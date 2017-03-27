@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/WifiApEnabler;
+.class public Lcom/android/settings_ex/wifi/WifiApEnabler;
 .super Ljava/lang/Object;
 .source "WifiApEnabler.java"
 
@@ -16,39 +16,39 @@
 
 
 # direct methods
-.method static synthetic access$000(Lcom/android/settings/wifi/WifiApEnabler;I)V
+.method static synthetic access$000(Lcom/android/settings_ex/wifi/WifiApEnabler;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiApEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiApEnabler;
     .param p1, "x1"    # I
 
     .prologue
     .line 43
-    invoke-direct {p0, p1}, Lcom/android/settings/wifi/WifiApEnabler;->handleWifiApStateChanged(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/wifi/WifiApEnabler;->handleWifiApStateChanged(I)V
 
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/wifi/WifiApEnabler;[Ljava/lang/Object;[Ljava/lang/Object;[Ljava/lang/Object;)V
+.method static synthetic access$100(Lcom/android/settings_ex/wifi/WifiApEnabler;[Ljava/lang/Object;[Ljava/lang/Object;[Ljava/lang/Object;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiApEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiApEnabler;
     .param p1, "x1"    # [Ljava/lang/Object;
     .param p2, "x2"    # [Ljava/lang/Object;
     .param p3, "x3"    # [Ljava/lang/Object;
 
     .prologue
     .line 43
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/settings/wifi/WifiApEnabler;->updateTetherState([Ljava/lang/Object;[Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/settings_ex/wifi/WifiApEnabler;->updateTetherState([Ljava/lang/Object;[Ljava/lang/Object;[Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/wifi/WifiApEnabler;)V
+.method static synthetic access$200(Lcom/android/settings_ex/wifi/WifiApEnabler;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiApEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiApEnabler;
 
     .prologue
     .line 43
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiApEnabler;->enableWifiSwitch()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiApEnabler;->enableWifiSwitch()V
 
     return-void
 .end method
@@ -62,7 +62,7 @@
     const/4 v2, 0x0
 
     .line 103
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApEnabler;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -84,7 +84,7 @@
     if-nez v0, :cond_1
 
     .line 106
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v2, v1}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
@@ -102,14 +102,14 @@
     .line 108
     .restart local v0    # "isAirplaneMode":Z
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApEnabler;->mOriginalSummary:Ljava/lang/CharSequence;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mOriginalSummary:Ljava/lang/CharSequence;
 
     invoke-virtual {v1, v3}, Landroid/preference/SwitchPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 109
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v2}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
@@ -129,19 +129,19 @@
     packed-switch p1, :pswitch_data_0
 
     .line 217
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v0, v2}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 218
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
 
     const v1, 0x7f0e0397
 
     invoke-virtual {v0, v1}, Landroid/preference/SwitchPreference;->setSummary(I)V
 
     .line 219
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiApEnabler;->enableWifiSwitch()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiApEnabler;->enableWifiSwitch()V
 
     .line 221
     :goto_0
@@ -149,14 +149,14 @@
 
     .line 195
     :pswitch_0
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
 
     const v1, 0x7f0e0599
 
     invoke-virtual {v0, v1}, Landroid/preference/SwitchPreference;->setSummary(I)V
 
     .line 196
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v0, v2}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
@@ -164,12 +164,12 @@
 
     .line 203
     :pswitch_1
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v0, v1}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 205
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v0, v1}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
@@ -177,14 +177,14 @@
 
     .line 208
     :pswitch_2
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
 
     const v1, 0x7f0e059a
 
     invoke-virtual {v0, v1}, Landroid/preference/SwitchPreference;->setSummary(I)V
 
     .line 209
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v0, v2}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
@@ -192,19 +192,19 @@
 
     .line 212
     :pswitch_3
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v0, v2}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 213
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
 
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiApEnabler;->mOriginalSummary:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mOriginalSummary:Ljava/lang/CharSequence;
 
     invoke-virtual {v0, v1}, Landroid/preference/SwitchPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 214
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiApEnabler;->enableWifiSwitch()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiApEnabler;->enableWifiSwitch()V
 
     goto :goto_0
 
@@ -264,7 +264,7 @@
 
     .line 173
     .local v8, "s":Ljava/lang/String;
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiApEnabler;->mWifiRegexs:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mWifiRegexs:[Ljava/lang/String;
 
     .local v1, "arr$":[Ljava/lang/String;
     array-length v5, v1
@@ -341,7 +341,7 @@
 
     .line 179
     .restart local v8    # "s":Ljava/lang/String;
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiApEnabler;->mWifiRegexs:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mWifiRegexs:[Ljava/lang/String;
 
     .restart local v1    # "arr$":[Ljava/lang/String;
     array-length v5, v1
@@ -392,7 +392,7 @@
     if-eqz v11, :cond_7
 
     .line 185
-    iget-object v12, p0, Lcom/android/settings/wifi/WifiApEnabler;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v12, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v12}, Landroid/net/wifi/WifiManager;->getWifiApConfiguration()Landroid/net/wifi/WifiConfiguration;
 
@@ -400,7 +400,7 @@
 
     .line 186
     .local v9, "wifiConfig":Landroid/net/wifi/WifiConfiguration;
-    invoke-virtual {p0, v9}, Lcom/android/settings/wifi/WifiApEnabler;->updateConfigSummary(Landroid/net/wifi/WifiConfiguration;)V
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/wifi/WifiApEnabler;->updateConfigSummary(Landroid/net/wifi/WifiConfiguration;)V
 
     .line 190
     .end local v9    # "wifiConfig":Landroid/net/wifi/WifiConfiguration;
@@ -413,7 +413,7 @@
     if-eqz v10, :cond_6
 
     .line 188
-    iget-object v12, p0, Lcom/android/settings/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
+    iget-object v12, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
 
     const v13, 0x7f0e0397
 
@@ -430,7 +430,7 @@
 
     .prologue
     .line 160
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiApEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mContext:Landroid/content/Context;
 
     const v2, 0x10403af
 
@@ -440,9 +440,9 @@
 
     .line 162
     .local v0, "s":Ljava/lang/String;
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mSwitch:Landroid/preference/SwitchPreference;
 
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiApEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiApEnabler;->mContext:Landroid/content/Context;
 
     const v3, 0x7f0e059b
 

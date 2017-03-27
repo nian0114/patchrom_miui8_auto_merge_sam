@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/deviceinfo/StorageSummaryPreference;
+.class public Lcom/android/settings_ex/deviceinfo/StorageSummaryPreference;
 .super Landroid/preference/Preference;
 .source "StorageSummaryPreference.java"
 
@@ -21,18 +21,18 @@
     .line 29
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/deviceinfo/StorageSummaryPreference;->mPercent:I
+    iput v0, p0, Lcom/android/settings_ex/deviceinfo/StorageSummaryPreference;->mPercent:I
 
     .line 34
     const v0, 0x7f0401f4
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageSummaryPreference;->setLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/deviceinfo/StorageSummaryPreference;->setLayoutResource(I)V
 
     .line 35
-    invoke-virtual {p0, v1}, Lcom/android/settings/deviceinfo/StorageSummaryPreference;->setEnabled(Z)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/deviceinfo/StorageSummaryPreference;->setEnabled(Z)V
 
     .line 36
-    invoke-virtual {p0, v1}, Lcom/android/settings/deviceinfo/StorageSummaryPreference;->setShouldDisableView(Z)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/deviceinfo/StorageSummaryPreference;->setShouldDisableView(Z)V
 
     .line 37
     return-void
@@ -56,7 +56,7 @@
 
     .line 46
     .local v0, "progress":Landroid/widget/ProgressBar;
-    iget v1, p0, Lcom/android/settings/deviceinfo/StorageSummaryPreference;->mPercent:I
+    iget v1, p0, Lcom/android/settings_ex/deviceinfo/StorageSummaryPreference;->mPercent:I
 
     const/4 v2, -0x1
 
@@ -68,7 +68,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
     .line 48
-    iget v1, p0, Lcom/android/settings/deviceinfo/StorageSummaryPreference;->mPercent:I
+    iget v1, p0, Lcom/android/settings_ex/deviceinfo/StorageSummaryPreference;->mPercent:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setProgress(I)V
 
@@ -94,7 +94,7 @@
 
     .prologue
     .line 40
-    iput p1, p0, Lcom/android/settings/deviceinfo/StorageSummaryPreference;->mPercent:I
+    iput p1, p0, Lcom/android/settings_ex/deviceinfo/StorageSummaryPreference;->mPercent:I
 
     .line 41
     return-void

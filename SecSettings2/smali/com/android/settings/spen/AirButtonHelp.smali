@@ -1,9 +1,9 @@
-.class public Lcom/android/settings/spen/AirButtonHelp;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/spen/AirButtonHelp;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "AirButtonHelp.java"
 
 # interfaces
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # instance fields
@@ -15,7 +15,7 @@
 
 .field private mKioskMode:Landroid/app/enterprise/kioskmode/KioskMode;
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 .field private mTalkbackDisableDialog:Landroid/app/AlertDialog;
 
@@ -28,51 +28,51 @@
     const/4 v1, 0x0
 
     .line 64
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 79
     const-string v0, "default"
 
-    iput-object v0, p0, Lcom/android/settings/spen/AirButtonHelp;->mDBItem:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mDBItem:Ljava/lang/String;
 
     .line 85
-    iput-object v1, p0, Lcom/android/settings/spen/AirButtonHelp;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
 
     .line 90
-    iput-object v1, p0, Lcom/android/settings/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v1, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 97
-    new-instance v0, Lcom/android/settings/spen/AirButtonHelp$1;
+    new-instance v0, Lcom/android/settings_ex/spen/AirButtonHelp$1;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/spen/AirButtonHelp$1;-><init>(Lcom/android/settings/spen/AirButtonHelp;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/spen/AirButtonHelp$1;-><init>(Lcom/android/settings_ex/spen/AirButtonHelp;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/spen/AirButtonHelp;->mAirCommanObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mAirCommanObserver:Landroid/database/ContentObserver;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/spen/AirButtonHelp;)Landroid/app/Activity;
+.method static synthetic access$000(Lcom/android/settings_ex/spen/AirButtonHelp;)Landroid/app/Activity;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/spen/AirButtonHelp;
+    .param p0, "x0"    # Lcom/android/settings_ex/spen/AirButtonHelp;
 
     .prologue
     .line 64
-    iget-object v0, p0, Lcom/android/settings/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/spen/AirButtonHelp;)Lcom/android/settings/widget/SwitchBar;
+.method static synthetic access$100(Lcom/android/settings_ex/spen/AirButtonHelp;)Lcom/android/settings_ex/widget/SwitchBar;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/spen/AirButtonHelp;
+    .param p0, "x0"    # Lcom/android/settings_ex/spen/AirButtonHelp;
 
     .prologue
     .line 64
-    iget-object v0, p0, Lcom/android/settings/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     return-object v0
 .end method
@@ -82,19 +82,19 @@
 
     .prologue
     .line 245
-    iget-object v0, p0, Lcom/android/settings/spen/AirButtonHelp;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
     .line 246
-    iget-object v0, p0, Lcom/android/settings/spen/AirButtonHelp;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 247
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/spen/AirButtonHelp;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
 
     .line 249
     :cond_0
@@ -106,7 +106,7 @@
 
     .prologue
     .line 192
-    invoke-direct {p0}, Lcom/android/settings/spen/AirButtonHelp;->dismissAllDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/spen/AirButtonHelp;->dismissAllDialog()V
 
     .line 193
     const v2, 0x7f0e15ae
@@ -119,13 +119,13 @@
 
     const v5, 0x7f0e0a57
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/spen/AirButtonHelp;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/spen/AirButtonHelp;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
     aput-object v5, v3, v4
 
-    invoke-virtual {p0, v2, v3}, Lcom/android/settings/spen/AirButtonHelp;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v2, v3}, Lcom/android/settings_ex/spen/AirButtonHelp;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -137,7 +137,7 @@
 
     const v3, 0x7f0e15af
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/spen/AirButtonHelp;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/spen/AirButtonHelp;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -157,13 +157,13 @@
 
     .line 197
     .local v0, "message":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/spen/AirButtonHelp;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/AirButtonHelp;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     const-string v3, "com.samsung.android.app.talkback"
 
-    invoke-static {v2, v3}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v2, v3}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v2
 
@@ -186,7 +186,7 @@
 
     const v3, 0x7f0e0a20
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/spen/AirButtonHelp;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/spen/AirButtonHelp;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -200,13 +200,13 @@
 
     .line 201
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/spen/AirButtonHelp;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/AirButtonHelp;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     const-string v3, "com.google.android.marvin.talkback"
 
-    invoke-static {v2, v3}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v2, v3}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v2
 
@@ -229,7 +229,7 @@
 
     const v3, 0x7f0e0a1f
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/spen/AirButtonHelp;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/spen/AirButtonHelp;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -259,7 +259,7 @@
 
     const v3, 0x7f0e0922
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/spen/AirButtonHelp;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/spen/AirButtonHelp;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -272,7 +272,7 @@
     move-result-object v0
 
     .line 205
-    iget-object v2, p0, Lcom/android/settings/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
 
     const-string v3, "com.sec.feature.overlaymagnifier"
 
@@ -299,7 +299,7 @@
 
     const v3, 0x7f0e0927
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/spen/AirButtonHelp;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/spen/AirButtonHelp;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -315,7 +315,7 @@
     :cond_2
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
-    iget-object v3, p0, Lcom/android/settings/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
+    iget-object v3, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
 
     invoke-direct {v2, v3}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -329,9 +329,9 @@
 
     const v3, 0x7f0e1282
 
-    new-instance v4, Lcom/android/settings/spen/AirButtonHelp$3;
+    new-instance v4, Lcom/android/settings_ex/spen/AirButtonHelp$3;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/spen/AirButtonHelp$3;-><init>(Lcom/android/settings/spen/AirButtonHelp;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/spen/AirButtonHelp$3;-><init>(Lcom/android/settings_ex/spen/AirButtonHelp;)V
 
     invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -339,9 +339,9 @@
 
     const/high16 v3, 0x1040000
 
-    new-instance v4, Lcom/android/settings/spen/AirButtonHelp$2;
+    new-instance v4, Lcom/android/settings_ex/spen/AirButtonHelp$2;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/spen/AirButtonHelp$2;-><init>(Lcom/android/settings/spen/AirButtonHelp;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/spen/AirButtonHelp$2;-><init>(Lcom/android/settings_ex/spen/AirButtonHelp;)V
 
     invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -351,19 +351,19 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/spen/AirButtonHelp;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
+    iput-object v2, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
 
     .line 233
-    iget-object v2, p0, Lcom/android/settings/spen/AirButtonHelp;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v2}, Landroid/app/AlertDialog;->show()V
 
     .line 234
-    iget-object v2, p0, Lcom/android/settings/spen/AirButtonHelp;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
 
-    new-instance v3, Lcom/android/settings/spen/AirButtonHelp$4;
+    new-instance v3, Lcom/android/settings_ex/spen/AirButtonHelp$4;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/spen/AirButtonHelp$4;-><init>(Lcom/android/settings/spen/AirButtonHelp;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/spen/AirButtonHelp$4;-><init>(Lcom/android/settings_ex/spen/AirButtonHelp;)V
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
@@ -389,27 +389,27 @@
 
     .prologue
     .line 116
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 117
-    invoke-virtual {p0}, Lcom/android/settings/spen/AirButtonHelp;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/AirButtonHelp;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 118
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v1, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 119
-    iget-object v1, p0, Lcom/android/settings/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 120
     return-void
@@ -421,23 +421,23 @@
 
     .prologue
     .line 105
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 107
-    invoke-virtual {p0}, Lcom/android/settings/spen/AirButtonHelp;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/AirButtonHelp;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
 
     .line 110
-    iget-object v0, p0, Lcom/android/settings/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
 
     invoke-static {v0}, Landroid/app/enterprise/kioskmode/KioskMode;->getInstance(Landroid/content/Context;)Landroid/app/enterprise/kioskmode/KioskMode;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/spen/AirButtonHelp;->mKioskMode:Landroid/app/enterprise/kioskmode/KioskMode;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mKioskMode:Landroid/app/enterprise/kioskmode/KioskMode;
 
     .line 112
     return-void
@@ -490,7 +490,7 @@
 
     aput-object v6, v4, v5
 
-    invoke-virtual {p0, v3, v4}, Lcom/android/settings/spen/AirButtonHelp;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v3, v4}, Lcom/android/settings_ex/spen/AirButtonHelp;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -507,11 +507,11 @@
 
     .line 260
     .local v0, "gloablairbutton":Landroid/widget/TextView;
-    invoke-virtual {p0}, Lcom/android/settings/spen/AirButtonHelp;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/AirButtonHelp;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {v3}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v3
 
@@ -532,7 +532,7 @@
 
     .prologue
     .line 148
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroy()V
 
     .line 149
     return-void
@@ -543,15 +543,15 @@
 
     .prologue
     .line 158
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroyView()V
 
     .line 159
-    invoke-direct {p0}, Lcom/android/settings/spen/AirButtonHelp;->dismissAllDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/spen/AirButtonHelp;->dismissAllDialog()V
 
     .line 160
-    iget-object v0, p0, Lcom/android/settings/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 161
     return-void
@@ -562,28 +562,28 @@
 
     .prologue
     .line 139
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 140
-    iget-object v0, p0, Lcom/android/settings/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 141
-    iget-object v0, p0, Lcom/android/settings/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 143
-    iget-object v0, p0, Lcom/android/settings/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/spen/AirButtonHelp;->mAirCommanObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mAirCommanObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
@@ -600,10 +600,10 @@
     const/4 v0, 0x0
 
     .line 124
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 125
-    iget-object v3, p0, Lcom/android/settings/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
+    iget-object v3, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v3}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -622,17 +622,17 @@
     .line 126
     .local v0, "airCommandEngineState":Z
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v3, v0}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v3, v0}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 127
-    iget-object v3, p0, Lcom/android/settings/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v3, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v3, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 130
-    iget-object v3, p0, Lcom/android/settings/spen/AirButtonHelp;->mKioskMode:Landroid/app/enterprise/kioskmode/KioskMode;
+    iget-object v3, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mKioskMode:Landroid/app/enterprise/kioskmode/KioskMode;
 
     invoke-virtual {v3}, Landroid/app/enterprise/kioskmode/KioskMode;->isAirCommandModeAllowed()Z
 
@@ -640,12 +640,12 @@
 
     .line 131
     .local v1, "allowed":Z
-    iget-object v3, p0, Lcom/android/settings/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v3, v1}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v3, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 134
-    iget-object v3, p0, Lcom/android/settings/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
+    iget-object v3, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v3}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -657,7 +657,7 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/spen/AirButtonHelp;->mAirCommanObserver:Landroid/database/ContentObserver;
+    iget-object v5, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mAirCommanObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v3, v4, v2, v5}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -670,7 +670,7 @@
 
     .prologue
     .line 153
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onStop()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onStop()V
 
     .line 154
     return-void
@@ -687,9 +687,9 @@
     const/4 v3, 0x0
 
     .line 166
-    iget-object v4, p0, Lcom/android/settings/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v4}, Lcom/android/settings/widget/SwitchBar;->getSwitch()Lcom/android/settings/widget/ToggleSwitch;
+    invoke-virtual {v4}, Lcom/android/settings_ex/widget/SwitchBar;->getSwitch()Lcom/android/settings_ex/widget/ToggleSwitch;
 
     move-result-object v4
 
@@ -712,7 +712,7 @@
 
     .line 173
     .local v1, "magnifier":Z
-    iget-object v4, p0, Lcom/android/settings/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
 
     const-string v5, "com.sec.feature.overlaymagnifier"
 
@@ -723,7 +723,7 @@
     if-eqz v4, :cond_1
 
     .line 174
-    iget-object v4, p0, Lcom/android/settings/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v4}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -742,15 +742,15 @@
     .line 177
     :cond_1
     :goto_1
-    iget-object v4, p0, Lcom/android/settings/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
 
     move-result v4
 
     if-nez v4, :cond_2
 
-    iget-object v4, p0, Lcom/android/settings/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v4}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -770,7 +770,7 @@
 
     .line 181
     :cond_2
-    invoke-direct {p0}, Lcom/android/settings/spen/AirButtonHelp;->showTalkBackDisableDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/spen/AirButtonHelp;->showTalkBackDisableDialog()V
 
     goto :goto_0
 
@@ -782,7 +782,7 @@
 
     .line 183
     :cond_4
-    iget-object v3, p0, Lcom/android/settings/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
+    iget-object v3, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v3}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -798,7 +798,7 @@
     .end local v0    # "hoverZoom":Z
     .end local v1    # "magnifier":Z
     :cond_5
-    iget-object v2, p0, Lcom/android/settings/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v2}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 

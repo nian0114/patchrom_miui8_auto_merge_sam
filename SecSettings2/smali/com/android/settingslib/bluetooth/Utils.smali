@@ -1,4 +1,4 @@
-.class public Lcom/android/settingslib/bluetooth/Utils;
+.class public Lcom/android/settings_exlib/bluetooth/Utils;
 .super Ljava/lang/Object;
 .source "Utils.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settingslib/bluetooth/Utils$ErrorListener;
+        Lcom/android/settings_exlib/bluetooth/Utils$ErrorListener;
     }
 .end annotation
 
@@ -16,7 +16,7 @@
 
 .field static checksum:Ljava/util/zip/Checksum;
 
-.field private static sErrorListener:Lcom/android/settingslib/bluetooth/Utils$ErrorListener;
+.field private static sErrorListener:Lcom/android/settings_exlib/bluetooth/Utils$ErrorListener;
 
 
 # direct methods
@@ -29,7 +29,7 @@
 
     invoke-direct {v0}, Ljava/util/zip/CRC32;-><init>()V
 
-    sput-object v0, Lcom/android/settingslib/bluetooth/Utils;->checksum:Ljava/util/zip/Checksum;
+    sput-object v0, Lcom/android/settings_exlib/bluetooth/Utils;->checksum:Ljava/util/zip/Checksum;
 
     .line 235
     const/4 v0, 0x1
@@ -42,7 +42,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/android/settingslib/bluetooth/Utils;->CONTACT_NUMBER:[Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_exlib/bluetooth/Utils;->CONTACT_NUMBER:[Ljava/lang/String;
 
     return-void
 .end method
@@ -191,25 +191,25 @@
 
     .line 56
     :pswitch_0
-    sget v0, Lcom/android/settingslib/R$string;->bluetooth_connected:I
+    sget v0, Lcom/android/settings_exlib/R$string;->bluetooth_connected:I
 
     goto :goto_0
 
     .line 58
     :pswitch_1
-    sget v0, Lcom/android/settingslib/R$string;->bluetooth_connecting:I
+    sget v0, Lcom/android/settings_exlib/R$string;->bluetooth_connecting:I
 
     goto :goto_0
 
     .line 60
     :pswitch_2
-    sget v0, Lcom/android/settingslib/R$string;->bluetooth_disconnected:I
+    sget v0, Lcom/android/settings_exlib/R$string;->bluetooth_disconnected:I
 
     goto :goto_0
 
     .line 62
     :pswitch_3
-    sget v0, Lcom/android/settingslib/R$string;->bluetooth_disconnecting:I
+    sget v0, Lcom/android/settings_exlib/R$string;->bluetooth_disconnecting:I
 
     goto :goto_0
 
@@ -254,7 +254,7 @@
 
     .line 324
     .local v0, "byteArray":[B
-    sget-object v4, Lcom/android/settingslib/bluetooth/Utils;->checksum:Ljava/util/zip/Checksum;
+    sget-object v4, Lcom/android/settings_exlib/bluetooth/Utils;->checksum:Ljava/util/zip/Checksum;
 
     const/4 v5, 0x0
 
@@ -263,7 +263,7 @@
     invoke-interface {v4, v0, v5, v6}, Ljava/util/zip/Checksum;->update([BII)V
 
     .line 325
-    sget-object v4, Lcom/android/settingslib/bluetooth/Utils;->checksum:Ljava/util/zip/Checksum;
+    sget-object v4, Lcom/android/settings_exlib/bluetooth/Utils;->checksum:Ljava/util/zip/Checksum;
 
     invoke-interface {v4}, Ljava/util/zip/Checksum;->getValue()J
 
@@ -271,12 +271,12 @@
 
     .line 326
     .local v2, "csValue":J
-    sget-object v4, Lcom/android/settingslib/bluetooth/Utils;->checksum:Ljava/util/zip/Checksum;
+    sget-object v4, Lcom/android/settings_exlib/bluetooth/Utils;->checksum:Ljava/util/zip/Checksum;
 
     invoke-interface {v4}, Ljava/util/zip/Checksum;->reset()V
 
     .line 328
-    invoke-static {v2, v3}, Lcom/android/settingslib/bluetooth/Utils;->longToString(J)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/android/settings_exlib/bluetooth/Utils;->longToString(J)Ljava/lang/String;
 
     move-result-object v1
 
@@ -366,7 +366,7 @@
 
     move-result-object v3
 
-    invoke-static {v1}, Lcom/android/settingslib/bluetooth/Utils;->byteToString([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/android/settings_exlib/bluetooth/Utils;->byteToString([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -393,7 +393,7 @@
 
     move-result-object v3
 
-    invoke-static {v0}, Lcom/android/settingslib/bluetooth/Utils;->byteToString([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/settings_exlib/bluetooth/Utils;->byteToString([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -408,15 +408,15 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 353
-    invoke-static {v1}, Lcom/android/settingslib/bluetooth/Utils;->byteToString([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/android/settings_exlib/bluetooth/Utils;->byteToString([B)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v0}, Lcom/android/settingslib/bluetooth/Utils;->byteToString([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/settings_exlib/bluetooth/Utils;->byteToString([B)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {p0, v2, v3}, Lcom/android/settingslib/bluetooth/Utils;->retrieveDB(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v2, v3}, Lcom/android/settings_exlib/bluetooth/Utils;->retrieveDB(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1023,7 +1023,7 @@
 
     sget-object v1, Landroid/provider/ContactsContract$Data;->CONTENT_URI:Landroid/net/Uri;
 
-    sget-object v2, Lcom/android/settingslib/bluetooth/Utils;->CONTACT_NUMBER:[Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_exlib/bluetooth/Utils;->CONTACT_NUMBER:[Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1081,11 +1081,11 @@
 
     .line 257
     .local v9, "data":Ljava/lang/String;
-    invoke-static {v9}, Lcom/android/settingslib/bluetooth/Utils;->cutNumber(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v9}, Lcom/android/settings_exlib/bluetooth/Utils;->cutNumber(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settingslib/bluetooth/Utils;->getDataCheckString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/settings_exlib/bluetooth/Utils;->getDataCheckString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -1315,13 +1315,13 @@
     goto :goto_3
 .end method
 
-.method public static setErrorListener(Lcom/android/settingslib/bluetooth/Utils$ErrorListener;)V
+.method public static setErrorListener(Lcom/android/settings_exlib/bluetooth/Utils$ErrorListener;)V
     .locals 0
-    .param p0, "listener"    # Lcom/android/settingslib/bluetooth/Utils$ErrorListener;
+    .param p0, "listener"    # Lcom/android/settings_exlib/bluetooth/Utils$ErrorListener;
 
     .prologue
     .line 108
-    sput-object p0, Lcom/android/settingslib/bluetooth/Utils;->sErrorListener:Lcom/android/settingslib/bluetooth/Utils$ErrorListener;
+    sput-object p0, Lcom/android/settings_exlib/bluetooth/Utils;->sErrorListener:Lcom/android/settings_exlib/bluetooth/Utils$ErrorListener;
 
     .line 109
     return-void
@@ -1334,14 +1334,14 @@
 
     .prologue
     .line 90
-    sget-object v0, Lcom/android/settingslib/bluetooth/Utils;->sErrorListener:Lcom/android/settingslib/bluetooth/Utils$ErrorListener;
+    sget-object v0, Lcom/android/settings_exlib/bluetooth/Utils;->sErrorListener:Lcom/android/settings_exlib/bluetooth/Utils$ErrorListener;
 
     if-eqz v0, :cond_0
 
     .line 91
-    sget-object v0, Lcom/android/settingslib/bluetooth/Utils;->sErrorListener:Lcom/android/settingslib/bluetooth/Utils$ErrorListener;
+    sget-object v0, Lcom/android/settings_exlib/bluetooth/Utils;->sErrorListener:Lcom/android/settings_exlib/bluetooth/Utils$ErrorListener;
 
-    invoke-interface {v0, p0, p1}, Lcom/android/settingslib/bluetooth/Utils$ErrorListener;->showConnectingError(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {v0, p0, p1}, Lcom/android/settings_exlib/bluetooth/Utils$ErrorListener;->showConnectingError(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 93
     :cond_0
@@ -1355,14 +1355,14 @@
 
     .prologue
     .line 102
-    sget-object v0, Lcom/android/settingslib/bluetooth/Utils;->sErrorListener:Lcom/android/settingslib/bluetooth/Utils$ErrorListener;
+    sget-object v0, Lcom/android/settings_exlib/bluetooth/Utils;->sErrorListener:Lcom/android/settings_exlib/bluetooth/Utils$ErrorListener;
 
     if-eqz v0, :cond_0
 
     .line 103
-    sget-object v0, Lcom/android/settingslib/bluetooth/Utils;->sErrorListener:Lcom/android/settingslib/bluetooth/Utils$ErrorListener;
+    sget-object v0, Lcom/android/settings_exlib/bluetooth/Utils;->sErrorListener:Lcom/android/settings_exlib/bluetooth/Utils$ErrorListener;
 
-    invoke-interface {v0, p0, p1}, Lcom/android/settingslib/bluetooth/Utils$ErrorListener;->onShowError(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {v0, p0, p1}, Lcom/android/settings_exlib/bluetooth/Utils$ErrorListener;->onShowError(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 105
     :cond_0
@@ -1377,14 +1377,14 @@
 
     .prologue
     .line 96
-    sget-object v0, Lcom/android/settingslib/bluetooth/Utils;->sErrorListener:Lcom/android/settingslib/bluetooth/Utils$ErrorListener;
+    sget-object v0, Lcom/android/settings_exlib/bluetooth/Utils;->sErrorListener:Lcom/android/settings_exlib/bluetooth/Utils$ErrorListener;
 
     if-eqz v0, :cond_0
 
     .line 97
-    sget-object v0, Lcom/android/settingslib/bluetooth/Utils;->sErrorListener:Lcom/android/settingslib/bluetooth/Utils$ErrorListener;
+    sget-object v0, Lcom/android/settings_exlib/bluetooth/Utils;->sErrorListener:Lcom/android/settings_exlib/bluetooth/Utils$ErrorListener;
 
-    invoke-interface {v0, p0, p1, p2}, Lcom/android/settingslib/bluetooth/Utils$ErrorListener;->onShowError(Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-interface {v0, p0, p1, p2}, Lcom/android/settings_exlib/bluetooth/Utils$ErrorListener;->onShowError(Landroid/content/Context;Ljava/lang/String;I)V
 
     .line 99
     :cond_0
@@ -1398,14 +1398,14 @@
 
     .prologue
     .line 84
-    sget-object v0, Lcom/android/settingslib/bluetooth/Utils;->sErrorListener:Lcom/android/settingslib/bluetooth/Utils$ErrorListener;
+    sget-object v0, Lcom/android/settings_exlib/bluetooth/Utils;->sErrorListener:Lcom/android/settings_exlib/bluetooth/Utils$ErrorListener;
 
     if-eqz v0, :cond_0
 
     .line 85
-    sget-object v0, Lcom/android/settingslib/bluetooth/Utils;->sErrorListener:Lcom/android/settingslib/bluetooth/Utils$ErrorListener;
+    sget-object v0, Lcom/android/settings_exlib/bluetooth/Utils;->sErrorListener:Lcom/android/settings_exlib/bluetooth/Utils$ErrorListener;
 
-    invoke-interface {v0, p0, p1}, Lcom/android/settingslib/bluetooth/Utils$ErrorListener;->showPANConnectingError(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {v0, p0, p1}, Lcom/android/settings_exlib/bluetooth/Utils$ErrorListener;->showPANConnectingError(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 87
     :cond_0
@@ -1418,12 +1418,12 @@
 
     .prologue
     .line 69
-    invoke-static {}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->getInstance()Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    invoke-static {}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->getInstance()Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     move-result-object v0
 
     .line 70
-    .local v0, "mLocalAdapter":Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    .local v0, "mLocalAdapter":Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -1455,7 +1455,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v0}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->getName()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->getName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1466,7 +1466,7 @@
     if-nez v2, :cond_1
 
     .line 78
-    invoke-virtual {v0, v1}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->setName(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->setName(Ljava/lang/String;)V
 
     .line 79
     const-string v2, "Settingslib_BluetoothUtils"

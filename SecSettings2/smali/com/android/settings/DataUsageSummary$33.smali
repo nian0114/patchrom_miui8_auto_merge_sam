@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DataUsageSummary$33;
+.class Lcom/android/settings_ex/DataUsageSummary$33;
 .super Ljava/lang/Object;
 .source "DataUsageSummary.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DataUsageSummary;
+    value = Lcom/android/settings_ex/DataUsageSummary;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DataUsageSummary;
+.field final synthetic this$0:Lcom/android/settings_ex/DataUsageSummary;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DataUsageSummary;)V
+.method constructor <init>(Lcom/android/settings_ex/DataUsageSummary;)V
     .locals 0
 
     .prologue
     .line 3654
-    iput-object p1, p0, Lcom/android/settings/DataUsageSummary$33;->this$0:Lcom/android/settings/DataUsageSummary;
+    iput-object p1, p0, Lcom/android/settings_ex/DataUsageSummary$33;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,10 +44,10 @@
     const/4 v1, 0x0
 
     .line 3657
-    iget-object v2, p0, Lcom/android/settings/DataUsageSummary$33;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v2, p0, Lcom/android/settings_ex/DataUsageSummary$33;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
-    # getter for: Lcom/android/settings/DataUsageSummary;->mAppRestrict:Landroid/widget/Switch;
-    invoke-static {v2}, Lcom/android/settings/DataUsageSummary;->access$5900(Lcom/android/settings/DataUsageSummary;)Landroid/widget/Switch;
+    # getter for: Lcom/android/settings_ex/DataUsageSummary;->mAppRestrict:Landroid/widget/Switch;
+    invoke-static {v2}, Lcom/android/settings_ex/DataUsageSummary;->access$5900(Lcom/android/settings_ex/DataUsageSummary;)Landroid/widget/Switch;
 
     move-result-object v2
 
@@ -65,9 +65,9 @@
     if-eqz v0, :cond_1
 
     .line 3663
-    iget-object v1, p0, Lcom/android/settings/DataUsageSummary$33;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v1, p0, Lcom/android/settings_ex/DataUsageSummary$33;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
-    invoke-static {v1}, Lcom/android/settings/DataUsageSummary$ConfirmAppRestrictFragment;->show(Lcom/android/settings/DataUsageSummary;)V
+    invoke-static {v1}, Lcom/android/settings_ex/DataUsageSummary$ConfirmAppRestrictFragment;->show(Lcom/android/settings_ex/DataUsageSummary;)V
 
     .line 3667
     :goto_1
@@ -83,10 +83,10 @@
     .line 3665
     .restart local v0    # "restrictBackground":Z
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/DataUsageSummary$33;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v2, p0, Lcom/android/settings_ex/DataUsageSummary$33;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
-    # invokes: Lcom/android/settings/DataUsageSummary;->setAppRestrictBackground(Z)V
-    invoke-static {v2, v1}, Lcom/android/settings/DataUsageSummary;->access$6000(Lcom/android/settings/DataUsageSummary;Z)V
+    # invokes: Lcom/android/settings_ex/DataUsageSummary;->setAppRestrictBackground(Z)V
+    invoke-static {v2, v1}, Lcom/android/settings_ex/DataUsageSummary;->access$6000(Lcom/android/settings_ex/DataUsageSummary;Z)V
 
     goto :goto_1
 .end method

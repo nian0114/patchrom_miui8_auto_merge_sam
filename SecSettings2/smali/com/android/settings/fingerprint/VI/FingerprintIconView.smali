@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/fingerprint/VI/FingerprintIconView;
+.class public Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;
 .super Landroid/view/View;
 .source "FingerprintIconView.java"
 
@@ -15,13 +15,13 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/fingerprint/VI/SvgHelper$SvgPath;",
+            "Lcom/android/settings_ex/fingerprint/VI/SvgHelper$SvgPath;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final mSvg:Lcom/android/settings/fingerprint/VI/SvgHelper;
+.field private final mSvg:Lcom/android/settings_ex/fingerprint/VI/SvgHelper;
 
 .field public percent:F
 
@@ -44,37 +44,37 @@
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
 
     .line 36
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->bgPaint:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->bgPaint:Landroid/graphics/Paint;
 
     .line 38
-    new-instance v0, Lcom/android/settings/fingerprint/VI/SvgHelper;
+    new-instance v0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper;
 
-    iget-object v1, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
 
-    invoke-direct {v0, v1}, Lcom/android/settings/fingerprint/VI/SvgHelper;-><init>(Landroid/graphics/Paint;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/fingerprint/VI/SvgHelper;-><init>(Landroid/graphics/Paint;)V
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->mSvg:Lcom/android/settings/fingerprint/VI/SvgHelper;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->mSvg:Lcom/android/settings_ex/fingerprint/VI/SvgHelper;
 
     .line 42
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->mPaths:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->mPaths:Ljava/util/List;
 
     .line 47
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, p1, v0, v1}, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->init(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, v0, v1}, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->init(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 48
     return-void
@@ -94,35 +94,35 @@
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
 
     .line 36
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->bgPaint:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->bgPaint:Landroid/graphics/Paint;
 
     .line 38
-    new-instance v0, Lcom/android/settings/fingerprint/VI/SvgHelper;
+    new-instance v0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper;
 
-    iget-object v1, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
 
-    invoke-direct {v0, v1}, Lcom/android/settings/fingerprint/VI/SvgHelper;-><init>(Landroid/graphics/Paint;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/fingerprint/VI/SvgHelper;-><init>(Landroid/graphics/Paint;)V
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->mSvg:Lcom/android/settings/fingerprint/VI/SvgHelper;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->mSvg:Lcom/android/settings_ex/fingerprint/VI/SvgHelper;
 
     .line 42
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->mPaths:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->mPaths:Ljava/util/List;
 
     .line 52
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->init(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->init(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 53
     return-void
@@ -143,56 +143,56 @@
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
 
     .line 36
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->bgPaint:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->bgPaint:Landroid/graphics/Paint;
 
     .line 38
-    new-instance v0, Lcom/android/settings/fingerprint/VI/SvgHelper;
+    new-instance v0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper;
 
-    iget-object v1, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
 
-    invoke-direct {v0, v1}, Lcom/android/settings/fingerprint/VI/SvgHelper;-><init>(Landroid/graphics/Paint;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/fingerprint/VI/SvgHelper;-><init>(Landroid/graphics/Paint;)V
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->mSvg:Lcom/android/settings/fingerprint/VI/SvgHelper;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->mSvg:Lcom/android/settings_ex/fingerprint/VI/SvgHelper;
 
     .line 42
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->mPaths:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->mPaths:Ljava/util/List;
 
     .line 57
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->init(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->init(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 58
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/fingerprint/VI/FingerprintIconView;)Lcom/android/settings/fingerprint/VI/SvgHelper;
+.method static synthetic access$000(Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;)Lcom/android/settings_ex/fingerprint/VI/SvgHelper;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/VI/FingerprintIconView;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;
 
     .prologue
     .line 28
-    iget-object v0, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->mSvg:Lcom/android/settings/fingerprint/VI/SvgHelper;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->mSvg:Lcom/android/settings_ex/fingerprint/VI/SvgHelper;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/fingerprint/VI/FingerprintIconView;)Ljava/util/List;
+.method static synthetic access$100(Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;)Ljava/util/List;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/VI/FingerprintIconView;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;
 
     .prologue
     .line 28
-    iget-object v0, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->mPaths:Ljava/util/List;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->mPaths:Ljava/util/List;
 
     return-object v0
 .end method
@@ -207,7 +207,7 @@
     const/4 v3, 0x1
 
     .line 62
-    iget-object v1, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
 
     const-string v2, "#fedf4d"
 
@@ -218,45 +218,45 @@
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 63
-    iget-object v1, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
 
     const/high16 v2, 0x41200000    # 10.0f
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
     .line 64
-    iget-object v1, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     .line 65
-    iget-object v1, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
 
     sget-object v2, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
     .line 66
-    iget-object v1, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
 
     sget-object v2, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
     .line 67
-    iget-object v1, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     .line 69
-    iget-object v1, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->bgPaint:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->bgPaint:Landroid/graphics/Paint;
 
     const/4 v2, -0x1
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 70
-    iget-object v1, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->bgPaint:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->bgPaint:Landroid/graphics/Paint;
 
     sget-object v2, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
 
@@ -265,18 +265,18 @@
     .line 72
     const/high16 v1, 0x3f800000    # 1.0f
 
-    iput v1, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->percent:F
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->percent:F
 
     .line 74
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
     .line 76
     .local v0, "observer":Landroid/view/ViewTreeObserver;
-    new-instance v1, Lcom/android/settings/fingerprint/VI/FingerprintIconView$1;
+    new-instance v1, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView$1;
 
-    invoke-direct {v1, p0, p1}, Lcom/android/settings/fingerprint/VI/FingerprintIconView$1;-><init>(Lcom/android/settings/fingerprint/VI/FingerprintIconView;Landroid/content/Context;)V
+    invoke-direct {v1, p0, p1}, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView$1;-><init>(Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;Landroid/content/Context;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
@@ -291,7 +291,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->phoneBit:Landroid/graphics/Bitmap;
+    iput-object v1, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->phoneBit:Landroid/graphics/Bitmap;
 
     .line 99
     return-void
@@ -353,9 +353,9 @@
 
     .line 114
     .local v2, "endAnimator":Landroid/animation/ValueAnimator;
-    new-instance v4, Lcom/android/settings/fingerprint/VI/FingerprintIconView$2;
+    new-instance v4, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView$2;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/fingerprint/VI/FingerprintIconView$2;-><init>(Lcom/android/settings/fingerprint/VI/FingerprintIconView;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView$2;-><init>(Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;)V
 
     invoke-virtual {v2, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -365,9 +365,9 @@
     invoke-virtual {v2, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     .line 127
-    new-instance v4, Lcom/android/settings/fingerprint/VI/SineInOut90;
+    new-instance v4, Lcom/android/settings_ex/fingerprint/VI/SineInOut90;
 
-    invoke-direct {v4}, Lcom/android/settings/fingerprint/VI/SineInOut90;-><init>()V
+    invoke-direct {v4}, Lcom/android/settings_ex/fingerprint/VI/SineInOut90;-><init>()V
 
     invoke-virtual {v2, v4}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
@@ -391,14 +391,14 @@
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
     .line 136
-    iget-object v5, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->phoneBit:Landroid/graphics/Bitmap;
+    iget-object v5, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->phoneBit:Landroid/graphics/Bitmap;
 
-    iget-object v6, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->bgPaint:Landroid/graphics/Paint;
+    iget-object v6, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->bgPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v5, v7, v7, v6}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
     .line 138
-    iget-object v5, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->mPaths:Ljava/util/List;
+    iget-object v5, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->mPaths:Ljava/util/List;
 
     invoke-interface {v5}, Ljava/util/List;->size()I
 
@@ -407,7 +407,7 @@
     if-lez v5, :cond_0
 
     .line 139
-    iget v5, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->width:I
+    iget v5, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->width:I
 
     int-to-float v5, v5
 
@@ -415,7 +415,7 @@
 
     mul-float/2addr v5, v6
 
-    iget v6, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->height:I
+    iget v6, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->height:I
 
     int-to-float v6, v6
 
@@ -430,7 +430,7 @@
 
     .local v2, "i":I
     :goto_0
-    iget-object v5, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->mPaths:Ljava/util/List;
+    iget-object v5, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->mPaths:Ljava/util/List;
 
     invoke-interface {v5}, Ljava/util/List;->size()I
 
@@ -439,19 +439,19 @@
     if-ge v2, v5, :cond_0
 
     .line 143
-    iget-object v5, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->mPaths:Ljava/util/List;
+    iget-object v5, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->mPaths:Ljava/util/List;
 
     invoke-interface {v5, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/fingerprint/VI/SvgHelper$SvgPath;
+    check-cast v0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper$SvgPath;
 
     .line 144
-    .local v0, "aPath":Lcom/android/settings/fingerprint/VI/SvgHelper$SvgPath;
+    .local v0, "aPath":Lcom/android/settings_ex/fingerprint/VI/SvgHelper$SvgPath;
     new-instance v4, Landroid/graphics/PathMeasure;
 
-    iget-object v5, v0, Lcom/android/settings/fingerprint/VI/SvgHelper$SvgPath;->path:Landroid/graphics/Path;
+    iget-object v5, v0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper$SvgPath;->path:Landroid/graphics/Path;
 
     invoke-direct {v4, v5, v8}, Landroid/graphics/PathMeasure;-><init>(Landroid/graphics/Path;Z)V
 
@@ -475,7 +475,7 @@
 
     aput v3, v5, v6
 
-    iget v6, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->percent:F
+    iget v6, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->percent:F
 
     mul-float/2addr v6, v3
 
@@ -483,14 +483,14 @@
 
     .line 147
     .local v1, "effect":Landroid/graphics/PathEffect;
-    iget-object v5, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
+    iget-object v5, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
 
     invoke-virtual {v5, v1}, Landroid/graphics/Paint;->setPathEffect(Landroid/graphics/PathEffect;)Landroid/graphics/PathEffect;
 
     .line 148
-    iget-object v5, v0, Lcom/android/settings/fingerprint/VI/SvgHelper$SvgPath;->path:Landroid/graphics/Path;
+    iget-object v5, v0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper$SvgPath;->path:Landroid/graphics/Path;
 
-    iget-object v6, p0, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
+    iget-object v6, p0, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->linePaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v5, v6}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
@@ -500,7 +500,7 @@
     goto :goto_0
 
     .line 151
-    .end local v0    # "aPath":Lcom/android/settings/fingerprint/VI/SvgHelper$SvgPath;
+    .end local v0    # "aPath":Lcom/android/settings_ex/fingerprint/VI/SvgHelper$SvgPath;
     .end local v1    # "effect":Landroid/graphics/PathEffect;
     .end local v2    # "i":I
     .end local v3    # "length":F

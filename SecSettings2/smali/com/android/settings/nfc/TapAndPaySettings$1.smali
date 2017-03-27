@@ -1,11 +1,11 @@
-.class Lcom/android/settings/nfc/TapAndPaySettings$1;
+.class Lcom/android/settings_ex/nfc/TapAndPaySettings$1;
 .super Landroid/content/BroadcastReceiver;
 .source "TapAndPaySettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/nfc/TapAndPaySettings;
+    value = Lcom/android/settings_ex/nfc/TapAndPaySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nfc/TapAndPaySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/nfc/TapAndPaySettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/nfc/TapAndPaySettings;)V
+.method constructor <init>(Lcom/android/settings_ex/nfc/TapAndPaySettings;)V
     .locals 0
 
     .prologue
     .line 70
-    iput-object p1, p0, Lcom/android/settings/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings/nfc/TapAndPaySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings_ex/nfc/TapAndPaySettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -48,7 +48,7 @@
 
     .line 74
     .local v0, "action":Ljava/lang/String;
-    sget-boolean v1, Lcom/android/settings/nfc/TapAndPaySettings;->DBG:Z
+    sget-boolean v1, Lcom/android/settings_ex/nfc/TapAndPaySettings;->DBG:Z
 
     if-eqz v1, :cond_0
 
@@ -76,11 +76,11 @@
 
     .line 76
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings/nfc/TapAndPaySettings;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings_ex/nfc/TapAndPaySettings;
 
-    iget-object v1, p0, Lcom/android/settings/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings/nfc/TapAndPaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings_ex/nfc/TapAndPaySettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/nfc/TapAndPaySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -88,8 +88,8 @@
 
     move-result-object v1
 
-    # getter for: Lcom/android/settings/nfc/TapAndPaySettings;->PAYMENT_TAB_TAG:Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/nfc/TapAndPaySettings;->access$100()Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/nfc/TapAndPaySettings;->PAYMENT_TAB_TAG:Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->access$100()Ljava/lang/String;
 
     move-result-object v3
 
@@ -97,17 +97,17 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/nfc/PaymentSettings;
+    check-cast v1, Lcom/android/settings_ex/nfc/PaymentSettings;
 
-    # setter for: Lcom/android/settings/nfc/TapAndPaySettings;->mPaymentFragment:Lcom/android/settings/nfc/PaymentSettings;
-    invoke-static {v2, v1}, Lcom/android/settings/nfc/TapAndPaySettings;->access$002(Lcom/android/settings/nfc/TapAndPaySettings;Lcom/android/settings/nfc/PaymentSettings;)Lcom/android/settings/nfc/PaymentSettings;
+    # setter for: Lcom/android/settings_ex/nfc/TapAndPaySettings;->mPaymentFragment:Lcom/android/settings_ex/nfc/PaymentSettings;
+    invoke-static {v2, v1}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->access$002(Lcom/android/settings_ex/nfc/TapAndPaySettings;Lcom/android/settings_ex/nfc/PaymentSettings;)Lcom/android/settings_ex/nfc/PaymentSettings;
 
     .line 77
-    iget-object v2, p0, Lcom/android/settings/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings/nfc/TapAndPaySettings;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings_ex/nfc/TapAndPaySettings;
 
-    iget-object v1, p0, Lcom/android/settings/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings/nfc/TapAndPaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings_ex/nfc/TapAndPaySettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/nfc/TapAndPaySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -115,8 +115,8 @@
 
     move-result-object v1
 
-    # getter for: Lcom/android/settings/nfc/TapAndPaySettings;->OTHER_TAB_TAG:Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/nfc/TapAndPaySettings;->access$300()Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/nfc/TapAndPaySettings;->OTHER_TAB_TAG:Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->access$300()Ljava/lang/String;
 
     move-result-object v3
 
@@ -124,10 +124,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/nfc/OtherSettings;
+    check-cast v1, Lcom/android/settings_ex/nfc/OtherSettings;
 
-    # setter for: Lcom/android/settings/nfc/TapAndPaySettings;->mOtherFragment:Lcom/android/settings/nfc/OtherSettings;
-    invoke-static {v2, v1}, Lcom/android/settings/nfc/TapAndPaySettings;->access$202(Lcom/android/settings/nfc/TapAndPaySettings;Lcom/android/settings/nfc/OtherSettings;)Lcom/android/settings/nfc/OtherSettings;
+    # setter for: Lcom/android/settings_ex/nfc/TapAndPaySettings;->mOtherFragment:Lcom/android/settings_ex/nfc/OtherSettings;
+    invoke-static {v2, v1}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->access$202(Lcom/android/settings_ex/nfc/TapAndPaySettings;Lcom/android/settings_ex/nfc/OtherSettings;)Lcom/android/settings_ex/nfc/OtherSettings;
 
     .line 79
     const-string v1, "android.nfc.action.ADAPTER_STATE_CHANGED"
@@ -150,9 +150,9 @@
     if-ne v1, v4, :cond_1
 
     .line 81
-    iget-object v1, p0, Lcom/android/settings/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings/nfc/TapAndPaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings_ex/nfc/TapAndPaySettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/nfc/TapAndPaySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -174,10 +174,10 @@
     if-eqz v1, :cond_4
 
     .line 84
-    iget-object v1, p0, Lcom/android/settings/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings/nfc/TapAndPaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings_ex/nfc/TapAndPaySettings;
 
-    # getter for: Lcom/android/settings/nfc/TapAndPaySettings;->mTabHost:Landroid/widget/TabHost;
-    invoke-static {v1}, Lcom/android/settings/nfc/TapAndPaySettings;->access$400(Lcom/android/settings/nfc/TapAndPaySettings;)Landroid/widget/TabHost;
+    # getter for: Lcom/android/settings_ex/nfc/TapAndPaySettings;->mTabHost:Landroid/widget/TabHost;
+    invoke-static {v1}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->access$400(Lcom/android/settings_ex/nfc/TapAndPaySettings;)Landroid/widget/TabHost;
 
     move-result-object v1
 
@@ -185,40 +185,40 @@
 
     move-result v1
 
-    # getter for: Lcom/android/settings/nfc/TapAndPaySettings;->SETTING_PAYMENT_TAB:I
-    invoke-static {}, Lcom/android/settings/nfc/TapAndPaySettings;->access$500()I
+    # getter for: Lcom/android/settings_ex/nfc/TapAndPaySettings;->SETTING_PAYMENT_TAB:I
+    invoke-static {}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->access$500()I
 
     move-result v2
 
     if-ne v1, v2, :cond_3
 
-    iget-object v1, p0, Lcom/android/settings/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings/nfc/TapAndPaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings_ex/nfc/TapAndPaySettings;
 
-    # getter for: Lcom/android/settings/nfc/TapAndPaySettings;->mPaymentFragment:Lcom/android/settings/nfc/PaymentSettings;
-    invoke-static {v1}, Lcom/android/settings/nfc/TapAndPaySettings;->access$000(Lcom/android/settings/nfc/TapAndPaySettings;)Lcom/android/settings/nfc/PaymentSettings;
+    # getter for: Lcom/android/settings_ex/nfc/TapAndPaySettings;->mPaymentFragment:Lcom/android/settings_ex/nfc/PaymentSettings;
+    invoke-static {v1}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->access$000(Lcom/android/settings_ex/nfc/TapAndPaySettings;)Lcom/android/settings_ex/nfc/PaymentSettings;
 
     move-result-object v1
 
     if-eqz v1, :cond_3
 
     .line 85
-    iget-object v1, p0, Lcom/android/settings/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings/nfc/TapAndPaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings_ex/nfc/TapAndPaySettings;
 
-    # getter for: Lcom/android/settings/nfc/TapAndPaySettings;->mPaymentFragment:Lcom/android/settings/nfc/PaymentSettings;
-    invoke-static {v1}, Lcom/android/settings/nfc/TapAndPaySettings;->access$000(Lcom/android/settings/nfc/TapAndPaySettings;)Lcom/android/settings/nfc/PaymentSettings;
+    # getter for: Lcom/android/settings_ex/nfc/TapAndPaySettings;->mPaymentFragment:Lcom/android/settings_ex/nfc/PaymentSettings;
+    invoke-static {v1}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->access$000(Lcom/android/settings_ex/nfc/TapAndPaySettings;)Lcom/android/settings_ex/nfc/PaymentSettings;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/settings/nfc/PaymentSettings;->refresh()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/nfc/PaymentSettings;->refresh()V
 
     goto :goto_0
 
     .line 86
     :cond_3
-    iget-object v1, p0, Lcom/android/settings/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings/nfc/TapAndPaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings_ex/nfc/TapAndPaySettings;
 
-    # getter for: Lcom/android/settings/nfc/TapAndPaySettings;->mTabHost:Landroid/widget/TabHost;
-    invoke-static {v1}, Lcom/android/settings/nfc/TapAndPaySettings;->access$400(Lcom/android/settings/nfc/TapAndPaySettings;)Landroid/widget/TabHost;
+    # getter for: Lcom/android/settings_ex/nfc/TapAndPaySettings;->mTabHost:Landroid/widget/TabHost;
+    invoke-static {v1}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->access$400(Lcom/android/settings_ex/nfc/TapAndPaySettings;)Landroid/widget/TabHost;
 
     move-result-object v1
 
@@ -226,31 +226,31 @@
 
     move-result v1
 
-    # getter for: Lcom/android/settings/nfc/TapAndPaySettings;->SETTING_OTHER_TAB:I
-    invoke-static {}, Lcom/android/settings/nfc/TapAndPaySettings;->access$600()I
+    # getter for: Lcom/android/settings_ex/nfc/TapAndPaySettings;->SETTING_OTHER_TAB:I
+    invoke-static {}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->access$600()I
 
     move-result v2
 
     if-ne v1, v2, :cond_1
 
-    iget-object v1, p0, Lcom/android/settings/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings/nfc/TapAndPaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings_ex/nfc/TapAndPaySettings;
 
-    # getter for: Lcom/android/settings/nfc/TapAndPaySettings;->mOtherFragment:Lcom/android/settings/nfc/OtherSettings;
-    invoke-static {v1}, Lcom/android/settings/nfc/TapAndPaySettings;->access$200(Lcom/android/settings/nfc/TapAndPaySettings;)Lcom/android/settings/nfc/OtherSettings;
+    # getter for: Lcom/android/settings_ex/nfc/TapAndPaySettings;->mOtherFragment:Lcom/android/settings_ex/nfc/OtherSettings;
+    invoke-static {v1}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->access$200(Lcom/android/settings_ex/nfc/TapAndPaySettings;)Lcom/android/settings_ex/nfc/OtherSettings;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
     .line 87
-    iget-object v1, p0, Lcom/android/settings/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings/nfc/TapAndPaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings_ex/nfc/TapAndPaySettings;
 
-    # getter for: Lcom/android/settings/nfc/TapAndPaySettings;->mOtherFragment:Lcom/android/settings/nfc/OtherSettings;
-    invoke-static {v1}, Lcom/android/settings/nfc/TapAndPaySettings;->access$200(Lcom/android/settings/nfc/TapAndPaySettings;)Lcom/android/settings/nfc/OtherSettings;
+    # getter for: Lcom/android/settings_ex/nfc/TapAndPaySettings;->mOtherFragment:Lcom/android/settings_ex/nfc/OtherSettings;
+    invoke-static {v1}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->access$200(Lcom/android/settings_ex/nfc/TapAndPaySettings;)Lcom/android/settings_ex/nfc/OtherSettings;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/settings/nfc/OtherSettings;->refresh()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/nfc/OtherSettings;->refresh()V
 
     goto :goto_0
 
@@ -274,10 +274,10 @@
     if-nez v1, :cond_1
 
     .line 90
-    iget-object v1, p0, Lcom/android/settings/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings/nfc/TapAndPaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings_ex/nfc/TapAndPaySettings;
 
-    # getter for: Lcom/android/settings/nfc/TapAndPaySettings;->mTabHost:Landroid/widget/TabHost;
-    invoke-static {v1}, Lcom/android/settings/nfc/TapAndPaySettings;->access$400(Lcom/android/settings/nfc/TapAndPaySettings;)Landroid/widget/TabHost;
+    # getter for: Lcom/android/settings_ex/nfc/TapAndPaySettings;->mTabHost:Landroid/widget/TabHost;
+    invoke-static {v1}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->access$400(Lcom/android/settings_ex/nfc/TapAndPaySettings;)Landroid/widget/TabHost;
 
     move-result-object v1
 
@@ -285,40 +285,40 @@
 
     move-result v1
 
-    # getter for: Lcom/android/settings/nfc/TapAndPaySettings;->SETTING_PAYMENT_TAB:I
-    invoke-static {}, Lcom/android/settings/nfc/TapAndPaySettings;->access$500()I
+    # getter for: Lcom/android/settings_ex/nfc/TapAndPaySettings;->SETTING_PAYMENT_TAB:I
+    invoke-static {}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->access$500()I
 
     move-result v2
 
     if-ne v1, v2, :cond_5
 
-    iget-object v1, p0, Lcom/android/settings/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings/nfc/TapAndPaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings_ex/nfc/TapAndPaySettings;
 
-    # getter for: Lcom/android/settings/nfc/TapAndPaySettings;->mPaymentFragment:Lcom/android/settings/nfc/PaymentSettings;
-    invoke-static {v1}, Lcom/android/settings/nfc/TapAndPaySettings;->access$000(Lcom/android/settings/nfc/TapAndPaySettings;)Lcom/android/settings/nfc/PaymentSettings;
+    # getter for: Lcom/android/settings_ex/nfc/TapAndPaySettings;->mPaymentFragment:Lcom/android/settings_ex/nfc/PaymentSettings;
+    invoke-static {v1}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->access$000(Lcom/android/settings_ex/nfc/TapAndPaySettings;)Lcom/android/settings_ex/nfc/PaymentSettings;
 
     move-result-object v1
 
     if-eqz v1, :cond_5
 
     .line 91
-    iget-object v1, p0, Lcom/android/settings/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings/nfc/TapAndPaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings_ex/nfc/TapAndPaySettings;
 
-    # getter for: Lcom/android/settings/nfc/TapAndPaySettings;->mPaymentFragment:Lcom/android/settings/nfc/PaymentSettings;
-    invoke-static {v1}, Lcom/android/settings/nfc/TapAndPaySettings;->access$000(Lcom/android/settings/nfc/TapAndPaySettings;)Lcom/android/settings/nfc/PaymentSettings;
+    # getter for: Lcom/android/settings_ex/nfc/TapAndPaySettings;->mPaymentFragment:Lcom/android/settings_ex/nfc/PaymentSettings;
+    invoke-static {v1}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->access$000(Lcom/android/settings_ex/nfc/TapAndPaySettings;)Lcom/android/settings_ex/nfc/PaymentSettings;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/settings/nfc/PaymentSettings;->restoreDefaultApp()Z
+    invoke-virtual {v1}, Lcom/android/settings_ex/nfc/PaymentSettings;->restoreDefaultApp()Z
 
     goto :goto_0
 
     .line 92
     :cond_5
-    iget-object v1, p0, Lcom/android/settings/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings/nfc/TapAndPaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings_ex/nfc/TapAndPaySettings;
 
-    # getter for: Lcom/android/settings/nfc/TapAndPaySettings;->mTabHost:Landroid/widget/TabHost;
-    invoke-static {v1}, Lcom/android/settings/nfc/TapAndPaySettings;->access$400(Lcom/android/settings/nfc/TapAndPaySettings;)Landroid/widget/TabHost;
+    # getter for: Lcom/android/settings_ex/nfc/TapAndPaySettings;->mTabHost:Landroid/widget/TabHost;
+    invoke-static {v1}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->access$400(Lcom/android/settings_ex/nfc/TapAndPaySettings;)Landroid/widget/TabHost;
 
     move-result-object v1
 
@@ -326,31 +326,31 @@
 
     move-result v1
 
-    # getter for: Lcom/android/settings/nfc/TapAndPaySettings;->SETTING_OTHER_TAB:I
-    invoke-static {}, Lcom/android/settings/nfc/TapAndPaySettings;->access$600()I
+    # getter for: Lcom/android/settings_ex/nfc/TapAndPaySettings;->SETTING_OTHER_TAB:I
+    invoke-static {}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->access$600()I
 
     move-result v2
 
     if-ne v1, v2, :cond_1
 
-    iget-object v1, p0, Lcom/android/settings/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings/nfc/TapAndPaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings_ex/nfc/TapAndPaySettings;
 
-    # getter for: Lcom/android/settings/nfc/TapAndPaySettings;->mOtherFragment:Lcom/android/settings/nfc/OtherSettings;
-    invoke-static {v1}, Lcom/android/settings/nfc/TapAndPaySettings;->access$200(Lcom/android/settings/nfc/TapAndPaySettings;)Lcom/android/settings/nfc/OtherSettings;
+    # getter for: Lcom/android/settings_ex/nfc/TapAndPaySettings;->mOtherFragment:Lcom/android/settings_ex/nfc/OtherSettings;
+    invoke-static {v1}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->access$200(Lcom/android/settings_ex/nfc/TapAndPaySettings;)Lcom/android/settings_ex/nfc/OtherSettings;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
     .line 93
-    iget-object v1, p0, Lcom/android/settings/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings/nfc/TapAndPaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/TapAndPaySettings$1;->this$0:Lcom/android/settings_ex/nfc/TapAndPaySettings;
 
-    # getter for: Lcom/android/settings/nfc/TapAndPaySettings;->mOtherFragment:Lcom/android/settings/nfc/OtherSettings;
-    invoke-static {v1}, Lcom/android/settings/nfc/TapAndPaySettings;->access$200(Lcom/android/settings/nfc/TapAndPaySettings;)Lcom/android/settings/nfc/OtherSettings;
+    # getter for: Lcom/android/settings_ex/nfc/TapAndPaySettings;->mOtherFragment:Lcom/android/settings_ex/nfc/OtherSettings;
+    invoke-static {v1}, Lcom/android/settings_ex/nfc/TapAndPaySettings;->access$200(Lcom/android/settings_ex/nfc/TapAndPaySettings;)Lcom/android/settings_ex/nfc/OtherSettings;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/settings/nfc/OtherSettings;->restoreDefaultOtherApp()Z
+    invoke-virtual {v1}, Lcom/android/settings_ex/nfc/OtherSettings;->restoreDefaultOtherApp()Z
 
     goto/16 :goto_0
 .end method

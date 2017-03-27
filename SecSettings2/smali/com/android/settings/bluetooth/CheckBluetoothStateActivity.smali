@@ -1,4 +1,4 @@
-.class public final Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;
+.class public final Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;
 .super Landroid/app/Activity;
 .source "CheckBluetoothStateActivity.java"
 
@@ -14,9 +14,9 @@
 # instance fields
 .field private final mBluetoothReceiver:Landroid/content/BroadcastReceiver;
 
-.field private mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+.field private mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
-.field private mLocalManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+.field private mLocalManager:Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;
 
 .field private final mTimeoutHandler:Landroid/os/Handler;
 
@@ -29,13 +29,13 @@
     const/4 v0, 0x0
 
     .line 64
-    sput-boolean v0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mDialogExist:Z
+    sput-boolean v0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mDialogExist:Z
 
     .line 65
-    sput-boolean v0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mIsDestroyed:Z
+    sput-boolean v0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mIsDestroyed:Z
 
     .line 66
-    sput-boolean v0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->expectingBluetoothOn:Z
+    sput-boolean v0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->expectingBluetoothOn:Z
 
     return-void
 .end method
@@ -48,18 +48,18 @@
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     .line 76
-    new-instance v0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity$1;
+    new-instance v0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity$1;-><init>(Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity$1;-><init>(Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;)V
 
-    iput-object v0, p0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mBluetoothReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mBluetoothReceiver:Landroid/content/BroadcastReceiver;
 
     .line 110
-    new-instance v0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity$2;
+    new-instance v0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity$2;-><init>(Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity$2;-><init>(Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;)V
 
-    iput-object v0, p0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mTimeoutHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mTimeoutHandler:Landroid/os/Handler;
 
     return-void
 .end method
@@ -69,7 +69,7 @@
 
     .prologue
     .line 59
-    sget-boolean v0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->expectingBluetoothOn:Z
+    sget-boolean v0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->expectingBluetoothOn:Z
 
     return v0
 .end method
@@ -79,40 +79,40 @@
 
     .prologue
     .line 59
-    sget-boolean v0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mIsDestroyed:Z
+    sget-boolean v0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mIsDestroyed:Z
 
     return v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;)V
+.method static synthetic access$200(Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;
 
     .prologue
     .line 59
-    invoke-direct {p0}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->launchDevicePicker()V
+    invoke-direct {p0}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->launchDevicePicker()V
 
     return-void
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;)Landroid/os/Handler;
+.method static synthetic access$300(Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;
 
     .prologue
     .line 59
-    iget-object v0, p0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mTimeoutHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mTimeoutHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;)Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+.method static synthetic access$400(Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;)Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;
 
     .prologue
     .line 59
-    iget-object v0, p0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     return-object v0
 .end method
@@ -123,7 +123,7 @@
 
     .prologue
     .line 59
-    sput-boolean p0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mDialogExist:Z
+    sput-boolean p0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mDialogExist:Z
 
     return p0
 .end method
@@ -135,7 +135,7 @@
     const/4 v2, 0x0
 
     .line 318
-    invoke-virtual {p0}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -219,7 +219,7 @@
 
     move-result-object v9
 
-    sget-boolean v10, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mDialogExist:Z
+    sget-boolean v10, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mDialogExist:Z
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -232,7 +232,7 @@
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 268
-    invoke-virtual {p0}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v4
 
@@ -320,13 +320,13 @@
     .line 290
     :cond_1
     :try_start_0
-    invoke-virtual {p0, v0}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 294
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->finish()V
 
     .line 295
     return-void
@@ -387,12 +387,12 @@
     if-eqz v1, :cond_0
 
     .line 251
-    sput-boolean v3, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->expectingBluetoothOn:Z
+    sput-boolean v3, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->expectingBluetoothOn:Z
 
     .line 252
-    iget-object v1, p0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mTimeoutHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mTimeoutHandler:Landroid/os/Handler;
 
-    iget-object v2, p0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mTimeoutHandler:Landroid/os/Handler;
+    iget-object v2, p0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mTimeoutHandler:Landroid/os/Handler;
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
@@ -405,13 +405,13 @@
     .line 257
     new-instance v0, Landroid/content/Intent;
 
-    const-class v1, Lcom/android/settings/bluetooth/BluetoothEnablingActivity;
+    const-class v1, Lcom/android/settings_ex/bluetooth/BluetoothEnablingActivity;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 259
     .local v0, "in":Landroid/content/Intent;
-    invoke-virtual {p0, v0}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->startActivity(Landroid/content/Intent;)V
 
     .line 263
     .end local v0    # "in":Landroid/content/Intent;
@@ -420,7 +420,7 @@
 
     .line 261
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->finish()V
 
     goto :goto_0
 .end method
@@ -448,7 +448,7 @@
 
     move-result-object v3
 
-    sget-boolean v5, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mDialogExist:Z
+    sget-boolean v5, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mDialogExist:Z
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -465,25 +465,25 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->setContentView(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->setContentView(I)V
 
     .line 135
     const/4 v1, 0x0
 
-    sput-boolean v1, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->expectingBluetoothOn:Z
+    sput-boolean v1, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->expectingBluetoothOn:Z
 
     .line 136
     const/4 v1, 0x0
 
-    sput-boolean v1, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mIsDestroyed:Z
+    sput-boolean v1, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mIsDestroyed:Z
 
     .line 138
-    sget-boolean v1, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mDialogExist:Z
+    sget-boolean v1, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mDialogExist:Z
 
     if-eqz v1, :cond_0
 
     .line 139
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->finish()V
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->finish()V
 
     .line 245
     :goto_0
@@ -493,16 +493,16 @@
     :cond_0
     const/4 v1, 0x1
 
-    sput-boolean v1, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mDialogExist:Z
+    sput-boolean v1, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mDialogExist:Z
 
     .line 143
     new-instance v18, Ljava/lang/Thread;
 
-    new-instance v1, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity$3;
+    new-instance v1, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity$3;
 
     move-object/from16 v0, p0
 
-    invoke-direct {v1, v0}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity$3;-><init>(Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;)V
+    invoke-direct {v1, v0}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity$3;-><init>(Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;)V
 
     move-object/from16 v0, v18
 
@@ -525,7 +525,7 @@
 
     .line 160
     .local v15, "isBluetoothEnabled":Z
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -605,7 +605,7 @@
 
     .line 179
     .local v7, "selectionArgsFalse":[Ljava/lang/String;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -676,7 +676,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -691,7 +691,7 @@
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
     .line 198
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->finish()V
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->finish()V
 
     goto/16 :goto_0
 
@@ -879,18 +879,18 @@
 
     .line 204
     :cond_6
-    invoke-static/range {p0 .. p0}, Lcom/android/settings/bluetooth/Utils;->getLocalBtManager(Landroid/content/Context;)Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+    invoke-static/range {p0 .. p0}, Lcom/android/settings_ex/bluetooth/Utils;->getLocalBtManager(Landroid/content/Context;)Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;
 
     move-result-object v1
 
     move-object/from16 v0, p0
 
-    iput-object v1, v0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mLocalManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+    iput-object v1, v0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mLocalManager:Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;
 
     .line 205
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mLocalManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+    iget-object v1, v0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mLocalManager:Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;
 
     if-nez v1, :cond_7
 
@@ -907,15 +907,15 @@
     :cond_7
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mLocalManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+    iget-object v1, v0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mLocalManager:Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;
 
-    invoke-virtual {v1}, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->getBluetoothAdapter()Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    invoke-virtual {v1}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;->getBluetoothAdapter()Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     move-result-object v1
 
     move-object/from16 v0, p0
 
-    iput-object v1, v0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iput-object v1, v0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     .line 212
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -947,7 +947,7 @@
 
     .line 214
     .local v9, "ChinaNalSecurityType":Ljava/lang/String;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -1010,7 +1010,7 @@
 
     if-ne v0, v1, :cond_9
 
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->isShareListenChecked()Z
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->isShareListenChecked()Z
 
     move-result v1
 
@@ -1027,18 +1027,18 @@
     .local v13, "filter":Landroid/content/IntentFilter;
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mBluetoothReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, v0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mBluetoothReceiver:Landroid/content/BroadcastReceiver;
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v1, v13}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {v0, v1, v13}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 220
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iget-object v1, v0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
-    invoke-virtual {v1}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->getBluetoothState()I
+    invoke-virtual {v1}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->getBluetoothState()I
 
     move-result v1
 
@@ -1049,15 +1049,15 @@
     .line 222
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iget-object v1, v0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
-    invoke-virtual {v1}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->enable()Z
+    invoke-virtual {v1}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->enable()Z
 
     goto/16 :goto_0
 
     .line 226
     :cond_8
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->launchDevicePicker()V
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->launchDevicePicker()V
 
     goto/16 :goto_0
 
@@ -1084,18 +1084,18 @@
     .line 238
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mBluetoothReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, v0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mBluetoothReceiver:Landroid/content/BroadcastReceiver;
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v1, v14}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {v0, v1, v14}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 239
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iget-object v1, v0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
-    invoke-virtual {v1}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->getBluetoothState()I
+    invoke-virtual {v1}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->getBluetoothState()I
 
     move-result v1
 
@@ -1104,13 +1104,13 @@
     if-ne v1, v3, :cond_a
 
     .line 240
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->processEnableResult()V
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->processEnableResult()V
 
     goto/16 :goto_0
 
     .line 242
     :cond_a
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->launchDevicePicker()V
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->launchDevicePicker()V
 
     goto/16 :goto_0
 .end method
@@ -1132,25 +1132,25 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 306
-    sput-boolean v3, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mIsDestroyed:Z
+    sput-boolean v3, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mIsDestroyed:Z
 
     .line 307
-    iget-object v1, p0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mBluetoothReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mBluetoothReceiver:Landroid/content/BroadcastReceiver;
 
     if-eqz v1, :cond_0
 
     .line 309
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mBluetoothReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mBluetoothReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 314
     :cond_0
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mTimeoutHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mTimeoutHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->removeMessages(I)V
 

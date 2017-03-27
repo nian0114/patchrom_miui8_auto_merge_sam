@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/widget/CenterMarkerSeekBar;
+.class public Lcom/android/settings_ex/widget/CenterMarkerSeekBar;
 .super Landroid/widget/SeekBar;
 .source "CenterMarkerSeekBar.java"
 
@@ -18,7 +18,7 @@
     .line 22
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lcom/android/settings/widget/CenterMarkerSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, v0}, Lcom/android/settings_ex/widget/CenterMarkerSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 23
     return-void
@@ -33,7 +33,7 @@
     .line 25
     const v0, 0x101007b
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings/widget/CenterMarkerSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings_ex/widget/CenterMarkerSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 26
     return-void
@@ -49,7 +49,7 @@
     .line 28
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/settings/widget/CenterMarkerSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/settings_ex/widget/CenterMarkerSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 29
     return-void
@@ -67,7 +67,7 @@
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/SeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 32
-    invoke-direct {p0, p1}, Lcom/android/settings/widget/CenterMarkerSeekBar;->init(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/widget/CenterMarkerSeekBar;->init(Landroid/content/Context;)V
 
     .line 33
     return-void
@@ -110,17 +110,17 @@
     const/4 v4, 0x0
 
     .line 36
-    invoke-virtual {p0}, Lcom/android/settings/widget/CenterMarkerSeekBar;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/CenterMarkerSeekBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
     .line 37
     .local v2, "resources":Landroid/content/res/Resources;
-    invoke-direct {p0, v4}, Lcom/android/settings/widget/CenterMarkerSeekBar;->colorToColorStateList(I)Landroid/content/res/ColorStateList;
+    invoke-direct {p0, v4}, Lcom/android/settings_ex/widget/CenterMarkerSeekBar;->colorToColorStateList(I)Landroid/content/res/ColorStateList;
 
     move-result-object v3
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/widget/CenterMarkerSeekBar;->setProgressTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/widget/CenterMarkerSeekBar;->setProgressTintList(Landroid/content/res/ColorStateList;)V
 
     .line 39
     const v3, 0x7f0c03b4
@@ -143,24 +143,24 @@
 
     invoke-direct {v3, v4, v4, v1, v0}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    iput-object v3, p0, Lcom/android/settings/widget/CenterMarkerSeekBar;->mRectMarker:Landroid/graphics/Rect;
+    iput-object v3, p0, Lcom/android/settings_ex/widget/CenterMarkerSeekBar;->mRectMarker:Landroid/graphics/Rect;
 
     .line 42
     new-instance v3, Landroid/graphics/Paint;
 
     invoke-direct {v3}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v3, p0, Lcom/android/settings/widget/CenterMarkerSeekBar;->mMarkerPaint:Landroid/graphics/Paint;
+    iput-object v3, p0, Lcom/android/settings_ex/widget/CenterMarkerSeekBar;->mMarkerPaint:Landroid/graphics/Paint;
 
     .line 43
-    iget-object v3, p0, Lcom/android/settings/widget/CenterMarkerSeekBar;->mMarkerPaint:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/android/settings_ex/widget/CenterMarkerSeekBar;->mMarkerPaint:Landroid/graphics/Paint;
 
     sget-object v4, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
     .line 44
-    iget-object v3, p0, Lcom/android/settings/widget/CenterMarkerSeekBar;->mMarkerPaint:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/android/settings_ex/widget/CenterMarkerSeekBar;->mMarkerPaint:Landroid/graphics/Paint;
 
     const v4, 0x7f0a011f
 
@@ -192,17 +192,17 @@
 
     move-result v1
 
-    iget v2, p0, Lcom/android/settings/widget/CenterMarkerSeekBar;->mPaddingTop:I
+    iget v2, p0, Lcom/android/settings_ex/widget/CenterMarkerSeekBar;->mPaddingTop:I
 
     sub-int/2addr v1, v2
 
-    iget v2, p0, Lcom/android/settings/widget/CenterMarkerSeekBar;->mPaddingBottom:I
+    iget v2, p0, Lcom/android/settings_ex/widget/CenterMarkerSeekBar;->mPaddingBottom:I
 
     sub-int/2addr v1, v2
 
     div-int/lit8 v1, v1, 0x2
 
-    iget-object v2, p0, Lcom/android/settings/widget/CenterMarkerSeekBar;->mRectMarker:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/android/settings_ex/widget/CenterMarkerSeekBar;->mRectMarker:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->bottom:I
 
@@ -210,7 +210,7 @@
 
     sub-int/2addr v1, v2
 
-    iget v2, p0, Lcom/android/settings/widget/CenterMarkerSeekBar;->mPaddingTop:I
+    iget v2, p0, Lcom/android/settings_ex/widget/CenterMarkerSeekBar;->mPaddingTop:I
 
     add-int v0, v1, v2
 
@@ -222,7 +222,7 @@
 
     int-to-float v1, v1
 
-    iget-object v2, p0, Lcom/android/settings/widget/CenterMarkerSeekBar;->mRectMarker:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/android/settings_ex/widget/CenterMarkerSeekBar;->mRectMarker:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->right:I
 
@@ -239,9 +239,9 @@
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
     .line 54
-    iget-object v1, p0, Lcom/android/settings/widget/CenterMarkerSeekBar;->mRectMarker:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/android/settings_ex/widget/CenterMarkerSeekBar;->mRectMarker:Landroid/graphics/Rect;
 
-    iget-object v2, p0, Lcom/android/settings/widget/CenterMarkerSeekBar;->mMarkerPaint:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/android/settings_ex/widget/CenterMarkerSeekBar;->mMarkerPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 

@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/LockscreenNotificationApplist$6;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/LockscreenNotificationApplist$6;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "LockscreenNotificationApplist.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/LockscreenNotificationApplist;
+    value = Lcom/android/settings_ex/LockscreenNotificationApplist;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 719
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -57,7 +57,7 @@
 
     .line 728
     .local v1, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v2, Lcom/android/settings/LockscreenNotificationApplist;
+    const-class v2, Lcom/android/settings_ex/LockscreenNotificationApplist;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler$26;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler$26;
 .super Ljava/lang/Object;
 .source "WifiApSwitchEnabler.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;->showDialog(I)V
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;->showDialog(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;)V
     .locals 0
 
     .prologue
     .line 906
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler$26;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler$26;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,10 +49,10 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 909
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler$26;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler$26;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;->mDialogConfigure:Lcom/android/settings/wifi/WifiApDialog;
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;->access$1400(Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;)Lcom/android/settings/wifi/WifiApDialog;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;->mDialogConfigure:Lcom/android/settings_ex/wifi/WifiApDialog;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;->access$1400(Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;)Lcom/android/settings_ex/wifi/WifiApDialog;
 
     move-result-object v0
 
@@ -66,29 +66,29 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 911
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler$26;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler$26;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;->mDialogConfigure:Lcom/android/settings/wifi/WifiApDialog;
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;->access$1400(Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;)Lcom/android/settings/wifi/WifiApDialog;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;->mDialogConfigure:Lcom/android/settings_ex/wifi/WifiApDialog;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;->access$1400(Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;)Lcom/android/settings_ex/wifi/WifiApDialog;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/WifiApDialog;->dismiss()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/wifi/WifiApDialog;->dismiss()V
 
     .line 913
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler$26;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler$26;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;->setEnabled(Z)V
 
     .line 914
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler$26;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler$26;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;->setChecked(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;->setChecked(Z)V
 
     .line 915
     return-void

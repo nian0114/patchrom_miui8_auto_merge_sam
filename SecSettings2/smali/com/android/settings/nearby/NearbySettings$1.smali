@@ -1,11 +1,11 @@
-.class Lcom/android/settings/nearby/NearbySettings$1;
+.class Lcom/android/settings_ex/nearby/NearbySettings$1;
 .super Landroid/content/BroadcastReceiver;
 .source "NearbySettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/nearby/NearbySettings;
+    value = Lcom/android/settings_ex/nearby/NearbySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nearby/NearbySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/nearby/NearbySettings;)V
+.method constructor <init>(Lcom/android/settings_ex/nearby/NearbySettings;)V
     .locals 0
 
     .prologue
     .line 505
-    iput-object p1, p0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -71,7 +71,7 @@
 
     move-result-object v22
 
-    invoke-static/range {v20 .. v22}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static/range {v20 .. v22}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 513
     const-string v20, "android.intent.action.MEDIA_MOUNTED"
@@ -122,10 +122,10 @@
 
     move-result-object v22
 
-    invoke-static/range {v20 .. v22}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static/range {v20 .. v22}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 517
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/nearby/NearbySettings$1;->isInitialStickyBroadcast()Z
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/nearby/NearbySettings$1;->isInitialStickyBroadcast()Z
 
     move-result v20
 
@@ -156,7 +156,7 @@
 
     move-result-object v22
 
-    invoke-static/range {v20 .. v22}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static/range {v20 .. v22}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
@@ -173,11 +173,11 @@
     :try_start_1
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v0, v0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     move-object/from16 v20, v0
 
-    invoke-virtual/range {v20 .. v20}, Lcom/android/settings/nearby/NearbySettings;->isExternalStorageSdMounted()Z
+    invoke-virtual/range {v20 .. v20}, Lcom/android/settings_ex/nearby/NearbySettings;->isExternalStorageSdMounted()Z
 
     move-result v20
 
@@ -186,12 +186,12 @@
     .line 526
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v0, v0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     move-object/from16 v20, v0
 
-    # getter for: Lcom/android/settings/nearby/NearbySettings;->mDownloadTo:Landroid/preference/ListPreference;
-    invoke-static/range {v20 .. v20}, Lcom/android/settings/nearby/NearbySettings;->access$000(Lcom/android/settings/nearby/NearbySettings;)Landroid/preference/ListPreference;
+    # getter for: Lcom/android/settings_ex/nearby/NearbySettings;->mDownloadTo:Landroid/preference/ListPreference;
+    invoke-static/range {v20 .. v20}, Lcom/android/settings_ex/nearby/NearbySettings;->access$000(Lcom/android/settings_ex/nearby/NearbySettings;)Landroid/preference/ListPreference;
 
     move-result-object v20
 
@@ -210,12 +210,12 @@
     .line 527
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v0, v0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     move-object/from16 v20, v0
 
-    # getter for: Lcom/android/settings/nearby/NearbySettings;->mDownloadTo:Landroid/preference/ListPreference;
-    invoke-static/range {v20 .. v20}, Lcom/android/settings/nearby/NearbySettings;->access$000(Lcom/android/settings/nearby/NearbySettings;)Landroid/preference/ListPreference;
+    # getter for: Lcom/android/settings_ex/nearby/NearbySettings;->mDownloadTo:Landroid/preference/ListPreference;
+    invoke-static/range {v20 .. v20}, Lcom/android/settings_ex/nearby/NearbySettings;->access$000(Lcom/android/settings_ex/nearby/NearbySettings;)Landroid/preference/ListPreference;
 
     move-result-object v20
 
@@ -226,12 +226,12 @@
     .line 528
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v0, v0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     move-object/from16 v20, v0
 
-    # getter for: Lcom/android/settings/nearby/NearbySettings;->mNearbyEnabler:Lcom/android/settings/nearby/NearbyEnabler;
-    invoke-static/range {v20 .. v20}, Lcom/android/settings/nearby/NearbySettings;->access$100(Lcom/android/settings/nearby/NearbySettings;)Lcom/android/settings/nearby/NearbyEnabler;
+    # getter for: Lcom/android/settings_ex/nearby/NearbySettings;->mNearbyEnabler:Lcom/android/settings_ex/nearby/NearbyEnabler;
+    invoke-static/range {v20 .. v20}, Lcom/android/settings_ex/nearby/NearbySettings;->access$100(Lcom/android/settings_ex/nearby/NearbySettings;)Lcom/android/settings_ex/nearby/NearbyEnabler;
 
     move-result-object v20
 
@@ -240,40 +240,40 @@
     .line 529
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v0, v0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     move-object/from16 v20, v0
 
-    # getter for: Lcom/android/settings/nearby/NearbySettings;->mNearbyEnabler:Lcom/android/settings/nearby/NearbyEnabler;
-    invoke-static/range {v20 .. v20}, Lcom/android/settings/nearby/NearbySettings;->access$100(Lcom/android/settings/nearby/NearbySettings;)Lcom/android/settings/nearby/NearbyEnabler;
+    # getter for: Lcom/android/settings_ex/nearby/NearbySettings;->mNearbyEnabler:Lcom/android/settings_ex/nearby/NearbyEnabler;
+    invoke-static/range {v20 .. v20}, Lcom/android/settings_ex/nearby/NearbySettings;->access$100(Lcom/android/settings_ex/nearby/NearbySettings;)Lcom/android/settings_ex/nearby/NearbyEnabler;
 
     move-result-object v20
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v0, v0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     move-object/from16 v21, v0
 
-    # getter for: Lcom/android/settings/nearby/NearbySettings;->mDownloadTo:Landroid/preference/ListPreference;
-    invoke-static/range {v21 .. v21}, Lcom/android/settings/nearby/NearbySettings;->access$000(Lcom/android/settings/nearby/NearbySettings;)Landroid/preference/ListPreference;
+    # getter for: Lcom/android/settings_ex/nearby/NearbySettings;->mDownloadTo:Landroid/preference/ListPreference;
+    invoke-static/range {v21 .. v21}, Lcom/android/settings_ex/nearby/NearbySettings;->access$000(Lcom/android/settings_ex/nearby/NearbySettings;)Landroid/preference/ListPreference;
 
     move-result-object v21
 
     const-string v22, "0"
 
-    invoke-virtual/range {v20 .. v22}, Lcom/android/settings/nearby/NearbyEnabler;->onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
+    invoke-virtual/range {v20 .. v22}, Lcom/android/settings_ex/nearby/NearbyEnabler;->onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
 
     .line 532
     :cond_3
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v0, v0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     move-object/from16 v20, v0
 
-    # getter for: Lcom/android/settings/nearby/NearbySettings;->mDownloadTo:Landroid/preference/ListPreference;
-    invoke-static/range {v20 .. v20}, Lcom/android/settings/nearby/NearbySettings;->access$000(Lcom/android/settings/nearby/NearbySettings;)Landroid/preference/ListPreference;
+    # getter for: Lcom/android/settings_ex/nearby/NearbySettings;->mDownloadTo:Landroid/preference/ListPreference;
+    invoke-static/range {v20 .. v20}, Lcom/android/settings_ex/nearby/NearbySettings;->access$000(Lcom/android/settings_ex/nearby/NearbySettings;)Landroid/preference/ListPreference;
 
     move-result-object v20
 
@@ -294,12 +294,12 @@
     :cond_4
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v0, v0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     move-object/from16 v20, v0
 
-    # getter for: Lcom/android/settings/nearby/NearbySettings;->mDownloadTo:Landroid/preference/ListPreference;
-    invoke-static/range {v20 .. v20}, Lcom/android/settings/nearby/NearbySettings;->access$000(Lcom/android/settings/nearby/NearbySettings;)Landroid/preference/ListPreference;
+    # getter for: Lcom/android/settings_ex/nearby/NearbySettings;->mDownloadTo:Landroid/preference/ListPreference;
+    invoke-static/range {v20 .. v20}, Lcom/android/settings_ex/nearby/NearbySettings;->access$000(Lcom/android/settings_ex/nearby/NearbySettings;)Landroid/preference/ListPreference;
 
     move-result-object v20
 
@@ -328,12 +328,12 @@
     .line 634
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v0, v0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     move-object/from16 v20, v0
 
-    # invokes: Lcom/android/settings/nearby/NearbySettings;->openSearchDetailMenu()V
-    invoke-static/range {v20 .. v20}, Lcom/android/settings/nearby/NearbySettings;->access$600(Lcom/android/settings/nearby/NearbySettings;)V
+    # invokes: Lcom/android/settings_ex/nearby/NearbySettings;->openSearchDetailMenu()V
+    invoke-static/range {v20 .. v20}, Lcom/android/settings_ex/nearby/NearbySettings;->access$600(Lcom/android/settings_ex/nearby/NearbySettings;)V
     :try_end_2
     .catch Landroid/content/res/Resources$NotFoundException; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
@@ -371,7 +371,7 @@
 
     move-result-object v22
 
-    invoke-static/range {v20 .. v22}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static/range {v20 .. v22}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -382,11 +382,11 @@
     :try_start_3
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v0, v0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     move-object/from16 v20, v0
 
-    invoke-virtual/range {v20 .. v20}, Lcom/android/settings/nearby/NearbySettings;->isExternalStorageSdMounted()Z
+    invoke-virtual/range {v20 .. v20}, Lcom/android/settings_ex/nearby/NearbySettings;->isExternalStorageSdMounted()Z
 
     move-result v20
 
@@ -395,12 +395,12 @@
     .line 540
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v0, v0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     move-object/from16 v20, v0
 
-    # getter for: Lcom/android/settings/nearby/NearbySettings;->mDownloadTo:Landroid/preference/ListPreference;
-    invoke-static/range {v20 .. v20}, Lcom/android/settings/nearby/NearbySettings;->access$000(Lcom/android/settings/nearby/NearbySettings;)Landroid/preference/ListPreference;
+    # getter for: Lcom/android/settings_ex/nearby/NearbySettings;->mDownloadTo:Landroid/preference/ListPreference;
+    invoke-static/range {v20 .. v20}, Lcom/android/settings_ex/nearby/NearbySettings;->access$000(Lcom/android/settings_ex/nearby/NearbySettings;)Landroid/preference/ListPreference;
 
     move-result-object v20
 
@@ -444,7 +444,7 @@
 
     move-result-object v22
 
-    invoke-static/range {v20 .. v22}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static/range {v20 .. v22}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 544
     invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
@@ -486,7 +486,7 @@
 
     move-result-object v22
 
-    invoke-static/range {v20 .. v22}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static/range {v20 .. v22}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -542,7 +542,7 @@
 
     move-result-object v22
 
-    invoke-static/range {v20 .. v22}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static/range {v20 .. v22}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 549
     const-string v20, "ACCEPTLIST"
@@ -578,12 +578,12 @@
     .line 555
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v0, v0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     move-object/from16 v20, v0
 
-    # getter for: Lcom/android/settings/nearby/NearbySettings;->mAcceptDevice:Lcom/android/settings/nearby/AcceptListPreference;
-    invoke-static/range {v20 .. v20}, Lcom/android/settings/nearby/NearbySettings;->access$200(Lcom/android/settings/nearby/NearbySettings;)Lcom/android/settings/nearby/AcceptListPreference;
+    # getter for: Lcom/android/settings_ex/nearby/NearbySettings;->mAcceptDevice:Lcom/android/settings_ex/nearby/AcceptListPreference;
+    invoke-static/range {v20 .. v20}, Lcom/android/settings_ex/nearby/NearbySettings;->access$200(Lcom/android/settings_ex/nearby/NearbySettings;)Lcom/android/settings_ex/nearby/AcceptListPreference;
 
     move-result-object v19
 
@@ -650,7 +650,7 @@
 
     move-result-object v22
 
-    invoke-static/range {v20 .. v22}, Lcom/android/settings/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static/range {v20 .. v22}, Lcom/android/settings_ex/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 566
     aget v20, v12, v11
@@ -678,12 +678,12 @@
     :cond_8
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v0, v0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     move-object/from16 v20, v0
 
-    # getter for: Lcom/android/settings/nearby/NearbySettings;->mRejectDevice:Lcom/android/settings/nearby/RejectListPreference;
-    invoke-static/range {v20 .. v20}, Lcom/android/settings/nearby/NearbySettings;->access$300(Lcom/android/settings/nearby/NearbySettings;)Lcom/android/settings/nearby/RejectListPreference;
+    # getter for: Lcom/android/settings_ex/nearby/NearbySettings;->mRejectDevice:Lcom/android/settings_ex/nearby/RejectListPreference;
+    invoke-static/range {v20 .. v20}, Lcom/android/settings_ex/nearby/NearbySettings;->access$300(Lcom/android/settings_ex/nearby/NearbySettings;)Lcom/android/settings_ex/nearby/RejectListPreference;
 
     move-result-object v19
 
@@ -696,12 +696,12 @@
     :cond_9
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v0, v0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     move-object/from16 v20, v0
 
-    # getter for: Lcom/android/settings/nearby/NearbySettings;->mNearbyEnabler:Lcom/android/settings/nearby/NearbyEnabler;
-    invoke-static/range {v20 .. v20}, Lcom/android/settings/nearby/NearbySettings;->access$100(Lcom/android/settings/nearby/NearbySettings;)Lcom/android/settings/nearby/NearbyEnabler;
+    # getter for: Lcom/android/settings_ex/nearby/NearbySettings;->mNearbyEnabler:Lcom/android/settings_ex/nearby/NearbyEnabler;
+    invoke-static/range {v20 .. v20}, Lcom/android/settings_ex/nearby/NearbySettings;->access$100(Lcom/android/settings_ex/nearby/NearbySettings;)Lcom/android/settings_ex/nearby/NearbyEnabler;
 
     move-result-object v20
 
@@ -711,7 +711,7 @@
 
     move-object/from16 v2, v16
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/nearby/NearbyEnabler;->onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/nearby/NearbyEnabler;->onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
 
     goto/16 :goto_1
 
@@ -769,7 +769,7 @@
 
     move-result-object v22
 
-    invoke-static/range {v20 .. v22}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static/range {v20 .. v22}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 575
     const-string v20, "LIST"
@@ -793,16 +793,16 @@
     .line 578
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v0, v0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     move-object/from16 v20, v0
 
-    # getter for: Lcom/android/settings/nearby/NearbySettings;->mAcceptDevice:Lcom/android/settings/nearby/AcceptListPreference;
-    invoke-static/range {v20 .. v20}, Lcom/android/settings/nearby/NearbySettings;->access$200(Lcom/android/settings/nearby/NearbySettings;)Lcom/android/settings/nearby/AcceptListPreference;
+    # getter for: Lcom/android/settings_ex/nearby/NearbySettings;->mAcceptDevice:Lcom/android/settings_ex/nearby/AcceptListPreference;
+    invoke-static/range {v20 .. v20}, Lcom/android/settings_ex/nearby/NearbySettings;->access$200(Lcom/android/settings_ex/nearby/NearbySettings;)Lcom/android/settings_ex/nearby/AcceptListPreference;
 
     move-result-object v20
 
-    invoke-virtual/range {v20 .. v20}, Lcom/android/settings/nearby/AcceptListPreference;->updateDialog()Z
+    invoke-virtual/range {v20 .. v20}, Lcom/android/settings_ex/nearby/AcceptListPreference;->updateDialog()Z
 
     move-result v20
 
@@ -811,16 +811,16 @@
     .line 579
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v0, v0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     move-object/from16 v20, v0
 
-    # getter for: Lcom/android/settings/nearby/NearbySettings;->mAcceptDevice:Lcom/android/settings/nearby/AcceptListPreference;
-    invoke-static/range {v20 .. v20}, Lcom/android/settings/nearby/NearbySettings;->access$200(Lcom/android/settings/nearby/NearbySettings;)Lcom/android/settings/nearby/AcceptListPreference;
+    # getter for: Lcom/android/settings_ex/nearby/NearbySettings;->mAcceptDevice:Lcom/android/settings_ex/nearby/AcceptListPreference;
+    invoke-static/range {v20 .. v20}, Lcom/android/settings_ex/nearby/NearbySettings;->access$200(Lcom/android/settings_ex/nearby/NearbySettings;)Lcom/android/settings_ex/nearby/AcceptListPreference;
 
     move-result-object v20
 
-    invoke-virtual/range {v20 .. v20}, Lcom/android/settings/nearby/AcceptListPreference;->getDialog()Landroid/app/Dialog;
+    invoke-virtual/range {v20 .. v20}, Lcom/android/settings_ex/nearby/AcceptListPreference;->getDialog()Landroid/app/Dialog;
 
     move-result-object v7
 
@@ -859,27 +859,27 @@
     if-eqz v15, :cond_5
 
     .line 588
-    new-instance v14, Lcom/android/settings/nearby/ListItemListener;
+    new-instance v14, Lcom/android/settings_ex/nearby/ListItemListener;
 
     move-object/from16 v0, v18
 
-    invoke-direct {v14, v0}, Lcom/android/settings/nearby/ListItemListener;-><init>(Landroid/widget/Button;)V
+    invoke-direct {v14, v0}, Lcom/android/settings_ex/nearby/ListItemListener;-><init>(Landroid/widget/Button;)V
 
     .line 590
-    .local v14, "listItemListener":Lcom/android/settings/nearby/ListItemListener;
+    .local v14, "listItemListener":Lcom/android/settings_ex/nearby/ListItemListener;
     invoke-virtual {v15, v14}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 592
-    new-instance v6, Lcom/android/settings/nearby/DeleteButtonListener;
+    new-instance v6, Lcom/android/settings_ex/nearby/DeleteButtonListener;
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v0, v0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     move-object/from16 v20, v0
 
-    # getter for: Lcom/android/settings/nearby/NearbySettings;->mContext:Landroid/content/Context;
-    invoke-static/range {v20 .. v20}, Lcom/android/settings/nearby/NearbySettings;->access$400(Lcom/android/settings/nearby/NearbySettings;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/nearby/NearbySettings;->mContext:Landroid/content/Context;
+    invoke-static/range {v20 .. v20}, Lcom/android/settings_ex/nearby/NearbySettings;->access$400(Lcom/android/settings_ex/nearby/NearbySettings;)Landroid/content/Context;
 
     move-result-object v20
 
@@ -889,10 +889,10 @@
 
     move/from16 v1, v21
 
-    invoke-direct {v6, v14, v7, v0, v1}, Lcom/android/settings/nearby/DeleteButtonListener;-><init>(Lcom/android/settings/nearby/ListItemListener;Landroid/app/Dialog;Landroid/content/Context;Z)V
+    invoke-direct {v6, v14, v7, v0, v1}, Lcom/android/settings_ex/nearby/DeleteButtonListener;-><init>(Lcom/android/settings_ex/nearby/ListItemListener;Landroid/app/Dialog;Landroid/content/Context;Z)V
 
     .line 594
-    .local v6, "deletebuttonlistener":Lcom/android/settings/nearby/DeleteButtonListener;
+    .local v6, "deletebuttonlistener":Lcom/android/settings_ex/nearby/DeleteButtonListener;
     move-object/from16 v0, v18
 
     invoke-virtual {v0, v6}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
@@ -900,24 +900,24 @@
     goto/16 :goto_1
 
     .line 599
-    .end local v6    # "deletebuttonlistener":Lcom/android/settings/nearby/DeleteButtonListener;
+    .end local v6    # "deletebuttonlistener":Lcom/android/settings_ex/nearby/DeleteButtonListener;
     .end local v7    # "dialog":Landroid/app/AlertDialog;
-    .end local v14    # "listItemListener":Lcom/android/settings/nearby/ListItemListener;
+    .end local v14    # "listItemListener":Lcom/android/settings_ex/nearby/ListItemListener;
     .end local v15    # "listView":Landroid/widget/ListView;
     .end local v18    # "positiveButton":Landroid/widget/Button;
     :cond_b
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v0, v0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     move-object/from16 v20, v0
 
-    # getter for: Lcom/android/settings/nearby/NearbySettings;->mRejectDevice:Lcom/android/settings/nearby/RejectListPreference;
-    invoke-static/range {v20 .. v20}, Lcom/android/settings/nearby/NearbySettings;->access$300(Lcom/android/settings/nearby/NearbySettings;)Lcom/android/settings/nearby/RejectListPreference;
+    # getter for: Lcom/android/settings_ex/nearby/NearbySettings;->mRejectDevice:Lcom/android/settings_ex/nearby/RejectListPreference;
+    invoke-static/range {v20 .. v20}, Lcom/android/settings_ex/nearby/NearbySettings;->access$300(Lcom/android/settings_ex/nearby/NearbySettings;)Lcom/android/settings_ex/nearby/RejectListPreference;
 
     move-result-object v20
 
-    invoke-virtual/range {v20 .. v20}, Lcom/android/settings/nearby/RejectListPreference;->updateDialog()Z
+    invoke-virtual/range {v20 .. v20}, Lcom/android/settings_ex/nearby/RejectListPreference;->updateDialog()Z
 
     move-result v20
 
@@ -926,16 +926,16 @@
     .line 600
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v0, v0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     move-object/from16 v20, v0
 
-    # getter for: Lcom/android/settings/nearby/NearbySettings;->mRejectDevice:Lcom/android/settings/nearby/RejectListPreference;
-    invoke-static/range {v20 .. v20}, Lcom/android/settings/nearby/NearbySettings;->access$300(Lcom/android/settings/nearby/NearbySettings;)Lcom/android/settings/nearby/RejectListPreference;
+    # getter for: Lcom/android/settings_ex/nearby/NearbySettings;->mRejectDevice:Lcom/android/settings_ex/nearby/RejectListPreference;
+    invoke-static/range {v20 .. v20}, Lcom/android/settings_ex/nearby/NearbySettings;->access$300(Lcom/android/settings_ex/nearby/NearbySettings;)Lcom/android/settings_ex/nearby/RejectListPreference;
 
     move-result-object v20
 
-    invoke-virtual/range {v20 .. v20}, Lcom/android/settings/nearby/RejectListPreference;->getDialog()Landroid/app/Dialog;
+    invoke-virtual/range {v20 .. v20}, Lcom/android/settings_ex/nearby/RejectListPreference;->getDialog()Landroid/app/Dialog;
 
     move-result-object v7
 
@@ -974,27 +974,27 @@
     if-eqz v15, :cond_5
 
     .line 609
-    new-instance v14, Lcom/android/settings/nearby/ListItemListener;
+    new-instance v14, Lcom/android/settings_ex/nearby/ListItemListener;
 
     move-object/from16 v0, v18
 
-    invoke-direct {v14, v0}, Lcom/android/settings/nearby/ListItemListener;-><init>(Landroid/widget/Button;)V
+    invoke-direct {v14, v0}, Lcom/android/settings_ex/nearby/ListItemListener;-><init>(Landroid/widget/Button;)V
 
     .line 611
-    .restart local v14    # "listItemListener":Lcom/android/settings/nearby/ListItemListener;
+    .restart local v14    # "listItemListener":Lcom/android/settings_ex/nearby/ListItemListener;
     invoke-virtual {v15, v14}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 613
-    new-instance v6, Lcom/android/settings/nearby/DeleteButtonListener;
+    new-instance v6, Lcom/android/settings_ex/nearby/DeleteButtonListener;
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v0, v0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     move-object/from16 v20, v0
 
-    # getter for: Lcom/android/settings/nearby/NearbySettings;->mContext:Landroid/content/Context;
-    invoke-static/range {v20 .. v20}, Lcom/android/settings/nearby/NearbySettings;->access$400(Lcom/android/settings/nearby/NearbySettings;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/nearby/NearbySettings;->mContext:Landroid/content/Context;
+    invoke-static/range {v20 .. v20}, Lcom/android/settings_ex/nearby/NearbySettings;->access$400(Lcom/android/settings_ex/nearby/NearbySettings;)Landroid/content/Context;
 
     move-result-object v20
 
@@ -1004,10 +1004,10 @@
 
     move/from16 v1, v21
 
-    invoke-direct {v6, v14, v7, v0, v1}, Lcom/android/settings/nearby/DeleteButtonListener;-><init>(Lcom/android/settings/nearby/ListItemListener;Landroid/app/Dialog;Landroid/content/Context;Z)V
+    invoke-direct {v6, v14, v7, v0, v1}, Lcom/android/settings_ex/nearby/DeleteButtonListener;-><init>(Lcom/android/settings_ex/nearby/ListItemListener;Landroid/app/Dialog;Landroid/content/Context;Z)V
 
     .line 615
-    .restart local v6    # "deletebuttonlistener":Lcom/android/settings/nearby/DeleteButtonListener;
+    .restart local v6    # "deletebuttonlistener":Lcom/android/settings_ex/nearby/DeleteButtonListener;
     move-object/from16 v0, v18
 
     invoke-virtual {v0, v6}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
@@ -1016,9 +1016,9 @@
 
     .line 623
     .end local v4    # "bIsAcceptedList":Z
-    .end local v6    # "deletebuttonlistener":Lcom/android/settings/nearby/DeleteButtonListener;
+    .end local v6    # "deletebuttonlistener":Lcom/android/settings_ex/nearby/DeleteButtonListener;
     .end local v7    # "dialog":Landroid/app/AlertDialog;
-    .end local v14    # "listItemListener":Lcom/android/settings/nearby/ListItemListener;
+    .end local v14    # "listItemListener":Lcom/android/settings_ex/nearby/ListItemListener;
     .end local v15    # "listView":Landroid/widget/ListView;
     .end local v18    # "positiveButton":Landroid/widget/Button;
     :cond_c
@@ -1035,11 +1035,11 @@
     .line 624
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v0, v0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     move-object/from16 v20, v0
 
-    invoke-virtual/range {v20 .. v20}, Lcom/android/settings/nearby/NearbySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {v20 .. v20}, Lcom/android/settings_ex/nearby/NearbySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v20
 
@@ -1076,12 +1076,12 @@
     .line 628
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/nearby/NearbySettings$1;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v0, v0, Lcom/android/settings_ex/nearby/NearbySettings$1;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     move-object/from16 v20, v0
 
-    # getter for: Lcom/android/settings/nearby/NearbySettings;->mHandler:Landroid/os/Handler;
-    invoke-static/range {v20 .. v20}, Lcom/android/settings/nearby/NearbySettings;->access$500(Lcom/android/settings/nearby/NearbySettings;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/nearby/NearbySettings;->mHandler:Landroid/os/Handler;
+    invoke-static/range {v20 .. v20}, Lcom/android/settings_ex/nearby/NearbySettings;->access$500(Lcom/android/settings_ex/nearby/NearbySettings;)Landroid/os/Handler;
 
     move-result-object v20
 

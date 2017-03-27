@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment$1;
+.class Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment$1;
 .super Landroid/content/BroadcastReceiver;
 .source "NotificationReminderPreferenceFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;
+    value = Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;)V
     .locals 0
 
     .prologue
     .line 100
-    iput-object p1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -53,7 +53,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 106
-    sget-object v1, Lcom/android/settings/accessibility/notificationreminder/GlobalConstant;->INTENT_NOTIFICATION_START_SREVICE_ACTION:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/accessibility/notificationreminder/GlobalConstant;->INTENT_NOTIFICATION_START_SREVICE_ACTION:Ljava/lang/String;
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -70,7 +70,7 @@
 
     const-string v2, "Notification Reminder2 Service start broadcast received"
 
-    invoke-static {v1, v2}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 108
     invoke-virtual {p1, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
@@ -82,7 +82,7 @@
 
     .line 109
     :cond_1
-    sget-object v1, Lcom/android/settings/accessibility/notificationreminder/GlobalConstant;->INTENT_NOTIFICATION_STOP_SREVICE_ACTION:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/accessibility/notificationreminder/GlobalConstant;->INTENT_NOTIFICATION_STOP_SREVICE_ACTION:Ljava/lang/String;
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -99,7 +99,7 @@
 
     const-string v2, "Notification Reminder2 Service stop broadcast receive"
 
-    invoke-static {v1, v2}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 111
     invoke-virtual {p1, v0}, Landroid/content/Context;->stopService(Landroid/content/Intent;)Z

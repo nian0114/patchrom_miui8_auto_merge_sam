@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiAuthFailWarningDialog$2;
+.class Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog$2;
 .super Ljava/lang/Object;
 .source "WifiAuthFailWarningDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiAuthFailWarningDialog;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiAuthFailWarningDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog;
 
 .field final synthetic val$nId:I
 
@@ -26,16 +26,16 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiAuthFailWarningDialog;II)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog;II)V
     .locals 0
 
     .prologue
     .line 109
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiAuthFailWarningDialog$2;->this$0:Lcom/android/settings/wifi/WifiAuthFailWarningDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog$2;->this$0:Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog;
 
-    iput p2, p0, Lcom/android/settings/wifi/WifiAuthFailWarningDialog$2;->val$reason:I
+    iput p2, p0, Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog$2;->val$reason:I
 
-    iput p3, p0, Lcom/android/settings/wifi/WifiAuthFailWarningDialog$2;->val$nId:I
+    iput p3, p0, Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog$2;->val$nId:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,10 +51,10 @@
 
     .prologue
     .line 111
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiAuthFailWarningDialog$2;->this$0:Lcom/android/settings/wifi/WifiAuthFailWarningDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog$2;->this$0:Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiAuthFailWarningDialog;->mAuthFailDialog:Landroid/app/AlertDialog;
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiAuthFailWarningDialog;->access$000(Lcom/android/settings/wifi/WifiAuthFailWarningDialog;)Landroid/app/AlertDialog;
+    # getter for: Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog;->mAuthFailDialog:Landroid/app/AlertDialog;
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog;->access$000(Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog;)Landroid/app/AlertDialog;
 
     move-result-object v1
 
@@ -89,34 +89,34 @@
     .line 117
     const-string v1, "changeReason"
 
-    iget v2, p0, Lcom/android/settings/wifi/WifiAuthFailWarningDialog$2;->val$reason:I
+    iget v2, p0, Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog$2;->val$reason:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 118
     const-string v1, "wifi_auth_fail_nId"
 
-    iget v2, p0, Lcom/android/settings/wifi/WifiAuthFailWarningDialog$2;->val$nId:I
+    iget v2, p0, Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog$2;->val$nId:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 119
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiAuthFailWarningDialog$2;->this$0:Lcom/android/settings/wifi/WifiAuthFailWarningDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog$2;->this$0:Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog;
 
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2, v0}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/wifi/WifiAuthFailWarningDialog;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 122
     .end local v0    # "WifiSettingsIntent":Landroid/content/Intent;
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiAuthFailWarningDialog$2;->this$0:Lcom/android/settings/wifi/WifiAuthFailWarningDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog$2;->this$0:Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog;
 
-    invoke-virtual {v1}, Lcom/android/settings/wifi/WifiAuthFailWarningDialog;->finish()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog;->finish()V
 
     .line 123
     return-void

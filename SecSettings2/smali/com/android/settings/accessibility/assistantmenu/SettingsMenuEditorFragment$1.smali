@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$1;
+.class Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$1;
 .super Landroid/os/Handler;
 .source "SettingsMenuEditorFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    value = Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
     .locals 0
 
     .prologue
     .line 183
-    iput-object p1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$1;->this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$1;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -49,23 +49,23 @@
 
     .line 188
     :pswitch_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$1;->this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$1;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    check-cast v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    check-cast v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
-    # invokes: Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GridViewScroll(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;)V
-    invoke-static {v1, v0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->access$000(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;)V
+    # invokes: Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GridViewScroll(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;)V
+    invoke-static {v1, v0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->access$000(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;)V
 
     goto :goto_0
 
     .line 191
     :pswitch_1
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$1;->this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$1;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
-    # invokes: Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->AfterTranslateAnimationEnd()V
-    invoke-static {v0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->access$100(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
+    # invokes: Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->AfterTranslateAnimationEnd()V
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->access$100(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
 
     goto :goto_0
 

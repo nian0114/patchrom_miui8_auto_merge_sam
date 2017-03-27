@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/DisplaySettings$11;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/DisplaySettings$11;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "DisplaySettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DisplaySettings;
+    value = Lcom/android/settings_ex/DisplaySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 1730
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -69,8 +69,8 @@
 
     .line 1755
     :cond_0
-    # invokes: Lcom/android/settings/DisplaySettings;->isLiftToWakeAvailable(Landroid/content/Context;)Z
-    invoke-static {p1}, Lcom/android/settings/DisplaySettings;->access$1000(Landroid/content/Context;)Z
+    # invokes: Lcom/android/settings_ex/DisplaySettings;->isLiftToWakeAvailable(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/DisplaySettings;->access$1000(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -107,7 +107,7 @@
 
     const-string v2, "ATT"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v3
 
@@ -140,7 +140,7 @@
     :cond_4
     const-string v2, "VZW"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v3
 
@@ -162,7 +162,7 @@
 
     .line 1781
     :cond_5
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v2
 
@@ -199,11 +199,11 @@
 
     .line 1798
     :cond_8
-    sget-boolean v2, Lcom/android/settings/DisplaySettings;->mDualFolderType:Z
+    sget-boolean v2, Lcom/android/settings_ex/DisplaySettings;->mDualFolderType:Z
 
     if-nez v2, :cond_13
 
-    sget-boolean v2, Lcom/android/settings/DisplaySettings;->mSupportFolderType:Z
+    sget-boolean v2, Lcom/android/settings_ex/DisplaySettings;->mSupportFolderType:Z
 
     if-eqz v2, :cond_13
 
@@ -224,8 +224,8 @@
 
     move-result-object v2
 
-    # invokes: Lcom/android/settings/DisplaySettings;->isTapToWakeAvailable(Landroid/content/res/Resources;)Z
-    invoke-static {v2}, Lcom/android/settings/DisplaySettings;->access$1100(Landroid/content/res/Resources;)Z
+    # invokes: Lcom/android/settings_ex/DisplaySettings;->isTapToWakeAvailable(Landroid/content/res/Resources;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/DisplaySettings;->access$1100(Landroid/content/res/Resources;)Z
 
     move-result v2
 
@@ -242,8 +242,8 @@
 
     move-result-object v2
 
-    # invokes: Lcom/android/settings/DisplaySettings;->isCameraGestureAvailable(Landroid/content/res/Resources;)Z
-    invoke-static {v2}, Lcom/android/settings/DisplaySettings;->access$1200(Landroid/content/res/Resources;)Z
+    # invokes: Lcom/android/settings_ex/DisplaySettings;->isCameraGestureAvailable(Landroid/content/res/Resources;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/DisplaySettings;->access$1200(Landroid/content/res/Resources;)Z
 
     move-result v2
 
@@ -260,8 +260,8 @@
 
     move-result-object v2
 
-    # invokes: Lcom/android/settings/DisplaySettings;->isCameraDoubleTapPowerGestureAvailable(Landroid/content/res/Resources;)Z
-    invoke-static {v2}, Lcom/android/settings/DisplaySettings;->access$1300(Landroid/content/res/Resources;)Z
+    # invokes: Lcom/android/settings_ex/DisplaySettings;->isCameraDoubleTapPowerGestureAvailable(Landroid/content/res/Resources;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/DisplaySettings;->access$1300(Landroid/content/res/Resources;)Z
 
     move-result v2
 
@@ -274,7 +274,7 @@
 
     .line 1819
     :cond_c
-    invoke-static {p1}, Lcom/android/settings/Utils;->isSupportLightSensor(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isSupportLightSensor(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -282,7 +282,7 @@
 
     .line 1823
     :goto_1
-    invoke-static {}, Lcom/android/settings/Utils;->isT4RModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isT4RModel()Z
 
     move-result v2
 
@@ -385,7 +385,7 @@
     :cond_10
     const-string v2, "com.samsung.android.app.aodservice"
 
-    invoke-static {p1, v2}, Lcom/android/settings/Utils;->isPackageExists(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v2}, Lcom/android/settings_ex/Utils;->isPackageExists(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v2
 
@@ -416,7 +416,7 @@
     .line 1802
     .end local v1    # "str":Ljava/lang/String;
     :cond_13
-    sget-boolean v2, Lcom/android/settings/DisplaySettings;->mDualFolderType:Z
+    sget-boolean v2, Lcom/android/settings_ex/DisplaySettings;->mDualFolderType:Z
 
     if-nez v2, :cond_9
 
@@ -476,7 +476,7 @@
 
     .line 1738
     .local v1, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v2, Lcom/android/settings/DisplaySettings;
+    const-class v2, Lcom/android/settings_ex/DisplaySettings;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

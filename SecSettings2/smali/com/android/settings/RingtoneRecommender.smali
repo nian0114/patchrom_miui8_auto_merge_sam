@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/RingtoneRecommender;
+.class public Lcom/android/settings_ex/RingtoneRecommender;
 .super Ljava/lang/Object;
 .source "RingtoneRecommender.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/RingtoneRecommender$OnHighlightResultListener;
+        Lcom/android/settings_ex/RingtoneRecommender$OnHighlightResultListener;
     }
 .end annotation
 
@@ -14,7 +14,7 @@
 # instance fields
 .field public mIsOpen:Z
 
-.field private mListener:Lcom/android/settings/RingtoneRecommender$OnHighlightResultListener;
+.field private mListener:Lcom/android/settings_ex/RingtoneRecommender$OnHighlightResultListener;
 
 .field private mMode:I
 
@@ -32,40 +32,40 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 104
-    iput-boolean v0, p0, Lcom/android/settings/RingtoneRecommender;->mIsOpen:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/RingtoneRecommender;->mIsOpen:Z
 
     .line 106
-    iput v0, p0, Lcom/android/settings/RingtoneRecommender;->mMode:I
+    iput v0, p0, Lcom/android/settings_ex/RingtoneRecommender;->mMode:I
 
     .line 145
     new-instance v0, Lcom/samsung/audio/Smat;
 
     invoke-direct {v0}, Lcom/samsung/audio/Smat;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/RingtoneRecommender;->mSmat:Lcom/samsung/audio/Smat;
+    iput-object v0, p0, Lcom/android/settings_ex/RingtoneRecommender;->mSmat:Lcom/samsung/audio/Smat;
 
     .line 146
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/RingtoneRecommender;)Lcom/samsung/audio/Smat;
+.method static synthetic access$000(Lcom/android/settings_ex/RingtoneRecommender;)Lcom/samsung/audio/Smat;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/RingtoneRecommender;
+    .param p0, "x0"    # Lcom/android/settings_ex/RingtoneRecommender;
 
     .prologue
     .line 30
-    iget-object v0, p0, Lcom/android/settings/RingtoneRecommender;->mSmat:Lcom/samsung/audio/Smat;
+    iget-object v0, p0, Lcom/android/settings_ex/RingtoneRecommender;->mSmat:Lcom/samsung/audio/Smat;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/RingtoneRecommender;)Lcom/android/settings/RingtoneRecommender$OnHighlightResultListener;
+.method static synthetic access$100(Lcom/android/settings_ex/RingtoneRecommender;)Lcom/android/settings_ex/RingtoneRecommender$OnHighlightResultListener;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/RingtoneRecommender;
+    .param p0, "x0"    # Lcom/android/settings_ex/RingtoneRecommender;
 
     .prologue
     .line 30
-    iget-object v0, p0, Lcom/android/settings/RingtoneRecommender;->mListener:Lcom/android/settings/RingtoneRecommender$OnHighlightResultListener;
+    iget-object v0, p0, Lcom/android/settings_ex/RingtoneRecommender;->mListener:Lcom/android/settings_ex/RingtoneRecommender$OnHighlightResultListener;
 
     return-object v0
 .end method
@@ -75,7 +75,7 @@
 
     .prologue
     .line 250
-    iget-object v1, p0, Lcom/android/settings/RingtoneRecommender;->mSmat:Lcom/samsung/audio/Smat;
+    iget-object v1, p0, Lcom/android/settings_ex/RingtoneRecommender;->mSmat:Lcom/samsung/audio/Smat;
 
     invoke-virtual {v1}, Lcom/samsung/audio/Smat;->extract()I
 
@@ -109,13 +109,13 @@
     if-nez v0, :cond_0
 
     .line 253
-    new-instance v1, Lcom/android/settings/RingtoneRecommender$1;
+    new-instance v1, Lcom/android/settings_ex/RingtoneRecommender$1;
 
     const-string v2, "Recommender thread"
 
-    invoke-direct {v1, p0, v2}, Lcom/android/settings/RingtoneRecommender$1;-><init>(Lcom/android/settings/RingtoneRecommender;Ljava/lang/String;)V
+    invoke-direct {v1, p0, v2}, Lcom/android/settings_ex/RingtoneRecommender$1;-><init>(Lcom/android/settings_ex/RingtoneRecommender;Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lcom/android/settings/RingtoneRecommender$1;->start()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/RingtoneRecommender$1;->start()V
 
     .line 290
     const/4 v1, 0x1
@@ -151,7 +151,7 @@
 
     move-result-object v2
 
-    iget-boolean v3, p0, Lcom/android/settings/RingtoneRecommender;->mIsOpen:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/RingtoneRecommender;->mIsOpen:Z
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -164,12 +164,12 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 233
-    iget-boolean v1, p0, Lcom/android/settings/RingtoneRecommender;->mIsOpen:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/RingtoneRecommender;->mIsOpen:Z
 
     if-eqz v1, :cond_0
 
     .line 234
-    iget-object v1, p0, Lcom/android/settings/RingtoneRecommender;->mSmat:Lcom/samsung/audio/Smat;
+    iget-object v1, p0, Lcom/android/settings_ex/RingtoneRecommender;->mSmat:Lcom/samsung/audio/Smat;
 
     invoke-virtual {v1}, Lcom/samsung/audio/Smat;->deinit()I
 
@@ -178,12 +178,12 @@
     if-nez v1, :cond_0
 
     .line 235
-    iput-boolean v0, p0, Lcom/android/settings/RingtoneRecommender;->mIsOpen:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/RingtoneRecommender;->mIsOpen:Z
 
     .line 236
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/RingtoneRecommender;->mListener:Lcom/android/settings/RingtoneRecommender$OnHighlightResultListener;
+    iput-object v0, p0, Lcom/android/settings_ex/RingtoneRecommender;->mListener:Lcom/android/settings_ex/RingtoneRecommender$OnHighlightResultListener;
 
     .line 237
     const/4 v0, 0x1
@@ -193,21 +193,21 @@
     return v0
 .end method
 
-.method public doExtract(Lcom/android/settings/RingtoneRecommender$OnHighlightResultListener;)Z
+.method public doExtract(Lcom/android/settings_ex/RingtoneRecommender$OnHighlightResultListener;)Z
     .locals 1
-    .param p1, "listener"    # Lcom/android/settings/RingtoneRecommender$OnHighlightResultListener;
+    .param p1, "listener"    # Lcom/android/settings_ex/RingtoneRecommender$OnHighlightResultListener;
 
     .prologue
     .line 218
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/RingtoneRecommender;->mIsOpen:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/RingtoneRecommender;->mIsOpen:Z
 
     .line 219
-    iput-object p1, p0, Lcom/android/settings/RingtoneRecommender;->mListener:Lcom/android/settings/RingtoneRecommender$OnHighlightResultListener;
+    iput-object p1, p0, Lcom/android/settings_ex/RingtoneRecommender;->mListener:Lcom/android/settings_ex/RingtoneRecommender$OnHighlightResultListener;
 
     .line 220
-    invoke-direct {p0}, Lcom/android/settings/RingtoneRecommender;->extract()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/RingtoneRecommender;->extract()Z
 
     move-result v0
 
@@ -226,7 +226,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 318
-    iget-object v0, p0, Lcom/android/settings/RingtoneRecommender;->mSmat:Lcom/samsung/audio/Smat;
+    iget-object v0, p0, Lcom/android/settings_ex/RingtoneRecommender;->mSmat:Lcom/samsung/audio/Smat;
 
     invoke-virtual {v0}, Lcom/samsung/audio/Smat;->is_extractable()Z
 
@@ -270,7 +270,7 @@
     .line 179
     const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, v0}, Lcom/android/settings/RingtoneRecommender;->open(Ljava/lang/String;I)I
+    invoke-virtual {p0, p1, v0}, Lcom/android/settings_ex/RingtoneRecommender;->open(Ljava/lang/String;I)I
 
     move-result v0
 
@@ -284,10 +284,10 @@
 
     .prologue
     .line 199
-    iput p2, p0, Lcom/android/settings/RingtoneRecommender;->mMode:I
+    iput p2, p0, Lcom/android/settings_ex/RingtoneRecommender;->mMode:I
 
     .line 200
-    iget-object v1, p0, Lcom/android/settings/RingtoneRecommender;->mSmat:Lcom/samsung/audio/Smat;
+    iget-object v1, p0, Lcom/android/settings_ex/RingtoneRecommender;->mSmat:Lcom/samsung/audio/Smat;
 
     invoke-virtual {v1, p1, p2}, Lcom/samsung/audio/Smat;->init(Ljava/lang/String;I)I
 

@@ -1,14 +1,14 @@
-.class Lcom/android/settings/applications/AdvancedAppSettings$1;
+.class Lcom/android/settings_ex/applications/AdvancedAppSettings$1;
 .super Ljava/lang/Object;
 .source "AdvancedAppSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/applications/PermissionsSummaryHelper$PermissionsResultCallback;
+.implements Lcom/android/settings_ex/applications/PermissionsSummaryHelper$PermissionsResultCallback;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/AdvancedAppSettings;
+    value = Lcom/android/settings_ex/applications/AdvancedAppSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/applications/AdvancedAppSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/applications/AdvancedAppSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/applications/AdvancedAppSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/applications/AdvancedAppSettings;)V
     .locals 0
 
     .prologue
     .line 122
-    iput-object p1, p0, Lcom/android/settings/applications/AdvancedAppSettings$1;->this$0:Lcom/android/settings/applications/AdvancedAppSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings$1;->this$0:Lcom/android/settings_ex/applications/AdvancedAppSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,9 +49,9 @@
     const/4 v5, 0x0
 
     .line 125
-    iget-object v0, p0, Lcom/android/settings/applications/AdvancedAppSettings$1;->this$0:Lcom/android/settings/applications/AdvancedAppSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings$1;->this$0:Lcom/android/settings_ex/applications/AdvancedAppSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/applications/AdvancedAppSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/applications/AdvancedAppSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -63,25 +63,25 @@
 
     .line 128
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/applications/AdvancedAppSettings$1;->this$0:Lcom/android/settings/applications/AdvancedAppSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings$1;->this$0:Lcom/android/settings_ex/applications/AdvancedAppSettings;
 
-    # setter for: Lcom/android/settings/applications/AdvancedAppSettings;->mPermissionReceiver:Landroid/content/BroadcastReceiver;
-    invoke-static {v0, v1}, Lcom/android/settings/applications/AdvancedAppSettings;->access$002(Lcom/android/settings/applications/AdvancedAppSettings;Landroid/content/BroadcastReceiver;)Landroid/content/BroadcastReceiver;
+    # setter for: Lcom/android/settings_ex/applications/AdvancedAppSettings;->mPermissionReceiver:Landroid/content/BroadcastReceiver;
+    invoke-static {v0, v1}, Lcom/android/settings_ex/applications/AdvancedAppSettings;->access$002(Lcom/android/settings_ex/applications/AdvancedAppSettings;Landroid/content/BroadcastReceiver;)Landroid/content/BroadcastReceiver;
 
     .line 129
     if-eqz p1, :cond_1
 
     .line 130
-    iget-object v0, p0, Lcom/android/settings/applications/AdvancedAppSettings$1;->this$0:Lcom/android/settings/applications/AdvancedAppSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings$1;->this$0:Lcom/android/settings_ex/applications/AdvancedAppSettings;
 
-    # getter for: Lcom/android/settings/applications/AdvancedAppSettings;->mAppPermsPreference:Landroid/preference/Preference;
-    invoke-static {v0}, Lcom/android/settings/applications/AdvancedAppSettings;->access$100(Lcom/android/settings/applications/AdvancedAppSettings;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/applications/AdvancedAppSettings;->mAppPermsPreference:Landroid/preference/Preference;
+    invoke-static {v0}, Lcom/android/settings_ex/applications/AdvancedAppSettings;->access$100(Lcom/android/settings_ex/applications/AdvancedAppSettings;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/applications/AdvancedAppSettings$1;->this$0:Lcom/android/settings/applications/AdvancedAppSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings$1;->this$0:Lcom/android/settings_ex/applications/AdvancedAppSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/applications/AdvancedAppSettings;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/android/settings_ex/applications/AdvancedAppSettings;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -117,10 +117,10 @@
 
     .line 133
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/applications/AdvancedAppSettings$1;->this$0:Lcom/android/settings/applications/AdvancedAppSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings$1;->this$0:Lcom/android/settings_ex/applications/AdvancedAppSettings;
 
-    # getter for: Lcom/android/settings/applications/AdvancedAppSettings;->mAppPermsPreference:Landroid/preference/Preference;
-    invoke-static {v0}, Lcom/android/settings/applications/AdvancedAppSettings;->access$100(Lcom/android/settings/applications/AdvancedAppSettings;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/applications/AdvancedAppSettings;->mAppPermsPreference:Landroid/preference/Preference;
+    invoke-static {v0}, Lcom/android/settings_ex/applications/AdvancedAppSettings;->access$100(Lcom/android/settings_ex/applications/AdvancedAppSettings;)Landroid/preference/Preference;
 
     move-result-object v0
 

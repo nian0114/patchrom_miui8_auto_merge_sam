@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/ManagedProfileSetup;
+.class public Lcom/android/settings_ex/ManagedProfileSetup;
 .super Landroid/content/BroadcastReceiver;
 .source "ManagedProfileSetup.java"
 
@@ -35,13 +35,13 @@
 
     .line 48
     .local v8, "um":Landroid/os/UserManager;
-    invoke-static {v8}, Lcom/android/settings/Utils;->isManagedProfile(Landroid/os/UserManager;)Z
+    invoke-static {v8}, Lcom/android/settings_ex/Utils;->isManagedProfile(Landroid/os/UserManager;)Z
 
     move-result v9
 
     if-eqz v9, :cond_0
 
-    invoke-static {v8}, Lcom/android/settings/Utils;->isKnoxContainer(Landroid/os/UserManager;)Z
+    invoke-static {v8}, Lcom/android/settings_ex/Utils;->isKnoxContainer(Landroid/os/UserManager;)Z
 
     move-result v9
 
@@ -199,7 +199,7 @@
     :cond_3
     new-instance v6, Landroid/content/ComponentName;
 
-    const-class v9, Lcom/android/settings/Settings;
+    const-class v9, Lcom/android/settings_ex/Settings;
 
     invoke-direct {v6, p1, v9}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -218,14 +218,14 @@
 
     if-nez v9, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isFactoryBinary()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isFactoryBinary()Z
 
     move-result v9
 
     if-nez v9, :cond_0
 
     .line 88
-    invoke-static {p1}, Lcom/android/settings/Utils;->disableNfcComponent(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->disableNfcComponent(Landroid/content/Context;)V
 
     goto/16 :goto_0
 .end method

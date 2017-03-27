@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$1;
+.class Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$1;
 .super Landroid/widget/ArrayAdapter;
 .source "AccessibilityDialogPreference.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    value = Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,18 +24,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;Landroid/content/Context;I)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;Landroid/content/Context;I)V
     .locals 0
     .param p2, "x0"    # Landroid/content/Context;
     .param p3, "x1"    # I
 
     .prologue
     .line 37
-    iput-object p1, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$1;->this$0:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$1;->this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
     invoke-direct {p0, p2, p3}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;I)V
 

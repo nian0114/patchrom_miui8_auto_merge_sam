@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/cloud/CloudAccountPreference;
+.class public Lcom/android/settings_ex/cloud/CloudAccountPreference;
 .super Landroid/preference/Preference;
 .source "CloudAccountPreference.java"
 
@@ -16,7 +16,7 @@
     .line 14
     const v0, 0x7f0401c5
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/cloud/CloudAccountPreference;->setLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/cloud/CloudAccountPreference;->setLayoutResource(I)V
 
     .line 15
     return-void

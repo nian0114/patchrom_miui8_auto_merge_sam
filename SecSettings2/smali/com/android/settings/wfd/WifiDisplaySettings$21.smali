@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wfd/WifiDisplaySettings$21;
+.class Lcom/android/settings_ex/wfd/WifiDisplaySettings$21;
 .super Ljava/lang/Object;
 .source "WifiDisplaySettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wfd/WifiDisplaySettings;->createDongleRenameDialog()Landroid/app/AlertDialog;
+    value = Lcom/android/settings_ex/wfd/WifiDisplaySettings;->createDongleRenameDialog()Landroid/app/AlertDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
 .field final synthetic val$mEditDeviceName:Landroid/widget/EditText;
 
@@ -26,16 +26,16 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wfd/WifiDisplaySettings;Landroid/widget/Button;Landroid/widget/EditText;)V
+.method constructor <init>(Lcom/android/settings_ex/wfd/WifiDisplaySettings;Landroid/widget/Button;Landroid/widget/EditText;)V
     .locals 0
 
     .prologue
     .line 2140
-    iput-object p1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$21;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$21;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
-    iput-object p2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$21;->val$mOkButton:Landroid/widget/Button;
+    iput-object p2, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$21;->val$mOkButton:Landroid/widget/Button;
 
-    iput-object p3, p0, Lcom/android/settings/wfd/WifiDisplaySettings$21;->val$mEditDeviceName:Landroid/widget/EditText;
+    iput-object p3, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$21;->val$mEditDeviceName:Landroid/widget/EditText;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -87,7 +87,7 @@
     if-nez v1, :cond_0
 
     .line 2148
-    iget-object v2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$21;->val$mOkButton:Landroid/widget/Button;
+    iget-object v2, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$21;->val$mOkButton:Landroid/widget/Button;
 
     invoke-virtual {v2, v5}, Landroid/widget/Button;->setEnabled(Z)V
 
@@ -146,7 +146,7 @@
     if-gt v2, v6, :cond_3
 
     .line 2153
-    iget-object v2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$21;->val$mEditDeviceName:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$21;->val$mEditDeviceName:Landroid/widget/EditText;
 
     invoke-virtual {v2, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
@@ -165,7 +165,7 @@
     if-gtz v2, :cond_1
 
     .line 2159
-    iget-object v2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$21;->val$mOkButton:Landroid/widget/Button;
+    iget-object v2, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$21;->val$mOkButton:Landroid/widget/Button;
 
     invoke-virtual {v2, v5}, Landroid/widget/Button;->setEnabled(Z)V
 
@@ -174,7 +174,7 @@
     if-eqz v0, :cond_2
 
     .line 2163
-    iget-object v2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$21;->val$mEditDeviceName:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$21;->val$mEditDeviceName:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -184,9 +184,9 @@
 
     .line 2166
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$21;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iget-object v2, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$21;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/wfd/WifiDisplaySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Lcom/android/settings_ex/wfd/WifiDisplaySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -202,7 +202,7 @@
 
     .line 2155
     :cond_3
-    iget-object v2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$21;->val$mEditDeviceName:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$21;->val$mEditDeviceName:Landroid/widget/EditText;
 
     const-string v3, ""
 
@@ -224,7 +224,7 @@
     if-lez v2, :cond_5
 
     .line 2169
-    iget-object v2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$21;->val$mOkButton:Landroid/widget/Button;
+    iget-object v2, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$21;->val$mOkButton:Landroid/widget/Button;
 
     const/4 v3, 0x1
 
@@ -234,7 +234,7 @@
 
     .line 2171
     :cond_5
-    iget-object v2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$21;->val$mOkButton:Landroid/widget/Button;
+    iget-object v2, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$21;->val$mOkButton:Landroid/widget/Button;
 
     invoke-virtual {v2, v5}, Landroid/widget/Button;->setEnabled(Z)V
 

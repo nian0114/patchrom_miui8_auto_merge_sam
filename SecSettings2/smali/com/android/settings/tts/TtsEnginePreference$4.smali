@@ -1,4 +1,4 @@
-.class Lcom/android/settings/tts/TtsEnginePreference$4;
+.class Lcom/android/settings_ex/tts/TtsEnginePreference$4;
 .super Ljava/lang/Object;
 .source "TtsEnginePreference.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/tts/TtsEnginePreference;
+    value = Lcom/android/settings_ex/tts/TtsEnginePreference;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/tts/TtsEnginePreference;
+.field final synthetic this$0:Lcom/android/settings_ex/tts/TtsEnginePreference;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/tts/TtsEnginePreference;)V
+.method constructor <init>(Lcom/android/settings_ex/tts/TtsEnginePreference;)V
     .locals 0
 
     .prologue
     .line 170
-    iput-object p1, p0, Lcom/android/settings/tts/TtsEnginePreference$4;->this$0:Lcom/android/settings/tts/TtsEnginePreference;
+    iput-object p1, p0, Lcom/android/settings_ex/tts/TtsEnginePreference$4;->this$0:Lcom/android/settings_ex/tts/TtsEnginePreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -70,10 +70,10 @@
     invoke-virtual {p1, v1}, Landroid/view/View;->playSoundEffect(I)V
 
     .line 178
-    iget-object v1, p0, Lcom/android/settings/tts/TtsEnginePreference$4;->this$0:Lcom/android/settings/tts/TtsEnginePreference;
+    iget-object v1, p0, Lcom/android/settings_ex/tts/TtsEnginePreference$4;->this$0:Lcom/android/settings_ex/tts/TtsEnginePreference;
 
-    # getter for: Lcom/android/settings/tts/TtsEnginePreference;->mSettingsIconContainer:Landroid/view/View;
-    invoke-static {v1}, Lcom/android/settings/tts/TtsEnginePreference;->access$200(Lcom/android/settings/tts/TtsEnginePreference;)Landroid/view/View;
+    # getter for: Lcom/android/settings_ex/tts/TtsEnginePreference;->mSettingsIconContainer:Landroid/view/View;
+    invoke-static {v1}, Lcom/android/settings_ex/tts/TtsEnginePreference;->access$200(Lcom/android/settings_ex/tts/TtsEnginePreference;)Landroid/view/View;
 
     move-result-object v1
 
@@ -84,10 +84,10 @@
     if-eqz v1, :cond_1
 
     .line 179
-    iget-object v1, p0, Lcom/android/settings/tts/TtsEnginePreference$4;->this$0:Lcom/android/settings/tts/TtsEnginePreference;
+    iget-object v1, p0, Lcom/android/settings_ex/tts/TtsEnginePreference$4;->this$0:Lcom/android/settings_ex/tts/TtsEnginePreference;
 
-    # invokes: Lcom/android/settings/tts/TtsEnginePreference;->launchSettings()V
-    invoke-static {v1}, Lcom/android/settings/tts/TtsEnginePreference;->access$100(Lcom/android/settings/tts/TtsEnginePreference;)V
+    # invokes: Lcom/android/settings_ex/tts/TtsEnginePreference;->launchSettings()V
+    invoke-static {v1}, Lcom/android/settings_ex/tts/TtsEnginePreference;->access$100(Lcom/android/settings_ex/tts/TtsEnginePreference;)V
 
     goto :goto_0
 

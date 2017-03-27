@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/RecommendRingtoneDialog;
+.class public Lcom/android/settings_ex/RecommendRingtoneDialog;
 .super Lcom/android/internal/app/AlertActivity;
 .source "RecommendRingtoneDialog.java"
 
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/RecommendRingtoneDialog$RecommendAdapter;
+        Lcom/android/settings_ex/RecommendRingtoneDialog$RecommendAdapter;
     }
 .end annotation
 
@@ -23,7 +23,7 @@
 
 .field private mInflater:Landroid/view/LayoutInflater;
 
-.field private mRecommendAdapter:Lcom/android/settings/RecommendRingtoneDialog$RecommendAdapter;
+.field private mRecommendAdapter:Lcom/android/settings_ex/RecommendRingtoneDialog$RecommendAdapter;
 
 .field private mSelectedPosition:I
 
@@ -45,149 +45,149 @@
     .line 41
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/android/settings/RecommendRingtoneDialog;->mSelectedPosition:I
+    iput v0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mSelectedPosition:I
 
     .line 132
-    new-instance v0, Lcom/android/settings/RecommendRingtoneDialog$2;
+    new-instance v0, Lcom/android/settings_ex/RecommendRingtoneDialog$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/RecommendRingtoneDialog$2;-><init>(Lcom/android/settings/RecommendRingtoneDialog;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/RecommendRingtoneDialog$2;-><init>(Lcom/android/settings_ex/RecommendRingtoneDialog;)V
 
-    iput-object v0, p0, Lcom/android/settings/RecommendRingtoneDialog;->mAudioFocusListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
+    iput-object v0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mAudioFocusListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
     .line 159
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/RecommendRingtoneDialog;)I
+.method static synthetic access$000(Lcom/android/settings_ex/RecommendRingtoneDialog;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/RecommendRingtoneDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/RecommendRingtoneDialog;
 
     .prologue
     .line 38
-    iget v0, p0, Lcom/android/settings/RecommendRingtoneDialog;->mSelectedPosition:I
+    iget v0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mSelectedPosition:I
 
     return v0
 .end method
 
-.method static synthetic access$002(Lcom/android/settings/RecommendRingtoneDialog;I)I
+.method static synthetic access$002(Lcom/android/settings_ex/RecommendRingtoneDialog;I)I
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/RecommendRingtoneDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/RecommendRingtoneDialog;
     .param p1, "x1"    # I
 
     .prologue
     .line 38
-    iput p1, p0, Lcom/android/settings/RecommendRingtoneDialog;->mSelectedPosition:I
+    iput p1, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mSelectedPosition:I
 
     return p1
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/RecommendRingtoneDialog;)Lcom/android/settings/RecommendRingtoneDialog$RecommendAdapter;
+.method static synthetic access$100(Lcom/android/settings_ex/RecommendRingtoneDialog;)Lcom/android/settings_ex/RecommendRingtoneDialog$RecommendAdapter;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/RecommendRingtoneDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/RecommendRingtoneDialog;
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/android/settings/RecommendRingtoneDialog;->mRecommendAdapter:Lcom/android/settings/RecommendRingtoneDialog$RecommendAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mRecommendAdapter:Lcom/android/settings_ex/RecommendRingtoneDialog$RecommendAdapter;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/RecommendRingtoneDialog;)Landroid/media/Ringtone;
+.method static synthetic access$200(Lcom/android/settings_ex/RecommendRingtoneDialog;)Landroid/media/Ringtone;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/RecommendRingtoneDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/RecommendRingtoneDialog;
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/android/settings/RecommendRingtoneDialog;->ringtone:Landroid/media/Ringtone;
+    iget-object v0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->ringtone:Landroid/media/Ringtone;
 
     return-object v0
 .end method
 
-.method static synthetic access$202(Lcom/android/settings/RecommendRingtoneDialog;Landroid/media/Ringtone;)Landroid/media/Ringtone;
+.method static synthetic access$202(Lcom/android/settings_ex/RecommendRingtoneDialog;Landroid/media/Ringtone;)Landroid/media/Ringtone;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/RecommendRingtoneDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/RecommendRingtoneDialog;
     .param p1, "x1"    # Landroid/media/Ringtone;
 
     .prologue
     .line 38
-    iput-object p1, p0, Lcom/android/settings/RecommendRingtoneDialog;->ringtone:Landroid/media/Ringtone;
+    iput-object p1, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->ringtone:Landroid/media/Ringtone;
 
     return-object p1
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/RecommendRingtoneDialog;)V
+.method static synthetic access$300(Lcom/android/settings_ex/RecommendRingtoneDialog;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/RecommendRingtoneDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/RecommendRingtoneDialog;
 
     .prologue
     .line 38
-    invoke-direct {p0}, Lcom/android/settings/RecommendRingtoneDialog;->requestAudioFocus()V
+    invoke-direct {p0}, Lcom/android/settings_ex/RecommendRingtoneDialog;->requestAudioFocus()V
 
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/RecommendRingtoneDialog;)Landroid/content/Context;
+.method static synthetic access$400(Lcom/android/settings_ex/RecommendRingtoneDialog;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/RecommendRingtoneDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/RecommendRingtoneDialog;
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/android/settings/RecommendRingtoneDialog;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/RecommendRingtoneDialog;)I
+.method static synthetic access$500(Lcom/android/settings_ex/RecommendRingtoneDialog;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/RecommendRingtoneDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/RecommendRingtoneDialog;
 
     .prologue
     .line 38
-    iget v0, p0, Lcom/android/settings/RecommendRingtoneDialog;->ringtoneType:I
+    iget v0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->ringtoneType:I
 
     return v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/RecommendRingtoneDialog;)I
+.method static synthetic access$600(Lcom/android/settings_ex/RecommendRingtoneDialog;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/RecommendRingtoneDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/RecommendRingtoneDialog;
 
     .prologue
     .line 38
-    iget v0, p0, Lcom/android/settings/RecommendRingtoneDialog;->offset:I
+    iget v0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->offset:I
 
     return v0
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/RecommendRingtoneDialog;)Landroid/media/AudioManager;
+.method static synthetic access$700(Lcom/android/settings_ex/RecommendRingtoneDialog;)Landroid/media/AudioManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/RecommendRingtoneDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/RecommendRingtoneDialog;
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/android/settings/RecommendRingtoneDialog;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mAudioManager:Landroid/media/AudioManager;
 
     return-object v0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/RecommendRingtoneDialog;)Landroid/media/AudioManager$OnAudioFocusChangeListener;
+.method static synthetic access$800(Lcom/android/settings_ex/RecommendRingtoneDialog;)Landroid/media/AudioManager$OnAudioFocusChangeListener;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/RecommendRingtoneDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/RecommendRingtoneDialog;
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/android/settings/RecommendRingtoneDialog;->mAudioFocusListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
+    iget-object v0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mAudioFocusListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
     return-object v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/RecommendRingtoneDialog;)Landroid/view/LayoutInflater;
+.method static synthetic access$900(Lcom/android/settings_ex/RecommendRingtoneDialog;)Landroid/view/LayoutInflater;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/RecommendRingtoneDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/RecommendRingtoneDialog;
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/android/settings/RecommendRingtoneDialog;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mInflater:Landroid/view/LayoutInflater;
 
     return-object v0
 .end method
@@ -197,13 +197,13 @@
 
     .prologue
     .line 153
-    iget-object v0, p0, Lcom/android/settings/RecommendRingtoneDialog;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mAudioManager:Landroid/media/AudioManager;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/RecommendRingtoneDialog;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mAudioManager:Landroid/media/AudioManager;
 
-    iget-object v1, p0, Lcom/android/settings/RecommendRingtoneDialog;->mAudioFocusListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
+    iget-object v1, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mAudioFocusListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
     const/4 v2, 0x3
 
@@ -236,12 +236,12 @@
 
     .prologue
     .line 107
-    iget-object v2, p0, Lcom/android/settings/RecommendRingtoneDialog;->ringtone:Landroid/media/Ringtone;
+    iget-object v2, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->ringtone:Landroid/media/Ringtone;
 
     if-eqz v2, :cond_0
 
     .line 108
-    iget-object v2, p0, Lcom/android/settings/RecommendRingtoneDialog;->ringtone:Landroid/media/Ringtone;
+    iget-object v2, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->ringtone:Landroid/media/Ringtone;
 
     invoke-virtual {v2}, Landroid/media/Ringtone;->stop()V
 
@@ -256,16 +256,16 @@
 
     .line 113
     :pswitch_0
-    iget v2, p0, Lcom/android/settings/RecommendRingtoneDialog;->mSelectedPosition:I
+    iget v2, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mSelectedPosition:I
 
     const/4 v3, 0x1
 
     if-ne v2, v3, :cond_1
 
     .line 114
-    iget-object v2, p0, Lcom/android/settings/RecommendRingtoneDialog;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mContext:Landroid/content/Context;
 
-    iget v3, p0, Lcom/android/settings/RecommendRingtoneDialog;->ringtoneType:I
+    iget v3, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->ringtoneType:I
 
     invoke-static {v2, v3}, Landroid/media/RingtoneManager;->getActualDefaultRingtoneUri(Landroid/content/Context;I)Landroid/net/Uri;
 
@@ -295,7 +295,7 @@
 
     move-result-object v3
 
-    iget v4, p0, Lcom/android/settings/RecommendRingtoneDialog;->ringtoneType:I
+    iget v4, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->ringtoneType:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -320,7 +320,7 @@
 
     const-string v3, "highlight_offset"
 
-    iget v4, p0, Lcom/android/settings/RecommendRingtoneDialog;->offset:I
+    iget v4, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->offset:I
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -358,7 +358,7 @@
 
     move-result-object v3
 
-    iget v4, p0, Lcom/android/settings/RecommendRingtoneDialog;->ringtoneType:I
+    iget v4, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->ringtoneType:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -377,25 +377,25 @@
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 118
-    iget v2, p0, Lcom/android/settings/RecommendRingtoneDialog;->ringtoneType:I
+    iget v2, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->ringtoneType:I
 
     invoke-static {p0, v2, v1}, Landroid/media/RingtoneManager;->setActualDefaultRingtoneUri(Landroid/content/Context;ILandroid/net/Uri;)V
 
     .line 120
-    iget v2, p0, Lcom/android/settings/RecommendRingtoneDialog;->ringtoneType:I
+    iget v2, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->ringtoneType:I
 
     const/16 v3, 0x80
 
     if-ne v2, v3, :cond_2
 
     .line 121
-    invoke-virtual {p0}, Lcom/android/settings/RecommendRingtoneDialog;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RecommendRingtoneDialog;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
     const-string v3, "recommendation_time_2"
 
-    iget v4, p0, Lcom/android/settings/RecommendRingtoneDialog;->offset:I
+    iget v4, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->offset:I
 
     invoke-static {v2, v3, v4}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
@@ -403,13 +403,13 @@
 
     .line 123
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/RecommendRingtoneDialog;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RecommendRingtoneDialog;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
     const-string v3, "recommendation_time"
 
-    iget v4, p0, Lcom/android/settings/RecommendRingtoneDialog;->offset:I
+    iget v4, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->offset:I
 
     invoke-static {v2, v3, v4}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
@@ -437,16 +437,16 @@
     .line 52
     const-string v1, "layout_inflater"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/RecommendRingtoneDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/RecommendRingtoneDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/view/LayoutInflater;
 
-    iput-object v1, p0, Lcom/android/settings/RecommendRingtoneDialog;->mInflater:Landroid/view/LayoutInflater;
+    iput-object v1, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mInflater:Landroid/view/LayoutInflater;
 
     .line 53
-    invoke-virtual {p0}, Lcom/android/settings/RecommendRingtoneDialog;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RecommendRingtoneDialog;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -456,10 +456,10 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/RecommendRingtoneDialog;->offset:I
+    iput v1, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->offset:I
 
     .line 54
-    invoke-virtual {p0}, Lcom/android/settings/RecommendRingtoneDialog;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RecommendRingtoneDialog;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -469,28 +469,28 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/RecommendRingtoneDialog;->ringtoneType:I
+    iput v1, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->ringtoneType:I
 
     .line 55
-    iput-object p0, p0, Lcom/android/settings/RecommendRingtoneDialog;->mContext:Landroid/content/Context;
+    iput-object p0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mContext:Landroid/content/Context;
 
     .line 56
     const-string v1, "audio"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/RecommendRingtoneDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/RecommendRingtoneDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/media/AudioManager;
 
-    iput-object v1, p0, Lcom/android/settings/RecommendRingtoneDialog;->mAudioManager:Landroid/media/AudioManager;
+    iput-object v1, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mAudioManager:Landroid/media/AudioManager;
 
     .line 57
-    iget-object v0, p0, Lcom/android/settings/RecommendRingtoneDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     .line 58
     .local v0, "ap":Lcom/android/internal/app/AlertController$AlertParams;
-    invoke-virtual {p0}, Lcom/android/settings/RecommendRingtoneDialog;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RecommendRingtoneDialog;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -508,7 +508,7 @@
     iput-boolean v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mIsSingleChoice:Z
 
     .line 60
-    invoke-virtual {p0}, Lcom/android/settings/RecommendRingtoneDialog;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RecommendRingtoneDialog;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -524,7 +524,7 @@
     iput-object p0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mPositiveButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
     .line 62
-    invoke-virtual {p0}, Lcom/android/settings/RecommendRingtoneDialog;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RecommendRingtoneDialog;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -540,26 +540,26 @@
     iput-object p0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mNegativeButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
     .line 64
-    new-instance v1, Lcom/android/settings/RecommendRingtoneDialog$1;
+    new-instance v1, Lcom/android/settings_ex/RecommendRingtoneDialog$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/RecommendRingtoneDialog$1;-><init>(Lcom/android/settings/RecommendRingtoneDialog;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/RecommendRingtoneDialog$1;-><init>(Lcom/android/settings_ex/RecommendRingtoneDialog;)V
 
     iput-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mOnClickListener:Landroid/content/DialogInterface$OnClickListener;
 
     .line 88
-    new-instance v1, Lcom/android/settings/RecommendRingtoneDialog$RecommendAdapter;
+    new-instance v1, Lcom/android/settings_ex/RecommendRingtoneDialog$RecommendAdapter;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/RecommendRingtoneDialog$RecommendAdapter;-><init>(Lcom/android/settings/RecommendRingtoneDialog;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/RecommendRingtoneDialog$RecommendAdapter;-><init>(Lcom/android/settings_ex/RecommendRingtoneDialog;)V
 
-    iput-object v1, p0, Lcom/android/settings/RecommendRingtoneDialog;->mRecommendAdapter:Lcom/android/settings/RecommendRingtoneDialog$RecommendAdapter;
+    iput-object v1, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mRecommendAdapter:Lcom/android/settings_ex/RecommendRingtoneDialog$RecommendAdapter;
 
     .line 89
-    iget-object v1, p0, Lcom/android/settings/RecommendRingtoneDialog;->mRecommendAdapter:Lcom/android/settings/RecommendRingtoneDialog$RecommendAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mRecommendAdapter:Lcom/android/settings_ex/RecommendRingtoneDialog$RecommendAdapter;
 
     iput-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mAdapter:Landroid/widget/ListAdapter;
 
     .line 90
-    invoke-virtual {p0}, Lcom/android/settings/RecommendRingtoneDialog;->setupAlert()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/RecommendRingtoneDialog;->setupAlert()V
 
     .line 91
     return-void
@@ -570,24 +570,24 @@
 
     .prologue
     .line 95
-    iget-object v0, p0, Lcom/android/settings/RecommendRingtoneDialog;->ringtone:Landroid/media/Ringtone;
+    iget-object v0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->ringtone:Landroid/media/Ringtone;
 
     if-eqz v0, :cond_0
 
     .line 96
-    iget-object v0, p0, Lcom/android/settings/RecommendRingtoneDialog;->ringtone:Landroid/media/Ringtone;
+    iget-object v0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->ringtone:Landroid/media/Ringtone;
 
     invoke-virtual {v0}, Landroid/media/Ringtone;->stop()V
 
     .line 97
-    iget-object v0, p0, Lcom/android/settings/RecommendRingtoneDialog;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mAudioManager:Landroid/media/AudioManager;
 
     if-eqz v0, :cond_0
 
     .line 98
-    iget-object v0, p0, Lcom/android/settings/RecommendRingtoneDialog;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mAudioManager:Landroid/media/AudioManager;
 
-    iget-object v1, p0, Lcom/android/settings/RecommendRingtoneDialog;->mAudioFocusListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
+    iget-object v1, p0, Lcom/android/settings_ex/RecommendRingtoneDialog;->mAudioFocusListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
     invoke-virtual {v0, v1}, Landroid/media/AudioManager;->abandonAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I
 

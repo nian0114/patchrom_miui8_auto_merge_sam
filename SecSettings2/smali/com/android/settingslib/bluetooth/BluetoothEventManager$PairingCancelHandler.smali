@@ -1,14 +1,14 @@
-.class Lcom/android/settingslib/bluetooth/BluetoothEventManager$PairingCancelHandler;
+.class Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$PairingCancelHandler;
 .super Ljava/lang/Object;
 .source "BluetoothEventManager.java"
 
 # interfaces
-.implements Lcom/android/settingslib/bluetooth/BluetoothEventManager$Handler;
+.implements Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$Handler;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/bluetooth/BluetoothEventManager;
+    value = Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,30 +18,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settingslib/bluetooth/BluetoothEventManager;
+.field final synthetic this$0:Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/settingslib/bluetooth/BluetoothEventManager;)V
+.method private constructor <init>(Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;)V
     .locals 0
 
     .prologue
     .line 499
-    iput-object p1, p0, Lcom/android/settingslib/bluetooth/BluetoothEventManager$PairingCancelHandler;->this$0:Lcom/android/settingslib/bluetooth/BluetoothEventManager;
+    iput-object p1, p0, Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$PairingCancelHandler;->this$0:Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settingslib/bluetooth/BluetoothEventManager;Lcom/android/settingslib/bluetooth/BluetoothEventManager$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settingslib/bluetooth/BluetoothEventManager;
-    .param p2, "x1"    # Lcom/android/settingslib/bluetooth/BluetoothEventManager$1;
+    .param p1, "x0"    # Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;
+    .param p2, "x1"    # Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$1;
 
     .prologue
     .line 499
-    invoke-direct {p0, p1}, Lcom/android/settingslib/bluetooth/BluetoothEventManager$PairingCancelHandler;-><init>(Lcom/android/settingslib/bluetooth/BluetoothEventManager;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$PairingCancelHandler;-><init>(Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;)V
 
     return-void
 .end method
@@ -72,19 +72,19 @@
 
     .line 505
     :cond_1
-    iget-object v2, p0, Lcom/android/settingslib/bluetooth/BluetoothEventManager$PairingCancelHandler;->this$0:Lcom/android/settingslib/bluetooth/BluetoothEventManager;
+    iget-object v2, p0, Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$PairingCancelHandler;->this$0:Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;
 
-    # getter for: Lcom/android/settingslib/bluetooth/BluetoothEventManager;->mDeviceManager:Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;
-    invoke-static {v2}, Lcom/android/settingslib/bluetooth/BluetoothEventManager;->access$1700(Lcom/android/settingslib/bluetooth/BluetoothEventManager;)Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;
+    # getter for: Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;->mDeviceManager:Lcom/android/settings_exlib/bluetooth/CachedBluetoothDeviceManager;
+    invoke-static {v2}, Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;->access$1700(Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;)Lcom/android/settings_exlib/bluetooth/CachedBluetoothDeviceManager;
 
     move-result-object v2
 
-    invoke-virtual {v2, p3}, Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;->findDevice(Landroid/bluetooth/BluetoothDevice;)Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
+    invoke-virtual {v2, p3}, Lcom/android/settings_exlib/bluetooth/CachedBluetoothDeviceManager;->findDevice(Landroid/bluetooth/BluetoothDevice;)Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;
 
     move-result-object v0
 
     .line 506
-    .local v0, "cachedDevice":Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
+    .local v0, "cachedDevice":Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;
     if-nez v0, :cond_2
 
     .line 507
@@ -98,7 +98,7 @@
 
     .line 510
     :cond_2
-    sget v1, Lcom/android/settingslib/R$string;->bluetooth_pairing_error_message:I
+    sget v1, Lcom/android/settings_exlib/R$string;->bluetooth_pairing_error_message:I
 
     .line 511
     .local v1, "errorMsg":I
@@ -118,11 +118,11 @@
     if-eqz p1, :cond_4
 
     .line 517
-    invoke-virtual {v0}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->getName()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {p1, v2, v1}, Lcom/android/settingslib/bluetooth/Utils;->showError(Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-static {p1, v2, v1}, Lcom/android/settings_exlib/bluetooth/Utils;->showError(Landroid/content/Context;Ljava/lang/String;I)V
 
     .line 520
     :cond_4
@@ -145,7 +145,7 @@
 
     const-string v4, "4_bluetooth_message_pairing_error"
 
-    invoke-static {p1, v2, v3, v4}, Lcom/android/settingslib/bluetooth/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v2, v3, v4}, Lcom/android/settings_exlib/bluetooth/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

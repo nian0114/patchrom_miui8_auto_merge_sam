@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/accessibility/ColorPreference;
-.super Lcom/android/settings/accessibility/ListDialogPreference;
+.class public Lcom/android/settings_ex/accessibility/ColorPreference;
+.super Lcom/android/settings_ex/accessibility/ListDialogPreference;
 .source "ColorPreference.java"
 
 
@@ -17,17 +17,17 @@
 
     .prologue
     .line 40
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/accessibility/ListDialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/accessibility/ListDialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 42
     const v0, 0x7f0400f0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/ColorPreference;->setDialogLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/ColorPreference;->setDialogLayoutResource(I)V
 
     .line 43
     const v0, 0x7f04005f
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/ColorPreference;->setListItemLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/ColorPreference;->setListItemLayoutResource(I)V
 
     .line 44
     return-void
@@ -41,7 +41,7 @@
 
     .prologue
     .line 68
-    invoke-super {p0, p1}, Lcom/android/settings/accessibility/ListDialogPreference;->getTitleAt(I)Ljava/lang/CharSequence;
+    invoke-super {p0, p1}, Lcom/android/settings_ex/accessibility/ListDialogPreference;->getTitleAt(I)Ljava/lang/CharSequence;
 
     move-result-object v3
 
@@ -57,7 +57,7 @@
     .line 74
     .restart local v3    # "title":Ljava/lang/CharSequence;
     :cond_0
-    invoke-virtual {p0, p1}, Lcom/android/settings/accessibility/ColorPreference;->getValueAt(I)I
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/accessibility/ColorPreference;->getValueAt(I)I
 
     move-result v4
 
@@ -81,7 +81,7 @@
 
     .line 78
     .local v0, "b":I
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/ColorPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/ColorPreference;->getContext()Landroid/content/Context;
 
     move-result-object v5
 
@@ -135,7 +135,7 @@
     const/4 v7, 0x1
 
     .line 114
-    invoke-virtual {p0, p2}, Lcom/android/settings/accessibility/ColorPreference;->getValueAt(I)I
+    invoke-virtual {p0, p2}, Lcom/android/settings_ex/accessibility/ColorPreference;->getValueAt(I)I
 
     move-result v1
 
@@ -200,7 +200,7 @@
 
     .line 137
     :goto_1
-    invoke-virtual {p0, p2}, Lcom/android/settings/accessibility/ColorPreference;->getTitleAt(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, p2}, Lcom/android/settings_ex/accessibility/ColorPreference;->getTitleAt(I)Ljava/lang/CharSequence;
 
     move-result-object v5
 
@@ -255,10 +255,10 @@
     const/4 v5, 0x0
 
     .line 83
-    invoke-super {p0, p1}, Lcom/android/settings/accessibility/ListDialogPreference;->onBindView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/accessibility/ListDialogPreference;->onBindView(Landroid/view/View;)V
 
     .line 85
-    iget-boolean v3, p0, Lcom/android/settings/accessibility/ColorPreference;->mPreviewEnabled:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/accessibility/ColorPreference;->mPreviewEnabled:Z
 
     if-eqz v3, :cond_0
 
@@ -273,7 +273,7 @@
 
     .line 87
     .local v1, "previewImage":Landroid/widget/ImageView;
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/ColorPreference;->getValue()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/ColorPreference;->getValue()I
 
     move-result v0
 
@@ -294,7 +294,7 @@
 
     .line 94
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/accessibility/ColorPreference;->mPreviewColor:Landroid/graphics/drawable/ColorDrawable;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/ColorPreference;->mPreviewColor:Landroid/graphics/drawable/ColorDrawable;
 
     if-nez v3, :cond_2
 
@@ -303,16 +303,16 @@
 
     invoke-direct {v3, v0}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    iput-object v3, p0, Lcom/android/settings/accessibility/ColorPreference;->mPreviewColor:Landroid/graphics/drawable/ColorDrawable;
+    iput-object v3, p0, Lcom/android/settings_ex/accessibility/ColorPreference;->mPreviewColor:Landroid/graphics/drawable/ColorDrawable;
 
     .line 96
-    iget-object v3, p0, Lcom/android/settings/accessibility/ColorPreference;->mPreviewColor:Landroid/graphics/drawable/ColorDrawable;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/ColorPreference;->mPreviewColor:Landroid/graphics/drawable/ColorDrawable;
 
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 101
     :goto_1
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/ColorPreference;->getSummary()Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/ColorPreference;->getSummary()Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -329,7 +329,7 @@
 
     .line 108
     :goto_2
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/ColorPreference;->isEnabled()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/ColorPreference;->isEnabled()Z
 
     move-result v3
 
@@ -357,7 +357,7 @@
 
     .line 98
     :cond_2
-    iget-object v3, p0, Lcom/android/settings/accessibility/ColorPreference;->mPreviewColor:Landroid/graphics/drawable/ColorDrawable;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/ColorPreference;->mPreviewColor:Landroid/graphics/drawable/ColorDrawable;
 
     invoke-virtual {v3, v0}, Landroid/graphics/drawable/ColorDrawable;->setColor(I)V
 
@@ -382,7 +382,7 @@
 
     .prologue
     .line 63
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/ColorPreference;->getValue()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/ColorPreference;->getValue()I
 
     move-result v0
 
@@ -392,7 +392,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-super {p0}, Lcom/android/settings/accessibility/ListDialogPreference;->shouldDisableDependents()Z
+    invoke-super {p0}, Lcom/android/settings_ex/accessibility/ListDialogPreference;->shouldDisableDependents()Z
 
     move-result v0
 

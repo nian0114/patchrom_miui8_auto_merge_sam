@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/net/DataUsageAppRestrict$AppItem;
+.class public Lcom/android/settings_ex/net/DataUsageAppRestrict$AppItem;
 .super Ljava/lang/Object;
 .source "DataUsageAppRestrict.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/net/DataUsageAppRestrict;
+    value = Lcom/android/settings_ex/net/DataUsageAppRestrict;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Ljava/lang/Comparable",
         "<",
-        "Lcom/android/settings/net/DataUsageAppRestrict$AppItem;",
+        "Lcom/android/settings_ex/net/DataUsageAppRestrict$AppItem;",
         ">;"
     }
 .end annotation
@@ -54,13 +54,13 @@
     .line 688
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/android/settings/net/DataUsageAppRestrict$AppItem;->uid:I
+    iput v0, p0, Lcom/android/settings_ex/net/DataUsageAppRestrict$AppItem;->uid:I
 
     .line 689
-    iput-wide v2, p0, Lcom/android/settings/net/DataUsageAppRestrict$AppItem;->dataTotal:J
+    iput-wide v2, p0, Lcom/android/settings_ex/net/DataUsageAppRestrict$AppItem;->dataTotal:J
 
     .line 690
-    iput-wide v2, p0, Lcom/android/settings/net/DataUsageAppRestrict$AppItem;->wifiTotal:J
+    iput-wide v2, p0, Lcom/android/settings_ex/net/DataUsageAppRestrict$AppItem;->wifiTotal:J
 
     .line 691
     return-void
@@ -78,16 +78,16 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 694
-    iput p1, p0, Lcom/android/settings/net/DataUsageAppRestrict$AppItem;->uid:I
+    iput p1, p0, Lcom/android/settings_ex/net/DataUsageAppRestrict$AppItem;->uid:I
 
     .line 695
-    iput-object p2, p0, Lcom/android/settings/net/DataUsageAppRestrict$AppItem;->mIcon:Landroid/graphics/drawable/Drawable;
+    iput-object p2, p0, Lcom/android/settings_ex/net/DataUsageAppRestrict$AppItem;->mIcon:Landroid/graphics/drawable/Drawable;
 
     .line 696
-    iput-object p3, p0, Lcom/android/settings/net/DataUsageAppRestrict$AppItem;->mLabel:Ljava/lang/CharSequence;
+    iput-object p3, p0, Lcom/android/settings_ex/net/DataUsageAppRestrict$AppItem;->mLabel:Ljava/lang/CharSequence;
 
     .line 697
-    iput-object p4, p0, Lcom/android/settings/net/DataUsageAppRestrict$AppItem;->mPackageName:Ljava/lang/String;
+    iput-object p4, p0, Lcom/android/settings_ex/net/DataUsageAppRestrict$AppItem;->mPackageName:Ljava/lang/String;
 
     .line 698
     return-void
@@ -95,19 +95,19 @@
 
 
 # virtual methods
-.method public compareTo(Lcom/android/settings/net/DataUsageAppRestrict$AppItem;)I
+.method public compareTo(Lcom/android/settings_ex/net/DataUsageAppRestrict$AppItem;)I
     .locals 3
-    .param p1, "another"    # Lcom/android/settings/net/DataUsageAppRestrict$AppItem;
+    .param p1, "another"    # Lcom/android/settings_ex/net/DataUsageAppRestrict$AppItem;
 
     .prologue
     .line 703
-    iget-object v1, p0, Lcom/android/settings/net/DataUsageAppRestrict$AppItem;->mLabel:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/android/settings_ex/net/DataUsageAppRestrict$AppItem;->mLabel:Ljava/lang/CharSequence;
 
     invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, p1, Lcom/android/settings/net/DataUsageAppRestrict$AppItem;->mLabel:Ljava/lang/CharSequence;
+    iget-object v2, p1, Lcom/android/settings_ex/net/DataUsageAppRestrict$AppItem;->mLabel:Ljava/lang/CharSequence;
 
     invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
@@ -128,10 +128,10 @@
 
     .prologue
     .line 678
-    check-cast p1, Lcom/android/settings/net/DataUsageAppRestrict$AppItem;
+    check-cast p1, Lcom/android/settings_ex/net/DataUsageAppRestrict$AppItem;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/net/DataUsageAppRestrict$AppItem;->compareTo(Lcom/android/settings/net/DataUsageAppRestrict$AppItem;)I
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/net/DataUsageAppRestrict$AppItem;->compareTo(Lcom/android/settings_ex/net/DataUsageAppRestrict$AppItem;)I
 
     move-result v0
 

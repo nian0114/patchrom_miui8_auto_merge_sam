@@ -1,11 +1,11 @@
-.class Lcom/android/settings/nfc/TagsConnectingDevices$1;
+.class Lcom/android/settings_ex/nfc/TagsConnectingDevices$1;
 .super Landroid/content/BroadcastReceiver;
 .source "TagsConnectingDevices.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/nfc/TagsConnectingDevices;
+    value = Lcom/android/settings_ex/nfc/TagsConnectingDevices;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nfc/TagsConnectingDevices;
+.field final synthetic this$0:Lcom/android/settings_ex/nfc/TagsConnectingDevices;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/nfc/TagsConnectingDevices;)V
+.method constructor <init>(Lcom/android/settings_ex/nfc/TagsConnectingDevices;)V
     .locals 0
 
     .prologue
     .line 60
-    iput-object p1, p0, Lcom/android/settings/nfc/TagsConnectingDevices$1;->this$0:Lcom/android/settings/nfc/TagsConnectingDevices;
+    iput-object p1, p0, Lcom/android/settings_ex/nfc/TagsConnectingDevices$1;->this$0:Lcom/android/settings_ex/nfc/TagsConnectingDevices;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -68,10 +68,10 @@
     if-ne v1, v3, :cond_1
 
     .line 68
-    iget-object v1, p0, Lcom/android/settings/nfc/TagsConnectingDevices$1;->this$0:Lcom/android/settings/nfc/TagsConnectingDevices;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/TagsConnectingDevices$1;->this$0:Lcom/android/settings_ex/nfc/TagsConnectingDevices;
 
-    # getter for: Lcom/android/settings/nfc/TagsConnectingDevices;->activity:Landroid/app/Activity;
-    invoke-static {v1}, Lcom/android/settings/nfc/TagsConnectingDevices;->access$000(Lcom/android/settings/nfc/TagsConnectingDevices;)Landroid/app/Activity;
+    # getter for: Lcom/android/settings_ex/nfc/TagsConnectingDevices;->activity:Landroid/app/Activity;
+    invoke-static {v1}, Lcom/android/settings_ex/nfc/TagsConnectingDevices;->access$000(Lcom/android/settings_ex/nfc/TagsConnectingDevices;)Landroid/app/Activity;
 
     move-result-object v1
 
@@ -95,10 +95,10 @@
     if-ne v1, v2, :cond_0
 
     .line 70
-    iget-object v1, p0, Lcom/android/settings/nfc/TagsConnectingDevices$1;->this$0:Lcom/android/settings/nfc/TagsConnectingDevices;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/TagsConnectingDevices$1;->this$0:Lcom/android/settings_ex/nfc/TagsConnectingDevices;
 
-    # invokes: Lcom/android/settings/nfc/TagsConnectingDevices;->setSwitchStatus(ZZ)V
-    invoke-static {v1, v3, v3}, Lcom/android/settings/nfc/TagsConnectingDevices;->access$100(Lcom/android/settings/nfc/TagsConnectingDevices;ZZ)V
+    # invokes: Lcom/android/settings_ex/nfc/TagsConnectingDevices;->setSwitchStatus(ZZ)V
+    invoke-static {v1, v3, v3}, Lcom/android/settings_ex/nfc/TagsConnectingDevices;->access$100(Lcom/android/settings_ex/nfc/TagsConnectingDevices;ZZ)V
 
     goto :goto_0
 .end method

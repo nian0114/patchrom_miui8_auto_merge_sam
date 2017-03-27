@@ -1,4 +1,4 @@
-.class Lcom/android/settings/deviceinfo/Status$7;
+.class Lcom/android/settings_ex/deviceinfo/Status$7;
 .super Ljava/lang/Object;
 .source "Status.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/Status;
+    value = Lcom/android/settings_ex/deviceinfo/Status;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/Status;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/Status;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/Status;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/Status;)V
     .locals 0
 
     .prologue
     .line 904
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/Status$7;->this$0:Lcom/android/settings/deviceinfo/Status;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/Status$7;->this$0:Lcom/android/settings_ex/deviceinfo/Status;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,20 +50,20 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 907
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/Status$7;->this$0:Lcom/android/settings/deviceinfo/Status;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/Status$7;->this$0:Lcom/android/settings_ex/deviceinfo/Status;
 
     new-instance v1, Landroid/os/Messenger;
 
     invoke-direct {v1, p2}, Landroid/os/Messenger;-><init>(Landroid/os/IBinder;)V
 
-    # setter for: Lcom/android/settings/deviceinfo/Status;->mServiceMessenger:Landroid/os/Messenger;
-    invoke-static {v0, v1}, Lcom/android/settings/deviceinfo/Status;->access$1102(Lcom/android/settings/deviceinfo/Status;Landroid/os/Messenger;)Landroid/os/Messenger;
+    # setter for: Lcom/android/settings_ex/deviceinfo/Status;->mServiceMessenger:Landroid/os/Messenger;
+    invoke-static {v0, v1}, Lcom/android/settings_ex/deviceinfo/Status;->access$1102(Lcom/android/settings_ex/deviceinfo/Status;Landroid/os/Messenger;)Landroid/os/Messenger;
 
     .line 908
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/Status$7;->this$0:Lcom/android/settings/deviceinfo/Status;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/Status$7;->this$0:Lcom/android/settings_ex/deviceinfo/Status;
 
-    # invokes: Lcom/android/settings/deviceinfo/Status;->getOemData()V
-    invoke-static {v0}, Lcom/android/settings/deviceinfo/Status;->access$1200(Lcom/android/settings/deviceinfo/Status;)V
+    # invokes: Lcom/android/settings_ex/deviceinfo/Status;->getOemData()V
+    invoke-static {v0}, Lcom/android/settings_ex/deviceinfo/Status;->access$1200(Lcom/android/settings_ex/deviceinfo/Status;)V
 
     .line 909
     return-void
@@ -82,12 +82,12 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 913
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/Status$7;->this$0:Lcom/android/settings/deviceinfo/Status;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/Status$7;->this$0:Lcom/android/settings_ex/deviceinfo/Status;
 
     const/4 v1, 0x0
 
-    # setter for: Lcom/android/settings/deviceinfo/Status;->mServiceMessenger:Landroid/os/Messenger;
-    invoke-static {v0, v1}, Lcom/android/settings/deviceinfo/Status;->access$1102(Lcom/android/settings/deviceinfo/Status;Landroid/os/Messenger;)Landroid/os/Messenger;
+    # setter for: Lcom/android/settings_ex/deviceinfo/Status;->mServiceMessenger:Landroid/os/Messenger;
+    invoke-static {v0, v1}, Lcom/android/settings_ex/deviceinfo/Status;->access$1102(Lcom/android/settings_ex/deviceinfo/Status;Landroid/os/Messenger;)Landroid/os/Messenger;
 
     .line 914
     return-void

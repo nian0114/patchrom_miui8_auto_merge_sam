@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$5;
+.class Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$5;
 .super Ljava/lang/Object;
 .source "SettingsMenuEditorFragment.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    value = Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
     .locals 0
 
     .prologue
     .line 451
-    iput-object p1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$5;->this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$5;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -66,10 +66,10 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 461
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$5;->this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$5;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
-    # getter for: Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
-    invoke-static {v0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->access$1500(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)Landroid/widget/ImageView;
+    # getter for: Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->access$1500(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)Landroid/widget/ImageView;
 
     move-result-object v0
 
@@ -88,10 +88,10 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 466
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$5;->this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$5;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
-    # getter for: Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
-    invoke-static {v0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->access$1500(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)Landroid/widget/ImageView;
+    # getter for: Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->access$1500(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)Landroid/widget/ImageView;
 
     move-result-object v0
 
@@ -108,10 +108,10 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 471
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$5;->this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$5;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
-    # getter for: Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
-    invoke-static {v0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->access$1500(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)Landroid/widget/ImageView;
+    # getter for: Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->access$1500(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)Landroid/widget/ImageView;
 
     move-result-object v0
 
@@ -148,7 +148,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 476
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$5;->this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$5;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
@@ -156,8 +156,8 @@
 
     float-to-int v1, v1
 
-    # invokes: Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ChangelayoutByGap(I)V
-    invoke-static {v0, v1}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->access$1600(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;I)V
+    # invokes: Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ChangelayoutByGap(I)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->access$1600(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;I)V
 
     goto :goto_0
 

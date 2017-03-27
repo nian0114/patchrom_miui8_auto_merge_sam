@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fingerprint/FingerprintSettings$4;
+.class Lcom/android/settings_ex/fingerprint/FingerprintSettings$4;
 .super Ljava/lang/Object;
 .source "FingerprintSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fingerprint/FingerprintSettings;
+    value = Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/FingerprintSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings;)V
     .locals 0
 
     .prologue
     .line 732
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintSettings$4;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$4;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,14 +50,14 @@
     invoke-static {v0, v1}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 736
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings$4;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$4;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
     const/4 v1, 0x0
 
     const/4 v2, -0x1
 
-    # invokes: Lcom/android/settings/fingerprint/FingerprintSettings;->setTwselectionChecklist(ZI)V
-    invoke-static {v0, v1, v2}, Lcom/android/settings/fingerprint/FingerprintSettings;->access$600(Lcom/android/settings/fingerprint/FingerprintSettings;ZI)V
+    # invokes: Lcom/android/settings_ex/fingerprint/FingerprintSettings;->setTwselectionChecklist(ZI)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/fingerprint/FingerprintSettings;->access$600(Lcom/android/settings_ex/fingerprint/FingerprintSettings;ZI)V
 
     .line 737
     return-void
@@ -81,20 +81,20 @@
 
     .local v0, "i":I
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings$4;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$4;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintSettings;->mEnrolledFingerCount:I
-    invoke-static {v1}, Lcom/android/settings/fingerprint/FingerprintSettings;->access$700(Lcom/android/settings/fingerprint/FingerprintSettings;)I
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintSettings;->mEnrolledFingerCount:I
+    invoke-static {v1}, Lcom/android/settings_ex/fingerprint/FingerprintSettings;->access$700(Lcom/android/settings_ex/fingerprint/FingerprintSettings;)I
 
     move-result v1
 
     if-ge v0, v1, :cond_0
 
     .line 743
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings$4;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$4;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintSettings;->twselectionChecklist:[Z
-    invoke-static {v1}, Lcom/android/settings/fingerprint/FingerprintSettings;->access$800(Lcom/android/settings/fingerprint/FingerprintSettings;)[Z
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintSettings;->twselectionChecklist:[Z
+    invoke-static {v1}, Lcom/android/settings_ex/fingerprint/FingerprintSettings;->access$800(Lcom/android/settings_ex/fingerprint/FingerprintSettings;)[Z
 
     move-result-object v1
 
@@ -105,19 +105,19 @@
     if-ne v1, v2, :cond_1
 
     .line 744
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings$4;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$4;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
     const/4 v2, -0x1
 
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings$4;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$4;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintSettings;->twselectionChecklist:[Z
-    invoke-static {v3}, Lcom/android/settings/fingerprint/FingerprintSettings;->access$800(Lcom/android/settings/fingerprint/FingerprintSettings;)[Z
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintSettings;->twselectionChecklist:[Z
+    invoke-static {v3}, Lcom/android/settings_ex/fingerprint/FingerprintSettings;->access$800(Lcom/android/settings_ex/fingerprint/FingerprintSettings;)[Z
 
     move-result-object v3
 
-    # invokes: Lcom/android/settings/fingerprint/FingerprintSettings;->startSelectListUI(I[Z)V
-    invoke-static {v1, v2, v3}, Lcom/android/settings/fingerprint/FingerprintSettings;->access$900(Lcom/android/settings/fingerprint/FingerprintSettings;I[Z)V
+    # invokes: Lcom/android/settings_ex/fingerprint/FingerprintSettings;->startSelectListUI(I[Z)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/fingerprint/FingerprintSettings;->access$900(Lcom/android/settings_ex/fingerprint/FingerprintSettings;I[Z)V
 
     .line 748
     :cond_0
@@ -176,22 +176,22 @@
     .line 754
     if-lez p3, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings$4;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$4;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintSettings;->mEnrolledFingerCount:I
-    invoke-static {v0}, Lcom/android/settings/fingerprint/FingerprintSettings;->access$700(Lcom/android/settings/fingerprint/FingerprintSettings;)I
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintSettings;->mEnrolledFingerCount:I
+    invoke-static {v0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings;->access$700(Lcom/android/settings_ex/fingerprint/FingerprintSettings;)I
 
     move-result v0
 
     if-gt p3, v0, :cond_0
 
     .line 755
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings$4;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$4;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
     add-int/lit8 v1, p3, -0x1
 
-    # invokes: Lcom/android/settings/fingerprint/FingerprintSettings;->updateTwMultiSelected(I)V
-    invoke-static {v0, v1}, Lcom/android/settings/fingerprint/FingerprintSettings;->access$1000(Lcom/android/settings/fingerprint/FingerprintSettings;I)V
+    # invokes: Lcom/android/settings_ex/fingerprint/FingerprintSettings;->updateTwMultiSelected(I)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/fingerprint/FingerprintSettings;->access$1000(Lcom/android/settings_ex/fingerprint/FingerprintSettings;I)V
 
     .line 757
     :cond_0

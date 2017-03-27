@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/applications/AppDomainsPreference;
-.super Lcom/android/settings/accessibility/ListDialogPreference;
+.class public Lcom/android/settings_ex/applications/AppDomainsPreference;
+.super Lcom/android/settings_ex/accessibility/ListDialogPreference;
 .source "AppDomainsPreference.java"
 
 
@@ -15,13 +15,13 @@
     const/4 v4, 0x1
 
     .line 45
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppDomainsPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/AppDomainsPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     .line 46
     .local v0, "context":Landroid/content/Context;
-    iget v3, p0, Lcom/android/settings/applications/AppDomainsPreference;->mNumEntries:I
+    iget v3, p0, Lcom/android/settings_ex/applications/AppDomainsPreference;->mNumEntries:I
 
     if-nez v3, :cond_0
 
@@ -38,13 +38,13 @@
 
     .line 51
     :cond_0
-    invoke-super {p0}, Lcom/android/settings/accessibility/ListDialogPreference;->getSummary()Ljava/lang/CharSequence;
+    invoke-super {p0}, Lcom/android/settings_ex/accessibility/ListDialogPreference;->getSummary()Ljava/lang/CharSequence;
 
     move-result-object v1
 
     .line 52
     .local v1, "summary":Ljava/lang/CharSequence;
-    iget v3, p0, Lcom/android/settings/applications/AppDomainsPreference;->mNumEntries:I
+    iget v3, p0, Lcom/android/settings_ex/applications/AppDomainsPreference;->mNumEntries:I
 
     if-ne v3, v4, :cond_1
 
@@ -80,7 +80,7 @@
 
     .prologue
     .line 60
-    invoke-virtual {p0, p2}, Lcom/android/settings/applications/AppDomainsPreference;->getTitleAt(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, p2}, Lcom/android/settings_ex/applications/AppDomainsPreference;->getTitleAt(I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -118,10 +118,10 @@
     array-length v0, p1
 
     :goto_0
-    iput v0, p0, Lcom/android/settings/applications/AppDomainsPreference;->mNumEntries:I
+    iput v0, p0, Lcom/android/settings_ex/applications/AppDomainsPreference;->mNumEntries:I
 
     .line 40
-    invoke-super {p0, p1}, Lcom/android/settings/accessibility/ListDialogPreference;->setTitles([Ljava/lang/CharSequence;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/accessibility/ListDialogPreference;->setTitles([Ljava/lang/CharSequence;)V
 
     .line 41
     return-void

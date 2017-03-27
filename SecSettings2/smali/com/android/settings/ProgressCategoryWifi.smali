@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/ProgressCategoryWifi;
-.super Lcom/android/settings/ProgressCategoryBase;
+.class public Lcom/android/settings_ex/ProgressCategoryWifi;
+.super Lcom/android/settings_ex/ProgressCategoryBase;
 .source "ProgressCategoryWifi.java"
 
 
@@ -18,7 +18,7 @@
     .line 34
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lcom/android/settings/ProgressCategoryWifi;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, v0}, Lcom/android/settings_ex/ProgressCategoryWifi;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 35
     return-void
@@ -33,20 +33,20 @@
     const/4 v0, 0x0
 
     .line 38
-    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings/ProgressCategoryBase;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings_ex/ProgressCategoryBase;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 31
-    iput-boolean v0, p0, Lcom/android/settings/ProgressCategoryWifi;->mProgress:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/ProgressCategoryWifi;->mProgress:Z
 
     .line 39
     const v0, 0x7f040190
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/ProgressCategoryWifi;->setLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/ProgressCategoryWifi;->setLayoutResource(I)V
 
     .line 40
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/ProgressCategoryWifi;->mEmptyTextRes:I
+    iput v0, p0, Lcom/android/settings_ex/ProgressCategoryWifi;->mEmptyTextRes:I
 
     .line 41
     return-void
@@ -62,7 +62,7 @@
     .line 45
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/settings/ProgressCategoryWifi;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/settings_ex/ProgressCategoryWifi;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 46
     return-void
@@ -77,17 +77,17 @@
 
     .prologue
     .line 49
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/settings/ProgressCategoryBase;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/settings_ex/ProgressCategoryBase;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 31
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/ProgressCategoryWifi;->mProgress:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/ProgressCategoryWifi;->mProgress:Z
 
     .line 50
     const v0, 0x7f040190
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/ProgressCategoryWifi;->setLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/ProgressCategoryWifi;->setLayoutResource(I)V
 
     .line 51
     return-void
@@ -101,7 +101,7 @@
 
     .prologue
     .line 59
-    invoke-super {p0, p1}, Lcom/android/settings/ProgressCategoryBase;->onBindView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/ProgressCategoryBase;->onBindView(Landroid/view/View;)V
 
     .line 60
     const v1, 0x7f0d00f4
@@ -112,7 +112,7 @@
 
     .line 62
     .local v0, "progressBar":Landroid/view/View;
-    iget-boolean v1, p0, Lcom/android/settings/ProgressCategoryWifi;->mProgress:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/ProgressCategoryWifi;->mProgress:Z
 
     if-eqz v1, :cond_0
 
@@ -137,10 +137,10 @@
 
     .prologue
     .line 67
-    iput-boolean p1, p0, Lcom/android/settings/ProgressCategoryWifi;->mProgress:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/ProgressCategoryWifi;->mProgress:Z
 
     .line 68
-    invoke-virtual {p0}, Lcom/android/settings/ProgressCategoryWifi;->notifyChanged()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/ProgressCategoryWifi;->notifyChanged()V
 
     .line 69
     return-void

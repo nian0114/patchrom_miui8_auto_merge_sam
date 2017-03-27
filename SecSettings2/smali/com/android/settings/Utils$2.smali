@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/Utils$2;
+.class final Lcom/android/settings_ex/Utils$2;
 .super Ljava/lang/Object;
 .source "Utils.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/Utils;->buildGlobalChangeWarningDialogwithNegativeAction(Landroid/content/Context;ILjava/lang/Runnable;Ljava/lang/Runnable;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/Utils;->buildGlobalChangeWarningDialogwithNegativeAction(Landroid/content/Context;ILjava/lang/Runnable;Ljava/lang/Runnable;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
 
     .prologue
     .line 2339
-    iput-object p1, p0, Lcom/android/settings/Utils$2;->val$positiveAction:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/android/settings_ex/Utils$2;->val$positiveAction:Ljava/lang/Runnable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
 
     .prologue
     .line 2342
-    iget-object v0, p0, Lcom/android/settings/Utils$2;->val$positiveAction:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/settings_ex/Utils$2;->val$positiveAction:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 

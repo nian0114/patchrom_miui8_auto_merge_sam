@@ -1,11 +1,11 @@
-.class Lcom/android/settings/bluetooth/BluetoothSettings$1;
+.class Lcom/android/settings_ex/bluetooth/BluetoothSettings$1;
 .super Landroid/content/BroadcastReceiver;
 .source "BluetoothSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/bluetooth/BluetoothSettings;
+    value = Lcom/android/settings_ex/bluetooth/BluetoothSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/bluetooth/BluetoothSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/bluetooth/BluetoothSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/bluetooth/BluetoothSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/bluetooth/BluetoothSettings;)V
     .locals 0
 
     .prologue
     .line 170
-    iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothSettings$1;->this$0:Lcom/android/settings/bluetooth/BluetoothSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/bluetooth/BluetoothSettings$1;->this$0:Lcom/android/settings_ex/bluetooth/BluetoothSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -94,17 +94,17 @@
     if-eqz v1, :cond_0
 
     .line 182
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothSettings$1;->this$0:Lcom/android/settings/bluetooth/BluetoothSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothSettings$1;->this$0:Lcom/android/settings_ex/bluetooth/BluetoothSettings;
 
-    iget-object v1, v1, Lcom/android/settings/bluetooth/BluetoothSettings;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iget-object v1, v1, Lcom/android/settings_ex/bluetooth/BluetoothSettings;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothSettings$1;->this$0:Lcom/android/settings/bluetooth/BluetoothSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothSettings$1;->this$0:Lcom/android/settings_ex/bluetooth/BluetoothSettings;
 
-    iget-object v1, v1, Lcom/android/settings/bluetooth/BluetoothSettings;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iget-object v1, v1, Lcom/android/settings_ex/bluetooth/BluetoothSettings;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
-    invoke-virtual {v1}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->getBluetoothState()I
+    invoke-virtual {v1}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->getBluetoothState()I
 
     move-result v1
 
@@ -112,25 +112,25 @@
 
     if-ne v1, v2, :cond_0
 
-    sget-boolean v1, Lcom/android/settings/bluetooth/BluetoothSettings;->mIsForegroundBtSettings:Z
+    sget-boolean v1, Lcom/android/settings_ex/bluetooth/BluetoothSettings;->mIsForegroundBtSettings:Z
 
     if-eqz v1, :cond_0
 
     .line 183
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothSettings$1;->this$0:Lcom/android/settings/bluetooth/BluetoothSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothSettings$1;->this$0:Lcom/android/settings_ex/bluetooth/BluetoothSettings;
 
-    iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothSettings$1;->this$0:Lcom/android/settings/bluetooth/BluetoothSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/bluetooth/BluetoothSettings$1;->this$0:Lcom/android/settings_ex/bluetooth/BluetoothSettings;
 
-    iget-object v2, v2, Lcom/android/settings/bluetooth/BluetoothSettings;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iget-object v2, v2, Lcom/android/settings_ex/bluetooth/BluetoothSettings;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
-    invoke-virtual {v2}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->getBluetoothState()I
+    invoke-virtual {v2}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->getBluetoothState()I
 
     move-result v2
 
     const/4 v3, 0x0
 
-    # invokes: Lcom/android/settings/bluetooth/BluetoothSettings;->updateContent(IZ)V
-    invoke-static {v1, v2, v3}, Lcom/android/settings/bluetooth/BluetoothSettings;->access$000(Lcom/android/settings/bluetooth/BluetoothSettings;IZ)V
+    # invokes: Lcom/android/settings_ex/bluetooth/BluetoothSettings;->updateContent(IZ)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/bluetooth/BluetoothSettings;->access$000(Lcom/android/settings_ex/bluetooth/BluetoothSettings;IZ)V
 
     goto :goto_0
 .end method

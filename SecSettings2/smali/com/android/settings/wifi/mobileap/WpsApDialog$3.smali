@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wifi/mobileap/WpsApDialog$3;
+.class Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$3;
 .super Ljava/util/TimerTask;
 .source "WpsApDialog.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/mobileap/WpsApDialog;->onStart()V
+    value = Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;->onStart()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WpsApDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WpsApDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;)V
     .locals 0
 
     .prologue
     .line 168
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WpsApDialog$3;->this$0:Lcom/android/settings/wifi/mobileap/WpsApDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$3;->this$0:Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
 
@@ -45,16 +45,16 @@
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 172
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WpsApDialog$3;->this$0:Lcom/android/settings/wifi/mobileap/WpsApDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$3;->this$0:Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WpsApDialog;->mHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WpsApDialog;->access$700(Lcom/android/settings/wifi/mobileap/WpsApDialog;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;->mHandler:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;->access$700(Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;)Landroid/os/Handler;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/settings/wifi/mobileap/WpsApDialog$3$1;
+    new-instance v1, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$3$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/wifi/mobileap/WpsApDialog$3$1;-><init>(Lcom/android/settings/wifi/mobileap/WpsApDialog$3;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$3$1;-><init>(Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$3;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

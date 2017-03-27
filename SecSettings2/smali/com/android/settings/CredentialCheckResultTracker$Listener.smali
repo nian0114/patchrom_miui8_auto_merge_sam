@@ -1,11 +1,11 @@
-.class interface abstract Lcom/android/settings/CredentialCheckResultTracker$Listener;
+.class interface abstract Lcom/android/settings_ex/CredentialCheckResultTracker$Listener;
 .super Ljava/lang/Object;
 .source "CredentialCheckResultTracker.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/CredentialCheckResultTracker;
+    value = Lcom/android/settings_ex/CredentialCheckResultTracker;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

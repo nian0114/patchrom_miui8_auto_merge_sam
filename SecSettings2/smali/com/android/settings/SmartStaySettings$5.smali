@@ -1,4 +1,4 @@
-.class Lcom/android/settings/SmartStaySettings$5;
+.class Lcom/android/settings_ex/SmartStaySettings$5;
 .super Ljava/lang/Object;
 .source "SmartStaySettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/SmartStaySettings;->makeTalkBackDisablePopup()V
+    value = Lcom/android/settings_ex/SmartStaySettings;->makeTalkBackDisablePopup()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/SmartStaySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/SmartStaySettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/SmartStaySettings;)V
+.method constructor <init>(Lcom/android/settings_ex/SmartStaySettings;)V
     .locals 0
 
     .prologue
     .line 225
-    iput-object p1, p0, Lcom/android/settings/SmartStaySettings$5;->this$0:Lcom/android/settings/SmartStaySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/SmartStaySettings$5;->this$0:Lcom/android/settings_ex/SmartStaySettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,16 +44,16 @@
     const/4 v0, 0x0
 
     .line 228
-    iget-object v1, p0, Lcom/android/settings/SmartStaySettings$5;->this$0:Lcom/android/settings/SmartStaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/SmartStaySettings$5;->this$0:Lcom/android/settings_ex/SmartStaySettings;
 
-    # getter for: Lcom/android/settings/SmartStaySettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v1}, Lcom/android/settings/SmartStaySettings;->access$000(Lcom/android/settings/SmartStaySettings;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/SmartStaySettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v1}, Lcom/android/settings_ex/SmartStaySettings;->access$000(Lcom/android/settings_ex/SmartStaySettings;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/SmartStaySettings$5;->this$0:Lcom/android/settings/SmartStaySettings;
+    iget-object v2, p0, Lcom/android/settings_ex/SmartStaySettings$5;->this$0:Lcom/android/settings_ex/SmartStaySettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/SmartStaySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v2}, Lcom/android/settings_ex/SmartStaySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -68,7 +68,7 @@
     const/4 v0, 0x1
 
     :cond_0
-    invoke-virtual {v1, v0}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 229
     return-void

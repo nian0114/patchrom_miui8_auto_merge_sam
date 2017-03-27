@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/nfc/OtherSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/nfc/OtherSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "OtherSettings.java"
 
 # interfaces
@@ -9,8 +9,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/nfc/OtherSettings$OtherAppPreference;,
-        Lcom/android/settings/nfc/OtherSettings$SettingsPackageMonitor;
+        Lcom/android/settings_ex/nfc/OtherSettings$OtherAppPreference;,
+        Lcom/android/settings_ex/nfc/OtherSettings$SettingsPackageMonitor;
     }
 .end annotation
 
@@ -22,7 +22,7 @@
 
 .field private static final OMC_SALES_CODE:Ljava/lang/String;
 
-.field public static OtherAppInfo_backup:Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;
+.field public static OtherAppInfo_backup:Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;
 
 .field private static final SALES_CODE:Ljava/lang/String;
 
@@ -36,7 +36,7 @@
 
 .field private mNfcAdapter:Landroid/nfc/NfcAdapter;
 
-.field private mOtherBackend:Lcom/android/settings/nfc/OtherBackend;
+.field private mOtherBackend:Lcom/android/settings_ex/nfc/OtherBackend;
 
 .field private final mReceiver:Landroid/content/BroadcastReceiver;
 
@@ -51,9 +51,9 @@
 
     .prologue
     .line 56
-    sget-boolean v0, Lcom/android/settings/nfc/PaymentSettings;->DBG:Z
+    sget-boolean v0, Lcom/android/settings_ex/nfc/PaymentSettings;->DBG:Z
 
-    sput-boolean v0, Lcom/android/settings/nfc/OtherSettings;->DBG:Z
+    sput-boolean v0, Lcom/android/settings_ex/nfc/OtherSettings;->DBG:Z
 
     .line 65
     const-string v0, "persist.omc.sales_code"
@@ -62,7 +62,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/nfc/OtherSettings;->OMC_SALES_CODE:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/nfc/OtherSettings;->OMC_SALES_CODE:Ljava/lang/String;
 
     .line 66
     const-string v0, "ro.csc.sales_code"
@@ -71,14 +71,14 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/nfc/OtherSettings;->CSC_SALES_CODE:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/nfc/OtherSettings;->CSC_SALES_CODE:Ljava/lang/String;
 
     .line 67
-    sget-object v0, Lcom/android/settings/nfc/OtherSettings;->OMC_SALES_CODE:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/nfc/OtherSettings;->OMC_SALES_CODE:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/android/settings/nfc/OtherSettings;->OMC_SALES_CODE:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/nfc/OtherSettings;->OMC_SALES_CODE:Ljava/lang/String;
 
     const-string v1, ""
 
@@ -89,15 +89,15 @@
     if-eqz v0, :cond_1
 
     :cond_0
-    sget-object v0, Lcom/android/settings/nfc/OtherSettings;->CSC_SALES_CODE:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/nfc/OtherSettings;->CSC_SALES_CODE:Ljava/lang/String;
 
     :goto_0
-    sput-object v0, Lcom/android/settings/nfc/OtherSettings;->SALES_CODE:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/nfc/OtherSettings;->SALES_CODE:Ljava/lang/String;
 
     return-void
 
     :cond_1
-    sget-object v0, Lcom/android/settings/nfc/OtherSettings;->OMC_SALES_CODE:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/nfc/OtherSettings;->OMC_SALES_CODE:Ljava/lang/String;
 
     goto :goto_0
 .end method
@@ -107,42 +107,42 @@
 
     .prologue
     .line 53
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 59
-    new-instance v0, Lcom/android/settings/nfc/OtherSettings$SettingsPackageMonitor;
+    new-instance v0, Lcom/android/settings_ex/nfc/OtherSettings$SettingsPackageMonitor;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/nfc/OtherSettings$SettingsPackageMonitor;-><init>(Lcom/android/settings/nfc/OtherSettings;Lcom/android/settings/nfc/OtherSettings$1;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/nfc/OtherSettings$SettingsPackageMonitor;-><init>(Lcom/android/settings_ex/nfc/OtherSettings;Lcom/android/settings_ex/nfc/OtherSettings$1;)V
 
-    iput-object v0, p0, Lcom/android/settings/nfc/OtherSettings;->mSettingsPackageMonitor:Lcom/android/internal/content/PackageMonitor;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/OtherSettings;->mSettingsPackageMonitor:Lcom/android/internal/content/PackageMonitor;
 
     .line 81
-    new-instance v0, Lcom/android/settings/nfc/OtherSettings$1;
+    new-instance v0, Lcom/android/settings_ex/nfc/OtherSettings$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/nfc/OtherSettings$1;-><init>(Lcom/android/settings/nfc/OtherSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/nfc/OtherSettings$1;-><init>(Lcom/android/settings_ex/nfc/OtherSettings;)V
 
-    iput-object v0, p0, Lcom/android/settings/nfc/OtherSettings;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/OtherSettings;->mReceiver:Landroid/content/BroadcastReceiver;
 
     .line 251
-    new-instance v0, Lcom/android/settings/nfc/OtherSettings$2;
+    new-instance v0, Lcom/android/settings_ex/nfc/OtherSettings$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/nfc/OtherSettings$2;-><init>(Lcom/android/settings/nfc/OtherSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/nfc/OtherSettings$2;-><init>(Lcom/android/settings_ex/nfc/OtherSettings;)V
 
-    iput-object v0, p0, Lcom/android/settings/nfc/OtherSettings;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/OtherSettings;->mHandler:Landroid/os/Handler;
 
     .line 280
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/nfc/OtherSettings;)Landroid/os/Handler;
+.method static synthetic access$100(Lcom/android/settings_ex/nfc/OtherSettings;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/nfc/OtherSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/nfc/OtherSettings;
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/android/settings/nfc/OtherSettings;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/OtherSettings;->mHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
@@ -169,7 +169,7 @@
 
     move-result-object v1
 
-    instance-of v1, v1, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;
+    instance-of v1, v1, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;
 
     if-eqz v1, :cond_1
 
@@ -178,47 +178,47 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;
+    check-cast v0, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;
 
     .line 192
-    .local v0, "appInfo":Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;
-    iget-object v1, v0, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;->componentName:Landroid/content/ComponentName;
+    .local v0, "appInfo":Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;
+    iget-object v1, v0, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;->componentName:Landroid/content/ComponentName;
 
     if-eqz v1, :cond_0
 
     .line 193
-    sput-object v0, Lcom/android/settings/nfc/OtherSettings;->OtherAppInfo_backup:Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;
+    sput-object v0, Lcom/android/settings_ex/nfc/OtherSettings;->OtherAppInfo_backup:Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;
 
     .line 196
-    iget-boolean v1, v0, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;->isSelected:Z
+    iget-boolean v1, v0, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;->isSelected:Z
 
     if-eqz v1, :cond_2
 
     .line 197
-    iget-object v1, p0, Lcom/android/settings/nfc/OtherSettings;->mOtherBackend:Lcom/android/settings/nfc/OtherBackend;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/OtherSettings;->mOtherBackend:Lcom/android/settings_ex/nfc/OtherBackend;
 
-    iget-object v2, v0, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;->componentName:Landroid/content/ComponentName;
+    iget-object v2, v0, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;->componentName:Landroid/content/ComponentName;
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/nfc/OtherBackend;->disableDefaultOtherApp(Landroid/content/ComponentName;)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/nfc/OtherBackend;->disableDefaultOtherApp(Landroid/content/ComponentName;)V
 
     .line 209
     :cond_0
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/nfc/OtherSettings;->refresh()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/OtherSettings;->refresh()V
 
     .line 211
-    .end local v0    # "appInfo":Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;
+    .end local v0    # "appInfo":Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;
     :cond_1
     return-void
 
     .line 199
-    .restart local v0    # "appInfo":Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;
+    .restart local v0    # "appInfo":Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/nfc/OtherSettings;->mOtherBackend:Lcom/android/settings/nfc/OtherBackend;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/OtherSettings;->mOtherBackend:Lcom/android/settings_ex/nfc/OtherBackend;
 
-    iget-object v2, v0, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;->componentName:Landroid/content/ComponentName;
+    iget-object v2, v0, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;->componentName:Landroid/content/ComponentName;
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/nfc/OtherBackend;->enableDefaultOtherApp(Landroid/content/ComponentName;)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/nfc/OtherBackend;->enableDefaultOtherApp(Landroid/content/ComponentName;)V
 
     goto :goto_0
 .end method
@@ -229,10 +229,10 @@
 
     .prologue
     .line 184
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 185
-    invoke-virtual {p0}, Lcom/android/settings/nfc/OtherSettings;->refresh()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/OtherSettings;->refresh()V
 
     .line 186
     return-void
@@ -244,10 +244,10 @@
 
     .prologue
     .line 99
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 100
-    sget-boolean v0, Lcom/android/settings/nfc/OtherSettings;->DBG:Z
+    sget-boolean v0, Lcom/android/settings_ex/nfc/OtherSettings;->DBG:Z
 
     if-eqz v0, :cond_0
 
@@ -259,29 +259,29 @@
 
     .line 102
     :cond_0
-    new-instance v0, Lcom/android/settings/nfc/OtherBackend;
+    new-instance v0, Lcom/android/settings_ex/nfc/OtherBackend;
 
-    invoke-virtual {p0}, Lcom/android/settings/nfc/OtherSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/OtherSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/android/settings/nfc/OtherBackend;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/nfc/OtherBackend;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/nfc/OtherSettings;->mOtherBackend:Lcom/android/settings/nfc/OtherBackend;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/OtherSettings;->mOtherBackend:Lcom/android/settings_ex/nfc/OtherBackend;
 
     .line 103
     const-string v0, "layout_inflater"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/nfc/OtherSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/nfc/OtherSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    iput-object v0, p0, Lcom/android/settings/nfc/OtherSettings;->mInflater:Landroid/view/LayoutInflater;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/OtherSettings;->mInflater:Landroid/view/LayoutInflater;
 
     .line 104
-    invoke-virtual {p0}, Lcom/android/settings/nfc/OtherSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/OtherSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -289,14 +289,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/nfc/OtherSettings;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/OtherSettings;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     .line 109
-    invoke-virtual {p0}, Lcom/android/settings/nfc/OtherSettings;->getPreferenceManager()Landroid/preference/PreferenceManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/OtherSettings;->getPreferenceManager()Landroid/preference/PreferenceManager;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/android/settings/nfc/OtherSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/OtherSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -304,7 +304,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/nfc/OtherSettings;->screen:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/OtherSettings;->screen:Landroid/preference/PreferenceScreen;
 
     .line 110
     return-void
@@ -319,7 +319,7 @@
     const/4 v2, 0x0
 
     .line 244
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     .line 246
     const/4 v0, 0x1
@@ -346,10 +346,10 @@
 
     .prologue
     .line 177
-    invoke-super {p0, p1, p2, p3}, Lcom/android/settings/SettingsPreferenceFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     .line 178
-    iget-object v1, p0, Lcom/android/settings/nfc/OtherSettings;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/OtherSettings;->mInflater:Landroid/view/LayoutInflater;
 
     const v2, 0x7f04014b
 
@@ -381,7 +381,7 @@
     if-nez v6, :cond_0
 
     .line 343
-    const-class v0, Lcom/android/settings/nfc/PaymentSettings;
+    const-class v0, Lcom/android/settings_ex/nfc/PaymentSettings;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
@@ -395,10 +395,10 @@
 
     move-object v1, p0
 
-    invoke-virtual/range {v0 .. v5}, Lcom/android/settings/nfc/OtherSettings;->startFragment(Landroid/app/Fragment;Ljava/lang/String;IILandroid/os/Bundle;)Z
+    invoke-virtual/range {v0 .. v5}, Lcom/android/settings_ex/nfc/OtherSettings;->startFragment(Landroid/app/Fragment;Ljava/lang/String;IILandroid/os/Bundle;)Z
 
     .line 345
-    invoke-virtual {p0}, Lcom/android/settings/nfc/OtherSettings;->finishFragment()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/OtherSettings;->finishFragment()V
 
     .line 346
     const/4 v4, 0x1
@@ -413,7 +413,7 @@
 
     .prologue
     .line 230
-    sget-boolean v0, Lcom/android/settings/nfc/OtherSettings;->DBG:Z
+    sget-boolean v0, Lcom/android/settings_ex/nfc/OtherSettings;->DBG:Z
 
     if-eqz v0, :cond_0
 
@@ -425,11 +425,11 @@
 
     .line 232
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/nfc/OtherSettings;->alert:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/OtherSettings;->alert:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/settings/nfc/OtherSettings;->alert:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/OtherSettings;->alert:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->isShowing()Z
 
@@ -438,18 +438,18 @@
     if-eqz v0, :cond_1
 
     .line 233
-    iget-object v0, p0, Lcom/android/settings/nfc/OtherSettings;->alert:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/OtherSettings;->alert:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 238
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/nfc/OtherSettings;->mSettingsPackageMonitor:Lcom/android/internal/content/PackageMonitor;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/OtherSettings;->mSettingsPackageMonitor:Lcom/android/internal/content/PackageMonitor;
 
     invoke-virtual {v0}, Lcom/android/internal/content/PackageMonitor;->unregister()V
 
     .line 239
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 240
     return-void
@@ -460,16 +460,16 @@
 
     .prologue
     .line 215
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 224
-    iget-object v0, p0, Lcom/android/settings/nfc/OtherSettings;->mSettingsPackageMonitor:Lcom/android/internal/content/PackageMonitor;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/OtherSettings;->mSettingsPackageMonitor:Lcom/android/internal/content/PackageMonitor;
 
-    invoke-virtual {p0}, Lcom/android/settings/nfc/OtherSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/OtherSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/nfc/OtherSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/OtherSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -482,7 +482,7 @@
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/content/PackageMonitor;->register(Landroid/content/Context;Landroid/os/Looper;Z)V
 
     .line 225
-    invoke-virtual {p0}, Lcom/android/settings/nfc/OtherSettings;->refresh()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/OtherSettings;->refresh()V
 
     .line 226
     return-void
@@ -493,7 +493,7 @@
 
     .prologue
     .line 113
-    sget-boolean v1, Lcom/android/settings/nfc/OtherSettings;->DBG:Z
+    sget-boolean v1, Lcom/android/settings_ex/nfc/OtherSettings;->DBG:Z
 
     if-eqz v1, :cond_0
 
@@ -505,19 +505,19 @@
 
     .line 114
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/nfc/OtherSettings;->screen:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/OtherSettings;->screen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1}, Landroid/preference/PreferenceScreen;->removeAll()V
 
     .line 117
-    iget-object v1, p0, Lcom/android/settings/nfc/OtherSettings;->mOtherBackend:Lcom/android/settings/nfc/OtherBackend;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/OtherSettings;->mOtherBackend:Lcom/android/settings_ex/nfc/OtherBackend;
 
-    invoke-virtual {v1}, Lcom/android/settings/nfc/OtherBackend;->getOtherAppInfos()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/android/settings_ex/nfc/OtherBackend;->getOtherAppInfos()Ljava/util/List;
 
     move-result-object v6
 
     .line 118
-    .local v6, "appInfos":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;>;"
+    .local v6, "appInfos":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;>;"
     if-eqz v6, :cond_2
 
     invoke-interface {v6}, Ljava/util/List;->size()I
@@ -543,46 +543,46 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;
+    check-cast v3, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;
 
     .line 129
-    .local v3, "appInfo":Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;
-    new-instance v0, Lcom/android/settings/nfc/OtherSettings$OtherAppPreference;
+    .local v3, "appInfo":Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;
+    new-instance v0, Lcom/android/settings_ex/nfc/OtherSettings$OtherAppPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/nfc/OtherSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/OtherSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/nfc/OtherSettings;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/OtherSettings;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     const/4 v5, 0x0
 
     move-object v4, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/settings/nfc/OtherSettings$OtherAppPreference;-><init>(Landroid/content/Context;Landroid/nfc/NfcAdapter;Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;Landroid/view/View$OnClickListener;Landroid/view/View$OnLongClickListener;)V
+    invoke-direct/range {v0 .. v5}, Lcom/android/settings_ex/nfc/OtherSettings$OtherAppPreference;-><init>(Landroid/content/Context;Landroid/nfc/NfcAdapter;Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;Landroid/view/View$OnClickListener;Landroid/view/View$OnLongClickListener;)V
 
     .line 131
-    .local v0, "preference":Lcom/android/settings/nfc/OtherSettings$OtherAppPreference;
-    iget-object v1, v3, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;->caption:Ljava/lang/CharSequence;
+    .local v0, "preference":Lcom/android/settings_ex/nfc/OtherSettings$OtherAppPreference;
+    iget-object v1, v3, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;->caption:Ljava/lang/CharSequence;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/nfc/OtherSettings$OtherAppPreference;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/nfc/OtherSettings$OtherAppPreference;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 133
-    iget-object v1, v3, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;->banner:Landroid/graphics/drawable/Drawable;
+    iget-object v1, v3, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;->banner:Landroid/graphics/drawable/Drawable;
 
     if-nez v1, :cond_1
 
     .line 137
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/nfc/OtherSettings;->screen:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/OtherSettings;->screen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v0}, Landroid/preference/PreferenceScreen;->addPreference(Landroid/preference/Preference;)Z
 
     goto :goto_0
 
     .line 142
-    .end local v0    # "preference":Lcom/android/settings/nfc/OtherSettings$OtherAppPreference;
-    .end local v3    # "appInfo":Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;
+    .end local v0    # "preference":Lcom/android/settings_ex/nfc/OtherSettings$OtherAppPreference;
+    .end local v3    # "appInfo":Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;
     .end local v12    # "i$":Ljava/util/Iterator;
     :cond_2
     const/4 v7, 0x0
@@ -593,7 +593,7 @@
 
     .line 145
     .local v8, "emptyLayout":Landroid/widget/LinearLayout;
-    invoke-virtual {p0}, Lcom/android/settings/nfc/OtherSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/OtherSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -608,7 +608,7 @@
     if-ne v1, v2, :cond_3
 
     .line 147
-    invoke-virtual {p0}, Lcom/android/settings/nfc/OtherSettings;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/OtherSettings;->getView()Landroid/view/View;
 
     move-result-object v1
 
@@ -623,7 +623,7 @@
 
     .line 148
     .restart local v7    # "emptyImage":Landroid/widget/ImageView;
-    invoke-virtual {p0}, Lcom/android/settings/nfc/OtherSettings;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/OtherSettings;->getView()Landroid/view/View;
 
     move-result-object v1
 
@@ -638,7 +638,7 @@
 
     .line 150
     .restart local v8    # "emptyLayout":Landroid/widget/LinearLayout;
-    invoke-virtual {p0}, Lcom/android/settings/nfc/OtherSettings;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/OtherSettings;->getView()Landroid/view/View;
 
     move-result-object v1
 
@@ -659,7 +659,7 @@
     .line 160
     .end local v10    # "emptyLayoutVert":Landroid/widget/LinearLayout;
     :goto_1
-    iget-object v1, p0, Lcom/android/settings/nfc/OtherSettings;->screen:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/OtherSettings;->screen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1}, Landroid/preference/PreferenceScreen;->getPreferenceCount()I
 
@@ -668,7 +668,7 @@
     if-nez v1, :cond_4
 
     .line 161
-    invoke-virtual {p0}, Lcom/android/settings/nfc/OtherSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/OtherSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -697,7 +697,7 @@
     invoke-virtual {v8, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 166
-    invoke-virtual {p0}, Lcom/android/settings/nfc/OtherSettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/OtherSettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v1
 
@@ -708,16 +708,16 @@
     .line 171
     .end local v11    # "frameAnim":Landroid/graphics/drawable/AnimationDrawable;
     :goto_2
-    iget-object v1, p0, Lcom/android/settings/nfc/OtherSettings;->screen:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/OtherSettings;->screen:Landroid/preference/PreferenceScreen;
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/nfc/OtherSettings;->setPreferenceScreen(Landroid/preference/PreferenceScreen;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/nfc/OtherSettings;->setPreferenceScreen(Landroid/preference/PreferenceScreen;)V
 
     .line 172
     return-void
 
     .line 153
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/nfc/OtherSettings;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/OtherSettings;->getView()Landroid/view/View;
 
     move-result-object v1
 
@@ -732,7 +732,7 @@
 
     .line 154
     .restart local v7    # "emptyImage":Landroid/widget/ImageView;
-    invoke-virtual {p0}, Lcom/android/settings/nfc/OtherSettings;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/OtherSettings;->getView()Landroid/view/View;
 
     move-result-object v1
 
@@ -747,7 +747,7 @@
 
     .line 156
     .restart local v8    # "emptyLayout":Landroid/widget/LinearLayout;
-    invoke-virtual {p0}, Lcom/android/settings/nfc/OtherSettings;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/OtherSettings;->getView()Landroid/view/View;
 
     move-result-object v1
 
@@ -775,7 +775,7 @@
     invoke-virtual {v8, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 169
-    invoke-virtual {p0}, Lcom/android/settings/nfc/OtherSettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/OtherSettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v1
 
@@ -791,7 +791,7 @@
 
     .prologue
     .line 352
-    sget-boolean v0, Lcom/android/settings/nfc/OtherSettings;->DBG:Z
+    sget-boolean v0, Lcom/android/settings_ex/nfc/OtherSettings;->DBG:Z
 
     if-eqz v0, :cond_0
 
@@ -803,27 +803,27 @@
 
     .line 354
     :cond_0
-    sget-object v0, Lcom/android/settings/nfc/OtherSettings;->OtherAppInfo_backup:Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;
+    sget-object v0, Lcom/android/settings_ex/nfc/OtherSettings;->OtherAppInfo_backup:Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;
 
-    iget-object v0, v0, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;->componentName:Landroid/content/ComponentName;
+    iget-object v0, v0, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;->componentName:Landroid/content/ComponentName;
 
     if-eqz v0, :cond_1
 
     .line 355
-    sget-object v0, Lcom/android/settings/nfc/OtherSettings;->OtherAppInfo_backup:Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;
+    sget-object v0, Lcom/android/settings_ex/nfc/OtherSettings;->OtherAppInfo_backup:Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;
 
-    iget-boolean v0, v0, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;->isSelected:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;->isSelected:Z
 
     if-eqz v0, :cond_2
 
     .line 356
-    iget-object v0, p0, Lcom/android/settings/nfc/OtherSettings;->mOtherBackend:Lcom/android/settings/nfc/OtherBackend;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/OtherSettings;->mOtherBackend:Lcom/android/settings_ex/nfc/OtherBackend;
 
-    sget-object v1, Lcom/android/settings/nfc/OtherSettings;->OtherAppInfo_backup:Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;
+    sget-object v1, Lcom/android/settings_ex/nfc/OtherSettings;->OtherAppInfo_backup:Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;
 
-    iget-object v1, v1, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;->componentName:Landroid/content/ComponentName;
+    iget-object v1, v1, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;->componentName:Landroid/content/ComponentName;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/nfc/OtherBackend;->enableDefaultOtherApp(Landroid/content/ComponentName;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/nfc/OtherBackend;->enableDefaultOtherApp(Landroid/content/ComponentName;)V
 
     .line 361
     :cond_1
@@ -834,13 +834,13 @@
 
     .line 358
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/nfc/OtherSettings;->mOtherBackend:Lcom/android/settings/nfc/OtherBackend;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/OtherSettings;->mOtherBackend:Lcom/android/settings_ex/nfc/OtherBackend;
 
-    sget-object v1, Lcom/android/settings/nfc/OtherSettings;->OtherAppInfo_backup:Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;
+    sget-object v1, Lcom/android/settings_ex/nfc/OtherSettings;->OtherAppInfo_backup:Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;
 
-    iget-object v1, v1, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;->componentName:Landroid/content/ComponentName;
+    iget-object v1, v1, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;->componentName:Landroid/content/ComponentName;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/nfc/OtherBackend;->disableDefaultOtherApp(Landroid/content/ComponentName;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/nfc/OtherBackend;->disableDefaultOtherApp(Landroid/content/ComponentName;)V
 
     goto :goto_0
 .end method

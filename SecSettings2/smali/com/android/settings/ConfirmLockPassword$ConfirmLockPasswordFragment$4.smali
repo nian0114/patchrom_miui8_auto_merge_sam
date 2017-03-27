@@ -1,11 +1,11 @@
-.class Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;
+.class Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;
 .super Landroid/os/AsyncTask;
 .source "ConfirmLockPassword.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->handleNext()V
+    value = Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->handleNext()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,16 +26,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;)V
     .locals 0
 
     .prologue
     .line 623
-    iput-object p1, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
@@ -221,7 +221,7 @@
 
     aget-object v1, p1, v1
 
-    invoke-direct {p0, v1}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->verifyPIN(Ljava/lang/String;)I
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->verifyPIN(Ljava/lang/String;)I
 
     move-result v0
 
@@ -243,7 +243,7 @@
     check-cast p1, [Ljava/lang/String;
 
     .end local p1    # "x0":[Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->doInBackground([Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->doInBackground([Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -257,20 +257,20 @@
     .prologue
     .line 680
     :try_start_0
-    iget-object v3, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v3, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->mDialog:Landroid/app/ProgressDialog;
-    invoke-static {v3}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1400(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->mDialog:Landroid/app/ProgressDialog;
+    invoke-static {v3}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1400(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;)Landroid/app/ProgressDialog;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
     .line 681
-    iget-object v3, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v3, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->mDialog:Landroid/app/ProgressDialog;
-    invoke-static {v3}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1400(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->mDialog:Landroid/app/ProgressDialog;
+    invoke-static {v3}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1400(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;)Landroid/app/ProgressDialog;
 
     move-result-object v3
 
@@ -278,10 +278,10 @@
 
     .line 683
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v3, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
-    # invokes: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->resetState()V
-    invoke-static {v3}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$800(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;)V
+    # invokes: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->resetState()V
+    invoke-static {v3}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$800(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;)V
 
     .line 684
     const/4 v2, 0x0
@@ -296,25 +296,25 @@
 
     .line 718
     :pswitch_0
-    iget-object v3, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v3, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
     const v4, 0x7f0e119d
 
-    # invokes: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->showError(I)V
-    invoke-static {v3, v4}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1700(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;I)V
+    # invokes: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->showError(I)V
+    invoke-static {v3, v4}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1700(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;I)V
 
     .line 720
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v3, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
-    invoke-virtual {v3}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v3}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v4, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->mOrientation:I
-    invoke-static {v4}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1200(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;)I
+    # getter for: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->mOrientation:I
+    invoke-static {v4}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1200(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;)I
 
     move-result v4
 
@@ -348,21 +348,21 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 691
-    iget-object v3, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v3, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
     const/4 v4, 0x1
 
     const/4 v5, 0x0
 
-    iget-object v6, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v6, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->mEffectiveUserId:I
-    invoke-static {v6}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1500(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;)I
+    # getter for: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->mEffectiveUserId:I
+    invoke-static {v6}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1500(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;)I
 
     move-result v6
 
-    # invokes: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->onPasswordChecked(ZLandroid/content/Intent;II)V
-    invoke-static {v3, v4, v1, v5, v6}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1600(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;ZLandroid/content/Intent;II)V
+    # invokes: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->onPasswordChecked(ZLandroid/content/Intent;II)V
+    invoke-static {v3, v4, v1, v5, v6}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1600(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;ZLandroid/content/Intent;II)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -392,12 +392,12 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 695
-    iget-object v3, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v3, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
     const v4, 0x7f0e11a0
 
-    # invokes: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->showError(I)V
-    invoke-static {v3, v4}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1700(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;I)V
+    # invokes: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->showError(I)V
+    invoke-static {v3, v4}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1700(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;I)V
 
     goto :goto_0
 
@@ -410,12 +410,12 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 699
-    iget-object v3, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v3, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
     const v4, 0x7f0e11a1
 
-    # invokes: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->showError(I)V
-    invoke-static {v3, v4}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1700(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;I)V
+    # invokes: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->showError(I)V
+    invoke-static {v3, v4}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1700(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;I)V
 
     goto :goto_0
 
@@ -428,12 +428,12 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 703
-    iget-object v3, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v3, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
     const v4, 0x7f0e11a3
 
-    # invokes: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->showError(I)V
-    invoke-static {v3, v4}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1700(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;I)V
+    # invokes: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->showError(I)V
+    invoke-static {v3, v4}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1700(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;I)V
 
     goto :goto_0
 
@@ -446,12 +446,12 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 707
-    iget-object v3, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v3, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
     const v4, 0x7f0e119f
 
-    # invokes: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->showError(I)V
-    invoke-static {v3, v4}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1700(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;I)V
+    # invokes: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->showError(I)V
+    invoke-static {v3, v4}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1700(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;I)V
 
     goto :goto_0
 
@@ -464,12 +464,12 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 711
-    iget-object v3, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v3, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
     const v4, 0x7f0e119e
 
-    # invokes: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->showError(I)V
-    invoke-static {v3, v4}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1700(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;I)V
+    # invokes: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->showError(I)V
+    invoke-static {v3, v4}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1700(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;I)V
 
     goto/16 :goto_0
 
@@ -482,12 +482,12 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 715
-    iget-object v3, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v3, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
     const v4, 0x7f0e11a2
 
-    # invokes: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->showError(I)V
-    invoke-static {v3, v4}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1700(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;I)V
+    # invokes: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->showError(I)V
+    invoke-static {v3, v4}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1700(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;I)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -519,7 +519,7 @@
     check-cast p1, Ljava/lang/Integer;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->onPostExecute(Ljava/lang/Integer;)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->onPostExecute(Ljava/lang/Integer;)V
 
     return-void
 .end method
@@ -531,31 +531,31 @@
     const/4 v3, 0x0
 
     .line 626
-    iget-object v0, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->mPasswordEntry:Landroid/widget/TextView;
-    invoke-static {v0}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$400(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->mPasswordEntry:Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$400(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;)Landroid/widget/TextView;
 
     move-result-object v0
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 627
-    iget-object v0, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->mPasswordEntryInputDisabler:Lcom/android/internal/widget/TextViewInputDisabler;
-    invoke-static {v0}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1100(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;)Lcom/android/internal/widget/TextViewInputDisabler;
+    # getter for: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->mPasswordEntryInputDisabler:Lcom/android/internal/widget/TextViewInputDisabler;
+    invoke-static {v0}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1100(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;)Lcom/android/internal/widget/TextViewInputDisabler;
 
     move-result-object v0
 
     invoke-virtual {v0, v3}, Lcom/android/internal/widget/TextViewInputDisabler;->setInputEnabled(Z)V
 
     .line 628
-    iget-object v0, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
-    iget-object v1, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
-    invoke-virtual {v1}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -563,36 +563,36 @@
 
     move-result v1
 
-    # setter for: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->mOrientation:I
-    invoke-static {v0, v1}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1202(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;I)I
+    # setter for: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->mOrientation:I
+    invoke-static {v0, v1}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1202(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;I)I
 
     .line 629
-    iget-object v0, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
-    invoke-virtual {v0}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
-    # invokes: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->getDeviceOrientation()I
-    invoke-static {v1}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1300(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;)I
+    # invokes: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->getDeviceOrientation()I
+    invoke-static {v1}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1300(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setRequestedOrientation(I)V
 
     .line 630
-    iget-object v0, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->mDialog:Landroid/app/ProgressDialog;
-    invoke-static {v0}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1400(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->mDialog:Landroid/app/ProgressDialog;
+    invoke-static {v0}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1400(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;)Landroid/app/ProgressDialog;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
-    invoke-virtual {v1}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -605,16 +605,16 @@
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 631
-    iget-object v0, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->mDialog:Landroid/app/ProgressDialog;
-    invoke-static {v0}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1400(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->mDialog:Landroid/app/ProgressDialog;
+    invoke-static {v0}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1400(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;)Landroid/app/ProgressDialog;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
-    invoke-virtual {v1}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -627,10 +627,10 @@
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
     .line 632
-    iget-object v0, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->mDialog:Landroid/app/ProgressDialog;
-    invoke-static {v0}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1400(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->mDialog:Landroid/app/ProgressDialog;
+    invoke-static {v0}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1400(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;)Landroid/app/ProgressDialog;
 
     move-result-object v0
 
@@ -639,30 +639,30 @@
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setIndeterminate(Z)V
 
     .line 633
-    iget-object v0, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->mDialog:Landroid/app/ProgressDialog;
-    invoke-static {v0}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1400(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->mDialog:Landroid/app/ProgressDialog;
+    invoke-static {v0}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1400(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;)Landroid/app/ProgressDialog;
 
     move-result-object v0
 
     invoke-virtual {v0, v3}, Landroid/app/ProgressDialog;->setProgressStyle(I)V
 
     .line 634
-    iget-object v0, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->mDialog:Landroid/app/ProgressDialog;
-    invoke-static {v0}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1400(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->mDialog:Landroid/app/ProgressDialog;
+    invoke-static {v0}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1400(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;)Landroid/app/ProgressDialog;
 
     move-result-object v0
 
     invoke-virtual {v0, v3}, Landroid/app/ProgressDialog;->setCancelable(Z)V
 
     .line 635
-    iget-object v0, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment$4;->this$0:Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->mDialog:Landroid/app/ProgressDialog;
-    invoke-static {v0}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1400(Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->mDialog:Landroid/app/ProgressDialog;
+    invoke-static {v0}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->access$1400(Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;)Landroid/app/ProgressDialog;
 
     move-result-object v0
 

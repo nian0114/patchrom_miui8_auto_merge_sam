@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/deviceinfo/IMEIBarcodeDisplayActivity;
+.class public Lcom/android/settings_ex/deviceinfo/IMEIBarcodeDisplayActivity;
 .super Landroid/app/Activity;
 .source "IMEIBarcodeDisplayActivity.java"
 
@@ -23,7 +23,7 @@
     .line 56
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/IMEIBarcodeDisplayActivity;->mPhone:Lcom/android/internal/telephony/Phone;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/IMEIBarcodeDisplayActivity;->mPhone:Lcom/android/internal/telephony/Phone;
 
     return-void
 .end method
@@ -250,7 +250,7 @@
     if-nez v4, :cond_0
 
     .line 70
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/IMEIBarcodeDisplayActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/IMEIBarcodeDisplayActivity;->finish()V
 
     .line 73
     :cond_0
@@ -258,23 +258,23 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/deviceinfo/IMEIBarcodeDisplayActivity;->mPhone:Lcom/android/internal/telephony/Phone;
+    iput-object v4, p0, Lcom/android/settings_ex/deviceinfo/IMEIBarcodeDisplayActivity;->mPhone:Lcom/android/internal/telephony/Phone;
 
     .line 75
-    iget-object v4, p0, Lcom/android/settings/deviceinfo/IMEIBarcodeDisplayActivity;->mPhone:Lcom/android/internal/telephony/Phone;
+    iget-object v4, p0, Lcom/android/settings_ex/deviceinfo/IMEIBarcodeDisplayActivity;->mPhone:Lcom/android/internal/telephony/Phone;
 
     invoke-interface {v4}, Lcom/android/internal/telephony/Phone;->getDeviceId()Ljava/lang/String;
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/deviceinfo/IMEIBarcodeDisplayActivity;->strImei:Ljava/lang/String;
+    iput-object v4, p0, Lcom/android/settings_ex/deviceinfo/IMEIBarcodeDisplayActivity;->strImei:Ljava/lang/String;
 
     .line 77
-    iget-object v4, p0, Lcom/android/settings/deviceinfo/IMEIBarcodeDisplayActivity;->strImei:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/deviceinfo/IMEIBarcodeDisplayActivity;->strImei:Ljava/lang/String;
 
     if-eqz v4, :cond_3
 
-    iget-object v4, p0, Lcom/android/settings/deviceinfo/IMEIBarcodeDisplayActivity;->strImei:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/deviceinfo/IMEIBarcodeDisplayActivity;->strImei:Ljava/lang/String;
 
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -299,7 +299,7 @@
 
     .line 82
     .local v0, "builder":Landroid/app/AlertDialog$Builder;
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/IMEIBarcodeDisplayActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/IMEIBarcodeDisplayActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v4
 
@@ -336,9 +336,9 @@
     if-eqz v1, :cond_1
 
     .line 87
-    iget-object v4, p0, Lcom/android/settings/deviceinfo/IMEIBarcodeDisplayActivity;->strImei:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/deviceinfo/IMEIBarcodeDisplayActivity;->strImei:Ljava/lang/String;
 
-    invoke-direct {p0, v4}, Lcom/android/settings/deviceinfo/IMEIBarcodeDisplayActivity;->makeBarcode(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-direct {p0, v4}, Lcom/android/settings_ex/deviceinfo/IMEIBarcodeDisplayActivity;->makeBarcode(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v4
 
@@ -349,7 +349,7 @@
     if-eqz v2, :cond_2
 
     .line 90
-    iget-object v4, p0, Lcom/android/settings/deviceinfo/IMEIBarcodeDisplayActivity;->strImei:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/deviceinfo/IMEIBarcodeDisplayActivity;->strImei:Ljava/lang/String;
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -370,7 +370,7 @@
 
     .line 97
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/IMEIBarcodeDisplayActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/IMEIBarcodeDisplayActivity;->finish()V
 
     goto :goto_0
 .end method
@@ -381,7 +381,7 @@
 
     .prologue
     .line 103
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/IMEIBarcodeDisplayActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/IMEIBarcodeDisplayActivity;->finish()V
 
     .line 104
     return-void

@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/SecurityPolicySettings$1;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/SecurityPolicySettings$1;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "SecurityPolicySettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/SecurityPolicySettings;
+    value = Lcom/android/settings_ex/SecurityPolicySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 176
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -50,7 +50,7 @@
 
     .line 189
     .local v0, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
-    invoke-static {p1}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -90,7 +90,7 @@
 
     .line 181
     .local v0, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v1, Lcom/android/settings/SecurityPolicySettings;
+    const-class v1, Lcom/android/settings_ex/SecurityPolicySettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

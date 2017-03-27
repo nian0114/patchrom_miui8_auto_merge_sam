@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/notification/ZenModeEventRuleSettings$3;
+.class final Lcom/android/settings_ex/notification/ZenModeEventRuleSettings$3;
 .super Ljava/lang/Object;
 .source "ZenModeEventRuleSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/ZenModeEventRuleSettings;
+    value = Lcom/android/settings_ex/notification/ZenModeEventRuleSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Ljava/util/Comparator",
         "<",
-        "Lcom/android/settings/notification/ZenModeEventRuleSettings$CalendarInfo;",
+        "Lcom/android/settings_ex/notification/ZenModeEventRuleSettings$CalendarInfo;",
         ">;"
     }
 .end annotation
@@ -40,16 +40,16 @@
 
 
 # virtual methods
-.method public compare(Lcom/android/settings/notification/ZenModeEventRuleSettings$CalendarInfo;Lcom/android/settings/notification/ZenModeEventRuleSettings$CalendarInfo;)I
+.method public compare(Lcom/android/settings_ex/notification/ZenModeEventRuleSettings$CalendarInfo;Lcom/android/settings_ex/notification/ZenModeEventRuleSettings$CalendarInfo;)I
     .locals 2
-    .param p1, "lhs"    # Lcom/android/settings/notification/ZenModeEventRuleSettings$CalendarInfo;
-    .param p2, "rhs"    # Lcom/android/settings/notification/ZenModeEventRuleSettings$CalendarInfo;
+    .param p1, "lhs"    # Lcom/android/settings_ex/notification/ZenModeEventRuleSettings$CalendarInfo;
+    .param p2, "rhs"    # Lcom/android/settings_ex/notification/ZenModeEventRuleSettings$CalendarInfo;
 
     .prologue
     .line 223
-    iget-object v0, p1, Lcom/android/settings/notification/ZenModeEventRuleSettings$CalendarInfo;->name:Ljava/lang/String;
+    iget-object v0, p1, Lcom/android/settings_ex/notification/ZenModeEventRuleSettings$CalendarInfo;->name:Ljava/lang/String;
 
-    iget-object v1, p2, Lcom/android/settings/notification/ZenModeEventRuleSettings$CalendarInfo;->name:Ljava/lang/String;
+    iget-object v1, p2, Lcom/android/settings_ex/notification/ZenModeEventRuleSettings$CalendarInfo;->name:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
@@ -65,13 +65,13 @@
 
     .prologue
     .line 220
-    check-cast p1, Lcom/android/settings/notification/ZenModeEventRuleSettings$CalendarInfo;
+    check-cast p1, Lcom/android/settings_ex/notification/ZenModeEventRuleSettings$CalendarInfo;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    check-cast p2, Lcom/android/settings/notification/ZenModeEventRuleSettings$CalendarInfo;
+    check-cast p2, Lcom/android/settings_ex/notification/ZenModeEventRuleSettings$CalendarInfo;
 
     .end local p2    # "x1":Ljava/lang/Object;
-    invoke-virtual {p0, p1, p2}, Lcom/android/settings/notification/ZenModeEventRuleSettings$3;->compare(Lcom/android/settings/notification/ZenModeEventRuleSettings$CalendarInfo;Lcom/android/settings/notification/ZenModeEventRuleSettings$CalendarInfo;)I
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings_ex/notification/ZenModeEventRuleSettings$3;->compare(Lcom/android/settings_ex/notification/ZenModeEventRuleSettings$CalendarInfo;Lcom/android/settings_ex/notification/ZenModeEventRuleSettings$CalendarInfo;)I
 
     move-result v0
 

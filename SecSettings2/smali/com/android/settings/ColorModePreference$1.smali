@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settings/ColorModePreference$1;
+.class synthetic Lcom/android/settings_ex/ColorModePreference$1;
 .super Ljava/lang/Object;
 .source "ColorModePreference.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/ColorModePreference;
+    value = Lcom/android/settings_ex/ColorModePreference;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

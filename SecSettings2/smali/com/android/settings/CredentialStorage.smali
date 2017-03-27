@@ -1,4 +1,4 @@
-.class public final Lcom/android/settings/CredentialStorage;
+.class public final Lcom/android/settings_ex/CredentialStorage;
 .super Landroid/app/Activity;
 .source "CredentialStorage.java"
 
@@ -6,11 +6,11 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/CredentialStorage$1;,
-        Lcom/android/settings/CredentialStorage$UnlockDialog;,
-        Lcom/android/settings/CredentialStorage$ConfigureKeyGuardDialog;,
-        Lcom/android/settings/CredentialStorage$ResetKeyStoreAndKeyChain;,
-        Lcom/android/settings/CredentialStorage$ResetDialog;
+        Lcom/android/settings_ex/CredentialStorage$1;,
+        Lcom/android/settings_ex/CredentialStorage$UnlockDialog;,
+        Lcom/android/settings_ex/CredentialStorage$ConfigureKeyGuardDialog;,
+        Lcom/android/settings_ex/CredentialStorage$ResetKeyStoreAndKeyChain;,
+        Lcom/android/settings_ex/CredentialStorage$ResetDialog;
     }
 .end annotation
 
@@ -43,7 +43,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/android/settings/CredentialStorage;->SYSTEM_CREDENTIAL_UIDS:[I
+    sput-object v0, Lcom/android/settings_ex/CredentialStorage;->SYSTEM_CREDENTIAL_UIDS:[I
 
     return-void
 
@@ -70,75 +70,75 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/CredentialStorage;->mKeyStore:Landroid/security/KeyStore;
+    iput-object v0, p0, Lcom/android/settings_ex/CredentialStorage;->mKeyStore:Landroid/security/KeyStore;
 
     .line 172
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/CredentialStorage;->mRetriesRemaining:I
+    iput v0, p0, Lcom/android/settings_ex/CredentialStorage;->mRetriesRemaining:I
 
     .line 718
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/CredentialStorage;->mIsShowingConfigureKeyGuardDialog:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/CredentialStorage;->mIsShowingConfigureKeyGuardDialog:Z
 
     .line 851
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/CredentialStorage;)V
+.method static synthetic access$1000(Lcom/android/settings_ex/CredentialStorage;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/CredentialStorage;
+    .param p0, "x0"    # Lcom/android/settings_ex/CredentialStorage;
 
     .prologue
     .line 133
-    invoke-direct {p0}, Lcom/android/settings/CredentialStorage;->ensureKeyGuard()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CredentialStorage;->ensureKeyGuard()V
 
     return-void
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/CredentialStorage;)V
+.method static synthetic access$1100(Lcom/android/settings_ex/CredentialStorage;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/CredentialStorage;
+    .param p0, "x0"    # Lcom/android/settings_ex/CredentialStorage;
 
     .prologue
     .line 133
-    invoke-direct {p0}, Lcom/android/settings/CredentialStorage;->handleUnlockOrInstall()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CredentialStorage;->handleUnlockOrInstall()V
 
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/CredentialStorage;)Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
+.method static synthetic access$400(Lcom/android/settings_ex/CredentialStorage;)Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/CredentialStorage;
+    .param p0, "x0"    # Lcom/android/settings_ex/CredentialStorage;
 
     .prologue
     .line 133
-    iget-object v0, p0, Lcom/android/settings/CredentialStorage;->mCCMService:Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
+    iget-object v0, p0, Lcom/android/settings_ex/CredentialStorage;->mCCMService:Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
 
     return-object v0
 .end method
 
-.method static synthetic access$402(Lcom/android/settings/CredentialStorage;Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;)Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
+.method static synthetic access$402(Lcom/android/settings_ex/CredentialStorage;Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;)Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/CredentialStorage;
+    .param p0, "x0"    # Lcom/android/settings_ex/CredentialStorage;
     .param p1, "x1"    # Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
 
     .prologue
     .line 133
-    iput-object p1, p0, Lcom/android/settings/CredentialStorage;->mCCMService:Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
+    iput-object p1, p0, Lcom/android/settings_ex/CredentialStorage;->mCCMService:Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
 
     return-object p1
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/CredentialStorage;I)Z
+.method static synthetic access$500(Lcom/android/settings_ex/CredentialStorage;I)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/CredentialStorage;
+    .param p0, "x0"    # Lcom/android/settings_ex/CredentialStorage;
     .param p1, "x1"    # I
 
     .prologue
     .line 133
-    invoke-direct {p0, p1}, Lcom/android/settings/CredentialStorage;->isUserRemoveCertificatesAllowed(I)Z
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/CredentialStorage;->isUserRemoveCertificatesAllowed(I)Z
 
     move-result v0
 
@@ -150,64 +150,64 @@
 
     .prologue
     .line 133
-    sget-object v0, Lcom/android/settings/CredentialStorage;->SYSTEM_CREDENTIAL_UIDS:[I
+    sget-object v0, Lcom/android/settings_ex/CredentialStorage;->SYSTEM_CREDENTIAL_UIDS:[I
 
     return-object v0
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/CredentialStorage;)Landroid/security/KeyStore;
+.method static synthetic access$700(Lcom/android/settings_ex/CredentialStorage;)Landroid/security/KeyStore;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/CredentialStorage;
+    .param p0, "x0"    # Lcom/android/settings_ex/CredentialStorage;
 
     .prologue
     .line 133
-    iget-object v0, p0, Lcom/android/settings/CredentialStorage;->mKeyStore:Landroid/security/KeyStore;
+    iget-object v0, p0, Lcom/android/settings_ex/CredentialStorage;->mKeyStore:Landroid/security/KeyStore;
 
     return-object v0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/CredentialStorage;)Z
+.method static synthetic access$800(Lcom/android/settings_ex/CredentialStorage;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/CredentialStorage;
+    .param p0, "x0"    # Lcom/android/settings_ex/CredentialStorage;
 
     .prologue
     .line 133
-    iget-boolean v0, p0, Lcom/android/settings/CredentialStorage;->mIsShowingConfigureKeyGuardDialog:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/CredentialStorage;->mIsShowingConfigureKeyGuardDialog:Z
 
     return v0
 .end method
 
-.method static synthetic access$802(Lcom/android/settings/CredentialStorage;Z)Z
+.method static synthetic access$802(Lcom/android/settings_ex/CredentialStorage;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/CredentialStorage;
+    .param p0, "x0"    # Lcom/android/settings_ex/CredentialStorage;
     .param p1, "x1"    # Z
 
     .prologue
     .line 133
-    iput-boolean p1, p0, Lcom/android/settings/CredentialStorage;->mIsShowingConfigureKeyGuardDialog:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/CredentialStorage;->mIsShowingConfigureKeyGuardDialog:Z
 
     return p1
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/CredentialStorage;)I
+.method static synthetic access$900(Lcom/android/settings_ex/CredentialStorage;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/CredentialStorage;
+    .param p0, "x0"    # Lcom/android/settings_ex/CredentialStorage;
 
     .prologue
     .line 133
-    iget v0, p0, Lcom/android/settings/CredentialStorage;->mRetriesRemaining:I
+    iget v0, p0, Lcom/android/settings_ex/CredentialStorage;->mRetriesRemaining:I
 
     return v0
 .end method
 
-.method static synthetic access$902(Lcom/android/settings/CredentialStorage;I)I
+.method static synthetic access$902(Lcom/android/settings_ex/CredentialStorage;I)I
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/CredentialStorage;
+    .param p0, "x0"    # Lcom/android/settings_ex/CredentialStorage;
     .param p1, "x1"    # I
 
     .prologue
     .line 133
-    iput p1, p0, Lcom/android/settings/CredentialStorage;->mRetriesRemaining:I
+    iput p1, p0, Lcom/android/settings_ex/CredentialStorage;->mRetriesRemaining:I
 
     return p1
 .end method
@@ -223,7 +223,7 @@
     .line 769
     const-string v7, "com.android.certinstaller"
 
-    invoke-virtual {p0}, Lcom/android/settings/CredentialStorage;->getCallingPackage()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CredentialStorage;->getCallingPackage()Ljava/lang/String;
 
     move-result-object v8
 
@@ -234,15 +234,15 @@
     if-eqz v7, :cond_2
 
     .line 772
-    invoke-virtual {p0}, Lcom/android/settings/CredentialStorage;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CredentialStorage;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v7
 
-    invoke-virtual {p0}, Lcom/android/settings/CredentialStorage;->getCallingPackage()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CredentialStorage;->getCallingPackage()Ljava/lang/String;
 
     move-result-object v8
 
-    invoke-virtual {p0}, Lcom/android/settings/CredentialStorage;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CredentialStorage;->getPackageName()Ljava/lang/String;
 
     move-result-object v9
 
@@ -273,7 +273,7 @@
 
     move-result-object v7
 
-    invoke-virtual {p0}, Lcom/android/settings/CredentialStorage;->getActivityToken()Landroid/os/IBinder;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CredentialStorage;->getActivityToken()Landroid/os/IBinder;
 
     move-result-object v8
 
@@ -330,7 +330,7 @@
     .local v1, "launchedFromUserId":I
     const-string v7, "user"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/CredentialStorage;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/CredentialStorage;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -450,15 +450,15 @@
     const/4 v4, 0x1
 
     .line 807
-    invoke-virtual {p0}, Lcom/android/settings/CredentialStorage;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CredentialStorage;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
     .line 808
     .local v1, "res":Landroid/content/res/Resources;
-    new-instance v2, Lcom/android/settings/ChooseLockSettingsHelper;
+    new-instance v2, Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;)V
 
     const v3, 0x7f0e0b87
 
@@ -466,7 +466,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v4, v3, v4}, Lcom/android/settings/ChooseLockSettingsHelper;->launchConfirmationActivity(ILjava/lang/CharSequence;Z)Z
+    invoke-virtual {v2, v4, v3, v4}, Lcom/android/settings_ex/ChooseLockSettingsHelper;->launchConfirmationActivity(ILjava/lang/CharSequence;Z)Z
 
     move-result v0
 
@@ -480,18 +480,18 @@
 
     .prologue
     .line 239
-    invoke-direct {p0}, Lcom/android/settings/CredentialStorage;->checkKeyGuardQuality()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/CredentialStorage;->checkKeyGuardQuality()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 241
-    new-instance v0, Lcom/android/settings/CredentialStorage$ConfigureKeyGuardDialog;
+    new-instance v0, Lcom/android/settings_ex/CredentialStorage$ConfigureKeyGuardDialog;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/CredentialStorage$ConfigureKeyGuardDialog;-><init>(Lcom/android/settings/CredentialStorage;Lcom/android/settings/CredentialStorage$1;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/CredentialStorage$ConfigureKeyGuardDialog;-><init>(Lcom/android/settings_ex/CredentialStorage;Lcom/android/settings_ex/CredentialStorage$1;)V
 
     .line 251
     :cond_0
@@ -500,14 +500,14 @@
 
     .line 246
     :cond_1
-    invoke-direct {p0}, Lcom/android/settings/CredentialStorage;->confirmKeyGuard()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/CredentialStorage;->confirmKeyGuard()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 250
-    invoke-virtual {p0}, Lcom/android/settings/CredentialStorage;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/CredentialStorage;->finish()V
 
     goto :goto_0
 .end method
@@ -633,7 +633,7 @@
 
     move-result-object v11
 
-    invoke-direct {p0, v11}, Lcom/android/settings/CredentialStorage;->trimByteArray([B)[B
+    invoke-direct {p0, v11}, Lcom/android/settings_ex/CredentialStorage;->trimByteArray([B)[B
 
     move-result-object v4
 
@@ -647,7 +647,7 @@
 
     move-result-object v11
 
-    invoke-direct {p0, v11}, Lcom/android/settings/CredentialStorage;->trimByteArray([B)[B
+    invoke-direct {p0, v11}, Lcom/android/settings_ex/CredentialStorage;->trimByteArray([B)[B
 
     move-result-object v9
 
@@ -661,7 +661,7 @@
 
     move-result-object v11
 
-    invoke-direct {p0, v11}, Lcom/android/settings/CredentialStorage;->trimByteArray([B)[B
+    invoke-direct {p0, v11}, Lcom/android/settings_ex/CredentialStorage;->trimByteArray([B)[B
 
     move-result-object v10
 
@@ -863,7 +863,7 @@
     const/4 v2, 0x0
 
     .line 208
-    invoke-virtual {p0}, Lcom/android/settings/CredentialStorage;->isFinishing()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/CredentialStorage;->isFinishing()Z
 
     move-result v0
 
@@ -875,9 +875,9 @@
 
     .line 211
     :cond_0
-    sget-object v0, Lcom/android/settings/CredentialStorage$1;->$SwitchMap$android$security$KeyStore$State:[I
+    sget-object v0, Lcom/android/settings_ex/CredentialStorage$1;->$SwitchMap$android$security$KeyStore$State:[I
 
-    iget-object v1, p0, Lcom/android/settings/CredentialStorage;->mKeyStore:Landroid/security/KeyStore;
+    iget-object v1, p0, Lcom/android/settings_ex/CredentialStorage;->mKeyStore:Landroid/security/KeyStore;
 
     invoke-virtual {v1}, Landroid/security/KeyStore;->state()Landroid/security/KeyStore$State;
 
@@ -895,39 +895,39 @@
 
     .line 213
     :pswitch_0
-    invoke-direct {p0}, Lcom/android/settings/CredentialStorage;->ensureKeyGuard()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CredentialStorage;->ensureKeyGuard()V
 
     goto :goto_0
 
     .line 217
     :pswitch_1
-    new-instance v0, Lcom/android/settings/CredentialStorage$UnlockDialog;
+    new-instance v0, Lcom/android/settings_ex/CredentialStorage$UnlockDialog;
 
-    invoke-direct {v0, p0, v2}, Lcom/android/settings/CredentialStorage$UnlockDialog;-><init>(Lcom/android/settings/CredentialStorage;Lcom/android/settings/CredentialStorage$1;)V
+    invoke-direct {v0, p0, v2}, Lcom/android/settings_ex/CredentialStorage$UnlockDialog;-><init>(Lcom/android/settings_ex/CredentialStorage;Lcom/android/settings_ex/CredentialStorage$1;)V
 
     goto :goto_0
 
     .line 221
     :pswitch_2
-    invoke-direct {p0}, Lcom/android/settings/CredentialStorage;->checkKeyGuardQuality()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/CredentialStorage;->checkKeyGuardQuality()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 222
-    new-instance v0, Lcom/android/settings/CredentialStorage$ConfigureKeyGuardDialog;
+    new-instance v0, Lcom/android/settings_ex/CredentialStorage$ConfigureKeyGuardDialog;
 
-    invoke-direct {v0, p0, v2}, Lcom/android/settings/CredentialStorage$ConfigureKeyGuardDialog;-><init>(Lcom/android/settings/CredentialStorage;Lcom/android/settings/CredentialStorage$1;)V
+    invoke-direct {v0, p0, v2}, Lcom/android/settings_ex/CredentialStorage$ConfigureKeyGuardDialog;-><init>(Lcom/android/settings_ex/CredentialStorage;Lcom/android/settings_ex/CredentialStorage$1;)V
 
     goto :goto_0
 
     .line 225
     :cond_1
-    invoke-direct {p0}, Lcom/android/settings/CredentialStorage;->installIfAvailable()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CredentialStorage;->installIfAvailable()V
 
     .line 226
-    invoke-virtual {p0}, Lcom/android/settings/CredentialStorage;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/CredentialStorage;->finish()V
 
     goto :goto_0
 
@@ -1153,7 +1153,7 @@
 
     move-object/from16 v1, v17
 
-    invoke-direct {v0, v1}, Lcom/android/settings/CredentialStorage;->getPrivateKeyFromBytes([B)Ljava/security/PrivateKey;
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/CredentialStorage;->getPrivateKeyFromBytes([B)Ljava/security/PrivateKey;
 
     move-result-object v15
 
@@ -1161,7 +1161,7 @@
     .local v15, "pKey":Ljava/security/PrivateKey;
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v11}, Lcom/android/settings/CredentialStorage;->getCertificateFromBytes([B)Ljava/security/cert/Certificate;
+    invoke-direct {v0, v11}, Lcom/android/settings_ex/CredentialStorage;->getCertificateFromBytes([B)Ljava/security/cert/Certificate;
 
     move-result-object v10
 
@@ -1191,7 +1191,7 @@
     :cond_5
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/CredentialStorage;->mCCMService:Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
+    iget-object v2, v0, Lcom/android/settings_ex/CredentialStorage;->mCCMService:Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
 
     const/4 v5, 0x3
 
@@ -1206,7 +1206,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v15, v6}, Lcom/android/settings/CredentialStorage;->getFormattedPrivateKey(Ljava/security/interfaces/RSAPrivateKey;Ljava/security/interfaces/RSAPublicKey;)[B
+    invoke-direct {v0, v15, v6}, Lcom/android/settings_ex/CredentialStorage;->getFormattedPrivateKey(Ljava/security/interfaces/RSAPrivateKey;Ljava/security/interfaces/RSAPublicKey;)[B
 
     move-result-object v6
 
@@ -1273,7 +1273,7 @@
     .line 491
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/CredentialStorage;->mCCMService:Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
+    iget-object v2, v0, Lcom/android/settings_ex/CredentialStorage;->mCCMService:Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
 
     invoke-virtual {v14}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
@@ -1341,7 +1341,7 @@
     .line 284
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/CredentialStorage;->mInstallBundle:Landroid/os/Bundle;
+    iget-object v0, v0, Lcom/android/settings_ex/CredentialStorage;->mInstallBundle:Landroid/os/Bundle;
 
     move-object/from16 v27, v0
 
@@ -1349,7 +1349,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/CredentialStorage;->mInstallBundle:Landroid/os/Bundle;
+    iget-object v0, v0, Lcom/android/settings_ex/CredentialStorage;->mInstallBundle:Landroid/os/Bundle;
 
     move-object/from16 v27, v0
 
@@ -1368,7 +1368,7 @@
     :cond_1
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/android/settings/CredentialStorage;->mInstallBundle:Landroid/os/Bundle;
+    iget-object v5, v0, Lcom/android/settings_ex/CredentialStorage;->mInstallBundle:Landroid/os/Bundle;
 
     .line 289
     .local v5, "bundle":Landroid/os/Bundle;
@@ -1378,7 +1378,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/CredentialStorage;->mInstallBundle:Landroid/os/Bundle;
+    iput-object v0, v1, Lcom/android/settings_ex/CredentialStorage;->mInstallBundle:Landroid/os/Bundle;
 
     .line 291
     const-string v27, "install_as_uid"
@@ -1579,7 +1579,7 @@
 
     move-object/from16 v1, v27
 
-    invoke-virtual {v0, v15, v1}, Lcom/android/settings/CredentialStorage;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
+    invoke-virtual {v0, v15, v1}, Lcom/android/settings_ex/CredentialStorage;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
     goto/16 :goto_0
 
@@ -1623,12 +1623,12 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/CredentialStorage;->mCCMService:Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
+    iput-object v0, v1, Lcom/android/settings_ex/CredentialStorage;->mCCMService:Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
 
     .line 323
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/CredentialStorage;->mCCMService:Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
+    iget-object v0, v0, Lcom/android/settings_ex/CredentialStorage;->mCCMService:Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
 
     move-object/from16 v27, v0
 
@@ -1636,7 +1636,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/CredentialStorage;->mCCMService:Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
+    iget-object v0, v0, Lcom/android/settings_ex/CredentialStorage;->mCCMService:Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
 
     move-object/from16 v27, v0
 
@@ -1666,7 +1666,7 @@
     .line 327
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/CredentialStorage;->mCCMService:Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
+    iget-object v0, v0, Lcom/android/settings_ex/CredentialStorage;->mCCMService:Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
 
     move-object/from16 v27, v0
 
@@ -1683,7 +1683,7 @@
     .line 328
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/CredentialStorage;->mCCMService:Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
+    iget-object v0, v0, Lcom/android/settings_ex/CredentialStorage;->mCCMService:Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
 
     move-object/from16 v27, v0
 
@@ -1713,7 +1713,7 @@
     :goto_3
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v5}, Lcom/android/settings/CredentialStorage;->isCCMSupportKeyAlgorithm(Landroid/os/Bundle;)Z
+    invoke-direct {v0, v5}, Lcom/android/settings_ex/CredentialStorage;->isCCMSupportKeyAlgorithm(Landroid/os/Bundle;)Z
 
     move-result v16
 
@@ -1755,7 +1755,7 @@
 
     move-object/from16 v1, v20
 
-    invoke-direct {v0, v5, v1}, Lcom/android/settings/CredentialStorage;->installCertificateinCCM(Landroid/os/Bundle;Ljava/lang/String;)Z
+    invoke-direct {v0, v5, v1}, Lcom/android/settings_ex/CredentialStorage;->installCertificateinCCM(Landroid/os/Bundle;Ljava/lang/String;)Z
 
     move-result v27
 
@@ -1878,7 +1878,7 @@
 
     move-object/from16 v1, v22
 
-    invoke-direct {v0, v1}, Lcom/android/settings/CredentialStorage;->isHardwareBackedKey([B)Z
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/CredentialStorage;->isHardwareBackedKey([B)Z
 
     move-result v27
 
@@ -1898,7 +1898,7 @@
     :cond_a
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/CredentialStorage;->mKeyStore:Landroid/security/KeyStore;
+    iget-object v0, v0, Lcom/android/settings_ex/CredentialStorage;->mKeyStore:Landroid/security/KeyStore;
 
     move-object/from16 v27, v0
 
@@ -1996,7 +1996,7 @@
     .local v9, "certData":[B
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/CredentialStorage;->mKeyStore:Landroid/security/KeyStore;
+    iget-object v0, v0, Lcom/android/settings_ex/CredentialStorage;->mKeyStore:Landroid/security/KeyStore;
 
     move-object/from16 v27, v0
 
@@ -2055,7 +2055,7 @@
     .end local v9    # "certData":[B
     .end local v10    # "certName":Ljava/lang/String;
     :cond_c
-    sget-boolean v27, Lcom/android/settings/Utils;->SUPPORT_WAPI:Z
+    sget-boolean v27, Lcom/android/settings_ex/Utils;->SUPPORT_WAPI:Z
 
     if-eqz v27, :cond_e
 
@@ -2093,7 +2093,7 @@
     .local v23, "wapiascertData":[B
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/CredentialStorage;->mKeyStore:Landroid/security/KeyStore;
+    iget-object v0, v0, Lcom/android/settings_ex/CredentialStorage;->mKeyStore:Landroid/security/KeyStore;
 
     move-object/from16 v27, v0
 
@@ -2181,7 +2181,7 @@
     .local v25, "wapiuscertData":[B
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/CredentialStorage;->mKeyStore:Landroid/security/KeyStore;
+    iget-object v0, v0, Lcom/android/settings_ex/CredentialStorage;->mKeyStore:Landroid/security/KeyStore;
 
     move-object/from16 v27, v0
 
@@ -2269,7 +2269,7 @@
     .local v6, "caListData":[B
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/CredentialStorage;->mKeyStore:Landroid/security/KeyStore;
+    iget-object v0, v0, Lcom/android/settings_ex/CredentialStorage;->mKeyStore:Landroid/security/KeyStore;
 
     move-object/from16 v27, v0
 
@@ -2334,7 +2334,7 @@
 
     move/from16 v1, v27
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/CredentialStorage;->setResult(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/CredentialStorage;->setResult(I)V
 
     goto/16 :goto_0
 .end method
@@ -2367,7 +2367,7 @@
     if-eqz v3, :cond_2
 
     .line 948
-    invoke-direct {p0, v3}, Lcom/android/settings/CredentialStorage;->getCertificateFromBytes([B)Ljava/security/cert/Certificate;
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/CredentialStorage;->getCertificateFromBytes([B)Ljava/security/cert/Certificate;
 
     move-result-object v2
 
@@ -2753,7 +2753,7 @@
 
     const-string v4, "isUserRemoveCertificatesAllowed"
 
-    invoke-static {p0, v3, v4, v1}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-static {p0, v3, v4, v1}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v3
 
@@ -2860,7 +2860,7 @@
     if-nez v1, :cond_2
 
     .line 826
-    invoke-direct {p0}, Lcom/android/settings/CredentialStorage;->isKnoxUser()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/CredentialStorage;->isKnoxUser()Z
 
     move-result v1
 
@@ -2875,7 +2875,7 @@
     .line 829
     .restart local v0    # "password":Ljava/lang/String;
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/CredentialStorage;->mKeyStore:Landroid/security/KeyStore;
+    iget-object v1, p0, Lcom/android/settings_ex/CredentialStorage;->mKeyStore:Landroid/security/KeyStore;
 
     invoke-virtual {v1, v0}, Landroid/security/KeyStore;->unlock(Ljava/lang/String;)Z
 
@@ -2884,7 +2884,7 @@
     .line 836
     .end local v0    # "password":Ljava/lang/String;
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/CredentialStorage;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/CredentialStorage;->finish()V
 
     goto :goto_0
 .end method
@@ -2897,7 +2897,7 @@
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
     .line 178
-    invoke-virtual {p0}, Lcom/android/settings/CredentialStorage;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CredentialStorage;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -2911,7 +2911,7 @@
     .local v0, "action":Ljava/lang/String;
     const-string v3, "user"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/CredentialStorage;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/CredentialStorage;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -2937,11 +2937,11 @@
     if-eqz v3, :cond_0
 
     .line 183
-    new-instance v3, Lcom/android/settings/CredentialStorage$ResetDialog;
+    new-instance v3, Lcom/android/settings_ex/CredentialStorage$ResetDialog;
 
     const/4 v4, 0x0
 
-    invoke-direct {v3, p0, v4}, Lcom/android/settings/CredentialStorage$ResetDialog;-><init>(Lcom/android/settings/CredentialStorage;Lcom/android/settings/CredentialStorage$1;)V
+    invoke-direct {v3, p0, v4}, Lcom/android/settings_ex/CredentialStorage$ResetDialog;-><init>(Lcom/android/settings_ex/CredentialStorage;Lcom/android/settings_ex/CredentialStorage$1;)V
 
     .line 200
     :goto_0
@@ -2957,7 +2957,7 @@
 
     if-eqz v3, :cond_1
 
-    invoke-direct {p0}, Lcom/android/settings/CredentialStorage;->checkCallerIsCertInstallerOrSelfInProfile()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/CredentialStorage;->checkCallerIsCertInstallerOrSelfInProfile()Z
 
     move-result v3
 
@@ -2968,11 +2968,11 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/CredentialStorage;->mInstallBundle:Landroid/os/Bundle;
+    iput-object v3, p0, Lcom/android/settings_ex/CredentialStorage;->mInstallBundle:Landroid/os/Bundle;
 
     .line 189
     :cond_1
-    invoke-direct {p0}, Lcom/android/settings/CredentialStorage;->handleUnlockOrInstall()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CredentialStorage;->handleUnlockOrInstall()V
 
     goto :goto_0
 
@@ -2986,7 +2986,7 @@
 
     if-eqz v3, :cond_3
 
-    iget-object v3, p0, Lcom/android/settings/CredentialStorage;->mKeyStore:Landroid/security/KeyStore;
+    iget-object v3, p0, Lcom/android/settings_ex/CredentialStorage;->mKeyStore:Landroid/security/KeyStore;
 
     invoke-virtual {v3}, Landroid/security/KeyStore;->state()Landroid/security/KeyStore$State;
 
@@ -2997,13 +2997,13 @@
     if-ne v3, v4, :cond_3
 
     .line 195
-    invoke-direct {p0}, Lcom/android/settings/CredentialStorage;->ensureKeyGuard()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CredentialStorage;->ensureKeyGuard()V
 
     goto :goto_0
 
     .line 197
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/CredentialStorage;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/CredentialStorage;->finish()V
 
     goto :goto_0
 .end method

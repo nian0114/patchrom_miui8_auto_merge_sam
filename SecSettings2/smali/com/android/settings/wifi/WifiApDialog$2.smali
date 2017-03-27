@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiApDialog$2;
+.class Lcom/android/settings_ex/wifi/WifiApDialog$2;
 .super Ljava/lang/Object;
 .source "WifiApDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiApDialog;
+    value = Lcom/android/settings_ex/wifi/WifiApDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiApDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiApDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiApDialog;)V
     .locals 0
 
     .prologue
     .line 768
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiApDialog$2;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiApDialog$2;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -66,9 +66,9 @@
 
     .line 775
     :pswitch_0
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiApDialog$2;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiApDialog$2;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    invoke-virtual {v1}, Lcom/android/settings/wifi/WifiApDialog;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/android/settings_ex/wifi/WifiApDialog;->getContext()Landroid/content/Context;
 
     move-result-object v1
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fingerprint/RegisterFingerprint$6;
+.class Lcom/android/settings_ex/fingerprint/RegisterFingerprint$6;
 .super Ljava/lang/Object;
 .source "RegisterFingerprint.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fingerprint/RegisterFingerprint;->showFingerprintKeyboardDialog(Ljava/lang/String;)V
+    value = Lcom/android/settings_ex/fingerprint/RegisterFingerprint;->showFingerprintKeyboardDialog(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/RegisterFingerprint;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/RegisterFingerprint;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/RegisterFingerprint;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/RegisterFingerprint;)V
     .locals 0
 
     .prologue
     .line 565
-    iput-object p1, p0, Lcom/android/settings/fingerprint/RegisterFingerprint$6;->this$0:Lcom/android/settings/fingerprint/RegisterFingerprint;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/RegisterFingerprint$6;->this$0:Lcom/android/settings_ex/fingerprint/RegisterFingerprint;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

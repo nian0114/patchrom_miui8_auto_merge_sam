@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApWarning$3;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$3;
 .super Ljava/lang/Object;
 .source "WifiApWarning.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/mobileap/WifiApWarning;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WifiApWarning;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;
 
 .field final synthetic val$cr:Landroid/content/ContentResolver;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WifiApWarning;Landroid/content/ContentResolver;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;Landroid/content/ContentResolver;)V
     .locals 0
 
     .prologue
     .line 263
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApWarning$3;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWarning;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$3;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;
 
-    iput-object p2, p0, Lcom/android/settings/wifi/mobileap/WifiApWarning$3;->val$cr:Landroid/content/ContentResolver;
+    iput-object p2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$3;->val$cr:Landroid/content/ContentResolver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,10 +49,10 @@
     const/4 v6, 0x1
 
     .line 265
-    iget-object v3, p0, Lcom/android/settings/wifi/mobileap/WifiApWarning$3;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWarning;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$3;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;
 
-    # invokes: Lcom/android/settings/wifi/mobileap/WifiApWarning;->isWifiSharingEnabled()Z
-    invoke-static {v3}, Lcom/android/settings/wifi/mobileap/WifiApWarning;->access$200(Lcom/android/settings/wifi/mobileap/WifiApWarning;)Z
+    # invokes: Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->isWifiSharingEnabled()Z
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->access$200(Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;)Z
 
     move-result v3
 
@@ -64,7 +64,7 @@
     .line 269
     .local v2, "wifiSavedState":I
     :try_start_0
-    iget-object v3, p0, Lcom/android/settings/wifi/mobileap/WifiApWarning$3;->val$cr:Landroid/content/ContentResolver;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$3;->val$cr:Landroid/content/ContentResolver;
 
     const-string v4, "wifi_saved_state"
 
@@ -88,20 +88,20 @@
 
     .line 279
     :goto_1
-    iget-object v3, p0, Lcom/android/settings/wifi/mobileap/WifiApWarning$3;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWarning;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$3;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApWarning;->mWifiManager:Landroid/net/wifi/WifiManager;
-    invoke-static {v3}, Lcom/android/settings/wifi/mobileap/WifiApWarning;->access$500(Lcom/android/settings/wifi/mobileap/WifiApWarning;)Landroid/net/wifi/WifiManager;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->access$500(Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;)Landroid/net/wifi/WifiManager;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
     .line 280
-    iget-object v3, p0, Lcom/android/settings/wifi/mobileap/WifiApWarning$3;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWarning;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$3;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApWarning;->mWifiManager:Landroid/net/wifi/WifiManager;
-    invoke-static {v3}, Lcom/android/settings/wifi/mobileap/WifiApWarning;->access$500(Lcom/android/settings/wifi/mobileap/WifiApWarning;)Landroid/net/wifi/WifiManager;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->access$500(Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;)Landroid/net/wifi/WifiManager;
 
     move-result-object v3
 
@@ -109,7 +109,7 @@
 
     .line 282
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/wifi/mobileap/WifiApWarning$3;->val$cr:Landroid/content/ContentResolver;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$3;->val$cr:Landroid/content/ContentResolver;
 
     const-string v4, "wifi_saved_state"
 
@@ -120,20 +120,20 @@
     .line 285
     .end local v2    # "wifiSavedState":I
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/wifi/mobileap/WifiApWarning$3;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWarning;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$3;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApWarning;->mNaiMismatchDialog:Landroid/app/AlertDialog;
-    invoke-static {v3}, Lcom/android/settings/wifi/mobileap/WifiApWarning;->access$600(Lcom/android/settings/wifi/mobileap/WifiApWarning;)Landroid/app/AlertDialog;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->mNaiMismatchDialog:Landroid/app/AlertDialog;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->access$600(Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;)Landroid/app/AlertDialog;
 
     move-result-object v3
 
     if-eqz v3, :cond_2
 
     .line 286
-    iget-object v3, p0, Lcom/android/settings/wifi/mobileap/WifiApWarning$3;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWarning;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$3;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApWarning;->mNaiMismatchDialog:Landroid/app/AlertDialog;
-    invoke-static {v3}, Lcom/android/settings/wifi/mobileap/WifiApWarning;->access$600(Lcom/android/settings/wifi/mobileap/WifiApWarning;)Landroid/app/AlertDialog;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->mNaiMismatchDialog:Landroid/app/AlertDialog;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->access$600(Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;)Landroid/app/AlertDialog;
 
     move-result-object v3
 
@@ -141,10 +141,10 @@
 
     .line 288
     :cond_2
-    iget-object v3, p0, Lcom/android/settings/wifi/mobileap/WifiApWarning$3;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWarning;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$3;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApWarning;->mDialogType:I
-    invoke-static {v3}, Lcom/android/settings/wifi/mobileap/WifiApWarning;->access$700(Lcom/android/settings/wifi/mobileap/WifiApWarning;)I
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->mDialogType:I
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->access$700(Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;)I
 
     move-result v3
 
@@ -179,10 +179,10 @@
     invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 294
-    iget-object v3, p0, Lcom/android/settings/wifi/mobileap/WifiApWarning$3;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWarning;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$3;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApWarning;->mContext:Landroid/content/Context;
-    invoke-static {v3}, Lcom/android/settings/wifi/mobileap/WifiApWarning;->access$400(Lcom/android/settings/wifi/mobileap/WifiApWarning;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->mContext:Landroid/content/Context;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->access$400(Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;)Landroid/content/Context;
 
     move-result-object v3
 
@@ -191,9 +191,9 @@
     .line 297
     .end local v0    # "dsaIntent":Landroid/content/Intent;
     :cond_3
-    iget-object v3, p0, Lcom/android/settings/wifi/mobileap/WifiApWarning$3;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWarning;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$3;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;
 
-    invoke-virtual {v3}, Lcom/android/settings/wifi/mobileap/WifiApWarning;->finish()V
+    invoke-virtual {v3}, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->finish()V
 
     .line 298
     return-void

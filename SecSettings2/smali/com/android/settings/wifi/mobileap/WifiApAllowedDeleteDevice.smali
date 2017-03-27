@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApAllowedDeleteDevice;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedDeleteDevice;
 .super Landroid/preference/CheckBoxPreference;
 .source "WifiApAllowedDeleteDevice.java"
 
@@ -21,16 +21,16 @@
     invoke-direct {p0, p1}, Landroid/preference/CheckBoxPreference;-><init>(Landroid/content/Context;)V
 
     .line 34
-    invoke-static {p1}, Lcom/android/settings/Utils;->isTablet(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isTablet(Landroid/content/Context;)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/wifi/mobileap/WifiApAllowedDeleteDevice;->mIsTablet:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedDeleteDevice;->mIsTablet:Z
 
     .line 35
     const v0, 0x7f040243
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/wifi/mobileap/WifiApAllowedDeleteDevice;->setLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedDeleteDevice;->setLayoutResource(I)V
 
     .line 36
     return-void
@@ -44,7 +44,7 @@
 
     .prologue
     .line 54
-    instance-of v1, p1, Lcom/android/settings/wifi/mobileap/WifiApAllowedDeleteDevice;
+    instance-of v1, p1, Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedDeleteDevice;
 
     if-nez v1, :cond_0
 
@@ -59,13 +59,13 @@
     move-object v0, p1
 
     .line 57
-    check-cast v0, Lcom/android/settings/wifi/mobileap/WifiApAllowedDeleteDevice;
+    check-cast v0, Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedDeleteDevice;
 
     .line 58
-    .local v0, "other":Lcom/android/settings/wifi/mobileap/WifiApAllowedDeleteDevice;
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApAllowedDeleteDevice;->mMac:Ljava/lang/String;
+    .local v0, "other":Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedDeleteDevice;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedDeleteDevice;->mMac:Ljava/lang/String;
 
-    iget-object v2, v0, Lcom/android/settings/wifi/mobileap/WifiApAllowedDeleteDevice;->mMac:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedDeleteDevice;->mMac:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
 
@@ -83,7 +83,7 @@
     check-cast p1, Landroid/preference/Preference;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/wifi/mobileap/WifiApAllowedDeleteDevice;->compareTo(Landroid/preference/Preference;)I
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedDeleteDevice;->compareTo(Landroid/preference/Preference;)I
 
     move-result v0
 
@@ -107,17 +107,17 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApAllowedDeleteDevice;->mMacView:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedDeleteDevice;->mMacView:Landroid/widget/TextView;
 
     .line 42
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApAllowedDeleteDevice;->mMacView:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedDeleteDevice;->mMacView:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApAllowedDeleteDevice;->mMac:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedDeleteDevice;->mMac:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 43
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApAllowedDeleteDevice;->mMacView:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedDeleteDevice;->mMacView:Landroid/widget/TextView;
 
     const/16 v1, 0x8
 
@@ -140,7 +140,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApAllowedDeleteDevice;->mMac:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedDeleteDevice;->mMac:Ljava/lang/String;
 
     .line 50
     return-void

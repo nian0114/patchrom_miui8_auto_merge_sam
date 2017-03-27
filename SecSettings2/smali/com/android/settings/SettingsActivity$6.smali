@@ -1,4 +1,4 @@
-.class Lcom/android/settings/SettingsActivity$6;
+.class Lcom/android/settings_ex/SettingsActivity$6;
 .super Ljava/lang/Object;
 .source "SettingsActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/SettingsActivity;->onPostResume()V
+    value = Lcom/android/settings_ex/SettingsActivity;->onPostResume()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/SettingsActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/SettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/SettingsActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/SettingsActivity;)V
     .locals 0
 
     .prologue
     .line 1130
-    iput-object p1, p0, Lcom/android/settings/SettingsActivity$6;->this$0:Lcom/android/settings/SettingsActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/SettingsActivity$6;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,28 +42,28 @@
 
     .prologue
     .line 1135
-    iget-object v0, p0, Lcom/android/settings/SettingsActivity$6;->this$0:Lcom/android/settings/SettingsActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/SettingsActivity$6;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
     const/4 v1, 0x0
 
-    # setter for: Lcom/android/settings/SettingsActivity;->mShowFotaView:Z
-    invoke-static {v0, v1}, Lcom/android/settings/SettingsActivity;->access$202(Lcom/android/settings/SettingsActivity;Z)Z
+    # setter for: Lcom/android/settings_ex/SettingsActivity;->mShowFotaView:Z
+    invoke-static {v0, v1}, Lcom/android/settings_ex/SettingsActivity;->access$202(Lcom/android/settings_ex/SettingsActivity;Z)Z
 
     .line 1136
-    iget-object v0, p0, Lcom/android/settings/SettingsActivity$6;->this$0:Lcom/android/settings/SettingsActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/SettingsActivity$6;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
-    # getter for: Lcom/android/settings/SettingsActivity;->mFotaUpdateStub:Landroid/view/ViewStub;
-    invoke-static {v0}, Lcom/android/settings/SettingsActivity;->access$300(Lcom/android/settings/SettingsActivity;)Landroid/view/ViewStub;
+    # getter for: Lcom/android/settings_ex/SettingsActivity;->mFotaUpdateStub:Landroid/view/ViewStub;
+    invoke-static {v0}, Lcom/android/settings_ex/SettingsActivity;->access$300(Lcom/android/settings_ex/SettingsActivity;)Landroid/view/ViewStub;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 1137
-    iget-object v0, p0, Lcom/android/settings/SettingsActivity$6;->this$0:Lcom/android/settings/SettingsActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/SettingsActivity$6;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
-    # getter for: Lcom/android/settings/SettingsActivity;->mFotaUpdateStub:Landroid/view/ViewStub;
-    invoke-static {v0}, Lcom/android/settings/SettingsActivity;->access$300(Lcom/android/settings/SettingsActivity;)Landroid/view/ViewStub;
+    # getter for: Lcom/android/settings_ex/SettingsActivity;->mFotaUpdateStub:Landroid/view/ViewStub;
+    invoke-static {v0}, Lcom/android/settings_ex/SettingsActivity;->access$300(Lcom/android/settings_ex/SettingsActivity;)Landroid/view/ViewStub;
 
     move-result-object v0
 

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/powersavingmode/GenericPowerSavingMode$4;
+.class Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode$4;
 .super Landroid/content/BroadcastReceiver;
 .source "GenericPowerSavingMode.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/powersavingmode/GenericPowerSavingMode;
+    value = Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/powersavingmode/GenericPowerSavingMode;
+.field final synthetic this$0:Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/powersavingmode/GenericPowerSavingMode;)V
+.method constructor <init>(Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;)V
     .locals 0
 
     .prologue
     .line 261
-    iput-object p1, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode$4;->this$0:Lcom/android/settings/powersavingmode/GenericPowerSavingMode;
+    iput-object p1, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode$4;->this$0:Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -70,10 +70,10 @@
     if-ne v1, v2, :cond_1
 
     .line 269
-    iget-object v2, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode$4;->this$0:Lcom/android/settings/powersavingmode/GenericPowerSavingMode;
+    iget-object v2, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode$4;->this$0:Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;
 
-    # setter for: Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mIsCharger:Z
-    invoke-static {v2, v3}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->access$602(Lcom/android/settings/powersavingmode/GenericPowerSavingMode;Z)Z
+    # setter for: Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mIsCharger:Z
+    invoke-static {v2, v3}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->access$602(Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;Z)Z
 
     .line 274
     .end local v1    # "status":I
@@ -84,12 +84,12 @@
     .line 271
     .restart local v1    # "status":I
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode$4;->this$0:Lcom/android/settings/powersavingmode/GenericPowerSavingMode;
+    iget-object v2, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode$4;->this$0:Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;
 
     const/4 v3, 0x0
 
-    # setter for: Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mIsCharger:Z
-    invoke-static {v2, v3}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->access$602(Lcom/android/settings/powersavingmode/GenericPowerSavingMode;Z)Z
+    # setter for: Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mIsCharger:Z
+    invoke-static {v2, v3}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->access$602(Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;Z)Z
 
     goto :goto_0
 .end method

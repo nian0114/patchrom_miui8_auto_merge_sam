@@ -1,11 +1,11 @@
-.class Lcom/android/settings/TRoamingSettings$9;
+.class Lcom/android/settings_ex/TRoamingSettings$9;
 .super Landroid/os/Handler;
 .source "TRoamingSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/TRoamingSettings;
+    value = Lcom/android/settings_ex/TRoamingSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/TRoamingSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/TRoamingSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/TRoamingSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/TRoamingSettings;)V
     .locals 0
 
     .prologue
     .line 825
-    iput-object p1, p0, Lcom/android/settings/TRoamingSettings$9;->this$0:Lcom/android/settings/TRoamingSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/TRoamingSettings$9;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -39,20 +39,20 @@
 
     .prologue
     .line 827
-    iget-object v0, p0, Lcom/android/settings/TRoamingSettings$9;->this$0:Lcom/android/settings/TRoamingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/TRoamingSettings$9;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
-    # getter for: Lcom/android/settings/TRoamingSettings;->loadingDialog:Landroid/app/ProgressDialog;
-    invoke-static {v0}, Lcom/android/settings/TRoamingSettings;->access$1000(Lcom/android/settings/TRoamingSettings;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/TRoamingSettings;->loadingDialog:Landroid/app/ProgressDialog;
+    invoke-static {v0}, Lcom/android/settings_ex/TRoamingSettings;->access$1000(Lcom/android/settings_ex/TRoamingSettings;)Landroid/app/ProgressDialog;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 828
-    iget-object v0, p0, Lcom/android/settings/TRoamingSettings$9;->this$0:Lcom/android/settings/TRoamingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/TRoamingSettings$9;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
-    # getter for: Lcom/android/settings/TRoamingSettings;->loadingDialog:Landroid/app/ProgressDialog;
-    invoke-static {v0}, Lcom/android/settings/TRoamingSettings;->access$1000(Lcom/android/settings/TRoamingSettings;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/TRoamingSettings;->loadingDialog:Landroid/app/ProgressDialog;
+    invoke-static {v0}, Lcom/android/settings_ex/TRoamingSettings;->access$1000(Lcom/android/settings_ex/TRoamingSettings;)Landroid/app/ProgressDialog;
 
     move-result-object v0
 
@@ -63,22 +63,22 @@
     if-eqz v0, :cond_0
 
     .line 829
-    iget-object v0, p0, Lcom/android/settings/TRoamingSettings$9;->this$0:Lcom/android/settings/TRoamingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/TRoamingSettings$9;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
-    # getter for: Lcom/android/settings/TRoamingSettings;->loadingDialog:Landroid/app/ProgressDialog;
-    invoke-static {v0}, Lcom/android/settings/TRoamingSettings;->access$1000(Lcom/android/settings/TRoamingSettings;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/TRoamingSettings;->loadingDialog:Landroid/app/ProgressDialog;
+    invoke-static {v0}, Lcom/android/settings_ex/TRoamingSettings;->access$1000(Lcom/android/settings_ex/TRoamingSettings;)Landroid/app/ProgressDialog;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
     .line 830
-    iget-object v0, p0, Lcom/android/settings/TRoamingSettings$9;->this$0:Lcom/android/settings/TRoamingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/TRoamingSettings$9;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
     const/4 v1, 0x0
 
-    # setter for: Lcom/android/settings/TRoamingSettings;->loadingDialog:Landroid/app/ProgressDialog;
-    invoke-static {v0, v1}, Lcom/android/settings/TRoamingSettings;->access$1002(Lcom/android/settings/TRoamingSettings;Landroid/app/ProgressDialog;)Landroid/app/ProgressDialog;
+    # setter for: Lcom/android/settings_ex/TRoamingSettings;->loadingDialog:Landroid/app/ProgressDialog;
+    invoke-static {v0, v1}, Lcom/android/settings_ex/TRoamingSettings;->access$1002(Lcom/android/settings_ex/TRoamingSettings;Landroid/app/ProgressDialog;)Landroid/app/ProgressDialog;
 
     .line 834
     :cond_0

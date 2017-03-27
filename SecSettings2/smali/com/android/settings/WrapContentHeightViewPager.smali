@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/WrapContentHeightViewPager;
+.class public Lcom/android/settings_ex/WrapContentHeightViewPager;
 .super Landroid/support/v4/view/ViewPager;
 .source "WrapContentHeightViewPager.java"
 
@@ -65,14 +65,14 @@
 
     .local v3, "i":I
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/WrapContentHeightViewPager;->getChildCount()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/WrapContentHeightViewPager;->getChildCount()I
 
     move-result v5
 
     if-ge v3, v5, :cond_2
 
     .line 29
-    invoke-virtual {p0, v3}, Lcom/android/settings/WrapContentHeightViewPager;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/WrapContentHeightViewPager;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 

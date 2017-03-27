@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/AccessibilitySettingsSetupWizard;
-.super Lcom/android/settings/SettingsActivity;
+.class public Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;
+.super Lcom/android/settings_ex/SettingsActivity;
 .source "AccessibilitySettingsSetupWizard.java"
 
 # interfaces
@@ -20,13 +20,13 @@
 
     .prologue
     .line 29
-    const-class v0, Lcom/android/settings/AccessibilitySettingsSetupWizard;
+    const-class v0, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/AccessibilitySettingsSetupWizard;->TAG:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->TAG:Ljava/lang/String;
 
     return-void
 .end method
@@ -36,7 +36,7 @@
 
     .prologue
     .line 28
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivity;-><init>()V
 
     return-void
 .end method
@@ -54,26 +54,26 @@
     .line 67
     const v7, 0x7f0d007f
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/AccessibilitySettingsSetupWizard;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->findViewById(I)Landroid/view/View;
 
     move-result-object v7
 
-    iput-object v7, p0, Lcom/android/settings/AccessibilitySettingsSetupWizard;->button:Landroid/view/View;
+    iput-object v7, p0, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->button:Landroid/view/View;
 
     .line 68
-    iget-object v7, p0, Lcom/android/settings/AccessibilitySettingsSetupWizard;->button:Landroid/view/View;
+    iget-object v7, p0, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->button:Landroid/view/View;
 
     invoke-virtual {v7, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 69
-    iget-object v7, p0, Lcom/android/settings/AccessibilitySettingsSetupWizard;->button:Landroid/view/View;
+    iget-object v7, p0, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->button:Landroid/view/View;
 
     instance-of v7, v7, Landroid/widget/Button;
 
     if-eqz v7, :cond_1
 
     .line 71
-    iget-object v2, p0, Lcom/android/settings/AccessibilitySettingsSetupWizard;->button:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->button:Landroid/view/View;
 
     check-cast v2, Landroid/widget/Button;
 
@@ -92,7 +92,7 @@
     if-eqz v7, :cond_0
 
     .line 73
-    invoke-virtual {p0}, Lcom/android/settings/AccessibilitySettingsSetupWizard;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -109,7 +109,7 @@
     .end local v3    # "original_str":Ljava/lang/String;
     :cond_0
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/AccessibilitySettingsSetupWizard;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -125,7 +125,7 @@
 
     .line 87
     .local v4, "params":Landroid/widget/RelativeLayout$LayoutParams;
-    invoke-virtual {p0}, Lcom/android/settings/AccessibilitySettingsSetupWizard;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
 
@@ -138,7 +138,7 @@
     if-eqz v7, :cond_2
 
     .line 88
-    invoke-virtual {p0}, Lcom/android/settings/AccessibilitySettingsSetupWizard;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -160,7 +160,7 @@
 
     .line 93
     .local v6, "topbottomPx":I
-    invoke-virtual {p0}, Lcom/android/settings/AccessibilitySettingsSetupWizard;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -183,14 +183,14 @@
     invoke-virtual {v4, v10, v6, v1, v6}, Landroid/widget/RelativeLayout$LayoutParams;->setMargins(IIII)V
 
     .line 100
-    iget-object v7, p0, Lcom/android/settings/AccessibilitySettingsSetupWizard;->button:Landroid/view/View;
+    iget-object v7, p0, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->button:Landroid/view/View;
 
     invoke-virtual {v7, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 101
-    iget-object v7, p0, Lcom/android/settings/AccessibilitySettingsSetupWizard;->button:Landroid/view/View;
+    iget-object v7, p0, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->button:Landroid/view/View;
 
-    invoke-virtual {p0}, Lcom/android/settings/AccessibilitySettingsSetupWizard;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -216,7 +216,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/settings/AccessibilitySettingsSetupWizard;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -234,7 +234,7 @@
 
     move-result-object v7
 
-    invoke-virtual {p0}, Lcom/android/settings/AccessibilitySettingsSetupWizard;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -254,7 +254,7 @@
 
     .line 78
     .local v0, "desc_tts":Ljava/lang/String;
-    iget-object v7, p0, Lcom/android/settings/AccessibilitySettingsSetupWizard;->button:Landroid/view/View;
+    iget-object v7, p0, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->button:Landroid/view/View;
 
     invoke-virtual {v7, v0}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
@@ -265,7 +265,7 @@
     .restart local v4    # "params":Landroid/widget/RelativeLayout$LayoutParams;
     .restart local v5    # "r":Landroid/content/res/Resources;
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/AccessibilitySettingsSetupWizard;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -288,14 +288,14 @@
     invoke-virtual {v4, v10, v10, v1, v10}, Landroid/widget/RelativeLayout$LayoutParams;->setMargins(IIII)V
 
     .line 111
-    iget-object v7, p0, Lcom/android/settings/AccessibilitySettingsSetupWizard;->button:Landroid/view/View;
+    iget-object v7, p0, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->button:Landroid/view/View;
 
     invoke-virtual {v7, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 112
-    iget-object v7, p0, Lcom/android/settings/AccessibilitySettingsSetupWizard;->button:Landroid/view/View;
+    iget-object v7, p0, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->button:Landroid/view/View;
 
-    invoke-virtual {p0}, Lcom/android/settings/AccessibilitySettingsSetupWizard;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -319,7 +319,7 @@
     .line 36
     new-instance v0, Landroid/content/Intent;
 
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->getIntent()Landroid/content/Intent;
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -345,10 +345,10 @@
     .line 118
     const/4 v0, -0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/AccessibilitySettingsSetupWizard;->setResult(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->setResult(I)V
 
     .line 119
-    invoke-virtual {p0}, Lcom/android/settings/AccessibilitySettingsSetupWizard;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->finish()V
 
     .line 120
     return-void
@@ -360,17 +360,17 @@
 
     .prologue
     .line 43
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 44
-    invoke-virtual {p0}, Lcom/android/settings/AccessibilitySettingsSetupWizard;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
     .line 45
-    invoke-virtual {p0}, Lcom/android/settings/AccessibilitySettingsSetupWizard;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v2
 
@@ -405,14 +405,14 @@
 
     .line 48
     .local v0, "mCustomLayout":Landroid/view/View;
-    invoke-virtual {p0}, Lcom/android/settings/AccessibilitySettingsSetupWizard;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v2
 
     invoke-virtual {v2, v0, v1}, Landroid/app/ActionBar;->setCustomView(Landroid/view/View;Landroid/app/ActionBar$LayoutParams;)V
 
     .line 49
-    invoke-virtual {p0}, Lcom/android/settings/AccessibilitySettingsSetupWizard;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v2
 
@@ -426,10 +426,10 @@
     :cond_0
     const v2, 0x7f040019
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/AccessibilitySettingsSetupWizard;->setContentView(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->setContentView(I)V
 
     .line 53
-    invoke-direct {p0}, Lcom/android/settings/AccessibilitySettingsSetupWizard;->initViews()V
+    invoke-direct {p0}, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->initViews()V
 
     .line 55
     return-void
@@ -440,10 +440,10 @@
 
     .prologue
     .line 59
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->onResume()V
 
     .line 60
-    invoke-direct {p0}, Lcom/android/settings/AccessibilitySettingsSetupWizard;->initViews()V
+    invoke-direct {p0}, Lcom/android/settings_ex/AccessibilitySettingsSetupWizard;->initViews()V
 
     .line 61
     return-void

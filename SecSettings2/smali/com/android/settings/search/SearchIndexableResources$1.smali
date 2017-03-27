@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/search/SearchIndexableResources$1;
+.class final Lcom/android/settings_ex/search/SearchIndexableResources$1;
 .super Ljava/lang/Object;
 .source "SearchIndexableResources.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/search/SearchIndexableResources;
+    value = Lcom/android/settings_ex/search/SearchIndexableResources;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -72,7 +72,7 @@
     .line 356
     iget-object v3, p1, Landroid/provider/SearchIndexableResource;->className:Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/android/settings/search/Ranking;->getRankForClassName(Ljava/lang/String;)I
+    invoke-static {v3}, Lcom/android/settings_ex/search/Ranking;->getRankForClassName(Ljava/lang/String;)I
 
     move-result v0
 
@@ -91,7 +91,7 @@
     .line 359
     iget-object v3, p2, Landroid/provider/SearchIndexableResource;->className:Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/android/settings/search/Ranking;->getRankForClassName(Ljava/lang/String;)I
+    invoke-static {v3}, Lcom/android/settings_ex/search/Ranking;->getRankForClassName(Ljava/lang/String;)I
 
     move-result v1
 
@@ -130,7 +130,7 @@
     check-cast p2, Landroid/provider/SearchIndexableResource;
 
     .end local p2    # "x1":Ljava/lang/Object;
-    invoke-virtual {p0, p1, p2}, Lcom/android/settings/search/SearchIndexableResources$1;->compare(Landroid/provider/SearchIndexableResource;Landroid/provider/SearchIndexableResource;)I
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings_ex/search/SearchIndexableResources$1;->compare(Landroid/provider/SearchIndexableResource;Landroid/provider/SearchIndexableResource;)I
 
     move-result v0
 

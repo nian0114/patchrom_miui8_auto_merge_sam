@@ -1,14 +1,14 @@
-.class Lcom/android/settings/fingerprint/FingerprintSettings$8;
+.class Lcom/android/settings_ex/fingerprint/FingerprintSettings$8;
 .super Ljava/lang/Object;
 .source "FingerprintSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/fingerprint/FingerPrintRenameDialog$ConfirmationDialogFragmentListener;
+.implements Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog$ConfirmationDialogFragmentListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fingerprint/FingerprintSettings;->renameFingerPrint(ILjava/lang/CharSequence;)V
+    value = Lcom/android/settings_ex/fingerprint/FingerprintSettings;->renameFingerPrint(ILjava/lang/CharSequence;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/FingerprintSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings;)V
     .locals 0
 
     .prologue
     .line 1656
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintSettings$8;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$8;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,12 +41,12 @@
 
     .prologue
     .line 1678
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings$8;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$8;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
     const/4 v1, 0x0
 
-    # setter for: Lcom/android/settings/fingerprint/FingerprintSettings;->mRenameDialog:Lcom/android/settings/fingerprint/FingerPrintRenameDialog;
-    invoke-static {v0, v1}, Lcom/android/settings/fingerprint/FingerprintSettings;->access$1602(Lcom/android/settings/fingerprint/FingerprintSettings;Lcom/android/settings/fingerprint/FingerPrintRenameDialog;)Lcom/android/settings/fingerprint/FingerPrintRenameDialog;
+    # setter for: Lcom/android/settings_ex/fingerprint/FingerprintSettings;->mRenameDialog:Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;
+    invoke-static {v0, v1}, Lcom/android/settings_ex/fingerprint/FingerprintSettings;->access$1602(Lcom/android/settings_ex/fingerprint/FingerprintSettings;Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;)Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;
 
     .line 1679
     return-void
@@ -57,10 +57,10 @@
 
     .prologue
     .line 1667
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings$8;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$8;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
-    # invokes: Lcom/android/settings/fingerprint/FingerprintSettings;->updatePreferences()V
-    invoke-static {v0}, Lcom/android/settings/fingerprint/FingerprintSettings;->access$1500(Lcom/android/settings/fingerprint/FingerprintSettings;)V
+    # invokes: Lcom/android/settings_ex/fingerprint/FingerprintSettings;->updatePreferences()V
+    invoke-static {v0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings;->access$1500(Lcom/android/settings_ex/fingerprint/FingerprintSettings;)V
 
     .line 1668
     return-void

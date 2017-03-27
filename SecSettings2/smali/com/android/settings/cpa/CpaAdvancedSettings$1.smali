@@ -1,11 +1,11 @@
-.class Lcom/android/settings/cpa/CpaAdvancedSettings$1;
+.class Lcom/android/settings_ex/cpa/CpaAdvancedSettings$1;
 .super Landroid/database/ContentObserver;
 .source "CpaAdvancedSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/cpa/CpaAdvancedSettings;
+    value = Lcom/android/settings_ex/cpa/CpaAdvancedSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/cpa/CpaAdvancedSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/cpa/CpaAdvancedSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/cpa/CpaAdvancedSettings;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/cpa/CpaAdvancedSettings;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 181
-    iput-object p1, p0, Lcom/android/settings/cpa/CpaAdvancedSettings$1;->this$0:Lcom/android/settings/cpa/CpaAdvancedSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings$1;->this$0:Lcom/android/settings_ex/cpa/CpaAdvancedSettings;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -43,9 +43,9 @@
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
     .line 185
-    iget-object v0, p0, Lcom/android/settings/cpa/CpaAdvancedSettings$1;->this$0:Lcom/android/settings/cpa/CpaAdvancedSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings$1;->this$0:Lcom/android/settings_ex/cpa/CpaAdvancedSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -62,9 +62,9 @@
     if-ne v0, v1, :cond_0
 
     .line 186
-    iget-object v0, p0, Lcom/android/settings/cpa/CpaAdvancedSettings$1;->this$0:Lcom/android/settings/cpa/CpaAdvancedSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings$1;->this$0:Lcom/android/settings_ex/cpa/CpaAdvancedSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->finish()V
 
     .line 188
     :cond_0

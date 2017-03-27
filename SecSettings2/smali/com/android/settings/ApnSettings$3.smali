@@ -1,11 +1,11 @@
-.class Lcom/android/settings/ApnSettings$3;
+.class Lcom/android/settings_ex/ApnSettings$3;
 .super Landroid/content/BroadcastReceiver;
 .source "ApnSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/ApnSettings;
+    value = Lcom/android/settings_ex/ApnSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/ApnSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/ApnSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/ApnSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/ApnSettings;)V
     .locals 0
 
     .prologue
     .line 230
-    iput-object p1, p0, Lcom/android/settings/ApnSettings$3;->this$0:Lcom/android/settings/ApnSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/ApnSettings$3;->this$0:Lcom/android/settings_ex/ApnSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -55,9 +55,9 @@
     if-eqz v1, :cond_0
 
     .line 234
-    iget-object v1, p0, Lcom/android/settings/ApnSettings$3;->this$0:Lcom/android/settings/ApnSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/ApnSettings$3;->this$0:Lcom/android/settings_ex/ApnSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/ApnSettings;->finish()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/ApnSettings;->finish()V
 
     .line 236
     :cond_0

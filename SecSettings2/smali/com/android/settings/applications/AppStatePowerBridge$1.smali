@@ -1,14 +1,14 @@
-.class final Lcom/android/settings/applications/AppStatePowerBridge$1;
+.class final Lcom/android/settings_ex/applications/AppStatePowerBridge$1;
 .super Ljava/lang/Object;
 .source "AppStatePowerBridge.java"
 
 # interfaces
-.implements Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+.implements Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/AppStatePowerBridge;
+    value = Lcom/android/settings_ex/applications/AppStatePowerBridge;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,13 +30,13 @@
 
 
 # virtual methods
-.method public filterApp(Lcom/android/settingslib/applications/ApplicationsState$AppEntry;)Z
+.method public filterApp(Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;)Z
     .locals 2
-    .param p1, "info"    # Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+    .param p1, "info"    # Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
 
     .prologue
     .line 66
-    iget-object v0, p1, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->extraInfo:Ljava/lang/Object;
+    iget-object v0, p1, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->extraInfo:Ljava/lang/Object;
 
     sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 

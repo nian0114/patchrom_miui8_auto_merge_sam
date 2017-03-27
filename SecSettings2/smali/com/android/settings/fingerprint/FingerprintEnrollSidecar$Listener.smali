@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/fingerprint/FingerprintEnrollSidecar$Listener;
+.class public interface abstract Lcom/android/settings_ex/fingerprint/FingerprintEnrollSidecar$Listener;
 .super Ljava/lang/Object;
 .source "FingerprintEnrollSidecar.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fingerprint/FingerprintEnrollSidecar;
+    value = Lcom/android/settings_ex/fingerprint/FingerprintEnrollSidecar;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

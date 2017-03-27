@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fingerprint/RegisterFingerprint$12;
+.class Lcom/android/settings_ex/fingerprint/RegisterFingerprint$12;
 .super Ljava/lang/Object;
 .source "RegisterFingerprint.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fingerprint/RegisterFingerprint;->showSensorErrorDialog(I)V
+    value = Lcom/android/settings_ex/fingerprint/RegisterFingerprint;->showSensorErrorDialog(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/RegisterFingerprint;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/RegisterFingerprint;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/RegisterFingerprint;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/RegisterFingerprint;)V
     .locals 0
 
     .prologue
     .line 1358
-    iput-object p1, p0, Lcom/android/settings/fingerprint/RegisterFingerprint$12;->this$0:Lcom/android/settings/fingerprint/RegisterFingerprint;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/RegisterFingerprint$12;->this$0:Lcom/android/settings_ex/fingerprint/RegisterFingerprint;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -64,24 +64,24 @@
     .line 1363
     const-string v1, "hw_auth_token"
 
-    iget-object v2, p0, Lcom/android/settings/fingerprint/RegisterFingerprint$12;->this$0:Lcom/android/settings/fingerprint/RegisterFingerprint;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/RegisterFingerprint$12;->this$0:Lcom/android/settings_ex/fingerprint/RegisterFingerprint;
 
-    # getter for: Lcom/android/settings/fingerprint/RegisterFingerprint;->mToken:[B
-    invoke-static {v2}, Lcom/android/settings/fingerprint/RegisterFingerprint;->access$1900(Lcom/android/settings/fingerprint/RegisterFingerprint;)[B
+    # getter for: Lcom/android/settings_ex/fingerprint/RegisterFingerprint;->mToken:[B
+    invoke-static {v2}, Lcom/android/settings_ex/fingerprint/RegisterFingerprint;->access$1900(Lcom/android/settings_ex/fingerprint/RegisterFingerprint;)[B
 
     move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;
 
     .line 1364
-    iget-object v1, p0, Lcom/android/settings/fingerprint/RegisterFingerprint$12;->this$0:Lcom/android/settings/fingerprint/RegisterFingerprint;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/RegisterFingerprint$12;->this$0:Lcom/android/settings_ex/fingerprint/RegisterFingerprint;
 
-    invoke-virtual {v1, v3, v0}, Lcom/android/settings/fingerprint/RegisterFingerprint;->setResult(ILandroid/content/Intent;)V
+    invoke-virtual {v1, v3, v0}, Lcom/android/settings_ex/fingerprint/RegisterFingerprint;->setResult(ILandroid/content/Intent;)V
 
     .line 1365
-    iget-object v1, p0, Lcom/android/settings/fingerprint/RegisterFingerprint$12;->this$0:Lcom/android/settings/fingerprint/RegisterFingerprint;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/RegisterFingerprint$12;->this$0:Lcom/android/settings_ex/fingerprint/RegisterFingerprint;
 
-    invoke-virtual {v1}, Lcom/android/settings/fingerprint/RegisterFingerprint;->finish()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/fingerprint/RegisterFingerprint;->finish()V
 
     .line 1366
     return-void

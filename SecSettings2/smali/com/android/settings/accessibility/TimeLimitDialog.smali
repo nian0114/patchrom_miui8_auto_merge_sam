@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accessibility/TimeLimitDialog;
+.class public Lcom/android/settings_ex/accessibility/TimeLimitDialog;
 .super Lcom/sec/android/touchwiz/app/TwTimePickerDialog;
 .source "TimeLimitDialog.java"
 
@@ -41,17 +41,17 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/TimeLimitDialog;->calendar:Ljava/util/Calendar;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/TimeLimitDialog;->calendar:Ljava/util/Calendar;
 
     .line 22
-    invoke-direct {p0, p1}, Lcom/android/settings/accessibility/TimeLimitDialog;->getTimeFormat(Landroid/content/Context;)Ljava/text/DateFormat;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/accessibility/TimeLimitDialog;->getTimeFormat(Landroid/content/Context;)Ljava/text/DateFormat;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/TimeLimitDialog;->dateformat:Ljava/text/DateFormat;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/TimeLimitDialog;->dateformat:Ljava/text/DateFormat;
 
     .line 23
-    invoke-direct {p0, p3, p4}, Lcom/android/settings/accessibility/TimeLimitDialog;->updateTitle(II)V
+    invoke-direct {p0, p3, p4}, Lcom/android/settings_ex/accessibility/TimeLimitDialog;->updateTitle(II)V
 
     .line 24
     return-void
@@ -79,23 +79,23 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/android/settings/accessibility/TimeLimitDialog;->calendar:Ljava/util/Calendar;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/TimeLimitDialog;->calendar:Ljava/util/Calendar;
 
     const/16 v1, 0xb
 
     invoke-virtual {v0, v1, p1}, Ljava/util/Calendar;->set(II)V
 
     .line 35
-    iget-object v0, p0, Lcom/android/settings/accessibility/TimeLimitDialog;->calendar:Ljava/util/Calendar;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/TimeLimitDialog;->calendar:Ljava/util/Calendar;
 
     const/16 v1, 0xc
 
     invoke-virtual {v0, v1, p2}, Ljava/util/Calendar;->set(II)V
 
     .line 36
-    iget-object v0, p0, Lcom/android/settings/accessibility/TimeLimitDialog;->dateformat:Ljava/text/DateFormat;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/TimeLimitDialog;->dateformat:Ljava/text/DateFormat;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/TimeLimitDialog;->calendar:Ljava/util/Calendar;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/TimeLimitDialog;->calendar:Ljava/util/Calendar;
 
     invoke-virtual {v1}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
 
@@ -105,7 +105,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/TimeLimitDialog;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/TimeLimitDialog;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 38
     return-void
@@ -138,7 +138,7 @@
 
     .line 52
     .local v1, "minute":I
-    invoke-direct {p0, v0, v1}, Lcom/android/settings/accessibility/TimeLimitDialog;->updateTitle(II)V
+    invoke-direct {p0, v0, v1}, Lcom/android/settings_ex/accessibility/TimeLimitDialog;->updateTitle(II)V
 
     .line 53
     return-void
@@ -152,7 +152,7 @@
 
     .prologue
     .line 29
-    invoke-direct {p0, p2, p3}, Lcom/android/settings/accessibility/TimeLimitDialog;->updateTitle(II)V
+    invoke-direct {p0, p2, p3}, Lcom/android/settings_ex/accessibility/TimeLimitDialog;->updateTitle(II)V
 
     .line 30
     return-void

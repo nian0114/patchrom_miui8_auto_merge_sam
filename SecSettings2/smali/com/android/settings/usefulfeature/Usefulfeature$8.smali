@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/usefulfeature/Usefulfeature$8;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/usefulfeature/Usefulfeature$8;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "Usefulfeature.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/usefulfeature/Usefulfeature;
+    value = Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 806
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -52,7 +52,7 @@
     .local v5, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v6, "com.samsung.android.game.gametools"
 
-    invoke-static {p1, v6}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v6}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v6
 
@@ -62,7 +62,7 @@
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/android/settings/Utils;->isEasyModeStatus(Landroid/content/ContentResolver;)Z
+    invoke-static {v6}, Lcom/android/settings_ex/Utils;->isEasyModeStatus(Landroid/content/ContentResolver;)Z
 
     move-result v6
 
@@ -76,14 +76,14 @@
 
     .line 839
     :cond_1
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v6
 
     if-nez v6, :cond_3
 
-    # invokes: Lcom/android/settings/usefulfeature/Usefulfeature;->isSupportSmartCall()Z
-    invoke-static {}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$1400()Z
+    # invokes: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->isSupportSmartCall()Z
+    invoke-static {}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$1400()Z
 
     move-result v6
 
@@ -105,7 +105,7 @@
     :cond_3
     const-string v6, "com.samsung.android.app.scrollcapture"
 
-    invoke-static {p1, v6}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v6}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v6
 
@@ -118,7 +118,7 @@
 
     .line 845
     :cond_4
-    sget-object v0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMotionFeatures:[Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMotionFeatures:[Ljava/lang/String;
 
     .local v0, "arr$":[Ljava/lang/String;
     array-length v2, v0
@@ -134,7 +134,7 @@
 
     .line 846
     .local v4, "motionFeature":Ljava/lang/String;
-    invoke-static {p1, v4}, Lcom/android/settings/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v4}, Lcom/android/settings_ex/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v6
 
@@ -156,7 +156,7 @@
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/android/settings/Utils;->isEasyModeStatus(Landroid/content/ContentResolver;)Z
+    invoke-static {v6}, Lcom/android/settings_ex/Utils;->isEasyModeStatus(Landroid/content/ContentResolver;)Z
 
     move-result v6
 
@@ -169,7 +169,7 @@
 
     .line 853
     :cond_7
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v6
 
@@ -191,7 +191,7 @@
     :cond_9
     const-string v6, "com.samsung.android.app.galaxylabs"
 
-    invoke-static {p1, v6}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v6}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v6
 
@@ -206,8 +206,8 @@
     :cond_a
     const-string v6, "com.sec.android.app.camera/com.sec.android.app.camera.Camera"
 
-    # getter for: Lcom/android/settings/usefulfeature/Usefulfeature;->componentNameOfDoubleTapOnHomeCommandIntent:Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$1700()Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->componentNameOfDoubleTapOnHomeCommandIntent:Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$1700()Ljava/lang/String;
 
     move-result-object v7
 
@@ -284,7 +284,7 @@
 
     .line 814
     .local v3, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v4, Lcom/android/settings/usefulfeature/Usefulfeature;
+    const-class v4, Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
     invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

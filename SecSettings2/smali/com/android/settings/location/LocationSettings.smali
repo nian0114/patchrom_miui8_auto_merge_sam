@@ -1,18 +1,18 @@
-.class public Lcom/android/settings/location/LocationSettings;
-.super Lcom/android/settings/location/LocationSettingsBase;
+.class public Lcom/android/settings_ex/location/LocationSettings;
+.super Lcom/android/settings_ex/location/LocationSettingsBase;
 .source "LocationSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/search/Indexable;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # instance fields
-.field private injector:Lcom/android/settings/location/SettingsInjector;
+.field private injector:Lcom/android/settings_ex/location/SettingsInjector;
 
 .field private mAgpsFunctionSwitch:Landroid/preference/PreferenceScreen;
 
@@ -38,7 +38,7 @@
 
 .field private mSwitch:Landroid/widget/Switch;
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 .field private mUm:Landroid/os/UserManager;
 
@@ -51,11 +51,11 @@
 
     .prologue
     .line 504
-    new-instance v0, Lcom/android/settings/location/LocationSettings$5;
+    new-instance v0, Lcom/android/settings_ex/location/LocationSettings$5;
 
-    invoke-direct {v0}, Lcom/android/settings/location/LocationSettings$5;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/location/LocationSettings$5;-><init>()V
 
-    sput-object v0, Lcom/android/settings/location/LocationSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/location/LocationSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -67,24 +67,24 @@
     const/4 v0, 0x0
 
     .line 93
-    invoke-direct {p0}, Lcom/android/settings/location/LocationSettingsBase;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/location/LocationSettingsBase;-><init>()V
 
     .line 132
-    iput-boolean v0, p0, Lcom/android/settings/location/LocationSettings;->mValidListener:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/location/LocationSettings;->mValidListener:Z
 
     .line 145
-    iput-boolean v0, p0, Lcom/android/settings/location/LocationSettings;->mIsEmerMode:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/location/LocationSettings;->mIsEmerMode:Z
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/location/LocationSettings;)Lcom/android/settings/location/SettingsInjector;
+.method static synthetic access$000(Lcom/android/settings_ex/location/LocationSettings;)Lcom/android/settings_ex/location/SettingsInjector;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/location/LocationSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/location/LocationSettings;
 
     .prologue
     .line 93
-    iget-object v0, p0, Lcom/android/settings/location/LocationSettings;->injector:Lcom/android/settings/location/SettingsInjector;
+    iget-object v0, p0, Lcom/android/settings_ex/location/LocationSettings;->injector:Lcom/android/settings_ex/location/SettingsInjector;
 
     return-object v0
 .end method
@@ -107,14 +107,14 @@
 
     .line 330
     .local v0, "categoryLocationServices":Landroid/preference/PreferenceCategory;
-    new-instance v3, Lcom/android/settings/location/SettingsInjector;
+    new-instance v3, Lcom/android/settings_ex/location/SettingsInjector;
 
-    invoke-direct {v3, p1}, Lcom/android/settings/location/SettingsInjector;-><init>(Landroid/content/Context;)V
+    invoke-direct {v3, p1}, Lcom/android/settings_ex/location/SettingsInjector;-><init>(Landroid/content/Context;)V
 
-    iput-object v3, p0, Lcom/android/settings/location/LocationSettings;->injector:Lcom/android/settings/location/SettingsInjector;
+    iput-object v3, p0, Lcom/android/settings_ex/location/LocationSettings;->injector:Lcom/android/settings_ex/location/SettingsInjector;
 
     .line 333
-    iget-object v4, p0, Lcom/android/settings/location/LocationSettings;->injector:Lcom/android/settings/location/SettingsInjector;
+    iget-object v4, p0, Lcom/android/settings_ex/location/LocationSettings;->injector:Lcom/android/settings_ex/location/SettingsInjector;
 
     if-eqz p3, :cond_0
 
@@ -123,17 +123,17 @@
     move-result v3
 
     :goto_0
-    invoke-virtual {v4, v3}, Lcom/android/settings/location/SettingsInjector;->getInjectedSettings(I)Ljava/util/List;
+    invoke-virtual {v4, v3}, Lcom/android/settings_ex/location/SettingsInjector;->getInjectedSettings(I)Ljava/util/List;
 
     move-result-object v2
 
     .line 336
     .local v2, "locationServices":Ljava/util/List;, "Ljava/util/List<Landroid/preference/Preference;>;"
-    new-instance v3, Lcom/android/settings/location/LocationSettings$2;
+    new-instance v3, Lcom/android/settings_ex/location/LocationSettings$2;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/location/LocationSettings$2;-><init>(Lcom/android/settings/location/LocationSettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/location/LocationSettings$2;-><init>(Lcom/android/settings_ex/location/LocationSettings;)V
 
-    iput-object v3, p0, Lcom/android/settings/location/LocationSettings;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v3, p0, Lcom/android/settings_ex/location/LocationSettings;->mReceiver:Landroid/content/BroadcastReceiver;
 
     .line 346
     new-instance v1, Landroid/content/IntentFilter;
@@ -147,7 +147,7 @@
     invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 348
-    iget-object v3, p0, Lcom/android/settings/location/LocationSettings;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v3, p0, Lcom/android/settings_ex/location/LocationSettings;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p1, v3, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -159,7 +159,7 @@
     if-lez v3, :cond_1
 
     .line 351
-    invoke-direct {p0, v2, v0}, Lcom/android/settings/location/LocationSettings;->addPreferencesSorted(Ljava/util/List;Landroid/preference/PreferenceGroup;)V
+    invoke-direct {p0, v2, v0}, Lcom/android/settings_ex/location/LocationSettings;->addPreferencesSorted(Ljava/util/List;Landroid/preference/PreferenceGroup;)V
 
     .line 356
     :goto_1
@@ -200,9 +200,9 @@
     .prologue
     .line 213
     .local p1, "prefs":Ljava/util/List;, "Ljava/util/List<Landroid/preference/Preference;>;"
-    new-instance v2, Lcom/android/settings/location/LocationSettings$1;
+    new-instance v2, Lcom/android/settings_ex/location/LocationSettings$1;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/location/LocationSettings$1;-><init>(Lcom/android/settings/location/LocationSettings;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/location/LocationSettings$1;-><init>(Lcom/android/settings_ex/location/LocationSettings;)V
 
     invoke-static {p1, v2}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
@@ -244,7 +244,7 @@
 
     .prologue
     .line 312
-    iget-object v0, p0, Lcom/android/settings/location/LocationSettings;->mManagedProfilePreference:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/location/LocationSettings;->mManagedProfilePreference:Landroid/preference/Preference;
 
     if-nez v0, :cond_0
 
@@ -254,12 +254,12 @@
 
     .line 315
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/location/LocationSettings;->mManagedProfilePreference:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/location/LocationSettings;->mManagedProfilePreference:Landroid/preference/Preference;
 
     invoke-virtual {v0, p1}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 316
-    iget-object v0, p0, Lcom/android/settings/location/LocationSettings;->mManagedProfilePreference:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/location/LocationSettings;->mManagedProfilePreference:Landroid/preference/Preference;
 
     invoke-virtual {v0, p2}, Landroid/preference/Preference;->setSummary(I)V
 
@@ -273,15 +273,15 @@
     const v12, 0x7f08006a
 
     .line 225
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 226
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v9
 
@@ -294,10 +294,10 @@
 
     .line 230
     :cond_0
-    invoke-virtual {p0, v12}, Lcom/android/settings/location/LocationSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v12}, Lcom/android/settings_ex/location/LocationSettings;->addPreferencesFromResource(I)V
 
     .line 231
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v9
 
@@ -322,11 +322,11 @@
 
     if-eqz v10, :cond_1
 
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
 
-    invoke-static {v10}, Lcom/android/settings/Utils;->isTablet(Landroid/content/Context;)Z
+    invoke-static {v10}, Lcom/android/settings_ex/Utils;->isTablet(Landroid/content/Context;)Z
 
     move-result v10
 
@@ -337,7 +337,7 @@
     if-eqz v2, :cond_2
 
     .line 237
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v10
 
@@ -353,7 +353,7 @@
 
     check-cast v10, Landroid/preference/SwitchPreference;
 
-    iput-object v10, p0, Lcom/android/settings/location/LocationSettings;->mClockSync:Landroid/preference/SwitchPreference;
+    iput-object v10, p0, Lcom/android/settings_ex/location/LocationSettings;->mClockSync:Landroid/preference/SwitchPreference;
 
     .line 243
     const-string v10, "assisted_gps_function_switch"
@@ -364,7 +364,7 @@
 
     check-cast v10, Landroid/preference/PreferenceScreen;
 
-    iput-object v10, p0, Lcom/android/settings/location/LocationSettings;->mAgpsFunctionSwitch:Landroid/preference/PreferenceScreen;
+    iput-object v10, p0, Lcom/android/settings_ex/location/LocationSettings;->mAgpsFunctionSwitch:Landroid/preference/PreferenceScreen;
 
     .line 244
     const-string v10, "satellite_view"
@@ -375,7 +375,7 @@
 
     check-cast v10, Landroid/preference/PreferenceScreen;
 
-    iput-object v10, p0, Lcom/android/settings/location/LocationSettings;->mSatelliteView:Landroid/preference/PreferenceScreen;
+    iput-object v10, p0, Lcom/android/settings_ex/location/LocationSettings;->mSatelliteView:Landroid/preference/PreferenceScreen;
 
     .line 245
     const-string v10, "cmcc_agpsmenu"
@@ -386,12 +386,12 @@
 
     check-cast v10, Landroid/preference/PreferenceCategory;
 
-    iput-object v10, p0, Lcom/android/settings/location/LocationSettings;->mAgpsMenu:Landroid/preference/PreferenceCategory;
+    iput-object v10, p0, Lcom/android/settings_ex/location/LocationSettings;->mAgpsMenu:Landroid/preference/PreferenceCategory;
 
     .line 247
     const-string v10, "CHM"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v11
 
@@ -402,44 +402,44 @@
     if-nez v10, :cond_3
 
     .line 248
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v10
 
-    iget-object v11, p0, Lcom/android/settings/location/LocationSettings;->mClockSync:Landroid/preference/SwitchPreference;
+    iget-object v11, p0, Lcom/android/settings_ex/location/LocationSettings;->mClockSync:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v10, v11}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 249
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v10
 
-    iget-object v11, p0, Lcom/android/settings/location/LocationSettings;->mAgpsFunctionSwitch:Landroid/preference/PreferenceScreen;
+    iget-object v11, p0, Lcom/android/settings_ex/location/LocationSettings;->mAgpsFunctionSwitch:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v10, v11}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 250
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v10
 
-    iget-object v11, p0, Lcom/android/settings/location/LocationSettings;->mSatelliteView:Landroid/preference/PreferenceScreen;
+    iget-object v11, p0, Lcom/android/settings_ex/location/LocationSettings;->mSatelliteView:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v10, v11}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 251
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v10
 
-    iget-object v11, p0, Lcom/android/settings/location/LocationSettings;->mAgpsMenu:Landroid/preference/PreferenceCategory;
+    iget-object v11, p0, Lcom/android/settings_ex/location/LocationSettings;->mAgpsMenu:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v10, v11}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 254
     :cond_3
-    invoke-direct {p0, v9}, Lcom/android/settings/location/LocationSettings;->setupManagedProfileCategory(Landroid/preference/PreferenceScreen;)V
+    invoke-direct {p0, v9}, Lcom/android/settings_ex/location/LocationSettings;->setupManagedProfileCategory(Landroid/preference/PreferenceScreen;)V
 
     .line 255
     const-string v10, "location_mode"
@@ -448,10 +448,10 @@
 
     move-result-object v10
 
-    iput-object v10, p0, Lcom/android/settings/location/LocationSettings;->mLocationMode:Landroid/preference/Preference;
+    iput-object v10, p0, Lcom/android/settings_ex/location/LocationSettings;->mLocationMode:Landroid/preference/Preference;
 
     .line 256
-    iget-object v10, p0, Lcom/android/settings/location/LocationSettings;->mLocationMode:Landroid/preference/Preference;
+    iget-object v10, p0, Lcom/android/settings_ex/location/LocationSettings;->mLocationMode:Landroid/preference/Preference;
 
     const/4 v11, 0x1
 
@@ -464,7 +464,7 @@
 
     move-result-object v10
 
-    iput-object v10, p0, Lcom/android/settings/location/LocationSettings;->mImproveLocation:Landroid/preference/Preference;
+    iput-object v10, p0, Lcom/android/settings_ex/location/LocationSettings;->mImproveLocation:Landroid/preference/Preference;
 
     .line 258
     const-string v10, "recent_location_requests"
@@ -475,16 +475,16 @@
 
     check-cast v10, Landroid/preference/PreferenceCategory;
 
-    iput-object v10, p0, Lcom/android/settings/location/LocationSettings;->mCategoryRecentLocationRequests:Landroid/preference/PreferenceCategory;
+    iput-object v10, p0, Lcom/android/settings_ex/location/LocationSettings;->mCategoryRecentLocationRequests:Landroid/preference/PreferenceCategory;
 
     .line 260
-    new-instance v6, Lcom/android/settings/location/RecentLocationApps;
+    new-instance v6, Lcom/android/settings_ex/location/RecentLocationApps;
 
-    invoke-direct {v6, v0}, Lcom/android/settings/location/RecentLocationApps;-><init>(Lcom/android/settings/SettingsActivity;)V
+    invoke-direct {v6, v0}, Lcom/android/settings_ex/location/RecentLocationApps;-><init>(Lcom/android/settings_ex/SettingsActivity;)V
 
     .line 261
-    .local v6, "recentApps":Lcom/android/settings/location/RecentLocationApps;
-    invoke-virtual {v6}, Lcom/android/settings/location/RecentLocationApps;->getAppList()Ljava/util/List;
+    .local v6, "recentApps":Lcom/android/settings_ex/location/RecentLocationApps;
+    invoke-virtual {v6}, Lcom/android/settings_ex/location/RecentLocationApps;->getAppList()Ljava/util/List;
 
     move-result-object v7
 
@@ -497,24 +497,24 @@
     if-lez v10, :cond_4
 
     .line 263
-    iget-object v10, p0, Lcom/android/settings/location/LocationSettings;->mCategoryRecentLocationRequests:Landroid/preference/PreferenceCategory;
+    iget-object v10, p0, Lcom/android/settings_ex/location/LocationSettings;->mCategoryRecentLocationRequests:Landroid/preference/PreferenceCategory;
 
-    invoke-direct {p0, v7, v10}, Lcom/android/settings/location/LocationSettings;->addPreferencesSorted(Ljava/util/List;Landroid/preference/PreferenceGroup;)V
+    invoke-direct {p0, v7, v10}, Lcom/android/settings_ex/location/LocationSettings;->addPreferencesSorted(Ljava/util/List;Landroid/preference/PreferenceGroup;)V
 
     .line 274
     :goto_0
-    iget-boolean v10, p0, Lcom/android/settings/location/LocationSettings;->mIsEmerMode:Z
+    iget-boolean v10, p0, Lcom/android/settings_ex/location/LocationSettings;->mIsEmerMode:Z
 
     if-eqz v10, :cond_5
 
     .line 275
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
 
     const-string v11, "UPSM"
 
-    invoke-static {v10, v12, v11}, Lcom/android/settings/Utils;->getRemovePreferenceInOtherMode(Landroid/content/Context;ILjava/lang/String;)Ljava/util/ArrayList;
+    invoke-static {v10, v12, v11}, Lcom/android/settings_ex/Utils;->getRemovePreferenceInOtherMode(Landroid/content/Context;ILjava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v8
 
@@ -543,7 +543,7 @@
 
     .line 278
     .local v4, "list":Ljava/lang/String;
-    invoke-virtual {p0, v4}, Lcom/android/settings/location/LocationSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/location/LocationSettings;->removePreference(Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -573,7 +573,7 @@
     invoke-virtual {v1, v10}, Landroid/preference/Preference;->setSelectable(Z)V
 
     .line 270
-    iget-object v10, p0, Lcom/android/settings/location/LocationSettings;->mCategoryRecentLocationRequests:Landroid/preference/PreferenceCategory;
+    iget-object v10, p0, Lcom/android/settings_ex/location/LocationSettings;->mCategoryRecentLocationRequests:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v10, v1}, Landroid/preference/PreferenceCategory;->addPreference(Landroid/preference/Preference;)Z
 
@@ -586,15 +586,15 @@
 
     .line 286
     .local v5, "lockdownOnLocationAccess":Z
-    iget-object v10, p0, Lcom/android/settings/location/LocationSettings;->mManagedProfile:Landroid/os/UserHandle;
+    iget-object v10, p0, Lcom/android/settings_ex/location/LocationSettings;->mManagedProfile:Landroid/os/UserHandle;
 
     if-eqz v10, :cond_6
 
-    iget-object v10, p0, Lcom/android/settings/location/LocationSettings;->mUm:Landroid/os/UserManager;
+    iget-object v10, p0, Lcom/android/settings_ex/location/LocationSettings;->mUm:Landroid/os/UserManager;
 
     const-string v11, "no_share_location"
 
-    iget-object v12, p0, Lcom/android/settings/location/LocationSettings;->mManagedProfile:Landroid/os/UserHandle;
+    iget-object v12, p0, Lcom/android/settings_ex/location/LocationSettings;->mManagedProfile:Landroid/os/UserHandle;
 
     invoke-virtual {v10, v11, v12}, Landroid/os/UserManager;->hasUserRestriction(Ljava/lang/String;Landroid/os/UserHandle;)Z
 
@@ -607,12 +607,12 @@
 
     .line 290
     :cond_6
-    invoke-direct {p0, v0, v9, v5}, Lcom/android/settings/location/LocationSettings;->addLocationServices(Landroid/content/Context;Landroid/preference/PreferenceScreen;Z)V
+    invoke-direct {p0, v0, v9, v5}, Lcom/android/settings_ex/location/LocationSettings;->addLocationServices(Landroid/content/Context;Landroid/preference/PreferenceScreen;Z)V
 
     .line 293
     .end local v5    # "lockdownOnLocationAccess":Z
     :cond_7
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->refreshLocationMode()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->refreshLocationMode()V
 
     .line 294
     return-object v9
@@ -626,16 +626,16 @@
     const/4 v1, 0x0
 
     .line 300
-    iget-object v0, p0, Lcom/android/settings/location/LocationSettings;->mUm:Landroid/os/UserManager;
+    iget-object v0, p0, Lcom/android/settings_ex/location/LocationSettings;->mUm:Landroid/os/UserManager;
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->getManagedProfile(Landroid/os/UserManager;)Landroid/os/UserHandle;
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->getManagedProfile(Landroid/os/UserManager;)Landroid/os/UserHandle;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/location/LocationSettings;->mManagedProfile:Landroid/os/UserHandle;
+    iput-object v0, p0, Lcom/android/settings_ex/location/LocationSettings;->mManagedProfile:Landroid/os/UserHandle;
 
     .line 301
-    iget-object v0, p0, Lcom/android/settings/location/LocationSettings;->mManagedProfile:Landroid/os/UserHandle;
+    iget-object v0, p0, Lcom/android/settings_ex/location/LocationSettings;->mManagedProfile:Landroid/os/UserHandle;
 
     if-nez v0, :cond_0
 
@@ -649,7 +649,7 @@
     invoke-virtual {p1, v0}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 304
-    iput-object v1, p0, Lcom/android/settings/location/LocationSettings;->mManagedProfilePreference:Landroid/preference/Preference;
+    iput-object v1, p0, Lcom/android/settings_ex/location/LocationSettings;->mManagedProfilePreference:Landroid/preference/Preference;
 
     .line 309
     :goto_0
@@ -663,10 +663,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/location/LocationSettings;->mManagedProfilePreference:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/android/settings_ex/location/LocationSettings;->mManagedProfilePreference:Landroid/preference/Preference;
 
     .line 307
-    iget-object v0, p0, Lcom/android/settings/location/LocationSettings;->mManagedProfilePreference:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/location/LocationSettings;->mManagedProfilePreference:Landroid/preference/Preference;
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -701,47 +701,47 @@
 
     .prologue
     .line 155
-    invoke-super {p0, p1}, Lcom/android/settings/location/LocationSettingsBase;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/location/LocationSettingsBase;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 157
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 158
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
     const-string v1, "user"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/SettingsActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/SettingsActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/os/UserManager;
 
-    iput-object v1, p0, Lcom/android/settings/location/LocationSettings;->mUm:Landroid/os/UserManager;
+    iput-object v1, p0, Lcom/android/settings_ex/location/LocationSettings;->mUm:Landroid/os/UserManager;
 
     .line 160
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/location/LocationSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v1, p0, Lcom/android/settings_ex/location/LocationSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 161
-    iget-object v1, p0, Lcom/android/settings/location/LocationSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/location/LocationSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1}, Lcom/android/settings/widget/SwitchBar;->getSwitch()Lcom/android/settings/widget/ToggleSwitch;
+    invoke-virtual {v1}, Lcom/android/settings_ex/widget/SwitchBar;->getSwitch()Lcom/android/settings_ex/widget/ToggleSwitch;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/location/LocationSettings;->mSwitch:Landroid/widget/Switch;
+    iput-object v1, p0, Lcom/android/settings_ex/location/LocationSettings;->mSwitch:Landroid/widget/Switch;
 
     .line 162
-    iget-object v1, p0, Lcom/android/settings/location/LocationSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/location/LocationSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 163
     return-void
@@ -753,19 +753,19 @@
 
     .prologue
     .line 173
-    invoke-super {p0, p1}, Lcom/android/settings/location/LocationSettingsBase;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/location/LocationSettingsBase;->onCreate(Landroid/os/Bundle;)V
 
     .line 175
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/location/LocationSettings;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/location/LocationSettings;->setHasOptionsMenu(Z)V
 
     .line 178
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isEnabledUltraPowerSaving(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isEnabledUltraPowerSaving(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -774,7 +774,7 @@
     .line 179
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/location/LocationSettings;->mIsEmerMode:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/location/LocationSettings;->mIsEmerMode:Z
 
     .line 182
     :cond_0
@@ -797,7 +797,7 @@
     invoke-interface {p1, v2, v0, v2, v1}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
     .line 362
-    invoke-super {p0, p1, p2}, Lcom/android/settings/location/LocationSettingsBase;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/location/LocationSettingsBase;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     .line 363
     return-void
@@ -808,12 +808,12 @@
 
     .prologue
     .line 167
-    invoke-super {p0}, Lcom/android/settings/location/LocationSettingsBase;->onDestroyView()V
+    invoke-super {p0}, Lcom/android/settings_ex/location/LocationSettingsBase;->onDestroyView()V
 
     .line 168
-    iget-object v0, p0, Lcom/android/settings/location/LocationSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/location/LocationSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 169
     return-void
@@ -841,17 +841,17 @@
     .line 418
     .local v0, "enabled":Z
     :goto_1
-    iget-object v4, p0, Lcom/android/settings/location/LocationSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v4, p0, Lcom/android/settings_ex/location/LocationSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-nez p2, :cond_7
 
     move v3, v1
 
     :goto_2
-    invoke-virtual {v4, v3}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v4, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 419
-    iget-object v4, p0, Lcom/android/settings/location/LocationSettings;->mLocationMode:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/location/LocationSettings;->mLocationMode:Landroid/preference/Preference;
 
     if-eqz v0, :cond_8
 
@@ -863,7 +863,7 @@
     invoke-virtual {v4, v3}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 420
-    iget-object v4, p0, Lcom/android/settings/location/LocationSettings;->mImproveLocation:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/location/LocationSettings;->mImproveLocation:Landroid/preference/Preference;
 
     if-eqz v0, :cond_9
 
@@ -875,12 +875,12 @@
     invoke-virtual {v4, v3}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 421
-    iget-object v3, p0, Lcom/android/settings/location/LocationSettings;->mCategoryRecentLocationRequests:Landroid/preference/PreferenceCategory;
+    iget-object v3, p0, Lcom/android/settings_ex/location/LocationSettings;->mCategoryRecentLocationRequests:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v3, v0}, Landroid/preference/PreferenceCategory;->setEnabled(Z)V
 
     .line 423
-    iget-object v3, p0, Lcom/android/settings/location/LocationSettings;->mSwitch:Landroid/widget/Switch;
+    iget-object v3, p0, Lcom/android/settings_ex/location/LocationSettings;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v3}, Landroid/widget/Switch;->isChecked()Z
 
@@ -889,43 +889,43 @@
     if-eq v0, v3, :cond_1
 
     .line 425
-    iget-boolean v3, p0, Lcom/android/settings/location/LocationSettings;->mValidListener:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/location/LocationSettings;->mValidListener:Z
 
     if-eqz v3, :cond_0
 
     .line 426
-    iget-object v3, p0, Lcom/android/settings/location/LocationSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/location/LocationSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v3, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v3, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 428
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/location/LocationSettings;->mSwitch:Landroid/widget/Switch;
+    iget-object v3, p0, Lcom/android/settings_ex/location/LocationSettings;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v3, v0}, Landroid/widget/Switch;->setChecked(Z)V
 
     .line 429
-    iget-boolean v3, p0, Lcom/android/settings/location/LocationSettings;->mValidListener:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/location/LocationSettings;->mValidListener:Z
 
     if-eqz v3, :cond_1
 
     .line 430
-    iget-object v3, p0, Lcom/android/settings/location/LocationSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/location/LocationSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v3, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v3, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 434
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/location/LocationSettings;->mManagedProfilePreference:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/location/LocationSettings;->mManagedProfilePreference:Landroid/preference/Preference;
 
     if-eqz v3, :cond_2
 
     .line 435
-    iget-object v3, p0, Lcom/android/settings/location/LocationSettings;->mUm:Landroid/os/UserManager;
+    iget-object v3, p0, Lcom/android/settings_ex/location/LocationSettings;->mUm:Landroid/os/UserManager;
 
     const-string v4, "no_share_location"
 
-    iget-object v5, p0, Lcom/android/settings/location/LocationSettings;->mManagedProfile:Landroid/os/UserHandle;
+    iget-object v5, p0, Lcom/android/settings_ex/location/LocationSettings;->mManagedProfile:Landroid/os/UserHandle;
 
     invoke-virtual {v3, v4, v5}, Landroid/os/UserManager;->hasUserRestriction(Ljava/lang/String;Landroid/os/UserHandle;)Z
 
@@ -936,19 +936,19 @@
     .line 436
     const v1, 0x7f0e0784
 
-    invoke-direct {p0, v2, v1}, Lcom/android/settings/location/LocationSettings;->changeManagedProfileLocationAccessStatus(ZI)V
+    invoke-direct {p0, v2, v1}, Lcom/android/settings_ex/location/LocationSettings;->changeManagedProfileLocationAccessStatus(ZI)V
 
     .line 449
     :cond_2
     :goto_5
-    iget-object v1, p0, Lcom/android/settings/location/LocationSettings;->injector:Lcom/android/settings/location/SettingsInjector;
+    iget-object v1, p0, Lcom/android/settings_ex/location/LocationSettings;->injector:Lcom/android/settings_ex/location/SettingsInjector;
 
     if-eqz v1, :cond_3
 
     .line 450
-    iget-object v1, p0, Lcom/android/settings/location/LocationSettings;->injector:Lcom/android/settings/location/SettingsInjector;
+    iget-object v1, p0, Lcom/android/settings_ex/location/LocationSettings;->injector:Lcom/android/settings_ex/location/SettingsInjector;
 
-    invoke-virtual {v1}, Lcom/android/settings/location/SettingsInjector;->reloadStatusMessages()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/location/SettingsInjector;->reloadStatusMessages()V
 
     .line 452
     :cond_3
@@ -957,7 +957,7 @@
     .line 389
     .end local v0    # "enabled":Z
     :pswitch_0
-    iget-object v3, p0, Lcom/android/settings/location/LocationSettings;->mLocationMode:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/location/LocationSettings;->mLocationMode:Landroid/preference/Preference;
 
     const v4, 0x7f0e078b
 
@@ -967,7 +967,7 @@
 
     .line 392
     :pswitch_1
-    iget-object v3, p0, Lcom/android/settings/location/LocationSettings;->mLocationMode:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/location/LocationSettings;->mLocationMode:Landroid/preference/Preference;
 
     const v4, 0x7f0e078a
 
@@ -977,18 +977,18 @@
 
     .line 395
     :pswitch_2
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {v3}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v3
 
     if-eqz v3, :cond_4
 
     .line 396
-    iget-object v3, p0, Lcom/android/settings/location/LocationSettings;->mLocationMode:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/location/LocationSettings;->mLocationMode:Landroid/preference/Preference;
 
     const v4, 0x7f0e0789
 
@@ -998,7 +998,7 @@
 
     .line 398
     :cond_4
-    iget-object v3, p0, Lcom/android/settings/location/LocationSettings;->mLocationMode:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/location/LocationSettings;->mLocationMode:Landroid/preference/Preference;
 
     const v4, 0x7f0e0788
 
@@ -1008,18 +1008,18 @@
 
     .line 402
     :pswitch_3
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {v3}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v3
 
     if-eqz v3, :cond_5
 
     .line 403
-    iget-object v3, p0, Lcom/android/settings/location/LocationSettings;->mLocationMode:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/location/LocationSettings;->mLocationMode:Landroid/preference/Preference;
 
     const v4, 0x7f0e0787
 
@@ -1029,7 +1029,7 @@
 
     .line 405
     :cond_5
-    iget-object v3, p0, Lcom/android/settings/location/LocationSettings;->mLocationMode:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/location/LocationSettings;->mLocationMode:Landroid/preference/Preference;
 
     const v4, 0x7f0e0786
 
@@ -1069,7 +1069,7 @@
     .line 440
     const v2, 0x7f0e0ea6
 
-    invoke-direct {p0, v1, v2}, Lcom/android/settings/location/LocationSettings;->changeManagedProfileLocationAccessStatus(ZI)V
+    invoke-direct {p0, v1, v2}, Lcom/android/settings_ex/location/LocationSettings;->changeManagedProfileLocationAccessStatus(ZI)V
 
     goto :goto_5
 
@@ -1077,7 +1077,7 @@
     :cond_b
     const v1, 0x7f0e0ea7
 
-    invoke-direct {p0, v2, v1}, Lcom/android/settings/location/LocationSettings;->changeManagedProfileLocationAccessStatus(ZI)V
+    invoke-direct {p0, v2, v1}, Lcom/android/settings_ex/location/LocationSettings;->changeManagedProfileLocationAccessStatus(ZI)V
 
     goto :goto_5
 
@@ -1099,14 +1099,14 @@
     const/4 v2, 0x0
 
     .line 367
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 368
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v1
@@ -1114,7 +1114,7 @@
     packed-switch v1, :pswitch_data_0
 
     .line 376
-    invoke-super {p0, p1}, Lcom/android/settings/location/LocationSettingsBase;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/android/settings_ex/location/LocationSettingsBase;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v1
 
@@ -1123,7 +1123,7 @@
 
     .line 370
     :pswitch_0
-    const-class v1, Lcom/android/settings/location/ScanningSettings;
+    const-class v1, Lcom/android/settings_ex/location/ScanningSettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -1137,7 +1137,7 @@
 
     move-object v5, p0
 
-    invoke-virtual/range {v0 .. v6}, Lcom/android/settings/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
+    invoke-virtual/range {v0 .. v6}, Lcom/android/settings_ex/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
 
     .line 374
     const/4 v1, 0x1
@@ -1157,11 +1157,11 @@
     .prologue
     .line 197
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/location/LocationSettings;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/location/LocationSettings;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
     :try_end_0
@@ -1170,23 +1170,23 @@
     .line 204
     :cond_0
     :goto_0
-    iget-boolean v1, p0, Lcom/android/settings/location/LocationSettings;->mValidListener:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/location/LocationSettings;->mValidListener:Z
 
     if-eqz v1, :cond_1
 
     .line 205
-    iget-object v1, p0, Lcom/android/settings/location/LocationSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/location/LocationSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v1, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 206
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lcom/android/settings/location/LocationSettings;->mValidListener:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/location/LocationSettings;->mValidListener:Z
 
     .line 208
     :cond_1
-    invoke-super {p0}, Lcom/android/settings/location/LocationSettingsBase;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/location/LocationSettingsBase;->onPause()V
 
     .line 209
     return-void
@@ -1238,25 +1238,25 @@
 
     .prologue
     .line 186
-    invoke-super {p0}, Lcom/android/settings/location/LocationSettingsBase;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/location/LocationSettingsBase;->onResume()V
 
     .line 187
-    invoke-direct {p0}, Lcom/android/settings/location/LocationSettings;->createPreferenceHierarchy()Landroid/preference/PreferenceScreen;
+    invoke-direct {p0}, Lcom/android/settings_ex/location/LocationSettings;->createPreferenceHierarchy()Landroid/preference/PreferenceScreen;
 
     .line 188
-    iget-boolean v0, p0, Lcom/android/settings/location/LocationSettings;->mValidListener:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/location/LocationSettings;->mValidListener:Z
 
     if-nez v0, :cond_0
 
     .line 189
-    iget-object v0, p0, Lcom/android/settings/location/LocationSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/location/LocationSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 190
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/location/LocationSettings;->mValidListener:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/location/LocationSettings;->mValidListener:Z
 
     .line 192
     :cond_0
@@ -1288,11 +1288,11 @@
     if-eqz v4, :cond_0
 
     .line 461
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/location/LocationSettings;->showVzwLocationConsentDialog(Landroid/content/Context;)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/location/LocationSettings;->showVzwLocationConsentDialog(Landroid/content/Context;)V
 
     .line 502
     :goto_0
@@ -1302,7 +1302,7 @@
     :cond_0
     const-string v4, "DCM"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v5
 
@@ -1315,7 +1315,7 @@
     .line 466
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1323,7 +1323,7 @@
 
     .line 467
     .local v1, "builder":Landroid/app/AlertDialog$Builder;
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -1336,7 +1336,7 @@
     invoke-virtual {v1, v4}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     .line 468
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -1352,7 +1352,7 @@
     invoke-virtual {v1, v6}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
     .line 470
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1366,14 +1366,14 @@
 
     move-result-object v4
 
-    new-instance v5, Lcom/android/settings/location/LocationSettings$3;
+    new-instance v5, Lcom/android/settings_ex/location/LocationSettings$3;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/location/LocationSettings$3;-><init>(Lcom/android/settings/location/LocationSettings;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/location/LocationSettings$3;-><init>(Lcom/android/settings_ex/location/LocationSettings;)V
 
     invoke-virtual {v1, v4, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 476
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -1383,9 +1383,9 @@
 
     move-result-object v4
 
-    new-instance v5, Lcom/android/settings/location/LocationSettings$4;
+    new-instance v5, Lcom/android/settings_ex/location/LocationSettings$4;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/location/LocationSettings$4;-><init>(Lcom/android/settings/location/LocationSettings;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/location/LocationSettings$4;-><init>(Lcom/android/settings_ex/location/LocationSettings;)V
 
     invoke-virtual {v1, v4, v5}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1406,7 +1406,7 @@
     :cond_1
     const/4 v4, 0x3
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/location/LocationSettings;->setLocationMode(I)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/location/LocationSettings;->setLocationMode(I)V
 
     goto :goto_0
 
@@ -1426,7 +1426,7 @@
 
     const-string v4, "THL"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v5
 
@@ -1437,7 +1437,7 @@
     if-eqz v4, :cond_3
 
     .line 491
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1454,7 +1454,7 @@
     if-ne v3, v4, :cond_3
 
     .line 493
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1480,14 +1480,14 @@
     invoke-virtual {v2, v4, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 496
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
     invoke-virtual {v4, v2}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 497
-    invoke-virtual {p0}, Lcom/android/settings/location/LocationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/LocationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1503,7 +1503,7 @@
     .end local v2    # "wifiCall":Landroid/content/Intent;
     .end local v3    # "wifiCallState":I
     :cond_3
-    invoke-virtual {p0, v6}, Lcom/android/settings/location/LocationSettings;->setLocationMode(I)V
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/location/LocationSettings;->setLocationMode(I)V
 
     goto/16 :goto_0
 .end method

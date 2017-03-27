@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;
+.class public Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;
 .super Landroid/view/View;
 .source "FingerprintLocationAnimationView.java"
 
@@ -48,24 +48,24 @@
 
     invoke-direct {v2}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v2, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mDotPaint:Landroid/graphics/Paint;
+    iput-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mDotPaint:Landroid/graphics/Paint;
 
     .line 51
     new-instance v2, Landroid/graphics/Paint;
 
     invoke-direct {v2}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v2, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mPulsePaint:Landroid/graphics/Paint;
+    iput-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mPulsePaint:Landroid/graphics/Paint;
 
     .line 173
-    new-instance v2, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView$5;
+    new-instance v2, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView$5;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView$5;-><init>(Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView$5;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;)V
 
-    iput-object v2, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mStartPhaseRunnable:Ljava/lang/Runnable;
+    iput-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mStartPhaseRunnable:Ljava/lang/Runnable;
 
     .line 58
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -75,10 +75,10 @@
 
     move-result v2
 
-    iput v2, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mDotRadius:I
+    iput v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mDotRadius:I
 
     .line 59
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -88,10 +88,10 @@
 
     move-result v2
 
-    iput v2, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mMaxPulseRadius:I
+    iput v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mMaxPulseRadius:I
 
     .line 60
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -101,10 +101,10 @@
 
     move-result v2
 
-    iput v2, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mFractionCenterX:F
+    iput v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mFractionCenterX:F
 
     .line 62
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -114,7 +114,7 @@
 
     move-result v2
 
-    iput v2, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mFractionCenterY:F
+    iput v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mFractionCenterY:F
 
     .line 64
     new-instance v1, Landroid/util/TypedValue;
@@ -132,7 +132,7 @@
     invoke-virtual {v2, v3, v1, v5}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
     .line 66
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -146,22 +146,22 @@
 
     .line 67
     .local v0, "color":I
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mDotPaint:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mDotPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v2, v5}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     .line 68
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mPulsePaint:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mPulsePaint:Landroid/graphics/Paint;
 
     invoke-virtual {v2, v5}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     .line 69
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mDotPaint:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mDotPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v2, v0}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 70
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mPulsePaint:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mPulsePaint:Landroid/graphics/Paint;
 
     invoke-virtual {v2, v0}, Landroid/graphics/Paint;->setColor(I)V
 
@@ -170,84 +170,84 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mLinearOutSlowInInterpolator:Landroid/view/animation/Interpolator;
+    iput-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mLinearOutSlowInInterpolator:Landroid/view/animation/Interpolator;
 
     .line 73
     invoke-static {p1, v6}, Landroid/view/animation/AnimationUtils;->loadInterpolator(Landroid/content/Context;I)Landroid/view/animation/Interpolator;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mFastOutSlowInInterpolator:Landroid/view/animation/Interpolator;
+    iput-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mFastOutSlowInInterpolator:Landroid/view/animation/Interpolator;
 
     .line 75
     return-void
 .end method
 
-.method static synthetic access$002(Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;F)F
+.method static synthetic access$002(Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;F)F
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;
     .param p1, "x1"    # F
 
     .prologue
     .line 37
-    iput p1, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mPulseRadius:F
+    iput p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mPulseRadius:F
 
     return p1
 .end method
 
-.method static synthetic access$102(Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;Landroid/animation/ValueAnimator;)Landroid/animation/ValueAnimator;
+.method static synthetic access$102(Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;Landroid/animation/ValueAnimator;)Landroid/animation/ValueAnimator;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;
     .param p1, "x1"    # Landroid/animation/ValueAnimator;
 
     .prologue
     .line 37
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mRadiusAnimator:Landroid/animation/ValueAnimator;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mRadiusAnimator:Landroid/animation/ValueAnimator;
 
     return-object p1
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;)Ljava/lang/Runnable;
+.method static synthetic access$200(Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;)Ljava/lang/Runnable;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;
 
     .prologue
     .line 37
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mStartPhaseRunnable:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mStartPhaseRunnable:Ljava/lang/Runnable;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;)Landroid/graphics/Paint;
+.method static synthetic access$300(Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;)Landroid/graphics/Paint;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;
 
     .prologue
     .line 37
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mPulsePaint:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mPulsePaint:Landroid/graphics/Paint;
 
     return-object v0
 .end method
 
-.method static synthetic access$402(Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;Landroid/animation/ValueAnimator;)Landroid/animation/ValueAnimator;
+.method static synthetic access$402(Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;Landroid/animation/ValueAnimator;)Landroid/animation/ValueAnimator;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;
     .param p1, "x1"    # Landroid/animation/ValueAnimator;
 
     .prologue
     .line 37
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mAlphaAnimator:Landroid/animation/ValueAnimator;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mAlphaAnimator:Landroid/animation/ValueAnimator;
 
     return-object p1
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;)V
+.method static synthetic access$500(Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;
 
     .prologue
     .line 37
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->startPhase()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->startPhase()V
 
     return-void
 .end method
@@ -258,19 +258,19 @@
 
     .prologue
     .line 84
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->getCenterX()F
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->getCenterX()F
 
     move-result v0
 
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->getCenterY()F
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->getCenterY()F
 
     move-result v1
 
-    iget v2, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mDotRadius:I
+    iget v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mDotRadius:I
 
     int-to-float v2, v2
 
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mDotPaint:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mDotPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
@@ -284,17 +284,17 @@
 
     .prologue
     .line 88
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->getCenterX()F
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->getCenterX()F
 
     move-result v0
 
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->getCenterY()F
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->getCenterY()F
 
     move-result v1
 
-    iget v2, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mPulseRadius:F
+    iget v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mPulseRadius:F
 
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mPulsePaint:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mPulsePaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
@@ -307,13 +307,13 @@
 
     .prologue
     .line 92
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->getWidth()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->getWidth()I
 
     move-result v0
 
     int-to-float v0, v0
 
-    iget v1, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mFractionCenterX:F
+    iget v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mFractionCenterX:F
 
     mul-float/2addr v0, v1
 
@@ -325,13 +325,13 @@
 
     .prologue
     .line 96
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->getHeight()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->getHeight()I
 
     move-result v0
 
     int-to-float v0, v0
 
-    iget v1, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mFractionCenterY:F
+    iget v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mFractionCenterY:F
 
     mul-float/2addr v0, v1
 
@@ -343,7 +343,7 @@
 
     .prologue
     .line 151
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mPulsePaint:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mPulsePaint:Landroid/graphics/Paint;
 
     const/16 v2, 0x26
 
@@ -362,16 +362,16 @@
 
     .line 153
     .local v0, "animator":Landroid/animation/ValueAnimator;
-    new-instance v1, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView$3;
+    new-instance v1, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView$3;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView$3;-><init>(Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView$3;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     .line 160
-    new-instance v1, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView$4;
+    new-instance v1, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView$4;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView$4;-><init>(Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView$4;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -381,7 +381,7 @@
     invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     .line 167
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mFastOutSlowInInterpolator:Landroid/view/animation/Interpolator;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mFastOutSlowInInterpolator:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
@@ -394,7 +394,7 @@
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
     .line 170
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mAlphaAnimator:Landroid/animation/ValueAnimator;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mAlphaAnimator:Landroid/animation/ValueAnimator;
 
     .line 171
     return-void
@@ -412,10 +412,10 @@
 
     .prologue
     .line 114
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->startRadiusAnimation()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->startRadiusAnimation()V
 
     .line 115
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->startAlphaAnimation()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->startAlphaAnimation()V
 
     .line 116
     return-void
@@ -438,7 +438,7 @@
 
     const/4 v2, 0x1
 
-    iget v3, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mMaxPulseRadius:I
+    iget v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mMaxPulseRadius:I
 
     int-to-float v3, v3
 
@@ -450,16 +450,16 @@
 
     .line 120
     .local v0, "animator":Landroid/animation/ValueAnimator;
-    new-instance v1, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView$1;
+    new-instance v1, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView$1;-><init>(Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView$1;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     .line 127
-    new-instance v1, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView$2;
+    new-instance v1, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView$2;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView$2;-><init>(Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView$2;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -469,7 +469,7 @@
     invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     .line 145
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mLinearOutSlowInInterpolator:Landroid/view/animation/Interpolator;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mLinearOutSlowInInterpolator:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
@@ -477,7 +477,7 @@
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
     .line 147
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mRadiusAnimator:Landroid/animation/ValueAnimator;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mRadiusAnimator:Landroid/animation/ValueAnimator;
 
     .line 148
     return-void
@@ -491,10 +491,10 @@
 
     .prologue
     .line 79
-    invoke-direct {p0, p1}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->drawPulse(Landroid/graphics/Canvas;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->drawPulse(Landroid/graphics/Canvas;)V
 
     .line 80
-    invoke-direct {p0, p1}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->drawDot(Landroid/graphics/Canvas;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->drawDot(Landroid/graphics/Canvas;)V
 
     .line 81
     return-void
@@ -505,7 +505,7 @@
 
     .prologue
     .line 100
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->startPhase()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->startPhase()V
 
     .line 101
     return-void
@@ -516,28 +516,28 @@
 
     .prologue
     .line 104
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mStartPhaseRunnable:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mStartPhaseRunnable:Ljava/lang/Runnable;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     .line 105
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mRadiusAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mRadiusAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v0, :cond_0
 
     .line 106
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mRadiusAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mRadiusAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
     .line 108
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mAlphaAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mAlphaAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v0, :cond_1
 
     .line 109
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mAlphaAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mAlphaAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 

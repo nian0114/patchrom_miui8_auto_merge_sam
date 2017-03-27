@@ -1,4 +1,4 @@
-.class Lcom/android/settings/bluetooth/BluetoothSettings$5;
+.class Lcom/android/settings_ex/bluetooth/BluetoothSettings$5;
 .super Ljava/lang/Object;
 .source "BluetoothSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/bluetooth/BluetoothSettings;->ShowChinaPermissionPopUp()V
+    value = Lcom/android/settings_ex/bluetooth/BluetoothSettings;->ShowChinaPermissionPopUp()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/bluetooth/BluetoothSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/bluetooth/BluetoothSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/bluetooth/BluetoothSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/bluetooth/BluetoothSettings;)V
     .locals 0
 
     .prologue
     .line 997
-    iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothSettings$5;->this$0:Lcom/android/settings/bluetooth/BluetoothSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/bluetooth/BluetoothSettings$5;->this$0:Lcom/android/settings_ex/bluetooth/BluetoothSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,9 +56,9 @@
     if-ne p2, v2, :cond_1
 
     .line 1005
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothSettings$5;->this$0:Lcom/android/settings/bluetooth/BluetoothSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothSettings$5;->this$0:Lcom/android/settings_ex/bluetooth/BluetoothSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/bluetooth/BluetoothSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/bluetooth/BluetoothSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -78,9 +78,9 @@
 
     .line 1009
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothSettings$5;->this$0:Lcom/android/settings/bluetooth/BluetoothSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothSettings$5;->this$0:Lcom/android/settings_ex/bluetooth/BluetoothSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/bluetooth/BluetoothSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/bluetooth/BluetoothSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/dashboard/DashboardSummary$2;
+.class Lcom/android/settings_ex/dashboard/DashboardSummary$2;
 .super Landroid/database/ContentObserver;
 .source "DashboardSummary.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/dashboard/DashboardSummary;
+    value = Lcom/android/settings_ex/dashboard/DashboardSummary;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/dashboard/DashboardSummary;
+.field final synthetic this$0:Lcom/android/settings_ex/dashboard/DashboardSummary;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/dashboard/DashboardSummary;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/dashboard/DashboardSummary;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 103
-    iput-object p1, p0, Lcom/android/settings/dashboard/DashboardSummary$2;->this$0:Lcom/android/settings/dashboard/DashboardSummary;
+    iput-object p1, p0, Lcom/android/settings_ex/dashboard/DashboardSummary$2;->this$0:Lcom/android/settings_ex/dashboard/DashboardSummary;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -40,14 +40,14 @@
 
     .prologue
     .line 106
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummary$2;->this$0:Lcom/android/settings/dashboard/DashboardSummary;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummary$2;->this$0:Lcom/android/settings_ex/dashboard/DashboardSummary;
 
-    invoke-virtual {v0}, Lcom/android/settings/dashboard/DashboardSummary;->redrawFavorite()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/dashboard/DashboardSummary;->redrawFavorite()V
 
     .line 107
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummary$2;->this$0:Lcom/android/settings/dashboard/DashboardSummary;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummary$2;->this$0:Lcom/android/settings_ex/dashboard/DashboardSummary;
 
-    invoke-virtual {v0}, Lcom/android/settings/dashboard/DashboardSummary;->redrawDashboard()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/dashboard/DashboardSummary;->redrawDashboard()V
 
     .line 108
     return-void

@@ -1,14 +1,14 @@
-.class Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;
+.class Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;
 .super Ljava/lang/Object;
 .source "ToggleScreenMagnificationPreferenceFragment.java"
 
 # interfaces
-.implements Lcom/android/settings/widget/ToggleSwitch$OnBeforeCheckedChangeListener;
+.implements Lcom/android/settings_ex/widget/ToggleSwitch$OnBeforeCheckedChangeListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->onInstallSwitchBarToggleSwitch()V
+    value = Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->onInstallSwitchBarToggleSwitch()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)V
     .locals 0
 
     .prologue
     .line 61
-    iput-object p1, p0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,9 +36,9 @@
 
 
 # virtual methods
-.method public onBeforeCheckedChanged(Lcom/android/settings/widget/ToggleSwitch;Z)Z
+.method public onBeforeCheckedChanged(Lcom/android/settings_ex/widget/ToggleSwitch;Z)Z
     .locals 17
-    .param p1, "toggleSwitch"    # Lcom/android/settings/widget/ToggleSwitch;
+    .param p1, "toggleSwitch"    # Lcom/android/settings_ex/widget/ToggleSwitch;
     .param p2, "checked"    # Z
 
     .prologue
@@ -81,11 +81,11 @@
     .local v3, "interactionControl":Z
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
     const v12, 0x7f0e0922
 
-    invoke-virtual {v11, v12}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {v11, v12}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -93,7 +93,7 @@
     .local v5, "name":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -101,9 +101,9 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v13, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    invoke-virtual {v13}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v13}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v13
 
@@ -135,8 +135,8 @@
 
     move-result-object v12
 
-    # setter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
-    invoke-static {v11, v12}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$002(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
+    # setter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
+    invoke-static {v11, v12}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$002(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
 
     .line 75
     const/4 v11, 0x1
@@ -161,7 +161,7 @@
     .line 77
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -169,10 +169,10 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v13, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # getter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
-    invoke-static {v13}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$000(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
+    invoke-static {v13}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$000(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Ljava/lang/String;
 
     move-result-object v13
 
@@ -188,9 +188,9 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v13, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    invoke-virtual {v13}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v13}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v13
 
@@ -208,30 +208,30 @@
 
     move-result-object v12
 
-    # setter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
-    invoke-static {v11, v12}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$002(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
+    # setter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
+    invoke-static {v11, v12}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$002(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
 
     .line 78
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v12, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # getter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->option_flag:I
-    invoke-static {v12}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$100(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)I
+    # getter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->option_flag:I
+    invoke-static {v12}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$100(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)I
 
     move-result v12
 
     add-int/lit8 v12, v12, 0x1
 
-    # setter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->option_flag:I
-    invoke-static {v11, v12}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$102(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;I)I
+    # setter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->option_flag:I
+    invoke-static {v11, v12}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$102(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;I)I
 
     .line 79
-    invoke-static {}, Lcom/android/settings/Utils;->isAutoAirViewSupported()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isAutoAirViewSupported()Z
 
     move-result v11
 
@@ -240,10 +240,10 @@
     .line 80
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # invokes: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v11}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$200(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v11}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$200(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
 
     move-result-object v11
 
@@ -277,26 +277,26 @@
     .line 93
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v12, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # getter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->option_flag:I
-    invoke-static {v12}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$100(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)I
+    # getter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->option_flag:I
+    invoke-static {v12}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$100(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)I
 
     move-result v12
 
     add-int/lit8 v12, v12, 0x4
 
-    # setter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->option_flag:I
-    invoke-static {v11, v12}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$102(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;I)I
+    # setter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->option_flag:I
+    invoke-static {v11, v12}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$102(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;I)I
 
     .line 94
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -304,10 +304,10 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v13, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # getter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
-    invoke-static {v13}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$000(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
+    invoke-static {v13}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$000(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Ljava/lang/String;
 
     move-result-object v13
 
@@ -323,9 +323,9 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v13, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    invoke-virtual {v13}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v13}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v13
 
@@ -343,13 +343,13 @@
 
     move-result-object v12
 
-    # setter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
-    invoke-static {v11, v12}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$002(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
+    # setter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
+    invoke-static {v11, v12}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$002(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
 
     .line 95
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -357,10 +357,10 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v13, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # getter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
-    invoke-static {v13}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$000(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
+    invoke-static {v13}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$000(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Ljava/lang/String;
 
     move-result-object v13
 
@@ -376,9 +376,9 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v13, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    invoke-virtual {v13}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v13}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v13
 
@@ -396,17 +396,17 @@
 
     move-result-object v12
 
-    # setter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
-    invoke-static {v11, v12}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$002(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
+    # setter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
+    invoke-static {v11, v12}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$002(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
 
     .line 96
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    iget-object v11, v11, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->context:Landroid/content/Context;
+    iget-object v11, v11, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->context:Landroid/content/Context;
 
-    invoke-static {v11}, Lcom/android/settings/Utils;->isSupportPenUsp10(Landroid/content/Context;)Z
+    invoke-static {v11}, Lcom/android/settings_ex/Utils;->isSupportPenUsp10(Landroid/content/Context;)Z
 
     move-result v11
 
@@ -415,10 +415,10 @@
     .line 97
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # invokes: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v11}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$500(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v11}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$500(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
 
     move-result-object v11
 
@@ -439,10 +439,10 @@
     :goto_1
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # invokes: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v11}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$600(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v11}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$600(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
 
     move-result-object v11
 
@@ -463,10 +463,10 @@
     :goto_2
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # invokes: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v11}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$700(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v11}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$700(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
 
     move-result-object v11
 
@@ -482,10 +482,10 @@
 
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # invokes: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v11}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$800(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v11}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$800(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
 
     move-result-object v11
 
@@ -506,9 +506,9 @@
     :goto_3
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    iget-object v11, v11, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->context:Landroid/content/Context;
+    iget-object v11, v11, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->context:Landroid/content/Context;
 
     invoke-virtual {v11}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -525,10 +525,10 @@
     .line 104
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # invokes: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v11}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$900(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v11}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$900(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
 
     move-result-object v11
 
@@ -548,7 +548,7 @@
     :goto_4
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -556,10 +556,10 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v13, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # getter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
-    invoke-static {v13}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$000(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
+    invoke-static {v13}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$000(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Ljava/lang/String;
 
     move-result-object v13
 
@@ -575,9 +575,9 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v13, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    invoke-virtual {v13}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v13}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v13
 
@@ -595,13 +595,13 @@
 
     move-result-object v12
 
-    # setter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
-    invoke-static {v11, v12}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$002(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
+    # setter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
+    invoke-static {v11, v12}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$002(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
 
     .line 108
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -609,10 +609,10 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v13, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # getter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
-    invoke-static {v13}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$000(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
+    invoke-static {v13}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$000(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Ljava/lang/String;
 
     move-result-object v13
 
@@ -628,9 +628,9 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v13, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    invoke-virtual {v13}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v13}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v13
 
@@ -648,16 +648,16 @@
 
     move-result-object v12
 
-    # setter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
-    invoke-static {v11, v12}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$002(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
+    # setter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
+    invoke-static {v11, v12}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$002(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
 
     .line 117
     :goto_5
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    iget-object v11, v11, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->context:Landroid/content/Context;
+    iget-object v11, v11, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->context:Landroid/content/Context;
 
     const-string v12, "com.sec.feature.overlaymagnifier"
 
@@ -670,26 +670,26 @@
     .line 118
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v12, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # getter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->option_flag:I
-    invoke-static {v12}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$100(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)I
+    # getter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->option_flag:I
+    invoke-static {v12}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$100(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)I
 
     move-result v12
 
     add-int/lit8 v12, v12, 0x8
 
-    # setter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->option_flag:I
-    invoke-static {v11, v12}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$102(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;I)I
+    # setter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->option_flag:I
+    invoke-static {v11, v12}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$102(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;I)I
 
     .line 119
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -697,10 +697,10 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v13, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # getter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
-    invoke-static {v13}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$000(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
+    invoke-static {v13}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$000(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Ljava/lang/String;
 
     move-result-object v13
 
@@ -716,9 +716,9 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v13, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    invoke-virtual {v13}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v13}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v13
 
@@ -736,16 +736,16 @@
 
     move-result-object v12
 
-    # setter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
-    invoke-static {v11, v12}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$002(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
+    # setter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
+    invoke-static {v11, v12}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$002(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
 
     .line 120
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # invokes: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v11}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$1000(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v11}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$1000(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
 
     move-result-object v11
 
@@ -766,13 +766,13 @@
     :goto_6
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    iget-object v11, v11, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->context:Landroid/content/Context;
+    iget-object v11, v11, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->context:Landroid/content/Context;
 
     const-string v12, "com.samsung.android.universalswitch"
 
-    invoke-static {v11, v12}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v11, v12}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v11
 
@@ -781,7 +781,7 @@
     .line 124
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -789,10 +789,10 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v13, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # getter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
-    invoke-static {v13}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$000(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
+    invoke-static {v13}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$000(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Ljava/lang/String;
 
     move-result-object v13
 
@@ -808,9 +808,9 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v13, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    invoke-virtual {v13}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v13}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v13
 
@@ -828,16 +828,16 @@
 
     move-result-object v12
 
-    # setter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
-    invoke-static {v11, v12}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$002(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
+    # setter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
+    invoke-static {v11, v12}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$002(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
 
     .line 125
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # invokes: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v11}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$1100(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v11}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$1100(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
 
     move-result-object v11
 
@@ -858,13 +858,13 @@
     :goto_7
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    iget-object v11, v11, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->context:Landroid/content/Context;
+    iget-object v11, v11, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->context:Landroid/content/Context;
 
     const-string v12, "com.samsung.android.app.accesscontrol"
 
-    invoke-static {v11, v12}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v11, v12}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v11
 
@@ -873,7 +873,7 @@
     .line 128
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -881,10 +881,10 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v13, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # getter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
-    invoke-static {v13}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$000(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
+    invoke-static {v13}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$000(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Ljava/lang/String;
 
     move-result-object v13
 
@@ -900,9 +900,9 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v13, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    invoke-virtual {v13}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v13}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v13
 
@@ -920,16 +920,16 @@
 
     move-result-object v12
 
-    # setter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
-    invoke-static {v11, v12}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$002(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
+    # setter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
+    invoke-static {v11, v12}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$002(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
 
     .line 129
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # invokes: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v11}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$1200(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v11}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$1200(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
 
     move-result-object v11
 
@@ -970,12 +970,12 @@
     :cond_7
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
     const/4 v12, 0x1
 
-    # invokes: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->showDialog(I)V
-    invoke-static {v11, v12}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$1300(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;I)V
+    # invokes: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->showDialog(I)V
+    invoke-static {v11, v12}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$1300(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;I)V
 
     .line 147
     :goto_9
@@ -993,10 +993,10 @@
     :cond_9
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # invokes: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v11}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$300(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v11}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$300(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
 
     move-result-object v11
 
@@ -1050,26 +1050,26 @@
     .line 86
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v12, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # getter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->option_flag:I
-    invoke-static {v12}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$100(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)I
+    # getter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->option_flag:I
+    invoke-static {v12}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$100(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)I
 
     move-result v12
 
     add-int/lit8 v12, v12, 0x2
 
-    # setter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->option_flag:I
-    invoke-static {v11, v12}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$102(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;I)I
+    # setter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->option_flag:I
+    invoke-static {v11, v12}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$102(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;I)I
 
     .line 87
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -1077,10 +1077,10 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v13, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # getter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
-    invoke-static {v13}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$000(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
+    invoke-static {v13}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$000(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Ljava/lang/String;
 
     move-result-object v13
 
@@ -1096,9 +1096,9 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v13, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    invoke-virtual {v13}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v13}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v13
 
@@ -1116,16 +1116,16 @@
 
     move-result-object v12
 
-    # setter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
-    invoke-static {v11, v12}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$002(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
+    # setter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
+    invoke-static {v11, v12}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$002(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
 
     .line 88
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # invokes: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v11}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$400(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v11}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$400(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
 
     move-result-object v11
 
@@ -1177,7 +1177,7 @@
     :cond_11
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -1185,10 +1185,10 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v13, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # getter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
-    invoke-static {v13}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$000(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
+    invoke-static {v13}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$000(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Ljava/lang/String;
 
     move-result-object v13
 
@@ -1204,9 +1204,9 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v13, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    invoke-virtual {v13}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v13}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v13
 
@@ -1224,8 +1224,8 @@
 
     move-result-object v12
 
-    # setter for: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
-    invoke-static {v11, v12}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$002(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
+    # setter for: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->dialog_content:Ljava/lang/String;
+    invoke-static {v11, v12}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$002(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
 
     goto/16 :goto_5
 
@@ -1249,7 +1249,7 @@
 
     .line 135
     :cond_15
-    invoke-virtual/range {p1 .. p2}, Lcom/android/settings/widget/ToggleSwitch;->setCheckedInternal(Z)V
+    invoke-virtual/range {p1 .. p2}, Lcom/android/settings_ex/widget/ToggleSwitch;->setCheckedInternal(Z)V
 
     .line 136
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
@@ -1267,10 +1267,10 @@
     .line 137
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # invokes: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v11}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$1400(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v11}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$1400(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
 
     move-result-object v11
 
@@ -1284,9 +1284,9 @@
     :cond_16
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    invoke-virtual {v11}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {v11}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v11
 
@@ -1299,17 +1299,17 @@
     .line 140
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v12, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    iget-object v12, v12, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->mPreferenceKey:Ljava/lang/String;
+    iget-object v12, v12, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->mPreferenceKey:Ljava/lang/String;
 
     move/from16 v0, p2
 
-    invoke-virtual {v11, v12, v0}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->onPreferenceToggled(Ljava/lang/String;Z)V
+    invoke-virtual {v11, v12, v0}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->onPreferenceToggled(Ljava/lang/String;Z)V
 
     goto/16 :goto_9
 
@@ -1319,14 +1319,14 @@
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v11}, Lcom/android/settings/widget/ToggleSwitch;->setCheckedInternal(Z)V
+    invoke-virtual {v0, v11}, Lcom/android/settings_ex/widget/ToggleSwitch;->setCheckedInternal(Z)V
 
     .line 144
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    invoke-virtual {v11}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {v11}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v11
 
@@ -1339,17 +1339,17 @@
     .line 145
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v11, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v12, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    iget-object v12, v12, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->mPreferenceKey:Ljava/lang/String;
+    iget-object v12, v12, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->mPreferenceKey:Ljava/lang/String;
 
     const/4 v13, 0x0
 
-    invoke-virtual {v11, v12, v13}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->onPreferenceToggled(Ljava/lang/String;Z)V
+    invoke-virtual {v11, v12, v13}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->onPreferenceToggled(Ljava/lang/String;Z)V
 
     goto/16 :goto_9
 .end method

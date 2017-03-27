@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;
+.class public Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;
 .super Ljava/lang/Object;
 .source "MirrorLinkAppDetail.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;
+    value = Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -38,7 +38,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 117
-    iput-object p1, p0, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;->mAppName:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;->mAppName:Ljava/lang/String;
 
     .line 118
     return-void

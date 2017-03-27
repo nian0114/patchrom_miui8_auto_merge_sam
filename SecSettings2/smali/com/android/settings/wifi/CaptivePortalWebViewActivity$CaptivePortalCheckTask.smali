@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;
+.class Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;
 .super Landroid/os/AsyncTask;
 .source "CaptivePortalWebViewActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/CaptivePortalWebViewActivity;
+    value = Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,35 +30,35 @@
 
 .field private isWiFiConnAvailable:Z
 
-.field final synthetic this$0:Lcom/android/settings/wifi/CaptivePortalWebViewActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity;
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/settings/wifi/CaptivePortalWebViewActivity;)V
+.method private constructor <init>(Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity;)V
     .locals 1
 
     .prologue
     .line 40
-    iput-object p1, p0, Lcom/android/settings/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->this$0:Lcom/android/settings/wifi/CaptivePortalWebViewActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->this$0:Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
     .line 42
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->isWiFiConnAvailable:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->isWiFiConnAvailable:Z
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/wifi/CaptivePortalWebViewActivity;Lcom/android/settings/wifi/CaptivePortalWebViewActivity$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity;Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/wifi/CaptivePortalWebViewActivity;
-    .param p2, "x1"    # Lcom/android/settings/wifi/CaptivePortalWebViewActivity$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity;
+    .param p2, "x1"    # Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity$1;
 
     .prologue
     .line 40
-    invoke-direct {p0, p1}, Lcom/android/settings/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;-><init>(Lcom/android/settings/wifi/CaptivePortalWebViewActivity;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;-><init>(Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity;)V
 
     return-void
 .end method
@@ -74,7 +74,7 @@
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "x0":[Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
 
     move-result-object v0
 
@@ -87,27 +87,27 @@
 
     .prologue
     .line 66
-    iget-object v0, p0, Lcom/android/settings/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->this$0:Lcom/android/settings/wifi/CaptivePortalWebViewActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->this$0:Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity;
 
-    iget-object v0, v0, Lcom/android/settings/wifi/CaptivePortalWebViewActivity;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiConnectivityUtils;->isWiFiConnAvailable(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->isWiFiConnAvailable(Landroid/content/Context;)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->isWiFiConnAvailable:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->isWiFiConnAvailable:Z
 
     .line 67
-    iget-boolean v0, p0, Lcom/android/settings/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->isWiFiConnAvailable:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->isWiFiConnAvailable:Z
 
     if-eqz v0, :cond_0
 
     .line 68
-    invoke-static {}, Lcom/android/settings/wifi/WifiConnectivityUtils;->isCaptivePortalNetwork()Z
+    invoke-static {}, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->isCaptivePortalNetwork()Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->isCaptive:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->isCaptive:Z
 
     .line 70
     :cond_0
@@ -125,7 +125,7 @@
     check-cast p1, Ljava/lang/Void;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->onPostExecute(Ljava/lang/Void;)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->onPostExecute(Ljava/lang/Void;)V
 
     return-void
 .end method
@@ -136,7 +136,7 @@
 
     .prologue
     .line 46
-    iget-boolean v0, p0, Lcom/android/settings/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->isWiFiConnAvailable:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->isWiFiConnAvailable:Z
 
     if-nez v0, :cond_0
 
@@ -148,16 +148,16 @@
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 48
-    iget-object v0, p0, Lcom/android/settings/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->this$0:Lcom/android/settings/wifi/CaptivePortalWebViewActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->this$0:Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/wifi/CaptivePortalWebViewActivity;->setResult(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity;->setResult(I)V
 
     .line 49
-    iget-object v0, p0, Lcom/android/settings/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->this$0:Lcom/android/settings/wifi/CaptivePortalWebViewActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->this$0:Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/CaptivePortalWebViewActivity;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity;->finish()V
 
     .line 58
     :goto_0
@@ -165,7 +165,7 @@
 
     .line 51
     :cond_0
-    iget-boolean v0, p0, Lcom/android/settings/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->isCaptive:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->isCaptive:Z
 
     if-eqz v0, :cond_1
 
@@ -187,16 +187,16 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 55
-    iget-object v0, p0, Lcom/android/settings/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->this$0:Lcom/android/settings/wifi/CaptivePortalWebViewActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->this$0:Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity;
 
     const/4 v1, -0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/wifi/CaptivePortalWebViewActivity;->setResult(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity;->setResult(I)V
 
     .line 56
-    iget-object v0, p0, Lcom/android/settings/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->this$0:Lcom/android/settings/wifi/CaptivePortalWebViewActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity$CaptivePortalCheckTask;->this$0:Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/CaptivePortalWebViewActivity;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/wifi/CaptivePortalWebViewActivity;->finish()V
 
     goto :goto_0
 .end method

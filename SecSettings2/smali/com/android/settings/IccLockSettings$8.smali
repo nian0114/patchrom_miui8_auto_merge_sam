@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/IccLockSettings$8;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/IccLockSettings$8;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "IccLockSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/IccLockSettings;
+    value = Lcom/android/settings_ex/IccLockSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 1044
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -50,20 +50,20 @@
 
     .line 1065
     .local v0, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticModel()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 1066
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticLGTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticLGTModel()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticWIFIModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticWIFIModel()Z
 
     move-result v1
 
@@ -124,7 +124,7 @@
     iput-object v1, v0, Landroid/provider/SearchIndexableResource;->intentTargetClass:Ljava/lang/String;
 
     .line 1052
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticModel()Z
 
     move-result v1
 

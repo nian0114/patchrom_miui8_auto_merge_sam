@@ -1,4 +1,4 @@
-.class Lcom/android/settings/KnoxSetLockFingerprintPassword$4;
+.class Lcom/android/settings_ex/KnoxSetLockFingerprintPassword$4;
 .super Ljava/lang/Object;
 .source "KnoxSetLockFingerprintPassword.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/KnoxSetLockFingerprintPassword;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/KnoxSetLockFingerprintPassword;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/KnoxSetLockFingerprintPassword;
+.field final synthetic this$0:Lcom/android/settings_ex/KnoxSetLockFingerprintPassword;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/KnoxSetLockFingerprintPassword;)V
+.method constructor <init>(Lcom/android/settings_ex/KnoxSetLockFingerprintPassword;)V
     .locals 0
 
     .prologue
     .line 264
-    iput-object p1, p0, Lcom/android/settings/KnoxSetLockFingerprintPassword$4;->this$0:Lcom/android/settings/KnoxSetLockFingerprintPassword;
+    iput-object p1, p0, Lcom/android/settings_ex/KnoxSetLockFingerprintPassword$4;->this$0:Lcom/android/settings_ex/KnoxSetLockFingerprintPassword;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,20 +43,20 @@
 
     .prologue
     .line 268
-    iget-object v0, p0, Lcom/android/settings/KnoxSetLockFingerprintPassword$4;->this$0:Lcom/android/settings/KnoxSetLockFingerprintPassword;
+    iget-object v0, p0, Lcom/android/settings_ex/KnoxSetLockFingerprintPassword$4;->this$0:Lcom/android/settings_ex/KnoxSetLockFingerprintPassword;
 
-    # getter for: Lcom/android/settings/KnoxSetLockFingerprintPassword;->mIsValidEntry:Z
-    invoke-static {v0}, Lcom/android/settings/KnoxSetLockFingerprintPassword;->access$000(Lcom/android/settings/KnoxSetLockFingerprintPassword;)Z
+    # getter for: Lcom/android/settings_ex/KnoxSetLockFingerprintPassword;->mIsValidEntry:Z
+    invoke-static {v0}, Lcom/android/settings_ex/KnoxSetLockFingerprintPassword;->access$000(Lcom/android/settings_ex/KnoxSetLockFingerprintPassword;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 269
-    iget-object v0, p0, Lcom/android/settings/KnoxSetLockFingerprintPassword$4;->this$0:Lcom/android/settings/KnoxSetLockFingerprintPassword;
+    iget-object v0, p0, Lcom/android/settings_ex/KnoxSetLockFingerprintPassword$4;->this$0:Lcom/android/settings_ex/KnoxSetLockFingerprintPassword;
 
-    # getter for: Lcom/android/settings/KnoxSetLockFingerprintPassword;->mHeading:Landroid/widget/TextView;
-    invoke-static {v0}, Lcom/android/settings/KnoxSetLockFingerprintPassword;->access$100(Lcom/android/settings/KnoxSetLockFingerprintPassword;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/KnoxSetLockFingerprintPassword;->mHeading:Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/android/settings_ex/KnoxSetLockFingerprintPassword;->access$100(Lcom/android/settings_ex/KnoxSetLockFingerprintPassword;)Landroid/widget/TextView;
 
     move-result-object v0
 

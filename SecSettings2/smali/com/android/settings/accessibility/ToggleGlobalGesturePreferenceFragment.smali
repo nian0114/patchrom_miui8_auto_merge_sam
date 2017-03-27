@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/accessibility/ToggleGlobalGesturePreferenceFragment;
-.super Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;
+.class public Lcom/android/settings_ex/accessibility/ToggleGlobalGesturePreferenceFragment;
+.super Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment;
 .source "ToggleGlobalGesturePreferenceFragment.java"
 
 
@@ -9,7 +9,7 @@
 
     .prologue
     .line 25
-    invoke-direct {p0}, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment;-><init>()V
 
     return-void
 .end method
@@ -31,16 +31,16 @@
 
     .prologue
     .line 35
-    invoke-super {p0}, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;->onInstallSwitchBarToggleSwitch()V
+    invoke-super {p0}, Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment;->onInstallSwitchBarToggleSwitch()V
 
     .line 36
-    iget-object v0, p0, Lcom/android/settings/accessibility/ToggleGlobalGesturePreferenceFragment;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/ToggleGlobalGesturePreferenceFragment;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
-    new-instance v1, Lcom/android/settings/accessibility/ToggleGlobalGesturePreferenceFragment$1;
+    new-instance v1, Lcom/android/settings_ex/accessibility/ToggleGlobalGesturePreferenceFragment$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/accessibility/ToggleGlobalGesturePreferenceFragment$1;-><init>(Lcom/android/settings/accessibility/ToggleGlobalGesturePreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/accessibility/ToggleGlobalGesturePreferenceFragment$1;-><init>(Lcom/android/settings_ex/accessibility/ToggleGlobalGesturePreferenceFragment;)V
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings_ex/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
 
     .line 45
     return-void
@@ -53,7 +53,7 @@
 
     .prologue
     .line 29
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/ToggleGlobalGesturePreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/ToggleGlobalGesturePreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/SettingsPreferenceFragment$2;
+.class Lcom/android/settings_ex/SettingsPreferenceFragment$2;
 .super Ljava/lang/Object;
 .source "SettingsPreferenceFragment.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    value = Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/SettingsPreferenceFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/SettingsPreferenceFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/SettingsPreferenceFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/SettingsPreferenceFragment;)V
     .locals 0
 
     .prologue
     .line 282
-    iput-object p1, p0, Lcom/android/settings/SettingsPreferenceFragment$2;->this$0:Lcom/android/settings/SettingsPreferenceFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/SettingsPreferenceFragment$2;->this$0:Lcom/android/settings_ex/SettingsPreferenceFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +41,9 @@
 
     .prologue
     .line 285
-    iget-object v0, p0, Lcom/android/settings/SettingsPreferenceFragment$2;->this$0:Lcom/android/settings/SettingsPreferenceFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/SettingsPreferenceFragment$2;->this$0:Lcom/android/settings_ex/SettingsPreferenceFragment;
 
-    invoke-virtual {v0}, Lcom/android/settings/SettingsPreferenceFragment;->buildPreferenceForCOM()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->buildPreferenceForCOM()V
 
     .line 286
     return-void

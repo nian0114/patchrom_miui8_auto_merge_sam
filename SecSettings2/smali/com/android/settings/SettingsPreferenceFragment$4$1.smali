@@ -1,4 +1,4 @@
-.class Lcom/android/settings/SettingsPreferenceFragment$4$1;
+.class Lcom/android/settings_ex/SettingsPreferenceFragment$4$1;
 .super Ljava/lang/Object;
 .source "SettingsPreferenceFragment.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/SettingsPreferenceFragment$4;->run()V
+    value = Lcom/android/settings_ex/SettingsPreferenceFragment$4;->run()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/SettingsPreferenceFragment$4;
+.field final synthetic this$1:Lcom/android/settings_ex/SettingsPreferenceFragment$4;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/SettingsPreferenceFragment$4;)V
+.method constructor <init>(Lcom/android/settings_ex/SettingsPreferenceFragment$4;)V
     .locals 0
 
     .prologue
     .line 576
-    iput-object p1, p0, Lcom/android/settings/SettingsPreferenceFragment$4$1;->this$1:Lcom/android/settings/SettingsPreferenceFragment$4;
+    iput-object p1, p0, Lcom/android/settings_ex/SettingsPreferenceFragment$4$1;->this$1:Lcom/android/settings_ex/SettingsPreferenceFragment$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,13 +41,13 @@
 
     .prologue
     .line 579
-    iget-object v5, p0, Lcom/android/settings/SettingsPreferenceFragment$4$1;->this$1:Lcom/android/settings/SettingsPreferenceFragment$4;
+    iget-object v5, p0, Lcom/android/settings_ex/SettingsPreferenceFragment$4$1;->this$1:Lcom/android/settings_ex/SettingsPreferenceFragment$4;
 
-    iget v5, v5, Lcom/android/settings/SettingsPreferenceFragment$4;->val$position:I
+    iget v5, v5, Lcom/android/settings_ex/SettingsPreferenceFragment$4;->val$position:I
 
-    iget-object v6, p0, Lcom/android/settings/SettingsPreferenceFragment$4$1;->this$1:Lcom/android/settings/SettingsPreferenceFragment$4;
+    iget-object v6, p0, Lcom/android/settings_ex/SettingsPreferenceFragment$4$1;->this$1:Lcom/android/settings_ex/SettingsPreferenceFragment$4;
 
-    iget-object v6, v6, Lcom/android/settings/SettingsPreferenceFragment$4;->val$listView:Landroid/widget/ListView;
+    iget-object v6, v6, Lcom/android/settings_ex/SettingsPreferenceFragment$4;->val$listView:Landroid/widget/ListView;
 
     invoke-virtual {v6}, Landroid/widget/ListView;->getFirstVisiblePosition()I
 
@@ -57,12 +57,12 @@
 
     .line 580
     .local v3, "index":I
-    iget-object v5, p0, Lcom/android/settings/SettingsPreferenceFragment$4$1;->this$1:Lcom/android/settings/SettingsPreferenceFragment$4;
+    iget-object v5, p0, Lcom/android/settings_ex/SettingsPreferenceFragment$4$1;->this$1:Lcom/android/settings_ex/SettingsPreferenceFragment$4;
 
-    iget-object v5, v5, Lcom/android/settings/SettingsPreferenceFragment$4;->this$0:Lcom/android/settings/SettingsPreferenceFragment;
+    iget-object v5, v5, Lcom/android/settings_ex/SettingsPreferenceFragment$4;->this$0:Lcom/android/settings_ex/SettingsPreferenceFragment;
 
-    # getter for: Lcom/android/settings/SettingsPreferenceFragment;->mPreferenceHighlighted:Z
-    invoke-static {v5}, Lcom/android/settings/SettingsPreferenceFragment;->access$100(Lcom/android/settings/SettingsPreferenceFragment;)Z
+    # getter for: Lcom/android/settings_ex/SettingsPreferenceFragment;->mPreferenceHighlighted:Z
+    invoke-static {v5}, Lcom/android/settings_ex/SettingsPreferenceFragment;->access$100(Lcom/android/settings_ex/SettingsPreferenceFragment;)Z
 
     move-result v5
 
@@ -70,9 +70,9 @@
 
     if-ltz v3, :cond_0
 
-    iget-object v5, p0, Lcom/android/settings/SettingsPreferenceFragment$4$1;->this$1:Lcom/android/settings/SettingsPreferenceFragment$4;
+    iget-object v5, p0, Lcom/android/settings_ex/SettingsPreferenceFragment$4$1;->this$1:Lcom/android/settings_ex/SettingsPreferenceFragment$4;
 
-    iget-object v5, v5, Lcom/android/settings/SettingsPreferenceFragment$4;->val$listView:Landroid/widget/ListView;
+    iget-object v5, v5, Lcom/android/settings_ex/SettingsPreferenceFragment$4;->val$listView:Landroid/widget/ListView;
 
     invoke-virtual {v5}, Landroid/widget/ListView;->getChildCount()I
 
@@ -81,9 +81,9 @@
     if-ge v3, v5, :cond_0
 
     .line 581
-    iget-object v5, p0, Lcom/android/settings/SettingsPreferenceFragment$4$1;->this$1:Lcom/android/settings/SettingsPreferenceFragment$4;
+    iget-object v5, p0, Lcom/android/settings_ex/SettingsPreferenceFragment$4$1;->this$1:Lcom/android/settings_ex/SettingsPreferenceFragment$4;
 
-    iget-object v5, v5, Lcom/android/settings/SettingsPreferenceFragment$4;->val$listView:Landroid/widget/ListView;
+    iget-object v5, v5, Lcom/android/settings_ex/SettingsPreferenceFragment$4;->val$listView:Landroid/widget/ListView;
 
     invoke-virtual {v5}, Landroid/widget/ListView;->getHeaderViewsCount()I
 
@@ -91,9 +91,9 @@
 
     .line 582
     .local v2, "headerCnt":I
-    iget-object v5, p0, Lcom/android/settings/SettingsPreferenceFragment$4$1;->this$1:Lcom/android/settings/SettingsPreferenceFragment$4;
+    iget-object v5, p0, Lcom/android/settings_ex/SettingsPreferenceFragment$4$1;->this$1:Lcom/android/settings_ex/SettingsPreferenceFragment$4;
 
-    iget-object v5, v5, Lcom/android/settings/SettingsPreferenceFragment$4;->val$listView:Landroid/widget/ListView;
+    iget-object v5, v5, Lcom/android/settings_ex/SettingsPreferenceFragment$4;->val$listView:Landroid/widget/ListView;
 
     add-int v6, v3, v2
 
@@ -132,9 +132,9 @@
 
     .line 586
     .local v1, "centerY":I
-    iget-object v5, p0, Lcom/android/settings/SettingsPreferenceFragment$4$1;->this$1:Lcom/android/settings/SettingsPreferenceFragment$4;
+    iget-object v5, p0, Lcom/android/settings_ex/SettingsPreferenceFragment$4$1;->this$1:Lcom/android/settings_ex/SettingsPreferenceFragment$4;
 
-    iget-object v5, v5, Lcom/android/settings/SettingsPreferenceFragment$4;->val$highlight:Landroid/graphics/drawable/Drawable;
+    iget-object v5, v5, Lcom/android/settings_ex/SettingsPreferenceFragment$4;->val$highlight:Landroid/graphics/drawable/Drawable;
 
     int-to-float v6, v0
 
@@ -153,14 +153,14 @@
     invoke-virtual {v4, v5}, Landroid/view/View;->setPressed(Z)V
 
     .line 589
-    iget-object v5, p0, Lcom/android/settings/SettingsPreferenceFragment$4$1;->this$1:Lcom/android/settings/SettingsPreferenceFragment$4;
+    iget-object v5, p0, Lcom/android/settings_ex/SettingsPreferenceFragment$4$1;->this$1:Lcom/android/settings_ex/SettingsPreferenceFragment$4;
 
-    iget-object v5, v5, Lcom/android/settings/SettingsPreferenceFragment$4;->this$0:Lcom/android/settings/SettingsPreferenceFragment;
+    iget-object v5, v5, Lcom/android/settings_ex/SettingsPreferenceFragment$4;->this$0:Lcom/android/settings_ex/SettingsPreferenceFragment;
 
     const/4 v6, 0x0
 
-    # setter for: Lcom/android/settings/SettingsPreferenceFragment;->mPreferenceKey:Ljava/lang/String;
-    invoke-static {v5, v6}, Lcom/android/settings/SettingsPreferenceFragment;->access$002(Lcom/android/settings/SettingsPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
+    # setter for: Lcom/android/settings_ex/SettingsPreferenceFragment;->mPreferenceKey:Ljava/lang/String;
+    invoke-static {v5, v6}, Lcom/android/settings_ex/SettingsPreferenceFragment;->access$002(Lcom/android/settings_ex/SettingsPreferenceFragment;Ljava/lang/String;)Ljava/lang/String;
 
     goto :goto_0
 .end method

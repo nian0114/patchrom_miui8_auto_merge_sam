@@ -1,11 +1,11 @@
-.class Lcom/android/settings/smartbonding/SmartBondingEnabler$3;
+.class Lcom/android/settings_ex/smartbonding/SmartBondingEnabler$3;
 .super Landroid/database/ContentObserver;
 .source "SmartBondingEnabler.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/smartbonding/SmartBondingEnabler;
+    value = Lcom/android/settings_ex/smartbonding/SmartBondingEnabler;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/smartbonding/SmartBondingEnabler;
+.field final synthetic this$0:Lcom/android/settings_ex/smartbonding/SmartBondingEnabler;
 
 
 # virtual methods
@@ -27,17 +27,17 @@
     const/4 v0, 0x0
 
     .line 71
-    iget-object v1, p0, Lcom/android/settings/smartbonding/SmartBondingEnabler$3;->this$0:Lcom/android/settings/smartbonding/SmartBondingEnabler;
+    iget-object v1, p0, Lcom/android/settings_ex/smartbonding/SmartBondingEnabler$3;->this$0:Lcom/android/settings_ex/smartbonding/SmartBondingEnabler;
 
-    # getter for: Lcom/android/settings/smartbonding/SmartBondingEnabler;->mSwitch:Landroid/widget/Switch;
-    invoke-static {v1}, Lcom/android/settings/smartbonding/SmartBondingEnabler;->access$100(Lcom/android/settings/smartbonding/SmartBondingEnabler;)Landroid/widget/Switch;
+    # getter for: Lcom/android/settings_ex/smartbonding/SmartBondingEnabler;->mSwitch:Landroid/widget/Switch;
+    invoke-static {v1}, Lcom/android/settings_ex/smartbonding/SmartBondingEnabler;->access$100(Lcom/android/settings_ex/smartbonding/SmartBondingEnabler;)Landroid/widget/Switch;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/smartbonding/SmartBondingEnabler$3;->this$0:Lcom/android/settings/smartbonding/SmartBondingEnabler;
+    iget-object v2, p0, Lcom/android/settings_ex/smartbonding/SmartBondingEnabler$3;->this$0:Lcom/android/settings_ex/smartbonding/SmartBondingEnabler;
 
-    # getter for: Lcom/android/settings/smartbonding/SmartBondingEnabler;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcom/android/settings/smartbonding/SmartBondingEnabler;->access$000(Lcom/android/settings/smartbonding/SmartBondingEnabler;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/smartbonding/SmartBondingEnabler;->mContext:Landroid/content/Context;
+    invoke-static {v2}, Lcom/android/settings_ex/smartbonding/SmartBondingEnabler;->access$000(Lcom/android/settings_ex/smartbonding/SmartBondingEnabler;)Landroid/content/Context;
 
     move-result-object v2
 

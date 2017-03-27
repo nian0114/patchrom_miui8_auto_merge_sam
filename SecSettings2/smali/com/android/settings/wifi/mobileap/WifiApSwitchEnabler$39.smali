@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler$39;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler$39;
 .super Ljava/lang/Object;
 .source "WifiApSwitchEnabler.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;->showFirstTimePoup()V
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;->showFirstTimePoup()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;)V
     .locals 0
 
     .prologue
     .line 1933
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler$39;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler$39;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,17 +46,17 @@
     const/4 v1, 0x0
 
     .line 1936
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler$39;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler$39;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;->mCb:Landroid/widget/CheckBox;
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;->access$1900(Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;)Landroid/widget/CheckBox;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;->mCb:Landroid/widget/CheckBox;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;->access$1900(Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;)Landroid/widget/CheckBox;
 
     move-result-object v3
 
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler$39;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler$39;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;->mCb:Landroid/widget/CheckBox;
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;->access$1900(Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;)Landroid/widget/CheckBox;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;->mCb:Landroid/widget/CheckBox;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;->access$1900(Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;)Landroid/widget/CheckBox;
 
     move-result-object v0
 
@@ -72,10 +72,10 @@
     invoke-virtual {v3, v0}, Landroid/widget/CheckBox;->setChecked(Z)V
 
     .line 1937
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler$39;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler$39;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;->mCb:Landroid/widget/CheckBox;
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;->access$1900(Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;)Landroid/widget/CheckBox;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;->mCb:Landroid/widget/CheckBox;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;->access$1900(Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;)Landroid/widget/CheckBox;
 
     move-result-object v0
 
@@ -86,10 +86,10 @@
     if-eqz v0, :cond_1
 
     .line 1938
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler$39;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler$39;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;
 
-    # setter for: Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;->nevershowagain:Z
-    invoke-static {v0, v2}, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;->access$2002(Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;Z)Z
+    # setter for: Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;->nevershowagain:Z
+    invoke-static {v0, v2}, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;->access$2002(Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;Z)Z
 
     .line 1941
     :goto_1
@@ -103,10 +103,10 @@
 
     .line 1940
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler$39;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler$39;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;
 
-    # setter for: Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;->nevershowagain:Z
-    invoke-static {v0, v1}, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;->access$2002(Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;Z)Z
+    # setter for: Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;->nevershowagain:Z
+    invoke-static {v0, v1}, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;->access$2002(Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;Z)Z
 
     goto :goto_1
 .end method

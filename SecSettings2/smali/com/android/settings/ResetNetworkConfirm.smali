@@ -1,13 +1,13 @@
-.class public Lcom/android/settings/ResetNetworkConfirm;
-.super Lcom/android/settings/InstrumentedFragment;
+.class public Lcom/android/settings_ex/ResetNetworkConfirm;
+.super Lcom/android/settings_ex/InstrumentedFragment;
 .source "ResetNetworkConfirm.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/ResetNetworkConfirm$RestoreApnProcessHandler;,
-        Lcom/android/settings/ResetNetworkConfirm$RestoreApnUiHandler;
+        Lcom/android/settings_ex/ResetNetworkConfirm$RestoreApnProcessHandler;,
+        Lcom/android/settings_ex/ResetNetworkConfirm$RestoreApnUiHandler;
     }
 .end annotation
 
@@ -39,9 +39,9 @@
 
 .field private mRemoveProgress:Ljava/lang/Runnable;
 
-.field private mRestoreApnProcessHandler:Lcom/android/settings/ResetNetworkConfirm$RestoreApnProcessHandler;
+.field private mRestoreApnProcessHandler:Lcom/android/settings_ex/ResetNetworkConfirm$RestoreApnProcessHandler;
 
-.field private mRestoreApnUiHandler:Lcom/android/settings/ResetNetworkConfirm$RestoreApnUiHandler;
+.field private mRestoreApnUiHandler:Lcom/android/settings_ex/ResetNetworkConfirm$RestoreApnUiHandler;
 
 .field private mRestoreDefaultApnThread:Landroid/os/HandlerThread;
 
@@ -62,7 +62,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/ResetNetworkConfirm;->DEFAULTAPN_URI:Landroid/net/Uri;
+    sput-object v0, Lcom/android/settings_ex/ResetNetworkConfirm;->DEFAULTAPN_URI:Landroid/net/Uri;
 
     return-void
 .end method
@@ -72,12 +72,12 @@
 
     .prologue
     .line 75
-    invoke-direct {p0}, Lcom/android/settings/InstrumentedFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/InstrumentedFragment;-><init>()V
 
     .line 78
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/ResetNetworkConfirm;->mSubId:I
+    iput v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mSubId:I
 
     .line 92
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -90,21 +90,21 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/ResetNetworkConfirm;->isATTReset:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->isATTReset:Z
 
     .line 115
-    new-instance v0, Lcom/android/settings/ResetNetworkConfirm$1;
+    new-instance v0, Lcom/android/settings_ex/ResetNetworkConfirm$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/ResetNetworkConfirm$1;-><init>(Lcom/android/settings/ResetNetworkConfirm;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/ResetNetworkConfirm$1;-><init>(Lcom/android/settings_ex/ResetNetworkConfirm;)V
 
-    iput-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->mNetworkResetReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mNetworkResetReceiver:Landroid/content/BroadcastReceiver;
 
     .line 147
-    new-instance v0, Lcom/android/settings/ResetNetworkConfirm$2;
+    new-instance v0, Lcom/android/settings_ex/ResetNetworkConfirm$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/ResetNetworkConfirm$2;-><init>(Lcom/android/settings/ResetNetworkConfirm;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/ResetNetworkConfirm$2;-><init>(Lcom/android/settings_ex/ResetNetworkConfirm;)V
 
-    iput-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->mFinalClickListener:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mFinalClickListener:Landroid/view/View$OnClickListener;
 
     .line 390
     return-void
@@ -115,7 +115,7 @@
 
     .prologue
     .line 329
-    invoke-virtual {p0}, Lcom/android/settings/ResetNetworkConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetNetworkConfirm;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -136,89 +136,89 @@
     .line 333
     const v1, 0x7f0e1352
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/ResetNetworkConfirm;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/ResetNetworkConfirm;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
     const v2, 0x7f0e1354
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/ResetNetworkConfirm;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/ResetNetworkConfirm;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
     const/16 v3, 0x65
 
-    invoke-direct {p0, v1, v2, v0, v3}, Lcom/android/settings/ResetNetworkConfirm;->queryPhonepassword(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {p0, v1, v2, v0, v3}, Lcom/android/settings_ex/ResetNetworkConfirm;->queryPhonepassword(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 336
     :cond_0
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/ResetNetworkConfirm;)Landroid/app/ProgressDialog;
+.method static synthetic access$000(Lcom/android/settings_ex/ResetNetworkConfirm;)Landroid/app/ProgressDialog;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ResetNetworkConfirm;
+    .param p0, "x0"    # Lcom/android/settings_ex/ResetNetworkConfirm;
 
     .prologue
     .line 75
-    iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->progressDialog:Landroid/app/ProgressDialog;
 
     return-object v0
 .end method
 
-.method static synthetic access$002(Lcom/android/settings/ResetNetworkConfirm;Landroid/app/ProgressDialog;)Landroid/app/ProgressDialog;
+.method static synthetic access$002(Lcom/android/settings_ex/ResetNetworkConfirm;Landroid/app/ProgressDialog;)Landroid/app/ProgressDialog;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ResetNetworkConfirm;
+    .param p0, "x0"    # Lcom/android/settings_ex/ResetNetworkConfirm;
     .param p1, "x1"    # Landroid/app/ProgressDialog;
 
     .prologue
     .line 75
-    iput-object p1, p0, Lcom/android/settings/ResetNetworkConfirm;->progressDialog:Landroid/app/ProgressDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->progressDialog:Landroid/app/ProgressDialog;
 
     return-object p1
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/ResetNetworkConfirm;)Z
+.method static synthetic access$100(Lcom/android/settings_ex/ResetNetworkConfirm;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ResetNetworkConfirm;
+    .param p0, "x0"    # Lcom/android/settings_ex/ResetNetworkConfirm;
 
     .prologue
     .line 75
-    iget-boolean v0, p0, Lcom/android/settings/ResetNetworkConfirm;->isFirstResume:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->isFirstResume:Z
 
     return v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/ResetNetworkConfirm;)Landroid/content/Context;
+.method static synthetic access$1000(Lcom/android/settings_ex/ResetNetworkConfirm;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ResetNetworkConfirm;
+    .param p0, "x0"    # Lcom/android/settings_ex/ResetNetworkConfirm;
 
     .prologue
     .line 75
-    iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$102(Lcom/android/settings/ResetNetworkConfirm;Z)Z
+.method static synthetic access$102(Lcom/android/settings_ex/ResetNetworkConfirm;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ResetNetworkConfirm;
+    .param p0, "x0"    # Lcom/android/settings_ex/ResetNetworkConfirm;
     .param p1, "x1"    # Z
 
     .prologue
     .line 75
-    iput-boolean p1, p0, Lcom/android/settings/ResetNetworkConfirm;->isFirstResume:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->isFirstResume:Z
 
     return p1
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/ResetNetworkConfirm;)I
+.method static synthetic access$1100(Lcom/android/settings_ex/ResetNetworkConfirm;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ResetNetworkConfirm;
+    .param p0, "x0"    # Lcom/android/settings_ex/ResetNetworkConfirm;
 
     .prologue
     .line 75
-    iget v0, p0, Lcom/android/settings/ResetNetworkConfirm;->mSubId:I
+    iget v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mSubId:I
 
     return v0
 .end method
@@ -228,108 +228,108 @@
 
     .prologue
     .line 75
-    sget-object v0, Lcom/android/settings/ResetNetworkConfirm;->DEFAULTAPN_URI:Landroid/net/Uri;
+    sget-object v0, Lcom/android/settings_ex/ResetNetworkConfirm;->DEFAULTAPN_URI:Landroid/net/Uri;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/ResetNetworkConfirm;)Z
+.method static synthetic access$200(Lcom/android/settings_ex/ResetNetworkConfirm;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ResetNetworkConfirm;
+    .param p0, "x0"    # Lcom/android/settings_ex/ResetNetworkConfirm;
 
     .prologue
     .line 75
-    iget-boolean v0, p0, Lcom/android/settings/ResetNetworkConfirm;->isWiFiEnabled:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->isWiFiEnabled:Z
 
     return v0
 .end method
 
-.method static synthetic access$202(Lcom/android/settings/ResetNetworkConfirm;Z)Z
+.method static synthetic access$202(Lcom/android/settings_ex/ResetNetworkConfirm;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ResetNetworkConfirm;
+    .param p0, "x0"    # Lcom/android/settings_ex/ResetNetworkConfirm;
     .param p1, "x1"    # Z
 
     .prologue
     .line 75
-    iput-boolean p1, p0, Lcom/android/settings/ResetNetworkConfirm;->isWiFiEnabled:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->isWiFiEnabled:Z
 
     return p1
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/ResetNetworkConfirm;)Ljava/lang/Runnable;
+.method static synthetic access$300(Lcom/android/settings_ex/ResetNetworkConfirm;)Ljava/lang/Runnable;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ResetNetworkConfirm;
+    .param p0, "x0"    # Lcom/android/settings_ex/ResetNetworkConfirm;
 
     .prologue
     .line 75
-    iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->mRemoveProgress:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mRemoveProgress:Ljava/lang/Runnable;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/ResetNetworkConfirm;)Landroid/os/Handler;
+.method static synthetic access$400(Lcom/android/settings_ex/ResetNetworkConfirm;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ResetNetworkConfirm;
+    .param p0, "x0"    # Lcom/android/settings_ex/ResetNetworkConfirm;
 
     .prologue
     .line 75
-    iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic access$502(Lcom/android/settings/ResetNetworkConfirm;Z)Z
+.method static synthetic access$502(Lcom/android/settings_ex/ResetNetworkConfirm;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ResetNetworkConfirm;
+    .param p0, "x0"    # Lcom/android/settings_ex/ResetNetworkConfirm;
     .param p1, "x1"    # Z
 
     .prologue
     .line 75
-    iput-boolean p1, p0, Lcom/android/settings/ResetNetworkConfirm;->DisableListner:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->DisableListner:Z
 
     return p1
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/ResetNetworkConfirm;)Z
+.method static synthetic access$600(Lcom/android/settings_ex/ResetNetworkConfirm;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ResetNetworkConfirm;
+    .param p0, "x0"    # Lcom/android/settings_ex/ResetNetworkConfirm;
 
     .prologue
     .line 75
-    iget-boolean v0, p0, Lcom/android/settings/ResetNetworkConfirm;->isATTReset:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->isATTReset:Z
 
     return v0
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/ResetNetworkConfirm;)Lcom/android/internal/widget/LockPatternUtils;
+.method static synthetic access$700(Lcom/android/settings_ex/ResetNetworkConfirm;)Lcom/android/internal/widget/LockPatternUtils;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ResetNetworkConfirm;
+    .param p0, "x0"    # Lcom/android/settings_ex/ResetNetworkConfirm;
 
     .prologue
     .line 75
-    iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     return-object v0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/ResetNetworkConfirm;)V
+.method static synthetic access$800(Lcom/android/settings_ex/ResetNetworkConfirm;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ResetNetworkConfirm;
+    .param p0, "x0"    # Lcom/android/settings_ex/ResetNetworkConfirm;
 
     .prologue
     .line 75
-    invoke-direct {p0}, Lcom/android/settings/ResetNetworkConfirm;->StartPassword()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ResetNetworkConfirm;->StartPassword()V
 
     return-void
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/ResetNetworkConfirm;)V
+.method static synthetic access$900(Lcom/android/settings_ex/ResetNetworkConfirm;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ResetNetworkConfirm;
+    .param p0, "x0"    # Lcom/android/settings_ex/ResetNetworkConfirm;
 
     .prologue
     .line 75
-    invoke-direct {p0}, Lcom/android/settings/ResetNetworkConfirm;->resetNetwork()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ResetNetworkConfirm;->resetNetwork()V
 
     return-void
 .end method
@@ -339,7 +339,7 @@
 
     .prologue
     .line 176
-    iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->mContentView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mContentView:Landroid/view/View;
 
     const v1, 0x7f0d0467
 
@@ -347,7 +347,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/ResetNetworkConfirm;->mFinalClickListener:Landroid/view/View$OnClickListener;
+    iget-object v1, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mFinalClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -360,11 +360,11 @@
 
     .prologue
     .line 318
-    iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->progressDialog:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->progressDialog:Landroid/app/ProgressDialog;
 
     .line 325
     :goto_0
@@ -374,39 +374,39 @@
     :cond_0
     new-instance v0, Landroid/app/ProgressDialog;
 
-    invoke-virtual {p0}, Lcom/android/settings/ResetNetworkConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetNetworkConfirm;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->progressDialog:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->progressDialog:Landroid/app/ProgressDialog;
 
     .line 320
-    iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->progressDialog:Landroid/app/ProgressDialog;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setIndeterminate(Z)V
 
     .line 321
-    iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->progressDialog:Landroid/app/ProgressDialog;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setCancelable(Z)V
 
     .line 322
-    iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->progressDialog:Landroid/app/ProgressDialog;
 
     const v1, 0x7f0e0fdd
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setTitle(I)V
 
     .line 323
-    iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->progressDialog:Landroid/app/ProgressDialog;
 
-    invoke-virtual {p0}, Lcom/android/settings/ResetNetworkConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetNetworkConfirm;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -419,7 +419,7 @@
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
     .line 325
-    iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->progressDialog:Landroid/app/ProgressDialog;
 
     goto :goto_0
 .end method
@@ -461,7 +461,7 @@
     invoke-virtual {v0, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 344
-    invoke-virtual {p0, v0, p4}, Lcom/android/settings/ResetNetworkConfirm;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v0, p4}, Lcom/android/settings_ex/ResetNetworkConfirm;->startActivityForResult(Landroid/content/Intent;I)V
 
     .line 345
     return-void
@@ -472,7 +472,7 @@
 
     .prologue
     .line 229
-    iget-boolean v2, p0, Lcom/android/settings/ResetNetworkConfirm;->DisableListner:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->DisableListner:Z
 
     if-eqz v2, :cond_0
 
@@ -482,32 +482,32 @@
 
     .line 231
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/ResetNetworkConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetNetworkConfirm;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/ResetNetworkConfirm;->mContext:Landroid/content/Context;
+    iput-object v2, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mContext:Landroid/content/Context;
 
     .line 233
-    iget-boolean v2, p0, Lcom/android/settings/ResetNetworkConfirm;->isATTReset:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->isATTReset:Z
 
     if-eqz v2, :cond_1
 
     .line 234
     const/4 v2, 0x1
 
-    iput-boolean v2, p0, Lcom/android/settings/ResetNetworkConfirm;->DisableListner:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->DisableListner:Z
 
     .line 235
     const/4 v2, 0x0
 
-    iput-boolean v2, p0, Lcom/android/settings/ResetNetworkConfirm;->isWiFiEnabled:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->isWiFiEnabled:Z
 
     .line 236
-    invoke-direct {p0}, Lcom/android/settings/ResetNetworkConfirm;->getProgressDialog()Landroid/app/ProgressDialog;
+    invoke-direct {p0}, Lcom/android/settings_ex/ResetNetworkConfirm;->getProgressDialog()Landroid/app/ProgressDialog;
 
     .line 237
-    iget-object v2, p0, Lcom/android/settings/ResetNetworkConfirm;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->progressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v2}, Landroid/app/ProgressDialog;->show()V
 
@@ -516,19 +516,19 @@
 
     invoke-direct {v2}, Landroid/os/Handler;-><init>()V
 
-    iput-object v2, p0, Lcom/android/settings/ResetNetworkConfirm;->mHandler:Landroid/os/Handler;
+    iput-object v2, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mHandler:Landroid/os/Handler;
 
     .line 239
-    new-instance v2, Lcom/android/settings/ResetNetworkConfirm$3;
+    new-instance v2, Lcom/android/settings_ex/ResetNetworkConfirm$3;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/ResetNetworkConfirm$3;-><init>(Lcom/android/settings/ResetNetworkConfirm;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/ResetNetworkConfirm$3;-><init>(Lcom/android/settings_ex/ResetNetworkConfirm;)V
 
-    iput-object v2, p0, Lcom/android/settings/ResetNetworkConfirm;->mRemoveProgress:Ljava/lang/Runnable;
+    iput-object v2, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mRemoveProgress:Ljava/lang/Runnable;
 
     .line 253
-    iget-object v2, p0, Lcom/android/settings/ResetNetworkConfirm;->mHandler:Landroid/os/Handler;
+    iget-object v2, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mHandler:Landroid/os/Handler;
 
-    iget-object v3, p0, Lcom/android/settings/ResetNetworkConfirm;->mRemoveProgress:Ljava/lang/Runnable;
+    iget-object v3, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mRemoveProgress:Ljava/lang/Runnable;
 
     const-wide/16 v4, 0x1388
 
@@ -543,14 +543,14 @@
 
     .line 257
     .local v0, "intent":Landroid/content/Intent;
-    invoke-virtual {p0}, Lcom/android/settings/ResetNetworkConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetNetworkConfirm;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     invoke-virtual {v2, v0}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 259
-    invoke-virtual {p0}, Lcom/android/settings/ResetNetworkConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetNetworkConfirm;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -567,15 +567,15 @@
 
     .line 265
     :goto_1
-    invoke-direct {p0}, Lcom/android/settings/ResetNetworkConfirm;->restoreDefaultApn()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/ResetNetworkConfirm;->restoreDefaultApn()Z
 
     .line 268
     .end local v0    # "intent":Landroid/content/Intent;
     .end local v1    # "mNfcAdapter":Landroid/nfc/NfcAdapter;
     :cond_1
-    new-instance v2, Lcom/android/settings/ResetNetworkConfirm$4;
+    new-instance v2, Lcom/android/settings_ex/ResetNetworkConfirm$4;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/ResetNetworkConfirm$4;-><init>(Lcom/android/settings/ResetNetworkConfirm;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/ResetNetworkConfirm$4;-><init>(Lcom/android/settings_ex/ResetNetworkConfirm;)V
 
     invoke-static {v2}, Landroid/os/AsyncTask;->execute(Ljava/lang/Runnable;)V
 
@@ -597,26 +597,26 @@
     const/4 v3, 0x1
 
     .line 362
-    iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->mRestoreApnUiHandler:Lcom/android/settings/ResetNetworkConfirm$RestoreApnUiHandler;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mRestoreApnUiHandler:Lcom/android/settings_ex/ResetNetworkConfirm$RestoreApnUiHandler;
 
     if-nez v0, :cond_0
 
     .line 363
-    new-instance v0, Lcom/android/settings/ResetNetworkConfirm$RestoreApnUiHandler;
+    new-instance v0, Lcom/android/settings_ex/ResetNetworkConfirm$RestoreApnUiHandler;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/ResetNetworkConfirm$RestoreApnUiHandler;-><init>(Lcom/android/settings/ResetNetworkConfirm;Lcom/android/settings/ResetNetworkConfirm$1;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/ResetNetworkConfirm$RestoreApnUiHandler;-><init>(Lcom/android/settings_ex/ResetNetworkConfirm;Lcom/android/settings_ex/ResetNetworkConfirm$1;)V
 
-    iput-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->mRestoreApnUiHandler:Lcom/android/settings/ResetNetworkConfirm$RestoreApnUiHandler;
+    iput-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mRestoreApnUiHandler:Lcom/android/settings_ex/ResetNetworkConfirm$RestoreApnUiHandler;
 
     .line 366
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->mRestoreApnProcessHandler:Lcom/android/settings/ResetNetworkConfirm$RestoreApnProcessHandler;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mRestoreApnProcessHandler:Lcom/android/settings_ex/ResetNetworkConfirm$RestoreApnProcessHandler;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->mRestoreDefaultApnThread:Landroid/os/HandlerThread;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mRestoreDefaultApnThread:Landroid/os/HandlerThread;
 
     if-nez v0, :cond_2
 
@@ -628,33 +628,33 @@
 
     invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->mRestoreDefaultApnThread:Landroid/os/HandlerThread;
+    iput-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mRestoreDefaultApnThread:Landroid/os/HandlerThread;
 
     .line 370
-    iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->mRestoreDefaultApnThread:Landroid/os/HandlerThread;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mRestoreDefaultApnThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
     .line 371
-    new-instance v0, Lcom/android/settings/ResetNetworkConfirm$RestoreApnProcessHandler;
+    new-instance v0, Lcom/android/settings_ex/ResetNetworkConfirm$RestoreApnProcessHandler;
 
-    iget-object v1, p0, Lcom/android/settings/ResetNetworkConfirm;->mRestoreDefaultApnThread:Landroid/os/HandlerThread;
+    iget-object v1, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mRestoreDefaultApnThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/ResetNetworkConfirm;->mRestoreApnUiHandler:Lcom/android/settings/ResetNetworkConfirm$RestoreApnUiHandler;
+    iget-object v2, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mRestoreApnUiHandler:Lcom/android/settings_ex/ResetNetworkConfirm$RestoreApnUiHandler;
 
-    invoke-direct {v0, p0, v1, v2}, Lcom/android/settings/ResetNetworkConfirm$RestoreApnProcessHandler;-><init>(Lcom/android/settings/ResetNetworkConfirm;Landroid/os/Looper;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1, v2}, Lcom/android/settings_ex/ResetNetworkConfirm$RestoreApnProcessHandler;-><init>(Lcom/android/settings_ex/ResetNetworkConfirm;Landroid/os/Looper;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->mRestoreApnProcessHandler:Lcom/android/settings/ResetNetworkConfirm$RestoreApnProcessHandler;
+    iput-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mRestoreApnProcessHandler:Lcom/android/settings_ex/ResetNetworkConfirm$RestoreApnProcessHandler;
 
     .line 375
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->mRestoreApnProcessHandler:Lcom/android/settings/ResetNetworkConfirm$RestoreApnProcessHandler;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mRestoreApnProcessHandler:Lcom/android/settings_ex/ResetNetworkConfirm$RestoreApnProcessHandler;
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/ResetNetworkConfirm$RestoreApnProcessHandler;->sendEmptyMessage(I)Z
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/ResetNetworkConfirm$RestoreApnProcessHandler;->sendEmptyMessage(I)Z
 
     .line 377
     return v3
@@ -680,7 +680,7 @@
 
     .prologue
     .line 350
-    invoke-super {p0, p1, p2, p3}, Lcom/android/settings/InstrumentedFragment;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings_ex/InstrumentedFragment;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 352
     const/16 v0, 0x65
@@ -688,7 +688,7 @@
     if-ne p1, v0, :cond_0
 
     .line 353
-    iget-boolean v0, p0, Lcom/android/settings/ResetNetworkConfirm;->isATTReset:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->isATTReset:Z
 
     if-eqz v0, :cond_0
 
@@ -698,7 +698,7 @@
     if-ne p2, v0, :cond_0
 
     .line 355
-    invoke-direct {p0}, Lcom/android/settings/ResetNetworkConfirm;->resetNetwork()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ResetNetworkConfirm;->resetNetwork()V
 
     .line 359
     :cond_0
@@ -711,10 +711,10 @@
 
     .prologue
     .line 194
-    invoke-super {p0, p1}, Lcom/android/settings/InstrumentedFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/InstrumentedFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 196
-    invoke-virtual {p0}, Lcom/android/settings/ResetNetworkConfirm;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetNetworkConfirm;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -731,19 +731,19 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/ResetNetworkConfirm;->mSubId:I
+    iput v1, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mSubId:I
 
     .line 202
     :cond_0
     new-instance v1, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/ResetNetworkConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetNetworkConfirm;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     invoke-direct {v1, v2}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/android/settings/ResetNetworkConfirm;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object v1, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 203
     return-void
@@ -759,7 +759,7 @@
     const/4 v2, 0x0
 
     .line 183
-    invoke-virtual {p0}, Lcom/android/settings/ResetNetworkConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetNetworkConfirm;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -794,13 +794,13 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->mContentView:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mContentView:Landroid/view/View;
 
     .line 188
-    invoke-direct {p0}, Lcom/android/settings/ResetNetworkConfirm;->establishFinalConfirmationState()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ResetNetworkConfirm;->establishFinalConfirmationState()V
 
     .line 189
-    iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->mContentView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mContentView:Landroid/view/View;
 
     goto :goto_0
 .end method
@@ -810,14 +810,14 @@
 
     .prologue
     .line 217
-    invoke-super {p0}, Lcom/android/settings/InstrumentedFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/InstrumentedFragment;->onPause()V
 
     .line 219
-    invoke-virtual {p0}, Lcom/android/settings/ResetNetworkConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetNetworkConfirm;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/ResetNetworkConfirm;->mNetworkResetReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mNetworkResetReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
@@ -830,7 +830,7 @@
 
     .prologue
     .line 207
-    invoke-super {p0}, Lcom/android/settings/InstrumentedFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/InstrumentedFragment;->onResume()V
 
     .line 209
     new-instance v0, Landroid/content/IntentFilter;
@@ -844,18 +844,18 @@
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 211
-    invoke-virtual {p0}, Lcom/android/settings/ResetNetworkConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetNetworkConfirm;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/ResetNetworkConfirm;->mNetworkResetReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->mNetworkResetReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 212
     const/4 v1, 0x1
 
-    iput-boolean v1, p0, Lcom/android/settings/ResetNetworkConfirm;->isFirstResume:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ResetNetworkConfirm;->isFirstResume:Z
 
     .line 213
     return-void

@@ -1,17 +1,17 @@
-.class public Lcom/android/settings/SecuritySettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/SecuritySettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "SecuritySettings.java"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnClickListener;
 .implements Landroid/preference/Preference$OnPreferenceChangeListener;
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/SecuritySettings$SecuritySearchIndexProvider;
+        Lcom/android/settings_ex/SecuritySettings$SecuritySearchIndexProvider;
     }
 .end annotation
 
@@ -19,7 +19,7 @@
 # static fields
 .field private static final MY_USER_ID:I
 
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 .field private static final SWITCH_PREFERENCE_KEYS:[Ljava/lang/String;
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field private mChooseLockSettingsHelper:Lcom/android/settings/ChooseLockSettingsHelper;
+.field private mChooseLockSettingsHelper:Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
 .field private mContext:Landroid/content/Context;
 
@@ -78,7 +78,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lcom/android/settings/SecuritySettings;->TRUST_AGENT_INTENT:Landroid/content/Intent;
+    sput-object v0, Lcom/android/settings_ex/SecuritySettings;->TRUST_AGENT_INTENT:Landroid/content/Intent;
 
     .line 117
     const/4 v0, 0x5
@@ -115,21 +115,21 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/android/settings/SecuritySettings;->SWITCH_PREFERENCE_KEYS:[Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/SecuritySettings;->SWITCH_PREFERENCE_KEYS:[Ljava/lang/String;
 
     .line 124
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
 
-    sput v0, Lcom/android/settings/SecuritySettings;->MY_USER_ID:I
+    sput v0, Lcom/android/settings_ex/SecuritySettings;->MY_USER_ID:I
 
     .line 772
-    new-instance v0, Lcom/android/settings/SecuritySettings$SecuritySearchIndexProvider;
+    new-instance v0, Lcom/android/settings_ex/SecuritySettings$SecuritySearchIndexProvider;
 
-    invoke-direct {v0}, Lcom/android/settings/SecuritySettings$SecuritySearchIndexProvider;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/SecuritySettings$SecuritySearchIndexProvider;-><init>()V
 
-    sput-object v0, Lcom/android/settings/SecuritySettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/SecuritySettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -139,7 +139,7 @@
 
     .prologue
     .line 81
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 775
     return-void
@@ -150,7 +150,7 @@
 
     .prologue
     .line 81
-    sget v0, Lcom/android/settings/SecuritySettings;->MY_USER_ID:I
+    sget v0, Lcom/android/settings_ex/SecuritySettings;->MY_USER_ID:I
 
     return v0
 .end method
@@ -162,7 +162,7 @@
 
     .prologue
     .line 81
-    invoke-static {p0, p1}, Lcom/android/settings/SecuritySettings;->getResIdForLockUnlockScreen(Landroid/content/Context;Lcom/android/internal/widget/LockPatternUtils;)I
+    invoke-static {p0, p1}, Lcom/android/settings_ex/SecuritySettings;->getResIdForLockUnlockScreen(Landroid/content/Context;Lcom/android/internal/widget/LockPatternUtils;)I
 
     move-result v0
 
@@ -177,7 +177,7 @@
 
     .prologue
     .line 81
-    invoke-static {p0, p1, p2}, Lcom/android/settings/SecuritySettings;->getActiveTrustAgents(Landroid/content/pm/PackageManager;Lcom/android/internal/widget/LockPatternUtils;Landroid/app/admin/DevicePolicyManager;)Ljava/util/ArrayList;
+    invoke-static {p0, p1, p2}, Lcom/android/settings_ex/SecuritySettings;->getActiveTrustAgents(Landroid/content/pm/PackageManager;Lcom/android/internal/widget/LockPatternUtils;Landroid/app/admin/DevicePolicyManager;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -192,9 +192,9 @@
     const/4 v9, 0x0
 
     .line 400
-    iget-object v6, p0, Lcom/android/settings/SecuritySettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v6, p0, Lcom/android/settings_ex/SecuritySettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    sget v7, Lcom/android/settings/SecuritySettings;->MY_USER_ID:I
+    sget v7, Lcom/android/settings_ex/SecuritySettings;->MY_USER_ID:I
 
     invoke-virtual {v6, v7}, Lcom/android/internal/widget/LockPatternUtils;->isSecure(I)Z
 
@@ -202,20 +202,20 @@
 
     .line 401
     .local v2, "hasSecurity":Z
-    invoke-virtual {p0}, Lcom/android/settings/SecuritySettings;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecuritySettings;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/SecuritySettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v7, p0, Lcom/android/settings_ex/SecuritySettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    iget-object v8, p0, Lcom/android/settings/SecuritySettings;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    iget-object v8, p0, Lcom/android/settings_ex/SecuritySettings;->mDPM:Landroid/app/admin/DevicePolicyManager;
 
-    invoke-static {v6, v7, v8}, Lcom/android/settings/SecuritySettings;->getActiveTrustAgents(Landroid/content/pm/PackageManager;Lcom/android/internal/widget/LockPatternUtils;Landroid/app/admin/DevicePolicyManager;)Ljava/util/ArrayList;
+    invoke-static {v6, v7, v8}, Lcom/android/settings_ex/SecuritySettings;->getActiveTrustAgents(Landroid/content/pm/PackageManager;Lcom/android/internal/widget/LockPatternUtils;Landroid/app/admin/DevicePolicyManager;)Ljava/util/ArrayList;
 
     move-result-object v1
 
     .line 403
-    .local v1, "agents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/settings/TrustAgentUtils$TrustAgentComponentInfo;>;"
+    .local v1, "agents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/settings_ex/TrustAgentUtils$TrustAgentComponentInfo;>;"
     const/4 v3, 0x0
 
     .local v3, "i":I
@@ -231,10 +231,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/TrustAgentUtils$TrustAgentComponentInfo;
+    check-cast v0, Lcom/android/settings_ex/TrustAgentUtils$TrustAgentComponentInfo;
 
     .line 405
-    .local v0, "agent":Lcom/android/settings/TrustAgentUtils$TrustAgentComponentInfo;
+    .local v0, "agent":Lcom/android/settings_ex/TrustAgentUtils$TrustAgentComponentInfo;
     new-instance v5, Landroid/preference/Preference;
 
     invoke-virtual {p1}, Landroid/preference/PreferenceGroup;->getContext()Landroid/content/Context;
@@ -250,12 +250,12 @@
     invoke-virtual {v5, v6}, Landroid/preference/Preference;->setKey(Ljava/lang/String;)V
 
     .line 408
-    iget-object v6, v0, Lcom/android/settings/TrustAgentUtils$TrustAgentComponentInfo;->title:Ljava/lang/String;
+    iget-object v6, v0, Lcom/android/settings_ex/TrustAgentUtils$TrustAgentComponentInfo;->title:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Landroid/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 409
-    iget-object v6, v0, Lcom/android/settings/TrustAgentUtils$TrustAgentComponentInfo;->summary:Ljava/lang/String;
+    iget-object v6, v0, Lcom/android/settings_ex/TrustAgentUtils$TrustAgentComponentInfo;->summary:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -266,7 +266,7 @@
 
     .line 412
     .local v4, "intent":Landroid/content/Intent;
-    iget-object v6, v0, Lcom/android/settings/TrustAgentUtils$TrustAgentComponentInfo;->componentName:Landroid/content/ComponentName;
+    iget-object v6, v0, Lcom/android/settings_ex/TrustAgentUtils$TrustAgentComponentInfo;->componentName:Landroid/content/ComponentName;
 
     invoke-virtual {v4, v6}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
@@ -282,7 +282,7 @@
     invoke-virtual {p1, v5}, Landroid/preference/PreferenceGroup;->addPreference(Landroid/preference/Preference;)Z
 
     .line 418
-    iget-boolean v6, v0, Lcom/android/settings/TrustAgentUtils$TrustAgentComponentInfo;->disabledByAdministrator:Z
+    iget-boolean v6, v0, Lcom/android/settings_ex/TrustAgentUtils$TrustAgentComponentInfo;->disabledByAdministrator:Z
 
     if-eqz v6, :cond_1
 
@@ -316,7 +316,7 @@
     goto :goto_1
 
     .line 426
-    .end local v0    # "agent":Lcom/android/settings/TrustAgentUtils$TrustAgentComponentInfo;
+    .end local v0    # "agent":Lcom/android/settings_ex/TrustAgentUtils$TrustAgentComponentInfo;
     .end local v4    # "intent":Landroid/content/Intent;
     .end local v5    # "trustAgentPreference":Landroid/preference/Preference;
     :cond_2
@@ -328,7 +328,7 @@
 
     .prologue
     .line 224
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/SecuritySettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/SecuritySettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v13
 
@@ -347,25 +347,25 @@
 
     move/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/SecuritySettings;->addPreferencesFromResource(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/SecuritySettings;->addPreferencesFromResource(I)V
 
     .line 229
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/SecuritySettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/SecuritySettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v13
 
     .line 232
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/SecuritySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/SecuritySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v19
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/SecuritySettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, v0, Lcom/android/settings_ex/SecuritySettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     move-object/from16 v20, v0
 
-    invoke-static/range {v19 .. v20}, Lcom/android/settings/SecuritySettings;->getResIdForLockUnlockScreen(Landroid/content/Context;Lcom/android/internal/widget/LockPatternUtils;)I
+    invoke-static/range {v19 .. v20}, Lcom/android/settings_ex/SecuritySettings;->getResIdForLockUnlockScreen(Landroid/content/Context;Lcom/android/internal/widget/LockPatternUtils;)I
 
     move-result v12
 
@@ -373,10 +373,10 @@
     .local v12, "resid":I
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v12}, Lcom/android/settings/SecuritySettings;->addPreferencesFromResource(I)V
+    invoke-virtual {v0, v12}, Lcom/android/settings_ex/SecuritySettings;->addPreferencesFromResource(I)V
 
     .line 236
-    sget v19, Lcom/android/settings/SecuritySettings;->MY_USER_ID:I
+    sget v19, Lcom/android/settings_ex/SecuritySettings;->MY_USER_ID:I
 
     if-nez v19, :cond_c
 
@@ -387,7 +387,7 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/SecuritySettings;->mIsPrimary:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/SecuritySettings;->mIsPrimary:Z
 
     .line 238
     const-string v19, "owner_info_settings"
@@ -396,7 +396,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/SecuritySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/SecuritySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v19
 
@@ -404,12 +404,12 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/SecuritySettings;->mOwnerInfoPref:Landroid/preference/Preference;
+    iput-object v0, v1, Lcom/android/settings_ex/SecuritySettings;->mOwnerInfoPref:Landroid/preference/Preference;
 
     .line 239
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/SecuritySettings;->mOwnerInfoPref:Landroid/preference/Preference;
+    iget-object v0, v0, Lcom/android/settings_ex/SecuritySettings;->mOwnerInfoPref:Landroid/preference/Preference;
 
     move-object/from16 v19, v0
 
@@ -418,17 +418,17 @@
     .line 240
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/SecuritySettings;->mOwnerInfoPref:Landroid/preference/Preference;
+    iget-object v0, v0, Lcom/android/settings_ex/SecuritySettings;->mOwnerInfoPref:Landroid/preference/Preference;
 
     move-object/from16 v19, v0
 
-    new-instance v20, Lcom/android/settings/SecuritySettings$1;
+    new-instance v20, Lcom/android/settings_ex/SecuritySettings$1;
 
     move-object/from16 v0, v20
 
     move-object/from16 v1, p0
 
-    invoke-direct {v0, v1}, Lcom/android/settings/SecuritySettings$1;-><init>(Lcom/android/settings/SecuritySettings;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/SecuritySettings$1;-><init>(Lcom/android/settings_ex/SecuritySettings;)V
 
     invoke-virtual/range {v19 .. v20}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -436,7 +436,7 @@
     :cond_1
     move-object/from16 v0, p0
 
-    iget-boolean v0, v0, Lcom/android/settings/SecuritySettings;->mIsPrimary:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/SecuritySettings;->mIsPrimary:Z
 
     move/from16 v19, v0
 
@@ -456,7 +456,7 @@
 
     move/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/SecuritySettings;->addPreferencesFromResource(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/SecuritySettings;->addPreferencesFromResource(I)V
 
     .line 261
     :cond_2
@@ -478,12 +478,12 @@
     .line 264
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v14}, Lcom/android/settings/SecuritySettings;->maybeAddFingerprintPreference(Landroid/preference/PreferenceGroup;)V
+    invoke-direct {v0, v14}, Lcom/android/settings_ex/SecuritySettings;->maybeAddFingerprintPreference(Landroid/preference/PreferenceGroup;)V
 
     .line 265
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v14}, Lcom/android/settings/SecuritySettings;->addTrustAgentSettings(Landroid/preference/PreferenceGroup;)V
+    invoke-direct {v0, v14}, Lcom/android/settings_ex/SecuritySettings;->addTrustAgentSettings(Landroid/preference/PreferenceGroup;)V
 
     .line 269
     :cond_3
@@ -501,22 +501,22 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
+    iput-object v0, v1, Lcom/android/settings_ex/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
 
     .line 270
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
 
     move-object/from16 v19, v0
 
     if-eqz v19, :cond_4
 
     .line 271
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/SecuritySettings;->setupLockAfterPreference()V
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/SecuritySettings;->setupLockAfterPreference()V
 
     .line 272
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/SecuritySettings;->updateLockAfterPreferenceSummary()V
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/SecuritySettings;->updateLockAfterPreferenceSummary()V
 
     .line 276
     :cond_4
@@ -534,7 +534,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/SecuritySettings;->mVisiblePattern:Landroid/preference/SwitchPreference;
+    iput-object v0, v1, Lcom/android/settings_ex/SecuritySettings;->mVisiblePattern:Landroid/preference/SwitchPreference;
 
     .line 279
     const-string v19, "power_button_instantly_locks"
@@ -551,7 +551,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/SecuritySettings;->mPowerButtonInstantlyLocks:Landroid/preference/SwitchPreference;
+    iput-object v0, v1, Lcom/android/settings_ex/SecuritySettings;->mPowerButtonInstantlyLocks:Landroid/preference/SwitchPreference;
 
     .line 281
     const-string v19, "trust_agent"
@@ -566,7 +566,7 @@
     .local v17, "trustAgentPreference":Landroid/preference/Preference;
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/SecuritySettings;->mPowerButtonInstantlyLocks:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/SecuritySettings;->mPowerButtonInstantlyLocks:Landroid/preference/SwitchPreference;
 
     move-object/from16 v19, v0
 
@@ -587,7 +587,7 @@
     .line 285
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/SecuritySettings;->mPowerButtonInstantlyLocks:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/SecuritySettings;->mPowerButtonInstantlyLocks:Landroid/preference/SwitchPreference;
 
     move-object/from16 v19, v0
 
@@ -615,7 +615,7 @@
 
     move-object/from16 v2, v21
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/SecuritySettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/SecuritySettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v20
 
@@ -629,7 +629,7 @@
 
     move/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/SecuritySettings;->addPreferencesFromResource(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/SecuritySettings;->addPreferencesFromResource(I)V
 
     .line 294
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -638,7 +638,7 @@
 
     .line 295
     .local v16, "tm":Landroid/telephony/TelephonyManager;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/SecuritySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/SecuritySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v19
 
@@ -660,13 +660,13 @@
     .local v4, "b":Landroid/os/PersistableBundle;
     move-object/from16 v0, p0
 
-    iget-boolean v0, v0, Lcom/android/settings/SecuritySettings;->mIsPrimary:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/SecuritySettings;->mIsPrimary:Z
 
     move/from16 v19, v0
 
     if-eqz v19, :cond_6
 
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/SecuritySettings;->isSimIccReady()Z
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/SecuritySettings;->isSimIccReady()Z
 
     move-result v19
 
@@ -698,7 +698,7 @@
 
     .line 305
     :goto_2
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/SecuritySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/SecuritySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v19
 
@@ -721,7 +721,7 @@
 
     move-result-object v19
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/SecuritySettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/SecuritySettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v20
 
@@ -749,7 +749,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/SecuritySettings;->mShowPassword:Landroid/preference/SwitchPreference;
+    iput-object v0, v1, Lcom/android/settings_ex/SecuritySettings;->mShowPassword:Landroid/preference/SwitchPreference;
 
     .line 313
     const-string v19, "credentials_reset"
@@ -764,10 +764,10 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/SecuritySettings;->mResetCredentials:Landroid/preference/Preference;
+    iput-object v0, v1, Lcom/android/settings_ex/SecuritySettings;->mResetCredentials:Landroid/preference/Preference;
 
     .line 316
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/SecuritySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/SecuritySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v19
 
@@ -789,7 +789,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/SecuritySettings;->mKeyStore:Landroid/security/KeyStore;
+    iput-object v0, v1, Lcom/android/settings_ex/SecuritySettings;->mKeyStore:Landroid/security/KeyStore;
 
     .line 318
     const-string v19, "no_config_credentials"
@@ -813,7 +813,7 @@
     .local v6, "credentialStorageType":Landroid/preference/Preference;
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/SecuritySettings;->mKeyStore:Landroid/security/KeyStore;
+    iget-object v0, v0, Lcom/android/settings_ex/SecuritySettings;->mKeyStore:Landroid/security/KeyStore;
 
     move-object/from16 v19, v0
 
@@ -852,7 +852,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/SecuritySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/SecuritySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v19
 
@@ -862,16 +862,16 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/SecuritySettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iput-object v0, v1, Lcom/android/settings_ex/SecuritySettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     .line 338
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/SecuritySettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/SecuritySettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     move-object/from16 v19, v0
 
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/SecuritySettings;->isNonMarketAppsAllowed()Z
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/SecuritySettings;->isNonMarketAppsAllowed()Z
 
     move-result v20
 
@@ -880,11 +880,11 @@
     .line 341
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/SecuritySettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/SecuritySettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     move-object/from16 v20, v0
 
-    sget v19, Lcom/android/settings/SecuritySettings;->MY_USER_ID:I
+    sget v19, Lcom/android/settings_ex/SecuritySettings;->MY_USER_ID:I
 
     invoke-virtual/range {v18 .. v19}, Landroid/os/UserManager;->getUserInfo(I)Landroid/content/pm/UserInfo;
 
@@ -926,7 +926,7 @@
     :cond_8
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/SecuritySettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/SecuritySettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     move-object/from16 v19, v0
 
@@ -965,11 +965,11 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/SecuritySettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, v0, Lcom/android/settings_ex/SecuritySettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     move-object/from16 v19, v0
 
-    sget v20, Lcom/android/settings/SecuritySettings;->MY_USER_ID:I
+    sget v20, Lcom/android/settings_ex/SecuritySettings;->MY_USER_ID:I
 
     invoke-virtual/range {v19 .. v20}, Lcom/android/internal/widget/LockPatternUtils;->isSecure(I)Z
 
@@ -994,15 +994,15 @@
     .line 361
     .end local v10    # "manageAgents":Landroid/preference/Preference;
     :cond_a
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/SecuritySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/SecuritySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v19
 
-    invoke-static/range {v19 .. v19}, Lcom/android/settings/search/Index;->getInstance(Landroid/content/Context;)Lcom/android/settings/search/Index;
+    invoke-static/range {v19 .. v19}, Lcom/android/settings_ex/search/Index;->getInstance(Landroid/content/Context;)Lcom/android/settings_ex/search/Index;
 
     move-result-object v19
 
-    const-class v20, Lcom/android/settings/SecuritySettings;
+    const-class v20, Lcom/android/settings_ex/SecuritySettings;
 
     invoke-virtual/range {v20 .. v20}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -1012,14 +1012,14 @@
 
     const/16 v22, 0x1
 
-    invoke-virtual/range {v19 .. v22}, Lcom/android/settings/search/Index;->updateFromClassNameResource(Ljava/lang/String;ZZ)V
+    invoke-virtual/range {v19 .. v22}, Lcom/android/settings_ex/search/Index;->updateFromClassNameResource(Ljava/lang/String;ZZ)V
 
     .line 364
     const/4 v9, 0x0
 
     .local v9, "i":I
     :goto_6
-    sget-object v19, Lcom/android/settings/SecuritySettings;->SWITCH_PREFERENCE_KEYS:[Ljava/lang/String;
+    sget-object v19, Lcom/android/settings_ex/SecuritySettings;->SWITCH_PREFERENCE_KEYS:[Ljava/lang/String;
 
     move-object/from16 v0, v19
 
@@ -1032,7 +1032,7 @@
     if-ge v9, v0, :cond_12
 
     .line 365
-    sget-object v19, Lcom/android/settings/SecuritySettings;->SWITCH_PREFERENCE_KEYS:[Ljava/lang/String;
+    sget-object v19, Lcom/android/settings_ex/SecuritySettings;->SWITCH_PREFERENCE_KEYS:[Ljava/lang/String;
 
     aget-object v19, v19, v9
 
@@ -1040,7 +1040,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/SecuritySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/SecuritySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v11
 
@@ -1082,7 +1082,7 @@
 
     move/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/SecuritySettings;->addPreferencesFromResource(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/SecuritySettings;->addPreferencesFromResource(I)V
 
     goto/16 :goto_1
 
@@ -1101,7 +1101,7 @@
 
     move-result-object v19
 
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/SecuritySettings;->isSimReady()Z
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/SecuritySettings;->isSimReady()Z
 
     move-result v20
 
@@ -1193,7 +1193,7 @@
 
     .prologue
     .line 588
-    iget-object v8, p0, Lcom/android/settings/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
 
     invoke-virtual {v8}, Landroid/preference/ListPreference;->getEntries()[Ljava/lang/CharSequence;
 
@@ -1201,7 +1201,7 @@
 
     .line 589
     .local v0, "entries":[Ljava/lang/CharSequence;
-    iget-object v8, p0, Lcom/android/settings/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
 
     invoke-virtual {v8}, Landroid/preference/ListPreference;->getEntryValues()[Ljava/lang/CharSequence;
 
@@ -1287,7 +1287,7 @@
 
     .line 600
     :cond_2
-    iget-object v9, p0, Lcom/android/settings/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -1304,7 +1304,7 @@
     invoke-virtual {v9, v8}, Landroid/preference/ListPreference;->setEntries([Ljava/lang/CharSequence;)V
 
     .line 602
-    iget-object v9, p0, Lcom/android/settings/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -1321,7 +1321,7 @@
     invoke-virtual {v9, v8}, Landroid/preference/ListPreference;->setEntryValues([Ljava/lang/CharSequence;)V
 
     .line 604
-    iget-object v8, p0, Lcom/android/settings/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
 
     invoke-virtual {v8}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1344,7 +1344,7 @@
     if-gtz v8, :cond_3
 
     .line 606
-    iget-object v8, p0, Lcom/android/settings/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
 
     invoke-static {v6}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -1355,7 +1355,7 @@
     .line 613
     .end local v6    # "userPreference":I
     :cond_3
-    iget-object v9, p0, Lcom/android/settings/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -1392,7 +1392,7 @@
             ")",
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/TrustAgentUtils$TrustAgentComponentInfo;",
+            "Lcom/android/settings_ex/TrustAgentUtils$TrustAgentComponentInfo;",
             ">;"
         }
     .end annotation
@@ -1408,8 +1408,8 @@
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
     .line 468
-    .local v5, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/settings/TrustAgentUtils$TrustAgentComponentInfo;>;"
-    sget-object v8, Lcom/android/settings/SecuritySettings;->TRUST_AGENT_INTENT:Landroid/content/Intent;
+    .local v5, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/settings_ex/TrustAgentUtils$TrustAgentComponentInfo;>;"
+    sget-object v8, Lcom/android/settings_ex/SecuritySettings;->TRUST_AGENT_INTENT:Landroid/content/Intent;
 
     const/16 v9, 0x80
 
@@ -1419,7 +1419,7 @@
 
     .line 470
     .local v4, "resolveInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
-    sget v8, Lcom/android/settings/SecuritySettings;->MY_USER_ID:I
+    sget v8, Lcom/android/settings_ex/SecuritySettings;->MY_USER_ID:I
 
     invoke-virtual {p1, v8}, Lcom/android/internal/widget/LockPatternUtils;->getEnabledTrustAgents(I)Ljava/util/List;
 
@@ -1492,24 +1492,24 @@
     .restart local v2    # "i":I
     .restart local v3    # "resolveInfo":Landroid/content/pm/ResolveInfo;
     :cond_2
-    invoke-static {v3, p0}, Lcom/android/settings/TrustAgentUtils;->checkProvidePermission(Landroid/content/pm/ResolveInfo;Landroid/content/pm/PackageManager;)Z
+    invoke-static {v3, p0}, Lcom/android/settings_ex/TrustAgentUtils;->checkProvidePermission(Landroid/content/pm/ResolveInfo;Landroid/content/pm/PackageManager;)Z
 
     move-result v8
 
     if-eqz v8, :cond_0
 
     .line 480
-    invoke-static {p0, v3}, Lcom/android/settings/TrustAgentUtils;->getSettingsComponent(Landroid/content/pm/PackageManager;Landroid/content/pm/ResolveInfo;)Lcom/android/settings/TrustAgentUtils$TrustAgentComponentInfo;
+    invoke-static {p0, v3}, Lcom/android/settings_ex/TrustAgentUtils;->getSettingsComponent(Landroid/content/pm/PackageManager;Landroid/content/pm/ResolveInfo;)Lcom/android/settings_ex/TrustAgentUtils$TrustAgentComponentInfo;
 
     move-result-object v6
 
     .line 482
-    .local v6, "trustAgentComponentInfo":Lcom/android/settings/TrustAgentUtils$TrustAgentComponentInfo;
-    iget-object v8, v6, Lcom/android/settings/TrustAgentUtils$TrustAgentComponentInfo;->componentName:Landroid/content/ComponentName;
+    .local v6, "trustAgentComponentInfo":Lcom/android/settings_ex/TrustAgentUtils$TrustAgentComponentInfo;
+    iget-object v8, v6, Lcom/android/settings_ex/TrustAgentUtils$TrustAgentComponentInfo;->componentName:Landroid/content/ComponentName;
 
     if-eqz v8, :cond_0
 
-    invoke-static {v3}, Lcom/android/settings/TrustAgentUtils;->getComponentName(Landroid/content/pm/ResolveInfo;)Landroid/content/ComponentName;
+    invoke-static {v3}, Lcom/android/settings_ex/TrustAgentUtils;->getComponentName(Landroid/content/pm/ResolveInfo;)Landroid/content/ComponentName;
 
     move-result-object v8
 
@@ -1519,7 +1519,7 @@
 
     if-eqz v8, :cond_0
 
-    iget-object v8, v6, Lcom/android/settings/TrustAgentUtils$TrustAgentComponentInfo;->title:Ljava/lang/String;
+    iget-object v8, v6, Lcom/android/settings_ex/TrustAgentUtils$TrustAgentComponentInfo;->title:Ljava/lang/String;
 
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1530,7 +1530,7 @@
     .line 486
     if-eqz v0, :cond_3
 
-    invoke-static {v3}, Lcom/android/settings/TrustAgentUtils;->getComponentName(Landroid/content/pm/ResolveInfo;)Landroid/content/ComponentName;
+    invoke-static {v3}, Lcom/android/settings_ex/TrustAgentUtils;->getComponentName(Landroid/content/pm/ResolveInfo;)Landroid/content/ComponentName;
 
     move-result-object v8
 
@@ -1541,7 +1541,7 @@
     if-nez v8, :cond_3
 
     .line 488
-    iput-boolean v7, v6, Lcom/android/settings/TrustAgentUtils$TrustAgentComponentInfo;->disabledByAdministrator:Z
+    iput-boolean v7, v6, Lcom/android/settings_ex/TrustAgentUtils$TrustAgentComponentInfo;->disabledByAdministrator:Z
 
     .line 490
     :cond_3
@@ -1550,7 +1550,7 @@
     .line 494
     .end local v2    # "i":I
     .end local v3    # "resolveInfo":Landroid/content/pm/ResolveInfo;
-    .end local v6    # "trustAgentComponentInfo":Lcom/android/settings/TrustAgentUtils$TrustAgentComponentInfo;
+    .end local v6    # "trustAgentComponentInfo":Lcom/android/settings_ex/TrustAgentUtils$TrustAgentComponentInfo;
     :cond_4
     return-object v5
 .end method
@@ -1566,7 +1566,7 @@
 
     .line 192
     .local v0, "resid":I
-    sget v1, Lcom/android/settings/SecuritySettings;->MY_USER_ID:I
+    sget v1, Lcom/android/settings_ex/SecuritySettings;->MY_USER_ID:I
 
     invoke-virtual {p1, v1}, Lcom/android/internal/widget/LockPatternUtils;->isSecure(I)Z
 
@@ -1575,7 +1575,7 @@
     if-nez v1, :cond_1
 
     .line 193
-    sget v1, Lcom/android/settings/SecuritySettings;->MY_USER_ID:I
+    sget v1, Lcom/android/settings_ex/SecuritySettings;->MY_USER_ID:I
 
     invoke-virtual {p1, v1}, Lcom/android/internal/widget/LockPatternUtils;->isLockScreenDisabled(I)Z
 
@@ -1598,7 +1598,7 @@
 
     .line 199
     :cond_1
-    sget v1, Lcom/android/settings/SecuritySettings;->MY_USER_ID:I
+    sget v1, Lcom/android/settings_ex/SecuritySettings;->MY_USER_ID:I
 
     invoke-virtual {p1, v1}, Lcom/android/internal/widget/LockPatternUtils;->getKeyguardStoredPasswordQuality(I)I
 
@@ -1649,7 +1649,7 @@
     const/4 v0, 0x0
 
     .line 498
-    invoke-virtual {p0}, Lcom/android/settings/SecuritySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecuritySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -1678,7 +1678,7 @@
 
     .line 432
     .local v3, "tm":Landroid/telephony/TelephonyManager;
-    iget-object v4, p0, Lcom/android/settings/SecuritySettings;->mSubscriptionManager:Landroid/telephony/SubscriptionManager;
+    iget-object v4, p0, Lcom/android/settings_ex/SecuritySettings;->mSubscriptionManager:Landroid/telephony/SubscriptionManager;
 
     invoke-virtual {v4}, Landroid/telephony/SubscriptionManager;->getActiveSubscriptionInfoList()Ljava/util/List;
 
@@ -1745,7 +1745,7 @@
 
     .line 451
     .local v1, "simState":I
-    iget-object v5, p0, Lcom/android/settings/SecuritySettings;->mSubscriptionManager:Landroid/telephony/SubscriptionManager;
+    iget-object v5, p0, Lcom/android/settings_ex/SecuritySettings;->mSubscriptionManager:Landroid/telephony/SubscriptionManager;
 
     invoke-virtual {v5}, Landroid/telephony/SubscriptionManager;->getActiveSubscriptionInfoList()Ljava/util/List;
 
@@ -1813,7 +1813,7 @@
     const/4 v5, 0x0
 
     .line 372
-    invoke-virtual {p0}, Lcom/android/settings/SecuritySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecuritySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -1887,7 +1887,7 @@
     .line 386
     .local v0, "fingerprintCount":I
     :goto_1
-    invoke-virtual {p0}, Lcom/android/settings/SecuritySettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecuritySettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -1933,7 +1933,7 @@
 
     .prologue
     .line 503
-    invoke-virtual {p0}, Lcom/android/settings/SecuritySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecuritySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -1961,7 +1961,7 @@
 
     .line 508
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/SecuritySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecuritySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -1991,7 +1991,7 @@
     const-wide/16 v6, 0x0
 
     .line 544
-    invoke-virtual {p0}, Lcom/android/settings/SecuritySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecuritySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v8
 
@@ -2005,7 +2005,7 @@
 
     .line 546
     .local v2, "currentTimeout":J
-    iget-object v8, p0, Lcom/android/settings/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
 
     invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
@@ -2014,16 +2014,16 @@
     invoke-virtual {v8, v9}, Landroid/preference/ListPreference;->setValue(Ljava/lang/String;)V
 
     .line 547
-    iget-object v8, p0, Lcom/android/settings/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
 
     invoke-virtual {v8, p0}, Landroid/preference/ListPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 548
-    iget-object v8, p0, Lcom/android/settings/SecuritySettings;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    iget-object v8, p0, Lcom/android/settings_ex/SecuritySettings;->mDPM:Landroid/app/admin/DevicePolicyManager;
 
     if-eqz v8, :cond_1
 
-    iget-object v8, p0, Lcom/android/settings/SecuritySettings;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    iget-object v8, p0, Lcom/android/settings_ex/SecuritySettings;->mDPM:Landroid/app/admin/DevicePolicyManager;
 
     const/4 v9, 0x0
 
@@ -2034,7 +2034,7 @@
     .line 549
     .local v0, "adminTimeout":J
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/SecuritySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecuritySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v8
 
@@ -2063,7 +2063,7 @@
 
     move-result-wide v6
 
-    invoke-direct {p0, v6, v7}, Lcom/android/settings/SecuritySettings;->disableUnusableTimeouts(J)V
+    invoke-direct {p0, v6, v7}, Lcom/android/settings_ex/SecuritySettings;->disableUnusableTimeouts(J)V
 
     .line 557
     :cond_0
@@ -2083,7 +2083,7 @@
 
     .prologue
     .line 561
-    invoke-virtual {p0}, Lcom/android/settings/SecuritySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecuritySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v9
 
@@ -2097,7 +2097,7 @@
 
     .line 563
     .local v2, "currentTimeout":J
-    iget-object v9, p0, Lcom/android/settings/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
 
     invoke-virtual {v9}, Landroid/preference/ListPreference;->getEntries()[Ljava/lang/CharSequence;
 
@@ -2105,7 +2105,7 @@
 
     .line 564
     .local v1, "entries":[Ljava/lang/CharSequence;
-    iget-object v9, p0, Lcom/android/settings/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
 
     invoke-virtual {v9}, Landroid/preference/ListPreference;->getEntryValues()[Ljava/lang/CharSequence;
 
@@ -2158,7 +2158,7 @@
     .line 573
     .end local v6    # "timeout":J
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/SecuritySettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecuritySettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v9
 
@@ -2204,7 +2204,7 @@
     if-nez v9, :cond_2
 
     .line 576
-    iget-object v9, p0, Lcom/android/settings/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
 
     const v10, 0x7f0e01f3
 
@@ -2220,7 +2220,7 @@
 
     aput-object v13, v11, v12
 
-    invoke-virtual {p0, v10, v11}, Lcom/android/settings/SecuritySettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v10, v11}, Lcom/android/settings_ex/SecuritySettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v10
 
@@ -2232,7 +2232,7 @@
 
     .line 579
     :cond_2
-    iget-object v9, p0, Lcom/android/settings/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
 
     const v10, 0x7f0e01f4
 
@@ -2254,7 +2254,7 @@
 
     aput-object v13, v11, v12
 
-    invoke-virtual {p0, v10, v11}, Lcom/android/settings/SecuritySettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v10, v11}, Lcom/android/settings_ex/SecuritySettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v10
 
@@ -2264,7 +2264,7 @@
 
     .line 583
     :cond_3
-    iget-object v9, p0, Lcom/android/settings/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/SecuritySettings;->mLockAfter:Landroid/preference/ListPreference;
 
     const v10, 0x7f0e01f2
 
@@ -2278,7 +2278,7 @@
 
     aput-object v13, v11, v12
 
-    invoke-virtual {p0, v10, v11}, Lcom/android/settings/SecuritySettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v10, v11}, Lcom/android/settings_ex/SecuritySettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v10
 
@@ -2294,13 +2294,13 @@
     .line 514
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/SecuritySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecuritySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {p0}, Lcom/android/settings/SecuritySettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecuritySettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -2320,7 +2320,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/android/settings/SecuritySettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecuritySettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -2350,7 +2350,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/SecuritySettings;->mWarnInstallApps:Landroid/content/DialogInterface;
+    iput-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mWarnInstallApps:Landroid/content/DialogInterface;
 
     .line 521
     return-void
@@ -2386,7 +2386,7 @@
 
     .prologue
     .line 718
-    invoke-super {p0, p1, p2, p3}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 719
     const/16 v0, 0x7e
@@ -2398,19 +2398,19 @@
     if-ne p2, v0, :cond_1
 
     .line 720
-    iget-object v0, p0, Lcom/android/settings/SecuritySettings;->mTrustAgentClickIntent:Landroid/content/Intent;
+    iget-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mTrustAgentClickIntent:Landroid/content/Intent;
 
     if-eqz v0, :cond_0
 
     .line 721
-    iget-object v0, p0, Lcom/android/settings/SecuritySettings;->mTrustAgentClickIntent:Landroid/content/Intent;
+    iget-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mTrustAgentClickIntent:Landroid/content/Intent;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/SecuritySettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/SecuritySettings;->startActivity(Landroid/content/Intent;)V
 
     .line 722
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/SecuritySettings;->mTrustAgentClickIntent:Landroid/content/Intent;
+    iput-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mTrustAgentClickIntent:Landroid/content/Intent;
 
     .line 727
     :cond_0
@@ -2419,7 +2419,7 @@
 
     .line 726
     :cond_1
-    invoke-direct {p0}, Lcom/android/settings/SecuritySettings;->createPreferenceHierarchy()Landroid/preference/PreferenceScreen;
+    invoke-direct {p0}, Lcom/android/settings_ex/SecuritySettings;->createPreferenceHierarchy()Landroid/preference/PreferenceScreen;
 
     goto :goto_0
 .end method
@@ -2431,7 +2431,7 @@
 
     .prologue
     .line 525
-    iget-object v1, p0, Lcom/android/settings/SecuritySettings;->mWarnInstallApps:Landroid/content/DialogInterface;
+    iget-object v1, p0, Lcom/android/settings_ex/SecuritySettings;->mWarnInstallApps:Landroid/content/DialogInterface;
 
     if-ne p1, v1, :cond_0
 
@@ -2445,15 +2445,15 @@
     .line 527
     .local v0, "turnOn":Z
     :goto_0
-    invoke-direct {p0, v0}, Lcom/android/settings/SecuritySettings;->setNonMarketAppsAllowed(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/SecuritySettings;->setNonMarketAppsAllowed(Z)V
 
     .line 528
-    iget-object v1, p0, Lcom/android/settings/SecuritySettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/SecuritySettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     if-eqz v1, :cond_0
 
     .line 529
-    iget-object v1, p0, Lcom/android/settings/SecuritySettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/SecuritySettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v0}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
@@ -2475,10 +2475,10 @@
 
     .prologue
     .line 164
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 166
-    invoke-virtual {p0}, Lcom/android/settings/SecuritySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecuritySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2486,40 +2486,40 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/SecuritySettings;->mSubscriptionManager:Landroid/telephony/SubscriptionManager;
+    iput-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mSubscriptionManager:Landroid/telephony/SubscriptionManager;
 
     .line 168
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/SecuritySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecuritySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/SecuritySettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 170
     const-string v0, "device_policy"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/SecuritySettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/SecuritySettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/app/admin/DevicePolicyManager;
 
-    iput-object v0, p0, Lcom/android/settings/SecuritySettings;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    iput-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mDPM:Landroid/app/admin/DevicePolicyManager;
 
     .line 172
-    new-instance v0, Lcom/android/settings/ChooseLockSettingsHelper;
+    new-instance v0, Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
-    invoke-virtual {p0}, Lcom/android/settings/SecuritySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecuritySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/android/settings/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;)V
 
-    iput-object v0, p0, Lcom/android/settings/SecuritySettings;->mChooseLockSettingsHelper:Lcom/android/settings/ChooseLockSettingsHelper;
+    iput-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mChooseLockSettingsHelper:Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
     .line 174
     if-eqz p1, :cond_0
@@ -2541,11 +2541,11 @@
 
     check-cast v0, Landroid/content/Intent;
 
-    iput-object v0, p0, Lcom/android/settings/SecuritySettings;->mTrustAgentClickIntent:Landroid/content/Intent;
+    iput-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mTrustAgentClickIntent:Landroid/content/Intent;
 
     .line 180
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/SecuritySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecuritySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2557,30 +2557,30 @@
 
     check-cast v0, Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    iput-object v0, p0, Lcom/android/settings/SecuritySettings;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
+    iput-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     .line 182
-    iget-object v0, p0, Lcom/android/settings/SecuritySettings;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
+    iget-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-eqz v0, :cond_1
 
     .line 183
-    iget-object v0, p0, Lcom/android/settings/SecuritySettings;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
+    iget-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     invoke-virtual {v0}, Landroid/app/enterprise/EnterpriseDeviceManager;->getRestrictionPolicy()Landroid/app/enterprise/RestrictionPolicy;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/SecuritySettings;->mRestrictionPolicy:Landroid/app/enterprise/RestrictionPolicy;
+    iput-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mRestrictionPolicy:Landroid/app/enterprise/RestrictionPolicy;
 
     .line 184
-    iget-object v0, p0, Lcom/android/settings/SecuritySettings;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
+    iget-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     invoke-virtual {v0}, Landroid/app/enterprise/EnterpriseDeviceManager;->getPasswordPolicy()Landroid/app/enterprise/PasswordPolicy;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/SecuritySettings;->mPasswordPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iput-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mPasswordPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     .line 187
     :cond_1
@@ -2592,15 +2592,15 @@
 
     .prologue
     .line 536
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroy()V
 
     .line 537
-    iget-object v0, p0, Lcom/android/settings/SecuritySettings;->mWarnInstallApps:Landroid/content/DialogInterface;
+    iget-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mWarnInstallApps:Landroid/content/DialogInterface;
 
     if-eqz v0, :cond_0
 
     .line 538
-    iget-object v0, p0, Lcom/android/settings/SecuritySettings;->mWarnInstallApps:Landroid/content/DialogInterface;
+    iget-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mWarnInstallApps:Landroid/content/DialogInterface;
 
     invoke-interface {v0}, Landroid/content/DialogInterface;->dismiss()V
 
@@ -2628,9 +2628,9 @@
 
     .line 733
     .local v1, "key":Ljava/lang/String;
-    iget-object v5, p0, Lcom/android/settings/SecuritySettings;->mChooseLockSettingsHelper:Lcom/android/settings/ChooseLockSettingsHelper;
+    iget-object v5, p0, Lcom/android/settings_ex/SecuritySettings;->mChooseLockSettingsHelper:Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
-    invoke-virtual {v5}, Lcom/android/settings/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
+    invoke-virtual {v5}, Lcom/android/settings_ex/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
 
     move-result-object v2
 
@@ -2655,7 +2655,7 @@
     .line 737
     .local v4, "timeout":I
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/SecuritySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecuritySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -2667,7 +2667,7 @@
 
     .line 742
     :goto_0
-    invoke-direct {p0}, Lcom/android/settings/SecuritySettings;->updateLockAfterPreferenceSummary()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SecuritySettings;->updateLockAfterPreferenceSummary()V
 
     .line 761
     .end local v4    # "timeout":I
@@ -2711,7 +2711,7 @@
 
     move-result v5
 
-    sget v6, Lcom/android/settings/SecuritySettings;->MY_USER_ID:I
+    sget v6, Lcom/android/settings_ex/SecuritySettings;->MY_USER_ID:I
 
     invoke-virtual {v2, v5, v6}, Lcom/android/internal/widget/LockPatternUtils;->setVisiblePatternEnabled(ZI)V
 
@@ -2729,7 +2729,7 @@
     if-eqz v5, :cond_3
 
     .line 746
-    iget-object v5, p0, Lcom/android/settings/SecuritySettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v5, p0, Lcom/android/settings_ex/SecuritySettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     check-cast p2, Ljava/lang/Boolean;
 
@@ -2738,7 +2738,7 @@
 
     move-result v6
 
-    sget v7, Lcom/android/settings/SecuritySettings;->MY_USER_ID:I
+    sget v7, Lcom/android/settings_ex/SecuritySettings;->MY_USER_ID:I
 
     invoke-virtual {v5, v6, v7}, Lcom/android/internal/widget/LockPatternUtils;->setPowerButtonInstantlyLocks(ZI)V
 
@@ -2756,7 +2756,7 @@
     if-eqz v5, :cond_5
 
     .line 748
-    invoke-virtual {p0}, Lcom/android/settings/SecuritySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecuritySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
 
@@ -2785,7 +2785,7 @@
 
     move-result v5
 
-    sget v6, Lcom/android/settings/SecuritySettings;->MY_USER_ID:I
+    sget v6, Lcom/android/settings_ex/SecuritySettings;->MY_USER_ID:I
 
     invoke-virtual {v2, v5, v6}, Lcom/android/internal/widget/LockPatternUtils;->setVisiblePasswordEnabled(ZI)V
 
@@ -2819,12 +2819,12 @@
     if-eqz v5, :cond_6
 
     .line 753
-    iget-object v5, p0, Lcom/android/settings/SecuritySettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/SecuritySettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v5, v6}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 754
-    invoke-direct {p0}, Lcom/android/settings/SecuritySettings;->warnAppInstallation()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SecuritySettings;->warnAppInstallation()V
 
     .line 756
     const/4 v3, 0x0
@@ -2833,7 +2833,7 @@
 
     .line 758
     :cond_6
-    invoke-direct {p0, v6}, Lcom/android/settings/SecuritySettings;->setNonMarketAppsAllowed(Z)V
+    invoke-direct {p0, v6}, Lcom/android/settings_ex/SecuritySettings;->setNonMarketAppsAllowed(Z)V
 
     goto :goto_1
 .end method
@@ -2872,7 +2872,7 @@
 
     move-object v1, p0
 
-    invoke-virtual/range {v0 .. v5}, Lcom/android/settings/SecuritySettings;->startFragment(Landroid/app/Fragment;Ljava/lang/String;IILandroid/os/Bundle;)Z
+    invoke-virtual/range {v0 .. v5}, Lcom/android/settings_ex/SecuritySettings;->startFragment(Landroid/app/Fragment;Ljava/lang/String;IILandroid/os/Bundle;)Z
 
     .line 710
     :cond_0
@@ -2893,21 +2893,21 @@
     if-eqz v0, :cond_2
 
     .line 696
-    new-instance v7, Lcom/android/settings/ChooseLockSettingsHelper;
+    new-instance v7, Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
-    invoke-virtual {p0}, Lcom/android/settings/SecuritySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecuritySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-direct {v7, v0, p0}, Lcom/android/settings/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;Landroid/app/Fragment;)V
+    invoke-direct {v7, v0, p0}, Lcom/android/settings_ex/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;Landroid/app/Fragment;)V
 
     .line 698
-    .local v7, "helper":Lcom/android/settings/ChooseLockSettingsHelper;
+    .local v7, "helper":Lcom/android/settings_ex/ChooseLockSettingsHelper;
     invoke-virtual {p2}, Landroid/preference/Preference;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/SecuritySettings;->mTrustAgentClickIntent:Landroid/content/Intent;
+    iput-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mTrustAgentClickIntent:Landroid/content/Intent;
 
     .line 699
     const/16 v0, 0x7e
@@ -2916,7 +2916,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v7, v0, v1}, Lcom/android/settings/ChooseLockSettingsHelper;->launchConfirmationActivity(ILjava/lang/CharSequence;)Z
+    invoke-virtual {v7, v0, v1}, Lcom/android/settings_ex/ChooseLockSettingsHelper;->launchConfirmationActivity(ILjava/lang/CharSequence;)Z
 
     move-result v6
 
@@ -2924,25 +2924,25 @@
     .local v6, "confirmationLaunched":Z
     if-nez v6, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/SecuritySettings;->mTrustAgentClickIntent:Landroid/content/Intent;
+    iget-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mTrustAgentClickIntent:Landroid/content/Intent;
 
     if-eqz v0, :cond_0
 
     .line 703
-    iget-object v0, p0, Lcom/android/settings/SecuritySettings;->mTrustAgentClickIntent:Landroid/content/Intent;
+    iget-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mTrustAgentClickIntent:Landroid/content/Intent;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/SecuritySettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/SecuritySettings;->startActivity(Landroid/content/Intent;)V
 
     .line 704
-    iput-object v5, p0, Lcom/android/settings/SecuritySettings;->mTrustAgentClickIntent:Landroid/content/Intent;
+    iput-object v5, p0, Lcom/android/settings_ex/SecuritySettings;->mTrustAgentClickIntent:Landroid/content/Intent;
 
     goto :goto_0
 
     .line 708
     .end local v6    # "confirmationLaunched":Z
-    .end local v7    # "helper":Lcom/android/settings/ChooseLockSettingsHelper;
+    .end local v7    # "helper":Lcom/android/settings_ex/ChooseLockSettingsHelper;
     :cond_2
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v0
 
@@ -2958,20 +2958,20 @@
     const/4 v6, 0x0
 
     .line 626
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 630
-    invoke-direct {p0}, Lcom/android/settings/SecuritySettings;->createPreferenceHierarchy()Landroid/preference/PreferenceScreen;
+    invoke-direct {p0}, Lcom/android/settings_ex/SecuritySettings;->createPreferenceHierarchy()Landroid/preference/PreferenceScreen;
 
     .line 633
-    iget-object v4, p0, Lcom/android/settings/SecuritySettings;->mRestrictionPolicy:Landroid/app/enterprise/RestrictionPolicy;
+    iget-object v4, p0, Lcom/android/settings_ex/SecuritySettings;->mRestrictionPolicy:Landroid/app/enterprise/RestrictionPolicy;
 
     if-eqz v4, :cond_0
 
     .line 636
-    iget-object v4, p0, Lcom/android/settings/SecuritySettings;->mShowPassword:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/SecuritySettings;->mShowPassword:Landroid/preference/SwitchPreference;
 
-    iget-object v7, p0, Lcom/android/settings/SecuritySettings;->mPasswordPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v7, p0, Lcom/android/settings_ex/SecuritySettings;->mPasswordPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v7}, Landroid/app/enterprise/PasswordPolicy;->isPasswordVisibilityEnabled()Z
 
@@ -2981,22 +2981,22 @@
 
     .line 641
     :cond_0
-    iget-object v4, p0, Lcom/android/settings/SecuritySettings;->mChooseLockSettingsHelper:Lcom/android/settings/ChooseLockSettingsHelper;
+    iget-object v4, p0, Lcom/android/settings_ex/SecuritySettings;->mChooseLockSettingsHelper:Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
-    invoke-virtual {v4}, Lcom/android/settings/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
+    invoke-virtual {v4}, Lcom/android/settings_ex/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
 
     move-result-object v2
 
     .line 642
     .local v2, "lockPatternUtils":Lcom/android/internal/widget/LockPatternUtils;
-    iget-object v4, p0, Lcom/android/settings/SecuritySettings;->mVisiblePattern:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/SecuritySettings;->mVisiblePattern:Landroid/preference/SwitchPreference;
 
     if-eqz v4, :cond_1
 
     .line 643
-    iget-object v4, p0, Lcom/android/settings/SecuritySettings;->mVisiblePattern:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/SecuritySettings;->mVisiblePattern:Landroid/preference/SwitchPreference;
 
-    sget v7, Lcom/android/settings/SecuritySettings;->MY_USER_ID:I
+    sget v7, Lcom/android/settings_ex/SecuritySettings;->MY_USER_ID:I
 
     invoke-virtual {v2, v7}, Lcom/android/internal/widget/LockPatternUtils;->isVisiblePatternEnabled(I)Z
 
@@ -3006,14 +3006,14 @@
 
     .line 646
     :cond_1
-    iget-object v4, p0, Lcom/android/settings/SecuritySettings;->mPowerButtonInstantlyLocks:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/SecuritySettings;->mPowerButtonInstantlyLocks:Landroid/preference/SwitchPreference;
 
     if-eqz v4, :cond_2
 
     .line 647
-    iget-object v4, p0, Lcom/android/settings/SecuritySettings;->mPowerButtonInstantlyLocks:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/SecuritySettings;->mPowerButtonInstantlyLocks:Landroid/preference/SwitchPreference;
 
-    sget v7, Lcom/android/settings/SecuritySettings;->MY_USER_ID:I
+    sget v7, Lcom/android/settings_ex/SecuritySettings;->MY_USER_ID:I
 
     invoke-virtual {v2, v7}, Lcom/android/internal/widget/LockPatternUtils;->getPowerButtonInstantlyLocks(I)Z
 
@@ -3023,14 +3023,14 @@
 
     .line 651
     :cond_2
-    iget-object v4, p0, Lcom/android/settings/SecuritySettings;->mShowPassword:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/SecuritySettings;->mShowPassword:Landroid/preference/SwitchPreference;
 
     if-eqz v4, :cond_3
 
     .line 652
-    iget-object v7, p0, Lcom/android/settings/SecuritySettings;->mShowPassword:Landroid/preference/SwitchPreference;
+    iget-object v7, p0, Lcom/android/settings_ex/SecuritySettings;->mShowPassword:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/SecuritySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecuritySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -3049,14 +3049,14 @@
 
     .line 662
     :cond_3
-    iget-object v4, p0, Lcom/android/settings/SecuritySettings;->mResetCredentials:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/SecuritySettings;->mResetCredentials:Landroid/preference/Preference;
 
     if-eqz v4, :cond_6
 
     .line 663
-    iget-object v4, p0, Lcom/android/settings/SecuritySettings;->mResetCredentials:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/SecuritySettings;->mResetCredentials:Landroid/preference/Preference;
 
-    iget-object v7, p0, Lcom/android/settings/SecuritySettings;->mKeyStore:Landroid/security/KeyStore;
+    iget-object v7, p0, Lcom/android/settings_ex/SecuritySettings;->mKeyStore:Landroid/security/KeyStore;
 
     invoke-virtual {v7}, Landroid/security/KeyStore;->isEmpty()Z
 
@@ -3068,7 +3068,7 @@
     invoke-virtual {v4, v5}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 666
-    iget-object v4, p0, Lcom/android/settings/SecuritySettings;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/SecuritySettings;->mContext:Landroid/content/Context;
 
     invoke-static {v4}, Lcom/sec/enterprise/knox/certificate/CertificatePolicy;->getInstance(Landroid/content/Context;)Lcom/sec/enterprise/knox/certificate/CertificatePolicy;
 
@@ -3076,7 +3076,7 @@
 
     .line 667
     .local v0, "cp":Lcom/sec/enterprise/knox/certificate/CertificatePolicy;
-    iget-object v4, p0, Lcom/android/settings/SecuritySettings;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/SecuritySettings;->mContext:Landroid/content/Context;
 
     const-string v5, "enterprise_policy"
 
@@ -3117,7 +3117,7 @@
 
     .line 673
     :cond_5
-    iget-object v4, p0, Lcom/android/settings/SecuritySettings;->mResetCredentials:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/SecuritySettings;->mResetCredentials:Landroid/preference/Preference;
 
     invoke-virtual {v4, v6}, Landroid/preference/Preference;->setEnabled(Z)V
 
@@ -3126,7 +3126,7 @@
     .end local v1    # "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     .end local v3    # "vp":Landroid/app/enterprise/VpnPolicy;
     :cond_6
-    invoke-virtual {p0}, Lcom/android/settings/SecuritySettings;->updateOwnerInfo()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecuritySettings;->updateOwnerInfo()V
 
     .line 679
     return-void
@@ -3150,17 +3150,17 @@
 
     .prologue
     .line 618
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 619
-    iget-object v0, p0, Lcom/android/settings/SecuritySettings;->mTrustAgentClickIntent:Landroid/content/Intent;
+    iget-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mTrustAgentClickIntent:Landroid/content/Intent;
 
     if-eqz v0, :cond_0
 
     .line 620
     const-string v0, "trust_agent_click_intent"
 
-    iget-object v1, p0, Lcom/android/settings/SecuritySettings;->mTrustAgentClickIntent:Landroid/content/Intent;
+    iget-object v1, p0, Lcom/android/settings_ex/SecuritySettings;->mTrustAgentClickIntent:Landroid/content/Intent;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
@@ -3174,16 +3174,16 @@
 
     .prologue
     .line 682
-    iget-object v0, p0, Lcom/android/settings/SecuritySettings;->mOwnerInfoPref:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mOwnerInfoPref:Landroid/preference/Preference;
 
     if-eqz v0, :cond_0
 
     .line 683
-    iget-object v1, p0, Lcom/android/settings/SecuritySettings;->mOwnerInfoPref:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/SecuritySettings;->mOwnerInfoPref:Landroid/preference/Preference;
 
-    iget-object v0, p0, Lcom/android/settings/SecuritySettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    sget v2, Lcom/android/settings/SecuritySettings;->MY_USER_ID:I
+    sget v2, Lcom/android/settings_ex/SecuritySettings;->MY_USER_ID:I
 
     invoke-virtual {v0, v2}, Lcom/android/internal/widget/LockPatternUtils;->isOwnerInfoEnabled(I)Z
 
@@ -3191,9 +3191,9 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/settings/SecuritySettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/SecuritySettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    sget v2, Lcom/android/settings/SecuritySettings;->MY_USER_ID:I
+    sget v2, Lcom/android/settings_ex/SecuritySettings;->MY_USER_ID:I
 
     invoke-virtual {v0, v2}, Lcom/android/internal/widget/LockPatternUtils;->getOwnerInfo(I)Ljava/lang/String;
 
@@ -3210,7 +3210,7 @@
     :cond_1
     const v0, 0x7f0e01f9
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/SecuritySettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/SecuritySettings;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/networkconnect/FirewallAdapter$OnItemCheckBoxListener;
+.class public interface abstract Lcom/android/settings_ex/networkconnect/FirewallAdapter$OnItemCheckBoxListener;
 .super Ljava/lang/Object;
 .source "FirewallAdapter.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/networkconnect/FirewallAdapter;
+    value = Lcom/android/settings_ex/networkconnect/FirewallAdapter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

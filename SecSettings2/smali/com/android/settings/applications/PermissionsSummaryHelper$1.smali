@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/applications/PermissionsSummaryHelper$1;
+.class final Lcom/android/settings_ex/applications/PermissionsSummaryHelper$1;
 .super Landroid/content/BroadcastReceiver;
 .source "PermissionsSummaryHelper.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/applications/PermissionsSummaryHelper;->sendPermissionRequest(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;Lcom/android/settings/applications/PermissionsSummaryHelper$PermissionsResultCallback;)Landroid/content/BroadcastReceiver;
+    value = Lcom/android/settings_ex/applications/PermissionsSummaryHelper;->sendPermissionRequest(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;Lcom/android/settings_ex/applications/PermissionsSummaryHelper$PermissionsResultCallback;)Landroid/content/BroadcastReceiver;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic val$callback:Lcom/android/settings/applications/PermissionsSummaryHelper$PermissionsResultCallback;
+.field final synthetic val$callback:Lcom/android/settings_ex/applications/PermissionsSummaryHelper$PermissionsResultCallback;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/applications/PermissionsSummaryHelper$PermissionsResultCallback;)V
+.method constructor <init>(Lcom/android/settings_ex/applications/PermissionsSummaryHelper$PermissionsResultCallback;)V
     .locals 0
 
     .prologue
     .line 45
-    iput-object p1, p0, Lcom/android/settings/applications/PermissionsSummaryHelper$1;->val$callback:Lcom/android/settings/applications/PermissionsSummaryHelper$PermissionsResultCallback;
+    iput-object p1, p0, Lcom/android/settings_ex/applications/PermissionsSummaryHelper$1;->val$callback:Lcom/android/settings_ex/applications/PermissionsSummaryHelper$PermissionsResultCallback;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -56,9 +56,9 @@
 
     .line 53
     .local v1, "groups":[Ljava/lang/CharSequence;
-    iget-object v2, p0, Lcom/android/settings/applications/PermissionsSummaryHelper$1;->val$callback:Lcom/android/settings/applications/PermissionsSummaryHelper$PermissionsResultCallback;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/PermissionsSummaryHelper$1;->val$callback:Lcom/android/settings_ex/applications/PermissionsSummaryHelper$PermissionsResultCallback;
 
-    invoke-interface {v2, v0, v1}, Lcom/android/settings/applications/PermissionsSummaryHelper$PermissionsResultCallback;->onPermissionSummaryResult([I[Ljava/lang/CharSequence;)V
+    invoke-interface {v2, v0, v1}, Lcom/android/settings_ex/applications/PermissionsSummaryHelper$PermissionsResultCallback;->onPermissionSummaryResult([I[Ljava/lang/CharSequence;)V
 
     .line 55
     invoke-virtual {p1, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V

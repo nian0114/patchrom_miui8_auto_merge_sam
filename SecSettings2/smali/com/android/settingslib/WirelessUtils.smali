@@ -1,4 +1,4 @@
-.class public Lcom/android/settingslib/WirelessUtils;
+.class public Lcom/android/settings_exlib/WirelessUtils;
 .super Ljava/lang/Object;
 .source "WirelessUtils.java"
 
@@ -39,7 +39,7 @@
     const/4 v1, 0x1
 
     .line 24
-    invoke-static {p0}, Lcom/android/settingslib/WirelessUtils;->isAirplaneModeOn(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/android/settings_exlib/WirelessUtils;->isAirplaneModeOn(Landroid/content/Context;)Z
 
     move-result v2
 

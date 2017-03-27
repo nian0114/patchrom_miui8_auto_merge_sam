@@ -1,4 +1,4 @@
-.class Lcom/android/settings/IntervalSeekBar$2;
+.class Lcom/android/settings_ex/IntervalSeekBar$2;
 .super Ljava/lang/Object;
 .source "IntervalSeekBar.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/IntervalSeekBar;
+    value = Lcom/android/settings_ex/IntervalSeekBar;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/IntervalSeekBar;
+.field final synthetic this$0:Lcom/android/settings_ex/IntervalSeekBar;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/IntervalSeekBar;)V
+.method constructor <init>(Lcom/android/settings_ex/IntervalSeekBar;)V
     .locals 0
 
     .prologue
     .line 107
-    iput-object p1, p0, Lcom/android/settings/IntervalSeekBar$2;->this$0:Lcom/android/settings/IntervalSeekBar;
+    iput-object p1, p0, Lcom/android/settings_ex/IntervalSeekBar$2;->this$0:Lcom/android/settings_ex/IntervalSeekBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,19 +50,19 @@
 
     .line 110
     .local v0, "Value":Ljava/lang/Float;
-    iget-object v1, p0, Lcom/android/settings/IntervalSeekBar$2;->this$0:Lcom/android/settings/IntervalSeekBar;
+    iget-object v1, p0, Lcom/android/settings_ex/IntervalSeekBar$2;->this$0:Lcom/android/settings_ex/IntervalSeekBar;
 
     invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
     move-result v2
 
-    # invokes: Lcom/android/settings/IntervalSeekBar;->animateMarkers(F)V
-    invoke-static {v1, v2}, Lcom/android/settings/IntervalSeekBar;->access$000(Lcom/android/settings/IntervalSeekBar;F)V
+    # invokes: Lcom/android/settings_ex/IntervalSeekBar;->animateMarkers(F)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/IntervalSeekBar;->access$000(Lcom/android/settings_ex/IntervalSeekBar;F)V
 
     .line 111
-    iget-object v1, p0, Lcom/android/settings/IntervalSeekBar$2;->this$0:Lcom/android/settings/IntervalSeekBar;
+    iget-object v1, p0, Lcom/android/settings_ex/IntervalSeekBar$2;->this$0:Lcom/android/settings_ex/IntervalSeekBar;
 
-    invoke-virtual {v1}, Lcom/android/settings/IntervalSeekBar;->invalidate()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/IntervalSeekBar;->invalidate()V
 
     .line 112
     return-void

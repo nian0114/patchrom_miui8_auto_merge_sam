@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/mirrorlink/MirrorLinkDeviceUID;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/mirrorlink/MirrorLinkDeviceUID;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "MirrorLinkDeviceUID.java"
 
 
@@ -17,13 +17,13 @@
     const/4 v0, 0x0
 
     .line 36
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 39
-    iput-object v0, p0, Lcom/android/settings/mirrorlink/MirrorLinkDeviceUID;->mTextViewTitle:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/mirrorlink/MirrorLinkDeviceUID;->mTextViewTitle:Landroid/widget/TextView;
 
     .line 40
-    iput-object v0, p0, Lcom/android/settings/mirrorlink/MirrorLinkDeviceUID;->mTextViewNumber:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/mirrorlink/MirrorLinkDeviceUID;->mTextViewNumber:Landroid/widget/TextView;
 
     return-void
 .end method
@@ -43,7 +43,7 @@
     .local v14, "uuid":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/mirrorlink/MirrorLinkDeviceUID;->mTextViewNumber:Landroid/widget/TextView;
+    iget-object v15, v0, Lcom/android/settings_ex/mirrorlink/MirrorLinkDeviceUID;->mTextViewNumber:Landroid/widget/TextView;
 
     if-eqz v15, :cond_5
 
@@ -403,7 +403,7 @@
     :goto_2
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/mirrorlink/MirrorLinkDeviceUID;->mTextViewNumber:Landroid/widget/TextView;
+    iget-object v15, v0, Lcom/android/settings_ex/mirrorlink/MirrorLinkDeviceUID;->mTextViewNumber:Landroid/widget/TextView;
 
     invoke-virtual {v15, v14}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -451,12 +451,12 @@
 
     .prologue
     .line 49
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 50
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/mirrorlink/MirrorLinkDeviceUID;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/mirrorlink/MirrorLinkDeviceUID;->setHasOptionsMenu(Z)V
 
     .line 51
     return-void
@@ -491,7 +491,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/android/settings/mirrorlink/MirrorLinkDeviceUID;->mTextViewTitle:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLinkDeviceUID;->mTextViewTitle:Landroid/widget/TextView;
 
     .line 58
     const v1, 0x7f0d0369
@@ -502,15 +502,15 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/android/settings/mirrorlink/MirrorLinkDeviceUID;->mTextViewNumber:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLinkDeviceUID;->mTextViewNumber:Landroid/widget/TextView;
 
     .line 59
-    iget-object v1, p0, Lcom/android/settings/mirrorlink/MirrorLinkDeviceUID;->mTextViewTitle:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLinkDeviceUID;->mTextViewTitle:Landroid/widget/TextView;
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 61
-    invoke-direct {p0}, Lcom/android/settings/mirrorlink/MirrorLinkDeviceUID;->updateDeviceUID()V
+    invoke-direct {p0}, Lcom/android/settings_ex/mirrorlink/MirrorLinkDeviceUID;->updateDeviceUID()V
 
     .line 63
     :cond_0
@@ -522,7 +522,7 @@
 
     .prologue
     .line 130
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroy()V
 
     .line 131
     return-void
@@ -533,7 +533,7 @@
 
     .prologue
     .line 120
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 121
     return-void
@@ -544,7 +544,7 @@
 
     .prologue
     .line 115
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 116
     return-void
@@ -555,7 +555,7 @@
 
     .prologue
     .line 125
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onStop()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onStop()V
 
     .line 126
     return-void

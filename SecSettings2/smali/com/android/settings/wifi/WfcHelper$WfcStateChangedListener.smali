@@ -1,11 +1,11 @@
-.class interface abstract Lcom/android/settings/wifi/WfcHelper$WfcStateChangedListener;
+.class interface abstract Lcom/android/settings_ex/wifi/WfcHelper$WfcStateChangedListener;
 .super Ljava/lang/Object;
 .source "WfcHelper.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WfcHelper;
+    value = Lcom/android/settings_ex/wifi/WfcHelper;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

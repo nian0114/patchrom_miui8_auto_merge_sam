@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/cpa/CpaErrorActivity;
+.class public Lcom/android/settings_ex/cpa/CpaErrorActivity;
 .super Lcom/android/internal/app/AlertActivity;
 .source "CpaErrorActivity.java"
 
@@ -20,13 +20,13 @@
 
     .prologue
     .line 51
-    const-class v0, Lcom/android/settings/cpa/CpaErrorActivity;
+    const-class v0, Lcom/android/settings_ex/cpa/CpaErrorActivity;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/cpa/CpaErrorActivity;->TAG:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/cpa/CpaErrorActivity;->TAG:Ljava/lang/String;
 
     return-void
 .end method
@@ -46,7 +46,7 @@
 
     .prologue
     .line 73
-    invoke-virtual {p0}, Lcom/android/settings/cpa/CpaErrorActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cpa/CpaErrorActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v2
 
@@ -70,7 +70,7 @@
 
     .line 75
     .local v0, "contentView":Landroid/widget/TextView;
-    iget-object v2, p0, Lcom/android/settings/cpa/CpaErrorActivity;->mErrorContent:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/cpa/CpaErrorActivity;->mErrorContent:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -100,7 +100,7 @@
     invoke-super {p0, p1}, Lcom/android/internal/app/AlertActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 56
-    invoke-virtual {p0}, Lcom/android/settings/cpa/CpaErrorActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cpa/CpaErrorActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -120,10 +120,10 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/cpa/CpaErrorActivity;->mErrorContent:Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/settings_ex/cpa/CpaErrorActivity;->mErrorContent:Ljava/lang/String;
 
     .line 61
-    sget-object v3, Lcom/android/settings/cpa/CpaErrorActivity;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/cpa/CpaErrorActivity;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -135,7 +135,7 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/cpa/CpaErrorActivity;->mErrorContent:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/cpa/CpaErrorActivity;->mErrorContent:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -148,7 +148,7 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 63
-    iget-object v2, p0, Lcom/android/settings/cpa/CpaErrorActivity;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v2, p0, Lcom/android/settings_ex/cpa/CpaErrorActivity;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     .line 64
     .local v2, "p":Lcom/android/internal/app/AlertController$AlertParams;
@@ -160,7 +160,7 @@
     iput-object v1, v2, Lcom/android/internal/app/AlertController$AlertParams;->mTitle:Ljava/lang/CharSequence;
 
     .line 66
-    invoke-direct {p0}, Lcom/android/settings/cpa/CpaErrorActivity;->createView()Landroid/view/View;
+    invoke-direct {p0}, Lcom/android/settings_ex/cpa/CpaErrorActivity;->createView()Landroid/view/View;
 
     move-result-object v3
 
@@ -169,7 +169,7 @@
     .line 67
     const v3, 0x7f0e02da
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/cpa/CpaErrorActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/cpa/CpaErrorActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -179,7 +179,7 @@
     iput-object p0, v2, Lcom/android/internal/app/AlertController$AlertParams;->mPositiveButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
     .line 69
-    invoke-virtual {p0}, Lcom/android/settings/cpa/CpaErrorActivity;->setupAlert()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/cpa/CpaErrorActivity;->setupAlert()V
 
     .line 70
     return-void

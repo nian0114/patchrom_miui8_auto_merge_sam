@@ -1,11 +1,11 @@
-.class Lcom/android/settings/lockappshortcut/AppShortcutList$1;
+.class Lcom/android/settings_ex/lockappshortcut/AppShortcutList$1;
 .super Landroid/os/Handler;
 .source "AppShortcutList.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/lockappshortcut/AppShortcutList;
+    value = Lcom/android/settings_ex/lockappshortcut/AppShortcutList;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/lockappshortcut/AppShortcutList;
+.field final synthetic this$0:Lcom/android/settings_ex/lockappshortcut/AppShortcutList;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/lockappshortcut/AppShortcutList;)V
+.method constructor <init>(Lcom/android/settings_ex/lockappshortcut/AppShortcutList;)V
     .locals 0
 
     .prologue
     .line 132
-    iput-object p1, p0, Lcom/android/settings/lockappshortcut/AppShortcutList$1;->this$0:Lcom/android/settings/lockappshortcut/AppShortcutList;
+    iput-object p1, p0, Lcom/android/settings_ex/lockappshortcut/AppShortcutList$1;->this$0:Lcom/android/settings_ex/lockappshortcut/AppShortcutList;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -52,14 +52,14 @@
 
     .line 137
     :pswitch_0
-    iget-object v0, p0, Lcom/android/settings/lockappshortcut/AppShortcutList$1;->this$0:Lcom/android/settings/lockappshortcut/AppShortcutList;
+    iget-object v0, p0, Lcom/android/settings_ex/lockappshortcut/AppShortcutList$1;->this$0:Lcom/android/settings_ex/lockappshortcut/AppShortcutList;
 
-    # getter for: Lcom/android/settings/lockappshortcut/AppShortcutList;->mLoadAppListTask:Lcom/android/settings/lockappshortcut/AppShortcutList$LoadAppListTask;
-    invoke-static {v0}, Lcom/android/settings/lockappshortcut/AppShortcutList;->access$000(Lcom/android/settings/lockappshortcut/AppShortcutList;)Lcom/android/settings/lockappshortcut/AppShortcutList$LoadAppListTask;
+    # getter for: Lcom/android/settings_ex/lockappshortcut/AppShortcutList;->mLoadAppListTask:Lcom/android/settings_ex/lockappshortcut/AppShortcutList$LoadAppListTask;
+    invoke-static {v0}, Lcom/android/settings_ex/lockappshortcut/AppShortcutList;->access$000(Lcom/android/settings_ex/lockappshortcut/AppShortcutList;)Lcom/android/settings_ex/lockappshortcut/AppShortcutList$LoadAppListTask;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/settings/lockappshortcut/AppShortcutList$LoadAppListTask;->add()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/lockappshortcut/AppShortcutList$LoadAppListTask;->add()V
 
     goto :goto_0
 

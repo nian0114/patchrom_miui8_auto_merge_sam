@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$4;
+.class Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$4;
 .super Ljava/lang/Object;
 .source "FingerprintEnrollEnrolling.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->clearError()V
+    value = Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;->clearError()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;)V
     .locals 0
 
     .prologue
     .line 314
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$4;->this$0:Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$4;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,10 +41,10 @@
 
     .prologue
     .line 317
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$4;->this$0:Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$4;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->mErrorText:Landroid/widget/TextView;
-    invoke-static {v0}, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->access$700(Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;->mErrorText:Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;->access$700(Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;)Landroid/widget/TextView;
 
     move-result-object v0
 

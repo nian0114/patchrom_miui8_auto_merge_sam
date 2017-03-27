@@ -1,4 +1,4 @@
-.class Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$1;
+.class Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$1;
 .super Ljava/lang/Object;
 .source "PackageSettingActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->onStart()V
+    value = Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->onStart()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;
 
 .field final synthetic val$positiveBtn:Landroid/widget/Button;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;Landroid/widget/Button;)V
+.method constructor <init>(Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;Landroid/widget/Button;)V
     .locals 0
 
     .prologue
     .line 526
-    iput-object p1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$1;->this$0:Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$1;->this$0:Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;
 
-    iput-object p2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$1;->val$positiveBtn:Landroid/widget/Button;
+    iput-object p2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$1;->val$positiveBtn:Landroid/widget/Button;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -80,7 +80,7 @@
 
     .line 543
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$1;->val$positiveBtn:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$1;->val$positiveBtn:Landroid/widget/Button;
 
     const/4 v2, 0x0
 
@@ -92,7 +92,7 @@
 
     .line 545
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$1;->val$positiveBtn:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$1;->val$positiveBtn:Landroid/widget/Button;
 
     const/4 v2, 0x1
 

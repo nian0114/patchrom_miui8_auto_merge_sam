@@ -1,4 +1,4 @@
-.class Lcom/android/settings/MultiLinePreference;
+.class Lcom/android/settings_ex/MultiLinePreference;
 .super Landroid/preference/Preference;
 .source "KnoxChooseLockTwoFactor.java"
 
@@ -19,10 +19,10 @@
     .line 575
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/MultiLinePreference;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/MultiLinePreference;->mContext:Landroid/content/Context;
 
     .line 580
-    iput-object p1, p0, Lcom/android/settings/MultiLinePreference;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/MultiLinePreference;->mContext:Landroid/content/Context;
 
     .line 581
     return-void
@@ -40,10 +40,10 @@
     .line 575
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/MultiLinePreference;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/MultiLinePreference;->mContext:Landroid/content/Context;
 
     .line 585
-    iput-object p1, p0, Lcom/android/settings/MultiLinePreference;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/MultiLinePreference;->mContext:Landroid/content/Context;
 
     .line 586
     return-void
@@ -62,10 +62,10 @@
     .line 575
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/MultiLinePreference;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/MultiLinePreference;->mContext:Landroid/content/Context;
 
     .line 590
-    iput-object p1, p0, Lcom/android/settings/MultiLinePreference;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/MultiLinePreference;->mContext:Landroid/content/Context;
 
     .line 591
     return-void

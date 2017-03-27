@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessibility/MagnifierService$MyReceiver;
+.class Lcom/android/settings_ex/accessibility/MagnifierService$MyReceiver;
 .super Landroid/content/BroadcastReceiver;
 .source "MagnifierService.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/MagnifierService;
+    value = Lcom/android/settings_ex/accessibility/MagnifierService;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,30 +15,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/MagnifierService;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/settings/accessibility/MagnifierService;)V
+.method private constructor <init>(Lcom/android/settings_ex/accessibility/MagnifierService;)V
     .locals 0
 
     .prologue
     .line 89
-    iput-object p1, p0, Lcom/android/settings/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/accessibility/MagnifierService;Lcom/android/settings/accessibility/MagnifierService$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/accessibility/MagnifierService;Lcom/android/settings_ex/accessibility/MagnifierService$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/accessibility/MagnifierService;
-    .param p2, "x1"    # Lcom/android/settings/accessibility/MagnifierService$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/accessibility/MagnifierService;
+    .param p2, "x1"    # Lcom/android/settings_ex/accessibility/MagnifierService$1;
 
     .prologue
     .line 89
-    invoke-direct {p0, p1}, Lcom/android/settings/accessibility/MagnifierService$MyReceiver;-><init>(Lcom/android/settings/accessibility/MagnifierService;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/accessibility/MagnifierService$MyReceiver;-><init>(Lcom/android/settings_ex/accessibility/MagnifierService;)V
 
     return-void
 .end method
@@ -80,9 +80,9 @@
     if-eqz v2, :cond_4
 
     .line 98
-    iget-object v4, p0, Lcom/android/settings/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
-    iget-object v4, v4, Lcom/android/settings/accessibility/MagnifierService;->mContext:Landroid/content/Context;
+    iget-object v4, v4, Lcom/android/settings_ex/accessibility/MagnifierService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -96,9 +96,9 @@
 
     .line 99
     .local v3, "toastMsg":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
-    iget-object v4, v4, Lcom/android/settings/accessibility/MagnifierService;->mContext:Landroid/content/Context;
+    iget-object v4, v4, Lcom/android/settings_ex/accessibility/MagnifierService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -115,9 +115,9 @@
     if-ne v4, v5, :cond_0
 
     .line 100
-    iget-object v4, p0, Lcom/android/settings/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
-    iget-object v4, v4, Lcom/android/settings/accessibility/MagnifierService;->mContext:Landroid/content/Context;
+    iget-object v4, v4, Lcom/android/settings_ex/accessibility/MagnifierService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -131,9 +131,9 @@
 
     .line 102
     :cond_0
-    iget-object v4, p0, Lcom/android/settings/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
-    iget-object v4, v4, Lcom/android/settings/accessibility/MagnifierService;->mContext:Landroid/content/Context;
+    iget-object v4, v4, Lcom/android/settings_ex/accessibility/MagnifierService;->mContext:Landroid/content/Context;
 
     invoke-static {v4, v3, v6}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
@@ -142,11 +142,11 @@
     invoke-virtual {v4}, Landroid/widget/Toast;->show()V
 
     .line 103
-    iget-object v4, p0, Lcom/android/settings/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
-    iget-object v4, v4, Lcom/android/settings/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v4, v4, Lcom/android/settings_ex/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    invoke-virtual {v4}, Lcom/android/settings/accessibility/MagnifierSurfaceView;->removeView()V
+    invoke-virtual {v4}, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->removeView()V
 
     .line 110
     .end local v2    # "isAccessControlEnabled":Z
@@ -162,11 +162,11 @@
     if-eqz v4, :cond_5
 
     .line 111
-    iget-object v4, p0, Lcom/android/settings/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
-    iget-object v4, v4, Lcom/android/settings/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v4, v4, Lcom/android/settings_ex/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    invoke-virtual {v4}, Lcom/android/settings/accessibility/MagnifierSurfaceView;->removeView()V
+    invoke-virtual {v4}, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->removeView()V
 
     .line 116
     :cond_2
@@ -181,9 +181,9 @@
 
     .line 118
     :try_start_0
-    iget-object v4, p0, Lcom/android/settings/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
-    invoke-virtual {v4}, Lcom/android/settings/accessibility/MagnifierService;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v4}, Lcom/android/settings_ex/accessibility/MagnifierService;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -194,16 +194,16 @@
     invoke-static {v4, v5, v6}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 119
-    iget-object v4, p0, Lcom/android/settings/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
-    iget-object v4, v4, Lcom/android/settings/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v4, v4, Lcom/android/settings_ex/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    invoke-virtual {v4}, Lcom/android/settings/accessibility/MagnifierSurfaceView;->removeView()V
+    invoke-virtual {v4}, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->removeView()V
 
     .line 120
-    iget-object v4, p0, Lcom/android/settings/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
-    invoke-virtual {v4}, Lcom/android/settings/accessibility/MagnifierService;->stopSelf()V
+    invoke-virtual {v4}, Lcom/android/settings_ex/accessibility/MagnifierService;->stopSelf()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -215,11 +215,11 @@
     .line 106
     .restart local v2    # "isAccessControlEnabled":Z
     :cond_4
-    iget-object v4, p0, Lcom/android/settings/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
-    iget-object v4, v4, Lcom/android/settings/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v4, v4, Lcom/android/settings_ex/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    invoke-virtual {v4}, Lcom/android/settings/accessibility/MagnifierSurfaceView;->showView()V
+    invoke-virtual {v4}, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->showView()V
 
     goto :goto_0
 
@@ -235,21 +235,21 @@
     if-eqz v4, :cond_2
 
     .line 113
-    iget-object v4, p0, Lcom/android/settings/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierService;->isScoverClosed:Z
-    invoke-static {v4}, Lcom/android/settings/accessibility/MagnifierService;->access$100(Lcom/android/settings/accessibility/MagnifierService;)Z
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierService;->isScoverClosed:Z
+    invoke-static {v4}, Lcom/android/settings_ex/accessibility/MagnifierService;->access$100(Lcom/android/settings_ex/accessibility/MagnifierService;)Z
 
     move-result v4
 
     if-nez v4, :cond_2
 
     .line 114
-    iget-object v4, p0, Lcom/android/settings/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/MagnifierService$MyReceiver;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
-    iget-object v4, v4, Lcom/android/settings/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v4, v4, Lcom/android/settings_ex/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    invoke-virtual {v4}, Lcom/android/settings/accessibility/MagnifierSurfaceView;->showView()V
+    invoke-virtual {v4}, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->showView()V
 
     goto :goto_1
 

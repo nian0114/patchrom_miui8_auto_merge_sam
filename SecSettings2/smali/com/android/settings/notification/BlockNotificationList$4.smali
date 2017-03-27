@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/notification/BlockNotificationList$4;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/notification/BlockNotificationList$4;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "BlockNotificationList.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/BlockNotificationList;
+    value = Lcom/android/settings_ex/notification/BlockNotificationList;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 566
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
             "Z)",
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/search/SearchIndexableRaw;",
+            "Lcom/android/settings_ex/search/SearchIndexableRaw;",
             ">;"
         }
     .end annotation
@@ -52,8 +52,8 @@
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     .line 586
-    .local v2, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/search/SearchIndexableRaw;>;"
-    invoke-static {}, Lcom/android/settings/Utils;->isAllNAVendor()Z
+    .local v2, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/search/SearchIndexableRaw;>;"
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isAllNAVendor()Z
 
     move-result v3
 
@@ -63,12 +63,12 @@
     const/4 v2, 0x0
 
     .line 597
-    .end local v2    # "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/search/SearchIndexableRaw;>;"
+    .end local v2    # "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/search/SearchIndexableRaw;>;"
     :goto_0
     return-object v2
 
     .line 589
-    .restart local v2    # "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/search/SearchIndexableRaw;>;"
+    .restart local v2    # "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/search/SearchIndexableRaw;>;"
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -76,24 +76,24 @@
 
     .line 592
     .local v1, "res":Landroid/content/res/Resources;
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 593
-    .local v0, "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .local v0, "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 594
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
 
     .line 595
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -131,7 +131,7 @@
 
     .line 575
     .local v1, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v2, Lcom/android/settings/notification/BlockNotificationList;
+    const-class v2, Lcom/android/settings_ex/notification/BlockNotificationList;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -140,7 +140,7 @@
     iput-object v2, v1, Landroid/provider/SearchIndexableResource;->className:Ljava/lang/String;
 
     .line 576
-    sget v2, Lcom/android/settings/search/SearchIndexableResources;->NO_DATA_RES_ID:I
+    sget v2, Lcom/android/settings_ex/search/SearchIndexableResources;->NO_DATA_RES_ID:I
 
     iput v2, v1, Landroid/provider/SearchIndexableResource;->xmlResId:I
 

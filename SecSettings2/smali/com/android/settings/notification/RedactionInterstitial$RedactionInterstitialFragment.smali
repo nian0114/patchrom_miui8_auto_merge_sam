@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "RedactionInterstitial.java"
 
 # interfaces
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/RedactionInterstitial;
+    value = Lcom/android/settings_ex/notification/RedactionInterstitial;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -37,45 +37,45 @@
 
     .prologue
     .line 100
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 107
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->title:Ljava/lang/CharSequence;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->title:Ljava/lang/CharSequence;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;)Landroid/widget/CheckedTextView;
+.method static synthetic access$000(Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;)Landroid/widget/CheckedTextView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;
 
     .prologue
     .line 100
-    iget-object v0, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mShowAllButton:Landroid/widget/CheckedTextView;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mShowAllButton:Landroid/widget/CheckedTextView;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;)Landroid/widget/CheckedTextView;
+.method static synthetic access$100(Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;)Landroid/widget/CheckedTextView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;
 
     .prologue
     .line 100
-    iget-object v0, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mRedactSensitiveButton:Landroid/widget/CheckedTextView;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mRedactSensitiveButton:Landroid/widget/CheckedTextView;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;)Landroid/widget/CheckedTextView;
+.method static synthetic access$200(Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;)Landroid/widget/CheckedTextView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;
 
     .prologue
     .line 100
-    iget-object v0, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mHideAllButton:Landroid/widget/CheckedTextView;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mHideAllButton:Landroid/widget/CheckedTextView;
 
     return-object v0
 .end method
@@ -89,7 +89,7 @@
     const/4 v3, 0x0
 
     .line 179
-    invoke-virtual {p0}, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -106,7 +106,7 @@
     .line 181
     .local v0, "enabled":Z
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -123,7 +123,7 @@
     .line 183
     .local v1, "show":Z
     :goto_1
-    iget-object v5, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mShowAllButton:Landroid/widget/CheckedTextView;
+    iget-object v5, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mShowAllButton:Landroid/widget/CheckedTextView;
 
     if-eqz v0, :cond_2
 
@@ -135,7 +135,7 @@
     invoke-virtual {v5, v4}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 184
-    iget-object v5, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mRedactSensitiveButton:Landroid/widget/CheckedTextView;
+    iget-object v5, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mRedactSensitiveButton:Landroid/widget/CheckedTextView;
 
     if-eqz v0, :cond_3
 
@@ -147,7 +147,7 @@
     invoke-virtual {v5, v4}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 185
-    iget-object v4, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mHideAllButton:Landroid/widget/CheckedTextView;
+    iget-object v4, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mHideAllButton:Landroid/widget/CheckedTextView;
 
     if-nez v0, :cond_4
 
@@ -214,23 +214,23 @@
     const/4 v3, 0x0
 
     .line 191
-    invoke-virtual {p0}, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->isTablet(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->isTablet(Landroid/content/Context;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
     .line 192
-    iget-object v4, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mDoneButton:Landroid/widget/Button;
+    iget-object v4, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mDoneButton:Landroid/widget/Button;
 
     if-ne p1, v4, :cond_0
 
     .line 193
-    invoke-virtual {p0}, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->finish()V
 
     .line 209
     :goto_0
@@ -238,7 +238,7 @@
 
     .line 198
     :cond_0
-    iget-object v4, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mShowAllButton:Landroid/widget/CheckedTextView;
+    iget-object v4, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mShowAllButton:Landroid/widget/CheckedTextView;
 
     if-ne p1, v4, :cond_1
 
@@ -247,7 +247,7 @@
     .line 199
     .local v1, "show":Z
     :goto_1
-    iget-object v4, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mHideAllButton:Landroid/widget/CheckedTextView;
+    iget-object v4, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mHideAllButton:Landroid/widget/CheckedTextView;
 
     if-eq p1, v4, :cond_2
 
@@ -256,7 +256,7 @@
     .line 201
     .local v0, "enabled":Z
     :goto_2
-    invoke-virtual {p0}, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -270,7 +270,7 @@
     invoke-static {v5, v6, v4}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 203
-    invoke-virtual {p0}, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -284,7 +284,7 @@
     invoke-static {v5, v6, v4}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 206
-    iget-object v5, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mShowAllButton:Landroid/widget/CheckedTextView;
+    iget-object v5, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mShowAllButton:Landroid/widget/CheckedTextView;
 
     if-eqz v0, :cond_5
 
@@ -296,7 +296,7 @@
     invoke-virtual {v5, v4}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 207
-    iget-object v5, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mRedactSensitiveButton:Landroid/widget/CheckedTextView;
+    iget-object v5, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mRedactSensitiveButton:Landroid/widget/CheckedTextView;
 
     if-eqz v0, :cond_6
 
@@ -308,7 +308,7 @@
     invoke-virtual {v5, v4}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 208
-    iget-object v4, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mHideAllButton:Landroid/widget/CheckedTextView;
+    iget-object v4, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mHideAllButton:Landroid/widget/CheckedTextView;
 
     if-nez v0, :cond_7
 
@@ -388,10 +388,10 @@
 
     .prologue
     .line 174
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 175
-    invoke-direct {p0}, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->loadFromSettings()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->loadFromSettings()V
 
     .line 176
     return-void
@@ -404,7 +404,7 @@
 
     .prologue
     .line 124
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 125
     const v1, 0x7f0d0459
@@ -415,7 +415,7 @@
 
     check-cast v1, Landroid/widget/CheckedTextView;
 
-    iput-object v1, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mShowAllButton:Landroid/widget/CheckedTextView;
+    iput-object v1, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mShowAllButton:Landroid/widget/CheckedTextView;
 
     .line 126
     const v1, 0x7f0d045b
@@ -426,7 +426,7 @@
 
     check-cast v1, Landroid/widget/CheckedTextView;
 
-    iput-object v1, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mRedactSensitiveButton:Landroid/widget/CheckedTextView;
+    iput-object v1, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mRedactSensitiveButton:Landroid/widget/CheckedTextView;
 
     .line 127
     const v1, 0x7f0d045d
@@ -437,20 +437,20 @@
 
     check-cast v1, Landroid/widget/CheckedTextView;
 
-    iput-object v1, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mHideAllButton:Landroid/widget/CheckedTextView;
+    iput-object v1, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mHideAllButton:Landroid/widget/CheckedTextView;
 
     .line 129
-    iget-object v1, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mShowAllButton:Landroid/widget/CheckedTextView;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mShowAllButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v1, p0}, Landroid/widget/CheckedTextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 130
-    iget-object v1, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mRedactSensitiveButton:Landroid/widget/CheckedTextView;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mRedactSensitiveButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v1, p0}, Landroid/widget/CheckedTextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 131
-    iget-object v1, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mHideAllButton:Landroid/widget/CheckedTextView;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mHideAllButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v1, p0}, Landroid/widget/CheckedTextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -473,7 +473,7 @@
     .local v0, "isSetupWizardPage":Z
     const/4 v1, 0x0
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isTablet(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isTablet(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -490,10 +490,10 @@
 
     check-cast v1, Landroid/widget/Button;
 
-    iput-object v1, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mDoneButton:Landroid/widget/Button;
+    iput-object v1, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mDoneButton:Landroid/widget/Button;
 
     .line 136
-    iget-object v1, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mDoneButton:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mDoneButton:Landroid/widget/Button;
 
     invoke-virtual {v1, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -506,24 +506,24 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mTitleText:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mTitleText:Landroid/widget/TextView;
 
     .line 139
-    iget-object v1, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mTitleText:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mTitleText:Landroid/widget/TextView;
 
     if-eqz v1, :cond_0
 
     .line 140
-    iget-object v1, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mTitleText:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mTitleText:Landroid/widget/TextView;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 141
-    iget-object v1, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mTitleText:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mTitleText:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -537,29 +537,29 @@
 
     .line 145
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mShowAllButton:Landroid/widget/CheckedTextView;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mShowAllButton:Landroid/widget/CheckedTextView;
 
-    new-instance v2, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment$1;
+    new-instance v2, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment$1;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment$1;-><init>(Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment$1;-><init>(Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/CheckedTextView;->post(Ljava/lang/Runnable;)Z
 
     .line 153
-    iget-object v1, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mRedactSensitiveButton:Landroid/widget/CheckedTextView;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mRedactSensitiveButton:Landroid/widget/CheckedTextView;
 
-    new-instance v2, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment$2;
+    new-instance v2, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment$2;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment$2;-><init>(Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment$2;-><init>(Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/CheckedTextView;->post(Ljava/lang/Runnable;)Z
 
     .line 162
-    iget-object v1, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mHideAllButton:Landroid/widget/CheckedTextView;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mHideAllButton:Landroid/widget/CheckedTextView;
 
-    new-instance v2, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment$3;
+    new-instance v2, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment$3;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment$3;-><init>(Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment$3;-><init>(Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/CheckedTextView;->post(Ljava/lang/Runnable;)Z
 

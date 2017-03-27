@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wfd/Wfd_Certification$8;
+.class Lcom/android/settings_ex/wfd/Wfd_Certification$8;
 .super Ljava/lang/Object;
 .source "Wfd_Certification.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wfd/Wfd_Certification;->stopAutoGO()V
+    value = Lcom/android/settings_ex/wfd/Wfd_Certification;->stopAutoGO()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wfd/Wfd_Certification;
+.field final synthetic this$0:Lcom/android/settings_ex/wfd/Wfd_Certification;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wfd/Wfd_Certification;)V
+.method constructor <init>(Lcom/android/settings_ex/wfd/Wfd_Certification;)V
     .locals 0
 
     .prologue
     .line 269
-    iput-object p1, p0, Lcom/android/settings/wfd/Wfd_Certification$8;->this$0:Lcom/android/settings/wfd/Wfd_Certification;
+    iput-object p1, p0, Lcom/android/settings_ex/wfd/Wfd_Certification$8;->this$0:Lcom/android/settings_ex/wfd/Wfd_Certification;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

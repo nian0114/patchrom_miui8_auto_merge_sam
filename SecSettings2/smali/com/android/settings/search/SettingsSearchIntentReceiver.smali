@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/search/SettingsSearchIntentReceiver;
+.class public Lcom/android/settings_ex/search/SettingsSearchIntentReceiver;
 .super Landroid/content/BroadcastReceiver;
 .source "SettingsSearchIntentReceiver.java"
 
@@ -18,7 +18,7 @@
     .line 24
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/search/SettingsSearchIntentReceiver;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/search/SettingsSearchIntentReceiver;->mContext:Landroid/content/Context;
 
     return-void
 .end method
@@ -96,7 +96,7 @@
 
     if-ge v1, v2, :cond_0
 
-    invoke-direct {p0}, Lcom/android/settings/search/SettingsSearchIntentReceiver;->isEncryptMode()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/search/SettingsSearchIntentReceiver;->isEncryptMode()Z
 
     move-result v1
 
@@ -116,17 +116,17 @@
 
     .line 44
     :cond_1
-    new-instance v0, Lcom/android/settings/search/ValueTrackerActivity;
+    new-instance v0, Lcom/android/settings_ex/search/ValueTrackerActivity;
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/android/settings/search/ValueTrackerActivity;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/search/ValueTrackerActivity;-><init>(Landroid/content/Context;)V
 
     .line 45
-    .local v0, "vta":Lcom/android/settings/search/ValueTrackerActivity;
-    invoke-virtual {v0}, Lcom/android/settings/search/ValueTrackerActivity;->initCategories()V
+    .local v0, "vta":Lcom/android/settings_ex/search/ValueTrackerActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/search/ValueTrackerActivity;->initCategories()V
 
     goto :goto_0
 .end method
@@ -150,7 +150,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/search/SettingsSearchIntentReceiver;->mContext:Landroid/content/Context;
+    iput-object v1, p0, Lcom/android/settings_ex/search/SettingsSearchIntentReceiver;->mContext:Landroid/content/Context;
 
     .line 31
     const-string v1, "SettingSearch/SearchIntentReceiver"
@@ -202,9 +202,9 @@
 
     .line 35
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/search/SettingsSearchIntentReceiver;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/search/SettingsSearchIntentReceiver;->mContext:Landroid/content/Context;
 
-    invoke-direct {p0, v1}, Lcom/android/settings/search/SettingsSearchIntentReceiver;->startTracker(Landroid/content/Context;)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/search/SettingsSearchIntentReceiver;->startTracker(Landroid/content/Context;)V
 
     .line 37
     :cond_1

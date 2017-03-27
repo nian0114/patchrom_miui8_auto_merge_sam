@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessibility/directaccess/DirectAccessFragment$3;
+.class Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment$3;
 .super Landroid/database/ContentObserver;
 .source "DirectAccessFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;
+    value = Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 84
-    iput-object p1, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessFragment$3;->this$0:Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment$3;->this$0:Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -42,10 +42,10 @@
     const/4 v2, 0x0
 
     .line 87
-    iget-object v0, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessFragment$3;->this$0:Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment$3;->this$0:Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;
 
-    # invokes: Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v0}, Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;->access$200(Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;->access$200(Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;)Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -58,20 +58,20 @@
     if-nez v0, :cond_0
 
     .line 88
-    iget-object v0, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessFragment$3;->this$0:Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment$3;->this$0:Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;
 
-    # getter for: Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;->mAccessControlSwitch:Landroid/preference/SwitchPreference;
-    invoke-static {v0}, Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;->access$300(Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;->mAccessControlSwitch:Landroid/preference/SwitchPreference;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;->access$300(Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;)Landroid/preference/SwitchPreference;
 
     move-result-object v0
 
     invoke-virtual {v0, v2}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 89
-    iget-object v0, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessFragment$3;->this$0:Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment$3;->this$0:Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;
 
-    # getter for: Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;->mAccessControlSwitch:Landroid/preference/SwitchPreference;
-    invoke-static {v0}, Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;->access$300(Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;->mAccessControlSwitch:Landroid/preference/SwitchPreference;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;->access$300(Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;)Landroid/preference/SwitchPreference;
 
     move-result-object v0
 
@@ -85,10 +85,10 @@
 
     .line 91
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessFragment$3;->this$0:Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment$3;->this$0:Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;
 
-    # getter for: Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;->mAccessControlSwitch:Landroid/preference/SwitchPreference;
-    invoke-static {v0}, Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;->access$300(Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;->mAccessControlSwitch:Landroid/preference/SwitchPreference;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;->access$300(Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;)Landroid/preference/SwitchPreference;
 
     move-result-object v0
 
@@ -97,10 +97,10 @@
     invoke-virtual {v0, v1}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 92
-    iget-object v0, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessFragment$3;->this$0:Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment$3;->this$0:Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;
 
-    # getter for: Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;->mAccessControlSwitch:Landroid/preference/SwitchPreference;
-    invoke-static {v0}, Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;->access$300(Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;->mAccessControlSwitch:Landroid/preference/SwitchPreference;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;->access$300(Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;)Landroid/preference/SwitchPreference;
 
     move-result-object v0
 

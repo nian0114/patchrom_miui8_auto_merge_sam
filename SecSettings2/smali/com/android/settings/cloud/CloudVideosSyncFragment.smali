@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/cloud/CloudVideosSyncFragment;
-.super Lcom/android/settings/cloud/SyncFragment;
+.class public Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;
+.super Lcom/android/settings_ex/cloud/SyncFragment;
 .source "CloudVideosSyncFragment.java"
 
 
@@ -15,7 +15,7 @@
     .line 26
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/android/settings/cloud/CloudVideosSyncFragment;->isVideoSyncAvailable:Z
+    sput-boolean v0, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->isVideoSyncAvailable:Z
 
     return-void
 .end method
@@ -25,7 +25,7 @@
 
     .prologue
     .line 20
-    invoke-direct {p0}, Lcom/android/settings/cloud/SyncFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/cloud/SyncFragment;-><init>()V
 
     return-void
 .end method
@@ -51,16 +51,16 @@
     .local v1, "i":Landroid/content/Intent;
     const-string v2, "videoSync"
 
-    iget-object v3, p0, Lcom/android/settings/cloud/CloudVideosSyncFragment;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v3}, Lcom/android/settings/widget/SwitchBar;->isChecked()Z
+    invoke-virtual {v3}, Lcom/android/settings_ex/widget/SwitchBar;->isChecked()Z
 
     move-result v3
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 95
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudVideosSyncFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -79,9 +79,9 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudVideosSyncFragment;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v4}, Lcom/android/settings/widget/SwitchBar;->isChecked()Z
+    invoke-virtual {v4}, Lcom/android/settings_ex/widget/SwitchBar;->isChecked()Z
 
     move-result v4
 
@@ -123,7 +123,7 @@
     .line 102
     const-string v2, "wifiOnlyValue"
 
-    iget-object v3, p0, Lcom/android/settings/cloud/CloudVideosSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v3}, Landroid/preference/CheckBoxPreference;->isChecked()Z
 
@@ -145,7 +145,7 @@
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
     .line 106
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudVideosSyncFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -164,7 +164,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudVideosSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v4}, Landroid/preference/CheckBoxPreference;->isChecked()Z
 
@@ -188,42 +188,42 @@
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudVideosSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
     if-nez v0, :cond_0
 
     .line 41
     const-string v0, "pref_wifi_only"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/cloud/CloudVideosSyncFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/CheckBoxPreference;
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudVideosSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
     .line 46
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudVideosSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v0, p0}, Landroid/preference/CheckBoxPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 47
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudVideosSyncFragment;->syncDescriptionPref:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->syncDescriptionPref:Landroid/preference/Preference;
 
     if-nez v0, :cond_1
 
     .line 48
     const-string v0, "sync_description"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/cloud/CloudVideosSyncFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/cloud/VideosSyncDescriptionPreference;
+    check-cast v0, Lcom/android/settings_ex/cloud/VideosSyncDescriptionPreference;
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudVideosSyncFragment;->syncDescriptionPref:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->syncDescriptionPref:Landroid/preference/Preference;
 
     .line 50
     :cond_1
@@ -236,15 +236,15 @@
 
     .prologue
     .line 30
-    invoke-super {p0, p1}, Lcom/android/settings/cloud/SyncFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/cloud/SyncFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 32
     const v0, 0x7f08002e
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/cloud/CloudVideosSyncFragment;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->addPreferencesFromResource(I)V
 
     .line 35
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudVideosSyncFragment;->getPreferencesReference()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->getPreferencesReference()V
 
     .line 36
     return-void
@@ -255,33 +255,33 @@
 
     .prologue
     .line 53
-    invoke-super {p0}, Lcom/android/settings/cloud/SyncFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/cloud/SyncFragment;->onResume()V
 
     .line 56
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudVideosSyncFragment;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getInstance()Lcom/android/settings/cloud/CloudSettings;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getInstance()Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/settings/cloud/CloudSettings;->isVideoSync()Z
+    invoke-virtual {v1}, Lcom/android/settings_ex/cloud/CloudSettings;->isVideoSync()Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 60
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudVideosSyncFragment;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 61
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudVideosSyncFragment;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 64
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudVideosSyncFragment;->updatePreferences()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->updatePreferences()V
 
     .line 65
     return-void
@@ -293,13 +293,13 @@
 
     .prologue
     .line 127
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getInstance()Lcom/android/settings/cloud/CloudSettings;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getInstance()Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v0
 
     const/4 v1, 0x2
 
-    invoke-virtual {v0, v1, p1}, Lcom/android/settings/cloud/CloudSettings;->setWifiOnly(IZ)V
+    invoke-virtual {v0, v1, p1}, Lcom/android/settings_ex/cloud/CloudSettings;->setWifiOnly(IZ)V
 
     .line 128
     return-void
@@ -311,21 +311,21 @@
 
     .prologue
     .line 117
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getInstance()Lcom/android/settings/cloud/CloudSettings;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getInstance()Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/android/settings/cloud/CloudSettings;->setVideoSync(Z)V
+    invoke-virtual {v0, p1}, Lcom/android/settings_ex/cloud/CloudSettings;->setVideoSync(Z)V
 
     .line 118
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudVideosSyncFragment;->syncDescriptionPref:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->syncDescriptionPref:Landroid/preference/Preference;
 
-    check-cast v0, Lcom/android/settings/cloud/VideosSyncDescriptionPreference;
+    check-cast v0, Lcom/android/settings_ex/cloud/VideosSyncDescriptionPreference;
 
-    invoke-virtual {v0, p1}, Lcom/android/settings/cloud/VideosSyncDescriptionPreference;->showDivider(Z)V
+    invoke-virtual {v0, p1}, Lcom/android/settings_ex/cloud/VideosSyncDescriptionPreference;->showDivider(Z)V
 
     .line 119
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudVideosSyncFragment;->updatePreferences()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->updatePreferences()V
 
     .line 120
     return-void
@@ -336,57 +336,57 @@
 
     .prologue
     .line 69
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudVideosSyncFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
     .line 71
     .local v0, "mPreferenceScreen":Landroid/preference/PreferenceScreen;
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getInstance()Lcom/android/settings/cloud/CloudSettings;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getInstance()Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudVideosSyncFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/cloud/CloudSettings;->isPhoneModel(Landroid/content/Context;)Z
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/cloud/CloudSettings;->isPhoneModel(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 72
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getInstance()Lcom/android/settings/cloud/CloudSettings;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getInstance()Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/settings/cloud/CloudSettings;->isVideoSync()Z
+    invoke-virtual {v1}, Lcom/android/settings_ex/cloud/CloudSettings;->isVideoSync()Z
 
     move-result v1
 
-    sput-boolean v1, Lcom/android/settings/cloud/CloudVideosSyncFragment;->isVideoSyncAvailable:Z
+    sput-boolean v1, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->isVideoSyncAvailable:Z
 
     .line 74
-    sget-boolean v1, Lcom/android/settings/cloud/CloudVideosSyncFragment;->isVideoSyncAvailable:Z
+    sget-boolean v1, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->isVideoSyncAvailable:Z
 
     if-eqz v1, :cond_0
 
     .line 75
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudVideosSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->addPreference(Landroid/preference/Preference;)Z
 
     .line 76
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudVideosSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getInstance()Lcom/android/settings/cloud/CloudSettings;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getInstance()Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v2
 
     const/4 v3, 0x2
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/cloud/CloudSettings;->isWifiOnly(I)Z
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/cloud/CloudSettings;->isWifiOnly(I)Z
 
     move-result v2
 
@@ -398,7 +398,7 @@
 
     .line 78
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudVideosSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
@@ -406,7 +406,7 @@
 
     .line 81
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudVideosSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiSnsSetupWizardDialog$3;
+.class Lcom/android/settings_ex/wifi/WifiSnsSetupWizardDialog$3;
 .super Ljava/lang/Object;
 .source "WifiSnsSetupWizardDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSnsSetupWizardDialog;->makeWifiSnsSetupWizardDialog()V
+    value = Lcom/android/settings_ex/wifi/WifiSnsSetupWizardDialog;->makeWifiSnsSetupWizardDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSnsSetupWizardDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSnsSetupWizardDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSnsSetupWizardDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSnsSetupWizardDialog;)V
     .locals 0
 
     .prologue
     .line 113
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSnsSetupWizardDialog$3;->this$0:Lcom/android/settings/wifi/WifiSnsSetupWizardDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSnsSetupWizardDialog$3;->this$0:Lcom/android/settings_ex/wifi/WifiSnsSetupWizardDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,8 +46,8 @@
     const/4 v3, 0x0
 
     .line 116
-    # getter for: Lcom/android/settings/wifi/WifiSnsSetupWizardDialog;->DBG:Z
-    invoke-static {}, Lcom/android/settings/wifi/WifiSnsSetupWizardDialog;->access$100()Z
+    # getter for: Lcom/android/settings_ex/wifi/WifiSnsSetupWizardDialog;->DBG:Z
+    invoke-static {}, Lcom/android/settings_ex/wifi/WifiSnsSetupWizardDialog;->access$100()Z
 
     move-result v0
 
@@ -82,8 +82,8 @@
     if-ne p2, v0, :cond_2
 
     .line 118
-    # getter for: Lcom/android/settings/wifi/WifiSnsSetupWizardDialog;->DBG:Z
-    invoke-static {}, Lcom/android/settings/wifi/WifiSnsSetupWizardDialog;->access$100()Z
+    # getter for: Lcom/android/settings_ex/wifi/WifiSnsSetupWizardDialog;->DBG:Z
+    invoke-static {}, Lcom/android/settings_ex/wifi/WifiSnsSetupWizardDialog;->access$100()Z
 
     move-result v0
 
@@ -97,17 +97,17 @@
 
     .line 119
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSnsSetupWizardDialog$3;->this$0:Lcom/android/settings/wifi/WifiSnsSetupWizardDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSnsSetupWizardDialog$3;->this$0:Lcom/android/settings_ex/wifi/WifiSnsSetupWizardDialog;
 
-    # invokes: Lcom/android/settings/wifi/WifiSnsSetupWizardDialog;->setPreferenceValue(Z)V
-    invoke-static {v0, v3}, Lcom/android/settings/wifi/WifiSnsSetupWizardDialog;->access$200(Lcom/android/settings/wifi/WifiSnsSetupWizardDialog;Z)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiSnsSetupWizardDialog;->setPreferenceValue(Z)V
+    invoke-static {v0, v3}, Lcom/android/settings_ex/wifi/WifiSnsSetupWizardDialog;->access$200(Lcom/android/settings_ex/wifi/WifiSnsSetupWizardDialog;Z)V
 
     .line 120
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSnsSetupWizardDialog$3;->this$0:Lcom/android/settings/wifi/WifiSnsSetupWizardDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSnsSetupWizardDialog$3;->this$0:Lcom/android/settings_ex/wifi/WifiSnsSetupWizardDialog;
 
     const-string v1, "SETUPWIZARD_OFF"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/wifi/WifiSnsSetupWizardDialog;->sendGSIMdata(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/wifi/WifiSnsSetupWizardDialog;->sendGSIMdata(Ljava/lang/String;)V
 
     .line 121
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V

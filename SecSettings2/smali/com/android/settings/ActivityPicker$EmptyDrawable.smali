@@ -1,11 +1,11 @@
-.class Lcom/android/settings/ActivityPicker$EmptyDrawable;
+.class Lcom/android/settings_ex/ActivityPicker$EmptyDrawable;
 .super Landroid/graphics/drawable/Drawable;
 .source "ActivityPicker.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/ActivityPicker;
+    value = Lcom/android/settings_ex/ActivityPicker;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -31,10 +31,10 @@
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
     .line 478
-    iput p1, p0, Lcom/android/settings/ActivityPicker$EmptyDrawable;->mWidth:I
+    iput p1, p0, Lcom/android/settings_ex/ActivityPicker$EmptyDrawable;->mWidth:I
 
     .line 479
-    iput p2, p0, Lcom/android/settings/ActivityPicker$EmptyDrawable;->mHeight:I
+    iput p2, p0, Lcom/android/settings_ex/ActivityPicker$EmptyDrawable;->mHeight:I
 
     .line 480
     return-void
@@ -56,7 +56,7 @@
 
     .prologue
     .line 489
-    iget v0, p0, Lcom/android/settings/ActivityPicker$EmptyDrawable;->mHeight:I
+    iget v0, p0, Lcom/android/settings_ex/ActivityPicker$EmptyDrawable;->mHeight:I
 
     return v0
 .end method
@@ -66,7 +66,7 @@
 
     .prologue
     .line 484
-    iget v0, p0, Lcom/android/settings/ActivityPicker$EmptyDrawable;->mWidth:I
+    iget v0, p0, Lcom/android/settings_ex/ActivityPicker$EmptyDrawable;->mWidth:I
 
     return v0
 .end method
@@ -76,7 +76,7 @@
 
     .prologue
     .line 499
-    iget v0, p0, Lcom/android/settings/ActivityPicker$EmptyDrawable;->mHeight:I
+    iget v0, p0, Lcom/android/settings_ex/ActivityPicker$EmptyDrawable;->mHeight:I
 
     return v0
 .end method
@@ -86,7 +86,7 @@
 
     .prologue
     .line 494
-    iget v0, p0, Lcom/android/settings/ActivityPicker$EmptyDrawable;->mWidth:I
+    iget v0, p0, Lcom/android/settings_ex/ActivityPicker$EmptyDrawable;->mWidth:I
 
     return v0
 .end method

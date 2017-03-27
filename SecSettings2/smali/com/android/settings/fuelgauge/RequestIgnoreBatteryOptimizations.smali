@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;
+.class public Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;
 .super Lcom/android/internal/app/AlertActivity;
 .source "RequestIgnoreBatteryOptimizations.java"
 
@@ -41,9 +41,9 @@
     .line 106
     :pswitch_0
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->mDeviceIdleService:Landroid/os/IDeviceIdleController;
+    iget-object v1, p0, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->mDeviceIdleService:Landroid/os/IDeviceIdleController;
 
-    iget-object v2, p0, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->mPackageName:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->mPackageName:Ljava/lang/String;
 
     invoke-interface {v1, v2}, Landroid/os/IDeviceIdleController;->addPowerSaveWhitelistApp(Ljava/lang/String;)V
     :try_end_0
@@ -53,7 +53,7 @@
     :goto_1
     const/4 v1, -0x1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->setResult(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->setResult(I)V
 
     goto :goto_0
 
@@ -101,10 +101,10 @@
 
     move-result-object v5
 
-    iput-object v5, p0, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->mDeviceIdleService:Landroid/os/IDeviceIdleController;
+    iput-object v5, p0, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->mDeviceIdleService:Landroid/os/IDeviceIdleController;
 
     .line 51
-    invoke-virtual {p0}, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->getIntent()Landroid/content/Intent;
 
     move-result-object v5
 
@@ -129,7 +129,7 @@
 
     move-result-object v6
 
-    invoke-virtual {p0}, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->getIntent()Landroid/content/Intent;
 
     move-result-object v7
 
@@ -144,7 +144,7 @@
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 55
-    invoke-virtual {p0}, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->finish()V
 
     .line 99
     :goto_0
@@ -156,10 +156,10 @@
 
     move-result-object v5
 
-    iput-object v5, p0, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->mPackageName:Ljava/lang/String;
+    iput-object v5, p0, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->mPackageName:Ljava/lang/String;
 
     .line 59
-    iget-object v5, p0, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->mPackageName:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->mPackageName:Ljava/lang/String;
 
     if-nez v5, :cond_1
 
@@ -176,7 +176,7 @@
 
     move-result-object v6
 
-    invoke-virtual {p0}, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->getIntent()Landroid/content/Intent;
 
     move-result-object v7
 
@@ -191,7 +191,7 @@
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 62
-    invoke-virtual {p0}, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->finish()V
 
     goto :goto_0
 
@@ -199,7 +199,7 @@
     :cond_1
     const-class v5, Landroid/os/PowerManager;
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -207,7 +207,7 @@
 
     .line 67
     .local v4, "power":Landroid/os/PowerManager;
-    iget-object v5, p0, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->mPackageName:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Landroid/os/PowerManager;->isIgnoringBatteryOptimizations(Ljava/lang/String;)Z
 
@@ -228,7 +228,7 @@
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->mPackageName:Ljava/lang/String;
+    iget-object v7, p0, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -241,18 +241,18 @@
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 69
-    invoke-virtual {p0}, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->finish()V
 
     goto :goto_0
 
     .line 75
     :cond_2
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->mPackageName:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->mPackageName:Ljava/lang/String;
 
     const/4 v7, 0x0
 
@@ -264,13 +264,13 @@
 
     .line 82
     .local v0, "ai":Landroid/content/pm/ApplicationInfo;
-    invoke-virtual {p0}, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v5
 
     const-string v6, "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
 
-    iget-object v7, p0, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->mPackageName:Ljava/lang/String;
+    iget-object v7, p0, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v5, v6, v7}, Landroid/content/pm/PackageManager;->checkPermission(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -291,7 +291,7 @@
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->mPackageName:Ljava/lang/String;
+    iget-object v7, p0, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -316,7 +316,7 @@
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 87
-    invoke-virtual {p0}, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->finish()V
 
     goto/16 :goto_0
 
@@ -339,7 +339,7 @@
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->mPackageName:Ljava/lang/String;
+    iget-object v7, p0, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -352,7 +352,7 @@
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 78
-    invoke-virtual {p0}, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->finish()V
 
     goto/16 :goto_0
 
@@ -360,13 +360,13 @@
     .end local v2    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .restart local v0    # "ai":Landroid/content/pm/ApplicationInfo;
     :cond_3
-    iget-object v3, p0, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v3, p0, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     .line 92
     .local v3, "p":Lcom/android/internal/app/AlertController$AlertParams;
     const v5, 0x7f0e0f33
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v5
 
@@ -379,7 +379,7 @@
 
     new-array v6, v6, [Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v7
 
@@ -389,7 +389,7 @@
 
     aput-object v7, v6, v8
 
-    invoke-virtual {p0, v5, v6}, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v5, v6}, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -398,7 +398,7 @@
     .line 94
     const v5, 0x7f0e00b8
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v5
 
@@ -407,7 +407,7 @@
     .line 95
     const v5, 0x7f0e00b9
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v5
 
@@ -420,7 +420,7 @@
     iput-object p0, v3, Lcom/android/internal/app/AlertController$AlertParams;->mNegativeButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
     .line 98
-    invoke-virtual {p0}, Lcom/android/settings/fuelgauge/RequestIgnoreBatteryOptimizations;->setupAlert()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fuelgauge/RequestIgnoreBatteryOptimizations;->setupAlert()V
 
     goto/16 :goto_0
 .end method

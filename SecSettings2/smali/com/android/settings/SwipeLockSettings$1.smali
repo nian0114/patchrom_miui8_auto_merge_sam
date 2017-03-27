@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/SwipeLockSettings$1;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/SwipeLockSettings$1;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "SwipeLockSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/SwipeLockSettings;
+    value = Lcom/android/settings_ex/SwipeLockSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 144
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -57,7 +57,7 @@
 
     .line 153
     .local v1, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v2, Lcom/android/settings/SwipeLockSettings;
+    const-class v2, Lcom/android/settings_ex/SwipeLockSettings;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

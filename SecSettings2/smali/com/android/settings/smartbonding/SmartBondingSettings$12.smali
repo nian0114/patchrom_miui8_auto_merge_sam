@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/smartbonding/SmartBondingSettings$12;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/smartbonding/SmartBondingSettings$12;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "SmartBondingSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/smartbonding/SmartBondingSettings;
+    value = Lcom/android/settings_ex/smartbonding/SmartBondingSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 445
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -57,7 +57,7 @@
 
     .line 452
     .local v1, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v2, Lcom/android/settings/smartbonding/SmartBondingSettings;
+    const-class v2, Lcom/android/settings_ex/smartbonding/SmartBondingSettings;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -66,7 +66,7 @@
     iput-object v2, v1, Landroid/provider/SearchIndexableResource;->className:Ljava/lang/String;
 
     .line 453
-    sget v2, Lcom/android/settings/search/SearchIndexableResources;->NO_DATA_RES_ID:I
+    sget v2, Lcom/android/settings_ex/search/SearchIndexableResources;->NO_DATA_RES_ID:I
 
     iput v2, v1, Landroid/provider/SearchIndexableResource;->xmlResId:I
 

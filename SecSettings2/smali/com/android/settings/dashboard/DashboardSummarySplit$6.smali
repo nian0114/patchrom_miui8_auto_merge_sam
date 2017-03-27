@@ -1,4 +1,4 @@
-.class Lcom/android/settings/dashboard/DashboardSummarySplit$6;
+.class Lcom/android/settings_ex/dashboard/DashboardSummarySplit$6;
 .super Ljava/lang/Object;
 .source "DashboardSummarySplit.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/dashboard/DashboardSummarySplit;->initializeLayoutBySplitBar()V
+    value = Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->initializeLayoutBySplitBar()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/dashboard/DashboardSummarySplit;
+.field final synthetic this$0:Lcom/android/settings_ex/dashboard/DashboardSummarySplit;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/dashboard/DashboardSummarySplit;)V
+.method constructor <init>(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;)V
     .locals 0
 
     .prologue
     .line 490
-    iput-object p1, p0, Lcom/android/settings/dashboard/DashboardSummarySplit$6;->this$0:Lcom/android/settings/dashboard/DashboardSummarySplit;
+    iput-object p1, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$6;->this$0:Lcom/android/settings_ex/dashboard/DashboardSummarySplit;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -54,23 +54,23 @@
 
     .line 497
     .local v0, "rightLayoutStartPosition":F
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit$6;->this$0:Lcom/android/settings/dashboard/DashboardSummarySplit;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$6;->this$0:Lcom/android/settings_ex/dashboard/DashboardSummarySplit;
 
-    invoke-virtual {v2}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isRTL(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isRTL(Landroid/content/Context;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
     .line 498
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit$6;->this$0:Lcom/android/settings/dashboard/DashboardSummarySplit;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$6;->this$0:Lcom/android/settings_ex/dashboard/DashboardSummarySplit;
 
-    # getter for: Lcom/android/settings/dashboard/DashboardSummarySplit;->mHeaderLayout:Landroid/widget/LinearLayout;
-    invoke-static {v2}, Lcom/android/settings/dashboard/DashboardSummarySplit;->access$300(Lcom/android/settings/dashboard/DashboardSummarySplit;)Landroid/widget/LinearLayout;
+    # getter for: Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mHeaderLayout:Landroid/widget/LinearLayout;
+    invoke-static {v2}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->access$300(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;)Landroid/widget/LinearLayout;
 
     move-result-object v2
 
@@ -80,20 +80,20 @@
 
     .line 503
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit$6;->this$0:Lcom/android/settings/dashboard/DashboardSummarySplit;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$6;->this$0:Lcom/android/settings_ex/dashboard/DashboardSummarySplit;
 
-    # getter for: Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
-    invoke-static {v2}, Lcom/android/settings/dashboard/DashboardSummarySplit;->access$500(Lcom/android/settings/dashboard/DashboardSummarySplit;)Landroid/view/View;
+    # getter for: Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    invoke-static {v2}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->access$500(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;)Landroid/view/View;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
     .line 504
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit$6;->this$0:Lcom/android/settings/dashboard/DashboardSummarySplit;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$6;->this$0:Lcom/android/settings_ex/dashboard/DashboardSummarySplit;
 
-    # getter for: Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
-    invoke-static {v2}, Lcom/android/settings/dashboard/DashboardSummarySplit;->access$500(Lcom/android/settings/dashboard/DashboardSummarySplit;)Landroid/view/View;
+    # getter for: Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    invoke-static {v2}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->access$500(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;)Landroid/view/View;
 
     move-result-object v2
 
@@ -120,10 +120,10 @@
 
     .line 508
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit$6;->this$0:Lcom/android/settings/dashboard/DashboardSummarySplit;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$6;->this$0:Lcom/android/settings_ex/dashboard/DashboardSummarySplit;
 
-    # getter for: Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
-    invoke-static {v2}, Lcom/android/settings/dashboard/DashboardSummarySplit;->access$500(Lcom/android/settings/dashboard/DashboardSummarySplit;)Landroid/view/View;
+    # getter for: Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    invoke-static {v2}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->access$500(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;)Landroid/view/View;
 
     move-result-object v2
 
@@ -138,10 +138,10 @@
     if-eqz v2, :cond_1
 
     .line 509
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit$6;->this$0:Lcom/android/settings/dashboard/DashboardSummarySplit;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$6;->this$0:Lcom/android/settings_ex/dashboard/DashboardSummarySplit;
 
-    # getter for: Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
-    invoke-static {v2}, Lcom/android/settings/dashboard/DashboardSummarySplit;->access$500(Lcom/android/settings/dashboard/DashboardSummarySplit;)Landroid/view/View;
+    # getter for: Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    invoke-static {v2}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->access$500(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;)Landroid/view/View;
 
     move-result-object v2
 
@@ -154,10 +154,10 @@
 
     .line 500
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit$6;->this$0:Lcom/android/settings/dashboard/DashboardSummarySplit;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$6;->this$0:Lcom/android/settings_ex/dashboard/DashboardSummarySplit;
 
-    # getter for: Lcom/android/settings/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
-    invoke-static {v2}, Lcom/android/settings/dashboard/DashboardSummarySplit;->access$400(Lcom/android/settings/dashboard/DashboardSummarySplit;)Landroid/view/ViewGroup;
+    # getter for: Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
+    invoke-static {v2}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->access$400(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;)Landroid/view/ViewGroup;
 
     move-result-object v2
 

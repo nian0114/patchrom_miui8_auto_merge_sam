@@ -1,4 +1,4 @@
-.class Lcom/android/settings/ConfirmDeviceCredentialBaseActivity$1;
+.class Lcom/android/settings_ex/ConfirmDeviceCredentialBaseActivity$1;
 .super Ljava/lang/Object;
 .source "ConfirmDeviceCredentialBaseActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/ConfirmDeviceCredentialBaseActivity;
+    value = Lcom/android/settings_ex/ConfirmDeviceCredentialBaseActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/ConfirmDeviceCredentialBaseActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/ConfirmDeviceCredentialBaseActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/ConfirmDeviceCredentialBaseActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/ConfirmDeviceCredentialBaseActivity;)V
     .locals 0
 
     .prologue
     .line 106
-    iput-object p1, p0, Lcom/android/settings/ConfirmDeviceCredentialBaseActivity$1;->this$0:Lcom/android/settings/ConfirmDeviceCredentialBaseActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseActivity$1;->this$0:Lcom/android/settings_ex/ConfirmDeviceCredentialBaseActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +41,9 @@
 
     .prologue
     .line 109
-    iget-object v0, p0, Lcom/android/settings/ConfirmDeviceCredentialBaseActivity$1;->this$0:Lcom/android/settings/ConfirmDeviceCredentialBaseActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseActivity$1;->this$0:Lcom/android/settings_ex/ConfirmDeviceCredentialBaseActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/ConfirmDeviceCredentialBaseActivity;->onEnterAnimationComplete()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseActivity;->onEnterAnimationComplete()V
 
     .line 110
     return-void

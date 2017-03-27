@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/AccessibilitySettingsHearing$3;
+.class Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$3;
 .super Ljava/lang/Object;
 .source "AccessibilitySettingsHearing.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->onActivityCreated(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->onActivityCreated(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)V
     .locals 0
 
     .prologue
     .line 153
-    iput-object p1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$3;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$3;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -64,9 +64,9 @@
 
     .line 160
     :pswitch_0
-    iget-object v4, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$3;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$3;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
-    invoke-virtual {v4}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {v4}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v4
 
@@ -74,9 +74,9 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$3;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$3;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
-    invoke-virtual {v5}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getListView()Landroid/widget/ListView;
+    invoke-virtual {v5}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getListView()Landroid/widget/ListView;
 
     move-result-object v5
 
@@ -97,7 +97,7 @@
 
     const-string v4, "dispatchKeyEvent item is null"
 
-    invoke-static {v3, v4}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/BlockSettings$6;
+.class Lcom/android/settings_ex/BlockSettings$6;
 .super Ljava/lang/Object;
 .source "BlockSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/BlockSettings;->makeVideoCallBlockDialog(I)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/BlockSettings;->makeVideoCallBlockDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/BlockSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/BlockSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/BlockSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/BlockSettings;)V
     .locals 0
 
     .prologue
     .line 289
-    iput-object p1, p0, Lcom/android/settings/BlockSettings$6;->this$0:Lcom/android/settings/BlockSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/BlockSettings$6;->this$0:Lcom/android/settings_ex/BlockSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

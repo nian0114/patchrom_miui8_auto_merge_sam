@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;
+.class public Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;
 .super Ljava/lang/Object;
 .source "KddiHttpsUrlConnection.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection$RequestBodyPart;
+        Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection$RequestBodyPart;
     }
 .end annotation
 
@@ -25,13 +25,13 @@
 
     .prologue
     .line 24
-    const-class v0, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;
+    const-class v0, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
 
     return-void
 .end method
@@ -46,7 +46,7 @@
     .line 42
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->mIsSucceed:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->mIsSucceed:Z
 
     .line 186
     return-void
@@ -57,7 +57,7 @@
 
     .prologue
     .line 22
-    sget-object v0, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -139,7 +139,7 @@
     const/4 v6, 0x0
 
     .line 128
-    sget-object v7, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
 
     const-string v8, "process return body part()"
 
@@ -161,7 +161,7 @@
     if-eqz v7, :cond_0
 
     .line 130
-    sget-object v7, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
 
     const-string v8, "no response body part available property is 3"
 
@@ -183,7 +183,7 @@
 
     .line 135
     :cond_1
-    sget-object v7, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
 
     const-string v8, "no response body part available"
 
@@ -199,7 +199,7 @@
 
     .line 140
     .local v1, "messageType":B
-    sget-object v6, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -228,7 +228,7 @@
 
     .line 143
     .local v0, "entireMessageLength":S
-    sget-object v6, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -257,7 +257,7 @@
 
     .line 146
     .local v3, "serverStatusCode":I
-    sget-object v6, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -286,7 +286,7 @@
 
     .line 149
     .local v5, "serverTextLen":S
-    sget-object v6, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -316,7 +316,7 @@
     invoke-virtual {p0, v4}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
     .line 153
-    sget-object v6, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -357,7 +357,7 @@
 
     .line 157
     .local v2, "newSimLockPolicyFileBytes":[B
-    sget-object v6, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -382,7 +382,7 @@
     invoke-static {v6, v7}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 159
-    invoke-static {p0}, Lcom/android/settings/deviceinfo/simlockstatus/SimStatusUtils;->copyRemainingByteBuffer(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+    invoke-static {p0}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SimStatusUtils;->copyRemainingByteBuffer(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     move-result-object v6
 
@@ -395,7 +395,7 @@
 
     .prologue
     .line 163
-    sget-object v5, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
 
     const-string v6, "read input stream"
 
@@ -455,7 +455,7 @@
     const/4 v5, 0x0
 
     .line 180
-    invoke-static {v1}, Lcom/android/settings/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently(Ljava/io/Closeable;)V
+    invoke-static {v1}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently(Ljava/io/Closeable;)V
 
     .line 183
     .end local v3    # "e":Ljava/io/IOException;
@@ -475,7 +475,7 @@
     move-result-object v2
 
     .line 175
-    sget-object v5, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -505,7 +505,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 180
-    invoke-static {v1}, Lcom/android/settings/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently(Ljava/io/Closeable;)V
+    invoke-static {v1}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently(Ljava/io/Closeable;)V
 
     move-object v5, v2
 
@@ -517,7 +517,7 @@
     :catchall_0
     move-exception v5
 
-    invoke-static {v1}, Lcom/android/settings/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently(Ljava/io/Closeable;)V
+    invoke-static {v1}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently(Ljava/io/Closeable;)V
 
     throw v5
 .end method
@@ -529,7 +529,7 @@
 
     .prologue
     .line 110
-    iget-boolean v0, p0, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->mIsSucceed:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->mIsSucceed:Z
 
     return v0
 .end method
@@ -540,7 +540,7 @@
 
     .prologue
     .line 54
-    sget-object v10, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
+    sget-object v10, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
 
     const-string v11, "connect()"
 
@@ -606,7 +606,7 @@
     .line 68
     const-string v10, "Authorization"
 
-    invoke-static {}, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->getAuthorizationValue()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->getAuthorizationValue()Ljava/lang/String;
 
     move-result-object v11
 
@@ -615,7 +615,7 @@
     .line 70
     const-string v10, "User-Agent"
 
-    invoke-static {}, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->getUserAgentValue()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->getUserAgentValue()Ljava/lang/String;
 
     move-result-object v11
 
@@ -629,7 +629,7 @@
     invoke-virtual {v9, v10, v11}, Ljavax/net/ssl/HttpsURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 74
-    sget-object v10, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
+    sget-object v10, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
 
     const-string v11, "write request body"
 
@@ -651,7 +651,7 @@
     .end local v1    # "buffOutStream":Ljava/io/BufferedOutputStream;
     .local v2, "buffOutStream":Ljava/io/BufferedOutputStream;
     :try_start_1
-    invoke-static {p1}, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection$RequestBodyPart;->build(Landroid/content/Context;)[B
+    invoke-static {p1}, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection$RequestBodyPart;->build(Landroid/content/Context;)[B
 
     move-result-object v10
 
@@ -673,7 +673,7 @@
 
     .line 81
     .local v6, "responseMessage":Ljava/lang/String;
-    sget-object v10, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
+    sget-object v10, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
 
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -711,7 +711,7 @@
     if-ne v5, v10, :cond_2
 
     .line 84
-    sget-object v10, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
+    sget-object v10, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
 
     const-string v11, "check input stream"
 
@@ -722,13 +722,13 @@
 
     move-result-object v10
 
-    invoke-static {v10}, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->readInputStream(Ljava/io/InputStream;)Ljava/nio/ByteBuffer;
+    invoke-static {v10}, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->readInputStream(Ljava/io/InputStream;)Ljava/nio/ByteBuffer;
 
     move-result-object v4
 
     .line 86
     .local v4, "httpResponseBodyPart":Ljava/nio/ByteBuffer;
-    invoke-static {v4}, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->processResponseBodyPart(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+    invoke-static {v4}, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->processResponseBodyPart(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     move-result-object v7
 
@@ -736,7 +736,7 @@
     if-eqz v7, :cond_0
 
     .line 89
-    sget-object v10, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
+    sget-object v10, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
 
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -767,11 +767,11 @@
 
     move-result v10
 
-    iput-boolean v10, p0, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->mIsSucceed:Z
+    iput-boolean v10, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->mIsSucceed:Z
 
     .line 92
     :cond_0
-    sget-object v10, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
+    sget-object v10, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
 
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -783,7 +783,7 @@
 
     move-result-object v11
 
-    iget-boolean v12, p0, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->mIsSucceed:Z
+    iget-boolean v12, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->mIsSucceed:Z
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -808,7 +808,7 @@
 
     .line 103
     :cond_1
-    invoke-static {v2}, Lcom/android/settings/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently(Ljava/io/Closeable;)V
+    invoke-static {v2}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently(Ljava/io/Closeable;)V
 
     move-object v1, v2
 
@@ -829,7 +829,7 @@
     .restart local v8    # "url":Ljava/net/URL;
     :cond_2
     :try_start_2
-    sget-object v10, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
+    sget-object v10, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->TAG:Ljava/lang/String;
 
     const-string v11, "check error stream"
 
@@ -840,7 +840,7 @@
 
     move-result-object v10
 
-    invoke-static {v10}, Lcom/android/settings/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->readInputStream(Ljava/io/InputStream;)Ljava/nio/ByteBuffer;
+    invoke-static {v10}, Lcom/android/settings_ex/deviceinfo/simlockstatus/KddiHttpsUrlConnection;->readInputStream(Ljava/io/InputStream;)Ljava/nio/ByteBuffer;
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
@@ -874,7 +874,7 @@
 
     .line 103
     :cond_3
-    invoke-static {v1}, Lcom/android/settings/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently(Ljava/io/Closeable;)V
+    invoke-static {v1}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently(Ljava/io/Closeable;)V
 
     goto :goto_1
 
@@ -891,7 +891,7 @@
 
     .line 103
     :cond_4
-    invoke-static {v1}, Lcom/android/settings/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently(Ljava/io/Closeable;)V
+    invoke-static {v1}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently(Ljava/io/Closeable;)V
 
     throw v10
 

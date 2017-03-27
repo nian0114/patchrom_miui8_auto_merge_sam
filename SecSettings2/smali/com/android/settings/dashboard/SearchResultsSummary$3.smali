@@ -1,4 +1,4 @@
-.class Lcom/android/settings/dashboard/SearchResultsSummary$3;
+.class Lcom/android/settings_ex/dashboard/SearchResultsSummary$3;
 .super Ljava/lang/Object;
 .source "SearchResultsSummary.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/dashboard/SearchResultsSummary;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    value = Lcom/android/settings_ex/dashboard/SearchResultsSummary;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/dashboard/SearchResultsSummary;
+.field final synthetic this$0:Lcom/android/settings_ex/dashboard/SearchResultsSummary;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/dashboard/SearchResultsSummary;)V
+.method constructor <init>(Lcom/android/settings_ex/dashboard/SearchResultsSummary;)V
     .locals 0
 
     .prologue
     .line 301
-    iput-object p1, p0, Lcom/android/settings/dashboard/SearchResultsSummary$3;->this$0:Lcom/android/settings/dashboard/SearchResultsSummary;
+    iput-object p1, p0, Lcom/android/settings_ex/dashboard/SearchResultsSummary$3;->this$0:Lcom/android/settings_ex/dashboard/SearchResultsSummary;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -65,16 +65,16 @@
     :cond_1
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/android/settings/dashboard/SearchResultsSummary$3;->this$0:Lcom/android/settings/dashboard/SearchResultsSummary;
+    iget-object v5, v0, Lcom/android/settings_ex/dashboard/SearchResultsSummary$3;->this$0:Lcom/android/settings_ex/dashboard/SearchResultsSummary;
 
-    # getter for: Lcom/android/settings/dashboard/SearchResultsSummary;->mResultsAdapter:Lcom/android/settings/dashboard/SearchResultsSummary$SearchResultsAdapter;
-    invoke-static {v5}, Lcom/android/settings/dashboard/SearchResultsSummary;->access$900(Lcom/android/settings/dashboard/SearchResultsSummary;)Lcom/android/settings/dashboard/SearchResultsSummary$SearchResultsAdapter;
+    # getter for: Lcom/android/settings_ex/dashboard/SearchResultsSummary;->mResultsAdapter:Lcom/android/settings_ex/dashboard/SearchResultsSummary$SearchResultsAdapter;
+    invoke-static {v5}, Lcom/android/settings_ex/dashboard/SearchResultsSummary;->access$900(Lcom/android/settings_ex/dashboard/SearchResultsSummary;)Lcom/android/settings_ex/dashboard/SearchResultsSummary$SearchResultsAdapter;
 
     move-result-object v5
 
     move/from16 v0, p3
 
-    invoke-virtual {v5, v0}, Lcom/android/settings/dashboard/SearchResultsSummary$SearchResultsAdapter;->getItemId(I)J
+    invoke-virtual {v5, v0}, Lcom/android/settings_ex/dashboard/SearchResultsSummary$SearchResultsAdapter;->getItemId(I)J
 
     move-result-wide v22
 
@@ -87,10 +87,10 @@
     .line 319
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/android/settings/dashboard/SearchResultsSummary$3;->this$0:Lcom/android/settings/dashboard/SearchResultsSummary;
+    iget-object v5, v0, Lcom/android/settings_ex/dashboard/SearchResultsSummary$3;->this$0:Lcom/android/settings_ex/dashboard/SearchResultsSummary;
 
-    # getter for: Lcom/android/settings/dashboard/SearchResultsSummary;->mSearchView:Landroid/widget/SearchView;
-    invoke-static {v5}, Lcom/android/settings/dashboard/SearchResultsSummary;->access$800(Lcom/android/settings/dashboard/SearchResultsSummary;)Landroid/widget/SearchView;
+    # getter for: Lcom/android/settings_ex/dashboard/SearchResultsSummary;->mSearchView:Landroid/widget/SearchView;
+    invoke-static {v5}, Lcom/android/settings_ex/dashboard/SearchResultsSummary;->access$800(Lcom/android/settings_ex/dashboard/SearchResultsSummary;)Landroid/widget/SearchView;
 
     move-result-object v5
 
@@ -99,10 +99,10 @@
     .line 320
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/android/settings/dashboard/SearchResultsSummary$3;->this$0:Lcom/android/settings/dashboard/SearchResultsSummary;
+    iget-object v5, v0, Lcom/android/settings_ex/dashboard/SearchResultsSummary$3;->this$0:Lcom/android/settings_ex/dashboard/SearchResultsSummary;
 
-    # getter for: Lcom/android/settings/dashboard/SearchResultsSummary;->mSearchView:Landroid/widget/SearchView;
-    invoke-static {v5}, Lcom/android/settings/dashboard/SearchResultsSummary;->access$800(Lcom/android/settings/dashboard/SearchResultsSummary;)Landroid/widget/SearchView;
+    # getter for: Lcom/android/settings_ex/dashboard/SearchResultsSummary;->mSearchView:Landroid/widget/SearchView;
+    invoke-static {v5}, Lcom/android/settings_ex/dashboard/SearchResultsSummary;->access$800(Lcom/android/settings_ex/dashboard/SearchResultsSummary;)Landroid/widget/SearchView;
 
     move-result-object v5
 
@@ -112,16 +112,16 @@
     :cond_2
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/android/settings/dashboard/SearchResultsSummary$3;->this$0:Lcom/android/settings/dashboard/SearchResultsSummary;
+    iget-object v5, v0, Lcom/android/settings_ex/dashboard/SearchResultsSummary$3;->this$0:Lcom/android/settings_ex/dashboard/SearchResultsSummary;
 
-    # getter for: Lcom/android/settings/dashboard/SearchResultsSummary;->mResultsAdapter:Lcom/android/settings/dashboard/SearchResultsSummary$SearchResultsAdapter;
-    invoke-static {v5}, Lcom/android/settings/dashboard/SearchResultsSummary;->access$900(Lcom/android/settings/dashboard/SearchResultsSummary;)Lcom/android/settings/dashboard/SearchResultsSummary$SearchResultsAdapter;
+    # getter for: Lcom/android/settings_ex/dashboard/SearchResultsSummary;->mResultsAdapter:Lcom/android/settings_ex/dashboard/SearchResultsSummary$SearchResultsAdapter;
+    invoke-static {v5}, Lcom/android/settings_ex/dashboard/SearchResultsSummary;->access$900(Lcom/android/settings_ex/dashboard/SearchResultsSummary;)Lcom/android/settings_ex/dashboard/SearchResultsSummary$SearchResultsAdapter;
 
     move-result-object v5
 
     move/from16 v0, p3
 
-    invoke-virtual {v5, v0}, Lcom/android/settings/dashboard/SearchResultsSummary$SearchResultsAdapter;->getItem(I)Ljava/lang/Object;
+    invoke-virtual {v5, v0}, Lcom/android/settings_ex/dashboard/SearchResultsSummary$SearchResultsAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object v16
 
@@ -132,31 +132,31 @@
     move-object/from16 v18, v16
 
     .line 325
-    check-cast v18, Lcom/android/settings/dashboard/SearchResultsSummary$SearchResult;
+    check-cast v18, Lcom/android/settings_ex/dashboard/SearchResultsSummary$SearchResult;
 
     .line 327
-    .local v18, "result":Lcom/android/settings/dashboard/SearchResultsSummary$SearchResult;
+    .local v18, "result":Lcom/android/settings_ex/dashboard/SearchResultsSummary$SearchResult;
     move-object/from16 v0, v18
 
-    iget-object v3, v0, Lcom/android/settings/dashboard/SearchResultsSummary$SearchResult;->className:Ljava/lang/String;
+    iget-object v3, v0, Lcom/android/settings_ex/dashboard/SearchResultsSummary$SearchResult;->className:Ljava/lang/String;
 
     .line 328
     .local v3, "className":Ljava/lang/String;
     move-object/from16 v0, v18
 
-    iget-object v8, v0, Lcom/android/settings/dashboard/SearchResultsSummary$SearchResult;->screenTitle:Ljava/lang/String;
+    iget-object v8, v0, Lcom/android/settings_ex/dashboard/SearchResultsSummary$SearchResult;->screenTitle:Ljava/lang/String;
 
     .line 329
     .local v8, "screenTitle":Ljava/lang/String;
     move-object/from16 v0, v18
 
-    iget-object v10, v0, Lcom/android/settings/dashboard/SearchResultsSummary$SearchResult;->action:Ljava/lang/String;
+    iget-object v10, v0, Lcom/android/settings_ex/dashboard/SearchResultsSummary$SearchResult;->action:Ljava/lang/String;
 
     .line 330
     .local v10, "action":Ljava/lang/String;
     move-object/from16 v0, v18
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/SearchResultsSummary$SearchResult;->key:Ljava/lang/String;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/SearchResultsSummary$SearchResult;->key:Ljava/lang/String;
 
     move-object/from16 v17, v0
 
@@ -164,17 +164,17 @@
     .local v17, "key":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/android/settings/dashboard/SearchResultsSummary$3;->this$0:Lcom/android/settings/dashboard/SearchResultsSummary;
+    iget-object v5, v0, Lcom/android/settings_ex/dashboard/SearchResultsSummary$3;->this$0:Lcom/android/settings_ex/dashboard/SearchResultsSummary;
 
-    invoke-virtual {v5}, Lcom/android/settings/dashboard/SearchResultsSummary;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v5}, Lcom/android/settings_ex/dashboard/SearchResultsSummary;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/SettingsActivity;
+    check-cast v2, Lcom/android/settings_ex/SettingsActivity;
 
     .line 333
-    .local v2, "sa":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v2}, Lcom/android/settings/SettingsActivity;->needToRevertToInitialFragment()V
+    .local v2, "sa":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v2}, Lcom/android/settings_ex/SettingsActivity;->needToRevertToInitialFragment()V
 
     .line 335
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -185,7 +185,7 @@
 
     move-object/from16 v0, v18
 
-    iget-object v5, v0, Lcom/android/settings/dashboard/SearchResultsSummary$SearchResult;->targetCls:Ljava/lang/String;
+    iget-object v5, v0, Lcom/android/settings_ex/dashboard/SearchResultsSummary$SearchResult;->targetCls:Ljava/lang/String;
 
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -218,7 +218,7 @@
 
     .line 341
     .local v7, "screenTitleRes":I
-    const-class v5, Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;
+    const-class v5, Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;
 
     invoke-virtual {v5}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -235,7 +235,7 @@
 
     .line 345
     :cond_3
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v5
 
@@ -246,7 +246,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v2 .. v8}, Lcom/android/settings/Utils;->startWithFragmentBySearch(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Fragment;IILjava/lang/CharSequence;)V
+    invoke-static/range {v2 .. v8}, Lcom/android/settings_ex/Utils;->startWithFragmentBySearch(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Fragment;IILjava/lang/CharSequence;)V
 
     .line 401
     .end local v4    # "args":Landroid/os/Bundle;
@@ -254,9 +254,9 @@
     :goto_1
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/android/settings/dashboard/SearchResultsSummary$3;->this$0:Lcom/android/settings/dashboard/SearchResultsSummary;
+    iget-object v5, v0, Lcom/android/settings_ex/dashboard/SearchResultsSummary$3;->this$0:Lcom/android/settings_ex/dashboard/SearchResultsSummary;
 
-    invoke-virtual {v5}, Lcom/android/settings/dashboard/SearchResultsSummary;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v5}, Lcom/android/settings_ex/dashboard/SearchResultsSummary;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -266,19 +266,19 @@
 
     move-object/from16 v0, v21
 
-    invoke-static {v5, v6, v0}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6, v0}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 402
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/android/settings/dashboard/SearchResultsSummary$3;->this$0:Lcom/android/settings/dashboard/SearchResultsSummary;
+    iget-object v5, v0, Lcom/android/settings_ex/dashboard/SearchResultsSummary$3;->this$0:Lcom/android/settings_ex/dashboard/SearchResultsSummary;
 
     move-object/from16 v0, v18
 
-    iget-object v6, v0, Lcom/android/settings/dashboard/SearchResultsSummary$SearchResult;->title:Ljava/lang/String;
+    iget-object v6, v0, Lcom/android/settings_ex/dashboard/SearchResultsSummary$SearchResult;->title:Ljava/lang/String;
 
-    # invokes: Lcom/android/settings/dashboard/SearchResultsSummary;->saveQueryToDatabase(Ljava/lang/String;)V
-    invoke-static {v5, v6}, Lcom/android/settings/dashboard/SearchResultsSummary;->access$1000(Lcom/android/settings/dashboard/SearchResultsSummary;Ljava/lang/String;)V
+    # invokes: Lcom/android/settings_ex/dashboard/SearchResultsSummary;->saveQueryToDatabase(Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lcom/android/settings_ex/dashboard/SearchResultsSummary;->access$1000(Lcom/android/settings_ex/dashboard/SearchResultsSummary;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -290,7 +290,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v2 .. v8}, Lcom/android/settings/Utils;->startWithFragment(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Fragment;IILjava/lang/CharSequence;)V
+    invoke-static/range {v2 .. v8}, Lcom/android/settings_ex/Utils;->startWithFragment(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Fragment;IILjava/lang/CharSequence;)V
 
     goto :goto_1
 
@@ -402,7 +402,7 @@
     .line 359
     move-object/from16 v0, v18
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/SearchResultsSummary$SearchResult;->targetPkg:Ljava/lang/String;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/SearchResultsSummary$SearchResult;->targetPkg:Ljava/lang/String;
 
     move-object/from16 v20, v0
 
@@ -410,7 +410,7 @@
     .local v20, "targetPackage":Ljava/lang/String;
     move-object/from16 v0, v18
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/SearchResultsSummary$SearchResult;->targetCls:Ljava/lang/String;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/SearchResultsSummary$SearchResult;->targetCls:Ljava/lang/String;
 
     move-object/from16 v19, v0
 
@@ -444,7 +444,7 @@
     .line 366
     .end local v12    # "component":Landroid/content/ComponentName;
     :cond_6
-    invoke-virtual {v2, v15}, Lcom/android/settings/SettingsActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v2, v15}, Lcom/android/settings_ex/SettingsActivity;->startActivity(Landroid/content/Intent;)V
 
     goto/16 :goto_1
 
@@ -464,7 +464,7 @@
     .restart local v15    # "intent":Landroid/content/Intent;
     move-object/from16 v0, v18
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/SearchResultsSummary$SearchResult;->targetPkg:Ljava/lang/String;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/SearchResultsSummary$SearchResult;->targetPkg:Ljava/lang/String;
 
     move-object/from16 v20, v0
 
@@ -472,7 +472,7 @@
     .restart local v20    # "targetPackage":Ljava/lang/String;
     move-object/from16 v0, v18
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/SearchResultsSummary$SearchResult;->targetCls:Ljava/lang/String;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/SearchResultsSummary$SearchResult;->targetCls:Ljava/lang/String;
 
     move-object/from16 v19, v0
 
@@ -614,7 +614,7 @@
     .line 398
     .end local v11    # "bundle":Landroid/os/Bundle;
     :cond_9
-    invoke-virtual {v2, v15}, Lcom/android/settings/SettingsActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v2, v15}, Lcom/android/settings_ex/SettingsActivity;->startActivity(Landroid/content/Intent;)V
 
     goto/16 :goto_1
 

@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;
-.super Lcom/android/settings/nfc/NfcOsaifukeitaiLock;
+.class public Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;
+.super Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;
 .source "NfcOsaifukeitaiLockKDI.java"
 
 
@@ -10,7 +10,7 @@
 
 .field private mLockState:Z
 
-.field private mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+.field private mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
 .field private final mReceiver:Landroid/content/BroadcastReceiver;
 
@@ -27,25 +27,25 @@
     const/4 v1, 0x0
 
     .line 81
-    invoke-direct {p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;-><init>()V
 
     .line 65
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mFelicaLockResultCode:I
+    iput v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mFelicaLockResultCode:I
 
     .line 66
-    iput-boolean v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mbSwitchBar:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mbSwitchBar:Z
 
     .line 67
-    iput-boolean v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mLockState:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mLockState:Z
 
     .line 87
-    new-instance v0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI$1;
+    new-instance v0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI$1;-><init>(Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI$1;-><init>(Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;)V
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mReceiver:Landroid/content/BroadcastReceiver;
 
     .line 82
     return-void
@@ -59,73 +59,73 @@
     const/4 v1, 0x0
 
     .line 83
-    invoke-direct {p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;-><init>()V
 
     .line 65
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mFelicaLockResultCode:I
+    iput v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mFelicaLockResultCode:I
 
     .line 66
-    iput-boolean v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mbSwitchBar:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mbSwitchBar:Z
 
     .line 67
-    iput-boolean v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mLockState:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mLockState:Z
 
     .line 87
-    new-instance v0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI$1;
+    new-instance v0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI$1;-><init>(Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI$1;-><init>(Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;)V
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mReceiver:Landroid/content/BroadcastReceiver;
 
     .line 84
-    iput-object p1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->activity:Landroid/app/Activity;
+    iput-object p1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->activity:Landroid/app/Activity;
 
     .line 85
-    new-instance v0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    new-instance v0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-direct {v0, p1}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
     .line 86
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;)Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+.method static synthetic access$000(Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;)Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;
+    .param p0, "x0"    # Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;
 
     .prologue
     .line 52
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;II)V
+.method static synthetic access$100(Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;II)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;
+    .param p0, "x0"    # Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;
     .param p1, "x1"    # I
     .param p2, "x2"    # I
 
     .prologue
     .line 52
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->setLockSwitch(II)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->setLockSwitch(II)V
 
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;II)V
+.method static synthetic access$200(Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;II)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;
+    .param p0, "x0"    # Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;
     .param p1, "x1"    # I
     .param p2, "x2"    # I
 
     .prologue
     .line 52
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->setExplainedWord(II)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->setExplainedWord(II)V
 
     return-void
 .end method
@@ -201,7 +201,7 @@
     .line 188
     const/4 v2, 0x0
 
-    iput-boolean v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mLockState:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mLockState:Z
 
     .line 193
     :goto_0
@@ -211,7 +211,7 @@
     :cond_2
     const/4 v2, 0x1
 
-    iput-boolean v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mLockState:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mLockState:Z
 
     goto :goto_0
 .end method
@@ -287,7 +287,7 @@
     .line 168
     const/4 v2, 0x0
 
-    iput-boolean v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mbSwitchBar:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mbSwitchBar:Z
 
     .line 172
     :goto_0
@@ -297,7 +297,7 @@
     :cond_2
     const/4 v2, 0x1
 
-    iput-boolean v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mbSwitchBar:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mbSwitchBar:Z
 
     goto :goto_0
 .end method
@@ -316,7 +316,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 139
-    iget-boolean v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mLockState:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mLockState:Z
 
     return v0
 .end method
@@ -333,7 +333,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 135
-    iget-boolean v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mbSwitchBar:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mbSwitchBar:Z
 
     return v0
 .end method
@@ -380,7 +380,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 146
-    iput p2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mFelicaLockResultCode:I
+    iput p2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mFelicaLockResultCode:I
 
     .line 147
     const/4 v0, 0x1
@@ -393,7 +393,7 @@
 
     .line 148
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->activity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->activity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
@@ -415,7 +415,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 129
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
@@ -447,49 +447,49 @@
 
     invoke-direct {v2}, Landroid/content/IntentFilter;-><init>()V
 
-    iput-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mfilter:Landroid/content/IntentFilter;
+    iput-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mfilter:Landroid/content/IntentFilter;
 
     .line 115
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mfilter:Landroid/content/IntentFilter;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mfilter:Landroid/content/IntentFilter;
 
     if-eqz v2, :cond_0
 
     .line 116
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mfilter:Landroid/content/IntentFilter;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mfilter:Landroid/content/IntentFilter;
 
     const-string v3, "android.nfc.action.ADAPTER_STATE_CHANGED"
 
     invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 117
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    iget-object v3, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mfilter:Landroid/content/IntentFilter;
+    iget-object v3, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mfilter:Landroid/content/IntentFilter;
 
     invoke-virtual {p1, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 120
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v2}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->getCLFLockStatus()I
+    invoke-virtual {v2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->getCLFLockStatus()I
 
     move-result v0
 
     .line 121
     .local v0, "clf_lock":I
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v2}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->getUIMLockStatus()I
+    invoke-virtual {v2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->getUIMLockStatus()I
 
     move-result v1
 
     .line 122
     .local v1, "uim_lock":I
-    invoke-direct {p0, v0, v1}, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->setLockSwitch(II)V
+    invoke-direct {p0, v0, v1}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->setLockSwitch(II)V
 
     .line 123
-    invoke-direct {p0, v0, v1}, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;->setExplainedWord(II)V
+    invoke-direct {p0, v0, v1}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;->setExplainedWord(II)V
 
     .line 124
     return-void

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/nfc/NfcGateReceiver;
+.class public Lcom/android/settings_ex/nfc/NfcGateReceiver;
 .super Landroid/content/BroadcastReceiver;
 .source "NfcGateReceiver.java"
 

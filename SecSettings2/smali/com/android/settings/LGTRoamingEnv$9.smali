@@ -1,4 +1,4 @@
-.class Lcom/android/settings/LGTRoamingEnv$9;
+.class Lcom/android/settings_ex/LGTRoamingEnv$9;
 .super Ljava/lang/Object;
 .source "LGTRoamingEnv.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/LGTRoamingEnv;->updateCountryInfo()V
+    value = Lcom/android/settings_ex/LGTRoamingEnv;->updateCountryInfo()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/LGTRoamingEnv;
+.field final synthetic this$0:Lcom/android/settings_ex/LGTRoamingEnv;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/LGTRoamingEnv;)V
+.method constructor <init>(Lcom/android/settings_ex/LGTRoamingEnv;)V
     .locals 0
 
     .prologue
     .line 459
-    iput-object p1, p0, Lcom/android/settings/LGTRoamingEnv$9;->this$0:Lcom/android/settings/LGTRoamingEnv;
+    iput-object p1, p0, Lcom/android/settings_ex/LGTRoamingEnv$9;->this$0:Lcom/android/settings_ex/LGTRoamingEnv;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,8 +42,8 @@
 
     .prologue
     .line 461
-    # getter for: Lcom/android/settings/LGTRoamingEnv;->mContext:Landroid/content/Context;
-    invoke-static {}, Lcom/android/settings/LGTRoamingEnv;->access$200()Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/LGTRoamingEnv;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/android/settings_ex/LGTRoamingEnv;->access$200()Landroid/content/Context;
 
     move-result-object v0
 
@@ -58,12 +58,12 @@
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
     .line 463
-    iget-object v0, p0, Lcom/android/settings/LGTRoamingEnv$9;->this$0:Lcom/android/settings/LGTRoamingEnv;
+    iget-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv$9;->this$0:Lcom/android/settings_ex/LGTRoamingEnv;
 
     const/4 v1, 0x0
 
-    # setter for: Lcom/android/settings/LGTRoamingEnv;->mProgressDialog:Landroid/app/ProgressDialog;
-    invoke-static {v0, v1}, Lcom/android/settings/LGTRoamingEnv;->access$102(Lcom/android/settings/LGTRoamingEnv;Landroid/app/ProgressDialog;)Landroid/app/ProgressDialog;
+    # setter for: Lcom/android/settings_ex/LGTRoamingEnv;->mProgressDialog:Landroid/app/ProgressDialog;
+    invoke-static {v0, v1}, Lcom/android/settings_ex/LGTRoamingEnv;->access$102(Lcom/android/settings_ex/LGTRoamingEnv;Landroid/app/ProgressDialog;)Landroid/app/ProgressDialog;
 
     .line 464
     return-void

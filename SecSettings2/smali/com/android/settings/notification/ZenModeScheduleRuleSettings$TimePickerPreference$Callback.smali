@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/notification/ZenModeScheduleRuleSettings$TimePickerPreference$Callback;
+.class public interface abstract Lcom/android/settings_ex/notification/ZenModeScheduleRuleSettings$TimePickerPreference$Callback;
 .super Ljava/lang/Object;
 .source "ZenModeScheduleRuleSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/ZenModeScheduleRuleSettings$TimePickerPreference;
+    value = Lcom/android/settings_ex/notification/ZenModeScheduleRuleSettings$TimePickerPreference;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

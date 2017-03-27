@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;
+.class public Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;
 .super Ljava/lang/Object;
 .source "SnsAccountManager.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accounts/SnsAccountManager;
+    value = Lcom/android/settings_ex/accounts/SnsAccountManager;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,19 +40,19 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 44
-    iput-object p1, p0, Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;->snsAccountType:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;->snsAccountType:Ljava/lang/String;
 
     .line 45
-    iput-object p2, p0, Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;->ssoAccountType:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;->ssoAccountType:Ljava/lang/String;
 
     .line 46
-    iput-object p3, p0, Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;->ssoAccountLabel:Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;->ssoAccountLabel:Ljava/lang/String;
 
     .line 47
-    iput-object p4, p0, Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;->ssoRetryAction:Ljava/lang/String;
+    iput-object p4, p0, Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;->ssoRetryAction:Ljava/lang/String;
 
     .line 48
-    iput-object p5, p0, Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;->serviceAppName:Ljava/lang/String;
+    iput-object p5, p0, Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;->serviceAppName:Ljava/lang/String;
 
     .line 49
     return-void
@@ -75,7 +75,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;->snsAccountType:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;->snsAccountType:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -87,7 +87,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;->ssoAccountType:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;->ssoAccountType:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

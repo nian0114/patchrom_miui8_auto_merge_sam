@@ -1,4 +1,4 @@
-.class Lcom/android/settings/location/LocationSettingsBase$2;
+.class Lcom/android/settings_ex/location/LocationSettingsBase$2;
 .super Ljava/lang/Object;
 .source "LocationSettingsBase.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/location/LocationSettingsBase;->showVzwLocationConsentDialog(Landroid/content/Context;)V
+    value = Lcom/android/settings_ex/location/LocationSettingsBase;->showVzwLocationConsentDialog(Landroid/content/Context;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/location/LocationSettingsBase;
+.field final synthetic this$0:Lcom/android/settings_ex/location/LocationSettingsBase;
 
 .field final synthetic val$context:Landroid/content/Context;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/location/LocationSettingsBase;Landroid/content/Context;)V
+.method constructor <init>(Lcom/android/settings_ex/location/LocationSettingsBase;Landroid/content/Context;)V
     .locals 0
 
     .prologue
     .line 230
-    iput-object p1, p0, Lcom/android/settings/location/LocationSettingsBase$2;->this$0:Lcom/android/settings/location/LocationSettingsBase;
+    iput-object p1, p0, Lcom/android/settings_ex/location/LocationSettingsBase$2;->this$0:Lcom/android/settings_ex/location/LocationSettingsBase;
 
-    iput-object p2, p0, Lcom/android/settings/location/LocationSettingsBase$2;->val$context:Landroid/content/Context;
+    iput-object p2, p0, Lcom/android/settings_ex/location/LocationSettingsBase$2;->val$context:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,12 +48,12 @@
     const/4 v2, 0x0
 
     .line 233
-    iget-object v0, p0, Lcom/android/settings/location/LocationSettingsBase$2;->this$0:Lcom/android/settings/location/LocationSettingsBase;
+    iget-object v0, p0, Lcom/android/settings_ex/location/LocationSettingsBase$2;->this$0:Lcom/android/settings_ex/location/LocationSettingsBase;
 
-    iget-object v1, p0, Lcom/android/settings/location/LocationSettingsBase$2;->val$context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/location/LocationSettingsBase$2;->val$context:Landroid/content/Context;
 
-    # invokes: Lcom/android/settings/location/LocationSettingsBase;->setVzwProviderAndMode(Landroid/content/Context;ZI)V
-    invoke-static {v0, v1, v2, v2}, Lcom/android/settings/location/LocationSettingsBase;->access$000(Lcom/android/settings/location/LocationSettingsBase;Landroid/content/Context;ZI)V
+    # invokes: Lcom/android/settings_ex/location/LocationSettingsBase;->setVzwProviderAndMode(Landroid/content/Context;ZI)V
+    invoke-static {v0, v1, v2, v2}, Lcom/android/settings_ex/location/LocationSettingsBase;->access$000(Lcom/android/settings_ex/location/LocationSettingsBase;Landroid/content/Context;ZI)V
 
     .line 234
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fingerprint/FingerprintLockSettings$5;
+.class Lcom/android/settings_ex/fingerprint/FingerprintLockSettings$5;
 .super Ljava/lang/Object;
 .source "FingerprintLockSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fingerprint/FingerprintLockSettings;->showSensorErrorDialog(I)V
+    value = Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;->showSensorErrorDialog(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/FingerprintLockSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/FingerprintLockSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;)V
     .locals 0
 
     .prologue
     .line 906
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintLockSettings$5;->this$0:Lcom/android/settings/fingerprint/FingerprintLockSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintLockSettings$5;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,23 +42,23 @@
 
     .prologue
     .line 909
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintLockSettings$5;->this$0:Lcom/android/settings/fingerprint/FingerprintLockSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintLockSettings$5;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;
 
     const/4 v1, 0x0
 
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintLockSettings$5;->this$0:Lcom/android/settings/fingerprint/FingerprintLockSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintLockSettings$5;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintLockSettings;->result_intent:Landroid/content/Intent;
-    invoke-static {v2}, Lcom/android/settings/fingerprint/FingerprintLockSettings;->access$500(Lcom/android/settings/fingerprint/FingerprintLockSettings;)Landroid/content/Intent;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;->result_intent:Landroid/content/Intent;
+    invoke-static {v2}, Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;->access$500(Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;)Landroid/content/Intent;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/fingerprint/FingerprintLockSettings;->setResult(ILandroid/content/Intent;)V
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;->setResult(ILandroid/content/Intent;)V
 
     .line 910
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintLockSettings$5;->this$0:Lcom/android/settings/fingerprint/FingerprintLockSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintLockSettings$5;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/fingerprint/FingerprintLockSettings;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;->finish()V
 
     .line 911
     return-void

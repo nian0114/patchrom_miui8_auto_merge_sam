@@ -1,11 +1,11 @@
-.class Lcom/android/settings/notification/VolumeSeekBarPreference$1;
+.class Lcom/android/settings_ex/notification/VolumeSeekBarPreference$1;
 .super Landroid/content/BroadcastReceiver;
 .source "VolumeSeekBarPreference.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/VolumeSeekBarPreference;
+    value = Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/VolumeSeekBarPreference;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/notification/VolumeSeekBarPreference;)V
+.method constructor <init>(Lcom/android/settings_ex/notification/VolumeSeekBarPreference;)V
     .locals 0
 
     .prologue
     .line 91
-    iput-object p1, p0, Lcom/android/settings/notification/VolumeSeekBarPreference$1;->this$0:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/VolumeSeekBarPreference$1;->this$0:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -104,20 +104,20 @@
     .line 110
     .end local v0    # "newState":I
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/notification/VolumeSeekBarPreference$1;->this$0:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VolumeSeekBarPreference$1;->this$0:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
-    # getter for: Lcom/android/settings/notification/VolumeSeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
-    invoke-static {v1}, Lcom/android/settings/notification/VolumeSeekBarPreference;->access$000(Lcom/android/settings/notification/VolumeSeekBarPreference;)Landroid/widget/SeekBar;
+    # getter for: Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
+    invoke-static {v1}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->access$000(Lcom/android/settings_ex/notification/VolumeSeekBarPreference;)Landroid/widget/SeekBar;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
     .line 112
-    iget-object v1, p0, Lcom/android/settings/notification/VolumeSeekBarPreference$1;->this$0:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VolumeSeekBarPreference$1;->this$0:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
-    # invokes: Lcom/android/settings/notification/VolumeSeekBarPreference;->setDualColorSeekbar()V
-    invoke-static {v1}, Lcom/android/settings/notification/VolumeSeekBarPreference;->access$100(Lcom/android/settings/notification/VolumeSeekBarPreference;)V
+    # invokes: Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->setDualColorSeekbar()V
+    invoke-static {v1}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->access$100(Lcom/android/settings_ex/notification/VolumeSeekBarPreference;)V
 
     goto :goto_0
 .end method

@@ -1,16 +1,16 @@
-.class public Lcom/android/settings/GigaLteSettings;
+.class public Lcom/android/settings_ex/GigaLteSettings;
 .super Landroid/app/Fragment;
 .source "GigaLteSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/search/Indexable;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/GigaLteSettings$MptcpStateReceiver;
+        Lcom/android/settings_ex/GigaLteSettings$MptcpStateReceiver;
     }
 .end annotation
 
@@ -18,7 +18,7 @@
 # static fields
 .field private static IsKTT:Z
 
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # instance fields
@@ -38,11 +38,11 @@
 
 .field private mMobileDataObserver:Landroid/database/ContentObserver;
 
-.field private mMptcpStateReceiver:Lcom/android/settings/GigaLteSettings$MptcpStateReceiver;
+.field private mMptcpStateReceiver:Lcom/android/settings_ex/GigaLteSettings$MptcpStateReceiver;
 
 .field private mRemoveProgress:Ljava/lang/Runnable;
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 .field private mTelephonyManager:Landroid/telephony/TelephonyManager;
 
@@ -65,14 +65,14 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/android/settings/GigaLteSettings;->IsKTT:Z
+    sput-boolean v0, Lcom/android/settings_ex/GigaLteSettings;->IsKTT:Z
 
     .line 569
-    new-instance v0, Lcom/android/settings/GigaLteSettings$21;
+    new-instance v0, Lcom/android/settings_ex/GigaLteSettings$21;
 
-    invoke-direct {v0}, Lcom/android/settings/GigaLteSettings$21;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/GigaLteSettings$21;-><init>()V
 
-    sput-object v0, Lcom/android/settings/GigaLteSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/GigaLteSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -87,228 +87,228 @@
     .line 95
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iput-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     .line 103
-    new-instance v0, Lcom/android/settings/GigaLteSettings$1;
+    new-instance v0, Lcom/android/settings_ex/GigaLteSettings$1;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/GigaLteSettings$1;-><init>(Lcom/android/settings/GigaLteSettings;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/GigaLteSettings$1;-><init>(Lcom/android/settings_ex/GigaLteSettings;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/GigaLteSettings;->mAirplaneModeObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mAirplaneModeObserver:Landroid/database/ContentObserver;
 
     .line 111
-    new-instance v0, Lcom/android/settings/GigaLteSettings$2;
+    new-instance v0, Lcom/android/settings_ex/GigaLteSettings$2;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/GigaLteSettings$2;-><init>(Lcom/android/settings/GigaLteSettings;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/GigaLteSettings$2;-><init>(Lcom/android/settings_ex/GigaLteSettings;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/GigaLteSettings;->mMobileDataObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mMobileDataObserver:Landroid/database/ContentObserver;
 
     .line 519
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/GigaLteSettings;)Landroid/content/Context;
+.method static synthetic access$000(Lcom/android/settings_ex/GigaLteSettings;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaLteSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaLteSettings;
 
     .prologue
     .line 63
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/GigaLteSettings;)Z
+.method static synthetic access$100(Lcom/android/settings_ex/GigaLteSettings;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaLteSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaLteSettings;
 
     .prologue
     .line 63
-    invoke-direct {p0}, Lcom/android/settings/GigaLteSettings;->isSimValid()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/GigaLteSettings;->isSimValid()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/GigaLteSettings;)Landroid/app/ProgressDialog;
+.method static synthetic access$1000(Lcom/android/settings_ex/GigaLteSettings;)Landroid/app/ProgressDialog;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaLteSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaLteSettings;
 
     .prologue
     .line 63
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
 
     return-object v0
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/GigaLteSettings;)Ljava/lang/Runnable;
+.method static synthetic access$1100(Lcom/android/settings_ex/GigaLteSettings;)Ljava/lang/Runnable;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaLteSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaLteSettings;
 
     .prologue
     .line 63
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mRemoveProgress:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mRemoveProgress:Ljava/lang/Runnable;
 
     return-object v0
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/GigaLteSettings;)Landroid/os/Handler;
+.method static synthetic access$1200(Lcom/android/settings_ex/GigaLteSettings;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaLteSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaLteSettings;
 
     .prologue
     .line 63
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mHoldingHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mHoldingHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic access$1300(Lcom/android/settings/GigaLteSettings;I)Z
+.method static synthetic access$1300(Lcom/android/settings_ex/GigaLteSettings;I)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaLteSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaLteSettings;
     .param p1, "x1"    # I
 
     .prologue
     .line 63
-    invoke-direct {p0, p1}, Lcom/android/settings/GigaLteSettings;->getWiFiState(I)Z
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/GigaLteSettings;->getWiFiState(I)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/GigaLteSettings;)Z
+.method static synthetic access$200(Lcom/android/settings_ex/GigaLteSettings;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaLteSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaLteSettings;
 
     .prologue
     .line 63
-    invoke-direct {p0}, Lcom/android/settings/GigaLteSettings;->isTether()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/GigaLteSettings;->isTether()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/GigaLteSettings;)Lcom/android/settings/widget/SwitchBar;
+.method static synthetic access$300(Lcom/android/settings_ex/GigaLteSettings;)Lcom/android/settings_ex/widget/SwitchBar;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaLteSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaLteSettings;
 
     .prologue
     .line 63
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/GigaLteSettings;)Z
+.method static synthetic access$400(Lcom/android/settings_ex/GigaLteSettings;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaLteSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaLteSettings;
 
     .prologue
     .line 63
-    iget-boolean v0, p0, Lcom/android/settings/GigaLteSettings;->isNetworkEnabling:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/GigaLteSettings;->isNetworkEnabling:Z
 
     return v0
 .end method
 
-.method static synthetic access$402(Lcom/android/settings/GigaLteSettings;Z)Z
+.method static synthetic access$402(Lcom/android/settings_ex/GigaLteSettings;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/GigaLteSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaLteSettings;
     .param p1, "x1"    # Z
 
     .prologue
     .line 63
-    iput-boolean p1, p0, Lcom/android/settings/GigaLteSettings;->isNetworkEnabling:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/GigaLteSettings;->isNetworkEnabling:Z
 
     return p1
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/GigaLteSettings;)Z
+.method static synthetic access$500(Lcom/android/settings_ex/GigaLteSettings;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaLteSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaLteSettings;
 
     .prologue
     .line 63
-    iget-boolean v0, p0, Lcom/android/settings/GigaLteSettings;->isMobileDataEnabling:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/GigaLteSettings;->isMobileDataEnabling:Z
 
     return v0
 .end method
 
-.method static synthetic access$502(Lcom/android/settings/GigaLteSettings;Z)Z
+.method static synthetic access$502(Lcom/android/settings_ex/GigaLteSettings;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/GigaLteSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaLteSettings;
     .param p1, "x1"    # Z
 
     .prologue
     .line 63
-    iput-boolean p1, p0, Lcom/android/settings/GigaLteSettings;->isMobileDataEnabling:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/GigaLteSettings;->isMobileDataEnabling:Z
 
     return p1
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/GigaLteSettings;)Z
+.method static synthetic access$600(Lcom/android/settings_ex/GigaLteSettings;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaLteSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaLteSettings;
 
     .prologue
     .line 63
-    iget-boolean v0, p0, Lcom/android/settings/GigaLteSettings;->isWiFiEnabling:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/GigaLteSettings;->isWiFiEnabling:Z
 
     return v0
 .end method
 
-.method static synthetic access$602(Lcom/android/settings/GigaLteSettings;Z)Z
+.method static synthetic access$602(Lcom/android/settings_ex/GigaLteSettings;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/GigaLteSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaLteSettings;
     .param p1, "x1"    # Z
 
     .prologue
     .line 63
-    iput-boolean p1, p0, Lcom/android/settings/GigaLteSettings;->isWiFiEnabling:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/GigaLteSettings;->isWiFiEnabling:Z
 
     return p1
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/GigaLteSettings;Z)V
+.method static synthetic access$700(Lcom/android/settings_ex/GigaLteSettings;Z)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/GigaLteSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaLteSettings;
     .param p1, "x1"    # Z
 
     .prologue
     .line 63
-    invoke-direct {p0, p1}, Lcom/android/settings/GigaLteSettings;->sendMptcpStartBroadCast(Z)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/GigaLteSettings;->sendMptcpStartBroadCast(Z)V
 
     return-void
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/GigaLteSettings;)Landroid/telephony/TelephonyManager;
+.method static synthetic access$800(Lcom/android/settings_ex/GigaLteSettings;)Landroid/telephony/TelephonyManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaLteSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaLteSettings;
 
     .prologue
     .line 63
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     return-object v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/GigaLteSettings;)Landroid/net/wifi/WifiManager;
+.method static synthetic access$900(Lcom/android/settings_ex/GigaLteSettings;)Landroid/net/wifi/WifiManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaLteSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaLteSettings;
 
     .prologue
     .line 63
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     return-object v0
 .end method
@@ -351,14 +351,14 @@
 
     .line 635
     .local v1, "isSimValid":Z
-    invoke-direct {p0}, Lcom/android/settings/GigaLteSettings;->isSimPresent()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/GigaLteSettings;->isSimPresent()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
     .line 636
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v2}, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;
 
@@ -395,7 +395,7 @@
 
     .line 605
     .local v0, "isSimPresent":Z
-    iget-object v3, p0, Lcom/android/settings/GigaLteSettings;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    iget-object v3, p0, Lcom/android/settings_ex/GigaLteSettings;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v3}, Landroid/telephony/TelephonyManager;->getPhoneCount()I
 
@@ -410,7 +410,7 @@
     if-ge v2, v1, :cond_1
 
     .line 608
-    iget-object v3, p0, Lcom/android/settings/GigaLteSettings;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    iget-object v3, p0, Lcom/android/settings_ex/GigaLteSettings;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v3, v2}, Landroid/telephony/TelephonyManager;->getSimState(I)I
 
@@ -443,14 +443,14 @@
 
     .line 618
     .local v1, "isSimValid":Z
-    invoke-direct {p0}, Lcom/android/settings/GigaLteSettings;->isSimPresent()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/GigaLteSettings;->isSimPresent()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
     .line 619
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v2}, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;
 
@@ -461,7 +461,7 @@
     if-eqz v0, :cond_1
 
     .line 621
-    sget-boolean v2, Lcom/android/settings/GigaLteSettings;->IsKTT:Z
+    sget-boolean v2, Lcom/android/settings_ex/GigaLteSettings;->IsKTT:Z
 
     if-eqz v2, :cond_1
 
@@ -499,7 +499,7 @@
     .line 653
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
     move-object/from16 v17, v0
 
@@ -701,7 +701,7 @@
     :cond_6
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/GigaLteSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v0, v0, Lcom/android/settings_ex/GigaLteSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     move-object/from16 v17, v0
 
@@ -709,7 +709,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/GigaLteSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v0, v0, Lcom/android/settings_ex/GigaLteSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     move-object/from16 v17, v0
 
@@ -738,16 +738,16 @@
 
     .prologue
     .line 236
-    iget-object v1, p0, Lcom/android/settings/GigaLteSettings;->mMptcpStateReceiver:Lcom/android/settings/GigaLteSettings$MptcpStateReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaLteSettings;->mMptcpStateReceiver:Lcom/android/settings_ex/GigaLteSettings$MptcpStateReceiver;
 
     if-nez v1, :cond_0
 
     .line 237
-    new-instance v1, Lcom/android/settings/GigaLteSettings$MptcpStateReceiver;
+    new-instance v1, Lcom/android/settings_ex/GigaLteSettings$MptcpStateReceiver;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/GigaLteSettings$MptcpStateReceiver;-><init>(Lcom/android/settings/GigaLteSettings;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/GigaLteSettings$MptcpStateReceiver;-><init>(Lcom/android/settings_ex/GigaLteSettings;)V
 
-    iput-object v1, p0, Lcom/android/settings/GigaLteSettings;->mMptcpStateReceiver:Lcom/android/settings/GigaLteSettings$MptcpStateReceiver;
+    iput-object v1, p0, Lcom/android/settings_ex/GigaLteSettings;->mMptcpStateReceiver:Lcom/android/settings_ex/GigaLteSettings$MptcpStateReceiver;
 
     .line 238
     new-instance v0, Landroid/content/IntentFilter;
@@ -766,11 +766,11 @@
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 241
-    invoke-virtual {p0}, Lcom/android/settings/GigaLteSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaLteSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mMptcpStateReceiver:Lcom/android/settings/GigaLteSettings$MptcpStateReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mMptcpStateReceiver:Lcom/android/settings_ex/GigaLteSettings$MptcpStateReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -832,19 +832,19 @@
     invoke-static {v1, v3}, Landroid/util/secutil/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 489
-    iget-object v1, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 490
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticSKTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticSKTModel()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
     .line 491
-    iget-object v1, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -870,23 +870,23 @@
 
     .prologue
     .line 246
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mMptcpStateReceiver:Lcom/android/settings/GigaLteSettings$MptcpStateReceiver;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mMptcpStateReceiver:Lcom/android/settings_ex/GigaLteSettings$MptcpStateReceiver;
 
     if-eqz v0, :cond_0
 
     .line 247
-    invoke-virtual {p0}, Lcom/android/settings/GigaLteSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaLteSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/GigaLteSettings;->mMptcpStateReceiver:Lcom/android/settings/GigaLteSettings$MptcpStateReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaLteSettings;->mMptcpStateReceiver:Lcom/android/settings_ex/GigaLteSettings$MptcpStateReceiver;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 248
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/GigaLteSettings;->mMptcpStateReceiver:Lcom/android/settings/GigaLteSettings$MptcpStateReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mMptcpStateReceiver:Lcom/android/settings_ex/GigaLteSettings$MptcpStateReceiver;
 
     .line 250
     :cond_0
@@ -906,29 +906,29 @@
     invoke-super {p0, p1}, Landroid/app/Fragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 163
-    invoke-virtual {p0}, Lcom/android/settings/GigaLteSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaLteSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 165
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/GigaLteSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 166
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v2}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 167
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    iget-object v3, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -945,12 +945,12 @@
     const/4 v1, 0x1
 
     :cond_0
-    invoke-virtual {v2, v1}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v2, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 168
-    iget-object v1, p0, Lcom/android/settings/GigaLteSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaLteSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v1, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 169
     return-void
@@ -971,14 +971,14 @@
     invoke-super {p0, p1}, Landroid/app/Fragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 130
-    invoke-virtual {p0}, Lcom/android/settings/GigaLteSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaLteSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
     .line 132
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
     const-string v1, "phone"
 
@@ -988,10 +988,10 @@
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    iput-object v0, p0, Lcom/android/settings/GigaLteSettings;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    iput-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     .line 134
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
     const-string v1, "wifi"
 
@@ -1001,10 +1001,10 @@
 
     check-cast v0, Landroid/net/wifi/WifiManager;
 
-    iput-object v0, p0, Lcom/android/settings/GigaLteSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iput-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     .line 136
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticSKTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticSKTModel()Z
 
     move-result v0
 
@@ -1017,7 +1017,7 @@
 
     .line 138
     :cond_1
-    invoke-direct {p0}, Lcom/android/settings/GigaLteSettings;->isSimPresent()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/GigaLteSettings;->isSimPresent()Z
 
     move-result v0
 
@@ -1026,33 +1026,33 @@
     .line 139
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/GigaLteSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaLteSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iput-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     .line 140
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v0, v3}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 141
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v1, 0x7f0e100a
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     .line 142
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v0, v2, v4}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 143
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
@@ -1060,7 +1060,7 @@
 
     .line 144
     :cond_2
-    invoke-direct {p0}, Lcom/android/settings/GigaLteSettings;->isSimValid()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/GigaLteSettings;->isSimValid()Z
 
     move-result v0
 
@@ -1069,33 +1069,33 @@
     .line 145
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/GigaLteSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaLteSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iput-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     .line 146
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v0, v3}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 147
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v1, 0x7f0e100b
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     .line 148
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v0, v2, v4}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 149
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
@@ -1103,9 +1103,9 @@
 
     .line 150
     :cond_3
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isRoaming(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isRoaming(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -1114,33 +1114,33 @@
     .line 151
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/GigaLteSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaLteSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iput-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     .line 152
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v0, v3}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 153
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v1, 0x7f0e100c
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     .line 154
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v0, v2, v4}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 155
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
@@ -1179,7 +1179,7 @@
 
     .line 178
     .local v1, "resEnableMsg":I
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticSKTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticSKTModel()Z
 
     move-result v3
 
@@ -1204,21 +1204,21 @@
     invoke-super {p0}, Landroid/app/Fragment;->onDestroyView()V
 
     .line 226
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 227
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 229
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->isShowing()Z
 
@@ -1227,14 +1227,14 @@
     if-eqz v0, :cond_0
 
     .line 230
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mHoldingHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mHoldingHandler:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/android/settings/GigaLteSettings;->mRemoveProgress:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaLteSettings;->mRemoveProgress:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     .line 231
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
@@ -1251,27 +1251,27 @@
     invoke-super {p0}, Landroid/app/Fragment;->onPause()V
 
     .line 216
-    invoke-direct {p0}, Lcom/android/settings/GigaLteSettings;->unRegisterReceivers()V
+    invoke-direct {p0}, Lcom/android/settings_ex/GigaLteSettings;->unRegisterReceivers()V
 
     .line 218
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/GigaLteSettings;->mAirplaneModeObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaLteSettings;->mAirplaneModeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 219
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/GigaLteSettings;->mMobileDataObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaLteSettings;->mMobileDataObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
@@ -1291,10 +1291,10 @@
     invoke-super {p0}, Landroid/app/Fragment;->onResume()V
 
     .line 189
-    invoke-direct {p0}, Lcom/android/settings/GigaLteSettings;->registerReceivers()V
+    invoke-direct {p0}, Lcom/android/settings_ex/GigaLteSettings;->registerReceivers()V
 
     .line 191
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticSKTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticSKTModel()Z
 
     move-result v2
 
@@ -1307,7 +1307,7 @@
 
     .line 193
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1319,12 +1319,12 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/GigaLteSettings;->mAirplaneModeObserver:Landroid/database/ContentObserver;
+    iget-object v4, p0, Lcom/android/settings_ex/GigaLteSettings;->mAirplaneModeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v2, v3, v1, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 196
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1336,34 +1336,34 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/GigaLteSettings;->mMobileDataObserver:Landroid/database/ContentObserver;
+    iget-object v4, p0, Lcom/android/settings_ex/GigaLteSettings;->mMobileDataObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v2, v3, v1, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 200
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isRoaming(Landroid/content/Context;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
-
-    invoke-static {v2}, Lcom/android/settings/Utils;->isAirplaneModeEnabled(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isRoaming(Landroid/content/Context;)Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    invoke-direct {p0}, Lcom/android/settings/GigaLteSettings;->isSimValid()Z
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
+
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isAirplaneModeEnabled(Landroid/content/Context;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    invoke-direct {p0}, Lcom/android/settings_ex/GigaLteSettings;->isSimValid()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    invoke-direct {p0}, Lcom/android/settings/GigaLteSettings;->isTether()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/GigaLteSettings;->isTether()Z
 
     move-result v2
 
@@ -1371,13 +1371,13 @@
 
     .line 202
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2, v0}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v2, v0}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 204
     :cond_3
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1396,11 +1396,11 @@
     .line 205
     .local v0, "mCurrentState":Z
     :cond_4
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v2}, Landroid/app/ProgressDialog;->isShowing()Z
 
@@ -1408,28 +1408,28 @@
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2}, Lcom/android/settings/widget/SwitchBar;->isChecked()Z
+    invoke-virtual {v2}, Lcom/android/settings_ex/widget/SwitchBar;->isChecked()Z
 
     move-result v2
 
     if-ne v0, v2, :cond_0
 
     .line 207
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2, v1}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v2, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 208
-    iget-object v1, p0, Lcom/android/settings/GigaLteSettings;->mHoldingHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaLteSettings;->mHoldingHandler:Landroid/os/Handler;
 
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mRemoveProgress:Ljava/lang/Runnable;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mRemoveProgress:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     .line 209
-    iget-object v1, p0, Lcom/android/settings/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v1}, Landroid/app/ProgressDialog;->dismiss()V
 
@@ -1451,7 +1451,7 @@
     const/4 v1, 0x0
 
     .line 254
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1488,14 +1488,14 @@
     :cond_1
     if-eqz p2, :cond_9
 
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticSKTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticSKTModel()Z
 
     move-result v2
 
     if-nez v2, :cond_9
 
     .line 257
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1512,32 +1512,32 @@
     .line 258
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/GigaLteSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaLteSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
     invoke-direct {v2, v3}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    iput-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iput-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     .line 259
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v2, v6}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 260
-    invoke-virtual {p0}, Lcom/android/settings/GigaLteSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaLteSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isWifiEnabled(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isWifiEnabled(Landroid/content/Context;)Z
 
     move-result v2
 
     if-nez v2, :cond_3
 
     .line 261
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1552,7 +1552,7 @@
     if-eqz v2, :cond_2
 
     .line 263
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v3, 0x7f0e100d
 
@@ -1560,30 +1560,30 @@
 
     .line 277
     :goto_2
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
-    new-instance v3, Lcom/android/settings/GigaLteSettings$3;
+    new-instance v3, Lcom/android/settings_ex/GigaLteSettings$3;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/GigaLteSettings$3;-><init>(Lcom/android/settings/GigaLteSettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/GigaLteSettings$3;-><init>(Lcom/android/settings_ex/GigaLteSettings;)V
 
     invoke-virtual {v2, v4, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 306
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
-    new-instance v3, Lcom/android/settings/GigaLteSettings$4;
+    new-instance v3, Lcom/android/settings_ex/GigaLteSettings$4;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/GigaLteSettings$4;-><init>(Lcom/android/settings/GigaLteSettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/GigaLteSettings$4;-><init>(Lcom/android/settings_ex/GigaLteSettings;)V
 
     invoke-virtual {v2, v5, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 311
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v2, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
     .line 312
-    iget-object v1, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
@@ -1591,7 +1591,7 @@
 
     .line 265
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v3, 0x7f0e100e
 
@@ -1601,18 +1601,18 @@
 
     .line 267
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/GigaLteSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaLteSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isMobileNetworkEnabled(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isMobileNetworkEnabled(Landroid/content/Context;)Z
 
     move-result v2
 
     if-nez v2, :cond_5
 
     .line 268
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1627,7 +1627,7 @@
     if-eqz v2, :cond_4
 
     .line 270
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v3, 0x7f0e100f
 
@@ -1637,7 +1637,7 @@
 
     .line 272
     :cond_4
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v3, 0x7f0e1010
 
@@ -1647,7 +1647,7 @@
 
     .line 275
     :cond_5
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v3, 0x7f0e1008
 
@@ -1657,21 +1657,21 @@
 
     .line 314
     :cond_6
-    invoke-virtual {p0}, Lcom/android/settings/GigaLteSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaLteSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isWifiEnabled(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isWifiEnabled(Landroid/content/Context;)Z
 
     move-result v2
 
     if-nez v2, :cond_7
 
-    invoke-virtual {p0}, Lcom/android/settings/GigaLteSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaLteSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isMobileNetworkEnabled(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isMobileNetworkEnabled(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -1680,53 +1680,53 @@
     .line 315
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/GigaLteSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaLteSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
     invoke-direct {v2, v3}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    iput-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iput-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     .line 316
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v2, v6}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 317
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v3, 0x7f0e1005
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     .line 318
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v3, 0x7f0e0fca
 
-    new-instance v4, Lcom/android/settings/GigaLteSettings$5;
+    new-instance v4, Lcom/android/settings_ex/GigaLteSettings$5;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/GigaLteSettings$5;-><init>(Lcom/android/settings/GigaLteSettings;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/GigaLteSettings$5;-><init>(Lcom/android/settings_ex/GigaLteSettings;)V
 
     invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 333
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
-    new-instance v3, Lcom/android/settings/GigaLteSettings$6;
+    new-instance v3, Lcom/android/settings_ex/GigaLteSettings$6;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/GigaLteSettings$6;-><init>(Lcom/android/settings/GigaLteSettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/GigaLteSettings$6;-><init>(Lcom/android/settings_ex/GigaLteSettings;)V
 
     invoke-virtual {v2, v5, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 338
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v2, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
     .line 339
-    iget-object v1, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
@@ -1734,11 +1734,11 @@
 
     .line 341
     :cond_7
-    invoke-virtual {p0}, Lcom/android/settings/GigaLteSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaLteSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isWifiEnabled(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isWifiEnabled(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -1747,53 +1747,53 @@
     .line 342
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/GigaLteSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaLteSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
     invoke-direct {v2, v3}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    iput-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iput-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     .line 343
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v2, v6}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 344
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v3, 0x7f0e1006
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     .line 345
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v3, 0x7f0e0fc8
 
-    new-instance v4, Lcom/android/settings/GigaLteSettings$7;
+    new-instance v4, Lcom/android/settings_ex/GigaLteSettings$7;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/GigaLteSettings$7;-><init>(Lcom/android/settings/GigaLteSettings;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/GigaLteSettings$7;-><init>(Lcom/android/settings_ex/GigaLteSettings;)V
 
     invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 358
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
-    new-instance v3, Lcom/android/settings/GigaLteSettings$8;
+    new-instance v3, Lcom/android/settings_ex/GigaLteSettings$8;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/GigaLteSettings$8;-><init>(Lcom/android/settings/GigaLteSettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/GigaLteSettings$8;-><init>(Lcom/android/settings_ex/GigaLteSettings;)V
 
     invoke-virtual {v2, v5, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 363
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v2, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
     .line 364
-    iget-object v1, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
@@ -1801,11 +1801,11 @@
 
     .line 366
     :cond_8
-    invoke-virtual {p0}, Lcom/android/settings/GigaLteSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaLteSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isMobileNetworkEnabled(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isMobileNetworkEnabled(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -1814,53 +1814,53 @@
     .line 367
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/GigaLteSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaLteSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
     invoke-direct {v2, v3}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    iput-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iput-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     .line 368
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v2, v6}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 369
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v3, 0x7f0e1007
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     .line 370
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v3, 0x7f0e0fc9
 
-    new-instance v4, Lcom/android/settings/GigaLteSettings$9;
+    new-instance v4, Lcom/android/settings_ex/GigaLteSettings$9;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/GigaLteSettings$9;-><init>(Lcom/android/settings/GigaLteSettings;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/GigaLteSettings$9;-><init>(Lcom/android/settings_ex/GigaLteSettings;)V
 
     invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 379
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
-    new-instance v3, Lcom/android/settings/GigaLteSettings$10;
+    new-instance v3, Lcom/android/settings_ex/GigaLteSettings$10;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/GigaLteSettings$10;-><init>(Lcom/android/settings/GigaLteSettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/GigaLteSettings$10;-><init>(Lcom/android/settings_ex/GigaLteSettings;)V
 
     invoke-virtual {v2, v5, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 384
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v2, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
     .line 385
-    iget-object v1, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
@@ -1870,7 +1870,7 @@
     :cond_9
     if-eqz p2, :cond_11
 
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticSKTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticSKTModel()Z
 
     move-result v2
 
@@ -1879,52 +1879,52 @@
     .line 391
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/GigaLteSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaLteSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
     invoke-direct {v2, v3}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    iput-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iput-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     .line 392
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v3, 0x7f0e1011
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 393
-    invoke-direct {p0}, Lcom/android/settings/GigaLteSettings;->isSimPresent()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/GigaLteSettings;->isSimPresent()Z
 
     move-result v2
 
     if-nez v2, :cond_a
 
     .line 394
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v3, 0x7f0e1013
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     .line 395
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
-    new-instance v3, Lcom/android/settings/GigaLteSettings$11;
+    new-instance v3, Lcom/android/settings_ex/GigaLteSettings$11;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/GigaLteSettings$11;-><init>(Lcom/android/settings/GigaLteSettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/GigaLteSettings$11;-><init>(Lcom/android/settings_ex/GigaLteSettings;)V
 
     invoke-virtual {v2, v4, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 400
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v2, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
     .line 474
     :goto_3
-    iget-object v1, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
@@ -1932,30 +1932,30 @@
 
     .line 401
     :cond_a
-    invoke-direct {p0}, Lcom/android/settings/GigaLteSettings;->isSKTSimValid()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/GigaLteSettings;->isSKTSimValid()Z
 
     move-result v2
 
     if-nez v2, :cond_b
 
     .line 402
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v3, 0x7f0e1014
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     .line 403
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
-    new-instance v3, Lcom/android/settings/GigaLteSettings$12;
+    new-instance v3, Lcom/android/settings_ex/GigaLteSettings$12;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/GigaLteSettings$12;-><init>(Lcom/android/settings/GigaLteSettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/GigaLteSettings$12;-><init>(Lcom/android/settings_ex/GigaLteSettings;)V
 
     invoke-virtual {v2, v4, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 408
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v2, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
@@ -1963,17 +1963,17 @@
 
     .line 409
     :cond_b
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isRoaming(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isRoaming(Landroid/content/Context;)Z
 
     move-result v2
 
     if-nez v2, :cond_c
 
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isAirplaneModeEnabled(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isAirplaneModeEnabled(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -1981,23 +1981,23 @@
 
     .line 410
     :cond_c
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v3, 0x7f0e1015
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     .line 411
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
-    new-instance v3, Lcom/android/settings/GigaLteSettings$13;
+    new-instance v3, Lcom/android/settings_ex/GigaLteSettings$13;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/GigaLteSettings$13;-><init>(Lcom/android/settings/GigaLteSettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/GigaLteSettings$13;-><init>(Lcom/android/settings_ex/GigaLteSettings;)V
 
     invoke-virtual {v2, v4, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 416
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v2, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
@@ -2005,7 +2005,7 @@
 
     .line 417
     :cond_d
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2020,32 +2020,32 @@
     if-eqz v2, :cond_e
 
     .line 418
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v3, 0x7f0e1016
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     .line 419
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
-    new-instance v3, Lcom/android/settings/GigaLteSettings$14;
+    new-instance v3, Lcom/android/settings_ex/GigaLteSettings$14;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/GigaLteSettings$14;-><init>(Lcom/android/settings/GigaLteSettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/GigaLteSettings$14;-><init>(Lcom/android/settings_ex/GigaLteSettings;)V
 
     invoke-virtual {v2, v4, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 431
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
-    new-instance v3, Lcom/android/settings/GigaLteSettings$15;
+    new-instance v3, Lcom/android/settings_ex/GigaLteSettings$15;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/GigaLteSettings$15;-><init>(Lcom/android/settings/GigaLteSettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/GigaLteSettings$15;-><init>(Lcom/android/settings_ex/GigaLteSettings;)V
 
     invoke-virtual {v2, v5, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 436
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v2, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
@@ -2053,21 +2053,21 @@
 
     .line 437
     :cond_e
-    invoke-virtual {p0}, Lcom/android/settings/GigaLteSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaLteSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isWifiEnabled(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isWifiEnabled(Landroid/content/Context;)Z
 
     move-result v2
 
     if-eqz v2, :cond_f
 
-    invoke-virtual {p0}, Lcom/android/settings/GigaLteSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaLteSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isMobileNetworkEnabled(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isMobileNetworkEnabled(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -2075,32 +2075,32 @@
 
     .line 438
     :cond_f
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v3, 0x7f0e1019
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     .line 439
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
-    new-instance v3, Lcom/android/settings/GigaLteSettings$16;
+    new-instance v3, Lcom/android/settings_ex/GigaLteSettings$16;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/GigaLteSettings$16;-><init>(Lcom/android/settings/GigaLteSettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/GigaLteSettings$16;-><init>(Lcom/android/settings_ex/GigaLteSettings;)V
 
     invoke-virtual {v2, v4, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 452
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
-    new-instance v3, Lcom/android/settings/GigaLteSettings$17;
+    new-instance v3, Lcom/android/settings_ex/GigaLteSettings$17;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/GigaLteSettings$17;-><init>(Lcom/android/settings/GigaLteSettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/GigaLteSettings$17;-><init>(Lcom/android/settings_ex/GigaLteSettings;)V
 
     invoke-virtual {v2, v5, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 457
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v2, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
@@ -2108,32 +2108,32 @@
 
     .line 459
     :cond_10
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v3, 0x7f0e1018
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     .line 460
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
-    new-instance v3, Lcom/android/settings/GigaLteSettings$18;
+    new-instance v3, Lcom/android/settings_ex/GigaLteSettings$18;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/GigaLteSettings$18;-><init>(Lcom/android/settings/GigaLteSettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/GigaLteSettings$18;-><init>(Lcom/android/settings_ex/GigaLteSettings;)V
 
     invoke-virtual {v2, v4, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 467
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
-    new-instance v3, Lcom/android/settings/GigaLteSettings$19;
+    new-instance v3, Lcom/android/settings_ex/GigaLteSettings$19;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/GigaLteSettings$19;-><init>(Lcom/android/settings/GigaLteSettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/GigaLteSettings$19;-><init>(Lcom/android/settings_ex/GigaLteSettings;)V
 
     invoke-virtual {v2, v5, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 472
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v2, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
@@ -2141,15 +2141,15 @@
 
     .line 478
     :cond_11
-    iget-object v2, p0, Lcom/android/settings/GigaLteSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaLteSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2, v1}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v2, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 480
-    invoke-virtual {p0}, Lcom/android/settings/GigaLteSettings;->showProgressDialog()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaLteSettings;->showProgressDialog()V
 
     .line 481
-    invoke-direct {p0, p2}, Lcom/android/settings/GigaLteSettings;->sendMptcpStartBroadCast(Z)V
+    invoke-direct {p0, p2}, Lcom/android/settings_ex/GigaLteSettings;->sendMptcpStartBroadCast(Z)V
 
     goto/16 :goto_1
 .end method
@@ -2161,33 +2161,33 @@
     .line 497
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
 
     .line 498
     new-instance v0, Landroid/app/ProgressDialog;
 
-    iget-object v1, p0, Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
 
     .line 499
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setIndeterminate(Z)V
 
     .line 500
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setCancelable(Z)V
 
     .line 501
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->getWindow()Landroid/view/Window;
 
@@ -2198,18 +2198,18 @@
     invoke-virtual {v0, v1}, Landroid/view/Window;->setType(I)V
 
     .line 502
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
 
     const v1, 0x7f0e00df
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/GigaLteSettings;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/GigaLteSettings;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
     .line 503
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->progressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->show()V
 
@@ -2218,19 +2218,19 @@
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/GigaLteSettings;->mHoldingHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mHoldingHandler:Landroid/os/Handler;
 
     .line 505
-    new-instance v0, Lcom/android/settings/GigaLteSettings$20;
+    new-instance v0, Lcom/android/settings_ex/GigaLteSettings$20;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/GigaLteSettings$20;-><init>(Lcom/android/settings/GigaLteSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/GigaLteSettings$20;-><init>(Lcom/android/settings_ex/GigaLteSettings;)V
 
-    iput-object v0, p0, Lcom/android/settings/GigaLteSettings;->mRemoveProgress:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mRemoveProgress:Ljava/lang/Runnable;
 
     .line 516
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings;->mHoldingHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings;->mHoldingHandler:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/android/settings/GigaLteSettings;->mRemoveProgress:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaLteSettings;->mRemoveProgress:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0x3a98
 

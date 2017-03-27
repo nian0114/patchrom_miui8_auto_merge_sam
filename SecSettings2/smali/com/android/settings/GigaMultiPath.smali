@@ -1,16 +1,16 @@
-.class public Lcom/android/settings/GigaMultiPath;
+.class public Lcom/android/settings_ex/GigaMultiPath;
 .super Landroid/app/Fragment;
 .source "GigaMultiPath.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/search/Indexable;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;
+        Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;
     }
 .end annotation
 
@@ -32,11 +32,11 @@
 
 .field private mMobileDataObserver:Landroid/database/ContentObserver;
 
-.field private mMptcpStateReceiver:Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;
+.field private mMptcpStateReceiver:Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;
 
 .field private mRemoveProgress:Ljava/lang/Runnable;
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 .field private mTelephonyManager:Landroid/telephony/TelephonyManager;
 
@@ -56,228 +56,228 @@
     .line 93
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iput-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     .line 101
-    new-instance v0, Lcom/android/settings/GigaMultiPath$1;
+    new-instance v0, Lcom/android/settings_ex/GigaMultiPath$1;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/GigaMultiPath$1;-><init>(Lcom/android/settings/GigaMultiPath;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/GigaMultiPath$1;-><init>(Lcom/android/settings_ex/GigaMultiPath;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/GigaMultiPath;->mAirplaneModeObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->mAirplaneModeObserver:Landroid/database/ContentObserver;
 
     .line 109
-    new-instance v0, Lcom/android/settings/GigaMultiPath$2;
+    new-instance v0, Lcom/android/settings_ex/GigaMultiPath$2;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/GigaMultiPath$2;-><init>(Lcom/android/settings/GigaMultiPath;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/GigaMultiPath$2;-><init>(Lcom/android/settings_ex/GigaMultiPath;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/GigaMultiPath;->mMobileDataObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->mMobileDataObserver:Landroid/database/ContentObserver;
 
     .line 358
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/GigaMultiPath;)Landroid/content/Context;
+.method static synthetic access$000(Lcom/android/settings_ex/GigaMultiPath;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaMultiPath;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaMultiPath;
 
     .prologue
     .line 63
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/GigaMultiPath;)Z
+.method static synthetic access$100(Lcom/android/settings_ex/GigaMultiPath;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaMultiPath;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaMultiPath;
 
     .prologue
     .line 63
-    invoke-direct {p0}, Lcom/android/settings/GigaMultiPath;->isSimValid()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/GigaMultiPath;->isSimValid()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/GigaMultiPath;)Landroid/app/ProgressDialog;
+.method static synthetic access$1000(Lcom/android/settings_ex/GigaMultiPath;)Landroid/app/ProgressDialog;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaMultiPath;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaMultiPath;
 
     .prologue
     .line 63
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
 
     return-object v0
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/GigaMultiPath;)Ljava/lang/Runnable;
+.method static synthetic access$1100(Lcom/android/settings_ex/GigaMultiPath;)Ljava/lang/Runnable;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaMultiPath;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaMultiPath;
 
     .prologue
     .line 63
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath;->mRemoveProgress:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->mRemoveProgress:Ljava/lang/Runnable;
 
     return-object v0
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/GigaMultiPath;)Landroid/os/Handler;
+.method static synthetic access$1200(Lcom/android/settings_ex/GigaMultiPath;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaMultiPath;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaMultiPath;
 
     .prologue
     .line 63
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath;->mHoldingHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->mHoldingHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic access$1300(Lcom/android/settings/GigaMultiPath;I)Z
+.method static synthetic access$1300(Lcom/android/settings_ex/GigaMultiPath;I)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaMultiPath;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaMultiPath;
     .param p1, "x1"    # I
 
     .prologue
     .line 63
-    invoke-direct {p0, p1}, Lcom/android/settings/GigaMultiPath;->getWiFiState(I)Z
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/GigaMultiPath;->getWiFiState(I)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/GigaMultiPath;)Z
+.method static synthetic access$200(Lcom/android/settings_ex/GigaMultiPath;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaMultiPath;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaMultiPath;
 
     .prologue
     .line 63
-    invoke-direct {p0}, Lcom/android/settings/GigaMultiPath;->isTether()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/GigaMultiPath;->isTether()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/GigaMultiPath;)Lcom/android/settings/widget/SwitchBar;
+.method static synthetic access$300(Lcom/android/settings_ex/GigaMultiPath;)Lcom/android/settings_ex/widget/SwitchBar;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaMultiPath;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaMultiPath;
 
     .prologue
     .line 63
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/GigaMultiPath;)Z
+.method static synthetic access$400(Lcom/android/settings_ex/GigaMultiPath;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaMultiPath;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaMultiPath;
 
     .prologue
     .line 63
-    iget-boolean v0, p0, Lcom/android/settings/GigaMultiPath;->isNetworkEnabling:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/GigaMultiPath;->isNetworkEnabling:Z
 
     return v0
 .end method
 
-.method static synthetic access$402(Lcom/android/settings/GigaMultiPath;Z)Z
+.method static synthetic access$402(Lcom/android/settings_ex/GigaMultiPath;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/GigaMultiPath;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaMultiPath;
     .param p1, "x1"    # Z
 
     .prologue
     .line 63
-    iput-boolean p1, p0, Lcom/android/settings/GigaMultiPath;->isNetworkEnabling:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/GigaMultiPath;->isNetworkEnabling:Z
 
     return p1
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/GigaMultiPath;)Z
+.method static synthetic access$500(Lcom/android/settings_ex/GigaMultiPath;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaMultiPath;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaMultiPath;
 
     .prologue
     .line 63
-    iget-boolean v0, p0, Lcom/android/settings/GigaMultiPath;->isMobileDataEnabling:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/GigaMultiPath;->isMobileDataEnabling:Z
 
     return v0
 .end method
 
-.method static synthetic access$502(Lcom/android/settings/GigaMultiPath;Z)Z
+.method static synthetic access$502(Lcom/android/settings_ex/GigaMultiPath;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/GigaMultiPath;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaMultiPath;
     .param p1, "x1"    # Z
 
     .prologue
     .line 63
-    iput-boolean p1, p0, Lcom/android/settings/GigaMultiPath;->isMobileDataEnabling:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/GigaMultiPath;->isMobileDataEnabling:Z
 
     return p1
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/GigaMultiPath;)Z
+.method static synthetic access$600(Lcom/android/settings_ex/GigaMultiPath;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaMultiPath;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaMultiPath;
 
     .prologue
     .line 63
-    iget-boolean v0, p0, Lcom/android/settings/GigaMultiPath;->isWiFiEnabling:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/GigaMultiPath;->isWiFiEnabling:Z
 
     return v0
 .end method
 
-.method static synthetic access$602(Lcom/android/settings/GigaMultiPath;Z)Z
+.method static synthetic access$602(Lcom/android/settings_ex/GigaMultiPath;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/GigaMultiPath;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaMultiPath;
     .param p1, "x1"    # Z
 
     .prologue
     .line 63
-    iput-boolean p1, p0, Lcom/android/settings/GigaMultiPath;->isWiFiEnabling:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/GigaMultiPath;->isWiFiEnabling:Z
 
     return p1
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/GigaMultiPath;Z)V
+.method static synthetic access$700(Lcom/android/settings_ex/GigaMultiPath;Z)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/GigaMultiPath;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaMultiPath;
     .param p1, "x1"    # Z
 
     .prologue
     .line 63
-    invoke-direct {p0, p1}, Lcom/android/settings/GigaMultiPath;->sendMptcpStartBroadCast(Z)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/GigaMultiPath;->sendMptcpStartBroadCast(Z)V
 
     return-void
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/GigaMultiPath;)Landroid/net/wifi/WifiManager;
+.method static synthetic access$800(Lcom/android/settings_ex/GigaMultiPath;)Landroid/net/wifi/WifiManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaMultiPath;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaMultiPath;
 
     .prologue
     .line 63
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     return-object v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/GigaMultiPath;)Landroid/telephony/TelephonyManager;
+.method static synthetic access$900(Lcom/android/settings_ex/GigaMultiPath;)Landroid/telephony/TelephonyManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/GigaMultiPath;
+    .param p0, "x0"    # Lcom/android/settings_ex/GigaMultiPath;
 
     .prologue
     .line 63
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     return-object v0
 .end method
@@ -320,7 +320,7 @@
 
     .line 410
     .local v0, "isSimPresent":Z
-    iget-object v3, p0, Lcom/android/settings/GigaMultiPath;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    iget-object v3, p0, Lcom/android/settings_ex/GigaMultiPath;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v3}, Landroid/telephony/TelephonyManager;->getPhoneCount()I
 
@@ -335,7 +335,7 @@
     if-ge v2, v1, :cond_1
 
     .line 413
-    iget-object v3, p0, Lcom/android/settings/GigaMultiPath;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    iget-object v3, p0, Lcom/android/settings_ex/GigaMultiPath;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v3, v2}, Landroid/telephony/TelephonyManager;->getSimState(I)I
 
@@ -368,14 +368,14 @@
 
     .line 423
     .local v1, "isSimValid":Z
-    invoke-direct {p0}, Lcom/android/settings/GigaMultiPath;->isSimPresent()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/GigaMultiPath;->isSimPresent()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
     .line 424
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v2}, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;
 
@@ -410,7 +410,7 @@
     .line 441
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/GigaMultiPath;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/GigaMultiPath;->mContext:Landroid/content/Context;
 
     move-object/from16 v17, v0
 
@@ -612,7 +612,7 @@
     :cond_6
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/GigaMultiPath;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v0, v0, Lcom/android/settings_ex/GigaMultiPath;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     move-object/from16 v17, v0
 
@@ -620,7 +620,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/GigaMultiPath;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v0, v0, Lcom/android/settings_ex/GigaMultiPath;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     move-object/from16 v17, v0
 
@@ -649,16 +649,16 @@
 
     .prologue
     .line 228
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mMptcpStateReceiver:Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mMptcpStateReceiver:Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;
 
     if-nez v1, :cond_0
 
     .line 229
-    new-instance v1, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;
+    new-instance v1, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;-><init>(Lcom/android/settings/GigaMultiPath;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;-><init>(Lcom/android/settings_ex/GigaMultiPath;)V
 
-    iput-object v1, p0, Lcom/android/settings/GigaMultiPath;->mMptcpStateReceiver:Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;
+    iput-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mMptcpStateReceiver:Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;
 
     .line 230
     new-instance v0, Landroid/content/IntentFilter;
@@ -677,11 +677,11 @@
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 233
-    invoke-virtual {p0}, Lcom/android/settings/GigaMultiPath;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaMultiPath;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->mMptcpStateReceiver:Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mMptcpStateReceiver:Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -741,7 +741,7 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 334
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
@@ -760,23 +760,23 @@
 
     .prologue
     .line 238
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath;->mMptcpStateReceiver:Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->mMptcpStateReceiver:Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;
 
     if-eqz v0, :cond_0
 
     .line 239
-    invoke-virtual {p0}, Lcom/android/settings/GigaMultiPath;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaMultiPath;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mMptcpStateReceiver:Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mMptcpStateReceiver:Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 240
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/GigaMultiPath;->mMptcpStateReceiver:Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->mMptcpStateReceiver:Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;
 
     .line 242
     :cond_0
@@ -796,29 +796,29 @@
     invoke-super {p0, p1}, Landroid/app/Fragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 161
-    invoke-virtual {p0}, Lcom/android/settings/GigaMultiPath;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaMultiPath;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 163
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/GigaMultiPath;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 164
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v2}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 165
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    iget-object v3, p0, Lcom/android/settings/GigaMultiPath;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/GigaMultiPath;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -835,12 +835,12 @@
     const/4 v1, 0x1
 
     :cond_0
-    invoke-virtual {v2, v1}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v2, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 166
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v1, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 167
     return-void
@@ -859,14 +859,14 @@
     invoke-super {p0, p1}, Landroid/app/Fragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 128
-    invoke-virtual {p0}, Lcom/android/settings/GigaMultiPath;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaMultiPath;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/GigaMultiPath;->mContext:Landroid/content/Context;
+    iput-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mContext:Landroid/content/Context;
 
     .line 130
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mContext:Landroid/content/Context;
 
     const-string v3, "phone"
 
@@ -876,10 +876,10 @@
 
     check-cast v2, Landroid/telephony/TelephonyManager;
 
-    iput-object v2, p0, Lcom/android/settings/GigaMultiPath;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    iput-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     .line 132
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mContext:Landroid/content/Context;
 
     const-string v3, "wifi"
 
@@ -889,17 +889,17 @@
 
     check-cast v2, Landroid/net/wifi/WifiManager;
 
-    iput-object v2, p0, Lcom/android/settings/GigaMultiPath;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iput-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     .line 134
-    invoke-direct {p0}, Lcom/android/settings/GigaMultiPath;->isSimPresent()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/GigaMultiPath;->isSimPresent()Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
     .line 135
-    invoke-virtual {p0}, Lcom/android/settings/GigaMultiPath;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaMultiPath;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -918,14 +918,14 @@
 
     .line 136
     :cond_1
-    invoke-direct {p0}, Lcom/android/settings/GigaMultiPath;->isSimValid()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/GigaMultiPath;->isSimValid()Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
     .line 137
-    invoke-virtual {p0}, Lcom/android/settings/GigaMultiPath;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaMultiPath;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -941,16 +941,16 @@
 
     .line 138
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mContext:Landroid/content/Context;
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isRoaming(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isRoaming(Landroid/content/Context;)Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
     .line 139
-    invoke-virtual {p0}, Lcom/android/settings/GigaMultiPath;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaMultiPath;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -966,16 +966,16 @@
 
     .line 140
     :cond_3
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mContext:Landroid/content/Context;
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isAirplaneModeEnabled(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isAirplaneModeEnabled(Landroid/content/Context;)Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
     .line 141
-    invoke-virtual {p0}, Lcom/android/settings/GigaMultiPath;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaMultiPath;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -991,11 +991,11 @@
 
     .line 142
     :cond_4
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     if-eqz v2, :cond_5
 
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v2}, Landroid/net/wifi/WifiManager;->getWifiApState()I
 
@@ -1006,7 +1006,7 @@
     if-ne v2, v3, :cond_5
 
     .line 144
-    invoke-virtual {p0}, Lcom/android/settings/GigaMultiPath;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaMultiPath;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1022,14 +1022,14 @@
 
     .line 145
     :cond_5
-    invoke-direct {p0}, Lcom/android/settings/GigaMultiPath;->isTether()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/GigaMultiPath;->isTether()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
     .line 146
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1037,7 +1037,7 @@
 
     .line 147
     .local v1, "tetherStr":Ljava/lang/String;
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mContext:Landroid/content/Context;
 
     const v3, 0x7f0e02c7
 
@@ -1058,7 +1058,7 @@
     if-nez v2, :cond_6
 
     .line 149
-    invoke-virtual {p0}, Lcom/android/settings/GigaMultiPath;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaMultiPath;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1079,7 +1079,7 @@
     move-result-object v1
 
     .line 152
-    invoke-virtual {p0}, Lcom/android/settings/GigaMultiPath;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaMultiPath;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1138,21 +1138,21 @@
     invoke-super {p0}, Landroid/app/Fragment;->onDestroyView()V
 
     .line 218
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 219
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 221
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->isShowing()Z
 
@@ -1161,14 +1161,14 @@
     if-eqz v0, :cond_0
 
     .line 222
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath;->mHoldingHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->mHoldingHandler:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mRemoveProgress:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mRemoveProgress:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     .line 223
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
@@ -1185,27 +1185,27 @@
     invoke-super {p0}, Landroid/app/Fragment;->onPause()V
 
     .line 208
-    invoke-direct {p0}, Lcom/android/settings/GigaMultiPath;->unRegisterReceivers()V
+    invoke-direct {p0}, Lcom/android/settings_ex/GigaMultiPath;->unRegisterReceivers()V
 
     .line 210
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mAirplaneModeObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mAirplaneModeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 211
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mMobileDataObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mMobileDataObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
@@ -1225,10 +1225,10 @@
     invoke-super {p0}, Landroid/app/Fragment;->onResume()V
 
     .line 183
-    invoke-direct {p0}, Lcom/android/settings/GigaMultiPath;->registerReceivers()V
+    invoke-direct {p0}, Lcom/android/settings_ex/GigaMultiPath;->registerReceivers()V
 
     .line 185
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1240,12 +1240,12 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/GigaMultiPath;->mAirplaneModeObserver:Landroid/database/ContentObserver;
+    iget-object v4, p0, Lcom/android/settings_ex/GigaMultiPath;->mAirplaneModeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v2, v3, v1, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 188
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1257,34 +1257,34 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/GigaMultiPath;->mMobileDataObserver:Landroid/database/ContentObserver;
+    iget-object v4, p0, Lcom/android/settings_ex/GigaMultiPath;->mMobileDataObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v2, v3, v1, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 192
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mContext:Landroid/content/Context;
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isRoaming(Landroid/content/Context;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->mContext:Landroid/content/Context;
-
-    invoke-static {v2}, Lcom/android/settings/Utils;->isAirplaneModeEnabled(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isRoaming(Landroid/content/Context;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    invoke-direct {p0}, Lcom/android/settings/GigaMultiPath;->isSimValid()Z
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mContext:Landroid/content/Context;
+
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isAirplaneModeEnabled(Landroid/content/Context;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-direct {p0}, Lcom/android/settings_ex/GigaMultiPath;->isSimValid()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    invoke-direct {p0}, Lcom/android/settings/GigaMultiPath;->isTether()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/GigaMultiPath;->isTether()Z
 
     move-result v2
 
@@ -1292,13 +1292,13 @@
 
     .line 194
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2, v0}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v2, v0}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 196
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1317,11 +1317,11 @@
     .line 197
     .local v0, "mCurrentState":Z
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
 
     if-eqz v2, :cond_3
 
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v2}, Landroid/app/ProgressDialog;->isShowing()Z
 
@@ -1329,28 +1329,28 @@
 
     if-eqz v2, :cond_3
 
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2}, Lcom/android/settings/widget/SwitchBar;->isChecked()Z
+    invoke-virtual {v2}, Lcom/android/settings_ex/widget/SwitchBar;->isChecked()Z
 
     move-result v2
 
     if-ne v0, v2, :cond_3
 
     .line 199
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2, v1}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v2, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 200
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mHoldingHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mHoldingHandler:Landroid/os/Handler;
 
-    iget-object v2, p0, Lcom/android/settings/GigaMultiPath;->mRemoveProgress:Ljava/lang/Runnable;
+    iget-object v2, p0, Lcom/android/settings_ex/GigaMultiPath;->mRemoveProgress:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     .line 201
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v1}, Landroid/app/ProgressDialog;->dismiss()V
 
@@ -1376,7 +1376,7 @@
     const/4 v2, 0x0
 
     .line 246
-    iget-object v3, p0, Lcom/android/settings/GigaMultiPath;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/GigaMultiPath;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1414,7 +1414,7 @@
     if-eqz p2, :cond_5
 
     .line 249
-    iget-object v3, p0, Lcom/android/settings/GigaMultiPath;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/GigaMultiPath;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1431,51 +1431,51 @@
     .line 250
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/GigaMultiPath;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaMultiPath;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
     invoke-direct {v1, v3}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/android/settings/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iput-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     .line 251
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v1, v7}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 252
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v3, 0x7f0e101f
 
     invoke-virtual {v1, v3}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     .line 253
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
-    new-instance v3, Lcom/android/settings/GigaMultiPath$3;
+    new-instance v3, Lcom/android/settings_ex/GigaMultiPath$3;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/GigaMultiPath$3;-><init>(Lcom/android/settings/GigaMultiPath;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/GigaMultiPath$3;-><init>(Lcom/android/settings_ex/GigaMultiPath;)V
 
     invoke-virtual {v1, v6, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 265
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
-    new-instance v3, Lcom/android/settings/GigaMultiPath$4;
+    new-instance v3, Lcom/android/settings_ex/GigaMultiPath$4;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/GigaMultiPath$4;-><init>(Lcom/android/settings/GigaMultiPath;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/GigaMultiPath$4;-><init>(Lcom/android/settings_ex/GigaMultiPath;)V
 
     invoke-virtual {v1, v5, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 270
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
     .line 271
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
@@ -1483,33 +1483,33 @@
 
     .line 273
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/GigaMultiPath;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaMultiPath;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/android/settings/Utils;->isWifiEnabled(Landroid/content/Context;)Z
+    invoke-static {v3}, Lcom/android/settings_ex/Utils;->isWifiEnabled(Landroid/content/Context;)Z
 
     move-result v3
 
     if-nez v3, :cond_3
 
-    invoke-virtual {p0}, Lcom/android/settings/GigaMultiPath;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaMultiPath;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/android/settings/Utils;->isMobileNetworkEnabled(Landroid/content/Context;)Z
+    invoke-static {v3}, Lcom/android/settings_ex/Utils;->isMobileNetworkEnabled(Landroid/content/Context;)Z
 
     move-result v3
 
     if-nez v3, :cond_3
 
     .line 274
-    iget-object v3, p0, Lcom/android/settings/GigaMultiPath;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/GigaMultiPath;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v3, v2}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v3, v2}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 275
-    invoke-virtual {p0}, Lcom/android/settings/GigaMultiPath;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaMultiPath;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1525,11 +1525,11 @@
 
     .line 277
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/GigaMultiPath;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaMultiPath;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isWifiEnabled(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isWifiEnabled(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -1538,51 +1538,51 @@
     .line 278
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/GigaMultiPath;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaMultiPath;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
     invoke-direct {v1, v3}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/android/settings/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iput-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     .line 279
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v1, v7}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 280
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v3, 0x7f0e101c
 
     invoke-virtual {v1, v3}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     .line 281
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
-    new-instance v3, Lcom/android/settings/GigaMultiPath$5;
+    new-instance v3, Lcom/android/settings_ex/GigaMultiPath$5;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/GigaMultiPath$5;-><init>(Lcom/android/settings/GigaMultiPath;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/GigaMultiPath$5;-><init>(Lcom/android/settings_ex/GigaMultiPath;)V
 
     invoke-virtual {v1, v6, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 292
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
-    new-instance v3, Lcom/android/settings/GigaMultiPath$6;
+    new-instance v3, Lcom/android/settings_ex/GigaMultiPath$6;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/GigaMultiPath$6;-><init>(Lcom/android/settings/GigaMultiPath;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/GigaMultiPath$6;-><init>(Lcom/android/settings_ex/GigaMultiPath;)V
 
     invoke-virtual {v1, v5, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 297
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
     .line 298
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
@@ -1590,11 +1590,11 @@
 
     .line 300
     :cond_4
-    invoke-virtual {p0}, Lcom/android/settings/GigaMultiPath;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaMultiPath;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isMobileNetworkEnabled(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isMobileNetworkEnabled(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -1603,51 +1603,51 @@
     .line 301
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/GigaMultiPath;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaMultiPath;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
     invoke-direct {v1, v3}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/android/settings/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iput-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     .line 302
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v1, v7}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 303
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     const v3, 0x7f0e101d
 
     invoke-virtual {v1, v3}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     .line 304
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
-    new-instance v3, Lcom/android/settings/GigaMultiPath$7;
+    new-instance v3, Lcom/android/settings_ex/GigaMultiPath$7;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/GigaMultiPath$7;-><init>(Lcom/android/settings/GigaMultiPath;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/GigaMultiPath$7;-><init>(Lcom/android/settings_ex/GigaMultiPath;)V
 
     invoke-virtual {v1, v6, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 313
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
-    new-instance v3, Lcom/android/settings/GigaMultiPath$8;
+    new-instance v3, Lcom/android/settings_ex/GigaMultiPath$8;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/GigaMultiPath$8;-><init>(Lcom/android/settings/GigaMultiPath;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/GigaMultiPath$8;-><init>(Lcom/android/settings_ex/GigaMultiPath;)V
 
     invoke-virtual {v1, v5, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 318
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
     .line 319
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mAlertDialog:Landroid/app/AlertDialog$Builder;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
@@ -1655,15 +1655,15 @@
 
     .line 323
     :cond_5
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 325
-    invoke-virtual {p0}, Lcom/android/settings/GigaMultiPath;->showProgressDialog()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/GigaMultiPath;->showProgressDialog()V
 
     .line 326
-    invoke-direct {p0, p2}, Lcom/android/settings/GigaMultiPath;->sendMptcpStartBroadCast(Z)V
+    invoke-direct {p0, p2}, Lcom/android/settings_ex/GigaMultiPath;->sendMptcpStartBroadCast(Z)V
 
     goto/16 :goto_1
 .end method
@@ -1675,33 +1675,33 @@
     .line 338
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
 
     .line 339
     new-instance v0, Landroid/app/ProgressDialog;
 
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
 
     .line 340
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setIndeterminate(Z)V
 
     .line 341
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setCancelable(Z)V
 
     .line 342
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->getWindow()Landroid/view/Window;
 
@@ -1712,18 +1712,18 @@
     invoke-virtual {v0, v1}, Landroid/view/Window;->setType(I)V
 
     .line 343
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
 
     const v1, 0x7f0e00df
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/GigaMultiPath;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/GigaMultiPath;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
     .line 344
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->show()V
 
@@ -1732,19 +1732,19 @@
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/GigaMultiPath;->mHoldingHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->mHoldingHandler:Landroid/os/Handler;
 
     .line 346
-    new-instance v0, Lcom/android/settings/GigaMultiPath$9;
+    new-instance v0, Lcom/android/settings_ex/GigaMultiPath$9;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/GigaMultiPath$9;-><init>(Lcom/android/settings/GigaMultiPath;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/GigaMultiPath$9;-><init>(Lcom/android/settings_ex/GigaMultiPath;)V
 
-    iput-object v0, p0, Lcom/android/settings/GigaMultiPath;->mRemoveProgress:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->mRemoveProgress:Ljava/lang/Runnable;
 
     .line 355
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath;->mHoldingHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath;->mHoldingHandler:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/android/settings/GigaMultiPath;->mRemoveProgress:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/android/settings_ex/GigaMultiPath;->mRemoveProgress:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0x3a98
 

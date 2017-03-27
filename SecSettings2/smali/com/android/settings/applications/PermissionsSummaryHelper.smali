@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/applications/PermissionsSummaryHelper;
+.class public Lcom/android/settings_ex/applications/PermissionsSummaryHelper;
 .super Ljava/lang/Object;
 .source "PermissionsSummaryHelper.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/applications/PermissionsSummaryHelper$PermissionsResultCallback;
+        Lcom/android/settings_ex/applications/PermissionsSummaryHelper$PermissionsResultCallback;
     }
 .end annotation
 
@@ -23,11 +23,11 @@
     return-void
 .end method
 
-.method public static getPermissionSummary(Landroid/content/Context;Ljava/lang/String;Lcom/android/settings/applications/PermissionsSummaryHelper$PermissionsResultCallback;)Landroid/content/BroadcastReceiver;
+.method public static getPermissionSummary(Landroid/content/Context;Ljava/lang/String;Lcom/android/settings_ex/applications/PermissionsSummaryHelper$PermissionsResultCallback;)Landroid/content/BroadcastReceiver;
     .locals 2
     .param p0, "context"    # Landroid/content/Context;
     .param p1, "pkg"    # Ljava/lang/String;
-    .param p2, "callback"    # Lcom/android/settings/applications/PermissionsSummaryHelper$PermissionsResultCallback;
+    .param p2, "callback"    # Lcom/android/settings_ex/applications/PermissionsSummaryHelper$PermissionsResultCallback;
 
     .prologue
     .line 32
@@ -46,25 +46,25 @@
     .line 34
     const-string v1, "com.android.settings.PERM_COUNT_RESPONSE"
 
-    invoke-static {p0, v1, v0, p2}, Lcom/android/settings/applications/PermissionsSummaryHelper;->sendPermissionRequest(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;Lcom/android/settings/applications/PermissionsSummaryHelper$PermissionsResultCallback;)Landroid/content/BroadcastReceiver;
+    invoke-static {p0, v1, v0, p2}, Lcom/android/settings_ex/applications/PermissionsSummaryHelper;->sendPermissionRequest(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;Lcom/android/settings_ex/applications/PermissionsSummaryHelper$PermissionsResultCallback;)Landroid/content/BroadcastReceiver;
 
     move-result-object v1
 
     return-object v1
 .end method
 
-.method private static sendPermissionRequest(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;Lcom/android/settings/applications/PermissionsSummaryHelper$PermissionsResultCallback;)Landroid/content/BroadcastReceiver;
+.method private static sendPermissionRequest(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;Lcom/android/settings_ex/applications/PermissionsSummaryHelper$PermissionsResultCallback;)Landroid/content/BroadcastReceiver;
     .locals 2
     .param p0, "context"    # Landroid/content/Context;
     .param p1, "action"    # Ljava/lang/String;
     .param p2, "request"    # Landroid/content/Intent;
-    .param p3, "callback"    # Lcom/android/settings/applications/PermissionsSummaryHelper$PermissionsResultCallback;
+    .param p3, "callback"    # Lcom/android/settings_ex/applications/PermissionsSummaryHelper$PermissionsResultCallback;
 
     .prologue
     .line 45
-    new-instance v0, Lcom/android/settings/applications/PermissionsSummaryHelper$1;
+    new-instance v0, Lcom/android/settings_ex/applications/PermissionsSummaryHelper$1;
 
-    invoke-direct {v0, p3}, Lcom/android/settings/applications/PermissionsSummaryHelper$1;-><init>(Lcom/android/settings/applications/PermissionsSummaryHelper$PermissionsResultCallback;)V
+    invoke-direct {v0, p3}, Lcom/android/settings_ex/applications/PermissionsSummaryHelper$1;-><init>(Lcom/android/settings_ex/applications/PermissionsSummaryHelper$PermissionsResultCallback;)V
 
     .line 58
     .local v0, "receiver":Landroid/content/BroadcastReceiver;

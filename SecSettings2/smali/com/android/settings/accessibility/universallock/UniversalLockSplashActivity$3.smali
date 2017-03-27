@@ -1,14 +1,14 @@
-.class Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity$3;
+.class Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity$3;
 .super Ljava/lang/Object;
 .source "UniversalLockSplashActivity.java"
 
 # interfaces
-.implements Lcom/android/settings/widget/ToggleSwitch$OnBeforeCheckedChangeListener;
+.implements Lcom/android/settings_ex/widget/ToggleSwitch$OnBeforeCheckedChangeListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->onActivityCreated(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->onActivityCreated(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;)V
     .locals 0
 
     .prologue
     .line 259
-    iput-object p1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity$3;->this$0:Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity$3;->this$0:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,9 +36,9 @@
 
 
 # virtual methods
-.method public onBeforeCheckedChanged(Lcom/android/settings/widget/ToggleSwitch;Z)Z
+.method public onBeforeCheckedChanged(Lcom/android/settings_ex/widget/ToggleSwitch;Z)Z
     .locals 6
-    .param p1, "toggleSwitch"    # Lcom/android/settings/widget/ToggleSwitch;
+    .param p1, "toggleSwitch"    # Lcom/android/settings_ex/widget/ToggleSwitch;
     .param p2, "checked"    # Z
 
     .prologue
@@ -80,22 +80,22 @@
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 266
-    # getter for: Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->access$1200()Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->access$1200()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    invoke-virtual {v1, v4}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v1, v4}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     .line 267
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity$3;->this$0:Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity$3;->this$0:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
-    invoke-static {v1}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->access$1300(Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;)Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->access$1300(Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;)Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
     move-result-object v1
 
-    invoke-virtual {v1, v5}, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->launchConfirmCurrentLockScreen(Z)Z
+    invoke-virtual {v1, v5}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->launchConfirmCurrentLockScreen(Z)Z
 
     .line 277
     :goto_0
@@ -103,14 +103,14 @@
 
     .line 271
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity$3;->this$0:Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity$3;->this$0:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
-    invoke-static {v1}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->access$1300(Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;)Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->access$1300(Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;)Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
     move-result-object v1
 
-    invoke-virtual {v1, v4}, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->launchConfirmCurrentLockScreen(Z)Z
+    invoke-virtual {v1, v4}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->launchConfirmCurrentLockScreen(Z)Z
 
     move-result v0
 
@@ -139,17 +139,17 @@
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 274
-    # getter for: Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->access$1200()Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->access$1200()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     .line 275
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity$3;->this$0:Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity$3;->this$0:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;
 
-    invoke-virtual {v1}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->loadSettings()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->loadSettings()V
 
     goto :goto_0
 .end method

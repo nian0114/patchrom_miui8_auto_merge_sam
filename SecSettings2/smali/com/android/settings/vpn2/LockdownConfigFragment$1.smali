@@ -1,4 +1,4 @@
-.class Lcom/android/settings/vpn2/LockdownConfigFragment$1;
+.class Lcom/android/settings_ex/vpn2/LockdownConfigFragment$1;
 .super Ljava/lang/Object;
 .source "LockdownConfigFragment.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/vpn2/LockdownConfigFragment;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/vpn2/LockdownConfigFragment;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/vpn2/LockdownConfigFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/vpn2/LockdownConfigFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/vpn2/LockdownConfigFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/vpn2/LockdownConfigFragment;)V
     .locals 0
 
     .prologue
     .line 115
-    iput-object p1, p0, Lcom/android/settings/vpn2/LockdownConfigFragment$1;->this$0:Lcom/android/settings/vpn2/LockdownConfigFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/vpn2/LockdownConfigFragment$1;->this$0:Lcom/android/settings_ex/vpn2/LockdownConfigFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/CryptDecryptConfirm$Blank$1;
+.class Lcom/android/settings_ex/CryptDecryptConfirm$Blank$1;
 .super Ljava/lang/Object;
 .source "CryptDecryptConfirm.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/CryptDecryptConfirm$Blank;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/CryptDecryptConfirm$Blank;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/CryptDecryptConfirm$Blank;
+.field final synthetic this$0:Lcom/android/settings_ex/CryptDecryptConfirm$Blank;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/CryptDecryptConfirm$Blank;)V
+.method constructor <init>(Lcom/android/settings_ex/CryptDecryptConfirm$Blank;)V
     .locals 0
 
     .prologue
     .line 78
-    iput-object p1, p0, Lcom/android/settings/CryptDecryptConfirm$Blank$1;->this$0:Lcom/android/settings/CryptDecryptConfirm$Blank;
+    iput-object p1, p0, Lcom/android/settings_ex/CryptDecryptConfirm$Blank$1;->this$0:Lcom/android/settings_ex/CryptDecryptConfirm$Blank;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -71,9 +71,9 @@
     invoke-static {v4, v5}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 89
-    iget-object v4, p0, Lcom/android/settings/CryptDecryptConfirm$Blank$1;->this$0:Lcom/android/settings/CryptDecryptConfirm$Blank;
+    iget-object v4, p0, Lcom/android/settings_ex/CryptDecryptConfirm$Blank$1;->this$0:Lcom/android/settings_ex/CryptDecryptConfirm$Blank;
 
-    invoke-virtual {v4}, Lcom/android/settings/CryptDecryptConfirm$Blank;->getIntent()Landroid/content/Intent;
+    invoke-virtual {v4}, Lcom/android/settings_ex/CryptDecryptConfirm$Blank;->getIntent()Landroid/content/Intent;
 
     move-result-object v4
 

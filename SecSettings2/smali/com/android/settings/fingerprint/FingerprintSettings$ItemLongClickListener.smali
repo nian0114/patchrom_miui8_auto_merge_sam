@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fingerprint/FingerprintSettings$ItemLongClickListener;
+.class Lcom/android/settings_ex/fingerprint/FingerprintSettings$ItemLongClickListener;
 .super Ljava/lang/Object;
 .source "FingerprintSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fingerprint/FingerprintSettings;
+    value = Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/FingerprintSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings;)V
     .locals 0
 
     .prologue
     .line 1608
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintSettings$ItemLongClickListener;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$ItemLongClickListener;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -54,10 +54,10 @@
     .prologue
     .line 1611
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings$ItemLongClickListener;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$ItemLongClickListener;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintSettings;->mEnrolledFingerCount:I
-    invoke-static {v0}, Lcom/android/settings/fingerprint/FingerprintSettings;->access$700(Lcom/android/settings/fingerprint/FingerprintSettings;)I
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintSettings;->mEnrolledFingerCount:I
+    invoke-static {v0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings;->access$700(Lcom/android/settings_ex/fingerprint/FingerprintSettings;)I
 
     move-result v0
 
@@ -76,10 +76,10 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSettings$ItemLongClickListener;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$ItemLongClickListener;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintSettings;->mEnrolledFingerCount:I
-    invoke-static {v2}, Lcom/android/settings/fingerprint/FingerprintSettings;->access$700(Lcom/android/settings/fingerprint/FingerprintSettings;)I
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintSettings;->mEnrolledFingerCount:I
+    invoke-static {v2}, Lcom/android/settings_ex/fingerprint/FingerprintSettings;->access$700(Lcom/android/settings_ex/fingerprint/FingerprintSettings;)I
 
     move-result v2
 
@@ -112,12 +112,12 @@
 
     .line 1615
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings$ItemLongClickListener;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$ItemLongClickListener;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings$ItemLongClickListener;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$ItemLongClickListener;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintSettings;->items:Ljava/util/List;
-    invoke-static {v0}, Lcom/android/settings/fingerprint/FingerprintSettings;->access$1400(Lcom/android/settings/fingerprint/FingerprintSettings;)Ljava/util/List;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintSettings;->items:Ljava/util/List;
+    invoke-static {v0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings;->access$1400(Lcom/android/settings_ex/fingerprint/FingerprintSettings;)Ljava/util/List;
 
     move-result-object v0
 
@@ -135,8 +135,8 @@
 
     const/4 v2, 0x0
 
-    # invokes: Lcom/android/settings/fingerprint/FingerprintSettings;->startSelectListUI(I[Z)V
-    invoke-static {v1, v0, v2}, Lcom/android/settings/fingerprint/FingerprintSettings;->access$900(Lcom/android/settings/fingerprint/FingerprintSettings;I[Z)V
+    # invokes: Lcom/android/settings_ex/fingerprint/FingerprintSettings;->startSelectListUI(I[Z)V
+    invoke-static {v1, v0, v2}, Lcom/android/settings_ex/fingerprint/FingerprintSettings;->access$900(Lcom/android/settings_ex/fingerprint/FingerprintSettings;I[Z)V
 
     .line 1616
     const/4 v0, 0x1

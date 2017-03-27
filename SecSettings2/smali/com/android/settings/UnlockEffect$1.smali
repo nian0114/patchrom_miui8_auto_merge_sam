@@ -1,4 +1,4 @@
-.class Lcom/android/settings/UnlockEffect$1;
+.class Lcom/android/settings_ex/UnlockEffect$1;
 .super Ljava/lang/Object;
 .source "UnlockEffect.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/UnlockEffect;->createDialogforTablet()V
+    value = Lcom/android/settings_ex/UnlockEffect;->createDialogforTablet()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/UnlockEffect;
+.field final synthetic this$0:Lcom/android/settings_ex/UnlockEffect;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/UnlockEffect;)V
+.method constructor <init>(Lcom/android/settings_ex/UnlockEffect;)V
     .locals 0
 
     .prologue
     .line 167
-    iput-object p1, p0, Lcom/android/settings/UnlockEffect$1;->this$0:Lcom/android/settings/UnlockEffect;
+    iput-object p1, p0, Lcom/android/settings_ex/UnlockEffect$1;->this$0:Lcom/android/settings_ex/UnlockEffect;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,18 +43,18 @@
 
     .prologue
     .line 169
-    iget-object v0, p0, Lcom/android/settings/UnlockEffect$1;->this$0:Lcom/android/settings/UnlockEffect;
+    iget-object v0, p0, Lcom/android/settings_ex/UnlockEffect$1;->this$0:Lcom/android/settings_ex/UnlockEffect;
 
-    invoke-virtual {v0}, Lcom/android/settings/UnlockEffect;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/android/settings_ex/UnlockEffect;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     const-string v1, "lockscreen_ripple_effect"
 
-    iget-object v2, p0, Lcom/android/settings/UnlockEffect$1;->this$0:Lcom/android/settings/UnlockEffect;
+    iget-object v2, p0, Lcom/android/settings_ex/UnlockEffect$1;->this$0:Lcom/android/settings_ex/UnlockEffect;
 
-    # getter for: Lcom/android/settings/UnlockEffect;->mDefaultUnlock:I
-    invoke-static {v2}, Lcom/android/settings/UnlockEffect;->access$000(Lcom/android/settings/UnlockEffect;)I
+    # getter for: Lcom/android/settings_ex/UnlockEffect;->mDefaultUnlock:I
+    invoke-static {v2}, Lcom/android/settings_ex/UnlockEffect;->access$000(Lcom/android/settings_ex/UnlockEffect;)I
 
     move-result v2
 
@@ -73,10 +73,10 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/UnlockEffect$1;->this$0:Lcom/android/settings/UnlockEffect;
+    iget-object v2, p0, Lcom/android/settings_ex/UnlockEffect$1;->this$0:Lcom/android/settings_ex/UnlockEffect;
 
-    # getter for: Lcom/android/settings/UnlockEffect;->mDefaultUnlock:I
-    invoke-static {v2}, Lcom/android/settings/UnlockEffect;->access$000(Lcom/android/settings/UnlockEffect;)I
+    # getter for: Lcom/android/settings_ex/UnlockEffect;->mDefaultUnlock:I
+    invoke-static {v2}, Lcom/android/settings_ex/UnlockEffect;->access$000(Lcom/android/settings_ex/UnlockEffect;)I
 
     move-result v2
 
@@ -91,9 +91,9 @@
     invoke-static {v0, v1}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 172
-    iget-object v0, p0, Lcom/android/settings/UnlockEffect$1;->this$0:Lcom/android/settings/UnlockEffect;
+    iget-object v0, p0, Lcom/android/settings_ex/UnlockEffect$1;->this$0:Lcom/android/settings_ex/UnlockEffect;
 
-    invoke-virtual {v0}, Lcom/android/settings/UnlockEffect;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/UnlockEffect;->finish()V
 
     .line 173
     return-void

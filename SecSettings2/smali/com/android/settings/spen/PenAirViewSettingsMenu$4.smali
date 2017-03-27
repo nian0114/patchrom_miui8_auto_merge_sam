@@ -1,4 +1,4 @@
-.class Lcom/android/settings/spen/PenAirViewSettingsMenu$4;
+.class Lcom/android/settings_ex/spen/PenAirViewSettingsMenu$4;
 .super Ljava/lang/Object;
 .source "PenAirViewSettingsMenu.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/spen/PenAirViewSettingsMenu;->showTalkBackDisableDialog()V
+    value = Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->showTalkBackDisableDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/spen/PenAirViewSettingsMenu;
+.field final synthetic this$0:Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/spen/PenAirViewSettingsMenu;)V
+.method constructor <init>(Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;)V
     .locals 0
 
     .prologue
     .line 304
-    iput-object p1, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu$4;->this$0:Lcom/android/settings/spen/PenAirViewSettingsMenu;
+    iput-object p1, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu$4;->this$0:Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

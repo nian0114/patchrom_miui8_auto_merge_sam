@@ -1,4 +1,4 @@
-.class Lcom/android/settings/FontPreviewTablet$1;
+.class Lcom/android/settings_ex/FontPreviewTablet$1;
 .super Ljava/lang/Object;
 .source "FontPreviewTablet.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/FontPreviewTablet;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/FontPreviewTablet;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/FontPreviewTablet;
+.field final synthetic this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/FontPreviewTablet;)V
+.method constructor <init>(Lcom/android/settings_ex/FontPreviewTablet;)V
     .locals 0
 
     .prologue
     .line 236
-    iput-object p1, p0, Lcom/android/settings/FontPreviewTablet$1;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iput-object p1, p0, Lcom/android/settings_ex/FontPreviewTablet$1;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,34 +44,34 @@
 
     .prologue
     .line 247
-    iget-object v0, p0, Lcom/android/settings/FontPreviewTablet$1;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreviewTablet$1;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    # invokes: Lcom/android/settings/FontPreviewTablet;->changeFontSizeFromSeekBar(I)V
-    invoke-static {v0, p2}, Lcom/android/settings/FontPreviewTablet;->access$000(Lcom/android/settings/FontPreviewTablet;I)V
+    # invokes: Lcom/android/settings_ex/FontPreviewTablet;->changeFontSizeFromSeekBar(I)V
+    invoke-static {v0, p2}, Lcom/android/settings_ex/FontPreviewTablet;->access$000(Lcom/android/settings_ex/FontPreviewTablet;I)V
 
     .line 248
-    iget-object v0, p0, Lcom/android/settings/FontPreviewTablet$1;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreviewTablet$1;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
     const/4 v1, 0x1
 
-    # setter for: Lcom/android/settings/FontPreviewTablet;->mIsChangedFontSizeSeekBar:Z
-    invoke-static {v0, v1}, Lcom/android/settings/FontPreviewTablet;->access$102(Lcom/android/settings/FontPreviewTablet;Z)Z
+    # setter for: Lcom/android/settings_ex/FontPreviewTablet;->mIsChangedFontSizeSeekBar:Z
+    invoke-static {v0, v1}, Lcom/android/settings_ex/FontPreviewTablet;->access$102(Lcom/android/settings_ex/FontPreviewTablet;Z)Z
 
     .line 251
-    iget-object v0, p0, Lcom/android/settings/FontPreviewTablet$1;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreviewTablet$1;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    # getter for: Lcom/android/settings/FontPreviewTablet;->mExtraLargeFontIndex:I
-    invoke-static {v0}, Lcom/android/settings/FontPreviewTablet;->access$200(Lcom/android/settings/FontPreviewTablet;)I
+    # getter for: Lcom/android/settings_ex/FontPreviewTablet;->mExtraLargeFontIndex:I
+    invoke-static {v0}, Lcom/android/settings_ex/FontPreviewTablet;->access$200(Lcom/android/settings_ex/FontPreviewTablet;)I
 
     move-result v0
 
     if-le p2, v0, :cond_0
 
     .line 253
-    iget-object v0, p0, Lcom/android/settings/FontPreviewTablet$1;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreviewTablet$1;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    # getter for: Lcom/android/settings/FontPreviewTablet;->mShowForHugeFontTextView:Landroid/widget/TextView;
-    invoke-static {v0}, Lcom/android/settings/FontPreviewTablet;->access$300(Lcom/android/settings/FontPreviewTablet;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/FontPreviewTablet;->mShowForHugeFontTextView:Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/android/settings_ex/FontPreviewTablet;->access$300(Lcom/android/settings_ex/FontPreviewTablet;)Landroid/widget/TextView;
 
     move-result-object v0
 
@@ -85,10 +85,10 @@
 
     .line 255
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/FontPreviewTablet$1;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreviewTablet$1;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    # getter for: Lcom/android/settings/FontPreviewTablet;->mShowForHugeFontTextView:Landroid/widget/TextView;
-    invoke-static {v0}, Lcom/android/settings/FontPreviewTablet;->access$300(Lcom/android/settings/FontPreviewTablet;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/FontPreviewTablet;->mShowForHugeFontTextView:Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/android/settings_ex/FontPreviewTablet;->access$300(Lcom/android/settings_ex/FontPreviewTablet;)Landroid/widget/TextView;
 
     move-result-object v0
 

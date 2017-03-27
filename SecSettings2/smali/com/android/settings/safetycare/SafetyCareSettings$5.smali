@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/safetycare/SafetyCareSettings$5;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/safetycare/SafetyCareSettings$5;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "SafetyCareSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/safetycare/SafetyCareSettings;
+    value = Lcom/android/settings_ex/safetycare/SafetyCareSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 436
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -63,7 +63,7 @@
     :goto_0
     const-string v2, "VZW"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v3
 
@@ -73,7 +73,7 @@
 
     if-eqz v2, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v2
 
@@ -89,7 +89,7 @@
     :cond_1
     const-string v2, "VZW"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v3
 
@@ -106,13 +106,13 @@
 
     .line 466
     :cond_2
-    invoke-static {p1}, Lcom/android/settings/Utils;->isShopDemo(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isShopDemo(Landroid/content/Context;)Z
 
     move-result v2
 
     if-nez v2, :cond_3
 
-    invoke-static {}, Lcom/android/settings/Utils;->isLDUModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isLDUModel()Z
 
     move-result v2
 
@@ -124,13 +124,13 @@
 
     if-nez v2, :cond_3
 
-    invoke-static {}, Lcom/android/settings/Utils;->isDisasterSafetyModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDisasterSafetyModel()Z
 
     move-result v2
 
     if-nez v2, :cond_3
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->isAfwProfile(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isAfwProfile(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -144,7 +144,7 @@
 
     .line 470
     :cond_4
-    invoke-static {p1}, Lcom/android/settings/Utils;->isSupportPrivateBoxInSettings(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isSupportPrivateBoxInSettings(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -171,7 +171,7 @@
 
     const-string v2, "VZW"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v3
 
@@ -189,7 +189,7 @@
 
     .line 481
     :cond_6
-    invoke-static {p1}, Lcom/android/settings/Utils;->isTablet(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isTablet(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -199,13 +199,13 @@
 
     const-string v2, "com.sec.android.app.safetyassurance"
 
-    invoke-static {p1, v2}, Lcom/android/settings/Utils;->isPackageExists(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v2}, Lcom/android/settings_ex/Utils;->isPackageExists(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_7
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->isEmergencyTableSupported(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isEmergencyTableSupported(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -232,7 +232,7 @@
 
     .line 491
     :cond_9
-    invoke-static {p1}, Lcom/android/settings/Utils;->showVzwEmergencyAlertOption(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->showVzwEmergencyAlertOption(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -247,7 +247,7 @@
     :cond_a
     const-string v2, "applock"
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isSupportCHNEnhancedFeature(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isSupportCHNEnhancedFeature(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -309,7 +309,7 @@
 
     .line 446
     .local v1, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v2, Lcom/android/settings/safetycare/SafetyCareSettings;
+    const-class v2, Lcom/android/settings_ex/safetycare/SafetyCareSettings;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

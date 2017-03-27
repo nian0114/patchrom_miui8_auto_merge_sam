@@ -1,11 +1,11 @@
-.class Lcom/android/settings/nfc/OtherSettings$SettingsPackageMonitor;
+.class Lcom/android/settings_ex/nfc/OtherSettings$SettingsPackageMonitor;
 .super Lcom/android/internal/content/PackageMonitor;
 .source "OtherSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/nfc/OtherSettings;
+    value = Lcom/android/settings_ex/nfc/OtherSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,30 +15,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nfc/OtherSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/nfc/OtherSettings;
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/settings/nfc/OtherSettings;)V
+.method private constructor <init>(Lcom/android/settings_ex/nfc/OtherSettings;)V
     .locals 0
 
     .prologue
     .line 258
-    iput-object p1, p0, Lcom/android/settings/nfc/OtherSettings$SettingsPackageMonitor;->this$0:Lcom/android/settings/nfc/OtherSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/nfc/OtherSettings$SettingsPackageMonitor;->this$0:Lcom/android/settings_ex/nfc/OtherSettings;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/nfc/OtherSettings;Lcom/android/settings/nfc/OtherSettings$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/nfc/OtherSettings;Lcom/android/settings_ex/nfc/OtherSettings$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/nfc/OtherSettings;
-    .param p2, "x1"    # Lcom/android/settings/nfc/OtherSettings$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/nfc/OtherSettings;
+    .param p2, "x1"    # Lcom/android/settings_ex/nfc/OtherSettings$1;
 
     .prologue
     .line 258
-    invoke-direct {p0, p1}, Lcom/android/settings/nfc/OtherSettings$SettingsPackageMonitor;-><init>(Lcom/android/settings/nfc/OtherSettings;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/nfc/OtherSettings$SettingsPackageMonitor;-><init>(Lcom/android/settings_ex/nfc/OtherSettings;)V
 
     return-void
 .end method
@@ -52,10 +52,10 @@
 
     .prologue
     .line 261
-    iget-object v0, p0, Lcom/android/settings/nfc/OtherSettings$SettingsPackageMonitor;->this$0:Lcom/android/settings/nfc/OtherSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/OtherSettings$SettingsPackageMonitor;->this$0:Lcom/android/settings_ex/nfc/OtherSettings;
 
-    # getter for: Lcom/android/settings/nfc/OtherSettings;->mHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/settings/nfc/OtherSettings;->access$100(Lcom/android/settings/nfc/OtherSettings;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/nfc/OtherSettings;->mHandler:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/settings_ex/nfc/OtherSettings;->access$100(Lcom/android/settings_ex/nfc/OtherSettings;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -76,10 +76,10 @@
 
     .prologue
     .line 266
-    iget-object v0, p0, Lcom/android/settings/nfc/OtherSettings$SettingsPackageMonitor;->this$0:Lcom/android/settings/nfc/OtherSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/OtherSettings$SettingsPackageMonitor;->this$0:Lcom/android/settings_ex/nfc/OtherSettings;
 
-    # getter for: Lcom/android/settings/nfc/OtherSettings;->mHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/settings/nfc/OtherSettings;->access$100(Lcom/android/settings/nfc/OtherSettings;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/nfc/OtherSettings;->mHandler:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/settings_ex/nfc/OtherSettings;->access$100(Lcom/android/settings_ex/nfc/OtherSettings;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -100,10 +100,10 @@
 
     .prologue
     .line 271
-    iget-object v0, p0, Lcom/android/settings/nfc/OtherSettings$SettingsPackageMonitor;->this$0:Lcom/android/settings/nfc/OtherSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/OtherSettings$SettingsPackageMonitor;->this$0:Lcom/android/settings_ex/nfc/OtherSettings;
 
-    # getter for: Lcom/android/settings/nfc/OtherSettings;->mHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/settings/nfc/OtherSettings;->access$100(Lcom/android/settings/nfc/OtherSettings;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/nfc/OtherSettings;->mHandler:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/settings_ex/nfc/OtherSettings;->access$100(Lcom/android/settings_ex/nfc/OtherSettings;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -124,10 +124,10 @@
 
     .prologue
     .line 276
-    iget-object v0, p0, Lcom/android/settings/nfc/OtherSettings$SettingsPackageMonitor;->this$0:Lcom/android/settings/nfc/OtherSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/OtherSettings$SettingsPackageMonitor;->this$0:Lcom/android/settings_ex/nfc/OtherSettings;
 
-    # getter for: Lcom/android/settings/nfc/OtherSettings;->mHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/settings/nfc/OtherSettings;->access$100(Lcom/android/settings/nfc/OtherSettings;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/nfc/OtherSettings;->mHandler:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/settings_ex/nfc/OtherSettings;->access$100(Lcom/android/settings_ex/nfc/OtherSettings;)Landroid/os/Handler;
 
     move-result-object v0
 

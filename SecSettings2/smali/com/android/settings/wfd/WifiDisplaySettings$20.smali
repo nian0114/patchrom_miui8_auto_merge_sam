@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wfd/WifiDisplaySettings$20;
+.class Lcom/android/settings_ex/wfd/WifiDisplaySettings$20;
 .super Ljava/lang/Object;
 .source "WifiDisplaySettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wfd/WifiDisplaySettings;->createDongleRenameDialog()Landroid/app/AlertDialog;
+    value = Lcom/android/settings_ex/wfd/WifiDisplaySettings;->createDongleRenameDialog()Landroid/app/AlertDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wfd/WifiDisplaySettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wfd/WifiDisplaySettings;)V
     .locals 0
 
     .prologue
     .line 2133
-    iput-object p1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$20;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$20;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,12 +42,12 @@
 
     .prologue
     .line 2135
-    iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$20;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$20;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
     const/4 v1, 0x0
 
-    # setter for: Lcom/android/settings/wfd/WifiDisplaySettings;->mGlobalEditDeviceName:Landroid/widget/EditText;
-    invoke-static {v0, v1}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$3302(Lcom/android/settings/wfd/WifiDisplaySettings;Landroid/widget/EditText;)Landroid/widget/EditText;
+    # setter for: Lcom/android/settings_ex/wfd/WifiDisplaySettings;->mGlobalEditDeviceName:Landroid/widget/EditText;
+    invoke-static {v0, v1}, Lcom/android/settings_ex/wfd/WifiDisplaySettings;->access$3302(Lcom/android/settings_ex/wfd/WifiDisplaySettings;Landroid/widget/EditText;)Landroid/widget/EditText;
 
     .line 2136
     return-void

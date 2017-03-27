@@ -1,11 +1,11 @@
-.class Lcom/android/settings/usefulfeature/Usefulfeature$7;
+.class Lcom/android/settings_ex/usefulfeature/Usefulfeature$7;
 .super Landroid/content/BroadcastReceiver;
 .source "Usefulfeature.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/usefulfeature/Usefulfeature;
+    value = Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+.field final synthetic this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/usefulfeature/Usefulfeature;)V
+.method constructor <init>(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)V
     .locals 0
 
     .prologue
     .line 584
-    iput-object p1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$7;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iput-object p1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$7;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -80,39 +80,39 @@
     if-eqz v1, :cond_0
 
     .line 590
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$7;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$7;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
-    # getter for: Lcom/android/settings/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$1200(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/PreferenceScreen;
+    # getter for: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$1200(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
     .line 591
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
     .line 592
-    # getter for: Lcom/android/settings/usefulfeature/Usefulfeature;->mContext:Landroid/content/Context;
-    invoke-static {}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$1600()Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$1600()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isNoSIM(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isNoSIM(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 593
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$7;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$7;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
-    # getter for: Lcom/android/settings/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$1200(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/PreferenceScreen;
+    # getter for: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$1200(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 
@@ -125,36 +125,36 @@
 
     .line 595
     :cond_1
-    # getter for: Lcom/android/settings/usefulfeature/Usefulfeature;->mContext:Landroid/content/Context;
-    invoke-static {}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$1600()Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$1600()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isRoaming(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isRoaming(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
     .line 596
-    # invokes: Lcom/android/settings/usefulfeature/Usefulfeature;->isSupportMCC()Z
-    invoke-static {}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$1500()Z
+    # invokes: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->isSupportMCC()Z
+    invoke-static {}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$1500()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    invoke-static {}, Lcom/android/settings/usefulfeature/Usefulfeature;->isSupportMccSmartCall()Z
+    invoke-static {}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->isSupportMccSmartCall()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
     .line 597
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$7;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$7;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
-    # getter for: Lcom/android/settings/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$1200(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/PreferenceScreen;
+    # getter for: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$1200(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 
@@ -164,10 +164,10 @@
 
     .line 599
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$7;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$7;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
-    # getter for: Lcom/android/settings/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$1200(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/PreferenceScreen;
+    # getter for: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$1200(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 

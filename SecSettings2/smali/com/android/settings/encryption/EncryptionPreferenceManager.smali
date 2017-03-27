@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/encryption/EncryptionPreferenceManager;
+.class public Lcom/android/settings_ex/encryption/EncryptionPreferenceManager;
 .super Ljava/lang/Object;
 .source "EncryptionPreferenceManager.java"
 
@@ -21,22 +21,22 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 17
-    iput-object v0, p0, Lcom/android/settings/encryption/EncryptionPreferenceManager;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/encryption/EncryptionPreferenceManager;->mContext:Landroid/content/Context;
 
     .line 18
-    iput-object v0, p0, Lcom/android/settings/encryption/EncryptionPreferenceManager;->mDem:Landroid/dirEncryption/DirEncryptionManager;
+    iput-object v0, p0, Lcom/android/settings_ex/encryption/EncryptionPreferenceManager;->mDem:Landroid/dirEncryption/DirEncryptionManager;
 
     .line 21
-    iput-object p1, p0, Lcom/android/settings/encryption/EncryptionPreferenceManager;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/encryption/EncryptionPreferenceManager;->mContext:Landroid/content/Context;
 
     .line 22
     new-instance v0, Landroid/dirEncryption/DirEncryptionManager;
 
-    iget-object v1, p0, Lcom/android/settings/encryption/EncryptionPreferenceManager;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/encryption/EncryptionPreferenceManager;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Landroid/dirEncryption/DirEncryptionManager;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/encryption/EncryptionPreferenceManager;->mDem:Landroid/dirEncryption/DirEncryptionManager;
+    iput-object v0, p0, Lcom/android/settings_ex/encryption/EncryptionPreferenceManager;->mDem:Landroid/dirEncryption/DirEncryptionManager;
 
     .line 23
     return-void
@@ -49,7 +49,7 @@
 
     .prologue
     .line 26
-    iget-object v0, p0, Lcom/android/settings/encryption/EncryptionPreferenceManager;->mDem:Landroid/dirEncryption/DirEncryptionManager;
+    iget-object v0, p0, Lcom/android/settings_ex/encryption/EncryptionPreferenceManager;->mDem:Landroid/dirEncryption/DirEncryptionManager;
 
     invoke-virtual {v0}, Landroid/dirEncryption/DirEncryptionManager;->isEncryptionSupported()Z
 

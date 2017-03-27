@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/UserAdapter;
+.class public Lcom/android/settings_ex/UserAdapter;
 .super Ljava/lang/Object;
 .source "UserAdapter.java"
 
@@ -10,7 +10,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/UserAdapter$UserDetails;
+        Lcom/android/settings_ex/UserAdapter$UserDetails;
     }
 .end annotation
 
@@ -21,7 +21,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/UserAdapter$UserDetails;",
+            "Lcom/android/settings_ex/UserAdapter$UserDetails;",
             ">;"
         }
     .end annotation
@@ -40,14 +40,14 @@
             "Landroid/content/Context;",
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/UserAdapter$UserDetails;",
+            "Lcom/android/settings_ex/UserAdapter$UserDetails;",
             ">;)V"
         }
     .end annotation
 
     .prologue
     .line 78
-    .local p2, "users":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/settings/UserAdapter$UserDetails;>;"
+    .local p2, "users":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/settings_ex/UserAdapter$UserDetails;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 79
@@ -64,7 +64,7 @@
 
     .line 82
     :cond_0
-    iput-object p2, p0, Lcom/android/settings/UserAdapter;->data:Ljava/util/ArrayList;
+    iput-object p2, p0, Lcom/android/settings_ex/UserAdapter;->data:Ljava/util/ArrayList;
 
     .line 83
     const-string v0, "layout_inflater"
@@ -75,7 +75,7 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    iput-object v0, p0, Lcom/android/settings/UserAdapter;->mInflater:Landroid/view/LayoutInflater;
+    iput-object v0, p0, Lcom/android/settings_ex/UserAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     .line 84
     return-void
@@ -87,7 +87,7 @@
 
     .prologue
     .line 114
-    iget-object v0, p0, Lcom/android/settings/UserAdapter;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v0, p0, Lcom/android/settings_ex/UserAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     const v1, 0x7f04022c
 
@@ -100,14 +100,14 @@
     return-object v0
 .end method
 
-.method private getTitle(Lcom/android/settings/UserAdapter$UserDetails;)I
+.method private getTitle(Lcom/android/settings_ex/UserAdapter$UserDetails;)I
     .locals 2
-    .param p1, "user"    # Lcom/android/settings/UserAdapter$UserDetails;
+    .param p1, "user"    # Lcom/android/settings_ex/UserAdapter$UserDetails;
 
     .prologue
     .line 104
-    # getter for: Lcom/android/settings/UserAdapter$UserDetails;->mUserHandle:Landroid/os/UserHandle;
-    invoke-static {p1}, Lcom/android/settings/UserAdapter$UserDetails;->access$000(Lcom/android/settings/UserAdapter$UserDetails;)Landroid/os/UserHandle;
+    # getter for: Lcom/android/settings_ex/UserAdapter$UserDetails;->mUserHandle:Landroid/os/UserHandle;
+    invoke-static {p1}, Lcom/android/settings_ex/UserAdapter$UserDetails;->access$000(Lcom/android/settings_ex/UserAdapter$UserDetails;)Landroid/os/UserHandle;
 
     move-result-object v1
 
@@ -158,7 +158,7 @@
 
     .prologue
     .line 129
-    iget-object v0, p0, Lcom/android/settings/UserAdapter;->data:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/UserAdapter;->data:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -182,16 +182,16 @@
     .line 97
     .local v0, "row":Landroid/view/View;
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/UserAdapter;->data:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/UserAdapter;->data:Ljava/util/ArrayList;
 
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/UserAdapter$UserDetails;
+    check-cast v1, Lcom/android/settings_ex/UserAdapter$UserDetails;
 
     .line 98
-    .local v1, "user":Lcom/android/settings/UserAdapter$UserDetails;
+    .local v1, "user":Lcom/android/settings_ex/UserAdapter$UserDetails;
     const v2, 0x1020006
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -200,8 +200,8 @@
 
     check-cast v2, Landroid/widget/ImageView;
 
-    # getter for: Lcom/android/settings/UserAdapter$UserDetails;->mIcon:Landroid/graphics/drawable/Drawable;
-    invoke-static {v1}, Lcom/android/settings/UserAdapter$UserDetails;->access$100(Lcom/android/settings/UserAdapter$UserDetails;)Landroid/graphics/drawable/Drawable;
+    # getter for: Lcom/android/settings_ex/UserAdapter$UserDetails;->mIcon:Landroid/graphics/drawable/Drawable;
+    invoke-static {v1}, Lcom/android/settings_ex/UserAdapter$UserDetails;->access$100(Lcom/android/settings_ex/UserAdapter$UserDetails;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
@@ -216,7 +216,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    invoke-direct {p0, v1}, Lcom/android/settings/UserAdapter;->getTitle(Lcom/android/settings/UserAdapter$UserDetails;)I
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/UserAdapter;->getTitle(Lcom/android/settings_ex/UserAdapter$UserDetails;)I
 
     move-result v3
 
@@ -227,28 +227,28 @@
 
     .line 95
     .end local v0    # "row":Landroid/view/View;
-    .end local v1    # "user":Lcom/android/settings/UserAdapter$UserDetails;
+    .end local v1    # "user":Lcom/android/settings_ex/UserAdapter$UserDetails;
     :cond_0
-    invoke-direct {p0, p3}, Lcom/android/settings/UserAdapter;->createUser(Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-direct {p0, p3}, Lcom/android/settings_ex/UserAdapter;->createUser(Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
     goto :goto_0
 .end method
 
-.method public getItem(I)Lcom/android/settings/UserAdapter$UserDetails;
+.method public getItem(I)Lcom/android/settings_ex/UserAdapter$UserDetails;
     .locals 1
     .param p1, "position"    # I
 
     .prologue
     .line 134
-    iget-object v0, p0, Lcom/android/settings/UserAdapter;->data:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/UserAdapter;->data:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/UserAdapter$UserDetails;
+    check-cast v0, Lcom/android/settings_ex/UserAdapter$UserDetails;
 
     return-object v0
 .end method
@@ -259,7 +259,7 @@
 
     .prologue
     .line 43
-    invoke-virtual {p0, p1}, Lcom/android/settings/UserAdapter;->getItem(I)Lcom/android/settings/UserAdapter$UserDetails;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/UserAdapter;->getItem(I)Lcom/android/settings_ex/UserAdapter$UserDetails;
 
     move-result-object v0
 
@@ -272,16 +272,16 @@
 
     .prologue
     .line 139
-    iget-object v0, p0, Lcom/android/settings/UserAdapter;->data:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/UserAdapter;->data:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/UserAdapter$UserDetails;
+    check-cast v0, Lcom/android/settings_ex/UserAdapter$UserDetails;
 
-    # getter for: Lcom/android/settings/UserAdapter$UserDetails;->mUserHandle:Landroid/os/UserHandle;
-    invoke-static {v0}, Lcom/android/settings/UserAdapter$UserDetails;->access$000(Lcom/android/settings/UserAdapter$UserDetails;)Landroid/os/UserHandle;
+    # getter for: Lcom/android/settings_ex/UserAdapter$UserDetails;->mUserHandle:Landroid/os/UserHandle;
+    invoke-static {v0}, Lcom/android/settings_ex/UserAdapter$UserDetails;->access$000(Lcom/android/settings_ex/UserAdapter$UserDetails;)Landroid/os/UserHandle;
 
     move-result-object v0
 
@@ -313,7 +313,7 @@
     .line 87
     if-ltz p1, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/UserAdapter;->data:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/UserAdapter;->data:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -330,16 +330,16 @@
     return-object v0
 
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/UserAdapter;->data:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/UserAdapter;->data:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/UserAdapter$UserDetails;
+    check-cast v0, Lcom/android/settings_ex/UserAdapter$UserDetails;
 
-    # getter for: Lcom/android/settings/UserAdapter$UserDetails;->mUserHandle:Landroid/os/UserHandle;
-    invoke-static {v0}, Lcom/android/settings/UserAdapter$UserDetails;->access$000(Lcom/android/settings/UserAdapter$UserDetails;)Landroid/os/UserHandle;
+    # getter for: Lcom/android/settings_ex/UserAdapter$UserDetails;->mUserHandle:Landroid/os/UserHandle;
+    invoke-static {v0}, Lcom/android/settings_ex/UserAdapter$UserDetails;->access$000(Lcom/android/settings_ex/UserAdapter$UserDetails;)Landroid/os/UserHandle;
 
     move-result-object v0
 
@@ -354,7 +354,7 @@
 
     .prologue
     .line 149
-    invoke-virtual {p0, p1, p2, p3}, Lcom/android/settings/UserAdapter;->getDropDownView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/android/settings_ex/UserAdapter;->getDropDownView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
@@ -386,7 +386,7 @@
 
     .prologue
     .line 164
-    iget-object v0, p0, Lcom/android/settings/UserAdapter;->data:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/UserAdapter;->data:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 

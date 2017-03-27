@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/nfc/OtherBackend;
+.class public Lcom/android/settings_ex/nfc/OtherBackend;
 .super Ljava/lang/Object;
 .source "OtherBackend.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;
+        Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;
     }
 .end annotation
 
@@ -29,9 +29,9 @@
 
     .prologue
     .line 21
-    sget-boolean v0, Lcom/android/settings/nfc/PaymentSettings;->DBG:Z
+    sget-boolean v0, Lcom/android/settings_ex/nfc/PaymentSettings;->DBG:Z
 
-    sput-boolean v0, Lcom/android/settings/nfc/OtherBackend;->DBG:Z
+    sput-boolean v0, Lcom/android/settings_ex/nfc/OtherBackend;->DBG:Z
 
     return-void
 .end method
@@ -45,23 +45,23 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 37
-    iput-object p1, p0, Lcom/android/settings/nfc/OtherBackend;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/nfc/OtherBackend;->mContext:Landroid/content/Context;
 
     .line 38
     invoke-static {p1}, Landroid/nfc/NfcAdapter;->getDefaultAdapter(Landroid/content/Context;)Landroid/nfc/NfcAdapter;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/nfc/OtherBackend;->mAdapter:Landroid/nfc/NfcAdapter;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/OtherBackend;->mAdapter:Landroid/nfc/NfcAdapter;
 
     .line 39
-    iget-object v0, p0, Lcom/android/settings/nfc/OtherBackend;->mAdapter:Landroid/nfc/NfcAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/OtherBackend;->mAdapter:Landroid/nfc/NfcAdapter;
 
     invoke-static {v0}, Landroid/nfc/cardemulation/CardEmulation;->getInstance(Landroid/nfc/NfcAdapter;)Landroid/nfc/cardemulation/CardEmulation;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/nfc/OtherBackend;->mCardEmuManager:Landroid/nfc/cardemulation/CardEmulation;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/OtherBackend;->mCardEmuManager:Landroid/nfc/cardemulation/CardEmulation;
 
     .line 40
     return-void
@@ -75,7 +75,7 @@
 
     .prologue
     .line 97
-    sget-boolean v0, Lcom/android/settings/nfc/OtherBackend;->DBG:Z
+    sget-boolean v0, Lcom/android/settings_ex/nfc/OtherBackend;->DBG:Z
 
     if-eqz v0, :cond_0
 
@@ -87,7 +87,7 @@
 
     .line 98
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/nfc/OtherBackend;->mCardEmuManager:Landroid/nfc/cardemulation/CardEmulation;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/OtherBackend;->mCardEmuManager:Landroid/nfc/cardemulation/CardEmulation;
 
     invoke-virtual {v0, p1}, Landroid/nfc/cardemulation/CardEmulation;->unsetOtherService(Landroid/content/ComponentName;)Z
 
@@ -101,7 +101,7 @@
 
     .prologue
     .line 87
-    sget-boolean v0, Lcom/android/settings/nfc/OtherBackend;->DBG:Z
+    sget-boolean v0, Lcom/android/settings_ex/nfc/OtherBackend;->DBG:Z
 
     if-eqz v0, :cond_0
 
@@ -113,7 +113,7 @@
 
     .line 88
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/nfc/OtherBackend;->mCardEmuManager:Landroid/nfc/cardemulation/CardEmulation;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/OtherBackend;->mCardEmuManager:Landroid/nfc/cardemulation/CardEmulation;
 
     invoke-virtual {v0, p1}, Landroid/nfc/cardemulation/CardEmulation;->setOtherService(Landroid/content/ComponentName;)Z
 
@@ -128,14 +128,14 @@
             "()",
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;",
+            "Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;",
             ">;"
         }
     .end annotation
 
     .prologue
     .line 43
-    iget-object v6, p0, Lcom/android/settings/nfc/OtherBackend;->mContext:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/settings_ex/nfc/OtherBackend;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -143,7 +143,7 @@
 
     .line 44
     .local v3, "pm":Landroid/content/pm/PackageManager;
-    iget-object v6, p0, Lcom/android/settings/nfc/OtherBackend;->mCardEmuManager:Landroid/nfc/cardemulation/CardEmulation;
+    iget-object v6, p0, Lcom/android/settings_ex/nfc/OtherBackend;->mCardEmuManager:Landroid/nfc/cardemulation/CardEmulation;
 
     const-string v7, "other"
 
@@ -158,7 +158,7 @@
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 48
-    .local v1, "appInfos":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;>;"
+    .local v1, "appInfos":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;>;"
     if-nez v5, :cond_1
 
     .line 82
@@ -195,27 +195,27 @@
 
     .line 54
     :cond_2
-    new-instance v0, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;
+    new-instance v0, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;
 
-    invoke-direct {v0}, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;-><init>()V
 
     .line 56
-    .local v0, "appInfo":Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;
+    .local v0, "appInfo":Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;
     invoke-virtual {v4, v3}, Landroid/nfc/cardemulation/ApduServiceInfo;->loadBanner(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v6
 
-    iput-object v6, v0, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;->banner:Landroid/graphics/drawable/Drawable;
+    iput-object v6, v0, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;->banner:Landroid/graphics/drawable/Drawable;
 
     .line 57
     invoke-virtual {v4, v3}, Landroid/nfc/cardemulation/ApduServiceInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v6
 
-    iput-object v6, v0, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;->icon:Landroid/graphics/drawable/Drawable;
+    iput-object v6, v0, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;->icon:Landroid/graphics/drawable/Drawable;
 
     .line 59
-    iget-object v6, v0, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;->banner:Landroid/graphics/drawable/Drawable;
+    iget-object v6, v0, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;->banner:Landroid/graphics/drawable/Drawable;
 
     if-nez v6, :cond_3
 
@@ -225,17 +225,17 @@
 
     move-result-object v6
 
-    iput-object v6, v0, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;->caption:Ljava/lang/CharSequence;
+    iput-object v6, v0, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;->caption:Ljava/lang/CharSequence;
 
     .line 65
     invoke-virtual {v4, v3}, Landroid/nfc/cardemulation/ApduServiceInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object v6
 
-    iput-object v6, v0, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;->title:Ljava/lang/CharSequence;
+    iput-object v6, v0, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;->title:Ljava/lang/CharSequence;
 
     .line 67
-    iget-object v6, v0, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;->caption:Ljava/lang/CharSequence;
+    iget-object v6, v0, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;->caption:Ljava/lang/CharSequence;
 
     if-nez v6, :cond_4
 
@@ -244,7 +244,7 @@
 
     move-result-object v6
 
-    iput-object v6, v0, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;->caption:Ljava/lang/CharSequence;
+    iput-object v6, v0, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;->caption:Ljava/lang/CharSequence;
 
     .line 72
     :cond_4
@@ -252,14 +252,14 @@
 
     move-result v6
 
-    iput-boolean v6, v0, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;->isSelected:Z
+    iput-boolean v6, v0, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;->isSelected:Z
 
     .line 78
     invoke-virtual {v4}, Landroid/nfc/cardemulation/ApduServiceInfo;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v6
 
-    iput-object v6, v0, Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;->componentName:Landroid/content/ComponentName;
+    iput-object v6, v0, Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;->componentName:Landroid/content/ComponentName;
 
     .line 79
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z

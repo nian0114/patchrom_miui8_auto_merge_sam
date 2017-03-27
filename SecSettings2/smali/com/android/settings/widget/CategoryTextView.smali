@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/widget/CategoryTextView;
+.class public Lcom/android/settings_ex/widget/CategoryTextView;
 .super Landroid/widget/TextView;
 .source "CategoryTextView.java"
 
@@ -16,7 +16,7 @@
     .line 16
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lcom/android/settings/widget/CategoryTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, v0}, Lcom/android/settings_ex/widget/CategoryTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 17
     return-void
@@ -31,7 +31,7 @@
     .line 20
     const v0, 0x1010084
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings/widget/CategoryTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings_ex/widget/CategoryTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 21
     return-void
@@ -47,7 +47,7 @@
     .line 24
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/settings/widget/CategoryTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/settings_ex/widget/CategoryTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 25
     return-void
@@ -93,17 +93,17 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/widget/CategoryTextView;->mAdditionalContextDesc:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/widget/CategoryTextView;->mAdditionalContextDesc:Ljava/lang/String;
 
     .line 31
-    invoke-virtual {p0}, Lcom/android/settings/widget/CategoryTextView;->getText()Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/CategoryTextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
     .line 32
-    invoke-virtual {p0}, Lcom/android/settings/widget/CategoryTextView;->getText()Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/CategoryTextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -121,7 +121,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/widget/CategoryTextView;->mAdditionalContextDesc:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/widget/CategoryTextView;->mAdditionalContextDesc:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -131,7 +131,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/widget/CategoryTextView;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/widget/CategoryTextView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 35
     .end local v0    # "text":Ljava/lang/String;
@@ -163,7 +163,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/widget/CategoryTextView;->mAdditionalContextDesc:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/widget/CategoryTextView;->mAdditionalContextDesc:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -173,7 +173,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/widget/CategoryTextView;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/widget/CategoryTextView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 42
     return-void

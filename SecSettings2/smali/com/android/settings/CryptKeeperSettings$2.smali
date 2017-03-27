@@ -1,4 +1,4 @@
-.class Lcom/android/settings/CryptKeeperSettings$2;
+.class Lcom/android/settings_ex/CryptKeeperSettings$2;
 .super Ljava/lang/Object;
 .source "CryptKeeperSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/CryptKeeperSettings;
+    value = Lcom/android/settings_ex/CryptKeeperSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/CryptKeeperSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/CryptKeeperSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/CryptKeeperSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/CryptKeeperSettings;)V
     .locals 0
 
     .prologue
     .line 181
-    iput-object p1, p0, Lcom/android/settings/CryptKeeperSettings$2;->this$0:Lcom/android/settings/CryptKeeperSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/CryptKeeperSettings$2;->this$0:Lcom/android/settings_ex/CryptKeeperSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,12 +42,12 @@
 
     .prologue
     .line 184
-    iget-object v0, p0, Lcom/android/settings/CryptKeeperSettings$2;->this$0:Lcom/android/settings/CryptKeeperSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeperSettings$2;->this$0:Lcom/android/settings_ex/CryptKeeperSettings;
 
     const/16 v1, 0x37
 
-    # invokes: Lcom/android/settings/CryptKeeperSettings;->runKeyguardConfirmation(I)Z
-    invoke-static {v0, v1}, Lcom/android/settings/CryptKeeperSettings;->access$600(Lcom/android/settings/CryptKeeperSettings;I)Z
+    # invokes: Lcom/android/settings_ex/CryptKeeperSettings;->runKeyguardConfirmation(I)Z
+    invoke-static {v0, v1}, Lcom/android/settings_ex/CryptKeeperSettings;->access$600(Lcom/android/settings_ex/CryptKeeperSettings;I)Z
 
     move-result v0
 
@@ -56,10 +56,10 @@
     .line 186
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    iget-object v1, p0, Lcom/android/settings/CryptKeeperSettings$2;->this$0:Lcom/android/settings/CryptKeeperSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeperSettings$2;->this$0:Lcom/android/settings_ex/CryptKeeperSettings;
 
-    # getter for: Lcom/android/settings/CryptKeeperSettings;->mParent:Landroid/app/Activity;
-    invoke-static {v1}, Lcom/android/settings/CryptKeeperSettings;->access$700(Lcom/android/settings/CryptKeeperSettings;)Landroid/app/Activity;
+    # getter for: Lcom/android/settings_ex/CryptKeeperSettings;->mParent:Landroid/app/Activity;
+    invoke-static {v1}, Lcom/android/settings_ex/CryptKeeperSettings;->access$700(Lcom/android/settings_ex/CryptKeeperSettings;)Landroid/app/Activity;
 
     move-result-object v1
 

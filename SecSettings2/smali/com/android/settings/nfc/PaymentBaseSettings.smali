@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/nfc/PaymentBaseSettings;
+.class public Lcom/android/settings_ex/nfc/PaymentBaseSettings;
 .super Landroid/app/Fragment;
 .source "PaymentBaseSettings.java"
 
@@ -25,7 +25,7 @@
     invoke-super {p0, p1}, Landroid/app/Fragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 37
-    invoke-virtual {p0}, Lcom/android/settings/nfc/PaymentBaseSettings;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/PaymentBaseSettings;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v0
 
@@ -35,9 +35,9 @@
 
     const v1, 0x1020002
 
-    new-instance v2, Lcom/android/settings/nfc/TapAndPaySettings;
+    new-instance v2, Lcom/android/settings_ex/nfc/TapAndPaySettings;
 
-    invoke-direct {v2}, Lcom/android/settings/nfc/TapAndPaySettings;-><init>()V
+    invoke-direct {v2}, Lcom/android/settings_ex/nfc/TapAndPaySettings;-><init>()V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
 

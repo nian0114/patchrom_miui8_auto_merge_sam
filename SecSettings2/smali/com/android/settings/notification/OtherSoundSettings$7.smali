@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/notification/OtherSoundSettings$7;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/notification/OtherSoundSettings$7;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "OtherSoundSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/OtherSoundSettings;
+    value = Lcom/android/settings_ex/notification/OtherSoundSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 251
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -50,12 +50,12 @@
 
     .line 262
     .local v4, "rt":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
-    # getter for: Lcom/android/settings/notification/OtherSoundSettings;->PREFS:[Lcom/android/settings/notification/SettingPref;
-    invoke-static {}, Lcom/android/settings/notification/OtherSoundSettings;->access$300()[Lcom/android/settings/notification/SettingPref;
+    # getter for: Lcom/android/settings_ex/notification/OtherSoundSettings;->PREFS:[Lcom/android/settings_ex/notification/SettingPref;
+    invoke-static {}, Lcom/android/settings_ex/notification/OtherSoundSettings;->access$300()[Lcom/android/settings_ex/notification/SettingPref;
 
     move-result-object v0
 
-    .local v0, "arr$":[Lcom/android/settings/notification/SettingPref;
+    .local v0, "arr$":[Lcom/android/settings_ex/notification/SettingPref;
     array-length v2, v0
 
     .local v2, "len$":I
@@ -68,15 +68,15 @@
     aget-object v3, v0, v1
 
     .line 263
-    .local v3, "pref":Lcom/android/settings/notification/SettingPref;
-    invoke-virtual {v3, p1}, Lcom/android/settings/notification/SettingPref;->isApplicable(Landroid/content/Context;)Z
+    .local v3, "pref":Lcom/android/settings_ex/notification/SettingPref;
+    invoke-virtual {v3, p1}, Lcom/android/settings_ex/notification/SettingPref;->isApplicable(Landroid/content/Context;)Z
 
     move-result v5
 
     if-nez v5, :cond_0
 
     .line 264
-    invoke-virtual {v3}, Lcom/android/settings/notification/SettingPref;->getKey()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/android/settings_ex/notification/SettingPref;->getKey()Ljava/lang/String;
 
     move-result-object v5
 
@@ -89,7 +89,7 @@
     goto :goto_0
 
     .line 267
-    .end local v3    # "pref":Lcom/android/settings/notification/SettingPref;
+    .end local v3    # "pref":Lcom/android/settings_ex/notification/SettingPref;
     :cond_1
     return-object v4
 .end method

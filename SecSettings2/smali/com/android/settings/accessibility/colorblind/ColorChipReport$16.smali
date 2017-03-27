@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/colorblind/ColorChipReport$16;
+.class Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$16;
 .super Ljava/lang/Object;
 .source "ColorChipReport.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    value = Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)V
     .locals 0
 
     .prologue
     .line 586
-    iput-object p1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$16;->this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$16;->this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -82,7 +82,7 @@
     if-eqz p3, :cond_0
 
     .line 594
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$16;->this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$16;->this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
     int-to-float v2, p2
 
@@ -90,24 +90,24 @@
 
     div-float/2addr v2, v3
 
-    # setter for: Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mUserParameter:F
-    invoke-static {v0, v2}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->access$902(Lcom/android/settings/accessibility/colorblind/ColorChipReport;F)F
+    # setter for: Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mUserParameter:F
+    invoke-static {v0, v2}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->access$902(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;F)F
 
     .line 596
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$16;->this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$16;->this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
-    # getter for: Lcom/android/settings/accessibility/colorblind/ColorChipReport;->isSwitch:Z
-    invoke-static {v0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->access$1000(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)Z
+    # getter for: Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->isSwitch:Z
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->access$1000(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$16;->this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$16;->this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
-    # getter for: Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mCVDType:I
-    invoke-static {v0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->access$1100(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)I
+    # getter for: Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mCVDType:I
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->access$1100(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)I
 
     move-result v0
 
@@ -116,16 +116,16 @@
     if-eq v0, v2, :cond_1
 
     .line 597
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$16;->this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$16;->this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$16;->this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$16;->this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
-    # getter for: Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mCVDSeverity:F
-    invoke-static {v0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->access$1200(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)F
+    # getter for: Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mCVDSeverity:F
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->access$1200(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)F
 
     move-result v0
 
@@ -138,14 +138,14 @@
     move v0, v1
 
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$16;->this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$16;->this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
-    # getter for: Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mUserParameter:F
-    invoke-static {v3}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->access$900(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)F
+    # getter for: Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mUserParameter:F
+    invoke-static {v3}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->access$900(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)F
 
     move-result v3
 
-    invoke-static {v2, v1, v0, v3}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->setColorBlind(Landroid/content/Context;ZZF)V
+    invoke-static {v2, v1, v0, v3}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->setColorBlind(Landroid/content/Context;ZZF)V
 
     .line 598
     const-string v0, "ColorChipReport"
@@ -160,10 +160,10 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$16;->this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$16;->this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
-    # getter for: Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mUserParameter:F
-    invoke-static {v2}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->access$900(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)F
+    # getter for: Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mUserParameter:F
+    invoke-static {v2}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->access$900(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)F
 
     move-result v2
 
@@ -190,10 +190,10 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$16;->this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$16;->this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
-    # getter for: Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mCVDType:I
-    invoke-static {v2}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->access$1100(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)I
+    # getter for: Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mCVDType:I
+    invoke-static {v2}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->access$1100(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)I
 
     move-result v2
 
@@ -207,10 +207,10 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$16;->this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$16;->this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
-    # getter for: Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mCVDSeverity:F
-    invoke-static {v2}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->access$1200(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)F
+    # getter for: Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mCVDSeverity:F
+    invoke-static {v2}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->access$1200(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)F
 
     move-result v2
 
@@ -224,10 +224,10 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$16;->this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$16;->this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
-    # getter for: Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mUserParameter:F
-    invoke-static {v2}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->access$900(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)F
+    # getter for: Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mUserParameter:F
+    invoke-static {v2}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->access$900(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)F
 
     move-result v2
 

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/notification/ManagedServiceSettings$NotiAccessSettingsPreference;
+.class Lcom/android/settings_ex/notification/ManagedServiceSettings$NotiAccessSettingsPreference;
 .super Landroid/preference/SwitchPreference;
 .source "ManagedServiceSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/ManagedServiceSettings;
+    value = Lcom/android/settings_ex/notification/ManagedServiceSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .line 208
     const v0, 0x7f04021d
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/notification/ManagedServiceSettings$NotiAccessSettingsPreference;->setLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/notification/ManagedServiceSettings$NotiAccessSettingsPreference;->setLayoutResource(I)V
 
     .line 209
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler$35;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler$35;
 .super Ljava/lang/Object;
 .source "WifiApSwitchEnabler.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;->showDialog(I)V
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;->showDialog(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;
 
 .field final synthetic val$cr:Landroid/content/ContentResolver;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;Landroid/content/ContentResolver;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;Landroid/content/ContentResolver;)V
     .locals 0
 
     .prologue
     .line 1005
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler$35;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler$35;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;
 
-    iput-object p2, p0, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler$35;->val$cr:Landroid/content/ContentResolver;
+    iput-object p2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler$35;->val$cr:Landroid/content/ContentResolver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -77,7 +77,7 @@
 
     .line 1014
     :try_start_0
-    iget-object v3, p0, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler$35;->val$cr:Landroid/content/ContentResolver;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler$35;->val$cr:Landroid/content/ContentResolver;
 
     const-string v4, "wifi_ap_wifi_sharing"
 
@@ -107,7 +107,7 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler$35;->val$cr:Landroid/content/ContentResolver;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler$35;->val$cr:Landroid/content/ContentResolver;
 
     const-string v6, "wifi_ap_wifi_sharing"
 
@@ -132,10 +132,10 @@
     iput-object v0, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     .line 1025
-    iget-object v3, p0, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler$35;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler$35;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;->mWifiManager:Landroid/net/wifi/WifiManager;
-    invoke-static {v3}, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;->access$900(Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler;)Landroid/net/wifi/WifiManager;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;->access$900(Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler;)Landroid/net/wifi/WifiManager;
 
     move-result-object v3
 
@@ -155,7 +155,7 @@
 
     .line 1017
     :try_start_1
-    iget-object v3, p0, Lcom/android/settings/wifi/mobileap/WifiApSwitchEnabler$35;->val$cr:Landroid/content/ContentResolver;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSwitchEnabler$35;->val$cr:Landroid/content/ContentResolver;
 
     const-string v4, "wifi_ap_wifi_sharing"
 

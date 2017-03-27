@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/users/UserPreference$1;
+.class final Lcom/android/settings_ex/users/UserPreference$1;
 .super Ljava/lang/Object;
 .source "UserPreference.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/users/UserPreference;
+    value = Lcom/android/settings_ex/users/UserPreference;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Ljava/util/Comparator",
         "<",
-        "Lcom/android/settings/users/UserPreference;",
+        "Lcom/android/settings_ex/users/UserPreference;",
         ">;"
     }
 .end annotation
@@ -40,22 +40,22 @@
 
 
 # virtual methods
-.method public compare(Lcom/android/settings/users/UserPreference;Lcom/android/settings/users/UserPreference;)I
+.method public compare(Lcom/android/settings_ex/users/UserPreference;Lcom/android/settings_ex/users/UserPreference;)I
     .locals 3
-    .param p1, "p1"    # Lcom/android/settings/users/UserPreference;
-    .param p2, "p2"    # Lcom/android/settings/users/UserPreference;
+    .param p1, "p1"    # Lcom/android/settings_ex/users/UserPreference;
+    .param p2, "p2"    # Lcom/android/settings_ex/users/UserPreference;
 
     .prologue
     .line 41
-    # invokes: Lcom/android/settings/users/UserPreference;->getSerialNumber()I
-    invoke-static {p1}, Lcom/android/settings/users/UserPreference;->access$000(Lcom/android/settings/users/UserPreference;)I
+    # invokes: Lcom/android/settings_ex/users/UserPreference;->getSerialNumber()I
+    invoke-static {p1}, Lcom/android/settings_ex/users/UserPreference;->access$000(Lcom/android/settings_ex/users/UserPreference;)I
 
     move-result v0
 
     .line 42
     .local v0, "sn1":I
-    # invokes: Lcom/android/settings/users/UserPreference;->getSerialNumber()I
-    invoke-static {p2}, Lcom/android/settings/users/UserPreference;->access$000(Lcom/android/settings/users/UserPreference;)I
+    # invokes: Lcom/android/settings_ex/users/UserPreference;->getSerialNumber()I
+    invoke-static {p2}, Lcom/android/settings_ex/users/UserPreference;->access$000(Lcom/android/settings_ex/users/UserPreference;)I
 
     move-result v1
 
@@ -93,13 +93,13 @@
 
     .prologue
     .line 38
-    check-cast p1, Lcom/android/settings/users/UserPreference;
+    check-cast p1, Lcom/android/settings_ex/users/UserPreference;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    check-cast p2, Lcom/android/settings/users/UserPreference;
+    check-cast p2, Lcom/android/settings_ex/users/UserPreference;
 
     .end local p2    # "x1":Ljava/lang/Object;
-    invoke-virtual {p0, p1, p2}, Lcom/android/settings/users/UserPreference$1;->compare(Lcom/android/settings/users/UserPreference;Lcom/android/settings/users/UserPreference;)I
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings_ex/users/UserPreference$1;->compare(Lcom/android/settings_ex/users/UserPreference;Lcom/android/settings_ex/users/UserPreference;)I
 
     move-result v0
 

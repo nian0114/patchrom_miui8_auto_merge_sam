@@ -1,11 +1,11 @@
-.class public final Lcom/android/settings/cloud/CloudSettingConstants$ContentsType;
+.class public final Lcom/android/settings_ex/cloud/CloudSettingConstants$ContentsType;
 .super Ljava/lang/Object;
 .source "CloudSettingConstants.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/cloud/CloudSettingConstants;
+    value = Lcom/android/settings_ex/cloud/CloudSettingConstants;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

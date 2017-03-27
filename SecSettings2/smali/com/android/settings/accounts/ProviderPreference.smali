@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accounts/ProviderPreference;
+.class public Lcom/android/settings_ex/accounts/ProviderPreference;
 .super Landroid/preference/Preference;
 .source "ProviderPreference.java"
 
@@ -29,30 +29,30 @@
     invoke-direct {p0, p1}, Landroid/preference/Preference;-><init>(Landroid/content/Context;)V
 
     .line 37
-    iput-boolean v1, p0, Lcom/android/settings/accounts/ProviderPreference;->mIsDialogGUI:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accounts/ProviderPreference;->mIsDialogGUI:Z
 
     .line 38
-    iput v1, p0, Lcom/android/settings/accounts/ProviderPreference;->mItemSidePaddingForDialog:I
+    iput v1, p0, Lcom/android/settings_ex/accounts/ProviderPreference;->mItemSidePaddingForDialog:I
 
     .line 63
-    iput-object p2, p0, Lcom/android/settings/accounts/ProviderPreference;->mAccountType:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/settings_ex/accounts/ProviderPreference;->mAccountType:Ljava/lang/String;
 
     .line 64
-    iput-boolean p5, p0, Lcom/android/settings/accounts/ProviderPreference;->mIsSignedIn:Z
+    iput-boolean p5, p0, Lcom/android/settings_ex/accounts/ProviderPreference;->mIsSignedIn:Z
 
     .line 65
     const v0, 0x7f04001d
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accounts/ProviderPreference;->setLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accounts/ProviderPreference;->setLayoutResource(I)V
 
     .line 66
-    invoke-virtual {p0, p3}, Lcom/android/settings/accounts/ProviderPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, p3}, Lcom/android/settings_ex/accounts/ProviderPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 67
-    invoke-virtual {p0, v1}, Lcom/android/settings/accounts/ProviderPreference;->setPersistent(Z)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accounts/ProviderPreference;->setPersistent(Z)V
 
     .line 68
-    invoke-virtual {p0, p4}, Lcom/android/settings/accounts/ProviderPreference;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, p4}, Lcom/android/settings_ex/accounts/ProviderPreference;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 69
     return-void
@@ -69,13 +69,13 @@
 
     .prologue
     .line 52
-    invoke-direct/range {p0 .. p5}, Lcom/android/settings/accounts/ProviderPreference;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Z)V
+    invoke-direct/range {p0 .. p5}, Lcom/android/settings_ex/accounts/ProviderPreference;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Z)V
 
     .line 53
-    iput-boolean p6, p0, Lcom/android/settings/accounts/ProviderPreference;->mIsDialogGUI:Z
+    iput-boolean p6, p0, Lcom/android/settings_ex/accounts/ProviderPreference;->mIsDialogGUI:Z
 
     .line 54
-    iget-boolean v0, p0, Lcom/android/settings/accounts/ProviderPreference;->mIsDialogGUI:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accounts/ProviderPreference;->mIsDialogGUI:Z
 
     if-eqz v0, :cond_0
 
@@ -90,7 +90,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/accounts/ProviderPreference;->mItemSidePaddingForDialog:I
+    iput v0, p0, Lcom/android/settings_ex/accounts/ProviderPreference;->mItemSidePaddingForDialog:I
 
     .line 57
     :cond_0
@@ -104,7 +104,7 @@
 
     .prologue
     .line 118
-    iget-object v0, p0, Lcom/android/settings/accounts/ProviderPreference;->mAccountType:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/accounts/ProviderPreference;->mAccountType:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -120,14 +120,14 @@
     invoke-super {p0, p1}, Landroid/preference/Preference;->onBindView(Landroid/view/View;)V
 
     .line 102
-    iget-boolean v1, p0, Lcom/android/settings/accounts/ProviderPreference;->mIsDialogGUI:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/accounts/ProviderPreference;->mIsDialogGUI:Z
 
     if-eqz v1, :cond_0
 
     .line 103
-    iget v1, p0, Lcom/android/settings/accounts/ProviderPreference;->mItemSidePaddingForDialog:I
+    iget v1, p0, Lcom/android/settings_ex/accounts/ProviderPreference;->mItemSidePaddingForDialog:I
 
-    iget v2, p0, Lcom/android/settings/accounts/ProviderPreference;->mItemSidePaddingForDialog:I
+    iget v2, p0, Lcom/android/settings_ex/accounts/ProviderPreference;->mItemSidePaddingForDialog:I
 
     invoke-virtual {p1, v1, v3, v2, v3}, Landroid/view/View;->setPaddingRelative(IIII)V
 
@@ -146,7 +146,7 @@
     if-eqz v0, :cond_1
 
     .line 108
-    iget-boolean v1, p0, Lcom/android/settings/accounts/ProviderPreference;->mIsSignedIn:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/accounts/ProviderPreference;->mIsSignedIn:Z
 
     const/4 v2, 0x1
 

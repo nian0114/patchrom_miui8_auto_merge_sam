@@ -1,4 +1,4 @@
-.class Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment$2;
+.class Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment$2;
 .super Ljava/lang/Object;
 .source "TRoamingSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment;
+    value = Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment;)V
     .locals 0
 
     .prologue
     .line 790
-    iput-object p1, p0, Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment$2;->this$0:Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment$2;->this$0:Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -60,8 +60,8 @@
 
     .line 796
     :try_start_0
-    # getter for: Lcom/android/settings/TRoamingSettings;->mContext:Landroid/content/Context;
-    invoke-static {}, Lcom/android/settings/TRoamingSettings;->access$1100()Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/TRoamingSettings;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/android/settings_ex/TRoamingSettings;->access$1100()Landroid/content/Context;
 
     move-result-object v2
 
@@ -71,9 +71,9 @@
 
     .line 800
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment$2;->this$0:Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment$2;->this$0:Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment;
 
-    invoke-virtual {v2}, Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment;->dismiss()V
+    invoke-virtual {v2}, Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment;->dismiss()V
 
     .line 801
     return-void

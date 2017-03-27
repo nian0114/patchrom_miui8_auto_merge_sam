@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/SubSettings;
-.super Lcom/android/settings/SettingsActivity;
+.class public Lcom/android/settings_ex/SubSettings;
+.super Lcom/android/settings_ex/SettingsActivity;
 .source "SubSettings.java"
 
 
@@ -17,13 +17,13 @@
     const/4 v0, 0x0
 
     .line 34
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivity;-><init>()V
 
     .line 36
-    iput-boolean v0, p0, Lcom/android/settings/SubSettings;->fromSearch:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/SubSettings;->fromSearch:Z
 
     .line 37
-    iput-boolean v0, p0, Lcom/android/settings/SubSettings;->isLaunched:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/SubSettings;->isLaunched:Z
 
     return-void
 .end method
@@ -70,10 +70,10 @@
 
     .prologue
     .line 42
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 43
-    invoke-virtual {p0}, Lcom/android/settings/SubSettings;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SubSettings;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -116,7 +116,7 @@
 
     move-result v2
 
-    iput-boolean v2, p0, Lcom/android/settings/SubSettings;->fromSearch:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/SubSettings;->fromSearch:Z
 
     .line 53
     .end local v0    # "bundle":Landroid/os/Bundle;
@@ -130,7 +130,7 @@
 
     move-result v2
 
-    iput-boolean v2, p0, Lcom/android/settings/SubSettings;->isLaunched:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/SubSettings;->isLaunched:Z
 
     .line 57
     const-string v2, "fromSearch"
@@ -139,11 +139,11 @@
 
     move-result v2
 
-    iput-boolean v2, p0, Lcom/android/settings/SubSettings;->fromSearch:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/SubSettings;->fromSearch:Z
 
     .line 60
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/SubSettings;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SubSettings;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v2
 
@@ -167,7 +167,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 66
-    invoke-virtual {p0}, Lcom/android/settings/SubSettings;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/SubSettings;->finish()V
 
     .line 67
     const/4 v0, 0x1
@@ -180,25 +180,25 @@
 
     .prologue
     .line 88
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->onPostResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->onPostResume()V
 
     .line 90
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
     .line 91
-    iget-boolean v1, p0, Lcom/android/settings/SubSettings;->isLaunched:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/SubSettings;->isLaunched:Z
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settings/SubSettings;->onBackPressed()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/SubSettings;->onBackPressed()V
 
     .line 93
     :cond_0
-    iget-boolean v1, p0, Lcom/android/settings/SubSettings;->fromSearch:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/SubSettings;->fromSearch:Z
 
     if-nez v1, :cond_1
 
@@ -208,7 +208,7 @@
 
     .line 95
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/SubSettings;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SubSettings;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
 
@@ -220,14 +220,14 @@
 
     .line 96
     .local v0, "mCurrentFrag":Landroid/app/Fragment;
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
     .line 97
-    const-class v1, Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment;
+    const-class v1, Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -248,28 +248,28 @@
     if-nez v1, :cond_2
 
     .line 99
-    invoke-static {v0}, Lcom/android/settings/Utils;->performClickMenuBySearch(Landroid/app/Fragment;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->performClickMenuBySearch(Landroid/app/Fragment;)Z
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/SubSettings;->isLaunched:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/SubSettings;->isLaunched:Z
 
     .line 104
     :cond_2
     :goto_1
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lcom/android/settings/SubSettings;->fromSearch:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/SubSettings;->fromSearch:Z
 
     goto :goto_0
 
     .line 102
     :cond_3
-    invoke-static {v0}, Lcom/android/settings/Utils;->performClickMenuBySearch(Landroid/app/Fragment;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->performClickMenuBySearch(Landroid/app/Fragment;)Z
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/SubSettings;->isLaunched:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/SubSettings;->isLaunched:Z
 
     goto :goto_1
 .end method
@@ -281,18 +281,18 @@
 
     .prologue
     .line 109
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/android/settings/SubSettings;->fromSearch:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/SubSettings;->fromSearch:Z
 
     if-eqz v0, :cond_0
 
     .line 110
-    invoke-virtual {p0}, Lcom/android/settings/SubSettings;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SubSettings;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v0
 
@@ -304,7 +304,7 @@
 
     .line 114
     :cond_0
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsActivity;->onPreferenceStartFragment(Landroid/preference/PreferenceFragment;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsActivity;->onPreferenceStartFragment(Landroid/preference/PreferenceFragment;Landroid/preference/Preference;)Z
 
     move-result v0
 
@@ -317,19 +317,19 @@
 
     .prologue
     .line 79
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 81
     const-string v0, "isLaunched"
 
-    iget-boolean v1, p0, Lcom/android/settings/SubSettings;->isLaunched:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/SubSettings;->isLaunched:Z
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 82
     const-string v0, "fromSearch"
 
-    iget-boolean v1, p0, Lcom/android/settings/SubSettings;->fromSearch:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/SubSettings;->fromSearch:Z
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 

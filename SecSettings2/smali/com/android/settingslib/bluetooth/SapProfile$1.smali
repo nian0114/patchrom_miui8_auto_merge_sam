@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settingslib/bluetooth/SapProfile$1;
+.class synthetic Lcom/android/settings_exlib/bluetooth/SapProfile$1;
 .super Ljava/lang/Object;
 .source "SapProfile.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/bluetooth/SapProfile;
+    value = Lcom/android/settings_exlib/bluetooth/SapProfile;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

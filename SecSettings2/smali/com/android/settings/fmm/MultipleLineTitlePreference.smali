@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/fmm/MultipleLineTitlePreference;
+.class public Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;
 .super Landroid/preference/Preference;
 .source "MultipleLineTitlePreference.java"
 
@@ -19,7 +19,7 @@
     .line 41
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/android/settings/fmm/MultipleLineTitlePreference;->mContext:Landroid/content/Context;
+    sput-object v0, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->mContext:Landroid/content/Context;
 
     return-void
 .end method
@@ -33,7 +33,7 @@
     .line 56
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings/fmm/MultipleLineTitlePreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 57
     return-void
@@ -50,12 +50,12 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 51
-    sput-object p1, Lcom/android/settings/fmm/MultipleLineTitlePreference;->mContext:Landroid/content/Context;
+    sput-object p1, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->mContext:Landroid/content/Context;
 
     .line 52
     const v0, 0x7f040199
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/fmm/MultipleLineTitlePreference;->setLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->setLayoutResource(I)V
 
     .line 53
     return-void
@@ -66,18 +66,18 @@
 
     .prologue
     .line 40
-    sget-object v0, Lcom/android/settings/fmm/MultipleLineTitlePreference;->mContext:Landroid/content/Context;
+    sget-object v0, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/fmm/MultipleLineTitlePreference;)Ljava/lang/String;
+.method static synthetic access$100(Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fmm/MultipleLineTitlePreference;
+    .param p0, "x0"    # Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/android/settings/fmm/MultipleLineTitlePreference;->mURL:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->mURL:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -103,7 +103,7 @@
 
     .line 64
     .local v5, "textview":Landroid/widget/TextView;
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v6
 
@@ -112,10 +112,10 @@
     const-string v6, "http://findmymobile.samsung.cn"
 
     :goto_0
-    iput-object v6, p0, Lcom/android/settings/fmm/MultipleLineTitlePreference;->mURL:Ljava/lang/String;
+    iput-object v6, p0, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->mURL:Ljava/lang/String;
 
     .line 65
-    sget-object v6, Lcom/android/settings/fmm/MultipleLineTitlePreference;->mContext:Landroid/content/Context;
+    sget-object v6, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -129,7 +129,7 @@
 
     const/4 v9, 0x0
 
-    iget-object v10, p0, Lcom/android/settings/fmm/MultipleLineTitlePreference;->mURL:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->mURL:Ljava/lang/String;
 
     aput-object v10, v8, v9
 
@@ -145,7 +145,7 @@
 
     .line 68
     .local v4, "strBuilder":Landroid/text/SpannableStringBuilder;
-    iget-object v6, p0, Lcom/android/settings/fmm/MultipleLineTitlePreference;->mURL:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->mURL:Ljava/lang/String;
 
     invoke-virtual {v0, v6}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
@@ -153,7 +153,7 @@
 
     .line 69
     .local v3, "start":I
-    iget-object v6, p0, Lcom/android/settings/fmm/MultipleLineTitlePreference;->mURL:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->mURL:Ljava/lang/String;
 
     invoke-virtual {v6}, Ljava/lang/String;->length()I
 
@@ -163,9 +163,9 @@
 
     .line 70
     .local v1, "end":I
-    new-instance v2, Lcom/android/settings/fmm/MultipleLineTitlePreference$1;
+    new-instance v2, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference$1;
 
-    invoke-direct {v2, p0, v3, v1}, Lcom/android/settings/fmm/MultipleLineTitlePreference$1;-><init>(Lcom/android/settings/fmm/MultipleLineTitlePreference;II)V
+    invoke-direct {v2, p0, v3, v1}, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference$1;-><init>(Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;II)V
 
     .line 97
     .local v2, "myActivityLauncher":Landroid/text/style/ClickableSpan;

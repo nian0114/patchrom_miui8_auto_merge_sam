@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/widget/FloatingActionButton;
+.class public Lcom/android/settings_ex/widget/FloatingActionButton;
 .super Landroid/widget/ImageView;
 .source "FloatingActionButton.java"
 
@@ -16,7 +16,7 @@
     .line 33
     sget-object v0, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/widget/FloatingActionButton;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/widget/FloatingActionButton;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
     .line 34
     const v0, 0x7f05001c
@@ -25,19 +25,19 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/widget/FloatingActionButton;->setStateListAnimator(Landroid/animation/StateListAnimator;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/widget/FloatingActionButton;->setStateListAnimator(Landroid/animation/StateListAnimator;)V
 
     .line 35
-    new-instance v0, Lcom/android/settings/widget/FloatingActionButton$1;
+    new-instance v0, Lcom/android/settings_ex/widget/FloatingActionButton$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/widget/FloatingActionButton$1;-><init>(Lcom/android/settings/widget/FloatingActionButton;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/widget/FloatingActionButton$1;-><init>(Lcom/android/settings_ex/widget/FloatingActionButton;)V
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/widget/FloatingActionButton;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/widget/FloatingActionButton;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
     .line 41
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/widget/FloatingActionButton;->setClipToOutline(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/widget/FloatingActionButton;->setClipToOutline(Z)V
 
     .line 42
     return-void
@@ -57,7 +57,7 @@
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/ImageView;->onSizeChanged(IIII)V
 
     .line 47
-    invoke-virtual {p0}, Lcom/android/settings/widget/FloatingActionButton;->invalidateOutline()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/FloatingActionButton;->invalidateOutline()V
 
     .line 48
     return-void

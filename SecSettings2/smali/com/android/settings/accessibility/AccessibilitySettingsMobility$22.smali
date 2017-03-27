@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/accessibility/AccessibilitySettingsMobility$22;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility$22;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "AccessibilitySettingsMobility.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/AccessibilitySettingsMobility;
+    value = Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 752
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -58,7 +58,7 @@
     .local v0, "pm":Landroid/content/pm/PackageManager;
     const-string v2, "com.samsung.android.app.assistantmenu"
 
-    invoke-static {p1, v2}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v2}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v2
 
@@ -95,7 +95,7 @@
     :cond_2
     const-string v2, "com.samsung.android.app.accesscontrol"
 
-    invoke-static {p1, v2}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v2}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v2
 
@@ -128,7 +128,7 @@
 
     .line 824
     :cond_5
-    invoke-static {p1}, Lcom/android/settings/accessibility/AccessibilityUtils;->isProvisioned(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->isProvisioned(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -160,7 +160,7 @@
             "Z)",
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/search/SearchIndexableRaw;",
+            "Lcom/android/settings_ex/search/SearchIndexableRaw;",
             ">;"
         }
     .end annotation
@@ -172,7 +172,7 @@
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
     .line 757
-    .local v5, "indexables":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/search/SearchIndexableRaw;>;"
+    .local v5, "indexables":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/search/SearchIndexableRaw;>;"
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v7
@@ -321,19 +321,19 @@
     if-eqz v13, :cond_0
 
     .line 782
-    new-instance v4, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v4, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
     move-object/from16 v0, p1
 
-    invoke-direct {v4, v0}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    invoke-direct {v4, v0}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 783
-    .local v4, "indexable":Lcom/android/settings/search/SearchIndexableRaw;
+    .local v4, "indexable":Lcom/android/settings_ex/search/SearchIndexableRaw;
     invoke-virtual {v2}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object v13
 
-    iput-object v13, v4, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v13, v4, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 784
     invoke-virtual {v9}, Landroid/accessibilityservice/AccessibilityServiceInfo;->getResolveInfo()Landroid/content/pm/ResolveInfo;
@@ -348,7 +348,7 @@
 
     move-result-object v13
 
-    iput-object v13, v4, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v13, v4, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 785
     const v13, 0x7f0e0ea6
@@ -359,7 +359,7 @@
 
     move-result-object v13
 
-    iput-object v13, v4, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v13, v4, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     .line 786
     const v13, 0x7f0e0ea7
@@ -370,17 +370,17 @@
 
     move-result-object v13
 
-    iput-object v13, v4, Lcom/android/settings/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
+    iput-object v13, v4, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
 
     .line 787
-    iput-object v8, v4, Lcom/android/settings/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
+    iput-object v8, v4, Lcom/android/settings_ex/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
 
     .line 788
     invoke-interface {v5, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 794
     .end local v2    # "componentName":Landroid/content/ComponentName;
-    .end local v4    # "indexable":Lcom/android/settings/search/SearchIndexableRaw;
+    .end local v4    # "indexable":Lcom/android/settings_ex/search/SearchIndexableRaw;
     .end local v6    # "mIsPrimary":Z
     .end local v9    # "service":Landroid/accessibilityservice/AccessibilityServiceInfo;
     .end local v11    # "serviceInfo":Landroid/content/pm/ServiceInfo;
@@ -427,7 +427,7 @@
 
     .line 801
     .local v0, "indexable":Landroid/provider/SearchIndexableResource;
-    const-class v2, Lcom/android/settings/accessibility/AccessibilitySettingsMobility;
+    const-class v2, Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

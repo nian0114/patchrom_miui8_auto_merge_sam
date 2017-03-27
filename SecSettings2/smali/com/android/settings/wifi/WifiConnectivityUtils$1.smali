@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/wifi/WifiConnectivityUtils$1;
+.class final Lcom/android/settings_ex/wifi/WifiConnectivityUtils$1;
 .super Ljava/lang/Object;
 .source "WifiConnectivityUtils.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiConnectivityUtils;
+    value = Lcom/android/settings_ex/wifi/WifiConnectivityUtils;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/LaunchApplication$2;
+.class Lcom/android/settings_ex/LaunchApplication$2;
 .super Ljava/lang/Object;
 .source "LaunchApplication.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/LaunchApplication;
+    value = Lcom/android/settings_ex/LaunchApplication;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/LaunchApplication;
+.field final synthetic this$0:Lcom/android/settings_ex/LaunchApplication;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/LaunchApplication;)V
+.method constructor <init>(Lcom/android/settings_ex/LaunchApplication;)V
     .locals 0
 
     .prologue
     .line 106
-    iput-object p1, p0, Lcom/android/settings/LaunchApplication$2;->this$0:Lcom/android/settings/LaunchApplication;
+    iput-object p1, p0, Lcom/android/settings_ex/LaunchApplication$2;->this$0:Lcom/android/settings_ex/LaunchApplication;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -55,10 +55,10 @@
 
     .line 111
     .local v1, "packageName":Ljava/lang/String;
-    iget-object v2, p0, Lcom/android/settings/LaunchApplication$2;->this$0:Lcom/android/settings/LaunchApplication;
+    iget-object v2, p0, Lcom/android/settings_ex/LaunchApplication$2;->this$0:Lcom/android/settings_ex/LaunchApplication;
 
-    # getter for: Lcom/android/settings/LaunchApplication;->mPm:Landroid/content/pm/PackageManager;
-    invoke-static {v2}, Lcom/android/settings/LaunchApplication;->access$000(Lcom/android/settings/LaunchApplication;)Landroid/content/pm/PackageManager;
+    # getter for: Lcom/android/settings_ex/LaunchApplication;->mPm:Landroid/content/pm/PackageManager;
+    invoke-static {v2}, Lcom/android/settings_ex/LaunchApplication;->access$000(Lcom/android/settings_ex/LaunchApplication;)Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
@@ -66,10 +66,10 @@
 
     .line 113
     :try_start_0
-    iget-object v2, p0, Lcom/android/settings/LaunchApplication$2;->this$0:Lcom/android/settings/LaunchApplication;
+    iget-object v2, p0, Lcom/android/settings_ex/LaunchApplication$2;->this$0:Lcom/android/settings_ex/LaunchApplication;
 
-    # getter for: Lcom/android/settings/LaunchApplication;->mUsbManager:Landroid/hardware/usb/IUsbManager;
-    invoke-static {v2}, Lcom/android/settings/LaunchApplication;->access$100(Lcom/android/settings/LaunchApplication;)Landroid/hardware/usb/IUsbManager;
+    # getter for: Lcom/android/settings_ex/LaunchApplication;->mUsbManager:Landroid/hardware/usb/IUsbManager;
+    invoke-static {v2}, Lcom/android/settings_ex/LaunchApplication;->access$100(Lcom/android/settings_ex/LaunchApplication;)Landroid/hardware/usb/IUsbManager;
 
     move-result-object v2
 
@@ -83,10 +83,10 @@
 
     .line 118
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/LaunchApplication$2;->this$0:Lcom/android/settings/LaunchApplication;
+    iget-object v2, p0, Lcom/android/settings_ex/LaunchApplication$2;->this$0:Lcom/android/settings_ex/LaunchApplication;
 
-    # invokes: Lcom/android/settings/LaunchApplication;->removeDefaultApplicationList(Ljava/lang/String;)V
-    invoke-static {v2, v1}, Lcom/android/settings/LaunchApplication;->access$200(Lcom/android/settings/LaunchApplication;Ljava/lang/String;)V
+    # invokes: Lcom/android/settings_ex/LaunchApplication;->removeDefaultApplicationList(Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/android/settings_ex/LaunchApplication;->access$200(Lcom/android/settings_ex/LaunchApplication;Ljava/lang/String;)V
 
     .line 119
     return-void

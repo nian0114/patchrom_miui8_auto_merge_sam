@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fingerprint/RegisterFingerprint$3;
+.class Lcom/android/settings_ex/fingerprint/RegisterFingerprint$3;
 .super Ljava/lang/Object;
 .source "RegisterFingerprint.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fingerprint/RegisterFingerprint;
+    value = Lcom/android/settings_ex/fingerprint/RegisterFingerprint;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/RegisterFingerprint;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/RegisterFingerprint;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/RegisterFingerprint;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/RegisterFingerprint;)V
     .locals 0
 
     .prologue
     .line 276
-    iput-object p1, p0, Lcom/android/settings/fingerprint/RegisterFingerprint$3;->this$0:Lcom/android/settings/fingerprint/RegisterFingerprint;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/RegisterFingerprint$3;->this$0:Lcom/android/settings_ex/fingerprint/RegisterFingerprint;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,10 +41,10 @@
 
     .prologue
     .line 279
-    iget-object v0, p0, Lcom/android/settings/fingerprint/RegisterFingerprint$3;->this$0:Lcom/android/settings/fingerprint/RegisterFingerprint;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/RegisterFingerprint$3;->this$0:Lcom/android/settings_ex/fingerprint/RegisterFingerprint;
 
-    # invokes: Lcom/android/settings/fingerprint/RegisterFingerprint;->cancelEnrollment()V
-    invoke-static {v0}, Lcom/android/settings/fingerprint/RegisterFingerprint;->access$100(Lcom/android/settings/fingerprint/RegisterFingerprint;)V
+    # invokes: Lcom/android/settings_ex/fingerprint/RegisterFingerprint;->cancelEnrollment()V
+    invoke-static {v0}, Lcom/android/settings_ex/fingerprint/RegisterFingerprint;->access$100(Lcom/android/settings_ex/fingerprint/RegisterFingerprint;)V
 
     .line 280
     return-void

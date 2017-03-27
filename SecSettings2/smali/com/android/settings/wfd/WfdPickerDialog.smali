@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wfd/WfdPickerDialog;
+.class public Lcom/android/settings_ex/wfd/WfdPickerDialog;
 .super Landroid/app/Activity;
 .source "WfdPickerDialog.java"
 
@@ -21,7 +21,7 @@
 
 .field private mWfdTitle:Landroid/widget/TextView;
 
-.field mWifiDisplaySettingsFragment:Lcom/android/settings/wfd/WifiDisplaySettings;
+.field mWifiDisplaySettingsFragment:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
 .field protected mWifiDisplayStatus:Landroid/hardware/display/WifiDisplayStatus;
 
@@ -37,32 +37,32 @@
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     .line 41
-    iput-object v0, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mDisplayManager:Landroid/hardware/display/DisplayManager;
+    iput-object v0, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     .line 43
-    iput-object v0, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mLastConnectedDisplay:Landroid/hardware/display/WifiDisplay;
+    iput-object v0, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mLastConnectedDisplay:Landroid/hardware/display/WifiDisplay;
 
     .line 47
-    iput-object v0, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mAlertDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mAlertDialog:Landroid/app/AlertDialog;
 
     .line 48
-    iput-object v0, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mHandler:Landroid/os/Handler;
 
     .line 49
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/wfd/WfdPickerDialog;->ischangedevice:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->ischangedevice:Z
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/wfd/WfdPickerDialog;)Landroid/app/AlertDialog;
+.method static synthetic access$000(Lcom/android/settings_ex/wfd/WfdPickerDialog;)Landroid/app/AlertDialog;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wfd/WfdPickerDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wfd/WfdPickerDialog;
 
     .prologue
     .line 36
-    iget-object v0, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mAlertDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mAlertDialog:Landroid/app/AlertDialog;
 
     return-object v0
 .end method
@@ -74,7 +74,7 @@
 
     .prologue
     .line 156
-    iget-boolean v0, p0, Lcom/android/settings/wfd/WfdPickerDialog;->ischangedevice:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->ischangedevice:Z
 
     if-eqz v0, :cond_0
 
@@ -103,7 +103,7 @@
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 69
-    invoke-virtual {p0}, Lcom/android/settings/wfd/WfdPickerDialog;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wfd/WfdPickerDialog;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v3
 
@@ -136,7 +136,7 @@
 
     check-cast v5, Landroid/widget/TextView;
 
-    iput-object v5, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mWfdTitle:Landroid/widget/TextView;
+    iput-object v5, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mWfdTitle:Landroid/widget/TextView;
 
     .line 75
     const v5, 0x7f0d00f4
@@ -147,29 +147,29 @@
 
     check-cast v5, Landroid/widget/ProgressBar;
 
-    iput-object v5, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mProgressBar:Landroid/widget/ProgressBar;
+    iput-object v5, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mProgressBar:Landroid/widget/ProgressBar;
 
     .line 77
-    iget-object v5, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mDisplayManager:Landroid/hardware/display/DisplayManager;
+    iget-object v5, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     invoke-virtual {v5}, Landroid/hardware/display/DisplayManager;->getWifiDisplayStatus()Landroid/hardware/display/WifiDisplayStatus;
 
     move-result-object v5
 
-    iput-object v5, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mWifiDisplayStatus:Landroid/hardware/display/WifiDisplayStatus;
+    iput-object v5, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mWifiDisplayStatus:Landroid/hardware/display/WifiDisplayStatus;
 
     .line 78
-    invoke-virtual {p0}, Lcom/android/settings/wfd/WfdPickerDialog;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wfd/WfdPickerDialog;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/android/settings/wfd/WfdSettingsUtils;->isWfdConnected(Landroid/content/Context;)Z
+    invoke-static {v5}, Lcom/android/settings_ex/wfd/WfdSettingsUtils;->isWfdConnected(Landroid/content/Context;)Z
 
     move-result v5
 
     if-nez v5, :cond_0
 
-    iget-object v5, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mDisplayManager:Landroid/hardware/display/DisplayManager;
+    iget-object v5, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     invoke-virtual {v5}, Landroid/hardware/display/DisplayManager;->isDLNADeviceConnected()Z
 
@@ -179,7 +179,7 @@
 
     .line 79
     :cond_0
-    iget-object v5, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mWfdTitle:Landroid/widget/TextView;
+    iget-object v5, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mWfdTitle:Landroid/widget/TextView;
 
     const v6, 0x7f0e10ee
 
@@ -188,22 +188,22 @@
     .line 80
     const/4 v5, 0x1
 
-    iput-boolean v5, p0, Lcom/android/settings/wfd/WfdPickerDialog;->ischangedevice:Z
+    iput-boolean v5, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->ischangedevice:Z
 
     .line 87
     :goto_0
     const v5, 0x7f0e01ba
 
-    new-instance v6, Lcom/android/settings/wfd/WfdPickerDialog$1;
+    new-instance v6, Lcom/android/settings_ex/wfd/WfdPickerDialog$1;
 
-    invoke-direct {v6, p0}, Lcom/android/settings/wfd/WfdPickerDialog$1;-><init>(Lcom/android/settings/wfd/WfdPickerDialog;)V
+    invoke-direct {v6, p0}, Lcom/android/settings_ex/wfd/WfdPickerDialog$1;-><init>(Lcom/android/settings_ex/wfd/WfdPickerDialog;)V
 
     invoke-virtual {v1, v5, v6}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 92
     const v6, 0x7f040237
 
-    invoke-virtual {p0}, Lcom/android/settings/wfd/WfdPickerDialog;->getCurrentFocus()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wfd/WfdPickerDialog;->getCurrentFocus()Landroid/view/View;
 
     move-result-object v5
 
@@ -218,7 +218,7 @@
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
 
     .line 94
-    invoke-virtual {p0}, Lcom/android/settings/wfd/WfdPickerDialog;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wfd/WfdPickerDialog;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v5
 
@@ -228,9 +228,9 @@
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/settings/wfd/WifiDisplaySettings;
+    check-cast v5, Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
-    iput-object v5, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mWifiDisplaySettingsFragment:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iput-object v5, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mWifiDisplaySettingsFragment:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
     .line 98
     new-instance v0, Landroid/content/Intent;
@@ -241,26 +241,26 @@
 
     .line 99
     .local v0, "actionIntent":Landroid/content/Intent;
-    invoke-virtual {p0, v0}, Lcom/android/settings/wfd/WfdPickerDialog;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wfd/WfdPickerDialog;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 101
     invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v5
 
-    iput-object v5, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mAlertDialog:Landroid/app/AlertDialog;
+    iput-object v5, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mAlertDialog:Landroid/app/AlertDialog;
 
     .line 102
-    iget-object v5, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mAlertDialog:Landroid/app/AlertDialog;
+    iget-object v5, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mAlertDialog:Landroid/app/AlertDialog;
 
-    new-instance v6, Lcom/android/settings/wfd/WfdPickerDialog$2;
+    new-instance v6, Lcom/android/settings_ex/wfd/WfdPickerDialog$2;
 
-    invoke-direct {v6, p0}, Lcom/android/settings/wfd/WfdPickerDialog$2;-><init>(Lcom/android/settings/wfd/WfdPickerDialog;)V
+    invoke-direct {v6, p0}, Lcom/android/settings_ex/wfd/WfdPickerDialog$2;-><init>(Lcom/android/settings_ex/wfd/WfdPickerDialog;)V
 
     invoke-virtual {v5, v6}, Landroid/app/AlertDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
     .line 110
-    iget-object v5, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mAlertDialog:Landroid/app/AlertDialog;
+    iget-object v5, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mAlertDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v5}, Landroid/app/AlertDialog;->show()V
 
@@ -271,7 +271,7 @@
     .end local v0    # "actionIntent":Landroid/content/Intent;
     .end local v2    # "dialoglayout":Landroid/view/View;
     :cond_1
-    iget-object v5, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mWfdTitle:Landroid/widget/TextView;
+    iget-object v5, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mWfdTitle:Landroid/widget/TextView;
 
     const v6, 0x7f0e10ed
 
@@ -280,7 +280,7 @@
     .line 83
     const/4 v5, 0x0
 
-    iput-boolean v5, p0, Lcom/android/settings/wfd/WfdPickerDialog;->ischangedevice:Z
+    iput-boolean v5, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->ischangedevice:Z
 
     goto :goto_0
 .end method
@@ -321,7 +321,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 55
-    invoke-virtual {p0}, Lcom/android/settings/wfd/WfdPickerDialog;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wfd/WfdPickerDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
@@ -332,37 +332,37 @@
     .line 57
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/wfd/WfdPickerDialog;->setDefaultKeyMode(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wfd/WfdPickerDialog;->setDefaultKeyMode(I)V
 
     .line 59
     const-string v0, "display"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/wfd/WfdPickerDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wfd/WfdPickerDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/hardware/display/DisplayManager;
 
-    iput-object v0, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mDisplayManager:Landroid/hardware/display/DisplayManager;
+    iput-object v0, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     .line 61
-    iget-object v0, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mDisplayManager:Landroid/hardware/display/DisplayManager;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManager;->getWifiDisplayStatus()Landroid/hardware/display/WifiDisplayStatus;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mWifiDisplayStatus:Landroid/hardware/display/WifiDisplayStatus;
+    iput-object v0, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mWifiDisplayStatus:Landroid/hardware/display/WifiDisplayStatus;
 
     .line 62
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mHandler:Landroid/os/Handler;
 
     .line 64
-    invoke-virtual {p0}, Lcom/android/settings/wfd/WfdPickerDialog;->createWfdPickerDialog()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wfd/WfdPickerDialog;->createWfdPickerDialog()V
 
     .line 65
     return-void
@@ -376,12 +376,12 @@
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
     .line 136
-    iget-object v0, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mAlertDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mAlertDialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
     .line 137
-    iget-object v0, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mAlertDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mAlertDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
@@ -460,7 +460,7 @@
     if-eqz p1, :cond_0
 
     .line 166
-    iget-object v0, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mProgressBar:Landroid/widget/ProgressBar;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mProgressBar:Landroid/widget/ProgressBar;
 
     const/4 v1, 0x0
 
@@ -472,7 +472,7 @@
 
     .line 168
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/wfd/WfdPickerDialog;->mProgressBar:Landroid/widget/ProgressBar;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WfdPickerDialog;->mProgressBar:Landroid/widget/ProgressBar;
 
     const/16 v1, 0x8
 

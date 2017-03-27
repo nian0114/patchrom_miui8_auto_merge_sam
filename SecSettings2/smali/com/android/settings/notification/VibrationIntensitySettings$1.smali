@@ -1,11 +1,11 @@
-.class Lcom/android/settings/notification/VibrationIntensitySettings$1;
+.class Lcom/android/settings_ex/notification/VibrationIntensitySettings$1;
 .super Landroid/content/BroadcastReceiver;
 .source "VibrationIntensitySettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/VibrationIntensitySettings;
+    value = Lcom/android/settings_ex/notification/VibrationIntensitySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/VibrationIntensitySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/VibrationIntensitySettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/notification/VibrationIntensitySettings;)V
+.method constructor <init>(Lcom/android/settings_ex/notification/VibrationIntensitySettings;)V
     .locals 0
 
     .prologue
     .line 70
-    iput-object p1, p0, Lcom/android/settings/notification/VibrationIntensitySettings$1;->this$0:Lcom/android/settings/notification/VibrationIntensitySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/VibrationIntensitySettings$1;->this$0:Lcom/android/settings_ex/notification/VibrationIntensitySettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -214,24 +214,24 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 90
-    iget-object v3, p0, Lcom/android/settings/notification/VibrationIntensitySettings$1;->this$0:Lcom/android/settings/notification/VibrationIntensitySettings;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/VibrationIntensitySettings$1;->this$0:Lcom/android/settings_ex/notification/VibrationIntensitySettings;
 
-    # getter for: Lcom/android/settings/notification/VibrationIntensitySettings;->systemVibrationPref:Lcom/android/settings/notification/VibrationSeekBarPreference;
-    invoke-static {v3}, Lcom/android/settings/notification/VibrationIntensitySettings;->access$000(Lcom/android/settings/notification/VibrationIntensitySettings;)Lcom/android/settings/notification/VibrationSeekBarPreference;
+    # getter for: Lcom/android/settings_ex/notification/VibrationIntensitySettings;->systemVibrationPref:Lcom/android/settings_ex/notification/VibrationSeekBarPreference;
+    invoke-static {v3}, Lcom/android/settings_ex/notification/VibrationIntensitySettings;->access$000(Lcom/android/settings_ex/notification/VibrationIntensitySettings;)Lcom/android/settings_ex/notification/VibrationSeekBarPreference;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
     .line 91
-    iget-object v3, p0, Lcom/android/settings/notification/VibrationIntensitySettings$1;->this$0:Lcom/android/settings/notification/VibrationIntensitySettings;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/VibrationIntensitySettings$1;->this$0:Lcom/android/settings_ex/notification/VibrationIntensitySettings;
 
-    # getter for: Lcom/android/settings/notification/VibrationIntensitySettings;->systemVibrationPref:Lcom/android/settings/notification/VibrationSeekBarPreference;
-    invoke-static {v3}, Lcom/android/settings/notification/VibrationIntensitySettings;->access$000(Lcom/android/settings/notification/VibrationIntensitySettings;)Lcom/android/settings/notification/VibrationSeekBarPreference;
+    # getter for: Lcom/android/settings_ex/notification/VibrationIntensitySettings;->systemVibrationPref:Lcom/android/settings_ex/notification/VibrationSeekBarPreference;
+    invoke-static {v3}, Lcom/android/settings_ex/notification/VibrationIntensitySettings;->access$000(Lcom/android/settings_ex/notification/VibrationIntensitySettings;)Lcom/android/settings_ex/notification/VibrationSeekBarPreference;
 
     move-result-object v3
 
-    invoke-virtual {v3, v7}, Lcom/android/settings/notification/VibrationSeekBarPreference;->setEnabled(Z)V
+    invoke-virtual {v3, v7}, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->setEnabled(Z)V
 
     goto/16 :goto_0
 
@@ -244,24 +244,24 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 98
-    iget-object v3, p0, Lcom/android/settings/notification/VibrationIntensitySettings$1;->this$0:Lcom/android/settings/notification/VibrationIntensitySettings;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/VibrationIntensitySettings$1;->this$0:Lcom/android/settings_ex/notification/VibrationIntensitySettings;
 
-    # getter for: Lcom/android/settings/notification/VibrationIntensitySettings;->systemVibrationPref:Lcom/android/settings/notification/VibrationSeekBarPreference;
-    invoke-static {v3}, Lcom/android/settings/notification/VibrationIntensitySettings;->access$000(Lcom/android/settings/notification/VibrationIntensitySettings;)Lcom/android/settings/notification/VibrationSeekBarPreference;
+    # getter for: Lcom/android/settings_ex/notification/VibrationIntensitySettings;->systemVibrationPref:Lcom/android/settings_ex/notification/VibrationSeekBarPreference;
+    invoke-static {v3}, Lcom/android/settings_ex/notification/VibrationIntensitySettings;->access$000(Lcom/android/settings_ex/notification/VibrationIntensitySettings;)Lcom/android/settings_ex/notification/VibrationSeekBarPreference;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
     .line 99
-    iget-object v3, p0, Lcom/android/settings/notification/VibrationIntensitySettings$1;->this$0:Lcom/android/settings/notification/VibrationIntensitySettings;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/VibrationIntensitySettings$1;->this$0:Lcom/android/settings_ex/notification/VibrationIntensitySettings;
 
-    # getter for: Lcom/android/settings/notification/VibrationIntensitySettings;->systemVibrationPref:Lcom/android/settings/notification/VibrationSeekBarPreference;
-    invoke-static {v3}, Lcom/android/settings/notification/VibrationIntensitySettings;->access$000(Lcom/android/settings/notification/VibrationIntensitySettings;)Lcom/android/settings/notification/VibrationSeekBarPreference;
+    # getter for: Lcom/android/settings_ex/notification/VibrationIntensitySettings;->systemVibrationPref:Lcom/android/settings_ex/notification/VibrationSeekBarPreference;
+    invoke-static {v3}, Lcom/android/settings_ex/notification/VibrationIntensitySettings;->access$000(Lcom/android/settings_ex/notification/VibrationIntensitySettings;)Lcom/android/settings_ex/notification/VibrationSeekBarPreference;
 
     move-result-object v3
 
-    invoke-virtual {v3, v6}, Lcom/android/settings/notification/VibrationSeekBarPreference;->setEnabled(Z)V
+    invoke-virtual {v3, v6}, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->setEnabled(Z)V
 
     goto/16 :goto_0
 

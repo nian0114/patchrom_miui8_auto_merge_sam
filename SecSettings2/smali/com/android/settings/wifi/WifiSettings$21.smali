@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiSettings$21;
+.class Lcom/android/settings_ex/wifi/WifiSettings$21;
 .super Ljava/lang/Object;
 .source "WifiSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSettings;->showPasspointWarningDialog()V
+    value = Lcom/android/settings_ex/wifi/WifiSettings;->showPasspointWarningDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSettings;)V
     .locals 0
 
     .prologue
     .line 2513
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSettings$21;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSettings$21;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,21 +43,21 @@
 
     .prologue
     .line 2517
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings$21;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSettings$21;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     const-string v1, "USER_ON"
 
-    invoke-static {v0, v1}, Lcom/android/settings/wifi/WifiSettings;->insertPasspointLogging(Landroid/net/wifi/WifiManager;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/wifi/WifiSettings;->insertPasspointLogging(Landroid/net/wifi/WifiManager;Ljava/lang/String;)V
 
     .line 2518
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings$21;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSettings$21;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
     const/4 v1, 0x1
 
-    # invokes: Lcom/android/settings/wifi/WifiSettings;->changeHotspot20(Z)V
-    invoke-static {v0, v1}, Lcom/android/settings/wifi/WifiSettings;->access$3000(Lcom/android/settings/wifi/WifiSettings;Z)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiSettings;->changeHotspot20(Z)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/wifi/WifiSettings;->access$3000(Lcom/android/settings_ex/wifi/WifiSettings;Z)V
 
     .line 2519
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V

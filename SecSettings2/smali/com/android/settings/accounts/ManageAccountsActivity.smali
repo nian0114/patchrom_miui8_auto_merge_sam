@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accounts/ManageAccountsActivity;
+.class public Lcom/android/settings_ex/accounts/ManageAccountsActivity;
 .super Landroid/preference/PreferenceActivity;
 .source "ManageAccountsActivity.java"
 
@@ -22,7 +22,7 @@
 
     .prologue
     .line 28
-    const-class v0, Lcom/android/settings/accounts/ManageAccountsSettings;
+    const-class v0, Lcom/android/settings_ex/accounts/ManageAccountsSettings;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -34,7 +34,7 @@
 
     if-nez v0, :cond_0
 
-    const-class v0, Lcom/android/settings/accounts/AccountSyncSettings;
+    const-class v0, Lcom/android/settings_ex/accounts/AccountSyncSettings;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

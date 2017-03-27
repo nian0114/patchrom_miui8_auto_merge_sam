@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;
+.class public Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;
 .super Ljava/lang/Object;
 .source "TrafficDataBaseHelper.java"
 
@@ -65,7 +65,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;->DB_PATH:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;->DB_PATH:Ljava/lang/String;
 
     return-void
 .end method
@@ -81,17 +81,17 @@
     .line 19
     const v0, 0x61a80
 
-    iput v0, p0, Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;->BUFFER_SIZE:I
+    iput v0, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;->BUFFER_SIZE:I
 
     .line 28
-    iput-object p1, p0, Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;->context:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;->context:Landroid/content/Context;
 
     .line 29
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;->DB_PATH:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;->DB_PATH:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -113,11 +113,11 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;->openDatabase(Ljava/lang/String;)Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;->openDatabase(Ljava/lang/String;)Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;->database:Landroid/database/sqlite/SQLiteDatabase;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;->database:Landroid/database/sqlite/SQLiteDatabase;
 
     .line 30
     return-void
@@ -130,7 +130,7 @@
 
     .prologue
     .line 80
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;->database:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;->database:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
@@ -147,7 +147,7 @@
 
     .prologue
     .line 84
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;->database:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;->database:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v3, "SELECT * FROM data WHERE province = ? and city = ? and operator = ? and cost_type = ?"
 
@@ -215,7 +215,7 @@
 
     .prologue
     .line 102
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;->database:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;->database:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v3, "SELECT * FROM data WHERE province = ? and city = ? and operator = ? and cost_type = ?"
 
@@ -283,7 +283,7 @@
 
     .prologue
     .line 93
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;->database:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;->database:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v3, "SELECT * FROM data WHERE province = ? and city = ? and operator = ? and cost_type = ?"
 
@@ -351,7 +351,7 @@
 
     .prologue
     .line 111
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;->database:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;->database:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v3, "SELECT * FROM data WHERE province = ? and city = ? and operator = ? and cost_type = ?"
 
@@ -438,7 +438,7 @@
     if-nez v7, :cond_3
 
     .line 37
-    iget-object v7, p0, Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;->context:Landroid/content/Context;
+    iget-object v7, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;->context:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

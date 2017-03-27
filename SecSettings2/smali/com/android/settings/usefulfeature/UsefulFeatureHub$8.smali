@@ -1,4 +1,4 @@
-.class Lcom/android/settings/usefulfeature/UsefulFeatureHub$8;
+.class Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$8;
 .super Ljava/lang/Object;
 .source "UsefulFeatureHub.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/usefulfeature/UsefulFeatureHub;->maketurnOffUniversalPopup()V
+    value = Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->maketurnOffUniversalPopup()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+.field final synthetic this$0:Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)V
+.method constructor <init>(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)V
     .locals 0
 
     .prologue
     .line 528
-    iput-object p1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$8;->this$0:Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    iput-object p1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$8;->this$0:Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,9 +45,9 @@
     const/4 v2, 0x1
 
     .line 530
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$8;->this$0:Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$8;->this$0:Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
-    invoke-virtual {v0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -55,13 +55,13 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->turnOffUniversalSwitch(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->turnOffUniversalSwitch(Landroid/content/Context;)Z
 
     .line 531
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$8;->this$0:Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$8;->this$0:Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
-    # invokes: Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->access$1200(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->access$1200(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -70,10 +70,10 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 532
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$8;->this$0:Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$8;->this$0:Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
-    # invokes: Lcom/android/settings/usefulfeature/UsefulFeatureHub;->insertlog(Z)V
-    invoke-static {v0, v2}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->access$1000(Lcom/android/settings/usefulfeature/UsefulFeatureHub;Z)V
+    # invokes: Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->insertlog(Z)V
+    invoke-static {v0, v2}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->access$1000(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;Z)V
 
     .line 533
     return-void

@@ -2,7 +2,7 @@
 <PreferenceScreen android:title="@string/mute_pause_title"
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:touchwiz="http://schemas.android.com/apk/res/touchwiz"
-  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings_ex">
     <PreferenceCategory android:title="@string/merged_mute_pause_by_title" android:key="mute_pause_by" />
     <CheckBoxPreference android:persistent="false" android:title="@string/merged_mute_pause_palm_touch_title" android:key="palm_touch" settings:dbMatchingName="surface_palm_touch" settings:dbMatchingTable="system" />
     <CheckBoxPreference android:persistent="false" android:title="@string/merged_mute_pause_turn_over_title" android:key="turn_over" settings:dbMatchingName="motion_overturn" settings:dbMatchingTable="system" />

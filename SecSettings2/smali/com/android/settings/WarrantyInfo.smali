@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/WarrantyInfo;
+.class public Lcom/android/settings_ex/WarrantyInfo;
 .super Lcom/android/internal/app/AlertActivity;
 .source "WarrantyInfo.java"
 
@@ -28,7 +28,7 @@
     .line 71
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/settings/WarrantyInfo;->s:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/WarrantyInfo;->s:Ljava/lang/String;
 
     return-void
 .end method
@@ -630,7 +630,7 @@
     invoke-super {p0, p1}, Lcom/android/internal/app/AlertActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 97
-    invoke-virtual {p0}, Lcom/android/settings/WarrantyInfo;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WarrantyInfo;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -644,7 +644,7 @@
 
     move-result v2
 
-    iput v2, p0, Lcom/android/settings/WarrantyInfo;->option:I
+    iput v2, p0, Lcom/android/settings_ex/WarrantyInfo;->option:I
 
     .line 99
     const-string v2, "WarrantyInfo"
@@ -659,7 +659,7 @@
 
     move-result-object v3
 
-    iget v4, p0, Lcom/android/settings/WarrantyInfo;->option:I
+    iget v4, p0, Lcom/android/settings_ex/WarrantyInfo;->option:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -672,24 +672,24 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 101
-    invoke-virtual {p0}, Lcom/android/settings/WarrantyInfo;->getBaseContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WarrantyInfo;->getBaseContext()Landroid/content/Context;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/WarrantyInfo;->mContext:Landroid/content/Context;
+    iput-object v2, p0, Lcom/android/settings_ex/WarrantyInfo;->mContext:Landroid/content/Context;
 
     .line 102
     invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/WarrantyInfo;->inflater:Landroid/view/LayoutInflater;
+    iput-object v2, p0, Lcom/android/settings_ex/WarrantyInfo;->inflater:Landroid/view/LayoutInflater;
 
     .line 103
-    iput-object v5, p0, Lcom/android/settings/WarrantyInfo;->view:Landroid/view/View;
+    iput-object v5, p0, Lcom/android/settings_ex/WarrantyInfo;->view:Landroid/view/View;
 
     .line 104
-    iget-object v2, p0, Lcom/android/settings/WarrantyInfo;->inflater:Landroid/view/LayoutInflater;
+    iget-object v2, p0, Lcom/android/settings_ex/WarrantyInfo;->inflater:Landroid/view/LayoutInflater;
 
     const v3, 0x7f040233
 
@@ -697,10 +697,10 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/WarrantyInfo;->view:Landroid/view/View;
+    iput-object v2, p0, Lcom/android/settings_ex/WarrantyInfo;->view:Landroid/view/View;
 
     .line 105
-    iget-object v2, p0, Lcom/android/settings/WarrantyInfo;->view:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/WarrantyInfo;->view:Landroid/view/View;
 
     const v3, 0x7f0d0542
 
@@ -710,34 +710,34 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    iput-object v2, p0, Lcom/android/settings/WarrantyInfo;->tv:Landroid/widget/TextView;
+    iput-object v2, p0, Lcom/android/settings_ex/WarrantyInfo;->tv:Landroid/widget/TextView;
 
     .line 107
-    iget-object v0, p0, Lcom/android/settings/WarrantyInfo;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v0, p0, Lcom/android/settings_ex/WarrantyInfo;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     .line 108
     .local v0, "ap":Lcom/android/internal/app/AlertController$AlertParams;
-    iget v2, p0, Lcom/android/settings/WarrantyInfo;->option:I
+    iget v2, p0, Lcom/android/settings_ex/WarrantyInfo;->option:I
 
     packed-switch v2, :pswitch_data_0
 
     .line 134
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/WarrantyInfo;->view:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/WarrantyInfo;->view:Landroid/view/View;
 
     iput-object v2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
 
     .line 135
     const v2, 0x104000a
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/WarrantyInfo;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/WarrantyInfo;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mPositiveButtonText:Ljava/lang/CharSequence;
 
     .line 137
-    invoke-virtual {p0}, Lcom/android/settings/WarrantyInfo;->setupAlert()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/WarrantyInfo;->setupAlert()V
 
     .line 138
     return-void
@@ -746,14 +746,14 @@
     :pswitch_0
     const-string v2, "system/serviceinfo/general_terms.txt"
 
-    invoke-direct {p0, v2}, Lcom/android/settings/WarrantyInfo;->readCSCFile(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/WarrantyInfo;->readCSCFile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/WarrantyInfo;->s:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/WarrantyInfo;->s:Ljava/lang/String;
 
     .line 111
-    invoke-virtual {p0}, Lcom/android/settings/WarrantyInfo;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WarrantyInfo;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -766,9 +766,9 @@
     iput-object v2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mTitle:Ljava/lang/CharSequence;
 
     .line 112
-    iget-object v2, p0, Lcom/android/settings/WarrantyInfo;->tv:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/WarrantyInfo;->tv:Landroid/widget/TextView;
 
-    iget-object v3, p0, Lcom/android/settings/WarrantyInfo;->s:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/WarrantyInfo;->s:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -778,14 +778,14 @@
     :pswitch_1
     const-string v2, "system/serviceinfo/warranty_exceptions.txt"
 
-    invoke-direct {p0, v2}, Lcom/android/settings/WarrantyInfo;->readCSCFile(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/WarrantyInfo;->readCSCFile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/WarrantyInfo;->s:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/WarrantyInfo;->s:Ljava/lang/String;
 
     .line 116
-    invoke-virtual {p0}, Lcom/android/settings/WarrantyInfo;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WarrantyInfo;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -798,9 +798,9 @@
     iput-object v2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mTitle:Ljava/lang/CharSequence;
 
     .line 117
-    iget-object v2, p0, Lcom/android/settings/WarrantyInfo;->tv:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/WarrantyInfo;->tv:Landroid/widget/TextView;
 
-    iget-object v3, p0, Lcom/android/settings/WarrantyInfo;->s:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/WarrantyInfo;->s:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -810,14 +810,14 @@
     :pswitch_2
     const-string v2, "system/serviceinfo/product_warranty.txt"
 
-    invoke-direct {p0, v2}, Lcom/android/settings/WarrantyInfo;->readCSCFile(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/WarrantyInfo;->readCSCFile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/WarrantyInfo;->s:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/WarrantyInfo;->s:Ljava/lang/String;
 
     .line 121
-    invoke-virtual {p0}, Lcom/android/settings/WarrantyInfo;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WarrantyInfo;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -830,9 +830,9 @@
     iput-object v2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mTitle:Ljava/lang/CharSequence;
 
     .line 122
-    iget-object v2, p0, Lcom/android/settings/WarrantyInfo;->tv:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/WarrantyInfo;->tv:Landroid/widget/TextView;
 
-    iget-object v3, p0, Lcom/android/settings/WarrantyInfo;->s:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/WarrantyInfo;->s:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -842,14 +842,14 @@
     :pswitch_3
     const-string v2, "system/serviceinfo/contact_us.txt"
 
-    invoke-direct {p0, v2}, Lcom/android/settings/WarrantyInfo;->readCSCFile(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/WarrantyInfo;->readCSCFile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/WarrantyInfo;->s:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/WarrantyInfo;->s:Ljava/lang/String;
 
     .line 126
-    invoke-virtual {p0}, Lcom/android/settings/WarrantyInfo;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WarrantyInfo;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -862,9 +862,9 @@
     iput-object v2, v0, Lcom/android/internal/app/AlertController$AlertParams;->mTitle:Ljava/lang/CharSequence;
 
     .line 127
-    iget-object v2, p0, Lcom/android/settings/WarrantyInfo;->tv:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/WarrantyInfo;->tv:Landroid/widget/TextView;
 
-    iget-object v3, p0, Lcom/android/settings/WarrantyInfo;->s:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/WarrantyInfo;->s:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 

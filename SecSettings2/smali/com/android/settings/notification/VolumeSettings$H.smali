@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/notification/VolumeSettings$H;
+.class final Lcom/android/settings_ex/notification/VolumeSettings$H;
 .super Landroid/os/Handler;
 .source "VolumeSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/VolumeSettings;
+    value = Lcom/android/settings_ex/notification/VolumeSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/VolumeSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/VolumeSettings;
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/settings/notification/VolumeSettings;)V
+.method private constructor <init>(Lcom/android/settings_ex/notification/VolumeSettings;)V
     .locals 1
 
     .prologue
     .line 424
-    iput-object p1, p0, Lcom/android/settings/notification/VolumeSettings$H;->this$0:Lcom/android/settings/notification/VolumeSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/VolumeSettings$H;->this$0:Lcom/android/settings_ex/notification/VolumeSettings;
 
     .line 425
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -37,14 +37,14 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/notification/VolumeSettings;Lcom/android/settings/notification/VolumeSettings$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/notification/VolumeSettings;Lcom/android/settings_ex/notification/VolumeSettings$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/notification/VolumeSettings;
-    .param p2, "x1"    # Lcom/android/settings/notification/VolumeSettings$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/notification/VolumeSettings;
+    .param p2, "x1"    # Lcom/android/settings_ex/notification/VolumeSettings$1;
 
     .prologue
     .line 416
-    invoke-direct {p0, p1}, Lcom/android/settings/notification/VolumeSettings$H;-><init>(Lcom/android/settings/notification/VolumeSettings;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/notification/VolumeSettings$H;-><init>(Lcom/android/settings_ex/notification/VolumeSettings;)V
 
     return-void
 .end method
@@ -67,65 +67,65 @@
 
     .line 432
     :pswitch_0
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings$H;->this$0:Lcom/android/settings/notification/VolumeSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings$H;->this$0:Lcom/android/settings_ex/notification/VolumeSettings;
 
-    # getter for: Lcom/android/settings/notification/VolumeSettings;->mVolumeCallback:Lcom/android/settings/notification/VolumeSettings$VolumePreferenceCallback;
-    invoke-static {v0}, Lcom/android/settings/notification/VolumeSettings;->access$400(Lcom/android/settings/notification/VolumeSettings;)Lcom/android/settings/notification/VolumeSettings$VolumePreferenceCallback;
+    # getter for: Lcom/android/settings_ex/notification/VolumeSettings;->mVolumeCallback:Lcom/android/settings_ex/notification/VolumeSettings$VolumePreferenceCallback;
+    invoke-static {v0}, Lcom/android/settings_ex/notification/VolumeSettings;->access$400(Lcom/android/settings_ex/notification/VolumeSettings;)Lcom/android/settings_ex/notification/VolumeSettings$VolumePreferenceCallback;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/settings/notification/VolumeSettings$VolumePreferenceCallback;->stopSample()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/notification/VolumeSettings$VolumePreferenceCallback;->stopSample()V
 
     goto :goto_0
 
     .line 435
     :pswitch_1
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings$H;->this$0:Lcom/android/settings/notification/VolumeSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings$H;->this$0:Lcom/android/settings_ex/notification/VolumeSettings;
 
-    # invokes: Lcom/android/settings/notification/VolumeSettings;->updateEffectsSuppressor()V
-    invoke-static {v0}, Lcom/android/settings/notification/VolumeSettings;->access$500(Lcom/android/settings/notification/VolumeSettings;)V
+    # invokes: Lcom/android/settings_ex/notification/VolumeSettings;->updateEffectsSuppressor()V
+    invoke-static {v0}, Lcom/android/settings_ex/notification/VolumeSettings;->access$500(Lcom/android/settings_ex/notification/VolumeSettings;)V
 
     goto :goto_0
 
     .line 438
     :pswitch_2
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings$H;->this$0:Lcom/android/settings/notification/VolumeSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings$H;->this$0:Lcom/android/settings_ex/notification/VolumeSettings;
 
-    # invokes: Lcom/android/settings/notification/VolumeSettings;->updateRingerMode()V
-    invoke-static {v0}, Lcom/android/settings/notification/VolumeSettings;->access$600(Lcom/android/settings/notification/VolumeSettings;)V
+    # invokes: Lcom/android/settings_ex/notification/VolumeSettings;->updateRingerMode()V
+    invoke-static {v0}, Lcom/android/settings_ex/notification/VolumeSettings;->access$600(Lcom/android/settings_ex/notification/VolumeSettings;)V
 
     goto :goto_0
 
     .line 441
     :pswitch_3
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings$H;->this$0:Lcom/android/settings/notification/VolumeSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings$H;->this$0:Lcom/android/settings_ex/notification/VolumeSettings;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    # invokes: Lcom/android/settings/notification/VolumeSettings;->updateNotificationIcon(I)V
-    invoke-static {v0, v1}, Lcom/android/settings/notification/VolumeSettings;->access$700(Lcom/android/settings/notification/VolumeSettings;I)V
+    # invokes: Lcom/android/settings_ex/notification/VolumeSettings;->updateNotificationIcon(I)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/notification/VolumeSettings;->access$700(Lcom/android/settings_ex/notification/VolumeSettings;I)V
 
     goto :goto_0
 
     .line 444
     :pswitch_4
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings$H;->this$0:Lcom/android/settings/notification/VolumeSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings$H;->this$0:Lcom/android/settings_ex/notification/VolumeSettings;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    # invokes: Lcom/android/settings/notification/VolumeSettings;->updateMusicIcon(I)V
-    invoke-static {v0, v1}, Lcom/android/settings/notification/VolumeSettings;->access$800(Lcom/android/settings/notification/VolumeSettings;I)V
+    # invokes: Lcom/android/settings_ex/notification/VolumeSettings;->updateMusicIcon(I)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/notification/VolumeSettings;->access$800(Lcom/android/settings_ex/notification/VolumeSettings;I)V
 
     goto :goto_0
 
     .line 447
     :pswitch_5
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings$H;->this$0:Lcom/android/settings/notification/VolumeSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings$H;->this$0:Lcom/android/settings_ex/notification/VolumeSettings;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    # invokes: Lcom/android/settings/notification/VolumeSettings;->updateSystemIcon(I)V
-    invoke-static {v0, v1}, Lcom/android/settings/notification/VolumeSettings;->access$900(Lcom/android/settings/notification/VolumeSettings;I)V
+    # invokes: Lcom/android/settings_ex/notification/VolumeSettings;->updateSystemIcon(I)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/notification/VolumeSettings;->access$900(Lcom/android/settings_ex/notification/VolumeSettings;I)V
 
     goto :goto_0
 

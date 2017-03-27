@@ -1,13 +1,13 @@
-.class public Lcom/android/settings/DomesticSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/DomesticSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "DomesticSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # direct methods
@@ -16,11 +16,11 @@
 
     .prologue
     .line 77
-    new-instance v0, Lcom/android/settings/DomesticSettings$1;
+    new-instance v0, Lcom/android/settings_ex/DomesticSettings$1;
 
-    invoke-direct {v0}, Lcom/android/settings/DomesticSettings$1;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/DomesticSettings$1;-><init>()V
 
-    sput-object v0, Lcom/android/settings/DomesticSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/DomesticSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -30,7 +30,7 @@
 
     .prologue
     .line 46
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     return-void
 .end method
@@ -53,12 +53,12 @@
 
     .prologue
     .line 53
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 55
     const v0, 0x7f080046
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/DomesticSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/DomesticSettings;->addPreferencesFromResource(I)V
 
     .line 56
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
@@ -70,7 +70,7 @@
     .line 57
     const-string v0, "giga_lte"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/DomesticSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/DomesticSettings;->removePreference(Ljava/lang/String;)V
 
     .line 59
     :cond_0
@@ -82,12 +82,12 @@
 
     .prologue
     .line 63
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 65
     const-string v1, "giga_lte"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DomesticSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DomesticSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
@@ -103,7 +103,7 @@
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 68
-    invoke-virtual {p0}, Lcom/android/settings/DomesticSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DomesticSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 

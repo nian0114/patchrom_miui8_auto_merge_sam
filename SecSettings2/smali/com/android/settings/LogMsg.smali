@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/LogMsg;
+.class public Lcom/android/settings_ex/LogMsg;
 .super Ljava/lang/Object;
 .source "LogMsg.java"
 
@@ -19,7 +19,7 @@
 
     invoke-direct {v0}, Ljava/lang/String;-><init>()V
 
-    sput-object v0, Lcom/android/settings/LogMsg;->outputContents:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/LogMsg;->outputContents:Ljava/lang/String;
 
     return-void
 .end method
@@ -94,7 +94,7 @@
 
     move-result-object v3
 
-    sput-object v3, Lcom/android/settings/LogMsg;->outputContents:Ljava/lang/String;
+    sput-object v3, Lcom/android/settings_ex/LogMsg;->outputContents:Ljava/lang/String;
 
     .line 32
     new-instance v3, Ljava/lang/StringBuilder;
@@ -115,13 +115,13 @@
 
     move-result-object v3
 
-    sput-object v3, Lcom/android/settings/LogMsg;->filename:Ljava/lang/String;
+    sput-object v3, Lcom/android/settings_ex/LogMsg;->filename:Ljava/lang/String;
 
     .line 33
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 34
-    invoke-static {}, Lcom/android/settings/LogMsg;->writeLog()V
+    invoke-static {}, Lcom/android/settings_ex/LogMsg;->writeLog()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -172,7 +172,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/LogMsg;->filename:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/LogMsg;->filename:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -227,7 +227,7 @@
     invoke-virtual {v3, v6, v7}, Ljava/io/RandomAccessFile;->seek(J)V
 
     .line 58
-    sget-object v6, Lcom/android/settings/LogMsg;->outputContents:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/LogMsg;->outputContents:Ljava/lang/String;
 
     invoke-virtual {v3, v6}, Ljava/io/RandomAccessFile;->writeBytes(Ljava/lang/String;)V
     :try_end_1
@@ -277,7 +277,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/LogMsg;->filename:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/LogMsg;->filename:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

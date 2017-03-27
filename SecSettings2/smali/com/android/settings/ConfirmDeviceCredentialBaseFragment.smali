@@ -1,9 +1,9 @@
-.class public abstract Lcom/android/settings/ConfirmDeviceCredentialBaseFragment;
-.super Lcom/android/settings/InstrumentedFragment;
+.class public abstract Lcom/android/settings_ex/ConfirmDeviceCredentialBaseFragment;
+.super Lcom/android/settings_ex/InstrumentedFragment;
 .source "ConfirmDeviceCredentialBaseFragment.java"
 
 # interfaces
-.implements Lcom/android/settings/fingerprint/FingerprintUiHelper$Callback;
+.implements Lcom/android/settings_ex/fingerprint/FingerprintUiHelper$Callback;
 
 
 # instance fields
@@ -13,7 +13,7 @@
 
 .field protected mErrorTextView:Landroid/widget/TextView;
 
-.field private mFingerprintHelper:Lcom/android/settings/fingerprint/FingerprintUiHelper;
+.field private mFingerprintHelper:Lcom/android/settings_ex/fingerprint/FingerprintUiHelper;
 
 .field protected mFingerprintIcon:Landroid/widget/ImageView;
 
@@ -24,7 +24,7 @@
 
     .prologue
     .line 32
-    invoke-direct {p0}, Lcom/android/settings/InstrumentedFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/InstrumentedFragment;-><init>()V
 
     return-void
 .end method
@@ -39,13 +39,13 @@
 
     .prologue
     .line 119
-    invoke-virtual {p0}, Lcom/android/settings/ConfirmDeviceCredentialBaseFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settings/ConfirmDeviceCredentialBaseFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -56,7 +56,7 @@
     if-eqz v0, :cond_0
 
     .line 120
-    invoke-virtual {p0}, Lcom/android/settings/ConfirmDeviceCredentialBaseFragment;->authenticationSucceeded()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseFragment;->authenticationSucceeded()V
 
     .line 122
     :cond_0
@@ -69,10 +69,10 @@
 
     .prologue
     .line 55
-    invoke-super {p0, p1}, Lcom/android/settings/InstrumentedFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/InstrumentedFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 56
-    invoke-virtual {p0}, Lcom/android/settings/ConfirmDeviceCredentialBaseFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -88,7 +88,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/ConfirmDeviceCredentialBaseFragment;->mAllowFpAuthentication:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseFragment;->mAllowFpAuthentication:Z
 
     .line 58
     return-void
@@ -108,17 +108,17 @@
 
     .prologue
     .line 110
-    invoke-super {p0}, Lcom/android/settings/InstrumentedFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/InstrumentedFragment;->onPause()V
 
     .line 111
-    iget-boolean v0, p0, Lcom/android/settings/ConfirmDeviceCredentialBaseFragment;->mAllowFpAuthentication:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseFragment;->mAllowFpAuthentication:Z
 
     if-eqz v0, :cond_0
 
     .line 112
-    iget-object v0, p0, Lcom/android/settings/ConfirmDeviceCredentialBaseFragment;->mFingerprintHelper:Lcom/android/settings/fingerprint/FingerprintUiHelper;
+    iget-object v0, p0, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseFragment;->mFingerprintHelper:Lcom/android/settings_ex/fingerprint/FingerprintUiHelper;
 
-    invoke-virtual {v0}, Lcom/android/settings/fingerprint/FingerprintUiHelper;->stopListening()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/fingerprint/FingerprintUiHelper;->stopListening()V
 
     .line 114
     :cond_0
@@ -130,17 +130,17 @@
 
     .prologue
     .line 83
-    invoke-super {p0}, Lcom/android/settings/InstrumentedFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/InstrumentedFragment;->onResume()V
 
     .line 84
-    iget-boolean v0, p0, Lcom/android/settings/ConfirmDeviceCredentialBaseFragment;->mAllowFpAuthentication:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseFragment;->mAllowFpAuthentication:Z
 
     if-eqz v0, :cond_0
 
     .line 85
-    iget-object v0, p0, Lcom/android/settings/ConfirmDeviceCredentialBaseFragment;->mFingerprintHelper:Lcom/android/settings/fingerprint/FingerprintUiHelper;
+    iget-object v0, p0, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseFragment;->mFingerprintHelper:Lcom/android/settings_ex/fingerprint/FingerprintUiHelper;
 
-    invoke-virtual {v0}, Lcom/android/settings/fingerprint/FingerprintUiHelper;->startListening()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/fingerprint/FingerprintUiHelper;->startListening()V
 
     .line 87
     :cond_0
@@ -154,7 +154,7 @@
 
     .prologue
     .line 62
-    invoke-super {p0, p1, p2}, Lcom/android/settings/InstrumentedFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/InstrumentedFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 63
     const v0, 0x7f0d012a
@@ -165,7 +165,7 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/android/settings/ConfirmDeviceCredentialBaseFragment;->mCancelButton:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseFragment;->mCancelButton:Landroid/widget/Button;
 
     .line 64
     const v0, 0x7f0d012c
@@ -176,7 +176,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/android/settings/ConfirmDeviceCredentialBaseFragment;->mFingerprintIcon:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseFragment;->mFingerprintIcon:Landroid/widget/ImageView;
 
     .line 65
     const v0, 0x7f0d012b
@@ -187,25 +187,25 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/android/settings/ConfirmDeviceCredentialBaseFragment;->mErrorTextView:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseFragment;->mErrorTextView:Landroid/widget/TextView;
 
     .line 66
-    iget-object v0, p0, Lcom/android/settings/ConfirmDeviceCredentialBaseFragment;->mErrorTextView:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseFragment;->mErrorTextView:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 67
-    new-instance v0, Lcom/android/settings/fingerprint/FingerprintUiHelper;
+    new-instance v0, Lcom/android/settings_ex/fingerprint/FingerprintUiHelper;
 
-    iget-object v1, p0, Lcom/android/settings/ConfirmDeviceCredentialBaseFragment;->mFingerprintIcon:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseFragment;->mFingerprintIcon:Landroid/widget/ImageView;
 
-    iget-object v2, p0, Lcom/android/settings/ConfirmDeviceCredentialBaseFragment;->mErrorTextView:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseFragment;->mErrorTextView:Landroid/widget/TextView;
 
-    invoke-direct {v0, v1, v2, p0}, Lcom/android/settings/fingerprint/FingerprintUiHelper;-><init>(Landroid/widget/ImageView;Landroid/widget/TextView;Lcom/android/settings/fingerprint/FingerprintUiHelper$Callback;)V
+    invoke-direct {v0, v1, v2, p0}, Lcom/android/settings_ex/fingerprint/FingerprintUiHelper;-><init>(Landroid/widget/ImageView;Landroid/widget/TextView;Lcom/android/settings_ex/fingerprint/FingerprintUiHelper$Callback;)V
 
-    iput-object v0, p0, Lcom/android/settings/ConfirmDeviceCredentialBaseFragment;->mFingerprintHelper:Lcom/android/settings/fingerprint/FingerprintUiHelper;
+    iput-object v0, p0, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseFragment;->mFingerprintHelper:Lcom/android/settings_ex/fingerprint/FingerprintUiHelper;
 
     .line 79
     return-void
@@ -217,7 +217,7 @@
 
     .prologue
     .line 90
-    invoke-virtual {p0}, Lcom/android/settings/ConfirmDeviceCredentialBaseFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -285,7 +285,7 @@
     if-nez v2, :cond_2
 
     .line 99
-    invoke-virtual {p0}, Lcom/android/settings/ConfirmDeviceCredentialBaseFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -315,11 +315,11 @@
 
     .line 104
     .local v0, "accessibilityTitle":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/ConfirmDeviceCredentialBaseFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    invoke-static {p1, v0}, Lcom/android/settings/Utils;->createAccessibleSequence(Ljava/lang/CharSequence;Ljava/lang/String;)Landroid/text/SpannableString;
+    invoke-static {p1, v0}, Lcom/android/settings_ex/Utils;->createAccessibleSequence(Ljava/lang/CharSequence;Ljava/lang/String;)Landroid/text/SpannableString;
 
     move-result-object v4
 

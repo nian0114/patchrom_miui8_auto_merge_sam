@@ -1,4 +1,4 @@
-.class Lcom/android/settings/dashboard/DashboardSummary$3;
+.class Lcom/android/settings_ex/dashboard/DashboardSummary$3;
 .super Ljava/lang/Object;
 .source "DashboardSummary.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/dashboard/DashboardSummary;->rebuildUI(Landroid/content/Context;)V
+    value = Lcom/android/settings_ex/dashboard/DashboardSummary;->rebuildUI(Landroid/content/Context;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/dashboard/DashboardSummary;
+.field final synthetic this$0:Lcom/android/settings_ex/dashboard/DashboardSummary;
 
 .field final synthetic val$context:Landroid/content/Context;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/dashboard/DashboardSummary;Landroid/content/Context;)V
+.method constructor <init>(Lcom/android/settings_ex/dashboard/DashboardSummary;Landroid/content/Context;)V
     .locals 0
 
     .prologue
     .line 213
-    iput-object p1, p0, Lcom/android/settings/dashboard/DashboardSummary$3;->this$0:Lcom/android/settings/dashboard/DashboardSummary;
+    iput-object p1, p0, Lcom/android/settings_ex/dashboard/DashboardSummary$3;->this$0:Lcom/android/settings_ex/dashboard/DashboardSummary;
 
-    iput-object p2, p0, Lcom/android/settings/dashboard/DashboardSummary$3;->val$context:Landroid/content/Context;
+    iput-object p2, p0, Lcom/android/settings_ex/dashboard/DashboardSummary$3;->val$context:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,11 +45,11 @@
 
     .prologue
     .line 215
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummary$3;->val$context:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummary$3;->val$context:Landroid/content/Context;
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->scrollToHide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->scrollToHide()V
 
     .line 216
     return-void

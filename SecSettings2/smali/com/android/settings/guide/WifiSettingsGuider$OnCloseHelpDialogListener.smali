@@ -1,11 +1,11 @@
-.class interface abstract Lcom/android/settings/guide/WifiSettingsGuider$OnCloseHelpDialogListener;
+.class interface abstract Lcom/android/settings_ex/guide/WifiSettingsGuider$OnCloseHelpDialogListener;
 .super Ljava/lang/Object;
 .source "WifiSettingsGuider.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/guide/WifiSettingsGuider;
+    value = Lcom/android/settings_ex/guide/WifiSettingsGuider;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

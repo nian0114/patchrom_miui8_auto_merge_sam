@@ -1,11 +1,11 @@
-.class Lcom/android/settings/ResetSettings$1;
+.class Lcom/android/settings_ex/ResetSettings$1;
 .super Landroid/content/BroadcastReceiver;
 .source "ResetSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/ResetSettings;->onActivityCreated(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/ResetSettings;->onActivityCreated(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/ResetSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/ResetSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/ResetSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/ResetSettings;)V
     .locals 0
 
     .prologue
     .line 150
-    iput-object p1, p0, Lcom/android/settings/ResetSettings$1;->this$0:Lcom/android/settings/ResetSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/ResetSettings$1;->this$0:Lcom/android/settings_ex/ResetSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -55,28 +55,28 @@
     if-eqz v0, :cond_0
 
     .line 154
-    iget-object v0, p0, Lcom/android/settings/ResetSettings$1;->this$0:Lcom/android/settings/ResetSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings$1;->this$0:Lcom/android/settings_ex/ResetSettings;
 
-    # setter for: Lcom/android/settings/ResetSettings;->databaseReset:Z
-    invoke-static {v0, v4}, Lcom/android/settings/ResetSettings;->access$002(Lcom/android/settings/ResetSettings;Z)Z
+    # setter for: Lcom/android/settings_ex/ResetSettings;->databaseReset:Z
+    invoke-static {v0, v4}, Lcom/android/settings_ex/ResetSettings;->access$002(Lcom/android/settings_ex/ResetSettings;Z)Z
 
     .line 155
-    iget-object v0, p0, Lcom/android/settings/ResetSettings$1;->this$0:Lcom/android/settings/ResetSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings$1;->this$0:Lcom/android/settings_ex/ResetSettings;
 
-    new-instance v1, Lcom/android/settings/ResetSettings$ResetSettingsTask;
+    new-instance v1, Lcom/android/settings_ex/ResetSettings$ResetSettingsTask;
 
-    iget-object v2, p0, Lcom/android/settings/ResetSettings$1;->this$0:Lcom/android/settings/ResetSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/ResetSettings$1;->this$0:Lcom/android/settings_ex/ResetSettings;
 
     const/4 v3, 0x0
 
-    invoke-direct {v1, v2, v3}, Lcom/android/settings/ResetSettings$ResetSettingsTask;-><init>(Lcom/android/settings/ResetSettings;Lcom/android/settings/ResetSettings$1;)V
+    invoke-direct {v1, v2, v3}, Lcom/android/settings_ex/ResetSettings$ResetSettingsTask;-><init>(Lcom/android/settings_ex/ResetSettings;Lcom/android/settings_ex/ResetSettings$1;)V
 
-    iput-object v1, v0, Lcom/android/settings/ResetSettings;->resetTask:Lcom/android/settings/ResetSettings$ResetSettingsTask;
+    iput-object v1, v0, Lcom/android/settings_ex/ResetSettings;->resetTask:Lcom/android/settings_ex/ResetSettings$ResetSettingsTask;
 
     .line 156
-    iget-object v0, p0, Lcom/android/settings/ResetSettings$1;->this$0:Lcom/android/settings/ResetSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings$1;->this$0:Lcom/android/settings_ex/ResetSettings;
 
-    iget-object v0, v0, Lcom/android/settings/ResetSettings;->resetTask:Lcom/android/settings/ResetSettings$ResetSettingsTask;
+    iget-object v0, v0, Lcom/android/settings_ex/ResetSettings;->resetTask:Lcom/android/settings_ex/ResetSettings$ResetSettingsTask;
 
     new-array v1, v4, [Landroid/content/Context;
 
@@ -84,7 +84,7 @@
 
     aput-object p1, v1, v2
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/ResetSettings$ResetSettingsTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/ResetSettings$ResetSettingsTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     .line 159
     :cond_0

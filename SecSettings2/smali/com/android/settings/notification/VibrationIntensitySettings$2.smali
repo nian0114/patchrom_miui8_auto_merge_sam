@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/notification/VibrationIntensitySettings$2;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/notification/VibrationIntensitySettings$2;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "VibrationIntensitySettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/VibrationIntensitySettings;
+    value = Lcom/android/settings_ex/notification/VibrationIntensitySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 231
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -50,7 +50,7 @@
 
     .line 244
     .local v0, "rt":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
-    invoke-static {p1}, Lcom/android/settings/Utils;->isVoiceCapable(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isVoiceCapable(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -90,7 +90,7 @@
 
     .line 236
     .local v0, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v1, Lcom/android/settings/notification/VibrationIntensitySettings;
+    const-class v1, Lcom/android/settings_ex/notification/VibrationIntensitySettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "SharedAccessibilityFragment.java"
 
 # interfaces
@@ -7,13 +7,13 @@
 
 
 # instance fields
-.field private importexportAccessibility:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+.field private importexportAccessibility:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
 .field private isPreferenceOpen:Z
 
 .field private final mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
-.field private shareAccessibility:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+.field private shareAccessibility:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
 .field private sharedAccessibilityMenus:Landroid/preference/PreferenceScreen;
 
@@ -24,41 +24,41 @@
 
     .prologue
     .line 29
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 39
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->isPreferenceOpen:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->isPreferenceOpen:Z
 
     .line 137
-    new-instance v0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment$3;
+    new-instance v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment$3;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment$3;-><init>(Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment$3;-><init>(Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
-
-    return-void
-.end method
-
-.method static synthetic access$000(Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;)V
-    .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;
-
-    .prologue
-    .line 29
-    invoke-direct {p0}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->buildStateDropDown()V
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;)V
+.method static synthetic access$000(Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;
 
     .prologue
     .line 29
-    invoke-direct {p0}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->buildShareViewDropDown()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->buildStateDropDown()V
+
+    return-void
+.end method
+
+.method static synthetic access$100(Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;)V
+    .locals 0
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;
+
+    .prologue
+    .line 29
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->buildShareViewDropDown()V
 
     return-void
 .end method
@@ -72,34 +72,34 @@
     .line 89
     const-string v0, "shared_accessibility_share"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    check-cast v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->shareAccessibility:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->shareAccessibility:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
     .line 90
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->shareAccessibility:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->shareAccessibility:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->clearItems()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->clearItems()V
 
     .line 91
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->isExternalMemoryAvailable(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->isExternalMemoryAvailable(Landroid/content/Context;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 92
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->shareAccessibility:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->shareAccessibility:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 112
     :goto_0
@@ -107,38 +107,38 @@
 
     .line 95
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->shareAccessibility:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->shareAccessibility:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->shareAccessibility:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->shareAccessibility:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
-    invoke-virtual {v1}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->getClickLister()Landroid/preference/Preference$OnPreferenceClickListener;
+    invoke-virtual {v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->getClickLister()Landroid/preference/Preference$OnPreferenceClickListener;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 96
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->shareAccessibility:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->shareAccessibility:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
     const v1, 0x7f0e09e6
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->addItem(ILjava/lang/Object;)V
 
     .line 97
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->shareAccessibility:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->shareAccessibility:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
     const v1, 0x7f0e09e7
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->addItem(ILjava/lang/Object;)V
 
     .line 99
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->shareAccessibility:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->shareAccessibility:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
-    new-instance v1, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment$2;
+    new-instance v1, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment$2;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment$2;-><init>(Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment$2;-><init>(Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;)V
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->setCallback(Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->setCallback(Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;)V
 
     goto :goto_0
 .end method
@@ -152,67 +152,67 @@
     .line 65
     const-string v0, "shared_accessibility_export_import"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    check-cast v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->importexportAccessibility:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->importexportAccessibility:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
     .line 66
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->importexportAccessibility:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->importexportAccessibility:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->clearItems()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->clearItems()V
 
     .line 67
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->importexportAccessibility:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->importexportAccessibility:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
     const v1, 0x7f0e09ec
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->addItem(ILjava/lang/Object;)V
 
     .line 68
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->importexportAccessibility:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->importexportAccessibility:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
     const v1, 0x7f0e09ee
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->addItem(ILjava/lang/Object;)V
 
     .line 70
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->isExternalMemoryAvailable(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->isExternalMemoryAvailable(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 71
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->importexportAccessibility:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->importexportAccessibility:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
     const v1, 0x7f0e09ed
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->addItem(ILjava/lang/Object;)V
 
     .line 72
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->importexportAccessibility:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->importexportAccessibility:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
     const v1, 0x7f0e09ef
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->addItem(ILjava/lang/Object;)V
 
     .line 75
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->importexportAccessibility:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->importexportAccessibility:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
-    new-instance v1, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment$1;
+    new-instance v1, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment$1;-><init>(Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment$1;-><init>(Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;)V
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->setCallback(Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->setCallback(Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;)V
 
     .line 86
     return-void
@@ -238,41 +238,41 @@
     const/4 v3, 0x0
 
     .line 43
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 44
     const-string v1, "SharedAccessibilityFragment"
 
     const-string v2, "SharedAccessibilityFragment Loaded"
 
-    invoke-static {v1, v2}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 45
     const v1, 0x7f0800b5
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->addPreferencesFromResource(I)V
 
     .line 46
     const-string v1, "shared_accessibility_menus"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/PreferenceScreen;
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->sharedAccessibilityMenus:Landroid/preference/PreferenceScreen;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->sharedAccessibilityMenus:Landroid/preference/PreferenceScreen;
 
     .line 47
     const-string v1, "shared_accessibility_export_import"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    check-cast v1, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->importexportAccessibility:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->importexportAccessibility:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
     .line 49
     new-instance v0, Landroid/content/IntentFilter;
@@ -296,27 +296,27 @@
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
     .line 53
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 55
     const-string v1, "shared_accessibility_share"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    check-cast v1, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->shareAccessibility:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->shareAccessibility:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
     .line 56
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -329,16 +329,16 @@
     if-nez v1, :cond_0
 
     .line 57
-    iget-object v1, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->shareAccessibility:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->shareAccessibility:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
-    invoke-virtual {v1, v3}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->setEnabled(Z)V
+    invoke-virtual {v1, v3}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->setEnabled(Z)V
 
     .line 60
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->buildShareViewDropDown()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->buildShareViewDropDown()V
 
     .line 61
-    invoke-direct {p0}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->buildStateDropDown()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->buildStateDropDown()V
 
     .line 62
     return-void
@@ -354,7 +354,7 @@
     const/4 v1, 0x0
 
     .line 116
-    iget-boolean v3, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->isPreferenceOpen:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->isPreferenceOpen:Z
 
     if-eqz v3, :cond_1
 
@@ -365,7 +365,7 @@
 
     .line 119
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->shareAccessibility:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->shareAccessibility:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
     invoke-virtual {p1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -398,10 +398,10 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     .line 125
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->startActivity(Landroid/content/Intent;)V
 
     .line 126
-    iput-boolean v2, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->isPreferenceOpen:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->isPreferenceOpen:Z
 
     move v1, v2
 
@@ -414,12 +414,12 @@
 
     .prologue
     .line 159
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 160
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->isPreferenceOpen:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->isPreferenceOpen:Z
 
     .line 161
     return-void

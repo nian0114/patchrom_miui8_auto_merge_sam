@@ -1,11 +1,11 @@
-.class Lcom/android/settings/smartbonding/SmartBondingSettings$4;
+.class Lcom/android/settings_ex/smartbonding/SmartBondingSettings$4;
 .super Landroid/database/ContentObserver;
 .source "SmartBondingSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/smartbonding/SmartBondingSettings;
+    value = Lcom/android/settings_ex/smartbonding/SmartBondingSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/smartbonding/SmartBondingSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/smartbonding/SmartBondingSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/smartbonding/SmartBondingSettings;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/smartbonding/SmartBondingSettings;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 105
-    iput-object p1, p0, Lcom/android/settings/smartbonding/SmartBondingSettings$4;->this$0:Lcom/android/settings/smartbonding/SmartBondingSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/smartbonding/SmartBondingSettings$4;->this$0:Lcom/android/settings_ex/smartbonding/SmartBondingSettings;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -44,10 +44,10 @@
     const/4 v2, 0x0
 
     .line 108
-    iget-object v0, p0, Lcom/android/settings/smartbonding/SmartBondingSettings$4;->this$0:Lcom/android/settings/smartbonding/SmartBondingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/smartbonding/SmartBondingSettings$4;->this$0:Lcom/android/settings_ex/smartbonding/SmartBondingSettings;
 
-    # invokes: Lcom/android/settings/smartbonding/SmartBondingSettings;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v0}, Lcom/android/settings/smartbonding/SmartBondingSettings;->access$400(Lcom/android/settings/smartbonding/SmartBondingSettings;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/smartbonding/SmartBondingSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v0}, Lcom/android/settings_ex/smartbonding/SmartBondingSettings;->access$400(Lcom/android/settings_ex/smartbonding/SmartBondingSettings;)Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -60,10 +60,10 @@
     if-ne v0, v3, :cond_0
 
     .line 110
-    iget-object v0, p0, Lcom/android/settings/smartbonding/SmartBondingSettings$4;->this$0:Lcom/android/settings/smartbonding/SmartBondingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/smartbonding/SmartBondingSettings$4;->this$0:Lcom/android/settings_ex/smartbonding/SmartBondingSettings;
 
-    # invokes: Lcom/android/settings/smartbonding/SmartBondingSettings;->updateSmartBondingState(Z)V
-    invoke-static {v0, v2}, Lcom/android/settings/smartbonding/SmartBondingSettings;->access$100(Lcom/android/settings/smartbonding/SmartBondingSettings;Z)V
+    # invokes: Lcom/android/settings_ex/smartbonding/SmartBondingSettings;->updateSmartBondingState(Z)V
+    invoke-static {v0, v2}, Lcom/android/settings_ex/smartbonding/SmartBondingSettings;->access$100(Lcom/android/settings_ex/smartbonding/SmartBondingSettings;Z)V
 
     .line 114
     :goto_0
@@ -71,10 +71,10 @@
 
     .line 112
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/smartbonding/SmartBondingSettings$4;->this$0:Lcom/android/settings/smartbonding/SmartBondingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/smartbonding/SmartBondingSettings$4;->this$0:Lcom/android/settings_ex/smartbonding/SmartBondingSettings;
 
-    # invokes: Lcom/android/settings/smartbonding/SmartBondingSettings;->updateSmartBondingState(Z)V
-    invoke-static {v0, v3}, Lcom/android/settings/smartbonding/SmartBondingSettings;->access$100(Lcom/android/settings/smartbonding/SmartBondingSettings;Z)V
+    # invokes: Lcom/android/settings_ex/smartbonding/SmartBondingSettings;->updateSmartBondingState(Z)V
+    invoke-static {v0, v3}, Lcom/android/settings_ex/smartbonding/SmartBondingSettings;->access$100(Lcom/android/settings_ex/smartbonding/SmartBondingSettings;Z)V
 
     goto :goto_0
 .end method

@@ -1,11 +1,11 @@
-.class final Lcom/android/settingslib/bluetooth/BluetoothDeviceFilter$TransferFilter;
-.super Lcom/android/settingslib/bluetooth/BluetoothDeviceFilter$ClassUuidFilter;
+.class final Lcom/android/settings_exlib/bluetooth/BluetoothDeviceFilter$TransferFilter;
+.super Lcom/android/settings_exlib/bluetooth/BluetoothDeviceFilter$ClassUuidFilter;
 .source "BluetoothDeviceFilter.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/bluetooth/BluetoothDeviceFilter;
+    value = Lcom/android/settings_exlib/bluetooth/BluetoothDeviceFilter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,18 +22,18 @@
     .line 142
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/android/settingslib/bluetooth/BluetoothDeviceFilter$ClassUuidFilter;-><init>(Lcom/android/settingslib/bluetooth/BluetoothDeviceFilter$1;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_exlib/bluetooth/BluetoothDeviceFilter$ClassUuidFilter;-><init>(Lcom/android/settings_exlib/bluetooth/BluetoothDeviceFilter$1;)V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settingslib/bluetooth/BluetoothDeviceFilter$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_exlib/bluetooth/BluetoothDeviceFilter$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settingslib/bluetooth/BluetoothDeviceFilter$1;
+    .param p1, "x0"    # Lcom/android/settings_exlib/bluetooth/BluetoothDeviceFilter$1;
 
     .prologue
     .line 142
-    invoke-direct {p0}, Lcom/android/settingslib/bluetooth/BluetoothDeviceFilter$TransferFilter;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_exlib/bluetooth/BluetoothDeviceFilter$TransferFilter;-><init>()V
 
     return-void
 .end method

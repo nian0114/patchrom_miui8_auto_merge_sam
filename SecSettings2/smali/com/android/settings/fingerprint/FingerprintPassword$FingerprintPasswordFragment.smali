@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;
+.class public Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;
 .super Landroid/app/Fragment;
 .source "FingerprintPassword.java"
 
@@ -6,12 +6,12 @@
 .implements Landroid/text/TextWatcher;
 .implements Landroid/view/View$OnClickListener;
 .implements Landroid/widget/TextView$OnEditorActionListener;
-.implements Lcom/android/settings/fingerprint/FingerprintPassword$onKeyBackListener;
+.implements Lcom/android/settings_ex/fingerprint/FingerprintPassword$onKeyBackListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fingerprint/FingerprintPassword;
+    value = Lcom/android/settings_ex/fingerprint/FingerprintPassword;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,7 +21,7 @@
 
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+        Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
     }
 .end annotation
 
@@ -77,7 +77,7 @@
 
 .field private mSavedPassword:Ljava/lang/String;
 
-.field private mUiStage:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+.field private mUiStage:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
 .field private rotateState:I
 
@@ -88,18 +88,18 @@
 
     .prologue
     .line 160
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintPassword;->getShortPasswordLength()I
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->getShortPasswordLength()I
 
     move-result v0
 
-    sput v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->MIN_PASSWORD_LENGTH:I
+    sput v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->MIN_PASSWORD_LENGTH:I
 
     .line 188
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintPassword;->getShortPasswordLength()I
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->getShortPasswordLength()I
 
     move-result v0
 
-    sput v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->THRESHOLD_OF_SEQUENTIAL_CHAR:I
+    sput v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->THRESHOLD_OF_SEQUENTIAL_CHAR:I
 
     return-void
 .end method
@@ -114,64 +114,64 @@
     invoke-direct {p0}, Landroid/app/Fragment;-><init>()V
 
     .line 163
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintPassword;->getShortPasswordLength()I
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->getShortPasswordLength()I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
+    iput v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
 
     .line 164
     const/16 v0, 0x10
 
-    iput v0, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMaxLength:I
+    iput v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMaxLength:I
 
     .line 165
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLetters:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLetters:I
 
     .line 166
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinUpperCase:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinUpperCase:I
 
     .line 167
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLowerCase:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLowerCase:I
 
     .line 168
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinSymbols:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinSymbols:I
 
     .line 169
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNumeric:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNumeric:I
 
     .line 170
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNonLetter:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNonLetter:I
 
     .line 172
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintPassword;->getFingerPasswordQuality()I
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->getFingerPasswordQuality()I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mRequestedQuality:I
+    iput v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mRequestedQuality:I
 
     .line 173
-    sget-object v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->Introduction:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    sget-object v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->Introduction:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     .line 194
-    iput-boolean v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mCheckSimplePassword:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mCheckSimplePassword:Z
 
     .line 195
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mSavedPassword:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mSavedPassword:Ljava/lang/String;
 
     .line 196
-    iput-boolean v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->isExistRequestedPWQ:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->isExistRequestedPWQ:Z
 
     .line 202
-    new-instance v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$1;
+    new-instance v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$1;-><init>(Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$1;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;)V
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHandler:Landroid/os/Handler;
 
     .line 241
     return-void
@@ -186,12 +186,12 @@
     .line 917
     const/4 v0, 0x3
 
-    invoke-direct {p0, v0, v1}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->requestSystemKeyEvent(IZ)Z
+    invoke-direct {p0, v0, v1}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->requestSystemKeyEvent(IZ)Z
 
     .line 918
     const/16 v0, 0xbb
 
-    invoke-direct {p0, v0, v1}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->requestSystemKeyEvent(IZ)Z
+    invoke-direct {p0, v0, v1}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->requestSystemKeyEvent(IZ)Z
 
     .line 919
     return-void
@@ -208,49 +208,49 @@
     const/4 v1, 0x0
 
     .line 922
-    invoke-direct {p0, v2}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->isSystemKeyEventRequested(I)Z
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->isSystemKeyEventRequested(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 923
-    invoke-direct {p0, v2, v1}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->requestSystemKeyEvent(IZ)Z
+    invoke-direct {p0, v2, v1}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->requestSystemKeyEvent(IZ)Z
 
     .line 926
     :cond_0
-    invoke-direct {p0, v3}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->isSystemKeyEventRequested(I)Z
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->isSystemKeyEventRequested(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 927
-    invoke-direct {p0, v3, v1}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->requestSystemKeyEvent(IZ)Z
+    invoke-direct {p0, v3, v1}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->requestSystemKeyEvent(IZ)Z
 
     .line 929
     :cond_1
     return-void
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;)Landroid/view/inputmethod/InputMethodManager;
+.method static synthetic access$300(Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;)Landroid/view/inputmethod/InputMethodManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;
 
     .prologue
     .line 158
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mInputMethodManager:Landroid/view/inputmethod/InputMethodManager;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mInputMethodManager:Landroid/view/inputmethod/InputMethodManager;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;)Landroid/widget/EditText;
+.method static synthetic access$400(Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;)Landroid/widget/EditText;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;
 
     .prologue
     .line 158
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
     return-object v0
 .end method
@@ -379,7 +379,7 @@
 
     move-result v5
 
-    sget v6, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->THRESHOLD_OF_SEQUENTIAL_CHAR:I
+    sget v6, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->THRESHOLD_OF_SEQUENTIAL_CHAR:I
 
     sub-int v1, v5, v6
 
@@ -394,7 +394,7 @@
     .line 688
     const-string v5, "0123456789"
 
-    sget v6, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->THRESHOLD_OF_SEQUENTIAL_CHAR:I
+    sget v6, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->THRESHOLD_OF_SEQUENTIAL_CHAR:I
 
     add-int/2addr v6, v0
 
@@ -406,7 +406,7 @@
     .local v2, "pattern":Ljava/lang/String;
     const-string v5, "9876543210"
 
-    sget v6, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->THRESHOLD_OF_SEQUENTIAL_CHAR:I
+    sget v6, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->THRESHOLD_OF_SEQUENTIAL_CHAR:I
 
     add-int/2addr v6, v0
 
@@ -460,7 +460,7 @@
 
     move-result v5
 
-    sget v6, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->THRESHOLD_OF_SEQUENTIAL_CHAR:I
+    sget v6, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->THRESHOLD_OF_SEQUENTIAL_CHAR:I
 
     sub-int v1, v5, v6
 
@@ -473,7 +473,7 @@
     .line 700
     const-string v5, "abcdefghijklmnopqrstuvwxyz"
 
-    sget v6, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->THRESHOLD_OF_SEQUENTIAL_CHAR:I
+    sget v6, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->THRESHOLD_OF_SEQUENTIAL_CHAR:I
 
     add-int/2addr v6, v0
 
@@ -485,7 +485,7 @@
     .restart local v2    # "pattern":Ljava/lang/String;
     const-string v5, "zyxwvutsrqponmlkjihgfedcba"
 
-    sget v6, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->THRESHOLD_OF_SEQUENTIAL_CHAR:I
+    sget v6, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->THRESHOLD_OF_SEQUENTIAL_CHAR:I
 
     add-int/2addr v6, v0
 
@@ -537,7 +537,7 @@
 
     .prologue
     .line 438
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -557,7 +557,7 @@
     const/4 v7, 0x0
 
     .line 740
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v4}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -586,14 +586,14 @@
 
     .line 748
     .local v0, "errorMsg":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    sget-object v5, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->Introduction:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    sget-object v5, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->Introduction:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     if-ne v4, v5, :cond_3
 
     .line 749
-    invoke-direct {p0, v2}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->validatePassword(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->validatePassword(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -601,19 +601,19 @@
     if-nez v0, :cond_2
 
     .line 752
-    iput-object v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mFirstPin:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mFirstPin:Ljava/lang/String;
 
     .line 753
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
     const-string v5, ""
 
     invoke-virtual {v4, v5}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 754
-    sget-object v4, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->NeedToConfirm:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    sget-object v4, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->NeedToConfirm:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->updateStage(Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->updateStage(Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;)V
 
     .line 777
     :cond_2
@@ -621,22 +621,22 @@
     if-eqz v0, :cond_0
 
     .line 778
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    invoke-direct {p0, v0, v4}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->showError(Ljava/lang/String;Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;)V
+    invoke-direct {p0, v0, v4}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->showError(Ljava/lang/String;Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;)V
 
     goto :goto_0
 
     .line 756
     :cond_3
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    sget-object v5, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->NeedToConfirm:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    sget-object v5, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->NeedToConfirm:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     if-ne v4, v5, :cond_2
 
     .line 757
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mFirstPin:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mFirstPin:Ljava/lang/String;
 
     invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -645,7 +645,7 @@
     if-eqz v4, :cond_5
 
     .line 758
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     const/4 v5, 0x0
 
@@ -658,8 +658,8 @@
     .line 760
     const-string v4, "FingerprintSettings_changepassword"
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintPassword;->mFingerprintPreviousStage:Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintPassword;->access$500()Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mFingerprintPreviousStage:Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->access$500()Ljava/lang/String;
 
     move-result-object v5
 
@@ -670,13 +670,13 @@
     if-eqz v4, :cond_4
 
     .line 761
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
     const v5, 0x7f0e1230
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -694,7 +694,7 @@
 
     .line 765
     .local v1, "intent":Landroid/content/Intent;
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -703,7 +703,7 @@
     invoke-virtual {v4, v5, v1}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
     .line 766
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -714,12 +714,12 @@
     .line 768
     .end local v1    # "intent":Landroid/content/Intent;
     :cond_5
-    sget-object v4, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->ConfirmWrong:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    sget-object v4, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->ConfirmWrong:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->updateStage(Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->updateStage(Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;)V
 
     .line 769
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v4}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -762,7 +762,7 @@
     .line 944
     .local v1, "windowmanager":Landroid/view/IWindowManager;
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -834,7 +834,7 @@
     .line 934
     .local v1, "windowmanager":Landroid/view/IWindowManager;
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -886,23 +886,23 @@
     goto :goto_0
 .end method
 
-.method private showError(Ljava/lang/String;Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;)V
+.method private showError(Ljava/lang/String;Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;)V
     .locals 4
     .param p1, "msg"    # Ljava/lang/String;
-    .param p2, "next"    # Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    .param p2, "next"    # Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     .prologue
     const/4 v3, 0x1
 
     .line 811
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
 
     invoke-virtual {v1, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 812
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
 
     invoke-virtual {v2}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -911,7 +911,7 @@
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
     .line 813
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v3, p2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
@@ -919,12 +919,12 @@
 
     .line 814
     .local v0, "mesg":Landroid/os/Message;
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 815
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v2, 0xbb8
 
@@ -947,7 +947,7 @@
     const/4 v5, 0x0
 
     .line 834
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->isDetached()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->isDetached()Z
 
     move-result v6
 
@@ -966,7 +966,7 @@
 
     .line 838
     :cond_0
-    iget-object v6, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v6}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -984,14 +984,14 @@
 
     .line 841
     .local v1, "length":I
-    iget-object v6, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    iget-object v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    sget-object v7, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->Introduction:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    sget-object v7, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->Introduction:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     if-ne v6, v7, :cond_2
 
     .line 842
-    iget-object v6, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mCancelButton:Landroid/widget/Button;
+    iget-object v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mCancelButton:Landroid/widget/Button;
 
     const v7, 0x7f0e02ba
 
@@ -999,23 +999,23 @@
 
     .line 847
     :goto_1
-    iget-object v6, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    iget-object v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    sget-object v7, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->Introduction:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    sget-object v7, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->Introduction:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     if-ne v6, v7, :cond_5
 
     if-lez v1, :cond_5
 
     .line 848
-    iget v6, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
+    iget v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
 
     if-ge v1, v6, :cond_3
 
     .line 849
     new-array v6, v4, [Ljava/lang/Object;
 
-    iget v7, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
+    iget v7, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1023,20 +1023,20 @@
 
     aput-object v7, v6, v5
 
-    invoke-virtual {p0, v9, v6}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v9, v6}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 850
     .local v2, "msg":Ljava/lang/String;
-    iget-boolean v6, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->isExistRequestedPWQ:Z
+    iget-boolean v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->isExistRequestedPWQ:Z
 
     if-nez v6, :cond_1
 
     .line 851
     new-array v4, v4, [Ljava/lang/Object;
 
-    iget v6, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
+    iget v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1044,29 +1044,29 @@
 
     aput-object v6, v4, v5
 
-    invoke-virtual {p0, v10, v4}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v10, v4}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 853
     :cond_1
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
 
     invoke-virtual {v4, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 854
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mNextButton:Landroid/widget/Button;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mNextButton:Landroid/widget/Button;
 
     invoke-virtual {v4, v5}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 884
     .end local v2    # "msg":Ljava/lang/String;
     :goto_2
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mNextButton:Landroid/widget/Button;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mNextButton:Landroid/widget/Button;
 
-    iget-object v5, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    iget-object v5, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    iget v5, v5, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->buttonText:I
+    iget v5, v5, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->buttonText:I
 
     invoke-virtual {v4, v5}, Landroid/widget/Button;->setText(I)V
 
@@ -1074,7 +1074,7 @@
 
     .line 844
     :cond_2
-    iget-object v6, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mCancelButton:Landroid/widget/Button;
+    iget-object v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mCancelButton:Landroid/widget/Button;
 
     const v7, 0x7f0e14c0
 
@@ -1084,7 +1084,7 @@
 
     .line 856
     :cond_3
-    invoke-direct {p0, v3}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->validatePassword(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->validatePassword(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1093,12 +1093,12 @@
     if-eqz v0, :cond_4
 
     .line 859
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
 
     invoke-virtual {v4, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 860
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mNextButton:Landroid/widget/Button;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mNextButton:Landroid/widget/Button;
 
     invoke-virtual {v4, v5}, Landroid/widget/Button;->setEnabled(Z)V
 
@@ -1106,14 +1106,14 @@
 
     .line 862
     :cond_4
-    iget-object v5, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
+    iget-object v5, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
 
     const v6, 0x7f0e02ad
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(I)V
 
     .line 863
-    iget-object v5, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mNextButton:Landroid/widget/Button;
+    iget-object v5, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mNextButton:Landroid/widget/Button;
 
     invoke-virtual {v5, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
@@ -1122,23 +1122,23 @@
     .line 867
     .end local v0    # "error":Ljava/lang/String;
     :cond_5
-    iget-object v6, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    iget-object v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    sget-object v7, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->Introduction:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    sget-object v7, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->Introduction:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     if-ne v6, v7, :cond_7
 
     .line 868
-    iget-boolean v6, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->isExistRequestedPWQ:Z
+    iget-boolean v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->isExistRequestedPWQ:Z
 
     if-nez v6, :cond_6
 
     .line 869
-    iget-object v6, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
 
     new-array v7, v4, [Ljava/lang/Object;
 
-    iget v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
+    iget v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1146,7 +1146,7 @@
 
     aput-object v8, v7, v5
 
-    invoke-virtual {p0, v10, v7}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v10, v7}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -1154,7 +1154,7 @@
 
     .line 881
     :goto_3
-    iget-object v6, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mNextButton:Landroid/widget/Button;
+    iget-object v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mNextButton:Landroid/widget/Button;
 
     if-lez v1, :cond_9
 
@@ -1165,11 +1165,11 @@
 
     .line 871
     :cond_6
-    iget-object v6, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
 
     new-array v7, v4, [Ljava/lang/Object;
 
-    iget v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
+    iget v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1177,7 +1177,7 @@
 
     aput-object v8, v7, v5
 
-    invoke-virtual {p0, v9, v7}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v9, v7}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -1187,20 +1187,20 @@
 
     .line 874
     :cond_7
-    iget-boolean v6, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->isExistRequestedPWQ:Z
+    iget-boolean v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->isExistRequestedPWQ:Z
 
     if-nez v6, :cond_8
 
     .line 875
-    iget-object v6, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
 
-    iget-object v7, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    iget-object v7, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    iget v7, v7, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->betaHint:I
+    iget v7, v7, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->betaHint:I
 
     new-array v8, v4, [Ljava/lang/Object;
 
-    iget v9, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
+    iget v9, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1208,7 +1208,7 @@
 
     aput-object v9, v8, v5
 
-    invoke-virtual {p0, v7, v8}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v7, v8}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -1218,15 +1218,15 @@
 
     .line 877
     :cond_8
-    iget-object v6, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
 
-    iget-object v7, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    iget-object v7, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    iget v7, v7, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->alphaHint:I
+    iget v7, v7, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->alphaHint:I
 
     new-array v8, v4, [Ljava/lang/Object;
 
-    iget v9, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
+    iget v9, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1234,7 +1234,7 @@
 
     aput-object v9, v8, v5
 
-    invoke-virtual {p0, v7, v8}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v7, v8}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -1257,14 +1257,14 @@
     .line 533
     move-object/from16 v0, p0
 
-    iget-boolean v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mCheckSimplePassword:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mCheckSimplePassword:Z
 
     move/from16 v29, v0
 
     if-eqz v29, :cond_1
 
     .line 534
-    invoke-direct/range {p0 .. p1}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->checkSequentialChars(Ljava/lang/String;)Z
+    invoke-direct/range {p0 .. p1}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->checkSequentialChars(Ljava/lang/String;)Z
 
     move-result v29
 
@@ -1277,7 +1277,7 @@
 
     move/from16 v1, v29
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v29
 
@@ -1287,7 +1287,7 @@
 
     .line 538
     :cond_0
-    invoke-direct/range {p0 .. p1}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->checkRepeatingChars(Ljava/lang/String;)Z
+    invoke-direct/range {p0 .. p1}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->checkRepeatingChars(Ljava/lang/String;)Z
 
     move-result v29
 
@@ -1300,7 +1300,7 @@
 
     move/from16 v1, v29
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v29
 
@@ -1314,7 +1314,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
 
     move/from16 v30, v0
 
@@ -1339,7 +1339,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
 
     move/from16 v32, v0
 
@@ -1355,7 +1355,7 @@
 
     move-object/from16 v2, v30
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v29
 
@@ -1369,7 +1369,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMaxLength:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMaxLength:I
 
     move/from16 v30, v0
 
@@ -1394,7 +1394,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMaxLength:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMaxLength:I
 
     move/from16 v32, v0
 
@@ -1410,7 +1410,7 @@
 
     move-object/from16 v2, v30
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v29
 
@@ -1487,7 +1487,7 @@
 
     move/from16 v1, v29
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v29
 
@@ -1579,7 +1579,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mRequestedQuality:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mRequestedQuality:I
 
     move/from16 v30, v0
 
@@ -1601,7 +1601,7 @@
 
     move/from16 v1, v29
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v29
 
@@ -1613,7 +1613,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mRequestedQuality:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mRequestedQuality:I
 
     move/from16 v30, v0
 
@@ -1626,7 +1626,7 @@
     .line 589
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLetters:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLetters:I
 
     move/from16 v29, v0
 
@@ -1637,7 +1637,7 @@
     if-ge v0, v1, :cond_c
 
     .line 590
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v29
 
@@ -1645,7 +1645,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLetters:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLetters:I
 
     move/from16 v31, v0
 
@@ -1665,7 +1665,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLetters:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLetters:I
 
     move/from16 v32, v0
 
@@ -1685,7 +1685,7 @@
     :cond_c
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNumeric:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNumeric:I
 
     move/from16 v29, v0
 
@@ -1696,7 +1696,7 @@
     if-ge v0, v1, :cond_d
 
     .line 594
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v29
 
@@ -1704,7 +1704,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNumeric:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNumeric:I
 
     move/from16 v31, v0
 
@@ -1724,7 +1724,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNumeric:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNumeric:I
 
     move/from16 v32, v0
 
@@ -1744,7 +1744,7 @@
     :cond_d
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLowerCase:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLowerCase:I
 
     move/from16 v29, v0
 
@@ -1755,7 +1755,7 @@
     if-ge v0, v1, :cond_e
 
     .line 598
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v29
 
@@ -1763,7 +1763,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLowerCase:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLowerCase:I
 
     move/from16 v31, v0
 
@@ -1783,7 +1783,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLowerCase:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLowerCase:I
 
     move/from16 v32, v0
 
@@ -1803,7 +1803,7 @@
     :cond_e
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinUpperCase:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinUpperCase:I
 
     move/from16 v29, v0
 
@@ -1814,7 +1814,7 @@
     if-ge v0, v1, :cond_f
 
     .line 602
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v29
 
@@ -1822,7 +1822,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinUpperCase:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinUpperCase:I
 
     move/from16 v31, v0
 
@@ -1842,7 +1842,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinUpperCase:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinUpperCase:I
 
     move/from16 v32, v0
 
@@ -1862,7 +1862,7 @@
     :cond_f
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinSymbols:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinSymbols:I
 
     move/from16 v29, v0
 
@@ -1873,7 +1873,7 @@
     if-ge v0, v1, :cond_10
 
     .line 606
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v29
 
@@ -1881,7 +1881,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinSymbols:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinSymbols:I
 
     move/from16 v31, v0
 
@@ -1901,7 +1901,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinSymbols:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinSymbols:I
 
     move/from16 v32, v0
 
@@ -1921,7 +1921,7 @@
     :cond_10
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNonLetter:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNonLetter:I
 
     move/from16 v29, v0
 
@@ -1932,7 +1932,7 @@
     if-ge v0, v1, :cond_16
 
     .line 610
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v29
 
@@ -1940,7 +1940,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNonLetter:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNonLetter:I
 
     move/from16 v31, v0
 
@@ -1960,7 +1960,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNonLetter:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNonLetter:I
 
     move/from16 v32, v0
 
@@ -1982,7 +1982,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mRequestedQuality:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mRequestedQuality:I
 
     move/from16 v30, v0
 
@@ -2001,7 +2001,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mRequestedQuality:I
+    iget v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mRequestedQuality:I
 
     move/from16 v30, v0
 
@@ -2030,7 +2030,7 @@
 
     move/from16 v1, v29
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v29
 
@@ -2065,7 +2065,7 @@
 
     move/from16 v1, v29
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v29
 
@@ -2095,7 +2095,7 @@
 
     .line 632
     .local v25, "selectionArgsForbStr":[Ljava/lang/String;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v29
 
@@ -2111,7 +2111,7 @@
 
     move-object/from16 v3, v25
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v7
 
@@ -2131,7 +2131,7 @@
 
     .line 635
     .local v24, "selectionArgs":[Ljava/lang/String;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v29
 
@@ -2147,13 +2147,13 @@
 
     move-object/from16 v3, v24
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v14
 
     .line 637
     .local v14, "hasForbiddenNumericSequence":I
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v29
 
@@ -2163,13 +2163,13 @@
 
     const/16 v32, 0x0
 
-    invoke-static/range {v29 .. v32}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabledInt(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-static/range {v29 .. v32}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabledInt(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v10
 
     .line 639
     .local v10, "getMaximumNumericSequenceLength":I
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v29
 
@@ -2185,13 +2185,13 @@
 
     move-object/from16 v3, v24
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v12
 
     .line 641
     .local v12, "hasForbiddenCharacterSequence":I
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v29
 
@@ -2201,7 +2201,7 @@
 
     const/16 v32, 0x0
 
-    invoke-static/range {v29 .. v32}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabledInt(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-static/range {v29 .. v32}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabledInt(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v9
 
@@ -2225,7 +2225,7 @@
 
     .line 644
     .local v26, "selectionArgsStrDist":[Ljava/lang/String;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v29
 
@@ -2241,13 +2241,13 @@
 
     move-object/from16 v3, v26
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v15
 
     .line 646
     .local v15, "hasForbiddenStringDistance":I
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v29
 
@@ -2257,13 +2257,13 @@
 
     const/16 v32, 0x0
 
-    invoke-static/range {v29 .. v32}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabledInt(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-static/range {v29 .. v32}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabledInt(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v11
 
     .line 648
     .local v11, "getMinimumCharacterChangeLength":I
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v29
 
@@ -2279,13 +2279,13 @@
 
     move-object/from16 v3, v24
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v13
 
     .line 649
     .local v13, "hasForbiddenData":I
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v29
 
@@ -2301,13 +2301,13 @@
 
     move-object/from16 v3, v24
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v16
 
     .line 651
     .local v16, "hasMaxRepeatedCharacters":I
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v29
 
@@ -2317,13 +2317,13 @@
 
     const/16 v32, 0x0
 
-    invoke-static/range {v29 .. v32}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabledInt(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-static/range {v29 .. v32}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabledInt(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v8
 
     .line 653
     .local v8, "getMaximumCharacterOccurences":I
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v29
 
@@ -2339,7 +2339,7 @@
 
     move-object/from16 v3, v24
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v18
 
@@ -2394,7 +2394,7 @@
 
     move-object/from16 v2, v30
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v29
 
@@ -2435,7 +2435,7 @@
 
     move-object/from16 v2, v30
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v29
 
@@ -2474,7 +2474,7 @@
 
     move-object/from16 v2, v30
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v29
 
@@ -2495,7 +2495,7 @@
 
     move/from16 v1, v29
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v29
 
@@ -2536,7 +2536,7 @@
 
     move-object/from16 v2, v30
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v29
 
@@ -2553,7 +2553,7 @@
 
     move/from16 v1, v29
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v29
 
@@ -2574,20 +2574,20 @@
 
     .prologue
     .line 889
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    sget-object v1, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->ConfirmWrong:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    sget-object v1, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->ConfirmWrong:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     if-ne v0, v1, :cond_0
 
     .line 890
-    sget-object v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->NeedToConfirm:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    sget-object v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->NeedToConfirm:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     .line 893
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->updateUi()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->updateUi()V
 
     .line 894
     return-void
@@ -2663,7 +2663,7 @@
     if-eq p2, v0, :cond_0
 
     .line 507
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2672,7 +2672,7 @@
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setResult(I)V
 
     .line 508
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2699,19 +2699,19 @@
     move-object v0, p1
 
     .line 246
-    check-cast v0, Lcom/android/settings/fingerprint/FingerprintPassword;
+    check-cast v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/fingerprint/FingerprintPassword;->setOnKeyBackListener(Lcom/android/settings/fingerprint/FingerprintPassword$onKeyBackListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->setOnKeyBackListener(Lcom/android/settings_ex/fingerprint/FingerprintPassword$onKeyBackListener;)V
 
     .line 247
-    # getter for: Lcom/android/settings/fingerprint/FingerprintPassword;->mIsSetupWizard:Z
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintPassword;->access$000()Z
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mIsSetupWizard:Z
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->access$000()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v0
 
@@ -2747,25 +2747,25 @@
 
     .line 785
     :pswitch_0
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->handleNext()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->handleNext()V
 
     goto :goto_0
 
     .line 788
     :pswitch_1
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    sget-object v1, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->Introduction:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    sget-object v1, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->Introduction:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     if-eq v0, v1, :cond_0
 
     .line 789
-    sget-object v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->Introduction:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    sget-object v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->Introduction:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->updateStage(Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->updateStage(Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;)V
 
     .line 790
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
     const-string v1, ""
 
@@ -2775,15 +2775,15 @@
 
     .line 794
     :cond_0
-    # getter for: Lcom/android/settings/fingerprint/FingerprintPassword;->mFingerprintPreviousStage:Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintPassword;->access$500()Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mFingerprintPreviousStage:Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->access$500()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintPassword;->mFingerprintPreviousStage:Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintPassword;->access$500()Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mFingerprintPreviousStage:Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->access$500()Ljava/lang/String;
 
     move-result-object v0
 
@@ -2794,7 +2794,7 @@
     if-eqz v0, :cond_1
 
     .line 795
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2803,7 +2803,7 @@
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setResult(I)V
 
     .line 796
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2813,7 +2813,7 @@
 
     .line 798
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2822,7 +2822,7 @@
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setResult(I)V
 
     .line 799
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2860,7 +2860,7 @@
     .line 447
     const-string v2, ""
 
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v3}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -2877,7 +2877,7 @@
     if-nez v2, :cond_1
 
     .line 448
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v2}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -2887,13 +2887,13 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mSavedPassword:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mSavedPassword:Ljava/lang/String;
 
     .line 453
     :goto_0
-    iget v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->rotateState:I
+    iget v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->rotateState:I
 
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getScreenOrientation()I
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getScreenOrientation()I
 
     move-result v3
 
@@ -2902,17 +2902,17 @@
     .line 454
     const/4 v2, 0x1
 
-    sput-boolean v2, Lcom/android/settings/fingerprint/FingerprintPassword;->isScreenRotated:Z
+    sput-boolean v2, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->isScreenRotated:Z
 
     .line 455
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getScreenOrientation()I
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getScreenOrientation()I
 
     move-result v2
 
-    iput v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->rotateState:I
+    iput v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->rotateState:I
 
     .line 456
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getView()Landroid/view/View;
 
     move-result-object v1
 
@@ -2923,7 +2923,7 @@
     invoke-virtual {v1}, Landroid/view/ViewGroup;->removeAllViewsInLayout()V
 
     .line 458
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -2931,7 +2931,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0, v2, v1, v4}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-virtual {p0, v2, v1, v4}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v0
 
@@ -2947,7 +2947,7 @@
 
     .line 450
     :cond_1
-    iput-object v4, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mSavedPassword:Ljava/lang/String;
+    iput-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mSavedPassword:Ljava/lang/String;
 
     goto :goto_0
 .end method
@@ -2980,16 +2980,16 @@
     .line 257
     new-instance v1, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
     invoke-direct {v1, v4}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 258
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -2999,13 +2999,13 @@
 
     .line 259
     .local v0, "intent":Landroid/content/Intent;
-    invoke-virtual {p0, v6}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->setRetainInstance(Z)V
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->setRetainInstance(Z)V
 
     .line 261
-    iput-boolean v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mCheckSimplePassword:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mCheckSimplePassword:Z
 
     .line 262
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v1}, Lcom/android/internal/widget/LockPatternUtils;->getDevicePolicyManager()Landroid/app/admin/DevicePolicyManager;
 
@@ -3018,7 +3018,7 @@
     if-nez v1, :cond_0
 
     .line 263
-    iput-boolean v6, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mCheckSimplePassword:Z
+    iput-boolean v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mCheckSimplePassword:Z
 
     .line 265
     :cond_0
@@ -3034,7 +3034,7 @@
 
     move-result-object v4
 
-    iget-boolean v5, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mCheckSimplePassword:Z
+    iget-boolean v5, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mCheckSimplePassword:Z
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -3047,17 +3047,17 @@
     invoke-static {v1, v4}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 267
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getScreenOrientation()I
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getScreenOrientation()I
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->rotateState:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->rotateState:I
 
     .line 268
-    sput-boolean v2, Lcom/android/settings/fingerprint/FingerprintPassword;->isScreenRotated:Z
+    sput-boolean v2, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->isScreenRotated:Z
 
     .line 270
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
@@ -3070,11 +3070,11 @@
     if-lez v1, :cond_1
 
     .line 271
-    iput-boolean v6, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->isExistRequestedPWQ:Z
+    iput-boolean v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->isExistRequestedPWQ:Z
 
     .line 275
     :cond_1
-    iput-boolean v6, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->isExistRequestedPWQ:Z
+    iput-boolean v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->isExistRequestedPWQ:Z
 
     .line 277
     const-string v1, "FpstFingerprintPasswordFragment"
@@ -3089,7 +3089,7 @@
 
     move-result-object v4
 
-    iget-boolean v5, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->isExistRequestedPWQ:Z
+    iget-boolean v5, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->isExistRequestedPWQ:Z
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -3102,33 +3102,33 @@
     invoke-static {v1, v4}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 279
-    iget-boolean v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->isExistRequestedPWQ:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->isExistRequestedPWQ:Z
 
     if-nez v1, :cond_2
 
     .line 280
-    sput v3, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->MIN_PASSWORD_LENGTH:I
+    sput v3, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->MIN_PASSWORD_LENGTH:I
 
     .line 281
-    iput v3, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
+    iput v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
 
     .line 282
-    sput v3, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->THRESHOLD_OF_SEQUENTIAL_CHAR:I
+    sput v3, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->THRESHOLD_OF_SEQUENTIAL_CHAR:I
 
     .line 283
-    iput v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mRequestedQuality:I
+    iput v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mRequestedQuality:I
 
     .line 287
     :cond_2
-    # getter for: Lcom/android/settings/fingerprint/FingerprintPassword;->mDPM:Landroid/app/admin/DevicePolicyManager;
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintPassword;->access$100()Landroid/app/admin/DevicePolicyManager;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->access$100()Landroid/app/admin/DevicePolicyManager;
 
     move-result-object v1
 
     if-nez v1, :cond_3
 
     .line 288
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -3140,22 +3140,22 @@
 
     check-cast v1, Landroid/app/admin/DevicePolicyManager;
 
-    # setter for: Lcom/android/settings/fingerprint/FingerprintPassword;->mDPM:Landroid/app/admin/DevicePolicyManager;
-    invoke-static {v1}, Lcom/android/settings/fingerprint/FingerprintPassword;->access$102(Landroid/app/admin/DevicePolicyManager;)Landroid/app/admin/DevicePolicyManager;
+    # setter for: Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    invoke-static {v1}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->access$102(Landroid/app/admin/DevicePolicyManager;)Landroid/app/admin/DevicePolicyManager;
 
     .line 290
     :cond_3
-    # getter for: Lcom/android/settings/fingerprint/FingerprintPassword;->mDPM:Landroid/app/admin/DevicePolicyManager;
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintPassword;->access$100()Landroid/app/admin/DevicePolicyManager;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->access$100()Landroid/app/admin/DevicePolicyManager;
 
     move-result-object v1
 
     if-eqz v1, :cond_8
 
     .line 291
-    iget v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mRequestedQuality:I
+    iget v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mRequestedQuality:I
 
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
@@ -3169,11 +3169,11 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mRequestedQuality:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mRequestedQuality:I
 
     .line 292
-    # getter for: Lcom/android/settings/fingerprint/FingerprintPassword;->mDPM:Landroid/app/admin/DevicePolicyManager;
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintPassword;->access$100()Landroid/app/admin/DevicePolicyManager;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->access$100()Landroid/app/admin/DevicePolicyManager;
 
     move-result-object v1
 
@@ -3181,24 +3181,24 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
 
     .line 294
-    iget v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
+    iget v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
 
-    sget v4, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->MIN_PASSWORD_LENGTH:I
+    sget v4, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->MIN_PASSWORD_LENGTH:I
 
     if-ge v1, v4, :cond_4
 
     .line 295
-    sget v1, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->MIN_PASSWORD_LENGTH:I
+    sget v1, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->MIN_PASSWORD_LENGTH:I
 
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
 
     .line 299
     :cond_4
-    # getter for: Lcom/android/settings/fingerprint/FingerprintPassword;->mDPM:Landroid/app/admin/DevicePolicyManager;
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintPassword;->access$100()Landroid/app/admin/DevicePolicyManager;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->access$100()Landroid/app/admin/DevicePolicyManager;
 
     move-result-object v1
 
@@ -3208,7 +3208,7 @@
 
     if-eqz v1, :cond_5
 
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
@@ -3221,30 +3221,30 @@
     if-ne v1, v8, :cond_5
 
     .line 301
-    iget v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mRequestedQuality:I
+    iget v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mRequestedQuality:I
 
     if-gez v1, :cond_6
 
     move v1, v2
 
     :goto_0
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mRequestedQuality:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mRequestedQuality:I
 
     .line 303
-    iget v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
+    iget v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
 
     if-ge v1, v3, :cond_7
 
     move v1, v3
 
     :goto_1
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
 
     .line 308
     :cond_5
-    iget v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
+    iget v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
 
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
@@ -3258,11 +3258,11 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
 
     .line 309
-    # getter for: Lcom/android/settings/fingerprint/FingerprintPassword;->mDPM:Landroid/app/admin/DevicePolicyManager;
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintPassword;->access$100()Landroid/app/admin/DevicePolicyManager;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->access$100()Landroid/app/admin/DevicePolicyManager;
 
     move-result-object v1
 
@@ -3270,18 +3270,18 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMaxLength:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMaxLength:I
 
     .line 310
     const-string v1, "lockscreen.password_min_letters"
 
-    iget v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLetters:I
+    iget v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLetters:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
@@ -3295,18 +3295,18 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLetters:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLetters:I
 
     .line 312
     const-string v1, "lockscreen.password_min_uppercase"
 
-    iget v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinUpperCase:I
+    iget v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinUpperCase:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
@@ -3320,18 +3320,18 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinUpperCase:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinUpperCase:I
 
     .line 314
     const-string v1, "lockscreen.password_min_lowercase"
 
-    iget v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLowerCase:I
+    iget v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLowerCase:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
@@ -3345,18 +3345,18 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLowerCase:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLowerCase:I
 
     .line 316
     const-string v1, "lockscreen.password_min_numeric"
 
-    iget v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNumeric:I
+    iget v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNumeric:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
@@ -3370,18 +3370,18 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNumeric:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNumeric:I
 
     .line 318
     const-string v1, "lockscreen.password_min_symbols"
 
-    iget v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinSymbols:I
+    iget v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinSymbols:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
@@ -3395,18 +3395,18 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinSymbols:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinSymbols:I
 
     .line 320
     const-string v1, "lockscreen.password_min_nonletter"
 
-    iget v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNonLetter:I
+    iget v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNonLetter:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
@@ -3420,10 +3420,10 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNonLetter:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinNonLetter:I
 
     .line 322
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -3435,7 +3435,7 @@
 
     check-cast v1, Landroid/view/inputmethod/InputMethodManager;
 
-    iput-object v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mInputMethodManager:Landroid/view/inputmethod/InputMethodManager;
+    iput-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mInputMethodManager:Landroid/view/inputmethod/InputMethodManager;
 
     .line 328
     :goto_2
@@ -3443,13 +3443,13 @@
 
     .line 301
     :cond_6
-    iget v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mRequestedQuality:I
+    iget v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mRequestedQuality:I
 
     goto/16 :goto_0
 
     .line 303
     :cond_7
-    iget v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
+    iget v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordMinLength:I
 
     goto/16 :goto_1
 
@@ -3479,11 +3479,11 @@
     invoke-static {v8, v9}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 334
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
@@ -3491,17 +3491,17 @@
 
     move-result-object v9
 
-    invoke-static {v8, v9}, Lcom/android/settings/Utils;->applyLandscapeFullScreen(Landroid/content/Context;Landroid/view/Window;)V
+    invoke-static {v8, v9}, Lcom/android/settings_ex/Utils;->applyLandscapeFullScreen(Landroid/content/Context;Landroid/view/Window;)V
 
     .line 336
-    # getter for: Lcom/android/settings/fingerprint/FingerprintPassword;->mIsSetupWizard:Z
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintPassword;->access$000()Z
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mIsSetupWizard:Z
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->access$000()Z
 
     move-result v8
 
     if-eqz v8, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v8
 
@@ -3515,7 +3515,7 @@
     invoke-static {v8, v9}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 338
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -3523,20 +3523,20 @@
 
     move-result-object v8
 
-    # setter for: Lcom/android/settings/fingerprint/FingerprintPassword;->window:Landroid/view/Window;
-    invoke-static {v8}, Lcom/android/settings/fingerprint/FingerprintPassword;->access$202(Landroid/view/Window;)Landroid/view/Window;
+    # setter for: Lcom/android/settings_ex/fingerprint/FingerprintPassword;->window:Landroid/view/Window;
+    invoke-static {v8}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->access$202(Landroid/view/Window;)Landroid/view/Window;
 
     .line 339
-    # getter for: Lcom/android/settings/fingerprint/FingerprintPassword;->window:Landroid/view/Window;
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintPassword;->access$200()Landroid/view/Window;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintPassword;->window:Landroid/view/Window;
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->access$200()Landroid/view/Window;
 
     move-result-object v8
 
     if-eqz v8, :cond_0
 
     .line 340
-    # getter for: Lcom/android/settings/fingerprint/FingerprintPassword;->window:Landroid/view/Window;
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintPassword;->access$200()Landroid/view/Window;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintPassword;->window:Landroid/view/Window;
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->access$200()Landroid/view/Window;
 
     move-result-object v8
 
@@ -3549,8 +3549,8 @@
     invoke-virtual {v8, v9}, Landroid/view/Window;->setStatusBarColor(I)V
 
     .line 341
-    # getter for: Lcom/android/settings/fingerprint/FingerprintPassword;->window:Landroid/view/Window;
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintPassword;->access$200()Landroid/view/Window;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintPassword;->window:Landroid/view/Window;
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->access$200()Landroid/view/Window;
 
     move-result-object v8
 
@@ -3572,8 +3572,8 @@
     iput v8, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     .line 344
-    # getter for: Lcom/android/settings/fingerprint/FingerprintPassword;->window:Landroid/view/Window;
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintPassword;->access$200()Landroid/view/Window;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintPassword;->window:Landroid/view/Window;
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->access$200()Landroid/view/Window;
 
     move-result-object v8
 
@@ -3600,10 +3600,10 @@
 
     check-cast v8, Landroid/widget/Button;
 
-    iput-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mCancelButton:Landroid/widget/Button;
+    iput-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mCancelButton:Landroid/widget/Button;
 
     .line 350
-    iget-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mCancelButton:Landroid/widget/Button;
+    iget-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mCancelButton:Landroid/widget/Button;
 
     invoke-virtual {v8, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -3616,15 +3616,15 @@
 
     check-cast v8, Landroid/widget/Button;
 
-    iput-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mNextButton:Landroid/widget/Button;
+    iput-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mNextButton:Landroid/widget/Button;
 
     .line 352
-    iget-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mNextButton:Landroid/widget/Button;
+    iget-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mNextButton:Landroid/widget/Button;
 
     invoke-virtual {v8, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 353
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v8
 
@@ -3656,7 +3656,7 @@
 
     check-cast v8, Lcom/android/internal/widget/PasswordEntryKeyboardView;
 
-    iput-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mKeyboardView:Landroid/inputmethodservice/KeyboardView;
+    iput-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mKeyboardView:Landroid/inputmethodservice/KeyboardView;
 
     .line 363
     const v8, 0x7f0d0103
@@ -3667,36 +3667,36 @@
 
     check-cast v8, Landroid/widget/EditText;
 
-    iput-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iput-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
     .line 364
-    iget-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v8, p0}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
     .line 365
-    iget-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v8, p0}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 366
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v8
 
     if-eqz v8, :cond_6
 
     .line 367
-    iget-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v8}, Landroid/widget/EditText;->requestFocus()Z
 
     .line 368
-    iget-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
-    new-instance v9, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$2;
+    new-instance v9, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$2;
 
-    invoke-direct {v9, p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$2;-><init>(Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;)V
+    invoke-direct {v9, p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$2;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;)V
 
     const-wide/16 v10, 0xc8
 
@@ -3704,7 +3704,7 @@
 
     .line 379
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -3712,16 +3712,16 @@
     .local v0, "activity":Landroid/app/Activity;
     new-instance v8, Lcom/android/internal/widget/PasswordEntryKeyboardHelper;
 
-    iget-object v9, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mKeyboardView:Landroid/inputmethodservice/KeyboardView;
+    iget-object v9, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mKeyboardView:Landroid/inputmethodservice/KeyboardView;
 
-    iget-object v10, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v10, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-direct {v8, v0, v9, v10}, Lcom/android/internal/widget/PasswordEntryKeyboardHelper;-><init>(Landroid/content/Context;Landroid/inputmethodservice/KeyboardView;Landroid/view/View;)V
 
-    iput-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mKeyboardHelper:Lcom/android/internal/widget/PasswordEntryKeyboardHelper;
+    iput-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mKeyboardHelper:Lcom/android/internal/widget/PasswordEntryKeyboardHelper;
 
     .line 382
-    iget-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mKeyboardHelper:Lcom/android/internal/widget/PasswordEntryKeyboardHelper;
+    iget-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mKeyboardHelper:Lcom/android/internal/widget/PasswordEntryKeyboardHelper;
 
     const/4 v9, 0x0
 
@@ -3736,17 +3736,17 @@
 
     check-cast v8, Landroid/widget/TextView;
 
-    iput-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
+    iput-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
 
     .line 385
-    # getter for: Lcom/android/settings/fingerprint/FingerprintPassword;->mIsSetupWizard:Z
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintPassword;->access$000()Z
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mIsSetupWizard:Z
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->access$000()Z
 
     move-result v8
 
     if-eqz v8, :cond_2
 
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v8
 
@@ -3770,12 +3770,12 @@
     .line 389
     .end local v3    # "mPwdTitle":Landroid/widget/TextView;
     :cond_2
-    iget-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mKeyboardView:Landroid/inputmethodservice/KeyboardView;
+    iget-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mKeyboardView:Landroid/inputmethodservice/KeyboardView;
 
     invoke-virtual {v8}, Landroid/inputmethodservice/KeyboardView;->requestFocus()Z
 
     .line 390
-    iget-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v8}, Landroid/widget/EditText;->getInputType()I
 
@@ -3783,7 +3783,7 @@
 
     .line 391
     .local v1, "currentType":I
-    iget-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v8, v1}, Landroid/widget/EditText;->setInputType(I)V
 
@@ -3805,8 +3805,8 @@
     .local v6, "titleid":I
     const-string v8, "FingerprintSettings_changepassword"
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintPassword;->mFingerprintPreviousStage:Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintPassword;->access$500()Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mFingerprintPreviousStage:Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->access$500()Ljava/lang/String;
 
     move-result-object v9
 
@@ -3821,7 +3821,7 @@
 
     .line 404
     :goto_1
-    invoke-virtual {p0, v6}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v5
 
@@ -3834,25 +3834,25 @@
     .end local v5    # "title":Ljava/lang/CharSequence;
     .end local v6    # "titleid":I
     :cond_3
-    iget-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
-    new-instance v9, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$3;
+    new-instance v9, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$3;
 
-    invoke-direct {v9, p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$3;-><init>(Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;)V
+    invoke-direct {v9, p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$3;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;)V
 
     invoke-virtual {v8, v9}, Landroid/widget/EditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
     .line 423
-    iget-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v8}, Landroid/widget/EditText;->requestFocus()Z
 
     .line 425
-    iget-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mSavedPassword:Ljava/lang/String;
+    iget-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mSavedPassword:Ljava/lang/String;
 
     if-eqz v8, :cond_4
 
-    iget-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mSavedPassword:Ljava/lang/String;
+    iget-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mSavedPassword:Ljava/lang/String;
 
     invoke-virtual {v8}, Ljava/lang/String;->isEmpty()Z
 
@@ -3861,16 +3861,16 @@
     if-nez v8, :cond_4
 
     .line 426
-    iget-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
-    iget-object v9, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mSavedPassword:Ljava/lang/String;
+    iget-object v9, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mSavedPassword:Ljava/lang/String;
 
     invoke-virtual {v8, v9}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 427
-    iget-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
-    iget-object v9, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v9, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v9}, Landroid/widget/EditText;->length()I
 
@@ -3880,14 +3880,14 @@
 
     .line 430
     :cond_4
-    iget-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    iget-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     if-eqz v8, :cond_5
 
     .line 431
-    iget-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    iget-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->updateStage(Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;)V
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->updateStage(Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;)V
 
     .line 434
     :cond_5
@@ -3897,7 +3897,7 @@
     .end local v0    # "activity":Landroid/app/Activity;
     .end local v1    # "currentType":I
     :cond_6
-    iget-object v8, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
     const/high16 v9, 0x2000000
 
@@ -3947,7 +3947,7 @@
 
     .line 823
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->handleNext()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->handleNext()V
 
     .line 824
     const/4 v0, 0x1
@@ -3979,9 +3979,9 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    invoke-virtual {v2}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -3996,9 +3996,9 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 905
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    sget-object v1, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->Introduction:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    sget-object v1, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->Introduction:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     if-ne v0, v1, :cond_0
 
@@ -4011,15 +4011,15 @@
 
     .line 908
     :cond_0
-    sget-object v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->Introduction:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    sget-object v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->Introduction:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     .line 909
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->updateUi()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->updateUi()V
 
     .line 910
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
     const-string v1, ""
 
@@ -4043,7 +4043,7 @@
     invoke-super {p0}, Landroid/app/Fragment;->onPause()V
 
     .line 478
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
 
@@ -4055,21 +4055,21 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 480
-    sget-boolean v0, Lcom/android/settings/fingerprint/FingerprintPassword;->isScreenRotated:Z
+    sget-boolean v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->isScreenRotated:Z
 
     if-ne v0, v2, :cond_1
 
     .line 481
-    sput-boolean v3, Lcom/android/settings/fingerprint/FingerprintPassword;->isScreenRotated:Z
+    sput-boolean v3, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->isScreenRotated:Z
 
     .line 485
     :goto_0
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mInputMethodManager:Landroid/view/inputmethod/InputMethodManager;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mInputMethodManager:Landroid/view/inputmethod/InputMethodManager;
 
     if-eqz v0, :cond_0
 
     .line 486
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -4082,9 +4082,9 @@
     if-ne v0, v2, :cond_2
 
     .line 487
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mInputMethodManager:Landroid/view/inputmethod/InputMethodManager;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mInputMethodManager:Landroid/view/inputmethod/InputMethodManager;
 
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->getWindowToken()Landroid/os/IBinder;
 
@@ -4097,14 +4097,14 @@
     .line 494
     :cond_0
     :goto_1
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->EnableSystemKey()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->EnableSystemKey()V
 
     .line 495
     return-void
 
     .line 483
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -4114,9 +4114,9 @@
 
     .line 490
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mInputMethodManager:Landroid/view/inputmethod/InputMethodManager;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mInputMethodManager:Landroid/view/inputmethod/InputMethodManager;
 
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->getWindowToken()Landroid/os/IBinder;
 
@@ -4142,13 +4142,13 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 468
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->updateStage(Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->updateStage(Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;)V
 
     .line 470
-    # getter for: Lcom/android/settings/fingerprint/FingerprintPassword;->mFingerprintPreviousStage:Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintPassword;->access$500()Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mFingerprintPreviousStage:Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->access$500()Ljava/lang/String;
 
     move-result-object v0
 
@@ -4156,8 +4156,8 @@
 
     const-string v0, "FingerprintSettings_changepassword"
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintPassword;->mFingerprintPreviousStage:Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintPassword;->access$500()Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mFingerprintPreviousStage:Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->access$500()Ljava/lang/String;
 
     move-result-object v1
 
@@ -4168,7 +4168,7 @@
     if-nez v0, :cond_0
 
     .line 471
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->DisableSystemKey()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->DisableSystemKey()V
 
     .line 473
     :cond_0
@@ -4187,28 +4187,28 @@
     return-void
 .end method
 
-.method protected updateStage(Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;)V
+.method protected updateStage(Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;)V
     .locals 3
-    .param p1, "stage"    # Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    .param p1, "stage"    # Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     .prologue
     .line 515
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     .line 516
-    .local v0, "previousStage":Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    .local v0, "previousStage":Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mUiStage:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     .line 517
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->updateUi()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->updateUi()V
 
     .line 521
     if-eq v0, p1, :cond_0
 
     .line 522
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
 
     invoke-virtual {v2}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 

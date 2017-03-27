@@ -1,9 +1,9 @@
-.class public Lcom/android/settings/ShowInfomationMenu;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/ShowInfomationMenu;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "ShowInfomationMenu.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # static fields
@@ -13,11 +13,11 @@
 
 .field private static final MY_USER_ID:I
 
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # instance fields
-.field private mChooseLockSettingsHelper:Lcom/android/settings/ChooseLockSettingsHelper;
+.field private mChooseLockSettingsHelper:Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
 .field private mDualclock:Landroid/preference/PreferenceScreen;
 
@@ -44,7 +44,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/ShowInfomationMenu;->ACCU_SETTING_URI:Landroid/net/Uri;
+    sput-object v0, Lcom/android/settings_ex/ShowInfomationMenu;->ACCU_SETTING_URI:Landroid/net/Uri;
 
     .line 60
     const-string v0, "content://com.sec.android.daemonapp.ap.accuweather.provider/weatherinfo"
@@ -53,21 +53,21 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/ShowInfomationMenu;->ACCU_WEATHERINFO_URI:Landroid/net/Uri;
+    sput-object v0, Lcom/android/settings_ex/ShowInfomationMenu;->ACCU_WEATHERINFO_URI:Landroid/net/Uri;
 
     .line 71
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
 
-    sput v0, Lcom/android/settings/ShowInfomationMenu;->MY_USER_ID:I
+    sput v0, Lcom/android/settings_ex/ShowInfomationMenu;->MY_USER_ID:I
 
     .line 382
-    new-instance v0, Lcom/android/settings/ShowInfomationMenu$2;
+    new-instance v0, Lcom/android/settings_ex/ShowInfomationMenu$2;
 
-    invoke-direct {v0}, Lcom/android/settings/ShowInfomationMenu$2;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/ShowInfomationMenu$2;-><init>()V
 
-    sput-object v0, Lcom/android/settings/ShowInfomationMenu;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/ShowInfomationMenu;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -77,12 +77,12 @@
 
     .prologue
     .line 47
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 68
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/ShowInfomationMenu;->mFromCoverSetting:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mFromCoverSetting:Z
 
     return-void
 .end method
@@ -105,16 +105,16 @@
     .line 105
     const-string v2, "lock_screen_dualclock"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/ShowInfomationMenu;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/ShowInfomationMenu;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
     check-cast v2, Landroid/preference/PreferenceScreen;
 
-    iput-object v2, p0, Lcom/android/settings/ShowInfomationMenu;->mDualclock:Landroid/preference/PreferenceScreen;
+    iput-object v2, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mDualclock:Landroid/preference/PreferenceScreen;
 
     .line 106
-    iget-object v2, p0, Lcom/android/settings/ShowInfomationMenu;->mDualclock:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mDualclock:Landroid/preference/PreferenceScreen;
 
     if-eqz v2, :cond_0
 
@@ -135,7 +135,7 @@
     .local v0, "isRoamingArea":Z
     if-nez v0, :cond_5
 
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticSKTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticSKTModel()Z
 
     move-result v2
 
@@ -146,7 +146,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -166,7 +166,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -186,12 +186,12 @@
 
     .line 110
     .local v1, "sText":Ljava/lang/String;
-    iget-object v2, p0, Lcom/android/settings/ShowInfomationMenu;->mDualclock:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mDualclock:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v2, v1}, Landroid/preference/PreferenceScreen;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 111
-    iget-object v2, p0, Lcom/android/settings/ShowInfomationMenu;->mDualclock:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mDualclock:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v2, v6}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -202,89 +202,89 @@
     :goto_0
     const-string v2, "lock_screen_menu_owner_infomation"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/ShowInfomationMenu;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/ShowInfomationMenu;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
     check-cast v2, Landroid/preference/PreferenceScreen;
 
-    iput-object v2, p0, Lcom/android/settings/ShowInfomationMenu;->mOwnerInfo:Landroid/preference/PreferenceScreen;
+    iput-object v2, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mOwnerInfo:Landroid/preference/PreferenceScreen;
 
     .line 118
-    iget-object v2, p0, Lcom/android/settings/ShowInfomationMenu;->mOwnerInfo:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mOwnerInfo:Landroid/preference/PreferenceScreen;
 
     if-eqz v2, :cond_1
 
     .line 119
-    invoke-direct {p0}, Lcom/android/settings/ShowInfomationMenu;->updateOwnerInfo()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->updateOwnerInfo()V
 
     .line 122
     :cond_1
     const-string v2, "lock_app_shortcut"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/ShowInfomationMenu;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/ShowInfomationMenu;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
     check-cast v2, Landroid/preference/PreferenceScreen;
 
-    iput-object v2, p0, Lcom/android/settings/ShowInfomationMenu;->mLockAppShortcut:Landroid/preference/PreferenceScreen;
+    iput-object v2, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mLockAppShortcut:Landroid/preference/PreferenceScreen;
 
     .line 124
     const-string v2, "lock_screen_settings_weather"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/ShowInfomationMenu;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/ShowInfomationMenu;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
     check-cast v2, Landroid/preference/PreferenceScreen;
 
-    iput-object v2, p0, Lcom/android/settings/ShowInfomationMenu;->mWeatherSettings:Landroid/preference/PreferenceScreen;
+    iput-object v2, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mWeatherSettings:Landroid/preference/PreferenceScreen;
 
     .line 125
-    iget-object v2, p0, Lcom/android/settings/ShowInfomationMenu;->mWeatherSettings:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mWeatherSettings:Landroid/preference/PreferenceScreen;
 
     if-eqz v2, :cond_2
 
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isSupportWeatherMenu(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isSupportWeatherMenu(Landroid/content/Context;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
     .line 126
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/ShowInfomationMenu;->getRegisteredCityCount(Landroid/content/Context;)I
+    invoke-static {v2}, Lcom/android/settings_ex/ShowInfomationMenu;->getRegisteredCityCount(Landroid/content/Context;)I
 
     move-result v2
 
     if-eqz v2, :cond_7
 
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/ShowInfomationMenu;->getWidgetCount(Landroid/content/Context;)I
+    invoke-static {v2}, Lcom/android/settings_ex/ShowInfomationMenu;->getWidgetCount(Landroid/content/Context;)I
 
     move-result v2
 
     if-lez v2, :cond_7
 
     .line 127
-    iget-object v3, p0, Lcom/android/settings/ShowInfomationMenu;->mWeatherSettings:Landroid/preference/PreferenceScreen;
+    iget-object v3, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mWeatherSettings:Landroid/preference/PreferenceScreen;
 
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/ShowInfomationMenu;->isWeatherState(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/ShowInfomationMenu;->isWeatherState(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -298,23 +298,23 @@
     .line 134
     :cond_2
     :goto_2
-    iget-object v2, p0, Lcom/android/settings/ShowInfomationMenu;->mDualclock:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mDualclock:Landroid/preference/PreferenceScreen;
 
     if-eqz v2, :cond_3
 
     .line 135
-    iget-object v2, p0, Lcom/android/settings/ShowInfomationMenu;->mDualclock:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mDualclock:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v2, v7}, Landroid/preference/PreferenceScreen;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 136
     :cond_3
-    iget-object v2, p0, Lcom/android/settings/ShowInfomationMenu;->mOwnerInfo:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mOwnerInfo:Landroid/preference/PreferenceScreen;
 
     if-eqz v2, :cond_4
 
     .line 137
-    iget-object v2, p0, Lcom/android/settings/ShowInfomationMenu;->mOwnerInfo:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mOwnerInfo:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v2, v7}, Landroid/preference/PreferenceScreen;->setTwSummaryColorToColorPrimaryDark(Z)V
 
@@ -325,13 +325,13 @@
     .line 113
     .restart local v0    # "isRoamingArea":Z
     :cond_5
-    iget-object v2, p0, Lcom/android/settings/ShowInfomationMenu;->mDualclock:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mDualclock:Landroid/preference/PreferenceScreen;
 
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -341,7 +341,7 @@
 
     move-result v4
 
-    invoke-static {v3, v4}, Lcom/android/settings/Utils;->getOnOffstatus(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v3, v4}, Lcom/android/settings_ex/Utils;->getOnOffstatus(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -358,7 +358,7 @@
 
     .line 130
     :cond_7
-    iget-object v2, p0, Lcom/android/settings/ShowInfomationMenu;->mWeatherSettings:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mWeatherSettings:Landroid/preference/PreferenceScreen;
 
     const/4 v3, 0x0
 
@@ -379,14 +379,14 @@
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 142
-    iget-object v1, p0, Lcom/android/settings/ShowInfomationMenu;->mOwnerInfo:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mOwnerInfo:Landroid/preference/PreferenceScreen;
 
     if-eqz v1, :cond_1
 
     .line 143
-    iget-object v1, p0, Lcom/android/settings/ShowInfomationMenu;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v1, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    sget v2, Lcom/android/settings/ShowInfomationMenu;->MY_USER_ID:I
+    sget v2, Lcom/android/settings_ex/ShowInfomationMenu;->MY_USER_ID:I
 
     invoke-virtual {v1, v2}, Lcom/android/internal/widget/LockPatternUtils;->isLockScreenDisabled(I)Z
 
@@ -394,15 +394,15 @@
 
     if-nez v1, :cond_0
 
-    iget-boolean v1, p0, Lcom/android/settings/ShowInfomationMenu;->mFromCoverSetting:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mFromCoverSetting:Z
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->hasCoverSettingOwnerInfo(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->hasCoverSettingOwnerInfo(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -410,21 +410,21 @@
 
     .line 145
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/ShowInfomationMenu;->mOwnerInfo:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mOwnerInfo:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v2}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 149
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -433,7 +433,7 @@
     .line 150
     const-string v1, "lock_screen_dualclock"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/ShowInfomationMenu;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/ShowInfomationMenu;->removePreference(Ljava/lang/String;)V
 
     .line 153
     :cond_2
@@ -445,25 +445,25 @@
 
     .line 154
     .local v0, "productName":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isSupportWeatherMenu(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isSupportWeatherMenu(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    iget-boolean v1, p0, Lcom/android/settings/ShowInfomationMenu;->mFromCoverSetting:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mFromCoverSetting:Z
 
     if-eqz v1, :cond_7
 
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->hasCoverSettingWeather(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->hasCoverSettingWeather(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -473,36 +473,36 @@
     :cond_3
     const-string v1, "lock_screen_settings_weather"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/ShowInfomationMenu;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/ShowInfomationMenu;->removePreference(Ljava/lang/String;)V
 
     .line 156
     const-string v1, "lock_screen_menu_weather"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/ShowInfomationMenu;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/ShowInfomationMenu;->removePreference(Ljava/lang/String;)V
 
     .line 163
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/ShowInfomationMenu;->mLockAppShortcut:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mLockAppShortcut:Landroid/preference/PreferenceScreen;
 
     if-eqz v1, :cond_6
 
     .line 164
-    iget-boolean v1, p0, Lcom/android/settings/ShowInfomationMenu;->mFromCoverSetting:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mFromCoverSetting:Z
 
     if-eqz v1, :cond_4
 
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->hasCoverSettingAppShortcut(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->hasCoverSettingAppShortcut(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
     :cond_4
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportLockAppShortcut()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportLockAppShortcut()Z
 
     move-result v1
 
@@ -512,7 +512,7 @@
     :cond_5
     const-string v1, "lock_app_shortcut"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/ShowInfomationMenu;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/ShowInfomationMenu;->removePreference(Ljava/lang/String;)V
 
     .line 169
     :cond_6
@@ -520,7 +520,7 @@
 
     .line 157
     :cond_7
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportWeatherStateSettings()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportWeatherStateSettings()Z
 
     move-result v1
 
@@ -529,7 +529,7 @@
     .line 158
     const-string v1, "lock_screen_settings_weather"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/ShowInfomationMenu;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/ShowInfomationMenu;->removePreference(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -537,7 +537,7 @@
     :cond_8
     const-string v1, "lock_screen_menu_weather"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/ShowInfomationMenu;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/ShowInfomationMenu;->removePreference(Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -586,7 +586,7 @@
     if-eqz v0, :cond_2
 
     .line 276
-    sget-object v1, Lcom/android/settings/ShowInfomationMenu;->ACCU_SETTING_URI:Landroid/net/Uri;
+    sget-object v1, Lcom/android/settings_ex/ShowInfomationMenu;->ACCU_SETTING_URI:Landroid/net/Uri;
 
     new-array v2, v9, [Ljava/lang/String;
 
@@ -678,7 +678,7 @@
     if-eqz v0, :cond_3
 
     .line 368
-    sget-object v1, Lcom/android/settings/ShowInfomationMenu;->ACCU_WEATHERINFO_URI:Landroid/net/Uri;
+    sget-object v1, Lcom/android/settings_ex/ShowInfomationMenu;->ACCU_WEATHERINFO_URI:Landroid/net/Uri;
 
     const/4 v2, 0x1
 
@@ -770,7 +770,7 @@
     if-eqz v0, :cond_2
 
     .line 296
-    sget-object v1, Lcom/android/settings/ShowInfomationMenu;->ACCU_SETTING_URI:Landroid/net/Uri;
+    sget-object v1, Lcom/android/settings_ex/ShowInfomationMenu;->ACCU_SETTING_URI:Landroid/net/Uri;
 
     const/4 v2, 0x1
 
@@ -874,7 +874,7 @@
     if-eqz v0, :cond_2
 
     .line 346
-    sget-object v1, Lcom/android/settings/ShowInfomationMenu;->ACCU_SETTING_URI:Landroid/net/Uri;
+    sget-object v1, Lcom/android/settings_ex/ShowInfomationMenu;->ACCU_SETTING_URI:Landroid/net/Uri;
 
     new-array v2, v9, [Ljava/lang/String;
 
@@ -979,7 +979,7 @@
 
     .line 319
     .local v0, "builder":Landroid/app/AlertDialog$Builder;
-    invoke-static {p0}, Lcom/android/settings/Utils;->hasCoverSettingWeather(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/android/settings_ex/Utils;->hasCoverSettingWeather(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -1013,9 +1013,9 @@
 
     const v3, 0x7f0e0f8c
 
-    new-instance v4, Lcom/android/settings/ShowInfomationMenu$1;
+    new-instance v4, Lcom/android/settings_ex/ShowInfomationMenu$1;
 
-    invoke-direct {v4}, Lcom/android/settings/ShowInfomationMenu$1;-><init>()V
+    invoke-direct {v4}, Lcom/android/settings_ex/ShowInfomationMenu$1;-><init>()V
 
     invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1042,12 +1042,12 @@
 
     .prologue
     .line 172
-    iget-object v1, p0, Lcom/android/settings/ShowInfomationMenu;->mOwnerInfo:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mOwnerInfo:Landroid/preference/PreferenceScreen;
 
     if-eqz v1, :cond_0
 
     .line 174
-    iget-object v1, p0, Lcom/android/settings/ShowInfomationMenu;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v1, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -1068,7 +1068,7 @@
     if-lez v1, :cond_1
 
     .line 176
-    iget-object v1, p0, Lcom/android/settings/ShowInfomationMenu;->mOwnerInfo:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mOwnerInfo:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v0}, Landroid/preference/PreferenceScreen;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -1081,28 +1081,28 @@
     .line 178
     .restart local v0    # "info":Ljava/lang/String;
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isCoverVerified(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isCoverVerified(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->hasCoverSettingOwnerInfo(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->hasCoverSettingOwnerInfo(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
     .line 180
-    iget-object v1, p0, Lcom/android/settings/ShowInfomationMenu;->mOwnerInfo:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mOwnerInfo:Landroid/preference/PreferenceScreen;
 
     const v2, 0x7f0e14e2
 
@@ -1112,7 +1112,7 @@
 
     .line 182
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/ShowInfomationMenu;->mOwnerInfo:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mOwnerInfo:Landroid/preference/PreferenceScreen;
 
     const v2, 0x7f0e01f5
 
@@ -1141,7 +1141,7 @@
 
     .prologue
     .line 190
-    invoke-super {p0, p1, p2, p3}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 191
     const/16 v0, 0xc8
@@ -1153,7 +1153,7 @@
     if-ne p2, v0, :cond_0
 
     .line 192
-    invoke-direct {p0}, Lcom/android/settings/ShowInfomationMenu;->updateOwnerInfo()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->updateOwnerInfo()V
 
     .line 194
     :cond_0
@@ -1166,37 +1166,37 @@
 
     .prologue
     .line 81
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 82
     const v1, 0x7f08006f
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/ShowInfomationMenu;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/ShowInfomationMenu;->addPreferencesFromResource(I)V
 
     .line 84
     new-instance v1, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     invoke-direct {v1, v2}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/android/settings/ShowInfomationMenu;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object v1, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 85
-    new-instance v1, Lcom/android/settings/ChooseLockSettingsHelper;
+    new-instance v1, Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/android/settings/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v1, v2}, Lcom/android/settings_ex/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;)V
 
-    iput-object v1, p0, Lcom/android/settings/ShowInfomationMenu;->mChooseLockSettingsHelper:Lcom/android/settings/ChooseLockSettingsHelper;
+    iput-object v1, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mChooseLockSettingsHelper:Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
     .line 86
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -1213,7 +1213,7 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/ShowInfomationMenu;->mFromCoverSetting:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mFromCoverSetting:Z
 
     .line 91
     :cond_0
@@ -1235,9 +1235,9 @@
 
     .line 201
     .local v9, "key":Ljava/lang/String;
-    iget-object v0, p0, Lcom/android/settings/ShowInfomationMenu;->mChooseLockSettingsHelper:Lcom/android/settings/ChooseLockSettingsHelper;
+    iget-object v0, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mChooseLockSettingsHelper:Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
-    invoke-virtual {v0}, Lcom/android/settings/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
+    invoke-virtual {v0}, Lcom/android/settings_ex/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
 
     move-result-object v10
 
@@ -1265,12 +1265,12 @@
     if-eqz v0, :cond_0
 
     .line 206
-    iget-boolean v0, p0, Lcom/android/settings/ShowInfomationMenu;->mFromCoverSetting:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mFromCoverSetting:Z
 
     if-eqz v0, :cond_1
 
     .line 207
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1280,12 +1280,12 @@
 
     const-string v3, "SViewCover"
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 257
     :cond_0
     :goto_0
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v0
 
@@ -1294,7 +1294,7 @@
 
     .line 209
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1304,7 +1304,7 @@
 
     const-string v3, "LockScreen"
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1319,17 +1319,17 @@
     if-eqz v0, :cond_7
 
     .line 212
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/ShowInfomationMenu;->existWeatherWidgetOnLauncher(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/ShowInfomationMenu;->existWeatherWidgetOnLauncher(Landroid/content/Context;)Z
 
     move-result v7
 
     .line 213
     .local v7, "existWeatherWidgetToLauncher":Z
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -1367,7 +1367,7 @@
     .line 217
     const-string v0, "PACKAGE"
 
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -1378,7 +1378,7 @@
     invoke-virtual {v8, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 218
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1400,12 +1400,12 @@
     if-eqz v0, :cond_0
 
     .line 224
-    iget-boolean v0, p0, Lcom/android/settings/ShowInfomationMenu;->mFromCoverSetting:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mFromCoverSetting:Z
 
     if-eqz v0, :cond_6
 
     .line 225
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1415,7 +1415,7 @@
 
     const-string v3, "SViewCover"
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1429,17 +1429,17 @@
     .line 220
     .restart local v6    # "easylaunchermode":Z
     :cond_5
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/ShowInfomationMenu;->showWeatherWidgetMessageDialog(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/android/settings_ex/ShowInfomationMenu;->showWeatherWidgetMessageDialog(Landroid/content/Context;)V
 
     goto :goto_3
 
     .line 227
     :cond_6
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1449,7 +1449,7 @@
 
     const-string v3, "LockScreen"
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -1466,11 +1466,11 @@
     if-eqz v0, :cond_9
 
     .line 231
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/ShowInfomationMenu;->getWidgetCount(Landroid/content/Context;)I
+    invoke-static {v0}, Lcom/android/settings_ex/ShowInfomationMenu;->getWidgetCount(Landroid/content/Context;)I
 
     move-result v0
 
@@ -1491,18 +1491,18 @@
 
     move-object v1, p0
 
-    invoke-virtual/range {v0 .. v5}, Lcom/android/settings/ShowInfomationMenu;->startFragment(Landroid/app/Fragment;Ljava/lang/String;IILandroid/os/Bundle;)Z
+    invoke-virtual/range {v0 .. v5}, Lcom/android/settings_ex/ShowInfomationMenu;->startFragment(Landroid/app/Fragment;Ljava/lang/String;IILandroid/os/Bundle;)Z
 
     goto/16 :goto_0
 
     .line 236
     .end local v5    # "args":Landroid/os/Bundle;
     :cond_8
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/ShowInfomationMenu;->showWeatherWidgetMessageDialog(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/android/settings_ex/ShowInfomationMenu;->showWeatherWidgetMessageDialog(Landroid/content/Context;)V
 
     goto/16 :goto_0
 
@@ -1517,7 +1517,7 @@
     if-eqz v0, :cond_0
 
     .line 241
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v0
 
@@ -1532,7 +1532,7 @@
     if-eqz v12, :cond_a
 
     .line 243
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v0
 
@@ -1542,7 +1542,7 @@
     :cond_a
     const v0, 0x7f0e01f6
 
-    invoke-static {v0}, Lcom/android/settings/OwnerInfoSettings;->newInstance(I)Lcom/android/settings/OwnerInfoSettings;
+    invoke-static {v0}, Lcom/android/settings_ex/OwnerInfoSettings;->newInstance(I)Lcom/android/settings_ex/OwnerInfoSettings;
 
     move-result-object v11
 
@@ -1553,7 +1553,7 @@
     invoke-virtual {v11, p0, v0}, Landroid/app/DialogFragment;->setTargetFragment(Landroid/app/Fragment;I)V
 
     .line 248
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v0
 
@@ -1575,12 +1575,12 @@
     if-eqz v0, :cond_0
 
     .line 251
-    iget-boolean v0, p0, Lcom/android/settings/ShowInfomationMenu;->mFromCoverSetting:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/ShowInfomationMenu;->mFromCoverSetting:Z
 
     if-eqz v0, :cond_b
 
     .line 252
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1590,13 +1590,13 @@
 
     const-string v3, "SViewCover"
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 254
     :cond_b
-    invoke-virtual {p0}, Lcom/android/settings/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1606,7 +1606,7 @@
 
     const-string v3, "LockScreen"
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 .end method
@@ -1623,13 +1623,13 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 97
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 98
-    invoke-direct {p0}, Lcom/android/settings/ShowInfomationMenu;->InitValue()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->InitValue()V
 
     .line 99
-    invoke-direct {p0}, Lcom/android/settings/ShowInfomationMenu;->RemoveMenu()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ShowInfomationMenu;->RemoveMenu()V
 
     .line 101
     return-void

@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/fmm/FindMyMobileSettings$13;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/fmm/FindMyMobileSettings$13;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "FindMyMobileSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fmm/FindMyMobileSettings;
+    value = Lcom/android/settings_ex/fmm/FindMyMobileSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 682
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -52,7 +52,7 @@
 
     .line 733
     .local v4, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
-    invoke-static {}, Lcom/android/settings/Utils;->isMultisimModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMultisimModel()Z
 
     move-result v6
 
@@ -60,7 +60,7 @@
 
     const-string v6, "CTC"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v7
 
@@ -79,7 +79,7 @@
     :cond_0
     const-string v6, "com.osp.app.signin"
 
-    invoke-static {p1, v6}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v6}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -118,7 +118,7 @@
 
     .line 745
     .local v3, "isSupportLMM":Z
-    invoke-static {p1}, Lcom/android/settings/Utils;->isSupportLMM(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isSupportLMM(Landroid/content/Context;)Z
 
     move-result v5
 
@@ -139,7 +139,7 @@
 
     .line 750
     .local v0, "hasFMMDMClient":Z
-    invoke-static {p1}, Lcom/android/settings/Utils;->hasFMMDMClient(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->hasFMMDMClient(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -191,13 +191,13 @@
     :goto_1
     const-string v5, "com.sec.android.app.mt"
 
-    invoke-static {p1, v5}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v5}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v5
 
     if-eqz v5, :cond_7
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->isSmsCapable(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isSmsCapable(Landroid/content/Context;)Z
 
     move-result v5
 
@@ -213,7 +213,7 @@
     :cond_8
     const-string v5, "USC"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v6
 
@@ -251,7 +251,7 @@
     :cond_b
     const-string v5, "com.google.android.gms"
 
-    invoke-static {p1, v5}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v5}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v5
 
@@ -276,7 +276,7 @@
             "Z)",
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/search/SearchIndexableRaw;",
+            "Lcom/android/settings_ex/search/SearchIndexableRaw;",
             ">;"
         }
     .end annotation
@@ -292,7 +292,7 @@
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     .line 704
-    .local v4, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/search/SearchIndexableRaw;>;"
+    .local v4, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/search/SearchIndexableRaw;>;"
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -323,12 +323,12 @@
 
     .line 710
     .local v1, "hasFMMDMClient":Z
-    invoke-static {p1}, Lcom/android/settings/Utils;->hasFMMDMClient(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->hasFMMDMClient(Landroid/content/Context;)Z
 
     move-result v1
 
     .line 712
-    invoke-static {}, Lcom/android/settings/Utils;->isMultisimModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMultisimModel()Z
 
     move-result v7
 
@@ -336,7 +336,7 @@
 
     const-string v7, "CTC"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v8
 
@@ -353,13 +353,13 @@
 
     const-string v7, "com.sec.android.app.mt"
 
-    invoke-static {p1, v7}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v7}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v7
 
     if-eqz v7, :cond_0
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->isSmsCapable(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isSmsCapable(Landroid/content/Context;)Z
 
     move-result v7
 
@@ -380,30 +380,30 @@
     .line 718
     .restart local v1    # "hasFMMDMClient":Z
     :cond_2
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 719
-    .local v0, "data":Lcom/android/settings/search/SearchIndexableRaw;
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    .local v0, "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    .end local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    .end local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 720
-    .restart local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .restart local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     const v7, 0x7f0e132c
 
     invoke-virtual {v3, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-static {v7}, Lcom/android/settings/Utils;->replaceSIMString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v7}, Lcom/android/settings_ex/Utils;->replaceSIMString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    iput-object v7, v0, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v7, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 721
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -421,16 +421,16 @@
     .line 722
     const-string v5, "com.android.settings"
 
-    iput-object v5, v0, Lcom/android/settings/search/SearchIndexableRaw;->intentTargetPackage:Ljava/lang/String;
+    iput-object v5, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->intentTargetPackage:Ljava/lang/String;
 
     .line 723
-    const-class v5, Lcom/android/settings/Settings$LockAndSecuritySettingsActivity;
+    const-class v5, Lcom/android/settings_ex/Settings$LockAndSecuritySettingsActivity;
 
     invoke-virtual {v5}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v5
 
-    iput-object v5, v0, Lcom/android/settings/search/SearchIndexableRaw;->intentTargetClass:Ljava/lang/String;
+    iput-object v5, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->intentTargetClass:Ljava/lang/String;
 
     .line 725
     :cond_3
@@ -469,7 +469,7 @@
 
     .line 690
     .local v1, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v2, Lcom/android/settings/fmm/FindMyMobileSettings;
+    const-class v2, Lcom/android/settings_ex/fmm/FindMyMobileSettings;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -505,7 +505,7 @@
     iput-object v2, v1, Landroid/provider/SearchIndexableResource;->intentTargetPackage:Ljava/lang/String;
 
     .line 694
-    const-class v2, Lcom/android/settings/Settings$LockAndSecuritySettingsActivity;
+    const-class v2, Lcom/android/settings_ex/Settings$LockAndSecuritySettingsActivity;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiWwsmPatcherDialog$1;
+.class Lcom/android/settings_ex/wifi/WifiWwsmPatcherDialog$1;
 .super Ljava/lang/Object;
 .source "WifiWwsmPatcherDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiWwsmPatcherDialog;
+    value = Lcom/android/settings_ex/wifi/WifiWwsmPatcherDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/notification/SoundEffectSettings$3;
-.super Lcom/android/settings/notification/SettingPref;
+.class final Lcom/android/settings_ex/notification/SoundEffectSettings$3;
+.super Lcom/android/settings_ex/notification/SettingPref;
 .source "SoundEffectSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/SoundEffectSettings;
+    value = Lcom/android/settings_ex/notification/SoundEffectSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 
     .prologue
     .line 98
-    invoke-direct/range {p0 .. p5}, Lcom/android/settings/notification/SettingPref;-><init>(ILjava/lang/String;Ljava/lang/String;I[I)V
+    invoke-direct/range {p0 .. p5}, Lcom/android/settings_ex/notification/SettingPref;-><init>(ILjava/lang/String;Ljava/lang/String;I[I)V
 
     return-void
 .end method

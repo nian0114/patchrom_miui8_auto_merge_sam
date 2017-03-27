@@ -1,11 +1,11 @@
-.class Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;
+.class Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;
 .super Landroid/content/BroadcastReceiver;
 .source "SoundEffectSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/SoundEffectSettings;
+    value = Lcom/android/settings_ex/notification/SoundEffectSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,30 +15,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/SoundEffectSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/settings/notification/SoundEffectSettings;)V
+.method private constructor <init>(Lcom/android/settings_ex/notification/SoundEffectSettings;)V
     .locals 0
 
     .prologue
     .line 148
-    iput-object p1, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/notification/SoundEffectSettings;Lcom/android/settings/notification/SoundEffectSettings$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/notification/SoundEffectSettings;Lcom/android/settings_ex/notification/SoundEffectSettings$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/notification/SoundEffectSettings;
-    .param p2, "x1"    # Lcom/android/settings/notification/SoundEffectSettings$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/notification/SoundEffectSettings;
+    .param p2, "x1"    # Lcom/android/settings_ex/notification/SoundEffectSettings$1;
 
     .prologue
     .line 148
-    invoke-direct {p0, p1}, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;-><init>(Lcom/android/settings/notification/SoundEffectSettings;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;-><init>(Lcom/android/settings_ex/notification/SoundEffectSettings;)V
 
     return-void
 .end method
@@ -103,12 +103,12 @@
 
     .line 158
     :cond_0
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     const/4 v13, 0x2
 
-    # setter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12, v13}, Lcom/android/settings/notification/SoundEffectSettings;->access$002(Lcom/android/settings/notification/SoundEffectSettings;I)I
+    # setter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12, v13}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$002(Lcom/android/settings_ex/notification/SoundEffectSettings;I)I
 
     .line 220
     .end local v8    # "previousSinkState":I
@@ -236,12 +236,12 @@
     if-ne v5, v12, :cond_15
 
     .line 232
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     const/4 v13, 0x0
 
-    # setter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12, v13}, Lcom/android/settings/notification/SoundEffectSettings;->access$002(Lcom/android/settings/notification/SoundEffectSettings;I)I
+    # setter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12, v13}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$002(Lcom/android/settings_ex/notification/SoundEffectSettings;I)I
 
     .line 243
     .end local v5    # "newDevice":I
@@ -249,18 +249,18 @@
     .end local v11    # "stream":I
     :cond_2
     :goto_1
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
-    # invokes: Lcom/android/settings/notification/SoundEffectSettings;->setDimSwitchPreference()V
-    invoke-static {v12}, Lcom/android/settings/notification/SoundEffectSettings;->access$200(Lcom/android/settings/notification/SoundEffectSettings;)V
+    # invokes: Lcom/android/settings_ex/notification/SoundEffectSettings;->setDimSwitchPreference()V
+    invoke-static {v12}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$200(Lcom/android/settings_ex/notification/SoundEffectSettings;)V
 
     .line 244
-    # getter for: Lcom/android/settings/notification/SoundEffectSettings;->PREFS:[Lcom/android/settings/notification/SettingPref;
-    invoke-static {}, Lcom/android/settings/notification/SoundEffectSettings;->access$300()[Lcom/android/settings/notification/SettingPref;
+    # getter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->PREFS:[Lcom/android/settings_ex/notification/SettingPref;
+    invoke-static {}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$300()[Lcom/android/settings_ex/notification/SettingPref;
 
     move-result-object v2
 
-    .local v2, "arr$":[Lcom/android/settings/notification/SettingPref;
+    .local v2, "arr$":[Lcom/android/settings_ex/notification/SettingPref;
     array-length v4, v2
 
     .local v4, "len$":I
@@ -273,15 +273,15 @@
     aget-object v7, v2, v3
 
     .line 245
-    .local v7, "pref":Lcom/android/settings/notification/SettingPref;
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    .local v7, "pref":Lcom/android/settings_ex/notification/SettingPref;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
-    # getter for: Lcom/android/settings/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
-    invoke-static {v12}, Lcom/android/settings/notification/SoundEffectSettings;->access$400(Lcom/android/settings/notification/SoundEffectSettings;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
+    invoke-static {v12}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$400(Lcom/android/settings_ex/notification/SoundEffectSettings;)Landroid/content/Context;
 
     move-result-object v12
 
-    invoke-virtual {v7, v12}, Lcom/android/settings/notification/SettingPref;->update(Landroid/content/Context;)V
+    invoke-virtual {v7, v12}, Lcom/android/settings_ex/notification/SettingPref;->update(Landroid/content/Context;)V
 
     .line 244
     add-int/lit8 v3, v3, 0x1
@@ -289,10 +289,10 @@
     goto :goto_2
 
     .line 159
-    .end local v2    # "arr$":[Lcom/android/settings/notification/SettingPref;
+    .end local v2    # "arr$":[Lcom/android/settings_ex/notification/SettingPref;
     .end local v3    # "i$":I
     .end local v4    # "len$":I
-    .end local v7    # "pref":Lcom/android/settings/notification/SettingPref;
+    .end local v7    # "pref":Lcom/android/settings_ex/notification/SettingPref;
     .restart local v8    # "previousSinkState":I
     .restart local v9    # "sinkState":I
     :cond_3
@@ -304,52 +304,52 @@
 
     .line 160
     :cond_4
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
-    invoke-virtual {v12}, Lcom/android/settings/notification/SoundEffectSettings;->isAudioPathEarjack()Z
+    invoke-virtual {v12}, Lcom/android/settings_ex/notification/SoundEffectSettings;->isAudioPathEarjack()Z
 
     move-result v12
 
     if-eqz v12, :cond_5
 
     .line 161
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     const/4 v13, 0x1
 
-    # setter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12, v13}, Lcom/android/settings/notification/SoundEffectSettings;->access$002(Lcom/android/settings/notification/SoundEffectSettings;I)I
+    # setter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12, v13}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$002(Lcom/android/settings_ex/notification/SoundEffectSettings;I)I
 
     goto/16 :goto_0
 
     .line 162
     :cond_5
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
-    invoke-virtual {v12}, Lcom/android/settings/notification/SoundEffectSettings;->isAudioPathWFD()Z
+    invoke-virtual {v12}, Lcom/android/settings_ex/notification/SoundEffectSettings;->isAudioPathWFD()Z
 
     move-result v12
 
     if-eqz v12, :cond_6
 
     .line 163
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     const/4 v13, 0x3
 
-    # setter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12, v13}, Lcom/android/settings/notification/SoundEffectSettings;->access$002(Lcom/android/settings/notification/SoundEffectSettings;I)I
+    # setter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12, v13}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$002(Lcom/android/settings_ex/notification/SoundEffectSettings;I)I
 
     goto/16 :goto_0
 
     .line 165
     :cond_6
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     const/4 v13, 0x0
 
-    # setter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12, v13}, Lcom/android/settings/notification/SoundEffectSettings;->access$002(Lcom/android/settings/notification/SoundEffectSettings;I)I
+    # setter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12, v13}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$002(Lcom/android/settings_ex/notification/SoundEffectSettings;I)I
 
     goto/16 :goto_0
 
@@ -405,10 +405,10 @@
 
     if-ne v9, v12, :cond_a
 
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
-    # getter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12}, Lcom/android/settings/notification/SoundEffectSettings;->access$000(Lcom/android/settings/notification/SoundEffectSettings;)I
+    # getter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$000(Lcom/android/settings_ex/notification/SoundEffectSettings;)I
 
     move-result v12
 
@@ -417,10 +417,10 @@
     if-eq v12, v13, :cond_a
 
     .line 174
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
-    # getter for: Lcom/android/settings/notification/SoundEffectSettings;->mAudioManager:Landroid/media/AudioManager;
-    invoke-static {v12}, Lcom/android/settings/notification/SoundEffectSettings;->access$100(Lcom/android/settings/notification/SoundEffectSettings;)Landroid/media/AudioManager;
+    # getter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mAudioManager:Landroid/media/AudioManager;
+    invoke-static {v12}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$100(Lcom/android/settings_ex/notification/SoundEffectSettings;)Landroid/media/AudioManager;
 
     move-result-object v12
 
@@ -430,10 +430,10 @@
 
     if-nez v12, :cond_8
 
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
-    # getter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12}, Lcom/android/settings/notification/SoundEffectSettings;->access$000(Lcom/android/settings/notification/SoundEffectSettings;)I
+    # getter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$000(Lcom/android/settings_ex/notification/SoundEffectSettings;)I
 
     move-result v12
 
@@ -453,29 +453,29 @@
 
     .line 178
     :cond_9
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     const/4 v13, 0x2
 
-    # setter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12, v13}, Lcom/android/settings/notification/SoundEffectSettings;->access$002(Lcom/android/settings/notification/SoundEffectSettings;I)I
+    # setter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12, v13}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$002(Lcom/android/settings_ex/notification/SoundEffectSettings;I)I
 
     goto/16 :goto_0
 
     .line 180
     :cond_a
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
-    invoke-virtual {v12}, Lcom/android/settings/notification/SoundEffectSettings;->isAudioPathBTHeadphone()Z
+    invoke-virtual {v12}, Lcom/android/settings_ex/notification/SoundEffectSettings;->isAudioPathBTHeadphone()Z
 
     move-result v12
 
     if-nez v12, :cond_1
 
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
-    # getter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12}, Lcom/android/settings/notification/SoundEffectSettings;->access$000(Lcom/android/settings/notification/SoundEffectSettings;)I
+    # getter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$000(Lcom/android/settings_ex/notification/SoundEffectSettings;)I
 
     move-result v12
 
@@ -484,52 +484,52 @@
     if-ne v12, v13, :cond_1
 
     .line 183
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
-    invoke-virtual {v12}, Lcom/android/settings/notification/SoundEffectSettings;->isAudioPathEarjack()Z
+    invoke-virtual {v12}, Lcom/android/settings_ex/notification/SoundEffectSettings;->isAudioPathEarjack()Z
 
     move-result v12
 
     if-eqz v12, :cond_b
 
     .line 184
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     const/4 v13, 0x1
 
-    # setter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12, v13}, Lcom/android/settings/notification/SoundEffectSettings;->access$002(Lcom/android/settings/notification/SoundEffectSettings;I)I
+    # setter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12, v13}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$002(Lcom/android/settings_ex/notification/SoundEffectSettings;I)I
 
     goto/16 :goto_0
 
     .line 185
     :cond_b
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
-    invoke-virtual {v12}, Lcom/android/settings/notification/SoundEffectSettings;->isAudioPathWFD()Z
+    invoke-virtual {v12}, Lcom/android/settings_ex/notification/SoundEffectSettings;->isAudioPathWFD()Z
 
     move-result v12
 
     if-eqz v12, :cond_c
 
     .line 186
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     const/4 v13, 0x3
 
-    # setter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12, v13}, Lcom/android/settings/notification/SoundEffectSettings;->access$002(Lcom/android/settings/notification/SoundEffectSettings;I)I
+    # setter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12, v13}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$002(Lcom/android/settings_ex/notification/SoundEffectSettings;I)I
 
     goto/16 :goto_0
 
     .line 188
     :cond_c
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     const/4 v13, 0x0
 
-    # setter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12, v13}, Lcom/android/settings/notification/SoundEffectSettings;->access$002(Lcom/android/settings/notification/SoundEffectSettings;I)I
+    # setter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12, v13}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$002(Lcom/android/settings_ex/notification/SoundEffectSettings;I)I
 
     goto/16 :goto_0
 
@@ -545,72 +545,72 @@
     if-eqz v12, :cond_11
 
     .line 192
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
-    invoke-virtual {v12}, Lcom/android/settings/notification/SoundEffectSettings;->isAudioPathEarjack()Z
+    invoke-virtual {v12}, Lcom/android/settings_ex/notification/SoundEffectSettings;->isAudioPathEarjack()Z
 
     move-result v12
 
     if-eqz v12, :cond_e
 
     .line 193
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     const/4 v13, 0x1
 
-    # setter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12, v13}, Lcom/android/settings/notification/SoundEffectSettings;->access$002(Lcom/android/settings/notification/SoundEffectSettings;I)I
+    # setter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12, v13}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$002(Lcom/android/settings_ex/notification/SoundEffectSettings;I)I
 
     goto/16 :goto_0
 
     .line 194
     :cond_e
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
-    invoke-virtual {v12}, Lcom/android/settings/notification/SoundEffectSettings;->isAudioPathBTHeadphone()Z
+    invoke-virtual {v12}, Lcom/android/settings_ex/notification/SoundEffectSettings;->isAudioPathBTHeadphone()Z
 
     move-result v12
 
     if-eqz v12, :cond_f
 
     .line 195
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     const/4 v13, 0x2
 
-    # setter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12, v13}, Lcom/android/settings/notification/SoundEffectSettings;->access$002(Lcom/android/settings/notification/SoundEffectSettings;I)I
+    # setter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12, v13}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$002(Lcom/android/settings_ex/notification/SoundEffectSettings;I)I
 
     goto/16 :goto_0
 
     .line 196
     :cond_f
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
-    invoke-virtual {v12}, Lcom/android/settings/notification/SoundEffectSettings;->isAudioPathWFD()Z
+    invoke-virtual {v12}, Lcom/android/settings_ex/notification/SoundEffectSettings;->isAudioPathWFD()Z
 
     move-result v12
 
     if-eqz v12, :cond_10
 
     .line 197
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     const/4 v13, 0x3
 
-    # setter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12, v13}, Lcom/android/settings/notification/SoundEffectSettings;->access$002(Lcom/android/settings/notification/SoundEffectSettings;I)I
+    # setter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12, v13}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$002(Lcom/android/settings_ex/notification/SoundEffectSettings;I)I
 
     goto/16 :goto_0
 
     .line 199
     :cond_10
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     const/4 v13, 0x0
 
-    # setter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12, v13}, Lcom/android/settings/notification/SoundEffectSettings;->access$002(Lcom/android/settings/notification/SoundEffectSettings;I)I
+    # setter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12, v13}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$002(Lcom/android/settings_ex/notification/SoundEffectSettings;I)I
 
     goto/16 :goto_0
 
@@ -665,63 +665,63 @@
     if-ne v10, v12, :cond_12
 
     .line 207
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     const/4 v13, 0x3
 
-    # setter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12, v13}, Lcom/android/settings/notification/SoundEffectSettings;->access$002(Lcom/android/settings/notification/SoundEffectSettings;I)I
+    # setter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12, v13}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$002(Lcom/android/settings_ex/notification/SoundEffectSettings;I)I
 
     goto/16 :goto_0
 
     .line 209
     :cond_12
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
-    invoke-virtual {v12}, Lcom/android/settings/notification/SoundEffectSettings;->isAudioPathEarjack()Z
+    invoke-virtual {v12}, Lcom/android/settings_ex/notification/SoundEffectSettings;->isAudioPathEarjack()Z
 
     move-result v12
 
     if-eqz v12, :cond_13
 
     .line 210
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     const/4 v13, 0x1
 
-    # setter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12, v13}, Lcom/android/settings/notification/SoundEffectSettings;->access$002(Lcom/android/settings/notification/SoundEffectSettings;I)I
+    # setter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12, v13}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$002(Lcom/android/settings_ex/notification/SoundEffectSettings;I)I
 
     goto/16 :goto_0
 
     .line 211
     :cond_13
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
-    invoke-virtual {v12}, Lcom/android/settings/notification/SoundEffectSettings;->isAudioPathBTHeadphone()Z
+    invoke-virtual {v12}, Lcom/android/settings_ex/notification/SoundEffectSettings;->isAudioPathBTHeadphone()Z
 
     move-result v12
 
     if-eqz v12, :cond_14
 
     .line 212
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     const/4 v13, 0x2
 
-    # setter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12, v13}, Lcom/android/settings/notification/SoundEffectSettings;->access$002(Lcom/android/settings/notification/SoundEffectSettings;I)I
+    # setter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12, v13}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$002(Lcom/android/settings_ex/notification/SoundEffectSettings;I)I
 
     goto/16 :goto_0
 
     .line 214
     :cond_14
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     const/4 v13, 0x0
 
-    # setter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12, v13}, Lcom/android/settings/notification/SoundEffectSettings;->access$002(Lcom/android/settings/notification/SoundEffectSettings;I)I
+    # setter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12, v13}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$002(Lcom/android/settings_ex/notification/SoundEffectSettings;I)I
 
     goto/16 :goto_0
 
@@ -736,12 +736,12 @@
     if-ne v5, v12, :cond_16
 
     .line 234
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     const/4 v13, 0x1
 
-    # setter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12, v13}, Lcom/android/settings/notification/SoundEffectSettings;->access$002(Lcom/android/settings/notification/SoundEffectSettings;I)I
+    # setter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12, v13}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$002(Lcom/android/settings_ex/notification/SoundEffectSettings;I)I
 
     goto/16 :goto_1
 
@@ -752,12 +752,12 @@
     if-ne v5, v12, :cond_17
 
     .line 236
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     const/4 v13, 0x2
 
-    # setter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12, v13}, Lcom/android/settings/notification/SoundEffectSettings;->access$002(Lcom/android/settings/notification/SoundEffectSettings;I)I
+    # setter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12, v13}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$002(Lcom/android/settings_ex/notification/SoundEffectSettings;I)I
 
     goto/16 :goto_1
 
@@ -768,12 +768,12 @@
     if-ne v5, v12, :cond_2
 
     .line 238
-    iget-object v12, p0, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v12, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     const/4 v13, 0x3
 
-    # setter for: Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
-    invoke-static {v12, v13}, Lcom/android/settings/notification/SoundEffectSettings;->access$002(Lcom/android/settings/notification/SoundEffectSettings;I)I
+    # setter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    invoke-static {v12, v13}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$002(Lcom/android/settings_ex/notification/SoundEffectSettings;I)I
 
     goto/16 :goto_1
 
@@ -781,7 +781,7 @@
     .end local v5    # "newDevice":I
     .end local v6    # "oldDevice":I
     .end local v11    # "stream":I
-    .restart local v2    # "arr$":[Lcom/android/settings/notification/SettingPref;
+    .restart local v2    # "arr$":[Lcom/android/settings_ex/notification/SettingPref;
     .restart local v3    # "i$":I
     .restart local v4    # "len$":I
     :cond_18

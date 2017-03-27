@@ -1,4 +1,4 @@
-.class Lcom/android/settings/NewOneHandOperationSettings$6;
+.class Lcom/android/settings_ex/NewOneHandOperationSettings$6;
 .super Ljava/lang/Object;
 .source "NewOneHandOperationSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/NewOneHandOperationSettings;->oneHandedInputDisablePopup()V
+    value = Lcom/android/settings_ex/NewOneHandOperationSettings;->oneHandedInputDisablePopup()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/NewOneHandOperationSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/NewOneHandOperationSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/NewOneHandOperationSettings;)V
     .locals 0
 
     .prologue
     .line 398
-    iput-object p1, p0, Lcom/android/settings/NewOneHandOperationSettings$6;->this$0:Lcom/android/settings/NewOneHandOperationSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/NewOneHandOperationSettings$6;->this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,16 +44,16 @@
     const/4 v0, 0x0
 
     .line 401
-    iget-object v1, p0, Lcom/android/settings/NewOneHandOperationSettings$6;->this$0:Lcom/android/settings/NewOneHandOperationSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/NewOneHandOperationSettings$6;->this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
-    # getter for: Lcom/android/settings/NewOneHandOperationSettings;->mOneHandedInput:Landroid/preference/SwitchPreference;
-    invoke-static {v1}, Lcom/android/settings/NewOneHandOperationSettings;->access$300(Lcom/android/settings/NewOneHandOperationSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/NewOneHandOperationSettings;->mOneHandedInput:Landroid/preference/SwitchPreference;
+    invoke-static {v1}, Lcom/android/settings_ex/NewOneHandOperationSettings;->access$300(Lcom/android/settings_ex/NewOneHandOperationSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/NewOneHandOperationSettings$6;->this$0:Lcom/android/settings/NewOneHandOperationSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/NewOneHandOperationSettings$6;->this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v2}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 

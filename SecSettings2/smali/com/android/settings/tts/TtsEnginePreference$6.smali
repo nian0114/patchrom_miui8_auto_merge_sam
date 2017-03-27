@@ -1,4 +1,4 @@
-.class Lcom/android/settings/tts/TtsEnginePreference$6;
+.class Lcom/android/settings_ex/tts/TtsEnginePreference$6;
 .super Ljava/lang/Object;
 .source "TtsEnginePreference.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/tts/TtsEnginePreference;->onRadioButtonClicked(Landroid/widget/CompoundButton;Z)V
+    value = Lcom/android/settings_ex/tts/TtsEnginePreference;->onRadioButtonClicked(Landroid/widget/CompoundButton;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/tts/TtsEnginePreference;
+.field final synthetic this$0:Lcom/android/settings_ex/tts/TtsEnginePreference;
 
 .field final synthetic val$buttonView:Landroid/widget/CompoundButton;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/tts/TtsEnginePreference;Landroid/widget/CompoundButton;)V
+.method constructor <init>(Lcom/android/settings_ex/tts/TtsEnginePreference;Landroid/widget/CompoundButton;)V
     .locals 0
 
     .prologue
     .line 261
-    iput-object p1, p0, Lcom/android/settings/tts/TtsEnginePreference$6;->this$0:Lcom/android/settings/tts/TtsEnginePreference;
+    iput-object p1, p0, Lcom/android/settings_ex/tts/TtsEnginePreference$6;->this$0:Lcom/android/settings_ex/tts/TtsEnginePreference;
 
-    iput-object p2, p0, Lcom/android/settings/tts/TtsEnginePreference$6;->val$buttonView:Landroid/widget/CompoundButton;
+    iput-object p2, p0, Lcom/android/settings_ex/tts/TtsEnginePreference$6;->val$buttonView:Landroid/widget/CompoundButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,7 +47,7 @@
 
     .prologue
     .line 265
-    iget-object v0, p0, Lcom/android/settings/tts/TtsEnginePreference$6;->val$buttonView:Landroid/widget/CompoundButton;
+    iget-object v0, p0, Lcom/android/settings_ex/tts/TtsEnginePreference$6;->val$buttonView:Landroid/widget/CompoundButton;
 
     const/4 v1, 0x0
 

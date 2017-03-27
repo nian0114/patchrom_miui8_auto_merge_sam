@@ -1,11 +1,11 @@
-.class Lcom/android/settings/BrightnessSeekBarPreference$5;
+.class Lcom/android/settings_ex/BrightnessSeekBarPreference$5;
 .super Landroid/database/ContentObserver;
 .source "BrightnessSeekBarPreference.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/BrightnessSeekBarPreference;
+    value = Lcom/android/settings_ex/BrightnessSeekBarPreference;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/BrightnessSeekBarPreference;
+.field final synthetic this$0:Lcom/android/settings_ex/BrightnessSeekBarPreference;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/BrightnessSeekBarPreference;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/BrightnessSeekBarPreference;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 152
-    iput-object p1, p0, Lcom/android/settings/BrightnessSeekBarPreference$5;->this$0:Lcom/android/settings/BrightnessSeekBarPreference;
+    iput-object p1, p0, Lcom/android/settings_ex/BrightnessSeekBarPreference$5;->this$0:Lcom/android/settings_ex/BrightnessSeekBarPreference;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -42,11 +42,11 @@
     const/4 v0, 0x0
 
     .line 155
-    iget-object v1, p0, Lcom/android/settings/BrightnessSeekBarPreference$5;->this$0:Lcom/android/settings/BrightnessSeekBarPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/BrightnessSeekBarPreference$5;->this$0:Lcom/android/settings_ex/BrightnessSeekBarPreference;
 
-    iget-object v2, p0, Lcom/android/settings/BrightnessSeekBarPreference$5;->this$0:Lcom/android/settings/BrightnessSeekBarPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/BrightnessSeekBarPreference$5;->this$0:Lcom/android/settings_ex/BrightnessSeekBarPreference;
 
-    invoke-virtual {v2}, Lcom/android/settings/BrightnessSeekBarPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {v2}, Lcom/android/settings_ex/BrightnessSeekBarPreference;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -65,8 +65,8 @@
     const/4 v0, 0x1
 
     :cond_0
-    # setter for: Lcom/android/settings/BrightnessSeekBarPreference;->mIsHBMOnOff:Z
-    invoke-static {v1, v0}, Lcom/android/settings/BrightnessSeekBarPreference;->access$502(Lcom/android/settings/BrightnessSeekBarPreference;Z)Z
+    # setter for: Lcom/android/settings_ex/BrightnessSeekBarPreference;->mIsHBMOnOff:Z
+    invoke-static {v1, v0}, Lcom/android/settings_ex/BrightnessSeekBarPreference;->access$502(Lcom/android/settings_ex/BrightnessSeekBarPreference;Z)Z
 
     .line 156
     const-string v0, "BrightnessSeekBarPreference"
@@ -81,10 +81,10 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/BrightnessSeekBarPreference$5;->this$0:Lcom/android/settings/BrightnessSeekBarPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/BrightnessSeekBarPreference$5;->this$0:Lcom/android/settings_ex/BrightnessSeekBarPreference;
 
-    # getter for: Lcom/android/settings/BrightnessSeekBarPreference;->mIsHBMOnOff:Z
-    invoke-static {v2}, Lcom/android/settings/BrightnessSeekBarPreference;->access$500(Lcom/android/settings/BrightnessSeekBarPreference;)Z
+    # getter for: Lcom/android/settings_ex/BrightnessSeekBarPreference;->mIsHBMOnOff:Z
+    invoke-static {v2}, Lcom/android/settings_ex/BrightnessSeekBarPreference;->access$500(Lcom/android/settings_ex/BrightnessSeekBarPreference;)Z
 
     move-result v2
 

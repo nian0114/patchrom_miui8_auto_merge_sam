@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment$2;
+.class Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment$2;
 .super Ljava/lang/Object;
 .source "TapAndHoldDelayCustomFragment.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->onActivityCreated(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)V
     .locals 0
 
     .prologue
     .line 92
-    iput-object p1, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment$2;->this$0:Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment$2;->this$0:Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,14 +53,14 @@
     if-nez v1, :cond_0
 
     .line 96
-    iget-object v1, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment$2;->this$0:Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment$2;->this$0:Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
 
-    # getter for: Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;
-    invoke-static {v1}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->access$000(Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;
+    # getter for: Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->access$000(Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->checkLongPressStatus()Z
+    invoke-virtual {v1}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->checkLongPressStatus()Z
 
     move-result v1
 
@@ -71,10 +71,10 @@
     if-ne p2, v1, :cond_0
 
     .line 97
-    iget-object v1, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment$2;->this$0:Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment$2;->this$0:Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
 
-    # invokes: Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->showDialog(I)V
-    invoke-static {v1, v0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->access$900(Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;I)V
+    # invokes: Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->showDialog(I)V
+    invoke-static {v1, v0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->access$900(Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;I)V
 
     .line 101
     :goto_0

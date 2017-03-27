@@ -1,11 +1,11 @@
-.class Lcom/android/settings/GlobalRoamingSettings$2;
+.class Lcom/android/settings_ex/GlobalRoamingSettings$2;
 .super Landroid/os/Handler;
 .source "GlobalRoamingSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/GlobalRoamingSettings;
+    value = Lcom/android/settings_ex/GlobalRoamingSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/GlobalRoamingSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/GlobalRoamingSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/GlobalRoamingSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/GlobalRoamingSettings;)V
     .locals 0
 
     .prologue
     .line 129
-    iput-object p1, p0, Lcom/android/settings/GlobalRoamingSettings$2;->this$0:Lcom/android/settings/GlobalRoamingSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/GlobalRoamingSettings$2;->this$0:Lcom/android/settings_ex/GlobalRoamingSettings;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -51,30 +51,30 @@
 
     .line 133
     :sswitch_0
-    iget-object v0, p0, Lcom/android/settings/GlobalRoamingSettings$2;->this$0:Lcom/android/settings/GlobalRoamingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/GlobalRoamingSettings$2;->this$0:Lcom/android/settings_ex/GlobalRoamingSettings;
 
     const/4 v1, 0x1
 
-    # invokes: Lcom/android/settings/GlobalRoamingSettings;->toogleBackgroundDataToast(Z)V
-    invoke-static {v0, v1}, Lcom/android/settings/GlobalRoamingSettings;->access$400(Lcom/android/settings/GlobalRoamingSettings;Z)V
+    # invokes: Lcom/android/settings_ex/GlobalRoamingSettings;->toogleBackgroundDataToast(Z)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/GlobalRoamingSettings;->access$400(Lcom/android/settings_ex/GlobalRoamingSettings;Z)V
 
     goto :goto_0
 
     .line 136
     :sswitch_1
-    iget-object v0, p0, Lcom/android/settings/GlobalRoamingSettings$2;->this$0:Lcom/android/settings/GlobalRoamingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/GlobalRoamingSettings$2;->this$0:Lcom/android/settings_ex/GlobalRoamingSettings;
 
-    # invokes: Lcom/android/settings/GlobalRoamingSettings;->toogleBackgroundDataToast(Z)V
-    invoke-static {v0, v1}, Lcom/android/settings/GlobalRoamingSettings;->access$400(Lcom/android/settings/GlobalRoamingSettings;Z)V
+    # invokes: Lcom/android/settings_ex/GlobalRoamingSettings;->toogleBackgroundDataToast(Z)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/GlobalRoamingSettings;->access$400(Lcom/android/settings_ex/GlobalRoamingSettings;Z)V
 
     goto :goto_0
 
     .line 139
     :sswitch_2
-    iget-object v0, p0, Lcom/android/settings/GlobalRoamingSettings$2;->this$0:Lcom/android/settings/GlobalRoamingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/GlobalRoamingSettings$2;->this$0:Lcom/android/settings_ex/GlobalRoamingSettings;
 
-    # invokes: Lcom/android/settings/GlobalRoamingSettings;->toogleDataRoamingToast(Z)V
-    invoke-static {v0, v1}, Lcom/android/settings/GlobalRoamingSettings;->access$500(Lcom/android/settings/GlobalRoamingSettings;Z)V
+    # invokes: Lcom/android/settings_ex/GlobalRoamingSettings;->toogleDataRoamingToast(Z)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/GlobalRoamingSettings;->access$500(Lcom/android/settings_ex/GlobalRoamingSettings;Z)V
 
     goto :goto_0
 

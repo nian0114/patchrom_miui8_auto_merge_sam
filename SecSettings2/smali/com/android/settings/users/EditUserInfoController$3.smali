@@ -1,4 +1,4 @@
-.class Lcom/android/settings/users/EditUserInfoController$3;
+.class Lcom/android/settings_ex/users/EditUserInfoController$3;
 .super Ljava/lang/Object;
 .source "EditUserInfoController.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/users/EditUserInfoController;->createDialog(Landroid/app/Fragment;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;ILcom/android/settings/users/EditUserInfoController$OnContentChangedCallback;Landroid/os/UserHandle;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/users/EditUserInfoController;->createDialog(Landroid/app/Fragment;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;ILcom/android/settings_ex/users/EditUserInfoController$OnContentChangedCallback;Landroid/os/UserHandle;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/users/EditUserInfoController;
+.field final synthetic this$0:Lcom/android/settings_ex/users/EditUserInfoController;
 
-.field final synthetic val$callback:Lcom/android/settings/users/EditUserInfoController$OnContentChangedCallback;
+.field final synthetic val$callback:Lcom/android/settings_ex/users/EditUserInfoController$OnContentChangedCallback;
 
 .field final synthetic val$currentUserIcon:Landroid/graphics/drawable/Drawable;
 
@@ -32,22 +32,22 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/users/EditUserInfoController;Landroid/widget/EditText;Ljava/lang/CharSequence;Lcom/android/settings/users/EditUserInfoController$OnContentChangedCallback;Landroid/graphics/drawable/Drawable;Landroid/app/Fragment;)V
+.method constructor <init>(Lcom/android/settings_ex/users/EditUserInfoController;Landroid/widget/EditText;Ljava/lang/CharSequence;Lcom/android/settings_ex/users/EditUserInfoController$OnContentChangedCallback;Landroid/graphics/drawable/Drawable;Landroid/app/Fragment;)V
     .locals 0
 
     .prologue
     .line 180
-    iput-object p1, p0, Lcom/android/settings/users/EditUserInfoController$3;->this$0:Lcom/android/settings/users/EditUserInfoController;
+    iput-object p1, p0, Lcom/android/settings_ex/users/EditUserInfoController$3;->this$0:Lcom/android/settings_ex/users/EditUserInfoController;
 
-    iput-object p2, p0, Lcom/android/settings/users/EditUserInfoController$3;->val$userNameView:Landroid/widget/EditText;
+    iput-object p2, p0, Lcom/android/settings_ex/users/EditUserInfoController$3;->val$userNameView:Landroid/widget/EditText;
 
-    iput-object p3, p0, Lcom/android/settings/users/EditUserInfoController$3;->val$currentUserName:Ljava/lang/CharSequence;
+    iput-object p3, p0, Lcom/android/settings_ex/users/EditUserInfoController$3;->val$currentUserName:Ljava/lang/CharSequence;
 
-    iput-object p4, p0, Lcom/android/settings/users/EditUserInfoController$3;->val$callback:Lcom/android/settings/users/EditUserInfoController$OnContentChangedCallback;
+    iput-object p4, p0, Lcom/android/settings_ex/users/EditUserInfoController$3;->val$callback:Lcom/android/settings_ex/users/EditUserInfoController$OnContentChangedCallback;
 
-    iput-object p5, p0, Lcom/android/settings/users/EditUserInfoController$3;->val$currentUserIcon:Landroid/graphics/drawable/Drawable;
+    iput-object p5, p0, Lcom/android/settings_ex/users/EditUserInfoController$3;->val$currentUserIcon:Landroid/graphics/drawable/Drawable;
 
-    iput-object p6, p0, Lcom/android/settings/users/EditUserInfoController$3;->val$fragment:Landroid/app/Fragment;
+    iput-object p6, p0, Lcom/android/settings_ex/users/EditUserInfoController$3;->val$fragment:Landroid/app/Fragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -68,7 +68,7 @@
     if-ne p2, v3, :cond_5
 
     .line 185
-    iget-object v3, p0, Lcom/android/settings/users/EditUserInfoController$3;->val$userNameView:Landroid/widget/EditText;
+    iget-object v3, p0, Lcom/android/settings_ex/users/EditUserInfoController$3;->val$userNameView:Landroid/widget/EditText;
 
     invoke-virtual {v3}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -83,7 +83,7 @@
     if-nez v3, :cond_2
 
     .line 187
-    iget-object v3, p0, Lcom/android/settings/users/EditUserInfoController$3;->val$currentUserName:Ljava/lang/CharSequence;
+    iget-object v3, p0, Lcom/android/settings_ex/users/EditUserInfoController$3;->val$currentUserName:Ljava/lang/CharSequence;
 
     if-eqz v3, :cond_0
 
@@ -91,7 +91,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/users/EditUserInfoController$3;->val$currentUserName:Ljava/lang/CharSequence;
+    iget-object v4, p0, Lcom/android/settings_ex/users/EditUserInfoController$3;->val$currentUserName:Ljava/lang/CharSequence;
 
     invoke-interface {v4}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
@@ -105,32 +105,32 @@
 
     .line 189
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/users/EditUserInfoController$3;->val$callback:Lcom/android/settings/users/EditUserInfoController$OnContentChangedCallback;
+    iget-object v3, p0, Lcom/android/settings_ex/users/EditUserInfoController$3;->val$callback:Lcom/android/settings_ex/users/EditUserInfoController$OnContentChangedCallback;
 
     if-eqz v3, :cond_1
 
     .line 190
-    iget-object v3, p0, Lcom/android/settings/users/EditUserInfoController$3;->val$callback:Lcom/android/settings/users/EditUserInfoController$OnContentChangedCallback;
+    iget-object v3, p0, Lcom/android/settings_ex/users/EditUserInfoController$3;->val$callback:Lcom/android/settings_ex/users/EditUserInfoController$OnContentChangedCallback;
 
     invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-interface {v3, v4}, Lcom/android/settings/users/EditUserInfoController$OnContentChangedCallback;->onLabelChanged(Ljava/lang/CharSequence;)V
+    invoke-interface {v3, v4}, Lcom/android/settings_ex/users/EditUserInfoController$OnContentChangedCallback;->onLabelChanged(Ljava/lang/CharSequence;)V
 
     .line 192
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/users/EditUserInfoController$3;->this$0:Lcom/android/settings/users/EditUserInfoController;
+    iget-object v3, p0, Lcom/android/settings_ex/users/EditUserInfoController$3;->this$0:Lcom/android/settings_ex/users/EditUserInfoController;
 
-    # getter for: Lcom/android/settings/users/EditUserInfoController;->mUserManager:Landroid/os/UserManager;
-    invoke-static {v3}, Lcom/android/settings/users/EditUserInfoController;->access$300(Lcom/android/settings/users/EditUserInfoController;)Landroid/os/UserManager;
+    # getter for: Lcom/android/settings_ex/users/EditUserInfoController;->mUserManager:Landroid/os/UserManager;
+    invoke-static {v3}, Lcom/android/settings_ex/users/EditUserInfoController;->access$300(Lcom/android/settings_ex/users/EditUserInfoController;)Landroid/os/UserManager;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/users/EditUserInfoController$3;->this$0:Lcom/android/settings/users/EditUserInfoController;
+    iget-object v4, p0, Lcom/android/settings_ex/users/EditUserInfoController$3;->this$0:Lcom/android/settings_ex/users/EditUserInfoController;
 
-    # getter for: Lcom/android/settings/users/EditUserInfoController;->mUser:Landroid/os/UserHandle;
-    invoke-static {v4}, Lcom/android/settings/users/EditUserInfoController;->access$200(Lcom/android/settings/users/EditUserInfoController;)Landroid/os/UserHandle;
+    # getter for: Lcom/android/settings_ex/users/EditUserInfoController;->mUser:Landroid/os/UserHandle;
+    invoke-static {v4}, Lcom/android/settings_ex/users/EditUserInfoController;->access$200(Lcom/android/settings_ex/users/EditUserInfoController;)Landroid/os/UserHandle;
 
     move-result-object v4
 
@@ -146,27 +146,27 @@
 
     .line 197
     :cond_2
-    iget-object v3, p0, Lcom/android/settings/users/EditUserInfoController$3;->this$0:Lcom/android/settings/users/EditUserInfoController;
+    iget-object v3, p0, Lcom/android/settings_ex/users/EditUserInfoController$3;->this$0:Lcom/android/settings_ex/users/EditUserInfoController;
 
-    # getter for: Lcom/android/settings/users/EditUserInfoController;->mEditUserPhotoController:Lcom/android/settings/users/EditUserPhotoController;
-    invoke-static {v3}, Lcom/android/settings/users/EditUserInfoController;->access$400(Lcom/android/settings/users/EditUserInfoController;)Lcom/android/settings/users/EditUserPhotoController;
+    # getter for: Lcom/android/settings_ex/users/EditUserInfoController;->mEditUserPhotoController:Lcom/android/settings_ex/users/EditUserPhotoController;
+    invoke-static {v3}, Lcom/android/settings_ex/users/EditUserInfoController;->access$400(Lcom/android/settings_ex/users/EditUserInfoController;)Lcom/android/settings_ex/users/EditUserPhotoController;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/android/settings/users/EditUserPhotoController;->getNewUserPhotoDrawable()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v3}, Lcom/android/settings_ex/users/EditUserPhotoController;->getNewUserPhotoDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
     .line 198
     .local v1, "drawable":Landroid/graphics/drawable/Drawable;
-    iget-object v3, p0, Lcom/android/settings/users/EditUserInfoController$3;->this$0:Lcom/android/settings/users/EditUserInfoController;
+    iget-object v3, p0, Lcom/android/settings_ex/users/EditUserInfoController$3;->this$0:Lcom/android/settings_ex/users/EditUserInfoController;
 
-    # getter for: Lcom/android/settings/users/EditUserInfoController;->mEditUserPhotoController:Lcom/android/settings/users/EditUserPhotoController;
-    invoke-static {v3}, Lcom/android/settings/users/EditUserInfoController;->access$400(Lcom/android/settings/users/EditUserInfoController;)Lcom/android/settings/users/EditUserPhotoController;
+    # getter for: Lcom/android/settings_ex/users/EditUserInfoController;->mEditUserPhotoController:Lcom/android/settings_ex/users/EditUserPhotoController;
+    invoke-static {v3}, Lcom/android/settings_ex/users/EditUserInfoController;->access$400(Lcom/android/settings_ex/users/EditUserInfoController;)Lcom/android/settings_ex/users/EditUserPhotoController;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/android/settings/users/EditUserPhotoController;->getNewUserPhotoBitmap()Landroid/graphics/Bitmap;
+    invoke-virtual {v3}, Lcom/android/settings_ex/users/EditUserPhotoController;->getNewUserPhotoBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -176,7 +176,7 @@
 
     if-eqz v0, :cond_4
 
-    iget-object v3, p0, Lcom/android/settings/users/EditUserInfoController$3;->val$currentUserIcon:Landroid/graphics/drawable/Drawable;
+    iget-object v3, p0, Lcom/android/settings_ex/users/EditUserInfoController$3;->val$currentUserIcon:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -185,28 +185,28 @@
     if-nez v3, :cond_4
 
     .line 201
-    iget-object v3, p0, Lcom/android/settings/users/EditUserInfoController$3;->val$callback:Lcom/android/settings/users/EditUserInfoController$OnContentChangedCallback;
+    iget-object v3, p0, Lcom/android/settings_ex/users/EditUserInfoController$3;->val$callback:Lcom/android/settings_ex/users/EditUserInfoController$OnContentChangedCallback;
 
     if-eqz v3, :cond_3
 
     .line 202
-    iget-object v3, p0, Lcom/android/settings/users/EditUserInfoController$3;->val$callback:Lcom/android/settings/users/EditUserInfoController$OnContentChangedCallback;
+    iget-object v3, p0, Lcom/android/settings_ex/users/EditUserInfoController$3;->val$callback:Lcom/android/settings_ex/users/EditUserInfoController$OnContentChangedCallback;
 
-    invoke-interface {v3, v1}, Lcom/android/settings/users/EditUserInfoController$OnContentChangedCallback;->onPhotoChanged(Landroid/graphics/drawable/Drawable;)V
+    invoke-interface {v3, v1}, Lcom/android/settings_ex/users/EditUserInfoController$OnContentChangedCallback;->onPhotoChanged(Landroid/graphics/drawable/Drawable;)V
 
     .line 205
     :cond_3
-    iget-object v3, p0, Lcom/android/settings/users/EditUserInfoController$3;->this$0:Lcom/android/settings/users/EditUserInfoController;
+    iget-object v3, p0, Lcom/android/settings_ex/users/EditUserInfoController$3;->this$0:Lcom/android/settings_ex/users/EditUserInfoController;
 
-    # getter for: Lcom/android/settings/users/EditUserInfoController;->mUserManager:Landroid/os/UserManager;
-    invoke-static {v3}, Lcom/android/settings/users/EditUserInfoController;->access$300(Lcom/android/settings/users/EditUserInfoController;)Landroid/os/UserManager;
+    # getter for: Lcom/android/settings_ex/users/EditUserInfoController;->mUserManager:Landroid/os/UserManager;
+    invoke-static {v3}, Lcom/android/settings_ex/users/EditUserInfoController;->access$300(Lcom/android/settings_ex/users/EditUserInfoController;)Landroid/os/UserManager;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/users/EditUserInfoController$3;->this$0:Lcom/android/settings/users/EditUserInfoController;
+    iget-object v4, p0, Lcom/android/settings_ex/users/EditUserInfoController$3;->this$0:Lcom/android/settings_ex/users/EditUserInfoController;
 
-    # getter for: Lcom/android/settings/users/EditUserInfoController;->mUser:Landroid/os/UserHandle;
-    invoke-static {v4}, Lcom/android/settings/users/EditUserInfoController;->access$200(Lcom/android/settings/users/EditUserInfoController;)Landroid/os/UserHandle;
+    # getter for: Lcom/android/settings_ex/users/EditUserInfoController;->mUser:Landroid/os/UserHandle;
+    invoke-static {v4}, Lcom/android/settings_ex/users/EditUserInfoController;->access$200(Lcom/android/settings_ex/users/EditUserInfoController;)Landroid/os/UserHandle;
 
     move-result-object v4
 
@@ -218,7 +218,7 @@
 
     .line 215
     :cond_4
-    iget-object v3, p0, Lcom/android/settings/users/EditUserInfoController$3;->val$fragment:Landroid/app/Fragment;
+    iget-object v3, p0, Lcom/android/settings_ex/users/EditUserInfoController$3;->val$fragment:Landroid/app/Fragment;
 
     invoke-virtual {v3}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
@@ -233,9 +233,9 @@
     .end local v1    # "drawable":Landroid/graphics/drawable/Drawable;
     .end local v2    # "userName":Ljava/lang/CharSequence;
     :cond_5
-    iget-object v3, p0, Lcom/android/settings/users/EditUserInfoController$3;->this$0:Lcom/android/settings/users/EditUserInfoController;
+    iget-object v3, p0, Lcom/android/settings_ex/users/EditUserInfoController$3;->this$0:Lcom/android/settings_ex/users/EditUserInfoController;
 
-    invoke-virtual {v3}, Lcom/android/settings/users/EditUserInfoController;->clear()V
+    invoke-virtual {v3}, Lcom/android/settings_ex/users/EditUserInfoController;->clear()V
 
     .line 219
     return-void

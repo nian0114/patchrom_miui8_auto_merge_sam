@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/fingerprint/FingerprintReceiver;
+.class public Lcom/android/settings_ex/fingerprint/FingerprintReceiver;
 .super Landroid/content/BroadcastReceiver;
 .source "FingerprintReceiver.java"
 
@@ -81,7 +81,7 @@
     invoke-static {v0, v1, v3, v2}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
     .line 88
-    invoke-direct {p0, p1}, Lcom/android/settings/fingerprint/FingerprintReceiver;->setFingerprintScreenLockDisable(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/fingerprint/FingerprintReceiver;->setFingerprintScreenLockDisable(Landroid/content/Context;)V
 
     .line 89
     return-void
@@ -146,7 +146,7 @@
     .line 71
     new-instance v0, Landroid/content/Intent;
 
-    const-class v1, Lcom/android/settings/personalpage/PersonalPageSettings;
+    const-class v1, Lcom/android/settings_ex/personalpage/PersonalPageSettings;
 
     invoke-direct {v0, p1, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -227,7 +227,7 @@
     if-eqz v2, :cond_1
 
     .line 36
-    invoke-direct {p0, p1}, Lcom/android/settings/fingerprint/FingerprintReceiver;->resetFingerprintSupportingFeatures(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/fingerprint/FingerprintReceiver;->resetFingerprintSupportingFeatures(Landroid/content/Context;)V
 
     .line 37
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -408,7 +408,7 @@
     if-eqz v2, :cond_0
 
     .line 65
-    invoke-direct {p0, p1}, Lcom/android/settings/fingerprint/FingerprintReceiver;->setPrivateModeFingerBackupKey(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/fingerprint/FingerprintReceiver;->setPrivateModeFingerBackupKey(Landroid/content/Context;)V
 
     goto :goto_0
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/notification/NotificationSettings$4$1;
+.class Lcom/android/settings_ex/notification/NotificationSettings$4$1;
 .super Ljava/lang/Object;
 .source "NotificationSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/notification/NotificationSettings$4;->setSetting(Landroid/content/Context;I)Z
+    value = Lcom/android/settings_ex/notification/NotificationSettings$4;->setSetting(Landroid/content/Context;I)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/NotificationSettings$4;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/NotificationSettings$4;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/notification/NotificationSettings$4;)V
+.method constructor <init>(Lcom/android/settings_ex/notification/NotificationSettings$4;)V
     .locals 0
 
     .prologue
     .line 287
-    iput-object p1, p0, Lcom/android/settings/notification/NotificationSettings$4$1;->this$0:Lcom/android/settings/notification/NotificationSettings$4;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/NotificationSettings$4$1;->this$0:Lcom/android/settings_ex/notification/NotificationSettings$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,8 +41,8 @@
 
     .prologue
     .line 290
-    # getter for: Lcom/android/settings/notification/NotificationSettings;->mAudioManager:Landroid/media/AudioManager;
-    invoke-static {}, Lcom/android/settings/notification/NotificationSettings;->access$200()Landroid/media/AudioManager;
+    # getter for: Lcom/android/settings_ex/notification/NotificationSettings;->mAudioManager:Landroid/media/AudioManager;
+    invoke-static {}, Lcom/android/settings_ex/notification/NotificationSettings;->access$200()Landroid/media/AudioManager;
 
     move-result-object v0
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DataUsageSummary$16;
+.class Lcom/android/settings_ex/DataUsageSummary$16;
 .super Ljava/lang/Object;
 .source "DataUsageSummary.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DataUsageSummary;->setRestrictBackground(Z)V
+    value = Lcom/android/settings_ex/DataUsageSummary;->setRestrictBackground(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DataUsageSummary;
+.field final synthetic this$0:Lcom/android/settings_ex/DataUsageSummary;
 
 .field final synthetic val$mRestrictBackground:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DataUsageSummary;Z)V
+.method constructor <init>(Lcom/android/settings_ex/DataUsageSummary;Z)V
     .locals 0
 
     .prologue
     .line 2768
-    iput-object p1, p0, Lcom/android/settings/DataUsageSummary$16;->this$0:Lcom/android/settings/DataUsageSummary;
+    iput-object p1, p0, Lcom/android/settings_ex/DataUsageSummary$16;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
-    iput-boolean p2, p0, Lcom/android/settings/DataUsageSummary$16;->val$mRestrictBackground:Z
+    iput-boolean p2, p0, Lcom/android/settings_ex/DataUsageSummary$16;->val$mRestrictBackground:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,22 +45,22 @@
 
     .prologue
     .line 2770
-    iget-object v1, p0, Lcom/android/settings/DataUsageSummary$16;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v1, p0, Lcom/android/settings_ex/DataUsageSummary$16;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
-    # getter for: Lcom/android/settings/DataUsageSummary;->mPolicyManager:Landroid/net/NetworkPolicyManager;
-    invoke-static {v1}, Lcom/android/settings/DataUsageSummary;->access$1600(Lcom/android/settings/DataUsageSummary;)Landroid/net/NetworkPolicyManager;
+    # getter for: Lcom/android/settings_ex/DataUsageSummary;->mPolicyManager:Landroid/net/NetworkPolicyManager;
+    invoke-static {v1}, Lcom/android/settings_ex/DataUsageSummary;->access$1600(Lcom/android/settings_ex/DataUsageSummary;)Landroid/net/NetworkPolicyManager;
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcom/android/settings/DataUsageSummary$16;->val$mRestrictBackground:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/DataUsageSummary$16;->val$mRestrictBackground:Z
 
     invoke-virtual {v1, v2}, Landroid/net/NetworkPolicyManager;->setRestrictBackground(Z)V
 
     .line 2771
-    iget-object v1, p0, Lcom/android/settings/DataUsageSummary$16;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v1, p0, Lcom/android/settings_ex/DataUsageSummary$16;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
-    # getter for: Lcom/android/settings/DataUsageSummary;->handler_loading:Landroid/os/Handler;
-    invoke-static {v1}, Lcom/android/settings/DataUsageSummary;->access$3300(Lcom/android/settings/DataUsageSummary;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/DataUsageSummary;->handler_loading:Landroid/os/Handler;
+    invoke-static {v1}, Lcom/android/settings_ex/DataUsageSummary;->access$3300(Lcom/android/settings_ex/DataUsageSummary;)Landroid/os/Handler;
 
     move-result-object v1
 
@@ -82,10 +82,10 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 2775
-    iget-object v1, p0, Lcom/android/settings/DataUsageSummary$16;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v1, p0, Lcom/android/settings_ex/DataUsageSummary$16;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
-    # getter for: Lcom/android/settings/DataUsageSummary;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/DataUsageSummary;->access$3400(Lcom/android/settings/DataUsageSummary;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/DataUsageSummary;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/DataUsageSummary;->access$3400(Lcom/android/settings_ex/DataUsageSummary;)Landroid/content/Context;
 
     move-result-object v1
 

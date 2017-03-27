@@ -1,11 +1,11 @@
-.class Lcom/android/settings/ethernet/EthernetLayer$1;
+.class Lcom/android/settings_ex/ethernet/EthernetLayer$1;
 .super Landroid/content/BroadcastReceiver;
 .source "EthernetLayer.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/ethernet/EthernetLayer;
+    value = Lcom/android/settings_ex/ethernet/EthernetLayer;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/ethernet/EthernetLayer;
+.field final synthetic this$0:Lcom/android/settings_ex/ethernet/EthernetLayer;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/ethernet/EthernetLayer;)V
+.method constructor <init>(Lcom/android/settings_ex/ethernet/EthernetLayer;)V
     .locals 0
 
     .prologue
     .line 39
-    iput-object p1, p0, Lcom/android/settings/ethernet/EthernetLayer$1;->this$0:Lcom/android/settings/ethernet/EthernetLayer;
+    iput-object p1, p0, Lcom/android/settings_ex/ethernet/EthernetLayer$1;->this$0:Lcom/android/settings_ex/ethernet/EthernetLayer;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -59,10 +59,10 @@
     if-eqz v1, :cond_0
 
     .line 44
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetLayer$1;->this$0:Lcom/android/settings/ethernet/EthernetLayer;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetLayer$1;->this$0:Lcom/android/settings_ex/ethernet/EthernetLayer;
 
-    # invokes: Lcom/android/settings/ethernet/EthernetLayer;->handleDevListChanges()V
-    invoke-static {v1}, Lcom/android/settings/ethernet/EthernetLayer;->access$000(Lcom/android/settings/ethernet/EthernetLayer;)V
+    # invokes: Lcom/android/settings_ex/ethernet/EthernetLayer;->handleDevListChanges()V
+    invoke-static {v1}, Lcom/android/settings_ex/ethernet/EthernetLayer;->access$000(Lcom/android/settings_ex/ethernet/EthernetLayer;)V
 
     .line 46
     :cond_0

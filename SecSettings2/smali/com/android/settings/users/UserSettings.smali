@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/users/UserSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/users/UserSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "UserSettings.java"
 
 # interfaces
@@ -7,20 +7,20 @@
 .implements Landroid/preference/Preference$OnPreferenceChangeListener;
 .implements Landroid/preference/Preference$OnPreferenceClickListener;
 .implements Landroid/view/View$OnClickListener;
-.implements Lcom/android/settings/search/Indexable;
-.implements Lcom/android/settings/users/EditUserInfoController$OnContentChangedCallback;
+.implements Lcom/android/settings_ex/search/Indexable;
+.implements Lcom/android/settings_ex/users/EditUserInfoController$OnContentChangedCallback;
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/users/UserSettings$UserCapabilities;
+        Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
     }
 .end annotation
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # instance fields
@@ -28,19 +28,19 @@
 
 .field private mAddingUser:Z
 
-.field private mEditUserInfoController:Lcom/android/settings/users/EditUserInfoController;
+.field private mEditUserInfoController:Lcom/android/settings_ex/users/EditUserInfoController;
 
 .field private mHandler:Landroid/os/Handler;
 
-.field private mMePreference:Lcom/android/settings/users/UserPreference;
+.field private mMePreference:Lcom/android/settings_ex/users/UserPreference;
 
 .field private mMum:Landroid/app/enterprise/multiuser/MultiUserManager;
 
-.field private mNicknamePreference:Lcom/android/settings/SelectableEditTextPreference;
+.field private mNicknamePreference:Lcom/android/settings_ex/SelectableEditTextPreference;
 
 .field private mRemovingUserId:I
 
-.field private mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+.field private mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
 .field private mUserChangeReceiver:Landroid/content/BroadcastReceiver;
 
@@ -70,11 +70,11 @@
 
     .prologue
     .line 1286
-    new-instance v0, Lcom/android/settings/users/UserSettings$14;
+    new-instance v0, Lcom/android/settings_ex/users/UserSettings$14;
 
-    invoke-direct {v0}, Lcom/android/settings/users/UserSettings$14;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/users/UserSettings$14;-><init>()V
 
-    sput-object v0, Lcom/android/settings/users/UserSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/users/UserSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -84,315 +84,315 @@
 
     .prologue
     .line 101
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 152
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/users/UserSettings;->mRemovingUserId:I
+    iput v0, p0, Lcom/android/settings_ex/users/UserSettings;->mRemovingUserId:I
 
     .line 153
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/android/settings/users/UserSettings;->mAddedUserId:I
+    iput v0, p0, Lcom/android/settings_ex/users/UserSettings;->mAddedUserId:I
 
     .line 156
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/users/UserSettings;->mMum:Landroid/app/enterprise/multiuser/MultiUserManager;
+    iput-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mMum:Landroid/app/enterprise/multiuser/MultiUserManager;
 
     .line 158
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserLock:Ljava/lang/Object;
+    iput-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserLock:Ljava/lang/Object;
 
     .line 160
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserIcons:Landroid/util/SparseArray;
+    iput-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserIcons:Landroid/util/SparseArray;
 
     .line 162
-    new-instance v0, Lcom/android/settings/users/EditUserInfoController;
+    new-instance v0, Lcom/android/settings_ex/users/EditUserInfoController;
 
-    invoke-direct {v0}, Lcom/android/settings/users/EditUserInfoController;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/users/EditUserInfoController;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/users/UserSettings;->mEditUserInfoController:Lcom/android/settings/users/EditUserInfoController;
+    iput-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mEditUserInfoController:Lcom/android/settings_ex/users/EditUserInfoController;
 
     .line 168
-    new-instance v0, Lcom/android/settings/users/UserSettings$1;
+    new-instance v0, Lcom/android/settings_ex/users/UserSettings$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/users/UserSettings$1;-><init>(Lcom/android/settings/users/UserSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/users/UserSettings$1;-><init>(Lcom/android/settings_ex/users/UserSettings;)V
 
-    iput-object v0, p0, Lcom/android/settings/users/UserSettings;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mHandler:Landroid/os/Handler;
 
     .line 185
-    new-instance v0, Lcom/android/settings/users/UserSettings$2;
+    new-instance v0, Lcom/android/settings_ex/users/UserSettings$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/users/UserSettings$2;-><init>(Lcom/android/settings/users/UserSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/users/UserSettings$2;-><init>(Lcom/android/settings_ex/users/UserSettings;)V
 
-    iput-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserChangeReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserChangeReceiver:Landroid/content/BroadcastReceiver;
 
     .line 1236
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/users/UserSettings;)V
+.method static synthetic access$000(Lcom/android/settings_ex/users/UserSettings;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/users/UserSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/users/UserSettings;
 
     .prologue
     .line 101
-    invoke-direct {p0}, Lcom/android/settings/users/UserSettings;->updateUserList()V
+    invoke-direct {p0}, Lcom/android/settings_ex/users/UserSettings;->updateUserList()V
 
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/users/UserSettings;I)V
+.method static synthetic access$100(Lcom/android/settings_ex/users/UserSettings;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/users/UserSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/users/UserSettings;
     .param p1, "x1"    # I
 
     .prologue
     .line 101
-    invoke-direct {p0, p1}, Lcom/android/settings/users/UserSettings;->onUserCreated(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/users/UserSettings;->onUserCreated(I)V
 
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/users/UserSettings;)V
+.method static synthetic access$1000(Lcom/android/settings_ex/users/UserSettings;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/users/UserSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/users/UserSettings;
 
     .prologue
     .line 101
-    invoke-direct {p0}, Lcom/android/settings/users/UserSettings;->removeUserNow()V
+    invoke-direct {p0}, Lcom/android/settings_ex/users/UserSettings;->removeUserNow()V
 
     return-void
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/users/UserSettings;I)V
+.method static synthetic access$1100(Lcom/android/settings_ex/users/UserSettings;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/users/UserSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/users/UserSettings;
     .param p1, "x1"    # I
 
     .prologue
     .line 101
-    invoke-direct {p0, p1}, Lcom/android/settings/users/UserSettings;->addUserNow(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/users/UserSettings;->addUserNow(I)V
 
     return-void
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/users/UserSettings;)I
+.method static synthetic access$1200(Lcom/android/settings_ex/users/UserSettings;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/users/UserSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/users/UserSettings;
 
     .prologue
     .line 101
-    iget v0, p0, Lcom/android/settings/users/UserSettings;->mAddedUserId:I
+    iget v0, p0, Lcom/android/settings_ex/users/UserSettings;->mAddedUserId:I
 
     return v0
 .end method
 
-.method static synthetic access$1300(Lcom/android/settings/users/UserSettings;I)V
+.method static synthetic access$1300(Lcom/android/settings_ex/users/UserSettings;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/users/UserSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/users/UserSettings;
     .param p1, "x1"    # I
 
     .prologue
     .line 101
-    invoke-direct {p0, p1}, Lcom/android/settings/users/UserSettings;->switchUserNow(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/users/UserSettings;->switchUserNow(I)V
 
     return-void
 .end method
 
-.method static synthetic access$1400(Lcom/android/settings/users/UserSettings;I)V
+.method static synthetic access$1400(Lcom/android/settings_ex/users/UserSettings;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/users/UserSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/users/UserSettings;
     .param p1, "x1"    # I
 
     .prologue
     .line 101
-    invoke-direct {p0, p1}, Lcom/android/settings/users/UserSettings;->onAddUserClicked(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/users/UserSettings;->onAddUserClicked(I)V
 
     return-void
 .end method
 
-.method static synthetic access$1500(Lcom/android/settings/users/UserSettings;)V
+.method static synthetic access$1500(Lcom/android/settings_ex/users/UserSettings;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/users/UserSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/users/UserSettings;
 
     .prologue
     .line 101
-    invoke-direct {p0}, Lcom/android/settings/users/UserSettings;->launchChooseLockscreen()V
+    invoke-direct {p0}, Lcom/android/settings_ex/users/UserSettings;->launchChooseLockscreen()V
 
     return-void
 .end method
 
-.method static synthetic access$1600(Lcom/android/settings/users/UserSettings;)V
+.method static synthetic access$1600(Lcom/android/settings_ex/users/UserSettings;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/users/UserSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/users/UserSettings;
 
     .prologue
     .line 101
-    invoke-direct {p0}, Lcom/android/settings/users/UserSettings;->exitGuest()V
+    invoke-direct {p0}, Lcom/android/settings_ex/users/UserSettings;->exitGuest()V
 
     return-void
 .end method
 
-.method static synthetic access$1700(Lcom/android/settings/users/UserSettings;)Ljava/lang/Object;
+.method static synthetic access$1700(Lcom/android/settings_ex/users/UserSettings;)Ljava/lang/Object;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/users/UserSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/users/UserSettings;
 
     .prologue
     .line 101
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserLock:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserLock:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method static synthetic access$1800(Lcom/android/settings/users/UserSettings;)Landroid/content/pm/UserInfo;
+.method static synthetic access$1800(Lcom/android/settings_ex/users/UserSettings;)Landroid/content/pm/UserInfo;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/users/UserSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/users/UserSettings;
 
     .prologue
     .line 101
-    invoke-direct {p0}, Lcom/android/settings/users/UserSettings;->createTrustedUser()Landroid/content/pm/UserInfo;
+    invoke-direct {p0}, Lcom/android/settings_ex/users/UserSettings;->createTrustedUser()Landroid/content/pm/UserInfo;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$1900(Lcom/android/settings/users/UserSettings;)Landroid/content/pm/UserInfo;
+.method static synthetic access$1900(Lcom/android/settings_ex/users/UserSettings;)Landroid/content/pm/UserInfo;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/users/UserSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/users/UserSettings;
 
     .prologue
     .line 101
-    invoke-direct {p0}, Lcom/android/settings/users/UserSettings;->createLimitedUser()Landroid/content/pm/UserInfo;
+    invoke-direct {p0}, Lcom/android/settings_ex/users/UserSettings;->createLimitedUser()Landroid/content/pm/UserInfo;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/users/UserSettings;IZ)V
+.method static synthetic access$200(Lcom/android/settings_ex/users/UserSettings;IZ)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/users/UserSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/users/UserSettings;
     .param p1, "x1"    # I
     .param p2, "x2"    # Z
 
     .prologue
     .line 101
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/users/UserSettings;->onManageUserClicked(IZ)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/users/UserSettings;->onManageUserClicked(IZ)V
 
     return-void
 .end method
 
-.method static synthetic access$2002(Lcom/android/settings/users/UserSettings;Z)Z
+.method static synthetic access$2002(Lcom/android/settings_ex/users/UserSettings;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/users/UserSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/users/UserSettings;
     .param p1, "x1"    # Z
 
     .prologue
     .line 101
-    iput-boolean p1, p0, Lcom/android/settings/users/UserSettings;->mAddingUser:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/users/UserSettings;->mAddingUser:Z
 
     return p1
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/users/UserSettings;)I
+.method static synthetic access$300(Lcom/android/settings_ex/users/UserSettings;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/users/UserSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/users/UserSettings;
 
     .prologue
     .line 101
-    iget v0, p0, Lcom/android/settings/users/UserSettings;->mRemovingUserId:I
+    iget v0, p0, Lcom/android/settings_ex/users/UserSettings;->mRemovingUserId:I
 
     return v0
 .end method
 
-.method static synthetic access$302(Lcom/android/settings/users/UserSettings;I)I
+.method static synthetic access$302(Lcom/android/settings_ex/users/UserSettings;I)I
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/users/UserSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/users/UserSettings;
     .param p1, "x1"    # I
 
     .prologue
     .line 101
-    iput p1, p0, Lcom/android/settings/users/UserSettings;->mRemovingUserId:I
+    iput p1, p0, Lcom/android/settings_ex/users/UserSettings;->mRemovingUserId:I
 
     return p1
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/users/UserSettings;)Landroid/util/SparseArray;
+.method static synthetic access$400(Lcom/android/settings_ex/users/UserSettings;)Landroid/util/SparseArray;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/users/UserSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/users/UserSettings;
 
     .prologue
     .line 101
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserIcons:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserIcons:Landroid/util/SparseArray;
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/users/UserSettings;I)V
+.method static synthetic access$500(Lcom/android/settings_ex/users/UserSettings;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/users/UserSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/users/UserSettings;
     .param p1, "x1"    # I
 
     .prologue
     .line 101
-    invoke-virtual {p0, p1}, Lcom/android/settings/users/UserSettings;->removeDialog(I)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/users/UserSettings;->removeDialog(I)V
 
     return-void
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/users/UserSettings;)Landroid/os/Handler;
+.method static synthetic access$600(Lcom/android/settings_ex/users/UserSettings;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/users/UserSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/users/UserSettings;
 
     .prologue
     .line 101
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/users/UserSettings;Ljava/lang/String;)V
+.method static synthetic access$700(Lcom/android/settings_ex/users/UserSettings;Ljava/lang/String;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/users/UserSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/users/UserSettings;
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 101
-    invoke-direct {p0, p1}, Lcom/android/settings/users/UserSettings;->finishLoadProfile(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/users/UserSettings;->finishLoadProfile(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/users/UserSettings;)Landroid/os/UserManager;
+.method static synthetic access$800(Lcom/android/settings_ex/users/UserSettings;)Landroid/os/UserManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/users/UserSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/users/UserSettings;
 
     .prologue
     .line 101
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserManager:Landroid/os/UserManager;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserManager:Landroid/os/UserManager;
 
     return-object v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/users/UserSettings;Landroid/content/pm/UserInfo;)V
+.method static synthetic access$900(Lcom/android/settings_ex/users/UserSettings;Landroid/content/pm/UserInfo;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/users/UserSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/users/UserSettings;
     .param p1, "x1"    # Landroid/content/pm/UserInfo;
 
     .prologue
     .line 101
-    invoke-direct {p0, p1}, Lcom/android/settings/users/UserSettings;->assignProfilePhoto(Landroid/content/pm/UserInfo;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/users/UserSettings;->assignProfilePhoto(Landroid/content/pm/UserInfo;)V
 
     return-void
 .end method
@@ -405,7 +405,7 @@
     const/4 v1, 0x1
 
     .line 770
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mMum:Landroid/app/enterprise/multiuser/MultiUserManager;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mMum:Landroid/app/enterprise/multiuser/MultiUserManager;
 
     invoke-virtual {v0, v1}, Landroid/app/enterprise/multiuser/MultiUserManager;->isUserCreationAllowed(Z)Z
 
@@ -419,7 +419,7 @@
 
     .line 774
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/users/UserSettings;->mUserLock:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/android/settings_ex/users/UserSettings;->mUserLock:Ljava/lang/Object;
 
     monitor-enter v1
 
@@ -427,14 +427,14 @@
     const/4 v0, 0x1
 
     :try_start_0
-    iput-boolean v0, p0, Lcom/android/settings/users/UserSettings;->mAddingUser:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/users/UserSettings;->mAddingUser:Z
 
     .line 777
-    new-instance v0, Lcom/android/settings/users/UserSettings$12;
+    new-instance v0, Lcom/android/settings_ex/users/UserSettings$12;
 
-    invoke-direct {v0, p0, p1}, Lcom/android/settings/users/UserSettings$12;-><init>(Lcom/android/settings/users/UserSettings;I)V
+    invoke-direct {v0, p0, p1}, Lcom/android/settings_ex/users/UserSettings$12;-><init>(Lcom/android/settings_ex/users/UserSettings;I)V
 
-    invoke-virtual {v0}, Lcom/android/settings/users/UserSettings$12;->start()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/users/UserSettings$12;->start()V
 
     .line 806
     monitor-exit v1
@@ -457,11 +457,11 @@
 
     .prologue
     .line 1062
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lcom/android/settings/Utils;->copyMeProfilePhoto(Landroid/content/Context;Landroid/content/pm/UserInfo;)Z
+    invoke-static {v0, p1}, Lcom/android/settings_ex/Utils;->copyMeProfilePhoto(Landroid/content/Context;Landroid/content/pm/UserInfo;)Z
 
     .line 1068
     return-void
@@ -472,7 +472,7 @@
 
     .prologue
     .line 1146
-    invoke-direct {p0}, Lcom/android/settings/users/UserSettings;->findGuest()Landroid/content/pm/UserInfo;
+    invoke-direct {p0}, Lcom/android/settings_ex/users/UserSettings;->findGuest()Landroid/content/pm/UserInfo;
 
     move-result-object v0
 
@@ -483,7 +483,7 @@
     .line 1148
     iget v2, v0, Landroid/content/pm/UserInfo;->id:I
 
-    invoke-direct {p0, v2}, Lcom/android/settings/users/UserSettings;->switchUserNow(I)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/users/UserSettings;->switchUserNow(I)V
 
     .line 1156
     :cond_0
@@ -492,13 +492,13 @@
 
     .line 1151
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/users/UserSettings;->mUserManager:Landroid/os/UserManager;
+    iget-object v2, p0, Lcom/android/settings_ex/users/UserSettings;->mUserManager:Landroid/os/UserManager;
 
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -519,7 +519,7 @@
     .line 1154
     iget v2, v1, Landroid/content/pm/UserInfo;->id:I
 
-    invoke-direct {p0, v2}, Lcom/android/settings/users/UserSettings;->switchUserNow(I)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/users/UserSettings;->switchUserNow(I)V
 
     goto :goto_0
 .end method
@@ -533,7 +533,7 @@
     const/4 v13, 0x0
 
     .line 477
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v11
 
@@ -545,7 +545,7 @@
 
     .line 478
     .local v6, "newProfileName":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v11
 
@@ -583,7 +583,7 @@
     move-result-object v6
 
     .line 481
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v11
 
@@ -592,7 +592,7 @@
     invoke-static {v11, v12, v8}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 482
-    iget-object v11, p0, Lcom/android/settings/users/UserSettings;->mUserManager:Landroid/os/UserManager;
+    iget-object v11, p0, Lcom/android/settings_ex/users/UserSettings;->mUserManager:Landroid/os/UserManager;
 
     const/16 v12, 0x8
 
@@ -612,14 +612,14 @@
 
     .line 486
     .local v9, "user":Landroid/os/UserHandle;
-    iget-object v11, p0, Lcom/android/settings/users/UserSettings;->mUserManager:Landroid/os/UserManager;
+    iget-object v11, p0, Lcom/android/settings_ex/users/UserSettings;->mUserManager:Landroid/os/UserManager;
 
     const-string v12, "no_modify_accounts"
 
     invoke-virtual {v11, v12, v14, v9}, Landroid/os/UserManager;->setUserRestriction(Ljava/lang/String;ZLandroid/os/UserHandle;)V
 
     .line 489
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v11
 
@@ -628,14 +628,14 @@
     invoke-static {v11, v12, v13, v10}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
     .line 491
-    iget-object v11, p0, Lcom/android/settings/users/UserSettings;->mUserManager:Landroid/os/UserManager;
+    iget-object v11, p0, Lcom/android/settings_ex/users/UserSettings;->mUserManager:Landroid/os/UserManager;
 
     const-string v12, "no_share_location"
 
     invoke-virtual {v11, v12, v14, v9}, Landroid/os/UserManager;->setUserRestriction(Ljava/lang/String;ZLandroid/os/UserHandle;)V
 
     .line 496
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v11
 
@@ -693,7 +693,7 @@
     const/4 v5, 0x0
 
     .line 510
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -705,7 +705,7 @@
 
     .line 511
     .local v2, "userName":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -743,7 +743,7 @@
     move-result-object v2
 
     .line 514
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -752,7 +752,7 @@
     invoke-static {v3, v4, v1}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 515
-    iget-object v3, p0, Lcom/android/settings/users/UserSettings;->mUserManager:Landroid/os/UserManager;
+    iget-object v3, p0, Lcom/android/settings_ex/users/UserSettings;->mUserManager:Landroid/os/UserManager;
 
     invoke-virtual {v3, v2, v5}, Landroid/os/UserManager;->createSecondaryUser(Ljava/lang/String;I)Landroid/content/pm/UserInfo;
 
@@ -769,11 +769,11 @@
 
     .prologue
     .line 1173
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/android/settings/drawable/CircleFramedDrawable;->encircle(Landroid/graphics/Bitmap;Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, v0}, Lcom/android/settings_ex/drawable/CircleFramedDrawable;->encircle(Landroid/graphics/Bitmap;Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -785,9 +785,9 @@
 
     .prologue
     .line 846
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    iget-boolean v0, v0, Lcom/android/settings/users/UserSettings$UserCapabilities;->mIsGuest:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mIsGuest:Z
 
     if-nez v0, :cond_0
 
@@ -797,7 +797,7 @@
 
     .line 849
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/users/UserSettings;->removeThisUser()V
+    invoke-direct {p0}, Lcom/android/settings_ex/users/UserSettings;->removeThisUser()V
 
     goto :goto_0
 .end method
@@ -807,7 +807,7 @@
 
     .prologue
     .line 1159
-    iget-object v3, p0, Lcom/android/settings/users/UserSettings;->mUserManager:Landroid/os/UserManager;
+    iget-object v3, p0, Lcom/android/settings_ex/users/UserSettings;->mUserManager:Landroid/os/UserManager;
 
     invoke-virtual {v3}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
@@ -858,7 +858,7 @@
 
     .prologue
     .line 400
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -871,7 +871,7 @@
 
     .line 401
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/users/UserSettings;->mMePreference:Lcom/android/settings/users/UserPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/users/UserSettings;->mMePreference:Lcom/android/settings_ex/users/UserPreference;
 
     const v3, 0x7f0e0d29
 
@@ -883,11 +883,11 @@
 
     aput-object p1, v4, v5
 
-    invoke-virtual {p0, v3, v4}, Lcom/android/settings/users/UserSettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v3, v4}, Lcom/android/settings_ex/users/UserSettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/users/UserPreference;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/users/UserPreference;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 402
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
@@ -896,7 +896,7 @@
 
     .line 403
     .local v1, "myUserId":I
-    iget-object v2, p0, Lcom/android/settings/users/UserSettings;->mUserManager:Landroid/os/UserManager;
+    iget-object v2, p0, Lcom/android/settings_ex/users/UserSettings;->mUserManager:Landroid/os/UserManager;
 
     invoke-virtual {v2, v1}, Landroid/os/UserManager;->getUserIcon(I)Landroid/graphics/Bitmap;
 
@@ -907,16 +907,16 @@
     if-eqz v0, :cond_0
 
     .line 405
-    iget-object v2, p0, Lcom/android/settings/users/UserSettings;->mMePreference:Lcom/android/settings/users/UserPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/users/UserSettings;->mMePreference:Lcom/android/settings_ex/users/UserPreference;
 
-    invoke-direct {p0, v0}, Lcom/android/settings/users/UserSettings;->encircle(Landroid/graphics/Bitmap;)Landroid/graphics/drawable/Drawable;
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/users/UserSettings;->encircle(Landroid/graphics/Bitmap;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/users/UserPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/users/UserPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 406
-    iget-object v2, p0, Lcom/android/settings/users/UserSettings;->mUserIcons:Landroid/util/SparseArray;
+    iget-object v2, p0, Lcom/android/settings_ex/users/UserSettings;->mUserIcons:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -941,7 +941,7 @@
 
     .line 1080
     .local v0, "defaultIcon":Landroid/graphics/Bitmap;
-    invoke-direct {p0, v0}, Lcom/android/settings/users/UserSettings;->encircle(Landroid/graphics/Bitmap;)Landroid/graphics/drawable/Drawable;
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/users/UserSettings;->encircle(Landroid/graphics/Bitmap;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -955,7 +955,7 @@
     .line 411
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -1019,7 +1019,7 @@
     .line 419
     const/16 v1, 0xa
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/users/UserSettings;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings_ex/users/UserSettings;->startActivityForResult(Landroid/content/Intent;I)V
 
     .line 420
     return-void
@@ -1040,9 +1040,9 @@
     .prologue
     .line 1041
     .local p1, "missingIcons":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
-    new-instance v0, Lcom/android/settings/users/UserSettings$13;
+    new-instance v0, Lcom/android/settings_ex/users/UserSettings$13;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/users/UserSettings$13;-><init>(Lcom/android/settings/users/UserSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/users/UserSettings$13;-><init>(Lcom/android/settings_ex/users/UserSettings;)V
 
     const/4 v1, 0x1
 
@@ -1052,7 +1052,7 @@
 
     aput-object p1, v1, v2
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/users/UserSettings$13;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/users/UserSettings$13;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     .line 1059
     return-void
@@ -1063,29 +1063,29 @@
 
     .prologue
     .line 375
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    iget-boolean v0, v0, Lcom/android/settings/users/UserSettings$UserCapabilities;->mIsGuest:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mIsGuest:Z
 
     if-eqz v0, :cond_0
 
     .line 377
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mMePreference:Lcom/android/settings/users/UserPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mMePreference:Lcom/android/settings_ex/users/UserPreference;
 
     const/16 v1, -0x2710
 
-    invoke-direct {p0, v1}, Lcom/android/settings/users/UserSettings;->getEncircledDefaultIcon(I)Landroid/graphics/drawable/Drawable;
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/users/UserSettings;->getEncircledDefaultIcon(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/users/UserPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/users/UserPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 378
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mMePreference:Lcom/android/settings/users/UserPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mMePreference:Lcom/android/settings_ex/users/UserPreference;
 
     const v1, 0x7f0e0d4a
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/users/UserPreference;->setTitle(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/users/UserPreference;->setTitle(I)V
 
     .line 397
     :goto_0
@@ -1093,15 +1093,15 @@
 
     .line 382
     :cond_0
-    new-instance v0, Lcom/android/settings/users/UserSettings$3;
+    new-instance v0, Lcom/android/settings_ex/users/UserSettings$3;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/users/UserSettings$3;-><init>(Lcom/android/settings/users/UserSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/users/UserSettings$3;-><init>(Lcom/android/settings_ex/users/UserSettings;)V
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/users/UserSettings$3;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/users/UserSettings$3;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     goto :goto_0
 .end method
@@ -1112,7 +1112,7 @@
 
     .prologue
     .line 437
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mMum:Landroid/app/enterprise/multiuser/MultiUserManager;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mMum:Landroid/app/enterprise/multiuser/MultiUserManager;
 
     const/4 v1, 0x1
 
@@ -1128,19 +1128,19 @@
 
     .line 441
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/users/UserSettings;->mUserLock:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/android/settings_ex/users/UserSettings;->mUserLock:Ljava/lang/Object;
 
     monitor-enter v1
 
     .line 442
     :try_start_0
-    iget v0, p0, Lcom/android/settings/users/UserSettings;->mRemovingUserId:I
+    iget v0, p0, Lcom/android/settings_ex/users/UserSettings;->mRemovingUserId:I
 
     const/4 v2, -0x1
 
     if-ne v0, v2, :cond_1
 
-    iget-boolean v0, p0, Lcom/android/settings/users/UserSettings;->mAddingUser:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/users/UserSettings;->mAddingUser:Z
 
     if-nez v0, :cond_1
 
@@ -1168,13 +1168,13 @@
     const/4 v0, 0x2
 
     :try_start_1
-    invoke-virtual {p0, v0}, Lcom/android/settings/users/UserSettings;->showDialog(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/users/UserSettings;->showDialog(I)V
 
     goto :goto_1
 
     .line 448
     :pswitch_1
-    invoke-direct {p0}, Lcom/android/settings/users/UserSettings;->hasLockscreenSecurity()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/users/UserSettings;->hasLockscreenSecurity()Z
 
     move-result v0
 
@@ -1183,7 +1183,7 @@
     .line 449
     const/4 v0, 0x2
 
-    invoke-direct {p0, v0}, Lcom/android/settings/users/UserSettings;->addUserNow(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/users/UserSettings;->addUserNow(I)V
 
     goto :goto_1
 
@@ -1191,7 +1191,7 @@
     :cond_2
     const/4 v0, 0x7
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/users/UserSettings;->showDialog(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/users/UserSettings;->showDialog(I)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -1232,13 +1232,13 @@
     invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 527
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
-    const-class v1, Lcom/android/settings/users/UserDetailsSettings;
+    const-class v1, Lcom/android/settings_ex/users/UserDetailsSettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -1252,7 +1252,7 @@
 
     const/4 v6, 0x0
 
-    invoke-virtual/range {v0 .. v6}, Lcom/android/settings/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
+    invoke-virtual/range {v0 .. v6}, Lcom/android/settings_ex/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
 
     .line 555
     .end local v2    # "extras":Landroid/os/Bundle;
@@ -1262,7 +1262,7 @@
 
     .line 532
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserManager:Landroid/os/UserManager;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserManager:Landroid/os/UserManager;
 
     invoke-virtual {v0, p1}, Landroid/os/UserManager;->getUserInfo(I)Landroid/content/pm/UserInfo;
 
@@ -1276,9 +1276,9 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    iget-boolean v0, v0, Lcom/android/settings/users/UserSettings$UserCapabilities;->mIsOwner:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mIsOwner:Z
 
     if-eqz v0, :cond_2
 
@@ -1299,13 +1299,13 @@
     invoke-virtual {v2, v0, p2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 537
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
-    const-class v1, Lcom/android/settings/users/RestrictedProfileSettings;
+    const-class v1, Lcom/android/settings_ex/users/RestrictedProfileSettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -1319,7 +1319,7 @@
 
     const/4 v6, 0x0
 
-    invoke-virtual/range {v0 .. v6}, Lcom/android/settings/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
+    invoke-virtual/range {v0 .. v6}, Lcom/android/settings_ex/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
 
     goto :goto_0
 
@@ -1335,15 +1335,15 @@
     if-ne v0, v1, :cond_3
 
     .line 543
-    invoke-static {p0}, Lcom/android/settings/OwnerInfoSettings;->show(Landroid/app/Fragment;)V
+    invoke-static {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->show(Landroid/app/Fragment;)V
 
     goto :goto_0
 
     .line 544
     :cond_3
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    iget-boolean v0, v0, Lcom/android/settings/users/UserSettings$UserCapabilities;->mIsOwner:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mIsOwner:Z
 
     if-eqz v0, :cond_0
 
@@ -1359,13 +1359,13 @@
     invoke-virtual {v2, v0, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 547
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
-    const-class v1, Lcom/android/settings/users/UserDetailsSettings;
+    const-class v1, Lcom/android/settings_ex/users/UserDetailsSettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -1379,7 +1379,7 @@
 
     const/4 v6, 0x0
 
-    invoke-virtual/range {v0 .. v6}, Lcom/android/settings/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
+    invoke-virtual/range {v0 .. v6}, Lcom/android/settings_ex/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
 
     goto :goto_0
 .end method
@@ -1392,7 +1392,7 @@
     const/4 v1, 0x1
 
     .line 461
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mMum:Landroid/app/enterprise/multiuser/MultiUserManager;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mMum:Landroid/app/enterprise/multiuser/MultiUserManager;
 
     invoke-virtual {v0, v1}, Landroid/app/enterprise/multiuser/MultiUserManager;->isUserRemovalAllowed(Z)Z
 
@@ -1406,29 +1406,29 @@
 
     .line 465
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/users/UserSettings;->mUserLock:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/android/settings_ex/users/UserSettings;->mUserLock:Ljava/lang/Object;
 
     monitor-enter v1
 
     .line 466
     :try_start_0
-    iget v0, p0, Lcom/android/settings/users/UserSettings;->mRemovingUserId:I
+    iget v0, p0, Lcom/android/settings_ex/users/UserSettings;->mRemovingUserId:I
 
     const/4 v2, -0x1
 
     if-ne v0, v2, :cond_1
 
-    iget-boolean v0, p0, Lcom/android/settings/users/UserSettings;->mAddingUser:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/users/UserSettings;->mAddingUser:Z
 
     if-nez v0, :cond_1
 
     .line 467
-    iput p1, p0, Lcom/android/settings/users/UserSettings;->mRemovingUserId:I
+    iput p1, p0, Lcom/android/settings_ex/users/UserSettings;->mRemovingUserId:I
 
     .line 468
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/users/UserSettings;->showDialog(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/users/UserSettings;->showDialog(I)V
 
     .line 470
     :cond_1
@@ -1452,10 +1452,10 @@
 
     .prologue
     .line 558
-    iput p1, p0, Lcom/android/settings/users/UserSettings;->mAddedUserId:I
+    iput p1, p0, Lcom/android/settings_ex/users/UserSettings;->mAddedUserId:I
 
     .line 559
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserManager:Landroid/os/UserManager;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserManager:Landroid/os/UserManager;
 
     invoke-virtual {v0, p1}, Landroid/os/UserManager;->getUserInfo(I)Landroid/content/pm/UserInfo;
 
@@ -1468,9 +1468,9 @@
     if-eqz v0, :cond_0
 
     .line 560
-    iget v0, p0, Lcom/android/settings/users/UserSettings;->mAddedUserId:I
+    iget v0, p0, Lcom/android/settings_ex/users/UserSettings;->mAddedUserId:I
 
-    invoke-direct {p0, v0}, Lcom/android/settings/users/UserSettings;->switchUserNow(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/users/UserSettings;->switchUserNow(I)V
 
     .line 564
     :goto_0
@@ -1480,7 +1480,7 @@
     :cond_0
     const/4 v0, 0x3
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/users/UserSettings;->showDialog(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/users/UserSettings;->showDialog(I)V
 
     goto :goto_0
 .end method
@@ -1491,14 +1491,14 @@
     .prologue
     .line 756
     :try_start_0
-    invoke-static {}, Lcom/android/settings/Utils;->isOnCall()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isOnCall()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 757
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -1527,7 +1527,7 @@
     invoke-interface {v1, v2}, Landroid/app/IActivityManager;->switchUser(I)Z
 
     .line 760
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -1571,14 +1571,14 @@
     const/4 v2, 0x1
 
     .line 730
-    invoke-static {}, Lcom/android/settings/Utils;->isOnCall()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isOnCall()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 731
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1596,7 +1596,7 @@
 
     .line 734
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mMum:Landroid/app/enterprise/multiuser/MultiUserManager;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mMum:Landroid/app/enterprise/multiuser/MultiUserManager;
 
     invoke-virtual {v0, v2}, Landroid/app/enterprise/multiuser/MultiUserManager;->isUserRemovalAllowed(Z)Z
 
@@ -1607,13 +1607,13 @@
     .line 735
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/users/UserSettings;->mRemovingUserId:I
+    iput v0, p0, Lcom/android/settings_ex/users/UserSettings;->mRemovingUserId:I
 
     goto :goto_0
 
     .line 739
     :cond_1
-    iget v0, p0, Lcom/android/settings/users/UserSettings;->mRemovingUserId:I
+    iget v0, p0, Lcom/android/settings_ex/users/UserSettings;->mRemovingUserId:I
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -1622,17 +1622,17 @@
     if-ne v0, v1, :cond_2
 
     .line 740
-    invoke-direct {p0}, Lcom/android/settings/users/UserSettings;->removeThisUser()V
+    invoke-direct {p0}, Lcom/android/settings_ex/users/UserSettings;->removeThisUser()V
 
     goto :goto_0
 
     .line 742
     :cond_2
-    new-instance v0, Lcom/android/settings/users/UserSettings$11;
+    new-instance v0, Lcom/android/settings_ex/users/UserSettings$11;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/users/UserSettings$11;-><init>(Lcom/android/settings/users/UserSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/users/UserSettings$11;-><init>(Lcom/android/settings_ex/users/UserSettings;)V
 
-    invoke-virtual {v0}, Lcom/android/settings/users/UserSettings$11;->start()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/users/UserSettings$11;->start()V
 
     goto :goto_0
 .end method
@@ -1644,7 +1644,7 @@
 
     .prologue
     .line 1093
-    iget-object v1, p0, Lcom/android/settings/users/UserSettings;->mUserIcons:Landroid/util/SparseArray;
+    iget-object v1, p0, Lcom/android/settings_ex/users/UserSettings;->mUserIcons:Landroid/util/SparseArray;
 
     iget v2, p2, Landroid/content/pm/UserInfo;->id:I
 
@@ -1659,7 +1659,7 @@
     if-eqz v0, :cond_0
 
     .line 1095
-    invoke-direct {p0, v0}, Lcom/android/settings/users/UserSettings;->encircle(Landroid/graphics/Bitmap;)Landroid/graphics/drawable/Drawable;
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/users/UserSettings;->encircle(Landroid/graphics/Bitmap;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -1676,7 +1676,7 @@
 
     .prologue
     .line 1100
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserManager:Landroid/os/UserManager;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserManager:Landroid/os/UserManager;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -1685,12 +1685,12 @@
     invoke-virtual {v0, v1, p1}, Landroid/os/UserManager;->setUserName(ILjava/lang/String;)V
 
     .line 1101
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mNicknamePreference:Lcom/android/settings/SelectableEditTextPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mNicknamePreference:Lcom/android/settings_ex/SelectableEditTextPreference;
 
-    invoke-virtual {v0, p1}, Lcom/android/settings/SelectableEditTextPreference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Lcom/android/settings_ex/SelectableEditTextPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 1102
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1712,7 +1712,7 @@
     const/4 v3, 0x0
 
     .line 831
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1730,7 +1730,7 @@
 
     .line 833
     .local v1, "state":Z
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1746,7 +1746,7 @@
 
     .line 834
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/users/UserSettings;->mUserManager:Landroid/os/UserManager;
+    iget-object v2, p0, Lcom/android/settings_ex/users/UserSettings;->mUserManager:Landroid/os/UserManager;
 
     invoke-virtual {v2, p1}, Landroid/os/UserManager;->getUserInfo(I)Landroid/content/pm/UserInfo;
 
@@ -1794,7 +1794,7 @@
 
     .line 811
     .local v1, "oldUserId":I
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1820,7 +1820,7 @@
     if-ne v2, v3, :cond_1
 
     .line 814
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -1832,14 +1832,14 @@
     :cond_0
     :goto_0
     :try_start_0
-    invoke-static {}, Lcom/android/settings/Utils;->isOnCall()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isOnCall()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
     .line 821
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1857,14 +1857,14 @@
 
     .line 828
     :goto_1
-    invoke-direct {p0, p1}, Lcom/android/settings/users/UserSettings;->setWifiApMultiUser(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/users/UserSettings;->setWifiApMultiUser(I)V
 
     .line 829
     return-void
 
     .line 816
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -1901,7 +1901,7 @@
 
     .prologue
     .line 1013
-    iget-object v3, p0, Lcom/android/settings/users/UserSettings;->mUserManager:Landroid/os/UserManager;
+    iget-object v3, p0, Lcom/android/settings_ex/users/UserSettings;->mUserManager:Landroid/os/UserManager;
 
     invoke-virtual {v3}, Landroid/os/UserManager;->canAddMoreUsers()Z
 
@@ -1914,7 +1914,7 @@
     .line 1016
     new-instance v0, Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -1927,9 +1927,9 @@
     invoke-virtual {v0, v3}, Landroid/preference/Preference;->setKey(Ljava/lang/String;)V
 
     .line 1018
-    iget-object v3, p0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iget-object v3, p0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    iget-boolean v3, v3, Lcom/android/settings/users/UserSettings$UserCapabilities;->mCanAddRestrictedProfile:Z
+    iget-boolean v3, v3, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mCanAddRestrictedProfile:Z
 
     if-eqz v3, :cond_3
 
@@ -1952,7 +1952,7 @@
     invoke-virtual {v0, p0}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 1022
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v3
 
@@ -1967,9 +1967,9 @@
     .local v1, "enableAddUser":Z
     if-eqz v1, :cond_1
 
-    iget-object v3, p0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iget-object v3, p0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    iget-boolean v3, v3, Lcom/android/settings/users/UserSettings$UserCapabilities;->mCanAddUser:Z
+    iget-boolean v3, v3, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mCanAddUser:Z
 
     if-nez v3, :cond_2
 
@@ -1977,7 +1977,7 @@
     :cond_1
     const-string v3, "user_add"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/users/UserSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/users/UserSettings;->removePreference(Ljava/lang/String;)V
 
     .line 1038
     :cond_2
@@ -1997,7 +1997,7 @@
 
     .prologue
     .line 853
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -2011,7 +2011,7 @@
     :cond_0
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/users/UserSettings;->mUserManager:Landroid/os/UserManager;
+    iget-object v4, v0, Lcom/android/settings_ex/users/UserSettings;->mUserManager:Landroid/os/UserManager;
 
     const/4 v5, 0x1
 
@@ -2021,7 +2021,7 @@
 
     .line 855
     .local v19, "users":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -2031,19 +2031,19 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v4}, Lcom/android/settings/users/UserSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {v0, v4}, Lcom/android/settings_ex/users/UserSettings;->removePreference(Ljava/lang/String;)V
 
     .line 858
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/users/UserSettings;->mUserListCategory:Landroid/preference/PreferenceGroup;
+    iget-object v4, v0, Lcom/android/settings_ex/users/UserSettings;->mUserListCategory:Landroid/preference/PreferenceGroup;
 
     invoke-virtual {v4}, Landroid/preference/PreferenceGroup;->removeAll()V
 
     .line 859
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/users/UserSettings;->mUserListCategory:Landroid/preference/PreferenceGroup;
+    iget-object v4, v0, Lcom/android/settings_ex/users/UserSettings;->mUserListCategory:Landroid/preference/PreferenceGroup;
 
     const/4 v5, 0x0
 
@@ -2052,23 +2052,23 @@
     .line 860
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/users/UserSettings;->mUserYouCategory:Landroid/preference/PreferenceGroup;
+    iget-object v4, v0, Lcom/android/settings_ex/users/UserSettings;->mUserYouCategory:Landroid/preference/PreferenceGroup;
 
     invoke-virtual {v4}, Landroid/preference/PreferenceGroup;->removeAll()V
 
     .line 861
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/users/UserSettings;->mUserYouCategory:Landroid/preference/PreferenceGroup;
+    iget-object v4, v0, Lcom/android/settings_ex/users/UserSettings;->mUserYouCategory:Landroid/preference/PreferenceGroup;
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/android/settings/users/UserSettings;->mMePreference:Lcom/android/settings/users/UserPreference;
+    iget-object v5, v0, Lcom/android/settings_ex/users/UserSettings;->mMePreference:Lcom/android/settings_ex/users/UserPreference;
 
     invoke-virtual {v4, v5}, Landroid/preference/PreferenceGroup;->addPreference(Landroid/preference/Preference;)Z
 
     .line 863
-    invoke-static {v3}, Lcom/android/settings/Utils;->isVoiceCapable(Landroid/content/Context;)Z
+    invoke-static {v3}, Lcom/android/settings_ex/Utils;->isVoiceCapable(Landroid/content/Context;)Z
 
     move-result v20
 
@@ -2128,16 +2128,16 @@
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iget-object v4, v0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    iget-boolean v4, v4, Lcom/android/settings/users/UserSettings$UserCapabilities;->mIsGuest:Z
+    iget-boolean v4, v4, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mIsGuest:Z
 
     if-nez v4, :cond_3
 
     .line 886
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/users/UserSettings;->mMePreference:Lcom/android/settings/users/UserPreference;
+    iget-object v2, v0, Lcom/android/settings_ex/users/UserSettings;->mMePreference:Lcom/android/settings_ex/users/UserPreference;
 
     .line 920
     .local v2, "pref":Landroid/preference/Preference;
@@ -2146,7 +2146,7 @@
 
     move-object/from16 v1, v18
 
-    invoke-direct {v0, v1}, Lcom/android/settings/users/UserSettings;->isInitialized(Landroid/content/pm/UserInfo;)Z
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/users/UserSettings;->isInitialized(Landroid/content/pm/UserInfo;)Z
 
     move-result v4
 
@@ -2169,7 +2169,7 @@
     .line 926
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/users/UserSettings;->mUserIcons:Landroid/util/SparseArray;
+    iget-object v4, v0, Lcom/android/settings_ex/users/UserSettings;->mUserIcons:Landroid/util/SparseArray;
 
     move-object/from16 v0, v18
 
@@ -2213,9 +2213,9 @@
     :cond_4
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iget-object v4, v0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    iget-boolean v4, v4, Lcom/android/settings/users/UserSettings$UserCapabilities;->mIsOwner:Z
+    iget-boolean v4, v4, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mIsOwner:Z
 
     if-eqz v4, :cond_7
 
@@ -2235,9 +2235,9 @@
     :goto_4
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iget-object v4, v0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    iget-boolean v4, v4, Lcom/android/settings/users/UserSettings$UserCapabilities;->mIsOwner:Z
+    iget-boolean v4, v4, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mIsOwner:Z
 
     if-eqz v4, :cond_8
 
@@ -2260,7 +2260,7 @@
     .line 909
     .local v15, "showDelete":Z
     :goto_5
-    new-instance v2, Lcom/android/settings/users/UserPreference;
+    new-instance v2, Lcom/android/settings_ex/users/UserPreference;
 
     const/4 v4, 0x0
 
@@ -2278,7 +2278,7 @@
     move-object/from16 v7, p0
 
     :goto_7
-    invoke-direct/range {v2 .. v7}, Lcom/android/settings/users/UserPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;ILandroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;)V
+    invoke-direct/range {v2 .. v7}, Lcom/android/settings_ex/users/UserPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;ILandroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;)V
 
     .line 912
     .restart local v2    # "pref":Landroid/preference/Preference;
@@ -2314,7 +2314,7 @@
     .line 914
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/users/UserSettings;->mUserListCategory:Landroid/preference/PreferenceGroup;
+    iget-object v4, v0, Lcom/android/settings_ex/users/UserSettings;->mUserListCategory:Landroid/preference/PreferenceGroup;
 
     invoke-virtual {v4, v2}, Landroid/preference/PreferenceGroup;->addPreference(Landroid/preference/Preference;)Z
 
@@ -2392,7 +2392,7 @@
 
     move-object/from16 v1, v18
 
-    invoke-direct {v0, v2, v1}, Lcom/android/settings/users/UserSettings;->setPhotoId(Landroid/preference/Preference;Landroid/content/pm/UserInfo;)V
+    invoke-direct {v0, v2, v1}, Lcom/android/settings_ex/users/UserSettings;->setPhotoId(Landroid/preference/Preference;Landroid/content/pm/UserInfo;)V
 
     goto/16 :goto_1
 
@@ -2404,7 +2404,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v4}, Lcom/android/settings/users/UserSettings;->getEncircledDefaultIcon(I)Landroid/graphics/drawable/Drawable;
+    invoke-direct {v0, v4}, Lcom/android/settings_ex/users/UserSettings;->getEncircledDefaultIcon(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
@@ -2418,14 +2418,14 @@
     :cond_e
     move-object/from16 v0, p0
 
-    iget-boolean v4, v0, Lcom/android/settings/users/UserSettings;->mAddingUser:Z
+    iget-boolean v4, v0, Lcom/android/settings_ex/users/UserSettings;->mAddingUser:Z
 
     if-eqz v4, :cond_f
 
     .line 942
-    new-instance v2, Lcom/android/settings/users/UserPreference;
+    new-instance v2, Lcom/android/settings_ex/users/UserPreference;
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -2439,7 +2439,7 @@
 
     move-object v4, v2
 
-    invoke-direct/range {v4 .. v9}, Lcom/android/settings/users/UserPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;ILandroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;)V
+    invoke-direct/range {v4 .. v9}, Lcom/android/settings_ex/users/UserPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;ILandroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;)V
 
     .line 944
     .restart local v2    # "pref":Landroid/preference/Preference;
@@ -2457,7 +2457,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v4}, Lcom/android/settings/users/UserSettings;->getEncircledDefaultIcon(I)Landroid/graphics/drawable/Drawable;
+    invoke-direct {v0, v4}, Lcom/android/settings_ex/users/UserSettings;->getEncircledDefaultIcon(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
@@ -2466,7 +2466,7 @@
     .line 947
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/users/UserSettings;->mUserListCategory:Landroid/preference/PreferenceGroup;
+    iget-object v4, v0, Lcom/android/settings_ex/users/UserSettings;->mUserListCategory:Landroid/preference/PreferenceGroup;
 
     invoke-virtual {v4, v2}, Landroid/preference/PreferenceGroup;->addPreference(Landroid/preference/Preference;)Z
 
@@ -2475,9 +2475,9 @@
     :cond_f
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iget-object v4, v0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    iget-boolean v4, v4, Lcom/android/settings/users/UserSettings$UserCapabilities;->mIsGuest:Z
+    iget-boolean v4, v4, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mIsGuest:Z
 
     if-nez v4, :cond_17
 
@@ -2500,9 +2500,9 @@
     .local v12, "isDualNumber":Z
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iget-object v4, v0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    iget-boolean v4, v4, Lcom/android/settings/users/UserSettings$UserCapabilities;->mIsOwner:Z
+    iget-boolean v4, v4, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mIsOwner:Z
 
     if-nez v4, :cond_10
 
@@ -2521,7 +2521,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/users/UserSettings;->mUserManager:Landroid/os/UserManager;
+    iget-object v4, v0, Lcom/android/settings_ex/users/UserSettings;->mUserManager:Landroid/os/UserManager;
 
     const-string v5, "no_add_user"
 
@@ -2569,9 +2569,9 @@
     if-eqz v16, :cond_15
 
     .line 992
-    new-instance v2, Lcom/android/settings/users/UserPreference;
+    new-instance v2, Lcom/android/settings_ex/users/UserPreference;
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -2581,9 +2581,9 @@
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iget-object v4, v0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    iget-boolean v4, v4, Lcom/android/settings/users/UserSettings$UserCapabilities;->mIsOwner:Z
+    iget-boolean v4, v4, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mIsOwner:Z
 
     if-eqz v4, :cond_18
 
@@ -2596,7 +2596,7 @@
 
     move-object v4, v2
 
-    invoke-direct/range {v4 .. v9}, Lcom/android/settings/users/UserPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;ILandroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;)V
+    invoke-direct/range {v4 .. v9}, Lcom/android/settings_ex/users/UserPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;ILandroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;)V
 
     .line 996
     .restart local v2    # "pref":Landroid/preference/Preference;
@@ -2609,7 +2609,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v4}, Lcom/android/settings/users/UserSettings;->getEncircledDefaultIcon(I)Landroid/graphics/drawable/Drawable;
+    invoke-direct {v0, v4}, Lcom/android/settings_ex/users/UserSettings;->getEncircledDefaultIcon(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
@@ -2623,14 +2623,14 @@
     .line 999
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/users/UserSettings;->mUserListCategory:Landroid/preference/PreferenceGroup;
+    iget-object v4, v0, Lcom/android/settings_ex/users/UserSettings;->mUserListCategory:Landroid/preference/PreferenceGroup;
 
     invoke-virtual {v4, v2}, Landroid/preference/PreferenceGroup;->addPreference(Landroid/preference/Preference;)Z
 
     .line 1003
     .end local v2    # "pref":Landroid/preference/Preference;
     :cond_15
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -2646,11 +2646,11 @@
     .line 1007
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v13}, Lcom/android/settings/users/UserSettings;->loadIconsAsync(Ljava/util/List;)V
+    invoke-direct {v0, v13}, Lcom/android/settings_ex/users/UserSettings;->loadIconsAsync(Ljava/util/List;)V
 
     .line 1009
     :cond_16
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/users/UserSettings;->updateAddUserPreference()V
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/users/UserSettings;->updateAddUserPreference()V
 
     goto/16 :goto_0
 
@@ -2701,16 +2701,16 @@
     const/4 v2, 0x0
 
     .line 274
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 276
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v11
 
     .line 277
     .local v11, "listview":Landroid/widget/ListView;
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v12
 
@@ -2740,11 +2740,11 @@
 
     .line 281
     .local v4, "divider_inset_size":I
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isRTL(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isRTL(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -2812,7 +2812,7 @@
 
     .prologue
     .line 424
-    invoke-super {p0, p1, p2, p3}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 426
     const/16 v0, 0xa
@@ -2822,7 +2822,7 @@
     .line 427
     if-eqz p2, :cond_0
 
-    invoke-direct {p0}, Lcom/android/settings/users/UserSettings;->hasLockscreenSecurity()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/users/UserSettings;->hasLockscreenSecurity()Z
 
     move-result v0
 
@@ -2831,7 +2831,7 @@
     .line 428
     const/4 v0, 0x2
 
-    invoke-direct {p0, v0}, Lcom/android/settings/users/UserSettings;->addUserNow(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/users/UserSettings;->addUserNow(I)V
 
     .line 433
     :cond_0
@@ -2840,9 +2840,9 @@
 
     .line 431
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mEditUserInfoController:Lcom/android/settings/users/EditUserInfoController;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mEditUserInfoController:Lcom/android/settings_ex/users/EditUserInfoController;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/android/settings/users/EditUserInfoController;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/android/settings_ex/users/EditUserInfoController;->onActivityResult(IILandroid/content/Intent;)V
 
     goto :goto_0
 .end method
@@ -2857,7 +2857,7 @@
 
     move-result-object v1
 
-    instance-of v1, v1, Lcom/android/settings/users/UserPreference;
+    instance-of v1, v1, Lcom/android/settings_ex/users/UserPreference;
 
     if-eqz v1, :cond_0
 
@@ -2866,9 +2866,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/users/UserPreference;
+    check-cast v1, Lcom/android/settings_ex/users/UserPreference;
 
-    invoke-virtual {v1}, Lcom/android/settings/users/UserPreference;->getUserId()I
+    invoke-virtual {v1}, Lcom/android/settings_ex/users/UserPreference;->getUserId()I
 
     move-result v0
 
@@ -2890,22 +2890,22 @@
     .line 1186
     .restart local v0    # "userId":I
     :pswitch_1
-    iget-object v1, p0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iget-object v1, p0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    iget-boolean v1, v1, Lcom/android/settings/users/UserSettings$UserCapabilities;->mIsGuest:Z
+    iget-boolean v1, v1, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mIsGuest:Z
 
     if-eqz v1, :cond_1
 
     .line 1187
     const/16 v1, 0x8
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/users/UserSettings;->showDialog(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/users/UserSettings;->showDialog(I)V
 
     goto :goto_0
 
     .line 1189
     :cond_1
-    invoke-direct {p0, v0}, Lcom/android/settings/users/UserSettings;->onRemoveUserClicked(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/users/UserSettings;->onRemoveUserClicked(I)V
 
     goto :goto_0
 
@@ -2913,7 +2913,7 @@
     :pswitch_2
     const/4 v1, 0x0
 
-    invoke-direct {p0, v0, v1}, Lcom/android/settings/users/UserSettings;->onManageUserClicked(IZ)V
+    invoke-direct {p0, v0, v1}, Lcom/android/settings_ex/users/UserSettings;->onManageUserClicked(IZ)V
 
     goto :goto_0
 
@@ -2940,10 +2940,10 @@
     const/4 v2, 0x0
 
     .line 210
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 211
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
 
@@ -2967,7 +2967,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/users/UserSettings;->mAddedUserId:I
+    iput v0, p0, Lcom/android/settings_ex/users/UserSettings;->mAddedUserId:I
 
     .line 217
     :cond_0
@@ -2986,27 +2986,27 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/users/UserSettings;->mRemovingUserId:I
+    iput v0, p0, Lcom/android/settings_ex/users/UserSettings;->mRemovingUserId:I
 
     .line 220
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mEditUserInfoController:Lcom/android/settings/users/EditUserInfoController;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mEditUserInfoController:Lcom/android/settings_ex/users/EditUserInfoController;
 
-    invoke-virtual {v0, p1}, Lcom/android/settings/users/EditUserInfoController;->onRestoreInstanceState(Landroid/os/Bundle;)V
+    invoke-virtual {v0, p1}, Lcom/android/settings_ex/users/EditUserInfoController;->onRestoreInstanceState(Landroid/os/Bundle;)V
 
     .line 222
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     .line 223
     .local v1, "context":Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/users/UserSettings$UserCapabilities;->create(Landroid/content/Context;)Lcom/android/settings/users/UserSettings$UserCapabilities;
+    invoke-static {v1}, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->create(Landroid/content/Context;)Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iput-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
     .line 224
     const-string v0, "user"
@@ -3017,12 +3017,12 @@
 
     check-cast v0, Landroid/os/UserManager;
 
-    iput-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserManager:Landroid/os/UserManager;
+    iput-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserManager:Landroid/os/UserManager;
 
     .line 225
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    iget-boolean v0, v0, Lcom/android/settings/users/UserSettings$UserCapabilities;->mEnabled:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mEnabled:Z
 
     if-nez v0, :cond_3
 
@@ -3038,7 +3038,7 @@
 
     .line 230
     .local v3, "myUserId":I
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -3046,43 +3046,43 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/users/UserSettings;->mMum:Landroid/app/enterprise/multiuser/MultiUserManager;
+    iput-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mMum:Landroid/app/enterprise/multiuser/MultiUserManager;
 
     .line 232
     const v0, 0x7f0800d0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/users/UserSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/users/UserSettings;->addPreferencesFromResource(I)V
 
     .line 233
     const-string v0, "user_list"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/users/UserSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/users/UserSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceGroup;
 
-    iput-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserListCategory:Landroid/preference/PreferenceGroup;
+    iput-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserListCategory:Landroid/preference/PreferenceGroup;
 
     .line 234
     const-string v0, "user_you"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/users/UserSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/users/UserSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceGroup;
 
-    iput-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserYouCategory:Landroid/preference/PreferenceGroup;
+    iput-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserYouCategory:Landroid/preference/PreferenceGroup;
 
     .line 235
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    iget-boolean v0, v0, Lcom/android/settings/users/UserSettings$UserCapabilities;->mIsOwner:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mIsOwner:Z
 
     if-nez v0, :cond_4
 
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mMum:Landroid/app/enterprise/multiuser/MultiUserManager;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mMum:Landroid/app/enterprise/multiuser/MultiUserManager;
 
     invoke-virtual {v0, v12}, Landroid/app/enterprise/multiuser/MultiUserManager;->isUserRemovalAllowed(Z)Z
 
@@ -3095,7 +3095,7 @@
     .line 236
     .local v12, "showDelete":Z
     :cond_4
-    new-instance v0, Lcom/android/settings/users/UserPreference;
+    new-instance v0, Lcom/android/settings_ex/users/UserPreference;
 
     if-eqz v12, :cond_9
 
@@ -3104,35 +3104,35 @@
     :goto_1
     move-object v4, v2
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/settings/users/UserPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;ILandroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;)V
+    invoke-direct/range {v0 .. v5}, Lcom/android/settings_ex/users/UserPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;ILandroid/view/View$OnClickListener;Landroid/view/View$OnClickListener;)V
 
-    iput-object v0, p0, Lcom/android/settings/users/UserSettings;->mMePreference:Lcom/android/settings/users/UserPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mMePreference:Lcom/android/settings_ex/users/UserPreference;
 
     .line 239
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mMePreference:Lcom/android/settings/users/UserPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mMePreference:Lcom/android/settings_ex/users/UserPreference;
 
     const-string v4, "user_me"
 
-    invoke-virtual {v0, v4}, Lcom/android/settings/users/UserPreference;->setKey(Ljava/lang/String;)V
+    invoke-virtual {v0, v4}, Lcom/android/settings_ex/users/UserPreference;->setKey(Ljava/lang/String;)V
 
     .line 240
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mMePreference:Lcom/android/settings/users/UserPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mMePreference:Lcom/android/settings_ex/users/UserPreference;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/users/UserPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/users/UserPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 241
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    iget-boolean v0, v0, Lcom/android/settings/users/UserSettings$UserCapabilities;->mIsOwner:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mIsOwner:Z
 
     if-eqz v0, :cond_5
 
     .line 242
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mMePreference:Lcom/android/settings/users/UserPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mMePreference:Lcom/android/settings_ex/users/UserPreference;
 
     const v4, 0x7f0e0d27
 
-    invoke-virtual {v0, v4}, Lcom/android/settings/users/UserPreference;->setSummary(I)V
+    invoke-virtual {v0, v4}, Lcom/android/settings_ex/users/UserPreference;->setSummary(I)V
 
     .line 246
     :cond_5
@@ -3142,9 +3142,9 @@
     .local v11, "enableAddUser":Z
     if-eqz v11, :cond_6
 
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    iget-boolean v0, v0, Lcom/android/settings/users/UserSettings$UserCapabilities;->mCanAddUser:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mCanAddUser:Z
 
     if-nez v0, :cond_7
 
@@ -3152,18 +3152,18 @@
     :cond_6
     const-string v0, "user_add"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/users/UserSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/users/UserSettings;->removePreference(Ljava/lang/String;)V
 
     .line 259
     :cond_7
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    iget-boolean v0, v0, Lcom/android/settings/users/UserSettings$UserCapabilities;->mCanAddRestrictedProfile:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mCanAddRestrictedProfile:Z
 
     if-nez v0, :cond_8
 
     .line 260
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserListCategory:Landroid/preference/PreferenceGroup;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserListCategory:Landroid/preference/PreferenceGroup;
 
     const v4, 0x7f0e06bb
 
@@ -3171,10 +3171,10 @@
 
     .line 263
     :cond_8
-    invoke-direct {p0}, Lcom/android/settings/users/UserSettings;->loadProfile()V
+    invoke-direct {p0}, Lcom/android/settings_ex/users/UserSettings;->loadProfile()V
 
     .line 264
-    invoke-virtual {p0, v6}, Lcom/android/settings/users/UserSettings;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/users/UserSettings;->setHasOptionsMenu(Z)V
 
     .line 265
     new-instance v7, Landroid/content/IntentFilter;
@@ -3195,11 +3195,11 @@
     invoke-virtual {v7, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 268
-    iget-object v5, p0, Lcom/android/settings/users/UserSettings;->mUserChangeReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v5, p0, Lcom/android/settings_ex/users/UserSettings;->mUserChangeReceiver:Landroid/content/BroadcastReceiver;
 
     sget-object v6, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
-    iget-object v9, p0, Lcom/android/settings/users/UserSettings;->mHandler:Landroid/os/Handler;
+    iget-object v9, p0, Lcom/android/settings_ex/users/UserSettings;->mHandler:Landroid/os/Handler;
 
     move-object v4, v1
 
@@ -3224,7 +3224,7 @@
 
     .prologue
     .line 575
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v17
 
@@ -3249,21 +3249,21 @@
 
     .line 579
     :pswitch_0
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
     move-object/from16 v0, p0
 
-    iget v7, v0, Lcom/android/settings/users/UserSettings;->mRemovingUserId:I
+    iget v7, v0, Lcom/android/settings_ex/users/UserSettings;->mRemovingUserId:I
 
-    new-instance v8, Lcom/android/settings/users/UserSettings$4;
+    new-instance v8, Lcom/android/settings_ex/users/UserSettings$4;
 
     move-object/from16 v0, p0
 
-    invoke-direct {v8, v0}, Lcom/android/settings/users/UserSettings$4;-><init>(Lcom/android/settings/users/UserSettings;)V
+    invoke-direct {v8, v0}, Lcom/android/settings_ex/users/UserSettings$4;-><init>(Lcom/android/settings_ex/users/UserSettings;)V
 
-    invoke-static {v5, v7, v8}, Lcom/android/settings/users/UserDialogs;->createRemoveDialog(Landroid/content/Context;ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/Dialog;
+    invoke-static {v5, v7, v8}, Lcom/android/settings_ex/users/UserDialogs;->createRemoveDialog(Landroid/content/Context;ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/Dialog;
 
     move-result-object v18
 
@@ -3302,7 +3302,7 @@
 
     .line 595
     :pswitch_2
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -3332,7 +3332,7 @@
     .local v21, "messageResId":I
     const-string v5, "VZW"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v7
 
@@ -3378,7 +3378,7 @@
 
     const v7, 0x104000a
 
-    new-instance v8, Lcom/android/settings/users/UserSettings$5;
+    new-instance v8, Lcom/android/settings_ex/users/UserSettings$5;
 
     move-object/from16 v0, p0
 
@@ -3388,7 +3388,7 @@
 
     move-object/from16 v3, v22
 
-    invoke-direct {v8, v0, v1, v2, v3}, Lcom/android/settings/users/UserSettings$5;-><init>(Lcom/android/settings/users/UserSettings;IZLandroid/content/SharedPreferences;)V
+    invoke-direct {v8, v0, v1, v2, v3}, Lcom/android/settings_ex/users/UserSettings$5;-><init>(Lcom/android/settings_ex/users/UserSettings;IZLandroid/content/SharedPreferences;)V
 
     invoke-virtual {v5, v7, v8}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -3443,11 +3443,11 @@
 
     const v7, 0x7f0e0d37
 
-    new-instance v8, Lcom/android/settings/users/UserSettings$6;
+    new-instance v8, Lcom/android/settings_ex/users/UserSettings$6;
 
     move-object/from16 v0, p0
 
-    invoke-direct {v8, v0}, Lcom/android/settings/users/UserSettings$6;-><init>(Lcom/android/settings/users/UserSettings;)V
+    invoke-direct {v8, v0}, Lcom/android/settings_ex/users/UserSettings$6;-><init>(Lcom/android/settings_ex/users/UserSettings;)V
 
     invoke-virtual {v5, v7, v8}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -3486,11 +3486,11 @@
 
     const v7, 0x104000a
 
-    new-instance v8, Lcom/android/settings/users/UserSettings$7;
+    new-instance v8, Lcom/android/settings_ex/users/UserSettings$7;
 
     move-object/from16 v0, p0
 
-    invoke-direct {v8, v0}, Lcom/android/settings/users/UserSettings$7;-><init>(Lcom/android/settings/users/UserSettings;)V
+    invoke-direct {v8, v0}, Lcom/android/settings_ex/users/UserSettings$7;-><init>(Lcom/android/settings_ex/users/UserSettings;)V
 
     invoke-virtual {v5, v7, v8}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -3533,7 +3533,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v7}, Lcom/android/settings/users/UserSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v7}, Lcom/android/settings_ex/users/UserSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
@@ -3546,7 +3546,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v7}, Lcom/android/settings/users/UserSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v7}, Lcom/android/settings_ex/users/UserSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
@@ -3565,7 +3565,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v7}, Lcom/android/settings/users/UserSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v7}, Lcom/android/settings_ex/users/UserSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
@@ -3578,7 +3578,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v7}, Lcom/android/settings/users/UserSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v7}, Lcom/android/settings_ex/users/UserSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
@@ -3638,11 +3638,11 @@
     invoke-virtual {v0, v5}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 667
-    new-instance v5, Lcom/android/settings/users/UserSettings$8;
+    new-instance v5, Lcom/android/settings_ex/users/UserSettings$8;
 
     move-object/from16 v0, p0
 
-    invoke-direct {v5, v0}, Lcom/android/settings/users/UserSettings$8;-><init>(Lcom/android/settings/users/UserSettings;)V
+    invoke-direct {v5, v0}, Lcom/android/settings_ex/users/UserSettings$8;-><init>(Lcom/android/settings_ex/users/UserSettings;)V
 
     move-object/from16 v0, v16
 
@@ -3682,11 +3682,11 @@
 
     const v7, 0x7f0e0d24
 
-    new-instance v8, Lcom/android/settings/users/UserSettings$9;
+    new-instance v8, Lcom/android/settings_ex/users/UserSettings$9;
 
     move-object/from16 v0, p0
 
-    invoke-direct {v8, v0}, Lcom/android/settings/users/UserSettings$9;-><init>(Lcom/android/settings/users/UserSettings;)V
+    invoke-direct {v8, v0}, Lcom/android/settings_ex/users/UserSettings$9;-><init>(Lcom/android/settings_ex/users/UserSettings;)V
 
     invoke-virtual {v5, v7, v8}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -3731,11 +3731,11 @@
 
     const v7, 0x7f0e0c2b
 
-    new-instance v8, Lcom/android/settings/users/UserSettings$10;
+    new-instance v8, Lcom/android/settings_ex/users/UserSettings$10;
 
     move-object/from16 v0, p0
 
-    invoke-direct {v8, v0}, Lcom/android/settings/users/UserSettings$10;-><init>(Lcom/android/settings/users/UserSettings;)V
+    invoke-direct {v8, v0}, Lcom/android/settings_ex/users/UserSettings$10;-><init>(Lcom/android/settings_ex/users/UserSettings;)V
 
     invoke-virtual {v5, v7, v8}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -3762,7 +3762,7 @@
     :pswitch_8
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/android/settings/users/UserSettings;->mUserManager:Landroid/os/UserManager;
+    iget-object v5, v0, Lcom/android/settings_ex/users/UserSettings;->mUserManager:Landroid/os/UserManager;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -3804,7 +3804,7 @@
     :cond_4
     move-object/from16 v0, p0
 
-    iget-object v7, v0, Lcom/android/settings/users/UserSettings;->mEditUserInfoController:Lcom/android/settings/users/EditUserInfoController;
+    iget-object v7, v0, Lcom/android/settings_ex/users/UserSettings;->mEditUserInfoController:Lcom/android/settings_ex/users/EditUserInfoController;
 
     if-eqz v19, :cond_5
 
@@ -3813,9 +3813,9 @@
     :goto_2
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/android/settings/users/UserSettings;->mMePreference:Lcom/android/settings/users/UserPreference;
+    iget-object v5, v0, Lcom/android/settings_ex/users/UserSettings;->mMePreference:Lcom/android/settings_ex/users/UserPreference;
 
-    invoke-virtual {v5}, Lcom/android/settings/users/UserPreference;->getTitle()Ljava/lang/CharSequence;
+    invoke-virtual {v5}, Lcom/android/settings_ex/users/UserPreference;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v10
 
@@ -3829,7 +3829,7 @@
 
     move-object/from16 v12, p0
 
-    invoke-virtual/range {v7 .. v13}, Lcom/android/settings/users/EditUserInfoController;->createDialog(Landroid/app/Fragment;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;ILcom/android/settings/users/EditUserInfoController$OnContentChangedCallback;Landroid/os/UserHandle;)Landroid/app/Dialog;
+    invoke-virtual/range {v7 .. v13}, Lcom/android/settings_ex/users/EditUserInfoController;->createDialog(Landroid/app/Fragment;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;ILcom/android/settings_ex/users/EditUserInfoController$OnContentChangedCallback;Landroid/os/UserHandle;)Landroid/app/Dialog;
 
     move-result-object v18
 
@@ -3842,9 +3842,9 @@
     :cond_5
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/android/settings/users/UserSettings;->mMePreference:Lcom/android/settings/users/UserPreference;
+    iget-object v5, v0, Lcom/android/settings_ex/users/UserSettings;->mMePreference:Lcom/android/settings_ex/users/UserPreference;
 
-    invoke-virtual {v5}, Lcom/android/settings/users/UserPreference;->getIcon()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v5}, Lcom/android/settings_ex/users/UserPreference;->getIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object v9
 
@@ -3879,12 +3879,12 @@
 
     .prologue
     .line 311
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroy()V
 
     .line 313
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    iget-boolean v0, v0, Lcom/android/settings/users/UserSettings$UserCapabilities;->mEnabled:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mEnabled:Z
 
     if-nez v0, :cond_0
 
@@ -3894,11 +3894,11 @@
 
     .line 315
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/users/UserSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/users/UserSettings;->mUserChangeReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/users/UserSettings;->mUserChangeReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
@@ -3910,10 +3910,10 @@
 
     .prologue
     .line 568
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDialogShowing()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDialogShowing()V
 
     .line 570
-    invoke-virtual {p0, p0}, Lcom/android/settings/users/UserSettings;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {p0, p0}, Lcom/android/settings_ex/users/UserSettings;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 571
     return-void
@@ -3925,7 +3925,7 @@
 
     .prologue
     .line 1201
-    iget-object v1, p0, Lcom/android/settings/users/UserSettings;->mUserLock:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/android/settings_ex/users/UserSettings;->mUserLock:Ljava/lang/Object;
 
     monitor-enter v1
 
@@ -3933,15 +3933,15 @@
     const/4 v0, 0x0
 
     :try_start_0
-    iput-boolean v0, p0, Lcom/android/settings/users/UserSettings;->mAddingUser:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/users/UserSettings;->mAddingUser:Z
 
     .line 1203
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/users/UserSettings;->mRemovingUserId:I
+    iput v0, p0, Lcom/android/settings_ex/users/UserSettings;->mRemovingUserId:I
 
     .line 1204
-    invoke-direct {p0}, Lcom/android/settings/users/UserSettings;->updateUserList()V
+    invoke-direct {p0}, Lcom/android/settings_ex/users/UserSettings;->updateUserList()V
 
     .line 1205
     monitor-exit v1
@@ -3966,7 +3966,7 @@
 
     .prologue
     .line 1233
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mMePreference:Lcom/android/settings/users/UserPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mMePreference:Lcom/android/settings_ex/users/UserPreference;
 
     const v1, 0x7f0e0d29
 
@@ -3978,11 +3978,11 @@
 
     aput-object p1, v2, v3
 
-    invoke-virtual {p0, v1, v2}, Lcom/android/settings/users/UserSettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v1, v2}, Lcom/android/settings_ex/users/UserSettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/users/UserPreference;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/users/UserPreference;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 1234
     return-void
@@ -3993,12 +3993,12 @@
 
     .prologue
     .line 304
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 306
     const/4 v0, 0x3
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/users/UserSettings;->removeDialog(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/users/UserSettings;->removeDialog(I)V
 
     .line 307
     return-void
@@ -4010,9 +4010,9 @@
 
     .prologue
     .line 1228
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mMePreference:Lcom/android/settings/users/UserPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mMePreference:Lcom/android/settings_ex/users/UserPreference;
 
-    invoke-virtual {v0, p1}, Lcom/android/settings/users/UserPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p1}, Lcom/android/settings_ex/users/UserPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 1229
     return-void
@@ -4025,7 +4025,7 @@
 
     .prologue
     .line 1210
-    iget-object v1, p0, Lcom/android/settings/users/UserSettings;->mNicknamePreference:Lcom/android/settings/SelectableEditTextPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/users/UserSettings;->mNicknamePreference:Lcom/android/settings_ex/SelectableEditTextPreference;
 
     if-ne p1, v1, :cond_1
 
@@ -4036,7 +4036,7 @@
 
     .line 1212
     .local v0, "value":Ljava/lang/String;
-    iget-object v1, p0, Lcom/android/settings/users/UserSettings;->mNicknamePreference:Lcom/android/settings/SelectableEditTextPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/users/UserSettings;->mNicknamePreference:Lcom/android/settings_ex/SelectableEditTextPreference;
 
     if-ne p1, v1, :cond_0
 
@@ -4049,7 +4049,7 @@
     if-lez v1, :cond_0
 
     .line 1214
-    invoke-direct {p0, v0}, Lcom/android/settings/users/UserSettings;->setUserName(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/users/UserSettings;->setUserName(Ljava/lang/String;)V
 
     .line 1216
     :cond_0
@@ -4074,14 +4074,14 @@
     const/4 v2, 0x1
 
     .line 1107
-    iget-object v3, p0, Lcom/android/settings/users/UserSettings;->mMePreference:Lcom/android/settings/users/UserPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/users/UserSettings;->mMePreference:Lcom/android/settings_ex/users/UserPreference;
 
     if-ne p1, v3, :cond_3
 
     .line 1108
-    iget-object v3, p0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iget-object v3, p0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    iget-boolean v3, v3, Lcom/android/settings/users/UserSettings$UserCapabilities;->mIsGuest:Z
+    iget-boolean v3, v3, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mIsGuest:Z
 
     if-eqz v3, :cond_0
 
@@ -4093,7 +4093,7 @@
     .line 1113
     .restart local p1    # "pref":Landroid/preference/Preference;
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/users/UserSettings;->mUserManager:Landroid/os/UserManager;
+    iget-object v2, p0, Lcom/android/settings_ex/users/UserSettings;->mUserManager:Landroid/os/UserManager;
 
     invoke-virtual {v2}, Landroid/os/UserManager;->isLinkedUser()Z
 
@@ -4114,21 +4114,21 @@
     :cond_2
     const/16 v2, 0x9
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/users/UserSettings;->showDialog(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/users/UserSettings;->showDialog(I)V
 
     goto :goto_1
 
     .line 1119
     :cond_3
-    instance-of v3, p1, Lcom/android/settings/users/UserPreference;
+    instance-of v3, p1, Lcom/android/settings_ex/users/UserPreference;
 
     if-eqz v3, :cond_6
 
     .line 1120
-    check-cast p1, Lcom/android/settings/users/UserPreference;
+    check-cast p1, Lcom/android/settings_ex/users/UserPreference;
 
     .end local p1    # "pref":Landroid/preference/Preference;
-    invoke-virtual {p1}, Lcom/android/settings/users/UserPreference;->getUserId()I
+    invoke-virtual {p1}, Lcom/android/settings_ex/users/UserPreference;->getUserId()I
 
     move-result v1
 
@@ -4139,13 +4139,13 @@
     if-ne v1, v2, :cond_4
 
     .line 1122
-    invoke-direct {p0}, Lcom/android/settings/users/UserSettings;->createAndSwitchToGuestUser()V
+    invoke-direct {p0}, Lcom/android/settings_ex/users/UserSettings;->createAndSwitchToGuestUser()V
 
     goto :goto_1
 
     .line 1125
     :cond_4
-    iget-object v2, p0, Lcom/android/settings/users/UserSettings;->mUserManager:Landroid/os/UserManager;
+    iget-object v2, p0, Lcom/android/settings_ex/users/UserSettings;->mUserManager:Landroid/os/UserManager;
 
     invoke-virtual {v2, v1}, Landroid/os/UserManager;->getUserInfo(I)Landroid/content/pm/UserInfo;
 
@@ -4153,16 +4153,16 @@
 
     .line 1126
     .local v0, "user":Landroid/content/pm/UserInfo;
-    invoke-direct {p0, v0}, Lcom/android/settings/users/UserSettings;->isInitialized(Landroid/content/pm/UserInfo;)Z
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/users/UserSettings;->isInitialized(Landroid/content/pm/UserInfo;)Z
 
     move-result v2
 
     if-nez v2, :cond_5
 
     .line 1127
-    iget-object v2, p0, Lcom/android/settings/users/UserSettings;->mHandler:Landroid/os/Handler;
+    iget-object v2, p0, Lcom/android/settings_ex/users/UserSettings;->mHandler:Landroid/os/Handler;
 
-    iget-object v3, p0, Lcom/android/settings/users/UserSettings;->mHandler:Landroid/os/Handler;
+    iget-object v3, p0, Lcom/android/settings_ex/users/UserSettings;->mHandler:Landroid/os/Handler;
 
     const/4 v4, 0x2
 
@@ -4180,7 +4180,7 @@
 
     .line 1130
     :cond_5
-    invoke-direct {p0, v1}, Lcom/android/settings/users/UserSettings;->switchUserNow(I)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/users/UserSettings;->switchUserNow(I)V
 
     goto :goto_1
 
@@ -4198,22 +4198,22 @@
     if-ne v3, v4, :cond_1
 
     .line 1136
-    iget-object v3, p0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iget-object v3, p0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    iget-boolean v3, v3, Lcom/android/settings/users/UserSettings$UserCapabilities;->mCanAddRestrictedProfile:Z
+    iget-boolean v3, v3, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mCanAddRestrictedProfile:Z
 
     if-eqz v3, :cond_7
 
     .line 1137
     const/4 v2, 0x6
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/users/UserSettings;->showDialog(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/users/UserSettings;->showDialog(I)V
 
     goto :goto_1
 
     .line 1139
     :cond_7
-    invoke-direct {p0, v2}, Lcom/android/settings/users/UserSettings;->onAddUserClicked(I)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/users/UserSettings;->onAddUserClicked(I)V
 
     goto :goto_1
 .end method
@@ -4223,12 +4223,12 @@
 
     .prologue
     .line 294
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 296
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mUserCaps:Lcom/android/settings/users/UserSettings$UserCapabilities;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mUserCaps:Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    iget-boolean v0, v0, Lcom/android/settings/users/UserSettings$UserCapabilities;->mEnabled:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mEnabled:Z
 
     if-nez v0, :cond_0
 
@@ -4238,10 +4238,10 @@
 
     .line 298
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/users/UserSettings;->loadProfile()V
+    invoke-direct {p0}, Lcom/android/settings_ex/users/UserSettings;->loadProfile()V
 
     .line 299
-    invoke-direct {p0}, Lcom/android/settings/users/UserSettings;->updateUserList()V
+    invoke-direct {p0}, Lcom/android/settings_ex/users/UserSettings;->updateUserList()V
 
     goto :goto_0
 .end method
@@ -4252,24 +4252,24 @@
 
     .prologue
     .line 320
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 321
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mEditUserInfoController:Lcom/android/settings/users/EditUserInfoController;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mEditUserInfoController:Lcom/android/settings_ex/users/EditUserInfoController;
 
-    invoke-virtual {v0, p1}, Lcom/android/settings/users/EditUserInfoController;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-virtual {v0, p1}, Lcom/android/settings_ex/users/EditUserInfoController;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 322
     const-string v0, "adding_user"
 
-    iget v1, p0, Lcom/android/settings/users/UserSettings;->mAddedUserId:I
+    iget v1, p0, Lcom/android/settings_ex/users/UserSettings;->mAddedUserId:I
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 323
     const-string v0, "removing_user"
 
-    iget v1, p0, Lcom/android/settings/users/UserSettings;->mRemovingUserId:I
+    iget v1, p0, Lcom/android/settings_ex/users/UserSettings;->mRemovingUserId:I
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
@@ -4284,12 +4284,12 @@
 
     .prologue
     .line 328
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings;->mEditUserInfoController:Lcom/android/settings/users/EditUserInfoController;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings;->mEditUserInfoController:Lcom/android/settings_ex/users/EditUserInfoController;
 
-    invoke-virtual {v0}, Lcom/android/settings/users/EditUserInfoController;->startingActivityForResult()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/users/EditUserInfoController;->startingActivityForResult()V
 
     .line 329
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->startActivityForResult(Landroid/content/Intent;I)V
 
     .line 330
     return-void

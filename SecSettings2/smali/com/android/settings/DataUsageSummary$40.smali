@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/DataUsageSummary$40;
+.class final Lcom/android/settings_ex/DataUsageSummary$40;
 .super Ljava/lang/Object;
 .source "DataUsageSummary.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DataUsageSummary;->inflateDropDownPreference(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/view/View;)Landroid/view/View;
+    value = Lcom/android/settings_ex/DataUsageSummary;->inflateDropDownPreference(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/view/View;)Landroid/view/View;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
 
     .prologue
     .line 5741
-    iput-object p1, p0, Lcom/android/settings/DataUsageSummary$40;->val$mSpinner:Landroid/view/View;
+    iput-object p1, p0, Lcom/android/settings_ex/DataUsageSummary$40;->val$mSpinner:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,7 +47,7 @@
     invoke-virtual {p1, v0}, Landroid/view/View;->setPressed(Z)V
 
     .line 5745
-    iget-object v0, p0, Lcom/android/settings/DataUsageSummary$40;->val$mSpinner:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/DataUsageSummary$40;->val$mSpinner:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->performClick()Z
 

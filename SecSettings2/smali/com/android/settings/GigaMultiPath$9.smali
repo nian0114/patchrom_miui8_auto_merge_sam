@@ -1,4 +1,4 @@
-.class Lcom/android/settings/GigaMultiPath$9;
+.class Lcom/android/settings_ex/GigaMultiPath$9;
 .super Ljava/lang/Object;
 .source "GigaMultiPath.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/GigaMultiPath;->showProgressDialog()V
+    value = Lcom/android/settings_ex/GigaMultiPath;->showProgressDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/GigaMultiPath;
+.field final synthetic this$0:Lcom/android/settings_ex/GigaMultiPath;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/GigaMultiPath;)V
+.method constructor <init>(Lcom/android/settings_ex/GigaMultiPath;)V
     .locals 0
 
     .prologue
     .line 346
-    iput-object p1, p0, Lcom/android/settings/GigaMultiPath$9;->this$0:Lcom/android/settings/GigaMultiPath;
+    iput-object p1, p0, Lcom/android/settings_ex/GigaMultiPath$9;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,19 +41,19 @@
 
     .prologue
     .line 348
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath$9;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath$9;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
-    invoke-static {v0}, Lcom/android/settings/GigaMultiPath;->access$1000(Lcom/android/settings/GigaMultiPath;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
+    invoke-static {v0}, Lcom/android/settings_ex/GigaMultiPath;->access$1000(Lcom/android/settings_ex/GigaMultiPath;)Landroid/app/ProgressDialog;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath$9;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath$9;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
-    invoke-static {v0}, Lcom/android/settings/GigaMultiPath;->access$1000(Lcom/android/settings/GigaMultiPath;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
+    invoke-static {v0}, Lcom/android/settings_ex/GigaMultiPath;->access$1000(Lcom/android/settings_ex/GigaMultiPath;)Landroid/app/ProgressDialog;
 
     move-result-object v0
 
@@ -64,34 +64,34 @@
     if-eqz v0, :cond_0
 
     .line 349
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath$9;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath$9;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v0}, Lcom/android/settings/GigaMultiPath;->access$300(Lcom/android/settings/GigaMultiPath;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v0}, Lcom/android/settings_ex/GigaMultiPath;->access$300(Lcom/android/settings_ex/GigaMultiPath;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 350
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath$9;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath$9;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v0}, Lcom/android/settings/GigaMultiPath;->access$300(Lcom/android/settings/GigaMultiPath;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v0}, Lcom/android/settings_ex/GigaMultiPath;->access$300(Lcom/android/settings_ex/GigaMultiPath;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 351
-    iget-object v0, p0, Lcom/android/settings/GigaMultiPath$9;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaMultiPath$9;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
-    invoke-static {v0}, Lcom/android/settings/GigaMultiPath;->access$1000(Lcom/android/settings/GigaMultiPath;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
+    invoke-static {v0}, Lcom/android/settings_ex/GigaMultiPath;->access$1000(Lcom/android/settings_ex/GigaMultiPath;)Landroid/app/ProgressDialog;
 
     move-result-object v0
 

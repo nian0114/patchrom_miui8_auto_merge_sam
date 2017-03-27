@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/colorblind/ColorChipReport$5;
+.class Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$5;
 .super Ljava/lang/Object;
 .source "ColorChipReport.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    value = Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
 
 # virtual methods
@@ -29,10 +29,10 @@
 
     .prologue
     .line 369
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$5;->this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$5;->this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
-    # invokes: Lcom/android/settings/accessibility/colorblind/ColorChipReport;->RetestOperate()V
-    invoke-static {v0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->access$400(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)V
+    # invokes: Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->RetestOperate()V
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->access$400(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)V
 
     .line 370
     return-void

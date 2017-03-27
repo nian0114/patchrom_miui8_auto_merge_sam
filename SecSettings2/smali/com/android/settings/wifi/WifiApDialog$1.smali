@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wifi/WifiApDialog$1;
+.class Lcom/android/settings_ex/wifi/WifiApDialog$1;
 .super Landroid/content/BroadcastReceiver;
 .source "WifiApDialog.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiApDialog;
+    value = Lcom/android/settings_ex/wifi/WifiApDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiApDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiApDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiApDialog;)V
     .locals 0
 
     .prologue
     .line 406
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -58,35 +58,35 @@
     .local v2, "plug":I
     if-ne v2, v5, :cond_3
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # invokes: Lcom/android/settings/wifi/WifiApDialog;->getChgType()Z
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiApDialog;->access$000(Lcom/android/settings/wifi/WifiApDialog;)Z
+    # invokes: Lcom/android/settings_ex/wifi/WifiApDialog;->getChgType()Z
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$000(Lcom/android/settings_ex/wifi/WifiApDialog;)Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
     .line 411
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # setter for: Lcom/android/settings/wifi/WifiApDialog;->mNumBasedOnCharger:I
-    invoke-static {v3, v5}, Lcom/android/settings/wifi/WifiApDialog;->access$102(Lcom/android/settings/wifi/WifiApDialog;I)I
+    # setter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mNumBasedOnCharger:I
+    invoke-static {v3, v5}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$102(Lcom/android/settings_ex/wifi/WifiApDialog;I)I
 
     .line 412
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mNumBasedOnCharger:I
-    invoke-static {v4}, Lcom/android/settings/wifi/WifiApDialog;->access$100(Lcom/android/settings/wifi/WifiApDialog;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mNumBasedOnCharger:I
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$100(Lcom/android/settings_ex/wifi/WifiApDialog;)I
 
     move-result v4
 
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mNumBasedOnCountry:I
-    invoke-static {v5}, Lcom/android/settings/wifi/WifiApDialog;->access$300(Lcom/android/settings/wifi/WifiApDialog;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mNumBasedOnCountry:I
+    invoke-static {v5}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$300(Lcom/android/settings_ex/wifi/WifiApDialog;)I
 
     move-result v5
 
@@ -94,35 +94,35 @@
 
     new-array v4, v4, [Ljava/lang/String;
 
-    # setter for: Lcom/android/settings/wifi/WifiApDialog;->wifiAp5gItem:[Ljava/lang/String;
-    invoke-static {v3, v4}, Lcom/android/settings/wifi/WifiApDialog;->access$202(Lcom/android/settings/wifi/WifiApDialog;[Ljava/lang/String;)[Ljava/lang/String;
+    # setter for: Lcom/android/settings_ex/wifi/WifiApDialog;->wifiAp5gItem:[Ljava/lang/String;
+    invoke-static {v3, v4}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$202(Lcom/android/settings_ex/wifi/WifiApDialog;[Ljava/lang/String;)[Ljava/lang/String;
 
     .line 413
     const/4 v1, 0x0
 
     .local v1, "i":I
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mNumBasedOnCharger:I
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiApDialog;->access$100(Lcom/android/settings/wifi/WifiApDialog;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mNumBasedOnCharger:I
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$100(Lcom/android/settings_ex/wifi/WifiApDialog;)I
 
     move-result v3
 
     if-ge v1, v3, :cond_0
 
     .line 414
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->wifiAp5gItem:[Ljava/lang/String;
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiApDialog;->access$200(Lcom/android/settings/wifi/WifiApDialog;)[Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->wifiAp5gItem:[Ljava/lang/String;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$200(Lcom/android/settings_ex/wifi/WifiApDialog;)[Ljava/lang/String;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->wifiAp5gItemBasedOnCharger:[Ljava/lang/String;
-    invoke-static {v4}, Lcom/android/settings/wifi/WifiApDialog;->access$400(Lcom/android/settings/wifi/WifiApDialog;)[Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->wifiAp5gItemBasedOnCharger:[Ljava/lang/String;
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$400(Lcom/android/settings_ex/wifi/WifiApDialog;)[Ljava/lang/String;
 
     move-result-object v4
 
@@ -137,35 +137,35 @@
 
     .line 416
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mNumBasedOnCountry:I
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiApDialog;->access$300(Lcom/android/settings/wifi/WifiApDialog;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mNumBasedOnCountry:I
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$300(Lcom/android/settings_ex/wifi/WifiApDialog;)I
 
     move-result v3
 
     if-lez v3, :cond_1
 
     .line 417
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mNumBasedOnCharger:I
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiApDialog;->access$100(Lcom/android/settings/wifi/WifiApDialog;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mNumBasedOnCharger:I
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$100(Lcom/android/settings_ex/wifi/WifiApDialog;)I
 
     move-result v1
 
     :goto_1
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mNumBasedOnCharger:I
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiApDialog;->access$100(Lcom/android/settings/wifi/WifiApDialog;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mNumBasedOnCharger:I
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$100(Lcom/android/settings_ex/wifi/WifiApDialog;)I
 
     move-result v3
 
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mNumBasedOnCountry:I
-    invoke-static {v4}, Lcom/android/settings/wifi/WifiApDialog;->access$300(Lcom/android/settings/wifi/WifiApDialog;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mNumBasedOnCountry:I
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$300(Lcom/android/settings_ex/wifi/WifiApDialog;)I
 
     move-result v4
 
@@ -174,24 +174,24 @@
     if-ge v1, v3, :cond_1
 
     .line 418
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->wifiAp5gItem:[Ljava/lang/String;
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiApDialog;->access$200(Lcom/android/settings/wifi/WifiApDialog;)[Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->wifiAp5gItem:[Ljava/lang/String;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$200(Lcom/android/settings_ex/wifi/WifiApDialog;)[Ljava/lang/String;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->wifiAp5gItemBasedOnCountry:[Ljava/lang/String;
-    invoke-static {v4}, Lcom/android/settings/wifi/WifiApDialog;->access$500(Lcom/android/settings/wifi/WifiApDialog;)[Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->wifiAp5gItemBasedOnCountry:[Ljava/lang/String;
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$500(Lcom/android/settings_ex/wifi/WifiApDialog;)[Ljava/lang/String;
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mNumBasedOnCharger:I
-    invoke-static {v5}, Lcom/android/settings/wifi/WifiApDialog;->access$100(Lcom/android/settings/wifi/WifiApDialog;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mNumBasedOnCharger:I
+    invoke-static {v5}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$100(Lcom/android/settings_ex/wifi/WifiApDialog;)I
 
     move-result v5
 
@@ -210,17 +210,17 @@
     :cond_1
     new-instance v0, Landroid/widget/ArrayAdapter;
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mContext:Landroid/content/Context;
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiApDialog;->access$600(Lcom/android/settings/wifi/WifiApDialog;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mContext:Landroid/content/Context;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$600(Lcom/android/settings_ex/wifi/WifiApDialog;)Landroid/content/Context;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->wifiAp5gItem:[Ljava/lang/String;
-    invoke-static {v4}, Lcom/android/settings/wifi/WifiApDialog;->access$200(Lcom/android/settings/wifi/WifiApDialog;)[Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->wifiAp5gItem:[Ljava/lang/String;
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$200(Lcom/android/settings_ex/wifi/WifiApDialog;)[Ljava/lang/String;
 
     move-result-object v4
 
@@ -239,57 +239,57 @@
 
     .line 434
     :cond_3
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # setter for: Lcom/android/settings/wifi/WifiApDialog;->mNumBasedOnCharger:I
-    invoke-static {v3, v4}, Lcom/android/settings/wifi/WifiApDialog;->access$102(Lcom/android/settings/wifi/WifiApDialog;I)I
+    # setter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mNumBasedOnCharger:I
+    invoke-static {v3, v4}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$102(Lcom/android/settings_ex/wifi/WifiApDialog;I)I
 
     .line 435
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mNumBasedOnCountry:I
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiApDialog;->access$300(Lcom/android/settings/wifi/WifiApDialog;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mNumBasedOnCountry:I
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$300(Lcom/android/settings_ex/wifi/WifiApDialog;)I
 
     move-result v3
 
     if-lez v3, :cond_5
 
     .line 436
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mNumBasedOnCountry:I
-    invoke-static {v4}, Lcom/android/settings/wifi/WifiApDialog;->access$300(Lcom/android/settings/wifi/WifiApDialog;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mNumBasedOnCountry:I
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$300(Lcom/android/settings_ex/wifi/WifiApDialog;)I
 
     move-result v4
 
     new-array v4, v4, [Ljava/lang/String;
 
-    # setter for: Lcom/android/settings/wifi/WifiApDialog;->wifiAp5gItem:[Ljava/lang/String;
-    invoke-static {v3, v4}, Lcom/android/settings/wifi/WifiApDialog;->access$202(Lcom/android/settings/wifi/WifiApDialog;[Ljava/lang/String;)[Ljava/lang/String;
+    # setter for: Lcom/android/settings_ex/wifi/WifiApDialog;->wifiAp5gItem:[Ljava/lang/String;
+    invoke-static {v3, v4}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$202(Lcom/android/settings_ex/wifi/WifiApDialog;[Ljava/lang/String;)[Ljava/lang/String;
 
     .line 437
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mNumBasedOnCharger:I
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiApDialog;->access$100(Lcom/android/settings/wifi/WifiApDialog;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mNumBasedOnCharger:I
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$100(Lcom/android/settings_ex/wifi/WifiApDialog;)I
 
     move-result v1
 
     .restart local v1    # "i":I
     :goto_3
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mNumBasedOnCharger:I
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiApDialog;->access$100(Lcom/android/settings/wifi/WifiApDialog;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mNumBasedOnCharger:I
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$100(Lcom/android/settings_ex/wifi/WifiApDialog;)I
 
     move-result v3
 
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mNumBasedOnCountry:I
-    invoke-static {v4}, Lcom/android/settings/wifi/WifiApDialog;->access$300(Lcom/android/settings/wifi/WifiApDialog;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mNumBasedOnCountry:I
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$300(Lcom/android/settings_ex/wifi/WifiApDialog;)I
 
     move-result v4
 
@@ -298,17 +298,17 @@
     if-ge v1, v3, :cond_4
 
     .line 438
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->wifiAp5gItem:[Ljava/lang/String;
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiApDialog;->access$200(Lcom/android/settings/wifi/WifiApDialog;)[Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->wifiAp5gItem:[Ljava/lang/String;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$200(Lcom/android/settings_ex/wifi/WifiApDialog;)[Ljava/lang/String;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->wifiAp5gItemBasedOnCountry:[Ljava/lang/String;
-    invoke-static {v4}, Lcom/android/settings/wifi/WifiApDialog;->access$500(Lcom/android/settings/wifi/WifiApDialog;)[Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->wifiAp5gItemBasedOnCountry:[Ljava/lang/String;
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$500(Lcom/android/settings_ex/wifi/WifiApDialog;)[Ljava/lang/String;
 
     move-result-object v4
 
@@ -325,17 +325,17 @@
     :cond_4
     new-instance v0, Landroid/widget/ArrayAdapter;
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mContext:Landroid/content/Context;
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiApDialog;->access$600(Lcom/android/settings/wifi/WifiApDialog;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mContext:Landroid/content/Context;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$600(Lcom/android/settings_ex/wifi/WifiApDialog;)Landroid/content/Context;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->wifiAp5gItem:[Ljava/lang/String;
-    invoke-static {v4}, Lcom/android/settings/wifi/WifiApDialog;->access$200(Lcom/android/settings/wifi/WifiApDialog;)[Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->wifiAp5gItem:[Ljava/lang/String;
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$200(Lcom/android/settings_ex/wifi/WifiApDialog;)[Ljava/lang/String;
 
     move-result-object v4
 
@@ -351,10 +351,10 @@
     .end local v0    # "adapter":Landroid/widget/ArrayAdapter;, "Landroid/widget/ArrayAdapter<Ljava/lang/String;>;"
     .end local v1    # "i":I
     :cond_5
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->CheckBoxChannel5g:Landroid/widget/RadioButton;
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiApDialog;->access$700(Lcom/android/settings/wifi/WifiApDialog;)Landroid/widget/RadioButton;
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->CheckBoxChannel5g:Landroid/widget/RadioButton;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$700(Lcom/android/settings_ex/wifi/WifiApDialog;)Landroid/widget/RadioButton;
 
     move-result-object v3
 
@@ -365,40 +365,40 @@
     if-eqz v3, :cond_2
 
     .line 445
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->CheckBoxChannel2g:Landroid/widget/RadioButton;
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiApDialog;->access$800(Lcom/android/settings/wifi/WifiApDialog;)Landroid/widget/RadioButton;
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->CheckBoxChannel2g:Landroid/widget/RadioButton;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$800(Lcom/android/settings_ex/wifi/WifiApDialog;)Landroid/widget/RadioButton;
 
     move-result-object v3
 
     invoke-virtual {v3, v5}, Landroid/widget/RadioButton;->setChecked(Z)V
 
     .line 446
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->CheckBoxChannel5g:Landroid/widget/RadioButton;
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiApDialog;->access$700(Lcom/android/settings/wifi/WifiApDialog;)Landroid/widget/RadioButton;
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->CheckBoxChannel5g:Landroid/widget/RadioButton;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$700(Lcom/android/settings_ex/wifi/WifiApDialog;)Landroid/widget/RadioButton;
 
     move-result-object v3
 
     invoke-virtual {v3, v4}, Landroid/widget/RadioButton;->setChecked(Z)V
 
     .line 447
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mChannel:Landroid/widget/Spinner;
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiApDialog;->access$900(Lcom/android/settings/wifi/WifiApDialog;)Landroid/widget/Spinner;
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mChannel:Landroid/widget/Spinner;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$900(Lcom/android/settings_ex/wifi/WifiApDialog;)Landroid/widget/Spinner;
 
     move-result-object v3
 
     invoke-virtual {v3, v4}, Landroid/widget/Spinner;->setVisibility(I)V
 
     .line 448
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mChannel5g:Landroid/widget/TextView;
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiApDialog;->access$1000(Lcom/android/settings/wifi/WifiApDialog;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mChannel5g:Landroid/widget/TextView;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$1000(Lcom/android/settings_ex/wifi/WifiApDialog;)Landroid/widget/TextView;
 
     move-result-object v3
 
@@ -407,30 +407,30 @@
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 449
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mLast2gChannel:I
-    invoke-static {v4}, Lcom/android/settings/wifi/WifiApDialog;->access$1200(Lcom/android/settings/wifi/WifiApDialog;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mLast2gChannel:I
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$1200(Lcom/android/settings_ex/wifi/WifiApDialog;)I
 
     move-result v4
 
-    # setter for: Lcom/android/settings/wifi/WifiApDialog;->mSelectedChannel:I
-    invoke-static {v3, v4}, Lcom/android/settings/wifi/WifiApDialog;->access$1102(Lcom/android/settings/wifi/WifiApDialog;I)I
+    # setter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mSelectedChannel:I
+    invoke-static {v3, v4}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$1102(Lcom/android/settings_ex/wifi/WifiApDialog;I)I
 
     .line 450
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mChannel:Landroid/widget/Spinner;
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiApDialog;->access$900(Lcom/android/settings/wifi/WifiApDialog;)Landroid/widget/Spinner;
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mChannel:Landroid/widget/Spinner;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$900(Lcom/android/settings_ex/wifi/WifiApDialog;)Landroid/widget/Spinner;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiApDialog$1;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiApDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mSelectedChannel:I
-    invoke-static {v4}, Lcom/android/settings/wifi/WifiApDialog;->access$1100(Lcom/android/settings/wifi/WifiApDialog;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mSelectedChannel:I
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$1100(Lcom/android/settings_ex/wifi/WifiApDialog;)I
 
     move-result v4
 

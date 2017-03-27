@@ -1,4 +1,4 @@
-.class Lcom/android/settings/ApplicationsSettings$AlphaComparator;
+.class Lcom/android/settings_ex/ApplicationsSettings$AlphaComparator;
 .super Ljava/lang/Object;
 .source "ApplicationsSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/ApplicationsSettings;
+    value = Lcom/android/settings_ex/ApplicationsSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,16 +30,16 @@
 # instance fields
 .field private final sCollator:Ljava/text/Collator;
 
-.field final synthetic this$0:Lcom/android/settings/ApplicationsSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/ApplicationsSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/ApplicationsSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/ApplicationsSettings;)V
     .locals 1
 
     .prologue
     .line 215
-    iput-object p1, p0, Lcom/android/settings/ApplicationsSettings$AlphaComparator;->this$0:Lcom/android/settings/ApplicationsSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/ApplicationsSettings$AlphaComparator;->this$0:Lcom/android/settings_ex/ApplicationsSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,7 +48,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/ApplicationsSettings$AlphaComparator;->sCollator:Ljava/text/Collator;
+    iput-object v0, p0, Lcom/android/settings_ex/ApplicationsSettings$AlphaComparator;->sCollator:Ljava/text/Collator;
 
     return-void
 .end method
@@ -64,10 +64,10 @@
     .line 220
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/ApplicationsSettings$AlphaComparator;->this$0:Lcom/android/settings/ApplicationsSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/ApplicationsSettings$AlphaComparator;->this$0:Lcom/android/settings_ex/ApplicationsSettings;
 
-    # getter for: Lcom/android/settings/ApplicationsSettings;->mPm:Landroid/content/pm/PackageManager;
-    invoke-static {v0}, Lcom/android/settings/ApplicationsSettings;->access$100(Lcom/android/settings/ApplicationsSettings;)Landroid/content/pm/PackageManager;
+    # getter for: Lcom/android/settings_ex/ApplicationsSettings;->mPm:Landroid/content/pm/PackageManager;
+    invoke-static {v0}, Lcom/android/settings_ex/ApplicationsSettings;->access$100(Lcom/android/settings_ex/ApplicationsSettings;)Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
@@ -93,10 +93,10 @@
     :cond_1
     if-eqz p2, :cond_2
 
-    iget-object v0, p0, Lcom/android/settings/ApplicationsSettings$AlphaComparator;->this$0:Lcom/android/settings/ApplicationsSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/ApplicationsSettings$AlphaComparator;->this$0:Lcom/android/settings_ex/ApplicationsSettings;
 
-    # getter for: Lcom/android/settings/ApplicationsSettings;->mPm:Landroid/content/pm/PackageManager;
-    invoke-static {v0}, Lcom/android/settings/ApplicationsSettings;->access$100(Lcom/android/settings/ApplicationsSettings;)Landroid/content/pm/PackageManager;
+    # getter for: Lcom/android/settings_ex/ApplicationsSettings;->mPm:Landroid/content/pm/PackageManager;
+    invoke-static {v0}, Lcom/android/settings_ex/ApplicationsSettings;->access$100(Lcom/android/settings_ex/ApplicationsSettings;)Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
@@ -118,12 +118,12 @@
 
     .line 224
     :cond_3
-    iget-object v0, p0, Lcom/android/settings/ApplicationsSettings$AlphaComparator;->sCollator:Ljava/text/Collator;
+    iget-object v0, p0, Lcom/android/settings_ex/ApplicationsSettings$AlphaComparator;->sCollator:Ljava/text/Collator;
 
-    iget-object v1, p0, Lcom/android/settings/ApplicationsSettings$AlphaComparator;->this$0:Lcom/android/settings/ApplicationsSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/ApplicationsSettings$AlphaComparator;->this$0:Lcom/android/settings_ex/ApplicationsSettings;
 
-    # getter for: Lcom/android/settings/ApplicationsSettings;->mPm:Landroid/content/pm/PackageManager;
-    invoke-static {v1}, Lcom/android/settings/ApplicationsSettings;->access$100(Lcom/android/settings/ApplicationsSettings;)Landroid/content/pm/PackageManager;
+    # getter for: Lcom/android/settings_ex/ApplicationsSettings;->mPm:Landroid/content/pm/PackageManager;
+    invoke-static {v1}, Lcom/android/settings_ex/ApplicationsSettings;->access$100(Lcom/android/settings_ex/ApplicationsSettings;)Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
@@ -139,10 +139,10 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/ApplicationsSettings$AlphaComparator;->this$0:Lcom/android/settings/ApplicationsSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/ApplicationsSettings$AlphaComparator;->this$0:Lcom/android/settings_ex/ApplicationsSettings;
 
-    # getter for: Lcom/android/settings/ApplicationsSettings;->mPm:Landroid/content/pm/PackageManager;
-    invoke-static {v2}, Lcom/android/settings/ApplicationsSettings;->access$100(Lcom/android/settings/ApplicationsSettings;)Landroid/content/pm/PackageManager;
+    # getter for: Lcom/android/settings_ex/ApplicationsSettings;->mPm:Landroid/content/pm/PackageManager;
+    invoke-static {v2}, Lcom/android/settings_ex/ApplicationsSettings;->access$100(Lcom/android/settings_ex/ApplicationsSettings;)Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
@@ -178,7 +178,7 @@
     check-cast p2, Landroid/content/pm/ResolveInfo;
 
     .end local p2    # "x1":Ljava/lang/Object;
-    invoke-virtual {p0, p1, p2}, Lcom/android/settings/ApplicationsSettings$AlphaComparator;->compare(Landroid/content/pm/ResolveInfo;Landroid/content/pm/ResolveInfo;)I
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings_ex/ApplicationsSettings$AlphaComparator;->compare(Landroid/content/pm/ResolveInfo;Landroid/content/pm/ResolveInfo;)I
 
     move-result v0
 

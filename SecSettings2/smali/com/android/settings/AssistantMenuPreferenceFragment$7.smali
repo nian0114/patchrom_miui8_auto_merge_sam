@@ -1,14 +1,14 @@
-.class Lcom/android/settings/AssistantMenuPreferenceFragment$7;
+.class Lcom/android/settings_ex/AssistantMenuPreferenceFragment$7;
 .super Ljava/lang/Object;
 .source "AssistantMenuPreferenceFragment.java"
 
 # interfaces
-.implements Lcom/android/settings/DropDownPreference$Callback;
+.implements Lcom/android/settings_ex/DropDownPreference$Callback;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/AssistantMenuPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/AssistantMenuPreferenceFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/AssistantMenuPreferenceFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/AssistantMenuPreferenceFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/AssistantMenuPreferenceFragment;)V
     .locals 0
 
     .prologue
     .line 350
-    iput-object p1, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$7;->this$0:Lcom/android/settings/AssistantMenuPreferenceFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$7;->this$0:Lcom/android/settings_ex/AssistantMenuPreferenceFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -52,9 +52,9 @@
 
     .line 357
     .local v0, "value":I
-    iget-object v1, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$7;->this$0:Lcom/android/settings/AssistantMenuPreferenceFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$7;->this$0:Lcom/android/settings_ex/AssistantMenuPreferenceFragment;
 
-    invoke-virtual {v1}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v1}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 

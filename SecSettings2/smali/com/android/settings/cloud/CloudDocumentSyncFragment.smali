@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/cloud/CloudDocumentSyncFragment;
-.super Lcom/android/settings/cloud/SyncFragment;
+.class public Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;
+.super Lcom/android/settings_ex/cloud/SyncFragment;
 .source "CloudDocumentSyncFragment.java"
 
 
@@ -15,7 +15,7 @@
     .line 22
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->isDocumentSyncAvailable:Z
+    sput-boolean v0, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->isDocumentSyncAvailable:Z
 
     return-void
 .end method
@@ -25,7 +25,7 @@
 
     .prologue
     .line 16
-    invoke-direct {p0}, Lcom/android/settings/cloud/SyncFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/cloud/SyncFragment;-><init>()V
 
     return-void
 .end method
@@ -51,16 +51,16 @@
     .local v1, "i":Landroid/content/Intent;
     const-string v2, "docSync"
 
-    iget-object v3, p0, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v3}, Lcom/android/settings/widget/SwitchBar;->isChecked()Z
+    invoke-virtual {v3}, Lcom/android/settings_ex/widget/SwitchBar;->isChecked()Z
 
     move-result v3
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 96
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -79,9 +79,9 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v4}, Lcom/android/settings/widget/SwitchBar;->isChecked()Z
+    invoke-virtual {v4}, Lcom/android/settings_ex/widget/SwitchBar;->isChecked()Z
 
     move-result v4
 
@@ -123,7 +123,7 @@
     .line 106
     const-string v2, "wifiOnlyValue"
 
-    iget-object v3, p0, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v3}, Landroid/preference/CheckBoxPreference;->isChecked()Z
 
@@ -145,7 +145,7 @@
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
     .line 110
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -164,7 +164,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v4}, Landroid/preference/CheckBoxPreference;->isChecked()Z
 
@@ -188,42 +188,42 @@
 
     .prologue
     .line 37
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
     if-nez v0, :cond_0
 
     .line 38
     const-string v0, "pref_wifi_only"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/CheckBoxPreference;
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
     .line 43
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v0, p0}, Landroid/preference/CheckBoxPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 44
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->syncDescriptionPref:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->syncDescriptionPref:Landroid/preference/Preference;
 
     if-nez v0, :cond_1
 
     .line 45
     const-string v0, "sync_description"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/cloud/DocumentsSyncDescriptionPreference;
+    check-cast v0, Lcom/android/settings_ex/cloud/DocumentsSyncDescriptionPreference;
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->syncDescriptionPref:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->syncDescriptionPref:Landroid/preference/Preference;
 
     .line 47
     :cond_1
@@ -236,15 +236,15 @@
 
     .prologue
     .line 27
-    invoke-super {p0, p1}, Lcom/android/settings/cloud/SyncFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/cloud/SyncFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 29
     const v0, 0x7f080029
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->addPreferencesFromResource(I)V
 
     .line 32
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->getPreferencesReference()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->getPreferencesReference()V
 
     .line 33
     return-void
@@ -255,33 +255,33 @@
 
     .prologue
     .line 52
-    invoke-super {p0}, Lcom/android/settings/cloud/SyncFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/cloud/SyncFragment;->onResume()V
 
     .line 55
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getInstance()Lcom/android/settings/cloud/CloudSettings;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getInstance()Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/settings/cloud/CloudSettings;->isDocumentSync()Z
+    invoke-virtual {v1}, Lcom/android/settings_ex/cloud/CloudSettings;->isDocumentSync()Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 59
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 60
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 63
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->updatePreferences()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->updatePreferences()V
 
     .line 64
     return-void
@@ -293,13 +293,13 @@
 
     .prologue
     .line 130
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getInstance()Lcom/android/settings/cloud/CloudSettings;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getInstance()Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v0
 
     const/4 v1, 0x4
 
-    invoke-virtual {v0, v1, p1}, Lcom/android/settings/cloud/CloudSettings;->setWifiOnly(IZ)V
+    invoke-virtual {v0, v1, p1}, Lcom/android/settings_ex/cloud/CloudSettings;->setWifiOnly(IZ)V
 
     .line 131
     return-void
@@ -311,21 +311,21 @@
 
     .prologue
     .line 119
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getInstance()Lcom/android/settings/cloud/CloudSettings;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getInstance()Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/android/settings/cloud/CloudSettings;->setDocumentSync(Z)V
+    invoke-virtual {v0, p1}, Lcom/android/settings_ex/cloud/CloudSettings;->setDocumentSync(Z)V
 
     .line 120
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->syncDescriptionPref:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->syncDescriptionPref:Landroid/preference/Preference;
 
-    check-cast v0, Lcom/android/settings/cloud/DocumentsSyncDescriptionPreference;
+    check-cast v0, Lcom/android/settings_ex/cloud/DocumentsSyncDescriptionPreference;
 
-    invoke-virtual {v0, p1}, Lcom/android/settings/cloud/DocumentsSyncDescriptionPreference;->showDivider(Z)V
+    invoke-virtual {v0, p1}, Lcom/android/settings_ex/cloud/DocumentsSyncDescriptionPreference;->showDivider(Z)V
 
     .line 122
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->updatePreferences()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->updatePreferences()V
 
     .line 123
     return-void
@@ -336,57 +336,57 @@
 
     .prologue
     .line 68
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
     .line 70
     .local v0, "mPreferenceScreen":Landroid/preference/PreferenceScreen;
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getInstance()Lcom/android/settings/cloud/CloudSettings;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getInstance()Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/cloud/CloudSettings;->isPhoneModel(Landroid/content/Context;)Z
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/cloud/CloudSettings;->isPhoneModel(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 71
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getInstance()Lcom/android/settings/cloud/CloudSettings;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getInstance()Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/settings/cloud/CloudSettings;->isDocumentSync()Z
+    invoke-virtual {v1}, Lcom/android/settings_ex/cloud/CloudSettings;->isDocumentSync()Z
 
     move-result v1
 
-    sput-boolean v1, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->isDocumentSyncAvailable:Z
+    sput-boolean v1, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->isDocumentSyncAvailable:Z
 
     .line 72
-    sget-boolean v1, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->isDocumentSyncAvailable:Z
+    sget-boolean v1, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->isDocumentSyncAvailable:Z
 
     if-eqz v1, :cond_0
 
     .line 73
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->addPreference(Landroid/preference/Preference;)Z
 
     .line 74
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getInstance()Lcom/android/settings/cloud/CloudSettings;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getInstance()Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v2
 
     const/4 v3, 0x4
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/cloud/CloudSettings;->isWifiOnly(I)Z
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/cloud/CloudSettings;->isWifiOnly(I)Z
 
     move-result v2
 
@@ -398,7 +398,7 @@
 
     .line 76
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
@@ -406,7 +406,7 @@
 
     .line 79
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudDocumentSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 

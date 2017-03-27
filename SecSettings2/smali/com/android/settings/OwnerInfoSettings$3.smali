@@ -1,4 +1,4 @@
-.class Lcom/android/settings/OwnerInfoSettings$3;
+.class Lcom/android/settings_ex/OwnerInfoSettings$3;
 .super Ljava/lang/Object;
 .source "OwnerInfoSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/OwnerInfoSettings;->onResume()V
+    value = Lcom/android/settings_ex/OwnerInfoSettings;->onResume()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/OwnerInfoSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/OwnerInfoSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/OwnerInfoSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/OwnerInfoSettings;)V
     .locals 0
 
     .prologue
     .line 258
-    iput-object p1, p0, Lcom/android/settings/OwnerInfoSettings$3;->this$0:Lcom/android/settings/OwnerInfoSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/OwnerInfoSettings$3;->this$0:Lcom/android/settings_ex/OwnerInfoSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -69,14 +69,14 @@
     if-gt v0, v1, :cond_0
 
     .line 292
-    iget-object v0, p0, Lcom/android/settings/OwnerInfoSettings$3;->this$0:Lcom/android/settings/OwnerInfoSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/OwnerInfoSettings$3;->this$0:Lcom/android/settings_ex/OwnerInfoSettings;
 
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    # setter for: Lcom/android/settings/OwnerInfoSettings;->info:Ljava/lang/String;
-    invoke-static {v0, v1}, Lcom/android/settings/OwnerInfoSettings;->access$202(Lcom/android/settings/OwnerInfoSettings;Ljava/lang/String;)Ljava/lang/String;
+    # setter for: Lcom/android/settings_ex/OwnerInfoSettings;->info:Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/android/settings_ex/OwnerInfoSettings;->access$202(Lcom/android/settings_ex/OwnerInfoSettings;Ljava/lang/String;)Ljava/lang/String;
 
     .line 294
     :cond_0
@@ -109,10 +109,10 @@
     if-lez v1, :cond_0
 
     .line 265
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings$3;->this$0:Lcom/android/settings/OwnerInfoSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings$3;->this$0:Lcom/android/settings_ex/OwnerInfoSettings;
 
-    # getter for: Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
-    invoke-static {v1}, Lcom/android/settings/OwnerInfoSettings;->access$000(Lcom/android/settings/OwnerInfoSettings;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    invoke-static {v1}, Lcom/android/settings_ex/OwnerInfoSettings;->access$000(Lcom/android/settings_ex/OwnerInfoSettings;)Landroid/widget/EditText;
 
     move-result-object v1
 
@@ -129,19 +129,19 @@
     if-le v1, v5, :cond_2
 
     .line 271
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings$3;->this$0:Lcom/android/settings/OwnerInfoSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings$3;->this$0:Lcom/android/settings_ex/OwnerInfoSettings;
 
-    # getter for: Lcom/android/settings/OwnerInfoSettings;->info:Ljava/lang/String;
-    invoke-static {v1}, Lcom/android/settings/OwnerInfoSettings;->access$200(Lcom/android/settings/OwnerInfoSettings;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/OwnerInfoSettings;->info:Ljava/lang/String;
+    invoke-static {v1}, Lcom/android/settings_ex/OwnerInfoSettings;->access$200(Lcom/android/settings_ex/OwnerInfoSettings;)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings$3;->this$0:Lcom/android/settings/OwnerInfoSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings$3;->this$0:Lcom/android/settings_ex/OwnerInfoSettings;
 
-    # getter for: Lcom/android/settings/OwnerInfoSettings;->info:Ljava/lang/String;
-    invoke-static {v1}, Lcom/android/settings/OwnerInfoSettings;->access$200(Lcom/android/settings/OwnerInfoSettings;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/OwnerInfoSettings;->info:Ljava/lang/String;
+    invoke-static {v1}, Lcom/android/settings_ex/OwnerInfoSettings;->access$200(Lcom/android/settings_ex/OwnerInfoSettings;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -152,17 +152,17 @@
     if-gt v1, v5, :cond_1
 
     .line 272
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings$3;->this$0:Lcom/android/settings/OwnerInfoSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings$3;->this$0:Lcom/android/settings_ex/OwnerInfoSettings;
 
-    # getter for: Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
-    invoke-static {v1}, Lcom/android/settings/OwnerInfoSettings;->access$000(Lcom/android/settings/OwnerInfoSettings;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    invoke-static {v1}, Lcom/android/settings_ex/OwnerInfoSettings;->access$000(Lcom/android/settings_ex/OwnerInfoSettings;)Landroid/widget/EditText;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings$3;->this$0:Lcom/android/settings/OwnerInfoSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings$3;->this$0:Lcom/android/settings_ex/OwnerInfoSettings;
 
-    # getter for: Lcom/android/settings/OwnerInfoSettings;->info:Ljava/lang/String;
-    invoke-static {v2}, Lcom/android/settings/OwnerInfoSettings;->access$200(Lcom/android/settings/OwnerInfoSettings;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/OwnerInfoSettings;->info:Ljava/lang/String;
+    invoke-static {v2}, Lcom/android/settings_ex/OwnerInfoSettings;->access$200(Lcom/android/settings_ex/OwnerInfoSettings;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -170,10 +170,10 @@
 
     .line 277
     :goto_1
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings$3;->this$0:Lcom/android/settings/OwnerInfoSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings$3;->this$0:Lcom/android/settings_ex/OwnerInfoSettings;
 
-    # getter for: Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
-    invoke-static {v1}, Lcom/android/settings/OwnerInfoSettings;->access$000(Lcom/android/settings/OwnerInfoSettings;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    invoke-static {v1}, Lcom/android/settings_ex/OwnerInfoSettings;->access$000(Lcom/android/settings_ex/OwnerInfoSettings;)Landroid/widget/EditText;
 
     move-result-object v1
 
@@ -181,9 +181,9 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings$3;->this$0:Lcom/android/settings/OwnerInfoSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings$3;->this$0:Lcom/android/settings_ex/OwnerInfoSettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/OwnerInfoSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Lcom/android/settings_ex/OwnerInfoSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -198,24 +198,24 @@
     invoke-virtual {v1, v2, v3}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
     .line 278
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings$3;->this$0:Lcom/android/settings/OwnerInfoSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings$3;->this$0:Lcom/android/settings_ex/OwnerInfoSettings;
 
-    # getter for: Lcom/android/settings/OwnerInfoSettings;->mErrorTextView:Landroid/widget/TextView;
-    invoke-static {v1}, Lcom/android/settings/OwnerInfoSettings;->access$300(Lcom/android/settings/OwnerInfoSettings;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/OwnerInfoSettings;->mErrorTextView:Landroid/widget/TextView;
+    invoke-static {v1}, Lcom/android/settings_ex/OwnerInfoSettings;->access$300(Lcom/android/settings_ex/OwnerInfoSettings;)Landroid/widget/TextView;
 
     move-result-object v1
 
     invoke-virtual {v1, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 279
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings$3;->this$0:Lcom/android/settings/OwnerInfoSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings$3;->this$0:Lcom/android/settings_ex/OwnerInfoSettings;
 
-    # getter for: Lcom/android/settings/OwnerInfoSettings;->mErrorTextView:Landroid/widget/TextView;
-    invoke-static {v1}, Lcom/android/settings/OwnerInfoSettings;->access$300(Lcom/android/settings/OwnerInfoSettings;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/OwnerInfoSettings;->mErrorTextView:Landroid/widget/TextView;
+    invoke-static {v1}, Lcom/android/settings_ex/OwnerInfoSettings;->access$300(Lcom/android/settings_ex/OwnerInfoSettings;)Landroid/widget/TextView;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings$3;->this$0:Lcom/android/settings/OwnerInfoSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings$3;->this$0:Lcom/android/settings_ex/OwnerInfoSettings;
 
     const v3, 0x7f0e01fb
 
@@ -229,17 +229,17 @@
 
     aput-object v5, v4, v6
 
-    invoke-virtual {v2, v3, v4}, Lcom/android/settings/OwnerInfoSettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v2, v3, v4}, Lcom/android/settings_ex/OwnerInfoSettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 280
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings$3;->this$0:Lcom/android/settings/OwnerInfoSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings$3;->this$0:Lcom/android/settings_ex/OwnerInfoSettings;
 
-    # getter for: Lcom/android/settings/OwnerInfoSettings;->mScrollView:Landroid/widget/ScrollView;
-    invoke-static {v1}, Lcom/android/settings/OwnerInfoSettings;->access$400(Lcom/android/settings/OwnerInfoSettings;)Landroid/widget/ScrollView;
+    # getter for: Lcom/android/settings_ex/OwnerInfoSettings;->mScrollView:Landroid/widget/ScrollView;
+    invoke-static {v1}, Lcom/android/settings_ex/OwnerInfoSettings;->access$400(Lcom/android/settings_ex/OwnerInfoSettings;)Landroid/widget/ScrollView;
 
     move-result-object v1
 
@@ -248,17 +248,17 @@
     invoke-virtual {v1, v2}, Landroid/widget/ScrollView;->fullScroll(I)Z
 
     .line 281
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings$3;->this$0:Lcom/android/settings/OwnerInfoSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings$3;->this$0:Lcom/android/settings_ex/OwnerInfoSettings;
 
-    # getter for: Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
-    invoke-static {v1}, Lcom/android/settings/OwnerInfoSettings;->access$000(Lcom/android/settings/OwnerInfoSettings;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    invoke-static {v1}, Lcom/android/settings_ex/OwnerInfoSettings;->access$000(Lcom/android/settings_ex/OwnerInfoSettings;)Landroid/widget/EditText;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings$3;->this$0:Lcom/android/settings/OwnerInfoSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings$3;->this$0:Lcom/android/settings_ex/OwnerInfoSettings;
 
-    # getter for: Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
-    invoke-static {v2}, Lcom/android/settings/OwnerInfoSettings;->access$000(Lcom/android/settings/OwnerInfoSettings;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    invoke-static {v2}, Lcom/android/settings_ex/OwnerInfoSettings;->access$000(Lcom/android/settings_ex/OwnerInfoSettings;)Landroid/widget/EditText;
 
     move-result-object v2
 
@@ -278,10 +278,10 @@
 
     .line 267
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings$3;->this$0:Lcom/android/settings/OwnerInfoSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings$3;->this$0:Lcom/android/settings_ex/OwnerInfoSettings;
 
-    # getter for: Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
-    invoke-static {v1}, Lcom/android/settings/OwnerInfoSettings;->access$000(Lcom/android/settings/OwnerInfoSettings;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    invoke-static {v1}, Lcom/android/settings_ex/OwnerInfoSettings;->access$000(Lcom/android/settings_ex/OwnerInfoSettings;)Landroid/widget/EditText;
 
     move-result-object v1
 
@@ -293,10 +293,10 @@
 
     .line 274
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings$3;->this$0:Lcom/android/settings/OwnerInfoSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings$3;->this$0:Lcom/android/settings_ex/OwnerInfoSettings;
 
-    # getter for: Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
-    invoke-static {v1}, Lcom/android/settings/OwnerInfoSettings;->access$000(Lcom/android/settings/OwnerInfoSettings;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    invoke-static {v1}, Lcom/android/settings_ex/OwnerInfoSettings;->access$000(Lcom/android/settings_ex/OwnerInfoSettings;)Landroid/widget/EditText;
 
     move-result-object v1
 
@@ -308,10 +308,10 @@
 
     .line 284
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings$3;->this$0:Lcom/android/settings/OwnerInfoSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings$3;->this$0:Lcom/android/settings_ex/OwnerInfoSettings;
 
-    # getter for: Lcom/android/settings/OwnerInfoSettings;->mErrorTextView:Landroid/widget/TextView;
-    invoke-static {v1}, Lcom/android/settings/OwnerInfoSettings;->access$300(Lcom/android/settings/OwnerInfoSettings;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/OwnerInfoSettings;->mErrorTextView:Landroid/widget/TextView;
+    invoke-static {v1}, Lcom/android/settings_ex/OwnerInfoSettings;->access$300(Lcom/android/settings_ex/OwnerInfoSettings;)Landroid/widget/TextView;
 
     move-result-object v1
 
@@ -320,10 +320,10 @@
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 285
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings$3;->this$0:Lcom/android/settings/OwnerInfoSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings$3;->this$0:Lcom/android/settings_ex/OwnerInfoSettings;
 
-    # getter for: Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
-    invoke-static {v1}, Lcom/android/settings/OwnerInfoSettings;->access$000(Lcom/android/settings/OwnerInfoSettings;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    invoke-static {v1}, Lcom/android/settings_ex/OwnerInfoSettings;->access$000(Lcom/android/settings_ex/OwnerInfoSettings;)Landroid/widget/EditText;
 
     move-result-object v1
 
@@ -331,9 +331,9 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings$3;->this$0:Lcom/android/settings/OwnerInfoSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings$3;->this$0:Lcom/android/settings_ex/OwnerInfoSettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/OwnerInfoSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Lcom/android/settings_ex/OwnerInfoSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 

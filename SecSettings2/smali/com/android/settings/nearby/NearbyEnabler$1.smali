@@ -1,4 +1,4 @@
-.class Lcom/android/settings/nearby/NearbyEnabler$1;
+.class Lcom/android/settings_ex/nearby/NearbyEnabler$1;
 .super Ljava/lang/Object;
 .source "NearbyEnabler.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/nearby/NearbyEnabler;->switchPreference(Z)V
+    value = Lcom/android/settings_ex/nearby/NearbyEnabler;->switchPreference(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nearby/NearbyEnabler;
+.field final synthetic this$0:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
 .field final synthetic val$handler:Landroid/preference/Preference$OnPreferenceChangeListener;
 
@@ -26,16 +26,16 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/nearby/NearbyEnabler;Landroid/preference/Preference$OnPreferenceChangeListener;Z)V
+.method constructor <init>(Lcom/android/settings_ex/nearby/NearbyEnabler;Landroid/preference/Preference$OnPreferenceChangeListener;Z)V
     .locals 0
 
     .prologue
     .line 487
-    iput-object p1, p0, Lcom/android/settings/nearby/NearbyEnabler$1;->this$0:Lcom/android/settings/nearby/NearbyEnabler;
+    iput-object p1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler$1;->this$0:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
-    iput-object p2, p0, Lcom/android/settings/nearby/NearbyEnabler$1;->val$handler:Landroid/preference/Preference$OnPreferenceChangeListener;
+    iput-object p2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler$1;->val$handler:Landroid/preference/Preference$OnPreferenceChangeListener;
 
-    iput-boolean p3, p0, Lcom/android/settings/nearby/NearbyEnabler$1;->val$value:Z
+    iput-boolean p3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler$1;->val$value:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,11 +49,11 @@
 
     .prologue
     .line 490
-    iget-object v0, p0, Lcom/android/settings/nearby/NearbyEnabler$1;->val$handler:Landroid/preference/Preference$OnPreferenceChangeListener;
+    iget-object v0, p0, Lcom/android/settings_ex/nearby/NearbyEnabler$1;->val$handler:Landroid/preference/Preference$OnPreferenceChangeListener;
 
     const/4 v1, 0x0
 
-    iget-boolean v2, p0, Lcom/android/settings/nearby/NearbyEnabler$1;->val$value:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler$1;->val$value:Z
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 

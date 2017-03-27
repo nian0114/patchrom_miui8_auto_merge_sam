@@ -1,11 +1,11 @@
-.class Lcom/android/settings/print/PrintSettingsFragment$SettingsPackageMonitor;
+.class Lcom/android/settings_ex/print/PrintSettingsFragment$SettingsPackageMonitor;
 .super Lcom/android/internal/content/PackageMonitor;
 .source "PrintSettingsFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/print/PrintSettingsFragment;
+    value = Lcom/android/settings_ex/print/PrintSettingsFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,30 +15,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/print/PrintSettingsFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/print/PrintSettingsFragment;
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/settings/print/PrintSettingsFragment;)V
+.method private constructor <init>(Lcom/android/settings_ex/print/PrintSettingsFragment;)V
     .locals 0
 
     .prologue
     .line 376
-    iput-object p1, p0, Lcom/android/settings/print/PrintSettingsFragment$SettingsPackageMonitor;->this$0:Lcom/android/settings/print/PrintSettingsFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/print/PrintSettingsFragment$SettingsPackageMonitor;->this$0:Lcom/android/settings_ex/print/PrintSettingsFragment;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/print/PrintSettingsFragment;Lcom/android/settings/print/PrintSettingsFragment$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/print/PrintSettingsFragment;Lcom/android/settings_ex/print/PrintSettingsFragment$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/print/PrintSettingsFragment;
-    .param p2, "x1"    # Lcom/android/settings/print/PrintSettingsFragment$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/print/PrintSettingsFragment;
+    .param p2, "x1"    # Lcom/android/settings_ex/print/PrintSettingsFragment$1;
 
     .prologue
     .line 376
-    invoke-direct {p0, p1}, Lcom/android/settings/print/PrintSettingsFragment$SettingsPackageMonitor;-><init>(Lcom/android/settings/print/PrintSettingsFragment;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/print/PrintSettingsFragment$SettingsPackageMonitor;-><init>(Lcom/android/settings_ex/print/PrintSettingsFragment;)V
 
     return-void
 .end method
@@ -52,10 +52,10 @@
 
     .prologue
     .line 379
-    iget-object v0, p0, Lcom/android/settings/print/PrintSettingsFragment$SettingsPackageMonitor;->this$0:Lcom/android/settings/print/PrintSettingsFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/print/PrintSettingsFragment$SettingsPackageMonitor;->this$0:Lcom/android/settings_ex/print/PrintSettingsFragment;
 
-    # getter for: Lcom/android/settings/print/PrintSettingsFragment;->mHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/settings/print/PrintSettingsFragment;->access$400(Lcom/android/settings/print/PrintSettingsFragment;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/print/PrintSettingsFragment;->mHandler:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/settings_ex/print/PrintSettingsFragment;->access$400(Lcom/android/settings_ex/print/PrintSettingsFragment;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -76,10 +76,10 @@
 
     .prologue
     .line 384
-    iget-object v0, p0, Lcom/android/settings/print/PrintSettingsFragment$SettingsPackageMonitor;->this$0:Lcom/android/settings/print/PrintSettingsFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/print/PrintSettingsFragment$SettingsPackageMonitor;->this$0:Lcom/android/settings_ex/print/PrintSettingsFragment;
 
-    # getter for: Lcom/android/settings/print/PrintSettingsFragment;->mHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/settings/print/PrintSettingsFragment;->access$400(Lcom/android/settings/print/PrintSettingsFragment;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/print/PrintSettingsFragment;->mHandler:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/settings_ex/print/PrintSettingsFragment;->access$400(Lcom/android/settings_ex/print/PrintSettingsFragment;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -100,10 +100,10 @@
 
     .prologue
     .line 389
-    iget-object v0, p0, Lcom/android/settings/print/PrintSettingsFragment$SettingsPackageMonitor;->this$0:Lcom/android/settings/print/PrintSettingsFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/print/PrintSettingsFragment$SettingsPackageMonitor;->this$0:Lcom/android/settings_ex/print/PrintSettingsFragment;
 
-    # getter for: Lcom/android/settings/print/PrintSettingsFragment;->mHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/settings/print/PrintSettingsFragment;->access$400(Lcom/android/settings/print/PrintSettingsFragment;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/print/PrintSettingsFragment;->mHandler:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/settings_ex/print/PrintSettingsFragment;->access$400(Lcom/android/settings_ex/print/PrintSettingsFragment;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -124,10 +124,10 @@
 
     .prologue
     .line 394
-    iget-object v0, p0, Lcom/android/settings/print/PrintSettingsFragment$SettingsPackageMonitor;->this$0:Lcom/android/settings/print/PrintSettingsFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/print/PrintSettingsFragment$SettingsPackageMonitor;->this$0:Lcom/android/settings_ex/print/PrintSettingsFragment;
 
-    # getter for: Lcom/android/settings/print/PrintSettingsFragment;->mHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/settings/print/PrintSettingsFragment;->access$400(Lcom/android/settings/print/PrintSettingsFragment;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/print/PrintSettingsFragment;->mHandler:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/settings_ex/print/PrintSettingsFragment;->access$400(Lcom/android/settings_ex/print/PrintSettingsFragment;)Landroid/os/Handler;
 
     move-result-object v0
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/AccessibilitySettingsHearing$11;
+.class Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$11;
 .super Ljava/lang/Object;
 .source "AccessibilitySettingsHearing.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->onCreateDialog(I)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->onCreateDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)V
     .locals 0
 
     .prologue
     .line 600
-    iput-object p1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$11;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$11;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,31 +45,31 @@
     const/4 v4, 0x1
 
     .line 602
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$11;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$11;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
-    invoke-virtual {v1}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 603
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$11;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$11;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
-    invoke-virtual {v1}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->turnOffTalkBack(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->turnOffTalkBack(Landroid/content/Context;)Z
 
     .line 604
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$11;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$11;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
-    invoke-virtual {v1}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -93,10 +93,10 @@
 
     .line 612
     .local v0, "all_sound_off_intent":Landroid/content/Intent;
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$11;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$11;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
-    # invokes: Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v1}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->access$800(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->access$800(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -110,9 +110,9 @@
     invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 622
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$11;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$11;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
-    invoke-virtual {v1}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -125,13 +125,13 @@
 
     const-string v2, "All sound off broadcast"
 
-    invoke-static {v1, v2}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 624
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$11;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$11;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
-    # getter for: Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAllSoundOffCheckbox:Landroid/preference/SwitchPreference;
-    invoke-static {v1}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->access$300(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAllSoundOffCheckbox:Landroid/preference/SwitchPreference;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->access$300(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)Landroid/preference/SwitchPreference;
 
     move-result-object v1
 

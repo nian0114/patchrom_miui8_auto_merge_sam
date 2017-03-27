@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;
+.class Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;
 .super Ljava/lang/Object;
 .source "LedCoverCallerIDSelectionList.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessories/LedCoverCallerIDSelectionList;
+    value = Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -23,11 +23,11 @@
 
 .field private display_name:Ljava/lang/String;
 
-.field final synthetic this$0:Lcom/android/settings/accessories/LedCoverCallerIDSelectionList;
+.field final synthetic this$0:Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/settings/accessories/LedCoverCallerIDSelectionList;Ljava/lang/String;Ljava/lang/String;[B)V
+.method public constructor <init>(Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList;Ljava/lang/String;Ljava/lang/String;[B)V
     .locals 0
     .param p2, "contact_id"    # Ljava/lang/String;
     .param p3, "display_name"    # Ljava/lang/String;
@@ -35,18 +35,18 @@
 
     .prologue
     .line 459
-    iput-object p1, p0, Lcom/android/settings/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->this$0:Lcom/android/settings/accessories/LedCoverCallerIDSelectionList;
+    iput-object p1, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->this$0:Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 460
-    iput-object p2, p0, Lcom/android/settings/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->contact_id:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->contact_id:Ljava/lang/String;
 
     .line 461
-    iput-object p3, p0, Lcom/android/settings/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->display_name:Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->display_name:Ljava/lang/String;
 
     .line 462
-    iput-object p4, p0, Lcom/android/settings/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->data15:[B
+    iput-object p4, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->data15:[B
 
     .line 463
     return-void
@@ -59,7 +59,7 @@
 
     .prologue
     .line 492
-    iget-boolean v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->checked:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->checked:Z
 
     return v0
 .end method
@@ -69,7 +69,7 @@
 
     .prologue
     .line 466
-    iget-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->contact_id:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->contact_id:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -79,7 +79,7 @@
 
     .prologue
     .line 482
-    invoke-virtual {p0}, Lcom/android/settings/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->getIconBitmap()Landroid/graphics/Bitmap;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->getIconBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -88,13 +88,13 @@
     if-eqz v0, :cond_0
 
     .line 484
-    iget-object v2, p0, Lcom/android/settings/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->this$0:Lcom/android/settings/accessories/LedCoverCallerIDSelectionList;
+    iget-object v2, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->this$0:Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList;
 
-    invoke-virtual {v2}, Lcom/android/settings/accessories/LedCoverCallerIDSelectionList;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-static {v2, v0}, Lcom/android/settings/drawable/CircleFramedDrawable;->getInstance(Landroid/content/Context;Landroid/graphics/Bitmap;)Lcom/android/settings/drawable/CircleFramedDrawable;
+    invoke-static {v2, v0}, Lcom/android/settings_ex/drawable/CircleFramedDrawable;->getInstance(Landroid/content/Context;Landroid/graphics/Bitmap;)Lcom/android/settings_ex/drawable/CircleFramedDrawable;
 
     move-result-object v1
 
@@ -113,16 +113,16 @@
 
     .prologue
     .line 474
-    iget-object v1, p0, Lcom/android/settings/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->data15:[B
+    iget-object v1, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->data15:[B
 
     if-eqz v1, :cond_0
 
     .line 475
-    iget-object v1, p0, Lcom/android/settings/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->data15:[B
+    iget-object v1, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->data15:[B
 
     const/4 v2, 0x0
 
-    iget-object v3, p0, Lcom/android/settings/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->data15:[B
+    iget-object v3, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->data15:[B
 
     array-length v3, v3
 
@@ -145,7 +145,7 @@
 
     .prologue
     .line 470
-    iget-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->display_name:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->display_name:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -156,7 +156,7 @@
 
     .prologue
     .line 496
-    iput-boolean p1, p0, Lcom/android/settings/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->checked:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList$ContactInfoCheckBox;->checked:Z
 
     .line 497
     return-void

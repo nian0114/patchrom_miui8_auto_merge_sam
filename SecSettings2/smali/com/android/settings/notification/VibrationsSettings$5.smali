@@ -1,11 +1,11 @@
-.class Lcom/android/settings/notification/VibrationsSettings$5;
+.class Lcom/android/settings_ex/notification/VibrationsSettings$5;
 .super Landroid/content/BroadcastReceiver;
 .source "VibrationsSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/notification/VibrationsSettings;->onResume()V
+    value = Lcom/android/settings_ex/notification/VibrationsSettings;->onResume()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/VibrationsSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/VibrationsSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/notification/VibrationsSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/notification/VibrationsSettings;)V
     .locals 0
 
     .prologue
     .line 225
-    iput-object p1, p0, Lcom/android/settings/notification/VibrationsSettings$5;->this$0:Lcom/android/settings/notification/VibrationsSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/VibrationsSettings$5;->this$0:Lcom/android/settings_ex/notification/VibrationsSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -57,8 +57,8 @@
     .line 229
     const/4 v1, 0x2
 
-    # getter for: Lcom/android/settings/notification/VibrationsSettings;->mAudioManager:Landroid/media/AudioManager;
-    invoke-static {}, Lcom/android/settings/notification/VibrationsSettings;->access$500()Landroid/media/AudioManager;
+    # getter for: Lcom/android/settings_ex/notification/VibrationsSettings;->mAudioManager:Landroid/media/AudioManager;
+    invoke-static {}, Lcom/android/settings_ex/notification/VibrationsSettings;->access$500()Landroid/media/AudioManager;
 
     move-result-object v2
 
@@ -69,22 +69,22 @@
     if-ne v1, v2, :cond_1
 
     .line 230
-    iget-object v1, p0, Lcom/android/settings/notification/VibrationsSettings$5;->this$0:Lcom/android/settings/notification/VibrationsSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VibrationsSettings$5;->this$0:Lcom/android/settings_ex/notification/VibrationsSettings;
 
     const-string v2, "vibrate_when_ringing"
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/notification/VibrationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/notification/VibrationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
     .line 231
-    iget-object v1, p0, Lcom/android/settings/notification/VibrationsSettings$5;->this$0:Lcom/android/settings/notification/VibrationsSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VibrationsSettings$5;->this$0:Lcom/android/settings_ex/notification/VibrationsSettings;
 
     const-string v2, "vibrate_when_ringing"
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/notification/VibrationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/notification/VibrationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -99,22 +99,22 @@
 
     .line 233
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/notification/VibrationsSettings$5;->this$0:Lcom/android/settings/notification/VibrationsSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VibrationsSettings$5;->this$0:Lcom/android/settings_ex/notification/VibrationsSettings;
 
     const-string v2, "vibrate_when_ringing"
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/notification/VibrationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/notification/VibrationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
     .line 234
-    iget-object v1, p0, Lcom/android/settings/notification/VibrationsSettings$5;->this$0:Lcom/android/settings/notification/VibrationsSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VibrationsSettings$5;->this$0:Lcom/android/settings_ex/notification/VibrationsSettings;
 
     const-string v2, "vibrate_when_ringing"
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/notification/VibrationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/notification/VibrationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 

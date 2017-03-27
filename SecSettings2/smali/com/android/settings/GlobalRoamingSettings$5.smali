@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/GlobalRoamingSettings$5;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/GlobalRoamingSettings$5;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "GlobalRoamingSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/GlobalRoamingSettings;
+    value = Lcom/android/settings_ex/GlobalRoamingSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 431
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method

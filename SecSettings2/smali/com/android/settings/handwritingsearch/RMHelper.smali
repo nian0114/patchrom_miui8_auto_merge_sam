@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/handwritingsearch/RMHelper;
+.class public Lcom/android/settings_ex/handwritingsearch/RMHelper;
 .super Ljava/lang/Object;
 .source "RMHelper.java"
 
@@ -23,13 +23,13 @@
 
     .prologue
     .line 17
-    const-class v0, Lcom/android/settings/handwritingsearch/RMHelper;
+    const-class v0, Lcom/android/settings_ex/handwritingsearch/RMHelper;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/handwritingsearch/RMHelper;->TAG:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/handwritingsearch/RMHelper;->TAG:Ljava/lang/String;
 
     .line 19
     const-string v0, "path.separator"
@@ -38,12 +38,12 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/handwritingsearch/RMHelper;->PATH_SEPARATOR:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/handwritingsearch/RMHelper;->PATH_SEPARATOR:Ljava/lang/String;
 
     .line 22
     const-string v0, "/system/VODB/lib"
 
-    sput-object v0, Lcom/android/settings/handwritingsearch/RMHelper;->PRELOAD_LIB_PATH:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/handwritingsearch/RMHelper;->PRELOAD_LIB_PATH:Ljava/lang/String;
 
     return-void
 .end method
@@ -61,12 +61,12 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/handwritingsearch/RMHelper;->cr:Landroid/content/ContentResolver;
+    iput-object v0, p0, Lcom/android/settings_ex/handwritingsearch/RMHelper;->cr:Landroid/content/ContentResolver;
 
     .line 33
-    iget-object v0, p0, Lcom/android/settings/handwritingsearch/RMHelper;->cr:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/handwritingsearch/RMHelper;->cr:Landroid/content/ContentResolver;
 
-    invoke-static {}, Lcom/android/settings/handwritingsearch/ResourceManagerContract;->getAuthority()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/handwritingsearch/ResourceManagerContract;->getAuthority()Ljava/lang/String;
 
     move-result-object v1
 
@@ -74,7 +74,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/handwritingsearch/RMHelper;->client:Landroid/content/ContentProviderClient;
+    iput-object v0, p0, Lcom/android/settings_ex/handwritingsearch/RMHelper;->client:Landroid/content/ContentProviderClient;
 
     .line 34
     return-void
@@ -93,15 +93,15 @@
 
     .line 44
     .local v9, "langList":[Ljava/lang/String;
-    iget-object v0, p0, Lcom/android/settings/handwritingsearch/RMHelper;->client:Landroid/content/ContentProviderClient;
+    iget-object v0, p0, Lcom/android/settings_ex/handwritingsearch/RMHelper;->client:Landroid/content/ContentProviderClient;
 
     if-eqz v0, :cond_1
 
     .line 46
     :try_start_0
-    iget-object v0, p0, Lcom/android/settings/handwritingsearch/RMHelper;->client:Landroid/content/ContentProviderClient;
+    iget-object v0, p0, Lcom/android/settings_ex/handwritingsearch/RMHelper;->client:Landroid/content/ContentProviderClient;
 
-    invoke-static {}, Lcom/android/settings/handwritingsearch/ResourceManagerContract$Langs;->getContentURI()Landroid/net/Uri;
+    invoke-static {}, Lcom/android/settings_ex/handwritingsearch/ResourceManagerContract$Langs;->getContentURI()Landroid/net/Uri;
 
     move-result-object v1
 

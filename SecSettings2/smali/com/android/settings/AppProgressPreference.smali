@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/AppProgressPreference;
-.super Lcom/android/settings/TintablePreference;
+.class public Lcom/android/settings_ex/AppProgressPreference;
+.super Lcom/android/settings_ex/TintablePreference;
 .source "AppProgressPreference.java"
 
 
@@ -15,17 +15,17 @@
 
     .prologue
     .line 28
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/TintablePreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/TintablePreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 29
     const v0, 0x7f040173
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/AppProgressPreference;->setLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/AppProgressPreference;->setLayoutResource(I)V
 
     .line 30
     const v0, 0x7f04023c
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/AppProgressPreference;->setWidgetLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/AppProgressPreference;->setWidgetLayoutResource(I)V
 
     .line 31
     return-void
@@ -39,7 +39,7 @@
 
     .prologue
     .line 40
-    invoke-super {p0, p1}, Lcom/android/settings/TintablePreference;->onBindView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/TintablePreference;->onBindView(Landroid/view/View;)V
 
     .line 42
     const v1, 0x102000d
@@ -52,7 +52,7 @@
 
     .line 43
     .local v0, "progress":Landroid/widget/ProgressBar;
-    iget v1, p0, Lcom/android/settings/AppProgressPreference;->mProgress:I
+    iget v1, p0, Lcom/android/settings_ex/AppProgressPreference;->mProgress:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setProgress(I)V
 
@@ -66,10 +66,10 @@
 
     .prologue
     .line 34
-    iput p1, p0, Lcom/android/settings/AppProgressPreference;->mProgress:I
+    iput p1, p0, Lcom/android/settings_ex/AppProgressPreference;->mProgress:I
 
     .line 35
-    invoke-virtual {p0}, Lcom/android/settings/AppProgressPreference;->notifyChanged()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/AppProgressPreference;->notifyChanged()V
 
     .line 36
     return-void

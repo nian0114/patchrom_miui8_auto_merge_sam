@@ -1,11 +1,11 @@
-.class Lcom/android/settings/ApnEditor$ApnSettingsObserver;
+.class Lcom/android/settings_ex/ApnEditor$ApnSettingsObserver;
 .super Landroid/database/ContentObserver;
 .source "ApnEditor.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/ApnEditor;
+    value = Lcom/android/settings_ex/ApnEditor;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,30 +15,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/ApnEditor;
+.field final synthetic this$0:Lcom/android/settings_ex/ApnEditor;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/settings/ApnEditor;Landroid/os/Handler;)V
+.method public constructor <init>(Lcom/android/settings_ex/ApnEditor;Landroid/os/Handler;)V
     .locals 3
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
     .line 226
-    iput-object p1, p0, Lcom/android/settings/ApnEditor$ApnSettingsObserver;->this$0:Lcom/android/settings/ApnEditor;
+    iput-object p1, p0, Lcom/android/settings_ex/ApnEditor$ApnSettingsObserver;->this$0:Lcom/android/settings_ex/ApnEditor;
 
     .line 227
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     .line 228
-    invoke-virtual {p1}, Lcom/android/settings/ApnEditor;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p1}, Lcom/android/settings_ex/ApnEditor;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     .line 229
     .local v0, "cr":Landroid/content/ContentResolver;
-    # getter for: Lcom/android/settings/ApnEditor;->mUri:Landroid/net/Uri;
-    invoke-static {p1}, Lcom/android/settings/ApnEditor;->access$000(Lcom/android/settings/ApnEditor;)Landroid/net/Uri;
+    # getter for: Lcom/android/settings_ex/ApnEditor;->mUri:Landroid/net/Uri;
+    invoke-static {p1}, Lcom/android/settings_ex/ApnEditor;->access$000(Lcom/android/settings_ex/ApnEditor;)Landroid/net/Uri;
 
     move-result-object v1
 
@@ -64,12 +64,12 @@
     if-nez p1, :cond_0
 
     .line 235
-    iget-object v0, p0, Lcom/android/settings/ApnEditor$ApnSettingsObserver;->this$0:Lcom/android/settings/ApnEditor;
+    iget-object v0, p0, Lcom/android/settings_ex/ApnEditor$ApnSettingsObserver;->this$0:Lcom/android/settings_ex/ApnEditor;
 
     const/4 v1, 0x1
 
-    # setter for: Lcom/android/settings/ApnEditor;->mHasMdmEditedApn:Z
-    invoke-static {v0, v1}, Lcom/android/settings/ApnEditor;->access$102(Lcom/android/settings/ApnEditor;Z)Z
+    # setter for: Lcom/android/settings_ex/ApnEditor;->mHasMdmEditedApn:Z
+    invoke-static {v0, v1}, Lcom/android/settings_ex/ApnEditor;->access$102(Lcom/android/settings_ex/ApnEditor;Z)Z
 
     .line 237
     :cond_0

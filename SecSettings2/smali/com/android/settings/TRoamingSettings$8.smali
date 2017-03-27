@@ -1,4 +1,4 @@
-.class Lcom/android/settings/TRoamingSettings$8;
+.class Lcom/android/settings_ex/TRoamingSettings$8;
 .super Ljava/lang/Object;
 .source "TRoamingSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/TRoamingSettings;->setRestrictBackground(Z)V
+    value = Lcom/android/settings_ex/TRoamingSettings;->setRestrictBackground(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/TRoamingSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/TRoamingSettings;
 
 .field final synthetic val$mRestrictBackground:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/TRoamingSettings;Z)V
+.method constructor <init>(Lcom/android/settings_ex/TRoamingSettings;Z)V
     .locals 0
 
     .prologue
     .line 813
-    iput-object p1, p0, Lcom/android/settings/TRoamingSettings$8;->this$0:Lcom/android/settings/TRoamingSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/TRoamingSettings$8;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
-    iput-boolean p2, p0, Lcom/android/settings/TRoamingSettings$8;->val$mRestrictBackground:Z
+    iput-boolean p2, p0, Lcom/android/settings_ex/TRoamingSettings$8;->val$mRestrictBackground:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,22 +45,22 @@
 
     .prologue
     .line 815
-    iget-object v1, p0, Lcom/android/settings/TRoamingSettings$8;->this$0:Lcom/android/settings/TRoamingSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/TRoamingSettings$8;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
-    # getter for: Lcom/android/settings/TRoamingSettings;->mPolicyManager:Landroid/net/NetworkPolicyManager;
-    invoke-static {v1}, Lcom/android/settings/TRoamingSettings;->access$200(Lcom/android/settings/TRoamingSettings;)Landroid/net/NetworkPolicyManager;
+    # getter for: Lcom/android/settings_ex/TRoamingSettings;->mPolicyManager:Landroid/net/NetworkPolicyManager;
+    invoke-static {v1}, Lcom/android/settings_ex/TRoamingSettings;->access$200(Lcom/android/settings_ex/TRoamingSettings;)Landroid/net/NetworkPolicyManager;
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcom/android/settings/TRoamingSettings$8;->val$mRestrictBackground:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/TRoamingSettings$8;->val$mRestrictBackground:Z
 
     invoke-virtual {v1, v2}, Landroid/net/NetworkPolicyManager;->setRestrictBackground(Z)V
 
     .line 816
-    iget-object v1, p0, Lcom/android/settings/TRoamingSettings$8;->this$0:Lcom/android/settings/TRoamingSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/TRoamingSettings$8;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
-    # getter for: Lcom/android/settings/TRoamingSettings;->handler_loading:Landroid/os/Handler;
-    invoke-static {v1}, Lcom/android/settings/TRoamingSettings;->access$1200(Lcom/android/settings/TRoamingSettings;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/TRoamingSettings;->handler_loading:Landroid/os/Handler;
+    invoke-static {v1}, Lcom/android/settings_ex/TRoamingSettings;->access$1200(Lcom/android/settings_ex/TRoamingSettings;)Landroid/os/Handler;
 
     move-result-object v1
 
@@ -82,8 +82,8 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 819
-    # getter for: Lcom/android/settings/TRoamingSettings;->mContext:Landroid/content/Context;
-    invoke-static {}, Lcom/android/settings/TRoamingSettings;->access$1100()Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/TRoamingSettings;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/android/settings_ex/TRoamingSettings;->access$1100()Landroid/content/Context;
 
     move-result-object v1
 

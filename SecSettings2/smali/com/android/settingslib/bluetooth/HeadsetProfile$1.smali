@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settingslib/bluetooth/HeadsetProfile$1;
+.class synthetic Lcom/android/settings_exlib/bluetooth/HeadsetProfile$1;
 .super Ljava/lang/Object;
 .source "HeadsetProfile.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/bluetooth/HeadsetProfile;
+    value = Lcom/android/settings_exlib/bluetooth/HeadsetProfile;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

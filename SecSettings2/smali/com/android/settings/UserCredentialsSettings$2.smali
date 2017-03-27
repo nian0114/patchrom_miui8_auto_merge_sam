@@ -1,4 +1,4 @@
-.class Lcom/android/settings/UserCredentialsSettings$2;
+.class Lcom/android/settings_ex/UserCredentialsSettings$2;
 .super Ljava/lang/Object;
 .source "UserCredentialsSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/UserCredentialsSettings;->showCertDialog(Lcom/android/settings/UserCredentialsSettings$CertHolder;)V
+    value = Lcom/android/settings_ex/UserCredentialsSettings;->showCertDialog(Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/UserCredentialsSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/UserCredentialsSettings;
 
 .field final synthetic val$views:Ljava/util/ArrayList;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/UserCredentialsSettings;Ljava/util/ArrayList;)V
+.method constructor <init>(Lcom/android/settings_ex/UserCredentialsSettings;Ljava/util/ArrayList;)V
     .locals 0
 
     .prologue
     .line 655
-    iput-object p1, p0, Lcom/android/settings/UserCredentialsSettings$2;->this$0:Lcom/android/settings/UserCredentialsSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/UserCredentialsSettings$2;->this$0:Lcom/android/settings_ex/UserCredentialsSettings;
 
-    iput-object p2, p0, Lcom/android/settings/UserCredentialsSettings$2;->val$views:Ljava/util/ArrayList;
+    iput-object p2, p0, Lcom/android/settings_ex/UserCredentialsSettings$2;->val$views:Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -62,7 +62,7 @@
 
     .local v0, "i":I
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/UserCredentialsSettings$2;->val$views:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/UserCredentialsSettings$2;->val$views:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -71,7 +71,7 @@
     if-ge v0, v1, :cond_1
 
     .line 660
-    iget-object v1, p0, Lcom/android/settings/UserCredentialsSettings$2;->val$views:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/UserCredentialsSettings$2;->val$views:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 

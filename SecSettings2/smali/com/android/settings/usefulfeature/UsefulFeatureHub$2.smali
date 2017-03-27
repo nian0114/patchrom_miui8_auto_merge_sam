@@ -1,11 +1,11 @@
-.class Lcom/android/settings/usefulfeature/UsefulFeatureHub$2;
+.class Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$2;
 .super Landroid/database/ContentObserver;
 .source "UsefulFeatureHub.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    value = Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+.field final synthetic this$0:Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/usefulfeature/UsefulFeatureHub;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 122
-    iput-object p1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$2;->this$0:Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    iput-object p1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$2;->this$0:Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -44,19 +44,19 @@
     const/4 v2, 0x0
 
     .line 125
-    iget-object v3, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$2;->this$0:Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    iget-object v3, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$2;->this$0:Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
-    # getter for: Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v3}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->access$000(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v3}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->access$000(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    iget-object v3, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$2;->this$0:Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    iget-object v3, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$2;->this$0:Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
-    # getter for: Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
-    invoke-static {v3}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->access$100(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    invoke-static {v3}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->access$100(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -68,10 +68,10 @@
 
     if-nez v3, :cond_0
 
-    iget-object v3, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$2;->this$0:Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    iget-object v3, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$2;->this$0:Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
-    # getter for: Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
-    invoke-static {v3}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->access$100(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    invoke-static {v3}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->access$100(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -84,10 +84,10 @@
     if-nez v3, :cond_0
 
     .line 126
-    iget-object v3, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$2;->this$0:Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    iget-object v3, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$2;->this$0:Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
-    # invokes: Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v3}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->access$300(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v3}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->access$300(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -102,24 +102,24 @@
     if-ne v0, v1, :cond_1
 
     .line 128
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$2;->this$0:Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$2;->this$0:Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
-    # getter for: Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->access$000(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->access$000(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 129
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$2;->this$0:Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$2;->this$0:Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
-    # getter for: Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->access$000(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->access$000(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 135
     .end local v0    # "onInteractionConrol":I
@@ -130,34 +130,34 @@
     .line 131
     .restart local v0    # "onInteractionConrol":I
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$2;->this$0:Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    iget-object v3, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$2;->this$0:Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
-    # getter for: Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v3}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->access$000(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v3}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->access$000(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v3
 
-    invoke-virtual {v3, v1}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v3, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 132
-    iget-object v3, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$2;->this$0:Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    iget-object v3, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$2;->this$0:Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
-    # getter for: Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v3}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->access$000(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v3}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->access$000(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$2;->this$0:Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    iget-object v4, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$2;->this$0:Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
-    # invokes: Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v4}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->access$400(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v4}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->access$400(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$2;->this$0:Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$2;->this$0:Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
-    # getter for: Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionDBItem:Ljava/lang/String;
-    invoke-static {v5}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->access$500(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionDBItem:Ljava/lang/String;
+    invoke-static {v5}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->access$500(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -168,7 +168,7 @@
     if-eqz v4, :cond_2
 
     :goto_1
-    invoke-virtual {v3, v1}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v3, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     goto :goto_0
 

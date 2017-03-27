@@ -1,11 +1,11 @@
-.class Lcom/android/settings/applications/DefaultEmergencyPreference$1;
+.class Lcom/android/settings_ex/applications/DefaultEmergencyPreference$1;
 .super Landroid/os/AsyncTask;
 .source "DefaultEmergencyPreference.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/applications/DefaultEmergencyPreference;->load()V
+    value = Lcom/android/settings_ex/applications/DefaultEmergencyPreference;->load()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,16 +28,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/applications/DefaultEmergencyPreference;
+.field final synthetic this$0:Lcom/android/settings_ex/applications/DefaultEmergencyPreference;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/applications/DefaultEmergencyPreference;)V
+.method constructor <init>(Lcom/android/settings_ex/applications/DefaultEmergencyPreference;)V
     .locals 0
 
     .prologue
     .line 73
-    iput-object p1, p0, Lcom/android/settings/applications/DefaultEmergencyPreference$1;->this$0:Lcom/android/settings/applications/DefaultEmergencyPreference;
+    iput-object p1, p0, Lcom/android/settings_ex/applications/DefaultEmergencyPreference$1;->this$0:Lcom/android/settings_ex/applications/DefaultEmergencyPreference;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
@@ -55,7 +55,7 @@
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "x0":[Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/applications/DefaultEmergencyPreference$1;->doInBackground([Ljava/lang/Void;)Ljava/util/Set;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/applications/DefaultEmergencyPreference$1;->doInBackground([Ljava/lang/Void;)Ljava/util/Set;
 
     move-result-object v0
 
@@ -79,10 +79,10 @@
 
     .prologue
     .line 76
-    iget-object v0, p0, Lcom/android/settings/applications/DefaultEmergencyPreference$1;->this$0:Lcom/android/settings/applications/DefaultEmergencyPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/DefaultEmergencyPreference$1;->this$0:Lcom/android/settings_ex/applications/DefaultEmergencyPreference;
 
-    # invokes: Lcom/android/settings/applications/DefaultEmergencyPreference;->resolveAssistPackageAndQueryApps()Ljava/util/Set;
-    invoke-static {v0}, Lcom/android/settings/applications/DefaultEmergencyPreference;->access$000(Lcom/android/settings/applications/DefaultEmergencyPreference;)Ljava/util/Set;
+    # invokes: Lcom/android/settings_ex/applications/DefaultEmergencyPreference;->resolveAssistPackageAndQueryApps()Ljava/util/Set;
+    invoke-static {v0}, Lcom/android/settings_ex/applications/DefaultEmergencyPreference;->access$000(Lcom/android/settings_ex/applications/DefaultEmergencyPreference;)Ljava/util/Set;
 
     move-result-object v0
 
@@ -98,7 +98,7 @@
     check-cast p1, Ljava/util/Set;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/applications/DefaultEmergencyPreference$1;->onPostExecute(Ljava/util/Set;)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/applications/DefaultEmergencyPreference$1;->onPostExecute(Ljava/util/Set;)V
 
     return-void
 .end method
@@ -118,10 +118,10 @@
     .prologue
     .line 81
     .local p1, "entries":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
-    iget-object v1, p0, Lcom/android/settings/applications/DefaultEmergencyPreference$1;->this$0:Lcom/android/settings/applications/DefaultEmergencyPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/DefaultEmergencyPreference$1;->this$0:Lcom/android/settings_ex/applications/DefaultEmergencyPreference;
 
-    # getter for: Lcom/android/settings/applications/DefaultEmergencyPreference;->mContentResolver:Landroid/content/ContentResolver;
-    invoke-static {v1}, Lcom/android/settings/applications/DefaultEmergencyPreference;->access$100(Lcom/android/settings/applications/DefaultEmergencyPreference;)Landroid/content/ContentResolver;
+    # getter for: Lcom/android/settings_ex/applications/DefaultEmergencyPreference;->mContentResolver:Landroid/content/ContentResolver;
+    invoke-static {v1}, Lcom/android/settings_ex/applications/DefaultEmergencyPreference;->access$100(Lcom/android/settings_ex/applications/DefaultEmergencyPreference;)Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -133,7 +133,7 @@
 
     .line 83
     .local v0, "currentPkg":Ljava/lang/String;
-    iget-object v2, p0, Lcom/android/settings/applications/DefaultEmergencyPreference$1;->this$0:Lcom/android/settings/applications/DefaultEmergencyPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/DefaultEmergencyPreference$1;->this$0:Lcom/android/settings_ex/applications/DefaultEmergencyPreference;
 
     invoke-interface {p1}, Ljava/util/Set;->size()I
 
@@ -147,7 +147,7 @@
 
     check-cast v1, [Ljava/lang/CharSequence;
 
-    invoke-virtual {v2, v1, v0}, Lcom/android/settings/applications/DefaultEmergencyPreference;->setPackageNames([Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
+    invoke-virtual {v2, v1, v0}, Lcom/android/settings_ex/applications/DefaultEmergencyPreference;->setPackageNames([Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
 
     .line 84
     return-void

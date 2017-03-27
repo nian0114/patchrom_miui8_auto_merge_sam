@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/fmm/SamsungAccountValidationActivity;
+.class public Lcom/android/settings_ex/fmm/SamsungAccountValidationActivity;
 .super Landroid/app/Activity;
 .source "SamsungAccountValidationActivity.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/fmm/SamsungAccountValidationActivity$AESCrypto;
+        Lcom/android/settings_ex/fmm/SamsungAccountValidationActivity$AESCrypto;
     }
 .end annotation
 
@@ -117,7 +117,7 @@
 
     move-result-object v9
 
-    invoke-static {v8, v9}, Lcom/android/settings/fmm/SamsungAccountValidationActivity$AESCrypto;->encrypt(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v8, v9}, Lcom/android/settings_ex/fmm/SamsungAccountValidationActivity$AESCrypto;->encrypt(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -136,7 +136,7 @@
 
     move-result-object v8
 
-    invoke-static {v8, v3}, Lcom/android/settings/fmm/SamsungAccountValidationActivity$AESCrypto;->decrypt(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v8, v3}, Lcom/android/settings_ex/fmm/SamsungAccountValidationActivity$AESCrypto;->decrypt(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -179,7 +179,7 @@
     invoke-virtual {v4, v8, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
     .line 139
-    invoke-virtual {p0, v4}, Lcom/android/settings/fmm/SamsungAccountValidationActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/fmm/SamsungAccountValidationActivity;->startActivity(Landroid/content/Intent;)V
 
     .line 143
     return-void
@@ -236,10 +236,10 @@
 
     .line 100
     .local v1, "apiServerUrl":Ljava/lang/String;
-    invoke-direct {p0, v0, v1, v3}, Lcom/android/settings/fmm/SamsungAccountValidationActivity;->launch(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v0, v1, v3}, Lcom/android/settings_ex/fmm/SamsungAccountValidationActivity;->launch(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 101
-    invoke-virtual {p0}, Lcom/android/settings/fmm/SamsungAccountValidationActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fmm/SamsungAccountValidationActivity;->finish()V
 
     goto :goto_0
 
@@ -344,7 +344,7 @@
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 82
-    invoke-virtual {p0, v1, v4}, Lcom/android/settings/fmm/SamsungAccountValidationActivity;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v1, v4}, Lcom/android/settings_ex/fmm/SamsungAccountValidationActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
     .line 83
     return-void

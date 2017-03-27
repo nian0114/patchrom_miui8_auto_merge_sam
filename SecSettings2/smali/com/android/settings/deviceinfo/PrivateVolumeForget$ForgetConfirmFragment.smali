@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;
+.class public Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;
 .super Landroid/app/DialogFragment;
 .source "PrivateVolumeForget.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/PrivateVolumeForget;
+    value = Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,18 +43,18 @@
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 80
-    new-instance v1, Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;
+    new-instance v1, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;
 
-    invoke-direct {v1}, Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;-><init>()V
+    invoke-direct {v1}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;-><init>()V
 
     .line 81
-    .local v1, "dialog":Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;
-    invoke-virtual {v1, v0}, Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;->setArguments(Landroid/os/Bundle;)V
+    .local v1, "dialog":Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;->setArguments(Landroid/os/Bundle;)V
 
     .line 82
     const/4 v2, 0x0
 
-    invoke-virtual {v1, p0, v2}, Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;->setTargetFragment(Landroid/app/Fragment;I)V
+    invoke-virtual {v1, p0, v2}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;->setTargetFragment(Landroid/app/Fragment;I)V
 
     .line 83
     invoke-virtual {p0}, Landroid/app/Fragment;->getFragmentManager()Landroid/app/FragmentManager;
@@ -63,7 +63,7 @@
 
     const-string v3, "forget_confirm"
 
-    invoke-virtual {v1, v2, v3}, Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v3}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     .line 84
     return-void
@@ -81,7 +81,7 @@
     const/4 v8, 0x0
 
     .line 88
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -97,7 +97,7 @@
 
     .line 91
     .local v4, "storage":Landroid/os/storage/StorageManager;
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v5
 
@@ -131,7 +131,7 @@
 
     aput-object v7, v6, v8
 
-    invoke-virtual {p0, v5, v6}, Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v5, v6}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -148,7 +148,7 @@
 
     aput-object v7, v6, v8
 
-    invoke-virtual {p0, v5, v6}, Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v5, v6}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -157,9 +157,9 @@
     .line 98
     const v5, 0x7f0e06b0
 
-    new-instance v6, Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment$1;
+    new-instance v6, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment$1;
 
-    invoke-direct {v6, p0, v4, v2}, Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment$1;-><init>(Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;Landroid/os/storage/StorageManager;Ljava/lang/String;)V
+    invoke-direct {v6, p0, v4, v2}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment$1;-><init>(Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;Landroid/os/storage/StorageManager;Ljava/lang/String;)V
 
     invoke-virtual {v0, v5, v6}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 

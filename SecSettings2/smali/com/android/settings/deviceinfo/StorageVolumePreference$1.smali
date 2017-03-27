@@ -1,4 +1,4 @@
-.class Lcom/android/settings/deviceinfo/StorageVolumePreference$1;
+.class Lcom/android/settings_ex/deviceinfo/StorageVolumePreference$1;
 .super Ljava/lang/Object;
 .source "StorageVolumePreference.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/StorageVolumePreference;
+    value = Lcom/android/settings_ex/deviceinfo/StorageVolumePreference;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/StorageVolumePreference;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/StorageVolumePreference;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/StorageVolumePreference;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/StorageVolumePreference;)V
     .locals 0
 
     .prologue
     .line 117
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/StorageVolumePreference$1;->this$0:Lcom/android/settings/deviceinfo/StorageVolumePreference;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/StorageVolumePreference$1;->this$0:Lcom/android/settings_ex/deviceinfo/StorageVolumePreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,28 +42,28 @@
 
     .prologue
     .line 120
-    new-instance v0, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;
+    new-instance v0, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;
 
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StorageVolumePreference$1;->this$0:Lcom/android/settings/deviceinfo/StorageVolumePreference;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StorageVolumePreference$1;->this$0:Lcom/android/settings_ex/deviceinfo/StorageVolumePreference;
 
-    invoke-virtual {v1}, Lcom/android/settings/deviceinfo/StorageVolumePreference;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/android/settings_ex/deviceinfo/StorageVolumePreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StorageVolumePreference$1;->this$0:Lcom/android/settings/deviceinfo/StorageVolumePreference;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StorageVolumePreference$1;->this$0:Lcom/android/settings_ex/deviceinfo/StorageVolumePreference;
 
-    # getter for: Lcom/android/settings/deviceinfo/StorageVolumePreference;->mVolume:Landroid/os/storage/VolumeInfo;
-    invoke-static {v2}, Lcom/android/settings/deviceinfo/StorageVolumePreference;->access$000(Lcom/android/settings/deviceinfo/StorageVolumePreference;)Landroid/os/storage/VolumeInfo;
+    # getter for: Lcom/android/settings_ex/deviceinfo/StorageVolumePreference;->mVolume:Landroid/os/storage/VolumeInfo;
+    invoke-static {v2}, Lcom/android/settings_ex/deviceinfo/StorageVolumePreference;->access$000(Lcom/android/settings_ex/deviceinfo/StorageVolumePreference;)Landroid/os/storage/VolumeInfo;
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;-><init>(Landroid/content/Context;Landroid/os/storage/VolumeInfo;)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;-><init>(Landroid/content/Context;Landroid/os/storage/VolumeInfo;)V
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     .line 121
     return-void

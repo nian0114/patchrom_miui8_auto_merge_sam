@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiSnsExceptionActivity$3;
+.class Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity$3;
 .super Ljava/lang/Object;
 .source "WifiSnsExceptionActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiSnsExceptionActivity;
+    value = Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSnsExceptionActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSnsExceptionActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;)V
     .locals 0
 
     .prologue
     .line 141
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity$3;->this$0:Lcom/android/settings/wifi/WifiSnsExceptionActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity$3;->this$0:Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -55,10 +55,10 @@
 
     .line 146
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity$3;->this$0:Lcom/android/settings/wifi/WifiSnsExceptionActivity;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity$3;->this$0:Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;
 
-    # getter for: Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->access$000(Lcom/android/settings/wifi/WifiSnsExceptionActivity;)Landroid/net/wifi/WifiManager;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->access$000(Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;)Landroid/net/wifi/WifiManager;
 
     move-result-object v2
 
@@ -95,10 +95,10 @@
     iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     .line 152
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity$3;->this$0:Lcom/android/settings/wifi/WifiSnsExceptionActivity;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity$3;->this$0:Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;
 
-    # getter for: Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->access$000(Lcom/android/settings/wifi/WifiSnsExceptionActivity;)Landroid/net/wifi/WifiManager;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->access$000(Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;)Landroid/net/wifi/WifiManager;
 
     move-result-object v2
 
@@ -112,18 +112,18 @@
     if-ne p2, v5, :cond_4
 
     .line 158
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity$3;->this$0:Lcom/android/settings/wifi/WifiSnsExceptionActivity;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity$3;->this$0:Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;
 
     const-string v4, "AP_OFF"
 
-    invoke-virtual {v2, v4}, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->sendGSIMdata(Ljava/lang/String;)V
+    invoke-virtual {v2, v4}, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->sendGSIMdata(Ljava/lang/String;)V
 
     .line 163
     :goto_3
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity$3;->this$0:Lcom/android/settings/wifi/WifiSnsExceptionActivity;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity$3;->this$0:Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;
 
-    # getter for: Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->access$200(Lcom/android/settings/wifi/WifiSnsExceptionActivity;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mContext:Landroid/content/Context;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->access$200(Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;)Landroid/content/Context;
 
     move-result-object v2
 
@@ -136,9 +136,9 @@
     invoke-static {v2, v4, v3}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 165
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity$3;->this$0:Lcom/android/settings/wifi/WifiSnsExceptionActivity;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity$3;->this$0:Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;
 
-    invoke-virtual {v2}, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->finish()V
+    invoke-virtual {v2}, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->finish()V
 
     goto :goto_0
 
@@ -154,8 +154,8 @@
     .end local v0    # "args":Landroid/os/Bundle;
     .end local v1    # "msg":Landroid/os/Message;
     :cond_3
-    # getter for: Lcom/android/settings/wifi/WifiSnsExceptionActivity;->DBG:Z
-    invoke-static {}, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->access$100()Z
+    # getter for: Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->DBG:Z
+    invoke-static {}, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->access$100()Z
 
     move-result v2
 
@@ -171,11 +171,11 @@
 
     .line 160
     :cond_4
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity$3;->this$0:Lcom/android/settings/wifi/WifiSnsExceptionActivity;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity$3;->this$0:Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;
 
     const-string v4, "AP_ON"
 
-    invoke-virtual {v2, v4}, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->sendGSIMdata(Ljava/lang/String;)V
+    invoke-virtual {v2, v4}, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->sendGSIMdata(Ljava/lang/String;)V
 
     goto :goto_3
 .end method

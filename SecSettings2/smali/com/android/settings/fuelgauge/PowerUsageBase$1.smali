@@ -1,11 +1,11 @@
-.class Lcom/android/settings/fuelgauge/PowerUsageBase$1;
+.class Lcom/android/settings_ex/fuelgauge/PowerUsageBase$1;
 .super Landroid/os/Handler;
 .source "PowerUsageBase.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fuelgauge/PowerUsageBase;
+    value = Lcom/android/settings_ex/fuelgauge/PowerUsageBase;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fuelgauge/PowerUsageBase;
+.field final synthetic this$0:Lcom/android/settings_ex/fuelgauge/PowerUsageBase;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fuelgauge/PowerUsageBase;)V
+.method constructor <init>(Lcom/android/settings_ex/fuelgauge/PowerUsageBase;)V
     .locals 0
 
     .prologue
     .line 151
-    iput-object p1, p0, Lcom/android/settings/fuelgauge/PowerUsageBase$1;->this$0:Lcom/android/settings/fuelgauge/PowerUsageBase;
+    iput-object p1, p0, Lcom/android/settings_ex/fuelgauge/PowerUsageBase$1;->this$0:Lcom/android/settings_ex/fuelgauge/PowerUsageBase;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -49,16 +49,16 @@
 
     .line 156
     :pswitch_0
-    iget-object v0, p0, Lcom/android/settings/fuelgauge/PowerUsageBase$1;->this$0:Lcom/android/settings/fuelgauge/PowerUsageBase;
+    iget-object v0, p0, Lcom/android/settings_ex/fuelgauge/PowerUsageBase$1;->this$0:Lcom/android/settings_ex/fuelgauge/PowerUsageBase;
 
-    iget-object v0, v0, Lcom/android/settings/fuelgauge/PowerUsageBase;->mStatsHelper:Lcom/android/internal/os/BatteryStatsHelper;
+    iget-object v0, v0, Lcom/android/settings_ex/fuelgauge/PowerUsageBase;->mStatsHelper:Lcom/android/internal/os/BatteryStatsHelper;
 
     invoke-virtual {v0}, Lcom/android/internal/os/BatteryStatsHelper;->clearStats()V
 
     .line 157
-    iget-object v0, p0, Lcom/android/settings/fuelgauge/PowerUsageBase$1;->this$0:Lcom/android/settings/fuelgauge/PowerUsageBase;
+    iget-object v0, p0, Lcom/android/settings_ex/fuelgauge/PowerUsageBase$1;->this$0:Lcom/android/settings_ex/fuelgauge/PowerUsageBase;
 
-    invoke-virtual {v0}, Lcom/android/settings/fuelgauge/PowerUsageBase;->refreshStats()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/fuelgauge/PowerUsageBase;->refreshStats()V
 
     goto :goto_0
 

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/fuelgauge/PowerUsageSummary$2;
+.class Lcom/android/settings_ex/fuelgauge/PowerUsageSummary$2;
 .super Landroid/database/ContentObserver;
 .source "PowerUsageSummary.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fuelgauge/PowerUsageSummary;
+    value = Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fuelgauge/PowerUsageSummary;
+.field final synthetic this$0:Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fuelgauge/PowerUsageSummary;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 140
-    iput-object p1, p0, Lcom/android/settings/fuelgauge/PowerUsageSummary$2;->this$0:Lcom/android/settings/fuelgauge/PowerUsageSummary;
+    iput-object p1, p0, Lcom/android/settings_ex/fuelgauge/PowerUsageSummary$2;->this$0:Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -42,16 +42,16 @@
     const/4 v0, 0x1
 
     .line 143
-    iget-object v1, p0, Lcom/android/settings/fuelgauge/PowerUsageSummary$2;->this$0:Lcom/android/settings/fuelgauge/PowerUsageSummary;
+    iget-object v1, p0, Lcom/android/settings_ex/fuelgauge/PowerUsageSummary$2;->this$0:Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;
 
-    # getter for: Lcom/android/settings/fuelgauge/PowerUsageSummary;->mFastWirelessChargingPref:Landroid/preference/SwitchPreference;
-    invoke-static {v1}, Lcom/android/settings/fuelgauge/PowerUsageSummary;->access$100(Lcom/android/settings/fuelgauge/PowerUsageSummary;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;->mFastWirelessChargingPref:Landroid/preference/SwitchPreference;
+    invoke-static {v1}, Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;->access$100(Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;)Landroid/preference/SwitchPreference;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/fuelgauge/PowerUsageSummary$2;->this$0:Lcom/android/settings/fuelgauge/PowerUsageSummary;
+    iget-object v2, p0, Lcom/android/settings_ex/fuelgauge/PowerUsageSummary$2;->this$0:Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;
 
-    invoke-virtual {v2}, Lcom/android/settings/fuelgauge/PowerUsageSummary;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 

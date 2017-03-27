@@ -1,11 +1,11 @@
-.class Lcom/android/settings/applications/AppStorageSettings$ClearCacheObserver;
+.class Lcom/android/settings_ex/applications/AppStorageSettings$ClearCacheObserver;
 .super Landroid/content/pm/IPackageDataObserver$Stub;
 .source "AppStorageSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/AppStorageSettings;
+    value = Lcom/android/settings_ex/applications/AppStorageSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/applications/AppStorageSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/applications/AppStorageSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/applications/AppStorageSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/applications/AppStorageSettings;)V
     .locals 0
 
     .prologue
     .line 546
-    iput-object p1, p0, Lcom/android/settings/applications/AppStorageSettings$ClearCacheObserver;->this$0:Lcom/android/settings/applications/AppStorageSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/applications/AppStorageSettings$ClearCacheObserver;->this$0:Lcom/android/settings_ex/applications/AppStorageSettings;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageDataObserver$Stub;-><init>()V
 
@@ -40,10 +40,10 @@
 
     .prologue
     .line 548
-    iget-object v1, p0, Lcom/android/settings/applications/AppStorageSettings$ClearCacheObserver;->this$0:Lcom/android/settings/applications/AppStorageSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/AppStorageSettings$ClearCacheObserver;->this$0:Lcom/android/settings_ex/applications/AppStorageSettings;
 
-    # getter for: Lcom/android/settings/applications/AppStorageSettings;->mHandler:Landroid/os/Handler;
-    invoke-static {v1}, Lcom/android/settings/applications/AppStorageSettings;->access$300(Lcom/android/settings/applications/AppStorageSettings;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/applications/AppStorageSettings;->mHandler:Landroid/os/Handler;
+    invoke-static {v1}, Lcom/android/settings_ex/applications/AppStorageSettings;->access$300(Lcom/android/settings_ex/applications/AppStorageSettings;)Landroid/os/Handler;
 
     move-result-object v1
 
@@ -63,10 +63,10 @@
     iput v1, v0, Landroid/os/Message;->arg1:I
 
     .line 550
-    iget-object v1, p0, Lcom/android/settings/applications/AppStorageSettings$ClearCacheObserver;->this$0:Lcom/android/settings/applications/AppStorageSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/AppStorageSettings$ClearCacheObserver;->this$0:Lcom/android/settings_ex/applications/AppStorageSettings;
 
-    # getter for: Lcom/android/settings/applications/AppStorageSettings;->mHandler:Landroid/os/Handler;
-    invoke-static {v1}, Lcom/android/settings/applications/AppStorageSettings;->access$300(Lcom/android/settings/applications/AppStorageSettings;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/applications/AppStorageSettings;->mHandler:Landroid/os/Handler;
+    invoke-static {v1}, Lcom/android/settings_ex/applications/AppStorageSettings;->access$300(Lcom/android/settings_ex/applications/AppStorageSettings;)Landroid/os/Handler;
 
     move-result-object v1
 

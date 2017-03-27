@@ -1,4 +1,4 @@
-.class Lcom/android/settings/FontPreview$8;
+.class Lcom/android/settings_ex/FontPreview$8;
 .super Ljava/lang/Object;
 .source "FontPreview.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/FontPreview;->badFontDialog(Ljava/lang/String;)V
+    value = Lcom/android/settings_ex/FontPreview;->badFontDialog(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/FontPreview;
+.field final synthetic this$0:Lcom/android/settings_ex/FontPreview;
 
 .field final synthetic val$deletePackageName:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/FontPreview;Ljava/lang/String;)V
+.method constructor <init>(Lcom/android/settings_ex/FontPreview;Ljava/lang/String;)V
     .locals 0
 
     .prologue
     .line 1356
-    iput-object p1, p0, Lcom/android/settings/FontPreview$8;->this$0:Lcom/android/settings/FontPreview;
+    iput-object p1, p0, Lcom/android/settings_ex/FontPreview$8;->this$0:Lcom/android/settings_ex/FontPreview;
 
-    iput-object p2, p0, Lcom/android/settings/FontPreview$8;->val$deletePackageName:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/settings_ex/FontPreview$8;->val$deletePackageName:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -58,7 +58,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/FontPreview$8;->val$deletePackageName:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/FontPreview$8;->val$deletePackageName:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -88,19 +88,19 @@
 
     .line 1365
     .local v2, "uninstallIntent":Landroid/content/Intent;
-    iget-object v3, p0, Lcom/android/settings/FontPreview$8;->this$0:Lcom/android/settings/FontPreview;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview$8;->this$0:Lcom/android/settings_ex/FontPreview;
 
-    # getter for: Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
-    invoke-static {v3}, Lcom/android/settings/FontPreview;->access$500(Lcom/android/settings/FontPreview;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
+    invoke-static {v3}, Lcom/android/settings_ex/FontPreview;->access$500(Lcom/android/settings_ex/FontPreview;)Landroid/content/Context;
 
     move-result-object v3
 
     invoke-virtual {v3, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     .line 1367
-    iget-object v3, p0, Lcom/android/settings/FontPreview$8;->this$0:Lcom/android/settings/FontPreview;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview$8;->this$0:Lcom/android/settings_ex/FontPreview;
 
-    invoke-virtual {v3}, Lcom/android/settings/FontPreview;->finish()V
+    invoke-virtual {v3}, Lcom/android/settings_ex/FontPreview;->finish()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

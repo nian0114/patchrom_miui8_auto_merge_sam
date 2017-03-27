@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/SettingsActivity$onEditButtonClicked;
+.class public interface abstract Lcom/android/settings_ex/SettingsActivity$onEditButtonClicked;
 .super Ljava/lang/Object;
 .source "SettingsActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/SettingsActivity;
+    value = Lcom/android/settings_ex/SettingsActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

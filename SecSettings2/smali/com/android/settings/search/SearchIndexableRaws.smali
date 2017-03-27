@@ -1,4 +1,4 @@
-.class public final Lcom/android/settings/search/SearchIndexableRaws;
+.class public final Lcom/android/settings_ex/search/SearchIndexableRaws;
 .super Ljava/lang/Object;
 .source "SearchIndexableRaws.java"
 
@@ -10,7 +10,7 @@
             "Ljava/util/HashMap",
             "<",
             "Ljava/lang/String;",
-            "Lcom/android/settings/search/SearchIndexableRaw;",
+            "Lcom/android/settings_ex/search/SearchIndexableRaw;",
             ">;"
         }
     .end annotation
@@ -27,7 +27,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/android/settings/search/SearchIndexableRaws;->sRawMap:Ljava/util/HashMap;
+    sput-object v0, Lcom/android/settings_ex/search/SearchIndexableRaws;->sRawMap:Ljava/util/HashMap;
 
     return-void
 .end method
@@ -39,14 +39,14 @@
             "()",
             "Ljava/util/Collection",
             "<",
-            "Lcom/android/settings/search/SearchIndexableRaw;",
+            "Lcom/android/settings_ex/search/SearchIndexableRaw;",
             ">;"
         }
     .end annotation
 
     .prologue
     .line 46
-    sget-object v0, Lcom/android/settings/search/SearchIndexableRaws;->sRawMap:Ljava/util/HashMap;
+    sget-object v0, Lcom/android/settings_ex/search/SearchIndexableRaws;->sRawMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 

@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/accessibility/MagnifierDisplayPolicy;
+.class final Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;
 .super Ljava/lang/Object;
 .source "MagnifierDisplayPolicy.java"
 
@@ -9,8 +9,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;,
-        Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+        Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;,
+        Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
     }
 .end annotation
 
@@ -46,14 +46,14 @@
 
 .field private mIsHoverZoom:Z
 
-.field private mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+.field private mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
 .field private mOnSizeChangeListener:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;",
+            "Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;",
             ">;"
         }
     .end annotation
@@ -84,63 +84,63 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 52
-    new-instance v1, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    new-instance v1, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
-    invoke-direct {v1}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;-><init>()V
+    invoke-direct {v1}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;-><init>()V
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     .line 54
-    iput v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
+    iput v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
 
     .line 55
-    iput v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
+    iput v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
 
     .line 60
-    iput v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerSize:I
+    iput v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerSize:I
 
     .line 61
-    iput v4, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iput v4, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
     .line 62
-    iput v4, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iput v4, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     .line 63
     const/high16 v1, 0x40000000    # 2.0f
 
-    iput v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mScale:F
+    iput v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mScale:F
 
     .line 66
-    iput v4, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
+    iput v4, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
 
     .line 321
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mOnSizeChangeListener:Ljava/util/ArrayList;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mOnSizeChangeListener:Ljava/util/ArrayList;
 
     .line 329
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDisplayMetrics:Landroid/util/DisplayMetrics;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDisplayMetrics:Landroid/util/DisplayMetrics;
 
     .line 442
-    new-instance v1, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$1;
+    new-instance v1, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$1;
 
     new-instance v4, Landroid/os/Handler;
 
     invoke-direct {v4}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v1, p0, v4}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$1;-><init>(Lcom/android/settings/accessibility/MagnifierDisplayPolicy;Landroid/os/Handler;)V
+    invoke-direct {v1, p0, v4}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$1;-><init>(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;Landroid/os/Handler;)V
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mHoverZoomObserver:Landroid/database/ContentObserver;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mHoverZoomObserver:Landroid/database/ContentObserver;
 
     .line 77
-    iput-object p1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
 
     .line 79
-    iget-object v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -157,10 +157,10 @@
     move v1, v2
 
     :goto_0
-    iput-boolean v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mIsHoverZoom:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mIsHoverZoom:Z
 
     .line 80
-    iget-object v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -172,12 +172,12 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mHoverZoomObserver:Landroid/database/ContentObserver;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mHoverZoomObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v1, v4, v3, v5}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 82
-    iget-object v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -189,7 +189,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerSize:I
+    iput v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerSize:I
 
     .line 84
     new-instance v0, Lcom/samsung/android/sdk/dualscreen/SDualScreen;
@@ -202,7 +202,7 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mIsDualScreenFeatureEnabled:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mIsDualScreenFeatureEnabled:Z
 
     .line 86
     return-void
@@ -215,47 +215,47 @@
     goto :goto_0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/accessibility/MagnifierDisplayPolicy;)Landroid/content/Context;
+.method static synthetic access$400(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/MagnifierDisplayPolicy;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;
 
     .prologue
     .line 48
-    iget-object v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/accessibility/MagnifierDisplayPolicy;)Z
+.method static synthetic access$500(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/MagnifierDisplayPolicy;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;
 
     .prologue
     .line 48
-    iget-boolean v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mIsHoverZoom:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mIsHoverZoom:Z
 
     return v0
 .end method
 
-.method static synthetic access$502(Lcom/android/settings/accessibility/MagnifierDisplayPolicy;Z)Z
+.method static synthetic access$502(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/MagnifierDisplayPolicy;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;
     .param p1, "x1"    # Z
 
     .prologue
     .line 48
-    iput-boolean p1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mIsHoverZoom:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mIsHoverZoom:Z
 
     return p1
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/accessibility/MagnifierDisplayPolicy;)V
+.method static synthetic access$600(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/MagnifierDisplayPolicy;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;
 
     .prologue
     .line 48
-    invoke-direct {p0}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->setPointMargin()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->setPointMargin()V
 
     return-void
 .end method
@@ -265,12 +265,12 @@
 
     .prologue
     .line 418
-    iget-boolean v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mIsHoverZoom:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mIsHoverZoom:Z
 
     if-eqz v0, :cond_0
 
     .line 419
-    iget-object v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -284,7 +284,7 @@
 
     int-to-float v0, v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
 
     .line 423
     :goto_0
@@ -292,9 +292,9 @@
 
     .line 421
     :cond_0
-    iget v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
-    iget v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mScale:F
+    iget v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mScale:F
 
     mul-float/2addr v0, v1
 
@@ -312,7 +312,7 @@
 
     int-to-float v0, v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
 
     goto :goto_0
 .end method
@@ -325,13 +325,13 @@
     .line 254
     if-eqz p1, :cond_0
 
-    iget v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
 
     iget v1, p1, Landroid/util/DisplayMetrics;->widthPixels:I
 
     if-ne v0, v1, :cond_1
 
-    iget v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
 
     iget v1, p1, Landroid/util/DisplayMetrics;->heightPixels:I
 
@@ -349,19 +349,19 @@
     :cond_1
     iget v0, p1, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    iput v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
 
     .line 260
     iget v0, p1, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    iput v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
 
     .line 262
-    iget v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mFixedWidth:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mFixedWidth:I
 
     int-to-float v0, v0
 
-    iget v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mScale:F
+    iget v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mScale:F
 
     div-float/2addr v0, v1
 
@@ -369,14 +369,14 @@
 
     int-to-float v0, v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
     .line 263
-    iget v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mFixedHeight:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mFixedHeight:I
 
     int-to-float v0, v0
 
-    iget v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mScale:F
+    iget v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mScale:F
 
     div-float/2addr v0, v1
 
@@ -384,10 +384,10 @@
 
     int-to-float v0, v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     .line 266
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->setPrecision()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->setPrecision()V
 
     .line 268
     const/4 v0, 0x1
@@ -404,12 +404,12 @@
     const/4 v5, 0x0
 
     .line 353
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
 
     if-nez v3, :cond_0
 
     .line 354
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
 
     const-string v4, "window"
 
@@ -419,16 +419,16 @@
 
     check-cast v3, Landroid/view/WindowManager;
 
-    iput-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mWindowManager:Landroid/view/WindowManager;
+    iput-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mWindowManager:Landroid/view/WindowManager;
 
     .line 356
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mWindowManager:Landroid/view/WindowManager;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-interface {v3}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultDisplay:Landroid/view/Display;
+    iput-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultDisplay:Landroid/view/Display;
 
     .line 358
     const-string v3, "display"
@@ -441,11 +441,11 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDm:Landroid/hardware/display/IDisplayManager;
+    iput-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDm:Landroid/hardware/display/IDisplayManager;
 
     .line 360
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -455,11 +455,11 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDisplayMetrics:Landroid/util/DisplayMetrics;
+    iput-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDisplayMetrics:Landroid/util/DisplayMetrics;
 
     .line 363
     :try_start_0
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDm:Landroid/hardware/display/IDisplayManager;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDm:Landroid/hardware/display/IDisplayManager;
 
     const/4 v4, 0x0
 
@@ -467,22 +467,22 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
+    iput-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 368
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDisplayMetrics:Landroid/util/DisplayMetrics;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDisplayMetrics:Landroid/util/DisplayMetrics;
 
-    invoke-direct {p0, v3}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->updateDisplayInfo(Landroid/util/DisplayMetrics;)Z
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->updateDisplayInfo(Landroid/util/DisplayMetrics;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
     .line 369
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mOnSizeChangeListener:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mOnSizeChangeListener:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -500,19 +500,19 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;
+    check-cast v2, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;
 
     .line 370
-    .local v2, "listener":Lcom/android/settings/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;
+    .local v2, "listener":Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;
     const/4 v3, 0x1
 
-    invoke-interface {v2, v3}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;->onSizeChanged(Z)V
+    invoke-interface {v2, v3}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;->onSizeChanged(Z)V
 
     goto :goto_1
 
     .line 364
     .end local v1    # "i$":Ljava/util/Iterator;
-    .end local v2    # "listener":Lcom/android/settings/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;
+    .end local v2    # "listener":Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;
     :catch_0
     move-exception v0
 
@@ -538,12 +538,12 @@
     const/4 v5, 0x0
 
     .line 389
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
 
     if-nez v3, :cond_0
 
     .line 390
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
 
     const-string v4, "window"
 
@@ -553,16 +553,16 @@
 
     check-cast v3, Landroid/view/WindowManager;
 
-    iput-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mWindowManager:Landroid/view/WindowManager;
+    iput-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mWindowManager:Landroid/view/WindowManager;
 
     .line 391
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mWindowManager:Landroid/view/WindowManager;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-interface {v3}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultDisplay:Landroid/view/Display;
+    iput-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultDisplay:Landroid/view/Display;
 
     .line 392
     const-string v3, "display"
@@ -575,11 +575,11 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDm:Landroid/hardware/display/IDisplayManager;
+    iput-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDm:Landroid/hardware/display/IDisplayManager;
 
     .line 394
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -589,7 +589,7 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDisplayMetrics:Landroid/util/DisplayMetrics;
+    iput-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDisplayMetrics:Landroid/util/DisplayMetrics;
 
     .line 397
     :try_start_0
@@ -605,7 +605,7 @@
     if-ne p1, v3, :cond_1
 
     .line 399
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDm:Landroid/hardware/display/IDisplayManager;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDm:Landroid/hardware/display/IDisplayManager;
 
     const/4 v4, 0x0
 
@@ -613,22 +613,22 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
+    iput-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 409
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDisplayMetrics:Landroid/util/DisplayMetrics;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDisplayMetrics:Landroid/util/DisplayMetrics;
 
-    invoke-direct {p0, v3}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->updateDisplayInfo(Landroid/util/DisplayMetrics;)Z
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->updateDisplayInfo(Landroid/util/DisplayMetrics;)Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
     .line 410
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mOnSizeChangeListener:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mOnSizeChangeListener:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -646,17 +646,17 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;
+    check-cast v2, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;
 
     .line 411
-    .local v2, "listener":Lcom/android/settings/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;
-    invoke-interface {v2, v6}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;->onSizeChanged(Z)V
+    .local v2, "listener":Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;
+    invoke-interface {v2, v6}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;->onSizeChanged(Z)V
 
     goto :goto_1
 
     .line 400
     .end local v1    # "i$":Ljava/util/Iterator;
-    .end local v2    # "listener":Lcom/android/settings/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;
+    .end local v2    # "listener":Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;
     :cond_1
     :try_start_1
     sget-object v3, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;->SUB:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;
@@ -664,7 +664,7 @@
     if-ne p1, v3, :cond_2
 
     .line 401
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDm:Landroid/hardware/display/IDisplayManager;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDm:Landroid/hardware/display/IDisplayManager;
 
     const/4 v4, 0x1
 
@@ -672,7 +672,7 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
+    iput-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -692,7 +692,7 @@
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_2
     :try_start_2
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDm:Landroid/hardware/display/IDisplayManager;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDm:Landroid/hardware/display/IDisplayManager;
 
     const/4 v4, 0x0
 
@@ -700,7 +700,7 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
+    iput-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -718,7 +718,7 @@
 
     .prologue
     .line 457
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -733,16 +733,16 @@
 
     .prologue
     .line 346
-    iget-object v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
 
     if-nez v0, :cond_0
 
     .line 347
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->checkUpdateDisplayInfo()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->checkUpdateDisplayInfo()Z
 
     .line 349
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
 
     return-object v0
 .end method
@@ -753,21 +753,21 @@
 
     .prologue
     .line 383
-    iget-object v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
 
     if-nez v0, :cond_0
 
     .line 384
-    invoke-virtual {p0, p1}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->checkUpdateDisplayInfo(Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;)Z
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->checkUpdateDisplayInfo(Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;)Z
 
     .line 386
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
 
     return-object v0
 .end method
 
-.method public getDisplayInfo(Landroid/view/MagnificationSpec;)Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+.method public getDisplayInfo(Landroid/view/MagnificationSpec;)Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
     .locals 26
     .param p1, "spec"    # Landroid/view/MagnificationSpec;
 
@@ -817,7 +817,7 @@
     .local v11, "scale":F
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
     move/from16 v17, v0
 
@@ -831,7 +831,7 @@
     .local v4, "left":F
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     move/from16 v17, v0
 
@@ -869,7 +869,7 @@
     .local v6, "pointOffsetY":F
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
     move/from16 v17, v0
 
@@ -911,7 +911,7 @@
     :goto_1
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     move/from16 v17, v0
 
@@ -941,12 +941,12 @@
     :goto_2
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mSurfaceOffset:Landroid/graphics/Point;
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$000(Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mSurfaceOffset:Landroid/graphics/Point;
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$000(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
 
     move-result-object v17
 
@@ -963,12 +963,12 @@
     .line 216
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mSurfaceOffset:Landroid/graphics/Point;
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$000(Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mSurfaceOffset:Landroid/graphics/Point;
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$000(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
 
     move-result-object v17
 
@@ -985,12 +985,12 @@
     .line 218
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mAbsOffset:Landroid/graphics/Point;
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$100(Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mAbsOffset:Landroid/graphics/Point;
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$100(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
 
     move-result-object v17
 
@@ -1007,12 +1007,12 @@
     .line 219
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mAbsOffset:Landroid/graphics/Point;
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$100(Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mAbsOffset:Landroid/graphics/Point;
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$100(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
 
     move-result-object v17
 
@@ -1029,12 +1029,12 @@
     .line 221
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mPointOffset:Landroid/graphics/Point;
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$200(Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mPointOffset:Landroid/graphics/Point;
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$200(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
 
     move-result-object v17
 
@@ -1044,7 +1044,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerSize:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerSize:I
 
     move/from16 v19, v0
 
@@ -1061,12 +1061,12 @@
     .line 222
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mPointOffset:Landroid/graphics/Point;
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$200(Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mPointOffset:Landroid/graphics/Point;
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$200(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
 
     move-result-object v17
 
@@ -1076,7 +1076,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerSize:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerSize:I
 
     move/from16 v19, v0
 
@@ -1093,12 +1093,12 @@
     .line 224
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mPointOffset:Landroid/graphics/Point;
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$200(Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mPointOffset:Landroid/graphics/Point;
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$200(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
 
     move-result-object v17
 
@@ -1113,12 +1113,12 @@
     .line 225
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mPointOffset:Landroid/graphics/Point;
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$200(Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mPointOffset:Landroid/graphics/Point;
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$200(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
 
     move-result-object v17
 
@@ -1135,12 +1135,12 @@
     :goto_3
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mPointOffset:Landroid/graphics/Point;
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$200(Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mPointOffset:Landroid/graphics/Point;
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$200(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
 
     move-result-object v17
 
@@ -1155,12 +1155,12 @@
     .line 231
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mPointOffset:Landroid/graphics/Point;
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$200(Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mPointOffset:Landroid/graphics/Point;
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$200(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
 
     move-result-object v17
 
@@ -1177,7 +1177,7 @@
     :goto_4
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mBorderPadding:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mBorderPadding:F
 
     move/from16 v17, v0
 
@@ -1187,7 +1187,7 @@
     .local v8, "rectLeft":F
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mBorderPadding:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mBorderPadding:F
 
     move/from16 v17, v0
 
@@ -1197,7 +1197,7 @@
     .local v10, "rectTop":F
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
     move/from16 v17, v0
 
@@ -1205,7 +1205,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mBorderPadding:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mBorderPadding:F
 
     move/from16 v18, v0
 
@@ -1215,7 +1215,7 @@
     .local v9, "rectRight":F
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     move/from16 v17, v0
 
@@ -1223,7 +1223,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mBorderPadding:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mBorderPadding:F
 
     move/from16 v18, v0
 
@@ -1233,12 +1233,12 @@
     .local v7, "rectBottom":F
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mSurfaceCropRect:Landroid/graphics/Rect;
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$300(Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Rect;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mSurfaceCropRect:Landroid/graphics/Rect;
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$300(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Rect;
 
     move-result-object v17
 
@@ -1275,12 +1275,12 @@
     .line 241
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mSurfaceOffset:Landroid/graphics/Point;
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$000(Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mSurfaceOffset:Landroid/graphics/Point;
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$000(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
 
     move-result-object v17
 
@@ -1323,12 +1323,12 @@
     .line 242
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mSurfaceOffset:Landroid/graphics/Point;
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$000(Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mSurfaceOffset:Landroid/graphics/Point;
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$000(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
 
     move-result-object v17
 
@@ -1383,12 +1383,12 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v19, v0
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mSurfaceOffset:Landroid/graphics/Point;
-    invoke-static/range {v19 .. v19}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$000(Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mSurfaceOffset:Landroid/graphics/Point;
+    invoke-static/range {v19 .. v19}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$000(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
 
     move-result-object v19
 
@@ -1410,12 +1410,12 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v19, v0
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mSurfaceOffset:Landroid/graphics/Point;
-    invoke-static/range {v19 .. v19}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$000(Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mSurfaceOffset:Landroid/graphics/Point;
+    invoke-static/range {v19 .. v19}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$000(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
 
     move-result-object v19
 
@@ -1437,12 +1437,12 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v19, v0
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mAbsOffset:Landroid/graphics/Point;
-    invoke-static/range {v19 .. v19}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$100(Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mAbsOffset:Landroid/graphics/Point;
+    invoke-static/range {v19 .. v19}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$100(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
 
     move-result-object v19
 
@@ -1464,12 +1464,12 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v19, v0
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mAbsOffset:Landroid/graphics/Point;
-    invoke-static/range {v19 .. v19}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$100(Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mAbsOffset:Landroid/graphics/Point;
+    invoke-static/range {v19 .. v19}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$100(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
 
     move-result-object v19
 
@@ -1491,12 +1491,12 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v19, v0
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mSurfaceCropRect:Landroid/graphics/Rect;
-    invoke-static/range {v19 .. v19}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$300(Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Rect;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mSurfaceCropRect:Landroid/graphics/Rect;
+    invoke-static/range {v19 .. v19}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$300(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Rect;
 
     move-result-object v19
 
@@ -1513,7 +1513,7 @@
     .line 250
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v17, v0
 
@@ -1527,7 +1527,7 @@
     :cond_2
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
     move/from16 v17, v0
 
@@ -1544,7 +1544,7 @@
     .line 153
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
     move/from16 v17, v0
 
@@ -1562,7 +1562,7 @@
     :cond_3
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
 
     move/from16 v17, v0
 
@@ -1574,7 +1574,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
     move/from16 v18, v0
 
@@ -1595,7 +1595,7 @@
     .line 157
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
 
     move/from16 v17, v0
 
@@ -1607,7 +1607,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
     move/from16 v18, v0
 
@@ -1620,7 +1620,7 @@
     .line 158
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
 
     move/from16 v17, v0
 
@@ -1637,7 +1637,7 @@
     .line 159
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
 
     move/from16 v17, v0
 
@@ -1649,7 +1649,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
 
     move/from16 v18, v0
 
@@ -1670,7 +1670,7 @@
     .line 160
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
 
     move/from16 v17, v0
 
@@ -1682,7 +1682,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
     move/from16 v18, v0
 
@@ -1692,7 +1692,7 @@
     :goto_5
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
 
     move/from16 v17, v0
 
@@ -1704,7 +1704,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
     move/from16 v18, v0
 
@@ -1720,7 +1720,7 @@
     :cond_4
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
 
     move/from16 v17, v0
 
@@ -1732,7 +1732,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
     move/from16 v18, v0
 
@@ -1751,7 +1751,7 @@
     .line 163
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
 
     move/from16 v17, v0
 
@@ -1763,7 +1763,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
     move/from16 v18, v0
 
@@ -1792,7 +1792,7 @@
     .line 168
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
     move/from16 v17, v0
 
@@ -1815,7 +1815,7 @@
     :cond_6
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     move/from16 v17, v0
 
@@ -1825,7 +1825,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
 
     move/from16 v18, v0
 
@@ -1848,7 +1848,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     move/from16 v18, v0
 
@@ -1868,7 +1868,7 @@
     .line 180
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     move/from16 v17, v0
 
@@ -1892,7 +1892,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
 
     move/from16 v17, v0
 
@@ -1904,7 +1904,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     move/from16 v17, v0
 
@@ -1931,7 +1931,7 @@
     .line 182
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
 
     move/from16 v17, v0
 
@@ -1943,7 +1943,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     move/from16 v18, v0
 
@@ -1960,7 +1960,7 @@
     .line 183
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
 
     move/from16 v17, v0
 
@@ -1972,7 +1972,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     move/from16 v18, v0
 
@@ -1981,7 +1981,7 @@
     .line 184
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
 
     move/from16 v17, v0
 
@@ -1994,7 +1994,7 @@
     .line 185
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
 
     move/from16 v17, v0
 
@@ -2012,7 +2012,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
 
     move/from16 v18, v0
 
@@ -2021,7 +2021,7 @@
     .line 186
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     move/from16 v17, v0
 
@@ -2037,7 +2037,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
 
     move/from16 v18, v0
 
@@ -2045,7 +2045,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     move/from16 v18, v0
 
@@ -2061,7 +2061,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
 
     move/from16 v18, v0
 
@@ -2083,7 +2083,7 @@
     :goto_6
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
 
     move/from16 v17, v0
 
@@ -2096,7 +2096,7 @@
     .line 201
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     move/from16 v17, v0
 
@@ -2120,7 +2120,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
 
     move/from16 v18, v0
 
@@ -2132,7 +2132,7 @@
     :cond_8
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
 
     move/from16 v17, v0
 
@@ -2148,7 +2148,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     move/from16 v18, v0
 
@@ -2164,7 +2164,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
 
     move/from16 v18, v0
 
@@ -2177,7 +2177,7 @@
     .line 189
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
 
     move/from16 v17, v0
 
@@ -2189,7 +2189,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
 
     move/from16 v18, v0
 
@@ -2213,7 +2213,7 @@
     :cond_9
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
 
     move/from16 v17, v0
 
@@ -2230,7 +2230,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     move/from16 v18, v0
 
@@ -2252,7 +2252,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
 
     move/from16 v18, v0
 
@@ -2261,7 +2261,7 @@
     .line 194
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     move/from16 v17, v0
 
@@ -2277,7 +2277,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
 
     move/from16 v18, v0
 
@@ -2289,7 +2289,7 @@
     :cond_a
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
 
     move/from16 v17, v0
 
@@ -2301,7 +2301,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     move/from16 v18, v0
 
@@ -2320,7 +2320,7 @@
     .line 197
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
 
     move/from16 v17, v0
 
@@ -2332,7 +2332,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     move/from16 v18, v0
 
@@ -2352,7 +2352,7 @@
     :cond_b
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
 
     move/from16 v17, v0
 
@@ -2364,7 +2364,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     move/from16 v18, v0
 
@@ -2384,7 +2384,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     move/from16 v18, v0
 
@@ -2406,7 +2406,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
 
     move/from16 v18, v0
 
@@ -2415,7 +2415,7 @@
     .line 207
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     move/from16 v17, v0
 
@@ -2439,7 +2439,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
 
     move/from16 v18, v0
 
@@ -2448,7 +2448,7 @@
     .line 208
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
 
     move/from16 v17, v0
 
@@ -2461,7 +2461,7 @@
     .line 209
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     move/from16 v17, v0
 
@@ -2477,7 +2477,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerMargin:F
 
     move/from16 v18, v0
 
@@ -2495,12 +2495,12 @@
     :cond_e
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mPointOffset:Landroid/graphics/Point;
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$200(Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mPointOffset:Landroid/graphics/Point;
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$200(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
 
     move-result-object v17
 
@@ -2512,13 +2512,13 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
 
     move/from16 v18, v0
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerSize:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerSize:I
 
     move/from16 v19, v0
 
@@ -2533,24 +2533,24 @@
     .line 227
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mPointOffset:Landroid/graphics/Point;
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$200(Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mPointOffset:Landroid/graphics/Point;
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$200(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
 
     move-result-object v17
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
 
     move/from16 v18, v0
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerSize:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerSize:I
 
     move/from16 v19, v0
 
@@ -2568,12 +2568,12 @@
     :cond_f
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mPointOffset:Landroid/graphics/Point;
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$200(Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mPointOffset:Landroid/graphics/Point;
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$200(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
 
     move-result-object v17
 
@@ -2585,13 +2585,13 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
 
     move/from16 v18, v0
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerSize:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerSize:I
 
     move/from16 v19, v0
 
@@ -2606,24 +2606,24 @@
     .line 233
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mPointOffset:Landroid/graphics/Point;
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$200(Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->mPointOffset:Landroid/graphics/Point;
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;->access$200(Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;)Landroid/graphics/Point;
 
     move-result-object v17
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultHeight:I
 
     move/from16 v18, v0
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mPointerSize:I
+    iget v0, v0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mPointerSize:I
 
     move/from16 v19, v0
 
@@ -2644,7 +2644,7 @@
 
     .prologue
     .line 272
-    iget v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mBorderPadding:F
+    iget v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mBorderPadding:F
 
     sub-float v1, p1, v1
 
@@ -2654,7 +2654,7 @@
 
     float-to-int v1, v1
 
-    iget v2, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mBorderPadding:F
+    iget v2, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mBorderPadding:F
 
     float-to-int v2, v2
 
@@ -2664,7 +2664,7 @@
 
     .line 273
     .local v0, "diff":F
-    iget v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mBorderPadding:F
+    iget v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mBorderPadding:F
 
     const/high16 v2, 0x40000000    # 2.0f
 
@@ -2682,17 +2682,17 @@
 
     .prologue
     .line 310
-    iget v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mScale:F
+    iget v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mScale:F
 
     return v0
 .end method
 
-.method public getmLastDisplayInfo()Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+.method public getmLastDisplayInfo()Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
     .locals 1
 
     .prologue
     .line 89
-    iget-object v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     return-object v0
 .end method
@@ -2702,30 +2702,30 @@
 
     .prologue
     .line 277
-    iget v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iget v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
-    iget v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iget v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->getPrecision(F)F
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->getPrecision(F)F
 
     move-result v1
 
     add-float/2addr v0, v1
 
-    iput v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
     .line 278
-    iget v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
-    iget v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->getPrecision(F)F
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->getPrecision(F)F
 
     move-result v1
 
     add-float/2addr v0, v1
 
-    iput v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     .line 279
     const-string v0, "Settings.MagnifierDisplayPolicy"
@@ -2740,7 +2740,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iget v2, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -2752,7 +2752,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iget v2, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -2765,16 +2765,16 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 281
-    invoke-direct {p0}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->setPointMargin()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->setPointMargin()V
 
     .line 283
-    iget v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iget v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
-    iget v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mScale:F
+    iget v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mScale:F
 
     mul-float/2addr v0, v1
 
-    iget v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mDefaultWidth:I
 
     int-to-float v1, v1
 
@@ -2783,18 +2783,18 @@
     if-lez v0, :cond_0
 
     .line 285
-    iget v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mFixedWidth:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mFixedWidth:I
 
     add-int/lit8 v0, v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mFixedWidth:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mFixedWidth:I
 
     .line 286
-    iget v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mFixedWidth:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mFixedWidth:I
 
     int-to-float v0, v0
 
-    iget v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mScale:F
+    iget v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mScale:F
 
     div-float/2addr v0, v1
 
@@ -2802,20 +2802,20 @@
 
     int-to-float v0, v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
     .line 287
-    iget v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iget v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
-    iget v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iget v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->getPrecision(F)F
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->getPrecision(F)F
 
     move-result v1
 
     add-float/2addr v0, v1
 
-    iput v0, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
     .line 289
     :cond_0
@@ -2838,7 +2838,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 317
-    iget-object v1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings/accessibility/MagnifierDisplayPolicy$DisplayInfo;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mLastDisplayInfo:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$DisplayInfo;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2860,16 +2860,16 @@
     const/high16 v3, 0x3f800000    # 1.0f
 
     .line 426
-    iput p1, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mFixedWidth:I
+    iput p1, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mFixedWidth:I
 
     .line 427
-    iput p2, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mFixedHeight:I
+    iput p2, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mFixedHeight:I
 
     .line 428
-    iput p3, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mScale:F
+    iput p3, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mScale:F
 
     .line 430
-    iget v2, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mFixedWidth:I
+    iget v2, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mFixedWidth:I
 
     int-to-float v2, v2
 
@@ -2879,10 +2879,10 @@
 
     int-to-float v2, v2
 
-    iput v2, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
+    iput v2, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropWidth:F
 
     .line 431
-    iget v2, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mFixedHeight:I
+    iget v2, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mFixedHeight:I
 
     int-to-float v2, v2
 
@@ -2892,10 +2892,10 @@
 
     int-to-float v2, v2
 
-    iput v2, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
+    iput v2, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mCropHeight:F
 
     .line 433
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->mOnSizeChangeListener:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->mOnSizeChangeListener:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -2913,18 +2913,18 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;
+    check-cast v1, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;
 
     .line 434
-    .local v1, "listener":Lcom/android/settings/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;
+    .local v1, "listener":Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;
     const/4 v2, 0x0
 
-    invoke-interface {v1, v2}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;->onSizeChanged(Z)V
+    invoke-interface {v1, v2}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;->onSizeChanged(Z)V
 
     goto :goto_0
 
     .line 436
-    .end local v1    # "listener":Lcom/android/settings/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;
+    .end local v1    # "listener":Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;
     :cond_0
     return-void
 .end method

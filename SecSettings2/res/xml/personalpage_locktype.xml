@@ -2,7 +2,7 @@
 <PreferenceScreen
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:touchwiz="http://schemas.android.com/apk/res/touchwiz">
-    <com.android.settings.UnclickablePreference android:key="personalpage_inline_help" />
+    <com.android.settings_ex.UnclickablePreference android:key="personalpage_inline_help" />
     <PreferenceCategory android:title="@string/vpn_type" android:key="locktype_category" />
     <Preference android:title="@string/unlock_set_unlock_pattern_title" android:key="personalpage_locktype_pattern" />
     <Preference android:title="@string/unlock_set_unlock_pin_title" android:key="personalpage_locktype_pin" />

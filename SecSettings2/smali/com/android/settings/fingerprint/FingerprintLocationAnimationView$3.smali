@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fingerprint/FingerprintLocationAnimationView$3;
+.class Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView$3;
 .super Ljava/lang/Object;
 .source "FingerprintLocationAnimationView.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->startAlphaAnimation()V
+    value = Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->startAlphaAnimation()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;)V
     .locals 0
 
     .prologue
     .line 153
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView$3;->this$0:Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView$3;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,10 +42,10 @@
 
     .prologue
     .line 156
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView$3;->this$0:Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView$3;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mPulsePaint:Landroid/graphics/Paint;
-    invoke-static {v0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->access$300(Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;)Landroid/graphics/Paint;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mPulsePaint:Landroid/graphics/Paint;
+    invoke-static {v0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->access$300(Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;)Landroid/graphics/Paint;
 
     move-result-object v1
 
@@ -68,9 +68,9 @@
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setAlpha(I)V
 
     .line 157
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView$3;->this$0:Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView$3;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;
 
-    invoke-virtual {v0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->invalidate()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->invalidate()V
 
     .line 158
     return-void

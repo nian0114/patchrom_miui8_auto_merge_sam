@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/networkconnect/NetworkManagerUtils;
+.class public Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;
 .super Ljava/lang/Object;
 .source "NetworkManagerUtils.java"
 
@@ -13,7 +13,7 @@
         value = {
             "Ljava/util/Comparator",
             "<",
-            "Lcom/android/settings/networkconnect/ApplicationNetInfo;",
+            "Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;",
             ">;"
         }
     .end annotation
@@ -74,7 +74,7 @@
     const/4 v3, 0x0
 
     .line 72
-    sput-boolean v3, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mIsWarningStatus:Z
+    sput-boolean v3, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mIsWarningStatus:Z
 
     .line 73
     new-array v0, v4, [[Ljava/lang/String;
@@ -93,14 +93,14 @@
 
     aput-object v1, v0, v3
 
-    sput-object v0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->ASSOCIATE_PACKAGES_BY_KEY_PACKAGE:[[Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->ASSOCIATE_PACKAGES_BY_KEY_PACKAGE:[[Ljava/lang/String;
 
     .line 135
-    new-instance v0, Lcom/android/settings/networkconnect/NetworkManagerUtils$1;
+    new-instance v0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils$1;
 
-    invoke-direct {v0}, Lcom/android/settings/networkconnect/NetworkManagerUtils$1;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils$1;-><init>()V
 
-    sput-object v0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mRowComparator:Ljava/util/Comparator;
+    sput-object v0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mRowComparator:Ljava/util/Comparator;
 
     return-void
 .end method
@@ -122,47 +122,47 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mWhiteListSlot1:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mWhiteListSlot1:Ljava/util/List;
 
     .line 51
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mWhiteListSlot2:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mWhiteListSlot2:Ljava/util/List;
 
     .line 58
-    iput-object v1, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mNetWorkHistory:Landroid/net/NetworkStatsHistory;
+    iput-object v1, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mNetWorkHistory:Landroid/net/NetworkStatsHistory;
 
     .line 59
-    iput-object v1, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mStatsService:Landroid/net/INetworkStatsService;
+    iput-object v1, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mStatsService:Landroid/net/INetworkStatsService;
 
     .line 60
-    iput-object v1, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mNetWorkTemplate:Landroid/net/NetworkTemplate;
+    iput-object v1, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mNetWorkTemplate:Landroid/net/NetworkTemplate;
 
     .line 61
-    iput-object v1, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mTelManager:Landroid/telephony/TelephonyManager;
+    iput-object v1, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mTelManager:Landroid/telephony/TelephonyManager;
 
     .line 62
-    iput-object v1, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mStatsSession:Landroid/net/INetworkStatsSession;
+    iput-object v1, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mStatsSession:Landroid/net/INetworkStatsSession;
 
     .line 70
-    iput-wide v2, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mStart:J
+    iput-wide v2, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mStart:J
 
     .line 71
-    iput-wide v2, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mEnd:J
+    iput-wide v2, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mEnd:J
 
     .line 77
-    iput-object p1, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
 
     .line 78
-    iget-object v0, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/net/NetworkPolicyManager;->from(Landroid/content/Context;)Landroid/net/NetworkPolicyManager;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mPolicyManager:Landroid/net/NetworkPolicyManager;
+    iput-object v0, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mPolicyManager:Landroid/net/NetworkPolicyManager;
 
     .line 79
     const-string v0, "netstats"
@@ -175,10 +175,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mStatsService:Landroid/net/INetworkStatsService;
+    iput-object v0, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mStatsService:Landroid/net/INetworkStatsService;
 
     .line 80
-    invoke-direct {p0}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getSubscriberId()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getSubscriberId()Ljava/lang/String;
 
     move-result-object v0
 
@@ -186,7 +186,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mNetWorkTemplate:Landroid/net/NetworkTemplate;
+    iput-object v0, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mNetWorkTemplate:Landroid/net/NetworkTemplate;
 
     .line 81
     return-void
@@ -287,7 +287,7 @@
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mStart:J
+    iput-wide v2, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mStart:J
 
     .line 359
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
@@ -325,7 +325,7 @@
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mEnd:J
+    iput-wide v2, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mEnd:J
 
     .line 369
     :goto_0
@@ -363,7 +363,7 @@
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mEnd:J
+    iput-wide v2, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mEnd:J
 
     .line 365
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
@@ -401,7 +401,7 @@
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mStart:J
+    iput-wide v2, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mStart:J
 
     goto :goto_0
 .end method
@@ -420,7 +420,7 @@
     .line 319
     .local v2, "lConfirmTime":J
     :try_start_0
-    iget-object v4, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -434,7 +434,7 @@
 
     move-result-object v5
 
-    invoke-direct {p0}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getActiveSubId()I
+    invoke-direct {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getActiveSubId()I
 
     move-result v6
 
@@ -496,7 +496,7 @@
 
     .line 335
     .local v2, "confirmTrafficString":Ljava/lang/String;
-    iget-object v7, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
+    iget-object v7, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -510,7 +510,7 @@
 
     move-result-object v8
 
-    invoke-direct {p0}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getActiveSubId()I
+    invoke-direct {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getActiveSubId()I
 
     move-result v9
 
@@ -657,7 +657,7 @@
     .line 301
     .local v1, "iStart":I
     :try_start_0
-    iget-object v3, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -671,7 +671,7 @@
 
     move-result-object v4
 
-    invoke-direct {p0}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getActiveSubId()I
+    invoke-direct {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getActiveSubId()I
 
     move-result v5
 
@@ -730,14 +730,14 @@
 
     .prologue
     .line 290
-    invoke-direct {p0}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->isSupportMultiSIM()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->isSupportMultiSIM()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
     .line 291
-    iget-object v1, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
 
     const-string v2, "phone"
 
@@ -759,7 +759,7 @@
     return-object v1
 
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getCurrentDataSoltId()I
+    invoke-direct {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getCurrentDataSoltId()I
 
     move-result v1
 
@@ -777,22 +777,22 @@
     const/4 v0, 0x1
 
     .line 283
-    iget-object v1, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mTelManager:Landroid/telephony/TelephonyManager;
+    iget-object v1, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mTelManager:Landroid/telephony/TelephonyManager;
 
     if-nez v1, :cond_0
 
     .line 284
-    iget-object v1, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Landroid/telephony/TelephonyManager;->from(Landroid/content/Context;)Landroid/telephony/TelephonyManager;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mTelManager:Landroid/telephony/TelephonyManager;
+    iput-object v1, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mTelManager:Landroid/telephony/TelephonyManager;
 
     .line 286
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mTelManager:Landroid/telephony/TelephonyManager;
+    iget-object v1, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mTelManager:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getPhoneCount()I
 
@@ -831,10 +831,10 @@
 
     move-result-object v8
 
-    iput-object v8, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mStatsService:Landroid/net/INetworkStatsService;
+    iput-object v8, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mStatsService:Landroid/net/INetworkStatsService;
 
     .line 220
-    invoke-direct {p0}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getSubscriberId()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getSubscriberId()Ljava/lang/String;
 
     move-result-object v8
 
@@ -842,10 +842,10 @@
 
     move-result-object v8
 
-    iput-object v8, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mNetWorkTemplate:Landroid/net/NetworkTemplate;
+    iput-object v8, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mNetWorkTemplate:Landroid/net/NetworkTemplate;
 
     .line 221
-    iget-object v8, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
 
     const-string v9, "phone"
 
@@ -855,25 +855,25 @@
 
     check-cast v8, Landroid/telephony/TelephonyManager;
 
-    iput-object v8, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mTelManager:Landroid/telephony/TelephonyManager;
+    iput-object v8, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mTelManager:Landroid/telephony/TelephonyManager;
 
     .line 222
-    iget-object v8, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
 
     invoke-static {v8}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v8
 
-    iput-object v8, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mSharedpre:Landroid/content/SharedPreferences;
+    iput-object v8, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mSharedpre:Landroid/content/SharedPreferences;
 
     .line 223
-    invoke-virtual {p0}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getTotalUsedData()J
+    invoke-virtual {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getTotalUsedData()J
 
     move-result-wide v4
 
     .line 224
     .local v4, "usedTotalBytes":J
-    sput-boolean v11, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mIsWarningStatus:Z
+    sput-boolean v11, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mIsWarningStatus:Z
 
     .line 225
     const/4 v0, 0x0
@@ -892,7 +892,7 @@
 
     .line 229
     .local v2, "isTrafficSettingEnable":Z
-    iget-object v8, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mSharedpre:Landroid/content/SharedPreferences;
+    iget-object v8, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mSharedpre:Landroid/content/SharedPreferences;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -904,7 +904,7 @@
 
     move-result-object v9
 
-    invoke-direct {p0}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getActiveSubId()I
+    invoke-direct {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getActiveSubId()I
 
     move-result v10
 
@@ -923,7 +923,7 @@
     move-result-object v1
 
     .line 230
-    iget-object v8, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mSharedpre:Landroid/content/SharedPreferences;
+    iget-object v8, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mSharedpre:Landroid/content/SharedPreferences;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -935,7 +935,7 @@
 
     move-result-object v9
 
-    invoke-direct {p0}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getActiveSubId()I
+    invoke-direct {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getActiveSubId()I
 
     move-result v10
 
@@ -954,7 +954,7 @@
     move-result-object v3
 
     .line 231
-    iget-object v8, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -970,7 +970,7 @@
 
     move-result-object v9
 
-    invoke-direct {p0}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getActiveSubId()I
+    invoke-direct {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getActiveSubId()I
 
     move-result v10
 
@@ -987,7 +987,7 @@
     move-result v0
 
     .line 233
-    iget-object v8, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mSharedpre:Landroid/content/SharedPreferences;
+    iget-object v8, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mSharedpre:Landroid/content/SharedPreferences;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -999,7 +999,7 @@
 
     move-result-object v9
 
-    invoke-direct {p0}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getActiveSubId()I
+    invoke-direct {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getActiveSubId()I
 
     move-result v10
 
@@ -1046,13 +1046,13 @@
 
     .line 236
     :cond_0
-    sput-boolean v11, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mIsWarningStatus:Z
+    sput-boolean v11, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mIsWarningStatus:Z
 
     .line 237
     if-eqz p1, :cond_1
 
     .line 238
-    invoke-virtual {p0}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->turnToNormalStatus()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->turnToNormalStatus()V
 
     .line 254
     :cond_1
@@ -1088,25 +1088,25 @@
     .line 244
     const/4 v8, 0x1
 
-    sput-boolean v8, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mIsWarningStatus:Z
+    sput-boolean v8, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mIsWarningStatus:Z
 
     .line 246
     :cond_3
     if-eqz p1, :cond_1
 
     .line 249
-    sget-boolean v8, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mIsWarningStatus:Z
+    sget-boolean v8, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mIsWarningStatus:Z
 
     if-nez v8, :cond_4
 
     .line 250
-    invoke-virtual {p0}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->turnToNormalStatus()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->turnToNormalStatus()V
 
     goto :goto_0
 
     .line 252
     :cond_4
-    invoke-virtual {p0}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->runWarning()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->runWarning()V
 
     goto :goto_0
 .end method
@@ -1178,13 +1178,13 @@
 
     .prologue
     .line 372
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getStartDay()I
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getStartDay()I
 
     move-result v3
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v3}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getBounds(I)V
+    invoke-direct {v0, v3}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getBounds(I)V
 
     .line 373
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
@@ -1197,7 +1197,7 @@
 
     .line 374
     .local v8, "currentTime":J
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getConfirmTime()J
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getConfirmTime()J
 
     move-result-wide v12
 
@@ -1221,7 +1221,7 @@
     .local v22, "totalUsedBytes":J
     move-object/from16 v0, p0
 
-    iget-wide v4, v0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mStart:J
+    iget-wide v4, v0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mStart:J
 
     cmp-long v3, v12, v4
 
@@ -1238,7 +1238,7 @@
     if-eqz v3, :cond_0
 
     .line 381
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getConfirmTraffic()J
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getConfirmTraffic()J
 
     move-result-wide v18
 
@@ -1246,7 +1246,7 @@
     :try_start_0
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
+    iget-object v3, v0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1262,7 +1262,7 @@
 
     move-result-object v4
 
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getActiveSubId()I
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getActiveSubId()I
 
     move-result v5
 
@@ -1286,7 +1286,7 @@
     :try_start_1
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mStatsService:Landroid/net/INetworkStatsService;
+    iget-object v3, v0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mStatsService:Landroid/net/INetworkStatsService;
 
     invoke-interface {v3}, Landroid/net/INetworkStatsService;->openSession()Landroid/net/INetworkStatsSession;
 
@@ -1294,16 +1294,16 @@
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mStatsSession:Landroid/net/INetworkStatsSession;
+    iput-object v3, v0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mStatsSession:Landroid/net/INetworkStatsSession;
 
     .line 391
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mStatsSession:Landroid/net/INetworkStatsSession;
+    iget-object v3, v0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mStatsSession:Landroid/net/INetworkStatsSession;
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mNetWorkTemplate:Landroid/net/NetworkTemplate;
+    iget-object v4, v0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mNetWorkTemplate:Landroid/net/NetworkTemplate;
 
     const/16 v5, 0xa
 
@@ -1313,12 +1313,12 @@
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mNetWorkHistory:Landroid/net/NetworkStatsHistory;
+    iput-object v3, v0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mNetWorkHistory:Landroid/net/NetworkStatsHistory;
 
     .line 392
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mNetWorkHistory:Landroid/net/NetworkStatsHistory;
+    iget-object v3, v0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mNetWorkHistory:Landroid/net/NetworkStatsHistory;
 
     if-nez v3, :cond_1
 
@@ -1361,15 +1361,15 @@
     :try_start_2
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mNetWorkHistory:Landroid/net/NetworkStatsHistory;
+    iget-object v3, v0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mNetWorkHistory:Landroid/net/NetworkStatsHistory;
 
     move-object/from16 v0, p0
 
-    iget-wide v4, v0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mStart:J
+    iget-wide v4, v0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mStart:J
 
     move-object/from16 v0, p0
 
-    iget-wide v6, v0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mEnd:J
+    iget-wide v6, v0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mEnd:J
 
     const/4 v10, 0x0
 
@@ -1439,7 +1439,7 @@
 
     .line 97
     .local v1, "subIdList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
-    iget-object v4, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1512,7 +1512,7 @@
 
     .line 85
     .local v1, "mWhiteList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
-    iget-object v4, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1566,13 +1566,13 @@
 
     .prologue
     .line 408
-    sget-boolean v0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mIsWarningStatus:Z
+    sget-boolean v0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mIsWarningStatus:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getActiveSubscriberId(Landroid/content/Context;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getActiveSubscriberId(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1607,7 +1607,7 @@
 
     .line 109
     .local v1, "subIdList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
-    iget-object v4, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1693,7 +1693,7 @@
     .end local v0    # "i":I
     .end local v3    # "subIdsArray":[Ljava/lang/String;
     :goto_1
-    iget-object v4, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1785,7 +1785,7 @@
 
     .line 132
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1806,9 +1806,9 @@
 
     .prologue
     .line 190
-    iget-object v3, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->setWifiAssociateApps(Landroid/content/Context;)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->setWifiAssociateApps(Landroid/content/Context;)V
 
     .line 191
     new-instance v2, Ljava/util/ArrayList;
@@ -1833,7 +1833,7 @@
 
     move-result-object v3
 
-    invoke-direct {p0}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getActiveSubId()I
+    invoke-direct {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getActiveSubId()I
 
     move-result v4
 
@@ -1845,14 +1845,14 @@
 
     move-result-object v3
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getWhiteList(Ljava/lang/String;)Ljava/util/List;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getWhiteList(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v2
 
     .line 194
     const-string v3, "data_normal_app_whitelist"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getWhiteList(Ljava/lang/String;)Ljava/util/List;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getWhiteList(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v1
 
@@ -1893,7 +1893,7 @@
     if-nez v3, :cond_1
 
     .line 197
-    iget-object v4, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mPolicyManager:Landroid/net/NetworkPolicyManager;
+    iget-object v4, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mPolicyManager:Landroid/net/NetworkPolicyManager;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1943,7 +1943,7 @@
     if-nez v3, :cond_0
 
     .line 199
-    iget-object v4, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mPolicyManager:Landroid/net/NetworkPolicyManager;
+    iget-object v4, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mPolicyManager:Landroid/net/NetworkPolicyManager;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1963,9 +1963,9 @@
 
     .line 202
     :cond_2
-    iget-object v3, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->setDataAssociateApps(Landroid/content/Context;)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->setDataAssociateApps(Landroid/content/Context;)V
 
     .line 203
     return-void
@@ -1989,14 +1989,14 @@
 
     .local v2, "i":I
     :goto_0
-    sget-object v9, Lcom/android/settings/networkconnect/NetworkManagerUtils;->ASSOCIATE_PACKAGES_BY_KEY_PACKAGE:[[Ljava/lang/String;
+    sget-object v9, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->ASSOCIATE_PACKAGES_BY_KEY_PACKAGE:[[Ljava/lang/String;
 
     array-length v9, v9
 
     if-ge v2, v9, :cond_1
 
     .line 417
-    sget-object v9, Lcom/android/settings/networkconnect/NetworkManagerUtils;->ASSOCIATE_PACKAGES_BY_KEY_PACKAGE:[[Ljava/lang/String;
+    sget-object v9, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->ASSOCIATE_PACKAGES_BY_KEY_PACKAGE:[[Ljava/lang/String;
 
     aget-object v6, v9, v2
 
@@ -2022,7 +2022,7 @@
 
     .line 422
     .local v5, "keyUid":I
-    iget-object v9, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mPolicyManager:Landroid/net/NetworkPolicyManager;
+    iget-object v9, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mPolicyManager:Landroid/net/NetworkPolicyManager;
 
     invoke-virtual {v9, v5}, Landroid/net/NetworkPolicyManager;->getFirewallRuleMobileData(I)Z
 
@@ -2054,7 +2054,7 @@
 
     .line 426
     .local v8, "uid":I
-    iget-object v9, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mPolicyManager:Landroid/net/NetworkPolicyManager;
+    iget-object v9, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mPolicyManager:Landroid/net/NetworkPolicyManager;
 
     invoke-virtual {v9, v8, v4}, Landroid/net/NetworkPolicyManager;->setFirewallRuleMobileData(IZ)V
     :try_end_1
@@ -2168,14 +2168,14 @@
 
     .local v2, "i":I
     :goto_0
-    sget-object v9, Lcom/android/settings/networkconnect/NetworkManagerUtils;->ASSOCIATE_PACKAGES_BY_KEY_PACKAGE:[[Ljava/lang/String;
+    sget-object v9, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->ASSOCIATE_PACKAGES_BY_KEY_PACKAGE:[[Ljava/lang/String;
 
     array-length v9, v9
 
     if-ge v2, v9, :cond_1
 
     .line 440
-    sget-object v9, Lcom/android/settings/networkconnect/NetworkManagerUtils;->ASSOCIATE_PACKAGES_BY_KEY_PACKAGE:[[Ljava/lang/String;
+    sget-object v9, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->ASSOCIATE_PACKAGES_BY_KEY_PACKAGE:[[Ljava/lang/String;
 
     aget-object v6, v9, v2
 
@@ -2201,7 +2201,7 @@
 
     .line 445
     .local v5, "keyUid":I
-    iget-object v9, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mPolicyManager:Landroid/net/NetworkPolicyManager;
+    iget-object v9, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mPolicyManager:Landroid/net/NetworkPolicyManager;
 
     invoke-virtual {v9, v5}, Landroid/net/NetworkPolicyManager;->getFirewallRuleWifi(I)Z
 
@@ -2233,7 +2233,7 @@
 
     .line 449
     .local v8, "uid":I
-    iget-object v9, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mPolicyManager:Landroid/net/NetworkPolicyManager;
+    iget-object v9, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mPolicyManager:Landroid/net/NetworkPolicyManager;
 
     invoke-virtual {v9, v8, v4}, Landroid/net/NetworkPolicyManager;->setFirewallRuleWifi(IZ)V
     :try_end_1
@@ -2339,18 +2339,18 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 145
-    .local v0, "applicationNetInfoList1":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/networkconnect/ApplicationNetInfo;>;"
+    .local v0, "applicationNetInfoList1":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;>;"
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 146
-    .local v1, "applicationNetInfoList2":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/networkconnect/ApplicationNetInfo;>;"
+    .local v1, "applicationNetInfoList2":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;>;"
     const/4 v2, 0x0
 
     .local v2, "i":I
     :goto_0
-    sget-object v3, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v3, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -2359,22 +2359,22 @@
     if-ge v2, v3, :cond_1
 
     .line 147
-    sget-object v3, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v3, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/settings/networkconnect/ApplicationNetInfo;
+    check-cast v3, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;
 
-    invoke-virtual {v3}, Lcom/android/settings/networkconnect/ApplicationNetInfo;->isDataAllowed()Z
+    invoke-virtual {v3}, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->isDataAllowed()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
     .line 148
-    sget-object v3, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v3, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2390,7 +2390,7 @@
 
     .line 150
     :cond_0
-    sget-object v3, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v3, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2402,27 +2402,27 @@
 
     .line 153
     :cond_1
-    sget-object v3, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mRowComparator:Ljava/util/Comparator;
+    sget-object v3, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mRowComparator:Ljava/util/Comparator;
 
     invoke-static {v0, v3}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
     .line 154
-    sget-object v3, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mRowComparator:Ljava/util/Comparator;
+    sget-object v3, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mRowComparator:Ljava/util/Comparator;
 
     invoke-static {v1, v3}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
     .line 155
-    sget-object v3, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v3, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->clear()V
 
     .line 156
-    sget-object v3, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v3, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     .line 157
-    sget-object v3, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v3, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
@@ -2440,24 +2440,24 @@
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 162
-    .local v1, "appDataEnableList1":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/networkconnect/ApplicationNetInfo;>;"
+    .local v1, "appDataEnableList1":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;>;"
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     .line 163
-    .local v2, "appDataEnableList2":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/networkconnect/ApplicationNetInfo;>;"
+    .local v2, "appDataEnableList2":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;>;"
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 164
-    .local v0, "appDataDisableList":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/networkconnect/ApplicationNetInfo;>;"
+    .local v0, "appDataDisableList":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;>;"
     const/4 v3, 0x0
 
     .local v3, "i":I
     :goto_0
-    sget-object v4, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v4, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -2466,37 +2466,37 @@
     if-ge v3, v4, :cond_2
 
     .line 165
-    sget-object v4, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v4, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/networkconnect/ApplicationNetInfo;
+    check-cast v4, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;
 
-    invoke-virtual {v4}, Lcom/android/settings/networkconnect/ApplicationNetInfo;->isDataAllowed()Z
+    invoke-virtual {v4}, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->isDataAllowed()Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
     .line 166
-    sget-object v4, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v4, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/networkconnect/ApplicationNetInfo;
+    check-cast v4, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;
 
-    invoke-virtual {v4}, Lcom/android/settings/networkconnect/ApplicationNetInfo;->isWarningAllowed()Z
+    invoke-virtual {v4}, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->isWarningAllowed()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
     .line 167
-    sget-object v4, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v4, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2512,7 +2512,7 @@
 
     .line 169
     :cond_0
-    sget-object v4, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v4, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2524,7 +2524,7 @@
 
     .line 172
     :cond_1
-    sget-object v4, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v4, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2536,37 +2536,37 @@
 
     .line 175
     :cond_2
-    sget-object v4, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mRowComparator:Ljava/util/Comparator;
+    sget-object v4, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mRowComparator:Ljava/util/Comparator;
 
     invoke-static {v1, v4}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
     .line 176
-    sget-object v4, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mRowComparator:Ljava/util/Comparator;
+    sget-object v4, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mRowComparator:Ljava/util/Comparator;
 
     invoke-static {v2, v4}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
     .line 177
-    sget-object v4, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mRowComparator:Ljava/util/Comparator;
+    sget-object v4, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mRowComparator:Ljava/util/Comparator;
 
     invoke-static {v0, v4}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
     .line 178
-    sget-object v4, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v4, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->clear()V
 
     .line 179
-    sget-object v4, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v4, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v4, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     .line 180
-    sget-object v4, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v4, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v4, v2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     .line 181
-    sget-object v4, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v4, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v4, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
@@ -2586,9 +2586,9 @@
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 207
-    iget-object v2, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->setWifiAssociateApps(Landroid/content/Context;)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->setWifiAssociateApps(Landroid/content/Context;)V
 
     .line 208
     new-instance v1, Ljava/util/ArrayList;
@@ -2599,7 +2599,7 @@
     .local v1, "normalAppUidList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v2, "data_normal_app_whitelist"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getWhiteList(Ljava/lang/String;)Ljava/util/List;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getWhiteList(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v1
 
@@ -2630,7 +2630,7 @@
     if-nez v2, :cond_0
 
     .line 212
-    iget-object v3, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mPolicyManager:Landroid/net/NetworkPolicyManager;
+    iget-object v3, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mPolicyManager:Landroid/net/NetworkPolicyManager;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2654,9 +2654,9 @@
 
     .line 215
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->mContext:Landroid/content/Context;
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->setDataAssociateApps(Landroid/content/Context;)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->setDataAssociateApps(Landroid/content/Context;)V
 
     .line 216
     return-void

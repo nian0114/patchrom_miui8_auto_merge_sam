@@ -1,4 +1,4 @@
-.class public final Lcom/android/settings/bluetooth/BluetoothPairingRequest;
+.class public final Lcom/android/settings_ex/bluetooth/BluetoothPairingRequest;
 .super Landroid/content/BroadcastReceiver;
 .source "BluetoothPairingRequest.java"
 
@@ -121,12 +121,12 @@
 
     .line 63
     :cond_3
-    invoke-static {p1}, Lcom/android/settings/bluetooth/Utils;->getLocalBtManager(Landroid/content/Context;)Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+    invoke-static {p1}, Lcom/android/settings_ex/bluetooth/Utils;->getLocalBtManager(Landroid/content/Context;)Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;
 
     move-result-object v4
 
     .line 64
-    .local v4, "mBluetoothManager":Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+    .local v4, "mBluetoothManager":Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;
     if-nez v4, :cond_4
 
     .line 65
@@ -140,12 +140,12 @@
 
     .line 69
     :cond_4
-    invoke-virtual {v4}, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->getBluetoothAdapter()Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    invoke-virtual {v4}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;->getBluetoothAdapter()Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     move-result-object v3
 
     .line 70
-    .local v3, "mBluetoothAdapter":Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    .local v3, "mBluetoothAdapter":Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
     if-nez v3, :cond_5
 
     .line 71
@@ -159,7 +159,7 @@
 
     .line 73
     :cond_5
-    invoke-virtual {v3}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->isEnabled()Z
+    invoke-virtual {v3}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->isEnabled()Z
 
     move-result v9
 
@@ -185,7 +185,7 @@
 
     .line 80
     .local v6, "pairingIntent":Landroid/content/Intent;
-    const-class v9, Lcom/android/settings/bluetooth/BluetoothPairingDialog;
+    const-class v9, Lcom/android/settings_ex/bluetooth/BluetoothPairingDialog;
 
     invoke-virtual {v6, p1, v9}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
@@ -245,7 +245,7 @@
 
     .line 95
     .local v2, "deviceAddress":Ljava/lang/String;
-    invoke-static {p1}, Lcom/android/settings/bluetooth/Utils;->makeNotiSound(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/android/settings_ex/bluetooth/Utils;->makeNotiSound(Landroid/content/Context;)V
 
     .line 96
     invoke-virtual {p1, v6}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
@@ -255,8 +255,8 @@
     .line 97
     .end local v1    # "device":Landroid/bluetooth/BluetoothDevice;
     .end local v2    # "deviceAddress":Ljava/lang/String;
-    .end local v3    # "mBluetoothAdapter":Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
-    .end local v4    # "mBluetoothManager":Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+    .end local v3    # "mBluetoothAdapter":Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
+    .end local v4    # "mBluetoothManager":Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;
     .end local v6    # "pairingIntent":Landroid/content/Intent;
     .end local v8    # "type":I
     :cond_9

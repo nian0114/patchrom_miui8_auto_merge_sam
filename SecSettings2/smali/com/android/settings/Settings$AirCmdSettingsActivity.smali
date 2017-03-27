@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/Settings$AirCmdSettingsActivity;
-.super Lcom/android/settings/SettingsActivityWrapper;
+.class public Lcom/android/settings_ex/Settings$AirCmdSettingsActivity;
+.super Lcom/android/settings_ex/SettingsActivityWrapper;
 .source "Settings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/Settings;
+    value = Lcom/android/settings_ex/Settings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 423
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivityWrapper;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivityWrapper;-><init>()V
 
     return-void
 .end method
@@ -52,10 +52,10 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 431
-    invoke-virtual {p0, v0}, Lcom/android/settings/Settings$AirCmdSettingsActivity;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/Settings$AirCmdSettingsActivity;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     .line 432
-    invoke-super {p0}, Lcom/android/settings/SettingsActivityWrapper;->onBackPressed()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivityWrapper;->onBackPressed()V
 
     .line 434
     return-void
@@ -74,7 +74,7 @@
     packed-switch v0, :pswitch_data_0
 
     .line 443
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsActivityWrapper;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsActivityWrapper;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v0
 
@@ -83,7 +83,7 @@
 
     .line 439
     :pswitch_0
-    invoke-virtual {p0}, Lcom/android/settings/Settings$AirCmdSettingsActivity;->onBackPressed()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings$AirCmdSettingsActivity;->onBackPressed()V
 
     .line 440
     const/4 v0, 0x1

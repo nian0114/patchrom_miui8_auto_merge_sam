@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/notification/NotificationSettings$3;
-.super Lcom/android/settings/notification/SettingPref;
+.class final Lcom/android/settings_ex/notification/NotificationSettings$3;
+.super Lcom/android/settings_ex/notification/SettingPref;
 .source "NotificationSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/NotificationSettings;
+    value = Lcom/android/settings_ex/notification/NotificationSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 
     .prologue
     .line 273
-    invoke-direct/range {p0 .. p5}, Lcom/android/settings/notification/SettingPref;-><init>(ILjava/lang/String;Ljava/lang/String;I[I)V
+    invoke-direct/range {p0 .. p5}, Lcom/android/settings_ex/notification/SettingPref;-><init>(ILjava/lang/String;Ljava/lang/String;I[I)V
 
     return-void
 .end method
@@ -38,8 +38,8 @@
 
     .prologue
     .line 276
-    # invokes: Lcom/android/settings/notification/NotificationSettings;->hasDockSettings(Landroid/content/Context;)Z
-    invoke-static {p1}, Lcom/android/settings/notification/NotificationSettings;->access$100(Landroid/content/Context;)Z
+    # invokes: Lcom/android/settings_ex/notification/NotificationSettings;->hasDockSettings(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/notification/NotificationSettings;->access$100(Landroid/content/Context;)Z
 
     move-result v0
 

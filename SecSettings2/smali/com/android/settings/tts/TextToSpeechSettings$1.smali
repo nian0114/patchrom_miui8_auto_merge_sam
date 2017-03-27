@@ -1,4 +1,4 @@
-.class Lcom/android/settings/tts/TextToSpeechSettings$1;
+.class Lcom/android/settings_ex/tts/TextToSpeechSettings$1;
 .super Ljava/lang/Object;
 .source "TextToSpeechSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/tts/TextToSpeechSettings;
+    value = Lcom/android/settings_ex/tts/TextToSpeechSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/tts/TextToSpeechSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/tts/TextToSpeechSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/tts/TextToSpeechSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/tts/TextToSpeechSettings;)V
     .locals 0
 
     .prologue
     .line 141
-    iput-object p1, p0, Lcom/android/settings/tts/TextToSpeechSettings$1;->this$0:Lcom/android/settings/tts/TextToSpeechSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/tts/TextToSpeechSettings$1;->this$0:Lcom/android/settings_ex/tts/TextToSpeechSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,9 +42,9 @@
 
     .prologue
     .line 144
-    iget-object v0, p0, Lcom/android/settings/tts/TextToSpeechSettings$1;->this$0:Lcom/android/settings/tts/TextToSpeechSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/tts/TextToSpeechSettings$1;->this$0:Lcom/android/settings_ex/tts/TextToSpeechSettings;
 
-    invoke-virtual {v0, p1}, Lcom/android/settings/tts/TextToSpeechSettings;->onInitEngine(I)V
+    invoke-virtual {v0, p1}, Lcom/android/settings_ex/tts/TextToSpeechSettings;->onInitEngine(I)V
 
     .line 145
     return-void

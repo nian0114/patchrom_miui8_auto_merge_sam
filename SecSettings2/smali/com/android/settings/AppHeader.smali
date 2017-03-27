@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/AppHeader;
+.class public Lcom/android/settings_ex/AppHeader;
 .super Ljava/lang/Object;
 .source "AppHeader.java"
 
@@ -36,7 +36,7 @@
     move-object v3, p3
 
     .line 40
-    invoke-static/range {v0 .. v5}, Lcom/android/settings/AppHeader;->setupHeaderView(Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Landroid/content/Intent;ILandroid/view/View;)Landroid/view/View;
+    invoke-static/range {v0 .. v5}, Lcom/android/settings_ex/AppHeader;->setupHeaderView(Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Landroid/content/Intent;ILandroid/view/View;)Landroid/view/View;
 
     .line 41
     invoke-virtual {p4, v5}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
@@ -45,9 +45,9 @@
     return-void
 .end method
 
-.method public static createAppHeader(Lcom/android/settings/SettingsPreferenceFragment;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Landroid/content/Intent;)V
+.method public static createAppHeader(Lcom/android/settings_ex/SettingsPreferenceFragment;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Landroid/content/Intent;)V
     .locals 1
-    .param p0, "fragment"    # Lcom/android/settings/SettingsPreferenceFragment;
+    .param p0, "fragment"    # Lcom/android/settings_ex/SettingsPreferenceFragment;
     .param p1, "icon"    # Landroid/graphics/drawable/Drawable;
     .param p2, "label"    # Ljava/lang/CharSequence;
     .param p3, "settingsIntent"    # Landroid/content/Intent;
@@ -56,15 +56,15 @@
     .line 33
     const/4 v0, 0x0
 
-    invoke-static {p0, p1, p2, p3, v0}, Lcom/android/settings/AppHeader;->createAppHeader(Lcom/android/settings/SettingsPreferenceFragment;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Landroid/content/Intent;I)V
+    invoke-static {p0, p1, p2, p3, v0}, Lcom/android/settings_ex/AppHeader;->createAppHeader(Lcom/android/settings_ex/SettingsPreferenceFragment;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Landroid/content/Intent;I)V
 
     .line 34
     return-void
 .end method
 
-.method public static createAppHeader(Lcom/android/settings/SettingsPreferenceFragment;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Landroid/content/Intent;I)V
+.method public static createAppHeader(Lcom/android/settings_ex/SettingsPreferenceFragment;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Landroid/content/Intent;I)V
     .locals 6
-    .param p0, "fragment"    # Lcom/android/settings/SettingsPreferenceFragment;
+    .param p0, "fragment"    # Lcom/android/settings_ex/SettingsPreferenceFragment;
     .param p1, "icon"    # Landroid/graphics/drawable/Drawable;
     .param p2, "label"    # Ljava/lang/CharSequence;
     .param p3, "settingsIntent"    # Landroid/content/Intent;
@@ -74,13 +74,13 @@
     .line 46
     const v0, 0x7f040031
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/SettingsPreferenceFragment;->setPinnedHeaderView(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->setPinnedHeaderView(I)Landroid/view/View;
 
     move-result-object v5
 
     .line 47
     .local v5, "bar":Landroid/view/View;
-    invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -92,7 +92,7 @@
 
     move v4, p4
 
-    invoke-static/range {v0 .. v5}, Lcom/android/settings/AppHeader;->setupHeaderView(Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Landroid/content/Intent;ILandroid/view/View;)Landroid/view/View;
+    invoke-static/range {v0 .. v5}, Lcom/android/settings_ex/AppHeader;->setupHeaderView(Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Landroid/content/Intent;ILandroid/view/View;)Landroid/view/View;
 
     .line 48
     return-void
@@ -183,9 +183,9 @@
     invoke-virtual {v2, v3}, Landroid/view/View;->setClickable(Z)V
 
     .line 69
-    new-instance v3, Lcom/android/settings/AppHeader$1;
+    new-instance v3, Lcom/android/settings_ex/AppHeader$1;
 
-    invoke-direct {v3, p0, p3}, Lcom/android/settings/AppHeader$1;-><init>(Landroid/app/Activity;Landroid/content/Intent;)V
+    invoke-direct {v3, p0, p3}, Lcom/android/settings_ex/AppHeader$1;-><init>(Landroid/app/Activity;Landroid/content/Intent;)V
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

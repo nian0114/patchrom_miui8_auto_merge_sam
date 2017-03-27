@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DisplayScalingActivity$7;
+.class Lcom/android/settings_ex/DisplayScalingActivity$7;
 .super Ljava/lang/Object;
 .source "DisplayScalingActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DisplayScalingActivity;->resetDialog()V
+    value = Lcom/android/settings_ex/DisplayScalingActivity;->resetDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DisplayScalingActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/DisplayScalingActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DisplayScalingActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/DisplayScalingActivity;)V
     .locals 0
 
     .prologue
     .line 404
-    iput-object p1, p0, Lcom/android/settings/DisplayScalingActivity$7;->this$0:Lcom/android/settings/DisplayScalingActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/DisplayScalingActivity$7;->this$0:Lcom/android/settings_ex/DisplayScalingActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

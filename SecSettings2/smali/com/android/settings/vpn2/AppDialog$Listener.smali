@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/vpn2/AppDialog$Listener;
+.class public interface abstract Lcom/android/settings_ex/vpn2/AppDialog$Listener;
 .super Ljava/lang/Object;
 .source "AppDialog.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/vpn2/AppDialog;
+    value = Lcom/android/settings_ex/vpn2/AppDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/cloud/CloudDialog;
+.class public Lcom/android/settings_ex/cloud/CloudDialog;
 .super Landroid/app/DialogFragment;
 .source "CloudDialog.java"
 
@@ -6,15 +6,15 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/cloud/CloudDialog$DialogListener;
+        Lcom/android/settings_ex/cloud/CloudDialog$DialogListener;
     }
 .end annotation
 
 
 # instance fields
-.field private dialogListener:Lcom/android/settings/cloud/CloudDialog$DialogListener;
+.field private dialogListener:Lcom/android/settings_ex/cloud/CloudDialog$DialogListener;
 
-.field parentFragment:Lcom/android/settings/cloud/SyncFragment;
+.field parentFragment:Lcom/android/settings_ex/cloud/SyncFragment;
 
 .field private progressDialog:Landroid/app/ProgressDialog;
 
@@ -30,61 +30,61 @@
     invoke-direct {p0}, Landroid/app/DialogFragment;-><init>()V
 
     .line 51
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudDialog;->progressDialog:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudDialog;->progressDialog:Landroid/app/ProgressDialog;
 
     .line 53
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudDialog;->parentFragment:Lcom/android/settings/cloud/SyncFragment;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudDialog;->parentFragment:Lcom/android/settings_ex/cloud/SyncFragment;
 
     .line 74
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudDialog;->dialogListener:Lcom/android/settings/cloud/CloudDialog$DialogListener;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudDialog;->dialogListener:Lcom/android/settings_ex/cloud/CloudDialog$DialogListener;
 
     .line 81
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/cloud/CloudDialog;)Z
+.method static synthetic access$000(Lcom/android/settings_ex/cloud/CloudDialog;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/cloud/CloudDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/cloud/CloudDialog;
 
     .prologue
     .line 28
-    invoke-direct {p0}, Lcom/android/settings/cloud/CloudDialog;->dismissProgressDialog()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/cloud/CloudDialog;->dismissProgressDialog()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/cloud/CloudDialog;)Landroid/app/ProgressDialog;
+.method static synthetic access$100(Lcom/android/settings_ex/cloud/CloudDialog;)Landroid/app/ProgressDialog;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/cloud/CloudDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/cloud/CloudDialog;
 
     .prologue
     .line 28
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudDialog;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudDialog;->progressDialog:Landroid/app/ProgressDialog;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/cloud/CloudDialog;)Lcom/android/settings/cloud/CloudDialog$DialogListener;
+.method static synthetic access$200(Lcom/android/settings_ex/cloud/CloudDialog;)Lcom/android/settings_ex/cloud/CloudDialog$DialogListener;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/cloud/CloudDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/cloud/CloudDialog;
 
     .prologue
     .line 28
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudDialog;->dialogListener:Lcom/android/settings/cloud/CloudDialog$DialogListener;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudDialog;->dialogListener:Lcom/android/settings_ex/cloud/CloudDialog$DialogListener;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/cloud/CloudDialog;Ljava/lang/String;)V
+.method static synthetic access$300(Lcom/android/settings_ex/cloud/CloudDialog;Ljava/lang/String;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/cloud/CloudDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/cloud/CloudDialog;
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 28
-    invoke-direct {p0, p1}, Lcom/android/settings/cloud/CloudDialog;->removeAccount(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/cloud/CloudDialog;->removeAccount(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -94,12 +94,12 @@
 
     .prologue
     .line 269
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudDialog;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudDialog;->progressDialog:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_0
 
     .line 270
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudDialog;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudDialog;->progressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->isShowing()Z
 
@@ -108,14 +108,14 @@
     if-eqz v0, :cond_0
 
     .line 271
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudDialog;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudDialog;->progressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
     .line 272
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudDialog;->progressDialog:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudDialog;->progressDialog:Landroid/app/ProgressDialog;
 
     .line 273
     const/4 v0, 0x1
@@ -130,21 +130,21 @@
     goto :goto_0
 .end method
 
-.method public static getInstance(ILjava/lang/String;Lcom/android/settings/cloud/CloudDialog$DialogListener;)Lcom/android/settings/cloud/CloudDialog;
+.method public static getInstance(ILjava/lang/String;Lcom/android/settings_ex/cloud/CloudDialog$DialogListener;)Lcom/android/settings_ex/cloud/CloudDialog;
     .locals 3
     .param p0, "dialogType"    # I
     .param p1, "message"    # Ljava/lang/String;
-    .param p2, "dialogListener"    # Lcom/android/settings/cloud/CloudDialog$DialogListener;
+    .param p2, "dialogListener"    # Lcom/android/settings_ex/cloud/CloudDialog$DialogListener;
 
     .prologue
     .line 93
-    new-instance v1, Lcom/android/settings/cloud/CloudDialog;
+    new-instance v1, Lcom/android/settings_ex/cloud/CloudDialog;
 
-    invoke-direct {v1}, Lcom/android/settings/cloud/CloudDialog;-><init>()V
+    invoke-direct {v1}, Lcom/android/settings_ex/cloud/CloudDialog;-><init>()V
 
     .line 94
-    .local v1, "cloudDialog":Lcom/android/settings/cloud/CloudDialog;
-    iput-object p2, v1, Lcom/android/settings/cloud/CloudDialog;->dialogListener:Lcom/android/settings/cloud/CloudDialog$DialogListener;
+    .local v1, "cloudDialog":Lcom/android/settings_ex/cloud/CloudDialog;
+    iput-object p2, v1, Lcom/android/settings_ex/cloud/CloudDialog;->dialogListener:Lcom/android/settings_ex/cloud/CloudDialog$DialogListener;
 
     .line 95
     new-instance v0, Landroid/os/Bundle;
@@ -163,7 +163,7 @@
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 98
-    invoke-virtual {v1, v0}, Lcom/android/settings/cloud/CloudDialog;->setArguments(Landroid/os/Bundle;)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/cloud/CloudDialog;->setArguments(Landroid/os/Bundle;)V
 
     .line 100
     return-object v1
@@ -188,18 +188,18 @@
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "storageVender"
 
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getInstance()Lcom/android/settings/cloud/CloudSettings;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getInstance()Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/android/settings/cloud/CloudSettings;->getVenderId()I
+    invoke-virtual {v2}, Lcom/android/settings_ex/cloud/CloudSettings;->getVenderId()I
 
     move-result v2
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 290
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -252,7 +252,7 @@
     .local v6, "alertDialog":Landroid/app/AlertDialog;
     new-instance v7, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -260,7 +260,7 @@
 
     .line 111
     .local v7, "builder":Landroid/app/AlertDialog$Builder;
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudDialog;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudDialog;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -281,7 +281,7 @@
 
     .line 113
     :sswitch_0
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -289,7 +289,7 @@
 
     const v2, 0x7f0e12a2
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/cloud/CloudDialog;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/cloud/CloudDialog;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -299,10 +299,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudDialog;->progressDialog:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudDialog;->progressDialog:Landroid/app/ProgressDialog;
 
     .line 117
-    new-instance v0, Lcom/android/settings/cloud/CloudDialog$1;
+    new-instance v0, Lcom/android/settings_ex/cloud/CloudDialog$1;
 
     const-wide/16 v2, 0x4e20
 
@@ -310,18 +310,18 @@
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/settings/cloud/CloudDialog$1;-><init>(Lcom/android/settings/cloud/CloudDialog;JJ)V
+    invoke-direct/range {v0 .. v5}, Lcom/android/settings_ex/cloud/CloudDialog$1;-><init>(Lcom/android/settings_ex/cloud/CloudDialog;JJ)V
 
-    invoke-virtual {v0}, Lcom/android/settings/cloud/CloudDialog$1;->start()Landroid/os/CountDownTimer;
+    invoke-virtual {v0}, Lcom/android/settings_ex/cloud/CloudDialog$1;->start()Landroid/os/CountDownTimer;
 
     .line 138
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudDialog;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudDialog;->progressDialog:Landroid/app/ProgressDialog;
 
     goto :goto_1
 
     .line 140
     :sswitch_1
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudDialog;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudDialog;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -335,7 +335,7 @@
     .local v10, "warningMessage":Ljava/lang/String;
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -353,17 +353,17 @@
 
     const v1, 0x7f0e12a8
 
-    new-instance v2, Lcom/android/settings/cloud/CloudDialog$3;
+    new-instance v2, Lcom/android/settings_ex/cloud/CloudDialog$3;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/cloud/CloudDialog$3;-><init>(Lcom/android/settings/cloud/CloudDialog;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/cloud/CloudDialog$3;-><init>(Lcom/android/settings_ex/cloud/CloudDialog;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/settings/cloud/CloudDialog$2;
+    new-instance v1, Lcom/android/settings_ex/cloud/CloudDialog$2;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/cloud/CloudDialog$2;-><init>(Lcom/android/settings/cloud/CloudDialog;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/cloud/CloudDialog$2;-><init>(Lcom/android/settings_ex/cloud/CloudDialog;)V
 
     invoke-virtual {v0, v4, v1}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -382,7 +382,7 @@
     .line 168
     .end local v10    # "warningMessage":Ljava/lang/String;
     :sswitch_2
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudDialog;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudDialog;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -396,7 +396,7 @@
     .local v9, "message":Ljava/lang/String;
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -414,17 +414,17 @@
 
     const v1, 0x7f0e12bc
 
-    new-instance v2, Lcom/android/settings/cloud/CloudDialog$5;
+    new-instance v2, Lcom/android/settings_ex/cloud/CloudDialog$5;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/cloud/CloudDialog$5;-><init>(Lcom/android/settings/cloud/CloudDialog;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/cloud/CloudDialog$5;-><init>(Lcom/android/settings_ex/cloud/CloudDialog;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/settings/cloud/CloudDialog$4;
+    new-instance v1, Lcom/android/settings_ex/cloud/CloudDialog$4;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/cloud/CloudDialog$4;-><init>(Lcom/android/settings/cloud/CloudDialog;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/cloud/CloudDialog$4;-><init>(Lcom/android/settings_ex/cloud/CloudDialog;)V
 
     invoke-virtual {v0, v4, v1}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -443,7 +443,7 @@
     .line 197
     .end local v9    # "message":Ljava/lang/String;
     :sswitch_3
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudDialog;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudDialog;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -457,7 +457,7 @@
     .local v8, "logoutMessage":Ljava/lang/String;
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -475,25 +475,25 @@
 
     const v1, 0x104000a
 
-    new-instance v2, Lcom/android/settings/cloud/CloudDialog$8;
+    new-instance v2, Lcom/android/settings_ex/cloud/CloudDialog$8;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/cloud/CloudDialog$8;-><init>(Lcom/android/settings/cloud/CloudDialog;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/cloud/CloudDialog$8;-><init>(Lcom/android/settings_ex/cloud/CloudDialog;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/settings/cloud/CloudDialog$7;
+    new-instance v1, Lcom/android/settings_ex/cloud/CloudDialog$7;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/cloud/CloudDialog$7;-><init>(Lcom/android/settings/cloud/CloudDialog;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/cloud/CloudDialog$7;-><init>(Lcom/android/settings_ex/cloud/CloudDialog;)V
 
     invoke-virtual {v0, v4, v1}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/settings/cloud/CloudDialog$6;
+    new-instance v1, Lcom/android/settings_ex/cloud/CloudDialog$6;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/cloud/CloudDialog$6;-><init>(Lcom/android/settings/cloud/CloudDialog;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/cloud/CloudDialog$6;-><init>(Lcom/android/settings_ex/cloud/CloudDialog;)V
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)Landroid/app/AlertDialog$Builder;
 
@@ -529,20 +529,20 @@
     invoke-super {p0}, Landroid/app/DialogFragment;->onResume()V
 
     .line 258
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudDialog;->parentFragment:Lcom/android/settings/cloud/SyncFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudDialog;->parentFragment:Lcom/android/settings_ex/cloud/SyncFragment;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudDialog;->parentFragment:Lcom/android/settings/cloud/SyncFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudDialog;->parentFragment:Lcom/android/settings_ex/cloud/SyncFragment;
 
-    invoke-virtual {v0}, Lcom/android/settings/cloud/SyncFragment;->isAdded()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/cloud/SyncFragment;->isAdded()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 259
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudDialog;->getDialog()Landroid/app/Dialog;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudDialog;->getDialog()Landroid/app/Dialog;
 
     move-result-object v0
 
@@ -560,7 +560,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 261
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudDialog;->getDialog()Landroid/app/Dialog;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudDialog;->getDialog()Landroid/app/Dialog;
 
     move-result-object v0
 
@@ -571,13 +571,13 @@
     return-void
 .end method
 
-.method public show(Lcom/android/settings/cloud/SyncFragment;)V
+.method public show(Lcom/android/settings_ex/cloud/SyncFragment;)V
     .locals 2
-    .param p1, "parent"    # Lcom/android/settings/cloud/SyncFragment;
+    .param p1, "parent"    # Lcom/android/settings_ex/cloud/SyncFragment;
 
     .prologue
     .line 248
-    invoke-virtual {p1}, Lcom/android/settings/cloud/SyncFragment;->isAdded()Z
+    invoke-virtual {p1}, Lcom/android/settings_ex/cloud/SyncFragment;->isAdded()Z
 
     move-result v0
 
@@ -589,21 +589,21 @@
 
     .line 249
     :cond_0
-    iput-object p1, p0, Lcom/android/settings/cloud/CloudDialog;->parentFragment:Lcom/android/settings/cloud/SyncFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/cloud/CloudDialog;->parentFragment:Lcom/android/settings_ex/cloud/SyncFragment;
 
     .line 251
     const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, v0}, Lcom/android/settings/cloud/CloudDialog;->setTargetFragment(Landroid/app/Fragment;I)V
+    invoke-virtual {p0, p1, v0}, Lcom/android/settings_ex/cloud/CloudDialog;->setTargetFragment(Landroid/app/Fragment;I)V
 
     .line 252
-    invoke-virtual {p1}, Lcom/android/settings/cloud/SyncFragment;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p1}, Lcom/android/settings_ex/cloud/SyncFragment;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v0
 
     const-string v1, "dialog"
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/cloud/CloudDialog;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings_ex/cloud/CloudDialog;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$3;
+.class Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$3;
 .super Ljava/lang/Object;
 .source "SettingsMenuEditorFragment.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->InitUI()V
+    value = Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->InitUI()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
     .locals 0
 
     .prologue
     .line 311
-    iput-object p1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -77,11 +77,11 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 316
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
-    sget-object v1, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;->PLUS_IMAGE_MODE:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;
+    sget-object v1, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;->PLUS_IMAGE_MODE:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;
 
-    invoke-virtual {v0, p2, p3, v1}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemClick(Landroid/view/View;ILcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;)V
+    invoke-virtual {v0, p2, p3, v1}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemClick(Landroid/view/View;ILcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;)V
 
     .line 318
     return-void

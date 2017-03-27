@@ -1,11 +1,11 @@
-.class final enum Lcom/android/settings/applock/PackageInfoUtil$State;
+.class final enum Lcom/android/settings_ex/applock/PackageInfoUtil$State;
 .super Ljava/lang/Enum;
 .source "PackageInfoUtil.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applock/PackageInfoUtil;
+    value = Lcom/android/settings_ex/applock/PackageInfoUtil;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,18 +17,18 @@
     value = {
         "Ljava/lang/Enum",
         "<",
-        "Lcom/android/settings/applock/PackageInfoUtil$State;",
+        "Lcom/android/settings_ex/applock/PackageInfoUtil$State;",
         ">;"
     }
 .end annotation
 
 
 # static fields
-.field private static final synthetic $VALUES:[Lcom/android/settings/applock/PackageInfoUtil$State;
+.field private static final synthetic $VALUES:[Lcom/android/settings_ex/applock/PackageInfoUtil$State;
 
-.field public static final enum ADD:Lcom/android/settings/applock/PackageInfoUtil$State;
+.field public static final enum ADD:Lcom/android/settings_ex/applock/PackageInfoUtil$State;
 
-.field public static final enum REMOVE:Lcom/android/settings/applock/PackageInfoUtil$State;
+.field public static final enum REMOVE:Lcom/android/settings_ex/applock/PackageInfoUtil$State;
 
 
 # direct methods
@@ -41,36 +41,36 @@
     const/4 v2, 0x0
 
     .line 45
-    new-instance v0, Lcom/android/settings/applock/PackageInfoUtil$State;
+    new-instance v0, Lcom/android/settings_ex/applock/PackageInfoUtil$State;
 
     const-string v1, "ADD"
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/applock/PackageInfoUtil$State;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/applock/PackageInfoUtil$State;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/settings/applock/PackageInfoUtil$State;->ADD:Lcom/android/settings/applock/PackageInfoUtil$State;
+    sput-object v0, Lcom/android/settings_ex/applock/PackageInfoUtil$State;->ADD:Lcom/android/settings_ex/applock/PackageInfoUtil$State;
 
-    new-instance v0, Lcom/android/settings/applock/PackageInfoUtil$State;
+    new-instance v0, Lcom/android/settings_ex/applock/PackageInfoUtil$State;
 
     const-string v1, "REMOVE"
 
-    invoke-direct {v0, v1, v3}, Lcom/android/settings/applock/PackageInfoUtil$State;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v3}, Lcom/android/settings_ex/applock/PackageInfoUtil$State;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/settings/applock/PackageInfoUtil$State;->REMOVE:Lcom/android/settings/applock/PackageInfoUtil$State;
+    sput-object v0, Lcom/android/settings_ex/applock/PackageInfoUtil$State;->REMOVE:Lcom/android/settings_ex/applock/PackageInfoUtil$State;
 
     .line 44
     const/4 v0, 0x2
 
-    new-array v0, v0, [Lcom/android/settings/applock/PackageInfoUtil$State;
+    new-array v0, v0, [Lcom/android/settings_ex/applock/PackageInfoUtil$State;
 
-    sget-object v1, Lcom/android/settings/applock/PackageInfoUtil$State;->ADD:Lcom/android/settings/applock/PackageInfoUtil$State;
+    sget-object v1, Lcom/android/settings_ex/applock/PackageInfoUtil$State;->ADD:Lcom/android/settings_ex/applock/PackageInfoUtil$State;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/android/settings/applock/PackageInfoUtil$State;->REMOVE:Lcom/android/settings/applock/PackageInfoUtil$State;
+    sget-object v1, Lcom/android/settings_ex/applock/PackageInfoUtil$State;->REMOVE:Lcom/android/settings_ex/applock/PackageInfoUtil$State;
 
     aput-object v1, v0, v3
 
-    sput-object v0, Lcom/android/settings/applock/PackageInfoUtil$State;->$VALUES:[Lcom/android/settings/applock/PackageInfoUtil$State;
+    sput-object v0, Lcom/android/settings_ex/applock/PackageInfoUtil$State;->$VALUES:[Lcom/android/settings_ex/applock/PackageInfoUtil$State;
 
     return-void
 .end method
@@ -90,35 +90,35 @@
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcom/android/settings/applock/PackageInfoUtil$State;
+.method public static valueOf(Ljava/lang/String;)Lcom/android/settings_ex/applock/PackageInfoUtil$State;
     .locals 1
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 44
-    const-class v0, Lcom/android/settings/applock/PackageInfoUtil$State;
+    const-class v0, Lcom/android/settings_ex/applock/PackageInfoUtil$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/applock/PackageInfoUtil$State;
+    check-cast v0, Lcom/android/settings_ex/applock/PackageInfoUtil$State;
 
     return-object v0
 .end method
 
-.method public static values()[Lcom/android/settings/applock/PackageInfoUtil$State;
+.method public static values()[Lcom/android/settings_ex/applock/PackageInfoUtil$State;
     .locals 1
 
     .prologue
     .line 44
-    sget-object v0, Lcom/android/settings/applock/PackageInfoUtil$State;->$VALUES:[Lcom/android/settings/applock/PackageInfoUtil$State;
+    sget-object v0, Lcom/android/settings_ex/applock/PackageInfoUtil$State;->$VALUES:[Lcom/android/settings_ex/applock/PackageInfoUtil$State;
 
-    invoke-virtual {v0}, [Lcom/android/settings/applock/PackageInfoUtil$State;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [Lcom/android/settings_ex/applock/PackageInfoUtil$State;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lcom/android/settings/applock/PackageInfoUtil$State;
+    check-cast v0, [Lcom/android/settings_ex/applock/PackageInfoUtil$State;
 
     return-object v0
 .end method

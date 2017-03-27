@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;
+.class public Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;
 .super Landroid/app/ListFragment;
 .source "AppLockSettingsActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applock/AppLockSettingsActivity;
+    value = Lcom/android/settings_ex/applock/AppLockSettingsActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field private mActivity:Lcom/android/settings/applock/AppLockSettingsActivity;
+.field private mActivity:Lcom/android/settings_ex/applock/AppLockSettingsActivity;
 
-.field private mAdapter:Lcom/android/settings/applock/PackageListAdapter;
+.field private mAdapter:Lcom/android/settings_ex/applock/PackageListAdapter;
 
 .field mAppCategoryText:Landroid/widget/TextView;
 
@@ -50,44 +50,44 @@
     invoke-direct {p0}, Landroid/app/ListFragment;-><init>()V
 
     .line 286
-    new-instance v0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment$1;
+    new-instance v0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment$1;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment$1;-><init>(Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment$1;-><init>(Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mAppLockTypeObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mAppLockTypeObserver:Landroid/database/ContentObserver;
 
     .line 343
-    new-instance v0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment$2;
+    new-instance v0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment$2;-><init>(Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment$2;-><init>(Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;)V
 
-    iput-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mFragmentHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mFragmentHandler:Landroid/os/Handler;
 
     return-void
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;)Lcom/android/settings/applock/PackageListAdapter;
+.method static synthetic access$600(Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;)Lcom/android/settings_ex/applock/PackageListAdapter;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;
 
     .prologue
     .line 277
-    iget-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mAdapter:Lcom/android/settings/applock/PackageListAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mAdapter:Lcom/android/settings_ex/applock/PackageListAdapter;
 
     return-object v0
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;)V
+.method static synthetic access$700(Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;
 
     .prologue
     .line 277
-    invoke-direct {p0}, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->updateView()V
+    invoke-direct {p0}, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->updateView()V
 
     return-void
 .end method
@@ -97,15 +97,15 @@
 
     .prologue
     .line 360
-    iget-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mActivity:Lcom/android/settings/applock/AppLockSettingsActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mActivity:Lcom/android/settings_ex/applock/AppLockSettingsActivity;
 
-    # invokes: Lcom/android/settings/applock/AppLockSettingsActivity;->updateCountViewState()V
-    invoke-static {v0}, Lcom/android/settings/applock/AppLockSettingsActivity;->access$800(Lcom/android/settings/applock/AppLockSettingsActivity;)V
+    # invokes: Lcom/android/settings_ex/applock/AppLockSettingsActivity;->updateCountViewState()V
+    invoke-static {v0}, Lcom/android/settings_ex/applock/AppLockSettingsActivity;->access$800(Lcom/android/settings_ex/applock/AppLockSettingsActivity;)V
 
     .line 361
-    iget-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mAdapter:Lcom/android/settings/applock/PackageListAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mAdapter:Lcom/android/settings_ex/applock/PackageListAdapter;
 
-    invoke-virtual {v0}, Lcom/android/settings/applock/PackageListAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/applock/PackageListAdapter;->notifyDataSetChanged()V
 
     .line 362
     return-void
@@ -134,17 +134,17 @@
     invoke-super {p0, p1}, Landroid/app/ListFragment;->onAttach(Landroid/app/Activity;)V
 
     .line 339
-    check-cast p1, Lcom/android/settings/applock/AppLockSettingsActivity;
+    check-cast p1, Lcom/android/settings_ex/applock/AppLockSettingsActivity;
 
     .end local p1    # "activity":Landroid/app/Activity;
-    iput-object p1, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mActivity:Lcom/android/settings/applock/AppLockSettingsActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mActivity:Lcom/android/settings_ex/applock/AppLockSettingsActivity;
 
     .line 340
-    iget-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mActivity:Lcom/android/settings/applock/AppLockSettingsActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mActivity:Lcom/android/settings_ex/applock/AppLockSettingsActivity;
 
-    iget-object v1, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mFragmentHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mFragmentHandler:Landroid/os/Handler;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/applock/AppLockSettingsActivity;->setHandler(Landroid/os/Handler;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/applock/AppLockSettingsActivity;->setHandler(Landroid/os/Handler;)V
 
     .line 341
     return-void
@@ -168,12 +168,12 @@
 
     .line 443
     :pswitch_0
-    iget-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mActivity:Lcom/android/settings/applock/AppLockSettingsActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mActivity:Lcom/android/settings_ex/applock/AppLockSettingsActivity;
 
     const/16 v1, 0x2711
 
-    # invokes: Lcom/android/settings/applock/AppLockSettingsActivity;->callLockType(I)V
-    invoke-static {v0, v1}, Lcom/android/settings/applock/AppLockSettingsActivity;->access$300(Lcom/android/settings/applock/AppLockSettingsActivity;I)V
+    # invokes: Lcom/android/settings_ex/applock/AppLockSettingsActivity;->callLockType(I)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/applock/AppLockSettingsActivity;->access$300(Lcom/android/settings_ex/applock/AppLockSettingsActivity;I)V
 
     goto :goto_0
 
@@ -193,29 +193,29 @@
     invoke-super {p0, p1}, Landroid/app/ListFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 296
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mContext:Landroid/content/Context;
 
     .line 297
-    new-instance v0, Lcom/android/settings/applock/PackageListAdapter;
+    new-instance v0, Lcom/android/settings_ex/applock/PackageListAdapter;
 
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mFragmentHandler:Landroid/os/Handler;
+    iget-object v2, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mFragmentHandler:Landroid/os/Handler;
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/applock/PackageListAdapter;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/applock/PackageListAdapter;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mAdapter:Lcom/android/settings/applock/PackageListAdapter;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mAdapter:Lcom/android/settings_ex/applock/PackageListAdapter;
 
     .line 298
-    iget-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mAdapter:Lcom/android/settings/applock/PackageListAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mAdapter:Lcom/android/settings_ex/applock/PackageListAdapter;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->setListAdapter(Landroid/widget/ListAdapter;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->setListAdapter(Landroid/widget/ListAdapter;)V
 
     .line 299
     return-void
@@ -229,12 +229,12 @@
 
     .prologue
     .line 304
-    iget-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mHeadView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mHeadView:Landroid/view/View;
 
     if-nez v0, :cond_0
 
     .line 305
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -250,10 +250,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mHeadView:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mHeadView:Landroid/view/View;
 
     .line 307
-    iget-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mHeadView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mHeadView:Landroid/view/View;
 
     const v1, 0x7f0d00d7
 
@@ -263,10 +263,10 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeView:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeView:Landroid/widget/LinearLayout;
 
     .line 308
-    iget-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mHeadView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mHeadView:Landroid/view/View;
 
     const v1, 0x7f0d00d8
 
@@ -276,10 +276,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeTitle:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeTitle:Landroid/widget/TextView;
 
     .line 309
-    iget-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mHeadView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mHeadView:Landroid/view/View;
 
     const v1, 0x7f0d00d9
 
@@ -289,10 +289,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeSummary:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeSummary:Landroid/widget/TextView;
 
     .line 310
-    iget-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mHeadView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mHeadView:Landroid/view/View;
 
     const v1, 0x7f0d00da
 
@@ -302,10 +302,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mAppCategoryText:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mAppCategoryText:Landroid/widget/TextView;
 
     .line 311
-    iget-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mHeadView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mHeadView:Landroid/view/View;
 
     const v1, 0x7f0d00d6
 
@@ -315,7 +315,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mAppLockDescription:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mAppLockDescription:Landroid/widget/TextView;
 
     .line 313
     :cond_0
@@ -334,7 +334,7 @@
     invoke-super {p0}, Landroid/app/ListFragment;->onPause()V
 
     .line 380
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -342,7 +342,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mAppLockTypeObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mAppLockTypeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
@@ -360,16 +360,16 @@
     invoke-super {p0}, Landroid/app/ListFragment;->onResume()V
 
     .line 367
-    iget-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mActivity:Lcom/android/settings/applock/AppLockSettingsActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mActivity:Lcom/android/settings_ex/applock/AppLockSettingsActivity;
 
-    iget-object v1, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mFragmentHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mFragmentHandler:Landroid/os/Handler;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/applock/AppLockSettingsActivity;->setHandler(Landroid/os/Handler;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/applock/AppLockSettingsActivity;->setHandler(Landroid/os/Handler;)V
 
     .line 368
-    iget-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mActivity:Lcom/android/settings/applock/AppLockSettingsActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mActivity:Lcom/android/settings_ex/applock/AppLockSettingsActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/applock/AppLockSettingsActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/android/settings_ex/applock/AppLockSettingsActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -379,14 +379,14 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mAppLockTypeObserver:Landroid/database/ContentObserver;
+    iget-object v2, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mAppLockTypeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 371
-    iget-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mActivity:Lcom/android/settings/applock/AppLockSettingsActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mActivity:Lcom/android/settings_ex/applock/AppLockSettingsActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/applock/AppLockSettingsActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/android/settings_ex/applock/AppLockSettingsActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -396,15 +396,15 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mAppLockTypeObserver:Landroid/database/ContentObserver;
+    iget-object v2, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mAppLockTypeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 373
-    invoke-direct {p0}, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->updateView()V
+    invoke-direct {p0}, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->updateView()V
 
     .line 374
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->updateLockTypeView()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->updateLockTypeView()V
 
     .line 375
     return-void
@@ -422,18 +422,18 @@
     invoke-super {p0, p1, p2}, Landroid/app/ListFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 319
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->getListView()Landroid/widget/ListView;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mHeadView:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mHeadView:Landroid/view/View;
 
     const/4 v3, 0x0
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/widget/ListView;->addHeaderView(Landroid/view/View;Ljava/lang/Object;Z)V
 
     .line 320
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->getListView()Landroid/widget/ListView;
 
     move-result-object v1
 
@@ -444,7 +444,7 @@
 
     const v1, 0x7f0e11ee
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -459,14 +459,14 @@
     .line 323
     const v1, 0x7f0e11ef
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 324
-    iget-object v1, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mAppLockDescription:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mAppLockDescription:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -475,21 +475,21 @@
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 325
-    iget-object v1, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeView:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeView:Landroid/widget/LinearLayout;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setClickable(Z)V
 
     .line 326
-    iget-object v1, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeView:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeView:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, p0}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 327
-    iget-object v1, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mAppCategoryText:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mAppCategoryText:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -518,9 +518,9 @@
     if-lez p1, :cond_0
 
     .line 432
-    iget-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mAppCategoryText:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mAppCategoryText:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -552,9 +552,9 @@
 
     .line 434
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mAppCategoryText:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mAppCategoryText:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -582,11 +582,11 @@
 
     .line 400
     .local v0, "hasEnrolledFingers":Z
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/android/settings/applock/AppLockUtil;->getLockType(Landroid/content/Context;)I
+    invoke-static {v3}, Lcom/android/settings_ex/applock/AppLockUtil;->getLockType(Landroid/content/Context;)I
 
     move-result v1
 
@@ -601,7 +601,7 @@
     if-gt v1, v3, :cond_0
 
     .line 402
-    iget-object v3, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mContext:Landroid/content/Context;
 
     invoke-static {v3, v2}, Lcom/samsung/android/fingerprint/FingerprintManager;->getInstance(Landroid/content/Context;I)Lcom/samsung/android/fingerprint/FingerprintManager;
 
@@ -638,7 +638,7 @@
 
     .line 410
     :pswitch_0
-    iget-object v2, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeSummary:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeSummary:Landroid/widget/TextView;
 
     const v3, 0x7f0e11f1
 
@@ -648,7 +648,7 @@
 
     .line 413
     :pswitch_1
-    iget-object v2, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeSummary:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeSummary:Landroid/widget/TextView;
 
     const v3, 0x7f0e11f2
 
@@ -658,7 +658,7 @@
 
     .line 416
     :pswitch_2
-    iget-object v2, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeSummary:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeSummary:Landroid/widget/TextView;
 
     const v3, 0x7f0e11f5
 
@@ -668,7 +668,7 @@
 
     .line 419
     :pswitch_3
-    iget-object v2, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeSummary:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeSummary:Landroid/widget/TextView;
 
     const v3, 0x7f0e11f3
 
@@ -678,7 +678,7 @@
 
     .line 425
     :pswitch_4
-    iget-object v2, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeSummary:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeSummary:Landroid/widget/TextView;
 
     const v3, 0x7f0e11f4
 
@@ -709,9 +709,9 @@
     const/4 v3, 0x0
 
     .line 384
-    iget-object v1, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mActivity:Lcom/android/settings/applock/AppLockSettingsActivity;
+    iget-object v1, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mActivity:Lcom/android/settings_ex/applock/AppLockSettingsActivity;
 
-    invoke-virtual {v1}, Lcom/android/settings/applock/AppLockSettingsActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v1}, Lcom/android/settings_ex/applock/AppLockSettingsActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -726,40 +726,40 @@
     if-ne v0, v4, :cond_0
 
     .line 387
-    iget-object v1, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeView:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeView:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, v4}, Landroid/widget/LinearLayout;->setEnabled(Z)V
 
     .line 388
-    iget-object v1, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeTitle:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeTitle:Landroid/widget/TextView;
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 389
-    iget-object v1, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeSummary:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeSummary:Landroid/widget/TextView;
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 395
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->updateLockTypeSummary()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->updateLockTypeSummary()V
 
     .line 396
     return-void
 
     .line 391
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeView:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeView:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, v3}, Landroid/widget/LinearLayout;->setEnabled(Z)V
 
     .line 392
-    iget-object v1, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeTitle:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeTitle:Landroid/widget/TextView;
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 393
-    iget-object v1, p0, Lcom/android/settings/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeSummary:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$AppLockListFragment;->mLockTypeSummary:Landroid/widget/TextView;
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setEnabled(Z)V
 

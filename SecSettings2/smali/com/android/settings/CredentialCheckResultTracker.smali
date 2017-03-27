@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/CredentialCheckResultTracker;
+.class public Lcom/android/settings_ex/CredentialCheckResultTracker;
 .super Landroid/app/Fragment;
 .source "CredentialCheckResultTracker.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/CredentialCheckResultTracker$Listener;
+        Lcom/android/settings_ex/CredentialCheckResultTracker$Listener;
     }
 .end annotation
 
@@ -14,7 +14,7 @@
 # instance fields
 .field private mHasResult:Z
 
-.field private mListener:Lcom/android/settings/CredentialCheckResultTracker$Listener;
+.field private mListener:Lcom/android/settings_ex/CredentialCheckResultTracker$Listener;
 
 .field private mResultData:Landroid/content/Intent;
 
@@ -36,7 +36,7 @@
     .line 29
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/CredentialCheckResultTracker;->mHasResult:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mHasResult:Z
 
     .line 75
     return-void
@@ -51,21 +51,21 @@
     const/4 v1, 0x0
 
     .line 68
-    iput-boolean v1, p0, Lcom/android/settings/CredentialCheckResultTracker;->mHasResult:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mHasResult:Z
 
     .line 69
-    iput-boolean v1, p0, Lcom/android/settings/CredentialCheckResultTracker;->mResultMatched:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mResultMatched:Z
 
     .line 70
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/CredentialCheckResultTracker;->mResultData:Landroid/content/Intent;
+    iput-object v0, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mResultData:Landroid/content/Intent;
 
     .line 71
-    iput v1, p0, Lcom/android/settings/CredentialCheckResultTracker;->mResultTimeoutMs:I
+    iput v1, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mResultTimeoutMs:I
 
     .line 72
-    iput v1, p0, Lcom/android/settings/CredentialCheckResultTracker;->mResultEffectiveUserId:I
+    iput v1, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mResultEffectiveUserId:I
 
     .line 73
     return-void
@@ -82,19 +82,19 @@
     .line 39
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/CredentialCheckResultTracker;->setRetainInstance(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/CredentialCheckResultTracker;->setRetainInstance(Z)V
 
     .line 40
     return-void
 .end method
 
-.method public setListener(Lcom/android/settings/CredentialCheckResultTracker$Listener;)V
+.method public setListener(Lcom/android/settings_ex/CredentialCheckResultTracker$Listener;)V
     .locals 5
-    .param p1, "listener"    # Lcom/android/settings/CredentialCheckResultTracker$Listener;
+    .param p1, "listener"    # Lcom/android/settings_ex/CredentialCheckResultTracker$Listener;
 
     .prologue
     .line 43
-    iget-object v0, p0, Lcom/android/settings/CredentialCheckResultTracker;->mListener:Lcom/android/settings/CredentialCheckResultTracker$Listener;
+    iget-object v0, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mListener:Lcom/android/settings_ex/CredentialCheckResultTracker$Listener;
 
     if-ne v0, p1, :cond_1
 
@@ -105,29 +105,29 @@
 
     .line 47
     :cond_1
-    iput-object p1, p0, Lcom/android/settings/CredentialCheckResultTracker;->mListener:Lcom/android/settings/CredentialCheckResultTracker$Listener;
+    iput-object p1, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mListener:Lcom/android/settings_ex/CredentialCheckResultTracker$Listener;
 
     .line 48
-    iget-object v0, p0, Lcom/android/settings/CredentialCheckResultTracker;->mListener:Lcom/android/settings/CredentialCheckResultTracker$Listener;
+    iget-object v0, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mListener:Lcom/android/settings_ex/CredentialCheckResultTracker$Listener;
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/android/settings/CredentialCheckResultTracker;->mHasResult:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mHasResult:Z
 
     if-eqz v0, :cond_0
 
     .line 49
-    iget-object v0, p0, Lcom/android/settings/CredentialCheckResultTracker;->mListener:Lcom/android/settings/CredentialCheckResultTracker$Listener;
+    iget-object v0, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mListener:Lcom/android/settings_ex/CredentialCheckResultTracker$Listener;
 
-    iget-boolean v1, p0, Lcom/android/settings/CredentialCheckResultTracker;->mResultMatched:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mResultMatched:Z
 
-    iget-object v2, p0, Lcom/android/settings/CredentialCheckResultTracker;->mResultData:Landroid/content/Intent;
+    iget-object v2, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mResultData:Landroid/content/Intent;
 
-    iget v3, p0, Lcom/android/settings/CredentialCheckResultTracker;->mResultTimeoutMs:I
+    iget v3, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mResultTimeoutMs:I
 
-    iget v4, p0, Lcom/android/settings/CredentialCheckResultTracker;->mResultEffectiveUserId:I
+    iget v4, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mResultEffectiveUserId:I
 
-    invoke-interface {v0, v1, v2, v3, v4}, Lcom/android/settings/CredentialCheckResultTracker$Listener;->onCredentialChecked(ZLandroid/content/Intent;II)V
+    invoke-interface {v0, v1, v2, v3, v4}, Lcom/android/settings_ex/CredentialCheckResultTracker$Listener;->onCredentialChecked(ZLandroid/content/Intent;II)V
 
     goto :goto_0
 .end method
@@ -141,39 +141,39 @@
 
     .prologue
     .line 55
-    iput-boolean p1, p0, Lcom/android/settings/CredentialCheckResultTracker;->mResultMatched:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mResultMatched:Z
 
     .line 56
-    iput-object p2, p0, Lcom/android/settings/CredentialCheckResultTracker;->mResultData:Landroid/content/Intent;
+    iput-object p2, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mResultData:Landroid/content/Intent;
 
     .line 57
-    iput p3, p0, Lcom/android/settings/CredentialCheckResultTracker;->mResultTimeoutMs:I
+    iput p3, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mResultTimeoutMs:I
 
     .line 58
-    iput p4, p0, Lcom/android/settings/CredentialCheckResultTracker;->mResultEffectiveUserId:I
+    iput p4, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mResultEffectiveUserId:I
 
     .line 60
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/CredentialCheckResultTracker;->mHasResult:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mHasResult:Z
 
     .line 61
-    iget-object v0, p0, Lcom/android/settings/CredentialCheckResultTracker;->mListener:Lcom/android/settings/CredentialCheckResultTracker$Listener;
+    iget-object v0, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mListener:Lcom/android/settings_ex/CredentialCheckResultTracker$Listener;
 
     if-eqz v0, :cond_0
 
     .line 62
-    iget-object v0, p0, Lcom/android/settings/CredentialCheckResultTracker;->mListener:Lcom/android/settings/CredentialCheckResultTracker$Listener;
+    iget-object v0, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mListener:Lcom/android/settings_ex/CredentialCheckResultTracker$Listener;
 
-    iget-boolean v1, p0, Lcom/android/settings/CredentialCheckResultTracker;->mResultMatched:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mResultMatched:Z
 
-    iget-object v2, p0, Lcom/android/settings/CredentialCheckResultTracker;->mResultData:Landroid/content/Intent;
+    iget-object v2, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mResultData:Landroid/content/Intent;
 
-    iget v3, p0, Lcom/android/settings/CredentialCheckResultTracker;->mResultTimeoutMs:I
+    iget v3, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mResultTimeoutMs:I
 
-    iget v4, p0, Lcom/android/settings/CredentialCheckResultTracker;->mResultEffectiveUserId:I
+    iget v4, p0, Lcom/android/settings_ex/CredentialCheckResultTracker;->mResultEffectiveUserId:I
 
-    invoke-interface {v0, v1, v2, v3, v4}, Lcom/android/settings/CredentialCheckResultTracker$Listener;->onCredentialChecked(ZLandroid/content/Intent;II)V
+    invoke-interface {v0, v1, v2, v3, v4}, Lcom/android/settings_ex/CredentialCheckResultTracker$Listener;->onCredentialChecked(ZLandroid/content/Intent;II)V
 
     .line 65
     :cond_0

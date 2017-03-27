@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/Settings$ActiveKeySettingsActivity;
-.super Lcom/android/settings/SettingsActivity;
+.class public Lcom/android/settings_ex/Settings$ActiveKeySettingsActivity;
+.super Lcom/android/settings_ex/SettingsActivity;
 .source "Settings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/Settings;
+    value = Lcom/android/settings_ex/Settings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 270
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivity;-><init>()V
 
     return-void
 .end method
@@ -33,17 +33,17 @@
 
     .prologue
     .line 273
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 274
-    invoke-static {}, Lcom/android/settings/Utils;->hasActiveKey()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->hasActiveKey()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 275
-    invoke-virtual {p0}, Lcom/android/settings/Settings$ActiveKeySettingsActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings$ActiveKeySettingsActivity;->finish()V
 
     .line 277
     :cond_0

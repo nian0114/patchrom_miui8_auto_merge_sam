@@ -10,7 +10,7 @@
     </LinearLayout>
     <FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/pattern_lock_confirm_bottom" style="@style/pattern_lock_background">
         <TextView android:textSize="@dimen/lock_pattern_footer_text_size" android:gravity="center" android:id="@id/errorText" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-        <com.android.settings.widget.BottomBarButton android:layout_gravity="bottom" android:id="@id/backupPin" android:background="@drawable/ripple_lockpattern_backup_pin_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/bottom_button_height" android:text="@string/lockpattern_backup_pin" android:textAlignment="center" style="@style/SecurityPreferenceButton" />
+        <com.android.settings_ex.widget.BottomBarButton android:layout_gravity="bottom" android:id="@id/backupPin" android:background="@drawable/ripple_lockpattern_backup_pin_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/bottom_button_height" android:text="@string/lockpattern_backup_pin" android:textAlignment="center" style="@style/SecurityPreferenceButton" />
         <ImageView android:layout_gravity="center_horizontal" android:id="@id/fingerprintIcon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
     </FrameLayout>
 </com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient>

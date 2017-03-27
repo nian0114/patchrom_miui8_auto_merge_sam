@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WpsDialog$4;
+.class Lcom/android/settings_ex/wifi/WpsDialog$4;
 .super Ljava/lang/Object;
 .source "WpsDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WpsDialog;
+    value = Lcom/android/settings_ex/wifi/WpsDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WpsDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WpsDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WpsDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WpsDialog;)V
     .locals 0
 
     .prologue
     .line 357
-    iput-object p1, p0, Lcom/android/settings/wifi/WpsDialog$4;->this$0:Lcom/android/settings/wifi/WpsDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WpsDialog$4;->this$0:Lcom/android/settings_ex/wifi/WpsDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,9 +43,9 @@
 
     .prologue
     .line 359
-    iget-object v0, p0, Lcom/android/settings/wifi/WpsDialog$4;->this$0:Lcom/android/settings/wifi/WpsDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WpsDialog$4;->this$0:Lcom/android/settings_ex/wifi/WpsDialog;
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WpsDialog;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WpsDialog;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
 
@@ -54,28 +54,28 @@
     if-eqz v0, :cond_0
 
     .line 360
-    iget-object v0, p0, Lcom/android/settings/wifi/WpsDialog$4;->this$0:Lcom/android/settings/wifi/WpsDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WpsDialog$4;->this$0:Lcom/android/settings_ex/wifi/WpsDialog;
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WpsDialog;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WpsDialog;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
     .line 363
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/wifi/WpsDialog$4;->this$0:Lcom/android/settings/wifi/WpsDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WpsDialog$4;->this$0:Lcom/android/settings_ex/wifi/WpsDialog;
 
-    # getter for: Lcom/android/settings/wifi/WpsDialog;->mTimer:Ljava/util/Timer;
-    invoke-static {v0}, Lcom/android/settings/wifi/WpsDialog;->access$500(Lcom/android/settings/wifi/WpsDialog;)Ljava/util/Timer;
+    # getter for: Lcom/android/settings_ex/wifi/WpsDialog;->mTimer:Ljava/util/Timer;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WpsDialog;->access$500(Lcom/android/settings_ex/wifi/WpsDialog;)Ljava/util/Timer;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 364
-    iget-object v0, p0, Lcom/android/settings/wifi/WpsDialog$4;->this$0:Lcom/android/settings/wifi/WpsDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WpsDialog$4;->this$0:Lcom/android/settings_ex/wifi/WpsDialog;
 
-    # getter for: Lcom/android/settings/wifi/WpsDialog;->mTimer:Ljava/util/Timer;
-    invoke-static {v0}, Lcom/android/settings/wifi/WpsDialog;->access$500(Lcom/android/settings/wifi/WpsDialog;)Ljava/util/Timer;
+    # getter for: Lcom/android/settings_ex/wifi/WpsDialog;->mTimer:Ljava/util/Timer;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WpsDialog;->access$500(Lcom/android/settings_ex/wifi/WpsDialog;)Ljava/util/Timer;
 
     move-result-object v0
 
@@ -83,9 +83,9 @@
 
     .line 365
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/wifi/WpsDialog$4;->this$0:Lcom/android/settings/wifi/WpsDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WpsDialog$4;->this$0:Lcom/android/settings_ex/wifi/WpsDialog;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/WpsDialog;->dismiss()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/wifi/WpsDialog;->dismiss()V
 
     .line 366
     return-void

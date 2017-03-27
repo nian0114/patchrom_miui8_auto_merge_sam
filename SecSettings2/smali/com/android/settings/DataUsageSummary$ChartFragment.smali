@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/DataUsageSummary$ChartFragment;
+.class public Lcom/android/settings_ex/DataUsageSummary$ChartFragment;
 .super Landroid/app/Fragment;
 .source "DataUsageSummary.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DataUsageSummary;
+    value = Lcom/android/settings_ex/DataUsageSummary;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,13 +25,13 @@
     return-void
 .end method
 
-.method public static show(Lcom/android/settings/DataUsageSummary;)V
+.method public static show(Lcom/android/settings_ex/DataUsageSummary;)V
     .locals 3
-    .param p0, "parent"    # Lcom/android/settings/DataUsageSummary;
+    .param p0, "parent"    # Lcom/android/settings_ex/DataUsageSummary;
 
     .prologue
     .line 4689
-    invoke-virtual {p0}, Lcom/android/settings/DataUsageSummary;->isAdded()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/DataUsageSummary;->isAdded()Z
 
     move-result v2
 
@@ -43,18 +43,18 @@
 
     .line 4691
     :cond_0
-    new-instance v0, Lcom/android/settings/DataUsageSummary$ChartFragment;
+    new-instance v0, Lcom/android/settings_ex/DataUsageSummary$ChartFragment;
 
-    invoke-direct {v0}, Lcom/android/settings/DataUsageSummary$ChartFragment;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/DataUsageSummary$ChartFragment;-><init>()V
 
     .line 4692
-    .local v0, "fragment":Lcom/android/settings/DataUsageSummary$ChartFragment;
+    .local v0, "fragment":Lcom/android/settings_ex/DataUsageSummary$ChartFragment;
     const/4 v2, 0x0
 
-    invoke-virtual {v0, p0, v2}, Lcom/android/settings/DataUsageSummary$ChartFragment;->setTargetFragment(Landroid/app/Fragment;I)V
+    invoke-virtual {v0, p0, v2}, Lcom/android/settings_ex/DataUsageSummary$ChartFragment;->setTargetFragment(Landroid/app/Fragment;I)V
 
     .line 4693
-    invoke-virtual {p0}, Lcom/android/settings/DataUsageSummary;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DataUsageSummary;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v2
 
@@ -86,16 +86,16 @@
 
     .prologue
     .line 4719
-    invoke-virtual {p0}, Lcom/android/settings/DataUsageSummary$ChartFragment;->getTargetFragment()Landroid/app/Fragment;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DataUsageSummary$ChartFragment;->getTargetFragment()Landroid/app/Fragment;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/DataUsageSummary;
+    check-cast v0, Lcom/android/settings_ex/DataUsageSummary;
 
     .line 4720
-    .local v0, "target":Lcom/android/settings/DataUsageSummary;
-    # invokes: Lcom/android/settings/DataUsageSummary;->backFromChart()V
-    invoke-static {v0}, Lcom/android/settings/DataUsageSummary;->access$8100(Lcom/android/settings/DataUsageSummary;)V
+    .local v0, "target":Lcom/android/settings_ex/DataUsageSummary;
+    # invokes: Lcom/android/settings_ex/DataUsageSummary;->backFromChart()V
+    invoke-static {v0}, Lcom/android/settings_ex/DataUsageSummary;->access$8100(Lcom/android/settings_ex/DataUsageSummary;)V
 
     .line 4721
     invoke-super {p0}, Landroid/app/Fragment;->onDestroy()V
@@ -112,28 +112,28 @@
     invoke-super {p0}, Landroid/app/Fragment;->onStart()V
 
     .line 4702
-    invoke-virtual {p0}, Lcom/android/settings/DataUsageSummary$ChartFragment;->getTargetFragment()Landroid/app/Fragment;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DataUsageSummary$ChartFragment;->getTargetFragment()Landroid/app/Fragment;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/DataUsageSummary;
+    check-cast v0, Lcom/android/settings_ex/DataUsageSummary;
 
     .line 4703
-    .local v0, "target":Lcom/android/settings/DataUsageSummary;
+    .local v0, "target":Lcom/android/settings_ex/DataUsageSummary;
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lcom/android/settings/DataUsageSummary;->mIsChartFragment:Z
+    iput-boolean v1, v0, Lcom/android/settings_ex/DataUsageSummary;->mIsChartFragment:Z
 
     .line 4704
-    # getter for: Lcom/android/settings/DataUsageSummary;->mAppDetail:Landroid/view/View;
-    invoke-static {v0}, Lcom/android/settings/DataUsageSummary;->access$8000(Lcom/android/settings/DataUsageSummary;)Landroid/view/View;
+    # getter for: Lcom/android/settings_ex/DataUsageSummary;->mAppDetail:Landroid/view/View;
+    invoke-static {v0}, Lcom/android/settings_ex/DataUsageSummary;->access$8000(Lcom/android/settings_ex/DataUsageSummary;)Landroid/view/View;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    # getter for: Lcom/android/settings/DataUsageSummary;->mAppDetail:Landroid/view/View;
-    invoke-static {v0}, Lcom/android/settings/DataUsageSummary;->access$8000(Lcom/android/settings/DataUsageSummary;)Landroid/view/View;
+    # getter for: Lcom/android/settings_ex/DataUsageSummary;->mAppDetail:Landroid/view/View;
+    invoke-static {v0}, Lcom/android/settings_ex/DataUsageSummary;->access$8000(Lcom/android/settings_ex/DataUsageSummary;)Landroid/view/View;
 
     move-result-object v1
 
@@ -146,8 +146,8 @@
     if-ne v1, v2, :cond_0
 
     .line 4705
-    # invokes: Lcom/android/settings/DataUsageSummary;->updateBody()V
-    invoke-static {v0}, Lcom/android/settings/DataUsageSummary;->access$2900(Lcom/android/settings/DataUsageSummary;)V
+    # invokes: Lcom/android/settings_ex/DataUsageSummary;->updateBody()V
+    invoke-static {v0}, Lcom/android/settings_ex/DataUsageSummary;->access$2900(Lcom/android/settings_ex/DataUsageSummary;)V
 
     .line 4707
     :cond_0
@@ -159,21 +159,21 @@
 
     .prologue
     .line 4711
-    invoke-virtual {p0}, Lcom/android/settings/DataUsageSummary$ChartFragment;->getTargetFragment()Landroid/app/Fragment;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DataUsageSummary$ChartFragment;->getTargetFragment()Landroid/app/Fragment;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/DataUsageSummary;
+    check-cast v0, Lcom/android/settings_ex/DataUsageSummary;
 
     .line 4712
-    .local v0, "target":Lcom/android/settings/DataUsageSummary;
+    .local v0, "target":Lcom/android/settings_ex/DataUsageSummary;
     const/4 v1, 0x0
 
-    iput-boolean v1, v0, Lcom/android/settings/DataUsageSummary;->mIsChartFragment:Z
+    iput-boolean v1, v0, Lcom/android/settings_ex/DataUsageSummary;->mIsChartFragment:Z
 
     .line 4713
-    # invokes: Lcom/android/settings/DataUsageSummary;->updateBody()V
-    invoke-static {v0}, Lcom/android/settings/DataUsageSummary;->access$2900(Lcom/android/settings/DataUsageSummary;)V
+    # invokes: Lcom/android/settings_ex/DataUsageSummary;->updateBody()V
+    invoke-static {v0}, Lcom/android/settings_ex/DataUsageSummary;->access$2900(Lcom/android/settings_ex/DataUsageSummary;)V
 
     .line 4714
     invoke-super {p0}, Landroid/app/Fragment;->onStop()V

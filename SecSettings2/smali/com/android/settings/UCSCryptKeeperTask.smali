@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/UCSCryptKeeperTask;
+.class public Lcom/android/settings_ex/UCSCryptKeeperTask;
 .super Landroid/os/AsyncTask;
 .source "UCSCryptKeeperTask.java"
 
@@ -6,9 +6,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/UCSCryptKeeperTask$EncryptTaskUCS;,
-        Lcom/android/settings/UCSCryptKeeperTask$DecryptTaskUCS;,
-        Lcom/android/settings/UCSCryptKeeperTask$StateMachine;
+        Lcom/android/settings_ex/UCSCryptKeeperTask$EncryptTaskUCS;,
+        Lcom/android/settings_ex/UCSCryptKeeperTask$DecryptTaskUCS;,
+        Lcom/android/settings_ex/UCSCryptKeeperTask$StateMachine;
     }
 .end annotation
 
@@ -59,13 +59,13 @@
 
 .field private mIsPukState:Z
 
-.field mKeyguardProp:Lcom/android/settings/EFSProperties$KeyguardProperties;
+.field mKeyguardProp:Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
 
-.field mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+.field mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
 .field private mOdeUCMEnabled:Z
 
-.field private mParentActivity:Lcom/android/settings/CryptKeeper;
+.field private mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
 .field private mPasswordEntry:Landroid/widget/EditText;
 
@@ -73,7 +73,7 @@
 
 .field protected mPukText:Ljava/lang/String;
 
-.field protected mStateMachine:Lcom/android/settings/UCSCryptKeeperTask$StateMachine;
+.field protected mStateMachine:Lcom/android/settings_ex/UCSCryptKeeperTask$StateMachine;
 
 .field private mStatusString:I
 
@@ -98,37 +98,37 @@
     .line 130
     const-string v0, ""
 
-    sput-object v0, Lcom/android/settings/UCSCryptKeeperTask;->mSavedPassword:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mSavedPassword:Ljava/lang/String;
 
     .line 133
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/android/settings/UCSCryptKeeperTask;->mFirstTime:Z
+    sput-boolean v0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mFirstTime:Z
 
     .line 135
-    sput v1, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordMaxLength:I
+    sput v1, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordMaxLength:I
 
     .line 136
-    sput v1, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordMinLength:I
+    sput v1, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordMinLength:I
 
     .line 137
-    sput v1, Lcom/android/settings/UCSCryptKeeperTask;->mPukMaxLength:I
+    sput v1, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPukMaxLength:I
 
     .line 138
-    sput v1, Lcom/android/settings/UCSCryptKeeperTask;->mPukMinLength:I
+    sput v1, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPukMinLength:I
 
     .line 139
     const-string v0, ""
 
-    sput-object v0, Lcom/android/settings/UCSCryptKeeperTask;->mCSName:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mCSName:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/android/settings/CryptKeeper;Landroid/os/Handler;ZIZ)V
+.method public constructor <init>(Landroid/content/Context;Lcom/android/settings_ex/CryptKeeper;Landroid/os/Handler;ZIZ)V
     .locals 3
     .param p1, "context"    # Landroid/content/Context;
-    .param p2, "parentActivity"    # Lcom/android/settings/CryptKeeper;
+    .param p2, "parentActivity"    # Lcom/android/settings_ex/CryptKeeper;
     .param p3, "handler"    # Landroid/os/Handler;
     .param p4, "isEncrypt"    # Z
     .param p5, "enabledWrap"    # I
@@ -143,94 +143,94 @@
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
     .line 114
-    iput v2, p0, Lcom/android/settings/UCSCryptKeeperTask;->passwordType:I
+    iput v2, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->passwordType:I
 
     .line 118
-    new-instance v0, Lcom/android/settings/UCSCryptKeeperTask$StateMachine;
+    new-instance v0, Lcom/android/settings_ex/UCSCryptKeeperTask$StateMachine;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/UCSCryptKeeperTask$StateMachine;-><init>(Lcom/android/settings/UCSCryptKeeperTask;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/UCSCryptKeeperTask$StateMachine;-><init>(Lcom/android/settings_ex/UCSCryptKeeperTask;)V
 
-    iput-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mStateMachine:Lcom/android/settings/UCSCryptKeeperTask$StateMachine;
+    iput-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mStateMachine:Lcom/android/settings_ex/UCSCryptKeeperTask$StateMachine;
 
     .line 119
-    iput-boolean v2, p0, Lcom/android/settings/UCSCryptKeeperTask;->mIsPukState:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mIsPukState:Z
 
     .line 120
-    iput-boolean v2, p0, Lcom/android/settings/UCSCryptKeeperTask;->mIsEncrypt:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mIsEncrypt:Z
 
     .line 121
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mEnabledWrap:I
+    iput v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mEnabledWrap:I
 
     .line 122
-    iput-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mStatusTextView:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mStatusTextView:Landroid/widget/TextView;
 
     .line 123
-    iput-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mCryptKeeperDescription:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mCryptKeeperDescription:Landroid/widget/TextView;
 
     .line 132
     const v0, 0x7f0e174b
 
-    iput v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mStatusString:I
+    iput v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mStatusString:I
 
     .line 134
-    iput-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mFieldLayout:Landroid/widget/LinearLayout;
+    iput-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mFieldLayout:Landroid/widget/LinearLayout;
 
     .line 149
-    iput-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mEmergencyCall:Landroid/widget/Button;
+    iput-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mEmergencyCall:Landroid/widget/Button;
 
     .line 153
-    iput-boolean v2, p0, Lcom/android/settings/UCSCryptKeeperTask;->mOdeUCMEnabled:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mOdeUCMEnabled:Z
 
     .line 154
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mUri:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mUri:Ljava/lang/String;
 
     .line 156
-    iput-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+    iput-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
     .line 157
-    iput-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mKeyguardProp:Lcom/android/settings/EFSProperties$KeyguardProperties;
+    iput-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mKeyguardProp:Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
 
     .line 685
-    new-instance v0, Lcom/android/settings/UCSCryptKeeperTask$4;
+    new-instance v0, Lcom/android/settings_ex/UCSCryptKeeperTask$4;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/UCSCryptKeeperTask$4;-><init>(Lcom/android/settings/UCSCryptKeeperTask;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/UCSCryptKeeperTask$4;-><init>(Lcom/android/settings_ex/UCSCryptKeeperTask;)V
 
-    iput-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->ucsEditListener:Landroid/widget/TextView$OnEditorActionListener;
+    iput-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->ucsEditListener:Landroid/widget/TextView$OnEditorActionListener;
 
     .line 160
-    iput-object p1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mContext:Landroid/content/Context;
 
     .line 161
-    iput-object p2, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iput-object p2, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
     .line 162
     const-string v0, "device_policy"
 
-    invoke-virtual {p2, v0}, Lcom/android/settings/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p2, v0}, Lcom/android/settings_ex/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/app/admin/DevicePolicyManager;
 
-    iput-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    iput-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mDPM:Landroid/app/admin/DevicePolicyManager;
 
     .line 163
-    iput-object p3, p0, Lcom/android/settings/UCSCryptKeeperTask;->mHandler:Landroid/os/Handler;
+    iput-object p3, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mHandler:Landroid/os/Handler;
 
     .line 164
     const v0, 0x7f0d0146
 
-    invoke-virtual {p2, v0}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p2, v0}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mEmergencyCall:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mEmergencyCall:Landroid/widget/Button;
 
     .line 166
     const-string v0, "com.samsung.ucs.agent.boot:com.samsung.ucs.agent.boot"
@@ -241,39 +241,39 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mUri:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mUri:Ljava/lang/String;
 
     .line 167
-    iput-boolean p4, p0, Lcom/android/settings/UCSCryptKeeperTask;->mIsEncrypt:Z
+    iput-boolean p4, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mIsEncrypt:Z
 
     .line 168
-    iput p5, p0, Lcom/android/settings/UCSCryptKeeperTask;->mEnabledWrap:I
+    iput p5, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mEnabledWrap:I
 
     .line 169
-    invoke-static {}, Lcom/android/settings/EFSProperties;->loadODEConfig()Lcom/android/settings/EFSProperties$ODEProperties;
+    invoke-static {}, Lcom/android/settings_ex/EFSProperties;->loadODEConfig()Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+    iput-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
     .line 170
-    invoke-static {}, Lcom/android/settings/EFSProperties;->loadKeyguardConfig()Lcom/android/settings/EFSProperties$KeyguardProperties;
+    invoke-static {}, Lcom/android/settings_ex/EFSProperties;->loadKeyguardConfig()Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mKeyguardProp:Lcom/android/settings/EFSProperties$KeyguardProperties;
+    iput-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mKeyguardProp:Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
 
     .line 171
-    iput-boolean p6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mOdeUCMEnabled:Z
+    iput-boolean p6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mOdeUCMEnabled:Z
 
     .line 172
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
-    iget v0, v0, Lcom/android/settings/EFSProperties$ODEProperties;->enabledUCSInODE:I
+    iget v0, v0, Lcom/android/settings_ex/EFSProperties$ODEProperties;->enabledUCSInODE:I
 
     const/4 v1, 0x1
 
@@ -282,41 +282,41 @@
     .line 173
     new-instance v0, Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
-    iget-object v1, v1, Lcom/android/settings/EFSProperties$ODEProperties;->csName:[B
+    iget-object v1, v1, Lcom/android/settings_ex/EFSProperties$ODEProperties;->csName:[B
 
     invoke-direct {v0, v1}, Ljava/lang/String;-><init>([B)V
 
-    sput-object v0, Lcom/android/settings/UCSCryptKeeperTask;->mCSName:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mCSName:Ljava/lang/String;
 
     .line 174
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
-    iget v0, v0, Lcom/android/settings/EFSProperties$ODEProperties;->pinMaxLength:I
+    iget v0, v0, Lcom/android/settings_ex/EFSProperties$ODEProperties;->pinMaxLength:I
 
-    sput v0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordMaxLength:I
+    sput v0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordMaxLength:I
 
     .line 175
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
-    iget v0, v0, Lcom/android/settings/EFSProperties$ODEProperties;->pinMinLength:I
+    iget v0, v0, Lcom/android/settings_ex/EFSProperties$ODEProperties;->pinMinLength:I
 
-    sput v0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordMinLength:I
+    sput v0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordMinLength:I
 
     .line 176
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
-    iget v0, v0, Lcom/android/settings/EFSProperties$ODEProperties;->pukMaxLength:I
+    iget v0, v0, Lcom/android/settings_ex/EFSProperties$ODEProperties;->pukMaxLength:I
 
-    sput v0, Lcom/android/settings/UCSCryptKeeperTask;->mPukMaxLength:I
+    sput v0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPukMaxLength:I
 
     .line 177
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
-    iget v0, v0, Lcom/android/settings/EFSProperties$ODEProperties;->pukMinLength:I
+    iget v0, v0, Lcom/android/settings_ex/EFSProperties$ODEProperties;->pukMinLength:I
 
-    sput v0, Lcom/android/settings/UCSCryptKeeperTask;->mPukMinLength:I
+    sput v0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPukMinLength:I
 
     .line 178
     const-string v0, "UCSCryptKeeperTask"
@@ -331,7 +331,7 @@
 
     move-result-object v1
 
-    sget-object v2, Lcom/android/settings/UCSCryptKeeperTask;->mCSName:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/UCSCryptKeeperTask;->mCSName:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -343,7 +343,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordMaxLength:I
+    sget v2, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordMaxLength:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -355,7 +355,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordMinLength:I
+    sget v2, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordMinLength:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -367,7 +367,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/android/settings/UCSCryptKeeperTask;->mPukMaxLength:I
+    sget v2, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPukMaxLength:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -379,7 +379,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/android/settings/UCSCryptKeeperTask;->mPukMinLength:I
+    sget v2, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPukMinLength:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -397,48 +397,48 @@
 
     .line 179
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mKeyguardProp:Lcom/android/settings/EFSProperties$KeyguardProperties;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mKeyguardProp:Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
 
     if-eqz v0, :cond_1
 
     .line 180
     new-instance v0, Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mKeyguardProp:Lcom/android/settings/EFSProperties$KeyguardProperties;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mKeyguardProp:Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
 
-    iget-object v1, v1, Lcom/android/settings/EFSProperties$KeyguardProperties;->csName:[B
+    iget-object v1, v1, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->csName:[B
 
     invoke-direct {v0, v1}, Ljava/lang/String;-><init>([B)V
 
-    sput-object v0, Lcom/android/settings/UCSCryptKeeperTask;->mCSName:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mCSName:Ljava/lang/String;
 
     .line 181
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mKeyguardProp:Lcom/android/settings/EFSProperties$KeyguardProperties;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mKeyguardProp:Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
 
-    iget v0, v0, Lcom/android/settings/EFSProperties$KeyguardProperties;->pinMaxLength:I
+    iget v0, v0, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->pinMaxLength:I
 
-    sput v0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordMaxLength:I
+    sput v0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordMaxLength:I
 
     .line 182
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mKeyguardProp:Lcom/android/settings/EFSProperties$KeyguardProperties;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mKeyguardProp:Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
 
-    iget v0, v0, Lcom/android/settings/EFSProperties$KeyguardProperties;->pinMinLength:I
+    iget v0, v0, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->pinMinLength:I
 
-    sput v0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordMinLength:I
+    sput v0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordMinLength:I
 
     .line 183
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mKeyguardProp:Lcom/android/settings/EFSProperties$KeyguardProperties;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mKeyguardProp:Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
 
-    iget v0, v0, Lcom/android/settings/EFSProperties$KeyguardProperties;->pukMaxLength:I
+    iget v0, v0, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->pukMaxLength:I
 
-    sput v0, Lcom/android/settings/UCSCryptKeeperTask;->mPukMaxLength:I
+    sput v0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPukMaxLength:I
 
     .line 184
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mKeyguardProp:Lcom/android/settings/EFSProperties$KeyguardProperties;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mKeyguardProp:Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
 
-    iget v0, v0, Lcom/android/settings/EFSProperties$KeyguardProperties;->pukMinLength:I
+    iget v0, v0, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->pukMinLength:I
 
-    sput v0, Lcom/android/settings/UCSCryptKeeperTask;->mPukMinLength:I
+    sput v0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPukMinLength:I
 
     .line 185
     const-string v0, "UCSCryptKeeperTask"
@@ -453,7 +453,7 @@
 
     move-result-object v1
 
-    sget-object v2, Lcom/android/settings/UCSCryptKeeperTask;->mCSName:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/UCSCryptKeeperTask;->mCSName:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -465,7 +465,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordMaxLength:I
+    sget v2, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordMaxLength:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -477,7 +477,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordMinLength:I
+    sget v2, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordMinLength:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -489,7 +489,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/android/settings/UCSCryptKeeperTask;->mPukMaxLength:I
+    sget v2, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPukMaxLength:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -501,7 +501,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/android/settings/UCSCryptKeeperTask;->mPukMinLength:I
+    sget v2, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPukMinLength:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -526,161 +526,161 @@
     goto :goto_0
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/UCSCryptKeeperTask;)Z
+.method static synthetic access$1000(Lcom/android/settings_ex/UCSCryptKeeperTask;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/UCSCryptKeeperTask;
+    .param p0, "x0"    # Lcom/android/settings_ex/UCSCryptKeeperTask;
 
     .prologue
     .line 111
-    iget-boolean v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mIsEncrypt:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mIsEncrypt:Z
 
     return v0
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/UCSCryptKeeperTask;)V
+.method static synthetic access$1100(Lcom/android/settings_ex/UCSCryptKeeperTask;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/UCSCryptKeeperTask;
+    .param p0, "x0"    # Lcom/android/settings_ex/UCSCryptKeeperTask;
 
     .prologue
     .line 111
-    invoke-direct {p0}, Lcom/android/settings/UCSCryptKeeperTask;->fakeUnlockAttempt()V
+    invoke-direct {p0}, Lcom/android/settings_ex/UCSCryptKeeperTask;->fakeUnlockAttempt()V
 
     return-void
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/UCSCryptKeeperTask;)V
+.method static synthetic access$1200(Lcom/android/settings_ex/UCSCryptKeeperTask;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/UCSCryptKeeperTask;
+    .param p0, "x0"    # Lcom/android/settings_ex/UCSCryptKeeperTask;
 
     .prologue
     .line 111
-    invoke-direct {p0}, Lcom/android/settings/UCSCryptKeeperTask;->beginAttempt()V
+    invoke-direct {p0}, Lcom/android/settings_ex/UCSCryptKeeperTask;->beginAttempt()V
 
     return-void
 .end method
 
-.method static synthetic access$1300(Lcom/android/settings/UCSCryptKeeperTask;)Landroid/os/storage/IMountService;
+.method static synthetic access$1300(Lcom/android/settings_ex/UCSCryptKeeperTask;)Landroid/os/storage/IMountService;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/UCSCryptKeeperTask;
+    .param p0, "x0"    # Lcom/android/settings_ex/UCSCryptKeeperTask;
 
     .prologue
     .line 111
-    invoke-direct {p0}, Lcom/android/settings/UCSCryptKeeperTask;->getMountService()Landroid/os/storage/IMountService;
+    invoke-direct {p0}, Lcom/android/settings_ex/UCSCryptKeeperTask;->getMountService()Landroid/os/storage/IMountService;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$1400(Lcom/android/settings/UCSCryptKeeperTask;)Ljava/lang/String;
+.method static synthetic access$1400(Lcom/android/settings_ex/UCSCryptKeeperTask;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/UCSCryptKeeperTask;
+    .param p0, "x0"    # Lcom/android/settings_ex/UCSCryptKeeperTask;
 
     .prologue
     .line 111
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mUri:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mUri:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$1500(Lcom/android/settings/UCSCryptKeeperTask;)Z
+.method static synthetic access$1500(Lcom/android/settings_ex/UCSCryptKeeperTask;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/UCSCryptKeeperTask;
+    .param p0, "x0"    # Lcom/android/settings_ex/UCSCryptKeeperTask;
 
     .prologue
     .line 111
-    iget-boolean v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mOdeUCMEnabled:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mOdeUCMEnabled:Z
 
     return v0
 .end method
 
-.method static synthetic access$1600(Lcom/android/settings/UCSCryptKeeperTask;[I)V
+.method static synthetic access$1600(Lcom/android/settings_ex/UCSCryptKeeperTask;[I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/UCSCryptKeeperTask;
+    .param p0, "x0"    # Lcom/android/settings_ex/UCSCryptKeeperTask;
     .param p1, "x1"    # [I
 
     .prologue
     .line 111
-    invoke-direct {p0, p1}, Lcom/android/settings/UCSCryptKeeperTask;->handleBadAttemptUCS([I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/UCSCryptKeeperTask;->handleBadAttemptUCS([I)V
 
     return-void
 .end method
 
-.method static synthetic access$1700(Lcom/android/settings/UCSCryptKeeperTask;)Landroid/widget/Button;
+.method static synthetic access$1700(Lcom/android/settings_ex/UCSCryptKeeperTask;)Landroid/widget/Button;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/UCSCryptKeeperTask;
+    .param p0, "x0"    # Lcom/android/settings_ex/UCSCryptKeeperTask;
 
     .prologue
     .line 111
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mEmergencyCall:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mEmergencyCall:Landroid/widget/Button;
 
     return-object v0
 .end method
 
-.method static synthetic access$1800(Lcom/android/settings/UCSCryptKeeperTask;)I
+.method static synthetic access$1800(Lcom/android/settings_ex/UCSCryptKeeperTask;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/UCSCryptKeeperTask;
+    .param p0, "x0"    # Lcom/android/settings_ex/UCSCryptKeeperTask;
 
     .prologue
     .line 111
-    iget v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mEnabledWrap:I
+    iget v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mEnabledWrap:I
 
     return v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/UCSCryptKeeperTask;Ljava/lang/String;I)V
+.method static synthetic access$200(Lcom/android/settings_ex/UCSCryptKeeperTask;Ljava/lang/String;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/UCSCryptKeeperTask;
+    .param p0, "x0"    # Lcom/android/settings_ex/UCSCryptKeeperTask;
     .param p1, "x1"    # Ljava/lang/String;
     .param p2, "x2"    # I
 
     .prologue
     .line 111
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/UCSCryptKeeperTask;->setMessageInUcsInfo(Ljava/lang/String;I)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/UCSCryptKeeperTask;->setMessageInUcsInfo(Ljava/lang/String;I)V
 
     return-void
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/UCSCryptKeeperTask;)V
+.method static synthetic access$300(Lcom/android/settings_ex/UCSCryptKeeperTask;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/UCSCryptKeeperTask;
+    .param p0, "x0"    # Lcom/android/settings_ex/UCSCryptKeeperTask;
 
     .prologue
     .line 111
-    invoke-direct {p0}, Lcom/android/settings/UCSCryptKeeperTask;->unlockUCSPUK()V
+    invoke-direct {p0}, Lcom/android/settings_ex/UCSCryptKeeperTask;->unlockUCSPUK()V
 
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/UCSCryptKeeperTask;)Landroid/widget/EditText;
+.method static synthetic access$400(Lcom/android/settings_ex/UCSCryptKeeperTask;)Landroid/widget/EditText;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/UCSCryptKeeperTask;
+    .param p0, "x0"    # Lcom/android/settings_ex/UCSCryptKeeperTask;
 
     .prologue
     .line 111
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/UCSCryptKeeperTask;)Landroid/content/Context;
+.method static synthetic access$500(Lcom/android/settings_ex/UCSCryptKeeperTask;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/UCSCryptKeeperTask;
+    .param p0, "x0"    # Lcom/android/settings_ex/UCSCryptKeeperTask;
 
     .prologue
     .line 111
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/UCSCryptKeeperTask;)Z
+.method static synthetic access$600(Lcom/android/settings_ex/UCSCryptKeeperTask;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/UCSCryptKeeperTask;
+    .param p0, "x0"    # Lcom/android/settings_ex/UCSCryptKeeperTask;
 
     .prologue
     .line 111
-    iget-boolean v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mIsPukState:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mIsPukState:Z
 
     return v0
 .end method
@@ -690,7 +690,7 @@
 
     .prologue
     .line 111
-    sget-object v0, Lcom/android/settings/UCSCryptKeeperTask;->mSavedPassword:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mSavedPassword:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -701,18 +701,18 @@
 
     .prologue
     .line 111
-    sput-object p0, Lcom/android/settings/UCSCryptKeeperTask;->mSavedPassword:Ljava/lang/String;
+    sput-object p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mSavedPassword:Ljava/lang/String;
 
     return-object p0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/UCSCryptKeeperTask;)Lcom/android/settings/CryptKeeper;
+.method static synthetic access$800(Lcom/android/settings_ex/UCSCryptKeeperTask;)Lcom/android/settings_ex/CryptKeeper;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/UCSCryptKeeperTask;
+    .param p0, "x0"    # Lcom/android/settings_ex/UCSCryptKeeperTask;
 
     .prologue
     .line 111
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
     return-object v0
 .end method
@@ -722,7 +722,7 @@
 
     .prologue
     .line 111
-    sget v0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordMinLength:I
+    sget v0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordMinLength:I
 
     return v0
 .end method
@@ -732,11 +732,11 @@
 
     .prologue
     .line 192
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
     const v2, 0x7f0d0147
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -758,9 +758,9 @@
 
     .prologue
     .line 197
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
-    invoke-virtual {v1}, Lcom/android/settings/CryptKeeper;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Lcom/android/settings_ex/CryptKeeper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -792,9 +792,9 @@
     const/4 v5, 0x1
 
     .line 1034
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
-    invoke-virtual {v0}, Lcom/android/settings/CryptKeeper;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Lcom/android/settings_ex/CryptKeeper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -806,7 +806,7 @@
 
     const/4 v3, 0x0
 
-    sget v4, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordMinLength:I
+    sget v4, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordMinLength:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -814,7 +814,7 @@
 
     aput-object v4, v2, v3
 
-    sget v3, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordMaxLength:I
+    sget v3, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordMaxLength:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -826,32 +826,32 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/UCSCryptKeeperTask;->setHintOrMessageText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/UCSCryptKeeperTask;->setHintOrMessageText(Ljava/lang/CharSequence;)V
 
     .line 1035
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     if-eqz v0, :cond_0
 
     .line 1036
-    invoke-virtual {p0, v5}, Lcom/android/settings/UCSCryptKeeperTask;->resetPasswordText(Z)V
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/UCSCryptKeeperTask;->resetPasswordText(Z)V
 
     .line 1037
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v0, v5}, Landroid/widget/EditText;->setEnabled(Z)V
 
     .line 1038
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
     .line 1039
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
-    new-instance v1, Lcom/android/settings/UCSCryptKeeperTask$5;
+    new-instance v1, Lcom/android/settings_ex/UCSCryptKeeperTask$5;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/UCSCryptKeeperTask$5;-><init>(Lcom/android/settings/UCSCryptKeeperTask;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/UCSCryptKeeperTask$5;-><init>(Lcom/android/settings_ex/UCSCryptKeeperTask;)V
 
     const-wide/16 v2, 0xc8
 
@@ -897,11 +897,11 @@
 
     .prologue
     .line 251
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
     const-string v1, "phone"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -929,14 +929,14 @@
     if-nez p1, :cond_1
 
     .line 979
-    iget-boolean v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mIsPukState:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mIsPukState:Z
 
     if-eqz v1, :cond_0
 
     .line 980
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mStateMachine:Lcom/android/settings/UCSCryptKeeperTask$StateMachine;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mStateMachine:Lcom/android/settings_ex/UCSCryptKeeperTask$StateMachine;
 
-    invoke-virtual {v1}, Lcom/android/settings/UCSCryptKeeperTask$StateMachine;->reset()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/UCSCryptKeeperTask$StateMachine;->reset()V
 
     .line 1031
     :goto_0
@@ -944,23 +944,23 @@
 
     .line 982
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/UCSCryptKeeperTask;->getWrongPasswordStringId()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/UCSCryptKeeperTask;->getWrongPasswordStringId()I
 
     move-result v1
 
     const/4 v2, -0x1
 
-    invoke-virtual {p0, v1, v2}, Lcom/android/settings/UCSCryptKeeperTask;->getUCSFailedAttemptMessage(II)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v1, v2}, Lcom/android/settings_ex/UCSCryptKeeperTask;->getUCSFailedAttemptMessage(II)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/UCSCryptKeeperTask;->setHintOrMessageText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/UCSCryptKeeperTask;->setHintOrMessageText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
     .line 987
     :cond_1
-    iget-boolean v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mIsPukState:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mIsPukState:Z
 
     if-eqz v1, :cond_5
 
@@ -970,32 +970,32 @@
     if-ne v1, v6, :cond_4
 
     .line 989
-    iget-boolean v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mIsEncrypt:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mIsEncrypt:Z
 
     if-eqz v1, :cond_3
 
     .line 990
     const v1, 0x7f0e1741
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/UCSCryptKeeperTask;->setHintOrMessageText(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/UCSCryptKeeperTask;->setHintOrMessageText(I)V
 
     .line 998
     :goto_1
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     if-eqz v1, :cond_2
 
     .line 999
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v1, v3}, Landroid/widget/EditText;->setEnabled(Z)V
 
     .line 1000
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
     const-string v2, "input_method"
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1003,75 +1003,75 @@
 
     .line 1001
     .local v0, "imm":Landroid/view/inputmethod/InputMethodManager;
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v0, v1, v4}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
 
     .line 1002
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
-    invoke-virtual {v1, v4}, Lcom/android/settings/CryptKeeper;->setBackFunctionality(Z)V
+    invoke-virtual {v1, v4}, Lcom/android/settings_ex/CryptKeeper;->setBackFunctionality(Z)V
 
     .line 1004
     .end local v0    # "imm":Landroid/view/inputmethod/InputMethodManager;
     :cond_2
-    sget-object v1, Lcom/android/settings/UCMHelpUtils;->miscInfo:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/UCMHelpUtils;->miscInfo:Ljava/lang/String;
 
     aget v2, p1, v5
 
-    invoke-direct {p0, v1, v2}, Lcom/android/settings/UCSCryptKeeperTask;->setMessageInUcsInfo(Ljava/lang/String;I)V
+    invoke-direct {p0, v1, v2}, Lcom/android/settings_ex/UCSCryptKeeperTask;->setMessageInUcsInfo(Ljava/lang/String;I)V
 
     .line 1005
     const-string v1, "NONE"
 
-    sput-object v1, Lcom/android/settings/UCMHelpUtils;->miscInfo:Ljava/lang/String;
+    sput-object v1, Lcom/android/settings_ex/UCMHelpUtils;->miscInfo:Ljava/lang/String;
 
     goto :goto_0
 
     .line 992
     :cond_3
-    invoke-virtual {p0, v7}, Lcom/android/settings/UCSCryptKeeperTask;->setHintOrMessageText(I)V
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/UCSCryptKeeperTask;->setHintOrMessageText(I)V
 
     goto :goto_1
 
     .line 995
     :cond_4
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mStateMachine:Lcom/android/settings/UCSCryptKeeperTask$StateMachine;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mStateMachine:Lcom/android/settings_ex/UCSCryptKeeperTask$StateMachine;
 
-    invoke-virtual {v1}, Lcom/android/settings/UCSCryptKeeperTask$StateMachine;->reset()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/UCSCryptKeeperTask$StateMachine;->reset()V
 
     .line 996
-    invoke-virtual {p0}, Lcom/android/settings/UCSCryptKeeperTask;->getWrongPukStringId()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/UCSCryptKeeperTask;->getWrongPukStringId()I
 
     move-result v1
 
     aget v2, p1, v3
 
-    invoke-virtual {p0, v1, v2}, Lcom/android/settings/UCSCryptKeeperTask;->getUCSFailedAttemptMessage(II)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v1, v2}, Lcom/android/settings_ex/UCSCryptKeeperTask;->getUCSFailedAttemptMessage(II)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/UCSCryptKeeperTask;->setHintOrMessageText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/UCSCryptKeeperTask;->setHintOrMessageText(Ljava/lang/CharSequence;)V
 
     goto :goto_1
 
     .line 1008
     :cond_5
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     if-eqz v1, :cond_6
 
     .line 1009
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v1, v3}, Landroid/widget/EditText;->setEnabled(Z)V
 
     .line 1010
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
     const-string v2, "input_method"
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1079,14 +1079,14 @@
 
     .line 1011
     .restart local v0    # "imm":Landroid/view/inputmethod/InputMethodManager;
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v0, v1, v4}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
 
     .line 1012
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
-    invoke-virtual {v1, v4}, Lcom/android/settings/CryptKeeper;->setBackFunctionality(Z)V
+    invoke-virtual {v1, v4}, Lcom/android/settings_ex/CryptKeeper;->setBackFunctionality(Z)V
 
     .line 1015
     .end local v0    # "imm":Landroid/view/inputmethod/InputMethodManager;
@@ -1098,27 +1098,27 @@
     if-ne v1, v2, :cond_7
 
     .line 1016
-    iput-boolean v3, p0, Lcom/android/settings/UCSCryptKeeperTask;->mIsPukState:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mIsPukState:Z
 
     .line 1017
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mStateMachine:Lcom/android/settings/UCSCryptKeeperTask$StateMachine;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mStateMachine:Lcom/android/settings_ex/UCSCryptKeeperTask$StateMachine;
 
     aget v2, p1, v3
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/UCSCryptKeeperTask$StateMachine;->reset(I)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/UCSCryptKeeperTask$StateMachine;->reset(I)V
 
     .line 1027
     :goto_2
-    sget-object v1, Lcom/android/settings/UCMHelpUtils;->miscInfo:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/UCMHelpUtils;->miscInfo:Ljava/lang/String;
 
     aget v2, p1, v5
 
-    invoke-direct {p0, v1, v2}, Lcom/android/settings/UCSCryptKeeperTask;->setMessageInUcsInfo(Ljava/lang/String;I)V
+    invoke-direct {p0, v1, v2}, Lcom/android/settings_ex/UCSCryptKeeperTask;->setMessageInUcsInfo(Ljava/lang/String;I)V
 
     .line 1028
     const-string v1, "NONE"
 
-    sput-object v1, Lcom/android/settings/UCMHelpUtils;->miscInfo:Ljava/lang/String;
+    sput-object v1, Lcom/android/settings_ex/UCMHelpUtils;->miscInfo:Ljava/lang/String;
 
     goto/16 :goto_0
 
@@ -1129,36 +1129,36 @@
     if-ne v1, v6, :cond_9
 
     .line 1019
-    iget-boolean v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mIsEncrypt:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mIsEncrypt:Z
 
     if-eqz v1, :cond_8
 
     .line 1020
     const v1, 0x7f0e1741
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/UCSCryptKeeperTask;->setHintOrMessageText(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/UCSCryptKeeperTask;->setHintOrMessageText(I)V
 
     goto :goto_2
 
     .line 1022
     :cond_8
-    invoke-virtual {p0, v7}, Lcom/android/settings/UCSCryptKeeperTask;->setHintOrMessageText(I)V
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/UCSCryptKeeperTask;->setHintOrMessageText(I)V
 
     goto :goto_2
 
     .line 1025
     :cond_9
-    invoke-virtual {p0}, Lcom/android/settings/UCSCryptKeeperTask;->getWrongPasswordStringId()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/UCSCryptKeeperTask;->getWrongPasswordStringId()I
 
     move-result v1
 
     aget v2, p1, v3
 
-    invoke-virtual {p0, v1, v2}, Lcom/android/settings/UCSCryptKeeperTask;->getUCSFailedAttemptMessage(II)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v1, v2}, Lcom/android/settings_ex/UCSCryptKeeperTask;->getUCSFailedAttemptMessage(II)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/UCSCryptKeeperTask;->setHintOrMessageText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/UCSCryptKeeperTask;->setHintOrMessageText(Ljava/lang/CharSequence;)V
 
     goto :goto_2
 .end method
@@ -1337,55 +1337,55 @@
     const/4 v10, 0x0
 
     .line 556
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
     const v7, 0x7f0d0151
 
-    invoke-virtual {v6, v7}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v6, v7}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v6
 
     check-cast v6, Landroid/widget/EditText;
 
-    iput-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iput-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     .line 557
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
     const v7, 0x7f0d0150
 
-    invoke-virtual {v6, v7}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v6, v7}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v6
 
     check-cast v6, Landroid/widget/LinearLayout;
 
-    iput-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mFieldLayout:Landroid/widget/LinearLayout;
+    iput-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mFieldLayout:Landroid/widget/LinearLayout;
 
     .line 558
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     if-eqz v6, :cond_2
 
     .line 559
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
-    iget-object v7, p0, Lcom/android/settings/UCSCryptKeeperTask;->ucsEditListener:Landroid/widget/TextView$OnEditorActionListener;
+    iget-object v7, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->ucsEditListener:Landroid/widget/TextView$OnEditorActionListener;
 
     invoke-virtual {v6, v7}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
     .line 560
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v6}, Landroid/widget/EditText;->requestFocus()Z
 
     .line 562
-    sget v6, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordMaxLength:I
+    sget v6, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordMaxLength:I
 
     if-nez v6, :cond_0
 
     .line 563
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mDPM:Landroid/app/admin/DevicePolicyManager;
 
     const/high16 v7, 0x60000
 
@@ -1393,24 +1393,24 @@
 
     move-result v6
 
-    sput v6, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordMaxLength:I
+    sput v6, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordMaxLength:I
 
     .line 564
     :cond_0
-    sget v6, Lcom/android/settings/UCSCryptKeeperTask;->mPukMaxLength:I
+    sget v6, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPukMaxLength:I
 
-    sget v7, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordMaxLength:I
+    sget v7, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordMaxLength:I
 
     if-le v6, v7, :cond_8
 
     .line 565
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     new-array v7, v11, [Landroid/text/InputFilter;
 
     new-instance v8, Landroid/text/InputFilter$LengthFilter;
 
-    sget v9, Lcom/android/settings/UCSCryptKeeperTask;->mPukMaxLength:I
+    sget v9, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPukMaxLength:I
 
     invoke-direct {v8, v9}, Landroid/text/InputFilter$LengthFilter;-><init>(I)V
 
@@ -1420,25 +1420,25 @@
 
     .line 570
     :goto_0
-    new-instance v5, Lcom/android/settings/UCSCryptKeeperTask$1;
+    new-instance v5, Lcom/android/settings_ex/UCSCryptKeeperTask$1;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/UCSCryptKeeperTask$1;-><init>(Lcom/android/settings/UCSCryptKeeperTask;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/UCSCryptKeeperTask$1;-><init>(Lcom/android/settings_ex/UCSCryptKeeperTask;)V
 
     .line 596
     .local v5, "watcher":Landroid/text/TextWatcher;
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
     .line 597
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mFieldLayout:Landroid/widget/LinearLayout;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mFieldLayout:Landroid/widget/LinearLayout;
 
     if-eqz v6, :cond_1
 
     .line 598
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mFieldLayout:Landroid/widget/LinearLayout;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mFieldLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v6}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -1451,56 +1451,56 @@
     if-eqz v3, :cond_1
 
     .line 601
-    invoke-direct {p0, v13}, Lcom/android/settings/UCSCryptKeeperTask;->dipToPixel(I)I
+    invoke-direct {p0, v13}, Lcom/android/settings_ex/UCSCryptKeeperTask;->dipToPixel(I)I
 
     move-result v6
 
     invoke-virtual {v3, v6}, Landroid/widget/LinearLayout$LayoutParams;->setMarginStart(I)V
 
     .line 602
-    invoke-direct {p0, v13}, Lcom/android/settings/UCSCryptKeeperTask;->dipToPixel(I)I
+    invoke-direct {p0, v13}, Lcom/android/settings_ex/UCSCryptKeeperTask;->dipToPixel(I)I
 
     move-result v6
 
     invoke-virtual {v3, v6}, Landroid/widget/LinearLayout$LayoutParams;->setMarginEnd(I)V
 
     .line 603
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mFieldLayout:Landroid/widget/LinearLayout;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mFieldLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v6, v3}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 607
     .end local v3    # "lFieldLayoutParams":Landroid/widget/LinearLayout$LayoutParams;
     :cond_1
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v6, v5}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 610
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
-    iget-object v7, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v7, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
     invoke-virtual {v6, v7}, Landroid/widget/EditText;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
     .line 611
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
-    iget-object v7, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v7, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
     invoke-virtual {v6, v7}, Landroid/widget/EditText;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     .line 612
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
-    iget-object v7, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v7, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
     invoke-virtual {v6, v7}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 616
     .end local v5    # "watcher":Landroid/text/TextWatcher;
     :cond_2
-    invoke-direct {p0}, Lcom/android/settings/UCSCryptKeeperTask;->getTelephonyManager()Landroid/telephony/TelephonyManager;
+    invoke-direct {p0}, Lcom/android/settings_ex/UCSCryptKeeperTask;->getTelephonyManager()Landroid/telephony/TelephonyManager;
 
     move-result-object v6
 
@@ -1511,11 +1511,11 @@
     if-nez v6, :cond_3
 
     .line 617
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
     const v7, 0x7f0d0146
 
-    invoke-virtual {v6, v7}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v6, v7}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1538,21 +1538,21 @@
     .line 625
     .end local v0    # "emergencyCall":Landroid/view/View;
     :cond_3
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
     const v7, 0x7f0d0164
 
-    invoke-virtual {v6, v7}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v6, v7}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     .line 626
     .local v1, "imeSwitcher":Landroid/view/View;
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
     const-string v7, "input_method"
 
-    invoke-virtual {v6, v7}, Lcom/android/settings/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v6, v7}, Lcom/android/settings_ex/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -1562,7 +1562,7 @@
     .local v2, "imm":Landroid/view/inputmethod/InputMethodManager;
     if-eqz v1, :cond_4
 
-    invoke-direct {p0, v2, v10}, Lcom/android/settings/UCSCryptKeeperTask;->hasMultipleEnabledIMEsOrSubtypes(Landroid/view/inputmethod/InputMethodManager;Z)Z
+    invoke-direct {p0, v2, v10}, Lcom/android/settings_ex/UCSCryptKeeperTask;->hasMultipleEnabledIMEsOrSubtypes(Landroid/view/inputmethod/InputMethodManager;Z)Z
 
     move-result v6
 
@@ -1572,17 +1572,17 @@
     invoke-virtual {v1, v10}, Landroid/view/View;->setVisibility(I)V
 
     .line 629
-    new-instance v6, Lcom/android/settings/UCSCryptKeeperTask$2;
+    new-instance v6, Lcom/android/settings_ex/UCSCryptKeeperTask$2;
 
-    invoke-direct {v6, p0, v2}, Lcom/android/settings/UCSCryptKeeperTask$2;-><init>(Lcom/android/settings/UCSCryptKeeperTask;Landroid/view/inputmethod/InputMethodManager;)V
+    invoke-direct {v6, p0, v2}, Lcom/android/settings_ex/UCSCryptKeeperTask$2;-><init>(Lcom/android/settings_ex/UCSCryptKeeperTask;Landroid/view/inputmethod/InputMethodManager;)V
 
     invoke-virtual {v1, v6}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 640
     :cond_4
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
-    iget-object v6, v6, Lcom/android/settings/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iget-object v6, v6, Lcom/android/settings_ex/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-nez v6, :cond_5
 
@@ -1594,11 +1594,11 @@
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 642
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
     const-string v7, "power"
 
-    invoke-virtual {v6, v7}, Lcom/android/settings/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v6, v7}, Lcom/android/settings_ex/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -1609,7 +1609,7 @@
     if-eqz v4, :cond_5
 
     .line 644
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
     const/16 v7, 0x1a
 
@@ -1619,42 +1619,42 @@
 
     move-result-object v7
 
-    iput-object v7, v6, Lcom/android/settings/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iput-object v7, v6, Lcom/android/settings_ex/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     .line 645
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
-    iget-object v6, v6, Lcom/android/settings/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iget-object v6, v6, Lcom/android/settings_ex/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v6}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
     .line 648
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
     const/16 v7, 0x60
 
-    iput v7, v6, Lcom/android/settings/CryptKeeper;->mReleaseWakeLockCountdown:I
+    iput v7, v6, Lcom/android/settings_ex/CryptKeeper;->mReleaseWakeLockCountdown:I
 
     .line 655
     .end local v4    # "pm":Landroid/os/PowerManager;
     :cond_5
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mHandler:Landroid/os/Handler;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mHandler:Landroid/os/Handler;
 
-    new-instance v7, Lcom/android/settings/UCSCryptKeeperTask$3;
+    new-instance v7, Lcom/android/settings_ex/UCSCryptKeeperTask$3;
 
-    invoke-direct {v7, p0, v2}, Lcom/android/settings/UCSCryptKeeperTask$3;-><init>(Lcom/android/settings/UCSCryptKeeperTask;Landroid/view/inputmethod/InputMethodManager;)V
+    invoke-direct {v7, p0, v2}, Lcom/android/settings_ex/UCSCryptKeeperTask$3;-><init>(Lcom/android/settings_ex/UCSCryptKeeperTask;Landroid/view/inputmethod/InputMethodManager;)V
 
     const-wide/16 v8, 0x0
 
     invoke-virtual {v6, v7, v8, v9}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 664
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
-    invoke-virtual {v6, v10}, Lcom/android/settings/CryptKeeper;->setBackFunctionality(Z)V
+    invoke-virtual {v6, v10}, Lcom/android/settings_ex/CryptKeeper;->setBackFunctionality(Z)V
 
     .line 665
-    sget-object v6, Lcom/android/settings/UCSCryptKeeperTask;->mSavedPassword:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/UCSCryptKeeperTask;->mSavedPassword:Ljava/lang/String;
 
     const-string v7, ""
 
@@ -1665,21 +1665,21 @@
     if-nez v6, :cond_7
 
     .line 666
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     if-eqz v6, :cond_6
 
     .line 667
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
-    sget-object v7, Lcom/android/settings/UCSCryptKeeperTask;->mSavedPassword:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/UCSCryptKeeperTask;->mSavedPassword:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 668
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
-    iget-object v7, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v7, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v7}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -1692,38 +1692,38 @@
     invoke-virtual {v6, v7}, Landroid/widget/EditText;->setSelection(I)V
 
     .line 669
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v6, v11}, Landroid/widget/EditText;->setEnabled(Z)V
 
     .line 673
     :cond_6
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
-    iput v10, v6, Lcom/android/settings/CryptKeeper;->mNotificationCountdown:I
+    iput v10, v6, Lcom/android/settings_ex/CryptKeeper;->mNotificationCountdown:I
 
     .line 676
     :cond_7
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
-    invoke-virtual {v6}, Lcom/android/settings/CryptKeeper;->updateEmergencyCallButtonState()V
+    invoke-virtual {v6}, Lcom/android/settings_ex/CryptKeeper;->updateEmergencyCallButtonState()V
 
     .line 678
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mHandler:Landroid/os/Handler;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v6, v12}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 679
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mHandler:Landroid/os/Handler;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mHandler:Landroid/os/Handler;
 
     const-wide/32 v8, 0x1d4c0
 
     invoke-virtual {v6, v12, v8, v9}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     .line 682
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
-    invoke-virtual {v6}, Lcom/android/settings/CryptKeeper;->getWindow()Landroid/view/Window;
+    invoke-virtual {v6}, Lcom/android/settings_ex/CryptKeeper;->getWindow()Landroid/view/Window;
 
     move-result-object v6
 
@@ -1738,13 +1738,13 @@
     .end local v1    # "imeSwitcher":Landroid/view/View;
     .end local v2    # "imm":Landroid/view/inputmethod/InputMethodManager;
     :cond_8
-    iget-object v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     new-array v7, v11, [Landroid/text/InputFilter;
 
     new-instance v8, Landroid/text/InputFilter$LengthFilter;
 
-    sget v9, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordMaxLength:I
+    sget v9, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordMaxLength:I
 
     invoke-direct {v8, v9}, Landroid/text/InputFilter$LengthFilter;-><init>(I)V
 
@@ -1768,7 +1768,7 @@
 
     .line 535
     .local v0, "msg":Ljava/lang/String;
-    sget-object v1, Lcom/android/settings/UCSCryptKeeperTask;->mCSName:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/UCSCryptKeeperTask;->mCSName:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
@@ -1781,7 +1781,7 @@
 
     move-result-object v1
 
-    sget-object v2, Lcom/android/settings/UCSCryptKeeperTask;->mCSName:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/UCSCryptKeeperTask;->mCSName:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1853,7 +1853,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/UCSCryptKeeperTask;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1875,9 +1875,9 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/UCSCryptKeeperTask;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mContext:Landroid/content/Context;
 
-    invoke-static {v2, p2}, Lcom/android/settings/UCMHelpUtils;->getErrorMessage(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v2, p2}, Lcom/android/settings_ex/UCMHelpUtils;->getErrorMessage(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1897,25 +1897,25 @@
 
     .line 545
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
     const v2, 0x7f0d014e
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mCryptKeeperDescription:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mCryptKeeperDescription:Landroid/widget/TextView;
 
     .line 546
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mCryptKeeperDescription:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mCryptKeeperDescription:Landroid/widget/TextView;
 
     invoke-virtual {v1, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 547
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mCryptKeeperDescription:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mCryptKeeperDescription:Landroid/widget/TextView;
 
     new-instance v2, Landroid/widget/LinearLayout$LayoutParams;
 
@@ -1928,21 +1928,21 @@
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 548
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mCryptKeeperDescription:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mCryptKeeperDescription:Landroid/widget/TextView;
 
     const v2, 0x800003
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setGravity(I)V
 
     .line 549
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mCryptKeeperDescription:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mCryptKeeperDescription:Landroid/widget/TextView;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2, v5}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
 
     .line 550
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mCryptKeeperDescription:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mCryptKeeperDescription:Landroid/widget/TextView;
 
     const/4 v2, 0x2
 
@@ -1951,7 +1951,7 @@
     invoke-virtual {v1, v2, v3}, Landroid/widget/TextView;->setTextSize(IF)V
 
     .line 551
-    iget-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mCryptKeeperDescription:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mCryptKeeperDescription:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -1970,14 +1970,14 @@
     const/4 v3, 0x0
 
     .line 255
-    iget-boolean v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mIsEncrypt:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mIsEncrypt:Z
 
     if-eqz v0, :cond_0
 
     .line 256
-    new-instance v0, Lcom/android/settings/UCSCryptKeeperTask$EncryptTaskUCS;
+    new-instance v0, Lcom/android/settings_ex/UCSCryptKeeperTask$EncryptTaskUCS;
 
-    invoke-direct {v0, p0, v2}, Lcom/android/settings/UCSCryptKeeperTask$EncryptTaskUCS;-><init>(Lcom/android/settings/UCSCryptKeeperTask;Lcom/android/settings/UCSCryptKeeperTask$1;)V
+    invoke-direct {v0, p0, v2}, Lcom/android/settings_ex/UCSCryptKeeperTask$EncryptTaskUCS;-><init>(Lcom/android/settings_ex/UCSCryptKeeperTask;Lcom/android/settings_ex/UCSCryptKeeperTask$1;)V
 
     new-array v1, v1, [Ljava/lang/String;
 
@@ -1985,7 +1985,7 @@
 
     aput-object v2, v1, v3
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/UCSCryptKeeperTask$EncryptTaskUCS;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/UCSCryptKeeperTask$EncryptTaskUCS;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     .line 260
     :goto_0
@@ -1993,9 +1993,9 @@
 
     .line 258
     :cond_0
-    new-instance v0, Lcom/android/settings/UCSCryptKeeperTask$DecryptTaskUCS;
+    new-instance v0, Lcom/android/settings_ex/UCSCryptKeeperTask$DecryptTaskUCS;
 
-    invoke-direct {v0, p0, v2}, Lcom/android/settings/UCSCryptKeeperTask$DecryptTaskUCS;-><init>(Lcom/android/settings/UCSCryptKeeperTask;Lcom/android/settings/UCSCryptKeeperTask$1;)V
+    invoke-direct {v0, p0, v2}, Lcom/android/settings_ex/UCSCryptKeeperTask$DecryptTaskUCS;-><init>(Lcom/android/settings_ex/UCSCryptKeeperTask;Lcom/android/settings_ex/UCSCryptKeeperTask$1;)V
 
     new-array v1, v1, [Ljava/lang/String;
 
@@ -2003,7 +2003,7 @@
 
     aput-object v2, v1, v3
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/UCSCryptKeeperTask$DecryptTaskUCS;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/UCSCryptKeeperTask$DecryptTaskUCS;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     goto :goto_0
 .end method
@@ -2015,7 +2015,7 @@
 
     .prologue
     .line 273
-    sget-object v1, Lcom/android/settings/UCSCryptKeeperTask;->mSavedPassword:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/UCSCryptKeeperTask;->mSavedPassword:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -2023,18 +2023,18 @@
 
     .line 274
     .local v0, "length":I
-    sget v1, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordMinLength:I
+    sget v1, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordMinLength:I
 
     if-lt v0, v1, :cond_0
 
-    sget v1, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordMaxLength:I
+    sget v1, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordMaxLength:I
 
     if-gt v0, v1, :cond_0
 
     .line 275
-    sget-object v1, Lcom/android/settings/UCSCryptKeeperTask;->mSavedPassword:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/UCSCryptKeeperTask;->mSavedPassword:Ljava/lang/String;
 
-    iput-object v1, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPinText:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPinText:Ljava/lang/String;
 
     .line 276
     const/4 v1, 0x1
@@ -2054,30 +2054,30 @@
 
     .prologue
     .line 264
-    sget-object v0, Lcom/android/settings/UCSCryptKeeperTask;->mSavedPassword:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mSavedPassword:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    sget v1, Lcom/android/settings/UCSCryptKeeperTask;->mPukMinLength:I
+    sget v1, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPukMinLength:I
 
     if-lt v0, v1, :cond_0
 
-    sget-object v0, Lcom/android/settings/UCSCryptKeeperTask;->mSavedPassword:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mSavedPassword:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    sget v1, Lcom/android/settings/UCSCryptKeeperTask;->mPukMaxLength:I
+    sget v1, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPukMaxLength:I
 
     if-gt v0, v1, :cond_0
 
     .line 265
-    sget-object v0, Lcom/android/settings/UCSCryptKeeperTask;->mSavedPassword:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mSavedPassword:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPukText:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPukText:Ljava/lang/String;
 
     .line 266
     const/4 v0, 0x1
@@ -2097,9 +2097,9 @@
 
     .prologue
     .line 282
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPinText:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPinText:Ljava/lang/String;
 
-    sget-object v1, Lcom/android/settings/UCSCryptKeeperTask;->mSavedPassword:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/UCSCryptKeeperTask;->mSavedPassword:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2117,7 +2117,7 @@
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "x0":[Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/UCSCryptKeeperTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/UCSCryptKeeperTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
 
     move-result-object v0
 
@@ -2131,7 +2131,7 @@
     .prologue
     .line 449
     :try_start_0
-    invoke-direct {p0}, Lcom/android/settings/UCSCryptKeeperTask;->getMountService()Landroid/os/storage/IMountService;
+    invoke-direct {p0}, Lcom/android/settings_ex/UCSCryptKeeperTask;->getMountService()Landroid/os/storage/IMountService;
 
     move-result-object v1
 
@@ -2140,7 +2140,7 @@
     if-eqz v1, :cond_0
 
     .line 451
-    iget-boolean v2, p0, Lcom/android/settings/UCSCryptKeeperTask;->mIsEncrypt:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mIsEncrypt:Z
 
     if-nez v2, :cond_0
 
@@ -2149,7 +2149,7 @@
 
     move-result v2
 
-    iput v2, p0, Lcom/android/settings/UCSCryptKeeperTask;->passwordType:I
+    iput v2, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->passwordType:I
 
     .line 453
     const-string v2, "OwnerInfo"
@@ -2158,7 +2158,7 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/UCSCryptKeeperTask;->owner_info:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->owner_info:Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2219,7 +2219,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v3, p0, Lcom/android/settings/UCSCryptKeeperTask;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2235,7 +2235,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/UCSCryptKeeperTask;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mContext:Landroid/content/Context;
 
     const v4, 0x7f0e1743
 
@@ -2277,7 +2277,7 @@
     .line 309
     .end local v0    # "message":Ljava/lang/CharSequence;
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/UCSCryptKeeperTask;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2316,7 +2316,7 @@
     check-cast p1, Ljava/lang/Void;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/UCSCryptKeeperTask;->onPostExecute(Ljava/lang/Void;)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/UCSCryptKeeperTask;->onPostExecute(Ljava/lang/Void;)V
 
     return-void
 .end method
@@ -2331,55 +2331,55 @@
     const/4 v8, 0x1
 
     .line 466
-    iget-object v5, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v5, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
     const v6, 0x7f040079
 
-    invoke-virtual {v5, v6}, Lcom/android/settings/CryptKeeper;->setContentView(I)V
+    invoke-virtual {v5, v6}, Lcom/android/settings_ex/CryptKeeper;->setContentView(I)V
 
     .line 468
     const-string v4, ""
 
     .line 469
     .local v4, "uri":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/UCSCryptKeeperTask;->mUri:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mUri:Ljava/lang/String;
 
     .line 470
     const v5, 0x7f0e174b
 
-    iput v5, p0, Lcom/android/settings/UCSCryptKeeperTask;->mStatusString:I
+    iput v5, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mStatusString:I
 
     .line 472
-    invoke-direct {p0}, Lcom/android/settings/UCSCryptKeeperTask;->passwordEntryInitForUCS()V
+    invoke-direct {p0}, Lcom/android/settings_ex/UCSCryptKeeperTask;->passwordEntryInitForUCS()V
 
     .line 473
-    iget-object v5, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v5, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     if-eqz v5, :cond_0
 
     .line 474
-    iget-object v5, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v5, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v5, v9}, Landroid/widget/EditText;->setEnabled(Z)V
 
     .line 476
     :cond_0
-    iget-object v5, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v5, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
     const v6, 0x7f0d0147
 
-    invoke-virtual {v5, v6}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v5, v6}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
     check-cast v5, Landroid/widget/TextView;
 
-    iput-object v5, p0, Lcom/android/settings/UCSCryptKeeperTask;->mStatusTextView:Landroid/widget/TextView;
+    iput-object v5, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mStatusTextView:Landroid/widget/TextView;
 
     .line 477
-    iget-object v5, p0, Lcom/android/settings/UCSCryptKeeperTask;->mStatusTextView:Landroid/widget/TextView;
+    iget-object v5, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mStatusTextView:Landroid/widget/TextView;
 
-    iget v6, p0, Lcom/android/settings/UCSCryptKeeperTask;->mStatusString:I
+    iget v6, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mStatusString:I
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(I)V
 
@@ -2388,7 +2388,7 @@
 
     .line 480
     .local v3, "state":[I
-    sget-boolean v5, Lcom/android/settings/UCSCryptKeeperTask;->mFirstTime:Z
+    sget-boolean v5, Lcom/android/settings_ex/UCSCryptKeeperTask;->mFirstTime:Z
 
     if-eqz v5, :cond_6
 
@@ -2402,7 +2402,7 @@
     if-ge v1, v5, :cond_1
 
     .line 482
-    invoke-static {v4}, Lcom/android/settings/UCMHelpUtils;->getStatus(Ljava/lang/String;)[I
+    invoke-static {v4}, Lcom/android/settings_ex/UCMHelpUtils;->getStatus(Ljava/lang/String;)[I
 
     move-result-object v3
 
@@ -2440,17 +2440,17 @@
 
     .line 495
     :cond_1
-    sput-boolean v9, Lcom/android/settings/UCSCryptKeeperTask;->mFirstTime:Z
+    sput-boolean v9, Lcom/android/settings_ex/UCSCryptKeeperTask;->mFirstTime:Z
 
     .line 499
     .end local v1    # "i":I
     :goto_1
-    iget-object v5, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v5, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     if-eqz v5, :cond_2
 
     .line 500
-    iget-object v5, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v5, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v5, v8}, Landroid/widget/EditText;->setEnabled(Z)V
 
@@ -2463,20 +2463,20 @@
     if-ne v5, v6, :cond_3
 
     .line 504
-    iput-boolean v8, p0, Lcom/android/settings/UCSCryptKeeperTask;->mIsPukState:Z
+    iput-boolean v8, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mIsPukState:Z
 
     .line 506
     :cond_3
-    sget-object v5, Lcom/android/settings/UCMHelpUtils;->miscInfo:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/UCMHelpUtils;->miscInfo:Ljava/lang/String;
 
-    invoke-direct {p0, v5, v9}, Lcom/android/settings/UCSCryptKeeperTask;->setMessageInUcsInfo(Ljava/lang/String;I)V
+    invoke-direct {p0, v5, v9}, Lcom/android/settings_ex/UCSCryptKeeperTask;->setMessageInUcsInfo(Ljava/lang/String;I)V
 
     .line 508
-    iget-object v5, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v5, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
     const v6, 0x7f0d014f
 
-    invoke-virtual {v5, v6}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v5, v6}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -2484,7 +2484,7 @@
 
     .line 509
     .local v2, "ownerInfo":Landroid/widget/TextView;
-    iget-object v5, p0, Lcom/android/settings/UCSCryptKeeperTask;->owner_info:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->owner_info:Ljava/lang/String;
 
     invoke-virtual {v2, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -2497,16 +2497,16 @@
     invoke-virtual {v2, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 513
-    iget-boolean v5, p0, Lcom/android/settings/UCSCryptKeeperTask;->mIsPukState:Z
+    iget-boolean v5, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mIsPukState:Z
 
     if-ne v5, v8, :cond_7
 
     .line 514
-    iget-object v5, p0, Lcom/android/settings/UCSCryptKeeperTask;->mStateMachine:Lcom/android/settings/UCSCryptKeeperTask$StateMachine;
+    iget-object v5, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mStateMachine:Lcom/android/settings_ex/UCSCryptKeeperTask$StateMachine;
 
     aget v6, v3, v8
 
-    invoke-virtual {v5, v6}, Lcom/android/settings/UCSCryptKeeperTask$StateMachine;->reset(I)V
+    invoke-virtual {v5, v6}, Lcom/android/settings_ex/UCSCryptKeeperTask$StateMachine;->reset(I)V
 
     .line 531
     :goto_2
@@ -2549,7 +2549,7 @@
     .end local v0    # "e":Ljava/lang/InterruptedException;
     .end local v1    # "i":I
     :cond_6
-    invoke-static {v4}, Lcom/android/settings/UCMHelpUtils;->getStatus(Ljava/lang/String;)[I
+    invoke-static {v4}, Lcom/android/settings_ex/UCMHelpUtils;->getStatus(Ljava/lang/String;)[I
 
     move-result-object v3
 
@@ -2558,18 +2558,18 @@
     .line 516
     .restart local v2    # "ownerInfo":Landroid/widget/TextView;
     :cond_7
-    iget-boolean v5, p0, Lcom/android/settings/UCSCryptKeeperTask;->mIsEncrypt:Z
+    iget-boolean v5, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mIsEncrypt:Z
 
     if-eqz v5, :cond_8
 
     .line 518
-    iget-object v5, p0, Lcom/android/settings/UCSCryptKeeperTask;->mStatusTextView:Landroid/widget/TextView;
+    iget-object v5, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mStatusTextView:Landroid/widget/TextView;
 
     const v6, 0x7f0e1742
 
     aget v7, v3, v8
 
-    invoke-virtual {p0, v6, v7}, Lcom/android/settings/UCSCryptKeeperTask;->getUCSFailedAttemptMessage(II)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v6, v7}, Lcom/android/settings_ex/UCSCryptKeeperTask;->getUCSFailedAttemptMessage(II)Ljava/lang/CharSequence;
 
     move-result-object v6
 
@@ -2579,13 +2579,13 @@
 
     .line 521
     :cond_8
-    iget-object v5, p0, Lcom/android/settings/UCSCryptKeeperTask;->mStatusTextView:Landroid/widget/TextView;
+    iget-object v5, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mStatusTextView:Landroid/widget/TextView;
 
     const v6, 0x7f0e0c24
 
     aget v7, v3, v8
 
-    invoke-virtual {p0, v6, v7}, Lcom/android/settings/UCSCryptKeeperTask;->getUCSFailedAttemptMessage(II)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v6, v7}, Lcom/android/settings_ex/UCSCryptKeeperTask;->getUCSFailedAttemptMessage(II)Ljava/lang/CharSequence;
 
     move-result-object v6
 
@@ -2600,7 +2600,7 @@
 
     .prologue
     .line 287
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordEntry:Landroid/widget/EditText;
 
     const-string v1, ""
 
@@ -2627,15 +2627,15 @@
     if-ne p1, v0, :cond_0
 
     .line 316
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
-    invoke-virtual {v0}, Lcom/android/settings/CryptKeeper;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Lcom/android/settings_ex/CryptKeeper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    sget v2, Lcom/android/settings/UCSCryptKeeperTask;->mPukMinLength:I
+    sget v2, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPukMinLength:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2643,7 +2643,7 @@
 
     aput-object v2, v1, v3
 
-    sget v2, Lcom/android/settings/UCSCryptKeeperTask;->mPukMaxLength:I
+    sget v2, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPukMaxLength:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2655,7 +2655,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/UCSCryptKeeperTask;->setHintOrMessageText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/UCSCryptKeeperTask;->setHintOrMessageText(Ljava/lang/CharSequence;)V
 
     .line 322
     :goto_0
@@ -2668,15 +2668,15 @@
     if-ne p1, v0, :cond_1
 
     .line 318
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
-    invoke-virtual {v0}, Lcom/android/settings/CryptKeeper;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Lcom/android/settings_ex/CryptKeeper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    sget v2, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordMinLength:I
+    sget v2, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordMinLength:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2684,7 +2684,7 @@
 
     aput-object v2, v1, v3
 
-    sget v2, Lcom/android/settings/UCSCryptKeeperTask;->mPasswordMaxLength:I
+    sget v2, Lcom/android/settings_ex/UCSCryptKeeperTask;->mPasswordMaxLength:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2696,15 +2696,15 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/UCSCryptKeeperTask;->setHintOrMessageText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/UCSCryptKeeperTask;->setHintOrMessageText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
     .line 320
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings/CryptKeeper;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mParentActivity:Lcom/android/settings_ex/CryptKeeper;
 
-    invoke-virtual {v0}, Lcom/android/settings/CryptKeeper;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Lcom/android/settings_ex/CryptKeeper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -2712,7 +2712,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/UCSCryptKeeperTask;->setHintOrMessageText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/UCSCryptKeeperTask;->setHintOrMessageText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 .end method
@@ -2723,7 +2723,7 @@
 
     .prologue
     .line 325
-    iget-object v0, p0, Lcom/android/settings/UCSCryptKeeperTask;->mStatusTextView:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/UCSCryptKeeperTask;->mStatusTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 

@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/applications/ProcStatsPackageEntry$1;
+.class final Lcom/android/settings_ex/applications/ProcStatsPackageEntry$1;
 .super Ljava/lang/Object;
 .source "ProcStatsPackageEntry.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/ProcStatsPackageEntry;
+    value = Lcom/android/settings_ex/applications/ProcStatsPackageEntry;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Landroid/os/Parcelable$Creator",
         "<",
-        "Lcom/android/settings/applications/ProcStatsPackageEntry;",
+        "Lcom/android/settings_ex/applications/ProcStatsPackageEntry;",
         ">;"
     }
 .end annotation
@@ -40,15 +40,15 @@
 
 
 # virtual methods
-.method public createFromParcel(Landroid/os/Parcel;)Lcom/android/settings/applications/ProcStatsPackageEntry;
+.method public createFromParcel(Landroid/os/Parcel;)Lcom/android/settings_ex/applications/ProcStatsPackageEntry;
     .locals 1
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
     .line 155
-    new-instance v0, Lcom/android/settings/applications/ProcStatsPackageEntry;
+    new-instance v0, Lcom/android/settings_ex/applications/ProcStatsPackageEntry;
 
-    invoke-direct {v0, p1}, Lcom/android/settings/applications/ProcStatsPackageEntry;-><init>(Landroid/os/Parcel;)V
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/applications/ProcStatsPackageEntry;-><init>(Landroid/os/Parcel;)V
 
     return-object v0
 .end method
@@ -59,20 +59,20 @@
 
     .prologue
     .line 153
-    invoke-virtual {p0, p1}, Lcom/android/settings/applications/ProcStatsPackageEntry$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/settings/applications/ProcStatsPackageEntry;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/applications/ProcStatsPackageEntry$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/settings_ex/applications/ProcStatsPackageEntry;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public newArray(I)[Lcom/android/settings/applications/ProcStatsPackageEntry;
+.method public newArray(I)[Lcom/android/settings_ex/applications/ProcStatsPackageEntry;
     .locals 1
     .param p1, "size"    # I
 
     .prologue
     .line 159
-    new-array v0, p1, [Lcom/android/settings/applications/ProcStatsPackageEntry;
+    new-array v0, p1, [Lcom/android/settings_ex/applications/ProcStatsPackageEntry;
 
     return-object v0
 .end method
@@ -83,7 +83,7 @@
 
     .prologue
     .line 153
-    invoke-virtual {p0, p1}, Lcom/android/settings/applications/ProcStatsPackageEntry$1;->newArray(I)[Lcom/android/settings/applications/ProcStatsPackageEntry;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/applications/ProcStatsPackageEntry$1;->newArray(I)[Lcom/android/settings_ex/applications/ProcStatsPackageEntry;
 
     move-result-object v0
 

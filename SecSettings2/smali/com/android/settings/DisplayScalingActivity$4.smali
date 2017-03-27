@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DisplayScalingActivity$4;
+.class Lcom/android/settings_ex/DisplayScalingActivity$4;
 .super Ljava/lang/Object;
 .source "DisplayScalingActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DisplayScalingActivity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
+    value = Lcom/android/settings_ex/DisplayScalingActivity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DisplayScalingActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/DisplayScalingActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DisplayScalingActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/DisplayScalingActivity;)V
     .locals 0
 
     .prologue
     .line 349
-    iput-object p1, p0, Lcom/android/settings/DisplayScalingActivity$4;->this$0:Lcom/android/settings/DisplayScalingActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/DisplayScalingActivity$4;->this$0:Lcom/android/settings_ex/DisplayScalingActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,20 +50,20 @@
 
     .line 353
     .local v0, "isChanged":Z
-    iget-object v3, p0, Lcom/android/settings/DisplayScalingActivity$4;->this$0:Lcom/android/settings/DisplayScalingActivity;
+    iget-object v3, p0, Lcom/android/settings_ex/DisplayScalingActivity$4;->this$0:Lcom/android/settings_ex/DisplayScalingActivity;
 
-    # getter for: Lcom/android/settings/DisplayScalingActivity;->isCondensed:Z
-    invoke-static {v3}, Lcom/android/settings/DisplayScalingActivity;->access$200(Lcom/android/settings/DisplayScalingActivity;)Z
+    # getter for: Lcom/android/settings_ex/DisplayScalingActivity;->isCondensed:Z
+    invoke-static {v3}, Lcom/android/settings_ex/DisplayScalingActivity;->access$200(Lcom/android/settings_ex/DisplayScalingActivity;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
     .line 354
-    iget-object v3, p0, Lcom/android/settings/DisplayScalingActivity$4;->this$0:Lcom/android/settings/DisplayScalingActivity;
+    iget-object v3, p0, Lcom/android/settings_ex/DisplayScalingActivity$4;->this$0:Lcom/android/settings_ex/DisplayScalingActivity;
 
-    # getter for: Lcom/android/settings/DisplayScalingActivity;->mStandardRadio:Landroid/widget/RadioButton;
-    invoke-static {v3}, Lcom/android/settings/DisplayScalingActivity;->access$000(Lcom/android/settings/DisplayScalingActivity;)Landroid/widget/RadioButton;
+    # getter for: Lcom/android/settings_ex/DisplayScalingActivity;->mStandardRadio:Landroid/widget/RadioButton;
+    invoke-static {v3}, Lcom/android/settings_ex/DisplayScalingActivity;->access$000(Lcom/android/settings_ex/DisplayScalingActivity;)Landroid/widget/RadioButton;
 
     move-result-object v3
 
@@ -80,10 +80,10 @@
     if-eqz v0, :cond_3
 
     .line 360
-    iget-object v1, p0, Lcom/android/settings/DisplayScalingActivity$4;->this$0:Lcom/android/settings/DisplayScalingActivity;
+    iget-object v1, p0, Lcom/android/settings_ex/DisplayScalingActivity$4;->this$0:Lcom/android/settings_ex/DisplayScalingActivity;
 
-    # invokes: Lcom/android/settings/DisplayScalingActivity;->resetDialog()V
-    invoke-static {v1}, Lcom/android/settings/DisplayScalingActivity;->access$600(Lcom/android/settings/DisplayScalingActivity;)V
+    # invokes: Lcom/android/settings_ex/DisplayScalingActivity;->resetDialog()V
+    invoke-static {v1}, Lcom/android/settings_ex/DisplayScalingActivity;->access$600(Lcom/android/settings_ex/DisplayScalingActivity;)V
 
     .line 363
     :goto_1
@@ -97,10 +97,10 @@
 
     .line 356
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/DisplayScalingActivity$4;->this$0:Lcom/android/settings/DisplayScalingActivity;
+    iget-object v3, p0, Lcom/android/settings_ex/DisplayScalingActivity$4;->this$0:Lcom/android/settings_ex/DisplayScalingActivity;
 
-    # getter for: Lcom/android/settings/DisplayScalingActivity;->mCondensedRadio:Landroid/widget/RadioButton;
-    invoke-static {v3}, Lcom/android/settings/DisplayScalingActivity;->access$100(Lcom/android/settings/DisplayScalingActivity;)Landroid/widget/RadioButton;
+    # getter for: Lcom/android/settings_ex/DisplayScalingActivity;->mCondensedRadio:Landroid/widget/RadioButton;
+    invoke-static {v3}, Lcom/android/settings_ex/DisplayScalingActivity;->access$100(Lcom/android/settings_ex/DisplayScalingActivity;)Landroid/widget/RadioButton;
 
     move-result-object v3
 
@@ -122,9 +122,9 @@
 
     .line 362
     :cond_3
-    iget-object v1, p0, Lcom/android/settings/DisplayScalingActivity$4;->this$0:Lcom/android/settings/DisplayScalingActivity;
+    iget-object v1, p0, Lcom/android/settings_ex/DisplayScalingActivity$4;->this$0:Lcom/android/settings_ex/DisplayScalingActivity;
 
-    invoke-virtual {v1}, Lcom/android/settings/DisplayScalingActivity;->finish()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/DisplayScalingActivity;->finish()V
 
     goto :goto_1
 .end method

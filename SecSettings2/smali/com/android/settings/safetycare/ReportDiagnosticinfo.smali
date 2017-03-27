@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/safetycare/ReportDiagnosticinfo;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "ReportDiagnosticinfo.java"
 
 # interfaces
@@ -24,17 +24,17 @@
 
     .prologue
     .line 39
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 41
     const-string v0, "PersonalPageReportDiagnosticinfo"
 
-    iput-object v0, p0, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->TAG:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->TAG:Ljava/lang/String;
 
     .line 43
     const-string v0, "diagnostics_info_message"
 
-    iput-object v0, p0, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->DIAGNOSTIC_INFO_MESSAGE:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->DIAGNOSTIC_INFO_MESSAGE:Ljava/lang/String;
 
     return-void
 .end method
@@ -52,7 +52,7 @@
     .line 140
     .local v2, "value":I
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -74,7 +74,7 @@
     invoke-virtual {v0, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 143
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -94,7 +94,7 @@
     invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 147
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -145,10 +145,10 @@
     :pswitch_0
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->setDiagnostic(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->setDiagnostic(Z)V
 
     .line 130
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->finish()V
 
     goto :goto_0
 
@@ -156,10 +156,10 @@
     :pswitch_1
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->setDiagnostic(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->setDiagnostic(Z)V
 
     .line 134
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->finish()V
 
     goto :goto_0
 
@@ -177,7 +177,7 @@
 
     .prologue
     .line 118
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 121
     return-void
@@ -209,7 +209,7 @@
 
     check-cast v9, Landroid/widget/TextView;
 
-    iput-object v9, p0, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->mDiagnosticsText:Landroid/widget/TextView;
+    iput-object v9, p0, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->mDiagnosticsText:Landroid/widget/TextView;
 
     .line 64
     const v9, 0x7f0d0105
@@ -220,10 +220,10 @@
 
     check-cast v9, Landroid/widget/Button;
 
-    iput-object v9, p0, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->mCancelButton:Landroid/widget/Button;
+    iput-object v9, p0, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->mCancelButton:Landroid/widget/Button;
 
     .line 65
-    iget-object v9, p0, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->mCancelButton:Landroid/widget/Button;
+    iget-object v9, p0, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->mCancelButton:Landroid/widget/Button;
 
     invoke-virtual {v9, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -236,10 +236,10 @@
 
     check-cast v9, Landroid/widget/Button;
 
-    iput-object v9, p0, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->mNextButton:Landroid/widget/Button;
+    iput-object v9, p0, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->mNextButton:Landroid/widget/Button;
 
     .line 68
-    iget-object v9, p0, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->mNextButton:Landroid/widget/Button;
+    iget-object v9, p0, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->mNextButton:Landroid/widget/Button;
 
     invoke-virtual {v9, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -256,7 +256,7 @@
 
     .line 74
     .local v1, "collectionString":Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v6
 
@@ -287,7 +287,7 @@
 
     .line 83
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v9
 
@@ -296,7 +296,7 @@
     move-result-object v5
 
     .line 85
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
@@ -331,7 +331,7 @@
     if-nez v1, :cond_3
 
     .line 104
-    iget-object v9, p0, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->TAG:Ljava/lang/String;
+    iget-object v9, p0, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->TAG:Ljava/lang/String;
 
     const-string v10, "error log collection disclaimer is null"
 
@@ -340,10 +340,10 @@
     .line 105
     const/4 v9, 0x0
 
-    invoke-direct {p0, v9}, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->setDiagnostic(Z)V
+    invoke-direct {p0, v9}, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->setDiagnostic(Z)V
 
     .line 106
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->finish()V
 
     .line 112
     :goto_2
@@ -364,7 +364,7 @@
     .restart local v8    # "vzwPackageName":Ljava/lang/String;
     :cond_2
     :try_start_1
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v9
 
@@ -373,7 +373,7 @@
     move-result-object v5
 
     .line 90
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
@@ -423,7 +423,7 @@
 
     .line 99
     .local v2, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
-    iget-object v9, p0, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->TAG:Ljava/lang/String;
+    iget-object v9, p0, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->TAG:Ljava/lang/String;
 
     const-string v10, "error getting activity of create package context"
 
@@ -434,7 +434,7 @@
     .line 108
     .end local v2    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_3
-    iget-object v9, p0, Lcom/android/settings/safetycare/ReportDiagnosticinfo;->mDiagnosticsText:Landroid/widget/TextView;
+    iget-object v9, p0, Lcom/android/settings_ex/safetycare/ReportDiagnosticinfo;->mDiagnosticsText:Landroid/widget/TextView;
 
     invoke-virtual {v9, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 

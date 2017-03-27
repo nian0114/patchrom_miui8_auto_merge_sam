@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+.class public Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
 .super Landroid/app/AlertDialog;
 .source "WifiApWhitelistDialog.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog$MacTextWatcher;
+        Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog$MacTextWatcher;
     }
 .end annotation
 
@@ -69,7 +69,7 @@
     .line 58
     const-string v0, "WifiApWhitelistDialog"
 
-    sput-object v0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->TAG:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->TAG:Ljava/lang/String;
 
     return-void
 .end method
@@ -95,58 +95,58 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mTextNoChange:Ljava/lang/Boolean;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mTextNoChange:Ljava/lang/Boolean;
 
     .line 76
-    iput-boolean v1, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mIsTalkBackEnabled:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mIsTalkBackEnabled:Z
 
     .line 79
     new-array v0, v2, [I
 
     fill-array-data v0, :array_0
 
-    iput-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacId:[I
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacId:[I
 
     .line 88
     new-array v0, v2, [Landroid/widget/EditText;
 
-    iput-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
 
     .line 92
-    new-instance v0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog$1;
+    new-instance v0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog$1;-><init>(Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog$1;-><init>(Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;)V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mMacFilter:Landroid/text/InputFilter;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mMacFilter:Landroid/text/InputFilter;
 
     .line 195
-    new-instance v0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog$2;
+    new-instance v0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog$2;-><init>(Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog$2;-><init>(Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;)V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->focusListener:Landroid/view/View$OnFocusChangeListener;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->focusListener:Landroid/view/View$OnFocusChangeListener;
 
     .line 303
-    new-instance v0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog$3;
+    new-instance v0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog$3;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog$3;-><init>(Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog$3;-><init>(Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;)V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->nameWatcher:Landroid/text/TextWatcher;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->nameWatcher:Landroid/text/TextWatcher;
 
     .line 103
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->context:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->context:Landroid/content/Context;
 
     .line 104
-    iput p2, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mType:I
+    iput p2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mType:I
 
     .line 105
-    iput-object p3, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mDeviceName:Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mDeviceName:Ljava/lang/String;
 
     .line 106
-    iput-object p4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mMac:Ljava/lang/String;
+    iput-object p4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mMac:Ljava/lang/String;
 
     .line 107
-    iput-object p5, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mListener:Landroid/content/DialogInterface$OnClickListener;
+    iput-object p5, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mListener:Landroid/content/DialogInterface$OnClickListener;
 
     .line 108
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -161,7 +161,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mSelectedFontSize:I
+    iput v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mSelectedFontSize:I
 
     .line 109
     return-void
@@ -180,148 +180,148 @@
     .end array-data
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;)Landroid/widget/Button;
+.method static synthetic access$000(Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;)Landroid/widget/Button;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
 
     .prologue
     .line 52
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mButtonOk:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mButtonOk:Landroid/widget/Button;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;)Landroid/widget/Button;
+.method static synthetic access$100(Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;)Landroid/widget/Button;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
 
     .prologue
     .line 52
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mButtonCancel:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mButtonCancel:Landroid/widget/Button;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;)Ljava/lang/Boolean;
+.method static synthetic access$200(Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;)Ljava/lang/Boolean;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
 
     .prologue
     .line 52
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mTextNoChange:Ljava/lang/Boolean;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mTextNoChange:Ljava/lang/Boolean;
 
     return-object v0
 .end method
 
-.method static synthetic access$202(Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;Ljava/lang/Boolean;)Ljava/lang/Boolean;
+.method static synthetic access$202(Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;Ljava/lang/Boolean;)Ljava/lang/Boolean;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
     .param p1, "x1"    # Ljava/lang/Boolean;
 
     .prologue
     .line 52
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mTextNoChange:Ljava/lang/Boolean;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mTextNoChange:Ljava/lang/Boolean;
 
     return-object p1
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;)[Landroid/widget/EditText;
+.method static synthetic access$300(Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;)[Landroid/widget/EditText;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
 
     .prologue
     .line 52
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;)Z
+.method static synthetic access$400(Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
 
     .prologue
     .line 52
-    iget-boolean v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mIsTalkBackEnabled:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mIsTalkBackEnabled:Z
 
     return v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;)V
+.method static synthetic access$500(Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
 
     .prologue
     .line 52
-    invoke-direct {p0}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->validate()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->validate()V
 
     return-void
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;)Ljava/lang/String;
+.method static synthetic access$600(Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
 
     .prologue
     .line 52
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mTempSsid:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mTempSsid:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$602(Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$602(Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 52
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mTempSsid:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mTempSsid:Ljava/lang/String;
 
     return-object p1
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;)Landroid/widget/EditText;
+.method static synthetic access$700(Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;)Landroid/widget/EditText;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
 
     .prologue
     .line 52
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
     return-object v0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;)Landroid/widget/Toast;
+.method static synthetic access$800(Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;)Landroid/widget/Toast;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
 
     .prologue
     .line 52
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->sToast:Landroid/widget/Toast;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->sToast:Landroid/widget/Toast;
 
     return-object v0
 .end method
 
-.method static synthetic access$802(Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;Landroid/widget/Toast;)Landroid/widget/Toast;
+.method static synthetic access$802(Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;Landroid/widget/Toast;)Landroid/widget/Toast;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
     .param p1, "x1"    # Landroid/widget/Toast;
 
     .prologue
     .line 52
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->sToast:Landroid/widget/Toast;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->sToast:Landroid/widget/Toast;
 
     return-object p1
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;)Landroid/content/Context;
+.method static synthetic access$900(Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
 
     .prologue
     .line 52
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->context:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->context:Landroid/content/Context;
 
     return-object v0
 .end method
@@ -337,7 +337,7 @@
 
     .line 341
     .local v0, "enabled":Z
-    iget v2, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mType:I
+    iget v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mType:I
 
     const/4 v3, 0x3
 
@@ -349,11 +349,11 @@
     .line 348
     :cond_0
     :goto_0
-    iget v2, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mType:I
+    iget v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mType:I
 
     if-eqz v2, :cond_1
 
-    iget v2, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mType:I
+    iget v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mType:I
 
     if-ne v2, v4, :cond_2
 
@@ -368,7 +368,7 @@
     if-ge v1, v2, :cond_2
 
     .line 350
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
 
     aget-object v2, v2, v1
 
@@ -388,17 +388,17 @@
     .line 357
     .end local v1    # "i":I
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mButtonOk:Landroid/widget/Button;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mButtonOk:Landroid/widget/Button;
 
     if-eqz v2, :cond_3
 
     .line 358
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mButtonOk:Landroid/widget/Button;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mButtonOk:Landroid/widget/Button;
 
     invoke-virtual {v2, v0}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 359
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mButtonOk:Landroid/widget/Button;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mButtonOk:Landroid/widget/Button;
 
     invoke-virtual {v2, v0}, Landroid/widget/Button;->setFocusable(Z)V
 
@@ -408,7 +408,7 @@
 
     .line 344
     :cond_4
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
     invoke-virtual {v2}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -420,7 +420,7 @@
 
     if-lez v2, :cond_0
 
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
     invoke-virtual {v2}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -464,7 +464,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
 
     const/4 v2, 0x0
 
@@ -488,7 +488,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
 
     const/4 v2, 0x1
 
@@ -512,7 +512,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
 
     const/4 v2, 0x2
 
@@ -536,7 +536,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
 
     const/4 v2, 0x3
 
@@ -560,7 +560,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
 
     const/4 v2, 0x4
 
@@ -584,7 +584,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
 
     const/4 v2, 0x5
 
@@ -614,7 +614,7 @@
 
     .prologue
     .line 246
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -632,7 +632,7 @@
 
     .prologue
     .line 259
-    iget v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mType:I
+    iget v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mType:I
 
     return v0
 .end method
@@ -653,7 +653,7 @@
     const/4 v8, -0x1
 
     .line 116
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v4
 
@@ -665,18 +665,18 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mView:Landroid/view/View;
+    iput-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mView:Landroid/view/View;
 
     .line 118
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mView:Landroid/view/View;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mView:Landroid/view/View;
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->setView(Landroid/view/View;)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->setView(Landroid/view/View;)V
 
     .line 119
-    invoke-virtual {p0, v10}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->setInverseBackgroundForced(Z)V
+    invoke-virtual {p0, v10}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->setInverseBackgroundForced(Z)V
 
     .line 121
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mView:Landroid/view/View;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mView:Landroid/view/View;
 
     const v5, 0x7f0d0547
 
@@ -686,10 +686,10 @@
 
     check-cast v4, Landroid/widget/EditText;
 
-    iput-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iput-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
     .line 126
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mView:Landroid/view/View;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mView:Landroid/view/View;
 
     const v5, 0x7f0d04b3
 
@@ -699,10 +699,10 @@
 
     check-cast v4, Landroid/widget/LinearLayout;
 
-    iput-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMac:Landroid/widget/LinearLayout;
+    iput-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMac:Landroid/widget/LinearLayout;
 
     .line 127
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mView:Landroid/view/View;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mView:Landroid/view/View;
 
     const v5, 0x7f0d05bc
 
@@ -712,22 +712,22 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    iput-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mTvMac:Landroid/widget/TextView;
+    iput-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mTvMac:Landroid/widget/TextView;
 
     .line 128
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v0
 
     .line 129
     .local v0, "SalesCode":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->context:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->context:Landroid/content/Context;
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->isTablet(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->isTablet(Landroid/content/Context;)Z
 
     move-result v4
 
-    iput-boolean v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mIsTablet:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mIsTablet:Z
 
     .line 130
     const/4 v1, 0x0
@@ -739,11 +739,11 @@
     if-ge v1, v4, :cond_2
 
     .line 131
-    iget-object v5, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
 
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mView:Landroid/view/View;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mView:Landroid/view/View;
 
-    iget-object v6, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacId:[I
+    iget-object v6, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacId:[I
 
     aget v6, v6, v1
 
@@ -814,17 +814,17 @@
 
     .line 133
     :cond_0
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
 
     aget-object v4, v4, v1
 
-    iget-object v5, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->nameWatcher:Landroid/text/TextWatcher;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->nameWatcher:Landroid/text/TextWatcher;
 
     invoke-virtual {v4, v5}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 137
     :goto_1
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
 
     aget-object v4, v4, v1
 
@@ -832,7 +832,7 @@
 
     new-array v5, v5, [Landroid/text/InputFilter;
 
-    iget-object v6, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mMacFilter:Landroid/text/InputFilter;
+    iget-object v6, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mMacFilter:Landroid/text/InputFilter;
 
     aput-object v6, v5, v11
 
@@ -847,7 +847,7 @@
     invoke-virtual {v4, v5}, Landroid/widget/EditText;->setFilters([Landroid/text/InputFilter;)V
 
     .line 138
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
 
     aget-object v4, v4, v1
 
@@ -856,7 +856,7 @@
     invoke-virtual {v4, v5}, Landroid/widget/EditText;->setInputType(I)V
 
     .line 139
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
 
     aget-object v4, v4, v1
 
@@ -869,13 +869,13 @@
 
     .line 135
     :cond_1
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
 
     aget-object v4, v4, v1
 
-    new-instance v5, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog$MacTextWatcher;
+    new-instance v5, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog$MacTextWatcher;
 
-    invoke-direct {v5, p0, v1}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog$MacTextWatcher;-><init>(Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;I)V
+    invoke-direct {v5, p0, v1}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog$MacTextWatcher;-><init>(Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;I)V
 
     invoke-virtual {v4, v5}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
@@ -883,34 +883,34 @@
 
     .line 145
     :cond_2
-    iget v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mType:I
+    iget v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mType:I
 
     if-nez v4, :cond_3
 
     .line 146
     const v4, 0x7f0e0476
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->setTitle(I)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->setTitle(I)V
 
     .line 147
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mTvMac:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mTvMac:Landroid/widget/TextView;
 
     invoke-virtual {v4, v9}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 148
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
     const v5, 0x7f0d05b6
 
     invoke-virtual {v4, v5}, Landroid/widget/EditText;->setNextFocusDownId(I)V
 
     .line 149
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
     invoke-virtual {v4}, Landroid/widget/EditText;->requestFocus()Z
 
     .line 150
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -920,13 +920,13 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mListener:Landroid/content/DialogInterface$OnClickListener;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mListener:Landroid/content/DialogInterface$OnClickListener;
 
-    invoke-virtual {p0, v8, v4, v5}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {p0, v8, v4, v5}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     .line 181
     :goto_2
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -936,14 +936,14 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mListener:Landroid/content/DialogInterface$OnClickListener;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mListener:Landroid/content/DialogInterface$OnClickListener;
 
-    invoke-virtual {p0, v12, v4, v5}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {p0, v12, v4, v5}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     .line 184
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
-    iget-object v5, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->nameWatcher:Landroid/text/TextWatcher;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->nameWatcher:Landroid/text/TextWatcher;
 
     invoke-virtual {v4, v5}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
@@ -951,78 +951,78 @@
     invoke-super {p0, p1}, Landroid/app/AlertDialog;->onCreate(Landroid/os/Bundle;)V
 
     .line 187
-    invoke-virtual {p0, v8}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->getButton(I)Landroid/widget/Button;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mButtonOk:Landroid/widget/Button;
+    iput-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mButtonOk:Landroid/widget/Button;
 
     .line 188
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mButtonOk:Landroid/widget/Button;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mButtonOk:Landroid/widget/Button;
 
-    iget-object v5, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->focusListener:Landroid/view/View$OnFocusChangeListener;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->focusListener:Landroid/view/View$OnFocusChangeListener;
 
     invoke-virtual {v4, v5}, Landroid/widget/Button;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
     .line 189
-    invoke-virtual {p0, v12}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->getButton(I)Landroid/widget/Button;
+    invoke-virtual {p0, v12}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mButtonCancel:Landroid/widget/Button;
+    iput-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mButtonCancel:Landroid/widget/Button;
 
     .line 190
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mButtonCancel:Landroid/widget/Button;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mButtonCancel:Landroid/widget/Button;
 
-    iget-object v5, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->focusListener:Landroid/view/View$OnFocusChangeListener;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->focusListener:Landroid/view/View$OnFocusChangeListener;
 
     invoke-virtual {v4, v5}, Landroid/widget/Button;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
     .line 191
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->context:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->context:Landroid/content/Context;
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
 
     move-result v4
 
-    iput-boolean v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mIsTalkBackEnabled:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mIsTalkBackEnabled:Z
 
     .line 192
-    invoke-direct {p0}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->validate()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->validate()V
 
     .line 193
     return-void
 
     .line 151
     :cond_3
-    iget v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mType:I
+    iget v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mType:I
 
     if-ne v4, v10, :cond_4
 
     .line 152
     const v4, 0x7f0e0476
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->setTitle(I)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->setTitle(I)V
 
     .line 153
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMac:Landroid/widget/LinearLayout;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMac:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4, v9}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 154
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mTvMac:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mTvMac:Landroid/widget/TextView;
 
-    iget-object v5, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mMac:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mMac:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 155
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
     invoke-virtual {v4}, Landroid/widget/EditText;->requestFocus()Z
 
     .line 156
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -1032,15 +1032,15 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mListener:Landroid/content/DialogInterface$OnClickListener;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mListener:Landroid/content/DialogInterface$OnClickListener;
 
-    invoke-virtual {p0, v8, v4, v5}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {p0, v8, v4, v5}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     goto :goto_2
 
     .line 157
     :cond_4
-    iget v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mType:I
+    iget v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mType:I
 
     const/4 v5, 0x3
 
@@ -1049,20 +1049,20 @@
     .line 158
     const v4, 0x7f0e047f
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->setTitle(I)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->setTitle(I)V
 
     .line 159
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
     invoke-virtual {v4, v9}, Landroid/widget/EditText;->setVisibility(I)V
 
     .line 160
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMac:Landroid/widget/LinearLayout;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMac:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4, v9}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 161
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mView:Landroid/view/View;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mView:Landroid/view/View;
 
     const v5, 0x7f0d05b3
 
@@ -1081,7 +1081,7 @@
 
     .line 163
     .local v3, "whiteList":Landroid/net/wifi/WifiApWhiteList;
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mView:Landroid/view/View;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mView:Landroid/view/View;
 
     const v5, 0x7f0d05b5
 
@@ -1094,7 +1094,7 @@
     invoke-virtual {v4, v11}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 164
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mView:Landroid/view/View;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mView:Landroid/view/View;
 
     const v5, 0x7f0d05b5
 
@@ -1104,7 +1104,7 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    iget-object v5, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mMac:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mMac:Ljava/lang/String;
 
     invoke-virtual {v3, v5}, Landroid/net/wifi/WifiApWhiteList;->getDeviceName(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1113,14 +1113,14 @@
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 165
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mTvMac:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mTvMac:Landroid/widget/TextView;
 
-    iget-object v5, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mMac:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mMac:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 166
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -1130,9 +1130,9 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mListener:Landroid/content/DialogInterface$OnClickListener;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mListener:Landroid/content/DialogInterface$OnClickListener;
 
-    invoke-virtual {p0, v8, v4, v5}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {p0, v8, v4, v5}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     goto/16 :goto_2
 
@@ -1141,24 +1141,24 @@
     :cond_5
     const v4, 0x7f0e0480
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->setTitle(I)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->setTitle(I)V
 
     .line 169
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mTvMac:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mTvMac:Landroid/widget/TextView;
 
     invoke-virtual {v4, v9}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 170
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
-    iget-object v5, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mDeviceName:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mDeviceName:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 171
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
-    iget-object v5, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
     invoke-virtual {v5}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -1171,19 +1171,19 @@
     invoke-virtual {v4, v5}, Landroid/widget/EditText;->setSelection(I)V
 
     .line 172
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
     invoke-virtual {v4}, Landroid/widget/EditText;->selectAll()V
 
     .line 173
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
     const v5, 0x7f0d05b6
 
     invoke-virtual {v4, v5}, Landroid/widget/EditText;->setNextFocusDownId(I)V
 
     .line 174
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mMac:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mMac:Ljava/lang/String;
 
     const-string v5, ":"
 
@@ -1201,7 +1201,7 @@
     if-ge v1, v4, :cond_6
 
     .line 176
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
 
     aget-object v4, v4, v1
 
@@ -1216,12 +1216,12 @@
 
     .line 177
     :cond_6
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
     invoke-virtual {v4}, Landroid/widget/EditText;->requestFocus()Z
 
     .line 178
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -1231,9 +1231,9 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mListener:Landroid/content/DialogInterface$OnClickListener;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mListener:Landroid/content/DialogInterface$OnClickListener;
 
-    invoke-virtual {p0, v8, v4, v5}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {p0, v8, v4, v5}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     goto/16 :goto_2
 .end method
@@ -1243,7 +1243,7 @@
 
     .prologue
     .line 229
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
@@ -1256,7 +1256,7 @@
 
     .prologue
     .line 237
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
 
     const/4 v1, 0x0
 
@@ -1267,7 +1267,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 238
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
 
     const/4 v1, 0x1
 
@@ -1278,7 +1278,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 239
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
 
     const/4 v1, 0x2
 
@@ -1289,7 +1289,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 240
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
 
     const/4 v1, 0x3
 
@@ -1300,7 +1300,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 241
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
 
     const/4 v1, 0x4
 
@@ -1311,7 +1311,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 242
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtMacArray:[Landroid/widget/EditText;
 
     const/4 v1, 0x5
 
@@ -1330,7 +1330,7 @@
 
     .prologue
     .line 233
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
     const-string v1, ""
 
@@ -1348,11 +1348,11 @@
     invoke-super {p0}, Landroid/app/AlertDialog;->show()V
 
     .line 210
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->hasFocus()Z
 
@@ -1360,7 +1360,7 @@
 
     if-nez v0, :cond_0
 
-    iget v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mType:I
+    iget v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mType:I
 
     const/4 v1, 0x2
 
@@ -1368,7 +1368,7 @@
 
     .line 211
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
@@ -1377,22 +1377,22 @@
     invoke-virtual {v0, v1}, Landroid/view/Window;->setSoftInputMode(I)V
 
     .line 212
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mDeviceName:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mDeviceName:Ljava/lang/String;
 
     if-eqz v0, :cond_2
 
     .line 213
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mDeviceName:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mDeviceName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 217
     :goto_0
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -1405,7 +1405,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setSelection(I)V
 
     .line 218
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->selectAll()V
 
@@ -1415,9 +1415,9 @@
 
     .line 215
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mEtDeviceName:Landroid/widget/EditText;
 
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mTempSsid:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mTempSsid:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 

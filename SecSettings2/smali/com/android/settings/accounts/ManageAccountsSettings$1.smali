@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accounts/ManageAccountsSettings$1;
+.class Lcom/android/settings_ex/accounts/ManageAccountsSettings$1;
 .super Landroid/os/Handler;
 .source "ManageAccountsSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accounts/ManageAccountsSettings;
+    value = Lcom/android/settings_ex/accounts/ManageAccountsSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accounts/ManageAccountsSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/accounts/ManageAccountsSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accounts/ManageAccountsSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/accounts/ManageAccountsSettings;)V
     .locals 0
 
     .prologue
     .line 112
-    iput-object p1, p0, Lcom/android/settings/accounts/ManageAccountsSettings$1;->this$0:Lcom/android/settings/accounts/ManageAccountsSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/accounts/ManageAccountsSettings$1;->this$0:Lcom/android/settings_ex/accounts/ManageAccountsSettings;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -49,9 +49,9 @@
 
     .line 117
     :pswitch_0
-    iget-object v0, p0, Lcom/android/settings/accounts/ManageAccountsSettings$1;->this$0:Lcom/android/settings/accounts/ManageAccountsSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/accounts/ManageAccountsSettings$1;->this$0:Lcom/android/settings_ex/accounts/ManageAccountsSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/accounts/ManageAccountsSettings;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accounts/ManageAccountsSettings;->finish()V
 
     goto :goto_0
 

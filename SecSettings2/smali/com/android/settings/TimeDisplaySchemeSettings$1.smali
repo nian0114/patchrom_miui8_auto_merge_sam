@@ -1,4 +1,4 @@
-.class Lcom/android/settings/TimeDisplaySchemeSettings$1;
+.class Lcom/android/settings_ex/TimeDisplaySchemeSettings$1;
 .super Ljava/lang/Object;
 .source "TimeDisplaySchemeSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/TimeDisplaySchemeSettings;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/TimeDisplaySchemeSettings;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/TimeDisplaySchemeSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/TimeDisplaySchemeSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/TimeDisplaySchemeSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/TimeDisplaySchemeSettings;)V
     .locals 0
 
     .prologue
     .line 69
-    iput-object p1, p0, Lcom/android/settings/TimeDisplaySchemeSettings$1;->this$0:Lcom/android/settings/TimeDisplaySchemeSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings$1;->this$0:Lcom/android/settings_ex/TimeDisplaySchemeSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,22 +43,22 @@
 
     .prologue
     .line 71
-    iget-object v0, p0, Lcom/android/settings/TimeDisplaySchemeSettings$1;->this$0:Lcom/android/settings/TimeDisplaySchemeSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings$1;->this$0:Lcom/android/settings_ex/TimeDisplaySchemeSettings;
 
-    # getter for: Lcom/android/settings/TimeDisplaySchemeSettings;->mTimeType:I
-    invoke-static {v0}, Lcom/android/settings/TimeDisplaySchemeSettings;->access$000(Lcom/android/settings/TimeDisplaySchemeSettings;)I
+    # getter for: Lcom/android/settings_ex/TimeDisplaySchemeSettings;->mTimeType:I
+    invoke-static {v0}, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->access$000(Lcom/android/settings_ex/TimeDisplaySchemeSettings;)I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
     .line 75
-    iget-object v0, p0, Lcom/android/settings/TimeDisplaySchemeSettings$1;->this$0:Lcom/android/settings/TimeDisplaySchemeSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings$1;->this$0:Lcom/android/settings_ex/TimeDisplaySchemeSettings;
 
     const/4 v1, 0x0
 
-    # invokes: Lcom/android/settings/TimeDisplaySchemeSettings;->setTimeDisplayScheme(I)V
-    invoke-static {v0, v1}, Lcom/android/settings/TimeDisplaySchemeSettings;->access$100(Lcom/android/settings/TimeDisplaySchemeSettings;I)V
+    # invokes: Lcom/android/settings_ex/TimeDisplaySchemeSettings;->setTimeDisplayScheme(I)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->access$100(Lcom/android/settings_ex/TimeDisplaySchemeSettings;I)V
 
     .line 82
     :goto_0
@@ -66,12 +66,12 @@
 
     .line 79
     :pswitch_0
-    iget-object v0, p0, Lcom/android/settings/TimeDisplaySchemeSettings$1;->this$0:Lcom/android/settings/TimeDisplaySchemeSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings$1;->this$0:Lcom/android/settings_ex/TimeDisplaySchemeSettings;
 
     const/4 v1, 0x1
 
-    # invokes: Lcom/android/settings/TimeDisplaySchemeSettings;->setTimeDisplayScheme(I)V
-    invoke-static {v0, v1}, Lcom/android/settings/TimeDisplaySchemeSettings;->access$100(Lcom/android/settings/TimeDisplaySchemeSettings;I)V
+    # invokes: Lcom/android/settings_ex/TimeDisplaySchemeSettings;->setTimeDisplayScheme(I)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->access$100(Lcom/android/settings_ex/TimeDisplaySchemeSettings;I)V
 
     goto :goto_0
 

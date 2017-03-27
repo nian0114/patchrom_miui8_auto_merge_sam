@@ -1,4 +1,4 @@
-.class Lcom/android/settings/TetherSettings$13;
+.class Lcom/android/settings_ex/TetherSettings$13;
 .super Ljava/lang/Object;
 .source "TetherSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/TetherSettings;->onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
+    value = Lcom/android/settings_ex/TetherSettings;->onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/TetherSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/TetherSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/TetherSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/TetherSettings;)V
     .locals 0
 
     .prologue
     .line 1186
-    iput-object p1, p0, Lcom/android/settings/TetherSettings$13;->this$0:Lcom/android/settings/TetherSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/TetherSettings$13;->this$0:Lcom/android/settings_ex/TetherSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,26 +43,26 @@
 
     .prologue
     .line 1189
-    iget-object v1, p0, Lcom/android/settings/TetherSettings$13;->this$0:Lcom/android/settings/TetherSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/TetherSettings$13;->this$0:Lcom/android/settings_ex/TetherSettings;
 
-    iget-object v0, p0, Lcom/android/settings/TetherSettings$13;->this$0:Lcom/android/settings/TetherSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/TetherSettings$13;->this$0:Lcom/android/settings_ex/TetherSettings;
 
     const-string v2, "wifi"
 
-    invoke-virtual {v0, v2}, Lcom/android/settings/TetherSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Lcom/android/settings_ex/TetherSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/net/wifi/WifiManager;
 
-    # setter for: Lcom/android/settings/TetherSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
-    invoke-static {v1, v0}, Lcom/android/settings/TetherSettings;->access$802(Lcom/android/settings/TetherSettings;Landroid/net/wifi/WifiManager;)Landroid/net/wifi/WifiManager;
+    # setter for: Lcom/android/settings_ex/TetherSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {v1, v0}, Lcom/android/settings_ex/TetherSettings;->access$802(Lcom/android/settings_ex/TetherSettings;Landroid/net/wifi/WifiManager;)Landroid/net/wifi/WifiManager;
 
     .line 1190
-    iget-object v0, p0, Lcom/android/settings/TetherSettings$13;->this$0:Lcom/android/settings/TetherSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/TetherSettings$13;->this$0:Lcom/android/settings_ex/TetherSettings;
 
-    # getter for: Lcom/android/settings/TetherSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
-    invoke-static {v0}, Lcom/android/settings/TetherSettings;->access$800(Lcom/android/settings/TetherSettings;)Landroid/net/wifi/WifiManager;
+    # getter for: Lcom/android/settings_ex/TetherSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {v0}, Lcom/android/settings_ex/TetherSettings;->access$800(Lcom/android/settings_ex/TetherSettings;)Landroid/net/wifi/WifiManager;
 
     move-result-object v0
 
@@ -71,12 +71,12 @@
     invoke-virtual {v0, v1}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
 
     .line 1191
-    iget-object v0, p0, Lcom/android/settings/TetherSettings$13;->this$0:Lcom/android/settings/TetherSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/TetherSettings$13;->this$0:Lcom/android/settings_ex/TetherSettings;
 
     const/4 v1, 0x1
 
-    # invokes: Lcom/android/settings/TetherSettings;->startProvisioningIfNecessary(I)V
-    invoke-static {v0, v1}, Lcom/android/settings/TetherSettings;->access$400(Lcom/android/settings/TetherSettings;I)V
+    # invokes: Lcom/android/settings_ex/TetherSettings;->startProvisioningIfNecessary(I)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/TetherSettings;->access$400(Lcom/android/settings_ex/TetherSettings;I)V
 
     .line 1192
     return-void

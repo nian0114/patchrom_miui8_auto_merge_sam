@@ -1,15 +1,15 @@
-.class public Lcom/android/settings/notification/VibrationsSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/notification/VibrationsSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "VibrationsSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # static fields
 .field private static final DEBUG:Z
 
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 
 .field private static mAudioManager:Landroid/media/AudioManager;
 
@@ -46,14 +46,14 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/android/settings/notification/VibrationsSettings;->DEBUG:Z
+    sput-boolean v0, Lcom/android/settings_ex/notification/VibrationsSettings;->DEBUG:Z
 
     .line 335
-    new-instance v0, Lcom/android/settings/notification/VibrationsSettings$6;
+    new-instance v0, Lcom/android/settings_ex/notification/VibrationsSettings$6;
 
-    invoke-direct {v0}, Lcom/android/settings/notification/VibrationsSettings$6;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/notification/VibrationsSettings$6;-><init>()V
 
-    sput-object v0, Lcom/android/settings/notification/VibrationsSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/notification/VibrationsSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 
     return-void
 .end method
@@ -63,73 +63,73 @@
 
     .prologue
     .line 63
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 80
-    new-instance v0, Lcom/android/settings/notification/VibrationsSettings$1;
+    new-instance v0, Lcom/android/settings_ex/notification/VibrationsSettings$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/notification/VibrationsSettings$1;-><init>(Lcom/android/settings/notification/VibrationsSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/notification/VibrationsSettings$1;-><init>(Lcom/android/settings_ex/notification/VibrationsSettings;)V
 
-    iput-object v0, p0, Lcom/android/settings/notification/VibrationsSettings;->mAoBleChangeReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mAoBleChangeReceiver:Landroid/content/BroadcastReceiver;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/notification/VibrationsSettings;)Landroid/preference/SwitchPreference;
+.method static synthetic access$000(Lcom/android/settings_ex/notification/VibrationsSettings;)Landroid/preference/SwitchPreference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/VibrationsSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/VibrationsSettings;
 
     .prologue
     .line 63
-    iget-object v0, p0, Lcom/android/settings/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/notification/VibrationsSettings;)Landroid/preference/SwitchPreference;
+.method static synthetic access$100(Lcom/android/settings_ex/notification/VibrationsSettings;)Landroid/preference/SwitchPreference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/VibrationsSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/VibrationsSettings;
 
     .prologue
     .line 63
-    iget-object v0, p0, Lcom/android/settings/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/notification/VibrationsSettings;)Landroid/content/ContentResolver;
+.method static synthetic access$200(Lcom/android/settings_ex/notification/VibrationsSettings;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/VibrationsSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/VibrationsSettings;
 
     .prologue
     .line 63
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationsSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationsSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/notification/VibrationsSettings;)Landroid/content/ContentResolver;
+.method static synthetic access$300(Lcom/android/settings_ex/notification/VibrationsSettings;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/VibrationsSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/VibrationsSettings;
 
     .prologue
     .line 63
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationsSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationsSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/notification/VibrationsSettings;)Landroid/content/ContentResolver;
+.method static synthetic access$400(Lcom/android/settings_ex/notification/VibrationsSettings;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/VibrationsSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/VibrationsSettings;
 
     .prologue
     .line 63
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationsSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationsSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -141,7 +141,7 @@
 
     .prologue
     .line 63
-    sget-object v0, Lcom/android/settings/notification/VibrationsSettings;->mAudioManager:Landroid/media/AudioManager;
+    sget-object v0, Lcom/android/settings_ex/notification/VibrationsSettings;->mAudioManager:Landroid/media/AudioManager;
 
     return-object v0
 .end method
@@ -168,10 +168,10 @@
     const/4 v6, 0x1
 
     .line 141
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 142
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -179,10 +179,10 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/notification/VibrationsSettings;->mContext:Landroid/content/Context;
+    iput-object v4, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mContext:Landroid/content/Context;
 
     .line 144
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -194,10 +194,10 @@
 
     check-cast v4, Landroid/media/AudioManager;
 
-    sput-object v4, Lcom/android/settings/notification/VibrationsSettings;->mAudioManager:Landroid/media/AudioManager;
+    sput-object v4, Lcom/android/settings_ex/notification/VibrationsSettings;->mAudioManager:Landroid/media/AudioManager;
 
     .line 145
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -209,103 +209,103 @@
 
     check-cast v4, Landroid/os/PowerManager;
 
-    sput-object v4, Lcom/android/settings/notification/VibrationsSettings;->mPowerManager:Landroid/os/PowerManager;
+    sput-object v4, Lcom/android/settings_ex/notification/VibrationsSettings;->mPowerManager:Landroid/os/PowerManager;
 
     .line 147
-    invoke-virtual {p0, v7}, Lcom/android/settings/notification/VibrationsSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/notification/VibrationsSettings;->addPreferencesFromResource(I)V
 
     .line 148
     const-string v4, "phone_vibration"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/notification/VibrationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/notification/VibrationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     check-cast v4, Landroid/preference/PreferenceScreen;
 
-    iput-object v4, p0, Lcom/android/settings/notification/VibrationsSettings;->mDeviceVibration:Landroid/preference/PreferenceScreen;
+    iput-object v4, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mDeviceVibration:Landroid/preference/PreferenceScreen;
 
     .line 149
-    iget-object v4, p0, Lcom/android/settings/notification/VibrationsSettings;->mDeviceVibration:Landroid/preference/PreferenceScreen;
+    iget-object v4, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mDeviceVibration:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v4, v6}, Landroid/preference/PreferenceScreen;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 150
     const-string v4, "vibrate_when_ringing"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/notification/VibrationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/notification/VibrationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     check-cast v4, Landroid/preference/SwitchPreference;
 
-    iput-object v4, p0, Lcom/android/settings/notification/VibrationsSettings;->mVibrateWhenRinging:Landroid/preference/SwitchPreference;
+    iput-object v4, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mVibrateWhenRinging:Landroid/preference/SwitchPreference;
 
     .line 151
     const-string v4, "vibrate_on_touch"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/notification/VibrationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/notification/VibrationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     check-cast v4, Landroid/preference/SwitchPreference;
 
-    iput-object v4, p0, Lcom/android/settings/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
+    iput-object v4, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
 
     .line 152
     const-string v4, "keyboard_vibration"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/notification/VibrationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/notification/VibrationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     check-cast v4, Landroid/preference/SwitchPreference;
 
-    iput-object v4, p0, Lcom/android/settings/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
+    iput-object v4, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
 
     .line 154
-    iget-object v4, p0, Lcom/android/settings/notification/VibrationsSettings;->mVibrateWhenRinging:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mVibrateWhenRinging:Landroid/preference/SwitchPreference;
 
-    new-instance v5, Lcom/android/settings/notification/VibrationsSettings$2;
+    new-instance v5, Lcom/android/settings_ex/notification/VibrationsSettings$2;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/notification/VibrationsSettings$2;-><init>(Lcom/android/settings/notification/VibrationsSettings;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/notification/VibrationsSettings$2;-><init>(Lcom/android/settings_ex/notification/VibrationsSettings;)V
 
     invoke-virtual {v4, v5}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 164
-    iget-object v4, p0, Lcom/android/settings/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
 
-    new-instance v5, Lcom/android/settings/notification/VibrationsSettings$3;
+    new-instance v5, Lcom/android/settings_ex/notification/VibrationsSettings$3;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/notification/VibrationsSettings$3;-><init>(Lcom/android/settings/notification/VibrationsSettings;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/notification/VibrationsSettings$3;-><init>(Lcom/android/settings_ex/notification/VibrationsSettings;)V
 
     invoke-virtual {v4, v5}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 174
-    iget-object v4, p0, Lcom/android/settings/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
 
-    new-instance v5, Lcom/android/settings/notification/VibrationsSettings$4;
+    new-instance v5, Lcom/android/settings_ex/notification/VibrationsSettings$4;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/notification/VibrationsSettings$4;-><init>(Lcom/android/settings/notification/VibrationsSettings;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/notification/VibrationsSettings$4;-><init>(Lcom/android/settings_ex/notification/VibrationsSettings;)V
 
     invoke-virtual {v4, v5}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 184
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->hasHaptic(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->hasHaptic(Landroid/content/Context;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->isEnableIntensity(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->isEnableIntensity(Landroid/content/Context;)Z
 
     move-result v4
 
@@ -315,26 +315,26 @@
     :cond_0
     const-string v4, "vibration_feedback_intensity"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/notification/VibrationsSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/notification/VibrationsSettings;->removePreference(Ljava/lang/String;)V
 
     .line 187
     const-string v4, "vibration_intensity_category"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/notification/VibrationsSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/notification/VibrationsSettings;->removePreference(Ljava/lang/String;)V
 
     .line 188
     const-string v4, "vibrate_on_touch"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/notification/VibrationsSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/notification/VibrationsSettings;->removePreference(Ljava/lang/String;)V
 
     .line 189
     const-string v4, "keyboard_vibration"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/notification/VibrationsSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/notification/VibrationsSettings;->removePreference(Ljava/lang/String;)V
 
     .line 191
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationsSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationsSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -351,33 +351,33 @@
     .line 194
     const-string v4, "vibrate_on_touch"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/notification/VibrationsSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/notification/VibrationsSettings;->removePreference(Ljava/lang/String;)V
 
     .line 195
     const-string v4, "keyboard_vibration"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/notification/VibrationsSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/notification/VibrationsSettings;->removePreference(Ljava/lang/String;)V
 
     .line 199
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->isEnabledUltraPowerSaving(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->isEnabledUltraPowerSaving(Landroid/content/Context;)Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
     .line 200
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
     const-string v5, "UPSM"
 
-    invoke-static {v4, v7, v5}, Lcom/android/settings/Utils;->getRemovePreferenceInOtherMode(Landroid/content/Context;ILjava/lang/String;)Ljava/util/ArrayList;
+    invoke-static {v4, v7, v5}, Lcom/android/settings_ex/Utils;->getRemovePreferenceInOtherMode(Landroid/content/Context;ILjava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v3
 
@@ -406,7 +406,7 @@
 
     .line 203
     .local v2, "list":Ljava/lang/String;
-    invoke-virtual {p0, v2}, Lcom/android/settings/notification/VibrationsSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/notification/VibrationsSettings;->removePreference(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -415,9 +415,9 @@
     .end local v2    # "list":Ljava/lang/String;
     .end local v3    # "removelist":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_3
-    iget-object v4, p0, Lcom/android/settings/notification/VibrationsSettings;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mContext:Landroid/content/Context;
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->isVoiceCapable(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->isVoiceCapable(Landroid/content/Context;)Z
 
     move-result v4
 
@@ -426,17 +426,17 @@
     .line 208
     const-string v4, "phone_vibration"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/notification/VibrationsSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/notification/VibrationsSettings;->removePreference(Ljava/lang/String;)V
 
     .line 209
     const-string v4, "vibration_pattern_category"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/notification/VibrationsSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/notification/VibrationsSettings;->removePreference(Ljava/lang/String;)V
 
     .line 210
     const-string v4, "vibrate_when_ringing"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/notification/VibrationsSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/notification/VibrationsSettings;->removePreference(Ljava/lang/String;)V
 
     .line 212
     :cond_4
@@ -448,26 +448,26 @@
 
     .prologue
     .line 274
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 276
-    iget-object v0, p0, Lcom/android/settings/notification/VibrationsSettings;->mRingModeChangedReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mRingModeChangedReceiver:Landroid/content/BroadcastReceiver;
 
     if-eqz v0, :cond_0
 
     .line 277
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/notification/VibrationsSettings;->mRingModeChangedReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mRingModeChangedReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 278
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/notification/VibrationsSettings;->mRingModeChangedReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mRingModeChangedReceiver:Landroid/content/BroadcastReceiver;
 
     .line 288
     :cond_0
@@ -481,22 +481,22 @@
 
     .prologue
     .line 292
-    iget-object v0, p0, Lcom/android/settings/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
 
     if-ne p2, v0, :cond_0
 
     .line 293
-    iget-object v0, p0, Lcom/android/settings/notification/VibrationsSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mContext:Landroid/content/Context;
 
     const-string v1, "com.android.settings"
 
     const-string v2, "SVKV"
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 295
     :cond_0
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v0
 
@@ -514,10 +514,10 @@
     const/4 v4, 0x0
 
     .line 216
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 222
-    iget-object v2, p0, Lcom/android/settings/notification/VibrationsSettings;->mRingModeChangedReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mRingModeChangedReceiver:Landroid/content/BroadcastReceiver;
 
     if-nez v2, :cond_0
 
@@ -533,32 +533,32 @@
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 225
-    new-instance v2, Lcom/android/settings/notification/VibrationsSettings$5;
+    new-instance v2, Lcom/android/settings_ex/notification/VibrationsSettings$5;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/notification/VibrationsSettings$5;-><init>(Lcom/android/settings/notification/VibrationsSettings;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/notification/VibrationsSettings$5;-><init>(Lcom/android/settings_ex/notification/VibrationsSettings;)V
 
-    iput-object v2, p0, Lcom/android/settings/notification/VibrationsSettings;->mRingModeChangedReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v2, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mRingModeChangedReceiver:Landroid/content/BroadcastReceiver;
 
     .line 239
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    iget-object v5, p0, Lcom/android/settings/notification/VibrationsSettings;->mRingModeChangedReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v5, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mRingModeChangedReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v2, v5, v1}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 242
     .end local v1    # "mfilter":Landroid/content/IntentFilter;
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/notification/VibrationsSettings;->mVibrateWhenRinging:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mVibrateWhenRinging:Landroid/preference/SwitchPreference;
 
     if-eqz v2, :cond_1
 
     .line 243
-    iget-object v5, p0, Lcom/android/settings/notification/VibrationsSettings;->mVibrateWhenRinging:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mVibrateWhenRinging:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationsSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationsSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -577,14 +577,14 @@
 
     .line 244
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
 
     if-eqz v2, :cond_2
 
     .line 245
-    iget-object v5, p0, Lcom/android/settings/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationsSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationsSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -603,14 +603,14 @@
 
     .line 246
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
 
     if-eqz v2, :cond_3
 
     .line 247
-    iget-object v5, p0, Lcom/android/settings/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationsSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationsSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -629,10 +629,10 @@
 
     .line 248
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationsSettings;->updateDeviceVibrationName()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationsSettings;->updateDeviceVibrationName()V
 
     .line 249
-    sget-object v2, Lcom/android/settings/notification/VibrationsSettings;->mPowerManager:Landroid/os/PowerManager;
+    sget-object v2, Lcom/android/settings_ex/notification/VibrationsSettings;->mPowerManager:Landroid/os/PowerManager;
 
     invoke-virtual {v2}, Landroid/os/PowerManager;->isPowerSaveMode()Z
 
@@ -640,7 +640,7 @@
 
     .line 250
     .local v0, "bPowerSaving":Z
-    iget-object v2, p0, Lcom/android/settings/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
 
     if-eqz v2, :cond_4
 
@@ -648,21 +648,21 @@
     if-nez v0, :cond_9
 
     .line 253
-    iget-object v2, p0, Lcom/android/settings/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
 
     const v5, 0x7f0e0e45
 
     invoke-virtual {v2, v5}, Landroid/preference/SwitchPreference;->setSummary(I)V
 
     .line 254
-    iget-object v2, p0, Lcom/android/settings/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v2, v3}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 260
     :cond_4
     :goto_3
-    iget-object v2, p0, Lcom/android/settings/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
 
     if-eqz v2, :cond_5
 
@@ -670,14 +670,14 @@
     if-nez v0, :cond_a
 
     .line 263
-    iget-object v2, p0, Lcom/android/settings/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
 
     const v4, 0x7f0e14d1
 
     invoke-virtual {v2, v4}, Landroid/preference/SwitchPreference;->setSummary(I)V
 
     .line 264
-    iget-object v2, p0, Lcom/android/settings/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v2, v3}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
@@ -708,12 +708,12 @@
     .line 256
     .restart local v0    # "bPowerSaving":Z
     :cond_9
-    iget-object v2, p0, Lcom/android/settings/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v2, v7}, Landroid/preference/SwitchPreference;->setSummary(I)V
 
     .line 257
-    iget-object v2, p0, Lcom/android/settings/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v2, v4}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
@@ -721,12 +721,12 @@
 
     .line 266
     :cond_a
-    iget-object v2, p0, Lcom/android/settings/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v2, v7}, Landroid/preference/SwitchPreference;->setSummary(I)V
 
     .line 267
-    iget-object v2, p0, Lcom/android/settings/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v2, v4}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
@@ -740,7 +740,7 @@
     const/4 v2, 0x0
 
     .line 299
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationsSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationsSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -755,7 +755,7 @@
     if-nez v7, :cond_2
 
     .line 303
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationsSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationsSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -784,12 +784,12 @@
     if-eqz v0, :cond_0
 
     .line 306
-    iget-object v0, p0, Lcom/android/settings/notification/VibrationsSettings;->mDeviceVibration:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mDeviceVibration:Landroid/preference/PreferenceScreen;
 
     if-eqz v0, :cond_0
 
     .line 307
-    iget-object v0, p0, Lcom/android/settings/notification/VibrationsSettings;->mDeviceVibration:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mDeviceVibration:Landroid/preference/PreferenceScreen;
 
     const-string v1, "vibration_name"
 
@@ -815,7 +815,7 @@
     .line 312
     .end local v6    # "c":Landroid/database/Cursor;
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationsSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationsSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -845,12 +845,12 @@
     if-eqz v0, :cond_3
 
     .line 316
-    iget-object v0, p0, Lcom/android/settings/notification/VibrationsSettings;->mDeviceVibration:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mDeviceVibration:Landroid/preference/PreferenceScreen;
 
     if-eqz v0, :cond_3
 
     .line 317
-    iget-object v0, p0, Lcom/android/settings/notification/VibrationsSettings;->mDeviceVibration:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VibrationsSettings;->mDeviceVibration:Landroid/preference/PreferenceScreen;
 
     const-string v1, "vibration_name"
 

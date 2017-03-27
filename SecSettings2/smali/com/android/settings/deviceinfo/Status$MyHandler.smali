@@ -1,11 +1,11 @@
-.class Lcom/android/settings/deviceinfo/Status$MyHandler;
+.class Lcom/android/settings_ex/deviceinfo/Status$MyHandler;
 .super Landroid/os/Handler;
 .source "Status.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/Status;
+    value = Lcom/android/settings_ex/deviceinfo/Status;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
         value = {
             "Ljava/lang/ref/WeakReference",
             "<",
-            "Lcom/android/settings/deviceinfo/Status;",
+            "Lcom/android/settings_ex/deviceinfo/Status;",
             ">;"
         }
     .end annotation
@@ -28,9 +28,9 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/settings/deviceinfo/Status;)V
+.method public constructor <init>(Lcom/android/settings_ex/deviceinfo/Status;)V
     .locals 1
-    .param p1, "activity"    # Lcom/android/settings/deviceinfo/Status;
+    .param p1, "activity"    # Lcom/android/settings_ex/deviceinfo/Status;
 
     .prologue
     .line 219
@@ -41,7 +41,7 @@
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/Status$MyHandler;->mStatus:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/Status$MyHandler;->mStatus:Ljava/lang/ref/WeakReference;
 
     .line 221
     return-void
@@ -55,16 +55,16 @@
 
     .prologue
     .line 225
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/Status$MyHandler;->mStatus:Ljava/lang/ref/WeakReference;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/Status$MyHandler;->mStatus:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/deviceinfo/Status;
+    check-cast v0, Lcom/android/settings_ex/deviceinfo/Status;
 
     .line 226
-    .local v0, "status":Lcom/android/settings/deviceinfo/Status;
+    .local v0, "status":Lcom/android/settings_ex/deviceinfo/Status;
     if-nez v0, :cond_0
 
     .line 240
@@ -81,20 +81,20 @@
 
     .line 232
     :sswitch_0
-    invoke-virtual {v0}, Lcom/android/settings/deviceinfo/Status;->updateTimes()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/deviceinfo/Status;->updateTimes()V
 
     .line 233
     const/16 v1, 0x1f4
 
     const-wide/16 v2, 0x3e8
 
-    invoke-virtual {p0, v1, v2, v3}, Lcom/android/settings/deviceinfo/Status$MyHandler;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {p0, v1, v2, v3}, Lcom/android/settings_ex/deviceinfo/Status$MyHandler;->sendEmptyMessageDelayed(IJ)Z
 
     goto :goto_0
 
     .line 237
     :sswitch_1
-    invoke-virtual {v0}, Lcom/android/settings/deviceinfo/Status;->updateConnectivity()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/deviceinfo/Status;->updateConnectivity()V
 
     goto :goto_0
 

@@ -1,14 +1,14 @@
-.class final Lcom/android/settingslib/animation/DisappearAnimationUtils$1;
+.class final Lcom/android/settings_exlib/animation/DisappearAnimationUtils$1;
 .super Ljava/lang/Object;
 .source "DisappearAnimationUtils.java"
 
 # interfaces
-.implements Lcom/android/settingslib/animation/AppearAnimationUtils$RowTranslationScaler;
+.implements Lcom/android/settings_exlib/animation/AppearAnimationUtils$RowTranslationScaler;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/animation/DisappearAnimationUtils;
+    value = Lcom/android/settings_exlib/animation/DisappearAnimationUtils;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

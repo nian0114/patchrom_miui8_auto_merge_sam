@@ -1,14 +1,14 @@
-.class public Lcom/android/settings/DockSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/DockSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "DockSettings.java"
 
 # interfaces
 .implements Landroid/preference/Preference$OnPreferenceChangeListener;
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # instance fields
@@ -51,11 +51,11 @@
 
     .prologue
     .line 550
-    new-instance v0, Lcom/android/settings/DockSettings$3;
+    new-instance v0, Lcom/android/settings_ex/DockSettings$3;
 
-    invoke-direct {v0}, Lcom/android/settings/DockSettings$3;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/DockSettings$3;-><init>()V
 
-    sput-object v0, Lcom/android/settings/DockSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/DockSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -65,60 +65,60 @@
 
     .prologue
     .line 61
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 83
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/DockSettings;->mshowOudioOutputNotiDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/DockSettings;->mshowOudioOutputNotiDialog:Landroid/app/AlertDialog;
 
     .line 103
-    new-instance v0, Lcom/android/settings/DockSettings$1;
+    new-instance v0, Lcom/android/settings_ex/DockSettings$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/DockSettings$1;-><init>(Lcom/android/settings/DockSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/DockSettings$1;-><init>(Lcom/android/settings_ex/DockSettings;)V
 
-    iput-object v0, p0, Lcom/android/settings/DockSettings;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/DockSettings;->mReceiver:Landroid/content/BroadcastReceiver;
 
     .line 127
-    new-instance v0, Lcom/android/settings/DockSettings$2;
+    new-instance v0, Lcom/android/settings_ex/DockSettings$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/DockSettings$2;-><init>(Lcom/android/settings/DockSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/DockSettings$2;-><init>(Lcom/android/settings_ex/DockSettings;)V
 
-    iput-object v0, p0, Lcom/android/settings/DockSettings;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/DockSettings;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/DockSettings;)Landroid/preference/ListPreference;
+.method static synthetic access$000(Lcom/android/settings_ex/DockSettings;)Landroid/preference/ListPreference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/DockSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/DockSettings;
 
     .prologue
     .line 61
-    iget-object v0, p0, Lcom/android/settings/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/DockSettings;)Landroid/preference/CheckBoxPreference;
+.method static synthetic access$100(Lcom/android/settings_ex/DockSettings;)Landroid/preference/CheckBoxPreference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/DockSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/DockSettings;
 
     .prologue
     .line 61
-    iget-object v0, p0, Lcom/android/settings/DockSettings;->mCradleEnable:Landroid/preference/CheckBoxPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/DockSettings;->mCradleEnable:Landroid/preference/CheckBoxPreference;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/DockSettings;Landroid/content/Intent;)V
+.method static synthetic access$200(Lcom/android/settings_ex/DockSettings;Landroid/content/Intent;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/DockSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/DockSettings;
     .param p1, "x1"    # Landroid/content/Intent;
 
     .prologue
     .line 61
-    invoke-direct {p0, p1}, Lcom/android/settings/DockSettings;->updateBatteryStatus(Landroid/content/Intent;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/DockSettings;->updateBatteryStatus(Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -480,7 +480,7 @@
     .line 519
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -521,32 +521,32 @@
     .line 252
     const-string v1, "dock_sounds"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/CheckBoxPreference;
 
-    iput-object v1, p0, Lcom/android/settings/DockSettings;->mDockSounds:Landroid/preference/CheckBoxPreference;
+    iput-object v1, p0, Lcom/android/settings_ex/DockSettings;->mDockSounds:Landroid/preference/CheckBoxPreference;
 
     .line 253
-    iget-object v1, p0, Lcom/android/settings/DockSettings;->mDockSounds:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings;->mDockSounds:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v1, v3}, Landroid/preference/CheckBoxPreference;->setPersistent(Z)V
 
     .line 254
     const-string v1, "cradle_enable"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/CheckBoxPreference;
 
-    iput-object v1, p0, Lcom/android/settings/DockSettings;->mCradleEnable:Landroid/preference/CheckBoxPreference;
+    iput-object v1, p0, Lcom/android/settings_ex/DockSettings;->mCradleEnable:Landroid/preference/CheckBoxPreference;
 
     .line 256
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v1
 
@@ -555,11 +555,11 @@
     .line 257
     const-string v1, "cradle_enable"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 260
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/DockSettings;->needsDockSettings()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/DockSettings;->needsDockSettings()Z
 
     move-result v1
 
@@ -581,98 +581,98 @@
     :cond_1
     const-string v1, "dock_settings"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 263
     const-string v1, "dock_sounds"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 264
     const-string v1, "cradle_enable"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 267
     :cond_2
     const-string v1, "cover"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/PreferenceCategory;
 
-    iput-object v1, p0, Lcom/android/settings/DockSettings;->mCoverCategory:Landroid/preference/PreferenceCategory;
+    iput-object v1, p0, Lcom/android/settings_ex/DockSettings;->mCoverCategory:Landroid/preference/PreferenceCategory;
 
     .line 268
     const-string v1, "automatic_unlock"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/SwitchPreference;
 
-    iput-object v1, p0, Lcom/android/settings/DockSettings;->mAutomaticUnlock:Landroid/preference/SwitchPreference;
+    iput-object v1, p0, Lcom/android/settings_ex/DockSettings;->mAutomaticUnlock:Landroid/preference/SwitchPreference;
 
     .line 269
     const-string v1, "select_info"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/PreferenceScreen;
 
-    iput-object v1, p0, Lcom/android/settings/DockSettings;->mSelectInfo:Landroid/preference/PreferenceScreen;
+    iput-object v1, p0, Lcom/android/settings_ex/DockSettings;->mSelectInfo:Landroid/preference/PreferenceScreen;
 
     .line 270
     const-string v1, "lock_screen_dualclock"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/PreferenceScreen;
 
-    iput-object v1, p0, Lcom/android/settings/DockSettings;->mDualclock:Landroid/preference/PreferenceScreen;
+    iput-object v1, p0, Lcom/android/settings_ex/DockSettings;->mDualclock:Landroid/preference/PreferenceScreen;
 
     .line 271
     const-string v1, "cover_show_notifications"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/PreferenceScreen;
 
-    iput-object v1, p0, Lcom/android/settings/DockSettings;->mShowNotifications:Landroid/preference/PreferenceScreen;
+    iput-object v1, p0, Lcom/android/settings_ex/DockSettings;->mShowNotifications:Landroid/preference/PreferenceScreen;
 
     .line 272
     const-string v1, "fast_wireless_charging"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/SwitchPreference;
 
-    iput-object v1, p0, Lcom/android/settings/DockSettings;->mFastWirelessCharging:Landroid/preference/SwitchPreference;
+    iput-object v1, p0, Lcom/android/settings_ex/DockSettings;->mFastWirelessCharging:Landroid/preference/SwitchPreference;
 
     .line 275
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    iget-object v1, p0, Lcom/android/settings/DockSettings;->mCoverCategory:Landroid/preference/PreferenceCategory;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings;->mCoverCategory:Landroid/preference/PreferenceCategory;
 
     if-eqz v1, :cond_3
 
     .line 276
-    iget-object v1, p0, Lcom/android/settings/DockSettings;->mCoverCategory:Landroid/preference/PreferenceCategory;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings;->mCoverCategory:Landroid/preference/PreferenceCategory;
 
     const v2, 0x7f0e12c9
 
@@ -688,11 +688,11 @@
 
     if-ge v1, v2, :cond_4
 
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isCoverVerified(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isCoverVerified(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -702,51 +702,51 @@
     :cond_4
     const-string v1, "cover"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 281
     const-string v1, "automatic_unlock"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 282
     const-string v1, "sview_color_2014"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 283
     const-string v1, "select_info"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 284
     const-string v1, "lock_screen_dualclock"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 285
     const-string v1, "cover_show_notifications"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 286
     const-string v1, "led_cover_caller_id"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 323
     :cond_5
     :goto_0
     const-string v1, "automatic_unlock"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     if-eqz v1, :cond_6
 
     .line 324
-    iget-object v1, p0, Lcom/android/settings/DockSettings;->mAutomaticUnlock:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings;->mAutomaticUnlock:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -754,32 +754,32 @@
     :cond_6
     const-string v1, "hdmi"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/PreferenceCategory;
 
-    iput-object v1, p0, Lcom/android/settings/DockSettings;->mHdmiCategory:Landroid/preference/PreferenceCategory;
+    iput-object v1, p0, Lcom/android/settings_ex/DockSettings;->mHdmiCategory:Landroid/preference/PreferenceCategory;
 
     .line 327
     const-string v1, "audio_output"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/ListPreference;
 
-    iput-object v1, p0, Lcom/android/settings/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
+    iput-object v1, p0, Lcom/android/settings_ex/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
 
     .line 328
-    iget-object v1, p0, Lcom/android/settings/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
 
     invoke-virtual {v1, p0}, Landroid/preference/ListPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 330
-    invoke-static {}, Lcom/android/settings/Utils;->hasHDMImenuinAccessories()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->hasHDMImenuinAccessories()Z
 
     move-result v1
 
@@ -788,42 +788,42 @@
     .line 331
     const-string v1, "hdmi"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 332
     const-string v1, "audio_output"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 336
     :cond_7
     const-string v1, "cover_note"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/CheckBoxPreference;
 
-    iput-object v1, p0, Lcom/android/settings/DockSettings;->mCoverNote:Landroid/preference/CheckBoxPreference;
+    iput-object v1, p0, Lcom/android/settings_ex/DockSettings;->mCoverNote:Landroid/preference/CheckBoxPreference;
 
     .line 337
     const-string v1, "cover_note_weather_unit"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/ListPreference;
 
-    iput-object v1, p0, Lcom/android/settings/DockSettings;->mCoverNoteWeatherUnit:Landroid/preference/ListPreference;
+    iput-object v1, p0, Lcom/android/settings_ex/DockSettings;->mCoverNoteWeatherUnit:Landroid/preference/ListPreference;
 
     .line 339
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isExistCoverNotePackage(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isExistCoverNotePackage(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -832,16 +832,16 @@
     .line 341
     const-string v1, "cover_note"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 342
     const-string v1, "cover_note_weather_unit"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 348
     :goto_1
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -851,23 +851,23 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/DockSettings;->showWireLessChargeMenu:I
+    iput v1, p0, Lcom/android/settings_ex/DockSettings;->showWireLessChargeMenu:I
 
     .line 349
-    iget v1, p0, Lcom/android/settings/DockSettings;->showWireLessChargeMenu:I
+    iget v1, p0, Lcom/android/settings_ex/DockSettings;->showWireLessChargeMenu:I
 
     const/4 v2, 0x1
 
     if-ne v1, v2, :cond_12
 
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportFastWirelessCharger()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportFastWirelessCharger()Z
 
     move-result v1
 
     if-eqz v1, :cond_12
 
     .line 350
-    iget-object v1, p0, Lcom/android/settings/DockSettings;->mFastWirelessCharging:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings;->mFastWirelessCharging:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -877,7 +877,7 @@
 
     .line 287
     :cond_8
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v1
 
@@ -886,43 +886,43 @@
     .line 288
     const-string v1, "sview_color_2014"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 289
     const-string v1, "select_info"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 290
     const-string v1, "lock_screen_dualclock"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 291
     const-string v1, "cover_show_notifications"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 292
     const-string v1, "led_cover_caller_id"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 294
     :cond_9
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->getTypeOfCover(Landroid/content/Context;)I
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->getTypeOfCover(Landroid/content/Context;)I
 
     move-result v0
 
     .line 295
     .local v0, "covertype":I
-    iget-object v1, p0, Lcom/android/settings/DockSettings;->mCoverCategory:Landroid/preference/PreferenceCategory;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings;->mCoverCategory:Landroid/preference/PreferenceCategory;
 
     if-eqz v1, :cond_a
 
@@ -930,7 +930,7 @@
     if-nez v0, :cond_f
 
     .line 297
-    iget-object v1, p0, Lcom/android/settings/DockSettings;->mCoverCategory:Landroid/preference/PreferenceCategory;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings;->mCoverCategory:Landroid/preference/PreferenceCategory;
 
     const v2, 0x7f0e12d8
 
@@ -939,11 +939,11 @@
     .line 303
     :cond_a
     :goto_3
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->hasCoverWallpaper(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->hasCoverWallpaper(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -952,15 +952,15 @@
     .line 304
     const-string v1, "sview_color_2014"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 305
     :cond_b
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->hasCoverSettingOptions(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->hasCoverSettingOptions(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -969,15 +969,15 @@
     .line 307
     const-string v1, "select_info"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 309
     :cond_c
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->hasCoverDualClockOptionOnly(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->hasCoverDualClockOptionOnly(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -986,15 +986,15 @@
     .line 311
     const-string v1, "lock_screen_dualclock"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 313
     :cond_d
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->hasCoverSettingShowNotifications(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->hasCoverSettingShowNotifications(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -1003,15 +1003,15 @@
     .line 315
     const-string v1, "cover_show_notifications"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 317
     :cond_e
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->hasCoverLEDCallerID(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->hasCoverLEDCallerID(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -1020,7 +1020,7 @@
     .line 319
     const-string v1, "led_cover_caller_id"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -1031,7 +1031,7 @@
     if-ne v0, v1, :cond_10
 
     .line 299
-    iget-object v1, p0, Lcom/android/settings/DockSettings;->mCoverCategory:Landroid/preference/PreferenceCategory;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings;->mCoverCategory:Landroid/preference/PreferenceCategory;
 
     const v2, 0x7f0e12d9
 
@@ -1046,7 +1046,7 @@
     if-ne v0, v1, :cond_a
 
     .line 301
-    iget-object v1, p0, Lcom/android/settings/DockSettings;->mCoverCategory:Landroid/preference/PreferenceCategory;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings;->mCoverCategory:Landroid/preference/PreferenceCategory;
 
     const v2, 0x7f0e12d7
 
@@ -1057,12 +1057,12 @@
     .line 344
     .end local v0    # "covertype":I
     :cond_11
-    iget-object v1, p0, Lcom/android/settings/DockSettings;->mCoverNote:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings;->mCoverNote:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v1, p0}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 345
-    iget-object v1, p0, Lcom/android/settings/DockSettings;->mCoverNoteWeatherUnit:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings;->mCoverNoteWeatherUnit:Landroid/preference/ListPreference;
 
     invoke-virtual {v1, p0}, Landroid/preference/ListPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -1072,12 +1072,12 @@
     :cond_12
     const-string v1, "fast_charing_category"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     .line 353
     const-string v1, "fast_wireless_charging"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/DockSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/DockSettings;->removePreference(Ljava/lang/String;)V
 
     goto/16 :goto_2
 .end method
@@ -1087,7 +1087,7 @@
 
     .prologue
     .line 358
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -1121,14 +1121,14 @@
     if-ne v0, v1, :cond_0
 
     .line 243
-    iget-object v1, p0, Lcom/android/settings/DockSettings;->mFastWirelessCharging:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings;->mFastWirelessCharging:Landroid/preference/SwitchPreference;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 244
-    iget-object v1, p0, Lcom/android/settings/DockSettings;->mFastWirelessCharging:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings;->mFastWirelessCharging:Landroid/preference/SwitchPreference;
 
     const v2, 0x7f0e0111
 
@@ -1140,12 +1140,12 @@
 
     .line 246
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/DockSettings;->mFastWirelessCharging:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings;->mFastWirelessCharging:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v2}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 247
-    iget-object v1, p0, Lcom/android/settings/DockSettings;->mFastWirelessCharging:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings;->mFastWirelessCharging:Landroid/preference/SwitchPreference;
 
     const v2, 0x7f0e0114
 
@@ -1172,15 +1172,15 @@
 
     .prologue
     .line 139
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 140
     const v0, 0x7f080045
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/DockSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/DockSettings;->addPreferencesFromResource(I)V
 
     .line 141
-    invoke-direct {p0}, Lcom/android/settings/DockSettings;->initDockSettings()V
+    invoke-direct {p0}, Lcom/android/settings_ex/DockSettings;->initDockSettings()V
 
     .line 142
     return-void
@@ -1197,7 +1197,7 @@
     if-ne p1, v0, :cond_0
 
     .line 512
-    invoke-direct {p0}, Lcom/android/settings/DockSettings;->createUndockedMessage()Landroid/app/Dialog;
+    invoke-direct {p0}, Lcom/android/settings_ex/DockSettings;->createUndockedMessage()Landroid/app/Dialog;
 
     move-result-object v0
 
@@ -1216,23 +1216,23 @@
 
     .prologue
     .line 234
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 235
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/DockSettings;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 236
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/DockSettings;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
@@ -1275,14 +1275,14 @@
 
     .line 477
     .local v1, "value":I
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
     .line 478
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -1292,7 +1292,7 @@
 
     .line 481
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -1301,9 +1301,9 @@
     invoke-virtual {v2, v4}, Landroid/preference/ListPreference;->setValue(Ljava/lang/String;)V
 
     .line 482
-    iget-object v2, p0, Lcom/android/settings/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
 
-    iget-object v4, p0, Lcom/android/settings/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
 
     invoke-virtual {v4}, Landroid/preference/ListPreference;->getEntry()Ljava/lang/CharSequence;
 
@@ -1338,7 +1338,7 @@
 
     .line 485
     .local v1, "value":Z
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1375,12 +1375,12 @@
 
     .line 488
     .restart local v1    # "value":Z
-    iget-object v4, p0, Lcom/android/settings/DockSettings;->mCoverNote:Landroid/preference/CheckBoxPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/DockSettings;->mCoverNote:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v4, v1}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
 
     .line 489
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1440,14 +1440,14 @@
 
     .line 494
     .local v1, "value":I
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
     if-eqz v2, :cond_7
 
     .line 495
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -1457,7 +1457,7 @@
 
     .line 498
     :cond_7
-    iget-object v2, p0, Lcom/android/settings/DockSettings;->mCoverNoteWeatherUnit:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/DockSettings;->mCoverNoteWeatherUnit:Landroid/preference/ListPreference;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -1466,9 +1466,9 @@
     invoke-virtual {v2, v4}, Landroid/preference/ListPreference;->setValue(Ljava/lang/String;)V
 
     .line 499
-    iget-object v2, p0, Lcom/android/settings/DockSettings;->mCoverNoteWeatherUnit:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/DockSettings;->mCoverNoteWeatherUnit:Landroid/preference/ListPreference;
 
-    iget-object v4, p0, Lcom/android/settings/DockSettings;->mCoverNoteWeatherUnit:Landroid/preference/ListPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/DockSettings;->mCoverNoteWeatherUnit:Landroid/preference/ListPreference;
 
     invoke-virtual {v4}, Landroid/preference/ListPreference;->getEntry()Ljava/lang/CharSequence;
 
@@ -1500,7 +1500,7 @@
 
     .line 502
     .local v1, "value":Z
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1527,18 +1527,18 @@
     const/4 v5, 0x1
 
     .line 399
-    iget-object v6, p0, Lcom/android/settings/DockSettings;->mDockSounds:Landroid/preference/CheckBoxPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/DockSettings;->mDockSounds:Landroid/preference/CheckBoxPreference;
 
     if-ne p2, v6, :cond_2
 
     .line 400
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
     const-string v7, "dock_sounds_enabled"
 
-    iget-object v8, p0, Lcom/android/settings/DockSettings;->mDockSounds:Landroid/preference/CheckBoxPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/DockSettings;->mDockSounds:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v8}, Landroid/preference/CheckBoxPreference;->isChecked()Z
 
@@ -1558,7 +1558,7 @@
 
     .line 403
     :cond_2
-    iget-object v6, p0, Lcom/android/settings/DockSettings;->mCradleEnable:Landroid/preference/CheckBoxPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/DockSettings;->mCradleEnable:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {p2, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1567,7 +1567,7 @@
     if-eqz v6, :cond_8
 
     .line 405
-    iget-object v6, p0, Lcom/android/settings/DockSettings;->mCradleEnable:Landroid/preference/CheckBoxPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/DockSettings;->mCradleEnable:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v6}, Landroid/preference/CheckBoxPreference;->isChecked()Z
 
@@ -1575,7 +1575,7 @@
 
     .line 406
     .local v3, "value":Z
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
 
@@ -1589,7 +1589,7 @@
     invoke-static {v7, v8, v6}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 408
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -1615,7 +1615,7 @@
 
     .line 413
     .local v1, "intent":Landroid/content/Intent;
-    invoke-direct {p0}, Lcom/android/settings/DockSettings;->checkSmartDockType()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/DockSettings;->checkSmartDockType()Z
 
     move-result v4
 
@@ -1646,7 +1646,7 @@
     invoke-virtual {v1, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 428
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1681,7 +1681,7 @@
 
     .line 447
     :goto_4
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1699,7 +1699,7 @@
     if-eqz v3, :cond_1
 
     .line 451
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->showOudioOutputNotiDialog()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->showOudioOutputNotiDialog()V
 
     goto :goto_0
 
@@ -1745,7 +1745,7 @@
 
     .line 434
     .restart local v1    # "intent":Landroid/content/Intent;
-    invoke-direct {p0}, Lcom/android/settings/DockSettings;->checkSmartDockType()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/DockSettings;->checkSmartDockType()Z
 
     move-result v4
 
@@ -1772,7 +1772,7 @@
     invoke-virtual {v1, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 443
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1816,18 +1816,18 @@
     .end local v1    # "intent":Landroid/content/Intent;
     .end local v3    # "value":Z
     :cond_8
-    iget-object v6, p0, Lcom/android/settings/DockSettings;->mAutomaticUnlock:Landroid/preference/SwitchPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/DockSettings;->mAutomaticUnlock:Landroid/preference/SwitchPreference;
 
     if-ne p2, v6, :cond_a
 
     .line 457
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
     const-string v7, "automatic_unlock"
 
-    iget-object v8, p0, Lcom/android/settings/DockSettings;->mAutomaticUnlock:Landroid/preference/SwitchPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/DockSettings;->mAutomaticUnlock:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v8}, Landroid/preference/SwitchPreference;->isChecked()Z
 
@@ -1844,7 +1844,7 @@
 
     .line 459
     :cond_a
-    iget-object v4, p0, Lcom/android/settings/DockSettings;->mDualclock:Landroid/preference/PreferenceScreen;
+    iget-object v4, p0, Lcom/android/settings_ex/DockSettings;->mDualclock:Landroid/preference/PreferenceScreen;
 
     if-ne p2, v4, :cond_b
 
@@ -1862,7 +1862,7 @@
     if-eqz v4, :cond_b
 
     .line 462
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1872,11 +1872,11 @@
 
     const-string v7, "SViewCover"
 
-    invoke-static {v4, v5, v6, v7}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5, v6, v7}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 466
     :cond_b
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v5
 
@@ -1888,7 +1888,7 @@
 
     .prologue
     .line 151
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 152
     new-instance v1, Landroid/content/IntentFilter;
@@ -1902,22 +1902,22 @@
     invoke-virtual {v1, v9}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 154
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
-    iget-object v10, p0, Lcom/android/settings/DockSettings;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v10, p0, Lcom/android/settings_ex/DockSettings;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v9, v10, v1}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 155
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
     .line 156
     .local v6, "resolver":Landroid/content/ContentResolver;
-    iget-object v10, p0, Lcom/android/settings/DockSettings;->mDockSounds:Landroid/preference/CheckBoxPreference;
+    iget-object v10, p0, Lcom/android/settings_ex/DockSettings;->mDockSounds:Landroid/preference/CheckBoxPreference;
 
     const-string v9, "dock_sounds_enabled"
 
@@ -1935,7 +1935,7 @@
     invoke-virtual {v10, v9}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
 
     .line 157
-    iget-object v10, p0, Lcom/android/settings/DockSettings;->mCradleEnable:Landroid/preference/CheckBoxPreference;
+    iget-object v10, p0, Lcom/android/settings_ex/DockSettings;->mCradleEnable:Landroid/preference/CheckBoxPreference;
 
     const-string v9, "cradle_enable"
 
@@ -1955,7 +1955,7 @@
     invoke-virtual {v10, v9}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
 
     .line 158
-    iget-object v10, p0, Lcom/android/settings/DockSettings;->mAutomaticUnlock:Landroid/preference/SwitchPreference;
+    iget-object v10, p0, Lcom/android/settings_ex/DockSettings;->mAutomaticUnlock:Landroid/preference/SwitchPreference;
 
     const-string v9, "automatic_unlock"
 
@@ -1985,7 +1985,7 @@
 
     .line 160
     .local v4, "mHdmiValue":I
-    iget-object v9, p0, Lcom/android/settings/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -1994,9 +1994,9 @@
     invoke-virtual {v9, v10}, Landroid/preference/ListPreference;->setValue(Ljava/lang/String;)V
 
     .line 161
-    iget-object v9, p0, Lcom/android/settings/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
 
-    iget-object v10, p0, Lcom/android/settings/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
+    iget-object v10, p0, Lcom/android/settings_ex/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
 
     invoke-virtual {v10}, Landroid/preference/ListPreference;->getEntry()Ljava/lang/CharSequence;
 
@@ -2007,7 +2007,7 @@
     .line 163
     const-string v9, "audio"
 
-    invoke-virtual {p0, v9}, Lcom/android/settings/DockSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/DockSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2066,7 +2066,7 @@
     if-eqz v2, :cond_d
 
     .line 175
-    iget-object v9, p0, Lcom/android/settings/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
 
     invoke-virtual {v9}, Landroid/preference/ListPreference;->getDialog()Landroid/app/Dialog;
 
@@ -2075,7 +2075,7 @@
     if-eqz v9, :cond_1
 
     .line 176
-    iget-object v9, p0, Lcom/android/settings/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
 
     invoke-virtual {v9}, Landroid/preference/ListPreference;->getDialog()Landroid/app/Dialog;
 
@@ -2085,14 +2085,14 @@
 
     .line 179
     :cond_1
-    iget-object v9, p0, Lcom/android/settings/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
 
     const/4 v10, 0x0
 
     invoke-virtual {v9, v10}, Landroid/preference/ListPreference;->setEnabled(Z)V
 
     .line 180
-    iget-object v9, p0, Lcom/android/settings/DockSettings;->mCradleEnable:Landroid/preference/CheckBoxPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/DockSettings;->mCradleEnable:Landroid/preference/CheckBoxPreference;
 
     const/4 v10, 0x0
 
@@ -2100,7 +2100,7 @@
 
     .line 189
     :goto_4
-    iget-object v9, p0, Lcom/android/settings/DockSettings;->mCoverNote:Landroid/preference/CheckBoxPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/DockSettings;->mCoverNote:Landroid/preference/CheckBoxPreference;
 
     if-eqz v9, :cond_2
 
@@ -2120,14 +2120,14 @@
     .line 191
     .local v8, "value":Z
     :goto_5
-    iget-object v9, p0, Lcom/android/settings/DockSettings;->mCoverNote:Landroid/preference/CheckBoxPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/DockSettings;->mCoverNote:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v9, v8}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
 
     .line 194
     .end local v8    # "value":Z
     :cond_2
-    iget-object v9, p0, Lcom/android/settings/DockSettings;->mCoverNoteWeatherUnit:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/DockSettings;->mCoverNoteWeatherUnit:Landroid/preference/ListPreference;
 
     if-eqz v9, :cond_3
 
@@ -2142,7 +2142,7 @@
 
     .line 196
     .local v8, "value":I
-    iget-object v9, p0, Lcom/android/settings/DockSettings;->mCoverNoteWeatherUnit:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/DockSettings;->mCoverNoteWeatherUnit:Landroid/preference/ListPreference;
 
     invoke-static {v8}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -2151,9 +2151,9 @@
     invoke-virtual {v9, v10}, Landroid/preference/ListPreference;->setValue(Ljava/lang/String;)V
 
     .line 197
-    iget-object v9, p0, Lcom/android/settings/DockSettings;->mCoverNoteWeatherUnit:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/DockSettings;->mCoverNoteWeatherUnit:Landroid/preference/ListPreference;
 
-    iget-object v10, p0, Lcom/android/settings/DockSettings;->mCoverNoteWeatherUnit:Landroid/preference/ListPreference;
+    iget-object v10, p0, Lcom/android/settings_ex/DockSettings;->mCoverNoteWeatherUnit:Landroid/preference/ListPreference;
 
     invoke-virtual {v10}, Landroid/preference/ListPreference;->getEntry()Ljava/lang/CharSequence;
 
@@ -2164,7 +2164,7 @@
     .line 200
     .end local v8    # "value":I
     :cond_3
-    iget-object v9, p0, Lcom/android/settings/DockSettings;->mDualclock:Landroid/preference/PreferenceScreen;
+    iget-object v9, p0, Lcom/android/settings_ex/DockSettings;->mDualclock:Landroid/preference/PreferenceScreen;
 
     if-eqz v9, :cond_4
 
@@ -2185,7 +2185,7 @@
     .local v3, "isRoamingArea":Z
     if-nez v3, :cond_f
 
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticSKTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticSKTModel()Z
 
     move-result v9
 
@@ -2196,7 +2196,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v10
 
@@ -2216,7 +2216,7 @@
 
     move-result-object v9
 
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v10
 
@@ -2236,12 +2236,12 @@
 
     .line 205
     .local v7, "sText":Ljava/lang/String;
-    iget-object v9, p0, Lcom/android/settings/DockSettings;->mDualclock:Landroid/preference/PreferenceScreen;
+    iget-object v9, p0, Lcom/android/settings_ex/DockSettings;->mDualclock:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v9, v7}, Landroid/preference/PreferenceScreen;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 206
-    iget-object v9, p0, Lcom/android/settings/DockSettings;->mDualclock:Landroid/preference/PreferenceScreen;
+    iget-object v9, p0, Lcom/android/settings_ex/DockSettings;->mDualclock:Landroid/preference/PreferenceScreen;
 
     const/4 v10, 0x0
 
@@ -2250,7 +2250,7 @@
     .line 211
     .end local v7    # "sText":Ljava/lang/String;
     :goto_6
-    iget-object v9, p0, Lcom/android/settings/DockSettings;->mDualclock:Landroid/preference/PreferenceScreen;
+    iget-object v9, p0, Lcom/android/settings_ex/DockSettings;->mDualclock:Landroid/preference/PreferenceScreen;
 
     const/4 v10, 0x1
 
@@ -2259,7 +2259,7 @@
     .line 214
     .end local v3    # "isRoamingArea":Z
     :cond_4
-    iget-object v9, p0, Lcom/android/settings/DockSettings;->mShowNotifications:Landroid/preference/PreferenceScreen;
+    iget-object v9, p0, Lcom/android/settings_ex/DockSettings;->mShowNotifications:Landroid/preference/PreferenceScreen;
 
     if-eqz v9, :cond_5
 
@@ -2270,40 +2270,40 @@
 
     if-nez v9, :cond_5
 
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
-    invoke-static {v9}, Lcom/android/settings/Utils;->isCoverVerified(Landroid/content/Context;)Z
+    invoke-static {v9}, Lcom/android/settings_ex/Utils;->isCoverVerified(Landroid/content/Context;)Z
 
     move-result v9
 
     if-eqz v9, :cond_5
 
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v9
 
     if-nez v9, :cond_5
 
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
-    invoke-static {v9}, Lcom/android/settings/Utils;->hasCoverSettingShowNotifications(Landroid/content/Context;)Z
+    invoke-static {v9}, Lcom/android/settings_ex/Utils;->hasCoverSettingShowNotifications(Landroid/content/Context;)Z
 
     move-result v9
 
     if-eqz v9, :cond_5
 
     .line 218
-    iget-object v9, p0, Lcom/android/settings/DockSettings;->mShowNotifications:Landroid/preference/PreferenceScreen;
+    iget-object v9, p0, Lcom/android/settings_ex/DockSettings;->mShowNotifications:Landroid/preference/PreferenceScreen;
 
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
 
-    invoke-static {v10}, Lcom/android/settings/Utils;->getLockScreenShowNotificationSummary(Landroid/content/Context;)I
+    invoke-static {v10}, Lcom/android/settings_ex/Utils;->getLockScreenShowNotificationSummary(Landroid/content/Context;)I
 
     move-result v10
 
@@ -2311,13 +2311,13 @@
 
     .line 221
     :cond_5
-    iget v9, p0, Lcom/android/settings/DockSettings;->showWireLessChargeMenu:I
+    iget v9, p0, Lcom/android/settings_ex/DockSettings;->showWireLessChargeMenu:I
 
     const/4 v10, 0x1
 
     if-ne v9, v10, :cond_7
 
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportFastWirelessCharger()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportFastWirelessCharger()Z
 
     move-result v9
 
@@ -2350,7 +2350,7 @@
 
     .line 227
     :cond_6
-    iget-object v10, p0, Lcom/android/settings/DockSettings;->mFastWirelessCharging:Landroid/preference/SwitchPreference;
+    iget-object v10, p0, Lcom/android/settings_ex/DockSettings;->mFastWirelessCharging:Landroid/preference/SwitchPreference;
 
     const/4 v9, 0x1
 
@@ -2364,11 +2364,11 @@
     .line 229
     .end local v8    # "value":I
     :cond_7
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
-    iget-object v10, p0, Lcom/android/settings/DockSettings;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v10, p0, Lcom/android/settings_ex/DockSettings;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
 
     new-instance v11, Landroid/content/IntentFilter;
 
@@ -2433,14 +2433,14 @@
 
     .line 182
     :cond_d
-    iget-object v9, p0, Lcom/android/settings/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
 
     const/4 v10, 0x1
 
     invoke-virtual {v9, v10}, Landroid/preference/ListPreference;->setEnabled(Z)V
 
     .line 183
-    iget-object v9, p0, Lcom/android/settings/DockSettings;->mCradleEnable:Landroid/preference/CheckBoxPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/DockSettings;->mCradleEnable:Landroid/preference/CheckBoxPreference;
 
     const/4 v10, 0x1
 
@@ -2457,13 +2457,13 @@
     .line 208
     .restart local v3    # "isRoamingArea":Z
     :cond_f
-    iget-object v9, p0, Lcom/android/settings/DockSettings;->mDualclock:Landroid/preference/PreferenceScreen;
+    iget-object v9, p0, Lcom/android/settings_ex/DockSettings;->mDualclock:Landroid/preference/PreferenceScreen;
 
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
 
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v11
 
@@ -2475,7 +2475,7 @@
 
     move-result v11
 
-    invoke-static {v10, v11}, Lcom/android/settings/Utils;->getOnOffstatus(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v10, v11}, Lcom/android/settings_ex/Utils;->getOnOffstatus(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v10
 
@@ -2501,7 +2501,7 @@
     .line 528
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/DockSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DockSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -2509,17 +2509,17 @@
 
     .line 530
     .local v0, "builder":Landroid/app/AlertDialog$Builder;
-    iget-object v1, p0, Lcom/android/settings/DockSettings;->mshowOudioOutputNotiDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings;->mshowOudioOutputNotiDialog:Landroid/app/AlertDialog;
 
     if-eqz v1, :cond_0
 
     .line 531
-    iget-object v1, p0, Lcom/android/settings/DockSettings;->mshowOudioOutputNotiDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings;->mshowOudioOutputNotiDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 532
-    iput-object v2, p0, Lcom/android/settings/DockSettings;->mshowOudioOutputNotiDialog:Landroid/app/AlertDialog;
+    iput-object v2, p0, Lcom/android/settings_ex/DockSettings;->mshowOudioOutputNotiDialog:Landroid/app/AlertDialog;
 
     .line 543
     :cond_0
@@ -2542,10 +2542,10 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/DockSettings;->mshowOudioOutputNotiDialog:Landroid/app/AlertDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/DockSettings;->mshowOudioOutputNotiDialog:Landroid/app/AlertDialog;
 
     .line 547
-    iget-object v1, p0, Lcom/android/settings/DockSettings;->mshowOudioOutputNotiDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings;->mshowOudioOutputNotiDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 

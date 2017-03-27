@@ -1,11 +1,11 @@
-.class Lcom/android/settings/applications/RunningState$MergedItem;
-.super Lcom/android/settings/applications/RunningState$BaseItem;
+.class Lcom/android/settings_ex/applications/RunningState$MergedItem;
+.super Lcom/android/settings_ex/applications/RunningState$BaseItem;
 .source "RunningState.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/RunningState;
+    value = Lcom/android/settings_ex/applications/RunningState;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/applications/RunningState$MergedItem;",
+            "Lcom/android/settings_ex/applications/RunningState$MergedItem;",
             ">;"
         }
     .end annotation
@@ -35,26 +35,26 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/applications/RunningState$ProcessItem;",
+            "Lcom/android/settings_ex/applications/RunningState$ProcessItem;",
             ">;"
         }
     .end annotation
 .end field
 
-.field mProcess:Lcom/android/settings/applications/RunningState$ProcessItem;
+.field mProcess:Lcom/android/settings_ex/applications/RunningState$ProcessItem;
 
 .field final mServices:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/applications/RunningState$ServiceItem;",
+            "Lcom/android/settings_ex/applications/RunningState$ServiceItem;",
             ">;"
         }
     .end annotation
 .end field
 
-.field mUser:Lcom/android/settings/applications/RunningState$UserState;
+.field mUser:Lcom/android/settings_ex/applications/RunningState$UserState;
 
 
 # direct methods
@@ -68,33 +68,33 @@
     .line 614
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0, p1}, Lcom/android/settings/applications/RunningState$BaseItem;-><init>(ZI)V
+    invoke-direct {p0, v0, p1}, Lcom/android/settings_ex/applications/RunningState$BaseItem;-><init>(ZI)V
 
     .line 607
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mOtherProcesses:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mOtherProcesses:Ljava/util/ArrayList;
 
     .line 608
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mServices:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mServices:Ljava/util/ArrayList;
 
     .line 609
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mChildren:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mChildren:Ljava/util/ArrayList;
 
     .line 611
-    iput v1, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mLastNumProcesses:I
+    iput v1, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mLastNumProcesses:I
 
-    iput v1, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mLastNumServices:I
+    iput v1, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mLastNumServices:I
 
     .line 615
     return-void
@@ -110,20 +110,20 @@
     const/4 v5, 0x1
 
     .line 618
-    iget v1, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mLastNumProcesses:I
+    iget v1, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mLastNumProcesses:I
 
     if-ne v1, p2, :cond_0
 
-    iget v1, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mLastNumServices:I
+    iget v1, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mLastNumServices:I
 
     if-eq v1, p3, :cond_2
 
     .line 619
     :cond_0
-    iput p2, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mLastNumProcesses:I
+    iput p2, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mLastNumProcesses:I
 
     .line 620
-    iput p3, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mLastNumServices:I
+    iput p3, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mLastNumServices:I
 
     .line 621
     const v0, 0x7f0e0864
@@ -166,7 +166,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mDescription:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mDescription:Ljava/lang/String;
 
     .line 632
     .end local v0    # "resid":I
@@ -192,19 +192,19 @@
 
 
 # virtual methods
-.method public loadIcon(Landroid/content/Context;Lcom/android/settings/applications/RunningState;)Landroid/graphics/drawable/Drawable;
+.method public loadIcon(Landroid/content/Context;Lcom/android/settings_ex/applications/RunningState;)Landroid/graphics/drawable/Drawable;
     .locals 2
     .param p1, "context"    # Landroid/content/Context;
-    .param p2, "state"    # Lcom/android/settings/applications/RunningState;
+    .param p2, "state"    # Lcom/android/settings_ex/applications/RunningState;
 
     .prologue
     .line 711
-    iget-object v1, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mUser:Lcom/android/settings/applications/RunningState$UserState;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mUser:Lcom/android/settings_ex/applications/RunningState$UserState;
 
     if-nez v1, :cond_0
 
     .line 712
-    invoke-super {p0, p1, p2}, Lcom/android/settings/applications/RunningState$BaseItem;->loadIcon(Landroid/content/Context;Lcom/android/settings/applications/RunningState;)Landroid/graphics/drawable/Drawable;
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/applications/RunningState$BaseItem;->loadIcon(Landroid/content/Context;Lcom/android/settings_ex/applications/RunningState;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -214,16 +214,16 @@
 
     .line 714
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mUser:Lcom/android/settings/applications/RunningState$UserState;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mUser:Lcom/android/settings_ex/applications/RunningState$UserState;
 
-    iget-object v1, v1, Lcom/android/settings/applications/RunningState$UserState;->mIcon:Landroid/graphics/drawable/Drawable;
+    iget-object v1, v1, Lcom/android/settings_ex/applications/RunningState$UserState;->mIcon:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_2
 
     .line 715
-    iget-object v1, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mUser:Lcom/android/settings/applications/RunningState$UserState;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mUser:Lcom/android/settings_ex/applications/RunningState$UserState;
 
-    iget-object v1, v1, Lcom/android/settings/applications/RunningState$UserState;->mIcon:Landroid/graphics/drawable/Drawable;
+    iget-object v1, v1, Lcom/android/settings_ex/applications/RunningState$UserState;->mIcon:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
 
@@ -234,9 +234,9 @@
     if-nez v0, :cond_1
 
     .line 717
-    iget-object v1, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mUser:Lcom/android/settings/applications/RunningState$UserState;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mUser:Lcom/android/settings_ex/applications/RunningState$UserState;
 
-    iget-object v1, v1, Lcom/android/settings/applications/RunningState$UserState;->mIcon:Landroid/graphics/drawable/Drawable;
+    iget-object v1, v1, Lcom/android/settings_ex/applications/RunningState$UserState;->mIcon:Landroid/graphics/drawable/Drawable;
 
     goto :goto_0
 
@@ -267,15 +267,15 @@
 
     .prologue
     .line 635
-    iput-boolean p2, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mBackground:Z
+    iput-boolean p2, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mBackground:Z
 
     .line 637
-    iget-object v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mUser:Lcom/android/settings/applications/RunningState$UserState;
+    iget-object v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mUser:Lcom/android/settings_ex/applications/RunningState$UserState;
 
     if-eqz v6, :cond_4
 
     .line 643
-    iget-object v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mChildren:Ljava/util/ArrayList;
+    iget-object v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mChildren:Ljava/util/ArrayList;
 
     const/4 v7, 0x0
 
@@ -283,32 +283,32 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/applications/RunningState$MergedItem;
+    check-cast v1, Lcom/android/settings_ex/applications/RunningState$MergedItem;
 
     .line 644
-    .local v1, "child0":Lcom/android/settings/applications/RunningState$MergedItem;
-    iget-object v6, v1, Lcom/android/settings/applications/RunningState$MergedItem;->mProcess:Lcom/android/settings/applications/RunningState$ProcessItem;
+    .local v1, "child0":Lcom/android/settings_ex/applications/RunningState$MergedItem;
+    iget-object v6, v1, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mProcess:Lcom/android/settings_ex/applications/RunningState$ProcessItem;
 
-    iget-object v6, v6, Lcom/android/settings/applications/RunningState$ProcessItem;->mPackageInfo:Landroid/content/pm/PackageItemInfo;
+    iget-object v6, v6, Lcom/android/settings_ex/applications/RunningState$ProcessItem;->mPackageInfo:Landroid/content/pm/PackageItemInfo;
 
-    iput-object v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mPackageInfo:Landroid/content/pm/PackageItemInfo;
+    iput-object v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mPackageInfo:Landroid/content/pm/PackageItemInfo;
 
     .line 645
-    iget-object v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mUser:Lcom/android/settings/applications/RunningState$UserState;
+    iget-object v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mUser:Lcom/android/settings_ex/applications/RunningState$UserState;
 
     if-eqz v6, :cond_1
 
-    iget-object v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mUser:Lcom/android/settings/applications/RunningState$UserState;
+    iget-object v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mUser:Lcom/android/settings_ex/applications/RunningState$UserState;
 
-    iget-object v6, v6, Lcom/android/settings/applications/RunningState$UserState;->mLabel:Ljava/lang/String;
+    iget-object v6, v6, Lcom/android/settings_ex/applications/RunningState$UserState;->mLabel:Ljava/lang/String;
 
     :goto_0
-    iput-object v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mLabel:Ljava/lang/String;
+    iput-object v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mLabel:Ljava/lang/String;
 
     .line 646
-    iget-object v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mLabel:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mLabel:Ljava/lang/String;
 
-    iput-object v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mDisplayLabel:Ljava/lang/CharSequence;
+    iput-object v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mDisplayLabel:Ljava/lang/CharSequence;
 
     .line 647
     const/4 v3, 0x0
@@ -321,14 +321,14 @@
     .local v4, "numServices":I
     const-wide/16 v6, -0x1
 
-    iput-wide v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mActiveSince:J
+    iput-wide v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mActiveSince:J
 
     .line 650
     const/4 v2, 0x0
 
     .local v2, "i":I
     :goto_1
-    iget-object v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mChildren:Ljava/util/ArrayList;
+    iget-object v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mChildren:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
@@ -337,27 +337,27 @@
     if-ge v2, v6, :cond_2
 
     .line 651
-    iget-object v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mChildren:Ljava/util/ArrayList;
+    iget-object v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mChildren:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/applications/RunningState$MergedItem;
+    check-cast v0, Lcom/android/settings_ex/applications/RunningState$MergedItem;
 
     .line 652
-    .local v0, "child":Lcom/android/settings/applications/RunningState$MergedItem;
-    iget v6, v0, Lcom/android/settings/applications/RunningState$MergedItem;->mLastNumProcesses:I
+    .local v0, "child":Lcom/android/settings_ex/applications/RunningState$MergedItem;
+    iget v6, v0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mLastNumProcesses:I
 
     add-int/2addr v3, v6
 
     .line 653
-    iget v6, v0, Lcom/android/settings/applications/RunningState$MergedItem;->mLastNumServices:I
+    iget v6, v0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mLastNumServices:I
 
     add-int/2addr v4, v6
 
     .line 654
-    iget-wide v6, v0, Lcom/android/settings/applications/RunningState$MergedItem;->mActiveSince:J
+    iget-wide v6, v0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mActiveSince:J
 
     const-wide/16 v8, 0x0
 
@@ -365,18 +365,18 @@
 
     if-ltz v6, :cond_0
 
-    iget-wide v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mActiveSince:J
+    iget-wide v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mActiveSince:J
 
-    iget-wide v8, v0, Lcom/android/settings/applications/RunningState$MergedItem;->mActiveSince:J
+    iget-wide v8, v0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mActiveSince:J
 
     cmp-long v6, v6, v8
 
     if-gez v6, :cond_0
 
     .line 655
-    iget-wide v6, v0, Lcom/android/settings/applications/RunningState$MergedItem;->mActiveSince:J
+    iget-wide v6, v0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mActiveSince:J
 
-    iput-wide v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mActiveSince:J
+    iput-wide v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mActiveSince:J
 
     .line 650
     :cond_0
@@ -385,7 +385,7 @@
     goto :goto_1
 
     .line 645
-    .end local v0    # "child":Lcom/android/settings/applications/RunningState$MergedItem;
+    .end local v0    # "child":Lcom/android/settings_ex/applications/RunningState$MergedItem;
     .end local v2    # "i":I
     .end local v3    # "numProcesses":I
     .end local v4    # "numServices":I
@@ -399,15 +399,15 @@
     .restart local v3    # "numProcesses":I
     .restart local v4    # "numServices":I
     :cond_2
-    iget-boolean v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mBackground:Z
+    iget-boolean v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mBackground:Z
 
     if-nez v6, :cond_3
 
     .line 659
-    invoke-direct {p0, p1, v3, v4}, Lcom/android/settings/applications/RunningState$MergedItem;->setDescription(Landroid/content/Context;II)V
+    invoke-direct {p0, p1, v3, v4}, Lcom/android/settings_ex/applications/RunningState$MergedItem;->setDescription(Landroid/content/Context;II)V
 
     .line 680
-    .end local v1    # "child0":Lcom/android/settings/applications/RunningState$MergedItem;
+    .end local v1    # "child0":Lcom/android/settings_ex/applications/RunningState$MergedItem;
     .end local v3    # "numProcesses":I
     .end local v4    # "numServices":I
     :cond_3
@@ -418,42 +418,42 @@
     .line 662
     .end local v2    # "i":I
     :cond_4
-    iget-object v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mProcess:Lcom/android/settings/applications/RunningState$ProcessItem;
+    iget-object v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mProcess:Lcom/android/settings_ex/applications/RunningState$ProcessItem;
 
-    iget-object v6, v6, Lcom/android/settings/applications/RunningState$ProcessItem;->mPackageInfo:Landroid/content/pm/PackageItemInfo;
+    iget-object v6, v6, Lcom/android/settings_ex/applications/RunningState$ProcessItem;->mPackageInfo:Landroid/content/pm/PackageItemInfo;
 
-    iput-object v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mPackageInfo:Landroid/content/pm/PackageItemInfo;
+    iput-object v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mPackageInfo:Landroid/content/pm/PackageItemInfo;
 
     .line 663
-    iget-object v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mProcess:Lcom/android/settings/applications/RunningState$ProcessItem;
+    iget-object v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mProcess:Lcom/android/settings_ex/applications/RunningState$ProcessItem;
 
-    iget-object v6, v6, Lcom/android/settings/applications/RunningState$ProcessItem;->mDisplayLabel:Ljava/lang/CharSequence;
+    iget-object v6, v6, Lcom/android/settings_ex/applications/RunningState$ProcessItem;->mDisplayLabel:Ljava/lang/CharSequence;
 
-    iput-object v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mDisplayLabel:Ljava/lang/CharSequence;
+    iput-object v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mDisplayLabel:Ljava/lang/CharSequence;
 
     .line 664
-    iget-object v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mProcess:Lcom/android/settings/applications/RunningState$ProcessItem;
+    iget-object v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mProcess:Lcom/android/settings_ex/applications/RunningState$ProcessItem;
 
-    iget-object v6, v6, Lcom/android/settings/applications/RunningState$ProcessItem;->mLabel:Ljava/lang/String;
+    iget-object v6, v6, Lcom/android/settings_ex/applications/RunningState$ProcessItem;->mLabel:Ljava/lang/String;
 
-    iput-object v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mLabel:Ljava/lang/String;
+    iput-object v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mLabel:Ljava/lang/String;
 
     .line 666
-    iget-boolean v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mBackground:Z
+    iget-boolean v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mBackground:Z
 
     if-nez v6, :cond_5
 
     .line 667
-    iget-object v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mProcess:Lcom/android/settings/applications/RunningState$ProcessItem;
+    iget-object v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mProcess:Lcom/android/settings_ex/applications/RunningState$ProcessItem;
 
-    iget v6, v6, Lcom/android/settings/applications/RunningState$ProcessItem;->mPid:I
+    iget v6, v6, Lcom/android/settings_ex/applications/RunningState$ProcessItem;->mPid:I
 
     if-lez v6, :cond_7
 
     const/4 v6, 0x1
 
     :goto_2
-    iget-object v7, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mOtherProcesses:Ljava/util/ArrayList;
+    iget-object v7, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mOtherProcesses:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
@@ -461,26 +461,26 @@
 
     add-int/2addr v6, v7
 
-    iget-object v7, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mServices:Ljava/util/ArrayList;
+    iget-object v7, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mServices:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
     move-result v7
 
-    invoke-direct {p0, p1, v6, v7}, Lcom/android/settings/applications/RunningState$MergedItem;->setDescription(Landroid/content/Context;II)V
+    invoke-direct {p0, p1, v6, v7}, Lcom/android/settings_ex/applications/RunningState$MergedItem;->setDescription(Landroid/content/Context;II)V
 
     .line 671
     :cond_5
     const-wide/16 v6, -0x1
 
-    iput-wide v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mActiveSince:J
+    iput-wide v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mActiveSince:J
 
     .line 672
     const/4 v2, 0x0
 
     .restart local v2    # "i":I
     :goto_3
-    iget-object v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mServices:Ljava/util/ArrayList;
+    iget-object v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mServices:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
@@ -489,17 +489,17 @@
     if-ge v2, v6, :cond_3
 
     .line 673
-    iget-object v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mServices:Ljava/util/ArrayList;
+    iget-object v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mServices:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/settings/applications/RunningState$ServiceItem;
+    check-cast v5, Lcom/android/settings_ex/applications/RunningState$ServiceItem;
 
     .line 674
-    .local v5, "si":Lcom/android/settings/applications/RunningState$ServiceItem;
-    iget-wide v6, v5, Lcom/android/settings/applications/RunningState$ServiceItem;->mActiveSince:J
+    .local v5, "si":Lcom/android/settings_ex/applications/RunningState$ServiceItem;
+    iget-wide v6, v5, Lcom/android/settings_ex/applications/RunningState$ServiceItem;->mActiveSince:J
 
     const-wide/16 v8, 0x0
 
@@ -507,18 +507,18 @@
 
     if-ltz v6, :cond_6
 
-    iget-wide v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mActiveSince:J
+    iget-wide v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mActiveSince:J
 
-    iget-wide v8, v5, Lcom/android/settings/applications/RunningState$ServiceItem;->mActiveSince:J
+    iget-wide v8, v5, Lcom/android/settings_ex/applications/RunningState$ServiceItem;->mActiveSince:J
 
     cmp-long v6, v6, v8
 
     if-gez v6, :cond_6
 
     .line 675
-    iget-wide v6, v5, Lcom/android/settings/applications/RunningState$ServiceItem;->mActiveSince:J
+    iget-wide v6, v5, Lcom/android/settings_ex/applications/RunningState$ServiceItem;->mActiveSince:J
 
-    iput-wide v6, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mActiveSince:J
+    iput-wide v6, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mActiveSince:J
 
     .line 672
     :cond_6
@@ -528,7 +528,7 @@
 
     .line 667
     .end local v2    # "i":I
-    .end local v5    # "si":Lcom/android/settings/applications/RunningState$ServiceItem;
+    .end local v5    # "si":Lcom/android/settings_ex/applications/RunningState$ServiceItem;
     :cond_7
     const/4 v6, 0x0
 
@@ -543,21 +543,21 @@
     const/4 v8, 0x0
 
     .line 684
-    iget-object v3, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mUser:Lcom/android/settings/applications/RunningState$UserState;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mUser:Lcom/android/settings_ex/applications/RunningState$UserState;
 
     if-eqz v3, :cond_0
 
     .line 685
     const-wide/16 v4, 0x0
 
-    iput-wide v4, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mSize:J
+    iput-wide v4, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mSize:J
 
     .line 686
     const/4 v1, 0x0
 
     .local v1, "i":I
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mChildren:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mChildren:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -566,26 +566,26 @@
     if-ge v1, v3, :cond_1
 
     .line 687
-    iget-object v3, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mChildren:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mChildren:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/applications/RunningState$MergedItem;
+    check-cast v0, Lcom/android/settings_ex/applications/RunningState$MergedItem;
 
     .line 688
-    .local v0, "child":Lcom/android/settings/applications/RunningState$MergedItem;
-    invoke-virtual {v0, p1}, Lcom/android/settings/applications/RunningState$MergedItem;->updateSize(Landroid/content/Context;)Z
+    .local v0, "child":Lcom/android/settings_ex/applications/RunningState$MergedItem;
+    invoke-virtual {v0, p1}, Lcom/android/settings_ex/applications/RunningState$MergedItem;->updateSize(Landroid/content/Context;)Z
 
     .line 689
-    iget-wide v4, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mSize:J
+    iget-wide v4, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mSize:J
 
-    iget-wide v6, v0, Lcom/android/settings/applications/RunningState$MergedItem;->mSize:J
+    iget-wide v6, v0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mSize:J
 
     add-long/2addr v4, v6
 
-    iput-wide v4, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mSize:J
+    iput-wide v4, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mSize:J
 
     .line 686
     add-int/lit8 v1, v1, 0x1
@@ -593,21 +593,21 @@
     goto :goto_0
 
     .line 692
-    .end local v0    # "child":Lcom/android/settings/applications/RunningState$MergedItem;
+    .end local v0    # "child":Lcom/android/settings_ex/applications/RunningState$MergedItem;
     .end local v1    # "i":I
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mProcess:Lcom/android/settings/applications/RunningState$ProcessItem;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mProcess:Lcom/android/settings_ex/applications/RunningState$ProcessItem;
 
-    iget-wide v4, v3, Lcom/android/settings/applications/RunningState$ProcessItem;->mSize:J
+    iget-wide v4, v3, Lcom/android/settings_ex/applications/RunningState$ProcessItem;->mSize:J
 
-    iput-wide v4, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mSize:J
+    iput-wide v4, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mSize:J
 
     .line 693
     const/4 v1, 0x0
 
     .restart local v1    # "i":I
     :goto_1
-    iget-object v3, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mOtherProcesses:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mOtherProcesses:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -616,21 +616,21 @@
     if-ge v1, v3, :cond_1
 
     .line 694
-    iget-wide v4, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mSize:J
+    iget-wide v4, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mSize:J
 
-    iget-object v3, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mOtherProcesses:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mOtherProcesses:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/settings/applications/RunningState$ProcessItem;
+    check-cast v3, Lcom/android/settings_ex/applications/RunningState$ProcessItem;
 
-    iget-wide v6, v3, Lcom/android/settings/applications/RunningState$ProcessItem;->mSize:J
+    iget-wide v6, v3, Lcom/android/settings_ex/applications/RunningState$ProcessItem;->mSize:J
 
     add-long/2addr v4, v6
 
-    iput-wide v4, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mSize:J
+    iput-wide v4, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mSize:J
 
     .line 693
     add-int/lit8 v1, v1, 0x1
@@ -639,7 +639,7 @@
 
     .line 698
     :cond_1
-    iget-wide v4, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mSize:J
+    iget-wide v4, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mSize:J
 
     invoke-static {p1, v4, v5}, Landroid/text/format/Formatter;->formatShortFileSize(Landroid/content/Context;J)Ljava/lang/String;
 
@@ -647,7 +647,7 @@
 
     .line 700
     .local v2, "sizeStr":Ljava/lang/String;
-    iget-object v3, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mSizeStr:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mSizeStr:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -656,7 +656,7 @@
     if-nez v3, :cond_2
 
     .line 701
-    iput-object v2, p0, Lcom/android/settings/applications/RunningState$MergedItem;->mSizeStr:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/applications/RunningState$MergedItem;->mSizeStr:Ljava/lang/String;
 
     .line 707
     :cond_2

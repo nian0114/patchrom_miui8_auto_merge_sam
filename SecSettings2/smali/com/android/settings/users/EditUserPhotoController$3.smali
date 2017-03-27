@@ -1,11 +1,11 @@
-.class Lcom/android/settings/users/EditUserPhotoController$3;
+.class Lcom/android/settings_ex/users/EditUserPhotoController$3;
 .super Landroid/os/AsyncTask;
 .source "EditUserPhotoController.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/users/EditUserPhotoController;->onPhotoCropped(Landroid/net/Uri;Z)V
+    value = Lcom/android/settings_ex/users/EditUserPhotoController;->onPhotoCropped(Landroid/net/Uri;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/users/EditUserPhotoController;
+.field final synthetic this$0:Lcom/android/settings_ex/users/EditUserPhotoController;
 
 .field final synthetic val$cropped:Z
 
@@ -34,16 +34,16 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/users/EditUserPhotoController;ZLandroid/net/Uri;)V
+.method constructor <init>(Lcom/android/settings_ex/users/EditUserPhotoController;ZLandroid/net/Uri;)V
     .locals 0
 
     .prologue
     .line 248
-    iput-object p1, p0, Lcom/android/settings/users/EditUserPhotoController$3;->this$0:Lcom/android/settings/users/EditUserPhotoController;
+    iput-object p1, p0, Lcom/android/settings_ex/users/EditUserPhotoController$3;->this$0:Lcom/android/settings_ex/users/EditUserPhotoController;
 
-    iput-boolean p2, p0, Lcom/android/settings/users/EditUserPhotoController$3;->val$cropped:Z
+    iput-boolean p2, p0, Lcom/android/settings_ex/users/EditUserPhotoController$3;->val$cropped:Z
 
-    iput-object p3, p0, Lcom/android/settings/users/EditUserPhotoController$3;->val$data:Landroid/net/Uri;
+    iput-object p3, p0, Lcom/android/settings_ex/users/EditUserPhotoController$3;->val$data:Landroid/net/Uri;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
@@ -60,7 +60,7 @@
     .line 251
     move-object/from16 v0, p0
 
-    iget-boolean v13, v0, Lcom/android/settings/users/EditUserPhotoController$3;->val$cropped:Z
+    iget-boolean v13, v0, Lcom/android/settings_ex/users/EditUserPhotoController$3;->val$cropped:Z
 
     if-eqz v13, :cond_2
 
@@ -72,10 +72,10 @@
     :try_start_0
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/users/EditUserPhotoController$3;->this$0:Lcom/android/settings/users/EditUserPhotoController;
+    iget-object v13, v0, Lcom/android/settings_ex/users/EditUserPhotoController$3;->this$0:Lcom/android/settings_ex/users/EditUserPhotoController;
 
-    # getter for: Lcom/android/settings/users/EditUserPhotoController;->mContext:Landroid/content/Context;
-    invoke-static {v13}, Lcom/android/settings/users/EditUserPhotoController;->access$300(Lcom/android/settings/users/EditUserPhotoController;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/users/EditUserPhotoController;->mContext:Landroid/content/Context;
+    invoke-static {v13}, Lcom/android/settings_ex/users/EditUserPhotoController;->access$300(Lcom/android/settings_ex/users/EditUserPhotoController;)Landroid/content/Context;
 
     move-result-object v13
 
@@ -85,7 +85,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/users/EditUserPhotoController$3;->val$data:Landroid/net/Uri;
+    iget-object v14, v0, Lcom/android/settings_ex/users/EditUserPhotoController$3;->val$data:Landroid/net/Uri;
 
     invoke-virtual {v13, v14}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
 
@@ -212,19 +212,19 @@
     :cond_2
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/users/EditUserPhotoController$3;->this$0:Lcom/android/settings/users/EditUserPhotoController;
+    iget-object v13, v0, Lcom/android/settings_ex/users/EditUserPhotoController$3;->this$0:Lcom/android/settings_ex/users/EditUserPhotoController;
 
-    # getter for: Lcom/android/settings/users/EditUserPhotoController;->mPhotoSize:I
-    invoke-static {v13}, Lcom/android/settings/users/EditUserPhotoController;->access$400(Lcom/android/settings/users/EditUserPhotoController;)I
+    # getter for: Lcom/android/settings_ex/users/EditUserPhotoController;->mPhotoSize:I
+    invoke-static {v13}, Lcom/android/settings_ex/users/EditUserPhotoController;->access$400(Lcom/android/settings_ex/users/EditUserPhotoController;)I
 
     move-result v13
 
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/users/EditUserPhotoController$3;->this$0:Lcom/android/settings/users/EditUserPhotoController;
+    iget-object v14, v0, Lcom/android/settings_ex/users/EditUserPhotoController$3;->this$0:Lcom/android/settings_ex/users/EditUserPhotoController;
 
-    # getter for: Lcom/android/settings/users/EditUserPhotoController;->mPhotoSize:I
-    invoke-static {v14}, Lcom/android/settings/users/EditUserPhotoController;->access$400(Lcom/android/settings/users/EditUserPhotoController;)I
+    # getter for: Lcom/android/settings_ex/users/EditUserPhotoController;->mPhotoSize:I
+    invoke-static {v14}, Lcom/android/settings_ex/users/EditUserPhotoController;->access$400(Lcom/android/settings_ex/users/EditUserPhotoController;)I
 
     move-result v14
 
@@ -249,10 +249,10 @@
     :try_start_5
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/users/EditUserPhotoController$3;->this$0:Lcom/android/settings/users/EditUserPhotoController;
+    iget-object v13, v0, Lcom/android/settings_ex/users/EditUserPhotoController$3;->this$0:Lcom/android/settings_ex/users/EditUserPhotoController;
 
-    # getter for: Lcom/android/settings/users/EditUserPhotoController;->mContext:Landroid/content/Context;
-    invoke-static {v13}, Lcom/android/settings/users/EditUserPhotoController;->access$300(Lcom/android/settings/users/EditUserPhotoController;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/users/EditUserPhotoController;->mContext:Landroid/content/Context;
+    invoke-static {v13}, Lcom/android/settings_ex/users/EditUserPhotoController;->access$300(Lcom/android/settings_ex/users/EditUserPhotoController;)Landroid/content/Context;
 
     move-result-object v13
 
@@ -262,7 +262,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/users/EditUserPhotoController$3;->val$data:Landroid/net/Uri;
+    iget-object v14, v0, Lcom/android/settings_ex/users/EditUserPhotoController$3;->val$data:Landroid/net/Uri;
 
     invoke-virtual {v13, v14}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
 
@@ -332,21 +332,21 @@
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/users/EditUserPhotoController$3;->this$0:Lcom/android/settings/users/EditUserPhotoController;
+    iget-object v15, v0, Lcom/android/settings_ex/users/EditUserPhotoController$3;->this$0:Lcom/android/settings_ex/users/EditUserPhotoController;
 
-    # getter for: Lcom/android/settings/users/EditUserPhotoController;->mPhotoSize:I
-    invoke-static {v15}, Lcom/android/settings/users/EditUserPhotoController;->access$400(Lcom/android/settings/users/EditUserPhotoController;)I
+    # getter for: Lcom/android/settings_ex/users/EditUserPhotoController;->mPhotoSize:I
+    invoke-static {v15}, Lcom/android/settings_ex/users/EditUserPhotoController;->access$400(Lcom/android/settings_ex/users/EditUserPhotoController;)I
 
     move-result v15
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/users/EditUserPhotoController$3;->this$0:Lcom/android/settings/users/EditUserPhotoController;
+    iget-object v0, v0, Lcom/android/settings_ex/users/EditUserPhotoController$3;->this$0:Lcom/android/settings_ex/users/EditUserPhotoController;
 
     move-object/from16 v16, v0
 
-    # getter for: Lcom/android/settings/users/EditUserPhotoController;->mPhotoSize:I
-    invoke-static/range {v16 .. v16}, Lcom/android/settings/users/EditUserPhotoController;->access$400(Lcom/android/settings/users/EditUserPhotoController;)I
+    # getter for: Lcom/android/settings_ex/users/EditUserPhotoController;->mPhotoSize:I
+    invoke-static/range {v16 .. v16}, Lcom/android/settings_ex/users/EditUserPhotoController;->access$400(Lcom/android/settings_ex/users/EditUserPhotoController;)I
 
     move-result v16
 
@@ -401,7 +401,7 @@
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "x0":[Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/users/EditUserPhotoController$3;->doInBackground([Ljava/lang/Void;)Landroid/graphics/Bitmap;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/users/EditUserPhotoController$3;->doInBackground([Ljava/lang/Void;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -417,25 +417,25 @@
     if-eqz p1, :cond_0
 
     .line 303
-    iget-object v0, p0, Lcom/android/settings/users/EditUserPhotoController$3;->this$0:Lcom/android/settings/users/EditUserPhotoController;
+    iget-object v0, p0, Lcom/android/settings_ex/users/EditUserPhotoController$3;->this$0:Lcom/android/settings_ex/users/EditUserPhotoController;
 
-    # setter for: Lcom/android/settings/users/EditUserPhotoController;->mNewUserPhotoBitmap:Landroid/graphics/Bitmap;
-    invoke-static {v0, p1}, Lcom/android/settings/users/EditUserPhotoController;->access$502(Lcom/android/settings/users/EditUserPhotoController;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    # setter for: Lcom/android/settings_ex/users/EditUserPhotoController;->mNewUserPhotoBitmap:Landroid/graphics/Bitmap;
+    invoke-static {v0, p1}, Lcom/android/settings_ex/users/EditUserPhotoController;->access$502(Lcom/android/settings_ex/users/EditUserPhotoController;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     .line 304
-    iget-object v0, p0, Lcom/android/settings/users/EditUserPhotoController$3;->this$0:Lcom/android/settings/users/EditUserPhotoController;
+    iget-object v0, p0, Lcom/android/settings_ex/users/EditUserPhotoController$3;->this$0:Lcom/android/settings_ex/users/EditUserPhotoController;
 
-    iget-object v1, p0, Lcom/android/settings/users/EditUserPhotoController$3;->this$0:Lcom/android/settings/users/EditUserPhotoController;
+    iget-object v1, p0, Lcom/android/settings_ex/users/EditUserPhotoController$3;->this$0:Lcom/android/settings_ex/users/EditUserPhotoController;
 
-    # getter for: Lcom/android/settings/users/EditUserPhotoController;->mNewUserPhotoBitmap:Landroid/graphics/Bitmap;
-    invoke-static {v1}, Lcom/android/settings/users/EditUserPhotoController;->access$500(Lcom/android/settings/users/EditUserPhotoController;)Landroid/graphics/Bitmap;
+    # getter for: Lcom/android/settings_ex/users/EditUserPhotoController;->mNewUserPhotoBitmap:Landroid/graphics/Bitmap;
+    invoke-static {v1}, Lcom/android/settings_ex/users/EditUserPhotoController;->access$500(Lcom/android/settings_ex/users/EditUserPhotoController;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/users/EditUserPhotoController$3;->this$0:Lcom/android/settings/users/EditUserPhotoController;
+    iget-object v2, p0, Lcom/android/settings_ex/users/EditUserPhotoController$3;->this$0:Lcom/android/settings_ex/users/EditUserPhotoController;
 
-    # getter for: Lcom/android/settings/users/EditUserPhotoController;->mImageView:Landroid/widget/ImageView;
-    invoke-static {v2}, Lcom/android/settings/users/EditUserPhotoController;->access$700(Lcom/android/settings/users/EditUserPhotoController;)Landroid/widget/ImageView;
+    # getter for: Lcom/android/settings_ex/users/EditUserPhotoController;->mImageView:Landroid/widget/ImageView;
+    invoke-static {v2}, Lcom/android/settings_ex/users/EditUserPhotoController;->access$700(Lcom/android/settings_ex/users/EditUserPhotoController;)Landroid/widget/ImageView;
 
     move-result-object v2
 
@@ -443,25 +443,25 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/android/settings/drawable/CircleFramedDrawable;->encircle(Landroid/graphics/Bitmap;Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v1, v2}, Lcom/android/settings_ex/drawable/CircleFramedDrawable;->encircle(Landroid/graphics/Bitmap;Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    # setter for: Lcom/android/settings/users/EditUserPhotoController;->mNewUserPhotoDrawable:Landroid/graphics/drawable/Drawable;
-    invoke-static {v0, v1}, Lcom/android/settings/users/EditUserPhotoController;->access$602(Lcom/android/settings/users/EditUserPhotoController;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    # setter for: Lcom/android/settings_ex/users/EditUserPhotoController;->mNewUserPhotoDrawable:Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, v1}, Lcom/android/settings_ex/users/EditUserPhotoController;->access$602(Lcom/android/settings_ex/users/EditUserPhotoController;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     .line 309
-    iget-object v0, p0, Lcom/android/settings/users/EditUserPhotoController$3;->this$0:Lcom/android/settings/users/EditUserPhotoController;
+    iget-object v0, p0, Lcom/android/settings_ex/users/EditUserPhotoController$3;->this$0:Lcom/android/settings_ex/users/EditUserPhotoController;
 
-    # getter for: Lcom/android/settings/users/EditUserPhotoController;->mImageView:Landroid/widget/ImageView;
-    invoke-static {v0}, Lcom/android/settings/users/EditUserPhotoController;->access$700(Lcom/android/settings/users/EditUserPhotoController;)Landroid/widget/ImageView;
+    # getter for: Lcom/android/settings_ex/users/EditUserPhotoController;->mImageView:Landroid/widget/ImageView;
+    invoke-static {v0}, Lcom/android/settings_ex/users/EditUserPhotoController;->access$700(Lcom/android/settings_ex/users/EditUserPhotoController;)Landroid/widget/ImageView;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/users/EditUserPhotoController$3;->this$0:Lcom/android/settings/users/EditUserPhotoController;
+    iget-object v1, p0, Lcom/android/settings_ex/users/EditUserPhotoController$3;->this$0:Lcom/android/settings_ex/users/EditUserPhotoController;
 
-    # getter for: Lcom/android/settings/users/EditUserPhotoController;->mNewUserPhotoDrawable:Landroid/graphics/drawable/Drawable;
-    invoke-static {v1}, Lcom/android/settings/users/EditUserPhotoController;->access$600(Lcom/android/settings/users/EditUserPhotoController;)Landroid/graphics/drawable/Drawable;
+    # getter for: Lcom/android/settings_ex/users/EditUserPhotoController;->mNewUserPhotoDrawable:Landroid/graphics/drawable/Drawable;
+    invoke-static {v1}, Lcom/android/settings_ex/users/EditUserPhotoController;->access$600(Lcom/android/settings_ex/users/EditUserPhotoController;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -471,10 +471,10 @@
     :cond_0
     new-instance v0, Ljava/io/File;
 
-    iget-object v1, p0, Lcom/android/settings/users/EditUserPhotoController$3;->this$0:Lcom/android/settings/users/EditUserPhotoController;
+    iget-object v1, p0, Lcom/android/settings_ex/users/EditUserPhotoController$3;->this$0:Lcom/android/settings_ex/users/EditUserPhotoController;
 
-    # getter for: Lcom/android/settings/users/EditUserPhotoController;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/users/EditUserPhotoController;->access$300(Lcom/android/settings/users/EditUserPhotoController;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/users/EditUserPhotoController;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/users/EditUserPhotoController;->access$300(Lcom/android/settings_ex/users/EditUserPhotoController;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -491,10 +491,10 @@
     .line 312
     new-instance v0, Ljava/io/File;
 
-    iget-object v1, p0, Lcom/android/settings/users/EditUserPhotoController$3;->this$0:Lcom/android/settings/users/EditUserPhotoController;
+    iget-object v1, p0, Lcom/android/settings_ex/users/EditUserPhotoController$3;->this$0:Lcom/android/settings_ex/users/EditUserPhotoController;
 
-    # getter for: Lcom/android/settings/users/EditUserPhotoController;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/users/EditUserPhotoController;->access$300(Lcom/android/settings/users/EditUserPhotoController;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/users/EditUserPhotoController;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/users/EditUserPhotoController;->access$300(Lcom/android/settings_ex/users/EditUserPhotoController;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -521,7 +521,7 @@
     check-cast p1, Landroid/graphics/Bitmap;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/users/EditUserPhotoController$3;->onPostExecute(Landroid/graphics/Bitmap;)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/users/EditUserPhotoController$3;->onPostExecute(Landroid/graphics/Bitmap;)V
 
     return-void
 .end method

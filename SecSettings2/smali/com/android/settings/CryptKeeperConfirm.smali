@@ -1,12 +1,12 @@
-.class public Lcom/android/settings/CryptKeeperConfirm;
-.super Lcom/android/settings/InstrumentedFragment;
+.class public Lcom/android/settings_ex/CryptKeeperConfirm;
+.super Lcom/android/settings_ex/InstrumentedFragment;
 .source "CryptKeeperConfirm.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/CryptKeeperConfirm$Blank;
+        Lcom/android/settings_ex/CryptKeeperConfirm$Blank;
     }
 .end annotation
 
@@ -37,12 +37,12 @@
     .line 66
     const-string v0, ""
 
-    sput-object v0, Lcom/android/settings/CryptKeeperConfirm;->mTrustedboot:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/CryptKeeperConfirm;->mTrustedboot:Ljava/lang/String;
 
     .line 175
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/android/settings/CryptKeeperConfirm;->utils:Lcom/android/internal/widget/LockPatternUtils;
+    sput-object v0, Lcom/android/settings_ex/CryptKeeperConfirm;->utils:Lcom/android/internal/widget/LockPatternUtils;
 
     return-void
 .end method
@@ -52,26 +52,26 @@
 
     .prologue
     .line 62
-    invoke-direct {p0}, Lcom/android/settings/InstrumentedFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/InstrumentedFragment;-><init>()V
 
     .line 173
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/CryptKeeperConfirm;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptKeeperConfirm;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     .line 177
-    new-instance v0, Lcom/android/settings/CryptKeeperConfirm$1;
+    new-instance v0, Lcom/android/settings_ex/CryptKeeperConfirm$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/CryptKeeperConfirm$1;-><init>(Lcom/android/settings/CryptKeeperConfirm;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/CryptKeeperConfirm$1;-><init>(Lcom/android/settings_ex/CryptKeeperConfirm;)V
 
-    iput-object v0, p0, Lcom/android/settings/CryptKeeperConfirm;->mFinalClickListener:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptKeeperConfirm;->mFinalClickListener:Landroid/view/View$OnClickListener;
 
     .line 233
-    new-instance v0, Lcom/android/settings/CryptKeeperConfirm$2;
+    new-instance v0, Lcom/android/settings_ex/CryptKeeperConfirm$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/CryptKeeperConfirm$2;-><init>(Lcom/android/settings/CryptKeeperConfirm;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/CryptKeeperConfirm$2;-><init>(Lcom/android/settings_ex/CryptKeeperConfirm;)V
 
-    iput-object v0, p0, Lcom/android/settings/CryptKeeperConfirm;->mFastEncryptionChecker:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptKeeperConfirm;->mFastEncryptionChecker:Landroid/view/View$OnClickListener;
 
     return-void
 .end method
@@ -81,7 +81,7 @@
 
     .prologue
     .line 62
-    sget-object v0, Lcom/android/settings/CryptKeeperConfirm;->utils:Lcom/android/internal/widget/LockPatternUtils;
+    sget-object v0, Lcom/android/settings_ex/CryptKeeperConfirm;->utils:Lcom/android/internal/widget/LockPatternUtils;
 
     return-object v0
 .end method
@@ -91,7 +91,7 @@
 
     .prologue
     .line 62
-    sget-object v0, Lcom/android/settings/CryptKeeperConfirm;->mTrustedboot:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/CryptKeeperConfirm;->mTrustedboot:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -101,7 +101,7 @@
 
     .prologue
     .line 228
-    iget-object v0, p0, Lcom/android/settings/CryptKeeperConfirm;->mContentView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeperConfirm;->mContentView:Landroid/view/View;
 
     const v1, 0x7f0d0144
 
@@ -111,12 +111,12 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/android/settings/CryptKeeperConfirm;->mFinalButton:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptKeeperConfirm;->mFinalButton:Landroid/widget/Button;
 
     .line 229
-    iget-object v0, p0, Lcom/android/settings/CryptKeeperConfirm;->mFinalButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeperConfirm;->mFinalButton:Landroid/widget/Button;
 
-    iget-object v1, p0, Lcom/android/settings/CryptKeeperConfirm;->mFinalClickListener:Landroid/view/View$OnClickListener;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeperConfirm;->mFinalClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -152,10 +152,10 @@
 
     move-result-object v9
 
-    iput-object v9, p0, Lcom/android/settings/CryptKeeperConfirm;->mContentView:Landroid/view/View;
+    iput-object v9, p0, Lcom/android/settings_ex/CryptKeeperConfirm;->mContentView:Landroid/view/View;
 
     .line 249
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeperConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeperConfirm;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
@@ -167,10 +167,10 @@
 
     check-cast v9, Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    iput-object v9, p0, Lcom/android/settings/CryptKeeperConfirm;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
+    iput-object v9, p0, Lcom/android/settings_ex/CryptKeeperConfirm;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     .line 253
-    iget-object v9, p0, Lcom/android/settings/CryptKeeperConfirm;->mContentView:Landroid/view/View;
+    iget-object v9, p0, Lcom/android/settings_ex/CryptKeeperConfirm;->mContentView:Landroid/view/View;
 
     const v10, 0x7f0d0143
 
@@ -182,20 +182,20 @@
 
     .line 254
     .local v2, "fastEncryption":Landroid/widget/CheckBox;
-    sget-object v9, Lcom/android/settings/CryptKeeperConfirm;->utils:Lcom/android/internal/widget/LockPatternUtils;
+    sget-object v9, Lcom/android/settings_ex/CryptKeeperConfirm;->utils:Lcom/android/internal/widget/LockPatternUtils;
 
     if-nez v9, :cond_0
 
     .line 255
     new-instance v9, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeperConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeperConfirm;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
 
     invoke-direct {v9, v10}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    sput-object v9, Lcom/android/settings/CryptKeeperConfirm;->utils:Lcom/android/internal/widget/LockPatternUtils;
+    sput-object v9, Lcom/android/settings_ex/CryptKeeperConfirm;->utils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 259
     :cond_0
@@ -211,7 +211,7 @@
 
     .line 260
     .local v6, "selectionArgs":[Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeperConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeperConfirm;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
@@ -219,7 +219,7 @@
 
     const-string v11, "isFastEncryptionAllowed"
 
-    invoke-static {v9, v10, v11, v6}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-static {v9, v10, v11, v6}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v3
 
@@ -255,7 +255,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeperConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeperConfirm;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
 
@@ -275,7 +275,7 @@
 
     move-result-object v9
 
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeperConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeperConfirm;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
 
@@ -328,7 +328,7 @@
 
     .line 279
     :cond_2
-    iget-object v9, p0, Lcom/android/settings/CryptKeeperConfirm;->mContentView:Landroid/view/View;
+    iget-object v9, p0, Lcom/android/settings_ex/CryptKeeperConfirm;->mContentView:Landroid/view/View;
 
     const v10, 0x7f0d0142
 
@@ -346,7 +346,7 @@
 
     .line 281
     .local v1, "desc":Ljava/lang/StringBuilder;
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeperConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeperConfirm;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
@@ -364,7 +364,7 @@
     invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 283
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeperConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeperConfirm;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
@@ -398,7 +398,7 @@
 
     .line 290
     .local v5, "sb":Ljava/lang/StringBuilder;
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeperConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeperConfirm;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
@@ -406,7 +406,7 @@
 
     const-string v11, "isOdeTrustedBootVerificationEnabled"
 
-    invoke-static {v9, v10, v11}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v9, v10, v11}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v4
 
@@ -472,13 +472,13 @@
 
     move-result-object v9
 
-    sput-object v9, Lcom/android/settings/CryptKeeperConfirm;->mTrustedboot:Ljava/lang/String;
+    sput-object v9, Lcom/android/settings_ex/CryptKeeperConfirm;->mTrustedboot:Ljava/lang/String;
 
     .line 307
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeperConfirm;->establishFinalConfirmationState()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeperConfirm;->establishFinalConfirmationState()V
 
     .line 308
-    iget-object v9, p0, Lcom/android/settings/CryptKeeperConfirm;->mContentView:Landroid/view/View;
+    iget-object v9, p0, Lcom/android/settings_ex/CryptKeeperConfirm;->mContentView:Landroid/view/View;
 
     return-object v9
 
@@ -487,7 +487,7 @@
     .end local v4    # "isODETrustedBootVerificationEnabled":I
     .end local v5    # "sb":Ljava/lang/StringBuilder;
     :cond_8
-    iget-object v9, p0, Lcom/android/settings/CryptKeeperConfirm;->mFastEncryptionChecker:Landroid/view/View$OnClickListener;
+    iget-object v9, p0, Lcom/android/settings_ex/CryptKeeperConfirm;->mFastEncryptionChecker:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v2, v9}, Landroid/widget/CheckBox;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

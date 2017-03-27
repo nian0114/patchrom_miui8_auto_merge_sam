@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/TRoamingSettings$LTERoamingSetFragment;
+.class public Lcom/android/settings_ex/TRoamingSettings$LTERoamingSetFragment;
 .super Landroid/app/DialogFragment;
 .source "TRoamingSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/TRoamingSettings;
+    value = Lcom/android/settings_ex/TRoamingSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,13 +25,13 @@
     return-void
 .end method
 
-.method public static show(Lcom/android/settings/TRoamingSettings;)V
+.method public static show(Lcom/android/settings_ex/TRoamingSettings;)V
     .locals 3
-    .param p0, "parent"    # Lcom/android/settings/TRoamingSettings;
+    .param p0, "parent"    # Lcom/android/settings_ex/TRoamingSettings;
 
     .prologue
     .line 678
-    invoke-virtual {p0}, Lcom/android/settings/TRoamingSettings;->isAdded()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/TRoamingSettings;->isAdded()Z
 
     move-result v1
 
@@ -43,24 +43,24 @@
 
     .line 680
     :cond_0
-    new-instance v0, Lcom/android/settings/TRoamingSettings$LTERoamingSetFragment;
+    new-instance v0, Lcom/android/settings_ex/TRoamingSettings$LTERoamingSetFragment;
 
-    invoke-direct {v0}, Lcom/android/settings/TRoamingSettings$LTERoamingSetFragment;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/TRoamingSettings$LTERoamingSetFragment;-><init>()V
 
     .line 681
-    .local v0, "dialog":Lcom/android/settings/TRoamingSettings$LTERoamingSetFragment;
+    .local v0, "dialog":Lcom/android/settings_ex/TRoamingSettings$LTERoamingSetFragment;
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p0, v1}, Lcom/android/settings/TRoamingSettings$LTERoamingSetFragment;->setTargetFragment(Landroid/app/Fragment;I)V
+    invoke-virtual {v0, p0, v1}, Lcom/android/settings_ex/TRoamingSettings$LTERoamingSetFragment;->setTargetFragment(Landroid/app/Fragment;I)V
 
     .line 682
-    invoke-virtual {p0}, Lcom/android/settings/TRoamingSettings;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/TRoamingSettings;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
 
     const-string v2, "DialogLTERoamingSet"
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/TRoamingSettings$LTERoamingSetFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/TRoamingSettings$LTERoamingSetFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -75,8 +75,8 @@
     .line 703
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    # getter for: Lcom/android/settings/TRoamingSettings;->mContext:Landroid/content/Context;
-    invoke-static {}, Lcom/android/settings/TRoamingSettings;->access$1100()Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/TRoamingSettings;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/android/settings_ex/TRoamingSettings;->access$1100()Landroid/content/Context;
 
     move-result-object v1
 
@@ -84,7 +84,7 @@
 
     .line 705
     .local v0, "builder":Landroid/app/AlertDialog$Builder;
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticSKTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticSKTModel()Z
 
     move-result v1
 
@@ -104,18 +104,18 @@
     :goto_0
     const v1, 0x1040013
 
-    new-instance v2, Lcom/android/settings/TRoamingSettings$LTERoamingSetFragment$1;
+    new-instance v2, Lcom/android/settings_ex/TRoamingSettings$LTERoamingSetFragment$1;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/TRoamingSettings$LTERoamingSetFragment$1;-><init>(Lcom/android/settings/TRoamingSettings$LTERoamingSetFragment;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/TRoamingSettings$LTERoamingSetFragment$1;-><init>(Lcom/android/settings_ex/TRoamingSettings$LTERoamingSetFragment;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 719
     const v1, 0x1040009
 
-    new-instance v2, Lcom/android/settings/TRoamingSettings$LTERoamingSetFragment$2;
+    new-instance v2, Lcom/android/settings_ex/TRoamingSettings$LTERoamingSetFragment$2;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/TRoamingSettings$LTERoamingSetFragment$2;-><init>(Lcom/android/settings/TRoamingSettings$LTERoamingSetFragment;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/TRoamingSettings$LTERoamingSetFragment$2;-><init>(Lcom/android/settings_ex/TRoamingSettings$LTERoamingSetFragment;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -152,20 +152,20 @@
     invoke-super {p0}, Landroid/app/DialogFragment;->onDestroy()V
 
     .line 697
-    invoke-virtual {p0}, Lcom/android/settings/TRoamingSettings$LTERoamingSetFragment;->getTargetFragment()Landroid/app/Fragment;
+    invoke-virtual {p0}, Lcom/android/settings_ex/TRoamingSettings$LTERoamingSetFragment;->getTargetFragment()Landroid/app/Fragment;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/TRoamingSettings;
+    check-cast v0, Lcom/android/settings_ex/TRoamingSettings;
 
     .line 698
-    .local v0, "target":Lcom/android/settings/TRoamingSettings;
-    # getter for: Lcom/android/settings/TRoamingSettings;->mUseLTERoaming:Landroid/preference/SwitchPreference;
-    invoke-static {v0}, Lcom/android/settings/TRoamingSettings;->access$400(Lcom/android/settings/TRoamingSettings;)Landroid/preference/SwitchPreference;
+    .local v0, "target":Lcom/android/settings_ex/TRoamingSettings;
+    # getter for: Lcom/android/settings_ex/TRoamingSettings;->mUseLTERoaming:Landroid/preference/SwitchPreference;
+    invoke-static {v0}, Lcom/android/settings_ex/TRoamingSettings;->access$400(Lcom/android/settings_ex/TRoamingSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v3
 
-    invoke-virtual {v0}, Lcom/android/settings/TRoamingSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/android/settings_ex/TRoamingSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 

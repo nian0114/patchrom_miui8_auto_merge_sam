@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction$1;
+.class final Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction$1;
 .super Ljava/lang/Object;
 .source "ShareAccessibilitySettingsCommonFunction.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->applySettings(Landroid/content/Context;Ljava/util/HashMap;)V
+    value = Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->applySettings(Landroid/content/Context;Ljava/util/HashMap;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

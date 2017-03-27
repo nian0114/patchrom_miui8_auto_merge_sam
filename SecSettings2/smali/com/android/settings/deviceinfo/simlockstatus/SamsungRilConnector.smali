@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;
+.class public Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;
 .super Ljava/lang/Object;
 .source "SamsungRilConnector.java"
 
@@ -6,8 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector$IOnRilJobListener;,
-        Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector$MessageHandler;
+        Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector$IOnRilJobListener;,
+        Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector$MessageHandler;
     }
 .end annotation
 
@@ -15,7 +15,7 @@
 # static fields
 .field protected static final TAG:Ljava/lang/String;
 
-.field private static sInstance:Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;
+.field private static sInstance:Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;
 
 
 # instance fields
@@ -32,13 +32,13 @@
         value = {
             "Ljava/lang/ref/WeakReference",
             "<",
-            "Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector$IOnRilJobListener;",
+            "Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector$IOnRilJobListener;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public mMessageHandler:Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector$MessageHandler;
+.field public mMessageHandler:Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector$MessageHandler;
 
 .field private mOperationName:Ljava/lang/String;
 
@@ -55,13 +55,13 @@
 
     .prologue
     .line 26
-    const-class v0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;
+    const-class v0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
 
     return-void
 .end method
@@ -76,22 +76,22 @@
     .line 53
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mIsConnected:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mIsConnected:Z
 
     .line 69
     const-string v0, "-"
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mOperationName:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mOperationName:Ljava/lang/String;
 
     .line 73
-    new-instance v0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector$1;
+    new-instance v0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector$1;-><init>(Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector$1;-><init>(Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mRilServiceConnection:Landroid/content/ServiceConnection;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mRilServiceConnection:Landroid/content/ServiceConnection;
 
     .line 132
-    sget-object v0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
 
     const-string v1, "new()"
 
@@ -104,145 +104,145 @@
 
     invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mHandlerThread:Landroid/os/HandlerThread;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mHandlerThread:Landroid/os/HandlerThread;
 
     .line 134
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mHandlerThread:Landroid/os/HandlerThread;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
     .line 135
-    new-instance v0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector$MessageHandler;
+    new-instance v0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector$MessageHandler;
 
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mHandlerThread:Landroid/os/HandlerThread;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector$MessageHandler;-><init>(Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;Landroid/os/Looper;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector$MessageHandler;-><init>(Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;Landroid/os/Looper;)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mMessageHandler:Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector$MessageHandler;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mMessageHandler:Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector$MessageHandler;
 
     .line 136
     new-instance v0, Landroid/os/Messenger;
 
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mMessageHandler:Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector$MessageHandler;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mMessageHandler:Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector$MessageHandler;
 
     invoke-direct {v0, v1}, Landroid/os/Messenger;-><init>(Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mServiceReplyMessenger:Landroid/os/Messenger;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mServiceReplyMessenger:Landroid/os/Messenger;
 
     .line 137
     return-void
 .end method
 
-.method static synthetic access$002(Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;Landroid/os/Messenger;)Landroid/os/Messenger;
+.method static synthetic access$002(Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;Landroid/os/Messenger;)Landroid/os/Messenger;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;
     .param p1, "x1"    # Landroid/os/Messenger;
 
     .prologue
     .line 24
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mServiceMessenger:Landroid/os/Messenger;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mServiceMessenger:Landroid/os/Messenger;
 
     return-object p1
 .end method
 
-.method static synthetic access$102(Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;Z)Z
+.method static synthetic access$102(Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;
     .param p1, "x1"    # Z
 
     .prologue
     .line 24
-    iput-boolean p1, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mIsConnected:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mIsConnected:Z
 
     return p1
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;)[B
+.method static synthetic access$200(Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;)[B
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;
 
     .prologue
     .line 24
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mBytesBuffer:[B
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mBytesBuffer:[B
 
     return-object v0
 .end method
 
-.method static synthetic access$202(Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;[B)[B
+.method static synthetic access$202(Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;[B)[B
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;
     .param p1, "x1"    # [B
 
     .prologue
     .line 24
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mBytesBuffer:[B
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mBytesBuffer:[B
 
     return-object p1
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;)Ljava/lang/ref/WeakReference;
+.method static synthetic access$300(Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;)Ljava/lang/ref/WeakReference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;
 
     .prologue
     .line 24
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mListenerRef:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mListenerRef:Ljava/lang/ref/WeakReference;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;)Ljava/lang/String;
+.method static synthetic access$400(Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;
 
     .prologue
     .line 24
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mOperationName:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mOperationName:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$402(Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$402(Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 24
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mOperationName:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mOperationName:Ljava/lang/String;
 
     return-object p1
 .end method
 
-.method public static getInstance(Landroid/content/Context;)Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;
+.method public static getInstance(Landroid/content/Context;)Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;
     .locals 1
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 92
-    sget-object v0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->sInstance:Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;
+    sget-object v0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->sInstance:Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;
 
     if-nez v0, :cond_0
 
     .line 93
-    new-instance v0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;
+    new-instance v0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;
 
-    invoke-direct {v0}, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;-><init>()V
 
-    sput-object v0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->sInstance:Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;
+    sput-object v0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->sInstance:Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;
 
     .line 95
     :cond_0
-    sget-object v0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->sInstance:Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;
+    sget-object v0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->sInstance:Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->setContext(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->setContext(Landroid/content/Context;)V
 
     .line 96
-    sget-object v0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->sInstance:Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;
+    sget-object v0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->sInstance:Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;
 
     return-object v0
 .end method
@@ -268,7 +268,7 @@
 
     .prologue
     .line 222
-    sget-object v2, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
 
     const-string v3, "invoke ril service"
 
@@ -286,17 +286,17 @@
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
 
     .line 226
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mServiceReplyMessenger:Landroid/os/Messenger;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mServiceReplyMessenger:Landroid/os/Messenger;
 
     iput-object v2, p2, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
 
     .line 228
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mServiceMessenger:Landroid/os/Messenger;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mServiceMessenger:Landroid/os/Messenger;
 
     if-nez v2, :cond_0
 
     .line 229
-    sget-object v2, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
 
     const-string v3, "RIL service is not connected"
 
@@ -309,12 +309,12 @@
     .line 234
     :cond_0
     :try_start_0
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mServiceMessenger:Landroid/os/Messenger;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mServiceMessenger:Landroid/os/Messenger;
 
     invoke-virtual {v2, p2}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
 
     .line 235
-    sget-object v2, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
 
     const-string v3, "message sent to ril service"
 
@@ -464,7 +464,7 @@
 
     .prologue
     .line 100
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mContext:Landroid/content/Context;
 
     .line 101
     return-void
@@ -477,19 +477,19 @@
 
     .prologue
     .line 108
-    sget-object v1, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
 
     const-string v2, "connect() => connect to the RIL service"
 
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 109
-    iget-boolean v1, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mIsConnected:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mIsConnected:Z
 
     if-eqz v1, :cond_0
 
     .line 110
-    sget-object v1, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
 
     const-string v2, "already connected"
 
@@ -514,12 +514,12 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 115
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mContext:Landroid/content/Context;
 
     if-nez v1, :cond_1
 
     .line 116
-    sget-object v1, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
 
     const-string v2, "Context is null. ignore"
 
@@ -529,9 +529,9 @@
 
     .line 119
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mRilServiceConnection:Landroid/content/ServiceConnection;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mRilServiceConnection:Landroid/content/ServiceConnection;
 
     const/4 v3, 0x1
 
@@ -545,7 +545,7 @@
 
     .prologue
     .line 123
-    sget-object v0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -557,7 +557,7 @@
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mIsConnected:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mIsConnected:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -570,7 +570,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 124
-    iget-boolean v0, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mIsConnected:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mIsConnected:Z
 
     if-nez v0, :cond_0
 
@@ -580,16 +580,16 @@
 
     .line 127
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mContext:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mRilServiceConnection:Landroid/content/ServiceConnection;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mRilServiceConnection:Landroid/content/ServiceConnection;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
     .line 128
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mIsConnected:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mIsConnected:Z
 
     goto :goto_0
 .end method
@@ -605,19 +605,19 @@
     const/4 v7, 0x0
 
     .line 140
-    sget-object v4, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
 
     const-string v5, "getBlob()"
 
     invoke-static {v4, v5}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 141
-    iget-boolean v4, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mIsConnected:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mIsConnected:Z
 
     if-nez v4, :cond_0
 
     .line 142
-    sget-object v4, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
 
     const-string v5, "not connected to RIL yet"
 
@@ -668,15 +668,15 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mMessageHandler:Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector$MessageHandler;
+    iget-object v5, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mMessageHandler:Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector$MessageHandler;
 
     const/4 v6, 0x0
 
-    invoke-virtual {v5, v6}, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector$MessageHandler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v5, v6}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector$MessageHandler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5}, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->invokeRilService([BLandroid/os/Message;)V
+    invoke-direct {p0, v4, v5}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->invokeRilService([BLandroid/os/Message;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -688,7 +688,7 @@
 
     aput-object v0, v4, v8
 
-    invoke-static {v4}, Lcom/android/settings/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently([Ljava/io/Closeable;)V
+    invoke-static {v4}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently([Ljava/io/Closeable;)V
 
     goto :goto_0
 
@@ -704,7 +704,7 @@
 
     aput-object v0, v4, v8
 
-    invoke-static {v4}, Lcom/android/settings/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently([Ljava/io/Closeable;)V
+    invoke-static {v4}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently([Ljava/io/Closeable;)V
 
     goto :goto_0
 
@@ -718,7 +718,7 @@
 
     aput-object v0, v5, v8
 
-    invoke-static {v5}, Lcom/android/settings/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently([Ljava/io/Closeable;)V
+    invoke-static {v5}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently([Ljava/io/Closeable;)V
 
     throw v4
 .end method
@@ -728,7 +728,7 @@
 
     .prologue
     .line 243
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mOperationName:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mOperationName:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -745,19 +745,19 @@
     const/4 v7, 0x1
 
     .line 166
-    sget-object v4, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
 
     const-string v5, "setBlob()"
 
     invoke-static {v4, v5}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 167
-    iget-boolean v4, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mIsConnected:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mIsConnected:Z
 
     if-nez v4, :cond_0
 
     .line 168
-    sget-object v4, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
 
     const-string v5, "not connected to RIL yet"
 
@@ -777,7 +777,7 @@
 
     .line 173
     :cond_1
-    sget-object v4, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->TAG:Ljava/lang/String;
 
     const-string v5, "ignore invalid blob"
 
@@ -836,15 +836,15 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mMessageHandler:Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector$MessageHandler;
+    iget-object v5, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mMessageHandler:Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector$MessageHandler;
 
     const/4 v6, 0x1
 
-    invoke-virtual {v5, v6}, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector$MessageHandler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v5, v6}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector$MessageHandler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5}, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->invokeRilService([BLandroid/os/Message;)V
+    invoke-direct {p0, v4, v5}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->invokeRilService([BLandroid/os/Message;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -856,7 +856,7 @@
 
     aput-object v0, v4, v7
 
-    invoke-static {v4}, Lcom/android/settings/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently([Ljava/io/Closeable;)V
+    invoke-static {v4}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently([Ljava/io/Closeable;)V
 
     goto :goto_0
 
@@ -878,7 +878,7 @@
 
     aput-object v0, v4, v7
 
-    invoke-static {v4}, Lcom/android/settings/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently([Ljava/io/Closeable;)V
+    invoke-static {v4}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently([Ljava/io/Closeable;)V
 
     goto :goto_0
 
@@ -892,14 +892,14 @@
 
     aput-object v0, v5, v7
 
-    invoke-static {v5}, Lcom/android/settings/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently([Ljava/io/Closeable;)V
+    invoke-static {v5}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently([Ljava/io/Closeable;)V
 
     throw v4
 .end method
 
-.method public setOnRilJobListener(Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector$IOnRilJobListener;)V
+.method public setOnRilJobListener(Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector$IOnRilJobListener;)V
     .locals 1
-    .param p1, "listener"    # Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector$IOnRilJobListener;
+    .param p1, "listener"    # Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector$IOnRilJobListener;
 
     .prologue
     .line 104
@@ -907,7 +907,7 @@
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;->mListenerRef:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;->mListenerRef:Ljava/lang/ref/WeakReference;
 
     .line 105
     return-void

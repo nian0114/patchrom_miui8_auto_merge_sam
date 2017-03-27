@@ -1,14 +1,14 @@
-.class final Lcom/android/settingslib/applications/ApplicationsState$5;
+.class final Lcom/android/settings_exlib/applications/ApplicationsState$5;
 .super Ljava/lang/Object;
 .source "ApplicationsState.java"
 
 # interfaces
-.implements Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+.implements Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/applications/ApplicationsState;
+    value = Lcom/android/settings_exlib/applications/ApplicationsState;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,13 +34,13 @@
 
 
 # virtual methods
-.method public filterApp(Lcom/android/settingslib/applications/ApplicationsState$AppEntry;)Z
+.method public filterApp(Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;)Z
     .locals 2
-    .param p1, "entry"    # Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+    .param p1, "entry"    # Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
 
     .prologue
     .line 1296
-    iget-object v0, p1, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
+    iget-object v0, p1, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
 
     iget v0, v0, Landroid/content/pm/ApplicationInfo;->uid:I
 
@@ -48,7 +48,7 @@
 
     move-result v0
 
-    iget v1, p0, Lcom/android/settingslib/applications/ApplicationsState$5;->mCurrentUser:I
+    iget v1, p0, Lcom/android/settings_exlib/applications/ApplicationsState$5;->mCurrentUser:I
 
     if-ne v0, v1, :cond_0
 
@@ -72,7 +72,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settingslib/applications/ApplicationsState$5;->mCurrentUser:I
+    iput v0, p0, Lcom/android/settings_exlib/applications/ApplicationsState$5;->mCurrentUser:I
 
     .line 1292
     return-void

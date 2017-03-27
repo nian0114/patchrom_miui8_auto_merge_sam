@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/deviceinfo/StorageSettings$DiskInitFragment;
+.class public Lcom/android/settings_ex/deviceinfo/StorageSettings$DiskInitFragment;
 .super Landroid/app/DialogFragment;
 .source "StorageSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/StorageSettings;
+    value = Lcom/android/settings_ex/deviceinfo/StorageSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -49,18 +49,18 @@
     invoke-virtual {v0, v2, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 461
-    new-instance v1, Lcom/android/settings/deviceinfo/StorageSettings$DiskInitFragment;
+    new-instance v1, Lcom/android/settings_ex/deviceinfo/StorageSettings$DiskInitFragment;
 
-    invoke-direct {v1}, Lcom/android/settings/deviceinfo/StorageSettings$DiskInitFragment;-><init>()V
+    invoke-direct {v1}, Lcom/android/settings_ex/deviceinfo/StorageSettings$DiskInitFragment;-><init>()V
 
     .line 462
-    .local v1, "dialog":Lcom/android/settings/deviceinfo/StorageSettings$DiskInitFragment;
-    invoke-virtual {v1, v0}, Lcom/android/settings/deviceinfo/StorageSettings$DiskInitFragment;->setArguments(Landroid/os/Bundle;)V
+    .local v1, "dialog":Lcom/android/settings_ex/deviceinfo/StorageSettings$DiskInitFragment;
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/deviceinfo/StorageSettings$DiskInitFragment;->setArguments(Landroid/os/Bundle;)V
 
     .line 463
     const/4 v2, 0x0
 
-    invoke-virtual {v1, p0, v2}, Lcom/android/settings/deviceinfo/StorageSettings$DiskInitFragment;->setTargetFragment(Landroid/app/Fragment;I)V
+    invoke-virtual {v1, p0, v2}, Lcom/android/settings_ex/deviceinfo/StorageSettings$DiskInitFragment;->setTargetFragment(Landroid/app/Fragment;I)V
 
     .line 464
     invoke-virtual {p0}, Landroid/app/Fragment;->getFragmentManager()Landroid/app/FragmentManager;
@@ -69,7 +69,7 @@
 
     const-string v3, "disk_init"
 
-    invoke-virtual {v1, v2, v3}, Lcom/android/settings/deviceinfo/StorageSettings$DiskInitFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v3}, Lcom/android/settings_ex/deviceinfo/StorageSettings$DiskInitFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     .line 465
     return-void
@@ -83,7 +83,7 @@
 
     .prologue
     .line 469
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageSettings$DiskInitFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageSettings$DiskInitFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -99,7 +99,7 @@
 
     .line 472
     .local v5, "sm":Landroid/os/storage/StorageManager;
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageSettings$DiskInitFragment;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageSettings$DiskInitFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v6
 
@@ -111,7 +111,7 @@
 
     .line 473
     .local v4, "resId":I
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageSettings$DiskInitFragment;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageSettings$DiskInitFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v6
 
@@ -147,7 +147,7 @@
 
     aput-object v8, v6, v7
 
-    invoke-virtual {p0, v4, v6}, Lcom/android/settings/deviceinfo/StorageSettings$DiskInitFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v4, v6}, Lcom/android/settings_ex/deviceinfo/StorageSettings$DiskInitFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -156,9 +156,9 @@
     .line 479
     const v6, 0x7f0e06b1
 
-    new-instance v7, Lcom/android/settings/deviceinfo/StorageSettings$DiskInitFragment$1;
+    new-instance v7, Lcom/android/settings_ex/deviceinfo/StorageSettings$DiskInitFragment$1;
 
-    invoke-direct {v7, p0, v1, v3}, Lcom/android/settings/deviceinfo/StorageSettings$DiskInitFragment$1;-><init>(Lcom/android/settings/deviceinfo/StorageSettings$DiskInitFragment;Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v7, p0, v1, v3}, Lcom/android/settings_ex/deviceinfo/StorageSettings$DiskInitFragment$1;-><init>(Lcom/android/settings_ex/deviceinfo/StorageSettings$DiskInitFragment;Landroid/content/Context;Ljava/lang/String;)V
 
     invoke-virtual {v0, v6, v7}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 

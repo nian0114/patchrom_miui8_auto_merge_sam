@@ -8,8 +8,8 @@
             </LinearLayout>
         </ScrollView>
         <LinearLayout android:orientation="horizontal" android:id="@id/crypt_keeper_sd_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" style="@style/SecurityPreferenceButtonContainer">
-            <com.android.settings.widget.BottomBarButton android:textSize="17.0sp" android:id="@id/left_button" android:layout_width="fill_parent" android:text="@string/sdcard_decrypt_select_button" style="@style/SecurityPreferenceButton" />
-            <com.android.settings.widget.BottomBarButton android:textSize="17.0sp" android:id="@id/right_button" android:layout_width="fill_parent" android:text="@string/sdcard_encrypt_select_button" style="@style/SecurityPreferenceButton" />
+            <com.android.settings_ex.widget.BottomBarButton android:textSize="17.0sp" android:id="@id/left_button" android:layout_width="fill_parent" android:text="@string/sdcard_decrypt_select_button" style="@style/SecurityPreferenceButton" />
+            <com.android.settings_ex.widget.BottomBarButton android:textSize="17.0sp" android:id="@id/right_button" android:layout_width="fill_parent" android:text="@string/sdcard_encrypt_select_button" style="@style/SecurityPreferenceButton" />
         </LinearLayout>
     </LinearLayout>
     <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/progress_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/deviceinfo/Status$6$1;
+.class Lcom/android/settings_ex/deviceinfo/Status$6$1;
 .super Ljava/lang/Object;
 .source "Status.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/deviceinfo/Status$6;->onChange(ZLandroid/net/Uri;)V
+    value = Lcom/android/settings_ex/deviceinfo/Status$6;->onChange(ZLandroid/net/Uri;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/deviceinfo/Status$6;
+.field final synthetic this$1:Lcom/android/settings_ex/deviceinfo/Status$6;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/Status$6;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/Status$6;)V
     .locals 0
 
     .prologue
     .line 873
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/Status$6$1;->this$1:Lcom/android/settings/deviceinfo/Status$6;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/Status$6$1;->this$1:Lcom/android/settings_ex/deviceinfo/Status$6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,12 +41,12 @@
 
     .prologue
     .line 876
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/Status$6$1;->this$1:Lcom/android/settings/deviceinfo/Status$6;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/Status$6$1;->this$1:Lcom/android/settings_ex/deviceinfo/Status$6;
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/Status$6;->this$0:Lcom/android/settings/deviceinfo/Status;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/Status$6;->this$0:Lcom/android/settings_ex/deviceinfo/Status;
 
-    # invokes: Lcom/android/settings/deviceinfo/Status;->updateRegistrationStatus()V
-    invoke-static {v0}, Lcom/android/settings/deviceinfo/Status;->access$1000(Lcom/android/settings/deviceinfo/Status;)V
+    # invokes: Lcom/android/settings_ex/deviceinfo/Status;->updateRegistrationStatus()V
+    invoke-static {v0}, Lcom/android/settings_ex/deviceinfo/Status;->access$1000(Lcom/android/settings_ex/deviceinfo/Status;)V
 
     .line 877
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/AccessibilitySettingsMobility$10;
+.class Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility$10;
 .super Ljava/lang/Object;
 .source "AccessibilitySettingsMobility.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/AccessibilitySettingsMobility;->onCreateDialog(I)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;->onCreateDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/AccessibilitySettingsMobility;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/AccessibilitySettingsMobility;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;)V
     .locals 0
 
     .prologue
     .line 556
-    iput-object p1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsMobility$10;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsMobility;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility$10;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,10 +43,10 @@
 
     .prologue
     .line 558
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsMobility$10;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsMobility;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility$10;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;
 
-    # invokes: Lcom/android/settings/accessibility/AccessibilitySettingsMobility;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v1}, Lcom/android/settings/accessibility/AccessibilitySettingsMobility;->access$1300(Lcom/android/settings/accessibility/AccessibilitySettingsMobility;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;->access$1300(Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;)Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -57,10 +57,10 @@
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 559
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsMobility$10;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsMobility;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility$10;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;
 
-    # invokes: Lcom/android/settings/accessibility/AccessibilitySettingsMobility;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v1}, Lcom/android/settings/accessibility/AccessibilitySettingsMobility;->access$1400(Lcom/android/settings/accessibility/AccessibilitySettingsMobility;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;->access$1400(Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;)Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -90,9 +90,9 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     .line 564
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsMobility$10;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsMobility;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility$10;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;
 
-    invoke-virtual {v1}, Lcom/android/settings/accessibility/AccessibilitySettingsMobility;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -103,12 +103,12 @@
     invoke-virtual {v1, v0}, Landroid/content/Context;->stopService(Landroid/content/Intent;)Z
 
     .line 566
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsMobility$10;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsMobility;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility$10;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;
 
     const/4 v2, 0x6
 
-    # invokes: Lcom/android/settings/accessibility/AccessibilitySettingsMobility;->removeDialog(I)V
-    invoke-static {v1, v2}, Lcom/android/settings/accessibility/AccessibilitySettingsMobility;->access$1500(Lcom/android/settings/accessibility/AccessibilitySettingsMobility;I)V
+    # invokes: Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;->removeDialog(I)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;->access$1500(Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;I)V
 
     .line 567
     return-void

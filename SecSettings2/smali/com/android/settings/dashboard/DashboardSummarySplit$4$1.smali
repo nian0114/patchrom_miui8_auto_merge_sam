@@ -1,4 +1,4 @@
-.class Lcom/android/settings/dashboard/DashboardSummarySplit$4$1;
+.class Lcom/android/settings_ex/dashboard/DashboardSummarySplit$4$1;
 .super Ljava/lang/Object;
 .source "DashboardSummarySplit.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/dashboard/DashboardSummarySplit$4;->onClick(Landroid/view/View;)V
+    value = Lcom/android/settings_ex/dashboard/DashboardSummarySplit$4;->onClick(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/dashboard/DashboardSummarySplit$4;
+.field final synthetic this$1:Lcom/android/settings_ex/dashboard/DashboardSummarySplit$4;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/dashboard/DashboardSummarySplit$4;)V
+.method constructor <init>(Lcom/android/settings_ex/dashboard/DashboardSummarySplit$4;)V
     .locals 0
 
     .prologue
     .line 322
-    iput-object p1, p0, Lcom/android/settings/dashboard/DashboardSummarySplit$4$1;->this$1:Lcom/android/settings/dashboard/DashboardSummarySplit$4;
+    iput-object p1, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$4$1;->this$1:Lcom/android/settings_ex/dashboard/DashboardSummarySplit$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
     .prologue
     .line 324
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit$4$1;->this$1:Lcom/android/settings/dashboard/DashboardSummarySplit$4;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$4$1;->this$1:Lcom/android/settings_ex/dashboard/DashboardSummarySplit$4;
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit$4;->this$0:Lcom/android/settings/dashboard/DashboardSummarySplit;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$4;->this$0:Lcom/android/settings_ex/dashboard/DashboardSummarySplit;
 
-    invoke-virtual {v0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 

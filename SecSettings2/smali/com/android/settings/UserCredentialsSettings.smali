@@ -1,19 +1,19 @@
-.class public Lcom/android/settings/UserCredentialsSettings;
-.super Lcom/android/settings/InstrumentedFragment;
+.class public Lcom/android/settings_ex/UserCredentialsSettings;
+.super Lcom/android/settings_ex/InstrumentedFragment;
 .source "UserCredentialsSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/UserCredentialsSettings$8;,
-        Lcom/android/settings/UserCredentialsSettings$AliasOperation;,
-        Lcom/android/settings/UserCredentialsSettings$ViewHolder;,
-        Lcom/android/settings/UserCredentialsSettings$CertHolder;,
-        Lcom/android/settings/UserCredentialsSettings$AdapterData;,
-        Lcom/android/settings/UserCredentialsSettings$UserCertificateAdapter;,
-        Lcom/android/settings/UserCredentialsSettings$UserCertificateAdapterCommons;,
-        Lcom/android/settings/UserCredentialsSettings$Tab;
+        Lcom/android/settings_ex/UserCredentialsSettings$8;,
+        Lcom/android/settings_ex/UserCredentialsSettings$AliasOperation;,
+        Lcom/android/settings_ex/UserCredentialsSettings$ViewHolder;,
+        Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;,
+        Lcom/android/settings_ex/UserCredentialsSettings$AdapterData;,
+        Lcom/android/settings_ex/UserCredentialsSettings$UserCertificateAdapter;,
+        Lcom/android/settings_ex/UserCredentialsSettings$UserCertificateAdapterCommons;,
+        Lcom/android/settings_ex/UserCredentialsSettings$Tab;
     }
 .end annotation
 
@@ -32,14 +32,14 @@
         value = {
             "Ljava/util/HashMap",
             "<",
-            "Lcom/android/settings/UserCredentialsSettings$Tab;",
-            "Lcom/android/settings/UserCredentialsSettings$AdapterData$AliasLoader;",
+            "Lcom/android/settings_ex/UserCredentialsSettings$Tab;",
+            "Lcom/android/settings_ex/UserCredentialsSettings$AdapterData$AliasLoader;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private mAliasOperation:Lcom/android/settings/UserCredentialsSettings$AliasOperation;
+.field private mAliasOperation:Lcom/android/settings_ex/UserCredentialsSettings$AliasOperation;
 
 .field private mCertDialog:Landroid/app/Dialog;
 
@@ -62,7 +62,7 @@
     .line 259
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/android/settings/UserCredentialsSettings;->mContext:Landroid/content/Context;
+    sput-object v0, Lcom/android/settings_ex/UserCredentialsSettings;->mContext:Landroid/content/Context;
 
     return-void
 .end method
@@ -74,13 +74,13 @@
     const/4 v0, 0x0
 
     .line 78
-    invoke-direct {p0}, Lcom/android/settings/InstrumentedFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/InstrumentedFragment;-><init>()V
 
     .line 85
-    iput-object v0, p0, Lcom/android/settings/UserCredentialsSettings;->mCertDialog:Landroid/app/Dialog;
+    iput-object v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mCertDialog:Landroid/app/Dialog;
 
     .line 86
-    iput-object v0, p0, Lcom/android/settings/UserCredentialsSettings;->mAlertDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mAlertDialog:Landroid/app/AlertDialog;
 
     .line 256
     new-instance v0, Ljava/util/HashMap;
@@ -89,19 +89,19 @@
 
     invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
 
-    iput-object v0, p0, Lcom/android/settings/UserCredentialsSettings;->mAliasLoaders:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mAliasLoaders:Ljava/util/HashMap;
 
     .line 796
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/UserCredentialsSettings;->mRefreshUI:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mRefreshUI:Z
 
     .line 799
-    new-instance v0, Lcom/android/settings/UserCredentialsSettings$7;
+    new-instance v0, Lcom/android/settings_ex/UserCredentialsSettings$7;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/UserCredentialsSettings$7;-><init>(Lcom/android/settings/UserCredentialsSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/UserCredentialsSettings$7;-><init>(Lcom/android/settings_ex/UserCredentialsSettings;)V
 
-    iput-object v0, p0, Lcom/android/settings/UserCredentialsSettings;->mEdmRefreshUiReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mEdmRefreshUiReceiver:Landroid/content/BroadcastReceiver;
 
     return-void
 .end method
@@ -111,7 +111,7 @@
 
     .prologue
     .line 78
-    sget-object v0, Lcom/android/settings/UserCredentialsSettings;->mContext:Landroid/content/Context;
+    sget-object v0, Lcom/android/settings_ex/UserCredentialsSettings;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
@@ -121,7 +121,7 @@
 
     .prologue
     .line 78
-    sget-object v0, Lcom/android/settings/UserCredentialsSettings;->mCCMService:Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
+    sget-object v0, Lcom/android/settings_ex/UserCredentialsSettings;->mCCMService:Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
 
     return-object v0
 .end method
@@ -132,127 +132,127 @@
 
     .prologue
     .line 78
-    sput-object p0, Lcom/android/settings/UserCredentialsSettings;->mCCMService:Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
+    sput-object p0, Lcom/android/settings_ex/UserCredentialsSettings;->mCCMService:Lcom/sec/enterprise/knox/ccm/IClientCertificateManager;
 
     return-object p0
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/UserCredentialsSettings;Lcom/android/settings/UserCredentialsSettings$CertHolder;Lcom/android/settings/UserCredentialsSettings$Tab;Landroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+.method static synthetic access$1200(Lcom/android/settings_ex/UserCredentialsSettings;Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;Lcom/android/settings_ex/UserCredentialsSettings$Tab;Landroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/UserCredentialsSettings;
-    .param p1, "x1"    # Lcom/android/settings/UserCredentialsSettings$CertHolder;
-    .param p2, "x2"    # Lcom/android/settings/UserCredentialsSettings$Tab;
+    .param p0, "x0"    # Lcom/android/settings_ex/UserCredentialsSettings;
+    .param p1, "x1"    # Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;
+    .param p2, "x2"    # Lcom/android/settings_ex/UserCredentialsSettings$Tab;
     .param p3, "x3"    # Landroid/view/View;
     .param p4, "x4"    # Landroid/view/ViewGroup;
 
     .prologue
     .line 78
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/settings/UserCredentialsSettings;->getViewForCertificate(Lcom/android/settings/UserCredentialsSettings$CertHolder;Lcom/android/settings/UserCredentialsSettings$Tab;Landroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/settings_ex/UserCredentialsSettings;->getViewForCertificate(Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;Lcom/android/settings_ex/UserCredentialsSettings$Tab;Landroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$1300(Lcom/android/settings/UserCredentialsSettings;)Ljava/util/HashMap;
+.method static synthetic access$1300(Lcom/android/settings_ex/UserCredentialsSettings;)Ljava/util/HashMap;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/UserCredentialsSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/UserCredentialsSettings;
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/android/settings/UserCredentialsSettings;->mAliasLoaders:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mAliasLoaders:Ljava/util/HashMap;
 
     return-object v0
 .end method
 
-.method static synthetic access$1400(Lcom/android/settings/UserCredentialsSettings;)Landroid/widget/TabHost;
+.method static synthetic access$1400(Lcom/android/settings_ex/UserCredentialsSettings;)Landroid/widget/TabHost;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/UserCredentialsSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/UserCredentialsSettings;
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/android/settings/UserCredentialsSettings;->mTabHost:Landroid/widget/TabHost;
+    iget-object v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mTabHost:Landroid/widget/TabHost;
 
     return-object v0
 .end method
 
-.method static synthetic access$3100(Lcom/android/settings/UserCredentialsSettings;Lcom/android/settings/UserCredentialsSettings$CertHolder;)V
+.method static synthetic access$3100(Lcom/android/settings_ex/UserCredentialsSettings;Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/UserCredentialsSettings;
-    .param p1, "x1"    # Lcom/android/settings/UserCredentialsSettings$CertHolder;
+    .param p0, "x0"    # Lcom/android/settings_ex/UserCredentialsSettings;
+    .param p1, "x1"    # Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;
 
     .prologue
     .line 78
-    invoke-direct {p0, p1}, Lcom/android/settings/UserCredentialsSettings;->showConfirmDialog(Lcom/android/settings/UserCredentialsSettings$CertHolder;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/UserCredentialsSettings;->showConfirmDialog(Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;)V
 
     return-void
 .end method
 
-.method static synthetic access$3400(Lcom/android/settings/UserCredentialsSettings;)Landroid/app/Dialog;
+.method static synthetic access$3400(Lcom/android/settings_ex/UserCredentialsSettings;)Landroid/app/Dialog;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/UserCredentialsSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/UserCredentialsSettings;
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/android/settings/UserCredentialsSettings;->mCertDialog:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mCertDialog:Landroid/app/Dialog;
 
     return-object v0
 .end method
 
-.method static synthetic access$3502(Lcom/android/settings/UserCredentialsSettings;Lcom/android/settings/UserCredentialsSettings$AliasOperation;)Lcom/android/settings/UserCredentialsSettings$AliasOperation;
+.method static synthetic access$3502(Lcom/android/settings_ex/UserCredentialsSettings;Lcom/android/settings_ex/UserCredentialsSettings$AliasOperation;)Lcom/android/settings_ex/UserCredentialsSettings$AliasOperation;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/UserCredentialsSettings;
-    .param p1, "x1"    # Lcom/android/settings/UserCredentialsSettings$AliasOperation;
+    .param p0, "x0"    # Lcom/android/settings_ex/UserCredentialsSettings;
+    .param p1, "x1"    # Lcom/android/settings_ex/UserCredentialsSettings$AliasOperation;
 
     .prologue
     .line 78
-    iput-object p1, p0, Lcom/android/settings/UserCredentialsSettings;->mAliasOperation:Lcom/android/settings/UserCredentialsSettings$AliasOperation;
+    iput-object p1, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mAliasOperation:Lcom/android/settings_ex/UserCredentialsSettings$AliasOperation;
 
     return-object p1
 .end method
 
-.method static synthetic access$3800(Lcom/android/settings/UserCredentialsSettings;)Z
+.method static synthetic access$3800(Lcom/android/settings_ex/UserCredentialsSettings;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/UserCredentialsSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/UserCredentialsSettings;
 
     .prologue
     .line 78
-    iget-boolean v0, p0, Lcom/android/settings/UserCredentialsSettings;->mInForeground:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mInForeground:Z
 
     return v0
 .end method
 
-.method static synthetic access$3900(Lcom/android/settings/UserCredentialsSettings;)V
+.method static synthetic access$3900(Lcom/android/settings_ex/UserCredentialsSettings;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/UserCredentialsSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/UserCredentialsSettings;
 
     .prologue
     .line 78
-    invoke-direct {p0}, Lcom/android/settings/UserCredentialsSettings;->refreshUI()V
+    invoke-direct {p0}, Lcom/android/settings_ex/UserCredentialsSettings;->refreshUI()V
 
     return-void
 .end method
 
-.method static synthetic access$4002(Lcom/android/settings/UserCredentialsSettings;Z)Z
+.method static synthetic access$4002(Lcom/android/settings_ex/UserCredentialsSettings;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/UserCredentialsSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/UserCredentialsSettings;
     .param p1, "x1"    # Z
 
     .prologue
     .line 78
-    iput-boolean p1, p0, Lcom/android/settings/UserCredentialsSettings;->mRefreshUI:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mRefreshUI:Z
 
     return p1
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/UserCredentialsSettings;Lcom/android/settings/UserCredentialsSettings$CertHolder;)V
+.method static synthetic access$800(Lcom/android/settings_ex/UserCredentialsSettings;Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/UserCredentialsSettings;
-    .param p1, "x1"    # Lcom/android/settings/UserCredentialsSettings$CertHolder;
+    .param p0, "x0"    # Lcom/android/settings_ex/UserCredentialsSettings;
+    .param p1, "x1"    # Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;
 
     .prologue
     .line 78
-    invoke-direct {p0, p1}, Lcom/android/settings/UserCredentialsSettings;->showCertDialog(Lcom/android/settings/UserCredentialsSettings$CertHolder;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/UserCredentialsSettings;->showCertDialog(Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;)V
 
     return-void
 .end method
@@ -285,7 +285,7 @@
 
     .line 764
     .local v0, "sslCert":Landroid/net/http/SslCertificate;
-    invoke-virtual {p0}, Lcom/android/settings/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -310,16 +310,16 @@
     return-void
 .end method
 
-.method private addTab(Lcom/android/settings/UserCredentialsSettings$Tab;)V
+.method private addTab(Lcom/android/settings_ex/UserCredentialsSettings$Tab;)V
     .locals 6
-    .param p1, "tab"    # Lcom/android/settings/UserCredentialsSettings$Tab;
+    .param p1, "tab"    # Lcom/android/settings_ex/UserCredentialsSettings$Tab;
 
     .prologue
     .line 306
-    iget-object v3, p0, Lcom/android/settings/UserCredentialsSettings;->mTabHost:Landroid/widget/TabHost;
+    iget-object v3, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mTabHost:Landroid/widget/TabHost;
 
-    # getter for: Lcom/android/settings/UserCredentialsSettings$Tab;->mTag:Ljava/lang/String;
-    invoke-static {p1}, Lcom/android/settings/UserCredentialsSettings$Tab;->access$500(Lcom/android/settings/UserCredentialsSettings$Tab;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/UserCredentialsSettings$Tab;->mTag:Ljava/lang/String;
+    invoke-static {p1}, Lcom/android/settings_ex/UserCredentialsSettings$Tab;->access$500(Lcom/android/settings_ex/UserCredentialsSettings$Tab;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -327,12 +327,12 @@
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lcom/android/settings/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    # getter for: Lcom/android/settings/UserCredentialsSettings$Tab;->mLabel:I
-    invoke-static {p1}, Lcom/android/settings/UserCredentialsSettings$Tab;->access$400(Lcom/android/settings/UserCredentialsSettings$Tab;)I
+    # getter for: Lcom/android/settings_ex/UserCredentialsSettings$Tab;->mLabel:I
+    invoke-static {p1}, Lcom/android/settings_ex/UserCredentialsSettings$Tab;->access$400(Lcom/android/settings_ex/UserCredentialsSettings$Tab;)I
 
     move-result v5
 
@@ -344,8 +344,8 @@
 
     move-result-object v3
 
-    # getter for: Lcom/android/settings/UserCredentialsSettings$Tab;->mView:I
-    invoke-static {p1}, Lcom/android/settings/UserCredentialsSettings$Tab;->access$300(Lcom/android/settings/UserCredentialsSettings$Tab;)I
+    # getter for: Lcom/android/settings_ex/UserCredentialsSettings$Tab;->mView:I
+    invoke-static {p1}, Lcom/android/settings_ex/UserCredentialsSettings$Tab;->access$300(Lcom/android/settings_ex/UserCredentialsSettings$Tab;)I
 
     move-result v4
 
@@ -355,15 +355,15 @@
 
     .line 309
     .local v2, "systemSpec":Landroid/widget/TabHost$TabSpec;
-    iget-object v3, p0, Lcom/android/settings/UserCredentialsSettings;->mTabHost:Landroid/widget/TabHost;
+    iget-object v3, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mTabHost:Landroid/widget/TabHost;
 
     invoke-virtual {v3, v2}, Landroid/widget/TabHost;->addTab(Landroid/widget/TabHost$TabSpec;)V
 
     .line 311
-    iget-object v3, p0, Lcom/android/settings/UserCredentialsSettings;->mTabHost:Landroid/widget/TabHost;
+    iget-object v3, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mTabHost:Landroid/widget/TabHost;
 
-    # getter for: Lcom/android/settings/UserCredentialsSettings$Tab;->mList:I
-    invoke-static {p1}, Lcom/android/settings/UserCredentialsSettings$Tab;->access$600(Lcom/android/settings/UserCredentialsSettings$Tab;)I
+    # getter for: Lcom/android/settings_ex/UserCredentialsSettings$Tab;->mList:I
+    invoke-static {p1}, Lcom/android/settings_ex/UserCredentialsSettings$Tab;->access$600(Lcom/android/settings_ex/UserCredentialsSettings$Tab;)I
 
     move-result v4
 
@@ -375,20 +375,20 @@
 
     .line 312
     .local v1, "lv":Landroid/widget/ListView;
-    new-instance v0, Lcom/android/settings/UserCredentialsSettings$UserCertificateAdapter;
+    new-instance v0, Lcom/android/settings_ex/UserCredentialsSettings$UserCertificateAdapter;
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, p0, p1, v3}, Lcom/android/settings/UserCredentialsSettings$UserCertificateAdapter;-><init>(Lcom/android/settings/UserCredentialsSettings;Lcom/android/settings/UserCredentialsSettings$Tab;Lcom/android/settings/UserCredentialsSettings$1;)V
+    invoke-direct {v0, p0, p1, v3}, Lcom/android/settings_ex/UserCredentialsSettings$UserCertificateAdapter;-><init>(Lcom/android/settings_ex/UserCredentialsSettings;Lcom/android/settings_ex/UserCredentialsSettings$Tab;Lcom/android/settings_ex/UserCredentialsSettings$1;)V
 
     .line 313
-    .local v0, "adapter":Lcom/android/settings/UserCredentialsSettings$UserCertificateAdapter;
+    .local v0, "adapter":Lcom/android/settings_ex/UserCredentialsSettings$UserCertificateAdapter;
     invoke-virtual {v1, v0}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 314
-    new-instance v3, Lcom/android/settings/UserCredentialsSettings$1;
+    new-instance v3, Lcom/android/settings_ex/UserCredentialsSettings$1;
 
-    invoke-direct {v3, p0, v0}, Lcom/android/settings/UserCredentialsSettings$1;-><init>(Lcom/android/settings/UserCredentialsSettings;Lcom/android/settings/UserCredentialsSettings$UserCertificateAdapter;)V
+    invoke-direct {v3, p0, v0}, Lcom/android/settings_ex/UserCredentialsSettings$1;-><init>(Lcom/android/settings_ex/UserCredentialsSettings;Lcom/android/settings_ex/UserCredentialsSettings$UserCertificateAdapter;)V
 
     invoke-virtual {v1, v3}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
@@ -396,10 +396,10 @@
     return-void
 .end method
 
-.method private getViewForCertificate(Lcom/android/settings/UserCredentialsSettings$CertHolder;Lcom/android/settings/UserCredentialsSettings$Tab;Landroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+.method private getViewForCertificate(Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;Lcom/android/settings_ex/UserCredentialsSettings$Tab;Landroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 4
-    .param p1, "certHolder"    # Lcom/android/settings/UserCredentialsSettings$CertHolder;
-    .param p2, "mTab"    # Lcom/android/settings/UserCredentialsSettings$Tab;
+    .param p1, "certHolder"    # Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;
+    .param p2, "mTab"    # Lcom/android/settings_ex/UserCredentialsSettings$Tab;
     .param p3, "convertView"    # Landroid/view/View;
     .param p4, "parent"    # Landroid/view/ViewGroup;
 
@@ -408,7 +408,7 @@
     if-nez p3, :cond_0
 
     .line 614
-    invoke-virtual {p0}, Lcom/android/settings/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -427,14 +427,14 @@
     move-result-object p3
 
     .line 616
-    new-instance v0, Lcom/android/settings/UserCredentialsSettings$ViewHolder;
+    new-instance v0, Lcom/android/settings_ex/UserCredentialsSettings$ViewHolder;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2}, Lcom/android/settings/UserCredentialsSettings$ViewHolder;-><init>(Lcom/android/settings/UserCredentialsSettings$1;)V
+    invoke-direct {v0, v2}, Lcom/android/settings_ex/UserCredentialsSettings$ViewHolder;-><init>(Lcom/android/settings_ex/UserCredentialsSettings$1;)V
 
     .line 617
-    .local v0, "holder":Lcom/android/settings/UserCredentialsSettings$ViewHolder;
+    .local v0, "holder":Lcom/android/settings_ex/UserCredentialsSettings$ViewHolder;
     const v2, 0x7f0d0500
 
     invoke-virtual {p3, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -443,8 +443,8 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    # setter for: Lcom/android/settings/UserCredentialsSettings$ViewHolder;->mSubjectPrimaryView:Landroid/widget/TextView;
-    invoke-static {v0, v2}, Lcom/android/settings/UserCredentialsSettings$ViewHolder;->access$2402(Lcom/android/settings/UserCredentialsSettings$ViewHolder;Landroid/widget/TextView;)Landroid/widget/TextView;
+    # setter for: Lcom/android/settings_ex/UserCredentialsSettings$ViewHolder;->mSubjectPrimaryView:Landroid/widget/TextView;
+    invoke-static {v0, v2}, Lcom/android/settings_ex/UserCredentialsSettings$ViewHolder;->access$2402(Lcom/android/settings_ex/UserCredentialsSettings$ViewHolder;Landroid/widget/TextView;)Landroid/widget/TextView;
 
     .line 619
     const v2, 0x7f0d0501
@@ -455,8 +455,8 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    # setter for: Lcom/android/settings/UserCredentialsSettings$ViewHolder;->mSubjectSecondaryView:Landroid/widget/TextView;
-    invoke-static {v0, v2}, Lcom/android/settings/UserCredentialsSettings$ViewHolder;->access$2502(Lcom/android/settings/UserCredentialsSettings$ViewHolder;Landroid/widget/TextView;)Landroid/widget/TextView;
+    # setter for: Lcom/android/settings_ex/UserCredentialsSettings$ViewHolder;->mSubjectSecondaryView:Landroid/widget/TextView;
+    invoke-static {v0, v2}, Lcom/android/settings_ex/UserCredentialsSettings$ViewHolder;->access$2502(Lcom/android/settings_ex/UserCredentialsSettings$ViewHolder;Landroid/widget/TextView;)Landroid/widget/TextView;
 
     .line 621
     invoke-virtual {p3, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
@@ -464,26 +464,26 @@
     .line 625
     .end local v1    # "inflater":Landroid/view/LayoutInflater;
     :goto_0
-    # getter for: Lcom/android/settings/UserCredentialsSettings$ViewHolder;->mSubjectPrimaryView:Landroid/widget/TextView;
-    invoke-static {v0}, Lcom/android/settings/UserCredentialsSettings$ViewHolder;->access$2400(Lcom/android/settings/UserCredentialsSettings$ViewHolder;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/UserCredentialsSettings$ViewHolder;->mSubjectPrimaryView:Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/android/settings_ex/UserCredentialsSettings$ViewHolder;->access$2400(Lcom/android/settings_ex/UserCredentialsSettings$ViewHolder;)Landroid/widget/TextView;
 
     move-result-object v2
 
-    # getter for: Lcom/android/settings/UserCredentialsSettings$CertHolder;->mSubjectPrimary:Ljava/lang/String;
-    invoke-static {p1}, Lcom/android/settings/UserCredentialsSettings$CertHolder;->access$2600(Lcom/android/settings/UserCredentialsSettings$CertHolder;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;->mSubjectPrimary:Ljava/lang/String;
+    invoke-static {p1}, Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;->access$2600(Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 626
-    # getter for: Lcom/android/settings/UserCredentialsSettings$ViewHolder;->mSubjectSecondaryView:Landroid/widget/TextView;
-    invoke-static {v0}, Lcom/android/settings/UserCredentialsSettings$ViewHolder;->access$2500(Lcom/android/settings/UserCredentialsSettings$ViewHolder;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/UserCredentialsSettings$ViewHolder;->mSubjectSecondaryView:Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/android/settings_ex/UserCredentialsSettings$ViewHolder;->access$2500(Lcom/android/settings_ex/UserCredentialsSettings$ViewHolder;)Landroid/widget/TextView;
 
     move-result-object v2
 
-    # getter for: Lcom/android/settings/UserCredentialsSettings$CertHolder;->mSubjectSecondary:Ljava/lang/String;
-    invoke-static {p1}, Lcom/android/settings/UserCredentialsSettings$CertHolder;->access$2700(Lcom/android/settings/UserCredentialsSettings$CertHolder;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;->mSubjectSecondary:Ljava/lang/String;
+    invoke-static {p1}, Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;->access$2700(Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -493,15 +493,15 @@
     return-object p3
 
     .line 623
-    .end local v0    # "holder":Lcom/android/settings/UserCredentialsSettings$ViewHolder;
+    .end local v0    # "holder":Lcom/android/settings_ex/UserCredentialsSettings$ViewHolder;
     :cond_0
     invoke-virtual {p3}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/UserCredentialsSettings$ViewHolder;
+    check-cast v0, Lcom/android/settings_ex/UserCredentialsSettings$ViewHolder;
 
-    .restart local v0    # "holder":Lcom/android/settings/UserCredentialsSettings$ViewHolder;
+    .restart local v0    # "holder":Lcom/android/settings_ex/UserCredentialsSettings$ViewHolder;
     goto :goto_0
 .end method
 
@@ -512,11 +512,11 @@
     const/4 v1, 0x0
 
     .line 815
-    iget-object v0, p0, Lcom/android/settings/UserCredentialsSettings;->mAlertDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mAlertDialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/UserCredentialsSettings;->mAlertDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mAlertDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->isShowing()Z
 
@@ -525,20 +525,20 @@
     if-eqz v0, :cond_0
 
     .line 816
-    iget-object v0, p0, Lcom/android/settings/UserCredentialsSettings;->mAlertDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mAlertDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 817
-    iput-object v1, p0, Lcom/android/settings/UserCredentialsSettings;->mAlertDialog:Landroid/app/AlertDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mAlertDialog:Landroid/app/AlertDialog;
 
     .line 819
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/UserCredentialsSettings;->mCertDialog:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mCertDialog:Landroid/app/Dialog;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/settings/UserCredentialsSettings;->mCertDialog:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mCertDialog:Landroid/app/Dialog;
 
     invoke-virtual {v0}, Landroid/app/Dialog;->isShowing()Z
 
@@ -547,16 +547,16 @@
     if-eqz v0, :cond_1
 
     .line 820
-    iget-object v0, p0, Lcom/android/settings/UserCredentialsSettings;->mCertDialog:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mCertDialog:Landroid/app/Dialog;
 
     invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
     .line 821
-    iput-object v1, p0, Lcom/android/settings/UserCredentialsSettings;->mCertDialog:Landroid/app/Dialog;
+    iput-object v1, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mCertDialog:Landroid/app/Dialog;
 
     .line 825
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -566,15 +566,15 @@
     return-void
 .end method
 
-.method private showCertDialog(Lcom/android/settings/UserCredentialsSettings$CertHolder;)V
+.method private showCertDialog(Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;)V
     .locals 27
-    .param p1, "certHolder"    # Lcom/android/settings/UserCredentialsSettings$CertHolder;
+    .param p1, "certHolder"    # Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;
 
     .prologue
     .line 636
     new-instance v7, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v23
 
@@ -603,8 +603,8 @@
 
     .line 641
     .local v21, "titles":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
-    # getter for: Lcom/android/settings/UserCredentialsSettings$CertHolder;->mX509Cert:Ljava/security/cert/X509Certificate;
-    invoke-static/range {p1 .. p1}, Lcom/android/settings/UserCredentialsSettings$CertHolder;->access$2800(Lcom/android/settings/UserCredentialsSettings$CertHolder;)Ljava/security/cert/X509Certificate;
+    # getter for: Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;->mX509Cert:Ljava/security/cert/X509Certificate;
+    invoke-static/range {p1 .. p1}, Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;->access$2800(Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;)Ljava/security/cert/X509Certificate;
 
     move-result-object v23
 
@@ -616,12 +616,12 @@
 
     move-object/from16 v3, v21
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/android/settings/UserCredentialsSettings;->addCertDetails(Ljava/security/cert/X509Certificate;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/android/settings_ex/UserCredentialsSettings;->addCertDetails(Ljava/security/cert/X509Certificate;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
     .line 643
     new-instance v5, Landroid/widget/ArrayAdapter;
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v23
 
@@ -646,7 +646,7 @@
     .line 647
     new-instance v20, Landroid/widget/Spinner;
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v23
 
@@ -674,7 +674,7 @@
 
     .line 650
     .local v16, "lp":Landroid/widget/LinearLayout$LayoutParams;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/UserCredentialsSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/UserCredentialsSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v23
 
@@ -690,7 +690,7 @@
 
     move/from16 v23, v0
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/UserCredentialsSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/UserCredentialsSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v24
 
@@ -706,7 +706,7 @@
 
     move/from16 v24, v0
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/UserCredentialsSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/UserCredentialsSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v25
 
@@ -749,7 +749,7 @@
     invoke-virtual {v0, v5}, Landroid/widget/Spinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
     .line 655
-    new-instance v23, Lcom/android/settings/UserCredentialsSettings$2;
+    new-instance v23, Lcom/android/settings_ex/UserCredentialsSettings$2;
 
     move-object/from16 v0, v23
 
@@ -757,7 +757,7 @@
 
     move-object/from16 v2, v22
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/UserCredentialsSettings$2;-><init>(Lcom/android/settings/UserCredentialsSettings;Ljava/util/ArrayList;)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/UserCredentialsSettings$2;-><init>(Lcom/android/settings_ex/UserCredentialsSettings;Ljava/util/ArrayList;)V
 
     move-object/from16 v0, v20
 
@@ -768,7 +768,7 @@
     .line 667
     new-instance v12, Landroid/widget/LinearLayout;
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v23
 
@@ -806,7 +806,7 @@
 
     .line 672
     .local v17, "lp2":Landroid/widget/LinearLayout$LayoutParams;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/UserCredentialsSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/UserCredentialsSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v23
 
@@ -895,13 +895,13 @@
     .line 683
     const v23, 0x104000a
 
-    new-instance v24, Lcom/android/settings/UserCredentialsSettings$3;
+    new-instance v24, Lcom/android/settings_ex/UserCredentialsSettings$3;
 
     move-object/from16 v0, v24
 
     move-object/from16 v1, p0
 
-    invoke-direct {v0, v1}, Lcom/android/settings/UserCredentialsSettings$3;-><init>(Lcom/android/settings/UserCredentialsSettings;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/UserCredentialsSettings$3;-><init>(Lcom/android/settings_ex/UserCredentialsSettings;)V
 
     move/from16 v0, v23
 
@@ -990,7 +990,7 @@
     check-cast v10, Landroid/widget/TextView;
 
     .end local v10    # "child":Landroid/view/View;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/UserCredentialsSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/UserCredentialsSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v23
 
@@ -1012,7 +1012,7 @@
 
     .line 703
     :cond_3
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v23
 
@@ -1038,7 +1038,7 @@
 
     .line 712
     .local v18, "removeButton":Landroid/widget/Button;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v23
 
@@ -1069,8 +1069,8 @@
 
     .line 721
     :cond_4
-    # getter for: Lcom/android/settings/UserCredentialsSettings$CertHolder;->mTab:Lcom/android/settings/UserCredentialsSettings$Tab;
-    invoke-static/range {p1 .. p1}, Lcom/android/settings/UserCredentialsSettings$CertHolder;->access$2900(Lcom/android/settings/UserCredentialsSettings$CertHolder;)Lcom/android/settings/UserCredentialsSettings$Tab;
+    # getter for: Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;->mTab:Lcom/android/settings_ex/UserCredentialsSettings$Tab;
+    invoke-static/range {p1 .. p1}, Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;->access$2900(Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;)Lcom/android/settings_ex/UserCredentialsSettings$Tab;
 
     move-result-object v23
 
@@ -1078,8 +1078,8 @@
 
     move-object/from16 v1, p1
 
-    # invokes: Lcom/android/settings/UserCredentialsSettings$Tab;->getButtonLabel(Lcom/android/settings/UserCredentialsSettings$CertHolder;)I
-    invoke-static {v0, v1}, Lcom/android/settings/UserCredentialsSettings$Tab;->access$3000(Lcom/android/settings/UserCredentialsSettings$Tab;Lcom/android/settings/UserCredentialsSettings$CertHolder;)I
+    # invokes: Lcom/android/settings_ex/UserCredentialsSettings$Tab;->getButtonLabel(Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;)I
+    invoke-static {v0, v1}, Lcom/android/settings_ex/UserCredentialsSettings$Tab;->access$3000(Lcom/android/settings_ex/UserCredentialsSettings$Tab;Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;)I
 
     move-result v23
 
@@ -1090,7 +1090,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
 
     .line 722
-    new-instance v23, Lcom/android/settings/UserCredentialsSettings$4;
+    new-instance v23, Lcom/android/settings_ex/UserCredentialsSettings$4;
 
     move-object/from16 v0, v23
 
@@ -1098,7 +1098,7 @@
 
     move-object/from16 v2, p1
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/UserCredentialsSettings$4;-><init>(Lcom/android/settings/UserCredentialsSettings;Lcom/android/settings/UserCredentialsSettings$CertHolder;)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/UserCredentialsSettings$4;-><init>(Lcom/android/settings_ex/UserCredentialsSettings;Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;)V
 
     move-object/from16 v0, v18
 
@@ -1118,19 +1118,19 @@
     .line 732
     move-object/from16 v0, p0
 
-    iput-object v8, v0, Lcom/android/settings/UserCredentialsSettings;->mCertDialog:Landroid/app/Dialog;
+    iput-object v8, v0, Lcom/android/settings_ex/UserCredentialsSettings;->mCertDialog:Landroid/app/Dialog;
 
     .line 734
     return-void
 .end method
 
-.method private showConfirmDialog(Lcom/android/settings/UserCredentialsSettings$CertHolder;)V
+.method private showConfirmDialog(Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;)V
     .locals 5
-    .param p1, "certHolder"    # Lcom/android/settings/UserCredentialsSettings$CertHolder;
+    .param p1, "certHolder"    # Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;
 
     .prologue
     .line 737
-    invoke-virtual {p0}, Lcom/android/settings/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1142,13 +1142,13 @@
 
     .line 739
     .local v1, "builder":Landroid/app/AlertDialog$Builder;
-    # getter for: Lcom/android/settings/UserCredentialsSettings$CertHolder;->mTab:Lcom/android/settings/UserCredentialsSettings$Tab;
-    invoke-static {p1}, Lcom/android/settings/UserCredentialsSettings$CertHolder;->access$2900(Lcom/android/settings/UserCredentialsSettings$CertHolder;)Lcom/android/settings/UserCredentialsSettings$Tab;
+    # getter for: Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;->mTab:Lcom/android/settings_ex/UserCredentialsSettings$Tab;
+    invoke-static {p1}, Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;->access$2900(Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;)Lcom/android/settings_ex/UserCredentialsSettings$Tab;
 
     move-result-object v3
 
-    # invokes: Lcom/android/settings/UserCredentialsSettings$Tab;->getButtonConfirmation(Lcom/android/settings/UserCredentialsSettings$CertHolder;)I
-    invoke-static {v3, p1}, Lcom/android/settings/UserCredentialsSettings$Tab;->access$3200(Lcom/android/settings/UserCredentialsSettings$Tab;Lcom/android/settings/UserCredentialsSettings$CertHolder;)I
+    # invokes: Lcom/android/settings_ex/UserCredentialsSettings$Tab;->getButtonConfirmation(Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;)I
+    invoke-static {v3, p1}, Lcom/android/settings_ex/UserCredentialsSettings$Tab;->access$3200(Lcom/android/settings_ex/UserCredentialsSettings$Tab;Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;)I
 
     move-result v3
 
@@ -1157,18 +1157,18 @@
     .line 740
     const v3, 0x1040013
 
-    new-instance v4, Lcom/android/settings/UserCredentialsSettings$5;
+    new-instance v4, Lcom/android/settings_ex/UserCredentialsSettings$5;
 
-    invoke-direct {v4, p0, p1}, Lcom/android/settings/UserCredentialsSettings$5;-><init>(Lcom/android/settings/UserCredentialsSettings;Lcom/android/settings/UserCredentialsSettings$CertHolder;)V
+    invoke-direct {v4, p0, p1}, Lcom/android/settings_ex/UserCredentialsSettings$5;-><init>(Lcom/android/settings_ex/UserCredentialsSettings;Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;)V
 
     invoke-virtual {v1, v3, v4}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 748
     const v3, 0x1040009
 
-    new-instance v4, Lcom/android/settings/UserCredentialsSettings$6;
+    new-instance v4, Lcom/android/settings_ex/UserCredentialsSettings$6;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/UserCredentialsSettings$6;-><init>(Lcom/android/settings/UserCredentialsSettings;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/UserCredentialsSettings$6;-><init>(Lcom/android/settings_ex/UserCredentialsSettings;)V
 
     invoke-virtual {v1, v3, v4}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1182,7 +1182,7 @@
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
     .line 757
-    iput-object v0, p0, Lcom/android/settings/UserCredentialsSettings;->mAlertDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mAlertDialog:Landroid/app/AlertDialog;
 
     .line 759
     return-void
@@ -1206,10 +1206,10 @@
 
     .prologue
     .line 263
-    invoke-super {p0, p1}, Lcom/android/settings/InstrumentedFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/InstrumentedFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 264
-    invoke-virtual {p0}, Lcom/android/settings/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1217,10 +1217,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/UserCredentialsSettings;->mContext:Landroid/content/Context;
+    sput-object v0, Lcom/android/settings_ex/UserCredentialsSettings;->mContext:Landroid/content/Context;
 
     .line 265
-    invoke-virtual {p0}, Lcom/android/settings/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1232,12 +1232,12 @@
 
     check-cast v0, Landroid/os/UserManager;
 
-    iput-object v0, p0, Lcom/android/settings/UserCredentialsSettings;->mUserManager:Landroid/os/UserManager;
+    iput-object v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mUserManager:Landroid/os/UserManager;
 
     .line 266
-    sget-object v0, Lcom/android/settings/UserCredentialsSettings;->mContext:Landroid/content/Context;
+    sget-object v0, Lcom/android/settings_ex/UserCredentialsSettings;->mContext:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/android/settings/UserCredentialsSettings;->mEdmRefreshUiReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mEdmRefreshUiReceiver:Landroid/content/BroadcastReceiver;
 
     new-instance v2, Landroid/content/IntentFilter;
 
@@ -1273,25 +1273,25 @@
 
     check-cast v0, Landroid/widget/TabHost;
 
-    iput-object v0, p0, Lcom/android/settings/UserCredentialsSettings;->mTabHost:Landroid/widget/TabHost;
+    iput-object v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mTabHost:Landroid/widget/TabHost;
 
     .line 275
-    iget-object v0, p0, Lcom/android/settings/UserCredentialsSettings;->mTabHost:Landroid/widget/TabHost;
+    iget-object v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mTabHost:Landroid/widget/TabHost;
 
     invoke-virtual {v0}, Landroid/widget/TabHost;->setup()V
 
     .line 276
-    sget-object v0, Lcom/android/settings/UserCredentialsSettings$Tab;->SYSTEM:Lcom/android/settings/UserCredentialsSettings$Tab;
+    sget-object v0, Lcom/android/settings_ex/UserCredentialsSettings$Tab;->SYSTEM:Lcom/android/settings_ex/UserCredentialsSettings$Tab;
 
-    invoke-direct {p0, v0}, Lcom/android/settings/UserCredentialsSettings;->addTab(Lcom/android/settings/UserCredentialsSettings$Tab;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/UserCredentialsSettings;->addTab(Lcom/android/settings_ex/UserCredentialsSettings$Tab;)V
 
     .line 277
-    sget-object v0, Lcom/android/settings/UserCredentialsSettings$Tab;->WIFI:Lcom/android/settings/UserCredentialsSettings$Tab;
+    sget-object v0, Lcom/android/settings_ex/UserCredentialsSettings$Tab;->WIFI:Lcom/android/settings_ex/UserCredentialsSettings$Tab;
 
-    invoke-direct {p0, v0}, Lcom/android/settings/UserCredentialsSettings;->addTab(Lcom/android/settings/UserCredentialsSettings$Tab;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/UserCredentialsSettings;->addTab(Lcom/android/settings_ex/UserCredentialsSettings$Tab;)V
 
     .line 278
-    invoke-virtual {p0}, Lcom/android/settings/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UserCredentialsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1304,10 +1304,10 @@
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setElevation(F)V
 
     .line 279
-    invoke-virtual {p0}, Lcom/android/settings/UserCredentialsSettings;->setTabViewTts()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/UserCredentialsSettings;->setTabViewTts()V
 
     .line 280
-    iget-object v0, p0, Lcom/android/settings/UserCredentialsSettings;->mTabHost:Landroid/widget/TabHost;
+    iget-object v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mTabHost:Landroid/widget/TabHost;
 
     return-object v0
 .end method
@@ -1319,7 +1319,7 @@
     const/4 v3, 0x1
 
     .line 294
-    iget-object v2, p0, Lcom/android/settings/UserCredentialsSettings;->mAliasLoaders:Ljava/util/HashMap;
+    iget-object v2, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mAliasLoaders:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
@@ -1341,41 +1341,41 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/UserCredentialsSettings$AdapterData$AliasLoader;
+    check-cast v0, Lcom/android/settings_ex/UserCredentialsSettings$AdapterData$AliasLoader;
 
     .line 295
-    .local v0, "aliasLoader":Lcom/android/settings/UserCredentialsSettings$AdapterData$AliasLoader;
-    invoke-virtual {v0, v3}, Lcom/android/settings/UserCredentialsSettings$AdapterData$AliasLoader;->cancel(Z)Z
+    .local v0, "aliasLoader":Lcom/android/settings_ex/UserCredentialsSettings$AdapterData$AliasLoader;
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/UserCredentialsSettings$AdapterData$AliasLoader;->cancel(Z)Z
 
     goto :goto_0
 
     .line 297
-    .end local v0    # "aliasLoader":Lcom/android/settings/UserCredentialsSettings$AdapterData$AliasLoader;
+    .end local v0    # "aliasLoader":Lcom/android/settings_ex/UserCredentialsSettings$AdapterData$AliasLoader;
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/UserCredentialsSettings;->mAliasOperation:Lcom/android/settings/UserCredentialsSettings$AliasOperation;
+    iget-object v2, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mAliasOperation:Lcom/android/settings_ex/UserCredentialsSettings$AliasOperation;
 
     if-eqz v2, :cond_1
 
     .line 298
-    iget-object v2, p0, Lcom/android/settings/UserCredentialsSettings;->mAliasOperation:Lcom/android/settings/UserCredentialsSettings$AliasOperation;
+    iget-object v2, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mAliasOperation:Lcom/android/settings_ex/UserCredentialsSettings$AliasOperation;
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/UserCredentialsSettings$AliasOperation;->cancel(Z)Z
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/UserCredentialsSettings$AliasOperation;->cancel(Z)Z
 
     .line 299
     const/4 v2, 0x0
 
-    iput-object v2, p0, Lcom/android/settings/UserCredentialsSettings;->mAliasOperation:Lcom/android/settings/UserCredentialsSettings$AliasOperation;
+    iput-object v2, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mAliasOperation:Lcom/android/settings_ex/UserCredentialsSettings$AliasOperation;
 
     .line 301
     :cond_1
-    sget-object v2, Lcom/android/settings/UserCredentialsSettings;->mContext:Landroid/content/Context;
+    sget-object v2, Lcom/android/settings_ex/UserCredentialsSettings;->mContext:Landroid/content/Context;
 
-    iget-object v3, p0, Lcom/android/settings/UserCredentialsSettings;->mEdmRefreshUiReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v3, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mEdmRefreshUiReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 302
-    invoke-super {p0}, Lcom/android/settings/InstrumentedFragment;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/InstrumentedFragment;->onDestroy()V
 
     .line 303
     return-void
@@ -1386,12 +1386,12 @@
 
     .prologue
     .line 840
-    invoke-super {p0}, Lcom/android/settings/InstrumentedFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/InstrumentedFragment;->onPause()V
 
     .line 841
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/UserCredentialsSettings;->mInForeground:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mInForeground:Z
 
     .line 842
     return-void
@@ -1402,20 +1402,20 @@
 
     .prologue
     .line 830
-    invoke-super {p0}, Lcom/android/settings/InstrumentedFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/InstrumentedFragment;->onResume()V
 
     .line 831
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/UserCredentialsSettings;->mInForeground:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mInForeground:Z
 
     .line 833
-    iget-boolean v0, p0, Lcom/android/settings/UserCredentialsSettings;->mRefreshUI:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mRefreshUI:Z
 
     if-eqz v0, :cond_0
 
     .line 834
-    invoke-direct {p0}, Lcom/android/settings/UserCredentialsSettings;->refreshUI()V
+    invoke-direct {p0}, Lcom/android/settings_ex/UserCredentialsSettings;->refreshUI()V
 
     .line 836
     :cond_0
@@ -1427,7 +1427,7 @@
 
     .prologue
     .line 284
-    iget-object v4, p0, Lcom/android/settings/UserCredentialsSettings;->mTabHost:Landroid/widget/TabHost;
+    iget-object v4, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mTabHost:Landroid/widget/TabHost;
 
     invoke-virtual {v4}, Landroid/widget/TabHost;->getTabWidget()Landroid/widget/TabWidget;
 
@@ -1446,7 +1446,7 @@
     if-ge v1, v0, :cond_0
 
     .line 286
-    iget-object v4, p0, Lcom/android/settings/UserCredentialsSettings;->mTabHost:Landroid/widget/TabHost;
+    iget-object v4, p0, Lcom/android/settings_ex/UserCredentialsSettings;->mTabHost:Landroid/widget/TabHost;
 
     invoke-virtual {v4}, Landroid/widget/TabHost;->getTabWidget()Landroid/widget/TabWidget;
 
@@ -1504,7 +1504,7 @@
 
     aput-object v8, v6, v7
 
-    invoke-virtual {p0, v5, v6}, Lcom/android/settings/UserCredentialsSettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v5, v6}, Lcom/android/settings_ex/UserCredentialsSettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 

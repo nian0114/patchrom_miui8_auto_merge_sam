@@ -1,14 +1,14 @@
-.class Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment$3;
+.class Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment$3;
 .super Ljava/lang/Object;
 .source "NotificationReminderPreferenceFragment.java"
 
 # interfaces
-.implements Lcom/android/settings/DropDownPreference$Callback;
+.implements Lcom/android/settings_ex/DropDownPreference$Callback;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;)V
     .locals 0
 
     .prologue
     .line 186
-    iput-object p1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment$3;->this$0:Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment$3;->this$0:Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -52,16 +52,16 @@
 
     .line 190
     .local v0, "value":I
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment$3;->this$0:Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment$3;->this$0:Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;
 
-    # invokes: Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v1}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->access$100(Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->access$100(Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;)Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment$3;->this$0:Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment$3;->this$0:Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;
 
-    iget-object v2, v2, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->SETTING_SYSTEM_TIME_KEY:Ljava/lang/String;
+    iget-object v2, v2, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->SETTING_SYSTEM_TIME_KEY:Ljava/lang/String;
 
     const/4 v3, -0x2
 
@@ -80,9 +80,9 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment$3;->this$0:Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment$3;->this$0:Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;
 
-    iget-object v3, v3, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->SETTING_SYSTEM_TIME_KEY:Ljava/lang/String;
+    iget-object v3, v3, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->SETTING_SYSTEM_TIME_KEY:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -102,7 +102,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 192
     const/4 v1, 0x1

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
+.class Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
 .super Ljava/lang/Object;
 .source "PenAirViewPagerAdapter.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/spen/PenAirViewPagerAdapter;
+    value = Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -31,10 +31,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 34
-    iput v0, p0, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;->animation:I
+    iput v0, p0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;->animation:I
 
     .line 35
-    iput v0, p0, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;->summary:I
+    iput v0, p0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;->summary:I
 
     .line 36
     return-void

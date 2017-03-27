@@ -1,19 +1,19 @@
-.class public Lcom/android/settings/LockscreenNotificationApplist;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/LockscreenNotificationApplist;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "LockscreenNotificationApplist.java"
 
 # interfaces
 .implements Landroid/preference/Preference$OnPreferenceChangeListener;
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/LockscreenNotificationApplist$Backend;,
-        Lcom/android/settings/LockscreenNotificationApplist$AppData;,
-        Lcom/android/settings/LockscreenNotificationApplist$AppRow;,
-        Lcom/android/settings/LockscreenNotificationApplist$Row;
+        Lcom/android/settings_ex/LockscreenNotificationApplist$Backend;,
+        Lcom/android/settings_ex/LockscreenNotificationApplist$AppData;,
+        Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;,
+        Lcom/android/settings_ex/LockscreenNotificationApplist$Row;
     }
 .end annotation
 
@@ -23,7 +23,7 @@
 
 .field private static final DEBUG:Z
 
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 .field private static mAppArray:Ljava/util/Hashtable;
     .annotation system Ldalvik/annotation/Signature;
@@ -31,20 +31,20 @@
             "Ljava/util/Hashtable",
             "<",
             "Ljava/lang/Integer;",
-            "Lcom/android/settings/LockscreenNotificationApplist$AppData;",
+            "Lcom/android/settings_ex/LockscreenNotificationApplist$AppData;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public static mBackend:Lcom/android/settings/LockscreenNotificationApplist$Backend;
+.field public static mBackend:Lcom/android/settings_ex/LockscreenNotificationApplist$Backend;
 
 .field private static final mRowComparator:Ljava/util/Comparator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Comparator",
             "<",
-            "Lcom/android/settings/LockscreenNotificationApplist$AppRow;",
+            "Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;",
             ">;"
         }
     .end annotation
@@ -74,7 +74,7 @@
 
 .field private mListViewState:Landroid/os/Parcelable;
 
-.field private mLockscreen:Lcom/android/settings/DropDownPreference;
+.field private mLockscreen:Lcom/android/settings_ex/DropDownPreference;
 
 .field private mLockscreenSelectedValue:I
 
@@ -88,7 +88,7 @@
             "Landroid/util/ArrayMap",
             "<",
             "Ljava/lang/String;",
-            "Lcom/android/settings/LockscreenNotificationApplist$AppRow;",
+            "Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;",
             ">;"
         }
     .end annotation
@@ -112,7 +112,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/LockscreenNotificationApplist$AppRow;",
+            "Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;",
             ">;"
         }
     .end annotation
@@ -133,7 +133,7 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/android/settings/LockscreenNotificationApplist;->DEBUG:Z
+    sput-boolean v0, Lcom/android/settings_ex/LockscreenNotificationApplist;->DEBUG:Z
 
     .line 79
     new-instance v0, Landroid/content/Intent;
@@ -148,35 +148,35 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/LockscreenNotificationApplist;->APP_NOTIFICATION_PREFS_CATEGORY_INTENT:Landroid/content/Intent;
+    sput-object v0, Lcom/android/settings_ex/LockscreenNotificationApplist;->APP_NOTIFICATION_PREFS_CATEGORY_INTENT:Landroid/content/Intent;
 
     .line 96
-    new-instance v0, Lcom/android/settings/LockscreenNotificationApplist$Backend;
+    new-instance v0, Lcom/android/settings_ex/LockscreenNotificationApplist$Backend;
 
-    invoke-direct {v0}, Lcom/android/settings/LockscreenNotificationApplist$Backend;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/LockscreenNotificationApplist$Backend;-><init>()V
 
-    sput-object v0, Lcom/android/settings/LockscreenNotificationApplist;->mBackend:Lcom/android/settings/LockscreenNotificationApplist$Backend;
+    sput-object v0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mBackend:Lcom/android/settings_ex/LockscreenNotificationApplist$Backend;
 
     .line 117
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    sput-object v0, Lcom/android/settings/LockscreenNotificationApplist;->mAppArray:Ljava/util/Hashtable;
+    sput-object v0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAppArray:Ljava/util/Hashtable;
 
     .line 344
-    new-instance v0, Lcom/android/settings/LockscreenNotificationApplist$3;
+    new-instance v0, Lcom/android/settings_ex/LockscreenNotificationApplist$3;
 
-    invoke-direct {v0}, Lcom/android/settings/LockscreenNotificationApplist$3;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/LockscreenNotificationApplist$3;-><init>()V
 
-    sput-object v0, Lcom/android/settings/LockscreenNotificationApplist;->mRowComparator:Ljava/util/Comparator;
+    sput-object v0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mRowComparator:Ljava/util/Comparator;
 
     .line 718
-    new-instance v0, Lcom/android/settings/LockscreenNotificationApplist$6;
+    new-instance v0, Lcom/android/settings_ex/LockscreenNotificationApplist$6;
 
-    invoke-direct {v0}, Lcom/android/settings/LockscreenNotificationApplist$6;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/LockscreenNotificationApplist$6;-><init>()V
 
-    sput-object v0, Lcom/android/settings/LockscreenNotificationApplist;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/LockscreenNotificationApplist;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -186,140 +186,140 @@
 
     .prologue
     .line 73
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 88
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mHandler:Landroid/os/Handler;
 
     .line 89
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mRows:Landroid/util/ArrayMap;
+    iput-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mRows:Landroid/util/ArrayMap;
 
     .line 90
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
 
     .line 91
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mSections:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mSections:Ljava/util/ArrayList;
 
     .line 101
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mHideApp:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mHideApp:Z
 
     .line 102
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->hide_app_list:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->hide_app_list:Ljava/lang/String;
 
     .line 410
-    new-instance v0, Lcom/android/settings/LockscreenNotificationApplist$4;
+    new-instance v0, Lcom/android/settings_ex/LockscreenNotificationApplist$4;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/LockscreenNotificationApplist$4;-><init>(Lcom/android/settings/LockscreenNotificationApplist;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/LockscreenNotificationApplist$4;-><init>(Lcom/android/settings_ex/LockscreenNotificationApplist;)V
 
-    iput-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mCollectAppsRunnable:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mCollectAppsRunnable:Ljava/lang/Runnable;
 
     .line 565
-    new-instance v0, Lcom/android/settings/LockscreenNotificationApplist$5;
+    new-instance v0, Lcom/android/settings_ex/LockscreenNotificationApplist$5;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/LockscreenNotificationApplist$5;-><init>(Lcom/android/settings/LockscreenNotificationApplist;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/LockscreenNotificationApplist$5;-><init>(Lcom/android/settings_ex/LockscreenNotificationApplist;)V
 
-    iput-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mRefreshAppsListRunnable:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mRefreshAppsListRunnable:Ljava/lang/Runnable;
 
     .line 573
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/LockscreenNotificationApplist;)I
+.method static synthetic access$000(Lcom/android/settings_ex/LockscreenNotificationApplist;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LockscreenNotificationApplist;
+    .param p0, "x0"    # Lcom/android/settings_ex/LockscreenNotificationApplist;
 
     .prologue
     .line 73
-    iget v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mLockscreenSelectedValue:I
+    iget v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mLockscreenSelectedValue:I
 
     return v0
 .end method
 
-.method static synthetic access$002(Lcom/android/settings/LockscreenNotificationApplist;I)I
+.method static synthetic access$002(Lcom/android/settings_ex/LockscreenNotificationApplist;I)I
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/LockscreenNotificationApplist;
+    .param p0, "x0"    # Lcom/android/settings_ex/LockscreenNotificationApplist;
     .param p1, "x1"    # I
 
     .prologue
     .line 73
-    iput p1, p0, Lcom/android/settings/LockscreenNotificationApplist;->mLockscreenSelectedValue:I
+    iput p1, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mLockscreenSelectedValue:I
 
     return p1
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/LockscreenNotificationApplist;)Z
+.method static synthetic access$100(Lcom/android/settings_ex/LockscreenNotificationApplist;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LockscreenNotificationApplist;
+    .param p0, "x0"    # Lcom/android/settings_ex/LockscreenNotificationApplist;
 
     .prologue
     .line 73
-    invoke-direct {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getLockscreenNotificationsEnabled()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getLockscreenNotificationsEnabled()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/LockscreenNotificationApplist;)Ljava/lang/Runnable;
+.method static synthetic access$1000(Lcom/android/settings_ex/LockscreenNotificationApplist;)Ljava/lang/Runnable;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LockscreenNotificationApplist;
+    .param p0, "x0"    # Lcom/android/settings_ex/LockscreenNotificationApplist;
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mRefreshAppsListRunnable:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mRefreshAppsListRunnable:Ljava/lang/Runnable;
 
     return-object v0
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/LockscreenNotificationApplist;)Landroid/os/Handler;
+.method static synthetic access$1100(Lcom/android/settings_ex/LockscreenNotificationApplist;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LockscreenNotificationApplist;
+    .param p0, "x0"    # Lcom/android/settings_ex/LockscreenNotificationApplist;
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/LockscreenNotificationApplist;)V
+.method static synthetic access$1200(Lcom/android/settings_ex/LockscreenNotificationApplist;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/LockscreenNotificationApplist;
+    .param p0, "x0"    # Lcom/android/settings_ex/LockscreenNotificationApplist;
 
     .prologue
     .line 73
-    invoke-direct {p0}, Lcom/android/settings/LockscreenNotificationApplist;->refreshDisplayedItems()V
+    invoke-direct {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->refreshDisplayedItems()V
 
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/LockscreenNotificationApplist;)Landroid/preference/SwitchPreference;
+.method static synthetic access$200(Lcom/android/settings_ex/LockscreenNotificationApplist;)Landroid/preference/SwitchPreference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LockscreenNotificationApplist;
+    .param p0, "x0"    # Lcom/android/settings_ex/LockscreenNotificationApplist;
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mAllApps:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAllApps:Landroid/preference/SwitchPreference;
 
     return-object v0
 .end method
@@ -329,43 +329,43 @@
 
     .prologue
     .line 73
-    sget-object v0, Lcom/android/settings/LockscreenNotificationApplist;->mAppArray:Ljava/util/Hashtable;
+    sget-object v0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAppArray:Ljava/util/Hashtable;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/LockscreenNotificationApplist;I)Ljava/lang/String;
+.method static synthetic access$400(Lcom/android/settings_ex/LockscreenNotificationApplist;I)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LockscreenNotificationApplist;
+    .param p0, "x0"    # Lcom/android/settings_ex/LockscreenNotificationApplist;
     .param p1, "x1"    # I
 
     .prologue
     .line 73
-    invoke-direct {p0, p1}, Lcom/android/settings/LockscreenNotificationApplist;->getVisibilityString(I)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getVisibilityString(I)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/LockscreenNotificationApplist;)Landroid/content/Context;
+.method static synthetic access$500(Lcom/android/settings_ex/LockscreenNotificationApplist;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LockscreenNotificationApplist;
+    .param p0, "x0"    # Lcom/android/settings_ex/LockscreenNotificationApplist;
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/LockscreenNotificationApplist;)Landroid/util/ArrayMap;
+.method static synthetic access$600(Lcom/android/settings_ex/LockscreenNotificationApplist;)Landroid/util/ArrayMap;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LockscreenNotificationApplist;
+    .param p0, "x0"    # Lcom/android/settings_ex/LockscreenNotificationApplist;
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mRows:Landroid/util/ArrayMap;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mRows:Landroid/util/ArrayMap;
 
     return-object v0
 .end method
@@ -375,29 +375,29 @@
 
     .prologue
     .line 73
-    sget-boolean v0, Lcom/android/settings/LockscreenNotificationApplist;->DEBUG:Z
+    sget-boolean v0, Lcom/android/settings_ex/LockscreenNotificationApplist;->DEBUG:Z
 
     return v0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/LockscreenNotificationApplist;)Ljava/util/ArrayList;
+.method static synthetic access$800(Lcom/android/settings_ex/LockscreenNotificationApplist;)Ljava/util/ArrayList;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LockscreenNotificationApplist;
+    .param p0, "x0"    # Lcom/android/settings_ex/LockscreenNotificationApplist;
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
 
     return-object v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/LockscreenNotificationApplist;)Landroid/content/pm/PackageManager;
+.method static synthetic access$900(Lcom/android/settings_ex/LockscreenNotificationApplist;)Landroid/content/pm/PackageManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LockscreenNotificationApplist;
+    .param p0, "x0"    # Lcom/android/settings_ex/LockscreenNotificationApplist;
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mPM:Landroid/content/pm/PackageManager;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mPM:Landroid/content/pm/PackageManager;
 
     return-object v0
 .end method
@@ -411,7 +411,7 @@
 
     .line 692
     .local v0, "cnt":I
-    iget-object v4, p0, Lcom/android/settings/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -430,17 +430,17 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/LockscreenNotificationApplist$AppRow;
+    check-cast v2, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;
 
     .line 693
-    .local v2, "r":Lcom/android/settings/LockscreenNotificationApplist$AppRow;
-    sget-object v4, Lcom/android/settings/LockscreenNotificationApplist;->mBackend:Lcom/android/settings/LockscreenNotificationApplist$Backend;
+    .local v2, "r":Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;
+    sget-object v4, Lcom/android/settings_ex/LockscreenNotificationApplist;->mBackend:Lcom/android/settings_ex/LockscreenNotificationApplist$Backend;
 
-    iget-object v5, v2, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->pkg:Ljava/lang/String;
+    iget-object v5, v2, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->pkg:Ljava/lang/String;
 
-    iget v6, v2, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->uid:I
+    iget v6, v2, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->uid:I
 
-    invoke-virtual {v4, v5, v6}, Lcom/android/settings/LockscreenNotificationApplist$Backend;->getShowonSharedeLocked(Ljava/lang/String;I)Z
+    invoke-virtual {v4, v5, v6}, Lcom/android/settings_ex/LockscreenNotificationApplist$Backend;->getShowonSharedeLocked(Ljava/lang/String;I)Z
 
     move-result v3
 
@@ -454,7 +454,7 @@
     goto :goto_0
 
     .line 697
-    .end local v2    # "r":Lcom/android/settings/LockscreenNotificationApplist$AppRow;
+    .end local v2    # "r":Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;
     .end local v3    # "state":Z
     :cond_1
     return v0
@@ -467,7 +467,7 @@
     const/4 v0, 0x0
 
     .line 245
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -492,7 +492,7 @@
     const/4 v0, 0x0
 
     .line 240
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -563,30 +563,30 @@
     .end packed-switch
 .end method
 
-.method public static loadAppRow(Landroid/content/pm/PackageManager;Landroid/content/pm/ApplicationInfo;Lcom/android/settings/LockscreenNotificationApplist$Backend;)Lcom/android/settings/LockscreenNotificationApplist$AppRow;
+.method public static loadAppRow(Landroid/content/pm/PackageManager;Landroid/content/pm/ApplicationInfo;Lcom/android/settings_ex/LockscreenNotificationApplist$Backend;)Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;
     .locals 6
     .param p0, "pm"    # Landroid/content/pm/PackageManager;
     .param p1, "app"    # Landroid/content/pm/ApplicationInfo;
-    .param p2, "backend"    # Lcom/android/settings/LockscreenNotificationApplist$Backend;
+    .param p2, "backend"    # Lcom/android/settings_ex/LockscreenNotificationApplist$Backend;
 
     .prologue
     const/4 v5, 0x1
 
     .line 354
-    new-instance v0, Lcom/android/settings/LockscreenNotificationApplist$AppRow;
+    new-instance v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;
 
-    invoke-direct {v0}, Lcom/android/settings/LockscreenNotificationApplist$AppRow;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;-><init>()V
 
     .line 355
-    .local v0, "row":Lcom/android/settings/LockscreenNotificationApplist$AppRow;
+    .local v0, "row":Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;
     iget-object v2, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    iput-object v2, v0, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->pkg:Ljava/lang/String;
+    iput-object v2, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->pkg:Ljava/lang/String;
 
     .line 356
     iget v2, p1, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    iput v2, v0, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->uid:I
+    iput v2, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->uid:I
 
     .line 358
     :try_start_0
@@ -594,7 +594,7 @@
 
     move-result-object v2
 
-    iput-object v2, v0, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->label:Ljava/lang/CharSequence;
+    iput-object v2, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->label:Ljava/lang/CharSequence;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -604,51 +604,51 @@
 
     move-result-object v2
 
-    iput-object v2, v0, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->icon:Landroid/graphics/drawable/Drawable;
+    iput-object v2, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->icon:Landroid/graphics/drawable/Drawable;
 
     .line 364
-    iget-object v2, v0, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->pkg:Ljava/lang/String;
 
-    iget v3, v0, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->uid:I
+    iget v3, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->uid:I
 
-    invoke-virtual {p2, v2, v3}, Lcom/android/settings/LockscreenNotificationApplist$Backend;->getNotificationsBanned(Ljava/lang/String;I)Z
+    invoke-virtual {p2, v2, v3}, Lcom/android/settings_ex/LockscreenNotificationApplist$Backend;->getNotificationsBanned(Ljava/lang/String;I)Z
 
     move-result v2
 
-    iput-boolean v2, v0, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->banned:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->banned:Z
 
     .line 365
-    iget-object v2, v0, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->pkg:Ljava/lang/String;
 
-    iget v3, v0, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->uid:I
+    iget v3, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->uid:I
 
-    invoke-virtual {p2, v2, v3}, Lcom/android/settings/LockscreenNotificationApplist$Backend;->getHighPriority(Ljava/lang/String;I)Z
+    invoke-virtual {p2, v2, v3}, Lcom/android/settings_ex/LockscreenNotificationApplist$Backend;->getHighPriority(Ljava/lang/String;I)Z
 
     move-result v2
 
-    iput-boolean v2, v0, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->priority:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->priority:Z
 
     .line 366
-    iget-object v2, v0, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->pkg:Ljava/lang/String;
 
-    iget v3, v0, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->uid:I
+    iget v3, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->uid:I
 
-    invoke-virtual {p2, v2, v3}, Lcom/android/settings/LockscreenNotificationApplist$Backend;->getSensitive(Ljava/lang/String;I)Z
+    invoke-virtual {p2, v2, v3}, Lcom/android/settings_ex/LockscreenNotificationApplist$Backend;->getSensitive(Ljava/lang/String;I)Z
 
     move-result v2
 
-    iput-boolean v2, v0, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->sensitive:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->sensitive:Z
 
     .line 367
-    iget-object v2, v0, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->pkg:Ljava/lang/String;
 
-    iget v3, v0, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->uid:I
+    iget v3, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->uid:I
 
-    invoke-virtual {p2, v2, v3}, Lcom/android/settings/LockscreenNotificationApplist$Backend;->getShowonSharedeLocked(Ljava/lang/String;I)Z
+    invoke-virtual {p2, v2, v3}, Lcom/android/settings_ex/LockscreenNotificationApplist$Backend;->getShowonSharedeLocked(Ljava/lang/String;I)Z
 
     move-result v2
 
-    iput-boolean v2, v0, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->show:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->show:Z
 
     .line 368
     return-object v0
@@ -671,7 +671,7 @@
 
     move-result-object v3
 
-    iget-object v4, v0, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->pkg:Ljava/lang/String;
+    iget-object v4, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->pkg:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -684,9 +684,9 @@
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 361
-    iget-object v2, v0, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->pkg:Ljava/lang/String;
 
-    iput-object v2, v0, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->label:Ljava/lang/CharSequence;
+    iput-object v2, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->label:Ljava/lang/CharSequence;
 
     goto :goto_0
 .end method
@@ -696,7 +696,7 @@
 
     .prologue
     .line 316
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mCollectAppsRunnable:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mCollectAppsRunnable:Ljava/lang/Runnable;
 
     invoke-static {v0}, Landroid/os/AsyncTask;->execute(Ljava/lang/Runnable;)V
 
@@ -710,19 +710,19 @@
 
     .prologue
     .line 758
-    new-instance v1, Lcom/android/settings/IconResizer;
+    new-instance v1, Lcom/android/settings_ex/IconResizer;
 
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/android/settings/IconResizer;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Lcom/android/settings_ex/IconResizer;-><init>(Landroid/content/Context;)V
 
     .line 759
-    .local v1, "mIconResizer":Lcom/android/settings/IconResizer;
+    .local v1, "mIconResizer":Lcom/android/settings_ex/IconResizer;
     const v2, 0x7f0c00ac
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/IconResizer;->setIconSize(I)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/IconResizer;->setIconSize(I)V
 
     .line 760
     const/4 v0, 0x0
@@ -732,7 +732,7 @@
     if-eqz p1, :cond_0
 
     .line 762
-    invoke-virtual {v1, p1}, Lcom/android/settings/IconResizer;->createIconThumbnail(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, p1}, Lcom/android/settings_ex/IconResizer;->createIconThumbnail(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -746,7 +746,7 @@
 
     .prologue
     .line 511
-    sget-boolean v7, Lcom/android/settings/LockscreenNotificationApplist;->DEBUG:Z
+    sget-boolean v7, Lcom/android/settings_ex/LockscreenNotificationApplist;->DEBUG:Z
 
     if-eqz v7, :cond_0
 
@@ -758,7 +758,7 @@
 
     .line 513
     :cond_0
-    iget-object v8, p0, Lcom/android/settings/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
+    iget-object v8, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
 
     monitor-enter v8
 
@@ -768,14 +768,14 @@
     .line 515
     .local v6, "section":Ljava/lang/String;
     :try_start_0
-    iget-object v7, p0, Lcom/android/settings/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
+    iget-object v7, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
 
-    sget-object v9, Lcom/android/settings/LockscreenNotificationApplist;->mRowComparator:Ljava/util/Comparator;
+    sget-object v9, Lcom/android/settings_ex/LockscreenNotificationApplist;->mRowComparator:Ljava/util/Comparator;
 
     invoke-static {v7, v9}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
     .line 516
-    iget-object v7, p0, Lcom/android/settings/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
+    iget-object v7, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
@@ -787,19 +787,19 @@
 
     .line 518
     .local v2, "first":Z
-    invoke-direct {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getLockscreenNotificationsEnabled()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getLockscreenNotificationsEnabled()Z
 
     move-result v4
 
     .line 520
     .local v4, "isEnabled":Z
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v7
 
     new-instance v9, Landroid/preference/PreferenceCategory;
 
-    iget-object v10, p0, Lcom/android/settings/LockscreenNotificationApplist;->mContext:Landroid/content/Context;
+    iget-object v10, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mContext:Landroid/content/Context;
 
     invoke-direct {v9, v10}, Landroid/preference/PreferenceCategory;-><init>(Landroid/content/Context;)V
 
@@ -813,23 +813,23 @@
     if-ge v3, v0, :cond_4
 
     .line 523
-    iget-object v7, p0, Lcom/android/settings/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
+    iget-object v7, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/settings/LockscreenNotificationApplist$AppRow;
+    check-cast v5, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;
 
     .line 525
-    .local v5, "row":Lcom/android/settings/LockscreenNotificationApplist$AppRow;
-    iput-boolean v2, v5, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->first:Z
+    .local v5, "row":Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;
+    iput-boolean v2, v5, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->first:Z
 
     .line 526
     const/4 v2, 0x0
 
     .line 528
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
@@ -839,108 +839,108 @@
     monitor-exit v8
 
     .line 558
-    .end local v5    # "row":Lcom/android/settings/LockscreenNotificationApplist$AppRow;
+    .end local v5    # "row":Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;
     :cond_1
     :goto_1
     return-void
 
     .line 531
-    .restart local v5    # "row":Lcom/android/settings/LockscreenNotificationApplist$AppRow;
+    .restart local v5    # "row":Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;
     :cond_2
     new-instance v7, Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
     invoke-direct {v7, v9}, Landroid/preference/SwitchPreference;-><init>(Landroid/content/Context;)V
 
-    iput-object v7, p0, Lcom/android/settings/LockscreenNotificationApplist;->mAppPreference:Landroid/preference/SwitchPreference;
+    iput-object v7, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAppPreference:Landroid/preference/SwitchPreference;
 
     .line 532
-    iget-object v9, p0, Lcom/android/settings/LockscreenNotificationApplist;->mAppPreference:Landroid/preference/SwitchPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAppPreference:Landroid/preference/SwitchPreference;
 
-    iget-object v7, p0, Lcom/android/settings/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
+    iget-object v7, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v7
 
-    check-cast v7, Lcom/android/settings/LockscreenNotificationApplist$AppRow;
+    check-cast v7, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;
 
-    iget-object v7, v7, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->label:Ljava/lang/CharSequence;
+    iget-object v7, v7, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->label:Ljava/lang/CharSequence;
 
     invoke-virtual {v9, v7}, Landroid/preference/SwitchPreference;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 533
-    iget-object v9, p0, Lcom/android/settings/LockscreenNotificationApplist;->mAppPreference:Landroid/preference/SwitchPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAppPreference:Landroid/preference/SwitchPreference;
 
-    iget-object v7, p0, Lcom/android/settings/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
+    iget-object v7, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v7
 
-    check-cast v7, Lcom/android/settings/LockscreenNotificationApplist$AppRow;
+    check-cast v7, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;
 
-    iget-object v7, v7, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->icon:Landroid/graphics/drawable/Drawable;
+    iget-object v7, v7, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->icon:Landroid/graphics/drawable/Drawable;
 
-    invoke-direct {p0, v7}, Lcom/android/settings/LockscreenNotificationApplist;->reSizeIcon(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-direct {p0, v7}, Lcom/android/settings_ex/LockscreenNotificationApplist;->reSizeIcon(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v7
 
     invoke-virtual {v9, v7}, Landroid/preference/SwitchPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 534
-    iget-object v7, p0, Lcom/android/settings/LockscreenNotificationApplist;->mAppPreference:Landroid/preference/SwitchPreference;
+    iget-object v7, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAppPreference:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v7, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 535
-    iget-object v7, p0, Lcom/android/settings/LockscreenNotificationApplist;->mAppPreference:Landroid/preference/SwitchPreference;
+    iget-object v7, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAppPreference:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v7, v4}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 536
-    iget-object v9, p0, Lcom/android/settings/LockscreenNotificationApplist;->mAppPreference:Landroid/preference/SwitchPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAppPreference:Landroid/preference/SwitchPreference;
 
-    sget-object v10, Lcom/android/settings/LockscreenNotificationApplist;->mBackend:Lcom/android/settings/LockscreenNotificationApplist$Backend;
+    sget-object v10, Lcom/android/settings_ex/LockscreenNotificationApplist;->mBackend:Lcom/android/settings_ex/LockscreenNotificationApplist$Backend;
 
-    iget-object v7, p0, Lcom/android/settings/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
-
-    invoke-virtual {v7, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lcom/android/settings/LockscreenNotificationApplist$AppRow;
-
-    iget-object v11, v7, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->pkg:Ljava/lang/String;
-
-    iget-object v7, p0, Lcom/android/settings/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
+    iget-object v7, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v7
 
-    check-cast v7, Lcom/android/settings/LockscreenNotificationApplist$AppRow;
+    check-cast v7, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;
 
-    iget v7, v7, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->uid:I
+    iget-object v11, v7, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->pkg:Ljava/lang/String;
 
-    invoke-virtual {v10, v11, v7}, Lcom/android/settings/LockscreenNotificationApplist$Backend;->getShowonSharedeLocked(Ljava/lang/String;I)Z
+    iget-object v7, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
+
+    invoke-virtual {v7, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;
+
+    iget v7, v7, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->uid:I
+
+    invoke-virtual {v10, v11, v7}, Lcom/android/settings_ex/LockscreenNotificationApplist$Backend;->getShowonSharedeLocked(Ljava/lang/String;I)Z
 
     move-result v7
 
     invoke-virtual {v9, v7}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 537
-    iget-boolean v7, v5, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->banned:Z
+    iget-boolean v7, v5, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->banned:Z
 
     if-eqz v7, :cond_3
 
     .line 538
-    iget-object v7, p0, Lcom/android/settings/LockscreenNotificationApplist;->mAppPreference:Landroid/preference/SwitchPreference;
+    iget-object v7, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAppPreference:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -953,7 +953,7 @@
     invoke-virtual {v7, v9}, Landroid/preference/SwitchPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 539
-    iget-object v7, p0, Lcom/android/settings/LockscreenNotificationApplist;->mAppPreference:Landroid/preference/SwitchPreference;
+    iget-object v7, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAppPreference:Landroid/preference/SwitchPreference;
 
     const/4 v9, 0x0
 
@@ -961,50 +961,50 @@
 
     .line 542
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v7
 
-    iget-object v9, p0, Lcom/android/settings/LockscreenNotificationApplist;->mAppPreference:Landroid/preference/SwitchPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAppPreference:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v7, v9}, Landroid/preference/PreferenceScreen;->addPreference(Landroid/preference/Preference;)Z
 
     .line 544
-    new-instance v1, Lcom/android/settings/LockscreenNotificationApplist$AppData;
+    new-instance v1, Lcom/android/settings_ex/LockscreenNotificationApplist$AppData;
 
-    invoke-direct {v1}, Lcom/android/settings/LockscreenNotificationApplist$AppData;-><init>()V
+    invoke-direct {v1}, Lcom/android/settings_ex/LockscreenNotificationApplist$AppData;-><init>()V
 
     .line 545
-    .local v1, "data":Lcom/android/settings/LockscreenNotificationApplist$AppData;
-    iget-object v7, p0, Lcom/android/settings/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
+    .local v1, "data":Lcom/android/settings_ex/LockscreenNotificationApplist$AppData;
+    iget-object v7, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v7
 
-    check-cast v7, Lcom/android/settings/LockscreenNotificationApplist$AppRow;
+    check-cast v7, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;
 
-    iget-object v7, v7, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->pkg:Ljava/lang/String;
+    iget-object v7, v7, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->pkg:Ljava/lang/String;
 
-    iput-object v7, v1, Lcom/android/settings/LockscreenNotificationApplist$AppData;->pkg:Ljava/lang/String;
+    iput-object v7, v1, Lcom/android/settings_ex/LockscreenNotificationApplist$AppData;->pkg:Ljava/lang/String;
 
     .line 546
-    iget-object v7, p0, Lcom/android/settings/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
+    iget-object v7, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v7
 
-    check-cast v7, Lcom/android/settings/LockscreenNotificationApplist$AppRow;
+    check-cast v7, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;
 
-    iget v7, v7, Lcom/android/settings/LockscreenNotificationApplist$AppRow;->uid:I
+    iget v7, v7, Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;->uid:I
 
-    iput v7, v1, Lcom/android/settings/LockscreenNotificationApplist$AppData;->uid:I
+    iput v7, v1, Lcom/android/settings_ex/LockscreenNotificationApplist$AppData;->uid:I
 
     .line 548
-    sget-object v7, Lcom/android/settings/LockscreenNotificationApplist;->mAppArray:Ljava/util/Hashtable;
+    sget-object v7, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAppArray:Ljava/util/Hashtable;
 
-    iget-object v9, p0, Lcom/android/settings/LockscreenNotificationApplist;->mAppPreference:Landroid/preference/SwitchPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAppPreference:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v9}, Landroid/preference/SwitchPreference;->getOrder()I
 
@@ -1022,20 +1022,20 @@
     goto/16 :goto_0
 
     .line 550
-    .end local v1    # "data":Lcom/android/settings/LockscreenNotificationApplist$AppData;
-    .end local v5    # "row":Lcom/android/settings/LockscreenNotificationApplist$AppRow;
+    .end local v1    # "data":Lcom/android/settings_ex/LockscreenNotificationApplist$AppData;
+    .end local v5    # "row":Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;
     :cond_4
     monitor-exit v8
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 552
-    iget-object v7, p0, Lcom/android/settings/LockscreenNotificationApplist;->mListViewState:Landroid/os/Parcelable;
+    iget-object v7, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mListViewState:Landroid/os/Parcelable;
 
     if-eqz v7, :cond_6
 
     .line 553
-    sget-boolean v7, Lcom/android/settings/LockscreenNotificationApplist;->DEBUG:Z
+    sget-boolean v7, Lcom/android/settings_ex/LockscreenNotificationApplist;->DEBUG:Z
 
     if-eqz v7, :cond_5
 
@@ -1047,22 +1047,22 @@
 
     .line 554
     :cond_5
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getListView()Landroid/widget/ListView;
 
     move-result-object v7
 
-    iget-object v8, p0, Lcom/android/settings/LockscreenNotificationApplist;->mListViewState:Landroid/os/Parcelable;
+    iget-object v8, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mListViewState:Landroid/os/Parcelable;
 
     invoke-virtual {v7, v8}, Landroid/widget/ListView;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
     .line 555
     const/4 v7, 0x0
 
-    iput-object v7, p0, Lcom/android/settings/LockscreenNotificationApplist;->mListViewState:Landroid/os/Parcelable;
+    iput-object v7, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mListViewState:Landroid/os/Parcelable;
 
     .line 557
     :cond_6
-    sget-boolean v7, Lcom/android/settings/LockscreenNotificationApplist;->DEBUG:Z
+    sget-boolean v7, Lcom/android/settings_ex/LockscreenNotificationApplist;->DEBUG:Z
 
     if-eqz v7, :cond_1
 
@@ -1078,7 +1078,7 @@
 
     move-result-object v8
 
-    iget-object v9, p0, Lcom/android/settings/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
+    iget-object v9, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mSortedRows:Ljava/util/ArrayList;
 
     invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
 
@@ -1123,7 +1123,7 @@
 
     .prologue
     .line 272
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -1131,14 +1131,14 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/LockscreenNotificationApplist;->mSharedPreferences:Landroid/content/SharedPreferences;
+    iput-object v1, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     .line 273
-    iget-object v1, p0, Lcom/android/settings/LockscreenNotificationApplist;->mSharedPreferences:Landroid/content/SharedPreferences;
+    iget-object v1, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     const-string v2, "lock_notification_all_apps"
 
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->isAllAppsCheckedState()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->isAllAppsCheckedState()Z
 
     move-result v3
 
@@ -1152,36 +1152,36 @@
 
     .line 274
     .local v0, "allAppsValue":Ljava/lang/Boolean;
-    iget-object v1, p0, Lcom/android/settings/LockscreenNotificationApplist;->mSharedPreferences:Landroid/content/SharedPreferences;
+    iget-object v1, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/LockscreenNotificationApplist;->edit:Landroid/content/SharedPreferences$Editor;
+    iput-object v1, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->edit:Landroid/content/SharedPreferences$Editor;
 
     .line 276
     const-string v1, "notification_all_apps"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/LockscreenNotificationApplist;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/LockscreenNotificationApplist;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/SwitchPreference;
 
-    iput-object v1, p0, Lcom/android/settings/LockscreenNotificationApplist;->mAllApps:Landroid/preference/SwitchPreference;
+    iput-object v1, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAllApps:Landroid/preference/SwitchPreference;
 
     .line 277
-    iget-object v1, p0, Lcom/android/settings/LockscreenNotificationApplist;->mAllApps:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAllApps:Landroid/preference/SwitchPreference;
 
-    invoke-direct {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getLockscreenNotificationsEnabled()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getLockscreenNotificationsEnabled()Z
 
     move-result v2
 
     invoke-virtual {v1, v2}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 278
-    iget-object v1, p0, Lcom/android/settings/LockscreenNotificationApplist;->mAllApps:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAllApps:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -1190,16 +1190,16 @@
     invoke-virtual {v1, v2}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 279
-    iget-object v1, p0, Lcom/android/settings/LockscreenNotificationApplist;->mAllApps:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAllApps:Landroid/preference/SwitchPreference;
 
-    new-instance v2, Lcom/android/settings/LockscreenNotificationApplist$2;
+    new-instance v2, Lcom/android/settings_ex/LockscreenNotificationApplist$2;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/LockscreenNotificationApplist$2;-><init>(Lcom/android/settings/LockscreenNotificationApplist;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/LockscreenNotificationApplist$2;-><init>(Lcom/android/settings_ex/LockscreenNotificationApplist;)V
 
     invoke-virtual {v1, v2}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 302
-    iget-object v1, p0, Lcom/android/settings/LockscreenNotificationApplist;->mAllApps:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAllApps:Landroid/preference/SwitchPreference;
 
     const/4 v2, 0x0
 
@@ -1222,16 +1222,16 @@
     .line 168
     const-string v0, "set_visibility"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/LockscreenNotificationApplist;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/DropDownPreference;
+    check-cast v0, Lcom/android/settings_ex/DropDownPreference;
 
-    iput-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mLockscreen:Lcom/android/settings/DropDownPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mLockscreen:Lcom/android/settings_ex/DropDownPreference;
 
     .line 169
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mLockscreen:Lcom/android/settings/DropDownPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mLockscreen:Lcom/android/settings_ex/DropDownPreference;
 
     if-nez v0, :cond_0
 
@@ -1248,50 +1248,50 @@
 
     .line 173
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mLockscreen:Lcom/android/settings/DropDownPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mLockscreen:Lcom/android/settings_ex/DropDownPreference;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/DropDownPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/DropDownPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 174
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mLockscreen:Lcom/android/settings/DropDownPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mLockscreen:Lcom/android/settings_ex/DropDownPreference;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-virtual {v0, v2, v1}, Lcom/android/settings/DropDownPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lcom/android/settings_ex/DropDownPreference;->addItem(ILjava/lang/Object;)V
 
     .line 177
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mLockscreen:Lcom/android/settings/DropDownPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mLockscreen:Lcom/android/settings_ex/DropDownPreference;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-virtual {v0, v3, v1}, Lcom/android/settings/DropDownPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v0, v3, v1}, Lcom/android/settings_ex/DropDownPreference;->addItem(ILjava/lang/Object;)V
 
     .line 180
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mLockscreen:Lcom/android/settings/DropDownPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mLockscreen:Lcom/android/settings_ex/DropDownPreference;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-virtual {v0, v4, v1}, Lcom/android/settings/DropDownPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v0, v4, v1}, Lcom/android/settings_ex/DropDownPreference;->addItem(ILjava/lang/Object;)V
 
     .line 182
-    invoke-direct {p0}, Lcom/android/settings/LockscreenNotificationApplist;->updateLockscreenNotifications()V
+    invoke-direct {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->updateLockscreenNotifications()V
 
     .line 183
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mLockscreen:Lcom/android/settings/DropDownPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mLockscreen:Lcom/android/settings_ex/DropDownPreference;
 
-    new-instance v1, Lcom/android/settings/LockscreenNotificationApplist$1;
+    new-instance v1, Lcom/android/settings_ex/LockscreenNotificationApplist$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/LockscreenNotificationApplist$1;-><init>(Lcom/android/settings/LockscreenNotificationApplist;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/LockscreenNotificationApplist$1;-><init>(Lcom/android/settings_ex/LockscreenNotificationApplist;)V
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/DropDownPreference;->setCallback(Lcom/android/settings/DropDownPreference$Callback;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/DropDownPreference;->setCallback(Lcom/android/settings_ex/DropDownPreference$Callback;)V
 
     goto :goto_0
 .end method
@@ -1301,7 +1301,7 @@
 
     .prologue
     .line 228
-    iget-object v2, p0, Lcom/android/settings/LockscreenNotificationApplist;->mLockscreen:Lcom/android/settings/DropDownPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mLockscreen:Lcom/android/settings_ex/DropDownPreference;
 
     if-nez v2, :cond_0
 
@@ -1311,13 +1311,13 @@
 
     .line 231
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getLockscreenNotificationsEnabled()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getLockscreenNotificationsEnabled()Z
 
     move-result v1
 
     .line 232
     .local v1, "enabled":Z
-    invoke-direct {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getLockscreenAllowPrivateNotifications()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getLockscreenAllowPrivateNotifications()Z
 
     move-result v0
 
@@ -1328,18 +1328,18 @@
     const v2, 0x7f0e0e3a
 
     :goto_1
-    iput v2, p0, Lcom/android/settings/LockscreenNotificationApplist;->mLockscreenSelectedValue:I
+    iput v2, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mLockscreenSelectedValue:I
 
     .line 236
-    iget-object v2, p0, Lcom/android/settings/LockscreenNotificationApplist;->mLockscreen:Lcom/android/settings/DropDownPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mLockscreen:Lcom/android/settings_ex/DropDownPreference;
 
-    iget v3, p0, Lcom/android/settings/LockscreenNotificationApplist;->mLockscreenSelectedValue:I
+    iget v3, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mLockscreenSelectedValue:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -1382,7 +1382,7 @@
 
     .local v1, "i":I
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v4
 
@@ -1393,7 +1393,7 @@
     if-ge v1, v4, :cond_3
 
     .line 772
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v4
 
@@ -1406,9 +1406,9 @@
     if-eqz v4, :cond_2
 
     .line 773
-    sget-object v4, Lcom/android/settings/LockscreenNotificationApplist;->mAppArray:Ljava/util/Hashtable;
+    sget-object v4, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAppArray:Ljava/util/Hashtable;
 
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
@@ -1438,7 +1438,7 @@
 
     .line 775
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v4
 
@@ -1450,7 +1450,7 @@
 
     .line 776
     .local v2, "mCurrentPreference":Landroid/preference/SwitchPreference;
-    sget-object v4, Lcom/android/settings/LockscreenNotificationApplist;->mAppArray:Ljava/util/Hashtable;
+    sget-object v4, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAppArray:Ljava/util/Hashtable;
 
     invoke-virtual {v2}, Landroid/preference/SwitchPreference;->getOrder()I
 
@@ -1464,17 +1464,17 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/LockscreenNotificationApplist$AppData;
+    check-cast v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppData;
 
     .line 778
-    .local v0, "data":Lcom/android/settings/LockscreenNotificationApplist$AppData;
-    sget-object v4, Lcom/android/settings/LockscreenNotificationApplist;->mBackend:Lcom/android/settings/LockscreenNotificationApplist$Backend;
+    .local v0, "data":Lcom/android/settings_ex/LockscreenNotificationApplist$AppData;
+    sget-object v4, Lcom/android/settings_ex/LockscreenNotificationApplist;->mBackend:Lcom/android/settings_ex/LockscreenNotificationApplist$Backend;
 
-    iget-object v5, v0, Lcom/android/settings/LockscreenNotificationApplist$AppData;->pkg:Ljava/lang/String;
+    iget-object v5, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppData;->pkg:Ljava/lang/String;
 
-    iget v6, v0, Lcom/android/settings/LockscreenNotificationApplist$AppData;->uid:I
+    iget v6, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppData;->uid:I
 
-    invoke-virtual {v4, v5, v6}, Lcom/android/settings/LockscreenNotificationApplist$Backend;->getShowonSharedeLocked(Ljava/lang/String;I)Z
+    invoke-virtual {v4, v5, v6}, Lcom/android/settings_ex/LockscreenNotificationApplist$Backend;->getShowonSharedeLocked(Ljava/lang/String;I)Z
 
     move-result v4
 
@@ -1484,7 +1484,7 @@
     add-int/lit8 v3, v3, 0x1
 
     .line 782
-    .end local v0    # "data":Lcom/android/settings/LockscreenNotificationApplist$AppData;
+    .end local v0    # "data":Lcom/android/settings_ex/LockscreenNotificationApplist$AppData;
     .end local v2    # "mCurrentPreference":Landroid/preference/SwitchPreference;
     :cond_2
     if-lez v3, :cond_0
@@ -1510,10 +1510,10 @@
     const/4 v2, 0x0
 
     .line 153
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 155
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getResources()Landroid/content/res/Resources;
 
     move-result-object v12
 
@@ -1543,11 +1543,11 @@
 
     .line 160
     .local v4, "divider_inset_size":I
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isRTL(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isRTL(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -1555,7 +1555,7 @@
 
     new-instance v0, Landroid/graphics/drawable/InsetDrawable;
 
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getListView()Landroid/widget/ListView;
 
     move-result-object v1
 
@@ -1574,7 +1574,7 @@
     .line 162
     .local v11, "insetdivider":Landroid/graphics/drawable/InsetDrawable;
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getListView()Landroid/widget/ListView;
 
     move-result-object v0
 
@@ -1588,7 +1588,7 @@
     :cond_0
     new-instance v5, Landroid/graphics/drawable/InsetDrawable;
 
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getListView()Landroid/widget/ListView;
 
     move-result-object v0
 
@@ -1617,31 +1617,31 @@
 
     .prologue
     .line 126
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 128
     const v0, 0x7f08006e
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/LockscreenNotificationApplist;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->addPreferencesFromResource(I)V
 
     .line 130
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mContext:Landroid/content/Context;
 
     .line 132
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mPM:Landroid/content/pm/PackageManager;
+    iput-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mPM:Landroid/content/pm/PackageManager;
 
     .line 133
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mContext:Landroid/content/Context;
 
     const-string v1, "launcherapps"
 
@@ -1651,7 +1651,7 @@
 
     check-cast v0, Landroid/content/pm/LauncherApps;
 
-    iput-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mLauncherApps:Landroid/content/pm/LauncherApps;
+    iput-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mLauncherApps:Landroid/content/pm/LauncherApps;
 
     .line 135
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -1664,14 +1664,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->hide_app_list:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->hide_app_list:Ljava/lang/String;
 
     .line 136
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->hide_app_list:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->hide_app_list:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->hide_app_list:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->hide_app_list:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -1682,10 +1682,10 @@
     .line 137
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mHideApp:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mHideApp:Z
 
     .line 138
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->hide_app_list:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->hide_app_list:Ljava/lang/String;
 
     const-string v1, ","
 
@@ -1693,10 +1693,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->hide_app_notification_list:[Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->hide_app_notification_list:[Ljava/lang/String;
 
     .line 139
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->hide_app_notification_list:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->hide_app_notification_list:[Ljava/lang/String;
 
     if-nez v0, :cond_0
 
@@ -1710,17 +1710,17 @@
     .line 141
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mHideApp:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mHideApp:Z
 
     .line 145
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/LockscreenNotificationApplist;->updateDropdownList()V
+    invoke-direct {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->updateDropdownList()V
 
     .line 146
-    invoke-direct {p0}, Lcom/android/settings/LockscreenNotificationApplist;->updateAllAppsPreference()V
+    invoke-direct {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->updateAllAppsPreference()V
 
     .line 148
-    invoke-direct {p0}, Lcom/android/settings/LockscreenNotificationApplist;->loadAppsList()V
+    invoke-direct {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->loadAppsList()V
 
     .line 149
     return-void
@@ -1731,27 +1731,27 @@
 
     .prologue
     .line 683
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroy()V
 
     .line 684
-    sget-boolean v0, Lcom/android/settings/Utils;->isEnabledSurveyMode:Z
+    sget-boolean v0, Lcom/android/settings_ex/Utils;->isEnabledSurveyMode:Z
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getLockscreenNotificationsEnabled()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getLockscreenNotificationsEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 686
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mContext:Landroid/content/Context;
 
     const-string v1, "com.android.settings"
 
     const-string v2, "LDST"
 
-    invoke-direct {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getEnabledItemCount()I
+    invoke-direct {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getEnabledItemCount()I
 
     move-result v3
 
@@ -1759,7 +1759,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/Utils;->insertStatusLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/Utils;->insertStatusLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 688
     :cond_0
@@ -1771,12 +1771,12 @@
 
     .prologue
     .line 258
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroyView()V
 
     .line 259
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mListViewState:Landroid/os/Parcelable;
+    iput-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mListViewState:Landroid/os/Parcelable;
 
     .line 260
     return-void
@@ -1787,10 +1787,10 @@
 
     .prologue
     .line 251
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 252
-    sget-boolean v0, Lcom/android/settings/LockscreenNotificationApplist;->DEBUG:Z
+    sget-boolean v0, Lcom/android/settings_ex/LockscreenNotificationApplist;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
@@ -1802,7 +1802,7 @@
 
     .line 253
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getListView()Landroid/widget/ListView;
 
     move-result-object v0
 
@@ -1810,7 +1810,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mListViewState:Landroid/os/Parcelable;
+    iput-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mListViewState:Landroid/os/Parcelable;
 
     .line 254
     return-void
@@ -1838,7 +1838,7 @@
 
     .line 743
     .local v2, "mCurrentPreference":Landroid/preference/SwitchPreference;
-    sget-object v3, Lcom/android/settings/LockscreenNotificationApplist;->mAppArray:Ljava/util/Hashtable;
+    sget-object v3, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAppArray:Ljava/util/Hashtable;
 
     invoke-virtual {v2}, Landroid/preference/SwitchPreference;->getOrder()I
 
@@ -1852,30 +1852,30 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/LockscreenNotificationApplist$AppData;
+    check-cast v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppData;
 
     .line 745
-    .local v0, "data":Lcom/android/settings/LockscreenNotificationApplist$AppData;
-    sget-object v3, Lcom/android/settings/LockscreenNotificationApplist;->mBackend:Lcom/android/settings/LockscreenNotificationApplist$Backend;
+    .local v0, "data":Lcom/android/settings_ex/LockscreenNotificationApplist$AppData;
+    sget-object v3, Lcom/android/settings_ex/LockscreenNotificationApplist;->mBackend:Lcom/android/settings_ex/LockscreenNotificationApplist$Backend;
 
-    iget-object v4, v0, Lcom/android/settings/LockscreenNotificationApplist$AppData;->pkg:Ljava/lang/String;
+    iget-object v4, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppData;->pkg:Ljava/lang/String;
 
-    iget v5, v0, Lcom/android/settings/LockscreenNotificationApplist$AppData;->uid:I
+    iget v5, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppData;->uid:I
 
-    invoke-virtual {v3, v4, v5, v1}, Lcom/android/settings/LockscreenNotificationApplist$Backend;->setShowonSharedeLocked(Ljava/lang/String;IZ)Z
+    invoke-virtual {v3, v4, v5, v1}, Lcom/android/settings_ex/LockscreenNotificationApplist$Backend;->setShowonSharedeLocked(Ljava/lang/String;IZ)Z
 
     .line 746
     invoke-virtual {v2, v1}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 748
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->isAllAppsCheckedState()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->isAllAppsCheckedState()Z
 
     move-result v3
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/LockscreenNotificationApplist;->setStatusPreference(Z)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/LockscreenNotificationApplist;->setStatusPreference(Z)V
 
     .line 750
-    sget-boolean v3, Lcom/android/settings/Utils;->isEnabledSurveyMode:Z
+    sget-boolean v3, Lcom/android/settings_ex/Utils;->isEnabledSurveyMode:Z
 
     if-eqz v3, :cond_0
 
@@ -1886,15 +1886,15 @@
     if-nez v3, :cond_0
 
     .line 751
-    iget-object v3, p0, Lcom/android/settings/LockscreenNotificationApplist;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mContext:Landroid/content/Context;
 
     const-string v4, "com.android.settings"
 
     const-string v5, "NFST"
 
-    iget-object v6, v0, Lcom/android/settings/LockscreenNotificationApplist$AppData;->pkg:Ljava/lang/String;
+    iget-object v6, v0, Lcom/android/settings_ex/LockscreenNotificationApplist$AppData;->pkg:Ljava/lang/String;
 
-    invoke-static {v3, v4, v5, v6}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4, v5, v6}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 754
     :cond_0
@@ -1908,10 +1908,10 @@
 
     .prologue
     .line 264
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 266
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenNotificationApplist;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist;->getListView()Landroid/widget/ListView;
 
     move-result-object v0
 
@@ -1929,19 +1929,19 @@
 
     .prologue
     .line 306
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->edit:Landroid/content/SharedPreferences$Editor;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->edit:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "lock_notification_all_apps"
 
     invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 307
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->edit:Landroid/content/SharedPreferences$Editor;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->edit:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 308
-    iget-object v0, p0, Lcom/android/settings/LockscreenNotificationApplist;->mAllApps:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenNotificationApplist;->mAllApps:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v0, p1}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 

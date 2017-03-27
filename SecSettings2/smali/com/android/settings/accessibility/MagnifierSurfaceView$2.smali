@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/MagnifierSurfaceView$2;
+.class Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$2;
 .super Ljava/lang/Object;
 .source "MagnifierSurfaceView.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/MagnifierSurfaceView;->injectAccessibilityMotionEvent(IZ)V
+    value = Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->injectAccessibilityMotionEvent(IZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/MagnifierSurfaceView;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;)V
     .locals 0
 
     .prologue
     .line 494
-    iput-object p1, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$2;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$2;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -142,9 +142,9 @@
     .local v36, "pcDown":Landroid/view/MotionEvent$PointerCoords;
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lcom/android/settings/accessibility/MagnifierSurfaceView$2;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v6, v0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$2;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget v6, v6, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mTouchUpX:F
+    iget v6, v6, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mTouchUpX:F
 
     move-object/from16 v0, v37
 
@@ -153,9 +153,9 @@
     .line 520
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lcom/android/settings/accessibility/MagnifierSurfaceView$2;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v6, v0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$2;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget v6, v6, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mTouchUpY:F
+    iget v6, v6, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mTouchUpY:F
 
     move-object/from16 v0, v37
 
@@ -183,9 +183,9 @@
     .line 525
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lcom/android/settings/accessibility/MagnifierSurfaceView$2;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v6, v0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$2;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget v6, v6, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mTouchDownX:F
+    iget v6, v6, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mTouchDownX:F
 
     move-object/from16 v0, v36
 
@@ -194,9 +194,9 @@
     .line 526
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lcom/android/settings/accessibility/MagnifierSurfaceView$2;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v6, v0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$2;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget v6, v6, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mTouchDownY:F
+    iget v6, v6, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mTouchDownY:F
 
     move-object/from16 v0, v36
 

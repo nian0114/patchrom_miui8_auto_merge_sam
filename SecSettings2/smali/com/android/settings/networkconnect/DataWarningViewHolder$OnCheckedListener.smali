@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/networkconnect/DataWarningViewHolder$OnCheckedListener;
+.class public interface abstract Lcom/android/settings_ex/networkconnect/DataWarningViewHolder$OnCheckedListener;
 .super Ljava/lang/Object;
 .source "DataWarningViewHolder.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/networkconnect/DataWarningViewHolder;
+    value = Lcom/android/settings_ex/networkconnect/DataWarningViewHolder;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

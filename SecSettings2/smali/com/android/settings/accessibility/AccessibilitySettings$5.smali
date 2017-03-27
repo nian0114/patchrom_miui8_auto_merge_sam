@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/AccessibilitySettings$5;
+.class Lcom/android/settings_ex/accessibility/AccessibilitySettings$5;
 .super Ljava/lang/Object;
 .source "AccessibilitySettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/AccessibilitySettings;->onActivityCreated(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/accessibility/AccessibilitySettings;->onActivityCreated(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/AccessibilitySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/AccessibilitySettings;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/AccessibilitySettings;)V
     .locals 0
 
     .prologue
     .line 354
-    iput-object p1, p0, Lcom/android/settings/accessibility/AccessibilitySettings$5;->this$0:Lcom/android/settings/accessibility/AccessibilitySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettings$5;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -64,9 +64,9 @@
 
     .line 362
     :pswitch_0
-    iget-object v4, p0, Lcom/android/settings/accessibility/AccessibilitySettings$5;->this$0:Lcom/android/settings/accessibility/AccessibilitySettings;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettings$5;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettings;
 
-    invoke-virtual {v4}, Lcom/android/settings/accessibility/AccessibilitySettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {v4}, Lcom/android/settings_ex/accessibility/AccessibilitySettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v4
 
@@ -74,9 +74,9 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/AccessibilitySettings$5;->this$0:Lcom/android/settings/accessibility/AccessibilitySettings;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettings$5;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettings;
 
-    invoke-virtual {v5}, Lcom/android/settings/accessibility/AccessibilitySettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {v5}, Lcom/android/settings_ex/accessibility/AccessibilitySettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v5
 
@@ -97,7 +97,7 @@
 
     const-string v4, "dispatchKeyEvent item is null"
 
-    invoke-static {v3, v4}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 

@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/deviceinfo/PrivateVolumeUnmount;
-.super Lcom/android/settings/InstrumentedFragment;
+.class public Lcom/android/settings_ex/deviceinfo/PrivateVolumeUnmount;
+.super Lcom/android/settings_ex/InstrumentedFragment;
 .source "PrivateVolumeUnmount.java"
 
 
@@ -17,25 +17,25 @@
 
     .prologue
     .line 36
-    invoke-direct {p0}, Lcom/android/settings/InstrumentedFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/InstrumentedFragment;-><init>()V
 
     .line 64
-    new-instance v0, Lcom/android/settings/deviceinfo/PrivateVolumeUnmount$1;
+    new-instance v0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeUnmount$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/deviceinfo/PrivateVolumeUnmount$1;-><init>(Lcom/android/settings/deviceinfo/PrivateVolumeUnmount;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeUnmount$1;-><init>(Lcom/android/settings_ex/deviceinfo/PrivateVolumeUnmount;)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/PrivateVolumeUnmount;->mConfirmListener:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeUnmount;->mConfirmListener:Landroid/view/View$OnClickListener;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/deviceinfo/PrivateVolumeUnmount;)Landroid/os/storage/VolumeInfo;
+.method static synthetic access$000(Lcom/android/settings_ex/deviceinfo/PrivateVolumeUnmount;)Landroid/os/storage/VolumeInfo;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/PrivateVolumeUnmount;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/PrivateVolumeUnmount;
 
     .prologue
     .line 36
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/PrivateVolumeUnmount;->mVolume:Landroid/os/storage/VolumeInfo;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeUnmount;->mVolume:Landroid/os/storage/VolumeInfo;
 
     return-object v0
 .end method
@@ -62,7 +62,7 @@
     const/4 v8, 0x0
 
     .line 48
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/PrivateVolumeUnmount;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeUnmount;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -76,7 +76,7 @@
 
     .line 49
     .local v2, "storage":Landroid/os/storage/StorageManager;
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/PrivateVolumeUnmount;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeUnmount;->getArguments()Landroid/os/Bundle;
 
     move-result-object v5
 
@@ -92,10 +92,10 @@
 
     move-result-object v5
 
-    iput-object v5, p0, Lcom/android/settings/deviceinfo/PrivateVolumeUnmount;->mVolume:Landroid/os/storage/VolumeInfo;
+    iput-object v5, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeUnmount;->mVolume:Landroid/os/storage/VolumeInfo;
 
     .line 51
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/PrivateVolumeUnmount;->mVolume:Landroid/os/storage/VolumeInfo;
+    iget-object v5, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeUnmount;->mVolume:Landroid/os/storage/VolumeInfo;
 
     invoke-virtual {v5}, Landroid/os/storage/VolumeInfo;->getDiskId()Ljava/lang/String;
 
@@ -105,7 +105,7 @@
 
     move-result-object v5
 
-    iput-object v5, p0, Lcom/android/settings/deviceinfo/PrivateVolumeUnmount;->mDisk:Landroid/os/storage/DiskInfo;
+    iput-object v5, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeUnmount;->mDisk:Landroid/os/storage/DiskInfo;
 
     .line 53
     const v5, 0x7f0401f3
@@ -142,7 +142,7 @@
 
     new-array v6, v6, [Ljava/lang/Object;
 
-    iget-object v7, p0, Lcom/android/settings/deviceinfo/PrivateVolumeUnmount;->mDisk:Landroid/os/storage/DiskInfo;
+    iget-object v7, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeUnmount;->mDisk:Landroid/os/storage/DiskInfo;
 
     invoke-virtual {v7}, Landroid/os/storage/DiskInfo;->getDescription()Ljava/lang/String;
 
@@ -150,14 +150,14 @@
 
     aput-object v7, v6, v8
 
-    invoke-virtual {p0, v5, v6}, Lcom/android/settings/deviceinfo/PrivateVolumeUnmount;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v5, v6}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeUnmount;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 59
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/PrivateVolumeUnmount;->mConfirmListener:Landroid/view/View$OnClickListener;
+    iget-object v5, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeUnmount;->mConfirmListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v1, v5}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

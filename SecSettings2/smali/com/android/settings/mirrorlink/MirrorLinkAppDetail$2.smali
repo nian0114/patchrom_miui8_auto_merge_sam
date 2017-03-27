@@ -1,4 +1,4 @@
-.class Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$2;
+.class Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$2;
 .super Ljava/lang/Object;
 .source "MirrorLinkAppDetail.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;
+.field final synthetic this$0:Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;)V
+.method constructor <init>(Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;)V
     .locals 0
 
     .prologue
     .line 145
-    iput-object p1, p0, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;
+    iput-object p1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,52 +43,52 @@
 
     .prologue
     .line 162
-    iget-object v1, p0, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;
+    iget-object v1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;
 
     invoke-static {p2}, Lcom/mirrorlink/android/service/IMirrorlinkManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/mirrorlink/android/service/IMirrorlinkManager;
 
     move-result-object v2
 
-    # setter for: Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
-    invoke-static {v1, v2}, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->access$102(Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;Lcom/mirrorlink/android/service/IMirrorlinkManager;)Lcom/mirrorlink/android/service/IMirrorlinkManager;
+    # setter for: Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
+    invoke-static {v1, v2}, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->access$102(Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;Lcom/mirrorlink/android/service/IMirrorlinkManager;)Lcom/mirrorlink/android/service/IMirrorlinkManager;
 
     .line 163
-    iget-object v1, p0, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;
+    iget-object v1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;
 
-    new-instance v2, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;
+    new-instance v2, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;
 
-    iget-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;
+    iget-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;
 
     const/4 v4, 0x0
 
-    invoke-direct {v2, v3, v4}, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;-><init>(Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$1;)V
+    invoke-direct {v2, v3, v4}, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;-><init>(Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$1;)V
 
-    # setter for: Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->mMirrorlinkListener:Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;
-    invoke-static {v1, v2}, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->access$202(Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;)Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;
+    # setter for: Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->mMirrorlinkListener:Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;
+    invoke-static {v1, v2}, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->access$202(Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;)Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;
 
     .line 165
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;
+    iget-object v1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;
 
-    # getter for: Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
-    invoke-static {v1}, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->access$100(Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;)Lcom/mirrorlink/android/service/IMirrorlinkManager;
+    # getter for: Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
+    invoke-static {v1}, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->access$100(Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;)Lcom/mirrorlink/android/service/IMirrorlinkManager;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
     .line 166
-    iget-object v1, p0, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;
+    iget-object v1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;
 
-    # getter for: Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
-    invoke-static {v1}, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->access$100(Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;)Lcom/mirrorlink/android/service/IMirrorlinkManager;
+    # getter for: Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
+    invoke-static {v1}, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->access$100(Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;)Lcom/mirrorlink/android/service/IMirrorlinkManager;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;
+    iget-object v2, p0, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;
 
-    # getter for: Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->mMirrorlinkListener:Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;
-    invoke-static {v2}, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->access$200(Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;)Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;
+    # getter for: Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->mMirrorlinkListener:Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;
+    invoke-static {v2}, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->access$200(Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;)Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;
 
     move-result-object v2
 
@@ -130,36 +130,36 @@
 
     .line 150
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;
+    iget-object v1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;
 
-    # getter for: Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
-    invoke-static {v1}, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->access$100(Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;)Lcom/mirrorlink/android/service/IMirrorlinkManager;
+    # getter for: Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
+    invoke-static {v1}, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->access$100(Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;)Lcom/mirrorlink/android/service/IMirrorlinkManager;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;
+    iget-object v1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;
 
-    # getter for: Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->mMirrorlinkListener:Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;
-    invoke-static {v1}, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->access$200(Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;)Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;
+    # getter for: Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->mMirrorlinkListener:Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;
+    invoke-static {v1}, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->access$200(Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;)Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
     .line 151
-    iget-object v1, p0, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;
+    iget-object v1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;
 
-    # getter for: Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
-    invoke-static {v1}, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->access$100(Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;)Lcom/mirrorlink/android/service/IMirrorlinkManager;
+    # getter for: Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
+    invoke-static {v1}, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->access$100(Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;)Lcom/mirrorlink/android/service/IMirrorlinkManager;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;
+    iget-object v2, p0, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;
 
-    # getter for: Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->mMirrorlinkListener:Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;
-    invoke-static {v2}, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->access$200(Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;)Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;
+    # getter for: Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->mMirrorlinkListener:Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;
+    invoke-static {v2}, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->access$200(Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;)Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;
 
     move-result-object v2
 
@@ -170,16 +170,16 @@
     .line 156
     :cond_0
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;
+    iget-object v1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;
 
-    # setter for: Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
-    invoke-static {v1, v3}, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->access$102(Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;Lcom/mirrorlink/android/service/IMirrorlinkManager;)Lcom/mirrorlink/android/service/IMirrorlinkManager;
+    # setter for: Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
+    invoke-static {v1, v3}, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->access$102(Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;Lcom/mirrorlink/android/service/IMirrorlinkManager;)Lcom/mirrorlink/android/service/IMirrorlinkManager;
 
     .line 157
-    iget-object v1, p0, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;
+    iget-object v1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$2;->this$0:Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;
 
-    # setter for: Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->mMirrorlinkListener:Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;
-    invoke-static {v1, v3}, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;->access$202(Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;)Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;
+    # setter for: Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->mMirrorlinkListener:Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;
+    invoke-static {v1, v3}, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;->access$202(Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;)Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MirrorlinkListener;
 
     .line 158
     return-void

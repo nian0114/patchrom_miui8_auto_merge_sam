@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$IconTouchDialog;
+.class public Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$IconTouchDialog;
 .super Landroid/app/DialogFragment;
 .source "FingerprintEnrollEnrolling.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;
+    value = Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -35,7 +35,7 @@
     .line 388
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$IconTouchDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$IconTouchDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -57,9 +57,9 @@
 
     const v2, 0x7f0e0216
 
-    new-instance v3, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$IconTouchDialog$1;
+    new-instance v3, Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$IconTouchDialog$1;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$IconTouchDialog$1;-><init>(Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$IconTouchDialog;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$IconTouchDialog$1;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$IconTouchDialog;)V
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 

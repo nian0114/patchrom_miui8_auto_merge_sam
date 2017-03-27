@@ -1,11 +1,11 @@
-.class Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;
+.class Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;
 .super Landroid/os/AsyncTask;
 .source "ConfirmLockEnterpriseIdentity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->handleNext()V
+    value = Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->handleNext()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,20 +26,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
 .field final synthetic val$password:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;Ljava/lang/String;)V
+.method constructor <init>(Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;Ljava/lang/String;)V
     .locals 0
 
     .prologue
     .line 262
-    iput-object p1, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    iput-object p2, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->val$password:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->val$password:Ljava/lang/String;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
@@ -59,14 +59,14 @@
     .line 293
     .local v1, "result":I
     :try_start_0
-    iget-object v3, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v3, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
-    invoke-static {v3}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$400(Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Lcom/android/internal/widget/LockPatternUtils;
+    # getter for: Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    invoke-static {v3}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$400(Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Lcom/android/internal/widget/LockPatternUtils;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->val$password:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->val$password:Ljava/lang/String;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -195,7 +195,7 @@
     check-cast p1, [Ljava/lang/String;
 
     .end local p1    # "x0":[Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->doInBackground([Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->doInBackground([Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -211,10 +211,10 @@
 
     .line 333
     :try_start_0
-    iget-object v6, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v6, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mKeyboardView:Lcom/android/internal/widget/PasswordEntryKeyboardView;
-    invoke-static {v6}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$000(Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Lcom/android/internal/widget/PasswordEntryKeyboardView;
+    # getter for: Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mKeyboardView:Lcom/android/internal/widget/PasswordEntryKeyboardView;
+    invoke-static {v6}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$000(Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Lcom/android/internal/widget/PasswordEntryKeyboardView;
 
     move-result-object v6
 
@@ -223,10 +223,10 @@
     invoke-virtual {v6, v7}, Lcom/android/internal/widget/PasswordEntryKeyboardView;->setEnabled(Z)V
 
     .line 334
-    iget-object v6, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v6, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mPasswordEntry:Landroid/widget/TextView;
-    invoke-static {v6}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$100(Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mPasswordEntry:Landroid/widget/TextView;
+    invoke-static {v6}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$100(Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Landroid/widget/TextView;
 
     move-result-object v6
 
@@ -235,10 +235,10 @@
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 335
-    iget-object v6, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v6, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mKeyboardView:Lcom/android/internal/widget/PasswordEntryKeyboardView;
-    invoke-static {v6}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$000(Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Lcom/android/internal/widget/PasswordEntryKeyboardView;
+    # getter for: Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mKeyboardView:Lcom/android/internal/widget/PasswordEntryKeyboardView;
+    invoke-static {v6}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$000(Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Lcom/android/internal/widget/PasswordEntryKeyboardView;
 
     move-result-object v6
 
@@ -282,16 +282,16 @@
 
     .line 385
     :goto_0
-    iget-object v6, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v6, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    invoke-virtual {v6}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v6}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v7, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mOrientation:I
-    invoke-static {v7}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$200(Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)I
+    # getter for: Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mOrientation:I
+    invoke-static {v7}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$200(Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)I
 
     move-result v7
 
@@ -317,10 +317,10 @@
 
     .line 343
     .local v5, "userId":I
-    iget-object v6, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v6, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->knoxConfirmLockHelper:Lcom/android/settings/KnoxConfirmLockHelper;
-    invoke-static {v6}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$500(Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Lcom/android/settings/KnoxConfirmLockHelper;
+    # getter for: Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->knoxConfirmLockHelper:Lcom/android/settings_ex/KnoxConfirmLockHelper;
+    invoke-static {v6}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$500(Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Lcom/android/settings_ex/KnoxConfirmLockHelper;
 
     move-result-object v6
 
@@ -329,14 +329,14 @@
     if-lt v5, v9, :cond_0
 
     .line 344
-    iget-object v6, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v6, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->knoxConfirmLockHelper:Lcom/android/settings/KnoxConfirmLockHelper;
-    invoke-static {v6}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$500(Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Lcom/android/settings/KnoxConfirmLockHelper;
+    # getter for: Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->knoxConfirmLockHelper:Lcom/android/settings_ex/KnoxConfirmLockHelper;
+    invoke-static {v6}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$500(Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Lcom/android/settings_ex/KnoxConfirmLockHelper;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lcom/android/settings/KnoxConfirmLockHelper;->resetNumberOfAttempts()V
+    invoke-virtual {v6}, Lcom/android/settings_ex/KnoxConfirmLockHelper;->resetNumberOfAttempts()V
 
     .line 350
     :cond_0
@@ -351,15 +351,15 @@
     .line 352
     const-string v6, "enterprise_password"
 
-    iget-object v7, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->val$password:Ljava/lang/String;
+    iget-object v7, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->val$password:Ljava/lang/String;
 
     invoke-virtual {v3, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 354
     :cond_1
-    iget-object v6, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v6, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    invoke-virtual {v6}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v6}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -368,9 +368,9 @@
     invoke-virtual {v6, v7, v3}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
     .line 355
-    iget-object v6, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v6, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    invoke-virtual {v6}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v6}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -422,10 +422,10 @@
     .restart local v4    # "res":Z
     :pswitch_1
     :try_start_1
-    iget-object v6, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v6, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->knoxConfirmLockHelper:Lcom/android/settings/KnoxConfirmLockHelper;
-    invoke-static {v6}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$500(Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Lcom/android/settings/KnoxConfirmLockHelper;
+    # getter for: Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->knoxConfirmLockHelper:Lcom/android/settings_ex/KnoxConfirmLockHelper;
+    invoke-static {v6}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$500(Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Lcom/android/settings_ex/KnoxConfirmLockHelper;
 
     move-result-object v6
 
@@ -438,31 +438,31 @@
     if-lt v6, v9, :cond_2
 
     .line 361
-    iget-object v6, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v6, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->knoxConfirmLockHelper:Lcom/android/settings/KnoxConfirmLockHelper;
-    invoke-static {v6}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$500(Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Lcom/android/settings/KnoxConfirmLockHelper;
+    # getter for: Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->knoxConfirmLockHelper:Lcom/android/settings_ex/KnoxConfirmLockHelper;
+    invoke-static {v6}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$500(Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Lcom/android/settings_ex/KnoxConfirmLockHelper;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lcom/android/settings/KnoxConfirmLockHelper;->checkNumberOfAttempts()I
+    invoke-virtual {v6}, Lcom/android/settings_ex/KnoxConfirmLockHelper;->checkNumberOfAttempts()I
 
     .line 362
-    iget-object v6, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v6, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
     const v7, 0x7f0e07df
 
-    # invokes: Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->showError(I)V
-    invoke-static {v6, v7}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$600(Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;I)V
+    # invokes: Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->showError(I)V
+    invoke-static {v6, v7}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$600(Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;I)V
 
     goto/16 :goto_0
 
     .line 364
     :cond_2
-    iget-object v6, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v6, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    # ++operator for: Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mNumWrongConfirmAttempts:I
-    invoke-static {v6}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$704(Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)I
+    # ++operator for: Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mNumWrongConfirmAttempts:I
+    invoke-static {v6}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$704(Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)I
 
     move-result v6
 
@@ -471,10 +471,10 @@
     if-lt v6, v7, :cond_3
 
     .line 365
-    iget-object v6, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v6, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
-    invoke-static {v6}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$400(Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Lcom/android/internal/widget/LockPatternUtils;
+    # getter for: Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    invoke-static {v6}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$400(Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Lcom/android/internal/widget/LockPatternUtils;
 
     move-result-object v6
 
@@ -488,28 +488,28 @@
 
     .line 366
     .local v0, "deadline":J
-    iget-object v6, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v6, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    # invokes: Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->handleAttemptLockout(J)V
-    invoke-static {v6, v0, v1}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$800(Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;J)V
+    # invokes: Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->handleAttemptLockout(J)V
+    invoke-static {v6, v0, v1}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$800(Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;J)V
 
     goto/16 :goto_0
 
     .line 368
     .end local v0    # "deadline":J
     :cond_3
-    iget-object v6, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v6, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
     const v7, 0x7f0e07df
 
-    # invokes: Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->showError(I)V
-    invoke-static {v6, v7}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$600(Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;I)V
+    # invokes: Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->showError(I)V
+    invoke-static {v6, v7}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$600(Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;I)V
 
     .line 369
-    iget-object v6, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v6, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mPasswordEntry:Landroid/widget/TextView;
-    invoke-static {v6}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$100(Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mPasswordEntry:Landroid/widget/TextView;
+    invoke-static {v6}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$100(Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Landroid/widget/TextView;
 
     move-result-object v6
 
@@ -539,7 +539,7 @@
     check-cast p1, Ljava/lang/Integer;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->onPostExecute(Ljava/lang/Integer;)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->onPostExecute(Ljava/lang/Integer;)V
 
     return-void
 .end method
@@ -551,30 +551,30 @@
     const/4 v1, 0x0
 
     .line 266
-    iget-object v0, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mKeyboardView:Lcom/android/internal/widget/PasswordEntryKeyboardView;
-    invoke-static {v0}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$000(Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Lcom/android/internal/widget/PasswordEntryKeyboardView;
+    # getter for: Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mKeyboardView:Lcom/android/internal/widget/PasswordEntryKeyboardView;
+    invoke-static {v0}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$000(Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Lcom/android/internal/widget/PasswordEntryKeyboardView;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/PasswordEntryKeyboardView;->setEnabled(Z)V
 
     .line 267
-    iget-object v0, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mPasswordEntry:Landroid/widget/TextView;
-    invoke-static {v0}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$100(Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mPasswordEntry:Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$100(Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Landroid/widget/TextView;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 268
-    iget-object v0, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mKeyboardView:Lcom/android/internal/widget/PasswordEntryKeyboardView;
-    invoke-static {v0}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$000(Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Lcom/android/internal/widget/PasswordEntryKeyboardView;
+    # getter for: Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mKeyboardView:Lcom/android/internal/widget/PasswordEntryKeyboardView;
+    invoke-static {v0}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$000(Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)Lcom/android/internal/widget/PasswordEntryKeyboardView;
 
     move-result-object v0
 
@@ -583,11 +583,11 @@
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/PasswordEntryKeyboardView;->setKeepScreenOn(Z)V
 
     .line 272
-    iget-object v0, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    iget-object v1, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    invoke-virtual {v1}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -595,8 +595,8 @@
 
     move-result v1
 
-    # setter for: Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mOrientation:I
-    invoke-static {v0, v1}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$202(Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;I)I
+    # setter for: Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mOrientation:I
+    invoke-static {v0, v1}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$202(Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;I)I
 
     .line 273
     const-string v0, "ConfirmLockEnterpriseIdentity"
@@ -611,10 +611,10 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    # getter for: Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mOrientation:I
-    invoke-static {v2}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$200(Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)I
+    # getter for: Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->mOrientation:I
+    invoke-static {v2}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$200(Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)I
 
     move-result v2
 
@@ -629,16 +629,16 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 274
-    iget-object v0, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    invoke-virtual {v0}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment$1;->this$0:Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
-    # invokes: Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->getDeviceOrientation()I
-    invoke-static {v1}, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$300(Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)I
+    # invokes: Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->getDeviceOrientation()I
+    invoke-static {v1}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;->access$300(Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;)I
 
     move-result v1
 

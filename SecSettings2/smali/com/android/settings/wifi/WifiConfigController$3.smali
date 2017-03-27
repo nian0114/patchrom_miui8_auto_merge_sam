@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiConfigController$3;
+.class Lcom/android/settings_ex/wifi/WifiConfigController$3;
 .super Ljava/lang/Object;
 .source "WifiConfigController.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiConfigController;->addGatewayRow(Landroid/view/ViewGroup;I)V
+    value = Lcom/android/settings_ex/wifi/WifiConfigController;->addGatewayRow(Landroid/view/ViewGroup;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiConfigController;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiConfigController;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiConfigController;)V
     .locals 0
 
     .prologue
     .line 1105
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiConfigController$3;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiConfigController$3;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,8 +42,8 @@
 
     .prologue
     .line 1108
-    # getter for: Lcom/android/settings/wifi/WifiConfigController;->DBG:Z
-    invoke-static {}, Lcom/android/settings/wifi/WifiConfigController;->access$000()Z
+    # getter for: Lcom/android/settings_ex/wifi/WifiConfigController;->DBG:Z
+    invoke-static {}, Lcom/android/settings_ex/wifi/WifiConfigController;->access$000()Z
 
     move-result v0
 
@@ -57,9 +57,9 @@
 
     .line 1109
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiConfigController$3;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiConfigController$3;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/WifiConfigController;->OpenWebPage()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/wifi/WifiConfigController;->OpenWebPage()V
 
     .line 1110
     return-void

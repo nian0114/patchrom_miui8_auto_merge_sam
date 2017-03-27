@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/fingerprint/FingerprintProgressEffectView;
+.class public Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;
 .super Landroid/widget/FrameLayout;
 .source "FingerprintProgressEffectView.java"
 
@@ -31,7 +31,7 @@
     .line 23
     const/4 v0, 0x0
 
-    sput v0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->strokeWidth:I
+    sput v0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->strokeWidth:I
 
     return-void
 .end method
@@ -49,24 +49,24 @@
     .line 15
     const-string v0, "FpstFingerprintProgressEffectView"
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->TAG:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->TAG:Ljava/lang/String;
 
     .line 19
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mPercent:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mPercent:I
 
     .line 20
-    iput-boolean v1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->bShowError:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->bShowError:Z
 
     .line 21
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mEffectWidth:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mEffectWidth:I
 
     .line 22
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mEffectHeight:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mEffectHeight:I
 
     .line 34
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, v0}, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 35
     return-void
@@ -86,22 +86,22 @@
     .line 15
     const-string v0, "FpstFingerprintProgressEffectView"
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->TAG:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->TAG:Ljava/lang/String;
 
     .line 19
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mPercent:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mPercent:I
 
     .line 20
-    iput-boolean v1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->bShowError:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->bShowError:Z
 
     .line 21
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mEffectWidth:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mEffectWidth:I
 
     .line 22
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mEffectHeight:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mEffectHeight:I
 
     .line 39
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 40
     return-void
@@ -122,22 +122,22 @@
     .line 15
     const-string v0, "FpstFingerprintProgressEffectView"
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->TAG:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->TAG:Ljava/lang/String;
 
     .line 19
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mPercent:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mPercent:I
 
     .line 20
-    iput-boolean v1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->bShowError:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->bShowError:Z
 
     .line 21
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mEffectWidth:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mEffectWidth:I
 
     .line 22
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mEffectHeight:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mEffectHeight:I
 
     .line 44
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 45
     return-void
@@ -159,7 +159,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 107
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mContext:Landroid/content/Context;
 
     .line 109
     if-nez p2, :cond_0
@@ -175,7 +175,7 @@
 
     .line 117
     :cond_0
-    sget-object v1, Lcom/android/settings/R$styleable;->FingerprintEffectView:[I
+    sget-object v1, Lcom/android/settings_ex/R$styleable;->FingerprintEffectView:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -187,7 +187,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mEffectWidth:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mEffectWidth:I
 
     .line 120
     const/4 v1, 0x1
@@ -196,13 +196,13 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mEffectHeight:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mEffectHeight:I
 
     .line 122
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 124
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -212,10 +212,10 @@
 
     move-result v1
 
-    sput v1, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->strokeWidth:I
+    sput v1, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->strokeWidth:I
 
     .line 126
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->reset()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->reset()V
 
     .line 127
     return-void
@@ -239,16 +239,16 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 91
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
 
     if-eqz v1, :cond_0
 
-    iget-boolean v1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->bShowError:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->bShowError:Z
 
     if-ne v1, v5, :cond_0
 
     .line 92
-    iput-boolean v4, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->bShowError:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->bShowError:Z
 
     .line 94
     new-instance v0, Landroid/view/animation/AlphaAnimation;
@@ -269,17 +269,17 @@
     invoke-virtual {v0, v5}, Landroid/view/animation/AlphaAnimation;->setFillAfter(Z)V
 
     .line 98
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
 
     invoke-virtual {v1, v0}, Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;->startAnimation(Landroid/view/animation/Animation;)V
 
     .line 99
-    iget v1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mPercent:I
+    iget v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mPercent:I
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->setPercent(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->setPercent(I)V
 
     .line 100
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
 
     invoke-virtual {v1, v4}, Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;->setFingerStatus(I)V
 
@@ -303,35 +303,35 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 132
-    iput v2, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mPercent:I
+    iput v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mPercent:I
 
     .line 133
-    iput-boolean v2, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->bShowError:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->bShowError:Z
 
     .line 135
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
 
     if-eqz v0, :cond_0
 
     .line 136
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->removeView(Landroid/view/View;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->removeView(Landroid/view/View;)V
 
     .line 137
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
 
     .line 140
     :cond_0
     new-instance v0, Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
 
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mContext:Landroid/content/Context;
 
-    iget v2, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mEffectWidth:I
+    iget v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mEffectWidth:I
 
-    iget v3, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mEffectHeight:I
+    iget v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mEffectHeight:I
 
     const v4, -0xfc4d15
 
@@ -341,7 +341,7 @@
 
     const v7, -0xff2d5d
 
-    sget v8, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->strokeWidth:I
+    sget v8, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->strokeWidth:I
 
     const v9, 0x7f0200dd
 
@@ -351,16 +351,16 @@
 
     invoke-direct/range {v0 .. v11}, Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;-><init>(Landroid/content/Context;IIIIIIIIII)V
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
 
     .line 143
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
 
-    iget v1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mEffectWidth:I
+    iget v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mEffectWidth:I
 
-    iget v2, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mEffectHeight:I
+    iget v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mEffectHeight:I
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->addView(Landroid/view/View;II)V
+    invoke-virtual {p0, v0, v1, v2}, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->addView(Landroid/view/View;II)V
 
     .line 144
     return-void
@@ -374,12 +374,12 @@
     .line 48
     if-ltz p1, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
 
     if-eqz v0, :cond_0
 
     .line 49
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
 
     invoke-virtual {v0, p1}, Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;->setFingerStatus(I)V
 
@@ -417,7 +417,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 56
-    iget v0, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mPercent:I
+    iget v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mPercent:I
 
     if-le v0, p1, :cond_1
 
@@ -428,12 +428,12 @@
 
     .line 60
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
 
     if-eqz v0, :cond_2
 
     .line 61
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
 
     int-to-float v1, p1
 
@@ -441,12 +441,12 @@
 
     .line 65
     :cond_2
-    iget-boolean v0, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->bShowError:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->bShowError:Z
 
     if-nez v0, :cond_0
 
     .line 66
-    iput p1, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mPercent:I
+    iput p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mPercent:I
 
     goto :goto_0
 .end method
@@ -465,7 +465,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 73
-    iget v2, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mPercent:I
+    iget v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mPercent:I
 
     add-int/lit8 v1, v2, 0x5
 
@@ -498,24 +498,24 @@
     invoke-virtual {v0, v4}, Landroid/view/animation/AlphaAnimation;->setFillAfter(Z)V
 
     .line 81
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
 
     if-eqz v2, :cond_1
 
-    iget-boolean v2, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->bShowError:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->bShowError:Z
 
     if-nez v2, :cond_1
 
     .line 82
-    iput-boolean v4, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->bShowError:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->bShowError:Z
 
     .line 83
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->mFingereffect:Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;
 
     invoke-virtual {v2, v0}, Lcom/samsung/android/visualeffect/progressfingerscan/ProgressFingerScanEffect;->startAnimation(Landroid/view/animation/Animation;)V
 
     .line 84
-    invoke-virtual {p0, v1}, Lcom/android/settings/fingerprint/FingerprintProgressEffectView;->setPercent(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/fingerprint/FingerprintProgressEffectView;->setPercent(I)V
 
     .line 86
     :cond_1

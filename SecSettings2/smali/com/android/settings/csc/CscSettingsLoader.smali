@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/csc/CscSettingsLoader;
+.class public Lcom/android/settings_ex/csc/CscSettingsLoader;
 .super Ljava/lang/Object;
 .source "CscSettingsLoader.java"
 
@@ -12,7 +12,7 @@
 
 .field private mContext:Landroid/content/Context;
 
-.field private mParser:Lcom/android/settings/csc/CscParser;
+.field private mParser:Lcom/android/settings_ex/csc/CscParser;
 
 .field private mResolver:Landroid/content/ContentResolver;
 
@@ -31,27 +31,27 @@
     .line 40
     const-string v0, "CscSettingsLoader"
 
-    iput-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->TAG:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->TAG:Ljava/lang/String;
 
     .line 83
     const-string v0, "Operators.DefaultRinger"
 
-    iput-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->PATH_OPERATORS_DEFAULTRINGER:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->PATH_OPERATORS_DEFAULTRINGER:Ljava/lang/String;
 
     .line 86
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iput-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     .line 90
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iput-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     .line 91
-    iput-object p1, p0, Lcom/android/settings/csc/CscSettingsLoader;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mContext:Landroid/content/Context;
 
     .line 92
     const-string v0, "USER_PREFERENCES"
@@ -62,7 +62,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->prefs:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->prefs:Landroid/content/SharedPreferences;
 
     .line 93
     return-void
@@ -83,22 +83,22 @@
     const/4 v4, 0x0
 
     .line 100
-    new-instance v0, Lcom/android/settings/csc/CscParser;
+    new-instance v0, Lcom/android/settings_ex/csc/CscParser;
 
-    invoke-static {}, Lcom/android/settings/csc/CscParser;->getCustomerPath()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/csc/CscParser;->getCustomerPath()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/android/settings/csc/CscParser;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/csc/CscParser;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iput-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     .line 103
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.DateTimeFormat.TimezoneUpdate"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -112,11 +112,11 @@
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 105
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.DateTimeFormat.TimezoneUpdate"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -129,14 +129,14 @@
     if-eqz v0, :cond_c
 
     .line 106
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "auto_time"
 
     invoke-static {v0, v1, v5}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 107
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "auto_time_zone"
 
@@ -145,11 +145,11 @@
     .line 117
     :cond_0
     :goto_0
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Sound.MediaVolume"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -168,11 +168,11 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v2, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v3, "Settings.Main.Sound.MediaVolume"
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -191,15 +191,15 @@
 
     const-string v1, "Settings.Main.Sound.MediaVolume"
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/csc/CscSettingsLoader;->updateVolume(ILjava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings_ex/csc/CscSettingsLoader;->updateVolume(ILjava/lang/String;)V
 
     .line 125
     :goto_1
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Sound.MsgToneVolume"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -218,11 +218,11 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v2, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v3, "Settings.Main.Sound.MsgToneVolume"
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -241,15 +241,15 @@
 
     const-string v1, "Settings.Main.Sound.MsgToneVolume"
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/csc/CscSettingsLoader;->updateVolume(ILjava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings_ex/csc/CscSettingsLoader;->updateVolume(ILjava/lang/String;)V
 
     .line 135
     :goto_2
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Sound.RngVolume"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -265,15 +265,15 @@
     .line 137
     const-string v0, "Settings.Main.Sound.RngVolume"
 
-    invoke-virtual {p0, v6, v0}, Lcom/android/settings/csc/CscSettingsLoader;->updateVolume(ILjava/lang/String;)V
+    invoke-virtual {p0, v6, v0}, Lcom/android/settings_ex/csc/CscSettingsLoader;->updateVolume(ILjava/lang/String;)V
 
     .line 143
     :goto_3
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Sound.ALARMVolume"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -289,15 +289,15 @@
     .line 145
     const-string v0, "Settings.Main.Sound.ALARMVolume"
 
-    invoke-virtual {p0, v7, v0}, Lcom/android/settings/csc/CscSettingsLoader;->updateVolume(ILjava/lang/String;)V
+    invoke-virtual {p0, v7, v0}, Lcom/android/settings_ex/csc/CscSettingsLoader;->updateVolume(ILjava/lang/String;)V
 
     .line 151
     :goto_4
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Sound.RngToneAlertType"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -313,15 +313,15 @@
     .line 153
     const-string v0, "Settings.Main.Sound.RngToneAlertType"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/csc/CscSettingsLoader;->updateSilentMode(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/csc/CscSettingsLoader;->updateSilentMode(Ljava/lang/String;)V
 
     .line 159
     :goto_5
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Sound.KeyTone.KeyVolume"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -337,15 +337,15 @@
     .line 161
     const-string v0, "Settings.Main.Sound.KeyTone.KeyVolume"
 
-    invoke-virtual {p0, v5, v0}, Lcom/android/settings/csc/CscSettingsLoader;->updateVolume(ILjava/lang/String;)V
+    invoke-virtual {p0, v5, v0}, Lcom/android/settings_ex/csc/CscSettingsLoader;->updateVolume(ILjava/lang/String;)V
 
     .line 167
     :goto_6
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.BackLightTime"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -359,11 +359,11 @@
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 169
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.BackLightTime"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -376,7 +376,7 @@
     if-eqz v0, :cond_14
 
     .line 170
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "screen_off_timeout"
 
@@ -387,11 +387,11 @@
     .line 196
     :cond_1
     :goto_7
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Sound.TouchTone"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -405,11 +405,11 @@
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 198
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Sound.TouchTone"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -422,7 +422,7 @@
     if-eqz v0, :cond_1b
 
     .line 199
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "sound_effects_enabled"
 
@@ -431,11 +431,11 @@
     .line 207
     :cond_2
     :goto_8
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.PowerSavingMode"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -449,11 +449,11 @@
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 209
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.PowerSavingMode"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -466,7 +466,7 @@
     if-eqz v0, :cond_1d
 
     .line 210
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "psm_switch"
 
@@ -475,11 +475,11 @@
     .line 218
     :cond_3
     :goto_9
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.GPS.GPSActivation"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -493,7 +493,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 220
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "location_providers_allowed"
 
@@ -510,11 +510,11 @@
     if-eqz v0, :cond_20
 
     .line 222
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.GPS.GPSActivation"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -527,7 +527,7 @@
     if-eqz v0, :cond_1f
 
     .line 223
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "location_providers_allowed"
 
@@ -551,11 +551,11 @@
     if-eqz v0, :cond_b
 
     .line 243
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.Motion.Activation"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -569,11 +569,11 @@
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 245
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.Motion.Activation"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -586,7 +586,7 @@
     if-eqz v0, :cond_23
 
     .line 246
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "motion_engine"
 
@@ -595,11 +595,11 @@
     .line 253
     :cond_5
     :goto_b
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.Motion.GlanceView"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -625,11 +625,11 @@
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 257
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.Motion.GlanceView"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -642,7 +642,7 @@
     if-eqz v0, :cond_25
 
     .line 258
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "air_motion_glance_view"
 
@@ -651,11 +651,11 @@
     .line 265
     :cond_6
     :goto_c
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.Motion.DirectCall"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -681,11 +681,11 @@
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 269
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.Motion.DirectCall"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -698,7 +698,7 @@
     if-eqz v0, :cond_27
 
     .line 270
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "motion_pick_up_to_call_out"
 
@@ -707,11 +707,11 @@
     .line 279
     :cond_7
     :goto_d
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.Motion.SmartAlert"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -737,11 +737,11 @@
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 283
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.Motion.SmartAlert"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -754,7 +754,7 @@
     if-eqz v0, :cond_29
 
     .line 284
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "motion_pick_up"
 
@@ -763,11 +763,11 @@
     .line 291
     :cond_8
     :goto_e
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.Motion.TurnOver"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -793,11 +793,11 @@
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 295
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.Motion.TurnOver"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -810,7 +810,7 @@
     if-eqz v0, :cond_2b
 
     .line 296
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "motion_overturn"
 
@@ -819,11 +819,11 @@
     .line 303
     :cond_9
     :goto_f
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.Motion.PalmSwipe"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -849,11 +849,11 @@
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 307
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.Motion.PalmSwipe"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -866,7 +866,7 @@
     if-eqz v0, :cond_2d
 
     .line 308
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "surface_palm_swipe"
 
@@ -875,11 +875,11 @@
     .line 315
     :cond_a
     :goto_10
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.Motion.PalmTouch"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -905,11 +905,11 @@
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 319
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.Motion.PalmTouch"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -922,7 +922,7 @@
     if-eqz v0, :cond_2f
 
     .line 320
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "surface_palm_touch"
 
@@ -931,45 +931,45 @@
     .line 329
     :cond_b
     :goto_11
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->prefs:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->prefs:Landroid/content/SharedPreferences;
 
     const-string v1, "PREF_RINGTONE_SET"
 
     invoke-interface {v0, v1, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     .line 330
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->prefs:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->prefs:Landroid/content/SharedPreferences;
 
     const-string v1, "PREF_NOTIFICATION_SET"
 
     invoke-interface {v0, v1, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     .line 331
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->prefs:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->prefs:Landroid/content/SharedPreferences;
 
     const-string v1, "PREF_ALARMTONE_SET"
 
     invoke-interface {v0, v1, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     .line 332
-    invoke-virtual {p0, v5}, Lcom/android/settings/csc/CscSettingsLoader;->updateRingtones(I)V
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/csc/CscSettingsLoader;->updateRingtones(I)V
 
     .line 333
-    invoke-virtual {p0, v6}, Lcom/android/settings/csc/CscSettingsLoader;->updateRingtones(I)V
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/csc/CscSettingsLoader;->updateRingtones(I)V
 
     .line 334
-    invoke-virtual {p0, v7}, Lcom/android/settings/csc/CscSettingsLoader;->updateRingtones(I)V
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/csc/CscSettingsLoader;->updateRingtones(I)V
 
     .line 336
     return-void
 
     .line 108
     :cond_c
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.DateTimeFormat.TimezoneUpdate"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -982,14 +982,14 @@
     if-eqz v0, :cond_0
 
     .line 109
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "auto_time"
 
     invoke-static {v0, v1, v4}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 110
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "auto_time_zone"
 
@@ -1069,11 +1069,11 @@
 
     .line 171
     :cond_14
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.BackLightTime"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1086,7 +1086,7 @@
     if-eqz v0, :cond_15
 
     .line 172
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "screen_off_timeout"
 
@@ -1098,11 +1098,11 @@
 
     .line 173
     :cond_15
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.BackLightTime"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1115,7 +1115,7 @@
     if-eqz v0, :cond_16
 
     .line 174
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "screen_off_timeout"
 
@@ -1127,11 +1127,11 @@
 
     .line 175
     :cond_16
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.BackLightTime"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1144,7 +1144,7 @@
     if-eqz v0, :cond_17
 
     .line 176
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "screen_off_timeout"
 
@@ -1156,11 +1156,11 @@
 
     .line 177
     :cond_17
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.BackLightTime"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1173,7 +1173,7 @@
     if-eqz v0, :cond_18
 
     .line 178
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "screen_off_timeout"
 
@@ -1185,11 +1185,11 @@
 
     .line 179
     :cond_18
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.BackLightTime"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1202,7 +1202,7 @@
     if-eqz v0, :cond_19
 
     .line 180
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "screen_off_timeout"
 
@@ -1214,11 +1214,11 @@
 
     .line 181
     :cond_19
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.BackLightTime"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1244,11 +1244,11 @@
 
     .line 200
     :cond_1b
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Sound.TouchTone"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1261,7 +1261,7 @@
     if-eqz v0, :cond_2
 
     .line 201
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "sound_effects_enabled"
 
@@ -1281,11 +1281,11 @@
 
     .line 211
     :cond_1d
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.PowerSavingMode"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1298,7 +1298,7 @@
     if-eqz v0, :cond_3
 
     .line 212
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "psm_switch"
 
@@ -1318,11 +1318,11 @@
 
     .line 225
     :cond_1f
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.GPS.GPSActivation"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1335,7 +1335,7 @@
     if-eqz v0, :cond_4
 
     .line 226
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "location_providers_allowed"
 
@@ -1347,11 +1347,11 @@
 
     .line 229
     :cond_20
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.GPS.GPSActivation"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1364,7 +1364,7 @@
     if-eqz v0, :cond_21
 
     .line 230
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "location_providers_allowed"
 
@@ -1376,11 +1376,11 @@
 
     .line 232
     :cond_21
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.GPS.GPSActivation"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1393,7 +1393,7 @@
     if-eqz v0, :cond_4
 
     .line 233
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "location_providers_allowed"
 
@@ -1415,11 +1415,11 @@
 
     .line 247
     :cond_23
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.Motion.Activation"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1432,7 +1432,7 @@
     if-eqz v0, :cond_5
 
     .line 248
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "motion_engine"
 
@@ -1452,11 +1452,11 @@
 
     .line 259
     :cond_25
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.Motion.GlanceView"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1469,7 +1469,7 @@
     if-eqz v0, :cond_6
 
     .line 260
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "air_motion_glance_view"
 
@@ -1489,11 +1489,11 @@
 
     .line 272
     :cond_27
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.Motion.DirectCall"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1506,7 +1506,7 @@
     if-eqz v0, :cond_7
 
     .line 273
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "motion_pick_up_to_call_out"
 
@@ -1526,11 +1526,11 @@
 
     .line 285
     :cond_29
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.Motion.SmartAlert"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1543,7 +1543,7 @@
     if-eqz v0, :cond_8
 
     .line 286
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "motion_pick_up"
 
@@ -1563,11 +1563,11 @@
 
     .line 297
     :cond_2b
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.Motion.TurnOver"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1580,7 +1580,7 @@
     if-eqz v0, :cond_9
 
     .line 298
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "motion_overturn"
 
@@ -1600,11 +1600,11 @@
 
     .line 309
     :cond_2d
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.Motion.PalmSwipe"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1617,7 +1617,7 @@
     if-eqz v0, :cond_a
 
     .line 310
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "surface_palm_swipe"
 
@@ -1637,11 +1637,11 @@
 
     .line 321
     :cond_2f
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v1, "Settings.Main.Phone.Motion.PalmTouch"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1654,7 +1654,7 @@
     if-eqz v0, :cond_b
 
     .line 322
-    iget-object v0, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v1, "surface_palm_touch"
 
@@ -1683,7 +1683,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->mContext:Landroid/content/Context;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mContext:Landroid/content/Context;
 
     invoke-direct {v7, v13}, Landroid/media/RingtoneManager;-><init>(Landroid/content/Context;)V
 
@@ -1693,17 +1693,17 @@
 
     .line 342
     .local v2, "Tag_Str":Ljava/lang/String;
-    new-instance v13, Lcom/android/settings/csc/CscParser;
+    new-instance v13, Lcom/android/settings_ex/csc/CscParser;
 
-    invoke-static {}, Lcom/android/settings/csc/CscParser;->getCustomerPath()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/csc/CscParser;->getCustomerPath()Ljava/lang/String;
 
     move-result-object v14
 
-    invoke-direct {v13, v14}, Lcom/android/settings/csc/CscParser;-><init>(Ljava/lang/String;)V
+    invoke-direct {v13, v14}, Lcom/android/settings_ex/csc/CscParser;-><init>(Ljava/lang/String;)V
 
     move-object/from16 v0, p0
 
-    iput-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iput-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     .line 344
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -1719,19 +1719,19 @@
     if-eqz v13, :cond_2
 
     .line 346
-    new-instance v4, Lcom/android/settings/csc/CscParser;
+    new-instance v4, Lcom/android/settings_ex/csc/CscParser;
 
-    invoke-static {}, Lcom/android/settings/csc/CscParser;->getChameleonPath()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/csc/CscParser;->getChameleonPath()Ljava/lang/String;
 
     move-result-object v13
 
-    invoke-direct {v4, v13}, Lcom/android/settings/csc/CscParser;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4, v13}, Lcom/android/settings_ex/csc/CscParser;-><init>(Ljava/lang/String;)V
 
     .line 347
-    .local v4, "chameleonParser":Lcom/android/settings/csc/CscParser;
+    .local v4, "chameleonParser":Lcom/android/settings_ex/csc/CscParser;
     const-string v13, "Operators.DefaultRinger"
 
-    invoke-virtual {v4, v13}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v4, v13}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1739,13 +1739,13 @@
     if-nez v2, :cond_1
 
     .line 526
-    .end local v4    # "chameleonParser":Lcom/android/settings/csc/CscParser;
+    .end local v4    # "chameleonParser":Lcom/android/settings_ex/csc/CscParser;
     :cond_0
     :goto_0
     return-void
 
     .line 352
-    .restart local v4    # "chameleonParser":Lcom/android/settings/csc/CscParser;
+    .restart local v4    # "chameleonParser":Lcom/android/settings_ex/csc/CscParser;
     :cond_1
     const/4 v13, 0x1
 
@@ -1754,7 +1754,7 @@
     .line 354
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v14, "Settings.Main.Sound.RingTone.src"
 
@@ -1762,7 +1762,7 @@
 
     const/16 v16, 0x1
 
-    invoke-virtual/range {v13 .. v16}, Lcom/android/settings/csc/CscParser;->getAttrbute(Ljava/lang/String;II)Ljava/lang/String;
+    invoke-virtual/range {v13 .. v16}, Lcom/android/settings_ex/csc/CscParser;->getAttrbute(Ljava/lang/String;II)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1793,7 +1793,7 @@
     const/16 p1, -0x1
 
     .line 359
-    .end local v4    # "chameleonParser":Lcom/android/settings/csc/CscParser;
+    .end local v4    # "chameleonParser":Lcom/android/settings_ex/csc/CscParser;
     :cond_2
     const-string v13, "CscSettingsLoader"
 
@@ -1834,7 +1834,7 @@
     .line 363
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v14, "Settings.Main.Sound.RingTone.src"
 
@@ -1842,7 +1842,7 @@
 
     const/16 v16, 0x1
 
-    invoke-virtual/range {v13 .. v16}, Lcom/android/settings/csc/CscParser;->getAttrbute(Ljava/lang/String;II)Ljava/lang/String;
+    invoke-virtual/range {v13 .. v16}, Lcom/android/settings_ex/csc/CscParser;->getAttrbute(Ljava/lang/String;II)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1877,7 +1877,7 @@
     .line 382
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->prefs:Landroid/content/SharedPreferences;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->prefs:Landroid/content/SharedPreferences;
 
     invoke-interface {v13}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -1885,7 +1885,7 @@
 
     move-object/from16 v0, p0
 
-    iput-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
+    iput-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
 
     .line 384
     const/4 v13, 0x1
@@ -1897,7 +1897,7 @@
     .line 385
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->prefs:Landroid/content/SharedPreferences;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->prefs:Landroid/content/SharedPreferences;
 
     const-string v14, "PREF_RINGTONE_SET"
 
@@ -1912,7 +1912,7 @@
     .line 386
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
 
     const-string v14, "PREF_RINGTONE_SET"
 
@@ -2052,7 +2052,7 @@
     .line 429
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->prefs:Landroid/content/SharedPreferences;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->prefs:Landroid/content/SharedPreferences;
 
     const-string v14, "PREF_RINGTONE_SET"
 
@@ -2076,7 +2076,7 @@
     .line 436
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v13}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
@@ -2104,7 +2104,7 @@
     .line 369
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v14, "Settings.Main.Sound.MessageTone.src"
 
@@ -2112,7 +2112,7 @@
 
     const/16 v16, 0x1
 
-    invoke-virtual/range {v13 .. v16}, Lcom/android/settings/csc/CscParser;->getAttrbute(Ljava/lang/String;II)Ljava/lang/String;
+    invoke-virtual/range {v13 .. v16}, Lcom/android/settings_ex/csc/CscParser;->getAttrbute(Ljava/lang/String;II)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2157,7 +2157,7 @@
     .line 375
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     const-string v14, "Settings.Main.Sound.AlarmTone.src"
 
@@ -2165,7 +2165,7 @@
 
     const/16 v16, 0x1
 
-    invoke-virtual/range {v13 .. v16}, Lcom/android/settings/csc/CscParser;->getAttrbute(Ljava/lang/String;II)Ljava/lang/String;
+    invoke-virtual/range {v13 .. v16}, Lcom/android/settings_ex/csc/CscParser;->getAttrbute(Ljava/lang/String;II)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2205,7 +2205,7 @@
     .line 391
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->prefs:Landroid/content/SharedPreferences;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->prefs:Landroid/content/SharedPreferences;
 
     const-string v14, "PREF_NOTIFICATION_SET"
 
@@ -2220,7 +2220,7 @@
     .line 392
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
 
     const-string v14, "PREF_NOTIFICATION_SET"
 
@@ -2248,7 +2248,7 @@
     .line 397
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->prefs:Landroid/content/SharedPreferences;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->prefs:Landroid/content/SharedPreferences;
 
     const-string v14, "PREF_ALARMTONE_SET"
 
@@ -2263,7 +2263,7 @@
     .line 398
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
 
     const-string v14, "PREF_ALARMTONE_SET"
 
@@ -2300,7 +2300,7 @@
     :cond_c
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
 
     const-string v14, "PREF_RINGTONE_SET"
 
@@ -2320,7 +2320,7 @@
     :goto_4
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v13}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
@@ -2340,7 +2340,7 @@
     .line 444
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->prefs:Landroid/content/SharedPreferences;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->prefs:Landroid/content/SharedPreferences;
 
     const-string v14, "PREF_NOTIFICATION_SET"
 
@@ -2364,7 +2364,7 @@
     .line 451
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v13}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
@@ -2377,7 +2377,7 @@
     :cond_f
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
 
     const-string v14, "PREF_NOTIFICATION_SET"
 
@@ -2405,7 +2405,7 @@
     .line 459
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->prefs:Landroid/content/SharedPreferences;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->prefs:Landroid/content/SharedPreferences;
 
     const-string v14, "PREF_ALARMTONE_SET"
 
@@ -2429,7 +2429,7 @@
     .line 466
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v13}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
@@ -2442,7 +2442,7 @@
     :cond_11
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
 
     const-string v14, "PREF_ALARMTONE_SET"
 
@@ -2502,7 +2502,7 @@
     .line 485
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->mContext:Landroid/content/Context;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mContext:Landroid/content/Context;
 
     const/4 v14, 0x1
 
@@ -2514,7 +2514,7 @@
     .line 487
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->mContext:Landroid/content/Context;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mContext:Landroid/content/Context;
 
     invoke-virtual {v13}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2566,7 +2566,7 @@
     :goto_5
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
 
     const-string v14, "PREF_RINGTONE_SET"
 
@@ -2586,7 +2586,7 @@
     :goto_6
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v13}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
@@ -2617,7 +2617,7 @@
     .line 501
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->mContext:Landroid/content/Context;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mContext:Landroid/content/Context;
 
     const/4 v14, 0x2
 
@@ -2626,7 +2626,7 @@
     .line 502
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->mContext:Landroid/content/Context;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mContext:Landroid/content/Context;
 
     invoke-virtual {v13}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2666,7 +2666,7 @@
     .line 504
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
 
     const-string v14, "PREF_NOTIFICATION_SET"
 
@@ -2700,7 +2700,7 @@
     .line 509
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->mContext:Landroid/content/Context;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mContext:Landroid/content/Context;
 
     const/4 v14, 0x4
 
@@ -2709,7 +2709,7 @@
     .line 510
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->mContext:Landroid/content/Context;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mContext:Landroid/content/Context;
 
     invoke-virtual {v13}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2749,7 +2749,7 @@
     .line 512
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
+    iget-object v13, v0, Lcom/android/settings_ex/csc/CscSettingsLoader;->editor:Landroid/content/SharedPreferences$Editor;
 
     const-string v14, "PREF_ALARMTONE_SET"
 
@@ -2790,27 +2790,27 @@
     invoke-static {v2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 550
-    new-instance v2, Lcom/android/settings/csc/CscParser;
+    new-instance v2, Lcom/android/settings_ex/csc/CscParser;
 
-    invoke-static {}, Lcom/android/settings/csc/CscParser;->getCustomerPath()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/csc/CscParser;->getCustomerPath()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/android/settings/csc/CscParser;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Lcom/android/settings_ex/csc/CscParser;-><init>(Ljava/lang/String;)V
 
-    iput-object v2, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iput-object v2, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     .line 552
-    iget-object v2, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v2, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
-    invoke-virtual {v2, p1}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, p1}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_3
 
     .line 553
-    iget-object v2, p0, Lcom/android/settings/csc/CscSettingsLoader;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mContext:Landroid/content/Context;
 
     const-string v3, "audio"
 
@@ -2967,7 +2967,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 566
-    iget-object v2, p0, Lcom/android/settings/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
+    iget-object v2, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mResolver:Landroid/content/ContentResolver;
 
     const-string v3, "vibrate_when_ringing"
 
@@ -3014,15 +3014,15 @@
 
     .line 530
     .local v1, "cscData":Ljava/lang/String;
-    new-instance v3, Lcom/android/settings/csc/CscParser;
+    new-instance v3, Lcom/android/settings_ex/csc/CscParser;
 
-    invoke-static {}, Lcom/android/settings/csc/CscParser;->getCustomerPath()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/csc/CscParser;->getCustomerPath()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-direct {v3, v4}, Lcom/android/settings/csc/CscParser;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v4}, Lcom/android/settings_ex/csc/CscParser;-><init>(Ljava/lang/String;)V
 
-    iput-object v3, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iput-object v3, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
     .line 532
     const-string v3, "CscSettingsLoader"
@@ -3030,16 +3030,16 @@
     invoke-static {v3, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 534
-    iget-object v3, p0, Lcom/android/settings/csc/CscSettingsLoader;->mParser:Lcom/android/settings/csc/CscParser;
+    iget-object v3, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mParser:Lcom/android/settings_ex/csc/CscParser;
 
-    invoke-virtual {v3, p2}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v3, p2}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
     .line 535
-    iget-object v3, p0, Lcom/android/settings/csc/CscSettingsLoader;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/csc/CscSettingsLoader;->mContext:Landroid/content/Context;
 
     const-string v4, "audio"
 

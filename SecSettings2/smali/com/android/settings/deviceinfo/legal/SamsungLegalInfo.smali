@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/deviceinfo/legal/SamsungLegalInfo;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/deviceinfo/legal/SamsungLegalInfo;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "SamsungLegalInfo.java"
 
 
@@ -9,7 +9,7 @@
 
     .prologue
     .line 27
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     return-void
 .end method
@@ -32,15 +32,15 @@
 
     .prologue
     .line 35
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 36
     const v2, 0x7f08009a
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/deviceinfo/legal/SamsungLegalInfo;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/deviceinfo/legal/SamsungLegalInfo;->addPreferencesFromResource(I)V
 
     .line 37
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v1
 
@@ -57,13 +57,13 @@
     .line 39
     const-string v2, "warranty"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/deviceinfo/legal/SamsungLegalInfo;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/deviceinfo/legal/SamsungLegalInfo;->removePreference(Ljava/lang/String;)V
 
     .line 42
     :cond_0
     const-string v2, "end_user_license_agreement"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/deviceinfo/legal/SamsungLegalInfo;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/deviceinfo/legal/SamsungLegalInfo;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
@@ -78,21 +78,21 @@
     if-eqz v2, :cond_4
 
     .line 44
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/legal/SamsungLegalInfo;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/legal/SamsungLegalInfo;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isGuestUser(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isGuestUser(Landroid/content/Context;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/legal/SamsungLegalInfo;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/legal/SamsungLegalInfo;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isRestrictedProfile(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isRestrictedProfile(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -102,7 +102,7 @@
     :cond_1
     const-string v2, "end_user_license_agreement"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/deviceinfo/legal/SamsungLegalInfo;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/deviceinfo/legal/SamsungLegalInfo;->removePreference(Ljava/lang/String;)V
 
     .line 51
     :cond_2
@@ -125,7 +125,7 @@
     :cond_4
     const/4 v2, 0x0
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isTablet(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isTablet(Landroid/content/Context;)Z
 
     move-result v2
 

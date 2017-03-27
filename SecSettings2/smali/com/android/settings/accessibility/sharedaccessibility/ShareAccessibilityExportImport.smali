@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;
+.class public Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;
 .super Landroid/app/Activity;
 .source "ShareAccessibilityExportImport.java"
 
@@ -61,13 +61,13 @@
     const/4 v0, 0x0
 
     .line 61
-    sput-boolean v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->isDialogShown:Z
+    sput-boolean v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->isDialogShown:Z
 
     .line 62
-    sput-boolean v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->isSdCardAvailable:Z
+    sput-boolean v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->isSdCardAvailable:Z
 
     .line 63
-    sput-boolean v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->isSecondDialogShown:Z
+    sput-boolean v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->isSecondDialogShown:Z
 
     return-void
 .end method
@@ -82,19 +82,19 @@
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     .line 42
-    iput-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
 
     .line 46
-    iput-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->path:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->path:Ljava/lang/String;
 
     .line 51
-    iput-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->pending_noti_internal_intent:Landroid/app/PendingIntent;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->pending_noti_internal_intent:Landroid/app/PendingIntent;
 
     .line 52
-    iput-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->pending_noti_external_intent:Landroid/app/PendingIntent;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->pending_noti_external_intent:Landroid/app/PendingIntent;
 
     .line 65
-    iput-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->window:Landroid/view/WindowManager$LayoutParams;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->window:Landroid/view/WindowManager$LayoutParams;
 
     return-void
 .end method
@@ -108,14 +108,14 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
+    sput-object v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
 
     .line 147
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
 
     .line 148
     const-string v0, "ShareAccessibilityExportImport"
@@ -133,18 +133,18 @@
 
     .prologue
     .line 140
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
 
     .line 141
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->RevSettingValues:Ljava/util/HashMap;
+    sput-object v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->RevSettingValues:Ljava/util/HashMap;
 
     .line 142
     const-string v0, "ShareAccessibilityExportImport"
@@ -162,7 +162,7 @@
 
     .prologue
     .line 32
-    sget-boolean v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->isDialogShown:Z
+    sget-boolean v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->isDialogShown:Z
 
     return v0
 .end method
@@ -173,7 +173,7 @@
 
     .prologue
     .line 32
-    sput-boolean p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->isDialogShown:Z
+    sput-boolean p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->isDialogShown:Z
 
     return p0
 .end method
@@ -183,7 +183,7 @@
 
     .prologue
     .line 32
-    sget-boolean v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->isSecondDialogShown:Z
+    sget-boolean v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->isSecondDialogShown:Z
 
     return v0
 .end method
@@ -194,18 +194,18 @@
 
     .prologue
     .line 32
-    sput-boolean p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->isSecondDialogShown:Z
+    sput-boolean p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->isSecondDialogShown:Z
 
     return p0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;)Ljava/lang/String;
+.method static synthetic access$200(Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;
 
     .prologue
     .line 32
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->path:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->path:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -215,7 +215,7 @@
 
     .prologue
     .line 32
-    sget-object v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->RevSettingValues:Ljava/util/HashMap;
+    sget-object v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->RevSettingValues:Ljava/util/HashMap;
 
     return-object v0
 .end method
@@ -226,30 +226,30 @@
 
     .prologue
     .line 32
-    sput-object p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->RevSettingValues:Ljava/util/HashMap;
+    sput-object p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->RevSettingValues:Ljava/util/HashMap;
 
     return-object p0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;)Landroid/content/Context;
+.method static synthetic access$400(Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;
 
     .prologue
     .line 32
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;Ljava/lang/String;)V
+.method static synthetic access$500(Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;Ljava/lang/String;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 32
-    invoke-direct {p0, p1}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->importNotificationSet(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->importNotificationSet(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -263,13 +263,13 @@
     .line 399
     const-string v1, "notification"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/app/NotificationManager;
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mExportFailNotificationManager:Landroid/app/NotificationManager;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mExportFailNotificationManager:Landroid/app/NotificationManager;
 
     .line 400
     new-instance v0, Landroid/app/Notification;
@@ -296,7 +296,7 @@
     iput v1, v0, Landroid/app/Notification;->flags:I
 
     .line 403
-    iget-object v1, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mExportFailNotificationManager:Landroid/app/NotificationManager;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mExportFailNotificationManager:Landroid/app/NotificationManager;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -307,7 +307,7 @@
     invoke-virtual {v1, v2, v0}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
     .line 404
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->finish()V
 
     .line 405
     return-void
@@ -329,7 +329,7 @@
 
     .line 296
     .local v5, "noti_common_export_intent":Landroid/content/Intent;
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v4
 
@@ -385,7 +385,7 @@
     .line 309
     const-string v6, "START_FOLDER"
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->ACC_SETTING_FILE_INTERNAL_FOLDER_PATH:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->ACC_SETTING_FILE_INTERNAL_FOLDER_PATH:Ljava/lang/String;
 
     invoke-virtual {v5, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -397,7 +397,7 @@
     .line 311
     const-string v6, "samsung.myfiles.intent.extra.START_PATH"
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->ACC_SETTING_FILE_INTERNAL_FOLDER_PATH:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->ACC_SETTING_FILE_INTERNAL_FOLDER_PATH:Ljava/lang/String;
 
     invoke-virtual {v5, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -406,12 +406,12 @@
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->pending_noti_internal_intent:Landroid/app/PendingIntent;
+    iput-object v6, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->pending_noti_internal_intent:Landroid/app/PendingIntent;
 
     .line 323
     :cond_2
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -431,7 +431,7 @@
 
     .line 324
     .local v1, "exportnotiticker":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -445,13 +445,13 @@
     .local v2, "exportnotititle":Ljava/lang/String;
     const-string v6, "notification"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Landroid/app/NotificationManager;
 
-    iput-object v6, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mExportNotificationManager:Landroid/app/NotificationManager;
+    iput-object v6, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mExportNotificationManager:Landroid/app/NotificationManager;
 
     .line 327
     new-instance v0, Landroid/app/Notification;
@@ -469,7 +469,7 @@
     if-nez p3, :cond_5
 
     .line 329
-    iget-object v6, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->pending_noti_internal_intent:Landroid/app/PendingIntent;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->pending_noti_internal_intent:Landroid/app/PendingIntent;
 
     invoke-virtual {v0, p0, v2, p1, v6}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
@@ -483,7 +483,7 @@
     iput v6, v0, Landroid/app/Notification;->flags:I
 
     .line 334
-    iget-object v6, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mExportNotificationManager:Landroid/app/NotificationManager;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mExportNotificationManager:Landroid/app/NotificationManager;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -494,7 +494,7 @@
     invoke-virtual {v6, v7, v0}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
     .line 337
-    iget-object v6, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
 
     new-instance v7, Landroid/content/Intent;
 
@@ -537,11 +537,11 @@
     if-ne p3, v10, :cond_2
 
     .line 315
-    iget-object v6, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
 
     const-string v7, "/Accessibility"
 
-    invoke-static {v6, v7}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->getExternalMemoryPath(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v6, v7}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->getExternalMemoryPath(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -568,7 +568,7 @@
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->pending_noti_external_intent:Landroid/app/PendingIntent;
+    iput-object v6, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->pending_noti_external_intent:Landroid/app/PendingIntent;
 
     goto/16 :goto_0
 
@@ -581,7 +581,7 @@
     if-ne p3, v10, :cond_3
 
     .line 331
-    iget-object v6, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->pending_noti_external_intent:Landroid/app/PendingIntent;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->pending_noti_external_intent:Landroid/app/PendingIntent;
 
     invoke-virtual {v0, p0, v2, p1, v6}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
@@ -622,7 +622,7 @@
 
     .line 348
     .local v3, "intent":Landroid/app/PendingIntent;
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -642,7 +642,7 @@
 
     .line 349
     .local v1, "importnotiticker":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -656,13 +656,13 @@
     .local v2, "importnotititle":Ljava/lang/String;
     const-string v5, "notification"
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Landroid/app/NotificationManager;
 
-    iput-object v5, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mImportNotificationManager:Landroid/app/NotificationManager;
+    iput-object v5, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mImportNotificationManager:Landroid/app/NotificationManager;
 
     .line 352
     new-instance v0, Landroid/app/Notification;
@@ -687,7 +687,7 @@
     iput v5, v0, Landroid/app/Notification;->flags:I
 
     .line 355
-    iget-object v5, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mImportNotificationManager:Landroid/app/NotificationManager;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mImportNotificationManager:Landroid/app/NotificationManager;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -698,7 +698,7 @@
     invoke-virtual {v5, v6, v0}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
     .line 357
-    iget-object v5, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
 
     new-instance v6, Landroid/content/Intent;
 
@@ -732,7 +732,7 @@
 
     .line 93
     :pswitch_0
-    invoke-static {}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->getAvailableInternalMemorySize()J
+    invoke-static {}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->getAvailableInternalMemorySize()J
 
     move-result-wide v4
 
@@ -741,13 +741,13 @@
     if-lez v4, :cond_0
 
     .line 94
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->exportMyFiles()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->exportMyFiles()V
 
     goto :goto_0
 
     .line 96
     :cond_0
-    invoke-virtual {p0, v7}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v4
 
@@ -757,7 +757,7 @@
 
     const v5, 0x7f0e09f1
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v5
 
@@ -765,7 +765,7 @@
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->exportFailureNotification(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v4, v5}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->exportFailureNotification(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -784,7 +784,7 @@
     .line 103
     const-string v4, "FOLDERPATH"
 
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->ACC_SETTING_FILE_MOST_INTERNAL_PATH:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->ACC_SETTING_FILE_MOST_INTERNAL_PATH:Ljava/lang/String;
 
     invoke-virtual {v3, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -804,7 +804,7 @@
     const/4 v4, 0x4
 
     :try_start_0
-    invoke-virtual {p0, v3, v4}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v3, v4}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->startActivityForResult(Landroid/content/Intent;I)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -824,9 +824,9 @@
     .end local v0    # "e":Landroid/content/ActivityNotFoundException;
     .end local v3    # "import_internal_intent":Landroid/content/Intent;
     :pswitch_2
-    iget-object v4, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
 
-    invoke-static {v4}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->getAvailableExternalMemorySize(Landroid/content/Context;)J
+    invoke-static {v4}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->getAvailableExternalMemorySize(Landroid/content/Context;)J
 
     move-result-wide v4
 
@@ -835,13 +835,13 @@
     if-lez v4, :cond_1
 
     .line 115
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->exportSDCards()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->exportSDCards()V
 
     goto :goto_0
 
     .line 117
     :cond_1
-    invoke-virtual {p0, v7}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v4
 
@@ -851,7 +851,7 @@
 
     const v5, 0x7f0e09f2
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v5
 
@@ -859,17 +859,17 @@
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->exportFailureNotification(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v4, v5}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->exportFailureNotification(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 121
     :pswitch_3
-    iget-object v4, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
 
     const-string v5, "/Accessibility"
 
-    invoke-static {v4, v5}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->getExternalMemoryPath(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v5}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->getExternalMemoryPath(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -906,7 +906,7 @@
     const/4 v4, 0x4
 
     :try_start_1
-    invoke-virtual {p0, v2, v4}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v2, v4}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->startActivityForResult(Landroid/content/Intent;I)V
     :try_end_1
     .catch Landroid/content/ActivityNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -1065,60 +1065,60 @@
 
     move-result-object v3
 
-    sput-object v3, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->FILE_NAME:Ljava/lang/String;
+    sput-object v3, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->FILE_NAME:Ljava/lang/String;
 
     .line 236
     new-instance v3, Ljava/io/File;
 
-    sget-object v4, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->ACC_SETTING_FILE_INTERNAL_FOLDER_PATH:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->ACC_SETTING_FILE_INTERNAL_FOLDER_PATH:Ljava/lang/String;
 
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->FILE_NAME:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->FILE_NAME:Ljava/lang/String;
 
     invoke-direct {v3, v4, v5}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    sput-object v3, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->export_internal_file:Ljava/io/File;
+    sput-object v3, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->export_internal_file:Ljava/io/File;
 
     .line 237
-    sget-object v3, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->export_internal_file:Ljava/io/File;
+    sget-object v3, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->export_internal_file:Ljava/io/File;
 
-    invoke-static {v3}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->sharingFileNameCheck(Ljava/io/File;)Ljava/io/File;
+    invoke-static {v3}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->sharingFileNameCheck(Ljava/io/File;)Ljava/io/File;
 
     move-result-object v3
 
-    sput-object v3, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->export_internal_file:Ljava/io/File;
+    sput-object v3, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->export_internal_file:Ljava/io/File;
 
     .line 238
-    sget-object v3, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->ACC_SETTING_FILE_INTERNAL_FOLDER_PATH:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->ACC_SETTING_FILE_INTERNAL_FOLDER_PATH:Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->createFolder(Ljava/lang/String;)V
+    invoke-static {v3}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->createFolder(Ljava/lang/String;)V
 
     .line 239
-    sput v6, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->SaveFlag:I
+    sput v6, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->SaveFlag:I
 
     .line 241
-    sget-object v3, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
+    sget-object v3, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
 
     if-eqz v3, :cond_2
 
     .line 242
-    sget-object v3, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
+    sget-object v3, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->clear()V
 
     .line 244
     :cond_2
-    iget-object v3, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
 
-    invoke-static {v3}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->saveValue(Landroid/content/Context;)Ljava/util/HashMap;
+    invoke-static {v3}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->saveValue(Landroid/content/Context;)Ljava/util/HashMap;
 
     move-result-object v3
 
-    sput-object v3, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
+    sput-object v3, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
 
     .line 245
     const-string v3, "ShareAccessibilityExportImport"
 
-    sget-object v4, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
+    sget-object v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
 
     invoke-virtual {v4}, Ljava/util/HashMap;->toString()Ljava/lang/String;
 
@@ -1127,14 +1127,14 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 246
-    sget-object v3, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
+    sget-object v3, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
 
-    sget-object v4, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->export_internal_file:Ljava/io/File;
+    sget-object v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->export_internal_file:Ljava/io/File;
 
-    invoke-static {v3, v4}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->saveValueToFile(Ljava/util/HashMap;Ljava/io/File;)V
+    invoke-static {v3, v4}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->saveValueToFile(Ljava/util/HashMap;Ljava/io/File;)V
 
     .line 248
-    sget-object v3, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->export_internal_file:Ljava/io/File;
+    sget-object v3, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->export_internal_file:Ljava/io/File;
 
     invoke-virtual {v3}, Ljava/io/File;->length()J
 
@@ -1147,13 +1147,13 @@
     if-lez v3, :cond_3
 
     .line 249
-    sget-object v3, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->export_internal_file:Ljava/io/File;
+    sget-object v3, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->export_internal_file:Ljava/io/File;
 
     invoke-virtual {v3}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    sget-object v4, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->export_internal_file:Ljava/io/File;
+    sget-object v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->export_internal_file:Ljava/io/File;
 
     invoke-virtual {v4}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -1161,7 +1161,7 @@
 
     const/4 v5, 0x0
 
-    invoke-direct {p0, v3, v4, v5}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->exportNotificationSet(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {p0, v3, v4, v5}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->exportNotificationSet(Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 256
     :goto_0
@@ -1172,7 +1172,7 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 257
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->finish()V
 
     .line 258
     return-void
@@ -1181,7 +1181,7 @@
     :cond_3
     const v3, 0x7f0e09f0
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v3
 
@@ -1191,7 +1191,7 @@
 
     const v4, 0x7f0e09f4
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v4
 
@@ -1199,10 +1199,10 @@
 
     move-result-object v4
 
-    invoke-direct {p0, v3, v4}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->exportFailureNotification(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v3, v4}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->exportFailureNotification(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 253
-    sget-object v3, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->export_internal_file:Ljava/io/File;
+    sget-object v3, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->export_internal_file:Ljava/io/File;
 
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
@@ -1304,45 +1304,45 @@
 
     .line 267
     :cond_1
-    iget-object v4, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
 
     const-string v5, "/Accessibility"
 
-    invoke-static {v4, v5}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->getExternalMemoryPath(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v5}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->getExternalMemoryPath(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     .line 268
     .local v1, "folder_path":Ljava/lang/String;
-    invoke-static {v1}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->createFolder(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->createFolder(Ljava/lang/String;)V
 
     .line 269
-    sput v8, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->SaveFlag:I
+    sput v8, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->SaveFlag:I
 
     .line 271
-    sget-object v4, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
+    sget-object v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
 
     if-eqz v4, :cond_2
 
     .line 272
-    sget-object v4, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
+    sget-object v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
 
     invoke-virtual {v4}, Ljava/util/HashMap;->clear()V
 
     .line 275
     :cond_2
-    iget-object v4, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mContext:Landroid/content/Context;
 
-    invoke-static {v4}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->saveValue(Landroid/content/Context;)Ljava/util/HashMap;
+    invoke-static {v4}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->saveValue(Landroid/content/Context;)Ljava/util/HashMap;
 
     move-result-object v4
 
-    sput-object v4, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
+    sput-object v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
 
     .line 276
     const-string v4, "ShareAccessibilityExportImport"
 
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
 
     invoke-virtual {v5}, Ljava/util/HashMap;->toString()Ljava/lang/String;
 
@@ -1387,35 +1387,35 @@
 
     move-result-object v4
 
-    sput-object v4, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->FILE_NAME:Ljava/lang/String;
+    sput-object v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->FILE_NAME:Ljava/lang/String;
 
     .line 278
     new-instance v4, Ljava/io/File;
 
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->FILE_NAME:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->FILE_NAME:Ljava/lang/String;
 
     invoke-direct {v4, v1, v5}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    sput-object v4, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->export_external_file:Ljava/io/File;
+    sput-object v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->export_external_file:Ljava/io/File;
 
     .line 279
-    sget-object v4, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->export_external_file:Ljava/io/File;
+    sget-object v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->export_external_file:Ljava/io/File;
 
-    invoke-static {v4}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->sharingFileNameCheck(Ljava/io/File;)Ljava/io/File;
+    invoke-static {v4}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->sharingFileNameCheck(Ljava/io/File;)Ljava/io/File;
 
     move-result-object v4
 
-    sput-object v4, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->export_external_file:Ljava/io/File;
+    sput-object v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->export_external_file:Ljava/io/File;
 
     .line 280
-    sget-object v4, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
+    sget-object v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
 
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->export_external_file:Ljava/io/File;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->export_external_file:Ljava/io/File;
 
-    invoke-static {v4, v5}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->saveValueToFile(Ljava/util/HashMap;Ljava/io/File;)V
+    invoke-static {v4, v5}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->saveValueToFile(Ljava/util/HashMap;Ljava/io/File;)V
 
     .line 281
-    sget-object v4, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->export_external_file:Ljava/io/File;
+    sget-object v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->export_external_file:Ljava/io/File;
 
     invoke-virtual {v4}, Ljava/io/File;->length()J
 
@@ -1428,19 +1428,19 @@
     if-lez v4, :cond_3
 
     .line 282
-    sget-object v4, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->export_external_file:Ljava/io/File;
+    sget-object v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->export_external_file:Ljava/io/File;
 
     invoke-virtual {v4}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v4
 
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->export_external_file:Ljava/io/File;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->export_external_file:Ljava/io/File;
 
     invoke-virtual {v5}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5, v8}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->exportNotificationSet(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {p0, v4, v5, v8}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->exportNotificationSet(Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 290
     :goto_0
@@ -1451,7 +1451,7 @@
     invoke-static {v4, v5}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 291
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->finish()V
 
     .line 292
     return-void
@@ -1460,7 +1460,7 @@
     :cond_3
     const v4, 0x7f0e09f0
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v4
 
@@ -1470,7 +1470,7 @@
 
     const v5, 0x7f0e09f4
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v5
 
@@ -1478,10 +1478,10 @@
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->exportFailureNotification(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v4, v5}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->exportFailureNotification(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 288
-    sget-object v4, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->export_external_file:Ljava/io/File;
+    sget-object v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->export_external_file:Ljava/io/File;
 
     invoke-virtual {v4}, Ljava/io/File;->delete()Z
 
@@ -1577,7 +1577,7 @@
     .line 381
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->path:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->path:Ljava/lang/String;
 
     .line 382
     const-string v0, "FILE"
@@ -1586,7 +1586,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->path:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->path:Ljava/lang/String;
 
     .line 383
     const-string v0, "ShareAccessibilityExportImport"
@@ -1601,7 +1601,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->path:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->path:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1616,7 +1616,7 @@
     .line 389
     const/4 v0, 0x5
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->showDialog(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->showDialog(I)V
 
     .line 396
     :goto_0
@@ -1631,7 +1631,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 393
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->finish()V
 
     goto :goto_0
 .end method
@@ -1645,14 +1645,14 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 71
-    invoke-direct {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->ShareAccessibilityExport_Init()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->ShareAccessibilityExport_Init()V
 
     .line 72
-    invoke-direct {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->ShareAccessibilityImport_Init()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->ShareAccessibilityImport_Init()V
 
     .line 75
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -1670,7 +1670,7 @@
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 77
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->finish()V
 
     .line 88
     :goto_0
@@ -1678,7 +1678,7 @@
 
     .line 79
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -1696,7 +1696,7 @@
 
     .line 80
     .local v1, "item":Ljava/lang/Integer;
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -1709,7 +1709,7 @@
 
     move-result v2
 
-    invoke-direct {p0, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->showContent(I)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->showContent(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1729,7 +1729,7 @@
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 85
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->finish()V
 
     goto :goto_0
 .end method
@@ -1746,9 +1746,9 @@
 
     .line 168
     .local v1, "dlg":Landroid/app/AlertDialog$Builder;
-    new-instance v2, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport$1;
+    new-instance v2, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport$1;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport$1;-><init>(Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport$1;-><init>(Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;)V
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1804,9 +1804,9 @@
 
     const v3, 0x7f0e083b
 
-    new-instance v4, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport$3;
+    new-instance v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport$3;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport$3;-><init>(Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport$3;-><init>(Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;)V
 
     invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1814,9 +1814,9 @@
 
     const v3, 0x7f0e09f3
 
-    new-instance v4, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport$2;
+    new-instance v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport$2;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport$2;-><init>(Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport$2;-><init>(Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;)V
 
     invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1843,21 +1843,21 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 411
-    sget-object v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
+    sget-object v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
 
     if-eqz v0, :cond_0
 
     .line 412
-    sput-object v2, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
+    sput-object v2, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->settingValue:Ljava/util/HashMap;
 
     .line 415
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mExportNotificationManager:Landroid/app/NotificationManager;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mExportNotificationManager:Landroid/app/NotificationManager;
 
     if-eqz v0, :cond_1
 
     .line 416
-    iput-object v2, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mExportNotificationManager:Landroid/app/NotificationManager;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->mExportNotificationManager:Landroid/app/NotificationManager;
 
     .line 419
     :cond_1
@@ -1889,7 +1889,7 @@
 
     .line 155
     :pswitch_0
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->finish()V
 
     goto :goto_0
 
@@ -1921,7 +1921,7 @@
     :pswitch_0
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->removeDialog(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->removeDialog(I)V
 
     goto :goto_0
 
@@ -1929,7 +1929,7 @@
     :pswitch_1
     const/4 v0, 0x2
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->removeDialog(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->removeDialog(I)V
 
     goto :goto_0
 

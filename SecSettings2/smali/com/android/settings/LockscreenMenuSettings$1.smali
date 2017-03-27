@@ -1,4 +1,4 @@
-.class Lcom/android/settings/LockscreenMenuSettings$1;
+.class Lcom/android/settings_ex/LockscreenMenuSettings$1;
 .super Ljava/lang/Object;
 .source "LockscreenMenuSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/LockscreenMenuSettings;->warnAppInstallationFromPackageInstaller()V
+    value = Lcom/android/settings_ex/LockscreenMenuSettings;->warnAppInstallationFromPackageInstaller()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/LockscreenMenuSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/LockscreenMenuSettings;
 
 .field final synthetic val$mCheck:Landroid/widget/CheckBox;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/LockscreenMenuSettings;Landroid/widget/CheckBox;)V
+.method constructor <init>(Lcom/android/settings_ex/LockscreenMenuSettings;Landroid/widget/CheckBox;)V
     .locals 0
 
     .prologue
     .line 766
-    iput-object p1, p0, Lcom/android/settings/LockscreenMenuSettings$1;->this$0:Lcom/android/settings/LockscreenMenuSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/LockscreenMenuSettings$1;->this$0:Lcom/android/settings_ex/LockscreenMenuSettings;
 
-    iput-object p2, p0, Lcom/android/settings/LockscreenMenuSettings$1;->val$mCheck:Landroid/widget/CheckBox;
+    iput-object p2, p0, Lcom/android/settings_ex/LockscreenMenuSettings$1;->val$mCheck:Landroid/widget/CheckBox;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,7 +49,7 @@
     const/4 v5, 0x1
 
     .line 768
-    iget-object v3, p0, Lcom/android/settings/LockscreenMenuSettings$1;->val$mCheck:Landroid/widget/CheckBox;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenMenuSettings$1;->val$mCheck:Landroid/widget/CheckBox;
 
     invoke-virtual {v3}, Landroid/widget/CheckBox;->isChecked()Z
 
@@ -58,9 +58,9 @@
     if-eqz v3, :cond_1
 
     .line 769
-    iget-object v3, p0, Lcom/android/settings/LockscreenMenuSettings$1;->this$0:Lcom/android/settings/LockscreenMenuSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenMenuSettings$1;->this$0:Lcom/android/settings_ex/LockscreenMenuSettings;
 
-    invoke-virtual {v3}, Lcom/android/settings/LockscreenMenuSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v3}, Lcom/android/settings_ex/LockscreenMenuSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -69,9 +69,9 @@
     invoke-static {v3, v4, v5}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 770
-    iget-object v3, p0, Lcom/android/settings/LockscreenMenuSettings$1;->this$0:Lcom/android/settings/LockscreenMenuSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenMenuSettings$1;->this$0:Lcom/android/settings_ex/LockscreenMenuSettings;
 
-    invoke-virtual {v3}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v3}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -92,9 +92,9 @@
 
     .line 773
     .local v2, "installIntent":Landroid/content/Intent;
-    iget-object v3, p0, Lcom/android/settings/LockscreenMenuSettings$1;->this$0:Lcom/android/settings/LockscreenMenuSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenMenuSettings$1;->this$0:Lcom/android/settings_ex/LockscreenMenuSettings;
 
-    invoke-virtual {v3}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v3}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -119,7 +119,7 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/LockscreenMenuSettings$1;->val$mCheck:Landroid/widget/CheckBox;
+    iget-object v5, p0, Lcom/android/settings_ex/LockscreenMenuSettings$1;->val$mCheck:Landroid/widget/CheckBox;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -132,9 +132,9 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 778
-    iget-object v3, p0, Lcom/android/settings/LockscreenMenuSettings$1;->this$0:Lcom/android/settings/LockscreenMenuSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenMenuSettings$1;->this$0:Lcom/android/settings_ex/LockscreenMenuSettings;
 
-    invoke-virtual {v3}, Lcom/android/settings/LockscreenMenuSettings;->finish()V
+    invoke-virtual {v3}, Lcom/android/settings_ex/LockscreenMenuSettings;->finish()V
 
     .line 795
     .end local v1    # "extras":Landroid/os/Bundle;
@@ -157,35 +157,35 @@
     .end local v0    # "e":Landroid/content/ActivityNotFoundException;
     .end local v1    # "extras":Landroid/os/Bundle;
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/LockscreenMenuSettings$1;->this$0:Lcom/android/settings/LockscreenMenuSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenMenuSettings$1;->this$0:Lcom/android/settings_ex/LockscreenMenuSettings;
 
-    # invokes: Lcom/android/settings/LockscreenMenuSettings;->setNonMarketAppsAllowed(Z)V
-    invoke-static {v3, v5}, Lcom/android/settings/LockscreenMenuSettings;->access$000(Lcom/android/settings/LockscreenMenuSettings;Z)V
+    # invokes: Lcom/android/settings_ex/LockscreenMenuSettings;->setNonMarketAppsAllowed(Z)V
+    invoke-static {v3, v5}, Lcom/android/settings_ex/LockscreenMenuSettings;->access$000(Lcom/android/settings_ex/LockscreenMenuSettings;Z)V
 
     .line 782
-    iget-object v3, p0, Lcom/android/settings/LockscreenMenuSettings$1;->this$0:Lcom/android/settings/LockscreenMenuSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenMenuSettings$1;->this$0:Lcom/android/settings_ex/LockscreenMenuSettings;
 
-    # getter for: Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
-    invoke-static {v3}, Lcom/android/settings/LockscreenMenuSettings;->access$100(Lcom/android/settings/LockscreenMenuSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    invoke-static {v3}, Lcom/android/settings_ex/LockscreenMenuSettings;->access$100(Lcom/android/settings_ex/LockscreenMenuSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
     .line 783
-    iget-object v3, p0, Lcom/android/settings/LockscreenMenuSettings$1;->this$0:Lcom/android/settings/LockscreenMenuSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenMenuSettings$1;->this$0:Lcom/android/settings_ex/LockscreenMenuSettings;
 
-    # getter for: Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
-    invoke-static {v3}, Lcom/android/settings/LockscreenMenuSettings;->access$100(Lcom/android/settings/LockscreenMenuSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    invoke-static {v3}, Lcom/android/settings_ex/LockscreenMenuSettings;->access$100(Lcom/android/settings_ex/LockscreenMenuSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v3
 
     invoke-virtual {v3, v5}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 784
-    iget-object v3, p0, Lcom/android/settings/LockscreenMenuSettings$1;->this$0:Lcom/android/settings/LockscreenMenuSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenMenuSettings$1;->this$0:Lcom/android/settings_ex/LockscreenMenuSettings;
 
-    invoke-virtual {v3}, Lcom/android/settings/LockscreenMenuSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v3}, Lcom/android/settings_ex/LockscreenMenuSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -196,9 +196,9 @@
     invoke-static {v3, v4, v5}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 785
-    iget-object v3, p0, Lcom/android/settings/LockscreenMenuSettings$1;->this$0:Lcom/android/settings/LockscreenMenuSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenMenuSettings$1;->this$0:Lcom/android/settings_ex/LockscreenMenuSettings;
 
-    invoke-virtual {v3}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v3}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -219,9 +219,9 @@
 
     .line 788
     .restart local v2    # "installIntent":Landroid/content/Intent;
-    iget-object v3, p0, Lcom/android/settings/LockscreenMenuSettings$1;->this$0:Lcom/android/settings/LockscreenMenuSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenMenuSettings$1;->this$0:Lcom/android/settings_ex/LockscreenMenuSettings;
 
-    invoke-virtual {v3}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v3}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -234,9 +234,9 @@
     .line 792
     .end local v2    # "installIntent":Landroid/content/Intent;
     :goto_2
-    iget-object v3, p0, Lcom/android/settings/LockscreenMenuSettings$1;->this$0:Lcom/android/settings/LockscreenMenuSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenMenuSettings$1;->this$0:Lcom/android/settings_ex/LockscreenMenuSettings;
 
-    invoke-virtual {v3}, Lcom/android/settings/LockscreenMenuSettings;->finish()V
+    invoke-virtual {v3}, Lcom/android/settings_ex/LockscreenMenuSettings;->finish()V
 
     goto :goto_1
 

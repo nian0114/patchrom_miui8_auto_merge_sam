@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accounts/SnsAccountManager;
+.class public Lcom/android/settings_ex/accounts/SnsAccountManager;
 .super Ljava/lang/Object;
 .source "SnsAccountManager.java"
 
@@ -6,13 +6,13 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;
+        Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;
     }
 .end annotation
 
 
 # static fields
-.field private static mInstance:Lcom/android/settings/accounts/SnsAccountManager;
+.field private static mInstance:Lcom/android/settings_ex/accounts/SnsAccountManager;
 
 
 # instance fields
@@ -21,7 +21,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;",
+            "Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;",
             ">;"
         }
     .end annotation
@@ -40,7 +40,7 @@
     .line 29
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/android/settings/accounts/SnsAccountManager;->mInstance:Lcom/android/settings/accounts/SnsAccountManager;
+    sput-object v0, Lcom/android/settings_ex/accounts/SnsAccountManager;->mInstance:Lcom/android/settings_ex/accounts/SnsAccountManager;
 
     return-void
 .end method
@@ -58,46 +58,46 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 31
-    iput-object v0, p0, Lcom/android/settings/accounts/SnsAccountManager;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/accounts/SnsAccountManager;->mContext:Landroid/content/Context;
 
     .line 32
-    iput-wide v2, p0, Lcom/android/settings/accounts/SnsAccountManager;->mQueryFailTime:J
+    iput-wide v2, p0, Lcom/android/settings_ex/accounts/SnsAccountManager;->mQueryFailTime:J
 
     .line 33
-    iput-object v0, p0, Lcom/android/settings/accounts/SnsAccountManager;->mAccountList:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/accounts/SnsAccountManager;->mAccountList:Ljava/util/ArrayList;
 
     .line 58
-    iput-object p1, p0, Lcom/android/settings/accounts/SnsAccountManager;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/accounts/SnsAccountManager;->mContext:Landroid/content/Context;
 
     .line 59
-    iput-wide v2, p0, Lcom/android/settings/accounts/SnsAccountManager;->mQueryFailTime:J
+    iput-wide v2, p0, Lcom/android/settings_ex/accounts/SnsAccountManager;->mQueryFailTime:J
 
     .line 60
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/accounts/SnsAccountManager;->mAccountList:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/accounts/SnsAccountManager;->mAccountList:Ljava/util/ArrayList;
 
     .line 62
-    invoke-virtual {p0}, Lcom/android/settings/accounts/SnsAccountManager;->updateSSOAccounts()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accounts/SnsAccountManager;->updateSSOAccounts()V
 
     .line 63
     return-void
 .end method
 
-.method public static declared-synchronized getInstance(Landroid/content/Context;)Lcom/android/settings/accounts/SnsAccountManager;
+.method public static declared-synchronized getInstance(Landroid/content/Context;)Lcom/android/settings_ex/accounts/SnsAccountManager;
     .locals 3
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 66
-    const-class v1, Lcom/android/settings/accounts/SnsAccountManager;
+    const-class v1, Lcom/android/settings_ex/accounts/SnsAccountManager;
 
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/android/settings/accounts/SnsAccountManager;->mInstance:Lcom/android/settings/accounts/SnsAccountManager;
+    sget-object v0, Lcom/android/settings_ex/accounts/SnsAccountManager;->mInstance:Lcom/android/settings_ex/accounts/SnsAccountManager;
 
     if-nez v0, :cond_0
 
@@ -105,16 +105,16 @@
     if-eqz p0, :cond_1
 
     .line 68
-    new-instance v0, Lcom/android/settings/accounts/SnsAccountManager;
+    new-instance v0, Lcom/android/settings_ex/accounts/SnsAccountManager;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/accounts/SnsAccountManager;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/accounts/SnsAccountManager;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/android/settings/accounts/SnsAccountManager;->mInstance:Lcom/android/settings/accounts/SnsAccountManager;
+    sput-object v0, Lcom/android/settings_ex/accounts/SnsAccountManager;->mInstance:Lcom/android/settings_ex/accounts/SnsAccountManager;
 
     .line 74
     :cond_0
     :goto_0
-    sget-object v0, Lcom/android/settings/accounts/SnsAccountManager;->mInstance:Lcom/android/settings/accounts/SnsAccountManager;
+    sget-object v0, Lcom/android/settings_ex/accounts/SnsAccountManager;->mInstance:Lcom/android/settings_ex/accounts/SnsAccountManager;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -152,14 +152,14 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/android/settings/accounts/SnsAccountManager;->mAccountList:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accounts/SnsAccountManager;->mAccountList:Ljava/util/ArrayList;
 
-    iget-object v7, p0, Lcom/android/settings/accounts/SnsAccountManager;->mAccountList:Ljava/util/ArrayList;
+    iget-object v7, p0, Lcom/android/settings_ex/accounts/SnsAccountManager;->mAccountList:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->removeAll(Ljava/util/Collection;)Z
 
     .line 84
-    iget-object v0, p0, Lcom/android/settings/accounts/SnsAccountManager;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/accounts/SnsAccountManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -256,11 +256,11 @@
 
     .line 100
     .local v5, "serviceAppName":Ljava/lang/String;
-    iget-object v7, p0, Lcom/android/settings/accounts/SnsAccountManager;->mAccountList:Ljava/util/ArrayList;
+    iget-object v7, p0, Lcom/android/settings_ex/accounts/SnsAccountManager;->mAccountList:Ljava/util/ArrayList;
 
-    new-instance v0, Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;
+    new-instance v0, Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v7, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -283,7 +283,7 @@
     .line 106
     const-wide/16 v8, 0x0
 
-    iput-wide v8, p0, Lcom/android/settings/accounts/SnsAccountManager;->mQueryFailTime:J
+    iput-wide v8, p0, Lcom/android/settings_ex/accounts/SnsAccountManager;->mQueryFailTime:J
 
     .line 107
     const-string v0, "SnsAccountManager"
@@ -298,7 +298,7 @@
 
     move-result-object v7
 
-    iget-object v8, p0, Lcom/android/settings/accounts/SnsAccountManager;->mAccountList:Ljava/util/ArrayList;
+    iget-object v8, p0, Lcom/android/settings_ex/accounts/SnsAccountManager;->mAccountList:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -325,7 +325,7 @@
 
     move-result-wide v8
 
-    iput-wide v8, p0, Lcom/android/settings/accounts/SnsAccountManager;->mQueryFailTime:J
+    iput-wide v8, p0, Lcom/android/settings_ex/accounts/SnsAccountManager;->mQueryFailTime:J
 
     .line 110
     const-string v0, "SnsAccountManager"
@@ -360,7 +360,7 @@
 
     .line 163
     .local v1, "pairedAccount":Landroid/accounts/Account;
-    invoke-virtual {p0, p1}, Lcom/android/settings/accounts/SnsAccountManager;->getPairedAccountType(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/accounts/SnsAccountManager;->getPairedAccountType(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -369,7 +369,7 @@
     if-eqz v2, :cond_0
 
     .line 165
-    iget-object v3, p0, Lcom/android/settings/accounts/SnsAccountManager;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/accounts/SnsAccountManager;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Landroid/accounts/AccountManager;->get(Landroid/content/Context;)Landroid/accounts/AccountManager;
 
@@ -406,16 +406,16 @@
 
     .line 148
     .local v1, "pairedAccountType":Ljava/lang/String;
-    invoke-virtual {p0, p1}, Lcom/android/settings/accounts/SnsAccountManager;->getSSOAccountEntry(Ljava/lang/String;)Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/accounts/SnsAccountManager;->getSSOAccountEntry(Ljava/lang/String;)Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;
 
     move-result-object v0
 
     .line 149
-    .local v0, "item":Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;
+    .local v0, "item":Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;
     if-eqz v0, :cond_0
 
     .line 150
-    iget-object v2, v0, Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;->snsAccountType:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;->snsAccountType:Ljava/lang/String;
 
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -424,7 +424,7 @@
     if-eqz v2, :cond_1
 
     .line 151
-    iget-object v1, v0, Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;->ssoAccountType:Ljava/lang/String;
+    iget-object v1, v0, Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;->ssoAccountType:Ljava/lang/String;
 
     .line 157
     :cond_0
@@ -433,7 +433,7 @@
 
     .line 153
     :cond_1
-    iget-object v1, v0, Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;->snsAccountType:Ljava/lang/String;
+    iget-object v1, v0, Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;->snsAccountType:Ljava/lang/String;
 
     goto :goto_0
 .end method
@@ -448,7 +448,7 @@
 
     .line 213
     .local v2, "ssoAccount":Landroid/accounts/Account;
-    invoke-virtual {p0, p1}, Lcom/android/settings/accounts/SnsAccountManager;->getSSOAccountType(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/accounts/SnsAccountManager;->getSSOAccountType(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -457,7 +457,7 @@
     if-eqz v1, :cond_0
 
     .line 215
-    iget-object v3, p0, Lcom/android/settings/accounts/SnsAccountManager;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/accounts/SnsAccountManager;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Landroid/accounts/AccountManager;->get(Landroid/content/Context;)Landroid/accounts/AccountManager;
 
@@ -484,7 +484,7 @@
     return-object v2
 .end method
 
-.method public declared-synchronized getSSOAccountEntry(Ljava/lang/String;)Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;
+.method public declared-synchronized getSSOAccountEntry(Ljava/lang/String;)Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;
     .locals 6
     .param p1, "accountType"    # Ljava/lang/String;
 
@@ -493,7 +493,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-wide v2, p0, Lcom/android/settings/accounts/SnsAccountManager;->mQueryFailTime:J
+    iget-wide v2, p0, Lcom/android/settings_ex/accounts/SnsAccountManager;->mQueryFailTime:J
 
     const-wide/16 v4, 0x0
 
@@ -501,7 +501,7 @@
 
     if-lez v2, :cond_0
 
-    iget-wide v2, p0, Lcom/android/settings/accounts/SnsAccountManager;->mQueryFailTime:J
+    iget-wide v2, p0, Lcom/android/settings_ex/accounts/SnsAccountManager;->mQueryFailTime:J
 
     const-wide/16 v4, 0x2710
 
@@ -516,11 +516,11 @@
     if-gez v2, :cond_0
 
     .line 116
-    invoke-virtual {p0}, Lcom/android/settings/accounts/SnsAccountManager;->updateSSOAccounts()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accounts/SnsAccountManager;->updateSSOAccounts()V
 
     .line 119
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/accounts/SnsAccountManager;->mAccountList:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/accounts/SnsAccountManager;->mAccountList:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -538,11 +538,11 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;
+    check-cast v1, Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;
 
     .line 120
-    .local v1, "item":Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;
-    iget-object v2, v1, Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;->snsAccountType:Ljava/lang/String;
+    .local v1, "item":Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;
+    iget-object v2, v1, Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;->snsAccountType:Ljava/lang/String;
 
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -550,7 +550,7 @@
 
     if-nez v2, :cond_2
 
-    iget-object v2, v1, Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;->ssoAccountType:Ljava/lang/String;
+    iget-object v2, v1, Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;->ssoAccountType:Ljava/lang/String;
 
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
     :try_end_0
@@ -561,7 +561,7 @@
     if-eqz v2, :cond_1
 
     .line 126
-    .end local v1    # "item":Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;
+    .end local v1    # "item":Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;
     :cond_2
     :goto_0
     monitor-exit p0
@@ -593,16 +593,16 @@
 
     .line 227
     .local v1, "ssoAccountLabel":Ljava/lang/String;
-    invoke-virtual {p0, p1}, Lcom/android/settings/accounts/SnsAccountManager;->getSSOAccountEntry(Ljava/lang/String;)Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/accounts/SnsAccountManager;->getSSOAccountEntry(Ljava/lang/String;)Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;
 
     move-result-object v0
 
     .line 228
-    .local v0, "item":Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;
+    .local v0, "item":Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;
     if-eqz v0, :cond_0
 
     .line 229
-    iget-object v1, v0, Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;->ssoAccountLabel:Ljava/lang/String;
+    iget-object v1, v0, Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;->ssoAccountLabel:Ljava/lang/String;
 
     .line 232
     :cond_0
@@ -619,16 +619,16 @@
 
     .line 202
     .local v1, "ssoAccountType":Ljava/lang/String;
-    invoke-virtual {p0, p1}, Lcom/android/settings/accounts/SnsAccountManager;->getSSOAccountEntry(Ljava/lang/String;)Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/accounts/SnsAccountManager;->getSSOAccountEntry(Ljava/lang/String;)Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;
 
     move-result-object v0
 
     .line 203
-    .local v0, "item":Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;
+    .local v0, "item":Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;
     if-eqz v0, :cond_0
 
     .line 204
-    iget-object v1, v0, Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;->ssoAccountType:Ljava/lang/String;
+    iget-object v1, v0, Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;->ssoAccountType:Ljava/lang/String;
 
     .line 207
     :cond_0
@@ -645,16 +645,16 @@
 
     .line 238
     .local v1, "serviceAppName":Ljava/lang/String;
-    invoke-virtual {p0, p1}, Lcom/android/settings/accounts/SnsAccountManager;->getSSOAccountEntry(Ljava/lang/String;)Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/accounts/SnsAccountManager;->getSSOAccountEntry(Ljava/lang/String;)Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;
 
     move-result-object v0
 
     .line 239
-    .local v0, "item":Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;
+    .local v0, "item":Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;
     if-eqz v0, :cond_0
 
     .line 240
-    iget-object v1, v0, Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;->serviceAppName:Ljava/lang/String;
+    iget-object v1, v0, Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;->serviceAppName:Ljava/lang/String;
 
     .line 243
     :cond_0
@@ -671,16 +671,16 @@
 
     .line 177
     .local v1, "snsAccountType":Ljava/lang/String;
-    invoke-virtual {p0, p1}, Lcom/android/settings/accounts/SnsAccountManager;->getSSOAccountEntry(Ljava/lang/String;)Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/accounts/SnsAccountManager;->getSSOAccountEntry(Ljava/lang/String;)Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;
 
     move-result-object v0
 
     .line 178
-    .local v0, "item":Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;
+    .local v0, "item":Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;
     if-eqz v0, :cond_0
 
     .line 179
-    iget-object v1, v0, Lcom/android/settings/accounts/SnsAccountManager$SnsAccountEntry;->snsAccountType:Ljava/lang/String;
+    iget-object v1, v0, Lcom/android/settings_ex/accounts/SnsAccountManager$SnsAccountEntry;->snsAccountType:Ljava/lang/String;
 
     .line 182
     :cond_0
@@ -692,7 +692,7 @@
 
     .prologue
     .line 78
-    invoke-direct {p0}, Lcom/android/settings/accounts/SnsAccountManager;->querySSOAccounts()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accounts/SnsAccountManager;->querySSOAccounts()V
 
     .line 79
     return-void

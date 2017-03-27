@@ -1,4 +1,4 @@
-.class Lcom/android/settings/notification/RadioPreference$1;
+.class Lcom/android/settings_ex/notification/RadioPreference$1;
 .super Ljava/lang/Object;
 .source "RadioPreference.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/RadioPreference;
+    value = Lcom/android/settings_ex/notification/RadioPreference;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/RadioPreference;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/RadioPreference;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/notification/RadioPreference;)V
+.method constructor <init>(Lcom/android/settings_ex/notification/RadioPreference;)V
     .locals 0
 
     .prologue
     .line 47
-    iput-object p1, p0, Lcom/android/settings/notification/RadioPreference$1;->this$0:Lcom/android/settings/notification/RadioPreference;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/RadioPreference$1;->this$0:Lcom/android/settings_ex/notification/RadioPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,10 +43,10 @@
 
     .prologue
     .line 50
-    iget-object v0, p0, Lcom/android/settings/notification/RadioPreference$1;->this$0:Lcom/android/settings/notification/RadioPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/RadioPreference$1;->this$0:Lcom/android/settings_ex/notification/RadioPreference;
 
-    # invokes: Lcom/android/settings/notification/RadioPreference;->onRadioButtonClicked(Landroid/widget/CompoundButton;Z)V
-    invoke-static {v0, p1, p2}, Lcom/android/settings/notification/RadioPreference;->access$000(Lcom/android/settings/notification/RadioPreference;Landroid/widget/CompoundButton;Z)V
+    # invokes: Lcom/android/settings_ex/notification/RadioPreference;->onRadioButtonClicked(Landroid/widget/CompoundButton;Z)V
+    invoke-static {v0, p1, p2}, Lcom/android/settings_ex/notification/RadioPreference;->access$000(Lcom/android/settings_ex/notification/RadioPreference;Landroid/widget/CompoundButton;Z)V
 
     .line 51
     return-void

@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/BrightnessPreference$SavedState$1;
+.class final Lcom/android/settings_ex/BrightnessPreference$SavedState$1;
 .super Ljava/lang/Object;
 .source "BrightnessPreference.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/BrightnessPreference$SavedState;
+    value = Lcom/android/settings_ex/BrightnessPreference$SavedState;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Landroid/os/Parcelable$Creator",
         "<",
-        "Lcom/android/settings/BrightnessPreference$SavedState;",
+        "Lcom/android/settings_ex/BrightnessPreference$SavedState;",
         ">;"
     }
 .end annotation
@@ -40,15 +40,15 @@
 
 
 # virtual methods
-.method public createFromParcel(Landroid/os/Parcel;)Lcom/android/settings/BrightnessPreference$SavedState;
+.method public createFromParcel(Landroid/os/Parcel;)Lcom/android/settings_ex/BrightnessPreference$SavedState;
     .locals 1
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
     .line 696
-    new-instance v0, Lcom/android/settings/BrightnessPreference$SavedState;
+    new-instance v0, Lcom/android/settings_ex/BrightnessPreference$SavedState;
 
-    invoke-direct {v0, p1}, Lcom/android/settings/BrightnessPreference$SavedState;-><init>(Landroid/os/Parcel;)V
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/BrightnessPreference$SavedState;-><init>(Landroid/os/Parcel;)V
 
     return-object v0
 .end method
@@ -59,20 +59,20 @@
 
     .prologue
     .line 694
-    invoke-virtual {p0, p1}, Lcom/android/settings/BrightnessPreference$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/settings/BrightnessPreference$SavedState;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/BrightnessPreference$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/settings_ex/BrightnessPreference$SavedState;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public newArray(I)[Lcom/android/settings/BrightnessPreference$SavedState;
+.method public newArray(I)[Lcom/android/settings_ex/BrightnessPreference$SavedState;
     .locals 1
     .param p1, "size"    # I
 
     .prologue
     .line 699
-    new-array v0, p1, [Lcom/android/settings/BrightnessPreference$SavedState;
+    new-array v0, p1, [Lcom/android/settings_ex/BrightnessPreference$SavedState;
 
     return-object v0
 .end method
@@ -83,7 +83,7 @@
 
     .prologue
     .line 694
-    invoke-virtual {p0, p1}, Lcom/android/settings/BrightnessPreference$SavedState$1;->newArray(I)[Lcom/android/settings/BrightnessPreference$SavedState;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/BrightnessPreference$SavedState$1;->newArray(I)[Lcom/android/settings_ex/BrightnessPreference$SavedState;
 
     move-result-object v0
 

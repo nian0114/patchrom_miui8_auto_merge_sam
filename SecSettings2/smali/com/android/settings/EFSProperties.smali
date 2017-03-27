@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/EFSProperties;
+.class public Lcom/android/settings_ex/EFSProperties;
 .super Ljava/lang/Object;
 .source "EFSProperties.java"
 
@@ -6,8 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/EFSProperties$KeyguardProperties;,
-        Lcom/android/settings/EFSProperties$ODEProperties;
+        Lcom/android/settings_ex/EFSProperties$KeyguardProperties;,
+        Lcom/android/settings_ex/EFSProperties$ODEProperties;
     }
 .end annotation
 
@@ -82,7 +82,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/android/settings/EFSProperties;->STORAGE_TYPES:[Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/EFSProperties;->STORAGE_TYPES:[Ljava/lang/String;
 
     .line 45
     new-array v0, v7, [Ljava/lang/String;
@@ -103,12 +103,12 @@
 
     aput-object v1, v0, v6
 
-    sput-object v0, Lcom/android/settings/EFSProperties;->SCP_TYPES:[Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/EFSProperties;->SCP_TYPES:[Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static loadKeyguardConfig()Lcom/android/settings/EFSProperties$KeyguardProperties;
+.method public static loadKeyguardConfig()Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
     .locals 16
 
     .prologue
@@ -117,7 +117,7 @@
     .line 247
     const-string v13, "load Keyguard config"
 
-    invoke-static {v13}, Lcom/android/settings/EFSProperties;->log(Ljava/lang/String;)V
+    invoke-static {v13}, Lcom/android/settings_ex/EFSProperties;->log(Ljava/lang/String;)V
 
     .line 248
     new-instance v7, Ljava/io/File;
@@ -141,7 +141,7 @@
     .line 251
     const-string v13, "Keyguard config file does not exist"
 
-    invoke-static {v13}, Lcom/android/settings/EFSProperties;->log(Ljava/lang/String;)V
+    invoke-static {v13}, Lcom/android/settings_ex/EFSProperties;->log(Ljava/lang/String;)V
 
     move-object v6, v12
 
@@ -159,7 +159,7 @@
     const/4 v5, 0x0
 
     .line 258
-    .local v5, "keyguard":Lcom/android/settings/EFSProperties$KeyguardProperties;
+    .local v5, "keyguard":Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
     :try_start_0
     new-instance v4, Ljava/io/FileInputStream;
 
@@ -173,17 +173,17 @@
     .end local v3    # "fis":Ljava/io/FileInputStream;
     .local v4, "fis":Ljava/io/FileInputStream;
     :try_start_1
-    new-instance v6, Lcom/android/settings/EFSProperties$KeyguardProperties;
+    new-instance v6, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
 
-    invoke-direct {v6}, Lcom/android/settings/EFSProperties$KeyguardProperties;-><init>()V
+    invoke-direct {v6}, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;-><init>()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_b
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_9
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 261
-    .end local v5    # "keyguard":Lcom/android/settings/EFSProperties$KeyguardProperties;
-    .local v6, "keyguard":Lcom/android/settings/EFSProperties$KeyguardProperties;
+    .end local v5    # "keyguard":Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
+    .local v6, "keyguard":Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
     :try_start_2
     invoke-virtual {v4}, Ljava/io/FileInputStream;->read()I
 
@@ -203,7 +203,7 @@
     invoke-virtual {v4, v0, v13, v9}, Ljava/io/FileInputStream;->read([BII)I
 
     .line 265
-    iput-object v0, v6, Lcom/android/settings/EFSProperties$KeyguardProperties;->csName:[B
+    iput-object v0, v6, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->csName:[B
 
     .line 270
     invoke-virtual {v4}, Ljava/io/FileInputStream;->read()I
@@ -217,10 +217,10 @@
     .line 272
     new-array v13, v8, [B
 
-    iput-object v13, v6, Lcom/android/settings/EFSProperties$KeyguardProperties;->AID:[B
+    iput-object v13, v6, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->AID:[B
 
     .line 273
-    iget-object v13, v6, Lcom/android/settings/EFSProperties$KeyguardProperties;->AID:[B
+    iget-object v13, v6, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->AID:[B
 
     const/4 v14, 0x0
 
@@ -393,42 +393,42 @@
 
     .line 283
     .local v11, "storageType":I
-    iput v11, v6, Lcom/android/settings/EFSProperties$KeyguardProperties;->storageType:I
+    iput v11, v6, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->storageType:I
 
     .line 284
     invoke-virtual {v4}, Ljava/io/FileInputStream;->read()I
 
     move-result v13
 
-    iput v13, v6, Lcom/android/settings/EFSProperties$KeyguardProperties;->enabledSCP:I
+    iput v13, v6, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->enabledSCP:I
 
     .line 285
     invoke-virtual {v4}, Ljava/io/FileInputStream;->read()I
 
     move-result v13
 
-    iput v13, v6, Lcom/android/settings/EFSProperties$KeyguardProperties;->pinMinLength:I
+    iput v13, v6, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->pinMinLength:I
 
     .line 286
     invoke-virtual {v4}, Ljava/io/FileInputStream;->read()I
 
     move-result v13
 
-    iput v13, v6, Lcom/android/settings/EFSProperties$KeyguardProperties;->pinMaxLength:I
+    iput v13, v6, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->pinMaxLength:I
 
     .line 287
     invoke-virtual {v4}, Ljava/io/FileInputStream;->read()I
 
     move-result v13
 
-    iput v13, v6, Lcom/android/settings/EFSProperties$KeyguardProperties;->pukMinLength:I
+    iput v13, v6, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->pukMinLength:I
 
     .line 288
     invoke-virtual {v4}, Ljava/io/FileInputStream;->read()I
 
     move-result v13
 
-    iput v13, v6, Lcom/android/settings/EFSProperties$KeyguardProperties;->pukMaxLength:I
+    iput v13, v6, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->pukMaxLength:I
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_c
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_a
@@ -459,13 +459,13 @@
     .end local v0    # "csTemp":[B
     .end local v1    # "e":Ljava/io/IOException;
     .end local v4    # "fis":Ljava/io/FileInputStream;
-    .end local v6    # "keyguard":Lcom/android/settings/EFSProperties$KeyguardProperties;
+    .end local v6    # "keyguard":Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
     .end local v8    # "lengthAID":I
     .end local v9    # "lengthCSName":I
     .end local v10    # "readByteSize":I
     .end local v11    # "storageType":I
     .restart local v3    # "fis":Ljava/io/FileInputStream;
-    .restart local v5    # "keyguard":Lcom/android/settings/EFSProperties$KeyguardProperties;
+    .restart local v5    # "keyguard":Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
     :catch_4
     move-exception v1
 
@@ -475,7 +475,7 @@
     :try_start_a
     const-string v13, "loadKeyguardConfig : IOException"
 
-    invoke-static {v13}, Lcom/android/settings/EFSProperties;->log(Ljava/lang/String;)V
+    invoke-static {v13}, Lcom/android/settings_ex/EFSProperties;->log(Ljava/lang/String;)V
 
     .line 291
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
@@ -518,7 +518,7 @@
     :try_start_c
     const-string v13, "loadKeyguardConfig : Exception"
 
-    invoke-static {v13}, Lcom/android/settings/EFSProperties;->log(Ljava/lang/String;)V
+    invoke-static {v13}, Lcom/android/settings_ex/EFSProperties;->log(Ljava/lang/String;)V
 
     .line 295
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
@@ -596,16 +596,16 @@
     goto :goto_8
 
     .end local v3    # "fis":Ljava/io/FileInputStream;
-    .end local v5    # "keyguard":Lcom/android/settings/EFSProperties$KeyguardProperties;
+    .end local v5    # "keyguard":Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
     .restart local v4    # "fis":Ljava/io/FileInputStream;
-    .restart local v6    # "keyguard":Lcom/android/settings/EFSProperties$KeyguardProperties;
+    .restart local v6    # "keyguard":Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
     :catchall_2
     move-exception v12
 
     move-object v5, v6
 
-    .end local v6    # "keyguard":Lcom/android/settings/EFSProperties$KeyguardProperties;
-    .restart local v5    # "keyguard":Lcom/android/settings/EFSProperties$KeyguardProperties;
+    .end local v6    # "keyguard":Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
+    .restart local v5    # "keyguard":Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
     move-object v3, v4
 
     .end local v4    # "fis":Ljava/io/FileInputStream;
@@ -625,16 +625,16 @@
     goto :goto_6
 
     .end local v3    # "fis":Ljava/io/FileInputStream;
-    .end local v5    # "keyguard":Lcom/android/settings/EFSProperties$KeyguardProperties;
+    .end local v5    # "keyguard":Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
     .restart local v4    # "fis":Ljava/io/FileInputStream;
-    .restart local v6    # "keyguard":Lcom/android/settings/EFSProperties$KeyguardProperties;
+    .restart local v6    # "keyguard":Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
     :catch_a
     move-exception v1
 
     move-object v5, v6
 
-    .end local v6    # "keyguard":Lcom/android/settings/EFSProperties$KeyguardProperties;
-    .restart local v5    # "keyguard":Lcom/android/settings/EFSProperties$KeyguardProperties;
+    .end local v6    # "keyguard":Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
+    .restart local v5    # "keyguard":Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
     move-object v3, v4
 
     .end local v4    # "fis":Ljava/io/FileInputStream;
@@ -654,16 +654,16 @@
     goto :goto_4
 
     .end local v3    # "fis":Ljava/io/FileInputStream;
-    .end local v5    # "keyguard":Lcom/android/settings/EFSProperties$KeyguardProperties;
+    .end local v5    # "keyguard":Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
     .restart local v4    # "fis":Ljava/io/FileInputStream;
-    .restart local v6    # "keyguard":Lcom/android/settings/EFSProperties$KeyguardProperties;
+    .restart local v6    # "keyguard":Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
     :catch_c
     move-exception v1
 
     move-object v5, v6
 
-    .end local v6    # "keyguard":Lcom/android/settings/EFSProperties$KeyguardProperties;
-    .restart local v5    # "keyguard":Lcom/android/settings/EFSProperties$KeyguardProperties;
+    .end local v6    # "keyguard":Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
+    .restart local v5    # "keyguard":Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
     move-object v3, v4
 
     .end local v4    # "fis":Ljava/io/FileInputStream;
@@ -671,14 +671,14 @@
     goto :goto_4
 .end method
 
-.method public static loadODEConfig()Lcom/android/settings/EFSProperties$ODEProperties;
+.method public static loadODEConfig()Lcom/android/settings_ex/EFSProperties$ODEProperties;
     .locals 15
 
     .prologue
     .line 48
     const-string v12, "load ODE config"
 
-    invoke-static {v12}, Lcom/android/settings/EFSProperties;->log(Ljava/lang/String;)V
+    invoke-static {v12}, Lcom/android/settings_ex/EFSProperties;->log(Ljava/lang/String;)V
 
     .line 49
     new-instance v10, Ljava/io/File;
@@ -702,12 +702,12 @@
     .line 52
     const-string v12, "ODE config file does not exist"
 
-    invoke-static {v12}, Lcom/android/settings/EFSProperties;->log(Ljava/lang/String;)V
+    invoke-static {v12}, Lcom/android/settings_ex/EFSProperties;->log(Ljava/lang/String;)V
 
     .line 53
-    new-instance v8, Lcom/android/settings/EFSProperties$ODEProperties;
+    new-instance v8, Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
-    invoke-direct {v8}, Lcom/android/settings/EFSProperties$ODEProperties;-><init>()V
+    invoke-direct {v8}, Lcom/android/settings_ex/EFSProperties$ODEProperties;-><init>()V
 
     .line 122
     :cond_0
@@ -719,7 +719,7 @@
     const/4 v8, 0x0
 
     .line 57
-    .local v8, "ode":Lcom/android/settings/EFSProperties$ODEProperties;
+    .local v8, "ode":Lcom/android/settings_ex/EFSProperties$ODEProperties;
     const/4 v2, 0x0
 
     .line 59
@@ -735,21 +735,21 @@
     .end local v2    # "fis":Ljava/io/FileInputStream;
     .local v3, "fis":Ljava/io/FileInputStream;
     :try_start_1
-    new-instance v9, Lcom/android/settings/EFSProperties$ODEProperties;
+    new-instance v9, Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
-    invoke-direct {v9}, Lcom/android/settings/EFSProperties$ODEProperties;-><init>()V
+    invoke-direct {v9}, Lcom/android/settings_ex/EFSProperties$ODEProperties;-><init>()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
 
     .line 62
-    .end local v8    # "ode":Lcom/android/settings/EFSProperties$ODEProperties;
-    .local v9, "ode":Lcom/android/settings/EFSProperties$ODEProperties;
+    .end local v8    # "ode":Lcom/android/settings_ex/EFSProperties$ODEProperties;
+    .local v9, "ode":Lcom/android/settings_ex/EFSProperties$ODEProperties;
     :try_start_2
     invoke-virtual {v3}, Ljava/io/FileInputStream;->read()I
 
     move-result v12
 
-    iput v12, v9, Lcom/android/settings/EFSProperties$ODEProperties;->enabledUCSInODE:I
+    iput v12, v9, Lcom/android/settings_ex/EFSProperties$ODEProperties;->enabledUCSInODE:I
 
     .line 63
     invoke-virtual {v3}, Ljava/io/FileInputStream;->read()I
@@ -763,10 +763,10 @@
     .line 65
     new-array v12, v6, [B
 
-    iput-object v12, v9, Lcom/android/settings/EFSProperties$ODEProperties;->AID:[B
+    iput-object v12, v9, Lcom/android/settings_ex/EFSProperties$ODEProperties;->AID:[B
 
     .line 66
-    iget-object v12, v9, Lcom/android/settings/EFSProperties$ODEProperties;->AID:[B
+    iget-object v12, v9, Lcom/android/settings_ex/EFSProperties$ODEProperties;->AID:[B
 
     const/4 v13, 0x0
 
@@ -818,63 +818,63 @@
 
     move-result v12
 
-    iput v12, v9, Lcom/android/settings/EFSProperties$ODEProperties;->storageType:I
+    iput v12, v9, Lcom/android/settings_ex/EFSProperties$ODEProperties;->storageType:I
 
     .line 72
     invoke-virtual {v3}, Ljava/io/FileInputStream;->read()I
 
     move-result v12
 
-    iput v12, v9, Lcom/android/settings/EFSProperties$ODEProperties;->enabledSCP:I
+    iput v12, v9, Lcom/android/settings_ex/EFSProperties$ODEProperties;->enabledSCP:I
 
     .line 73
     invoke-virtual {v3}, Ljava/io/FileInputStream;->read()I
 
     move-result v12
 
-    iput v12, v9, Lcom/android/settings/EFSProperties$ODEProperties;->enabledWrap:I
+    iput v12, v9, Lcom/android/settings_ex/EFSProperties$ODEProperties;->enabledWrap:I
 
     .line 74
     invoke-virtual {v3}, Ljava/io/FileInputStream;->read()I
 
     move-result v12
 
-    iput v12, v9, Lcom/android/settings/EFSProperties$ODEProperties;->pinMinLength:I
+    iput v12, v9, Lcom/android/settings_ex/EFSProperties$ODEProperties;->pinMinLength:I
 
     .line 75
     invoke-virtual {v3}, Ljava/io/FileInputStream;->read()I
 
     move-result v12
 
-    iput v12, v9, Lcom/android/settings/EFSProperties$ODEProperties;->pinMaxLength:I
+    iput v12, v9, Lcom/android/settings_ex/EFSProperties$ODEProperties;->pinMaxLength:I
 
     .line 76
     invoke-virtual {v3}, Ljava/io/FileInputStream;->read()I
 
     move-result v12
 
-    iput v12, v9, Lcom/android/settings/EFSProperties$ODEProperties;->authMode:I
+    iput v12, v9, Lcom/android/settings_ex/EFSProperties$ODEProperties;->authMode:I
 
     .line 77
     invoke-virtual {v3}, Ljava/io/FileInputStream;->read()I
 
     move-result v12
 
-    iput v12, v9, Lcom/android/settings/EFSProperties$ODEProperties;->authMaxCnt:I
+    iput v12, v9, Lcom/android/settings_ex/EFSProperties$ODEProperties;->authMaxCnt:I
 
     .line 78
     invoke-virtual {v3}, Ljava/io/FileInputStream;->read()I
 
     move-result v12
 
-    iput v12, v9, Lcom/android/settings/EFSProperties$ODEProperties;->pukMinLength:I
+    iput v12, v9, Lcom/android/settings_ex/EFSProperties$ODEProperties;->pukMinLength:I
 
     .line 79
     invoke-virtual {v3}, Ljava/io/FileInputStream;->read()I
 
     move-result v12
 
-    iput v12, v9, Lcom/android/settings/EFSProperties$ODEProperties;->pukMaxLength:I
+    iput v12, v9, Lcom/android/settings_ex/EFSProperties$ODEProperties;->pukMaxLength:I
 
     .line 81
     invoke-virtual {v3}, Ljava/io/FileInputStream;->read()I
@@ -888,10 +888,10 @@
     .line 83
     new-array v12, v7, [B
 
-    iput-object v12, v9, Lcom/android/settings/EFSProperties$ODEProperties;->csName:[B
+    iput-object v12, v9, Lcom/android/settings_ex/EFSProperties$ODEProperties;->csName:[B
 
     .line 84
-    iget-object v12, v9, Lcom/android/settings/EFSProperties$ODEProperties;->csName:[B
+    iget-object v12, v9, Lcom/android/settings_ex/EFSProperties$ODEProperties;->csName:[B
 
     const/4 v13, 0x0
 
@@ -943,14 +943,14 @@
 
     move-result v12
 
-    iput v12, v9, Lcom/android/settings/EFSProperties$ODEProperties;->CertAdminID:I
+    iput v12, v9, Lcom/android/settings_ex/EFSProperties$ODEProperties;->CertAdminID:I
 
     .line 91
     invoke-virtual {v3}, Ljava/io/FileInputStream;->read()I
 
     move-result v12
 
-    iput v12, v9, Lcom/android/settings/EFSProperties$ODEProperties;->CertUserID:I
+    iput v12, v9, Lcom/android/settings_ex/EFSProperties$ODEProperties;->CertUserID:I
 
     .line 92
     invoke-virtual {v3}, Ljava/io/FileInputStream;->read()I
@@ -964,10 +964,10 @@
     .line 94
     new-array v12, v4, [B
 
-    iput-object v12, v9, Lcom/android/settings/EFSProperties$ODEProperties;->CertAlias:[B
+    iput-object v12, v9, Lcom/android/settings_ex/EFSProperties$ODEProperties;->CertAlias:[B
 
     .line 95
-    iget-object v12, v9, Lcom/android/settings/EFSProperties$ODEProperties;->CertAlias:[B
+    iget-object v12, v9, Lcom/android/settings_ex/EFSProperties$ODEProperties;->CertAlias:[B
 
     const/4 v13, 0x0
 
@@ -1026,10 +1026,10 @@
     .line 102
     new-array v12, v5, [B
 
-    iput-object v12, v9, Lcom/android/settings/EFSProperties$ODEProperties;->CertLocation:[B
+    iput-object v12, v9, Lcom/android/settings_ex/EFSProperties$ODEProperties;->CertLocation:[B
 
     .line 103
-    iget-object v12, v9, Lcom/android/settings/EFSProperties$ODEProperties;->CertLocation:[B
+    iget-object v12, v9, Lcom/android/settings_ex/EFSProperties$ODEProperties;->CertLocation:[B
 
     const/4 v13, 0x0
 
@@ -1089,8 +1089,8 @@
     .end local v5    # "lenCertLocation":I
     .end local v6    # "lengthAID":I
     .end local v7    # "lengthCsName":I
-    .end local v9    # "ode":Lcom/android/settings/EFSProperties$ODEProperties;
-    .restart local v8    # "ode":Lcom/android/settings/EFSProperties$ODEProperties;
+    .end local v9    # "ode":Lcom/android/settings_ex/EFSProperties$ODEProperties;
+    .restart local v8    # "ode":Lcom/android/settings_ex/EFSProperties$ODEProperties;
     :goto_1
     if-eqz v2, :cond_0
 
@@ -1141,9 +1141,9 @@
     goto :goto_2
 
     .end local v2    # "fis":Ljava/io/FileInputStream;
-    .end local v8    # "ode":Lcom/android/settings/EFSProperties$ODEProperties;
+    .end local v8    # "ode":Lcom/android/settings_ex/EFSProperties$ODEProperties;
     .restart local v3    # "fis":Ljava/io/FileInputStream;
-    .restart local v9    # "ode":Lcom/android/settings/EFSProperties$ODEProperties;
+    .restart local v9    # "ode":Lcom/android/settings_ex/EFSProperties$ODEProperties;
     :catch_3
     move-exception v0
 
@@ -1153,8 +1153,8 @@
     .restart local v2    # "fis":Ljava/io/FileInputStream;
     move-object v8, v9
 
-    .end local v9    # "ode":Lcom/android/settings/EFSProperties$ODEProperties;
-    .restart local v8    # "ode":Lcom/android/settings/EFSProperties$ODEProperties;
+    .end local v9    # "ode":Lcom/android/settings_ex/EFSProperties$ODEProperties;
+    .restart local v8    # "ode":Lcom/android/settings_ex/EFSProperties$ODEProperties;
     goto :goto_2
 .end method
 

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wifi/WifiEnabler$SwitchHandler;
+.class Lcom/android/settings_ex/wifi/WifiEnabler$SwitchHandler;
 .super Landroid/os/Handler;
 .source "WifiEnabler.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiEnabler;
+    value = Lcom/android/settings_ex/wifi/WifiEnabler;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiEnabler;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiEnabler;
 
 
 # virtual methods
@@ -25,10 +25,10 @@
 
     .prologue
     .line 511
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiEnabler$SwitchHandler;->this$0:Lcom/android/settings/wifi/WifiEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiEnabler$SwitchHandler;->this$0:Lcom/android/settings_ex/wifi/WifiEnabler;
 
-    # invokes: Lcom/android/settings/wifi/WifiEnabler;->isWifiBlocked()Z
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiEnabler;->access$600(Lcom/android/settings/wifi/WifiEnabler;)Z
+    # invokes: Lcom/android/settings_ex/wifi/WifiEnabler;->isWifiBlocked()Z
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiEnabler;->access$600(Lcom/android/settings_ex/wifi/WifiEnabler;)Z
 
     move-result v0
 
@@ -52,23 +52,23 @@
 
     .line 517
     :pswitch_0
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiEnabler$SwitchHandler;->this$0:Lcom/android/settings/wifi/WifiEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiEnabler$SwitchHandler;->this$0:Lcom/android/settings_ex/wifi/WifiEnabler;
 
     const/4 v1, 0x1
 
-    # invokes: Lcom/android/settings/wifi/WifiEnabler;->setSwitchChecked(Z)V
-    invoke-static {v0, v1}, Lcom/android/settings/wifi/WifiEnabler;->access$700(Lcom/android/settings/wifi/WifiEnabler;Z)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiEnabler;->setSwitchChecked(Z)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/wifi/WifiEnabler;->access$700(Lcom/android/settings_ex/wifi/WifiEnabler;Z)V
 
     goto :goto_1
 
     .line 520
     :pswitch_1
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiEnabler$SwitchHandler;->this$0:Lcom/android/settings/wifi/WifiEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiEnabler$SwitchHandler;->this$0:Lcom/android/settings_ex/wifi/WifiEnabler;
 
     const/4 v1, 0x0
 
-    # invokes: Lcom/android/settings/wifi/WifiEnabler;->setSwitchChecked(Z)V
-    invoke-static {v0, v1}, Lcom/android/settings/wifi/WifiEnabler;->access$700(Lcom/android/settings/wifi/WifiEnabler;Z)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiEnabler;->setSwitchChecked(Z)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/wifi/WifiEnabler;->access$700(Lcom/android/settings_ex/wifi/WifiEnabler;Z)V
 
     goto :goto_1
 

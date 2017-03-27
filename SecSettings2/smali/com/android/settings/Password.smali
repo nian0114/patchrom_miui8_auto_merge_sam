@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/Password;
+.class public Lcom/android/settings_ex/Password;
 .super Landroid/app/Activity;
 .source "Password.java"
 
@@ -31,13 +31,13 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/Password;)Landroid/widget/TextView;
+.method static synthetic access$000(Lcom/android/settings_ex/Password;)Landroid/widget/TextView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/Password;
+    .param p0, "x0"    # Lcom/android/settings_ex/Password;
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/android/settings/Password;->mDigits:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/Password;->mDigits:Landroid/widget/TextView;
 
     return-object v0
 .end method
@@ -52,7 +52,7 @@
 
     if-eq p1, v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/settings/Password;->mDigits:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/Password;->mDigits:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -84,7 +84,7 @@
 
     .line 223
     .local v0, "event":Landroid/view/KeyEvent;
-    iget-object v1, p0, Lcom/android/settings/Password;->mDigits:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/Password;->mDigits:Landroid/widget/TextView;
 
     invoke-virtual {v1, p1, v0}, Landroid/widget/TextView;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
@@ -101,7 +101,7 @@
     const/4 v0, 0x0
 
     .line 243
-    invoke-direct {p0, p1}, Lcom/android/settings/Password;->reasonable(Ljava/lang/String;)Z
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/Password;->reasonable(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -119,7 +119,7 @@
     .line 246
     const-string v1, "****"
 
-    iget-object v2, p0, Lcom/android/settings/Password;->mPassword:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/Password;->mPassword:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -128,7 +128,7 @@
     if-eqz v1, :cond_1
 
     .line 247
-    invoke-virtual {p0}, Lcom/android/settings/Password;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Password;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -138,7 +138,7 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v1}, Lcom/android/settings/Password;->showAlert(Ljava/lang/String;)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/Password;->showAlert(Ljava/lang/String;)V
 
     .line 264
     :cond_0
@@ -147,7 +147,7 @@
 
     .line 249
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/Password;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Password;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -155,7 +155,7 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v1}, Lcom/android/settings/Password;->showAlert(Ljava/lang/String;)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/Password;->showAlert(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -163,7 +163,7 @@
     :cond_2
     const-string v1, "****"
 
-    iget-object v2, p0, Lcom/android/settings/Password;->mPassword:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/Password;->mPassword:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -171,7 +171,7 @@
 
     if-nez v1, :cond_3
 
-    iget-object v1, p0, Lcom/android/settings/Password;->mPassword:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/Password;->mPassword:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -187,7 +187,7 @@
 
     .line 260
     :cond_4
-    invoke-virtual {p0}, Lcom/android/settings/Password;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Password;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -195,7 +195,7 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v1}, Lcom/android/settings/Password;->showAlert(Ljava/lang/String;)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/Password;->showAlert(Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -205,7 +205,7 @@
 
     .prologue
     .line 285
-    iget-object v2, p0, Lcom/android/settings/Password;->mDigits:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/Password;->mDigits:Landroid/widget/TextView;
 
     invoke-virtual {v2}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -217,7 +217,7 @@
 
     .line 286
     .local v1, "pwd":Ljava/lang/String;
-    invoke-direct {p0, v1}, Lcom/android/settings/Password;->match(Ljava/lang/String;)Z
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/Password;->match(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -237,10 +237,10 @@
     .line 289
     const/4 v2, -0x1
 
-    invoke-virtual {p0, v2, v0}, Lcom/android/settings/Password;->setResult(ILandroid/content/Intent;)V
+    invoke-virtual {p0, v2, v0}, Lcom/android/settings_ex/Password;->setResult(ILandroid/content/Intent;)V
 
     .line 290
-    invoke-virtual {p0}, Lcom/android/settings/Password;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/Password;->finish()V
 
     .line 292
     .end local v0    # "intent":Landroid/content/Intent;
@@ -267,7 +267,7 @@
     .line 297
     const-string v1, "****"
 
-    iget-object v2, p0, Lcom/android/settings/Password;->mPassword:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/Password;->mPassword:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -276,7 +276,7 @@
     if-eqz v1, :cond_0
 
     .line 298
-    invoke-virtual {p0}, Lcom/android/settings/Password;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Password;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -286,7 +286,7 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v1}, Lcom/android/settings/Password;->showAlert(Ljava/lang/String;)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/Password;->showAlert(Ljava/lang/String;)V
 
     .line 311
     :goto_0
@@ -294,7 +294,7 @@
 
     .line 300
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/Password;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Password;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -302,7 +302,7 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v1}, Lcom/android/settings/Password;->showAlert(Ljava/lang/String;)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/Password;->showAlert(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -328,7 +328,7 @@
     :cond_2
     const-string v1, "****"
 
-    iget-object v2, p0, Lcom/android/settings/Password;->mPassword:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/Password;->mPassword:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -337,7 +337,7 @@
     if-eqz v1, :cond_3
 
     .line 305
-    invoke-virtual {p0}, Lcom/android/settings/Password;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Password;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -347,13 +347,13 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v1}, Lcom/android/settings/Password;->showAlert(Ljava/lang/String;)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/Password;->showAlert(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 307
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/Password;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Password;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -361,7 +361,7 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v1}, Lcom/android/settings/Password;->showAlert(Ljava/lang/String;)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/Password;->showAlert(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -381,7 +381,7 @@
     .line 136
     const v1, 0x7f0d0208
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/Password;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/Password;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -395,7 +395,7 @@
     .line 139
     const v1, 0x7f0d0209
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/Password;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/Password;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -404,7 +404,7 @@
     .line 140
     const v1, 0x7f0d020a
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/Password;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/Password;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -413,7 +413,7 @@
     .line 141
     const v1, 0x7f0d020b
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/Password;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/Password;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -422,7 +422,7 @@
     .line 142
     const v1, 0x7f0d020c
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/Password;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/Password;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -431,7 +431,7 @@
     .line 143
     const v1, 0x7f0d020d
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/Password;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/Password;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -440,7 +440,7 @@
     .line 144
     const v1, 0x7f0d020e
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/Password;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/Password;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -449,7 +449,7 @@
     .line 145
     const v1, 0x7f0d020f
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/Password;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/Password;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -458,7 +458,7 @@
     .line 146
     const v1, 0x7f0d0210
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/Password;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/Password;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -467,7 +467,7 @@
     .line 147
     const v1, 0x7f0d0212
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/Password;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/Password;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -476,21 +476,21 @@
     .line 148
     const v1, 0x7f0d00f8
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/Password;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/Password;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 149
-    invoke-virtual {p0, v2}, Lcom/android/settings/Password;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/Password;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 150
-    invoke-virtual {p0, v2}, Lcom/android/settings/Password;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/Password;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -499,7 +499,7 @@
     .line 151
     const v1, 0x7f0d0211
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/Password;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/Password;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -519,7 +519,7 @@
 
     .prologue
     .line 271
-    iget-object v1, p0, Lcom/android/settings/Password;->mDigits:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/Password;->mDigits:Landroid/widget/TextView;
 
     const-string v2, ""
 
@@ -535,7 +535,7 @@
     invoke-virtual {v0, p1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     .line 274
-    invoke-virtual {p0}, Lcom/android/settings/Password;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Password;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -545,9 +545,9 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/android/settings/Password$2;
+    new-instance v2, Lcom/android/settings_ex/Password$2;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/Password$2;-><init>(Lcom/android/settings/Password;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/Password$2;-><init>(Lcom/android/settings_ex/Password;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -609,7 +609,7 @@
     if-ne v1, v3, :cond_0
 
     .line 233
-    invoke-direct {p0}, Lcom/android/settings/Password;->onPasswordConfirm()V
+    invoke-direct {p0}, Lcom/android/settings_ex/Password;->onPasswordConfirm()V
 
     .line 237
     :goto_0
@@ -643,7 +643,7 @@
     :sswitch_0
     const/16 v0, 0x8
 
-    invoke-direct {p0, v0}, Lcom/android/settings/Password;->keyPressed(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/Password;->keyPressed(I)V
 
     goto :goto_0
 
@@ -651,7 +651,7 @@
     :sswitch_1
     const/16 v0, 0x9
 
-    invoke-direct {p0, v0}, Lcom/android/settings/Password;->keyPressed(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/Password;->keyPressed(I)V
 
     goto :goto_0
 
@@ -659,7 +659,7 @@
     :sswitch_2
     const/16 v0, 0xa
 
-    invoke-direct {p0, v0}, Lcom/android/settings/Password;->keyPressed(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/Password;->keyPressed(I)V
 
     goto :goto_0
 
@@ -667,7 +667,7 @@
     :sswitch_3
     const/16 v0, 0xb
 
-    invoke-direct {p0, v0}, Lcom/android/settings/Password;->keyPressed(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/Password;->keyPressed(I)V
 
     goto :goto_0
 
@@ -675,7 +675,7 @@
     :sswitch_4
     const/16 v0, 0xc
 
-    invoke-direct {p0, v0}, Lcom/android/settings/Password;->keyPressed(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/Password;->keyPressed(I)V
 
     goto :goto_0
 
@@ -683,7 +683,7 @@
     :sswitch_5
     const/16 v0, 0xd
 
-    invoke-direct {p0, v0}, Lcom/android/settings/Password;->keyPressed(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/Password;->keyPressed(I)V
 
     goto :goto_0
 
@@ -691,7 +691,7 @@
     :sswitch_6
     const/16 v0, 0xe
 
-    invoke-direct {p0, v0}, Lcom/android/settings/Password;->keyPressed(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/Password;->keyPressed(I)V
 
     goto :goto_0
 
@@ -699,7 +699,7 @@
     :sswitch_7
     const/16 v0, 0xf
 
-    invoke-direct {p0, v0}, Lcom/android/settings/Password;->keyPressed(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/Password;->keyPressed(I)V
 
     goto :goto_0
 
@@ -707,7 +707,7 @@
     :sswitch_8
     const/16 v0, 0x10
 
-    invoke-direct {p0, v0}, Lcom/android/settings/Password;->keyPressed(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/Password;->keyPressed(I)V
 
     goto :goto_0
 
@@ -715,7 +715,7 @@
     :sswitch_9
     const/4 v0, 0x7
 
-    invoke-direct {p0, v0}, Lcom/android/settings/Password;->keyPressed(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/Password;->keyPressed(I)V
 
     goto :goto_0
 
@@ -723,19 +723,19 @@
     :sswitch_a
     const/16 v0, 0x43
 
-    invoke-direct {p0, v0}, Lcom/android/settings/Password;->keyPressed(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/Password;->keyPressed(I)V
 
     goto :goto_0
 
     .line 205
     :sswitch_b
-    invoke-direct {p0}, Lcom/android/settings/Password;->onPasswordConfirm()V
+    invoke-direct {p0}, Lcom/android/settings_ex/Password;->onPasswordConfirm()V
 
     goto :goto_0
 
     .line 210
     :sswitch_c
-    invoke-virtual {p0}, Lcom/android/settings/Password;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/Password;->finish()V
 
     goto :goto_0
 
@@ -769,11 +769,11 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 132
-    invoke-virtual {p0}, Lcom/android/settings/Password;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Password;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/android/settings/Utils;->applyLandscapeFullScreen(Landroid/content/Context;Landroid/view/Window;)V
+    invoke-static {p0, v0}, Lcom/android/settings_ex/Utils;->applyLandscapeFullScreen(Landroid/content/Context;Landroid/view/Window;)V
 
     .line 133
     return-void
@@ -792,10 +792,10 @@
     .line 74
     const v2, 0x7f0400ba
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/Password;->setContentView(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/Password;->setContentView(I)V
 
     .line 75
-    invoke-virtual {p0}, Lcom/android/settings/Password;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Password;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -814,7 +814,7 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/Password;->mTitle:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/Password;->mTitle:Ljava/lang/String;
 
     .line 78
     const-string v2, ".subject"
@@ -823,7 +823,7 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/Password;->mSubject:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/Password;->mSubject:Ljava/lang/String;
 
     .line 79
     const-string v2, ".password"
@@ -832,7 +832,7 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/Password;->mPassword:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/Password;->mPassword:Ljava/lang/String;
 
     .line 80
     const-string v2, "FromOtherSecurity"
@@ -850,42 +850,42 @@
     if-eqz v2, :cond_0
 
     .line 81
-    iget-object v2, p0, Lcom/android/settings/Password;->mTitle:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/Password;->mTitle:Ljava/lang/String;
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/Password;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/Password;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 83
     :cond_0
     const v2, 0x7f0d0102
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/Password;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/Password;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/TextView;
 
-    iput-object v2, p0, Lcom/android/settings/Password;->mHeadrText:Landroid/widget/TextView;
+    iput-object v2, p0, Lcom/android/settings_ex/Password;->mHeadrText:Landroid/widget/TextView;
 
     .line 84
-    iget-object v2, p0, Lcom/android/settings/Password;->mHeadrText:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/Password;->mHeadrText:Landroid/widget/TextView;
 
-    iget-object v3, p0, Lcom/android/settings/Password;->mSubject:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/Password;->mSubject:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 91
     const v2, 0x7f0d0205
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/Password;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/Password;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/TextView;
 
-    iput-object v2, p0, Lcom/android/settings/Password;->mDigits:Landroid/widget/TextView;
+    iput-object v2, p0, Lcom/android/settings_ex/Password;->mDigits:Landroid/widget/TextView;
 
     .line 92
-    iget-object v2, p0, Lcom/android/settings/Password;->mDigits:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/Password;->mDigits:Landroid/widget/TextView;
 
     invoke-static {}, Landroid/text/method/DialerKeyListener;->getInstance()Landroid/text/method/DialerKeyListener;
 
@@ -894,33 +894,33 @@
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setKeyListener(Landroid/text/method/KeyListener;)V
 
     .line 93
-    iget-object v2, p0, Lcom/android/settings/Password;->mDigits:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/Password;->mDigits:Landroid/widget/TextView;
 
     invoke-virtual {v2, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 94
-    iget-object v2, p0, Lcom/android/settings/Password;->mDigits:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/Password;->mDigits:Landroid/widget/TextView;
 
-    new-instance v3, Lcom/android/settings/Password$1;
+    new-instance v3, Lcom/android/settings_ex/Password$1;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/Password$1;-><init>(Lcom/android/settings/Password;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/Password$1;-><init>(Lcom/android/settings_ex/Password;)V
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
     .line 108
-    iget-object v2, p0, Lcom/android/settings/Password;->mDigits:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/Password;->mDigits:Landroid/widget/TextView;
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setInputType(I)V
 
     .line 109
-    iget-object v2, p0, Lcom/android/settings/Password;->mDigits:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/Password;->mDigits:Landroid/widget/TextView;
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setLongClickable(Z)V
 
     .line 113
     const v2, 0x7f0d0208
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/Password;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/Password;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -929,7 +929,7 @@
     if-eqz v1, :cond_1
 
     .line 115
-    invoke-direct {p0}, Lcom/android/settings/Password;->setupKeypad()V
+    invoke-direct {p0}, Lcom/android/settings_ex/Password;->setupKeypad()V
 
     .line 121
     :cond_1
@@ -956,7 +956,7 @@
 
     .line 321
     :pswitch_0
-    iget-object v0, p0, Lcom/android/settings/Password;->mDigits:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/Password;->mDigits:Landroid/widget/TextView;
 
     const-string v1, ""
 
@@ -981,11 +981,11 @@
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
     .line 126
-    invoke-virtual {p0}, Lcom/android/settings/Password;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Password;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/android/settings/Utils;->applyLandscapeFullScreen(Landroid/content/Context;Landroid/view/Window;)V
+    invoke-static {p0, v0}, Lcom/android/settings_ex/Utils;->applyLandscapeFullScreen(Landroid/content/Context;Landroid/view/Window;)V
 
     .line 127
     return-void

@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "PackageSettingActivity.java"
 
 # interfaces
@@ -11,9 +11,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;,
-        Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;,
-        Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;
+        Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;,
+        Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;,
+        Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;
     }
 .end annotation
 
@@ -33,7 +33,7 @@
 
 .field handlerThread:Landroid/os/HandlerThread;
 
-.field private mDataBaseHelper:Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;
+.field private mDataBaseHelper:Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;
 
 .field private operatorChoose:Landroid/preference/ListPreference;
 
@@ -60,13 +60,13 @@
     .line 56
     const-string v0, "settings/PackageSettings"
 
-    sput-object v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     .line 92
-    sput v1, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sput v1, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     .line 93
-    sput v1, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->subId:I
+    sput v1, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->subId:I
 
     return-void
 .end method
@@ -76,12 +76,12 @@
 
     .prologue
     .line 54
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 105
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->restrictDataChecked:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->restrictDataChecked:Z
 
     .line 835
     new-instance v0, Landroid/os/HandlerThread;
@@ -90,57 +90,57 @@
 
     invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->handlerThread:Landroid/os/HandlerThread;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->handlerThread:Landroid/os/HandlerThread;
 
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;)Ljava/lang/String;
+.method static synthetic access$100(Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;
 
     .prologue
     .line 54
-    invoke-direct {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getCommand()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getCommand()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;)Ljava/lang/String;
+.method static synthetic access$200(Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;
 
     .prologue
     .line 54
-    invoke-direct {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getKeyS()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getKeyS()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;)Ljava/lang/String;
+.method static synthetic access$300(Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;
 
     .prologue
     .line 54
-    invoke-direct {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getKeyE()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getKeyE()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;)Ljava/lang/String;
+.method static synthetic access$400(Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;
 
     .prologue
     .line 54
-    invoke-direct {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getKeyT()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getKeyT()Ljava/lang/String;
 
     move-result-object v0
 
@@ -157,7 +157,7 @@
     .line 782
     .local v0, "costType":I
     :try_start_0
-    iget-object v3, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v3}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -173,7 +173,7 @@
 
     .line 787
     :goto_0
-    sget-object v3, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -196,21 +196,21 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 788
-    iget-object v3, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->mDataBaseHelper:Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;
+    iget-object v3, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->mDataBaseHelper:Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;
 
-    iget-object v4, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v4}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v5}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v6}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -234,13 +234,13 @@
 
     move-result-object v7
 
-    invoke-virtual {v3, v4, v5, v6, v7}, Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;->getQueryCommand(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v3, v4, v5, v6, v7}, Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;->getQueryCommand(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 789
     .local v2, "s":Ljava/lang/String;
-    sget-object v3, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -275,7 +275,7 @@
     const/4 v0, 0x0
 
     .line 785
-    sget-object v3, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     const-string v4, "NumberFormatException()"
 
@@ -294,7 +294,7 @@
     .line 809
     .local v0, "costType":I
     :try_start_0
-    iget-object v3, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v3}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -310,7 +310,7 @@
 
     .line 814
     :goto_0
-    sget-object v3, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -333,21 +333,21 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 816
-    iget-object v3, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->mDataBaseHelper:Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;
+    iget-object v3, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->mDataBaseHelper:Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;
 
-    iget-object v4, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v4}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v5}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v6}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -371,13 +371,13 @@
 
     move-result-object v7
 
-    invoke-virtual {v3, v4, v5, v6, v7}, Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;->getQueryKeyEnd(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v3, v4, v5, v6, v7}, Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;->getQueryKeyEnd(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 817
     .local v2, "s":Ljava/lang/String;
-    sget-object v3, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -412,7 +412,7 @@
     const/4 v0, 0x0
 
     .line 812
-    sget-object v3, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     const-string v4, "NumberFormatException()"
 
@@ -431,7 +431,7 @@
     .line 795
     .local v0, "costType":I
     :try_start_0
-    iget-object v3, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v3}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -447,7 +447,7 @@
 
     .line 800
     :goto_0
-    sget-object v3, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -470,21 +470,21 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 802
-    iget-object v3, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->mDataBaseHelper:Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;
+    iget-object v3, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->mDataBaseHelper:Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;
 
-    iget-object v4, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v4}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v5}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v6}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -508,13 +508,13 @@
 
     move-result-object v7
 
-    invoke-virtual {v3, v4, v5, v6, v7}, Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;->getQueryKeyStart(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v3, v4, v5, v6, v7}, Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;->getQueryKeyStart(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 803
     .local v2, "s":Ljava/lang/String;
-    sget-object v3, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -549,7 +549,7 @@
     const/4 v0, 0x0
 
     .line 798
-    sget-object v3, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     const-string v4, "NumberFormatException()"
 
@@ -568,7 +568,7 @@
     .line 823
     .local v0, "costType":I
     :try_start_0
-    iget-object v3, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v3}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -584,7 +584,7 @@
 
     .line 828
     :goto_0
-    sget-object v3, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -611,21 +611,21 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v4, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->mDataBaseHelper:Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;
+    iget-object v4, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->mDataBaseHelper:Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;
 
-    iget-object v5, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v5}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v6}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v7, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v7}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -649,7 +649,7 @@
 
     move-result-object v8
 
-    invoke-virtual {v4, v5, v6, v7, v8}, Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;->getQueryKeyType(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v4, v5, v6, v7, v8}, Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;->getQueryKeyType(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v4
 
@@ -669,7 +669,7 @@
 
     .line 831
     .local v2, "s":Ljava/lang/String;
-    sget-object v3, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -704,7 +704,7 @@
     const/4 v0, 0x0
 
     .line 826
-    sget-object v3, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     const-string v4, "NumberFormatException()"
 
@@ -719,18 +719,18 @@
 
     .prologue
     .line 250
-    sget-object v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     const-string v1, "---->initSummary<-----"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 251
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v0}, Landroid/preference/ListPreference;->getEntry()Ljava/lang/CharSequence;
 
@@ -739,9 +739,9 @@
     if-eqz v0, :cond_0
 
     .line 252
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getEntry()Ljava/lang/CharSequence;
 
@@ -751,11 +751,11 @@
 
     .line 254
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v0}, Landroid/preference/ListPreference;->getEntry()Ljava/lang/CharSequence;
 
@@ -764,9 +764,9 @@
     if-eqz v0, :cond_1
 
     .line 255
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getEntry()Ljava/lang/CharSequence;
 
@@ -776,11 +776,11 @@
 
     .line 257
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v0}, Landroid/preference/ListPreference;->getEntry()Ljava/lang/CharSequence;
 
@@ -789,9 +789,9 @@
     if-eqz v0, :cond_2
 
     .line 258
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getEntry()Ljava/lang/CharSequence;
 
@@ -801,11 +801,11 @@
 
     .line 260
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v0}, Landroid/preference/ListPreference;->getEntry()Ljava/lang/CharSequence;
 
@@ -814,9 +814,9 @@
     if-eqz v0, :cond_3
 
     .line 261
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getEntry()Ljava/lang/CharSequence;
 
@@ -826,7 +826,7 @@
 
     .line 263
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
@@ -847,14 +847,14 @@
 
     .prologue
     .line 839
-    sget-object v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     const-string v1, "---->setCityEnties<-----"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 840
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v0}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -862,7 +862,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v0}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -870,7 +870,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v0}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -878,7 +878,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v0}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -887,9 +887,9 @@
     if-eqz v0, :cond_0
 
     .line 844
-    new-instance v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$1;
+    new-instance v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$1;
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->handlerThread:Landroid/os/HandlerThread;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->handlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
@@ -897,22 +897,22 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, p0, v1, v2}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$1;-><init>(Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;Landroid/os/Looper;Landroid/os/Handler$Callback;)V
+    invoke-direct {v0, p0, v1, v2}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$1;-><init>(Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;Landroid/os/Looper;Landroid/os/Handler$Callback;)V
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->databaseHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->databaseHandler:Landroid/os/Handler;
 
     .line 856
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->databaseHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->databaseHandler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$2;
+    new-instance v1, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$2;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$2;-><init>(Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$2;-><init>(Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 867
     :cond_0
-    sget-object v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -924,7 +924,7 @@
 
     move-result-object v1
 
-    sget-object v2, Lcom/android/settings/trafficmanager/settings/SMSCatchReceiver;->key_start:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/trafficmanager/settings/SMSCatchReceiver;->key_start:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -937,7 +937,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 868
-    sget-object v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -949,7 +949,7 @@
 
     move-result-object v1
 
-    sget-object v2, Lcom/android/settings/trafficmanager/settings/SMSCatchReceiver;->key_end:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/trafficmanager/settings/SMSCatchReceiver;->key_end:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -962,7 +962,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 869
-    sget-object v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -974,7 +974,7 @@
 
     move-result-object v1
 
-    sget-object v2, Lcom/android/settings/trafficmanager/settings/SMSCatchReceiver;->key_type:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/trafficmanager/settings/SMSCatchReceiver;->key_type:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -995,26 +995,26 @@
 
     .prologue
     .line 602
-    sget-object v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     const-string v1, "---->setCityEnties<-----"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 603
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     if-nez v0, :cond_1
 
@@ -1027,7 +1027,7 @@
     :cond_1
     const-string v0, "CMCC"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1040,14 +1040,14 @@
     if-eqz v0, :cond_3
 
     .line 608
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100fb
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 609
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100ff
 
@@ -1058,7 +1058,7 @@
     :goto_1
     const-string v0, "Beijing"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1071,14 +1071,14 @@
     if-eqz v0, :cond_5
 
     .line 624
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100bf
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 625
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100c0
 
@@ -1090,7 +1090,7 @@
     :cond_3
     const-string v0, "CU"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1103,14 +1103,14 @@
     if-eqz v0, :cond_4
 
     .line 613
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f110102
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 614
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f110103
 
@@ -1122,7 +1122,7 @@
     :cond_4
     const-string v0, "CTC"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1135,14 +1135,14 @@
     if-eqz v0, :cond_2
 
     .line 618
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f110100
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 619
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f110101
 
@@ -1154,7 +1154,7 @@
     :cond_5
     const-string v0, "Tianjin"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1167,14 +1167,14 @@
     if-eqz v0, :cond_6
 
     .line 629
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100c1
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 630
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100c2
 
@@ -1186,7 +1186,7 @@
     :cond_6
     const-string v0, "Shanghai"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1199,14 +1199,14 @@
     if-eqz v0, :cond_7
 
     .line 634
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100c3
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 635
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100c4
 
@@ -1218,7 +1218,7 @@
     :cond_7
     const-string v0, "Chongqing"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1231,14 +1231,14 @@
     if-eqz v0, :cond_8
 
     .line 639
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100c5
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 640
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100c6
 
@@ -1250,7 +1250,7 @@
     :cond_8
     const-string v0, "Guangdong"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1263,14 +1263,14 @@
     if-eqz v0, :cond_9
 
     .line 644
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100c7
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 645
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100c8
 
@@ -1282,7 +1282,7 @@
     :cond_9
     const-string v0, "Shandong"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1295,14 +1295,14 @@
     if-eqz v0, :cond_a
 
     .line 649
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100c9
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 650
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100ca
 
@@ -1314,7 +1314,7 @@
     :cond_a
     const-string v0, "Shanxi"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1327,14 +1327,14 @@
     if-eqz v0, :cond_b
 
     .line 654
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100cb
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 655
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100cc
 
@@ -1346,7 +1346,7 @@
     :cond_b
     const-string v0, "Liaoning"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1359,14 +1359,14 @@
     if-eqz v0, :cond_c
 
     .line 659
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100cf
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 660
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100d0
 
@@ -1378,7 +1378,7 @@
     :cond_c
     const-string v0, "Gansu"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1391,14 +1391,14 @@
     if-eqz v0, :cond_d
 
     .line 664
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100d1
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 665
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100d2
 
@@ -1410,7 +1410,7 @@
     :cond_d
     const-string v0, "Xinjiang"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1423,14 +1423,14 @@
     if-eqz v0, :cond_e
 
     .line 669
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100d3
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 670
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100d4
 
@@ -1442,7 +1442,7 @@
     :cond_e
     const-string v0, "Jilin"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1455,14 +1455,14 @@
     if-eqz v0, :cond_f
 
     .line 674
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100d5
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 675
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100d6
 
@@ -1474,7 +1474,7 @@
     :cond_f
     const-string v0, "Jiangsu"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1487,14 +1487,14 @@
     if-eqz v0, :cond_10
 
     .line 679
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100d7
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 680
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100d8
 
@@ -1506,7 +1506,7 @@
     :cond_10
     const-string v0, "Heilongjiang"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1519,14 +1519,14 @@
     if-eqz v0, :cond_11
 
     .line 684
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100dd
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 685
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100de
 
@@ -1538,7 +1538,7 @@
     :cond_11
     const-string v0, "Neimenggu"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1551,14 +1551,14 @@
     if-eqz v0, :cond_12
 
     .line 689
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100df
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 690
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100e0
 
@@ -1570,7 +1570,7 @@
     :cond_12
     const-string v0, "Shaanxi"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1583,14 +1583,14 @@
     if-eqz v0, :cond_13
 
     .line 694
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100cd
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 695
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100ce
 
@@ -1602,7 +1602,7 @@
     :cond_13
     const-string v0, "Sichuan"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1615,14 +1615,14 @@
     if-eqz v0, :cond_14
 
     .line 699
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100e1
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 700
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100e2
 
@@ -1634,7 +1634,7 @@
     :cond_14
     const-string v0, "Hubei"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1647,14 +1647,14 @@
     if-eqz v0, :cond_15
 
     .line 704
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100e3
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 705
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100e4
 
@@ -1666,7 +1666,7 @@
     :cond_15
     const-string v0, "Hunan"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1679,14 +1679,14 @@
     if-eqz v0, :cond_16
 
     .line 709
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100e5
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 710
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100e6
 
@@ -1698,7 +1698,7 @@
     :cond_16
     const-string v0, "Yunnan"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1711,14 +1711,14 @@
     if-eqz v0, :cond_17
 
     .line 714
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100e7
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 715
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100e8
 
@@ -1730,7 +1730,7 @@
     :cond_17
     const-string v0, "Guizhou"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1743,14 +1743,14 @@
     if-eqz v0, :cond_18
 
     .line 719
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100e9
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 720
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100ea
 
@@ -1762,7 +1762,7 @@
     :cond_18
     const-string v0, "Fujian"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1775,14 +1775,14 @@
     if-eqz v0, :cond_19
 
     .line 724
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100eb
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 725
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100ec
 
@@ -1794,7 +1794,7 @@
     :cond_19
     const-string v0, "Jiangxi"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1807,14 +1807,14 @@
     if-eqz v0, :cond_1a
 
     .line 729
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100ed
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 730
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100ee
 
@@ -1826,7 +1826,7 @@
     :cond_1a
     const-string v0, "Henan"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1839,14 +1839,14 @@
     if-eqz v0, :cond_1b
 
     .line 734
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100bd
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 735
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100be
 
@@ -1858,7 +1858,7 @@
     :cond_1b
     const-string v0, "Hebei"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1871,14 +1871,14 @@
     if-eqz v0, :cond_1c
 
     .line 739
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100b7
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 740
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100b8
 
@@ -1890,7 +1890,7 @@
     :cond_1c
     const-string v0, "Xizang"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1903,14 +1903,14 @@
     if-eqz v0, :cond_1d
 
     .line 744
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100f3
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 745
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100f4
 
@@ -1922,7 +1922,7 @@
     :cond_1d
     const-string v0, "Zhejiang"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1935,14 +1935,14 @@
     if-eqz v0, :cond_1e
 
     .line 749
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100d9
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 750
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100da
 
@@ -1954,7 +1954,7 @@
     :cond_1e
     const-string v0, "Anhui"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1967,14 +1967,14 @@
     if-eqz v0, :cond_1f
 
     .line 754
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100db
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 755
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100dc
 
@@ -1986,7 +1986,7 @@
     :cond_1f
     const-string v0, "Guangxi"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1999,14 +1999,14 @@
     if-eqz v0, :cond_20
 
     .line 759
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100bb
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 760
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100bc
 
@@ -2018,7 +2018,7 @@
     :cond_20
     const-string v0, "Ningxia"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -2031,14 +2031,14 @@
     if-eqz v0, :cond_21
 
     .line 764
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100ef
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 765
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100f0
 
@@ -2050,7 +2050,7 @@
     :cond_21
     const-string v0, "Hainan"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -2063,14 +2063,14 @@
     if-eqz v0, :cond_22
 
     .line 769
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100b9
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 770
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100ba
 
@@ -2080,14 +2080,14 @@
 
     .line 773
     :cond_22
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100f5
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setEntries(I)V
 
     .line 774
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     const v1, 0x7f1100f6
 
@@ -2115,7 +2115,7 @@
     const/4 v3, 0x1
 
     .line 330
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     if-nez v0, :cond_1
 
@@ -2126,11 +2126,11 @@
 
     .line 333
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v0}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
@@ -2139,7 +2139,7 @@
     if-eqz v0, :cond_0
 
     .line 334
-    sget-object v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2151,7 +2151,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v2}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
@@ -2174,7 +2174,7 @@
     .line 335
     const-string v0, "CMCC"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -2187,12 +2187,12 @@
     if-eqz v0, :cond_3
 
     .line 336
-    sget v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sget v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     if-nez v0, :cond_2
 
     .line 337
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v0}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
@@ -2202,18 +2202,18 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/trafficmanager/settings/SMSCatchReceiver;->OPERATOR_CMCC_SEND_BODY:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/trafficmanager/settings/SMSCatchReceiver;->OPERATOR_CMCC_SEND_BODY:Ljava/lang/String;
 
     goto :goto_0
 
     .line 338
     :cond_2
-    sget v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sget v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     if-ne v0, v3, :cond_0
 
     .line 339
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v0}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
@@ -2223,7 +2223,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/trafficmanager/settings/SMSCatchReceiver;->OPERATOR_CMCC_SEND_BODY_1:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/trafficmanager/settings/SMSCatchReceiver;->OPERATOR_CMCC_SEND_BODY_1:Ljava/lang/String;
 
     goto :goto_0
 
@@ -2231,7 +2231,7 @@
     :cond_3
     const-string v0, "CU"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -2244,12 +2244,12 @@
     if-eqz v0, :cond_5
 
     .line 342
-    sget v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sget v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     if-nez v0, :cond_4
 
     .line 343
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v0}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
@@ -2259,18 +2259,18 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/trafficmanager/settings/SMSCatchReceiver;->OPERATOR_CU_SEND_BODY:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/trafficmanager/settings/SMSCatchReceiver;->OPERATOR_CU_SEND_BODY:Ljava/lang/String;
 
     goto :goto_0
 
     .line 344
     :cond_4
-    sget v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sget v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     if-ne v0, v3, :cond_0
 
     .line 345
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v0}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
@@ -2280,7 +2280,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/trafficmanager/settings/SMSCatchReceiver;->OPERATOR_CU_SEND_BODY_1:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/trafficmanager/settings/SMSCatchReceiver;->OPERATOR_CU_SEND_BODY_1:Ljava/lang/String;
 
     goto/16 :goto_0
 
@@ -2288,7 +2288,7 @@
     :cond_5
     const-string v0, "CTC"
 
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -2301,12 +2301,12 @@
     if-eqz v0, :cond_0
 
     .line 348
-    sget v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sget v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     if-nez v0, :cond_6
 
     .line 349
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v0}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
@@ -2316,18 +2316,18 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/trafficmanager/settings/SMSCatchReceiver;->OPERATOR_CTC_SEND_BODY:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/trafficmanager/settings/SMSCatchReceiver;->OPERATOR_CTC_SEND_BODY:Ljava/lang/String;
 
     goto/16 :goto_0
 
     .line 350
     :cond_6
-    sget v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sget v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     if-ne v0, v3, :cond_0
 
     .line 351
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v0}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
@@ -2337,7 +2337,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/trafficmanager/settings/SMSCatchReceiver;->OPERATOR_CTC_SEND_BODY_1:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/trafficmanager/settings/SMSCatchReceiver;->OPERATOR_CTC_SEND_BODY_1:Ljava/lang/String;
 
     goto/16 :goto_0
 .end method
@@ -2354,102 +2354,102 @@
     const/4 v3, 0x1
 
     .line 110
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 111
     const v0, 0x7f080085
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->addPreferencesFromResource(I)V
 
     .line 113
-    new-instance v0, Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;
+    new-instance v0, Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;
 
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->mDataBaseHelper:Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->mDataBaseHelper:Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;
 
     .line 114
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->handlerThread:Landroid/os/HandlerThread;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->handlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
     .line 115
-    sget v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sget v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     if-nez v0, :cond_4
 
     .line 116
     const-string v0, "province_choose"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/ListPreference;
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     .line 117
     const-string v0, "city_choose"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/ListPreference;
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     .line 118
     const-string v0, "operator_choose"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/ListPreference;
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     .line 119
     const-string v0, "set_order_editor"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/EditTextPreference;
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
 
     .line 120
     const-string v0, "set_package_start_date"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
 
     .line 121
     const-string v0, "package_choose"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/ListPreference;
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     .line 124
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v0}, Landroid/preference/EditTextPreference;->getEditText()Landroid/widget/EditText;
 
@@ -2466,13 +2466,13 @@
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setFilters([Landroid/text/InputFilter;)V
 
     .line 128
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
     const-string v1, "set_attribution_and_operator_1"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -2481,17 +2481,17 @@
     .line 148
     :cond_0
     :goto_0
-    sget v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sget v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     if-eqz v0, :cond_1
 
-    sget v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sget v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     if-ne v0, v3, :cond_3
 
     .line 149
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2499,44 +2499,44 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->shp:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->shp:Landroid/content/SharedPreferences;
 
     .line 150
-    invoke-direct {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setCityEnties()V
+    invoke-direct {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setCityEnties()V
 
     .line 151
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->shp:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->shp:Landroid/content/SharedPreferences;
 
-    invoke-direct {p0, v0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->initSummary(Landroid/content/SharedPreferences;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->initSummary(Landroid/content/SharedPreferences;)V
 
     .line 153
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportAutoVerfiyTraffic()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportAutoVerfiyTraffic()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
     .line 154
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
     const-string v1, "set_attribution_and_operator"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 155
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
     const-string v1, "set_attribution_and_operator_1"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -2544,27 +2544,27 @@
 
     .line 158
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v0, p0}, Landroid/preference/ListPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 159
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v0, p0}, Landroid/preference/ListPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 160
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v0, p0}, Landroid/preference/ListPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 161
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v0, p0}, Landroid/preference/ListPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 162
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, p0}, Landroid/preference/PreferenceScreen;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -2574,78 +2574,78 @@
 
     .line 131
     :cond_4
-    sget v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sget v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     if-ne v0, v3, :cond_0
 
     .line 132
     const-string v0, "province_choose_1"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/ListPreference;
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     .line 133
     const-string v0, "city_choose_1"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/ListPreference;
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     .line 134
     const-string v0, "operator_choose_1"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/ListPreference;
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     .line 135
     const-string v0, "set_order_editor_1"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/EditTextPreference;
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
 
     .line 136
     const-string v0, "set_package_start_date_1"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
 
     .line 137
     const-string v0, "package_choose_1"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/ListPreference;
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     .line 140
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v0}, Landroid/preference/EditTextPreference;->getEditText()Landroid/widget/EditText;
 
@@ -2662,13 +2662,13 @@
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setFilters([Landroid/text/InputFilter;)V
 
     .line 144
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
     const-string v1, "set_attribution_and_operator"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -2682,15 +2682,15 @@
 
     .prologue
     .line 286
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroy()V
 
     .line 287
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->mDataBaseHelper:Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->mDataBaseHelper:Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;
 
-    invoke-virtual {v0}, Lcom/android/settings/trafficmanager/settings/TrafficDataBaseHelper;->closeDatabase()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficDataBaseHelper;->closeDatabase()V
 
     .line 288
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->handlerThread:Landroid/os/HandlerThread;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->handlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
@@ -2707,10 +2707,10 @@
 
     .prologue
     .line 278
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 280
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
@@ -2733,19 +2733,19 @@
     const/4 v0, 0x1
 
     .line 304
-    sget-object v1, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     const-string v2, "---->onPreferenceChange<-----"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 305
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     if-ne p1, v1, :cond_1
 
     .line 306
-    sget-object v1, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2759,7 +2759,7 @@
 
     const-string v3, "TJ"
 
-    iget-object v4, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v4}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -2779,7 +2779,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v3}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -2796,7 +2796,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 307
-    invoke-direct {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setCityEnties()V
+    invoke-direct {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setCityEnties()V
 
     .line 326
     :cond_0
@@ -2805,39 +2805,39 @@
 
     .line 311
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     if-ne p1, v1, :cond_2
 
     .line 313
-    invoke-direct {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->sendText()V
+    invoke-direct {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->sendText()V
 
     goto :goto_0
 
     .line 315
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     if-eq p1, v1, :cond_0
 
     .line 319
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     if-ne p1, v1, :cond_3
 
     .line 320
-    invoke-direct {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->sendText()V
+    invoke-direct {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->sendText()V
 
     goto :goto_0
 
     .line 322
     :cond_3
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
 
     if-ne p1, v1, :cond_4
 
     .line 323
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getOrderToSend()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getOrderToSend()V
 
     goto :goto_0
 
@@ -2854,34 +2854,34 @@
 
     .prologue
     .line 293
-    sget-object v1, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     const-string v2, "---->onPreferenceClick<-----"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 295
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
 
     if-ne p1, v1, :cond_0
 
     .line 296
-    new-instance v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;
+    new-instance v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;
 
-    invoke-direct {v0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;-><init>()V
 
     .line 297
-    .local v0, "cycleEditor":Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getFragmentManager()Landroid/app/FragmentManager;
+    .local v0, "cycleEditor":Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
 
     const-string v2, "DatePickDialog"
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     .line 299
-    .end local v0    # "cycleEditor":Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;
+    .end local v0    # "cycleEditor":Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;
     :cond_0
     const/4 v1, 0x0
 
@@ -2893,13 +2893,13 @@
 
     .prologue
     .line 268
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 269
-    invoke-direct {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setCityEnties()V
+    invoke-direct {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setCityEnties()V
 
     .line 270
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2907,15 +2907,15 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->shp:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->shp:Landroid/content/SharedPreferences;
 
     .line 271
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->shp:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->shp:Landroid/content/SharedPreferences;
 
-    invoke-direct {p0, v0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->initSummary(Landroid/content/SharedPreferences;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->initSummary(Landroid/content/SharedPreferences;)V
 
     .line 272
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
@@ -2940,7 +2940,7 @@
     const/4 v5, 0x0
 
     .line 169
-    sget-object v2, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     const-string v3, "---->onSharedPreferenceChanged<-----"
 
@@ -3013,7 +3013,7 @@
 
     .line 178
     :cond_0
-    sget-object v2, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -3036,10 +3036,10 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 179
-    invoke-direct {p0, p1}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->initSummary(Landroid/content/SharedPreferences;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->initSummary(Landroid/content/SharedPreferences;)V
 
     .line 180
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v2
 
@@ -3087,7 +3087,7 @@
 
     .line 186
     :cond_2
-    invoke-direct {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->sendText()V
+    invoke-direct {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->sendText()V
 
     .line 189
     :cond_3
@@ -3099,12 +3099,12 @@
 
     if-eqz v2, :cond_4
 
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     if-eqz v2, :cond_4
 
     .line 190
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -3114,17 +3114,17 @@
 
     .line 191
     .local v0, "dSummary":Ljava/lang/String;
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v2, v0}, Landroid/preference/ListPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 192
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v2, v5}, Landroid/preference/ListPreference;->setValue(Ljava/lang/String;)V
 
     .line 193
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -3146,7 +3146,7 @@
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 196
-    invoke-direct {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setCityEnties()V
+    invoke-direct {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setCityEnties()V
 
     .line 198
     .end local v0    # "dSummary":Ljava/lang/String;
@@ -3160,12 +3160,12 @@
 
     if-eqz v2, :cond_5
 
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     if-eqz v2, :cond_5
 
     .line 199
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -3175,17 +3175,17 @@
 
     .line 200
     .restart local v0    # "dSummary":Ljava/lang/String;
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v2, v0}, Landroid/preference/ListPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 201
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v2, v5}, Landroid/preference/ListPreference;->setValue(Ljava/lang/String;)V
 
     .line 202
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -3207,7 +3207,7 @@
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 205
-    invoke-direct {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setCityEnties()V
+    invoke-direct {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setCityEnties()V
 
     .line 208
     .end local v0    # "dSummary":Ljava/lang/String;
@@ -3221,12 +3221,12 @@
 
     if-eqz v2, :cond_6
 
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     if-eqz v2, :cond_6
 
     .line 209
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -3236,17 +3236,17 @@
 
     .line 210
     .restart local v0    # "dSummary":Ljava/lang/String;
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v2, v0}, Landroid/preference/ListPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 211
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v2, v5}, Landroid/preference/ListPreference;->setValue(Ljava/lang/String;)V
 
     .line 212
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -3268,7 +3268,7 @@
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 215
-    invoke-direct {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setCityEnties()V
+    invoke-direct {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setCityEnties()V
 
     .line 217
     .end local v0    # "dSummary":Ljava/lang/String;
@@ -3282,12 +3282,12 @@
 
     if-eqz v2, :cond_7
 
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     if-eqz v2, :cond_7
 
     .line 218
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -3297,17 +3297,17 @@
 
     .line 219
     .restart local v0    # "dSummary":Ljava/lang/String;
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v2, v0}, Landroid/preference/ListPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 220
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v2, v5}, Landroid/preference/ListPreference;->setValue(Ljava/lang/String;)V
 
     .line 221
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -3329,29 +3329,29 @@
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 224
-    invoke-direct {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setCityEnties()V
+    invoke-direct {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setCityEnties()V
 
     .line 226
     .end local v0    # "dSummary":Ljava/lang/String;
     .end local v1    # "editor":Landroid/content/SharedPreferences$Editor;
     :cond_7
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     if-eqz v2, :cond_a
 
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     if-eqz v2, :cond_a
 
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     if-eqz v2, :cond_a
 
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     if-eqz v2, :cond_a
 
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->provinceChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v2}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -3359,7 +3359,7 @@
 
     if-eqz v2, :cond_8
 
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->cityChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v2}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -3367,7 +3367,7 @@
 
     if-eqz v2, :cond_8
 
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v2}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -3375,7 +3375,7 @@
 
     if-eqz v2, :cond_8
 
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->packageChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v2}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -3385,7 +3385,7 @@
 
     .line 234
     :cond_8
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -3399,7 +3399,7 @@
 
     .line 235
     .restart local v1    # "editor":Landroid/content/SharedPreferences$Editor;
-    sget v2, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sget v2, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     if-nez v2, :cond_d
 
@@ -3416,7 +3416,7 @@
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 240
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
 
     const-string v3, ""
 
@@ -3443,14 +3443,14 @@
 
     .line 244
     :cond_b
-    sget-object v2, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     const-string v3, "---->onSharedPreferenceChanged<-----KEY_SET_ORDER"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 245
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getOrderToSend()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getOrderToSend()V
 
     .line 247
     :cond_c
@@ -3459,7 +3459,7 @@
     .line 237
     .restart local v1    # "editor":Landroid/content/SharedPreferences$Editor;
     :cond_d
-    sget v2, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sget v2, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     const/4 v3, 0x1
 
@@ -3481,7 +3481,7 @@
 
     .prologue
     .line 358
-    sget-object v1, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -3518,7 +3518,7 @@
     :cond_0
     const-string v1, "CMCC"
 
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v2}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -3536,7 +3536,7 @@
     .line 367
     :cond_1
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -3550,7 +3550,7 @@
 
     .line 368
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
-    sget v1, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sget v1, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     if-nez v1, :cond_5
 
@@ -3565,7 +3565,7 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 373
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->setOrder:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v1, p1}, Landroid/preference/EditTextPreference;->setText(Ljava/lang/String;)V
 
@@ -3577,7 +3577,7 @@
     :cond_3
     const-string v1, "CU"
 
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v2}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -3598,7 +3598,7 @@
     :cond_4
     const-string v1, "CTC"
 
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->operatorChoose:Landroid/preference/ListPreference;
 
     invoke-virtual {v2}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -3618,7 +3618,7 @@
     .line 370
     .restart local v0    # "editor":Landroid/content/SharedPreferences$Editor;
     :cond_5
-    sget v1, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sget v1, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     const/4 v2, 0x1
 

@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/AppHeader$1;
+.class final Lcom/android/settings_ex/AppHeader$1;
 .super Ljava/lang/Object;
 .source "AppHeader.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/AppHeader;->setupHeaderView(Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Landroid/content/Intent;ILandroid/view/View;)Landroid/view/View;
+    value = Lcom/android/settings_ex/AppHeader;->setupHeaderView(Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Landroid/content/Intent;ILandroid/view/View;)Landroid/view/View;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -29,9 +29,9 @@
 
     .prologue
     .line 69
-    iput-object p1, p0, Lcom/android/settings/AppHeader$1;->val$activity:Landroid/app/Activity;
+    iput-object p1, p0, Lcom/android/settings_ex/AppHeader$1;->val$activity:Landroid/app/Activity;
 
-    iput-object p2, p0, Lcom/android/settings/AppHeader$1;->val$settingsIntent:Landroid/content/Intent;
+    iput-object p2, p0, Lcom/android/settings_ex/AppHeader$1;->val$settingsIntent:Landroid/content/Intent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,9 +46,9 @@
 
     .prologue
     .line 72
-    iget-object v0, p0, Lcom/android/settings/AppHeader$1;->val$activity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/AppHeader$1;->val$activity:Landroid/app/Activity;
 
-    iget-object v1, p0, Lcom/android/settings/AppHeader$1;->val$settingsIntent:Landroid/content/Intent;
+    iget-object v1, p0, Lcom/android/settings_ex/AppHeader$1;->val$settingsIntent:Landroid/content/Intent;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 

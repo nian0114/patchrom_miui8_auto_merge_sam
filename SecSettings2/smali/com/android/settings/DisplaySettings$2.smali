@@ -1,11 +1,11 @@
-.class Lcom/android/settings/DisplaySettings$2;
+.class Lcom/android/settings_ex/DisplaySettings$2;
 .super Landroid/content/BroadcastReceiver;
 .source "DisplaySettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DisplaySettings;
+    value = Lcom/android/settings_ex/DisplaySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DisplaySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/DisplaySettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DisplaySettings;)V
+.method constructor <init>(Lcom/android/settings_ex/DisplaySettings;)V
     .locals 0
 
     .prologue
     .line 248
-    iput-object p1, p0, Lcom/android/settings/DisplaySettings$2;->this$0:Lcom/android/settings/DisplaySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/DisplaySettings$2;->this$0:Lcom/android/settings_ex/DisplaySettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -81,10 +81,10 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 253
-    iget-object v3, p0, Lcom/android/settings/DisplaySettings$2;->this$0:Lcom/android/settings/DisplaySettings;
+    iget-object v3, p0, Lcom/android/settings_ex/DisplaySettings$2;->this$0:Lcom/android/settings_ex/DisplaySettings;
 
-    # getter for: Lcom/android/settings/DisplaySettings;->MAX_BRIGHTNESS_CHANGED:Ljava/lang/String;
-    invoke-static {v3}, Lcom/android/settings/DisplaySettings;->access$200(Lcom/android/settings/DisplaySettings;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/DisplaySettings;->MAX_BRIGHTNESS_CHANGED:Ljava/lang/String;
+    invoke-static {v3}, Lcom/android/settings_ex/DisplaySettings;->access$200(Lcom/android/settings_ex/DisplaySettings;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -124,14 +124,14 @@
 
     .line 262
     .local v1, "changeType":I
-    iget-object v3, p0, Lcom/android/settings/DisplaySettings$2;->this$0:Lcom/android/settings/DisplaySettings;
+    iget-object v3, p0, Lcom/android/settings_ex/DisplaySettings$2;->this$0:Lcom/android/settings_ex/DisplaySettings;
 
-    # getter for: Lcom/android/settings/DisplaySettings;->mSecBrightness:Lcom/android/settings/BrightnessSeekBarPreference;
-    invoke-static {v3}, Lcom/android/settings/DisplaySettings;->access$100(Lcom/android/settings/DisplaySettings;)Lcom/android/settings/BrightnessSeekBarPreference;
+    # getter for: Lcom/android/settings_ex/DisplaySettings;->mSecBrightness:Lcom/android/settings_ex/BrightnessSeekBarPreference;
+    invoke-static {v3}, Lcom/android/settings_ex/DisplaySettings;->access$100(Lcom/android/settings_ex/DisplaySettings;)Lcom/android/settings_ex/BrightnessSeekBarPreference;
 
     move-result-object v3
 
-    invoke-virtual {v3, v2, v1}, Lcom/android/settings/BrightnessSeekBarPreference;->setMaxBrightnessLimit(II)V
+    invoke-virtual {v3, v2, v1}, Lcom/android/settings_ex/BrightnessSeekBarPreference;->setMaxBrightnessLimit(II)V
 
     goto :goto_0
 .end method

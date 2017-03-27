@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/OneHandViewPagerAdapter;
+.class public Lcom/android/settings_ex/OneHandViewPagerAdapter;
 .super Landroid/support/v4/view/PagerAdapter;
 .source "OneHandViewPagerAdapter.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/OneHandViewPagerAdapter$Description;
+        Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;
     }
 .end annotation
 
@@ -19,7 +19,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/OneHandViewPagerAdapter$Description;",
+            "Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;",
             ">;"
         }
     .end annotation
@@ -42,20 +42,20 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     .line 57
-    iput-object p1, p0, Lcom/android/settings/OneHandViewPagerAdapter;->context:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/OneHandViewPagerAdapter;->context:Landroid/content/Context;
 
     .line 58
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/OneHandViewPagerAdapter;->mInflater:Landroid/view/LayoutInflater;
+    iput-object v0, p0, Lcom/android/settings_ex/OneHandViewPagerAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     .line 60
-    invoke-direct {p0}, Lcom/android/settings/OneHandViewPagerAdapter;->setDescriptions()V
+    invoke-direct {p0}, Lcom/android/settings_ex/OneHandViewPagerAdapter;->setDescriptions()V
 
     .line 61
     return-void
@@ -66,72 +66,72 @@
 
     .prologue
     .line 130
-    new-instance v0, Lcom/android/settings/OneHandViewPagerAdapter$Description;
+    new-instance v0, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;
 
-    invoke-direct {v0}, Lcom/android/settings/OneHandViewPagerAdapter$Description;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;-><init>()V
 
     .line 133
-    .local v0, "description":Lcom/android/settings/OneHandViewPagerAdapter$Description;
-    new-instance v0, Lcom/android/settings/OneHandViewPagerAdapter$Description;
+    .local v0, "description":Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;
+    new-instance v0, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;
 
-    .end local v0    # "description":Lcom/android/settings/OneHandViewPagerAdapter$Description;
-    invoke-direct {v0}, Lcom/android/settings/OneHandViewPagerAdapter$Description;-><init>()V
+    .end local v0    # "description":Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;
+    invoke-direct {v0}, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;-><init>()V
 
     .line 134
-    .restart local v0    # "description":Lcom/android/settings/OneHandViewPagerAdapter$Description;
+    .restart local v0    # "description":Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;
     const-string v1, "reduce_screen_size"
 
-    iput-object v1, v0, Lcom/android/settings/OneHandViewPagerAdapter$Description;->key:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;->key:Ljava/lang/String;
 
     .line 135
     const v1, 0x7f02027a
 
-    iput v1, v0, Lcom/android/settings/OneHandViewPagerAdapter$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;->animation:I
 
     .line 136
     const v1, 0x7f0e0a5b
 
-    iput v1, v0, Lcom/android/settings/OneHandViewPagerAdapter$Description;->title:I
+    iput v1, v0, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;->title:I
 
     .line 137
     const v1, 0x7f0e11ae
 
-    iput v1, v0, Lcom/android/settings/OneHandViewPagerAdapter$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;->summary:I
 
     .line 138
-    iget-object v1, p0, Lcom/android/settings/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 142
-    new-instance v0, Lcom/android/settings/OneHandViewPagerAdapter$Description;
+    new-instance v0, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;
 
-    .end local v0    # "description":Lcom/android/settings/OneHandViewPagerAdapter$Description;
-    invoke-direct {v0}, Lcom/android/settings/OneHandViewPagerAdapter$Description;-><init>()V
+    .end local v0    # "description":Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;
+    invoke-direct {v0}, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;-><init>()V
 
     .line 143
-    .restart local v0    # "description":Lcom/android/settings/OneHandViewPagerAdapter$Description;
+    .restart local v0    # "description":Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;
     const-string v1, "one_handed_input"
 
-    iput-object v1, v0, Lcom/android/settings/OneHandViewPagerAdapter$Description;->key:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;->key:Ljava/lang/String;
 
     .line 144
     const v1, 0x7f020279
 
-    iput v1, v0, Lcom/android/settings/OneHandViewPagerAdapter$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;->animation:I
 
     .line 145
     const v1, 0x7f0e11af
 
-    iput v1, v0, Lcom/android/settings/OneHandViewPagerAdapter$Description;->title:I
+    iput v1, v0, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;->title:I
 
     .line 146
     const v1, 0x7f0e11b4
 
-    iput v1, v0, Lcom/android/settings/OneHandViewPagerAdapter$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;->summary:I
 
     .line 147
-    iget-object v1, p0, Lcom/android/settings/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -166,7 +166,7 @@
 
     .prologue
     .line 65
-    iget-object v0, p0, Lcom/android/settings/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -204,7 +204,7 @@
 
     .local v0, "i":I
     :goto_1
-    iget-object v2, p0, Lcom/android/settings/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -213,15 +213,15 @@
     if-ge v0, v2, :cond_2
 
     .line 122
-    iget-object v2, p0, Lcom/android/settings/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/OneHandViewPagerAdapter$Description;
+    check-cast v2, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;
 
-    iget-object v2, v2, Lcom/android/settings/OneHandViewPagerAdapter$Description;->key:Ljava/lang/String;
+    iget-object v2, v2, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;->key:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -256,7 +256,7 @@
 
     .line 77
     .local v3, "v":Landroid/view/View;
-    iget-object v4, p0, Lcom/android/settings/OneHandViewPagerAdapter;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v4, p0, Lcom/android/settings_ex/OneHandViewPagerAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     const v5, 0x7f040164
 
@@ -304,15 +304,15 @@
 
     .line 83
     .local v0, "mAnimationView":Landroid/widget/ImageView;
-    iget-object v4, p0, Lcom/android/settings/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v4, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/OneHandViewPagerAdapter$Description;
+    check-cast v4, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;
 
-    iget v4, v4, Lcom/android/settings/OneHandViewPagerAdapter$Description;->title:I
+    iget v4, v4, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;->title:I
 
     if-nez v4, :cond_0
 
@@ -321,15 +321,15 @@
 
     .line 90
     :goto_0
-    iget-object v4, p0, Lcom/android/settings/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v4, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/OneHandViewPagerAdapter$Description;
+    check-cast v4, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;
 
-    iget v4, v4, Lcom/android/settings/OneHandViewPagerAdapter$Description;->summary:I
+    iget v4, v4, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;->summary:I
 
     if-nez v4, :cond_1
 
@@ -338,15 +338,15 @@
 
     .line 97
     :goto_1
-    iget-object v4, p0, Lcom/android/settings/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v4, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/OneHandViewPagerAdapter$Description;
+    check-cast v4, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;
 
-    iget v4, v4, Lcom/android/settings/OneHandViewPagerAdapter$Description;->animation:I
+    iget v4, v4, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;->animation:I
 
     if-nez v4, :cond_2
 
@@ -369,15 +369,15 @@
     invoke-virtual {v2, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 87
-    iget-object v4, p0, Lcom/android/settings/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v4, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/OneHandViewPagerAdapter$Description;
+    check-cast v4, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;
 
-    iget v4, v4, Lcom/android/settings/OneHandViewPagerAdapter$Description;->title:I
+    iget v4, v4, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;->title:I
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setText(I)V
 
@@ -388,15 +388,15 @@
     invoke-virtual {v1, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 94
-    iget-object v4, p0, Lcom/android/settings/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v4, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/OneHandViewPagerAdapter$Description;
+    check-cast v4, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;
 
-    iget v4, v4, Lcom/android/settings/OneHandViewPagerAdapter$Description;->summary:I
+    iget v4, v4, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;->summary:I
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setText(I)V
 
@@ -407,15 +407,15 @@
     invoke-virtual {v0, v7}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 101
-    iget-object v4, p0, Lcom/android/settings/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/OneHandViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v4, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/OneHandViewPagerAdapter$Description;
+    check-cast v4, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;
 
-    iget v4, v4, Lcom/android/settings/OneHandViewPagerAdapter$Description;->animation:I
+    iget v4, v4, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;->animation:I
 
     invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setImageResource(I)V
 

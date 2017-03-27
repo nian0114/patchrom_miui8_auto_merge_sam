@@ -1,11 +1,11 @@
-.class Lcom/android/settings/RingtoneSettingTabActivity$1;
+.class Lcom/android/settings_ex/RingtoneSettingTabActivity$1;
 .super Landroid/content/BroadcastReceiver;
 .source "RingtoneSettingTabActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/RingtoneSettingTabActivity;->onResume()V
+    value = Lcom/android/settings_ex/RingtoneSettingTabActivity;->onResume()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/RingtoneSettingTabActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/RingtoneSettingTabActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/RingtoneSettingTabActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/RingtoneSettingTabActivity;)V
     .locals 0
 
     .prologue
     .line 154
-    iput-object p1, p0, Lcom/android/settings/RingtoneSettingTabActivity$1;->this$0:Lcom/android/settings/RingtoneSettingTabActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/RingtoneSettingTabActivity$1;->this$0:Lcom/android/settings_ex/RingtoneSettingTabActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -40,9 +40,9 @@
 
     .prologue
     .line 158
-    iget-object v0, p0, Lcom/android/settings/RingtoneSettingTabActivity$1;->this$0:Lcom/android/settings/RingtoneSettingTabActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/RingtoneSettingTabActivity$1;->this$0:Lcom/android/settings_ex/RingtoneSettingTabActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/RingtoneSettingTabActivity;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/RingtoneSettingTabActivity;->finish()V
 
     .line 159
     return-void

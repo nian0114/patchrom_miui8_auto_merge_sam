@@ -1,11 +1,11 @@
-.class Lcom/android/settings/nfc/NfcMobileCashbee$1;
+.class Lcom/android/settings_ex/nfc/NfcMobileCashbee$1;
 .super Landroid/content/BroadcastReceiver;
 .source "NfcMobileCashbee.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/nfc/NfcMobileCashbee;
+    value = Lcom/android/settings_ex/nfc/NfcMobileCashbee;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nfc/NfcMobileCashbee;
+.field final synthetic this$0:Lcom/android/settings_ex/nfc/NfcMobileCashbee;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/nfc/NfcMobileCashbee;)V
+.method constructor <init>(Lcom/android/settings_ex/nfc/NfcMobileCashbee;)V
     .locals 0
 
     .prologue
     .line 68
-    iput-object p1, p0, Lcom/android/settings/nfc/NfcMobileCashbee$1;->this$0:Lcom/android/settings/nfc/NfcMobileCashbee;
+    iput-object p1, p0, Lcom/android/settings_ex/nfc/NfcMobileCashbee$1;->this$0:Lcom/android/settings_ex/nfc/NfcMobileCashbee;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -100,10 +100,10 @@
     if-ne v0, v2, :cond_0
 
     .line 78
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcMobileCashbee$1;->this$0:Lcom/android/settings/nfc/NfcMobileCashbee;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcMobileCashbee$1;->this$0:Lcom/android/settings_ex/nfc/NfcMobileCashbee;
 
-    # getter for: Lcom/android/settings/nfc/NfcMobileCashbee;->activity:Landroid/app/Activity;
-    invoke-static {v2}, Lcom/android/settings/nfc/NfcMobileCashbee;->access$000(Lcom/android/settings/nfc/NfcMobileCashbee;)Landroid/app/Activity;
+    # getter for: Lcom/android/settings_ex/nfc/NfcMobileCashbee;->activity:Landroid/app/Activity;
+    invoke-static {v2}, Lcom/android/settings_ex/nfc/NfcMobileCashbee;->access$000(Lcom/android/settings_ex/nfc/NfcMobileCashbee;)Landroid/app/Activity;
 
     move-result-object v2
 

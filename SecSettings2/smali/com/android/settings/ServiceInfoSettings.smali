@@ -1,9 +1,9 @@
-.class public Lcom/android/settings/ServiceInfoSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/ServiceInfoSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "ServiceInfoSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # direct methods
@@ -12,7 +12,7 @@
 
     .prologue
     .line 88
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 90
     return-void
@@ -36,15 +36,15 @@
 
     .prologue
     .line 94
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 96
     const v1, 0x7f0800b3
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/ServiceInfoSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/ServiceInfoSettings;->addPreferencesFromResource(I)V
 
     .line 98
-    invoke-virtual {p0}, Lcom/android/settings/ServiceInfoSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ServiceInfoSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
     .line 105
     const-string v1, "contact_us"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/ServiceInfoSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/ServiceInfoSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -84,12 +84,12 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 108
-    invoke-virtual {p0, v0}, Lcom/android/settings/ServiceInfoSettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/ServiceInfoSettings;->startActivity(Landroid/content/Intent;)V
 
     .line 110
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v1
 

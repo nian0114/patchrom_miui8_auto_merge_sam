@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DropDownPreference$2;
+.class Lcom/android/settings_ex/DropDownPreference$2;
 .super Ljava/lang/Object;
 .source "DropDownPreference.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DropDownPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    value = Lcom/android/settings_ex/DropDownPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DropDownPreference;
+.field final synthetic this$0:Lcom/android/settings_ex/DropDownPreference;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DropDownPreference;)V
+.method constructor <init>(Lcom/android/settings_ex/DropDownPreference;)V
     .locals 0
 
     .prologue
     .line 67
-    iput-object p1, p0, Lcom/android/settings/DropDownPreference$2;->this$0:Lcom/android/settings/DropDownPreference;
+    iput-object p1, p0, Lcom/android/settings_ex/DropDownPreference$2;->this$0:Lcom/android/settings_ex/DropDownPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,10 +42,10 @@
 
     .prologue
     .line 70
-    iget-object v0, p0, Lcom/android/settings/DropDownPreference$2;->this$0:Lcom/android/settings/DropDownPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/DropDownPreference$2;->this$0:Lcom/android/settings_ex/DropDownPreference;
 
-    # getter for: Lcom/android/settings/DropDownPreference;->mSpinner:Landroid/widget/Spinner;
-    invoke-static {v0}, Lcom/android/settings/DropDownPreference;->access$000(Lcom/android/settings/DropDownPreference;)Landroid/widget/Spinner;
+    # getter for: Lcom/android/settings_ex/DropDownPreference;->mSpinner:Landroid/widget/Spinner;
+    invoke-static {v0}, Lcom/android/settings_ex/DropDownPreference;->access$000(Lcom/android/settings_ex/DropDownPreference;)Landroid/widget/Spinner;
 
     move-result-object v0
 
@@ -54,10 +54,10 @@
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setSoundEffectsEnabled(Z)V
 
     .line 71
-    iget-object v0, p0, Lcom/android/settings/DropDownPreference$2;->this$0:Lcom/android/settings/DropDownPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/DropDownPreference$2;->this$0:Lcom/android/settings_ex/DropDownPreference;
 
-    # getter for: Lcom/android/settings/DropDownPreference;->mSpinner:Landroid/widget/Spinner;
-    invoke-static {v0}, Lcom/android/settings/DropDownPreference;->access$000(Lcom/android/settings/DropDownPreference;)Landroid/widget/Spinner;
+    # getter for: Lcom/android/settings_ex/DropDownPreference;->mSpinner:Landroid/widget/Spinner;
+    invoke-static {v0}, Lcom/android/settings_ex/DropDownPreference;->access$000(Lcom/android/settings_ex/DropDownPreference;)Landroid/widget/Spinner;
 
     move-result-object v0
 

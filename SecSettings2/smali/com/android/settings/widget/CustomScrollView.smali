@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/widget/CustomScrollView;
+.class public Lcom/android/settings_ex/widget/CustomScrollView;
 .super Landroid/widget/ScrollView;
 .source "CustomScrollView.java"
 
@@ -6,13 +6,13 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/widget/CustomScrollView$ObservableScrollViewCallbacks;
+        Lcom/android/settings_ex/widget/CustomScrollView$ObservableScrollViewCallbacks;
     }
 .end annotation
 
 
 # instance fields
-.field private mCallbacks:Lcom/android/settings/widget/CustomScrollView$ObservableScrollViewCallbacks;
+.field private mCallbacks:Lcom/android/settings_ex/widget/CustomScrollView$ObservableScrollViewCallbacks;
 
 .field private mIsFirstLoading:Z
 
@@ -29,7 +29,7 @@
     .line 11
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/widget/CustomScrollView;->mIsFirstLoading:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/widget/CustomScrollView;->mIsFirstLoading:Z
 
     .line 20
     return-void
@@ -47,7 +47,7 @@
     .line 11
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/widget/CustomScrollView;->mIsFirstLoading:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/widget/CustomScrollView;->mIsFirstLoading:Z
 
     .line 23
     return-void
@@ -66,7 +66,7 @@
     .line 11
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/widget/CustomScrollView;->mIsFirstLoading:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/widget/CustomScrollView;->mIsFirstLoading:Z
 
     .line 26
     return-void
@@ -86,7 +86,7 @@
     .line 11
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/widget/CustomScrollView;->mIsFirstLoading:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/widget/CustomScrollView;->mIsFirstLoading:Z
 
     .line 30
     return-void
@@ -99,7 +99,7 @@
 
     .prologue
     .line 59
-    iget-boolean v0, p0, Lcom/android/settings/widget/CustomScrollView;->mIsFirstLoading:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/widget/CustomScrollView;->mIsFirstLoading:Z
 
     return v0
 .end method
@@ -125,7 +125,7 @@
 
     .prologue
     .line 44
-    iget-object v0, p0, Lcom/android/settings/widget/CustomScrollView;->mCallbacks:Lcom/android/settings/widget/CustomScrollView$ObservableScrollViewCallbacks;
+    iget-object v0, p0, Lcom/android/settings_ex/widget/CustomScrollView;->mCallbacks:Lcom/android/settings_ex/widget/CustomScrollView$ObservableScrollViewCallbacks;
 
     if-eqz v0, :cond_0
 
@@ -148,9 +148,9 @@
 
     .line 50
     :pswitch_1
-    iget-object v0, p0, Lcom/android/settings/widget/CustomScrollView;->mCallbacks:Lcom/android/settings/widget/CustomScrollView$ObservableScrollViewCallbacks;
+    iget-object v0, p0, Lcom/android/settings_ex/widget/CustomScrollView;->mCallbacks:Lcom/android/settings_ex/widget/CustomScrollView$ObservableScrollViewCallbacks;
 
-    invoke-interface {v0}, Lcom/android/settings/widget/CustomScrollView$ObservableScrollViewCallbacks;->releaseView()V
+    invoke-interface {v0}, Lcom/android/settings_ex/widget/CustomScrollView$ObservableScrollViewCallbacks;->releaseView()V
 
     goto :goto_0
 
@@ -170,19 +170,19 @@
 
     .prologue
     .line 63
-    iput-boolean p1, p0, Lcom/android/settings/widget/CustomScrollView;->mIsFirstLoading:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/widget/CustomScrollView;->mIsFirstLoading:Z
 
     .line 64
     return-void
 .end method
 
-.method public setScrollViewCallbacks(Lcom/android/settings/widget/CustomScrollView$ObservableScrollViewCallbacks;)V
+.method public setScrollViewCallbacks(Lcom/android/settings_ex/widget/CustomScrollView$ObservableScrollViewCallbacks;)V
     .locals 0
-    .param p1, "listener"    # Lcom/android/settings/widget/CustomScrollView$ObservableScrollViewCallbacks;
+    .param p1, "listener"    # Lcom/android/settings_ex/widget/CustomScrollView$ObservableScrollViewCallbacks;
 
     .prologue
     .line 33
-    iput-object p1, p0, Lcom/android/settings/widget/CustomScrollView;->mCallbacks:Lcom/android/settings/widget/CustomScrollView$ObservableScrollViewCallbacks;
+    iput-object p1, p0, Lcom/android/settings_ex/widget/CustomScrollView;->mCallbacks:Lcom/android/settings_ex/widget/CustomScrollView$ObservableScrollViewCallbacks;
 
     .line 34
     return-void

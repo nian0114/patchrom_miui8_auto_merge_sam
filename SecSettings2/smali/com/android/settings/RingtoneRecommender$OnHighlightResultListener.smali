@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/RingtoneRecommender$OnHighlightResultListener;
+.class public interface abstract Lcom/android/settings_ex/RingtoneRecommender$OnHighlightResultListener;
 .super Ljava/lang/Object;
 .source "RingtoneRecommender.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/RingtoneRecommender;
+    value = Lcom/android/settings_ex/RingtoneRecommender;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

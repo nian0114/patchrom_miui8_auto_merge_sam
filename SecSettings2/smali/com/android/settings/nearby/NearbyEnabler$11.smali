@@ -1,4 +1,4 @@
-.class Lcom/android/settings/nearby/NearbyEnabler$11;
+.class Lcom/android/settings_ex/nearby/NearbyEnabler$11;
 .super Ljava/lang/Object;
 .source "NearbyEnabler.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/nearby/NearbyEnabler;->requestRestartServerPopup()V
+    value = Lcom/android/settings_ex/nearby/NearbyEnabler;->requestRestartServerPopup()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nearby/NearbyEnabler;
+.field final synthetic this$0:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/nearby/NearbyEnabler;)V
+.method constructor <init>(Lcom/android/settings_ex/nearby/NearbyEnabler;)V
     .locals 0
 
     .prologue
     .line 1100
-    iput-object p1, p0, Lcom/android/settings/nearby/NearbyEnabler$11;->this$0:Lcom/android/settings/nearby/NearbyEnabler;
+    iput-object p1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler$11;->this$0:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,7 +49,7 @@
 
     const-string v2, "Restart AlertDialog Select : Negative - do nothing"
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1105
     return-void

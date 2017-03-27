@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/SetupWizardWifiScreen$11;
+.class Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$11;
 .super Ljava/lang/Object;
 .source "SetupWizardWifiScreen.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/SetupWizardWifiScreen;->showAlertDialog(I)V
+    value = Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->showAlertDialog(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
     .locals 0
 
     .prologue
     .line 479
-    iput-object p1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$11;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$11;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,14 +42,14 @@
 
     .prologue
     .line 482
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$11;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$11;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
-    # getter for: Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiManager:Landroid/net/wifi/WifiManager;
-    invoke-static {v0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->access$900(Lcom/android/settings/wifi/SetupWizardWifiScreen;)Landroid/net/wifi/WifiManager;
+    # getter for: Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->access$900(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)Landroid/net/wifi/WifiManager;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiConnectivityUtils;->forgetNetWork(Landroid/net/wifi/WifiManager;)V
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->forgetNetWork(Landroid/net/wifi/WifiManager;)V
 
     .line 483
     invoke-interface {p1}, Landroid/content/DialogInterface;->cancel()V

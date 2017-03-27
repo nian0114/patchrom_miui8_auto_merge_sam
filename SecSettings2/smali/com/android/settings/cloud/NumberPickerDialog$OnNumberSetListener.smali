@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/cloud/NumberPickerDialog$OnNumberSetListener;
+.class public interface abstract Lcom/android/settings_ex/cloud/NumberPickerDialog$OnNumberSetListener;
 .super Ljava/lang/Object;
 .source "NumberPickerDialog.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/cloud/NumberPickerDialog;
+    value = Lcom/android/settings_ex/cloud/NumberPickerDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

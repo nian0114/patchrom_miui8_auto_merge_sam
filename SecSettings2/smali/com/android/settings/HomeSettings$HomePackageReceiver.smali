@@ -1,11 +1,11 @@
-.class Lcom/android/settings/HomeSettings$HomePackageReceiver;
+.class Lcom/android/settings_ex/HomeSettings$HomePackageReceiver;
 .super Landroid/content/BroadcastReceiver;
 .source "HomeSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/HomeSettings;
+    value = Lcom/android/settings_ex/HomeSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,30 +15,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/HomeSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/HomeSettings;
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/settings/HomeSettings;)V
+.method private constructor <init>(Lcom/android/settings_ex/HomeSettings;)V
     .locals 0
 
     .prologue
     .line 87
-    iput-object p1, p0, Lcom/android/settings/HomeSettings$HomePackageReceiver;->this$0:Lcom/android/settings/HomeSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/HomeSettings$HomePackageReceiver;->this$0:Lcom/android/settings_ex/HomeSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/HomeSettings;Lcom/android/settings/HomeSettings$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/HomeSettings;Lcom/android/settings_ex/HomeSettings$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/HomeSettings;
-    .param p2, "x1"    # Lcom/android/settings/HomeSettings$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/HomeSettings;
+    .param p2, "x1"    # Lcom/android/settings_ex/HomeSettings$1;
 
     .prologue
     .line 87
-    invoke-direct {p0, p1}, Lcom/android/settings/HomeSettings$HomePackageReceiver;-><init>(Lcom/android/settings/HomeSettings;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/HomeSettings$HomePackageReceiver;-><init>(Lcom/android/settings_ex/HomeSettings;)V
 
     return-void
 .end method
@@ -54,23 +54,23 @@
     const/4 v2, 0x1
 
     .line 90
-    iget-object v0, p0, Lcom/android/settings/HomeSettings$HomePackageReceiver;->this$0:Lcom/android/settings/HomeSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/HomeSettings$HomePackageReceiver;->this$0:Lcom/android/settings_ex/HomeSettings;
 
-    # invokes: Lcom/android/settings/HomeSettings;->buildHomeActivitiesList()V
-    invoke-static {v0}, Lcom/android/settings/HomeSettings;->access$000(Lcom/android/settings/HomeSettings;)V
+    # invokes: Lcom/android/settings_ex/HomeSettings;->buildHomeActivitiesList()V
+    invoke-static {v0}, Lcom/android/settings_ex/HomeSettings;->access$000(Lcom/android/settings_ex/HomeSettings;)V
 
     .line 91
-    invoke-static {p1}, Lcom/android/settings/search/Index;->getInstance(Landroid/content/Context;)Lcom/android/settings/search/Index;
+    invoke-static {p1}, Lcom/android/settings_ex/search/Index;->getInstance(Landroid/content/Context;)Lcom/android/settings_ex/search/Index;
 
     move-result-object v0
 
-    const-class v1, Lcom/android/settings/HomeSettings;
+    const-class v1, Lcom/android/settings_ex/HomeSettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1, v2, v2}, Lcom/android/settings/search/Index;->updateFromClassNameResource(Ljava/lang/String;ZZ)V
+    invoke-virtual {v0, v1, v2, v2}, Lcom/android/settings_ex/search/Index;->updateFromClassNameResource(Ljava/lang/String;ZZ)V
 
     .line 93
     return-void

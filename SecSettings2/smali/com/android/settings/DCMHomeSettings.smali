@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/DCMHomeSettings;
+.class public Lcom/android/settings_ex/DCMHomeSettings;
 .super Landroid/app/ListFragment;
 .source "DCMHomeSettings.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/DCMHomeSettings$HomeAdapter;
+        Lcom/android/settings_ex/DCMHomeSettings$HomeAdapter;
     }
 .end annotation
 
@@ -84,114 +84,114 @@
 
     invoke-direct {v0}, Landroid/content/res/Configuration;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/DCMHomeSettings;->mCurConfig:Landroid/content/res/Configuration;
+    iput-object v0, p0, Lcom/android/settings_ex/DCMHomeSettings;->mCurConfig:Landroid/content/res/Configuration;
 
     .line 73
-    iput v1, p0, Lcom/android/settings/DCMHomeSettings;->previousIndex:I
+    iput v1, p0, Lcom/android/settings_ex/DCMHomeSettings;->previousIndex:I
 
     .line 74
     const v0, 0x3f9ae148    # 1.21f
 
-    iput v0, p0, Lcom/android/settings/DCMHomeSettings;->LARGE_FONT_SCALE:F
+    iput v0, p0, Lcom/android/settings_ex/DCMHomeSettings;->LARGE_FONT_SCALE:F
 
     .line 75
     const v0, 0x3fc28f5c    # 1.52f
 
-    iput v0, p0, Lcom/android/settings/DCMHomeSettings;->EXTRA_LARGE_FONT_SCALE:F
+    iput v0, p0, Lcom/android/settings_ex/DCMHomeSettings;->EXTRA_LARGE_FONT_SCALE:F
 
     .line 76
     const/4 v0, 0x5
 
-    iput v0, p0, Lcom/android/settings/DCMHomeSettings;->mExtraLargeFontIndex:I
+    iput v0, p0, Lcom/android/settings_ex/DCMHomeSettings;->mExtraLargeFontIndex:I
 
     .line 101
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/DCMHomeSettings;->mHasEasyLauncher:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/DCMHomeSettings;->mHasEasyLauncher:Z
 
     .line 103
-    iput-boolean v1, p0, Lcom/android/settings/DCMHomeSettings;->mSetupMode:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/DCMHomeSettings;->mSetupMode:Z
 
     .line 506
     return-void
 .end method
 
-.method static synthetic access$002(Lcom/android/settings/DCMHomeSettings;I)I
+.method static synthetic access$002(Lcom/android/settings_ex/DCMHomeSettings;I)I
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/DCMHomeSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/DCMHomeSettings;
     .param p1, "x1"    # I
 
     .prologue
     .line 61
-    iput p1, p0, Lcom/android/settings/DCMHomeSettings;->mInitHome:I
+    iput p1, p0, Lcom/android/settings_ex/DCMHomeSettings;->mInitHome:I
 
     return p1
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/DCMHomeSettings;)I
+.method static synthetic access$100(Lcom/android/settings_ex/DCMHomeSettings;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/DCMHomeSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/DCMHomeSettings;
 
     .prologue
     .line 61
-    iget v0, p0, Lcom/android/settings/DCMHomeSettings;->mCurrentHome:I
+    iget v0, p0, Lcom/android/settings_ex/DCMHomeSettings;->mCurrentHome:I
 
     return v0
 .end method
 
-.method static synthetic access$202(Lcom/android/settings/DCMHomeSettings;I)I
+.method static synthetic access$202(Lcom/android/settings_ex/DCMHomeSettings;I)I
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/DCMHomeSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/DCMHomeSettings;
     .param p1, "x1"    # I
 
     .prologue
     .line 61
-    iput p1, p0, Lcom/android/settings/DCMHomeSettings;->mSelectedHome:I
+    iput p1, p0, Lcom/android/settings_ex/DCMHomeSettings;->mSelectedHome:I
 
     return p1
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/DCMHomeSettings;I)V
+.method static synthetic access$300(Lcom/android/settings_ex/DCMHomeSettings;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/DCMHomeSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/DCMHomeSettings;
     .param p1, "x1"    # I
 
     .prologue
     .line 61
-    invoke-direct {p0, p1}, Lcom/android/settings/DCMHomeSettings;->changeHome(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/DCMHomeSettings;->changeHome(I)V
 
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/DCMHomeSettings;)V
+.method static synthetic access$400(Lcom/android/settings_ex/DCMHomeSettings;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/DCMHomeSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/DCMHomeSettings;
 
     .prologue
     .line 61
-    invoke-direct {p0}, Lcom/android/settings/DCMHomeSettings;->startHome()V
+    invoke-direct {p0}, Lcom/android/settings_ex/DCMHomeSettings;->startHome()V
 
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/DCMHomeSettings;)Z
+.method static synthetic access$500(Lcom/android/settings_ex/DCMHomeSettings;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/DCMHomeSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/DCMHomeSettings;
 
     .prologue
     .line 61
-    iget-boolean v0, p0, Lcom/android/settings/DCMHomeSettings;->mHasEasyLauncher:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/DCMHomeSettings;->mHasEasyLauncher:Z
 
     return v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/DCMHomeSettings;)Landroid/content/pm/PackageManager;
+.method static synthetic access$600(Lcom/android/settings_ex/DCMHomeSettings;)Landroid/content/pm/PackageManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/DCMHomeSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/DCMHomeSettings;
 
     .prologue
     .line 61
-    iget-object v0, p0, Lcom/android/settings/DCMHomeSettings;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v0, p0, Lcom/android/settings_ex/DCMHomeSettings;->mPm:Landroid/content/pm/PackageManager;
 
     return-object v0
 .end method
@@ -229,7 +229,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 293
-    iget-object v1, p0, Lcom/android/settings/DCMHomeSettings;->mHomeApps:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/settings_ex/DCMHomeSettings;->mHomeApps:Ljava/util/List;
 
     invoke-interface {v1, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -239,16 +239,16 @@
 
     .line 294
     .local v0, "info":Landroid/content/pm/ResolveInfo;
-    invoke-virtual {p0, v0}, Lcom/android/settings/DCMHomeSettings;->setPreferredHome(Landroid/content/pm/ResolveInfo;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/DCMHomeSettings;->setPreferredHome(Landroid/content/pm/ResolveInfo;)V
 
     .line 295
-    iput p1, p0, Lcom/android/settings/DCMHomeSettings;->mCurrentHome:I
+    iput p1, p0, Lcom/android/settings_ex/DCMHomeSettings;->mCurrentHome:I
 
     .line 297
     packed-switch p1, :pswitch_data_0
 
     .line 312
-    invoke-direct {p0, v4, v5}, Lcom/android/settings/DCMHomeSettings;->setEasymode(ZZ)V
+    invoke-direct {p0, v4, v5}, Lcom/android/settings_ex/DCMHomeSettings;->setEasymode(ZZ)V
 
     .line 315
     :goto_0
@@ -256,30 +256,30 @@
 
     .line 299
     :pswitch_0
-    invoke-direct {p0, v4, v5}, Lcom/android/settings/DCMHomeSettings;->setEasymode(ZZ)V
+    invoke-direct {p0, v4, v5}, Lcom/android/settings_ex/DCMHomeSettings;->setEasymode(ZZ)V
 
     goto :goto_0
 
     .line 302
     :pswitch_1
-    invoke-direct {p0, v4, v4}, Lcom/android/settings/DCMHomeSettings;->setEasymode(ZZ)V
+    invoke-direct {p0, v4, v4}, Lcom/android/settings_ex/DCMHomeSettings;->setEasymode(ZZ)V
 
     goto :goto_0
 
     .line 305
     :pswitch_2
-    iget-boolean v1, p0, Lcom/android/settings/DCMHomeSettings;->mHasEasyLauncher:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/DCMHomeSettings;->mHasEasyLauncher:Z
 
     if-eqz v1, :cond_0
 
     .line 306
-    invoke-direct {p0, v5, v4}, Lcom/android/settings/DCMHomeSettings;->setEasymode(ZZ)V
+    invoke-direct {p0, v5, v4}, Lcom/android/settings_ex/DCMHomeSettings;->setEasymode(ZZ)V
 
     goto :goto_0
 
     .line 308
     :cond_0
-    invoke-direct {p0, v4, v5}, Lcom/android/settings/DCMHomeSettings;->setEasymode(ZZ)V
+    invoke-direct {p0, v4, v5}, Lcom/android/settings_ex/DCMHomeSettings;->setEasymode(ZZ)V
 
     goto :goto_0
 
@@ -298,12 +298,12 @@
 
     .prologue
     .line 490
-    iget-object v2, p0, Lcom/android/settings/DCMHomeSettings;->mAppList:Ljava/util/List;
+    iget-object v2, p0, Lcom/android/settings_ex/DCMHomeSettings;->mAppList:Ljava/util/List;
 
     if-eqz v2, :cond_1
 
     .line 491
-    iget-object v2, p0, Lcom/android/settings/DCMHomeSettings;->mAppList:Ljava/util/List;
+    iget-object v2, p0, Lcom/android/settings_ex/DCMHomeSettings;->mAppList:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -367,7 +367,7 @@
 
     .line 484
     .local v0, "componentList":Ljava/util/List;, "Ljava/util/List<Landroid/content/ComponentName;>;"
-    iget-object v2, p0, Lcom/android/settings/DCMHomeSettings;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v2, p0, Lcom/android/settings_ex/DCMHomeSettings;->mPm:Landroid/content/pm/PackageManager;
 
     invoke-virtual {v2, v1, v0, p1}, Landroid/content/pm/PackageManager;->getPreferredActivities(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)I
 
@@ -432,7 +432,7 @@
     .line 352
     .local v5, "switchValue":I
     :goto_0
-    iget-object v8, p0, Lcom/android/settings/DCMHomeSettings;->mMw:Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;
+    iget-object v8, p0, Lcom/android/settings_ex/DCMHomeSettings;->mMw:Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;
 
     if-eqz v8, :cond_0
 
@@ -448,7 +448,7 @@
     if-eqz p1, :cond_4
 
     .line 355
-    iget-object v8, p0, Lcom/android/settings/DCMHomeSettings;->mMw:Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;
+    iget-object v8, p0, Lcom/android/settings_ex/DCMHomeSettings;->mMw:Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;
 
     invoke-virtual {v8, v2, v6}, Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;->updateMultiWindowSetting(Ljava/lang/StringBuilder;Z)V
 
@@ -456,7 +456,7 @@
     .end local v2    # "key":Ljava/lang/StringBuilder;
     :cond_0
     :goto_1
-    iget-object v8, p0, Lcom/android/settings/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
+    iget-object v8, p0, Lcom/android/settings_ex/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
 
     const-string v9, "easy_mode_switch"
 
@@ -494,12 +494,12 @@
 
     .line 370
     :goto_2
-    iget-boolean v8, p0, Lcom/android/settings/DCMHomeSettings;->mSetupMode:Z
+    iget-boolean v8, p0, Lcom/android/settings_ex/DCMHomeSettings;->mSetupMode:Z
 
     if-nez v8, :cond_2
 
     .line 371
-    iget-object v8, p0, Lcom/android/settings/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
+    iget-object v8, p0, Lcom/android/settings_ex/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
 
     const-string v9, "easy_mode_switch"
 
@@ -510,10 +510,10 @@
     if-nez v7, :cond_6
 
     .line 373
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->setLargeFont()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->setLargeFont()V
 
     .line 375
-    iget-object v7, p0, Lcom/android/settings/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
+    iget-object v7, p0, Lcom/android/settings_ex/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
 
     const-string v8, "smart_scroll"
 
@@ -533,14 +533,14 @@
     invoke-virtual {v4, v7, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 378
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
     invoke-virtual {v7, v4}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 380
-    iget-object v7, p0, Lcom/android/settings/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
+    iget-object v7, p0, Lcom/android/settings_ex/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
 
     const-string v8, "smart_pause"
 
@@ -560,21 +560,21 @@
     invoke-virtual {v3, v7, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 383
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
     invoke-virtual {v7, v3}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 385
-    iget-object v7, p0, Lcom/android/settings/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
+    iget-object v7, p0, Lcom/android/settings_ex/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
 
     const-string v8, "finger_air_view"
 
     invoke-static {v7, v8, v6}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 386
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
@@ -582,9 +582,9 @@
 
     move-result-object v7
 
-    sget v8, Lcom/android/settings/Utils;->MASTER_AIR_VIEW_OFF:I
+    sget v8, Lcom/android/settings_ex/Utils;->MASTER_AIR_VIEW_OFF:I
 
-    invoke-static {v7, v8}, Lcom/android/settings/Utils;->SetAirViewMasterValue(Landroid/content/Context;I)V
+    invoke-static {v7, v8}, Lcom/android/settings_ex/Utils;->SetAirViewMasterValue(Landroid/content/Context;I)V
 
     .line 388
     new-instance v0, Landroid/content/Intent;
@@ -600,14 +600,14 @@
     invoke-virtual {v0, v7, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 390
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
     invoke-virtual {v7, v0}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 392
-    iget-object v7, p0, Lcom/android/settings/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
+    iget-object v7, p0, Lcom/android/settings_ex/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
 
     const-string v8, "multi_window_enabled"
 
@@ -622,16 +622,16 @@
     if-nez p2, :cond_2
 
     .line 401
-    iget v6, p0, Lcom/android/settings/DCMHomeSettings;->mInitHome:I
+    iget v6, p0, Lcom/android/settings_ex/DCMHomeSettings;->mInitHome:I
 
     if-eq v6, v11, :cond_7
 
-    iget v6, p0, Lcom/android/settings/DCMHomeSettings;->mSelectedHome:I
+    iget v6, p0, Lcom/android/settings_ex/DCMHomeSettings;->mSelectedHome:I
 
     if-ne v6, v11, :cond_7
 
     .line 402
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -654,7 +654,7 @@
     .restart local v2    # "key":Ljava/lang/StringBuilder;
     .restart local v5    # "switchValue":I
     :cond_4
-    iget-object v8, p0, Lcom/android/settings/DCMHomeSettings;->mMw:Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;
+    iget-object v8, p0, Lcom/android/settings_ex/DCMHomeSettings;->mMw:Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;
 
     invoke-virtual {v8, v2, v7}, Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;->updateMultiWindowSetting(Ljava/lang/StringBuilder;Z)V
 
@@ -676,29 +676,29 @@
     :cond_6
     const/4 v6, 0x0
 
-    invoke-static {v6}, Lcom/android/settings/Utils;->isTablet(Landroid/content/Context;)Z
+    invoke-static {v6}, Lcom/android/settings_ex/Utils;->isTablet(Landroid/content/Context;)Z
 
     move-result v6
 
     if-nez v6, :cond_1
 
     .line 396
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->setStandardFont()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->setStandardFont()V
 
     goto :goto_3
 
     .line 403
     :cond_7
-    iget v6, p0, Lcom/android/settings/DCMHomeSettings;->mInitHome:I
+    iget v6, p0, Lcom/android/settings_ex/DCMHomeSettings;->mInitHome:I
 
     if-ne v6, v11, :cond_2
 
-    iget v6, p0, Lcom/android/settings/DCMHomeSettings;->mSelectedHome:I
+    iget v6, p0, Lcom/android/settings_ex/DCMHomeSettings;->mSelectedHome:I
 
     if-eq v6, v11, :cond_2
 
     .line 404
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -747,10 +747,10 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 476
-    invoke-virtual {p0, v0}, Lcom/android/settings/DCMHomeSettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/DCMHomeSettings;->startActivity(Landroid/content/Intent;)V
 
     .line 478
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -784,19 +784,19 @@
     invoke-super {p0, p1}, Landroid/app/ListFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 239
-    new-instance v0, Lcom/android/settings/DCMHomeSettings$HomeAdapter;
+    new-instance v0, Lcom/android/settings_ex/DCMHomeSettings$HomeAdapter;
 
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     const v2, 0x7f08005b
 
-    iget-object v3, p0, Lcom/android/settings/DCMHomeSettings;->mHomeApps:Ljava/util/List;
+    iget-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mHomeApps:Ljava/util/List;
 
-    invoke-direct {v0, p0, v1, v2, v3}, Lcom/android/settings/DCMHomeSettings$HomeAdapter;-><init>(Lcom/android/settings/DCMHomeSettings;Landroid/content/Context;ILjava/util/List;)V
+    invoke-direct {v0, p0, v1, v2, v3}, Lcom/android/settings_ex/DCMHomeSettings$HomeAdapter;-><init>(Lcom/android/settings_ex/DCMHomeSettings;Landroid/content/Context;ILjava/util/List;)V
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/DCMHomeSettings;->setListAdapter(Landroid/widget/ListAdapter;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/DCMHomeSettings;->setListAdapter(Landroid/widget/ListAdapter;)V
 
     .line 240
     return-void
@@ -822,7 +822,7 @@
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 112
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -830,10 +830,10 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/DCMHomeSettings;->mPm:Landroid/content/pm/PackageManager;
+    iput-object v4, p0, Lcom/android/settings_ex/DCMHomeSettings;->mPm:Landroid/content/pm/PackageManager;
 
     .line 113
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -841,45 +841,45 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
+    iput-object v4, p0, Lcom/android/settings_ex/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
 
     .line 114
-    iput v6, p0, Lcom/android/settings/DCMHomeSettings;->mCurrentHome:I
+    iput v6, p0, Lcom/android/settings_ex/DCMHomeSettings;->mCurrentHome:I
 
     .line 115
-    iput v6, p0, Lcom/android/settings/DCMHomeSettings;->mInitHome:I
+    iput v6, p0, Lcom/android/settings_ex/DCMHomeSettings;->mInitHome:I
 
     .line 116
-    iput v6, p0, Lcom/android/settings/DCMHomeSettings;->mSelectedHome:I
+    iput v6, p0, Lcom/android/settings_ex/DCMHomeSettings;->mSelectedHome:I
 
     .line 118
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
     const/4 v5, 0x4
 
-    invoke-static {v4, v5}, Lcom/android/settings/Utils;->getFontScale(Landroid/content/Context;I)F
+    invoke-static {v4, v5}, Lcom/android/settings_ex/Utils;->getFontScale(Landroid/content/Context;I)F
 
     move-result v4
 
-    iput v4, p0, Lcom/android/settings/DCMHomeSettings;->LARGE_FONT_SCALE:F
+    iput v4, p0, Lcom/android/settings_ex/DCMHomeSettings;->LARGE_FONT_SCALE:F
 
     .line 119
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
     const/4 v5, 0x5
 
-    invoke-static {v4, v5}, Lcom/android/settings/Utils;->getFontScale(Landroid/content/Context;I)F
+    invoke-static {v4, v5}, Lcom/android/settings_ex/Utils;->getFontScale(Landroid/content/Context;I)F
 
     move-result v4
 
-    iput v4, p0, Lcom/android/settings/DCMHomeSettings;->EXTRA_LARGE_FONT_SCALE:F
+    iput v4, p0, Lcom/android/settings_ex/DCMHomeSettings;->EXTRA_LARGE_FONT_SCALE:F
 
     .line 121
-    iget-object v4, p0, Lcom/android/settings/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
+    iget-object v4, p0, Lcom/android/settings_ex/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
 
     const-string v5, "device_provisioned"
 
@@ -900,19 +900,19 @@
 
     invoke-direct {v4, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    iput-object v4, p0, Lcom/android/settings/DCMHomeSettings;->mHomeIntent:Landroid/content/Intent;
+    iput-object v4, p0, Lcom/android/settings_ex/DCMHomeSettings;->mHomeIntent:Landroid/content/Intent;
 
     .line 125
-    iget-object v4, p0, Lcom/android/settings/DCMHomeSettings;->mHomeIntent:Landroid/content/Intent;
+    iget-object v4, p0, Lcom/android/settings_ex/DCMHomeSettings;->mHomeIntent:Landroid/content/Intent;
 
     const-string v5, "android.intent.category.HOME"
 
     invoke-virtual {v4, v5}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 126
-    iget-object v4, p0, Lcom/android/settings/DCMHomeSettings;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v4, p0, Lcom/android/settings_ex/DCMHomeSettings;->mPm:Landroid/content/pm/PackageManager;
 
-    iget-object v5, p0, Lcom/android/settings/DCMHomeSettings;->mHomeIntent:Landroid/content/Intent;
+    iget-object v5, p0, Lcom/android/settings_ex/DCMHomeSettings;->mHomeIntent:Landroid/content/Intent;
 
     const v6, 0x10040
 
@@ -920,21 +920,21 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/DCMHomeSettings;->mAppList:Ljava/util/List;
+    iput-object v4, p0, Lcom/android/settings_ex/DCMHomeSettings;->mAppList:Ljava/util/List;
 
     .line 128
     new-instance v4, Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;
 
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
     invoke-direct {v4, v5}, Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;-><init>(Landroid/app/Activity;)V
 
-    iput-object v4, p0, Lcom/android/settings/DCMHomeSettings;->mMw:Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;
+    iput-object v4, p0, Lcom/android/settings_ex/DCMHomeSettings;->mMw:Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;
 
     .line 130
-    iget-object v4, p0, Lcom/android/settings/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
+    iget-object v4, p0, Lcom/android/settings_ex/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
 
     const-string v5, "font_size"
 
@@ -944,43 +944,43 @@
 
     move-result v4
 
-    iput v4, p0, Lcom/android/settings/DCMHomeSettings;->previousIndex:I
+    iput v4, p0, Lcom/android/settings_ex/DCMHomeSettings;->previousIndex:I
 
     .line 131
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    iget v5, p0, Lcom/android/settings/DCMHomeSettings;->EXTRA_LARGE_FONT_SCALE:F
+    iget v5, p0, Lcom/android/settings_ex/DCMHomeSettings;->EXTRA_LARGE_FONT_SCALE:F
 
-    invoke-static {v4, v5}, Lcom/android/settings/Utils;->getFontIndex(Landroid/content/Context;F)I
+    invoke-static {v4, v5}, Lcom/android/settings_ex/Utils;->getFontIndex(Landroid/content/Context;F)I
 
     move-result v4
 
-    iput v4, p0, Lcom/android/settings/DCMHomeSettings;->mExtraLargeFontIndex:I
+    iput v4, p0, Lcom/android/settings_ex/DCMHomeSettings;->mExtraLargeFontIndex:I
 
     .line 134
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v4, p0, Lcom/android/settings/DCMHomeSettings;->mHomeApps:Ljava/util/List;
+    iput-object v4, p0, Lcom/android/settings_ex/DCMHomeSettings;->mHomeApps:Ljava/util/List;
 
     .line 135
     const-string v4, "com.nttdocomo.android.dhome"
 
-    invoke-direct {p0, v4}, Lcom/android/settings/DCMHomeSettings;->getResolveInfo(Ljava/lang/String;)Landroid/content/pm/ResolveInfo;
+    invoke-direct {p0, v4}, Lcom/android/settings_ex/DCMHomeSettings;->getResolveInfo(Ljava/lang/String;)Landroid/content/pm/ResolveInfo;
 
     move-result-object v4
 
     if-eqz v4, :cond_4
 
     .line 136
-    iget-object v4, p0, Lcom/android/settings/DCMHomeSettings;->mHomeApps:Ljava/util/List;
+    iget-object v4, p0, Lcom/android/settings_ex/DCMHomeSettings;->mHomeApps:Ljava/util/List;
 
     const-string v5, "com.nttdocomo.android.dhome"
 
-    invoke-direct {p0, v5}, Lcom/android/settings/DCMHomeSettings;->getResolveInfo(Ljava/lang/String;)Landroid/content/pm/ResolveInfo;
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/DCMHomeSettings;->getResolveInfo(Ljava/lang/String;)Landroid/content/pm/ResolveInfo;
 
     move-result-object v5
 
@@ -998,18 +998,18 @@
     :goto_1
     const-string v4, "com.sec.android.app.launcher"
 
-    invoke-direct {p0, v4}, Lcom/android/settings/DCMHomeSettings;->getResolveInfo(Ljava/lang/String;)Landroid/content/pm/ResolveInfo;
+    invoke-direct {p0, v4}, Lcom/android/settings_ex/DCMHomeSettings;->getResolveInfo(Ljava/lang/String;)Landroid/content/pm/ResolveInfo;
 
     move-result-object v4
 
     if-eqz v4, :cond_1
 
     .line 143
-    iget-object v4, p0, Lcom/android/settings/DCMHomeSettings;->mHomeApps:Ljava/util/List;
+    iget-object v4, p0, Lcom/android/settings_ex/DCMHomeSettings;->mHomeApps:Ljava/util/List;
 
     const-string v5, "com.sec.android.app.launcher"
 
-    invoke-direct {p0, v5}, Lcom/android/settings/DCMHomeSettings;->getResolveInfo(Ljava/lang/String;)Landroid/content/pm/ResolveInfo;
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/DCMHomeSettings;->getResolveInfo(Ljava/lang/String;)Landroid/content/pm/ResolveInfo;
 
     move-result-object v5
 
@@ -1026,18 +1026,18 @@
     :cond_1
     const-string v4, "com.sec.android.app.easylauncher"
 
-    invoke-direct {p0, v4}, Lcom/android/settings/DCMHomeSettings;->getResolveInfo(Ljava/lang/String;)Landroid/content/pm/ResolveInfo;
+    invoke-direct {p0, v4}, Lcom/android/settings_ex/DCMHomeSettings;->getResolveInfo(Ljava/lang/String;)Landroid/content/pm/ResolveInfo;
 
     move-result-object v4
 
     if-eqz v4, :cond_5
 
     .line 147
-    iget-object v3, p0, Lcom/android/settings/DCMHomeSettings;->mHomeApps:Ljava/util/List;
+    iget-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mHomeApps:Ljava/util/List;
 
     const-string v4, "com.sec.android.app.easylauncher"
 
-    invoke-direct {p0, v4}, Lcom/android/settings/DCMHomeSettings;->getResolveInfo(Ljava/lang/String;)Landroid/content/pm/ResolveInfo;
+    invoke-direct {p0, v4}, Lcom/android/settings_ex/DCMHomeSettings;->getResolveInfo(Ljava/lang/String;)Landroid/content/pm/ResolveInfo;
 
     move-result-object v4
 
@@ -1059,7 +1059,7 @@
 
     .local v0, "i":I
     :goto_3
-    iget-object v3, p0, Lcom/android/settings/DCMHomeSettings;->mAppList:Ljava/util/List;
+    iget-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mAppList:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -1068,7 +1068,7 @@
     if-ge v0, v3, :cond_6
 
     .line 156
-    iget-object v3, p0, Lcom/android/settings/DCMHomeSettings;->mAppList:Ljava/util/List;
+    iget-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mAppList:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1187,7 +1187,7 @@
     if-nez v3, :cond_2
 
     .line 167
-    iget-object v3, p0, Lcom/android/settings/DCMHomeSettings;->mHomeApps:Ljava/util/List;
+    iget-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mHomeApps:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1211,18 +1211,18 @@
     :cond_4
     const-string v4, "com.nttdocomo.android.paletteui"
 
-    invoke-direct {p0, v4}, Lcom/android/settings/DCMHomeSettings;->getResolveInfo(Ljava/lang/String;)Landroid/content/pm/ResolveInfo;
+    invoke-direct {p0, v4}, Lcom/android/settings_ex/DCMHomeSettings;->getResolveInfo(Ljava/lang/String;)Landroid/content/pm/ResolveInfo;
 
     move-result-object v4
 
     if-eqz v4, :cond_0
 
     .line 139
-    iget-object v4, p0, Lcom/android/settings/DCMHomeSettings;->mHomeApps:Ljava/util/List;
+    iget-object v4, p0, Lcom/android/settings_ex/DCMHomeSettings;->mHomeApps:Ljava/util/List;
 
     const-string v5, "com.nttdocomo.android.paletteui"
 
-    invoke-direct {p0, v5}, Lcom/android/settings/DCMHomeSettings;->getResolveInfo(Ljava/lang/String;)Landroid/content/pm/ResolveInfo;
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/DCMHomeSettings;->getResolveInfo(Ljava/lang/String;)Landroid/content/pm/ResolveInfo;
 
     move-result-object v5
 
@@ -1239,7 +1239,7 @@
 
     .line 150
     :cond_5
-    iput-boolean v3, p0, Lcom/android/settings/DCMHomeSettings;->mHasEasyLauncher:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mHasEasyLauncher:Z
 
     goto/16 :goto_2
 
@@ -1249,7 +1249,7 @@
 
     .restart local v0    # "i":I
     :goto_4
-    iget-object v3, p0, Lcom/android/settings/DCMHomeSettings;->mAppList:Ljava/util/List;
+    iget-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mAppList:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -1258,7 +1258,7 @@
     if-ge v0, v3, :cond_8
 
     .line 174
-    iget-object v3, p0, Lcom/android/settings/DCMHomeSettings;->mAppList:Ljava/util/List;
+    iget-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mAppList:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1288,7 +1288,7 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 177
-    iget-object v3, p0, Lcom/android/settings/DCMHomeSettings;->mAppList:Ljava/util/List;
+    iget-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mAppList:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
@@ -1304,7 +1304,7 @@
     const/4 v0, 0x0
 
     :goto_5
-    iget-object v3, p0, Lcom/android/settings/DCMHomeSettings;->mAppList:Ljava/util/List;
+    iget-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mAppList:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -1313,7 +1313,7 @@
     if-ge v0, v3, :cond_a
 
     .line 183
-    iget-object v3, p0, Lcom/android/settings/DCMHomeSettings;->mAppList:Ljava/util/List;
+    iget-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mAppList:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1343,7 +1343,7 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 186
-    iget-object v3, p0, Lcom/android/settings/DCMHomeSettings;->mAppList:Ljava/util/List;
+    iget-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mAppList:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
@@ -1419,7 +1419,7 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 247
-    iget v3, p0, Lcom/android/settings/DCMHomeSettings;->mCurrentHome:I
+    iget v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mCurrentHome:I
 
     if-ne v3, p3, :cond_0
 
@@ -1429,7 +1429,7 @@
 
     .line 251
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/DCMHomeSettings;->mHomeApps:Ljava/util/List;
+    iget-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mHomeApps:Ljava/util/List;
 
     invoke-interface {v3, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1439,26 +1439,26 @@
 
     .line 253
     .local v1, "info":Landroid/content/pm/ResolveInfo;
-    iget-boolean v3, p0, Lcom/android/settings/DCMHomeSettings;->mSetupMode:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mSetupMode:Z
 
     if-eqz v3, :cond_1
 
     .line 254
-    invoke-direct {p0, p3}, Lcom/android/settings/DCMHomeSettings;->changeHome(I)V
+    invoke-direct {p0, p3}, Lcom/android/settings_ex/DCMHomeSettings;->changeHome(I)V
 
     .line 255
-    iget-object v3, p0, Lcom/android/settings/DCMHomeSettings;->mSetupButton:Landroid/widget/TextView;
+    iget-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mSetupButton:Landroid/widget/TextView;
 
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 256
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getListAdapter()Landroid/widget/ListAdapter;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getListAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/settings/DCMHomeSettings$HomeAdapter;
+    check-cast v3, Lcom/android/settings_ex/DCMHomeSettings$HomeAdapter;
 
-    invoke-virtual {v3}, Lcom/android/settings/DCMHomeSettings$HomeAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v3}, Lcom/android/settings_ex/DCMHomeSettings$HomeAdapter;->notifyDataSetChanged()V
 
     goto :goto_0
 
@@ -1468,7 +1468,7 @@
 
     iget-object v3, v3, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    iget-object v4, p0, Lcom/android/settings/DCMHomeSettings;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v4, p0, Lcom/android/settings_ex/DCMHomeSettings;->mPm:Landroid/content/pm/PackageManager;
 
     invoke-virtual {v3, v4}, Landroid/content/pm/ApplicationInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
@@ -1487,7 +1487,7 @@
     :goto_1
     new-instance v3, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1501,7 +1501,7 @@
 
     aput-object v2, v5, v6
 
-    invoke-virtual {p0, v4, v5}, Lcom/android/settings/DCMHomeSettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v4, v5}, Lcom/android/settings_ex/DCMHomeSettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1511,9 +1511,9 @@
 
     const v4, 0x104000a
 
-    new-instance v5, Lcom/android/settings/DCMHomeSettings$1;
+    new-instance v5, Lcom/android/settings_ex/DCMHomeSettings$1;
 
-    invoke-direct {v5, p0, p3}, Lcom/android/settings/DCMHomeSettings$1;-><init>(Lcom/android/settings/DCMHomeSettings;I)V
+    invoke-direct {v5, p0, p3}, Lcom/android/settings_ex/DCMHomeSettings$1;-><init>(Lcom/android/settings_ex/DCMHomeSettings;I)V
 
     invoke-virtual {v3, v4, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1542,7 +1542,7 @@
     :pswitch_0
     const v3, 0x7f0e1632
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/DCMHomeSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/DCMHomeSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1553,7 +1553,7 @@
     :pswitch_1
     const v3, 0x7f0e1634
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/DCMHomeSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/DCMHomeSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1562,14 +1562,14 @@
 
     .line 267
     :pswitch_2
-    iget-boolean v3, p0, Lcom/android/settings/DCMHomeSettings;->mHasEasyLauncher:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mHasEasyLauncher:Z
 
     if-eqz v3, :cond_2
 
     .line 268
     const v3, 0x7f0e1636
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/DCMHomeSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/DCMHomeSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1611,7 +1611,7 @@
 
     .local v0, "i":I
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/DCMHomeSettings;->mHomeApps:Ljava/util/List;
+    iget-object v2, p0, Lcom/android/settings_ex/DCMHomeSettings;->mHomeApps:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -1620,7 +1620,7 @@
     if-ge v0, v2, :cond_0
 
     .line 201
-    iget-object v2, p0, Lcom/android/settings/DCMHomeSettings;->mHomeApps:Ljava/util/List;
+    iget-object v2, p0, Lcom/android/settings_ex/DCMHomeSettings;->mHomeApps:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1637,28 +1637,28 @@
 
     iget-object v2, v2, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    invoke-direct {p0, v2}, Lcom/android/settings/DCMHomeSettings;->isPreffered(Ljava/lang/String;)Z
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/DCMHomeSettings;->isPreffered(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
     .line 204
-    iput v0, p0, Lcom/android/settings/DCMHomeSettings;->mCurrentHome:I
+    iput v0, p0, Lcom/android/settings_ex/DCMHomeSettings;->mCurrentHome:I
 
     .line 210
     .end local v1    # "info":Landroid/content/pm/ResolveInfo;
     :cond_0
     const-string v2, "com.sec.android.app.launcher"
 
-    invoke-direct {p0, v2}, Lcom/android/settings/DCMHomeSettings;->isPreffered(Ljava/lang/String;)Z
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/DCMHomeSettings;->isPreffered(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_6
 
     .line 211
-    iget-object v2, p0, Lcom/android/settings/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
+    iget-object v2, p0, Lcom/android/settings_ex/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
 
     const-string v3, "easy_mode_switch"
 
@@ -1666,40 +1666,40 @@
 
     move-result v2
 
-    iput v2, p0, Lcom/android/settings/DCMHomeSettings;->mCurrentMode:I
+    iput v2, p0, Lcom/android/settings_ex/DCMHomeSettings;->mCurrentMode:I
 
     .line 212
-    iget v2, p0, Lcom/android/settings/DCMHomeSettings;->mCurrentMode:I
+    iget v2, p0, Lcom/android/settings_ex/DCMHomeSettings;->mCurrentMode:I
 
     if-nez v2, :cond_5
 
     .line 213
-    iput v6, p0, Lcom/android/settings/DCMHomeSettings;->mCurrentHome:I
+    iput v6, p0, Lcom/android/settings_ex/DCMHomeSettings;->mCurrentHome:I
 
     .line 221
     :cond_1
     :goto_1
-    iget v2, p0, Lcom/android/settings/DCMHomeSettings;->mCurrentHome:I
+    iget v2, p0, Lcom/android/settings_ex/DCMHomeSettings;->mCurrentHome:I
 
     if-eq v2, v5, :cond_7
 
-    iget-boolean v2, p0, Lcom/android/settings/DCMHomeSettings;->mSetupMode:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/DCMHomeSettings;->mSetupMode:Z
 
     if-eqz v2, :cond_7
 
-    iget-object v2, p0, Lcom/android/settings/DCMHomeSettings;->mSetupButton:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/DCMHomeSettings;->mSetupButton:Landroid/widget/TextView;
 
     if-eqz v2, :cond_7
 
     .line 222
-    iget-object v2, p0, Lcom/android/settings/DCMHomeSettings;->mSetupButton:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/DCMHomeSettings;->mSetupButton:Landroid/widget/TextView;
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 229
     :cond_2
     :goto_2
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getListAdapter()Landroid/widget/ListAdapter;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getListAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v2
 
@@ -1718,7 +1718,7 @@
 
     move-result-object v3
 
-    iget v4, p0, Lcom/android/settings/DCMHomeSettings;->mCurrentHome:I
+    iget v4, p0, Lcom/android/settings_ex/DCMHomeSettings;->mCurrentHome:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1731,13 +1731,13 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 231
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getListAdapter()Landroid/widget/ListAdapter;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getListAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/DCMHomeSettings$HomeAdapter;
+    check-cast v2, Lcom/android/settings_ex/DCMHomeSettings$HomeAdapter;
 
-    invoke-virtual {v2}, Lcom/android/settings/DCMHomeSettings$HomeAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v2}, Lcom/android/settings_ex/DCMHomeSettings$HomeAdapter;->notifyDataSetChanged()V
 
     .line 233
     :cond_3
@@ -1753,7 +1753,7 @@
     .line 215
     .end local v1    # "info":Landroid/content/pm/ResolveInfo;
     :cond_5
-    iput v4, p0, Lcom/android/settings/DCMHomeSettings;->mCurrentHome:I
+    iput v4, p0, Lcom/android/settings_ex/DCMHomeSettings;->mCurrentHome:I
 
     goto :goto_1
 
@@ -1761,38 +1761,38 @@
     :cond_6
     const-string v2, "com.sec.android.app.easylauncher"
 
-    invoke-direct {p0, v2}, Lcom/android/settings/DCMHomeSettings;->isPreffered(Ljava/lang/String;)Z
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/DCMHomeSettings;->isPreffered(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
     .line 218
-    iput v6, p0, Lcom/android/settings/DCMHomeSettings;->mCurrentHome:I
+    iput v6, p0, Lcom/android/settings_ex/DCMHomeSettings;->mCurrentHome:I
 
     goto :goto_1
 
     .line 223
     :cond_7
-    iget v2, p0, Lcom/android/settings/DCMHomeSettings;->mCurrentHome:I
+    iget v2, p0, Lcom/android/settings_ex/DCMHomeSettings;->mCurrentHome:I
 
     if-ne v2, v5, :cond_2
 
-    iget-boolean v2, p0, Lcom/android/settings/DCMHomeSettings;->mSetupMode:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/DCMHomeSettings;->mSetupMode:Z
 
     if-eqz v2, :cond_2
 
-    iget-object v2, p0, Lcom/android/settings/DCMHomeSettings;->mSetupButton:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/DCMHomeSettings;->mSetupButton:Landroid/widget/TextView;
 
     if-eqz v2, :cond_2
 
     .line 225
     const/4 v2, 0x0
 
-    invoke-direct {p0, v2}, Lcom/android/settings/DCMHomeSettings;->changeHome(I)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/DCMHomeSettings;->changeHome(I)V
 
     .line 226
-    iget-object v2, p0, Lcom/android/settings/DCMHomeSettings;->mSetupButton:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/DCMHomeSettings;->mSetupButton:Landroid/widget/TextView;
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setEnabled(Z)V
 
@@ -1805,7 +1805,7 @@
     .prologue
     .line 412
     :try_start_0
-    iget-object v3, p0, Lcom/android/settings/DCMHomeSettings;->mCurConfig:Landroid/content/res/Configuration;
+    iget-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mCurConfig:Landroid/content/res/Configuration;
 
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -1821,7 +1821,7 @@
 
     .line 417
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
+    iget-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
 
     const-string v4, "font_size"
 
@@ -1833,20 +1833,20 @@
 
     .line 418
     .local v2, "previousIndex":I
-    iget-object v3, p0, Lcom/android/settings/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
+    iget-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
 
     const-string v4, "STANDARD_FONT_SIZE"
 
     invoke-static {v3, v4, v2}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 420
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    iget v4, p0, Lcom/android/settings/DCMHomeSettings;->EXTRA_LARGE_FONT_SCALE:F
+    iget v4, p0, Lcom/android/settings_ex/DCMHomeSettings;->EXTRA_LARGE_FONT_SCALE:F
 
-    invoke-static {v3, v4}, Lcom/android/settings/Utils;->getFontIndex(Landroid/content/Context;F)I
+    invoke-static {v3, v4}, Lcom/android/settings_ex/Utils;->getFontIndex(Landroid/content/Context;F)I
 
     move-result v3
 
@@ -1868,7 +1868,7 @@
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 423
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -1884,30 +1884,30 @@
     .line 427
     .end local v1    # "i":Landroid/content/Intent;
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
+    iget-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
 
     const-string v4, "font_size"
 
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
-    iget v6, p0, Lcom/android/settings/DCMHomeSettings;->LARGE_FONT_SCALE:F
+    iget v6, p0, Lcom/android/settings_ex/DCMHomeSettings;->LARGE_FONT_SCALE:F
 
-    invoke-static {v5, v6}, Lcom/android/settings/Utils;->getFontIndex(Landroid/content/Context;F)I
+    invoke-static {v5, v6}, Lcom/android/settings_ex/Utils;->getFontIndex(Landroid/content/Context;F)I
 
     move-result v5
 
     invoke-static {v3, v4, v5}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 429
-    iget v3, p0, Lcom/android/settings/DCMHomeSettings;->LARGE_FONT_SCALE:F
+    iget v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->LARGE_FONT_SCALE:F
 
     invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v3
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/DCMHomeSettings;->writeFontSizePreference(Ljava/lang/Object;)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/DCMHomeSettings;->writeFontSizePreference(Ljava/lang/Object;)V
 
     .line 430
     return-void
@@ -1962,7 +1962,7 @@
     invoke-virtual {v1, v5}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
 
     .line 332
-    iget-object v5, p0, Lcom/android/settings/DCMHomeSettings;->mAppList:Ljava/util/List;
+    iget-object v5, p0, Lcom/android/settings_ex/DCMHomeSettings;->mAppList:Ljava/util/List;
 
     invoke-interface {v5}, Ljava/util/List;->size()I
 
@@ -1990,7 +1990,7 @@
 
     .local v3, "i":I
     :goto_0
-    iget-object v5, p0, Lcom/android/settings/DCMHomeSettings;->mAppList:Ljava/util/List;
+    iget-object v5, p0, Lcom/android/settings_ex/DCMHomeSettings;->mAppList:Ljava/util/List;
 
     invoke-interface {v5}, Ljava/util/List;->size()I
 
@@ -1999,7 +1999,7 @@
     if-ge v3, v5, :cond_1
 
     .line 336
-    iget-object v5, p0, Lcom/android/settings/DCMHomeSettings;->mAppList:Ljava/util/List;
+    iget-object v5, p0, Lcom/android/settings_ex/DCMHomeSettings;->mAppList:Ljava/util/List;
 
     invoke-interface {v5, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2028,14 +2028,14 @@
 
     iget-object v5, v5, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    invoke-direct {p0, v5}, Lcom/android/settings/DCMHomeSettings;->isPreffered(Ljava/lang/String;)Z
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/DCMHomeSettings;->isPreffered(Ljava/lang/String;)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
     .line 341
-    iget-object v5, p0, Lcom/android/settings/DCMHomeSettings;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v5, p0, Lcom/android/settings_ex/DCMHomeSettings;->mPm:Landroid/content/pm/PackageManager;
 
     iget-object v6, v2, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
@@ -2052,7 +2052,7 @@
     .line 346
     .end local v2    # "home":Landroid/content/pm/ResolveInfo;
     :cond_1
-    iget-object v5, p0, Lcom/android/settings/DCMHomeSettings;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v5, p0, Lcom/android/settings_ex/DCMHomeSettings;->mPm:Landroid/content/pm/PackageManager;
 
     iget v6, p1, Landroid/content/pm/ResolveInfo;->match:I
 
@@ -2069,7 +2069,7 @@
     const/4 v6, 0x2
 
     .line 434
-    iget-object v3, p0, Lcom/android/settings/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
+    iget-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
 
     const-string v4, "STANDARD_FONT_SIZE"
 
@@ -2079,11 +2079,11 @@
 
     .line 436
     .local v0, "fontIndex":I
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    invoke-static {v3, v0}, Lcom/android/settings/Utils;->getFontScale(Landroid/content/Context;I)F
+    invoke-static {v3, v0}, Lcom/android/settings_ex/Utils;->getFontScale(Landroid/content/Context;I)F
 
     move-result v3
 
@@ -2091,7 +2091,7 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/DCMHomeSettings;->objValue:Ljava/lang/Object;
+    iput-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->objValue:Ljava/lang/Object;
 
     .line 438
     const-string v3, "DCMHomeSettings"
@@ -2116,7 +2116,7 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/DCMHomeSettings;->objValue:Ljava/lang/Object;
+    iget-object v5, p0, Lcom/android/settings_ex/DCMHomeSettings;->objValue:Ljava/lang/Object;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2129,7 +2129,7 @@
     invoke-static {v3, v4}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 439
-    iget-object v3, p0, Lcom/android/settings/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
+    iget-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
 
     const-string v4, "font_size"
 
@@ -2139,11 +2139,11 @@
 
     .line 441
     .local v2, "previousIndex":I
-    iget v3, p0, Lcom/android/settings/DCMHomeSettings;->mExtraLargeFontIndex:I
+    iget v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mExtraLargeFontIndex:I
 
     if-gt v2, v3, :cond_1
 
-    iget v3, p0, Lcom/android/settings/DCMHomeSettings;->mExtraLargeFontIndex:I
+    iget v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mExtraLargeFontIndex:I
 
     if-le v0, v3, :cond_1
 
@@ -2163,7 +2163,7 @@
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 444
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -2180,27 +2180,27 @@
     .end local v1    # "i":Landroid/content/Intent;
     :cond_0
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
+    iget-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mResolver:Landroid/content/ContentResolver;
 
     const-string v4, "font_size"
 
     invoke-static {v3, v4, v0}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 453
-    iget-object v3, p0, Lcom/android/settings/DCMHomeSettings;->objValue:Ljava/lang/Object;
+    iget-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->objValue:Ljava/lang/Object;
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/DCMHomeSettings;->writeFontSizePreference(Ljava/lang/Object;)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/DCMHomeSettings;->writeFontSizePreference(Ljava/lang/Object;)V
 
     .line 454
     return-void
 
     .line 446
     :cond_1
-    iget v3, p0, Lcom/android/settings/DCMHomeSettings;->mExtraLargeFontIndex:I
+    iget v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mExtraLargeFontIndex:I
 
     if-le v2, v3, :cond_0
 
-    iget v3, p0, Lcom/android/settings/DCMHomeSettings;->mExtraLargeFontIndex:I
+    iget v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mExtraLargeFontIndex:I
 
     if-gt v0, v3, :cond_0
 
@@ -2220,7 +2220,7 @@
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 449
-    invoke-virtual {p0}, Lcom/android/settings/DCMHomeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DCMHomeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -2253,7 +2253,7 @@
 
     .line 459
     .local v1, "fontScale":F
-    iget-object v2, p0, Lcom/android/settings/DCMHomeSettings;->mCurConfig:Landroid/content/res/Configuration;
+    iget-object v2, p0, Lcom/android/settings_ex/DCMHomeSettings;->mCurConfig:Landroid/content/res/Configuration;
 
     iput v1, v2, Landroid/content/res/Configuration;->fontScale:F
 
@@ -2285,7 +2285,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/DCMHomeSettings;->mCurConfig:Landroid/content/res/Configuration;
+    iget-object v3, p0, Lcom/android/settings_ex/DCMHomeSettings;->mCurConfig:Landroid/content/res/Configuration;
 
     invoke-interface {v2, v3}, Landroid/app/IActivityManager;->updatePersistentConfiguration(Landroid/content/res/Configuration;)V
     :try_end_0

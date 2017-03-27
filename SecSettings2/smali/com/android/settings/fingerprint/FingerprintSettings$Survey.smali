@@ -1,11 +1,11 @@
-.class final enum Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+.class final enum Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 .super Ljava/lang/Enum;
 .source "FingerprintSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fingerprint/FingerprintSettings;
+    value = Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,22 +17,22 @@
     value = {
         "Ljava/lang/Enum",
         "<",
-        "Lcom/android/settings/fingerprint/FingerprintSettings$Survey;",
+        "Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;",
         ">;"
     }
 .end annotation
 
 
 # static fields
-.field private static final synthetic $VALUES:[Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+.field private static final synthetic $VALUES:[Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
-.field public static final enum FINGERPRINT_LOCK_DISABLE:Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+.field public static final enum FINGERPRINT_LOCK_DISABLE:Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
-.field public static final enum FINGERPRINT_LOCK_ENABLE:Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+.field public static final enum FINGERPRINT_LOCK_ENABLE:Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
-.field public static final enum IDENTIFY:Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+.field public static final enum IDENTIFY:Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
-.field public static final enum RENAME:Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+.field public static final enum RENAME:Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
 
 # direct methods
@@ -49,60 +49,60 @@
     const/4 v2, 0x0
 
     .line 147
-    new-instance v0, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    new-instance v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
     const-string v1, "RENAME"
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;->RENAME:Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    sput-object v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;->RENAME:Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
-    new-instance v0, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    new-instance v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
     const-string v1, "IDENTIFY"
 
-    invoke-direct {v0, v1, v3}, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v3}, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;->IDENTIFY:Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    sput-object v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;->IDENTIFY:Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
-    new-instance v0, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    new-instance v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
     const-string v1, "FINGERPRINT_LOCK_ENABLE"
 
-    invoke-direct {v0, v1, v4}, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v4}, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;->FINGERPRINT_LOCK_ENABLE:Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    sput-object v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;->FINGERPRINT_LOCK_ENABLE:Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
-    new-instance v0, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    new-instance v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
     const-string v1, "FINGERPRINT_LOCK_DISABLE"
 
-    invoke-direct {v0, v1, v5}, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v5}, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;->FINGERPRINT_LOCK_DISABLE:Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    sput-object v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;->FINGERPRINT_LOCK_DISABLE:Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
     .line 146
     const/4 v0, 0x4
 
-    new-array v0, v0, [Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    new-array v0, v0, [Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
-    sget-object v1, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;->RENAME:Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    sget-object v1, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;->RENAME:Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;->IDENTIFY:Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    sget-object v1, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;->IDENTIFY:Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;->FINGERPRINT_LOCK_ENABLE:Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    sget-object v1, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;->FINGERPRINT_LOCK_ENABLE:Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
     aput-object v1, v0, v4
 
-    sget-object v1, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;->FINGERPRINT_LOCK_DISABLE:Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    sget-object v1, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;->FINGERPRINT_LOCK_DISABLE:Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
     aput-object v1, v0, v5
 
-    sput-object v0, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;->$VALUES:[Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    sput-object v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;->$VALUES:[Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
     return-void
 .end method
@@ -122,35 +122,35 @@
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+.method public static valueOf(Ljava/lang/String;)Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
     .locals 1
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 146
-    const-class v0, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    const-class v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    check-cast v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
     return-object v0
 .end method
 
-.method public static values()[Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+.method public static values()[Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
     .locals 1
 
     .prologue
     .line 146
-    sget-object v0, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;->$VALUES:[Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    sget-object v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;->$VALUES:[Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
-    invoke-virtual {v0}, [Lcom/android/settings/fingerprint/FingerprintSettings$Survey;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    check-cast v0, [Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
     return-object v0
 .end method

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/TRoamingSettings$BetterDontMessFragment$2;
+.class Lcom/android/settings_ex/TRoamingSettings$BetterDontMessFragment$2;
 .super Ljava/lang/Object;
 .source "TRoamingSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/TRoamingSettings$BetterDontMessFragment;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/TRoamingSettings$BetterDontMessFragment;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/TRoamingSettings$BetterDontMessFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/TRoamingSettings$BetterDontMessFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/TRoamingSettings$BetterDontMessFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/TRoamingSettings$BetterDontMessFragment;)V
     .locals 0
 
     .prologue
     .line 643
-    iput-object p1, p0, Lcom/android/settings/TRoamingSettings$BetterDontMessFragment$2;->this$0:Lcom/android/settings/TRoamingSettings$BetterDontMessFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/TRoamingSettings$BetterDontMessFragment$2;->this$0:Lcom/android/settings_ex/TRoamingSettings$BetterDontMessFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,15 +43,15 @@
 
     .prologue
     .line 645
-    iget-object v1, p0, Lcom/android/settings/TRoamingSettings$BetterDontMessFragment$2;->this$0:Lcom/android/settings/TRoamingSettings$BetterDontMessFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/TRoamingSettings$BetterDontMessFragment$2;->this$0:Lcom/android/settings_ex/TRoamingSettings$BetterDontMessFragment;
 
-    invoke-virtual {v1}, Lcom/android/settings/TRoamingSettings$BetterDontMessFragment;->getTargetFragment()Landroid/app/Fragment;
+    invoke-virtual {v1}, Lcom/android/settings_ex/TRoamingSettings$BetterDontMessFragment;->getTargetFragment()Landroid/app/Fragment;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/TRoamingSettings;
+    check-cast v0, Lcom/android/settings_ex/TRoamingSettings;
 
     .line 646
-    .local v0, "target":Lcom/android/settings/TRoamingSettings;
+    .local v0, "target":Lcom/android/settings_ex/TRoamingSettings;
     return-void
 .end method

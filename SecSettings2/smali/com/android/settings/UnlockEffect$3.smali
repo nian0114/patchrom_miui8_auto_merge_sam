@@ -1,4 +1,4 @@
-.class Lcom/android/settings/UnlockEffect$3;
+.class Lcom/android/settings_ex/UnlockEffect$3;
 .super Ljava/lang/Object;
 .source "UnlockEffect.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/UnlockEffect;->createDialogforTablet()V
+    value = Lcom/android/settings_ex/UnlockEffect;->createDialogforTablet()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/UnlockEffect;
+.field final synthetic this$0:Lcom/android/settings_ex/UnlockEffect;
 
 .field final synthetic val$alertDialog:Landroid/app/AlertDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/UnlockEffect;Landroid/app/AlertDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/UnlockEffect;Landroid/app/AlertDialog;)V
     .locals 0
 
     .prologue
     .line 182
-    iput-object p1, p0, Lcom/android/settings/UnlockEffect$3;->this$0:Lcom/android/settings/UnlockEffect;
+    iput-object p1, p0, Lcom/android/settings_ex/UnlockEffect$3;->this$0:Lcom/android/settings_ex/UnlockEffect;
 
-    iput-object p2, p0, Lcom/android/settings/UnlockEffect$3;->val$alertDialog:Landroid/app/AlertDialog;
+    iput-object p2, p0, Lcom/android/settings_ex/UnlockEffect$3;->val$alertDialog:Landroid/app/AlertDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,14 +46,14 @@
 
     .prologue
     .line 185
-    iget-object v0, p0, Lcom/android/settings/UnlockEffect$3;->val$alertDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/UnlockEffect$3;->val$alertDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 186
-    iget-object v0, p0, Lcom/android/settings/UnlockEffect$3;->this$0:Lcom/android/settings/UnlockEffect;
+    iget-object v0, p0, Lcom/android/settings_ex/UnlockEffect$3;->this$0:Lcom/android/settings_ex/UnlockEffect;
 
-    invoke-virtual {v0}, Lcom/android/settings/UnlockEffect;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/UnlockEffect;->finish()V
 
     .line 187
     return-void

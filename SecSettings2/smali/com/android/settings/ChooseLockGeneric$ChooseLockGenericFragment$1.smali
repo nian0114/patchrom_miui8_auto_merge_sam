@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment$1;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment$1;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "ChooseLockGeneric.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment;
+    value = Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,7 +17,7 @@
 # instance fields
 .field private mActivity:Landroid/app/Activity;
 
-.field private mChooseLockSettingsHelper:Lcom/android/settings/ChooseLockSettingsHelper;
+.field private mChooseLockSettingsHelper:Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
 
 # direct methods
@@ -26,7 +26,7 @@
 
     .prologue
     .line 254
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -56,7 +56,7 @@
 
     check-cast v3, Landroid/app/Activity;
 
-    iput-object v3, p0, Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment$1;->mActivity:Landroid/app/Activity;
+    iput-object v3, p0, Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment$1;->mActivity:Landroid/app/Activity;
 
     .line 293
     new-instance v2, Ljava/util/ArrayList;
@@ -65,13 +65,13 @@
 
     .line 294
     .local v2, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
-    new-instance v3, Lcom/android/settings/ChooseLockSettingsHelper;
+    new-instance v3, Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
-    iget-object v4, p0, Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment$1;->mActivity:Landroid/app/Activity;
+    iget-object v4, p0, Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment$1;->mActivity:Landroid/app/Activity;
 
-    invoke-direct {v3, v4}, Lcom/android/settings/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v3, v4}, Lcom/android/settings_ex/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;)V
 
-    iput-object v3, p0, Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment$1;->mChooseLockSettingsHelper:Lcom/android/settings/ChooseLockSettingsHelper;
+    iput-object v3, p0, Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment$1;->mChooseLockSettingsHelper:Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
     .line 295
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -116,9 +116,9 @@
 
     .line 305
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment$1;->mChooseLockSettingsHelper:Lcom/android/settings/ChooseLockSettingsHelper;
+    iget-object v3, p0, Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment$1;->mChooseLockSettingsHelper:Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
-    invoke-virtual {v3}, Lcom/android/settings/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
+    invoke-virtual {v3}, Lcom/android/settings_ex/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
 
     move-result-object v3
 
@@ -135,19 +135,19 @@
 
     .line 308
     :cond_2
-    invoke-static {p1}, Lcom/android/settings/Utils;->hasFingerprintFeature(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->hasFingerprintFeature(Landroid/content/Context;)Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->isRestrictedProfile(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isRestrictedProfile(Landroid/content/Context;)Z
 
     move-result v3
 
     if-nez v3, :cond_3
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->isGuestUser(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isGuestUser(Landroid/content/Context;)Z
 
     move-result v3
 
@@ -218,7 +218,7 @@
             "Z)",
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/search/SearchIndexableRaw;",
+            "Lcom/android/settings_ex/search/SearchIndexableRaw;",
             ">;"
         }
     .end annotation
@@ -230,7 +230,7 @@
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 284
-    .local v1, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/search/SearchIndexableRaw;>;"
+    .local v1, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/search/SearchIndexableRaw;>;"
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -258,7 +258,7 @@
 
     .prologue
     .line 262
-    invoke-static {p1}, Lcom/android/settings/Utils;->isShopDemo(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isShopDemo(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -285,7 +285,7 @@
 
     .line 268
     .local v1, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v2, Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment;
+    const-class v2, Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -299,7 +299,7 @@
     iput v2, v1, Landroid/provider/SearchIndexableResource;->xmlResId:I
 
     .line 270
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v2
 
@@ -311,7 +311,7 @@
     iput-object v2, v1, Landroid/provider/SearchIndexableResource;->intentTargetPackage:Ljava/lang/String;
 
     .line 272
-    const-class v2, Lcom/android/settings/ChooseLockGeneric;
+    const-class v2, Lcom/android/settings_ex/ChooseLockGeneric;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

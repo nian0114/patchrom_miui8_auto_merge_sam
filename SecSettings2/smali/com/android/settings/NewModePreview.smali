@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/NewModePreview;
+.class public Lcom/android/settings_ex/NewModePreview;
 .super Landroid/app/Activity;
 .source "NewModePreview.java"
 
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/NewModePreview$RadioAdapter;
+        Lcom/android/settings_ex/NewModePreview$RadioAdapter;
     }
 .end annotation
 
@@ -21,7 +21,7 @@
 
 
 # instance fields
-.field private adapter:Lcom/android/settings/NewModePreview$RadioAdapter;
+.field private adapter:Lcom/android/settings_ex/NewModePreview$RadioAdapter;
 
 .field private mAutoAdaptiveTextView:Landroid/widget/TextView;
 
@@ -86,7 +86,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/android/settings/NewModePreview;->mPackageName:[Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/NewModePreview;->mPackageName:[Ljava/lang/String;
 
     return-void
 .end method
@@ -115,21 +115,21 @@
     .line 65
     const v1, 0x7f040147
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/NewModePreview;->setContentView(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/NewModePreview;->setContentView(I)V
 
     .line 69
     const/4 v1, 0x4
 
     new-array v1, v1, [Ljava/lang/String;
 
-    sput-object v1, Lcom/android/settings/NewModePreview;->mModeItem:[Ljava/lang/String;
+    sput-object v1, Lcom/android/settings_ex/NewModePreview;->mModeItem:[Ljava/lang/String;
 
     .line 70
-    sget-object v1, Lcom/android/settings/NewModePreview;->mModeItem:[Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/NewModePreview;->mModeItem:[Ljava/lang/String;
 
     const/4 v2, 0x0
 
-    invoke-virtual {p0}, Lcom/android/settings/NewModePreview;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewModePreview;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -142,11 +142,11 @@
     aput-object v3, v1, v2
 
     .line 71
-    sget-object v1, Lcom/android/settings/NewModePreview;->mModeItem:[Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/NewModePreview;->mModeItem:[Ljava/lang/String;
 
     const/4 v2, 0x1
 
-    invoke-virtual {p0}, Lcom/android/settings/NewModePreview;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewModePreview;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -159,11 +159,11 @@
     aput-object v3, v1, v2
 
     .line 72
-    sget-object v1, Lcom/android/settings/NewModePreview;->mModeItem:[Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/NewModePreview;->mModeItem:[Ljava/lang/String;
 
     const/4 v2, 0x2
 
-    invoke-virtual {p0}, Lcom/android/settings/NewModePreview;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewModePreview;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -176,11 +176,11 @@
     aput-object v3, v1, v2
 
     .line 73
-    sget-object v1, Lcom/android/settings/NewModePreview;->mModeItem:[Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/NewModePreview;->mModeItem:[Ljava/lang/String;
 
     const/4 v2, 0x3
 
-    invoke-virtual {p0}, Lcom/android/settings/NewModePreview;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewModePreview;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -195,27 +195,27 @@
     .line 84
     const v1, 0x7f0d036c
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/NewModePreview;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/NewModePreview;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/android/settings/NewModePreview;->mAutoAdaptiveTextView:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/NewModePreview;->mAutoAdaptiveTextView:Landroid/widget/TextView;
 
     .line 85
     const v1, 0x7f0d0187
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/NewModePreview;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/NewModePreview;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/ListView;
 
-    iput-object v1, p0, Lcom/android/settings/NewModePreview;->mListView:Landroid/widget/ListView;
+    iput-object v1, p0, Lcom/android/settings_ex/NewModePreview;->mListView:Landroid/widget/ListView;
 
     .line 87
-    invoke-virtual {p0}, Lcom/android/settings/NewModePreview;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewModePreview;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -245,7 +245,7 @@
 
     .line 91
     .local v4, "divider_inset_size":I
-    invoke-static {p0}, Lcom/android/settings/Utils;->isRTL(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/android/settings_ex/Utils;->isRTL(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -254,7 +254,7 @@
     .line 92
     new-instance v0, Landroid/graphics/drawable/InsetDrawable;
 
-    iget-object v1, p0, Lcom/android/settings/NewModePreview;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/NewModePreview;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1}, Landroid/widget/ListView;->getDivider()Landroid/graphics/drawable/Drawable;
 
@@ -270,38 +270,38 @@
 
     .line 93
     .local v0, "insetdivider":Landroid/graphics/drawable/InsetDrawable;
-    iget-object v1, p0, Lcom/android/settings/NewModePreview;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/NewModePreview;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ListView;->setDivider(Landroid/graphics/drawable/Drawable;)V
 
     .line 100
     :goto_0
-    new-instance v1, Lcom/android/settings/NewModePreview$RadioAdapter;
+    new-instance v1, Lcom/android/settings_ex/NewModePreview$RadioAdapter;
 
     const v2, 0x7f040125
 
-    sget-object v3, Lcom/android/settings/NewModePreview;->mModeItem:[Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/NewModePreview;->mModeItem:[Ljava/lang/String;
 
-    invoke-direct {v1, p0, v2, v3}, Lcom/android/settings/NewModePreview$RadioAdapter;-><init>(Landroid/content/Context;I[Ljava/lang/String;)V
+    invoke-direct {v1, p0, v2, v3}, Lcom/android/settings_ex/NewModePreview$RadioAdapter;-><init>(Landroid/content/Context;I[Ljava/lang/String;)V
 
-    iput-object v1, p0, Lcom/android/settings/NewModePreview;->adapter:Lcom/android/settings/NewModePreview$RadioAdapter;
+    iput-object v1, p0, Lcom/android/settings_ex/NewModePreview;->adapter:Lcom/android/settings_ex/NewModePreview$RadioAdapter;
 
     .line 102
-    iget-object v1, p0, Lcom/android/settings/NewModePreview;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/NewModePreview;->mListView:Landroid/widget/ListView;
 
-    iget-object v2, p0, Lcom/android/settings/NewModePreview;->adapter:Lcom/android/settings/NewModePreview$RadioAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/NewModePreview;->adapter:Lcom/android/settings_ex/NewModePreview$RadioAdapter;
 
     invoke-virtual {v1, v2}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 103
-    iget-object v1, p0, Lcom/android/settings/NewModePreview;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/NewModePreview;->mListView:Landroid/widget/ListView;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/widget/ListView;->setItemsCanFocus(Z)V
 
     .line 104
-    invoke-virtual {p0}, Lcom/android/settings/NewModePreview;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewModePreview;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -328,19 +328,19 @@
 
     .line 113
     :goto_1
-    iget-object v1, p0, Lcom/android/settings/NewModePreview;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/NewModePreview;->mListView:Landroid/widget/ListView;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v10, v2}, Landroid/widget/ListView;->setItemChecked(IZ)V
 
     .line 114
-    iget-object v1, p0, Lcom/android/settings/NewModePreview;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/NewModePreview;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1, p0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 115
-    iget-object v1, p0, Lcom/android/settings/NewModePreview;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/NewModePreview;->mListView:Landroid/widget/ListView;
 
     const/4 v2, 0x2
 
@@ -356,7 +356,7 @@
     :cond_0
     new-instance v0, Landroid/graphics/drawable/InsetDrawable;
 
-    iget-object v1, p0, Lcom/android/settings/NewModePreview;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/NewModePreview;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1}, Landroid/widget/ListView;->getDivider()Landroid/graphics/drawable/Drawable;
 
@@ -374,7 +374,7 @@
 
     .line 96
     .restart local v0    # "insetdivider":Landroid/graphics/drawable/InsetDrawable;
-    iget-object v1, p0, Lcom/android/settings/NewModePreview;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/NewModePreview;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ListView;->setDivider(Landroid/graphics/drawable/Drawable;)V
 
@@ -384,7 +384,7 @@
     .restart local v8    # "isChecked":I
     .restart local v10    # "selectedBtn":I
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/NewModePreview;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewModePreview;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -439,12 +439,12 @@
     if-nez p3, :cond_0
 
     .line 148
-    iget-object v1, p0, Lcom/android/settings/NewModePreview;->mAutoAdaptiveTextView:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/NewModePreview;->mAutoAdaptiveTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 150
-    invoke-virtual {p0}, Lcom/android/settings/NewModePreview;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewModePreview;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -455,7 +455,7 @@
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 151
-    iget-object v1, p0, Lcom/android/settings/NewModePreview;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/NewModePreview;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1}, Landroid/widget/ListView;->getCount()I
 
@@ -493,14 +493,14 @@
 
     .line 153
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/NewModePreview;->mAutoAdaptiveTextView:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/NewModePreview;->mAutoAdaptiveTextView:Landroid/widget/TextView;
 
     const/4 v2, 0x4
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 155
-    invoke-virtual {p0}, Lcom/android/settings/NewModePreview;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewModePreview;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -509,13 +509,13 @@
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 156
-    invoke-virtual {p0}, Lcom/android/settings/NewModePreview;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewModePreview;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
     const-string v2, "screen_mode_setting"
 
-    iget-object v3, p0, Lcom/android/settings/NewModePreview;->mListView:Landroid/widget/ListView;
+    iget-object v3, p0, Lcom/android/settings_ex/NewModePreview;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v3}, Landroid/widget/ListView;->getCheckedItemPosition()I
 
@@ -549,7 +549,7 @@
 
     .line 168
     .local v0, "idx":I
-    invoke-virtual {p0}, Lcom/android/settings/NewModePreview;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewModePreview;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -562,7 +562,7 @@
     if-ne v1, v3, :cond_1
 
     .line 169
-    iget-object v1, p0, Lcom/android/settings/NewModePreview;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/NewModePreview;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1}, Landroid/widget/ListView;->getCount()I
 
@@ -584,7 +584,7 @@
     .line 171
     .restart local v0    # "idx":I
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/NewModePreview;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewModePreview;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -604,7 +604,7 @@
     const/4 v5, 0x1
 
     .line 122
-    invoke-virtual {p0}, Lcom/android/settings/NewModePreview;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewModePreview;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -616,7 +616,7 @@
 
     .line 123
     .local v0, "adaptiveValue":I
-    invoke-virtual {p0}, Lcom/android/settings/NewModePreview;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewModePreview;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -635,7 +635,7 @@
 
     .line 127
     .local v2, "idx":I
-    iget-object v3, p0, Lcom/android/settings/NewModePreview;->mListView:Landroid/widget/ListView;
+    iget-object v3, p0, Lcom/android/settings_ex/NewModePreview;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v3}, Landroid/widget/ListView;->getCount()I
 
@@ -666,7 +666,7 @@
     const/4 v1, 0x0
 
     .line 138
-    iget-object v0, p0, Lcom/android/settings/NewModePreview;->mListView:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/android/settings_ex/NewModePreview;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v0}, Landroid/widget/ListView;->getCheckedItemPosition()I
 
@@ -678,17 +678,17 @@
 
     move-object v2, v1
 
-    invoke-virtual/range {v0 .. v5}, Lcom/android/settings/NewModePreview;->onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    invoke-virtual/range {v0 .. v5}, Lcom/android/settings_ex/NewModePreview;->onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
 
     .line 139
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
     .line 140
-    invoke-virtual {p0}, Lcom/android/settings/NewModePreview;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewModePreview;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/android/settings/Utils;->applyLandscapeFullScreen(Landroid/content/Context;Landroid/view/Window;)V
+    invoke-static {p0, v0}, Lcom/android/settings_ex/Utils;->applyLandscapeFullScreen(Landroid/content/Context;Landroid/view/Window;)V
 
     .line 141
     return-void

@@ -1,14 +1,14 @@
-.class final Lcom/android/settingslib/applications/ApplicationsState$12;
+.class final Lcom/android/settings_exlib/applications/ApplicationsState$12;
 .super Ljava/lang/Object;
 .source "ApplicationsState.java"
 
 # interfaces
-.implements Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+.implements Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/applications/ApplicationsState;
+    value = Lcom/android/settings_exlib/applications/ApplicationsState;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,9 +30,9 @@
 
 
 # virtual methods
-.method public filterApp(Lcom/android/settingslib/applications/ApplicationsState$AppEntry;)Z
+.method public filterApp(Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;)Z
     .locals 1
-    .param p1, "entry"    # Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+    .param p1, "entry"    # Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
 
     .prologue
     .line 1386

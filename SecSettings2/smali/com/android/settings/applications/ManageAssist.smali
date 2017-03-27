@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/applications/ManageAssist;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/applications/ManageAssist;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "ManageAssist.java"
 
 # interfaces
@@ -9,13 +9,13 @@
 # instance fields
 .field private mContextPref:Landroid/preference/SwitchPreference;
 
-.field private mDefaultAssitPref:Lcom/android/settings/applications/DefaultAssistPreference;
+.field private mDefaultAssitPref:Lcom/android/settings_ex/applications/DefaultAssistPreference;
 
 .field private mHandler:Landroid/os/Handler;
 
 .field private mScreenshotPref:Landroid/preference/SwitchPreference;
 
-.field private mVoiceInputPref:Lcom/android/settings/voice/VoiceInputListPreference;
+.field private mVoiceInputPref:Lcom/android/settings_ex/voice/VoiceInputListPreference;
 
 
 # direct methods
@@ -24,37 +24,37 @@
 
     .prologue
     .line 46
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 58
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/applications/ManageAssist;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/applications/ManageAssist;->mHandler:Landroid/os/Handler;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/applications/ManageAssist;)V
+.method static synthetic access$000(Lcom/android/settings_ex/applications/ManageAssist;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/applications/ManageAssist;
+    .param p0, "x0"    # Lcom/android/settings_ex/applications/ManageAssist;
 
     .prologue
     .line 46
-    invoke-direct {p0}, Lcom/android/settings/applications/ManageAssist;->updateUi()V
+    invoke-direct {p0}, Lcom/android/settings_ex/applications/ManageAssist;->updateUi()V
 
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/applications/ManageAssist;Ljava/lang/String;)V
+.method static synthetic access$100(Lcom/android/settings_ex/applications/ManageAssist;Ljava/lang/String;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/applications/ManageAssist;
+    .param p0, "x0"    # Lcom/android/settings_ex/applications/ManageAssist;
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 46
-    invoke-direct {p0, p1}, Lcom/android/settings/applications/ManageAssist;->setDefaultAssist(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/applications/ManageAssist;->setDefaultAssist(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -69,17 +69,17 @@
     const/4 v9, 0x1
 
     .line 181
-    iget-object v7, p0, Lcom/android/settings/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings/applications/DefaultAssistPreference;
+    iget-object v7, p0, Lcom/android/settings_ex/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings_ex/applications/DefaultAssistPreference;
 
-    invoke-virtual {v7, p1}, Lcom/android/settings/applications/DefaultAssistPreference;->findIndexOfValue(Ljava/lang/String;)I
+    invoke-virtual {v7, p1}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->findIndexOfValue(Ljava/lang/String;)I
 
     move-result v5
 
     .line 182
     .local v5, "selected":I
-    iget-object v7, p0, Lcom/android/settings/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings/applications/DefaultAssistPreference;
+    iget-object v7, p0, Lcom/android/settings_ex/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings_ex/applications/DefaultAssistPreference;
 
-    invoke-virtual {v7}, Lcom/android/settings/applications/DefaultAssistPreference;->getEntries()[Ljava/lang/CharSequence;
+    invoke-virtual {v7}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->getEntries()[Ljava/lang/CharSequence;
 
     move-result-object v7
 
@@ -93,7 +93,7 @@
 
     aput-object v0, v8, v10
 
-    invoke-virtual {p0, v7, v8}, Lcom/android/settings/applications/ManageAssist;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v7, v8}, Lcom/android/settings_ex/applications/ManageAssist;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -105,21 +105,21 @@
 
     aput-object v0, v8, v10
 
-    invoke-virtual {p0, v7, v8}, Lcom/android/settings/applications/ManageAssist;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v7, v8}, Lcom/android/settings_ex/applications/ManageAssist;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
     .line 187
     .local v3, "message":Ljava/lang/String;
-    new-instance v4, Lcom/android/settings/applications/ManageAssist$2;
+    new-instance v4, Lcom/android/settings_ex/applications/ManageAssist$2;
 
-    invoke-direct {v4, p0, p1}, Lcom/android/settings/applications/ManageAssist$2;-><init>(Lcom/android/settings/applications/ManageAssist;Ljava/lang/String;)V
+    invoke-direct {v4, p0, p1}, Lcom/android/settings_ex/applications/ManageAssist$2;-><init>(Lcom/android/settings_ex/applications/ManageAssist;Ljava/lang/String;)V
 
     .line 194
     .local v4, "onAgree":Landroid/content/DialogInterface$OnClickListener;
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/applications/ManageAssist;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/ManageAssist;->getContext()Landroid/content/Context;
 
     move-result-object v7
 
@@ -169,17 +169,17 @@
 
     .prologue
     .line 174
-    iget-object v2, p0, Lcom/android/settings/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings/applications/DefaultAssistPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings_ex/applications/DefaultAssistPreference;
 
-    invoke-virtual {v2}, Lcom/android/settings/applications/DefaultAssistPreference;->getCurrentAssist()Landroid/content/ComponentName;
+    invoke-virtual {v2}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->getCurrentAssist()Landroid/content/ComponentName;
 
     move-result-object v1
 
     .line 175
     .local v1, "currentAssist":Landroid/content/ComponentName;
-    iget-object v2, p0, Lcom/android/settings/applications/ManageAssist;->mVoiceInputPref:Lcom/android/settings/voice/VoiceInputListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/ManageAssist;->mVoiceInputPref:Lcom/android/settings_ex/voice/VoiceInputListPreference;
 
-    invoke-virtual {v2}, Lcom/android/settings/voice/VoiceInputListPreference;->getCurrentService()Landroid/content/ComponentName;
+    invoke-virtual {v2}, Lcom/android/settings_ex/voice/VoiceInputListPreference;->getCurrentService()Landroid/content/ComponentName;
 
     move-result-object v0
 
@@ -215,11 +215,11 @@
 
     .prologue
     .line 138
-    iget-object v0, p0, Lcom/android/settings/applications/ManageAssist;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageAssist;->mHandler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/android/settings/applications/ManageAssist$1;
+    new-instance v1, Lcom/android/settings_ex/applications/ManageAssist$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/applications/ManageAssist$1;-><init>(Lcom/android/settings/applications/ManageAssist;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/applications/ManageAssist$1;-><init>(Lcom/android/settings_ex/applications/ManageAssist;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -233,12 +233,12 @@
 
     .prologue
     .line 205
-    iget-object v0, p0, Lcom/android/settings/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings/applications/DefaultAssistPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings_ex/applications/DefaultAssistPreference;
 
-    invoke-virtual {v0, p1}, Lcom/android/settings/applications/DefaultAssistPreference;->setValue(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->setValue(Ljava/lang/String;)V
 
     .line 206
-    invoke-direct {p0}, Lcom/android/settings/applications/ManageAssist;->updateUi()V
+    invoke-direct {p0}, Lcom/android/settings_ex/applications/ManageAssist;->updateUi()V
 
     .line 207
     return-void
@@ -251,19 +251,19 @@
     const/4 v2, 0x0
 
     .line 147
-    iget-object v3, p0, Lcom/android/settings/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings/applications/DefaultAssistPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings_ex/applications/DefaultAssistPreference;
 
-    invoke-virtual {v3}, Lcom/android/settings/applications/DefaultAssistPreference;->refreshAssistApps()V
+    invoke-virtual {v3}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->refreshAssistApps()V
 
     .line 148
-    iget-object v3, p0, Lcom/android/settings/applications/ManageAssist;->mVoiceInputPref:Lcom/android/settings/voice/VoiceInputListPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/ManageAssist;->mVoiceInputPref:Lcom/android/settings_ex/voice/VoiceInputListPreference;
 
-    invoke-virtual {v3}, Lcom/android/settings/voice/VoiceInputListPreference;->refreshVoiceInputs()V
+    invoke-virtual {v3}, Lcom/android/settings_ex/voice/VoiceInputListPreference;->refreshVoiceInputs()V
 
     .line 150
-    iget-object v3, p0, Lcom/android/settings/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings/applications/DefaultAssistPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings_ex/applications/DefaultAssistPreference;
 
-    invoke-virtual {v3}, Lcom/android/settings/applications/DefaultAssistPreference;->getCurrentAssist()Landroid/content/ComponentName;
+    invoke-virtual {v3}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->getCurrentAssist()Landroid/content/ComponentName;
 
     move-result-object v0
 
@@ -279,45 +279,45 @@
     if-eqz v1, :cond_2
 
     .line 153
-    invoke-virtual {p0}, Lcom/android/settings/applications/ManageAssist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/ManageAssist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/applications/ManageAssist;->mContextPref:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/ManageAssist;->mContextPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v3, v4}, Landroid/preference/PreferenceScreen;->addPreference(Landroid/preference/Preference;)Z
 
     .line 154
-    invoke-virtual {p0}, Lcom/android/settings/applications/ManageAssist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/ManageAssist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/applications/ManageAssist;->mScreenshotPref:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/ManageAssist;->mScreenshotPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v3, v4}, Landroid/preference/PreferenceScreen;->addPreference(Landroid/preference/Preference;)Z
 
     .line 160
     :goto_1
-    invoke-direct {p0}, Lcom/android/settings/applications/ManageAssist;->isCurrentAssistVoiceService()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/applications/ManageAssist;->isCurrentAssistVoiceService()Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
     .line 161
-    invoke-virtual {p0}, Lcom/android/settings/applications/ManageAssist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/ManageAssist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/applications/ManageAssist;->mVoiceInputPref:Lcom/android/settings/voice/VoiceInputListPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/ManageAssist;->mVoiceInputPref:Lcom/android/settings_ex/voice/VoiceInputListPreference;
 
     invoke-virtual {v3, v4}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 167
     :goto_2
-    iget-object v3, p0, Lcom/android/settings/applications/ManageAssist;->mScreenshotPref:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/ManageAssist;->mScreenshotPref:Landroid/preference/SwitchPreference;
 
-    iget-object v4, p0, Lcom/android/settings/applications/ManageAssist;->mContextPref:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/ManageAssist;->mContextPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4}, Landroid/preference/SwitchPreference;->isChecked()Z
 
@@ -326,7 +326,7 @@
     invoke-virtual {v3, v4}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 168
-    iget-object v3, p0, Lcom/android/settings/applications/ManageAssist;->mContextPref:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/ManageAssist;->mContextPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v3}, Landroid/preference/SwitchPreference;->isChecked()Z
 
@@ -335,7 +335,7 @@
     if-nez v3, :cond_0
 
     .line 169
-    iget-object v3, p0, Lcom/android/settings/applications/ManageAssist;->mScreenshotPref:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/ManageAssist;->mScreenshotPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v3, v2}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
@@ -353,20 +353,20 @@
     .line 156
     .restart local v1    # "hasAssistant":Z
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/applications/ManageAssist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/ManageAssist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/applications/ManageAssist;->mContextPref:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/ManageAssist;->mContextPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v3, v4}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 157
-    invoke-virtual {p0}, Lcom/android/settings/applications/ManageAssist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/ManageAssist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/applications/ManageAssist;->mScreenshotPref:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/ManageAssist;->mScreenshotPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v3, v4}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
@@ -374,18 +374,18 @@
 
     .line 163
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/applications/ManageAssist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/ManageAssist;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/applications/ManageAssist;->mVoiceInputPref:Lcom/android/settings/voice/VoiceInputListPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/ManageAssist;->mVoiceInputPref:Lcom/android/settings_ex/voice/VoiceInputListPreference;
 
     invoke-virtual {v3, v4}, Landroid/preference/PreferenceScreen;->addPreference(Landroid/preference/Preference;)Z
 
     .line 164
-    iget-object v3, p0, Lcom/android/settings/applications/ManageAssist;->mVoiceInputPref:Lcom/android/settings/voice/VoiceInputListPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/ManageAssist;->mVoiceInputPref:Lcom/android/settings_ex/voice/VoiceInputListPreference;
 
-    invoke-virtual {v3, v0}, Lcom/android/settings/voice/VoiceInputListPreference;->setAssistRestrict(Landroid/content/ComponentName;)V
+    invoke-virtual {v3, v0}, Lcom/android/settings_ex/voice/VoiceInputListPreference;->setAssistRestrict(Landroid/content/ComponentName;)V
 
     goto :goto_2
 .end method
@@ -408,17 +408,17 @@
 
     .prologue
     .line 211
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 212
-    iget-object v0, p0, Lcom/android/settings/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings/applications/DefaultAssistPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings_ex/applications/DefaultAssistPreference;
 
     if-eqz v0, :cond_0
 
     .line 213
-    iget-object v0, p0, Lcom/android/settings/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings/applications/DefaultAssistPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings_ex/applications/DefaultAssistPreference;
 
-    invoke-virtual {v0}, Lcom/android/settings/applications/DefaultAssistPreference;->rotateSettingsListPreference()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->rotateSettingsListPreference()V
 
     .line 215
     :cond_0
@@ -435,44 +435,44 @@
     const/4 v1, 0x1
 
     .line 62
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 63
     const v0, 0x7f080072
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/applications/ManageAssist;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/applications/ManageAssist;->addPreferencesFromResource(I)V
 
     .line 65
     const-string v0, "default_assist"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/applications/ManageAssist;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/applications/ManageAssist;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/applications/DefaultAssistPreference;
+    check-cast v0, Lcom/android/settings_ex/applications/DefaultAssistPreference;
 
-    iput-object v0, p0, Lcom/android/settings/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings/applications/DefaultAssistPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings_ex/applications/DefaultAssistPreference;
 
     .line 66
-    iget-object v0, p0, Lcom/android/settings/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings/applications/DefaultAssistPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings_ex/applications/DefaultAssistPreference;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/applications/DefaultAssistPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 68
     const-string v0, "context"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/applications/ManageAssist;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/applications/ManageAssist;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/SwitchPreference;
 
-    iput-object v0, p0, Lcom/android/settings/applications/ManageAssist;->mContextPref:Landroid/preference/SwitchPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/applications/ManageAssist;->mContextPref:Landroid/preference/SwitchPreference;
 
     .line 69
-    iget-object v3, p0, Lcom/android/settings/applications/ManageAssist;->mContextPref:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/ManageAssist;->mContextPref:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/applications/ManageAssist;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/ManageAssist;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -490,25 +490,25 @@
     invoke-virtual {v3, v0}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 71
-    iget-object v0, p0, Lcom/android/settings/applications/ManageAssist;->mContextPref:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageAssist;->mContextPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v0, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 73
     const-string v0, "screenshot"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/applications/ManageAssist;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/applications/ManageAssist;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/SwitchPreference;
 
-    iput-object v0, p0, Lcom/android/settings/applications/ManageAssist;->mScreenshotPref:Landroid/preference/SwitchPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/applications/ManageAssist;->mScreenshotPref:Landroid/preference/SwitchPreference;
 
     .line 74
-    iget-object v0, p0, Lcom/android/settings/applications/ManageAssist;->mScreenshotPref:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageAssist;->mScreenshotPref:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/applications/ManageAssist;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/ManageAssist;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -524,23 +524,23 @@
     invoke-virtual {v0, v1}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 76
-    iget-object v0, p0, Lcom/android/settings/applications/ManageAssist;->mScreenshotPref:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageAssist;->mScreenshotPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v0, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 78
     const-string v0, "voice_input_settings"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/applications/ManageAssist;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/applications/ManageAssist;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/voice/VoiceInputListPreference;
+    check-cast v0, Lcom/android/settings_ex/voice/VoiceInputListPreference;
 
-    iput-object v0, p0, Lcom/android/settings/applications/ManageAssist;->mVoiceInputPref:Lcom/android/settings/voice/VoiceInputListPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/applications/ManageAssist;->mVoiceInputPref:Lcom/android/settings_ex/voice/VoiceInputListPreference;
 
     .line 79
-    invoke-direct {p0}, Lcom/android/settings/applications/ManageAssist;->updateUi()V
+    invoke-direct {p0}, Lcom/android/settings_ex/applications/ManageAssist;->updateUi()V
 
     .line 80
     return-void
@@ -569,12 +569,12 @@
     const/4 v2, 0x0
 
     .line 109
-    iget-object v4, p0, Lcom/android/settings/applications/ManageAssist;->mContextPref:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/ManageAssist;->mContextPref:Landroid/preference/SwitchPreference;
 
     if-ne p1, v4, :cond_2
 
     .line 110
-    invoke-virtual {p0}, Lcom/android/settings/applications/ManageAssist;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/ManageAssist;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -595,7 +595,7 @@
     invoke-static {v4, v5, v2}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 112
-    invoke-direct {p0}, Lcom/android/settings/applications/ManageAssist;->postUpdateUi()V
+    invoke-direct {p0}, Lcom/android/settings_ex/applications/ManageAssist;->postUpdateUi()V
 
     move v2, v3
 
@@ -607,12 +607,12 @@
     .line 115
     .restart local p2    # "newValue":Ljava/lang/Object;
     :cond_2
-    iget-object v4, p0, Lcom/android/settings/applications/ManageAssist;->mScreenshotPref:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/ManageAssist;->mScreenshotPref:Landroid/preference/SwitchPreference;
 
     if-ne p1, v4, :cond_4
 
     .line 116
-    invoke-virtual {p0}, Lcom/android/settings/applications/ManageAssist;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/ManageAssist;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -640,7 +640,7 @@
     .line 120
     .restart local p2    # "newValue":Ljava/lang/Object;
     :cond_4
-    iget-object v3, p0, Lcom/android/settings/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings/applications/DefaultAssistPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings_ex/applications/DefaultAssistPreference;
 
     if-ne p1, v3, :cond_1
 
@@ -665,15 +665,15 @@
     :cond_5
     const-string v3, ""
 
-    invoke-direct {p0, v3}, Lcom/android/settings/applications/ManageAssist;->setDefaultAssist(Ljava/lang/String;)V
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/applications/ManageAssist;->setDefaultAssist(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 128
     :cond_6
-    iget-object v3, p0, Lcom/android/settings/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings/applications/DefaultAssistPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings_ex/applications/DefaultAssistPreference;
 
-    invoke-virtual {v3}, Lcom/android/settings/applications/DefaultAssistPreference;->getValue()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
@@ -689,7 +689,7 @@
 
     .line 130
     :cond_7
-    invoke-direct {p0, v1}, Lcom/android/settings/applications/ManageAssist;->confirmNewAssist(Ljava/lang/String;)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/applications/ManageAssist;->confirmNewAssist(Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -703,10 +703,10 @@
     const/4 v4, 0x0
 
     .line 84
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 87
-    invoke-direct {p0}, Lcom/android/settings/applications/ManageAssist;->updateUi()V
+    invoke-direct {p0}, Lcom/android/settings_ex/applications/ManageAssist;->updateUi()V
 
     .line 88
     new-instance v0, Landroid/content/Intent;
@@ -717,7 +717,7 @@
 
     .line 89
     .local v0, "intent":Landroid/content/Intent;
-    invoke-virtual {p0}, Lcom/android/settings/applications/ManageAssist;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/ManageAssist;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -737,28 +737,28 @@
 
     aput-object v8, v7, v4
 
-    invoke-static {v2, v5, v6, v7}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-static {v2, v5, v6, v7}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v1
 
     .line 96
     .local v1, "isChangeAllowed":I
-    iget-object v5, p0, Lcom/android/settings/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings/applications/DefaultAssistPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/applications/ManageAssist;->mDefaultAssitPref:Lcom/android/settings_ex/applications/DefaultAssistPreference;
 
     if-eqz v1, :cond_0
 
     move v2, v3
 
     :goto_0
-    invoke-virtual {v5, v2}, Lcom/android/settings/applications/DefaultAssistPreference;->setEnabled(Z)V
+    invoke-virtual {v5, v2}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->setEnabled(Z)V
 
     .line 97
-    iget-object v2, p0, Lcom/android/settings/applications/ManageAssist;->mVoiceInputPref:Lcom/android/settings/voice/VoiceInputListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/ManageAssist;->mVoiceInputPref:Lcom/android/settings_ex/voice/VoiceInputListPreference;
 
     if-eqz v1, :cond_1
 
     :goto_1
-    invoke-virtual {v2, v3}, Lcom/android/settings/voice/VoiceInputListPreference;->setEnabled(Z)V
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/voice/VoiceInputListPreference;->setEnabled(Z)V
 
     .line 100
     return-void

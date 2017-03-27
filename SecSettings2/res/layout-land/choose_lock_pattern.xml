@@ -13,7 +13,7 @@
         </LinearLayout>
     </LinearLayout>
     <LinearLayout android:orientation="horizontal" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" style="@style/SecurityPreferenceButtonContainer">
-        <com.android.settings.widget.BottomBarButton android:textSize="@dimen/lockscreen_bottom_button_size" android:id="@id/footerLeftButton" android:text="@string/lockpattern_restart_button_text" style="@style/SecurityPreferenceButton" />
-        <com.android.settings.widget.BottomBarButton android:textSize="@dimen/lockscreen_bottom_button_size" android:id="@id/footerRightButton" android:text="@string/lockpattern_confirm_button_text" style="@style/SecurityPreferenceButton" />
+        <com.android.settings_ex.widget.BottomBarButton android:textSize="@dimen/lockscreen_bottom_button_size" android:id="@id/footerLeftButton" android:text="@string/lockpattern_restart_button_text" style="@style/SecurityPreferenceButton" />
+        <com.android.settings_ex.widget.BottomBarButton android:textSize="@dimen/lockscreen_bottom_button_size" android:id="@id/footerRightButton" android:text="@string/lockpattern_confirm_button_text" style="@style/SecurityPreferenceButton" />
     </LinearLayout>
 </com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient>

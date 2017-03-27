@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wfd/WfdHelpActivity$1;
+.class Lcom/android/settings_ex/wfd/WfdHelpActivity$1;
 .super Ljava/lang/Object;
 .source "WfdHelpActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wfd/WfdHelpActivity;
+    value = Lcom/android/settings_ex/wfd/WfdHelpActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wfd/WfdHelpActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/wfd/WfdHelpActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wfd/WfdHelpActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/wfd/WfdHelpActivity;)V
     .locals 0
 
     .prologue
     .line 64
-    iput-object p1, p0, Lcom/android/settings/wfd/WfdHelpActivity$1;->this$0:Lcom/android/settings/wfd/WfdHelpActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/wfd/WfdHelpActivity$1;->this$0:Lcom/android/settings_ex/wfd/WfdHelpActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,10 +43,10 @@
 
     .prologue
     .line 67
-    iget-object v0, p0, Lcom/android/settings/wfd/WfdHelpActivity$1;->this$0:Lcom/android/settings/wfd/WfdHelpActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WfdHelpActivity$1;->this$0:Lcom/android/settings_ex/wfd/WfdHelpActivity;
 
-    # setter for: Lcom/android/settings/wfd/WfdHelpActivity;->mIsReadOnlyChecked:Z
-    invoke-static {v0, p2}, Lcom/android/settings/wfd/WfdHelpActivity;->access$002(Lcom/android/settings/wfd/WfdHelpActivity;Z)Z
+    # setter for: Lcom/android/settings_ex/wfd/WfdHelpActivity;->mIsReadOnlyChecked:Z
+    invoke-static {v0, p2}, Lcom/android/settings_ex/wfd/WfdHelpActivity;->access$002(Lcom/android/settings_ex/wfd/WfdHelpActivity;Z)Z
 
     .line 68
     return-void

@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;
+.class public Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;
 .super Landroid/app/DialogFragment;
 .source "PackageSettingActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;
+    value = Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -37,7 +37,7 @@
 
     .prologue
     .line 555
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -89,7 +89,7 @@
 
     check-cast v8, Landroid/widget/EditText;
 
-    iput-object v8, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->dataLimitText:Landroid/widget/EditText;
+    iput-object v8, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->dataLimitText:Landroid/widget/EditText;
 
     .line 563
     const/16 v8, 0x8
@@ -97,14 +97,14 @@
     invoke-virtual {v2, v8}, Landroid/widget/EditText;->setVisibility(I)V
 
     .line 564
-    iget-object v8, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->dataLimitText:Landroid/widget/EditText;
+    iget-object v8, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->dataLimitText:Landroid/widget/EditText;
 
     const/4 v9, 0x0
 
     invoke-virtual {v8, v9}, Landroid/widget/EditText;->setVisibility(I)V
 
     .line 565
-    iget-object v8, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->dataLimitText:Landroid/widget/EditText;
+    iget-object v8, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->dataLimitText:Landroid/widget/EditText;
 
     const/4 v9, 0x1
 
@@ -133,7 +133,7 @@
 
     .line 570
     .local v5, "sharedpre":Landroid/content/SharedPreferences;
-    sget v8, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sget v8, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     if-nez v8, :cond_1
 
@@ -149,12 +149,12 @@
     .line 574
     :cond_0
     :goto_0
-    iget-object v8, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->dataLimitText:Landroid/widget/EditText;
+    iget-object v8, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->dataLimitText:Landroid/widget/EditText;
 
     invoke-virtual {v8, v4}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 575
-    iget-object v8, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->dataLimitText:Landroid/widget/EditText;
+    iget-object v8, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->dataLimitText:Landroid/widget/EditText;
 
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
@@ -188,9 +188,9 @@
     .line 581
     const v8, 0x7f0e0ca8
 
-    new-instance v9, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$2;
+    new-instance v9, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$2;
 
-    invoke-direct {v9, p0, v1}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$2;-><init>(Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;Landroid/content/Context;)V
+    invoke-direct {v9, p0, v1}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$2;-><init>(Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;Landroid/content/Context;)V
 
     invoke-virtual {v0, v8, v9}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -211,7 +211,7 @@
     .line 572
     .end local v6    # "subTitleView":Landroid/widget/TextView;
     :cond_1
-    sget v8, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sget v8, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     const/4 v9, 0x1
 
@@ -237,7 +237,7 @@
     invoke-super {p0}, Landroid/app/DialogFragment;->onStart()V
 
     .line 523
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->getDialog()Landroid/app/Dialog;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->getDialog()Landroid/app/Dialog;
 
     move-result-object v0
 
@@ -256,11 +256,11 @@
 
     .line 526
     .local v1, "positiveBtn":Landroid/widget/Button;
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->dataLimitText:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->dataLimitText:Landroid/widget/EditText;
 
-    new-instance v3, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$1;
+    new-instance v3, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$1;
 
-    invoke-direct {v3, p0, v1}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$1;-><init>(Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;Landroid/widget/Button;)V
+    invoke-direct {v3, p0, v1}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$1;-><init>(Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;Landroid/widget/Button;)V
 
     invoke-virtual {v2, v3}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 

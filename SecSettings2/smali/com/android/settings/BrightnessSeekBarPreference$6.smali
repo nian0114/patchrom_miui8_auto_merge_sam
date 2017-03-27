@@ -1,4 +1,4 @@
-.class Lcom/android/settings/BrightnessSeekBarPreference$6;
+.class Lcom/android/settings_ex/BrightnessSeekBarPreference$6;
 .super Ljava/lang/Object;
 .source "BrightnessSeekBarPreference.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/BrightnessSeekBarPreference;->onBindView(Landroid/view/View;)V
+    value = Lcom/android/settings_ex/BrightnessSeekBarPreference;->onBindView(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/BrightnessSeekBarPreference;
+.field final synthetic this$0:Lcom/android/settings_ex/BrightnessSeekBarPreference;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/BrightnessSeekBarPreference;)V
+.method constructor <init>(Lcom/android/settings_ex/BrightnessSeekBarPreference;)V
     .locals 0
 
     .prologue
     .line 221
-    iput-object p1, p0, Lcom/android/settings/BrightnessSeekBarPreference$6;->this$0:Lcom/android/settings/BrightnessSeekBarPreference;
+    iput-object p1, p0, Lcom/android/settings_ex/BrightnessSeekBarPreference$6;->this$0:Lcom/android/settings_ex/BrightnessSeekBarPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,10 +50,10 @@
     if-nez v0, :cond_0
 
     .line 225
-    iget-object v0, p0, Lcom/android/settings/BrightnessSeekBarPreference$6;->this$0:Lcom/android/settings/BrightnessSeekBarPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessSeekBarPreference$6;->this$0:Lcom/android/settings_ex/BrightnessSeekBarPreference;
 
-    # getter for: Lcom/android/settings/BrightnessSeekBarPreference;->mCheckBox:Landroid/widget/CheckBox;
-    invoke-static {v0}, Lcom/android/settings/BrightnessSeekBarPreference;->access$700(Lcom/android/settings/BrightnessSeekBarPreference;)Landroid/widget/CheckBox;
+    # getter for: Lcom/android/settings_ex/BrightnessSeekBarPreference;->mCheckBox:Landroid/widget/CheckBox;
+    invoke-static {v0}, Lcom/android/settings_ex/BrightnessSeekBarPreference;->access$700(Lcom/android/settings_ex/BrightnessSeekBarPreference;)Landroid/widget/CheckBox;
 
     move-result-object v0
 

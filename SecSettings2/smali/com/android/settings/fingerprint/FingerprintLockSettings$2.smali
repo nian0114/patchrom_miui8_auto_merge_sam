@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fingerprint/FingerprintLockSettings$2;
+.class Lcom/android/settings_ex/fingerprint/FingerprintLockSettings$2;
 .super Ljava/lang/Object;
 .source "FingerprintLockSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fingerprint/FingerprintLockSettings;->showDatabaseFailureDialog()V
+    value = Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;->showDatabaseFailureDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/FingerprintLockSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/FingerprintLockSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;)V
     .locals 0
 
     .prologue
     .line 875
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintLockSettings$2;->this$0:Lcom/android/settings/fingerprint/FingerprintLockSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintLockSettings$2;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

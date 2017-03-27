@@ -1,4 +1,4 @@
-.class Lcom/android/settings/smartbonding/SmartBondingSettings$10;
+.class Lcom/android/settings_ex/smartbonding/SmartBondingSettings$10;
 .super Ljava/lang/Object;
 .source "SmartBondingSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/smartbonding/SmartBondingSettings;->onSwitchChanged(Landroid/widget/Switch;Z)V
+    value = Lcom/android/settings_ex/smartbonding/SmartBondingSettings;->onSwitchChanged(Landroid/widget/Switch;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/smartbonding/SmartBondingSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/smartbonding/SmartBondingSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/smartbonding/SmartBondingSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/smartbonding/SmartBondingSettings;)V
     .locals 0
 
     .prologue
     .line 409
-    iput-object p1, p0, Lcom/android/settings/smartbonding/SmartBondingSettings$10;->this$0:Lcom/android/settings/smartbonding/SmartBondingSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/smartbonding/SmartBondingSettings$10;->this$0:Lcom/android/settings_ex/smartbonding/SmartBondingSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,16 +45,16 @@
     const/4 v2, 0x1
 
     .line 411
-    iget-object v0, p0, Lcom/android/settings/smartbonding/SmartBondingSettings$10;->this$0:Lcom/android/settings/smartbonding/SmartBondingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/smartbonding/SmartBondingSettings$10;->this$0:Lcom/android/settings_ex/smartbonding/SmartBondingSettings;
 
-    # invokes: Lcom/android/settings/smartbonding/SmartBondingSettings;->sendMptcpStartBroadCast(Z)V
-    invoke-static {v0, v2}, Lcom/android/settings/smartbonding/SmartBondingSettings;->access$800(Lcom/android/settings/smartbonding/SmartBondingSettings;Z)V
+    # invokes: Lcom/android/settings_ex/smartbonding/SmartBondingSettings;->sendMptcpStartBroadCast(Z)V
+    invoke-static {v0, v2}, Lcom/android/settings_ex/smartbonding/SmartBondingSettings;->access$800(Lcom/android/settings_ex/smartbonding/SmartBondingSettings;Z)V
 
     .line 412
-    iget-object v0, p0, Lcom/android/settings/smartbonding/SmartBondingSettings$10;->this$0:Lcom/android/settings/smartbonding/SmartBondingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/smartbonding/SmartBondingSettings$10;->this$0:Lcom/android/settings_ex/smartbonding/SmartBondingSettings;
 
-    # invokes: Lcom/android/settings/smartbonding/SmartBondingSettings;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v0}, Lcom/android/settings/smartbonding/SmartBondingSettings;->access$900(Lcom/android/settings/smartbonding/SmartBondingSettings;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/smartbonding/SmartBondingSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v0}, Lcom/android/settings_ex/smartbonding/SmartBondingSettings;->access$900(Lcom/android/settings_ex/smartbonding/SmartBondingSettings;)Landroid/content/ContentResolver;
 
     move-result-object v0
 

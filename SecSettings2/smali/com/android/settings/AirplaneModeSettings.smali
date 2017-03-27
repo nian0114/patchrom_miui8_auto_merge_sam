@@ -1,13 +1,13 @@
-.class public Lcom/android/settings/AirplaneModeSettings;
+.class public Lcom/android/settings_ex/AirplaneModeSettings;
 .super Landroid/app/Fragment;
 .source "AirplaneModeSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # instance fields
@@ -15,9 +15,9 @@
 
 .field private mAirplaneModeObserver:Landroid/database/ContentObserver;
 
-.field private mEnabler:Lcom/android/settings/AirplaneModeSwitchEnabler;
+.field private mEnabler:Lcom/android/settings_ex/AirplaneModeSwitchEnabler;
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 
 # direct methods
@@ -26,11 +26,11 @@
 
     .prologue
     .line 173
-    new-instance v0, Lcom/android/settings/AirplaneModeSettings$2;
+    new-instance v0, Lcom/android/settings_ex/AirplaneModeSettings$2;
 
-    invoke-direct {v0}, Lcom/android/settings/AirplaneModeSettings$2;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/AirplaneModeSettings$2;-><init>()V
 
-    sput-object v0, Lcom/android/settings/AirplaneModeSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/AirplaneModeSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -45,29 +45,29 @@
     .line 59
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/AirplaneModeSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v0, p0, Lcom/android/settings_ex/AirplaneModeSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 66
-    new-instance v0, Lcom/android/settings/AirplaneModeSettings$1;
+    new-instance v0, Lcom/android/settings_ex/AirplaneModeSettings$1;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/AirplaneModeSettings$1;-><init>(Lcom/android/settings/AirplaneModeSettings;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/AirplaneModeSettings$1;-><init>(Lcom/android/settings_ex/AirplaneModeSettings;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/AirplaneModeSettings;->mAirplaneModeObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/AirplaneModeSettings;->mAirplaneModeObserver:Landroid/database/ContentObserver;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/AirplaneModeSettings;)V
+.method static synthetic access$000(Lcom/android/settings_ex/AirplaneModeSettings;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/AirplaneModeSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/AirplaneModeSettings;
 
     .prologue
     .line 56
-    invoke-direct {p0}, Lcom/android/settings/AirplaneModeSettings;->setDescription()V
+    invoke-direct {p0}, Lcom/android/settings_ex/AirplaneModeSettings;->setDescription()V
 
     return-void
 .end method
@@ -83,14 +83,14 @@
     const/4 v5, 0x0
 
     .line 99
-    invoke-static {}, Lcom/android/settings/Utils;->isJapanModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isJapanModel()Z
 
     move-result v6
 
     if-eqz v6, :cond_0
 
     .line 100
-    iget-object v6, p0, Lcom/android/settings/AirplaneModeSettings;->airplaneModeDesc:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/android/settings_ex/AirplaneModeSettings;->airplaneModeDesc:Landroid/widget/TextView;
 
     const/4 v7, 0x2
 
@@ -106,7 +106,7 @@
     .local v3, "resEnableMsg":I
     const-string v6, "VZW"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v7
 
@@ -119,7 +119,7 @@
     .line 106
     const/4 v6, 0x7
 
-    invoke-virtual {p0}, Lcom/android/settings/AirplaneModeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AirplaneModeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
@@ -207,7 +207,7 @@
     if-eqz v0, :cond_4
 
     .line 117
-    invoke-virtual {p0}, Lcom/android/settings/AirplaneModeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AirplaneModeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -231,7 +231,7 @@
     .end local v1    # "mImsInterfaceForGeneral":Lcom/samsung/commonimsinterface/imsinterface/IMSInterfaceForGeneral;
     .end local v2    # "reqFields":[I
     :goto_1
-    iget-object v4, p0, Lcom/android/settings/AirplaneModeSettings;->airplaneModeDesc:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/AirplaneModeSettings;->airplaneModeDesc:Landroid/widget/TextView;
 
     invoke-virtual {v4, v3}, Landroid/widget/TextView;->setText(I)V
 
@@ -255,7 +255,7 @@
 
     .line 123
     :cond_4
-    invoke-virtual {p0}, Lcom/android/settings/AirplaneModeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AirplaneModeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -300,11 +300,11 @@
     if-eqz v4, :cond_8
 
     .line 130
-    invoke-virtual {p0}, Lcom/android/settings/AirplaneModeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AirplaneModeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->isVoiceCapable(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->isVoiceCapable(Landroid/content/Context;)Z
 
     move-result v4
 
@@ -323,18 +323,18 @@
 
     .line 136
     :cond_8
-    invoke-virtual {p0}, Lcom/android/settings/AirplaneModeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AirplaneModeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->isVoiceCapable(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->isVoiceCapable(Landroid/content/Context;)Z
 
     move-result v4
 
     if-eqz v4, :cond_a
 
     .line 137
-    invoke-static {}, Lcom/android/settings/Utils;->isAllNAVendor()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isAllNAVendor()Z
 
     move-result v4
 
@@ -369,28 +369,28 @@
     invoke-super {p0, p1}, Landroid/app/Fragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 81
-    invoke-virtual {p0}, Lcom/android/settings/AirplaneModeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AirplaneModeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 82
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/AirplaneModeSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v1, p0, Lcom/android/settings_ex/AirplaneModeSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 84
-    new-instance v1, Lcom/android/settings/AirplaneModeSwitchEnabler;
+    new-instance v1, Lcom/android/settings_ex/AirplaneModeSwitchEnabler;
 
-    iget-object v2, p0, Lcom/android/settings/AirplaneModeSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/AirplaneModeSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-direct {v1, v0, v2}, Lcom/android/settings/AirplaneModeSwitchEnabler;-><init>(Landroid/content/Context;Lcom/android/settings/widget/SwitchBar;)V
+    invoke-direct {v1, v0, v2}, Lcom/android/settings_ex/AirplaneModeSwitchEnabler;-><init>(Landroid/content/Context;Lcom/android/settings_ex/widget/SwitchBar;)V
 
-    iput-object v1, p0, Lcom/android/settings/AirplaneModeSettings;->mEnabler:Lcom/android/settings/AirplaneModeSwitchEnabler;
+    iput-object v1, p0, Lcom/android/settings_ex/AirplaneModeSettings;->mEnabler:Lcom/android/settings_ex/AirplaneModeSwitchEnabler;
 
     .line 85
     return-void
@@ -434,10 +434,10 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/android/settings/AirplaneModeSettings;->airplaneModeDesc:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/AirplaneModeSettings;->airplaneModeDesc:Landroid/widget/TextView;
 
     .line 92
-    invoke-direct {p0}, Lcom/android/settings/AirplaneModeSettings;->setDescription()V
+    invoke-direct {p0}, Lcom/android/settings_ex/AirplaneModeSettings;->setDescription()V
 
     .line 94
     return-object v0
@@ -451,14 +451,14 @@
     invoke-super {p0}, Landroid/app/Fragment;->onDestroyView()V
 
     .line 169
-    iget-object v0, p0, Lcom/android/settings/AirplaneModeSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/AirplaneModeSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_0
 
     .line 170
-    iget-object v0, p0, Lcom/android/settings/AirplaneModeSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/AirplaneModeSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 171
     :cond_0
@@ -473,12 +473,12 @@
     invoke-super {p0}, Landroid/app/Fragment;->onPause()V
 
     .line 162
-    iget-object v0, p0, Lcom/android/settings/AirplaneModeSettings;->mEnabler:Lcom/android/settings/AirplaneModeSwitchEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/AirplaneModeSettings;->mEnabler:Lcom/android/settings_ex/AirplaneModeSwitchEnabler;
 
-    invoke-virtual {v0}, Lcom/android/settings/AirplaneModeSwitchEnabler;->pause()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/AirplaneModeSwitchEnabler;->pause()V
 
     .line 163
-    invoke-virtual {p0}, Lcom/android/settings/AirplaneModeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AirplaneModeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -486,7 +486,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/AirplaneModeSettings;->mAirplaneModeObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/AirplaneModeSettings;->mAirplaneModeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
@@ -502,12 +502,12 @@
     invoke-super {p0}, Landroid/app/Fragment;->onResume()V
 
     .line 154
-    iget-object v0, p0, Lcom/android/settings/AirplaneModeSettings;->mEnabler:Lcom/android/settings/AirplaneModeSwitchEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/AirplaneModeSettings;->mEnabler:Lcom/android/settings_ex/AirplaneModeSwitchEnabler;
 
-    invoke-virtual {v0}, Lcom/android/settings/AirplaneModeSwitchEnabler;->resume()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/AirplaneModeSwitchEnabler;->resume()V
 
     .line 155
-    invoke-virtual {p0}, Lcom/android/settings/AirplaneModeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AirplaneModeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -523,7 +523,7 @@
 
     const/4 v2, 0x1
 
-    iget-object v3, p0, Lcom/android/settings/AirplaneModeSettings;->mAirplaneModeObserver:Landroid/database/ContentObserver;
+    iget-object v3, p0, Lcom/android/settings_ex/AirplaneModeSettings;->mAirplaneModeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 

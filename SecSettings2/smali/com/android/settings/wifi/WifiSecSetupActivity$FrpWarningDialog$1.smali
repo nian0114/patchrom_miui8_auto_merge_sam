@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiSecSetupActivity$FrpWarningDialog$1;
+.class Lcom/android/settings_ex/wifi/WifiSecSetupActivity$FrpWarningDialog$1;
 .super Ljava/lang/Object;
 .source "WifiSecSetupActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSecSetupActivity$FrpWarningDialog;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/wifi/WifiSecSetupActivity$FrpWarningDialog;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSecSetupActivity$FrpWarningDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity$FrpWarningDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSecSetupActivity$FrpWarningDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSecSetupActivity$FrpWarningDialog;)V
     .locals 0
 
     .prologue
     .line 1355
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSecSetupActivity$FrpWarningDialog$1;->this$0:Lcom/android/settings/wifi/WifiSecSetupActivity$FrpWarningDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$FrpWarningDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity$FrpWarningDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

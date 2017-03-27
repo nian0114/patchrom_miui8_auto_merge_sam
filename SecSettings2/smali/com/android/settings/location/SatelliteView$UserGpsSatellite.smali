@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/location/SatelliteView$UserGpsSatellite;
+.class public Lcom/android/settings_ex/location/SatelliteView$UserGpsSatellite;
 .super Ljava/lang/Object;
 .source "SatelliteView.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/location/SatelliteView;
+    value = Lcom/android/settings_ex/location/SatelliteView;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -31,10 +31,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 447
-    iput-object p1, p0, Lcom/android/settings/location/SatelliteView$UserGpsSatellite;->mSat:Landroid/location/GpsSatellite;
+    iput-object p1, p0, Lcom/android/settings_ex/location/SatelliteView$UserGpsSatellite;->mSat:Landroid/location/GpsSatellite;
 
     .line 448
-    iput p2, p0, Lcom/android/settings/location/SatelliteView$UserGpsSatellite;->mSV:I
+    iput p2, p0, Lcom/android/settings_ex/location/SatelliteView$UserGpsSatellite;->mSV:I
 
     .line 449
     return-void
@@ -47,7 +47,7 @@
 
     .prologue
     .line 466
-    iget-object v0, p0, Lcom/android/settings/location/SatelliteView$UserGpsSatellite;->mSat:Landroid/location/GpsSatellite;
+    iget-object v0, p0, Lcom/android/settings_ex/location/SatelliteView$UserGpsSatellite;->mSat:Landroid/location/GpsSatellite;
 
     return-object v0
 .end method

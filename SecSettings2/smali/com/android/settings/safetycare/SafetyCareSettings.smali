@@ -1,13 +1,13 @@
-.class public Lcom/android/settings/safetycare/SafetyCareSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/safetycare/SafetyCareSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "SafetyCareSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # instance fields
@@ -44,11 +44,11 @@
 
     .prologue
     .line 435
-    new-instance v0, Lcom/android/settings/safetycare/SafetyCareSettings$5;
+    new-instance v0, Lcom/android/settings_ex/safetycare/SafetyCareSettings$5;
 
-    invoke-direct {v0}, Lcom/android/settings/safetycare/SafetyCareSettings$5;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings$5;-><init>()V
 
-    sput-object v0, Lcom/android/settings/safetycare/SafetyCareSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -58,95 +58,95 @@
 
     .prologue
     .line 87
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 115
-    new-instance v0, Lcom/android/settings/safetycare/SafetyCareSettings$1;
+    new-instance v0, Lcom/android/settings_ex/safetycare/SafetyCareSettings$1;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/safetycare/SafetyCareSettings$1;-><init>(Lcom/android/settings/safetycare/SafetyCareSettings;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/safetycare/SafetyCareSettings$1;-><init>(Lcom/android/settings_ex/safetycare/SafetyCareSettings;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mLocationModeObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mLocationModeObserver:Landroid/database/ContentObserver;
 
     .line 122
-    new-instance v0, Lcom/android/settings/safetycare/SafetyCareSettings$2;
+    new-instance v0, Lcom/android/settings_ex/safetycare/SafetyCareSettings$2;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/safetycare/SafetyCareSettings$2;-><init>(Lcom/android/settings/safetycare/SafetyCareSettings;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/safetycare/SafetyCareSettings$2;-><init>(Lcom/android/settings_ex/safetycare/SafetyCareSettings;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAssistantObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAssistantObserver:Landroid/database/ContentObserver;
 
     .line 145
-    new-instance v0, Lcom/android/settings/safetycare/SafetyCareSettings$3;
+    new-instance v0, Lcom/android/settings_ex/safetycare/SafetyCareSettings$3;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/safetycare/SafetyCareSettings$3;-><init>(Lcom/android/settings/safetycare/SafetyCareSettings;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/safetycare/SafetyCareSettings$3;-><init>(Lcom/android/settings_ex/safetycare/SafetyCareSettings;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mPrivateModeObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mPrivateModeObserver:Landroid/database/ContentObserver;
 
     .line 152
-    new-instance v0, Lcom/android/settings/safetycare/SafetyCareSettings$4;
+    new-instance v0, Lcom/android/settings_ex/safetycare/SafetyCareSettings$4;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/safetycare/SafetyCareSettings$4;-><init>(Lcom/android/settings/safetycare/SafetyCareSettings;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/safetycare/SafetyCareSettings$4;-><init>(Lcom/android/settings_ex/safetycare/SafetyCareSettings;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAppLockObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAppLockObserver:Landroid/database/ContentObserver;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/safetycare/SafetyCareSettings;)V
+.method static synthetic access$000(Lcom/android/settings_ex/safetycare/SafetyCareSettings;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/safetycare/SafetyCareSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/safetycare/SafetyCareSettings;
 
     .prologue
     .line 87
-    invoke-direct {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->locationSummaryUpdate()V
+    invoke-direct {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->locationSummaryUpdate()V
 
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/safetycare/SafetyCareSettings;)Landroid/preference/PreferenceScreen;
+.method static synthetic access$100(Lcom/android/settings_ex/safetycare/SafetyCareSettings;)Landroid/preference/PreferenceScreen;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/safetycare/SafetyCareSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/safetycare/SafetyCareSettings;
 
     .prologue
     .line 87
-    iget-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAssistance:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAssistance:Landroid/preference/PreferenceScreen;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/safetycare/SafetyCareSettings;)V
+.method static synthetic access$200(Lcom/android/settings_ex/safetycare/SafetyCareSettings;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/safetycare/SafetyCareSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/safetycare/SafetyCareSettings;
 
     .prologue
     .line 87
-    invoke-direct {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->privateModeSummaryUpdate()V
+    invoke-direct {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->privateModeSummaryUpdate()V
 
     return-void
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/safetycare/SafetyCareSettings;)V
+.method static synthetic access$300(Lcom/android/settings_ex/safetycare/SafetyCareSettings;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/safetycare/SafetyCareSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/safetycare/SafetyCareSettings;
 
     .prologue
     .line 87
-    invoke-direct {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->appLockSummaryUpdate()V
+    invoke-direct {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->appLockSummaryUpdate()V
 
     return-void
 .end method
@@ -156,7 +156,7 @@
 
     .prologue
     .line 420
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -175,7 +175,7 @@
     if-ne v0, v1, :cond_0
 
     .line 423
-    iget-object v1, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAppLock:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAppLock:Landroid/preference/PreferenceScreen;
 
     const v2, 0x7f0e0ea6
 
@@ -187,7 +187,7 @@
 
     .line 425
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAppLock:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAppLock:Landroid/preference/PreferenceScreen;
 
     const v2, 0x7f0e0ea7
 
@@ -201,9 +201,9 @@
 
     .prologue
     .line 430
-    iget-object v1, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mLocationSettings:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mLocationSettings:Landroid/preference/PreferenceScreen;
 
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -237,7 +237,7 @@
 
     .prologue
     .line 409
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -256,7 +256,7 @@
     if-ne v0, v1, :cond_0
 
     .line 413
-    iget-object v1, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mPrivateMode:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mPrivateMode:Landroid/preference/PreferenceScreen;
 
     const v2, 0x7f0e0ea6
 
@@ -268,7 +268,7 @@
 
     .line 415
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mPrivateMode:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mPrivateMode:Landroid/preference/PreferenceScreen;
 
     const v2, 0x7f0e0ea7
 
@@ -283,18 +283,18 @@
 
     .prologue
     .line 402
-    invoke-virtual {p0, p1}, Lcom/android/settings/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 403
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
-    invoke-virtual {p0, p1}, Lcom/android/settings/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -327,70 +327,70 @@
     const/4 v13, 0x1
 
     .line 165
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 167
     const v0, 0x7f080099
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->addPreferencesFromResource(I)V
 
     .line 169
     const-string v0, "key_private_mode"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    iput-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mPrivateMode:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mPrivateMode:Landroid/preference/PreferenceScreen;
 
     .line 170
     const-string v0, "key_private_box"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    iput-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mPrivateBox:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mPrivateBox:Landroid/preference/PreferenceScreen;
 
     .line 171
     const-string v0, "key_applock"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    iput-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAppLock:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAppLock:Landroid/preference/PreferenceScreen;
 
     .line 172
     const-string v0, "key_location"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    iput-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mLocationSettings:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mLocationSettings:Landroid/preference/PreferenceScreen;
 
     .line 173
     const-string v0, "key_app_permissions"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    iput-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAppPermissions:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAppPermissions:Landroid/preference/PreferenceScreen;
 
     .line 174
-    iget-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAppPermissions:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAppPermissions:Landroid/preference/PreferenceScreen;
 
     new-instance v2, Landroid/content/Intent;
 
@@ -403,42 +403,42 @@
     .line 175
     const-string v0, "key_safety_assistance"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    iput-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAssistance:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAssistance:Landroid/preference/PreferenceScreen;
 
     .line 176
     const-string v0, "safetycare_help"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    iput-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mSafetycareHelp:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mSafetycareHelp:Landroid/preference/PreferenceScreen;
 
     .line 177
     const-string v0, "key_vzw_emergency_alert"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    iput-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mVerizonEmergencyAlert:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mVerizonEmergencyAlert:Landroid/preference/PreferenceScreen;
 
     .line 179
-    iget-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mPrivateMode:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mPrivateMode:Landroid/preference/PreferenceScreen;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -446,14 +446,14 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isShopDemo(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isShopDemo(Landroid/content/Context;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     :cond_0
-    invoke-static {}, Lcom/android/settings/Utils;->isLDUModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isLDUModel()Z
 
     move-result v0
 
@@ -463,7 +463,7 @@
     :cond_1
     const-string v0, "key_private_mode"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
 
     .line 183
     :cond_2
@@ -473,7 +473,7 @@
 
     if-nez v0, :cond_3
 
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -483,17 +483,17 @@
 
     if-nez v0, :cond_3
 
-    invoke-static {}, Lcom/android/settings/Utils;->isDisasterSafetyModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDisasterSafetyModel()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isAfwProfile(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isAfwProfile(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -503,15 +503,15 @@
     :cond_3
     const-string v0, "key_private_mode"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
 
     .line 187
     :cond_4
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isSupportPrivateBoxInSettings(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isSupportPrivateBoxInSettings(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -520,17 +520,17 @@
     .line 188
     const-string v0, "key_private_box"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
 
     .line 193
     :goto_0
-    iget-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAppLock:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAppLock:Landroid/preference/PreferenceScreen;
 
     if-eqz v0, :cond_5
 
     const-string v0, "applock"
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isSupportCHNEnhancedFeature(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isSupportCHNEnhancedFeature(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -539,11 +539,11 @@
     .line 194
     const-string v0, "key_applock"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
 
     .line 197
     :cond_5
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v12
 
@@ -561,7 +561,7 @@
 
     if-eqz v0, :cond_6
 
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -576,7 +576,7 @@
     .line 200
     const-string v0, "key_app_permissions"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->removePreference(Ljava/lang/String;)V
 
     .line 203
     :cond_6
@@ -591,7 +591,7 @@
     .line 204
     const-string v0, "key_safety"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
@@ -603,13 +603,13 @@
     :cond_7
     const-string v0, "key_report_diagnostics_info"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    iput-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mDiagnosticInfo:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mDiagnosticInfo:Landroid/preference/PreferenceScreen;
 
     .line 209
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
@@ -636,7 +636,7 @@
     :cond_8
     const-string v0, "key_report_diagnostics_info"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->removePreference(Ljava/lang/String;)V
 
     .line 216
     :cond_9
@@ -657,7 +657,7 @@
     .line 220
     .local v11, "result":Ljava/lang/String;
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -743,7 +743,7 @@
     .line 244
     .local v8, "isSecondaryUser":Z
     :cond_c
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v0
 
@@ -752,21 +752,21 @@
     .line 245
     const-string v0, "key_safety_assistance"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
 
     .line 246
     const-string v0, "safetycare_help"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
 
     .line 273
     :cond_d
     :goto_3
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->showVzwEmergencyAlertOption(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->showVzwEmergencyAlertOption(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -775,13 +775,13 @@
     .line 274
     const-string v0, "key_vzw_emergency_alert"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
 
     .line 277
     :cond_e
     const-string v0, "key_safety_assistance"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
@@ -789,7 +789,7 @@
 
     const-string v0, "safetycare_help"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
@@ -798,18 +798,18 @@
     .line 278
     const-string v0, "key_safety"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
 
     .line 279
     const-string v0, "key_privacy"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
 
     .line 282
     :cond_f
     const-string v0, "VZW"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v2
 
@@ -822,7 +822,7 @@
     .line 283
     const-string v0, "key_location"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
 
     .line 284
     if-eqz v8, :cond_10
@@ -830,7 +830,7 @@
     .line 285
     const-string v0, "key_privacy"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
 
     .line 290
     :cond_10
@@ -860,7 +860,7 @@
     .line 296
     const-string v0, "key_location"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
 
     .line 298
     :cond_12
@@ -871,74 +871,74 @@
     .line 299
     const-string v0, "key_app_permissions"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
 
     .line 303
     :cond_13
-    invoke-virtual {p0, v13}, Lcom/android/settings/safetycare/SafetyCareSettings;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v13}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->setHasOptionsMenu(Z)V
 
     .line 305
-    iget-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mPrivateMode:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mPrivateMode:Landroid/preference/PreferenceScreen;
 
     if-eqz v0, :cond_14
 
     .line 306
-    iget-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mPrivateMode:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mPrivateMode:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v13}, Landroid/preference/PreferenceScreen;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 307
     :cond_14
-    iget-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mLocationSettings:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mLocationSettings:Landroid/preference/PreferenceScreen;
 
     if-eqz v0, :cond_15
 
     .line 308
-    iget-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mLocationSettings:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mLocationSettings:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v13}, Landroid/preference/PreferenceScreen;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 309
     :cond_15
-    iget-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAppLock:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAppLock:Landroid/preference/PreferenceScreen;
 
     if-eqz v0, :cond_16
 
     .line 310
-    iget-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAppLock:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAppLock:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v13}, Landroid/preference/PreferenceScreen;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 311
     :cond_16
-    iget-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mDiagnosticInfo:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mDiagnosticInfo:Landroid/preference/PreferenceScreen;
 
     if-eqz v0, :cond_17
 
     .line 312
-    iget-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mDiagnosticInfo:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mDiagnosticInfo:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v13}, Landroid/preference/PreferenceScreen;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 313
     :cond_17
-    iget-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAssistance:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAssistance:Landroid/preference/PreferenceScreen;
 
     if-eqz v0, :cond_18
 
     .line 314
-    iget-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAssistance:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAssistance:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v13}, Landroid/preference/PreferenceScreen;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 315
     :cond_18
-    iget-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mSafetycareHelp:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mSafetycareHelp:Landroid/preference/PreferenceScreen;
 
     if-eqz v0, :cond_19
 
     .line 316
-    iget-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mSafetycareHelp:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mSafetycareHelp:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v13}, Landroid/preference/PreferenceScreen;->setTwSummaryColorToColorPrimaryDark(Z)V
 
@@ -957,7 +957,7 @@
     :cond_1a
     const-string v0, "key_private_mode"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -1014,13 +1014,13 @@
     .line 248
     .restart local v8    # "isSecondaryUser":Z
     :cond_1d
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     const-string v2, "com.sec.android.app.safetyassurance"
 
-    invoke-static {v0, v2}, Lcom/android/settings/Utils;->isPackageExists(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v2}, Lcom/android/settings_ex/Utils;->isPackageExists(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1036,12 +1036,12 @@
     .line 250
     const-string v0, "key_safety_assistance"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
 
     .line 251
     const-string v0, "VZW"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1054,17 +1054,17 @@
     .line 252
     const-string v0, "safetycare_help"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
 
     goto/16 :goto_3
 
     .line 255
     :cond_1e
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isEmergencyTableSupported(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isEmergencyTableSupported(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -1073,13 +1073,13 @@
     .line 256
     const-string v0, "key_safety_assistance"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
 
     .line 259
     :cond_1f
     const-string v0, "VZW"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1092,7 +1092,7 @@
     .line 260
     const-string v0, "safetycare_help"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
 
     .line 261
     if-eqz v8, :cond_d
@@ -1100,7 +1100,7 @@
     .line 262
     const-string v0, "key_safety_assistance"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
 
     goto/16 :goto_3
 
@@ -1111,7 +1111,7 @@
     .line 266
     const-string v0, "key_safety_assistance"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->removeSafetyPreference(Ljava/lang/String;)V
 
     goto/16 :goto_3
 .end method
@@ -1121,15 +1121,15 @@
 
     .prologue
     .line 383
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 385
-    iget-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAssistance:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAssistance:Landroid/preference/PreferenceScreen;
 
     if-eqz v0, :cond_0
 
     .line 386
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1137,18 +1137,18 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAssistantObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAssistantObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 389
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mPrivateMode:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mPrivateMode:Landroid/preference/PreferenceScreen;
 
     if-eqz v0, :cond_1
 
     .line 390
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1156,18 +1156,18 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mPrivateModeObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mPrivateModeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 393
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAppLock:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAppLock:Landroid/preference/PreferenceScreen;
 
     if-eqz v0, :cond_2
 
     .line 394
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1175,13 +1175,13 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAppLockObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAppLockObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 397
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1189,7 +1189,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mLocationModeObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mLocationModeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
@@ -1210,10 +1210,10 @@
     const/4 v5, 0x1
 
     .line 323
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 325
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -1227,14 +1227,14 @@
 
     move-result-object v9
 
-    iget-object v10, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mLocationModeObserver:Landroid/database/ContentObserver;
+    iget-object v10, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mLocationModeObserver:Landroid/database/ContentObserver;
 
     const/4 v11, -0x2
 
     invoke-virtual {v6, v9, v5, v10, v11}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
     .line 327
-    invoke-direct {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->locationSummaryUpdate()V
+    invoke-direct {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->locationSummaryUpdate()V
 
     .line 329
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
@@ -1250,7 +1250,7 @@
     if-eqz v6, :cond_0
 
     .line 331
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -1267,7 +1267,7 @@
     .line 332
     .local v2, "getDiagInfo":Z
     :goto_0
-    iget-object v9, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mDiagnosticInfo:Landroid/preference/PreferenceScreen;
+    iget-object v9, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mDiagnosticInfo:Landroid/preference/PreferenceScreen;
 
     if-eqz v2, :cond_6
 
@@ -1279,15 +1279,15 @@
     .line 335
     .end local v2    # "getDiagInfo":Z
     :cond_0
-    iget-object v6, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mPrivateMode:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mPrivateMode:Landroid/preference/PreferenceScreen;
 
     if-eqz v6, :cond_1
 
     .line 337
-    invoke-direct {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->privateModeSummaryUpdate()V
+    invoke-direct {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->privateModeSummaryUpdate()V
 
     .line 339
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -1301,18 +1301,18 @@
 
     move-result-object v9
 
-    iget-object v10, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mPrivateModeObserver:Landroid/database/ContentObserver;
+    iget-object v10, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mPrivateModeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v6, v9, v5, v10}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 343
     :cond_1
-    iget-object v6, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mPrivateBox:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mPrivateBox:Landroid/preference/PreferenceScreen;
 
     if-eqz v6, :cond_2
 
     .line 344
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -1327,7 +1327,7 @@
     if-ne v3, v5, :cond_7
 
     .line 346
-    iget-object v6, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mPrivateBox:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mPrivateBox:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v6, v7}, Landroid/preference/PreferenceScreen;->setSummary(I)V
 
@@ -1335,15 +1335,15 @@
     .end local v3    # "isEnableInLockscreen":I
     :cond_2
     :goto_2
-    iget-object v6, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAppLock:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAppLock:Landroid/preference/PreferenceScreen;
 
     if-eqz v6, :cond_3
 
     .line 353
-    invoke-direct {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->appLockSummaryUpdate()V
+    invoke-direct {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->appLockSummaryUpdate()V
 
     .line 354
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -1357,18 +1357,18 @@
 
     move-result-object v9
 
-    iget-object v10, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAppLockObserver:Landroid/database/ContentObserver;
+    iget-object v10, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAppLockObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v6, v9, v5, v10}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 358
     :cond_3
-    iget-object v6, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAssistance:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAssistance:Landroid/preference/PreferenceScreen;
 
     if-eqz v6, :cond_4
 
     .line 359
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -1389,7 +1389,7 @@
     .line 362
     .local v1, "bStatus":Z
     :goto_3
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -1413,7 +1413,7 @@
     if-nez v0, :cond_a
 
     .line 368
-    iget-object v4, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAssistance:Landroid/preference/PreferenceScreen;
+    iget-object v4, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAssistance:Landroid/preference/PreferenceScreen;
 
     const v6, 0x7f0e14ad
 
@@ -1421,7 +1421,7 @@
 
     .line 374
     :goto_5
-    invoke-virtual {p0}, Lcom/android/settings/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1435,7 +1435,7 @@
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAssistantObserver:Landroid/database/ContentObserver;
+    iget-object v7, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAssistantObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v4, v6, v5, v7}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -1462,7 +1462,7 @@
     .end local v2    # "getDiagInfo":Z
     .restart local v3    # "isEnableInLockscreen":I
     :cond_7
-    iget-object v6, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mPrivateBox:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mPrivateBox:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v6, v8}, Landroid/preference/PreferenceScreen;->setSummary(I)V
 
@@ -1485,7 +1485,7 @@
     .line 370
     .restart local v0    # "bIsEnabled":Z
     :cond_a
-    iget-object v4, p0, Lcom/android/settings/safetycare/SafetyCareSettings;->mAssistance:Landroid/preference/PreferenceScreen;
+    iget-object v4, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->mAssistance:Landroid/preference/PreferenceScreen;
 
     if-ne v1, v5, :cond_b
 

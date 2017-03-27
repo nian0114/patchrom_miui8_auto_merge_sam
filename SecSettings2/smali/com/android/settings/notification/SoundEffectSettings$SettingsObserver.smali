@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/notification/SoundEffectSettings$SettingsObserver;
+.class final Lcom/android/settings_ex/notification/SoundEffectSettings$SettingsObserver;
 .super Landroid/database/ContentObserver;
 .source "SoundEffectSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/SoundEffectSettings;
+    value = Lcom/android/settings_ex/notification/SoundEffectSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/SoundEffectSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/settings/notification/SoundEffectSettings;)V
+.method public constructor <init>(Lcom/android/settings_ex/notification/SoundEffectSettings;)V
     .locals 1
 
     .prologue
     .line 510
-    iput-object p1, p0, Lcom/android/settings/notification/SoundEffectSettings$SettingsObserver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$SettingsObserver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     .line 511
     new-instance v0, Landroid/os/Handler;
@@ -49,12 +49,12 @@
     invoke-super {p0, p1, p2}, Landroid/database/ContentObserver;->onChange(ZLandroid/net/Uri;)V
 
     .line 527
-    # getter for: Lcom/android/settings/notification/SoundEffectSettings;->PREFS:[Lcom/android/settings/notification/SettingPref;
-    invoke-static {}, Lcom/android/settings/notification/SoundEffectSettings;->access$300()[Lcom/android/settings/notification/SettingPref;
+    # getter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->PREFS:[Lcom/android/settings_ex/notification/SettingPref;
+    invoke-static {}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$300()[Lcom/android/settings_ex/notification/SettingPref;
 
     move-result-object v0
 
-    .local v0, "arr$":[Lcom/android/settings/notification/SettingPref;
+    .local v0, "arr$":[Lcom/android/settings_ex/notification/SettingPref;
     array-length v2, v0
 
     .local v2, "len$":I
@@ -67,8 +67,8 @@
     aget-object v3, v0, v1
 
     .line 528
-    .local v3, "pref":Lcom/android/settings/notification/SettingPref;
-    invoke-virtual {v3}, Lcom/android/settings/notification/SettingPref;->getUri()Landroid/net/Uri;
+    .local v3, "pref":Lcom/android/settings_ex/notification/SettingPref;
+    invoke-virtual {v3}, Lcom/android/settings_ex/notification/SettingPref;->getUri()Landroid/net/Uri;
 
     move-result-object v4
 
@@ -79,22 +79,22 @@
     if-eqz v4, :cond_1
 
     .line 529
-    iget-object v4, p0, Lcom/android/settings/notification/SoundEffectSettings$SettingsObserver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v4, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$SettingsObserver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
-    # getter for: Lcom/android/settings/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
-    invoke-static {v4}, Lcom/android/settings/notification/SoundEffectSettings;->access$400(Lcom/android/settings/notification/SoundEffectSettings;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
+    invoke-static {v4}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$400(Lcom/android/settings_ex/notification/SoundEffectSettings;)Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/notification/SettingPref;->update(Landroid/content/Context;)V
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/notification/SettingPref;->update(Landroid/content/Context;)V
 
     .line 533
-    .end local v3    # "pref":Lcom/android/settings/notification/SettingPref;
+    .end local v3    # "pref":Lcom/android/settings_ex/notification/SettingPref;
     :cond_0
     return-void
 
     .line 527
-    .restart local v3    # "pref":Lcom/android/settings/notification/SettingPref;
+    .restart local v3    # "pref":Lcom/android/settings_ex/notification/SettingPref;
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
@@ -107,10 +107,10 @@
 
     .prologue
     .line 515
-    iget-object v5, p0, Lcom/android/settings/notification/SoundEffectSettings$SettingsObserver;->this$0:Lcom/android/settings/notification/SoundEffectSettings;
+    iget-object v5, p0, Lcom/android/settings_ex/notification/SoundEffectSettings$SettingsObserver;->this$0:Lcom/android/settings_ex/notification/SoundEffectSettings;
 
-    # invokes: Lcom/android/settings/notification/SoundEffectSettings;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v5}, Lcom/android/settings/notification/SoundEffectSettings;->access$600(Lcom/android/settings/notification/SoundEffectSettings;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/notification/SoundEffectSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v5}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$600(Lcom/android/settings_ex/notification/SoundEffectSettings;)Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -119,12 +119,12 @@
     if-eqz p1, :cond_0
 
     .line 517
-    # getter for: Lcom/android/settings/notification/SoundEffectSettings;->PREFS:[Lcom/android/settings/notification/SettingPref;
-    invoke-static {}, Lcom/android/settings/notification/SoundEffectSettings;->access$300()[Lcom/android/settings/notification/SettingPref;
+    # getter for: Lcom/android/settings_ex/notification/SoundEffectSettings;->PREFS:[Lcom/android/settings_ex/notification/SettingPref;
+    invoke-static {}, Lcom/android/settings_ex/notification/SoundEffectSettings;->access$300()[Lcom/android/settings_ex/notification/SettingPref;
 
     move-result-object v0
 
-    .local v0, "arr$":[Lcom/android/settings/notification/SettingPref;
+    .local v0, "arr$":[Lcom/android/settings_ex/notification/SettingPref;
     array-length v3, v0
 
     .local v3, "len$":I
@@ -137,8 +137,8 @@
     aget-object v4, v0, v2
 
     .line 518
-    .local v4, "pref":Lcom/android/settings/notification/SettingPref;
-    invoke-virtual {v4}, Lcom/android/settings/notification/SettingPref;->getUri()Landroid/net/Uri;
+    .local v4, "pref":Lcom/android/settings_ex/notification/SettingPref;
+    invoke-virtual {v4}, Lcom/android/settings_ex/notification/SettingPref;->getUri()Landroid/net/Uri;
 
     move-result-object v5
 
@@ -152,10 +152,10 @@
     goto :goto_0
 
     .line 521
-    .end local v0    # "arr$":[Lcom/android/settings/notification/SettingPref;
+    .end local v0    # "arr$":[Lcom/android/settings_ex/notification/SettingPref;
     .end local v2    # "i$":I
     .end local v3    # "len$":I
-    .end local v4    # "pref":Lcom/android/settings/notification/SettingPref;
+    .end local v4    # "pref":Lcom/android/settings_ex/notification/SettingPref;
     :cond_0
     invoke-virtual {v1, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 

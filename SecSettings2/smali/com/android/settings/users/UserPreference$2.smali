@@ -1,4 +1,4 @@
-.class Lcom/android/settings/users/UserPreference$2;
+.class Lcom/android/settings_ex/users/UserPreference$2;
 .super Ljava/lang/Object;
 .source "UserPreference.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/users/UserPreference;->onBindView(Landroid/view/View;)V
+    value = Lcom/android/settings_ex/users/UserPreference;->onBindView(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/users/UserPreference;
+.field final synthetic this$0:Lcom/android/settings_ex/users/UserPreference;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/users/UserPreference;)V
+.method constructor <init>(Lcom/android/settings_ex/users/UserPreference;)V
     .locals 0
 
     .prologue
     .line 82
-    iput-object p1, p0, Lcom/android/settings/users/UserPreference$2;->this$0:Lcom/android/settings/users/UserPreference;
+    iput-object p1, p0, Lcom/android/settings_ex/users/UserPreference$2;->this$0:Lcom/android/settings_ex/users/UserPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,9 +42,9 @@
 
     .prologue
     .line 85
-    iget-object v1, p0, Lcom/android/settings/users/UserPreference$2;->this$0:Lcom/android/settings/users/UserPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/users/UserPreference$2;->this$0:Lcom/android/settings_ex/users/UserPreference;
 
-    invoke-virtual {v1}, Lcom/android/settings/users/UserPreference;->getOnPreferenceClickListener()Landroid/preference/Preference$OnPreferenceClickListener;
+    invoke-virtual {v1}, Lcom/android/settings_ex/users/UserPreference;->getOnPreferenceClickListener()Landroid/preference/Preference$OnPreferenceClickListener;
 
     move-result-object v0
 
@@ -53,10 +53,10 @@
     if-eqz v0, :cond_0
 
     .line 87
-    iget-object v1, p0, Lcom/android/settings/users/UserPreference$2;->this$0:Lcom/android/settings/users/UserPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/users/UserPreference$2;->this$0:Lcom/android/settings_ex/users/UserPreference;
 
-    # getter for: Lcom/android/settings/users/UserPreference;->mPref:Landroid/preference/Preference;
-    invoke-static {v1}, Lcom/android/settings/users/UserPreference;->access$100(Lcom/android/settings/users/UserPreference;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/users/UserPreference;->mPref:Landroid/preference/Preference;
+    invoke-static {v1}, Lcom/android/settings_ex/users/UserPreference;->access$100(Lcom/android/settings_ex/users/UserPreference;)Landroid/preference/Preference;
 
     move-result-object v1
 

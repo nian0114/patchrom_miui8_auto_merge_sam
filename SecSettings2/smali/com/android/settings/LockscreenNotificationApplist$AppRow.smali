@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/LockscreenNotificationApplist$AppRow;
-.super Lcom/android/settings/LockscreenNotificationApplist$Row;
+.class public Lcom/android/settings_ex/LockscreenNotificationApplist$AppRow;
+.super Lcom/android/settings_ex/LockscreenNotificationApplist$Row;
 .source "LockscreenNotificationApplist.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/LockscreenNotificationApplist;
+    value = Lcom/android/settings_ex/LockscreenNotificationApplist;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,7 +40,7 @@
 
     .prologue
     .line 331
-    invoke-direct {p0}, Lcom/android/settings/LockscreenNotificationApplist$Row;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/LockscreenNotificationApplist$Row;-><init>()V
 
     return-void
 .end method

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/cpa/CpaAdvancedSettings;
+.class public Lcom/android/settings_ex/cpa/CpaAdvancedSettings;
 .super Landroid/preference/PreferenceActivity;
 .source "CpaAdvancedSettings.java"
 
@@ -67,13 +67,13 @@
 
     .prologue
     .line 73
-    const-class v0, Lcom/android/settings/cpa/CpaAdvancedSettings;
+    const-class v0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     .line 138
     const/16 v0, 0x14
@@ -200,7 +200,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/android/settings/cpa/CpaAdvancedSettings;->sProjection:[Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->sProjection:[Ljava/lang/String;
 
     return-void
 .end method
@@ -215,43 +215,43 @@
     .line 87
     const-string v0, "^[a-z0-9A-Z]+([-._/a-z0-9A-Z]?)+[a-z0-9A-Z]@[0-9a-z]+[-.0-9a-z]+[0-9a-z]$"
 
-    iput-object v0, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->regExpn:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->regExpn:Ljava/lang/String;
 
     .line 90
     const-string v0, "^[a-z0-9A-Z]@[0-9a-z]+[-.0-9a-z]+[0-9a-z]$"
 
-    iput-object v0, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->regExpn1:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->regExpn1:Ljava/lang/String;
 
     .line 92
     const-string v0, "^[a-z0-9A-Z]+([-._/a-z0-9A-Z]?)+[a-z0-9A-Z]@[0-9]*$"
 
-    iput-object v0, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->regExpn_Domain_num:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->regExpn_Domain_num:Ljava/lang/String;
 
     .line 93
     const-string v0, "^[a-z0-9A-Z]@[0-9]*$"
 
-    iput-object v0, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->regExpn_Domain_num1:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->regExpn_Domain_num1:Ljava/lang/String;
 
     .line 96
     const-string v0, "^[a-z0-9A-Z!#$%&()*+-./:;<>=?@\\[\\]_\\{\\}]{1,16}$"
 
-    iput-object v0, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->regExpn_Pwd:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->regExpn_Pwd:Ljava/lang/String;
 
     .line 99
     const-string v0, "(([2][5][0-5]|[2][0-4][0-9]|[0-1][0-9][0-9]|[0-9][0-9]|[0-9])\\.){3}([2][5][0-5]|[2][0-4][0-9]|[0-1][0-9][0-9]|[0-9][0-9]|[0-9])"
 
-    iput-object v0, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->regExpn_IP:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->regExpn_IP:Ljava/lang/String;
 
     .line 181
-    new-instance v0, Lcom/android/settings/cpa/CpaAdvancedSettings$1;
+    new-instance v0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings$1;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/cpa/CpaAdvancedSettings$1;-><init>(Lcom/android/settings/cpa/CpaAdvancedSettings;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings$1;-><init>(Lcom/android/settings_ex/cpa/CpaAdvancedSettings;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mAirplainModeEnabledObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mAirplainModeEnabledObserver:Landroid/database/ContentObserver;
 
     return-void
 .end method
@@ -264,7 +264,7 @@
     .line 798
     if-eqz p0, :cond_0
 
-    sget-object v0, Lcom/android/settings/cpa/CpaAdvancedSettings;->sNotSet:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->sNotSet:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -298,7 +298,7 @@
 
     .line 770
     :cond_0
-    sget-object p1, Lcom/android/settings/cpa/CpaAdvancedSettings;->sNotSet:Ljava/lang/String;
+    sget-object p1, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->sNotSet:Ljava/lang/String;
 
     .line 772
     .end local p1    # "value":Ljava/lang/String;
@@ -311,7 +311,7 @@
 
     .prologue
     .line 258
-    sget-object v9, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v9, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -323,7 +323,7 @@
 
     move-result-object v10
 
-    iget-boolean v11, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mFirstTime:Z
+    iget-boolean v11, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mFirstTime:Z
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -335,7 +335,7 @@
 
     move-result-object v10
 
-    iget-boolean v11, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mNewApn:Z
+    iget-boolean v11, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mNewApn:Z
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -352,19 +352,19 @@
 
     .line 261
     .local v0, "apnType":Ljava/lang/String;
-    iget-boolean v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mFirstTime:Z
+    iget-boolean v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mFirstTime:Z
 
     if-eqz v9, :cond_3
 
     .line 262
     const/4 v9, 0x0
 
-    iput-boolean v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mFirstTime:Z
+    iput-boolean v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mFirstTime:Z
 
     .line 264
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mApn:Landroid/preference/EditTextPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mApn:Landroid/preference/EditTextPreference;
 
-    iget-object v10, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mCursor:Landroid/database/Cursor;
+    iget-object v10, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mCursor:Landroid/database/Cursor;
 
     const/4 v11, 0x2
 
@@ -375,9 +375,9 @@
     invoke-virtual {v9, v10}, Landroid/preference/EditTextPreference;->setText(Ljava/lang/String;)V
 
     .line 265
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mProxy:Landroid/preference/EditTextPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mProxy:Landroid/preference/EditTextPreference;
 
-    iget-object v10, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mCursor:Landroid/database/Cursor;
+    iget-object v10, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mCursor:Landroid/database/Cursor;
 
     const/4 v11, 0x3
 
@@ -388,9 +388,9 @@
     invoke-virtual {v9, v10}, Landroid/preference/EditTextPreference;->setText(Ljava/lang/String;)V
 
     .line 266
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mPort:Landroid/preference/EditTextPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mPort:Landroid/preference/EditTextPreference;
 
-    iget-object v10, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mCursor:Landroid/database/Cursor;
+    iget-object v10, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mCursor:Landroid/database/Cursor;
 
     const/4 v11, 0x4
 
@@ -401,9 +401,9 @@
     invoke-virtual {v9, v10}, Landroid/preference/EditTextPreference;->setText(Ljava/lang/String;)V
 
     .line 267
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mUser:Landroid/preference/EditTextPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mUser:Landroid/preference/EditTextPreference;
 
-    iget-object v10, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mCursor:Landroid/database/Cursor;
+    iget-object v10, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mCursor:Landroid/database/Cursor;
 
     const/4 v11, 0x5
 
@@ -414,9 +414,9 @@
     invoke-virtual {v9, v10}, Landroid/preference/EditTextPreference;->setText(Ljava/lang/String;)V
 
     .line 268
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mPassword:Landroid/preference/EditTextPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mPassword:Landroid/preference/EditTextPreference;
 
-    iget-object v10, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mCursor:Landroid/database/Cursor;
+    iget-object v10, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mCursor:Landroid/database/Cursor;
 
     const/4 v11, 0x7
 
@@ -427,7 +427,7 @@
     invoke-virtual {v9, v10}, Landroid/preference/EditTextPreference;->setText(Ljava/lang/String;)V
 
     .line 270
-    iget-boolean v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mNewApn:Z
+    iget-boolean v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mNewApn:Z
 
     if-eqz v9, :cond_0
 
@@ -440,7 +440,7 @@
 
     .line 273
     .local v7, "numeric":Ljava/lang/String;
-    sget-object v9, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v9, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -492,17 +492,17 @@
 
     .line 281
     .local v6, "mnc":Ljava/lang/String;
-    iput-object v6, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mCurMnc:Ljava/lang/String;
+    iput-object v6, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mCurMnc:Ljava/lang/String;
 
     .line 282
-    iput-object v5, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mCurMcc:Ljava/lang/String;
+    iput-object v5, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mCurMcc:Ljava/lang/String;
 
     .line 286
     .end local v5    # "mcc":Ljava/lang/String;
     .end local v6    # "mnc":Ljava/lang/String;
     .end local v7    # "numeric":Ljava/lang/String;
     :cond_0
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mCursor:Landroid/database/Cursor;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mCursor:Landroid/database/Cursor;
 
     const/16 v10, 0xe
 
@@ -531,7 +531,7 @@
 
     .line 291
     :cond_2
-    sget-object v9, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v9, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -554,7 +554,7 @@
     invoke-static {v9, v10}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 292
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mAuthType:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mAuthType:Landroid/preference/ListPreference;
 
     add-int/lit8 v10, v1, -0x1
 
@@ -562,7 +562,7 @@
 
     .line 297
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v9
 
@@ -574,7 +574,7 @@
 
     .line 298
     .local v3, "dns1":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v9
 
@@ -586,12 +586,12 @@
 
     .line 299
     .local v4, "dns2":Ljava/lang/String;
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mDns1:Landroid/preference/EditTextPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mDns1:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v9, v3}, Landroid/preference/EditTextPreference;->setText(Ljava/lang/String;)V
 
     .line 300
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mDns2:Landroid/preference/EditTextPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mDns2:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v9, v4}, Landroid/preference/EditTextPreference;->setText(Ljava/lang/String;)V
 
@@ -600,82 +600,82 @@
     .end local v3    # "dns1":Ljava/lang/String;
     .end local v4    # "dns2":Ljava/lang/String;
     :cond_3
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mApn:Landroid/preference/EditTextPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mApn:Landroid/preference/EditTextPreference;
 
-    iget-object v10, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mApn:Landroid/preference/EditTextPreference;
+    iget-object v10, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mApn:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v10}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
     move-result-object v10
 
-    invoke-direct {p0, v10}, Lcom/android/settings/cpa/CpaAdvancedSettings;->checkNull(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v10}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->checkNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
     invoke-virtual {v9, v10}, Landroid/preference/EditTextPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 304
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mProxy:Landroid/preference/EditTextPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mProxy:Landroid/preference/EditTextPreference;
 
-    iget-object v10, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mProxy:Landroid/preference/EditTextPreference;
+    iget-object v10, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mProxy:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v10}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
     move-result-object v10
 
-    invoke-direct {p0, v10}, Lcom/android/settings/cpa/CpaAdvancedSettings;->checkNull(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v10}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->checkNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
     invoke-virtual {v9, v10}, Landroid/preference/EditTextPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 305
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mPort:Landroid/preference/EditTextPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mPort:Landroid/preference/EditTextPreference;
 
-    iget-object v10, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mPort:Landroid/preference/EditTextPreference;
+    iget-object v10, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mPort:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v10}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
     move-result-object v10
 
-    invoke-direct {p0, v10}, Lcom/android/settings/cpa/CpaAdvancedSettings;->checkNull(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v10}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->checkNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
     invoke-virtual {v9, v10}, Landroid/preference/EditTextPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 306
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mUser:Landroid/preference/EditTextPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mUser:Landroid/preference/EditTextPreference;
 
-    iget-object v10, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mUser:Landroid/preference/EditTextPreference;
+    iget-object v10, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mUser:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v10}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
     move-result-object v10
 
-    invoke-direct {p0, v10}, Lcom/android/settings/cpa/CpaAdvancedSettings;->checkNull(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v10}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->checkNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
     invoke-virtual {v9, v10}, Landroid/preference/EditTextPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 307
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mPassword:Landroid/preference/EditTextPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mPassword:Landroid/preference/EditTextPreference;
 
-    iget-object v10, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mPassword:Landroid/preference/EditTextPreference;
+    iget-object v10, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mPassword:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v10}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
     move-result-object v10
 
-    invoke-direct {p0, v10}, Lcom/android/settings/cpa/CpaAdvancedSettings;->starify(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v10}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->starify(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
     invoke-virtual {v9, v10}, Landroid/preference/EditTextPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 309
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mDns1:Landroid/preference/EditTextPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mDns1:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v9}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
@@ -683,7 +683,7 @@
 
     .line 310
     .restart local v3    # "dns1":Ljava/lang/String;
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mDns2:Landroid/preference/EditTextPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mDns2:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v9}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
@@ -691,18 +691,18 @@
 
     .line 311
     .restart local v4    # "dns2":Ljava/lang/String;
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mDns1:Landroid/preference/EditTextPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mDns1:Landroid/preference/EditTextPreference;
 
-    invoke-direct {p0, v3}, Lcom/android/settings/cpa/CpaAdvancedSettings;->checkNull(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->checkNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
     invoke-virtual {v9, v10}, Landroid/preference/EditTextPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 312
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mDns2:Landroid/preference/EditTextPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mDns2:Landroid/preference/EditTextPreference;
 
-    invoke-direct {p0, v4}, Lcom/android/settings/cpa/CpaAdvancedSettings;->checkNull(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v4}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->checkNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
@@ -722,7 +722,7 @@
     if-eqz v9, :cond_5
 
     .line 315
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mDns2:Landroid/preference/EditTextPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mDns2:Landroid/preference/EditTextPreference;
 
     const/4 v10, 0x0
 
@@ -730,7 +730,7 @@
 
     .line 320
     :goto_1
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mAuthType:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mAuthType:Landroid/preference/ListPreference;
 
     invoke-virtual {v9}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -747,12 +747,12 @@
 
     .line 323
     .local v2, "authValIndex":I
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mAuthType:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mAuthType:Landroid/preference/ListPreference;
 
     invoke-virtual {v9, v2}, Landroid/preference/ListPreference;->setValueIndex(I)V
 
     .line 325
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
 
     const v10, 0x7f11003d
 
@@ -762,7 +762,7 @@
 
     .line 326
     .local v8, "values":[Ljava/lang/String;
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mAuthType:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mAuthType:Landroid/preference/ListPreference;
 
     aget-object v10, v8, v2
 
@@ -779,7 +779,7 @@
     .end local v4    # "dns2":Ljava/lang/String;
     .local v1, "authVal":I
     :cond_4
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mAuthType:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mAuthType:Landroid/preference/ListPreference;
 
     const/4 v10, 0x0
 
@@ -792,7 +792,7 @@
     .restart local v3    # "dns1":Ljava/lang/String;
     .restart local v4    # "dns2":Ljava/lang/String;
     :cond_5
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mDns2:Landroid/preference/EditTextPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mDns2:Landroid/preference/EditTextPreference;
 
     const/4 v10, 0x1
 
@@ -803,9 +803,9 @@
     .line 328
     .local v1, "authVal":Ljava/lang/String;
     :cond_6
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mAuthType:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mAuthType:Landroid/preference/ListPreference;
 
-    sget-object v10, Lcom/android/settings/cpa/CpaAdvancedSettings;->sNotSet:Ljava/lang/String;
+    sget-object v10, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->sNotSet:Ljava/lang/String;
 
     invoke-virtual {v9, v10}, Landroid/preference/ListPreference;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -823,61 +823,61 @@
 
     .line 688
     .local v1, "errorMsg":Ljava/lang/String;
-    iget-object v6, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mApn:Landroid/preference/EditTextPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mApn:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v6}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/android/settings/cpa/CpaAdvancedSettings;->checkNotSet(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v6}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->checkNotSet(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 689
     .local v0, "apn":Ljava/lang/String;
-    iget-object v6, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mUser:Landroid/preference/EditTextPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mUser:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v6}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/android/settings/cpa/CpaAdvancedSettings;->checkNotSet(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v6}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->checkNotSet(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     .line 690
     .local v5, "user":Ljava/lang/String;
-    iget-object v6, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mPassword:Landroid/preference/EditTextPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mPassword:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v6}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/android/settings/cpa/CpaAdvancedSettings;->checkNotSet(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v6}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->checkNotSet(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 691
     .local v2, "passwd":Ljava/lang/String;
-    iget-object v6, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mProxy:Landroid/preference/EditTextPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mProxy:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v6}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/android/settings/cpa/CpaAdvancedSettings;->checkNotSet(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v6}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->checkNotSet(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     .line 692
     .local v4, "proxy":Ljava/lang/String;
-    iget-object v6, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mPort:Landroid/preference/EditTextPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mPort:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v6}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/android/settings/cpa/CpaAdvancedSettings;->checkNotSet(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v6}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->checkNotSet(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -890,7 +890,7 @@
     if-ge v6, v7, :cond_1
 
     .line 695
-    iget-object v6, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
+    iget-object v6, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
 
     const v7, 0x7f0e071b
 
@@ -912,7 +912,7 @@
     if-ge v6, v7, :cond_2
 
     .line 697
-    iget-object v6, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
+    iget-object v6, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
 
     const v7, 0x7f0e0733
 
@@ -931,7 +931,7 @@
     if-ge v6, v7, :cond_3
 
     .line 699
-    iget-object v6, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
+    iget-object v6, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
 
     const v7, 0x7f0e0734
 
@@ -957,7 +957,7 @@
     if-lt v6, v7, :cond_0
 
     .line 702
-    iget-object v6, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
+    iget-object v6, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
 
     const v7, 0x7f0e072f
 
@@ -986,7 +986,7 @@
 
     .line 517
     :cond_0
-    iget-object v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->regExpn_IP:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->regExpn_IP:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
@@ -1020,7 +1020,7 @@
     if-eqz v4, :cond_2
 
     .line 524
-    sget-object v2, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1049,7 +1049,7 @@
 
     .line 527
     :cond_2
-    sget-object v3, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1125,7 +1125,7 @@
 
     .line 549
     :cond_2
-    sget-object v3, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1155,7 +1155,7 @@
 
     .line 544
     .local v0, "e":Ljava/lang/NumberFormatException;
-    sget-object v3, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     const-string v4, "It\'s not number type!!!"
 
@@ -1166,7 +1166,7 @@
     .line 552
     .end local v0    # "e":Ljava/lang/NumberFormatException;
     :cond_3
-    sget-object v2, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1210,7 +1210,7 @@
 
     .line 758
     :cond_0
-    sget-object v2, Lcom/android/settings/cpa/CpaAdvancedSettings;->sNotSet:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->sNotSet:Ljava/lang/String;
 
     .line 764
     :goto_0
@@ -1267,19 +1267,19 @@
     const/4 v6, 0x0
 
     .line 623
-    iget-object v8, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mApn:Landroid/preference/EditTextPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mApn:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v8}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
     move-result-object v8
 
-    invoke-static {v8}, Lcom/android/settings/cpa/CpaAdvancedSettings;->checkNotSet(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v8}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->checkNotSet(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 624
     .local v0, "apn":Ljava/lang/String;
-    sget-object v8, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v8, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -1302,7 +1302,7 @@
     invoke-static {v8, v9}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 626
-    invoke-direct {p0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->getErrorMsg()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->getErrorMsg()Ljava/lang/String;
 
     move-result-object v8
 
@@ -1311,7 +1311,7 @@
     if-nez p1, :cond_1
 
     .line 627
-    invoke-virtual {p0, v6}, Lcom/android/settings/cpa/CpaAdvancedSettings;->showDialog(I)V
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->showDialog(I)V
 
     .line 682
     :cond_0
@@ -1320,7 +1320,7 @@
 
     .line 631
     :cond_1
-    iget-object v8, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mCursor:Landroid/database/Cursor;
+    iget-object v8, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v8}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -1329,7 +1329,7 @@
     if-nez v8, :cond_2
 
     .line 632
-    sget-object v7, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     const-string v8, "Could not go to the first row in the Cursor when saving data."
 
@@ -1341,7 +1341,7 @@
     :cond_2
     if-eqz p1, :cond_3
 
-    iget-boolean v8, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mNewApn:Z
+    iget-boolean v8, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mNewApn:Z
 
     if-eqz v8, :cond_3
 
@@ -1366,13 +1366,13 @@
     .line 648
     const-string v8, "proxy"
 
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mProxy:Landroid/preference/EditTextPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mProxy:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v9}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
     move-result-object v9
 
-    invoke-static {v9}, Lcom/android/settings/cpa/CpaAdvancedSettings;->checkNotSet(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v9}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->checkNotSet(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
@@ -1381,13 +1381,13 @@
     .line 649
     const-string v8, "port"
 
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mPort:Landroid/preference/EditTextPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mPort:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v9}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
     move-result-object v9
 
-    invoke-static {v9}, Lcom/android/settings/cpa/CpaAdvancedSettings;->checkNotSet(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v9}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->checkNotSet(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
@@ -1396,13 +1396,13 @@
     .line 650
     const-string v8, "user"
 
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mUser:Landroid/preference/EditTextPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mUser:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v9}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
     move-result-object v9
 
-    invoke-static {v9}, Lcom/android/settings/cpa/CpaAdvancedSettings;->checkNotSet(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v9}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->checkNotSet(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
@@ -1411,20 +1411,20 @@
     .line 651
     const-string v8, "password"
 
-    iget-object v9, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mPassword:Landroid/preference/EditTextPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mPassword:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v9}, Landroid/preference/EditTextPreference;->getText()Ljava/lang/String;
 
     move-result-object v9
 
-    invoke-static {v9}, Lcom/android/settings/cpa/CpaAdvancedSettings;->checkNotSet(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v9}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->checkNotSet(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
     invoke-virtual {v5, v8, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 653
-    iget-object v8, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mAuthType:Landroid/preference/ListPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mAuthType:Landroid/preference/ListPreference;
 
     invoke-virtual {v8}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
@@ -1459,7 +1459,7 @@
 
     .line 659
     .local v4, "numeric":Ljava/lang/String;
-    sget-object v8, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v8, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -1511,10 +1511,10 @@
     move-result-object v3
 
     .line 668
-    iput-object v3, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mCurMnc:Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mCurMnc:Ljava/lang/String;
 
     .line 669
-    iput-object v2, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mCurMcc:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mCurMcc:Ljava/lang/String;
 
     .line 671
     :cond_5
@@ -1539,30 +1539,30 @@
     invoke-virtual {v5, v6, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 672
-    sget-object v6, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     const-string v8, "CURRENT 1"
 
     invoke-static {v6, v8}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 673
-    iget-object v6, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mCurMnc:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mCurMnc:Ljava/lang/String;
 
     if-eqz v6, :cond_6
 
-    iget-object v6, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mCurMcc:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mCurMcc:Ljava/lang/String;
 
     if-eqz v6, :cond_6
 
     .line 674
-    sget-object v6, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     const-string v8, "CURRENT 2"
 
     invoke-static {v6, v8}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 675
-    iget-object v6, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mCurMnc:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mCurMnc:Ljava/lang/String;
 
     invoke-virtual {v6, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1570,7 +1570,7 @@
 
     if-eqz v6, :cond_6
 
-    iget-object v6, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mCurMcc:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mCurMcc:Ljava/lang/String;
 
     invoke-virtual {v6, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1579,7 +1579,7 @@
     if-eqz v6, :cond_6
 
     .line 676
-    sget-object v6, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     const-string v8, "CURRENT 3"
 
@@ -1596,11 +1596,11 @@
 
     .line 680
     :cond_6
-    invoke-virtual {p0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
-    iget-object v8, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mUri:Landroid/net/Uri;
+    iget-object v8, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mUri:Landroid/net/Uri;
 
     invoke-virtual {v6, v8, v5, v12, v12}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
@@ -1627,7 +1627,7 @@
     if-nez p1, :cond_0
 
     .line 445
-    sget-object v8, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v8, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     const-string v9, "isValidID : inputEmail == null"
 
@@ -1659,7 +1659,7 @@
 
     .line 452
     :cond_1
-    iget-object v8, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->regExpn:Ljava/lang/String;
+    iget-object v8, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->regExpn:Ljava/lang/String;
 
     invoke-static {v8}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
@@ -1667,7 +1667,7 @@
 
     .line 454
     .local v4, "p":Ljava/util/regex/Pattern;
-    iget-object v8, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->regExpn1:Ljava/lang/String;
+    iget-object v8, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->regExpn1:Ljava/lang/String;
 
     invoke-static {v8}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
@@ -1675,7 +1675,7 @@
 
     .line 456
     .local v5, "p1":Ljava/util/regex/Pattern;
-    iget-object v8, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->regExpn_Domain_num:Ljava/lang/String;
+    iget-object v8, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->regExpn_Domain_num:Ljava/lang/String;
 
     invoke-static {v8}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
@@ -1683,7 +1683,7 @@
 
     .line 457
     .local v6, "p2":Ljava/util/regex/Pattern;
-    iget-object v8, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->regExpn_Domain_num1:Ljava/lang/String;
+    iget-object v8, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->regExpn_Domain_num1:Ljava/lang/String;
 
     invoke-static {v8}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
@@ -1716,7 +1716,7 @@
     if-le v1, v8, :cond_2
 
     .line 463
-    sget-object v8, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v8, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -1752,7 +1752,7 @@
     if-le v0, v8, :cond_3
 
     .line 466
-    sget-object v8, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v8, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -1794,7 +1794,7 @@
     if-ne v8, v12, :cond_4
 
     .line 469
-    sget-object v8, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v8, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -1836,7 +1836,7 @@
     if-ne v8, v12, :cond_5
 
     .line 472
-    sget-object v8, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v8, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -1893,7 +1893,7 @@
 
     .line 480
     :cond_6
-    sget-object v8, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v8, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -1924,7 +1924,7 @@
 
     .line 485
     :cond_7
-    sget-object v8, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v8, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -1967,7 +1967,7 @@
     if-nez p1, :cond_0
 
     .line 492
-    sget-object v3, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     const-string v4, "inputPwd : inputPwd == null"
 
@@ -1992,7 +1992,7 @@
 
     .line 500
     :cond_1
-    iget-object v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->regExpn_Pwd:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->regExpn_Pwd:Ljava/lang/String;
 
     invoke-static {v4}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
@@ -2013,7 +2013,7 @@
     if-eqz v4, :cond_2
 
     .line 504
-    sget-object v2, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     const-string v4, "isValidPwd : Vaild pwd"
 
@@ -2026,7 +2026,7 @@
 
     .line 508
     :cond_2
-    sget-object v3, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     const-string v4, "isValidPwd : Invalid pwd"
 
@@ -2050,16 +2050,16 @@
     .line 195
     const v4, 0x7f08002f
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/cpa/CpaAdvancedSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->addPreferencesFromResource(I)V
 
     .line 197
-    invoke-virtual {p0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v2
 
     .line 198
     .local v2, "ps":Landroid/preference/PreferenceScreen;
-    invoke-virtual {p0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -2069,146 +2069,146 @@
 
     move-result-object v4
 
-    sput-object v4, Lcom/android/settings/cpa/CpaAdvancedSettings;->sNotSet:Ljava/lang/String;
+    sput-object v4, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->sNotSet:Ljava/lang/String;
 
     .line 199
     const-string v4, "apn_apn"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/cpa/CpaAdvancedSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     check-cast v4, Landroid/preference/EditTextPreference;
 
-    iput-object v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mApn:Landroid/preference/EditTextPreference;
+    iput-object v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mApn:Landroid/preference/EditTextPreference;
 
     .line 200
     const-string v4, "apn_http_proxy"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/cpa/CpaAdvancedSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     check-cast v4, Landroid/preference/EditTextPreference;
 
-    iput-object v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mProxy:Landroid/preference/EditTextPreference;
+    iput-object v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mProxy:Landroid/preference/EditTextPreference;
 
     .line 201
     const-string v4, "apn_http_port"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/cpa/CpaAdvancedSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     check-cast v4, Landroid/preference/EditTextPreference;
 
-    iput-object v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mPort:Landroid/preference/EditTextPreference;
+    iput-object v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mPort:Landroid/preference/EditTextPreference;
 
     .line 202
     const-string v4, "apn_user"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/cpa/CpaAdvancedSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     check-cast v4, Landroid/preference/EditTextPreference;
 
-    iput-object v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mUser:Landroid/preference/EditTextPreference;
+    iput-object v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mUser:Landroid/preference/EditTextPreference;
 
     .line 203
     const-string v4, "apn_password"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/cpa/CpaAdvancedSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     check-cast v4, Landroid/preference/EditTextPreference;
 
-    iput-object v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mPassword:Landroid/preference/EditTextPreference;
+    iput-object v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mPassword:Landroid/preference/EditTextPreference;
 
     .line 204
     const-string v4, "dns1"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/cpa/CpaAdvancedSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     check-cast v4, Landroid/preference/EditTextPreference;
 
-    iput-object v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mDns1:Landroid/preference/EditTextPreference;
+    iput-object v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mDns1:Landroid/preference/EditTextPreference;
 
     .line 205
     const-string v4, "dns2"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/cpa/CpaAdvancedSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     check-cast v4, Landroid/preference/EditTextPreference;
 
-    iput-object v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mDns2:Landroid/preference/EditTextPreference;
+    iput-object v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mDns2:Landroid/preference/EditTextPreference;
 
     .line 207
-    iget-object v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mApn:Landroid/preference/EditTextPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mApn:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v4, p0}, Landroid/preference/EditTextPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 208
-    iget-object v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mUser:Landroid/preference/EditTextPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mUser:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v4, p0}, Landroid/preference/EditTextPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 209
-    iget-object v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mPassword:Landroid/preference/EditTextPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mPassword:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v4, p0}, Landroid/preference/EditTextPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 210
-    iget-object v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mPort:Landroid/preference/EditTextPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mPort:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v4, p0}, Landroid/preference/EditTextPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 211
-    iget-object v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mDns1:Landroid/preference/EditTextPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mDns1:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v4, p0}, Landroid/preference/EditTextPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 212
-    iget-object v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mDns2:Landroid/preference/EditTextPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mDns2:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v4, p0}, Landroid/preference/EditTextPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 214
     const-string v4, "auth_type"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/cpa/CpaAdvancedSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     check-cast v4, Landroid/preference/ListPreference;
 
-    iput-object v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mAuthType:Landroid/preference/ListPreference;
+    iput-object v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mAuthType:Landroid/preference/ListPreference;
 
     .line 215
-    iget-object v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mAuthType:Landroid/preference/ListPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mAuthType:Landroid/preference/ListPreference;
 
     invoke-virtual {v4, p0}, Landroid/preference/ListPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 217
-    invoke-virtual {p0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
 
     .line 218
     .local v3, "tempIntent":Landroid/content/Intent;
-    invoke-virtual {p0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
+    iput-object v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
 
     .line 220
-    invoke-virtual {p0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -2225,7 +2225,7 @@
     const/4 v4, 0x1
 
     :goto_0
-    iput-boolean v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mFirstTime:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mFirstTime:Z
 
     .line 225
     const-string v4, "com.samsung.settings.cpa.CpaAdvancedSettings"
@@ -2241,7 +2241,7 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mUri:Landroid/net/Uri;
+    iput-object v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mUri:Landroid/net/Uri;
 
     .line 227
     const-string v4, "new"
@@ -2250,10 +2250,10 @@
 
     move-result v4
 
-    iput-boolean v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mNewApn:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mNewApn:Z
 
     .line 232
-    sget-object v4, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2265,7 +2265,7 @@
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mUri:Landroid/net/Uri;
+    iget-object v6, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mUri:Landroid/net/Uri;
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2278,18 +2278,18 @@
     invoke-static {v4, v5}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 233
-    iget-object v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mUri:Landroid/net/Uri;
+    iget-object v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mUri:Landroid/net/Uri;
 
-    sget-object v5, Lcom/android/settings/cpa/CpaAdvancedSettings;->sProjection:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->sProjection:[Ljava/lang/String;
 
-    invoke-virtual {p0, v4, v5, v7, v7}, Lcom/android/settings/cpa/CpaAdvancedSettings;->managedQuery(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {p0, v4, v5, v7, v7}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->managedQuery(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mCursor:Landroid/database/Cursor;
+    iput-object v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mCursor:Landroid/database/Cursor;
 
     .line 234
-    sget-object v4, Lcom/android/settings/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2301,7 +2301,7 @@
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mCursor:Landroid/database/Cursor;
+    iget-object v6, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mCursor:Landroid/database/Cursor;
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2314,12 +2314,12 @@
     invoke-static {v4, v5}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 235
-    iget-object v4, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mCursor:Landroid/database/Cursor;
+    iget-object v4, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v4}, Landroid/database/Cursor;->moveToFirst()Z
 
     .line 237
-    invoke-direct {p0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->fillUi()V
+    invoke-direct {p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->fillUi()V
 
     .line 238
     :goto_1
@@ -2333,7 +2333,7 @@
 
     .line 229
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->finish()V
 
     goto :goto_1
 .end method
@@ -2351,7 +2351,7 @@
     if-nez p1, :cond_0
 
     .line 712
-    invoke-direct {p0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->getErrorMsg()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->getErrorMsg()Ljava/lang/String;
 
     move-result-object v0
 
@@ -2373,9 +2373,9 @@
 
     const v2, 0x7f0e1177
 
-    new-instance v3, Lcom/android/settings/cpa/CpaAdvancedSettings$3;
+    new-instance v3, Lcom/android/settings_ex/cpa/CpaAdvancedSettings$3;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/cpa/CpaAdvancedSettings$3;-><init>(Lcom/android/settings/cpa/CpaAdvancedSettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings$3;-><init>(Lcom/android/settings_ex/cpa/CpaAdvancedSettings;)V
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -2460,7 +2460,7 @@
     :pswitch_0
     const/4 v1, 0x0
 
-    invoke-direct {p0, v1}, Lcom/android/settings/cpa/CpaAdvancedSettings;->validateAndSave(Z)Z
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->validateAndSave(Z)Z
 
     move-result v1
 
@@ -2469,10 +2469,10 @@
     .line 598
     const/4 v1, -0x1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/cpa/CpaAdvancedSettings;->setResult(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->setResult(I)V
 
     .line 599
-    invoke-virtual {p0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -2481,7 +2481,7 @@
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 600
-    invoke-virtual {p0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->finish()V
 
     goto :goto_0
 
@@ -2499,7 +2499,7 @@
 
     .prologue
     .line 251
-    invoke-virtual {p0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
@@ -2510,11 +2510,11 @@
     invoke-interface {v0, p0}, Landroid/content/SharedPreferences;->unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
 
     .line 253
-    invoke-virtual {p0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mAirplainModeEnabledObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mAirplainModeEnabledObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
@@ -2563,12 +2563,12 @@
 
     .line 356
     .local v1, "index":I
-    iget-object v8, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mAuthType:Landroid/preference/ListPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mAuthType:Landroid/preference/ListPreference;
 
     invoke-virtual {v8, v1}, Landroid/preference/ListPreference;->setValueIndex(I)V
 
     .line 358
-    iget-object v8, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
+    iget-object v8, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
 
     const v9, 0x7f11003d
 
@@ -2578,7 +2578,7 @@
 
     .line 359
     .local v5, "values":[Ljava/lang/String;
-    iget-object v8, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mAuthType:Landroid/preference/ListPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mAuthType:Landroid/preference/ListPreference;
 
     aget-object v9, v5, v1
 
@@ -2623,7 +2623,7 @@
 
     .line 365
     .local v3, "value":Ljava/lang/String;
-    invoke-direct {p0, v3}, Lcom/android/settings/cpa/CpaAdvancedSettings;->isValidPort(Ljava/lang/String;)Z
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->isValidPort(Ljava/lang/String;)Z
 
     move-result v8
 
@@ -2631,9 +2631,9 @@
 
     .line 367
     :try_start_1
-    iget-object v6, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mPort:Landroid/preference/EditTextPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mPort:Landroid/preference/EditTextPreference;
 
-    invoke-direct {p0, v3}, Lcom/android/settings/cpa/CpaAdvancedSettings;->checkNull(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->checkNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -2651,7 +2651,7 @@
 
     .line 372
     :cond_2
-    iget-object v7, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
+    iget-object v7, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
 
     const v8, 0x7f0e072f
 
@@ -2659,7 +2659,7 @@
 
     move-result-object v7
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/cpa/CpaAdvancedSettings;->showAlertDialogAboutInvalid(Ljava/lang/String;)V
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->showAlertDialogAboutInvalid(Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -2690,7 +2690,7 @@
     if-eqz v8, :cond_0
 
     .line 379
-    iget-object v7, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
+    iget-object v7, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
 
     const v8, 0x7f0e0730
 
@@ -2698,7 +2698,7 @@
 
     move-result-object v7
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/cpa/CpaAdvancedSettings;->showAlertDialogAboutInvalid(Ljava/lang/String;)V
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->showAlertDialogAboutInvalid(Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -2720,7 +2720,7 @@
 
     .line 384
     .restart local v3    # "value":Ljava/lang/String;
-    invoke-virtual {p0, v3}, Lcom/android/settings/cpa/CpaAdvancedSettings;->isValidID(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->isValidID(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v8
 
@@ -2731,9 +2731,9 @@
     if-eqz v8, :cond_5
 
     .line 385
-    iget-object v6, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mUser:Landroid/preference/EditTextPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mUser:Landroid/preference/EditTextPreference;
 
-    invoke-direct {p0, v3}, Lcom/android/settings/cpa/CpaAdvancedSettings;->checkNull(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->checkNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -2743,7 +2743,7 @@
 
     .line 387
     :cond_5
-    iget-object v7, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
+    iget-object v7, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
 
     const v8, 0x7f0e0731
 
@@ -2751,7 +2751,7 @@
 
     move-result-object v7
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/cpa/CpaAdvancedSettings;->showAlertDialogAboutInvalid(Ljava/lang/String;)V
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->showAlertDialogAboutInvalid(Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -2773,16 +2773,16 @@
 
     .line 392
     .restart local v3    # "value":Ljava/lang/String;
-    invoke-virtual {p0, v3}, Lcom/android/settings/cpa/CpaAdvancedSettings;->isValidPwd(Ljava/lang/String;)Z
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->isValidPwd(Ljava/lang/String;)Z
 
     move-result v8
 
     if-eqz v8, :cond_7
 
     .line 393
-    iget-object v6, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mPassword:Landroid/preference/EditTextPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mPassword:Landroid/preference/EditTextPreference;
 
-    invoke-direct {p0, v3}, Lcom/android/settings/cpa/CpaAdvancedSettings;->starify(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->starify(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -2792,7 +2792,7 @@
 
     .line 395
     :cond_7
-    iget-object v7, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
+    iget-object v7, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
 
     const v8, 0x7f0e0732
 
@@ -2800,7 +2800,7 @@
 
     move-result-object v7
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/cpa/CpaAdvancedSettings;->showAlertDialogAboutInvalid(Ljava/lang/String;)V
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->showAlertDialogAboutInvalid(Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -2822,14 +2822,14 @@
 
     .line 401
     .restart local v3    # "value":Ljava/lang/String;
-    invoke-direct {p0, v3}, Lcom/android/settings/cpa/CpaAdvancedSettings;->isValidIP(Ljava/lang/String;)Z
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->isValidIP(Ljava/lang/String;)Z
 
     move-result v8
 
     if-eqz v8, :cond_a
 
     .line 402
-    invoke-virtual {p0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v8
 
@@ -2841,14 +2841,14 @@
 
     .line 403
     .local v4, "value2":Ljava/lang/String;
-    invoke-direct {p0, v3}, Lcom/android/settings/cpa/CpaAdvancedSettings;->checkNull(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->checkNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
     invoke-virtual {p1, v8}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 404
-    invoke-virtual {p0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v8
 
@@ -2870,7 +2870,7 @@
     if-eqz v8, :cond_9
 
     .line 407
-    iget-object v8, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mDns2:Landroid/preference/EditTextPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mDns2:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v8, v6}, Landroid/preference/EditTextPreference;->setEnabled(Z)V
 
@@ -2878,7 +2878,7 @@
 
     .line 409
     :cond_9
-    iget-object v6, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mDns2:Landroid/preference/EditTextPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mDns2:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v6, v7}, Landroid/preference/EditTextPreference;->setEnabled(Z)V
 
@@ -2887,13 +2887,13 @@
     .line 412
     .end local v4    # "value2":Ljava/lang/String;
     :cond_a
-    iget-object v7, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
+    iget-object v7, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
 
     invoke-virtual {v7, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/cpa/CpaAdvancedSettings;->showAlertDialogAboutInvalid(Ljava/lang/String;)V
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->showAlertDialogAboutInvalid(Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -2915,21 +2915,21 @@
 
     .line 417
     .restart local v3    # "value":Ljava/lang/String;
-    invoke-direct {p0, v3}, Lcom/android/settings/cpa/CpaAdvancedSettings;->isValidIP(Ljava/lang/String;)Z
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->isValidIP(Ljava/lang/String;)Z
 
     move-result v8
 
     if-eqz v8, :cond_c
 
     .line 418
-    invoke-direct {p0, v3}, Lcom/android/settings/cpa/CpaAdvancedSettings;->checkNull(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->checkNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
     invoke-virtual {p1, v6}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 419
-    invoke-virtual {p0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -2941,13 +2941,13 @@
 
     .line 421
     :cond_c
-    iget-object v7, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
+    iget-object v7, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mRes:Landroid/content/res/Resources;
 
     invoke-virtual {v7, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/cpa/CpaAdvancedSettings;->showAlertDialogAboutInvalid(Ljava/lang/String;)V
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->showAlertDialogAboutInvalid(Ljava/lang/String;)V
 
     goto/16 :goto_1
 .end method
@@ -2965,7 +2965,7 @@
     if-nez p1, :cond_0
 
     .line 743
-    invoke-direct {p0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->getErrorMsg()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->getErrorMsg()Ljava/lang/String;
 
     move-result-object v0
 
@@ -2993,7 +2993,7 @@
     invoke-super {p0}, Landroid/preference/PreferenceActivity;->onResume()V
 
     .line 243
-    invoke-virtual {p0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
@@ -3004,7 +3004,7 @@
     invoke-interface {v0, p0}, Landroid/content/SharedPreferences;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
 
     .line 245
-    invoke-virtual {p0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -3016,7 +3016,7 @@
 
     const/4 v2, 0x1
 
-    iget-object v3, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mAirplainModeEnabledObserver:Landroid/database/ContentObserver;
+    iget-object v3, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mAirplainModeEnabledObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -3035,7 +3035,7 @@
     .line 611
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->validateAndSave(Z)Z
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->validateAndSave(Z)Z
 
     move-result v0
 
@@ -3044,7 +3044,7 @@
     .line 612
     const-string v0, "pos"
 
-    iget-object v1, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mCursor:Landroid/database/Cursor;
+    iget-object v1, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mCursor:Landroid/database/Cursor;
 
     const/4 v2, 0x0
 
@@ -3066,7 +3066,7 @@
 
     .prologue
     .line 820
-    invoke-virtual {p0, p2}, Lcom/android/settings/cpa/CpaAdvancedSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, p2}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
@@ -3075,7 +3075,7 @@
     if-eqz v0, :cond_0
 
     .line 823
-    iget-object v1, p0, Lcom/android/settings/cpa/CpaAdvancedSettings;->mPassword:Landroid/preference/EditTextPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->mPassword:Landroid/preference/EditTextPreference;
 
     invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -3090,7 +3090,7 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v1}, Lcom/android/settings/cpa/CpaAdvancedSettings;->starify(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->starify(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -3109,7 +3109,7 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v1}, Lcom/android/settings/cpa/CpaAdvancedSettings;->checkNull(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->checkNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -3140,9 +3140,9 @@
     .line 433
     const v1, 0x104000a
 
-    new-instance v2, Lcom/android/settings/cpa/CpaAdvancedSettings$2;
+    new-instance v2, Lcom/android/settings_ex/cpa/CpaAdvancedSettings$2;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/cpa/CpaAdvancedSettings$2;-><init>(Lcom/android/settings/cpa/CpaAdvancedSettings;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings$2;-><init>(Lcom/android/settings_ex/cpa/CpaAdvancedSettings;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 

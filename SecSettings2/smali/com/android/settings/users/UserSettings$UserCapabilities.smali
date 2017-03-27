@@ -1,11 +1,11 @@
-.class Lcom/android/settings/users/UserSettings$UserCapabilities;
+.class Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 .super Ljava/lang/Object;
 .source "UserSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/users/UserSettings;
+    value = Lcom/android/settings_ex/users/UserSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -39,13 +39,13 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1237
-    iput-boolean v0, p0, Lcom/android/settings/users/UserSettings$UserCapabilities;->mEnabled:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mEnabled:Z
 
     .line 1238
-    iput-boolean v0, p0, Lcom/android/settings/users/UserSettings$UserCapabilities;->mCanAddUser:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mCanAddUser:Z
 
     .line 1239
-    iput-boolean v0, p0, Lcom/android/settings/users/UserSettings$UserCapabilities;->mCanAddRestrictedProfile:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mCanAddRestrictedProfile:Z
 
     .line 1240
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
@@ -55,7 +55,7 @@
     if-nez v1, :cond_0
 
     :goto_0
-    iput-boolean v0, p0, Lcom/android/settings/users/UserSettings$UserCapabilities;->mIsOwner:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mIsOwner:Z
 
     return-void
 
@@ -65,7 +65,7 @@
     goto :goto_0
 .end method
 
-.method public static create(Landroid/content/Context;)Lcom/android/settings/users/UserSettings$UserCapabilities;
+.method public static create(Landroid/content/Context;)Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
     .locals 10
     .param p0, "context"    # Landroid/content/Context;
 
@@ -85,19 +85,19 @@
 
     .line 1246
     .local v5, "userManager":Landroid/os/UserManager;
-    new-instance v1, Lcom/android/settings/users/UserSettings$UserCapabilities;
+    new-instance v1, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
 
-    invoke-direct {v1}, Lcom/android/settings/users/UserSettings$UserCapabilities;-><init>()V
+    invoke-direct {v1}, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;-><init>()V
 
     .line 1247
-    .local v1, "caps":Lcom/android/settings/users/UserSettings$UserCapabilities;
+    .local v1, "caps":Lcom/android/settings_ex/users/UserSettings$UserCapabilities;
     invoke-static {}, Landroid/os/UserManager;->supportsMultipleUsers()Z
 
     move-result v8
 
     if-eqz v8, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isMonkeyRunning()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMonkeyRunning()Z
 
     move-result v8
 
@@ -105,7 +105,7 @@
 
     .line 1248
     :cond_0
-    iput-boolean v6, v1, Lcom/android/settings/users/UserSettings$UserCapabilities;->mEnabled:Z
+    iput-boolean v6, v1, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mEnabled:Z
 
     .line 1271
     :goto_0
@@ -121,7 +121,7 @@
 
     .line 1254
     .local v2, "disallowAddUser":Z
-    iget-boolean v8, v1, Lcom/android/settings/users/UserSettings$UserCapabilities;->mIsOwner:Z
+    iget-boolean v8, v1, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mIsOwner:Z
 
     if-eqz v8, :cond_2
 
@@ -143,7 +143,7 @@
 
     .line 1257
     :cond_2
-    iput-boolean v6, v1, Lcom/android/settings/users/UserSettings$UserCapabilities;->mCanAddUser:Z
+    iput-boolean v6, v1, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mCanAddUser:Z
 
     .line 1259
     :cond_3
@@ -163,7 +163,7 @@
 
     if-nez v8, :cond_4
 
-    invoke-static {p0}, Lcom/android/settings/Utils;->isVoiceCapable(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/android/settings_ex/Utils;->isVoiceCapable(Landroid/content/Context;)Z
 
     move-result v8
 
@@ -171,7 +171,7 @@
 
     .line 1263
     :cond_4
-    iput-boolean v6, v1, Lcom/android/settings/users/UserSettings$UserCapabilities;->mCanAddRestrictedProfile:Z
+    iput-boolean v6, v1, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mCanAddRestrictedProfile:Z
 
     .line 1265
     :cond_5
@@ -189,10 +189,10 @@
 
     move-result v8
 
-    iput-boolean v8, v1, Lcom/android/settings/users/UserSettings$UserCapabilities;->mIsGuest:Z
+    iput-boolean v8, v1, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mIsGuest:Z
 
     .line 1268
-    iget-boolean v8, v1, Lcom/android/settings/users/UserSettings$UserCapabilities;->mIsOwner:Z
+    iget-boolean v8, v1, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mIsOwner:Z
 
     if-nez v8, :cond_6
 
@@ -214,7 +214,7 @@
     .line 1270
     .local v0, "canAddUsersWhenLocked":Z
     :goto_1
-    iget-boolean v8, v1, Lcom/android/settings/users/UserSettings$UserCapabilities;->mIsGuest:Z
+    iget-boolean v8, v1, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mIsGuest:Z
 
     if-nez v8, :cond_8
 
@@ -223,7 +223,7 @@
     if-eqz v0, :cond_8
 
     :goto_2
-    iput-boolean v7, v1, Lcom/android/settings/users/UserSettings$UserCapabilities;->mCanAddGuest:Z
+    iput-boolean v7, v1, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mCanAddGuest:Z
 
     goto :goto_0
 
@@ -259,7 +259,7 @@
 
     move-result-object v0
 
-    iget-boolean v1, p0, Lcom/android/settings/users/UserSettings$UserCapabilities;->mEnabled:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mEnabled:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -271,7 +271,7 @@
 
     move-result-object v0
 
-    iget-boolean v1, p0, Lcom/android/settings/users/UserSettings$UserCapabilities;->mCanAddUser:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mCanAddUser:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -283,7 +283,7 @@
 
     move-result-object v0
 
-    iget-boolean v1, p0, Lcom/android/settings/users/UserSettings$UserCapabilities;->mCanAddRestrictedProfile:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mCanAddRestrictedProfile:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -295,7 +295,7 @@
 
     move-result-object v0
 
-    iget-boolean v1, p0, Lcom/android/settings/users/UserSettings$UserCapabilities;->mIsOwner:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mIsOwner:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -307,7 +307,7 @@
 
     move-result-object v0
 
-    iget-boolean v1, p0, Lcom/android/settings/users/UserSettings$UserCapabilities;->mIsGuest:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/users/UserSettings$UserCapabilities;->mIsGuest:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 

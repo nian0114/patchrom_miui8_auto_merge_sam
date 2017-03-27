@@ -1,14 +1,14 @@
-.class Lcom/android/settingslib/bluetooth/BluetoothEventManager$DeviceShutDownHandler;
+.class Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$DeviceShutDownHandler;
 .super Ljava/lang/Object;
 .source "BluetoothEventManager.java"
 
 # interfaces
-.implements Lcom/android/settingslib/bluetooth/BluetoothEventManager$Handler;
+.implements Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$Handler;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/bluetooth/BluetoothEventManager;
+    value = Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,30 +18,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settingslib/bluetooth/BluetoothEventManager;
+.field final synthetic this$0:Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/settingslib/bluetooth/BluetoothEventManager;)V
+.method private constructor <init>(Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;)V
     .locals 0
 
     .prologue
     .line 542
-    iput-object p1, p0, Lcom/android/settingslib/bluetooth/BluetoothEventManager$DeviceShutDownHandler;->this$0:Lcom/android/settingslib/bluetooth/BluetoothEventManager;
+    iput-object p1, p0, Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$DeviceShutDownHandler;->this$0:Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settingslib/bluetooth/BluetoothEventManager;Lcom/android/settingslib/bluetooth/BluetoothEventManager$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settingslib/bluetooth/BluetoothEventManager;
-    .param p2, "x1"    # Lcom/android/settingslib/bluetooth/BluetoothEventManager$1;
+    .param p1, "x0"    # Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;
+    .param p2, "x1"    # Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$1;
 
     .prologue
     .line 542
-    invoke-direct {p0, p1}, Lcom/android/settingslib/bluetooth/BluetoothEventManager$DeviceShutDownHandler;-><init>(Lcom/android/settingslib/bluetooth/BluetoothEventManager;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$DeviceShutDownHandler;-><init>(Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;)V
 
     return-void
 .end method
@@ -56,10 +56,10 @@
 
     .prologue
     .line 544
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/BluetoothEventManager$DeviceShutDownHandler;->this$0:Lcom/android/settingslib/bluetooth/BluetoothEventManager;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$DeviceShutDownHandler;->this$0:Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;
 
-    # getter for: Lcom/android/settingslib/bluetooth/BluetoothEventManager;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Lcom/android/settingslib/bluetooth/BluetoothEventManager;->access$2300(Lcom/android/settingslib/bluetooth/BluetoothEventManager;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;->mContext:Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;->access$2300(Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -167,7 +167,7 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v5}, Lcom/android/settingslib/bluetooth/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
+    invoke-static/range {v0 .. v5}, Lcom/android/settings_exlib/bluetooth/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
 
     .line 555
     :cond_1

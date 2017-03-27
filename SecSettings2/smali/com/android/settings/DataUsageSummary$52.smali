@@ -1,14 +1,14 @@
-.class Lcom/android/settings/DataUsageSummary$52;
+.class Lcom/android/settings_ex/DataUsageSummary$52;
 .super Ljava/lang/Object;
 .source "DataUsageSummary.java"
 
 # interfaces
-.implements Lcom/android/settings/datasaving/DataSavingHelper$TrafficServiceConnectionListener;
+.implements Lcom/android/settings_ex/datasaving/DataSavingHelper$TrafficServiceConnectionListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DataUsageSummary;
+    value = Lcom/android/settings_ex/DataUsageSummary;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DataUsageSummary;
+.field final synthetic this$0:Lcom/android/settings_ex/DataUsageSummary;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DataUsageSummary;)V
+.method constructor <init>(Lcom/android/settings_ex/DataUsageSummary;)V
     .locals 0
 
     .prologue
     .line 6992
-    iput-object p1, p0, Lcom/android/settings/DataUsageSummary$52;->this$0:Lcom/android/settings/DataUsageSummary;
+    iput-object p1, p0, Lcom/android/settings_ex/DataUsageSummary$52;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,9 +49,9 @@
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    new-instance v1, Lcom/android/settings/DataUsageSummary$52$1;
+    new-instance v1, Lcom/android/settings_ex/DataUsageSummary$52$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/DataUsageSummary$52$1;-><init>(Lcom/android/settings/DataUsageSummary$52;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/DataUsageSummary$52$1;-><init>(Lcom/android/settings_ex/DataUsageSummary$52;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

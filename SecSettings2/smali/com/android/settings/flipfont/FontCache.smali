@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/flipfont/FontCache;
+.class public Lcom/android/settings_ex/flipfont/FontCache;
 .super Ljava/lang/Object;
 .source "FontCache.java"
 
@@ -27,7 +27,7 @@
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    sput-object v0, Lcom/android/settings/flipfont/FontCache;->fontCache:Ljava/util/Hashtable;
+    sput-object v0, Lcom/android/settings_ex/flipfont/FontCache;->fontCache:Ljava/util/Hashtable;
 
     return-void
 .end method
@@ -39,7 +39,7 @@
 
     .prologue
     .line 21
-    sget-object v2, Lcom/android/settings/flipfont/FontCache;->fontCache:Ljava/util/Hashtable;
+    sget-object v2, Lcom/android/settings_ex/flipfont/FontCache;->fontCache:Ljava/util/Hashtable;
 
     invoke-virtual {v2, p0}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -60,7 +60,7 @@
     move-result-object v1
 
     .line 30
-    sget-object v2, Lcom/android/settings/flipfont/FontCache;->fontCache:Ljava/util/Hashtable;
+    sget-object v2, Lcom/android/settings_ex/flipfont/FontCache;->fontCache:Ljava/util/Hashtable;
 
     invoke-virtual {v2, p0, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

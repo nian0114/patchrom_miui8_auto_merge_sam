@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/accessibility/AccessibilitySettingsHearing$13;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$13;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "AccessibilitySettingsHearing.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    value = Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 682
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -52,13 +52,13 @@
     .local v0, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v1, "com.samsung.android.video"
 
-    invoke-static {p1, v1}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v1}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-static {}, Lcom/android/settings/Utils;->isJapanModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isJapanModel()Z
 
     move-result v1
 
@@ -85,13 +85,13 @@
 
     .line 702
     :cond_2
-    invoke-static {p1}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->isVoiceCapable(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isVoiceCapable(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -117,7 +117,7 @@
 
     .line 710
     :cond_4
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v1
 
@@ -151,7 +151,7 @@
     :cond_6
     const-string v1, "com.samsung.android.app.sounddetector"
 
-    invoke-static {p1, v1}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v1}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -166,7 +166,7 @@
     :cond_7
     const-string v1, "com.samsung.android.app.advsounddetector"
 
-    invoke-static {p1, v1}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v1}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -212,7 +212,7 @@
 
     .line 687
     .local v0, "indexable":Landroid/provider/SearchIndexableResource;
-    const-class v2, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    const-class v2, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

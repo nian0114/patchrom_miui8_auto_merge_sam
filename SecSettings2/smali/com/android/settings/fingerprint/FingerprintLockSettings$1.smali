@@ -1,11 +1,11 @@
-.class Lcom/android/settings/fingerprint/FingerprintLockSettings$1;
+.class Lcom/android/settings_ex/fingerprint/FingerprintLockSettings$1;
 .super Lcom/samsung/android/fingerprint/IFingerprintClient$Stub;
 .source "FingerprintLockSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fingerprint/FingerprintLockSettings;->identifyFinger()I
+    value = Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;->identifyFinger()I
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/FingerprintLockSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/FingerprintLockSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;)V
     .locals 0
 
     .prologue
     .line 718
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintLockSettings$1;->this$0:Lcom/android/settings/fingerprint/FingerprintLockSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintLockSettings$1;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;
 
     invoke-direct {p0}, Lcom/samsung/android/fingerprint/IFingerprintClient$Stub;-><init>()V
 
@@ -49,26 +49,26 @@
     .line 723
     .local v1, "event":Lcom/samsung/android/fingerprint/FingerprintEvent;
     :try_start_0
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintLockSettings$1;->this$0:Lcom/android/settings/fingerprint/FingerprintLockSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintLockSettings$1;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintLockSettings;->mHandler:Landroid/os/Handler;
-    invoke-static {v2}, Lcom/android/settings/fingerprint/FingerprintLockSettings;->access$000(Lcom/android/settings/fingerprint/FingerprintLockSettings;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;->mHandler:Landroid/os/Handler;
+    invoke-static {v2}, Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;->access$000(Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;)Landroid/os/Handler;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
     .line 724
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintLockSettings$1;->this$0:Lcom/android/settings/fingerprint/FingerprintLockSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintLockSettings$1;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintLockSettings;->mHandler:Landroid/os/Handler;
-    invoke-static {v2}, Lcom/android/settings/fingerprint/FingerprintLockSettings;->access$000(Lcom/android/settings/fingerprint/FingerprintLockSettings;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;->mHandler:Landroid/os/Handler;
+    invoke-static {v2}, Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;->access$000(Lcom/android/settings_ex/fingerprint/FingerprintLockSettings;)Landroid/os/Handler;
 
     move-result-object v2
 
-    new-instance v3, Lcom/android/settings/fingerprint/FingerprintLockSettings$1$1;
+    new-instance v3, Lcom/android/settings_ex/fingerprint/FingerprintLockSettings$1$1;
 
-    invoke-direct {v3, p0, v1}, Lcom/android/settings/fingerprint/FingerprintLockSettings$1$1;-><init>(Lcom/android/settings/fingerprint/FingerprintLockSettings$1;Lcom/samsung/android/fingerprint/FingerprintEvent;)V
+    invoke-direct {v3, p0, v1}, Lcom/android/settings_ex/fingerprint/FingerprintLockSettings$1$1;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintLockSettings$1;Lcom/samsung/android/fingerprint/FingerprintEvent;)V
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
     :try_end_0

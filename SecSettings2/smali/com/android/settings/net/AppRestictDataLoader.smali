@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/net/AppRestictDataLoader;
+.class public Lcom/android/settings_ex/net/AppRestictDataLoader;
 .super Landroid/content/AsyncTaskLoader;
 .source "AppRestictDataLoader.java"
 
@@ -34,10 +34,10 @@
     invoke-direct {p0, p1}, Landroid/content/AsyncTaskLoader;-><init>(Landroid/content/Context;)V
 
     .line 50
-    iput-object p2, p0, Lcom/android/settings/net/AppRestictDataLoader;->mSession:Landroid/net/INetworkStatsSession;
+    iput-object p2, p0, Lcom/android/settings_ex/net/AppRestictDataLoader;->mSession:Landroid/net/INetworkStatsSession;
 
     .line 51
-    iput-object p3, p0, Lcom/android/settings/net/AppRestictDataLoader;->mArgs:Landroid/os/Bundle;
+    iput-object p3, p0, Lcom/android/settings_ex/net/AppRestictDataLoader;->mArgs:Landroid/os/Bundle;
 
     .line 52
     return-void
@@ -57,7 +57,7 @@
 
     .prologue
     .line 101
-    iget-object v0, p0, Lcom/android/settings/net/AppRestictDataLoader;->mSession:Landroid/net/INetworkStatsSession;
+    iget-object v0, p0, Lcom/android/settings_ex/net/AppRestictDataLoader;->mSession:Landroid/net/INetworkStatsSession;
 
     const/4 v4, 0x0
 
@@ -97,7 +97,7 @@
     .local v0, "data":Landroid/net/NetworkStatsHistory;
     const/4 v1, 0x0
 
-    invoke-direct {p0, p1, p2, v1, v0}, Lcom/android/settings/net/AppRestictDataLoader;->collectHistoryForUid(Landroid/net/NetworkTemplate;IILandroid/net/NetworkStatsHistory;)Landroid/net/NetworkStatsHistory;
+    invoke-direct {p0, p1, p2, v1, v0}, Lcom/android/settings_ex/net/AppRestictDataLoader;->collectHistoryForUid(Landroid/net/NetworkTemplate;IILandroid/net/NetworkStatsHistory;)Landroid/net/NetworkStatsHistory;
 
     move-result-object v0
 
@@ -112,7 +112,7 @@
 
     .prologue
     .line 62
-    iget-object v3, p0, Lcom/android/settings/net/AppRestictDataLoader;->mArgs:Landroid/os/Bundle;
+    iget-object v3, p0, Lcom/android/settings_ex/net/AppRestictDataLoader;->mArgs:Landroid/os/Bundle;
 
     const-string v4, "template"
 
@@ -124,7 +124,7 @@
 
     .line 63
     .local v2, "template":Landroid/net/NetworkTemplate;
-    iget-object v3, p0, Lcom/android/settings/net/AppRestictDataLoader;->mArgs:Landroid/os/Bundle;
+    iget-object v3, p0, Lcom/android/settings_ex/net/AppRestictDataLoader;->mArgs:Landroid/os/Bundle;
 
     const-string v4, "uid"
 
@@ -132,10 +132,10 @@
 
     move-result v3
 
-    iput v3, p0, Lcom/android/settings/net/AppRestictDataLoader;->uid:I
+    iput v3, p0, Lcom/android/settings_ex/net/AppRestictDataLoader;->uid:I
 
     .line 64
-    iget-object v3, p0, Lcom/android/settings/net/AppRestictDataLoader;->mArgs:Landroid/os/Bundle;
+    iget-object v3, p0, Lcom/android/settings_ex/net/AppRestictDataLoader;->mArgs:Landroid/os/Bundle;
 
     const-string v4, "fields"
 
@@ -146,9 +146,9 @@
     .line 67
     .local v1, "fields":I
     :try_start_0
-    iget v3, p0, Lcom/android/settings/net/AppRestictDataLoader;->uid:I
+    iget v3, p0, Lcom/android/settings_ex/net/AppRestictDataLoader;->uid:I
 
-    invoke-direct {p0, v2, v3, v1}, Lcom/android/settings/net/AppRestictDataLoader;->loadInBackground(Landroid/net/NetworkTemplate;II)Landroid/net/NetworkStatsHistory;
+    invoke-direct {p0, v2, v3, v1}, Lcom/android/settings_ex/net/AppRestictDataLoader;->loadInBackground(Landroid/net/NetworkTemplate;II)Landroid/net/NetworkStatsHistory;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -176,7 +176,7 @@
 
     .prologue
     .line 39
-    invoke-virtual {p0}, Lcom/android/settings/net/AppRestictDataLoader;->loadInBackground()Landroid/net/NetworkStatsHistory;
+    invoke-virtual {p0}, Lcom/android/settings_ex/net/AppRestictDataLoader;->loadInBackground()Landroid/net/NetworkStatsHistory;
 
     move-result-object v0
 
@@ -191,7 +191,7 @@
     invoke-super {p0}, Landroid/content/AsyncTaskLoader;->onReset()V
 
     .line 91
-    invoke-virtual {p0}, Lcom/android/settings/net/AppRestictDataLoader;->cancelLoad()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/net/AppRestictDataLoader;->cancelLoad()Z
 
     .line 92
     return-void
@@ -205,7 +205,7 @@
     invoke-super {p0}, Landroid/content/AsyncTaskLoader;->onStartLoading()V
 
     .line 57
-    invoke-virtual {p0}, Lcom/android/settings/net/AppRestictDataLoader;->forceLoad()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/net/AppRestictDataLoader;->forceLoad()V
 
     .line 58
     return-void
@@ -219,7 +219,7 @@
     invoke-super {p0}, Landroid/content/AsyncTaskLoader;->onStopLoading()V
 
     .line 86
-    invoke-virtual {p0}, Lcom/android/settings/net/AppRestictDataLoader;->cancelLoad()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/net/AppRestictDataLoader;->cancelLoad()Z
 
     .line 87
     return-void

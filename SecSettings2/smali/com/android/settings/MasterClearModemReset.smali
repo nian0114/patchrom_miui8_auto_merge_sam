@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/MasterClearModemReset;
+.class public Lcom/android/settings_ex/MasterClearModemReset;
 .super Landroid/app/Service;
 .source "MasterClearModemReset.java"
 
@@ -24,22 +24,22 @@
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
     .line 68
-    new-instance v0, Lcom/android/settings/MasterClearModemReset$1;
+    new-instance v0, Lcom/android/settings_ex/MasterClearModemReset$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/MasterClearModemReset$1;-><init>(Lcom/android/settings/MasterClearModemReset;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/MasterClearModemReset$1;-><init>(Lcom/android/settings_ex/MasterClearModemReset;)V
 
-    iput-object v0, p0, Lcom/android/settings/MasterClearModemReset;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/MasterClearModemReset;->mHandler:Landroid/os/Handler;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/MasterClearModemReset;)V
+.method static synthetic access$000(Lcom/android/settings_ex/MasterClearModemReset;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/MasterClearModemReset;
+    .param p0, "x0"    # Lcom/android/settings_ex/MasterClearModemReset;
 
     .prologue
     .line 46
-    invoke-direct {p0}, Lcom/android/settings/MasterClearModemReset;->sendMasterClearIntent()V
+    invoke-direct {p0}, Lcom/android/settings_ex/MasterClearModemReset;->sendMasterClearIntent()V
 
     return-void
 .end method
@@ -55,10 +55,10 @@
     const/4 v1, 0x0
 
     :try_start_0
-    iput-boolean v1, p0, Lcom/android/settings/MasterClearModemReset;->called:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/MasterClearModemReset;->called:Z
 
     .line 106
-    iget-boolean v1, p0, Lcom/android/settings/MasterClearModemReset;->called:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/MasterClearModemReset;->called:Z
 
     if-eqz v1, :cond_0
 
@@ -73,7 +73,7 @@
     :cond_0
     const/4 v1, 0x1
 
-    iput-boolean v1, p0, Lcom/android/settings/MasterClearModemReset;->called:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/MasterClearModemReset;->called:Z
 
     .line 112
     new-instance v0, Landroid/content/Intent;
@@ -98,12 +98,12 @@
     .line 115
     const-string v1, "android.intent.extra.WIPE_EXTERNAL_STORAGE"
 
-    iget-boolean v2, p0, Lcom/android/settings/MasterClearModemReset;->mEraseSdCard:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/MasterClearModemReset;->mEraseSdCard:Z
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 116
-    invoke-virtual {p0, v0}, Lcom/android/settings/MasterClearModemReset;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/MasterClearModemReset;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 117
     monitor-exit p0
@@ -174,13 +174,13 @@
     invoke-virtual {v1, v2}, Lcom/samsung/android/sec_platform_library/PacketBuilder;->addData(B)Lcom/samsung/android/sec_platform_library/PacketBuilder;
 
     .line 65
-    iget-object v2, p0, Lcom/android/settings/MasterClearModemReset;->mPhone:Lcom/samsung/android/sec_platform_library/FactoryPhone;
+    iget-object v2, p0, Lcom/android/settings_ex/MasterClearModemReset;->mPhone:Lcom/samsung/android/sec_platform_library/FactoryPhone;
 
     invoke-virtual {v1}, Lcom/samsung/android/sec_platform_library/PacketBuilder;->getPacket()[B
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/MasterClearModemReset;->mHandler:Landroid/os/Handler;
+    iget-object v4, p0, Lcom/android/settings_ex/MasterClearModemReset;->mHandler:Landroid/os/Handler;
 
     const/16 v5, 0x3f0
 
@@ -215,14 +215,14 @@
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
     .line 129
-    invoke-static {}, Lcom/android/settings/Utils;->isMonkeyRunning()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMonkeyRunning()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 130
-    invoke-virtual {p0}, Lcom/android/settings/MasterClearModemReset;->stopSelf()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/MasterClearModemReset;->stopSelf()V
 
     .line 139
     :goto_0
@@ -234,7 +234,7 @@
 
     invoke-direct {v0, p0}, Lcom/samsung/android/sec_platform_library/FactoryPhone;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/MasterClearModemReset;->mPhone:Lcom/samsung/android/sec_platform_library/FactoryPhone;
+    iput-object v0, p0, Lcom/android/settings_ex/MasterClearModemReset;->mPhone:Lcom/samsung/android/sec_platform_library/FactoryPhone;
 
     goto :goto_0
 .end method
@@ -244,7 +244,7 @@
 
     .prologue
     .line 143
-    iget-object v0, p0, Lcom/android/settings/MasterClearModemReset;->mPhone:Lcom/samsung/android/sec_platform_library/FactoryPhone;
+    iget-object v0, p0, Lcom/android/settings_ex/MasterClearModemReset;->mPhone:Lcom/samsung/android/sec_platform_library/FactoryPhone;
 
     invoke-virtual {v0}, Lcom/samsung/android/sec_platform_library/FactoryPhone;->disconnectFromRilService()V
 
@@ -287,7 +287,7 @@
 
     move-result v4
 
-    iput-boolean v4, p0, Lcom/android/settings/MasterClearModemReset;->mEraseSdCard:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/MasterClearModemReset;->mEraseSdCard:Z
 
     .line 159
     const-string v4, "MasterClearModemReset"
@@ -302,7 +302,7 @@
 
     move-result-object v5
 
-    iget-boolean v6, p0, Lcom/android/settings/MasterClearModemReset;->mEraseSdCard:Z
+    iget-boolean v6, p0, Lcom/android/settings_ex/MasterClearModemReset;->mEraseSdCard:Z
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -319,7 +319,7 @@
     if-nez v0, :cond_1
 
     .line 166
-    invoke-virtual {p0}, Lcom/android/settings/MasterClearModemReset;->stopSelf()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/MasterClearModemReset;->stopSelf()V
 
     .line 194
     :goto_0
@@ -365,7 +365,7 @@
     .line 181
     const v4, 0x1040112
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/MasterClearModemReset;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/MasterClearModemReset;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v4
 
@@ -382,14 +382,14 @@
     invoke-static {v4, v5}, Landroid/util/secutil/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 184
-    invoke-direct {p0}, Lcom/android/settings/MasterClearModemReset;->sendResetCommandToRIL()V
+    invoke-direct {p0}, Lcom/android/settings_ex/MasterClearModemReset;->sendResetCommandToRIL()V
 
     .line 185
-    new-instance v4, Lcom/android/settings/MasterClearModemReset$2;
+    new-instance v4, Lcom/android/settings_ex/MasterClearModemReset$2;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/MasterClearModemReset$2;-><init>(Lcom/android/settings/MasterClearModemReset;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/MasterClearModemReset$2;-><init>(Lcom/android/settings_ex/MasterClearModemReset;)V
 
-    iput-object v4, p0, Lcom/android/settings/MasterClearModemReset;->mDelayRunnable:Ljava/lang/Runnable;
+    iput-object v4, p0, Lcom/android/settings_ex/MasterClearModemReset;->mDelayRunnable:Ljava/lang/Runnable;
 
     .line 192
     new-instance v2, Landroid/os/Handler;
@@ -398,7 +398,7 @@
 
     .line 193
     .local v2, "mTimerHandler":Landroid/os/Handler;
-    iget-object v4, p0, Lcom/android/settings/MasterClearModemReset;->mDelayRunnable:Ljava/lang/Runnable;
+    iget-object v4, p0, Lcom/android/settings_ex/MasterClearModemReset;->mDelayRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v6, 0x4e20
 

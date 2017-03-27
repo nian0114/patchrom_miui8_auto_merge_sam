@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/WifiSnsExceptionActivity;
+.class public Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;
 .super Landroid/app/Activity;
 .source "WifiSnsExceptionActivity.java"
 
@@ -38,7 +38,7 @@
     const/4 v0, 0x0
 
     :cond_0
-    sput-boolean v0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->DBG:Z
+    sput-boolean v0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->DBG:Z
 
     return-void
 .end method
@@ -51,29 +51,29 @@
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     .line 51
-    new-instance v0, Lcom/android/settings/wifi/WifiSnsExceptionActivity$1;
+    new-instance v0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/wifi/WifiSnsExceptionActivity$1;-><init>(Lcom/android/settings/wifi/WifiSnsExceptionActivity;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity$1;-><init>(Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;)V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
     .line 141
-    new-instance v0, Lcom/android/settings/wifi/WifiSnsExceptionActivity$3;
+    new-instance v0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity$3;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/wifi/WifiSnsExceptionActivity$3;-><init>(Lcom/android/settings/wifi/WifiSnsExceptionActivity;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity$3;-><init>(Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;)V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mWifiSnsExceptionDialogListener:Landroid/content/DialogInterface$OnClickListener;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mWifiSnsExceptionDialogListener:Landroid/content/DialogInterface$OnClickListener;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/wifi/WifiSnsExceptionActivity;)Landroid/net/wifi/WifiManager;
+.method static synthetic access$000(Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;)Landroid/net/wifi/WifiManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiSnsExceptionActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;
 
     .prologue
     .line 42
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     return-object v0
 .end method
@@ -83,18 +83,18 @@
 
     .prologue
     .line 42
-    sget-boolean v0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->DBG:Z
+    sget-boolean v0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->DBG:Z
 
     return v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/wifi/WifiSnsExceptionActivity;)Landroid/content/Context;
+.method static synthetic access$200(Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiSnsExceptionActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;
 
     .prologue
     .line 42
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
@@ -117,7 +117,7 @@
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 105
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mContext:Landroid/content/Context;
 
     const v2, 0x7f0e0526
 
@@ -125,7 +125,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mSsid:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mSsid:Ljava/lang/String;
 
     aput-object v4, v3, v5
 
@@ -136,7 +136,7 @@
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     .line 106
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mContext:Landroid/content/Context;
 
     const v2, 0x7f0e0548
 
@@ -144,12 +144,12 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mWifiSnsExceptionDialogListener:Landroid/content/DialogInterface$OnClickListener;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mWifiSnsExceptionDialogListener:Landroid/content/DialogInterface$OnClickListener;
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 107
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mContext:Landroid/content/Context;
 
     const v2, 0x7f0e0545
 
@@ -157,14 +157,14 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mWifiSnsExceptionDialogListener:Landroid/content/DialogInterface$OnClickListener;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mWifiSnsExceptionDialogListener:Landroid/content/DialogInterface$OnClickListener;
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 109
-    new-instance v1, Lcom/android/settings/wifi/WifiSnsExceptionActivity$2;
+    new-instance v1, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity$2;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/wifi/WifiSnsExceptionActivity$2;-><init>(Lcom/android/settings/wifi/WifiSnsExceptionActivity;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity$2;-><init>(Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)Landroid/app/AlertDialog$Builder;
 
@@ -173,15 +173,15 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mWifiSnsExceptionDialog:Landroid/app/AlertDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mWifiSnsExceptionDialog:Landroid/app/AlertDialog;
 
     .line 134
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mWifiSnsExceptionDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mWifiSnsExceptionDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1, v5}, Landroid/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
     .line 135
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mWifiSnsExceptionDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mWifiSnsExceptionDialog:Landroid/app/AlertDialog;
 
     if-eqz v1, :cond_0
 
@@ -198,7 +198,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mSsid:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mSsid:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -211,7 +211,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 137
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mWifiSnsExceptionDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mWifiSnsExceptionDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
@@ -232,7 +232,7 @@
     invoke-super {p0}, Landroid/app/Activity;->finish()V
 
     .line 99
-    invoke-virtual {p0, v0, v0}, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->overridePendingTransition(II)V
+    invoke-virtual {p0, v0, v0}, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->overridePendingTransition(II)V
 
     .line 100
     return-void
@@ -249,13 +249,13 @@
     .line 71
     const/4 v2, 0x1
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->requestWindowFeature(I)Z
 
     .line 72
-    iput-object p0, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mContext:Landroid/content/Context;
+    iput-object p0, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mContext:Landroid/content/Context;
 
     .line 73
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mContext:Landroid/content/Context;
 
     const-string v3, "wifi"
 
@@ -265,15 +265,15 @@
 
     check-cast v2, Landroid/net/wifi/WifiManager;
 
-    iput-object v2, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     .line 75
     const/4 v2, 0x0
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->setVisible(Z)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->setVisible(Z)V
 
     .line 78
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -285,16 +285,16 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mSsid:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mSsid:Ljava/lang/String;
 
     .line 80
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mSsid:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mSsid:Ljava/lang/String;
 
     if-nez v2, :cond_0
 
     const-string v2, "AP"
 
-    iput-object v2, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mSsid:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mSsid:Ljava/lang/String;
 
     .line 81
     :cond_0
@@ -316,12 +316,12 @@
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 85
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v2, v1}, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v2, v1}, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 87
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->showWifiSnsExceptionDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->showWifiSnsExceptionDialog()V
 
     .line 88
     return-void
@@ -335,9 +335,9 @@
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
     .line 93
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 94
     return-void
@@ -402,12 +402,12 @@
     iput-object v0, v4, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     .line 185
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     if-eqz v5, :cond_0
 
     .line 186
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v5, v4}, Landroid/net/wifi/WifiManager;->callSECApi(Landroid/os/Message;)I
 

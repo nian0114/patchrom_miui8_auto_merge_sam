@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/applock/AppLockTypeFragment;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/applock/AppLockTypeFragment;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "AppLockTypeFragment.java"
 
 
@@ -22,7 +22,7 @@
 
 .field private mLockTypePin:Landroid/preference/Preference;
 
-.field private mPackageInfoUtil:Lcom/android/settings/applock/PackageInfoUtil;
+.field private mPackageInfoUtil:Lcom/android/settings_ex/applock/PackageInfoUtil;
 
 
 # direct methods
@@ -31,7 +31,7 @@
 
     .prologue
     .line 42
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     return-void
 .end method
@@ -50,7 +50,7 @@
     .line 219
     const-string v6, "device_policy"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/applock/AppLockTypeFragment;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -85,11 +85,11 @@
 
     invoke-direct {v6}, Landroid/content/Intent;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
-    const-class v8, Lcom/android/settings/ChooseLockPassword;
+    const-class v8, Lcom/android/settings_ex/ChooseLockPassword;
 
     invoke-virtual {v6, v7, v8}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
@@ -137,7 +137,7 @@
     const/4 v5, 0x2
 
     :goto_1
-    invoke-virtual {p0, v1, v5}, Lcom/android/settings/applock/AppLockTypeFragment;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v1, v5}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->startActivityForResult(Landroid/content/Intent;I)V
 
     .line 237
     return-void
@@ -157,60 +157,60 @@
     goto :goto_1
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/applock/AppLockTypeFragment;)Landroid/os/Handler;
+.method static synthetic access$000(Lcom/android/settings_ex/applock/AppLockTypeFragment;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/applock/AppLockTypeFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/applock/AppLockTypeFragment;
 
     .prologue
     .line 42
-    iget-object v0, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic access$002(Lcom/android/settings/applock/AppLockTypeFragment;Landroid/os/Handler;)Landroid/os/Handler;
+.method static synthetic access$002(Lcom/android/settings_ex/applock/AppLockTypeFragment;Landroid/os/Handler;)Landroid/os/Handler;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/applock/AppLockTypeFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/applock/AppLockTypeFragment;
     .param p1, "x1"    # Landroid/os/Handler;
 
     .prologue
     .line 42
-    iput-object p1, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mHandler:Landroid/os/Handler;
+    iput-object p1, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mHandler:Landroid/os/Handler;
 
     return-object p1
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/applock/AppLockTypeFragment;)Z
+.method static synthetic access$100(Lcom/android/settings_ex/applock/AppLockTypeFragment;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/applock/AppLockTypeFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/applock/AppLockTypeFragment;
 
     .prologue
     .line 42
-    iget-boolean v0, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mFlags:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mFlags:Z
 
     return v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/applock/AppLockTypeFragment;)Landroid/content/ContentResolver;
+.method static synthetic access$200(Lcom/android/settings_ex/applock/AppLockTypeFragment;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/applock/AppLockTypeFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/applock/AppLockTypeFragment;
 
     .prologue
     .line 42
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/applock/AppLockTypeFragment;)V
+.method static synthetic access$300(Lcom/android/settings_ex/applock/AppLockTypeFragment;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/applock/AppLockTypeFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/applock/AppLockTypeFragment;
 
     .prologue
     .line 42
-    invoke-direct {p0}, Lcom/android/settings/applock/AppLockTypeFragment;->setAppLockFingerBackupKey()V
+    invoke-direct {p0}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->setAppLockFingerBackupKey()V
 
     return-void
 .end method
@@ -229,18 +229,18 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mFlags:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mFlags:Z
 
     .line 359
-    iget-object v1, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mFingerprintManager:Lcom/samsung/android/fingerprint/FingerprintManager;
+    iget-object v1, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mFingerprintManager:Lcom/samsung/android/fingerprint/FingerprintManager;
 
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    new-instance v3, Lcom/android/settings/applock/AppLockTypeFragment$2;
+    new-instance v3, Lcom/android/settings_ex/applock/AppLockTypeFragment$2;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/applock/AppLockTypeFragment$2;-><init>(Lcom/android/settings/applock/AppLockTypeFragment;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/applock/AppLockTypeFragment$2;-><init>(Lcom/android/settings_ex/applock/AppLockTypeFragment;)V
 
     invoke-virtual {v1, v2, v3, p1}, Lcom/samsung/android/fingerprint/FingerprintManager;->identifyWithDialog(Landroid/content/Context;Lcom/samsung/android/fingerprint/IFingerprintClient;Landroid/os/Bundle;)I
 
@@ -260,11 +260,11 @@
     .line 425
     new-instance v0, Landroid/content/Intent;
 
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    const-class v2, Lcom/android/settings/ChooseLockGeneric;
+    const-class v2, Lcom/android/settings_ex/ChooseLockGeneric;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -289,7 +289,7 @@
     .line 430
     const/16 v1, 0x3ec
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/applock/AppLockTypeFragment;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->startActivityForResult(Landroid/content/Intent;I)V
 
     .line 432
     return-void
@@ -316,50 +316,50 @@
     .line 127
     const-string v4, "locktype_category"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/applock/AppLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mLockTypeCategory:Landroid/preference/Preference;
+    iput-object v4, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mLockTypeCategory:Landroid/preference/Preference;
 
     .line 128
     const-string v4, "applock_locktype_pattern"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/applock/AppLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mLockTypePattern:Landroid/preference/Preference;
+    iput-object v4, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mLockTypePattern:Landroid/preference/Preference;
 
     .line 129
     const-string v4, "applock_locktype_pin"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/applock/AppLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mLockTypePin:Landroid/preference/Preference;
+    iput-object v4, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mLockTypePin:Landroid/preference/Preference;
 
     .line 130
     const-string v4, "applock_locktype_password"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/applock/AppLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mLockTypePassword:Landroid/preference/Preference;
+    iput-object v4, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mLockTypePassword:Landroid/preference/Preference;
 
     .line 131
     const-string v4, "applock_locktype_fingerprint"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/applock/AppLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mLockTypeFinger:Landroid/preference/Preference;
+    iput-object v4, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mLockTypeFinger:Landroid/preference/Preference;
 
     .line 135
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockTypeFragment;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -373,11 +373,11 @@
 
     .line 143
     .local v1, "getRequestCodeValue":I
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->hasFingerprintFeature(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->hasFingerprintFeature(Landroid/content/Context;)Z
 
     move-result v4
 
@@ -390,7 +390,7 @@
 
     .line 146
     :cond_1
-    iget-object v4, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mFingerprintManager:Lcom/samsung/android/fingerprint/FingerprintManager;
+    iget-object v4, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mFingerprintManager:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     invoke-virtual {v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->getEnrolledFingers()I
 
@@ -406,12 +406,12 @@
     if-nez v2, :cond_0
 
     .line 148
-    iget-object v4, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mLockTypeFinger:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mLockTypeFinger:Landroid/preference/Preference;
 
     invoke-virtual {v4, v3}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 149
-    iget-object v3, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mLockTypeFinger:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mLockTypeFinger:Landroid/preference/Preference;
 
     const v4, 0x7f0e0282
 
@@ -472,14 +472,14 @@
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 283
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 284
-    .local v0, "SettingsActivity":Lcom/android/settings/SettingsActivity;
+    .local v0, "SettingsActivity":Lcom/android/settings_ex/SettingsActivity;
     const/4 v1, 0x0
 
     .line 286
@@ -495,7 +495,7 @@
     if-lez p2, :cond_0
 
     .line 291
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -507,17 +507,17 @@
     const/4 v1, 0x1
 
     .line 293
-    iget-object v2, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mPackageInfoUtil:Lcom/android/settings/applock/PackageInfoUtil;
+    iget-object v2, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mPackageInfoUtil:Lcom/android/settings_ex/applock/PackageInfoUtil;
 
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3, v6}, Lcom/android/settings/applock/PackageInfoUtil;->setMasterValue(Landroid/content/Context;Z)V
+    invoke-virtual {v2, v3, v6}, Lcom/android/settings_ex/applock/PackageInfoUtil;->setMasterValue(Landroid/content/Context;Z)V
 
     .line 296
     :cond_0
-    invoke-virtual {v0, p0, v1, v5}, Lcom/android/settings/SettingsActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
+    invoke-virtual {v0, p0, v1, v5}, Lcom/android/settings_ex/SettingsActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
 
     goto :goto_0
 
@@ -526,7 +526,7 @@
     if-eqz p2, :cond_1
 
     .line 302
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -538,17 +538,17 @@
     const/4 v1, 0x1
 
     .line 304
-    iget-object v2, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mPackageInfoUtil:Lcom/android/settings/applock/PackageInfoUtil;
+    iget-object v2, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mPackageInfoUtil:Lcom/android/settings_ex/applock/PackageInfoUtil;
 
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3, v6}, Lcom/android/settings/applock/PackageInfoUtil;->setMasterValue(Landroid/content/Context;Z)V
+    invoke-virtual {v2, v3, v6}, Lcom/android/settings_ex/applock/PackageInfoUtil;->setMasterValue(Landroid/content/Context;Z)V
 
     .line 307
     :cond_1
-    invoke-virtual {v0, p0, v1, v5}, Lcom/android/settings/SettingsActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
+    invoke-virtual {v0, p0, v1, v5}, Lcom/android/settings_ex/SettingsActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
 
     goto :goto_0
 
@@ -559,7 +559,7 @@
     if-ne p2, v2, :cond_2
 
     .line 312
-    invoke-direct {p0}, Lcom/android/settings/applock/AppLockTypeFragment;->setAppLockFingerBackupKey()V
+    invoke-direct {p0}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->setAppLockFingerBackupKey()V
 
     goto :goto_0
 
@@ -568,7 +568,7 @@
     const/4 v1, -0x1
 
     .line 315
-    invoke-virtual {v0, p0, v1, v5}, Lcom/android/settings/SettingsActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
+    invoke-virtual {v0, p0, v1, v5}, Lcom/android/settings_ex/SettingsActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
 
     goto :goto_0
 
@@ -597,7 +597,7 @@
     const/4 v1, -0x1
 
     .line 325
-    invoke-virtual {v0, p0, v1, v5}, Lcom/android/settings/SettingsActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
+    invoke-virtual {v0, p0, v1, v5}, Lcom/android/settings_ex/SettingsActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
 
     goto :goto_0
 
@@ -632,17 +632,17 @@
     const/4 v1, 0x1
 
     .line 334
-    iget-object v2, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mPackageInfoUtil:Lcom/android/settings/applock/PackageInfoUtil;
+    iget-object v2, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mPackageInfoUtil:Lcom/android/settings_ex/applock/PackageInfoUtil;
 
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3, v6}, Lcom/android/settings/applock/PackageInfoUtil;->setMasterValue(Landroid/content/Context;Z)V
+    invoke-virtual {v2, v3, v6}, Lcom/android/settings_ex/applock/PackageInfoUtil;->setMasterValue(Landroid/content/Context;Z)V
 
     .line 336
     :cond_4
-    invoke-virtual {v0, p0, v1, v5}, Lcom/android/settings/SettingsActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
+    invoke-virtual {v0, p0, v1, v5}, Lcom/android/settings_ex/SettingsActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
 
     goto :goto_0
 
@@ -666,21 +666,21 @@
 
     .prologue
     .line 86
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 87
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 89
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -690,14 +690,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mFingerprintManager:Lcom/samsung/android/fingerprint/FingerprintManager;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mFingerprintManager:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     .line 90
-    invoke-static {}, Lcom/android/settings/applock/PackageInfoUtil;->getInstance()Lcom/android/settings/applock/PackageInfoUtil;
+    invoke-static {}, Lcom/android/settings_ex/applock/PackageInfoUtil;->getInstance()Lcom/android/settings_ex/applock/PackageInfoUtil;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mPackageInfoUtil:Lcom/android/settings/applock/PackageInfoUtil;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mPackageInfoUtil:Lcom/android/settings_ex/applock/PackageInfoUtil;
 
     .line 91
     return-void
@@ -723,10 +723,10 @@
     .local v0, "view":Landroid/view/View;
     const v1, 0x7f08001d
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/applock/AppLockTypeFragment;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->addPreferencesFromResource(I)V
 
     .line 97
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -739,7 +739,7 @@
     invoke-virtual {v1, v2}, Landroid/app/ActionBar;->setTitle(I)V
 
     .line 98
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockTypeFragment;->initPref()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->initPref()V
 
     .line 99
     return-object v0
@@ -757,7 +757,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 111
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 112
     return-void
@@ -774,7 +774,7 @@
     const/4 v6, 0x1
 
     .line 243
-    iget-object v4, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mLockTypePattern:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mLockTypePattern:Landroid/preference/Preference;
 
     invoke-virtual {p2, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -785,11 +785,11 @@
     .line 244
     new-instance v1, Landroid/content/Intent;
 
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    const-class v5, Lcom/android/settings/ChooseLockPattern;
+    const-class v5, Lcom/android/settings_ex/ChooseLockPattern;
 
     invoke-direct {v1, v4, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -807,13 +807,13 @@
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 247
-    invoke-virtual {p0, v1, v6}, Lcom/android/settings/applock/AppLockTypeFragment;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v1, v6}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->startActivityForResult(Landroid/content/Intent;I)V
 
     .line 277
     .end local v1    # "intent":Landroid/content/Intent;
     :cond_0
     :goto_0
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v4
 
@@ -821,7 +821,7 @@
 
     .line 248
     :cond_1
-    iget-object v4, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mLockTypePin:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mLockTypePin:Landroid/preference/Preference;
 
     invoke-virtual {p2, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -832,13 +832,13 @@
     .line 249
     const/high16 v4, 0x20000
 
-    invoke-direct {p0, v4}, Lcom/android/settings/applock/AppLockTypeFragment;->StartChooseLockPassword(I)V
+    invoke-direct {p0, v4}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->StartChooseLockPassword(I)V
 
     goto :goto_0
 
     .line 250
     :cond_2
-    iget-object v4, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mLockTypePassword:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mLockTypePassword:Landroid/preference/Preference;
 
     invoke-virtual {p2, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -849,13 +849,13 @@
     .line 251
     const/high16 v4, 0x40000
 
-    invoke-direct {p0, v4}, Lcom/android/settings/applock/AppLockTypeFragment;->StartChooseLockPassword(I)V
+    invoke-direct {p0, v4}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->StartChooseLockPassword(I)V
 
     goto :goto_0
 
     .line 252
     :cond_3
-    iget-object v4, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mLockTypeFinger:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mLockTypeFinger:Landroid/preference/Preference;
 
     invoke-virtual {p2, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -864,7 +864,7 @@
     if-eqz v4, :cond_0
 
     .line 253
-    iget-object v4, p0, Lcom/android/settings/applock/AppLockTypeFragment;->mFingerprintManager:Lcom/samsung/android/fingerprint/FingerprintManager;
+    iget-object v4, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment;->mFingerprintManager:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     invoke-virtual {v4}, Lcom/samsung/android/fingerprint/FingerprintManager;->getEnrolledFingers()I
 
@@ -873,18 +873,18 @@
     if-nez v4, :cond_5
 
     .line 254
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->ConnectedMobileKeypad(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->ConnectedMobileKeypad(Landroid/content/Context;)Z
 
     move-result v4
 
     if-eqz v4, :cond_4
 
     .line 255
-    invoke-virtual {p0}, Lcom/android/settings/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -894,13 +894,13 @@
 
     const v7, 0x7f0e11f6
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/applock/AppLockTypeFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
     aput-object v7, v6, v8
 
-    invoke-virtual {p0, v5, v6}, Lcom/android/settings/applock/AppLockTypeFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v5, v6}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -946,7 +946,7 @@
     .line 262
     const/4 v4, 0x4
 
-    invoke-virtual {p0, v2, v4}, Lcom/android/settings/applock/AppLockTypeFragment;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v2, v4}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->startActivityForResult(Landroid/content/Intent;I)V
 
     goto :goto_0
 
@@ -964,7 +964,7 @@
     invoke-virtual {v0, v4, v6}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 267
-    invoke-direct {p0, v0}, Lcom/android/settings/applock/AppLockTypeFragment;->identifyFinger(Landroid/os/Bundle;)I
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->identifyFinger(Landroid/os/Bundle;)I
 
     move-result v3
 
@@ -996,7 +996,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 105
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 106
     return-void
@@ -1007,7 +1007,7 @@
 
     .prologue
     .line 116
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onStop()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onStop()V
 
     .line 117
     const-string v0, "AppPageLockTypeFragment"

@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/wifi/VI/AnimationHelper$1;
+.class final Lcom/android/settings_ex/wifi/VI/AnimationHelper$1;
 .super Ljava/lang/Object;
 .source "AnimationHelper.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/VI/AnimationHelper;->fadeAni(Landroid/view/View;FFJJI)V
+    value = Lcom/android/settings_ex/wifi/VI/AnimationHelper;->fadeAni(Landroid/view/View;FFJJI)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
 
     .prologue
     .line 25
-    iput-object p1, p0, Lcom/android/settings/wifi/VI/AnimationHelper$1;->val$view:Landroid/view/View;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/VI/AnimationHelper$1;->val$view:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,7 +56,7 @@
 
     .line 31
     .local v0, "alpha_current":F
-    iget-object v1, p0, Lcom/android/settings/wifi/VI/AnimationHelper$1;->val$view:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/VI/AnimationHelper$1;->val$view:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setAlpha(F)V
 

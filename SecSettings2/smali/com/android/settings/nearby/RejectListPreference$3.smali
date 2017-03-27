@@ -1,11 +1,11 @@
-.class Lcom/android/settings/nearby/RejectListPreference$3;
+.class Lcom/android/settings_ex/nearby/RejectListPreference$3;
 .super Landroid/os/Handler;
 .source "RejectListPreference.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/nearby/RejectListPreference;
+    value = Lcom/android/settings_ex/nearby/RejectListPreference;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nearby/RejectListPreference;
+.field final synthetic this$0:Lcom/android/settings_ex/nearby/RejectListPreference;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/nearby/RejectListPreference;)V
+.method constructor <init>(Lcom/android/settings_ex/nearby/RejectListPreference;)V
     .locals 0
 
     .prologue
     .line 119
-    iput-object p1, p0, Lcom/android/settings/nearby/RejectListPreference$3;->this$0:Lcom/android/settings/nearby/RejectListPreference;
+    iput-object p1, p0, Lcom/android/settings_ex/nearby/RejectListPreference$3;->this$0:Lcom/android/settings_ex/nearby/RejectListPreference;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -63,7 +63,7 @@
 
     move-result-object v9
 
-    invoke-static {v7, v8, v9}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8, v9}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 124
     :try_start_0
@@ -96,7 +96,7 @@
 
     move-result-object v9
 
-    invoke-static {v7, v8, v9}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8, v9}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 157
     :cond_0
@@ -105,16 +105,16 @@
 
     .line 126
     :pswitch_0
-    iget-object v7, p0, Lcom/android/settings/nearby/RejectListPreference$3;->this$0:Lcom/android/settings/nearby/RejectListPreference;
+    iget-object v7, p0, Lcom/android/settings_ex/nearby/RejectListPreference$3;->this$0:Lcom/android/settings_ex/nearby/RejectListPreference;
 
     const/4 v8, 0x0
 
-    invoke-virtual {v7, v8}, Lcom/android/settings/nearby/RejectListPreference;->showDialog(Landroid/os/Bundle;)V
+    invoke-virtual {v7, v8}, Lcom/android/settings_ex/nearby/RejectListPreference;->showDialog(Landroid/os/Bundle;)V
 
     .line 128
-    iget-object v7, p0, Lcom/android/settings/nearby/RejectListPreference$3;->this$0:Lcom/android/settings/nearby/RejectListPreference;
+    iget-object v7, p0, Lcom/android/settings_ex/nearby/RejectListPreference$3;->this$0:Lcom/android/settings_ex/nearby/RejectListPreference;
 
-    invoke-virtual {v7}, Lcom/android/settings/nearby/RejectListPreference;->getDialog()Landroid/app/Dialog;
+    invoke-virtual {v7}, Lcom/android/settings_ex/nearby/RejectListPreference;->getDialog()Landroid/app/Dialog;
 
     move-result-object v1
 
@@ -166,29 +166,29 @@
     invoke-virtual {v6, v7}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 140
-    new-instance v4, Lcom/android/settings/nearby/ListItemListener;
+    new-instance v4, Lcom/android/settings_ex/nearby/ListItemListener;
 
-    invoke-direct {v4, v6}, Lcom/android/settings/nearby/ListItemListener;-><init>(Landroid/widget/Button;)V
+    invoke-direct {v4, v6}, Lcom/android/settings_ex/nearby/ListItemListener;-><init>(Landroid/widget/Button;)V
 
     .line 141
-    .local v4, "listItemListener":Lcom/android/settings/nearby/ListItemListener;
+    .local v4, "listItemListener":Lcom/android/settings_ex/nearby/ListItemListener;
     invoke-virtual {v5, v4}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 143
-    new-instance v0, Lcom/android/settings/nearby/DeleteButtonListener;
+    new-instance v0, Lcom/android/settings_ex/nearby/DeleteButtonListener;
 
-    iget-object v7, p0, Lcom/android/settings/nearby/RejectListPreference$3;->this$0:Lcom/android/settings/nearby/RejectListPreference;
+    iget-object v7, p0, Lcom/android/settings_ex/nearby/RejectListPreference$3;->this$0:Lcom/android/settings_ex/nearby/RejectListPreference;
 
-    invoke-virtual {v7}, Lcom/android/settings/nearby/RejectListPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {v7}, Lcom/android/settings_ex/nearby/RejectListPreference;->getContext()Landroid/content/Context;
 
     move-result-object v7
 
     const/4 v8, 0x0
 
-    invoke-direct {v0, v4, v1, v7, v8}, Lcom/android/settings/nearby/DeleteButtonListener;-><init>(Lcom/android/settings/nearby/ListItemListener;Landroid/app/Dialog;Landroid/content/Context;Z)V
+    invoke-direct {v0, v4, v1, v7, v8}, Lcom/android/settings_ex/nearby/DeleteButtonListener;-><init>(Lcom/android/settings_ex/nearby/ListItemListener;Landroid/app/Dialog;Landroid/content/Context;Z)V
 
     .line 145
-    .local v0, "deletebuttonlistener":Lcom/android/settings/nearby/DeleteButtonListener;
+    .local v0, "deletebuttonlistener":Lcom/android/settings_ex/nearby/DeleteButtonListener;
     invoke-virtual {v6, v0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -196,10 +196,10 @@
     goto :goto_0
 
     .line 153
-    .end local v0    # "deletebuttonlistener":Lcom/android/settings/nearby/DeleteButtonListener;
+    .end local v0    # "deletebuttonlistener":Lcom/android/settings_ex/nearby/DeleteButtonListener;
     .end local v1    # "dialog":Landroid/app/AlertDialog;
     .end local v3    # "i":I
-    .end local v4    # "listItemListener":Lcom/android/settings/nearby/ListItemListener;
+    .end local v4    # "listItemListener":Lcom/android/settings_ex/nearby/ListItemListener;
     .end local v5    # "listView":Landroid/widget/ListView;
     .end local v6    # "positiveButton":Landroid/widget/Button;
     :catch_0
@@ -229,7 +229,7 @@
 
     move-result-object v9
 
-    invoke-static {v7, v8, v9}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8, v9}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 155
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V

@@ -1,14 +1,14 @@
-.class Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment$1;
+.class Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment$1;
 .super Ljava/lang/Object;
 .source "ToggleAirWakeUpPreferenceFragment.java"
 
 # interfaces
-.implements Lcom/android/settings/widget/ToggleSwitch$OnBeforeCheckedChangeListener;
+.implements Lcom/android/settings_ex/widget/ToggleSwitch$OnBeforeCheckedChangeListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment;->onInstallSwitchBarToggleSwitch()V
+    value = Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment;->onInstallSwitchBarToggleSwitch()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment;)V
     .locals 0
 
     .prologue
     .line 95
-    iput-object p1, p0, Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,26 +36,26 @@
 
 
 # virtual methods
-.method public onBeforeCheckedChanged(Lcom/android/settings/widget/ToggleSwitch;Z)Z
+.method public onBeforeCheckedChanged(Lcom/android/settings_ex/widget/ToggleSwitch;Z)Z
     .locals 3
-    .param p1, "toggleSwitch"    # Lcom/android/settings/widget/ToggleSwitch;
+    .param p1, "toggleSwitch"    # Lcom/android/settings_ex/widget/ToggleSwitch;
     .param p2, "checked"    # Z
 
     .prologue
     .line 98
-    iget-object v1, p0, Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment;
 
-    iget-object v1, v1, Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, v1, Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, p2}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v1, p2}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     .line 99
-    iget-object v1, p0, Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment;
 
     const-string v2, "accessibility"
 
-    # invokes: Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-    invoke-static {v1, v2}, Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment;->access$000(Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment;Ljava/lang/String;)Ljava/lang/Object;
+    # invokes: Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v1, v2}, Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment;->access$000(Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -67,14 +67,14 @@
 
     .line 102
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment;
 
-    # getter for: Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment;->ctx:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment;->access$100(Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment;->ctx:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment;->access$100(Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment;)Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->turnOnAirMotionEngine(Landroid/content/Context;)V
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->turnOnAirMotionEngine(Landroid/content/Context;)V
 
     .line 103
     invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->OnStartGestureWakeup()Z
@@ -87,14 +87,14 @@
 
     .line 105
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment;
 
-    # getter for: Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment;->ctx:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment;->access$100(Lcom/android/settings/accessibility/ToggleAirWakeUpPreferenceFragment;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment;->ctx:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment;->access$100(Lcom/android/settings_ex/accessibility/ToggleAirWakeUpPreferenceFragment;)Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->autoTurnOffAirMotionEngine(Landroid/content/Context;)V
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->autoTurnOffAirMotionEngine(Landroid/content/Context;)V
 
     .line 106
     invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->OnStopGestureWakeup()Z

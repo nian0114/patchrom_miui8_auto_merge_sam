@@ -1,4 +1,4 @@
-.class Lcom/android/settings/guide/BtSettingsGuider$3;
+.class Lcom/android/settings_ex/guide/BtSettingsGuider$3;
 .super Ljava/lang/Object;
 .source "BtSettingsGuider.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/guide/BtSettingsGuider;->onPrepareOptionsMenu(Landroid/view/Menu;)V
+    value = Lcom/android/settings_ex/guide/BtSettingsGuider;->onPrepareOptionsMenu(Landroid/view/Menu;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/guide/BtSettingsGuider;
+.field final synthetic this$0:Lcom/android/settings_ex/guide/BtSettingsGuider;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/guide/BtSettingsGuider;)V
+.method constructor <init>(Lcom/android/settings_ex/guide/BtSettingsGuider;)V
     .locals 0
 
     .prologue
     .line 648
-    iput-object p1, p0, Lcom/android/settings/guide/BtSettingsGuider$3;->this$0:Lcom/android/settings/guide/BtSettingsGuider;
+    iput-object p1, p0, Lcom/android/settings_ex/guide/BtSettingsGuider$3;->this$0:Lcom/android/settings_ex/guide/BtSettingsGuider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +41,9 @@
 
     .prologue
     .line 652
-    iget-object v0, p0, Lcom/android/settings/guide/BtSettingsGuider$3;->this$0:Lcom/android/settings/guide/BtSettingsGuider;
+    iget-object v0, p0, Lcom/android/settings_ex/guide/BtSettingsGuider$3;->this$0:Lcom/android/settings_ex/guide/BtSettingsGuider;
 
-    invoke-virtual {v0}, Lcom/android/settings/guide/BtSettingsGuider;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/guide/BtSettingsGuider;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -61,29 +61,29 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/guide/BtSettingsGuider$3;->this$0:Lcom/android/settings/guide/BtSettingsGuider;
+    iget-object v0, p0, Lcom/android/settings_ex/guide/BtSettingsGuider$3;->this$0:Lcom/android/settings_ex/guide/BtSettingsGuider;
 
-    # getter for: Lcom/android/settings/guide/BtSettingsGuider;->mShowedDialog:Lcom/android/settings/guide/BtSettingsGuider$GuideStates;
-    invoke-static {v0}, Lcom/android/settings/guide/BtSettingsGuider;->access$000(Lcom/android/settings/guide/BtSettingsGuider;)Lcom/android/settings/guide/BtSettingsGuider$GuideStates;
+    # getter for: Lcom/android/settings_ex/guide/BtSettingsGuider;->mShowedDialog:Lcom/android/settings_ex/guide/BtSettingsGuider$GuideStates;
+    invoke-static {v0}, Lcom/android/settings_ex/guide/BtSettingsGuider;->access$000(Lcom/android/settings_ex/guide/BtSettingsGuider;)Lcom/android/settings_ex/guide/BtSettingsGuider$GuideStates;
 
     move-result-object v0
 
-    sget-object v1, Lcom/android/settings/guide/BtSettingsGuider$GuideStates;->ENABLE:Lcom/android/settings/guide/BtSettingsGuider$GuideStates;
+    sget-object v1, Lcom/android/settings_ex/guide/BtSettingsGuider$GuideStates;->ENABLE:Lcom/android/settings_ex/guide/BtSettingsGuider$GuideStates;
 
     if-ne v0, v1, :cond_0
 
     .line 654
-    iget-object v0, p0, Lcom/android/settings/guide/BtSettingsGuider$3;->this$0:Lcom/android/settings/guide/BtSettingsGuider;
+    iget-object v0, p0, Lcom/android/settings_ex/guide/BtSettingsGuider$3;->this$0:Lcom/android/settings_ex/guide/BtSettingsGuider;
 
-    iget-object v0, v0, Lcom/android/settings/guide/BtSettingsGuider;->mHelpDialog:Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;
+    iget-object v0, v0, Lcom/android/settings_ex/guide/BtSettingsGuider;->mHelpDialog:Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;
 
-    iget-object v1, p0, Lcom/android/settings/guide/BtSettingsGuider$3;->this$0:Lcom/android/settings/guide/BtSettingsGuider;
+    iget-object v1, p0, Lcom/android/settings_ex/guide/BtSettingsGuider$3;->this$0:Lcom/android/settings_ex/guide/BtSettingsGuider;
 
-    invoke-virtual {v1}, Lcom/android/settings/guide/BtSettingsGuider;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/guide/BtSettingsGuider;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/android/settings/guide/GuideModeHelper;->drawActionPointerForSwitcher(Lcom/android/settings/helpdialog/TwHelpDialog;Landroid/app/Activity;)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/guide/GuideModeHelper;->drawActionPointerForSwitcher(Lcom/android/settings_ex/helpdialog/TwHelpDialog;Landroid/app/Activity;)V
 
     .line 656
     :cond_0

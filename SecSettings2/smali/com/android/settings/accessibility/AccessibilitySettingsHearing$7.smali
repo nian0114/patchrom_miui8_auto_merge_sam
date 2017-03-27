@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/AccessibilitySettingsHearing$7;
+.class Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$7;
 .super Ljava/lang/Object;
 .source "AccessibilitySettingsHearing.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->onCreateDialog(I)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->onCreateDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)V
     .locals 0
 
     .prologue
     .line 578
-    iput-object p1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$7;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$7;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -54,10 +54,10 @@
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     .line 583
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$7;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$7;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
-    # getter for: Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPreferenceScreen:Landroid/preference/SwitchPreferenceScreen;
-    invoke-static {v0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->access$700(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)Landroid/preference/SwitchPreferenceScreen;
+    # getter for: Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPreferenceScreen:Landroid/preference/SwitchPreferenceScreen;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->access$700(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)Landroid/preference/SwitchPreferenceScreen;
 
     move-result-object v0
 

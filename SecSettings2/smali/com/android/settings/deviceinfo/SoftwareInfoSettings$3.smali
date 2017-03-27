@@ -1,4 +1,4 @@
-.class Lcom/android/settings/deviceinfo/SoftwareInfoSettings$3;
+.class Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings$3;
 .super Ljava/lang/Object;
 .source "SoftwareInfoSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/SoftwareInfoSettings;
+    value = Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/SoftwareInfoSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/SoftwareInfoSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings;)V
     .locals 0
 
     .prologue
     .line 980
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/SoftwareInfoSettings$3;->this$0:Lcom/android/settings/deviceinfo/SoftwareInfoSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings$3;->this$0:Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,8 +48,8 @@
 
     move-result-object v1
 
-    # setter for: Lcom/android/settings/deviceinfo/SoftwareInfoSettings;->mSecurityManager:Lcom/sec/android/service/sm/aidl/ISecurityManager;
-    invoke-static {v1}, Lcom/android/settings/deviceinfo/SoftwareInfoSettings;->access$102(Lcom/sec/android/service/sm/aidl/ISecurityManager;)Lcom/sec/android/service/sm/aidl/ISecurityManager;
+    # setter for: Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings;->mSecurityManager:Lcom/sec/android/service/sm/aidl/ISecurityManager;
+    invoke-static {v1}, Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings;->access$102(Lcom/sec/android/service/sm/aidl/ISecurityManager;)Lcom/sec/android/service/sm/aidl/ISecurityManager;
     :try_end_0
     .catch Ljava/lang/NoClassDefFoundError; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -77,8 +77,8 @@
     const/4 v1, 0x0
 
     :try_start_0
-    # setter for: Lcom/android/settings/deviceinfo/SoftwareInfoSettings;->mSecurityManager:Lcom/sec/android/service/sm/aidl/ISecurityManager;
-    invoke-static {v1}, Lcom/android/settings/deviceinfo/SoftwareInfoSettings;->access$102(Lcom/sec/android/service/sm/aidl/ISecurityManager;)Lcom/sec/android/service/sm/aidl/ISecurityManager;
+    # setter for: Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings;->mSecurityManager:Lcom/sec/android/service/sm/aidl/ISecurityManager;
+    invoke-static {v1}, Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings;->access$102(Lcom/sec/android/service/sm/aidl/ISecurityManager;)Lcom/sec/android/service/sm/aidl/ISecurityManager;
     :try_end_0
     .catch Ljava/lang/NoClassDefFoundError; {:try_start_0 .. :try_end_0} :catch_0
 

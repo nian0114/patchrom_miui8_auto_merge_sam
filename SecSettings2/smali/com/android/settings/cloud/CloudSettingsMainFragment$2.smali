@@ -1,11 +1,11 @@
-.class Lcom/android/settings/cloud/CloudSettingsMainFragment$2;
+.class Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;
 .super Landroid/content/BroadcastReceiver;
 .source "CloudSettingsMainFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/cloud/CloudSettingsMainFragment;->registerCloudReceiver()V
+    value = Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->registerCloudReceiver()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/cloud/CloudSettingsMainFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)V
     .locals 0
 
     .prologue
     .line 790
-    iput-object p1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -79,15 +79,15 @@
     .line 801
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    # invokes: Lcom/android/settings/cloud/CloudSettingsMainFragment;->dismissProgress()V
-    invoke-static {v14}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$000(Lcom/android/settings/cloud/CloudSettingsMainFragment;)V
+    # invokes: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->dismissProgress()V
+    invoke-static {v14}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$000(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)V
 
     .line 802
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     const-string v15, "cloudSettings"
 
@@ -97,26 +97,26 @@
 
     move-result-object v15
 
-    invoke-static {v15}, Lcom/android/settings/cloud/CloudSettings;->getInstance(Landroid/os/Bundle;)Lcom/android/settings/cloud/CloudSettings;
+    invoke-static {v15}, Lcom/android/settings_ex/cloud/CloudSettings;->getInstance(Landroid/os/Bundle;)Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v15
 
-    # setter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
-    invoke-static {v14, v15}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$102(Lcom/android/settings/cloud/CloudSettingsMainFragment;Lcom/android/settings/cloud/CloudSettings;)Lcom/android/settings/cloud/CloudSettings;
+    # setter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
+    invoke-static {v14, v15}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$102(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;Lcom/android/settings_ex/cloud/CloudSettings;)Lcom/android/settings_ex/cloud/CloudSettings;
 
     .line 805
     const-string v14, "CloudSettings"
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v15, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    # getter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
-    invoke-static {v15}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$100(Lcom/android/settings/cloud/CloudSettingsMainFragment;)Lcom/android/settings/cloud/CloudSettings;
+    # getter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
+    invoke-static {v15}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$100(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v15
 
-    invoke-virtual {v15}, Lcom/android/settings/cloud/CloudSettings;->toString()Ljava/lang/String;
+    invoke-virtual {v15}, Lcom/android/settings_ex/cloud/CloudSettings;->toString()Ljava/lang/String;
 
     move-result-object v15
 
@@ -125,18 +125,18 @@
     .line 806
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    # invokes: Lcom/android/settings/cloud/CloudSettingsMainFragment;->updatePreferences()V
-    invoke-static {v14}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$200(Lcom/android/settings/cloud/CloudSettingsMainFragment;)V
+    # invokes: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->updatePreferences()V
+    invoke-static {v14}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$200(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)V
 
     .line 807
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    # invokes: Lcom/android/settings/cloud/CloudSettingsMainFragment;->requestCloudStorageUsage()V
-    invoke-static {v14}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$300(Lcom/android/settings/cloud/CloudSettingsMainFragment;)V
+    # invokes: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->requestCloudStorageUsage()V
+    invoke-static {v14}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$300(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)V
 
     .line 918
     .end local v5    # "action":Ljava/lang/String;
@@ -158,22 +158,22 @@
     .line 809
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v15, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    invoke-virtual {v15}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v15}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v15
 
-    invoke-static {v15}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isConnected(Landroid/content/Context;)Z
+    invoke-static {v15}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isConnected(Landroid/content/Context;)Z
 
     move-result v15
 
-    # setter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mIsConnected:Z
-    invoke-static {v14, v15}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$402(Lcom/android/settings/cloud/CloudSettingsMainFragment;Z)Z
+    # setter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mIsConnected:Z
+    invoke-static {v14, v15}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$402(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;Z)Z
 
     goto :goto_0
 
@@ -197,30 +197,30 @@
     .line 814
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    # invokes: Lcom/android/settings/cloud/CloudSettingsMainFragment;->dismissProgress()V
-    invoke-static {v14}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$000(Lcom/android/settings/cloud/CloudSettingsMainFragment;)V
+    # invokes: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->dismissProgress()V
+    invoke-static {v14}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$000(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)V
 
     .line 815
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getInstance()Lcom/android/settings/cloud/CloudSettings;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getInstance()Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v15
 
-    # setter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
-    invoke-static {v14, v15}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$102(Lcom/android/settings/cloud/CloudSettingsMainFragment;Lcom/android/settings/cloud/CloudSettings;)Lcom/android/settings/cloud/CloudSettings;
+    # setter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
+    invoke-static {v14, v15}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$102(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;Lcom/android/settings_ex/cloud/CloudSettings;)Lcom/android/settings_ex/cloud/CloudSettings;
 
     .line 816
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    # getter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
-    invoke-static {v14}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$100(Lcom/android/settings/cloud/CloudSettingsMainFragment;)Lcom/android/settings/cloud/CloudSettings;
+    # getter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
+    invoke-static {v14}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$100(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v14
 
@@ -229,14 +229,14 @@
     .line 817
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    # getter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
-    invoke-static {v14}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$100(Lcom/android/settings/cloud/CloudSettingsMainFragment;)Lcom/android/settings/cloud/CloudSettings;
+    # getter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
+    invoke-static {v14}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$100(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v14
 
-    invoke-virtual {v14}, Lcom/android/settings/cloud/CloudSettings;->isAccountSet()Z
+    invoke-virtual {v14}, Lcom/android/settings_ex/cloud/CloudSettings;->isAccountSet()Z
 
     move-result v14
 
@@ -245,10 +245,10 @@
     .line 818
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    # getter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
-    invoke-static {v14}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$100(Lcom/android/settings/cloud/CloudSettingsMainFragment;)Lcom/android/settings/cloud/CloudSettings;
+    # getter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
+    invoke-static {v14}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$100(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v14
 
@@ -260,7 +260,7 @@
 
     move-result-object v15
 
-    invoke-virtual {v14, v15}, Lcom/android/settings/cloud/CloudSettings;->setStorageUsage(Landroid/os/Bundle;)V
+    invoke-virtual {v14, v15}, Lcom/android/settings_ex/cloud/CloudSettings;->setStorageUsage(Landroid/os/Bundle;)V
 
     .line 821
     :cond_3
@@ -268,14 +268,14 @@
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v15, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    # getter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
-    invoke-static {v15}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$100(Lcom/android/settings/cloud/CloudSettingsMainFragment;)Lcom/android/settings/cloud/CloudSettings;
+    # getter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
+    invoke-static {v15}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$100(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v15
 
-    invoke-virtual {v15}, Lcom/android/settings/cloud/CloudSettings;->toString()Ljava/lang/String;
+    invoke-virtual {v15}, Lcom/android/settings_ex/cloud/CloudSettings;->toString()Ljava/lang/String;
 
     move-result-object v15
 
@@ -284,14 +284,14 @@
     .line 823
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    # getter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
-    invoke-static {v14}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$100(Lcom/android/settings/cloud/CloudSettingsMainFragment;)Lcom/android/settings/cloud/CloudSettings;
+    # getter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
+    invoke-static {v14}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$100(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v14
 
-    invoke-virtual {v14}, Lcom/android/settings/cloud/CloudSettings;->getStorageUsage()Ljava/lang/String;
+    invoke-virtual {v14}, Lcom/android/settings_ex/cloud/CloudSettings;->getStorageUsage()Ljava/lang/String;
 
     move-result-object v14
 
@@ -299,10 +299,10 @@
 
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    # getter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefUsage:Landroid/preference/Preference;
-    invoke-static {v14}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$500(Lcom/android/settings/cloud/CloudSettingsMainFragment;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefUsage:Landroid/preference/Preference;
+    invoke-static {v14}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$500(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)Landroid/preference/Preference;
 
     move-result-object v14
 
@@ -311,31 +311,31 @@
     .line 824
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v15, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    # getter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
-    invoke-static {v15}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$100(Lcom/android/settings/cloud/CloudSettingsMainFragment;)Lcom/android/settings/cloud/CloudSettings;
-
-    move-result-object v15
-
-    invoke-virtual {v15}, Lcom/android/settings/cloud/CloudSettings;->getStorageUsage()Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
+    invoke-static {v15}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$100(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v15
 
-    # setter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
-    invoke-static {v14, v15}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$602(Lcom/android/settings/cloud/CloudSettingsMainFragment;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v15}, Lcom/android/settings_ex/cloud/CloudSettings;->getStorageUsage()Ljava/lang/String;
+
+    move-result-object v15
+
+    # setter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
+    invoke-static {v14, v15}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$602(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;Ljava/lang/String;)Ljava/lang/String;
 
     .line 825
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    # getter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
-    invoke-static {v14}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$600(Lcom/android/settings/cloud/CloudSettingsMainFragment;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
+    invoke-static {v14}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$600(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)Ljava/lang/String;
 
     move-result-object v14
 
@@ -344,14 +344,14 @@
     .line 826
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v15, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    # getter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
-    invoke-static {v15}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$600(Lcom/android/settings/cloud/CloudSettingsMainFragment;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
+    invoke-static {v15}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$600(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)Ljava/lang/String;
 
     move-result-object v15
 
@@ -363,20 +363,20 @@
 
     move-result-object v15
 
-    # setter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
-    invoke-static {v14, v15}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$602(Lcom/android/settings/cloud/CloudSettingsMainFragment;Ljava/lang/String;)Ljava/lang/String;
+    # setter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
+    invoke-static {v14, v15}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$602(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;Ljava/lang/String;)Ljava/lang/String;
 
     .line 827
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v15, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    # getter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
-    invoke-static {v15}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$600(Lcom/android/settings/cloud/CloudSettingsMainFragment;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
+    invoke-static {v15}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$600(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)Ljava/lang/String;
 
     move-result-object v15
 
@@ -384,13 +384,13 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     move-object/from16 v17, v0
 
     const v18, 0x7f0e1088
 
-    invoke-virtual/range {v17 .. v18}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual/range {v17 .. v18}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v17
 
@@ -398,20 +398,20 @@
 
     move-result-object v15
 
-    # setter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
-    invoke-static {v14, v15}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$602(Lcom/android/settings/cloud/CloudSettingsMainFragment;Ljava/lang/String;)Ljava/lang/String;
+    # setter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
+    invoke-static {v14, v15}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$602(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;Ljava/lang/String;)Ljava/lang/String;
 
     .line 828
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v15, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    # getter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
-    invoke-static {v15}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$600(Lcom/android/settings/cloud/CloudSettingsMainFragment;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
+    invoke-static {v15}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$600(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)Ljava/lang/String;
 
     move-result-object v15
 
@@ -419,13 +419,13 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     move-object/from16 v17, v0
 
     const v18, 0x7f0e1087
 
-    invoke-virtual/range {v17 .. v18}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual/range {v17 .. v18}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v17
 
@@ -433,26 +433,26 @@
 
     move-result-object v15
 
-    # setter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
-    invoke-static {v14, v15}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$602(Lcom/android/settings/cloud/CloudSettingsMainFragment;Ljava/lang/String;)Ljava/lang/String;
+    # setter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
+    invoke-static {v14, v15}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$602(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;Ljava/lang/String;)Ljava/lang/String;
 
     .line 830
     :cond_4
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    # getter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefUsage:Landroid/preference/Preference;
-    invoke-static {v14}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$500(Lcom/android/settings/cloud/CloudSettingsMainFragment;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefUsage:Landroid/preference/Preference;
+    invoke-static {v14}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$500(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)Landroid/preference/Preference;
 
     move-result-object v14
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v15, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    # getter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
-    invoke-static {v15}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$600(Lcom/android/settings/cloud/CloudSettingsMainFragment;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
+    invoke-static {v15}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$600(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)Ljava/lang/String;
 
     move-result-object v15
 
@@ -530,19 +530,19 @@
     .line 847
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     const/4 v15, 0x0
 
-    # setter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mValidationStatus:I
-    invoke-static {v14, v15}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$702(Lcom/android/settings/cloud/CloudSettingsMainFragment;I)I
+    # setter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mValidationStatus:I
+    invoke-static {v14, v15}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$702(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;I)I
 
     .line 848
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    invoke-virtual {v14}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showAllPreference()V
+    invoke-virtual {v14}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showAllPreference()V
 
     .line 907
     .end local v13    # "validationResult":Ljava/lang/Boolean;
@@ -550,9 +550,9 @@
     :goto_1
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    invoke-virtual {v14}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v14}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v14
 
@@ -576,10 +576,10 @@
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v15, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    # getter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mValidationStatus:I
-    invoke-static {v15}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$700(Lcom/android/settings/cloud/CloudSettingsMainFragment;)I
+    # getter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mValidationStatus:I
+    invoke-static {v15}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$700(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)I
 
     move-result v15
 
@@ -611,19 +611,19 @@
     :try_start_1
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     const/4 v15, 0x1
 
-    # setter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mValidationStatus:I
-    invoke-static {v14, v15}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$702(Lcom/android/settings/cloud/CloudSettingsMainFragment;I)I
+    # setter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mValidationStatus:I
+    invoke-static {v14, v15}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$702(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;I)I
 
     .line 853
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    invoke-virtual {v14}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showVerifyAccountPreference()V
+    invoke-virtual {v14}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showVerifyAccountPreference()V
 
     .line 855
     const-string v14, "check_list"
@@ -719,7 +719,7 @@
     .line 879
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     const-string v15, "REQUIRED_PROCESS_ACTION"
 
@@ -729,7 +729,7 @@
 
     move-result-object v15
 
-    iput-object v15, v14, Lcom/android/settings/cloud/CloudSettingsMainFragment;->processAction:Ljava/lang/String;
+    iput-object v15, v14, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->processAction:Ljava/lang/String;
 
     goto/16 :goto_1
 
@@ -748,10 +748,10 @@
     .line 892
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    # getter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mProgressDialog:Landroid/app/ProgressDialog;
-    invoke-static {v14}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$800(Lcom/android/settings/cloud/CloudSettingsMainFragment;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mProgressDialog:Landroid/app/ProgressDialog;
+    invoke-static {v14}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$800(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)Landroid/app/ProgressDialog;
 
     move-result-object v14
 
@@ -770,19 +770,19 @@
     .local v10, "errorMessage":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    invoke-virtual {v14}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v14}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v14
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v15, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     const v16, 0x7f0e11ac
 
-    invoke-virtual/range {v15 .. v16}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual/range {v15 .. v16}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v15
 
@@ -797,9 +797,9 @@
     .line 896
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    invoke-virtual {v14}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v14}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v14
 
@@ -808,12 +808,12 @@
     .line 897
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     const/4 v15, 0x1
 
-    # setter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mValidationStatus:I
-    invoke-static {v14, v15}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$702(Lcom/android/settings/cloud/CloudSettingsMainFragment;I)I
+    # setter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mValidationStatus:I
+    invoke-static {v14, v15}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$702(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;I)I
 
     goto/16 :goto_1
 
@@ -822,10 +822,10 @@
     :cond_d
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    # getter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mProgressDialog:Landroid/app/ProgressDialog;
-    invoke-static {v14}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$800(Lcom/android/settings/cloud/CloudSettingsMainFragment;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mProgressDialog:Landroid/app/ProgressDialog;
+    invoke-static {v14}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$800(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)Landroid/app/ProgressDialog;
 
     move-result-object v14
 
@@ -844,19 +844,19 @@
     .restart local v10    # "errorMessage":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    invoke-virtual {v14}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v14}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v14
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v15, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     const v16, 0x7f0e11ac
 
-    invoke-virtual/range {v15 .. v16}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual/range {v15 .. v16}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v15
 
@@ -871,9 +871,9 @@
     .line 903
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
-    invoke-virtual {v14}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v14}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v14
 
@@ -882,12 +882,12 @@
     .line 904
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iget-object v14, v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     const/4 v15, 0x1
 
-    # setter for: Lcom/android/settings/cloud/CloudSettingsMainFragment;->mValidationStatus:I
-    invoke-static {v14, v15}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->access$702(Lcom/android/settings/cloud/CloudSettingsMainFragment;I)I
+    # setter for: Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mValidationStatus:I
+    invoke-static {v14, v15}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->access$702(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;I)I
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 

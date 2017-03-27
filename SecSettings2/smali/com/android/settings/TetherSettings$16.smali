@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/TetherSettings$16;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/TetherSettings$16;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "TetherSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/TetherSettings;
+    value = Lcom/android/settings_ex/TetherSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 1563
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -212,7 +212,7 @@
     :cond_5
     if-eqz v7, :cond_6
 
-    invoke-static {}, Lcom/android/settings/Utils;->isMonkeyRunning()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMonkeyRunning()Z
 
     move-result v10
 
@@ -287,7 +287,7 @@
 
     .line 1567
     .local v0, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v1, Lcom/android/settings/TetherSettings;
+    const-class v1, Lcom/android/settings_ex/TetherSettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

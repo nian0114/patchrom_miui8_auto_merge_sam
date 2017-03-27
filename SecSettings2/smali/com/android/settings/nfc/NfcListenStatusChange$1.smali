@@ -1,11 +1,11 @@
-.class Lcom/android/settings/nfc/NfcListenStatusChange$1;
+.class Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;
 .super Landroid/content/BroadcastReceiver;
 .source "NfcListenStatusChange.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/nfc/NfcListenStatusChange;
+    value = Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+.field final synthetic this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/nfc/NfcListenStatusChange;)V
+.method constructor <init>(Lcom/android/settings_ex/nfc/NfcListenStatusChange;)V
     .locals 0
 
     .prologue
     .line 89
-    iput-object p1, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iput-object p1, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -224,14 +224,14 @@
     invoke-static {v5, v6}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 109
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # getter for: Lcom/android/settings/nfc/NfcListenStatusChange;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
-    invoke-static {v5}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$000(Lcom/android/settings/nfc/NfcListenStatusChange;)Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    # getter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
+    invoke-static {v5}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$000(Lcom/android/settings_ex/nfc/NfcListenStatusChange;)Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->getCLFLockStatus()I
+    invoke-virtual {v5}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->getCLFLockStatus()I
 
     move-result v4
 
@@ -239,10 +239,10 @@
     if-gt v4, v8, :cond_3
 
     .line 111
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # setter for: Lcom/android/settings/nfc/NfcListenStatusChange;->mFeliCaLock:Z
-    invoke-static {v5, v8}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$102(Lcom/android/settings/nfc/NfcListenStatusChange;Z)Z
+    # setter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->mFeliCaLock:Z
+    invoke-static {v5, v8}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$102(Lcom/android/settings_ex/nfc/NfcListenStatusChange;Z)Z
 
     .line 117
     :goto_0
@@ -255,26 +255,26 @@
 
     .line 119
     :cond_0
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # setter for: Lcom/android/settings/nfc/NfcListenStatusChange;->mUimLock:Z
-    invoke-static {v5, v8}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$202(Lcom/android/settings/nfc/NfcListenStatusChange;Z)Z
+    # setter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->mUimLock:Z
+    invoke-static {v5, v8}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$202(Lcom/android/settings_ex/nfc/NfcListenStatusChange;Z)Z
 
     .line 127
     :goto_1
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # getter for: Lcom/android/settings/nfc/NfcListenStatusChange;->mFeliCaLock:Z
-    invoke-static {v5}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$100(Lcom/android/settings/nfc/NfcListenStatusChange;)Z
+    # getter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->mFeliCaLock:Z
+    invoke-static {v5}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$100(Lcom/android/settings_ex/nfc/NfcListenStatusChange;)Z
 
     move-result v5
 
     if-nez v5, :cond_1
 
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # getter for: Lcom/android/settings/nfc/NfcListenStatusChange;->mUimLock:Z
-    invoke-static {v5}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$200(Lcom/android/settings/nfc/NfcListenStatusChange;)Z
+    # getter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->mUimLock:Z
+    invoke-static {v5}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$200(Lcom/android/settings_ex/nfc/NfcListenStatusChange;)Z
 
     move-result v5
 
@@ -282,30 +282,30 @@
 
     .line 128
     :cond_1
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # getter for: Lcom/android/settings/nfc/NfcListenStatusChange;->pNFcTypeABF:Landroid/preference/CheckBoxPreference;
-    invoke-static {v5}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$300(Lcom/android/settings/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
+    # getter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->pNFcTypeABF:Landroid/preference/CheckBoxPreference;
+    invoke-static {v5}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$300(Lcom/android/settings_ex/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
 
     move-result-object v5
 
     invoke-virtual {v5, v9}, Landroid/preference/CheckBoxPreference;->setEnabled(Z)V
 
     .line 129
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # getter for: Lcom/android/settings/nfc/NfcListenStatusChange;->pNFcTypeAF:Landroid/preference/CheckBoxPreference;
-    invoke-static {v5}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$400(Lcom/android/settings/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
+    # getter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->pNFcTypeAF:Landroid/preference/CheckBoxPreference;
+    invoke-static {v5}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$400(Lcom/android/settings_ex/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
 
     move-result-object v5
 
     invoke-virtual {v5, v9}, Landroid/preference/CheckBoxPreference;->setEnabled(Z)V
 
     .line 130
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # getter for: Lcom/android/settings/nfc/NfcListenStatusChange;->pNFcTypeBF:Landroid/preference/CheckBoxPreference;
-    invoke-static {v5}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$500(Lcom/android/settings/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
+    # getter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->pNFcTypeBF:Landroid/preference/CheckBoxPreference;
+    invoke-static {v5}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$500(Lcom/android/settings_ex/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
 
     move-result-object v5
 
@@ -318,57 +318,57 @@
 
     .line 113
     :cond_3
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # setter for: Lcom/android/settings/nfc/NfcListenStatusChange;->mFeliCaLock:Z
-    invoke-static {v5, v9}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$102(Lcom/android/settings/nfc/NfcListenStatusChange;Z)Z
+    # setter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->mFeliCaLock:Z
+    invoke-static {v5, v9}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$102(Lcom/android/settings_ex/nfc/NfcListenStatusChange;Z)Z
 
     goto :goto_0
 
     .line 121
     :cond_4
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # setter for: Lcom/android/settings/nfc/NfcListenStatusChange;->mUimLock:Z
-    invoke-static {v5, v9}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$202(Lcom/android/settings/nfc/NfcListenStatusChange;Z)Z
+    # setter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->mUimLock:Z
+    invoke-static {v5, v9}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$202(Lcom/android/settings_ex/nfc/NfcListenStatusChange;Z)Z
 
     goto :goto_1
 
     .line 124
     :cond_5
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # setter for: Lcom/android/settings/nfc/NfcListenStatusChange;->mUimLock:Z
-    invoke-static {v5, v9}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$202(Lcom/android/settings/nfc/NfcListenStatusChange;Z)Z
+    # setter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->mUimLock:Z
+    invoke-static {v5, v9}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$202(Lcom/android/settings_ex/nfc/NfcListenStatusChange;Z)Z
 
     goto :goto_1
 
     .line 132
     :cond_6
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # getter for: Lcom/android/settings/nfc/NfcListenStatusChange;->pNFcTypeABF:Landroid/preference/CheckBoxPreference;
-    invoke-static {v5}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$300(Lcom/android/settings/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
+    # getter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->pNFcTypeABF:Landroid/preference/CheckBoxPreference;
+    invoke-static {v5}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$300(Lcom/android/settings_ex/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
 
     move-result-object v5
 
     invoke-virtual {v5, v8}, Landroid/preference/CheckBoxPreference;->setEnabled(Z)V
 
     .line 133
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # getter for: Lcom/android/settings/nfc/NfcListenStatusChange;->pNFcTypeAF:Landroid/preference/CheckBoxPreference;
-    invoke-static {v5}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$400(Lcom/android/settings/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
+    # getter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->pNFcTypeAF:Landroid/preference/CheckBoxPreference;
+    invoke-static {v5}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$400(Lcom/android/settings_ex/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
 
     move-result-object v5
 
     invoke-virtual {v5, v8}, Landroid/preference/CheckBoxPreference;->setEnabled(Z)V
 
     .line 134
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # getter for: Lcom/android/settings/nfc/NfcListenStatusChange;->pNFcTypeBF:Landroid/preference/CheckBoxPreference;
-    invoke-static {v5}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$500(Lcom/android/settings/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
+    # getter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->pNFcTypeBF:Landroid/preference/CheckBoxPreference;
+    invoke-static {v5}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$500(Lcom/android/settings_ex/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
 
     move-result-object v5
 
@@ -541,14 +541,14 @@
     if-ne v3, v5, :cond_2
 
     .line 149
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # getter for: Lcom/android/settings/nfc/NfcListenStatusChange;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
-    invoke-static {v5}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$000(Lcom/android/settings/nfc/NfcListenStatusChange;)Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    # getter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
+    invoke-static {v5}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$000(Lcom/android/settings_ex/nfc/NfcListenStatusChange;)Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->getCLFLockStatus()I
+    invoke-virtual {v5}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->getCLFLockStatus()I
 
     move-result v4
 
@@ -556,10 +556,10 @@
     if-gt v4, v8, :cond_a
 
     .line 151
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # setter for: Lcom/android/settings/nfc/NfcListenStatusChange;->mFeliCaLock:Z
-    invoke-static {v5, v8}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$102(Lcom/android/settings/nfc/NfcListenStatusChange;Z)Z
+    # setter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->mFeliCaLock:Z
+    invoke-static {v5, v8}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$102(Lcom/android/settings_ex/nfc/NfcListenStatusChange;Z)Z
 
     .line 157
     :goto_3
@@ -569,26 +569,26 @@
 
     .line 158
     :cond_8
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # setter for: Lcom/android/settings/nfc/NfcListenStatusChange;->mUimLock:Z
-    invoke-static {v5, v8}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$202(Lcom/android/settings/nfc/NfcListenStatusChange;Z)Z
+    # setter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->mUimLock:Z
+    invoke-static {v5, v8}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$202(Lcom/android/settings_ex/nfc/NfcListenStatusChange;Z)Z
 
     .line 163
     :goto_4
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # getter for: Lcom/android/settings/nfc/NfcListenStatusChange;->mFeliCaLock:Z
-    invoke-static {v5}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$100(Lcom/android/settings/nfc/NfcListenStatusChange;)Z
+    # getter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->mFeliCaLock:Z
+    invoke-static {v5}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$100(Lcom/android/settings_ex/nfc/NfcListenStatusChange;)Z
 
     move-result v5
 
     if-nez v5, :cond_9
 
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # getter for: Lcom/android/settings/nfc/NfcListenStatusChange;->mUimLock:Z
-    invoke-static {v5}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$200(Lcom/android/settings/nfc/NfcListenStatusChange;)Z
+    # getter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->mUimLock:Z
+    invoke-static {v5}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$200(Lcom/android/settings_ex/nfc/NfcListenStatusChange;)Z
 
     move-result v5
 
@@ -596,30 +596,30 @@
 
     .line 164
     :cond_9
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # getter for: Lcom/android/settings/nfc/NfcListenStatusChange;->pNFcTypeABF:Landroid/preference/CheckBoxPreference;
-    invoke-static {v5}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$300(Lcom/android/settings/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
+    # getter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->pNFcTypeABF:Landroid/preference/CheckBoxPreference;
+    invoke-static {v5}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$300(Lcom/android/settings_ex/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
 
     move-result-object v5
 
     invoke-virtual {v5, v9}, Landroid/preference/CheckBoxPreference;->setEnabled(Z)V
 
     .line 165
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # getter for: Lcom/android/settings/nfc/NfcListenStatusChange;->pNFcTypeAF:Landroid/preference/CheckBoxPreference;
-    invoke-static {v5}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$400(Lcom/android/settings/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
+    # getter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->pNFcTypeAF:Landroid/preference/CheckBoxPreference;
+    invoke-static {v5}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$400(Lcom/android/settings_ex/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
 
     move-result-object v5
 
     invoke-virtual {v5, v9}, Landroid/preference/CheckBoxPreference;->setEnabled(Z)V
 
     .line 166
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # getter for: Lcom/android/settings/nfc/NfcListenStatusChange;->pNFcTypeBF:Landroid/preference/CheckBoxPreference;
-    invoke-static {v5}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$500(Lcom/android/settings/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
+    # getter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->pNFcTypeBF:Landroid/preference/CheckBoxPreference;
+    invoke-static {v5}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$500(Lcom/android/settings_ex/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
 
     move-result-object v5
 
@@ -629,48 +629,48 @@
 
     .line 153
     :cond_a
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # setter for: Lcom/android/settings/nfc/NfcListenStatusChange;->mFeliCaLock:Z
-    invoke-static {v5, v9}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$102(Lcom/android/settings/nfc/NfcListenStatusChange;Z)Z
+    # setter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->mFeliCaLock:Z
+    invoke-static {v5, v9}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$102(Lcom/android/settings_ex/nfc/NfcListenStatusChange;Z)Z
 
     goto :goto_3
 
     .line 160
     :cond_b
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # setter for: Lcom/android/settings/nfc/NfcListenStatusChange;->mUimLock:Z
-    invoke-static {v5, v9}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$202(Lcom/android/settings/nfc/NfcListenStatusChange;Z)Z
+    # setter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->mUimLock:Z
+    invoke-static {v5, v9}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$202(Lcom/android/settings_ex/nfc/NfcListenStatusChange;Z)Z
 
     goto :goto_4
 
     .line 168
     :cond_c
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # getter for: Lcom/android/settings/nfc/NfcListenStatusChange;->pNFcTypeABF:Landroid/preference/CheckBoxPreference;
-    invoke-static {v5}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$300(Lcom/android/settings/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
+    # getter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->pNFcTypeABF:Landroid/preference/CheckBoxPreference;
+    invoke-static {v5}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$300(Lcom/android/settings_ex/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
 
     move-result-object v5
 
     invoke-virtual {v5, v8}, Landroid/preference/CheckBoxPreference;->setEnabled(Z)V
 
     .line 169
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # getter for: Lcom/android/settings/nfc/NfcListenStatusChange;->pNFcTypeAF:Landroid/preference/CheckBoxPreference;
-    invoke-static {v5}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$400(Lcom/android/settings/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
+    # getter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->pNFcTypeAF:Landroid/preference/CheckBoxPreference;
+    invoke-static {v5}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$400(Lcom/android/settings_ex/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
 
     move-result-object v5
 
     invoke-virtual {v5, v8}, Landroid/preference/CheckBoxPreference;->setEnabled(Z)V
 
     .line 170
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$1;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # getter for: Lcom/android/settings/nfc/NfcListenStatusChange;->pNFcTypeBF:Landroid/preference/CheckBoxPreference;
-    invoke-static {v5}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$500(Lcom/android/settings/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
+    # getter for: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->pNFcTypeBF:Landroid/preference/CheckBoxPreference;
+    invoke-static {v5}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$500(Lcom/android/settings_ex/nfc/NfcListenStatusChange;)Landroid/preference/CheckBoxPreference;
 
     move-result-object v5
 

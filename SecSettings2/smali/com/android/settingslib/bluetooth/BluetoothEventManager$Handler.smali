@@ -1,11 +1,11 @@
-.class interface abstract Lcom/android/settingslib/bluetooth/BluetoothEventManager$Handler;
+.class interface abstract Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$Handler;
 .super Ljava/lang/Object;
 .source "BluetoothEventManager.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/bluetooth/BluetoothEventManager;
+    value = Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

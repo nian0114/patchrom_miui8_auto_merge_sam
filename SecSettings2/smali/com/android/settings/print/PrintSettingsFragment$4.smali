@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/print/PrintSettingsFragment$4;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/print/PrintSettingsFragment$4;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "PrintSettingsFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/print/PrintSettingsFragment;
+    value = Lcom/android/settings_ex/print/PrintSettingsFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 624
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
             "Z)",
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/search/SearchIndexableRaw;",
+            "Lcom/android/settings_ex/search/SearchIndexableRaw;",
             ">;"
         }
     .end annotation
@@ -50,7 +50,7 @@
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     .line 629
-    .local v3, "indexables":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/search/SearchIndexableRaw;>;"
+    .local v3, "indexables":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/search/SearchIndexableRaw;>;"
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v4
@@ -79,16 +79,16 @@
 
     .line 634
     .local v6, "screenTitle":Ljava/lang/String;
-    new-instance v1, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v1, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    invoke-direct {v1, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 635
-    .local v1, "data":Lcom/android/settings/search/SearchIndexableRaw;
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    .local v1, "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 636
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
 
     .line 637
     invoke-interface {v3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -143,18 +143,18 @@
 
     .line 649
     .local v0, "componentName":Landroid/content/ComponentName;
-    new-instance v1, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v1, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    .end local v1    # "data":Lcom/android/settings/search/SearchIndexableRaw;
-    invoke-direct {v1, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    .end local v1    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
+    invoke-direct {v1, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 650
-    .restart local v1    # "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .restart local v1    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     invoke-virtual {v0}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object v10
 
-    iput-object v10, v1, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v10, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 651
     invoke-virtual {v7}, Landroid/printservice/PrintServiceInfo;->getResolveInfo()Landroid/content/pm/ResolveInfo;
@@ -169,7 +169,7 @@
 
     move-result-object v10
 
-    iput-object v10, v1, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v10, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 652
     const v10, 0x7f0e0aa8
@@ -178,7 +178,7 @@
 
     move-result-object v10
 
-    iput-object v10, v1, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v10, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     .line 653
     const v10, 0x7f0e0aa9
@@ -187,10 +187,10 @@
 
     move-result-object v10
 
-    iput-object v10, v1, Lcom/android/settings/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
+    iput-object v10, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
 
     .line 654
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
 
     .line 655
     invoke-interface {v3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z

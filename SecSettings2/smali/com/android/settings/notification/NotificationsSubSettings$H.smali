@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/notification/NotificationsSubSettings$H;
+.class final Lcom/android/settings_ex/notification/NotificationsSubSettings$H;
 .super Landroid/os/Handler;
 .source "NotificationsSubSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/NotificationsSubSettings;
+    value = Lcom/android/settings_ex/notification/NotificationsSubSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/NotificationsSubSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/NotificationsSubSettings;
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/settings/notification/NotificationsSubSettings;)V
+.method private constructor <init>(Lcom/android/settings_ex/notification/NotificationsSubSettings;)V
     .locals 1
 
     .prologue
     .line 1006
-    iput-object p1, p0, Lcom/android/settings/notification/NotificationsSubSettings$H;->this$0:Lcom/android/settings/notification/NotificationsSubSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/NotificationsSubSettings$H;->this$0:Lcom/android/settings_ex/notification/NotificationsSubSettings;
 
     .line 1007
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -37,14 +37,14 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/notification/NotificationsSubSettings;Lcom/android/settings/notification/NotificationsSubSettings$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/notification/NotificationsSubSettings;Lcom/android/settings_ex/notification/NotificationsSubSettings$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/notification/NotificationsSubSettings;
-    .param p2, "x1"    # Lcom/android/settings/notification/NotificationsSubSettings$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/notification/NotificationsSubSettings;
+    .param p2, "x1"    # Lcom/android/settings_ex/notification/NotificationsSubSettings$1;
 
     .prologue
     .line 1001
-    invoke-direct {p0, p1}, Lcom/android/settings/notification/NotificationsSubSettings$H;-><init>(Lcom/android/settings/notification/NotificationsSubSettings;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/notification/NotificationsSubSettings$H;-><init>(Lcom/android/settings_ex/notification/NotificationsSubSettings;)V
 
     return-void
 .end method
@@ -68,10 +68,10 @@
 
     .line 1014
     :pswitch_1
-    iget-object v0, p0, Lcom/android/settings/notification/NotificationsSubSettings$H;->this$0:Lcom/android/settings/notification/NotificationsSubSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/NotificationsSubSettings$H;->this$0:Lcom/android/settings_ex/notification/NotificationsSubSettings;
 
-    # getter for: Lcom/android/settings/notification/NotificationsSubSettings;->mPhoneRingtonePreference:Landroid/preference/Preference;
-    invoke-static {v0}, Lcom/android/settings/notification/NotificationsSubSettings;->access$800(Lcom/android/settings/notification/NotificationsSubSettings;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/notification/NotificationsSubSettings;->mPhoneRingtonePreference:Landroid/preference/Preference;
+    invoke-static {v0}, Lcom/android/settings_ex/notification/NotificationsSubSettings;->access$800(Lcom/android/settings_ex/notification/NotificationsSubSettings;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -85,10 +85,10 @@
 
     .line 1017
     :pswitch_2
-    iget-object v0, p0, Lcom/android/settings/notification/NotificationsSubSettings$H;->this$0:Lcom/android/settings/notification/NotificationsSubSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/NotificationsSubSettings$H;->this$0:Lcom/android/settings_ex/notification/NotificationsSubSettings;
 
-    # getter for: Lcom/android/settings/notification/NotificationsSubSettings;->mPhoneRingtone2Preference:Landroid/preference/Preference;
-    invoke-static {v0}, Lcom/android/settings/notification/NotificationsSubSettings;->access$1200(Lcom/android/settings/notification/NotificationsSubSettings;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/notification/NotificationsSubSettings;->mPhoneRingtone2Preference:Landroid/preference/Preference;
+    invoke-static {v0}, Lcom/android/settings_ex/notification/NotificationsSubSettings;->access$1200(Lcom/android/settings_ex/notification/NotificationsSubSettings;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -102,10 +102,10 @@
 
     .line 1020
     :pswitch_3
-    iget-object v0, p0, Lcom/android/settings/notification/NotificationsSubSettings$H;->this$0:Lcom/android/settings/notification/NotificationsSubSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/NotificationsSubSettings$H;->this$0:Lcom/android/settings_ex/notification/NotificationsSubSettings;
 
-    # getter for: Lcom/android/settings/notification/NotificationsSubSettings;->mNotificationSound:Lcom/android/settings/DefaultRingtonePreference;
-    invoke-static {v0}, Lcom/android/settings/notification/NotificationsSubSettings;->access$1300(Lcom/android/settings/notification/NotificationsSubSettings;)Lcom/android/settings/DefaultRingtonePreference;
+    # getter for: Lcom/android/settings_ex/notification/NotificationsSubSettings;->mNotificationSound:Lcom/android/settings_ex/DefaultRingtonePreference;
+    invoke-static {v0}, Lcom/android/settings_ex/notification/NotificationsSubSettings;->access$1300(Lcom/android/settings_ex/notification/NotificationsSubSettings;)Lcom/android/settings_ex/DefaultRingtonePreference;
 
     move-result-object v1
 
@@ -113,7 +113,7 @@
 
     check-cast v0, Ljava/lang/CharSequence;
 
-    invoke-virtual {v1, v0}, Lcom/android/settings/DefaultRingtonePreference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/DefaultRingtonePreference;->setSummary(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 

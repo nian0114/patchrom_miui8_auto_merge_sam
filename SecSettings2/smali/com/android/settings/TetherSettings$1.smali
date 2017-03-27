@@ -1,4 +1,4 @@
-.class Lcom/android/settings/TetherSettings$1;
+.class Lcom/android/settings_ex/TetherSettings$1;
 .super Ljava/lang/Object;
 .source "TetherSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/TetherSettings;
+    value = Lcom/android/settings_ex/TetherSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/TetherSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/TetherSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/TetherSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/TetherSettings;)V
     .locals 0
 
     .prologue
     .line 350
-    iput-object p1, p0, Lcom/android/settings/TetherSettings$1;->this$0:Lcom/android/settings/TetherSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/TetherSettings$1;->this$0:Lcom/android/settings_ex/TetherSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,10 +43,10 @@
 
     .prologue
     .line 352
-    iget-object v1, p0, Lcom/android/settings/TetherSettings$1;->this$0:Lcom/android/settings/TetherSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/TetherSettings$1;->this$0:Lcom/android/settings_ex/TetherSettings;
 
-    # getter for: Lcom/android/settings/TetherSettings;->mBluetoothPan:Ljava/util/concurrent/atomic/AtomicReference;
-    invoke-static {v1}, Lcom/android/settings/TetherSettings;->access$000(Lcom/android/settings/TetherSettings;)Ljava/util/concurrent/atomic/AtomicReference;
+    # getter for: Lcom/android/settings_ex/TetherSettings;->mBluetoothPan:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-static {v1}, Lcom/android/settings_ex/TetherSettings;->access$000(Lcom/android/settings_ex/TetherSettings;)Ljava/util/concurrent/atomic/AtomicReference;
 
     move-result-object v1
 
@@ -56,20 +56,20 @@
     invoke-virtual {v1, p2}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
     .line 353
-    iget-object v1, p0, Lcom/android/settings/TetherSettings$1;->this$0:Lcom/android/settings/TetherSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/TetherSettings$1;->this$0:Lcom/android/settings_ex/TetherSettings;
 
-    # getter for: Lcom/android/settings/TetherSettings;->mBluetoothEnableForTether:Z
-    invoke-static {v1}, Lcom/android/settings/TetherSettings;->access$100(Lcom/android/settings/TetherSettings;)Z
+    # getter for: Lcom/android/settings_ex/TetherSettings;->mBluetoothEnableForTether:Z
+    invoke-static {v1}, Lcom/android/settings_ex/TetherSettings;->access$100(Lcom/android/settings_ex/TetherSettings;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
     .line 354
-    iget-object v1, p0, Lcom/android/settings/TetherSettings$1;->this$0:Lcom/android/settings/TetherSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/TetherSettings$1;->this$0:Lcom/android/settings_ex/TetherSettings;
 
-    # getter for: Lcom/android/settings/TetherSettings;->mBluetoothPan:Ljava/util/concurrent/atomic/AtomicReference;
-    invoke-static {v1}, Lcom/android/settings/TetherSettings;->access$000(Lcom/android/settings/TetherSettings;)Ljava/util/concurrent/atomic/AtomicReference;
+    # getter for: Lcom/android/settings_ex/TetherSettings;->mBluetoothPan:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-static {v1}, Lcom/android/settings_ex/TetherSettings;->access$000(Lcom/android/settings_ex/TetherSettings;)Ljava/util/concurrent/atomic/AtomicReference;
 
     move-result-object v1
 
@@ -84,8 +84,8 @@
     if-eqz v0, :cond_1
 
     .line 356
-    # getter for: Lcom/android/settings/TetherSettings;->DBG:Z
-    invoke-static {}, Lcom/android/settings/TetherSettings;->access$200()Z
+    # getter for: Lcom/android/settings_ex/TetherSettings;->DBG:Z
+    invoke-static {}, Lcom/android/settings_ex/TetherSettings;->access$200()Z
 
     move-result v1
 
@@ -105,19 +105,19 @@
     invoke-virtual {v0, v1}, Landroid/bluetooth/BluetoothPan;->setBluetoothTethering(Z)V
 
     .line 359
-    iget-object v1, p0, Lcom/android/settings/TetherSettings$1;->this$0:Lcom/android/settings/TetherSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/TetherSettings$1;->this$0:Lcom/android/settings_ex/TetherSettings;
 
     const/4 v2, 0x0
 
-    # setter for: Lcom/android/settings/TetherSettings;->mBluetoothEnableForTether:Z
-    invoke-static {v1, v2}, Lcom/android/settings/TetherSettings;->access$102(Lcom/android/settings/TetherSettings;Z)Z
+    # setter for: Lcom/android/settings_ex/TetherSettings;->mBluetoothEnableForTether:Z
+    invoke-static {v1, v2}, Lcom/android/settings_ex/TetherSettings;->access$102(Lcom/android/settings_ex/TetherSettings;Z)Z
 
     .line 361
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/TetherSettings$1;->this$0:Lcom/android/settings/TetherSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/TetherSettings$1;->this$0:Lcom/android/settings_ex/TetherSettings;
 
-    # invokes: Lcom/android/settings/TetherSettings;->updateState()V
-    invoke-static {v1}, Lcom/android/settings/TetherSettings;->access$300(Lcom/android/settings/TetherSettings;)V
+    # invokes: Lcom/android/settings_ex/TetherSettings;->updateState()V
+    invoke-static {v1}, Lcom/android/settings_ex/TetherSettings;->access$300(Lcom/android/settings_ex/TetherSettings;)V
 
     .line 363
     .end local v0    # "bluetoothPan":Landroid/bluetooth/BluetoothPan;
@@ -131,10 +131,10 @@
 
     .prologue
     .line 366
-    iget-object v2, p0, Lcom/android/settings/TetherSettings$1;->this$0:Lcom/android/settings/TetherSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/TetherSettings$1;->this$0:Lcom/android/settings_ex/TetherSettings;
 
-    # getter for: Lcom/android/settings/TetherSettings;->mBluetoothPan:Ljava/util/concurrent/atomic/AtomicReference;
-    invoke-static {v2}, Lcom/android/settings/TetherSettings;->access$000(Lcom/android/settings/TetherSettings;)Ljava/util/concurrent/atomic/AtomicReference;
+    # getter for: Lcom/android/settings_ex/TetherSettings;->mBluetoothPan:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-static {v2}, Lcom/android/settings_ex/TetherSettings;->access$000(Lcom/android/settings_ex/TetherSettings;)Ljava/util/concurrent/atomic/AtomicReference;
 
     move-result-object v2
 
@@ -155,10 +155,10 @@
     if-eqz v1, :cond_2
 
     .line 369
-    iget-object v2, p0, Lcom/android/settings/TetherSettings$1;->this$0:Lcom/android/settings/TetherSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/TetherSettings$1;->this$0:Lcom/android/settings_ex/TetherSettings;
 
-    # getter for: Lcom/android/settings/TetherSettings;->mBluetoothPan:Ljava/util/concurrent/atomic/AtomicReference;
-    invoke-static {v2}, Lcom/android/settings/TetherSettings;->access$000(Lcom/android/settings/TetherSettings;)Ljava/util/concurrent/atomic/AtomicReference;
+    # getter for: Lcom/android/settings_ex/TetherSettings;->mBluetoothPan:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-static {v2}, Lcom/android/settings_ex/TetherSettings;->access$000(Lcom/android/settings_ex/TetherSettings;)Ljava/util/concurrent/atomic/AtomicReference;
 
     move-result-object v2
 
@@ -170,8 +170,8 @@
     if-eqz v0, :cond_1
 
     .line 372
-    # getter for: Lcom/android/settings/TetherSettings;->DBG:Z
-    invoke-static {}, Lcom/android/settings/TetherSettings;->access$200()Z
+    # getter for: Lcom/android/settings_ex/TetherSettings;->DBG:Z
+    invoke-static {}, Lcom/android/settings_ex/TetherSettings;->access$200()Z
 
     move-result v2
 

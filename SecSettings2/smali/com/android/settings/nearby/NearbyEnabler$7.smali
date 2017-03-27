@@ -1,4 +1,4 @@
-.class Lcom/android/settings/nearby/NearbyEnabler$7;
+.class Lcom/android/settings_ex/nearby/NearbyEnabler$7;
 .super Ljava/lang/Object;
 .source "NearbyEnabler.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/nearby/NearbyEnabler;->requestWifiCheckingPopup()V
+    value = Lcom/android/settings_ex/nearby/NearbyEnabler;->requestWifiCheckingPopup()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nearby/NearbyEnabler;
+.field final synthetic this$0:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
 .field final synthetic val$checkbox:Landroid/widget/CheckBox;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/nearby/NearbyEnabler;Landroid/widget/CheckBox;)V
+.method constructor <init>(Lcom/android/settings_ex/nearby/NearbyEnabler;Landroid/widget/CheckBox;)V
     .locals 0
 
     .prologue
     .line 1019
-    iput-object p1, p0, Lcom/android/settings/nearby/NearbyEnabler$7;->this$0:Lcom/android/settings/nearby/NearbyEnabler;
+    iput-object p1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler$7;->this$0:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
-    iput-object p2, p0, Lcom/android/settings/nearby/NearbyEnabler$7;->val$checkbox:Landroid/widget/CheckBox;
+    iput-object p2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler$7;->val$checkbox:Landroid/widget/CheckBox;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,7 +49,7 @@
     const/4 v4, 0x1
 
     .line 1022
-    iget-object v2, p0, Lcom/android/settings/nearby/NearbyEnabler$7;->val$checkbox:Landroid/widget/CheckBox;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler$7;->val$checkbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v2}, Landroid/widget/CheckBox;->isChecked()Z
 
@@ -58,10 +58,10 @@
     if-eqz v2, :cond_0
 
     .line 1023
-    iget-object v2, p0, Lcom/android/settings/nearby/NearbyEnabler$7;->this$0:Lcom/android/settings/nearby/NearbyEnabler;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler$7;->this$0:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
-    # getter for: Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcom/android/settings/nearby/NearbyEnabler;->access$1300(Lcom/android/settings/nearby/NearbyEnabler;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    invoke-static {v2}, Lcom/android/settings_ex/nearby/NearbyEnabler;->access$1300(Lcom/android/settings_ex/nearby/NearbyEnabler;)Landroid/content/Context;
 
     move-result-object v2
 
@@ -92,14 +92,14 @@
     .end local v0    # "ed":Landroid/content/SharedPreferences$Editor;
     .end local v1    # "sharedPreference":Landroid/content/SharedPreferences;
     :cond_0
-    # setter for: Lcom/android/settings/nearby/NearbyEnabler;->isShowWifiCheckingPopup:Z
-    invoke-static {v4}, Lcom/android/settings/nearby/NearbyEnabler;->access$1402(Z)Z
+    # setter for: Lcom/android/settings_ex/nearby/NearbyEnabler;->isShowWifiCheckingPopup:Z
+    invoke-static {v4}, Lcom/android/settings_ex/nearby/NearbyEnabler;->access$1402(Z)Z
 
     .line 1032
-    iget-object v2, p0, Lcom/android/settings/nearby/NearbyEnabler$7;->this$0:Lcom/android/settings/nearby/NearbyEnabler;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler$7;->this$0:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
-    # invokes: Lcom/android/settings/nearby/NearbyEnabler;->switchPreference(Z)V
-    invoke-static {v2, v4}, Lcom/android/settings/nearby/NearbyEnabler;->access$1700(Lcom/android/settings/nearby/NearbyEnabler;Z)V
+    # invokes: Lcom/android/settings_ex/nearby/NearbyEnabler;->switchPreference(Z)V
+    invoke-static {v2, v4}, Lcom/android/settings_ex/nearby/NearbyEnabler;->access$1700(Lcom/android/settings_ex/nearby/NearbyEnabler;Z)V
 
     .line 1033
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V

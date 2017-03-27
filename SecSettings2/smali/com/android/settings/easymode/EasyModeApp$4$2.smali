@@ -1,4 +1,4 @@
-.class Lcom/android/settings/easymode/EasyModeApp$4$2;
+.class Lcom/android/settings_ex/easymode/EasyModeApp$4$2;
 .super Ljava/lang/Object;
 .source "EasyModeApp.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/easymode/EasyModeApp$4;->onClick(Landroid/view/View;)V
+    value = Lcom/android/settings_ex/easymode/EasyModeApp$4;->onClick(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/easymode/EasyModeApp$4;
+.field final synthetic this$1:Lcom/android/settings_ex/easymode/EasyModeApp$4;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/easymode/EasyModeApp$4;)V
+.method constructor <init>(Lcom/android/settings_ex/easymode/EasyModeApp$4;)V
     .locals 0
 
     .prologue
     .line 1059
-    iput-object p1, p0, Lcom/android/settings/easymode/EasyModeApp$4$2;->this$1:Lcom/android/settings/easymode/EasyModeApp$4;
+    iput-object p1, p0, Lcom/android/settings_ex/easymode/EasyModeApp$4$2;->this$1:Lcom/android/settings_ex/easymode/EasyModeApp$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings$5;
+.class Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings$5;
 .super Ljava/lang/Object;
 .source "InputMethodAndLanguageSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;->updateHardKeyboards()V
+    value = Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;->updateHardKeyboards()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;
 
 .field final synthetic val$identifier:Landroid/hardware/input/InputDeviceIdentifier;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;Landroid/hardware/input/InputDeviceIdentifier;)V
+.method constructor <init>(Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;Landroid/hardware/input/InputDeviceIdentifier;)V
     .locals 0
 
     .prologue
     .line 788
-    iput-object p1, p0, Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings$5;->this$0:Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings$5;->this$0:Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;
 
-    iput-object p2, p0, Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings$5;->val$identifier:Landroid/hardware/input/InputDeviceIdentifier;
+    iput-object p2, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings$5;->val$identifier:Landroid/hardware/input/InputDeviceIdentifier;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,12 +46,12 @@
 
     .prologue
     .line 791
-    iget-object v0, p0, Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings$5;->this$0:Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings$5;->this$0:Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;
 
-    iget-object v1, p0, Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings$5;->val$identifier:Landroid/hardware/input/InputDeviceIdentifier;
+    iget-object v1, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings$5;->val$identifier:Landroid/hardware/input/InputDeviceIdentifier;
 
-    # invokes: Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;->showKeyboardLayoutDialog(Landroid/hardware/input/InputDeviceIdentifier;)V
-    invoke-static {v0, v1}, Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;->access$700(Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;Landroid/hardware/input/InputDeviceIdentifier;)V
+    # invokes: Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;->showKeyboardLayoutDialog(Landroid/hardware/input/InputDeviceIdentifier;)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;->access$700(Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;Landroid/hardware/input/InputDeviceIdentifier;)V
 
     .line 792
     const/4 v0, 0x1

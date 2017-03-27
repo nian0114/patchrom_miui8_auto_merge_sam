@@ -1,4 +1,4 @@
-.class Lcom/android/settings/SimPersoLockSettings$TouchInput;
+.class Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;
 .super Ljava/lang/Object;
 .source "SimPersoLockSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/SimPersoLockSettings;
+    value = Lcom/android/settings_ex/SimPersoLockSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,262 +40,262 @@
 
 .field private mZero:Landroid/widget/TextView;
 
-.field final synthetic this$0:Lcom/android/settings/SimPersoLockSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/SimPersoLockSettings;
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/settings/SimPersoLockSettings;)V
+.method private constructor <init>(Lcom/android/settings_ex/SimPersoLockSettings;)V
     .locals 2
 
     .prologue
     .line 528
-    iput-object p1, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->this$0:Lcom/android/settings/SimPersoLockSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->this$0:Lcom/android/settings_ex/SimPersoLockSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 529
     const v0, 0x7f0d0211
 
-    invoke-virtual {p1, v0}, Lcom/android/settings/SimPersoLockSettings;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Lcom/android/settings_ex/SimPersoLockSettings;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mZero:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mZero:Landroid/widget/TextView;
 
     .line 530
     const v0, 0x7f0d0208
 
-    invoke-virtual {p1, v0}, Lcom/android/settings/SimPersoLockSettings;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Lcom/android/settings_ex/SimPersoLockSettings;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mOne:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mOne:Landroid/widget/TextView;
 
     .line 531
     const v0, 0x7f0d0209
 
-    invoke-virtual {p1, v0}, Lcom/android/settings/SimPersoLockSettings;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Lcom/android/settings_ex/SimPersoLockSettings;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mTwo:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mTwo:Landroid/widget/TextView;
 
     .line 532
     const v0, 0x7f0d020a
 
-    invoke-virtual {p1, v0}, Lcom/android/settings/SimPersoLockSettings;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Lcom/android/settings_ex/SimPersoLockSettings;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mThree:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mThree:Landroid/widget/TextView;
 
     .line 533
     const v0, 0x7f0d020b
 
-    invoke-virtual {p1, v0}, Lcom/android/settings/SimPersoLockSettings;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Lcom/android/settings_ex/SimPersoLockSettings;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mFour:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mFour:Landroid/widget/TextView;
 
     .line 534
     const v0, 0x7f0d020c
 
-    invoke-virtual {p1, v0}, Lcom/android/settings/SimPersoLockSettings;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Lcom/android/settings_ex/SimPersoLockSettings;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mFive:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mFive:Landroid/widget/TextView;
 
     .line 535
     const v0, 0x7f0d020d
 
-    invoke-virtual {p1, v0}, Lcom/android/settings/SimPersoLockSettings;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Lcom/android/settings_ex/SimPersoLockSettings;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mSix:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mSix:Landroid/widget/TextView;
 
     .line 536
     const v0, 0x7f0d020e
 
-    invoke-virtual {p1, v0}, Lcom/android/settings/SimPersoLockSettings;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Lcom/android/settings_ex/SimPersoLockSettings;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mSeven:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mSeven:Landroid/widget/TextView;
 
     .line 537
     const v0, 0x7f0d020f
 
-    invoke-virtual {p1, v0}, Lcom/android/settings/SimPersoLockSettings;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Lcom/android/settings_ex/SimPersoLockSettings;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mEight:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mEight:Landroid/widget/TextView;
 
     .line 538
     const v0, 0x7f0d0210
 
-    invoke-virtual {p1, v0}, Lcom/android/settings/SimPersoLockSettings;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Lcom/android/settings_ex/SimPersoLockSettings;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mNine:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mNine:Landroid/widget/TextView;
 
     .line 539
     const v0, 0x7f0d00f8
 
-    invoke-virtual {p1, v0}, Lcom/android/settings/SimPersoLockSettings;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Lcom/android/settings_ex/SimPersoLockSettings;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mCancelButton:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mCancelButton:Landroid/widget/TextView;
 
     .line 541
-    iget-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mZero:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mZero:Landroid/widget/TextView;
 
     const-string v1, "0"
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 542
-    iget-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mOne:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mOne:Landroid/widget/TextView;
 
     const-string v1, "1"
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 543
-    iget-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mTwo:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mTwo:Landroid/widget/TextView;
 
     const-string v1, "2"
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 544
-    iget-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mThree:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mThree:Landroid/widget/TextView;
 
     const-string v1, "3"
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 545
-    iget-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mFour:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mFour:Landroid/widget/TextView;
 
     const-string v1, "4"
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 546
-    iget-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mFive:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mFive:Landroid/widget/TextView;
 
     const-string v1, "5"
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 547
-    iget-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mSix:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mSix:Landroid/widget/TextView;
 
     const-string v1, "6"
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 548
-    iget-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mSeven:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mSeven:Landroid/widget/TextView;
 
     const-string v1, "7"
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 549
-    iget-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mEight:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mEight:Landroid/widget/TextView;
 
     const-string v1, "8"
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 550
-    iget-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mNine:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mNine:Landroid/widget/TextView;
 
     const-string v1, "9"
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 552
-    iget-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mZero:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mZero:Landroid/widget/TextView;
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 553
-    iget-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mOne:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mOne:Landroid/widget/TextView;
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 554
-    iget-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mTwo:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mTwo:Landroid/widget/TextView;
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 555
-    iget-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mThree:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mThree:Landroid/widget/TextView;
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 556
-    iget-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mFour:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mFour:Landroid/widget/TextView;
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 557
-    iget-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mFive:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mFive:Landroid/widget/TextView;
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 558
-    iget-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mSix:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mSix:Landroid/widget/TextView;
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 559
-    iget-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mSeven:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mSeven:Landroid/widget/TextView;
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 560
-    iget-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mEight:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mEight:Landroid/widget/TextView;
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 561
-    iget-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mNine:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mNine:Landroid/widget/TextView;
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 562
-    iget-object v0, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mCancelButton:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mCancelButton:Landroid/widget/TextView;
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -303,14 +303,14 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/SimPersoLockSettings;Lcom/android/settings/SimPersoLockSettings$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/SimPersoLockSettings;Lcom/android/settings_ex/SimPersoLockSettings$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/SimPersoLockSettings;
-    .param p2, "x1"    # Lcom/android/settings/SimPersoLockSettings$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/SimPersoLockSettings;
+    .param p2, "x1"    # Lcom/android/settings_ex/SimPersoLockSettings$1;
 
     .prologue
     .line 515
-    invoke-direct {p0, p1}, Lcom/android/settings/SimPersoLockSettings$TouchInput;-><init>(Lcom/android/settings/SimPersoLockSettings;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;-><init>(Lcom/android/settings_ex/SimPersoLockSettings;)V
 
     return-void
 .end method
@@ -325,7 +325,7 @@
 
     .line 581
     .local v0, "digit":I
-    iget-object v1, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mZero:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mZero:Landroid/widget/TextView;
 
     if-ne p1, v1, :cond_1
 
@@ -339,7 +339,7 @@
 
     .line 583
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mOne:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mOne:Landroid/widget/TextView;
 
     if-ne p1, v1, :cond_2
 
@@ -350,7 +350,7 @@
 
     .line 585
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mTwo:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mTwo:Landroid/widget/TextView;
 
     if-ne p1, v1, :cond_3
 
@@ -361,7 +361,7 @@
 
     .line 587
     :cond_3
-    iget-object v1, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mThree:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mThree:Landroid/widget/TextView;
 
     if-ne p1, v1, :cond_4
 
@@ -372,7 +372,7 @@
 
     .line 589
     :cond_4
-    iget-object v1, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mFour:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mFour:Landroid/widget/TextView;
 
     if-ne p1, v1, :cond_5
 
@@ -383,7 +383,7 @@
 
     .line 591
     :cond_5
-    iget-object v1, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mFive:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mFive:Landroid/widget/TextView;
 
     if-ne p1, v1, :cond_6
 
@@ -394,7 +394,7 @@
 
     .line 593
     :cond_6
-    iget-object v1, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mSix:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mSix:Landroid/widget/TextView;
 
     if-ne p1, v1, :cond_7
 
@@ -405,7 +405,7 @@
 
     .line 595
     :cond_7
-    iget-object v1, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mSeven:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mSeven:Landroid/widget/TextView;
 
     if-ne p1, v1, :cond_8
 
@@ -416,7 +416,7 @@
 
     .line 597
     :cond_8
-    iget-object v1, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mEight:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mEight:Landroid/widget/TextView;
 
     if-ne p1, v1, :cond_9
 
@@ -427,7 +427,7 @@
 
     .line 599
     :cond_9
-    iget-object v1, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mNine:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mNine:Landroid/widget/TextView;
 
     if-ne p1, v1, :cond_0
 
@@ -445,14 +445,14 @@
 
     .prologue
     .line 566
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticKTTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticKTTModel()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    # getter for: Lcom/android/settings/SimPersoLockSettings;->mNum_Retry:I
-    invoke-static {}, Lcom/android/settings/SimPersoLockSettings;->access$300()I
+    # getter for: Lcom/android/settings_ex/SimPersoLockSettings;->mNum_Retry:I
+    invoke-static {}, Lcom/android/settings_ex/SimPersoLockSettings;->access$300()I
 
     move-result v1
 
@@ -467,18 +467,18 @@
 
     .line 569
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->mCancelButton:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->mCancelButton:Landroid/widget/TextView;
 
     if-ne p1, v1, :cond_2
 
     .line 570
-    iget-object v1, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->this$0:Lcom/android/settings/SimPersoLockSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->this$0:Lcom/android/settings_ex/SimPersoLockSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/SimPersoLockSettings;->finish()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/SimPersoLockSettings;->finish()V
 
     .line 573
     :cond_2
-    invoke-direct {p0, p1}, Lcom/android/settings/SimPersoLockSettings$TouchInput;->checkDigit(Landroid/view/View;)I
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->checkDigit(Landroid/view/View;)I
 
     move-result v0
 
@@ -487,10 +487,10 @@
     if-ltz v0, :cond_0
 
     .line 575
-    iget-object v1, p0, Lcom/android/settings/SimPersoLockSettings$TouchInput;->this$0:Lcom/android/settings/SimPersoLockSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/SimPersoLockSettings$TouchInput;->this$0:Lcom/android/settings_ex/SimPersoLockSettings;
 
-    # invokes: Lcom/android/settings/SimPersoLockSettings;->reportDigit(I)V
-    invoke-static {v1, v0}, Lcom/android/settings/SimPersoLockSettings;->access$400(Lcom/android/settings/SimPersoLockSettings;I)V
+    # invokes: Lcom/android/settings_ex/SimPersoLockSettings;->reportDigit(I)V
+    invoke-static {v1, v0}, Lcom/android/settings_ex/SimPersoLockSettings;->access$400(Lcom/android/settings_ex/SimPersoLockSettings;I)V
 
     goto :goto_0
 .end method

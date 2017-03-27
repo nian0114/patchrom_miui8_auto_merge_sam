@@ -1,11 +1,11 @@
-.class Lcom/android/settings/AirplaneModeSwitchEnabler$2;
+.class Lcom/android/settings_ex/AirplaneModeSwitchEnabler$2;
 .super Landroid/database/ContentObserver;
 .source "AirplaneModeSwitchEnabler.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/AirplaneModeSwitchEnabler;
+    value = Lcom/android/settings_ex/AirplaneModeSwitchEnabler;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/AirplaneModeSwitchEnabler;
+.field final synthetic this$0:Lcom/android/settings_ex/AirplaneModeSwitchEnabler;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/AirplaneModeSwitchEnabler;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/AirplaneModeSwitchEnabler;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 101
-    iput-object p1, p0, Lcom/android/settings/AirplaneModeSwitchEnabler$2;->this$0:Lcom/android/settings/AirplaneModeSwitchEnabler;
+    iput-object p1, p0, Lcom/android/settings_ex/AirplaneModeSwitchEnabler$2;->this$0:Lcom/android/settings_ex/AirplaneModeSwitchEnabler;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -40,10 +40,10 @@
 
     .prologue
     .line 104
-    iget-object v0, p0, Lcom/android/settings/AirplaneModeSwitchEnabler$2;->this$0:Lcom/android/settings/AirplaneModeSwitchEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/AirplaneModeSwitchEnabler$2;->this$0:Lcom/android/settings_ex/AirplaneModeSwitchEnabler;
 
-    # invokes: Lcom/android/settings/AirplaneModeSwitchEnabler;->onAirplaneModeChanged()V
-    invoke-static {v0}, Lcom/android/settings/AirplaneModeSwitchEnabler;->access$000(Lcom/android/settings/AirplaneModeSwitchEnabler;)V
+    # invokes: Lcom/android/settings_ex/AirplaneModeSwitchEnabler;->onAirplaneModeChanged()V
+    invoke-static {v0}, Lcom/android/settings_ex/AirplaneModeSwitchEnabler;->access$000(Lcom/android/settings_ex/AirplaneModeSwitchEnabler;)V
 
     .line 105
     return-void

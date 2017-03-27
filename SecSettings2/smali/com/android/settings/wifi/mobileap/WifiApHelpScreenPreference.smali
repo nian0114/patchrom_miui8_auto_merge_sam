@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/mobileap/WifiApHelpScreenPreference;
+.class public Lcom/android/settings_ex/wifi/mobileap/WifiApHelpScreenPreference;
 .super Landroid/preference/Preference;
 .source "WifiApHelpScreenPreference.java"
 
@@ -17,14 +17,14 @@
     invoke-direct {p0, p1}, Landroid/preference/Preference;-><init>(Landroid/content/Context;)V
 
     .line 43
-    sget v0, Lcom/android/settings/Utils;->MAX_CLIENT_4_MOBILEAP:I
+    sget v0, Lcom/android/settings_ex/Utils;->MAX_CLIENT_4_MOBILEAP:I
 
-    iput v0, p0, Lcom/android/settings/wifi/mobileap/WifiApHelpScreenPreference;->mMaxClient:I
+    iput v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHelpScreenPreference;->mMaxClient:I
 
     .line 44
     const v0, 0x7f040247
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/wifi/mobileap/WifiApHelpScreenPreference;->setLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApHelpScreenPreference;->setLayoutResource(I)V
 
     .line 45
     return-void
@@ -79,7 +79,7 @@
     .local v0, "mTextView":Landroid/widget/TextView;
     const-string v4, "TMO"
 
-    sget-object v5, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -96,7 +96,7 @@
     :goto_0
     const-string v4, "SPRINT"
 
-    sget-object v5, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -106,7 +106,7 @@
 
     const-string v4, "VZW"
 
-    sget-object v5, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -116,7 +116,7 @@
 
     const-string v4, "ATT"
 
-    sget-object v5, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -126,13 +126,13 @@
 
     .line 71
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApHelpScreenPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApHelpScreenPreference;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
     new-array v5, v6, [Ljava/lang/Object;
 
-    iget v6, p0, Lcom/android/settings/wifi/mobileap/WifiApHelpScreenPreference;->mMaxClient:I
+    iget v6, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHelpScreenPreference;->mMaxClient:I
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -169,7 +169,7 @@
     :cond_3
     const-string v4, "TMO"
 
-    sget-object v5, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -188,7 +188,7 @@
     :cond_4
     const-string v4, "NEWCO"
 
-    sget-object v5, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -233,13 +233,13 @@
     if-eqz v4, :cond_7
 
     .line 83
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApHelpScreenPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApHelpScreenPreference;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
     new-array v5, v6, [Ljava/lang/Object;
 
-    iget v6, p0, Lcom/android/settings/wifi/mobileap/WifiApHelpScreenPreference;->mMaxClient:I
+    iget v6, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHelpScreenPreference;->mMaxClient:I
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -257,7 +257,7 @@
 
     .line 85
     :cond_7
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApHelpScreenPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApHelpScreenPreference;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -278,10 +278,10 @@
 
     .prologue
     .line 91
-    iput p1, p0, Lcom/android/settings/wifi/mobileap/WifiApHelpScreenPreference;->mMaxClient:I
+    iput p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHelpScreenPreference;->mMaxClient:I
 
     .line 92
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApHelpScreenPreference;->notifyHierarchyChanged()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApHelpScreenPreference;->notifyHierarchyChanged()V
 
     .line 93
     return-void

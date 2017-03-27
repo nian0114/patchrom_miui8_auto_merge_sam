@@ -1,11 +1,11 @@
-.class Lcom/android/settings/LaunchApplication$DefaultAppPreference;
+.class Lcom/android/settings_ex/LaunchApplication$DefaultAppPreference;
 .super Landroid/preference/Preference;
 .source "LaunchApplication.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/LaunchApplication;
+    value = Lcom/android/settings_ex/LaunchApplication;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,11 +17,11 @@
 # instance fields
 .field packageName:Ljava/lang/CharSequence;
 
-.field final synthetic this$0:Lcom/android/settings/LaunchApplication;
+.field final synthetic this$0:Lcom/android/settings_ex/LaunchApplication;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/settings/LaunchApplication;Landroid/content/Context;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
+.method public constructor <init>(Lcom/android/settings_ex/LaunchApplication;Landroid/content/Context;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
     .locals 1
     .param p2, "context"    # Landroid/content/Context;
     .param p3, "icon"    # Landroid/graphics/drawable/Drawable;
@@ -30,7 +30,7 @@
 
     .prologue
     .line 271
-    iput-object p1, p0, Lcom/android/settings/LaunchApplication$DefaultAppPreference;->this$0:Lcom/android/settings/LaunchApplication;
+    iput-object p1, p0, Lcom/android/settings_ex/LaunchApplication$DefaultAppPreference;->this$0:Lcom/android/settings_ex/LaunchApplication;
 
     .line 272
     invoke-direct {p0, p2}, Landroid/preference/Preference;-><init>(Landroid/content/Context;)V
@@ -38,16 +38,16 @@
     .line 273
     const v0, 0x7f04011c
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/LaunchApplication$DefaultAppPreference;->setLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/LaunchApplication$DefaultAppPreference;->setLayoutResource(I)V
 
     .line 274
-    invoke-virtual {p0, p3}, Lcom/android/settings/LaunchApplication$DefaultAppPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, p3}, Lcom/android/settings_ex/LaunchApplication$DefaultAppPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 275
-    invoke-virtual {p0, p4}, Lcom/android/settings/LaunchApplication$DefaultAppPreference;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, p4}, Lcom/android/settings_ex/LaunchApplication$DefaultAppPreference;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 276
-    iput-object p5, p0, Lcom/android/settings/LaunchApplication$DefaultAppPreference;->packageName:Ljava/lang/CharSequence;
+    iput-object p5, p0, Lcom/android/settings_ex/LaunchApplication$DefaultAppPreference;->packageName:Ljava/lang/CharSequence;
 
     .line 277
     return-void
@@ -78,21 +78,21 @@
 
     .line 283
     .local v1, "clearButton":Landroid/widget/Button;
-    iget-object v8, p0, Lcom/android/settings/LaunchApplication$DefaultAppPreference;->this$0:Lcom/android/settings/LaunchApplication;
+    iget-object v8, p0, Lcom/android/settings_ex/LaunchApplication$DefaultAppPreference;->this$0:Lcom/android/settings_ex/LaunchApplication;
 
-    iget-object v8, v8, Lcom/android/settings/LaunchApplication;->mClearClickListener:Landroid/view/View$OnClickListener;
+    iget-object v8, v8, Lcom/android/settings_ex/LaunchApplication;->mClearClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v1, v8}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 284
-    iget-object v8, p0, Lcom/android/settings/LaunchApplication$DefaultAppPreference;->packageName:Ljava/lang/CharSequence;
+    iget-object v8, p0, Lcom/android/settings_ex/LaunchApplication$DefaultAppPreference;->packageName:Ljava/lang/CharSequence;
 
     invoke-virtual {v1, v8}, Landroid/widget/Button;->setTag(Ljava/lang/Object;)V
 
     .line 288
-    iget-object v8, p0, Lcom/android/settings/LaunchApplication$DefaultAppPreference;->this$0:Lcom/android/settings/LaunchApplication;
+    iget-object v8, p0, Lcom/android/settings_ex/LaunchApplication$DefaultAppPreference;->this$0:Lcom/android/settings_ex/LaunchApplication;
 
-    invoke-virtual {v8}, Lcom/android/settings/LaunchApplication;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v8}, Lcom/android/settings_ex/LaunchApplication;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -100,7 +100,7 @@
 
     const-string v10, "isKioskModeEnabled"
 
-    invoke-static {v8, v9, v10}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v8, v9, v10}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v4
 
@@ -109,9 +109,9 @@
     if-ne v4, v6, :cond_0
 
     .line 293
-    iget-object v8, p0, Lcom/android/settings/LaunchApplication$DefaultAppPreference;->this$0:Lcom/android/settings/LaunchApplication;
+    iget-object v8, p0, Lcom/android/settings_ex/LaunchApplication$DefaultAppPreference;->this$0:Lcom/android/settings_ex/LaunchApplication;
 
-    invoke-virtual {v8}, Lcom/android/settings/LaunchApplication;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v8}, Lcom/android/settings_ex/LaunchApplication;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -121,7 +121,7 @@
 
     const/4 v11, 0x0
 
-    invoke-static {v8, v9, v10, v11}, Lcom/android/settings/Utils;->getEnterprisePolicyStringValue(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v8, v9, v10, v11}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyStringValue(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -129,7 +129,7 @@
     .local v3, "kioskHomePackage":Ljava/lang/String;
     if-eqz v3, :cond_0
 
-    iget-object v8, p0, Lcom/android/settings/LaunchApplication$DefaultAppPreference;->packageName:Ljava/lang/CharSequence;
+    iget-object v8, p0, Lcom/android/settings_ex/LaunchApplication$DefaultAppPreference;->packageName:Ljava/lang/CharSequence;
 
     invoke-virtual {v3, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -143,7 +143,7 @@
     .line 303
     .end local v3    # "kioskHomePackage":Ljava/lang/String;
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/LaunchApplication$DefaultAppPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LaunchApplication$DefaultAppPreference;->getContext()Landroid/content/Context;
 
     move-result-object v8
 
@@ -155,7 +155,7 @@
 
     new-array v11, v11, [Ljava/lang/String;
 
-    iget-object v12, p0, Lcom/android/settings/LaunchApplication$DefaultAppPreference;->packageName:Ljava/lang/CharSequence;
+    iget-object v12, p0, Lcom/android/settings_ex/LaunchApplication$DefaultAppPreference;->packageName:Ljava/lang/CharSequence;
 
     invoke-interface {v12}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
@@ -173,7 +173,7 @@
 
     aput-object v12, v11, v6
 
-    invoke-static {v8, v9, v10, v11}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-static {v8, v9, v10, v11}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v0
 
@@ -208,14 +208,14 @@
 
     .line 321
     .local v5, "v":Landroid/view/View;
-    iget-object v6, p0, Lcom/android/settings/LaunchApplication$DefaultAppPreference;->this$0:Lcom/android/settings/LaunchApplication;
+    iget-object v6, p0, Lcom/android/settings_ex/LaunchApplication$DefaultAppPreference;->this$0:Lcom/android/settings_ex/LaunchApplication;
 
-    iget-object v6, v6, Lcom/android/settings/LaunchApplication;->mApplicationClickListener:Landroid/view/View$OnClickListener;
+    iget-object v6, v6, Lcom/android/settings_ex/LaunchApplication;->mApplicationClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v5, v6}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 322
-    iget-object v6, p0, Lcom/android/settings/LaunchApplication$DefaultAppPreference;->packageName:Ljava/lang/CharSequence;
+    iget-object v6, p0, Lcom/android/settings_ex/LaunchApplication$DefaultAppPreference;->packageName:Ljava/lang/CharSequence;
 
     invoke-virtual {v5, v6}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 

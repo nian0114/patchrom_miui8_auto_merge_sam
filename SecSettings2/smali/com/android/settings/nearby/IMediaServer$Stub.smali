@@ -1,14 +1,14 @@
-.class public abstract Lcom/android/settings/nearby/IMediaServer$Stub;
+.class public abstract Lcom/android/settings_ex/nearby/IMediaServer$Stub;
 .super Landroid/os/Binder;
 .source "IMediaServer.java"
 
 # interfaces
-.implements Lcom/android/settings/nearby/IMediaServer;
+.implements Lcom/android/settings_ex/nearby/IMediaServer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/nearby/IMediaServer;
+    value = Lcom/android/settings_ex/nearby/IMediaServer;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,13 +18,13 @@
 
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;
+        Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;
     }
 .end annotation
 
 
 # direct methods
-.method public static asInterface(Landroid/os/IBinder;)Lcom/android/settings/nearby/IMediaServer;
+.method public static asInterface(Landroid/os/IBinder;)Lcom/android/settings_ex/nearby/IMediaServer;
     .locals 2
     .param p0, "obj"    # Landroid/os/IBinder;
 
@@ -51,21 +51,21 @@
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
-    instance-of v1, v0, Lcom/android/settings/nearby/IMediaServer;
+    instance-of v1, v0, Lcom/android/settings_ex/nearby/IMediaServer;
 
     if-eqz v1, :cond_1
 
     .line 33
-    check-cast v0, Lcom/android/settings/nearby/IMediaServer;
+    check-cast v0, Lcom/android/settings_ex/nearby/IMediaServer;
 
     goto :goto_0
 
     .line 35
     :cond_1
-    new-instance v0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;
+    new-instance v0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;
 
     .end local v0    # "iin":Landroid/os/IInterface;
-    invoke-direct {v0, p0}, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;-><init>(Landroid/os/IBinder;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;-><init>(Landroid/os/IBinder;)V
 
     goto :goto_0
 .end method
@@ -115,7 +115,7 @@
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 53
-    invoke-virtual {p0}, Lcom/android/settings/nearby/IMediaServer$Stub;->startMediaServer()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub;->startMediaServer()V
 
     .line 54
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -129,7 +129,7 @@
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 60
-    invoke-virtual {p0}, Lcom/android/settings/nearby/IMediaServer$Stub;->stopMediaServer()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub;->stopMediaServer()V
 
     .line 61
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -143,7 +143,7 @@
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 67
-    invoke-virtual {p0}, Lcom/android/settings/nearby/IMediaServer$Stub;->isServerStarted()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub;->isServerStarted()Z
 
     move-result v1
 
@@ -175,7 +175,7 @@
 
     .line 77
     .local v0, "_arg0":I
-    invoke-virtual {p0, v0}, Lcom/android/settings/nearby/IMediaServer$Stub;->setSharedMediaType(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub;->setSharedMediaType(I)V
 
     .line 78
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -190,7 +190,7 @@
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 84
-    invoke-virtual {p0}, Lcom/android/settings/nearby/IMediaServer$Stub;->getSharedMediaType()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub;->getSharedMediaType()I
 
     move-result v1
 
@@ -217,7 +217,7 @@
 
     .line 94
     .local v0, "_arg0":Ljava/lang/String;
-    invoke-virtual {p0, v0}, Lcom/android/settings/nearby/IMediaServer$Stub;->setUploadPath(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub;->setUploadPath(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -239,7 +239,7 @@
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 102
-    invoke-virtual {p0}, Lcom/android/settings/nearby/IMediaServer$Stub;->getUploadPath()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub;->getUploadPath()Ljava/lang/String;
 
     move-result-object v1
 
@@ -266,7 +266,7 @@
 
     .line 112
     .restart local v0    # "_arg0":Ljava/lang/String;
-    invoke-virtual {p0, v0}, Lcom/android/settings/nearby/IMediaServer$Stub;->setMediaServerName(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub;->setMediaServerName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -288,7 +288,7 @@
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 120
-    invoke-virtual {p0}, Lcom/android/settings/nearby/IMediaServer$Stub;->getMediaServerName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub;->getMediaServerName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -309,7 +309,7 @@
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 128
-    invoke-virtual {p0}, Lcom/android/settings/nearby/IMediaServer$Stub;->isContentUploadAllowed()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub;->isContentUploadAllowed()Z
 
     move-result v1
 
@@ -341,7 +341,7 @@
 
     .line 138
     .restart local v0    # "_arg0":Ljava/lang/String;
-    invoke-virtual {p0, v0}, Lcom/android/settings/nearby/IMediaServer$Stub;->setContentUploadAllowed(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub;->setContentUploadAllowed(Ljava/lang/String;)V
 
     .line 139
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -362,7 +362,7 @@
 
     .line 147
     .restart local v0    # "_arg0":Ljava/lang/String;
-    invoke-virtual {p0, v0}, Lcom/android/settings/nearby/IMediaServer$Stub;->setContentAccessAllowed(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub;->setContentAccessAllowed(Ljava/lang/String;)V
 
     .line 148
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -377,7 +377,7 @@
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 154
-    invoke-virtual {p0}, Lcom/android/settings/nearby/IMediaServer$Stub;->reannounceServer()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub;->reannounceServer()V
 
     .line 155
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -391,7 +391,7 @@
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 161
-    invoke-virtual {p0}, Lcom/android/settings/nearby/IMediaServer$Stub;->announceServer()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub;->announceServer()V
 
     .line 162
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -411,7 +411,7 @@
 
     .line 170
     .restart local v0    # "_arg0":Ljava/lang/String;
-    invoke-virtual {p0, v0}, Lcom/android/settings/nearby/IMediaServer$Stub;->resume(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub;->resume(Ljava/lang/String;)V
 
     .line 171
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -426,7 +426,7 @@
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 177
-    invoke-virtual {p0}, Lcom/android/settings/nearby/IMediaServer$Stub;->pause()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub;->pause()V
 
     .line 178
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -440,7 +440,7 @@
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 184
-    invoke-virtual {p0}, Lcom/android/settings/nearby/IMediaServer$Stub;->getAcceptEntry()[Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub;->getAcceptEntry()[Ljava/lang/String;
 
     move-result-object v1
 
@@ -461,7 +461,7 @@
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 192
-    invoke-virtual {p0}, Lcom/android/settings/nearby/IMediaServer$Stub;->getAcceptEntryValue()[Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub;->getAcceptEntryValue()[Ljava/lang/String;
 
     move-result-object v1
 
@@ -482,7 +482,7 @@
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 200
-    invoke-virtual {p0}, Lcom/android/settings/nearby/IMediaServer$Stub;->getRejectList()[Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub;->getRejectList()[Ljava/lang/String;
 
     move-result-object v1
 
@@ -503,7 +503,7 @@
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 208
-    invoke-virtual {p0}, Lcom/android/settings/nearby/IMediaServer$Stub;->getRejectListValue()[Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub;->getRejectListValue()[Ljava/lang/String;
 
     move-result-object v1
 
@@ -530,7 +530,7 @@
 
     .line 218
     .restart local v0    # "_arg0":Ljava/lang/String;
-    invoke-virtual {p0, v0}, Lcom/android/settings/nearby/IMediaServer$Stub;->removeAcceptList(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub;->removeAcceptList(Ljava/lang/String;)V
 
     .line 219
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -551,7 +551,7 @@
 
     .line 227
     .restart local v0    # "_arg0":Ljava/lang/String;
-    invoke-virtual {p0, v0}, Lcom/android/settings/nearby/IMediaServer$Stub;->removeRejectList(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/nearby/IMediaServer$Stub;->removeRejectList(Ljava/lang/String;)V
 
     .line 228
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V

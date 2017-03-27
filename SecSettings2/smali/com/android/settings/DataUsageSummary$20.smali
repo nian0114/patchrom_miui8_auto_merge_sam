@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DataUsageSummary$20;
+.class Lcom/android/settings_ex/DataUsageSummary$20;
 .super Ljava/lang/Object;
 .source "DataUsageSummary.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DataUsageSummary;
+    value = Lcom/android/settings_ex/DataUsageSummary;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DataUsageSummary;
+.field final synthetic this$0:Lcom/android/settings_ex/DataUsageSummary;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DataUsageSummary;)V
+.method constructor <init>(Lcom/android/settings_ex/DataUsageSummary;)V
     .locals 0
 
     .prologue
     .line 3271
-    iput-object p1, p0, Lcom/android/settings/DataUsageSummary$20;->this$0:Lcom/android/settings/DataUsageSummary;
+    iput-object p1, p0, Lcom/android/settings_ex/DataUsageSummary$20;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,10 +46,10 @@
     const/4 v2, 0x0
 
     .line 3274
-    iget-object v3, p0, Lcom/android/settings/DataUsageSummary$20;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v3, p0, Lcom/android/settings_ex/DataUsageSummary$20;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
-    # getter for: Lcom/android/settings/DataUsageSummary;->mConfirmAtBoot:Landroid/widget/Switch;
-    invoke-static {v3}, Lcom/android/settings/DataUsageSummary;->access$4000(Lcom/android/settings/DataUsageSummary;)Landroid/widget/Switch;
+    # getter for: Lcom/android/settings_ex/DataUsageSummary;->mConfirmAtBoot:Landroid/widget/Switch;
+    invoke-static {v3}, Lcom/android/settings_ex/DataUsageSummary;->access$4000(Lcom/android/settings_ex/DataUsageSummary;)Landroid/widget/Switch;
 
     move-result-object v3
 
@@ -64,9 +64,9 @@
     .line 3275
     .local v0, "confirmAtBoot":Z
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/DataUsageSummary$20;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v3, p0, Lcom/android/settings_ex/DataUsageSummary$20;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
-    invoke-virtual {v3}, Lcom/android/settings/DataUsageSummary;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v3}, Lcom/android/settings_ex/DataUsageSummary;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -82,10 +82,10 @@
     invoke-static {v3, v4, v1}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 3281
-    iget-object v1, p0, Lcom/android/settings/DataUsageSummary$20;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v1, p0, Lcom/android/settings_ex/DataUsageSummary$20;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
-    # getter for: Lcom/android/settings/DataUsageSummary;->mConfirmAtBoot:Landroid/widget/Switch;
-    invoke-static {v1}, Lcom/android/settings/DataUsageSummary;->access$4000(Lcom/android/settings/DataUsageSummary;)Landroid/widget/Switch;
+    # getter for: Lcom/android/settings_ex/DataUsageSummary;->mConfirmAtBoot:Landroid/widget/Switch;
+    invoke-static {v1}, Lcom/android/settings_ex/DataUsageSummary;->access$4000(Lcom/android/settings_ex/DataUsageSummary;)Landroid/widget/Switch;
 
     move-result-object v1
 

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/dashboard/DashboardEditFavoriteSummary$1;
+.class Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary$1;
 .super Landroid/os/Handler;
 .source "DashboardEditFavoriteSummary.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/dashboard/DashboardEditFavoriteSummary;
+    value = Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/dashboard/DashboardEditFavoriteSummary;
+.field final synthetic this$0:Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/dashboard/DashboardEditFavoriteSummary;)V
+.method constructor <init>(Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary;)V
     .locals 0
 
     .prologue
     .line 91
-    iput-object p1, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteSummary$1;->this$0:Lcom/android/settings/dashboard/DashboardEditFavoriteSummary;
+    iput-object p1, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary$1;->this$0:Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -49,18 +49,18 @@
 
     .line 96
     :pswitch_0
-    iget-object v1, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteSummary$1;->this$0:Lcom/android/settings/dashboard/DashboardEditFavoriteSummary;
+    iget-object v1, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary$1;->this$0:Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary;
 
-    invoke-virtual {v1}, Lcom/android/settings/dashboard/DashboardEditFavoriteSummary;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     .line 97
     .local v0, "context":Landroid/content/Context;
-    iget-object v1, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteSummary$1;->this$0:Lcom/android/settings/dashboard/DashboardEditFavoriteSummary;
+    iget-object v1, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary$1;->this$0:Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary;
 
-    # invokes: Lcom/android/settings/dashboard/DashboardEditFavoriteSummary;->rebuildUI(Landroid/content/Context;)V
-    invoke-static {v1, v0}, Lcom/android/settings/dashboard/DashboardEditFavoriteSummary;->access$000(Lcom/android/settings/dashboard/DashboardEditFavoriteSummary;Landroid/content/Context;)V
+    # invokes: Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary;->rebuildUI(Landroid/content/Context;)V
+    invoke-static {v1, v0}, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary;->access$000(Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary;Landroid/content/Context;)V
 
     goto :goto_0
 

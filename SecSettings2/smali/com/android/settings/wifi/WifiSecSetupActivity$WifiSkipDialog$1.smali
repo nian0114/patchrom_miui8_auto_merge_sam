@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiSecSetupActivity$WifiSkipDialog$1;
+.class Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiSkipDialog$1;
 .super Ljava/lang/Object;
 .source "WifiSecSetupActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSecSetupActivity$WifiSkipDialog;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiSkipDialog;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSecSetupActivity$WifiSkipDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiSkipDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSecSetupActivity$WifiSkipDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiSkipDialog;)V
     .locals 0
 
     .prologue
     .line 1211
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSecSetupActivity$WifiSkipDialog$1;->this$0:Lcom/android/settings/wifi/WifiSecSetupActivity$WifiSkipDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiSkipDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiSkipDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,16 +43,16 @@
 
     .prologue
     .line 1214
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSecSetupActivity$WifiSkipDialog$1;->this$0:Lcom/android/settings/wifi/WifiSecSetupActivity$WifiSkipDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiSkipDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiSkipDialog;
 
-    invoke-virtual {v1}, Lcom/android/settings/wifi/WifiSecSetupActivity$WifiSkipDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiSkipDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/wifi/WifiSecSetupActivity;
+    check-cast v0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
 
     .line 1215
-    .local v0, "activity":Lcom/android/settings/wifi/WifiSecSetupActivity;
+    .local v0, "activity":Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
     const-string v1, "WifiSecSetupActivity"
 
     const-string v2, "Skip anyway!!!"
@@ -62,10 +62,10 @@
     .line 1216
     const/4 v1, -0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/wifi/WifiSecSetupActivity;->setResult(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->setResult(I)V
 
     .line 1217
-    invoke-virtual {v0}, Lcom/android/settings/wifi/WifiSecSetupActivity;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->finish()V
 
     .line 1218
     return-void

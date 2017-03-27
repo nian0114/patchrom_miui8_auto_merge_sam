@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;
-.super Lcom/android/settings/nfc/NfcOsaifukeitaiSettings;
+.class public Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;
+.super Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettings;
 .source "NfcOsaifukeitaiSettingsKDI.java"
 
 
@@ -18,7 +18,7 @@
 
 .field private mMenu_Korea:Z
 
-.field private mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+.field private mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
 .field private mNfcPaymentSettings:Landroid/preference/PreferenceScreen;
 
@@ -51,61 +51,61 @@
     const/4 v0, 0x0
 
     .line 89
-    invoke-direct {p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettings;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettings;-><init>()V
 
     .line 69
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
 
     .line 70
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mRWp2p:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mRWp2p:Landroid/preference/PreferenceScreen;
 
     .line 71
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
 
     .line 72
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mCashbee:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mCashbee:Landroid/preference/PreferenceScreen;
 
     .line 73
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumchg:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumchg:Landroid/preference/PreferenceScreen;
 
     .line 74
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumInit:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumInit:Landroid/preference/PreferenceScreen;
 
     .line 75
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcPaymentSettings:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcPaymentSettings:Landroid/preference/PreferenceScreen;
 
     .line 76
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mRoot:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mRoot:Landroid/preference/PreferenceScreen;
 
     .line 78
-    iput-boolean v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mMenu_Korea:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mMenu_Korea:Z
 
     .line 79
-    iput-boolean v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mSetLayout:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mSetLayout:Z
 
     .line 84
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mHandler:Landroid/os/Handler;
 
     .line 85
-    iput v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mRetry_counter:I
+    iput v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mRetry_counter:I
 
     .line 104
-    new-instance v0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI$1;
+    new-instance v0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI$1;-><init>(Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI$1;-><init>(Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;)V
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->nfcBroadcast:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->nfcBroadcast:Landroid/content/BroadcastReceiver;
 
     .line 465
-    new-instance v0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI$2;
+    new-instance v0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI$2;-><init>(Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI$2;-><init>(Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;)V
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->uimDetectAction:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->uimDetectAction:Ljava/lang/Runnable;
 
     .line 90
     return-void
@@ -128,85 +128,85 @@
     const/4 v0, 0x0
 
     .line 93
-    invoke-direct {p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettings;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettings;-><init>()V
 
     .line 69
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
 
     .line 70
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mRWp2p:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mRWp2p:Landroid/preference/PreferenceScreen;
 
     .line 71
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
 
     .line 72
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mCashbee:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mCashbee:Landroid/preference/PreferenceScreen;
 
     .line 73
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumchg:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumchg:Landroid/preference/PreferenceScreen;
 
     .line 74
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumInit:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumInit:Landroid/preference/PreferenceScreen;
 
     .line 75
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcPaymentSettings:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcPaymentSettings:Landroid/preference/PreferenceScreen;
 
     .line 76
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mRoot:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mRoot:Landroid/preference/PreferenceScreen;
 
     .line 78
-    iput-boolean v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mMenu_Korea:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mMenu_Korea:Z
 
     .line 79
-    iput-boolean v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mSetLayout:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mSetLayout:Z
 
     .line 84
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mHandler:Landroid/os/Handler;
 
     .line 85
-    iput v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mRetry_counter:I
+    iput v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mRetry_counter:I
 
     .line 104
-    new-instance v0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI$1;
+    new-instance v0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI$1;-><init>(Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI$1;-><init>(Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;)V
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->nfcBroadcast:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->nfcBroadcast:Landroid/content/BroadcastReceiver;
 
     .line 465
-    new-instance v0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI$2;
+    new-instance v0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI$2;-><init>(Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI$2;-><init>(Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;)V
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->uimDetectAction:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->uimDetectAction:Ljava/lang/Runnable;
 
     .line 94
-    iput-object p1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
+    iput-object p1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
 
     .line 95
-    iput-object p2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mRWp2p:Landroid/preference/PreferenceScreen;
+    iput-object p2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mRWp2p:Landroid/preference/PreferenceScreen;
 
     .line 96
-    iput-object p3, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
+    iput-object p3, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
 
     .line 97
-    iput-object p4, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mCashbee:Landroid/preference/PreferenceScreen;
+    iput-object p4, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mCashbee:Landroid/preference/PreferenceScreen;
 
     .line 98
-    iput-object p5, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumchg:Landroid/preference/PreferenceScreen;
+    iput-object p5, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumchg:Landroid/preference/PreferenceScreen;
 
     .line 99
-    iput-object p6, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumInit:Landroid/preference/PreferenceScreen;
+    iput-object p6, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumInit:Landroid/preference/PreferenceScreen;
 
     .line 100
-    iput-object p7, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcPaymentSettings:Landroid/preference/PreferenceScreen;
+    iput-object p7, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcPaymentSettings:Landroid/preference/PreferenceScreen;
 
     .line 101
-    iput-object p8, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mRoot:Landroid/preference/PreferenceScreen;
+    iput-object p8, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mRoot:Landroid/preference/PreferenceScreen;
 
     .line 102
     return-void
@@ -245,12 +245,12 @@
     .line 418
     if-ne p1, v3, :cond_1
 
-    iget-boolean v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mMenu_Korea:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mMenu_Korea:Z
 
     if-nez v0, :cond_1
 
     .line 420
-    iput-boolean v3, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mMenu_Korea:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mMenu_Korea:Z
 
     .line 426
     :cond_0
@@ -268,14 +268,14 @@
     :cond_1
     if-nez p1, :cond_0
 
-    iget-boolean v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mMenu_Korea:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mMenu_Korea:Z
 
     if-ne v0, v3, :cond_0
 
     .line 423
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mMenu_Korea:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mMenu_Korea:Z
 
     goto :goto_0
 .end method
@@ -302,7 +302,7 @@
 
     .line 319
     .local v1, "summary_resId":I
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
 
     if-nez v2, :cond_0
 
@@ -319,7 +319,7 @@
     if-gt p1, v2, :cond_5
 
     .line 323
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v2, v4}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -332,15 +332,15 @@
     if-eqz v1, :cond_2
 
     .line 348
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v2, v1}, Landroid/preference/PreferenceScreen;->setSummary(I)V
 
     .line 351
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v2}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->get3lmRemoteLockStatus()Z
+    invoke-virtual {v2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->get3lmRemoteLockStatus()Z
 
     move-result v2
 
@@ -356,7 +356,7 @@
 
     .line 354
     :cond_3
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v2, v4}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -377,14 +377,14 @@
     if-nez p2, :cond_8
 
     .line 327
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v2, v5}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
     .line 329
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v2}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->getRWP2pStatus()I
+    invoke-virtual {v2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->getRWP2pStatus()I
 
     move-result v0
 
@@ -395,14 +395,14 @@
     if-ne v0, v2, :cond_7
 
     .line 331
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v2, v5}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
     .line 332
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v2}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->getABeamStatus()Z
+    invoke-virtual {v2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->getABeamStatus()Z
 
     move-result v2
 
@@ -426,7 +426,7 @@
     if-ne v0, v2, :cond_1
 
     .line 338
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v2, v4}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -438,7 +438,7 @@
     .line 342
     .end local v0    # "result_rwp2p":I
     :cond_8
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v2, v4}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -464,7 +464,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 450
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumInit:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumInit:Landroid/preference/PreferenceScreen;
 
     if-nez v0, :cond_0
 
@@ -474,9 +474,9 @@
 
     .line 454
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v0}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->get3lmRemoteLockStatus()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->get3lmRemoteLockStatus()Z
 
     move-result v0
 
@@ -492,7 +492,7 @@
 
     .line 457
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumInit:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumInit:Landroid/preference/PreferenceScreen;
 
     const/4 v1, 0x0
 
@@ -510,7 +510,7 @@
 
     .line 459
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumInit:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumInit:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v2}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -533,7 +533,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 432
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumchg:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumchg:Landroid/preference/PreferenceScreen;
 
     if-nez v0, :cond_0
 
@@ -543,9 +543,9 @@
 
     .line 436
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v0}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->get3lmRemoteLockStatus()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->get3lmRemoteLockStatus()Z
 
     move-result v0
 
@@ -561,7 +561,7 @@
 
     .line 439
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumchg:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumchg:Landroid/preference/PreferenceScreen;
 
     const/4 v1, 0x0
 
@@ -579,7 +579,7 @@
 
     .line 441
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumchg:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumchg:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v2}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -600,7 +600,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 398
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcPaymentSettings:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcPaymentSettings:Landroid/preference/PreferenceScreen;
 
     if-nez v0, :cond_0
 
@@ -615,7 +615,7 @@
     if-nez p2, :cond_1
 
     .line 403
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcPaymentSettings:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcPaymentSettings:Landroid/preference/PreferenceScreen;
 
     const/4 v1, 0x1
 
@@ -633,7 +633,7 @@
 
     .line 405
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcPaymentSettings:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcPaymentSettings:Landroid/preference/PreferenceScreen;
 
     const/4 v1, 0x0
 
@@ -660,7 +660,7 @@
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 363
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mCashbee:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mCashbee:Landroid/preference/PreferenceScreen;
 
     if-nez v2, :cond_0
 
@@ -679,15 +679,15 @@
     if-nez p2, :cond_4
 
     .line 369
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mCashbee:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mCashbee:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v2, v4}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
     .line 374
     :goto_1
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v2}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->getNfcTypeSettings()I
+    invoke-virtual {v2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->getNfcTypeSettings()I
 
     move-result v1
 
@@ -703,15 +703,15 @@
     if-eqz v0, :cond_1
 
     .line 383
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mCashbee:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mCashbee:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v2, v0}, Landroid/preference/PreferenceScreen;->setSummary(I)V
 
     .line 386
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v2}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->get3lmRemoteLockStatus()Z
+    invoke-virtual {v2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->get3lmRemoteLockStatus()Z
 
     move-result v2
 
@@ -727,7 +727,7 @@
 
     .line 389
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mCashbee:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mCashbee:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v2, v5}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -744,7 +744,7 @@
     .line 371
     .end local v1    # "type_settings":I
     :cond_4
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mCashbee:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mCashbee:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v2, v5}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -780,7 +780,7 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 211
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
 
     if-nez v1, :cond_0
 
@@ -813,15 +813,15 @@
     if-eqz v0, :cond_1
 
     .line 229
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v0}, Landroid/preference/PreferenceScreen;->setSummary(I)V
 
     .line 232
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v1}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->get3lmRemoteLockStatus()Z
+    invoke-virtual {v1}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->get3lmRemoteLockStatus()Z
 
     move-result v1
 
@@ -835,7 +835,7 @@
 
     .line 235
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v3}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -875,7 +875,7 @@
     if-gt p1, v1, :cond_6
 
     .line 238
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v3}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -883,7 +883,7 @@
 
     .line 240
     :cond_6
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v4}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -914,7 +914,7 @@
 
     .line 251
     .local v10, "summary_resId":I
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mRWp2p:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mRWp2p:Landroid/preference/PreferenceScreen;
 
     if-nez v0, :cond_0
 
@@ -936,7 +936,7 @@
 
     .line 261
     .local v1, "mUri":Landroid/net/Uri;
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -999,7 +999,7 @@
     if-gt p1, v0, :cond_6
 
     .line 278
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mRWp2p:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mRWp2p:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v11}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -1011,15 +1011,15 @@
     if-eqz v10, :cond_3
 
     .line 303
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mRWp2p:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mRWp2p:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v10}, Landroid/preference/PreferenceScreen;->setSummary(I)V
 
     .line 306
     :cond_3
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v0}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->get3lmRemoteLockStatus()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->get3lmRemoteLockStatus()Z
 
     move-result v0
 
@@ -1035,7 +1035,7 @@
 
     .line 309
     :cond_4
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mRWp2p:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mRWp2p:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v11}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -1085,7 +1085,7 @@
     invoke-static {v0, v2}, Landroid/util/secutil/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 282
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mRWp2p:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mRWp2p:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v11}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -1101,14 +1101,14 @@
     if-nez p2, :cond_a
 
     .line 286
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mRWp2p:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mRWp2p:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v12}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
     .line 288
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v0}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->getRWP2pStatus()I
+    invoke-virtual {v0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->getRWP2pStatus()I
 
     move-result v9
 
@@ -1147,7 +1147,7 @@
     .line 297
     .end local v9    # "result":I
     :cond_a
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mRWp2p:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mRWp2p:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v11}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -1157,85 +1157,85 @@
     goto :goto_2
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;)Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+.method static synthetic access$000(Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;)Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;
+    .param p0, "x0"    # Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;
 
     .prologue
     .line 59
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;II)V
+.method static synthetic access$100(Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;II)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;
+    .param p0, "x0"    # Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;
     .param p1, "x1"    # I
     .param p2, "x2"    # I
 
     .prologue
     .line 59
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->list_items_update(II)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->list_items_update(II)V
 
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;)I
+.method static synthetic access$200(Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;
+    .param p0, "x0"    # Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;
 
     .prologue
     .line 59
-    iget v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mRetry_counter:I
+    iget v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mRetry_counter:I
 
     return v0
 .end method
 
-.method static synthetic access$208(Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;)I
+.method static synthetic access$208(Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;)I
     .locals 2
-    .param p0, "x0"    # Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;
+    .param p0, "x0"    # Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;
 
     .prologue
     .line 59
-    iget v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mRetry_counter:I
+    iget v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mRetry_counter:I
 
     add-int/lit8 v1, v0, 0x1
 
-    iput v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mRetry_counter:I
+    iput v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mRetry_counter:I
 
     return v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;)Landroid/preference/PreferenceScreen;
+.method static synthetic access$300(Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;)Landroid/preference/PreferenceScreen;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;
+    .param p0, "x0"    # Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;
 
     .prologue
     .line 59
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;)Landroid/os/Handler;
+.method static synthetic access$400(Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;
+    .param p0, "x0"    # Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;
 
     .prologue
     .line 59
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;)Ljava/lang/Runnable;
+.method static synthetic access$500(Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;)Ljava/lang/Runnable;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;
+    .param p0, "x0"    # Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;
 
     .prologue
     .line 59
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->uimDetectAction:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->uimDetectAction:Ljava/lang/Runnable;
 
     return-object v0
 .end method
@@ -1287,46 +1287,46 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 191
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->List_items_update_of_nfclock(II)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->List_items_update_of_nfclock(II)V
 
     .line 192
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->List_items_update_of_nfrwp2p(II)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->List_items_update_of_nfrwp2p(II)V
 
     .line 193
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->List_items_update_of_ABeam(II)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->List_items_update_of_ABeam(II)V
 
     .line 194
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->List_items_update_of_LockNumchg(II)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->List_items_update_of_LockNumchg(II)V
 
     .line 195
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->List_items_update_of_LockNumInit(II)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->List_items_update_of_LockNumInit(II)V
 
     .line 196
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->List_items_update_of_TapAndPay(II)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->List_items_update_of_TapAndPay(II)V
 
     .line 198
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
     if-eqz v0, :cond_0
 
     .line 199
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v0}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->getMobileCashbee_DisplayJudging()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->getMobileCashbee_DisplayJudging()Z
 
     move-result v0
 
-    invoke-direct {p0, v0}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->List_items_settings_of_cashbee(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->List_items_settings_of_cashbee(Z)V
 
     .line 200
-    iget-boolean v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mMenu_Korea:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mMenu_Korea:Z
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
     .line 201
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->List_items_update_of_cashbee(II)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->List_items_update_of_cashbee(II)V
 
     .line 205
     :cond_0
@@ -1347,7 +1347,7 @@
 
     .prologue
     .line 412
-    iget-boolean v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mMenu_Korea:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mMenu_Korea:Z
 
     return v0
 .end method
@@ -1367,14 +1367,14 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 122
-    iput-object p1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mContext:Landroid/content/Context;
 
     .line 124
-    new-instance v0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    new-instance v0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-direct {v0, p1}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
     .line 127
     const-string v0, "[NfcOsaifukeitaiSettingsKDI]"
@@ -1389,7 +1389,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1414,7 +1414,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mRWp2p:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mRWp2p:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1439,7 +1439,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mABeam:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1464,7 +1464,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mCashbee:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mCashbee:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1489,7 +1489,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumchg:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumchg:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1514,7 +1514,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumInit:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mLockNumInit:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1539,7 +1539,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcPaymentSettings:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcPaymentSettings:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1552,14 +1552,14 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 136
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
 
     if-eqz v0, :cond_0
 
     .line 137
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v0}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->getUIMLockStatus()I
+    invoke-virtual {v0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->getUIMLockStatus()I
 
     move-result v0
 
@@ -1568,17 +1568,17 @@
     if-ne v0, v1, :cond_0
 
     .line 138
-    iput v3, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mRetry_counter:I
+    iput v3, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mRetry_counter:I
 
     .line 139
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfclock:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v3}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
     .line 140
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mHandler:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->uimDetectAction:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->uimDetectAction:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0x3e8
 
@@ -1597,45 +1597,45 @@
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter:Landroid/content/IntentFilter;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter:Landroid/content/IntentFilter;
 
     .line 145
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter:Landroid/content/IntentFilter;
 
     if-eqz v0, :cond_1
 
     .line 146
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter:Landroid/content/IntentFilter;
 
     const-string v1, "android.nfc.action.ADAPTER_STATE_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 147
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter:Landroid/content/IntentFilter;
 
     const-string v1, "com.felicanetworks.nfc.action.ADAPTER_RW_P2P_STATE_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 148
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter:Landroid/content/IntentFilter;
 
     const-string v1, "android.action.nfc.policychanged"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 149
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter:Landroid/content/IntentFilter;
 
     const-string v1, "com.android.settings.nfc.ACTION_OSAIFUKEITAI_NETWORK_CHG"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 150
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->nfcBroadcast:Landroid/content/BroadcastReceiver;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->nfcBroadcast:Landroid/content/BroadcastReceiver;
 
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter:Landroid/content/IntentFilter;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter:Landroid/content/IntentFilter;
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -1645,38 +1645,38 @@
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter_apk:Landroid/content/IntentFilter;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter_apk:Landroid/content/IntentFilter;
 
     .line 154
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter_apk:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter_apk:Landroid/content/IntentFilter;
 
     if-eqz v0, :cond_2
 
     .line 155
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter_apk:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter_apk:Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 156
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter_apk:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter_apk:Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 157
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter_apk:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter_apk:Landroid/content/IntentFilter;
 
     const-string v1, "package"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
     .line 158
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->nfcBroadcast:Landroid/content/BroadcastReceiver;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->nfcBroadcast:Landroid/content/BroadcastReceiver;
 
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter_apk:Landroid/content/IntentFilter;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter_apk:Landroid/content/IntentFilter;
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -1684,7 +1684,7 @@
     :cond_2
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->setHasOptionsMenu(Z)V
 
     .line 161
     const-string v0, "[NfcOsaifukeitaiSettingsKDI]"
@@ -1710,7 +1710,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 183
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->nfcBroadcast:Landroid/content/BroadcastReceiver;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->nfcBroadcast:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
@@ -1738,57 +1738,57 @@
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 166
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->nfcBroadcast:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->nfcBroadcast:Landroid/content/BroadcastReceiver;
 
-    iget-object v3, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter:Landroid/content/IntentFilter;
+    iget-object v3, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter:Landroid/content/IntentFilter;
 
     invoke-virtual {p1, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 167
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->nfcBroadcast:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->nfcBroadcast:Landroid/content/BroadcastReceiver;
 
-    iget-object v3, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter_apk:Landroid/content/IntentFilter;
+    iget-object v3, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mfilter_apk:Landroid/content/IntentFilter;
 
     invoke-virtual {p1, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 169
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v2}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->getCLFLockStatus()I
+    invoke-virtual {v2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->getCLFLockStatus()I
 
     move-result v0
 
     .line 170
     .local v0, "clfLock":I
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v2}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->getUIMLockStatus()I
+    invoke-virtual {v2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->getUIMLockStatus()I
 
     move-result v1
 
     .line 172
     .local v1, "uimLock":I
-    invoke-direct {p0, v0, v1}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->list_items_update(II)V
+    invoke-direct {p0, v0, v1}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->list_items_update(II)V
 
     .line 174
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->getKoreaMenu()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->getKoreaMenu()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mRoot:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mRoot:Landroid/preference/PreferenceScreen;
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mCashbee:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mCashbee:Landroid/preference/PreferenceScreen;
 
     if-eqz v2, :cond_0
 
     .line 175
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mRoot:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mRoot:Landroid/preference/PreferenceScreen;
 
-    iget-object v3, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsKDI;->mCashbee:Landroid/preference/PreferenceScreen;
+    iget-object v3, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsKDI;->mCashbee:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v2, v3}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 

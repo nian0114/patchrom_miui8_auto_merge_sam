@@ -1,13 +1,13 @@
-.class public Lcom/android/settings/ConfirmLockPassword;
-.super Lcom/android/settings/ConfirmDeviceCredentialBaseActivity;
+.class public Lcom/android/settings_ex/ConfirmLockPassword;
+.super Lcom/android/settings_ex/ConfirmDeviceCredentialBaseActivity;
 .source "ConfirmLockPassword.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;,
-        Lcom/android/settings/ConfirmLockPassword$InternalActivity;
+        Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;,
+        Lcom/android/settings_ex/ConfirmLockPassword$InternalActivity;
     }
 .end annotation
 
@@ -30,16 +30,16 @@
     const/4 v0, 0x0
 
     .line 85
-    sput-boolean v0, Lcom/android/settings/ConfirmLockPassword;->mFromPersonalPage:Z
+    sput-boolean v0, Lcom/android/settings_ex/ConfirmLockPassword;->mFromPersonalPage:Z
 
     .line 86
-    sput-boolean v0, Lcom/android/settings/ConfirmLockPassword;->mPersonalPage_isPin:Z
+    sput-boolean v0, Lcom/android/settings_ex/ConfirmLockPassword;->mPersonalPage_isPin:Z
 
     .line 87
-    sput-boolean v0, Lcom/android/settings/ConfirmLockPassword;->mFromAppLock:Z
+    sput-boolean v0, Lcom/android/settings_ex/ConfirmLockPassword;->mFromAppLock:Z
 
     .line 88
-    sput-boolean v0, Lcom/android/settings/ConfirmLockPassword;->mAppLock_isPin:Z
+    sput-boolean v0, Lcom/android/settings_ex/ConfirmLockPassword;->mAppLock_isPin:Z
 
     return-void
 .end method
@@ -49,7 +49,7 @@
 
     .prologue
     .line 83
-    invoke-direct {p0}, Lcom/android/settings/ConfirmDeviceCredentialBaseActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseActivity;-><init>()V
 
     .line 116
     return-void
@@ -60,7 +60,7 @@
 
     .prologue
     .line 83
-    sget-boolean v0, Lcom/android/settings/ConfirmLockPassword;->mFromPersonalPage:Z
+    sget-boolean v0, Lcom/android/settings_ex/ConfirmLockPassword;->mFromPersonalPage:Z
 
     return v0
 .end method
@@ -71,7 +71,7 @@
 
     .prologue
     .line 83
-    sput-boolean p0, Lcom/android/settings/ConfirmLockPassword;->mFromPersonalPage:Z
+    sput-boolean p0, Lcom/android/settings_ex/ConfirmLockPassword;->mFromPersonalPage:Z
 
     return p0
 .end method
@@ -81,7 +81,7 @@
 
     .prologue
     .line 83
-    sget-boolean v0, Lcom/android/settings/ConfirmLockPassword;->mPersonalPage_isPin:Z
+    sget-boolean v0, Lcom/android/settings_ex/ConfirmLockPassword;->mPersonalPage_isPin:Z
 
     return v0
 .end method
@@ -92,7 +92,7 @@
 
     .prologue
     .line 83
-    sput-boolean p0, Lcom/android/settings/ConfirmLockPassword;->mPersonalPage_isPin:Z
+    sput-boolean p0, Lcom/android/settings_ex/ConfirmLockPassword;->mPersonalPage_isPin:Z
 
     return p0
 .end method
@@ -102,7 +102,7 @@
 
     .prologue
     .line 83
-    sget-boolean v0, Lcom/android/settings/ConfirmLockPassword;->mFromAppLock:Z
+    sget-boolean v0, Lcom/android/settings_ex/ConfirmLockPassword;->mFromAppLock:Z
 
     return v0
 .end method
@@ -113,7 +113,7 @@
 
     .prologue
     .line 83
-    sput-boolean p0, Lcom/android/settings/ConfirmLockPassword;->mFromAppLock:Z
+    sput-boolean p0, Lcom/android/settings_ex/ConfirmLockPassword;->mFromAppLock:Z
 
     return p0
 .end method
@@ -123,7 +123,7 @@
 
     .prologue
     .line 83
-    sget-boolean v0, Lcom/android/settings/ConfirmLockPassword;->mAppLock_isPin:Z
+    sget-boolean v0, Lcom/android/settings_ex/ConfirmLockPassword;->mAppLock_isPin:Z
 
     return v0
 .end method
@@ -134,7 +134,7 @@
 
     .prologue
     .line 83
-    sput-boolean p0, Lcom/android/settings/ConfirmLockPassword;->mAppLock_isPin:Z
+    sput-boolean p0, Lcom/android/settings_ex/ConfirmLockPassword;->mAppLock_isPin:Z
 
     return p0
 .end method
@@ -148,7 +148,7 @@
     .line 95
     new-instance v0, Landroid/content/Intent;
 
-    invoke-super {p0}, Lcom/android/settings/ConfirmDeviceCredentialBaseActivity;->getIntent()Landroid/content/Intent;
+    invoke-super {p0}, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -158,7 +158,7 @@
     .local v0, "modIntent":Landroid/content/Intent;
     const-string v1, ":settings:show_fragment"
 
-    const-class v2, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    const-class v2, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -183,7 +183,7 @@
 
     .prologue
     .line 103
-    const-class v0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    const-class v0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -213,10 +213,10 @@
 
     .prologue
     .line 109
-    invoke-super {p0, p1}, Lcom/android/settings/ConfirmDeviceCredentialBaseActivity;->onWindowFocusChanged(Z)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseActivity;->onWindowFocusChanged(Z)V
 
     .line 110
-    invoke-virtual {p0}, Lcom/android/settings/ConfirmLockPassword;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ConfirmLockPassword;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
 
@@ -230,15 +230,15 @@
     .local v0, "fragment":Landroid/app/Fragment;
     if-eqz v0, :cond_0
 
-    instance-of v1, v0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    instance-of v1, v0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
     if-eqz v1, :cond_0
 
     .line 112
-    check-cast v0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;
+    check-cast v0, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;
 
     .end local v0    # "fragment":Landroid/app/Fragment;
-    invoke-virtual {v0, p1}, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->onWindowFocusChanged(Z)V
+    invoke-virtual {v0, p1}, Lcom/android/settings_ex/ConfirmLockPassword$ConfirmLockPasswordFragment;->onWindowFocusChanged(Z)V
 
     .line 114
     :cond_0

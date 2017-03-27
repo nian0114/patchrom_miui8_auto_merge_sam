@@ -1,11 +1,11 @@
-.class Lcom/android/settings/cloud/CloudDialog$1;
+.class Lcom/android/settings_ex/cloud/CloudDialog$1;
 .super Landroid/os/CountDownTimer;
 .source "CloudDialog.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/cloud/CloudDialog;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/cloud/CloudDialog;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,18 +15,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/cloud/CloudDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/cloud/CloudDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/cloud/CloudDialog;JJ)V
+.method constructor <init>(Lcom/android/settings_ex/cloud/CloudDialog;JJ)V
     .locals 0
     .param p2, "x0"    # J
     .param p4, "x1"    # J
 
     .prologue
     .line 117
-    iput-object p1, p0, Lcom/android/settings/cloud/CloudDialog$1;->this$0:Lcom/android/settings/cloud/CloudDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/cloud/CloudDialog$1;->this$0:Lcom/android/settings_ex/cloud/CloudDialog;
 
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/os/CountDownTimer;-><init>(JJ)V
 
@@ -40,10 +40,10 @@
 
     .prologue
     .line 121
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudDialog$1;->this$0:Lcom/android/settings/cloud/CloudDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudDialog$1;->this$0:Lcom/android/settings_ex/cloud/CloudDialog;
 
-    # invokes: Lcom/android/settings/cloud/CloudDialog;->dismissProgressDialog()Z
-    invoke-static {v0}, Lcom/android/settings/cloud/CloudDialog;->access$000(Lcom/android/settings/cloud/CloudDialog;)Z
+    # invokes: Lcom/android/settings_ex/cloud/CloudDialog;->dismissProgressDialog()Z
+    invoke-static {v0}, Lcom/android/settings_ex/cloud/CloudDialog;->access$000(Lcom/android/settings_ex/cloud/CloudDialog;)Z
 
     move-result v0
 
@@ -57,17 +57,17 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 123
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudDialog$1;->this$0:Lcom/android/settings/cloud/CloudDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudDialog$1;->this$0:Lcom/android/settings_ex/cloud/CloudDialog;
 
-    invoke-virtual {v0}, Lcom/android/settings/cloud/CloudDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/cloud/CloudDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudDialog$1;->this$0:Lcom/android/settings/cloud/CloudDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudDialog$1;->this$0:Lcom/android/settings_ex/cloud/CloudDialog;
 
     const v2, 0x7f0e12af
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/cloud/CloudDialog;->getString(I)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/cloud/CloudDialog;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -80,9 +80,9 @@
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
     .line 124
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudDialog$1;->this$0:Lcom/android/settings/cloud/CloudDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudDialog$1;->this$0:Lcom/android/settings_ex/cloud/CloudDialog;
 
-    invoke-virtual {v0}, Lcom/android/settings/cloud/CloudDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/cloud/CloudDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -99,20 +99,20 @@
 
     .prologue
     .line 130
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudDialog$1;->this$0:Lcom/android/settings/cloud/CloudDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudDialog$1;->this$0:Lcom/android/settings_ex/cloud/CloudDialog;
 
-    # getter for: Lcom/android/settings/cloud/CloudDialog;->progressDialog:Landroid/app/ProgressDialog;
-    invoke-static {v0}, Lcom/android/settings/cloud/CloudDialog;->access$100(Lcom/android/settings/cloud/CloudDialog;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/cloud/CloudDialog;->progressDialog:Landroid/app/ProgressDialog;
+    invoke-static {v0}, Lcom/android/settings_ex/cloud/CloudDialog;->access$100(Lcom/android/settings_ex/cloud/CloudDialog;)Landroid/app/ProgressDialog;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 131
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudDialog$1;->this$0:Lcom/android/settings/cloud/CloudDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudDialog$1;->this$0:Lcom/android/settings_ex/cloud/CloudDialog;
 
-    # getter for: Lcom/android/settings/cloud/CloudDialog;->progressDialog:Landroid/app/ProgressDialog;
-    invoke-static {v0}, Lcom/android/settings/cloud/CloudDialog;->access$100(Lcom/android/settings/cloud/CloudDialog;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/cloud/CloudDialog;->progressDialog:Landroid/app/ProgressDialog;
+    invoke-static {v0}, Lcom/android/settings_ex/cloud/CloudDialog;->access$100(Lcom/android/settings_ex/cloud/CloudDialog;)Landroid/app/ProgressDialog;
 
     move-result-object v0
 

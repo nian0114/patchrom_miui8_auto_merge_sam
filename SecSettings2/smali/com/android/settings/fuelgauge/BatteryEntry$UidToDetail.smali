@@ -1,11 +1,11 @@
-.class Lcom/android/settings/fuelgauge/BatteryEntry$UidToDetail;
+.class Lcom/android/settings_ex/fuelgauge/BatteryEntry$UidToDetail;
 .super Ljava/lang/Object;
 .source "BatteryEntry.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fuelgauge/BatteryEntry;
+    value = Lcom/android/settings_ex/fuelgauge/BatteryEntry;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

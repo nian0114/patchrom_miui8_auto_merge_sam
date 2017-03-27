@@ -1,4 +1,4 @@
-.class Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$2;
+.class Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$2;
 .super Ljava/lang/Object;
 .source "PackageSettingActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;
 
 .field final synthetic val$context:Landroid/content/Context;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;Landroid/content/Context;)V
+.method constructor <init>(Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;Landroid/content/Context;)V
     .locals 0
 
     .prologue
     .line 582
-    iput-object p1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$2;->this$0:Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$2;->this$0:Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;
 
-    iput-object p2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$2;->val$context:Landroid/content/Context;
+    iput-object p2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$2;->val$context:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,9 +47,9 @@
 
     .prologue
     .line 586
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$2;->this$0:Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$2;->this$0:Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;
 
-    iget-object v2, v2, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->dataLimitText:Landroid/widget/EditText;
+    iget-object v2, v2, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->dataLimitText:Landroid/widget/EditText;
 
     invoke-virtual {v2}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -61,7 +61,7 @@
 
     .line 588
     .local v0, "dataUsed":Ljava/lang/String;
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$2;->val$context:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment$2;->val$context:Landroid/content/Context;
 
     invoke-static {v2}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
@@ -73,7 +73,7 @@
 
     .line 589
     .local v1, "editor":Landroid/content/SharedPreferences$Editor;
-    sget v2, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sget v2, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     if-nez v2, :cond_1
 
@@ -92,7 +92,7 @@
 
     .line 591
     :cond_1
-    sget v2, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sget v2, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     const/4 v3, 0x1
 

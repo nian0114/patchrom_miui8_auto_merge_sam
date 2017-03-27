@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/SoftwareUpdateSettings$2;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/SoftwareUpdateSettings$2;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "SoftwareUpdateSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/SoftwareUpdateSettings;
+    value = Lcom/android/settings_ex/SoftwareUpdateSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 604
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -50,8 +50,8 @@
 
     .line 637
     .local v0, "keys":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
-    # getter for: Lcom/android/settings/SoftwareUpdateSettings;->mEnablePrl:Z
-    invoke-static {}, Lcom/android/settings/SoftwareUpdateSettings;->access$500()Z
+    # getter for: Lcom/android/settings_ex/SoftwareUpdateSettings;->mEnablePrl:Z
+    invoke-static {}, Lcom/android/settings_ex/SoftwareUpdateSettings;->access$500()Z
 
     move-result v3
 
@@ -64,7 +64,7 @@
 
     .line 641
     :cond_0
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v2
 
@@ -213,7 +213,7 @@
 
     .line 609
     .local v0, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v1, Lcom/android/settings/SoftwareUpdateSettings;
+    const-class v1, Lcom/android/settings_ex/SoftwareUpdateSettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

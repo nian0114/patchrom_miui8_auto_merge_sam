@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "TapAndHoldDelayCustomFragment.java"
 
 # interfaces
@@ -24,7 +24,7 @@
 
 .field private mShownDialogId:I
 
-.field private mTabAndHoldView:Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;
+.field private mTabAndHoldView:Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;
 
 .field private mTextViewPressTime:Landroid/widget/TextView;
 
@@ -51,7 +51,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->isInFront:Ljava/lang/Boolean;
+    sput-object v0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->isInFront:Ljava/lang/Boolean;
 
     return-void
 .end method
@@ -61,121 +61,121 @@
 
     .prologue
     .line 40
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 51
     const-wide/16 v0, -0x1
 
-    iput-wide v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->base_time:J
+    iput-wide v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->base_time:J
 
     .line 52
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->press_time:J
+    iput-wide v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->press_time:J
 
     .line 60
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mHandler:Landroid/os/Handler;
 
     .line 61
-    new-instance v0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment$1;
+    new-instance v0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment$1;-><init>(Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment$1;-><init>(Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mRunnable:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mRunnable:Ljava/lang/Runnable;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;
+.method static synthetic access$000(Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)Landroid/widget/Button;
+.method static synthetic access$100(Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)Landroid/widget/Button;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mSaveBttn:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mSaveBttn:Landroid/widget/Button;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)J
+.method static synthetic access$200(Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)J
     .locals 2
-    .param p0, "x0"    # Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
 
     .prologue
     .line 40
-    iget-wide v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->base_time:J
+    iget-wide v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->base_time:J
 
     return-wide v0
 .end method
 
-.method static synthetic access$202(Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;J)J
+.method static synthetic access$202(Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;J)J
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
     .param p1, "x1"    # J
 
     .prologue
     .line 40
-    iput-wide p1, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->base_time:J
+    iput-wide p1, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->base_time:J
 
     return-wide p1
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)J
+.method static synthetic access$300(Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)J
     .locals 2
-    .param p0, "x0"    # Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
 
     .prologue
     .line 40
-    iget-wide v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->press_time:J
+    iget-wide v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->press_time:J
 
     return-wide v0
 .end method
 
-.method static synthetic access$302(Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;J)J
+.method static synthetic access$302(Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;J)J
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
     .param p1, "x1"    # J
 
     .prologue
     .line 40
-    iput-wide p1, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->press_time:J
+    iput-wide p1, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->press_time:J
 
     return-wide p1
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)Landroid/widget/TextView;
+.method static synthetic access$400(Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)Landroid/widget/TextView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTextViewPressTime:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTextViewPressTime:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)Landroid/widget/TextView;
+.method static synthetic access$500(Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)Landroid/widget/TextView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTextViewSec:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTextViewSec:Landroid/widget/TextView;
 
     return-object v0
 .end method
@@ -185,41 +185,41 @@
 
     .prologue
     .line 40
-    sget-object v0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->isInFront:Ljava/lang/Boolean;
+    sget-object v0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->isInFront:Ljava/lang/Boolean;
 
     return-object v0
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)Ljava/lang/Runnable;
+.method static synthetic access$700(Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)Ljava/lang/Runnable;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mRunnable:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mRunnable:Ljava/lang/Runnable;
 
     return-object v0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)Landroid/os/Handler;
+.method static synthetic access$800(Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;I)V
+.method static synthetic access$900(Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;
     .param p1, "x1"    # I
 
     .prologue
     .line 40
-    invoke-virtual {p0, p1}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->showDialog(I)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->showDialog(I)V
 
     return-void
 .end method
@@ -233,7 +233,7 @@
 
     .line 208
     .local v0, "bCovered":Z
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -333,10 +333,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 241
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -373,7 +373,7 @@
 
     .line 140
     .local v0, "out":Landroid/util/TypedValue;
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -390,7 +390,7 @@
 
     move-result v3
 
-    iput v3, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->value_textSize:F
+    iput v3, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->value_textSize:F
 
     .line 145
     const v3, 0x7f0c00b3
@@ -414,7 +414,7 @@
 
     move-result v3
 
-    iput v3, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->value_spacing:F
+    iput v3, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->value_spacing:F
 
     .line 148
     return-void
@@ -426,10 +426,10 @@
 
     .prologue
     .line 88
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 90
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getView()Landroid/view/View;
 
     move-result-object v0
 
@@ -438,20 +438,20 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setFocusableInTouchMode(Z)V
 
     .line 91
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getView()Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
 
     .line 92
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getView()Landroid/view/View;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment$2;
+    new-instance v1, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment$2;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment$2;-><init>(Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment$2;-><init>(Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
@@ -479,19 +479,19 @@
 
     .line 274
     :pswitch_0
-    iget v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mShownDialogId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mShownDialogId:I
 
     if-ne v0, v1, :cond_0
 
     .line 275
-    iget-wide v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->press_time:J
+    iget-wide v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->press_time:J
 
     long-to-int v0, v0
 
-    invoke-direct {p0, v0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->updateLongPressTimeOut(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->updateLongPressTimeOut(I)V
 
     .line 276
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->finish()V
 
     .line 289
     :cond_0
@@ -500,7 +500,7 @@
 
     .line 279
     :pswitch_1
-    iget v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mShownDialogId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mShownDialogId:I
 
     if-ne v0, v1, :cond_0
 
@@ -511,12 +511,12 @@
 
     .line 283
     :pswitch_2
-    iget v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mShownDialogId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mShownDialogId:I
 
     if-ne v0, v1, :cond_0
 
     .line 284
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->finish()V
 
     goto :goto_0
 
@@ -535,7 +535,7 @@
 
     .prologue
     .line 231
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mSaveBttn:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mSaveBttn:Landroid/widget/Button;
 
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -544,14 +544,14 @@
     if-eqz v0, :cond_1
 
     .line 232
-    iget-wide v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->press_time:J
+    iget-wide v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->press_time:J
 
     long-to-int v0, v0
 
-    invoke-direct {p0, v0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->updateLongPressTimeOut(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->updateLongPressTimeOut(I)V
 
     .line 233
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->finish()V
 
     .line 237
     :cond_0
@@ -560,7 +560,7 @@
 
     .line 234
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mcancelBttn:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mcancelBttn:Landroid/widget/Button;
 
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -569,7 +569,7 @@
     if-eqz v0, :cond_0
 
     .line 235
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->finish()V
 
     goto :goto_0
 .end method
@@ -582,7 +582,7 @@
     const/4 v8, -0x1
 
     .line 172
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -592,7 +592,7 @@
 
     .line 173
     .local v1, "inflater":Landroid/view/LayoutInflater;
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getView()Landroid/view/View;
 
     move-result-object v2
 
@@ -605,7 +605,7 @@
     .line 175
     const/4 v4, 0x1
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->removeDialog(I)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->removeDialog(I)V
 
     .line 176
     const v4, 0x7f040213
@@ -622,9 +622,9 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;
+    check-cast v4, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;
 
-    iput-object v4, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;
+    iput-object v4, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;
 
     .line 178
     const v4, 0x7f0d04f6
@@ -635,10 +635,10 @@
 
     check-cast v4, Landroid/widget/Button;
 
-    iput-object v4, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mcancelBttn:Landroid/widget/Button;
+    iput-object v4, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mcancelBttn:Landroid/widget/Button;
 
     .line 179
-    iget-object v4, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mcancelBttn:Landroid/widget/Button;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mcancelBttn:Landroid/widget/Button;
 
     invoke-virtual {v4, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -651,10 +651,10 @@
 
     check-cast v4, Landroid/widget/Button;
 
-    iput-object v4, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mSaveBttn:Landroid/widget/Button;
+    iput-object v4, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mSaveBttn:Landroid/widget/Button;
 
     .line 181
-    iget-object v4, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mSaveBttn:Landroid/widget/Button;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mSaveBttn:Landroid/widget/Button;
 
     invoke-virtual {v4, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -667,12 +667,12 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    iput-object v4, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mDescription:Landroid/widget/TextView;
+    iput-object v4, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mDescription:Landroid/widget/TextView;
 
     .line 184
-    iget-object v4, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mDescription:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mDescription:Landroid/widget/TextView;
 
-    iget v5, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->value_spacing:F
+    iget v5, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->value_spacing:F
 
     const/high16 v6, 0x3f800000    # 1.0f
 
@@ -687,10 +687,10 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    iput-object v4, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTextViewPressTime:Landroid/widget/TextView;
+    iput-object v4, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTextViewPressTime:Landroid/widget/TextView;
 
     .line 186
-    iget-object v4, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTextViewPressTime:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTextViewPressTime:Landroid/widget/TextView;
 
     const-string v5, ""
 
@@ -705,10 +705,10 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    iput-object v4, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTextViewSec:Landroid/widget/TextView;
+    iput-object v4, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTextViewSec:Landroid/widget/TextView;
 
     .line 188
-    iget-object v4, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTextViewSec:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTextViewSec:Landroid/widget/TextView;
 
     const/4 v5, 0x4
 
@@ -717,28 +717,28 @@
     .line 189
     const-wide/16 v4, -0x1
 
-    iput-wide v4, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->base_time:J
+    iput-wide v4, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->base_time:J
 
     .line 190
-    iget-object v4, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mHandler:Landroid/os/Handler;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mHandler:Landroid/os/Handler;
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mRunnable:Ljava/lang/Runnable;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 192
-    invoke-direct {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->isMobileKeyboardCovered()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->isMobileKeyboardCovered()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
     .line 193
-    iget-object v4, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;
 
     new-instance v5, Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -750,13 +750,13 @@
 
     invoke-direct {v5, v8, v6}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    invoke-virtual {v4, v5}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v4, v5}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 203
     :goto_0
-    iget-object v4, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;
 
-    invoke-virtual {v4}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->refresh()V
+    invoke-virtual {v4}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->refresh()V
 
     .line 204
     return-void
@@ -769,7 +769,7 @@
 
     if-eq v4, v5, :cond_1
 
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v4
 
@@ -782,20 +782,20 @@
     .line 201
     .local v0, "height":I
     :goto_1
-    iget-object v4, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;
 
     new-instance v5, Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-direct {v5, v8, v0}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    invoke-virtual {v4, v5}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v4, v5}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_0
 
     .line 200
     .end local v0    # "height":I
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -841,19 +841,19 @@
     :pswitch_0
     const/4 v3, 0x1
 
-    iput v3, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mShownDialogId:I
+    iput v3, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mShownDialogId:I
 
     .line 255
     const v3, 0x7f0e0a64
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
     .line 256
     new-instance v3, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -917,7 +917,7 @@
     const/4 v6, -0x1
 
     .line 108
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->initDP()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->initDP()V
 
     .line 109
     const v2, 0x7f040213
@@ -936,9 +936,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;
+    check-cast v2, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;
 
     .line 111
     const v2, 0x7f0d04f6
@@ -949,10 +949,10 @@
 
     check-cast v2, Landroid/widget/Button;
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mcancelBttn:Landroid/widget/Button;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mcancelBttn:Landroid/widget/Button;
 
     .line 112
-    iget-object v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mcancelBttn:Landroid/widget/Button;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mcancelBttn:Landroid/widget/Button;
 
     invoke-virtual {v2, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -965,10 +965,10 @@
 
     check-cast v2, Landroid/widget/Button;
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mSaveBttn:Landroid/widget/Button;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mSaveBttn:Landroid/widget/Button;
 
     .line 114
-    iget-object v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mSaveBttn:Landroid/widget/Button;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mSaveBttn:Landroid/widget/Button;
 
     invoke-virtual {v2, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -981,12 +981,12 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mDescription:Landroid/widget/TextView;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mDescription:Landroid/widget/TextView;
 
     .line 117
-    iget-object v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mDescription:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mDescription:Landroid/widget/TextView;
 
-    iget v3, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->value_spacing:F
+    iget v3, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->value_spacing:F
 
     const/high16 v4, 0x3f800000    # 1.0f
 
@@ -1001,7 +1001,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTextViewPressTime:Landroid/widget/TextView;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTextViewPressTime:Landroid/widget/TextView;
 
     .line 119
     const v2, 0x7f0d04f3
@@ -1012,35 +1012,35 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTextViewSec:Landroid/widget/TextView;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTextViewSec:Landroid/widget/TextView;
 
     .line 120
-    iget-object v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTextViewSec:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTextViewSec:Landroid/widget/TextView;
 
     const/4 v3, 0x4
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 121
-    iget-object v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mHandler:Landroid/os/Handler;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mHandler:Landroid/os/Handler;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mRunnable:Ljava/lang/Runnable;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 123
-    invoke-direct {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->isMobileKeyboardCovered()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->isMobileKeyboardCovered()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
     .line 124
-    iget-object v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;
 
     new-instance v3, Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -1052,20 +1052,20 @@
 
     invoke-direct {v3, v6, v4}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 134
     :goto_0
     const/4 v2, 0x1
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->setHasOptionsMenu(Z)V
 
     .line 135
     return-object v1
 
     .line 128
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1079,7 +1079,7 @@
 
     if-eq v2, v3, :cond_1
 
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v2
 
@@ -1092,20 +1092,20 @@
     .line 132
     .local v0, "height":I
     :goto_1
-    iget-object v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;
 
     new-instance v3, Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-direct {v3, v6, v0}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_0
 
     .line 131
     .end local v0    # "height":I
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1130,10 +1130,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->isInFront:Ljava/lang/Boolean;
+    sput-object v0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->isInFront:Ljava/lang/Boolean;
 
     .line 226
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroy()V
 
     .line 227
     return-void
@@ -1154,7 +1154,7 @@
     packed-switch v1, :pswitch_data_0
 
     .line 307
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v0
 
@@ -1163,22 +1163,22 @@
 
     .line 300
     :pswitch_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;
 
-    invoke-virtual {v1}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->checkLongPressStatus()Z
+    invoke-virtual {v1}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->checkLongPressStatus()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 301
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->showDialog(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->showDialog(I)V
 
     goto :goto_0
 
     .line 303
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->finish()V
 
     goto :goto_0
 
@@ -1196,9 +1196,9 @@
 
     .prologue
     .line 161
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->getTouchTime()J
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->getTouchTime()J
 
     move-result-wide v0
 
@@ -1209,12 +1209,12 @@
     if-gez v0, :cond_0
 
     .line 162
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->refresh()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->refresh()V
 
     .line 163
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTextViewSec:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTextViewSec:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getVisibility()I
 
@@ -1223,7 +1223,7 @@
     if-nez v0, :cond_0
 
     .line 164
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTextViewPressTime:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTextViewPressTime:Landroid/widget/TextView;
 
     const-string v1, "%.2f"
 
@@ -1249,12 +1249,12 @@
 
     .line 166
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->mTabAndHoldView:Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->checkAndSaveState()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->checkAndSaveState()V
 
     .line 167
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 168
     return-void
@@ -1265,7 +1265,7 @@
 
     .prologue
     .line 152
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1273,7 +1273,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -1292,10 +1292,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->isInFront:Ljava/lang/Boolean;
+    sput-object v0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayCustomFragment;->isInFront:Ljava/lang/Boolean;
 
     .line 155
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 156
     return-void

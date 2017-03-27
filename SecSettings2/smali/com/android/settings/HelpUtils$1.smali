@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/HelpUtils$1;
+.class final Lcom/android/settings_ex/HelpUtils$1;
 .super Ljava/lang/Object;
 .source "HelpUtils.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/HelpUtils;->prepareHelpMenuItem(Landroid/app/Activity;Landroid/view/MenuItem;Ljava/lang/String;Ljava/lang/String;)Z
+    value = Lcom/android/settings_ex/HelpUtils;->prepareHelpMenuItem(Landroid/app/Activity;Landroid/view/MenuItem;Ljava/lang/String;Ljava/lang/String;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -29,9 +29,9 @@
 
     .prologue
     .line 105
-    iput-object p1, p0, Lcom/android/settings/HelpUtils$1;->val$activity:Landroid/app/Activity;
+    iput-object p1, p0, Lcom/android/settings_ex/HelpUtils$1;->val$activity:Landroid/app/Activity;
 
-    iput-object p2, p0, Lcom/android/settings/HelpUtils$1;->val$intent:Landroid/content/Intent;
+    iput-object p2, p0, Lcom/android/settings_ex/HelpUtils$1;->val$intent:Landroid/content/Intent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,9 +46,9 @@
 
     .prologue
     .line 108
-    iget-object v0, p0, Lcom/android/settings/HelpUtils$1;->val$activity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/HelpUtils$1;->val$activity:Landroid/app/Activity;
 
-    iget-object v1, p0, Lcom/android/settings/HelpUtils$1;->val$intent:Landroid/content/Intent;
+    iget-object v1, p0, Lcom/android/settings_ex/HelpUtils$1;->val$intent:Landroid/content/Intent;
 
     const/4 v2, 0x0
 

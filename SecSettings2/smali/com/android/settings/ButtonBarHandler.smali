@@ -1,4 +1,4 @@
-.class public interface abstract Lcom/android/settings/ButtonBarHandler;
+.class public interface abstract Lcom/android/settings_ex/ButtonBarHandler;
 .super Ljava/lang/Object;
 .source "ButtonBarHandler.java"
 

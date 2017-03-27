@@ -1,14 +1,14 @@
-.class final Lcom/android/settingslib/applications/ApplicationsState$8;
+.class final Lcom/android/settings_exlib/applications/ApplicationsState$8;
 .super Ljava/lang/Object;
 .source "ApplicationsState.java"
 
 # interfaces
-.implements Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+.implements Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/applications/ApplicationsState;
+    value = Lcom/android/settings_exlib/applications/ApplicationsState;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,15 +30,15 @@
 
 
 # virtual methods
-.method public filterApp(Lcom/android/settingslib/applications/ApplicationsState$AppEntry;)Z
+.method public filterApp(Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;)Z
     .locals 2
-    .param p1, "entry"    # Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+    .param p1, "entry"    # Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
 
     .prologue
     const/4 v0, 0x1
 
     .line 1334
-    iget-object v1, p1, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
+    iget-object v1, p1, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
 
     iget v1, v1, Landroid/content/pm/ApplicationInfo;->flags:I
 
@@ -53,7 +53,7 @@
 
     .line 1336
     :cond_1
-    iget-object v1, p1, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
+    iget-object v1, p1, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
 
     iget v1, v1, Landroid/content/pm/ApplicationInfo;->flags:I
 
@@ -62,7 +62,7 @@
     if-eqz v1, :cond_0
 
     .line 1338
-    iget-boolean v1, p1, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->hasLauncherEntry:Z
+    iget-boolean v1, p1, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->hasLauncherEntry:Z
 
     if-nez v1, :cond_0
 

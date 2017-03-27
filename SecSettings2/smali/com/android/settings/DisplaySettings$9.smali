@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DisplaySettings$9;
+.class Lcom/android/settings_ex/DisplaySettings$9;
 .super Ljava/lang/Object;
 .source "DisplaySettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DisplaySettings;->onActivityCreated(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/DisplaySettings;->onActivityCreated(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DisplaySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/DisplaySettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DisplaySettings;)V
+.method constructor <init>(Lcom/android/settings_ex/DisplaySettings;)V
     .locals 0
 
     .prologue
     .line 726
-    iput-object p1, p0, Lcom/android/settings/DisplaySettings$9;->this$0:Lcom/android/settings/DisplaySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/DisplaySettings$9;->this$0:Lcom/android/settings_ex/DisplaySettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -64,9 +64,9 @@
 
     .line 733
     :pswitch_0
-    iget-object v4, p0, Lcom/android/settings/DisplaySettings$9;->this$0:Lcom/android/settings/DisplaySettings;
+    iget-object v4, p0, Lcom/android/settings_ex/DisplaySettings$9;->this$0:Lcom/android/settings_ex/DisplaySettings;
 
-    invoke-virtual {v4}, Lcom/android/settings/DisplaySettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {v4}, Lcom/android/settings_ex/DisplaySettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v4
 
@@ -74,9 +74,9 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/DisplaySettings$9;->this$0:Lcom/android/settings/DisplaySettings;
+    iget-object v5, p0, Lcom/android/settings_ex/DisplaySettings$9;->this$0:Lcom/android/settings_ex/DisplaySettings;
 
-    invoke-virtual {v5}, Lcom/android/settings/DisplaySettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {v5}, Lcom/android/settings_ex/DisplaySettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v5
 

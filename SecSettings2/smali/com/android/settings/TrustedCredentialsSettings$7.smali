@@ -1,4 +1,4 @@
-.class Lcom/android/settings/TrustedCredentialsSettings$7;
+.class Lcom/android/settings_ex/TrustedCredentialsSettings$7;
 .super Ljava/lang/Object;
 .source "TrustedCredentialsSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/TrustedCredentialsSettings;->showtConfirmDialog(Lcom/android/settings/TrustedCredentialsSettings$CertHolder;)V
+    value = Lcom/android/settings_ex/TrustedCredentialsSettings;->showtConfirmDialog(Lcom/android/settings_ex/TrustedCredentialsSettings$CertHolder;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/TrustedCredentialsSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/TrustedCredentialsSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/TrustedCredentialsSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/TrustedCredentialsSettings;)V
     .locals 0
 
     .prologue
     .line 876
-    iput-object p1, p0, Lcom/android/settings/TrustedCredentialsSettings$7;->this$0:Lcom/android/settings/TrustedCredentialsSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/TrustedCredentialsSettings$7;->this$0:Lcom/android/settings_ex/TrustedCredentialsSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

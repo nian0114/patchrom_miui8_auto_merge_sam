@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/CenteredImageSpan;
+.class public Lcom/android/settings_ex/CenteredImageSpan;
 .super Landroid/text/style/ImageSpan;
 .source "CenteredImageSpan.java"
 
@@ -30,7 +30,7 @@
     .line 13
     const/high16 v0, 0x3f800000    # 1.0f
 
-    iput v0, p0, Lcom/android/settings/CenteredImageSpan;->fontScale:F
+    iput v0, p0, Lcom/android/settings_ex/CenteredImageSpan;->fontScale:F
 
     .line 18
     return-void
@@ -41,7 +41,7 @@
 
     .prologue
     .line 54
-    iget-object v1, p0, Lcom/android/settings/CenteredImageSpan;->mDrawableRef:Ljava/lang/ref/WeakReference;
+    iget-object v1, p0, Lcom/android/settings_ex/CenteredImageSpan;->mDrawableRef:Ljava/lang/ref/WeakReference;
 
     .line 55
     .local v1, "wr":Ljava/lang/ref/WeakReference;, "Ljava/lang/ref/WeakReference<Landroid/graphics/drawable/Drawable;>;"
@@ -65,7 +65,7 @@
     if-nez v0, :cond_1
 
     .line 62
-    invoke-virtual {p0}, Lcom/android/settings/CenteredImageSpan;->getDrawable()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CenteredImageSpan;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -74,7 +74,7 @@
 
     invoke-direct {v2, v0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v2, p0, Lcom/android/settings/CenteredImageSpan;->mDrawableRef:Ljava/lang/ref/WeakReference;
+    iput-object v2, p0, Lcom/android/settings_ex/CenteredImageSpan;->mDrawableRef:Ljava/lang/ref/WeakReference;
 
     .line 66
     :cond_1
@@ -103,7 +103,7 @@
 
     .line 35
     .local v3, "fm":Landroid/graphics/Paint$FontMetricsInt;
-    invoke-direct {p0}, Lcom/android/settings/CenteredImageSpan;->getCachedDrawable()Landroid/graphics/drawable/Drawable;
+    invoke-direct {p0}, Lcom/android/settings_ex/CenteredImageSpan;->getCachedDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -161,7 +161,7 @@
 
     int-to-float v9, v9
 
-    iget v10, p0, Lcom/android/settings/CenteredImageSpan;->fontScale:F
+    iget v10, p0, Lcom/android/settings_ex/CenteredImageSpan;->fontScale:F
 
     mul-float v2, v9, v10
 
@@ -185,9 +185,9 @@
     invoke-virtual {p1, v9, v8}, Landroid/graphics/Canvas;->translate(FF)V
 
     .line 48
-    iget v9, p0, Lcom/android/settings/CenteredImageSpan;->fontScale:F
+    iget v9, p0, Lcom/android/settings_ex/CenteredImageSpan;->fontScale:F
 
-    iget v10, p0, Lcom/android/settings/CenteredImageSpan;->fontScale:F
+    iget v10, p0, Lcom/android/settings_ex/CenteredImageSpan;->fontScale:F
 
     invoke-virtual {p1, v9, v10}, Landroid/graphics/Canvas;->scale(FF)V
 
@@ -210,7 +210,7 @@
 
     .prologue
     .line 22
-    invoke-direct {p0}, Lcom/android/settings/CenteredImageSpan;->getCachedDrawable()Landroid/graphics/drawable/Drawable;
+    invoke-direct {p0}, Lcom/android/settings_ex/CenteredImageSpan;->getCachedDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -237,7 +237,7 @@
 
     int-to-float v2, v2
 
-    iget v3, p0, Lcom/android/settings/CenteredImageSpan;->fontScale:F
+    iget v3, p0, Lcom/android/settings_ex/CenteredImageSpan;->fontScale:F
 
     mul-float/2addr v2, v3
 

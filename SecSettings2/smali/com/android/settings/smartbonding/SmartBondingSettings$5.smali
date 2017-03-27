@@ -1,4 +1,4 @@
-.class Lcom/android/settings/smartbonding/SmartBondingSettings$5;
+.class Lcom/android/settings_ex/smartbonding/SmartBondingSettings$5;
 .super Ljava/lang/Object;
 .source "SmartBondingSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/smartbonding/SmartBondingSettings;->showNotificationDialog()V
+    value = Lcom/android/settings_ex/smartbonding/SmartBondingSettings;->showNotificationDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/smartbonding/SmartBondingSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/smartbonding/SmartBondingSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/smartbonding/SmartBondingSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/smartbonding/SmartBondingSettings;)V
     .locals 0
 
     .prologue
     .line 252
-    iput-object p1, p0, Lcom/android/settings/smartbonding/SmartBondingSettings$5;->this$0:Lcom/android/settings/smartbonding/SmartBondingSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/smartbonding/SmartBondingSettings$5;->this$0:Lcom/android/settings_ex/smartbonding/SmartBondingSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

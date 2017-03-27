@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiApDialog$9;
+.class Lcom/android/settings_ex/wifi/WifiApDialog$9;
 .super Ljava/lang/Object;
 .source "WifiApDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiApDialog;->getPassworldFilter()[Landroid/text/InputFilter;
+    value = Lcom/android/settings_ex/wifi/WifiApDialog;->getPassworldFilter()[Landroid/text/InputFilter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiApDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiApDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiApDialog;)V
     .locals 0
 
     .prologue
     .line 1434
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiApDialog$9;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiApDialog$9;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,24 +51,24 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiPasswordEmojiPattern;->hasEmojiString(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiPasswordEmojiPattern;->hasEmojiString(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 1438
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiApDialog$9;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiApDialog$9;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiApDialog;->access$600(Lcom/android/settings/wifi/WifiApDialog;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mContext:Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$600(Lcom/android/settings_ex/wifi/WifiApDialog;)Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiApDialog$9;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiApDialog$9;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiApDialog;->access$600(Lcom/android/settings/wifi/WifiApDialog;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$600(Lcom/android/settings_ex/wifi/WifiApDialog;)Landroid/content/Context;
 
     move-result-object v1
 

@@ -1,31 +1,31 @@
-.class public Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "HandwritingLanguagePreference.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;,
-        Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
+        Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;,
+        Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
     }
 .end annotation
 
 
 # static fields
-.field private static mHelper:Lcom/android/settings/handwritingsearch/RMHelper;
+.field private static mHelper:Lcom/android/settings_ex/handwritingsearch/RMHelper;
 
 
 # instance fields
 .field private mContext:Landroid/content/Context;
 
-.field private mHandwritingLanguageListAdapter:Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
+.field private mHandwritingLanguageListAdapter:Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
 
 .field private mLinkInfo:Z
 
 .field private mListView:Landroid/widget/ListView;
 
-.field private mMoreButton:Lcom/android/settings/widget/BottomBarButton;
+.field private mMoreButton:Lcom/android/settings_ex/widget/BottomBarButton;
 
 .field private mMoreButtonLayout:Landroid/widget/LinearLayout;
 
@@ -44,7 +44,7 @@
     .line 56
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mHelper:Lcom/android/settings/handwritingsearch/RMHelper;
+    sput-object v0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mHelper:Lcom/android/settings_ex/handwritingsearch/RMHelper;
 
     return-void
 .end method
@@ -56,91 +56,91 @@
     const/4 v0, 0x0
 
     .line 39
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 44
-    iput-object v0, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
 
     .line 46
-    iput-object v0, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mTextView:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mTextView:Landroid/widget/TextView;
 
     .line 48
-    iput-object v0, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
 
     .line 50
-    iput-object v0, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mMoreButton:Lcom/android/settings/widget/BottomBarButton;
+    iput-object v0, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mMoreButton:Lcom/android/settings_ex/widget/BottomBarButton;
 
     .line 52
-    iput-object v0, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mMoreButtonLayout:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mMoreButtonLayout:Landroid/widget/LinearLayout;
 
     .line 54
-    iput-object v0, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mHandwritingLanguageListAdapter:Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
+    iput-object v0, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mHandwritingLanguageListAdapter:Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
 
     .line 58
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mLinkInfo:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mLinkInfo:Z
 
     .line 219
-    new-instance v0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$2;
+    new-instance v0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$2;-><init>(Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$2;-><init>(Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;)V
 
-    iput-object v0, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mOnKeyListener:Landroid/view/View$OnKeyListener;
+    iput-object v0, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mOnKeyListener:Landroid/view/View$OnKeyListener;
 
     .line 230
-    new-instance v0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$3;
+    new-instance v0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$3;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$3;-><init>(Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$3;-><init>(Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;)V
 
-    iput-object v0, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mOnItemClickListener:Landroid/widget/AdapterView$OnItemClickListener;
+    iput-object v0, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mOnItemClickListener:Landroid/widget/AdapterView$OnItemClickListener;
 
     .line 545
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;)Landroid/content/Context;
+.method static synthetic access$000(Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;
+    .param p0, "x0"    # Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;
 
     .prologue
     .line 39
-    iget-object v0, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;)Landroid/widget/ListView;
+.method static synthetic access$100(Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;)Landroid/widget/ListView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;
+    .param p0, "x0"    # Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;
 
     .prologue
     .line 39
-    iget-object v0, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;)Ljava/lang/String;
+.method static synthetic access$200(Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;
+    .param p0, "x0"    # Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;
 
     .prologue
     .line 39
-    invoke-direct {p0}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->getDescriptionString()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->getDescriptionString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;)Landroid/widget/TextView;
+.method static synthetic access$300(Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;)Landroid/widget/TextView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;
+    .param p0, "x0"    # Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;
 
     .prologue
     .line 39
-    iget-object v0, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mTextView:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mTextView:Landroid/widget/TextView;
 
     return-object v0
 .end method
@@ -160,28 +160,28 @@
 
     .line 192
     .local v0, "currentLanguage":Ljava/lang/String;
-    iget-object v3, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mHandwritingLanguageListAdapter:Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
+    iget-object v3, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mHandwritingLanguageListAdapter:Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
 
-    invoke-virtual {v3}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;->getCount()I
+    invoke-virtual {v3}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;->getCount()I
 
     move-result v3
 
     if-lez v3, :cond_0
 
     .line 193
-    iget-object v3, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mHandwritingLanguageListAdapter:Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
+    iget-object v3, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mHandwritingLanguageListAdapter:Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
 
-    iget-object v4, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
+    iget-object v4, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v4}, Landroid/widget/ListView;->getCheckedItemPosition()I
 
     move-result v4
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;->getItem(I)Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;->getItem(I)Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->getLanguage()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->getLanguage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -200,7 +200,7 @@
     if-nez v0, :cond_1
 
     .line 197
-    iget-object v3, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -221,7 +221,7 @@
     if-eqz v3, :cond_2
 
     .line 200
-    iget-object v3, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -231,7 +231,7 @@
 
     .line 202
     :cond_2
-    iget-object v3, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
 
     const v4, 0x7f0e08a0
 
@@ -307,26 +307,26 @@
     goto :goto_1
 .end method
 
-.method public static getLocaleInfoAdapter(Landroid/content/Context;)[Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+.method public static getLocaleInfoAdapter(Landroid/content/Context;)[Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
     .locals 27
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 239
-    new-instance v24, Lcom/android/settings/handwritingsearch/RMHelper;
+    new-instance v24, Lcom/android/settings_ex/handwritingsearch/RMHelper;
 
     move-object/from16 v0, v24
 
     move-object/from16 v1, p0
 
-    invoke-direct {v0, v1}, Lcom/android/settings/handwritingsearch/RMHelper;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/handwritingsearch/RMHelper;-><init>(Landroid/content/Context;)V
 
-    sput-object v24, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mHelper:Lcom/android/settings/handwritingsearch/RMHelper;
+    sput-object v24, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mHelper:Lcom/android/settings_ex/handwritingsearch/RMHelper;
 
     .line 240
-    sget-object v24, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mHelper:Lcom/android/settings/handwritingsearch/RMHelper;
+    sget-object v24, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mHelper:Lcom/android/settings_ex/handwritingsearch/RMHelper;
 
-    invoke-virtual/range {v24 .. v24}, Lcom/android/settings/handwritingsearch/RMHelper;->getLangList()[Ljava/lang/String;
+    invoke-virtual/range {v24 .. v24}, Lcom/android/settings_ex/handwritingsearch/RMHelper;->getLangList()[Ljava/lang/String;
 
     move-result-object v17
 
@@ -371,12 +371,12 @@
     invoke-static/range {v17 .. v17}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
 
     .line 249
-    new-array v0, v12, [Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    new-array v0, v12, [Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
 
     move-object/from16 v20, v0
 
     .line 250
-    .local v20, "preprocess":[Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    .local v20, "preprocess":[Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
     const/4 v8, 0x0
 
     .line 252
@@ -532,7 +532,7 @@
 
     move-result-object v26
 
-    invoke-static/range {v26 .. v26}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {v26 .. v26}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v26
 
@@ -551,13 +551,13 @@
 
     .end local v9    # "finalSize":I
     .restart local v8    # "finalSize":I
-    new-instance v24, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    new-instance v24, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
 
     invoke-virtual {v15, v15}, Ljava/util/Locale;->getDisplayLanguage(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v25
 
-    invoke-static/range {v25 .. v25}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {v25 .. v25}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v25
 
@@ -565,7 +565,7 @@
 
     move-object/from16 v1, v25
 
-    invoke-direct {v0, v1, v11, v15}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;)V
+    invoke-direct {v0, v1, v11, v15}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;)V
 
     aput-object v24, v20, v9
 
@@ -581,7 +581,7 @@
 
     move-object/from16 v0, v24
 
-    iget-object v0, v0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->locale:Ljava/util/Locale;
+    iget-object v0, v0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->locale:Ljava/util/Locale;
 
     move-object/from16 v24, v0
 
@@ -616,7 +616,7 @@
 
     move-object/from16 v0, v26
 
-    iget-object v0, v0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->title:Ljava/lang/String;
+    iget-object v0, v0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->title:Ljava/lang/String;
 
     move-object/from16 v26, v0
 
@@ -636,7 +636,7 @@
 
     move-object/from16 v0, v26
 
-    iget-object v0, v0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->locale:Ljava/util/Locale;
+    iget-object v0, v0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->locale:Ljava/util/Locale;
 
     move-object/from16 v26, v0
 
@@ -646,7 +646,7 @@
 
     move-object/from16 v2, v23
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->getDisplayName(Ljava/util/Locale;[Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->getDisplayName(Ljava/util/Locale;[Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v26
 
@@ -671,7 +671,7 @@
 
     move-object/from16 v0, v25
 
-    iget-object v0, v0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->locale:Ljava/util/Locale;
+    iget-object v0, v0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->locale:Ljava/util/Locale;
 
     move-object/from16 v25, v0
 
@@ -681,11 +681,11 @@
 
     move-object/from16 v2, v23
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->getDisplayName(Ljava/util/Locale;[Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->getDisplayName(Ljava/util/Locale;[Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v25
 
-    invoke-static/range {v25 .. v25}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {v25 .. v25}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v25
 
@@ -693,7 +693,7 @@
 
     move-object/from16 v1, v24
 
-    iput-object v0, v1, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->title:Ljava/lang/String;
+    iput-object v0, v1, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->title:Ljava/lang/String;
 
     .line 292
     const-string v24, "HandwritingLanguagePreference"
@@ -712,11 +712,11 @@
 
     move-object/from16 v1, v23
 
-    invoke-static {v15, v0, v1}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->getDisplayName(Ljava/util/Locale;[Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v15, v0, v1}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->getDisplayName(Ljava/util/Locale;[Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v26
 
-    invoke-static/range {v26 .. v26}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {v26 .. v26}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v26
 
@@ -735,17 +735,17 @@
 
     .end local v9    # "finalSize":I
     .restart local v8    # "finalSize":I
-    new-instance v24, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    new-instance v24, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
 
     move-object/from16 v0, v22
 
     move-object/from16 v1, v23
 
-    invoke-static {v15, v0, v1}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->getDisplayName(Ljava/util/Locale;[Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v15, v0, v1}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->getDisplayName(Ljava/util/Locale;[Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v25
 
-    invoke-static/range {v25 .. v25}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {v25 .. v25}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v25
 
@@ -753,7 +753,7 @@
 
     move-object/from16 v1, v25
 
-    invoke-direct {v0, v1, v11, v15}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;)V
+    invoke-direct {v0, v1, v11, v15}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;)V
 
     aput-object v24, v20, v9
 
@@ -836,11 +836,11 @@
 
     .end local v9    # "finalSize":I
     .restart local v8    # "finalSize":I
-    new-instance v24, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    new-instance v24, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
 
     move-object/from16 v0, v24
 
-    invoke-direct {v0, v7, v11, v15}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;)V
+    invoke-direct {v0, v7, v11, v15}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;)V
 
     aput-object v24, v20, v9
 
@@ -857,7 +857,7 @@
 
     move-result-object v24
 
-    invoke-static/range {v24 .. v24}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {v24 .. v24}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -892,7 +892,7 @@
 
     move-result-object v24
 
-    invoke-static/range {v24 .. v24}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {v24 .. v24}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -929,7 +929,7 @@
 
     move-result-object v24
 
-    invoke-static/range {v24 .. v24}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {v24 .. v24}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -939,11 +939,11 @@
 
     .end local v9    # "finalSize":I
     .restart local v8    # "finalSize":I
-    new-instance v24, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    new-instance v24, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
 
     move-object/from16 v0, v24
 
-    invoke-direct {v0, v7, v11, v15}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;)V
+    invoke-direct {v0, v7, v11, v15}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;)V
 
     aput-object v24, v20, v9
 
@@ -958,12 +958,12 @@
     .end local v15    # "locale":Ljava/util/Locale;
     .restart local v9    # "finalSize":I
     :cond_8
-    new-array v0, v12, [Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    new-array v0, v12, [Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
 
     move-object/from16 v16, v0
 
     .line 340
-    .local v16, "localeInfos":[Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    .local v16, "localeInfos":[Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
     const/4 v10, 0x0
 
     :goto_3
@@ -984,7 +984,7 @@
     return-object v16
 .end method
 
-.method public static getLocaleInfoAdapter(Landroid/content/Context;[Ljava/lang/String;)[Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+.method public static getLocaleInfoAdapter(Landroid/content/Context;[Ljava/lang/String;)[Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
     .locals 28
     .param p0, "context"    # Landroid/content/Context;
     .param p1, "handWritingLanguageList"    # [Ljava/lang/String;
@@ -1030,12 +1030,12 @@
     invoke-static/range {p1 .. p1}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
 
     .line 357
-    new-array v0, v13, [Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    new-array v0, v13, [Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
 
     move-object/from16 v20, v0
 
     .line 358
-    .local v20, "preprocess":[Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    .local v20, "preprocess":[Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
     const/4 v8, 0x0
 
     .line 360
@@ -1197,7 +1197,7 @@
 
     move-result-object v27
 
-    invoke-static/range {v27 .. v27}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {v27 .. v27}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v27
 
@@ -1216,7 +1216,7 @@
 
     .end local v9    # "finalSize":I
     .restart local v8    # "finalSize":I
-    new-instance v25, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    new-instance v25, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
 
     move-object/from16 v0, v16
 
@@ -1226,7 +1226,7 @@
 
     move-result-object v26
 
-    invoke-static/range {v26 .. v26}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {v26 .. v26}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v26
 
@@ -1236,7 +1236,7 @@
 
     move-object/from16 v2, v16
 
-    invoke-direct {v0, v1, v12, v2}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;)V
+    invoke-direct {v0, v1, v12, v2}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;)V
 
     aput-object v25, v20, v9
 
@@ -1252,7 +1252,7 @@
 
     move-object/from16 v0, v25
 
-    iget-object v0, v0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->locale:Ljava/util/Locale;
+    iget-object v0, v0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->locale:Ljava/util/Locale;
 
     move-object/from16 v25, v0
 
@@ -1287,7 +1287,7 @@
 
     move-object/from16 v0, v27
 
-    iget-object v0, v0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->title:Ljava/lang/String;
+    iget-object v0, v0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->title:Ljava/lang/String;
 
     move-object/from16 v27, v0
 
@@ -1307,7 +1307,7 @@
 
     move-object/from16 v0, v27
 
-    iget-object v0, v0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->locale:Ljava/util/Locale;
+    iget-object v0, v0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->locale:Ljava/util/Locale;
 
     move-object/from16 v27, v0
 
@@ -1317,7 +1317,7 @@
 
     move-object/from16 v2, v24
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->getDisplayName(Ljava/util/Locale;[Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->getDisplayName(Ljava/util/Locale;[Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v27
 
@@ -1342,7 +1342,7 @@
 
     move-object/from16 v0, v26
 
-    iget-object v0, v0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->locale:Ljava/util/Locale;
+    iget-object v0, v0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->locale:Ljava/util/Locale;
 
     move-object/from16 v26, v0
 
@@ -1352,11 +1352,11 @@
 
     move-object/from16 v2, v24
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->getDisplayName(Ljava/util/Locale;[Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->getDisplayName(Ljava/util/Locale;[Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v26
 
-    invoke-static/range {v26 .. v26}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {v26 .. v26}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v26
 
@@ -1364,7 +1364,7 @@
 
     move-object/from16 v1, v25
 
-    iput-object v0, v1, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->title:Ljava/lang/String;
+    iput-object v0, v1, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->title:Ljava/lang/String;
 
     .line 399
     const-string v25, "HandwritingLanguagePreference"
@@ -1385,11 +1385,11 @@
 
     move-object/from16 v2, v24
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->getDisplayName(Ljava/util/Locale;[Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->getDisplayName(Ljava/util/Locale;[Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v27
 
-    invoke-static/range {v27 .. v27}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {v27 .. v27}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v27
 
@@ -1408,7 +1408,7 @@
 
     .end local v9    # "finalSize":I
     .restart local v8    # "finalSize":I
-    new-instance v25, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    new-instance v25, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
 
     move-object/from16 v0, v16
 
@@ -1416,11 +1416,11 @@
 
     move-object/from16 v2, v24
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->getDisplayName(Ljava/util/Locale;[Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->getDisplayName(Ljava/util/Locale;[Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v26
 
-    invoke-static/range {v26 .. v26}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {v26 .. v26}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v26
 
@@ -1430,7 +1430,7 @@
 
     move-object/from16 v2, v16
 
-    invoke-direct {v0, v1, v12, v2}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;)V
+    invoke-direct {v0, v1, v12, v2}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;)V
 
     aput-object v25, v20, v9
 
@@ -1513,13 +1513,13 @@
 
     .end local v9    # "finalSize":I
     .restart local v8    # "finalSize":I
-    new-instance v25, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    new-instance v25, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
 
     move-object/from16 v0, v25
 
     move-object/from16 v1, v16
 
-    invoke-direct {v0, v7, v12, v1}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;)V
+    invoke-direct {v0, v7, v12, v1}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;)V
 
     aput-object v25, v20, v9
 
@@ -1540,7 +1540,7 @@
 
     move-result-object v25
 
-    invoke-static/range {v25 .. v25}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {v25 .. v25}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -1579,7 +1579,7 @@
 
     move-result-object v25
 
-    invoke-static/range {v25 .. v25}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {v25 .. v25}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -1622,7 +1622,7 @@
 
     move-result-object v25
 
-    invoke-static/range {v25 .. v25}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {v25 .. v25}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->toTitleCase(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -1632,13 +1632,13 @@
 
     .end local v9    # "finalSize":I
     .restart local v8    # "finalSize":I
-    new-instance v25, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    new-instance v25, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
 
     move-object/from16 v0, v25
 
     move-object/from16 v1, v16
 
-    invoke-direct {v0, v7, v12, v1}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;)V
+    invoke-direct {v0, v7, v12, v1}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/Locale;)V
 
     aput-object v25, v20, v9
 
@@ -1658,7 +1658,7 @@
     invoke-direct/range {v17 .. v17}, Ljava/util/ArrayList;-><init>()V
 
     .line 447
-    .local v17, "localeInfos":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;>;"
+    .local v17, "localeInfos":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;>;"
     const/4 v11, 0x0
 
     .local v11, "j":I
@@ -1684,7 +1684,7 @@
 
     aget-object v26, v20, v10
 
-    invoke-virtual/range {v26 .. v26}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->getLanguage()Ljava/lang/String;
+    invoke-virtual/range {v26 .. v26}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->getLanguage()Ljava/lang/String;
 
     move-result-object v26
 
@@ -1723,12 +1723,12 @@
 
     move/from16 v0, v25
 
-    new-array v0, v0, [Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    new-array v0, v0, [Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
 
     move-object/from16 v22, v0
 
     .line 456
-    .local v22, "retLanguage":[Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    .local v22, "retLanguage":[Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
     move-object/from16 v0, v17
 
     move-object/from16 v1, v22
@@ -1746,7 +1746,7 @@
     const/4 v2, 0x0
 
     .line 150
-    invoke-virtual {p0}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->getResources()Landroid/content/res/Resources;
 
     move-result-object v11
 
@@ -1776,11 +1776,11 @@
 
     .line 154
     .local v4, "divider_inset_size":I
-    invoke-virtual {p0}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isRTL(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isRTL(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -1789,7 +1789,7 @@
     .line 155
     new-instance v0, Landroid/graphics/drawable/InsetDrawable;
 
-    iget-object v1, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1}, Landroid/widget/ListView;->getDivider()Landroid/graphics/drawable/Drawable;
 
@@ -1803,7 +1803,7 @@
 
     .line 156
     .local v0, "insetdivider":Landroid/graphics/drawable/InsetDrawable;
-    iget-object v1, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ListView;->setDivider(Landroid/graphics/drawable/Drawable;)V
 
@@ -1816,7 +1816,7 @@
     :cond_0
     new-instance v0, Landroid/graphics/drawable/InsetDrawable;
 
-    iget-object v1, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1}, Landroid/widget/ListView;->getDivider()Landroid/graphics/drawable/Drawable;
 
@@ -1836,7 +1836,7 @@
 
     .line 159
     .restart local v0    # "insetdivider":Landroid/graphics/drawable/InsetDrawable;
-    iget-object v1, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ListView;->setDivider(Landroid/graphics/drawable/Drawable;)V
 
@@ -1857,22 +1857,22 @@
 
     .local v0, "i":I
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mHandwritingLanguageListAdapter:Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mHandwritingLanguageListAdapter:Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
 
-    invoke-virtual {v2}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;->getCount()I
+    invoke-virtual {v2}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;->getCount()I
 
     move-result v2
 
     if-ge v0, v2, :cond_0
 
     .line 211
-    iget-object v2, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mHandwritingLanguageListAdapter:Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mHandwritingLanguageListAdapter:Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
 
-    invoke-virtual {v2, v0}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;->getItem(I)Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    invoke-virtual {v2, v0}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;->getItem(I)Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->getLanguage()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->getLanguage()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1887,7 +1887,7 @@
 
     .line 216
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
+    iget-object v2, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
 
     const/4 v3, 0x1
 
@@ -1982,10 +1982,10 @@
     invoke-static {v0, v1}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 68
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 69
-    invoke-virtual {p0}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1993,10 +1993,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
 
     .line 70
-    invoke-virtual {p0}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2012,7 +2012,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mLinkInfo:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mLinkInfo:Z
 
     .line 71
     return-void
@@ -2044,7 +2044,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mTextView:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mTextView:Landroid/widget/TextView;
 
     .line 77
     const v1, 0x7f0d02f2
@@ -2055,7 +2055,7 @@
 
     check-cast v1, Landroid/widget/ListView;
 
-    iput-object v1, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
+    iput-object v1, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
 
     .line 78
     const v1, 0x7f0d02f4
@@ -2064,9 +2064,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/widget/BottomBarButton;
+    check-cast v1, Lcom/android/settings_ex/widget/BottomBarButton;
 
-    iput-object v1, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mMoreButton:Lcom/android/settings/widget/BottomBarButton;
+    iput-object v1, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mMoreButton:Lcom/android/settings_ex/widget/BottomBarButton;
 
     .line 79
     const v1, 0x7f0d02f3
@@ -2077,35 +2077,35 @@
 
     check-cast v1, Landroid/widget/LinearLayout;
 
-    iput-object v1, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mMoreButtonLayout:Landroid/widget/LinearLayout;
+    iput-object v1, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mMoreButtonLayout:Landroid/widget/LinearLayout;
 
     .line 81
-    iget-object v1, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mMoreButton:Lcom/android/settings/widget/BottomBarButton;
+    iget-object v1, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mMoreButton:Lcom/android/settings_ex/widget/BottomBarButton;
 
     if-eqz v1, :cond_0
 
     .line 82
-    iget-object v1, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mMoreButton:Lcom/android/settings/widget/BottomBarButton;
+    iget-object v1, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mMoreButton:Lcom/android/settings_ex/widget/BottomBarButton;
 
-    new-instance v2, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$1;
+    new-instance v2, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$1;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$1;-><init>(Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$1;-><init>(Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;)V
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/widget/BottomBarButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/widget/BottomBarButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 104
     :cond_0
-    iget-boolean v1, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mLinkInfo:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mLinkInfo:Z
 
     if-nez v1, :cond_1
 
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaHKTWModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaHKTWModel()Z
 
     move-result v1
 
@@ -2113,12 +2113,12 @@
 
     .line 105
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mMoreButtonLayout:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mMoreButtonLayout:Landroid/widget/LinearLayout;
 
     if-eqz v1, :cond_2
 
     .line 106
-    iget-object v1, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mMoreButtonLayout:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mMoreButtonLayout:Landroid/widget/LinearLayout;
 
     const/16 v2, 0x8
 
@@ -2126,7 +2126,7 @@
 
     .line 109
     :cond_2
-    invoke-direct {p0}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->initLayout()V
+    invoke-direct {p0}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->initLayout()V
 
     .line 111
     return-object v0
@@ -2137,7 +2137,7 @@
 
     .prologue
     .line 184
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroy()V
 
     .line 186
     const-string v0, "HandwritingLanguagePreference"
@@ -2155,7 +2155,7 @@
 
     .prologue
     .line 165
-    iget-object v3, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
+    iget-object v3, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v3}, Landroid/widget/ListView;->getCheckedItemPosition()I
 
@@ -2167,22 +2167,22 @@
 
     .line 167
     .local v1, "language":Ljava/lang/String;
-    iget-object v3, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mHandwritingLanguageListAdapter:Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
+    iget-object v3, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mHandwritingLanguageListAdapter:Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
 
-    invoke-virtual {v3}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;->getCount()I
+    invoke-virtual {v3}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;->getCount()I
 
     move-result v3
 
     if-lez v3, :cond_0
 
     .line 168
-    iget-object v3, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mHandwritingLanguageListAdapter:Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
+    iget-object v3, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mHandwritingLanguageListAdapter:Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
 
-    invoke-virtual {v3, v2}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;->getItem(I)Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    invoke-virtual {v3, v2}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;->getItem(I)Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->getLanguage()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->getLanguage()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2211,7 +2211,7 @@
     invoke-static {v3, v4}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 172
-    iget-object v3, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2235,12 +2235,12 @@
     invoke-virtual {v0, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 177
-    iget-object v3, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 179
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 180
     return-void
@@ -2253,14 +2253,14 @@
     const/4 v8, 0x1
 
     .line 115
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 117
     const/4 v0, 0x0
 
     .line 118
-    .local v0, "arrayLanguageInfo":[Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
-    iget-object v5, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
+    .local v0, "arrayLanguageInfo":[Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    iget-object v5, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2274,7 +2274,7 @@
 
     .line 119
     .local v3, "imLanguageList":Ljava/lang/String;
-    iget-object v5, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2288,7 +2288,7 @@
 
     .line 121
     .local v4, "inputMethodId":Ljava/lang/String;
-    iget-object v5, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2311,19 +2311,19 @@
     if-nez v5, :cond_2
 
     .line 124
-    iget-object v5, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
 
-    invoke-static {v5}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->getLocaleInfoAdapter(Landroid/content/Context;)[Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    invoke-static {v5}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->getLocaleInfoAdapter(Landroid/content/Context;)[Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
 
     move-result-object v0
 
     .line 125
-    iget-object v5, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mMoreButtonLayout:Landroid/widget/LinearLayout;
+    iget-object v5, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mMoreButtonLayout:Landroid/widget/LinearLayout;
 
     if-eqz v5, :cond_0
 
     .line 126
-    iget-object v5, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mMoreButtonLayout:Landroid/widget/LinearLayout;
+    iget-object v5, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mMoreButtonLayout:Landroid/widget/LinearLayout;
 
     const/16 v6, 0x8
 
@@ -2332,39 +2332,39 @@
     .line 135
     :cond_0
     :goto_0
-    new-instance v5, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
+    new-instance v5, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
 
-    iget-object v6, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
 
     const v7, 0x7f040125
 
-    invoke-direct {v5, v6, v7, v0}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;-><init>(Landroid/content/Context;I[Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;)V
+    invoke-direct {v5, v6, v7, v0}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;-><init>(Landroid/content/Context;I[Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;)V
 
-    iput-object v5, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mHandwritingLanguageListAdapter:Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
+    iput-object v5, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mHandwritingLanguageListAdapter:Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
 
     .line 138
-    iget-object v5, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
+    iget-object v5, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
 
-    iget-object v6, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mHandwritingLanguageListAdapter:Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
+    iget-object v6, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mHandwritingLanguageListAdapter:Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$HandwritingLanguageListAdapter;
 
     invoke-virtual {v5, v6}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 139
-    iget-object v5, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
+    iget-object v5, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
 
-    iget-object v6, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mOnItemClickListener:Landroid/widget/AdapterView$OnItemClickListener;
+    iget-object v6, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mOnItemClickListener:Landroid/widget/AdapterView$OnItemClickListener;
 
     invoke-virtual {v5, v6}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 140
-    iget-object v5, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
+    iget-object v5, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
 
-    iget-object v6, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mOnKeyListener:Landroid/view/View$OnKeyListener;
+    iget-object v6, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mOnKeyListener:Landroid/view/View$OnKeyListener;
 
     invoke-virtual {v5, v6}, Landroid/widget/ListView;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
     .line 141
-    iget-object v5, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
+    iget-object v5, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v5, v8}, Landroid/widget/ListView;->setChoiceMode(I)V
 
@@ -2372,13 +2372,13 @@
     if-eqz v1, :cond_1
 
     .line 144
-    invoke-direct {p0, v1}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->setListValue(Ljava/lang/String;)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->setListValue(Ljava/lang/String;)V
 
     .line 146
     :cond_1
-    iget-object v5, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mTextView:Landroid/widget/TextView;
+    iget-object v5, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mTextView:Landroid/widget/TextView;
 
-    invoke-direct {p0}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->getDescriptionString()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->getDescriptionString()Ljava/lang/String;
 
     move-result-object v6
 
@@ -2412,9 +2412,9 @@
 
     .line 129
     .local v2, "imLanguage":[Ljava/lang/String;
-    iget-object v5, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
 
-    invoke-static {v5, v2}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->getLocaleInfoAdapter(Landroid/content/Context;[Ljava/lang/String;)[Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    invoke-static {v5, v2}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->getLocaleInfoAdapter(Landroid/content/Context;[Ljava/lang/String;)[Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
 
     move-result-object v0
 
@@ -2432,9 +2432,9 @@
 
     .line 132
     .restart local v2    # "imLanguage":[Ljava/lang/String;
-    iget-object v5, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->mContext:Landroid/content/Context;
 
-    invoke-static {v5, v2}, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;->getLocaleInfoAdapter(Landroid/content/Context;[Ljava/lang/String;)[Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+    invoke-static {v5, v2}, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;->getLocaleInfoAdapter(Landroid/content/Context;[Ljava/lang/String;)[Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
 
     move-result-object v0
 

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;
+.class public Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;
 .super Landroid/app/DialogFragment;
 .source "FingerprintDisclaimerDialog.java"
 
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog$FingerprintDisclaimerDialogListener;
+        Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog$FingerprintDisclaimerDialogListener;
     }
 .end annotation
 
@@ -27,7 +27,7 @@
 
 .field isSbrowserInstalled:Z
 
-.field private listener:Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog$FingerprintDisclaimerDialogListener;
+.field private listener:Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog$FingerprintDisclaimerDialogListener;
 
 .field private mAlertDialog:Landroid/app/AlertDialog;
 
@@ -47,31 +47,31 @@
     invoke-direct {p0}, Landroid/app/DialogFragment;-><init>()V
 
     .line 42
-    iput-boolean v0, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->isFidoInstalled:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->isFidoInstalled:Z
 
     .line 44
-    iput-boolean v0, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->isSbrowserInstalled:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->isSbrowserInstalled:Z
 
     .line 45
-    iput-boolean v0, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->isAlipayInstalled:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->isAlipayInstalled:Z
 
     .line 46
-    iput-boolean v0, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->isSamsungpayInstalled:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->isSamsungpayInstalled:Z
 
     .line 47
-    iput-boolean v0, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->isKioskMode:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->isKioskMode:Z
 
     .line 57
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;)Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog$FingerprintDisclaimerDialogListener;
+.method static synthetic access$000(Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;)Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog$FingerprintDisclaimerDialogListener;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;
 
     .prologue
     .line 31
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->listener:Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog$FingerprintDisclaimerDialogListener;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->listener:Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog$FingerprintDisclaimerDialogListener;
 
     return-object v0
 .end method
@@ -81,55 +81,55 @@
 
     .prologue
     .line 174
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     const-string v3, "com.sec.android.app.sbrowser"
 
-    invoke-static {v2, v3}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v2, v3}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v2
 
-    iput-boolean v2, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->isSbrowserInstalled:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->isSbrowserInstalled:Z
 
     .line 175
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     const-string v3, "com.eg.android.AlipayGphone"
 
-    invoke-static {v2, v3}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v2, v3}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v2
 
-    iput-boolean v2, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->isAlipayInstalled:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->isAlipayInstalled:Z
 
     .line 176
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     const-string v3, "com.samsung.android.samsungpay"
 
-    invoke-static {v2, v3}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v2, v3}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v2
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
     const-string v4, "com.samsung.android.spay"
 
-    invoke-static {v3, v4}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v3, v4}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v3
 
     or-int/2addr v2, v3
 
-    iput-boolean v2, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->isSamsungpayInstalled:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->isSamsungpayInstalled:Z
 
     .line 177
     const-string v0, "&#8226 "
@@ -140,7 +140,7 @@
 
     .line 180
     .local v1, "s":Ljava/lang/String;
-    iget-boolean v2, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->isKioskMode:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->isKioskMode:Z
 
     if-nez v2, :cond_0
 
@@ -157,7 +157,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -183,7 +183,7 @@
 
     .line 184
     :cond_0
-    iget-boolean v2, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->isSbrowserInstalled:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->isSbrowserInstalled:Z
 
     if-eqz v2, :cond_1
 
@@ -200,7 +200,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -238,7 +238,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -257,7 +257,7 @@
     move-result-object v1
 
     .line 191
-    iget-boolean v2, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->isSamsungpayInstalled:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->isSamsungpayInstalled:Z
 
     if-eqz v2, :cond_2
 
@@ -280,7 +280,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -300,11 +300,11 @@
 
     .line 194
     :cond_2
-    iget-boolean v2, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->isAlipayInstalled:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->isAlipayInstalled:Z
 
     if-eqz v2, :cond_3
 
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v2
 
@@ -329,7 +329,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -367,9 +367,9 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 144
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->listener:Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog$FingerprintDisclaimerDialogListener;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->listener:Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog$FingerprintDisclaimerDialogListener;
 
-    invoke-interface {v0}, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog$FingerprintDisclaimerDialogListener;->onCanceDisclaimerDialog()V
+    invoke-interface {v0}, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog$FingerprintDisclaimerDialogListener;->onCanceDisclaimerDialog()V
 
     .line 145
     return-void
@@ -384,14 +384,14 @@
     invoke-super {p0, p1}, Landroid/app/DialogFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 68
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->context:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->context:Landroid/content/Context;
 
     .line 69
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -399,7 +399,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->mSharedPreferences:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     .line 70
     return-void
@@ -424,7 +424,7 @@
 
     .line 82
     .local v2, "dialogView":Landroid/view/View;
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -469,14 +469,14 @@
 
     check-cast v7, Landroid/widget/CheckBox;
 
-    iput-object v7, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->mDoNotShow:Landroid/widget/CheckBox;
+    iput-object v7, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->mDoNotShow:Landroid/widget/CheckBox;
 
     .line 94
-    iget-object v7, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->mDoNotShow:Landroid/widget/CheckBox;
+    iget-object v7, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->mDoNotShow:Landroid/widget/CheckBox;
 
-    new-instance v8, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog$1;
+    new-instance v8, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog$1;
 
-    invoke-direct {v8, p0}, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog$1;-><init>(Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;)V
+    invoke-direct {v8, p0}, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog$1;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;)V
 
     invoke-virtual {v7, v8}, Landroid/widget/CheckBox;->setOnClickListener(Landroid/view/View$OnClickListener;)V
     :try_end_0
@@ -494,7 +494,7 @@
 
     .line 105
     .local v4, "mMessage":Landroid/widget/TextView;
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->makeFingerPrintDescString()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->makeFingerPrintDescString()Ljava/lang/String;
 
     move-result-object v7
 
@@ -507,7 +507,7 @@
     .line 107
     const-string v7, "VZW"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v8
 
@@ -552,7 +552,7 @@
     .local v6, "mVzwDisclaimerMsg":Landroid/widget/TextView;
     const v7, 0x7f0e14ca
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
@@ -570,7 +570,7 @@
     :cond_2
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
@@ -588,9 +588,9 @@
     .line 123
     const v7, 0x7f0e14bf
 
-    new-instance v8, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog$2;
+    new-instance v8, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog$2;
 
-    invoke-direct {v8, p0}, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog$2;-><init>(Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;)V
+    invoke-direct {v8, p0}, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog$2;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;)V
 
     invoke-virtual {v0, v7, v8}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -599,10 +599,10 @@
 
     move-result-object v7
 
-    iput-object v7, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->mAlertDialog:Landroid/app/AlertDialog;
+    iput-object v7, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->mAlertDialog:Landroid/app/AlertDialog;
 
     .line 134
-    iget-object v7, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->mAlertDialog:Landroid/app/AlertDialog;
+    iget-object v7, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->mAlertDialog:Landroid/app/AlertDialog;
 
     goto/16 :goto_0
 
@@ -681,7 +681,7 @@
 
     .prologue
     .line 169
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->context:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->context:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 

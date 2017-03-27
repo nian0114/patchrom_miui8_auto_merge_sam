@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/p2p/WifiP2pDevicePicker$5$1;
+.class Lcom/android/settings_ex/wifi/p2p/WifiP2pDevicePicker$5$1;
 .super Ljava/lang/Object;
 .source "WifiP2pDevicePicker.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/p2p/WifiP2pDevicePicker$5;->onFinish()V
+    value = Lcom/android/settings_ex/wifi/p2p/WifiP2pDevicePicker$5;->onFinish()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/wifi/p2p/WifiP2pDevicePicker$5;
+.field final synthetic this$1:Lcom/android/settings_ex/wifi/p2p/WifiP2pDevicePicker$5;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/p2p/WifiP2pDevicePicker$5;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/p2p/WifiP2pDevicePicker$5;)V
     .locals 0
 
     .prologue
     .line 640
-    iput-object p1, p0, Lcom/android/settings/wifi/p2p/WifiP2pDevicePicker$5$1;->this$1:Lcom/android/settings/wifi/p2p/WifiP2pDevicePicker$5;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDevicePicker$5$1;->this$1:Lcom/android/settings_ex/wifi/p2p/WifiP2pDevicePicker$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

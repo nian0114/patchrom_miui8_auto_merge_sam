@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;
+.class public Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;
 .super Landroid/app/DialogFragment;
 .source "FingerprintSamsungAccountDialog.java"
 
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog$SamsungAccountDialogFragmentListener;
+        Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog$SamsungAccountDialogFragmentListener;
     }
 .end annotation
 
@@ -17,7 +17,7 @@
 # instance fields
 .field private context:Landroid/content/Context;
 
-.field private listener:Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog$SamsungAccountDialogFragmentListener;
+.field private listener:Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog$SamsungAccountDialogFragmentListener;
 
 .field private mAlertDialog:Landroid/app/AlertDialog;
 
@@ -36,13 +36,13 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;)Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog$SamsungAccountDialogFragmentListener;
+.method static synthetic access$000(Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;)Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog$SamsungAccountDialogFragmentListener;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;
 
     .prologue
     .line 35
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;->listener:Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog$SamsungAccountDialogFragmentListener;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;->listener:Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog$SamsungAccountDialogFragmentListener;
 
     return-object v0
 .end method
@@ -62,9 +62,9 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 97
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;->listener:Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog$SamsungAccountDialogFragmentListener;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;->listener:Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog$SamsungAccountDialogFragmentListener;
 
-    invoke-interface {v0}, Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog$SamsungAccountDialogFragmentListener;->onCancelSamsungAccountDialog()V
+    invoke-interface {v0}, Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog$SamsungAccountDialogFragmentListener;->onCancelSamsungAccountDialog()V
 
     .line 98
     return-void
@@ -79,14 +79,14 @@
     invoke-super {p0, p1}, Landroid/app/DialogFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 53
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;->context:Landroid/content/Context;
+    iput-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;->context:Landroid/content/Context;
 
     .line 54
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -94,10 +94,10 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;->mSharedPreferences:Landroid/content/SharedPreferences;
+    iput-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     .line 56
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;->mSharedPreferences:Landroid/content/SharedPreferences;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -133,7 +133,7 @@
     .line 70
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -153,9 +153,9 @@
 
     const v1, 0x104000a
 
-    new-instance v2, Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog$2;
+    new-instance v2, Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog$2;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog$2;-><init>(Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog$2;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -163,9 +163,9 @@
 
     const/high16 v1, 0x1040000
 
-    new-instance v2, Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog$1;
+    new-instance v2, Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog$1;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog$1;-><init>(Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog$1;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -175,10 +175,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;->mAlertDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;->mAlertDialog:Landroid/app/AlertDialog;
 
     .line 87
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;->mAlertDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;->mAlertDialog:Landroid/app/AlertDialog;
 
     return-object v0
 .end method

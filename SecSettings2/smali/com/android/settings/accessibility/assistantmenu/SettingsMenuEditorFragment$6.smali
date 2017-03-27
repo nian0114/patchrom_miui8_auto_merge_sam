@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$6;
+.class Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$6;
 .super Ljava/lang/Object;
 .source "SettingsMenuEditorFragment.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    value = Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
     .locals 0
 
     .prologue
     .line 498
-    iput-object p1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$6;->this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$6;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -54,10 +54,10 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$6;->this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$6;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
-    # getter for: Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
-    invoke-static {v2}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->access$1700(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)I
+    # getter for: Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
+    invoke-static {v2}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->access$1700(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)I
 
     move-result v2
 
@@ -71,10 +71,10 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$6;->this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$6;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
-    # getter for: Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsTranslateAnimationEnd:Z
-    invoke-static {v2}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->access$1100(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)Z
+    # getter for: Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsTranslateAnimationEnd:Z
+    invoke-static {v2}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->access$1100(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)Z
 
     move-result v2
 
@@ -89,10 +89,10 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 515
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$6;->this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$6;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
-    # getter for: Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mSettingsMenuEditorHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->access$900(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mSettingsMenuEditorHandler:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->access$900(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -101,10 +101,10 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 517
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$6;->this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$6;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
-    # invokes: Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->AfterTranslateAnimationEnd()V
-    invoke-static {v0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->access$100(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
+    # invokes: Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->AfterTranslateAnimationEnd()V
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->access$100(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
 
     .line 518
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/SettingsActivity$5;
+.class Lcom/android/settings_ex/SettingsActivity$5;
 .super Ljava/lang/Object;
 .source "SettingsActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/SettingsActivity;->onPostResume()V
+    value = Lcom/android/settings_ex/SettingsActivity;->onPostResume()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/SettingsActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/SettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/SettingsActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/SettingsActivity;)V
     .locals 0
 
     .prologue
     .line 1117
-    iput-object p1, p0, Lcom/android/settings/SettingsActivity$5;->this$0:Lcom/android/settings/SettingsActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/SettingsActivity$5;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -62,8 +62,8 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 1125
-    # getter for: Lcom/android/settings/SettingsActivity;->mContext:Landroid/content/Context;
-    invoke-static {}, Lcom/android/settings/SettingsActivity;->access$100()Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/SettingsActivity;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/android/settings_ex/SettingsActivity;->access$100()Landroid/content/Context;
 
     move-result-object v1
 

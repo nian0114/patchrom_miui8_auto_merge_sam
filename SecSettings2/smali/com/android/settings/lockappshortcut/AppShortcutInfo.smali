@@ -1,4 +1,4 @@
-.class Lcom/android/settings/lockappshortcut/AppShortcutInfo;
+.class Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo;
 .super Ljava/lang/Object;
 .source "AppShortcutInfo.java"
 
@@ -6,18 +6,18 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;,
-        Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppListItem;
+        Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;,
+        Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppListItem;
     }
 .end annotation
 
 
 # direct methods
-.method public static getApplicationInfo(Landroid/content/Context;ILcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;)Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;
+.method public static getApplicationInfo(Landroid/content/Context;ILcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;)Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;
     .locals 13
     .param p0, "context"    # Landroid/content/Context;
     .param p1, "index"    # I
-    .param p2, "appInfo"    # Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;
+    .param p2, "appInfo"    # Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;
 
     .prologue
     const/4 v12, 0x0
@@ -62,13 +62,13 @@
     const/4 p2, 0x0
 
     .line 103
-    .end local p2    # "appInfo":Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;
+    .end local p2    # "appInfo":Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;
     :cond_1
     :goto_0
     return-object p2
 
     .line 73
-    .restart local p2    # "appInfo":Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;
+    .restart local p2    # "appInfo":Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;
     :cond_2
     const/16 v10, 0x2f
 
@@ -130,14 +130,14 @@
 
     check-cast v10, Ljava/lang/String;
 
-    iput-object v10, p2, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->mLabel:Ljava/lang/String;
+    iput-object v10, p2, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->mLabel:Ljava/lang/String;
 
     .line 83
-    invoke-static {p0, v8}, Lcom/android/settings/Utils;->isEnabledPkg(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v8}, Lcom/android/settings_ex/Utils;->isEnabledPkg(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v10
 
-    iput-boolean v10, p2, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->isActive:Z
+    iput-boolean v10, p2, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->isActive:Z
 
     .line 84
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -152,7 +152,7 @@
 
     move-result-object v10
 
-    iput-object v10, p2, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->mIcon:Landroid/graphics/drawable/Drawable;
+    iput-object v10, p2, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->mIcon:Landroid/graphics/drawable/Drawable;
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
 
@@ -187,14 +187,14 @@
 
     check-cast v10, Ljava/lang/String;
 
-    iput-object v10, p2, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->mLabel:Ljava/lang/String;
+    iput-object v10, p2, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->mLabel:Ljava/lang/String;
 
     .line 95
-    invoke-static {p0, v8}, Lcom/android/settings/Utils;->isEnabledPkg(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v8}, Lcom/android/settings_ex/Utils;->isEnabledPkg(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v10
 
-    iput-boolean v10, p2, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->isActive:Z
+    iput-boolean v10, p2, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->isActive:Z
 
     .line 96
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -209,7 +209,7 @@
 
     move-result-object v10
 
-    iput-object v10, p2, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->mIcon:Landroid/graphics/drawable/Drawable;
+    iput-object v10, p2, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->mIcon:Landroid/graphics/drawable/Drawable;
     :try_end_1
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
 

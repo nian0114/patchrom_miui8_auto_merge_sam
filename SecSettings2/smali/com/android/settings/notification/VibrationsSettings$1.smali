@@ -1,11 +1,11 @@
-.class Lcom/android/settings/notification/VibrationsSettings$1;
+.class Lcom/android/settings_ex/notification/VibrationsSettings$1;
 .super Landroid/content/BroadcastReceiver;
 .source "VibrationsSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/VibrationsSettings;
+    value = Lcom/android/settings_ex/notification/VibrationsSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/VibrationsSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/VibrationsSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/notification/VibrationsSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/notification/VibrationsSettings;)V
     .locals 0
 
     .prologue
     .line 80
-    iput-object p1, p0, Lcom/android/settings/notification/VibrationsSettings$1;->this$0:Lcom/android/settings/notification/VibrationsSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/VibrationsSettings$1;->this$0:Lcom/android/settings_ex/notification/VibrationsSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -214,20 +214,20 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 100
-    iget-object v3, p0, Lcom/android/settings/notification/VibrationsSettings$1;->this$0:Lcom/android/settings/notification/VibrationsSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/VibrationsSettings$1;->this$0:Lcom/android/settings_ex/notification/VibrationsSettings;
 
-    # getter for: Lcom/android/settings/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
-    invoke-static {v3}, Lcom/android/settings/notification/VibrationsSettings;->access$000(Lcom/android/settings/notification/VibrationsSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
+    invoke-static {v3}, Lcom/android/settings_ex/notification/VibrationsSettings;->access$000(Lcom/android/settings_ex/notification/VibrationsSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v3
 
     if-eqz v3, :cond_3
 
     .line 101
-    iget-object v3, p0, Lcom/android/settings/notification/VibrationsSettings$1;->this$0:Lcom/android/settings/notification/VibrationsSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/VibrationsSettings$1;->this$0:Lcom/android/settings_ex/notification/VibrationsSettings;
 
-    # getter for: Lcom/android/settings/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
-    invoke-static {v3}, Lcom/android/settings/notification/VibrationsSettings;->access$000(Lcom/android/settings/notification/VibrationsSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
+    invoke-static {v3}, Lcom/android/settings_ex/notification/VibrationsSettings;->access$000(Lcom/android/settings_ex/notification/VibrationsSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v3
 
@@ -235,20 +235,20 @@
 
     .line 103
     :cond_3
-    iget-object v3, p0, Lcom/android/settings/notification/VibrationsSettings$1;->this$0:Lcom/android/settings/notification/VibrationsSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/VibrationsSettings$1;->this$0:Lcom/android/settings_ex/notification/VibrationsSettings;
 
-    # getter for: Lcom/android/settings/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
-    invoke-static {v3}, Lcom/android/settings/notification/VibrationsSettings;->access$100(Lcom/android/settings/notification/VibrationsSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
+    invoke-static {v3}, Lcom/android/settings_ex/notification/VibrationsSettings;->access$100(Lcom/android/settings_ex/notification/VibrationsSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
     .line 104
-    iget-object v3, p0, Lcom/android/settings/notification/VibrationsSettings$1;->this$0:Lcom/android/settings/notification/VibrationsSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/VibrationsSettings$1;->this$0:Lcom/android/settings_ex/notification/VibrationsSettings;
 
-    # getter for: Lcom/android/settings/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
-    invoke-static {v3}, Lcom/android/settings/notification/VibrationsSettings;->access$100(Lcom/android/settings/notification/VibrationsSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
+    invoke-static {v3}, Lcom/android/settings_ex/notification/VibrationsSettings;->access$100(Lcom/android/settings_ex/notification/VibrationsSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v3
 
@@ -265,20 +265,20 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 111
-    iget-object v3, p0, Lcom/android/settings/notification/VibrationsSettings$1;->this$0:Lcom/android/settings/notification/VibrationsSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/VibrationsSettings$1;->this$0:Lcom/android/settings_ex/notification/VibrationsSettings;
 
-    # getter for: Lcom/android/settings/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
-    invoke-static {v3}, Lcom/android/settings/notification/VibrationsSettings;->access$000(Lcom/android/settings/notification/VibrationsSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
+    invoke-static {v3}, Lcom/android/settings_ex/notification/VibrationsSettings;->access$000(Lcom/android/settings_ex/notification/VibrationsSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v3
 
     if-eqz v3, :cond_4
 
     .line 112
-    iget-object v3, p0, Lcom/android/settings/notification/VibrationsSettings$1;->this$0:Lcom/android/settings/notification/VibrationsSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/VibrationsSettings$1;->this$0:Lcom/android/settings_ex/notification/VibrationsSettings;
 
-    # getter for: Lcom/android/settings/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
-    invoke-static {v3}, Lcom/android/settings/notification/VibrationsSettings;->access$000(Lcom/android/settings/notification/VibrationsSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/notification/VibrationsSettings;->mVibrationOnTouch:Landroid/preference/SwitchPreference;
+    invoke-static {v3}, Lcom/android/settings_ex/notification/VibrationsSettings;->access$000(Lcom/android/settings_ex/notification/VibrationsSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v3
 
@@ -286,20 +286,20 @@
 
     .line 114
     :cond_4
-    iget-object v3, p0, Lcom/android/settings/notification/VibrationsSettings$1;->this$0:Lcom/android/settings/notification/VibrationsSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/VibrationsSettings$1;->this$0:Lcom/android/settings_ex/notification/VibrationsSettings;
 
-    # getter for: Lcom/android/settings/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
-    invoke-static {v3}, Lcom/android/settings/notification/VibrationsSettings;->access$100(Lcom/android/settings/notification/VibrationsSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
+    invoke-static {v3}, Lcom/android/settings_ex/notification/VibrationsSettings;->access$100(Lcom/android/settings_ex/notification/VibrationsSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
     .line 115
-    iget-object v3, p0, Lcom/android/settings/notification/VibrationsSettings$1;->this$0:Lcom/android/settings/notification/VibrationsSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/VibrationsSettings$1;->this$0:Lcom/android/settings_ex/notification/VibrationsSettings;
 
-    # getter for: Lcom/android/settings/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
-    invoke-static {v3}, Lcom/android/settings/notification/VibrationsSettings;->access$100(Lcom/android/settings/notification/VibrationsSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/notification/VibrationsSettings;->mKeyboardVibration:Landroid/preference/SwitchPreference;
+    invoke-static {v3}, Lcom/android/settings_ex/notification/VibrationsSettings;->access$100(Lcom/android/settings_ex/notification/VibrationsSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v3
 

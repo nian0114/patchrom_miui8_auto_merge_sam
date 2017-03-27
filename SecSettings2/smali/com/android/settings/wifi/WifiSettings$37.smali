@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wifi/WifiSettings$37;
+.class Lcom/android/settings_ex/wifi/WifiSettings$37;
 .super Landroid/database/ContentObserver;
 .source "WifiSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiSettings;
+    value = Lcom/android/settings_ex/wifi/WifiSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSettings;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSettings;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 6022
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSettings$37;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSettings$37;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -40,9 +40,9 @@
 
     .prologue
     .line 6024
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings$37;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSettings$37;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/wifi/WifiSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/wifi/WifiSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 

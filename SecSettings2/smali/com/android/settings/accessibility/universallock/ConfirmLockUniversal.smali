@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+.class public Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 .super Landroid/app/Activity;
 .source "ConfirmLockUniversal.java"
 
@@ -6,8 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$12;,
-        Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;
+        Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$12;,
+        Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;
     }
 .end annotation
 
@@ -107,7 +107,7 @@
 
 .field private mStepCircleUp:Landroid/graphics/Bitmap;
 
-.field private mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+.field private mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
 .field private playBeep:Z
 
@@ -135,268 +135,268 @@
     .line 138
     const/16 v0, 0x50
 
-    iput v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->ARROW_STEPCIRCLE_THRESHOLD:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->ARROW_STEPCIRCLE_THRESHOLD:I
 
     .line 139
     const/16 v0, 0xc8
 
-    iput v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->ANIMATION_DURATION:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->ANIMATION_DURATION:I
 
     .line 160
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mEmptyString:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mEmptyString:Ljava/lang/String;
 
     .line 161
-    iput-boolean v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mFlgToChkConfChng:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mFlgToChkConfChng:Z
 
     .line 162
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mEmptyString:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mEmptyString:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mCurrentPwd:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mCurrentPwd:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mEmptyString:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mEmptyString:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mHeaderString:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mHeaderString:Ljava/lang/String;
 
     .line 163
-    iput v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNumWrongAttempt:I
+    iput v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNumWrongAttempt:I
 
     .line 164
-    iput-boolean v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mLeftBtnState:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mLeftBtnState:Z
 
-    iput-boolean v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mRightBtnState:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mRightBtnState:Z
 
     .line 218
-    new-instance v0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$1;
+    new-instance v0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$1;-><init>(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$1;-><init>(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->_listener:Lcom/android/internal/widget/DirectionLockTouchListener;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->_listener:Lcom/android/internal/widget/DirectionLockTouchListener;
 
     .line 940
-    new-instance v0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$10;
+    new-instance v0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$10;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$10;-><init>(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$10;-><init>(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mClearPatternRunnable:Ljava/lang/Runnable;
-
-    return-void
-.end method
-
-.method static synthetic access$000(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)Lcom/android/internal/widget/DirectionLockView;
-    .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
-
-    .prologue
-    .line 87
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
-
-    return-object v0
-.end method
-
-.method static synthetic access$100(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)Landroid/widget/TextView;
-    .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
-
-    .prologue
-    .line 87
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
-
-    return-object v0
-.end method
-
-.method static synthetic access$1000(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)Ljava/util/ArrayList;
-    .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
-
-    .prologue
-    .line 87
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyStepCircleList:Ljava/util/ArrayList;
-
-    return-object v0
-.end method
-
-.method static synthetic access$1100(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)Landroid/graphics/drawable/Drawable;
-    .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
-
-    .prologue
-    .line 87
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyCircleDrawable:Landroid/graphics/drawable/Drawable;
-
-    return-object v0
-.end method
-
-.method static synthetic access$1200(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)Landroid/widget/ImageView;
-    .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
-
-    .prologue
-    .line 87
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mOldStepCircle:Landroid/widget/ImageView;
-
-    return-object v0
-.end method
-
-.method static synthetic access$1300(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)V
-    .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
-
-    .prologue
-    .line 87
-    invoke-direct {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->clearStepCircles()V
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mClearPatternRunnable:Ljava/lang/Runnable;
 
     return-void
 .end method
 
-.method static synthetic access$1400(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)V
-    .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+.method static synthetic access$000(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)Lcom/android/internal/widget/DirectionLockView;
+    .locals 1
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
     .prologue
     .line 87
-    invoke-direct {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->checkForCorrectPassword()V
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+
+    return-object v0
+.end method
+
+.method static synthetic access$100(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)Landroid/widget/TextView;
+    .locals 1
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
+
+    .prologue
+    .line 87
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1000(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)Ljava/util/ArrayList;
+    .locals 1
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
+
+    .prologue
+    .line 87
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyStepCircleList:Ljava/util/ArrayList;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1100(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)Landroid/graphics/drawable/Drawable;
+    .locals 1
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
+
+    .prologue
+    .line 87
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyCircleDrawable:Landroid/graphics/drawable/Drawable;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1200(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)Landroid/widget/ImageView;
+    .locals 1
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
+
+    .prologue
+    .line 87
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mOldStepCircle:Landroid/widget/ImageView;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1300(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)V
+    .locals 0
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
+
+    .prologue
+    .line 87
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->clearStepCircles()V
 
     return-void
 .end method
 
-.method static synthetic access$1502(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;Landroid/os/AsyncTask;)Landroid/os/AsyncTask;
+.method static synthetic access$1400(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
+
+    .prologue
+    .line 87
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->checkForCorrectPassword()V
+
+    return-void
+.end method
+
+.method static synthetic access$1502(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;Landroid/os/AsyncTask;)Landroid/os/AsyncTask;
+    .locals 0
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
     .param p1, "x1"    # Landroid/os/AsyncTask;
 
     .prologue
     .line 87
-    iput-object p1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mPendingLockCheck:Landroid/os/AsyncTask;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mPendingLockCheck:Landroid/os/AsyncTask;
 
     return-object p1
 .end method
 
-.method static synthetic access$1600(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;ZLandroid/content/Intent;I)V
+.method static synthetic access$1600(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;ZLandroid/content/Intent;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
     .param p1, "x1"    # Z
     .param p2, "x2"    # Landroid/content/Intent;
     .param p3, "x3"    # I
 
     .prologue
     .line 87
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->onDirectionChecking(ZLandroid/content/Intent;I)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->onDirectionChecking(ZLandroid/content/Intent;I)V
 
     return-void
 .end method
 
-.method static synthetic access$1702(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;I)I
+.method static synthetic access$1702(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;I)I
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
     .param p1, "x1"    # I
 
     .prologue
     .line 87
-    iput p1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNumWrongConfirmAttempts:I
+    iput p1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNumWrongConfirmAttempts:I
 
     return p1
 .end method
 
-.method static synthetic access$1800(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;)V
+.method static synthetic access$1800(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
-    .param p1, "x1"    # Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
+    .param p1, "x1"    # Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;
 
     .prologue
     .line 87
-    invoke-direct {p0, p1}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->updateStage(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->updateStage(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;)V
 
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+.method static synthetic access$200(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
     .prologue
     .line 87
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)Landroid/widget/Button;
+.method static synthetic access$300(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)Landroid/widget/Button;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
     .prologue
     .line 87
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mLeftButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mLeftButton:Landroid/widget/Button;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)Landroid/widget/Button;
+.method static synthetic access$400(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)Landroid/widget/Button;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
     .prologue
     .line 87
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mRightButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mRightButton:Landroid/widget/Button;
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)Landroid/widget/ImageView;
+.method static synthetic access$500(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)Landroid/widget/ImageView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
     .prologue
     .line 87
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionImageView:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionImageView:Landroid/widget/ImageView;
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)Landroid/view/animation/AlphaAnimation;
+.method static synthetic access$600(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)Landroid/view/animation/AlphaAnimation;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
     .prologue
     .line 87
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mOutgoingArrowAnimator:Landroid/view/animation/AlphaAnimation;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mOutgoingArrowAnimator:Landroid/view/animation/AlphaAnimation;
 
     return-object v0
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;Ljava/lang/String;Z)V
+.method static synthetic access$700(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;Ljava/lang/String;Z)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
     .param p1, "x1"    # Ljava/lang/String;
     .param p2, "x2"    # Z
 
     .prologue
     .line 87
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->handleStepCircle(Ljava/lang/String;Z)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->handleStepCircle(Ljava/lang/String;Z)V
 
     return-void
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)Landroid/widget/ImageView;
+.method static synthetic access$800(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)Landroid/widget/ImageView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
     .prologue
     .line 87
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
 
     return-object v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)Landroid/widget/LinearLayout;
+.method static synthetic access$900(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)Landroid/widget/LinearLayout;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
     .prologue
     .line 87
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleLayout:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleLayout:Landroid/widget/LinearLayout;
 
     return-object v0
 .end method
@@ -413,27 +413,27 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 553
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mLeftButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mLeftButton:Landroid/widget/Button;
 
-    new-instance v1, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$6;
+    new-instance v1, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$6;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$6;-><init>(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$6;-><init>(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 573
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mRightButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mRightButton:Landroid/widget/Button;
 
-    new-instance v1, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$7;
+    new-instance v1, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$7;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$7;-><init>(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$7;-><init>(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 580
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->topLayout:Lcom/android/internal/widget/LinearLayoutWithDefaultTouchRecepient;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->topLayout:Lcom/android/internal/widget/LinearLayoutWithDefaultTouchRecepient;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/LinearLayoutWithDefaultTouchRecepient;->setDefaultTouchRecepient(Landroid/view/View;)V
 
@@ -446,7 +446,7 @@
 
     .prologue
     .line 693
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -492,7 +492,7 @@
     if-eqz v1, :cond_0
 
     .line 698
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-virtual {v2}, Lcom/android/internal/widget/DirectionLockView;->getCurrentPasswordNumbers()Ljava/lang/String;
 
@@ -502,7 +502,7 @@
 
     move-result-object v2
 
-    invoke-direct {p0, v2, v0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->startVerifyPattern(Ljava/util/List;Landroid/content/Intent;)V
+    invoke-direct {p0, v2, v0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->startVerifyPattern(Ljava/util/List;Landroid/content/Intent;)V
 
     .line 707
     :goto_0
@@ -510,7 +510,7 @@
 
     .line 703
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-virtual {v2}, Lcom/android/internal/widget/DirectionLockView;->getCurrentPasswordNumbers()Ljava/lang/String;
 
@@ -520,7 +520,7 @@
 
     move-result-object v2
 
-    invoke-direct {p0, v2, v0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->startCheckPattern(Ljava/util/List;Landroid/content/Intent;)V
+    invoke-direct {p0, v2, v0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->startCheckPattern(Ljava/util/List;Landroid/content/Intent;)V
 
     goto :goto_0
 .end method
@@ -539,11 +539,11 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 603
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isStarted()Z
 
@@ -552,17 +552,17 @@
     if-eqz v0, :cond_0
 
     .line 604
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
     .line 606
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isStarted()Z
 
@@ -571,28 +571,28 @@
     if-eqz v0, :cond_1
 
     .line 607
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
     .line 609
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleLayout:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleLayout:Landroid/widget/LinearLayout;
 
     if-eqz v0, :cond_2
 
     .line 610
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleLayout:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->removeAllViews()V
 
     .line 611
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyStepCircleList:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyStepCircleList:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyStepCircleList:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyStepCircleList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -601,16 +601,16 @@
     if-nez v0, :cond_3
 
     .line 612
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyStepCircleList:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyStepCircleList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     .line 614
     :cond_3
-    iput-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
 
     .line 615
-    iput-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mOldStepCircle:Landroid/widget/ImageView;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mOldStepCircle:Landroid/widget/ImageView;
 
     .line 616
     return-void
@@ -621,11 +621,11 @@
 
     .prologue
     .line 736
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isStarted()Z
 
@@ -634,17 +634,17 @@
     if-eqz v0, :cond_0
 
     .line 737
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
     .line 739
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isStarted()Z
 
@@ -653,7 +653,7 @@
     if-eqz v0, :cond_1
 
     .line 740
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
@@ -676,59 +676,59 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1014
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleDown:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleDown:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
     .line 1015
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleDown:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleDown:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
     .line 1016
-    iput-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleDown:Landroid/graphics/Bitmap;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleDown:Landroid/graphics/Bitmap;
 
     .line 1019
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleUp:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleUp:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_1
 
     .line 1020
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleUp:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleUp:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
     .line 1021
-    iput-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleUp:Landroid/graphics/Bitmap;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleUp:Landroid/graphics/Bitmap;
 
     .line 1024
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleLeft:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleLeft:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_2
 
     .line 1025
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleLeft:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleLeft:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
     .line 1026
-    iput-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleLeft:Landroid/graphics/Bitmap;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleLeft:Landroid/graphics/Bitmap;
 
     .line 1029
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleRight:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleRight:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_3
 
     .line 1030
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleRight:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleRight:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
     .line 1031
-    iput-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleRight:Landroid/graphics/Bitmap;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleRight:Landroid/graphics/Bitmap;
 
     .line 1033
     :cond_3
@@ -748,9 +748,9 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 971
-    sget-object v0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;->LockedOut:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;
+    sget-object v0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;->LockedOut:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;
 
-    invoke-direct {p0, v0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->updateStage(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->updateStage(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;)V
 
     .line 972
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -759,7 +759,7 @@
 
     .line 973
     .local v6, "elapsedRealtime":J
-    new-instance v0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$11;
+    new-instance v0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$11;
 
     sub-long v2, p1, v6
 
@@ -767,13 +767,13 @@
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$11;-><init>(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;JJ)V
+    invoke-direct/range {v0 .. v5}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$11;-><init>(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;JJ)V
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$11;->start()Landroid/os/CountDownTimer;
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$11;->start()Landroid/os/CountDownTimer;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mCountdownTimer:Landroid/os/CountDownTimer;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mCountdownTimer:Landroid/os/CountDownTimer;
 
     .line 1009
     return-void
@@ -801,16 +801,16 @@
 
     .line 754
     .local v0, "mNewStepCircleBitmap":Landroid/graphics/Bitmap;
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
 
     if-eqz v1, :cond_1
 
     .line 755
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v1}, Landroid/animation/ValueAnimator;->isStarted()Z
 
@@ -819,29 +819,29 @@
     if-eqz v1, :cond_0
 
     .line 756
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v1}, Landroid/animation/ValueAnimator;->cancel()V
 
     .line 758
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mOldStepCircle:Landroid/widget/ImageView;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mOldStepCircle:Landroid/widget/ImageView;
 
     .line 759
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyStepCircleList:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyStepCircleList:Ljava/util/ArrayList;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mOldStepCircle:Landroid/widget/ImageView;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mOldStepCircle:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 761
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v1}, Landroid/animation/ValueAnimator;->isStarted()Z
 
@@ -850,7 +850,7 @@
     if-eqz v1, :cond_1
 
     .line 762
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v1}, Landroid/animation/ValueAnimator;->cancel()V
 
@@ -858,13 +858,13 @@
     :cond_1
     new-instance v1, Landroid/widget/ImageView;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v3
 
     invoke-direct {v1, v3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
 
     .line 767
     const/4 v1, -0x1
@@ -938,38 +938,38 @@
 
     .line 769
     :pswitch_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleUp:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleUp:Landroid/graphics/Bitmap;
 
     .line 784
     :goto_2
     if-eqz p2, :cond_3
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mOldStepCircle:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mOldStepCircle:Landroid/widget/ImageView;
 
     if-eqz v1, :cond_3
 
     .line 785
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mOldStepCircle:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mOldStepCircle:Landroid/widget/ImageView;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyCircleDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyCircleDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 787
     :cond_3
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreenCircleDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreenCircleDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 788
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     .line 790
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -977,10 +977,10 @@
 
     check-cast v1, Landroid/widget/LinearLayout$LayoutParams;
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->stepCircleLayoutParams:Landroid/widget/LinearLayout$LayoutParams;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->stepCircleLayoutParams:Landroid/widget/LinearLayout$LayoutParams;
 
     .line 793
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->stepCircleLayoutParams:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->stepCircleLayoutParams:Landroid/widget/LinearLayout$LayoutParams;
 
     if-nez v1, :cond_4
 
@@ -989,22 +989,22 @@
 
     invoke-direct {v1, v4, v4}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->stepCircleLayoutParams:Landroid/widget/LinearLayout$LayoutParams;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->stepCircleLayoutParams:Landroid/widget/LinearLayout$LayoutParams;
 
     .line 798
     :cond_4
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->stepCircleLayoutParams:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->stepCircleLayoutParams:Landroid/widget/LinearLayout$LayoutParams;
 
-    iget v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_LEFT_MARGIN:I
+    iget v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_LEFT_MARGIN:I
 
-    iget v4, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_RIGHT_MARGIN:I
+    iget v4, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_RIGHT_MARGIN:I
 
     invoke-virtual {v1, v3, v2, v4, v2}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
 
     .line 799
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->stepCircleLayoutParams:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->stepCircleLayoutParams:Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -1012,36 +1012,36 @@
     if-nez p2, :cond_5
 
     .line 802
-    invoke-direct {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->performAnimations()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->performAnimations()V
 
     goto :goto_1
 
     .line 772
     :pswitch_1
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleLeft:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleLeft:Landroid/graphics/Bitmap;
 
     .line 773
     goto :goto_2
 
     .line 775
     :pswitch_2
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleRight:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleRight:Landroid/graphics/Bitmap;
 
     .line 776
     goto :goto_2
 
     .line 778
     :pswitch_3
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleDown:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleDown:Landroid/graphics/Bitmap;
 
     .line 779
     goto :goto_2
 
     .line 804
     :cond_5
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleLayout:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleLayout:Landroid/widget/LinearLayout;
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
@@ -1091,17 +1091,17 @@
 
     invoke-direct {v2, v8, v6}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mOutgoingArrowAnimator:Landroid/view/animation/AlphaAnimation;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mOutgoingArrowAnimator:Landroid/view/animation/AlphaAnimation;
 
     .line 375
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mOutgoingArrowAnimator:Landroid/view/animation/AlphaAnimation;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mOutgoingArrowAnimator:Landroid/view/animation/AlphaAnimation;
 
     invoke-virtual {v2, v7}, Landroid/view/animation/AlphaAnimation;->setFillAfter(Z)V
 
     .line 376
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mOutgoingArrowAnimator:Landroid/view/animation/AlphaAnimation;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mOutgoingArrowAnimator:Landroid/view/animation/AlphaAnimation;
 
-    iget v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->ANIMATION_DURATION:I
+    iget v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->ANIMATION_DURATION:I
 
     int-to-long v4, v3
 
@@ -1112,19 +1112,19 @@
 
     invoke-direct {v2, v6, v8}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mIncomingArrowAnimator:Landroid/view/animation/AlphaAnimation;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mIncomingArrowAnimator:Landroid/view/animation/AlphaAnimation;
 
     .line 380
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mIncomingArrowAnimator:Landroid/view/animation/AlphaAnimation;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mIncomingArrowAnimator:Landroid/view/animation/AlphaAnimation;
 
-    iget v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->ANIMATION_DURATION:I
+    iget v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->ANIMATION_DURATION:I
 
     int-to-long v4, v3
 
     invoke-virtual {v2, v4, v5}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
     .line 381
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mIncomingArrowAnimator:Landroid/view/animation/AlphaAnimation;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mIncomingArrowAnimator:Landroid/view/animation/AlphaAnimation;
 
     invoke-virtual {v2, v7}, Landroid/view/animation/AlphaAnimation;->setFillAfter(Z)V
 
@@ -1137,10 +1137,10 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
 
     .line 385
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v3, Landroid/view/animation/interpolator/SineInOut80;
 
@@ -1149,22 +1149,22 @@
     invoke-virtual {v2, v3}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
     .line 386
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
 
-    iget v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->ANIMATION_DURATION:I
+    iget v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->ANIMATION_DURATION:I
 
     int-to-long v4, v3
 
     invoke-virtual {v2, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     .line 387
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
 
-    iget v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->ANIMATION_DURATION:I
+    iget v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->ANIMATION_DURATION:I
 
     div-int/lit8 v3, v3, 0x64
 
-    iget v4, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->ARROW_STEPCIRCLE_THRESHOLD:I
+    iget v4, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->ARROW_STEPCIRCLE_THRESHOLD:I
 
     mul-int/2addr v3, v4
 
@@ -1173,25 +1173,25 @@
     invoke-virtual {v2, v4, v5}, Landroid/animation/ValueAnimator;->setStartDelay(J)V
 
     .line 389
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
 
-    new-instance v3, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$2;
+    new-instance v3, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$2;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$2;-><init>(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$2;-><init>(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)V
 
     invoke-virtual {v2, v3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     .line 398
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
 
-    new-instance v3, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$3;
+    new-instance v3, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$3;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$3;-><init>(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$3;-><init>(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)V
 
     invoke-virtual {v2, v3}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
     .line 421
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1201,7 +1201,7 @@
 
     move-result v2
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -1213,7 +1213,7 @@
 
     add-float/2addr v2, v3
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -1247,25 +1247,25 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
 
     .line 427
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
 
-    iget v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->ANIMATION_DURATION:I
+    iget v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->ANIMATION_DURATION:I
 
     int-to-long v4, v3
 
     invoke-virtual {v2, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     .line 428
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
 
-    iget v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->ANIMATION_DURATION:I
+    iget v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->ANIMATION_DURATION:I
 
     div-int/lit8 v3, v3, 0x64
 
-    iget v4, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->ARROW_STEPCIRCLE_THRESHOLD:I
+    iget v4, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->ARROW_STEPCIRCLE_THRESHOLD:I
 
     mul-int/2addr v3, v4
 
@@ -1274,20 +1274,20 @@
     invoke-virtual {v2, v4, v5}, Landroid/animation/ValueAnimator;->setStartDelay(J)V
 
     .line 429
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
 
-    new-instance v3, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$4;
+    new-instance v3, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$4;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$4;-><init>(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$4;-><init>(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)V
 
     invoke-virtual {v2, v3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     .line 443
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
 
-    new-instance v3, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$5;
+    new-instance v3, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$5;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$5;-><init>(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$5;-><init>(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)V
 
     invoke-virtual {v2, v3}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -1316,75 +1316,75 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 304
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->_listener:Lcom/android/internal/widget/DirectionLockTouchListener;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->_listener:Lcom/android/internal/widget/DirectionLockTouchListener;
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/DirectionLockView;->setOnDirectionLockTouchListener(Lcom/android/internal/widget/DirectionLockTouchListener;)V
 
     .line 305
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
-    iget v1, v1, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->SETTINGS_ARROW_SIZE:I
+    iget v1, v1, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->SETTINGS_ARROW_SIZE:I
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/DirectionLockView;->getDirectionImageView(I)Landroid/widget/ImageView;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionImageView:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionImageView:Landroid/widget/ImageView;
 
     .line 306
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/DirectionLockView;->setSettingsMode()V
 
     .line 309
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->isTablet()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->isTablet()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 310
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/DirectionLockView;->reloadBitmap()V
 
     .line 313
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
-    iget-boolean v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->showArrow:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->showArrow:Z
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/DirectionLockView;->setShowArrow(Z)V
 
     .line 314
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
-    iget-boolean v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->playVoice:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->playVoice:Z
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/DirectionLockView;->setPlayVoice(Z)V
 
     .line 315
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
-    iget-boolean v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->playVibration:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->playVibration:Z
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/DirectionLockView;->setPlayVibration(Z)V
 
     .line 316
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
-    iget-boolean v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->playBeep:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->playBeep:Z
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/DirectionLockView;->setPlayBeep(Z)V
 
     .line 317
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     const/4 v1, 0x0
 
@@ -1401,12 +1401,12 @@
     .line 174
     const v1, 0x7f040069
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->setContentView(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->setContentView(I)V
 
     .line 175
     const v1, 0x7f0e0a9c
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -1416,38 +1416,38 @@
 
     invoke-direct {v1, p0}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 177
-    invoke-static {p0}, Lcom/android/settings/Utils;->getEffectiveUserId(Landroid/content/Context;)I
+    invoke-static {p0}, Lcom/android/settings_ex/Utils;->getEffectiveUserId(Landroid/content/Context;)I
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mEffectiveUserId:I
+    iput v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mEffectiveUserId:I
 
     .line 178
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 179
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->initializeIdentifiers()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->initializeIdentifiers()V
 
     .line 180
-    invoke-direct {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->loadCustomSettings()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->loadCustomSettings()V
 
     .line 181
-    invoke-direct {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->initializeDirectionView()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->initializeDirectionView()V
 
     .line 182
-    invoke-direct {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->loadStepCircleVariables()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->loadStepCircleVariables()V
 
     .line 183
-    invoke-direct {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->initializeAnimations()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->initializeAnimations()V
 
     .line 184
-    invoke-direct {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->setInitialState()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->setInitialState()V
 
     .line 185
-    invoke-direct {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->attachListeners()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->attachListeners()V
 
     .line 187
     return-void
@@ -1460,7 +1460,7 @@
     .line 289
     const-string v1, "vibrator"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1468,7 +1468,7 @@
 
     .line 290
     .local v0, "vibrator":Landroid/os/Vibrator;
-    invoke-static {p0}, Lcom/android/settings/Utils;->hasHaptic(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/android/settings_ex/Utils;->hasHaptic(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -1512,15 +1512,15 @@
     invoke-static {v0, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 276
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->isTouchExplorationEnabled()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->isTouchExplorationEnabled()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -1540,10 +1540,10 @@
     move v0, v2
 
     :goto_0
-    iput-boolean v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->playVoice:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->playVoice:Z
 
     .line 279
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -1562,21 +1562,21 @@
     move v0, v2
 
     :goto_1
-    iput-boolean v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->playBeep:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->playBeep:Z
 
     .line 281
-    invoke-direct {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->isVibrationSupport()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->isVibrationSupport()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
     .line 282
-    iput-boolean v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->playVibration:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->playVibration:Z
 
     .line 285
     :goto_2
-    iput-boolean v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->showArrow:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->showArrow:Z
 
     .line 286
     return-void
@@ -1595,7 +1595,7 @@
 
     .line 284
     :cond_3
-    iput-boolean v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->playVibration:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->playVibration:Z
 
     goto :goto_2
 .end method
@@ -1614,16 +1614,16 @@
     .line 329
     const v0, 0x7f0d011a
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleLayout:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleLayout:Landroid/widget/LinearLayout;
 
     .line 331
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -1635,10 +1635,10 @@
 
     float-to-int v0, v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_SIZE:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_SIZE:I
 
     .line 333
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -1650,10 +1650,10 @@
 
     float-to-int v0, v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_LEFT_MARGIN:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_LEFT_MARGIN:I
 
     .line 335
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -1665,17 +1665,17 @@
 
     float-to-int v0, v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_RIGHT_MARGIN:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_RIGHT_MARGIN:I
 
     .line 339
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
     if-eqz v0, :cond_0
 
     .line 340
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -1685,20 +1685,20 @@
 
     const v2, 0x7f0200c8
 
-    iget v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_SIZE:I
+    iget v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_SIZE:I
 
-    iget v4, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_SIZE:I
+    iget v4, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_SIZE:I
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->getBitmapFromResource(Landroid/content/res/Resources;III)Landroid/graphics/Bitmap;
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->getBitmapFromResource(Landroid/content/res/Resources;III)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleDown:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleDown:Landroid/graphics/Bitmap;
 
     .line 344
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -1708,20 +1708,20 @@
 
     const v2, 0x7f0200cb
 
-    iget v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_SIZE:I
+    iget v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_SIZE:I
 
-    iget v4, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_SIZE:I
+    iget v4, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_SIZE:I
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->getBitmapFromResource(Landroid/content/res/Resources;III)Landroid/graphics/Bitmap;
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->getBitmapFromResource(Landroid/content/res/Resources;III)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleUp:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleUp:Landroid/graphics/Bitmap;
 
     .line 348
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -1731,20 +1731,20 @@
 
     const v2, 0x7f0200c9
 
-    iget v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_SIZE:I
+    iget v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_SIZE:I
 
-    iget v4, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_SIZE:I
+    iget v4, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_SIZE:I
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->getBitmapFromResource(Landroid/content/res/Resources;III)Landroid/graphics/Bitmap;
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->getBitmapFromResource(Landroid/content/res/Resources;III)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleLeft:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleLeft:Landroid/graphics/Bitmap;
 
     .line 352
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -1754,19 +1754,19 @@
 
     const v2, 0x7f0200ca
 
-    iget v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_SIZE:I
+    iget v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_SIZE:I
 
-    iget v4, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_SIZE:I
+    iget v4, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->STEP_CIRCLE_SIZE:I
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->getBitmapFromResource(Landroid/content/res/Resources;III)Landroid/graphics/Bitmap;
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->getBitmapFromResource(Landroid/content/res/Resources;III)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleRight:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleRight:Landroid/graphics/Bitmap;
 
     .line 358
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -1776,10 +1776,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyCircleDrawable:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyCircleDrawable:Landroid/graphics/drawable/Drawable;
 
     .line 360
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -1789,7 +1789,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreenCircleDrawable:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreenCircleDrawable:Landroid/graphics/drawable/Drawable;
 
     .line 362
     return-void
@@ -1808,10 +1808,10 @@
     .line 718
     const/4 v2, -0x1
 
-    invoke-virtual {p0, v2, p2}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->setResult(ILandroid/content/Intent;)V
+    invoke-virtual {p0, v2, p2}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->setResult(ILandroid/content/Intent;)V
 
     .line 719
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->finish()V
 
     .line 733
     :goto_0
@@ -1819,11 +1819,11 @@
 
     .line 720
     :cond_0
-    iget v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNumWrongConfirmAttempts:I
+    iget v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNumWrongConfirmAttempts:I
 
     add-int/lit8 v2, v2, 0x1
 
-    iput v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNumWrongConfirmAttempts:I
+    iput v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNumWrongConfirmAttempts:I
 
     const/4 v3, 0x5
 
@@ -1833,7 +1833,7 @@
     if-lez p3, :cond_1
 
     .line 723
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -1845,30 +1845,30 @@
 
     .line 724
     .local v0, "deadline":J
-    invoke-direct {p0, v0, v1}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->handleAttemptLockout(J)V
+    invoke-direct {p0, v0, v1}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->handleAttemptLockout(J)V
 
     goto :goto_0
 
     .line 726
     .end local v0    # "deadline":J
     :cond_1
-    sget-object v2, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;->NeedToUnlockWrong:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;
+    sget-object v2, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;->NeedToUnlockWrong:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;
 
-    invoke-direct {p0, v2}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->updateStage(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->updateStage(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;)V
 
     .line 727
-    invoke-direct {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->postClearPatternRunnable()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->postClearPatternRunnable()V
 
     goto :goto_0
 
     .line 730
     :cond_2
-    sget-object v2, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;->NeedToUnlockWrong:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;
+    sget-object v2, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;->NeedToUnlockWrong:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;
 
-    invoke-direct {p0, v2}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->updateStage(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->updateStage(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;)V
 
     .line 731
-    invoke-direct {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->postClearPatternRunnable()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->postClearPatternRunnable()V
 
     goto :goto_0
 .end method
@@ -1885,31 +1885,31 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 816
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionImageView:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionImageView:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_0
 
     .line 817
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionImageView:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionImageView:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mIncomingArrowAnimator:Landroid/view/animation/AlphaAnimation;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mIncomingArrowAnimator:Landroid/view/animation/AlphaAnimation;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
     .line 820
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v0, :cond_1
 
     .line 821
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircleScaleAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
     .line 823
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyStepCircleList:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyStepCircleList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -1918,7 +1918,7 @@
     if-nez v0, :cond_2
 
     .line 824
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyListAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
@@ -1939,17 +1939,17 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 956
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/DirectionLockView;->clearScreen()V
 
     .line 957
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/DirectionLockView;->resetPassword()V
 
     .line 958
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     const/4 v1, 0x1
 
@@ -1975,35 +1975,35 @@
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 476
-    sget-object v3, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;->NeedToUnlock:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;
+    sget-object v3, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;->NeedToUnlock:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;
 
-    invoke-direct {p0, v3}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->updateStage(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;)V
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->updateStage(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;)V
 
     .line 478
-    iget-object v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mLeftButton:Landroid/widget/Button;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mLeftButton:Landroid/widget/Button;
 
     invoke-virtual {v3, v5}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 479
-    iget-object v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mRightButton:Landroid/widget/Button;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mRightButton:Landroid/widget/Button;
 
     invoke-virtual {v3, v5}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 481
-    iget-boolean v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mFlgToChkConfChng:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mFlgToChkConfChng:Z
 
     if-eqz v3, :cond_5
 
     .line 482
-    iput-boolean v5, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mFlgToChkConfChng:Z
+    iput-boolean v5, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mFlgToChkConfChng:Z
 
     .line 483
-    iget v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNumWrongAttempt:I
+    iget v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNumWrongAttempt:I
 
-    iput v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNumWrongConfirmAttempts:I
+    iput v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNumWrongConfirmAttempts:I
 
     .line 484
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mCurrentPwd:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mCurrentPwd:Ljava/lang/String;
 
     .line 487
     .local v2, "savedPassword":Ljava/lang/String;
@@ -2016,18 +2016,18 @@
     if-lt v3, v4, :cond_0
 
     .line 488
-    iget-object v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-virtual {v3, v5}, Lcom/android/internal/widget/DirectionLockView;->setEnabled(Z)V
 
     .line 489
-    iput-boolean v6, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mFlagForEnabled:Z
+    iput-boolean v6, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mFlagForEnabled:Z
 
     .line 494
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mHeaderString:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mHeaderString:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -2036,7 +2036,7 @@
 
     .line 497
     .local v0, "curDirection":Ljava/lang/String;
-    iget-object v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-virtual {v3, v2}, Lcom/android/internal/widget/DirectionLockView;->setCurrentPassword(Ljava/lang/String;)V
 
@@ -2060,7 +2060,7 @@
 
     .line 517
     :goto_2
-    invoke-direct {p0, v0, v6}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->handleStepCircle(Ljava/lang/String;Z)V
+    invoke-direct {p0, v0, v6}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->handleStepCircle(Ljava/lang/String;Z)V
 
     .line 499
     add-int/lit8 v1, v1, 0x1
@@ -2071,7 +2071,7 @@
     .end local v0    # "curDirection":Ljava/lang/String;
     .end local v1    # "i":I
     :cond_0
-    iput-boolean v5, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mFlagForEnabled:Z
+    iput-boolean v5, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mFlagForEnabled:Z
 
     goto :goto_0
 
@@ -2107,16 +2107,16 @@
 
     .line 520
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mLeftButton:Landroid/widget/Button;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mLeftButton:Landroid/widget/Button;
 
-    iget-boolean v4, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mLeftBtnState:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mLeftBtnState:Z
 
     invoke-virtual {v3, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 521
-    iget-object v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mRightButton:Landroid/widget/Button;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mRightButton:Landroid/widget/Button;
 
-    iget-boolean v4, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mRightBtnState:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mRightBtnState:Z
 
     invoke-virtual {v3, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
@@ -2126,9 +2126,9 @@
     .end local v2    # "savedPassword":Ljava/lang/String;
     :cond_2
     :goto_3
-    iget-object v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
-    invoke-virtual {v3}, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->isTouchExplorationEnabled()Z
+    invoke-virtual {v3}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->isTouchExplorationEnabled()Z
 
     move-result v3
 
@@ -2136,16 +2136,16 @@
 
     .line 539
     :cond_3
-    iget-object v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
-    invoke-virtual {v3}, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->isTablet()Z
+    invoke-virtual {v3}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->isTablet()Z
 
     move-result v3
 
     if-nez v3, :cond_4
 
     .line 540
-    invoke-virtual {p0, v6}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->setRequestedOrientation(I)V
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->setRequestedOrientation(I)V
 
     .line 542
     :cond_4
@@ -2153,7 +2153,7 @@
 
     .line 529
     :cond_5
-    iget-object v3, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
@@ -2168,10 +2168,10 @@
     .line 530
     const/4 v3, -0x1
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->setResult(I)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->setResult(I)V
 
     .line 531
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->finish()V
 
     goto :goto_3
 
@@ -2211,21 +2211,21 @@
 
     .line 666
     :try_start_0
-    iget v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mEffectiveUserId:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mEffectiveUserId:I
 
     .line 667
     .local v1, "localEffectiveUserId":I
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    new-instance v3, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$9;
+    new-instance v3, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$9;
 
-    invoke-direct {v3, p0, p2}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$9;-><init>(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;Landroid/content/Intent;)V
+    invoke-direct {v3, p0, p2}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$9;-><init>(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;Landroid/content/Intent;)V
 
     invoke-static {v2, p1, v1, v3}, Lcom/android/internal/widget/LockPatternChecker;->checkPattern(Lcom/android/internal/widget/LockPatternUtils;Ljava/util/List;ILcom/android/internal/widget/LockPatternChecker$OnCheckCallback;)Landroid/os/AsyncTask;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mPendingLockCheck:Landroid/os/AsyncTask;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mPendingLockCheck:Landroid/os/AsyncTask;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2272,11 +2272,11 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 628
-    iget v4, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mEffectiveUserId:I
+    iget v4, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mEffectiveUserId:I
 
     .line 629
     .local v4, "localEffectiveUserId":I
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -2295,7 +2295,7 @@
     .line 633
     const-class v0, Landroid/hardware/fingerprint/FingerprintManager;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2307,11 +2307,11 @@
 
     .line 636
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    new-instance v5, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$8;
+    new-instance v5, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$8;
 
-    invoke-direct {v5, p0, p2}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$8;-><init>(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;Landroid/content/Intent;)V
+    invoke-direct {v5, p0, p2}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$8;-><init>(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;Landroid/content/Intent;)V
 
     move-object v1, p1
 
@@ -2319,15 +2319,15 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mPendingLockCheck:Landroid/os/AsyncTask;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mPendingLockCheck:Landroid/os/AsyncTask;
 
     .line 654
     return-void
 .end method
 
-.method private updateStage(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;)V
+.method private updateStage(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;)V
     .locals 6
-    .param p1, "stage"    # Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;
+    .param p1, "stage"    # Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;
 
     .prologue
     const/4 v5, 0x1
@@ -2358,12 +2358,12 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 896
-    invoke-direct {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->clearStepCircles()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->clearStepCircles()V
 
     .line 897
-    sget-object v0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$12;->$SwitchMap$com$android$settings$accessibility$universallock$ConfirmLockUniversal$Stage:[I
+    sget-object v0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$12;->$SwitchMap$com$android$settings$accessibility$universallock$ConfirmLockUniversal$Stage:[I
 
-    invoke-virtual {p1}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;->ordinal()I
+    invoke-virtual {p1}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;->ordinal()I
 
     move-result v1
 
@@ -2373,9 +2373,9 @@
 
     .line 937
     :goto_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -2395,29 +2395,29 @@
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 900
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
 
     const v1, 0x7f0e0a8e
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     .line 901
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->isTouchExplorationEnabled()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->isTouchExplorationEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 902
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
 
     invoke-virtual {v2}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -2433,7 +2433,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -2459,27 +2459,27 @@
 
     .line 907
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/DirectionLockView;->resetPassword()V
 
     .line 908
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/DirectionLockView;->clearScreen()V
 
     .line 910
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mRightButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mRightButton:Landroid/widget/Button;
 
     invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 911
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mLeftButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mLeftButton:Landroid/widget/Button;
 
     invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 912
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-virtual {v0, v5}, Lcom/android/internal/widget/DirectionLockView;->setEnabled(Z)V
 
@@ -2494,34 +2494,34 @@
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 917
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
 
     const v1, 0x7f0e0a87
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     .line 918
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/DirectionLockView;->resetPassword()V
 
     .line 919
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-virtual {v0, v5}, Lcom/android/internal/widget/DirectionLockView;->setEnabled(Z)V
 
     .line 920
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mRightButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mRightButton:Landroid/widget/Button;
 
     invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 921
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mLeftButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mLeftButton:Landroid/widget/Button;
 
     invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 922
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/DirectionLockView;->clearScreen()V
 
@@ -2536,27 +2536,27 @@
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 927
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/DirectionLockView;->clearScreen()V
 
     .line 928
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/DirectionLockView;->resetPassword()V
 
     .line 929
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-virtual {v0, v4}, Lcom/android/internal/widget/DirectionLockView;->setEnabled(Z)V
 
     .line 930
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mRightButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mRightButton:Landroid/widget/Button;
 
     invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 931
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mLeftButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mLeftButton:Landroid/widget/Button;
 
     invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
@@ -2585,38 +2585,38 @@
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 199
-    new-instance v1, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    new-instance v1, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;-><init>(Landroid/app/Activity;)V
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
     .line 200
     const v1, 0x7f0d0117
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/internal/widget/DirectionLockView;
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     .line 201
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->isMobileKeyboardCovered(Landroid/content/Context;)Z
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->isMobileKeyboardCovered(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 202
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-virtual {v1}, Lcom/android/internal/widget/DirectionLockView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -2626,7 +2626,7 @@
 
     .line 203
     .local v0, "params":Landroid/widget/RelativeLayout$LayoutParams;
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -2641,7 +2641,7 @@
     iput v1, v0, Landroid/widget/RelativeLayout$LayoutParams;->height:I
 
     .line 204
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-virtual {v1, v0}, Lcom/android/internal/widget/DirectionLockView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -2650,58 +2650,58 @@
     :cond_0
     const v1, 0x7f0d011c
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/Button;
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mLeftButton:Landroid/widget/Button;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mLeftButton:Landroid/widget/Button;
 
     .line 207
     const v1, 0x7f0d011d
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/Button;
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mRightButton:Landroid/widget/Button;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mRightButton:Landroid/widget/Button;
 
     .line 208
     const v1, 0x7f0d0110
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/internal/widget/LinearLayoutWithDefaultTouchRecepient;
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->topLayout:Lcom/android/internal/widget/LinearLayoutWithDefaultTouchRecepient;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->topLayout:Lcom/android/internal/widget/LinearLayoutWithDefaultTouchRecepient;
 
     .line 209
     const v1, 0x7f0d0102
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
 
     .line 210
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyStepCircleList:Ljava/util/ArrayList;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyStepCircleList:Ljava/util/ArrayList;
 
     .line 211
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mFlagForEnabled:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mFlagForEnabled:Z
 
     .line 212
     return-void
@@ -2725,22 +2725,22 @@
     .line 833
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mFlgToChkConfChng:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mFlgToChkConfChng:Z
 
     .line 834
-    invoke-direct {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->endOngoingAnimations()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->endOngoingAnimations()V
 
     .line 835
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/DirectionLockView;->getCurrentPassword()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mCurrentPwd:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mCurrentPwd:Ljava/lang/String;
 
     .line 836
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -2750,33 +2750,33 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mHeaderString:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mHeaderString:Ljava/lang/String;
 
     .line 837
-    iget v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNumWrongConfirmAttempts:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNumWrongConfirmAttempts:I
 
-    iput v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNumWrongAttempt:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNumWrongAttempt:I
 
     .line 838
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mLeftButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mLeftButton:Landroid/widget/Button;
 
     invoke-virtual {v0}, Landroid/widget/Button;->isEnabled()Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mLeftBtnState:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mLeftBtnState:Z
 
     .line 839
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mRightButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mRightButton:Landroid/widget/Button;
 
     invoke-virtual {v0}, Landroid/widget/Button;->isEnabled()Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mRightBtnState:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mRightBtnState:Z
 
     .line 840
-    invoke-direct {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->initializing()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->initializing()V
 
     .line 841
     return-void
@@ -2798,7 +2798,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 111
-    invoke-direct {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->initializing()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->initializing()V
 
     .line 112
     return-void
@@ -2816,7 +2816,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1039
-    invoke-direct {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->freeUpMemory()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->freeUpMemory()V
 
     .line 1040
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
@@ -2837,12 +2837,12 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 854
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mCountdownTimer:Landroid/os/CountDownTimer;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mCountdownTimer:Landroid/os/CountDownTimer;
 
     if-eqz v0, :cond_0
 
     .line 855
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mCountdownTimer:Landroid/os/CountDownTimer;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mCountdownTimer:Landroid/os/CountDownTimer;
 
     invoke-virtual {v0}, Landroid/os/CountDownTimer;->cancel()V
 
@@ -2869,18 +2869,18 @@
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 871
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getWindow()Landroid/view/Window;
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->applyLandscapeFullScreen(Landroid/content/Context;Landroid/view/Window;)V
+    invoke-static {v2, v3}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->applyLandscapeFullScreen(Landroid/content/Context;Landroid/view/Window;)V
 
     .line 873
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
@@ -2899,7 +2899,7 @@
     if-eqz v2, :cond_1
 
     .line 875
-    invoke-direct {p0, v0, v1}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->handleAttemptLockout(J)V
+    invoke-direct {p0, v0, v1}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->handleAttemptLockout(J)V
 
     .line 883
     :cond_0
@@ -2908,11 +2908,11 @@
 
     .line 876
     :cond_1
-    iget-boolean v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mFlagForEnabled:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mFlagForEnabled:Z
 
     if-nez v2, :cond_0
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
 
     invoke-virtual {v2}, Lcom/android/internal/widget/DirectionLockView;->isEnabled()Z
 
@@ -2923,12 +2923,12 @@
     .line 880
     const/4 v2, 0x0
 
-    iput v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNumWrongConfirmAttempts:I
+    iput v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNumWrongConfirmAttempts:I
 
     .line 881
-    sget-object v2, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;->NeedToUnlock:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;
+    sget-object v2, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;->NeedToUnlock:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;
 
-    invoke-direct {p0, v2}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->updateStage(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->updateStage(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;)V
 
     goto :goto_0
 .end method

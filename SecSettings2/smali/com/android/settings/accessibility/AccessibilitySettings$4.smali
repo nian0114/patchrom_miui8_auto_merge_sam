@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/AccessibilitySettings$4;
+.class Lcom/android/settings_ex/accessibility/AccessibilitySettings$4;
 .super Ljava/lang/Object;
 .source "AccessibilitySettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/AccessibilitySettings;->onCreateDialog(I)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/accessibility/AccessibilitySettings;->onCreateDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/AccessibilitySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/AccessibilitySettings;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/AccessibilitySettings;)V
     .locals 0
 
     .prologue
     .line 315
-    iput-object p1, p0, Lcom/android/settings/accessibility/AccessibilitySettings$4;->this$0:Lcom/android/settings/accessibility/AccessibilitySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettings$4;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,12 +43,12 @@
 
     .prologue
     .line 323
-    iget-object v4, p0, Lcom/android/settings/accessibility/AccessibilitySettings$4;->this$0:Lcom/android/settings/accessibility/AccessibilitySettings;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettings$4;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettings;
 
     const/4 v5, 0x1
 
-    # invokes: Lcom/android/settings/accessibility/AccessibilitySettings;->removeDialog(I)V
-    invoke-static {v4, v5}, Lcom/android/settings/accessibility/AccessibilitySettings;->access$400(Lcom/android/settings/accessibility/AccessibilitySettings;I)V
+    # invokes: Lcom/android/settings_ex/accessibility/AccessibilitySettings;->removeDialog(I)V
+    invoke-static {v4, v5}, Lcom/android/settings_ex/accessibility/AccessibilitySettings;->access$400(Lcom/android/settings_ex/accessibility/AccessibilitySettings;I)V
 
     .line 324
     const-string v4, "ro.screenreader.market"
@@ -76,9 +76,9 @@
     .line 331
     .local v1, "marketIntent":Landroid/content/Intent;
     :try_start_0
-    iget-object v4, p0, Lcom/android/settings/accessibility/AccessibilitySettings$4;->this$0:Lcom/android/settings/accessibility/AccessibilitySettings;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettings$4;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettings;
 
-    invoke-virtual {v4, v1}, Lcom/android/settings/accessibility/AccessibilitySettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v4, v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettings;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 

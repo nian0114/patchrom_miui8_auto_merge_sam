@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/Settings$InputMethodAndLanguageSettingsActivity;
-.super Lcom/android/settings/SettingsActivityWrapper;
+.class public Lcom/android/settings_ex/Settings$InputMethodAndLanguageSettingsActivity;
+.super Lcom/android/settings_ex/SettingsActivityWrapper;
 .source "Settings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/Settings;
+    value = Lcom/android/settings_ex/Settings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 139
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivityWrapper;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivityWrapper;-><init>()V
 
     return-void
 .end method
@@ -34,7 +34,7 @@
     .line 170
     new-instance v0, Landroid/content/Intent;
 
-    invoke-super {p0}, Lcom/android/settings/SettingsActivityWrapper;->getIntent()Landroid/content/Intent;
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivityWrapper;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -42,7 +42,7 @@
 
     .line 171
     .local v0, "modIntent":Landroid/content/Intent;
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v1
 
@@ -70,7 +70,7 @@
     const/4 v4, 0x1
 
     .line 142
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsActivityWrapper;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsActivityWrapper;->onCreate(Landroid/os/Bundle;)V
 
     .line 143
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
@@ -82,7 +82,7 @@
     if-lt v2, v3, :cond_1
 
     .line 144
-    invoke-virtual {p0}, Lcom/android/settings/Settings$InputMethodAndLanguageSettingsActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings$InputMethodAndLanguageSettingsActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -107,21 +107,21 @@
     :cond_0
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/android/settings/Settings$InputMethodAndLanguageSettingsActivity;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings$InputMethodAndLanguageSettingsActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
     .line 150
-    invoke-virtual {p0}, Lcom/android/settings/Settings$InputMethodAndLanguageSettingsActivity;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings$InputMethodAndLanguageSettingsActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v2
 
     invoke-virtual {v2, v4}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
     .line 151
-    invoke-virtual {p0}, Lcom/android/settings/Settings$InputMethodAndLanguageSettingsActivity;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings$InputMethodAndLanguageSettingsActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v2
 
@@ -157,7 +157,7 @@
 
     .line 165
     :cond_0
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsActivityWrapper;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsActivityWrapper;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v0
 
@@ -166,7 +166,7 @@
 
     .line 161
     :pswitch_0
-    invoke-virtual {p0}, Lcom/android/settings/Settings$InputMethodAndLanguageSettingsActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings$InputMethodAndLanguageSettingsActivity;->finish()V
 
     .line 162
     const/4 v0, 0x1

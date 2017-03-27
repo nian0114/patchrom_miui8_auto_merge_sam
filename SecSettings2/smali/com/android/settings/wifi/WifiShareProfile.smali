@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/wifi/WifiShareProfile;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/wifi/WifiShareProfile;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "WifiShareProfile.java"
 
 # interfaces
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/wifi/WifiShareProfile$WifiShareProfileApInfo;
+        Lcom/android/settings_ex/wifi/WifiShareProfile$WifiShareProfileApInfo;
     }
 .end annotation
 
@@ -53,7 +53,7 @@
             "Ljava/util/HashMap",
             "<",
             "Ljava/lang/String;",
-            "Lcom/android/settings/wifi/WifiShareProfile$WifiShareProfileApInfo;",
+            "Lcom/android/settings_ex/wifi/WifiShareProfile$WifiShareProfileApInfo;",
             ">;"
         }
     .end annotation
@@ -126,7 +126,7 @@
     const/4 v0, 0x0
 
     :cond_0
-    sput-boolean v0, Lcom/android/settings/wifi/WifiShareProfile;->DBG:Z
+    sput-boolean v0, Lcom/android/settings_ex/wifi/WifiShareProfile;->DBG:Z
 
     return-void
 .end method
@@ -140,83 +140,83 @@
     const/4 v1, 0x0
 
     .line 112
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 127
-    iput-object v2, p0, Lcom/android/settings/wifi/WifiShareProfile;->dialog:Landroid/app/AlertDialog;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->dialog:Landroid/app/AlertDialog;
 
     .line 130
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mFilter:Landroid/content/IntentFilter;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mFilter:Landroid/content/IntentFilter;
 
     .line 135
-    iput-object v2, p0, Lcom/android/settings/wifi/WifiShareProfile;->mConnectivityManager:Landroid/net/ConnectivityManager;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mConnectivityManager:Landroid/net/ConnectivityManager;
 
     .line 138
-    iput-object v2, p0, Lcom/android/settings/wifi/WifiShareProfile;->mWifiP2pInfo:Landroid/net/wifi/p2p/WifiP2pInfo;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mWifiP2pInfo:Landroid/net/wifi/p2p/WifiP2pInfo;
 
     .line 143
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->P2pPeers:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->P2pPeers:Ljava/util/List;
 
     .line 144
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->SelectedP2pPeers:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->SelectedP2pPeers:Ljava/util/List;
 
     .line 146
-    iput-object v2, p0, Lcom/android/settings/wifi/WifiShareProfile;->mWifiP2pGroup:Landroid/net/wifi/p2p/WifiP2pGroup;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mWifiP2pGroup:Landroid/net/wifi/p2p/WifiP2pGroup;
 
     .line 152
-    iput-boolean v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->wifiIsEnabled:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->wifiIsEnabled:Z
 
     .line 153
-    iput-boolean v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->wifiP2pConnected:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->wifiP2pConnected:Z
 
     .line 155
-    iput-boolean v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->mP2pConnectedOnSend:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mP2pConnectedOnSend:Z
 
     .line 161
     const-string v0, "0b1e96db05d64ea4"
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mSessionKey:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mSessionKey:Ljava/lang/String;
 
     .line 165
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->currentApInfoMap:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->currentApInfoMap:Ljava/util/HashMap;
 
     .line 166
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->selectedApIndexes:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->selectedApIndexes:Ljava/util/List;
 
     .line 167
-    iput v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->selectedApCount:I
+    iput v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->selectedApCount:I
 
     .line 184
-    new-instance v0, Lcom/android/settings/wifi/WifiShareProfile$1;
+    new-instance v0, Lcom/android/settings_ex/wifi/WifiShareProfile$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/wifi/WifiShareProfile$1;-><init>(Lcom/android/settings/wifi/WifiShareProfile;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/wifi/WifiShareProfile$1;-><init>(Lcom/android/settings_ex/wifi/WifiShareProfile;)V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mHandler:Landroid/os/Handler;
 
     .line 721
     const/16 v0, 0x21b1
 
-    iput v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->DEVICE_PICKER_REQUEST:I
+    iput v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->DEVICE_PICKER_REQUEST:I
 
     return-void
 .end method
@@ -247,9 +247,9 @@
     .line 689
     .local v10, "ret":I
     :try_start_0
-    iget-object v11, p0, Lcom/android/settings/wifi/WifiShareProfile;->mSessionKey:Ljava/lang/String;
+    iget-object v11, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mSessionKey:Ljava/lang/String;
 
-    invoke-direct {p0, v11}, Lcom/android/settings/wifi/WifiShareProfile;->StreamCrypt(Ljava/lang/String;)V
+    invoke-direct {p0, v11}, Lcom/android/settings_ex/wifi/WifiShareProfile;->StreamCrypt(Ljava/lang/String;)V
 
     .line 690
     new-instance v7, Ljava/io/FileInputStream;
@@ -278,7 +278,7 @@
     .end local v3    # "foTemp":Ljava/io/FileOutputStream;
     .local v4, "foTemp":Ljava/io/FileOutputStream;
     :try_start_2
-    invoke-direct {p0, v4}, Lcom/android/settings/wifi/WifiShareProfile;->encryptStream(Ljava/io/OutputStream;)Ljava/io/OutputStream;
+    invoke-direct {p0, v4}, Lcom/android/settings_ex/wifi/WifiShareProfile;->encryptStream(Ljava/io/OutputStream;)Ljava/io/OutputStream;
 
     move-result-object v8
 
@@ -706,7 +706,7 @@
 
     move-result-object v2
 
-    sput-object v2, Lcom/android/settings/wifi/WifiShareProfile;->cipher:Ljavax/crypto/Cipher;
+    sput-object v2, Lcom/android/settings_ex/wifi/WifiShareProfile;->cipher:Ljavax/crypto/Cipher;
 
     .line 777
     new-instance v2, Ljavax/crypto/spec/SecretKeySpec;
@@ -715,165 +715,165 @@
 
     invoke-direct {v2, v1, v3}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    sput-object v2, Lcom/android/settings/wifi/WifiShareProfile;->key:Ljavax/crypto/spec/SecretKeySpec;
+    sput-object v2, Lcom/android/settings_ex/wifi/WifiShareProfile;->key:Ljavax/crypto/spec/SecretKeySpec;
 
     .line 779
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/wifi/WifiShareProfile;)Landroid/content/Context;
+.method static synthetic access$000(Lcom/android/settings_ex/wifi/WifiShareProfile;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiShareProfile;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiShareProfile;
 
     .prologue
     .line 112
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/wifi/WifiShareProfile;)Z
+.method static synthetic access$100(Lcom/android/settings_ex/wifi/WifiShareProfile;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiShareProfile;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiShareProfile;
 
     .prologue
     .line 112
-    iget-boolean v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->wifiIsEnabled:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->wifiIsEnabled:Z
 
     return v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/wifi/WifiShareProfile;)Landroid/net/wifi/p2p/WifiP2pDevice;
+.method static synthetic access$1000(Lcom/android/settings_ex/wifi/WifiShareProfile;)Landroid/net/wifi/p2p/WifiP2pDevice;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiShareProfile;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiShareProfile;
 
     .prologue
     .line 112
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mP2pThisDevice:Landroid/net/wifi/p2p/WifiP2pDevice;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mP2pThisDevice:Landroid/net/wifi/p2p/WifiP2pDevice;
 
     return-object v0
 .end method
 
-.method static synthetic access$1002(Lcom/android/settings/wifi/WifiShareProfile;Landroid/net/wifi/p2p/WifiP2pDevice;)Landroid/net/wifi/p2p/WifiP2pDevice;
+.method static synthetic access$1002(Lcom/android/settings_ex/wifi/WifiShareProfile;Landroid/net/wifi/p2p/WifiP2pDevice;)Landroid/net/wifi/p2p/WifiP2pDevice;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiShareProfile;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiShareProfile;
     .param p1, "x1"    # Landroid/net/wifi/p2p/WifiP2pDevice;
 
     .prologue
     .line 112
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiShareProfile;->mP2pThisDevice:Landroid/net/wifi/p2p/WifiP2pDevice;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mP2pThisDevice:Landroid/net/wifi/p2p/WifiP2pDevice;
 
     return-object p1
 .end method
 
-.method static synthetic access$102(Lcom/android/settings/wifi/WifiShareProfile;Z)Z
+.method static synthetic access$102(Lcom/android/settings_ex/wifi/WifiShareProfile;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiShareProfile;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiShareProfile;
     .param p1, "x1"    # Z
 
     .prologue
     .line 112
-    iput-boolean p1, p0, Lcom/android/settings/wifi/WifiShareProfile;->wifiIsEnabled:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->wifiIsEnabled:Z
 
     return p1
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/wifi/WifiShareProfile;)Landroid/net/wifi/p2p/WifiP2pManager;
+.method static synthetic access$1100(Lcom/android/settings_ex/wifi/WifiShareProfile;)Landroid/net/wifi/p2p/WifiP2pManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiShareProfile;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiShareProfile;
 
     .prologue
     .line 112
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mWifiP2pManager:Landroid/net/wifi/p2p/WifiP2pManager;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mWifiP2pManager:Landroid/net/wifi/p2p/WifiP2pManager;
 
     return-object v0
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/wifi/WifiShareProfile;)V
+.method static synthetic access$1200(Lcom/android/settings_ex/wifi/WifiShareProfile;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiShareProfile;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiShareProfile;
 
     .prologue
     .line 112
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiShareProfile;->initPreferences()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->initPreferences()V
 
     return-void
 .end method
 
-.method static synthetic access$1300(Lcom/android/settings/wifi/WifiShareProfile;)Landroid/app/AlertDialog;
+.method static synthetic access$1300(Lcom/android/settings_ex/wifi/WifiShareProfile;)Landroid/app/AlertDialog;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiShareProfile;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiShareProfile;
 
     .prologue
     .line 112
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->dialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->dialog:Landroid/app/AlertDialog;
 
     return-object v0
 .end method
 
-.method static synthetic access$1400(Lcom/android/settings/wifi/WifiShareProfile;)Landroid/preference/PreferenceGroup;
+.method static synthetic access$1400(Lcom/android/settings_ex/wifi/WifiShareProfile;)Landroid/preference/PreferenceGroup;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiShareProfile;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiShareProfile;
 
     .prologue
     .line 112
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
 
     return-object v0
 .end method
 
-.method static synthetic access$1500(Lcom/android/settings/wifi/WifiShareProfile;)V
+.method static synthetic access$1500(Lcom/android/settings_ex/wifi/WifiShareProfile;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiShareProfile;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiShareProfile;
 
     .prologue
     .line 112
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiShareProfile;->convertSelectedApIndexesIntoEncrypedFile()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->convertSelectedApIndexesIntoEncrypedFile()V
 
     return-void
 .end method
 
-.method static synthetic access$1600(Lcom/android/settings/wifi/WifiShareProfile;)V
+.method static synthetic access$1600(Lcom/android/settings_ex/wifi/WifiShareProfile;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiShareProfile;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiShareProfile;
 
     .prologue
     .line 112
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiShareProfile;->startWifiP2pDevicePicker()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->startWifiP2pDevicePicker()V
 
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/wifi/WifiShareProfile;)Z
+.method static synthetic access$200(Lcom/android/settings_ex/wifi/WifiShareProfile;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiShareProfile;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiShareProfile;
 
     .prologue
     .line 112
-    iget-boolean v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->wifiP2pConnected:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->wifiP2pConnected:Z
 
     return v0
 .end method
 
-.method static synthetic access$202(Lcom/android/settings/wifi/WifiShareProfile;Z)Z
+.method static synthetic access$202(Lcom/android/settings_ex/wifi/WifiShareProfile;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiShareProfile;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiShareProfile;
     .param p1, "x1"    # Z
 
     .prologue
     .line 112
-    iput-boolean p1, p0, Lcom/android/settings/wifi/WifiShareProfile;->wifiP2pConnected:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->wifiP2pConnected:Z
 
     return p1
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/wifi/WifiShareProfile;)Landroid/net/wifi/WifiManager;
+.method static synthetic access$300(Lcom/android/settings_ex/wifi/WifiShareProfile;)Landroid/net/wifi/WifiManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiShareProfile;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiShareProfile;
 
     .prologue
     .line 112
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     return-object v0
 .end method
@@ -883,75 +883,75 @@
 
     .prologue
     .line 112
-    sget-boolean v0, Lcom/android/settings/wifi/WifiShareProfile;->DBG:Z
+    sget-boolean v0, Lcom/android/settings_ex/wifi/WifiShareProfile;->DBG:Z
 
     return v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/wifi/WifiShareProfile;)Landroid/net/wifi/p2p/WifiP2pManager$Channel;
+.method static synthetic access$500(Lcom/android/settings_ex/wifi/WifiShareProfile;)Landroid/net/wifi/p2p/WifiP2pManager$Channel;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiShareProfile;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiShareProfile;
 
     .prologue
     .line 112
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mChannel:Landroid/net/wifi/p2p/WifiP2pManager$Channel;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mChannel:Landroid/net/wifi/p2p/WifiP2pManager$Channel;
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/wifi/WifiShareProfile;)Landroid/net/wifi/p2p/WifiP2pGroup;
+.method static synthetic access$600(Lcom/android/settings_ex/wifi/WifiShareProfile;)Landroid/net/wifi/p2p/WifiP2pGroup;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiShareProfile;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiShareProfile;
 
     .prologue
     .line 112
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mWifiP2pGroup:Landroid/net/wifi/p2p/WifiP2pGroup;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mWifiP2pGroup:Landroid/net/wifi/p2p/WifiP2pGroup;
 
     return-object v0
 .end method
 
-.method static synthetic access$602(Lcom/android/settings/wifi/WifiShareProfile;Landroid/net/wifi/p2p/WifiP2pGroup;)Landroid/net/wifi/p2p/WifiP2pGroup;
+.method static synthetic access$602(Lcom/android/settings_ex/wifi/WifiShareProfile;Landroid/net/wifi/p2p/WifiP2pGroup;)Landroid/net/wifi/p2p/WifiP2pGroup;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiShareProfile;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiShareProfile;
     .param p1, "x1"    # Landroid/net/wifi/p2p/WifiP2pGroup;
 
     .prologue
     .line 112
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiShareProfile;->mWifiP2pGroup:Landroid/net/wifi/p2p/WifiP2pGroup;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mWifiP2pGroup:Landroid/net/wifi/p2p/WifiP2pGroup;
 
     return-object p1
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/wifi/WifiShareProfile;)Ljava/util/List;
+.method static synthetic access$700(Lcom/android/settings_ex/wifi/WifiShareProfile;)Ljava/util/List;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiShareProfile;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiShareProfile;
 
     .prologue
     .line 112
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->P2pPeers:Ljava/util/List;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->P2pPeers:Ljava/util/List;
 
     return-object v0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/wifi/WifiShareProfile;)V
+.method static synthetic access$800(Lcom/android/settings_ex/wifi/WifiShareProfile;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiShareProfile;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiShareProfile;
 
     .prologue
     .line 112
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiShareProfile;->updateWifiP2pDeviceList()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->updateWifiP2pDeviceList()V
 
     return-void
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/wifi/WifiShareProfile;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$900(Lcom/android/settings_ex/wifi/WifiShareProfile;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiShareProfile;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiShareProfile;
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 112
-    invoke-direct {p0, p1}, Lcom/android/settings/wifi/WifiShareProfile;->convertDevAddress(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/wifi/WifiShareProfile;->convertDevAddress(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -973,7 +973,7 @@
     .local v13, "rawConfFile":Ljava/io/File;
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/wifi/WifiShareProfile;->currentApInfoMap:Ljava/util/HashMap;
+    iget-object v15, v0, Lcom/android/settings_ex/wifi/WifiShareProfile;->currentApInfoMap:Ljava/util/HashMap;
 
     invoke-virtual {v15}, Ljava/util/HashMap;->clear()V
 
@@ -1018,7 +1018,7 @@
     .line 546
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/wifi/WifiShareProfile;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v15, v0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v15, v11}, Landroid/net/wifi/WifiManager;->callSECApi(Landroid/os/Message;)I
 
@@ -1027,7 +1027,7 @@
     if-nez v15, :cond_4
 
     .line 547
-    sget-boolean v15, Lcom/android/settings/wifi/WifiShareProfile;->DBG:Z
+    sget-boolean v15, Lcom/android/settings_ex/wifi/WifiShareProfile;->DBG:Z
 
     if-eqz v15, :cond_0
 
@@ -1133,7 +1133,7 @@
     .line 624
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/wifi/WifiShareProfile;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v15, v0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v15, v11}, Landroid/net/wifi/WifiManager;->callSECApi(Landroid/os/Message;)I
 
@@ -1142,7 +1142,7 @@
     if-nez v15, :cond_15
 
     .line 625
-    sget-boolean v15, Lcom/android/settings/wifi/WifiShareProfile;->DBG:Z
+    sget-boolean v15, Lcom/android/settings_ex/wifi/WifiShareProfile;->DBG:Z
 
     if-eqz v15, :cond_2
 
@@ -1383,7 +1383,7 @@
 
     .line 600
     :cond_b
-    sget-boolean v15, Lcom/android/settings/wifi/WifiShareProfile;->DBG:Z
+    sget-boolean v15, Lcom/android/settings_ex/wifi/WifiShareProfile;->DBG:Z
 
     if-eqz v15, :cond_c
 
@@ -1455,7 +1455,7 @@
     .local v9, "e":Ljava/lang/Exception;
     :goto_4
     :try_start_4
-    sget-boolean v15, Lcom/android/settings/wifi/WifiShareProfile;->DBG:Z
+    sget-boolean v15, Lcom/android/settings_ex/wifi/WifiShareProfile;->DBG:Z
 
     if-eqz v15, :cond_d
 
@@ -1504,7 +1504,7 @@
     .line 624
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/wifi/WifiShareProfile;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v15, v0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v15, v11}, Landroid/net/wifi/WifiManager;->callSECApi(Landroid/os/Message;)I
 
@@ -1513,7 +1513,7 @@
     if-nez v15, :cond_16
 
     .line 625
-    sget-boolean v15, Lcom/android/settings/wifi/WifiShareProfile;->DBG:Z
+    sget-boolean v15, Lcom/android/settings_ex/wifi/WifiShareProfile;->DBG:Z
 
     if-eqz v15, :cond_e
 
@@ -1572,7 +1572,7 @@
     if-eqz v15, :cond_12
 
     .line 602
-    sget-boolean v15, Lcom/android/settings/wifi/WifiShareProfile;->DBG:Z
+    sget-boolean v15, Lcom/android/settings_ex/wifi/WifiShareProfile;->DBG:Z
 
     if-eqz v15, :cond_c
 
@@ -1654,7 +1654,7 @@
     .line 624
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiShareProfile;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     move-object/from16 v16, v0
 
@@ -1667,7 +1667,7 @@
     if-nez v16, :cond_17
 
     .line 625
-    sget-boolean v16, Lcom/android/settings/wifi/WifiShareProfile;->DBG:Z
+    sget-boolean v16, Lcom/android/settings_ex/wifi/WifiShareProfile;->DBG:Z
 
     if-eqz v16, :cond_10
 
@@ -1712,7 +1712,7 @@
     if-eqz v15, :cond_13
 
     .line 604
-    sget-boolean v15, Lcom/android/settings/wifi/WifiShareProfile;->DBG:Z
+    sget-boolean v15, Lcom/android/settings_ex/wifi/WifiShareProfile;->DBG:Z
 
     if-eqz v15, :cond_c
 
@@ -1759,7 +1759,7 @@
     if-eqz v15, :cond_14
 
     .line 606
-    sget-boolean v15, Lcom/android/settings/wifi/WifiShareProfile;->DBG:Z
+    sget-boolean v15, Lcom/android/settings_ex/wifi/WifiShareProfile;->DBG:Z
 
     if-eqz v15, :cond_c
 
@@ -1795,13 +1795,13 @@
     :cond_14
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/wifi/WifiShareProfile;->currentApInfoMap:Ljava/util/HashMap;
+    iget-object v15, v0, Lcom/android/settings_ex/wifi/WifiShareProfile;->currentApInfoMap:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v16
 
-    new-instance v17, Lcom/android/settings/wifi/WifiShareProfile$WifiShareProfileApInfo;
+    new-instance v17, Lcom/android/settings_ex/wifi/WifiShareProfile$WifiShareProfileApInfo;
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1817,12 +1817,12 @@
 
     move-object/from16 v2, v19
 
-    invoke-direct {v0, v14, v1, v2, v12}, Lcom/android/settings/wifi/WifiShareProfile$WifiShareProfileApInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v14, v1, v2, v12}, Lcom/android/settings_ex/wifi/WifiShareProfile$WifiShareProfileApInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
     invoke-virtual/range {v15 .. v17}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 609
-    sget-boolean v15, Lcom/android/settings/wifi/WifiShareProfile;->DBG:Z
+    sget-boolean v15, Lcom/android/settings_ex/wifi/WifiShareProfile;->DBG:Z
 
     if-eqz v15, :cond_c
 
@@ -2149,7 +2149,7 @@
 
     .local v5, "i":I
     :goto_0
-    iget-object v8, p0, Lcom/android/settings/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
+    iget-object v8, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
 
     invoke-virtual {v8}, Landroid/preference/PreferenceGroup;->getPreferenceCount()I
 
@@ -2158,17 +2158,17 @@
     if-ge v5, v8, :cond_4
 
     .line 651
-    iget-object v9, p0, Lcom/android/settings/wifi/WifiShareProfile;->selectedApIndexes:Ljava/util/List;
+    iget-object v9, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->selectedApIndexes:Ljava/util/List;
 
-    iget-object v8, p0, Lcom/android/settings/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
+    iget-object v8, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
 
     invoke-virtual {v8, v5}, Landroid/preference/PreferenceGroup;->getPreference(I)Landroid/preference/Preference;
 
     move-result-object v8
 
-    check-cast v8, Lcom/android/settings/wifi/WifiShareProfileCandidateAP;
+    check-cast v8, Lcom/android/settings_ex/wifi/WifiShareProfileCandidateAP;
 
-    iget-object v8, v8, Lcom/android/settings/wifi/WifiShareProfileCandidateAP;->index:Ljava/lang/String;
+    iget-object v8, v8, Lcom/android/settings_ex/wifi/WifiShareProfileCandidateAP;->index:Ljava/lang/String;
 
     invoke-interface {v9, v8}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -2177,7 +2177,7 @@
     if-eqz v8, :cond_3
 
     .line 652
-    sget-boolean v8, Lcom/android/settings/wifi/WifiShareProfile;->DBG:Z
+    sget-boolean v8, Lcom/android/settings_ex/wifi/WifiShareProfile;->DBG:Z
 
     if-eqz v8, :cond_2
 
@@ -2193,15 +2193,15 @@
 
     move-result-object v10
 
-    iget-object v8, p0, Lcom/android/settings/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
+    iget-object v8, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
 
     invoke-virtual {v8, v5}, Landroid/preference/PreferenceGroup;->getPreference(I)Landroid/preference/Preference;
 
     move-result-object v8
 
-    check-cast v8, Lcom/android/settings/wifi/WifiShareProfileCandidateAP;
+    check-cast v8, Lcom/android/settings_ex/wifi/WifiShareProfileCandidateAP;
 
-    iget-object v8, v8, Lcom/android/settings/wifi/WifiShareProfileCandidateAP;->index:Ljava/lang/String;
+    iget-object v8, v8, Lcom/android/settings_ex/wifi/WifiShareProfileCandidateAP;->index:Ljava/lang/String;
 
     invoke-virtual {v10, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2215,15 +2215,15 @@
 
     .line 654
     :cond_2
-    iget-object v8, p0, Lcom/android/settings/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
+    iget-object v8, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
 
     invoke-virtual {v8, v5}, Landroid/preference/PreferenceGroup;->getPreference(I)Landroid/preference/Preference;
 
     move-result-object v8
 
-    check-cast v8, Lcom/android/settings/wifi/WifiShareProfileCandidateAP;
+    check-cast v8, Lcom/android/settings_ex/wifi/WifiShareProfileCandidateAP;
 
-    invoke-virtual {v8}, Lcom/android/settings/wifi/WifiShareProfileCandidateAP;->updatedNetwork()Ljava/lang/String;
+    invoke-virtual {v8}, Lcom/android/settings_ex/wifi/WifiShareProfileCandidateAP;->updatedNetwork()Ljava/lang/String;
 
     move-result-object v8
 
@@ -2233,15 +2233,15 @@
     invoke-virtual {v6, v11}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 656
-    iget-object v8, p0, Lcom/android/settings/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
+    iget-object v8, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
 
     invoke-virtual {v8, v5}, Landroid/preference/PreferenceGroup;->getPreference(I)Landroid/preference/Preference;
 
     move-result-object v8
 
-    check-cast v8, Lcom/android/settings/wifi/WifiShareProfileCandidateAP;
+    check-cast v8, Lcom/android/settings_ex/wifi/WifiShareProfileCandidateAP;
 
-    iget-object v8, v8, Lcom/android/settings/wifi/WifiShareProfileCandidateAP;->ssid:Ljava/lang/String;
+    iget-object v8, v8, Lcom/android/settings_ex/wifi/WifiShareProfileCandidateAP;->ssid:Ljava/lang/String;
 
     invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2281,7 +2281,7 @@
 
     move-result-object v8
 
-    iput-object v8, p0, Lcom/android/settings/wifi/WifiShareProfile;->selectedSSID:Ljava/lang/String;
+    iput-object v8, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->selectedSSID:Ljava/lang/String;
 
     .line 664
     :cond_5
@@ -2329,7 +2329,7 @@
     .restart local v3    # "fw":Ljava/io/FileOutputStream;
     :cond_6
     :goto_1
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiShareProfile;->EncryptData()I
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->EncryptData()I
 
     .line 678
     invoke-virtual {v7}, Ljava/io/File;->exists()Z
@@ -2495,7 +2495,7 @@
 
     .prologue
     .line 784
-    sget-object v2, Lcom/android/settings/wifi/WifiShareProfile;->cipher:Ljavax/crypto/Cipher;
+    sget-object v2, Lcom/android/settings_ex/wifi/WifiShareProfile;->cipher:Ljavax/crypto/Cipher;
 
     invoke-virtual {v2}, Ljavax/crypto/Cipher;->getBlockSize()I
 
@@ -2521,18 +2521,18 @@
     invoke-virtual {p1, v0}, Ljava/io/OutputStream;->write([B)V
 
     .line 792
-    sget-object v2, Lcom/android/settings/wifi/WifiShareProfile;->cipher:Ljavax/crypto/Cipher;
+    sget-object v2, Lcom/android/settings_ex/wifi/WifiShareProfile;->cipher:Ljavax/crypto/Cipher;
 
     const/4 v3, 0x1
 
-    sget-object v4, Lcom/android/settings/wifi/WifiShareProfile;->key:Ljavax/crypto/spec/SecretKeySpec;
+    sget-object v4, Lcom/android/settings_ex/wifi/WifiShareProfile;->key:Ljavax/crypto/spec/SecretKeySpec;
 
     invoke-virtual {v2, v3, v4, v1}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
 
     .line 793
     new-instance v2, Ljavax/crypto/CipherOutputStream;
 
-    sget-object v3, Lcom/android/settings/wifi/WifiShareProfile;->cipher:Ljavax/crypto/Cipher;
+    sget-object v3, Lcom/android/settings_ex/wifi/WifiShareProfile;->cipher:Ljavax/crypto/Cipher;
 
     invoke-direct {v2, p1, v3}, Ljavax/crypto/CipherOutputStream;-><init>(Ljava/io/OutputStream;Ljavax/crypto/Cipher;)V
 
@@ -2546,17 +2546,17 @@
     const/4 v9, 0x1
 
     .line 368
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->selectedApIndexes:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->selectedApIndexes:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
     .line 369
     const/4 v1, 0x0
 
-    iput v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->selectedApCount:I
+    iput v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->selectedApCount:I
 
     .line 372
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v1}, Landroid/net/wifi/WifiManager;->isWifiEnabled()Z
 
@@ -2565,7 +2565,7 @@
     if-nez v1, :cond_1
 
     .line 373
-    sget-boolean v1, Lcom/android/settings/wifi/WifiShareProfile;->DBG:Z
+    sget-boolean v1, Lcom/android/settings_ex/wifi/WifiShareProfile;->DBG:Z
 
     if-eqz v1, :cond_0
 
@@ -2577,7 +2577,7 @@
 
     .line 374
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
 
     invoke-virtual {v1}, Landroid/preference/PreferenceGroup;->removeAll()V
 
@@ -2587,7 +2587,7 @@
 
     .line 379
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->currentApInfoMap:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->currentApInfoMap:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->size()I
 
@@ -2596,7 +2596,7 @@
     if-nez v1, :cond_3
 
     .line 380
-    sget-boolean v1, Lcom/android/settings/wifi/WifiShareProfile;->DBG:Z
+    sget-boolean v1, Lcom/android/settings_ex/wifi/WifiShareProfile;->DBG:Z
 
     if-eqz v1, :cond_2
 
@@ -2608,14 +2608,14 @@
 
     .line 381
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiShareProfile;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 
     invoke-virtual {v1}, Landroid/preference/PreferenceScreen;->removeAll()V
 
     .line 382
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
 
     invoke-virtual {v1}, Landroid/preference/PreferenceGroup;->removeAll()V
 
@@ -2623,35 +2623,35 @@
 
     .line 387
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiShareProfile;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v8
 
     .line 388
     .local v8, "preferenceScreen":Landroid/preference/PreferenceScreen;
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
 
     invoke-virtual {v1}, Landroid/preference/PreferenceGroup;->removeAll()V
 
     .line 389
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
 
     const v2, 0x7f0e0530
 
     invoke-virtual {v1, v2}, Landroid/preference/PreferenceGroup;->setTitle(I)V
 
     .line 390
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
 
     invoke-virtual {v1, v9}, Landroid/preference/PreferenceGroup;->setEnabled(Z)V
 
     .line 391
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
 
     invoke-virtual {v8, v1}, Landroid/preference/PreferenceScreen;->addPreference(Landroid/preference/Preference;)Z
 
     .line 393
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->currentApInfoMap:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->currentApInfoMap:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
@@ -2677,67 +2677,67 @@
 
     .line 394
     .local v6, "apIndex":Ljava/lang/String;
-    new-instance v0, Lcom/android/settings/wifi/WifiShareProfileCandidateAP;
+    new-instance v0, Lcom/android/settings_ex/wifi/WifiShareProfileCandidateAP;
 
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiShareProfile;->currentApInfoMap:Ljava/util/HashMap;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->currentApInfoMap:Ljava/util/HashMap;
 
     invoke-virtual {v2, v6}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/wifi/WifiShareProfile$WifiShareProfileApInfo;
+    check-cast v2, Lcom/android/settings_ex/wifi/WifiShareProfile$WifiShareProfileApInfo;
 
-    iget-object v2, v2, Lcom/android/settings/wifi/WifiShareProfile$WifiShareProfileApInfo;->ssid:Ljava/lang/String;
+    iget-object v2, v2, Lcom/android/settings_ex/wifi/WifiShareProfile$WifiShareProfileApInfo;->ssid:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiShareProfile;->currentApInfoMap:Ljava/util/HashMap;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->currentApInfoMap:Ljava/util/HashMap;
 
     invoke-virtual {v3, v6}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/settings/wifi/WifiShareProfile$WifiShareProfileApInfo;
+    check-cast v3, Lcom/android/settings_ex/wifi/WifiShareProfile$WifiShareProfileApInfo;
 
-    iget-object v3, v3, Lcom/android/settings/wifi/WifiShareProfile$WifiShareProfileApInfo;->index:Ljava/lang/String;
+    iget-object v3, v3, Lcom/android/settings_ex/wifi/WifiShareProfile$WifiShareProfileApInfo;->index:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiShareProfile;->currentApInfoMap:Ljava/util/HashMap;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->currentApInfoMap:Ljava/util/HashMap;
 
     invoke-virtual {v4, v6}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/wifi/WifiShareProfile$WifiShareProfileApInfo;
+    check-cast v4, Lcom/android/settings_ex/wifi/WifiShareProfile$WifiShareProfileApInfo;
 
-    iget-object v4, v4, Lcom/android/settings/wifi/WifiShareProfile$WifiShareProfileApInfo;->network:Ljava/lang/String;
+    iget-object v4, v4, Lcom/android/settings_ex/wifi/WifiShareProfile$WifiShareProfileApInfo;->network:Ljava/lang/String;
 
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiShareProfile;->currentApInfoMap:Ljava/util/HashMap;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->currentApInfoMap:Ljava/util/HashMap;
 
     invoke-virtual {v5, v6}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/settings/wifi/WifiShareProfile$WifiShareProfileApInfo;
+    check-cast v5, Lcom/android/settings_ex/wifi/WifiShareProfile$WifiShareProfileApInfo;
 
-    iget v5, v5, Lcom/android/settings/wifi/WifiShareProfile$WifiShareProfileApInfo;->priority:I
+    iget v5, v5, Lcom/android/settings_ex/wifi/WifiShareProfile$WifiShareProfileApInfo;->priority:I
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/settings/wifi/WifiShareProfileCandidateAP;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct/range {v0 .. v5}, Lcom/android/settings_ex/wifi/WifiShareProfileCandidateAP;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 399
-    .local v0, "temp_c":Lcom/android/settings/wifi/WifiShareProfileCandidateAP;
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
+    .local v0, "temp_c":Lcom/android/settings_ex/wifi/WifiShareProfileCandidateAP;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
 
     invoke-virtual {v1, v0}, Landroid/preference/PreferenceGroup;->addPreference(Landroid/preference/Preference;)Z
 
     goto :goto_1
 
     .line 401
-    .end local v0    # "temp_c":Lcom/android/settings/wifi/WifiShareProfileCandidateAP;
+    .end local v0    # "temp_c":Lcom/android/settings_ex/wifi/WifiShareProfileCandidateAP;
     .end local v6    # "apIndex":Ljava/lang/String;
     :cond_4
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
 
     invoke-virtual {v1, v9}, Landroid/preference/PreferenceGroup;->setEnabled(Z)V
 
@@ -2756,7 +2756,7 @@
     .local v0, "apId":I
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -2772,9 +2772,9 @@
 
     const v3, 0x7f110024
 
-    new-instance v4, Lcom/android/settings/wifi/WifiShareProfile$5;
+    new-instance v4, Lcom/android/settings_ex/wifi/WifiShareProfile$5;
 
-    invoke-direct {v4, p0, v0}, Lcom/android/settings/wifi/WifiShareProfile$5;-><init>(Lcom/android/settings/wifi/WifiShareProfile;I)V
+    invoke-direct {v4, p0, v0}, Lcom/android/settings_ex/wifi/WifiShareProfile$5;-><init>(Lcom/android/settings_ex/wifi/WifiShareProfile;I)V
 
     invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setItems(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -2782,17 +2782,17 @@
 
     const v3, 0x7f0e01ba
 
-    new-instance v4, Lcom/android/settings/wifi/WifiShareProfile$4;
+    new-instance v4, Lcom/android/settings_ex/wifi/WifiShareProfile$4;
 
-    invoke-direct {v4, p0, v0}, Lcom/android/settings/wifi/WifiShareProfile$4;-><init>(Lcom/android/settings/wifi/WifiShareProfile;I)V
+    invoke-direct {v4, p0, v0}, Lcom/android/settings_ex/wifi/WifiShareProfile$4;-><init>(Lcom/android/settings_ex/wifi/WifiShareProfile;I)V
 
     invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v2
 
-    new-instance v3, Lcom/android/settings/wifi/WifiShareProfile$3;
+    new-instance v3, Lcom/android/settings_ex/wifi/WifiShareProfile$3;
 
-    invoke-direct {v3, p0, v0}, Lcom/android/settings/wifi/WifiShareProfile$3;-><init>(Lcom/android/settings/wifi/WifiShareProfile;I)V
+    invoke-direct {v3, p0, v0}, Lcom/android/settings_ex/wifi/WifiShareProfile$3;-><init>(Lcom/android/settings_ex/wifi/WifiShareProfile;I)V
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
 
@@ -2802,7 +2802,7 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/wifi/WifiShareProfile;->dialog:Landroid/app/AlertDialog;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->dialog:Landroid/app/AlertDialog;
 
     .line 477
     return-void
@@ -2813,9 +2813,9 @@
 
     .prologue
     .line 723
-    iget-boolean v2, p0, Lcom/android/settings/wifi/WifiShareProfile;->wifiP2pConnected:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->wifiP2pConnected:Z
 
-    iput-boolean v2, p0, Lcom/android/settings/wifi/WifiShareProfile;->mP2pConnectedOnSend:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mP2pConnectedOnSend:Z
 
     .line 725
     new-instance v1, Landroid/content/Intent;
@@ -2839,7 +2839,7 @@
     const/16 v2, 0x21b1
 
     :try_start_0
-    invoke-virtual {p0, v1, v2}, Lcom/android/settings/wifi/WifiShareProfile;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v1, v2}, Lcom/android/settings_ex/wifi/WifiShareProfile;->startActivityForResult(Landroid/content/Intent;I)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2883,7 +2883,7 @@
 
     .prologue
     .line 736
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiShareProfile;->P2pPeers:Ljava/util/List;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->P2pPeers:Ljava/util/List;
 
     invoke-interface {v5}, Ljava/util/List;->size()I
 
@@ -2892,7 +2892,7 @@
     if-nez v5, :cond_1
 
     .line 737
-    sget-boolean v5, Lcom/android/settings/wifi/WifiShareProfile;->DBG:Z
+    sget-boolean v5, Lcom/android/settings_ex/wifi/WifiShareProfile;->DBG:Z
 
     if-eqz v5, :cond_0
 
@@ -2908,7 +2908,7 @@
 
     .line 739
     :cond_1
-    sget-boolean v5, Lcom/android/settings/wifi/WifiShareProfile;->DBG:Z
+    sget-boolean v5, Lcom/android/settings_ex/wifi/WifiShareProfile;->DBG:Z
 
     if-eqz v5, :cond_2
 
@@ -2924,7 +2924,7 @@
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/wifi/WifiShareProfile;->P2pPeers:Ljava/util/List;
+    iget-object v7, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->P2pPeers:Ljava/util/List;
 
     invoke-interface {v7}, Ljava/util/List;->size()I
 
@@ -2952,7 +2952,7 @@
 
     .line 741
     .local v1, "deviceToDelete":Landroid/net/wifi/p2p/WifiP2pDevice;
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiShareProfile;->P2pPeers:Ljava/util/List;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->P2pPeers:Ljava/util/List;
 
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2974,7 +2974,7 @@
 
     .line 742
     .local v4, "peer":Landroid/net/wifi/p2p/WifiP2pDevice;
-    sget-boolean v5, Lcom/android/settings/wifi/WifiShareProfile;->DBG:Z
+    sget-boolean v5, Lcom/android/settings_ex/wifi/WifiShareProfile;->DBG:Z
 
     if-eqz v5, :cond_3
 
@@ -3028,7 +3028,7 @@
 
     .line 745
     :cond_3
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiShareProfile;->SelectedP2pPeers:Ljava/util/List;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->SelectedP2pPeers:Ljava/util/List;
 
     invoke-interface {v5, v4}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -3070,7 +3070,7 @@
     .line 752
     const-string v5, "senderName"
 
-    iget-object v6, p0, Lcom/android/settings/wifi/WifiShareProfile;->mP2pThisDevice:Landroid/net/wifi/p2p/WifiP2pDevice;
+    iget-object v6, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mP2pThisDevice:Landroid/net/wifi/p2p/WifiP2pDevice;
 
     iget-object v6, v6, Landroid/net/wifi/p2p/WifiP2pDevice;->deviceName:Ljava/lang/String;
 
@@ -3079,14 +3079,14 @@
     .line 753
     const-string v5, "SSIDs"
 
-    iget-object v6, p0, Lcom/android/settings/wifi/WifiShareProfile;->selectedSSID:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->selectedSSID:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 754
     const-string v6, "disconnectOnCompletion"
 
-    iget-boolean v5, p0, Lcom/android/settings/wifi/WifiShareProfile;->mP2pConnectedOnSend:Z
+    iget-boolean v5, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mP2pConnectedOnSend:Z
 
     if-nez v5, :cond_6
 
@@ -3099,7 +3099,7 @@
     iput-object v0, v3, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     .line 756
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiShareProfile;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v5, v3}, Landroid/net/wifi/WifiManager;->callSECApi(Landroid/os/Message;)I
 
@@ -3108,7 +3108,7 @@
     if-nez v5, :cond_7
 
     .line 757
-    sget-boolean v5, Lcom/android/settings/wifi/WifiShareProfile;->DBG:Z
+    sget-boolean v5, Lcom/android/settings_ex/wifi/WifiShareProfile;->DBG:Z
 
     if-eqz v5, :cond_4
 
@@ -3124,7 +3124,7 @@
     move-object v1, v4
 
     .line 762
-    sget-boolean v5, Lcom/android/settings/wifi/WifiShareProfile;->DBG:Z
+    sget-boolean v5, Lcom/android/settings_ex/wifi/WifiShareProfile;->DBG:Z
 
     if-eqz v5, :cond_5
 
@@ -3138,7 +3138,7 @@
     .end local v0    # "args":Landroid/os/Bundle;
     .end local v3    # "msg":Landroid/os/Message;
     :cond_5
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiShareProfile;->SelectedP2pPeers:Ljava/util/List;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->SelectedP2pPeers:Ljava/util/List;
 
     invoke-interface {v5, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
@@ -3170,7 +3170,7 @@
 
     .prologue
     .line 522
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -3204,16 +3204,16 @@
     .line 526
     const-string v2, "com.android.settings.wifi.WifiShareProfileSelectedSSID"
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiShareProfile;->selectedSSID:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->selectedSSID:Ljava/lang/String;
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 527
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
 
     const/4 v3, -0x1
 
@@ -3221,14 +3221,14 @@
 
     .line 529
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
     .line 530
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -3255,17 +3255,17 @@
 
     .prologue
     .line 324
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 325
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->mContext:Landroid/content/Context;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mContext:Landroid/content/Context;
 
     .line 327
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -3284,7 +3284,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setGravity(I)V
 
     .line 329
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiShareProfile;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -3299,7 +3299,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextSize(F)V
 
     .line 330
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiShareProfile;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -3317,7 +3317,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     .line 332
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiShareProfile;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -3332,17 +3332,17 @@
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setLineSpacing(FF)V
 
     .line 333
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiShareProfile;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->getListView()Landroid/widget/ListView;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/widget/ListView;->setEmptyView(Landroid/view/View;)V
 
     .line 335
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiShareProfile;->constructCurrentApInfoMap()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->constructCurrentApInfoMap()V
 
     .line 336
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiShareProfile;->initPreferences()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->initPreferences()V
 
     .line 337
     return-void
@@ -3379,12 +3379,12 @@
     if-eqz v0, :cond_0
 
     .line 485
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->SelectedP2pPeers:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->SelectedP2pPeers:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
     .line 486
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->SelectedP2pPeers:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->SelectedP2pPeers:Ljava/util/List;
 
     invoke-virtual {v0}, Landroid/net/wifi/p2p/WifiP2pDeviceList;->getDeviceList()Ljava/util/Collection;
 
@@ -3394,7 +3394,7 @@
 
     .line 488
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiShareProfile;->initPreferences()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->initPreferences()V
 
     .line 494
     .end local v0    # "deviceList":Landroid/net/wifi/p2p/WifiP2pDeviceList;
@@ -3407,12 +3407,12 @@
     if-nez p2, :cond_1
 
     .line 490
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->SelectedP2pPeers:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->SelectedP2pPeers:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
     .line 491
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiShareProfile;->initPreferences()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->initPreferences()V
 
     goto :goto_0
 .end method
@@ -3423,36 +3423,36 @@
 
     .prologue
     .line 205
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 207
     const v0, 0x7f0800e8
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/wifi/WifiShareProfile;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->addPreferencesFromResource(I)V
 
     .line 209
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mFilter:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mFilter:Landroid/content/IntentFilter;
 
     const-string v1, "android.net.wifi.p2p.CONNECTION_STATE_CHANGE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 210
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mFilter:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mFilter:Landroid/content/IntentFilter;
 
     const-string v1, "android.net.wifi.p2p.THIS_DEVICE_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 211
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mFilter:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mFilter:Landroid/content/IntentFilter;
 
     const-string v1, "android.net.wifi.WIFI_STATE_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 212
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mFilter:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mFilter:Landroid/content/IntentFilter;
 
     const-string v1, "android.net.wifi.SCAN_RESULTS"
 
@@ -3461,22 +3461,22 @@
     .line 214
     const-string v0, "wifip2p"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/wifi/WifiShareProfile;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/net/wifi/p2p/WifiP2pManager;
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mWifiP2pManager:Landroid/net/wifi/p2p/WifiP2pManager;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mWifiP2pManager:Landroid/net/wifi/p2p/WifiP2pManager;
 
     .line 215
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mWifiP2pManager:Landroid/net/wifi/p2p/WifiP2pManager;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mWifiP2pManager:Landroid/net/wifi/p2p/WifiP2pManager;
 
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -3490,52 +3490,52 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mChannel:Landroid/net/wifi/p2p/WifiP2pManager$Channel;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mChannel:Landroid/net/wifi/p2p/WifiP2pManager$Channel;
 
     .line 217
     const-string v0, "wifi"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/wifi/WifiShareProfile;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/net/wifi/WifiManager;
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     .line 218
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->isWifiEnabled()Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->wifiIsEnabled:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->wifiIsEnabled:Z
 
     .line 220
-    new-instance v0, Lcom/android/settings/wifi/WifiShareProfile$2;
+    new-instance v0, Lcom/android/settings_ex/wifi/WifiShareProfile$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/wifi/WifiShareProfile$2;-><init>(Lcom/android/settings/wifi/WifiShareProfile;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/wifi/WifiShareProfile$2;-><init>(Lcom/android/settings_ex/wifi/WifiShareProfile;)V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mReceiver:Landroid/content/BroadcastReceiver;
 
     .line 318
     const-string v0, "candidate_aps"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/wifi/WifiShareProfile;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceCategory;
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
 
     .line 319
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->getActivity()Landroid/app/Activity;
 
     const/4 v1, 0x0
 
@@ -3552,7 +3552,7 @@
     .prologue
     .line 504
     .line 508
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreateDialog(I)Landroid/app/Dialog;
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreateDialog(I)Landroid/app/Dialog;
 
     move-result-object v0
 
@@ -3564,19 +3564,19 @@
 
     .prologue
     .line 357
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
 
     invoke-virtual {v0}, Landroid/preference/PreferenceGroup;->removeAll()V
 
     .line 358
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     .line 359
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroy()V
 
     .line 360
     return-void
@@ -3589,22 +3589,22 @@
     const/4 v2, 0x0
 
     .line 349
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 350
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mContext:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 351
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/android/settings/wifi/WifiStatusReceiver;->mIsForegroundWifiSubSettings:Z
+    sput-boolean v0, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->mIsForegroundWifiSubSettings:Z
 
     .line 352
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x5
 
@@ -3645,22 +3645,22 @@
 
     .prologue
     .line 406
-    instance-of v4, p2, Lcom/android/settings/wifi/WifiShareProfileCandidateAP;
+    instance-of v4, p2, Lcom/android/settings_ex/wifi/WifiShareProfileCandidateAP;
 
     if-eqz v4, :cond_2
 
     move-object v0, p2
 
     .line 407
-    check-cast v0, Lcom/android/settings/wifi/WifiShareProfileCandidateAP;
+    check-cast v0, Lcom/android/settings_ex/wifi/WifiShareProfileCandidateAP;
 
     .line 410
-    .local v0, "candidateAP":Lcom/android/settings/wifi/WifiShareProfileCandidateAP;
+    .local v0, "candidateAP":Lcom/android/settings_ex/wifi/WifiShareProfileCandidateAP;
     const/4 v3, 0x0
 
     .local v3, "selectedIndex":I
     :goto_0
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
 
     invoke-virtual {v4}, Landroid/preference/PreferenceGroup;->getPreferenceCount()I
 
@@ -3669,17 +3669,17 @@
     if-ge v3, v4, :cond_0
 
     .line 411
-    iget-object v5, v0, Lcom/android/settings/wifi/WifiShareProfileCandidateAP;->index:Ljava/lang/String;
+    iget-object v5, v0, Lcom/android/settings_ex/wifi/WifiShareProfileCandidateAP;->index:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mCandidateAPs:Landroid/preference/PreferenceGroup;
 
     invoke-virtual {v4, v3}, Landroid/preference/PreferenceGroup;->getPreference(I)Landroid/preference/Preference;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/wifi/WifiShareProfileCandidateAP;
+    check-cast v4, Lcom/android/settings_ex/wifi/WifiShareProfileCandidateAP;
 
-    iget-object v4, v4, Lcom/android/settings/wifi/WifiShareProfileCandidateAP;->index:Ljava/lang/String;
+    iget-object v4, v4, Lcom/android/settings_ex/wifi/WifiShareProfileCandidateAP;->index:Ljava/lang/String;
 
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3689,17 +3689,17 @@
 
     .line 415
     :cond_0
-    invoke-direct {p0, v3}, Lcom/android/settings/wifi/WifiShareProfile;->showAccessTimeoutAlertDialog(I)V
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/wifi/WifiShareProfile;->showAccessTimeoutAlertDialog(I)V
 
     .line 416
-    iget v4, p0, Lcom/android/settings/wifi/WifiShareProfile;->selectedApCount:I
+    iget v4, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->selectedApCount:I
 
     add-int/lit8 v4, v4, 0x1
 
-    iput v4, p0, Lcom/android/settings/wifi/WifiShareProfile;->selectedApCount:I
+    iput v4, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->selectedApCount:I
 
     .line 418
-    sget-boolean v4, Lcom/android/settings/wifi/WifiShareProfile;->DBG:Z
+    sget-boolean v4, Lcom/android/settings_ex/wifi/WifiShareProfile;->DBG:Z
 
     if-eqz v4, :cond_2
 
@@ -3711,7 +3711,7 @@
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 420
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiShareProfile;->selectedApIndexes:Ljava/util/List;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->selectedApIndexes:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3748,7 +3748,7 @@
     goto :goto_0
 
     .line 426
-    .end local v0    # "candidateAP":Lcom/android/settings/wifi/WifiShareProfileCandidateAP;
+    .end local v0    # "candidateAP":Lcom/android/settings_ex/wifi/WifiShareProfileCandidateAP;
     .end local v3    # "selectedIndex":I
     :cond_2
     const/4 v4, 0x1
@@ -3763,24 +3763,24 @@
     const/4 v3, 0x0
 
     .line 341
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 342
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mContext:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiShareProfile;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiShareProfile;->mFilter:Landroid/content/IntentFilter;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mFilter:Landroid/content/IntentFilter;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 343
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/android/settings/wifi/WifiStatusReceiver;->mIsForegroundWifiSubSettings:Z
+    sput-boolean v0, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->mIsForegroundWifiSubSettings:Z
 
     .line 344
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x5
 
@@ -3799,7 +3799,7 @@
 
     .prologue
     .line 513
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onStart()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onStart()V
 
     .line 514
     return-void
@@ -3810,7 +3810,7 @@
 
     .prologue
     .line 518
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onStop()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onStop()V
 
     .line 519
     return-void

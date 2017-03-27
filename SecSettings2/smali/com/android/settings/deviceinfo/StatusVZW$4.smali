@@ -1,11 +1,11 @@
-.class Lcom/android/settings/deviceinfo/StatusVZW$4;
+.class Lcom/android/settings_ex/deviceinfo/StatusVZW$4;
 .super Landroid/content/BroadcastReceiver;
 .source "StatusVZW.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/StatusVZW;
+    value = Lcom/android/settings_ex/deviceinfo/StatusVZW;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/StatusVZW;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
     .locals 0
 
     .prologue
     .line 391
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/StatusVZW$4;->this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW$4;->this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -99,10 +99,10 @@
 
     .line 403
     .local v3, "latestAreaInfo":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/deviceinfo/StatusVZW$4;->this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+    iget-object v4, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW$4;->this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
-    # invokes: Lcom/android/settings/deviceinfo/StatusVZW;->updateAreaInfo(Ljava/lang/String;)V
-    invoke-static {v4, v3}, Lcom/android/settings/deviceinfo/StatusVZW;->access$900(Lcom/android/settings/deviceinfo/StatusVZW;Ljava/lang/String;)V
+    # invokes: Lcom/android/settings_ex/deviceinfo/StatusVZW;->updateAreaInfo(Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->access$900(Lcom/android/settings_ex/deviceinfo/StatusVZW;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

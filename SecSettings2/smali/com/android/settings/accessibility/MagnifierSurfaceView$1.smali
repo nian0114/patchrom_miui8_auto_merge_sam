@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessibility/MagnifierSurfaceView$1;
+.class Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;
 .super Landroid/os/Handler;
 .source "MagnifierSurfaceView.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    value = Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/MagnifierSurfaceView;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;)V
     .locals 0
 
     .prologue
     .line 430
-    iput-object p1, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -50,12 +50,12 @@
     if-ne v2, v6, :cond_4
 
     .line 433
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierSurfaceView;->mContext:Landroid/content/Context;
-    invoke-static {v3}, Lcom/android/settings/accessibility/MagnifierSurfaceView;->access$100(Lcom/android/settings/accessibility/MagnifierSurfaceView;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mContext:Landroid/content/Context;
+    invoke-static {v3}, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->access$100(Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;)Landroid/content/Context;
 
     move-result-object v3
 
@@ -69,13 +69,13 @@
 
     move-result v3
 
-    iput v3, v2, Lcom/android/settings/accessibility/MagnifierSurfaceView;->magSize:I
+    iput v3, v2, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->magSize:I
 
     .line 434
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierSurfaceView;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcom/android/settings/accessibility/MagnifierSurfaceView;->access$100(Lcom/android/settings/accessibility/MagnifierSurfaceView;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mContext:Landroid/content/Context;
+    invoke-static {v2}, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->access$100(Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;)Landroid/content/Context;
 
     move-result-object v2
 
@@ -92,17 +92,17 @@
     .line 436
     .local v1, "scaleSize":I
     :try_start_0
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget-object v2, v2, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mManager:Landroid/view/accessibility/AccessibilityManager;
+    iget-object v2, v2, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mManager:Landroid/view/accessibility/AccessibilityManager;
 
     invoke-virtual {v2}, Landroid/view/accessibility/AccessibilityManager;->disableMagnifier()V
 
     .line 437
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierSurfaceView;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcom/android/settings/accessibility/MagnifierSurfaceView;->access$100(Lcom/android/settings/accessibility/MagnifierSurfaceView;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mContext:Landroid/content/Context;
+    invoke-static {v2}, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->access$100(Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;)Landroid/content/Context;
 
     move-result-object v2
 
@@ -129,47 +129,47 @@
     .line 439
     .restart local v1    # "scaleSize":I
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget-boolean v2, v2, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mIsDualScreenFeatureEnabled:Z
+    iget-boolean v2, v2, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mIsDualScreenFeatureEnabled:Z
 
     if-eqz v2, :cond_3
 
     .line 440
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget-object v2, v2, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mCurrentScreen:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;
+    iget-object v2, v2, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mCurrentScreen:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;
 
     sget-object v3, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;->SUB:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;
 
     if-ne v2, v3, :cond_2
 
     .line 441
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget-object v2, v2, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mManager:Landroid/view/accessibility/AccessibilityManager;
+    iget-object v2, v2, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mManager:Landroid/view/accessibility/AccessibilityManager;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget-object v3, v3, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mMagPadSize:Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;
+    iget-object v3, v3, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mMagPadSize:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;
 
-    iget-object v3, v3, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
+    iget-object v3, v3, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget v4, v4, Lcom/android/settings/accessibility/MagnifierSurfaceView;->magSize:I
+    iget v4, v4, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->magSize:I
 
     aget v3, v3, v4
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget-object v4, v4, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mMagPadSize:Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;
+    iget-object v4, v4, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mMagPadSize:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;
 
-    iget-object v4, v4, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
+    iget-object v4, v4, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget v5, v5, Lcom/android/settings/accessibility/MagnifierSurfaceView;->magSize:I
+    iget v5, v5, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->magSize:I
 
     aget v4, v4, v5
 
@@ -183,34 +183,34 @@
 
     .line 448
     :goto_1
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    # getter for: Lcom/android/settings/accessibility/MagnifierSurfaceView;->mPolicy:Lcom/android/settings/accessibility/MagnifierDisplayPolicy;
-    invoke-static {v2}, Lcom/android/settings/accessibility/MagnifierSurfaceView;->access$200(Lcom/android/settings/accessibility/MagnifierSurfaceView;)Lcom/android/settings/accessibility/MagnifierDisplayPolicy;
+    # getter for: Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mPolicy:Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;
+    invoke-static {v2}, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->access$200(Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;)Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget-object v3, v3, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mMagPadSize:Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;
+    iget-object v3, v3, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mMagPadSize:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;
 
-    iget-object v3, v3, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
+    iget-object v3, v3, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget v4, v4, Lcom/android/settings/accessibility/MagnifierSurfaceView;->magSize:I
+    iget v4, v4, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->magSize:I
 
     aget v3, v3, v4
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget-object v4, v4, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mMagPadSize:Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;
+    iget-object v4, v4, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mMagPadSize:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;
 
-    iget-object v4, v4, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
+    iget-object v4, v4, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget v5, v5, Lcom/android/settings/accessibility/MagnifierSurfaceView;->magSize:I
+    iget v5, v5, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->magSize:I
 
     aget v4, v4, v5
 
@@ -218,48 +218,48 @@
 
     add-float/2addr v5, v7
 
-    invoke-virtual {v2, v3, v4, v5}, Lcom/android/settings/accessibility/MagnifierDisplayPolicy;->updateSettings(IIF)V
+    invoke-virtual {v2, v3, v4, v5}, Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;->updateSettings(IIF)V
 
     .line 449
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget-object v2, v2, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mManager:Landroid/view/accessibility/AccessibilityManager;
+    iget-object v2, v2, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mManager:Landroid/view/accessibility/AccessibilityManager;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget v3, v3, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mCursorX:F
+    iget v3, v3, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mCursorX:F
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget v4, v4, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mCursorY:F
+    iget v4, v4, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mCursorY:F
 
     invoke-virtual {v2, v3, v4}, Landroid/view/accessibility/AccessibilityManager;->showMagnifier(FF)V
 
     .line 450
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget v3, v3, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mCursorX:F
+    iget v3, v3, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mCursorX:F
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget v4, v4, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mCursorY:F
+    iget v4, v4, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mCursorY:F
 
-    # invokes: Lcom/android/settings/accessibility/MagnifierSurfaceView;->updateMagnificationSpec(FF)V
-    invoke-static {v2, v3, v4}, Lcom/android/settings/accessibility/MagnifierSurfaceView;->access$300(Lcom/android/settings/accessibility/MagnifierSurfaceView;FF)V
+    # invokes: Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->updateMagnificationSpec(FF)V
+    invoke-static {v2, v3, v4}, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->access$300(Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;FF)V
 
     .line 451
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    # invokes: Lcom/android/settings/accessibility/MagnifierSurfaceView;->updateMagnifierLayoutParams()V
-    invoke-static {v2}, Lcom/android/settings/accessibility/MagnifierSurfaceView;->access$400(Lcom/android/settings/accessibility/MagnifierSurfaceView;)V
+    # invokes: Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->updateMagnifierLayoutParams()V
+    invoke-static {v2}, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->access$400(Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;)V
 
     .line 452
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    # invokes: Lcom/android/settings/accessibility/MagnifierSurfaceView;->updateViewLayout()V
-    invoke-static {v2}, Lcom/android/settings/accessibility/MagnifierSurfaceView;->access$500(Lcom/android/settings/accessibility/MagnifierSurfaceView;)V
+    # invokes: Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->updateViewLayout()V
+    invoke-static {v2}, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->access$500(Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -279,31 +279,31 @@
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_2
     :try_start_1
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget-object v2, v2, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mManager:Landroid/view/accessibility/AccessibilityManager;
+    iget-object v2, v2, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mManager:Landroid/view/accessibility/AccessibilityManager;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget-object v3, v3, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mMagPadSize:Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;
+    iget-object v3, v3, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mMagPadSize:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;
 
-    iget-object v3, v3, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
+    iget-object v3, v3, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget v4, v4, Lcom/android/settings/accessibility/MagnifierSurfaceView;->magSize:I
+    iget v4, v4, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->magSize:I
 
     aget v3, v3, v4
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget-object v4, v4, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mMagPadSize:Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;
+    iget-object v4, v4, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mMagPadSize:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;
 
-    iget-object v4, v4, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
+    iget-object v4, v4, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget v5, v5, Lcom/android/settings/accessibility/MagnifierSurfaceView;->magSize:I
+    iget v5, v5, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->magSize:I
 
     aget v4, v4, v5
 
@@ -319,31 +319,31 @@
 
     .line 446
     :cond_3
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget-object v2, v2, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mManager:Landroid/view/accessibility/AccessibilityManager;
+    iget-object v2, v2, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mManager:Landroid/view/accessibility/AccessibilityManager;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget-object v3, v3, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mMagPadSize:Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;
+    iget-object v3, v3, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mMagPadSize:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;
 
-    iget-object v3, v3, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
+    iget-object v3, v3, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget v4, v4, Lcom/android/settings/accessibility/MagnifierSurfaceView;->magSize:I
+    iget v4, v4, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->magSize:I
 
     aget v3, v3, v4
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget-object v4, v4, Lcom/android/settings/accessibility/MagnifierSurfaceView;->mMagPadSize:Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;
+    iget-object v4, v4, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->mMagPadSize:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;
 
-    iget-object v4, v4, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
+    iget-object v4, v4, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget v5, v5, Lcom/android/settings/accessibility/MagnifierSurfaceView;->magSize:I
+    iget v5, v5, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->magSize:I
 
     aget v4, v4, v5
 
@@ -367,10 +367,10 @@
     if-ne v2, v3, :cond_0
 
     .line 457
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    # invokes: Lcom/android/settings/accessibility/MagnifierSurfaceView;->handleTimeout()V
-    invoke-static {v2}, Lcom/android/settings/accessibility/MagnifierSurfaceView;->access$600(Lcom/android/settings/accessibility/MagnifierSurfaceView;)V
+    # invokes: Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->handleTimeout()V
+    invoke-static {v2}, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->access$600(Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;)V
 
     goto/16 :goto_0
 .end method

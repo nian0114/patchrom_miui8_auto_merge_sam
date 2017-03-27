@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settings/fingerprint/FingerprintSettings$9;
+.class synthetic Lcom/android/settings_ex/fingerprint/FingerprintSettings$9;
 .super Ljava/lang/Object;
 .source "FingerprintSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fingerprint/FingerprintSettings;
+    value = Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
 
     .prologue
     .line 1692
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;->values()[Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;->values()[Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
     move-result-object v0
 
@@ -32,12 +32,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/settings/fingerprint/FingerprintSettings$9;->$SwitchMap$com$android$settings$fingerprint$FingerprintSettings$Survey:[I
+    sput-object v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$9;->$SwitchMap$com$android$settings$fingerprint$FingerprintSettings$Survey:[I
 
     :try_start_0
-    sget-object v0, Lcom/android/settings/fingerprint/FingerprintSettings$9;->$SwitchMap$com$android$settings$fingerprint$FingerprintSettings$Survey:[I
+    sget-object v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$9;->$SwitchMap$com$android$settings$fingerprint$FingerprintSettings$Survey:[I
 
-    sget-object v1, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;->RENAME:Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    sget-object v1, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;->RENAME:Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -51,9 +51,9 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/android/settings/fingerprint/FingerprintSettings$9;->$SwitchMap$com$android$settings$fingerprint$FingerprintSettings$Survey:[I
+    sget-object v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$9;->$SwitchMap$com$android$settings$fingerprint$FingerprintSettings$Survey:[I
 
-    sget-object v1, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;->IDENTIFY:Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    sget-object v1, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;->IDENTIFY:Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -67,9 +67,9 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/android/settings/fingerprint/FingerprintSettings$9;->$SwitchMap$com$android$settings$fingerprint$FingerprintSettings$Survey:[I
+    sget-object v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$9;->$SwitchMap$com$android$settings$fingerprint$FingerprintSettings$Survey:[I
 
-    sget-object v1, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;->FINGERPRINT_LOCK_ENABLE:Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    sget-object v1, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;->FINGERPRINT_LOCK_ENABLE:Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -83,9 +83,9 @@
 
     :goto_2
     :try_start_3
-    sget-object v0, Lcom/android/settings/fingerprint/FingerprintSettings$9;->$SwitchMap$com$android$settings$fingerprint$FingerprintSettings$Survey:[I
+    sget-object v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$9;->$SwitchMap$com$android$settings$fingerprint$FingerprintSettings$Survey:[I
 
-    sget-object v1, Lcom/android/settings/fingerprint/FingerprintSettings$Survey;->FINGERPRINT_LOCK_DISABLE:Lcom/android/settings/fingerprint/FingerprintSettings$Survey;
+    sget-object v1, Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;->FINGERPRINT_LOCK_DISABLE:Lcom/android/settings_ex/fingerprint/FingerprintSettings$Survey;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 

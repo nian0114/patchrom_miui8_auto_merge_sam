@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/spen/DirectPenInputSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/spen/DirectPenInputSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "DirectPenInputSettings.java"
 
 
@@ -28,11 +28,11 @@
 
 .field private mListView:Landroid/widget/ListView;
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 .field private mTryBtnClickListener:Landroid/view/View$OnClickListener;
 
-.field private onWritingBuddyChangeListener:Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.field private onWritingBuddyChangeListener:Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 .field private tryBtn:Landroid/widget/Button;
 
@@ -53,245 +53,245 @@
     const/4 v1, 0x0
 
     .line 100
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 60
     const-string v0, "pen_writing_buddy"
 
-    iput-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->URI_PEN_WRITING_BUDDY:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->URI_PEN_WRITING_BUDDY:Ljava/lang/String;
 
     .line 61
     const-string v0, "pen_writing_buddy_text_suggestion"
 
-    iput-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->URI_TEXT_SUGGESTION:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->URI_TEXT_SUGGESTION:Ljava/lang/String;
 
     .line 63
     const-string v0, "accessibility_display_magnification_enabled"
 
-    iput-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->ACCESSIBILITY_MAGNIFICATION_ENABLED:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->ACCESSIBILITY_MAGNIFICATION_ENABLED:Ljava/lang/String;
 
     .line 64
     const-string v0, "accessibility_magnifier"
 
-    iput-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->ACCESSIBILITY_MAGNIFIER:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->ACCESSIBILITY_MAGNIFIER:Ljava/lang/String;
 
     .line 67
     const-string v0, "enabled_accessibility_services"
 
-    iput-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->ACCESSIBILITY_ENABLED:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->ACCESSIBILITY_ENABLED:Ljava/lang/String;
 
     .line 68
     const-string v0, "com.google.android.marvin.talkback"
 
-    iput-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->DEFAULT_SCREENREADER_NAME:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->DEFAULT_SCREENREADER_NAME:Ljava/lang/String;
 
     .line 70
-    iput-object v1, p0, Lcom/android/settings/spen/DirectPenInputSettings;->tryItView:Landroid/view/View;
+    iput-object v1, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->tryItView:Landroid/view/View;
 
     .line 71
-    iput-object v1, p0, Lcom/android/settings/spen/DirectPenInputSettings;->tryBtn:Landroid/widget/Button;
+    iput-object v1, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->tryBtn:Landroid/widget/Button;
 
     .line 72
-    iput-boolean v2, p0, Lcom/android/settings/spen/DirectPenInputSettings;->isTryButtonPressed:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->isTryButtonPressed:Z
 
     .line 73
     const/16 v0, 0x3a
 
-    iput-char v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->enabledServicesSeparator:C
+    iput-char v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->enabledServicesSeparator:C
 
     .line 74
-    iput-object v1, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v1, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 75
-    iput-boolean v2, p0, Lcom/android/settings/spen/DirectPenInputSettings;->isShowEnablePopup:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->isShowEnablePopup:Z
 
     .line 76
-    iput-object v1, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
+    iput-object v1, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
 
     .line 90
-    new-instance v0, Lcom/android/settings/spen/DirectPenInputSettings$1;
+    new-instance v0, Lcom/android/settings_ex/spen/DirectPenInputSettings$1;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/spen/DirectPenInputSettings$1;-><init>(Lcom/android/settings/spen/DirectPenInputSettings;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/spen/DirectPenInputSettings$1;-><init>(Lcom/android/settings_ex/spen/DirectPenInputSettings;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mDirectPenObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mDirectPenObserver:Landroid/database/ContentObserver;
 
     .line 318
-    new-instance v0, Lcom/android/settings/spen/DirectPenInputSettings$5;
+    new-instance v0, Lcom/android/settings_ex/spen/DirectPenInputSettings$5;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/spen/DirectPenInputSettings$5;-><init>(Lcom/android/settings/spen/DirectPenInputSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/spen/DirectPenInputSettings$5;-><init>(Lcom/android/settings_ex/spen/DirectPenInputSettings;)V
 
-    iput-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->onWritingBuddyChangeListener:Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->onWritingBuddyChangeListener:Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
     .line 361
-    new-instance v0, Lcom/android/settings/spen/DirectPenInputSettings$6;
+    new-instance v0, Lcom/android/settings_ex/spen/DirectPenInputSettings$6;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/spen/DirectPenInputSettings$6;-><init>(Lcom/android/settings/spen/DirectPenInputSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/spen/DirectPenInputSettings$6;-><init>(Lcom/android/settings_ex/spen/DirectPenInputSettings;)V
 
-    iput-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mTryBtnClickListener:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mTryBtnClickListener:Landroid/view/View$OnClickListener;
 
     .line 498
-    new-instance v0, Lcom/android/settings/spen/DirectPenInputSettings$9;
+    new-instance v0, Lcom/android/settings_ex/spen/DirectPenInputSettings$9;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/spen/DirectPenInputSettings$9;-><init>(Lcom/android/settings/spen/DirectPenInputSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/spen/DirectPenInputSettings$9;-><init>(Lcom/android/settings_ex/spen/DirectPenInputSettings;)V
 
-    iput-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->withOffFunctionsOKBtnClickListener:Landroid/content/DialogInterface$OnClickListener;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->withOffFunctionsOKBtnClickListener:Landroid/content/DialogInterface$OnClickListener;
 
     .line 519
-    new-instance v0, Lcom/android/settings/spen/DirectPenInputSettings$10;
+    new-instance v0, Lcom/android/settings_ex/spen/DirectPenInputSettings$10;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/spen/DirectPenInputSettings$10;-><init>(Lcom/android/settings/spen/DirectPenInputSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/spen/DirectPenInputSettings$10;-><init>(Lcom/android/settings_ex/spen/DirectPenInputSettings;)V
 
-    iput-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->withoutOffFunctionsOKBtnClickListener:Landroid/content/DialogInterface$OnClickListener;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->withoutOffFunctionsOKBtnClickListener:Landroid/content/DialogInterface$OnClickListener;
 
     .line 102
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/spen/DirectPenInputSettings;)Landroid/app/Activity;
+.method static synthetic access$000(Lcom/android/settings_ex/spen/DirectPenInputSettings;)Landroid/app/Activity;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/spen/DirectPenInputSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
     .prologue
     .line 59
-    iget-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/spen/DirectPenInputSettings;)Ljava/lang/String;
+.method static synthetic access$100(Lcom/android/settings_ex/spen/DirectPenInputSettings;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/spen/DirectPenInputSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
     .prologue
     .line 59
-    iget-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->URI_PEN_WRITING_BUDDY:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->URI_PEN_WRITING_BUDDY:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/spen/DirectPenInputSettings;)V
+.method static synthetic access$1000(Lcom/android/settings_ex/spen/DirectPenInputSettings;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/spen/DirectPenInputSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
     .prologue
     .line 59
-    invoke-direct {p0}, Lcom/android/settings/spen/DirectPenInputSettings;->startTryIt()V
+    invoke-direct {p0}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->startTryIt()V
 
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/spen/DirectPenInputSettings;)Lcom/android/settings/widget/SwitchBar;
+.method static synthetic access$200(Lcom/android/settings_ex/spen/DirectPenInputSettings;)Lcom/android/settings_ex/widget/SwitchBar;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/spen/DirectPenInputSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
     .prologue
     .line 59
-    iget-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/spen/DirectPenInputSettings;)V
+.method static synthetic access$300(Lcom/android/settings_ex/spen/DirectPenInputSettings;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/spen/DirectPenInputSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
     .prologue
     .line 59
-    invoke-direct {p0}, Lcom/android/settings/spen/DirectPenInputSettings;->setPreferenceEnabled()V
+    invoke-direct {p0}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->setPreferenceEnabled()V
 
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/spen/DirectPenInputSettings;)Ljava/lang/String;
+.method static synthetic access$400(Lcom/android/settings_ex/spen/DirectPenInputSettings;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/spen/DirectPenInputSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
     .prologue
     .line 59
-    iget-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->URI_TEXT_SUGGESTION:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->URI_TEXT_SUGGESTION:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/spen/DirectPenInputSettings;)Landroid/widget/ListView;
+.method static synthetic access$500(Lcom/android/settings_ex/spen/DirectPenInputSettings;)Landroid/widget/ListView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/spen/DirectPenInputSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
     .prologue
     .line 59
-    iget-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mListView:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mListView:Landroid/widget/ListView;
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/spen/DirectPenInputSettings;)Z
+.method static synthetic access$600(Lcom/android/settings_ex/spen/DirectPenInputSettings;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/spen/DirectPenInputSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
     .prologue
     .line 59
-    iget-boolean v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->isShowEnablePopup:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->isShowEnablePopup:Z
 
     return v0
 .end method
 
-.method static synthetic access$602(Lcom/android/settings/spen/DirectPenInputSettings;Z)Z
+.method static synthetic access$602(Lcom/android/settings_ex/spen/DirectPenInputSettings;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/spen/DirectPenInputSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/spen/DirectPenInputSettings;
     .param p1, "x1"    # Z
 
     .prologue
     .line 59
-    iput-boolean p1, p0, Lcom/android/settings/spen/DirectPenInputSettings;->isShowEnablePopup:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->isShowEnablePopup:Z
 
     return p1
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/spen/DirectPenInputSettings;)Z
+.method static synthetic access$700(Lcom/android/settings_ex/spen/DirectPenInputSettings;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/spen/DirectPenInputSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
     .prologue
     .line 59
-    iget-boolean v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->isTryButtonPressed:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->isTryButtonPressed:Z
 
     return v0
 .end method
 
-.method static synthetic access$702(Lcom/android/settings/spen/DirectPenInputSettings;Z)Z
+.method static synthetic access$702(Lcom/android/settings_ex/spen/DirectPenInputSettings;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/spen/DirectPenInputSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/spen/DirectPenInputSettings;
     .param p1, "x1"    # Z
 
     .prologue
     .line 59
-    iput-boolean p1, p0, Lcom/android/settings/spen/DirectPenInputSettings;->isTryButtonPressed:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->isTryButtonPressed:Z
 
     return p1
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/spen/DirectPenInputSettings;)Ljava/lang/String;
+.method static synthetic access$800(Lcom/android/settings_ex/spen/DirectPenInputSettings;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/spen/DirectPenInputSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
     .prologue
     .line 59
-    iget-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->ACCESSIBILITY_MAGNIFICATION_ENABLED:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->ACCESSIBILITY_MAGNIFICATION_ENABLED:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/spen/DirectPenInputSettings;)Ljava/lang/String;
+.method static synthetic access$900(Lcom/android/settings_ex/spen/DirectPenInputSettings;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/spen/DirectPenInputSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
     .prologue
     .line 59
-    iget-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->ACCESSIBILITY_MAGNIFIER:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->ACCESSIBILITY_MAGNIFIER:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -303,13 +303,13 @@
     const/4 v1, 0x0
 
     .line 236
-    iget-object v2, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v2}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/spen/DirectPenInputSettings;->URI_PEN_WRITING_BUDDY:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->URI_PEN_WRITING_BUDDY:Ljava/lang/String;
 
     invoke-static {v2, v3, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -324,7 +324,7 @@
     :cond_0
     const-string v2, "predictive_text"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/spen/DirectPenInputSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
@@ -350,7 +350,7 @@
     const/4 v2, 0x0
 
     :try_start_0
-    iput-boolean v2, p0, Lcom/android/settings/spen/DirectPenInputSettings;->isTryButtonPressed:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->isTryButtonPressed:Z
 
     .line 404
     new-instance v1, Landroid/content/Intent;
@@ -364,7 +364,7 @@
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 406
-    invoke-virtual {p0, v1}, Lcom/android/settings/spen/DirectPenInputSettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -407,7 +407,7 @@
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     .line 538
-    invoke-virtual {p0}, Lcom/android/settings/spen/DirectPenInputSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -474,9 +474,9 @@
 
     .prologue
     .line 413
-    iget-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -491,27 +491,27 @@
     const/4 v5, 0x0
 
     .line 188
-    invoke-virtual {p0}, Lcom/android/settings/spen/DirectPenInputSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 189
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v2, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 190
-    iget-object v2, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v2}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 192
-    iget-object v2, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
 
     const-string v3, "layout_inflater"
 
@@ -529,10 +529,10 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/spen/DirectPenInputSettings;->tryItView:Landroid/view/View;
+    iput-object v2, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->tryItView:Landroid/view/View;
 
     .line 194
-    iget-object v2, p0, Lcom/android/settings/spen/DirectPenInputSettings;->tryItView:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->tryItView:Landroid/view/View;
 
     const v3, 0x7f0d06b8
 
@@ -542,12 +542,12 @@
 
     check-cast v2, Landroid/widget/Button;
 
-    iput-object v2, p0, Lcom/android/settings/spen/DirectPenInputSettings;->tryBtn:Landroid/widget/Button;
+    iput-object v2, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->tryBtn:Landroid/widget/Button;
 
     .line 195
-    iget-object v2, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isRestrictedProfile(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isRestrictedProfile(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -563,7 +563,7 @@
 
     .line 196
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/spen/DirectPenInputSettings;->tryBtn:Landroid/widget/Button;
+    iget-object v2, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->tryBtn:Landroid/widget/Button;
 
     const/16 v3, 0x8
 
@@ -571,43 +571,43 @@
 
     .line 221
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/spen/DirectPenInputSettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mListView:Landroid/widget/ListView;
+    iput-object v2, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mListView:Landroid/widget/ListView;
 
     .line 231
-    invoke-virtual {p0}, Lcom/android/settings/spen/DirectPenInputSettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/spen/DirectPenInputSettings;->tryItView:Landroid/view/View;
+    iget-object v3, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->tryItView:Landroid/view/View;
 
     const/4 v4, 0x0
 
     invoke-virtual {v2, v3, v5, v4}, Landroid/widget/ListView;->addHeaderView(Landroid/view/View;Ljava/lang/Object;Z)V
 
     .line 232
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 233
     return-void
 
     .line 199
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/spen/DirectPenInputSettings;->tryBtn:Landroid/widget/Button;
+    iget-object v2, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->tryBtn:Landroid/widget/Button;
 
-    iget-object v3, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mTryBtnClickListener:Landroid/view/View$OnClickListener;
+    iget-object v3, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mTryBtnClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 200
-    iget-object v2, p0, Lcom/android/settings/spen/DirectPenInputSettings;->tryBtn:Landroid/widget/Button;
+    iget-object v2, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->tryBtn:Landroid/widget/Button;
 
-    new-instance v3, Lcom/android/settings/spen/DirectPenInputSettings$4;
+    new-instance v3, Lcom/android/settings_ex/spen/DirectPenInputSettings$4;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/spen/DirectPenInputSettings$4;-><init>(Lcom/android/settings/spen/DirectPenInputSettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/spen/DirectPenInputSettings$4;-><init>(Lcom/android/settings_ex/spen/DirectPenInputSettings;)V
 
     invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
@@ -624,31 +624,31 @@
     const/4 v4, 0x0
 
     .line 108
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 109
-    invoke-virtual {p0}, Lcom/android/settings/spen/DirectPenInputSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
-    iput-object v5, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
+    iput-object v5, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
 
     .line 110
-    invoke-virtual {p0, v3}, Lcom/android/settings/spen/DirectPenInputSettings;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->setHasOptionsMenu(Z)V
 
     .line 111
     const v5, 0x7f080042
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/spen/DirectPenInputSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->addPreferencesFromResource(I)V
 
     .line 113
-    iget-object v5, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
+    iget-object v5, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v5}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/spen/DirectPenInputSettings;->URI_PEN_WRITING_BUDDY:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->URI_PEN_WRITING_BUDDY:Ljava/lang/String;
 
     invoke-static {v5, v6, v4}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -663,7 +663,7 @@
     :goto_0
     const-string v5, "predictive_text"
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/spen/DirectPenInputSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
@@ -674,13 +674,13 @@
     if-eqz v0, :cond_3
 
     .line 138
-    iget-object v5, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
+    iget-object v5, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v5}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/spen/DirectPenInputSettings;->URI_TEXT_SUGGESTION:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->URI_TEXT_SUGGESTION:Ljava/lang/String;
 
     invoke-static {v5, v6, v4}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -693,13 +693,13 @@
     .line 139
     .local v1, "textSuggestion":Z
     :goto_1
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v5
 
     if-nez v5, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaHKTWModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaHKTWModel()Z
 
     move-result v5
 
@@ -721,13 +721,13 @@
     invoke-virtual {v0, v1}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 144
-    iget-object v5, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
+    iget-object v5, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v5}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/spen/DirectPenInputSettings;->URI_TEXT_SUGGESTION:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->URI_TEXT_SUGGESTION:Ljava/lang/String;
 
     if-ne v1, v3, :cond_6
 
@@ -736,16 +736,16 @@
 
     .line 147
     :cond_2
-    new-instance v3, Lcom/android/settings/spen/DirectPenInputSettings$2;
+    new-instance v3, Lcom/android/settings_ex/spen/DirectPenInputSettings$2;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/spen/DirectPenInputSettings$2;-><init>(Lcom/android/settings/spen/DirectPenInputSettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/spen/DirectPenInputSettings$2;-><init>(Lcom/android/settings_ex/spen/DirectPenInputSettings;)V
 
     invoke-virtual {v0, v3}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 165
-    new-instance v3, Lcom/android/settings/spen/DirectPenInputSettings$3;
+    new-instance v3, Lcom/android/settings_ex/spen/DirectPenInputSettings$3;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/spen/DirectPenInputSettings$3;-><init>(Lcom/android/settings/spen/DirectPenInputSettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/spen/DirectPenInputSettings$3;-><init>(Lcom/android/settings_ex/spen/DirectPenInputSettings;)V
 
     invoke-virtual {v0, v3}, Landroid/preference/SwitchPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -787,12 +787,12 @@
     const/4 v1, 0x0
 
     .line 294
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     .line 295
-    iget-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isSupportHelpMenu(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isSupportHelpMenu(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -819,12 +819,12 @@
 
     .prologue
     .line 288
-    iget-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 289
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroyView()V
 
     .line 290
     return-void
@@ -843,7 +843,7 @@
     packed-switch v2, :pswitch_data_0
 
     .line 314
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v2
 
@@ -868,7 +868,7 @@
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 308
-    invoke-virtual {p0, v1}, Lcom/android/settings/spen/DirectPenInputSettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -901,14 +901,14 @@
 
     .prologue
     .line 275
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 277
-    iget-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    iget-object v1, p0, Lcom/android/settings/spen/DirectPenInputSettings;->onWritingBuddyChangeListener:Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->onWritingBuddyChangeListener:Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 278
     return-void
@@ -923,7 +923,7 @@
     const/4 v0, 0x0
 
     .line 251
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 253
     const-string v2, "writingbuddymanagerservice"
@@ -935,15 +935,15 @@
     if-nez v2, :cond_0
 
     .line 254
-    invoke-direct {p0}, Lcom/android/settings/spen/DirectPenInputSettings;->startWritingBuddyService()V
+    invoke-direct {p0}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->startWritingBuddyService()V
 
     .line 256
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/spen/DirectPenInputSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/spen/DirectPenInputSettings;->URI_PEN_WRITING_BUDDY:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->URI_PEN_WRITING_BUDDY:Ljava/lang/String;
 
     invoke-static {v2, v3, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -956,48 +956,48 @@
     .line 257
     .local v0, "writingBuddyOn":Z
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v2, :cond_3
 
     .line 258
-    iget-object v2, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2}, Lcom/android/settings/widget/SwitchBar;->isChecked()Z
+    invoke-virtual {v2}, Lcom/android/settings_ex/widget/SwitchBar;->isChecked()Z
 
     move-result v2
 
     if-eq v2, v0, :cond_2
 
     .line 259
-    iget-object v2, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2, v0}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v2, v0}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 261
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    iget-object v3, p0, Lcom/android/settings/spen/DirectPenInputSettings;->onWritingBuddyChangeListener:Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+    iget-object v3, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->onWritingBuddyChangeListener:Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 263
     :cond_3
-    invoke-direct {p0}, Lcom/android/settings/spen/DirectPenInputSettings;->setPreferenceEnabled()V
+    invoke-direct {p0}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->setPreferenceEnabled()V
 
     .line 269
-    invoke-virtual {p0}, Lcom/android/settings/spen/DirectPenInputSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/spen/DirectPenInputSettings;->URI_PEN_WRITING_BUDDY:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->URI_PEN_WRITING_BUDDY:Ljava/lang/String;
 
     invoke-static {v3}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mDirectPenObserver:Landroid/database/ContentObserver;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mDirectPenObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v2, v3, v1, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -1010,16 +1010,16 @@
 
     .prologue
     .line 282
-    invoke-virtual {p0}, Lcom/android/settings/spen/DirectPenInputSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mDirectPenObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mDirectPenObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 283
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onStop()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onStop()V
 
     .line 284
     return-void
@@ -1036,12 +1036,12 @@
     .line 468
     const/4 v1, 0x1
 
-    iput-boolean v1, p0, Lcom/android/settings/spen/DirectPenInputSettings;->isShowEnablePopup:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->isShowEnablePopup:Z
 
     .line 469
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
-    iget-object v2, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
 
     invoke-direct {v1, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -1051,17 +1051,17 @@
 
     const v2, 0x7f0e15c8
 
-    new-instance v3, Lcom/android/settings/spen/DirectPenInputSettings$8;
+    new-instance v3, Lcom/android/settings_ex/spen/DirectPenInputSettings$8;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/spen/DirectPenInputSettings$8;-><init>(Lcom/android/settings/spen/DirectPenInputSettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/spen/DirectPenInputSettings$8;-><init>(Lcom/android/settings_ex/spen/DirectPenInputSettings;)V
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v1
 
-    new-instance v2, Lcom/android/settings/spen/DirectPenInputSettings$7;
+    new-instance v2, Lcom/android/settings_ex/spen/DirectPenInputSettings$7;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/spen/DirectPenInputSettings$7;-><init>(Lcom/android/settings/spen/DirectPenInputSettings;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/spen/DirectPenInputSettings$7;-><init>(Lcom/android/settings_ex/spen/DirectPenInputSettings;)V
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1072,7 +1072,7 @@
     if-eqz p2, :cond_0
 
     .line 491
-    iget-object v1, p0, Lcom/android/settings/spen/DirectPenInputSettings;->withOffFunctionsOKBtnClickListener:Landroid/content/DialogInterface$OnClickListener;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->withOffFunctionsOKBtnClickListener:Landroid/content/DialogInterface$OnClickListener;
 
     invoke-virtual {v0, v4, v1}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1085,7 +1085,7 @@
 
     .line 493
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/spen/DirectPenInputSettings;->withoutOffFunctionsOKBtnClickListener:Landroid/content/DialogInterface$OnClickListener;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->withoutOffFunctionsOKBtnClickListener:Landroid/content/DialogInterface$OnClickListener;
 
     invoke-virtual {v0, v4, v1}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1097,9 +1097,9 @@
 
     .prologue
     .line 460
-    iget-object v0, p0, Lcom/android/settings/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->turnOffTalkBack(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->turnOffTalkBack(Landroid/content/Context;)Z
 
     .line 461
     const/4 v0, 0x1

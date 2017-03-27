@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "FingerprintSettings_MultiSelect.java"
 
 # interfaces
@@ -46,7 +46,7 @@
 
 .field private mRemoveCallback:Landroid/hardware/fingerprint/FingerprintManager$RemovalCallback;
 
-.field private mRenameDialog:Lcom/android/settings/fingerprint/FingerPrintRenameDialog;
+.field private mRenameDialog:Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;
 
 .field private mSelectActionView:Landroid/view/View;
 
@@ -80,11 +80,11 @@
 
     .prologue
     .line 106
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSalesCode:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSalesCode:Ljava/lang/String;
 
     .line 110
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
@@ -97,12 +97,12 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->ENABLE_SURVEY_MODE:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->ENABLE_SURVEY_MODE:Ljava/lang/String;
 
     .line 134
     const/4 v0, -0x1
 
-    sput v0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectedId:I
+    sput v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectedId:I
 
     return-void
 .end method
@@ -114,74 +114,74 @@
     const/4 v1, 0x0
 
     .line 85
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 91
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
+    iput v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
 
     .line 94
-    iput-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iput-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     .line 96
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintSettings_Utils;->getMaxFingerEnroll()I
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_Utils;->getMaxFingerEnroll()I
 
     move-result v0
 
     new-array v0, v0, [Z
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->twselectionChecklist:[Z
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->twselectionChecklist:[Z
 
     .line 97
-    iput-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->twselectedChecklist:[Z
+    iput-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->twselectedChecklist:[Z
 
     .line 98
-    iput-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
+    iput-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
 
     .line 99
-    iput-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllCheckbox:Landroid/widget/CheckBox;
+    iput-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllCheckbox:Landroid/widget/CheckBox;
 
     .line 100
-    iput-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllText:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllText:Landroid/widget/TextView;
 
     .line 101
-    iput-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectedFingerprintTextView:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectedFingerprintTextView:Landroid/widget/TextView;
 
     .line 107
-    iput-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
 
     .line 108
-    iput-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteDialog:Landroid/app/AlertDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteDialog:Landroid/app/AlertDialog;
 
     .line 109
-    iput-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mRenameDialog:Lcom/android/settings/fingerprint/FingerPrintRenameDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mRenameDialog:Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;
 
     .line 135
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->originalContentStart:I
+    iput v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->originalContentStart:I
 
     .line 137
-    new-instance v0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$1;
+    new-instance v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$1;-><init>(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$1;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)V
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mRemoveCallback:Landroid/hardware/fingerprint/FingerprintManager$RemovalCallback;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mRemoveCallback:Landroid/hardware/fingerprint/FingerprintManager$RemovalCallback;
 
     .line 218
-    new-instance v0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$4;
+    new-instance v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$4;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$4;-><init>(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$4;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)V
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mHandler:Landroid/os/Handler;
 
     .line 612
-    new-instance v0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$7;
+    new-instance v0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$7;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$7;-><init>(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$7;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)V
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->TwFingerprintultiSelectedListener:Landroid/widget/AdapterView$OnTwMultiSelectedListener;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->TwFingerprintultiSelectedListener:Landroid/widget/AdapterView$OnTwMultiSelectedListener;
 
     return-void
 .end method
@@ -196,7 +196,7 @@
 
     .local v0, "i":I
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -205,7 +205,7 @@
     if-ge v0, v1, :cond_0
 
     .line 1566
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -222,186 +222,186 @@
 
     .line 1569
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->updateSelectionState()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->updateSelectionState()V
 
     .line 1570
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;Landroid/hardware/fingerprint/Fingerprint;)Z
+.method static synthetic access$000(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;Landroid/hardware/fingerprint/Fingerprint;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;
     .param p1, "x1"    # Landroid/hardware/fingerprint/Fingerprint;
 
     .prologue
     .line 85
-    invoke-direct {p0, p1}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->checkFinishDeleteOperation(Landroid/hardware/fingerprint/Fingerprint;)Z
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->checkFinishDeleteOperation(Landroid/hardware/fingerprint/Fingerprint;)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)Landroid/os/Handler;
+.method static synthetic access$100(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;
 
     .prologue
     .line 85
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;I)V
+.method static synthetic access$1000(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;
     .param p1, "x1"    # I
 
     .prologue
     .line 85
-    invoke-direct {p0, p1}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->updateTwChecklist(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->updateTwChecklist(I)V
 
     return-void
 .end method
 
-.method static synthetic access$1102(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;Lcom/android/settings/fingerprint/FingerPrintRenameDialog;)Lcom/android/settings/fingerprint/FingerPrintRenameDialog;
+.method static synthetic access$1102(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;)Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;
-    .param p1, "x1"    # Lcom/android/settings/fingerprint/FingerPrintRenameDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;
+    .param p1, "x1"    # Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;
 
     .prologue
     .line 85
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mRenameDialog:Lcom/android/settings/fingerprint/FingerPrintRenameDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mRenameDialog:Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;
 
     return-object p1
 .end method
 
-.method static synthetic access$1202(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;Landroid/app/AlertDialog;)Landroid/app/AlertDialog;
+.method static synthetic access$1202(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;Landroid/app/AlertDialog;)Landroid/app/AlertDialog;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;
     .param p1, "x1"    # Landroid/app/AlertDialog;
 
     .prologue
     .line 85
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteDialog:Landroid/app/AlertDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteDialog:Landroid/app/AlertDialog;
 
     return-object p1
 .end method
 
-.method static synthetic access$1302(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;Landroid/app/AlertDialog;)Landroid/app/AlertDialog;
+.method static synthetic access$1302(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;Landroid/app/AlertDialog;)Landroid/app/AlertDialog;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;
     .param p1, "x1"    # Landroid/app/AlertDialog;
 
     .prologue
     .line 85
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
 
     return-object p1
 .end method
 
-.method static synthetic access$1400(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;Z)Z
+.method static synthetic access$1400(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;Z)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;
     .param p1, "x1"    # Z
 
     .prologue
     .line 85
-    invoke-direct {p0, p1}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->deleteFingerprintOperation(Z)Z
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->deleteFingerprintOperation(Z)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)V
+.method static synthetic access$200(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;
 
     .prologue
     .line 85
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->deleteFingerprintSequentially()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->deleteFingerprintSequentially()V
 
     return-void
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)V
+.method static synthetic access$300(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;
 
     .prologue
     .line 85
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->showSensorErrorDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->showSensorErrorDialog()V
 
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)V
+.method static synthetic access$400(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;
 
     .prologue
     .line 85
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->finishSelectMode()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->finishSelectMode()V
 
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)Landroid/widget/CheckBox;
+.method static synthetic access$500(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)Landroid/widget/CheckBox;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;
 
     .prologue
     .line 85
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllCheckbox:Landroid/widget/CheckBox;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllCheckbox:Landroid/widget/CheckBox;
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;Z)V
+.method static synthetic access$600(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;Z)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;
     .param p1, "x1"    # Z
 
     .prologue
     .line 85
-    invoke-direct {p0, p1}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->ToggleAllCheck(Z)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->ToggleAllCheck(Z)V
 
     return-void
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;ZI)V
+.method static synthetic access$700(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;ZI)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;
     .param p1, "x1"    # Z
     .param p2, "x2"    # I
 
     .prologue
     .line 85
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->setTwselectionChecklist(ZI)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->setTwselectionChecklist(ZI)V
 
     return-void
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)V
+.method static synthetic access$800(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;
 
     .prologue
     .line 85
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->copyTwselectionChecklist()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->copyTwselectionChecklist()V
 
     return-void
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)V
+.method static synthetic access$900(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;
 
     .prologue
     .line 85
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->updateTwMultiSelected()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->updateTwMultiSelected()V
 
     return-void
 .end method
@@ -416,38 +416,38 @@
     const/4 v7, -0x1
 
     .line 527
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
 
     if-eqz v4, :cond_0
 
     .line 528
-    iput-object v8, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
+    iput-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
 
     .line 530
     :cond_0
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     invoke-virtual {v4}, Landroid/hardware/fingerprint/FingerprintManager;->getEnrolledFingerprints()Ljava/util/List;
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
+    iput-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
 
     .line 532
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v4
 
-    iput v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
+    iput v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
 
     .line 535
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_0
-    iget v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
+    iget v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
 
     if-ge v0, v4, :cond_2
 
@@ -459,7 +459,7 @@
     :goto_1
     if-lez v2, :cond_1
 
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
 
     add-int/lit8 v5, v2, -0x1
 
@@ -473,7 +473,7 @@
 
     move-result v5
 
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
 
     invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -488,11 +488,11 @@
     if-le v5, v4, :cond_1
 
     .line 539
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
 
     add-int/lit8 v5, v2, -0x1
 
-    iget-object v6, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
+    iget-object v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
 
     invoke-interface {v6, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -501,7 +501,7 @@
     invoke-interface {v4, v5, v6}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
     .line 540
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
 
     add-int/lit8 v5, v2, 0x1
 
@@ -521,9 +521,9 @@
     .line 545
     .end local v2    # "j":I
     :cond_2
-    iget v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
+    iget v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
 
-    iget-object v5, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
+    iget-object v5, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
 
     invoke-interface {v5}, Ljava/util/List;->size()I
 
@@ -539,25 +539,25 @@
     invoke-static {v4, v5}, Landroid/util/Log;->secE(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 547
-    iput-object v8, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
+    iput-object v8, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
 
     .line 548
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     invoke-virtual {v4}, Landroid/hardware/fingerprint/FingerprintManager;->getEnrolledFingerprints()Ljava/util/List;
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
+    iput-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
 
     .line 549
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v4
 
-    iput v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
+    iput v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
 
     .line 553
     :cond_3
@@ -573,7 +573,7 @@
 
     move-result-object v5
 
-    iget v6, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
+    iget v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -595,12 +595,12 @@
     const/4 v0, 0x0
 
     :goto_2
-    iget v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
+    iget v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
 
     if-ge v0, v4, :cond_4
 
     .line 556
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
 
     invoke-interface {v4, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -675,12 +675,12 @@
     const/4 v0, 0x0
 
     :goto_3
-    iget v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
+    iget v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
 
     if-ge v0, v4, :cond_6
 
     .line 561
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
 
     invoke-interface {v4, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -690,7 +690,7 @@
 
     .line 563
     .restart local v1    # "item":Landroid/hardware/fingerprint/Fingerprint;
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getPreferenceManager()Landroid/preference/PreferenceManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getPreferenceManager()Landroid/preference/PreferenceManager;
 
     move-result-object v4
 
@@ -724,7 +724,7 @@
 
     move-result v4
 
-    invoke-static {v4}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->genKey(I)Ljava/lang/String;
+    invoke-static {v4}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->genKey(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -746,14 +746,14 @@
     invoke-virtual {v3, p0}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 573
-    invoke-virtual {p0, v3}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->addCheckedList(Landroid/preference/CheckBoxPreference;)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->addCheckedList(Landroid/preference/CheckBoxPreference;)V
 
     .line 574
-    sget v4, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectedId:I
+    sget v4, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectedId:I
 
     if-eq v4, v7, :cond_5
 
-    sget v4, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectedId:I
+    sget v4, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectedId:I
 
     invoke-virtual {v1}, Landroid/hardware/fingerprint/Fingerprint;->getFingerId()I
 
@@ -767,7 +767,7 @@
     invoke-virtual {v3, v4}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
 
     .line 576
-    sput v7, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectedId:I
+    sput v7, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectedId:I
 
     .line 560
     :cond_5
@@ -779,7 +779,7 @@
     .end local v1    # "item":Landroid/hardware/fingerprint/Fingerprint;
     .end local v3    # "pref":Landroid/preference/CheckBoxPreference;
     :cond_6
-    iget v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
+    iget v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
 
     :goto_4
     const/4 v4, 0x4
@@ -787,7 +787,7 @@
     if-ge v0, v4, :cond_8
 
     .line 581
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getPreferenceManager()Landroid/preference/PreferenceManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getPreferenceManager()Landroid/preference/PreferenceManager;
 
     move-result-object v4
 
@@ -847,7 +847,7 @@
     invoke-static {v4, v5}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 584
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mRegisterCategory:Landroid/preference/PreferenceCategory;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mRegisterCategory:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v4, v3}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
@@ -870,7 +870,7 @@
     const/4 v1, 0x0
 
     .line 962
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -919,7 +919,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -942,7 +942,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 243
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -977,7 +977,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 678
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -986,7 +986,7 @@
     invoke-virtual {v1, v2, v0}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
     .line 679
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->finishFingerprintSettings()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->finishFingerprintSettings()V
 
     .line 680
     return-void
@@ -1001,11 +1001,11 @@
     const/4 v4, 0x0
 
     .line 912
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
-    invoke-direct {p0, v5}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->checkFingerprintUsageNQuality(Landroid/content/Context;)Z
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->checkFingerprintUsageNQuality(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -1023,7 +1023,7 @@
 
     .line 932
     .local v1, "dialogMessage":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -1041,7 +1041,7 @@
 
     new-array v8, v8, [Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -1053,7 +1053,7 @@
 
     aput-object v9, v8, v4
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -1078,7 +1078,7 @@
     .line 944
     new-instance v3, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -1086,7 +1086,7 @@
 
     const v5, 0x7f0e121f
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -1129,11 +1129,11 @@
     const/4 v4, 0x0
 
     .line 972
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
-    invoke-direct {p0, v5}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->checkFingerprintIndexUsageInPersona(Landroid/content/Context;)Z
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->checkFingerprintIndexUsageInPersona(Landroid/content/Context;)Z
 
     move-result v5
 
@@ -1168,7 +1168,7 @@
     :cond_1
     const v3, 0x7f0e121e
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1176,7 +1176,7 @@
     .local v1, "dialogMessage":Ljava/lang/String;
     new-instance v3, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -1184,7 +1184,7 @@
 
     const v5, 0x7f0e121f
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -1299,7 +1299,7 @@
     if-eqz v5, :cond_0
 
     .line 1536
-    invoke-direct {p0, p1, v1}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->isSelectedWholeFingersUsedKnox(Landroid/content/Context;I)Z
+    invoke-direct {p0, p1, v1}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->isSelectedWholeFingersUsedKnox(Landroid/content/Context;I)Z
 
     move-result v5
 
@@ -1491,7 +1491,7 @@
 
     .local v1, "i":I
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -1500,7 +1500,7 @@
     if-ge v1, v3, :cond_2
 
     .line 166
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -1515,7 +1515,7 @@
     if-eqz v3, :cond_0
 
     .line 167
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1589,12 +1589,12 @@
     if-eq v0, v3, :cond_3
 
     .line 178
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     .line 179
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
@@ -1624,7 +1624,7 @@
 
     .local v0, "i":I
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -1633,7 +1633,7 @@
     if-ge v0, v1, :cond_0
 
     .line 1650
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -1652,7 +1652,7 @@
 
     .line 1652
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
@@ -1669,14 +1669,14 @@
 
     .local v0, "i":I
     :goto_0
-    iget v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
+    iget v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
 
     if-ge v0, v1, :cond_0
 
     .line 654
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->twselectionChecklist:[Z
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->twselectionChecklist:[Z
 
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -1705,7 +1705,7 @@
 
     .prologue
     .line 500
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
@@ -1720,13 +1720,13 @@
     :cond_0
     const v1, 0x7f080054
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->addPreferencesFromResource(I)V
 
     .line 506
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->setFingerprintPreference()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->setFingerprintPreference()V
 
     .line 507
-    invoke-direct {p0, v0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->addFingerprintItemPreferences(Landroid/preference/PreferenceGroup;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->addFingerprintItemPreferences(Landroid/preference/PreferenceGroup;)V
 
     .line 518
     return-object v0
@@ -1747,7 +1747,7 @@
     const/4 v7, 0x1
 
     .line 991
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getNumOfCheckedList()I
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getNumOfCheckedList()I
 
     move-result v2
 
@@ -1755,7 +1755,7 @@
     .local v2, "selectedCount":I
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1803,7 +1803,7 @@
     if-ne v4, v7, :cond_8
 
     .line 1000
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getFingerprintSupportingFeatures()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getFingerprintSupportingFeatures()Z
 
     move-result v4
 
@@ -1813,7 +1813,7 @@
     if-ne v2, v7, :cond_2
 
     .line 1002
-    sget-object v4, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSalesCode:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSalesCode:Ljava/lang/String;
 
     const-string v5, "DCM"
 
@@ -1826,7 +1826,7 @@
     .line 1003
     const v4, 0x7f0e1217
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -1835,7 +1835,7 @@
     :goto_0
     new-instance v4, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -1845,9 +1845,9 @@
 
     move-result-object v4
 
-    new-instance v5, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$13;
+    new-instance v5, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$13;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$13;-><init>(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$13;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)V
 
     invoke-virtual {v4, v10, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1859,9 +1859,9 @@
 
     move-result-object v4
 
-    new-instance v5, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$12;
+    new-instance v5, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$12;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$12;-><init>(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$12;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)V
 
     invoke-virtual {v4, v5}, Landroid/app/AlertDialog$Builder;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1871,23 +1871,23 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
+    iput-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
 
     .line 1065
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
     .line 1066
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v4, v11}, Landroid/app/AlertDialog;->setTitle(I)V
 
     .line 1068
     :cond_0
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v4}, Landroid/app/AlertDialog;->show()V
 
@@ -1900,7 +1900,7 @@
     :cond_1
     const v4, 0x7f0e1211
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -1910,7 +1910,7 @@
     .line 1008
     .end local v3    # "strMessage":Ljava/lang/String;
     :cond_2
-    sget-object v4, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSalesCode:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSalesCode:Ljava/lang/String;
 
     const-string v5, "DCM"
 
@@ -1931,7 +1931,7 @@
 
     aput-object v6, v5, v8
 
-    invoke-virtual {p0, v4, v5}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v4, v5}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -1951,7 +1951,7 @@
 
     aput-object v6, v5, v8
 
-    invoke-virtual {p0, v4, v5}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v4, v5}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -1964,7 +1964,7 @@
     if-ne v2, v7, :cond_6
 
     .line 1020
-    sget-object v4, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSalesCode:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSalesCode:Ljava/lang/String;
 
     const-string v5, "DCM"
 
@@ -1977,7 +1977,7 @@
     .line 1021
     const v4, 0x7f0e1215
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -1989,7 +1989,7 @@
     :cond_5
     const v4, 0x7f0e1213
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -1999,7 +1999,7 @@
     .line 1026
     .end local v3    # "strMessage":Ljava/lang/String;
     :cond_6
-    sget-object v4, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSalesCode:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSalesCode:Ljava/lang/String;
 
     const-string v5, "DCM"
 
@@ -2020,7 +2020,7 @@
 
     aput-object v6, v5, v8
 
-    invoke-virtual {p0, v4, v5}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v4, v5}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -2040,7 +2040,7 @@
 
     aput-object v6, v5, v8
 
-    invoke-virtual {p0, v4, v5}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v4, v5}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -2050,7 +2050,7 @@
     .line 1069
     .end local v3    # "strMessage":Ljava/lang/String;
     :cond_8
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getFingerprintSupportingFeatures()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getFingerprintSupportingFeatures()Z
 
     move-result v4
 
@@ -2075,7 +2075,7 @@
     .line 1072
     const v4, 0x7f0e120f
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -2084,7 +2084,7 @@
     :goto_2
     new-instance v4, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -2094,9 +2094,9 @@
 
     move-result-object v4
 
-    new-instance v5, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$15;
+    new-instance v5, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$15;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$15;-><init>(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$15;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)V
 
     invoke-virtual {v4, v10, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -2108,9 +2108,9 @@
 
     move-result-object v4
 
-    new-instance v5, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$14;
+    new-instance v5, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$14;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$14;-><init>(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$14;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)V
 
     invoke-virtual {v4, v5}, Landroid/app/AlertDialog$Builder;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Landroid/app/AlertDialog$Builder;
 
@@ -2120,23 +2120,23 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
+    iput-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
 
     .line 1095
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v4
 
     if-eqz v4, :cond_a
 
     .line 1096
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v4, v11}, Landroid/app/AlertDialog;->setTitle(I)V
 
     .line 1098
     :cond_a
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v4}, Landroid/app/AlertDialog;->show()V
 
@@ -2155,7 +2155,7 @@
 
     aput-object v6, v5, v8
 
-    invoke-virtual {p0, v4, v5}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v4, v5}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -2170,7 +2170,7 @@
     .line 1102
     const v4, 0x7f0e120d
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -2179,7 +2179,7 @@
     :goto_3
     new-instance v4, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -2189,9 +2189,9 @@
 
     move-result-object v4
 
-    new-instance v5, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$17;
+    new-instance v5, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$17;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$17;-><init>(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$17;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)V
 
     invoke-virtual {v4, v10, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -2203,9 +2203,9 @@
 
     move-result-object v4
 
-    new-instance v5, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$16;
+    new-instance v5, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$16;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$16;-><init>(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$16;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)V
 
     invoke-virtual {v4, v5}, Landroid/app/AlertDialog$Builder;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Landroid/app/AlertDialog$Builder;
 
@@ -2215,23 +2215,23 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
+    iput-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
 
     .line 1127
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v4
 
     if-eqz v4, :cond_d
 
     .line 1128
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v4, v11}, Landroid/app/AlertDialog;->setTitle(I)V
 
     .line 1130
     :cond_d
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v4}, Landroid/app/AlertDialog;->show()V
 
@@ -2250,7 +2250,7 @@
 
     aput-object v6, v5, v8
 
-    invoke-virtual {p0, v4, v5}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v4, v5}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -2271,11 +2271,11 @@
     if-eqz p1, :cond_0
 
     .line 1139
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->resetFingerprintSupportingFeatures()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->resetFingerprintSupportingFeatures()V
 
     .line 1147
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->deleteFingerprintSequentially()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->deleteFingerprintSequentially()V
 
     .line 1165
     return v0
@@ -2288,7 +2288,7 @@
     const/4 v3, 0x1
 
     .line 1212
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -2296,7 +2296,7 @@
 
     if-lt v2, v3, :cond_0
 
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getNumOfCheckedList()I
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getNumOfCheckedList()I
 
     move-result v2
 
@@ -2313,7 +2313,7 @@
 
     .local v1, "i":I
     :goto_1
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -2322,7 +2322,7 @@
     if-ge v1, v2, :cond_0
 
     .line 1217
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -2337,7 +2337,7 @@
     if-eqz v2, :cond_2
 
     .line 1219
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2384,7 +2384,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1221
-    invoke-direct {p0, v0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->removeFingerPrint(Landroid/hardware/fingerprint/Fingerprint;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->removeFingerPrint(Landroid/hardware/fingerprint/Fingerprint;)V
 
     goto :goto_0
 
@@ -2401,10 +2401,10 @@
 
     .prologue
     .line 1644
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->clearselectionChecklist()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->clearselectionChecklist()V
 
     .line 1645
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->backToFingerlist()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->backToFingerlist()V
 
     .line 1646
     return-void
@@ -2446,7 +2446,7 @@
     const/4 v0, 0x0
 
     .line 1268
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -2462,7 +2462,7 @@
 
     if-eq v2, v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -2478,7 +2478,7 @@
 
     if-eq v2, v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -2494,7 +2494,7 @@
 
     if-eq v2, v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -2512,7 +2512,7 @@
 
     if-eq v2, v3, :cond_0
 
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->appLockUsingFingerprint()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->appLockUsingFingerprint()Z
 
     move-result v2
 
@@ -2535,12 +2535,12 @@
 
     .line 1575
     .local v2, "numChecked":I
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     if-eqz v3, :cond_1
 
     .line 1577
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -2617,7 +2617,7 @@
 
     .line 1477
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getNumOfCheckedList()I
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getNumOfCheckedList()I
 
     move-result v6
 
@@ -2629,7 +2629,7 @@
 
     .line 1480
     .local v2, "indexToBeRemoved":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
-    iget-object v7, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v7, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
@@ -2766,7 +2766,7 @@
 
     .line 1659
     .local v1, "isSharedDevice":Z
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -2880,9 +2880,9 @@
     invoke-static {v0, v1}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 743
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mRemoveCallback:Landroid/hardware/fingerprint/FingerprintManager$RemovalCallback;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mRemoveCallback:Landroid/hardware/fingerprint/FingerprintManager$RemovalCallback;
 
     invoke-virtual {v0, p1, v1}, Landroid/hardware/fingerprint/FingerprintManager;->remove(Landroid/hardware/fingerprint/Fingerprint;Landroid/hardware/fingerprint/FingerprintManager$RemovalCallback;)V
 
@@ -2897,7 +2897,7 @@
     const/4 v3, 0x0
 
     .line 1229
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -2910,7 +2910,7 @@
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 1231
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -2923,7 +2923,7 @@
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 1233
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -2936,7 +2936,7 @@
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 1235
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -2949,10 +2949,10 @@
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 1237
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->setFingerprintScreenLockDisable()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->setFingerprintScreenLockDisable()V
 
     .line 1239
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -2971,7 +2971,7 @@
     if-ne v1, v2, :cond_0
 
     .line 1241
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -2985,7 +2985,7 @@
 
     .line 1244
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -3010,7 +3010,7 @@
     if-gt v0, v1, :cond_1
 
     .line 1247
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -3035,7 +3035,7 @@
 
     .prologue
     .line 448
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -3067,16 +3067,16 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->originalContentStart:I
+    iput v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->originalContentStart:I
 
     .line 453
     const/16 v1, 0x10
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/android/settings/fingerprint/FingerprintSettings_Utils;->convertDpToPixel(ILandroid/content/Context;)I
+    invoke-static {v1, v2}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_Utils;->convertDpToPixel(ILandroid/content/Context;)I
 
     move-result v1
 
@@ -3093,14 +3093,14 @@
 
     .line 455
     :cond_1
-    iget v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->originalContentStart:I
+    iget v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->originalContentStart:I
 
     const/4 v2, -0x1
 
     if-eq v1, v2, :cond_0
 
     .line 456
-    iget v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->originalContentStart:I
+    iget v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->originalContentStart:I
 
     invoke-virtual {v0}, Landroid/widget/Toolbar;->getContentInsetEnd()I
 
@@ -3128,13 +3128,13 @@
     .line 1639
     const-string v0, "register_category"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceCategory;
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mRegisterCategory:Landroid/preference/PreferenceCategory;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mRegisterCategory:Landroid/preference/PreferenceCategory;
 
     .line 1641
     return-void
@@ -3156,7 +3156,7 @@
     .line 1254
     new-instance v1, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -3177,17 +3177,17 @@
     if-ne v2, v3, :cond_0
 
     .line 1257
-    new-instance v0, Lcom/android/settings/ChooseLockSettingsHelper;
+    new-instance v0, Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-direct {v0, v2}, Lcom/android/settings/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v0, v2}, Lcom/android/settings_ex/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;)V
 
     .line 1258
-    .local v0, "chooseLockSettingsHelper":Lcom/android/settings/ChooseLockSettingsHelper;
-    invoke-virtual {v0}, Lcom/android/settings/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
+    .local v0, "chooseLockSettingsHelper":Lcom/android/settings_ex/ChooseLockSettingsHelper;
+    invoke-virtual {v0}, Lcom/android/settings_ex/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
 
     move-result-object v2
 
@@ -3198,7 +3198,7 @@
     invoke-virtual {v2, v3}, Lcom/android/internal/widget/LockPatternUtils;->clearLock(I)V
 
     .line 1259
-    invoke-virtual {v0}, Lcom/android/settings/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
+    invoke-virtual {v0}, Lcom/android/settings_ex/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
 
     move-result-object v2
 
@@ -3209,7 +3209,7 @@
     invoke-virtual {v2, v4, v3}, Lcom/android/internal/widget/LockPatternUtils;->setLockScreenDisabled(ZI)V
 
     .line 1262
-    .end local v0    # "chooseLockSettingsHelper":Lcom/android/settings/ChooseLockSettingsHelper;
+    .end local v0    # "chooseLockSettingsHelper":Lcom/android/settings_ex/ChooseLockSettingsHelper;
     :cond_0
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -3218,7 +3218,7 @@
     invoke-virtual {v1, v4, v2}, Lcom/android/internal/widget/LockPatternUtils;->setFingerPrintLockscreen(II)V
 
     .line 1263
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -3244,14 +3244,14 @@
 
     .local v0, "i":I
     :goto_0
-    invoke-static {}, Lcom/android/settings/fingerprint/FingerprintSettings_Utils;->getMaxFingerEnroll()I
+    invoke-static {}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_Utils;->getMaxFingerEnroll()I
 
     move-result v1
 
     if-ge v0, v1, :cond_1
 
     .line 660
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->twselectionChecklist:[Z
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->twselectionChecklist:[Z
 
     aput-boolean p1, v1, v0
 
@@ -3263,14 +3263,14 @@
     .line 662
     .end local v0    # "i":I
     :cond_0
-    iget v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
+    iget v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
 
     if-ge p2, v1, :cond_3
 
     .line 663
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->twselectionChecklist:[Z
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->twselectionChecklist:[Z
 
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->twselectionChecklist:[Z
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->twselectionChecklist:[Z
 
     aget-boolean v1, v1, p2
 
@@ -3334,7 +3334,7 @@
 
     .prologue
     .line 190
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -3346,7 +3346,7 @@
     .local v2, "stringID":I
     const-string v3, "VZW"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v4
 
@@ -3380,17 +3380,17 @@
 
     const v4, 0x104000a
 
-    new-instance v5, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$3;
+    new-instance v5, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$3;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$3;-><init>(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$3;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)V
 
     invoke-virtual {v3, v4, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v3
 
-    new-instance v4, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$2;
+    new-instance v4, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$2;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$2;-><init>(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$2;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)V
 
     invoke-virtual {v3, v4}, Landroid/app/AlertDialog$Builder;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Landroid/app/AlertDialog$Builder;
 
@@ -3425,7 +3425,7 @@
 
     .prologue
     .line 671
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->createPreferenceHierarchy()Landroid/preference/PreferenceScreen;
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->createPreferenceHierarchy()Landroid/preference/PreferenceScreen;
 
     .line 672
     return-void
@@ -3437,14 +3437,14 @@
 
     .prologue
     .line 645
-    iget v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
+    iget v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
 
     if-ge p1, v0, :cond_0
 
     .line 646
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0, p1}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->setTwselectionChecklist(ZI)V
+    invoke-direct {p0, v0, p1}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->setTwselectionChecklist(ZI)V
 
     .line 650
     :goto_0
@@ -3486,12 +3486,12 @@
 
     .local v0, "i":I
     :goto_0
-    iget v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
+    iget v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
 
     if-ge v0, v1, :cond_0
 
     .line 639
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -3499,7 +3499,7 @@
 
     check-cast v1, Landroid/preference/CheckBoxPreference;
 
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->twselectionChecklist:[Z
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->twselectionChecklist:[Z
 
     aget-boolean v2, v2, v0
 
@@ -3523,7 +3523,7 @@
 
     .prologue
     .line 590
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -3540,15 +3540,15 @@
     const/4 v4, 0x1
 
     .line 840
-    iget-object v6, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
+    iget-object v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
 
     if-nez v6, :cond_0
 
-    iget-object v6, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteDialog:Landroid/app/AlertDialog;
+    iget-object v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteDialog:Landroid/app/AlertDialog;
 
     if-nez v6, :cond_0
 
-    iget-object v6, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mRenameDialog:Lcom/android/settings/fingerprint/FingerPrintRenameDialog;
+    iget-object v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mRenameDialog:Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;
 
     if-eqz v6, :cond_2
 
@@ -3562,13 +3562,13 @@
 
     .line 843
     :cond_2
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getNumOfCheckedList()I
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getNumOfCheckedList()I
 
     move-result v2
 
     .line 845
     .local v2, "selectedCount":I
-    iget-object v6, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v6, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
@@ -3579,7 +3579,7 @@
     .line 847
     new-instance v1, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -3587,7 +3587,7 @@
 
     .line 848
     .local v1, "mLockPatternUtils":Lcom/android/internal/widget/LockPatternUtils;
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->isSharedDeviceEnabled()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->isSharedDeviceEnabled()Z
 
     move-result v6
 
@@ -3604,11 +3604,11 @@
     if-ne v6, v4, :cond_3
 
     .line 849
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
@@ -3632,21 +3632,21 @@
 
     .line 855
     :cond_3
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->checkDeleteAllFingerprint()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->checkDeleteAllFingerprint()Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
     .line 856
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->deleteAllFingerPrint()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->deleteAllFingerPrint()V
 
     goto :goto_0
 
     .line 862
     .end local v1    # "mLockPatternUtils":Lcom/android/internal/widget/LockPatternUtils;
     :cond_4
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->checkDeleteSomeFingerprint()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->checkDeleteSomeFingerprint()Z
 
     move-result v6
 
@@ -3655,7 +3655,7 @@
     .line 867
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -3663,7 +3663,7 @@
 
     .line 868
     .local v0, "builder":Landroid/app/AlertDialog$Builder;
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v6
 
@@ -3681,7 +3681,7 @@
     .line 873
     const v5, 0x7f0e120d
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -3693,25 +3693,25 @@
     .line 880
     const v5, 0x7f0e121c
 
-    new-instance v6, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$9;
+    new-instance v6, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$9;
 
-    invoke-direct {v6, p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$9;-><init>(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)V
+    invoke-direct {v6, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$9;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)V
 
     invoke-virtual {v0, v5, v6}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 889
     const/high16 v5, 0x1040000
 
-    new-instance v6, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$10;
+    new-instance v6, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$10;
 
-    invoke-direct {v6, p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$10;-><init>(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)V
+    invoke-direct {v6, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$10;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)V
 
     invoke-virtual {v0, v5, v6}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 897
-    new-instance v5, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$11;
+    new-instance v5, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$11;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$11;-><init>(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$11;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)V
 
     invoke-virtual {v0, v5}, Landroid/app/AlertDialog$Builder;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Landroid/app/AlertDialog$Builder;
 
@@ -3720,10 +3720,10 @@
 
     move-result-object v5
 
-    iput-object v5, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteDialog:Landroid/app/AlertDialog;
+    iput-object v5, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteDialog:Landroid/app/AlertDialog;
 
     .line 904
-    iget-object v5, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteDialog:Landroid/app/AlertDialog;
+    iget-object v5, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v5}, Landroid/app/AlertDialog;->show()V
 
@@ -3742,7 +3742,7 @@
 
     aput-object v8, v7, v5
 
-    invoke-virtual {p0, v6, v7}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v6, v7}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -3755,30 +3755,30 @@
 
     .prologue
     .line 684
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
     .line 685
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
 
     if-eqz v0, :cond_0
 
     .line 686
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
 
     invoke-interface {v0}, Landroid/view/Menu;->clear()V
 
     .line 687
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
 
     invoke-interface {v0}, Landroid/view/Menu;->close()V
 
     .line 690
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -3795,7 +3795,7 @@
     if-le v0, v1, :cond_5
 
     .line 691
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -3808,34 +3808,34 @@
     .line 700
     :cond_1
     :goto_0
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mRenameDialog:Lcom/android/settings/fingerprint/FingerPrintRenameDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mRenameDialog:Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;
 
     if-eqz v0, :cond_2
 
     .line 701
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mRenameDialog:Lcom/android/settings/fingerprint/FingerPrintRenameDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mRenameDialog:Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;
 
-    invoke-virtual {v0}, Lcom/android/settings/fingerprint/FingerPrintRenameDialog;->cancelRenameDialog()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;->cancelRenameDialog()V
 
     .line 704
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_3
 
     .line 705
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->cancel()V
 
     .line 708
     :cond_3
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteDialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_4
 
     .line 709
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->cancel()V
 
@@ -3845,18 +3845,18 @@
 
     .line 692
     :cond_5
-    sget-boolean v0, Lcom/android/settings/fingerprint/FingerprintEntry;->isSearchEntry:Z
+    sget-boolean v0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->isSearchEntry:Z
 
     if-eqz v0, :cond_1
 
     .line 693
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->finishFragment()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->finishFragment()V
 
     goto :goto_0
 
     .line 697
     :cond_6
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -3891,7 +3891,7 @@
 
     .prologue
     .line 115
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 116
     iget v1, p1, Landroid/content/res/Configuration;->orientation:I
@@ -3901,7 +3901,7 @@
     if-ne v1, v2, :cond_1
 
     .line 117
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllText:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllText:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -3913,7 +3913,7 @@
     .local v0, "params":Landroid/widget/LinearLayout$LayoutParams;
     iget v1, v0, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -3930,7 +3930,7 @@
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
 
     .line 119
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllText:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllText:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -3949,7 +3949,7 @@
     if-ne v1, v2, :cond_0
 
     .line 121
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllText:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllText:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -3961,7 +3961,7 @@
     .restart local v0    # "params":Landroid/widget/LinearLayout$LayoutParams;
     iget v1, v0, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -3978,7 +3978,7 @@
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
 
     .line 123
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllText:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllText:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -3991,7 +3991,7 @@
 
     .prologue
     .line 280
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 281
     const-string v3, "FpstFingerprintSettings_MultiSelect"
@@ -4001,7 +4001,7 @@
     invoke-static {v3, v4}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 283
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -4048,7 +4048,7 @@
 
     move-result v3
 
-    sput v3, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectedId:I
+    sput v3, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectedId:I
 
     .line 289
     const-string v3, "FpstFingerprintSettings_MultiSelect"
@@ -4063,7 +4063,7 @@
 
     move-result-object v4
 
-    sget v5, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectedId:I
+    sget v5, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectedId:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -4094,7 +4094,7 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->twselectedChecklist:[Z
+    iput-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->twselectedChecklist:[Z
 
     .line 294
     const-string v3, "FpstFingerprintSettings_MultiSelect"
@@ -4109,7 +4109,7 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->twselectedChecklist:[Z
+    iget-object v5, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->twselectedChecklist:[Z
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -4124,7 +4124,7 @@
     .line 299
     .end local v1    # "bundle":Landroid/os/Bundle;
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -4138,22 +4138,22 @@
 
     check-cast v3, Landroid/hardware/fingerprint/FingerprintManager;
 
-    iput-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
+    iput-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     .line 302
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iput-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     .line 303
     const/4 v3, 0x1
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->setHasOptionsMenu(Z)V
 
     .line 304
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -4161,10 +4161,10 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->actionBar:Landroid/app/ActionBar;
+    iput-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->actionBar:Landroid/app/ActionBar;
 
     .line 306
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->updatePreferences()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->updatePreferences()V
 
     .line 307
     return-void
@@ -4192,18 +4192,18 @@
     invoke-static {v3, v4}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 312
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     .line 314
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
 
     .line 315
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
 
     invoke-interface {v3}, Landroid/view/Menu;->clear()V
 
     .line 317
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -4219,22 +4219,22 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectActionView:Landroid/view/View;
+    iput-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectActionView:Landroid/view/View;
 
     .line 318
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->actionBar:Landroid/app/ActionBar;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->actionBar:Landroid/app/ActionBar;
 
     if-eqz v3, :cond_2
 
     .line 319
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->actionBar:Landroid/app/ActionBar;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->actionBar:Landroid/app/ActionBar;
 
     invoke-virtual {v3, v6, v6}, Landroid/app/ActionBar;->setDisplayOptions(II)V
 
     .line 320
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->actionBar:Landroid/app/ActionBar;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->actionBar:Landroid/app/ActionBar;
 
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectActionView:Landroid/view/View;
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectActionView:Landroid/view/View;
 
     new-instance v5, Landroid/app/ActionBar$LayoutParams;
 
@@ -4243,17 +4243,17 @@
     invoke-virtual {v3, v4, v5}, Landroid/app/ActionBar;->setCustomView(Landroid/view/View;Landroid/app/ActionBar$LayoutParams;)V
 
     .line 321
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->actionBar:Landroid/app/ActionBar;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->actionBar:Landroid/app/ActionBar;
 
     invoke-virtual {v3, v7}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
 
     .line 322
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->actionBar:Landroid/app/ActionBar;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->actionBar:Landroid/app/ActionBar;
 
     invoke-virtual {v3, v7}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
     .line 324
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectActionView:Landroid/view/View;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectActionView:Landroid/view/View;
 
     const v4, 0x7f0d02c8
 
@@ -4263,19 +4263,19 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    iput-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllText:Landroid/widget/TextView;
+    iput-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllText:Landroid/widget/TextView;
 
     .line 325
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllText:Landroid/widget/TextView;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllText:Landroid/widget/TextView;
 
-    new-instance v4, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$5;
+    new-instance v4, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$5;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$5;-><init>(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$5;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)V
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 332
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectActionView:Landroid/view/View;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectActionView:Landroid/view/View;
 
     const v4, 0x7f0d02c7
 
@@ -4285,19 +4285,19 @@
 
     check-cast v3, Landroid/widget/CheckBox;
 
-    iput-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllCheckbox:Landroid/widget/CheckBox;
+    iput-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllCheckbox:Landroid/widget/CheckBox;
 
     .line 333
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllCheckbox:Landroid/widget/CheckBox;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllCheckbox:Landroid/widget/CheckBox;
 
-    new-instance v4, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$6;
+    new-instance v4, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$6;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$6;-><init>(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$6;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)V
 
     invoke-virtual {v3, v4}, Landroid/widget/CheckBox;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 339
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectActionView:Landroid/view/View;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectActionView:Landroid/view/View;
 
     const v4, 0x7f0d02c9
 
@@ -4307,10 +4307,10 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    iput-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectedFingerprintTextView:Landroid/widget/TextView;
+    iput-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectedFingerprintTextView:Landroid/widget/TextView;
 
     .line 341
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectActionView:Landroid/view/View;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectActionView:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -4327,7 +4327,7 @@
 
     .line 345
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -4346,7 +4346,7 @@
     if-ne v3, v4, :cond_1
 
     .line 346
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllText:Landroid/widget/TextView;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllText:Landroid/widget/TextView;
 
     invoke-virtual {v3}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -4358,7 +4358,7 @@
     .local v1, "params":Landroid/widget/LinearLayout$LayoutParams;
     iget v3, v1, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -4375,7 +4375,7 @@
     invoke-virtual {v1, v3, v4, v5, v6}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
 
     .line 348
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllText:Landroid/widget/TextView;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllText:Landroid/widget/TextView;
 
     invoke-virtual {v3, v1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -4406,7 +4406,7 @@
     invoke-interface {v3, v9}, Landroid/view/MenuItem;->setShowAsAction(I)V
 
     .line 358
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->twselectedChecklist:[Z
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->twselectedChecklist:[Z
 
     if-eqz v3, :cond_3
 
@@ -4422,12 +4422,12 @@
 
     .local v0, "i":I
     :goto_1
-    iget v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
+    iget v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mEnrolledFingerCount:I
 
     if-ge v0, v3, :cond_3
 
     .line 362
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -4435,7 +4435,7 @@
 
     check-cast v3, Landroid/preference/CheckBoxPreference;
 
-    iget-object v4, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->twselectedChecklist:[Z
+    iget-object v4, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->twselectedChecklist:[Z
 
     aget-boolean v4, v4, v0
 
@@ -4459,7 +4459,7 @@
 
     .line 366
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->updateSelectionState()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->updateSelectionState()V
 
     .line 367
     return-void
@@ -4470,12 +4470,12 @@
 
     .prologue
     .line 736
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroy()V
 
     .line 737
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->setContentsStart(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->setContentsStart(Z)V
 
     .line 738
     const-string v0, "FpstFingerprintSettings_MultiSelect"
@@ -4509,7 +4509,7 @@
 
     .line 374
     :pswitch_0
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->renameFingerPrint()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->renameFingerPrint()V
 
     .line 382
     :goto_1
@@ -4519,7 +4519,7 @@
 
     .line 377
     :pswitch_1
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->deleteFingerprint()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->deleteFingerprint()Z
 
     goto :goto_1
 
@@ -4536,7 +4536,7 @@
 
     .prologue
     .line 715
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 716
     const-string v0, "FpstFingerprintSettings_MultiSelect"
@@ -4546,7 +4546,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 717
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->cancelAndSessionEnd()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->cancelAndSessionEnd()V
 
     .line 719
     return-void
@@ -4571,7 +4571,7 @@
 
     .prologue
     .line 724
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->updateSelectionState()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->updateSelectionState()V
 
     .line 725
     const/4 v0, 0x1
@@ -4584,7 +4584,7 @@
 
     .prologue
     .line 599
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 600
     const-string v1, "FpstFingerprintSettings_MultiSelect"
@@ -4594,7 +4594,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 606
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getListView()Landroid/widget/ListView;
 
     move-result-object v0
 
@@ -4605,7 +4605,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setEnableDragBlock(Z)V
 
     .line 608
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->TwFingerprintultiSelectedListener:Landroid/widget/AdapterView$OnTwMultiSelectedListener;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->TwFingerprintultiSelectedListener:Landroid/widget/AdapterView$OnTwMultiSelectedListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setTwMultiSelectedListener(Landroid/widget/AdapterView$OnTwMultiSelectedListener;)V
 
@@ -4629,13 +4629,13 @@
     .line 441
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->setContentsStart(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->setContentsStart(Z)V
 
     .line 443
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 444
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->setDivider()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->setDivider()V
 
     .line 445
     return-void
@@ -4650,15 +4650,15 @@
 
     .line 758
     .local v0, "fp":Landroid/hardware/fingerprint/Fingerprint;
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteAllDialog:Landroid/app/AlertDialog;
 
     if-nez v2, :cond_0
 
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mDeleteDialog:Landroid/app/AlertDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mDeleteDialog:Landroid/app/AlertDialog;
 
     if-nez v2, :cond_0
 
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mRenameDialog:Lcom/android/settings/fingerprint/FingerPrintRenameDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mRenameDialog:Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;
 
     if-eqz v2, :cond_1
 
@@ -4669,7 +4669,7 @@
 
     .line 761
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_3
 
@@ -4678,7 +4678,7 @@
 
     .local v1, "i":I
     :goto_1
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -4687,7 +4687,7 @@
     if-ge v1, v2, :cond_3
 
     .line 763
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -4702,7 +4702,7 @@
     if-eqz v2, :cond_2
 
     .line 772
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->items:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -4724,7 +4724,7 @@
     if-eqz v0, :cond_0
 
     .line 781
-    new-instance v2, Lcom/android/settings/fingerprint/FingerPrintRenameDialog;
+    new-instance v2, Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;
 
     invoke-virtual {v0}, Landroid/hardware/fingerprint/Fingerprint;->getFingerId()I
 
@@ -4734,32 +4734,32 @@
 
     move-result-object v4
 
-    invoke-direct {v2, v3, v4}, Lcom/android/settings/fingerprint/FingerPrintRenameDialog;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v2, v3, v4}, Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;-><init>(ILjava/lang/CharSequence;)V
 
-    iput-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mRenameDialog:Lcom/android/settings/fingerprint/FingerPrintRenameDialog;
+    iput-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mRenameDialog:Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;
 
     .line 782
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mRenameDialog:Lcom/android/settings/fingerprint/FingerPrintRenameDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mRenameDialog:Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;
 
-    new-instance v3, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$8;
+    new-instance v3, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$8;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect$8;-><init>(Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect$8;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;)V
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/fingerprint/FingerPrintRenameDialog;->setConfirmationDialogFragmentListener(Lcom/android/settings/fingerprint/FingerPrintRenameDialog$ConfirmationDialogFragmentListener;)V
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;->setConfirmationDialogFragmentListener(Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog$ConfirmationDialogFragmentListener;)V
 
     .line 812
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mRenameDialog:Lcom/android/settings/fingerprint/FingerPrintRenameDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mRenameDialog:Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v3
 
     const-string v4, "dialog"
 
-    invoke-virtual {v2, v3, v4}, Lcom/android/settings/fingerprint/FingerPrintRenameDialog;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v2, v3, v4}, Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     .line 814
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->sendSurveyForRename()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->sendSurveyForRename()V
 
     goto :goto_0
 .end method
@@ -4771,7 +4771,7 @@
     .line 819
     const-string v2, "TRUE"
 
-    sget-object v3, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->ENABLE_SURVEY_MODE:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->ENABLE_SURVEY_MODE:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4821,7 +4821,7 @@
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 833
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -4858,7 +4858,7 @@
 
     .line 466
     .local v7, "l":Ljava/util/Locale;
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getListView()Landroid/widget/ListView;
 
     move-result-object v8
 
@@ -4878,7 +4878,7 @@
     .line 472
     new-instance v0, Landroid/graphics/drawable/InsetDrawable;
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getListView()Landroid/widget/ListView;
 
     move-result-object v1
 
@@ -4886,7 +4886,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -4925,7 +4925,7 @@
     :cond_2
     new-instance v0, Landroid/graphics/drawable/InsetDrawable;
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getListView()Landroid/widget/ListView;
 
     move-result-object v1
 
@@ -4933,7 +4933,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -4968,7 +4968,7 @@
 
     .line 389
     .local v0, "numChecked":I
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getNumOfCheckedList()I
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getNumOfCheckedList()I
 
     move-result v0
 
@@ -4995,7 +4995,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -5015,16 +5015,16 @@
     if-lez v0, :cond_1
 
     .line 394
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 395
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectedFingerprintTextView:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectedFingerprintTextView:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -5054,7 +5054,7 @@
 
     .line 404
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->selectionChecklist:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -5063,7 +5063,7 @@
     if-ne v0, v1, :cond_2
 
     .line 405
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllCheckbox:Landroid/widget/CheckBox;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllCheckbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v1, v7}, Landroid/widget/CheckBox;->setChecked(Z)V
 
@@ -5077,9 +5077,9 @@
 
     .line 397
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectedFingerprintTextView:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectedFingerprintTextView:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -5103,7 +5103,7 @@
 
     .line 401
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectedFingerprintTextView:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectedFingerprintTextView:Landroid/widget/TextView;
 
     const v2, 0x7f0e1252    # 1.888455E38f
 
@@ -5113,7 +5113,7 @@
 
     .line 407
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllCheckbox:Landroid/widget/CheckBox;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mSelectAllCheckbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v1, v6}, Landroid/widget/CheckBox;->setChecked(Z)V
 
@@ -5121,7 +5121,7 @@
 
     .line 412
     :pswitch_0
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
 
     invoke-interface {v1, v8}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
@@ -5130,7 +5130,7 @@
     invoke-interface {v1, v6}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
     .line 413
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
 
     invoke-interface {v1, v8}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
@@ -5139,7 +5139,7 @@
     invoke-interface {v1, v6}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
 
     .line 414
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
 
     invoke-interface {v1, v9}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
@@ -5148,7 +5148,7 @@
     invoke-interface {v1, v6}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
     .line 415
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
 
     invoke-interface {v1, v9}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
@@ -5160,7 +5160,7 @@
 
     .line 418
     :pswitch_1
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
 
     invoke-interface {v1, v8}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
@@ -5169,7 +5169,7 @@
     invoke-interface {v1, v7}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
     .line 419
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
 
     invoke-interface {v1, v8}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
@@ -5178,7 +5178,7 @@
     invoke-interface {v1, v7}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
 
     .line 420
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
 
     invoke-interface {v1, v9}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
@@ -5187,7 +5187,7 @@
     invoke-interface {v1, v7}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
     .line 421
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
 
     invoke-interface {v1, v9}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
@@ -5199,7 +5199,7 @@
 
     .line 426
     :pswitch_2
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
 
     invoke-interface {v1, v8}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
@@ -5208,7 +5208,7 @@
     invoke-interface {v1, v6}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
     .line 427
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
 
     invoke-interface {v1, v8}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
@@ -5217,7 +5217,7 @@
     invoke-interface {v1, v6}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
 
     .line 428
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
 
     invoke-interface {v1, v9}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
@@ -5226,7 +5226,7 @@
     invoke-interface {v1, v7}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
     .line 429
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->mOptionsMenu:Landroid/view/Menu;
 
     invoke-interface {v1, v9}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
@@ -5252,7 +5252,7 @@
 
     .prologue
     .line 1560
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSettings_MultiSelect;->updateActionbarState()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings_MultiSelect;->updateActionbarState()V
 
     .line 1561
     return-void

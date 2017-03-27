@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settings/ChooseLockPassword$1;
+.class synthetic Lcom/android/settings_ex/ChooseLockPassword$1;
 .super Ljava/lang/Object;
 .source "ChooseLockPassword.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/ChooseLockPassword;
+    value = Lcom/android/settings_ex/ChooseLockPassword;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

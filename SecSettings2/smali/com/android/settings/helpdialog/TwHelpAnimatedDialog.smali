@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;
-.super Lcom/android/settings/helpdialog/TwHelpDialog;
+.class public Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;
+.super Lcom/android/settings_ex/helpdialog/TwHelpDialog;
 .source "TwHelpAnimatedDialog.java"
 
 
@@ -35,88 +35,88 @@
     const/4 v1, 0x0
 
     .line 68
-    invoke-direct {p0, p1}, Lcom/android/settings/helpdialog/TwHelpDialog;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/helpdialog/TwHelpDialog;-><init>(Landroid/content/Context;)V
 
     .line 30
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mCurrentPointAnimation:I
+    iput v0, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mCurrentPointAnimation:I
 
     .line 32
-    iput-object v1, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mPointAnimationView:Landroid/view/View;
+    iput-object v1, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mPointAnimationView:Landroid/view/View;
 
     .line 34
-    iput-object v1, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mBubbleAnimationView:Landroid/view/View;
+    iput-object v1, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mBubbleAnimationView:Landroid/view/View;
 
     .line 114
-    new-instance v0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog$2;
+    new-instance v0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog$2;-><init>(Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog$2;-><init>(Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;)V
 
-    iput-object v0, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mPointAnimationListener:Landroid/view/animation/Animation$AnimationListener;
+    iput-object v0, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mPointAnimationListener:Landroid/view/animation/Animation$AnimationListener;
 
     .line 69
-    invoke-direct {p0, p1}, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->init(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->init(Landroid/content/Context;)V
 
     .line 70
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;)Landroid/view/animation/Animation;
+.method static synthetic access$000(Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;)Landroid/view/animation/Animation;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;
 
     .prologue
     .line 26
-    iget-object v0, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mBubbleAnimation:Landroid/view/animation/Animation;
+    iget-object v0, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mBubbleAnimation:Landroid/view/animation/Animation;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;)I
+.method static synthetic access$100(Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;
 
     .prologue
     .line 26
-    iget v0, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mCurrentPointAnimation:I
+    iget v0, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mCurrentPointAnimation:I
 
     return v0
 .end method
 
-.method static synthetic access$108(Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;)I
+.method static synthetic access$108(Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;)I
     .locals 2
-    .param p0, "x0"    # Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;
 
     .prologue
     .line 26
-    iget v0, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mCurrentPointAnimation:I
+    iget v0, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mCurrentPointAnimation:I
 
     add-int/lit8 v1, v0, 0x1
 
-    iput v1, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mCurrentPointAnimation:I
+    iput v1, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mCurrentPointAnimation:I
 
     return v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;)Ljava/util/List;
+.method static synthetic access$200(Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;)Ljava/util/List;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;
 
     .prologue
     .line 26
-    iget-object v0, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mPointAnimations:Ljava/util/List;
+    iget-object v0, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mPointAnimations:Ljava/util/List;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;)Landroid/view/View;
+.method static synthetic access$300(Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;)Landroid/view/View;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;
 
     .prologue
     .line 26
-    iget-object v0, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mPointAnimationView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mPointAnimationView:Landroid/view/View;
 
     return-object v0
 .end method
@@ -133,7 +133,7 @@
 
     invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
 
-    iput-object v1, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mPointAnimations:Ljava/util/List;
+    iput-object v1, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mPointAnimations:Ljava/util/List;
 
     .line 83
     const v1, 0x7f05001f
@@ -144,12 +144,12 @@
 
     .line 84
     .local v0, "animation":Landroid/view/animation/Animation;
-    iget-object v1, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mPointAnimationListener:Landroid/view/animation/Animation$AnimationListener;
+    iget-object v1, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mPointAnimationListener:Landroid/view/animation/Animation$AnimationListener;
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
     .line 85
-    iget-object v1, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mPointAnimations:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mPointAnimations:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -161,12 +161,12 @@
     move-result-object v0
 
     .line 88
-    iget-object v1, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mPointAnimationListener:Landroid/view/animation/Animation$AnimationListener;
+    iget-object v1, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mPointAnimationListener:Landroid/view/animation/Animation$AnimationListener;
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
     .line 89
-    iget-object v1, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mPointAnimations:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mPointAnimations:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -178,12 +178,12 @@
     move-result-object v0
 
     .line 92
-    iget-object v1, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mPointAnimationListener:Landroid/view/animation/Animation$AnimationListener;
+    iget-object v1, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mPointAnimationListener:Landroid/view/animation/Animation$AnimationListener;
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
     .line 93
-    iget-object v1, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mPointAnimations:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mPointAnimations:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -195,12 +195,12 @@
     move-result-object v0
 
     .line 96
-    iget-object v1, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mPointAnimationListener:Landroid/view/animation/Animation$AnimationListener;
+    iget-object v1, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mPointAnimationListener:Landroid/view/animation/Animation$AnimationListener;
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
     .line 97
-    iget-object v1, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mPointAnimations:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mPointAnimations:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -212,12 +212,12 @@
     move-result-object v0
 
     .line 100
-    iget-object v1, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mPointAnimationListener:Landroid/view/animation/Animation$AnimationListener;
+    iget-object v1, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mPointAnimationListener:Landroid/view/animation/Animation$AnimationListener;
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
     .line 101
-    iget-object v1, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mPointAnimations:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mPointAnimations:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -228,14 +228,14 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mBubbleAnimation:Landroid/view/animation/Animation;
+    iput-object v1, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mBubbleAnimation:Landroid/view/animation/Animation;
 
     .line 104
-    new-instance v1, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog$1;
+    new-instance v1, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog$1;-><init>(Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog$1;-><init>(Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;)V
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->setOnShowListener(Landroid/content/DialogInterface$OnShowListener;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->setOnShowListener(Landroid/content/DialogInterface$OnShowListener;)V
 
     .line 111
     return-void
@@ -248,28 +248,28 @@
 
     .prologue
     .line 45
-    invoke-super {p0}, Lcom/android/settings/helpdialog/TwHelpDialog;->onAttachedToWindow()V
+    invoke-super {p0}, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->onAttachedToWindow()V
 
     .line 46
     const v0, 0x7f0d000e
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mPointAnimationView:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mPointAnimationView:Landroid/view/View;
 
     .line 48
-    iget-object v0, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mPointAnimationView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mPointAnimationView:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
     .line 49
-    iget-object v1, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mPointAnimationView:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mPointAnimationView:Landroid/view/View;
 
-    iget-object v0, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mPointAnimations:Ljava/util/List;
+    iget-object v0, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mPointAnimations:Ljava/util/List;
 
-    iget v2, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mCurrentPointAnimation:I
+    iget v2, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mCurrentPointAnimation:I
 
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -283,21 +283,21 @@
     :cond_0
     const v0, 0x7f0d0012
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mBubbleAnimationView:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mBubbleAnimationView:Landroid/view/View;
 
     .line 54
-    iget-object v0, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mBubbleAnimationView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mBubbleAnimationView:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
     .line 55
-    iget-object v0, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mBubbleAnimationView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mBubbleAnimationView:Landroid/view/View;
 
-    iget-object v1, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mBubbleAnimation:Landroid/view/animation/Animation;
+    iget-object v1, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mBubbleAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setAnimation(Landroid/view/animation/Animation;)V
 

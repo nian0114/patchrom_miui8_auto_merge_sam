@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiApDialog$7;
+.class Lcom/android/settings_ex/wifi/WifiApDialog$7;
 .super Ljava/lang/Object;
 .source "WifiApDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiApDialog;->showHideSsidWarningDialog()V
+    value = Lcom/android/settings_ex/wifi/WifiApDialog;->showHideSsidWarningDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiApDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiApDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiApDialog;)V
     .locals 0
 
     .prologue
     .line 1318
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiApDialog$7;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiApDialog$7;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,10 +42,10 @@
 
     .prologue
     .line 1320
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiApDialog$7;->this$0:Lcom/android/settings/wifi/WifiApDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiApDialog$7;->this$0:Lcom/android/settings_ex/wifi/WifiApDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiApDialog;->mHideSsid:Landroid/widget/CheckBox;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiApDialog;->access$2100(Lcom/android/settings/wifi/WifiApDialog;)Landroid/widget/CheckBox;
+    # getter for: Lcom/android/settings_ex/wifi/WifiApDialog;->mHideSsid:Landroid/widget/CheckBox;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiApDialog;->access$2100(Lcom/android/settings_ex/wifi/WifiApDialog;)Landroid/widget/CheckBox;
 
     move-result-object v0
 

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;
+.class public Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;
 .super Landroid/app/Fragment;
 .source "ChooseLockAdditionalPin.java"
 
@@ -10,7 +10,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/ChooseLockAdditionalPin;
+    value = Lcom/android/settings_ex/ChooseLockAdditionalPin;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+        Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
     }
 .end annotation
 
@@ -54,7 +54,7 @@
 
 .field private mChallenge:J
 
-.field private mChooseLockSettingsHelper:Lcom/android/settings/ChooseLockSettingsHelper;
+.field private mChooseLockSettingsHelper:Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
 .field protected mChosenPattern:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -120,7 +120,7 @@
 
 .field private mTitleText:Landroid/widget/TextView;
 
-.field private mUiStage:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+.field private mUiStage:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
 .field title:Ljava/lang/CharSequence;
 
@@ -135,7 +135,7 @@
 
     move-result v0
 
-    sput v0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
+    sput v0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
 
     return-void
 .end method
@@ -156,102 +156,102 @@
     .line 144
     const/4 v0, 0x4
 
-    iput v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMinLength:I
+    iput v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMinLength:I
 
     .line 145
     const/16 v0, 0x10
 
-    iput v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMaxLength:I
+    iput v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMaxLength:I
 
     .line 147
-    iput v2, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
+    iput v2, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
 
     .line 148
-    iput v2, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstLockQuality:I
+    iput v2, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstLockQuality:I
 
     .line 149
-    iput-boolean v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isFallback:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isFallback:Z
 
     .line 150
-    iput-boolean v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isBlock:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isBlock:Z
 
     .line 151
-    iput-boolean v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isSignature:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isSignature:Z
 
     .line 153
-    iput-object v3, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
+    iput-object v3, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
 
     .line 157
-    sget-object v0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->Introduction:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    sget-object v0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->Introduction:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
-    iput-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    iput-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
     .line 167
-    iput-boolean v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mDone:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mDone:Z
 
     .line 168
-    iput-boolean v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHasChallenge:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHasChallenge:Z
 
     .line 179
-    iput-object v3, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPatternSavedString:Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPatternSavedString:Ljava/lang/String;
 
     .line 182
-    iput-boolean v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isSetupWizardLock:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isSetupWizardLock:Z
 
     .line 201
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->title:Ljava/lang/CharSequence;
+    iput-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->title:Ljava/lang/CharSequence;
 
     .line 204
-    new-instance v0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$1;
+    new-instance v0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$1;-><init>(Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$1;-><init>(Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;)V
 
-    iput-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHandler:Landroid/os/Handler;
 
     .line 214
     const/4 v0, 0x1
 
-    iput v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MSG_SHOW_SOFTINPUT:I
+    iput v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MSG_SHOW_SOFTINPUT:I
 
     .line 216
-    new-instance v0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$2;
+    new-instance v0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$2;-><init>(Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$2;-><init>(Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;)V
 
-    iput-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mH:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mH:Landroid/os/Handler;
 
     .line 402
-    new-instance v0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$3;
+    new-instance v0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$3;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$3;-><init>(Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$3;-><init>(Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;)V
 
-    iput-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MaxLengthFilter:Landroid/text/InputFilter;
+    iput-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MaxLengthFilter:Landroid/text/InputFilter;
 
     .line 269
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;)V
+.method static synthetic access$000(Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;
 
     .prologue
     .line 136
-    invoke-direct {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->showSoftInput()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->showSoftInput()V
 
     return-void
 .end method
 
-.method static synthetic access$1002(Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;Z)Z
+.method static synthetic access$1002(Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;
     .param p1, "x1"    # Z
 
     .prologue
     .line 136
-    iput-boolean p1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mDone:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mDone:Z
 
     return p1
 .end method
@@ -261,52 +261,52 @@
 
     .prologue
     .line 136
-    sget v0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
+    sget v0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
 
     return v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;)Landroid/widget/TextView;
+.method static synthetic access$300(Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;)Landroid/widget/TextView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;
 
     .prologue
     .line 136
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;)I
+.method static synthetic access$400(Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;
 
     .prologue
     .line 136
-    iget v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMaxLength:I
+    iget v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMaxLength:I
 
     return v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;)Landroid/widget/TextView;
+.method static synthetic access$500(Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;)Landroid/widget/TextView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;
 
     .prologue
     .line 136
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHeaderText:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHeaderText:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method static synthetic access$902(Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;Landroid/os/AsyncTask;)Landroid/os/AsyncTask;
+.method static synthetic access$902(Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;Landroid/os/AsyncTask;)Landroid/os/AsyncTask;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;
     .param p1, "x1"    # Landroid/os/AsyncTask;
 
     .prologue
     .line 136
-    iput-object p1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPendingLockCheck:Landroid/os/AsyncTask;
+    iput-object p1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPendingLockCheck:Landroid/os/AsyncTask;
 
     return-object p1
 .end method
@@ -316,7 +316,7 @@
 
     .prologue
     .line 560
-    iget-boolean v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mDone:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mDone:Z
 
     if-eqz v0, :cond_1
 
@@ -327,7 +327,7 @@
 
     .line 561
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -350,14 +350,14 @@
 
     .line 569
     .local v7, "errorMsg":Ljava/lang/String;
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
-    sget-object v1, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->Introduction:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    sget-object v1, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->Introduction:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
     if-ne v0, v1, :cond_3
 
     .line 570
-    invoke-direct {p0, v9}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->validatePassword(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v9}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->validatePassword(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -365,22 +365,22 @@
     if-nez v7, :cond_2
 
     .line 573
-    iput-object v9, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstPin:Ljava/lang/String;
+    iput-object v9, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstPin:Ljava/lang/String;
 
     .line 574
-    sget-object v0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->NeedToConfirm:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    sget-object v0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->NeedToConfirm:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->updateStage(Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->updateStage(Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;)V
 
     .line 575
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
 
     const-string v1, ""
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 576
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->requestFocus()Z
 
@@ -390,22 +390,22 @@
     if-eqz v7, :cond_0
 
     .line 704
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
-    invoke-direct {p0, v7, v0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->showError(Ljava/lang/String;Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;)V
+    invoke-direct {p0, v7, v0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->showError(Ljava/lang/String;Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;)V
 
     goto :goto_0
 
     .line 578
     :cond_3
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
-    sget-object v1, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->NeedToConfirm:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    sget-object v1, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->NeedToConfirm:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
     if-ne v0, v1, :cond_2
 
     .line 579
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstPin:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstPin:Ljava/lang/String;
 
     invoke-virtual {v0, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -414,12 +414,12 @@
     if-eqz v0, :cond_16
 
     .line 583
-    iget-boolean v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isSignatureOwnAdditionalPin:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isSignatureOwnAdditionalPin:Z
 
     if-eqz v0, :cond_4
 
     .line 584
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -434,38 +434,38 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 585
-    invoke-direct {p0, v9}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->saveAdditionalPinForSignatureAndFinish(Ljava/lang/String;)V
+    invoke-direct {p0, v9}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->saveAdditionalPinForSignatureAndFinish(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 589
     :cond_4
-    iget-boolean v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isPersonalPageLockPatternAdditionalPin:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isPersonalPageLockPatternAdditionalPin:Z
 
     if-eqz v0, :cond_5
 
     .line 590
-    invoke-direct {p0, v9}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->saveAdditionalPinForPersonalPageLockPattern(Ljava/lang/String;)V
+    invoke-direct {p0, v9}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->saveAdditionalPinForPersonalPageLockPattern(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 593
     :cond_5
-    iget-boolean v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isAppLockPatternAdditionalPin:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isAppLockPatternAdditionalPin:Z
 
     if-eqz v0, :cond_6
 
     .line 594
-    invoke-direct {p0, v9}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->saveAdditionalPinForAppLockPattern(Ljava/lang/String;)V
+    invoke-direct {p0, v9}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->saveAdditionalPinForAppLockPattern(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 598
     :cond_6
-    iget-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    # getter for: Lcom/android/settings/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
-    invoke-static {}, Lcom/android/settings/ChooseLockAdditionalPin;->access$200()Z
+    # getter for: Lcom/android/settings_ex/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
+    invoke-static {}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->access$200()Z
 
     move-result v0
 
@@ -485,10 +485,10 @@
     .line 600
     .local v8, "lockVirgin":Z
     :goto_3
-    iget-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    # getter for: Lcom/android/settings/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
-    invoke-static {}, Lcom/android/settings/ChooseLockAdditionalPin;->access$200()Z
+    # getter for: Lcom/android/settings_ex/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
+    invoke-static {}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->access$200()Z
 
     move-result v0
 
@@ -503,14 +503,14 @@
 
     .line 602
     .local v13, "wasSecureBefore":Z
-    iget-boolean v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isBlock:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isBlock:Z
 
     if-eqz v0, :cond_d
 
     .line 603
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    sget v1, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
+    sget v1, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/LockPatternUtils;->isLockScreenDisabled(I)Z
 
@@ -519,30 +519,30 @@
     if-eqz v0, :cond_7
 
     .line 604
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChooseLockSettingsHelper:Lcom/android/settings/ChooseLockSettingsHelper;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChooseLockSettingsHelper:Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
-    invoke-virtual {v0}, Lcom/android/settings/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
+    invoke-virtual {v0}, Lcom/android/settings_ex/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    sget v2, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
+    sget v2, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/widget/LockPatternUtils;->setLockScreenDisabled(ZI)V
 
     .line 607
     :cond_7
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstLockString:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstLockString:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/android/internal/widget/LockPatternUtils;->stringToPattern(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
 
     .line 609
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     const/4 v1, 0x0
 
@@ -553,11 +553,11 @@
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/widget/LockPatternUtils;->setFingerPrintLockscreen(II)V
 
     .line 610
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     const/4 v1, 0x0
 
-    iget v2, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
+    iget v2, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -566,18 +566,18 @@
     invoke-virtual {v0, v9, v1, v2, v3}, Lcom/android/internal/widget/LockPatternUtils;->saveLockBackupPin(Ljava/lang/String;Ljava/lang/String;II)V
 
     .line 611
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/LockPatternUtils;->setLockPatternEnabled(Z)V
 
     .line 612
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    iget-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
 
-    iget-object v2, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mCurrentPattern:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mCurrentPattern:Ljava/lang/String;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -585,19 +585,19 @@
 
     const/4 v4, 0x0
 
-    iget-boolean v5, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isBlock:Z
+    iget-boolean v5, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isBlock:Z
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/internal/widget/LockPatternUtils;->saveLockPattern(Ljava/util/List;Ljava/lang/String;IZZ)V
 
     .line 613
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/LockPatternUtils;->setSmartUnlockEnabled(Z)V
 
     .line 614
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -633,8 +633,8 @@
 
     const-string v5, "screen-lock enabled : pattern"
 
-    # getter for: Lcom/android/settings/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
-    invoke-static {}, Lcom/android/settings/ChooseLockAdditionalPin;->access$200()Z
+    # getter for: Lcom/android/settings_ex/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
+    invoke-static {}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->access$200()Z
 
     move-result v6
 
@@ -646,7 +646,7 @@
     invoke-static/range {v0 .. v6}, Landroid/sec/enterprise/auditlog/AuditLog;->logAsUser(IIZILjava/lang/String;Ljava/lang/String;I)V
 
     .line 661
-    invoke-static {}, Lcom/android/settings/UCMHelpUtils;->resetUcmKeyguardSettings()Z
+    invoke-static {}, Lcom/android/settings_ex/UCMHelpUtils;->resetUcmKeyguardSettings()Z
 
     .line 665
     new-instance v12, Landroid/content/Intent;
@@ -660,7 +660,7 @@
     invoke-virtual {v12, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 667
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -670,12 +670,12 @@
     if-eqz v8, :cond_8
 
     .line 671
-    iget-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     const/4 v2, 0x1
 
-    # getter for: Lcom/android/settings/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
-    invoke-static {}, Lcom/android/settings/ChooseLockAdditionalPin;->access$200()Z
+    # getter for: Lcom/android/settings_ex/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
+    invoke-static {}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->access$200()Z
 
     move-result v0
 
@@ -688,12 +688,12 @@
 
     .line 674
     :cond_8
-    iget-boolean v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHasChallenge:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHasChallenge:Z
 
     if-eqz v0, :cond_14
 
     .line 675
-    iget-wide v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChallenge:J
+    iget-wide v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChallenge:J
 
     const-wide/16 v2, 0x0
 
@@ -702,7 +702,7 @@
     if-nez v0, :cond_9
 
     .line 676
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -718,11 +718,11 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChallenge:J
+    iput-wide v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChallenge:J
 
     .line 678
     :cond_9
-    iget-wide v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChallenge:J
+    iget-wide v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChallenge:J
 
     const-wide/16 v2, 0x0
 
@@ -731,9 +731,9 @@
     if-eqz v0, :cond_2
 
     .line 679
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-direct {p0, v0, v13}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->startVerifyPattern(Lcom/android/internal/widget/LockPatternUtils;Z)V
+    invoke-direct {p0, v0, v13}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->startVerifyPattern(Lcom/android/internal/widget/LockPatternUtils;Z)V
 
     goto/16 :goto_1
 
@@ -742,7 +742,7 @@
     .end local v12    # "warningClearIntent":Landroid/content/Intent;
     .end local v13    # "wasSecureBefore":Z
     :cond_a
-    sget v0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
+    sget v0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
 
     goto/16 :goto_2
 
@@ -754,21 +754,21 @@
     .line 600
     .restart local v8    # "lockVirgin":Z
     :cond_c
-    sget v0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
+    sget v0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
 
     goto/16 :goto_4
 
     .line 618
     .restart local v13    # "wasSecureBefore":Z
     :cond_d
-    iget-boolean v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mIsParentDirectionLock:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mIsParentDirectionLock:Z
 
     if-eqz v0, :cond_f
 
     .line 620
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    sget v1, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
+    sget v1, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/LockPatternUtils;->isLockScreenDisabled(I)Z
 
@@ -777,21 +777,21 @@
     if-eqz v0, :cond_e
 
     .line 621
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChooseLockSettingsHelper:Lcom/android/settings/ChooseLockSettingsHelper;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChooseLockSettingsHelper:Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
-    invoke-virtual {v0}, Lcom/android/settings/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
+    invoke-virtual {v0}, Lcom/android/settings_ex/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    sget v2, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
+    sget v2, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/widget/LockPatternUtils;->setLockScreenDisabled(ZI)V
 
     .line 623
     :cond_e
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -806,9 +806,9 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 624
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    iget-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v1}, Lcom/android/internal/widget/LockPatternUtils;->getCurrentUser()I
 
@@ -817,20 +817,20 @@
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/LockPatternUtils;->clearLock(I)V
 
     .line 625
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstLockString:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstLockString:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/android/internal/widget/LockPatternUtils;->stringToPattern(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
 
     .line 626
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     const/4 v1, 0x0
 
-    iget v2, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
+    iget v2, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -839,16 +839,16 @@
     invoke-virtual {v0, v9, v1, v2, v3}, Lcom/android/internal/widget/LockPatternUtils;->saveLockBackupPin(Ljava/lang/String;Ljava/lang/String;II)V
 
     .line 627
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/LockPatternUtils;->setLockPatternEnabled(Z)V
 
     .line 628
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    iget-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/LockPatternUtils;->saveLockUniversal(Ljava/util/List;)V
 
@@ -856,7 +856,7 @@
 
     .line 634
     :cond_f
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -874,40 +874,40 @@
 
     .line 636
     .local v10, "required":Z
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v0, v10}, Lcom/android/internal/widget/LockPatternUtils;->setCredentialRequiredToDecrypt(Z)V
 
     .line 638
-    # getter for: Lcom/android/settings/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
-    invoke-static {}, Lcom/android/settings/ChooseLockAdditionalPin;->access$200()Z
+    # getter for: Lcom/android/settings_ex/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
+    invoke-static {}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->access$200()Z
 
     move-result v0
 
     if-eqz v0, :cond_11
 
     .line 639
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     const/4 v1, 0x0
 
-    iget v2, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
+    iget v2, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
 
     const/4 v3, 0x0
 
     invoke-virtual {v0, v9, v1, v2, v3}, Lcom/android/internal/widget/LockPatternUtils;->saveLockBackupPin(Ljava/lang/String;Ljava/lang/String;II)V
 
     .line 640
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstLockString:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstLockString:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/android/internal/widget/LockPatternUtils;->stringToPattern(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
 
     .line 641
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     const/4 v1, 0x1
 
@@ -916,11 +916,11 @@
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/widget/LockPatternUtils;->setLockPatternEnabled(ZI)V
 
     .line 642
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    iget-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
 
-    iget-object v2, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mCurrentPattern:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mCurrentPattern:Ljava/lang/String;
 
     const/4 v3, 0x0
 
@@ -929,7 +929,7 @@
     .line 653
     :cond_10
     :goto_8
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -947,7 +947,7 @@
 
     .line 644
     :cond_11
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     const/4 v1, 0x0
 
@@ -958,11 +958,11 @@
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/widget/LockPatternUtils;->setFingerPrintLockscreen(II)V
 
     .line 645
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     const/4 v1, 0x0
 
-    iget v2, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
+    iget v2, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -971,27 +971,27 @@
     invoke-virtual {v0, v9, v1, v2, v3}, Lcom/android/internal/widget/LockPatternUtils;->saveLockBackupPin(Ljava/lang/String;Ljava/lang/String;II)V
 
     .line 646
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstLockString:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstLockString:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/android/internal/widget/LockPatternUtils;->stringToPattern(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
 
     .line 647
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/LockPatternUtils;->setLockPatternEnabled(Z)V
 
     .line 648
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    iget-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
 
-    iget-object v2, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mCurrentPattern:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mCurrentPattern:Ljava/lang/String;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -1000,7 +1000,7 @@
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/widget/LockPatternUtils;->saveLockPattern(Ljava/util/List;Ljava/lang/String;I)V
 
     .line 649
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1018,15 +1018,15 @@
 
     if-nez v0, :cond_10
 
-    # getter for: Lcom/android/settings/ChooseLockAdditionalPin;->mForFingerprint:Z
-    invoke-static {}, Lcom/android/settings/ChooseLockAdditionalPin;->access$800()Z
+    # getter for: Lcom/android/settings_ex/ChooseLockAdditionalPin;->mForFingerprint:Z
+    invoke-static {}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->access$800()Z
 
     move-result v0
 
     if-nez v0, :cond_10
 
     .line 650
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -1036,27 +1036,27 @@
 
     const-string v3, "pattern"
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_8
 
     .line 656
     .end local v10    # "required":Z
     :cond_12
-    sget v6, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
+    sget v6, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
 
     goto/16 :goto_6
 
     .line 671
     .restart local v12    # "warningClearIntent":Landroid/content/Intent;
     :cond_13
-    sget v0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
+    sget v0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
 
     goto/16 :goto_7
 
     .line 682
     :cond_14
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1065,7 +1065,7 @@
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setResult(I)V
 
     .line 683
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1074,17 +1074,17 @@
     .line 684
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mDone:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mDone:Z
 
     .line 685
-    sget v0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
+    sget v0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
 
     const/16 v1, 0x64
 
     if-lt v0, v1, :cond_15
 
-    # getter for: Lcom/android/settings/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
-    invoke-static {}, Lcom/android/settings/ChooseLockAdditionalPin;->access$200()Z
+    # getter for: Lcom/android/settings_ex/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
+    invoke-static {}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->access$200()Z
 
     move-result v0
 
@@ -1094,23 +1094,23 @@
     :cond_15
     if-nez v13, :cond_2
 
-    # getter for: Lcom/android/settings/ChooseLockAdditionalPin;->mForFingerprint:Z
-    invoke-static {}, Lcom/android/settings/ChooseLockAdditionalPin;->access$800()Z
+    # getter for: Lcom/android/settings_ex/ChooseLockAdditionalPin;->mForFingerprint:Z
+    invoke-static {}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->access$800()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
     .line 688
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getRedactionInterstitialIntent(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getRedactionInterstitialIntent(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->startActivity(Landroid/content/Intent;)V
 
     goto/16 :goto_1
 
@@ -1119,12 +1119,12 @@
     .end local v12    # "warningClearIntent":Landroid/content/Intent;
     .end local v13    # "wasSecureBefore":Z
     :cond_16
-    sget-object v0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->ConfirmWrong:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    sget-object v0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->ConfirmWrong:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->updateStage(Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->updateStage(Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;)V
 
     .line 695
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -1158,14 +1158,14 @@
     const/4 v4, 0x1
 
     .line 860
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPatternSavedString:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPatternSavedString:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
     .line 861
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    iget-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPatternSavedString:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPatternSavedString:Ljava/lang/String;
 
     sget-object v2, Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;->Pattern:Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;
 
@@ -1177,7 +1177,7 @@
 
     .line 864
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     sget-object v1, Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;->BackupPin:Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;
 
@@ -1188,15 +1188,15 @@
     invoke-virtual {v0, p1, v1, v2}, Lcom/android/internal/widget/LockPatternUtils;->saveAppLockPassword(Ljava/lang/String;Lcom/android/internal/widget/LockPatternUtils$SecAppLockType;I)V
 
     .line 865
-    # getter for: Lcom/android/settings/ChooseLockAdditionalPin;->mForAppLockBackupKey:Z
-    invoke-static {}, Lcom/android/settings/ChooseLockAdditionalPin;->access$1300()Z
+    # getter for: Lcom/android/settings_ex/ChooseLockAdditionalPin;->mForAppLockBackupKey:Z
+    invoke-static {}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->access$1300()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 866
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -1205,7 +1205,7 @@
     invoke-virtual {v0, v4, v1}, Lcom/android/internal/widget/LockPatternUtils;->setAppLockFingerPrintLockscreen(ZI)V
 
     .line 867
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1221,14 +1221,14 @@
 
     .line 869
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     invoke-virtual {v0, v4}, Landroid/app/Activity;->setResult(I)V
 
     .line 870
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1248,23 +1248,23 @@
     const/4 v4, 0x1
 
     .line 845
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPatternSavedString:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPatternSavedString:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
     .line 846
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPatternSavedString:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPatternSavedString:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/android/internal/widget/LockPatternUtils;->stringToPattern(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
 
     .line 847
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    iget-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
 
     sget-object v2, Lcom/android/internal/widget/LockPatternUtils$SecPrivateMode;->Pattern:Lcom/android/internal/widget/LockPatternUtils$SecPrivateMode;
 
@@ -1276,7 +1276,7 @@
 
     .line 849
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     sget-object v1, Lcom/android/internal/widget/LockPatternUtils$SecPrivateMode;->BackupPin:Lcom/android/internal/widget/LockPatternUtils$SecPrivateMode;
 
@@ -1287,15 +1287,15 @@
     invoke-virtual {v0, p1, v5, v1, v2}, Lcom/android/internal/widget/LockPatternUtils;->savePrivateModePassword(Ljava/lang/String;Ljava/util/List;Lcom/android/internal/widget/LockPatternUtils$SecPrivateMode;I)V
 
     .line 850
-    # getter for: Lcom/android/settings/ChooseLockAdditionalPin;->mForPrivateModeBackupKey:Z
-    invoke-static {}, Lcom/android/settings/ChooseLockAdditionalPin;->access$1200()Z
+    # getter for: Lcom/android/settings_ex/ChooseLockAdditionalPin;->mForPrivateModeBackupKey:Z
+    invoke-static {}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->access$1200()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 851
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -1304,7 +1304,7 @@
     invoke-virtual {v0, v4, v1}, Lcom/android/internal/widget/LockPatternUtils;->setPrivateModeFingerPrintLockscreen(ZI)V
 
     .line 852
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1320,14 +1320,14 @@
 
     .line 855
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     invoke-virtual {v0, v4}, Landroid/app/Activity;->setResult(I)V
 
     .line 856
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1343,7 +1343,7 @@
 
     .prologue
     .line 839
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1352,7 +1352,7 @@
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setResult(I)V
 
     .line 840
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1362,21 +1362,21 @@
     return-void
 .end method
 
-.method private showError(Ljava/lang/String;Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;)V
+.method private showError(Ljava/lang/String;Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;)V
     .locals 4
     .param p1, "msg"    # Ljava/lang/String;
-    .param p2, "next"    # Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    .param p2, "next"    # Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
     .prologue
     const/4 v2, 0x1
 
     .line 763
-    iget-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHeaderText:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHeaderText:Landroid/widget/TextView;
 
     invoke-virtual {v1, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 764
-    iget-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v2, p2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
@@ -1384,12 +1384,12 @@
 
     .line 765
     .local v0, "mesg":Landroid/os/Message;
-    iget-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 766
-    iget-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v2, 0xbb8
 
@@ -1410,24 +1410,24 @@
 
     .line 230
     .local v0, "bRetVal":Z
-    # getter for: Lcom/android/settings/ChooseLockAdditionalPin;->mImm:Landroid/view/inputmethod/InputMethodManager;
-    invoke-static {}, Lcom/android/settings/ChooseLockAdditionalPin;->access$100()Landroid/view/inputmethod/InputMethodManager;
+    # getter for: Lcom/android/settings_ex/ChooseLockAdditionalPin;->mImm:Landroid/view/inputmethod/InputMethodManager;
+    invoke-static {}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->access$100()Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
 
     if-eqz v1, :cond_0
 
     .line 231
-    # getter for: Lcom/android/settings/ChooseLockAdditionalPin;->mImm:Landroid/view/inputmethod/InputMethodManager;
-    invoke-static {}, Lcom/android/settings/ChooseLockAdditionalPin;->access$100()Landroid/view/inputmethod/InputMethodManager;
+    # getter for: Lcom/android/settings_ex/ChooseLockAdditionalPin;->mImm:Landroid/view/inputmethod/InputMethodManager;
+    invoke-static {}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->access$100()Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
 
     invoke-virtual {v1, v2, v4}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
 
@@ -1457,7 +1457,7 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 236
-    iget-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mH:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mH:Landroid/os/Handler;
 
     const-wide/16 v2, 0x32
 
@@ -1475,32 +1475,32 @@
     const/4 v4, 0x0
 
     .line 709
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPendingLockCheck:Landroid/os/AsyncTask;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPendingLockCheck:Landroid/os/AsyncTask;
 
     if-eqz v0, :cond_0
 
     .line 710
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPendingLockCheck:Landroid/os/AsyncTask;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPendingLockCheck:Landroid/os/AsyncTask;
 
     invoke-virtual {v0, v4}, Landroid/os/AsyncTask;->cancel(Z)Z
 
     .line 713
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChosenPattern:Ljava/util/List;
 
-    iget-wide v2, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChallenge:J
+    iget-wide v2, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChallenge:J
 
-    # getter for: Lcom/android/settings/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
-    invoke-static {}, Lcom/android/settings/ChooseLockAdditionalPin;->access$200()Z
+    # getter for: Lcom/android/settings_ex/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
+    invoke-static {}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->access$200()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     :goto_0
-    new-instance v5, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$4;
+    new-instance v5, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$4;
 
-    invoke-direct {v5, p0, p2}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$4;-><init>(Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;Z)V
+    invoke-direct {v5, p0, p2}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$4;-><init>(Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;Z)V
 
     move-object v0, p1
 
@@ -1508,14 +1508,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPendingLockCheck:Landroid/os/AsyncTask;
+    iput-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPendingLockCheck:Landroid/os/AsyncTask;
 
     .line 747
     return-void
 
     .line 713
     :cond_1
-    sget v4, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
+    sget v4, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
 
     goto :goto_0
 .end method
@@ -1529,7 +1529,7 @@
     const/4 v5, 0x0
 
     .line 785
-    iget-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
 
     invoke-virtual {v6}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -1547,16 +1547,16 @@
 
     .line 788
     .local v1, "length":I
-    iget-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
-    sget-object v7, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->Introduction:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    sget-object v7, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->Introduction:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
     if-ne v6, v7, :cond_2
 
     if-lez v1, :cond_2
 
     .line 789
-    iget v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMinLength:I
+    iget v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMinLength:I
 
     if-ge v1, v6, :cond_0
 
@@ -1565,7 +1565,7 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    iget v7, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMinLength:I
+    iget v7, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMinLength:I
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1573,29 +1573,29 @@
 
     aput-object v7, v4, v5
 
-    invoke-virtual {p0, v6, v4}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v6, v4}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 792
     .local v2, "msg":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHeaderText:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHeaderText:Landroid/widget/TextView;
 
     invoke-virtual {v4, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 793
-    iget-object v4, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mNextButton:Landroid/widget/Button;
+    iget-object v4, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mNextButton:Landroid/widget/Button;
 
     invoke-virtual {v4, v5}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 810
     .end local v2    # "msg":Ljava/lang/String;
     :goto_0
-    iget-object v4, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mNextButton:Landroid/widget/Button;
+    iget-object v4, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mNextButton:Landroid/widget/Button;
 
-    iget-object v5, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    iget-object v5, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
-    iget v5, v5, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->buttonText:I
+    iget v5, v5, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->buttonText:I
 
     invoke-virtual {v4, v5}, Landroid/widget/Button;->setText(I)V
 
@@ -1604,7 +1604,7 @@
 
     .line 795
     :cond_0
-    invoke-direct {p0, v3}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->validatePassword(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->validatePassword(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1613,12 +1613,12 @@
     if-eqz v0, :cond_1
 
     .line 798
-    iget-object v4, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHeaderText:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHeaderText:Landroid/widget/TextView;
 
     invoke-virtual {v4, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 799
-    iget-object v4, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mNextButton:Landroid/widget/Button;
+    iget-object v4, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mNextButton:Landroid/widget/Button;
 
     invoke-virtual {v4, v5}, Landroid/widget/Button;->setEnabled(Z)V
 
@@ -1626,14 +1626,14 @@
 
     .line 801
     :cond_1
-    iget-object v5, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHeaderText:Landroid/widget/TextView;
+    iget-object v5, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHeaderText:Landroid/widget/TextView;
 
     const v6, 0x7f0e02ad
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(I)V
 
     .line 802
-    iget-object v5, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mNextButton:Landroid/widget/Button;
+    iget-object v5, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mNextButton:Landroid/widget/Button;
 
     invoke-virtual {v5, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
@@ -1642,16 +1642,16 @@
     .line 806
     .end local v0    # "error":Ljava/lang/String;
     :cond_2
-    iget-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHeaderText:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHeaderText:Landroid/widget/TextView;
 
-    iget-object v7, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    iget-object v7, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
-    iget v7, v7, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->numericHint:I
+    iget v7, v7, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->numericHint:I
 
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setText(I)V
 
     .line 807
-    iget-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mNextButton:Landroid/widget/Button;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mNextButton:Landroid/widget/Button;
 
     if-lez v1, :cond_3
 
@@ -1682,7 +1682,7 @@
 
     move-result v8
 
-    iget v9, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMinLength:I
+    iget v9, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMinLength:I
 
     if-ge v8, v9, :cond_0
 
@@ -1691,7 +1691,7 @@
 
     new-array v8, v10, [Ljava/lang/Object;
 
-    iget v9, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMinLength:I
+    iget v9, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMinLength:I
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1699,7 +1699,7 @@
 
     aput-object v9, v8, v6
 
-    invoke-virtual {p0, v7, v8}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v7, v8}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -1713,7 +1713,7 @@
 
     move-result v8
 
-    iget v9, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMaxLength:I
+    iget v9, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMaxLength:I
 
     if-le v8, v9, :cond_1
 
@@ -1722,7 +1722,7 @@
 
     new-array v8, v10, [Ljava/lang/Object;
 
-    iget v9, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMaxLength:I
+    iget v9, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMaxLength:I
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1730,7 +1730,7 @@
 
     aput-object v9, v8, v6
 
-    invoke-virtual {p0, v7, v8}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v7, v8}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -1783,7 +1783,7 @@
     :cond_2
     const v6, 0x7f0e02b3
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
@@ -1855,7 +1855,7 @@
     :cond_7
     const/high16 v8, 0x20000
 
-    iget v9, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
+    iget v9, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
 
     if-ne v8, v9, :cond_9
 
@@ -1867,7 +1867,7 @@
     :cond_8
     const v6, 0x7f0e02b1
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
@@ -1877,7 +1877,7 @@
     :cond_9
     const/high16 v8, 0x70000
 
-    iget v9, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
+    iget v9, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
 
     if-ne v8, v9, :cond_c
 
@@ -1890,7 +1890,7 @@
     :cond_a
     const v6, 0x7f0e117f
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
@@ -1904,10 +1904,10 @@
 
     .line 552
     :cond_c
-    iget-object v8, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v8, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    # getter for: Lcom/android/settings/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
-    invoke-static {}, Lcom/android/settings/ChooseLockAdditionalPin;->access$200()Z
+    # getter for: Lcom/android/settings_ex/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
+    invoke-static {}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->access$200()Z
 
     move-result v9
 
@@ -1923,7 +1923,7 @@
     .line 553
     const v6, 0x7f0e02b2
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
@@ -1931,7 +1931,7 @@
 
     .line 552
     :cond_d
-    sget v6, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
+    sget v6, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
 
     goto :goto_3
 
@@ -1950,20 +1950,20 @@
 
     .prologue
     .line 815
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
-    sget-object v1, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->ConfirmWrong:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    sget-object v1, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->ConfirmWrong:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
     if-ne v0, v1, :cond_0
 
     .line 816
-    sget-object v0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->NeedToConfirm:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    sget-object v0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->NeedToConfirm:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
-    iput-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    iput-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
     .line 819
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->updateUi()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->updateUi()V
 
     .line 820
     return-void
@@ -1987,18 +1987,18 @@
 
     .prologue
     .line 484
-    iget-boolean v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isSetupWizardLock:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isSetupWizardLock:Z
 
     if-eqz v1, :cond_0
 
     .line 485
-    invoke-static {p1}, Lcom/android/settings/SetupRedactionInterstitial;->createStartIntent(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-static {p1}, Lcom/android/settings_ex/SetupRedactionInterstitial;->createStartIntent(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v0
 
     .line 486
     .local v0, "intent":Landroid/content/Intent;
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -2006,7 +2006,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lcom/android/settings/SetupWizardUtils;->copySetupExtras(Landroid/content/Intent;Landroid/content/Intent;)V
+    invoke-static {v1, v0}, Lcom/android/settings_ex/SetupWizardUtils;->copySetupExtras(Landroid/content/Intent;Landroid/content/Intent;)V
 
     .line 489
     .end local v0    # "intent":Landroid/content/Intent;
@@ -2014,7 +2014,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {p1}, Lcom/android/settings/notification/RedactionInterstitial;->createStartIntent(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-static {p1}, Lcom/android/settings_ex/notification/RedactionInterstitial;->createStartIntent(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -2079,7 +2079,7 @@
     if-eq p2, v0, :cond_0
 
     .line 475
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2088,7 +2088,7 @@
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setResult(I)V
 
     .line 476
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2121,15 +2121,15 @@
 
     .line 752
     :pswitch_0
-    invoke-direct {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->handleNext()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->handleNext()V
 
     goto :goto_0
 
     .line 756
     :pswitch_1
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mInputMethodManager:Landroid/view/inputmethod/InputMethodManager;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mInputMethodManager:Landroid/view/inputmethod/InputMethodManager;
 
-    iget-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getWindowToken()Landroid/os/IBinder;
 
@@ -2140,7 +2140,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
     .line 757
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2171,16 +2171,16 @@
     .line 274
     new-instance v1, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
     invoke-direct {v1, v3}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 276
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -2192,24 +2192,24 @@
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "lockscreen.password_type"
 
-    iget v3, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
+    iget v3, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
+    iput v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
 
     .line 278
     const-string v1, "lockscreen.password_type"
 
-    iget v3, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstLockQuality:I
+    iget v3, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstLockQuality:I
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstLockQuality:I
+    iput v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstLockQuality:I
 
     .line 279
     const-string v1, "firstlock"
@@ -2218,29 +2218,29 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstLockString:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstLockString:Ljava/lang/String;
 
     .line 280
     const-string v1, "lockscreen.password_min"
 
-    iget v3, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMinLength:I
+    iget v3, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMinLength:I
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMinLength:I
+    iput v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMinLength:I
 
     .line 281
     const-string v1, "lockscreen.password_max"
 
-    iget v3, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMaxLength:I
+    iget v3, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMaxLength:I
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMaxLength:I
+    iput v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMaxLength:I
 
     .line 282
     const-string v1, "has_challenge"
@@ -2249,7 +2249,7 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHasChallenge:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHasChallenge:Z
 
     .line 284
     const-string v1, "challenge"
@@ -2260,7 +2260,7 @@
 
     move-result-wide v4
 
-    iput-wide v4, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChallenge:J
+    iput-wide v4, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChallenge:J
 
     .line 285
     const-string v1, "password"
@@ -2269,7 +2269,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mCurrentPattern:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mCurrentPattern:Ljava/lang/String;
 
     .line 286
     const-string v1, "lockscreen.biometric_weak_fallback"
@@ -2278,7 +2278,7 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isFallback:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isFallback:Z
 
     .line 287
     const-string v1, "Block"
@@ -2287,10 +2287,10 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isBlock:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isBlock:Z
 
     .line 288
-    iput-boolean v2, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isSignature:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isSignature:Z
 
     .line 293
     const-string v1, "isUniversalLock"
@@ -2299,10 +2299,10 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mIsParentDirectionLock:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mIsParentDirectionLock:Z
 
     .line 295
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -2314,21 +2314,21 @@
 
     check-cast v1, Landroid/view/inputmethod/InputMethodManager;
 
-    iput-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mInputMethodManager:Landroid/view/inputmethod/InputMethodManager;
+    iput-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mInputMethodManager:Landroid/view/inputmethod/InputMethodManager;
 
     .line 296
     const-string v1, "lockscreen.password_type"
 
-    iget v3, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
+    iget v3, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v3
 
-    iget-object v4, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v4, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    # getter for: Lcom/android/settings/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
-    invoke-static {}, Lcom/android/settings/ChooseLockAdditionalPin;->access$200()Z
+    # getter for: Lcom/android/settings_ex/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
+    invoke-static {}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->access$200()Z
 
     move-result v1
 
@@ -2345,18 +2345,18 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
+    iput v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
 
     .line 298
-    new-instance v1, Lcom/android/settings/ChooseLockSettingsHelper;
+    new-instance v1, Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    invoke-direct {v1, v3}, Lcom/android/settings/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v1, v3}, Lcom/android/settings_ex/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;)V
 
-    iput-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChooseLockSettingsHelper:Lcom/android/settings/ChooseLockSettingsHelper;
+    iput-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mChooseLockSettingsHelper:Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
     .line 300
     const-string v1, "SignatureOwnAdditionalPin"
@@ -2365,7 +2365,7 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isSignatureOwnAdditionalPin:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isSignatureOwnAdditionalPin:Z
 
     .line 302
     const-string v1, "PersonalPagePatternOwnAdditionalPin"
@@ -2374,7 +2374,7 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isPersonalPageLockPatternAdditionalPin:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isPersonalPageLockPatternAdditionalPin:Z
 
     .line 303
     const-string v1, "AppLockPatternOwnAdditionalPin"
@@ -2383,7 +2383,7 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isAppLockPatternAdditionalPin:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isAppLockPatternAdditionalPin:Z
 
     .line 304
     const-string v1, "SetupWizardLock"
@@ -2392,10 +2392,10 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isSetupWizardLock:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isSetupWizardLock:Z
 
     .line 306
-    iget-boolean v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isPersonalPageLockPatternAdditionalPin:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isPersonalPageLockPatternAdditionalPin:Z
 
     if-eqz v1, :cond_0
 
@@ -2406,11 +2406,11 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPatternSavedString:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPatternSavedString:Ljava/lang/String;
 
     .line 309
     :cond_0
-    iget-boolean v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isAppLockPatternAdditionalPin:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isAppLockPatternAdditionalPin:Z
 
     if-eqz v1, :cond_1
 
@@ -2421,11 +2421,11 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPatternSavedString:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPatternSavedString:Ljava/lang/String;
 
     .line 313
     :cond_1
-    iget-boolean v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isSignatureOwnAdditionalPin:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isSignatureOwnAdditionalPin:Z
 
     if-eqz v1, :cond_2
 
@@ -2436,23 +2436,23 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isSetLockToSignature:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isSetLockToSignature:Z
 
     .line 315
-    iput v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
+    iput v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mRequestedQuality:I
 
     .line 316
-    iput v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstLockQuality:I
+    iput v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstLockQuality:I
 
     .line 317
     const/4 v1, 0x4
 
-    iput v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMinLength:I
+    iput v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMinLength:I
 
     .line 318
     const/16 v1, 0x8
 
-    iput v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMaxLength:I
+    iput v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMaxLength:I
 
     .line 320
     :cond_2
@@ -2460,7 +2460,7 @@
 
     .line 296
     :cond_3
-    sget v1, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
+    sget v1, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MY_USER_ID:I
 
     goto :goto_0
 .end method
@@ -2485,7 +2485,7 @@
 
     .line 327
     .local v5, "view":Landroid/view/View;
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v6
 
@@ -2515,10 +2515,10 @@
 
     check-cast v6, Landroid/widget/Button;
 
-    iput-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mCancelButton:Landroid/widget/Button;
+    iput-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mCancelButton:Landroid/widget/Button;
 
     .line 334
-    iget-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mCancelButton:Landroid/widget/Button;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mCancelButton:Landroid/widget/Button;
 
     invoke-virtual {v6, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -2531,10 +2531,10 @@
 
     check-cast v6, Landroid/widget/Button;
 
-    iput-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mNextButton:Landroid/widget/Button;
+    iput-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mNextButton:Landroid/widget/Button;
 
     .line 336
-    iget-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mNextButton:Landroid/widget/Button;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mNextButton:Landroid/widget/Button;
 
     invoke-virtual {v6, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -2547,7 +2547,7 @@
 
     check-cast v6, Lcom/android/internal/widget/PasswordEntryKeyboardView;
 
-    iput-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mKeyboardView:Landroid/inputmethodservice/KeyboardView;
+    iput-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mKeyboardView:Landroid/inputmethodservice/KeyboardView;
 
     .line 338
     const v6, 0x7f0d0103
@@ -2558,32 +2558,32 @@
 
     check-cast v6, Landroid/widget/TextView;
 
-    iput-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
+    iput-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
 
     .line 339
-    iget-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
 
     invoke-virtual {v6, v9}, Landroid/widget/TextView;->setWritingBuddyEnabled(Z)V
 
     .line 340
-    iget-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
 
     invoke-virtual {v6, p0}, Landroid/widget/TextView;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
     .line 341
-    iget-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
 
     invoke-virtual {v6, p0}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 342
-    iget-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
 
     const/high16 v7, 0x2000000
 
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setImeOptions(I)V
 
     .line 343
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -2591,16 +2591,16 @@
     .local v2, "activity":Landroid/app/Activity;
     new-instance v6, Lcom/android/internal/widget/PasswordEntryKeyboardHelper;
 
-    iget-object v7, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mKeyboardView:Landroid/inputmethodservice/KeyboardView;
+    iget-object v7, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mKeyboardView:Landroid/inputmethodservice/KeyboardView;
 
-    iget-object v8, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
+    iget-object v8, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
 
     invoke-direct {v6, v2, v7, v8}, Lcom/android/internal/widget/PasswordEntryKeyboardHelper;-><init>(Landroid/content/Context;Landroid/inputmethodservice/KeyboardView;Landroid/view/View;)V
 
-    iput-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mKeyboardHelper:Lcom/android/internal/widget/PasswordEntryKeyboardHelper;
+    iput-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mKeyboardHelper:Lcom/android/internal/widget/PasswordEntryKeyboardHelper;
 
     .line 346
-    iget-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mKeyboardHelper:Lcom/android/internal/widget/PasswordEntryKeyboardHelper;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mKeyboardHelper:Lcom/android/internal/widget/PasswordEntryKeyboardHelper;
 
     invoke-virtual {v6, v10}, Lcom/android/internal/widget/PasswordEntryKeyboardHelper;->setKeyboardMode(I)V
 
@@ -2613,7 +2613,7 @@
 
     check-cast v6, Landroid/widget/TextView;
 
-    iput-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHeaderText:Landroid/widget/TextView;
+    iput-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHeaderText:Landroid/widget/TextView;
 
     .line 348
     const v6, 0x7f0d0104
@@ -2624,32 +2624,32 @@
 
     check-cast v6, Landroid/widget/TextView;
 
-    iput-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockText:Landroid/widget/TextView;
+    iput-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockText:Landroid/widget/TextView;
 
     .line 351
-    iget-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
 
     const/16 v7, 0x12
 
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setInputType(I)V
 
     .line 353
-    iget v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMaxLength:I
+    iget v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMaxLength:I
 
     if-lez v6, :cond_1
 
     .line 354
-    iget v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMaxLength:I
+    iget v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordMaxLength:I
 
     .line 355
     .local v0, "MaxLength":I
-    iget-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
 
     const/4 v7, 0x2
 
     new-array v7, v7, [Landroid/text/InputFilter;
 
-    iget-object v8, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MaxLengthFilter:Landroid/text/InputFilter;
+    iget-object v8, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->MaxLengthFilter:Landroid/text/InputFilter;
 
     aput-object v8, v7, v9
 
@@ -2667,49 +2667,49 @@
     if-nez p3, :cond_5
 
     .line 359
-    sget-object v6, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->Introduction:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    sget-object v6, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->Introduction:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->updateStage(Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;)V
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->updateStage(Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;)V
 
     .line 369
     :cond_2
     :goto_0
-    iput-boolean v9, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mDone:Z
+    iput-boolean v9, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mDone:Z
 
     .line 371
-    instance-of v6, v2, Lcom/android/settings/SettingsActivity;
+    instance-of v6, v2, Lcom/android/settings_ex/SettingsActivity;
 
     if-eqz v6, :cond_3
 
     move-object v1, v2
 
     .line 372
-    check-cast v1, Lcom/android/settings/SettingsActivity;
+    check-cast v1, Lcom/android/settings_ex/SettingsActivity;
 
     .line 373
-    .local v1, "SettingsActivity":Lcom/android/settings/SettingsActivity;
+    .local v1, "SettingsActivity":Lcom/android/settings_ex/SettingsActivity;
     const v3, 0x7f0e1180
 
     .line 374
     .local v3, "id":I
-    invoke-virtual {p0, v3}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->title:Ljava/lang/CharSequence;
+    iput-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->title:Ljava/lang/CharSequence;
 
     .line 375
-    iget-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->title:Ljava/lang/CharSequence;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->title:Ljava/lang/CharSequence;
 
-    invoke-virtual {v1, v6}, Lcom/android/settings/SettingsActivity;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v6}, Lcom/android/settings_ex/SettingsActivity;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 379
-    .end local v1    # "SettingsActivity":Lcom/android/settings/SettingsActivity;
+    .end local v1    # "SettingsActivity":Lcom/android/settings_ex/SettingsActivity;
     .end local v3    # "id":I
     :cond_3
     const/4 v6, 0x0
 
-    invoke-static {v6}, Lcom/android/settings/Utils;->isTablet(Landroid/content/Context;)Z
+    invoke-static {v6}, Lcom/android/settings_ex/Utils;->isTablet(Landroid/content/Context;)Z
 
     move-result v6
 
@@ -2724,22 +2724,22 @@
 
     check-cast v6, Landroid/widget/TextView;
 
-    iput-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mTitleText:Landroid/widget/TextView;
+    iput-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mTitleText:Landroid/widget/TextView;
 
     .line 381
-    iget-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mTitleText:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mTitleText:Landroid/widget/TextView;
 
     if-eqz v6, :cond_4
 
     .line 382
-    iget-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mTitleText:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mTitleText:Landroid/widget/TextView;
 
     invoke-virtual {v6, v9}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 383
-    iget-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mTitleText:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mTitleText:Landroid/widget/TextView;
 
-    iget-object v7, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->title:Ljava/lang/CharSequence;
+    iget-object v7, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->title:Ljava/lang/CharSequence;
 
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -2755,7 +2755,7 @@
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstPin:Ljava/lang/String;
+    iput-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstPin:Ljava/lang/String;
 
     .line 362
     const-string v6, "ui_stage"
@@ -2769,16 +2769,16 @@
     if-eqz v4, :cond_2
 
     .line 365
-    invoke-static {v4}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->valueOf(Ljava/lang/String;)Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    invoke-static {v4}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->valueOf(Ljava/lang/String;)Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    iput-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
     .line 366
-    iget-object v6, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->updateStage(Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;)V
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->updateStage(Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;)V
 
     goto :goto_0
 .end method
@@ -2803,7 +2803,7 @@
 
     .line 774
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->handleNext()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->handleNext()V
 
     .line 775
     const/4 v0, 0x1
@@ -2823,12 +2823,12 @@
 
     .prologue
     .line 448
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPendingLockCheck:Landroid/os/AsyncTask;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPendingLockCheck:Landroid/os/AsyncTask;
 
     if-eqz v0, :cond_0
 
     .line 449
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPendingLockCheck:Landroid/os/AsyncTask;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPendingLockCheck:Landroid/os/AsyncTask;
 
     const/4 v1, 0x0
 
@@ -2837,11 +2837,11 @@
     .line 450
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPendingLockCheck:Landroid/os/AsyncTask;
+    iput-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPendingLockCheck:Landroid/os/AsyncTask;
 
     .line 452
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
 
@@ -2862,27 +2862,27 @@
     invoke-super {p0}, Landroid/app/Fragment;->onResume()V
 
     .line 418
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->updateStage(Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->updateStage(Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;)V
 
     .line 419
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mKeyboardView:Landroid/inputmethodservice/KeyboardView;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mKeyboardView:Landroid/inputmethodservice/KeyboardView;
 
     invoke-virtual {v0}, Landroid/inputmethodservice/KeyboardView;->requestFocus()Z
 
     .line 420
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mPasswordEntry:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->requestFocus()Z
 
     .line 424
-    iget-boolean v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isSignatureOwnAdditionalPin:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->isSignatureOwnAdditionalPin:Z
 
     if-eqz v0, :cond_0
 
     .line 425
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockText:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockText:Landroid/widget/TextView;
 
     const v1, 0x7f0e1184
 
@@ -2890,7 +2890,7 @@
 
     .line 439
     :goto_0
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockText:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockText:Landroid/widget/TextView;
 
     const v1, 0x3f333333    # 0.7f
 
@@ -2904,7 +2904,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 442
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mH:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mH:Landroid/os/Handler;
 
     const/4 v1, 0x1
 
@@ -2917,12 +2917,12 @@
 
     .line 426
     :cond_0
-    iget-boolean v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mIsParentDirectionLock:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mIsParentDirectionLock:Z
 
     if-eqz v0, :cond_1
 
     .line 429
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockText:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockText:Landroid/widget/TextView;
 
     const v1, 0x7f0e1183
 
@@ -2932,15 +2932,15 @@
 
     .line 431
     :cond_1
-    # getter for: Lcom/android/settings/ChooseLockAdditionalPin;->mFromPersonalPage:Z
-    invoke-static {}, Lcom/android/settings/ChooseLockAdditionalPin;->access$600()Z
+    # getter for: Lcom/android/settings_ex/ChooseLockAdditionalPin;->mFromPersonalPage:Z
+    invoke-static {}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->access$600()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 432
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockText:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockText:Landroid/widget/TextView;
 
     const v1, 0x7f0e11d4
 
@@ -2950,15 +2950,15 @@
 
     .line 433
     :cond_2
-    # getter for: Lcom/android/settings/ChooseLockAdditionalPin;->mFromAppLock:Z
-    invoke-static {}, Lcom/android/settings/ChooseLockAdditionalPin;->access$700()Z
+    # getter for: Lcom/android/settings_ex/ChooseLockAdditionalPin;->mFromAppLock:Z
+    invoke-static {}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->access$700()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
     .line 434
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockText:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockText:Landroid/widget/TextView;
 
     const v1, 0x7f0e11e4
 
@@ -2968,7 +2968,7 @@
 
     .line 436
     :cond_3
-    iget-object v0, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockText:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mLockText:Landroid/widget/TextView;
 
     const v1, 0x7f0e1182
 
@@ -2988,9 +2988,9 @@
     .line 461
     const-string v0, "ui_stage"
 
-    iget-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
-    invoke-virtual {v1}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->name()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;->name()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2999,7 +2999,7 @@
     .line 462
     const-string v0, "first_pin"
 
-    iget-object v1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstPin:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mFirstPin:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -3019,16 +3019,16 @@
     return-void
 .end method
 
-.method protected updateStage(Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;)V
+.method protected updateStage(Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;)V
     .locals 0
-    .param p1, "stage"    # Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    .param p1, "stage"    # Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
     .prologue
     .line 494
-    iput-object p1, p0, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
+    iput-object p1, p0, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->mUiStage:Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment$Stage;
 
     .line 495
-    invoke-direct {p0}, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->updateUi()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;->updateUi()V
 
     .line 496
     return-void

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/SettingsActivity$1;
+.class Lcom/android/settings_ex/SettingsActivity$1;
 .super Landroid/os/Handler;
 .source "SettingsActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/SettingsActivity;
+    value = Lcom/android/settings_ex/SettingsActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/SettingsActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/SettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/SettingsActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/SettingsActivity;)V
     .locals 0
 
     .prologue
     .line 671
-    iput-object p1, p0, Lcom/android/settings/SettingsActivity$1;->this$0:Lcom/android/settings/SettingsActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/SettingsActivity$1;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -65,18 +65,18 @@
     if-eqz v0, :cond_0
 
     .line 678
-    iget-object v1, p0, Lcom/android/settings/SettingsActivity$1;->this$0:Lcom/android/settings/SettingsActivity;
+    iget-object v1, p0, Lcom/android/settings_ex/SettingsActivity$1;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
-    iget-object v2, p0, Lcom/android/settings/SettingsActivity$1;->this$0:Lcom/android/settings/SettingsActivity;
+    iget-object v2, p0, Lcom/android/settings_ex/SettingsActivity$1;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
-    # getter for: Lcom/android/settings/SettingsActivity;->mCategories:Ljava/util/ArrayList;
-    invoke-static {v2}, Lcom/android/settings/SettingsActivity;->access$000(Lcom/android/settings/SettingsActivity;)Ljava/util/ArrayList;
+    # getter for: Lcom/android/settings_ex/SettingsActivity;->mCategories:Ljava/util/ArrayList;
+    invoke-static {v2}, Lcom/android/settings_ex/SettingsActivity;->access$000(Lcom/android/settings_ex/SettingsActivity;)Ljava/util/ArrayList;
 
     move-result-object v2
 
     const-string v3, "main_mode"
 
-    invoke-virtual {v1, v2, v3}, Lcom/android/settings/SettingsActivity;->buildDashboardCategories(Ljava/util/List;Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v3}, Lcom/android/settings_ex/SettingsActivity;->buildDashboardCategories(Ljava/util/List;Ljava/lang/String;)V
 
     goto :goto_0
 

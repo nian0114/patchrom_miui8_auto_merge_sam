@@ -1,4 +1,4 @@
-.class Lcom/android/settings/TRoamingSettings$LTERoamingSetFragment$1;
+.class Lcom/android/settings_ex/TRoamingSettings$LTERoamingSetFragment$1;
 .super Ljava/lang/Object;
 .source "TRoamingSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/TRoamingSettings$LTERoamingSetFragment;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/TRoamingSettings$LTERoamingSetFragment;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/TRoamingSettings$LTERoamingSetFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/TRoamingSettings$LTERoamingSetFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/TRoamingSettings$LTERoamingSetFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/TRoamingSettings$LTERoamingSetFragment;)V
     .locals 0
 
     .prologue
     .line 713
-    iput-object p1, p0, Lcom/android/settings/TRoamingSettings$LTERoamingSetFragment$1;->this$0:Lcom/android/settings/TRoamingSettings$LTERoamingSetFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/TRoamingSettings$LTERoamingSetFragment$1;->this$0:Lcom/android/settings_ex/TRoamingSettings$LTERoamingSetFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,17 +43,17 @@
 
     .prologue
     .line 715
-    iget-object v1, p0, Lcom/android/settings/TRoamingSettings$LTERoamingSetFragment$1;->this$0:Lcom/android/settings/TRoamingSettings$LTERoamingSetFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/TRoamingSettings$LTERoamingSetFragment$1;->this$0:Lcom/android/settings_ex/TRoamingSettings$LTERoamingSetFragment;
 
-    invoke-virtual {v1}, Lcom/android/settings/TRoamingSettings$LTERoamingSetFragment;->getTargetFragment()Landroid/app/Fragment;
+    invoke-virtual {v1}, Lcom/android/settings_ex/TRoamingSettings$LTERoamingSetFragment;->getTargetFragment()Landroid/app/Fragment;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/TRoamingSettings;
+    check-cast v0, Lcom/android/settings_ex/TRoamingSettings;
 
     .line 716
-    .local v0, "target":Lcom/android/settings/TRoamingSettings;
-    invoke-virtual {v0}, Lcom/android/settings/TRoamingSettings;->getContentResolver()Landroid/content/ContentResolver;
+    .local v0, "target":Lcom/android/settings_ex/TRoamingSettings;
+    invoke-virtual {v0}, Lcom/android/settings_ex/TRoamingSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/deviceinfo/SoftwareInfoSettings$2;
+.class Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings$2;
 .super Ljava/lang/Object;
 .source "SoftwareInfoSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/deviceinfo/SoftwareInfoSettings;->initCCMode()V
+    value = Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings;->initCCMode()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/SoftwareInfoSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/SoftwareInfoSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings;)V
     .locals 0
 
     .prologue
     .line 945
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/SoftwareInfoSettings$2;->this$0:Lcom/android/settings/deviceinfo/SoftwareInfoSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings$2;->this$0:Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,8 +41,8 @@
 
     .prologue
     .line 948
-    # getter for: Lcom/android/settings/deviceinfo/SoftwareInfoSettings;->mIsSMServiceBound:Z
-    invoke-static {}, Lcom/android/settings/deviceinfo/SoftwareInfoSettings;->access$000()Z
+    # getter for: Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings;->mIsSMServiceBound:Z
+    invoke-static {}, Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings;->access$000()Z
 
     move-result v2
 
@@ -61,8 +61,8 @@
     .line 952
     .local v1, "res":I
     :try_start_0
-    # getter for: Lcom/android/settings/deviceinfo/SoftwareInfoSettings;->mSecurityManager:Lcom/sec/android/service/sm/aidl/ISecurityManager;
-    invoke-static {}, Lcom/android/settings/deviceinfo/SoftwareInfoSettings;->access$100()Lcom/sec/android/service/sm/aidl/ISecurityManager;
+    # getter for: Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings;->mSecurityManager:Lcom/sec/android/service/sm/aidl/ISecurityManager;
+    invoke-static {}, Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings;->access$100()Lcom/sec/android/service/sm/aidl/ISecurityManager;
 
     move-result-object v2
 
@@ -102,10 +102,10 @@
 
     .line 956
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/SoftwareInfoSettings$2;->this$0:Lcom/android/settings/deviceinfo/SoftwareInfoSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings$2;->this$0:Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings;
 
-    # invokes: Lcom/android/settings/deviceinfo/SoftwareInfoSettings;->showSecuritySWVersion()V
-    invoke-static {v2}, Lcom/android/settings/deviceinfo/SoftwareInfoSettings;->access$200(Lcom/android/settings/deviceinfo/SoftwareInfoSettings;)V
+    # invokes: Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings;->showSecuritySWVersion()V
+    invoke-static {v2}, Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings;->access$200(Lcom/android/settings_ex/deviceinfo/SoftwareInfoSettings;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 

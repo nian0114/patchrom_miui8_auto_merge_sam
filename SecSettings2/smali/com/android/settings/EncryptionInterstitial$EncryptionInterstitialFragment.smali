@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "EncryptionInterstitial.java"
 
 # interfaces
@@ -9,7 +9,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/EncryptionInterstitial;
+    value = Lcom/android/settings_ex/EncryptionInterstitial;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,7 +34,7 @@
 
     .prologue
     .line 75
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     return-void
 .end method
@@ -45,15 +45,15 @@
 
     .prologue
     .line 219
-    iput-boolean p1, p0, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->mPasswordRequired:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->mPasswordRequired:Z
 
     .line 220
-    iget-object v2, p0, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v2, p0, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v2, p1}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 221
-    iget-object v3, p0, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v3, p0, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     if-nez p1, :cond_1
 
@@ -63,15 +63,15 @@
     invoke-virtual {v3, v2}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 224
-    invoke-virtual {p0}, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/SettingsActivity;
+    check-cast v1, Lcom/android/settings_ex/SettingsActivity;
 
     .line 225
-    .local v1, "sa":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v1}, Lcom/android/settings/SettingsActivity;->getResultIntentData()Landroid/content/Intent;
+    .local v1, "sa":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/SettingsActivity;->getResultIntentData()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -87,13 +87,13 @@
 
     .line 228
     .restart local v0    # "resultIntentData":Landroid/content/Intent;
-    invoke-virtual {v1, v0}, Lcom/android/settings/SettingsActivity;->setResultIntentData(Landroid/content/Intent;)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/SettingsActivity;->setResultIntentData(Landroid/content/Intent;)V
 
     .line 230
     :cond_0
     const-string v2, "extra_require_password"
 
-    iget-boolean v3, p0, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->mPasswordRequired:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->mPasswordRequired:Z
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
@@ -102,7 +102,7 @@
 
     .line 221
     .end local v0    # "resultIntentData":Landroid/content/Intent;
-    .end local v1    # "sa":Lcom/android/settings/SettingsActivity;
+    .end local v1    # "sa":Lcom/android/settings_ex/SettingsActivity;
     :cond_1
     const/4 v2, 0x0
 
@@ -135,7 +135,7 @@
     .line 236
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->setRequirePasswordState(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->setRequirePasswordState(Z)V
 
     .line 240
     :cond_0
@@ -151,7 +151,7 @@
     .line 238
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->setRequirePasswordState(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->setRequirePasswordState(Z)V
 
     goto :goto_0
 .end method
@@ -166,12 +166,12 @@
     const/4 v2, 0x0
 
     .line 152
-    iget-object v1, p0, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v1, p0, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     if-ne p1, v1, :cond_1
 
     .line 153
-    invoke-virtual {p0}, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -187,24 +187,24 @@
     .local v0, "accEn":Z
     if-eqz v0, :cond_0
 
-    iget-boolean v1, p0, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->mPasswordRequired:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->mPasswordRequired:Z
 
     if-nez v1, :cond_0
 
     .line 155
-    invoke-direct {p0, v2}, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->setRequirePasswordState(Z)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->setRequirePasswordState(Z)V
 
     .line 156
-    invoke-virtual {p0, v3}, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->showDialog(I)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->showDialog(I)V
 
     .line 160
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v1, p0, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v1, v3}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 161
-    iget-object v1, p0, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v1, p0, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v1, v2}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
@@ -216,22 +216,22 @@
     .line 158
     .restart local v0    # "accEn":Z
     :cond_0
-    invoke-direct {p0, v3}, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->setRequirePasswordState(Z)V
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->setRequirePasswordState(Z)V
 
     goto :goto_0
 
     .line 163
     .end local v0    # "accEn":Z
     :cond_1
-    invoke-direct {p0, v2}, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->setRequirePasswordState(Z)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->setRequirePasswordState(Z)V
 
     .line 164
-    iget-object v1, p0, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v1, p0, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v1, v2}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 165
-    iget-object v1, p0, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v1, p0, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v1, v3}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
@@ -261,7 +261,7 @@
     :pswitch_0
     new-instance v5, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -289,7 +289,7 @@
     .line 194
     .local v2, "messageId":I
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -319,7 +319,7 @@
     :goto_1
     new-instance v5, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -333,7 +333,7 @@
 
     aput-object v0, v6, v7
 
-    invoke-virtual {p0, v2, v6}, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v2, v6}, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -406,7 +406,7 @@
 
     move-result-object v5
 
-    invoke-virtual {p0}, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v6
 
@@ -457,12 +457,12 @@
 
     .prologue
     .line 246
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 247
     const-string v1, "selected_button"
 
-    iget-object v0, p0, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v0, p0, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v0}, Landroid/widget/CheckedTextView;->isChecked()Z
 
@@ -496,7 +496,7 @@
     const/4 v8, 0x0
 
     .line 97
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 98
     const v6, 0x7f0d014b
@@ -507,7 +507,7 @@
 
     check-cast v6, Landroid/widget/CheckedTextView;
 
-    iput-object v6, p0, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iput-object v6, p0, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     .line 100
     const v6, 0x7f0d014c
@@ -518,7 +518,7 @@
 
     check-cast v6, Landroid/widget/CheckedTextView;
 
-    iput-object v6, p0, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iput-object v6, p0, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     .line 102
     const v6, 0x7f0d0149
@@ -529,10 +529,10 @@
 
     check-cast v6, Landroid/widget/TextView;
 
-    iput-object v6, p0, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->mEncryptionMessage:Landroid/widget/TextView;
+    iput-object v6, p0, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->mEncryptionMessage:Landroid/widget/TextView;
 
     .line 104
-    invoke-virtual {p0}, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -548,7 +548,7 @@
 
     .line 106
     .local v2, "forFingerprint":Z
-    invoke-virtual {p0}, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -583,27 +583,27 @@
     .line 131
     .local v1, "enableId":I
     :goto_1
-    iget-object v6, p0, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->mEncryptionMessage:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->mEncryptionMessage:Landroid/widget/TextView;
 
     invoke-virtual {v6, v3}, Landroid/widget/TextView;->setText(I)V
 
     .line 133
-    iget-object v6, p0, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v6, p0, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v6, p0}, Landroid/widget/CheckedTextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 134
-    iget-object v6, p0, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v6, p0, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v6, v1}, Landroid/widget/CheckedTextView;->setText(I)V
 
     .line 135
-    iget-object v6, p0, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v6, p0, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v6, p0}, Landroid/widget/CheckedTextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 136
-    iget-object v6, p0, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v6, p0, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     const v9, 0x7f0e0ecc
 
@@ -626,12 +626,12 @@
     .line 141
     .local v5, "value":Z
     :goto_2
-    iget-object v6, p0, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v6, p0, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v6, v5}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 142
-    iget-object v6, p0, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v6, p0, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     if-nez v5, :cond_4
 
@@ -639,7 +639,7 @@
     invoke-virtual {v6, v7}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 143
-    invoke-direct {p0, v5}, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->setRequirePasswordState(Z)V
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->setRequirePasswordState(Z)V
 
     .line 148
     .end local v5    # "value":Z
@@ -718,7 +718,7 @@
     .line 145
     .end local v5    # "value":Z
     :cond_5
-    invoke-virtual {p0}, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -732,7 +732,7 @@
 
     move-result v6
 
-    invoke-direct {p0, v6}, Lcom/android/settings/EncryptionInterstitial$EncryptionInterstitialFragment;->setRequirePasswordState(Z)V
+    invoke-direct {p0, v6}, Lcom/android/settings_ex/EncryptionInterstitial$EncryptionInterstitialFragment;->setRequirePasswordState(Z)V
 
     goto :goto_4
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DevelopmentSettings$3;
+.class Lcom/android/settings_ex/DevelopmentSettings$3;
 .super Ljava/lang/Object;
 .source "DevelopmentSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DevelopmentSettings;->confirmEnableMultiWindowMode()V
+    value = Lcom/android/settings_ex/DevelopmentSettings;->confirmEnableMultiWindowMode()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DevelopmentSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/DevelopmentSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DevelopmentSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/DevelopmentSettings;)V
     .locals 0
 
     .prologue
     .line 1765
-    iput-object p1, p0, Lcom/android/settings/DevelopmentSettings$3;->this$0:Lcom/android/settings/DevelopmentSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/DevelopmentSettings$3;->this$0:Lcom/android/settings_ex/DevelopmentSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
 
     .prologue
     .line 1768
-    iget-object v1, p0, Lcom/android/settings/DevelopmentSettings$3;->this$0:Lcom/android/settings/DevelopmentSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/DevelopmentSettings$3;->this$0:Lcom/android/settings_ex/DevelopmentSettings;
 
     const/4 v0, -0x1
 
@@ -52,14 +52,14 @@
     const/4 v0, 0x1
 
     :goto_0
-    # invokes: Lcom/android/settings/DevelopmentSettings;->setEnableMultiWindow(Z)V
-    invoke-static {v1, v0}, Lcom/android/settings/DevelopmentSettings;->access$200(Lcom/android/settings/DevelopmentSettings;Z)V
+    # invokes: Lcom/android/settings_ex/DevelopmentSettings;->setEnableMultiWindow(Z)V
+    invoke-static {v1, v0}, Lcom/android/settings_ex/DevelopmentSettings;->access$200(Lcom/android/settings_ex/DevelopmentSettings;Z)V
 
     .line 1769
-    iget-object v0, p0, Lcom/android/settings/DevelopmentSettings$3;->this$0:Lcom/android/settings/DevelopmentSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/DevelopmentSettings$3;->this$0:Lcom/android/settings_ex/DevelopmentSettings;
 
-    # invokes: Lcom/android/settings/DevelopmentSettings;->updateAllOptions()V
-    invoke-static {v0}, Lcom/android/settings/DevelopmentSettings;->access$000(Lcom/android/settings/DevelopmentSettings;)V
+    # invokes: Lcom/android/settings_ex/DevelopmentSettings;->updateAllOptions()V
+    invoke-static {v0}, Lcom/android/settings_ex/DevelopmentSettings;->access$000(Lcom/android/settings_ex/DevelopmentSettings;)V
 
     .line 1770
     return-void

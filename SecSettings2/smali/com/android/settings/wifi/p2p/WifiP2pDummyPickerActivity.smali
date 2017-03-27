@@ -1,4 +1,4 @@
-.class public final Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;
+.class public final Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;
 .super Landroid/app/Activity;
 .source "WifiP2pDummyPickerActivity.java"
 
@@ -30,13 +30,13 @@
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     .line 68
-    iput-boolean v0, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->mIsLandscape:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->mIsLandscape:Z
 
     .line 70
-    iput-boolean v0, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->mIsGrandeDisplay:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->mIsGrandeDisplay:Z
 
     .line 71
-    iput-boolean v0, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->isTablet:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->isTablet:Z
 
     return-void
 .end method
@@ -147,65 +147,65 @@
     .line 144
     const v3, 0x7f0d0615
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/LinearLayout;
 
-    iput-object v3, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->blankLayout:Landroid/widget/LinearLayout;
+    iput-object v3, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->blankLayout:Landroid/widget/LinearLayout;
 
     .line 145
     const v3, 0x7f0d0616
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/RelativeLayout;
 
-    iput-object v3, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->left:Landroid/widget/RelativeLayout;
+    iput-object v3, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->left:Landroid/widget/RelativeLayout;
 
     .line 146
     const v3, 0x7f0d0619
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/RelativeLayout;
 
-    iput-object v3, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->right:Landroid/widget/RelativeLayout;
+    iput-object v3, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->right:Landroid/widget/RelativeLayout;
 
     .line 147
     const v3, 0x7f0d0617
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/RelativeLayout;
 
-    iput-object v3, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->center:Landroid/widget/RelativeLayout;
+    iput-object v3, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->center:Landroid/widget/RelativeLayout;
 
     .line 149
-    iget-object v3, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->blankLayout:Landroid/widget/LinearLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->blankLayout:Landroid/widget/LinearLayout;
 
-    iget-object v4, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->left:Landroid/widget/RelativeLayout;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->left:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v3, v4}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
 
     .line 150
-    iget-object v3, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->blankLayout:Landroid/widget/LinearLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->blankLayout:Landroid/widget/LinearLayout;
 
-    iget-object v4, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->right:Landroid/widget/RelativeLayout;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->right:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v3, v4}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
 
     .line 151
-    iget-object v3, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->blankLayout:Landroid/widget/LinearLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->blankLayout:Landroid/widget/LinearLayout;
 
-    iget-object v4, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->center:Landroid/widget/RelativeLayout;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->center:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v3, v4}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
 
@@ -244,9 +244,9 @@
     if-eqz v3, :cond_0
 
     .line 159
-    iget-object v3, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->left:Landroid/widget/RelativeLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->left:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {p0}, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -259,9 +259,9 @@
     invoke-virtual {v3, v4}, Landroid/widget/RelativeLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 160
-    iget-object v3, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->right:Landroid/widget/RelativeLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->right:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {p0}, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -275,17 +275,17 @@
 
     .line 166
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->left:Landroid/widget/RelativeLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->left:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v3, v1}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 167
-    iget-object v3, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->right:Landroid/widget/RelativeLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->right:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v3, v2}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 168
-    iget-object v3, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->center:Landroid/widget/RelativeLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->center:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v3, v0}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -294,23 +294,23 @@
     .end local v1    # "leftParams":Landroid/widget/LinearLayout$LayoutParams;
     .end local v2    # "rightParams":Landroid/widget/LinearLayout$LayoutParams;
     :goto_1
-    iget-object v3, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->blankLayout:Landroid/widget/LinearLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->blankLayout:Landroid/widget/LinearLayout;
 
-    iget-object v4, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->left:Landroid/widget/RelativeLayout;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->left:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v3, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 185
-    iget-object v3, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->blankLayout:Landroid/widget/LinearLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->blankLayout:Landroid/widget/LinearLayout;
 
-    iget-object v4, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->center:Landroid/widget/RelativeLayout;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->center:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v3, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 186
-    iget-object v3, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->blankLayout:Landroid/widget/LinearLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->blankLayout:Landroid/widget/LinearLayout;
 
-    iget-object v4, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->right:Landroid/widget/RelativeLayout;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->right:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v3, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
@@ -322,9 +322,9 @@
     .restart local v1    # "leftParams":Landroid/widget/LinearLayout$LayoutParams;
     .restart local v2    # "rightParams":Landroid/widget/LinearLayout$LayoutParams;
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->left:Landroid/widget/RelativeLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->left:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {p0}, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -337,9 +337,9 @@
     invoke-virtual {v3, v4}, Landroid/widget/RelativeLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 163
-    iget-object v3, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->right:Landroid/widget/RelativeLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->right:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {p0}, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -382,7 +382,7 @@
     .line 174
     new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
 
-    invoke-static {p0}, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->getDisplayWidth(Landroid/content/Context;)I
+    invoke-static {p0}, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->getDisplayWidth(Landroid/content/Context;)I
 
     move-result v3
 
@@ -392,27 +392,27 @@
 
     .line 176
     .local v0, "centerParams":Landroid/widget/RelativeLayout$LayoutParams;
-    iget-object v3, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->left:Landroid/widget/RelativeLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->left:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v3, v8}, Landroid/widget/RelativeLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 177
-    iget-object v3, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->right:Landroid/widget/RelativeLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->right:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v3, v8}, Landroid/widget/RelativeLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 179
-    iget-object v3, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->left:Landroid/widget/RelativeLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->left:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v3, v1}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 180
-    iget-object v3, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->right:Landroid/widget/RelativeLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->right:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v3, v2}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 181
-    iget-object v3, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->center:Landroid/widget/RelativeLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->center:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v3, v0}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -438,31 +438,31 @@
     const/4 v0, 0x0
 
     :cond_0
-    iput-boolean v0, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->mIsLandscape:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->mIsLandscape:Z
 
     .line 125
-    iget-boolean v0, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->mIsGrandeDisplay:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->mIsGrandeDisplay:Z
 
     if-eqz v0, :cond_1
 
     .line 126
-    iget-boolean v0, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->mIsLandscape:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->mIsLandscape:Z
 
-    invoke-direct {p0, v0}, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->setGrandeDisplayView(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->setGrandeDisplayView(Z)V
 
     .line 129
     :cond_1
-    iget-boolean v0, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->isTablet:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->isTablet:Z
 
     if-nez v0, :cond_2
 
     .line 130
-    iget-boolean v0, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->mIsLandscape:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->mIsLandscape:Z
 
     if-eqz v0, :cond_3
 
     .line 131
-    invoke-virtual {p0}, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
@@ -478,7 +478,7 @@
 
     .line 133
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
@@ -497,14 +497,14 @@
     const/4 v0, 0x1
 
     .line 87
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->isTablet:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->isTablet:Z
 
     .line 89
-    invoke-virtual {p0}, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
@@ -516,7 +516,7 @@
     .line 92
     const v1, 0x7f040271
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->setContentView(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->setContentView(I)V
 
     .line 94
     const-string v1, "grande"
@@ -531,10 +531,10 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->mIsGrandeDisplay:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->mIsGrandeDisplay:Z
 
     .line 95
-    invoke-virtual {p0}, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -549,31 +549,31 @@
     if-ne v1, v2, :cond_3
 
     :goto_0
-    iput-boolean v0, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->mIsLandscape:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->mIsLandscape:Z
 
     .line 98
-    iget-boolean v0, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->mIsGrandeDisplay:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->mIsGrandeDisplay:Z
 
     if-eqz v0, :cond_0
 
     .line 99
-    iget-boolean v0, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->mIsLandscape:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->mIsLandscape:Z
 
-    invoke-direct {p0, v0}, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->setGrandeDisplayView(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->setGrandeDisplayView(Z)V
 
     .line 102
     :cond_0
-    iget-boolean v0, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->isTablet:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->isTablet:Z
 
     if-nez v0, :cond_1
 
-    iget-boolean v0, p0, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->mIsLandscape:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->mIsLandscape:Z
 
     if-eqz v0, :cond_2
 
     .line 103
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/wifi/p2p/WifiP2pDummyPickerActivity;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/p2p/WifiP2pDummyPickerActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 

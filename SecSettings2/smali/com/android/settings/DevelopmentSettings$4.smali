@@ -1,11 +1,11 @@
-.class Lcom/android/settings/DevelopmentSettings$4;
+.class Lcom/android/settings_ex/DevelopmentSettings$4;
 .super Landroid/content/BroadcastReceiver;
 .source "DevelopmentSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DevelopmentSettings;
+    value = Lcom/android/settings_ex/DevelopmentSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DevelopmentSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/DevelopmentSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DevelopmentSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/DevelopmentSettings;)V
     .locals 0
 
     .prologue
     .line 2206
-    iput-object p1, p0, Lcom/android/settings/DevelopmentSettings$4;->this$0:Lcom/android/settings/DevelopmentSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/DevelopmentSettings$4;->this$0:Lcom/android/settings_ex/DevelopmentSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -40,10 +40,10 @@
 
     .prologue
     .line 2209
-    iget-object v0, p0, Lcom/android/settings/DevelopmentSettings$4;->this$0:Lcom/android/settings/DevelopmentSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/DevelopmentSettings$4;->this$0:Lcom/android/settings_ex/DevelopmentSettings;
 
-    # invokes: Lcom/android/settings/DevelopmentSettings;->updateUsbConfigurationValues()V
-    invoke-static {v0}, Lcom/android/settings/DevelopmentSettings;->access$300(Lcom/android/settings/DevelopmentSettings;)V
+    # invokes: Lcom/android/settings_ex/DevelopmentSettings;->updateUsbConfigurationValues()V
+    invoke-static {v0}, Lcom/android/settings_ex/DevelopmentSettings;->access$300(Lcom/android/settings_ex/DevelopmentSettings;)V
 
     .line 2210
     return-void

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/WifiHiddenApAddDialog;
+.class public Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;
 .super Landroid/app/AlertDialog;
 .source "WifiHiddenApAddDialog.java"
 
@@ -30,97 +30,97 @@
     .line 27
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->mTempSsid:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->mTempSsid:Ljava/lang/String;
 
     .line 72
-    new-instance v0, Lcom/android/settings/wifi/WifiHiddenApAddDialog$1;
+    new-instance v0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/wifi/WifiHiddenApAddDialog$1;-><init>(Lcom/android/settings/wifi/WifiHiddenApAddDialog;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog$1;-><init>(Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;)V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->ssidWatcher:Landroid/text/TextWatcher;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->ssidWatcher:Landroid/text/TextWatcher;
 
     .line 35
-    iput-object p2, p0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->mListener:Landroid/content/DialogInterface$OnClickListener;
+    iput-object p2, p0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->mListener:Landroid/content/DialogInterface$OnClickListener;
 
     .line 36
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/wifi/WifiHiddenApAddDialog;)Ljava/lang/String;
+.method static synthetic access$000(Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiHiddenApAddDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->mTempSsid:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->mTempSsid:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$002(Lcom/android/settings/wifi/WifiHiddenApAddDialog;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$002(Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiHiddenApAddDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 21
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->mTempSsid:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->mTempSsid:Ljava/lang/String;
 
     return-object p1
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/wifi/WifiHiddenApAddDialog;)Landroid/widget/EditText;
+.method static synthetic access$100(Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;)Landroid/widget/EditText;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiHiddenApAddDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->mSsid:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->mSsid:Landroid/widget/EditText;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/wifi/WifiHiddenApAddDialog;)Landroid/widget/Toast;
+.method static synthetic access$200(Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;)Landroid/widget/Toast;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiHiddenApAddDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->mToast:Landroid/widget/Toast;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->mToast:Landroid/widget/Toast;
 
     return-object v0
 .end method
 
-.method static synthetic access$202(Lcom/android/settings/wifi/WifiHiddenApAddDialog;Landroid/widget/Toast;)Landroid/widget/Toast;
+.method static synthetic access$202(Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;Landroid/widget/Toast;)Landroid/widget/Toast;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiHiddenApAddDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;
     .param p1, "x1"    # Landroid/widget/Toast;
 
     .prologue
     .line 21
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->mToast:Landroid/widget/Toast;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->mToast:Landroid/widget/Toast;
 
     return-object p1
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/wifi/WifiHiddenApAddDialog;)Landroid/content/Context;
+.method static synthetic access$300(Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiHiddenApAddDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/wifi/WifiHiddenApAddDialog;)V
+.method static synthetic access$400(Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiHiddenApAddDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;
 
     .prologue
     .line 21
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->validate()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->validate()V
 
     return-void
 .end method
@@ -136,17 +136,17 @@
     .local v1, "enabled":Z
     const/4 v2, -0x1
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->getButton(I)Landroid/widget/Button;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v0
 
     .line 109
     .local v0, "button":Landroid/widget/Button;
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->mSsid:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->mSsid:Landroid/widget/EditText;
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->mSsid:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->mSsid:Landroid/widget/EditText;
 
     invoke-virtual {v2}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -188,7 +188,7 @@
 
     .prologue
     .line 69
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->mSsid:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->mSsid:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -209,7 +209,7 @@
     const/4 v5, 0x1
 
     .line 41
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v2
 
@@ -223,27 +223,27 @@
 
     .line 43
     .local v1, "view":Landroid/view/View;
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->mContext:Landroid/content/Context;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->mContext:Landroid/content/Context;
 
     .line 45
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->setView(Landroid/view/View;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->setView(Landroid/view/View;)V
 
     .line 46
-    invoke-virtual {p0, v5}, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->setInverseBackgroundForced(Z)V
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->setInverseBackgroundForced(Z)V
 
     .line 48
-    new-instance v0, Lcom/android/settings/Utils$LengthFilter;
+    new-instance v0, Lcom/android/settings_ex/Utils$LengthFilter;
 
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v2}, Lcom/android/settings/Utils$LengthFilter;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v2}, Lcom/android/settings_ex/Utils$LengthFilter;-><init>(Landroid/content/Context;)V
 
     .line 49
-    .local v0, "lengthFilter":Lcom/android/settings/Utils$LengthFilter;
+    .local v0, "lengthFilter":Lcom/android/settings_ex/Utils$LengthFilter;
     const v2, 0x7f0d0579
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -252,17 +252,17 @@
 
     check-cast v2, Landroid/widget/EditText;
 
-    iput-object v2, p0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->mSsid:Landroid/widget/EditText;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->mSsid:Landroid/widget/EditText;
 
     .line 50
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->mSsid:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->mSsid:Landroid/widget/EditText;
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->ssidWatcher:Landroid/text/TextWatcher;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->ssidWatcher:Landroid/text/TextWatcher;
 
     invoke-virtual {v2, v3}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 51
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->mSsid:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->mSsid:Landroid/widget/EditText;
 
     new-array v3, v5, [Landroid/text/InputFilter;
 
@@ -275,7 +275,7 @@
     .line 53
     const/4 v2, -0x1
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->mContext:Landroid/content/Context;
 
     const v4, 0x7f0e043e
 
@@ -283,14 +283,14 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->mListener:Landroid/content/DialogInterface$OnClickListener;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->mListener:Landroid/content/DialogInterface$OnClickListener;
 
-    invoke-virtual {p0, v2, v3, v4}, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {p0, v2, v3, v4}, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     .line 54
     const/4 v2, -0x2
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->mContext:Landroid/content/Context;
 
     const v4, 0x7f0e0545
 
@@ -298,15 +298,15 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->mListener:Landroid/content/DialogInterface$OnClickListener;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->mListener:Landroid/content/DialogInterface$OnClickListener;
 
-    invoke-virtual {p0, v2, v3, v4}, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-virtual {p0, v2, v3, v4}, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     .line 56
     invoke-super {p0, p1}, Landroid/app/AlertDialog;->onCreate(Landroid/os/Bundle;)V
 
     .line 58
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->validate()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->validate()V
 
     .line 59
     return-void
@@ -320,7 +320,7 @@
     invoke-super {p0}, Landroid/app/AlertDialog;->show()V
 
     .line 65
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 

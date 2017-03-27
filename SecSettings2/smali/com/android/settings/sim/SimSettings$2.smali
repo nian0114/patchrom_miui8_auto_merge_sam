@@ -1,11 +1,11 @@
-.class Lcom/android/settings/sim/SimSettings$2;
+.class Lcom/android/settings_ex/sim/SimSettings$2;
 .super Landroid/telephony/PhoneStateListener;
 .source "SimSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/sim/SimSettings;
+    value = Lcom/android/settings_ex/sim/SimSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/sim/SimSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/sim/SimSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/sim/SimSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/sim/SimSettings;)V
     .locals 0
 
     .prologue
     .line 214
-    iput-object p1, p0, Lcom/android/settings/sim/SimSettings$2;->this$0:Lcom/android/settings/sim/SimSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/sim/SimSettings$2;->this$0:Lcom/android/settings_ex/sim/SimSettings;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
 
@@ -42,11 +42,11 @@
     const/4 v2, 0x0
 
     .line 222
-    iget-object v3, p0, Lcom/android/settings/sim/SimSettings$2;->this$0:Lcom/android/settings/sim/SimSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/sim/SimSettings$2;->this$0:Lcom/android/settings_ex/sim/SimSettings;
 
     const-string v4, "sim_cellular_data"
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/sim/SimSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/sim/SimSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 

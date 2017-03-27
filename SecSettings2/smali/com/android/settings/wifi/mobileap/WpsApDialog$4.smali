@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WpsApDialog$4;
+.class Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$4;
 .super Ljava/lang/Object;
 .source "WpsApDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/mobileap/WpsApDialog;->updateDialog(Lcom/android/settings/wifi/mobileap/WpsApDialog$DialogState;Ljava/lang/String;)V
+    value = Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;->updateDialog(Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$DialogState;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,24 +18,24 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WpsApDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;
 
 .field final synthetic val$msg:Ljava/lang/String;
 
-.field final synthetic val$state:Lcom/android/settings/wifi/mobileap/WpsApDialog$DialogState;
+.field final synthetic val$state:Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$DialogState;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WpsApDialog;Lcom/android/settings/wifi/mobileap/WpsApDialog$DialogState;Ljava/lang/String;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$DialogState;Ljava/lang/String;)V
     .locals 0
 
     .prologue
     .line 286
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WpsApDialog$4;->this$0:Lcom/android/settings/wifi/mobileap/WpsApDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$4;->this$0:Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;
 
-    iput-object p2, p0, Lcom/android/settings/wifi/mobileap/WpsApDialog$4;->val$state:Lcom/android/settings/wifi/mobileap/WpsApDialog$DialogState;
+    iput-object p2, p0, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$4;->val$state:Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$DialogState;
 
-    iput-object p3, p0, Lcom/android/settings/wifi/mobileap/WpsApDialog$4;->val$msg:Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$4;->val$msg:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,11 +51,11 @@
     const/16 v2, 0x8
 
     .line 289
-    sget-object v0, Lcom/android/settings/wifi/mobileap/WpsApDialog$5;->$SwitchMap$com$android$settings$wifi$mobileap$WpsApDialog$DialogState:[I
+    sget-object v0, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$5;->$SwitchMap$com$android$settings$wifi$mobileap$WpsApDialog$DialogState:[I
 
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WpsApDialog$4;->val$state:Lcom/android/settings/wifi/mobileap/WpsApDialog$DialogState;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$4;->val$state:Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$DialogState;
 
-    invoke-virtual {v1}, Lcom/android/settings/wifi/mobileap/WpsApDialog$DialogState;->ordinal()I
+    invoke-virtual {v1}, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$DialogState;->ordinal()I
 
     move-result v1
 
@@ -65,14 +65,14 @@
 
     .line 309
     :goto_0
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WpsApDialog$4;->this$0:Lcom/android/settings/wifi/mobileap/WpsApDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$4;->this$0:Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WpsApDialog;->mTextView:Landroid/widget/TextView;
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WpsApDialog;->access$900(Lcom/android/settings/wifi/mobileap/WpsApDialog;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;->mTextView:Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;->access$900(Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;)Landroid/widget/TextView;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WpsApDialog$4;->val$msg:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$4;->val$msg:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -81,20 +81,20 @@
 
     .line 291
     :pswitch_0
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WpsApDialog$4;->this$0:Lcom/android/settings/wifi/mobileap/WpsApDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$4;->this$0:Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WpsApDialog;->mTimeoutBar:Landroid/widget/ProgressBar;
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WpsApDialog;->access$200(Lcom/android/settings/wifi/mobileap/WpsApDialog;)Landroid/widget/ProgressBar;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;->mTimeoutBar:Landroid/widget/ProgressBar;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;->access$200(Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;)Landroid/widget/ProgressBar;
 
     move-result-object v0
 
     invoke-virtual {v0, v2}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
     .line 292
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WpsApDialog$4;->this$0:Lcom/android/settings/wifi/mobileap/WpsApDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$4;->this$0:Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WpsApDialog;->mProgressBar:Landroid/widget/ProgressBar;
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WpsApDialog;->access$800(Lcom/android/settings/wifi/mobileap/WpsApDialog;)Landroid/widget/ProgressBar;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;->mProgressBar:Landroid/widget/ProgressBar;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;->access$800(Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;)Landroid/widget/ProgressBar;
 
     move-result-object v0
 
@@ -106,11 +106,11 @@
 
     .line 297
     :pswitch_1
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WpsApDialog$4;->this$0:Lcom/android/settings/wifi/mobileap/WpsApDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$4;->this$0:Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;
 
     const/4 v1, -0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/wifi/mobileap/WpsApDialog;->getButton(I)Landroid/widget/Button;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v0
 
@@ -119,20 +119,20 @@
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
 
     .line 301
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WpsApDialog$4;->this$0:Lcom/android/settings/wifi/mobileap/WpsApDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$4;->this$0:Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WpsApDialog;->mTimeoutBar:Landroid/widget/ProgressBar;
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WpsApDialog;->access$200(Lcom/android/settings/wifi/mobileap/WpsApDialog;)Landroid/widget/ProgressBar;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;->mTimeoutBar:Landroid/widget/ProgressBar;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;->access$200(Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;)Landroid/widget/ProgressBar;
 
     move-result-object v0
 
     invoke-virtual {v0, v2}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
     .line 302
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WpsApDialog$4;->this$0:Lcom/android/settings/wifi/mobileap/WpsApDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$4;->this$0:Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WpsApDialog;->mProgressBar:Landroid/widget/ProgressBar;
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WpsApDialog;->access$800(Lcom/android/settings/wifi/mobileap/WpsApDialog;)Landroid/widget/ProgressBar;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;->mProgressBar:Landroid/widget/ProgressBar;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;->access$800(Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;)Landroid/widget/ProgressBar;
 
     move-result-object v0
 

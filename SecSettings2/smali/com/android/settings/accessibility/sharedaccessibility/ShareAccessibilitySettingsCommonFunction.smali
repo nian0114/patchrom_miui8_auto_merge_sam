@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;
+.class public Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;
 .super Ljava/lang/Object;
 .source "ShareAccessibilitySettingsCommonFunction.java"
 
@@ -45,52 +45,52 @@
     const/4 v1, 0x0
 
     .line 68
-    sput v1, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mTtsFlag:I
+    sput v1, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mTtsFlag:I
 
     .line 69
-    sput v1, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_talkback:I
+    sput v1, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_talkback:I
 
     .line 70
-    sput v1, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_switchaccess:I
+    sput v1, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_switchaccess:I
 
     .line 71
-    sput v1, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_galaxy_talkback:I
+    sput v1, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_galaxy_talkback:I
 
     .line 72
-    sput v1, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_pagereader:I
+    sput v1, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_pagereader:I
 
     .line 74
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mTTS_DEFAULT_RATE_VALUE:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mTTS_DEFAULT_RATE_VALUE:Ljava/lang/String;
 
     .line 76
-    sput v1, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->RevColorBlindTestCheck:I
+    sput v1, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->RevColorBlindTestCheck:I
 
     .line 78
-    sput v3, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveDominant_hand_type:I
+    sput v3, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveDominant_hand_type:I
 
     .line 80
     const/4 v0, 0x2
 
-    sput v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePointer_speed:I
+    sput v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePointer_speed:I
 
     .line 81
-    sput v1, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePointer_size:I
+    sput v1, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePointer_size:I
 
     .line 82
-    sput v3, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePad_size:I
+    sput v3, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePad_size:I
 
     .line 84
     const/4 v0, 0x3
 
-    sput v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveCVDType:I
+    sput v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveCVDType:I
 
     .line 85
-    sput v2, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveCVDseverity:F
+    sput v2, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveCVDseverity:F
 
     .line 86
-    sput v2, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveUserParameter:F
+    sput v2, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveUserParameter:F
 
     return-void
 .end method
@@ -179,7 +179,7 @@
 
     invoke-direct {v14, v15}, Ljava/io/FileInputStream;-><init>(Ljava/io/FileDescriptor;)V
 
-    sput-object v14, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
+    sput-object v14, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/io/StreamCorruptedException; {:try_start_1 .. :try_end_1} :catch_a
@@ -193,7 +193,7 @@
     .line 286
     .local v3, "doc":Lorg/w3c/dom/Document;
     :try_start_2
-    sget-object v14, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
+    sget-object v14, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
 
     invoke-virtual {v2, v14}, Ljavax/xml/parsers/DocumentBuilder;->parse(Ljava/io/InputStream;)Lorg/w3c/dom/Document;
     :try_end_2
@@ -244,7 +244,7 @@
 
     .line 314
     :try_start_4
-    sget-object v14, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
+    sget-object v14, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
 
     invoke-virtual {v14}, Ljava/io/FileInputStream;->close()V
     :try_end_4
@@ -256,7 +256,7 @@
     .line 348
     :goto_1
     :try_start_5
-    sget-object v14, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
+    sget-object v14, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
 
     invoke-virtual {v14}, Ljava/io/FileInputStream;->close()V
     :try_end_5
@@ -282,7 +282,7 @@
 
     invoke-direct {v14, v0}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
-    sput-object v14, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
+    sput-object v14, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
     :try_end_6
     .catch Ljava/io/FileNotFoundException; {:try_start_6 .. :try_end_6} :catch_0
     .catch Ljava/io/StreamCorruptedException; {:try_start_6 .. :try_end_6} :catch_a
@@ -311,7 +311,7 @@
 
     .line 348
     :try_start_8
-    sget-object v14, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
+    sget-object v14, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
 
     invoke-virtual {v14}, Ljava/io/FileInputStream;->close()V
     :try_end_8
@@ -363,7 +363,7 @@
 
     .line 292
     :try_start_a
-    sget-object v14, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
+    sget-object v14, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
 
     invoke-virtual {v14}, Ljava/io/FileInputStream;->close()V
     :try_end_a
@@ -408,7 +408,7 @@
 
     .line 348
     :try_start_c
-    sget-object v14, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
+    sget-object v14, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
 
     invoke-virtual {v14}, Ljava/io/FileInputStream;->close()V
     :try_end_c
@@ -462,7 +462,7 @@
 
     .line 348
     :try_start_f
-    sget-object v14, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
+    sget-object v14, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
 
     invoke-virtual {v14}, Ljava/io/FileInputStream;->close()V
     :try_end_f
@@ -531,7 +531,7 @@
 
     .line 348
     :try_start_12
-    sget-object v14, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
+    sget-object v14, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
 
     invoke-virtual {v14}, Ljava/io/FileInputStream;->close()V
     :try_end_12
@@ -562,14 +562,14 @@
     .local v8, "i":I
     :goto_4
     :try_start_13
-    sget-object v14, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v14, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     array-length v14, v14
 
     if-ge v8, v14, :cond_4
 
     .line 325
-    sget-object v14, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v14, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v14, v14, v8
 
@@ -690,7 +690,7 @@
 
     .line 348
     :try_start_15
-    sget-object v14, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
+    sget-object v14, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
 
     invoke-virtual {v14}, Ljava/io/FileInputStream;->close()V
     :try_end_15
@@ -778,7 +778,7 @@
 
     .line 348
     :try_start_16
-    sget-object v15, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
+    sget-object v15, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
 
     invoke-virtual {v15}, Ljava/io/FileInputStream;->close()V
     :try_end_16
@@ -836,9 +836,9 @@
     invoke-static/range {v18 .. v19}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 997
-    new-instance v13, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction$1;
+    new-instance v13, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction$1;
 
-    invoke-direct {v13}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction$1;-><init>()V
+    invoke-direct {v13}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction$1;-><init>()V
 
     .line 1002
     .local v13, "mInitListener":Landroid/speech/tts/TextToSpeech$OnInitListener;
@@ -852,19 +852,19 @@
     .local v14, "mTts":Landroid/speech/tts/TextToSpeech;
     const/16 v18, 0x0
 
-    sput v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mTtsFlag:I
+    sput v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mTtsFlag:I
 
     .line 1005
     const/16 v18, 0x0
 
-    sput-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mTTS_DEFAULT_RATE_VALUE:Ljava/lang/String;
+    sput-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mTTS_DEFAULT_RATE_VALUE:Ljava/lang/String;
 
     .line 1007
     const/4 v8, 0x0
 
     .local v8, "i":I
     :goto_0
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     move-object/from16 v0, v18
 
@@ -877,7 +877,7 @@
     if-ge v8, v0, :cond_58
 
     .line 1008
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -892,7 +892,7 @@
     if-eqz v18, :cond_56
 
     .line 1010
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -905,11 +905,11 @@
     if-eqz v18, :cond_1
 
     .line 1013
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -929,7 +929,7 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1466
     :cond_0
@@ -947,7 +947,7 @@
 
     move-result-object v19
 
-    sget-object v20, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v20, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v20, v20, v8
 
@@ -965,7 +965,7 @@
 
     move-result-object v20
 
-    sget-object v21, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v21, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v21, v21, v8
 
@@ -993,7 +993,7 @@
 
     .line 1015
     :cond_1
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1006,11 +1006,11 @@
     if-eqz v18, :cond_2
 
     .line 1017
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1030,13 +1030,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
     .line 1019
     :cond_2
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1049,11 +1049,11 @@
     if-eqz v18, :cond_3
 
     .line 1021
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1073,13 +1073,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1023
     :cond_3
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1092,11 +1092,11 @@
     if-eqz v18, :cond_4
 
     .line 1025
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1116,13 +1116,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1027
     :cond_4
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1135,11 +1135,11 @@
     if-eqz v18, :cond_5
 
     .line 1031
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1159,13 +1159,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1033
     :cond_5
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1187,11 +1187,11 @@
     invoke-static/range {v18 .. v19}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     .line 1036
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1211,10 +1211,10 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v14, v13, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setTtsEngine(Landroid/content/Context;Landroid/speech/tts/TextToSpeech;Landroid/speech/tts/TextToSpeech$OnInitListener;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v14, v13, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setTtsEngine(Landroid/content/Context;Landroid/speech/tts/TextToSpeech;Landroid/speech/tts/TextToSpeech$OnInitListener;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1039
-    sget v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mTtsFlag:I
+    sget v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mTtsFlag:I
 
     const/16 v19, 0x1
 
@@ -1225,14 +1225,14 @@
     if-ne v0, v1, :cond_0
 
     .line 1041
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mTTS_DEFAULT_RATE_VALUE:Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mTTS_DEFAULT_RATE_VALUE:Ljava/lang/String;
 
     if-eqz v18, :cond_6
 
     .line 1042
     const-string v18, "tts_default_rate"
 
-    sget-object v19, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mTTS_DEFAULT_RATE_VALUE:Ljava/lang/String;
+    sget-object v19, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mTTS_DEFAULT_RATE_VALUE:Ljava/lang/String;
 
     move-object/from16 v0, p0
 
@@ -1240,12 +1240,12 @@
 
     move-object/from16 v2, v19
 
-    invoke-static {v0, v14, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setTtsRate(Landroid/content/Context;Landroid/speech/tts/TextToSpeech;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v14, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setTtsRate(Landroid/content/Context;Landroid/speech/tts/TextToSpeech;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1044
     const/16 v18, 0x0
 
-    sput v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mTtsFlag:I
+    sput v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mTtsFlag:I
 
     goto/16 :goto_1
 
@@ -1261,7 +1261,7 @@
 
     .line 1050
     :cond_7
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1277,10 +1277,10 @@
     const/16 v18, 0x1
 
     :try_start_1
-    sput v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mTtsFlag:I
+    sput v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mTtsFlag:I
 
     .line 1053
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1294,25 +1294,25 @@
 
     check-cast v18, Ljava/lang/String;
 
-    sput-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mTTS_DEFAULT_RATE_VALUE:Ljava/lang/String;
+    sput-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mTTS_DEFAULT_RATE_VALUE:Ljava/lang/String;
 
     .line 1055
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v18
 
-    sget-object v19, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v19, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v19, v8
 
     invoke-static/range {v18 .. v19}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
 
     .line 1057
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1332,7 +1332,7 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v14, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setTtsRate(Landroid/content/Context;Landroid/speech/tts/TextToSpeech;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v14, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setTtsRate(Landroid/content/Context;Landroid/speech/tts/TextToSpeech;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -1347,11 +1347,11 @@
     invoke-virtual {v7}, Landroid/provider/Settings$SettingNotFoundException;->printStackTrace()V
 
     .line 1061
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1371,14 +1371,14 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v14, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setTtsRate(Landroid/content/Context;Landroid/speech/tts/TextToSpeech;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v14, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setTtsRate(Landroid/content/Context;Landroid/speech/tts/TextToSpeech;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1065
     .end local v7    # "e":Landroid/provider/Settings$SettingNotFoundException;
     :cond_8
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1391,11 +1391,11 @@
     if-eqz v18, :cond_9
 
     .line 1067
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1415,13 +1415,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1069
     :cond_9
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1434,11 +1434,11 @@
     if-eqz v18, :cond_a
 
     .line 1071
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1458,13 +1458,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1073
     :cond_a
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1477,11 +1477,11 @@
     if-eqz v18, :cond_b
 
     .line 1075
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1501,13 +1501,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1077
     :cond_b
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1520,11 +1520,11 @@
     if-eqz v18, :cond_c
 
     .line 1078
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1544,13 +1544,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setGlobalSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setGlobalSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1080
     :cond_c
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1581,18 +1581,18 @@
 
     move-result-object v18
 
-    sget-object v19, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v19, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v19, v8
 
     invoke-static/range {v18 .. v19}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
 
     .line 1086
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v20, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1626,7 +1626,7 @@
 
     move-object/from16 v3, v19
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setFontSize(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setFontSize(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_2 .. :try_end_2} :catch_1
 
@@ -1641,11 +1641,11 @@
     invoke-virtual {v7}, Landroid/provider/Settings$SettingNotFoundException;->printStackTrace()V
 
     .line 1092
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v20, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1679,7 +1679,7 @@
 
     move-object/from16 v3, v19
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setFontSize(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setFontSize(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -1691,14 +1691,14 @@
 
     move-result-object v18
 
-    sget-object v19, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v19, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v19, v8
 
     invoke-static/range {v18 .. v19}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
 
     .line 1103
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1714,7 +1714,7 @@
 
     move-object/from16 v3, v20
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setFontSize(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setFontSize(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_3 .. :try_end_3} :catch_2
 
@@ -1729,7 +1729,7 @@
     invoke-virtual {v7}, Landroid/provider/Settings$SettingNotFoundException;->printStackTrace()V
 
     .line 1107
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1745,14 +1745,14 @@
 
     move-object/from16 v3, v20
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setFontSize(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setFontSize(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1110
     .end local v7    # "e":Landroid/provider/Settings$SettingNotFoundException;
     :cond_e
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1765,7 +1765,7 @@
     if-nez v18, :cond_0
 
     .line 1112
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1778,11 +1778,11 @@
     if-eqz v18, :cond_f
 
     .line 1115
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1802,13 +1802,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setMonoAudio(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setMonoAudio(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1118
     :cond_f
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1821,11 +1821,11 @@
     if-eqz v18, :cond_10
 
     .line 1121
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1845,13 +1845,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setTurnOffAllSound(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setTurnOffAllSound(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1123
     :cond_10
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1864,11 +1864,11 @@
     if-eqz v18, :cond_11
 
     .line 1125
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1888,13 +1888,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setAssistantMenu(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setAssistantMenu(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1129
     :cond_11
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1907,7 +1907,7 @@
     if-eqz v18, :cond_12
 
     .line 1132
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1925,7 +1925,7 @@
 
     move-result v18
 
-    sput v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveDominant_hand_type:I
+    sput v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveDominant_hand_type:I
 
     .line 1135
     const-string v18, "ShareAccessibilitySettingsCommonFunction"
@@ -1940,7 +1940,7 @@
 
     move-result-object v19
 
-    sget v20, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveDominant_hand_type:I
+    sget v20, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveDominant_hand_type:I
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1957,11 +1957,11 @@
 
     move-result-object v18
 
-    sget-object v19, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v19, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v19, v8
 
-    sget v20, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveDominant_hand_type:I
+    sget v20, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveDominant_hand_type:I
 
     invoke-static/range {v18 .. v20}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
@@ -1969,7 +1969,7 @@
 
     .line 1141
     :cond_12
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -1982,7 +1982,7 @@
     if-eqz v18, :cond_13
 
     .line 1144
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2000,7 +2000,7 @@
 
     move-result v18
 
-    sput v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePointer_speed:I
+    sput v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePointer_speed:I
 
     .line 1147
     const-string v18, "ShareAccessibilitySettingsCommonFunction"
@@ -2015,7 +2015,7 @@
 
     move-result-object v19
 
-    sget v20, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePointer_speed:I
+    sget v20, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePointer_speed:I
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2032,11 +2032,11 @@
 
     move-result-object v18
 
-    sget-object v19, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v19, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v19, v8
 
-    sget v20, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePointer_speed:I
+    sget v20, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePointer_speed:I
 
     invoke-static/range {v18 .. v20}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
@@ -2044,7 +2044,7 @@
 
     .line 1152
     :cond_13
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2057,7 +2057,7 @@
     if-eqz v18, :cond_14
 
     .line 1155
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2075,7 +2075,7 @@
 
     move-result v18
 
-    sput v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePointer_size:I
+    sput v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePointer_size:I
 
     .line 1158
     const-string v18, "ShareAccessibilitySettingsCommonFunction"
@@ -2090,7 +2090,7 @@
 
     move-result-object v19
 
-    sget v20, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePointer_size:I
+    sget v20, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePointer_size:I
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2107,11 +2107,11 @@
 
     move-result-object v18
 
-    sget-object v19, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v19, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v19, v8
 
-    sget v20, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePointer_size:I
+    sget v20, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePointer_size:I
 
     invoke-static/range {v18 .. v20}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
@@ -2119,7 +2119,7 @@
 
     .line 1163
     :cond_14
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2132,7 +2132,7 @@
     if-eqz v18, :cond_15
 
     .line 1166
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2150,7 +2150,7 @@
 
     move-result v18
 
-    sput v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePad_size:I
+    sput v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePad_size:I
 
     .line 1169
     const-string v18, "ShareAccessibilitySettingsCommonFunction"
@@ -2165,7 +2165,7 @@
 
     move-result-object v19
 
-    sget v20, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePad_size:I
+    sget v20, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePad_size:I
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2182,11 +2182,11 @@
 
     move-result-object v18
 
-    sget-object v19, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v19, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v19, v8
 
-    sget v20, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePad_size:I
+    sget v20, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceivePad_size:I
 
     invoke-static/range {v18 .. v20}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
@@ -2194,7 +2194,7 @@
 
     .line 1175
     :cond_15
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2212,18 +2212,18 @@
 
     move-result-object v18
 
-    sget-object v19, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v19, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v19, v8
 
     invoke-static/range {v18 .. v19}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
 
     .line 1179
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2243,10 +2243,10 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1181
-    invoke-static/range {p0 .. p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setNegativeColourGreyscale(Landroid/content/Context;)V
+    invoke-static/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setNegativeColourGreyscale(Landroid/content/Context;)V
     :try_end_4
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_4 .. :try_end_4} :catch_3
 
@@ -2261,11 +2261,11 @@
     invoke-virtual {v7}, Landroid/provider/Settings$SettingNotFoundException;->printStackTrace()V
 
     .line 1184
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2285,17 +2285,17 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1186
-    invoke-static/range {p0 .. p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setNegativeColourGreyscale(Landroid/content/Context;)V
+    invoke-static/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setNegativeColourGreyscale(Landroid/content/Context;)V
 
     goto/16 :goto_1
 
     .line 1189
     .end local v7    # "e":Landroid/provider/Settings$SettingNotFoundException;
     :cond_16
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2314,18 +2314,18 @@
 
     move-object/from16 v1, v18
 
-    invoke-static {v0, v1}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v1}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v18
 
     if-eqz v18, :cond_0
 
     .line 1193
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2345,13 +2345,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setAccessibilityEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setAccessibilityEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1196
     :cond_17
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2370,18 +2370,18 @@
 
     move-object/from16 v1, v18
 
-    invoke-static {v0, v1}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v1}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v18
 
     if-eqz v18, :cond_0
 
     .line 1201
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2401,13 +2401,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setGalaxyTalkbackEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setGalaxyTalkbackEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1214
     :cond_18
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2426,14 +2426,14 @@
 
     move-object/from16 v1, v18
 
-    invoke-static {v0, v1}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v1}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v18
 
     if-eqz v18, :cond_0
 
     .line 1216
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2451,13 +2451,13 @@
 
     move-object/from16 v1, v18
 
-    invoke-static {v0, v1}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSwitchAccessEnabled(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSwitchAccessEnabled(Landroid/content/Context;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1218
     :cond_19
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2470,11 +2470,11 @@
     if-eqz v18, :cond_1a
 
     .line 1219
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2494,13 +2494,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1221
     :cond_1a
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2513,11 +2513,11 @@
     if-eqz v18, :cond_1b
 
     .line 1225
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2537,10 +2537,10 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1227
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2558,7 +2558,7 @@
 
     move-result v18
 
-    sput v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->RevColorBlindTestCheck:I
+    sput v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->RevColorBlindTestCheck:I
 
     .line 1229
     const-string v18, "ShareAccessibilitySettingsCommonFunction"
@@ -2573,7 +2573,7 @@
 
     move-result-object v19
 
-    sget v20, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->RevColorBlindTestCheck:I
+    sget v20, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->RevColorBlindTestCheck:I
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2589,7 +2589,7 @@
 
     .line 1230
     :cond_1b
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2602,7 +2602,7 @@
     if-eqz v18, :cond_1c
 
     .line 1232
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2620,7 +2620,7 @@
 
     move-result v18
 
-    sput v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveCVDType:I
+    sput v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveCVDType:I
 
     .line 1234
     const-string v18, "ShareAccessibilitySettingsCommonFunction"
@@ -2635,7 +2635,7 @@
 
     move-result-object v19
 
-    sget v20, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveCVDType:I
+    sget v20, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveCVDType:I
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2652,11 +2652,11 @@
 
     move-result-object v18
 
-    sget-object v19, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v19, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v19, v8
 
-    sget v20, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveCVDType:I
+    sget v20, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveCVDType:I
 
     invoke-static/range {v18 .. v20}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
@@ -2664,7 +2664,7 @@
 
     .line 1237
     :cond_1c
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2677,7 +2677,7 @@
     if-eqz v18, :cond_1d
 
     .line 1239
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2695,7 +2695,7 @@
 
     move-result v18
 
-    sput v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveCVDseverity:F
+    sput v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveCVDseverity:F
 
     .line 1241
     const-string v18, "ShareAccessibilitySettingsCommonFunction"
@@ -2710,7 +2710,7 @@
 
     move-result-object v19
 
-    sget v20, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveCVDseverity:F
+    sget v20, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveCVDseverity:F
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -2727,11 +2727,11 @@
 
     move-result-object v18
 
-    sget-object v19, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v19, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v19, v8
 
-    sget v20, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveCVDseverity:F
+    sget v20, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveCVDseverity:F
 
     invoke-static/range {v18 .. v20}, Landroid/provider/Settings$Secure;->putFloat(Landroid/content/ContentResolver;Ljava/lang/String;F)Z
 
@@ -2739,7 +2739,7 @@
 
     .line 1244
     :cond_1d
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2752,7 +2752,7 @@
     if-eqz v18, :cond_1e
 
     .line 1246
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2770,7 +2770,7 @@
 
     move-result v18
 
-    sput v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveUserParameter:F
+    sput v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveUserParameter:F
 
     .line 1248
     const-string v18, "ShareAccessibilitySettingsCommonFunction"
@@ -2785,7 +2785,7 @@
 
     move-result-object v19
 
-    sget v20, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveUserParameter:F
+    sget v20, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveUserParameter:F
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -2802,11 +2802,11 @@
 
     move-result-object v18
 
-    sget-object v19, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v19, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v19, v8
 
-    sget v20, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveUserParameter:F
+    sget v20, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveUserParameter:F
 
     invoke-static/range {v18 .. v20}, Landroid/provider/Settings$Secure;->putFloat(Landroid/content/ContentResolver;Ljava/lang/String;F)Z
 
@@ -2814,7 +2814,7 @@
 
     .line 1251
     :cond_1e
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2827,7 +2827,7 @@
     if-eqz v18, :cond_1f
 
     .line 1253
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2845,13 +2845,13 @@
 
     move-result v18
 
-    sput v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveUserParameter:F
+    sput v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->mReceiveUserParameter:F
 
     goto/16 :goto_1
 
     .line 1255
     :cond_1f
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2864,11 +2864,11 @@
     if-eqz v18, :cond_20
 
     .line 1257
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2888,13 +2888,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setGlobalSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setGlobalSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1259
     :cond_20
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2907,11 +2907,11 @@
     if-eqz v18, :cond_21
 
     .line 1260
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2931,13 +2931,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1262
     :cond_21
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2950,11 +2950,11 @@
     if-eqz v18, :cond_22
 
     .line 1263
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2974,13 +2974,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1265
     :cond_22
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -2993,11 +2993,11 @@
     if-eqz v18, :cond_23
 
     .line 1266
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3017,13 +3017,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1268
     :cond_23
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3036,11 +3036,11 @@
     if-eqz v18, :cond_24
 
     .line 1269
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3060,13 +3060,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1271
     :cond_24
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3079,11 +3079,11 @@
     if-eqz v18, :cond_25
 
     .line 1272
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3103,13 +3103,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1274
     :cond_25
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3122,11 +3122,11 @@
     if-eqz v18, :cond_26
 
     .line 1275
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3146,13 +3146,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1277
     :cond_26
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3165,11 +3165,11 @@
     if-eqz v18, :cond_27
 
     .line 1278
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3189,13 +3189,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1280
     :cond_27
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3208,11 +3208,11 @@
     if-eqz v18, :cond_28
 
     .line 1281
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3232,13 +3232,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1283
     :cond_28
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3251,11 +3251,11 @@
     if-eqz v18, :cond_29
 
     .line 1284
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3275,13 +3275,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1286
     :cond_29
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3294,11 +3294,11 @@
     if-eqz v18, :cond_2a
 
     .line 1287
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3318,13 +3318,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setHearingAid(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setHearingAid(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1289
     :cond_2a
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3337,11 +3337,11 @@
     if-eqz v18, :cond_2b
 
     .line 1290
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3361,13 +3361,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1292
     :cond_2b
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3380,11 +3380,11 @@
     if-eqz v18, :cond_2c
 
     .line 1293
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3404,13 +3404,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1295
     :cond_2c
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3423,11 +3423,11 @@
     if-eqz v18, :cond_2d
 
     .line 1296
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3447,13 +3447,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureFloatSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureFloatSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1298
     :cond_2d
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3466,11 +3466,11 @@
     if-eqz v18, :cond_2e
 
     .line 1299
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3490,13 +3490,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1301
     :cond_2e
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3509,11 +3509,11 @@
     if-eqz v18, :cond_2f
 
     .line 1302
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3533,13 +3533,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureStringSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureStringSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1304
     :cond_2f
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3552,11 +3552,11 @@
     if-eqz v18, :cond_30
 
     .line 1305
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3576,13 +3576,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1307
     :cond_30
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3595,11 +3595,11 @@
     if-eqz v18, :cond_31
 
     .line 1308
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3619,13 +3619,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1310
     :cond_31
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3638,11 +3638,11 @@
     if-eqz v18, :cond_32
 
     .line 1311
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3662,13 +3662,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1313
     :cond_32
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3681,11 +3681,11 @@
     if-eqz v18, :cond_33
 
     .line 1314
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3705,13 +3705,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1316
     :cond_33
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3724,11 +3724,11 @@
     if-eqz v18, :cond_34
 
     .line 1317
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3748,13 +3748,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1319
     :cond_34
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3767,11 +3767,11 @@
     if-eqz v18, :cond_35
 
     .line 1320
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3791,13 +3791,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureStringSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureStringSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1322
     :cond_35
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3810,11 +3810,11 @@
     if-eqz v18, :cond_36
 
     .line 1323
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3834,13 +3834,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1325
     :cond_36
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3853,11 +3853,11 @@
     if-eqz v18, :cond_37
 
     .line 1326
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3877,13 +3877,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1328
     :cond_37
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3896,11 +3896,11 @@
     if-eqz v18, :cond_38
 
     .line 1329
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3920,13 +3920,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->broadcastAirWakeupChanged(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->broadcastAirWakeupChanged(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1331
     :cond_38
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3939,11 +3939,11 @@
     if-eqz v18, :cond_39
 
     .line 1332
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3963,13 +3963,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1334
     :cond_39
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -3982,11 +3982,11 @@
     if-eqz v18, :cond_3a
 
     .line 1335
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4006,13 +4006,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1337
     :cond_3a
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4031,18 +4031,18 @@
 
     move-object/from16 v1, v18
 
-    invoke-static {v0, v1}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v1}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v18
 
     if-eqz v18, :cond_0
 
     .line 1339
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4062,13 +4062,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1342
     :cond_3b
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4081,11 +4081,11 @@
     if-eqz v18, :cond_3c
 
     .line 1343
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4105,13 +4105,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1345
     :cond_3c
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4124,11 +4124,11 @@
     if-eqz v18, :cond_3d
 
     .line 1346
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4148,13 +4148,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1348
     :cond_3d
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4167,11 +4167,11 @@
     if-eqz v18, :cond_3e
 
     .line 1349
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4191,13 +4191,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1351
     :cond_3e
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4210,11 +4210,11 @@
     if-eqz v18, :cond_3f
 
     .line 1352
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4234,13 +4234,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureStringSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureStringSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1354
     :cond_3f
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4253,11 +4253,11 @@
     if-eqz v18, :cond_40
 
     .line 1355
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4277,13 +4277,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureStringSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureStringSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1357
     :cond_40
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4296,11 +4296,11 @@
     if-eqz v18, :cond_41
 
     .line 1358
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4320,13 +4320,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureStringSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureStringSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1360
     :cond_41
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4339,11 +4339,11 @@
     if-eqz v18, :cond_42
 
     .line 1361
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4363,13 +4363,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1374
     :cond_42
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4382,11 +4382,11 @@
     if-eqz v18, :cond_43
 
     .line 1375
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4406,13 +4406,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1377
     :cond_43
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4425,11 +4425,11 @@
     if-eqz v18, :cond_44
 
     .line 1378
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4449,13 +4449,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1380
     :cond_44
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4468,11 +4468,11 @@
     if-eqz v18, :cond_45
 
     .line 1381
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4492,13 +4492,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1383
     :cond_45
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4511,11 +4511,11 @@
     if-eqz v18, :cond_46
 
     .line 1384
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4535,13 +4535,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1386
     :cond_46
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4554,11 +4554,11 @@
     if-eqz v18, :cond_47
 
     .line 1387
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4578,13 +4578,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1389
     :cond_47
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4597,11 +4597,11 @@
     if-eqz v18, :cond_48
 
     .line 1390
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4621,13 +4621,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1392
     :cond_48
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4640,11 +4640,11 @@
     if-eqz v18, :cond_49
 
     .line 1393
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4664,13 +4664,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1395
     :cond_49
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4683,11 +4683,11 @@
     if-eqz v18, :cond_4a
 
     .line 1396
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4707,13 +4707,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1398
     :cond_4a
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4731,18 +4731,18 @@
 
     move-result-object v18
 
-    sget-object v19, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v19, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v19, v8
 
     invoke-static/range {v18 .. v19}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
 
     .line 1402
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4762,7 +4762,7 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->changeAirCallAccept(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->changeAirCallAccept(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_5
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_5 .. :try_end_5} :catch_4
 
@@ -4777,11 +4777,11 @@
     invoke-virtual {v7}, Landroid/provider/Settings$SettingNotFoundException;->printStackTrace()V
 
     .line 1406
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4801,14 +4801,14 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->changeAirCallAccept(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->changeAirCallAccept(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1409
     .end local v7    # "e":Landroid/provider/Settings$SettingNotFoundException;
     :cond_4b
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4821,11 +4821,11 @@
     if-eqz v18, :cond_4c
 
     .line 1410
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4845,13 +4845,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1412
     :cond_4c
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4866,7 +4866,7 @@
     .line 1413
     const-string v19, "sound_balance"
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4886,13 +4886,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1415
     :cond_4d
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4907,7 +4907,7 @@
     .line 1416
     const-string v19, "sound_balance"
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4927,13 +4927,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1418
     :cond_4e
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4946,11 +4946,11 @@
     if-eqz v18, :cond_50
 
     .line 1419
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -4970,7 +4970,7 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1422
     :try_start_6
@@ -4986,7 +4986,7 @@
 
     .line 1424
     .local v6, "config":Landroid/content/res/Configuration;
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -5051,7 +5051,7 @@
     .end local v5    # "am":Landroid/app/IActivityManager;
     .end local v6    # "config":Landroid/content/res/Configuration;
     :cond_50
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -5064,11 +5064,11 @@
     if-eqz v18, :cond_51
 
     .line 1431
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -5088,16 +5088,16 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1432
-    invoke-static/range {p0 .. p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setNegativeColourGreyscale(Landroid/content/Context;)V
+    invoke-static/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setNegativeColourGreyscale(Landroid/content/Context;)V
 
     goto/16 :goto_1
 
     .line 1433
     :cond_51
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -5110,11 +5110,11 @@
     if-eqz v18, :cond_52
 
     .line 1434
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -5134,13 +5134,13 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureIntSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1435
     :cond_52
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -5153,7 +5153,7 @@
     if-eqz v18, :cond_55
 
     .line 1436
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -5207,7 +5207,7 @@
 
     move-object/from16 v2, v20
 
-    invoke-static {v0, v1, v2, v9}, Lcom/android/settings/accessibility/AccessibilityUtils;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v9}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -5219,18 +5219,18 @@
 
     move-result-object v18
 
-    sget-object v19, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v19, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v19, v8
 
     invoke-static/range {v18 .. v19}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
 
     .line 1447
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -5250,7 +5250,7 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_7
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_7 .. :try_end_7} :catch_6
 
@@ -5265,11 +5265,11 @@
     invoke-virtual {v7}, Landroid/provider/Settings$SettingNotFoundException;->printStackTrace()V
 
     .line 1451
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v19, v18, v8
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -5289,7 +5289,7 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSystemSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -5303,7 +5303,7 @@
     invoke-static/range {v18 .. v19}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1457
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -5315,7 +5315,7 @@
 
     if-nez v18, :cond_57
 
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -5329,7 +5329,7 @@
 
     .line 1461
     :cond_57
-    sget-object v18, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v18, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v18, v18, v8
 
@@ -5341,7 +5341,7 @@
 
     move-object/from16 v2, v19
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureStringSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->setSecureStringSetting(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -5644,7 +5644,7 @@
     if-ne v1, v3, :cond_0
 
     .line 2055
-    invoke-static {p0}, Lcom/android/settings/Utils;->turnOnAirMotionEngine(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/android/settings_ex/Utils;->turnOnAirMotionEngine(Landroid/content/Context;)V
 
     .line 2056
     const-string v1, "isEnable"
@@ -5670,7 +5670,7 @@
     invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 2061
-    invoke-static {p0}, Lcom/android/settings/Utils;->autoTurnOffAirMotionEngine(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/android/settings_ex/Utils;->autoTurnOffAirMotionEngine(Landroid/content/Context;)V
 
     goto :goto_0
 .end method
@@ -5696,7 +5696,7 @@
     if-ne v0, v3, :cond_0
 
     .line 1766
-    invoke-static {p0}, Lcom/android/settings/Utils;->turnOnAirMotionEngine(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/android/settings_ex/Utils;->turnOnAirMotionEngine(Landroid/content/Context;)V
 
     .line 1767
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -5708,7 +5708,7 @@
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 1768
-    invoke-static {p0, v3}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->broadcastAirCallAcceptChanged(Landroid/content/Context;Z)V
+    invoke-static {p0, v3}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->broadcastAirCallAcceptChanged(Landroid/content/Context;Z)V
 
     .line 1773
     :goto_0
@@ -5725,7 +5725,7 @@
     invoke-static {v1, v2, v4}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 1771
-    invoke-static {p0, v4}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->broadcastAirCallAcceptChanged(Landroid/content/Context;Z)V
+    invoke-static {p0, v4}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->broadcastAirCallAcceptChanged(Landroid/content/Context;Z)V
 
     goto :goto_0
 .end method
@@ -6033,7 +6033,7 @@
 
     .line 1973
     .local v3, "enabledServices":Ljava/util/Set;, "Ljava/util/Set<Landroid/content/ComponentName;>;"
-    sget-object v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->sStringColonSplitter:Landroid/text/TextUtils$SimpleStringSplitter;
+    sget-object v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->sStringColonSplitter:Landroid/text/TextUtils$SimpleStringSplitter;
 
     .line 1974
     .local v0, "colonSplitter":Landroid/text/TextUtils$SimpleStringSplitter;
@@ -6606,7 +6606,7 @@
 
     .local v2, "i":I
     :goto_0
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     array-length v5, v5
 
@@ -6614,7 +6614,7 @@
 
     .line 364
     :try_start_0
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -6627,7 +6627,7 @@
     if-eqz v5, :cond_1
 
     .line 365
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -6635,7 +6635,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -6660,7 +6660,7 @@
 
     .line 368
     :cond_1
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -6673,7 +6673,7 @@
     if-eqz v5, :cond_2
 
     .line 370
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -6681,7 +6681,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -6713,7 +6713,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -6742,7 +6742,7 @@
     .end local v1    # "e":Landroid/provider/Settings$SettingNotFoundException;
     :cond_2
     :try_start_1
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -6755,7 +6755,7 @@
     if-eqz v5, :cond_3
 
     .line 376
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -6763,7 +6763,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -6783,7 +6783,7 @@
 
     .line 380
     :cond_3
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -6796,7 +6796,7 @@
     if-eqz v5, :cond_4
 
     .line 382
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -6804,7 +6804,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -6824,7 +6824,7 @@
 
     .line 386
     :cond_4
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -6837,7 +6837,7 @@
     if-eqz v5, :cond_5
 
     .line 388
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -6845,7 +6845,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -6865,7 +6865,7 @@
 
     .line 391
     :cond_5
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -6880,21 +6880,21 @@
     .line 392
     const-string v5, "com.google.android.marvin.talkback"
 
-    invoke-static {p0, v5}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v5}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v5
 
     if-eqz v5, :cond_7
 
     .line 393
-    invoke-static {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->isTalkBackEnabled(Landroid/content/Context;)I
+    invoke-static {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->isTalkBackEnabled(Landroid/content/Context;)I
 
     move-result v5
 
     if-ne v5, v9, :cond_6
 
     .line 394
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -6910,7 +6910,7 @@
 
     .line 396
     :cond_6
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -6926,7 +6926,7 @@
 
     .line 399
     :cond_7
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -6942,7 +6942,7 @@
 
     .line 400
     :cond_8
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -6957,21 +6957,21 @@
     .line 401
     const-string v5, "com.samsung.android.app.talkback"
 
-    invoke-static {p0, v5}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v5}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v5
 
     if-eqz v5, :cond_a
 
     .line 402
-    invoke-static {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->isTalkBackEnabled(Landroid/content/Context;)I
+    invoke-static {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->isTalkBackEnabled(Landroid/content/Context;)I
 
     move-result v5
 
     if-ne v5, v10, :cond_9
 
     .line 403
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -6997,7 +6997,7 @@
 
     move-result-object v6
 
-    invoke-static {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->isTalkBackEnabled(Landroid/content/Context;)I
+    invoke-static {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->isTalkBackEnabled(Landroid/content/Context;)I
 
     move-result v7
 
@@ -7015,7 +7015,7 @@
 
     .line 405
     :cond_9
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7031,7 +7031,7 @@
 
     .line 409
     :cond_a
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7047,7 +7047,7 @@
 
     .line 410
     :cond_b
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7062,14 +7062,14 @@
     .line 411
     const-string v5, "com.google.android.marvin.talkback"
 
-    invoke-static {p0, v5}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v5}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v5
 
     if-eqz v5, :cond_d
 
     .line 412
-    invoke-static {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->isTalkBackEnabled(Landroid/content/Context;)I
+    invoke-static {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->isTalkBackEnabled(Landroid/content/Context;)I
 
     move-result v5
 
@@ -7078,7 +7078,7 @@
     if-ne v5, v6, :cond_c
 
     .line 413
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7094,7 +7094,7 @@
 
     .line 415
     :cond_c
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7110,7 +7110,7 @@
 
     .line 418
     :cond_d
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7126,7 +7126,7 @@
 
     .line 419
     :cond_e
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7139,7 +7139,7 @@
     if-eqz v5, :cond_f
 
     .line 420
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7159,7 +7159,7 @@
 
     .line 422
     :cond_f
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7172,7 +7172,7 @@
     if-eqz v5, :cond_10
 
     .line 423
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7180,7 +7180,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -7200,7 +7200,7 @@
 
     .line 425
     :cond_10
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7213,7 +7213,7 @@
     if-eqz v5, :cond_11
 
     .line 426
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7237,7 +7237,7 @@
 
     .line 428
     :cond_11
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7250,7 +7250,7 @@
     if-eqz v5, :cond_12
 
     .line 429
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7258,7 +7258,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -7278,7 +7278,7 @@
 
     .line 433
     :cond_12
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7291,7 +7291,7 @@
     if-eqz v5, :cond_13
 
     .line 434
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7299,7 +7299,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -7319,7 +7319,7 @@
 
     .line 438
     :cond_13
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7332,7 +7332,7 @@
     if-eqz v5, :cond_14
 
     .line 439
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7340,7 +7340,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -7360,7 +7360,7 @@
 
     .line 443
     :cond_14
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7373,7 +7373,7 @@
     if-eqz v5, :cond_15
 
     .line 445
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7381,7 +7381,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -7401,7 +7401,7 @@
 
     .line 449
     :cond_15
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7414,7 +7414,7 @@
     if-eqz v5, :cond_16
 
     .line 451
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7422,7 +7422,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -7442,7 +7442,7 @@
 
     .line 454
     :cond_16
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7455,7 +7455,7 @@
     if-eqz v5, :cond_17
 
     .line 456
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7463,7 +7463,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -7483,7 +7483,7 @@
 
     .line 459
     :cond_17
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7496,7 +7496,7 @@
     if-eqz v5, :cond_18
 
     .line 461
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7504,7 +7504,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -7524,7 +7524,7 @@
 
     .line 464
     :cond_18
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7537,7 +7537,7 @@
     if-eqz v5, :cond_19
 
     .line 465
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7545,7 +7545,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -7565,7 +7565,7 @@
 
     .line 469
     :cond_19
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7578,7 +7578,7 @@
     if-eqz v5, :cond_1a
 
     .line 470
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7586,7 +7586,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -7606,7 +7606,7 @@
 
     .line 474
     :cond_1a
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7619,7 +7619,7 @@
     if-eqz v5, :cond_1b
 
     .line 475
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7627,7 +7627,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -7647,7 +7647,7 @@
 
     .line 479
     :cond_1b
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7660,7 +7660,7 @@
     if-eqz v5, :cond_1c
 
     .line 481
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7668,7 +7668,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -7688,7 +7688,7 @@
 
     .line 485
     :cond_1c
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7701,7 +7701,7 @@
     if-eqz v5, :cond_1d
 
     .line 486
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7709,7 +7709,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -7729,7 +7729,7 @@
 
     .line 491
     :cond_1d
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7742,7 +7742,7 @@
     if-eqz v5, :cond_1e
 
     .line 493
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7750,7 +7750,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -7770,7 +7770,7 @@
 
     .line 498
     :cond_1e
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7783,7 +7783,7 @@
     if-eqz v5, :cond_1f
 
     .line 500
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7791,7 +7791,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -7811,7 +7811,7 @@
 
     .line 505
     :cond_1f
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7824,7 +7824,7 @@
     if-eqz v5, :cond_20
 
     .line 507
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7832,7 +7832,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -7852,7 +7852,7 @@
 
     .line 512
     :cond_20
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7865,7 +7865,7 @@
     if-eqz v5, :cond_21
 
     .line 514
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7873,7 +7873,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -7893,7 +7893,7 @@
 
     .line 520
     :cond_21
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7906,7 +7906,7 @@
     if-eqz v5, :cond_22
 
     .line 521
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7914,7 +7914,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -7934,7 +7934,7 @@
 
     .line 525
     :cond_22
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7947,7 +7947,7 @@
     if-eqz v5, :cond_23
 
     .line 526
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7955,7 +7955,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -7975,7 +7975,7 @@
 
     .line 530
     :cond_23
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7988,7 +7988,7 @@
     if-eqz v5, :cond_24
 
     .line 531
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -7996,7 +7996,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8016,7 +8016,7 @@
 
     .line 535
     :cond_24
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8029,7 +8029,7 @@
     if-eqz v5, :cond_25
 
     .line 536
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8037,7 +8037,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8057,7 +8057,7 @@
 
     .line 540
     :cond_25
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8070,7 +8070,7 @@
     if-eqz v5, :cond_26
 
     .line 541
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8078,7 +8078,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8098,7 +8098,7 @@
 
     .line 545
     :cond_26
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8111,7 +8111,7 @@
     if-eqz v5, :cond_27
 
     .line 546
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8119,7 +8119,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8139,7 +8139,7 @@
 
     .line 550
     :cond_27
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8152,7 +8152,7 @@
     if-eqz v5, :cond_28
 
     .line 552
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8160,7 +8160,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8180,7 +8180,7 @@
 
     .line 556
     :cond_28
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8193,7 +8193,7 @@
     if-eqz v5, :cond_29
 
     .line 558
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8201,7 +8201,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8221,7 +8221,7 @@
 
     .line 562
     :cond_29
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8234,7 +8234,7 @@
     if-eqz v5, :cond_2a
 
     .line 564
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8242,7 +8242,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8262,7 +8262,7 @@
 
     .line 568
     :cond_2a
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8275,7 +8275,7 @@
     if-eqz v5, :cond_2b
 
     .line 570
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8283,7 +8283,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8303,7 +8303,7 @@
 
     .line 574
     :cond_2b
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8316,7 +8316,7 @@
     if-eqz v5, :cond_2c
 
     .line 576
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8324,7 +8324,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8344,7 +8344,7 @@
 
     .line 580
     :cond_2c
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8357,7 +8357,7 @@
     if-eqz v5, :cond_2d
 
     .line 582
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8365,7 +8365,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8385,7 +8385,7 @@
 
     .line 586
     :cond_2d
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8398,7 +8398,7 @@
     if-eqz v5, :cond_2e
 
     .line 588
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8406,7 +8406,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8426,7 +8426,7 @@
 
     .line 592
     :cond_2e
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8439,7 +8439,7 @@
     if-eqz v5, :cond_2f
 
     .line 594
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8447,7 +8447,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8467,7 +8467,7 @@
 
     .line 598
     :cond_2f
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8480,7 +8480,7 @@
     if-eqz v5, :cond_30
 
     .line 600
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8488,7 +8488,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8508,7 +8508,7 @@
 
     .line 604
     :cond_30
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8521,7 +8521,7 @@
     if-eqz v5, :cond_31
 
     .line 606
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8529,7 +8529,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8549,7 +8549,7 @@
 
     .line 610
     :cond_31
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8562,7 +8562,7 @@
     if-eqz v5, :cond_32
 
     .line 612
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8570,7 +8570,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8590,7 +8590,7 @@
 
     .line 616
     :cond_32
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8603,7 +8603,7 @@
     if-eqz v5, :cond_33
 
     .line 618
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8611,7 +8611,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8631,7 +8631,7 @@
 
     .line 622
     :cond_33
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8644,7 +8644,7 @@
     if-eqz v5, :cond_34
 
     .line 624
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8652,7 +8652,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8672,7 +8672,7 @@
 
     .line 628
     :cond_34
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8685,7 +8685,7 @@
     if-eqz v5, :cond_35
 
     .line 630
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8693,7 +8693,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8713,7 +8713,7 @@
 
     .line 634
     :cond_35
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8730,7 +8730,7 @@
 
     move-result-object v5
 
-    sget-object v6, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v6, v6, v2
 
@@ -8760,7 +8760,7 @@
 
     .line 642
     :cond_37
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8768,7 +8768,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8783,7 +8783,7 @@
     .line 658
     .end local v4    # "value":Ljava/lang/String;
     :cond_38
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8796,7 +8796,7 @@
     if-eqz v5, :cond_39
 
     .line 659
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8804,7 +8804,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8824,7 +8824,7 @@
 
     .line 661
     :cond_39
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8837,7 +8837,7 @@
     if-eqz v5, :cond_3a
 
     .line 662
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8845,7 +8845,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8865,7 +8865,7 @@
 
     .line 664
     :cond_3a
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8878,7 +8878,7 @@
     if-eqz v5, :cond_3b
 
     .line 665
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8886,7 +8886,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8906,7 +8906,7 @@
 
     .line 667
     :cond_3b
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8919,7 +8919,7 @@
     if-eqz v5, :cond_3c
 
     .line 669
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8927,7 +8927,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8947,7 +8947,7 @@
 
     .line 673
     :cond_3c
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8960,7 +8960,7 @@
     if-eqz v5, :cond_3d
 
     .line 675
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -8968,7 +8968,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -8988,7 +8988,7 @@
 
     .line 679
     :cond_3d
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9001,7 +9001,7 @@
     if-eqz v5, :cond_3e
 
     .line 681
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9009,7 +9009,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9029,7 +9029,7 @@
 
     .line 685
     :cond_3e
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9042,7 +9042,7 @@
     if-eqz v5, :cond_3f
 
     .line 687
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9050,7 +9050,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9070,7 +9070,7 @@
 
     .line 691
     :cond_3f
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9083,7 +9083,7 @@
     if-eqz v5, :cond_40
 
     .line 693
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9091,7 +9091,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9111,7 +9111,7 @@
 
     .line 697
     :cond_40
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9124,7 +9124,7 @@
     if-eqz v5, :cond_41
 
     .line 699
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9132,7 +9132,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9152,7 +9152,7 @@
 
     .line 703
     :cond_41
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9169,7 +9169,7 @@
 
     move-result-object v5
 
-    sget-object v6, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v6, v6, v2
 
@@ -9189,7 +9189,7 @@
 
     .line 709
     :cond_42
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9201,7 +9201,7 @@
 
     .line 711
     :cond_43
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9209,7 +9209,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9224,7 +9224,7 @@
     .line 715
     .end local v4    # "value":Ljava/lang/String;
     :cond_44
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9237,7 +9237,7 @@
     if-eqz v5, :cond_45
 
     .line 717
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9245,7 +9245,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9265,7 +9265,7 @@
 
     .line 721
     :cond_45
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9278,7 +9278,7 @@
     if-eqz v5, :cond_46
 
     .line 723
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9286,7 +9286,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9306,7 +9306,7 @@
 
     .line 727
     :cond_46
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9319,7 +9319,7 @@
     if-eqz v5, :cond_47
 
     .line 729
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9327,7 +9327,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9347,7 +9347,7 @@
 
     .line 733
     :cond_47
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9360,7 +9360,7 @@
     if-eqz v5, :cond_48
 
     .line 735
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9368,7 +9368,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9388,7 +9388,7 @@
 
     .line 739
     :cond_48
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9401,7 +9401,7 @@
     if-eqz v5, :cond_49
 
     .line 741
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9409,7 +9409,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9429,7 +9429,7 @@
 
     .line 745
     :cond_49
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9446,7 +9446,7 @@
 
     move-result-object v5
 
-    sget-object v6, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v6, v6, v2
 
@@ -9466,7 +9466,7 @@
 
     .line 751
     :cond_4a
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9478,7 +9478,7 @@
 
     .line 753
     :cond_4b
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9486,7 +9486,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9501,7 +9501,7 @@
     .line 757
     .end local v4    # "value":Ljava/lang/String;
     :cond_4c
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9514,7 +9514,7 @@
     if-eqz v5, :cond_4d
 
     .line 759
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9522,7 +9522,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9542,7 +9542,7 @@
 
     .line 763
     :cond_4d
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9555,7 +9555,7 @@
     if-eqz v5, :cond_4e
 
     .line 765
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9563,7 +9563,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9583,7 +9583,7 @@
 
     .line 769
     :cond_4e
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9596,7 +9596,7 @@
     if-eqz v5, :cond_4f
 
     .line 771
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9604,7 +9604,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9624,7 +9624,7 @@
 
     .line 775
     :cond_4f
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9637,7 +9637,7 @@
     if-eqz v5, :cond_50
 
     .line 777
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9645,7 +9645,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9665,7 +9665,7 @@
 
     .line 781
     :cond_50
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9678,7 +9678,7 @@
     if-eqz v5, :cond_51
 
     .line 783
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9686,7 +9686,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9706,7 +9706,7 @@
 
     .line 787
     :cond_51
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9719,7 +9719,7 @@
     if-eqz v5, :cond_52
 
     .line 789
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9727,7 +9727,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9747,7 +9747,7 @@
 
     .line 793
     :cond_52
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9760,7 +9760,7 @@
     if-eqz v5, :cond_53
 
     .line 795
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9768,7 +9768,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9788,7 +9788,7 @@
 
     .line 799
     :cond_53
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9801,7 +9801,7 @@
     if-eqz v5, :cond_54
 
     .line 801
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9809,7 +9809,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9829,7 +9829,7 @@
 
     .line 805
     :cond_54
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9842,7 +9842,7 @@
     if-eqz v5, :cond_55
 
     .line 807
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9850,7 +9850,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9870,7 +9870,7 @@
 
     .line 811
     :cond_55
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9883,7 +9883,7 @@
     if-eqz v5, :cond_56
 
     .line 813
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9891,7 +9891,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9911,7 +9911,7 @@
 
     .line 817
     :cond_56
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9924,7 +9924,7 @@
     if-eqz v5, :cond_57
 
     .line 819
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9932,7 +9932,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9952,7 +9952,7 @@
 
     .line 823
     :cond_57
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9965,7 +9965,7 @@
     if-eqz v5, :cond_58
 
     .line 825
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -9973,7 +9973,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -9993,7 +9993,7 @@
 
     .line 829
     :cond_58
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10006,7 +10006,7 @@
     if-eqz v5, :cond_59
 
     .line 831
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10014,7 +10014,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -10034,7 +10034,7 @@
 
     .line 835
     :cond_59
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10047,7 +10047,7 @@
     if-eqz v5, :cond_5a
 
     .line 837
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10055,7 +10055,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -10075,7 +10075,7 @@
 
     .line 841
     :cond_5a
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10088,7 +10088,7 @@
     if-eqz v5, :cond_5b
 
     .line 843
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10096,7 +10096,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -10116,7 +10116,7 @@
 
     .line 853
     :cond_5b
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10129,7 +10129,7 @@
     if-eqz v5, :cond_5c
 
     .line 855
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10137,7 +10137,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -10157,7 +10157,7 @@
 
     .line 859
     :cond_5c
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10172,14 +10172,14 @@
     .line 862
     const-string v5, "com.samsung.android.app.talkback"
 
-    invoke-static {p0, v5}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v5}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
     .line 863
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10187,7 +10187,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -10207,7 +10207,7 @@
 
     .line 869
     :cond_5d
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10222,14 +10222,14 @@
     .line 872
     const-string v5, "com.samsung.android.universalswitch"
 
-    invoke-static {p0, v5}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v5}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
     .line 873
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10237,7 +10237,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -10257,7 +10257,7 @@
 
     .line 885
     :cond_5e
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10270,7 +10270,7 @@
     if-eqz v5, :cond_5f
 
     .line 887
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10296,7 +10296,7 @@
 
     .line 889
     :cond_5f
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10309,7 +10309,7 @@
     if-eqz v5, :cond_60
 
     .line 891
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10335,7 +10335,7 @@
 
     .line 893
     :cond_60
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10348,7 +10348,7 @@
     if-eqz v5, :cond_61
 
     .line 895
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10356,7 +10356,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -10376,7 +10376,7 @@
 
     .line 897
     :cond_61
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10389,7 +10389,7 @@
     if-eqz v5, :cond_62
 
     .line 898
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10397,7 +10397,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -10417,7 +10417,7 @@
 
     .line 900
     :cond_62
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10430,7 +10430,7 @@
     if-eqz v5, :cond_63
 
     .line 901
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10438,7 +10438,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -10458,7 +10458,7 @@
 
     .line 903
     :cond_63
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10471,7 +10471,7 @@
     if-eqz v5, :cond_64
 
     .line 904
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10479,7 +10479,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -10499,7 +10499,7 @@
 
     .line 905
     :cond_64
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10520,7 +10520,7 @@
 
     const-string v7, "high_contrast_keyboard"
 
-    invoke-static {v5, v6, v7}, Lcom/android/settings/accessibility/AccessibilityUtils;->getString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5, v6, v7}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->getString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -10548,7 +10548,7 @@
 
     .line 910
     :cond_66
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10559,7 +10559,7 @@
     .line 914
     .end local v0    # "current_value":Ljava/lang/String;
     :cond_67
-    sget-object v5, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v5, v5, v2
 
@@ -10567,7 +10567,7 @@
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     aget-object v7, v7, v2
 
@@ -11027,7 +11027,7 @@
     .line 151
     const/4 v8, 0x0
 
-    sput v8, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->SaveFlag:I
+    sput v8, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->SaveFlag:I
     :try_end_b
     .catch Ljava/io/FileNotFoundException; {:try_start_b .. :try_end_b} :catch_0
     .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_2
@@ -11081,20 +11081,20 @@
 
     move-result v0
 
-    sput v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_talkback:I
+    sput v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_talkback:I
 
     .line 1844
-    sget v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_talkback:I
+    sget v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_talkback:I
 
     if-ne v0, v1, :cond_0
 
     .line 1845
-    invoke-static {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->turnOffSoundDetector(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->turnOffSoundDetector(Landroid/content/Context;)V
 
     .line 1846
     const-string v0, "com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService"
 
-    invoke-static {p0, v0, v1}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->startTalkback(Landroid/content/Context;Ljava/lang/String;Z)V
+    invoke-static {p0, v0, v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->startTalkback(Landroid/content/Context;Ljava/lang/String;Z)V
 
     .line 1850
     :goto_0
@@ -11106,7 +11106,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p0, v0, v1}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->startTalkback(Landroid/content/Context;Ljava/lang/String;Z)V
+    invoke-static {p0, v0, v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->startTalkback(Landroid/content/Context;Ljava/lang/String;Z)V
 
     goto :goto_0
 .end method
@@ -11221,13 +11221,13 @@
     move-result-object v6
 
     .line 1605
-    invoke-static {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->isDualFolderType(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->isDualFolderType(Landroid/content/Context;)Z
 
     move-result v10
 
     if-eqz v10, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v10
 
@@ -11308,7 +11308,7 @@
 
     .line 1645
     :cond_3
-    sget-object v10, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->mCurConfig:Landroid/content/res/Configuration;
+    sget-object v10, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->mCurConfig:Landroid/content/res/Configuration;
 
     iput v4, v10, Landroid/content/res/Configuration;->fontScale:F
 
@@ -11380,7 +11380,7 @@
     invoke-virtual {v1, v10}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     .line 1673
-    sget-object v10, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->mCurConfig:Landroid/content/res/Configuration;
+    sget-object v10, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->mCurConfig:Landroid/content/res/Configuration;
 
     const/4 v11, 0x0
 
@@ -11620,20 +11620,20 @@
 
     move-result v0
 
-    sput v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_galaxy_talkback:I
+    sput v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_galaxy_talkback:I
 
     .line 1854
-    sget v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_galaxy_talkback:I
+    sget v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_galaxy_talkback:I
 
     if-ne v0, v1, :cond_0
 
     .line 1855
-    invoke-static {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->turnOffSoundDetector(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->turnOffSoundDetector(Landroid/content/Context;)V
 
     .line 1856
     const-string v0, "com.samsung.android.app.talkback/com.samsung.android.app.talkback.TalkBackService"
 
-    invoke-static {p0, v0, v1}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->startTalkback(Landroid/content/Context;Ljava/lang/String;Z)V
+    invoke-static {p0, v0, v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->startTalkback(Landroid/content/Context;Ljava/lang/String;Z)V
 
     .line 1860
     :goto_0
@@ -11645,7 +11645,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p0, v0, v1}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->startTalkback(Landroid/content/Context;Ljava/lang/String;Z)V
+    invoke-static {p0, v0, v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->startTalkback(Landroid/content/Context;Ljava/lang/String;Z)V
 
     goto :goto_0
 .end method
@@ -12035,10 +12035,10 @@
 
     move-result v0
 
-    sput v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_switchaccess:I
+    sput v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_switchaccess:I
 
     .line 1825
-    sget v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_switchaccess:I
+    sget v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_switchaccess:I
 
     if-ne v0, v1, :cond_1
 
@@ -12050,7 +12050,7 @@
     .line 1828
     const-string v0, "com.google.android.marvin.talkback/com.android.switchaccess.SwitchAccessService"
 
-    invoke-static {p0, v0, v1}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->startTalkback(Landroid/content/Context;Ljava/lang/String;Z)V
+    invoke-static {p0, v0, v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->startTalkback(Landroid/content/Context;Ljava/lang/String;Z)V
 
     .line 1840
     :goto_0
@@ -12060,7 +12060,7 @@
     :cond_0
     const-string v0, "com.google.android.marvin.talkback/com.googlecode.eyesfree.switchcontrol.SwitchControlService"
 
-    invoke-static {p0, v0, v1}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->startTalkback(Landroid/content/Context;Ljava/lang/String;Z)V
+    invoke-static {p0, v0, v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->startTalkback(Landroid/content/Context;Ljava/lang/String;Z)V
 
     goto :goto_0
 
@@ -12073,7 +12073,7 @@
     .line 1835
     const-string v0, "com.google.android.marvin.talkback/com.android.switchaccess.SwitchAccessService"
 
-    invoke-static {p0, v0, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->startTalkback(Landroid/content/Context;Ljava/lang/String;Z)V
+    invoke-static {p0, v0, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->startTalkback(Landroid/content/Context;Ljava/lang/String;Z)V
 
     goto :goto_0
 
@@ -12081,7 +12081,7 @@
     :cond_2
     const-string v0, "com.google.android.marvin.talkback/com.googlecode.eyesfree.switchcontrol.SwitchControlService"
 
-    invoke-static {p0, v0, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->startTalkback(Landroid/content/Context;Ljava/lang/String;Z)V
+    invoke-static {p0, v0, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->startTalkback(Landroid/content/Context;Ljava/lang/String;Z)V
 
     goto :goto_0
 .end method
@@ -12539,7 +12539,7 @@
 
     .line 1895
     .local v11, "sStringColonSplitter":Landroid/text/TextUtils$SimpleStringSplitter;
-    invoke-static/range {p0 .. p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->getEnabledServicesFromSettings(Landroid/content/Context;)Ljava/util/Set;
+    invoke-static/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->getEnabledServicesFromSettings(Landroid/content/Context;)Ljava/util/Set;
 
     move-result-object v5
 
@@ -12628,7 +12628,7 @@
     invoke-interface {v5, v12}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     .line 1912
-    sget-object v10, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->sInstalledServices:Ljava/util/Set;
+    sget-object v10, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->sInstalledServices:Ljava/util/Set;
 
     .line 1913
     .local v10, "installedServices":Ljava/util/Set;, "Ljava/util/Set<Landroid/content/ComponentName;>;"
@@ -12750,7 +12750,7 @@
 
     if-nez v1, :cond_8
 
-    sget v13, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_talkback:I
+    sget v13, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_talkback:I
 
     const/16 v16, 0x1
 
@@ -12758,7 +12758,7 @@
 
     if-eq v13, v0, :cond_8
 
-    sget v13, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_galaxy_talkback:I
+    sget v13, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_galaxy_talkback:I
 
     const/16 v16, 0x1
 
@@ -12766,7 +12766,7 @@
 
     if-eq v13, v0, :cond_8
 
-    sget v13, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_pagereader:I
+    sget v13, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_pagereader:I
 
     const/16 v16, 0x1
 
@@ -12774,7 +12774,7 @@
 
     if-eq v13, v0, :cond_8
 
-    sget v13, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_switchaccess:I
+    sget v13, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->is_switchaccess:I
 
     const/16 v16, 0x1
 
@@ -12852,7 +12852,7 @@
     :cond_1
     const-string v1, "com.samsung.android.app.sounddetector"
 
-    invoke-static {p0, v1}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v1}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -12905,7 +12905,7 @@
     :cond_2
     const-string v1, "com.samsung.android.app.advsounddetector"
 
-    invoke-static {p0, v1}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v1}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 

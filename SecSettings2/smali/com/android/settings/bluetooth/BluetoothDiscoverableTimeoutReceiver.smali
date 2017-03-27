@@ -1,12 +1,12 @@
-.class public Lcom/android/settings/bluetooth/BluetoothDiscoverableTimeoutReceiver;
+.class public Lcom/android/settings_ex/bluetooth/BluetoothDiscoverableTimeoutReceiver;
 .super Landroid/content/BroadcastReceiver;
 .source "BluetoothDiscoverableTimeoutReceiver.java"
 
 
 # instance fields
-.field private mLocalBluetoothAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+.field private mLocalBluetoothAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
-.field private mLocalBluetoothManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+.field private mLocalBluetoothManager:Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;
 
 
 # direct methods
@@ -41,7 +41,7 @@
 
     .line 68
     .local v1, "intent":Landroid/content/Intent;
-    const-class v3, Lcom/android/settings/bluetooth/BluetoothDiscoverableTimeoutReceiver;
+    const-class v3, Lcom/android/settings_ex/bluetooth/BluetoothDiscoverableTimeoutReceiver;
 
     invoke-virtual {v1, p0, v3}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
@@ -122,7 +122,7 @@
 
     .line 44
     .local v1, "intent":Landroid/content/Intent;
-    const-class v3, Lcom/android/settings/bluetooth/BluetoothDiscoverableTimeoutReceiver;
+    const-class v3, Lcom/android/settings_ex/bluetooth/BluetoothDiscoverableTimeoutReceiver;
 
     invoke-virtual {v1, p0, v3}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
@@ -226,34 +226,34 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 91
-    invoke-static {p1}, Lcom/android/settings/bluetooth/Utils;->getLocalBtManager(Landroid/content/Context;)Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+    invoke-static {p1}, Lcom/android/settings_ex/bluetooth/Utils;->getLocalBtManager(Landroid/content/Context;)Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDiscoverableTimeoutReceiver;->mLocalBluetoothManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+    iput-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothDiscoverableTimeoutReceiver;->mLocalBluetoothManager:Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;
 
     .line 92
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDiscoverableTimeoutReceiver;->mLocalBluetoothManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+    iget-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothDiscoverableTimeoutReceiver;->mLocalBluetoothManager:Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;
 
     if-eqz v1, :cond_1
 
     .line 93
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDiscoverableTimeoutReceiver;->mLocalBluetoothManager:Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+    iget-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothDiscoverableTimeoutReceiver;->mLocalBluetoothManager:Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;
 
-    invoke-virtual {v1}, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->getBluetoothAdapter()Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    invoke-virtual {v1}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;->getBluetoothAdapter()Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDiscoverableTimeoutReceiver;->mLocalBluetoothAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iput-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothDiscoverableTimeoutReceiver;->mLocalBluetoothAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     .line 99
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDiscoverableTimeoutReceiver;->mLocalBluetoothAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothDiscoverableTimeoutReceiver;->mLocalBluetoothAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDiscoverableTimeoutReceiver;->mLocalBluetoothAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothDiscoverableTimeoutReceiver;->mLocalBluetoothAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
-    invoke-virtual {v1}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->getState()I
+    invoke-virtual {v1}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->getState()I
 
     move-result v1
 
@@ -269,11 +269,11 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 103
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothDiscoverableTimeoutReceiver;->mLocalBluetoothAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothDiscoverableTimeoutReceiver;->mLocalBluetoothAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     const/16 v2, 0x15
 
-    invoke-virtual {v1, v2}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->setScanMode(I)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->setScanMode(I)V
 
     goto :goto_0
 

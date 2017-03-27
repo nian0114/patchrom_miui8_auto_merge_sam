@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/CMCCWaringDialogControl;
+.class public Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;
 .super Lcom/android/internal/app/AlertActivity;
 .source "CMCCWaringDialogControl.java"
 
@@ -43,7 +43,7 @@
     .line 49
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mEnableWarningDialog:Landroid/app/AlertDialog;
+    sput-object v0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mEnableWarningDialog:Landroid/app/AlertDialog;
 
     return-void
 .end method
@@ -58,19 +58,19 @@
     invoke-direct {p0}, Lcom/android/internal/app/AlertActivity;-><init>()V
 
     .line 39
-    iput-boolean v0, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mIsReceiverRegistered:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mIsReceiverRegistered:Z
 
     .line 46
-    iput-boolean v0, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->donotshowagain:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->donotshowagain:Z
 
     .line 51
-    iput-boolean v0, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->cmccap_do_not_show_again:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->cmccap_do_not_show_again:Z
 
     .line 52
-    iput-boolean v0, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->aplist_do_not_show_again:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->aplist_do_not_show_again:Z
 
     .line 53
-    iput-boolean v0, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->asktowlan_do_not_show_again:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->asktowlan_do_not_show_again:Z
 
     return-void
 .end method
@@ -87,7 +87,7 @@
     invoke-super {p0}, Lcom/android/internal/app/AlertActivity;->finish()V
 
     .line 148
-    invoke-virtual {p0, v0, v0}, Lcom/android/settings/wifi/CMCCWaringDialogControl;->overridePendingTransition(II)V
+    invoke-virtual {p0, v0, v0}, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->overridePendingTransition(II)V
 
     .line 149
     return-void
@@ -100,7 +100,7 @@
 
     .prologue
     .line 119
-    iget-object v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mSharedPreferences:Landroid/content/SharedPreferences;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -189,7 +189,7 @@
     if-eqz p2, :cond_2
 
     .line 127
-    invoke-virtual {p0}, Lcom/android/settings/wifi/CMCCWaringDialogControl;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -203,7 +203,7 @@
 
     .line 129
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/wifi/CMCCWaringDialogControl;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -324,7 +324,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 111
-    invoke-virtual {p0}, Lcom/android/settings/wifi/CMCCWaringDialogControl;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->finish()V
 
     goto :goto_0
 
@@ -367,10 +367,10 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mSharedPreferences:Landroid/content/SharedPreferences;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     .line 62
-    iget-object v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mSharedPreferences:Landroid/content/SharedPreferences;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     const-string v4, "cmccap_do_not_show"
 
@@ -378,10 +378,10 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->cmccap_do_not_show_again:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->cmccap_do_not_show_again:Z
 
     .line 63
-    iget-object v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mSharedPreferences:Landroid/content/SharedPreferences;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     const-string v4, "aplist_do_not_show"
 
@@ -389,10 +389,10 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->aplist_do_not_show_again:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->aplist_do_not_show_again:Z
 
     .line 64
-    iget-object v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mSharedPreferences:Landroid/content/SharedPreferences;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     const-string v4, "asktowlan_do_not_show"
 
@@ -400,25 +400,25 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->asktowlan_do_not_show_again:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->asktowlan_do_not_show_again:Z
 
     .line 69
     const-string v1, "layout_inflater"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/CMCCWaringDialogControl;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/view/LayoutInflater;
 
-    iput-object v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mInflater:Landroid/view/LayoutInflater;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mInflater:Landroid/view/LayoutInflater;
 
     .line 70
-    iget-object v0, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     .line 71
     .local v0, "ap":Lcom/android/internal/app/AlertController$AlertParams;
-    iget-object v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mInflater:Landroid/view/LayoutInflater;
 
     const v4, 0x7f04005e
 
@@ -431,7 +431,7 @@
     iput-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
 
     .line 72
-    invoke-virtual {p0}, Lcom/android/settings/wifi/CMCCWaringDialogControl;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -444,7 +444,7 @@
     iput-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mTitle:Ljava/lang/CharSequence;
 
     .line 73
-    invoke-virtual {p0}, Lcom/android/settings/wifi/CMCCWaringDialogControl;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -460,7 +460,7 @@
     iput-object p0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mPositiveButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
     .line 75
-    invoke-virtual {p0}, Lcom/android/settings/wifi/CMCCWaringDialogControl;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -484,7 +484,7 @@
 
     check-cast v1, Landroid/widget/CheckBox;
 
-    iput-object v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mcmccapcheckbox:Landroid/widget/CheckBox;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mcmccapcheckbox:Landroid/widget/CheckBox;
 
     .line 78
     iget-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
@@ -495,7 +495,7 @@
 
     check-cast v1, Landroid/widget/CheckBox;
 
-    iput-object v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mallistcheckbox:Landroid/widget/CheckBox;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mallistcheckbox:Landroid/widget/CheckBox;
 
     .line 79
     iget-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
@@ -508,7 +508,7 @@
 
     check-cast v1, Landroid/widget/CheckBox;
 
-    iput-object v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mfightmodecheckbox:Landroid/widget/CheckBox;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mfightmodecheckbox:Landroid/widget/CheckBox;
 
     .line 80
     iget-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
@@ -519,7 +519,7 @@
 
     check-cast v1, Landroid/widget/CheckBox;
 
-    iput-object v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->malwaysaskcheckbox:Landroid/widget/CheckBox;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->malwaysaskcheckbox:Landroid/widget/CheckBox;
 
     .line 81
     iget-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
@@ -560,29 +560,29 @@
     invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
 
     .line 85
-    iget-object v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mcmccapcheckbox:Landroid/widget/CheckBox;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mcmccapcheckbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v1, p0}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     .line 86
-    iget-object v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mfightmodecheckbox:Landroid/widget/CheckBox;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mfightmodecheckbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v1, p0}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     .line 87
-    iget-object v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->malwaysaskcheckbox:Landroid/widget/CheckBox;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->malwaysaskcheckbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v1, p0}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     .line 88
-    iget-object v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mallistcheckbox:Landroid/widget/CheckBox;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mallistcheckbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v1, p0}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     .line 90
-    iget-object v4, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mcmccapcheckbox:Landroid/widget/CheckBox;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mcmccapcheckbox:Landroid/widget/CheckBox;
 
-    iget-boolean v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->cmccap_do_not_show_again:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->cmccap_do_not_show_again:Z
 
     if-eqz v1, :cond_0
 
@@ -592,9 +592,9 @@
     invoke-virtual {v4, v1}, Landroid/widget/CheckBox;->setChecked(Z)V
 
     .line 92
-    iget-object v4, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mallistcheckbox:Landroid/widget/CheckBox;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mallistcheckbox:Landroid/widget/CheckBox;
 
-    iget-boolean v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->aplist_do_not_show_again:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->aplist_do_not_show_again:Z
 
     if-eqz v1, :cond_1
 
@@ -604,13 +604,13 @@
     invoke-virtual {v4, v1}, Landroid/widget/CheckBox;->setChecked(Z)V
 
     .line 93
-    invoke-virtual {p0}, Lcom/android/settings/wifi/CMCCWaringDialogControl;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
     const-string v5, "wifi_networks_available_notification_on"
 
-    iget-boolean v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->aplist_do_not_show_again:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->aplist_do_not_show_again:Z
 
     if-eqz v1, :cond_2
 
@@ -620,9 +620,9 @@
     invoke-static {v4, v5, v1}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 95
-    iget-object v4, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->malwaysaskcheckbox:Landroid/widget/CheckBox;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->malwaysaskcheckbox:Landroid/widget/CheckBox;
 
-    iget-boolean v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->asktowlan_do_not_show_again:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->asktowlan_do_not_show_again:Z
 
     if-eqz v1, :cond_3
 
@@ -632,7 +632,7 @@
     invoke-virtual {v4, v1}, Landroid/widget/CheckBox;->setChecked(Z)V
 
     .line 96
-    invoke-virtual {p0}, Lcom/android/settings/wifi/CMCCWaringDialogControl;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -645,13 +645,13 @@
     if-nez v1, :cond_4
 
     .line 97
-    iget-object v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mfightmodecheckbox:Landroid/widget/CheckBox;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mfightmodecheckbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v1, v3}, Landroid/widget/CheckBox;->setChecked(Z)V
 
     .line 101
     :goto_4
-    invoke-virtual {p0}, Lcom/android/settings/wifi/CMCCWaringDialogControl;->setupAlert()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->setupAlert()V
 
     .line 103
     return-void
@@ -682,7 +682,7 @@
 
     .line 99
     :cond_4
-    iget-object v1, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mfightmodecheckbox:Landroid/widget/CheckBox;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mfightmodecheckbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v1, v2}, Landroid/widget/CheckBox;->setChecked(Z)V
 
@@ -712,7 +712,7 @@
     invoke-super {p0}, Lcom/android/internal/app/AlertActivity;->onResume()V
 
     .line 153
-    iget-object v0, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mSharedPreferences:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     const-string v3, "cmccap_do_not_show"
 
@@ -720,10 +720,10 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->cmccap_do_not_show_again:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->cmccap_do_not_show_again:Z
 
     .line 154
-    iget-object v0, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mSharedPreferences:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     const-string v3, "aplist_do_not_show"
 
@@ -731,10 +731,10 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->aplist_do_not_show_again:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->aplist_do_not_show_again:Z
 
     .line 155
-    iget-object v0, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mSharedPreferences:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     const-string v3, "asktowlan_do_not_show"
 
@@ -742,12 +742,12 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->asktowlan_do_not_show_again:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->asktowlan_do_not_show_again:Z
 
     .line 157
-    iget-object v3, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mcmccapcheckbox:Landroid/widget/CheckBox;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mcmccapcheckbox:Landroid/widget/CheckBox;
 
-    iget-boolean v0, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->cmccap_do_not_show_again:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->cmccap_do_not_show_again:Z
 
     if-eqz v0, :cond_0
 
@@ -757,9 +757,9 @@
     invoke-virtual {v3, v0}, Landroid/widget/CheckBox;->setChecked(Z)V
 
     .line 159
-    iget-object v3, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mallistcheckbox:Landroid/widget/CheckBox;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mallistcheckbox:Landroid/widget/CheckBox;
 
-    iget-boolean v0, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->aplist_do_not_show_again:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->aplist_do_not_show_again:Z
 
     if-eqz v0, :cond_1
 
@@ -769,13 +769,13 @@
     invoke-virtual {v3, v0}, Landroid/widget/CheckBox;->setChecked(Z)V
 
     .line 160
-    invoke-virtual {p0}, Lcom/android/settings/wifi/CMCCWaringDialogControl;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
     const-string v4, "wifi_networks_available_notification_on"
 
-    iget-boolean v0, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->aplist_do_not_show_again:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->aplist_do_not_show_again:Z
 
     if-eqz v0, :cond_2
 
@@ -785,9 +785,9 @@
     invoke-static {v3, v4, v0}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 161
-    iget-object v3, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->malwaysaskcheckbox:Landroid/widget/CheckBox;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->malwaysaskcheckbox:Landroid/widget/CheckBox;
 
-    iget-boolean v0, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->asktowlan_do_not_show_again:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->asktowlan_do_not_show_again:Z
 
     if-eqz v0, :cond_3
 
@@ -797,7 +797,7 @@
     invoke-virtual {v3, v0}, Landroid/widget/CheckBox;->setChecked(Z)V
 
     .line 162
-    invoke-virtual {p0}, Lcom/android/settings/wifi/CMCCWaringDialogControl;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -810,7 +810,7 @@
     if-nez v0, :cond_4
 
     .line 163
-    iget-object v0, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mfightmodecheckbox:Landroid/widget/CheckBox;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mfightmodecheckbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v0, v2}, Landroid/widget/CheckBox;->setChecked(Z)V
 
@@ -844,7 +844,7 @@
 
     .line 165
     :cond_4
-    iget-object v0, p0, Lcom/android/settings/wifi/CMCCWaringDialogControl;->mfightmodecheckbox:Landroid/widget/CheckBox;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/CMCCWaringDialogControl;->mfightmodecheckbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setChecked(Z)V
 

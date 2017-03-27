@@ -1,14 +1,14 @@
-.class Lcom/android/settingslib/bluetooth/BluetoothEventManager$BluetoothItPolicyHandler;
+.class Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$BluetoothItPolicyHandler;
 .super Ljava/lang/Object;
 .source "BluetoothEventManager.java"
 
 # interfaces
-.implements Lcom/android/settingslib/bluetooth/BluetoothEventManager$Handler;
+.implements Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$Handler;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/bluetooth/BluetoothEventManager;
+    value = Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,13 +28,13 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settingslib/bluetooth/BluetoothEventManager$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settingslib/bluetooth/BluetoothEventManager$1;
+    .param p1, "x0"    # Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$1;
 
     .prologue
     .line 325
-    invoke-direct {p0}, Lcom/android/settingslib/bluetooth/BluetoothEventManager$BluetoothItPolicyHandler;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$BluetoothItPolicyHandler;-><init>()V
 
     return-void
 .end method

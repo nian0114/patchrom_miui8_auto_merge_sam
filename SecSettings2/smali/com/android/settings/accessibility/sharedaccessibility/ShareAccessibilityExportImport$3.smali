@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport$3;
+.class Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport$3;
 .super Ljava/lang/Object;
 .source "ShareAccessibilityExportImport.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->onCreateDialog(I)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->onCreateDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;)V
     .locals 0
 
     .prologue
     .line 190
-    iput-object p1, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport$3;->this$0:Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport$3;->this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,9 +43,9 @@
 
     .prologue
     .line 192
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport$3;->this$0:Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport$3;->this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityExportImport;->finish()V
 
     .line 193
     return-void

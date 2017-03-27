@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settings/deviceinfo/StorageWizardFormatProgress$1;
+.class synthetic Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress$1;
 .super Ljava/lang/Object;
 .source "StorageWizardFormatProgress.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/StorageWizardFormatProgress;
+    value = Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/WifiWwsmPatcherDialog;
+.class public Lcom/android/settings_ex/wifi/WifiWwsmPatcherDialog;
 .super Ljava/lang/Object;
 .source "WifiWwsmPatcherDialog.java"
 
@@ -24,7 +24,7 @@
     const/4 v0, 0x0
 
     :cond_0
-    sput-boolean v0, Lcom/android/settings/wifi/WifiWwsmPatcherDialog;->DBG:Z
+    sput-boolean v0, Lcom/android/settings_ex/wifi/WifiWwsmPatcherDialog;->DBG:Z
 
     return-void
 .end method

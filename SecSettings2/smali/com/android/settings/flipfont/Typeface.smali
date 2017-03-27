@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/flipfont/Typeface;
+.class public Lcom/android/settings_ex/flipfont/Typeface;
 .super Ljava/lang/Object;
 .source "Typeface.java"
 
@@ -11,7 +11,7 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/flipfont/TypefaceFile;",
+            "Lcom/android/settings_ex/flipfont/TypefaceFile;",
             ">;"
         }
     .end annotation
@@ -24,7 +24,7 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/flipfont/TypefaceFile;",
+            "Lcom/android/settings_ex/flipfont/TypefaceFile;",
             ">;"
         }
     .end annotation
@@ -35,7 +35,7 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/flipfont/TypefaceFile;",
+            "Lcom/android/settings_ex/flipfont/TypefaceFile;",
             ">;"
         }
     .end annotation
@@ -55,34 +55,34 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 28
-    iput-object v0, p0, Lcom/android/settings/flipfont/Typeface;->mName:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/flipfont/Typeface;->mName:Ljava/lang/String;
 
     .line 31
-    iput-object v0, p0, Lcom/android/settings/flipfont/Typeface;->mFontPackageName:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/flipfont/Typeface;->mFontPackageName:Ljava/lang/String;
 
     .line 34
-    iput-object v0, p0, Lcom/android/settings/flipfont/Typeface;->mTypefaceFilename:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/flipfont/Typeface;->mTypefaceFilename:Ljava/lang/String;
 
     .line 37
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/flipfont/Typeface;->mSansFonts:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/flipfont/Typeface;->mSansFonts:Ljava/util/List;
 
     .line 39
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/flipfont/Typeface;->mSerifFonts:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/flipfont/Typeface;->mSerifFonts:Ljava/util/List;
 
     .line 41
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/flipfont/Typeface;->mMonospaceFonts:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/flipfont/Typeface;->mMonospaceFonts:Ljava/util/List;
 
     return-void
 .end method
@@ -94,7 +94,7 @@
 
     .prologue
     .line 44
-    iget-object v0, p0, Lcom/android/settings/flipfont/Typeface;->mFontPackageName:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/flipfont/Typeface;->mFontPackageName:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -104,7 +104,7 @@
 
     .prologue
     .line 52
-    iget-object v0, p0, Lcom/android/settings/flipfont/Typeface;->mName:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/flipfont/Typeface;->mName:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -114,7 +114,7 @@
 
     .prologue
     .line 72
-    iget-object v0, p0, Lcom/android/settings/flipfont/Typeface;->mSansFonts:Ljava/util/List;
+    iget-object v0, p0, Lcom/android/settings_ex/flipfont/Typeface;->mSansFonts:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
@@ -130,7 +130,7 @@
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/flipfont/Typeface;->mName:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/flipfont/Typeface;->mName:Ljava/lang/String;
 
     goto :goto_0
 .end method
@@ -140,7 +140,7 @@
 
     .prologue
     .line 60
-    iget-object v0, p0, Lcom/android/settings/flipfont/Typeface;->mTypefaceFilename:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/flipfont/Typeface;->mTypefaceFilename:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -151,7 +151,7 @@
 
     .prologue
     .line 48
-    iput-object p1, p0, Lcom/android/settings/flipfont/Typeface;->mFontPackageName:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/flipfont/Typeface;->mFontPackageName:Ljava/lang/String;
 
     .line 49
     return-void
@@ -163,7 +163,7 @@
 
     .prologue
     .line 56
-    iput-object p1, p0, Lcom/android/settings/flipfont/Typeface;->mName:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/flipfont/Typeface;->mName:Ljava/lang/String;
 
     .line 57
     return-void
@@ -175,7 +175,7 @@
 
     .prologue
     .line 64
-    iput-object p1, p0, Lcom/android/settings/flipfont/Typeface;->mTypefaceFilename:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/flipfont/Typeface;->mTypefaceFilename:Ljava/lang/String;
 
     .line 65
     return-void

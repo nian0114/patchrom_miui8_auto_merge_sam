@@ -1,16 +1,16 @@
-.class public Lcom/android/settings/notification/SoundEffectSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/notification/SoundEffectSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "SoundEffectSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/notification/SoundEffectSettings$SettingsObserver;,
-        Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;
+        Lcom/android/settings_ex/notification/SoundEffectSettings$SettingsObserver;,
+        Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;
     }
 .end annotation
 
@@ -18,17 +18,17 @@
 # static fields
 .field private static final KEYS:[Ljava/lang/String;
 
-.field private static final PREFS:[Lcom/android/settings/notification/SettingPref;
+.field private static final PREFS:[Lcom/android/settings_ex/notification/SettingPref;
 
-.field private static final PREF_K2HD:Lcom/android/settings/notification/SettingPref;
+.field private static final PREF_K2HD:Lcom/android/settings_ex/notification/SettingPref;
 
-.field private static final PREF_SOUND_ALIVE:Lcom/android/settings/notification/SettingPref;
+.field private static final PREF_SOUND_ALIVE:Lcom/android/settings_ex/notification/SettingPref;
 
-.field private static final PREF_TUBE_AMP:Lcom/android/settings/notification/SettingPref;
+.field private static final PREF_TUBE_AMP:Lcom/android/settings_ex/notification/SettingPref;
 
-.field private static final PREF_UHQ_UPSCALER:Lcom/android/settings/notification/SettingPref;
+.field private static final PREF_UHQ_UPSCALER:Lcom/android/settings_ex/notification/SettingPref;
 
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 
 .field public static final SUPPORT_FW_FEATURE_LOGGING:Z
 
@@ -52,11 +52,11 @@
 
 .field private mEnabledUhqUpscaler:Z
 
-.field private mMusicReceiver:Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;
+.field private mMusicReceiver:Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;
 
 .field private mMySound:Landroid/preference/PreferenceScreen;
 
-.field private final mSettingsObserver:Lcom/android/settings/notification/SoundEffectSettings$SettingsObserver;
+.field private final mSettingsObserver:Lcom/android/settings_ex/notification/SoundEffectSettings$SettingsObserver;
 
 .field private mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
 
@@ -97,10 +97,10 @@
 
     aput-object v2, v0, v7
 
-    sput-object v0, Lcom/android/settings/notification/SoundEffectSettings;->KEYS:[Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/notification/SoundEffectSettings;->KEYS:[Ljava/lang/String;
 
     .line 89
-    new-instance v0, Lcom/android/settings/notification/SoundEffectSettings$1;
+    new-instance v0, Lcom/android/settings_ex/notification/SoundEffectSettings$1;
 
     const-string v2, "uhq_upscaler"
 
@@ -108,12 +108,12 @@
 
     new-array v5, v6, [I
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/settings/notification/SoundEffectSettings$1;-><init>(ILjava/lang/String;Ljava/lang/String;I[I)V
+    invoke-direct/range {v0 .. v5}, Lcom/android/settings_ex/notification/SoundEffectSettings$1;-><init>(ILjava/lang/String;Ljava/lang/String;I[I)V
 
-    sput-object v0, Lcom/android/settings/notification/SoundEffectSettings;->PREF_UHQ_UPSCALER:Lcom/android/settings/notification/SettingPref;
+    sput-object v0, Lcom/android/settings_ex/notification/SoundEffectSettings;->PREF_UHQ_UPSCALER:Lcom/android/settings_ex/notification/SettingPref;
 
     .line 93
-    new-instance v0, Lcom/android/settings/notification/SoundEffectSettings$2;
+    new-instance v0, Lcom/android/settings_ex/notification/SoundEffectSettings$2;
 
     const-string v2, "sound_alive"
 
@@ -121,12 +121,12 @@
 
     new-array v5, v6, [I
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/settings/notification/SoundEffectSettings$2;-><init>(ILjava/lang/String;Ljava/lang/String;I[I)V
+    invoke-direct/range {v0 .. v5}, Lcom/android/settings_ex/notification/SoundEffectSettings$2;-><init>(ILjava/lang/String;Ljava/lang/String;I[I)V
 
-    sput-object v0, Lcom/android/settings/notification/SoundEffectSettings;->PREF_SOUND_ALIVE:Lcom/android/settings/notification/SettingPref;
+    sput-object v0, Lcom/android/settings_ex/notification/SoundEffectSettings;->PREF_SOUND_ALIVE:Lcom/android/settings_ex/notification/SettingPref;
 
     .line 97
-    new-instance v0, Lcom/android/settings/notification/SoundEffectSettings$3;
+    new-instance v0, Lcom/android/settings_ex/notification/SoundEffectSettings$3;
 
     const-string v2, "k2hd"
 
@@ -134,12 +134,12 @@
 
     new-array v5, v6, [I
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/settings/notification/SoundEffectSettings$3;-><init>(ILjava/lang/String;Ljava/lang/String;I[I)V
+    invoke-direct/range {v0 .. v5}, Lcom/android/settings_ex/notification/SoundEffectSettings$3;-><init>(ILjava/lang/String;Ljava/lang/String;I[I)V
 
-    sput-object v0, Lcom/android/settings/notification/SoundEffectSettings;->PREF_K2HD:Lcom/android/settings/notification/SettingPref;
+    sput-object v0, Lcom/android/settings_ex/notification/SoundEffectSettings;->PREF_K2HD:Lcom/android/settings_ex/notification/SettingPref;
 
     .line 101
-    new-instance v0, Lcom/android/settings/notification/SoundEffectSettings$4;
+    new-instance v0, Lcom/android/settings_ex/notification/SoundEffectSettings$4;
 
     const-string v2, "tube_amp"
 
@@ -147,40 +147,40 @@
 
     new-array v5, v6, [I
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/settings/notification/SoundEffectSettings$4;-><init>(ILjava/lang/String;Ljava/lang/String;I[I)V
+    invoke-direct/range {v0 .. v5}, Lcom/android/settings_ex/notification/SoundEffectSettings$4;-><init>(ILjava/lang/String;Ljava/lang/String;I[I)V
 
-    sput-object v0, Lcom/android/settings/notification/SoundEffectSettings;->PREF_TUBE_AMP:Lcom/android/settings/notification/SettingPref;
+    sput-object v0, Lcom/android/settings_ex/notification/SoundEffectSettings;->PREF_TUBE_AMP:Lcom/android/settings_ex/notification/SettingPref;
 
     .line 105
-    new-array v0, v8, [Lcom/android/settings/notification/SettingPref;
+    new-array v0, v8, [Lcom/android/settings_ex/notification/SettingPref;
 
-    sget-object v2, Lcom/android/settings/notification/SoundEffectSettings;->PREF_UHQ_UPSCALER:Lcom/android/settings/notification/SettingPref;
+    sget-object v2, Lcom/android/settings_ex/notification/SoundEffectSettings;->PREF_UHQ_UPSCALER:Lcom/android/settings_ex/notification/SettingPref;
 
     aput-object v2, v0, v6
 
-    sget-object v2, Lcom/android/settings/notification/SoundEffectSettings;->PREF_SOUND_ALIVE:Lcom/android/settings/notification/SettingPref;
+    sget-object v2, Lcom/android/settings_ex/notification/SoundEffectSettings;->PREF_SOUND_ALIVE:Lcom/android/settings_ex/notification/SettingPref;
 
     aput-object v2, v0, v4
 
-    sget-object v2, Lcom/android/settings/notification/SoundEffectSettings;->PREF_K2HD:Lcom/android/settings/notification/SettingPref;
+    sget-object v2, Lcom/android/settings_ex/notification/SoundEffectSettings;->PREF_K2HD:Lcom/android/settings_ex/notification/SettingPref;
 
     aput-object v2, v0, v1
 
-    sget-object v1, Lcom/android/settings/notification/SoundEffectSettings;->PREF_TUBE_AMP:Lcom/android/settings/notification/SettingPref;
+    sget-object v1, Lcom/android/settings_ex/notification/SoundEffectSettings;->PREF_TUBE_AMP:Lcom/android/settings_ex/notification/SettingPref;
 
     aput-object v1, v0, v7
 
-    sput-object v0, Lcom/android/settings/notification/SoundEffectSettings;->PREFS:[Lcom/android/settings/notification/SettingPref;
+    sput-object v0, Lcom/android/settings_ex/notification/SoundEffectSettings;->PREFS:[Lcom/android/settings_ex/notification/SettingPref;
 
     .line 131
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/notification/SoundEffectSettings;->sFloatingFeature:Lcom/samsung/android/feature/FloatingFeature;
+    sput-object v0, Lcom/android/settings_ex/notification/SoundEffectSettings;->sFloatingFeature:Lcom/samsung/android/feature/FloatingFeature;
 
     .line 132
-    sget-object v0, Lcom/android/settings/notification/SoundEffectSettings;->sFloatingFeature:Lcom/samsung/android/feature/FloatingFeature;
+    sget-object v0, Lcom/android/settings_ex/notification/SoundEffectSettings;->sFloatingFeature:Lcom/samsung/android/feature/FloatingFeature;
 
     const-string v1, "SEC_FLOATING_FEATURE_CONTEXTSERVICE_ENABLE_SURVEY_MODE"
 
@@ -188,14 +188,14 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/android/settings/notification/SoundEffectSettings;->SUPPORT_FW_FEATURE_LOGGING:Z
+    sput-boolean v0, Lcom/android/settings_ex/notification/SoundEffectSettings;->SUPPORT_FW_FEATURE_LOGGING:Z
 
     .line 538
-    new-instance v0, Lcom/android/settings/notification/SoundEffectSettings$5;
+    new-instance v0, Lcom/android/settings_ex/notification/SoundEffectSettings$5;
 
-    invoke-direct {v0}, Lcom/android/settings/notification/SoundEffectSettings$5;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/notification/SoundEffectSettings$5;-><init>()V
 
-    sput-object v0, Lcom/android/settings/notification/SoundEffectSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/notification/SoundEffectSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 
     return-void
 .end method
@@ -207,111 +207,111 @@
     const/4 v1, 0x0
 
     .line 76
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 87
     const/4 v0, 0x4
 
     new-array v0, v0, [Landroid/preference/TwoStatePreference;
 
-    iput-object v0, p0, Lcom/android/settings/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
 
     .line 112
-    new-instance v0, Lcom/android/settings/notification/SoundEffectSettings$SettingsObserver;
+    new-instance v0, Lcom/android/settings_ex/notification/SoundEffectSettings$SettingsObserver;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/notification/SoundEffectSettings$SettingsObserver;-><init>(Lcom/android/settings/notification/SoundEffectSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/notification/SoundEffectSettings$SettingsObserver;-><init>(Lcom/android/settings_ex/notification/SoundEffectSettings;)V
 
-    iput-object v0, p0, Lcom/android/settings/notification/SoundEffectSettings;->mSettingsObserver:Lcom/android/settings/notification/SoundEffectSettings$SettingsObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mSettingsObserver:Lcom/android/settings_ex/notification/SoundEffectSettings$SettingsObserver;
 
     .line 115
-    iput-boolean v1, p0, Lcom/android/settings/notification/SoundEffectSettings;->mEnabledSoundAlive:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mEnabledSoundAlive:Z
 
     .line 116
-    iput-boolean v1, p0, Lcom/android/settings/notification/SoundEffectSettings;->mEnabledUhqUpscaler:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mEnabledUhqUpscaler:Z
 
     .line 117
-    iput-boolean v1, p0, Lcom/android/settings/notification/SoundEffectSettings;->mEnabledTubeAmp:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mEnabledTubeAmp:Z
 
     .line 123
-    iput v1, p0, Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    iput v1, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
 
     .line 509
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/notification/SoundEffectSettings;)I
+.method static synthetic access$000(Lcom/android/settings_ex/notification/SoundEffectSettings;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/SoundEffectSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     .prologue
     .line 76
-    iget v0, p0, Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    iget v0, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
 
     return v0
 .end method
 
-.method static synthetic access$002(Lcom/android/settings/notification/SoundEffectSettings;I)I
+.method static synthetic access$002(Lcom/android/settings_ex/notification/SoundEffectSettings;I)I
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/notification/SoundEffectSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/SoundEffectSettings;
     .param p1, "x1"    # I
 
     .prologue
     .line 76
-    iput p1, p0, Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    iput p1, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
 
     return p1
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/notification/SoundEffectSettings;)Landroid/media/AudioManager;
+.method static synthetic access$100(Lcom/android/settings_ex/notification/SoundEffectSettings;)Landroid/media/AudioManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/SoundEffectSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     .prologue
     .line 76
-    iget-object v0, p0, Lcom/android/settings/notification/SoundEffectSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mAudioManager:Landroid/media/AudioManager;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/notification/SoundEffectSettings;)V
+.method static synthetic access$200(Lcom/android/settings_ex/notification/SoundEffectSettings;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/notification/SoundEffectSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     .prologue
     .line 76
-    invoke-direct {p0}, Lcom/android/settings/notification/SoundEffectSettings;->setDimSwitchPreference()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/SoundEffectSettings;->setDimSwitchPreference()V
 
     return-void
 .end method
 
-.method static synthetic access$300()[Lcom/android/settings/notification/SettingPref;
+.method static synthetic access$300()[Lcom/android/settings_ex/notification/SettingPref;
     .locals 1
 
     .prologue
     .line 76
-    sget-object v0, Lcom/android/settings/notification/SoundEffectSettings;->PREFS:[Lcom/android/settings/notification/SettingPref;
+    sget-object v0, Lcom/android/settings_ex/notification/SoundEffectSettings;->PREFS:[Lcom/android/settings_ex/notification/SettingPref;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/notification/SoundEffectSettings;)Landroid/content/Context;
+.method static synthetic access$400(Lcom/android/settings_ex/notification/SoundEffectSettings;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/SoundEffectSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     .prologue
     .line 76
-    iget-object v0, p0, Lcom/android/settings/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/notification/SoundEffectSettings;)Landroid/content/ContentResolver;
+.method static synthetic access$600(Lcom/android/settings_ex/notification/SoundEffectSettings;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/SoundEffectSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/SoundEffectSettings;
 
     .prologue
     .line 76
-    invoke-virtual {p0}, Lcom/android/settings/notification/SoundEffectSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/SoundEffectSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -327,7 +327,7 @@
 
     .prologue
     .line 633
-    sget-boolean v2, Lcom/android/settings/notification/SoundEffectSettings;->SUPPORT_FW_FEATURE_LOGGING:Z
+    sget-boolean v2, Lcom/android/settings_ex/notification/SoundEffectSettings;->SUPPORT_FW_FEATURE_LOGGING:Z
 
     if-nez v2, :cond_0
 
@@ -414,7 +414,7 @@
     if-ge v1, v6, :cond_10
 
     .line 383
-    iget-object v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
 
     aget-object v6, v6, v1
 
@@ -430,7 +430,7 @@
     .line 400
     :goto_1
     :try_start_0
-    iget-object v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -444,7 +444,7 @@
 
     .line 401
     .local v5, "val":I
-    iget-object v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
 
     aget-object v9, v6, v1
 
@@ -473,7 +473,7 @@
     if-le v6, v9, :cond_1
 
     :cond_0
-    iget-object v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->currentUser:Landroid/content/pm/UserInfo;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->currentUser:Landroid/content/pm/UserInfo;
 
     invoke-virtual {v6}, Landroid/content/pm/UserInfo;->isPrimary()Z
 
@@ -483,12 +483,12 @@
 
     .line 405
     :cond_1
-    iget v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    iget v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
 
     if-ne v6, v7, :cond_4
 
     .line 406
-    iget-object v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
 
     aget-object v6, v6, v1
 
@@ -507,7 +507,7 @@
     if-eqz v6, :cond_c
 
     .line 433
-    iget-object v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
 
     aget-object v6, v6, v1
 
@@ -517,7 +517,7 @@
 
     if-eqz v6, :cond_b
 
-    iget-object v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
 
     aget-object v6, v6, v1
 
@@ -530,7 +530,7 @@
     .line 434
     const/4 v6, 0x1
 
-    iput-boolean v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mEnabledSoundAlive:Z
+    iput-boolean v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mEnabledSoundAlive:Z
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -575,7 +575,7 @@
     .line 407
     :cond_4
     :try_start_1
-    iget v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    iget v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
 
     const/4 v9, 0x2
 
@@ -591,7 +591,7 @@
     if-eqz v6, :cond_6
 
     .line 409
-    iget-object v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -607,7 +607,7 @@
 
     .line 410
     .local v2, "isSupport":I
-    iget-object v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -628,7 +628,7 @@
     if-ne v3, v7, :cond_5
 
     .line 412
-    iget-object v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
 
     aget-object v6, v6, v1
 
@@ -660,7 +660,7 @@
     .restart local v5    # "val":I
     :cond_5
     :try_start_2
-    iget-object v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
 
     aget-object v6, v6, v1
 
@@ -674,7 +674,7 @@
     .end local v2    # "isSupport":I
     .end local v3    # "isUhqMode":I
     :cond_6
-    iget-object v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
 
     aget-object v6, v6, v1
 
@@ -686,7 +686,7 @@
 
     .line 419
     :cond_7
-    iget v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    iget v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
 
     if-nez v6, :cond_9
 
@@ -710,7 +710,7 @@
     if-eqz v6, :cond_8
 
     .line 421
-    iget-object v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
 
     aget-object v6, v6, v1
 
@@ -722,7 +722,7 @@
 
     .line 423
     :cond_8
-    iget-object v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
 
     aget-object v6, v6, v1
 
@@ -734,7 +734,7 @@
 
     .line 426
     :cond_9
-    iget-object v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
 
     aget-object v6, v6, v1
 
@@ -746,7 +746,7 @@
 
     .line 429
     :cond_a
-    iget-object v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
 
     aget-object v6, v6, v1
 
@@ -760,7 +760,7 @@
     :cond_b
     const/4 v6, 0x0
 
-    iput-boolean v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mEnabledSoundAlive:Z
+    iput-boolean v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mEnabledSoundAlive:Z
 
     goto/16 :goto_4
 
@@ -775,7 +775,7 @@
     if-eqz v6, :cond_e
 
     .line 439
-    iget-object v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
 
     aget-object v6, v6, v1
 
@@ -785,7 +785,7 @@
 
     if-eqz v6, :cond_d
 
-    iget-object v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
 
     aget-object v6, v6, v1
 
@@ -798,7 +798,7 @@
     .line 440
     const/4 v6, 0x1
 
-    iput-boolean v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mEnabledUhqUpscaler:Z
+    iput-boolean v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mEnabledUhqUpscaler:Z
 
     goto/16 :goto_4
 
@@ -806,7 +806,7 @@
     :cond_d
     const/4 v6, 0x0
 
-    iput-boolean v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mEnabledUhqUpscaler:Z
+    iput-boolean v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mEnabledUhqUpscaler:Z
 
     goto/16 :goto_4
 
@@ -821,7 +821,7 @@
     if-eqz v6, :cond_2
 
     .line 445
-    iget-object v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
 
     aget-object v6, v6, v1
 
@@ -831,7 +831,7 @@
 
     if-eqz v6, :cond_f
 
-    iget-object v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
 
     aget-object v6, v6, v1
 
@@ -844,7 +844,7 @@
     .line 446
     const/4 v6, 0x1
 
-    iput-boolean v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mEnabledTubeAmp:Z
+    iput-boolean v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mEnabledTubeAmp:Z
 
     goto/16 :goto_4
 
@@ -852,7 +852,7 @@
     :cond_f
     const/4 v6, 0x0
 
-    iput-boolean v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->mEnabledTubeAmp:Z
+    iput-boolean v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mEnabledTubeAmp:Z
     :try_end_2
     .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -893,7 +893,7 @@
     const/4 v0, 0x0
 
     .line 460
-    iget-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mAudioManager:Landroid/media/AudioManager;
 
     const-string v3, "audioParam;outDevice"
 
@@ -958,7 +958,7 @@
 
     .prologue
     .line 484
-    iget-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mAudioManager:Landroid/media/AudioManager;
 
     const-string v3, "audioParam;curDevice"
 
@@ -984,7 +984,7 @@
 
     .prologue
     .line 474
-    iget-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mAudioManager:Landroid/media/AudioManager;
 
     const-string v3, "audioParam;outDevice"
 
@@ -1037,24 +1037,24 @@
     const/4 v4, 0x0
 
     .line 257
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 259
     const v2, 0x7f0800bc
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/notification/SoundEffectSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/notification/SoundEffectSettings;->addPreferencesFromResource(I)V
 
     .line 261
-    invoke-virtual {p0}, Lcom/android/settings/notification/SoundEffectSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/SoundEffectSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
+    iput-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
 
     .line 263
-    iget-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
 
-    iget-object v3, p0, Lcom/android/settings/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
 
     const-string v3, "user"
 
@@ -1064,12 +1064,12 @@
 
     check-cast v2, Landroid/os/UserManager;
 
-    iput-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->mUm:Landroid/os/UserManager;
+    iput-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mUm:Landroid/os/UserManager;
 
     .line 265
-    iget-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->mUm:Landroid/os/UserManager;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mUm:Landroid/os/UserManager;
 
-    iget-object v3, p0, Lcom/android/settings/notification/SoundEffectSettings;->mUm:Landroid/os/UserManager;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mUm:Landroid/os/UserManager;
 
     invoke-virtual {v3}, Landroid/os/UserManager;->getUserHandle()I
 
@@ -1079,7 +1079,7 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->currentUser:Landroid/content/pm/UserInfo;
+    iput-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->currentUser:Landroid/content/pm/UserInfo;
 
     .line 268
     const/4 v0, 0x0
@@ -1091,13 +1091,13 @@
     if-ge v0, v2, :cond_0
 
     .line 270
-    iget-object v3, p0, Lcom/android/settings/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
 
-    sget-object v2, Lcom/android/settings/notification/SoundEffectSettings;->KEYS:[Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/notification/SoundEffectSettings;->KEYS:[Ljava/lang/String;
 
     aget-object v2, v2, v0
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/notification/SoundEffectSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/notification/SoundEffectSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
@@ -1112,11 +1112,11 @@
 
     .line 274
     :cond_0
-    new-instance v2, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;
+    new-instance v2, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;
 
-    invoke-direct {v2, p0, v4}, Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;-><init>(Lcom/android/settings/notification/SoundEffectSettings;Lcom/android/settings/notification/SoundEffectSettings$1;)V
+    invoke-direct {v2, p0, v4}, Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;-><init>(Lcom/android/settings_ex/notification/SoundEffectSettings;Lcom/android/settings_ex/notification/SoundEffectSettings$1;)V
 
-    iput-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->mMusicReceiver:Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;
+    iput-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mMusicReceiver:Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;
 
     .line 275
     new-instance v2, Landroid/content/IntentFilter;
@@ -1125,45 +1125,45 @@
 
     invoke-direct {v2, v3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    iput-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->intentFilter:Landroid/content/IntentFilter;
+    iput-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->intentFilter:Landroid/content/IntentFilter;
 
     .line 276
-    iget-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->intentFilter:Landroid/content/IntentFilter;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->intentFilter:Landroid/content/IntentFilter;
 
     const-string v3, "android.bluetooth.device.action.ACL_CONNECTED"
 
     invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 277
-    iget-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->intentFilter:Landroid/content/IntentFilter;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->intentFilter:Landroid/content/IntentFilter;
 
     const-string v3, "android.bluetooth.a2dp.profile.action.CONNECTION_STATE_CHANGED"
 
     invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 278
-    iget-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->intentFilter:Landroid/content/IntentFilter;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->intentFilter:Landroid/content/IntentFilter;
 
     const-string v3, "android.bluetooth.a2dp.profile.action.PLAYING_STATE_CHANGED"
 
     invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 280
-    iget-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->intentFilter:Landroid/content/IntentFilter;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->intentFilter:Landroid/content/IntentFilter;
 
     const-string v3, "android.intent.action.WIFI_DISPLAY"
 
     invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 282
-    iget-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->intentFilter:Landroid/content/IntentFilter;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->intentFilter:Landroid/content/IntentFilter;
 
     const-string v3, "android.media.STREAM_DEVICES_CHANGED_ACTION"
 
     invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 284
-    iget-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
 
     const-string v3, "audio"
 
@@ -1173,26 +1173,26 @@
 
     check-cast v2, Landroid/media/AudioManager;
 
-    iput-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->mAudioManager:Landroid/media/AudioManager;
+    iput-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mAudioManager:Landroid/media/AudioManager;
 
     .line 287
     const-string v2, "my_sound"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/notification/SoundEffectSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/notification/SoundEffectSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
     check-cast v2, Landroid/preference/PreferenceScreen;
 
-    iput-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->mMySound:Landroid/preference/PreferenceScreen;
+    iput-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mMySound:Landroid/preference/PreferenceScreen;
 
     .line 310
     const-string v2, "k2hd"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/notification/SoundEffectSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/notification/SoundEffectSettings;->removePreference(Ljava/lang/String;)V
 
     .line 312
-    iget-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mTwoStatePrefs:[Landroid/preference/TwoStatePreference;
 
     const/4 v3, 0x3
 
@@ -1203,12 +1203,12 @@
     invoke-virtual {v2, v3}, Landroid/preference/TwoStatePreference;->setTitle(I)V
 
     .line 317
-    sget-boolean v2, Lcom/android/settings/notification/SoundEffectSettings;->SUPPORT_FW_FEATURE_LOGGING:Z
+    sget-boolean v2, Lcom/android/settings_ex/notification/SoundEffectSettings;->SUPPORT_FW_FEATURE_LOGGING:Z
 
     if-eqz v2, :cond_1
 
     .line 318
-    invoke-virtual {p0}, Lcom/android/settings/notification/SoundEffectSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/SoundEffectSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1231,11 +1231,11 @@
     if-eqz v2, :cond_5
 
     .line 320
-    iget-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
 
     const-string v3, "SEST"
 
-    invoke-static {v2, v3, v4, v4}, Lcom/android/settings/notification/SoundEffectSettings;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3, v4, v4}, Lcom/android/settings_ex/notification/SoundEffectSettings;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 328
     .end local v1    # "mComponentName":Ljava/lang/String;
@@ -1258,7 +1258,7 @@
     if-le v2, v3, :cond_3
 
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->currentUser:Landroid/content/pm/UserInfo;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->currentUser:Landroid/content/pm/UserInfo;
 
     invoke-virtual {v2}, Landroid/content/pm/UserInfo;->isPrimary()Z
 
@@ -1270,7 +1270,7 @@
     :cond_3
     const-string v2, "my_sound"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/notification/SoundEffectSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/notification/SoundEffectSettings;->removePreference(Ljava/lang/String;)V
 
     .line 332
     :cond_4
@@ -1288,11 +1288,11 @@
     if-eqz v2, :cond_6
 
     .line 322
-    iget-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
 
     const-string v3, "SEST"
 
-    invoke-static {v2, v3, v4, v4}, Lcom/android/settings/notification/SoundEffectSettings;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3, v4, v4}, Lcom/android/settings_ex/notification/SoundEffectSettings;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -1307,11 +1307,11 @@
     if-eqz v2, :cond_1
 
     .line 324
-    iget-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
 
     const-string v3, "SEMU"
 
-    invoke-static {v2, v3, v4, v4}, Lcom/android/settings/notification/SoundEffectSettings;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3, v4, v4}, Lcom/android/settings_ex/notification/SoundEffectSettings;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 .end method
@@ -1323,56 +1323,56 @@
     const/4 v3, 0x0
 
     .line 367
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroy()V
 
     .line 368
-    sget-boolean v0, Lcom/android/settings/notification/SoundEffectSettings;->SUPPORT_FW_FEATURE_LOGGING:Z
+    sget-boolean v0, Lcom/android/settings_ex/notification/SoundEffectSettings;->SUPPORT_FW_FEATURE_LOGGING:Z
 
     if-eqz v0, :cond_2
 
     .line 369
-    iget-boolean v0, p0, Lcom/android/settings/notification/SoundEffectSettings;->mEnabledSoundAlive:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mEnabledSoundAlive:Z
 
     if-eqz v0, :cond_0
 
     .line 370
-    iget-object v0, p0, Lcom/android/settings/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
 
     const-string v1, "SESA"
 
     const-string v2, "sound_alive"
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/notification/SoundEffectSettings;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/notification/SoundEffectSettings;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 372
     :cond_0
-    iget-boolean v0, p0, Lcom/android/settings/notification/SoundEffectSettings;->mEnabledUhqUpscaler:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mEnabledUhqUpscaler:Z
 
     if-eqz v0, :cond_1
 
     .line 373
-    iget-object v0, p0, Lcom/android/settings/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
 
     const-string v1, "SESA"
 
     const-string v2, "k2hd"
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/notification/SoundEffectSettings;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/notification/SoundEffectSettings;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 375
     :cond_1
-    iget-boolean v0, p0, Lcom/android/settings/notification/SoundEffectSettings;->mEnabledTubeAmp:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mEnabledTubeAmp:Z
 
     if-eqz v0, :cond_2
 
     .line 376
-    iget-object v0, p0, Lcom/android/settings/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
 
     const-string v1, "SESA"
 
     const-string v2, "tube_amp"
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/notification/SoundEffectSettings;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/notification/SoundEffectSettings;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 379
     :cond_2
@@ -1384,19 +1384,19 @@
 
     .prologue
     .line 360
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 361
-    iget-object v0, p0, Lcom/android/settings/notification/SoundEffectSettings;->mSettingsObserver:Lcom/android/settings/notification/SoundEffectSettings$SettingsObserver;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mSettingsObserver:Lcom/android/settings_ex/notification/SoundEffectSettings$SettingsObserver;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/notification/SoundEffectSettings$SettingsObserver;->register(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/notification/SoundEffectSettings$SettingsObserver;->register(Z)V
 
     .line 362
-    iget-object v0, p0, Lcom/android/settings/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/android/settings/notification/SoundEffectSettings;->mMusicReceiver:Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mMusicReceiver:Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
@@ -1413,7 +1413,7 @@
     .line 493
     if-eqz p2, :cond_0
 
-    iget-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->mMySound:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mMySound:Landroid/preference/PreferenceScreen;
 
     if-nez v2, :cond_1
 
@@ -1434,7 +1434,7 @@
 
     .line 497
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/notification/SoundEffectSettings;->mMySound:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mMySound:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {p2, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1452,7 +1452,7 @@
 
     .line 500
     .local v1, "intent1":Landroid/content/Intent;
-    invoke-virtual {p0, v1}, Lcom/android/settings/notification/SoundEffectSettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/notification/SoundEffectSettings;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1460,7 +1460,7 @@
     .end local v1    # "intent1":Landroid/content/Intent;
     :cond_2
     :goto_1
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v2
 
@@ -1488,37 +1488,37 @@
     const/4 v7, 0x1
 
     .line 336
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 337
-    iget-object v4, p0, Lcom/android/settings/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mContext:Landroid/content/Context;
 
-    iget-object v5, p0, Lcom/android/settings/notification/SoundEffectSettings;->mMusicReceiver:Lcom/android/settings/notification/SoundEffectSettings$MusicIntentReceiver;
+    iget-object v5, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mMusicReceiver:Lcom/android/settings_ex/notification/SoundEffectSettings$MusicIntentReceiver;
 
-    iget-object v6, p0, Lcom/android/settings/notification/SoundEffectSettings;->intentFilter:Landroid/content/IntentFilter;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->intentFilter:Landroid/content/IntentFilter;
 
     invoke-virtual {v4, v5, v6}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 338
-    iget-object v4, p0, Lcom/android/settings/notification/SoundEffectSettings;->mSettingsObserver:Lcom/android/settings/notification/SoundEffectSettings$SettingsObserver;
+    iget-object v4, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mSettingsObserver:Lcom/android/settings_ex/notification/SoundEffectSettings$SettingsObserver;
 
-    invoke-virtual {v4, v7}, Lcom/android/settings/notification/SoundEffectSettings$SettingsObserver;->register(Z)V
+    invoke-virtual {v4, v7}, Lcom/android/settings_ex/notification/SoundEffectSettings$SettingsObserver;->register(Z)V
 
     .line 342
-    invoke-virtual {p0}, Lcom/android/settings/notification/SoundEffectSettings;->isAudioPathEarjack()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/SoundEffectSettings;->isAudioPathEarjack()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
     .line 343
-    iput v7, p0, Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    iput v7, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
 
     .line 351
     :goto_0
-    sget-object v0, Lcom/android/settings/notification/SoundEffectSettings;->PREFS:[Lcom/android/settings/notification/SettingPref;
+    sget-object v0, Lcom/android/settings_ex/notification/SoundEffectSettings;->PREFS:[Lcom/android/settings_ex/notification/SettingPref;
 
-    .local v0, "arr$":[Lcom/android/settings/notification/SettingPref;
+    .local v0, "arr$":[Lcom/android/settings_ex/notification/SettingPref;
     array-length v2, v0
 
     .local v2, "len$":I
@@ -1531,8 +1531,8 @@
     aget-object v3, v0, v1
 
     .line 352
-    .local v3, "pref":Lcom/android/settings/notification/SettingPref;
-    invoke-virtual {v3, p0}, Lcom/android/settings/notification/SettingPref;->init(Lcom/android/settings/SettingsPreferenceFragment;)Landroid/preference/Preference;
+    .local v3, "pref":Lcom/android/settings_ex/notification/SettingPref;
+    invoke-virtual {v3, p0}, Lcom/android/settings_ex/notification/SettingPref;->init(Lcom/android/settings_ex/SettingsPreferenceFragment;)Landroid/preference/Preference;
 
     .line 351
     add-int/lit8 v1, v1, 0x1
@@ -1540,12 +1540,12 @@
     goto :goto_1
 
     .line 344
-    .end local v0    # "arr$":[Lcom/android/settings/notification/SettingPref;
+    .end local v0    # "arr$":[Lcom/android/settings_ex/notification/SettingPref;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
-    .end local v3    # "pref":Lcom/android/settings/notification/SettingPref;
+    .end local v3    # "pref":Lcom/android/settings_ex/notification/SettingPref;
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/notification/SoundEffectSettings;->isAudioPathBTHeadphone()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/SoundEffectSettings;->isAudioPathBTHeadphone()Z
 
     move-result v4
 
@@ -1554,13 +1554,13 @@
     .line 345
     const/4 v4, 0x2
 
-    iput v4, p0, Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    iput v4, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
 
     goto :goto_0
 
     .line 346
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/notification/SoundEffectSettings;->isAudioPathWFD()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/SoundEffectSettings;->isAudioPathWFD()Z
 
     move-result v4
 
@@ -1569,7 +1569,7 @@
     .line 347
     const/4 v4, 0x3
 
-    iput v4, p0, Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    iput v4, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
 
     goto :goto_0
 
@@ -1577,16 +1577,16 @@
     :cond_2
     const/4 v4, 0x0
 
-    iput v4, p0, Lcom/android/settings/notification/SoundEffectSettings;->mCurrentAudioPath:I
+    iput v4, p0, Lcom/android/settings_ex/notification/SoundEffectSettings;->mCurrentAudioPath:I
 
     goto :goto_0
 
     .line 355
-    .restart local v0    # "arr$":[Lcom/android/settings/notification/SettingPref;
+    .restart local v0    # "arr$":[Lcom/android/settings_ex/notification/SettingPref;
     .restart local v1    # "i$":I
     .restart local v2    # "len$":I
     :cond_3
-    invoke-direct {p0}, Lcom/android/settings/notification/SoundEffectSettings;->setDimSwitchPreference()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/SoundEffectSettings;->setDimSwitchPreference()V
 
     .line 356
     return-void

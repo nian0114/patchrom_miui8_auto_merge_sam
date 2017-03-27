@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/widget/HomeSettingsWidgetProvider;
+.class public Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;
 .super Landroid/appwidget/AppWidgetProvider;
 .source "HomeSettingsWidgetProvider.java"
 
@@ -51,26 +51,26 @@
     .line 58
     const/4 v0, 0x0
 
-    sput v0, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mHomeGridMode:I
+    sput v0, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mHomeGridMode:I
 
     .line 62
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
+    sput-object v0, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
 
     .line 66
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapX:Ljava/util/Map;
+    sput-object v0, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapX:Ljava/util/Map;
 
     .line 68
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
+    sput-object v0, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
 
     return-void
 .end method
@@ -100,7 +100,7 @@
 
     .line 268
     .local v0, "launchIntent":Landroid/content/Intent;
-    const-class v2, Lcom/android/settings/widget/HomeSettingsWidgetProvider;
+    const-class v2, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;
 
     invoke-virtual {v0, p0, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
@@ -159,27 +159,27 @@
     invoke-static {v3, v4}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 72
-    sget-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
+    sget-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
 
     if-nez v3, :cond_0
 
     .line 73
-    sput-object p1, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
+    sput-object p1, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
 
     .line 74
     :cond_0
-    sget-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mRes:Landroid/content/res/Resources;
+    sget-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mRes:Landroid/content/res/Resources;
 
     if-nez v3, :cond_1
 
     .line 75
-    sget-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
+    sget-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    sput-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mRes:Landroid/content/res/Resources;
+    sput-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mRes:Landroid/content/res/Resources;
 
     .line 77
     :cond_1
@@ -209,7 +209,7 @@
 
     .line 82
     .local v1, "currentDefaultHome":Landroid/content/ComponentName;
-    sget-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mRes:Landroid/content/res/Resources;
+    sget-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mRes:Landroid/content/res/Resources;
 
     const v4, 0x7f100019
 
@@ -232,7 +232,7 @@
 
     move-result-object v4
 
-    sget v5, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mHomeGridMode:I
+    sget v5, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mHomeGridMode:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -245,7 +245,7 @@
     invoke-static {v3, v4}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 84
-    invoke-static {}, Lcom/android/settings/Utils;->isJapanDCMModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isJapanDCMModel()Z
 
     move-result v3
 
@@ -260,7 +260,7 @@
     .line 85
     new-instance v3, Landroid/widget/RemoteViews;
 
-    sget-object v4, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
+    sget-object v4, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -270,51 +270,51 @@
 
     invoke-direct {v3, v4, v5}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
-    sput-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
+    sput-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
 
     .line 97
     :goto_0
-    sget-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->appWidgetManager:Landroid/appwidget/AppWidgetManager;
+    sget-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->appWidgetManager:Landroid/appwidget/AppWidgetManager;
 
     if-nez v3, :cond_2
 
     .line 98
-    sget-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
+    sget-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
 
     invoke-static {v3}, Landroid/appwidget/AppWidgetManager;->getInstance(Landroid/content/Context;)Landroid/appwidget/AppWidgetManager;
 
     move-result-object v3
 
-    sput-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->appWidgetManager:Landroid/appwidget/AppWidgetManager;
+    sput-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->appWidgetManager:Landroid/appwidget/AppWidgetManager;
 
     .line 100
     :cond_2
-    sget-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
+    sget-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
 
     const v4, 0x7f0d02f9
 
     const/4 v5, 0x1
 
-    invoke-static {p1, v5}, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->getLaunchPendingIntent(Landroid/content/Context;I)Landroid/app/PendingIntent;
+    invoke-static {p1, v5}, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->getLaunchPendingIntent(Landroid/content/Context;I)Landroid/app/PendingIntent;
 
     move-result-object v5
 
     invoke-virtual {v3, v4, v5}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
 
     .line 103
-    invoke-direct {p0, p1}, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->initSpanMap(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->initSpanMap(Landroid/content/Context;)V
 
     .line 104
-    sget-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
+    sget-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->updateWidget(Landroid/widget/RemoteViews;)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->updateWidget(Landroid/widget/RemoteViews;)V
 
     .line 105
     return-void
 
     .line 86
     :cond_3
-    sget v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mHomeGridMode:I
+    sget v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mHomeGridMode:I
 
     const/16 v4, 0x2d
 
@@ -323,7 +323,7 @@
     .line 87
     new-instance v3, Landroid/widget/RemoteViews;
 
-    sget-object v4, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
+    sget-object v4, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -333,13 +333,13 @@
 
     invoke-direct {v3, v4, v5}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
-    sput-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
+    sput-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
 
     goto :goto_0
 
     .line 88
     :cond_4
-    sget v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mHomeGridMode:I
+    sget v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mHomeGridMode:I
 
     const/16 v4, 0x37
 
@@ -348,7 +348,7 @@
     .line 89
     new-instance v3, Landroid/widget/RemoteViews;
 
-    sget-object v4, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
+    sget-object v4, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -358,7 +358,7 @@
 
     invoke-direct {v3, v4, v5}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
-    sput-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
+    sput-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
 
     goto :goto_0
 
@@ -366,7 +366,7 @@
     :cond_5
     new-instance v3, Landroid/widget/RemoteViews;
 
-    sget-object v4, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
+    sget-object v4, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -374,7 +374,7 @@
 
     invoke-direct {v3, v4, v6}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
-    sput-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
+    sput-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
 
     goto :goto_0
 
@@ -382,7 +382,7 @@
     :cond_6
     new-instance v3, Landroid/widget/RemoteViews;
 
-    sget-object v4, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
+    sget-object v4, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -390,7 +390,7 @@
 
     invoke-direct {v3, v4, v6}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
-    sput-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
+    sput-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
 
     goto :goto_0
 .end method
@@ -432,14 +432,14 @@
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapX:Ljava/util/Map;
+    sput-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapX:Ljava/util/Map;
 
     .line 255
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
+    sput-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
 
     .line 257
     .end local v0    # "spX":Landroid/content/SharedPreferences;
@@ -463,7 +463,7 @@
     invoke-super {p0, p1, p2, p3, p4}, Landroid/appwidget/AppWidgetProvider;->onAppWidgetOptionsChanged(Landroid/content/Context;Landroid/appwidget/AppWidgetManager;ILandroid/os/Bundle;)V
 
     .line 112
-    sget-object v6, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mRes:Landroid/content/res/Resources;
+    sget-object v6, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mRes:Landroid/content/res/Resources;
 
     if-nez v6, :cond_0
 
@@ -472,11 +472,11 @@
 
     move-result-object v6
 
-    sput-object v6, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mRes:Landroid/content/res/Resources;
+    sput-object v6, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mRes:Landroid/content/res/Resources;
 
     .line 115
     :cond_0
-    sget-object v6, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mRes:Landroid/content/res/Resources;
+    sget-object v6, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mRes:Landroid/content/res/Resources;
 
     const v7, 0x7f100019
 
@@ -536,7 +536,7 @@
     invoke-static {v6, v7}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 121
-    sget-object v6, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mRes:Landroid/content/res/Resources;
+    sget-object v6, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mRes:Landroid/content/res/Resources;
 
     const v7, 0x7f0c03a3
 
@@ -546,7 +546,7 @@
 
     .line 122
     .local v3, "grid55width":I
-    sget-object v6, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mRes:Landroid/content/res/Resources;
+    sget-object v6, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mRes:Landroid/content/res/Resources;
 
     const v7, 0x7f0c03a4
 
@@ -556,7 +556,7 @@
 
     .line 123
     .local v2, "grid55height":I
-    sget-object v6, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mRes:Landroid/content/res/Resources;
+    sget-object v6, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mRes:Landroid/content/res/Resources;
 
     const v7, 0x7f0c039b
 
@@ -566,7 +566,7 @@
 
     .line 124
     .local v1, "grid45width":I
-    sget-object v6, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mRes:Landroid/content/res/Resources;
+    sget-object v6, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mRes:Landroid/content/res/Resources;
 
     const v7, 0x7f0c039c
 
@@ -583,11 +583,11 @@
     .line 126
     const/16 v6, 0x37
 
-    sput v6, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mHomeGridMode:I
+    sput v6, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mHomeGridMode:I
 
     .line 132
     :goto_0
-    invoke-direct {p0, p1}, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->init(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->init(Landroid/content/Context;)V
 
     .line 137
     .end local v0    # "grid45height":I
@@ -614,7 +614,7 @@
     .line 128
     const/16 v6, 0x2d
 
-    sput v6, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mHomeGridMode:I
+    sput v6, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mHomeGridMode:I
 
     goto :goto_0
 
@@ -622,7 +622,7 @@
     :cond_2
     const/16 v6, 0x2c
 
-    sput v6, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mHomeGridMode:I
+    sput v6, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mHomeGridMode:I
 
     goto :goto_0
 
@@ -636,7 +636,7 @@
     :cond_3
     const/4 v6, 0x0
 
-    sput v6, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mHomeGridMode:I
+    sput v6, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mHomeGridMode:I
 
     goto :goto_1
 .end method
@@ -732,7 +732,7 @@
 
     .line 288
     .restart local p2    # "intent":Landroid/content/Intent;
-    invoke-static {}, Lcom/android/settings/Utils;->isJapanDCMModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isJapanDCMModel()Z
 
     move-result v18
 
@@ -878,7 +878,7 @@
 
     .line 313
     :goto_2
-    invoke-direct/range {p0 .. p1}, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->init(Landroid/content/Context;)V
+    invoke-direct/range {p0 .. p1}, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->init(Landroid/content/Context;)V
 
     goto :goto_1
 
@@ -979,12 +979,12 @@
 
     .line 320
     .local v11, "editorY":Landroid/content/SharedPreferences$Editor;
-    sget-object v18, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
+    sget-object v18, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
 
     if-nez v18, :cond_5
 
     .line 321
-    invoke-direct/range {p0 .. p1}, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->init(Landroid/content/Context;)V
+    invoke-direct/range {p0 .. p1}, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->init(Landroid/content/Context;)V
 
     .line 323
     :cond_5
@@ -1068,17 +1068,17 @@
 
     .line 328
     .local v7, "containY":I
-    sget-object v18, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapX:Ljava/util/Map;
+    sget-object v18, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapX:Ljava/util/Map;
 
     if-eqz v18, :cond_6
 
-    sget-object v18, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
+    sget-object v18, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
 
     if-nez v18, :cond_7
 
     .line 329
     :cond_6
-    invoke-direct/range {p0 .. p1}, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->initSpanMap(Landroid/content/Context;)V
+    invoke-direct/range {p0 .. p1}, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->initSpanMap(Landroid/content/Context;)V
 
     .line 330
     :cond_7
@@ -1156,7 +1156,7 @@
     if-le v7, v0, :cond_8
 
     .line 332
-    sget-object v18, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapX:Ljava/util/Map;
+    sget-object v18, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapX:Ljava/util/Map;
 
     invoke-static/range {v17 .. v17}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -1181,7 +1181,7 @@
     invoke-interface {v10}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 335
-    sget-object v18, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
+    sget-object v18, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
 
     invoke-static/range {v17 .. v17}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -1208,13 +1208,13 @@
     invoke-interface {v11}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 338
-    sget-object v18, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
+    sget-object v18, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, v18
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->updateWidget(Landroid/widget/RemoteViews;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->updateWidget(Landroid/widget/RemoteViews;)V
 
     goto/16 :goto_1
 
@@ -1235,7 +1235,7 @@
     if-le v6, v0, :cond_9
 
     .line 340
-    sget-object v18, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapX:Ljava/util/Map;
+    sget-object v18, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapX:Ljava/util/Map;
 
     invoke-static/range {v17 .. v17}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -1260,13 +1260,13 @@
     invoke-interface {v10}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 343
-    sget-object v18, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
+    sget-object v18, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, v18
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->updateWidget(Landroid/widget/RemoteViews;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->updateWidget(Landroid/widget/RemoteViews;)V
 
     goto/16 :goto_1
 
@@ -1287,7 +1287,7 @@
     if-le v7, v0, :cond_0
 
     .line 345
-    sget-object v18, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
+    sget-object v18, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
 
     invoke-static/range {v17 .. v17}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -1314,13 +1314,13 @@
     invoke-interface {v11}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 348
-    sget-object v18, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
+    sget-object v18, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mViews1x1:Landroid/widget/RemoteViews;
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, v18
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->updateWidget(Landroid/widget/RemoteViews;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->updateWidget(Landroid/widget/RemoteViews;)V
 
     goto/16 :goto_1
 .end method
@@ -1343,17 +1343,17 @@
     invoke-super/range {p0 .. p3}, Landroid/appwidget/AppWidgetProvider;->onUpdate(Landroid/content/Context;Landroid/appwidget/AppWidgetManager;[I)V
 
     .line 182
-    sget-object v11, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapX:Ljava/util/Map;
+    sget-object v11, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapX:Ljava/util/Map;
 
     if-eqz v11, :cond_0
 
-    sget-object v11, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
+    sget-object v11, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
 
     if-nez v11, :cond_1
 
     .line 183
     :cond_0
-    invoke-direct {p0, p1}, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->initSpanMap(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->initSpanMap(Landroid/content/Context;)V
 
     .line 184
     :cond_1
@@ -1432,7 +1432,7 @@
     if-ne v8, v11, :cond_2
 
     .line 193
-    sget-object v11, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapX:Ljava/util/Map;
+    sget-object v11, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapX:Ljava/util/Map;
 
     const/4 v12, 0x1
 
@@ -1454,7 +1454,7 @@
     if-ne v9, v11, :cond_3
 
     .line 198
-    sget-object v11, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
+    sget-object v11, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
 
     const/4 v12, 0x1
 
@@ -1477,7 +1477,7 @@
 
     .line 201
     :cond_3
-    sget-object v11, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
+    sget-object v11, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1510,7 +1510,7 @@
     const/4 v7, 0x1
 
     .line 140
-    sget-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
+    sget-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
 
     invoke-static {v3}, Landroid/appwidget/AppWidgetManager;->getInstance(Landroid/content/Context;)Landroid/appwidget/AppWidgetManager;
 
@@ -1518,7 +1518,7 @@
 
     new-instance v4, Landroid/content/ComponentName;
 
-    sget-object v5, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
+    sget-object v5, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1530,26 +1530,26 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->appWidgetIds:[I
+    iput-object v3, p0, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->appWidgetIds:[I
 
     .line 142
-    sget-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapX:Ljava/util/Map;
+    sget-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapX:Ljava/util/Map;
 
     if-eqz v3, :cond_0
 
-    sget-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
+    sget-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
 
     if-nez v3, :cond_1
 
     .line 143
     :cond_0
-    sget-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
+    sget-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mCtxt:Landroid/content/Context;
 
-    invoke-direct {p0, v3}, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->initSpanMap(Landroid/content/Context;)V
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->initSpanMap(Landroid/content/Context;)V
 
     .line 144
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->appWidgetIds:[I
+    iget-object v3, p0, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->appWidgetIds:[I
 
     array-length v3, v3
 
@@ -1569,7 +1569,7 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->appWidgetIds:[I
+    iget-object v5, p0, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->appWidgetIds:[I
 
     array-length v5, v5
 
@@ -1588,14 +1588,14 @@
 
     .local v2, "i":I
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->appWidgetIds:[I
+    iget-object v3, p0, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->appWidgetIds:[I
 
     array-length v3, v3
 
     if-ge v2, v3, :cond_5
 
     .line 148
-    iget-object v3, p0, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->appWidgetIds:[I
+    iget-object v3, p0, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->appWidgetIds:[I
 
     aget v0, v3, v2
 
@@ -1636,7 +1636,7 @@
 
     move-result-object v4
 
-    sget-object v5, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapX:Ljava/util/Map;
+    sget-object v5, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapX:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -1656,7 +1656,7 @@
 
     move-result-object v4
 
-    sget-object v5, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
+    sget-object v5, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -1677,7 +1677,7 @@
     invoke-static {v3, v4}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 152
-    sget-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapX:Ljava/util/Map;
+    sget-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapX:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -1689,7 +1689,7 @@
 
     if-nez v3, :cond_3
 
-    sget-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
+    sget-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -1702,7 +1702,7 @@
     if-nez v3, :cond_3
 
     .line 154
-    sget-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->appWidgetManager:Landroid/appwidget/AppWidgetManager;
+    sget-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->appWidgetManager:Landroid/appwidget/AppWidgetManager;
 
     invoke-virtual {v3, v0, p1}, Landroid/appwidget/AppWidgetManager;->updateAppWidget(ILandroid/widget/RemoteViews;)V
 
@@ -1715,7 +1715,7 @@
 
     .line 160
     :cond_3
-    sget-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
+    sget-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -1734,7 +1734,7 @@
     if-gt v3, v7, :cond_2
 
     .line 161
-    sget-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapX:Ljava/util/Map;
+    sget-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapX:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -1752,7 +1752,7 @@
 
     if-le v3, v7, :cond_4
 
-    sget-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
+    sget-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->mSpanMapY:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -1772,7 +1772,7 @@
 
     .line 164
     :cond_4
-    sget-object v3, Lcom/android/settings/widget/HomeSettingsWidgetProvider;->appWidgetManager:Landroid/appwidget/AppWidgetManager;
+    sget-object v3, Lcom/android/settings_ex/widget/HomeSettingsWidgetProvider;->appWidgetManager:Landroid/appwidget/AppWidgetManager;
 
     invoke-virtual {v3, v0, p1}, Landroid/appwidget/AppWidgetManager;->updateAppWidget(ILandroid/widget/RemoteViews;)V
     :try_end_0

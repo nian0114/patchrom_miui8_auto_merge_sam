@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/colorblind/ColorChipReport$13;
+.class Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$13;
 .super Ljava/lang/Object;
 .source "ColorChipReport.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/colorblind/ColorChipReport;->CreateGreyscaleAndNegativeColorDialog()V
+    value = Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->CreateGreyscaleAndNegativeColorDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)V
     .locals 0
 
     .prologue
     .line 483
-    iput-object p1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$13;->this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$13;->this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,9 +45,9 @@
     const/4 v3, 0x0
 
     .line 486
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$13;->this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$13;->this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
-    invoke-virtual {v1}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -60,9 +60,9 @@
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 488
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$13;->this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$13;->this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
-    invoke-virtual {v1}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -75,12 +75,12 @@
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 490
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$13;->this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$13;->this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
     const-string v2, "accessibility"
 
-    # invokes: Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-    invoke-static {v1, v2}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->access$800(Lcom/android/settings/accessibility/colorblind/ColorChipReport;Ljava/lang/String;)Ljava/lang/Object;
+    # invokes: Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v1, v2}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->access$800(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -88,13 +88,13 @@
 
     .line 491
     .local v0, "manager":Landroid/view/accessibility/AccessibilityManager;
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$13;->this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$13;->this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
-    invoke-virtual {v1}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1, v3}, Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;->setColorWeaknessMode(Landroid/content/Context;Z)V
+    invoke-static {v1, v3}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;->setColorWeaknessMode(Landroid/content/Context;Z)V
 
     .line 492
     const/4 v1, 0x5
@@ -102,10 +102,10 @@
     invoke-virtual {v0, v1, v3}, Landroid/view/accessibility/AccessibilityManager;->setmDNIeAccessibilityMode(IZ)Z
 
     .line 493
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$13;->this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$13;->this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
-    # invokes: Lcom/android/settings/accessibility/colorblind/ColorChipReport;->CheckTestRecord()V
-    invoke-static {v1}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->access$600(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)V
+    # invokes: Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->CheckTestRecord()V
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->access$600(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)V
 
     .line 494
     return-void

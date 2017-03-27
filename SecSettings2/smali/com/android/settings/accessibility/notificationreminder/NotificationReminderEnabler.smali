@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;
+.class public Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;
 .super Ljava/lang/Object;
 .source "NotificationReminderEnabler.java"
 
@@ -23,10 +23,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 18
-    iput-object p1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;->mContext:Landroid/content/Context;
 
     .line 19
-    iput-object p2, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;->mSwitch:Landroid/widget/Switch;
+    iput-object p2, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;->mSwitch:Landroid/widget/Switch;
 
     .line 20
     return-void
@@ -47,14 +47,14 @@
     const/4 v3, -0x2
 
     .line 73
-    invoke-static {}, Lcom/android/settings/accessibility/notificationreminder/GlobalConstant;->isPersistantAlert()Z
+    invoke-static {}, Lcom/android/settings_ex/accessibility/notificationreminder/GlobalConstant;->isPersistantAlert()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 74
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -74,7 +74,7 @@
     if-nez v0, :cond_2
 
     .line 80
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v1, v5}, Landroid/widget/Switch;->setChecked(Z)V
 
@@ -83,17 +83,17 @@
 
     const-string v2, "switch is on"
 
-    invoke-static {v1, v2}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 82
-    invoke-static {}, Lcom/android/settings/accessibility/notificationreminder/GlobalConstant;->isPersistantAlert()Z
+    invoke-static {}, Lcom/android/settings_ex/accessibility/notificationreminder/GlobalConstant;->isPersistantAlert()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 83
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -105,11 +105,11 @@
 
     .line 87
     :goto_1
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;->mContext:Landroid/content/Context;
 
     new-instance v2, Landroid/content/Intent;
 
-    sget-object v3, Lcom/android/settings/accessibility/notificationreminder/GlobalConstant;->INTENT_NOTIFICATION_START_SREVICE_ACTION:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/accessibility/notificationreminder/GlobalConstant;->INTENT_NOTIFICATION_START_SREVICE_ACTION:Ljava/lang/String;
 
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
@@ -124,7 +124,7 @@
     .line 76
     .end local v0    # "state":I
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -141,7 +141,7 @@
 
     .line 85
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -160,7 +160,7 @@
     if-ne v0, v5, :cond_4
 
     .line 89
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v1, v4}, Landroid/widget/Switch;->setChecked(Z)V
 
@@ -169,17 +169,17 @@
 
     const-string v2, "switch is off"
 
-    invoke-static {v1, v2}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 91
-    invoke-static {}, Lcom/android/settings/accessibility/notificationreminder/GlobalConstant;->isPersistantAlert()Z
+    invoke-static {}, Lcom/android/settings_ex/accessibility/notificationreminder/GlobalConstant;->isPersistantAlert()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
     .line 92
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -191,11 +191,11 @@
 
     .line 96
     :goto_3
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;->mContext:Landroid/content/Context;
 
     new-instance v2, Landroid/content/Intent;
 
-    sget-object v3, Lcom/android/settings/accessibility/notificationreminder/GlobalConstant;->INTENT_NOTIFICATION_STOP_SREVICE_ACTION:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/accessibility/notificationreminder/GlobalConstant;->INTENT_NOTIFICATION_STOP_SREVICE_ACTION:Ljava/lang/String;
 
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
@@ -207,7 +207,7 @@
 
     .line 94
     :cond_3
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -225,7 +225,7 @@
 
     const-string v2, "switch error"
 
-    invoke-static {v1, v2}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogE(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogE(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 .end method
@@ -235,7 +235,7 @@
 
     .prologue
     .line 43
-    iget-object v0, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;->mSwitch:Landroid/widget/Switch;
 
     const/4 v1, 0x0
 
@@ -256,14 +256,14 @@
     const/4 v3, 0x0
 
     .line 25
-    invoke-static {}, Lcom/android/settings/accessibility/notificationreminder/GlobalConstant;->isPersistantAlert()Z
+    invoke-static {}, Lcom/android/settings_ex/accessibility/notificationreminder/GlobalConstant;->isPersistantAlert()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 26
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -281,18 +281,18 @@
     if-ne v0, v4, :cond_1
 
     .line 32
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v1, v4}, Landroid/widget/Switch;->setEnabled(Z)V
 
     .line 33
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v1, v4}, Landroid/widget/Switch;->setChecked(Z)V
 
     .line 39
     :goto_1
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v1, p0}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
@@ -302,7 +302,7 @@
     .line 28
     .end local v0    # "notificationReminder_state":I
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -319,12 +319,12 @@
 
     .line 35
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v1, v3}, Landroid/widget/Switch;->setChecked(Z)V
 
     .line 36
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v1, v3}, Landroid/widget/Switch;->setEnabled(Z)V
 

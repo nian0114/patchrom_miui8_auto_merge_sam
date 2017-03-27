@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity$2;
+.class Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity$2;
 .super Ljava/lang/Object;
 .source "WifiMaliciousHotspotDetectionActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;
+    value = Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;)V
     .locals 0
 
     .prologue
     .line 89
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity$2;->this$0:Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity$2;->this$0:Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,16 +56,16 @@
     if-ne p2, v0, :cond_1
 
     .line 95
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity$2;->this$0:Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity$2;->this$0:Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;
 
-    # invokes: Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->handleDisconnect()V
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->access$000(Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->handleDisconnect()V
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->access$000(Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;)V
 
     .line 97
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity$2;->this$0:Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity$2;->this$0:Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->finish()V
 
     goto :goto_0
 .end method

@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settings/ApnSettings$10;
+.class synthetic Lcom/android/settings_ex/ApnSettings$10;
 .super Ljava/lang/Object;
 .source "ApnSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/ApnSettings;
+    value = Lcom/android/settings_ex/ApnSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -32,10 +32,10 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/settings/ApnSettings$10;->$SwitchMap$com$android$internal$telephony$PhoneConstants$DataState:[I
+    sput-object v0, Lcom/android/settings_ex/ApnSettings$10;->$SwitchMap$com$android$internal$telephony$PhoneConstants$DataState:[I
 
     :try_start_0
-    sget-object v0, Lcom/android/settings/ApnSettings$10;->$SwitchMap$com$android$internal$telephony$PhoneConstants$DataState:[I
+    sget-object v0, Lcom/android/settings_ex/ApnSettings$10;->$SwitchMap$com$android$internal$telephony$PhoneConstants$DataState:[I
 
     sget-object v1, Lcom/android/internal/telephony/PhoneConstants$DataState;->CONNECTED:Lcom/android/internal/telephony/PhoneConstants$DataState;
 

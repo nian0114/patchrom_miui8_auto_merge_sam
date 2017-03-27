@@ -7,7 +7,7 @@
     <Preference android:title="@string/roaming_select_roaming_network_lgt" android:key="button_network_settings">
         <intent android:action="android.settings.NETWORK_OPERATOR_SETTINGS" />
     </Preference>
-    <PreferenceScreen android:title="@string/roaming_setting_env_lgt" android:key="button_roaming_env" android:fragment="com.android.settings.LGTRoamingEnv" />
+    <PreferenceScreen android:title="@string/roaming_setting_env_lgt" android:key="button_roaming_env" android:fragment="com.android.settings_ex.LGTRoamingEnv" />
     <Preference android:title="@string/roaming_additional_service" android:key="button_add_service" android:summary="@string/roaming_additional_service_summary" />
     <Preference android:title="@string/lgt_service_global_auto_roaming_call_customcenter" android:key="button_direct_call_customer_service" android:summary="@string/lgt_service_global_auto_roaming_call_customcenter_summary" />
 </PreferenceScreen>

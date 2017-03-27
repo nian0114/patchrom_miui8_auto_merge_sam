@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom$2;
+.class Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom$2;
 .super Ljava/lang/Object;
 .source "ToggleMagnifierPreferenceFragment.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;->onLongClick(Landroid/view/View;)Z
+    value = Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;->onLongClick(Landroid/view/View;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;
+.field final synthetic this$1:Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;
 
 .field final synthetic val$defaultProgress:I
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;I)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;I)V
     .locals 0
 
     .prologue
     .line 989
-    iput-object p1, p0, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom$2;->this$1:Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom$2;->this$1:Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;
 
-    iput p2, p0, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom$2;->val$defaultProgress:I
+    iput p2, p0, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom$2;->val$defaultProgress:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,14 +45,14 @@
 
     .prologue
     .line 991
-    iget v1, p0, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom$2;->val$defaultProgress:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom$2;->val$defaultProgress:I
 
     .line 992
     .local v1, "progressValue":I
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom$2;->this$1:Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom$2;->this$1:Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;
 
-    iget-boolean v2, v2, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;->mIsLongkeyProcessing:Z
+    iget-boolean v2, v2, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;->mIsLongkeyProcessing:Z
 
     if-eqz v2, :cond_0
 
@@ -64,11 +64,11 @@
     add-int/lit8 v1, v1, 0x1
 
     .line 994
-    iget-object v2, p0, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom$2;->this$1:Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom$2;->this$1:Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;
 
-    iget-object v2, v2, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;->this$0:Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;
+    iget-object v2, v2, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;->this$0:Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;
 
-    invoke-virtual {v2}, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -81,10 +81,10 @@
     invoke-static {v2, v3, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 997
-    iget-object v2, p0, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom$2;->this$1:Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom$2;->this$1:Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;
 
-    # getter for: Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;->mSeekBar:Landroid/widget/SeekBar;
-    invoke-static {v2}, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;->access$1000(Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;)Landroid/widget/SeekBar;
+    # getter for: Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;->mSeekBar:Landroid/widget/SeekBar;
+    invoke-static {v2}, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;->access$1000(Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageZoom;)Landroid/widget/SeekBar;
 
     move-result-object v2
 

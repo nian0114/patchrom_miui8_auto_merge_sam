@@ -1,11 +1,11 @@
-.class Lcom/android/settings/applock/PackageInfoUtil$PackageUtilHolder;
+.class Lcom/android/settings_ex/applock/PackageInfoUtil$PackageUtilHolder;
 .super Ljava/lang/Object;
 .source "PackageInfoUtil.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applock/PackageInfoUtil;
+    value = Lcom/android/settings_ex/applock/PackageInfoUtil;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 
 # static fields
-.field private static final INSTANCE:Lcom/android/settings/applock/PackageInfoUtil;
+.field private static final INSTANCE:Lcom/android/settings_ex/applock/PackageInfoUtil;
 
 
 # direct methods
@@ -24,23 +24,23 @@
 
     .prologue
     .line 57
-    new-instance v0, Lcom/android/settings/applock/PackageInfoUtil;
+    new-instance v0, Lcom/android/settings_ex/applock/PackageInfoUtil;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/android/settings/applock/PackageInfoUtil;-><init>(Lcom/android/settings/applock/PackageInfoUtil$1;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/applock/PackageInfoUtil;-><init>(Lcom/android/settings_ex/applock/PackageInfoUtil$1;)V
 
-    sput-object v0, Lcom/android/settings/applock/PackageInfoUtil$PackageUtilHolder;->INSTANCE:Lcom/android/settings/applock/PackageInfoUtil;
+    sput-object v0, Lcom/android/settings_ex/applock/PackageInfoUtil$PackageUtilHolder;->INSTANCE:Lcom/android/settings_ex/applock/PackageInfoUtil;
 
     return-void
 .end method
 
-.method static synthetic access$000()Lcom/android/settings/applock/PackageInfoUtil;
+.method static synthetic access$000()Lcom/android/settings_ex/applock/PackageInfoUtil;
     .locals 1
 
     .prologue
     .line 56
-    sget-object v0, Lcom/android/settings/applock/PackageInfoUtil$PackageUtilHolder;->INSTANCE:Lcom/android/settings/applock/PackageInfoUtil;
+    sget-object v0, Lcom/android/settings_ex/applock/PackageInfoUtil$PackageUtilHolder;->INSTANCE:Lcom/android/settings_ex/applock/PackageInfoUtil;
 
     return-object v0
 .end method

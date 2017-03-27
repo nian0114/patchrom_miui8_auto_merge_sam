@@ -1,4 +1,4 @@
-.class Lcom/android/settings/SettingsActivity$13;
+.class Lcom/android/settings_ex/SettingsActivity$13;
 .super Ljava/lang/Object;
 .source "SettingsActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/SettingsActivity;->centerTabItem(I)V
+    value = Lcom/android/settings_ex/SettingsActivity;->centerTabItem(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/SettingsActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/SettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/SettingsActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/SettingsActivity;)V
     .locals 0
 
     .prologue
     .line 1462
-    iput-object p1, p0, Lcom/android/settings/SettingsActivity$13;->this$0:Lcom/android/settings/SettingsActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/SettingsActivity$13;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,10 +41,10 @@
 
     .prologue
     .line 1465
-    iget-object v4, p0, Lcom/android/settings/SettingsActivity$13;->this$0:Lcom/android/settings/SettingsActivity;
+    iget-object v4, p0, Lcom/android/settings_ex/SettingsActivity$13;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
-    # getter for: Lcom/android/settings/SettingsActivity;->mTabHost:Landroid/widget/TabHost;
-    invoke-static {v4}, Lcom/android/settings/SettingsActivity;->access$1000(Lcom/android/settings/SettingsActivity;)Landroid/widget/TabHost;
+    # getter for: Lcom/android/settings_ex/SettingsActivity;->mTabHost:Landroid/widget/TabHost;
+    invoke-static {v4}, Lcom/android/settings_ex/SettingsActivity;->access$1000(Lcom/android/settings_ex/SettingsActivity;)Landroid/widget/TabHost;
 
     move-result-object v4
 
@@ -54,9 +54,9 @@
 
     .line 1466
     .local v3, "tabWidget":Landroid/widget/TabWidget;
-    iget-object v4, p0, Lcom/android/settings/SettingsActivity$13;->this$0:Lcom/android/settings/SettingsActivity;
+    iget-object v4, p0, Lcom/android/settings_ex/SettingsActivity$13;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
-    invoke-virtual {v4}, Lcom/android/settings/SettingsActivity;->getWindowManager()Landroid/view/WindowManager;
+    invoke-virtual {v4}, Lcom/android/settings_ex/SettingsActivity;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v4
 
@@ -70,10 +70,10 @@
 
     .line 1467
     .local v2, "screenWidth":I
-    iget-object v4, p0, Lcom/android/settings/SettingsActivity$13;->this$0:Lcom/android/settings/SettingsActivity;
+    iget-object v4, p0, Lcom/android/settings_ex/SettingsActivity$13;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
-    # getter for: Lcom/android/settings/SettingsActivity;->tabIndex:I
-    invoke-static {v4}, Lcom/android/settings/SettingsActivity;->access$1100(Lcom/android/settings/SettingsActivity;)I
+    # getter for: Lcom/android/settings_ex/SettingsActivity;->tabIndex:I
+    invoke-static {v4}, Lcom/android/settings_ex/SettingsActivity;->access$1100(Lcom/android/settings_ex/SettingsActivity;)I
 
     move-result v4
 
@@ -91,10 +91,10 @@
 
     .line 1469
     .local v1, "newX":I
-    iget-object v4, p0, Lcom/android/settings/SettingsActivity$13;->this$0:Lcom/android/settings/SettingsActivity;
+    iget-object v4, p0, Lcom/android/settings_ex/SettingsActivity$13;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
-    # getter for: Lcom/android/settings/SettingsActivity;->tabIndex:I
-    invoke-static {v4}, Lcom/android/settings/SettingsActivity;->access$1100(Lcom/android/settings/SettingsActivity;)I
+    # getter for: Lcom/android/settings_ex/SettingsActivity;->tabIndex:I
+    invoke-static {v4}, Lcom/android/settings_ex/SettingsActivity;->access$1100(Lcom/android/settings_ex/SettingsActivity;)I
 
     move-result v4
 
@@ -122,9 +122,9 @@
 
     .line 1473
     :cond_0
-    iget-object v4, p0, Lcom/android/settings/SettingsActivity$13;->this$0:Lcom/android/settings/SettingsActivity;
+    iget-object v4, p0, Lcom/android/settings_ex/SettingsActivity$13;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
-    invoke-virtual {v4, v1}, Lcom/android/settings/SettingsActivity;->ScrollHorizontalScrollView(I)V
+    invoke-virtual {v4, v1}, Lcom/android/settings_ex/SettingsActivity;->ScrollHorizontalScrollView(I)V
 
     .line 1474
     return-void

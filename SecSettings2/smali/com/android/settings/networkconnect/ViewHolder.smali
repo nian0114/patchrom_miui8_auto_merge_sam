@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/networkconnect/ViewHolder;
+.class public Lcom/android/settings_ex/networkconnect/ViewHolder;
 .super Ljava/lang/Object;
 .source "ViewHolder.java"
 
@@ -9,13 +9,13 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/networkconnect/ViewHolder$OnCheckedListener;
+        Lcom/android/settings_ex/networkconnect/ViewHolder$OnCheckedListener;
     }
 .end annotation
 
 
 # instance fields
-.field private L:Lcom/android/settings/networkconnect/ViewHolder$OnCheckedListener;
+.field private L:Lcom/android/settings_ex/networkconnect/ViewHolder$OnCheckedListener;
 
 .field public dataUsageText:Landroid/widget/TextView;
 
@@ -31,10 +31,10 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/android/settings/networkconnect/ViewHolder$OnCheckedListener;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/android/settings_ex/networkconnect/ViewHolder$OnCheckedListener;)V
     .locals 1
     .param p1, "context"    # Landroid/content/Context;
-    .param p2, "l"    # Lcom/android/settings/networkconnect/ViewHolder$OnCheckedListener;
+    .param p2, "l"    # Lcom/android/settings_ex/networkconnect/ViewHolder$OnCheckedListener;
 
     .prologue
     .line 38
@@ -45,10 +45,10 @@
 
     new-array v0, v0, [Landroid/widget/CheckBox;
 
-    iput-object v0, p0, Lcom/android/settings/networkconnect/ViewHolder;->toggle:[Landroid/widget/CheckBox;
+    iput-object v0, p0, Lcom/android/settings_ex/networkconnect/ViewHolder;->toggle:[Landroid/widget/CheckBox;
 
     .line 39
-    iput-object p2, p0, Lcom/android/settings/networkconnect/ViewHolder;->L:Lcom/android/settings/networkconnect/ViewHolder$OnCheckedListener;
+    iput-object p2, p0, Lcom/android/settings_ex/networkconnect/ViewHolder;->L:Lcom/android/settings_ex/networkconnect/ViewHolder$OnCheckedListener;
 
     .line 40
     return-void
@@ -63,9 +63,9 @@
 
     .prologue
     .line 52
-    iget-object v1, p0, Lcom/android/settings/networkconnect/ViewHolder;->L:Lcom/android/settings/networkconnect/ViewHolder$OnCheckedListener;
+    iget-object v1, p0, Lcom/android/settings_ex/networkconnect/ViewHolder;->L:Lcom/android/settings_ex/networkconnect/ViewHolder$OnCheckedListener;
 
-    iget v2, p0, Lcom/android/settings/networkconnect/ViewHolder;->postion:I
+    iget v2, p0, Lcom/android/settings_ex/networkconnect/ViewHolder;->postion:I
 
     invoke-virtual {p1}, Landroid/widget/CompoundButton;->getTag()Ljava/lang/Object;
 
@@ -77,7 +77,7 @@
 
     move-result v0
 
-    invoke-interface {v1, v2, v0, p2}, Lcom/android/settings/networkconnect/ViewHolder$OnCheckedListener;->onChecked(IIZ)V
+    invoke-interface {v1, v2, v0, p2}, Lcom/android/settings_ex/networkconnect/ViewHolder$OnCheckedListener;->onChecked(IIZ)V
 
     .line 53
     return-void
@@ -90,7 +90,7 @@
 
     .prologue
     .line 43
-    iget-object v0, p0, Lcom/android/settings/networkconnect/ViewHolder;->toggle:[Landroid/widget/CheckBox;
+    iget-object v0, p0, Lcom/android/settings_ex/networkconnect/ViewHolder;->toggle:[Landroid/widget/CheckBox;
 
     aget-object v0, v0, p1
 
@@ -106,7 +106,7 @@
 
     .prologue
     .line 47
-    iput p1, p0, Lcom/android/settings/networkconnect/ViewHolder;->postion:I
+    iput p1, p0, Lcom/android/settings_ex/networkconnect/ViewHolder;->postion:I
 
     .line 48
     return-void

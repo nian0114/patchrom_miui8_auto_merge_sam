@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/wifi/VI/AnimationHelperWifi$1;
+.class final Lcom/android/settings_ex/wifi/VI/AnimationHelperWifi$1;
 .super Ljava/lang/Object;
 .source "AnimationHelperWifi.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/VI/AnimationHelperWifi;->animTitleFromRight(Landroid/view/View;JJ)V
+    value = Lcom/android/settings_ex/wifi/VI/AnimationHelperWifi;->animTitleFromRight(Landroid/view/View;JJ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
 
     .prologue
     .line 33
-    iput-object p1, p0, Lcom/android/settings/wifi/VI/AnimationHelperWifi$1;->val$view:Landroid/view/View;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/VI/AnimationHelperWifi$1;->val$view:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -70,12 +70,12 @@
 
     .line 47
     .local v1, "trans_current":F
-    iget-object v2, p0, Lcom/android/settings/wifi/VI/AnimationHelperWifi$1;->val$view:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/VI/AnimationHelperWifi$1;->val$view:Landroid/view/View;
 
     invoke-virtual {v2, v0}, Landroid/view/View;->setAlpha(F)V
 
     .line 49
-    iget-object v2, p0, Lcom/android/settings/wifi/VI/AnimationHelperWifi$1;->val$view:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/VI/AnimationHelperWifi$1;->val$view:Landroid/view/View;
 
     invoke-virtual {v2, v1}, Landroid/view/View;->setTranslationX(F)V
 

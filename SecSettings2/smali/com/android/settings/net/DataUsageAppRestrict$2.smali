@@ -1,4 +1,4 @@
-.class Lcom/android/settings/net/DataUsageAppRestrict$2;
+.class Lcom/android/settings_ex/net/DataUsageAppRestrict$2;
 .super Ljava/lang/Object;
 .source "DataUsageAppRestrict.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/net/DataUsageAppRestrict;->setRestrictBackground(Z)V
+    value = Lcom/android/settings_ex/net/DataUsageAppRestrict;->setRestrictBackground(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/net/DataUsageAppRestrict;
+.field final synthetic this$0:Lcom/android/settings_ex/net/DataUsageAppRestrict;
 
 .field final synthetic val$context:Landroid/content/Context;
 
@@ -26,16 +26,16 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/net/DataUsageAppRestrict;ZLandroid/content/Context;)V
+.method constructor <init>(Lcom/android/settings_ex/net/DataUsageAppRestrict;ZLandroid/content/Context;)V
     .locals 0
 
     .prologue
     .line 368
-    iput-object p1, p0, Lcom/android/settings/net/DataUsageAppRestrict$2;->this$0:Lcom/android/settings/net/DataUsageAppRestrict;
+    iput-object p1, p0, Lcom/android/settings_ex/net/DataUsageAppRestrict$2;->this$0:Lcom/android/settings_ex/net/DataUsageAppRestrict;
 
-    iput-boolean p2, p0, Lcom/android/settings/net/DataUsageAppRestrict$2;->val$mRestrictBackground:Z
+    iput-boolean p2, p0, Lcom/android/settings_ex/net/DataUsageAppRestrict$2;->val$mRestrictBackground:Z
 
-    iput-object p3, p0, Lcom/android/settings/net/DataUsageAppRestrict$2;->val$context:Landroid/content/Context;
+    iput-object p3, p0, Lcom/android/settings_ex/net/DataUsageAppRestrict$2;->val$context:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,22 +49,22 @@
 
     .prologue
     .line 370
-    iget-object v1, p0, Lcom/android/settings/net/DataUsageAppRestrict$2;->this$0:Lcom/android/settings/net/DataUsageAppRestrict;
+    iget-object v1, p0, Lcom/android/settings_ex/net/DataUsageAppRestrict$2;->this$0:Lcom/android/settings_ex/net/DataUsageAppRestrict;
 
-    # getter for: Lcom/android/settings/net/DataUsageAppRestrict;->mPolicyManager:Landroid/net/NetworkPolicyManager;
-    invoke-static {v1}, Lcom/android/settings/net/DataUsageAppRestrict;->access$000(Lcom/android/settings/net/DataUsageAppRestrict;)Landroid/net/NetworkPolicyManager;
+    # getter for: Lcom/android/settings_ex/net/DataUsageAppRestrict;->mPolicyManager:Landroid/net/NetworkPolicyManager;
+    invoke-static {v1}, Lcom/android/settings_ex/net/DataUsageAppRestrict;->access$000(Lcom/android/settings_ex/net/DataUsageAppRestrict;)Landroid/net/NetworkPolicyManager;
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcom/android/settings/net/DataUsageAppRestrict$2;->val$mRestrictBackground:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/net/DataUsageAppRestrict$2;->val$mRestrictBackground:Z
 
     invoke-virtual {v1, v2}, Landroid/net/NetworkPolicyManager;->setRestrictBackground(Z)V
 
     .line 371
-    iget-object v1, p0, Lcom/android/settings/net/DataUsageAppRestrict$2;->this$0:Lcom/android/settings/net/DataUsageAppRestrict;
+    iget-object v1, p0, Lcom/android/settings_ex/net/DataUsageAppRestrict$2;->this$0:Lcom/android/settings_ex/net/DataUsageAppRestrict;
 
-    # getter for: Lcom/android/settings/net/DataUsageAppRestrict;->handler_loading:Landroid/os/Handler;
-    invoke-static {v1}, Lcom/android/settings/net/DataUsageAppRestrict;->access$300(Lcom/android/settings/net/DataUsageAppRestrict;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/net/DataUsageAppRestrict;->handler_loading:Landroid/os/Handler;
+    invoke-static {v1}, Lcom/android/settings_ex/net/DataUsageAppRestrict;->access$300(Lcom/android/settings_ex/net/DataUsageAppRestrict;)Landroid/os/Handler;
 
     move-result-object v1
 
@@ -86,7 +86,7 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 374
-    iget-object v1, p0, Lcom/android/settings/net/DataUsageAppRestrict$2;->val$context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/net/DataUsageAppRestrict$2;->val$context:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 

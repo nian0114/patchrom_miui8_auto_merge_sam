@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/nfc/NfcSettings$2;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/nfc/NfcSettings$2;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "NfcSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/nfc/NfcSettings;
+    value = Lcom/android/settings_ex/nfc/NfcSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 330
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -50,7 +50,7 @@
 
     .line 342
     .local v0, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
-    invoke-static {}, Lcom/android/settings/nfc/NfcSettings;->isSupportRWP2p()Z
+    invoke-static {}, Lcom/android/settings_ex/nfc/NfcSettings;->isSupportRWP2p()Z
 
     move-result v1
 
@@ -97,7 +97,7 @@
 
     .line 334
     .local v0, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v1, Lcom/android/settings/nfc/NfcSettings;
+    const-class v1, Lcom/android/settings_ex/nfc/NfcSettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

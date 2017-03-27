@@ -1,4 +1,4 @@
-.class Lcom/android/settings/TRoamingSettings$AirPlaneModeFragment$1;
+.class Lcom/android/settings_ex/TRoamingSettings$AirPlaneModeFragment$1;
 .super Ljava/lang/Object;
 .source "TRoamingSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/TRoamingSettings$AirPlaneModeFragment;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/TRoamingSettings$AirPlaneModeFragment;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/TRoamingSettings$AirPlaneModeFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/TRoamingSettings$AirPlaneModeFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/TRoamingSettings$AirPlaneModeFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/TRoamingSettings$AirPlaneModeFragment;)V
     .locals 0
 
     .prologue
     .line 667
-    iput-object p1, p0, Lcom/android/settings/TRoamingSettings$AirPlaneModeFragment$1;->this$0:Lcom/android/settings/TRoamingSettings$AirPlaneModeFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/TRoamingSettings$AirPlaneModeFragment$1;->this$0:Lcom/android/settings_ex/TRoamingSettings$AirPlaneModeFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,15 +43,15 @@
 
     .prologue
     .line 669
-    iget-object v1, p0, Lcom/android/settings/TRoamingSettings$AirPlaneModeFragment$1;->this$0:Lcom/android/settings/TRoamingSettings$AirPlaneModeFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/TRoamingSettings$AirPlaneModeFragment$1;->this$0:Lcom/android/settings_ex/TRoamingSettings$AirPlaneModeFragment;
 
-    invoke-virtual {v1}, Lcom/android/settings/TRoamingSettings$AirPlaneModeFragment;->getTargetFragment()Landroid/app/Fragment;
+    invoke-virtual {v1}, Lcom/android/settings_ex/TRoamingSettings$AirPlaneModeFragment;->getTargetFragment()Landroid/app/Fragment;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/TRoamingSettings;
+    check-cast v0, Lcom/android/settings_ex/TRoamingSettings;
 
     .line 670
-    .local v0, "target":Lcom/android/settings/TRoamingSettings;
+    .local v0, "target":Lcom/android/settings_ex/TRoamingSettings;
     return-void
 .end method

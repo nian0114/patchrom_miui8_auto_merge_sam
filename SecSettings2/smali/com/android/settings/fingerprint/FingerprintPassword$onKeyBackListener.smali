@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/fingerprint/FingerprintPassword$onKeyBackListener;
+.class public interface abstract Lcom/android/settings_ex/fingerprint/FingerprintPassword$onKeyBackListener;
 .super Ljava/lang/Object;
 .source "FingerprintPassword.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fingerprint/FingerprintPassword;
+    value = Lcom/android/settings_ex/fingerprint/FingerprintPassword;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/applications/ProcessStatsUi$1;
+.class final Lcom/android/settings_ex/applications/ProcessStatsUi$1;
 .super Ljava/lang/Object;
 .source "ProcessStatsUi.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/ProcessStatsUi;
+    value = Lcom/android/settings_ex/applications/ProcessStatsUi;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Ljava/util/Comparator",
         "<",
-        "Lcom/android/settings/applications/ProcStatsPackageEntry;",
+        "Lcom/android/settings_ex/applications/ProcStatsPackageEntry;",
         ">;"
     }
 .end annotation
@@ -40,16 +40,16 @@
 
 
 # virtual methods
-.method public compare(Lcom/android/settings/applications/ProcStatsPackageEntry;Lcom/android/settings/applications/ProcStatsPackageEntry;)I
+.method public compare(Lcom/android/settings_ex/applications/ProcStatsPackageEntry;Lcom/android/settings_ex/applications/ProcStatsPackageEntry;)I
     .locals 8
-    .param p1, "lhs"    # Lcom/android/settings/applications/ProcStatsPackageEntry;
-    .param p2, "rhs"    # Lcom/android/settings/applications/ProcStatsPackageEntry;
+    .param p1, "lhs"    # Lcom/android/settings_ex/applications/ProcStatsPackageEntry;
+    .param p2, "rhs"    # Lcom/android/settings_ex/applications/ProcStatsPackageEntry;
 
     .prologue
     .line 188
-    iget-wide v4, p2, Lcom/android/settings/applications/ProcStatsPackageEntry;->mRunWeight:D
+    iget-wide v4, p2, Lcom/android/settings_ex/applications/ProcStatsPackageEntry;->mRunWeight:D
 
-    iget-wide v6, p2, Lcom/android/settings/applications/ProcStatsPackageEntry;->mBgWeight:D
+    iget-wide v6, p2, Lcom/android/settings_ex/applications/ProcStatsPackageEntry;->mBgWeight:D
 
     invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->max(DD)D
 
@@ -57,9 +57,9 @@
 
     .line 189
     .local v2, "rhsWeight":D
-    iget-wide v4, p1, Lcom/android/settings/applications/ProcStatsPackageEntry;->mRunWeight:D
+    iget-wide v4, p1, Lcom/android/settings_ex/applications/ProcStatsPackageEntry;->mRunWeight:D
 
-    iget-wide v6, p1, Lcom/android/settings/applications/ProcStatsPackageEntry;->mBgWeight:D
+    iget-wide v6, p1, Lcom/android/settings_ex/applications/ProcStatsPackageEntry;->mBgWeight:D
 
     invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->max(DD)D
 
@@ -100,13 +100,13 @@
 
     .prologue
     .line 185
-    check-cast p1, Lcom/android/settings/applications/ProcStatsPackageEntry;
+    check-cast p1, Lcom/android/settings_ex/applications/ProcStatsPackageEntry;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    check-cast p2, Lcom/android/settings/applications/ProcStatsPackageEntry;
+    check-cast p2, Lcom/android/settings_ex/applications/ProcStatsPackageEntry;
 
     .end local p2    # "x1":Ljava/lang/Object;
-    invoke-virtual {p0, p1, p2}, Lcom/android/settings/applications/ProcessStatsUi$1;->compare(Lcom/android/settings/applications/ProcStatsPackageEntry;Lcom/android/settings/applications/ProcStatsPackageEntry;)I
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings_ex/applications/ProcessStatsUi$1;->compare(Lcom/android/settings_ex/applications/ProcStatsPackageEntry;Lcom/android/settings_ex/applications/ProcStatsPackageEntry;)I
 
     move-result v0
 

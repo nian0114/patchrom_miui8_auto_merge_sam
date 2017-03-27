@@ -13,7 +13,7 @@
     </RelativeLayout>
     <com.android.internal.widget.DirectionLockView android:id="@id/directionLockView" android:background="@color/settings_universal_lock_view_background" android:focusable="true" android:layout_width="fill_parent" android:layout_height="@dimen/choose_lock_universal_direction_view_height" android:layout_above="@id/footer_layout" android:layout_centerHorizontal="true" />
     <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/footer_layout" android:layout_width="fill_parent" android:layout_height="@dimen/choose_lock_universal_footer_height" android:layout_alignParentBottom="true" style="@style/SecurityPreferenceButtonContainer">
-        <com.android.settings.widget.BottomBarButton android:id="@id/left_button" android:text="@string/direction_reset" style="@style/SecurityPreferenceButton" />
-        <com.android.settings.widget.BottomBarButton android:id="@id/right_button" android:text="@string/direction_continue_string_display" style="@style/SecurityPreferenceButton" />
+        <com.android.settings_ex.widget.BottomBarButton android:id="@id/left_button" android:text="@string/direction_reset" style="@style/SecurityPreferenceButton" />
+        <com.android.settings_ex.widget.BottomBarButton android:id="@id/right_button" android:text="@string/direction_continue_string_display" style="@style/SecurityPreferenceButton" />
     </LinearLayout>
 </RelativeLayout>

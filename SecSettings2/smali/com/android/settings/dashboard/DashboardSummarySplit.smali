@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/dashboard/DashboardSummarySplit;
-.super Lcom/android/settings/InstrumentedFragment;
+.class public Lcom/android/settings_ex/dashboard/DashboardSummarySplit;
+.super Lcom/android/settings_ex/InstrumentedFragment;
 .source "DashboardSummarySplit.java"
 
 # interfaces
@@ -27,7 +27,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/dashboard/DashboardTileView;",
+            "Lcom/android/settings_ex/dashboard/DashboardTileView;",
             ">;"
         }
     .end annotation
@@ -51,7 +51,7 @@
 
 .field private mPrefsContainer:Landroid/view/ViewGroup;
 
-.field private mPrevTileView:Lcom/android/settings/dashboard/DashboardTileView;
+.field private mPrevTileView:Lcom/android/settings_ex/dashboard/DashboardTileView;
 
 .field private mSearchMenuItem:Landroid/view/MenuItem;
 
@@ -59,7 +59,7 @@
 
 .field private mSplitBarView:Landroid/view/View;
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 .field private mUpdateLayoutBySplitChange:Z
 
@@ -74,12 +74,12 @@
     .line 116
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUserUpdateSplit:Z
+    sput-boolean v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUserUpdateSplit:Z
 
     .line 118
     const/high16 v0, -0x40800000    # -1.0f
 
-    sput v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarMovedLeftWeight:F
+    sput v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarMovedLeftWeight:F
 
     return-void
 .end method
@@ -91,115 +91,115 @@
     const/4 v2, 0x0
 
     .line 86
-    invoke-direct {p0}, Lcom/android/settings/InstrumentedFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/InstrumentedFragment;-><init>()V
 
     .line 108
-    iput-boolean v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
 
     .line 110
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarLayoutChangeListner:Landroid/view/View$OnLayoutChangeListener;
+    iput-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarLayoutChangeListner:Landroid/view/View$OnLayoutChangeListener;
 
     .line 124
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mArrayTileView:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mArrayTileView:Ljava/util/ArrayList;
 
     .line 134
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->InitialDashboardId:J
+    iput-wide v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->InitialDashboardId:J
 
     .line 136
-    iput v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->tilesCount:I
+    iput v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->tilesCount:I
 
     .line 143
-    new-instance v0, Lcom/android/settings/dashboard/DashboardSummarySplit$1;
+    new-instance v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/dashboard/DashboardSummarySplit$1;-><init>(Lcom/android/settings/dashboard/DashboardSummarySplit;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$1;-><init>(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;)V
 
-    iput-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mHandler:Landroid/os/Handler;
 
     .line 156
-    new-instance v0, Lcom/android/settings/dashboard/DashboardSummarySplit$2;
+    new-instance v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$2;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/dashboard/DashboardSummarySplit$2;-><init>(Lcom/android/settings/dashboard/DashboardSummarySplit;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$2;-><init>(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mAirplaneObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mAirplaneObserver:Landroid/database/ContentObserver;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/dashboard/DashboardSummarySplit;Landroid/content/Context;)V
+.method static synthetic access$000(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;Landroid/content/Context;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/dashboard/DashboardSummarySplit;
+    .param p0, "x0"    # Lcom/android/settings_ex/dashboard/DashboardSummarySplit;
     .param p1, "x1"    # Landroid/content/Context;
 
     .prologue
     .line 86
-    invoke-direct {p0, p1}, Lcom/android/settings/dashboard/DashboardSummarySplit;->rebuildUI(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->rebuildUI(Landroid/content/Context;)V
 
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/dashboard/DashboardSummarySplit;)Lcom/android/settings/dashboard/DashboardTileView;
+.method static synthetic access$100(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;)Lcom/android/settings_ex/dashboard/DashboardTileView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/dashboard/DashboardSummarySplit;
+    .param p0, "x0"    # Lcom/android/settings_ex/dashboard/DashboardSummarySplit;
 
     .prologue
     .line 86
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPrevTileView:Lcom/android/settings/dashboard/DashboardTileView;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPrevTileView:Lcom/android/settings_ex/dashboard/DashboardTileView;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/dashboard/DashboardSummarySplit;)Landroid/os/Handler;
+.method static synthetic access$200(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/dashboard/DashboardSummarySplit;
+    .param p0, "x0"    # Lcom/android/settings_ex/dashboard/DashboardSummarySplit;
 
     .prologue
     .line 86
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/dashboard/DashboardSummarySplit;)Landroid/widget/LinearLayout;
+.method static synthetic access$300(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;)Landroid/widget/LinearLayout;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/dashboard/DashboardSummarySplit;
+    .param p0, "x0"    # Lcom/android/settings_ex/dashboard/DashboardSummarySplit;
 
     .prologue
     .line 86
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mHeaderLayout:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mHeaderLayout:Landroid/widget/LinearLayout;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/dashboard/DashboardSummarySplit;)Landroid/view/ViewGroup;
+.method static synthetic access$400(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;)Landroid/view/ViewGroup;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/dashboard/DashboardSummarySplit;
+    .param p0, "x0"    # Lcom/android/settings_ex/dashboard/DashboardSummarySplit;
 
     .prologue
     .line 86
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/dashboard/DashboardSummarySplit;)Landroid/view/View;
+.method static synthetic access$500(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;)Landroid/view/View;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/dashboard/DashboardSummarySplit;
+    .param p0, "x0"    # Lcom/android/settings_ex/dashboard/DashboardSummarySplit;
 
     .prologue
     .line 86
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     return-object v0
 .end method
@@ -214,7 +214,7 @@
 
     .local v2, "i":I
     :goto_0
-    iget-object v4, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mArrayTileView:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mArrayTileView:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
@@ -227,28 +227,28 @@
 
     .line 986
     .local v0, "DashboardRank":I
-    iget-object v4, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mArrayTileView:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mArrayTileView:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/dashboard/DashboardTileView;
+    check-cast v4, Lcom/android/settings_ex/dashboard/DashboardTileView;
 
-    invoke-virtual {v4}, Lcom/android/settings/dashboard/DashboardTileView;->getTile()Lcom/android/settings/dashboard/DashboardTile;
+    invoke-virtual {v4}, Lcom/android/settings_ex/dashboard/DashboardTileView;->getTile()Lcom/android/settings_ex/dashboard/DashboardTile;
 
     move-result-object v1
 
     .line 987
-    .local v1, "dashboardTile":Lcom/android/settings/dashboard/DashboardTile;
-    iget-object v4, v1, Lcom/android/settings/dashboard/DashboardTile;->fragment:Ljava/lang/String;
+    .local v1, "dashboardTile":Lcom/android/settings_ex/dashboard/DashboardTile;
+    iget-object v4, v1, Lcom/android/settings_ex/dashboard/DashboardTile;->fragment:Ljava/lang/String;
 
     if-eqz v4, :cond_1
 
     .line 988
-    iget-object v4, v1, Lcom/android/settings/dashboard/DashboardTile;->fragment:Ljava/lang/String;
+    iget-object v4, v1, Lcom/android/settings_ex/dashboard/DashboardTile;->fragment:Ljava/lang/String;
 
-    invoke-static {v4}, Lcom/android/settings/search/Ranking;->getRankForClassName(Ljava/lang/String;)I
+    invoke-static {v4}, Lcom/android/settings_ex/search/Ranking;->getRankForClassName(Ljava/lang/String;)I
 
     move-result v0
 
@@ -258,36 +258,36 @@
     if-ne v0, p1, :cond_2
 
     .line 995
-    iget-wide v4, v1, Lcom/android/settings/dashboard/DashboardTile;->id:J
+    iget-wide v4, v1, Lcom/android/settings_ex/dashboard/DashboardTile;->id:J
 
     .line 998
     .end local v0    # "DashboardRank":I
-    .end local v1    # "dashboardTile":Lcom/android/settings/dashboard/DashboardTile;
+    .end local v1    # "dashboardTile":Lcom/android/settings_ex/dashboard/DashboardTile;
     :goto_2
     return-wide v4
 
     .line 989
     .restart local v0    # "DashboardRank":I
-    .restart local v1    # "dashboardTile":Lcom/android/settings/dashboard/DashboardTile;
+    .restart local v1    # "dashboardTile":Lcom/android/settings_ex/dashboard/DashboardTile;
     :cond_1
-    iget-object v4, v1, Lcom/android/settings/dashboard/DashboardTile;->intent:Landroid/content/Intent;
+    iget-object v4, v1, Lcom/android/settings_ex/dashboard/DashboardTile;->intent:Landroid/content/Intent;
 
     if-eqz v4, :cond_0
 
     .line 990
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    iget-object v5, v1, Lcom/android/settings/dashboard/DashboardTile;->intent:Landroid/content/Intent;
+    iget-object v5, v1, Lcom/android/settings_ex/dashboard/DashboardTile;->intent:Landroid/content/Intent;
 
-    invoke-static {v4, v5}, Lcom/android/settings/Utils;->getTargetPkgByIntent(Landroid/content/Context;Landroid/content/Intent;)Ljava/lang/String;
+    invoke-static {v4, v5}, Lcom/android/settings_ex/Utils;->getTargetPkgByIntent(Landroid/content/Context;Landroid/content/Intent;)Ljava/lang/String;
 
     move-result-object v3
 
     .line 991
     .local v3, "targetPkg":Ljava/lang/String;
-    invoke-static {v3}, Lcom/android/settings/search/Ranking;->getRankForClassName(Ljava/lang/String;)I
+    invoke-static {v3}, Lcom/android/settings_ex/search/Ranking;->getRankForClassName(Ljava/lang/String;)I
 
     move-result v0
 
@@ -302,7 +302,7 @@
 
     .line 998
     .end local v0    # "DashboardRank":I
-    .end local v1    # "dashboardTile":Lcom/android/settings/dashboard/DashboardTile;
+    .end local v1    # "dashboardTile":Lcom/android/settings_ex/dashboard/DashboardTile;
     :cond_3
     const-wide/16 v4, 0x0
 
@@ -314,12 +314,12 @@
 
     .prologue
     .line 463
-    iget-object v7, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v7, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     if-eqz v7, :cond_0
 
     .line 464
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mHeaderLayout:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mHeaderLayout:Landroid/widget/LinearLayout;
 
     .line 465
     .local v0, "headerLayout":Landroid/widget/LinearLayout;
@@ -331,7 +331,7 @@
 
     .line 467
     .local v2, "llp":Landroid/widget/LinearLayout$LayoutParams;
-    iget-object v7, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
+    iget-object v7, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
 
     invoke-virtual {v7}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -353,7 +353,7 @@
 
     .line 474
     .local v6, "weightSum":F
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
@@ -373,10 +373,10 @@
 
     move-result v7
 
-    sput v7, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarMovedLeftWeight:F
+    sput v7, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarMovedLeftWeight:F
 
     .line 481
-    sget v7, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarMovedLeftWeight:F
+    sget v7, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarMovedLeftWeight:F
 
     const/4 v8, 0x0
 
@@ -385,12 +385,12 @@
     if-lez v7, :cond_0
 
     .line 482
-    sget v7, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarMovedLeftWeight:F
+    sget v7, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarMovedLeftWeight:F
 
     iput v7, v2, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
     .line 483
-    sget v7, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarMovedLeftWeight:F
+    sget v7, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarMovedLeftWeight:F
 
     sub-float v7, v6, v7
 
@@ -400,7 +400,7 @@
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 485
-    iget-object v7, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
+    iget-object v7, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
 
     invoke-virtual {v7, v4}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -413,16 +413,16 @@
     .end local v5    # "sharedPreference":Landroid/content/SharedPreferences;
     .end local v6    # "weightSum":F
     :cond_0
-    iget-object v7, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarLayoutChangeListner:Landroid/view/View$OnLayoutChangeListener;
+    iget-object v7, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarLayoutChangeListner:Landroid/view/View$OnLayoutChangeListener;
 
     if-nez v7, :cond_1
 
     .line 490
-    new-instance v7, Lcom/android/settings/dashboard/DashboardSummarySplit$6;
+    new-instance v7, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$6;
 
-    invoke-direct {v7, p0}, Lcom/android/settings/dashboard/DashboardSummarySplit$6;-><init>(Lcom/android/settings/dashboard/DashboardSummarySplit;)V
+    invoke-direct {v7, p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$6;-><init>(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;)V
 
-    iput-object v7, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarLayoutChangeListner:Landroid/view/View$OnLayoutChangeListener;
+    iput-object v7, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarLayoutChangeListner:Landroid/view/View$OnLayoutChangeListener;
 
     .line 516
     :cond_1
@@ -441,7 +441,7 @@
 
     .line 394
     .local v20, "start":J
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -449,32 +449,32 @@
     .local v4, "res":Landroid/content/res/Resources;
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mDashboard:Landroid/view/ViewGroup;
+    iget-object v2, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mDashboard:Landroid/view/ViewGroup;
 
     invoke-virtual {v2}, Landroid/view/ViewGroup;->removeAllViews()V
 
     .line 398
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mArrayTileView:Ljava/util/ArrayList;
+    iget-object v2, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mArrayTileView:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
     move-object/from16 v2, p1
 
     .line 400
-    check-cast v2, Lcom/android/settings/SettingsActivity;
+    check-cast v2, Lcom/android/settings_ex/SettingsActivity;
 
     const/4 v3, 0x1
 
     const-string v6, "main_mode"
 
-    invoke-virtual {v2, v3, v6}, Lcom/android/settings/SettingsActivity;->getDashboardCategories(ZLjava/lang/String;)Ljava/util/List;
+    invoke-virtual {v2, v3, v6}, Lcom/android/settings_ex/SettingsActivity;->getDashboardCategories(ZLjava/lang/String;)Ljava/util/List;
 
     move-result-object v9
 
     .line 403
-    .local v9, "categories":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/dashboard/DashboardCategory;>;"
+    .local v9, "categories":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/dashboard/DashboardCategory;>;"
     invoke-interface {v9}, Ljava/util/List;->size()I
 
     move-result v14
@@ -485,14 +485,14 @@
 
     move-object/from16 v0, p0
 
-    iput-object v2, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mMainContainerView:[Landroid/view/ViewGroup;
+    iput-object v2, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mMainContainerView:[Landroid/view/ViewGroup;
 
     .line 405
     new-array v2, v14, [Landroid/view/ViewGroup;
 
     move-object/from16 v0, p0
 
-    iput-object v2, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mMainContainerView:[Landroid/view/ViewGroup;
+    iput-object v2, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mMainContainerView:[Landroid/view/ViewGroup;
 
     .line 407
     const/16 v18, 0x0
@@ -510,19 +510,19 @@
 
     move-result-object v10
 
-    check-cast v10, Lcom/android/settings/dashboard/DashboardCategory;
+    check-cast v10, Lcom/android/settings_ex/dashboard/DashboardCategory;
 
     .line 410
-    .local v10, "category":Lcom/android/settings/dashboard/DashboardCategory;
+    .local v10, "category":Lcom/android/settings_ex/dashboard/DashboardCategory;
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mLayoutInflater:Landroid/view/LayoutInflater;
+    iget-object v2, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mLayoutInflater:Landroid/view/LayoutInflater;
 
     const v3, 0x7f040086
 
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mDashboard:Landroid/view/ViewGroup;
+    iget-object v6, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mDashboard:Landroid/view/ViewGroup;
 
     const/4 v7, 0x0
 
@@ -566,7 +566,7 @@
     .local v11, "categoryLabel":Landroid/widget/TextView;
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->tilesCount:I
+    iget v2, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->tilesCount:I
 
     if-nez v2, :cond_0
 
@@ -588,7 +588,7 @@
     :cond_0
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mMainContainerView:[Landroid/view/ViewGroup;
+    iget-object v3, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mMainContainerView:[Landroid/view/ViewGroup;
 
     const v2, 0x7f0d0173
 
@@ -618,7 +618,7 @@
 
     .line 429
     :cond_1
-    invoke-virtual {v10}, Lcom/android/settings/dashboard/DashboardCategory;->getTilesCount()I
+    invoke-virtual {v10}, Lcom/android/settings_ex/dashboard/DashboardCategory;->getTilesCount()I
 
     move-result v22
 
@@ -633,15 +633,15 @@
     if-ge v15, v0, :cond_3
 
     .line 431
-    invoke-virtual {v10, v15}, Lcom/android/settings/dashboard/DashboardCategory;->getTile(I)Lcom/android/settings/dashboard/DashboardTile;
+    invoke-virtual {v10, v15}, Lcom/android/settings_ex/dashboard/DashboardCategory;->getTile(I)Lcom/android/settings_ex/dashboard/DashboardTile;
 
     move-result-object v5
 
     .line 433
-    .local v5, "tile":Lcom/android/settings/dashboard/DashboardTile;
-    new-instance v19, Lcom/android/settings/dashboard/DashboardTileView;
+    .local v5, "tile":Lcom/android/settings_ex/dashboard/DashboardTile;
+    new-instance v19, Lcom/android/settings_ex/dashboard/DashboardTileView;
 
-    iget-wide v2, v5, Lcom/android/settings/dashboard/DashboardTile;->id:J
+    iget-wide v2, v5, Lcom/android/settings_ex/dashboard/DashboardTile;->id:J
 
     long-to-int v2, v2
 
@@ -649,19 +649,19 @@
 
     move-object/from16 v1, p1
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/dashboard/DashboardTileView;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/dashboard/DashboardTileView;-><init>(Landroid/content/Context;I)V
 
     .line 434
-    .local v19, "tileView":Lcom/android/settings/dashboard/DashboardTileView;
-    invoke-virtual/range {v19 .. v19}, Lcom/android/settings/dashboard/DashboardTileView;->getImageView()Landroid/widget/ImageView;
+    .local v19, "tileView":Lcom/android/settings_ex/dashboard/DashboardTileView;
+    invoke-virtual/range {v19 .. v19}, Lcom/android/settings_ex/dashboard/DashboardTileView;->getImageView()Landroid/widget/ImageView;
 
     move-result-object v6
 
-    invoke-virtual/range {v19 .. v19}, Lcom/android/settings/dashboard/DashboardTileView;->getTitleTextView()Landroid/widget/TextView;
+    invoke-virtual/range {v19 .. v19}, Lcom/android/settings_ex/dashboard/DashboardTileView;->getTitleTextView()Landroid/widget/TextView;
 
     move-result-object v7
 
-    iget-wide v2, v10, Lcom/android/settings/dashboard/DashboardCategory;->id:J
+    iget-wide v2, v10, Lcom/android/settings_ex/dashboard/DashboardCategory;->id:J
 
     long-to-int v8, v2
 
@@ -669,24 +669,24 @@
 
     move-object/from16 v3, p1
 
-    invoke-direct/range {v2 .. v8}, Lcom/android/settings/dashboard/DashboardSummarySplit;->updateTileView(Landroid/content/Context;Landroid/content/res/Resources;Lcom/android/settings/dashboard/DashboardTile;Landroid/widget/ImageView;Landroid/widget/TextView;I)V
+    invoke-direct/range {v2 .. v8}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->updateTileView(Landroid/content/Context;Landroid/content/res/Resources;Lcom/android/settings_ex/dashboard/DashboardTile;Landroid/widget/ImageView;Landroid/widget/TextView;I)V
 
     .line 437
     move-object/from16 v0, v19
 
-    invoke-virtual {v0, v5}, Lcom/android/settings/dashboard/DashboardTileView;->setTile(Lcom/android/settings/dashboard/DashboardTile;)V
+    invoke-virtual {v0, v5}, Lcom/android/settings_ex/dashboard/DashboardTileView;->setTile(Lcom/android/settings_ex/dashboard/DashboardTile;)V
 
     .line 439
     move-object/from16 v0, v19
 
     move-object/from16 v1, p0
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/dashboard/DashboardTileView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/dashboard/DashboardTileView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 440
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mArrayTileView:Ljava/util/ArrayList;
+    iget-object v2, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mArrayTileView:Ljava/util/ArrayList;
 
     move-object/from16 v0, v19
 
@@ -695,7 +695,7 @@
     .line 442
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mMainContainerView:[Landroid/view/ViewGroup;
+    iget-object v2, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mMainContainerView:[Landroid/view/ViewGroup;
 
     aget-object v2, v2, v18
 
@@ -704,16 +704,16 @@
     invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     .line 443
-    sget-wide v2, Lcom/android/settings/Utils;->focusedTileId:J
+    sget-wide v2, Lcom/android/settings_ex/Utils;->focusedTileId:J
 
-    iget-wide v6, v5, Lcom/android/settings/dashboard/DashboardTile;->id:J
+    iget-wide v6, v5, Lcom/android/settings_ex/dashboard/DashboardTile;->id:J
 
     cmp-long v2, v2, v6
 
     if-nez v2, :cond_2
 
     .line 444
-    invoke-virtual/range {v19 .. v19}, Lcom/android/settings/dashboard/DashboardTileView;->requestFocus()Z
+    invoke-virtual/range {v19 .. v19}, Lcom/android/settings_ex/dashboard/DashboardTileView;->requestFocus()Z
 
     .line 430
     :cond_2
@@ -722,12 +722,12 @@
     goto :goto_1
 
     .line 449
-    .end local v5    # "tile":Lcom/android/settings/dashboard/DashboardTile;
-    .end local v19    # "tileView":Lcom/android/settings/dashboard/DashboardTileView;
+    .end local v5    # "tile":Lcom/android/settings_ex/dashboard/DashboardTile;
+    .end local v19    # "tileView":Lcom/android/settings_ex/dashboard/DashboardTileView;
     :cond_3
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mDashboard:Landroid/view/ViewGroup;
+    iget-object v2, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mDashboard:Landroid/view/ViewGroup;
 
     invoke-virtual {v2, v12}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -737,7 +737,7 @@
     goto/16 :goto_0
 
     .line 452
-    .end local v10    # "category":Lcom/android/settings/dashboard/DashboardCategory;
+    .end local v10    # "category":Lcom/android/settings_ex/dashboard/DashboardCategory;
     .end local v11    # "categoryLabel":Landroid/widget/TextView;
     .end local v12    # "categoryView":Landroid/view/View;
     .end local v13    # "categorydivider":Landroid/view/View;
@@ -792,7 +792,7 @@
 
     .prologue
     .line 348
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->isAdded()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->isAdded()Z
 
     move-result v0
 
@@ -811,17 +811,17 @@
 
     .line 352
     :cond_0
-    invoke-direct {p0, p1}, Lcom/android/settings/dashboard/DashboardSummarySplit;->rebuildMainContainer(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->rebuildMainContainer(Landroid/content/Context;)V
 
     .line 353
-    invoke-direct {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->setInitialFragment()V
+    invoke-direct {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->setInitialFragment()V
 
     .line 355
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mHandler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/android/settings/dashboard/DashboardSummarySplit$5;
+    new-instance v1, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$5;
 
-    invoke-direct {v1, p0, p1}, Lcom/android/settings/dashboard/DashboardSummarySplit$5;-><init>(Lcom/android/settings/dashboard/DashboardSummarySplit;Landroid/content/Context;)V
+    invoke-direct {v1, p0, p1}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$5;-><init>(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;Landroid/content/Context;)V
 
     const-wide/16 v2, 0x0
 
@@ -837,24 +837,24 @@
     .line 927
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPrevTileView:Lcom/android/settings/dashboard/DashboardTileView;
+    iget-object v2, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPrevTileView:Lcom/android/settings_ex/dashboard/DashboardTileView;
 
     if-eqz v2, :cond_1
 
     .line 928
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPrevTileView:Lcom/android/settings/dashboard/DashboardTileView;
+    iget-object v2, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPrevTileView:Lcom/android/settings_ex/dashboard/DashboardTileView;
 
-    invoke-virtual {v2}, Lcom/android/settings/dashboard/DashboardTileView;->getTile()Lcom/android/settings/dashboard/DashboardTile;
+    invoke-virtual {v2}, Lcom/android/settings_ex/dashboard/DashboardTileView;->getTile()Lcom/android/settings_ex/dashboard/DashboardTile;
 
     move-result-object v2
 
-    iget-wide v10, v2, Lcom/android/settings/dashboard/DashboardTile;->id:J
+    iget-wide v10, v2, Lcom/android/settings_ex/dashboard/DashboardTile;->id:J
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v10, v11}, Lcom/android/settings/dashboard/DashboardSummarySplit;->switchToTile(J)V
+    invoke-virtual {v0, v10, v11}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->switchToTile(J)V
 
     .line 981
     :cond_0
@@ -865,7 +865,7 @@
     :cond_1
     move-object/from16 v0, p0
 
-    iget-wide v10, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->InitialDashboardId:J
+    iget-wide v10, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->InitialDashboardId:J
 
     const-wide/16 v18, 0x0
 
@@ -876,17 +876,17 @@
     .line 933
     move-object/from16 v0, p0
 
-    iget-wide v10, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->InitialDashboardId:J
+    iget-wide v10, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->InitialDashboardId:J
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v10, v11}, Lcom/android/settings/dashboard/DashboardSummarySplit;->switchToTile(J)V
+    invoke-virtual {v0, v10, v11}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->switchToTile(J)V
 
     goto :goto_0
 
     .line 935
     :cond_2
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -908,7 +908,7 @@
 
     .line 939
     .local v13, "className":Ljava/lang/String;
-    const-class v2, Lcom/android/settings/Settings;
+    const-class v2, Lcom/android/settings_ex/Settings;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -923,7 +923,7 @@
     .line 940
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mArrayTileView:Ljava/util/ArrayList;
+    iget-object v2, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mArrayTileView:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -934,7 +934,7 @@
     .line 941
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mArrayTileView:Ljava/util/ArrayList;
+    iget-object v2, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mArrayTileView:Ljava/util/ArrayList;
 
     const/4 v5, 0x0
 
@@ -942,9 +942,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/dashboard/DashboardTileView;
+    check-cast v2, Lcom/android/settings_ex/dashboard/DashboardTileView;
 
-    invoke-virtual {v2}, Lcom/android/settings/dashboard/DashboardTileView;->performClick()Z
+    invoke-virtual {v2}, Lcom/android/settings_ex/dashboard/DashboardTileView;->performClick()Z
 
     goto :goto_0
 
@@ -998,7 +998,7 @@
 
     .line 954
     :try_start_0
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1006,7 +1006,7 @@
 
     move-result-object v2
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -1039,7 +1039,7 @@
 
     .line 964
     .local v17, "topLevelDashboardRank":I
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v2
 
@@ -1057,24 +1057,24 @@
 
     move/from16 v1, v17
 
-    invoke-direct {v0, v1}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getSelectedTopLevelDashboardId(I)J
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getSelectedTopLevelDashboardId(I)J
 
     move-result-wide v10
 
     move-object/from16 v0, p0
 
-    iput-wide v10, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->InitialDashboardId:J
+    iput-wide v10, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->InitialDashboardId:J
 
     .line 976
     :cond_5
     :goto_2
     move-object/from16 v0, p0
 
-    iget-wide v10, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->InitialDashboardId:J
+    iget-wide v10, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->InitialDashboardId:J
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v10, v11}, Lcom/android/settings/dashboard/DashboardSummarySplit;->switchToTile(J)V
+    invoke-virtual {v0, v10, v11}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->switchToTile(J)V
 
     .line 977
     const/4 v5, 0x0
@@ -1089,7 +1089,7 @@
 
     move-object/from16 v2, p0
 
-    invoke-virtual/range {v2 .. v11}, Lcom/android/settings/dashboard/DashboardSummarySplit;->switchToFragment(Ljava/lang/String;Landroid/os/Bundle;ZZILjava/lang/CharSequence;ZLandroid/app/Fragment;I)V
+    invoke-virtual/range {v2 .. v11}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->switchToFragment(Ljava/lang/String;Landroid/os/Bundle;ZZILjava/lang/CharSequence;ZLandroid/app/Fragment;I)V
 
     goto/16 :goto_0
 
@@ -1103,7 +1103,7 @@
     invoke-virtual {v15}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
     .line 958
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1121,27 +1121,27 @@
     .end local v15    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .restart local v17    # "topLevelDashboardRank":I
     :cond_6
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
     .line 971
     .local v12, "activity":Landroid/app/Activity;
-    instance-of v2, v12, Lcom/android/settings/SettingsActivity;
+    instance-of v2, v12, Lcom/android/settings_ex/SettingsActivity;
 
     if-eqz v2, :cond_5
 
     .line 972
-    check-cast v12, Lcom/android/settings/SettingsActivity;
+    check-cast v12, Lcom/android/settings_ex/SettingsActivity;
 
     .end local v12    # "activity":Landroid/app/Activity;
-    invoke-virtual {v12}, Lcom/android/settings/SettingsActivity;->getTopLevelDashboardId()J
+    invoke-virtual {v12}, Lcom/android/settings_ex/SettingsActivity;->getTopLevelDashboardId()J
 
     move-result-wide v10
 
     move-object/from16 v0, p0
 
-    iput-wide v10, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->InitialDashboardId:J
+    iput-wide v10, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->InitialDashboardId:J
 
     goto :goto_2
 .end method
@@ -1154,7 +1154,7 @@
     const/4 v12, 0x0
 
     .line 826
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1198,7 +1198,7 @@
 
     .line 833
     .local v6, "messageView":Landroid/widget/TextView;
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -1212,11 +1212,11 @@
 
     new-array v9, v9, [Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
 
     move-result-object v10
 
-    invoke-static {}, Lcom/android/settings/Utils;->getResIdForUserManual()I
+    invoke-static {}, Lcom/android/settings_ex/Utils;->getResIdForUserManual()I
 
     move-result v11
 
@@ -1264,7 +1264,7 @@
 
     move-result-object v8
 
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -1280,9 +1280,9 @@
 
     const v9, 0x7f0e0f8c
 
-    new-instance v10, Lcom/android/settings/dashboard/DashboardSummarySplit$9;
+    new-instance v10, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$9;
 
-    invoke-direct {v10, p0, v0, v3, v5}, Lcom/android/settings/dashboard/DashboardSummarySplit$9;-><init>(Lcom/android/settings/dashboard/DashboardSummarySplit;Landroid/widget/CheckBox;Landroid/content/SharedPreferences$Editor;Landroid/content/Intent;)V
+    invoke-direct {v10, p0, v0, v3, v5}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$9;-><init>(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;Landroid/widget/CheckBox;Landroid/content/SharedPreferences$Editor;Landroid/content/Intent;)V
 
     invoke-virtual {v8, v9, v10}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1290,17 +1290,17 @@
 
     const v9, 0x7f0e01ba
 
-    new-instance v10, Lcom/android/settings/dashboard/DashboardSummarySplit$8;
+    new-instance v10, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$8;
 
-    invoke-direct {v10, p0}, Lcom/android/settings/dashboard/DashboardSummarySplit$8;-><init>(Lcom/android/settings/dashboard/DashboardSummarySplit;)V
+    invoke-direct {v10, p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$8;-><init>(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;)V
 
     invoke-virtual {v8, v9, v10}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v8
 
-    new-instance v9, Lcom/android/settings/dashboard/DashboardSummarySplit$7;
+    new-instance v9, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$7;
 
-    invoke-direct {v9, p0}, Lcom/android/settings/dashboard/DashboardSummarySplit$7;-><init>(Lcom/android/settings/dashboard/DashboardSummarySplit;)V
+    invoke-direct {v9, p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$7;-><init>(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;)V
 
     invoke-virtual {v8, v9}, Landroid/app/AlertDialog$Builder;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1314,7 +1314,7 @@
 
     .line 859
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -1322,10 +1322,10 @@
 
     const-string v10, "HQST"
 
-    invoke-static {v8, v9, v10}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v9, v10}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 860
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -1334,11 +1334,11 @@
     goto :goto_0
 .end method
 
-.method private updateTileView(Landroid/content/Context;Landroid/content/res/Resources;Lcom/android/settings/dashboard/DashboardTile;Landroid/widget/ImageView;Landroid/widget/TextView;I)V
+.method private updateTileView(Landroid/content/Context;Landroid/content/res/Resources;Lcom/android/settings_ex/dashboard/DashboardTile;Landroid/widget/ImageView;Landroid/widget/TextView;I)V
     .locals 4
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "res"    # Landroid/content/res/Resources;
-    .param p3, "tile"    # Lcom/android/settings/dashboard/DashboardTile;
+    .param p3, "tile"    # Lcom/android/settings_ex/dashboard/DashboardTile;
     .param p4, "tileIcon"    # Landroid/widget/ImageView;
     .param p5, "tileTextView"    # Landroid/widget/TextView;
     .param p6, "categoryid"    # I
@@ -1347,29 +1347,29 @@
     const/4 v2, 0x0
 
     .line 365
-    iget v1, p3, Lcom/android/settings/dashboard/DashboardTile;->iconRes:I
+    iget v1, p3, Lcom/android/settings_ex/dashboard/DashboardTile;->iconRes:I
 
     if-lez v1, :cond_0
 
     .line 366
-    iget v1, p3, Lcom/android/settings/dashboard/DashboardTile;->iconRes:I
+    iget v1, p3, Lcom/android/settings_ex/dashboard/DashboardTile;->iconRes:I
 
     invoke-virtual {p4, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 372
     :goto_0
-    iget-wide v2, p3, Lcom/android/settings/dashboard/DashboardTile;->id:J
+    iget-wide v2, p3, Lcom/android/settings_ex/dashboard/DashboardTile;->id:J
 
     long-to-int v1, v2
 
-    invoke-static {p6, v1}, Lcom/android/settings/Utils;->getTileBackgroundId(II)I
+    invoke-static {p6, v1}, Lcom/android/settings_ex/Utils;->getTileBackgroundId(II)I
 
     move-result v1
 
     invoke-virtual {p4, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
     .line 373
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -1384,14 +1384,14 @@
     invoke-virtual {p4, v1, v2}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
     .line 375
-    invoke-virtual {p3, p2}, Lcom/android/settings/dashboard/DashboardTile;->getTitle(Landroid/content/res/Resources;)Ljava/lang/CharSequence;
+    invoke-virtual {p3, p2}, Lcom/android/settings_ex/dashboard/DashboardTile;->getTitle(Landroid/content/res/Resources;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
     invoke-virtual {p5, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 377
-    invoke-virtual {p3, p2}, Lcom/android/settings/dashboard/DashboardTile;->getSummary(Landroid/content/res/Resources;)Ljava/lang/CharSequence;
+    invoke-virtual {p3, p2}, Lcom/android/settings_ex/dashboard/DashboardTile;->getSummary(Landroid/content/res/Resources;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -1422,30 +1422,30 @@
     return v0
 .end method
 
-.method public getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+.method public getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
     .locals 2
 
     .prologue
     .line 1002
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-nez v0, :cond_0
 
     .line 1003
-    new-instance v0, Lcom/android/settings/widget/SwitchBar;
+    new-instance v0, Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/android/settings/widget/SwitchBar;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;-><init>(Landroid/content/Context;)V
 
     .line 1005
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     goto :goto_0
 .end method
@@ -1462,7 +1462,7 @@
     const/4 v4, 0x1
 
     .line 520
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->isResumed()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->isResumed()Z
 
     move-result v0
 
@@ -1475,24 +1475,24 @@
 
     .line 524
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/guide/GuideFragment;->isInGuideMode(Landroid/app/Activity;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/guide/GuideFragment;->isInGuideMode(Landroid/app/Activity;)Z
 
     move-result v0
 
     if-ne v0, v4, :cond_2
 
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 525
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1508,17 +1508,17 @@
 
     .line 530
     :cond_2
-    instance-of v0, p1, Lcom/android/settings/dashboard/DashboardTileView;
+    instance-of v0, p1, Lcom/android/settings_ex/dashboard/DashboardTileView;
 
     if-eqz v0, :cond_0
 
     .line 531
-    sget-object v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPreferToolbar:Landroid/widget/Toolbar;
+    sget-object v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPreferToolbar:Landroid/widget/Toolbar;
 
     if-eqz v0, :cond_3
 
     .line 532
-    sget-object v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPreferToolbar:Landroid/widget/Toolbar;
+    sget-object v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPreferToolbar:Landroid/widget/Toolbar;
 
     invoke-virtual {v0}, Landroid/widget/Toolbar;->dismissPopupMenus()V
 
@@ -1526,22 +1526,22 @@
     move-object v12, p1
 
     .line 534
-    check-cast v12, Lcom/android/settings/dashboard/DashboardTileView;
+    check-cast v12, Lcom/android/settings_ex/dashboard/DashboardTileView;
 
     .line 535
-    .local v12, "selectedTileView":Lcom/android/settings/dashboard/DashboardTileView;
-    invoke-virtual {v12}, Lcom/android/settings/dashboard/DashboardTileView;->getTile()Lcom/android/settings/dashboard/DashboardTile;
+    .local v12, "selectedTileView":Lcom/android/settings_ex/dashboard/DashboardTileView;
+    invoke-virtual {v12}, Lcom/android/settings_ex/dashboard/DashboardTileView;->getTile()Lcom/android/settings_ex/dashboard/DashboardTile;
 
     move-result-object v11
 
     .line 537
-    .local v11, "mTile":Lcom/android/settings/dashboard/DashboardTile;
-    iget-object v0, v11, Lcom/android/settings/dashboard/DashboardTile;->fragment:Ljava/lang/String;
+    .local v11, "mTile":Lcom/android/settings_ex/dashboard/DashboardTile;
+    iget-object v0, v11, Lcom/android/settings_ex/dashboard/DashboardTile;->fragment:Ljava/lang/String;
 
     if-eqz v0, :cond_5
 
     .line 538
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v0
 
@@ -1555,7 +1555,7 @@
     .local v10, "currentFragment":Landroid/app/Fragment;
     if-eqz v10, :cond_4
 
-    iget-object v0, v11, Lcom/android/settings/dashboard/DashboardTile;->fragment:Ljava/lang/String;
+    iget-object v0, v11, Lcom/android/settings_ex/dashboard/DashboardTile;->fragment:Ljava/lang/String;
 
     invoke-virtual {v10}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1573,7 +1573,7 @@
 
     .line 541
     :cond_4
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v0
 
@@ -1582,18 +1582,18 @@
     invoke-virtual {v0, v1, v4}, Landroid/app/FragmentManager;->popBackStack(Ljava/lang/String;I)V
 
     .line 544
-    iget-wide v0, v11, Lcom/android/settings/dashboard/DashboardTile;->id:J
+    iget-wide v0, v11, Lcom/android/settings_ex/dashboard/DashboardTile;->id:J
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/dashboard/DashboardSummarySplit;->switchToTile(J)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->switchToTile(J)V
 
     .line 545
-    iget-object v1, v11, Lcom/android/settings/dashboard/DashboardTile;->fragment:Ljava/lang/String;
+    iget-object v1, v11, Lcom/android/settings_ex/dashboard/DashboardTile;->fragment:Ljava/lang/String;
 
-    iget-object v2, v11, Lcom/android/settings/dashboard/DashboardTile;->fragmentArguments:Landroid/os/Bundle;
+    iget-object v2, v11, Lcom/android/settings_ex/dashboard/DashboardTile;->fragmentArguments:Landroid/os/Bundle;
 
-    iget v5, v11, Lcom/android/settings/dashboard/DashboardTile;->titleRes:I
+    iget v5, v11, Lcom/android/settings_ex/dashboard/DashboardTile;->titleRes:I
 
-    iget-object v6, v11, Lcom/android/settings/dashboard/DashboardTile;->title:Ljava/lang/CharSequence;
+    iget-object v6, v11, Lcom/android/settings_ex/dashboard/DashboardTile;->title:Ljava/lang/CharSequence;
 
     const/4 v8, 0x0
 
@@ -1603,47 +1603,47 @@
 
     move v9, v3
 
-    invoke-virtual/range {v0 .. v9}, Lcom/android/settings/dashboard/DashboardSummarySplit;->switchToFragment(Ljava/lang/String;Landroid/os/Bundle;ZZILjava/lang/CharSequence;ZLandroid/app/Fragment;I)V
+    invoke-virtual/range {v0 .. v9}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->switchToFragment(Ljava/lang/String;Landroid/os/Bundle;ZZILjava/lang/CharSequence;ZLandroid/app/Fragment;I)V
 
     goto :goto_0
 
     .line 548
     .end local v10    # "currentFragment":Landroid/app/Fragment;
     :cond_5
-    iget-object v0, v11, Lcom/android/settings/dashboard/DashboardTile;->intent:Landroid/content/Intent;
+    iget-object v0, v11, Lcom/android/settings_ex/dashboard/DashboardTile;->intent:Landroid/content/Intent;
 
     if-eqz v0, :cond_0
 
     .line 549
-    iget-wide v0, v11, Lcom/android/settings/dashboard/DashboardTile;->id:J
+    iget-wide v0, v11, Lcom/android/settings_ex/dashboard/DashboardTile;->id:J
 
     cmp-long v0, v0, v6
 
     if-nez v0, :cond_6
 
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
     .line 550
-    iget-object v0, v11, Lcom/android/settings/dashboard/DashboardTile;->intent:Landroid/content/Intent;
+    iget-object v0, v11, Lcom/android/settings_ex/dashboard/DashboardTile;->intent:Landroid/content/Intent;
 
-    invoke-direct {p0, v0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->showOnlineHelpDialog(Landroid/content/Intent;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->showOnlineHelpDialog(Landroid/content/Intent;)V
 
     goto/16 :goto_0
 
     .line 552
     :cond_6
-    iget-wide v0, v11, Lcom/android/settings/dashboard/DashboardTile;->id:J
+    iget-wide v0, v11, Lcom/android/settings_ex/dashboard/DashboardTile;->id:J
 
     cmp-long v0, v0, v6
 
     if-nez v0, :cond_7
 
     .line 553
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1651,15 +1651,15 @@
 
     const-string v2, "HQST"
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 555
     :cond_7
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, v11, Lcom/android/settings/dashboard/DashboardTile;->intent:Landroid/content/Intent;
+    iget-object v1, v11, Lcom/android/settings_ex/dashboard/DashboardTile;->intent:Landroid/content/Intent;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
@@ -1672,7 +1672,7 @@
 
     .prologue
     .line 246
-    invoke-super/range {p0 .. p1}, Lcom/android/settings/InstrumentedFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super/range {p0 .. p1}, Lcom/android/settings_ex/InstrumentedFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 250
     new-instance v6, Landroid/util/DisplayMetrics;
@@ -1681,7 +1681,7 @@
 
     .line 251
     .local v6, "metrics":Landroid/util/DisplayMetrics;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v15
 
@@ -1702,7 +1702,7 @@
     .local v9, "screenWidth":I
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mHeaderLayout:Landroid/widget/LinearLayout;
+    iget-object v3, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mHeaderLayout:Landroid/widget/LinearLayout;
 
     .line 254
     .local v3, "headerLayout":Landroid/widget/LinearLayout;
@@ -1716,7 +1716,7 @@
     .local v5, "llp":Landroid/widget/LinearLayout$LayoutParams;
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
+    iget-object v15, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
 
     invoke-virtual {v15}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -1738,16 +1738,16 @@
     .local v14, "weightSum":F
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v15, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     if-eqz v15, :cond_1
 
-    sget-boolean v15, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUserUpdateSplit:Z
+    sget-boolean v15, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUserUpdateSplit:Z
 
     if-nez v15, :cond_1
 
     .line 262
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
 
     move-result-object v15
 
@@ -1762,7 +1762,7 @@
     iput v15, v5, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
     .line 263
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
 
     move-result-object v15
 
@@ -1782,7 +1782,7 @@
     .line 265
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
+    iget-object v15, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
 
     invoke-virtual {v15, v8}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -1805,7 +1805,7 @@
 
     .line 270
     .local v13, "tempheaderLayoutWidth":F
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
 
     move-result-object v15
 
@@ -1817,7 +1817,7 @@
 
     .line 272
     .local v4, "headerLayoutMinSize":I
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
 
     move-result-object v15
 
@@ -1833,7 +1833,7 @@
     .local v11, "snapCenterPosition":F
     const/4 v15, 0x1
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
 
     move-result-object v16
 
@@ -1901,12 +1901,12 @@
     .line 282
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
+    iget-object v15, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
 
     invoke-virtual {v15, v8}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 284
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v15
 
@@ -1984,12 +1984,12 @@
     .line 294
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
+    iget-object v15, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
 
     invoke-virtual {v15, v8}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 296
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v15
 
@@ -2025,7 +2025,7 @@
 
     .prologue
     .line 184
-    invoke-super {p0, p1}, Lcom/android/settings/InstrumentedFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/InstrumentedFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 186
     if-eqz p1, :cond_0
@@ -2037,11 +2037,11 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->InitialDashboardId:J
+    iput-wide v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->InitialDashboardId:J
 
     .line 190
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2053,12 +2053,12 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mDevelopmentPreferences:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mDevelopmentPreferences:Landroid/content/SharedPreferences;
 
     .line 193
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->setHasOptionsMenu(Z)V
 
     .line 194
     return-void
@@ -2071,17 +2071,17 @@
 
     .prologue
     .line 198
-    invoke-super {p0, p1, p2}, Lcom/android/settings/InstrumentedFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/InstrumentedFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     .line 199
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 200
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2095,7 +2095,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, p1, v1, v2}, Lcom/android/settings/HelpUtils;->prepareHelpMenuItem(Landroid/app/Activity;Landroid/view/Menu;ILjava/lang/String;)Z
+    invoke-static {v0, p1, v1, v2}, Lcom/android/settings_ex/HelpUtils;->prepareHelpMenuItem(Landroid/app/Activity;Landroid/view/Menu;ILjava/lang/String;)Z
 
     .line 203
     :cond_0
@@ -2110,7 +2110,7 @@
 
     .prologue
     .line 307
-    iput-object p1, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mLayoutInflater:Landroid/view/LayoutInflater;
+    iput-object p1, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mLayoutInflater:Landroid/view/LayoutInflater;
 
     .line 308
     const v2, 0x7f04008f
@@ -2131,7 +2131,7 @@
 
     check-cast v2, Landroid/view/ViewGroup;
 
-    iput-object v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mDashboard:Landroid/view/ViewGroup;
+    iput-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mDashboard:Landroid/view/ViewGroup;
 
     .line 310
     const v2, 0x7f0d0181
@@ -2142,7 +2142,7 @@
 
     check-cast v2, Landroid/view/ViewGroup;
 
-    iput-object v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
+    iput-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
 
     .line 311
     const v2, 0x7f0d0186
@@ -2151,7 +2151,7 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iput-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     .line 312
     const v2, 0x7f0d017b
@@ -2162,7 +2162,7 @@
 
     check-cast v2, Landroid/widget/LinearLayout;
 
-    iput-object v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mHeaderLayout:Landroid/widget/LinearLayout;
+    iput-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mHeaderLayout:Landroid/widget/LinearLayout;
 
     .line 313
     const v2, 0x7f0d0184
@@ -2171,9 +2171,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/widget/SwitchBar;
+    check-cast v2, Lcom/android/settings_ex/widget/SwitchBar;
 
-    iput-object v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 314
     const v2, 0x7f0d017e
@@ -2184,7 +2184,7 @@
 
     check-cast v2, Landroid/widget/Toolbar;
 
-    iput-object v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mMainToolbar:Landroid/widget/Toolbar;
+    iput-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mMainToolbar:Landroid/widget/Toolbar;
 
     .line 315
     const v2, 0x7f0d0183
@@ -2195,62 +2195,62 @@
 
     check-cast v2, Landroid/widget/Toolbar;
 
-    sput-object v2, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPreferToolbar:Landroid/widget/Toolbar;
+    sput-object v2, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPreferToolbar:Landroid/widget/Toolbar;
 
     .line 317
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    sget-object v3, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPreferToolbar:Landroid/widget/Toolbar;
+    sget-object v3, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPreferToolbar:Landroid/widget/Toolbar;
 
     invoke-virtual {v2, v3}, Landroid/app/Activity;->setActionBar(Landroid/widget/Toolbar;)V
 
     .line 318
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/SettingsActivity;
+    check-cast v2, Lcom/android/settings_ex/SettingsActivity;
 
-    invoke-virtual {v2}, Lcom/android/settings/SettingsActivity;->onBackStackChanged()V
+    invoke-virtual {v2}, Lcom/android/settings_ex/SettingsActivity;->onBackStackChanged()V
 
     .line 319
-    sget-object v2, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPreferToolbar:Landroid/widget/Toolbar;
+    sget-object v2, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPreferToolbar:Landroid/widget/Toolbar;
 
-    new-instance v3, Lcom/android/settings/dashboard/DashboardSummarySplit$4;
+    new-instance v3, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$4;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/dashboard/DashboardSummarySplit$4;-><init>(Lcom/android/settings/dashboard/DashboardSummarySplit;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$4;-><init>(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;)V
 
     invoke-virtual {v2, v3}, Landroid/widget/Toolbar;->setNavigationOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 330
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mMainToolbar:Landroid/widget/Toolbar;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mMainToolbar:Landroid/widget/Toolbar;
 
     const v3, 0x7f0e01c3
 
     invoke-virtual {v2, v3}, Landroid/widget/Toolbar;->setTitle(I)V
 
     .line 332
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isEnabledUltraPowerSaving(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isEnabledUltraPowerSaving(Landroid/content/Context;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
     .line 333
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mMainToolbar:Landroid/widget/Toolbar;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mMainToolbar:Landroid/widget/Toolbar;
 
     const v3, 0x7f140009
 
     invoke-virtual {v2, v3}, Landroid/widget/Toolbar;->inflateMenu(I)V
 
     .line 334
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mMainToolbar:Landroid/widget/Toolbar;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mMainToolbar:Landroid/widget/Toolbar;
 
     invoke-virtual {v2}, Landroid/widget/Toolbar;->getMenu()Landroid/view/Menu;
 
@@ -2264,7 +2264,7 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSearchMenuItem:Landroid/view/MenuItem;
+    iput-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSearchMenuItem:Landroid/view/MenuItem;
 
     .line 336
     const v2, 0x7f0d06e0
@@ -2272,29 +2272,29 @@
     invoke-interface {v0, v2}, Landroid/view/Menu;->removeItem(I)V
 
     .line 337
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSearchMenuItem:Landroid/view/MenuItem;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSearchMenuItem:Landroid/view/MenuItem;
 
     invoke-interface {v2, p0}, Landroid/view/MenuItem;->setOnActionExpandListener(Landroid/view/MenuItem$OnActionExpandListener;)Landroid/view/MenuItem;
 
     .line 339
     .end local v0    # "menu":Landroid/view/Menu;
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->initializeLayoutBySplitBar()V
+    invoke-direct {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->initializeLayoutBySplitBar()V
 
     .line 340
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     invoke-virtual {v2, p0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     .line 341
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     invoke-virtual {v2, p0}, Landroid/view/View;->setOnHoverListener(Landroid/view/View$OnHoverListener;)V
 
     .line 342
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
-    iget-object v3, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarLayoutChangeListner:Landroid/view/View$OnLayoutChangeListener;
+    iget-object v3, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarLayoutChangeListner:Landroid/view/View$OnLayoutChangeListener;
 
     invoke-virtual {v2, v3}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
@@ -2401,24 +2401,24 @@
     const/4 v3, 0x0
 
     .line 1017
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/guide/GuideFragment;->isInGuideMode(Landroid/app/Activity;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/guide/GuideFragment;->isInGuideMode(Landroid/app/Activity;)Z
 
     move-result v0
 
     if-ne v0, v4, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 1018
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2436,7 +2436,7 @@
 
     .line 1023
     :cond_0
-    const-class v0, Lcom/android/settings/dashboard/SearchResultsSummary;
+    const-class v0, Lcom/android/settings_ex/dashboard/SearchResultsSummary;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -2454,7 +2454,7 @@
 
     move v9, v3
 
-    invoke-virtual/range {v0 .. v9}, Lcom/android/settings/dashboard/DashboardSummarySplit;->switchToFragment(Ljava/lang/String;Landroid/os/Bundle;ZZILjava/lang/CharSequence;ZLandroid/app/Fragment;I)V
+    invoke-virtual/range {v0 .. v9}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->switchToFragment(Ljava/lang/String;Landroid/os/Bundle;ZZILjava/lang/CharSequence;ZLandroid/app/Fragment;I)V
 
     .line 1026
     invoke-interface {p1}, Landroid/view/MenuItem;->collapseActionView()Z
@@ -2467,28 +2467,28 @@
 
     .prologue
     .line 233
-    invoke-super {p0}, Lcom/android/settings/InstrumentedFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/InstrumentedFragment;->onPause()V
 
     .line 235
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mDevelopmentPreferences:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mDevelopmentPreferences:Landroid/content/SharedPreferences;
 
     if-eqz v0, :cond_0
 
     .line 236
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mDevelopmentPreferences:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mDevelopmentPreferences:Landroid/content/SharedPreferences;
 
-    iget-object v1, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mDevelopmentPreferencesListener:Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
+    iget-object v1, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mDevelopmentPreferencesListener:Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
 
     invoke-interface {v0, v1}, Landroid/content/SharedPreferences;->unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
 
     .line 238
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mDevelopmentPreferencesListener:Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
+    iput-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mDevelopmentPreferencesListener:Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
 
     .line 241
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2496,7 +2496,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mAirplaneObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mAirplaneObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
@@ -2509,42 +2509,42 @@
 
     .prologue
     .line 207
-    invoke-super {p0}, Lcom/android/settings/InstrumentedFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/InstrumentedFragment;->onResume()V
 
     .line 209
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->rebuildUI(Landroid/content/Context;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->rebuildUI(Landroid/content/Context;)V
 
     .line 210
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
     .line 212
-    new-instance v0, Lcom/android/settings/dashboard/DashboardSummarySplit$3;
+    new-instance v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$3;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/dashboard/DashboardSummarySplit$3;-><init>(Lcom/android/settings/dashboard/DashboardSummarySplit;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$3;-><init>(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;)V
 
-    iput-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mDevelopmentPreferencesListener:Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
+    iput-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mDevelopmentPreferencesListener:Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
 
     .line 218
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mDevelopmentPreferences:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mDevelopmentPreferences:Landroid/content/SharedPreferences;
 
     if-eqz v0, :cond_0
 
     .line 219
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mDevelopmentPreferences:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mDevelopmentPreferences:Landroid/content/SharedPreferences;
 
-    iget-object v1, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mDevelopmentPreferencesListener:Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
+    iget-object v1, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mDevelopmentPreferencesListener:Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
 
     invoke-interface {v0, v1}, Landroid/content/SharedPreferences;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
 
     .line 223
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2560,7 +2560,7 @@
 
     const/4 v2, 0x1
 
-    iget-object v3, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mAirplaneObserver:Landroid/database/ContentObserver;
+    iget-object v3, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mAirplaneObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -2574,23 +2574,23 @@
 
     .prologue
     .line 176
-    invoke-super {p0, p1}, Lcom/android/settings/InstrumentedFragment;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/InstrumentedFragment;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 177
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPrevTileView:Lcom/android/settings/dashboard/DashboardTileView;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPrevTileView:Lcom/android/settings_ex/dashboard/DashboardTileView;
 
     if-eqz v0, :cond_0
 
     .line 178
     const-string v0, ":android:current_dashboard_id"
 
-    iget-object v1, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPrevTileView:Lcom/android/settings/dashboard/DashboardTileView;
+    iget-object v1, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPrevTileView:Lcom/android/settings_ex/dashboard/DashboardTileView;
 
-    invoke-virtual {v1}, Lcom/android/settings/dashboard/DashboardTileView;->getTile()Lcom/android/settings/dashboard/DashboardTile;
+    invoke-virtual {v1}, Lcom/android/settings_ex/dashboard/DashboardTileView;->getTile()Lcom/android/settings_ex/dashboard/DashboardTile;
 
     move-result-object v1
 
-    iget-wide v2, v1, Lcom/android/settings/dashboard/DashboardTile;->id:J
+    iget-wide v2, v1, Lcom/android/settings_ex/dashboard/DashboardTile;->id:J
 
     invoke-virtual {p1, v0, v2, v3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
@@ -2616,7 +2616,7 @@
 
     .line 565
     .local v23, "splitBar":Landroid/view/View;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
 
     move-result-object v32
 
@@ -2634,7 +2634,7 @@
 
     .line 567
     .local v22, "snapCenterPosition":F
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
 
     move-result-object v32
 
@@ -2646,7 +2646,7 @@
     .local v3, "d":Landroid/util/DisplayMetrics;
     const/16 v32, 0x1
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
 
     move-result-object v33
 
@@ -2672,7 +2672,7 @@
 
     .line 570
     .local v27, "splitXinFullview":F
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
 
     move-result-object v32
 
@@ -2730,7 +2730,7 @@
     if-nez v2, :cond_4
 
     .line 584
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
 
     move-result-object v32
 
@@ -2753,14 +2753,14 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
 
     .line 769
     :cond_2
     :goto_1
     move-object/from16 v0, p0
 
-    iget-boolean v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
 
     move/from16 v32, v0
 
@@ -2769,7 +2769,7 @@
     .line 770
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mHeaderLayout:Landroid/widget/LinearLayout;
+    iget-object v6, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mHeaderLayout:Landroid/widget/LinearLayout;
 
     .line 771
     .local v6, "headerLayout":Landroid/widget/LinearLayout;
@@ -2783,12 +2783,12 @@
     .local v10, "llp":Landroid/widget/LinearLayout$LayoutParams;
     const/16 v32, 0x1
 
-    sput-boolean v32, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUserUpdateSplit:Z
+    sput-boolean v32, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUserUpdateSplit:Z
 
     .line 775
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
 
     move-object/from16 v32, v0
 
@@ -2870,11 +2870,11 @@
     iput v15, v0, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
     .line 795
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v32
 
-    invoke-static/range {v32 .. v32}, Lcom/android/settings/Utils;->isRTL(Landroid/content/Context;)Z
+    invoke-static/range {v32 .. v32}, Lcom/android/settings_ex/Utils;->isRTL(Landroid/content/Context;)Z
 
     move-result v32
 
@@ -2888,7 +2888,7 @@
     .line 797
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
 
     move-object/from16 v32, v0
 
@@ -2904,7 +2904,7 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
 
     .line 804
     .end local v6    # "headerLayout":Landroid/widget/LinearLayout;
@@ -2934,7 +2934,7 @@
     .line 588
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     move-object/from16 v32, v0
 
@@ -2952,7 +2952,7 @@
     .local v28, "touchX":F
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     move-object/from16 v32, v0
 
@@ -2979,7 +2979,7 @@
     .line 594
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     move-object/from16 v32, v0
 
@@ -2996,11 +2996,11 @@
     move-result v18
 
     .line 596
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v32
 
-    invoke-static/range {v32 .. v32}, Lcom/android/settings/Utils;->isRTL(Landroid/content/Context;)Z
+    invoke-static/range {v32 .. v32}, Lcom/android/settings_ex/Utils;->isRTL(Landroid/content/Context;)Z
 
     move-result v32
 
@@ -3074,7 +3074,7 @@
     .line 612
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mHeaderLayout:Landroid/widget/LinearLayout;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mHeaderLayout:Landroid/widget/LinearLayout;
 
     move-object/from16 v32, v0
 
@@ -3107,12 +3107,12 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
 
     .line 616
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     move-object/from16 v32, v0
 
@@ -3132,7 +3132,7 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
 
     goto/16 :goto_1
 
@@ -3169,12 +3169,12 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
 
     .line 625
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     move-object/from16 v32, v0
 
@@ -3210,12 +3210,12 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
 
     .line 629
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     move-object/from16 v32, v0
 
@@ -3286,12 +3286,12 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
 
     .line 643
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     move-object/from16 v32, v0
 
@@ -3333,7 +3333,7 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
 
     goto/16 :goto_1
 
@@ -3370,12 +3370,12 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
 
     .line 659
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     move-object/from16 v32, v0
 
@@ -3406,12 +3406,12 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
 
     .line 663
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     move-object/from16 v32, v0
 
@@ -3506,12 +3506,12 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
 
     .line 679
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     move-object/from16 v32, v0
 
@@ -3551,7 +3551,7 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
 
     goto/16 :goto_1
 
@@ -3592,12 +3592,12 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
 
     .line 695
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     move-object/from16 v32, v0
 
@@ -3628,12 +3628,12 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
 
     .line 699
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     move-object/from16 v32, v0
 
@@ -3679,7 +3679,7 @@
     .line 711
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mHeaderLayout:Landroid/widget/LinearLayout;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mHeaderLayout:Landroid/widget/LinearLayout;
 
     move-object/from16 v32, v0
 
@@ -3714,12 +3714,12 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
 
     .line 715
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     move-object/from16 v32, v0
 
@@ -3739,7 +3739,7 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
 
     goto/16 :goto_1
 
@@ -3774,12 +3774,12 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
 
     .line 724
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     move-object/from16 v32, v0
 
@@ -3819,12 +3819,12 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
 
     .line 728
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     move-object/from16 v32, v0
 
@@ -3851,7 +3851,7 @@
     .line 734
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mHeaderLayout:Landroid/widget/LinearLayout;
+    iget-object v6, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mHeaderLayout:Landroid/widget/LinearLayout;
 
     .line 735
     .restart local v6    # "headerLayout":Landroid/widget/LinearLayout;
@@ -3863,7 +3863,7 @@
 
     .line 738
     .restart local v10    # "llp":Landroid/widget/LinearLayout$LayoutParams;
-    sget v32, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarMovedLeftWeight:F
+    sget v32, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarMovedLeftWeight:F
 
     iget v0, v10, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
@@ -3878,10 +3878,10 @@
 
     move/from16 v32, v0
 
-    sput v32, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarMovedLeftWeight:F
+    sput v32, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarMovedLeftWeight:F
 
     .line 741
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v32
 
@@ -3903,7 +3903,7 @@
     .local v4, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v32, "split_bar_left_wegigh"
 
-    sget v33, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarMovedLeftWeight:F
+    sget v33, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarMovedLeftWeight:F
 
     move-object/from16 v0, v32
 
@@ -3918,7 +3918,7 @@
     .end local v4    # "editor":Landroid/content/SharedPreferences$Editor;
     .end local v21    # "sharedPreference":Landroid/content/SharedPreferences;
     :cond_15
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
 
     move-result-object v32
 
@@ -3937,7 +3937,7 @@
     .line 752
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     move-object/from16 v32, v0
 
@@ -3951,7 +3951,7 @@
     :cond_16
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
 
     move-object/from16 v32, v0
 
@@ -3961,7 +3961,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     move-object/from16 v33, v0
 
@@ -4001,7 +4001,7 @@
     .line 759
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSplitBarView:Landroid/view/View;
 
     move-object/from16 v32, v0
 
@@ -4019,10 +4019,10 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mUpdateLayoutBySplitChange:Z
 
     .line 764
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getResources()Landroid/content/res/Resources;
 
     move-result-object v32
 
@@ -4059,7 +4059,7 @@
     .line 800
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPrefsContainer:Landroid/view/ViewGroup;
 
     move-object/from16 v32, v0
 
@@ -4077,12 +4077,12 @@
 
     .prologue
     .line 1031
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSearchMenuItem:Landroid/view/MenuItem;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSearchMenuItem:Landroid/view/MenuItem;
 
     if-eqz v0, :cond_0
 
     .line 1032
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mSearchMenuItem:Landroid/view/MenuItem;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mSearchMenuItem:Landroid/view/MenuItem;
 
     invoke-interface {v0}, Landroid/view/MenuItem;->expandActionView()Z
 
@@ -4114,7 +4114,7 @@
 
     .line 885
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -4136,14 +4136,14 @@
 
     .line 895
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v4
 
     if-eqz v4, :cond_0
 
     .line 898
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v4
 
@@ -4153,7 +4153,7 @@
 
     .line 899
     .local v3, "transaction":Landroid/app/FragmentTransaction;
-    const-class v4, Lcom/android/settings/dashboard/SearchResultsSummary;
+    const-class v4, Lcom/android/settings_ex/dashboard/SearchResultsSummary;
 
     invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -4189,7 +4189,7 @@
     .line 915
     .end local v2    # "tag":Ljava/lang/String;
     :goto_1
-    const-class v4, Lcom/android/settings/dashboard/SearchResultsSummary;
+    const-class v4, Lcom/android/settings_ex/dashboard/SearchResultsSummary;
 
     invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -4266,7 +4266,7 @@
 
     .local v0, "i":I
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mArrayTileView:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mArrayTileView:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -4275,60 +4275,60 @@
     if-ge v0, v1, :cond_1
 
     .line 866
-    iget-object v1, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mArrayTileView:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mArrayTileView:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/dashboard/DashboardTileView;
+    check-cast v1, Lcom/android/settings_ex/dashboard/DashboardTileView;
 
-    invoke-virtual {v1}, Lcom/android/settings/dashboard/DashboardTileView;->getTile()Lcom/android/settings/dashboard/DashboardTile;
+    invoke-virtual {v1}, Lcom/android/settings_ex/dashboard/DashboardTileView;->getTile()Lcom/android/settings_ex/dashboard/DashboardTile;
 
     move-result-object v1
 
-    iget-wide v2, v1, Lcom/android/settings/dashboard/DashboardTile;->id:J
+    iget-wide v2, v1, Lcom/android/settings_ex/dashboard/DashboardTile;->id:J
 
     cmp-long v1, p1, v2
 
     if-nez v1, :cond_2
 
     .line 867
-    iget-object v1, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPrevTileView:Lcom/android/settings/dashboard/DashboardTileView;
+    iget-object v1, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPrevTileView:Lcom/android/settings_ex/dashboard/DashboardTileView;
 
     if-eqz v1, :cond_0
 
     .line 868
-    iget-object v1, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPrevTileView:Lcom/android/settings/dashboard/DashboardTileView;
+    iget-object v1, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPrevTileView:Lcom/android/settings_ex/dashboard/DashboardTileView;
 
     const v2, 0x7f0200b6
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/dashboard/DashboardTileView;->setBackgroundResource(I)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/dashboard/DashboardTileView;->setBackgroundResource(I)V
 
     .line 870
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mArrayTileView:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mArrayTileView:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/dashboard/DashboardTileView;
+    check-cast v1, Lcom/android/settings_ex/dashboard/DashboardTileView;
 
     const v2, 0x7f0200b7
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/dashboard/DashboardTileView;->setBackgroundResource(I)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/dashboard/DashboardTileView;->setBackgroundResource(I)V
 
     .line 872
-    iget-object v1, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mArrayTileView:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mArrayTileView:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/dashboard/DashboardTileView;
+    check-cast v1, Lcom/android/settings_ex/dashboard/DashboardTileView;
 
-    iput-object v1, p0, Lcom/android/settings/dashboard/DashboardSummarySplit;->mPrevTileView:Lcom/android/settings/dashboard/DashboardTileView;
+    iput-object v1, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->mPrevTileView:Lcom/android/settings_ex/dashboard/DashboardTileView;
 
     .line 876
     :cond_1

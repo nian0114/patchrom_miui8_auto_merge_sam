@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/cloud/NumberPickerDialog;
+.class public Lcom/android/settings_ex/cloud/NumberPickerDialog;
 .super Landroid/app/AlertDialog;
 .source "NumberPickerDialog.java"
 
@@ -9,13 +9,13 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/cloud/NumberPickerDialog$OnNumberSetListener;
+        Lcom/android/settings_ex/cloud/NumberPickerDialog$OnNumberSetListener;
     }
 .end annotation
 
 
 # instance fields
-.field private final mCallback:Lcom/android/settings/cloud/NumberPickerDialog$OnNumberSetListener;
+.field private final mCallback:Lcom/android/settings_ex/cloud/NumberPickerDialog$OnNumberSetListener;
 
 .field private final mNumberPicker:Landroid/widget/NumberPicker;
 
@@ -28,25 +28,25 @@
 
     .prologue
     .line 108
-    iget-object v0, p0, Lcom/android/settings/cloud/NumberPickerDialog;->mCallback:Lcom/android/settings/cloud/NumberPickerDialog$OnNumberSetListener;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/NumberPickerDialog;->mCallback:Lcom/android/settings_ex/cloud/NumberPickerDialog$OnNumberSetListener;
 
     if-eqz v0, :cond_0
 
     .line 109
-    iget-object v0, p0, Lcom/android/settings/cloud/NumberPickerDialog;->mNumberPicker:Landroid/widget/NumberPicker;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/NumberPickerDialog;->mNumberPicker:Landroid/widget/NumberPicker;
 
     invoke-virtual {v0}, Landroid/widget/NumberPicker;->clearFocus()V
 
     .line 110
-    iget-object v0, p0, Lcom/android/settings/cloud/NumberPickerDialog;->mCallback:Lcom/android/settings/cloud/NumberPickerDialog$OnNumberSetListener;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/NumberPickerDialog;->mCallback:Lcom/android/settings_ex/cloud/NumberPickerDialog$OnNumberSetListener;
 
-    iget-object v1, p0, Lcom/android/settings/cloud/NumberPickerDialog;->mNumberPicker:Landroid/widget/NumberPicker;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/NumberPickerDialog;->mNumberPicker:Landroid/widget/NumberPicker;
 
     invoke-virtual {v1}, Landroid/widget/NumberPicker;->getValue()I
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/android/settings/cloud/NumberPickerDialog$OnNumberSetListener;->onNumberSet(I)V
+    invoke-interface {v0, v1}, Lcom/android/settings_ex/cloud/NumberPickerDialog$OnNumberSetListener;->onNumberSet(I)V
 
     .line 111
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
@@ -73,7 +73,7 @@
 
     .line 126
     .local v0, "number":I
-    iget-object v1, p0, Lcom/android/settings/cloud/NumberPickerDialog;->mNumberPicker:Landroid/widget/NumberPicker;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/NumberPickerDialog;->mNumberPicker:Landroid/widget/NumberPicker;
 
     invoke-virtual {v1, v0}, Landroid/widget/NumberPicker;->setValue(I)V
 
@@ -94,7 +94,7 @@
     .local v0, "state":Landroid/os/Bundle;
     const-string v1, "number"
 
-    iget-object v2, p0, Lcom/android/settings/cloud/NumberPickerDialog;->mNumberPicker:Landroid/widget/NumberPicker;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/NumberPickerDialog;->mNumberPicker:Landroid/widget/NumberPicker;
 
     invoke-virtual {v2}, Landroid/widget/NumberPicker;->getValue()I
 

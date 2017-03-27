@@ -1,4 +1,4 @@
-.class Lcom/android/settings/location/LocationSettings$4;
+.class Lcom/android/settings_ex/location/LocationSettings$4;
 .super Ljava/lang/Object;
 .source "LocationSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/location/LocationSettings;->onSwitchChanged(Landroid/widget/Switch;Z)V
+    value = Lcom/android/settings_ex/location/LocationSettings;->onSwitchChanged(Landroid/widget/Switch;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/location/LocationSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/location/LocationSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/location/LocationSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/location/LocationSettings;)V
     .locals 0
 
     .prologue
     .line 476
-    iput-object p1, p0, Lcom/android/settings/location/LocationSettings$4;->this$0:Lcom/android/settings/location/LocationSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/location/LocationSettings$4;->this$0:Lcom/android/settings_ex/location/LocationSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,11 +43,11 @@
 
     .prologue
     .line 478
-    iget-object v0, p0, Lcom/android/settings/location/LocationSettings$4;->this$0:Lcom/android/settings/location/LocationSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/location/LocationSettings$4;->this$0:Lcom/android/settings_ex/location/LocationSettings;
 
     const/4 v1, 0x2
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/location/LocationSettings;->setLocationMode(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/location/LocationSettings;->setLocationMode(I)V
 
     .line 479
     invoke-interface {p1}, Landroid/content/DialogInterface;->cancel()V

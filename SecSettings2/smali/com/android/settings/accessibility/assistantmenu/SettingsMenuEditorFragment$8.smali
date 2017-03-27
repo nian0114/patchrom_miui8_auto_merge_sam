@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$8;
+.class synthetic Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$8;
 .super Ljava/lang/Object;
 .source "SettingsMenuEditorFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    value = Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
 
     .prologue
     .line 1362
-    invoke-static {}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;->values()[Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;
+    invoke-static {}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;->values()[Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;
 
     move-result-object v0
 
@@ -34,12 +34,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$8;->$SwitchMap$com$android$settings$accessibility$assistantmenu$SettingsMenuEditorFragment$IMAGE_MODE:[I
+    sput-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$8;->$SwitchMap$com$android$settings$accessibility$assistantmenu$SettingsMenuEditorFragment$IMAGE_MODE:[I
 
     :try_start_0
-    sget-object v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$8;->$SwitchMap$com$android$settings$accessibility$assistantmenu$SettingsMenuEditorFragment$IMAGE_MODE:[I
+    sget-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$8;->$SwitchMap$com$android$settings$accessibility$assistantmenu$SettingsMenuEditorFragment$IMAGE_MODE:[I
 
-    sget-object v1, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;->MINUS_IMAGE_MODE:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;
+    sget-object v1, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;->MINUS_IMAGE_MODE:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -53,9 +53,9 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$8;->$SwitchMap$com$android$settings$accessibility$assistantmenu$SettingsMenuEditorFragment$IMAGE_MODE:[I
+    sget-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$8;->$SwitchMap$com$android$settings$accessibility$assistantmenu$SettingsMenuEditorFragment$IMAGE_MODE:[I
 
-    sget-object v1, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;->PLUS_IMAGE_MODE:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;
+    sget-object v1, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;->PLUS_IMAGE_MODE:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -69,7 +69,7 @@
 
     .line 1276
     :goto_1
-    invoke-static {}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->values()[Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    invoke-static {}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->values()[Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
     move-result-object v0
 
@@ -77,12 +77,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$8;->$SwitchMap$com$android$settings$accessibility$assistantmenu$SettingsMenuEditorFragment$SCROLL_MOTION:[I
+    sput-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$8;->$SwitchMap$com$android$settings$accessibility$assistantmenu$SettingsMenuEditorFragment$SCROLL_MOTION:[I
 
     :try_start_2
-    sget-object v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$8;->$SwitchMap$com$android$settings$accessibility$assistantmenu$SettingsMenuEditorFragment$SCROLL_MOTION:[I
+    sget-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$8;->$SwitchMap$com$android$settings$accessibility$assistantmenu$SettingsMenuEditorFragment$SCROLL_MOTION:[I
 
-    sget-object v1, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->SCROLL_UP:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    sget-object v1, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->SCROLL_UP:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -96,9 +96,9 @@
 
     :goto_2
     :try_start_3
-    sget-object v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$8;->$SwitchMap$com$android$settings$accessibility$assistantmenu$SettingsMenuEditorFragment$SCROLL_MOTION:[I
+    sget-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$8;->$SwitchMap$com$android$settings$accessibility$assistantmenu$SettingsMenuEditorFragment$SCROLL_MOTION:[I
 
-    sget-object v1, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->SCROLL_DOWN:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    sget-object v1, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->SCROLL_DOWN:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 

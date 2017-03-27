@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/cloud/CloudSettings;
+.class public Lcom/android/settings_ex/cloud/CloudSettings;
 .super Ljava/lang/Object;
 .source "CloudSettings.java"
 
@@ -8,7 +8,7 @@
 
 .field private static CONTENT_PATH:Landroid/net/Uri;
 
-.field private static mInstance:Lcom/android/settings/cloud/CloudSettings;
+.field private static mInstance:Lcom/android/settings_ex/cloud/CloudSettings;
 
 
 # instance fields
@@ -55,7 +55,7 @@
     .line 98
     const-string v0, "cloud"
 
-    sput-object v0, Lcom/android/settings/cloud/CloudSettings;->AUTHORITY:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/cloud/CloudSettings;->AUTHORITY:Ljava/lang/String;
 
     .line 99
     new-instance v0, Ljava/lang/StringBuilder;
@@ -68,7 +68,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/android/settings/cloud/CloudSettings;->AUTHORITY:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/cloud/CloudSettings;->AUTHORITY:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -82,7 +82,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/cloud/CloudSettings;->CONTENT_PATH:Landroid/net/Uri;
+    sput-object v0, Lcom/android/settings_ex/cloud/CloudSettings;->CONTENT_PATH:Landroid/net/Uri;
 
     return-void
 .end method
@@ -107,7 +107,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 341
-    invoke-direct {p0, p1}, Lcom/android/settings/cloud/CloudSettings;->parceCloudSettings(Landroid/os/Bundle;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/cloud/CloudSettings;->parceCloudSettings(Landroid/os/Bundle;)V
 
     .line 342
     return-void
@@ -122,22 +122,22 @@
 
     .line 432
     .local v0, "country_code":Ljava/lang/String;
-    new-instance v1, Lcom/android/settings/csc/CscParser;
+    new-instance v1, Lcom/android/settings_ex/csc/CscParser;
 
-    invoke-static {}, Lcom/android/settings/csc/CscParser;->getCustomerPath()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/csc/CscParser;->getCustomerPath()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/android/settings/csc/CscParser;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Lcom/android/settings_ex/csc/CscParser;-><init>(Ljava/lang/String;)V
 
     .line 433
-    .local v1, "cscParser":Lcom/android/settings/csc/CscParser;
+    .local v1, "cscParser":Lcom/android/settings_ex/csc/CscParser;
     if-eqz v1, :cond_5
 
     .line 435
     const-string v2, "GeneralInfo.Country"
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/csc/CscParser;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -205,26 +205,26 @@
     goto :goto_0
 .end method
 
-.method public static declared-synchronized getInstance()Lcom/android/settings/cloud/CloudSettings;
+.method public static declared-synchronized getInstance()Lcom/android/settings_ex/cloud/CloudSettings;
     .locals 3
 
     .prologue
     .line 308
-    const-class v1, Lcom/android/settings/cloud/CloudSettings;
+    const-class v1, Lcom/android/settings_ex/cloud/CloudSettings;
 
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/android/settings/cloud/CloudSettings;->mInstance:Lcom/android/settings/cloud/CloudSettings;
+    sget-object v0, Lcom/android/settings_ex/cloud/CloudSettings;->mInstance:Lcom/android/settings_ex/cloud/CloudSettings;
 
     if-nez v0, :cond_0
 
     .line 309
-    new-instance v0, Lcom/android/settings/cloud/CloudSettings;
+    new-instance v0, Lcom/android/settings_ex/cloud/CloudSettings;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2}, Lcom/android/settings/cloud/CloudSettings;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v0, v2}, Lcom/android/settings_ex/cloud/CloudSettings;-><init>(Landroid/os/Bundle;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -236,7 +236,7 @@
 
     :cond_0
     :try_start_1
-    sget-object v0, Lcom/android/settings/cloud/CloudSettings;->mInstance:Lcom/android/settings/cloud/CloudSettings;
+    sget-object v0, Lcom/android/settings_ex/cloud/CloudSettings;->mInstance:Lcom/android/settings_ex/cloud/CloudSettings;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -251,31 +251,31 @@
     throw v0
 .end method
 
-.method public static declared-synchronized getInstance(Landroid/os/Bundle;)Lcom/android/settings/cloud/CloudSettings;
+.method public static declared-synchronized getInstance(Landroid/os/Bundle;)Lcom/android/settings_ex/cloud/CloudSettings;
     .locals 2
     .param p0, "bundle"    # Landroid/os/Bundle;
 
     .prologue
     .line 321
-    const-class v1, Lcom/android/settings/cloud/CloudSettings;
+    const-class v1, Lcom/android/settings_ex/cloud/CloudSettings;
 
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/android/settings/cloud/CloudSettings;->mInstance:Lcom/android/settings/cloud/CloudSettings;
+    sget-object v0, Lcom/android/settings_ex/cloud/CloudSettings;->mInstance:Lcom/android/settings_ex/cloud/CloudSettings;
 
     if-nez v0, :cond_0
 
     .line 322
-    new-instance v0, Lcom/android/settings/cloud/CloudSettings;
+    new-instance v0, Lcom/android/settings_ex/cloud/CloudSettings;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/cloud/CloudSettings;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/cloud/CloudSettings;-><init>(Landroid/os/Bundle;)V
 
-    sput-object v0, Lcom/android/settings/cloud/CloudSettings;->mInstance:Lcom/android/settings/cloud/CloudSettings;
+    sput-object v0, Lcom/android/settings_ex/cloud/CloudSettings;->mInstance:Lcom/android/settings_ex/cloud/CloudSettings;
 
     .line 326
     :goto_0
-    sget-object v0, Lcom/android/settings/cloud/CloudSettings;->mInstance:Lcom/android/settings/cloud/CloudSettings;
+    sget-object v0, Lcom/android/settings_ex/cloud/CloudSettings;->mInstance:Lcom/android/settings_ex/cloud/CloudSettings;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -286,9 +286,9 @@
     .line 324
     :cond_0
     :try_start_1
-    sget-object v0, Lcom/android/settings/cloud/CloudSettings;->mInstance:Lcom/android/settings/cloud/CloudSettings;
+    sget-object v0, Lcom/android/settings_ex/cloud/CloudSettings;->mInstance:Lcom/android/settings_ex/cloud/CloudSettings;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/cloud/CloudSettings;->parceCloudSettings(Landroid/os/Bundle;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/cloud/CloudSettings;->parceCloudSettings(Landroid/os/Bundle;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -312,7 +312,7 @@
 
     .line 406
     .local v0, "sales_code":Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/csc/CscParser;->getSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/csc/CscParser;->getSalesCode()Ljava/lang/String;
 
     move-result-object v0
 
@@ -356,7 +356,7 @@
 
     .prologue
     .line 419
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getSalesCode()Ljava/lang/String;
 
     move-result-object v0
 
@@ -410,7 +410,7 @@
 
     if-nez v1, :cond_0
 
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->isLDUModel()Z
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->isLDUModel()Z
 
     move-result v1
 
@@ -418,7 +418,7 @@
 
     const-string v1, "CHINA"
 
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getCountryCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getCountryCode()Ljava/lang/String;
 
     move-result-object v2
 
@@ -445,7 +445,7 @@
 
     .prologue
     .line 426
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getSalesCode()Ljava/lang/String;
 
     move-result-object v0
 
@@ -498,7 +498,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/cloud/CloudSettings;->venderId:I
+    iput v1, p0, Lcom/android/settings_ex/cloud/CloudSettings;->venderId:I
 
     .line 269
     const-string v1, "accountName"
@@ -507,7 +507,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/cloud/CloudSettings;->accountName:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettings;->accountName:Ljava/lang/String;
 
     .line 270
     const-string v1, "documentSyncFolderName"
@@ -516,7 +516,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/cloud/CloudSettings;->documentSyncFolderName:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettings;->documentSyncFolderName:Ljava/lang/String;
 
     .line 271
     const-string v1, "numberOfDisplayingPhotos"
@@ -525,7 +525,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/cloud/CloudSettings;->numberOfDisplayingPhotos:I
+    iput v1, p0, Lcom/android/settings_ex/cloud/CloudSettings;->numberOfDisplayingPhotos:I
 
     .line 274
     const-string v1, "caToSettingsValues"
@@ -543,7 +543,7 @@
     move v1, v2
 
     :goto_0
-    iput-boolean v1, p0, Lcom/android/settings/cloud/CloudSettings;->mSupportPhotoSync:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mSupportPhotoSync:Z
 
     .line 277
     and-int/lit8 v1, v0, 0x2
@@ -553,7 +553,7 @@
     move v1, v2
 
     :goto_1
-    iput-boolean v1, p0, Lcom/android/settings/cloud/CloudSettings;->mSupportVideoSync:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mSupportVideoSync:Z
 
     .line 278
     and-int/lit8 v1, v0, 0x4
@@ -563,7 +563,7 @@
     move v1, v2
 
     :goto_2
-    iput-boolean v1, p0, Lcom/android/settings/cloud/CloudSettings;->mSupportMusicSync:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mSupportMusicSync:Z
 
     .line 279
     and-int/lit8 v1, v0, 0x8
@@ -573,7 +573,7 @@
     move v1, v2
 
     :goto_3
-    iput-boolean v1, p0, Lcom/android/settings/cloud/CloudSettings;->mSupportDocumentSync:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mSupportDocumentSync:Z
 
     .line 281
     and-int/lit8 v1, v0, 0x10
@@ -583,7 +583,7 @@
     move v1, v2
 
     :goto_4
-    iput-boolean v1, p0, Lcom/android/settings/cloud/CloudSettings;->photoSync:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/cloud/CloudSettings;->photoSync:Z
 
     .line 282
     and-int/lit8 v1, v0, 0x20
@@ -593,7 +593,7 @@
     move v1, v2
 
     :goto_5
-    iput-boolean v1, p0, Lcom/android/settings/cloud/CloudSettings;->videoSync:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/cloud/CloudSettings;->videoSync:Z
 
     .line 283
     and-int/lit8 v1, v0, 0x40
@@ -603,7 +603,7 @@
     move v1, v2
 
     :goto_6
-    iput-boolean v1, p0, Lcom/android/settings/cloud/CloudSettings;->musicSync:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/cloud/CloudSettings;->musicSync:Z
 
     .line 284
     and-int/lit16 v1, v0, 0x80
@@ -613,7 +613,7 @@
     move v1, v2
 
     :goto_7
-    iput-boolean v1, p0, Lcom/android/settings/cloud/CloudSettings;->documentSync:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/cloud/CloudSettings;->documentSync:Z
 
     .line 286
     and-int/lit16 v1, v0, 0x100
@@ -623,7 +623,7 @@
     move v1, v2
 
     :goto_8
-    iput-boolean v1, p0, Lcom/android/settings/cloud/CloudSettings;->mIsWifiOnlyPhoto:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mIsWifiOnlyPhoto:Z
 
     .line 287
     and-int/lit16 v1, v0, 0x200
@@ -633,7 +633,7 @@
     move v1, v2
 
     :goto_9
-    iput-boolean v1, p0, Lcom/android/settings/cloud/CloudSettings;->mIsWifiOnlyVideo:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mIsWifiOnlyVideo:Z
 
     .line 288
     and-int/lit16 v1, v0, 0x400
@@ -643,7 +643,7 @@
     move v1, v2
 
     :goto_a
-    iput-boolean v1, p0, Lcom/android/settings/cloud/CloudSettings;->mIsWifiOnlyMusic:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mIsWifiOnlyMusic:Z
 
     .line 289
     and-int/lit16 v1, v0, 0x800
@@ -651,7 +651,7 @@
     if-eqz v1, :cond_c
 
     :goto_b
-    iput-boolean v2, p0, Lcom/android/settings/cloud/CloudSettings;->mIsWifiOnlyDoc:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mIsWifiOnlyDoc:Z
 
     .line 293
     .end local v0    # "settingsValue":I
@@ -739,7 +739,7 @@
 
     .prologue
     .line 172
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettings;->accountName:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettings;->accountName:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -759,7 +759,7 @@
 
     .prologue
     .line 397
-    sget-object v0, Lcom/android/settings/cloud/CloudSettings;->CONTENT_PATH:Landroid/net/Uri;
+    sget-object v0, Lcom/android/settings_ex/cloud/CloudSettings;->CONTENT_PATH:Landroid/net/Uri;
 
     return-object v0
 .end method
@@ -769,7 +769,7 @@
 
     .prologue
     .line 253
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettings;->documentSyncFolderName:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettings;->documentSyncFolderName:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -779,7 +779,7 @@
 
     .prologue
     .line 248
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettings;->storageUsage:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettings;->storageUsage:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -789,7 +789,7 @@
 
     .prologue
     .line 163
-    iget v0, p0, Lcom/android/settings/cloud/CloudSettings;->venderId:I
+    iget v0, p0, Lcom/android/settings_ex/cloud/CloudSettings;->venderId:I
 
     return v0
 .end method
@@ -799,7 +799,7 @@
 
     .prologue
     .line 345
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettings;->accountName:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettings;->accountName:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
@@ -819,7 +819,7 @@
 
     .prologue
     .line 212
-    iget-boolean v0, p0, Lcom/android/settings/cloud/CloudSettings;->documentSync:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/cloud/CloudSettings;->documentSync:Z
 
     return v0
 .end method
@@ -829,7 +829,7 @@
 
     .prologue
     .line 202
-    iget-boolean v0, p0, Lcom/android/settings/cloud/CloudSettings;->musicSync:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/cloud/CloudSettings;->musicSync:Z
 
     return v0
 .end method
@@ -899,7 +899,7 @@
 
     .prologue
     .line 182
-    iget-boolean v0, p0, Lcom/android/settings/cloud/CloudSettings;->photoSync:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/cloud/CloudSettings;->photoSync:Z
 
     return v0
 .end method
@@ -920,25 +920,25 @@
 
     .line 145
     :pswitch_0
-    iget-boolean v0, p0, Lcom/android/settings/cloud/CloudSettings;->mSupportPhotoSync:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mSupportPhotoSync:Z
 
     goto :goto_0
 
     .line 147
     :pswitch_1
-    iget-boolean v0, p0, Lcom/android/settings/cloud/CloudSettings;->mSupportVideoSync:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mSupportVideoSync:Z
 
     goto :goto_0
 
     .line 149
     :pswitch_2
-    iget-boolean v0, p0, Lcom/android/settings/cloud/CloudSettings;->mSupportMusicSync:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mSupportMusicSync:Z
 
     goto :goto_0
 
     .line 151
     :pswitch_3
-    iget-boolean v0, p0, Lcom/android/settings/cloud/CloudSettings;->mSupportDocumentSync:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mSupportDocumentSync:Z
 
     goto :goto_0
 
@@ -959,7 +959,7 @@
 
     .prologue
     .line 192
-    iget-boolean v0, p0, Lcom/android/settings/cloud/CloudSettings;->videoSync:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/cloud/CloudSettings;->videoSync:Z
 
     return v0
 .end method
@@ -980,25 +980,25 @@
 
     .line 109
     :pswitch_0
-    iget-boolean v0, p0, Lcom/android/settings/cloud/CloudSettings;->mIsWifiOnlyPhoto:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mIsWifiOnlyPhoto:Z
 
     goto :goto_0
 
     .line 111
     :pswitch_1
-    iget-boolean v0, p0, Lcom/android/settings/cloud/CloudSettings;->mIsWifiOnlyVideo:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mIsWifiOnlyVideo:Z
 
     goto :goto_0
 
     .line 113
     :pswitch_2
-    iget-boolean v0, p0, Lcom/android/settings/cloud/CloudSettings;->mIsWifiOnlyMusic:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mIsWifiOnlyMusic:Z
 
     goto :goto_0
 
     .line 115
     :pswitch_3
-    iget-boolean v0, p0, Lcom/android/settings/cloud/CloudSettings;->mIsWifiOnlyDoc:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mIsWifiOnlyDoc:Z
 
     goto :goto_0
 
@@ -1020,7 +1020,7 @@
 
     .prologue
     .line 228
-    iput-boolean p1, p0, Lcom/android/settings/cloud/CloudSettings;->documentSync:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/cloud/CloudSettings;->documentSync:Z
 
     .line 229
     return-void
@@ -1032,7 +1032,7 @@
 
     .prologue
     .line 224
-    iput-boolean p1, p0, Lcom/android/settings/cloud/CloudSettings;->musicSync:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/cloud/CloudSettings;->musicSync:Z
 
     .line 225
     return-void
@@ -1044,7 +1044,7 @@
 
     .prologue
     .line 216
-    iput-boolean p1, p0, Lcom/android/settings/cloud/CloudSettings;->photoSync:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/cloud/CloudSettings;->photoSync:Z
 
     .line 217
     return-void
@@ -1065,7 +1065,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/cloud/CloudSettings;->venderId:I
+    iput v0, p0, Lcom/android/settings_ex/cloud/CloudSettings;->venderId:I
 
     .line 298
     const-string v0, "storageUsage"
@@ -1074,7 +1074,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudSettings;->storageUsage:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettings;->storageUsage:Ljava/lang/String;
 
     .line 300
     :cond_0
@@ -1087,7 +1087,7 @@
 
     .prologue
     .line 220
-    iput-boolean p1, p0, Lcom/android/settings/cloud/CloudSettings;->videoSync:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/cloud/CloudSettings;->videoSync:Z
 
     .line 221
     return-void
@@ -1108,25 +1108,25 @@
 
     .line 128
     :pswitch_0
-    iput-boolean p2, p0, Lcom/android/settings/cloud/CloudSettings;->mIsWifiOnlyPhoto:Z
+    iput-boolean p2, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mIsWifiOnlyPhoto:Z
 
     goto :goto_0
 
     .line 131
     :pswitch_1
-    iput-boolean p2, p0, Lcom/android/settings/cloud/CloudSettings;->mIsWifiOnlyVideo:Z
+    iput-boolean p2, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mIsWifiOnlyVideo:Z
 
     goto :goto_0
 
     .line 134
     :pswitch_2
-    iput-boolean p2, p0, Lcom/android/settings/cloud/CloudSettings;->mIsWifiOnlyMusic:Z
+    iput-boolean p2, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mIsWifiOnlyMusic:Z
 
     goto :goto_0
 
     .line 137
     :pswitch_3
-    iput-boolean p2, p0, Lcom/android/settings/cloud/CloudSettings;->mIsWifiOnlyDoc:Z
+    iput-boolean p2, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mIsWifiOnlyDoc:Z
 
     goto :goto_0
 
@@ -1161,7 +1161,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/android/settings/cloud/CloudSettings;->venderId:I
+    iget v2, p0, Lcom/android/settings_ex/cloud/CloudSettings;->venderId:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1184,7 +1184,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/cloud/CloudSettings;->accountName:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/CloudSettings;->accountName:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1207,7 +1207,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/cloud/CloudSettings;->documentSyncFolderName:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/CloudSettings;->documentSyncFolderName:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1230,7 +1230,7 @@
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcom/android/settings/cloud/CloudSettings;->photoSync:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/cloud/CloudSettings;->photoSync:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1253,7 +1253,7 @@
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcom/android/settings/cloud/CloudSettings;->videoSync:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/cloud/CloudSettings;->videoSync:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1276,7 +1276,7 @@
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcom/android/settings/cloud/CloudSettings;->musicSync:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/cloud/CloudSettings;->musicSync:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1299,7 +1299,7 @@
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcom/android/settings/cloud/CloudSettings;->documentSync:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/cloud/CloudSettings;->documentSync:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1322,7 +1322,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/android/settings/cloud/CloudSettings;->numberOfDisplayingPhotos:I
+    iget v2, p0, Lcom/android/settings_ex/cloud/CloudSettings;->numberOfDisplayingPhotos:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1345,7 +1345,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/cloud/CloudSettings;->storageUsage:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/CloudSettings;->storageUsage:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1368,7 +1368,7 @@
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcom/android/settings/cloud/CloudSettings;->mIsWifiOnlyPhoto:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mIsWifiOnlyPhoto:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1391,7 +1391,7 @@
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcom/android/settings/cloud/CloudSettings;->mIsWifiOnlyVideo:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mIsWifiOnlyVideo:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1414,7 +1414,7 @@
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcom/android/settings/cloud/CloudSettings;->mIsWifiOnlyMusic:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mIsWifiOnlyMusic:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1437,7 +1437,7 @@
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcom/android/settings/cloud/CloudSettings;->mIsWifiOnlyDoc:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/cloud/CloudSettings;->mIsWifiOnlyDoc:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 

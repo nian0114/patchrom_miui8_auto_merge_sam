@@ -1,10 +1,10 @@
-.class public final Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+.class public final Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 .super Ljava/lang/Object;
 .source "LocalBluetoothAdapter.java"
 
 
 # static fields
-.field private static sInstance:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+.field private static sInstance:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
 
 # instance fields
@@ -12,7 +12,7 @@
 
 .field private mLastScan:J
 
-.field private mProfileManager:Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
+.field private mProfileManager:Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;
 
 .field private mState:I
 
@@ -29,26 +29,26 @@
     .line 48
     const/high16 v0, -0x80000000
 
-    iput v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mState:I
+    iput v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mState:I
 
     .line 55
-    iput-object p1, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iput-object p1, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     .line 56
     return-void
 .end method
 
-.method static declared-synchronized getInstance()Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+.method static declared-synchronized getInstance()Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
     .locals 3
 
     .prologue
     .line 69
-    const-class v2, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    const-class v2, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     monitor-enter v2
 
     :try_start_0
-    sget-object v1, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->sInstance:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    sget-object v1, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->sInstance:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     if-nez v1, :cond_0
 
@@ -62,15 +62,15 @@
     if-eqz v0, :cond_0
 
     .line 72
-    new-instance v1, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    new-instance v1, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
-    invoke-direct {v1, v0}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;-><init>(Landroid/bluetooth/BluetoothAdapter;)V
+    invoke-direct {v1, v0}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;-><init>(Landroid/bluetooth/BluetoothAdapter;)V
 
-    sput-object v1, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->sInstance:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    sput-object v1, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->sInstance:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     .line 76
     :cond_0
-    sget-object v1, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->sInstance:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    sget-object v1, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->sInstance:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -94,7 +94,7 @@
 
     .prologue
     .line 82
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->cancelDiscovery()Z
 
@@ -107,7 +107,7 @@
 
     .prologue
     .line 90
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->disable()Z
 
@@ -121,7 +121,7 @@
 
     .prologue
     .line 86
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->enable()Z
 
@@ -138,10 +138,10 @@
     monitor-enter p0
 
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->syncBluetoothState()Z
+    invoke-virtual {p0}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->syncBluetoothState()Z
 
     .line 194
-    iget v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mState:I
+    iget v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mState:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -172,7 +172,7 @@
 
     .prologue
     .line 99
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->getBondedDevices()Ljava/util/Set;
 
@@ -186,7 +186,7 @@
 
     .prologue
     .line 243
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->getDiscoverableTimeout()I
 
@@ -200,7 +200,7 @@
 
     .prologue
     .line 103
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->getName()Ljava/lang/String;
 
@@ -215,7 +215,7 @@
 
     .prologue
     .line 131
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0, p1}, Landroid/bluetooth/BluetoothAdapter;->getProfileConnectionState(I)I
 
@@ -232,7 +232,7 @@
 
     .prologue
     .line 95
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/bluetooth/BluetoothAdapter;->getProfileProxy(Landroid/content/Context;Landroid/bluetooth/BluetoothProfile$ServiceListener;I)Z
 
@@ -245,7 +245,7 @@
 
     .prologue
     .line 107
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->getScanMode()I
 
@@ -259,7 +259,7 @@
 
     .prologue
     .line 115
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->getState()I
 
@@ -273,7 +273,7 @@
 
     .prologue
     .line 119
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->getUuids()[Landroid/os/ParcelUuid;
 
@@ -287,7 +287,7 @@
 
     .prologue
     .line 123
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->isDiscovering()Z
 
@@ -301,7 +301,7 @@
 
     .prologue
     .line 127
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->isEnabled()Z
 
@@ -318,7 +318,7 @@
     .line 220
     if-eqz p1, :cond_0
 
-    iget-object v1, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v1, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v1}, Landroid/bluetooth/BluetoothAdapter;->enable()Z
 
@@ -335,7 +335,7 @@
     const/16 v1, 0xb
 
     :goto_1
-    invoke-virtual {p0, v1}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->setBluetoothStateInt(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->setBluetoothStateInt(I)V
 
     .line 236
     :goto_2
@@ -344,7 +344,7 @@
     .line 220
     .end local v0    # "success":Z
     :cond_0
-    iget-object v1, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v1, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v1}, Landroid/bluetooth/BluetoothAdapter;->disable()Z
 
@@ -384,7 +384,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 234
-    invoke-virtual {p0}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->syncBluetoothState()Z
+    invoke-virtual {p0}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->syncBluetoothState()Z
 
     goto :goto_2
 .end method
@@ -398,7 +398,7 @@
     monitor-enter p0
 
     :try_start_0
-    iput p1, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mState:I
+    iput p1, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mState:I
 
     .line 200
     const/16 v0, 0xc
@@ -406,14 +406,14 @@
     if-ne p1, v0, :cond_0
 
     .line 203
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mProfileManager:Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mProfileManager:Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;
 
     if-eqz v0, :cond_0
 
     .line 204
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mProfileManager:Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mProfileManager:Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;
 
-    invoke-virtual {v0}, Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;->setBluetoothStateOn()V
+    invoke-virtual {v0}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;->setBluetoothStateOn()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -438,7 +438,7 @@
 
     .prologue
     .line 139
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0, p1}, Landroid/bluetooth/BluetoothAdapter;->setDiscoverableTimeout(I)V
 
@@ -451,7 +451,7 @@
 
     .prologue
     .line 155
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->setManufacturerData()V
 
@@ -465,7 +465,7 @@
 
     .prologue
     .line 143
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0, p1}, Landroid/bluetooth/BluetoothAdapter;->setName(Ljava/lang/String;)Z
 
@@ -473,13 +473,13 @@
     return-void
 .end method
 
-.method setProfileManager(Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;)V
+.method setProfileManager(Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;)V
     .locals 0
-    .param p1, "manager"    # Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
+    .param p1, "manager"    # Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;
 
     .prologue
     .line 59
-    iput-object p1, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mProfileManager:Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
+    iput-object p1, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mProfileManager:Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;
 
     .line 60
     return-void
@@ -491,7 +491,7 @@
 
     .prologue
     .line 147
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0, p1}, Landroid/bluetooth/BluetoothAdapter;->setScanMode(I)Z
 
@@ -506,7 +506,7 @@
 
     .prologue
     .line 151
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0, p1, p2}, Landroid/bluetooth/BluetoothAdapter;->setScanMode(II)Z
 
@@ -543,7 +543,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v3, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v3}, Landroid/bluetooth/BluetoothAdapter;->isDiscovering()Z
 
@@ -560,7 +560,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 161
-    iget-object v1, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v1, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v1}, Landroid/bluetooth/BluetoothAdapter;->isDiscovering()Z
 
@@ -572,7 +572,7 @@
     if-nez p1, :cond_2
 
     .line 165
-    iget-wide v2, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mLastScan:J
+    iget-wide v2, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mLastScan:J
 
     const-wide/32 v4, 0x493e0
 
@@ -599,7 +599,7 @@
 
     move-result-object v2
 
-    iget-wide v4, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mLastScan:J
+    iget-wide v4, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mLastScan:J
 
     invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -644,17 +644,17 @@
 
     .line 171
     :cond_1
-    iget-object v1, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mProfileManager:Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
+    iget-object v1, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mProfileManager:Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;
 
-    invoke-virtual {v1}, Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;->getA2dpProfile()Lcom/android/settingslib/bluetooth/A2dpProfile;
+    invoke-virtual {v1}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;->getA2dpProfile()Lcom/android/settings_exlib/bluetooth/A2dpProfile;
 
     move-result-object v0
 
     .line 172
-    .local v0, "a2dp":Lcom/android/settingslib/bluetooth/A2dpProfile;
+    .local v0, "a2dp":Lcom/android/settings_exlib/bluetooth/A2dpProfile;
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/android/settingslib/bluetooth/A2dpProfile;->isA2dpPlaying()Z
+    invoke-virtual {v0}, Lcom/android/settings_exlib/bluetooth/A2dpProfile;->isA2dpPlaying()Z
 
     move-result v1
 
@@ -670,9 +670,9 @@
     goto :goto_0
 
     .line 178
-    .end local v0    # "a2dp":Lcom/android/settingslib/bluetooth/A2dpProfile;
+    .end local v0    # "a2dp":Lcom/android/settings_exlib/bluetooth/A2dpProfile;
     :cond_2
-    iget-object v1, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v1, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v1}, Landroid/bluetooth/BluetoothAdapter;->startDiscovery()Z
 
@@ -685,7 +685,7 @@
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mLastScan:J
+    iput-wide v2, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mLastScan:J
 
     .line 181
     :cond_3
@@ -701,7 +701,7 @@
 
     move-result-object v2
 
-    iget-wide v4, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mLastScan:J
+    iget-wide v4, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mLastScan:J
 
     invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -721,7 +721,7 @@
 
     .prologue
     .line 186
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->isDiscovering()Z
 
@@ -730,7 +730,7 @@
     if-eqz v0, :cond_0
 
     .line 187
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->cancelDiscovery()Z
 
@@ -744,7 +744,7 @@
 
     .prologue
     .line 211
-    iget-object v1, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v1, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v1}, Landroid/bluetooth/BluetoothAdapter;->getState()I
 
@@ -752,18 +752,18 @@
 
     .line 212
     .local v0, "currentState":I
-    iget v1, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mState:I
+    iget v1, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mState:I
 
     if-eq v0, v1, :cond_0
 
     .line 213
-    iget-object v1, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
+    iget-object v1, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->mAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v1}, Landroid/bluetooth/BluetoothAdapter;->getState()I
 
     move-result v1
 
-    invoke-virtual {p0, v1}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->setBluetoothStateInt(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->setBluetoothStateInt(I)V
 
     .line 214
     const/4 v1, 0x1

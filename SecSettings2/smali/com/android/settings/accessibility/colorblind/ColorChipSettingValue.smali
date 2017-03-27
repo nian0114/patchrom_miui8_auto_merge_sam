@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;
+.class public Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;
 .super Landroid/app/Application;
 .source "ColorChipSettingValue.java"
 
@@ -23,10 +23,10 @@
     invoke-direct {p0}, Landroid/app/Application;-><init>()V
 
     .line 27
-    iput-object p1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;->mContext:Landroid/content/Context;
 
     .line 28
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;->UpdatePrefCVDSettingValue()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;->UpdatePrefCVDSettingValue()V
 
     .line 29
     return-void
@@ -162,7 +162,7 @@
     const/4 v3, 0x0
 
     .line 36
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -176,10 +176,10 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;->mCVDType:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;->mCVDType:I
 
     .line 37
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -191,10 +191,10 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;->mCVDseverity:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;->mCVDseverity:F
 
     .line 38
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -206,7 +206,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;->mUserParameter:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;->mUserParameter:F
 
     .line 39
     return-void
@@ -217,7 +217,7 @@
 
     .prologue
     .line 42
-    iget v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;->mCVDType:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;->mCVDType:I
 
     return v0
 .end method
@@ -227,7 +227,7 @@
 
     .prologue
     .line 46
-    iget v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;->mCVDseverity:F
+    iget v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;->mCVDseverity:F
 
     return v0
 .end method
@@ -237,7 +237,7 @@
 
     .prologue
     .line 50
-    iget v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;->mUserParameter:F
+    iget v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;->mUserParameter:F
 
     return v0
 .end method

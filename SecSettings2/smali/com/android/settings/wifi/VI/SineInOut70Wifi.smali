@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/VI/SineInOut70Wifi;
+.class public Lcom/android/settings_ex/wifi/VI/SineInOut70Wifi;
 .super Landroid/view/animation/PathInterpolator;
 .source "SineInOut70Wifi.java"
 

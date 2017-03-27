@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/nfc/NfcOsaifukeitaiRemoteLock;
+.class public Lcom/android/settings_ex/nfc/NfcOsaifukeitaiRemoteLock;
 .super Landroid/app/Fragment;
 .source "NfcOsaifukeitaiRemoteLock.java"
 
@@ -20,11 +20,11 @@
     invoke-direct {p0}, Landroid/app/Fragment;-><init>()V
 
     .line 69
-    new-instance v0, Lcom/android/settings/nfc/NfcOsaifukeitaiRemoteLock$1;
+    new-instance v0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiRemoteLock$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiRemoteLock$1;-><init>(Lcom/android/settings/nfc/NfcOsaifukeitaiRemoteLock;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiRemoteLock$1;-><init>(Lcom/android/settings_ex/nfc/NfcOsaifukeitaiRemoteLock;)V
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiRemoteLock;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiRemoteLock;->mReceiver:Landroid/content/BroadcastReceiver;
 
     return-void
 .end method
@@ -64,7 +64,7 @@
     const/4 v2, 0x1
 
     :try_start_0
-    invoke-virtual {p0, v1, v2}, Lcom/android/settings/nfc/NfcOsaifukeitaiRemoteLock;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v1, v2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiRemoteLock;->startActivityForResult(Landroid/content/Intent;I)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -140,7 +140,7 @@
 
     .line 113
     :try_start_0
-    invoke-virtual {p0, v1}, Lcom/android/settings/nfc/NfcOsaifukeitaiRemoteLock;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiRemoteLock;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -148,7 +148,7 @@
     .end local v1    # "intent":Landroid/content/Intent;
     :cond_0
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiRemoteLock;->mActivity:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiRemoteLock;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v2}, Landroid/app/Activity;->finish()V
 
@@ -176,14 +176,14 @@
     invoke-super {p0, p1}, Landroid/app/Fragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 88
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiRemoteLock;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiRemoteLock;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiRemoteLock;->mActivity:Landroid/app/Activity;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiRemoteLock;->mActivity:Landroid/app/Activity;
 
     .line 89
-    invoke-direct {p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiRemoteLock;->startPasswardManager()V
+    invoke-direct {p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiRemoteLock;->startPasswardManager()V
 
     .line 90
     const-string v0, "[NfcOsaifukeitaiRemoteLock]"
@@ -212,10 +212,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiRemoteLock;->mView:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiRemoteLock;->mView:Landroid/view/View;
 
     .line 136
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiRemoteLock;->mView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiRemoteLock;->mView:Landroid/view/View;
 
     return-object v0
 .end method

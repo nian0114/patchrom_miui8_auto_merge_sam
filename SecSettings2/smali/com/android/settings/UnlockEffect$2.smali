@@ -1,4 +1,4 @@
-.class Lcom/android/settings/UnlockEffect$2;
+.class Lcom/android/settings_ex/UnlockEffect$2;
 .super Ljava/lang/Object;
 .source "UnlockEffect.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/UnlockEffect;->createDialogforTablet()V
+    value = Lcom/android/settings_ex/UnlockEffect;->createDialogforTablet()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/UnlockEffect;
+.field final synthetic this$0:Lcom/android/settings_ex/UnlockEffect;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/UnlockEffect;)V
+.method constructor <init>(Lcom/android/settings_ex/UnlockEffect;)V
     .locals 0
 
     .prologue
     .line 176
-    iput-object p1, p0, Lcom/android/settings/UnlockEffect$2;->this$0:Lcom/android/settings/UnlockEffect;
+    iput-object p1, p0, Lcom/android/settings_ex/UnlockEffect$2;->this$0:Lcom/android/settings_ex/UnlockEffect;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,9 +43,9 @@
 
     .prologue
     .line 178
-    iget-object v0, p0, Lcom/android/settings/UnlockEffect$2;->this$0:Lcom/android/settings/UnlockEffect;
+    iget-object v0, p0, Lcom/android/settings_ex/UnlockEffect$2;->this$0:Lcom/android/settings_ex/UnlockEffect;
 
-    invoke-virtual {v0}, Lcom/android/settings/UnlockEffect;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/UnlockEffect;->finish()V
 
     .line 179
     return-void

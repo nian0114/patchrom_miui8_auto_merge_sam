@@ -1,11 +1,11 @@
-.class Lcom/android/settings/safetycare/SafetyCareSettings$1;
+.class Lcom/android/settings_ex/safetycare/SafetyCareSettings$1;
 .super Landroid/database/ContentObserver;
 .source "SafetyCareSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/safetycare/SafetyCareSettings;
+    value = Lcom/android/settings_ex/safetycare/SafetyCareSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/safetycare/SafetyCareSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/safetycare/SafetyCareSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/safetycare/SafetyCareSettings;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/safetycare/SafetyCareSettings;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 115
-    iput-object p1, p0, Lcom/android/settings/safetycare/SafetyCareSettings$1;->this$0:Lcom/android/settings/safetycare/SafetyCareSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings$1;->this$0:Lcom/android/settings_ex/safetycare/SafetyCareSettings;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -40,10 +40,10 @@
 
     .prologue
     .line 118
-    iget-object v0, p0, Lcom/android/settings/safetycare/SafetyCareSettings$1;->this$0:Lcom/android/settings/safetycare/SafetyCareSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/safetycare/SafetyCareSettings$1;->this$0:Lcom/android/settings_ex/safetycare/SafetyCareSettings;
 
-    # invokes: Lcom/android/settings/safetycare/SafetyCareSettings;->locationSummaryUpdate()V
-    invoke-static {v0}, Lcom/android/settings/safetycare/SafetyCareSettings;->access$000(Lcom/android/settings/safetycare/SafetyCareSettings;)V
+    # invokes: Lcom/android/settings_ex/safetycare/SafetyCareSettings;->locationSummaryUpdate()V
+    invoke-static {v0}, Lcom/android/settings_ex/safetycare/SafetyCareSettings;->access$000(Lcom/android/settings_ex/safetycare/SafetyCareSettings;)V
 
     .line 119
     return-void

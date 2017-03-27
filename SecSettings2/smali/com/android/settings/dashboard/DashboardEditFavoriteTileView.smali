@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;
+.class public Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;
 .super Landroid/widget/FrameLayout;
 .source "DashboardEditFavoriteTileView.java"
 
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/dashboard/DashboardEditFavoriteTileView$DashboardEditFavoriteTileViewHolder;
+        Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView$DashboardEditFavoriteTileViewHolder;
     }
 .end annotation
 
@@ -25,7 +25,7 @@
 
 .field private mStatusTextView:Landroid/widget/TextView;
 
-.field private mTile:Lcom/android/settings/dashboard/DashboardTile;
+.field private mTile:Lcom/android/settings_ex/dashboard/DashboardTile;
 
 .field private mTitleTextView:Landroid/widget/TextView;
 
@@ -39,7 +39,7 @@
     .line 59
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, v0}, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 60
     return-void
@@ -57,7 +57,7 @@
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 50
-    iput v3, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->mColSpan:I
+    iput v3, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->mColSpan:I
 
     .line 65
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
@@ -80,7 +80,7 @@
 
     check-cast v1, Landroid/widget/ImageView;
 
-    iput-object v1, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->mImageView:Landroid/widget/ImageView;
+    iput-object v1, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->mImageView:Landroid/widget/ImageView;
 
     .line 68
     const v1, 0x7f0d0058
@@ -91,7 +91,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->mTitleTextView:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->mTitleTextView:Landroid/widget/TextView;
 
     .line 69
     const v1, 0x7f0d0147
@@ -102,7 +102,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->mStatusTextView:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->mStatusTextView:Landroid/widget/TextView;
 
     .line 70
     const v1, 0x7f0d016f
@@ -111,7 +111,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->mDivider:Landroid/view/View;
+    iput-object v1, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->mDivider:Landroid/view/View;
 
     .line 71
     const v1, 0x7f0d0064
@@ -122,21 +122,21 @@
 
     check-cast v1, Landroid/widget/CheckBox;
 
-    iput-object v1, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->mCheckbox:Landroid/widget/CheckBox;
+    iput-object v1, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->mCheckbox:Landroid/widget/CheckBox;
 
     .line 73
-    invoke-virtual {p0, p1}, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->setFontSizeIfNeeded(Landroid/content/Context;)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->setFontSizeIfNeeded(Landroid/content/Context;)V
 
     .line 74
-    invoke-virtual {p0, p0}, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p0, p0}, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 75
     const v1, 0x7f0200b6
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->setBackgroundResource(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->setBackgroundResource(I)V
 
     .line 76
-    invoke-virtual {p0, v3}, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->setFocusable(Z)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->setFocusable(Z)V
 
     .line 77
     return-void
@@ -149,7 +149,7 @@
 
     .prologue
     .line 92
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->mCheckbox:Landroid/widget/CheckBox;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->mCheckbox:Landroid/widget/CheckBox;
 
     return-object v0
 .end method
@@ -159,7 +159,7 @@
 
     .prologue
     .line 112
-    iget v0, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->mColSpan:I
+    iget v0, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->mColSpan:I
 
     return v0
 .end method
@@ -169,7 +169,7 @@
 
     .prologue
     .line 88
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->mImageView:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->mImageView:Landroid/widget/ImageView;
 
     return-object v0
 .end method
@@ -179,17 +179,17 @@
 
     .prologue
     .line 84
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->mStatusTextView:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->mStatusTextView:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method public getTile()Lcom/android/settings/dashboard/DashboardTile;
+.method public getTile()Lcom/android/settings_ex/dashboard/DashboardTile;
     .locals 1
 
     .prologue
     .line 100
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->mTile:Lcom/android/settings/dashboard/DashboardTile;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->mTile:Lcom/android/settings_ex/dashboard/DashboardTile;
 
     return-object v0
 .end method
@@ -199,7 +199,7 @@
 
     .prologue
     .line 80
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->mTitleTextView:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->mTitleTextView:Landroid/widget/TextView;
 
     return-object v0
 .end method
@@ -216,7 +216,7 @@
     const/4 v7, 0x0
 
     .line 130
-    invoke-static {}, Lcom/android/settings/dashboard/DashboardEditFavoriteSummary;->getCheckedTileCount()I
+    invoke-static {}, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary;->getCheckedTileCount()I
 
     move-result v0
 
@@ -226,11 +226,11 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView$DashboardEditFavoriteTileViewHolder;
+    check-cast v1, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView$DashboardEditFavoriteTileViewHolder;
 
     .line 134
-    .local v1, "holder":Lcom/android/settings/dashboard/DashboardEditFavoriteTileView$DashboardEditFavoriteTileViewHolder;
-    iget-object v3, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->mCheckbox:Landroid/widget/CheckBox;
+    .local v1, "holder":Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView$DashboardEditFavoriteTileViewHolder;
+    iget-object v3, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->mCheckbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v3}, Landroid/widget/CheckBox;->isChecked()Z
 
@@ -239,10 +239,10 @@
     if-eqz v3, :cond_0
 
     .line 135
-    iput-boolean v7, v1, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView$DashboardEditFavoriteTileViewHolder;->isChecked:Z
+    iput-boolean v7, v1, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView$DashboardEditFavoriteTileViewHolder;->isChecked:Z
 
     .line 136
-    iget-object v3, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->mCheckbox:Landroid/widget/CheckBox;
+    iget-object v3, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->mCheckbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v3, v7}, Landroid/widget/CheckBox;->setChecked(Z)V
 
@@ -251,7 +251,7 @@
 
     .line 151
     :goto_0
-    invoke-static {}, Lcom/android/settings/dashboard/DashboardEditFavoriteSummary;->UpdateSelectionMenu()V
+    invoke-static {}, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary;->UpdateSelectionMenu()V
 
     .line 153
     :goto_1
@@ -262,10 +262,10 @@
     if-ge v0, v6, :cond_1
 
     .line 140
-    iput-boolean v5, v1, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView$DashboardEditFavoriteTileViewHolder;->isChecked:Z
+    iput-boolean v5, v1, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView$DashboardEditFavoriteTileViewHolder;->isChecked:Z
 
     .line 141
-    iget-object v3, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->mCheckbox:Landroid/widget/CheckBox;
+    iget-object v3, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->mCheckbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v3, v5}, Landroid/widget/CheckBox;->setChecked(Z)V
 
@@ -276,7 +276,7 @@
 
     .line 144
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -296,7 +296,7 @@
 
     .line 146
     .local v2, "text":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -315,7 +315,7 @@
 
     .prologue
     .line 104
-    iget-object v1, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->mDivider:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->mDivider:Landroid/view/View;
 
     if-eqz p1, :cond_0
 
@@ -359,19 +359,19 @@
     if-le v0, v3, :cond_0
 
     .line 120
-    invoke-static {p1, v0}, Lcom/android/settings/Utils;->getFontScale(Landroid/content/Context;I)F
+    invoke-static {p1, v0}, Lcom/android/settings_ex/Utils;->getFontScale(Landroid/content/Context;I)F
 
     move-result v1
 
     .line 121
     .local v1, "fontScale":F
-    iget-object v3, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->mTitleTextView:Landroid/widget/TextView;
+    iget-object v3, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->mTitleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v3}, Landroid/widget/TextView;->getTextSize()F
 
     move-result v3
 
-    invoke-virtual {p0}, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -385,7 +385,7 @@
 
     .line 123
     .local v2, "fontsize":F
-    iget-object v3, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->mTitleTextView:Landroid/widget/TextView;
+    iget-object v3, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->mTitleTextView:Landroid/widget/TextView;
 
     const/4 v4, 0x1
 
@@ -400,13 +400,13 @@
     return-void
 .end method
 
-.method public setTile(Lcom/android/settings/dashboard/DashboardTile;)V
+.method public setTile(Lcom/android/settings_ex/dashboard/DashboardTile;)V
     .locals 0
-    .param p1, "tile"    # Lcom/android/settings/dashboard/DashboardTile;
+    .param p1, "tile"    # Lcom/android/settings_ex/dashboard/DashboardTile;
 
     .prologue
     .line 96
-    iput-object p1, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;->mTile:Lcom/android/settings/dashboard/DashboardTile;
+    iput-object p1, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;->mTile:Lcom/android/settings_ex/dashboard/DashboardTile;
 
     .line 97
     return-void

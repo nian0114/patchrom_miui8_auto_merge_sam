@@ -1,11 +1,11 @@
-.class Lcom/android/settings/mirrorlink/MirrorLink$MirrorlinkListener;
+.class Lcom/android/settings_ex/mirrorlink/MirrorLink$MirrorlinkListener;
 .super Lcom/mirrorlink/android/service/IMirrorlinkListener$Stub;
 .source "MirrorLink.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/mirrorlink/MirrorLink;
+    value = Lcom/android/settings_ex/mirrorlink/MirrorLink;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,13 +25,13 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/mirrorlink/MirrorLink$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/mirrorlink/MirrorLink$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/mirrorlink/MirrorLink$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/mirrorlink/MirrorLink$1;
 
     .prologue
     .line 184
-    invoke-direct {p0}, Lcom/android/settings/mirrorlink/MirrorLink$MirrorlinkListener;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink$MirrorlinkListener;-><init>()V
 
     return-void
 .end method

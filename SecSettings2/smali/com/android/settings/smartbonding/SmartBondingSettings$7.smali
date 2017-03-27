@@ -1,4 +1,4 @@
-.class Lcom/android/settings/smartbonding/SmartBondingSettings$7;
+.class Lcom/android/settings_ex/smartbonding/SmartBondingSettings$7;
 .super Ljava/lang/Object;
 .source "SmartBondingSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/smartbonding/SmartBondingSettings;->showNotificationDialog()V
+    value = Lcom/android/settings_ex/smartbonding/SmartBondingSettings;->showNotificationDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/smartbonding/SmartBondingSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/smartbonding/SmartBondingSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/smartbonding/SmartBondingSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/smartbonding/SmartBondingSettings;)V
     .locals 0
 
     .prologue
     .line 275
-    iput-object p1, p0, Lcom/android/settings/smartbonding/SmartBondingSettings$7;->this$0:Lcom/android/settings/smartbonding/SmartBondingSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/smartbonding/SmartBondingSettings$7;->this$0:Lcom/android/settings_ex/smartbonding/SmartBondingSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,10 +45,10 @@
     const/4 v2, 0x1
 
     .line 277
-    iget-object v0, p0, Lcom/android/settings/smartbonding/SmartBondingSettings$7;->this$0:Lcom/android/settings/smartbonding/SmartBondingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/smartbonding/SmartBondingSettings$7;->this$0:Lcom/android/settings_ex/smartbonding/SmartBondingSettings;
 
-    # invokes: Lcom/android/settings/smartbonding/SmartBondingSettings;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v0}, Lcom/android/settings/smartbonding/SmartBondingSettings;->access$500(Lcom/android/settings/smartbonding/SmartBondingSettings;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/smartbonding/SmartBondingSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v0}, Lcom/android/settings_ex/smartbonding/SmartBondingSettings;->access$500(Lcom/android/settings_ex/smartbonding/SmartBondingSettings;)Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -57,14 +57,14 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 278
-    iget-object v0, p0, Lcom/android/settings/smartbonding/SmartBondingSettings$7;->this$0:Lcom/android/settings/smartbonding/SmartBondingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/smartbonding/SmartBondingSettings$7;->this$0:Lcom/android/settings_ex/smartbonding/SmartBondingSettings;
 
-    # getter for: Lcom/android/settings/smartbonding/SmartBondingSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v0}, Lcom/android/settings/smartbonding/SmartBondingSettings;->access$200(Lcom/android/settings/smartbonding/SmartBondingSettings;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/smartbonding/SmartBondingSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v0}, Lcom/android/settings_ex/smartbonding/SmartBondingSettings;->access$200(Lcom/android/settings_ex/smartbonding/SmartBondingSettings;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v0, v2}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 279
     return-void

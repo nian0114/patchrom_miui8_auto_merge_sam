@@ -1,4 +1,4 @@
-.class Lcom/android/settings/PrivacySettings$1$2;
+.class Lcom/android/settings_ex/PrivacySettings$1$2;
 .super Ljava/lang/Object;
 .source "PrivacySettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/PrivacySettings$1;->onPreferenceClick(Landroid/preference/Preference;)Z
+    value = Lcom/android/settings_ex/PrivacySettings$1;->onPreferenceClick(Landroid/preference/Preference;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/PrivacySettings$1;
+.field final synthetic this$1:Lcom/android/settings_ex/PrivacySettings$1;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/PrivacySettings$1;)V
+.method constructor <init>(Lcom/android/settings_ex/PrivacySettings$1;)V
     .locals 0
 
     .prologue
     .line 300
-    iput-object p1, p0, Lcom/android/settings/PrivacySettings$1$2;->this$1:Lcom/android/settings/PrivacySettings$1;
+    iput-object p1, p0, Lcom/android/settings_ex/PrivacySettings$1$2;->this$1:Lcom/android/settings_ex/PrivacySettings$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -81,11 +81,11 @@
     invoke-virtual {v2, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 309
-    iget-object v4, p0, Lcom/android/settings/PrivacySettings$1$2;->this$1:Lcom/android/settings/PrivacySettings$1;
+    iget-object v4, p0, Lcom/android/settings_ex/PrivacySettings$1$2;->this$1:Lcom/android/settings_ex/PrivacySettings$1;
 
-    iget-object v4, v4, Lcom/android/settings/PrivacySettings$1;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v4, v4, Lcom/android/settings_ex/PrivacySettings$1;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
-    invoke-virtual {v4}, Lcom/android/settings/PrivacySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v4}, Lcom/android/settings_ex/PrivacySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -127,11 +127,11 @@
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 311
-    iget-object v4, p0, Lcom/android/settings/PrivacySettings$1$2;->this$1:Lcom/android/settings/PrivacySettings$1;
+    iget-object v4, p0, Lcom/android/settings_ex/PrivacySettings$1$2;->this$1:Lcom/android/settings_ex/PrivacySettings$1;
 
-    iget-object v4, v4, Lcom/android/settings/PrivacySettings$1;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v4, v4, Lcom/android/settings_ex/PrivacySettings$1;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
-    invoke-virtual {v4, v2}, Lcom/android/settings/PrivacySettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v4, v2}, Lcom/android/settings_ex/PrivacySettings;->startActivity(Landroid/content/Intent;)V
 
     .line 312
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
@@ -184,11 +184,11 @@
     invoke-virtual {v1, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 319
-    iget-object v4, p0, Lcom/android/settings/PrivacySettings$1$2;->this$1:Lcom/android/settings/PrivacySettings$1;
+    iget-object v4, p0, Lcom/android/settings_ex/PrivacySettings$1$2;->this$1:Lcom/android/settings_ex/PrivacySettings$1;
 
-    iget-object v4, v4, Lcom/android/settings/PrivacySettings$1;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v4, v4, Lcom/android/settings_ex/PrivacySettings$1;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
-    invoke-virtual {v4, v1}, Lcom/android/settings/PrivacySettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v4, v1}, Lcom/android/settings_ex/PrivacySettings;->startActivity(Landroid/content/Intent;)V
 
     .line 320
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V

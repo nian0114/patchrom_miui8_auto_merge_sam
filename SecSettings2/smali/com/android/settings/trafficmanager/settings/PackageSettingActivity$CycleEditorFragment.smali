@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;
+.class public Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;
 .super Landroid/app/DialogFragment;
 .source "PackageSettingActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;
+    value = Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -35,7 +35,7 @@
     const/4 v10, 0x1
 
     .line 380
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -89,7 +89,7 @@
 
     .line 390
     .local v2, "cycleDay":I
-    sget v7, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sget v7, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     if-nez v7, :cond_1
 
@@ -129,7 +129,7 @@
 
     move-result-object v7
 
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -152,9 +152,9 @@
     .line 406
     const v7, 0x7f0e0ca8
 
-    new-instance v8, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment$1;
+    new-instance v8, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment$1;
 
-    invoke-direct {v8, p0, v3, v1}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment$1;-><init>(Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;Landroid/widget/NumberPicker;Landroid/content/Context;)V
+    invoke-direct {v8, p0, v3, v1}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment$1;-><init>(Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;Landroid/widget/NumberPicker;Landroid/content/Context;)V
 
     invoke-virtual {v0, v7, v8}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -167,7 +167,7 @@
 
     .line 392
     :cond_1
-    sget v7, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sget v7, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     if-ne v7, v10, :cond_0
 

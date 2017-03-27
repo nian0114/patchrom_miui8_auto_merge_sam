@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/sim/SimDialogActivity;
+.class public Lcom/android/settings_ex/sim/SimDialogActivity;
 .super Landroid/app/Activity;
 .source "SimDialogActivity.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/sim/SimDialogActivity$SelectAccountListAdapter;
+        Lcom/android/settings_ex/sim/SimDialogActivity$SelectAccountListAdapter;
     }
 .end annotation
 
@@ -27,17 +27,17 @@
     .line 49
     const-string v0, "SimDialogActivity"
 
-    sput-object v0, Lcom/android/settings/sim/SimDialogActivity;->TAG:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/sim/SimDialogActivity;->TAG:Ljava/lang/String;
 
     .line 51
     const-string v0, "preferred_sim"
 
-    sput-object v0, Lcom/android/settings/sim/SimDialogActivity;->PREFERRED_SIM:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/sim/SimDialogActivity;->PREFERRED_SIM:Ljava/lang/String;
 
     .line 52
     const-string v0, "dialog_type"
 
-    sput-object v0, Lcom/android/settings/sim/SimDialogActivity;->DIALOG_TYPE_KEY:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/sim/SimDialogActivity;->DIALOG_TYPE_KEY:Ljava/lang/String;
 
     return-void
 .end method
@@ -53,14 +53,14 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/sim/SimDialogActivity;I)Landroid/telecom/PhoneAccountHandle;
+.method static synthetic access$000(Lcom/android/settings_ex/sim/SimDialogActivity;I)Landroid/telecom/PhoneAccountHandle;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/sim/SimDialogActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/sim/SimDialogActivity;
     .param p1, "x1"    # I
 
     .prologue
     .line 48
-    invoke-direct {p0, p1}, Lcom/android/settings/sim/SimDialogActivity;->subscriptionIdToPhoneAccountHandle(I)Landroid/telecom/PhoneAccountHandle;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/sim/SimDialogActivity;->subscriptionIdToPhoneAccountHandle(I)Landroid/telecom/PhoneAccountHandle;
 
     move-result-object v0
 
@@ -74,7 +74,7 @@
 
     .prologue
     .line 48
-    invoke-static {p0, p1}, Lcom/android/settings/sim/SimDialogActivity;->setDefaultDataSubId(Landroid/content/Context;I)V
+    invoke-static {p0, p1}, Lcom/android/settings_ex/sim/SimDialogActivity;->setDefaultDataSubId(Landroid/content/Context;I)V
 
     return-void
 .end method
@@ -86,19 +86,19 @@
 
     .prologue
     .line 48
-    invoke-static {p0, p1}, Lcom/android/settings/sim/SimDialogActivity;->setDefaultSmsSubId(Landroid/content/Context;I)V
+    invoke-static {p0, p1}, Lcom/android/settings_ex/sim/SimDialogActivity;->setDefaultSmsSubId(Landroid/content/Context;I)V
 
     return-void
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/sim/SimDialogActivity;Landroid/telecom/PhoneAccountHandle;)V
+.method static synthetic access$300(Lcom/android/settings_ex/sim/SimDialogActivity;Landroid/telecom/PhoneAccountHandle;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/sim/SimDialogActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/sim/SimDialogActivity;
     .param p1, "x1"    # Landroid/telecom/PhoneAccountHandle;
 
     .prologue
     .line 48
-    invoke-direct {p0, p1}, Lcom/android/settings/sim/SimDialogActivity;->setUserSelectedOutgoingPhoneAccount(Landroid/telecom/PhoneAccountHandle;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/sim/SimDialogActivity;->setUserSelectedOutgoingPhoneAccount(Landroid/telecom/PhoneAccountHandle;)V
 
     return-void
 .end method
@@ -109,13 +109,13 @@
 
     .prologue
     .line 81
-    invoke-virtual {p0}, Lcom/android/settings/sim/SimDialogActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/sim/SimDialogActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
     .line 82
     .local v2, "res":Landroid/content/res/Resources;
-    invoke-virtual {p0}, Lcom/android/settings/sim/SimDialogActivity;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/sim/SimDialogActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -168,18 +168,18 @@
     .line 92
     const v4, 0x7f0e00b8
 
-    new-instance v5, Lcom/android/settings/sim/SimDialogActivity$1;
+    new-instance v5, Lcom/android/settings_ex/sim/SimDialogActivity$1;
 
-    invoke-direct {v5, p0, v3, v1}, Lcom/android/settings/sim/SimDialogActivity$1;-><init>(Lcom/android/settings/sim/SimDialogActivity;Landroid/telephony/SubscriptionInfo;Landroid/content/Context;)V
+    invoke-direct {v5, p0, v3, v1}, Lcom/android/settings_ex/sim/SimDialogActivity$1;-><init>(Lcom/android/settings_ex/sim/SimDialogActivity;Landroid/telephony/SubscriptionInfo;Landroid/content/Context;)V
 
     invoke-virtual {v0, v4, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 105
     const v4, 0x7f0e00b9
 
-    new-instance v5, Lcom/android/settings/sim/SimDialogActivity$2;
+    new-instance v5, Lcom/android/settings_ex/sim/SimDialogActivity$2;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/sim/SimDialogActivity$2;-><init>(Lcom/android/settings/sim/SimDialogActivity;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/sim/SimDialogActivity$2;-><init>(Lcom/android/settings_ex/sim/SimDialogActivity;)V
 
     invoke-virtual {v0, v4, v5}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -197,7 +197,7 @@
 
     .line 115
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/sim/SimDialogActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/sim/SimDialogActivity;->finish()V
 
     goto :goto_0
 .end method
@@ -371,7 +371,7 @@
     .line 159
     .local v21, "selectableSubInfoLength":I
     :goto_0
-    new-instance v22, Lcom/android/settings/sim/SimDialogActivity$3;
+    new-instance v22, Lcom/android/settings_ex/sim/SimDialogActivity$3;
 
     move-object/from16 v0, v22
 
@@ -383,17 +383,17 @@
 
     move-object/from16 v4, p1
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/android/settings/sim/SimDialogActivity$3;-><init>(Lcom/android/settings/sim/SimDialogActivity;ILjava/util/List;Landroid/content/Context;)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/android/settings_ex/sim/SimDialogActivity$3;-><init>(Lcom/android/settings_ex/sim/SimDialogActivity;ILjava/util/List;Landroid/content/Context;)V
 
     .line 192
     .local v22, "selectionListener":Landroid/content/DialogInterface$OnClickListener;
-    new-instance v17, Lcom/android/settings/sim/SimDialogActivity$4;
+    new-instance v17, Lcom/android/settings_ex/sim/SimDialogActivity$4;
 
     move-object/from16 v0, v17
 
     move-object/from16 v1, p0
 
-    invoke-direct {v0, v1}, Lcom/android/settings/sim/SimDialogActivity$4;-><init>(Lcom/android/settings/sim/SimDialogActivity;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/sim/SimDialogActivity$4;-><init>(Lcom/android/settings_ex/sim/SimDialogActivity;)V
 
     .line 203
     .local v17, "keyListener":Landroid/content/DialogInterface$OnKeyListener;
@@ -432,7 +432,7 @@
 
     .line 210
     .local v20, "phoneAccounts":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/telecom/PhoneAccountHandle;>;"
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/sim/SimDialogActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/sim/SimDialogActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -638,7 +638,7 @@
 
     .line 240
     .local v12, "builder":Landroid/app/AlertDialog$Builder;
-    new-instance v5, Lcom/android/settings/sim/SimDialogActivity$SelectAccountListAdapter;
+    new-instance v5, Lcom/android/settings_ex/sim/SimDialogActivity$SelectAccountListAdapter;
 
     const/4 v6, 0x1
 
@@ -659,7 +659,7 @@
 
     move/from16 v11, p2
 
-    invoke-direct/range {v5 .. v11}, Lcom/android/settings/sim/SimDialogActivity$SelectAccountListAdapter;-><init>(Lcom/android/settings/sim/SimDialogActivity;Ljava/util/List;Landroid/content/Context;I[Ljava/lang/String;I)V
+    invoke-direct/range {v5 .. v11}, Lcom/android/settings_ex/sim/SimDialogActivity$SelectAccountListAdapter;-><init>(Lcom/android/settings_ex/sim/SimDialogActivity;Ljava/util/List;Landroid/content/Context;I[Ljava/lang/String;I)V
 
     .line 246
     .local v5, "adapter":Landroid/widget/ListAdapter;
@@ -731,11 +731,11 @@
     invoke-virtual {v14, v0}, Landroid/app/Dialog;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)V
 
     .line 264
-    new-instance v6, Lcom/android/settings/sim/SimDialogActivity$5;
+    new-instance v6, Lcom/android/settings_ex/sim/SimDialogActivity$5;
 
     move-object/from16 v0, p0
 
-    invoke-direct {v6, v0}, Lcom/android/settings/sim/SimDialogActivity$5;-><init>(Lcom/android/settings/sim/SimDialogActivity;)V
+    invoke-direct {v6, v0}, Lcom/android/settings_ex/sim/SimDialogActivity$5;-><init>(Lcom/android/settings_ex/sim/SimDialogActivity;)V
 
     invoke-virtual {v14, v6}, Landroid/app/Dialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
@@ -779,7 +779,7 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 62
-    invoke-virtual {p0}, Lcom/android/settings/sim/SimDialogActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/sim/SimDialogActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -789,7 +789,7 @@
 
     .line 63
     .local v1, "extras":Landroid/os/Bundle;
-    sget-object v2, Lcom/android/settings/sim/SimDialogActivity;->DIALOG_TYPE_KEY:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/sim/SimDialogActivity;->DIALOG_TYPE_KEY:Ljava/lang/String;
 
     const/4 v3, -0x1
 
@@ -834,7 +834,7 @@
 
     .line 69
     :pswitch_0
-    invoke-virtual {p0, p0, v0}, Lcom/android/settings/sim/SimDialogActivity;->createDialog(Landroid/content/Context;I)Landroid/app/Dialog;
+    invoke-virtual {p0, p0, v0}, Lcom/android/settings_ex/sim/SimDialogActivity;->createDialog(Landroid/content/Context;I)Landroid/app/Dialog;
 
     move-result-object v2
 
@@ -846,13 +846,13 @@
 
     .line 72
     :pswitch_1
-    sget-object v2, Lcom/android/settings/sim/SimDialogActivity;->PREFERRED_SIM:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/sim/SimDialogActivity;->PREFERRED_SIM:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v2
 
-    invoke-direct {p0, v2}, Lcom/android/settings/sim/SimDialogActivity;->displayPreferredDialog(I)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/sim/SimDialogActivity;->displayPreferredDialog(I)V
 
     goto :goto_0
 

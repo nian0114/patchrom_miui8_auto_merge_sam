@@ -1,11 +1,11 @@
-.class Lcom/android/settings/trafficmanager/ITotalDataService$1;
+.class Lcom/android/settings_ex/trafficmanager/ITotalDataService$1;
 .super Lcom/samsung/android/trafficmanager/ITotalData$Stub;
 .source "ITotalDataService.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/trafficmanager/ITotalDataService;
+    value = Lcom/android/settings_ex/trafficmanager/ITotalDataService;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/trafficmanager/ITotalDataService;
+.field final synthetic this$0:Lcom/android/settings_ex/trafficmanager/ITotalDataService;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/trafficmanager/ITotalDataService;)V
+.method constructor <init>(Lcom/android/settings_ex/trafficmanager/ITotalDataService;)V
     .locals 0
 
     .prologue
     .line 57
-    iput-object p1, p0, Lcom/android/settings/trafficmanager/ITotalDataService$1;->this$0:Lcom/android/settings/trafficmanager/ITotalDataService;
+    iput-object p1, p0, Lcom/android/settings_ex/trafficmanager/ITotalDataService$1;->this$0:Lcom/android/settings_ex/trafficmanager/ITotalDataService;
 
     invoke-direct {p0}, Lcom/samsung/android/trafficmanager/ITotalData$Stub;-><init>()V
 
@@ -50,10 +50,10 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 66
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/ITotalDataService$1;->this$0:Lcom/android/settings/trafficmanager/ITotalDataService;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/ITotalDataService$1;->this$0:Lcom/android/settings_ex/trafficmanager/ITotalDataService;
 
-    # invokes: Lcom/android/settings/trafficmanager/ITotalDataService;->getTotalUsedData()J
-    invoke-static {v0}, Lcom/android/settings/trafficmanager/ITotalDataService;->access$000(Lcom/android/settings/trafficmanager/ITotalDataService;)J
+    # invokes: Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getTotalUsedData()J
+    invoke-static {v0}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->access$000(Lcom/android/settings_ex/trafficmanager/ITotalDataService;)J
 
     move-result-wide v0
 

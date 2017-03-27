@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/fuelgauge/PowerUsageSummary$5;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/fuelgauge/PowerUsageSummary$5;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "PowerUsageSummary.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fuelgauge/PowerUsageSummary;
+    value = Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 712
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -60,7 +60,7 @@
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 741
-    invoke-static {p1}, Lcom/android/settings/Utils;->useGEDBattery(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->useGEDBattery(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -73,7 +73,7 @@
 
     .line 745
     :cond_0
-    invoke-static {p1}, Lcom/android/settings/Utils;->isAppOptUIAvailable(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isAppOptUIAvailable(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -86,13 +86,13 @@
 
     .line 749
     :cond_1
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportFastCableCharger()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportFastCableCharger()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->useGEDBattery(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->useGEDBattery(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -106,13 +106,13 @@
 
     .line 752
     :cond_3
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportFastWirelessCharger()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportFastWirelessCharger()Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->useGEDBattery(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->useGEDBattery(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -154,7 +154,7 @@
             "Z)",
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/search/SearchIndexableRaw;",
+            "Lcom/android/settings_ex/search/SearchIndexableRaw;",
             ">;"
         }
     .end annotation
@@ -166,7 +166,7 @@
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 728
-    .local v1, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/search/SearchIndexableRaw;>;"
+    .local v1, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/search/SearchIndexableRaw;>;"
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -200,7 +200,7 @@
 
     .line 718
     .local v0, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v1, Lcom/android/settings/fuelgauge/PowerUsageSummary;
+    const-class v1, Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

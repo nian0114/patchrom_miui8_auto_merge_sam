@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApAllowedListDelete$4;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedListDelete$4;
 .super Ljava/lang/Object;
 .source "WifiApAllowedListDelete.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/mobileap/WifiApAllowedListDelete;->onActivityCreated(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedListDelete;->onActivityCreated(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WifiApAllowedListDelete;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedListDelete;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WifiApAllowedListDelete;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedListDelete;)V
     .locals 0
 
     .prologue
     .line 194
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApAllowedListDelete$4;->this$0:Lcom/android/settings/wifi/mobileap/WifiApAllowedListDelete;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedListDelete$4;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedListDelete;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,15 +42,15 @@
 
     .prologue
     .line 197
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApAllowedListDelete$4;->this$0:Lcom/android/settings/wifi/mobileap/WifiApAllowedListDelete;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedListDelete$4;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedListDelete;
 
-    # invokes: Lcom/android/settings/wifi/mobileap/WifiApAllowedListDelete;->removeSelectedList()V
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WifiApAllowedListDelete;->access$400(Lcom/android/settings/wifi/mobileap/WifiApAllowedListDelete;)V
+    # invokes: Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedListDelete;->removeSelectedList()V
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedListDelete;->access$400(Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedListDelete;)V
 
     .line 198
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApAllowedListDelete$4;->this$0:Lcom/android/settings/wifi/mobileap/WifiApAllowedListDelete;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedListDelete$4;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedListDelete;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/mobileap/WifiApAllowedListDelete;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedListDelete;->finish()V
 
     .line 199
     return-void

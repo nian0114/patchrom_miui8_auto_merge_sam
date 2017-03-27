@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+.class public Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 .super Landroid/preference/Preference;
 .source "AccessibilityDialogPreference.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;
+        Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;
     }
 .end annotation
 
@@ -25,7 +25,7 @@
     .end annotation
 .end field
 
-.field private mCallback:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;
+.field private mCallback:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;
 
 .field private final mContext:Landroid/content/Context;
 
@@ -54,7 +54,7 @@
     .line 30
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, v0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 31
     return-void
@@ -76,76 +76,76 @@
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v4, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mValues:Ljava/util/ArrayList;
+    iput-object v4, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mValues:Ljava/util/ArrayList;
 
     .line 26
     const/4 v4, -0x5
 
-    iput v4, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->ShiftSpinnerFromLeft:I
+    iput v4, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->ShiftSpinnerFromLeft:I
 
     .line 125
-    new-instance v4, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$3;
+    new-instance v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$3;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$3;-><init>(Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$3;-><init>(Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;)V
 
-    iput-object v4, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mPrefClickListener:Landroid/preference/Preference$OnPreferenceClickListener;
+    iput-object v4, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mPrefClickListener:Landroid/preference/Preference$OnPreferenceClickListener;
 
     .line 35
-    iput-object p1, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mContext:Landroid/content/Context;
 
     .line 36
-    new-instance v4, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$1;
+    new-instance v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$1;
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mContext:Landroid/content/Context;
 
     const v6, 0x1090009
 
-    invoke-direct {v4, p0, v5, v6}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$1;-><init>(Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;Landroid/content/Context;I)V
+    invoke-direct {v4, p0, v5, v6}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$1;-><init>(Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;Landroid/content/Context;I)V
 
-    iput-object v4, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mAdapter:Landroid/widget/ArrayAdapter;
+    iput-object v4, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mAdapter:Landroid/widget/ArrayAdapter;
 
     .line 51
     new-instance v4, Landroid/widget/Spinner;
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mContext:Landroid/content/Context;
 
     invoke-direct {v4, v5}, Landroid/widget/Spinner;-><init>(Landroid/content/Context;)V
 
-    iput-object v4, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
+    iput-object v4, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
 
     .line 52
-    iget-object v4, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
 
     const/4 v5, 0x4
 
     invoke-virtual {v4, v5}, Landroid/widget/Spinner;->setVisibility(I)V
 
     .line 53
-    iget-object v4, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mAdapter:Landroid/widget/ArrayAdapter;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mAdapter:Landroid/widget/ArrayAdapter;
 
     invoke-virtual {v4, v5}, Landroid/widget/Spinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
     .line 54
-    iget-object v4, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
 
-    new-instance v5, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$2;
+    new-instance v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$2;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$2;-><init>(Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$2;-><init>(Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;)V
 
     invoke-virtual {v4, v5}, Landroid/widget/Spinner;->setOnItemClickListenerInt(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 63
-    invoke-virtual {p0, v7}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->setPersistent(Z)V
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->setPersistent(Z)V
 
     .line 72
-    iget-object v4, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mPrefClickListener:Landroid/preference/Preference$OnPreferenceClickListener;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mPrefClickListener:Landroid/preference/Preference$OnPreferenceClickListener;
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 74
-    sget-object v4, Lcom/android/settings/R$styleable;->DropDownPreference:[I
+    sget-object v4, Lcom/android/settings_ex/R$styleable;->DropDownPreference:[I
 
     invoke-virtual {p1, p2, v4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -189,7 +189,7 @@
 
     aget-object v5, v3, v2
 
-    invoke-virtual {p0, v4, v5}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->addItem(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p0, v4, v5}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->addItem(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 78
     add-int/lit8 v2, v2, 0x1
@@ -205,35 +205,35 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;)Ljava/util/ArrayList;
+.method static synthetic access$000(Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;)Ljava/util/ArrayList;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
     .prologue
     .line 19
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mValues:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mValues:Ljava/util/ArrayList;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;)Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;
+.method static synthetic access$100(Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;)Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
     .prologue
     .line 19
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mCallback:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mCallback:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;)Landroid/widget/Spinner;
+.method static synthetic access$200(Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;)Landroid/widget/Spinner;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
     .prologue
     .line 19
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
 
     return-object v0
 .end method
@@ -247,7 +247,7 @@
 
     .prologue
     .line 90
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -257,7 +257,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0, p2}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->addItem(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p0, v0, p2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->addItem(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 91
     return-void
@@ -270,12 +270,12 @@
 
     .prologue
     .line 94
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mAdapter:Landroid/widget/ArrayAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mAdapter:Landroid/widget/ArrayAdapter;
 
     invoke-virtual {v0, p1}, Landroid/widget/ArrayAdapter;->add(Ljava/lang/Object;)V
 
     .line 95
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mValues:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mValues:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -288,12 +288,12 @@
 
     .prologue
     .line 99
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mAdapter:Landroid/widget/ArrayAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mAdapter:Landroid/widget/ArrayAdapter;
 
     invoke-virtual {v0}, Landroid/widget/ArrayAdapter;->clear()V
 
     .line 100
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mValues:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mValues:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
@@ -306,7 +306,7 @@
 
     .prologue
     .line 135
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mPrefClickListener:Landroid/preference/Preference$OnPreferenceClickListener;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mPrefClickListener:Landroid/preference/Preference$OnPreferenceClickListener;
 
     return-object v0
 .end method
@@ -322,7 +322,7 @@
     invoke-super {p0, p1}, Landroid/preference/Preference;->onBindView(Landroid/view/View;)V
 
     .line 109
-    iget-object v2, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
 
     invoke-virtual {v2}, Landroid/widget/Spinner;->getParent()Landroid/view/ViewParent;
 
@@ -340,7 +340,7 @@
 
     .line 110
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
 
     invoke-virtual {v2}, Landroid/widget/Spinner;->getParent()Landroid/view/ViewParent;
 
@@ -349,7 +349,7 @@
     if-eqz v2, :cond_1
 
     .line 111
-    iget-object v2, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
 
     invoke-virtual {v2}, Landroid/widget/Spinner;->getParent()Landroid/view/ViewParent;
 
@@ -357,7 +357,7 @@
 
     check-cast v2, Landroid/view/ViewGroup;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
 
     invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
@@ -369,12 +369,12 @@
 
     .line 114
     .local v1, "vg":Landroid/view/ViewGroup;
-    iget-object v2, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
 
     invoke-virtual {v1, v2, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
 
     .line 115
-    iget-object v2, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
 
     invoke-virtual {v2}, Landroid/widget/Spinner;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -385,27 +385,27 @@
     iput v4, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     .line 117
-    iget-object v2, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
 
     invoke-virtual {v2, v0}, Landroid/widget/Spinner;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 118
-    iget-object v2, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
 
-    iget v3, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->ShiftSpinnerFromLeft:I
+    iget v3, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->ShiftSpinnerFromLeft:I
 
     invoke-virtual {v2, v3}, Landroid/widget/Spinner;->setDropDownHorizontalOffset(I)V
 
     goto :goto_0
 .end method
 
-.method public setCallback(Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;)V
+.method public setCallback(Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;)V
     .locals 0
-    .param p1, "callback"    # Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;
+    .param p1, "callback"    # Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;
 
     .prologue
     .line 86
-    iput-object p1, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mCallback:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mCallback:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;
 
     .line 87
     return-void

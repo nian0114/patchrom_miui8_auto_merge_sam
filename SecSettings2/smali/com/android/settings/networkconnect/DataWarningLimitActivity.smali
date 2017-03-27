@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/networkconnect/DataWarningLimitActivity;
-.super Lcom/android/settings/SettingsActivity;
+.class public Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;
+.super Lcom/android/settings_ex/SettingsActivity;
 .source "DataWarningLimitActivity.java"
 
 
@@ -11,7 +11,7 @@
         value = {
             "Ljava/util/Comparator",
             "<",
-            "Lcom/android/settings/networkconnect/ApplicationNetInfo;",
+            "Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;",
             ">;"
         }
     .end annotation
@@ -36,7 +36,7 @@
 
 .field public mDataTemplate:Landroid/net/NetworkTemplate;
 
-.field private mDataWarningAdapter:Lcom/android/settings/networkconnect/DataWarningAdapter;
+.field private mDataWarningAdapter:Lcom/android/settings_ex/networkconnect/DataWarningAdapter;
 
 .field private mEnableWarningStatus:I
 
@@ -114,14 +114,14 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->DATA_SIZE_SUFFIX:[Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->DATA_SIZE_SUFFIX:[Ljava/lang/String;
 
     .line 277
-    new-instance v0, Lcom/android/settings/networkconnect/DataWarningLimitActivity$3;
+    new-instance v0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity$3;
 
-    invoke-direct {v0}, Lcom/android/settings/networkconnect/DataWarningLimitActivity$3;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity$3;-><init>()V
 
-    sput-object v0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mRowComparator:Ljava/util/Comparator;
+    sput-object v0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mRowComparator:Ljava/util/Comparator;
 
     return-void
 .end method
@@ -133,178 +133,178 @@
     const/4 v1, 0x0
 
     .line 74
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivity;-><init>()V
 
     .line 75
     const-string v0, "DataWarningLimitActivity"
 
-    iput-object v0, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->TAG:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->TAG:Ljava/lang/String;
 
     .line 90
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSubscriberId:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSubscriberId:Ljava/lang/String;
 
     .line 91
-    iput v1, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSubId:I
+    iput v1, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSubId:I
 
     .line 92
-    iput v1, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mEnableWarningStatus:I
+    iput v1, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mEnableWarningStatus:I
 
     .line 93
-    iput-boolean v1, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mIsDataLoadFinished:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mIsDataLoadFinished:Z
 
     .line 170
-    new-instance v0, Lcom/android/settings/networkconnect/DataWarningLimitActivity$1;
+    new-instance v0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/networkconnect/DataWarningLimitActivity$1;-><init>(Lcom/android/settings/networkconnect/DataWarningLimitActivity;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity$1;-><init>(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;)V
 
-    iput-object v0, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSwitchChangedListener:Landroid/widget/CompoundButton$OnCheckedChangeListener;
+    iput-object v0, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSwitchChangedListener:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
     .line 210
-    new-instance v0, Lcom/android/settings/networkconnect/DataWarningLimitActivity$2;
+    new-instance v0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/networkconnect/DataWarningLimitActivity$2;-><init>(Lcom/android/settings/networkconnect/DataWarningLimitActivity;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity$2;-><init>(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;)V
 
-    iput-object v0, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSwitchBarClickListener:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSwitchBarClickListener:Landroid/view/View$OnClickListener;
 
     .line 285
-    new-instance v0, Lcom/android/settings/networkconnect/DataWarningLimitActivity$4;
+    new-instance v0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity$4;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/networkconnect/DataWarningLimitActivity$4;-><init>(Lcom/android/settings/networkconnect/DataWarningLimitActivity;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity$4;-><init>(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;)V
 
-    iput-object v0, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mDataCallback:Landroid/app/LoaderManager$LoaderCallbacks;
+    iput-object v0, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mDataCallback:Landroid/app/LoaderManager$LoaderCallbacks;
 
     .line 330
-    new-instance v0, Lcom/android/settings/networkconnect/DataWarningLimitActivity$5;
+    new-instance v0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity$5;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/networkconnect/DataWarningLimitActivity$5;-><init>(Lcom/android/settings/networkconnect/DataWarningLimitActivity;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity$5;-><init>(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;)V
 
-    iput-object v0, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mWifiCallback:Landroid/app/LoaderManager$LoaderCallbacks;
+    iput-object v0, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mWifiCallback:Landroid/app/LoaderManager$LoaderCallbacks;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/networkconnect/DataWarningLimitActivity;)Landroid/content/Context;
+.method static synthetic access$000(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/networkconnect/DataWarningLimitActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;
 
     .prologue
     .line 74
-    iget-object v0, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/networkconnect/DataWarningLimitActivity;)I
+.method static synthetic access$100(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/networkconnect/DataWarningLimitActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;
 
     .prologue
     .line 74
-    iget v0, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSubId:I
+    iget v0, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSubId:I
 
     return v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/networkconnect/DataWarningLimitActivity;)Landroid/net/INetworkStatsSession;
+.method static synthetic access$1000(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;)Landroid/net/INetworkStatsSession;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/networkconnect/DataWarningLimitActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;
 
     .prologue
     .line 74
-    iget-object v0, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mStatsSession:Landroid/net/INetworkStatsSession;
+    iget-object v0, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mStatsSession:Landroid/net/INetworkStatsSession;
 
     return-object v0
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/networkconnect/DataWarningLimitActivity;)I
+.method static synthetic access$1100(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/networkconnect/DataWarningLimitActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;
 
     .prologue
     .line 74
-    iget v0, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mEnableWarningStatus:I
+    iget v0, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mEnableWarningStatus:I
 
     return v0
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/networkconnect/DataWarningLimitActivity;)Landroid/widget/ListView;
+.method static synthetic access$1200(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;)Landroid/widget/ListView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/networkconnect/DataWarningLimitActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;
 
     .prologue
     .line 74
-    iget-object v0, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mListView:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mListView:Landroid/widget/ListView;
 
     return-object v0
 .end method
 
-.method static synthetic access$1300(Lcom/android/settings/networkconnect/DataWarningLimitActivity;)Landroid/widget/TextView;
+.method static synthetic access$1300(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;)Landroid/widget/TextView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/networkconnect/DataWarningLimitActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;
 
     .prologue
     .line 74
-    iget-object v0, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mMobileText:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mMobileText:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/networkconnect/DataWarningLimitActivity;)Z
+.method static synthetic access$200(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/networkconnect/DataWarningLimitActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;
 
     .prologue
     .line 74
-    invoke-direct {p0}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->isWarningFunctionActive()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->isWarningFunctionActive()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/networkconnect/DataWarningLimitActivity;)Landroid/widget/Switch;
+.method static synthetic access$300(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;)Landroid/widget/Switch;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/networkconnect/DataWarningLimitActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;
 
     .prologue
     .line 74
-    iget-object v0, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSwitch:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSwitch:Landroid/widget/Switch;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/networkconnect/DataWarningLimitActivity;)Landroid/widget/TextView;
+.method static synthetic access$400(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;)Landroid/widget/TextView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/networkconnect/DataWarningLimitActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;
 
     .prologue
     .line 74
-    iget-object v0, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSwitchtext:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSwitchtext:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/networkconnect/DataWarningLimitActivity;)Lcom/android/settings/networkconnect/DataWarningAdapter;
+.method static synthetic access$500(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;)Lcom/android/settings_ex/networkconnect/DataWarningAdapter;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/networkconnect/DataWarningLimitActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;
 
     .prologue
     .line 74
-    iget-object v0, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mDataWarningAdapter:Lcom/android/settings/networkconnect/DataWarningAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mDataWarningAdapter:Lcom/android/settings_ex/networkconnect/DataWarningAdapter;
 
     return-object v0
 .end method
 
-.method static synthetic access$502(Lcom/android/settings/networkconnect/DataWarningLimitActivity;Lcom/android/settings/networkconnect/DataWarningAdapter;)Lcom/android/settings/networkconnect/DataWarningAdapter;
+.method static synthetic access$502(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;Lcom/android/settings_ex/networkconnect/DataWarningAdapter;)Lcom/android/settings_ex/networkconnect/DataWarningAdapter;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/networkconnect/DataWarningLimitActivity;
-    .param p1, "x1"    # Lcom/android/settings/networkconnect/DataWarningAdapter;
+    .param p0, "x0"    # Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;
+    .param p1, "x1"    # Lcom/android/settings_ex/networkconnect/DataWarningAdapter;
 
     .prologue
     .line 74
-    iput-object p1, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mDataWarningAdapter:Lcom/android/settings/networkconnect/DataWarningAdapter;
+    iput-object p1, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mDataWarningAdapter:Lcom/android/settings_ex/networkconnect/DataWarningAdapter;
 
     return-object p1
 .end method
@@ -315,56 +315,56 @@
 
     .prologue
     .line 74
-    invoke-static {p0, p1}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->formatFileSizeMB(J)Ljava/lang/String;
+    invoke-static {p0, p1}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->formatFileSizeMB(J)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/networkconnect/DataWarningLimitActivity;)Z
+.method static synthetic access$700(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/networkconnect/DataWarningLimitActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;
 
     .prologue
     .line 74
-    iget-boolean v0, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mIsDataLoadFinished:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mIsDataLoadFinished:Z
 
     return v0
 .end method
 
-.method static synthetic access$702(Lcom/android/settings/networkconnect/DataWarningLimitActivity;Z)Z
+.method static synthetic access$702(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/networkconnect/DataWarningLimitActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;
     .param p1, "x1"    # Z
 
     .prologue
     .line 74
-    iput-boolean p1, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mIsDataLoadFinished:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mIsDataLoadFinished:Z
 
     return p1
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/networkconnect/DataWarningLimitActivity;)J
+.method static synthetic access$800(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;)J
     .locals 2
-    .param p0, "x0"    # Lcom/android/settings/networkconnect/DataWarningLimitActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;
 
     .prologue
     .line 74
-    invoke-direct {p0}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->getStartTime()J
+    invoke-direct {p0}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->getStartTime()J
 
     move-result-wide v0
 
     return-wide v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/networkconnect/DataWarningLimitActivity;)Landroid/app/LoaderManager$LoaderCallbacks;
+.method static synthetic access$900(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;)Landroid/app/LoaderManager$LoaderCallbacks;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/networkconnect/DataWarningLimitActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;
 
     .prologue
     .line 74
-    iget-object v0, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mWifiCallback:Landroid/app/LoaderManager$LoaderCallbacks;
+    iget-object v0, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mWifiCallback:Landroid/app/LoaderManager$LoaderCallbacks;
 
     return-object v0
 .end method
@@ -374,27 +374,27 @@
 
     .prologue
     .line 163
-    sget-object v0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
     .line 164
-    sget-object v0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidDataMap:Ljava/util/Map;
+    sget-object v0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidDataMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
     .line 165
-    sget-object v0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidWifiMap:Ljava/util/Map;
+    sget-object v0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidWifiMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
     .line 166
-    sget-object v0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidDataLongTypeMap:Ljava/util/Map;
+    sget-object v0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidDataLongTypeMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
     .line 167
-    sget-object v0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidWifiLongTypeMap:Ljava/util/Map;
+    sget-object v0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidWifiLongTypeMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
@@ -431,7 +431,7 @@
     :goto_0
     if-lez v3, :cond_0
 
-    sget-object v5, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->DATA_SIZE_SUFFIX:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->DATA_SIZE_SUFFIX:[Ljava/lang/String;
 
     array-length v5, v5
 
@@ -464,7 +464,7 @@
 
     move-result-object v5
 
-    sget-object v6, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->DATA_SIZE_SUFFIX:[Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->DATA_SIZE_SUFFIX:[Ljava/lang/String;
 
     add-int/lit8 v1, v2, 0x1
 
@@ -519,7 +519,7 @@
     :try_start_0
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mContext:Landroid/content/Context;
+    iget-object v3, v0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -537,7 +537,7 @@
 
     move-object/from16 v0, p0
 
-    iget v7, v0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSubId:I
+    iget v7, v0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSubId:I
 
     invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -632,7 +632,7 @@
     .local v15, "e":Landroid/provider/Settings$SettingNotFoundException;
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->TAG:Ljava/lang/String;
+    iget-object v3, v0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->TAG:Ljava/lang/String;
 
     const-string v4, "startDay SettingNotFoundException"
 
@@ -692,14 +692,14 @@
 
     .prologue
     .line 272
-    new-instance v0, Lcom/android/settings/networkconnect/NetworkManagerUtils;
+    new-instance v0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;
 
-    iget-object v1, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Lcom/android/settings/networkconnect/NetworkManagerUtils;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;-><init>(Landroid/content/Context;)V
 
     .line 273
-    .local v0, "utils":Lcom/android/settings/networkconnect/NetworkManagerUtils;
+    .local v0, "utils":Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -710,7 +710,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSubId:I
+    iget v2, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSubId:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -720,20 +720,20 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getWhiteList(Ljava/lang/String;)Ljava/util/List;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getWhiteList(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v1
 
-    sput-object v1, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mWarningWhiteList:Ljava/util/List;
+    sput-object v1, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mWarningWhiteList:Ljava/util/List;
 
     .line 274
     const-string v1, "data_normal_app_whitelist"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getWhiteList(Ljava/lang/String;)Ljava/util/List;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getWhiteList(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v1
 
-    sput-object v1, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mDataBackupWhiteList:Ljava/util/List;
+    sput-object v1, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mDataBackupWhiteList:Ljava/util/List;
 
     .line 275
     return-void
@@ -746,28 +746,28 @@
     .line 218
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->TAG:Ljava/lang/String;
+    iget-object v15, v0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->TAG:Ljava/lang/String;
 
     const-string v16, "init"
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 219
-    sget-boolean v15, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mIsNeedReLoad:Z
+    sget-boolean v15, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mIsNeedReLoad:Z
 
     if-eqz v15, :cond_8
 
     .line 220
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v14
 
     .line 221
     .local v14, "pm":Landroid/content/pm/PackageManager;
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->dataReset()V
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->dataReset()V
 
     .line 222
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->getWarningWhiteList()V
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->getWarningWhiteList()V
 
     .line 223
     const/16 v15, 0x80
@@ -869,7 +869,7 @@
     .local v2, "packageName":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v2}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->isInWhiteList(Ljava/lang/String;)Z
+    invoke-direct {v0, v2}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->isInWhiteList(Ljava/lang/String;)Z
 
     move-result v15
 
@@ -900,7 +900,7 @@
 
     .line 241
     .local v3, "appLabel":Ljava/lang/String;
-    sget-object v15, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mDataBackupWhiteList:Ljava/util/List;
+    sget-object v15, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mDataBackupWhiteList:Ljava/util/List;
 
     new-instance v16, Ljava/lang/StringBuilder;
 
@@ -932,7 +932,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mPolicyManager:Landroid/net/NetworkPolicyManager;
+    iget-object v15, v0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mPolicyManager:Landroid/net/NetworkPolicyManager;
 
     invoke-virtual {v15, v4}, Landroid/net/NetworkPolicyManager;->getFirewallRuleMobileData(I)Z
 
@@ -941,7 +941,7 @@
     if-eqz v15, :cond_3
 
     .line 243
-    sget-object v15, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mDataBackupWhiteList:Ljava/util/List;
+    sget-object v15, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mDataBackupWhiteList:Ljava/util/List;
 
     new-instance v16, Ljava/lang/StringBuilder;
 
@@ -971,7 +971,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mPolicyManager:Landroid/net/NetworkPolicyManager;
+    iget-object v15, v0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mPolicyManager:Landroid/net/NetworkPolicyManager;
 
     invoke-virtual {v15, v4}, Landroid/net/NetworkPolicyManager;->getFirewallRuleMobileData(I)Z
 
@@ -986,7 +986,7 @@
     :goto_2
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mPolicyManager:Landroid/net/NetworkPolicyManager;
+    iget-object v15, v0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mPolicyManager:Landroid/net/NetworkPolicyManager;
 
     invoke-virtual {v15, v4}, Landroid/net/NetworkPolicyManager;->getFirewallRuleWifi(I)Z
 
@@ -996,7 +996,7 @@
     .local v7, "isWlanAllowed":Z
     if-eqz v6, :cond_7
 
-    sget-object v15, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mWarningWhiteList:Ljava/util/List;
+    sget-object v15, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mWarningWhiteList:Ljava/util/List;
 
     new-instance v16, Ljava/lang/StringBuilder;
 
@@ -1048,20 +1048,20 @@
 
     .line 254
     :cond_5
-    new-instance v1, Lcom/android/settings/networkconnect/ApplicationNetInfo;
+    new-instance v1, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;
 
-    invoke-direct/range {v1 .. v8}, Lcom/android/settings/networkconnect/ApplicationNetInfo;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/util/ArrayList;ZZZ)V
+    invoke-direct/range {v1 .. v8}, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/util/ArrayList;ZZZ)V
 
     .line 256
-    .local v1, "applicationNetInfo":Lcom/android/settings/networkconnect/ApplicationNetInfo;
-    sget-object v15, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    .local v1, "applicationNetInfo":Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;
+    sget-object v15, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v15, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_1
 
     .line 245
-    .end local v1    # "applicationNetInfo":Lcom/android/settings/networkconnect/ApplicationNetInfo;
+    .end local v1    # "applicationNetInfo":Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;
     .end local v5    # "uids":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     .end local v7    # "isWlanAllowed":Z
     .end local v8    # "isWarningAllowed":Z
@@ -1103,14 +1103,14 @@
 
     .local v0, "i":I
     :goto_0
-    sget-object v1, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mWhiteList:[Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mWhiteList:[Ljava/lang/String;
 
     array-length v1, v1
 
     if-ge v0, v1, :cond_1
 
     .line 264
-    sget-object v1, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mWhiteList:[Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mWhiteList:[Ljava/lang/String;
 
     aget-object v1, v1, v0
 
@@ -1159,7 +1159,7 @@
 
     .line 444
     .local v1, "isTrafficSettingEnable":Z
-    iget-object v5, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mContext:Landroid/content/Context;
 
     invoke-static {v5}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
@@ -1177,7 +1177,7 @@
 
     move-result-object v5
 
-    sget v6, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mSubId:I
+    sget v6, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mSubId:I
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1204,7 +1204,7 @@
 
     move-result-object v5
 
-    sget v6, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mSubId:I
+    sget v6, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mSubId:I
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1231,7 +1231,7 @@
 
     move-result-object v5
 
-    sget v6, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mSubId:I
+    sget v6, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mSubId:I
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1302,18 +1302,18 @@
 
     .prologue
     .line 99
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 100
     const v1, 0x7f0400a2
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->setContentView(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->setContentView(I)V
 
     .line 101
-    iput-object p0, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mContext:Landroid/content/Context;
+    iput-object p0, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mContext:Landroid/content/Context;
 
     .line 102
-    invoke-virtual {p0}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -1332,7 +1332,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSubscriberId:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSubscriberId:Ljava/lang/String;
 
     .line 105
     const-string v1, "subId"
@@ -1343,86 +1343,86 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSubId:I
+    iput v1, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSubId:I
 
     .line 107
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Landroid/net/NetworkPolicyManager;->from(Landroid/content/Context;)Landroid/net/NetworkPolicyManager;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mPolicyManager:Landroid/net/NetworkPolicyManager;
+    iput-object v1, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mPolicyManager:Landroid/net/NetworkPolicyManager;
 
     .line 108
     const v1, 0x7f0d01d3
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/LinearLayout;
 
-    iput-object v1, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSwitchBar:Landroid/widget/LinearLayout;
+    iput-object v1, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSwitchBar:Landroid/widget/LinearLayout;
 
     .line 109
     const v1, 0x7f0d01d5
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/Switch;
 
-    iput-object v1, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSwitch:Landroid/widget/Switch;
+    iput-object v1, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSwitch:Landroid/widget/Switch;
 
     .line 110
-    iget-object v1, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSwitch:Landroid/widget/Switch;
+    iget-object v1, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSwitch:Landroid/widget/Switch;
 
-    iget-object v2, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSwitchChangedListener:Landroid/widget/CompoundButton$OnCheckedChangeListener;
+    iget-object v2, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSwitchChangedListener:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
     invoke-virtual {v1, v2}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     .line 111
-    iget-object v1, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSwitchBar:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSwitchBar:Landroid/widget/LinearLayout;
 
-    iget-object v2, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSwitchBarClickListener:Landroid/view/View$OnClickListener;
+    iget-object v2, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSwitchBarClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 112
     const v1, 0x7f0d01d4
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSwitchtext:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSwitchtext:Landroid/widget/TextView;
 
     .line 113
     const v1, 0x7f0d01d7
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mMobileText:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mMobileText:Landroid/widget/TextView;
 
     .line 114
     const v1, 0x102000a
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/ListView;
 
-    iput-object v1, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mListView:Landroid/widget/ListView;
+    iput-object v1, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mListView:Landroid/widget/ListView;
 
     .line 115
     return-void
@@ -1433,12 +1433,12 @@
 
     .prologue
     .line 156
-    iget-object v0, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mStatsSession:Landroid/net/INetworkStatsSession;
+    iget-object v0, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mStatsSession:Landroid/net/INetworkStatsSession;
 
     invoke-static {v0}, Landroid/net/TrafficStats;->closeQuietly(Landroid/net/INetworkStatsSession;)V
 
     .line 157
-    invoke-virtual {p0}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->getLoaderManager()Landroid/app/LoaderManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->getLoaderManager()Landroid/app/LoaderManager;
 
     move-result-object v0
 
@@ -1447,7 +1447,7 @@
     invoke-virtual {v0, v1}, Landroid/app/LoaderManager;->destroyLoader(I)V
 
     .line 158
-    invoke-virtual {p0}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->getLoaderManager()Landroid/app/LoaderManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->getLoaderManager()Landroid/app/LoaderManager;
 
     move-result-object v0
 
@@ -1456,7 +1456,7 @@
     invoke-virtual {v0, v1}, Landroid/app/LoaderManager;->destroyLoader(I)V
 
     .line 159
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->onDestroy()V
 
     .line 160
     return-void
@@ -1467,7 +1467,7 @@
 
     .prologue
     .line 147
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->onPause()V
 
     .line 148
     return-void
@@ -1484,29 +1484,29 @@
     const/4 v6, 0x0
 
     .line 119
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->onResume()V
 
     .line 120
-    iput-boolean v6, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mIsDataLoadFinished:Z
+    iput-boolean v6, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mIsDataLoadFinished:Z
 
     .line 121
-    invoke-direct {p0}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->init()V
+    invoke-direct {p0}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->init()V
 
     .line 122
     invoke-static {}, Landroid/net/NetworkTemplate;->buildTemplateWifiWildcard()Landroid/net/NetworkTemplate;
 
     move-result-object v7
 
-    iput-object v7, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mWifiTemplate:Landroid/net/NetworkTemplate;
+    iput-object v7, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mWifiTemplate:Landroid/net/NetworkTemplate;
 
     .line 123
-    iget-object v7, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSubscriberId:Ljava/lang/String;
+    iget-object v7, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSubscriberId:Ljava/lang/String;
 
     invoke-static {v7}, Landroid/net/NetworkTemplate;->buildTemplateMobileAll(Ljava/lang/String;)Landroid/net/NetworkTemplate;
 
     move-result-object v7
 
-    iput-object v7, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mDataTemplate:Landroid/net/NetworkTemplate;
+    iput-object v7, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mDataTemplate:Landroid/net/NetworkTemplate;
 
     .line 124
     const-string v7, "netstats"
@@ -1519,17 +1519,17 @@
 
     move-result-object v7
 
-    iput-object v7, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mStatsService:Landroid/net/INetworkStatsService;
+    iput-object v7, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mStatsService:Landroid/net/INetworkStatsService;
 
     .line 126
     :try_start_0
-    iget-object v7, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mStatsService:Landroid/net/INetworkStatsService;
+    iget-object v7, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mStatsService:Landroid/net/INetworkStatsService;
 
     invoke-interface {v7}, Landroid/net/INetworkStatsService;->openSession()Landroid/net/INetworkStatsSession;
 
     move-result-object v7
 
-    iput-object v7, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mStatsSession:Landroid/net/INetworkStatsSession;
+    iput-object v7, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mStatsSession:Landroid/net/INetworkStatsSession;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
@@ -1542,37 +1542,37 @@
 
     .line 133
     .local v4, "now":J
-    invoke-virtual {p0}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->getLoaderManager()Landroid/app/LoaderManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->getLoaderManager()Landroid/app/LoaderManager;
 
     move-result-object v7
 
     const/16 v8, 0xb
 
-    iget-object v9, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mDataTemplate:Landroid/net/NetworkTemplate;
+    iget-object v9, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mDataTemplate:Landroid/net/NetworkTemplate;
 
-    invoke-direct {p0}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->getStartTime()J
+    invoke-direct {p0}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->getStartTime()J
 
     move-result-wide v10
 
-    invoke-static {v9, v10, v11, v4, v5}, Lcom/android/settings/net/SummaryForAllUidLoader;->buildArgs(Landroid/net/NetworkTemplate;JJ)Landroid/os/Bundle;
+    invoke-static {v9, v10, v11, v4, v5}, Lcom/android/settings_ex/net/SummaryForAllUidLoader;->buildArgs(Landroid/net/NetworkTemplate;JJ)Landroid/os/Bundle;
 
     move-result-object v9
 
-    iget-object v10, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mDataCallback:Landroid/app/LoaderManager$LoaderCallbacks;
+    iget-object v10, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mDataCallback:Landroid/app/LoaderManager$LoaderCallbacks;
 
     invoke-virtual {v7, v8, v9, v10}, Landroid/app/LoaderManager;->restartLoader(ILandroid/os/Bundle;Landroid/app/LoaderManager$LoaderCallbacks;)Landroid/content/Loader;
 
     .line 134
-    iget-object v7, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mMobileText:Landroid/widget/TextView;
+    iget-object v7, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mMobileText:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v12}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v12}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
     invoke-virtual {v7, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 135
-    iget-object v7, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mContext:Landroid/content/Context;
+    iget-object v7, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1588,7 +1588,7 @@
 
     move-result-object v8
 
-    iget v9, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSubId:I
+    iget v9, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSubId:I
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1602,14 +1602,14 @@
 
     move-result v7
 
-    iput v7, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mEnableWarningStatus:I
+    iput v7, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mEnableWarningStatus:I
 
     .line 136
-    iget v7, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mEnableWarningStatus:I
+    iget v7, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mEnableWarningStatus:I
 
     if-ne v7, v0, :cond_0
 
-    invoke-direct {p0}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->isWarningFunctionActive()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->isWarningFunctionActive()Z
 
     move-result v7
 
@@ -1618,12 +1618,12 @@
     .line 137
     .local v0, "checked":Z
     :goto_1
-    iget-object v6, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSwitch:Landroid/widget/Switch;
+    iget-object v6, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v6, v0}, Landroid/widget/Switch;->setChecked(Z)V
 
     .line 138
-    iget-object v7, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSwitchtext:Landroid/widget/TextView;
+    iget-object v7, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSwitchtext:Landroid/widget/TextView;
 
     if-eqz v0, :cond_1
 
@@ -1633,19 +1633,19 @@
     invoke-virtual {v7, v6}, Landroid/widget/TextView;->setText(I)V
 
     .line 139
-    new-instance v3, Lcom/android/settings/networkconnect/NetworkManagerUtils;
+    new-instance v3, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;
 
-    iget-object v6, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mContext:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mContext:Landroid/content/Context;
 
-    invoke-direct {v3, v6}, Lcom/android/settings/networkconnect/NetworkManagerUtils;-><init>(Landroid/content/Context;)V
+    invoke-direct {v3, v6}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;-><init>(Landroid/content/Context;)V
 
     .line 140
-    .local v3, "utils":Lcom/android/settings/networkconnect/NetworkManagerUtils;
+    .local v3, "utils":Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget v7, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSubId:I
+    iget v7, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSubId:I
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1661,15 +1661,15 @@
 
     move-result-object v6
 
-    invoke-virtual {v3, v6}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->putUsedSubId(Ljava/lang/String;)V
+    invoke-virtual {v3, v6}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->putUsedSubId(Ljava/lang/String;)V
 
     .line 141
-    invoke-virtual {v3}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->sortInWarningStatus()V
+    invoke-virtual {v3}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->sortInWarningStatus()V
 
     .line 142
-    iget-object v6, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mMobileText:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mMobileText:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v12}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v12}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
@@ -1680,7 +1680,7 @@
 
     .line 127
     .end local v0    # "checked":Z
-    .end local v3    # "utils":Lcom/android/settings/networkconnect/NetworkManagerUtils;
+    .end local v3    # "utils":Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;
     .end local v4    # "now":J
     :catch_0
     move-exception v1
@@ -1725,7 +1725,7 @@
 
     .prologue
     .line 152
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->onStop()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->onStop()V
 
     .line 153
     return-void

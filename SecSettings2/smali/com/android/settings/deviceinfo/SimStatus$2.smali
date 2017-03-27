@@ -1,4 +1,4 @@
-.class Lcom/android/settings/deviceinfo/SimStatus$2;
+.class Lcom/android/settings_ex/deviceinfo/SimStatus$2;
 .super Ljava/lang/Object;
 .source "SimStatus.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/deviceinfo/SimStatus;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/deviceinfo/SimStatus;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/SimStatus;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/SimStatus;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/SimStatus;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/SimStatus;)V
     .locals 0
 
     .prologue
     .line 220
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/SimStatus$2;->this$0:Lcom/android/settings/deviceinfo/SimStatus;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/SimStatus$2;->this$0:Lcom/android/settings_ex/deviceinfo/SimStatus;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -70,11 +70,11 @@
 
     .line 227
     .local v2, "pref":Landroid/preference/Preference;
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/SimStatus$2;->this$0:Lcom/android/settings/deviceinfo/SimStatus;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/SimStatus$2;->this$0:Lcom/android/settings_ex/deviceinfo/SimStatus;
 
     const-string v4, "clipboard"
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/deviceinfo/SimStatus;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/deviceinfo/SimStatus;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -89,7 +89,7 @@
     invoke-virtual {v0, v3}, Landroid/content/ClipboardManager;->setText(Ljava/lang/CharSequence;)V
 
     .line 230
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/SimStatus$2;->this$0:Lcom/android/settings/deviceinfo/SimStatus;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/SimStatus$2;->this$0:Lcom/android/settings_ex/deviceinfo/SimStatus;
 
     const v4, 0x1040326
 

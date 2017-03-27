@@ -1,15 +1,15 @@
-.class public Lcom/android/settings/NewOneHandOperationSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/NewOneHandOperationSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "NewOneHandOperationSettings.java"
 
 # interfaces
 .implements Landroid/preference/Preference$OnPreferenceChangeListener;
 .implements Landroid/preference/Preference$OnPreferenceClickListener;
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # instance fields
@@ -27,9 +27,9 @@
 
 .field private mReduceScreenSize:Landroid/preference/SwitchPreference;
 
-.field private mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+.field private mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-.field private mViewPagerAdapter:Lcom/android/settings/OneHandViewPagerAdapter;
+.field private mViewPagerAdapter:Lcom/android/settings_ex/OneHandViewPagerAdapter;
 
 .field private magnificationGesturesEnabled:Z
 
@@ -48,11 +48,11 @@
 
     .prologue
     .line 439
-    new-instance v0, Lcom/android/settings/NewOneHandOperationSettings$9;
+    new-instance v0, Lcom/android/settings_ex/NewOneHandOperationSettings$9;
 
-    invoke-direct {v0}, Lcom/android/settings/NewOneHandOperationSettings$9;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/NewOneHandOperationSettings$9;-><init>()V
 
-    sput-object v0, Lcom/android/settings/NewOneHandOperationSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/NewOneHandOperationSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -64,91 +64,91 @@
     const/4 v0, 0x0
 
     .line 60
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 75
-    iput-boolean v0, p0, Lcom/android/settings/NewOneHandOperationSettings;->sTalkbackEnabled:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->sTalkbackEnabled:Z
 
     .line 76
-    iput-boolean v0, p0, Lcom/android/settings/NewOneHandOperationSettings;->talkbackEnabled:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->talkbackEnabled:Z
 
     .line 77
-    iput-boolean v0, p0, Lcom/android/settings/NewOneHandOperationSettings;->hoverzoomEnabled:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->hoverzoomEnabled:Z
 
     .line 78
-    iput-boolean v0, p0, Lcom/android/settings/NewOneHandOperationSettings;->magnificationGesturesEnabled:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->magnificationGesturesEnabled:Z
 
     .line 79
-    iput-boolean v0, p0, Lcom/android/settings/NewOneHandOperationSettings;->magnifierWindowEnabled:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->magnifierWindowEnabled:Z
 
     .line 80
-    iput-boolean v0, p0, Lcom/android/settings/NewOneHandOperationSettings;->universalSwitchEnabled:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->universalSwitchEnabled:Z
 
     .line 81
-    iput-boolean v0, p0, Lcom/android/settings/NewOneHandOperationSettings;->accessControlEnabled:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->accessControlEnabled:Z
 
     .line 82
-    iput-boolean v0, p0, Lcom/android/settings/NewOneHandOperationSettings;->assistantMenuEnabled:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->assistantMenuEnabled:Z
 
     .line 83
-    iput-boolean v0, p0, Lcom/android/settings/NewOneHandOperationSettings;->directAccessEnabled:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->directAccessEnabled:Z
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/NewOneHandOperationSettings;)Lcom/android/settings/WrapContentHeightViewPager;
+.method static synthetic access$000(Lcom/android/settings_ex/NewOneHandOperationSettings;)Lcom/android/settings_ex/WrapContentHeightViewPager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/NewOneHandOperationSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/NewOneHandOperationSettings;
 
     .prologue
     .line 60
-    iget-object v0, p0, Lcom/android/settings/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/NewOneHandOperationSettings;)Landroid/preference/SwitchPreference;
+.method static synthetic access$100(Lcom/android/settings_ex/NewOneHandOperationSettings;)Landroid/preference/SwitchPreference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/NewOneHandOperationSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/NewOneHandOperationSettings;
 
     .prologue
     .line 60
-    iget-object v0, p0, Lcom/android/settings/NewOneHandOperationSettings;->mReduceScreenSize:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mReduceScreenSize:Landroid/preference/SwitchPreference;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/NewOneHandOperationSettings;I)V
+.method static synthetic access$200(Lcom/android/settings_ex/NewOneHandOperationSettings;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/NewOneHandOperationSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/NewOneHandOperationSettings;
     .param p1, "x1"    # I
 
     .prologue
     .line 60
-    invoke-direct {p0, p1}, Lcom/android/settings/NewOneHandOperationSettings;->reduceSizeBroadcast(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/NewOneHandOperationSettings;->reduceSizeBroadcast(I)V
 
     return-void
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/NewOneHandOperationSettings;)Landroid/preference/SwitchPreference;
+.method static synthetic access$300(Lcom/android/settings_ex/NewOneHandOperationSettings;)Landroid/preference/SwitchPreference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/NewOneHandOperationSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/NewOneHandOperationSettings;
 
     .prologue
     .line 60
-    iget-object v0, p0, Lcom/android/settings/NewOneHandOperationSettings;->mOneHandedInput:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mOneHandedInput:Landroid/preference/SwitchPreference;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/NewOneHandOperationSettings;I)V
+.method static synthetic access$400(Lcom/android/settings_ex/NewOneHandOperationSettings;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/NewOneHandOperationSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/NewOneHandOperationSettings;
     .param p1, "x1"    # I
 
     .prologue
     .line 60
-    invoke-direct {p0, p1}, Lcom/android/settings/NewOneHandOperationSettings;->oneHandedInputBroadcast(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/NewOneHandOperationSettings;->oneHandedInputBroadcast(I)V
 
     return-void
 .end method
@@ -172,7 +172,7 @@
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 416
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -191,7 +191,7 @@
     const/4 v7, 0x0
 
     .line 375
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -203,7 +203,7 @@
 
     .line 376
     .local v0, "item":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -223,7 +223,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -267,7 +267,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -288,7 +288,7 @@
     .line 381
     new-instance v3, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -300,9 +300,9 @@
 
     const v4, 0x104000a
 
-    new-instance v5, Lcom/android/settings/NewOneHandOperationSettings$8;
+    new-instance v5, Lcom/android/settings_ex/NewOneHandOperationSettings$8;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/NewOneHandOperationSettings$8;-><init>(Lcom/android/settings/NewOneHandOperationSettings;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/NewOneHandOperationSettings$8;-><init>(Lcom/android/settings_ex/NewOneHandOperationSettings;)V
 
     invoke-virtual {v3, v4, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -310,17 +310,17 @@
 
     const/high16 v4, 0x1040000
 
-    new-instance v5, Lcom/android/settings/NewOneHandOperationSettings$7;
+    new-instance v5, Lcom/android/settings_ex/NewOneHandOperationSettings$7;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/NewOneHandOperationSettings$7;-><init>(Lcom/android/settings/NewOneHandOperationSettings;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/NewOneHandOperationSettings$7;-><init>(Lcom/android/settings_ex/NewOneHandOperationSettings;)V
 
     invoke-virtual {v3, v4, v5}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v3
 
-    new-instance v4, Lcom/android/settings/NewOneHandOperationSettings$6;
+    new-instance v4, Lcom/android/settings_ex/NewOneHandOperationSettings$6;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/NewOneHandOperationSettings$6;-><init>(Lcom/android/settings/NewOneHandOperationSettings;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/NewOneHandOperationSettings$6;-><init>(Lcom/android/settings_ex/NewOneHandOperationSettings;)V
 
     invoke-virtual {v3, v4}, Landroid/app/AlertDialog$Builder;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Landroid/app/AlertDialog$Builder;
 
@@ -351,7 +351,7 @@
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 410
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -370,7 +370,7 @@
     const/4 v7, 0x0
 
     .line 312
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -382,7 +382,7 @@
 
     .line 313
     .local v0, "item":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -402,7 +402,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -432,13 +432,13 @@
 
     .line 315
     .local v1, "message":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
     const-string v4, "com.samsung.android.app.talkback"
 
-    invoke-static {v3, v4}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v3, v4}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v3
 
@@ -461,7 +461,7 @@
 
     const v4, 0x7f0e0a20
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/NewOneHandOperationSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -475,13 +475,13 @@
 
     .line 318
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
     const-string v4, "com.google.android.marvin.talkback"
 
-    invoke-static {v3, v4}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v3, v4}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v3
 
@@ -504,7 +504,7 @@
 
     const v4, 0x7f0e0a1f
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/NewOneHandOperationSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -532,7 +532,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -551,7 +551,7 @@
     move-result-object v1
 
     .line 325
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -569,23 +569,23 @@
 
     .line 329
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
     const-string v4, "com.samsung.android.universalswitch"
 
-    invoke-static {v3, v4}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v3, v4}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/android/settings/Utils;->isUniversalSwitchSupportMultiUserKnoxMode(Landroid/content/Context;)Z
+    invoke-static {v3}, Lcom/android/settings_ex/Utils;->isUniversalSwitchSupportMultiUserKnoxMode(Landroid/content/Context;)Z
 
     move-result v3
 
@@ -606,7 +606,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -626,13 +626,13 @@
 
     .line 332
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
     const-string v4, "com.samsung.android.app.accesscontrol"
 
-    invoke-static {v3, v4}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v3, v4}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v3
 
@@ -653,7 +653,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -673,13 +673,13 @@
 
     .line 335
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
     const-string v4, "com.samsung.android.app.assistantmenu"
 
-    invoke-static {v3, v4}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v3, v4}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v3
 
@@ -700,7 +700,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -734,7 +734,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -755,7 +755,7 @@
     .line 340
     new-instance v3, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -767,9 +767,9 @@
 
     const v4, 0x104000a
 
-    new-instance v5, Lcom/android/settings/NewOneHandOperationSettings$5;
+    new-instance v5, Lcom/android/settings_ex/NewOneHandOperationSettings$5;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/NewOneHandOperationSettings$5;-><init>(Lcom/android/settings/NewOneHandOperationSettings;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/NewOneHandOperationSettings$5;-><init>(Lcom/android/settings_ex/NewOneHandOperationSettings;)V
 
     invoke-virtual {v3, v4, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -777,17 +777,17 @@
 
     const/high16 v4, 0x1040000
 
-    new-instance v5, Lcom/android/settings/NewOneHandOperationSettings$4;
+    new-instance v5, Lcom/android/settings_ex/NewOneHandOperationSettings$4;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/NewOneHandOperationSettings$4;-><init>(Lcom/android/settings/NewOneHandOperationSettings;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/NewOneHandOperationSettings$4;-><init>(Lcom/android/settings_ex/NewOneHandOperationSettings;)V
 
     invoke-virtual {v3, v4, v5}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v3
 
-    new-instance v4, Lcom/android/settings/NewOneHandOperationSettings$3;
+    new-instance v4, Lcom/android/settings_ex/NewOneHandOperationSettings$3;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/NewOneHandOperationSettings$3;-><init>(Lcom/android/settings/NewOneHandOperationSettings;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/NewOneHandOperationSettings$3;-><init>(Lcom/android/settings_ex/NewOneHandOperationSettings;)V
 
     invoke-virtual {v3, v4}, Landroid/app/AlertDialog$Builder;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Landroid/app/AlertDialog$Builder;
 
@@ -814,7 +814,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -847,7 +847,7 @@
 
     .local v0, "i":I
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/NewOneHandOperationSettings;->mPointArea:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mPointArea:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->getChildCount()I
 
@@ -856,7 +856,7 @@
     if-ge v0, v1, :cond_0
 
     .line 211
-    iget-object v1, p0, Lcom/android/settings/NewOneHandOperationSettings;->mPointArea:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mPointArea:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
@@ -875,7 +875,7 @@
 
     .line 213
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/NewOneHandOperationSettings;->mPointArea:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mPointArea:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, p1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
@@ -915,10 +915,10 @@
     const/4 v10, 0x1
 
     .line 153
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 155
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
@@ -946,47 +946,47 @@
 
     move-result-object v7
 
-    check-cast v7, Lcom/android/settings/WrapContentHeightViewPager;
+    check-cast v7, Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    iput-object v7, p0, Lcom/android/settings/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iput-object v7, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
     .line 159
-    new-instance v7, Lcom/android/settings/OneHandViewPagerAdapter;
+    new-instance v7, Lcom/android/settings_ex/OneHandViewPagerAdapter;
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
-    invoke-direct {v7, v8}, Lcom/android/settings/OneHandViewPagerAdapter;-><init>(Landroid/content/Context;)V
+    invoke-direct {v7, v8}, Lcom/android/settings_ex/OneHandViewPagerAdapter;-><init>(Landroid/content/Context;)V
 
-    iput-object v7, p0, Lcom/android/settings/NewOneHandOperationSettings;->mViewPagerAdapter:Lcom/android/settings/OneHandViewPagerAdapter;
+    iput-object v7, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mViewPagerAdapter:Lcom/android/settings_ex/OneHandViewPagerAdapter;
 
     .line 160
-    iget-object v7, p0, Lcom/android/settings/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v7, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    iget-object v8, p0, Lcom/android/settings/NewOneHandOperationSettings;->mViewPagerAdapter:Lcom/android/settings/OneHandViewPagerAdapter;
+    iget-object v8, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mViewPagerAdapter:Lcom/android/settings_ex/OneHandViewPagerAdapter;
 
-    invoke-virtual {v7, v8}, Lcom/android/settings/WrapContentHeightViewPager;->setAdapter(Landroid/support/v4/view/PagerAdapter;)V
+    invoke-virtual {v7, v8}, Lcom/android/settings_ex/WrapContentHeightViewPager;->setAdapter(Landroid/support/v4/view/PagerAdapter;)V
 
     .line 161
-    iget-object v7, p0, Lcom/android/settings/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v7, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    iget-object v8, p0, Lcom/android/settings/NewOneHandOperationSettings;->mViewPagerAdapter:Lcom/android/settings/OneHandViewPagerAdapter;
+    iget-object v8, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mViewPagerAdapter:Lcom/android/settings_ex/OneHandViewPagerAdapter;
 
-    invoke-virtual {v8}, Lcom/android/settings/OneHandViewPagerAdapter;->getCount()I
+    invoke-virtual {v8}, Lcom/android/settings_ex/OneHandViewPagerAdapter;->getCount()I
 
     move-result v8
 
-    invoke-virtual {v7, v8}, Lcom/android/settings/WrapContentHeightViewPager;->setOffscreenPageLimit(I)V
+    invoke-virtual {v7, v8}, Lcom/android/settings_ex/WrapContentHeightViewPager;->setOffscreenPageLimit(I)V
 
     .line 162
-    iget-object v7, p0, Lcom/android/settings/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v7, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    new-instance v8, Lcom/android/settings/NewOneHandOperationSettings$1;
+    new-instance v8, Lcom/android/settings_ex/NewOneHandOperationSettings$1;
 
-    invoke-direct {v8, p0}, Lcom/android/settings/NewOneHandOperationSettings$1;-><init>(Lcom/android/settings/NewOneHandOperationSettings;)V
+    invoke-direct {v8, p0}, Lcom/android/settings_ex/NewOneHandOperationSettings$1;-><init>(Lcom/android/settings_ex/NewOneHandOperationSettings;)V
 
-    invoke-virtual {v7, v8}, Lcom/android/settings/WrapContentHeightViewPager;->setOnPageChangeListener(Landroid/support/v4/view/ViewPager$OnPageChangeListener;)V
+    invoke-virtual {v7, v8}, Lcom/android/settings_ex/WrapContentHeightViewPager;->setOnPageChangeListener(Landroid/support/v4/view/ViewPager$OnPageChangeListener;)V
 
     .line 176
     const v7, 0x7f0d02ea
@@ -997,12 +997,12 @@
 
     check-cast v7, Landroid/widget/LinearLayout;
 
-    iput-object v7, p0, Lcom/android/settings/NewOneHandOperationSettings;->mPointArea:Landroid/widget/LinearLayout;
+    iput-object v7, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mPointArea:Landroid/widget/LinearLayout;
 
     .line 177
-    iget-object v7, p0, Lcom/android/settings/NewOneHandOperationSettings;->mViewPagerAdapter:Lcom/android/settings/OneHandViewPagerAdapter;
+    iget-object v7, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mViewPagerAdapter:Lcom/android/settings_ex/OneHandViewPagerAdapter;
 
-    invoke-virtual {v7}, Lcom/android/settings/OneHandViewPagerAdapter;->getCount()I
+    invoke-virtual {v7}, Lcom/android/settings_ex/OneHandViewPagerAdapter;->getCount()I
 
     move-result v6
 
@@ -1031,7 +1031,7 @@
     .local v5, "point":Landroid/widget/ImageView;
     const v7, 0x7f0e1283
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/NewOneHandOperationSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
@@ -1060,14 +1060,14 @@
     invoke-virtual {v5, v7}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 183
-    new-instance v7, Lcom/android/settings/NewOneHandOperationSettings$2;
+    new-instance v7, Lcom/android/settings_ex/NewOneHandOperationSettings$2;
 
-    invoke-direct {v7, p0, v0}, Lcom/android/settings/NewOneHandOperationSettings$2;-><init>(Lcom/android/settings/NewOneHandOperationSettings;I)V
+    invoke-direct {v7, p0, v0}, Lcom/android/settings_ex/NewOneHandOperationSettings$2;-><init>(Lcom/android/settings_ex/NewOneHandOperationSettings;I)V
 
     invoke-virtual {v5, v7}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 189
-    iget-object v7, p0, Lcom/android/settings/NewOneHandOperationSettings;->mPointArea:Landroid/widget/LinearLayout;
+    iget-object v7, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mPointArea:Landroid/widget/LinearLayout;
 
     invoke-virtual {v7, v5}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
@@ -1080,7 +1080,7 @@
     .end local v0    # "current":I
     .end local v5    # "point":Landroid/widget/ImageView;
     :cond_0
-    iget-object v7, p0, Lcom/android/settings/NewOneHandOperationSettings;->mPointArea:Landroid/widget/LinearLayout;
+    iget-object v7, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mPointArea:Landroid/widget/LinearLayout;
 
     invoke-virtual {v7}, Landroid/widget/LinearLayout;->getChildCount()I
 
@@ -1089,7 +1089,7 @@
     if-lez v7, :cond_1
 
     .line 193
-    iget-object v7, p0, Lcom/android/settings/NewOneHandOperationSettings;->mPointArea:Landroid/widget/LinearLayout;
+    iget-object v7, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mPointArea:Landroid/widget/LinearLayout;
 
     invoke-virtual {v7, v12}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
@@ -1103,7 +1103,7 @@
 
     .line 196
     :cond_1
-    iget-object v7, p0, Lcom/android/settings/NewOneHandOperationSettings;->mPointArea:Landroid/widget/LinearLayout;
+    iget-object v7, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mPointArea:Landroid/widget/LinearLayout;
 
     invoke-virtual {v7}, Landroid/widget/LinearLayout;->getChildCount()I
 
@@ -1112,13 +1112,13 @@
     if-ne v7, v10, :cond_2
 
     .line 197
-    iget-object v7, p0, Lcom/android/settings/NewOneHandOperationSettings;->mPointArea:Landroid/widget/LinearLayout;
+    iget-object v7, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mPointArea:Landroid/widget/LinearLayout;
 
     invoke-virtual {v7, v13}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 199
     :cond_2
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v7
 
@@ -1138,14 +1138,14 @@
     .line 205
     .end local v1    # "divider":Landroid/view/View;
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v7
 
     invoke-virtual {v7, v2, v11, v10}, Landroid/widget/ListView;->addHeaderView(Landroid/view/View;Ljava/lang/Object;Z)V
 
     .line 206
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v7
 
@@ -1161,17 +1161,17 @@
 
     .prologue
     .line 126
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 128
-    iget-object v1, p0, Lcom/android/settings/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v1, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
     if-eqz v1, :cond_0
 
     .line 129
-    iget-object v1, p0, Lcom/android/settings/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v1, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    invoke-virtual {v1}, Lcom/android/settings/WrapContentHeightViewPager;->getCurrentItem()I
+    invoke-virtual {v1}, Lcom/android/settings_ex/WrapContentHeightViewPager;->getCurrentItem()I
 
     move-result v0
 
@@ -1203,27 +1203,27 @@
     if-ltz v0, :cond_0
 
     .line 133
-    iget-object v1, p0, Lcom/android/settings/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v1, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    iget-object v2, p0, Lcom/android/settings/NewOneHandOperationSettings;->mViewPagerAdapter:Lcom/android/settings/OneHandViewPagerAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mViewPagerAdapter:Lcom/android/settings_ex/OneHandViewPagerAdapter;
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/WrapContentHeightViewPager;->setAdapter(Landroid/support/v4/view/PagerAdapter;)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/WrapContentHeightViewPager;->setAdapter(Landroid/support/v4/view/PagerAdapter;)V
 
     .line 134
-    iget-object v1, p0, Lcom/android/settings/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v1, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    iget-object v2, p0, Lcom/android/settings/NewOneHandOperationSettings;->mViewPagerAdapter:Lcom/android/settings/OneHandViewPagerAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mViewPagerAdapter:Lcom/android/settings_ex/OneHandViewPagerAdapter;
 
-    invoke-virtual {v2}, Lcom/android/settings/OneHandViewPagerAdapter;->getCount()I
+    invoke-virtual {v2}, Lcom/android/settings_ex/OneHandViewPagerAdapter;->getCount()I
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/WrapContentHeightViewPager;->setOffscreenPageLimit(I)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/WrapContentHeightViewPager;->setOffscreenPageLimit(I)V
 
     .line 135
-    iget-object v1, p0, Lcom/android/settings/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v1, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    invoke-virtual {v1, v0}, Lcom/android/settings/WrapContentHeightViewPager;->setCurrentItem(I)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/WrapContentHeightViewPager;->setCurrentItem(I)V
 
     .line 138
     .end local v0    # "position":I
@@ -1237,37 +1237,37 @@
 
     .prologue
     .line 96
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 98
     const v1, 0x7f08007a
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/NewOneHandOperationSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/NewOneHandOperationSettings;->addPreferencesFromResource(I)V
 
     .line 100
     const-string v1, "reduce_screen_size"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/NewOneHandOperationSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/NewOneHandOperationSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/SwitchPreference;
 
-    iput-object v1, p0, Lcom/android/settings/NewOneHandOperationSettings;->mReduceScreenSize:Landroid/preference/SwitchPreference;
+    iput-object v1, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mReduceScreenSize:Landroid/preference/SwitchPreference;
 
     .line 101
     const-string v1, "one_handed_input"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/NewOneHandOperationSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/NewOneHandOperationSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/SwitchPreference;
 
-    iput-object v1, p0, Lcom/android/settings/NewOneHandOperationSettings;->mOneHandedInput:Landroid/preference/SwitchPreference;
+    iput-object v1, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mOneHandedInput:Landroid/preference/SwitchPreference;
 
     .line 103
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -1279,7 +1279,7 @@
 
     .line 104
     .local v0, "summary":Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/Utils;->isJapanModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isJapanModel()Z
 
     move-result v1
 
@@ -1300,7 +1300,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1334,7 +1334,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1367,7 +1367,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1386,34 +1386,34 @@
     move-result-object v0
 
     .line 109
-    iget-object v1, p0, Lcom/android/settings/NewOneHandOperationSettings;->mReduceScreenSize:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mReduceScreenSize:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 110
-    iget-object v1, p0, Lcom/android/settings/NewOneHandOperationSettings;->mReduceScreenSize:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mReduceScreenSize:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 111
-    iget-object v1, p0, Lcom/android/settings/NewOneHandOperationSettings;->mOneHandedInput:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mOneHandedInput:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 112
-    iget-object v1, p0, Lcom/android/settings/NewOneHandOperationSettings;->mOneHandedInput:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mOneHandedInput:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 113
-    iget-object v1, p0, Lcom/android/settings/NewOneHandOperationSettings;->mOneHandedInput:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mOneHandedInput:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v0}, Landroid/preference/SwitchPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 121
     const/4 v1, 0x1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/NewOneHandOperationSettings;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/NewOneHandOperationSettings;->setHasOptionsMenu(Z)V
 
     .line 122
     return-void
@@ -1428,11 +1428,11 @@
     const/4 v3, 0x0
 
     .line 421
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isSupportHelpMenu(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isSupportHelpMenu(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -1456,7 +1456,7 @@
     .line 425
     .end local v0    # "helpitem":Landroid/view/MenuItem;
     :cond_0
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     .line 426
     return-void
@@ -1494,12 +1494,12 @@
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 434
-    invoke-virtual {p0, v0}, Lcom/android/settings/NewOneHandOperationSettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->startActivity(Landroid/content/Intent;)V
 
     .line 436
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v2
 
@@ -1534,9 +1534,9 @@
 
     .line 231
     .local v3, "value":Z
-    iget-object v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->mViewPagerAdapter:Lcom/android/settings/OneHandViewPagerAdapter;
+    iget-object v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mViewPagerAdapter:Lcom/android/settings_ex/OneHandViewPagerAdapter;
 
-    invoke-virtual {v4, v1}, Lcom/android/settings/OneHandViewPagerAdapter;->getItemPosition(Ljava/lang/Object;)I
+    invoke-virtual {v4, v1}, Lcom/android/settings_ex/OneHandViewPagerAdapter;->getItemPosition(Ljava/lang/Object;)I
 
     move-result v2
 
@@ -1545,13 +1545,13 @@
     if-ltz v2, :cond_0
 
     .line 233
-    iget-object v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    invoke-virtual {v4, v2}, Lcom/android/settings/WrapContentHeightViewPager;->setCurrentItem(I)V
+    invoke-virtual {v4, v2}, Lcom/android/settings_ex/WrapContentHeightViewPager;->setCurrentItem(I)V
 
     .line 236
     :cond_0
-    iget-object v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->mReduceScreenSize:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mReduceScreenSize:Landroid/preference/SwitchPreference;
 
     invoke-virtual {p1, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1563,29 +1563,29 @@
     if-eqz v3, :cond_e
 
     .line 238
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->isStalkBackEnabled(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->isStalkBackEnabled(Landroid/content/Context;)Z
 
     move-result v4
 
-    iput-boolean v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->sTalkbackEnabled:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->sTalkbackEnabled:Z
 
     .line 239
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->isGEDTalkBackEnabled(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->isGEDTalkBackEnabled(Landroid/content/Context;)Z
 
     move-result v4
 
-    iput-boolean v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->talkbackEnabled:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->talkbackEnabled:Z
 
     .line 241
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1602,7 +1602,7 @@
     if-eqz v4, :cond_1
 
     .line 242
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1617,11 +1617,11 @@
     move v4, v5
 
     :goto_0
-    iput-boolean v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->hoverzoomEnabled:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->hoverzoomEnabled:Z
 
     .line 244
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1636,10 +1636,10 @@
     move v4, v5
 
     :goto_1
-    iput-boolean v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->magnificationGesturesEnabled:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->magnificationGesturesEnabled:Z
 
     .line 246
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1654,24 +1654,24 @@
     move v4, v5
 
     :goto_2
-    iput-boolean v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->magnifierWindowEnabled:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->magnifierWindowEnabled:Z
 
     .line 248
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->isUniversalSwitchEnabled(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->isUniversalSwitchEnabled(Landroid/content/Context;)Z
 
     move-result v4
 
     if-eqz v4, :cond_5
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->isUniversalSwitchSupportMultiUserKnoxMode(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->isUniversalSwitchSupportMultiUserKnoxMode(Landroid/content/Context;)Z
 
     move-result v4
 
@@ -1680,10 +1680,10 @@
     move v4, v5
 
     :goto_3
-    iput-boolean v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->universalSwitchEnabled:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->universalSwitchEnabled:Z
 
     .line 249
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1698,10 +1698,10 @@
     move v4, v5
 
     :goto_4
-    iput-boolean v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->accessControlEnabled:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->accessControlEnabled:Z
 
     .line 250
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1716,10 +1716,10 @@
     move v4, v5
 
     :goto_5
-    iput-boolean v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->assistantMenuEnabled:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->assistantMenuEnabled:Z
 
     .line 251
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1734,7 +1734,7 @@
     move v4, v5
 
     :goto_6
-    iput-boolean v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->directAccessEnabled:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->directAccessEnabled:Z
 
     .line 253
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
@@ -1750,7 +1750,7 @@
     if-eqz v4, :cond_a
 
     .line 254
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -1765,9 +1765,9 @@
     if-ne v4, v5, :cond_a
 
     .line 256
-    iget-object v7, p0, Lcom/android/settings/NewOneHandOperationSettings;->mReduceScreenSize:Landroid/preference/SwitchPreference;
+    iget-object v7, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mReduceScreenSize:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1785,17 +1785,17 @@
     invoke-virtual {v7, v4}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 257
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
     new-array v8, v5, [Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -1874,45 +1874,45 @@
     .line 262
     .end local v0    # "conf":Landroid/content/res/Configuration;
     :cond_a
-    iget-boolean v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->sTalkbackEnabled:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->sTalkbackEnabled:Z
 
     if-nez v4, :cond_b
 
-    iget-boolean v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->talkbackEnabled:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->talkbackEnabled:Z
 
     if-nez v4, :cond_b
 
-    iget-boolean v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->hoverzoomEnabled:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->hoverzoomEnabled:Z
 
     if-nez v4, :cond_b
 
-    iget-boolean v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->magnificationGesturesEnabled:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->magnificationGesturesEnabled:Z
 
     if-nez v4, :cond_b
 
-    iget-boolean v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->magnifierWindowEnabled:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->magnifierWindowEnabled:Z
 
     if-nez v4, :cond_b
 
-    iget-boolean v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->universalSwitchEnabled:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->universalSwitchEnabled:Z
 
     if-nez v4, :cond_b
 
-    iget-boolean v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->accessControlEnabled:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->accessControlEnabled:Z
 
     if-nez v4, :cond_b
 
-    iget-boolean v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->assistantMenuEnabled:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->assistantMenuEnabled:Z
 
     if-nez v4, :cond_b
 
-    iget-boolean v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->directAccessEnabled:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->directAccessEnabled:Z
 
     if-eqz v4, :cond_d
 
     .line 264
     :cond_b
-    invoke-direct {p0}, Lcom/android/settings/NewOneHandOperationSettings;->reduceSizeDisablePopup()V
+    invoke-direct {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->reduceSizeDisablePopup()V
 
     :cond_c
     :goto_9
@@ -1923,7 +1923,7 @@
 
     .line 266
     :cond_d
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1932,13 +1932,13 @@
     invoke-static {v4, v6, v5}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 267
-    invoke-direct {p0, v5}, Lcom/android/settings/NewOneHandOperationSettings;->reduceSizeBroadcast(I)V
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/NewOneHandOperationSettings;->reduceSizeBroadcast(I)V
 
     goto :goto_9
 
     .line 270
     :cond_e
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1947,13 +1947,13 @@
     invoke-static {v4, v7, v6}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 271
-    invoke-direct {p0, v6}, Lcom/android/settings/NewOneHandOperationSettings;->reduceSizeBroadcast(I)V
+    invoke-direct {p0, v6}, Lcom/android/settings_ex/NewOneHandOperationSettings;->reduceSizeBroadcast(I)V
 
     goto :goto_9
 
     .line 282
     :cond_f
-    iget-object v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->mOneHandedInput:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mOneHandedInput:Landroid/preference/SwitchPreference;
 
     invoke-virtual {p1, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1965,7 +1965,7 @@
     if-eqz v3, :cond_15
 
     .line 284
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1980,7 +1980,7 @@
     move v4, v5
 
     :goto_a
-    iput-boolean v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->magnificationGesturesEnabled:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->magnificationGesturesEnabled:Z
 
     .line 287
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
@@ -1996,7 +1996,7 @@
     if-eqz v4, :cond_12
 
     .line 288
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -2011,9 +2011,9 @@
     if-ne v4, v5, :cond_12
 
     .line 290
-    iget-object v7, p0, Lcom/android/settings/NewOneHandOperationSettings;->mOneHandedInput:Landroid/preference/SwitchPreference;
+    iget-object v7, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mOneHandedInput:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -2031,17 +2031,17 @@
     invoke-virtual {v7, v4}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 291
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
     new-array v8, v5, [Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -2082,16 +2082,16 @@
     .line 296
     .end local v0    # "conf":Landroid/content/res/Configuration;
     :cond_12
-    iget-boolean v4, p0, Lcom/android/settings/NewOneHandOperationSettings;->magnificationGesturesEnabled:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->magnificationGesturesEnabled:Z
 
     if-eqz v4, :cond_14
 
     .line 297
-    invoke-direct {p0}, Lcom/android/settings/NewOneHandOperationSettings;->oneHandedInputDisablePopup()V
+    invoke-direct {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->oneHandedInputDisablePopup()V
 
     .line 306
     :goto_c
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -2104,13 +2104,13 @@
     const/16 v6, 0x3e8
 
     :cond_13
-    invoke-static {v4, v7, v8, v6}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-static {v4, v7, v8, v6}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
 
     goto/16 :goto_9
 
     .line 299
     :cond_14
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -2119,13 +2119,13 @@
     invoke-static {v4, v7, v5}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 300
-    invoke-direct {p0, v5}, Lcom/android/settings/NewOneHandOperationSettings;->oneHandedInputBroadcast(I)V
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/NewOneHandOperationSettings;->oneHandedInputBroadcast(I)V
 
     goto :goto_c
 
     .line 303
     :cond_15
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -2134,7 +2134,7 @@
     invoke-static {v4, v7, v6}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 304
-    invoke-direct {p0, v6}, Lcom/android/settings/NewOneHandOperationSettings;->oneHandedInputBroadcast(I)V
+    invoke-direct {p0, v6}, Lcom/android/settings_ex/NewOneHandOperationSettings;->oneHandedInputBroadcast(I)V
 
     goto :goto_c
 .end method
@@ -2151,9 +2151,9 @@
 
     .line 144
     .local v0, "key":Ljava/lang/String;
-    iget-object v2, p0, Lcom/android/settings/NewOneHandOperationSettings;->mViewPagerAdapter:Lcom/android/settings/OneHandViewPagerAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mViewPagerAdapter:Lcom/android/settings_ex/OneHandViewPagerAdapter;
 
-    invoke-virtual {v2, v0}, Lcom/android/settings/OneHandViewPagerAdapter;->getItemPosition(Ljava/lang/Object;)I
+    invoke-virtual {v2, v0}, Lcom/android/settings_ex/OneHandViewPagerAdapter;->getItemPosition(Ljava/lang/Object;)I
 
     move-result v1
 
@@ -2162,9 +2162,9 @@
     if-ltz v1, :cond_0
 
     .line 146
-    iget-object v2, p0, Lcom/android/settings/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v2, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    invoke-virtual {v2, v1}, Lcom/android/settings/WrapContentHeightViewPager;->setCurrentItem(I)V
+    invoke-virtual {v2, v1}, Lcom/android/settings_ex/WrapContentHeightViewPager;->setCurrentItem(I)V
 
     .line 148
     :cond_0
@@ -2182,17 +2182,17 @@
     const/4 v2, 0x0
 
     .line 218
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 220
-    iget-object v0, p0, Lcom/android/settings/NewOneHandOperationSettings;->mReduceScreenSize:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mReduceScreenSize:Landroid/preference/SwitchPreference;
 
     if-eqz v0, :cond_0
 
     .line 221
-    iget-object v3, p0, Lcom/android/settings/NewOneHandOperationSettings;->mReduceScreenSize:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mReduceScreenSize:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -2211,14 +2211,14 @@
 
     .line 222
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/NewOneHandOperationSettings;->mOneHandedInput:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mOneHandedInput:Landroid/preference/SwitchPreference;
 
     if-eqz v0, :cond_1
 
     .line 223
-    iget-object v0, p0, Lcom/android/settings/NewOneHandOperationSettings;->mOneHandedInput:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings;->mOneHandedInput:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 

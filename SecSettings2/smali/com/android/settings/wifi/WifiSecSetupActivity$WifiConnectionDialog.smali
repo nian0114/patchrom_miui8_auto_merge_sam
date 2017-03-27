@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog;
+.class Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog;
 .super Landroid/app/DialogFragment;
 .source "WifiSecSetupActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiSecSetupActivity;
+    value = Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,7 +30,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    sput-object v0, Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog;->isAdded:Ljava/util/concurrent/atomic/AtomicBoolean;
+    sput-object v0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog;->isAdded:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-void
 .end method
@@ -51,8 +51,8 @@
 
     .prologue
     .line 1243
-    # getter for: Lcom/android/settings/wifi/WifiSecSetupActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
-    invoke-static {}, Lcom/android/settings/wifi/WifiSecSetupActivity;->access$1300()Landroid/net/wifi/WifiManager;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->access$1300()Landroid/net/wifi/WifiManager;
 
     move-result-object v4
 
@@ -72,9 +72,9 @@
     if-nez v4, :cond_2
 
     .line 1246
-    new-instance v3, Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog$1;
+    new-instance v3, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog$1;
 
-    invoke-direct {v3}, Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog$1;-><init>()V
+    invoke-direct {v3}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog$1;-><init>()V
 
     .line 1254
     .local v3, "mForgetListener":Landroid/net/wifi/WifiManager$ActionListener;
@@ -109,8 +109,8 @@
     if-eqz v4, :cond_1
 
     .line 1257
-    # getter for: Lcom/android/settings/wifi/WifiSecSetupActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
-    invoke-static {}, Lcom/android/settings/wifi/WifiSecSetupActivity;->access$1300()Landroid/net/wifi/WifiManager;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->access$1300()Landroid/net/wifi/WifiManager;
 
     move-result-object v4
 
@@ -146,8 +146,8 @@
 
     .line 1259
     :cond_1
-    # getter for: Lcom/android/settings/wifi/WifiSecSetupActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
-    invoke-static {}, Lcom/android/settings/wifi/WifiSecSetupActivity;->access$1300()Landroid/net/wifi/WifiManager;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->access$1300()Landroid/net/wifi/WifiManager;
 
     move-result-object v4
 
@@ -165,7 +165,7 @@
     return-void
 .end method
 
-.method public static newInstance(I)Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog;
+.method public static newInstance(I)Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog;
     .locals 3
     .param p0, "messageRes"    # I
 
@@ -182,13 +182,13 @@
     invoke-virtual {v0, v2, p0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 1233
-    new-instance v1, Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog;
+    new-instance v1, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog;
 
-    invoke-direct {v1}, Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog;-><init>()V
+    invoke-direct {v1}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog;-><init>()V
 
     .line 1234
-    .local v1, "dialog":Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog;
-    invoke-virtual {v1, v0}, Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog;->setArguments(Landroid/os/Bundle;)V
+    .local v1, "dialog":Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog;
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog;->setArguments(Landroid/os/Bundle;)V
 
     .line 1235
     return-object v1
@@ -209,14 +209,14 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1298
-    sget-object v0, Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog;->isAdded:Ljava/util/concurrent/atomic/AtomicBoolean;
+    sget-object v0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog;->isAdded:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
     .line 1299
-    invoke-static {}, Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog;->forget()V
+    invoke-static {}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog;->forget()V
 
     .line 1300
     invoke-super {p0, p1}, Landroid/app/DialogFragment;->onCancel(Landroid/content/DialogInterface;)V
@@ -237,7 +237,7 @@
 
     .line 1271
     .local v0, "diag":Landroid/app/Dialog;
-    sget-object v2, Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog;->isAdded:Ljava/util/concurrent/atomic/AtomicBoolean;
+    sget-object v2, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog;->isAdded:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v3, 0x1
 
@@ -255,7 +255,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1273
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog;->getArguments()Landroid/os/Bundle;
 
     move-result-object v2
 
@@ -269,7 +269,7 @@
     .local v1, "messageRes":I
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -285,9 +285,9 @@
 
     const v3, 0x7f0e01bd
 
-    new-instance v4, Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog$2;
+    new-instance v4, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog$2;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog$2;-><init>(Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog$2;-><init>(Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog;)V
 
     invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 

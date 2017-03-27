@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accounts/SyncStateSwitchPreference;
+.class public Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;
 .super Landroid/preference/SwitchPreference;
 .source "SyncStateSwitchPreference.java"
 
@@ -33,27 +33,27 @@
     invoke-direct {p0, p1, v0}, Landroid/preference/SwitchPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 34
-    iput-boolean v1, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mIsActive:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mIsActive:Z
 
     .line 35
-    iput-boolean v1, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mIsPending:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mIsPending:Z
 
     .line 36
-    iput-boolean v1, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mFailed:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mFailed:Z
 
     .line 44
-    iput-boolean v1, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mOneTimeSyncMode:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mOneTimeSyncMode:Z
 
     .line 55
     const v0, 0x7f0401a2
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accounts/SyncStateSwitchPreference;->setWidgetLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->setWidgetLayoutResource(I)V
 
     .line 56
-    iput-object p2, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mAccount:Landroid/accounts/Account;
+    iput-object p2, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mAccount:Landroid/accounts/Account;
 
     .line 57
-    iput-object p3, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mAuthority:Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mAuthority:Ljava/lang/String;
 
     .line 58
     return-void
@@ -73,27 +73,27 @@
     invoke-direct {p0, p1, p2}, Landroid/preference/SwitchPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 34
-    iput-boolean v0, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mIsActive:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mIsActive:Z
 
     .line 35
-    iput-boolean v0, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mIsPending:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mIsPending:Z
 
     .line 36
-    iput-boolean v0, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mFailed:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mFailed:Z
 
     .line 44
-    iput-boolean v0, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mOneTimeSyncMode:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mOneTimeSyncMode:Z
 
     .line 48
     const v0, 0x7f0401a2
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accounts/SyncStateSwitchPreference;->setWidgetLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->setWidgetLayoutResource(I)V
 
     .line 49
-    iput-object v1, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mAccount:Landroid/accounts/Account;
+    iput-object v1, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mAccount:Landroid/accounts/Account;
 
     .line 50
-    iput-object v1, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mAuthority:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mAuthority:Ljava/lang/String;
 
     .line 51
     return-void
@@ -106,7 +106,7 @@
 
     .prologue
     .line 146
-    iget-object v0, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mAccount:Landroid/accounts/Account;
+    iget-object v0, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mAccount:Landroid/accounts/Account;
 
     return-object v0
 .end method
@@ -116,7 +116,7 @@
 
     .prologue
     .line 150
-    iget-object v0, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mAuthority:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mAuthority:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -126,7 +126,7 @@
 
     .prologue
     .line 129
-    iget-boolean v0, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mOneTimeSyncMode:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mOneTimeSyncMode:Z
 
     return v0
 .end method
@@ -152,10 +152,10 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/widget/AnimatedImageView;
+    check-cast v4, Lcom/android/settings_ex/widget/AnimatedImageView;
 
     .line 65
-    .local v4, "syncActiveView":Lcom/android/settings/widget/AnimatedImageView;
+    .local v4, "syncActiveView":Lcom/android/settings_ex/widget/AnimatedImageView;
     const v6, 0x7f0d041d
 
     invoke-virtual {p1, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -164,11 +164,11 @@
 
     .line 67
     .local v5, "syncFailedView":Landroid/view/View;
-    iget-boolean v6, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mIsActive:Z
+    iget-boolean v6, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mIsActive:Z
 
     if-nez v6, :cond_0
 
-    iget-boolean v6, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mIsPending:Z
+    iget-boolean v6, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mIsPending:Z
 
     if-eqz v6, :cond_1
 
@@ -183,15 +183,15 @@
     move v6, v7
 
     :goto_1
-    invoke-virtual {v4, v6}, Lcom/android/settings/widget/AnimatedImageView;->setVisibility(I)V
+    invoke-virtual {v4, v6}, Lcom/android/settings_ex/widget/AnimatedImageView;->setVisibility(I)V
 
     .line 69
-    iget-boolean v6, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mIsActive:Z
+    iget-boolean v6, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mIsActive:Z
 
-    invoke-virtual {v4, v6}, Lcom/android/settings/widget/AnimatedImageView;->setAnimating(Z)V
+    invoke-virtual {v4, v6}, Lcom/android/settings_ex/widget/AnimatedImageView;->setAnimating(Z)V
 
     .line 71
-    iget-boolean v6, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mFailed:Z
+    iget-boolean v6, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mFailed:Z
 
     if-eqz v6, :cond_3
 
@@ -218,7 +218,7 @@
 
     .line 75
     .local v3, "switchView":Landroid/view/View;
-    iget-boolean v6, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mOneTimeSyncMode:Z
+    iget-boolean v6, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mOneTimeSyncMode:Z
 
     if-eqz v6, :cond_5
 
@@ -236,7 +236,7 @@
 
     .line 84
     .local v2, "summary":Landroid/widget/TextView;
-    invoke-virtual {p0}, Lcom/android/settings/accounts/SyncStateSwitchPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
@@ -244,7 +244,7 @@
 
     new-array v9, v9, [Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lcom/android/settings/accounts/SyncStateSwitchPreference;->getSummary()Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->getSummary()Ljava/lang/CharSequence;
 
     move-result-object v10
 
@@ -303,7 +303,7 @@
 
     .prologue
     .line 136
-    iget-boolean v0, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mOneTimeSyncMode:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mOneTimeSyncMode:Z
 
     if-nez v0, :cond_0
 
@@ -339,10 +339,10 @@
 
     .prologue
     .line 95
-    iput-boolean p1, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mIsActive:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mIsActive:Z
 
     .line 96
-    invoke-virtual {p0}, Lcom/android/settings/accounts/SyncStateSwitchPreference;->notifyChanged()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->notifyChanged()V
 
     .line 97
     return-void
@@ -354,10 +354,10 @@
 
     .prologue
     .line 113
-    iput-boolean p1, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mFailed:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mFailed:Z
 
     .line 114
-    invoke-virtual {p0}, Lcom/android/settings/accounts/SyncStateSwitchPreference;->notifyChanged()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->notifyChanged()V
 
     .line 115
     return-void
@@ -369,10 +369,10 @@
 
     .prologue
     .line 121
-    iput-boolean p1, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mOneTimeSyncMode:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mOneTimeSyncMode:Z
 
     .line 122
-    invoke-virtual {p0}, Lcom/android/settings/accounts/SyncStateSwitchPreference;->notifyChanged()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->notifyChanged()V
 
     .line 123
     return-void
@@ -384,10 +384,10 @@
 
     .prologue
     .line 104
-    iput-boolean p1, p0, Lcom/android/settings/accounts/SyncStateSwitchPreference;->mIsPending:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->mIsPending:Z
 
     .line 105
-    invoke-virtual {p0}, Lcom/android/settings/accounts/SyncStateSwitchPreference;->notifyChanged()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accounts/SyncStateSwitchPreference;->notifyChanged()V
 
     .line 106
     return-void

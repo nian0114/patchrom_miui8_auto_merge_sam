@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiSettings$8;
+.class Lcom/android/settings_ex/wifi/WifiSettings$8;
 .super Ljava/lang/Object;
 .source "WifiSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSettings;->onActivityCreated(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/wifi/WifiSettings;->onActivityCreated(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSettings;)V
     .locals 0
 
     .prologue
     .line 958
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSettings$8;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSettings$8;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,19 +44,19 @@
     const/16 v3, 0xa
 
     .line 967
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings$8;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSettings$8;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # invokes: Lcom/android/settings/wifi/WifiSettings;->isMobileApON()Z
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiSettings;->access$1200(Lcom/android/settings/wifi/WifiSettings;)Z
+    # invokes: Lcom/android/settings_ex/wifi/WifiSettings;->isMobileApON()Z
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiSettings;->access$1200(Lcom/android/settings_ex/wifi/WifiSettings;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings$8;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSettings$8;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # invokes: Lcom/android/settings/wifi/WifiSettings;->isWifiSharingEnabled()Z
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiSettings;->access$1300(Lcom/android/settings/wifi/WifiSettings;)Z
+    # invokes: Lcom/android/settings_ex/wifi/WifiSettings;->isWifiSharingEnabled()Z
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiSettings;->access$1300(Lcom/android/settings_ex/wifi/WifiSettings;)Z
 
     move-result v1
 
@@ -93,9 +93,9 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 975
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings$8;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSettings$8;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/wifi/WifiSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/wifi/WifiSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -108,17 +108,17 @@
 
     .line 977
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings$8;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSettings$8;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
     const/4 v2, 0x1
 
-    # invokes: Lcom/android/settings/wifi/WifiSettings;->dismissDialog(I)V
-    invoke-static {v1, v2}, Lcom/android/settings/wifi/WifiSettings;->access$1400(Lcom/android/settings/wifi/WifiSettings;I)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiSettings;->dismissDialog(I)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/wifi/WifiSettings;->access$1400(Lcom/android/settings_ex/wifi/WifiSettings;I)V
 
     .line 978
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings$8;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSettings$8;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/wifi/WifiSettings;->onP2pMenuPressed()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/wifi/WifiSettings;->onP2pMenuPressed()V
 
     goto :goto_0
 .end method

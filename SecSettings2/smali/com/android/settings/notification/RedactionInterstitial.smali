@@ -1,12 +1,12 @@
-.class public Lcom/android/settings/notification/RedactionInterstitial;
-.super Lcom/android/settings/SettingsActivity;
+.class public Lcom/android/settings_ex/notification/RedactionInterstitial;
+.super Lcom/android/settings_ex/SettingsActivity;
 .source "RedactionInterstitial.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;
+        Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;
     }
 .end annotation
 
@@ -17,7 +17,7 @@
 
     .prologue
     .line 39
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivity;-><init>()V
 
     .line 100
     return-void
@@ -31,7 +31,7 @@
     const/4 v0, 0x0
 
     .line 60
-    invoke-static {p0}, Lcom/android/settings/notification/RedactionInterstitial;->isSecureNotificationsDisabled(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/android/settings_ex/notification/RedactionInterstitial;->isSecureNotificationsDisabled(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -43,7 +43,7 @@
 
     .line 65
     :cond_0
-    invoke-static {v0}, Lcom/android/settings/Utils;->isTablet(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isTablet(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -52,7 +52,7 @@
     .line 66
     new-instance v0, Landroid/content/Intent;
 
-    const-class v1, Lcom/android/settings/notification/RedactionInterstitial;
+    const-class v1, Lcom/android/settings_ex/notification/RedactionInterstitial;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -62,7 +62,7 @@
     :cond_1
     new-instance v1, Landroid/content/Intent;
 
-    const-class v2, Lcom/android/settings/notification/RedactionInterstitial;
+    const-class v2, Lcom/android/settings_ex/notification/RedactionInterstitial;
 
     invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -153,7 +153,7 @@
     .line 43
     new-instance v0, Landroid/content/Intent;
 
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->getIntent()Landroid/content/Intent;
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -163,7 +163,7 @@
     .local v0, "modIntent":Landroid/content/Intent;
     const-string v1, ":settings:show_fragment"
 
-    const-class v2, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;
+    const-class v2, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -188,7 +188,7 @@
 
     .prologue
     .line 51
-    const-class v0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;
+    const-class v0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -209,7 +209,7 @@
     .line 94
     const/4 v0, 0x0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isTablet(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isTablet(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -218,11 +218,11 @@
     .line 95
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/notification/RedactionInterstitial;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/notification/RedactionInterstitial;->requestWindowFeature(I)Z
 
     .line 97
     :cond_0
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 98
     return-void

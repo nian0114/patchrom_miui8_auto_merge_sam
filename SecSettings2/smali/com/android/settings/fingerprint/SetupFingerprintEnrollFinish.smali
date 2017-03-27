@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/fingerprint/SetupFingerprintEnrollFinish;
-.super Lcom/android/settings/fingerprint/FingerprintEnrollFinish;
+.class public Lcom/android/settings_ex/fingerprint/SetupFingerprintEnrollFinish;
+.super Lcom/android/settings_ex/fingerprint/FingerprintEnrollFinish;
 .source "SetupFingerprintEnrollFinish.java"
 
 # interfaces
@@ -12,7 +12,7 @@
 
     .prologue
     .line 30
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintEnrollFinish;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFinish;-><init>()V
 
     return-void
 .end method
@@ -26,7 +26,7 @@
     .line 37
     new-instance v0, Landroid/content/Intent;
 
-    const-class v1, Lcom/android/settings/fingerprint/SetupFingerprintEnrollEnrolling;
+    const-class v1, Lcom/android/settings_ex/fingerprint/SetupFingerprintEnrollEnrolling;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -34,16 +34,16 @@
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "hw_auth_token"
 
-    iget-object v2, p0, Lcom/android/settings/fingerprint/SetupFingerprintEnrollFinish;->mToken:[B
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/SetupFingerprintEnrollFinish;->mToken:[B
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;
 
     .line 39
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/SetupFingerprintEnrollFinish;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/SetupFingerprintEnrollFinish;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lcom/android/settings/SetupWizardUtils;->copySetupExtras(Landroid/content/Intent;Landroid/content/Intent;)V
+    invoke-static {v1, v0}, Lcom/android/settings_ex/SetupWizardUtils;->copySetupExtras(Landroid/content/Intent;Landroid/content/Intent;)V
 
     .line 40
     return-object v0
@@ -54,7 +54,7 @@
 
     .prologue
     .line 71
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/SetupFingerprintEnrollFinish;->getNavigationBar()Lcom/android/setupwizardlib/view/NavigationBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/SetupFingerprintEnrollFinish;->getNavigationBar()Lcom/android/setupwizardlib/view/NavigationBar;
 
     move-result-object v0
 
@@ -72,12 +72,12 @@
     const/16 v5, 0x8
 
     .line 51
-    invoke-static {p0}, Lcom/android/settings/SetupWizardUtils;->setImmersiveMode(Landroid/app/Activity;)V
+    invoke-static {p0}, Lcom/android/settings_ex/SetupWizardUtils;->setImmersiveMode(Landroid/app/Activity;)V
 
     .line 53
     const v4, 0x7f0d0106
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/fingerprint/SetupFingerprintEnrollFinish;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/fingerprint/SetupFingerprintEnrollFinish;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -90,7 +90,7 @@
 
     .line 58
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/SetupFingerprintEnrollFinish;->getNavigationBar()Lcom/android/setupwizardlib/view/NavigationBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/SetupFingerprintEnrollFinish;->getNavigationBar()Lcom/android/setupwizardlib/view/NavigationBar;
 
     move-result-object v1
 
@@ -108,7 +108,7 @@
     .line 62
     const v4, 0x7f0d00ec
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/fingerprint/SetupFingerprintEnrollFinish;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/fingerprint/SetupFingerprintEnrollFinish;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -123,7 +123,7 @@
     .line 65
     const v4, 0x7f0d02b2
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/fingerprint/SetupFingerprintEnrollFinish;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/fingerprint/SetupFingerprintEnrollFinish;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
@@ -147,16 +147,16 @@
 
     .prologue
     .line 45
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/SetupFingerprintEnrollFinish;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/SetupFingerprintEnrollFinish;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/SetupWizardUtils;->getTheme(Landroid/content/Intent;)I
+    invoke-static {v0}, Lcom/android/settings_ex/SetupWizardUtils;->getTheme(Landroid/content/Intent;)I
 
     move-result p2
 
     .line 46
-    invoke-super {p0, p1, p2, p3}, Lcom/android/settings/fingerprint/FingerprintEnrollFinish;->onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFinish;->onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
 
     .line 47
     return-void
@@ -167,7 +167,7 @@
 
     .prologue
     .line 76
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/SetupFingerprintEnrollFinish;->onBackPressed()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/SetupFingerprintEnrollFinish;->onBackPressed()V
 
     .line 77
     return-void
@@ -178,7 +178,7 @@
 
     .prologue
     .line 81
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/SetupFingerprintEnrollFinish;->onNextButtonClick()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/SetupFingerprintEnrollFinish;->onNextButtonClick()V
 
     .line 82
     return-void

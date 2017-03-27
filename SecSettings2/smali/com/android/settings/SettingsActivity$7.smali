@@ -1,4 +1,4 @@
-.class Lcom/android/settings/SettingsActivity$7;
+.class Lcom/android/settings_ex/SettingsActivity$7;
 .super Ljava/lang/Object;
 .source "SettingsActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/SettingsActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/SettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/SettingsActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/SettingsActivity;)V
     .locals 0
 
     .prologue
     .line 1253
-    iput-object p1, p0, Lcom/android/settings/SettingsActivity$7;->this$0:Lcom/android/settings/SettingsActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/SettingsActivity$7;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,9 +42,9 @@
 
     .prologue
     .line 1255
-    iget-object v0, p0, Lcom/android/settings/SettingsActivity$7;->this$0:Lcom/android/settings/SettingsActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/SettingsActivity$7;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->switchToEditFavoriteFragment()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->switchToEditFavoriteFragment()V
 
     .line 1256
     return-void

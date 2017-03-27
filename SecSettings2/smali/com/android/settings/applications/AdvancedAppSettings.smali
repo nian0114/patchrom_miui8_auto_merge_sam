@@ -1,16 +1,16 @@
-.class public Lcom/android/settings/applications/AdvancedAppSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/applications/AdvancedAppSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "AdvancedAppSettings.java"
 
 # interfaces
-.implements Lcom/android/settingslib/applications/ApplicationsState$Callbacks;
+.implements Lcom/android/settings_exlib/applications/ApplicationsState$Callbacks;
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/applications/AdvancedAppSettings$CountAppsWithWriteSettingsPermission;,
-        Lcom/android/settings/applications/AdvancedAppSettings$CountAppsWithOverlayPermission;
+        Lcom/android/settings_ex/applications/AdvancedAppSettings$CountAppsWithWriteSettingsPermission;,
+        Lcom/android/settings_ex/applications/AdvancedAppSettings$CountAppsWithOverlayPermission;
     }
 .end annotation
 
@@ -22,11 +22,11 @@
 
 .field private mHighPowerPreference:Landroid/preference/Preference;
 
-.field private final mPermissionCallback:Lcom/android/settings/applications/PermissionsSummaryHelper$PermissionsResultCallback;
+.field private final mPermissionCallback:Lcom/android/settings_ex/applications/PermissionsSummaryHelper$PermissionsResultCallback;
 
 .field private mPermissionReceiver:Landroid/content/BroadcastReceiver;
 
-.field private mSession:Lcom/android/settingslib/applications/ApplicationsState$Session;
+.field private mSession:Lcom/android/settings_exlib/applications/ApplicationsState$Session;
 
 .field private mSystemAlertWindowPreference:Landroid/preference/Preference;
 
@@ -39,60 +39,60 @@
 
     .prologue
     .line 38
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 122
-    new-instance v0, Lcom/android/settings/applications/AdvancedAppSettings$1;
+    new-instance v0, Lcom/android/settings_ex/applications/AdvancedAppSettings$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/applications/AdvancedAppSettings$1;-><init>(Lcom/android/settings/applications/AdvancedAppSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/applications/AdvancedAppSettings$1;-><init>(Lcom/android/settings_ex/applications/AdvancedAppSettings;)V
 
-    iput-object v0, p0, Lcom/android/settings/applications/AdvancedAppSettings;->mPermissionCallback:Lcom/android/settings/applications/PermissionsSummaryHelper$PermissionsResultCallback;
+    iput-object v0, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings;->mPermissionCallback:Lcom/android/settings_ex/applications/PermissionsSummaryHelper$PermissionsResultCallback;
 
     .line 161
     return-void
 .end method
 
-.method static synthetic access$002(Lcom/android/settings/applications/AdvancedAppSettings;Landroid/content/BroadcastReceiver;)Landroid/content/BroadcastReceiver;
+.method static synthetic access$002(Lcom/android/settings_ex/applications/AdvancedAppSettings;Landroid/content/BroadcastReceiver;)Landroid/content/BroadcastReceiver;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/applications/AdvancedAppSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/applications/AdvancedAppSettings;
     .param p1, "x1"    # Landroid/content/BroadcastReceiver;
 
     .prologue
     .line 38
-    iput-object p1, p0, Lcom/android/settings/applications/AdvancedAppSettings;->mPermissionReceiver:Landroid/content/BroadcastReceiver;
+    iput-object p1, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings;->mPermissionReceiver:Landroid/content/BroadcastReceiver;
 
     return-object p1
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/applications/AdvancedAppSettings;)Landroid/preference/Preference;
+.method static synthetic access$100(Lcom/android/settings_ex/applications/AdvancedAppSettings;)Landroid/preference/Preference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/applications/AdvancedAppSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/applications/AdvancedAppSettings;
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/android/settings/applications/AdvancedAppSettings;->mAppPermsPreference:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings;->mAppPermsPreference:Landroid/preference/Preference;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/applications/AdvancedAppSettings;)Landroid/preference/Preference;
+.method static synthetic access$200(Lcom/android/settings_ex/applications/AdvancedAppSettings;)Landroid/preference/Preference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/applications/AdvancedAppSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/applications/AdvancedAppSettings;
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/android/settings/applications/AdvancedAppSettings;->mSystemAlertWindowPreference:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings;->mSystemAlertWindowPreference:Landroid/preference/Preference;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/applications/AdvancedAppSettings;)Landroid/preference/Preference;
+.method static synthetic access$300(Lcom/android/settings_ex/applications/AdvancedAppSettings;)Landroid/preference/Preference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/applications/AdvancedAppSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/applications/AdvancedAppSettings;
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/android/settings/applications/AdvancedAppSettings;->mWriteSettingsPreference:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings;->mWriteSettingsPreference:Landroid/preference/Preference;
 
     return-object v0
 .end method
@@ -123,15 +123,15 @@
 
     .prologue
     .line 60
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 61
     const v2, 0x7f08000e
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/applications/AdvancedAppSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/applications/AdvancedAppSettings;->addPreferencesFromResource(I)V
 
     .line 63
-    invoke-virtual {p0}, Lcom/android/settings/applications/AdvancedAppSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/AdvancedAppSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v2
 
@@ -152,7 +152,7 @@
     invoke-virtual {v1, v2}, Landroid/preference/Preference;->setIntent(Landroid/content/Intent;)V
 
     .line 66
-    invoke-virtual {p0}, Lcom/android/settings/applications/AdvancedAppSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/AdvancedAppSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -160,62 +160,62 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settingslib/applications/ApplicationsState;->getInstance(Landroid/app/Application;)Lcom/android/settingslib/applications/ApplicationsState;
+    invoke-static {v2}, Lcom/android/settings_exlib/applications/ApplicationsState;->getInstance(Landroid/app/Application;)Lcom/android/settings_exlib/applications/ApplicationsState;
 
     move-result-object v0
 
     .line 68
-    .local v0, "applicationsState":Lcom/android/settingslib/applications/ApplicationsState;
-    invoke-virtual {v0, p0}, Lcom/android/settingslib/applications/ApplicationsState;->newSession(Lcom/android/settingslib/applications/ApplicationsState$Callbacks;)Lcom/android/settingslib/applications/ApplicationsState$Session;
+    .local v0, "applicationsState":Lcom/android/settings_exlib/applications/ApplicationsState;
+    invoke-virtual {v0, p0}, Lcom/android/settings_exlib/applications/ApplicationsState;->newSession(Lcom/android/settings_exlib/applications/ApplicationsState$Callbacks;)Lcom/android/settings_exlib/applications/ApplicationsState$Session;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/applications/AdvancedAppSettings;->mSession:Lcom/android/settingslib/applications/ApplicationsState$Session;
+    iput-object v2, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings;->mSession:Lcom/android/settings_exlib/applications/ApplicationsState$Session;
 
     .line 70
     const-string v2, "manage_perms"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/applications/AdvancedAppSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/applications/AdvancedAppSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/applications/AdvancedAppSettings;->mAppPermsPreference:Landroid/preference/Preference;
+    iput-object v2, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings;->mAppPermsPreference:Landroid/preference/Preference;
 
     .line 71
     const-string v2, "domain_urls"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/applications/AdvancedAppSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/applications/AdvancedAppSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/applications/AdvancedAppSettings;->mAppDomainURLsPreference:Landroid/preference/Preference;
+    iput-object v2, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings;->mAppDomainURLsPreference:Landroid/preference/Preference;
 
     .line 72
     const-string v2, "high_power_apps"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/applications/AdvancedAppSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/applications/AdvancedAppSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/applications/AdvancedAppSettings;->mHighPowerPreference:Landroid/preference/Preference;
+    iput-object v2, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings;->mHighPowerPreference:Landroid/preference/Preference;
 
     .line 73
     const-string v2, "system_alert_window"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/applications/AdvancedAppSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/applications/AdvancedAppSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/applications/AdvancedAppSettings;->mSystemAlertWindowPreference:Landroid/preference/Preference;
+    iput-object v2, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings;->mSystemAlertWindowPreference:Landroid/preference/Preference;
 
     .line 74
     const-string v2, "write_settings_apps"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/applications/AdvancedAppSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/applications/AdvancedAppSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/applications/AdvancedAppSettings;->mWriteSettingsPreference:Landroid/preference/Preference;
+    iput-object v2, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings;->mWriteSettingsPreference:Landroid/preference/Preference;
 
     .line 75
     return-void
@@ -269,14 +269,14 @@
             "(",
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settingslib/applications/ApplicationsState$AppEntry;",
+            "Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;",
             ">;)V"
         }
     .end annotation
 
     .prologue
     .line 95
-    .local p1, "apps":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/settingslib/applications/ApplicationsState$AppEntry;>;"
+    .local p1, "apps":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;>;"
     return-void
 .end method
 

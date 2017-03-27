@@ -1,4 +1,4 @@
-.class Lcom/android/settings/notification/VibrationsSettings$4;
+.class Lcom/android/settings_ex/notification/VibrationsSettings$4;
 .super Ljava/lang/Object;
 .source "VibrationsSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/notification/VibrationsSettings;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/notification/VibrationsSettings;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/VibrationsSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/VibrationsSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/notification/VibrationsSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/notification/VibrationsSettings;)V
     .locals 0
 
     .prologue
     .line 174
-    iput-object p1, p0, Lcom/android/settings/notification/VibrationsSettings$4;->this$0:Lcom/android/settings/notification/VibrationsSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/VibrationsSettings$4;->this$0:Lcom/android/settings_ex/notification/VibrationsSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -52,10 +52,10 @@
 
     .line 178
     .local v0, "val":Z
-    iget-object v1, p0, Lcom/android/settings/notification/VibrationsSettings$4;->this$0:Lcom/android/settings/notification/VibrationsSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VibrationsSettings$4;->this$0:Lcom/android/settings_ex/notification/VibrationsSettings;
 
-    # invokes: Lcom/android/settings/notification/VibrationsSettings;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v1}, Lcom/android/settings/notification/VibrationsSettings;->access$400(Lcom/android/settings/notification/VibrationsSettings;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/notification/VibrationsSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v1}, Lcom/android/settings_ex/notification/VibrationsSettings;->access$400(Lcom/android/settings_ex/notification/VibrationsSettings;)Landroid/content/ContentResolver;
 
     move-result-object v2
 

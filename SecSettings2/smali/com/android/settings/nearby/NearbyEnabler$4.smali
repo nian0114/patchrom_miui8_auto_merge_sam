@@ -1,11 +1,11 @@
-.class Lcom/android/settings/nearby/NearbyEnabler$4;
+.class Lcom/android/settings_ex/nearby/NearbyEnabler$4;
 .super Landroid/content/BroadcastReceiver;
 .source "NearbyEnabler.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/nearby/NearbyEnabler;
+    value = Lcom/android/settings_ex/nearby/NearbyEnabler;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nearby/NearbyEnabler;
+.field final synthetic this$0:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/nearby/NearbyEnabler;)V
+.method constructor <init>(Lcom/android/settings_ex/nearby/NearbyEnabler;)V
     .locals 0
 
     .prologue
     .line 916
-    iput-object p1, p0, Lcom/android/settings/nearby/NearbyEnabler$4;->this$0:Lcom/android/settings/nearby/NearbyEnabler;
+    iput-object p1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler$4;->this$0:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -68,7 +68,7 @@
 
     move-result-object v5
 
-    invoke-static {v3, v4, v5}, Lcom/android/settings/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4, v5}, Lcom/android/settings_ex/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 923
     const-string v3, "com.android.settings.allshare.SERVER_STATE_CHANGED"
@@ -112,39 +112,39 @@
 
     move-result-object v5
 
-    invoke-static {v3, v4, v5}, Lcom/android/settings/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4, v5}, Lcom/android/settings_ex/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 927
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
     .line 928
-    # setter for: Lcom/android/settings/nearby/NearbyEnabler;->isShowWifiCheckingPopup:Z
-    invoke-static {v2}, Lcom/android/settings/nearby/NearbyEnabler;->access$1402(Z)Z
+    # setter for: Lcom/android/settings_ex/nearby/NearbyEnabler;->isShowWifiCheckingPopup:Z
+    invoke-static {v2}, Lcom/android/settings_ex/nearby/NearbyEnabler;->access$1402(Z)Z
 
     .line 940
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/nearby/NearbyEnabler$4;->this$0:Lcom/android/settings/nearby/NearbyEnabler;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler$4;->this$0:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
-    # getter for: Lcom/android/settings/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v3}, Lcom/android/settings/nearby/NearbyEnabler;->access$1000(Lcom/android/settings/nearby/NearbyEnabler;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v3}, Lcom/android/settings_ex/nearby/NearbyEnabler;->access$1000(Lcom/android/settings_ex/nearby/NearbyEnabler;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v3
 
     if-eqz v3, :cond_2
 
     .line 941
-    iget-object v3, p0, Lcom/android/settings/nearby/NearbyEnabler$4;->this$0:Lcom/android/settings/nearby/NearbyEnabler;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler$4;->this$0:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
-    # getter for: Lcom/android/settings/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v3}, Lcom/android/settings/nearby/NearbyEnabler;->access$1000(Lcom/android/settings/nearby/NearbyEnabler;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v3}, Lcom/android/settings_ex/nearby/NearbyEnabler;->access$1000(Lcom/android/settings_ex/nearby/NearbyEnabler;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/android/settings/widget/SwitchBar;->isChecked()Z
+    invoke-virtual {v3}, Lcom/android/settings_ex/widget/SwitchBar;->isChecked()Z
 
     move-result v3
 
@@ -173,30 +173,30 @@
 
     move-result-object v5
 
-    invoke-static {v3, v4, v5}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4, v5}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 944
-    iget-object v3, p0, Lcom/android/settings/nearby/NearbyEnabler$4;->this$0:Lcom/android/settings/nearby/NearbyEnabler;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler$4;->this$0:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
-    # getter for: Lcom/android/settings/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v3}, Lcom/android/settings/nearby/NearbyEnabler;->access$1000(Lcom/android/settings/nearby/NearbyEnabler;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v3}, Lcom/android/settings_ex/nearby/NearbyEnabler;->access$1000(Lcom/android/settings_ex/nearby/NearbyEnabler;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v3
 
-    invoke-virtual {v3, v2}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v3, v2}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 946
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/nearby/NearbyEnabler$4;->this$0:Lcom/android/settings/nearby/NearbyEnabler;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler$4;->this$0:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
-    # getter for: Lcom/android/settings/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v3}, Lcom/android/settings/nearby/NearbyEnabler;->access$1000(Lcom/android/settings/nearby/NearbyEnabler;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v3}, Lcom/android/settings_ex/nearby/NearbyEnabler;->access$1000(Lcom/android/settings_ex/nearby/NearbyEnabler;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v3
 
     const/4 v4, 0x1
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 959
     .end local v2    # "isServerStarted":Z
@@ -219,12 +219,12 @@
     if-eqz v3, :cond_2
 
     .line 951
-    iget-object v3, p0, Lcom/android/settings/nearby/NearbyEnabler$4;->this$0:Lcom/android/settings/nearby/NearbyEnabler;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler$4;->this$0:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
-    iget-object v4, p0, Lcom/android/settings/nearby/NearbyEnabler$4;->this$0:Lcom/android/settings/nearby/NearbyEnabler;
+    iget-object v4, p0, Lcom/android/settings_ex/nearby/NearbyEnabler$4;->this$0:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
-    # getter for: Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
-    invoke-static {v4}, Lcom/android/settings/nearby/NearbyEnabler;->access$1300(Lcom/android/settings/nearby/NearbyEnabler;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    invoke-static {v4}, Lcom/android/settings_ex/nearby/NearbyEnabler;->access$1300(Lcom/android/settings_ex/nearby/NearbyEnabler;)Landroid/content/Context;
 
     move-result-object v4
 
@@ -238,8 +238,8 @@
 
     move-result-object v4
 
-    # invokes: Lcom/android/settings/nearby/NearbyEnabler;->checkDeviceName(Ljava/lang/String;)Ljava/lang/String;
-    invoke-static {v3, v4}, Lcom/android/settings/nearby/NearbyEnabler;->access$1500(Lcom/android/settings/nearby/NearbyEnabler;Ljava/lang/String;)Ljava/lang/String;
+    # invokes: Lcom/android/settings_ex/nearby/NearbyEnabler;->checkDeviceName(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v4}, Lcom/android/settings_ex/nearby/NearbyEnabler;->access$1500(Lcom/android/settings_ex/nearby/NearbyEnabler;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -247,20 +247,20 @@
     .local v1, "deviceName":Ljava/lang/String;
     if-eqz v1, :cond_2
 
-    iget-object v3, p0, Lcom/android/settings/nearby/NearbyEnabler$4;->this$0:Lcom/android/settings/nearby/NearbyEnabler;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler$4;->this$0:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
-    # getter for: Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDeviceName:Landroid/preference/PreferenceScreen;
-    invoke-static {v3}, Lcom/android/settings/nearby/NearbyEnabler;->access$1600(Lcom/android/settings/nearby/NearbyEnabler;)Landroid/preference/PreferenceScreen;
+    # getter for: Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDeviceName:Landroid/preference/PreferenceScreen;
+    invoke-static {v3}, Lcom/android/settings_ex/nearby/NearbyEnabler;->access$1600(Lcom/android/settings_ex/nearby/NearbyEnabler;)Landroid/preference/PreferenceScreen;
 
     move-result-object v3
 
     if-eqz v3, :cond_2
 
     .line 955
-    iget-object v3, p0, Lcom/android/settings/nearby/NearbyEnabler$4;->this$0:Lcom/android/settings/nearby/NearbyEnabler;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler$4;->this$0:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
-    # getter for: Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDeviceName:Landroid/preference/PreferenceScreen;
-    invoke-static {v3}, Lcom/android/settings/nearby/NearbyEnabler;->access$1600(Lcom/android/settings/nearby/NearbyEnabler;)Landroid/preference/PreferenceScreen;
+    # getter for: Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDeviceName:Landroid/preference/PreferenceScreen;
+    invoke-static {v3}, Lcom/android/settings_ex/nearby/NearbyEnabler;->access$1600(Lcom/android/settings_ex/nearby/NearbyEnabler;)Landroid/preference/PreferenceScreen;
 
     move-result-object v3
 

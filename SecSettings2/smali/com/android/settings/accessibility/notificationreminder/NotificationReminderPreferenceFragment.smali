@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "NotificationReminderPreferenceFragment.java"
 
 # interfaces
@@ -30,7 +30,7 @@
 
 .field private mCheckSelectAll:I
 
-.field private mNotificationReminderEnabler:Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;
+.field private mNotificationReminderEnabler:Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;
 
 .field private mNotificationReminderObserver:Landroid/database/ContentObserver;
 
@@ -40,11 +40,11 @@
 
 .field private mShouldCheckAll:I
 
-.field protected mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field protected mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-.field private mTimeInterval:Lcom/android/settings/DropDownPreference;
+.field private mTimeInterval:Lcom/android/settings_ex/DropDownPreference;
 
-.field protected mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+.field protected mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
 .field private packageCategory:Landroid/preference/PreferenceCategory;
 
@@ -63,7 +63,7 @@
 
 .field private settingCategory:Landroid/preference/PreferenceCategory;
 
-.field private summaryPreference:Lcom/android/settings/UnclickablePreference;
+.field private summaryPreference:Lcom/android/settings_ex/UnclickablePreference;
 
 .field private vibratePreference:Landroid/preference/SwitchPreference;
 
@@ -76,12 +76,12 @@
     .line 80
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mOpenDetailMenu:Z
+    sput-boolean v0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mOpenDetailMenu:Z
 
     .line 81
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mOpenDetailMenuKey:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mOpenDetailMenuKey:Ljava/lang/String;
 
     return-void
 .end method
@@ -91,79 +91,79 @@
 
     .prologue
     .line 96
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 72
     const-string v0, "notification_reminder"
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->SETTING_SYSTEM_NOTIFICATION_REMINDER:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->SETTING_SYSTEM_NOTIFICATION_REMINDER:Ljava/lang/String;
 
     .line 73
     const-string v0, "time_key"
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->SETTING_SYSTEM_TIME_KEY:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->SETTING_SYSTEM_TIME_KEY:Ljava/lang/String;
 
     .line 90
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
 
     .line 91
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->list:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->list:Ljava/util/ArrayList;
 
     .line 100
-    new-instance v0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment$1;
+    new-instance v0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment$1;-><init>(Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment$1;-><init>(Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mReminderPreferenceReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mReminderPreferenceReceiver:Landroid/content/BroadcastReceiver;
 
     .line 116
-    new-instance v0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment$2;
+    new-instance v0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment$2;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment$2;-><init>(Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment$2;-><init>(Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mNotificationReminderObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mNotificationReminderObserver:Landroid/database/ContentObserver;
 
     .line 97
     const-string v0, "NotificationReminderPreferenceFragment"
 
     const-string v1, "NotificationReminderPreferenceFragment()"
 
-    invoke-static {v0, v1}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 98
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;)V
+.method static synthetic access$000(Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;
 
     .prologue
     .line 56
-    invoke-direct {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->updateNotificationReminderSaving()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->updateNotificationReminderSaving()V
 
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;)Landroid/content/ContentResolver;
+.method static synthetic access$100(Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;
 
     .prologue
     .line 56
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -175,14 +175,14 @@
 
     .prologue
     .line 330
-    iget-object v8, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
+    iget-object v8, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v8}, Landroid/preference/PreferenceCategory;->removeAll()V
 
     .line 331
-    iget-object v8, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
+    iget-object v8, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
 
-    iget-object v9, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->selectAllPreference:Landroid/preference/SwitchPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->selectAllPreference:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v8, v9}, Landroid/preference/PreferenceCategory;->addPreference(Landroid/preference/Preference;)Z
 
@@ -193,7 +193,7 @@
 
     .line 333
     .local v2, "mAppList":Ljava/lang/StringBuffer;
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v8
 
@@ -241,23 +241,23 @@
 
     .line 342
     :cond_1
-    invoke-direct {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->loadPackages()Ljava/util/List;
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->loadPackages()Ljava/util/List;
 
     move-result-object v8
 
-    iput-object v8, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
+    iput-object v8, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
 
     .line 343
-    iget-object v8, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
+    iget-object v8, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
 
-    invoke-direct {p0, v8}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->sortPackage(Ljava/util/List;)Ljava/util/List;
+    invoke-direct {p0, v8}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->sortPackage(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v8
 
-    iput-object v8, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
+    iput-object v8, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
 
     .line 344
-    iget-object v8, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
+    iget-object v8, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
 
     if-nez v8, :cond_3
 
@@ -266,7 +266,7 @@
 
     const-string v9, "Package load error!"
 
-    invoke-static {v8, v9}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v9}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 375
     :cond_2
@@ -275,20 +275,20 @@
 
     .line 348
     :cond_3
-    iget-object v8, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
+    iget-object v8, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
 
     invoke-interface {v8}, Ljava/util/List;->size()I
 
     move-result v8
 
-    iput v8, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mShouldCheckAll:I
+    iput v8, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mShouldCheckAll:I
 
     .line 350
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_1
-    iget-object v8, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
+    iget-object v8, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
 
     invoke-interface {v8}, Ljava/util/List;->size()I
 
@@ -299,7 +299,7 @@
     .line 351
     new-instance v3, Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -307,7 +307,7 @@
 
     .line 352
     .local v3, "mAppPreference":Landroid/preference/SwitchPreference;
-    iget-object v8, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
+    iget-object v8, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
 
     invoke-interface {v8, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -320,7 +320,7 @@
     invoke-virtual {v3, v8}, Landroid/preference/SwitchPreference;->setKey(Ljava/lang/String;)V
 
     .line 353
-    iget-object v8, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
+    iget-object v8, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
 
     invoke-interface {v8, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -328,7 +328,7 @@
 
     check-cast v8, Landroid/content/pm/ApplicationInfo;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v9
 
@@ -348,7 +348,7 @@
     invoke-virtual {v3, v8}, Landroid/preference/SwitchPreference;->setPersistent(Z)V
 
     .line 355
-    iget-object v8, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
+    iget-object v8, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
 
     invoke-interface {v8, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -356,7 +356,7 @@
 
     check-cast v8, Landroid/content/pm/ApplicationInfo;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v9
 
@@ -366,7 +366,7 @@
 
     .line 356
     .local v5, "originalIcon":Landroid/graphics/drawable/Drawable;
-    invoke-direct {p0, v5}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->reSizeIcon(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->reSizeIcon(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v8
 
@@ -380,7 +380,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v8, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
+    iget-object v8, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
 
     invoke-interface {v8, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -425,7 +425,7 @@
 
     .line 365
     :cond_5
-    iget-object v8, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
+    iget-object v8, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v8, v3}, Landroid/preference/PreferenceCategory;->addPreference(Landroid/preference/Preference;)Z
 
@@ -439,23 +439,23 @@
     .end local v5    # "originalIcon":Landroid/graphics/drawable/Drawable;
     .end local v6    # "packagename_savedformat":Ljava/lang/String;
     :cond_6
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v8
 
     if-eqz v8, :cond_2
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
-    invoke-static {v8}, Lcom/android/settings/Utils;->isVoiceCapable(Landroid/content/Context;)Z
+    invoke-static {v8}, Lcom/android/settings_ex/Utils;->isVoiceCapable(Landroid/content/Context;)Z
 
     move-result v8
 
     if-nez v8, :cond_2
 
-    iget-object v8, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
+    iget-object v8, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
 
     const-string v9, "com.android.server.telecom"
 
@@ -468,7 +468,7 @@
     .line 371
     const-string v8, "com.android.server.telecom"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
@@ -476,7 +476,7 @@
 
     .line 372
     .local v4, "mPhonePreference":Landroid/preference/SwitchPreference;
-    iget-object v8, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
+    iget-object v8, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v8, v4}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
@@ -492,10 +492,10 @@
 
     const-string v4, "handleReminderCheckPackage"
 
-    invoke-static {v3, v4}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 451
-    iget-object v3, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->selectAllPreference:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->selectAllPreference:Landroid/preference/SwitchPreference;
 
     const/4 v4, 0x0
 
@@ -512,7 +512,7 @@
 
     .local v0, "i":I
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v3}, Landroid/preference/PreferenceCategory;->getPreferenceCount()I
 
@@ -521,7 +521,7 @@
     if-ge v0, v3, :cond_1
 
     .line 455
-    iget-object v3, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v3, v0}, Landroid/preference/PreferenceCategory;->getPreference(I)Landroid/preference/Preference;
 
@@ -559,7 +559,7 @@
     .line 461
     .end local v2    # "mAppPreference":Landroid/preference/SwitchPreference;
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -600,7 +600,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 464
     return-void
@@ -617,7 +617,7 @@
 
     const-string v7, "handleReminderCheckPackage with argument"
 
-    invoke-static {v6, v7}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 469
     new-instance v1, Ljava/lang/StringBuffer;
@@ -664,7 +664,7 @@
 
     .local v0, "i":I
     :goto_1
-    iget-object v6, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v6}, Landroid/preference/PreferenceCategory;->getPreferenceCount()I
 
@@ -673,7 +673,7 @@
     if-ge v0, v6, :cond_3
 
     .line 485
-    iget-object v6, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v6, v0}, Landroid/preference/PreferenceCategory;->getPreference(I)Landroid/preference/Preference;
 
@@ -712,7 +712,7 @@
 
     .line 481
     .restart local v4    # "mCurrentPreference":Landroid/preference/SwitchPreference;
-    iget-object v6, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->selectAllPreference:Landroid/preference/SwitchPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->selectAllPreference:Landroid/preference/SwitchPreference;
 
     const/4 v7, 0x0
 
@@ -765,7 +765,7 @@
     .line 497
     .end local v2    # "mAppPreference":Landroid/preference/SwitchPreference;
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -806,10 +806,10 @@
 
     move-result-object v7
 
-    invoke-static {v6, v7}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 500
-    iget-object v6, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
 
     invoke-interface {v6}, Ljava/util/List;->size()I
 
@@ -846,13 +846,13 @@
 
     move-result-object v7
 
-    invoke-static {v6, v7}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 502
     if-ne v3, v5, :cond_4
 
     .line 503
-    iget-object v6, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->selectAllPreference:Landroid/preference/SwitchPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->selectAllPreference:Landroid/preference/SwitchPreference;
 
     const/4 v7, 0x1
 
@@ -873,7 +873,7 @@
 
     const-string v4, "handleReminderSelectAll"
 
-    invoke-static {v3, v4}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 429
     new-instance v1, Ljava/lang/StringBuffer;
@@ -886,7 +886,7 @@
 
     .local v0, "i":I
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v3}, Landroid/preference/PreferenceCategory;->getPreferenceCount()I
 
@@ -895,7 +895,7 @@
     if-ge v0, v3, :cond_1
 
     .line 432
-    iget-object v3, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v3, v0}, Landroid/preference/PreferenceCategory;->getPreference(I)Landroid/preference/Preference;
 
@@ -935,13 +935,13 @@
     if-eqz p1, :cond_2
 
     .line 439
-    sget-object v3, Lcom/android/settings/accessibility/notificationreminder/GlobalConstant;->includeAppStrings:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/accessibility/notificationreminder/GlobalConstant;->includeAppStrings:Ljava/lang/String;
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     .line 442
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -960,7 +960,7 @@
     .line 443
     if-eqz p1, :cond_3
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->selectAllPreference:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->selectAllPreference:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v3}, Landroid/preference/SwitchPreference;->isChecked()Z
 
@@ -969,7 +969,7 @@
     if-nez v3, :cond_3
 
     .line 444
-    iget-object v3, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->selectAllPreference:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->selectAllPreference:Landroid/preference/SwitchPreference;
 
     const/4 v4, 0x1
 
@@ -1001,7 +1001,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 447
     return-void
@@ -1017,10 +1017,10 @@
 
     const-string v1, "handleReminderVibrate"
 
-    invoke-static {v0, v1}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 406
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -1050,12 +1050,12 @@
 
     .prologue
     .line 296
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->onInstallSwitchBarToggleSwitch()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->onInstallSwitchBarToggleSwitch()V
 
     .line 297
-    iget-object v0, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 298
     return-void
@@ -1077,7 +1077,7 @@
     .line 387
     new-instance v1, Ljava/util/ArrayList;
 
-    sget-object v5, Lcom/android/settings/accessibility/notificationreminder/GlobalConstant;->includeAppStrings:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/notificationreminder/GlobalConstant;->includeAppStrings:Ljava/lang/String;
 
     const-string v6, ";"
 
@@ -1093,7 +1093,7 @@
 
     .line 388
     .local v1, "checkLists":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v4
 
@@ -1139,7 +1139,7 @@
 
     iget-object v5, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    invoke-static {v5}, Lcom/android/settings/accessibility/notificationreminder/GlobalConstant;->Contain(Ljava/lang/String;)Z
+    invoke-static {v5}, Lcom/android/settings_ex/accessibility/notificationreminder/GlobalConstant;->Contain(Ljava/lang/String;)Z
 
     move-result v5
 
@@ -1171,26 +1171,26 @@
 
     .prologue
     .line 378
-    new-instance v1, Lcom/android/settings/IconResizer;
+    new-instance v1, Lcom/android/settings_ex/IconResizer;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/android/settings/IconResizer;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Lcom/android/settings_ex/IconResizer;-><init>(Landroid/content/Context;)V
 
     .line 379
-    .local v1, "mIconResizer":Lcom/android/settings/IconResizer;
+    .local v1, "mIconResizer":Lcom/android/settings_ex/IconResizer;
     const v2, 0x7f0c00ac
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/IconResizer;->setIconSize(I)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/IconResizer;->setIconSize(I)V
 
     .line 380
     const/4 v0, 0x0
 
     .line 381
     .local v0, "icon":Landroid/graphics/drawable/Drawable;
-    invoke-virtual {v1, p1}, Lcom/android/settings/IconResizer;->createIconThumbnail(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, p1}, Lcom/android/settings_ex/IconResizer;->createIconThumbnail(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -1203,16 +1203,16 @@
 
     .prologue
     .line 301
-    iget-object v0, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 302
-    iget-object v0, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings_ex/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
 
     .line 303
     return-void
@@ -1237,7 +1237,7 @@
     .prologue
     .line 569
     .local p1, "packagesList1":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
-    iget-object v0, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packagesList:Ljava/util/List;
 
     if-nez v0, :cond_0
 
@@ -1254,7 +1254,7 @@
     :cond_0
     new-instance v0, Landroid/content/pm/ApplicationInfo$DisplayNameComparator;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
@@ -1274,11 +1274,11 @@
     const/4 v4, 0x0
 
     .line 259
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->SETTING_SYSTEM_NOTIFICATION_REMINDER:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->SETTING_SYSTEM_NOTIFICATION_REMINDER:Ljava/lang/String;
 
     const/4 v3, -0x2
 
@@ -1291,22 +1291,22 @@
     if-nez v0, :cond_0
 
     .line 262
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, v4}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v1, v4}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     .line 263
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->vibratePreference:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->vibratePreference:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v4}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 265
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mTimeInterval:Lcom/android/settings/DropDownPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mTimeInterval:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v1, v4}, Lcom/android/settings/DropDownPreference;->setEnabled(Z)V
+    invoke-virtual {v1, v4}, Lcom/android/settings_ex/DropDownPreference;->setEnabled(Z)V
 
     .line 266
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v1, v4}, Landroid/preference/PreferenceCategory;->setEnabled(Z)V
 
@@ -1316,22 +1316,22 @@
 
     .line 268
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, v5}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v1, v5}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     .line 269
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->vibratePreference:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->vibratePreference:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v5}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 271
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mTimeInterval:Lcom/android/settings/DropDownPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mTimeInterval:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v1, v5}, Lcom/android/settings/DropDownPreference;->setEnabled(Z)V
+    invoke-virtual {v1, v5}, Lcom/android/settings_ex/DropDownPreference;->setEnabled(Z)V
 
     .line 272
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v1, v5}, Landroid/preference/PreferenceCategory;->setEnabled(Z)V
 
@@ -1360,31 +1360,31 @@
     const/4 v1, 0x0
 
     .line 200
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 202
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 203
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v3, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 204
-    iget-object v3, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->SETTING_SYSTEM_NOTIFICATION_REMINDER:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->SETTING_SYSTEM_NOTIFICATION_REMINDER:Ljava/lang/String;
 
     const/4 v6, -0x2
 
@@ -1397,26 +1397,26 @@
     move v1, v2
 
     :cond_0
-    invoke-virtual {v3, v1}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v3, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     .line 205
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1}, Lcom/android/settings/widget/SwitchBar;->getSwitch()Lcom/android/settings/widget/ToggleSwitch;
+    invoke-virtual {v1}, Lcom/android/settings_ex/widget/SwitchBar;->getSwitch()Lcom/android/settings_ex/widget/ToggleSwitch;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
     .line 207
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 
     invoke-virtual {v1, v2}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
     .line 208
-    invoke-direct {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->installSwitchBarToggleSwitch()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->installSwitchBarToggleSwitch()V
 
     .line 209
     return-void
@@ -1430,112 +1430,112 @@
     const/4 v7, -0x2
 
     .line 125
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 126
     const-string v4, "NotificationReminderPreferenceFragment"
 
     const-string v5, "onCreate()"
 
-    invoke-static {v4, v5}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 128
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mPreferenceFragmentActivity:Landroid/app/Activity;
+    iput-object v4, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mPreferenceFragmentActivity:Landroid/app/Activity;
 
     .line 129
     const v4, 0x7f080080
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->addPreferencesFromResource(I)V
 
     .line 130
     const-string v4, "notification_reminder_guide"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/UnclickablePreference;
+    check-cast v4, Lcom/android/settings_ex/UnclickablePreference;
 
-    iput-object v4, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->summaryPreference:Lcom/android/settings/UnclickablePreference;
+    iput-object v4, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->summaryPreference:Lcom/android/settings_ex/UnclickablePreference;
 
     .line 131
     const-string v4, "notification_reminder_category_options"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     check-cast v4, Landroid/preference/PreferenceCategory;
 
-    iput-object v4, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->settingCategory:Landroid/preference/PreferenceCategory;
+    iput-object v4, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->settingCategory:Landroid/preference/PreferenceCategory;
 
     .line 132
     const-string v4, "notification_reminder_vibrate"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     check-cast v4, Landroid/preference/SwitchPreference;
 
-    iput-object v4, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->vibratePreference:Landroid/preference/SwitchPreference;
+    iput-object v4, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->vibratePreference:Landroid/preference/SwitchPreference;
 
     .line 133
-    iget-object v4, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->vibratePreference:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->vibratePreference:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 136
     const-string v4, "notification_reminder_category_packages"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     check-cast v4, Landroid/preference/PreferenceCategory;
 
-    iput-object v4, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
+    iput-object v4, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
 
     .line 137
     const-string v4, "notification_reminder_select_all"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     check-cast v4, Landroid/preference/SwitchPreference;
 
-    iput-object v4, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->selectAllPreference:Landroid/preference/SwitchPreference;
+    iput-object v4, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->selectAllPreference:Landroid/preference/SwitchPreference;
 
     .line 138
-    iget-object v4, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->selectAllPreference:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->selectAllPreference:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 139
     const-string v4, "notification_time_interval"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/DropDownPreference;
+    check-cast v4, Lcom/android/settings_ex/DropDownPreference;
 
-    iput-object v4, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mTimeInterval:Lcom/android/settings/DropDownPreference;
+    iput-object v4, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mTimeInterval:Lcom/android/settings_ex/DropDownPreference;
 
     .line 140
-    iget-object v4, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mTimeInterval:Lcom/android/settings/DropDownPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mTimeInterval:Lcom/android/settings_ex/DropDownPreference;
 
     const/4 v5, 0x1
 
-    invoke-virtual {v4, v5}, Lcom/android/settings/DropDownPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
+    invoke-virtual {v4, v5}, Lcom/android/settings_ex/DropDownPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 141
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -1547,7 +1547,7 @@
 
     .line 142
     .local v1, "time_interval_entries":[Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -1559,14 +1559,14 @@
 
     .line 144
     .local v3, "time_interval_values":[Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/accessibility/notificationreminder/GlobalConstant;->isPersistantAlert()Z
+    invoke-static {}, Lcom/android/settings_ex/accessibility/notificationreminder/GlobalConstant;->isPersistantAlert()Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
     .line 145
-    iget-object v4, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->settingCategory:Landroid/preference/PreferenceCategory;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->settingCategory:Landroid/preference/PreferenceCategory;
 
     const v5, 0x7f0e098d
 
@@ -1575,17 +1575,17 @@
     .line 146
     const-string v4, "notification_reminder_selectable"
 
-    iput-object v4, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->SETTING_SYSTEM_NOTIFICATION_REMINDER:Ljava/lang/String;
+    iput-object v4, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->SETTING_SYSTEM_NOTIFICATION_REMINDER:Ljava/lang/String;
 
     .line 148
-    invoke-static {}, Lcom/android/settings/accessibility/notificationreminder/GlobalConstant;->isAboveAPI21()Z
+    invoke-static {}, Lcom/android/settings_ex/accessibility/notificationreminder/GlobalConstant;->isAboveAPI21()Z
 
     move-result v4
 
     if-eqz v4, :cond_2
 
     .line 149
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -1596,7 +1596,7 @@
     move-result-object v1
 
     .line 150
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -1608,48 +1608,48 @@
 
     .line 171
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->hasHaptic(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->hasHaptic(Landroid/content/Context;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
     .line 172
-    iget-object v4, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->settingCategory:Landroid/preference/PreferenceCategory;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->settingCategory:Landroid/preference/PreferenceCategory;
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->vibratePreference:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->vibratePreference:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4, v5}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
     .line 173
-    iget-object v4, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->summaryPreference:Lcom/android/settings/UnclickablePreference;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->summaryPreference:Lcom/android/settings_ex/UnclickablePreference;
 
     const v5, 0x7f0e098b
 
-    invoke-virtual {v4, v5}, Lcom/android/settings/UnclickablePreference;->setTitle(I)V
+    invoke-virtual {v4, v5}, Lcom/android/settings_ex/UnclickablePreference;->setTitle(I)V
 
     .line 176
     :cond_0
-    iget-object v4, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mTimeInterval:Lcom/android/settings/DropDownPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mTimeInterval:Lcom/android/settings_ex/DropDownPreference;
 
     if-eqz v4, :cond_5
 
     .line 177
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->SETTING_SYSTEM_TIME_KEY:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->SETTING_SYSTEM_TIME_KEY:Ljava/lang/String;
 
     const/4 v6, 0x0
 
@@ -1657,20 +1657,20 @@
 
     move-result v4
 
-    invoke-static {}, Lcom/android/settings/accessibility/notificationreminder/GlobalConstant;->getDefaultTimeInterval()I
+    invoke-static {}, Lcom/android/settings_ex/accessibility/notificationreminder/GlobalConstant;->getDefaultTimeInterval()I
 
     move-result v5
 
     if-ge v4, v5, :cond_1
 
     .line 178
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->SETTING_SYSTEM_TIME_KEY:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->SETTING_SYSTEM_TIME_KEY:Ljava/lang/String;
 
-    invoke-static {}, Lcom/android/settings/accessibility/notificationreminder/GlobalConstant;->getDefaultTimeInterval()I
+    invoke-static {}, Lcom/android/settings_ex/accessibility/notificationreminder/GlobalConstant;->getDefaultTimeInterval()I
 
     move-result v6
 
@@ -1687,7 +1687,7 @@
     if-ge v0, v4, :cond_4
 
     .line 182
-    iget-object v4, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mTimeInterval:Lcom/android/settings/DropDownPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mTimeInterval:Lcom/android/settings_ex/DropDownPreference;
 
     aget-object v5, v1, v0
 
@@ -1697,7 +1697,7 @@
 
     move-result-object v6
 
-    invoke-virtual {v4, v5, v6}, Lcom/android/settings/DropDownPreference;->addItem(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {v4, v5, v6}, Lcom/android/settings_ex/DropDownPreference;->addItem(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 181
     add-int/lit8 v0, v0, 0x1
@@ -1707,7 +1707,7 @@
     .line 153
     .end local v0    # "i":I
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -1718,7 +1718,7 @@
     move-result-object v1
 
     .line 154
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -1732,36 +1732,36 @@
 
     .line 157
     :cond_3
-    iget-object v4, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->settingCategory:Landroid/preference/PreferenceCategory;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->settingCategory:Landroid/preference/PreferenceCategory;
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->vibratePreference:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->vibratePreference:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4, v5}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
     .line 159
-    iget-object v4, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->packageCategory:Landroid/preference/PreferenceCategory;
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->selectAllPreference:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->selectAllPreference:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4, v5}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
     .line 160
     const-string v4, "notification_reminder_category_packages"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->removePreference(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 184
     .restart local v0    # "i":I
     :cond_4
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->SETTING_SYSTEM_TIME_KEY:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->SETTING_SYSTEM_TIME_KEY:Ljava/lang/String;
 
-    invoke-static {}, Lcom/android/settings/accessibility/notificationreminder/GlobalConstant;->getDefaultTimeInterval()I
+    invoke-static {}, Lcom/android/settings_ex/accessibility/notificationreminder/GlobalConstant;->getDefaultTimeInterval()I
 
     move-result v6
 
@@ -1771,22 +1771,22 @@
 
     .line 185
     .local v2, "time_interval_saved_value":I
-    iget-object v4, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mTimeInterval:Lcom/android/settings/DropDownPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mTimeInterval:Lcom/android/settings_ex/DropDownPreference;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Lcom/android/settings/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
+    invoke-virtual {v4, v5}, Lcom/android/settings_ex/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
 
     .line 186
-    iget-object v4, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mTimeInterval:Lcom/android/settings/DropDownPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mTimeInterval:Lcom/android/settings_ex/DropDownPreference;
 
-    new-instance v5, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment$3;
+    new-instance v5, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment$3;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment$3;-><init>(Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment$3;-><init>(Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;)V
 
-    invoke-virtual {v4, v5}, Lcom/android/settings/DropDownPreference;->setCallback(Lcom/android/settings/DropDownPreference$Callback;)V
+    invoke-virtual {v4, v5}, Lcom/android/settings_ex/DropDownPreference;->setCallback(Lcom/android/settings_ex/DropDownPreference$Callback;)V
 
     .line 196
     .end local v0    # "i":I
@@ -1800,10 +1800,10 @@
 
     .prologue
     .line 253
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroyView()V
 
     .line 254
-    invoke-direct {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->removeSwitchBarToggleSwitch()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->removeSwitchBarToggleSwitch()V
 
     .line 255
     return-void
@@ -1814,13 +1814,13 @@
 
     .prologue
     .line 277
-    iget-object v0, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
-    new-instance v1, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment$4;
+    new-instance v1, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment$4;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment$4;-><init>(Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment$4;-><init>(Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;)V
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings_ex/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
 
     .line 293
     return-void
@@ -1831,37 +1831,37 @@
 
     .prologue
     .line 244
-    iget-object v0, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 245
-    iget-object v0, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mNotificationReminderEnabler:Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mNotificationReminderEnabler:Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;->pause()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;->pause()V
 
     .line 246
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mNotificationReminderObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mNotificationReminderObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 247
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mReminderPreferenceReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mReminderPreferenceReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 248
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 249
     return-void
@@ -1884,10 +1884,10 @@
     .local v0, "key":Ljava/lang/String;
     const/4 v1, 0x0
 
-    iput v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mCheckSelectAll:I
+    iput v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mCheckSelectAll:I
 
     .line 311
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->vibratePreference:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->vibratePreference:Landroid/preference/SwitchPreference;
 
     invoke-virtual {p1, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1903,7 +1903,7 @@
 
     move-result v1
 
-    invoke-direct {p0, v1}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->handleReminderVibrate(Z)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->handleReminderVibrate(Z)V
 
     .line 323
     :goto_0
@@ -1912,7 +1912,7 @@
     .line 317
     .restart local p2    # "newValue":Ljava/lang/Object;
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->selectAllPreference:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->selectAllPreference:Landroid/preference/SwitchPreference;
 
     invoke-virtual {p1, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1928,7 +1928,7 @@
 
     move-result v1
 
-    invoke-direct {p0, v1}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->handleReminderSelectAll(Z)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->handleReminderSelectAll(Z)V
 
     goto :goto_0
 
@@ -1942,7 +1942,7 @@
 
     move-result v1
 
-    invoke-direct {p0, v1, p1}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->handleReminderCheckPackage(ZLandroid/preference/Preference;)V
+    invoke-direct {p0, v1, p1}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->handleReminderCheckPackage(ZLandroid/preference/Preference;)V
 
     goto :goto_0
 .end method
@@ -1956,43 +1956,43 @@
     const/4 v2, 0x1
 
     .line 213
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 215
-    new-instance v3, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;
+    new-instance v3, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mPreferenceFragmentActivity:Landroid/app/Activity;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mPreferenceFragmentActivity:Landroid/app/Activity;
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
-    invoke-direct {v3, v4, v5}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;-><init>(Landroid/content/Context;Landroid/widget/Switch;)V
+    invoke-direct {v3, v4, v5}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;-><init>(Landroid/content/Context;Landroid/widget/Switch;)V
 
-    iput-object v3, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mNotificationReminderEnabler:Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;
+    iput-object v3, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mNotificationReminderEnabler:Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;
 
     .line 217
-    invoke-direct {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->updateNotificationReminderSaving()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->updateNotificationReminderSaving()V
 
     .line 218
-    iget-object v3, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mNotificationReminderEnabler:Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mNotificationReminderEnabler:Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;
 
-    invoke-virtual {v3}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderEnabler;->resume()V
+    invoke-virtual {v3}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderEnabler;->resume()V
 
     .line 219
-    iget-object v3, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v3, v2}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v3, v2}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 221
-    invoke-static {}, Lcom/android/settings/accessibility/notificationreminder/GlobalConstant;->isPersistantAlert()Z
+    invoke-static {}, Lcom/android/settings_ex/accessibility/notificationreminder/GlobalConstant;->isPersistantAlert()Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
     .line 223
-    iget-object v3, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->vibratePreference:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->vibratePreference:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -2012,10 +2012,10 @@
     invoke-virtual {v3, v1}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 225
-    invoke-direct {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->addPackagePreference()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->addPackagePreference()V
 
     .line 226
-    iget-object v1, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->selectAllPreference:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->selectAllPreference:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1}, Landroid/preference/SwitchPreference;->isChecked()Z
 
@@ -2025,7 +2025,7 @@
 
     const-string v1, "selectAll"
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -2043,7 +2043,7 @@
 
     .line 228
     :cond_1
-    invoke-direct {p0, v2}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->handleReminderSelectAll(Z)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->handleReminderSelectAll(Z)V
 
     .line 234
     :cond_2
@@ -2054,36 +2054,36 @@
 
     .line 235
     .local v0, "filter":Landroid/content/IntentFilter;
-    sget-object v1, Lcom/android/settings/accessibility/notificationreminder/GlobalConstant;->INTENT_NOTIFICATION_START_SREVICE_ACTION:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/accessibility/notificationreminder/GlobalConstant;->INTENT_NOTIFICATION_START_SREVICE_ACTION:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 236
-    sget-object v1, Lcom/android/settings/accessibility/notificationreminder/GlobalConstant;->INTENT_NOTIFICATION_STOP_SREVICE_ACTION:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/accessibility/notificationreminder/GlobalConstant;->INTENT_NOTIFICATION_STOP_SREVICE_ACTION:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 237
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mReminderPreferenceReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mReminderPreferenceReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v3, v0}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 239
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->SETTING_SYSTEM_NOTIFICATION_REMINDER:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->SETTING_SYSTEM_NOTIFICATION_REMINDER:Ljava/lang/String;
 
     invoke-static {v3}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mNotificationReminderObserver:Landroid/database/ContentObserver;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->mNotificationReminderObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v1, v3, v2, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -2093,7 +2093,7 @@
     .line 230
     .end local v0    # "filter":Landroid/content/IntentFilter;
     :cond_3
-    invoke-direct {p0}, Lcom/android/settings/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->handleReminderCheckPackage()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/notificationreminder/NotificationReminderPreferenceFragment;->handleReminderCheckPackage()V
 
     goto :goto_0
 .end method

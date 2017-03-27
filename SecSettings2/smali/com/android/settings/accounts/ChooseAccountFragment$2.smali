@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/accounts/ChooseAccountFragment$2;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/accounts/ChooseAccountFragment$2;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "ChooseAccountFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accounts/ChooseAccountFragment;
+    value = Lcom/android/settings_ex/accounts/ChooseAccountFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 595
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -77,7 +77,7 @@
 
     .line 600
     .local v0, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v1, Lcom/android/settings/accounts/ChooseAccountFragment;
+    const-class v1, Lcom/android/settings_ex/accounts/ChooseAccountFragment;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

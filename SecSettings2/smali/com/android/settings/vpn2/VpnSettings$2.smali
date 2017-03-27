@@ -1,11 +1,11 @@
-.class Lcom/android/settings/vpn2/VpnSettings$2;
+.class Lcom/android/settings_ex/vpn2/VpnSettings$2;
 .super Landroid/net/ConnectivityManager$NetworkCallback;
 .source "VpnSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/vpn2/VpnSettings;
+    value = Lcom/android/settings_ex/vpn2/VpnSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/vpn2/VpnSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/vpn2/VpnSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/vpn2/VpnSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/vpn2/VpnSettings;)V
     .locals 0
 
     .prologue
     .line 446
-    iput-object p1, p0, Lcom/android/settings/vpn2/VpnSettings$2;->this$0:Lcom/android/settings/vpn2/VpnSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/vpn2/VpnSettings$2;->this$0:Lcom/android/settings_ex/vpn2/VpnSettings;
 
     invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
 
@@ -39,20 +39,20 @@
 
     .prologue
     .line 449
-    iget-object v0, p0, Lcom/android/settings/vpn2/VpnSettings$2;->this$0:Lcom/android/settings/vpn2/VpnSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/vpn2/VpnSettings$2;->this$0:Lcom/android/settings_ex/vpn2/VpnSettings;
 
-    # getter for: Lcom/android/settings/vpn2/VpnSettings;->mUpdater:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/settings/vpn2/VpnSettings;->access$000(Lcom/android/settings/vpn2/VpnSettings;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/vpn2/VpnSettings;->mUpdater:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/settings_ex/vpn2/VpnSettings;->access$000(Lcom/android/settings_ex/vpn2/VpnSettings;)Landroid/os/Handler;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 450
-    iget-object v0, p0, Lcom/android/settings/vpn2/VpnSettings$2;->this$0:Lcom/android/settings/vpn2/VpnSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/vpn2/VpnSettings$2;->this$0:Lcom/android/settings_ex/vpn2/VpnSettings;
 
-    # getter for: Lcom/android/settings/vpn2/VpnSettings;->mUpdater:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/settings/vpn2/VpnSettings;->access$000(Lcom/android/settings/vpn2/VpnSettings;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/vpn2/VpnSettings;->mUpdater:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/settings_ex/vpn2/VpnSettings;->access$000(Lcom/android/settings_ex/vpn2/VpnSettings;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -71,20 +71,20 @@
 
     .prologue
     .line 456
-    iget-object v0, p0, Lcom/android/settings/vpn2/VpnSettings$2;->this$0:Lcom/android/settings/vpn2/VpnSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/vpn2/VpnSettings$2;->this$0:Lcom/android/settings_ex/vpn2/VpnSettings;
 
-    # getter for: Lcom/android/settings/vpn2/VpnSettings;->mUpdater:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/settings/vpn2/VpnSettings;->access$000(Lcom/android/settings/vpn2/VpnSettings;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/vpn2/VpnSettings;->mUpdater:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/settings_ex/vpn2/VpnSettings;->access$000(Lcom/android/settings_ex/vpn2/VpnSettings;)Landroid/os/Handler;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 457
-    iget-object v0, p0, Lcom/android/settings/vpn2/VpnSettings$2;->this$0:Lcom/android/settings/vpn2/VpnSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/vpn2/VpnSettings$2;->this$0:Lcom/android/settings_ex/vpn2/VpnSettings;
 
-    # getter for: Lcom/android/settings/vpn2/VpnSettings;->mUpdater:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/settings/vpn2/VpnSettings;->access$000(Lcom/android/settings/vpn2/VpnSettings;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/vpn2/VpnSettings;->mUpdater:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/settings_ex/vpn2/VpnSettings;->access$000(Lcom/android/settings_ex/vpn2/VpnSettings;)Landroid/os/Handler;
 
     move-result-object v0
 

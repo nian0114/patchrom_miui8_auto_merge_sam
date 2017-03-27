@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/EFSProperties$ODEProperties;
+.class public Lcom/android/settings_ex/EFSProperties$ODEProperties;
 .super Ljava/lang/Object;
 .source "EFSProperties.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/EFSProperties;
+    value = Lcom/android/settings_ex/EFSProperties;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -61,52 +61,52 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 414
-    iput v0, p0, Lcom/android/settings/EFSProperties$ODEProperties;->enabledUCSInODE:I
+    iput v0, p0, Lcom/android/settings_ex/EFSProperties$ODEProperties;->enabledUCSInODE:I
 
     .line 415
-    iput-object v1, p0, Lcom/android/settings/EFSProperties$ODEProperties;->AID:[B
+    iput-object v1, p0, Lcom/android/settings_ex/EFSProperties$ODEProperties;->AID:[B
 
     .line 416
-    iput v0, p0, Lcom/android/settings/EFSProperties$ODEProperties;->storageType:I
+    iput v0, p0, Lcom/android/settings_ex/EFSProperties$ODEProperties;->storageType:I
 
     .line 417
-    iput v0, p0, Lcom/android/settings/EFSProperties$ODEProperties;->enabledSCP:I
+    iput v0, p0, Lcom/android/settings_ex/EFSProperties$ODEProperties;->enabledSCP:I
 
     .line 418
-    iput v0, p0, Lcom/android/settings/EFSProperties$ODEProperties;->enabledWrap:I
+    iput v0, p0, Lcom/android/settings_ex/EFSProperties$ODEProperties;->enabledWrap:I
 
     .line 419
-    iput v0, p0, Lcom/android/settings/EFSProperties$ODEProperties;->pinMinLength:I
+    iput v0, p0, Lcom/android/settings_ex/EFSProperties$ODEProperties;->pinMinLength:I
 
     .line 420
-    iput v0, p0, Lcom/android/settings/EFSProperties$ODEProperties;->pinMaxLength:I
+    iput v0, p0, Lcom/android/settings_ex/EFSProperties$ODEProperties;->pinMaxLength:I
 
     .line 421
-    iput v0, p0, Lcom/android/settings/EFSProperties$ODEProperties;->authMode:I
+    iput v0, p0, Lcom/android/settings_ex/EFSProperties$ODEProperties;->authMode:I
 
     .line 422
-    iput v0, p0, Lcom/android/settings/EFSProperties$ODEProperties;->authMaxCnt:I
+    iput v0, p0, Lcom/android/settings_ex/EFSProperties$ODEProperties;->authMaxCnt:I
 
     .line 423
-    iput v0, p0, Lcom/android/settings/EFSProperties$ODEProperties;->pukMinLength:I
+    iput v0, p0, Lcom/android/settings_ex/EFSProperties$ODEProperties;->pukMinLength:I
 
     .line 424
-    iput v0, p0, Lcom/android/settings/EFSProperties$ODEProperties;->pukMaxLength:I
+    iput v0, p0, Lcom/android/settings_ex/EFSProperties$ODEProperties;->pukMaxLength:I
 
     .line 425
-    iput-object v1, p0, Lcom/android/settings/EFSProperties$ODEProperties;->csName:[B
+    iput-object v1, p0, Lcom/android/settings_ex/EFSProperties$ODEProperties;->csName:[B
 
     .line 426
-    iput v0, p0, Lcom/android/settings/EFSProperties$ODEProperties;->CertAdminID:I
+    iput v0, p0, Lcom/android/settings_ex/EFSProperties$ODEProperties;->CertAdminID:I
 
     .line 427
-    iput v0, p0, Lcom/android/settings/EFSProperties$ODEProperties;->CertUserID:I
+    iput v0, p0, Lcom/android/settings_ex/EFSProperties$ODEProperties;->CertUserID:I
 
     .line 428
-    iput-object v1, p0, Lcom/android/settings/EFSProperties$ODEProperties;->CertAlias:[B
+    iput-object v1, p0, Lcom/android/settings_ex/EFSProperties$ODEProperties;->CertAlias:[B
 
     .line 429
-    iput-object v1, p0, Lcom/android/settings/EFSProperties$ODEProperties;->CertLocation:[B
+    iput-object v1, p0, Lcom/android/settings_ex/EFSProperties$ODEProperties;->CertLocation:[B
 
     .line 430
     return-void

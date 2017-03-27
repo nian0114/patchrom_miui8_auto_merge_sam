@@ -1,14 +1,14 @@
-.class Lcom/android/settings/accessibility/colorblind/ColorChipReport$1;
+.class Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$1;
 .super Ljava/lang/Object;
 .source "ColorChipReport.java"
 
 # interfaces
-.implements Lcom/android/settings/widget/ToggleSwitch$OnBeforeCheckedChangeListener;
+.implements Lcom/android/settings_ex/widget/ToggleSwitch$OnBeforeCheckedChangeListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/colorblind/ColorChipReport;->onInstallSwitchBarToggleSwitch()V
+    value = Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->onInstallSwitchBarToggleSwitch()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)V
     .locals 0
 
     .prologue
     .line 173
-    iput-object p1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$1;->this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$1;->this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,18 +36,18 @@
 
 
 # virtual methods
-.method public onBeforeCheckedChanged(Lcom/android/settings/widget/ToggleSwitch;Z)Z
+.method public onBeforeCheckedChanged(Lcom/android/settings_ex/widget/ToggleSwitch;Z)Z
     .locals 1
-    .param p1, "toggleSwitch"    # Lcom/android/settings/widget/ToggleSwitch;
+    .param p1, "toggleSwitch"    # Lcom/android/settings_ex/widget/ToggleSwitch;
     .param p2, "checked"    # Z
 
     .prologue
     .line 177
     :try_start_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$1;->this$0:Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$1;->this$0:Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
-    # invokes: Lcom/android/settings/accessibility/colorblind/ColorChipReport;->SetSwitchOnOff(Z)V
-    invoke-static {v0, p2}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->access$000(Lcom/android/settings/accessibility/colorblind/ColorChipReport;Z)V
+    # invokes: Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->SetSwitchOnOff(Z)V
+    invoke-static {v0, p2}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->access$000(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;Z)V
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0

@@ -1,9 +1,9 @@
-.class public Lcom/android/settings/vpn2/AppDialogFragment;
+.class public Lcom/android/settings_ex/vpn2/AppDialogFragment;
 .super Landroid/app/DialogFragment;
 .source "AppDialogFragment.java"
 
 # interfaces
-.implements Lcom/android/settings/vpn2/AppDialog$Listener;
+.implements Lcom/android/settings_ex/vpn2/AppDialog$Listener;
 
 
 # instance fields
@@ -31,19 +31,19 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/vpn2/AppDialogFragment;->mService:Landroid/net/IConnectivityManager;
+    iput-object v0, p0, Lcom/android/settings_ex/vpn2/AppDialogFragment;->mService:Landroid/net/IConnectivityManager;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/vpn2/AppDialogFragment;Landroid/content/DialogInterface;)V
+.method static synthetic access$000(Lcom/android/settings_ex/vpn2/AppDialogFragment;Landroid/content/DialogInterface;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/vpn2/AppDialogFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/vpn2/AppDialogFragment;
     .param p1, "x1"    # Landroid/content/DialogInterface;
 
     .prologue
     .line 39
-    invoke-direct {p0, p1}, Lcom/android/settings/vpn2/AppDialogFragment;->onDisconnect(Landroid/content/DialogInterface;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/vpn2/AppDialogFragment;->onDisconnect(Landroid/content/DialogInterface;)V
 
     return-void
 .end method
@@ -54,7 +54,7 @@
 
     .prologue
     .line 118
-    iget-object v3, p0, Lcom/android/settings/vpn2/AppDialogFragment;->mPackageInfo:Landroid/content/pm/PackageInfo;
+    iget-object v3, p0, Lcom/android/settings_ex/vpn2/AppDialogFragment;->mPackageInfo:Landroid/content/pm/PackageInfo;
 
     iget-object v3, v3, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -67,7 +67,7 @@
     .line 120
     .local v1, "userId":I
     :try_start_0
-    iget-object v3, p0, Lcom/android/settings/vpn2/AppDialogFragment;->mService:Landroid/net/IConnectivityManager;
+    iget-object v3, p0, Lcom/android/settings_ex/vpn2/AppDialogFragment;->mService:Landroid/net/IConnectivityManager;
 
     invoke-interface {v3, v1}, Landroid/net/IConnectivityManager;->getVpnConfig(I)Lcom/android/internal/net/VpnConfig;
 
@@ -90,7 +90,7 @@
     .line 124
     .restart local v2    # "vpnConfig":Lcom/android/internal/net/VpnConfig;
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/vpn2/AppDialogFragment;->mPackageInfo:Landroid/content/pm/PackageInfo;
+    iget-object v3, p0, Lcom/android/settings_ex/vpn2/AppDialogFragment;->mPackageInfo:Landroid/content/pm/PackageInfo;
 
     iget-object v3, v3, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
@@ -103,9 +103,9 @@
     if-eqz v3, :cond_0
 
     .line 125
-    iget-object v3, p0, Lcom/android/settings/vpn2/AppDialogFragment;->mService:Landroid/net/IConnectivityManager;
+    iget-object v3, p0, Lcom/android/settings_ex/vpn2/AppDialogFragment;->mService:Landroid/net/IConnectivityManager;
 
-    iget-object v4, p0, Lcom/android/settings/vpn2/AppDialogFragment;->mPackageInfo:Landroid/content/pm/PackageInfo;
+    iget-object v4, p0, Lcom/android/settings_ex/vpn2/AppDialogFragment;->mPackageInfo:Landroid/content/pm/PackageInfo;
 
     iget-object v4, v4, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
@@ -136,7 +136,7 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/vpn2/AppDialogFragment;->mPackageInfo:Landroid/content/pm/PackageInfo;
+    iget-object v5, p0, Lcom/android/settings_ex/vpn2/AppDialogFragment;->mPackageInfo:Landroid/content/pm/PackageInfo;
 
     iget-object v5, v5, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
@@ -163,9 +163,9 @@
     goto :goto_0
 .end method
 
-.method public static show(Lcom/android/settings/vpn2/VpnSettings;Landroid/content/pm/PackageInfo;Ljava/lang/String;ZZ)V
+.method public static show(Lcom/android/settings_ex/vpn2/VpnSettings;Landroid/content/pm/PackageInfo;Ljava/lang/String;ZZ)V
     .locals 4
-    .param p0, "parent"    # Lcom/android/settings/vpn2/VpnSettings;
+    .param p0, "parent"    # Lcom/android/settings_ex/vpn2/VpnSettings;
     .param p1, "packageInfo"    # Landroid/content/pm/PackageInfo;
     .param p2, "label"    # Ljava/lang/String;
     .param p3, "managing"    # Z
@@ -173,7 +173,7 @@
 
     .prologue
     .line 55
-    invoke-virtual {p0}, Lcom/android/settings/vpn2/VpnSettings;->isAdded()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/vpn2/VpnSettings;->isAdded()Z
 
     move-result v2
 
@@ -211,27 +211,27 @@
     invoke-virtual {v0, v2, p4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 63
-    new-instance v1, Lcom/android/settings/vpn2/AppDialogFragment;
+    new-instance v1, Lcom/android/settings_ex/vpn2/AppDialogFragment;
 
-    invoke-direct {v1}, Lcom/android/settings/vpn2/AppDialogFragment;-><init>()V
+    invoke-direct {v1}, Lcom/android/settings_ex/vpn2/AppDialogFragment;-><init>()V
 
     .line 64
-    .local v1, "frag":Lcom/android/settings/vpn2/AppDialogFragment;
-    invoke-virtual {v1, v0}, Lcom/android/settings/vpn2/AppDialogFragment;->setArguments(Landroid/os/Bundle;)V
+    .local v1, "frag":Lcom/android/settings_ex/vpn2/AppDialogFragment;
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/vpn2/AppDialogFragment;->setArguments(Landroid/os/Bundle;)V
 
     .line 65
     const/4 v2, 0x0
 
-    invoke-virtual {v1, p0, v2}, Lcom/android/settings/vpn2/AppDialogFragment;->setTargetFragment(Landroid/app/Fragment;I)V
+    invoke-virtual {v1, p0, v2}, Lcom/android/settings_ex/vpn2/AppDialogFragment;->setTargetFragment(Landroid/app/Fragment;I)V
 
     .line 66
-    invoke-virtual {p0}, Lcom/android/settings/vpn2/VpnSettings;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/vpn2/VpnSettings;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v2
 
     const-string v3, "vpnappdialog"
 
-    invoke-virtual {v1, v2, v3}, Lcom/android/settings/vpn2/AppDialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v3}, Lcom/android/settings_ex/vpn2/AppDialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -244,7 +244,7 @@
 
     .prologue
     .line 101
-    invoke-virtual {p0}, Lcom/android/settings/vpn2/AppDialogFragment;->dismiss()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/vpn2/AppDialogFragment;->dismiss()V
 
     .line 102
     invoke-super {p0, p1}, Landroid/app/DialogFragment;->onCancel(Landroid/content/DialogInterface;)V
@@ -259,7 +259,7 @@
 
     .prologue
     .line 71
-    invoke-virtual {p0}, Lcom/android/settings/vpn2/AppDialogFragment;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/vpn2/AppDialogFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -297,21 +297,21 @@
 
     check-cast v5, Landroid/content/pm/PackageInfo;
 
-    iput-object v5, p0, Lcom/android/settings/vpn2/AppDialogFragment;->mPackageInfo:Landroid/content/pm/PackageInfo;
+    iput-object v5, p0, Lcom/android/settings_ex/vpn2/AppDialogFragment;->mPackageInfo:Landroid/content/pm/PackageInfo;
 
     .line 77
     if-eqz v4, :cond_0
 
     .line 78
-    new-instance v5, Lcom/android/settings/vpn2/AppDialog;
+    new-instance v5, Lcom/android/settings_ex/vpn2/AppDialog;
 
-    invoke-virtual {p0}, Lcom/android/settings/vpn2/AppDialogFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/vpn2/AppDialogFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/vpn2/AppDialogFragment;->mPackageInfo:Landroid/content/pm/PackageInfo;
+    iget-object v7, p0, Lcom/android/settings_ex/vpn2/AppDialogFragment;->mPackageInfo:Landroid/content/pm/PackageInfo;
 
-    invoke-direct {v5, v6, p0, v7, v3}, Lcom/android/settings/vpn2/AppDialog;-><init>(Landroid/content/Context;Lcom/android/settings/vpn2/AppDialog$Listener;Landroid/content/pm/PackageInfo;Ljava/lang/String;)V
+    invoke-direct {v5, v6, p0, v7, v3}, Lcom/android/settings_ex/vpn2/AppDialog;-><init>(Landroid/content/Context;Lcom/android/settings_ex/vpn2/AppDialog$Listener;Landroid/content/pm/PackageInfo;Ljava/lang/String;)V
 
     .line 95
     :goto_0
@@ -321,7 +321,7 @@
     :cond_0
     new-instance v5, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/vpn2/AppDialogFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/vpn2/AppDialogFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -331,7 +331,7 @@
 
     move-result-object v5
 
-    invoke-virtual {p0}, Lcom/android/settings/vpn2/AppDialogFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/vpn2/AppDialogFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -345,7 +345,7 @@
 
     move-result-object v5
 
-    invoke-virtual {p0}, Lcom/android/settings/vpn2/AppDialogFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/vpn2/AppDialogFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -366,7 +366,7 @@
     if-eqz v1, :cond_1
 
     .line 87
-    invoke-virtual {p0}, Lcom/android/settings/vpn2/AppDialogFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/vpn2/AppDialogFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -376,9 +376,9 @@
 
     move-result-object v5
 
-    new-instance v6, Lcom/android/settings/vpn2/AppDialogFragment$1;
+    new-instance v6, Lcom/android/settings_ex/vpn2/AppDialogFragment$1;
 
-    invoke-direct {v6, p0}, Lcom/android/settings/vpn2/AppDialogFragment$1;-><init>(Lcom/android/settings/vpn2/AppDialogFragment;)V
+    invoke-direct {v6, p0}, Lcom/android/settings_ex/vpn2/AppDialogFragment$1;-><init>(Lcom/android/settings_ex/vpn2/AppDialogFragment;)V
 
     invoke-virtual {v2, v5, v6}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -397,7 +397,7 @@
 
     .prologue
     .line 107
-    iget-object v2, p0, Lcom/android/settings/vpn2/AppDialogFragment;->mPackageInfo:Landroid/content/pm/PackageInfo;
+    iget-object v2, p0, Lcom/android/settings_ex/vpn2/AppDialogFragment;->mPackageInfo:Landroid/content/pm/PackageInfo;
 
     iget-object v2, v2, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -410,9 +410,9 @@
     .line 109
     .local v1, "userId":I
     :try_start_0
-    iget-object v2, p0, Lcom/android/settings/vpn2/AppDialogFragment;->mService:Landroid/net/IConnectivityManager;
+    iget-object v2, p0, Lcom/android/settings_ex/vpn2/AppDialogFragment;->mService:Landroid/net/IConnectivityManager;
 
-    iget-object v3, p0, Lcom/android/settings/vpn2/AppDialogFragment;->mPackageInfo:Landroid/content/pm/PackageInfo;
+    iget-object v3, p0, Lcom/android/settings_ex/vpn2/AppDialogFragment;->mPackageInfo:Landroid/content/pm/PackageInfo;
 
     iget-object v3, v3, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
@@ -421,7 +421,7 @@
     invoke-interface {v2, v3, v1, v4}, Landroid/net/IConnectivityManager;->setVpnPackageAuthorization(Ljava/lang/String;IZ)V
 
     .line 110
-    invoke-direct {p0, p1}, Lcom/android/settings/vpn2/AppDialogFragment;->onDisconnect(Landroid/content/DialogInterface;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/vpn2/AppDialogFragment;->onDisconnect(Landroid/content/DialogInterface;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -447,7 +447,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/vpn2/AppDialogFragment;->mPackageInfo:Landroid/content/pm/PackageInfo;
+    iget-object v4, p0, Lcom/android/settings_ex/vpn2/AppDialogFragment;->mPackageInfo:Landroid/content/pm/PackageInfo;
 
     iget-object v4, v4, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 

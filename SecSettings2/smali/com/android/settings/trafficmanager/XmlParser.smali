@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/trafficmanager/XmlParser;
+.class public Lcom/android/settings_ex/trafficmanager/XmlParser;
 .super Ljava/lang/Object;
 .source "XmlParser.java"
 
@@ -38,25 +38,25 @@
     .line 18
     const-string v0, "TrafficManager/XmlParser"
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/XmlParser;->TAG:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->TAG:Ljava/lang/String;
 
     .line 19
     const-string v0, "SMSKeyWord"
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/XmlParser;->KEY_WORD:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->KEY_WORD:Ljava/lang/String;
 
     .line 20
-    iput-object v1, p0, Lcom/android/settings/trafficmanager/XmlParser;->mWord_contain:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->mWord_contain:Ljava/lang/String;
 
     .line 21
-    iput-object v1, p0, Lcom/android/settings/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
+    iput-object v1, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
 
     .line 22
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/XmlParser;->mNormalFeature:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->mNormalFeature:Ljava/util/HashMap;
 
     .line 24
     return-void
@@ -75,25 +75,25 @@
     .line 18
     const-string v2, "TrafficManager/XmlParser"
 
-    iput-object v2, p0, Lcom/android/settings/trafficmanager/XmlParser;->TAG:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->TAG:Ljava/lang/String;
 
     .line 19
     const-string v2, "SMSKeyWord"
 
-    iput-object v2, p0, Lcom/android/settings/trafficmanager/XmlParser;->KEY_WORD:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->KEY_WORD:Ljava/lang/String;
 
     .line 20
-    iput-object v3, p0, Lcom/android/settings/trafficmanager/XmlParser;->mWord_contain:Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->mWord_contain:Ljava/lang/String;
 
     .line 21
-    iput-object v3, p0, Lcom/android/settings/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
+    iput-object v3, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
 
     .line 22
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v2, p0, Lcom/android/settings/trafficmanager/XmlParser;->mNormalFeature:Ljava/util/HashMap;
+    iput-object v2, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->mNormalFeature:Ljava/util/HashMap;
 
     .line 27
     new-instance v1, Ljava/io/File;
@@ -107,7 +107,7 @@
 
     invoke-direct {v2, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    iput-object v2, p0, Lcom/android/settings/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
+    iput-object v2, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -174,20 +174,20 @@
     if-nez v5, :cond_2
 
     .line 113
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
 
     if-eqz v6, :cond_1
 
     .line 115
     :try_start_1
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
 
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
 
     .line 116
     const/4 v6, 0x0
 
-    iput-object v6, p0, Lcom/android/settings/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
+    iput-object v6, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -210,7 +210,7 @@
     .end local v2    # "e":Ljava/io/IOException;
     :cond_2
     :try_start_2
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
 
     const/4 v7, 0x0
 
@@ -321,12 +321,12 @@
     if-eqz v6, :cond_6
 
     .line 76
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/XmlParser;->mWord_contain:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->mWord_contain:Ljava/lang/String;
 
     if-nez v6, :cond_6
 
     .line 77
-    iput-object v1, p0, Lcom/android/settings/trafficmanager/XmlParser;->mWord_contain:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->mWord_contain:Ljava/lang/String;
 
     .line 78
     const-string v6, "TrafficManager/XmlParserLPF"
@@ -341,7 +341,7 @@
 
     move-result-object v7
 
-    iget-object v8, p0, Lcom/android/settings/trafficmanager/XmlParser;->mWord_contain:Ljava/lang/String;
+    iget-object v8, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->mWord_contain:Ljava/lang/String;
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -355,11 +355,11 @@
 
     .line 81
     :cond_6
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/XmlParser;->mWord_contain:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->mWord_contain:Ljava/lang/String;
 
     if-eqz v6, :cond_3
 
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/XmlParser;->mWord_contain:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->mWord_contain:Ljava/lang/String;
 
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -367,7 +367,7 @@
 
     if-nez v6, :cond_3
 
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/XmlParser;->mWord_contain:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->mWord_contain:Ljava/lang/String;
 
     invoke-virtual {v6, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -409,7 +409,7 @@
     invoke-static {v6, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 83
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/XmlParser;->mNormalFeature:Ljava/util/HashMap;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->mNormalFeature:Ljava/util/HashMap;
 
     invoke-virtual {v6, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
     :try_end_4
@@ -459,20 +459,20 @@
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
     .line 113
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
 
     if-eqz v6, :cond_1
 
     .line 115
     :try_start_8
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
 
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
 
     .line 116
     const/4 v6, 0x0
 
-    iput-object v6, p0, Lcom/android/settings/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
+    iput-object v6, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_3
 
@@ -525,7 +525,7 @@
     invoke-static {v6, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 94
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/XmlParser;->mNormalFeature:Ljava/util/HashMap;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->mNormalFeature:Ljava/util/HashMap;
 
     invoke-virtual {v6, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_9
@@ -538,20 +538,20 @@
     :catchall_0
     move-exception v6
 
-    iget-object v7, p0, Lcom/android/settings/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
+    iget-object v7, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
 
     if-eqz v7, :cond_8
 
     .line 115
     :try_start_a
-    iget-object v7, p0, Lcom/android/settings/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
+    iget-object v7, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
 
     invoke-virtual {v7}, Ljava/io/InputStream;->close()V
 
     .line 116
     const/4 v7, 0x0
 
-    iput-object v7, p0, Lcom/android/settings/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
+    iput-object v7, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_6
 
@@ -577,20 +577,20 @@
     .line 113
     .end local v2    # "e":Ljava/io/IOException;
     :cond_9
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
 
     if-eqz v6, :cond_1
 
     .line 115
     :try_start_c
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
 
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
 
     .line 116
     const/4 v6, 0x0
 
-    iput-object v6, p0, Lcom/android/settings/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
+    iput-object v6, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->inFile:Ljava/io/InputStream;
     :try_end_c
     .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_5
 
@@ -633,7 +633,7 @@
 
     .prologue
     .line 127
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/XmlParser;->mNormalFeature:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/XmlParser;->mNormalFeature:Ljava/util/HashMap;
 
     return-object v0
 .end method

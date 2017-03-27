@@ -1,14 +1,14 @@
-.class final Lcom/android/settings/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;
+.class final Lcom/android/settings_ex/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;
 .super Ljava/lang/Object;
 .source "TextToSpeechSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/tts/TTSSeekBarPreference$Callback;
+.implements Lcom/android/settings_ex/tts/TTSSeekBarPreference$Callback;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/tts/TextToSpeechSettings;
+    value = Lcom/android/settings_ex/tts/TextToSpeechSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,30 +18,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/tts/TextToSpeechSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/tts/TextToSpeechSettings;
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/settings/tts/TextToSpeechSettings;)V
+.method private constructor <init>(Lcom/android/settings_ex/tts/TextToSpeechSettings;)V
     .locals 0
 
     .prologue
     .line 689
-    iput-object p1, p0, Lcom/android/settings/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings/tts/TextToSpeechSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings_ex/tts/TextToSpeechSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/tts/TextToSpeechSettings;Lcom/android/settings/tts/TextToSpeechSettings$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/tts/TextToSpeechSettings;Lcom/android/settings_ex/tts/TextToSpeechSettings$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/tts/TextToSpeechSettings;
-    .param p2, "x1"    # Lcom/android/settings/tts/TextToSpeechSettings$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/tts/TextToSpeechSettings;
+    .param p2, "x1"    # Lcom/android/settings_ex/tts/TextToSpeechSettings$1;
 
     .prologue
     .line 689
-    invoke-direct {p0, p1}, Lcom/android/settings/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;-><init>(Lcom/android/settings/tts/TextToSpeechSettings;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;-><init>(Lcom/android/settings_ex/tts/TextToSpeechSettings;)V
 
     return-void
 .end method
@@ -61,9 +61,9 @@
 
     .local v0, "i":I
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings/tts/TextToSpeechSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings_ex/tts/TextToSpeechSettings;
 
-    iget-object v2, v2, Lcom/android/settings/tts/TextToSpeechSettings;->rate:[Ljava/lang/String;
+    iget-object v2, v2, Lcom/android/settings_ex/tts/TextToSpeechSettings;->rate:[Ljava/lang/String;
 
     array-length v2, v2
 
@@ -72,16 +72,16 @@
     .line 713
     const/4 v2, 0x1
 
-    iget-object v3, p0, Lcom/android/settings/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings/tts/TextToSpeechSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings_ex/tts/TextToSpeechSettings;
 
-    iget-object v3, v3, Lcom/android/settings/tts/TextToSpeechSettings;->rate:[Ljava/lang/String;
+    iget-object v3, v3, Lcom/android/settings_ex/tts/TextToSpeechSettings;->rate:[Ljava/lang/String;
 
     aget-object v3, v3, v0
 
-    iget-object v4, p0, Lcom/android/settings/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings/tts/TextToSpeechSettings;
+    iget-object v4, p0, Lcom/android/settings_ex/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings_ex/tts/TextToSpeechSettings;
 
-    # getter for: Lcom/android/settings/tts/TextToSpeechSettings;->mDefaultRate:I
-    invoke-static {v4}, Lcom/android/settings/tts/TextToSpeechSettings;->access$200(Lcom/android/settings/tts/TextToSpeechSettings;)I
+    # getter for: Lcom/android/settings_ex/tts/TextToSpeechSettings;->mDefaultRate:I
+    invoke-static {v4}, Lcom/android/settings_ex/tts/TextToSpeechSettings;->access$200(Lcom/android/settings_ex/tts/TextToSpeechSettings;)I
 
     move-result v4
 
@@ -138,11 +138,11 @@
 
     .prologue
     .line 695
-    iget-object v1, p0, Lcom/android/settings/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings/tts/TextToSpeechSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings_ex/tts/TextToSpeechSettings;
 
-    iget-object v2, p0, Lcom/android/settings/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings/tts/TextToSpeechSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings_ex/tts/TextToSpeechSettings;
 
-    iget-object v2, v2, Lcom/android/settings/tts/TextToSpeechSettings;->rate:[Ljava/lang/String;
+    iget-object v2, v2, Lcom/android/settings_ex/tts/TextToSpeechSettings;->rate:[Ljava/lang/String;
 
     aget-object v2, v2, p1
 
@@ -150,8 +150,8 @@
 
     move-result v2
 
-    # setter for: Lcom/android/settings/tts/TextToSpeechSettings;->mDefaultRate:I
-    invoke-static {v1, v2}, Lcom/android/settings/tts/TextToSpeechSettings;->access$202(Lcom/android/settings/tts/TextToSpeechSettings;I)I
+    # setter for: Lcom/android/settings_ex/tts/TextToSpeechSettings;->mDefaultRate:I
+    invoke-static {v1, v2}, Lcom/android/settings_ex/tts/TextToSpeechSettings;->access$202(Lcom/android/settings_ex/tts/TextToSpeechSettings;I)I
 
     .line 696
     const-string v1, "TextToSpeechSettings"
@@ -166,10 +166,10 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings/tts/TextToSpeechSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings_ex/tts/TextToSpeechSettings;
 
-    # getter for: Lcom/android/settings/tts/TextToSpeechSettings;->mDefaultRate:I
-    invoke-static {v3}, Lcom/android/settings/tts/TextToSpeechSettings;->access$200(Lcom/android/settings/tts/TextToSpeechSettings;)I
+    # getter for: Lcom/android/settings_ex/tts/TextToSpeechSettings;->mDefaultRate:I
+    invoke-static {v3}, Lcom/android/settings_ex/tts/TextToSpeechSettings;->access$200(Lcom/android/settings_ex/tts/TextToSpeechSettings;)I
 
     move-result v3
 
@@ -185,46 +185,46 @@
 
     .line 698
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings/tts/TextToSpeechSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings_ex/tts/TextToSpeechSettings;
 
-    # invokes: Lcom/android/settings/tts/TextToSpeechSettings;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v1}, Lcom/android/settings/tts/TextToSpeechSettings;->access$300(Lcom/android/settings/tts/TextToSpeechSettings;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/tts/TextToSpeechSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v1}, Lcom/android/settings_ex/tts/TextToSpeechSettings;->access$300(Lcom/android/settings_ex/tts/TextToSpeechSettings;)Landroid/content/ContentResolver;
 
     move-result-object v1
 
     const-string v2, "tts_default_rate"
 
-    iget-object v3, p0, Lcom/android/settings/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings/tts/TextToSpeechSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings_ex/tts/TextToSpeechSettings;
 
-    # getter for: Lcom/android/settings/tts/TextToSpeechSettings;->mDefaultRate:I
-    invoke-static {v3}, Lcom/android/settings/tts/TextToSpeechSettings;->access$200(Lcom/android/settings/tts/TextToSpeechSettings;)I
+    # getter for: Lcom/android/settings_ex/tts/TextToSpeechSettings;->mDefaultRate:I
+    invoke-static {v3}, Lcom/android/settings_ex/tts/TextToSpeechSettings;->access$200(Lcom/android/settings_ex/tts/TextToSpeechSettings;)I
 
     move-result v3
 
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 700
-    iget-object v1, p0, Lcom/android/settings/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings/tts/TextToSpeechSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings_ex/tts/TextToSpeechSettings;
 
-    # getter for: Lcom/android/settings/tts/TextToSpeechSettings;->mTts:Landroid/speech/tts/TextToSpeech;
-    invoke-static {v1}, Lcom/android/settings/tts/TextToSpeechSettings;->access$400(Lcom/android/settings/tts/TextToSpeechSettings;)Landroid/speech/tts/TextToSpeech;
+    # getter for: Lcom/android/settings_ex/tts/TextToSpeechSettings;->mTts:Landroid/speech/tts/TextToSpeech;
+    invoke-static {v1}, Lcom/android/settings_ex/tts/TextToSpeechSettings;->access$400(Lcom/android/settings_ex/tts/TextToSpeechSettings;)Landroid/speech/tts/TextToSpeech;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
     .line 701
-    iget-object v1, p0, Lcom/android/settings/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings/tts/TextToSpeechSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings_ex/tts/TextToSpeechSettings;
 
-    # getter for: Lcom/android/settings/tts/TextToSpeechSettings;->mTts:Landroid/speech/tts/TextToSpeech;
-    invoke-static {v1}, Lcom/android/settings/tts/TextToSpeechSettings;->access$400(Lcom/android/settings/tts/TextToSpeechSettings;)Landroid/speech/tts/TextToSpeech;
+    # getter for: Lcom/android/settings_ex/tts/TextToSpeechSettings;->mTts:Landroid/speech/tts/TextToSpeech;
+    invoke-static {v1}, Lcom/android/settings_ex/tts/TextToSpeechSettings;->access$400(Lcom/android/settings_ex/tts/TextToSpeechSettings;)Landroid/speech/tts/TextToSpeech;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings/tts/TextToSpeechSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings_ex/tts/TextToSpeechSettings;
 
-    # getter for: Lcom/android/settings/tts/TextToSpeechSettings;->mDefaultRate:I
-    invoke-static {v2}, Lcom/android/settings/tts/TextToSpeechSettings;->access$200(Lcom/android/settings/tts/TextToSpeechSettings;)I
+    # getter for: Lcom/android/settings_ex/tts/TextToSpeechSettings;->mDefaultRate:I
+    invoke-static {v2}, Lcom/android/settings_ex/tts/TextToSpeechSettings;->access$200(Lcom/android/settings_ex/tts/TextToSpeechSettings;)I
 
     move-result v2
 
@@ -237,10 +237,10 @@
     invoke-virtual {v1, v2}, Landroid/speech/tts/TextToSpeech;->setSpeechRate(F)I
 
     .line 702
-    iget-object v1, p0, Lcom/android/settings/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings/tts/TextToSpeechSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/tts/TextToSpeechSettings$TTSSeekBarPreferenceCallback;->this$0:Lcom/android/settings_ex/tts/TextToSpeechSettings;
 
-    # invokes: Lcom/android/settings/tts/TextToSpeechSettings;->speakSampleText()V
-    invoke-static {v1}, Lcom/android/settings/tts/TextToSpeechSettings;->access$100(Lcom/android/settings/tts/TextToSpeechSettings;)V
+    # invokes: Lcom/android/settings_ex/tts/TextToSpeechSettings;->speakSampleText()V
+    invoke-static {v1}, Lcom/android/settings_ex/tts/TextToSpeechSettings;->access$100(Lcom/android/settings_ex/tts/TextToSpeechSettings;)V
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 

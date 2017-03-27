@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog$FingerprintDisclaimerDialogListener;
+.class public interface abstract Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog$FingerprintDisclaimerDialogListener;
 .super Ljava/lang/Object;
 .source "FingerprintDisclaimerDialog.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;
+    value = Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

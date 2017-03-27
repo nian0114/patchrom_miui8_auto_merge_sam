@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fmm/RecipientsMinusView$1;
+.class Lcom/android/settings_ex/fmm/RecipientsMinusView$1;
 .super Ljava/lang/Object;
 .source "RecipientsMinusView.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fmm/RecipientsMinusView;->onFinishInflate()V
+    value = Lcom/android/settings_ex/fmm/RecipientsMinusView;->onFinishInflate()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fmm/RecipientsMinusView;
+.field final synthetic this$0:Lcom/android/settings_ex/fmm/RecipientsMinusView;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fmm/RecipientsMinusView;)V
+.method constructor <init>(Lcom/android/settings_ex/fmm/RecipientsMinusView;)V
     .locals 0
 
     .prologue
     .line 76
-    iput-object p1, p0, Lcom/android/settings/fmm/RecipientsMinusView$1;->this$0:Lcom/android/settings/fmm/RecipientsMinusView;
+    iput-object p1, p0, Lcom/android/settings_ex/fmm/RecipientsMinusView$1;->this$0:Lcom/android/settings_ex/fmm/RecipientsMinusView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,9 +44,9 @@
     const/4 v4, 0x0
 
     .line 79
-    iget-object v2, p0, Lcom/android/settings/fmm/RecipientsMinusView$1;->this$0:Lcom/android/settings/fmm/RecipientsMinusView;
+    iget-object v2, p0, Lcom/android/settings_ex/fmm/RecipientsMinusView$1;->this$0:Lcom/android/settings_ex/fmm/RecipientsMinusView;
 
-    invoke-virtual {v2}, Lcom/android/settings/fmm/RecipientsMinusView;->getContext()Landroid/content/Context;
+    invoke-virtual {v2}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -60,11 +60,11 @@
 
     .line 80
     .local v1, "imm":Landroid/view/inputmethod/InputMethodManager;
-    iget-object v2, p0, Lcom/android/settings/fmm/RecipientsMinusView$1;->this$0:Lcom/android/settings/fmm/RecipientsMinusView;
+    iget-object v2, p0, Lcom/android/settings_ex/fmm/RecipientsMinusView$1;->this$0:Lcom/android/settings_ex/fmm/RecipientsMinusView;
 
     const v3, 0x7f0d0330
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/fmm/RecipientsMinusView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -91,20 +91,20 @@
 
     .line 86
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/fmm/RecipientsMinusView$1;->this$0:Lcom/android/settings/fmm/RecipientsMinusView;
+    iget-object v2, p0, Lcom/android/settings_ex/fmm/RecipientsMinusView$1;->this$0:Lcom/android/settings_ex/fmm/RecipientsMinusView;
 
-    # getter for: Lcom/android/settings/fmm/RecipientsMinusView;->CurrentView:Landroid/widget/LinearLayout;
-    invoke-static {v2}, Lcom/android/settings/fmm/RecipientsMinusView;->access$000(Lcom/android/settings/fmm/RecipientsMinusView;)Landroid/widget/LinearLayout;
+    # getter for: Lcom/android/settings_ex/fmm/RecipientsMinusView;->CurrentView:Landroid/widget/LinearLayout;
+    invoke-static {v2}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->access$000(Lcom/android/settings_ex/fmm/RecipientsMinusView;)Landroid/widget/LinearLayout;
 
     move-result-object v2
 
     invoke-virtual {v2}, Landroid/widget/LinearLayout;->removeAllViews()V
 
     .line 87
-    iget-object v2, p0, Lcom/android/settings/fmm/RecipientsMinusView$1;->this$0:Lcom/android/settings/fmm/RecipientsMinusView;
+    iget-object v2, p0, Lcom/android/settings_ex/fmm/RecipientsMinusView$1;->this$0:Lcom/android/settings_ex/fmm/RecipientsMinusView;
 
-    # setter for: Lcom/android/settings/fmm/RecipientsMinusView;->VisibleView:Z
-    invoke-static {v2, v4}, Lcom/android/settings/fmm/RecipientsMinusView;->access$102(Lcom/android/settings/fmm/RecipientsMinusView;Z)Z
+    # setter for: Lcom/android/settings_ex/fmm/RecipientsMinusView;->VisibleView:Z
+    invoke-static {v2, v4}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->access$102(Lcom/android/settings_ex/fmm/RecipientsMinusView;Z)Z
 
     .line 88
     return-void

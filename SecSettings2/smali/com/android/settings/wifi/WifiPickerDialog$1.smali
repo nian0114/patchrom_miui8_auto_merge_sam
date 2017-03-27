@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wifi/WifiPickerDialog$1;
+.class Lcom/android/settings_ex/wifi/WifiPickerDialog$1;
 .super Landroid/content/BroadcastReceiver;
 .source "WifiPickerDialog.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiPickerDialog;
+    value = Lcom/android/settings_ex/wifi/WifiPickerDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiPickerDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiPickerDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiPickerDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiPickerDialog;)V
     .locals 0
 
     .prologue
     .line 49
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiPickerDialog$1;->this$0:Lcom/android/settings/wifi/WifiPickerDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiPickerDialog;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -98,12 +98,12 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 58
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiPickerDialog$1;->this$0:Lcom/android/settings/wifi/WifiPickerDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiPickerDialog;
 
     const/4 v3, 0x1
 
-    # invokes: Lcom/android/settings/wifi/WifiPickerDialog;->requestSystemKeyEvents(Z)V
-    invoke-static {v2, v3}, Lcom/android/settings/wifi/WifiPickerDialog;->access$000(Lcom/android/settings/wifi/WifiPickerDialog;Z)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiPickerDialog;->requestSystemKeyEvents(Z)V
+    invoke-static {v2, v3}, Lcom/android/settings_ex/wifi/WifiPickerDialog;->access$000(Lcom/android/settings_ex/wifi/WifiPickerDialog;Z)V
 
     .line 65
     .end local v1    # "mTaskLocked":Z
@@ -121,10 +121,10 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 62
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiPickerDialog$1;->this$0:Lcom/android/settings/wifi/WifiPickerDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiPickerDialog;
 
-    # invokes: Lcom/android/settings/wifi/WifiPickerDialog;->requestSystemKeyEvents(Z)V
-    invoke-static {v2, v5}, Lcom/android/settings/wifi/WifiPickerDialog;->access$000(Lcom/android/settings/wifi/WifiPickerDialog;Z)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiPickerDialog;->requestSystemKeyEvents(Z)V
+    invoke-static {v2, v5}, Lcom/android/settings_ex/wifi/WifiPickerDialog;->access$000(Lcom/android/settings_ex/wifi/WifiPickerDialog;Z)V
 
     goto :goto_0
 .end method

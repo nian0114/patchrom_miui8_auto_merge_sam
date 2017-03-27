@@ -1,14 +1,14 @@
-.class public Lcom/android/settings/ChooseLockPattern;
-.super Lcom/android/settings/SettingsActivity;
+.class public Lcom/android/settings_ex/ChooseLockPattern;
+.super Lcom/android/settings_ex/SettingsActivity;
 .source "ChooseLockPattern.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/ChooseLockPattern$1;,
-        Lcom/android/settings/ChooseLockPattern$SaveAndFinishWorker;,
-        Lcom/android/settings/ChooseLockPattern$ChooseLockPatternFragment;
+        Lcom/android/settings_ex/ChooseLockPattern$1;,
+        Lcom/android/settings_ex/ChooseLockPattern$SaveAndFinishWorker;,
+        Lcom/android/settings_ex/ChooseLockPattern$ChooseLockPatternFragment;
     }
 .end annotation
 
@@ -35,22 +35,22 @@
     const/4 v0, 0x0
 
     .line 90
-    sput-boolean v0, Lcom/android/settings/ChooseLockPattern;->mForFingerprint:Z
+    sput-boolean v0, Lcom/android/settings_ex/ChooseLockPattern;->mForFingerprint:Z
 
     .line 91
-    sput-boolean v0, Lcom/android/settings/ChooseLockPattern;->mIsFromKnoxFinger:Z
+    sput-boolean v0, Lcom/android/settings_ex/ChooseLockPattern;->mIsFromKnoxFinger:Z
 
     .line 92
-    sput-boolean v0, Lcom/android/settings/ChooseLockPattern;->mFromPersonalPage:Z
+    sput-boolean v0, Lcom/android/settings_ex/ChooseLockPattern;->mFromPersonalPage:Z
 
     .line 93
-    sput-boolean v0, Lcom/android/settings/ChooseLockPattern;->mFromAppLock:Z
+    sput-boolean v0, Lcom/android/settings_ex/ChooseLockPattern;->mFromAppLock:Z
 
     .line 94
-    sput-boolean v0, Lcom/android/settings/ChooseLockPattern;->mForPrivateModeBackupKey:Z
+    sput-boolean v0, Lcom/android/settings_ex/ChooseLockPattern;->mForPrivateModeBackupKey:Z
 
     .line 95
-    sput-boolean v0, Lcom/android/settings/ChooseLockPattern;->mForAppLockBackupKey:Z
+    sput-boolean v0, Lcom/android/settings_ex/ChooseLockPattern;->mForAppLockBackupKey:Z
 
     return-void
 .end method
@@ -60,7 +60,7 @@
 
     .prologue
     .line 77
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivity;-><init>()V
 
     .line 1020
     return-void
@@ -71,7 +71,7 @@
 
     .prologue
     .line 77
-    sget-boolean v0, Lcom/android/settings/ChooseLockPattern;->mIsFromKnoxFinger:Z
+    sget-boolean v0, Lcom/android/settings_ex/ChooseLockPattern;->mIsFromKnoxFinger:Z
 
     return v0
 .end method
@@ -81,7 +81,7 @@
 
     .prologue
     .line 77
-    sget-boolean v0, Lcom/android/settings/ChooseLockPattern;->mForFingerprint:Z
+    sget-boolean v0, Lcom/android/settings_ex/ChooseLockPattern;->mForFingerprint:Z
 
     return v0
 .end method
@@ -91,7 +91,7 @@
 
     .prologue
     .line 77
-    sget-boolean v0, Lcom/android/settings/ChooseLockPattern;->mFromPersonalPage:Z
+    sget-boolean v0, Lcom/android/settings_ex/ChooseLockPattern;->mFromPersonalPage:Z
 
     return v0
 .end method
@@ -101,7 +101,7 @@
 
     .prologue
     .line 77
-    sget-boolean v0, Lcom/android/settings/ChooseLockPattern;->mForPrivateModeBackupKey:Z
+    sget-boolean v0, Lcom/android/settings_ex/ChooseLockPattern;->mForPrivateModeBackupKey:Z
 
     return v0
 .end method
@@ -111,7 +111,7 @@
 
     .prologue
     .line 77
-    sget-boolean v0, Lcom/android/settings/ChooseLockPattern;->mForAppLockBackupKey:Z
+    sget-boolean v0, Lcom/android/settings_ex/ChooseLockPattern;->mForAppLockBackupKey:Z
 
     return v0
 .end method
@@ -121,19 +121,19 @@
 
     .prologue
     .line 77
-    sget-boolean v0, Lcom/android/settings/ChooseLockPattern;->mFromAppLock:Z
+    sget-boolean v0, Lcom/android/settings_ex/ChooseLockPattern;->mFromAppLock:Z
 
     return v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/ChooseLockPattern;I)V
+.method static synthetic access$900(Lcom/android/settings_ex/ChooseLockPattern;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockPattern;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockPattern;
     .param p1, "x1"    # I
 
     .prologue
     .line 77
-    invoke-direct {p0, p1}, Lcom/android/settings/ChooseLockPattern;->sendIntentToKnoxKeyguard(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/ChooseLockPattern;->sendIntentToKnoxKeyguard(I)V
 
     return-void
 .end method
@@ -149,7 +149,7 @@
     .line 132
     const/4 v1, 0x0
 
-    invoke-static {p0, p1, v1}, Lcom/android/settings/ChooseLockPattern;->createIntent(Landroid/content/Context;ZZ)Landroid/content/Intent;
+    invoke-static {p0, p1, v1}, Lcom/android/settings_ex/ChooseLockPattern;->createIntent(Landroid/content/Context;ZZ)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -185,7 +185,7 @@
     .line 116
     const/4 v1, 0x0
 
-    invoke-static {p0, p1, v1}, Lcom/android/settings/ChooseLockPattern;->createIntent(Landroid/content/Context;ZZ)Landroid/content/Intent;
+    invoke-static {p0, p1, v1}, Lcom/android/settings_ex/ChooseLockPattern;->createIntent(Landroid/content/Context;ZZ)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -209,7 +209,7 @@
     .line 107
     new-instance v0, Landroid/content/Intent;
 
-    const-class v1, Lcom/android/settings/ChooseLockPattern;
+    const-class v1, Lcom/android/settings_ex/ChooseLockPattern;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -301,7 +301,7 @@
 
     invoke-direct {v1, v2}, Landroid/os/UserHandle;-><init>(I)V
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/ChooseLockPattern;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings_ex/ChooseLockPattern;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
     .line 211
     return-void
@@ -323,7 +323,7 @@
 
     .prologue
     .line 146
-    const-class v0, Lcom/android/settings/ChooseLockPattern$ChooseLockPatternFragment;
+    const-class v0, Lcom/android/settings_ex/ChooseLockPattern$ChooseLockPatternFragment;
 
     return-object v0
 .end method
@@ -335,7 +335,7 @@
     .line 99
     new-instance v0, Landroid/content/Intent;
 
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->getIntent()Landroid/content/Intent;
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -345,7 +345,7 @@
     .local v0, "modIntent":Landroid/content/Intent;
     const-string v1, ":settings:show_fragment"
 
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPattern;->getFragmentClass()Ljava/lang/Class;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPattern;->getFragmentClass()Ljava/lang/Class;
 
     move-result-object v2
 
@@ -372,7 +372,7 @@
 
     .prologue
     .line 141
-    const-class v0, Lcom/android/settings/ChooseLockPattern$ChooseLockPatternFragment;
+    const-class v0, Lcom/android/settings_ex/ChooseLockPattern$ChooseLockPatternFragment;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -406,10 +406,10 @@
     const/4 v6, 0x0
 
     .line 152
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 153
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPattern;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPattern;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
 
@@ -419,10 +419,10 @@
 
     move-result v3
 
-    sput-boolean v3, Lcom/android/settings/ChooseLockPattern;->mFromPersonalPage:Z
+    sput-boolean v3, Lcom/android/settings_ex/ChooseLockPattern;->mFromPersonalPage:Z
 
     .line 154
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPattern;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPattern;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
 
@@ -432,7 +432,7 @@
 
     move-result v3
 
-    sput-boolean v3, Lcom/android/settings/ChooseLockPattern;->mFromAppLock:Z
+    sput-boolean v3, Lcom/android/settings_ex/ChooseLockPattern;->mFromAppLock:Z
 
     .line 155
     const-string v3, "ChooseLockPattern"
@@ -447,7 +447,7 @@
 
     move-result-object v4
 
-    sget-boolean v5, Lcom/android/settings/ChooseLockPattern;->mFromAppLock:Z
+    sget-boolean v5, Lcom/android/settings_ex/ChooseLockPattern;->mFromAppLock:Z
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -460,7 +460,7 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 157
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPattern;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPattern;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
 
@@ -470,7 +470,7 @@
 
     move-result v3
 
-    sput-boolean v3, Lcom/android/settings/ChooseLockPattern;->mForFingerprint:Z
+    sput-boolean v3, Lcom/android/settings_ex/ChooseLockPattern;->mForFingerprint:Z
 
     .line 158
     const-string v3, "ChooseLockPattern"
@@ -485,7 +485,7 @@
 
     move-result-object v4
 
-    sget-boolean v5, Lcom/android/settings/ChooseLockPattern;->mForFingerprint:Z
+    sget-boolean v5, Lcom/android/settings_ex/ChooseLockPattern;->mForFingerprint:Z
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -498,7 +498,7 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 159
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPattern;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPattern;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
 
@@ -508,10 +508,10 @@
 
     move-result v3
 
-    sput-boolean v3, Lcom/android/settings/ChooseLockPattern;->mForPrivateModeBackupKey:Z
+    sput-boolean v3, Lcom/android/settings_ex/ChooseLockPattern;->mForPrivateModeBackupKey:Z
 
     .line 160
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPattern;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPattern;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
 
@@ -521,7 +521,7 @@
 
     move-result v3
 
-    sput-boolean v3, Lcom/android/settings/ChooseLockPattern;->mForAppLockBackupKey:Z
+    sput-boolean v3, Lcom/android/settings_ex/ChooseLockPattern;->mForAppLockBackupKey:Z
 
     .line 161
     const-string v3, "ChooseLockPattern"
@@ -536,7 +536,7 @@
 
     move-result-object v4
 
-    sget-boolean v5, Lcom/android/settings/ChooseLockPattern;->mForPrivateModeBackupKey:Z
+    sget-boolean v5, Lcom/android/settings_ex/ChooseLockPattern;->mForPrivateModeBackupKey:Z
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -549,7 +549,7 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 163
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPattern;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPattern;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
 
@@ -559,7 +559,7 @@
 
     move-result v3
 
-    sput-boolean v3, Lcom/android/settings/ChooseLockPattern;->mIsFromKnoxFinger:Z
+    sput-boolean v3, Lcom/android/settings_ex/ChooseLockPattern;->mIsFromKnoxFinger:Z
 
     .line 164
     const-string v3, "ChooseLockPattern"
@@ -574,7 +574,7 @@
 
     move-result-object v4
 
-    sget-boolean v5, Lcom/android/settings/ChooseLockPattern;->mIsFromKnoxFinger:Z
+    sget-boolean v5, Lcom/android/settings_ex/ChooseLockPattern;->mIsFromKnoxFinger:Z
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -596,7 +596,7 @@
     .line 166
     const-string v3, "persona"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/ChooseLockPattern;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/ChooseLockPattern;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -640,7 +640,7 @@
     if-eqz v3, :cond_1
 
     .line 173
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPattern;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPattern;->getWindow()Landroid/view/Window;
 
     move-result-object v3
 
@@ -654,11 +654,11 @@
 
     .line 179
     .local v0, "msg":Ljava/lang/CharSequence;
-    sget-boolean v3, Lcom/android/settings/ChooseLockPattern;->mFromPersonalPage:Z
+    sget-boolean v3, Lcom/android/settings_ex/ChooseLockPattern;->mFromPersonalPage:Z
 
     if-nez v3, :cond_2
 
-    sget-boolean v3, Lcom/android/settings/ChooseLockPattern;->mForPrivateModeBackupKey:Z
+    sget-boolean v3, Lcom/android/settings_ex/ChooseLockPattern;->mForPrivateModeBackupKey:Z
 
     if-eqz v3, :cond_3
 
@@ -666,20 +666,20 @@
     :cond_2
     const v3, 0x7f0e11c8
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/ChooseLockPattern;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/ChooseLockPattern;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
     .line 188
     :goto_0
-    invoke-virtual {p0, v0}, Lcom/android/settings/ChooseLockPattern;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/ChooseLockPattern;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 189
     return-void
 
     .line 182
     :cond_3
-    sget-boolean v3, Lcom/android/settings/ChooseLockPattern;->mForFingerprint:Z
+    sget-boolean v3, Lcom/android/settings_ex/ChooseLockPattern;->mForFingerprint:Z
 
     if-nez v3, :cond_4
 
@@ -692,7 +692,7 @@
     .line 183
     const v3, 0x7f0e026a
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/ChooseLockPattern;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/ChooseLockPattern;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -702,7 +702,7 @@
     :cond_4
     const v3, 0x7f0e07bf
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/ChooseLockPattern;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/ChooseLockPattern;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -737,11 +737,11 @@
     .line 197
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/android/settings/ChooseLockPattern;->sendIntentToKnoxKeyguard(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/ChooseLockPattern;->sendIntentToKnoxKeyguard(I)V
 
     .line 200
     :cond_1
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v0
 

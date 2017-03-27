@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/csc/CscParser;
+.class public Lcom/android/settings_ex/csc/CscParser;
 .super Ljava/lang/Object;
 .source "CscParser.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/csc/CscParser$CscNodeList;
+        Lcom/android/settings_ex/csc/CscParser$CscNodeList;
     }
 .end annotation
 
@@ -35,22 +35,22 @@
     .line 28
     const-string v0, "/system/csc/customer.xml"
 
-    sput-object v0, Lcom/android/settings/csc/CscParser;->CSC_XML_FILE:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/csc/CscParser;->CSC_XML_FILE:Ljava/lang/String;
 
     .line 30
     const-string v0, "/system/csc/others.xml"
 
-    sput-object v0, Lcom/android/settings/csc/CscParser;->CSC_OTHERS_FILE:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/csc/CscParser;->CSC_OTHERS_FILE:Ljava/lang/String;
 
     .line 39
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/android/settings/csc/CscParser;->value_uri:Landroid/net/Uri;
+    sput-object v0, Lcom/android/settings_ex/csc/CscParser;->value_uri:Landroid/net/Uri;
 
     .line 41
     const/4 v0, 0x1
 
-    sput v0, Lcom/android/settings/csc/CscParser;->Media_Type:I
+    sput v0, Lcom/android/settings_ex/csc/CscParser;->Media_Type:I
 
     return-void
 .end method
@@ -65,7 +65,7 @@
 
     .line 72
     :try_start_0
-    invoke-direct {p0, p1}, Lcom/android/settings/csc/CscParser;->update(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/csc/CscParser;->update(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -101,7 +101,7 @@
 
     .prologue
     .line 281
-    sget-object v0, Lcom/android/settings/csc/CscParser;->CSC_XML_FILE:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/csc/CscParser;->CSC_XML_FILE:Ljava/lang/String;
 
     .line 282
     .local v0, "customer_path":Ljava/lang/String;
@@ -493,16 +493,16 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/csc/CscParser;->mDoc:Lorg/w3c/dom/Document;
+    iput-object v3, p0, Lcom/android/settings_ex/csc/CscParser;->mDoc:Lorg/w3c/dom/Document;
 
     .line 92
-    iget-object v3, p0, Lcom/android/settings/csc/CscParser;->mDoc:Lorg/w3c/dom/Document;
+    iget-object v3, p0, Lcom/android/settings_ex/csc/CscParser;->mDoc:Lorg/w3c/dom/Document;
 
     invoke-interface {v3}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/csc/CscParser;->mRoot:Lorg/w3c/dom/Node;
+    iput-object v3, p0, Lcom/android/settings_ex/csc/CscParser;->mRoot:Lorg/w3c/dom/Node;
 
     .line 96
     :goto_0
@@ -529,7 +529,7 @@
     const/4 v2, 0x0
 
     .line 99
-    invoke-virtual {p0, p1}, Lcom/android/settings/csc/CscParser;->search(Ljava/lang/String;)Lorg/w3c/dom/Node;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/csc/CscParser;->search(Ljava/lang/String;)Lorg/w3c/dom/Node;
 
     move-result-object v1
 
@@ -677,13 +677,13 @@
     :cond_2
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v13}, Lcom/android/settings/csc/CscParser;->search(Ljava/lang/String;)Lorg/w3c/dom/Node;
+    invoke-virtual {v0, v13}, Lcom/android/settings_ex/csc/CscParser;->search(Ljava/lang/String;)Lorg/w3c/dom/Node;
 
     move-result-object v15
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v15, v12}, Lcom/android/settings/csc/CscParser;->searchList(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/NodeList;
+    invoke-virtual {v0, v15, v12}, Lcom/android/settings_ex/csc/CscParser;->searchList(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/NodeList;
 
     move-result-object v8
 
@@ -828,7 +828,7 @@
 
     .line 112
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/csc/CscParser;->mRoot:Lorg/w3c/dom/Node;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscParser;->mRoot:Lorg/w3c/dom/Node;
 
     .line 113
     .local v0, "node":Lorg/w3c/dom/Node;
@@ -863,7 +863,7 @@
 
     .line 121
     :cond_2
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/csc/CscParser;->search(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings_ex/csc/CscParser;->search(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
     move-result-object v0
 
@@ -965,12 +965,12 @@
     .line 153
     :cond_1
     :try_start_0
-    new-instance v4, Lcom/android/settings/csc/CscParser$CscNodeList;
+    new-instance v4, Lcom/android/settings_ex/csc/CscParser$CscNodeList;
 
-    invoke-direct {v4}, Lcom/android/settings/csc/CscParser$CscNodeList;-><init>()V
+    invoke-direct {v4}, Lcom/android/settings_ex/csc/CscParser$CscNodeList;-><init>()V
 
     .line 154
-    .local v4, "list":Lcom/android/settings/csc/CscParser$CscNodeList;
+    .local v4, "list":Lcom/android/settings_ex/csc/CscParser$CscNodeList;
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v1
@@ -1013,7 +1013,7 @@
 
     .line 164
     :try_start_1
-    invoke-virtual {v4, v0}, Lcom/android/settings/csc/CscParser$CscNodeList;->appendChild(Lorg/w3c/dom/Node;)V
+    invoke-virtual {v4, v0}, Lcom/android/settings_ex/csc/CscParser$CscNodeList;->appendChild(Lorg/w3c/dom/Node;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -1042,7 +1042,7 @@
     .end local v1    # "children":Lorg/w3c/dom/NodeList;
     .end local v2    # "e":Ljava/lang/Exception;
     .end local v3    # "i":I
-    .end local v4    # "list":Lcom/android/settings/csc/CscParser$CscNodeList;
+    .end local v4    # "list":Lcom/android/settings_ex/csc/CscParser$CscNodeList;
     .end local v5    # "n":I
     :catch_1
     move-exception v2

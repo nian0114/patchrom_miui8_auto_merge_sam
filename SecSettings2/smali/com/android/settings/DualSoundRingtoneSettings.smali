@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/DualSoundRingtoneSettings;
+.class public Lcom/android/settings_ex/DualSoundRingtoneSettings;
 .super Landroid/preference/PreferenceActivity;
 .source "DualSoundRingtoneSettings.java"
 
@@ -28,7 +28,7 @@
 
 .field receiver:Landroid/content/BroadcastReceiver;
 
-.field private ringtone:Lcom/android/settings/DefaultRingtonePreference;
+.field private ringtone:Lcom/android/settings_ex/DefaultRingtonePreference;
 
 
 # direct methods
@@ -42,14 +42,14 @@
     .line 82
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/DualSoundRingtoneSettings;->receiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->receiver:Landroid/content/BroadcastReceiver;
 
     .line 109
-    new-instance v0, Lcom/android/settings/DualSoundRingtoneSettings$1;
+    new-instance v0, Lcom/android/settings_ex/DualSoundRingtoneSettings$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/DualSoundRingtoneSettings$1;-><init>(Lcom/android/settings/DualSoundRingtoneSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/DualSoundRingtoneSettings$1;-><init>(Lcom/android/settings_ex/DualSoundRingtoneSettings;)V
 
-    iput-object v0, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mHandler:Landroid/os/Handler;
 
     return-void
 .end method
@@ -61,7 +61,7 @@
     .line 267
     new-instance v0, Ljava/lang/Thread;
 
-    iget-object v1, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mRingtoneNotificationRunnable:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mRingtoneNotificationRunnable:Ljava/lang/Runnable;
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
@@ -71,49 +71,49 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/DualSoundRingtoneSettings;)Landroid/preference/Preference;
+.method static synthetic access$000(Lcom/android/settings_ex/DualSoundRingtoneSettings;)Landroid/preference/Preference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/DualSoundRingtoneSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/DualSoundRingtoneSettings;
 
     .prologue
     .line 60
-    iget-object v0, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mRingtonePreference:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mRingtonePreference:Landroid/preference/Preference;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/DualSoundRingtoneSettings;)Landroid/preference/Preference;
+.method static synthetic access$100(Lcom/android/settings_ex/DualSoundRingtoneSettings;)Landroid/preference/Preference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/DualSoundRingtoneSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/DualSoundRingtoneSettings;
 
     .prologue
     .line 60
-    iget-object v0, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mNotificationPreference:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mNotificationPreference:Landroid/preference/Preference;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/DualSoundRingtoneSettings;)I
+.method static synthetic access$200(Lcom/android/settings_ex/DualSoundRingtoneSettings;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/DualSoundRingtoneSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/DualSoundRingtoneSettings;
 
     .prologue
     .line 60
-    iget v0, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mActivePhone:I
+    iget v0, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mActivePhone:I
 
     return v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/DualSoundRingtoneSettings;ILandroid/preference/Preference;I)V
+.method static synthetic access$300(Lcom/android/settings_ex/DualSoundRingtoneSettings;ILandroid/preference/Preference;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/DualSoundRingtoneSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/DualSoundRingtoneSettings;
     .param p1, "x1"    # I
     .param p2, "x2"    # Landroid/preference/Preference;
     .param p3, "x3"    # I
 
     .prologue
     .line 60
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/settings/DualSoundRingtoneSettings;->updateRingtoneName(ILandroid/preference/Preference;I)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->updateRingtoneName(ILandroid/preference/Preference;I)V
 
     return-void
 .end method
@@ -129,7 +129,7 @@
     .line 395
     const-string v5, "DCM"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v6
 
@@ -316,7 +316,7 @@
 
     .prologue
     .line 505
-    invoke-virtual {p0}, Lcom/android/settings/DualSoundRingtoneSettings;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
@@ -563,7 +563,7 @@
 
     .line 485
     .local v7, "tempUri":Landroid/net/Uri;
-    invoke-virtual {p0}, Lcom/android/settings/DualSoundRingtoneSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v9
 
@@ -598,7 +598,7 @@
     invoke-virtual {v9, v7, v10, v6}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
     .line 486
-    invoke-virtual {p0}, Lcom/android/settings/DualSoundRingtoneSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v9
 
@@ -705,14 +705,14 @@
     if-ne p1, v2, :cond_1
 
     .line 513
-    iget-object v0, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mRingtonePreference:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mRingtonePreference:Landroid/preference/Preference;
 
     if-eqz v0, :cond_0
 
     .line 514
-    iget-object v0, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mRingtonePreference:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mRingtonePreference:Landroid/preference/Preference;
 
-    invoke-direct {p0, v2, v0, v2}, Lcom/android/settings/DualSoundRingtoneSettings;->updateRingtoneName(ILandroid/preference/Preference;I)V
+    invoke-direct {p0, v2, v0, v2}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->updateRingtoneName(ILandroid/preference/Preference;I)V
 
     .line 523
     :cond_0
@@ -721,16 +721,16 @@
 
     .line 518
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mRingtone2Preference:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mRingtone2Preference:Landroid/preference/Preference;
 
     if-eqz v0, :cond_0
 
     .line 519
     const/16 v0, 0x80
 
-    iget-object v1, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mRingtone2Preference:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mRingtone2Preference:Landroid/preference/Preference;
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings/DualSoundRingtoneSettings;->updateRingtoneName(ILandroid/preference/Preference;I)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->updateRingtoneName(ILandroid/preference/Preference;I)V
 
     goto :goto_0
 .end method
@@ -781,9 +781,9 @@
     .line 242
     :cond_1
     :goto_1
-    iget-object v0, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mHandler:Landroid/os/Handler;
 
-    iget-object v2, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mHandler:Landroid/os/Handler;
+    iget-object v2, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v2, p3, v8}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
@@ -864,7 +864,7 @@
     const/4 v2, 0x0
 
     .line 278
-    iget-object v1, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v1, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v1}, Landroid/media/AudioManager;->getRingerModeInternal()I
 
@@ -875,12 +875,12 @@
     if-eqz p1, :cond_0
 
     .line 281
-    iget-object v1, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mRingtonePreference:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mRingtonePreference:Landroid/preference/Preference;
 
     invoke-virtual {v1, v3}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 282
-    iget-object v1, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mNotificationPreference:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mNotificationPreference:Landroid/preference/Preference;
 
     invoke-virtual {v1, v3}, Landroid/preference/Preference;->setEnabled(Z)V
 
@@ -890,12 +890,12 @@
 
     .line 284
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mRingtonePreference:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mRingtonePreference:Landroid/preference/Preference;
 
     invoke-virtual {v1, v2}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 285
-    iget-object v1, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mNotificationPreference:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mNotificationPreference:Landroid/preference/Preference;
 
     invoke-virtual {v1, v2}, Landroid/preference/Preference;->setEnabled(Z)V
 
@@ -909,7 +909,7 @@
 
     .prologue
     .line 247
-    iget v0, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mActivePhone:I
+    iget v0, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mActivePhone:I
 
     return v0
 .end method
@@ -944,7 +944,7 @@
     .line 390
     :cond_1
     :goto_0
-    invoke-direct {p0, p2}, Lcom/android/settings/DualSoundRingtoneSettings;->updateRingtoneData(I)V
+    invoke-direct {p0, p2}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->updateRingtoneData(I)V
 
     .line 391
     :goto_1
@@ -954,7 +954,7 @@
     :cond_2
     const-string v2, "DCM"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v3
 
@@ -964,9 +964,9 @@
 
     if-eqz v2, :cond_3
 
-    sget-object v2, Lcom/android/settings/DualSoundRingtoneSettings;->myContext:Landroid/content/Context;
+    sget-object v2, Lcom/android/settings_ex/DualSoundRingtoneSettings;->myContext:Landroid/content/Context;
 
-    invoke-direct {p0, v2, p1}, Lcom/android/settings/DualSoundRingtoneSettings;->canSetRingtone(Landroid/content/Context;Landroid/net/Uri;)Z
+    invoke-direct {p0, v2, p1}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->canSetRingtone(Landroid/content/Context;Landroid/net/Uri;)Z
 
     move-result v2
 
@@ -1010,7 +1010,7 @@
     if-eqz v2, :cond_4
 
     .line 357
-    invoke-direct {p0, p1}, Lcom/android/settings/DualSoundRingtoneSettings;->updateMediaDB(Landroid/net/Uri;)Landroid/net/Uri;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->updateMediaDB(Landroid/net/Uri;)Landroid/net/Uri;
 
     move-result-object p1
 
@@ -1049,7 +1049,7 @@
 
     .line 370
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/DualSoundRingtoneSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -1106,7 +1106,7 @@
 
     .line 381
     :goto_2
-    iget-object v2, p0, Lcom/android/settings/DualSoundRingtoneSettings;->offset:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->offset:Ljava/lang/String;
 
     if-eqz v2, :cond_1
 
@@ -1116,13 +1116,13 @@
     if-ne p2, v2, :cond_5
 
     .line 383
-    invoke-virtual {p0}, Lcom/android/settings/DualSoundRingtoneSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
     const-string v3, "recommendation_time_2"
 
-    iget-object v4, p0, Lcom/android/settings/DualSoundRingtoneSettings;->offset:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->offset:Ljava/lang/String;
 
     invoke-static {v2, v3, v4}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -1214,13 +1214,13 @@
     .line 386
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_5
-    invoke-virtual {p0}, Lcom/android/settings/DualSoundRingtoneSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
     const-string v3, "recommendation_time"
 
-    iget-object v4, p0, Lcom/android/settings/DualSoundRingtoneSettings;->offset:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->offset:Ljava/lang/String;
 
     invoke-static {v2, v3, v4}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -1274,12 +1274,12 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/DualSoundRingtoneSettings;->offset:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->offset:Ljava/lang/String;
 
     .line 303
     const/4 v1, 0x1
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/DualSoundRingtoneSettings;->handleRingtonePicked(Landroid/net/Uri;I)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->handleRingtonePicked(Landroid/net/Uri;I)V
 
     goto :goto_0
 
@@ -1311,12 +1311,12 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/DualSoundRingtoneSettings;->offset:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->offset:Ljava/lang/String;
 
     .line 316
     const/16 v1, 0x80
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/DualSoundRingtoneSettings;->handleRingtonePicked(Landroid/net/Uri;I)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->handleRingtonePicked(Landroid/net/Uri;I)V
 
     goto :goto_0
 
@@ -1343,25 +1343,25 @@
     invoke-super {p0, p1}, Landroid/preference/PreferenceActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 126
-    invoke-virtual {p0}, Lcom/android/settings/DualSoundRingtoneSettings;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mContext:Landroid/content/Context;
+    iput-object v3, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mContext:Landroid/content/Context;
 
     .line 127
     const-string v3, "audio"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/DualSoundRingtoneSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/media/AudioManager;
 
-    iput-object v3, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mAudioManager:Landroid/media/AudioManager;
+    iput-object v3, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mAudioManager:Landroid/media/AudioManager;
 
     .line 128
-    invoke-virtual {p0}, Lcom/android/settings/DualSoundRingtoneSettings;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -1382,7 +1382,7 @@
 
     move-result v3
 
-    iput v3, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mActivePhone:I
+    iput v3, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mActivePhone:I
 
     .line 132
     const-string v3, "DualSoundRingtoneSettings"
@@ -1397,7 +1397,7 @@
 
     move-result-object v4
 
-    iget v5, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mActivePhone:I
+    iget v5, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mActivePhone:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1426,7 +1426,7 @@
     if-eqz v3, :cond_0
 
     .line 145
-    invoke-virtual {p0}, Lcom/android/settings/DualSoundRingtoneSettings;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
 
@@ -1442,30 +1442,30 @@
 
     .line 146
     .local v2, "title":Ljava/lang/String;
-    invoke-virtual {p0, v2}, Lcom/android/settings/DualSoundRingtoneSettings;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 149
     .end local v2    # "title":Ljava/lang/String;
     :cond_0
     const v3, 0x7f080048
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/DualSoundRingtoneSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->addPreferencesFromResource(I)V
 
     .line 151
     const-string v3, "ringtone"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/DualSoundRingtoneSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/settings/DefaultRingtonePreference;
+    check-cast v3, Lcom/android/settings_ex/DefaultRingtonePreference;
 
-    iput-object v3, p0, Lcom/android/settings/DualSoundRingtoneSettings;->ringtone:Lcom/android/settings/DefaultRingtonePreference;
+    iput-object v3, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->ringtone:Lcom/android/settings_ex/DefaultRingtonePreference;
 
     .line 152
-    iget-object v3, p0, Lcom/android/settings/DualSoundRingtoneSettings;->ringtone:Lcom/android/settings/DefaultRingtonePreference;
+    iget-object v3, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->ringtone:Lcom/android/settings_ex/DefaultRingtonePreference;
 
-    invoke-virtual {v3, p0}, Lcom/android/settings/DefaultRingtonePreference;->setObjectDual(Lcom/android/settings/DualSoundRingtoneSettings;)V
+    invoke-virtual {v3, p0}, Lcom/android/settings_ex/DefaultRingtonePreference;->setObjectDual(Lcom/android/settings_ex/DualSoundRingtoneSettings;)V
 
     .line 155
     :try_start_0
@@ -1473,11 +1473,11 @@
 
     const/4 v4, 0x1
 
-    invoke-virtual {p0, v3, v4}, Lcom/android/settings/DualSoundRingtoneSettings;->createPackageContext(Ljava/lang/String;I)Landroid/content/Context;
+    invoke-virtual {p0, v3, v4}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->createPackageContext(Ljava/lang/String;I)Landroid/content/Context;
 
     move-result-object v3
 
-    sput-object v3, Lcom/android/settings/DualSoundRingtoneSettings;->myContext:Landroid/content/Context;
+    sput-object v3, Lcom/android/settings_ex/DualSoundRingtoneSettings;->myContext:Landroid/content/Context;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1485,19 +1485,19 @@
     :goto_1
     const-string v3, "ringtone"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/DualSoundRingtoneSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mRingtonePreference:Landroid/preference/Preference;
+    iput-object v3, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mRingtonePreference:Landroid/preference/Preference;
 
     .line 162
-    iget-object v3, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mRingtonePreference:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mRingtonePreference:Landroid/preference/Preference;
 
     if-eqz v3, :cond_1
 
     .line 163
-    iget-object v3, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mRingtonePreference:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mRingtonePreference:Landroid/preference/Preference;
 
     invoke-virtual {v3, v6}, Landroid/preference/Preference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
@@ -1505,19 +1505,19 @@
     :cond_1
     const-string v3, "ringtone2"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/DualSoundRingtoneSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mRingtone2Preference:Landroid/preference/Preference;
+    iput-object v3, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mRingtone2Preference:Landroid/preference/Preference;
 
     .line 166
-    iget-object v3, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mRingtone2Preference:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mRingtone2Preference:Landroid/preference/Preference;
 
     if-eqz v3, :cond_2
 
     .line 167
-    iget-object v3, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mRingtone2Preference:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mRingtone2Preference:Landroid/preference/Preference;
 
     invoke-virtual {v3, v6}, Landroid/preference/Preference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
@@ -1525,39 +1525,39 @@
     :cond_2
     const-string v3, "notification_sound"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/DualSoundRingtoneSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mNotificationPreference:Landroid/preference/Preference;
+    iput-object v3, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mNotificationPreference:Landroid/preference/Preference;
 
     .line 170
-    iget-object v3, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mNotificationPreference:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mNotificationPreference:Landroid/preference/Preference;
 
     if-eqz v3, :cond_3
 
     .line 171
-    iget-object v3, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mNotificationPreference:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mNotificationPreference:Landroid/preference/Preference;
 
     invoke-virtual {v3, v6}, Landroid/preference/Preference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 174
     :cond_3
-    invoke-direct {p0}, Lcom/android/settings/DualSoundRingtoneSettings;->configureActionBar()V
+    invoke-direct {p0}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->configureActionBar()V
 
     .line 176
-    new-instance v3, Lcom/android/settings/DualSoundRingtoneSettings$2;
+    new-instance v3, Lcom/android/settings_ex/DualSoundRingtoneSettings$2;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/DualSoundRingtoneSettings$2;-><init>(Lcom/android/settings/DualSoundRingtoneSettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/DualSoundRingtoneSettings$2;-><init>(Lcom/android/settings_ex/DualSoundRingtoneSettings;)V
 
-    iput-object v3, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mRingtoneNotificationRunnable:Ljava/lang/Runnable;
+    iput-object v3, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mRingtoneNotificationRunnable:Ljava/lang/Runnable;
 
     .line 214
     return-void
 
     .line 134
     :cond_4
-    invoke-virtual {p0}, Lcom/android/settings/DualSoundRingtoneSettings;->getBaseContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->getBaseContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -1575,7 +1575,7 @@
 
     if-ne v3, v4, :cond_5
 
-    invoke-virtual {p0}, Lcom/android/settings/DualSoundRingtoneSettings;->getBaseContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->getBaseContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -1586,7 +1586,7 @@
     if-eqz v3, :cond_5
 
     .line 137
-    iput v6, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mActivePhone:I
+    iput v6, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mActivePhone:I
 
     .line 141
     :goto_2
@@ -1602,7 +1602,7 @@
 
     move-result-object v4
 
-    iget v5, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mActivePhone:I
+    iget v5, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mActivePhone:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1624,7 +1624,7 @@
 
     .line 139
     :cond_5
-    iput v5, p0, Lcom/android/settings/DualSoundRingtoneSettings;->mActivePhone:I
+    iput v5, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->mActivePhone:I
 
     goto :goto_2
 
@@ -1665,7 +1665,7 @@
 
     .line 496
     :pswitch_0
-    invoke-virtual {p0}, Lcom/android/settings/DualSoundRingtoneSettings;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->finish()V
 
     .line 497
     const/4 v0, 0x1
@@ -1724,7 +1724,7 @@
     const/4 v2, 0x1
 
     :try_start_0
-    invoke-virtual {p0, v1, v2}, Lcom/android/settings/DualSoundRingtoneSettings;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v1, v2}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->startActivityForResult(Landroid/content/Intent;I)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1748,7 +1748,7 @@
     const/4 v2, 0x2
 
     :try_start_1
-    invoke-virtual {p0, v1, v2}, Lcom/android/settings/DualSoundRingtoneSettings;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v1, v2}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->startActivityForResult(Landroid/content/Intent;I)V
     :try_end_1
     .catch Landroid/content/ActivityNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -1773,9 +1773,9 @@
     invoke-super {p0}, Landroid/preference/PreferenceActivity;->onPause()V
 
     .line 273
-    iget-object v0, p0, Lcom/android/settings/DualSoundRingtoneSettings;->receiver:Landroid/content/BroadcastReceiver;
+    iget-object v0, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->receiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/DualSoundRingtoneSettings;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 274
     return-void
@@ -1791,10 +1791,10 @@
     .line 253
     const/4 v1, 0x1
 
-    invoke-direct {p0, v1}, Lcom/android/settings/DualSoundRingtoneSettings;->updateState(Z)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->updateState(Z)V
 
     .line 254
-    invoke-direct {p0}, Lcom/android/settings/DualSoundRingtoneSettings;->UpdateRingtoneNotificationNames()V
+    invoke-direct {p0}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->UpdateRingtoneNotificationNames()V
 
     .line 255
     new-instance v0, Landroid/content/IntentFilter;
@@ -1805,16 +1805,16 @@
 
     .line 256
     .local v0, "filter":Landroid/content/IntentFilter;
-    new-instance v1, Lcom/android/settings/DualSoundRingtoneSettings$3;
+    new-instance v1, Lcom/android/settings_ex/DualSoundRingtoneSettings$3;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/DualSoundRingtoneSettings$3;-><init>(Lcom/android/settings/DualSoundRingtoneSettings;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/DualSoundRingtoneSettings$3;-><init>(Lcom/android/settings_ex/DualSoundRingtoneSettings;)V
 
-    iput-object v1, p0, Lcom/android/settings/DualSoundRingtoneSettings;->receiver:Landroid/content/BroadcastReceiver;
+    iput-object v1, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->receiver:Landroid/content/BroadcastReceiver;
 
     .line 263
-    iget-object v1, p0, Lcom/android/settings/DualSoundRingtoneSettings;->receiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings;->receiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v1, v0}, Lcom/android/settings/DualSoundRingtoneSettings;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v1, v0}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 264
     return-void

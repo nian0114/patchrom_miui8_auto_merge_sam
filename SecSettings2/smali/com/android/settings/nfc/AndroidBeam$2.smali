@@ -1,4 +1,4 @@
-.class Lcom/android/settings/nfc/AndroidBeam$2;
+.class Lcom/android/settings_ex/nfc/AndroidBeam$2;
 .super Ljava/lang/Object;
 .source "AndroidBeam.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/nfc/AndroidBeam;->makeAlertDialog()V
+    value = Lcom/android/settings_ex/nfc/AndroidBeam;->makeAlertDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nfc/AndroidBeam;
+.field final synthetic this$0:Lcom/android/settings_ex/nfc/AndroidBeam;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/nfc/AndroidBeam;)V
+.method constructor <init>(Lcom/android/settings_ex/nfc/AndroidBeam;)V
     .locals 0
 
     .prologue
     .line 275
-    iput-object p1, p0, Lcom/android/settings/nfc/AndroidBeam$2;->this$0:Lcom/android/settings/nfc/AndroidBeam;
+    iput-object p1, p0, Lcom/android/settings_ex/nfc/AndroidBeam$2;->this$0:Lcom/android/settings_ex/nfc/AndroidBeam;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,10 +43,10 @@
 
     .prologue
     .line 278
-    iget-object v0, p0, Lcom/android/settings/nfc/AndroidBeam$2;->this$0:Lcom/android/settings/nfc/AndroidBeam;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/AndroidBeam$2;->this$0:Lcom/android/settings_ex/nfc/AndroidBeam;
 
-    # getter for: Lcom/android/settings/nfc/AndroidBeam;->mNfcAdapter:Landroid/nfc/NfcAdapter;
-    invoke-static {v0}, Lcom/android/settings/nfc/AndroidBeam;->access$100(Lcom/android/settings/nfc/AndroidBeam;)Landroid/nfc/NfcAdapter;
+    # getter for: Lcom/android/settings_ex/nfc/AndroidBeam;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    invoke-static {v0}, Lcom/android/settings_ex/nfc/AndroidBeam;->access$100(Lcom/android/settings_ex/nfc/AndroidBeam;)Landroid/nfc/NfcAdapter;
 
     move-result-object v0
 

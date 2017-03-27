@@ -1,22 +1,22 @@
-.class public Lcom/android/settings/nearby/NearbyEnabler;
+.class public Lcom/android/settings_ex/nearby/NearbyEnabler;
 .super Ljava/lang/Object;
 .source "NearbyEnabler.java"
 
 # interfaces
 .implements Landroid/preference/Preference$OnPreferenceChangeListener;
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/nearby/NearbyEnabler$HandleRejectDevice;,
-        Lcom/android/settings/nearby/NearbyEnabler$HandleAcceptDevice;,
-        Lcom/android/settings/nearby/NearbyEnabler$HandleAllowUpload;,
-        Lcom/android/settings/nearby/NearbyEnabler$HandleShareContentType;,
-        Lcom/android/settings/nearby/NearbyEnabler$HandleServerName;,
-        Lcom/android/settings/nearby/NearbyEnabler$HandleServerStart;,
-        Lcom/android/settings/nearby/NearbyEnabler$HandleSetUploadPath;
+        Lcom/android/settings_ex/nearby/NearbyEnabler$HandleRejectDevice;,
+        Lcom/android/settings_ex/nearby/NearbyEnabler$HandleAcceptDevice;,
+        Lcom/android/settings_ex/nearby/NearbyEnabler$HandleAllowUpload;,
+        Lcom/android/settings_ex/nearby/NearbyEnabler$HandleShareContentType;,
+        Lcom/android/settings_ex/nearby/NearbyEnabler$HandleServerName;,
+        Lcom/android/settings_ex/nearby/NearbyEnabler$HandleServerStart;,
+        Lcom/android/settings_ex/nearby/NearbyEnabler$HandleSetUploadPath;
     }
 .end annotation
 
@@ -24,7 +24,7 @@
 # static fields
 .field private static isShowWifiCheckingPopup:Z
 
-.field private static mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+.field private static mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
 .field private static mPreferenceChangeThread:Landroid/os/HandlerThread;
 
@@ -56,7 +56,7 @@
 
 .field private final mNearbySharedContents:Landroid/preference/MultiSelectListPreference;
 
-.field private mNearbySwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mNearbySwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 .field private mPreferenceChangeMap:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
@@ -83,24 +83,24 @@
     .line 160
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/android/settings/nearby/NearbyEnabler;->isShowWifiCheckingPopup:Z
+    sput-boolean v0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isShowWifiCheckingPopup:Z
 
     .line 231
-    sput-object v1, Lcom/android/settings/nearby/NearbyEnabler;->mPreferenceChangeThread:Landroid/os/HandlerThread;
+    sput-object v1, Lcom/android/settings_ex/nearby/NearbyEnabler;->mPreferenceChangeThread:Landroid/os/HandlerThread;
 
     .line 233
-    sput-object v1, Lcom/android/settings/nearby/NearbyEnabler;->mPreferenceChangeWorker:Landroid/os/Handler;
+    sput-object v1, Lcom/android/settings_ex/nearby/NearbyEnabler;->mPreferenceChangeWorker:Landroid/os/Handler;
 
     .line 622
-    sput-object v1, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sput-object v1, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/android/settings/widget/SwitchBar;Landroid/preference/PreferenceScreen;Landroid/preference/MultiSelectListPreference;Landroid/preference/MultiSelectListPreference;Landroid/preference/MultiSelectListPreference;Landroid/preference/ListPreference;Landroid/preference/ListPreference;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/android/settings_ex/widget/SwitchBar;Landroid/preference/PreferenceScreen;Landroid/preference/MultiSelectListPreference;Landroid/preference/MultiSelectListPreference;Landroid/preference/MultiSelectListPreference;Landroid/preference/ListPreference;Landroid/preference/ListPreference;)V
     .locals 3
     .param p1, "context"    # Landroid/content/Context;
-    .param p2, "nearbySwitchBar"    # Lcom/android/settings/widget/SwitchBar;
+    .param p2, "nearbySwitchBar"    # Lcom/android/settings_ex/widget/SwitchBar;
     .param p3, "deviceName"    # Landroid/preference/PreferenceScreen;
     .param p4, "sharedContents"    # Landroid/preference/MultiSelectListPreference;
     .param p5, "acceptList"    # Landroid/preference/MultiSelectListPreference;
@@ -115,42 +115,42 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 150
-    iput-boolean v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->isResumeState:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isResumeState:Z
 
     .line 152
-    iput-boolean v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->isBound:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isBound:Z
 
     .line 158
     const-string v0, "TYPE_SETTINGS"
 
-    iput-object v0, p0, Lcom/android/settings/nearby/NearbyEnabler;->enablerType:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->enablerType:Ljava/lang/String;
 
     .line 465
-    iput-boolean v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->isAutoStart:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isAutoStart:Z
 
     .line 573
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/nearby/NearbyEnabler;->mPreferenceChangeMap:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mPreferenceChangeMap:Ljava/util/HashMap;
 
     .line 624
-    new-instance v0, Lcom/android/settings/nearby/NearbyEnabler$3;
+    new-instance v0, Lcom/android/settings_ex/nearby/NearbyEnabler$3;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/nearby/NearbyEnabler$3;-><init>(Lcom/android/settings/nearby/NearbyEnabler;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/nearby/NearbyEnabler$3;-><init>(Lcom/android/settings_ex/nearby/NearbyEnabler;)V
 
-    iput-object v0, p0, Lcom/android/settings/nearby/NearbyEnabler;->mServiceConn:Landroid/content/ServiceConnection;
+    iput-object v0, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mServiceConn:Landroid/content/ServiceConnection;
 
     .line 885
-    iput-boolean v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->isBroadcastRegistered:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isBroadcastRegistered:Z
 
     .line 916
-    new-instance v0, Lcom/android/settings/nearby/NearbyEnabler$4;
+    new-instance v0, Lcom/android/settings_ex/nearby/NearbyEnabler$4;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/nearby/NearbyEnabler$4;-><init>(Lcom/android/settings/nearby/NearbyEnabler;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/nearby/NearbyEnabler$4;-><init>(Lcom/android/settings_ex/nearby/NearbyEnabler;)V
 
-    iput-object v0, p0, Lcom/android/settings/nearby/NearbyEnabler;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     .line 213
     const-string v0, "NearbyEnabler"
@@ -159,81 +159,81 @@
 
     const-string v2, ""
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 214
-    iput-object p1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     .line 216
-    iput-object p2, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object p2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 218
-    iput-object p3, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDeviceName:Landroid/preference/PreferenceScreen;
+    iput-object p3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDeviceName:Landroid/preference/PreferenceScreen;
 
     .line 219
-    iput-object p4, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbySharedContents:Landroid/preference/MultiSelectListPreference;
+    iput-object p4, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySharedContents:Landroid/preference/MultiSelectListPreference;
 
     .line 220
-    iput-object p5, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyAcceptList:Landroid/preference/MultiSelectListPreference;
+    iput-object p5, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyAcceptList:Landroid/preference/MultiSelectListPreference;
 
     .line 222
-    iput-object p7, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
+    iput-object p7, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
 
     .line 223
-    iput-object p8, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDownloadOption:Landroid/preference/ListPreference;
+    iput-object p8, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDownloadOption:Landroid/preference/ListPreference;
 
     .line 225
     const-string v0, "TYPE_NEARBY"
 
-    iput-object v0, p0, Lcom/android/settings/nearby/NearbyEnabler;->enablerType:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->enablerType:Ljava/lang/String;
 
     .line 227
-    invoke-direct {p0}, Lcom/android/settings/nearby/NearbyEnabler;->initEnabler()V
+    invoke-direct {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->initEnabler()V
 
     .line 228
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/nearby/NearbyEnabler;)Lcom/android/settings/widget/SwitchBar;
+.method static synthetic access$1000(Lcom/android/settings_ex/nearby/NearbyEnabler;)Lcom/android/settings_ex/widget/SwitchBar;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/nearby/NearbyEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/nearby/NearbyEnabler;
 
     .prologue
     .line 56
-    iget-object v0, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     return-object v0
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/nearby/NearbyEnabler;)V
+.method static synthetic access$1100(Lcom/android/settings_ex/nearby/NearbyEnabler;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/nearby/NearbyEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/nearby/NearbyEnabler;
 
     .prologue
     .line 56
-    invoke-direct {p0}, Lcom/android/settings/nearby/NearbyEnabler;->setCheckedState()V
+    invoke-direct {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->setCheckedState()V
 
     return-void
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/nearby/NearbyEnabler;)V
+.method static synthetic access$1200(Lcom/android/settings_ex/nearby/NearbyEnabler;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/nearby/NearbyEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/nearby/NearbyEnabler;
 
     .prologue
     .line 56
-    invoke-direct {p0}, Lcom/android/settings/nearby/NearbyEnabler;->setDefaultValues()V
+    invoke-direct {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->setDefaultValues()V
 
     return-void
 .end method
 
-.method static synthetic access$1300(Lcom/android/settings/nearby/NearbyEnabler;)Landroid/content/Context;
+.method static synthetic access$1300(Lcom/android/settings_ex/nearby/NearbyEnabler;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/nearby/NearbyEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/nearby/NearbyEnabler;
 
     .prologue
     .line 56
-    iget-object v0, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
@@ -244,113 +244,113 @@
 
     .prologue
     .line 56
-    sput-boolean p0, Lcom/android/settings/nearby/NearbyEnabler;->isShowWifiCheckingPopup:Z
+    sput-boolean p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isShowWifiCheckingPopup:Z
 
     return p0
 .end method
 
-.method static synthetic access$1500(Lcom/android/settings/nearby/NearbyEnabler;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$1500(Lcom/android/settings_ex/nearby/NearbyEnabler;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/nearby/NearbyEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/nearby/NearbyEnabler;
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 56
-    invoke-direct {p0, p1}, Lcom/android/settings/nearby/NearbyEnabler;->checkDeviceName(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/nearby/NearbyEnabler;->checkDeviceName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$1600(Lcom/android/settings/nearby/NearbyEnabler;)Landroid/preference/PreferenceScreen;
+.method static synthetic access$1600(Lcom/android/settings_ex/nearby/NearbyEnabler;)Landroid/preference/PreferenceScreen;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/nearby/NearbyEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/nearby/NearbyEnabler;
 
     .prologue
     .line 56
-    iget-object v0, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDeviceName:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDeviceName:Landroid/preference/PreferenceScreen;
 
     return-object v0
 .end method
 
-.method static synthetic access$1700(Lcom/android/settings/nearby/NearbyEnabler;Z)V
+.method static synthetic access$1700(Lcom/android/settings_ex/nearby/NearbyEnabler;Z)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/nearby/NearbyEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/nearby/NearbyEnabler;
     .param p1, "x1"    # Z
 
     .prologue
     .line 56
-    invoke-direct {p0, p1}, Lcom/android/settings/nearby/NearbyEnabler;->switchPreference(Z)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/nearby/NearbyEnabler;->switchPreference(Z)V
 
     return-void
 .end method
 
-.method static synthetic access$1800(Lcom/android/settings/nearby/NearbyEnabler;Ljava/util/HashSet;)Ljava/lang/String;
+.method static synthetic access$1800(Lcom/android/settings_ex/nearby/NearbyEnabler;Ljava/util/HashSet;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/nearby/NearbyEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/nearby/NearbyEnabler;
     .param p1, "x1"    # Ljava/util/HashSet;
 
     .prologue
     .line 56
-    invoke-direct {p0, p1}, Lcom/android/settings/nearby/NearbyEnabler;->getListString(Ljava/util/HashSet;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/nearby/NearbyEnabler;->getListString(Ljava/util/HashSet;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$700()Lcom/android/settings/nearby/IMediaServer;
+.method static synthetic access$700()Lcom/android/settings_ex/nearby/IMediaServer;
     .locals 1
 
     .prologue
     .line 56
-    sget-object v0, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sget-object v0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
     return-object v0
 .end method
 
-.method static synthetic access$702(Lcom/android/settings/nearby/IMediaServer;)Lcom/android/settings/nearby/IMediaServer;
+.method static synthetic access$702(Lcom/android/settings_ex/nearby/IMediaServer;)Lcom/android/settings_ex/nearby/IMediaServer;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/nearby/IMediaServer;
+    .param p0, "x0"    # Lcom/android/settings_ex/nearby/IMediaServer;
 
     .prologue
     .line 56
-    sput-object p0, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sput-object p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
     return-object p0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/nearby/NearbyEnabler;)Ljava/lang/String;
+.method static synthetic access$800(Lcom/android/settings_ex/nearby/NearbyEnabler;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/nearby/NearbyEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/nearby/NearbyEnabler;
 
     .prologue
     .line 56
-    iget-object v0, p0, Lcom/android/settings/nearby/NearbyEnabler;->enablerType:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->enablerType:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/nearby/NearbyEnabler;)Z
+.method static synthetic access$900(Lcom/android/settings_ex/nearby/NearbyEnabler;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/nearby/NearbyEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/nearby/NearbyEnabler;
 
     .prologue
     .line 56
-    iget-boolean v0, p0, Lcom/android/settings/nearby/NearbyEnabler;->isAutoStart:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isAutoStart:Z
 
     return v0
 .end method
 
-.method static synthetic access$902(Lcom/android/settings/nearby/NearbyEnabler;Z)Z
+.method static synthetic access$902(Lcom/android/settings_ex/nearby/NearbyEnabler;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/nearby/NearbyEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/nearby/NearbyEnabler;
     .param p1, "x1"    # Z
 
     .prologue
     .line 56
-    iput-boolean p1, p0, Lcom/android/settings/nearby/NearbyEnabler;->isAutoStart:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isAutoStart:Z
 
     return p1
 .end method
@@ -365,7 +365,7 @@
 
     const-string v6, "checkDeviceName"
 
-    invoke-static {v5, v6, p1}, Lcom/android/settings/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6, p1}, Lcom/android/settings_ex/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 825
     move-object v4, p1
@@ -418,7 +418,7 @@
 
     move-result-object v7
 
-    invoke-static {v5, v6, v7}, Lcom/android/settings/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6, v7}, Lcom/android/settings_ex/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 835
     .end local v0    # "changedName":Ljava/lang/String;
@@ -470,7 +470,7 @@
 
     move-result-object v7
 
-    invoke-static {v5, v6, v7}, Lcom/android/settings/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6, v7}, Lcom/android/settings_ex/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 848
     :cond_1
@@ -479,7 +479,7 @@
 
     .line 863
     .local v1, "deviceType":Ljava/lang/String;
-    iget-object v5, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -502,7 +502,7 @@
 
     const-string v7, "TABLET Device"
 
-    invoke-static {v5, v6, v7}, Lcom/android/settings/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6, v7}, Lcom/android/settings_ex/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 865
     const-string v1, "[Tablet]"
@@ -571,7 +571,7 @@
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     const v7, 0x7f0e10d6
 
@@ -620,7 +620,7 @@
 
     move-result-object v7
 
-    invoke-static {v5, v6, v7}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6, v7}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 879
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
@@ -633,7 +633,7 @@
 
     .prologue
     .line 748
-    iget-object v2, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     const-string v3, "pref_allshare"
 
@@ -663,7 +663,7 @@
 
     .prologue
     .line 700
-    invoke-direct {p0}, Lcom/android/settings/nearby/NearbyEnabler;->getDownloadTo()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->getDownloadTo()Ljava/lang/String;
 
     move-result-object v0
 
@@ -709,7 +709,7 @@
     move-result-object v1
 
     .line 706
-    iget-object v3, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -735,7 +735,7 @@
     if-eqz v3, :cond_3
 
     .line 708
-    iget-object v3, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     const-string v4, "storage"
 
@@ -747,7 +747,7 @@
 
     .line 710
     .local v2, "storageManager":Landroid/os/storage/StorageManager;
-    invoke-virtual {p0}, Lcom/android/settings/nearby/NearbyEnabler;->getExernalSdPath()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->getExernalSdPath()Ljava/lang/String;
 
     move-result-object v1
 
@@ -769,7 +769,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/settings/nearby/NearbyEnabler;->getExernalSdPath()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->getExernalSdPath()Ljava/lang/String;
 
     move-result-object v4
 
@@ -788,7 +788,7 @@
     move-result-object v1
 
     .line 714
-    iget-object v3, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -808,7 +808,7 @@
 
     const-string v5, "No External Volume: Change to Internal"
 
-    invoke-static {v3, v4, v5}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4, v5}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 717
     new-instance v3, Ljava/lang/StringBuilder;
@@ -838,7 +838,7 @@
     move-result-object v1
 
     .line 719
-    iget-object v3, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -849,16 +849,16 @@
     invoke-static {v3, v4, v1}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 720
-    iget-object v3, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
 
     if-eqz v3, :cond_0
 
     .line 721
-    iget-object v3, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
 
     const-string v4, "0"
 
-    invoke-virtual {p0, v3, v4}, Lcom/android/settings/nearby/NearbyEnabler;->onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
+    invoke-virtual {p0, v3, v4}, Lcom/android/settings_ex/nearby/NearbyEnabler;->onPreferenceChange(Landroid/preference/Preference;Ljava/lang/Object;)Z
 
     goto :goto_0
 
@@ -871,7 +871,7 @@
 
     const-string v5, "HandleSetUploadPath has incorrect value - Init to Default"
 
-    invoke-static {v3, v4, v5}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4, v5}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 727
     new-instance v3, Ljava/lang/StringBuilder;
@@ -901,7 +901,7 @@
     move-result-object v1
 
     .line 728
-    iget-object v3, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -919,7 +919,7 @@
 
     .prologue
     .line 735
-    iget-object v2, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     const-string v3, "pref_allshare"
 
@@ -941,12 +941,12 @@
 
     .line 739
     .local v1, "value":Ljava/lang/String;
-    iget-object v2, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
 
     if-eqz v2, :cond_0
 
     .line 740
-    iget-object v2, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
 
     invoke-virtual {v2, v1}, Landroid/preference/ListPreference;->setValue(Ljava/lang/String;)V
 
@@ -971,7 +971,7 @@
     .prologue
     .line 1287
     .local p1, "newValue":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
-    sget-object v2, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sget-object v2, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
     if-eqz v2, :cond_0
 
@@ -1045,9 +1045,9 @@
     .line 764
     .local v1, "flag":I
     :try_start_0
-    sget-object v6, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sget-object v6, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
-    invoke-interface {v6}, Lcom/android/settings/nearby/IMediaServer;->getSharedMediaType()I
+    invoke-interface {v6}, Lcom/android/settings_ex/nearby/IMediaServer;->getSharedMediaType()I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1055,7 +1055,7 @@
 
     .line 769
     :goto_0
-    iget-object v6, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     const-string v7, "pref_allshare"
 
@@ -1086,7 +1086,7 @@
 
     const-string v8, "Init SharedContent Value"
 
-    invoke-static {v6, v7, v8}, Lcom/android/settings/nearby/DLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v7, v8}, Lcom/android/settings_ex/nearby/DLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 777
     new-instance v5, Ljava/util/HashSet;
@@ -1115,12 +1115,12 @@
     .line 784
     .end local v5    # "temp":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     :cond_0
-    iget-object v6, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbySharedContents:Landroid/preference/MultiSelectListPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySharedContents:Landroid/preference/MultiSelectListPreference;
 
     if-eqz v6, :cond_1
 
     .line 785
-    iget-object v6, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbySharedContents:Landroid/preference/MultiSelectListPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySharedContents:Landroid/preference/MultiSelectListPreference;
 
     invoke-virtual {v6, v3}, Landroid/preference/MultiSelectListPreference;->setValues(Ljava/util/Set;)V
 
@@ -1234,97 +1234,97 @@
 
     const-string v3, ""
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 578
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mPreferenceChangeMap:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mPreferenceChangeMap:Ljava/util/HashMap;
 
     const-string v2, "nearby_settings"
 
-    new-instance v3, Lcom/android/settings/nearby/NearbyEnabler$HandleServerStart;
+    new-instance v3, Lcom/android/settings_ex/nearby/NearbyEnabler$HandleServerStart;
 
     const/4 v4, 0x0
 
-    invoke-direct {v3, v4}, Lcom/android/settings/nearby/NearbyEnabler$HandleServerStart;-><init>(Lcom/android/settings/nearby/NearbyEnabler$1;)V
+    invoke-direct {v3, v4}, Lcom/android/settings_ex/nearby/NearbyEnabler$HandleServerStart;-><init>(Lcom/android/settings_ex/nearby/NearbyEnabler$1;)V
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 579
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mPreferenceChangeMap:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mPreferenceChangeMap:Ljava/util/HashMap;
 
     const-string v2, "allshare_shared_contents"
 
-    new-instance v3, Lcom/android/settings/nearby/NearbyEnabler$HandleShareContentType;
+    new-instance v3, Lcom/android/settings_ex/nearby/NearbyEnabler$HandleShareContentType;
 
     const/4 v4, 0x0
 
-    invoke-direct {v3, p0, v4}, Lcom/android/settings/nearby/NearbyEnabler$HandleShareContentType;-><init>(Lcom/android/settings/nearby/NearbyEnabler;Lcom/android/settings/nearby/NearbyEnabler$1;)V
+    invoke-direct {v3, p0, v4}, Lcom/android/settings_ex/nearby/NearbyEnabler$HandleShareContentType;-><init>(Lcom/android/settings_ex/nearby/NearbyEnabler;Lcom/android/settings_ex/nearby/NearbyEnabler$1;)V
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 580
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mPreferenceChangeMap:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mPreferenceChangeMap:Ljava/util/HashMap;
 
     const-string v2, "allshare_device_name"
 
-    new-instance v3, Lcom/android/settings/nearby/NearbyEnabler$HandleServerName;
+    new-instance v3, Lcom/android/settings_ex/nearby/NearbyEnabler$HandleServerName;
 
     const/4 v4, 0x0
 
-    invoke-direct {v3, p0, v4}, Lcom/android/settings/nearby/NearbyEnabler$HandleServerName;-><init>(Lcom/android/settings/nearby/NearbyEnabler;Lcom/android/settings/nearby/NearbyEnabler$1;)V
+    invoke-direct {v3, p0, v4}, Lcom/android/settings_ex/nearby/NearbyEnabler$HandleServerName;-><init>(Lcom/android/settings_ex/nearby/NearbyEnabler;Lcom/android/settings_ex/nearby/NearbyEnabler$1;)V
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 581
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mPreferenceChangeMap:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mPreferenceChangeMap:Ljava/util/HashMap;
 
     const-string v2, "allshare_download_from"
 
-    new-instance v3, Lcom/android/settings/nearby/NearbyEnabler$HandleAllowUpload;
+    new-instance v3, Lcom/android/settings_ex/nearby/NearbyEnabler$HandleAllowUpload;
 
     const/4 v4, 0x0
 
-    invoke-direct {v3, v4}, Lcom/android/settings/nearby/NearbyEnabler$HandleAllowUpload;-><init>(Lcom/android/settings/nearby/NearbyEnabler$1;)V
+    invoke-direct {v3, v4}, Lcom/android/settings_ex/nearby/NearbyEnabler$HandleAllowUpload;-><init>(Lcom/android/settings_ex/nearby/NearbyEnabler$1;)V
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 582
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mPreferenceChangeMap:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mPreferenceChangeMap:Ljava/util/HashMap;
 
     const-string v2, "allshare_download_to"
 
-    new-instance v3, Lcom/android/settings/nearby/NearbyEnabler$HandleSetUploadPath;
+    new-instance v3, Lcom/android/settings_ex/nearby/NearbyEnabler$HandleSetUploadPath;
 
     const/4 v4, 0x0
 
-    invoke-direct {v3, p0, v4}, Lcom/android/settings/nearby/NearbyEnabler$HandleSetUploadPath;-><init>(Lcom/android/settings/nearby/NearbyEnabler;Lcom/android/settings/nearby/NearbyEnabler$1;)V
+    invoke-direct {v3, p0, v4}, Lcom/android/settings_ex/nearby/NearbyEnabler$HandleSetUploadPath;-><init>(Lcom/android/settings_ex/nearby/NearbyEnabler;Lcom/android/settings_ex/nearby/NearbyEnabler$1;)V
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 583
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mPreferenceChangeMap:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mPreferenceChangeMap:Ljava/util/HashMap;
 
     const-string v2, "allshare_accept_device"
 
-    new-instance v3, Lcom/android/settings/nearby/NearbyEnabler$HandleAcceptDevice;
+    new-instance v3, Lcom/android/settings_ex/nearby/NearbyEnabler$HandleAcceptDevice;
 
     const/4 v4, 0x0
 
-    invoke-direct {v3, p0, v4}, Lcom/android/settings/nearby/NearbyEnabler$HandleAcceptDevice;-><init>(Lcom/android/settings/nearby/NearbyEnabler;Lcom/android/settings/nearby/NearbyEnabler$1;)V
+    invoke-direct {v3, p0, v4}, Lcom/android/settings_ex/nearby/NearbyEnabler$HandleAcceptDevice;-><init>(Lcom/android/settings_ex/nearby/NearbyEnabler;Lcom/android/settings_ex/nearby/NearbyEnabler$1;)V
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 584
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mPreferenceChangeMap:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mPreferenceChangeMap:Ljava/util/HashMap;
 
     const-string v2, "allshare_reject_device"
 
-    new-instance v3, Lcom/android/settings/nearby/NearbyEnabler$HandleRejectDevice;
+    new-instance v3, Lcom/android/settings_ex/nearby/NearbyEnabler$HandleRejectDevice;
 
     const/4 v4, 0x0
 
-    invoke-direct {v3, p0, v4}, Lcom/android/settings/nearby/NearbyEnabler$HandleRejectDevice;-><init>(Lcom/android/settings/nearby/NearbyEnabler;Lcom/android/settings/nearby/NearbyEnabler$1;)V
+    invoke-direct {v3, p0, v4}, Lcom/android/settings_ex/nearby/NearbyEnabler$HandleRejectDevice;-><init>(Lcom/android/settings_ex/nearby/NearbyEnabler;Lcom/android/settings_ex/nearby/NearbyEnabler$1;)V
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
@@ -1362,7 +1362,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 587
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
@@ -1376,7 +1376,7 @@
     .prologue
     .line 239
     :try_start_0
-    sget-object v1, Lcom/android/settings/nearby/NearbyEnabler;->mPreferenceChangeThread:Landroid/os/HandlerThread;
+    sget-object v1, Lcom/android/settings_ex/nearby/NearbyEnabler;->mPreferenceChangeThread:Landroid/os/HandlerThread;
 
     if-nez v1, :cond_0
 
@@ -1387,7 +1387,7 @@
 
     const-string v3, "create new HandlerThread!!"
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 241
     new-instance v1, Landroid/os/HandlerThread;
@@ -1396,11 +1396,11 @@
 
     invoke-direct {v1, v2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    sput-object v1, Lcom/android/settings/nearby/NearbyEnabler;->mPreferenceChangeThread:Landroid/os/HandlerThread;
+    sput-object v1, Lcom/android/settings_ex/nearby/NearbyEnabler;->mPreferenceChangeThread:Landroid/os/HandlerThread;
 
     .line 243
     :cond_0
-    sget-object v1, Lcom/android/settings/nearby/NearbyEnabler;->mPreferenceChangeThread:Landroid/os/HandlerThread;
+    sget-object v1, Lcom/android/settings_ex/nearby/NearbyEnabler;->mPreferenceChangeThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v1}, Landroid/os/HandlerThread;->isAlive()Z
 
@@ -1415,16 +1415,16 @@
 
     const-string v3, "start HandlerThread!!"
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 245
-    sget-object v1, Lcom/android/settings/nearby/NearbyEnabler;->mPreferenceChangeThread:Landroid/os/HandlerThread;
+    sget-object v1, Lcom/android/settings_ex/nearby/NearbyEnabler;->mPreferenceChangeThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
 
     .line 247
     :cond_1
-    sget-object v1, Lcom/android/settings/nearby/NearbyEnabler;->mPreferenceChangeWorker:Landroid/os/Handler;
+    sget-object v1, Lcom/android/settings_ex/nearby/NearbyEnabler;->mPreferenceChangeWorker:Landroid/os/Handler;
 
     if-nez v1, :cond_2
 
@@ -1435,12 +1435,12 @@
 
     const-string v3, "create new Handler!!"
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 249
     new-instance v1, Landroid/os/Handler;
 
-    sget-object v2, Lcom/android/settings/nearby/NearbyEnabler;->mPreferenceChangeThread:Landroid/os/HandlerThread;
+    sget-object v2, Lcom/android/settings_ex/nearby/NearbyEnabler;->mPreferenceChangeThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v2}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
@@ -1448,14 +1448,14 @@
 
     invoke-direct {v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    sput-object v1, Lcom/android/settings/nearby/NearbyEnabler;->mPreferenceChangeWorker:Landroid/os/Handler;
+    sput-object v1, Lcom/android/settings_ex/nearby/NearbyEnabler;->mPreferenceChangeWorker:Landroid/os/Handler;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 257
     :cond_2
     :goto_0
-    invoke-direct {p0}, Lcom/android/settings/nearby/NearbyEnabler;->initChangePreferenceHandler()V
+    invoke-direct {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->initChangePreferenceHandler()V
 
     .line 258
     return-void
@@ -1488,7 +1488,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 253
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
@@ -1502,14 +1502,14 @@
     .prologue
     .line 965
     :try_start_0
-    sget-object v1, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sget-object v1, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
     if-eqz v1, :cond_0
 
     .line 966
-    sget-object v1, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sget-object v1, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
-    invoke-interface {v1}, Lcom/android/settings/nearby/IMediaServer;->isServerStarted()Z
+    invoke-interface {v1}, Lcom/android/settings_ex/nearby/IMediaServer;->isServerStarted()Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1546,18 +1546,18 @@
 
     const-string v3, "setBroadcastReceiver()"
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 890
     :try_start_0
-    iget-boolean v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->isBroadcastRegistered:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isBroadcastRegistered:Z
 
     if-nez v1, :cond_0
 
     .line 891
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/settings/nearby/NearbyEnabler;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     new-instance v3, Landroid/content/IntentFilter;
 
@@ -1568,9 +1568,9 @@
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 894
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/settings/nearby/NearbyEnabler;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     new-instance v3, Landroid/content/IntentFilter;
 
@@ -1583,7 +1583,7 @@
     .line 897
     const/4 v1, 0x1
 
-    iput-boolean v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->isBroadcastRegistered:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isBroadcastRegistered:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1620,7 +1620,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -1636,17 +1636,17 @@
 
     const-string v3, ""
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1082
     :try_start_0
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
-    iget-object v2, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     invoke-direct {v1, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    iget-object v2, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     const v3, 0x7f0e10d7
 
@@ -1658,7 +1658,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     const v3, 0x7f0e10e4
 
@@ -1672,9 +1672,9 @@
 
     const v2, 0x7f0e10ce
 
-    new-instance v3, Lcom/android/settings/nearby/NearbyEnabler$12;
+    new-instance v3, Lcom/android/settings_ex/nearby/NearbyEnabler$12;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/nearby/NearbyEnabler$12;-><init>(Lcom/android/settings/nearby/NearbyEnabler;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/nearby/NearbyEnabler$12;-><init>(Lcom/android/settings_ex/nearby/NearbyEnabler;)V
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1682,17 +1682,17 @@
 
     const v2, 0x7f0e10cd
 
-    new-instance v3, Lcom/android/settings/nearby/NearbyEnabler$11;
+    new-instance v3, Lcom/android/settings_ex/nearby/NearbyEnabler$11;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/nearby/NearbyEnabler$11;-><init>(Lcom/android/settings/nearby/NearbyEnabler;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/nearby/NearbyEnabler$11;-><init>(Lcom/android/settings_ex/nearby/NearbyEnabler;)V
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v1
 
-    new-instance v2, Lcom/android/settings/nearby/NearbyEnabler$10;
+    new-instance v2, Lcom/android/settings_ex/nearby/NearbyEnabler$10;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/nearby/NearbyEnabler$10;-><init>(Lcom/android/settings/nearby/NearbyEnabler;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/nearby/NearbyEnabler$10;-><init>(Lcom/android/settings_ex/nearby/NearbyEnabler;)V
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1734,7 +1734,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1114
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
@@ -1753,11 +1753,11 @@
 
     const-string v9, ""
 
-    invoke-static {v7, v8, v9}, Lcom/android/settings/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8, v9}, Lcom/android/settings_ex/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1003
     :try_start_0
-    iget-object v7, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v7, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     const-string v8, "layout_inflater"
 
@@ -1811,7 +1811,7 @@
     .line 1014
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
-    iget-object v7, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v7, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     invoke-direct {v1, v7}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -1827,25 +1827,25 @@
     .line 1018
     const v7, 0x7f0e10cc
 
-    new-instance v8, Lcom/android/settings/nearby/NearbyEnabler$7;
+    new-instance v8, Lcom/android/settings_ex/nearby/NearbyEnabler$7;
 
-    invoke-direct {v8, p0, v2}, Lcom/android/settings/nearby/NearbyEnabler$7;-><init>(Lcom/android/settings/nearby/NearbyEnabler;Landroid/widget/CheckBox;)V
+    invoke-direct {v8, p0, v2}, Lcom/android/settings_ex/nearby/NearbyEnabler$7;-><init>(Lcom/android/settings_ex/nearby/NearbyEnabler;Landroid/widget/CheckBox;)V
 
     invoke-virtual {v1, v7, v8}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 1037
     const v7, 0x7f0e10cd
 
-    new-instance v8, Lcom/android/settings/nearby/NearbyEnabler$8;
+    new-instance v8, Lcom/android/settings_ex/nearby/NearbyEnabler$8;
 
-    invoke-direct {v8, p0}, Lcom/android/settings/nearby/NearbyEnabler$8;-><init>(Lcom/android/settings/nearby/NearbyEnabler;)V
+    invoke-direct {v8, p0}, Lcom/android/settings_ex/nearby/NearbyEnabler$8;-><init>(Lcom/android/settings_ex/nearby/NearbyEnabler;)V
 
     invoke-virtual {v1, v7, v8}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 1047
-    new-instance v7, Lcom/android/settings/nearby/NearbyEnabler$9;
+    new-instance v7, Lcom/android/settings_ex/nearby/NearbyEnabler$9;
 
-    invoke-direct {v7, p0}, Lcom/android/settings/nearby/NearbyEnabler$9;-><init>(Lcom/android/settings/nearby/NearbyEnabler;)V
+    invoke-direct {v7, p0}, Lcom/android/settings_ex/nearby/NearbyEnabler$9;-><init>(Lcom/android/settings_ex/nearby/NearbyEnabler;)V
 
     invoke-virtual {v1, v7}, Landroid/app/AlertDialog$Builder;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1903,7 +1903,7 @@
 
     move-result-object v9
 
-    invoke-static {v7, v8, v9}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8, v9}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1074
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
@@ -1922,17 +1922,17 @@
 
     const-string v3, ""
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 978
     :try_start_0
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
-    iget-object v2, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     invoke-direct {v1, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    iget-object v2, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     const v3, 0x7f0e10d6
 
@@ -1944,7 +1944,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     const v3, 0x7f0e10cf
 
@@ -1958,17 +1958,17 @@
 
     const v2, 0x7f0e10cc
 
-    new-instance v3, Lcom/android/settings/nearby/NearbyEnabler$6;
+    new-instance v3, Lcom/android/settings_ex/nearby/NearbyEnabler$6;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/nearby/NearbyEnabler$6;-><init>(Lcom/android/settings/nearby/NearbyEnabler;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/nearby/NearbyEnabler$6;-><init>(Lcom/android/settings_ex/nearby/NearbyEnabler;)V
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v1
 
-    new-instance v2, Lcom/android/settings/nearby/NearbyEnabler$5;
+    new-instance v2, Lcom/android/settings_ex/nearby/NearbyEnabler$5;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/nearby/NearbyEnabler$5;-><init>(Lcom/android/settings/nearby/NearbyEnabler;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/nearby/NearbyEnabler$5;-><init>(Lcom/android/settings_ex/nearby/NearbyEnabler;)V
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
 
@@ -2010,7 +2010,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 995
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
@@ -2027,12 +2027,12 @@
 
     const-string v1, "setCheckedState"
 
-    iget-object v2, p0, Lcom/android/settings/nearby/NearbyEnabler;->enablerType:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->enablerType:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 283
-    sget-object v0, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sget-object v0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
     if-nez v0, :cond_1
 
@@ -2043,48 +2043,48 @@
 
     .line 286
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_0
 
     .line 287
-    iget-object v0, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->isEnabled()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->isEnabled()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
     .line 288
-    iget-object v0, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 289
     :cond_2
-    invoke-direct {p0}, Lcom/android/settings/nearby/NearbyEnabler;->isServerStarted()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->isServerStarted()Z
 
     move-result v0
 
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1}, Lcom/android/settings/widget/SwitchBar;->isChecked()Z
+    invoke-virtual {v1}, Lcom/android/settings_ex/widget/SwitchBar;->isChecked()Z
 
     move-result v1
 
     if-eq v0, v1, :cond_0
 
     .line 290
-    iget-object v0, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-direct {p0}, Lcom/android/settings/nearby/NearbyEnabler;->isServerStarted()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->isServerStarted()Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     goto :goto_0
 .end method
@@ -2100,52 +2100,52 @@
 
     const-string v7, ""
 
-    invoke-static {v5, v6, v7}, Lcom/android/settings/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6, v7}, Lcom/android/settings_ex/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 263
-    invoke-direct {p0}, Lcom/android/settings/nearby/NearbyEnabler;->getDownloadPath()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->getDownloadPath()Ljava/lang/String;
 
     move-result-object v2
 
     .line 264
     .local v2, "downloadPath":Ljava/lang/String;
-    invoke-direct {p0}, Lcom/android/settings/nearby/NearbyEnabler;->getDownloadOption()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->getDownloadOption()Ljava/lang/String;
 
     move-result-object v1
 
     .line 265
     .local v1, "downloadOption":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/nearby/NearbyEnabler;->getDeviceName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->getDeviceName()Ljava/lang/String;
 
     move-result-object v0
 
     .line 266
     .local v0, "deviceName":Ljava/lang/String;
-    invoke-direct {p0}, Lcom/android/settings/nearby/NearbyEnabler;->getSharedContent()I
+    invoke-direct {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->getSharedContent()I
 
     move-result v4
 
     .line 269
     .local v4, "flag":I
     :try_start_0
-    sget-object v5, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sget-object v5, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
-    invoke-interface {v5, v4}, Lcom/android/settings/nearby/IMediaServer;->setSharedMediaType(I)V
+    invoke-interface {v5, v4}, Lcom/android/settings_ex/nearby/IMediaServer;->setSharedMediaType(I)V
 
     .line 270
-    sget-object v5, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sget-object v5, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
-    invoke-interface {v5, v0}, Lcom/android/settings/nearby/IMediaServer;->setMediaServerName(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v5, v0}, Lcom/android/settings_ex/nearby/IMediaServer;->setMediaServerName(Ljava/lang/String;)Ljava/lang/String;
 
     .line 271
-    sget-object v5, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sget-object v5, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
-    invoke-interface {v5, v2}, Lcom/android/settings/nearby/IMediaServer;->setUploadPath(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v5, v2}, Lcom/android/settings_ex/nearby/IMediaServer;->setUploadPath(Ljava/lang/String;)Ljava/lang/String;
 
     .line 272
-    sget-object v5, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sget-object v5, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
-    invoke-interface {v5, v1}, Lcom/android/settings/nearby/IMediaServer;->setContentUploadAllowed(Ljava/lang/String;)V
+    invoke-interface {v5, v1}, Lcom/android/settings_ex/nearby/IMediaServer;->setContentUploadAllowed(Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
@@ -2195,7 +2195,7 @@
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 607
-    iget-object v2, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
@@ -2203,7 +2203,7 @@
 
     if-eqz v2, :cond_1
 
-    iget-boolean v2, p0, Lcom/android/settings/nearby/NearbyEnabler;->isBound:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isBound:Z
 
     if-nez v2, :cond_1
 
@@ -2222,7 +2222,7 @@
 
     move-result-object v4
 
-    iget-boolean v5, p0, Lcom/android/settings/nearby/NearbyEnabler;->isBound:Z
+    iget-boolean v5, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isBound:Z
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -2232,12 +2232,12 @@
 
     move-result-object v4
 
-    invoke-static {v2, v3, v4}, Lcom/android/settings/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3, v4}, Lcom/android/settings_ex/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 609
-    iget-object v2, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
-    iget-object v3, p0, Lcom/android/settings/nearby/NearbyEnabler;->mServiceConn:Landroid/content/ServiceConnection;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mServiceConn:Landroid/content/ServiceConnection;
 
     const/4 v4, 0x0
 
@@ -2245,7 +2245,7 @@
 
     move-result v2
 
-    iput-boolean v2, p0, Lcom/android/settings/nearby/NearbyEnabler;->isBound:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isBound:Z
 
     .line 619
     .end local v1    # "intent":Landroid/content/Intent;
@@ -2256,11 +2256,11 @@
     .line 610
     .restart local v1    # "intent":Landroid/content/Intent;
     :cond_1
-    iget-boolean v2, p0, Lcom/android/settings/nearby/NearbyEnabler;->isBound:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isBound:Z
 
     if-eqz v2, :cond_0
 
-    sget-object v2, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sget-object v2, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
     if-nez v2, :cond_0
 
@@ -2279,7 +2279,7 @@
 
     move-result-object v4
 
-    iget-boolean v5, p0, Lcom/android/settings/nearby/NearbyEnabler;->isBound:Z
+    iget-boolean v5, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isBound:Z
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -2289,12 +2289,12 @@
 
     move-result-object v4
 
-    invoke-static {v2, v3, v4}, Lcom/android/settings/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3, v4}, Lcom/android/settings_ex/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 612
-    iget-object v2, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
-    iget-object v3, p0, Lcom/android/settings/nearby/NearbyEnabler;->mServiceConn:Landroid/content/ServiceConnection;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mServiceConn:Landroid/content/ServiceConnection;
 
     const/4 v4, 0x0
 
@@ -2333,7 +2333,7 @@
 
     move-result-object v4
 
-    invoke-static {v2, v3, v4}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3, v4}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 617
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
@@ -2350,7 +2350,7 @@
 
     .line 469
     :try_start_0
-    sget-object v3, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sget-object v3, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
     if-nez v3, :cond_1
 
@@ -2363,22 +2363,22 @@
 
     const-string v5, "Start new DMS Serivce"
 
-    invoke-static {v3, v4, v5}, Lcom/android/settings/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4, v5}, Lcom/android/settings_ex/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 473
-    invoke-direct {p0}, Lcom/android/settings/nearby/NearbyEnabler;->startDmsService()V
+    invoke-direct {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->startDmsService()V
 
     .line 476
-    iget-object v3, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     const/4 v4, 0x0
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 477
     const/4 v3, 0x1
 
-    iput-boolean v3, p0, Lcom/android/settings/nearby/NearbyEnabler;->isAutoStart:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isAutoStart:Z
 
     .line 504
     :cond_0
@@ -2387,13 +2387,13 @@
 
     .line 479
     :cond_1
-    sget-object v3, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sget-object v3, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
     if-eqz v3, :cond_2
 
-    sget-object v3, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sget-object v3, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
-    invoke-interface {v3}, Lcom/android/settings/nearby/IMediaServer;->isServerStarted()Z
+    invoke-interface {v3}, Lcom/android/settings_ex/nearby/IMediaServer;->isServerStarted()Z
 
     move-result v3
 
@@ -2406,17 +2406,17 @@
 
     const-string v5, "Change State to:"
 
-    invoke-static {v3, v4, v5}, Lcom/android/settings/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4, v5}, Lcom/android/settings_ex/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 482
-    iget-object v3, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     const/4 v4, 0x0
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 484
-    iget-object v3, p0, Lcom/android/settings/nearby/NearbyEnabler;->mPreferenceChangeMap:Ljava/util/HashMap;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mPreferenceChangeMap:Ljava/util/HashMap;
 
     const-string v4, "nearby_settings"
 
@@ -2431,11 +2431,11 @@
     if-eqz v2, :cond_0
 
     .line 487
-    sget-object v3, Lcom/android/settings/nearby/NearbyEnabler;->mPreferenceChangeWorker:Landroid/os/Handler;
+    sget-object v3, Lcom/android/settings_ex/nearby/NearbyEnabler;->mPreferenceChangeWorker:Landroid/os/Handler;
 
-    new-instance v4, Lcom/android/settings/nearby/NearbyEnabler$1;
+    new-instance v4, Lcom/android/settings_ex/nearby/NearbyEnabler$1;
 
-    invoke-direct {v4, p0, v2, p1}, Lcom/android/settings/nearby/NearbyEnabler$1;-><init>(Lcom/android/settings/nearby/NearbyEnabler;Landroid/preference/Preference$OnPreferenceChangeListener;Z)V
+    invoke-direct {v4, p0, v2, p1}, Lcom/android/settings_ex/nearby/NearbyEnabler$1;-><init>(Lcom/android/settings_ex/nearby/NearbyEnabler;Landroid/preference/Preference$OnPreferenceChangeListener;Z)V
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
     :try_end_0
@@ -2457,7 +2457,7 @@
 
     const-string v5, "RemoteException: "
 
-    invoke-static {v3, v4, v5, v1}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-static {v3, v4, v5, v1}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
 
     .line 499
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
@@ -2474,7 +2474,7 @@
 
     const-string v5, "Change check state"
 
-    invoke-static {v3, v4, v5}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4, v5}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
@@ -2509,7 +2509,7 @@
 
     move-result-object v5
 
-    invoke-static {v3, v4, v5}, Lcom/android/settings/nearby/DLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4, v5}, Lcom/android/settings_ex/nearby/DLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 502
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
@@ -2528,25 +2528,25 @@
 
     const-string v3, ""
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 907
     :try_start_0
-    iget-boolean v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->isBroadcastRegistered:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isBroadcastRegistered:Z
 
     if-eqz v1, :cond_0
 
     .line 908
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/settings/nearby/NearbyEnabler;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 909
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->isBroadcastRegistered:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isBroadcastRegistered:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2583,7 +2583,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -2598,9 +2598,9 @@
 
     .line 1303
     :try_start_0
-    sget-object v3, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sget-object v3, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
-    invoke-interface {v3}, Lcom/android/settings/nearby/IMediaServer;->getAcceptEntry()[Ljava/lang/String;
+    invoke-interface {v3}, Lcom/android/settings_ex/nearby/IMediaServer;->getAcceptEntry()[Ljava/lang/String;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
@@ -2641,9 +2641,9 @@
 
     .line 1315
     :try_start_0
-    sget-object v3, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sget-object v3, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
-    invoke-interface {v3}, Lcom/android/settings/nearby/IMediaServer;->getAcceptEntryValue()[Ljava/lang/String;
+    invoke-interface {v3}, Lcom/android/settings_ex/nearby/IMediaServer;->getAcceptEntryValue()[Ljava/lang/String;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
@@ -2687,10 +2687,10 @@
 
     const-string v2, ""
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 818
-    iget-object v0, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2702,7 +2702,7 @@
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/android/settings/nearby/NearbyEnabler;->checkDeviceName(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->checkDeviceName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2715,7 +2715,7 @@
     .prologue
     .line 678
     :try_start_0
-    iget-object v8, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     const-string v9, "storage"
 
@@ -2842,7 +2842,7 @@
 
     move-result-object v10
 
-    invoke-static {v8, v9, v10}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v9, v10}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 693
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
@@ -2863,9 +2863,9 @@
 
     .line 1327
     :try_start_0
-    sget-object v3, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sget-object v3, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
-    invoke-interface {v3}, Lcom/android/settings/nearby/IMediaServer;->getRejectList()[Ljava/lang/String;
+    invoke-interface {v3}, Lcom/android/settings_ex/nearby/IMediaServer;->getRejectList()[Ljava/lang/String;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
@@ -2906,9 +2906,9 @@
 
     .line 1339
     :try_start_0
-    sget-object v3, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sget-object v3, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
-    invoke-interface {v3}, Lcom/android/settings/nearby/IMediaServer;->getRejectListValue()[Ljava/lang/String;
+    invoke-interface {v3}, Lcom/android/settings_ex/nearby/IMediaServer;->getRejectListValue()[Ljava/lang/String;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
@@ -2976,7 +2976,7 @@
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/nearby/NearbyEnabler;->enablerType:Ljava/lang/String;
+    iget-object v7, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->enablerType:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2986,10 +2986,10 @@
 
     move-result-object v6
 
-    invoke-static {v4, v5, v6}, Lcom/android/settings/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5, v6}, Lcom/android/settings_ex/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 530
-    iget-object v4, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyAcceptList:Landroid/preference/MultiSelectListPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyAcceptList:Landroid/preference/MultiSelectListPreference;
 
     invoke-virtual {p1, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -2998,14 +2998,14 @@
     if-eqz v4, :cond_1
 
     .line 531
-    invoke-direct {p0}, Lcom/android/settings/nearby/NearbyEnabler;->isServerStarted()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->isServerStarted()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
     .line 532
-    invoke-direct {p0}, Lcom/android/settings/nearby/NearbyEnabler;->requestRestartServerPopup()V
+    invoke-direct {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->requestRestartServerPopup()V
 
     .line 550
     :cond_0
@@ -3016,7 +3016,7 @@
 
     .line 552
     .local v2, "key":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/nearby/NearbyEnabler;->mPreferenceChangeMap:Ljava/util/HashMap;
+    iget-object v4, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mPreferenceChangeMap:Ljava/util/HashMap;
 
     invoke-virtual {v4, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -3030,11 +3030,11 @@
 
     .line 556
     :try_start_0
-    sget-object v4, Lcom/android/settings/nearby/NearbyEnabler;->mPreferenceChangeWorker:Landroid/os/Handler;
+    sget-object v4, Lcom/android/settings_ex/nearby/NearbyEnabler;->mPreferenceChangeWorker:Landroid/os/Handler;
 
-    new-instance v5, Lcom/android/settings/nearby/NearbyEnabler$2;
+    new-instance v5, Lcom/android/settings_ex/nearby/NearbyEnabler$2;
 
-    invoke-direct {v5, p0, v1, p1, p2}, Lcom/android/settings/nearby/NearbyEnabler$2;-><init>(Lcom/android/settings/nearby/NearbyEnabler;Landroid/preference/Preference$OnPreferenceChangeListener;Landroid/preference/Preference;Ljava/lang/Object;)V
+    invoke-direct {v5, p0, v1, p1, p2}, Lcom/android/settings_ex/nearby/NearbyEnabler$2;-><init>(Lcom/android/settings_ex/nearby/NearbyEnabler;Landroid/preference/Preference$OnPreferenceChangeListener;Landroid/preference/Preference;Ljava/lang/Object;)V
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
     :try_end_0
@@ -3051,7 +3051,7 @@
     .end local v1    # "handler":Landroid/preference/Preference$OnPreferenceChangeListener;
     .end local v2    # "key":Ljava/lang/String;
     :cond_1
-    iget-object v4, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
 
     invoke-virtual {p1, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -3082,10 +3082,10 @@
 
     move-result-object v6
 
-    invoke-static {v4, v5, v6}, Lcom/android/settings/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5, v6}, Lcom/android/settings_ex/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 538
-    iget-object v4, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
 
     invoke-virtual {v4}, Landroid/preference/ListPreference;->getEntries()[Ljava/lang/CharSequence;
 
@@ -3105,7 +3105,7 @@
 
     .line 540
     .local v3, "summary":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
 
     invoke-virtual {v4, v3}, Landroid/preference/ListPreference;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -3114,7 +3114,7 @@
     .line 543
     .end local v3    # "summary":Ljava/lang/String;
     :cond_2
-    iget-object v4, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDownloadOption:Landroid/preference/ListPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDownloadOption:Landroid/preference/ListPreference;
 
     invoke-virtual {p1, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -3145,10 +3145,10 @@
 
     move-result-object v6
 
-    invoke-static {v4, v5, v6}, Lcom/android/settings/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5, v6}, Lcom/android/settings_ex/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 545
-    iget-object v4, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDownloadOption:Landroid/preference/ListPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDownloadOption:Landroid/preference/ListPreference;
 
     invoke-virtual {v4}, Landroid/preference/ListPreference;->getEntries()[Ljava/lang/CharSequence;
 
@@ -3168,7 +3168,7 @@
 
     .line 547
     .restart local v3    # "summary":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDownloadOption:Landroid/preference/ListPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDownloadOption:Landroid/preference/ListPreference;
 
     invoke-virtual {v4, v3}, Landroid/preference/ListPreference;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -3205,7 +3205,7 @@
 
     move-result-object v6
 
-    invoke-static {v4, v5, v6}, Lcom/android/settings/nearby/DLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5, v6}, Lcom/android/settings_ex/nearby/DLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 567
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
@@ -3259,7 +3259,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/nearby/NearbyEnabler;->enablerType:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->enablerType:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3269,28 +3269,28 @@
 
     move-result-object v3
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 420
     if-eqz p2, :cond_1
 
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/android/settings/nearby/DMSUtil;->isNetworkConnected(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/nearby/DMSUtil;->isNetworkConnected(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
     .line 421
-    invoke-direct {p0}, Lcom/android/settings/nearby/NearbyEnabler;->requestWifiSettingPopup()V
+    invoke-direct {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->requestWifiSettingPopup()V
 
     .line 423
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 439
     :cond_0
@@ -3299,9 +3299,9 @@
 
     .line 429
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1}, Lcom/android/settings/widget/SwitchBar;->getSwitch()Lcom/android/settings/widget/ToggleSwitch;
+    invoke-virtual {v1}, Lcom/android/settings_ex/widget/SwitchBar;->getSwitch()Lcom/android/settings_ex/widget/ToggleSwitch;
 
     move-result-object v1
 
@@ -3312,7 +3312,7 @@
     if-eqz v1, :cond_0
 
     .line 430
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
     const-string v2, "pref_allshare"
 
@@ -3322,13 +3322,13 @@
 
     .line 432
     .local v0, "sharedPreference":Landroid/content/SharedPreferences;
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    sget-boolean v1, Lcom/android/settings/nearby/NearbyEnabler;->isShowWifiCheckingPopup:Z
+    sget-boolean v1, Lcom/android/settings_ex/nearby/NearbyEnabler;->isShowWifiCheckingPopup:Z
 
     if-nez v1, :cond_2
 
@@ -3343,13 +3343,13 @@
     if-eqz v1, :cond_2
 
     .line 434
-    invoke-direct {p0}, Lcom/android/settings/nearby/NearbyEnabler;->requestWifiCheckingPopup()V
+    invoke-direct {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->requestWifiCheckingPopup()V
 
     goto :goto_0
 
     .line 436
     :cond_2
-    invoke-direct {p0, p2}, Lcom/android/settings/nearby/NearbyEnabler;->switchPreference(Z)V
+    invoke-direct {p0, p2}, Lcom/android/settings_ex/nearby/NearbyEnabler;->switchPreference(Z)V
 
     goto :goto_0
 .end method
@@ -3367,77 +3367,77 @@
 
     const-string v2, "pause"
 
-    iget-object v3, p0, Lcom/android/settings/nearby/NearbyEnabler;->enablerType:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->enablerType:Ljava/lang/String;
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 370
-    iput-boolean v6, p0, Lcom/android/settings/nearby/NearbyEnabler;->isResumeState:Z
+    iput-boolean v6, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isResumeState:Z
 
     .line 373
     :try_start_0
-    sget-object v1, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sget-object v1, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
     if-eqz v1, :cond_0
 
     .line 374
-    sget-object v1, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sget-object v1, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
-    invoke-interface {v1}, Lcom/android/settings/nearby/IMediaServer;->pause()V
+    invoke-interface {v1}, Lcom/android/settings_ex/nearby/IMediaServer;->pause()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 384
     :cond_0
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v1, :cond_1
 
     .line 385
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v1, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 392
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbySharedContents:Landroid/preference/MultiSelectListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySharedContents:Landroid/preference/MultiSelectListPreference;
 
     if-eqz v1, :cond_2
 
     .line 393
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbySharedContents:Landroid/preference/MultiSelectListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySharedContents:Landroid/preference/MultiSelectListPreference;
 
     invoke-virtual {v1, v5}, Landroid/preference/MultiSelectListPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 396
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
 
     if-eqz v1, :cond_3
 
     .line 397
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
 
     invoke-virtual {v1, v5}, Landroid/preference/ListPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 400
     :cond_3
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDownloadOption:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDownloadOption:Landroid/preference/ListPreference;
 
     if-eqz v1, :cond_4
 
     .line 401
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDownloadOption:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDownloadOption:Landroid/preference/ListPreference;
 
     invoke-virtual {v1, v5}, Landroid/preference/ListPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 404
     :cond_4
-    invoke-direct {p0}, Lcom/android/settings/nearby/NearbyEnabler;->unregisterBroadcastReceiver()V
+    invoke-direct {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->unregisterBroadcastReceiver()V
 
     .line 407
-    iget-boolean v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->isBound:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isBound:Z
 
     if-eqz v1, :cond_5
 
@@ -3456,7 +3456,7 @@
 
     move-result-object v3
 
-    iget-boolean v4, p0, Lcom/android/settings/nearby/NearbyEnabler;->isBound:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isBound:Z
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -3466,17 +3466,17 @@
 
     move-result-object v3
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 409
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/settings/nearby/NearbyEnabler;->mServiceConn:Landroid/content/ServiceConnection;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mServiceConn:Landroid/content/ServiceConnection;
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
     .line 410
-    iput-boolean v6, p0, Lcom/android/settings/nearby/NearbyEnabler;->isBound:Z
+    iput-boolean v6, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isBound:Z
 
     .line 412
     :cond_5
@@ -3510,7 +3510,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 377
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
@@ -3527,84 +3527,84 @@
 
     const-string v2, "resume"
 
-    iget-object v3, p0, Lcom/android/settings/nearby/NearbyEnabler;->enablerType:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->enablerType:Ljava/lang/String;
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 324
     const/4 v1, 0x1
 
-    iput-boolean v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->isResumeState:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->isResumeState:Z
 
     .line 327
     :try_start_0
-    sget-object v1, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sget-object v1, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
     if-eqz v1, :cond_0
 
     .line 328
-    sget-object v1, Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
+    sget-object v1, Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
 
-    iget-object v2, p0, Lcom/android/settings/nearby/NearbyEnabler;->enablerType:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->enablerType:Ljava/lang/String;
 
-    invoke-interface {v1, v2}, Lcom/android/settings/nearby/IMediaServer;->resume(Ljava/lang/String;)V
+    invoke-interface {v1, v2}, Lcom/android/settings_ex/nearby/IMediaServer;->resume(Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 336
     :cond_0
     :goto_0
-    invoke-direct {p0}, Lcom/android/settings/nearby/NearbyEnabler;->startDmsService()V
+    invoke-direct {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->startDmsService()V
 
     .line 342
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v1, :cond_1
 
     .line 343
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v1, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 350
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbySharedContents:Landroid/preference/MultiSelectListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySharedContents:Landroid/preference/MultiSelectListPreference;
 
     if-eqz v1, :cond_2
 
     .line 351
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbySharedContents:Landroid/preference/MultiSelectListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbySharedContents:Landroid/preference/MultiSelectListPreference;
 
     invoke-virtual {v1, p0}, Landroid/preference/MultiSelectListPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 354
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
 
     if-eqz v1, :cond_3
 
     .line 355
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDownloadTo:Landroid/preference/ListPreference;
 
     invoke-virtual {v1, p0}, Landroid/preference/ListPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 358
     :cond_3
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDownloadOption:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDownloadOption:Landroid/preference/ListPreference;
 
     if-eqz v1, :cond_4
 
     .line 359
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbyEnabler;->mNearbyDownloadOption:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler;->mNearbyDownloadOption:Landroid/preference/ListPreference;
 
     invoke-virtual {v1, p0}, Landroid/preference/ListPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 362
     :cond_4
-    invoke-direct {p0}, Lcom/android/settings/nearby/NearbyEnabler;->registerBroadcastReceiver()V
+    invoke-direct {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->registerBroadcastReceiver()V
 
     .line 364
-    invoke-direct {p0}, Lcom/android/settings/nearby/NearbyEnabler;->setCheckedState()V
+    invoke-direct {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->setCheckedState()V
 
     .line 365
     return-void
@@ -3637,7 +3637,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 332
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V

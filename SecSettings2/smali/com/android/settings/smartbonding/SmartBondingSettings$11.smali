@@ -1,4 +1,4 @@
-.class Lcom/android/settings/smartbonding/SmartBondingSettings$11;
+.class Lcom/android/settings_ex/smartbonding/SmartBondingSettings$11;
 .super Ljava/lang/Object;
 .source "SmartBondingSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/smartbonding/SmartBondingSettings;->onSwitchChanged(Landroid/widget/Switch;Z)V
+    value = Lcom/android/settings_ex/smartbonding/SmartBondingSettings;->onSwitchChanged(Landroid/widget/Switch;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/smartbonding/SmartBondingSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/smartbonding/SmartBondingSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/smartbonding/SmartBondingSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/smartbonding/SmartBondingSettings;)V
     .locals 0
 
     .prologue
     .line 415
-    iput-object p1, p0, Lcom/android/settings/smartbonding/SmartBondingSettings$11;->this$0:Lcom/android/settings/smartbonding/SmartBondingSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/smartbonding/SmartBondingSettings$11;->this$0:Lcom/android/settings_ex/smartbonding/SmartBondingSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,21 +43,21 @@
 
     .prologue
     .line 417
-    iget-object v0, p0, Lcom/android/settings/smartbonding/SmartBondingSettings$11;->this$0:Lcom/android/settings/smartbonding/SmartBondingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/smartbonding/SmartBondingSettings$11;->this$0:Lcom/android/settings_ex/smartbonding/SmartBondingSettings;
 
-    # getter for: Lcom/android/settings/smartbonding/SmartBondingSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v0}, Lcom/android/settings/smartbonding/SmartBondingSettings;->access$200(Lcom/android/settings/smartbonding/SmartBondingSettings;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/smartbonding/SmartBondingSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v0}, Lcom/android/settings_ex/smartbonding/SmartBondingSettings;->access$200(Lcom/android/settings_ex/smartbonding/SmartBondingSettings;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    iget-object v0, p0, Lcom/android/settings/smartbonding/SmartBondingSettings$11;->this$0:Lcom/android/settings/smartbonding/SmartBondingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/smartbonding/SmartBondingSettings$11;->this$0:Lcom/android/settings_ex/smartbonding/SmartBondingSettings;
 
-    # getter for: Lcom/android/settings/smartbonding/SmartBondingSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v0}, Lcom/android/settings/smartbonding/SmartBondingSettings;->access$200(Lcom/android/settings/smartbonding/SmartBondingSettings;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/smartbonding/SmartBondingSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v0}, Lcom/android/settings_ex/smartbonding/SmartBondingSettings;->access$200(Lcom/android/settings_ex/smartbonding/SmartBondingSettings;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->isChecked()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->isChecked()Z
 
     move-result v0
 
@@ -66,7 +66,7 @@
     const/4 v0, 0x1
 
     :goto_0
-    invoke-virtual {v1, v0}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 418
     return-void

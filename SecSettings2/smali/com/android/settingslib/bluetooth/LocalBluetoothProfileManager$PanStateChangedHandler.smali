@@ -1,11 +1,11 @@
-.class Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager$PanStateChangedHandler;
-.super Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager$StateChangedHandler;
+.class Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager$PanStateChangedHandler;
+.super Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager$StateChangedHandler;
 .source "LocalBluetoothProfileManager.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
+    value = Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,20 +15,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
+.field final synthetic this$0:Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;Lcom/android/settingslib/bluetooth/LocalBluetoothProfile;)V
+.method constructor <init>(Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfile;)V
     .locals 0
-    .param p2, "profile"    # Lcom/android/settingslib/bluetooth/LocalBluetoothProfile;
+    .param p2, "profile"    # Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfile;
 
     .prologue
     .line 406
-    iput-object p1, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager$PanStateChangedHandler;->this$0:Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
+    iput-object p1, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager$PanStateChangedHandler;->this$0:Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;
 
     .line 407
-    invoke-direct {p0, p1, p2}, Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager$StateChangedHandler;-><init>(Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;Lcom/android/settingslib/bluetooth/LocalBluetoothProfile;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager$StateChangedHandler;-><init>(Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfile;)V
 
     .line 408
     return-void
@@ -44,12 +44,12 @@
 
     .prologue
     .line 412
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager$PanStateChangedHandler;->mProfile:Lcom/android/settingslib/bluetooth/LocalBluetoothProfile;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager$PanStateChangedHandler;->mProfile:Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfile;
 
-    check-cast v0, Lcom/android/settingslib/bluetooth/PanProfile;
+    check-cast v0, Lcom/android/settings_exlib/bluetooth/PanProfile;
 
     .line 413
-    .local v0, "panProfile":Lcom/android/settingslib/bluetooth/PanProfile;
+    .local v0, "panProfile":Lcom/android/settings_exlib/bluetooth/PanProfile;
     const-string v2, "android.bluetooth.pan.extra.LOCAL_ROLE"
 
     const/4 v3, 0x0
@@ -60,10 +60,10 @@
 
     .line 414
     .local v1, "role":I
-    invoke-virtual {v0, p3, v1}, Lcom/android/settingslib/bluetooth/PanProfile;->setLocalRole(Landroid/bluetooth/BluetoothDevice;I)V
+    invoke-virtual {v0, p3, v1}, Lcom/android/settings_exlib/bluetooth/PanProfile;->setLocalRole(Landroid/bluetooth/BluetoothDevice;I)V
 
     .line 415
-    invoke-super {p0, p1, p2, p3}, Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager$StateChangedHandler;->onReceive(Landroid/content/Context;Landroid/content/Intent;Landroid/bluetooth/BluetoothDevice;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager$StateChangedHandler;->onReceive(Landroid/content/Context;Landroid/content/Intent;Landroid/bluetooth/BluetoothDevice;)V
 
     .line 416
     return-void

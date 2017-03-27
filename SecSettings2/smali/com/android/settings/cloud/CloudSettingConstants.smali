@@ -1,4 +1,4 @@
-.class public final Lcom/android/settings/cloud/CloudSettingConstants;
+.class public final Lcom/android/settings_ex/cloud/CloudSettingConstants;
 .super Ljava/lang/Object;
 .source "CloudSettingConstants.java"
 
@@ -6,9 +6,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/cloud/CloudSettingConstants$Protocol;,
-        Lcom/android/settings/cloud/CloudSettingConstants$ContentsType;,
-        Lcom/android/settings/cloud/CloudSettingConstants$Vendor;
+        Lcom/android/settings_ex/cloud/CloudSettingConstants$Protocol;,
+        Lcom/android/settings_ex/cloud/CloudSettingConstants$ContentsType;,
+        Lcom/android/settings_ex/cloud/CloudSettingConstants$Vendor;
     }
 .end annotation
 
@@ -23,7 +23,7 @@
 
     .prologue
     .line 37
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getCountryCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getCountryCode()Ljava/lang/String;
 
     move-result-object v0
 
@@ -35,7 +35,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getCountryCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getCountryCode()Ljava/lang/String;
 
     move-result-object v0
 
@@ -47,7 +47,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getCountryCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getCountryCode()Ljava/lang/String;
 
     move-result-object v0
 
@@ -63,7 +63,7 @@
     const/4 v0, 0x1
 
     :goto_0
-    sput-boolean v0, Lcom/android/settings/cloud/CloudSettingConstants;->C_CHINA:Z
+    sput-boolean v0, Lcom/android/settings_ex/cloud/CloudSettingConstants;->C_CHINA:Z
 
     return-void
 

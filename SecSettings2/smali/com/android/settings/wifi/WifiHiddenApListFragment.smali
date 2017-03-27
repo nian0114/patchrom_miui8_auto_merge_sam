@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/wifi/WifiHiddenApListFragment;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "WifiHiddenApListFragment.java"
 
 
@@ -19,7 +19,7 @@
 
 .field mContext:Landroid/content/Context;
 
-.field private mDialogConfigure:Lcom/android/settings/wifi/WifiHiddenApAddDialog;
+.field private mDialogConfigure:Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;
 
 .field private mList:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -43,93 +43,93 @@
 
     .prologue
     .line 44
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 47
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mAdapter:Landroid/widget/ArrayAdapter;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mAdapter:Landroid/widget/ArrayAdapter;
 
     .line 48
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mList:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mList:Ljava/util/ArrayList;
 
     .line 197
-    new-instance v0, Lcom/android/settings/wifi/WifiHiddenApListFragment$1;
+    new-instance v0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/wifi/WifiHiddenApListFragment$1;-><init>(Lcom/android/settings/wifi/WifiHiddenApListFragment;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment$1;-><init>(Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;)V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mConfigureDialogListener:Landroid/content/DialogInterface$OnClickListener;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mConfigureDialogListener:Landroid/content/DialogInterface$OnClickListener;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/wifi/WifiHiddenApListFragment;)Lcom/android/settings/wifi/WifiHiddenApAddDialog;
+.method static synthetic access$000(Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;)Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiHiddenApListFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;
 
     .prologue
     .line 44
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mDialogConfigure:Lcom/android/settings/wifi/WifiHiddenApAddDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mDialogConfigure:Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/wifi/WifiHiddenApListFragment;)Ljava/util/ArrayList;
+.method static synthetic access$100(Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;)Ljava/util/ArrayList;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiHiddenApListFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;
 
     .prologue
     .line 44
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mList:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mList:Ljava/util/ArrayList;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/wifi/WifiHiddenApListFragment;)Landroid/widget/ListView;
+.method static synthetic access$200(Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;)Landroid/widget/ListView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiHiddenApListFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;
 
     .prologue
     .line 44
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mListView:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mListView:Landroid/widget/ListView;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/wifi/WifiHiddenApListFragment;)Landroid/widget/ArrayAdapter;
+.method static synthetic access$300(Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;)Landroid/widget/ArrayAdapter;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiHiddenApListFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;
 
     .prologue
     .line 44
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mAdapter:Landroid/widget/ArrayAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mAdapter:Landroid/widget/ArrayAdapter;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/wifi/WifiHiddenApListFragment;)V
+.method static synthetic access$400(Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiHiddenApListFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;
 
     .prologue
     .line 44
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiHiddenApListFragment;->saveFile()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->saveFile()V
 
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/wifi/WifiHiddenApListFragment;Ljava/lang/String;)Ljava/lang/Object;
+.method static synthetic access$500(Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiHiddenApListFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 44
-    invoke-virtual {p0, p1}, Lcom/android/settings/wifi/WifiHiddenApListFragment;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -193,7 +193,7 @@
     if-eqz v0, :cond_1
 
     .line 242
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mList:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mList:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_1
@@ -244,7 +244,7 @@
     .line 253
     const-string v3, "wifi"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/wifi/WifiHiddenApListFragment;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -271,7 +271,7 @@
     .local v0, "args":Landroid/os/Bundle;
     const-string v3, "hiddenAps"
 
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mList:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mList:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v3, v4}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
@@ -314,10 +314,10 @@
     .line 117
     iget v0, p1, Landroid/content/res/Configuration;->orientation:I
 
-    invoke-direct {p0, v0}, Lcom/android/settings/wifi/WifiHiddenApListFragment;->updateEmptyView(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->updateEmptyView(I)V
 
     .line 119
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 120
     return-void
@@ -329,14 +329,14 @@
 
     .prologue
     .line 64
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 66
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiHiddenApListFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mContext:Landroid/content/Context;
 
     .line 67
     return-void
@@ -374,18 +374,18 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mRemoveMenu:Landroid/view/MenuItem;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mRemoveMenu:Landroid/view/MenuItem;
 
     .line 131
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mRemoveMenu:Landroid/view/MenuItem;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mRemoveMenu:Landroid/view/MenuItem;
 
     invoke-interface {v0, v2}, Landroid/view/MenuItem;->setShowAsAction(I)V
 
     .line 132
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiHiddenApListFragment;->updateMenu()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->updateMenu()V
 
     .line 134
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     .line 135
     return-void
@@ -409,7 +409,7 @@
 
     .line 74
     .local v1, "view":Landroid/view/View;
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiHiddenApListFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -424,7 +424,7 @@
     .line 77
     const/4 v2, 0x1
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/wifi/WifiHiddenApListFragment;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->setHasOptionsMenu(Z)V
 
     .line 79
     const v2, 0x7f0d0490
@@ -435,7 +435,7 @@
 
     check-cast v2, Landroid/widget/ListView;
 
-    iput-object v2, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mListView:Landroid/widget/ListView;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mListView:Landroid/widget/ListView;
 
     .line 81
     const v2, 0x1020004
@@ -448,37 +448,37 @@
 
     .line 85
     .local v0, "emptyView":Landroid/widget/FrameLayout;
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mList:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mList:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
     .line 86
     new-instance v2, Landroid/widget/ArrayAdapter;
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mContext:Landroid/content/Context;
 
     const v4, 0x1090003
 
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mList:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mList:Ljava/util/ArrayList;
 
     invoke-direct {v2, v3, v4, v5}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
 
-    iput-object v2, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mAdapter:Landroid/widget/ArrayAdapter;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mAdapter:Landroid/widget/ArrayAdapter;
 
     .line 87
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mListView:Landroid/widget/ListView;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mListView:Landroid/widget/ListView;
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mAdapter:Landroid/widget/ArrayAdapter;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mAdapter:Landroid/widget/ArrayAdapter;
 
     invoke-virtual {v2, v3}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 88
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mListView:Landroid/widget/ListView;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v2, v0}, Landroid/widget/ListView;->setEmptyView(Landroid/view/View;)V
 
     .line 90
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -490,7 +490,7 @@
 
     iget v2, v2, Landroid/content/res/Configuration;->orientation:I
 
-    invoke-direct {p0, v2}, Lcom/android/settings/wifi/WifiHiddenApListFragment;->updateEmptyView(I)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->updateEmptyView(I)V
 
     .line 92
     return-object v1
@@ -501,18 +501,18 @@
 
     .prologue
     .line 108
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mDialogConfigure:Lcom/android/settings/wifi/WifiHiddenApAddDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mDialogConfigure:Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;
 
     if-eqz v0, :cond_0
 
     .line 109
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mDialogConfigure:Lcom/android/settings/wifi/WifiHiddenApAddDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mDialogConfigure:Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->dismiss()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->dismiss()V
 
     .line 112
     :cond_0
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroy()V
 
     .line 113
     return-void
@@ -537,7 +537,7 @@
     sparse-switch v0, :sswitch_data_0
 
     .line 165
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v0
 
@@ -546,27 +546,27 @@
 
     .line 141
     :sswitch_0
-    new-instance v0, Lcom/android/settings/wifi/WifiHiddenApAddDialog;
+    new-instance v0, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;
 
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mConfigureDialogListener:Landroid/content/DialogInterface$OnClickListener;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mConfigureDialogListener:Landroid/content/DialogInterface$OnClickListener;
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/wifi/WifiHiddenApAddDialog;-><init>(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;-><init>(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;)V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mDialogConfigure:Lcom/android/settings/wifi/WifiHiddenApAddDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mDialogConfigure:Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;
 
     .line 142
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mDialogConfigure:Lcom/android/settings/wifi/WifiHiddenApAddDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mDialogConfigure:Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;
 
     const v1, 0x7f0e03e8
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->setTitle(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->setTitle(I)V
 
     .line 143
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mDialogConfigure:Lcom/android/settings/wifi/WifiHiddenApAddDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mDialogConfigure:Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/WifiHiddenApAddDialog;->show()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/wifi/WifiHiddenApAddDialog;->show()V
 
     move v0, v10
 
@@ -575,22 +575,22 @@
 
     .line 147
     :sswitch_1
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiHiddenApListFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/android/settings/SettingsActivity;
+    instance-of v0, v0, Lcom/android/settings_ex/SettingsActivity;
 
     if-eqz v0, :cond_0
 
     .line 148
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiHiddenApListFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
-    const-class v1, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;
+    const-class v1, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
@@ -602,7 +602,7 @@
 
     move-object v5, p0
 
-    invoke-virtual/range {v0 .. v6}, Lcom/android/settings/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
+    invoke-virtual/range {v0 .. v6}, Lcom/android/settings_ex/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
 
     :goto_1
     move v0, v10
@@ -612,7 +612,7 @@
 
     .line 152
     :cond_0
-    const-class v0, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;
+    const-class v0, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
@@ -628,13 +628,13 @@
 
     move-object v9, v2
 
-    invoke-virtual/range {v4 .. v9}, Lcom/android/settings/wifi/WifiHiddenApListFragment;->startFragment(Landroid/app/Fragment;Ljava/lang/String;IILandroid/os/Bundle;)Z
+    invoke-virtual/range {v4 .. v9}, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->startFragment(Landroid/app/Fragment;Ljava/lang/String;IILandroid/os/Bundle;)Z
 
     goto :goto_1
 
     .line 158
     :sswitch_2
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiHiddenApListFragment;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->finish()V
 
     move v0, v10
 
@@ -657,23 +657,23 @@
 
     .prologue
     .line 97
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 99
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mList:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     .line 100
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiHiddenApListFragment;->addListItems()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->addListItems()V
 
     .line 101
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mAdapter:Landroid/widget/ArrayAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mAdapter:Landroid/widget/ArrayAdapter;
 
     invoke-virtual {v0}, Landroid/widget/ArrayAdapter;->notifyDataSetChanged()V
 
     .line 103
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiHiddenApListFragment;->updateMenu()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->updateMenu()V
 
     .line 104
     return-void
@@ -684,12 +684,12 @@
 
     .prologue
     .line 186
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mRemoveMenu:Landroid/view/MenuItem;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mRemoveMenu:Landroid/view/MenuItem;
 
     if-eqz v0, :cond_0
 
     .line 187
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mList:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -698,7 +698,7 @@
     if-nez v0, :cond_1
 
     .line 189
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mRemoveMenu:Landroid/view/MenuItem;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mRemoveMenu:Landroid/view/MenuItem;
 
     const/4 v1, 0x0
 
@@ -711,7 +711,7 @@
 
     .line 192
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApListFragment;->mRemoveMenu:Landroid/view/MenuItem;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApListFragment;->mRemoveMenu:Landroid/view/MenuItem;
 
     const/4 v1, 0x1
 

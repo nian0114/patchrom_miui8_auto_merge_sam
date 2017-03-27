@@ -1,4 +1,4 @@
-.class Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment$3;
+.class Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment$3;
 .super Ljava/lang/Object;
 .source "KnoxChooseLockFingerprintPassword.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;
+    value = Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;)V
     .locals 0
 
     .prologue
     .line 686
-    iput-object p1, p0, Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment$3;->this$0:Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment$3;->this$0:Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,19 +47,19 @@
 
     .prologue
     .line 690
-    iget-object v1, p0, Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment$3;->this$0:Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment$3;->this$0:Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;
 
-    # getter for: Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/TextView;
-    invoke-static {v1}, Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->access$200(Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/TextView;
+    invoke-static {v1}, Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->access$200(Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;)Landroid/widget/TextView;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment$3;->this$0:Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment$3;->this$0:Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;
 
-    # getter for: Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/TextView;
-    invoke-static {v1}, Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->access$200(Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->mPasswordEntry:Landroid/widget/TextView;
+    invoke-static {v1}, Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->access$200(Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;)Landroid/widget/TextView;
 
     move-result-object v1
 
@@ -75,22 +75,22 @@
 
     move-result v1
 
-    iget-object v2, p0, Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment$3;->this$0:Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment$3;->this$0:Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;
 
-    # getter for: Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->mPasswordMaxLength:I
-    invoke-static {v2}, Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->access$900(Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;)I
+    # getter for: Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->mPasswordMaxLength:I
+    invoke-static {v2}, Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->access$900(Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;)I
 
     move-result v2
 
     if-lt v1, v2, :cond_0
 
     .line 692
-    iget-object v2, p0, Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment$3;->this$0:Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment$3;->this$0:Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;
 
-    iget-object v1, p0, Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment$3;->this$0:Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment$3;->this$0:Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;
 
-    # getter for: Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->mIsAlphaMode:Z
-    invoke-static {v1}, Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->access$1000(Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;)Z
+    # getter for: Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->mIsAlphaMode:Z
+    invoke-static {v1}, Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->access$1000(Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;)Z
 
     move-result v1
 
@@ -105,10 +105,10 @@
 
     const/4 v4, 0x0
 
-    iget-object v5, p0, Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment$3;->this$0:Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;
+    iget-object v5, p0, Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment$3;->this$0:Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;
 
-    # getter for: Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->mPasswordMaxLength:I
-    invoke-static {v5}, Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->access$900(Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;)I
+    # getter for: Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->mPasswordMaxLength:I
+    invoke-static {v5}, Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->access$900(Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;)I
 
     move-result v5
 
@@ -118,16 +118,16 @@
 
     aput-object v5, v3, v4
 
-    invoke-virtual {v2, v1, v3}, Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v2, v1, v3}, Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 695
     .local v0, "errorText":Ljava/lang/String;
-    iget-object v1, p0, Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment$3;->this$0:Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment$3;->this$0:Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;
 
-    # getter for: Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
-    invoke-static {v1}, Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->access$1100(Lcom/android/settings/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->mHeaderText:Landroid/widget/TextView;
+    invoke-static {v1}, Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;->access$1100(Lcom/android/settings_ex/KnoxChooseLockFingerprintPassword$KnoxChooseLockFingerprintPasswordFragment;)Landroid/widget/TextView;
 
     move-result-object v1
 

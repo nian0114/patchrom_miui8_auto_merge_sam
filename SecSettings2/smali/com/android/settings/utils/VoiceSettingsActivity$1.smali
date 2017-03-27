@@ -1,11 +1,11 @@
-.class Lcom/android/settings/utils/VoiceSettingsActivity$1;
+.class Lcom/android/settings_ex/utils/VoiceSettingsActivity$1;
 .super Landroid/app/VoiceInteractor$CompleteVoiceRequest;
 .source "VoiceSettingsActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/utils/VoiceSettingsActivity;->notifySuccess(Ljava/lang/CharSequence;)V
+    value = Lcom/android/settings_ex/utils/VoiceSettingsActivity;->notifySuccess(Ljava/lang/CharSequence;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,18 +15,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/utils/VoiceSettingsActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/utils/VoiceSettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/utils/VoiceSettingsActivity;Ljava/lang/CharSequence;Landroid/os/Bundle;)V
+.method constructor <init>(Lcom/android/settings_ex/utils/VoiceSettingsActivity;Ljava/lang/CharSequence;Landroid/os/Bundle;)V
     .locals 0
     .param p2, "x0"    # Ljava/lang/CharSequence;
     .param p3, "x1"    # Landroid/os/Bundle;
 
     .prologue
     .line 68
-    iput-object p1, p0, Lcom/android/settings/utils/VoiceSettingsActivity$1;->this$0:Lcom/android/settings/utils/VoiceSettingsActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/utils/VoiceSettingsActivity$1;->this$0:Lcom/android/settings_ex/utils/VoiceSettingsActivity;
 
     invoke-direct {p0, p2, p3}, Landroid/app/VoiceInteractor$CompleteVoiceRequest;-><init>(Ljava/lang/CharSequence;Landroid/os/Bundle;)V
 
@@ -41,9 +41,9 @@
 
     .prologue
     .line 71
-    iget-object v0, p0, Lcom/android/settings/utils/VoiceSettingsActivity$1;->this$0:Lcom/android/settings/utils/VoiceSettingsActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/utils/VoiceSettingsActivity$1;->this$0:Lcom/android/settings_ex/utils/VoiceSettingsActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/utils/VoiceSettingsActivity;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/utils/VoiceSettingsActivity;->finish()V
 
     .line 72
     return-void

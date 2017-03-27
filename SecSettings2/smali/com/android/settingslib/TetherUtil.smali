@@ -1,4 +1,4 @@
-.class public Lcom/android/settingslib/TetherUtil;
+.class public Lcom/android/settings_exlib/TetherUtil;
 .super Ljava/lang/Object;
 .source "TetherUtil.java"
 
@@ -27,7 +27,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settingslib/TetherUtil;->TETHER_SERVICE:Landroid/content/ComponentName;
+    sput-object v0, Lcom/android/settings_exlib/TetherUtil;->TETHER_SERVICE:Landroid/content/ComponentName;
 
     return-void
 .end method

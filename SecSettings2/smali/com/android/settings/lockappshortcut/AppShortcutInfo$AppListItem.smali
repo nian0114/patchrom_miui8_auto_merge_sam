@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppListItem;
+.class public Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppListItem;
 .super Ljava/lang/Object;
 .source "AppShortcutInfo.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/lockappshortcut/AppShortcutInfo;
+    value = Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,22 +43,22 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 33
-    iput-object p1, p0, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppListItem;->mPackageName:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppListItem;->mPackageName:Ljava/lang/String;
 
     .line 34
-    iput-object p2, p0, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppListItem;->mActivityName:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppListItem;->mActivityName:Ljava/lang/String;
 
     .line 35
-    iput-object p3, p0, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppListItem;->mLabel:Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppListItem;->mLabel:Ljava/lang/String;
 
     .line 36
-    iput-object p4, p0, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppListItem;->mIcon:Landroid/graphics/drawable/Drawable;
+    iput-object p4, p0, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppListItem;->mIcon:Landroid/graphics/drawable/Drawable;
 
     .line 37
-    iput-boolean p5, p0, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppListItem;->mIsChecked:Z
+    iput-boolean p5, p0, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppListItem;->mIsChecked:Z
 
     .line 38
-    iput-boolean p6, p0, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppListItem;->mIsActive:Z
+    iput-boolean p6, p0, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppListItem;->mIsActive:Z
 
     .line 39
     return-void

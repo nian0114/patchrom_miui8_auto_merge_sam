@@ -1,4 +1,4 @@
-.class public final Lcom/android/settings/users/UserDialogs;
+.class public final Lcom/android/settings_ex/users/UserDialogs;
 .super Ljava/lang/Object;
 .source "UserDialogs.java"
 
@@ -204,7 +204,7 @@
     invoke-virtual {v0, v4}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 66
-    invoke-static {p0, p1}, Lcom/android/settings/users/UserDialogs;->createRemoveManagedUserDialogView(Landroid/content/Context;I)Landroid/view/View;
+    invoke-static {p0, p1}, Lcom/android/settings_ex/users/UserDialogs;->createRemoveManagedUserDialogView(Landroid/content/Context;I)Landroid/view/View;
 
     move-result-object v3
 
@@ -255,7 +255,7 @@
 
     .line 84
     .local v6, "packageManager":Landroid/content/pm/PackageManager;
-    invoke-static {p0, p1}, Lcom/android/settings/Utils;->getAdminApplicationInfo(Landroid/content/Context;I)Landroid/content/pm/ApplicationInfo;
+    invoke-static {p0, p1}, Lcom/android/settings_ex/Utils;->getAdminApplicationInfo(Landroid/content/Context;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v5
 

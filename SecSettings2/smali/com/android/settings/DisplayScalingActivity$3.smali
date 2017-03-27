@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DisplayScalingActivity$3;
+.class Lcom/android/settings_ex/DisplayScalingActivity$3;
 .super Ljava/lang/Object;
 .source "DisplayScalingActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DisplayScalingActivity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
+    value = Lcom/android/settings_ex/DisplayScalingActivity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DisplayScalingActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/DisplayScalingActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DisplayScalingActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/DisplayScalingActivity;)V
     .locals 0
 
     .prologue
     .line 339
-    iput-object p1, p0, Lcom/android/settings/DisplayScalingActivity$3;->this$0:Lcom/android/settings/DisplayScalingActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/DisplayScalingActivity$3;->this$0:Lcom/android/settings_ex/DisplayScalingActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,9 +42,9 @@
 
     .prologue
     .line 342
-    iget-object v0, p0, Lcom/android/settings/DisplayScalingActivity$3;->this$0:Lcom/android/settings/DisplayScalingActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/DisplayScalingActivity$3;->this$0:Lcom/android/settings_ex/DisplayScalingActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/DisplayScalingActivity;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/DisplayScalingActivity;->finish()V
 
     .line 343
     return-void

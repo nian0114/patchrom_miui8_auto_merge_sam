@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DataUsageSummary$ConfirmDataDisableFragment$1;
+.class Lcom/android/settings_ex/DataUsageSummary$ConfirmDataDisableFragment$1;
 .super Ljava/lang/Object;
 .source "DataUsageSummary.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DataUsageSummary$ConfirmDataDisableFragment;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/DataUsageSummary$ConfirmDataDisableFragment;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DataUsageSummary$ConfirmDataDisableFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/DataUsageSummary$ConfirmDataDisableFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DataUsageSummary$ConfirmDataDisableFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/DataUsageSummary$ConfirmDataDisableFragment;)V
     .locals 0
 
     .prologue
     .line 5273
-    iput-object p1, p0, Lcom/android/settings/DataUsageSummary$ConfirmDataDisableFragment$1;->this$0:Lcom/android/settings/DataUsageSummary$ConfirmDataDisableFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/DataUsageSummary$ConfirmDataDisableFragment$1;->this$0:Lcom/android/settings_ex/DataUsageSummary$ConfirmDataDisableFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,23 +43,23 @@
 
     .prologue
     .line 5276
-    iget-object v1, p0, Lcom/android/settings/DataUsageSummary$ConfirmDataDisableFragment$1;->this$0:Lcom/android/settings/DataUsageSummary$ConfirmDataDisableFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/DataUsageSummary$ConfirmDataDisableFragment$1;->this$0:Lcom/android/settings_ex/DataUsageSummary$ConfirmDataDisableFragment;
 
-    invoke-virtual {v1}, Lcom/android/settings/DataUsageSummary$ConfirmDataDisableFragment;->getTargetFragment()Landroid/app/Fragment;
+    invoke-virtual {v1}, Lcom/android/settings_ex/DataUsageSummary$ConfirmDataDisableFragment;->getTargetFragment()Landroid/app/Fragment;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/DataUsageSummary;
+    check-cast v0, Lcom/android/settings_ex/DataUsageSummary;
 
     .line 5277
-    .local v0, "target":Lcom/android/settings/DataUsageSummary;
+    .local v0, "target":Lcom/android/settings_ex/DataUsageSummary;
     if-eqz v0, :cond_0
 
     .line 5279
     const/4 v1, 0x0
 
-    # invokes: Lcom/android/settings/DataUsageSummary;->setMobileDataEnabled(Z)V
-    invoke-static {v0, v1}, Lcom/android/settings/DataUsageSummary;->access$3900(Lcom/android/settings/DataUsageSummary;Z)V
+    # invokes: Lcom/android/settings_ex/DataUsageSummary;->setMobileDataEnabled(Z)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/DataUsageSummary;->access$3900(Lcom/android/settings_ex/DataUsageSummary;Z)V
 
     .line 5281
     :cond_0

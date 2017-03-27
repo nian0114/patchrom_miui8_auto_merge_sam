@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/applications/AppStatePowerBridge$HighPowerState;
+.class public Lcom/android/settings_ex/applications/AppStatePowerBridge$HighPowerState;
 .super Ljava/lang/Object;
 .source "AppStatePowerBridge.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/AppStatePowerBridge;
+    value = Lcom/android/settings_ex/applications/AppStatePowerBridge;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

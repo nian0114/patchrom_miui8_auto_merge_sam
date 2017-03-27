@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;
+.class public Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;
 .super Landroid/preference/Preference;
 .source "AssistantMenuPreferenceFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/AssistantMenuPreferenceFragment;
+    value = Lcom/android/settings_ex/AssistantMenuPreferenceFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -41,23 +41,23 @@
 
     fill-array-data v0, :array_0
 
-    iput-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;->mIcon:[I
+    iput-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;->mIcon:[I
 
     .line 550
-    iput-object p1, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;->mContext:Landroid/content/Context;
 
     .line 551
     const v0, 0x7f040130
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;->setLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;->setLayoutResource(I)V
 
     .line 552
-    iput p2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;->currentMag:I
+    iput p2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;->currentMag:I
 
     .line 553
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;->setSelectable(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;->setSelectable(Z)V
 
     .line 554
     return-void
@@ -86,7 +86,7 @@
 
     .prologue
     .line 570
-    iget-object v1, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;->img:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;->img:Landroid/widget/ImageView;
 
     if-nez v1, :cond_0
 
@@ -96,7 +96,7 @@
 
     .line 571
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -113,7 +113,7 @@
     if-ne v1, v2, :cond_1
 
     .line 572
-    iget-object v1, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;->img:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;->img:Landroid/widget/ImageView;
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -128,14 +128,14 @@
     iput v1, v0, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
     .line 574
-    iget-object v1, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;->img:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;->img:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 575
-    iget-object v1, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;->img:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;->img:Landroid/widget/ImageView;
 
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;->mIcon:[I
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;->mIcon:[I
 
     aget v2, v2, p1
 
@@ -146,9 +146,9 @@
     .line 577
     .end local v0    # "params":Landroid/widget/LinearLayout$LayoutParams;
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;->img:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;->img:Landroid/widget/ImageView;
 
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;->mIcon:[I
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;->mIcon:[I
 
     aget v2, v2, p1
 
@@ -174,12 +174,12 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;->img:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;->img:Landroid/widget/ImageView;
 
     .line 565
-    iget v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;->currentMag:I
+    iget v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;->currentMag:I
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;->ImageChange(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;->ImageChange(I)V
 
     .line 566
     const-string v0, "AssistantMenuPreferenceFragment"
@@ -198,12 +198,12 @@
 
     .prologue
     .line 557
-    iput p1, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;->currentMag:I
+    iput p1, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;->currentMag:I
 
     .line 558
-    iget v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;->currentMag:I
+    iget v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;->currentMag:I
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;->ImageChange(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;->ImageChange(I)V
 
     .line 559
     return-void

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/bluetooth/CheckBluetoothStateActivity$2;
+.class Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity$2;
 .super Landroid/os/Handler;
 .source "CheckBluetoothStateActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;
+    value = Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;)V
     .locals 0
 
     .prologue
     .line 110
-    iput-object p1, p0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity$2;->this$0:Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity$2;->this$0:Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -57,10 +57,10 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 116
-    iget-object v0, p0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity$2;->this$0:Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity$2;->this$0:Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;
 
-    # getter for: Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mTimeoutHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->access$300(Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mTimeoutHandler:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->access$300(Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -81,14 +81,14 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity$2;->this$0:Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;
+    iget-object v2, p0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity$2;->this$0:Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;
 
-    # getter for: Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
-    invoke-static {v2}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->access$400(Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;)Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    # getter for: Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
+    invoke-static {v2}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->access$400(Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;)Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->getBluetoothState()I
+    invoke-virtual {v2}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->getBluetoothState()I
 
     move-result v2
 
@@ -102,8 +102,8 @@
 
     move-result-object v1
 
-    # getter for: Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->expectingBluetoothOn:Z
-    invoke-static {}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->access$000()Z
+    # getter for: Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->expectingBluetoothOn:Z
+    invoke-static {}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->access$000()Z
 
     move-result v2
 
@@ -117,8 +117,8 @@
 
     move-result-object v1
 
-    # getter for: Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mIsDestroyed:Z
-    invoke-static {}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->access$100()Z
+    # getter for: Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mIsDestroyed:Z
+    invoke-static {}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->access$100()Z
 
     move-result v2
 
@@ -133,14 +133,14 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 120
-    iget-object v0, p0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity$2;->this$0:Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity$2;->this$0:Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;
 
-    # getter for: Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
-    invoke-static {v0}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->access$400(Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;)Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    # getter for: Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
+    invoke-static {v0}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->access$400(Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;)Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->getBluetoothState()I
+    invoke-virtual {v0}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->getBluetoothState()I
 
     move-result v0
 
@@ -148,24 +148,24 @@
 
     if-ne v0, v1, :cond_0
 
-    # getter for: Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->expectingBluetoothOn:Z
-    invoke-static {}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->access$000()Z
+    # getter for: Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->expectingBluetoothOn:Z
+    invoke-static {}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->access$000()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    # getter for: Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mIsDestroyed:Z
-    invoke-static {}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->access$100()Z
+    # getter for: Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mIsDestroyed:Z
+    invoke-static {}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->access$100()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 121
-    iget-object v0, p0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity$2;->this$0:Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity$2;->this$0:Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->finish()V
 
     goto :goto_0
 

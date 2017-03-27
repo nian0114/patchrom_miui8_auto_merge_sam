@@ -1,14 +1,14 @@
-.class Lcom/android/settings/guide/WifiSettingsGuider$5;
+.class Lcom/android/settings_ex/guide/WifiSettingsGuider$5;
 .super Ljava/lang/Object;
 .source "WifiSettingsGuider.java"
 
 # interfaces
-.implements Lcom/android/settings/guide/WifiSettingsGuider$OnCloseHelpDialogListener;
+.implements Lcom/android/settings_ex/guide/WifiSettingsGuider$OnCloseHelpDialogListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/guide/WifiSettingsGuider;->showHelpDialog(Lcom/android/settings/guide/WifiSettingsGuider$GuideStates;)V
+    value = Lcom/android/settings_ex/guide/WifiSettingsGuider;->showHelpDialog(Lcom/android/settings_ex/guide/WifiSettingsGuider$GuideStates;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/guide/WifiSettingsGuider;
+.field final synthetic this$0:Lcom/android/settings_ex/guide/WifiSettingsGuider;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/guide/WifiSettingsGuider;)V
+.method constructor <init>(Lcom/android/settings_ex/guide/WifiSettingsGuider;)V
     .locals 0
 
     .prologue
     .line 390
-    iput-object p1, p0, Lcom/android/settings/guide/WifiSettingsGuider$5;->this$0:Lcom/android/settings/guide/WifiSettingsGuider;
+    iput-object p1, p0, Lcom/android/settings_ex/guide/WifiSettingsGuider$5;->this$0:Lcom/android/settings_ex/guide/WifiSettingsGuider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

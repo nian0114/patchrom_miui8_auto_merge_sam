@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/LinkifyUtils;
+.class public Lcom/android/settings_ex/LinkifyUtils;
 .super Ljava/lang/Object;
 .source "LinkifyUtils.java"
 
@@ -6,17 +6,17 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/LinkifyUtils$OnClickListener;
+        Lcom/android/settings_ex/LinkifyUtils$OnClickListener;
     }
 .end annotation
 
 
 # direct methods
-.method public static linkify(Landroid/widget/TextView;Ljava/lang/StringBuilder;Lcom/android/settings/LinkifyUtils$OnClickListener;)Z
+.method public static linkify(Landroid/widget/TextView;Ljava/lang/StringBuilder;Lcom/android/settings_ex/LinkifyUtils$OnClickListener;)Z
     .locals 7
     .param p0, "textView"    # Landroid/widget/TextView;
     .param p1, "text"    # Ljava/lang/StringBuilder;
-    .param p2, "listener"    # Lcom/android/settings/LinkifyUtils$OnClickListener;
+    .param p2, "listener"    # Lcom/android/settings_ex/LinkifyUtils$OnClickListener;
 
     .prologue
     const/4 v4, 0x0
@@ -106,9 +106,9 @@
 
     .line 68
     .local v2, "spannableContent":Landroid/text/Spannable;
-    new-instance v3, Lcom/android/settings/LinkifyUtils$1;
+    new-instance v3, Lcom/android/settings_ex/LinkifyUtils$1;
 
-    invoke-direct {v3, p2}, Lcom/android/settings/LinkifyUtils$1;-><init>(Lcom/android/settings/LinkifyUtils$OnClickListener;)V
+    invoke-direct {v3, p2}, Lcom/android/settings_ex/LinkifyUtils$1;-><init>(Lcom/android/settings_ex/LinkifyUtils$OnClickListener;)V
 
     .line 80
     .local v3, "spannableLink":Landroid/text/style/ClickableSpan;

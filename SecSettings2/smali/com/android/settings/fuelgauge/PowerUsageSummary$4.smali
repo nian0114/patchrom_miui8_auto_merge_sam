@@ -1,11 +1,11 @@
-.class Lcom/android/settings/fuelgauge/PowerUsageSummary$4;
+.class Lcom/android/settings_ex/fuelgauge/PowerUsageSummary$4;
 .super Landroid/os/Handler;
 .source "PowerUsageSummary.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fuelgauge/PowerUsageSummary;
+    value = Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fuelgauge/PowerUsageSummary;
+.field final synthetic this$0:Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fuelgauge/PowerUsageSummary;)V
+.method constructor <init>(Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;)V
     .locals 0
 
     .prologue
     .line 683
-    iput-object p1, p0, Lcom/android/settings/fuelgauge/PowerUsageSummary$4;->this$0:Lcom/android/settings/fuelgauge/PowerUsageSummary;
+    iput-object p1, p0, Lcom/android/settings_ex/fuelgauge/PowerUsageSummary$4;->this$0:Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -55,13 +55,13 @@
     :pswitch_0
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    check-cast v1, Lcom/android/settings/fuelgauge/BatteryEntry;
+    check-cast v1, Lcom/android/settings_ex/fuelgauge/BatteryEntry;
 
     .line 690
-    .local v1, "entry":Lcom/android/settings/fuelgauge/BatteryEntry;
-    iget-object v5, p0, Lcom/android/settings/fuelgauge/PowerUsageSummary$4;->this$0:Lcom/android/settings/fuelgauge/PowerUsageSummary;
+    .local v1, "entry":Lcom/android/settings_ex/fuelgauge/BatteryEntry;
+    iget-object v5, p0, Lcom/android/settings_ex/fuelgauge/PowerUsageSummary$4;->this$0:Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;
 
-    iget-object v6, v1, Lcom/android/settings/fuelgauge/BatteryEntry;->sipper:Lcom/android/internal/os/BatterySipper;
+    iget-object v6, v1, Lcom/android/settings_ex/fuelgauge/BatteryEntry;->sipper:Lcom/android/internal/os/BatterySipper;
 
     iget-object v6, v6, Lcom/android/internal/os/BatterySipper;->uidObj:Landroid/os/BatteryStats$Uid;
 
@@ -73,18 +73,18 @@
 
     move-result-object v6
 
-    invoke-virtual {v5, v6}, Lcom/android/settings/fuelgauge/PowerUsageSummary;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v5, v6}, Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/fuelgauge/PowerGaugePreference;
+    check-cast v2, Lcom/android/settings_ex/fuelgauge/PowerGaugePreference;
 
     .line 693
-    .local v2, "pgp":Lcom/android/settings/fuelgauge/PowerGaugePreference;
+    .local v2, "pgp":Lcom/android/settings_ex/fuelgauge/PowerGaugePreference;
     if-eqz v2, :cond_0
 
     .line 694
-    iget-object v5, v1, Lcom/android/settings/fuelgauge/BatteryEntry;->sipper:Lcom/android/internal/os/BatterySipper;
+    iget-object v5, v1, Lcom/android/settings_ex/fuelgauge/BatteryEntry;->sipper:Lcom/android/internal/os/BatterySipper;
 
     invoke-virtual {v5}, Lcom/android/internal/os/BatterySipper;->getUid()I
 
@@ -102,11 +102,11 @@
 
     .line 696
     .local v3, "userHandle":Landroid/os/UserHandle;
-    iget-object v5, p0, Lcom/android/settings/fuelgauge/PowerUsageSummary$4;->this$0:Lcom/android/settings/fuelgauge/PowerUsageSummary;
+    iget-object v5, p0, Lcom/android/settings_ex/fuelgauge/PowerUsageSummary$4;->this$0:Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;
 
-    iget-object v5, v5, Lcom/android/settings/fuelgauge/PowerUsageSummary;->mUm:Landroid/os/UserManager;
+    iget-object v5, v5, Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;->mUm:Landroid/os/UserManager;
 
-    invoke-virtual {v1}, Lcom/android/settings/fuelgauge/BatteryEntry;->getIcon()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1}, Lcom/android/settings_ex/fuelgauge/BatteryEntry;->getIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object v6
 
@@ -114,24 +114,24 @@
 
     move-result-object v5
 
-    invoke-virtual {v2, v5}, Lcom/android/settings/fuelgauge/PowerGaugePreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v2, v5}, Lcom/android/settings_ex/fuelgauge/PowerGaugePreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 697
-    iget-object v5, v1, Lcom/android/settings/fuelgauge/BatteryEntry;->name:Ljava/lang/String;
+    iget-object v5, v1, Lcom/android/settings_ex/fuelgauge/BatteryEntry;->name:Ljava/lang/String;
 
-    invoke-virtual {v2, v5}, Lcom/android/settings/fuelgauge/PowerGaugePreference;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v2, v5}, Lcom/android/settings_ex/fuelgauge/PowerGaugePreference;->setTitle(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
     .line 701
-    .end local v1    # "entry":Lcom/android/settings/fuelgauge/BatteryEntry;
-    .end local v2    # "pgp":Lcom/android/settings/fuelgauge/PowerGaugePreference;
+    .end local v1    # "entry":Lcom/android/settings_ex/fuelgauge/BatteryEntry;
+    .end local v2    # "pgp":Lcom/android/settings_ex/fuelgauge/PowerGaugePreference;
     .end local v3    # "userHandle":Landroid/os/UserHandle;
     .end local v4    # "userId":I
     :pswitch_1
-    iget-object v5, p0, Lcom/android/settings/fuelgauge/PowerUsageSummary$4;->this$0:Lcom/android/settings/fuelgauge/PowerUsageSummary;
+    iget-object v5, p0, Lcom/android/settings_ex/fuelgauge/PowerUsageSummary$4;->this$0:Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;
 
-    invoke-virtual {v5}, Lcom/android/settings/fuelgauge/PowerUsageSummary;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v5}, Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 

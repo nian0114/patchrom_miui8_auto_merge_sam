@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/LaunchApplication$3;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/LaunchApplication$3;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "LaunchApplication.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/LaunchApplication;
+    value = Lcom/android/settings_ex/LaunchApplication;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 241
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -83,7 +83,7 @@
 
     .line 250
     .local v1, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v2, Lcom/android/settings/LaunchApplication;
+    const-class v2, Lcom/android/settings_ex/LaunchApplication;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

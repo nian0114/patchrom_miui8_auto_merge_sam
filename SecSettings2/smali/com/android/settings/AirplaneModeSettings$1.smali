@@ -1,11 +1,11 @@
-.class Lcom/android/settings/AirplaneModeSettings$1;
+.class Lcom/android/settings_ex/AirplaneModeSettings$1;
 .super Landroid/database/ContentObserver;
 .source "AirplaneModeSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/AirplaneModeSettings;
+    value = Lcom/android/settings_ex/AirplaneModeSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/AirplaneModeSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/AirplaneModeSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/AirplaneModeSettings;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/AirplaneModeSettings;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 66
-    iput-object p1, p0, Lcom/android/settings/AirplaneModeSettings$1;->this$0:Lcom/android/settings/AirplaneModeSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/AirplaneModeSettings$1;->this$0:Lcom/android/settings_ex/AirplaneModeSettings;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -40,10 +40,10 @@
 
     .prologue
     .line 69
-    iget-object v0, p0, Lcom/android/settings/AirplaneModeSettings$1;->this$0:Lcom/android/settings/AirplaneModeSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/AirplaneModeSettings$1;->this$0:Lcom/android/settings_ex/AirplaneModeSettings;
 
-    # invokes: Lcom/android/settings/AirplaneModeSettings;->setDescription()V
-    invoke-static {v0}, Lcom/android/settings/AirplaneModeSettings;->access$000(Lcom/android/settings/AirplaneModeSettings;)V
+    # invokes: Lcom/android/settings_ex/AirplaneModeSettings;->setDescription()V
+    invoke-static {v0}, Lcom/android/settings_ex/AirplaneModeSettings;->access$000(Lcom/android/settings_ex/AirplaneModeSettings;)V
 
     .line 70
     return-void

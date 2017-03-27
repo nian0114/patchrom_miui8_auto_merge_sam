@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/Utils$LengthFilter;
+.class public Lcom/android/settings_ex/Utils$LengthFilter;
 .super Ljava/lang/Object;
 .source "Utils.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/Utils;
+    value = Lcom/android/settings_ex/Utils;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -35,12 +35,12 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 6212
-    iput-object p1, p0, Lcom/android/settings/Utils$LengthFilter;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/Utils$LengthFilter;->mContext:Landroid/content/Context;
 
     .line 6213
     const/16 v0, 0x20
 
-    iput v0, p0, Lcom/android/settings/Utils$LengthFilter;->maxLength:I
+    iput v0, p0, Lcom/android/settings_ex/Utils$LengthFilter;->maxLength:I
 
     .line 6214
     return-void
@@ -70,7 +70,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    iget v4, p0, Lcom/android/settings/Utils$LengthFilter;->maxLength:I
+    iget v4, p0, Lcom/android/settings_ex/Utils$LengthFilter;->maxLength:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -88,7 +88,7 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/Utils$LengthFilter;->mTextLimitToast:Landroid/widget/Toast;
+    iput-object v2, p0, Lcom/android/settings_ex/Utils$LengthFilter;->mTextLimitToast:Landroid/widget/Toast;
 
     .line 6233
     return-void
@@ -99,23 +99,23 @@
 
     .prologue
     .line 6221
-    iget-object v0, p0, Lcom/android/settings/Utils$LengthFilter;->mTextLimitToast:Landroid/widget/Toast;
+    iget-object v0, p0, Lcom/android/settings_ex/Utils$LengthFilter;->mTextLimitToast:Landroid/widget/Toast;
 
     if-nez v0, :cond_0
 
     .line 6222
-    iget-object v0, p0, Lcom/android/settings/Utils$LengthFilter;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/Utils$LengthFilter;->mContext:Landroid/content/Context;
 
-    invoke-direct {p0, v0}, Lcom/android/settings/Utils$LengthFilter;->makeTextLimitToast(Landroid/content/Context;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/Utils$LengthFilter;->makeTextLimitToast(Landroid/content/Context;)V
 
     .line 6224
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/Utils$LengthFilter;->mTextLimitToast:Landroid/widget/Toast;
+    iget-object v0, p0, Lcom/android/settings_ex/Utils$LengthFilter;->mTextLimitToast:Landroid/widget/Toast;
 
     if-eqz v0, :cond_1
 
     .line 6225
-    iget-object v0, p0, Lcom/android/settings/Utils$LengthFilter;->mTextLimitToast:Landroid/widget/Toast;
+    iget-object v0, p0, Lcom/android/settings_ex/Utils$LengthFilter;->mTextLimitToast:Landroid/widget/Toast;
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
@@ -137,7 +137,7 @@
 
     .prologue
     .line 6237
-    iget v1, p0, Lcom/android/settings/Utils$LengthFilter;->maxLength:I
+    iget v1, p0, Lcom/android/settings_ex/Utils$LengthFilter;->maxLength:I
 
     invoke-interface {p4}, Landroid/text/Spanned;->length()I
 
@@ -160,7 +160,7 @@
     if-lez v1, :cond_0
 
     .line 6239
-    invoke-direct {p0}, Lcom/android/settings/Utils$LengthFilter;->showTextLimitMessage()V
+    invoke-direct {p0}, Lcom/android/settings_ex/Utils$LengthFilter;->showTextLimitMessage()V
 
     .line 6241
     :cond_0
@@ -193,7 +193,7 @@
     if-lez v1, :cond_3
 
     .line 6247
-    invoke-direct {p0}, Lcom/android/settings/Utils$LengthFilter;->showTextLimitMessage()V
+    invoke-direct {p0}, Lcom/android/settings_ex/Utils$LengthFilter;->showTextLimitMessage()V
 
     .line 6249
     :cond_3
@@ -207,7 +207,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->removeBrokenEmojiChar(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->removeBrokenEmojiChar(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -220,7 +220,7 @@
 
     .prologue
     .line 6217
-    iput p1, p0, Lcom/android/settings/Utils$LengthFilter;->maxLength:I
+    iput p1, p0, Lcom/android/settings_ex/Utils$LengthFilter;->maxLength:I
 
     .line 6218
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict$1;
+.class Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict$1;
 .super Ljava/lang/Object;
 .source "DataUsageSummary.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;
+.field final synthetic this$0:Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;)V
+.method constructor <init>(Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;)V
     .locals 0
 
     .prologue
     .line 5320
-    iput-object p1, p0, Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict$1;->this$0:Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;
+    iput-object p1, p0, Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict$1;->this$0:Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -62,9 +62,9 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     .line 5326
-    iget-object v2, p0, Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict$1;->this$0:Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;
+    iget-object v2, p0, Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict$1;->this$0:Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;
 
-    invoke-virtual {v2}, Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 

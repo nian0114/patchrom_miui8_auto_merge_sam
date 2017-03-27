@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen android:title="@string/active_key_title"
   xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings_ex">
     <PreferenceCategory android:title="@string/xcover_key_category_customize" android:key="customize_category_key" />
     <PreferenceScreen android:title="@string/xcover_key_shortcut_normal_mode" android:key="short_press_key" />
     <PreferenceScreen android:title="@string/xcover_key_shortcut_battery_conserving_mode" android:key="long_press_key" />

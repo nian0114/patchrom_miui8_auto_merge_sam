@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiSettings$24;
+.class Lcom/android/settings_ex/wifi/WifiSettings$24;
 .super Ljava/lang/Object;
 .source "WifiSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSettings;->onPasspointPressed()V
+    value = Lcom/android/settings_ex/wifi/WifiSettings;->onPasspointPressed()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSettings;)V
     .locals 0
 
     .prologue
     .line 2565
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSettings$24;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSettings$24;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

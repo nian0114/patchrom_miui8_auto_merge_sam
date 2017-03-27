@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiSettings$32;
+.class Lcom/android/settings_ex/wifi/WifiSettings$32;
 .super Ljava/lang/Object;
 .source "WifiSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSettings;->showWeChatDialog()V
+    value = Lcom/android/settings_ex/wifi/WifiSettings;->showWeChatDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSettings;)V
     .locals 0
 
     .prologue
     .line 3506
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSettings$32;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSettings$32;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,10 +43,10 @@
 
     .prologue
     .line 3508
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings$32;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSettings$32;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settings/wifi/AccessPoint;
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiSettings;->access$3300(Lcom/android/settings/wifi/WifiSettings;)Lcom/android/settings/wifi/AccessPoint;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settings_ex/wifi/AccessPoint;
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiSettings;->access$3300(Lcom/android/settings_ex/wifi/WifiSettings;)Lcom/android/settings_ex/wifi/AccessPoint;
 
     move-result-object v1
 
@@ -61,55 +61,55 @@
 
     .line 3513
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings$32;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSettings$32;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settings/wifi/AccessPoint;
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiSettings;->access$3300(Lcom/android/settings/wifi/WifiSettings;)Lcom/android/settings/wifi/AccessPoint;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settings_ex/wifi/AccessPoint;
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiSettings;->access$3300(Lcom/android/settings_ex/wifi/WifiSettings;)Lcom/android/settings_ex/wifi/AccessPoint;
 
     move-result-object v1
 
-    iget v1, v1, Lcom/android/settings/wifi/AccessPoint;->security:I
+    iget v1, v1, Lcom/android/settings_ex/wifi/AccessPoint;->security:I
 
     if-nez v1, :cond_1
 
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings$32;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSettings$32;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settings/wifi/AccessPoint;
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiSettings;->access$3300(Lcom/android/settings/wifi/WifiSettings;)Lcom/android/settings/wifi/AccessPoint;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settings_ex/wifi/AccessPoint;
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiSettings;->access$3300(Lcom/android/settings_ex/wifi/WifiSettings;)Lcom/android/settings_ex/wifi/AccessPoint;
 
     move-result-object v1
 
-    iget v1, v1, Lcom/android/settings/wifi/AccessPoint;->networkId:I
+    iget v1, v1, Lcom/android/settings_ex/wifi/AccessPoint;->networkId:I
 
     const/4 v2, -0x1
 
     if-ne v1, v2, :cond_1
 
     .line 3515
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings$32;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSettings$32;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settings/wifi/AccessPoint;
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiSettings;->access$3300(Lcom/android/settings/wifi/WifiSettings;)Lcom/android/settings/wifi/AccessPoint;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settings_ex/wifi/AccessPoint;
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiSettings;->access$3300(Lcom/android/settings_ex/wifi/WifiSettings;)Lcom/android/settings_ex/wifi/AccessPoint;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/settings/wifi/AccessPoint;->generateOpenNetworkConfig()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/wifi/AccessPoint;->generateOpenNetworkConfig()V
 
     .line 3518
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings$32;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSettings$32;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSettings$32;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSettings$32;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settings/wifi/AccessPoint;
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiSettings;->access$3300(Lcom/android/settings/wifi/WifiSettings;)Lcom/android/settings/wifi/AccessPoint;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settings_ex/wifi/AccessPoint;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiSettings;->access$3300(Lcom/android/settings_ex/wifi/WifiSettings;)Lcom/android/settings_ex/wifi/AccessPoint;
 
     move-result-object v2
 
     const/4 v3, 0x0
 
-    # invokes: Lcom/android/settings/wifi/WifiSettings;->showDialog(Lcom/android/settings/wifi/AccessPoint;Z)V
-    invoke-static {v1, v2, v3}, Lcom/android/settings/wifi/WifiSettings;->access$4100(Lcom/android/settings/wifi/WifiSettings;Lcom/android/settings/wifi/AccessPoint;Z)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiSettings;->showDialog(Lcom/android/settings_ex/wifi/AccessPoint;Z)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/wifi/WifiSettings;->access$4100(Lcom/android/settings_ex/wifi/WifiSettings;Lcom/android/settings_ex/wifi/AccessPoint;Z)V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -136,23 +136,23 @@
     .line 3522
     .end local v0    # "ex":Ljava/lang/IllegalStateException;
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings$32;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSettings$32;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settings/wifi/AccessPoint;
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiSettings;->access$3300(Lcom/android/settings/wifi/WifiSettings;)Lcom/android/settings/wifi/AccessPoint;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settings_ex/wifi/AccessPoint;
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiSettings;->access$3300(Lcom/android/settings_ex/wifi/WifiSettings;)Lcom/android/settings_ex/wifi/AccessPoint;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/settings/wifi/AccessPoint;->isSupportedSecurityType()Z
+    invoke-virtual {v1}, Lcom/android/settings_ex/wifi/AccessPoint;->isSupportedSecurityType()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
     .line 3523
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings$32;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSettings$32;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/wifi/WifiSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/wifi/WifiSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -171,19 +171,19 @@
     .line 3527
     :cond_2
     :try_start_1
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings$32;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSettings$32;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSettings$32;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSettings$32;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settings/wifi/AccessPoint;
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiSettings;->access$3300(Lcom/android/settings/wifi/WifiSettings;)Lcom/android/settings/wifi/AccessPoint;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mSelectedAccessPoint:Lcom/android/settings_ex/wifi/AccessPoint;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiSettings;->access$3300(Lcom/android/settings_ex/wifi/WifiSettings;)Lcom/android/settings_ex/wifi/AccessPoint;
 
     move-result-object v2
 
     const/4 v3, 0x0
 
-    # invokes: Lcom/android/settings/wifi/WifiSettings;->showDialog(Lcom/android/settings/wifi/AccessPoint;Z)V
-    invoke-static {v1, v2, v3}, Lcom/android/settings/wifi/WifiSettings;->access$4100(Lcom/android/settings/wifi/WifiSettings;Lcom/android/settings/wifi/AccessPoint;Z)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiSettings;->showDialog(Lcom/android/settings_ex/wifi/AccessPoint;Z)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/wifi/WifiSettings;->access$4100(Lcom/android/settings_ex/wifi/WifiSettings;Lcom/android/settings_ex/wifi/AccessPoint;Z)V
     :try_end_1
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_1
 

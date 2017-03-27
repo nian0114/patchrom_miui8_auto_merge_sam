@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wifi/WifiSnsExceptionActivity$1;
+.class Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity$1;
 .super Landroid/content/BroadcastReceiver;
 .source "WifiSnsExceptionActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiSnsExceptionActivity;
+    value = Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSnsExceptionActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSnsExceptionActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;)V
     .locals 0
 
     .prologue
     .line 51
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity$1;->this$0:Lcom/android/settings/wifi/WifiSnsExceptionActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity$1;->this$0:Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -82,9 +82,9 @@
 
     .line 62
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSnsExceptionActivity$1;->this$0:Lcom/android/settings/wifi/WifiSnsExceptionActivity;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity$1;->this$0:Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;
 
-    invoke-virtual {v2}, Lcom/android/settings/wifi/WifiSnsExceptionActivity;->finish()V
+    invoke-virtual {v2}, Lcom/android/settings_ex/wifi/WifiSnsExceptionActivity;->finish()V
 
     goto :goto_0
 .end method

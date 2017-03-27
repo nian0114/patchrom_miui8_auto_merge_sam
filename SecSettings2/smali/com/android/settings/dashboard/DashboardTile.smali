@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/dashboard/DashboardTile;
+.class public Lcom/android/settings_ex/dashboard/DashboardTile;
 .super Ljava/lang/Object;
 .source "DashboardTile.java"
 
@@ -12,7 +12,7 @@
         value = {
             "Landroid/os/Parcelable$Creator",
             "<",
-            "Lcom/android/settings/dashboard/DashboardTile;",
+            "Lcom/android/settings_ex/dashboard/DashboardTile;",
             ">;"
         }
     .end annotation
@@ -64,11 +64,11 @@
 
     .prologue
     .line 201
-    new-instance v0, Lcom/android/settings/dashboard/DashboardTile$1;
+    new-instance v0, Lcom/android/settings_ex/dashboard/DashboardTile$1;
 
-    invoke-direct {v0}, Lcom/android/settings/dashboard/DashboardTile$1;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/dashboard/DashboardTile$1;-><init>()V
 
-    sput-object v0, Lcom/android/settings/dashboard/DashboardTile;->CREATOR:Landroid/os/Parcelable$Creator;
+    sput-object v0, Lcom/android/settings_ex/dashboard/DashboardTile;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
@@ -83,14 +83,14 @@
     .line 46
     const-wide/16 v0, -0x1
 
-    iput-wide v0, p0, Lcom/android/settings/dashboard/DashboardTile;->id:J
+    iput-wide v0, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->id:J
 
     .line 104
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/dashboard/DashboardTile;->userHandle:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->userHandle:Ljava/util/ArrayList;
 
     .line 117
     return-void
@@ -107,17 +107,17 @@
     .line 46
     const-wide/16 v0, -0x1
 
-    iput-wide v0, p0, Lcom/android/settings/dashboard/DashboardTile;->id:J
+    iput-wide v0, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->id:J
 
     .line 104
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/dashboard/DashboardTile;->userHandle:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->userHandle:Ljava/util/ArrayList;
 
     .line 198
-    invoke-virtual {p0, p1}, Lcom/android/settings/dashboard/DashboardTile;->readFromParcel(Landroid/os/Parcel;)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/dashboard/DashboardTile;->readFromParcel(Landroid/os/Parcel;)V
 
     .line 199
     return-void
@@ -141,12 +141,12 @@
 
     .prologue
     .line 137
-    iget v0, p0, Lcom/android/settings/dashboard/DashboardTile;->summaryRes:I
+    iget v0, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->summaryRes:I
 
     if-eqz v0, :cond_0
 
     .line 138
-    iget v0, p0, Lcom/android/settings/dashboard/DashboardTile;->summaryRes:I
+    iget v0, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->summaryRes:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -157,7 +157,7 @@
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardTile;->summary:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->summary:Ljava/lang/CharSequence;
 
     goto :goto_0
 .end method
@@ -168,12 +168,12 @@
 
     .prologue
     .line 125
-    iget v0, p0, Lcom/android/settings/dashboard/DashboardTile;->titleRes:I
+    iget v0, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->titleRes:I
 
     if-eqz v0, :cond_0
 
     .line 126
-    iget v0, p0, Lcom/android/settings/dashboard/DashboardTile;->titleRes:I
+    iget v0, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->titleRes:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -184,7 +184,7 @@
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardTile;->title:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->title:Ljava/lang/CharSequence;
 
     goto :goto_0
 .end method
@@ -199,14 +199,14 @@
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/android/settings/dashboard/DashboardTile;->id:J
+    iput-wide v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->id:J
 
     .line 177
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    iput v2, p0, Lcom/android/settings/dashboard/DashboardTile;->titleRes:I
+    iput v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->titleRes:I
 
     .line 178
     sget-object v2, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
@@ -217,14 +217,14 @@
 
     check-cast v2, Ljava/lang/CharSequence;
 
-    iput-object v2, p0, Lcom/android/settings/dashboard/DashboardTile;->title:Ljava/lang/CharSequence;
+    iput-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->title:Ljava/lang/CharSequence;
 
     .line 179
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    iput v2, p0, Lcom/android/settings/dashboard/DashboardTile;->summaryRes:I
+    iput v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->summaryRes:I
 
     .line 180
     sget-object v2, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
@@ -235,35 +235,35 @@
 
     check-cast v2, Ljava/lang/CharSequence;
 
-    iput-object v2, p0, Lcom/android/settings/dashboard/DashboardTile;->summary:Ljava/lang/CharSequence;
+    iput-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->summary:Ljava/lang/CharSequence;
 
     .line 181
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    iput v2, p0, Lcom/android/settings/dashboard/DashboardTile;->iconRes:I
+    iput v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->iconRes:I
 
     .line 182
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/dashboard/DashboardTile;->iconPkg:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->iconPkg:Ljava/lang/String;
 
     .line 183
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/dashboard/DashboardTile;->fragment:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->fragment:Ljava/lang/String;
 
     .line 184
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/dashboard/DashboardTile;->fragmentArguments:Landroid/os/Bundle;
+    iput-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->fragmentArguments:Landroid/os/Bundle;
 
     .line 185
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -281,7 +281,7 @@
 
     check-cast v2, Landroid/content/Intent;
 
-    iput-object v2, p0, Lcom/android/settings/dashboard/DashboardTile;->intent:Landroid/content/Intent;
+    iput-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->intent:Landroid/content/Intent;
 
     .line 188
     :cond_0
@@ -298,7 +298,7 @@
     if-ge v1, v0, :cond_1
 
     .line 190
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardTile;->userHandle:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->userHandle:Ljava/util/ArrayList;
 
     sget-object v3, Landroid/os/UserHandle;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -319,21 +319,21 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/dashboard/DashboardTile;->extras:Landroid/os/Bundle;
+    iput-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->extras:Landroid/os/Bundle;
 
     .line 193
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    iput v2, p0, Lcom/android/settings/dashboard/DashboardTile;->categoryId:I
+    iput v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->categoryId:I
 
     .line 194
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/dashboard/DashboardTile;->removeTileapps:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->removeTileapps:Ljava/lang/String;
 
     .line 195
     return-void
@@ -346,52 +346,52 @@
 
     .prologue
     .line 150
-    iget-wide v2, p0, Lcom/android/settings/dashboard/DashboardTile;->id:J
+    iget-wide v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->id:J
 
     invoke-virtual {p1, v2, v3}, Landroid/os/Parcel;->writeLong(J)V
 
     .line 151
-    iget v2, p0, Lcom/android/settings/dashboard/DashboardTile;->titleRes:I
+    iget v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->titleRes:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 152
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardTile;->title:Ljava/lang/CharSequence;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->title:Ljava/lang/CharSequence;
 
     invoke-static {v2, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
     .line 153
-    iget v2, p0, Lcom/android/settings/dashboard/DashboardTile;->summaryRes:I
+    iget v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->summaryRes:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 154
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardTile;->summary:Ljava/lang/CharSequence;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->summary:Ljava/lang/CharSequence;
 
     invoke-static {v2, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
     .line 155
-    iget v2, p0, Lcom/android/settings/dashboard/DashboardTile;->iconRes:I
+    iget v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->iconRes:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 156
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardTile;->iconPkg:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->iconPkg:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 157
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardTile;->fragment:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->fragment:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 158
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardTile;->fragmentArguments:Landroid/os/Bundle;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->fragmentArguments:Landroid/os/Bundle;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
     .line 159
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardTile;->intent:Landroid/content/Intent;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->intent:Landroid/content/Intent;
 
     if-eqz v2, :cond_0
 
@@ -401,13 +401,13 @@
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 161
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardTile;->intent:Landroid/content/Intent;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->intent:Landroid/content/Intent;
 
     invoke-virtual {v2, p1, p2}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
     .line 165
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardTile;->userHandle:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->userHandle:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -425,7 +425,7 @@
     if-ge v1, v0, :cond_1
 
     .line 168
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardTile;->userHandle:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->userHandle:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -454,17 +454,17 @@
     .restart local v0    # "N":I
     .restart local v1    # "i":I
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardTile;->extras:Landroid/os/Bundle;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->extras:Landroid/os/Bundle;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
     .line 171
-    iget v2, p0, Lcom/android/settings/dashboard/DashboardTile;->categoryId:I
+    iget v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->categoryId:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 172
-    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardTile;->removeTileapps:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/dashboard/DashboardTile;->removeTileapps:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/powersavingmode/PowerSavingModeUltra$2;
+.class Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra$2;
 .super Landroid/telephony/PhoneStateListener;
 .source "PowerSavingModeUltra.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/powersavingmode/PowerSavingModeUltra;
+    value = Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/powersavingmode/PowerSavingModeUltra;
+.field final synthetic this$0:Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/powersavingmode/PowerSavingModeUltra;)V
+.method constructor <init>(Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;)V
     .locals 0
 
     .prologue
     .line 133
-    iput-object p1, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings/powersavingmode/PowerSavingModeUltra;
+    iput-object p1, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
 
@@ -41,10 +41,10 @@
     const/4 v2, 0x0
 
     .line 136
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings/powersavingmode/PowerSavingModeUltra;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;
 
-    # getter for: Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mTelephonyManager:Landroid/telephony/TelephonyManager;
-    invoke-static {v1}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->access$100(Lcom/android/settings/powersavingmode/PowerSavingModeUltra;)Landroid/telephony/TelephonyManager;
+    # getter for: Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    invoke-static {v1}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->access$100(Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;)Landroid/telephony/TelephonyManager;
 
     move-result-object v1
 
@@ -101,10 +101,10 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings/powersavingmode/PowerSavingModeUltra;
+    iget-object v4, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;
 
-    # getter for: Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mWasVideo:Z
-    invoke-static {v4}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->access$200(Lcom/android/settings/powersavingmode/PowerSavingModeUltra;)Z
+    # getter for: Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mWasVideo:Z
+    invoke-static {v4}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->access$200(Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;)Z
 
     move-result v4
 
@@ -119,30 +119,30 @@
     invoke-static {v1, v3}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 139
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings/powersavingmode/PowerSavingModeUltra;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;
 
-    # getter for: Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mWasVideo:Z
-    invoke-static {v1}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->access$200(Lcom/android/settings/powersavingmode/PowerSavingModeUltra;)Z
+    # getter for: Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mWasVideo:Z
+    invoke-static {v1}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->access$200(Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;)Z
 
     move-result v1
 
     if-eq v0, v1, :cond_1
 
     .line 141
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings/powersavingmode/PowerSavingModeUltra;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;
 
-    # getter for: Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v1}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->access$000(Lcom/android/settings/powersavingmode/PowerSavingModeUltra;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v1}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->access$000(Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
     .line 142
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings/powersavingmode/PowerSavingModeUltra;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;
 
-    # getter for: Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v1}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->access$000(Lcom/android/settings/powersavingmode/PowerSavingModeUltra;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v1}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->access$000(Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v3
 
@@ -151,47 +151,47 @@
     const/4 v1, 0x1
 
     :goto_0
-    invoke-virtual {v3, v1}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v3, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 144
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings/powersavingmode/PowerSavingModeUltra;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;
 
-    # getter for: Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->isSharedDevice:Z
-    invoke-static {v1}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->access$300(Lcom/android/settings/powersavingmode/PowerSavingModeUltra;)Z
+    # getter for: Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->isSharedDevice:Z
+    invoke-static {v1}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->access$300(Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 145
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings/powersavingmode/PowerSavingModeUltra;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;
 
-    # getter for: Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v1}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->access$000(Lcom/android/settings/powersavingmode/PowerSavingModeUltra;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v1}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->access$000(Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 146
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings/powersavingmode/PowerSavingModeUltra;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;
 
-    # getter for: Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v1}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->access$000(Lcom/android/settings/powersavingmode/PowerSavingModeUltra;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v1}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->access$000(Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/widget/SwitchBar;->setClickable(Z)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/widget/SwitchBar;->setClickable(Z)V
 
     .line 147
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings/powersavingmode/PowerSavingModeUltra;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;
 
-    # getter for: Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v1}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->access$000(Lcom/android/settings/powersavingmode/PowerSavingModeUltra;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v1}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->access$000(Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/widget/SwitchBar;->setFocusable(Z)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/widget/SwitchBar;->setFocusable(Z)V
 
     .line 148
     const-string v1, "PowerSavingModeUltra"
@@ -206,10 +206,10 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings/powersavingmode/PowerSavingModeUltra;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;
 
-    # getter for: Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->isSharedDevice:Z
-    invoke-static {v3}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->access$300(Lcom/android/settings/powersavingmode/PowerSavingModeUltra;)Z
+    # getter for: Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->isSharedDevice:Z
+    invoke-static {v3}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->access$300(Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;)Z
 
     move-result v3
 
@@ -225,10 +225,10 @@
 
     .line 152
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings/powersavingmode/PowerSavingModeUltra;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra$2;->this$0:Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;
 
-    # setter for: Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mWasVideo:Z
-    invoke-static {v1, v0}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->access$202(Lcom/android/settings/powersavingmode/PowerSavingModeUltra;Z)Z
+    # setter for: Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mWasVideo:Z
+    invoke-static {v1, v0}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->access$202(Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;Z)Z
 
     .line 154
     :cond_1

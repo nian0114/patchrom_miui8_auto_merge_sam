@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settings/applications/AppPermissions$1;
+.class synthetic Lcom/android/settings_ex/applications/AppPermissions$1;
 .super Ljava/lang/Object;
 .source "AppPermissions.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/AppPermissions;
+    value = Lcom/android/settings_ex/applications/AppPermissions;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

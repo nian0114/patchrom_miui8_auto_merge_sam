@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/applications/DefaultPhonePreference;
-.super Lcom/android/settings/AppListPreference;
+.class public Lcom/android/settings_ex/applications/DefaultPhonePreference;
+.super Lcom/android/settings_ex/AppListPreference;
 .source "DefaultPhonePreference.java"
 
 
@@ -15,29 +15,29 @@
 
     .prologue
     .line 39
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/AppListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/AppListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 41
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/applications/DefaultPhonePreference;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/applications/DefaultPhonePreference;->mContext:Landroid/content/Context;
 
     .line 42
     const v0, 0x7f0e13b7
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/applications/DefaultPhonePreference;->setResDescription(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/applications/DefaultPhonePreference;->setResDescription(I)V
 
     .line 43
-    invoke-static {p1}, Lcom/android/settings/applications/DefaultPhonePreference;->isAvailable(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/applications/DefaultPhonePreference;->isAvailable(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 44
-    invoke-virtual {p0}, Lcom/android/settings/applications/DefaultPhonePreference;->loadDialerApps()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/DefaultPhonePreference;->loadDialerApps()V
 
     .line 46
     :cond_0
@@ -49,7 +49,7 @@
 
     .prologue
     .line 73
-    invoke-virtual {p0}, Lcom/android/settings/applications/DefaultPhonePreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/DefaultPhonePreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -121,7 +121,7 @@
 
     .prologue
     .line 62
-    invoke-virtual {p0}, Lcom/android/settings/applications/DefaultPhonePreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/DefaultPhonePreference;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -165,11 +165,11 @@
 
     .line 69
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/applications/DefaultPhonePreference;->getDefaultPackage()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/applications/DefaultPhonePreference;->getDefaultPackage()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {p0, v1, v3}, Lcom/android/settings/applications/DefaultPhonePreference;->setPackageNames([Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v1, v3}, Lcom/android/settings_ex/applications/DefaultPhonePreference;->setPackageNames([Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
 
     .line 70
     return-void
@@ -187,7 +187,7 @@
 
     if-nez v1, :cond_0
 
-    invoke-direct {p0}, Lcom/android/settings/applications/DefaultPhonePreference;->getDefaultPackage()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/applications/DefaultPhonePreference;->getDefaultPackage()Ljava/lang/String;
 
     move-result-object v1
 
@@ -216,7 +216,7 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 55
-    iget-object v1, p0, Lcom/android/settings/applications/DefaultPhonePreference;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/DefaultPhonePreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/deviceinfo/simlockstatus/SimStatusUtils;
+.class public Lcom/android/settings_ex/deviceinfo/simlockstatus/SimStatusUtils;
 .super Ljava/lang/Object;
 .source "SimStatusUtils.java"
 
@@ -13,13 +13,13 @@
 
     .prologue
     .line 22
-    const-class v0, Lcom/android/settings/deviceinfo/simlockstatus/SimStatusUtils;
+    const-class v0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SimStatusUtils;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/deviceinfo/simlockstatus/SimStatusUtils;->TAG:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/deviceinfo/simlockstatus/SimStatusUtils;->TAG:Ljava/lang/String;
 
     return-void
 .end method
@@ -87,7 +87,7 @@
     .line 100
     aget-object v1, p0, v0
 
-    invoke-static {v1}, Lcom/android/settings/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently(Ljava/io/Closeable;)V
+    invoke-static {v1}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently(Ljava/io/Closeable;)V
 
     .line 99
     add-int/lit8 v0, v0, 0x1
@@ -136,7 +136,7 @@
 
     .line 46
     .local v1, "returnBuffer":Ljava/nio/ByteBuffer;
-    invoke-static {v0}, Lcom/android/settings/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently(Ljava/io/Closeable;)V
+    invoke-static {v0}, Lcom/android/settings_ex/deviceinfo/simlockstatus/SimStatusUtils;->closeSilently(Ljava/io/Closeable;)V
 
     .line 47
     return-object v1
@@ -207,7 +207,7 @@
 
     .line 121
     .local v0, "e":Ljava/io/UnsupportedEncodingException;
-    sget-object v4, Lcom/android/settings/deviceinfo/simlockstatus/SimStatusUtils;->TAG:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/deviceinfo/simlockstatus/SimStatusUtils;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
 

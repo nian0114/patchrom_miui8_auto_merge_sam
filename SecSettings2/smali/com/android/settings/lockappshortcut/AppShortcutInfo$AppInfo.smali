@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;
+.class public Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;
 .super Ljava/lang/Object;
 .source "AppShortcutInfo.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/lockappshortcut/AppShortcutInfo;
+    value = Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -33,15 +33,15 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 48
-    iput-object v0, p0, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->mLabel:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->mLabel:Ljava/lang/String;
 
     .line 49
-    iput-object v0, p0, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->mIcon:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->mIcon:Landroid/graphics/drawable/Drawable;
 
     .line 50
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->isActive:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->isActive:Z
 
     .line 51
     return-void

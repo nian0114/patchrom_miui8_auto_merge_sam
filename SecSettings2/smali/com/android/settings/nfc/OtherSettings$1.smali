@@ -1,11 +1,11 @@
-.class Lcom/android/settings/nfc/OtherSettings$1;
+.class Lcom/android/settings_ex/nfc/OtherSettings$1;
 .super Landroid/content/BroadcastReceiver;
 .source "OtherSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/nfc/OtherSettings;
+    value = Lcom/android/settings_ex/nfc/OtherSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nfc/OtherSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/nfc/OtherSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/nfc/OtherSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/nfc/OtherSettings;)V
     .locals 0
 
     .prologue
     .line 81
-    iput-object p1, p0, Lcom/android/settings/nfc/OtherSettings$1;->this$0:Lcom/android/settings/nfc/OtherSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/nfc/OtherSettings$1;->this$0:Lcom/android/settings_ex/nfc/OtherSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -68,9 +68,9 @@
     if-ne v1, v2, :cond_0
 
     .line 89
-    iget-object v1, p0, Lcom/android/settings/nfc/OtherSettings$1;->this$0:Lcom/android/settings/nfc/OtherSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/OtherSettings$1;->this$0:Lcom/android/settings_ex/nfc/OtherSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/nfc/OtherSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/nfc/OtherSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -92,9 +92,9 @@
     if-eqz v1, :cond_0
 
     .line 92
-    iget-object v1, p0, Lcom/android/settings/nfc/OtherSettings$1;->this$0:Lcom/android/settings/nfc/OtherSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/OtherSettings$1;->this$0:Lcom/android/settings_ex/nfc/OtherSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/nfc/OtherSettings;->refresh()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/nfc/OtherSettings;->refresh()V
 
     goto :goto_0
 .end method

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/bluetooth/CheckBluetoothStateActivity$3;
+.class Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity$3;
 .super Ljava/lang/Object;
 .source "CheckBluetoothStateActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;)V
     .locals 0
 
     .prologue
     .line 143
-    iput-object p1, p0, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity$3;->this$0:Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity$3;->this$0:Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -59,8 +59,8 @@
     .line 151
     const/4 v1, 0x0
 
-    # setter for: Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->mDialogExist:Z
-    invoke-static {v1}, Lcom/android/settings/bluetooth/CheckBluetoothStateActivity;->access$502(Z)Z
+    # setter for: Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->mDialogExist:Z
+    invoke-static {v1}, Lcom/android/settings_ex/bluetooth/CheckBluetoothStateActivity;->access$502(Z)Z
 
     .line 152
     return-void

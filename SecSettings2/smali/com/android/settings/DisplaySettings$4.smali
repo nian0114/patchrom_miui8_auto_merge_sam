@@ -1,11 +1,11 @@
-.class Lcom/android/settings/DisplaySettings$4;
+.class Lcom/android/settings_ex/DisplaySettings$4;
 .super Lcom/android/internal/view/RotationPolicy$RotationPolicyListener;
 .source "DisplaySettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DisplaySettings;
+    value = Lcom/android/settings_ex/DisplaySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DisplaySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/DisplaySettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DisplaySettings;)V
+.method constructor <init>(Lcom/android/settings_ex/DisplaySettings;)V
     .locals 0
 
     .prologue
     .line 276
-    iput-object p1, p0, Lcom/android/settings/DisplaySettings$4;->this$0:Lcom/android/settings/DisplaySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/DisplaySettings$4;->this$0:Lcom/android/settings_ex/DisplaySettings;
 
     invoke-direct {p0}, Lcom/android/internal/view/RotationPolicy$RotationPolicyListener;-><init>()V
 
@@ -38,10 +38,10 @@
 
     .prologue
     .line 279
-    iget-object v1, p0, Lcom/android/settings/DisplaySettings$4;->this$0:Lcom/android/settings/DisplaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/DisplaySettings$4;->this$0:Lcom/android/settings_ex/DisplaySettings;
 
-    # getter for: Lcom/android/settings/DisplaySettings;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/DisplaySettings;->access$300(Lcom/android/settings/DisplaySettings;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/DisplaySettings;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/DisplaySettings;->access$300(Lcom/android/settings_ex/DisplaySettings;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -52,11 +52,11 @@
     if-eqz v1, :cond_0
 
     .line 280
-    iget-object v1, p0, Lcom/android/settings/DisplaySettings$4;->this$0:Lcom/android/settings/DisplaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/DisplaySettings$4;->this$0:Lcom/android/settings_ex/DisplaySettings;
 
     const-string v2, "auto_rotate"
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/DisplaySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/DisplaySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
@@ -67,9 +67,9 @@
     if-eqz v0, :cond_0
 
     .line 284
-    iget-object v1, p0, Lcom/android/settings/DisplaySettings$4;->this$0:Lcom/android/settings/DisplaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/DisplaySettings$4;->this$0:Lcom/android/settings_ex/DisplaySettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/DisplaySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/DisplaySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/notification/AppNotificationSettings$2;
+.class Lcom/android/settings_ex/notification/AppNotificationSettings$2;
 .super Ljava/lang/Object;
 .source "AppNotificationSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/notification/AppNotificationSettings;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/notification/AppNotificationSettings;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/AppNotificationSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/AppNotificationSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/notification/AppNotificationSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/notification/AppNotificationSettings;)V
     .locals 0
 
     .prologue
     .line 235
-    iput-object p1, p0, Lcom/android/settings/notification/AppNotificationSettings$2;->this$0:Lcom/android/settings/notification/AppNotificationSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/AppNotificationSettings$2;->this$0:Lcom/android/settings_ex/notification/AppNotificationSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -83,18 +83,18 @@
     if-eqz v0, :cond_0
 
     .line 241
-    iget-object v2, p0, Lcom/android/settings/notification/AppNotificationSettings$2;->this$0:Lcom/android/settings/notification/AppNotificationSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/AppNotificationSettings$2;->this$0:Lcom/android/settings_ex/notification/AppNotificationSettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/notification/AppNotificationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Lcom/android/settings_ex/notification/AppNotificationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     const/16 v3, 0x93
 
-    iget-object v4, p0, Lcom/android/settings/notification/AppNotificationSettings$2;->this$0:Lcom/android/settings/notification/AppNotificationSettings;
+    iget-object v4, p0, Lcom/android/settings_ex/notification/AppNotificationSettings$2;->this$0:Lcom/android/settings_ex/notification/AppNotificationSettings;
 
-    # getter for: Lcom/android/settings/notification/AppNotificationSettings;->pkg:Ljava/lang/String;
-    invoke-static {v4}, Lcom/android/settings/notification/AppNotificationSettings;->access$000(Lcom/android/settings/notification/AppNotificationSettings;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/notification/AppNotificationSettings;->pkg:Ljava/lang/String;
+    invoke-static {v4}, Lcom/android/settings_ex/notification/AppNotificationSettings;->access$000(Lcom/android/settings_ex/notification/AppNotificationSettings;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -102,28 +102,28 @@
 
     .line 243
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/notification/AppNotificationSettings$2;->this$0:Lcom/android/settings/notification/AppNotificationSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/AppNotificationSettings$2;->this$0:Lcom/android/settings_ex/notification/AppNotificationSettings;
 
-    # getter for: Lcom/android/settings/notification/AppNotificationSettings;->mBackend:Lcom/android/settings/notification/NotificationBackend;
-    invoke-static {v2}, Lcom/android/settings/notification/AppNotificationSettings;->access$200(Lcom/android/settings/notification/AppNotificationSettings;)Lcom/android/settings/notification/NotificationBackend;
+    # getter for: Lcom/android/settings_ex/notification/AppNotificationSettings;->mBackend:Lcom/android/settings_ex/notification/NotificationBackend;
+    invoke-static {v2}, Lcom/android/settings_ex/notification/AppNotificationSettings;->access$200(Lcom/android/settings_ex/notification/AppNotificationSettings;)Lcom/android/settings_ex/notification/NotificationBackend;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/notification/AppNotificationSettings$2;->this$0:Lcom/android/settings/notification/AppNotificationSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/AppNotificationSettings$2;->this$0:Lcom/android/settings_ex/notification/AppNotificationSettings;
 
-    # getter for: Lcom/android/settings/notification/AppNotificationSettings;->pkg:Ljava/lang/String;
-    invoke-static {v3}, Lcom/android/settings/notification/AppNotificationSettings;->access$000(Lcom/android/settings/notification/AppNotificationSettings;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/notification/AppNotificationSettings;->pkg:Ljava/lang/String;
+    invoke-static {v3}, Lcom/android/settings_ex/notification/AppNotificationSettings;->access$000(Lcom/android/settings_ex/notification/AppNotificationSettings;)Ljava/lang/String;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/notification/AppNotificationSettings$2;->this$0:Lcom/android/settings/notification/AppNotificationSettings;
+    iget-object v4, p0, Lcom/android/settings_ex/notification/AppNotificationSettings$2;->this$0:Lcom/android/settings_ex/notification/AppNotificationSettings;
 
-    # getter for: Lcom/android/settings/notification/AppNotificationSettings;->mUid:I
-    invoke-static {v4}, Lcom/android/settings/notification/AppNotificationSettings;->access$100(Lcom/android/settings/notification/AppNotificationSettings;)I
+    # getter for: Lcom/android/settings_ex/notification/AppNotificationSettings;->mUid:I
+    invoke-static {v4}, Lcom/android/settings_ex/notification/AppNotificationSettings;->access$100(Lcom/android/settings_ex/notification/AppNotificationSettings;)I
 
     move-result v4
 
-    invoke-virtual {v2, v3, v4, v0}, Lcom/android/settings/notification/NotificationBackend;->setNotificationsBanned(Ljava/lang/String;IZ)Z
+    invoke-virtual {v2, v3, v4, v0}, Lcom/android/settings_ex/notification/NotificationBackend;->setNotificationsBanned(Ljava/lang/String;IZ)Z
 
     move-result v1
 
@@ -132,10 +132,10 @@
     if-eqz v1, :cond_1
 
     .line 245
-    iget-object v2, p0, Lcom/android/settings/notification/AppNotificationSettings$2;->this$0:Lcom/android/settings/notification/AppNotificationSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/AppNotificationSettings$2;->this$0:Lcom/android/settings_ex/notification/AppNotificationSettings;
 
-    # invokes: Lcom/android/settings/notification/AppNotificationSettings;->updateDependents(Z)V
-    invoke-static {v2, v0}, Lcom/android/settings/notification/AppNotificationSettings;->access$300(Lcom/android/settings/notification/AppNotificationSettings;Z)V
+    # invokes: Lcom/android/settings_ex/notification/AppNotificationSettings;->updateDependents(Z)V
+    invoke-static {v2, v0}, Lcom/android/settings_ex/notification/AppNotificationSettings;->access$300(Lcom/android/settings_ex/notification/AppNotificationSettings;Z)V
 
     .line 247
     :cond_1

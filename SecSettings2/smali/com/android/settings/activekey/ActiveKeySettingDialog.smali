@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/activekey/ActiveKeySettingDialog;
+.class public Lcom/android/settings_ex/activekey/ActiveKeySettingDialog;
 .super Lcom/android/internal/app/AlertActivity;
 .source "ActiveKeySettingDialog.java"
 
@@ -23,7 +23,7 @@
 
     .prologue
     .line 76
-    invoke-virtual {p0}, Lcom/android/settings/activekey/ActiveKeySettingDialog;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Lcom/android/settings_ex/activekey/ActiveKeySettingDialog;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v2
 
@@ -66,7 +66,7 @@
 
     .line 43
     .local v0, "alertDialogBuilder":Landroid/app/AlertDialog$Builder;
-    invoke-direct {p0}, Lcom/android/settings/activekey/ActiveKeySettingDialog;->getContentView()Landroid/view/View;
+    invoke-direct {p0}, Lcom/android/settings_ex/activekey/ActiveKeySettingDialog;->getContentView()Landroid/view/View;
 
     move-result-object v1
 
@@ -82,25 +82,25 @@
     .line 46
     const v2, 0x7f0e01c3
 
-    new-instance v3, Lcom/android/settings/activekey/ActiveKeySettingDialog$1;
+    new-instance v3, Lcom/android/settings_ex/activekey/ActiveKeySettingDialog$1;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/activekey/ActiveKeySettingDialog$1;-><init>(Lcom/android/settings/activekey/ActiveKeySettingDialog;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/activekey/ActiveKeySettingDialog$1;-><init>(Lcom/android/settings_ex/activekey/ActiveKeySettingDialog;)V
 
     invoke-virtual {v0, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 57
     const v2, 0x7f0e1678
 
-    new-instance v3, Lcom/android/settings/activekey/ActiveKeySettingDialog$2;
+    new-instance v3, Lcom/android/settings_ex/activekey/ActiveKeySettingDialog$2;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/activekey/ActiveKeySettingDialog$2;-><init>(Lcom/android/settings/activekey/ActiveKeySettingDialog;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/activekey/ActiveKeySettingDialog$2;-><init>(Lcom/android/settings_ex/activekey/ActiveKeySettingDialog;)V
 
     invoke-virtual {v0, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 64
-    new-instance v2, Lcom/android/settings/activekey/ActiveKeySettingDialog$3;
+    new-instance v2, Lcom/android/settings_ex/activekey/ActiveKeySettingDialog$3;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/activekey/ActiveKeySettingDialog$3;-><init>(Lcom/android/settings/activekey/ActiveKeySettingDialog;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/activekey/ActiveKeySettingDialog$3;-><init>(Lcom/android/settings_ex/activekey/ActiveKeySettingDialog;)V
 
     invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
 
@@ -109,10 +109,10 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/activekey/ActiveKeySettingDialog;->mProceedAlertDialog:Landroid/app/AlertDialog;
+    iput-object v2, p0, Lcom/android/settings_ex/activekey/ActiveKeySettingDialog;->mProceedAlertDialog:Landroid/app/AlertDialog;
 
     .line 72
-    iget-object v2, p0, Lcom/android/settings/activekey/ActiveKeySettingDialog;->mProceedAlertDialog:Landroid/app/AlertDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/activekey/ActiveKeySettingDialog;->mProceedAlertDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v2}, Landroid/app/AlertDialog;->show()V
 
@@ -131,10 +131,10 @@
     invoke-super {p0, p1}, Lcom/android/internal/app/AlertActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 37
-    invoke-direct {p0}, Lcom/android/settings/activekey/ActiveKeySettingDialog;->showProceedDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/activekey/ActiveKeySettingDialog;->showProceedDialog()V
 
     .line 38
-    invoke-virtual {p0}, Lcom/android/settings/activekey/ActiveKeySettingDialog;->setupAlert()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/activekey/ActiveKeySettingDialog;->setupAlert()V
 
     .line 39
     return-void

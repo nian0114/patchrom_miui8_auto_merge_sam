@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settings/guide/WifiSettingsGuider$8;
+.class synthetic Lcom/android/settings_ex/guide/WifiSettingsGuider$8;
 .super Ljava/lang/Object;
 .source "WifiSettingsGuider.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/guide/WifiSettingsGuider;
+    value = Lcom/android/settings_ex/guide/WifiSettingsGuider;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
 
     .prologue
     .line 357
-    invoke-static {}, Lcom/android/settings/guide/WifiSettingsGuider$GuideStates;->values()[Lcom/android/settings/guide/WifiSettingsGuider$GuideStates;
+    invoke-static {}, Lcom/android/settings_ex/guide/WifiSettingsGuider$GuideStates;->values()[Lcom/android/settings_ex/guide/WifiSettingsGuider$GuideStates;
 
     move-result-object v0
 
@@ -32,12 +32,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/settings/guide/WifiSettingsGuider$8;->$SwitchMap$com$android$settings$guide$WifiSettingsGuider$GuideStates:[I
+    sput-object v0, Lcom/android/settings_ex/guide/WifiSettingsGuider$8;->$SwitchMap$com$android$settings$guide$WifiSettingsGuider$GuideStates:[I
 
     :try_start_0
-    sget-object v0, Lcom/android/settings/guide/WifiSettingsGuider$8;->$SwitchMap$com$android$settings$guide$WifiSettingsGuider$GuideStates:[I
+    sget-object v0, Lcom/android/settings_ex/guide/WifiSettingsGuider$8;->$SwitchMap$com$android$settings$guide$WifiSettingsGuider$GuideStates:[I
 
-    sget-object v1, Lcom/android/settings/guide/WifiSettingsGuider$GuideStates;->SECURITY:Lcom/android/settings/guide/WifiSettingsGuider$GuideStates;
+    sget-object v1, Lcom/android/settings_ex/guide/WifiSettingsGuider$GuideStates;->SECURITY:Lcom/android/settings_ex/guide/WifiSettingsGuider$GuideStates;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -51,9 +51,9 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/android/settings/guide/WifiSettingsGuider$8;->$SwitchMap$com$android$settings$guide$WifiSettingsGuider$GuideStates:[I
+    sget-object v0, Lcom/android/settings_ex/guide/WifiSettingsGuider$8;->$SwitchMap$com$android$settings$guide$WifiSettingsGuider$GuideStates:[I
 
-    sget-object v1, Lcom/android/settings/guide/WifiSettingsGuider$GuideStates;->CONNECTED_AUTOMATICALLY:Lcom/android/settings/guide/WifiSettingsGuider$GuideStates;
+    sget-object v1, Lcom/android/settings_ex/guide/WifiSettingsGuider$GuideStates;->CONNECTED_AUTOMATICALLY:Lcom/android/settings_ex/guide/WifiSettingsGuider$GuideStates;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -67,9 +67,9 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/android/settings/guide/WifiSettingsGuider$8;->$SwitchMap$com$android$settings$guide$WifiSettingsGuider$GuideStates:[I
+    sget-object v0, Lcom/android/settings_ex/guide/WifiSettingsGuider$8;->$SwitchMap$com$android$settings$guide$WifiSettingsGuider$GuideStates:[I
 
-    sget-object v1, Lcom/android/settings/guide/WifiSettingsGuider$GuideStates;->NO_NETWORK:Lcom/android/settings/guide/WifiSettingsGuider$GuideStates;
+    sget-object v1, Lcom/android/settings_ex/guide/WifiSettingsGuider$GuideStates;->NO_NETWORK:Lcom/android/settings_ex/guide/WifiSettingsGuider$GuideStates;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -83,9 +83,9 @@
 
     :goto_2
     :try_start_3
-    sget-object v0, Lcom/android/settings/guide/WifiSettingsGuider$8;->$SwitchMap$com$android$settings$guide$WifiSettingsGuider$GuideStates:[I
+    sget-object v0, Lcom/android/settings_ex/guide/WifiSettingsGuider$8;->$SwitchMap$com$android$settings$guide$WifiSettingsGuider$GuideStates:[I
 
-    sget-object v1, Lcom/android/settings/guide/WifiSettingsGuider$GuideStates;->CONNECTED_SUCCESSFULLY:Lcom/android/settings/guide/WifiSettingsGuider$GuideStates;
+    sget-object v1, Lcom/android/settings_ex/guide/WifiSettingsGuider$GuideStates;->CONNECTED_SUCCESSFULLY:Lcom/android/settings_ex/guide/WifiSettingsGuider$GuideStates;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -99,9 +99,9 @@
 
     :goto_3
     :try_start_4
-    sget-object v0, Lcom/android/settings/guide/WifiSettingsGuider$8;->$SwitchMap$com$android$settings$guide$WifiSettingsGuider$GuideStates:[I
+    sget-object v0, Lcom/android/settings_ex/guide/WifiSettingsGuider$8;->$SwitchMap$com$android$settings$guide$WifiSettingsGuider$GuideStates:[I
 
-    sget-object v1, Lcom/android/settings/guide/WifiSettingsGuider$GuideStates;->FOUND_NETWORK:Lcom/android/settings/guide/WifiSettingsGuider$GuideStates;
+    sget-object v1, Lcom/android/settings_ex/guide/WifiSettingsGuider$GuideStates;->FOUND_NETWORK:Lcom/android/settings_ex/guide/WifiSettingsGuider$GuideStates;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -115,9 +115,9 @@
 
     :goto_4
     :try_start_5
-    sget-object v0, Lcom/android/settings/guide/WifiSettingsGuider$8;->$SwitchMap$com$android$settings$guide$WifiSettingsGuider$GuideStates:[I
+    sget-object v0, Lcom/android/settings_ex/guide/WifiSettingsGuider$8;->$SwitchMap$com$android$settings$guide$WifiSettingsGuider$GuideStates:[I
 
-    sget-object v1, Lcom/android/settings/guide/WifiSettingsGuider$GuideStates;->ENABLE:Lcom/android/settings/guide/WifiSettingsGuider$GuideStates;
+    sget-object v1, Lcom/android/settings_ex/guide/WifiSettingsGuider$GuideStates;->ENABLE:Lcom/android/settings_ex/guide/WifiSettingsGuider$GuideStates;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -131,9 +131,9 @@
 
     :goto_5
     :try_start_6
-    sget-object v0, Lcom/android/settings/guide/WifiSettingsGuider$8;->$SwitchMap$com$android$settings$guide$WifiSettingsGuider$GuideStates:[I
+    sget-object v0, Lcom/android/settings_ex/guide/WifiSettingsGuider$8;->$SwitchMap$com$android$settings$guide$WifiSettingsGuider$GuideStates:[I
 
-    sget-object v1, Lcom/android/settings/guide/WifiSettingsGuider$GuideStates;->SCAN:Lcom/android/settings/guide/WifiSettingsGuider$GuideStates;
+    sget-object v1, Lcom/android/settings_ex/guide/WifiSettingsGuider$GuideStates;->SCAN:Lcom/android/settings_ex/guide/WifiSettingsGuider$GuideStates;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -147,9 +147,9 @@
 
     :goto_6
     :try_start_7
-    sget-object v0, Lcom/android/settings/guide/WifiSettingsGuider$8;->$SwitchMap$com$android$settings$guide$WifiSettingsGuider$GuideStates:[I
+    sget-object v0, Lcom/android/settings_ex/guide/WifiSettingsGuider$8;->$SwitchMap$com$android$settings$guide$WifiSettingsGuider$GuideStates:[I
 
-    sget-object v1, Lcom/android/settings/guide/WifiSettingsGuider$GuideStates;->NONE:Lcom/android/settings/guide/WifiSettingsGuider$GuideStates;
+    sget-object v1, Lcom/android/settings_ex/guide/WifiSettingsGuider$GuideStates;->NONE:Lcom/android/settings_ex/guide/WifiSettingsGuider$GuideStates;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 

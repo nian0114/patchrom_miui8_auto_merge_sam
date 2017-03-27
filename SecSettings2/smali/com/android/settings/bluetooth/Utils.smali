@@ -1,4 +1,4 @@
-.class public final Lcom/android/settings/bluetooth/Utils;
+.class public final Lcom/android/settings_ex/bluetooth/Utils;
 .super Ljava/lang/Object;
 .source "Utils.java"
 
@@ -12,9 +12,9 @@
 
 .field static checksum:Ljava/util/zip/Checksum;
 
-.field private static final mErrorListener:Lcom/android/settingslib/bluetooth/Utils$ErrorListener;
+.field private static final mErrorListener:Lcom/android/settings_exlib/bluetooth/Utils$ErrorListener;
 
-.field private static final mOnInitCallback:Lcom/android/settingslib/bluetooth/LocalBluetoothManager$BluetoothManagerCallback;
+.field private static final mOnInitCallback:Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager$BluetoothManagerCallback;
 
 
 # direct methods
@@ -31,21 +31,21 @@
 
     invoke-direct {v0}, Ljava/util/zip/CRC32;-><init>()V
 
-    sput-object v0, Lcom/android/settings/bluetooth/Utils;->checksum:Ljava/util/zip/Checksum;
+    sput-object v0, Lcom/android/settings_ex/bluetooth/Utils;->checksum:Ljava/util/zip/Checksum;
 
     .line 402
-    new-instance v0, Lcom/android/settings/bluetooth/Utils$1;
+    new-instance v0, Lcom/android/settings_ex/bluetooth/Utils$1;
 
-    invoke-direct {v0}, Lcom/android/settings/bluetooth/Utils$1;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/bluetooth/Utils$1;-><init>()V
 
-    sput-object v0, Lcom/android/settings/bluetooth/Utils;->mErrorListener:Lcom/android/settingslib/bluetooth/Utils$ErrorListener;
+    sput-object v0, Lcom/android/settings_ex/bluetooth/Utils;->mErrorListener:Lcom/android/settings_exlib/bluetooth/Utils$ErrorListener;
 
     .line 426
-    new-instance v0, Lcom/android/settings/bluetooth/Utils$2;
+    new-instance v0, Lcom/android/settings_ex/bluetooth/Utils$2;
 
-    invoke-direct {v0}, Lcom/android/settings/bluetooth/Utils$2;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/bluetooth/Utils$2;-><init>()V
 
-    sput-object v0, Lcom/android/settings/bluetooth/Utils;->mOnInitCallback:Lcom/android/settingslib/bluetooth/LocalBluetoothManager$BluetoothManagerCallback;
+    sput-object v0, Lcom/android/settings_ex/bluetooth/Utils;->mOnInitCallback:Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager$BluetoothManagerCallback;
 
     .line 512
     new-array v0, v3, [Ljava/lang/String;
@@ -54,7 +54,7 @@
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/android/settings/bluetooth/Utils;->CONTACT_ID_PROJ:[Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/bluetooth/Utils;->CONTACT_ID_PROJ:[Ljava/lang/String;
 
     .line 795
     new-array v0, v3, [Ljava/lang/String;
@@ -63,7 +63,7 @@
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/android/settings/bluetooth/Utils;->OWNER_NUMBER_PROJ:[Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/bluetooth/Utils;->OWNER_NUMBER_PROJ:[Ljava/lang/String;
 
     .line 841
     new-array v0, v3, [Ljava/lang/String;
@@ -72,7 +72,7 @@
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/android/settings/bluetooth/Utils;->CONTACT_NUMBER:[Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/bluetooth/Utils;->CONTACT_NUMBER:[Ljava/lang/String;
 
     return-void
 .end method
@@ -88,12 +88,12 @@
     return-void
 .end method
 
-.method static synthetic access$000()Lcom/android/settingslib/bluetooth/Utils$ErrorListener;
+.method static synthetic access$000()Lcom/android/settings_exlib/bluetooth/Utils$ErrorListener;
     .locals 1
 
     .prologue
     .line 96
-    sget-object v0, Lcom/android/settings/bluetooth/Utils;->mErrorListener:Lcom/android/settingslib/bluetooth/Utils$ErrorListener;
+    sget-object v0, Lcom/android/settings_ex/bluetooth/Utils;->mErrorListener:Lcom/android/settings_exlib/bluetooth/Utils$ErrorListener;
 
     return-object v0
 .end method
@@ -517,7 +517,7 @@
     .local v12, "resizeBitmap":Landroid/graphics/Bitmap;
     const v2, 0x7f0c00ac
 
-    invoke-static {p0, v2, v12}, Lcom/android/settings/bluetooth/Utils;->cropIcon(Landroid/content/Context;ILandroid/graphics/Bitmap;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p0, v2, v12}, Lcom/android/settings_ex/bluetooth/Utils;->cropIcon(Landroid/content/Context;ILandroid/graphics/Bitmap;)Landroid/graphics/drawable/Drawable;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -696,7 +696,7 @@
 
     .prologue
     .line 542
-    invoke-static {p0, p1}, Lcom/android/settings/bluetooth/Utils;->retrieveContactId(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {p0, p1}, Lcom/android/settings_ex/bluetooth/Utils;->retrieveContactId(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result v0
 
@@ -1287,15 +1287,15 @@
     .end packed-switch
 .end method
 
-.method public static getLocalBtManager(Landroid/content/Context;)Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+.method public static getLocalBtManager(Landroid/content/Context;)Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;
     .locals 1
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 399
-    sget-object v0, Lcom/android/settings/bluetooth/Utils;->mOnInitCallback:Lcom/android/settingslib/bluetooth/LocalBluetoothManager$BluetoothManagerCallback;
+    sget-object v0, Lcom/android/settings_ex/bluetooth/Utils;->mOnInitCallback:Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager$BluetoothManagerCallback;
 
-    invoke-static {p0, v0}, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->getInstance(Landroid/content/Context;Lcom/android/settingslib/bluetooth/LocalBluetoothManager$BluetoothManagerCallback;)Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+    invoke-static {p0, v0}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;->getInstance(Landroid/content/Context;Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager$BluetoothManagerCallback;)Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;
 
     move-result-object v0
 
@@ -1517,12 +1517,12 @@
 
     .prologue
     .line 574
-    invoke-static {p0}, Lcom/android/settings/bluetooth/Utils;->getLocalBtManager(Landroid/content/Context;)Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+    invoke-static {p0}, Lcom/android/settings_ex/bluetooth/Utils;->getLocalBtManager(Landroid/content/Context;)Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;
 
     move-result-object v3
 
     .line 576
-    .local v3, "mLocalManager":Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+    .local v3, "mLocalManager":Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;
     if-nez v3, :cond_0
 
     const/4 v4, 0x0
@@ -1533,7 +1533,7 @@
 
     .line 577
     :cond_0
-    invoke-virtual {v3}, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->getCachedDeviceManager()Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;
+    invoke-virtual {v3}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;->getCachedDeviceManager()Lcom/android/settings_exlib/bluetooth/CachedBluetoothDeviceManager;
 
     move-result-object v5
 
@@ -1581,16 +1581,16 @@
 
     .line 581
     .local v4, "values":[J
-    invoke-virtual {v3}, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->getCachedDeviceManager()Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;
+    invoke-virtual {v3}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;->getCachedDeviceManager()Lcom/android/settings_exlib/bluetooth/CachedBluetoothDeviceManager;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;->getCachedDevicesCopy()Ljava/util/Collection;
+    invoke-virtual {v5}, Lcom/android/settings_exlib/bluetooth/CachedBluetoothDeviceManager;->getCachedDevicesCopy()Ljava/util/Collection;
 
     move-result-object v1
 
     .line 582
-    .local v1, "cachedDevices":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;>;"
+    .local v1, "cachedDevices":Ljava/util/Collection;, "Ljava/util/Collection<Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;>;"
     invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -1608,11 +1608,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
+    check-cast v0, Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;
 
     .line 583
-    .local v0, "cachedDevice":Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
-    invoke-virtual {v0}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->getBondState()I
+    .local v0, "cachedDevice":Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;
+    invoke-virtual {v0}, Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;->getBondState()I
 
     move-result v5
 
@@ -1621,7 +1621,7 @@
     if-eq v5, v6, :cond_2
 
     .line 584
-    invoke-virtual {v0}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->getDevice()Landroid/bluetooth/BluetoothDevice;
+    invoke-virtual {v0}, Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;->getDevice()Landroid/bluetooth/BluetoothDevice;
 
     move-result-object v5
 
@@ -1711,7 +1711,7 @@
     goto :goto_1
 
     .line 603
-    .end local v0    # "cachedDevice":Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
+    .end local v0    # "cachedDevice":Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;
     :cond_3
     const-string v5, "BluetoothUtils"
 
@@ -1799,17 +1799,17 @@
 
     .prologue
     .line 557
-    invoke-static {p0}, Lcom/android/settings/bluetooth/Utils;->getLocalBtManager(Landroid/content/Context;)Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+    invoke-static {p0}, Lcom/android/settings_ex/bluetooth/Utils;->getLocalBtManager(Landroid/content/Context;)Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;
 
     move-result-object v4
 
     .line 559
-    .local v4, "mLocalManager":Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
-    invoke-virtual {v4}, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->getBluetoothAdapter()Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    .local v4, "mLocalManager":Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;
+    invoke-virtual {v4}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;->getBluetoothAdapter()Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     move-result-object v7
 
-    invoke-virtual {v7}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->getBondedDevices()Ljava/util/Set;
+    invoke-virtual {v7}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->getBondedDevices()Ljava/util/Set;
 
     move-result-object v7
 
@@ -1819,7 +1819,7 @@
 
     .line 560
     .local v1, "bondedCount":I
-    invoke-static {p0}, Lcom/android/settings/bluetooth/DeviceListPreferenceFragment;->getCachedDevicesNumber(Landroid/content/Context;)I
+    invoke-static {p0}, Lcom/android/settings_ex/bluetooth/DeviceListPreferenceFragment;->getCachedDevicesNumber(Landroid/content/Context;)I
 
     move-result v5
 
@@ -1912,7 +1912,7 @@
 
     .line 568
     .local v2, "extras":[Ljava/lang/String;
-    invoke-static {p0, v0}, Lcom/android/settings/bluetooth/Utils;->getTypeValues(Landroid/content/Context;I)[J
+    invoke-static {p0, v0}, Lcom/android/settings_ex/bluetooth/Utils;->getTypeValues(Landroid/content/Context;I)[J
 
     move-result-object v6
 
@@ -1920,7 +1920,7 @@
     .local v6, "values":[J
     const-string v7, "com.android.bluetooth"
 
-    invoke-static {p0, v7, v3, v2, v6}, Lcom/android/settings/Utils;->insertMultipleStatusLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[J)V
+    invoke-static {p0, v7, v3, v2, v6}, Lcom/android/settings_ex/Utils;->insertMultipleStatusLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[J)V
 
     .line 571
     return-void
@@ -2163,7 +2163,7 @@
 
     move-object/from16 v1, p2
 
-    invoke-static {v0, v1}, Lcom/android/settings/bluetooth/Utils;->getContactTint(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/android/settings_ex/bluetooth/Utils;->getContactTint(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result v15
 
@@ -2435,7 +2435,7 @@
     .line 522
     sget-object v1, Landroid/provider/ContactsContract$CommonDataKinds$Phone;->CONTENT_URI:Landroid/net/Uri;
 
-    sget-object v2, Lcom/android/settings/bluetooth/Utils;->CONTACT_ID_PROJ:[Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/bluetooth/Utils;->CONTACT_ID_PROJ:[Ljava/lang/String;
 
     const-string v3, "data1=?"
 

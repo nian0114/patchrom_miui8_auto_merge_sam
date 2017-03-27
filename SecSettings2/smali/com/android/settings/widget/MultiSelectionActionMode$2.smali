@@ -1,4 +1,4 @@
-.class Lcom/android/settings/widget/MultiSelectionActionMode$2;
+.class Lcom/android/settings_ex/widget/MultiSelectionActionMode$2;
 .super Ljava/lang/Object;
 .source "MultiSelectionActionMode.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/widget/MultiSelectionActionMode;->onCreateActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
+    value = Lcom/android/settings_ex/widget/MultiSelectionActionMode;->onCreateActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/widget/MultiSelectionActionMode;
+.field final synthetic this$0:Lcom/android/settings_ex/widget/MultiSelectionActionMode;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/widget/MultiSelectionActionMode;)V
+.method constructor <init>(Lcom/android/settings_ex/widget/MultiSelectionActionMode;)V
     .locals 0
 
     .prologue
     .line 112
-    iput-object p1, p0, Lcom/android/settings/widget/MultiSelectionActionMode$2;->this$0:Lcom/android/settings/widget/MultiSelectionActionMode;
+    iput-object p1, p0, Lcom/android/settings_ex/widget/MultiSelectionActionMode$2;->this$0:Lcom/android/settings_ex/widget/MultiSelectionActionMode;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -57,20 +57,20 @@
     if-nez v0, :cond_0
 
     .line 116
-    iget-object v0, p0, Lcom/android/settings/widget/MultiSelectionActionMode$2;->this$0:Lcom/android/settings/widget/MultiSelectionActionMode;
+    iget-object v0, p0, Lcom/android/settings_ex/widget/MultiSelectionActionMode$2;->this$0:Lcom/android/settings_ex/widget/MultiSelectionActionMode;
 
-    # getter for: Lcom/android/settings/widget/MultiSelectionActionMode;->mAllCheckBox:Landroid/widget/CheckBox;
-    invoke-static {v0}, Lcom/android/settings/widget/MultiSelectionActionMode;->access$200(Lcom/android/settings/widget/MultiSelectionActionMode;)Landroid/widget/CheckBox;
+    # getter for: Lcom/android/settings_ex/widget/MultiSelectionActionMode;->mAllCheckBox:Landroid/widget/CheckBox;
+    invoke-static {v0}, Lcom/android/settings_ex/widget/MultiSelectionActionMode;->access$200(Lcom/android/settings_ex/widget/MultiSelectionActionMode;)Landroid/widget/CheckBox;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->playSoundEffect(I)V
 
     .line 117
-    iget-object v0, p0, Lcom/android/settings/widget/MultiSelectionActionMode$2;->this$0:Lcom/android/settings/widget/MultiSelectionActionMode;
+    iget-object v0, p0, Lcom/android/settings_ex/widget/MultiSelectionActionMode$2;->this$0:Lcom/android/settings_ex/widget/MultiSelectionActionMode;
 
-    # invokes: Lcom/android/settings/widget/MultiSelectionActionMode;->clickAllCheck()V
-    invoke-static {v0}, Lcom/android/settings/widget/MultiSelectionActionMode;->access$300(Lcom/android/settings/widget/MultiSelectionActionMode;)V
+    # invokes: Lcom/android/settings_ex/widget/MultiSelectionActionMode;->clickAllCheck()V
+    invoke-static {v0}, Lcom/android/settings_ex/widget/MultiSelectionActionMode;->access$300(Lcom/android/settings_ex/widget/MultiSelectionActionMode;)V
 
     .line 120
     :cond_0

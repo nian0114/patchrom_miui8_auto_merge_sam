@@ -1,11 +1,11 @@
-.class Lcom/android/settings/OtherSecuritySettings$1;
+.class Lcom/android/settings_ex/OtherSecuritySettings$1;
 .super Landroid/content/BroadcastReceiver;
 .source "OtherSecuritySettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/OtherSecuritySettings;
+    value = Lcom/android/settings_ex/OtherSecuritySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/OtherSecuritySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/OtherSecuritySettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/OtherSecuritySettings;)V
+.method constructor <init>(Lcom/android/settings_ex/OtherSecuritySettings;)V
     .locals 0
 
     .prologue
     .line 198
-    iput-object p1, p0, Lcom/android/settings/OtherSecuritySettings$1;->this$0:Lcom/android/settings/OtherSecuritySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/OtherSecuritySettings$1;->this$0:Lcom/android/settings_ex/OtherSecuritySettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -67,10 +67,10 @@
     invoke-static {v0, v1}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 202
-    iget-object v0, p0, Lcom/android/settings/OtherSecuritySettings$1;->this$0:Lcom/android/settings/OtherSecuritySettings;
+    iget-object v0, p0, Lcom/android/settings_ex/OtherSecuritySettings$1;->this$0:Lcom/android/settings_ex/OtherSecuritySettings;
 
-    # invokes: Lcom/android/settings/OtherSecuritySettings;->updateSIMLockEnable()V
-    invoke-static {v0}, Lcom/android/settings/OtherSecuritySettings;->access$000(Lcom/android/settings/OtherSecuritySettings;)V
+    # invokes: Lcom/android/settings_ex/OtherSecuritySettings;->updateSIMLockEnable()V
+    invoke-static {v0}, Lcom/android/settings_ex/OtherSecuritySettings;->access$000(Lcom/android/settings_ex/OtherSecuritySettings;)V
 
     .line 203
     return-void

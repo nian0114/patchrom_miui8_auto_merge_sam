@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/location/ScanningSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/location/ScanningSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "ScanningSettings.java"
 
 # interfaces
@@ -12,7 +12,7 @@
 
     .prologue
     .line 33
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     return-void
 .end method
@@ -22,7 +22,7 @@
 
     .prologue
     .line 51
-    invoke-virtual {p0}, Lcom/android/settings/location/ScanningSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/ScanningSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
@@ -37,15 +37,15 @@
     :cond_0
     const v1, 0x7f080069
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/location/ScanningSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/location/ScanningSettings;->addPreferencesFromResource(I)V
 
     .line 56
-    invoke-virtual {p0}, Lcom/android/settings/location/ScanningSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/ScanningSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
     .line 57
-    invoke-direct {p0}, Lcom/android/settings/location/ScanningSettings;->initPreferences()V
+    invoke-direct {p0}, Lcom/android/settings_ex/location/ScanningSettings;->initPreferences()V
 
     .line 58
     return-object v0
@@ -62,7 +62,7 @@
     .line 62
     const-string v2, "wifi_always_scanning"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/location/ScanningSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/location/ScanningSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -70,7 +70,7 @@
 
     .line 63
     .local v1, "wifiScanAlwaysAvailable":Landroid/preference/SwitchPreference;
-    invoke-virtual {p0}, Lcom/android/settings/location/ScanningSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/ScanningSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -93,7 +93,7 @@
     .line 66
     const-string v2, "bluetooth_always_scanning"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/location/ScanningSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/location/ScanningSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
@@ -101,7 +101,7 @@
 
     .line 67
     .local v0, "bleScanAlwaysAvailable":Landroid/preference/SwitchPreference;
-    invoke-virtual {p0}, Lcom/android/settings/location/ScanningSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/ScanningSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -187,7 +187,7 @@
     if-eqz v3, :cond_2
 
     .line 78
-    invoke-virtual {p0}, Lcom/android/settings/location/ScanningSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/ScanningSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -219,7 +219,7 @@
     if-eqz v3, :cond_0
 
     .line 80
-    invoke-virtual {p0}, Lcom/android/settings/location/ScanningSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/ScanningSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -235,10 +235,10 @@
 
     .prologue
     .line 46
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 47
-    invoke-direct {p0}, Lcom/android/settings/location/ScanningSettings;->createPreferenceHierarchy()Landroid/preference/PreferenceScreen;
+    invoke-direct {p0}, Lcom/android/settings_ex/location/ScanningSettings;->createPreferenceHierarchy()Landroid/preference/PreferenceScreen;
 
     .line 48
     return-void

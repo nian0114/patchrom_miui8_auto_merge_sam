@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/search/SearchIndexableRaw;
+.class public Lcom/android/settings_ex/search/SearchIndexableRaw;
 .super Landroid/provider/SearchIndexableData;
 .source "SearchIndexableRaw.java"
 
@@ -35,15 +35,15 @@
     invoke-direct {p0, p1}, Landroid/provider/SearchIndexableData;-><init>(Landroid/content/Context;)V
 
     .line 61
-    iput v0, p0, Lcom/android/settings/search/SearchIndexableRaw;->categoryId:I
+    iput v0, p0, Lcom/android/settings_ex/search/SearchIndexableRaw;->categoryId:I
 
     .line 62
-    iput v0, p0, Lcom/android/settings/search/SearchIndexableRaw;->parentTitleRes:I
+    iput v0, p0, Lcom/android/settings_ex/search/SearchIndexableRaw;->parentTitleRes:I
 
     .line 63
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/search/SearchIndexableRaw;->menu_type:I
+    iput v0, p0, Lcom/android/settings_ex/search/SearchIndexableRaw;->menu_type:I
 
     .line 67
     return-void

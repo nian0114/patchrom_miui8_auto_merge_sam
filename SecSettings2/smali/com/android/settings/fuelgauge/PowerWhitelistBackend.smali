@@ -1,10 +1,10 @@
-.class public Lcom/android/settings/fuelgauge/PowerWhitelistBackend;
+.class public Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;
 .super Ljava/lang/Object;
 .source "PowerWhitelistBackend.java"
 
 
 # static fields
-.field private static final INSTANCE:Lcom/android/settings/fuelgauge/PowerWhitelistBackend;
+.field private static final INSTANCE:Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;
 
 
 # instance fields
@@ -39,11 +39,11 @@
 
     .prologue
     .line 34
-    new-instance v0, Lcom/android/settings/fuelgauge/PowerWhitelistBackend;
+    new-instance v0, Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;
 
-    invoke-direct {v0}, Lcom/android/settings/fuelgauge/PowerWhitelistBackend;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;-><init>()V
 
-    sput-object v0, Lcom/android/settings/fuelgauge/PowerWhitelistBackend;->INSTANCE:Lcom/android/settings/fuelgauge/PowerWhitelistBackend;
+    sput-object v0, Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;->INSTANCE:Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;
 
     return-void
 .end method
@@ -60,14 +60,14 @@
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/fuelgauge/PowerWhitelistBackend;->mWhitelistedApps:Landroid/util/ArraySet;
+    iput-object v0, p0, Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;->mWhitelistedApps:Landroid/util/ArraySet;
 
     .line 38
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/fuelgauge/PowerWhitelistBackend;->mSysWhitelistedApps:Landroid/util/ArraySet;
+    iput-object v0, p0, Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;->mSysWhitelistedApps:Landroid/util/ArraySet;
 
     .line 41
     const-string v0, "deviceidle"
@@ -80,21 +80,21 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/fuelgauge/PowerWhitelistBackend;->mDeviceIdleService:Landroid/os/IDeviceIdleController;
+    iput-object v0, p0, Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;->mDeviceIdleService:Landroid/os/IDeviceIdleController;
 
     .line 43
-    invoke-direct {p0}, Lcom/android/settings/fuelgauge/PowerWhitelistBackend;->refreshList()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;->refreshList()V
 
     .line 44
     return-void
 .end method
 
-.method public static getInstance()Lcom/android/settings/fuelgauge/PowerWhitelistBackend;
+.method public static getInstance()Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;
     .locals 1
 
     .prologue
     .line 94
-    sget-object v0, Lcom/android/settings/fuelgauge/PowerWhitelistBackend;->INSTANCE:Lcom/android/settings/fuelgauge/PowerWhitelistBackend;
+    sget-object v0, Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;->INSTANCE:Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;
 
     return-object v0
 .end method
@@ -104,18 +104,18 @@
 
     .prologue
     .line 77
-    iget-object v7, p0, Lcom/android/settings/fuelgauge/PowerWhitelistBackend;->mSysWhitelistedApps:Landroid/util/ArraySet;
+    iget-object v7, p0, Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;->mSysWhitelistedApps:Landroid/util/ArraySet;
 
     invoke-virtual {v7}, Landroid/util/ArraySet;->clear()V
 
     .line 78
-    iget-object v7, p0, Lcom/android/settings/fuelgauge/PowerWhitelistBackend;->mWhitelistedApps:Landroid/util/ArraySet;
+    iget-object v7, p0, Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;->mWhitelistedApps:Landroid/util/ArraySet;
 
     invoke-virtual {v7}, Landroid/util/ArraySet;->clear()V
 
     .line 80
     :try_start_0
-    iget-object v7, p0, Lcom/android/settings/fuelgauge/PowerWhitelistBackend;->mDeviceIdleService:Landroid/os/IDeviceIdleController;
+    iget-object v7, p0, Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;->mDeviceIdleService:Landroid/os/IDeviceIdleController;
 
     invoke-interface {v7}, Landroid/os/IDeviceIdleController;->getFullPowerWhitelist()[Ljava/lang/String;
 
@@ -139,7 +139,7 @@
 
     .line 82
     .local v0, "app":Ljava/lang/String;
-    iget-object v7, p0, Lcom/android/settings/fuelgauge/PowerWhitelistBackend;->mWhitelistedApps:Landroid/util/ArraySet;
+    iget-object v7, p0, Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;->mWhitelistedApps:Landroid/util/ArraySet;
 
     invoke-virtual {v7, v0}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
@@ -151,7 +151,7 @@
     .line 84
     .end local v0    # "app":Ljava/lang/String;
     :cond_0
-    iget-object v7, p0, Lcom/android/settings/fuelgauge/PowerWhitelistBackend;->mDeviceIdleService:Landroid/os/IDeviceIdleController;
+    iget-object v7, p0, Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;->mDeviceIdleService:Landroid/os/IDeviceIdleController;
 
     invoke-interface {v7}, Landroid/os/IDeviceIdleController;->getSystemPowerWhitelist()[Ljava/lang/String;
 
@@ -172,7 +172,7 @@
 
     .line 86
     .restart local v0    # "app":Ljava/lang/String;
-    iget-object v7, p0, Lcom/android/settings/fuelgauge/PowerWhitelistBackend;->mSysWhitelistedApps:Landroid/util/ArraySet;
+    iget-object v7, p0, Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;->mSysWhitelistedApps:Landroid/util/ArraySet;
 
     invoke-virtual {v7, v0}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
     :try_end_0
@@ -216,12 +216,12 @@
     .prologue
     .line 60
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/fuelgauge/PowerWhitelistBackend;->mDeviceIdleService:Landroid/os/IDeviceIdleController;
+    iget-object v1, p0, Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;->mDeviceIdleService:Landroid/os/IDeviceIdleController;
 
     invoke-interface {v1, p1}, Landroid/os/IDeviceIdleController;->addPowerSaveWhitelistApp(Ljava/lang/String;)V
 
     .line 61
-    iget-object v1, p0, Lcom/android/settings/fuelgauge/PowerWhitelistBackend;->mWhitelistedApps:Landroid/util/ArraySet;
+    iget-object v1, p0, Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;->mWhitelistedApps:Landroid/util/ArraySet;
 
     invoke-virtual {v1, p1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
     :try_end_0
@@ -252,7 +252,7 @@
 
     .prologue
     .line 51
-    iget-object v0, p0, Lcom/android/settings/fuelgauge/PowerWhitelistBackend;->mSysWhitelistedApps:Landroid/util/ArraySet;
+    iget-object v0, p0, Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;->mSysWhitelistedApps:Landroid/util/ArraySet;
 
     invoke-virtual {v0, p1}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
 
@@ -267,7 +267,7 @@
 
     .prologue
     .line 55
-    iget-object v0, p0, Lcom/android/settings/fuelgauge/PowerWhitelistBackend;->mWhitelistedApps:Landroid/util/ArraySet;
+    iget-object v0, p0, Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;->mWhitelistedApps:Landroid/util/ArraySet;
 
     invoke-virtual {v0, p1}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
 
@@ -283,12 +283,12 @@
     .prologue
     .line 69
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/fuelgauge/PowerWhitelistBackend;->mDeviceIdleService:Landroid/os/IDeviceIdleController;
+    iget-object v1, p0, Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;->mDeviceIdleService:Landroid/os/IDeviceIdleController;
 
     invoke-interface {v1, p1}, Landroid/os/IDeviceIdleController;->removePowerSaveWhitelistApp(Ljava/lang/String;)V
 
     .line 70
-    iget-object v1, p0, Lcom/android/settings/fuelgauge/PowerWhitelistBackend;->mWhitelistedApps:Landroid/util/ArraySet;
+    iget-object v1, p0, Lcom/android/settings_ex/fuelgauge/PowerWhitelistBackend;->mWhitelistedApps:Landroid/util/ArraySet;
 
     invoke-virtual {v1, p1}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
     :try_end_0

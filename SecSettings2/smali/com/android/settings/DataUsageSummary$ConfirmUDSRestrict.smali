@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;
+.class public Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;
 .super Landroid/app/DialogFragment;
 .source "DataUsageSummary.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DataUsageSummary;
+    value = Lcom/android/settings_ex/DataUsageSummary;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final dialog:Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;
+.field static final dialog:Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;
 
 
 # direct methods
@@ -24,11 +24,11 @@
 
     .prologue
     .line 5297
-    new-instance v0, Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;
+    new-instance v0, Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;
 
-    invoke-direct {v0}, Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;-><init>()V
 
-    sput-object v0, Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;->dialog:Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;
+    sput-object v0, Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;->dialog:Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;
 
     return-void
 .end method
@@ -43,13 +43,13 @@
     return-void
 .end method
 
-.method public static show(Lcom/android/settings/DataUsageSummary;)V
+.method public static show(Lcom/android/settings_ex/DataUsageSummary;)V
     .locals 3
-    .param p0, "parent"    # Lcom/android/settings/DataUsageSummary;
+    .param p0, "parent"    # Lcom/android/settings_ex/DataUsageSummary;
 
     .prologue
     .line 5299
-    invoke-virtual {p0}, Lcom/android/settings/DataUsageSummary;->isAdded()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/DataUsageSummary;->isAdded()Z
 
     move-result v0
 
@@ -62,35 +62,35 @@
 
     .line 5300
     :cond_1
-    sget-object v0, Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;->dialog:Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;
+    sget-object v0, Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;->dialog:Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;->dialog:Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;
+    sget-object v0, Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;->dialog:Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;
 
-    invoke-virtual {v0}, Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;->isAdded()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;->isAdded()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 5301
-    sget-object v0, Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;->dialog:Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;
+    sget-object v0, Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;->dialog:Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p0, v1}, Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;->setTargetFragment(Landroid/app/Fragment;I)V
+    invoke-virtual {v0, p0, v1}, Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;->setTargetFragment(Landroid/app/Fragment;I)V
 
     .line 5302
-    sget-object v0, Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;->dialog:Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;
+    sget-object v0, Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;->dialog:Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;
 
-    invoke-virtual {p0}, Lcom/android/settings/DataUsageSummary;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DataUsageSummary;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
 
     const-string v2, "confirmUDSRestrict"
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -103,7 +103,7 @@
 
     .prologue
     .line 5315
-    invoke-virtual {p0}, Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -122,9 +122,9 @@
     .line 5320
     const v2, 0x7f0e16b3
 
-    new-instance v3, Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict$1;
+    new-instance v3, Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict$1;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict$1;-><init>(Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict$1;-><init>(Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;)V
 
     invoke-virtual {v0, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 

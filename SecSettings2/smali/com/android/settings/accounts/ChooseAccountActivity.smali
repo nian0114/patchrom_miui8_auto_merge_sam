@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/accounts/ChooseAccountActivity;
-.super Lcom/android/settings/SettingsActivity;
+.class public Lcom/android/settings_ex/accounts/ChooseAccountActivity;
+.super Lcom/android/settings_ex/SettingsActivity;
 .source "ChooseAccountActivity.java"
 
 
@@ -9,7 +9,7 @@
 
     .prologue
     .line 32
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivity;-><init>()V
 
     return-void
 .end method
@@ -25,7 +25,7 @@
     .line 50
     new-instance v0, Landroid/content/Intent;
 
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->getIntent()Landroid/content/Intent;
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -35,7 +35,7 @@
     .local v0, "modIntent":Landroid/content/Intent;
     const-string v1, ":settings:show_fragment"
 
-    const-class v2, Lcom/android/settings/accounts/ChooseAccountFragment;
+    const-class v2, Lcom/android/settings_ex/accounts/ChooseAccountFragment;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -81,10 +81,10 @@
 
     .prologue
     .line 39
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 40
-    invoke-virtual {p0}, Lcom/android/settings/accounts/ChooseAccountActivity;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accounts/ChooseAccountActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
@@ -103,10 +103,10 @@
     .line 60
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accounts/ChooseAccountActivity;->setResult(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accounts/ChooseAccountActivity;->setResult(I)V
 
     .line 61
-    invoke-virtual {p0}, Lcom/android/settings/accounts/ChooseAccountActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accounts/ChooseAccountActivity;->finish()V
 
     .line 62
     const/4 v0, 0x1

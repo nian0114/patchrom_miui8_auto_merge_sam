@@ -18,6 +18,6 @@
         <ImageView android:layout_gravity="center_vertical" android:id="@id/fingerprintIcon" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
     </LinearLayout>
     <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <com.android.settings.widget.BottomBarButton android:layout_gravity="bottom" android:id="@id/backupPin" android:background="@drawable/ripple_lockpattern_backup_pin_button" android:visibility="gone" android:text="@string/lockpattern_backup_pin" android:textAlignment="center" style="@style/SecurityPreferenceButton" />
+        <com.android.settings_ex.widget.BottomBarButton android:layout_gravity="bottom" android:id="@id/backupPin" android:background="@drawable/ripple_lockpattern_backup_pin_button" android:visibility="gone" android:text="@string/lockpattern_backup_pin" android:textAlignment="center" style="@style/SecurityPreferenceButton" />
     </LinearLayout>
 </com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient>

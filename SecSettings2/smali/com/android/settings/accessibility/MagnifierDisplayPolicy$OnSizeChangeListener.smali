@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;
+.class public interface abstract Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy$OnSizeChangeListener;
 .super Ljava/lang/Object;
 .source "MagnifierDisplayPolicy.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/MagnifierDisplayPolicy;
+    value = Lcom/android/settings_ex/accessibility/MagnifierDisplayPolicy;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

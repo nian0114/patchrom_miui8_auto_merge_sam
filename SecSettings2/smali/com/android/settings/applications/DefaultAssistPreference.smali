@@ -1,12 +1,12 @@
-.class public Lcom/android/settings/applications/DefaultAssistPreference;
-.super Lcom/android/settings/AppListPreferenceWithSettings;
+.class public Lcom/android/settings_ex/applications/DefaultAssistPreference;
+.super Lcom/android/settings_ex/AppListPreferenceWithSettings;
 .source "DefaultAssistPreference.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/applications/DefaultAssistPreference$Info;
+        Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;
     }
 .end annotation
 
@@ -23,7 +23,7 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/applications/DefaultAssistPreference$Info;",
+            "Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;",
             ">;"
         }
     .end annotation
@@ -36,13 +36,13 @@
 
     .prologue
     .line 41
-    const-class v0, Lcom/android/settings/applications/DefaultAssistPreference;
+    const-class v0, Lcom/android/settings_ex/applications/DefaultAssistPreference;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/applications/DefaultAssistPreference;->TAG:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/applications/DefaultAssistPreference;->TAG:Ljava/lang/String;
 
     return-void
 .end method
@@ -54,36 +54,36 @@
 
     .prologue
     .line 48
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/AppListPreferenceWithSettings;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/AppListPreferenceWithSettings;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 43
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/applications/DefaultAssistPreference;->mAvailableAssistants:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/applications/DefaultAssistPreference;->mAvailableAssistants:Ljava/util/List;
 
     .line 49
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/applications/DefaultAssistPreference;->setShowItemNone(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->setShowItemNone(Z)V
 
     .line 50
     const v0, 0x7f0e0f16
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/applications/DefaultAssistPreference;->setDialogTitle(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->setDialogTitle(I)V
 
     .line 51
     new-instance v0, Lcom/android/internal/app/AssistUtils;
 
     invoke-direct {v0, p1}, Lcom/android/internal/app/AssistUtils;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/applications/DefaultAssistPreference;->mAssistUtils:Lcom/android/internal/app/AssistUtils;
+    iput-object v0, p0, Lcom/android/settings_ex/applications/DefaultAssistPreference;->mAssistUtils:Lcom/android/internal/app/AssistUtils;
 
     .line 52
     const v0, 0x7f0e13bd
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/applications/DefaultAssistPreference;->setResDescription(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->setResDescription(I)V
 
     .line 53
     return-void
@@ -94,7 +94,7 @@
 
     .prologue
     .line 162
-    invoke-virtual {p0}, Lcom/android/settings/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -137,9 +137,9 @@
 
     .line 169
     .local v3, "resolveInfo":Landroid/content/pm/ResolveInfo;
-    iget-object v4, p0, Lcom/android/settings/applications/DefaultAssistPreference;->mAvailableAssistants:Ljava/util/List;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/DefaultAssistPreference;->mAvailableAssistants:Ljava/util/List;
 
-    new-instance v5, Lcom/android/settings/applications/DefaultAssistPreference$Info;
+    new-instance v5, Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;
 
     new-instance v6, Landroid/content/ComponentName;
 
@@ -153,7 +153,7 @@
 
     invoke-direct {v6, v7, v8}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {v5, v6}, Lcom/android/settings/applications/DefaultAssistPreference$Info;-><init>(Landroid/content/ComponentName;)V
+    invoke-direct {v5, v6}, Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;-><init>(Landroid/content/ComponentName;)V
 
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -173,7 +173,7 @@
 
     .prologue
     .line 141
-    invoke-virtual {p0}, Lcom/android/settings/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
 
     move-result-object v5
 
@@ -238,9 +238,9 @@
 
     .line 154
     :cond_0
-    iget-object v5, p0, Lcom/android/settings/applications/DefaultAssistPreference;->mAvailableAssistants:Ljava/util/List;
+    iget-object v5, p0, Lcom/android/settings_ex/applications/DefaultAssistPreference;->mAvailableAssistants:Ljava/util/List;
 
-    new-instance v6, Lcom/android/settings/applications/DefaultAssistPreference$Info;
+    new-instance v6, Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;
 
     new-instance v7, Landroid/content/ComponentName;
 
@@ -254,7 +254,7 @@
 
     invoke-direct {v7, v8, v9}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {v6, v7, v4}, Lcom/android/settings/applications/DefaultAssistPreference$Info;-><init>(Landroid/content/ComponentName;Landroid/service/voice/VoiceInteractionServiceInfo;)V
+    invoke-direct {v6, v7, v4}, Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;-><init>(Landroid/content/ComponentName;Landroid/service/voice/VoiceInteractionServiceInfo;)V
 
     invoke-interface {v5, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -267,7 +267,7 @@
     return-void
 .end method
 
-.method private findAssistantByPackageName(Ljava/lang/String;)Lcom/android/settings/applications/DefaultAssistPreference$Info;
+.method private findAssistantByPackageName(Ljava/lang/String;)Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;
     .locals 3
     .param p1, "packageName"    # Ljava/lang/String;
 
@@ -277,7 +277,7 @@
 
     .local v0, "i":I
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/applications/DefaultAssistPreference;->mAvailableAssistants:Ljava/util/List;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/DefaultAssistPreference;->mAvailableAssistants:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -286,17 +286,17 @@
     if-ge v0, v2, :cond_1
 
     .line 132
-    iget-object v2, p0, Lcom/android/settings/applications/DefaultAssistPreference;->mAvailableAssistants:Ljava/util/List;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/DefaultAssistPreference;->mAvailableAssistants:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/applications/DefaultAssistPreference$Info;
+    check-cast v1, Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;
 
     .line 133
-    .local v1, "info":Lcom/android/settings/applications/DefaultAssistPreference$Info;
-    iget-object v2, v1, Lcom/android/settings/applications/DefaultAssistPreference$Info;->component:Landroid/content/ComponentName;
+    .local v1, "info":Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;
+    iget-object v2, v1, Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;->component:Landroid/content/ComponentName;
 
     invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -309,19 +309,19 @@
     if-eqz v2, :cond_0
 
     .line 137
-    .end local v1    # "info":Lcom/android/settings/applications/DefaultAssistPreference$Info;
+    .end local v1    # "info":Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;
     :goto_1
     return-object v1
 
     .line 131
-    .restart local v1    # "info":Lcom/android/settings/applications/DefaultAssistPreference$Info;
+    .restart local v1    # "info":Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     .line 137
-    .end local v1    # "info":Lcom/android/settings/applications/DefaultAssistPreference$Info;
+    .end local v1    # "info":Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;
     :cond_1
     const/4 v1, 0x0
 
@@ -333,7 +333,7 @@
 
     .prologue
     .line 118
-    invoke-virtual {p0}, Lcom/android/settings/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -363,7 +363,7 @@
 
     .line 122
     :cond_0
-    sget-object v1, Lcom/android/settings/applications/DefaultAssistPreference;->TAG:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/applications/DefaultAssistPreference;->TAG:Ljava/lang/String;
 
     const-string v2, "Unable to resolve default voice recognition service."
 
@@ -396,13 +396,13 @@
     goto :goto_0
 .end method
 
-.method private setAssistActivity(Lcom/android/settings/applications/DefaultAssistPreference$Info;)V
+.method private setAssistActivity(Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;)V
     .locals 3
-    .param p1, "activityInfo"    # Lcom/android/settings/applications/DefaultAssistPreference$Info;
+    .param p1, "activityInfo"    # Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;
 
     .prologue
     .line 106
-    invoke-virtual {p0}, Lcom/android/settings/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -412,7 +412,7 @@
 
     const-string v1, "assistant"
 
-    iget-object v2, p1, Lcom/android/settings/applications/DefaultAssistPreference$Info;->component:Landroid/content/ComponentName;
+    iget-object v2, p1, Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;->component:Landroid/content/ComponentName;
 
     invoke-virtual {v2}, Landroid/content/ComponentName;->flattenToShortString()Ljava/lang/String;
 
@@ -421,7 +421,7 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 108
-    invoke-virtual {p0}, Lcom/android/settings/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -436,7 +436,7 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 110
-    invoke-virtual {p0}, Lcom/android/settings/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -446,23 +446,23 @@
 
     const-string v1, "voice_recognition_service"
 
-    invoke-direct {p0}, Lcom/android/settings/applications/DefaultAssistPreference;->getDefaultRecognizer()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->getDefaultRecognizer()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 113
-    invoke-virtual {p0}, Lcom/android/settings/applications/DefaultAssistPreference;->getEntry()Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->getEntry()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/applications/DefaultAssistPreference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 114
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/applications/DefaultAssistPreference;->setSettingsComponent(Landroid/content/ComponentName;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->setSettingsComponent(Landroid/content/ComponentName;)V
 
     .line 115
     return-void
@@ -473,7 +473,7 @@
 
     .prologue
     .line 72
-    invoke-virtual {p0}, Lcom/android/settings/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -488,7 +488,7 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 74
-    invoke-virtual {p0}, Lcom/android/settings/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -503,7 +503,7 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 76
-    invoke-virtual {p0}, Lcom/android/settings/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -513,14 +513,14 @@
 
     const-string v1, "voice_recognition_service"
 
-    invoke-direct {p0}, Lcom/android/settings/applications/DefaultAssistPreference;->getDefaultRecognizer()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->getDefaultRecognizer()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 79
-    invoke-virtual {p0}, Lcom/android/settings/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -530,24 +530,24 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/applications/DefaultAssistPreference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 80
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/applications/DefaultAssistPreference;->setSettingsComponent(Landroid/content/ComponentName;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->setSettingsComponent(Landroid/content/ComponentName;)V
 
     .line 81
     return-void
 .end method
 
-.method private setAssistService(Lcom/android/settings/applications/DefaultAssistPreference$Info;)V
+.method private setAssistService(Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;)V
     .locals 6
-    .param p1, "serviceInfo"    # Lcom/android/settings/applications/DefaultAssistPreference$Info;
+    .param p1, "serviceInfo"    # Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;
 
     .prologue
     .line 84
-    iget-object v3, p1, Lcom/android/settings/applications/DefaultAssistPreference$Info;->component:Landroid/content/ComponentName;
+    iget-object v3, p1, Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;->component:Landroid/content/ComponentName;
 
     invoke-virtual {v3}, Landroid/content/ComponentName;->flattenToShortString()Ljava/lang/String;
 
@@ -557,13 +557,13 @@
     .local v0, "serviceComponentName":Ljava/lang/String;
     new-instance v3, Landroid/content/ComponentName;
 
-    iget-object v4, p1, Lcom/android/settings/applications/DefaultAssistPreference$Info;->component:Landroid/content/ComponentName;
+    iget-object v4, p1, Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;->component:Landroid/content/ComponentName;
 
     invoke-virtual {v4}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
 
-    iget-object v5, p1, Lcom/android/settings/applications/DefaultAssistPreference$Info;->voiceInteractionServiceInfo:Landroid/service/voice/VoiceInteractionServiceInfo;
+    iget-object v5, p1, Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;->voiceInteractionServiceInfo:Landroid/service/voice/VoiceInteractionServiceInfo;
 
     invoke-virtual {v5}, Landroid/service/voice/VoiceInteractionServiceInfo;->getRecognitionService()Ljava/lang/String;
 
@@ -577,7 +577,7 @@
 
     .line 90
     .local v1, "serviceRecognizerName":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -590,7 +590,7 @@
     invoke-static {v3, v4, v0}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 92
-    invoke-virtual {p0}, Lcom/android/settings/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -603,7 +603,7 @@
     invoke-static {v3, v4, v0}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 94
-    invoke-virtual {p0}, Lcom/android/settings/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -616,14 +616,14 @@
     invoke-static {v3, v4, v1}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 97
-    invoke-virtual {p0}, Lcom/android/settings/applications/DefaultAssistPreference;->getEntry()Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->getEntry()Ljava/lang/CharSequence;
 
     move-result-object v3
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/applications/DefaultAssistPreference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 98
-    iget-object v3, p1, Lcom/android/settings/applications/DefaultAssistPreference$Info;->voiceInteractionServiceInfo:Landroid/service/voice/VoiceInteractionServiceInfo;
+    iget-object v3, p1, Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;->voiceInteractionServiceInfo:Landroid/service/voice/VoiceInteractionServiceInfo;
 
     invoke-virtual {v3}, Landroid/service/voice/VoiceInteractionServiceInfo;->getSettingsActivity()Ljava/lang/String;
 
@@ -636,7 +636,7 @@
     const/4 v3, 0x0
 
     :goto_0
-    invoke-virtual {p0, v3}, Lcom/android/settings/applications/DefaultAssistPreference;->setSettingsComponent(Landroid/content/ComponentName;)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->setSettingsComponent(Landroid/content/ComponentName;)V
 
     .line 103
     return-void
@@ -645,7 +645,7 @@
     :cond_0
     new-instance v3, Landroid/content/ComponentName;
 
-    iget-object v4, p1, Lcom/android/settings/applications/DefaultAssistPreference$Info;->component:Landroid/content/ComponentName;
+    iget-object v4, p1, Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;->component:Landroid/content/ComponentName;
 
     invoke-virtual {v4}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -663,7 +663,7 @@
 
     .prologue
     .line 176
-    iget-object v0, p0, Lcom/android/settings/applications/DefaultAssistPreference;->mAssistUtils:Lcom/android/internal/app/AssistUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/DefaultAssistPreference;->mAssistUtils:Lcom/android/internal/app/AssistUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -684,16 +684,16 @@
     const/4 v2, 0x1
 
     .line 57
-    invoke-direct {p0, p1}, Lcom/android/settings/applications/DefaultAssistPreference;->findAssistantByPackageName(Ljava/lang/String;)Lcom/android/settings/applications/DefaultAssistPreference$Info;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->findAssistantByPackageName(Ljava/lang/String;)Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;
 
     move-result-object v0
 
     .line 58
-    .local v0, "info":Lcom/android/settings/applications/DefaultAssistPreference$Info;
+    .local v0, "info":Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;
     if-nez v0, :cond_0
 
     .line 59
-    invoke-direct {p0}, Lcom/android/settings/applications/DefaultAssistPreference;->setAssistNone()V
+    invoke-direct {p0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->setAssistNone()V
 
     .line 68
     :goto_0
@@ -701,20 +701,20 @@
 
     .line 63
     :cond_0
-    invoke-virtual {v0}, Lcom/android/settings/applications/DefaultAssistPreference$Info;->isVoiceInteractionService()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;->isVoiceInteractionService()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 64
-    invoke-direct {p0, v0}, Lcom/android/settings/applications/DefaultAssistPreference;->setAssistService(Lcom/android/settings/applications/DefaultAssistPreference$Info;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->setAssistService(Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;)V
 
     goto :goto_0
 
     .line 66
     :cond_1
-    invoke-direct {p0, v0}, Lcom/android/settings/applications/DefaultAssistPreference;->setAssistActivity(Lcom/android/settings/applications/DefaultAssistPreference$Info;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->setAssistActivity(Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;)V
 
     goto :goto_0
 .end method
@@ -724,15 +724,15 @@
 
     .prologue
     .line 180
-    iget-object v4, p0, Lcom/android/settings/applications/DefaultAssistPreference;->mAvailableAssistants:Ljava/util/List;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/DefaultAssistPreference;->mAvailableAssistants:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->clear()V
 
     .line 181
-    invoke-direct {p0}, Lcom/android/settings/applications/DefaultAssistPreference;->addAssistServices()V
+    invoke-direct {p0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->addAssistServices()V
 
     .line 182
-    invoke-direct {p0}, Lcom/android/settings/applications/DefaultAssistPreference;->addAssistActivities()V
+    invoke-direct {p0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->addAssistActivities()V
 
     .line 184
     new-instance v3, Ljava/util/ArrayList;
@@ -745,7 +745,7 @@
 
     .local v1, "i":I
     :goto_0
-    iget-object v4, p0, Lcom/android/settings/applications/DefaultAssistPreference;->mAvailableAssistants:Ljava/util/List;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/DefaultAssistPreference;->mAvailableAssistants:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -754,15 +754,15 @@
     if-ge v1, v4, :cond_1
 
     .line 186
-    iget-object v4, p0, Lcom/android/settings/applications/DefaultAssistPreference;->mAvailableAssistants:Ljava/util/List;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/DefaultAssistPreference;->mAvailableAssistants:Ljava/util/List;
 
     invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/applications/DefaultAssistPreference$Info;
+    check-cast v4, Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;
 
-    iget-object v4, v4, Lcom/android/settings/applications/DefaultAssistPreference$Info;->component:Landroid/content/ComponentName;
+    iget-object v4, v4, Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;->component:Landroid/content/ComponentName;
 
     invoke-virtual {v4}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -791,7 +791,7 @@
     .line 194
     .end local v2    # "packageName":Ljava/lang/String;
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/applications/DefaultAssistPreference;->getCurrentAssist()Landroid/content/ComponentName;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->getCurrentAssist()Landroid/content/ComponentName;
 
     move-result-object v0
 
@@ -814,7 +814,7 @@
     const/4 v5, 0x0
 
     :goto_2
-    invoke-virtual {p0, v4, v5}, Lcom/android/settings/applications/DefaultAssistPreference;->setPackageNames([Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v4, v5}, Lcom/android/settings_ex/applications/DefaultAssistPreference;->setPackageNames([Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
 
     .line 197
     return-void

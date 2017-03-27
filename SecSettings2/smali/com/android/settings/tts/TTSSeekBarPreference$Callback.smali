@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/tts/TTSSeekBarPreference$Callback;
+.class public interface abstract Lcom/android/settings_ex/tts/TTSSeekBarPreference$Callback;
 .super Ljava/lang/Object;
 .source "TTSSeekBarPreference.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/tts/TTSSeekBarPreference;
+    value = Lcom/android/settings_ex/tts/TTSSeekBarPreference;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

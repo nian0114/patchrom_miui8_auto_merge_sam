@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;
+.class public Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;
 .super Lcom/android/internal/app/AlertActivity;
 .source "WifiMaliciousHotspotDetectionActivity.java"
 
@@ -36,7 +36,7 @@
     const/4 v0, 0x0
 
     :cond_0
-    sput-boolean v0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->DBG:Z
+    sput-boolean v0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->DBG:Z
 
     return-void
 .end method
@@ -51,25 +51,25 @@
     .line 45
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mSsid:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mSsid:Ljava/lang/String;
 
     .line 89
-    new-instance v0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity$2;
+    new-instance v0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity$2;-><init>(Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity$2;-><init>(Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;)V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiMaliciousHotspotDetectionDialogListener:Landroid/content/DialogInterface$OnClickListener;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiMaliciousHotspotDetectionDialogListener:Landroid/content/DialogInterface$OnClickListener;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;)V
+.method static synthetic access$000(Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;
 
     .prologue
     .line 38
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->handleDisconnect()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->handleDisconnect()V
 
     return-void
 .end method
@@ -79,7 +79,7 @@
 
     .prologue
     .line 102
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     if-nez v3, :cond_1
 
@@ -90,7 +90,7 @@
 
     .line 103
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v3}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
@@ -107,7 +107,7 @@
 
     .line 106
     .local v0, "bssid":Ljava/lang/String;
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v3, v0}, Landroid/net/wifi/WifiManager;->isDetectedAsMaliciousHotspot(Ljava/lang/String;)Z
 
@@ -116,7 +116,7 @@
     if-eqz v3, :cond_0
 
     .line 107
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v3, v0}, Landroid/net/wifi/WifiManager;->addToSBlacklist(Ljava/lang/String;)Z
 
@@ -124,17 +124,17 @@
 
     .line 108
     .local v2, "result":Z
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v3}, Landroid/net/wifi/WifiManager;->disconnect()Z
 
     .line 109
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v3}, Landroid/net/wifi/WifiManager;->reconnect()Z
 
     .line 110
-    sget-boolean v3, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->DBG:Z
+    sget-boolean v3, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->DBG:Z
 
     if-eqz v3, :cond_0
 
@@ -170,7 +170,7 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v5}, Landroid/net/wifi/WifiManager;->getSBlacklist()Ljava/lang/String;
 
@@ -196,7 +196,7 @@
     const/4 v6, 0x0
 
     .line 65
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v2}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
@@ -210,17 +210,17 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mSsid:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mSsid:Ljava/lang/String;
 
     .line 67
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mSsid:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mSsid:Ljava/lang/String;
 
     if-nez v2, :cond_1
 
     const-string v2, "AP"
 
-    iput-object v2, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mSsid:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mSsid:Ljava/lang/String;
 
     .line 68
     :cond_1
@@ -235,7 +235,7 @@
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 70
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mContext:Landroid/content/Context;
 
     const v3, 0x7f0e0537
 
@@ -243,7 +243,7 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mSsid:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mSsid:Ljava/lang/String;
 
     aput-object v5, v4, v6
 
@@ -254,7 +254,7 @@
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     .line 71
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mContext:Landroid/content/Context;
 
     const v3, 0x7f0e053a
 
@@ -262,12 +262,12 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiMaliciousHotspotDetectionDialogListener:Landroid/content/DialogInterface$OnClickListener;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiMaliciousHotspotDetectionDialogListener:Landroid/content/DialogInterface$OnClickListener;
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 73
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mContext:Landroid/content/Context;
 
     const v3, 0x7f0e0538
 
@@ -275,14 +275,14 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiMaliciousHotspotDetectionDialogListener:Landroid/content/DialogInterface$OnClickListener;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiMaliciousHotspotDetectionDialogListener:Landroid/content/DialogInterface$OnClickListener;
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 76
-    new-instance v2, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity$1;
+    new-instance v2, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity$1;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity$1;-><init>(Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity$1;-><init>(Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;)V
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
 
@@ -291,15 +291,15 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiMalicioudHotspotDetectionDialog:Landroid/app/AlertDialog;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiMalicioudHotspotDetectionDialog:Landroid/app/AlertDialog;
 
     .line 82
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiMalicioudHotspotDetectionDialog:Landroid/app/AlertDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiMalicioudHotspotDetectionDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v2, v6}, Landroid/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
     .line 83
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiMalicioudHotspotDetectionDialog:Landroid/app/AlertDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiMalicioudHotspotDetectionDialog:Landroid/app/AlertDialog;
 
     if-eqz v2, :cond_2
 
@@ -316,7 +316,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mSsid:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mSsid:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -329,7 +329,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 85
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiMalicioudHotspotDetectionDialog:Landroid/app/AlertDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiMalicioudHotspotDetectionDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v2}, Landroid/app/AlertDialog;->show()V
 
@@ -349,10 +349,10 @@
     invoke-super {p0, p1}, Lcom/android/internal/app/AlertActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 50
-    iput-object p0, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mContext:Landroid/content/Context;
+    iput-object p0, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mContext:Landroid/content/Context;
 
     .line 51
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mContext:Landroid/content/Context;
 
     const-string v2, "wifi"
 
@@ -362,18 +362,18 @@
 
     check-cast v1, Landroid/net/wifi/WifiManager;
 
-    iput-object v1, p0, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     .line 53
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->setVisible(Z)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->setVisible(Z)V
 
     .line 54
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->setupAlert()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->setupAlert()V
 
     .line 56
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -386,7 +386,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 61
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiMaliciousHotspotDetectionActivity;->showMaliciousHotspotDetectionDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiMaliciousHotspotDetectionActivity;->showMaliciousHotspotDetectionDialog()V
 
     .line 62
     return-void

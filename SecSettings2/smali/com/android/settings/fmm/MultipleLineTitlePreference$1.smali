@@ -1,11 +1,11 @@
-.class Lcom/android/settings/fmm/MultipleLineTitlePreference$1;
+.class Lcom/android/settings_ex/fmm/MultipleLineTitlePreference$1;
 .super Landroid/text/style/ClickableSpan;
 .source "MultipleLineTitlePreference.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fmm/MultipleLineTitlePreference;->onBindView(Landroid/view/View;)V
+    value = Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->onBindView(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fmm/MultipleLineTitlePreference;
+.field final synthetic this$0:Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;
 
 .field final synthetic val$end:I
 
@@ -23,16 +23,16 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fmm/MultipleLineTitlePreference;II)V
+.method constructor <init>(Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;II)V
     .locals 0
 
     .prologue
     .line 70
-    iput-object p1, p0, Lcom/android/settings/fmm/MultipleLineTitlePreference$1;->this$0:Lcom/android/settings/fmm/MultipleLineTitlePreference;
+    iput-object p1, p0, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference$1;->this$0:Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;
 
-    iput p2, p0, Lcom/android/settings/fmm/MultipleLineTitlePreference$1;->val$start:I
+    iput p2, p0, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference$1;->val$start:I
 
-    iput p3, p0, Lcom/android/settings/fmm/MultipleLineTitlePreference$1;->val$end:I
+    iput p3, p0, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference$1;->val$end:I
 
     invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
@@ -57,9 +57,9 @@
 
     check-cast v3, Landroid/text/Spannable;
 
-    iget v4, p0, Lcom/android/settings/fmm/MultipleLineTitlePreference$1;->val$start:I
+    iget v4, p0, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference$1;->val$start:I
 
-    iget v5, p0, Lcom/android/settings/fmm/MultipleLineTitlePreference$1;->val$end:I
+    iget v5, p0, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference$1;->val$end:I
 
     invoke-static {v3, v4, v5}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
 
@@ -73,8 +73,8 @@
 
     .line 77
     .local v0, "intent":Landroid/content/Intent;
-    # getter for: Lcom/android/settings/fmm/MultipleLineTitlePreference;->mContext:Landroid/content/Context;
-    invoke-static {}, Lcom/android/settings/fmm/MultipleLineTitlePreference;->access$000()Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->access$000()Landroid/content/Context;
 
     move-result-object v3
 
@@ -97,12 +97,12 @@
     if-lez v3, :cond_1
 
     .line 80
-    # getter for: Lcom/android/settings/fmm/MultipleLineTitlePreference;->mContext:Landroid/content/Context;
-    invoke-static {}, Lcom/android/settings/fmm/MultipleLineTitlePreference;->access$000()Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->access$000()Landroid/content/Context;
 
     move-result-object v3
 
-    const-class v4, Lcom/android/settings/fmm/SamsungAccountValidationActivity;
+    const-class v4, Lcom/android/settings_ex/fmm/SamsungAccountValidationActivity;
 
     invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -112,20 +112,20 @@
 
     .line 86
     :goto_0
-    # getter for: Lcom/android/settings/fmm/MultipleLineTitlePreference;->mContext:Landroid/content/Context;
-    invoke-static {}, Lcom/android/settings/fmm/MultipleLineTitlePreference;->access$000()Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->access$000()Landroid/content/Context;
 
     move-result-object v3
 
-    invoke-static {v3, v0}, Lcom/android/settings/Utils;->isIntentAvailable(Landroid/content/Context;Landroid/content/Intent;)Z
+    invoke-static {v3, v0}, Lcom/android/settings_ex/Utils;->isIntentAvailable(Landroid/content/Context;Landroid/content/Intent;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
     .line 87
-    # getter for: Lcom/android/settings/fmm/MultipleLineTitlePreference;->mContext:Landroid/content/Context;
-    invoke-static {}, Lcom/android/settings/fmm/MultipleLineTitlePreference;->access$000()Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->access$000()Landroid/content/Context;
 
     move-result-object v3
 
@@ -145,8 +145,8 @@
     if-eqz v3, :cond_0
 
     .line 91
-    # getter for: Lcom/android/settings/fmm/MultipleLineTitlePreference;->mContext:Landroid/content/Context;
-    invoke-static {}, Lcom/android/settings/fmm/MultipleLineTitlePreference;->access$000()Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->access$000()Landroid/content/Context;
 
     move-result-object v3
 
@@ -154,7 +154,7 @@
 
     const-string v5, "FMMW"
 
-    invoke-static {v3, v4, v5}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4, v5}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 94
     :cond_0
@@ -167,10 +167,10 @@
     invoke-virtual {v0, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 83
-    iget-object v3, p0, Lcom/android/settings/fmm/MultipleLineTitlePreference$1;->this$0:Lcom/android/settings/fmm/MultipleLineTitlePreference;
+    iget-object v3, p0, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference$1;->this$0:Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;
 
-    # getter for: Lcom/android/settings/fmm/MultipleLineTitlePreference;->mURL:Ljava/lang/String;
-    invoke-static {v3}, Lcom/android/settings/fmm/MultipleLineTitlePreference;->access$100(Lcom/android/settings/fmm/MultipleLineTitlePreference;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->mURL:Ljava/lang/String;
+    invoke-static {v3}, Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;->access$100(Lcom/android/settings_ex/fmm/MultipleLineTitlePreference;)Ljava/lang/String;
 
     move-result-object v3
 

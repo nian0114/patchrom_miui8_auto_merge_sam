@@ -1,10 +1,10 @@
-.class public Lcom/android/settings/ScreenPinningSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/ScreenPinningSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "ScreenPinningSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/search/Indexable;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # static fields
@@ -12,7 +12,7 @@
 
 .field private static final LOG_TAG:Ljava/lang/String;
 
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
 .field private mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 .field private mUseScreenLock:Landroid/preference/SwitchPreference;
 
@@ -31,25 +31,25 @@
 
     .prologue
     .line 59
-    const-class v0, Lcom/android/settings/ScreenPinningSettings;
+    const-class v0, Lcom/android/settings_ex/ScreenPinningSettings;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/ScreenPinningSettings;->LOG_TAG:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/ScreenPinningSettings;->LOG_TAG:Ljava/lang/String;
 
     .line 61
     const-string v0, "use_screen_lock"
 
-    sput-object v0, Lcom/android/settings/ScreenPinningSettings;->KEY_USE_SCREEN_LOCK:Ljava/lang/CharSequence;
+    sput-object v0, Lcom/android/settings_ex/ScreenPinningSettings;->KEY_USE_SCREEN_LOCK:Ljava/lang/CharSequence;
 
     .line 368
-    new-instance v0, Lcom/android/settings/ScreenPinningSettings$5;
+    new-instance v0, Lcom/android/settings_ex/ScreenPinningSettings$5;
 
-    invoke-direct {v0}, Lcom/android/settings/ScreenPinningSettings$5;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/ScreenPinningSettings$5;-><init>()V
 
-    sput-object v0, Lcom/android/settings/ScreenPinningSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/ScreenPinningSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -59,44 +59,44 @@
 
     .prologue
     .line 57
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/ScreenPinningSettings;Z)Z
+.method static synthetic access$000(Lcom/android/settings_ex/ScreenPinningSettings;Z)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ScreenPinningSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/ScreenPinningSettings;
     .param p1, "x1"    # Z
 
     .prologue
     .line 57
-    invoke-direct {p0, p1}, Lcom/android/settings/ScreenPinningSettings;->setScreenLockUsed(Z)Z
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/ScreenPinningSettings;->setScreenLockUsed(Z)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/ScreenPinningSettings;)Lcom/android/settings/widget/SwitchBar;
+.method static synthetic access$100(Lcom/android/settings_ex/ScreenPinningSettings;)Lcom/android/settings_ex/widget/SwitchBar;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ScreenPinningSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/ScreenPinningSettings;
 
     .prologue
     .line 57
-    iget-object v0, p0, Lcom/android/settings/ScreenPinningSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/ScreenPinningSettings;Z)V
+.method static synthetic access$200(Lcom/android/settings_ex/ScreenPinningSettings;Z)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ScreenPinningSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/ScreenPinningSettings;
     .param p1, "x1"    # Z
 
     .prologue
     .line 57
-    invoke-direct {p0, p1}, Lcom/android/settings/ScreenPinningSettings;->setLockToAppEnabled(Z)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/ScreenPinningSettings;->setLockToAppEnabled(Z)V
 
     return-void
 .end method
@@ -107,7 +107,7 @@
 
     .prologue
     .line 57
-    invoke-static {p0}, Lcom/android/settings/ScreenPinningSettings;->isLockToAppEnabled(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->isLockToAppEnabled(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -127,7 +127,7 @@
     const/4 v3, 0x0
 
     .line 216
-    iget-object v1, p0, Lcom/android/settings/ScreenPinningSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v1, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -139,7 +139,7 @@
 
     .line 219
     .local v0, "quality":I
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -150,7 +150,7 @@
     if-eqz v1, :cond_0
 
     .line 220
-    invoke-virtual {p0, v6}, Lcom/android/settings/ScreenPinningSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/ScreenPinningSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -164,7 +164,7 @@
 
     .line 240
     :cond_1
-    invoke-virtual {p0, v6}, Lcom/android/settings/ScreenPinningSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/ScreenPinningSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -176,13 +176,13 @@
 
     const v2, 0x7f0e0280
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/ScreenPinningSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/ScreenPinningSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
     aput-object v2, v1, v3
 
-    invoke-virtual {p0, v5, v1}, Lcom/android/settings/ScreenPinningSettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v5, v1}, Lcom/android/settings_ex/ScreenPinningSettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -194,13 +194,13 @@
 
     const v2, 0x7f0e0283
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/ScreenPinningSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/ScreenPinningSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
     aput-object v2, v1, v3
 
-    invoke-virtual {p0, v5, v1}, Lcom/android/settings/ScreenPinningSettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v5, v1}, Lcom/android/settings_ex/ScreenPinningSettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -208,7 +208,7 @@
 
     .line 235
     :sswitch_2
-    iget-object v1, p0, Lcom/android/settings/ScreenPinningSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v1, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -225,13 +225,13 @@
 
     const v2, 0x7f0e0263
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/ScreenPinningSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/ScreenPinningSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
     aput-object v2, v1, v3
 
-    invoke-virtual {p0, v5, v1}, Lcom/android/settings/ScreenPinningSettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v5, v1}, Lcom/android/settings_ex/ScreenPinningSettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -288,11 +288,11 @@
     .line 171
     const v3, 0x7f0e0eaa
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/ScreenPinningSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/ScreenPinningSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-direct {p0}, Lcom/android/settings/ScreenPinningSettings;->getCurrentSecurityTitle()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getCurrentSecurityTitle()Ljava/lang/String;
 
     move-result-object v4
 
@@ -307,7 +307,7 @@
     .line 172
     .local v0, "def":I
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -346,7 +346,7 @@
     const/4 v7, 0x0
 
     .line 327
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -358,7 +358,7 @@
 
     .line 328
     .local v0, "item":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -378,7 +378,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -408,13 +408,13 @@
 
     .line 330
     .local v1, "message":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
     const-string v4, "com.samsung.android.app.accesscontrol"
 
-    invoke-static {v3, v4}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v3, v4}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v3
 
@@ -435,7 +435,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -457,7 +457,7 @@
     :cond_0
     new-instance v3, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -473,9 +473,9 @@
 
     const v4, 0x104000a
 
-    new-instance v5, Lcom/android/settings/ScreenPinningSettings$4;
+    new-instance v5, Lcom/android/settings_ex/ScreenPinningSettings$4;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/ScreenPinningSettings$4;-><init>(Lcom/android/settings/ScreenPinningSettings;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/ScreenPinningSettings$4;-><init>(Lcom/android/settings_ex/ScreenPinningSettings;)V
 
     invoke-virtual {v3, v4, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -483,17 +483,17 @@
 
     const/high16 v4, 0x1040000
 
-    new-instance v5, Lcom/android/settings/ScreenPinningSettings$3;
+    new-instance v5, Lcom/android/settings_ex/ScreenPinningSettings$3;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/ScreenPinningSettings$3;-><init>(Lcom/android/settings/ScreenPinningSettings;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/ScreenPinningSettings$3;-><init>(Lcom/android/settings_ex/ScreenPinningSettings;)V
 
     invoke-virtual {v3, v4, v5}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v3
 
-    new-instance v4, Lcom/android/settings/ScreenPinningSettings$2;
+    new-instance v4, Lcom/android/settings_ex/ScreenPinningSettings$2;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/ScreenPinningSettings$2;-><init>(Lcom/android/settings/ScreenPinningSettings;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/ScreenPinningSettings$2;-><init>(Lcom/android/settings_ex/ScreenPinningSettings;)V
 
     invoke-virtual {v3, v4}, Landroid/app/AlertDialog$Builder;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Landroid/app/AlertDialog$Builder;
 
@@ -511,7 +511,7 @@
 
     .prologue
     .line 162
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -528,11 +528,11 @@
     if-eqz p1, :cond_0
 
     .line 166
-    invoke-direct {p0}, Lcom/android/settings/ScreenPinningSettings;->isScreenLockUsed()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->isScreenLockUsed()Z
 
     move-result v0
 
-    invoke-direct {p0, v0}, Lcom/android/settings/ScreenPinningSettings;->setScreenLockUsedSetting(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/ScreenPinningSettings;->setScreenLockUsedSetting(Z)V
 
     .line 168
     :cond_0
@@ -558,7 +558,7 @@
     .line 178
     new-instance v1, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -603,7 +603,7 @@
     .line 188
     const/16 v4, 0x2b
 
-    invoke-virtual {p0, v0, v4}, Lcom/android/settings/ScreenPinningSettings;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v0, v4}, Lcom/android/settings_ex/ScreenPinningSettings;->startActivityForResult(Landroid/content/Intent;I)V
 
     .line 189
     const/4 v4, 0x0
@@ -618,7 +618,7 @@
 
     .line 192
     :cond_0
-    invoke-direct {p0, p1}, Lcom/android/settings/ScreenPinningSettings;->setScreenLockUsedSetting(Z)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/ScreenPinningSettings;->setScreenLockUsedSetting(Z)V
 
     goto :goto_0
 .end method
@@ -629,7 +629,7 @@
 
     .prologue
     .line 197
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -679,7 +679,7 @@
 
     .line 301
     :cond_0
-    sget-object v5, Lcom/android/settings/ScreenPinningSettings;->LOG_TAG:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/ScreenPinningSettings;->LOG_TAG:Ljava/lang/String;
 
     const-string v6, "makeStringWithImage - description or functionName or drawable is null"
 
@@ -700,7 +700,7 @@
     if-nez v5, :cond_2
 
     .line 305
-    sget-object v5, Lcom/android/settings/ScreenPinningSettings;->LOG_TAG:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/ScreenPinningSettings;->LOG_TAG:Ljava/lang/String;
 
     const-string v6, "makeStringWithImage - %s is not in str"
 
@@ -741,12 +741,12 @@
 
     .line 318
     .local v3, "ss":Landroid/text/SpannableString;
-    new-instance v2, Lcom/android/settings/CenteredImageSpan;
+    new-instance v2, Lcom/android/settings_ex/CenteredImageSpan;
 
-    invoke-direct {v2, p2}, Lcom/android/settings/CenteredImageSpan;-><init>(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {v2, p2}, Lcom/android/settings_ex/CenteredImageSpan;-><init>(Landroid/graphics/drawable/Drawable;)V
 
     .line 321
-    .local v2, "span":Lcom/android/settings/CenteredImageSpan;
+    .local v2, "span":Lcom/android/settings_ex/CenteredImageSpan;
     add-int/lit8 v5, v0, 0x1
 
     const/16 v6, 0x11
@@ -762,22 +762,22 @@
 
     .prologue
     .line 91
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 93
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 94
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
     new-instance v8, Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-direct {v8, v0}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    iput-object v8, p0, Lcom/android/settings/ScreenPinningSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object v8, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 96
     invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
@@ -800,7 +800,7 @@
 
     move-result-object v8
 
-    iput-object v8, p0, Lcom/android/settings/ScreenPinningSettings;->mDivider:Landroid/view/View;
+    iput-object v8, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mDivider:Landroid/view/View;
 
     .line 100
     const v8, 0x7f0d0481
@@ -823,7 +823,7 @@
 
     .line 103
     .local v3, "descSub":Landroid/widget/TextView;
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -835,7 +835,7 @@
 
     .line 104
     .local v6, "functionName":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -870,25 +870,25 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v10
 
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
-    invoke-static {v8}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {v8}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v8
 
     if-nez v8, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
-    invoke-static {v8}, Lcom/android/settings/Utils;->isVoiceCapable(Landroid/content/Context;)Z
+    invoke-static {v8}, Lcom/android/settings_ex/Utils;->isVoiceCapable(Landroid/content/Context;)Z
 
     move-result v8
 
@@ -912,7 +912,7 @@
 
     move-result-object v8
 
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -939,7 +939,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -953,13 +953,13 @@
 
     move-result-object v9
 
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
-    check-cast v8, Lcom/android/settings/SettingsActivity;
+    check-cast v8, Lcom/android/settings_ex/SettingsActivity;
 
-    invoke-static {v8}, Lcom/android/settings/Utils;->isRTL(Landroid/content/Context;)Z
+    invoke-static {v8}, Lcom/android/settings_ex/Utils;->isRTL(Landroid/content/Context;)Z
 
     move-result v8
 
@@ -972,7 +972,7 @@
 
     move-result-object v8
 
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -1000,7 +1000,7 @@
 
     move-result-object v8
 
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -1020,7 +1020,7 @@
 
     move-result-object v8
 
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -1040,7 +1040,7 @@
 
     move-result-object v8
 
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -1060,7 +1060,7 @@
 
     move-result-object v8
 
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -1080,7 +1080,7 @@
 
     move-result-object v8
 
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -1094,13 +1094,13 @@
 
     move-result-object v9
 
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
-    check-cast v8, Lcom/android/settings/SettingsActivity;
+    check-cast v8, Lcom/android/settings_ex/SettingsActivity;
 
-    invoke-static {v8}, Lcom/android/settings/Utils;->isRTL(Landroid/content/Context;)Z
+    invoke-static {v8}, Lcom/android/settings_ex/Utils;->isRTL(Landroid/content/Context;)Z
 
     move-result v8
 
@@ -1113,7 +1113,7 @@
 
     move-result-object v8
 
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -1148,14 +1148,14 @@
     invoke-virtual {v3, v8}, Landroid/widget/TextView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 130
-    invoke-virtual {p0, v4, v7}, Lcom/android/settings/ScreenPinningSettings;->makeStringWithImage(Ljava/lang/String;Landroid/graphics/drawable/Drawable;)Landroid/text/SpannableString;
+    invoke-virtual {p0, v4, v7}, Lcom/android/settings_ex/ScreenPinningSettings;->makeStringWithImage(Ljava/lang/String;Landroid/graphics/drawable/Drawable;)Landroid/text/SpannableString;
 
     move-result-object v8
 
     invoke-virtual {v3, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 135
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v8
 
@@ -1166,34 +1166,34 @@
     invoke-virtual {v8, v5, v9, v10}, Landroid/widget/ListView;->addFooterView(Landroid/view/View;Ljava/lang/Object;Z)V
 
     .line 137
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v8
 
-    iput-object v8, p0, Lcom/android/settings/ScreenPinningSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v8, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 138
-    iget-object v8, p0, Lcom/android/settings/ScreenPinningSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v8, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v8, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v8, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 139
-    iget-object v8, p0, Lcom/android/settings/ScreenPinningSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v8, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v8}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v8}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 140
-    iget-object v8, p0, Lcom/android/settings/ScreenPinningSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v8, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
-    invoke-static {v9}, Lcom/android/settings/ScreenPinningSettings;->isLockToAppEnabled(Landroid/content/Context;)Z
+    invoke-static {v9}, Lcom/android/settings_ex/ScreenPinningSettings;->isLockToAppEnabled(Landroid/content/Context;)Z
 
     move-result v9
 
-    invoke-virtual {v8, v9}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v8, v9}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 141
     return-void
@@ -1227,7 +1227,7 @@
 
     .prologue
     .line 203
-    invoke-super {p0, p1, p2, p3}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 204
     const/16 v2, 0x2b
@@ -1237,7 +1237,7 @@
     .line 205
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1260,10 +1260,10 @@
     .line 209
     .local v1, "validPassQuality":Z
     :goto_0
-    invoke-direct {p0, v1}, Lcom/android/settings/ScreenPinningSettings;->setScreenLockUsed(Z)Z
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/ScreenPinningSettings;->setScreenLockUsed(Z)Z
 
     .line 211
-    iget-object v2, p0, Lcom/android/settings/ScreenPinningSettings;->mUseScreenLock:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mUseScreenLock:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v2, v1}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
@@ -1287,30 +1287,30 @@
 
     .prologue
     .line 77
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 79
     const v0, 0x7f08009b
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/ScreenPinningSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/ScreenPinningSettings;->addPreferencesFromResource(I)V
 
     .line 80
-    sget-object v0, Lcom/android/settings/ScreenPinningSettings;->KEY_USE_SCREEN_LOCK:Ljava/lang/CharSequence;
+    sget-object v0, Lcom/android/settings_ex/ScreenPinningSettings;->KEY_USE_SCREEN_LOCK:Ljava/lang/CharSequence;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/ScreenPinningSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/ScreenPinningSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/SwitchPreference;
 
-    iput-object v0, p0, Lcom/android/settings/ScreenPinningSettings;->mUseScreenLock:Landroid/preference/SwitchPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mUseScreenLock:Landroid/preference/SwitchPreference;
 
     .line 81
-    iget-object v0, p0, Lcom/android/settings/ScreenPinningSettings;->mUseScreenLock:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mUseScreenLock:Landroid/preference/SwitchPreference;
 
-    new-instance v1, Lcom/android/settings/ScreenPinningSettings$1;
+    new-instance v1, Lcom/android/settings_ex/ScreenPinningSettings$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/ScreenPinningSettings$1;-><init>(Lcom/android/settings/ScreenPinningSettings;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/ScreenPinningSettings$1;-><init>(Lcom/android/settings_ex/ScreenPinningSettings;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -1323,17 +1323,17 @@
 
     .prologue
     .line 145
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroyView()V
 
     .line 147
-    iget-object v0, p0, Lcom/android/settings/ScreenPinningSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 148
-    iget-object v0, p0, Lcom/android/settings/ScreenPinningSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 149
     return-void
@@ -1344,10 +1344,10 @@
 
     .prologue
     .line 157
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 158
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->updateDisplay()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->updateDisplay()V
 
     .line 159
     return-void
@@ -1364,7 +1364,7 @@
     const/4 v1, 0x0
 
     .line 248
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -1384,7 +1384,7 @@
     if-eqz v0, :cond_1
 
     .line 250
-    invoke-direct {p0}, Lcom/android/settings/ScreenPinningSettings;->screenPinningDisablePopup()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->screenPinningDisablePopup()V
 
     .line 255
     :goto_1
@@ -1400,10 +1400,10 @@
     .line 252
     .restart local v0    # "accessControlEnabled":Z
     :cond_1
-    invoke-direct {p0, p2}, Lcom/android/settings/ScreenPinningSettings;->setLockToAppEnabled(Z)V
+    invoke-direct {p0, p2}, Lcom/android/settings_ex/ScreenPinningSettings;->setLockToAppEnabled(Z)V
 
     .line 253
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->updateDisplay()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->updateDisplay()V
 
     goto :goto_1
 .end method
@@ -1417,57 +1417,57 @@
     const/4 v7, 0x0
 
     .line 258
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/settings/ScreenPinningSettings;->isLockToAppEnabled(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/ScreenPinningSettings;->isLockToAppEnabled(Landroid/content/Context;)Z
 
     move-result v4
 
     if-eqz v4, :cond_5
 
     .line 259
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/ScreenPinningSettings;->mUseScreenLock:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mUseScreenLock:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4, v5}, Landroid/preference/PreferenceScreen;->addPreference(Landroid/preference/Preference;)Z
 
     .line 260
-    iget-object v4, p0, Lcom/android/settings/ScreenPinningSettings;->mDivider:Landroid/view/View;
+    iget-object v4, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mDivider:Landroid/view/View;
 
     if-eqz v4, :cond_0
 
     .line 261
-    iget-object v4, p0, Lcom/android/settings/ScreenPinningSettings;->mDivider:Landroid/view/View;
+    iget-object v4, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mDivider:Landroid/view/View;
 
     invoke-virtual {v4, v7}, Landroid/view/View;->setVisibility(I)V
 
     .line 270
     :cond_0
     :goto_0
-    iget-object v4, p0, Lcom/android/settings/ScreenPinningSettings;->mUseScreenLock:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mUseScreenLock:Landroid/preference/SwitchPreference;
 
-    invoke-direct {p0}, Lcom/android/settings/ScreenPinningSettings;->isScreenLockUsed()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->isScreenLockUsed()Z
 
     move-result v5
 
     invoke-virtual {v4, v5}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 271
-    iget-object v4, p0, Lcom/android/settings/ScreenPinningSettings;->mUseScreenLock:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mUseScreenLock:Landroid/preference/SwitchPreference;
 
-    invoke-direct {p0}, Lcom/android/settings/ScreenPinningSettings;->getCurrentSecurityTitle()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getCurrentSecurityTitle()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v4, v5}, Landroid/preference/SwitchPreference;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 274
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1478,18 +1478,18 @@
     if-eqz v4, :cond_1
 
     .line 275
-    iget-object v4, p0, Lcom/android/settings/ScreenPinningSettings;->mUseScreenLock:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mUseScreenLock:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4, v7}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 276
-    iget-object v4, p0, Lcom/android/settings/ScreenPinningSettings;->mUseScreenLock:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mUseScreenLock:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4, v7}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 280
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1497,13 +1497,13 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->isShopDemo(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->isShopDemo(Landroid/content/Context;)Z
 
     move-result v2
 
     .line 281
     .local v2, "isShopDemo":Z
-    invoke-static {}, Lcom/android/settings/Utils;->isLDUModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isLDUModel()Z
 
     move-result v0
 
@@ -1515,7 +1515,7 @@
 
     .line 283
     :cond_2
-    iget-object v4, p0, Lcom/android/settings/ScreenPinningSettings;->mUseScreenLock:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mUseScreenLock:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4, v7}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
@@ -1529,7 +1529,7 @@
 
     .line 287
     .local v3, "selectionArgs":[Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1537,7 +1537,7 @@
 
     const-string v6, "isScreenPinningAllowedAsUser"
 
-    invoke-static {v4, v5, v6, v3}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-static {v4, v5, v6, v3}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v1
 
@@ -1551,14 +1551,14 @@
     if-nez v1, :cond_6
 
     .line 291
-    iget-object v4, p0, Lcom/android/settings/ScreenPinningSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v4, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v4, v7}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v4, v7}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 292
-    iget-object v4, p0, Lcom/android/settings/ScreenPinningSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v4, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v4, v7}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v4, v7}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 297
     :cond_4
@@ -1571,21 +1571,21 @@
     .end local v2    # "isShopDemo":Z
     .end local v3    # "selectionArgs":[Ljava/lang/String;
     :cond_5
-    invoke-virtual {p0}, Lcom/android/settings/ScreenPinningSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ScreenPinningSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/ScreenPinningSettings;->mUseScreenLock:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mUseScreenLock:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4, v5}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 265
-    iget-object v4, p0, Lcom/android/settings/ScreenPinningSettings;->mDivider:Landroid/view/View;
+    iget-object v4, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mDivider:Landroid/view/View;
 
     if-eqz v4, :cond_0
 
     .line 266
-    iget-object v4, p0, Lcom/android/settings/ScreenPinningSettings;->mDivider:Landroid/view/View;
+    iget-object v4, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mDivider:Landroid/view/View;
 
     const/16 v5, 0x8
 
@@ -1599,9 +1599,9 @@
     .restart local v2    # "isShopDemo":Z
     .restart local v3    # "selectionArgs":[Ljava/lang/String;
     :cond_6
-    iget-object v4, p0, Lcom/android/settings/ScreenPinningSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v4, p0, Lcom/android/settings_ex/ScreenPinningSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v4, v8}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v4, v8}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     goto :goto_1
 .end method

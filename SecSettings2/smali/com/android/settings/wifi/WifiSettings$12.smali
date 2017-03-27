@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiSettings$12;
+.class Lcom/android/settings_ex/wifi/WifiSettings$12;
 .super Ljava/lang/Object;
 .source "WifiSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSettings;->showQrConfirmDialg()V
+    value = Lcom/android/settings_ex/wifi/WifiSettings;->showQrConfirmDialg()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSettings;)V
     .locals 0
 
     .prologue
     .line 1798
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSettings$12;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSettings$12;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,17 +43,17 @@
 
     .prologue
     .line 1801
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings$12;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSettings$12;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mPasswordView:Landroid/widget/EditText;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiSettings;->access$1900(Lcom/android/settings/wifi/WifiSettings;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mPasswordView:Landroid/widget/EditText;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiSettings;->access$1900(Lcom/android/settings_ex/wifi/WifiSettings;)Landroid/widget/EditText;
 
     move-result-object v1
 
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings$12;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSettings$12;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mPasswordCheckBox:Landroid/widget/CheckBox;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiSettings;->access$1800(Lcom/android/settings/wifi/WifiSettings;)Landroid/widget/CheckBox;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mPasswordCheckBox:Landroid/widget/CheckBox;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiSettings;->access$1800(Lcom/android/settings_ex/wifi/WifiSettings;)Landroid/widget/CheckBox;
 
     move-result-object v0
 
@@ -71,17 +71,17 @@
     invoke-virtual {v1, v0}, Landroid/widget/EditText;->setInputType(I)V
 
     .line 1805
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings$12;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSettings$12;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mPasswordView:Landroid/widget/EditText;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiSettings;->access$1900(Lcom/android/settings/wifi/WifiSettings;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mPasswordView:Landroid/widget/EditText;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiSettings;->access$1900(Lcom/android/settings_ex/wifi/WifiSettings;)Landroid/widget/EditText;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings$12;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSettings$12;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mPasswordView:Landroid/widget/EditText;
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiSettings;->access$1900(Lcom/android/settings/wifi/WifiSettings;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mPasswordView:Landroid/widget/EditText;
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiSettings;->access$1900(Lcom/android/settings_ex/wifi/WifiSettings;)Landroid/widget/EditText;
 
     move-result-object v1
 

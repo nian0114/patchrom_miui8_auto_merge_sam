@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fmm/FindMyMobileSettings$10;
+.class Lcom/android/settings_ex/fmm/FindMyMobileSettings$10;
 .super Ljava/lang/Object;
 .source "FindMyMobileSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fmm/FindMyMobileSettings;->showNotificationChargeDialog()V
+    value = Lcom/android/settings_ex/fmm/FindMyMobileSettings;->showNotificationChargeDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fmm/FindMyMobileSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/fmm/FindMyMobileSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fmm/FindMyMobileSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/fmm/FindMyMobileSettings;)V
     .locals 0
 
     .prologue
     .line 638
-    iput-object p1, p0, Lcom/android/settings/fmm/FindMyMobileSettings$10;->this$0:Lcom/android/settings/fmm/FindMyMobileSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/fmm/FindMyMobileSettings$10;->this$0:Lcom/android/settings_ex/fmm/FindMyMobileSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

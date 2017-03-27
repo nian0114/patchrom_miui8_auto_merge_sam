@@ -1,4 +1,4 @@
-.class Lcom/android/settings/FontPreviewTablet$3;
+.class Lcom/android/settings_ex/FontPreviewTablet$3;
 .super Ljava/lang/Object;
 .source "FontPreviewTablet.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/FontPreviewTablet;->setReHeightFontStyleListview()V
+    value = Lcom/android/settings_ex/FontPreviewTablet;->setReHeightFontStyleListview()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/FontPreviewTablet;
+.field final synthetic this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
 .field final synthetic val$scrollView:Landroid/widget/ScrollView;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/FontPreviewTablet;Landroid/widget/ScrollView;)V
+.method constructor <init>(Lcom/android/settings_ex/FontPreviewTablet;Landroid/widget/ScrollView;)V
     .locals 0
 
     .prologue
     .line 474
-    iput-object p1, p0, Lcom/android/settings/FontPreviewTablet$3;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iput-object p1, p0, Lcom/android/settings_ex/FontPreviewTablet$3;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    iput-object p2, p0, Lcom/android/settings/FontPreviewTablet$3;->val$scrollView:Landroid/widget/ScrollView;
+    iput-object p2, p0, Lcom/android/settings_ex/FontPreviewTablet$3;->val$scrollView:Landroid/widget/ScrollView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,7 +47,7 @@
     const/4 v1, 0x0
 
     .line 477
-    iget-object v0, p0, Lcom/android/settings/FontPreviewTablet$3;->val$scrollView:Landroid/widget/ScrollView;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreviewTablet$3;->val$scrollView:Landroid/widget/ScrollView;
 
     invoke-virtual {v0, v1, v1}, Landroid/widget/ScrollView;->scrollTo(II)V
 

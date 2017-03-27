@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/sim/SimSelectNotification;
+.class public Lcom/android/settings_ex/sim/SimSelectNotification;
 .super Landroid/content/BroadcastReceiver;
 .source "SimSelectNotification.java"
 
@@ -96,7 +96,7 @@
     .local v0, "builder":Landroid/support/v4/app/NotificationCompat$Builder;
     new-instance v3, Landroid/content/Intent;
 
-    const-class v5, Lcom/android/settings/Settings$SimSettingsActivity;
+    const-class v5, Lcom/android/settings_ex/Settings$SimSettingsActivity;
 
     invoke-direct {v3, p1, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -211,7 +211,7 @@
     .line 57
     .restart local v3    # "isInProvisioning":Z
     :cond_2
-    invoke-static/range {p1 .. p1}, Lcom/android/settings/sim/SimSelectNotification;->cancelNotification(Landroid/content/Context;)V
+    invoke-static/range {p1 .. p1}, Lcom/android/settings_ex/sim/SimSelectNotification;->cancelNotification(Landroid/content/Context;)V
 
     .line 60
     const-string v12, "ss"
@@ -381,7 +381,7 @@
 
     .line 101
     :cond_8
-    invoke-direct/range {p0 .. p1}, Lcom/android/settings/sim/SimSelectNotification;->createNotification(Landroid/content/Context;)V
+    invoke-direct/range {p0 .. p1}, Lcom/android/settings_ex/sim/SimSelectNotification;->createNotification(Landroid/content/Context;)V
 
     .line 103
     invoke-interface {v6}, Ljava/util/List;->size()I
@@ -395,7 +395,7 @@
     .line 105
     new-instance v4, Landroid/content/Intent;
 
-    const-class v12, Lcom/android/settings/sim/SimDialogActivity;
+    const-class v12, Lcom/android/settings_ex/sim/SimDialogActivity;
 
     move-object/from16 v0, p1
 
@@ -408,14 +408,14 @@
     invoke-virtual {v4, v12}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 107
-    sget-object v12, Lcom/android/settings/sim/SimDialogActivity;->DIALOG_TYPE_KEY:Ljava/lang/String;
+    sget-object v12, Lcom/android/settings_ex/sim/SimDialogActivity;->DIALOG_TYPE_KEY:Ljava/lang/String;
 
     const/4 v13, 0x3
 
     invoke-virtual {v4, v12, v13}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 108
-    sget-object v13, Lcom/android/settings/sim/SimDialogActivity;->PREFERRED_SIM:Ljava/lang/String;
+    sget-object v13, Lcom/android/settings_ex/sim/SimDialogActivity;->PREFERRED_SIM:Ljava/lang/String;
 
     const/4 v12, 0x0
 
@@ -446,7 +446,7 @@
     .line 112
     new-instance v4, Landroid/content/Intent;
 
-    const-class v12, Lcom/android/settings/sim/SimDialogActivity;
+    const-class v12, Lcom/android/settings_ex/sim/SimDialogActivity;
 
     move-object/from16 v0, p1
 
@@ -459,7 +459,7 @@
     invoke-virtual {v4, v12}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 114
-    sget-object v12, Lcom/android/settings/sim/SimDialogActivity;->DIALOG_TYPE_KEY:Ljava/lang/String;
+    sget-object v12, Lcom/android/settings_ex/sim/SimDialogActivity;->DIALOG_TYPE_KEY:Ljava/lang/String;
 
     const/4 v13, 0x0
 

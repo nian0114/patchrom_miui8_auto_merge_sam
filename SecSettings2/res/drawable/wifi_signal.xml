@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector
   xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings_ex">
     <item settings:state_encrypted="true" settings:state_wifi_giga="false" settings:state_wifi_wechat="false">
         <level-list>
             <item android:drawable="@drawable/ic_wifi_signal_lock_0" android:maxLevel="0" />

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$2;
+.class Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$2;
 .super Landroid/database/ContentObserver;
 .source "ToggleScreenMagnificationPreferenceFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    value = Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 153
-    iput-object p1, p0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$2;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$2;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -43,10 +43,10 @@
     const/4 v2, 0x0
 
     .line 156
-    iget-object v0, p0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$2;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$2;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    # invokes: Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v0}, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$1500(Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->access$1500(Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;)Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -59,11 +59,11 @@
     if-eqz v0, :cond_0
 
     .line 157
-    iget-object v0, p0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$2;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$2;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
-    invoke-virtual {v0, v2}, Lcom/android/settings/widget/ToggleSwitch;->setEnabled(Z)V
+    invoke-virtual {v0, v2}, Lcom/android/settings_ex/widget/ToggleSwitch;->setEnabled(Z)V
 
     .line 160
     :goto_0
@@ -71,13 +71,13 @@
 
     .line 159
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment$2;->this$0:Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment$2;->this$0:Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/ToggleScreenMagnificationPreferenceFragment;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/ToggleScreenMagnificationPreferenceFragment;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/ToggleSwitch;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/ToggleSwitch;->setEnabled(Z)V
 
     goto :goto_0
 .end method

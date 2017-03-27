@@ -1,9 +1,9 @@
-.class public Lcom/android/settings/wifi/WifiPickerActivity;
-.super Lcom/android/settings/SettingsActivity;
+.class public Lcom/android/settings_ex/wifi/WifiPickerActivity;
+.super Lcom/android/settings_ex/SettingsActivity;
 .source "WifiPickerActivity.java"
 
 # interfaces
-.implements Lcom/android/settings/ButtonBarHandler;
+.implements Lcom/android/settings_ex/ButtonBarHandler;
 
 
 # direct methods
@@ -12,7 +12,7 @@
 
     .prologue
     .line 29
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivity;-><init>()V
 
     return-void
 .end method
@@ -26,7 +26,7 @@
     .line 33
     new-instance v0, Landroid/content/Intent;
 
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->getIntent()Landroid/content/Intent;
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -45,7 +45,7 @@
     .line 35
     const-string v1, ":settings:show_fragment"
 
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiPickerActivity;->getWifiSettingsClass()Ljava/lang/Class;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiPickerActivity;->getWifiSettingsClass()Ljava/lang/Class;
 
     move-result-object v2
 
@@ -88,7 +88,7 @@
 
     .prologue
     .line 57
-    const-class v0, Lcom/android/settings/wifi/WifiSettings;
+    const-class v0, Lcom/android/settings_ex/wifi/WifiSettings;
 
     return-object v0
 .end method
@@ -99,7 +99,7 @@
 
     .prologue
     .line 44
-    const-class v0, Lcom/android/settings/wifi/WifiSettings;
+    const-class v0, Lcom/android/settings_ex/wifi/WifiSettings;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -111,7 +111,7 @@
 
     if-nez v0, :cond_0
 
-    const-class v0, Lcom/android/settings/wifi/p2p/WifiP2pSettings;
+    const-class v0, Lcom/android/settings_ex/wifi/p2p/WifiP2pSettings;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

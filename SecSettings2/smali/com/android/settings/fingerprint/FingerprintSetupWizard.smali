@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/fingerprint/FingerprintSetupWizard;
+.class public Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;
 .super Landroid/app/Activity;
 .source "FingerprintSetupWizard.java"
 
@@ -32,7 +32,7 @@
 
 .field private descriptionText:Landroid/view/View;
 
-.field private fingerprintImage:Lcom/android/settings/fingerprint/VI/FingerprintIconView;
+.field private fingerprintImage:Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;
 
 .field private fingerprintPhoneImage:Landroid/view/View;
 
@@ -75,7 +75,7 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->isEnableSurveyMode:Z
+    sput-boolean v0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->isEnableSurveyMode:Z
 
     return-void
 .end method
@@ -92,78 +92,78 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->contentArray:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->contentArray:Ljava/util/ArrayList;
 
     .line 76
     const/high16 v0, 0x42f00000    # 120.0f
 
-    iput v0, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->transX:F
+    iput v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->transX:F
 
     .line 77
     const/high16 v0, 0x44850000    # 1064.0f
 
-    iput v0, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->image_transY:F
+    iput v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->image_transY:F
 
     .line 78
     const/high16 v0, 0x43600000    # 224.0f
 
-    iput v0, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->button_transY:F
+    iput v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->button_transY:F
 
     .line 83
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->handler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->handler:Landroid/os/Handler;
 
     .line 86
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->mWasSecureBefore:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->mWasSecureBefore:Z
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/fingerprint/FingerprintSetupWizard;)Lcom/android/settings/fingerprint/VI/FingerprintIconView;
+.method static synthetic access$000(Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;)Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintSetupWizard;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;
 
     .prologue
     .line 46
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->fingerprintImage:Lcom/android/settings/fingerprint/VI/FingerprintIconView;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->fingerprintImage:Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/fingerprint/FingerprintSetupWizard;)Landroid/view/View;
+.method static synthetic access$100(Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;)Landroid/view/View;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintSetupWizard;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;
 
     .prologue
     .line 46
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->titleArea:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->titleArea:Landroid/view/View;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/fingerprint/FingerprintSetupWizard;)V
+.method static synthetic access$200(Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintSetupWizard;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;
 
     .prologue
     .line 46
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->startAnimation()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->startAnimation()V
 
     return-void
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/fingerprint/FingerprintSetupWizard;)Landroid/os/Handler;
+.method static synthetic access$300(Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintSetupWizard;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;
 
     .prologue
     .line 46
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->handler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->handler:Landroid/os/Handler;
 
     return-object v0
 .end method
@@ -189,7 +189,7 @@
 
     move-result-object v3
 
-    sget-boolean v4, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->isEnableSurveyMode:Z
+    sget-boolean v4, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->isEnableSurveyMode:Z
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -232,7 +232,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 391
-    sget-boolean v2, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->isEnableSurveyMode:Z
+    sget-boolean v2, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->isEnableSurveyMode:Z
 
     if-eqz v2, :cond_0
 
@@ -288,12 +288,12 @@
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 402
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->mContext:Landroid/content/Context;
 
     if-eqz v2, :cond_0
 
     .line 403
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
@@ -309,7 +309,7 @@
 
     .prologue
     .line 223
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v0
 
@@ -342,70 +342,70 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 290
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->titleText:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->titleText:Landroid/view/View;
 
-    iget v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->transX:F
+    iget v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->transX:F
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setTranslationX(F)V
 
     .line 291
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->titleText:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->titleText:Landroid/view/View;
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setAlpha(F)V
 
     .line 292
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->descriptionText:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->descriptionText:Landroid/view/View;
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setAlpha(F)V
 
     .line 294
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->imageArea:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->imageArea:Landroid/view/View;
 
     if-eqz v1, :cond_0
 
     .line 295
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->imageArea:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->imageArea:Landroid/view/View;
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setAlpha(F)V
 
     .line 297
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->titleArea:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->titleArea:Landroid/view/View;
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setAlpha(F)V
 
     .line 299
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->fingerprintImage:Lcom/android/settings/fingerprint/VI/FingerprintIconView;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->fingerprintImage:Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;
 
     if-eqz v1, :cond_1
 
     .line 300
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->fingerprintImage:Lcom/android/settings/fingerprint/VI/FingerprintIconView;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->fingerprintImage:Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;
 
-    invoke-virtual {v1, v3}, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->setAlpha(F)V
+    invoke-virtual {v1, v3}, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->setAlpha(F)V
 
     .line 301
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->fingerprintImage:Lcom/android/settings/fingerprint/VI/FingerprintIconView;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->fingerprintImage:Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;
 
-    iget v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->image_transY:F
+    iget v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->image_transY:F
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->setTranslationY(F)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->setTranslationY(F)V
 
     .line 304
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->btnArea:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->btnArea:Landroid/view/View;
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setAlpha(F)V
 
     .line 305
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->btnArea:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->btnArea:Landroid/view/View;
 
-    iget v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->button_transY:F
+    iget v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->button_transY:F
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setTranslationY(F)V
 
     .line 307
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->titleArea:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->titleArea:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
@@ -413,9 +413,9 @@
 
     .line 309
     .local v0, "observer":Landroid/view/ViewTreeObserver;
-    new-instance v1, Lcom/android/settings/fingerprint/FingerprintSetupWizard$3;
+    new-instance v1, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard$3;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard$3;-><init>(Lcom/android/settings/fingerprint/FingerprintSetupWizard;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard$3;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
@@ -432,7 +432,7 @@
 
     .line 280
     .local v0, "visibility":I
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->getWindow()Landroid/view/Window;
 
     move-result-object v2
 
@@ -443,7 +443,7 @@
     invoke-virtual {v2, v0}, Landroid/view/View;->setSystemUiVisibility(I)V
 
     .line 282
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->getWindow()Landroid/view/Window;
 
     move-result-object v2
 
@@ -476,7 +476,7 @@
     .local v1, "stringID":I
     const-string v2, "VZW"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v3
 
@@ -507,9 +507,9 @@
 
     const v3, 0x104000a
 
-    new-instance v4, Lcom/android/settings/fingerprint/FingerprintSetupWizard$2;
+    new-instance v4, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard$2;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard$2;-><init>(Lcom/android/settings/fingerprint/FingerprintSetupWizard;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard$2;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;)V
 
     invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -549,100 +549,100 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 328
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->imageArea:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->imageArea:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
     .line 329
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->imageArea:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->imageArea:Landroid/view/View;
 
     const-wide/16 v6, 0x1f4
 
     const/16 v8, 0x21
 
-    invoke-static/range {v1 .. v8}, Lcom/android/settings/fingerprint/VI/AnimationHelper;->fadeAni(Landroid/view/View;FFJJI)V
+    invoke-static/range {v1 .. v8}, Lcom/android/settings_ex/fingerprint/VI/AnimationHelper;->fadeAni(Landroid/view/View;FFJJI)V
 
     .line 331
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->titleArea:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->titleArea:Landroid/view/View;
 
     const-wide/16 v6, 0x1f4
 
     const/16 v8, 0x21
 
-    invoke-static/range {v1 .. v8}, Lcom/android/settings/fingerprint/VI/AnimationHelper;->fadeAni(Landroid/view/View;FFJJI)V
+    invoke-static/range {v1 .. v8}, Lcom/android/settings_ex/fingerprint/VI/AnimationHelper;->fadeAni(Landroid/view/View;FFJJI)V
 
     .line 333
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->descriptionText:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->descriptionText:Landroid/view/View;
 
     const-wide/16 v6, 0x1f4
 
     const/16 v8, 0x21
 
-    invoke-static/range {v1 .. v8}, Lcom/android/settings/fingerprint/VI/AnimationHelper;->fadeAni(Landroid/view/View;FFJJI)V
+    invoke-static/range {v1 .. v8}, Lcom/android/settings_ex/fingerprint/VI/AnimationHelper;->fadeAni(Landroid/view/View;FFJJI)V
 
     .line 335
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->titleText:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->titleText:Landroid/view/View;
 
-    invoke-static {v0, v4, v5, v10, v11}, Lcom/android/settings/fingerprint/VI/AnimationHelper;->fromRight(Landroid/view/View;JJ)V
+    invoke-static {v0, v4, v5, v10, v11}, Lcom/android/settings_ex/fingerprint/VI/AnimationHelper;->fromRight(Landroid/view/View;JJ)V
 
     .line 336
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->titleText:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->titleText:Landroid/view/View;
 
     move-wide v6, v10
 
     move v8, v12
 
-    invoke-static/range {v1 .. v8}, Lcom/android/settings/fingerprint/VI/AnimationHelper;->fadeAni(Landroid/view/View;FFJJI)V
+    invoke-static/range {v1 .. v8}, Lcom/android/settings_ex/fingerprint/VI/AnimationHelper;->fadeAni(Landroid/view/View;FFJJI)V
 
     .line 338
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->fingerprintImage:Lcom/android/settings/fingerprint/VI/FingerprintIconView;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->fingerprintImage:Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;
 
     if-eqz v0, :cond_1
 
     .line 339
-    iget-object v7, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->fingerprintImage:Lcom/android/settings/fingerprint/VI/FingerprintIconView;
+    iget-object v7, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->fingerprintImage:Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;
 
     move-wide v8, v4
 
-    invoke-static/range {v7 .. v12}, Lcom/android/settings/fingerprint/VI/AnimationHelper;->fromBottom(Landroid/view/View;JJI)V
+    invoke-static/range {v7 .. v12}, Lcom/android/settings_ex/fingerprint/VI/AnimationHelper;->fromBottom(Landroid/view/View;JJI)V
 
     .line 340
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->fingerprintImage:Lcom/android/settings/fingerprint/VI/FingerprintIconView;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->fingerprintImage:Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;
 
     move-wide v6, v10
 
     move v8, v12
 
-    invoke-static/range {v1 .. v8}, Lcom/android/settings/fingerprint/VI/AnimationHelper;->fadeAni(Landroid/view/View;FFJJI)V
+    invoke-static/range {v1 .. v8}, Lcom/android/settings_ex/fingerprint/VI/AnimationHelper;->fadeAni(Landroid/view/View;FFJJI)V
 
     .line 343
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->handler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->handler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/android/settings/fingerprint/FingerprintSetupWizard$4;
+    new-instance v1, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard$4;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard$4;-><init>(Lcom/android/settings/fingerprint/FingerprintSetupWizard;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard$4;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;)V
 
     const-wide/16 v6, 0x190
 
     invoke-virtual {v0, v1, v6, v7}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 353
-    iget-object v7, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->btnArea:Landroid/view/View;
+    iget-object v7, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->btnArea:Landroid/view/View;
 
     move-wide v8, v4
 
-    invoke-static/range {v7 .. v12}, Lcom/android/settings/fingerprint/VI/AnimationHelper;->fromBottom(Landroid/view/View;JJI)V
+    invoke-static/range {v7 .. v12}, Lcom/android/settings_ex/fingerprint/VI/AnimationHelper;->fromBottom(Landroid/view/View;JJI)V
 
     .line 354
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->btnArea:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->btnArea:Landroid/view/View;
 
     move-wide v6, v10
 
     move v8, v12
 
-    invoke-static/range {v1 .. v8}, Lcom/android/settings/fingerprint/VI/AnimationHelper;->fadeAni(Landroid/view/View;FFJJI)V
+    invoke-static/range {v1 .. v8}, Lcom/android/settings_ex/fingerprint/VI/AnimationHelper;->fadeAni(Landroid/view/View;FFJJI)V
 
     .line 355
     return-void
@@ -683,7 +683,7 @@
     const/16 v2, 0x7d0
 
     :try_start_0
-    invoke-virtual {p0, v1, v2}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v1, v2}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->startActivityForResult(Landroid/content/Intent;I)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -779,10 +779,10 @@
     if-ne p2, v3, :cond_0
 
     .line 260
-    invoke-virtual {p0, v3}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->setResult(I)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->setResult(I)V
 
     .line 261
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->finish()V
 
     goto :goto_0
 
@@ -802,10 +802,10 @@
     .line 218
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->setResult(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->setResult(I)V
 
     .line 219
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->finish()V
 
     .line 220
     return-void
@@ -851,15 +851,15 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->insertSurveyLog(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
+    invoke-direct/range {v0 .. v5}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->insertSurveyLog(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
 
     .line 185
     const/4 v0, 0x7
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->setResult(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->setResult(I)V
 
     .line 186
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->finish()V
 
     goto :goto_0
 
@@ -872,7 +872,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 191
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -887,7 +887,7 @@
     if-ne v0, v2, :cond_0
 
     .line 193
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->mContext:Landroid/content/Context;
 
     const v1, 0x7f0e14c4
 
@@ -895,13 +895,13 @@
 
     const v3, 0x7f0e11f6
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     aput-object v3, v2, v4
 
-    invoke-virtual {p0, v1, v2}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v1, v2}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -915,12 +915,12 @@
 
     .line 195
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     if-eqz v0, :cond_3
 
     .line 196
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     invoke-virtual {v0}, Landroid/hardware/fingerprint/FingerprintManager;->isHardwareDetected()Z
 
@@ -928,7 +928,7 @@
 
     .line 197
     .local v7, "isHWdetected":Z
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     invoke-virtual {v0}, Landroid/hardware/fingerprint/FingerprintManager;->requestGetSensorStatus()I
 
@@ -981,13 +981,13 @@
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 201
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->showSensorErrorDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->showSensorErrorDialog()V
 
     goto/16 :goto_0
 
     .line 205
     :cond_2
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->startFingerprintLockSettings()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->startFingerprintLockSettings()V
 
     goto/16 :goto_0
 
@@ -1002,7 +1002,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 209
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->showSensorErrorDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->showSensorErrorDialog()V
 
     goto/16 :goto_0
 
@@ -1035,14 +1035,14 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 100
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
     .line 101
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v2
 
@@ -1050,35 +1050,35 @@
 
     .line 104
     :cond_0
-    iput-object p0, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->mContext:Landroid/content/Context;
+    iput-object p0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->mContext:Landroid/content/Context;
 
     .line 106
     const v2, 0x7f0400eb
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->setContentView(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->setContentView(I)V
 
     .line 108
     const-string v2, "fingerprint"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/hardware/fingerprint/FingerprintManager;
 
-    iput-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
+    iput-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     .line 109
     new-instance v2, Lcom/android/internal/widget/LockPatternUtils;
 
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->mContext:Landroid/content/Context;
 
     invoke-direct {v2, v3}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    sput-object v2, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    sput-object v2, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 111
-    sget-object v2, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    sget-object v2, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
@@ -1088,43 +1088,43 @@
 
     move-result v2
 
-    iput-boolean v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->mWasSecureBefore:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->mWasSecureBefore:Z
 
     .line 113
     const v2, 0x7f0d02d0
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/TextView;
 
-    iput-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->titleText:Landroid/view/View;
+    iput-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->titleText:Landroid/view/View;
 
     .line 114
     const v2, 0x7f0d02d2
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/TextView;
 
-    iput-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->descriptionText:Landroid/view/View;
+    iput-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->descriptionText:Landroid/view/View;
 
     .line 115
     const v2, 0x7f0d02d4
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/LinearLayout;
 
-    iput-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->laterBtn:Landroid/view/View;
+    iput-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->laterBtn:Landroid/view/View;
 
     .line 116
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->laterBtn:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->laterBtn:Landroid/view/View;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1132,7 +1132,7 @@
 
     const v4, 0x7f0e1239
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1146,7 +1146,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1163,16 +1163,16 @@
     .line 117
     const v2, 0x7f0d02d6
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/LinearLayout;
 
-    iput-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->registerBtn:Landroid/view/View;
+    iput-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->registerBtn:Landroid/view/View;
 
     .line 118
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->registerBtn:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->registerBtn:Landroid/view/View;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1180,7 +1180,7 @@
 
     const v4, 0x7f0e1238
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1194,7 +1194,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1211,121 +1211,121 @@
     .line 119
     const v2, 0x7f0d02ce
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/RelativeLayout;
 
-    iput-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->imageArea:Landroid/view/View;
+    iput-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->imageArea:Landroid/view/View;
 
     .line 120
     const v2, 0x7f0d0058
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/LinearLayout;
 
-    iput-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->titleArea:Landroid/view/View;
+    iput-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->titleArea:Landroid/view/View;
 
     .line 121
     const v2, 0x7f0d02d3
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/RelativeLayout;
 
-    iput-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->btnArea:Landroid/view/View;
+    iput-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->btnArea:Landroid/view/View;
 
     .line 122
     const v2, 0x7f0d02d1
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/LinearLayout;
 
-    iput-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->descriptionArea:Landroid/view/View;
+    iput-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->descriptionArea:Landroid/view/View;
 
     .line 124
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->isVIEnabled()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->isVIEnabled()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
     .line 125
-    invoke-virtual {p0, v5}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/fingerprint/VI/FingerprintIconView;
+    check-cast v2, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;
 
-    iput-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->fingerprintImage:Lcom/android/settings/fingerprint/VI/FingerprintIconView;
+    iput-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->fingerprintImage:Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;
 
     .line 127
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->fingerprintImage:Lcom/android/settings/fingerprint/VI/FingerprintIconView;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->fingerprintImage:Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;
 
     if-eqz v2, :cond_1
 
     .line 128
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->fingerprintImage:Lcom/android/settings/fingerprint/VI/FingerprintIconView;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->fingerprintImage:Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;
 
-    new-instance v3, Lcom/android/settings/fingerprint/FingerprintSetupWizard$1;
+    new-instance v3, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard$1;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard$1;-><init>(Lcom/android/settings/fingerprint/FingerprintSetupWizard;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard$1;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;)V
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/fingerprint/VI/FingerprintIconView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/fingerprint/VI/FingerprintIconView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 146
     :cond_1
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->contentArray:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->contentArray:Ljava/util/ArrayList;
 
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->titleText:Landroid/view/View;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->titleText:Landroid/view/View;
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 147
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->contentArray:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->contentArray:Ljava/util/ArrayList;
 
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->descriptionText:Landroid/view/View;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->descriptionText:Landroid/view/View;
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 148
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->contentArray:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->contentArray:Ljava/util/ArrayList;
 
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->laterBtn:Landroid/view/View;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->laterBtn:Landroid/view/View;
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 149
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->contentArray:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->contentArray:Ljava/util/ArrayList;
 
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->registerBtn:Landroid/view/View;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->registerBtn:Landroid/view/View;
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 151
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->laterBtn:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->laterBtn:Landroid/view/View;
 
     invoke-virtual {v2, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 152
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->registerBtn:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->registerBtn:Landroid/view/View;
 
     invoke-virtual {v2, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 155
     const v2, 0x7f0d02d8
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -1342,7 +1342,7 @@
 
     const/high16 v2, -0x1000000
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->getBaseContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->getBaseContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -1367,17 +1367,17 @@
     invoke-virtual {v2, v0}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
     .line 161
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->setIndicatorTransparency()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->setIndicatorTransparency()V
 
     .line 163
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->isVIEnabled()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->isVIEnabled()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
     .line 164
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->resetAnimation()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->resetAnimation()V
 
     .line 166
     :cond_2
@@ -1387,16 +1387,16 @@
     .end local v0    # "colorfilter":Landroid/graphics/ColorFilter;
     .end local v1    # "register_arrow":Landroid/widget/ImageView;
     :cond_3
-    invoke-virtual {p0, v5}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/ImageView;
 
-    iput-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->fingerprintPhoneImage:Landroid/view/View;
+    iput-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->fingerprintPhoneImage:Landroid/view/View;
 
     .line 143
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->fingerprintPhoneImage:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->fingerprintPhoneImage:Landroid/view/View;
 
     const v3, 0x7f0200e3
 

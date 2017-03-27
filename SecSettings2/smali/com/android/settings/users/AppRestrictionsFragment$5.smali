@@ -1,4 +1,4 @@
-.class Lcom/android/settings/users/AppRestrictionsFragment$5;
+.class Lcom/android/settings_ex/users/AppRestrictionsFragment$5;
 .super Ljava/lang/Object;
 .source "AppRestrictionsFragment.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/users/AppRestrictionsFragment;->showSubordinateAppEnablePopup(Ljava/lang/String;)V
+    value = Lcom/android/settings_ex/users/AppRestrictionsFragment;->showSubordinateAppEnablePopup(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/users/AppRestrictionsFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/users/AppRestrictionsFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/users/AppRestrictionsFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/users/AppRestrictionsFragment;)V
     .locals 0
 
     .prologue
     .line 1112
-    iput-object p1, p0, Lcom/android/settings/users/AppRestrictionsFragment$5;->this$0:Lcom/android/settings/users/AppRestrictionsFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/users/AppRestrictionsFragment$5;->this$0:Lcom/android/settings_ex/users/AppRestrictionsFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,14 +42,14 @@
 
     .prologue
     .line 1116
-    iget-object v0, p0, Lcom/android/settings/users/AppRestrictionsFragment$5;->this$0:Lcom/android/settings/users/AppRestrictionsFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/users/AppRestrictionsFragment$5;->this$0:Lcom/android/settings_ex/users/AppRestrictionsFragment;
 
-    # getter for: Lcom/android/settings/users/AppRestrictionsFragment;->mClickedAppPref:Lcom/android/settings/users/AppRestrictionsFragment$AppRestrictionsPreference;
-    invoke-static {v0}, Lcom/android/settings/users/AppRestrictionsFragment;->access$1200(Lcom/android/settings/users/AppRestrictionsFragment;)Lcom/android/settings/users/AppRestrictionsFragment$AppRestrictionsPreference;
+    # getter for: Lcom/android/settings_ex/users/AppRestrictionsFragment;->mClickedAppPref:Lcom/android/settings_ex/users/AppRestrictionsFragment$AppRestrictionsPreference;
+    invoke-static {v0}, Lcom/android/settings_ex/users/AppRestrictionsFragment;->access$1200(Lcom/android/settings_ex/users/AppRestrictionsFragment;)Lcom/android/settings_ex/users/AppRestrictionsFragment$AppRestrictionsPreference;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/settings/users/AppRestrictionsFragment$AppRestrictionsPreference;->updateStatus()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/users/AppRestrictionsFragment$AppRestrictionsPreference;->updateStatus()V
 
     .line 1117
     return-void

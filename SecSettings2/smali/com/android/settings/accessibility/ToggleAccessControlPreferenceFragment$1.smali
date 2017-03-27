@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment$1;
+.class Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment$1;
 .super Landroid/database/ContentObserver;
 .source "ToggleAccessControlPreferenceFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;
+    value = Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 101
-    iput-object p1, p0, Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -43,10 +43,10 @@
     const/4 v0, 0x0
 
     .line 104
-    iget-object v1, p0, Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;
 
-    # invokes: Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v1}, Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;->access$000(Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;->access$000(Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;)Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -63,23 +63,23 @@
     .line 105
     .local v0, "settingValue":Z
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;
 
-    iget-object v1, v1, Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iget-object v1, v1, Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
-    invoke-virtual {v1, v0}, Lcom/android/settings/widget/ToggleSwitch;->setCheckedInternal(Z)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/widget/ToggleSwitch;->setCheckedInternal(Z)V
 
     .line 106
-    iget-object v1, p0, Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;
 
-    # invokes: Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;->setBlockOptionsEnabled(Z)V
-    invoke-static {v1, v0}, Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;->access$100(Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;Z)V
+    # invokes: Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;->setBlockOptionsEnabled(Z)V
+    invoke-static {v1, v0}, Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;->access$100(Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;Z)V
 
     .line 107
-    iget-object v1, p0, Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;
 
-    # invokes: Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;->updateTimerPreference()V
-    invoke-static {v1}, Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;->access$200(Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;)V
+    # invokes: Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;->updateTimerPreference()V
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;->access$200(Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;)V
 
     .line 108
     return-void

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/fmm/RecipientsMinusView;
+.class public Lcom/android/settings_ex/fmm/RecipientsMinusView;
 .super Landroid/widget/LinearLayout;
 .source "RecipientsMinusView.java"
 
@@ -35,25 +35,25 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/fmm/RecipientsMinusView;)Landroid/widget/LinearLayout;
+.method static synthetic access$000(Lcom/android/settings_ex/fmm/RecipientsMinusView;)Landroid/widget/LinearLayout;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fmm/RecipientsMinusView;
+    .param p0, "x0"    # Lcom/android/settings_ex/fmm/RecipientsMinusView;
 
     .prologue
     .line 52
-    iget-object v0, p0, Lcom/android/settings/fmm/RecipientsMinusView;->CurrentView:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/android/settings_ex/fmm/RecipientsMinusView;->CurrentView:Landroid/widget/LinearLayout;
 
     return-object v0
 .end method
 
-.method static synthetic access$102(Lcom/android/settings/fmm/RecipientsMinusView;Z)Z
+.method static synthetic access$102(Lcom/android/settings_ex/fmm/RecipientsMinusView;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/fmm/RecipientsMinusView;
+    .param p0, "x0"    # Lcom/android/settings_ex/fmm/RecipientsMinusView;
     .param p1, "x1"    # Z
 
     .prologue
     .line 52
-    iput-boolean p1, p0, Lcom/android/settings/fmm/RecipientsMinusView;->VisibleView:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/fmm/RecipientsMinusView;->VisibleView:Z
 
     return p1
 .end method
@@ -67,7 +67,7 @@
     .line 94
     const v1, 0x7f0d0330
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/fmm/RecipientsMinusView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -91,7 +91,7 @@
 
     .prologue
     .line 113
-    iget-boolean v0, p0, Lcom/android/settings/fmm/RecipientsMinusView;->VisibleView:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/fmm/RecipientsMinusView;->VisibleView:Z
 
     return v0
 .end method
@@ -106,23 +106,23 @@
     .line 73
     const/4 v1, 0x1
 
-    iput-boolean v1, p0, Lcom/android/settings/fmm/RecipientsMinusView;->VisibleView:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/fmm/RecipientsMinusView;->VisibleView:Z
 
     .line 74
     const v1, 0x7f0d032f
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/fmm/RecipientsMinusView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/LinearLayout;
 
-    iput-object v1, p0, Lcom/android/settings/fmm/RecipientsMinusView;->CurrentView:Landroid/widget/LinearLayout;
+    iput-object v1, p0, Lcom/android/settings_ex/fmm/RecipientsMinusView;->CurrentView:Landroid/widget/LinearLayout;
 
     .line 75
     const v1, 0x7f0d0331
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/fmm/RecipientsMinusView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -130,9 +130,9 @@
 
     .line 76
     .local v0, "MinusButton":Landroid/widget/ImageView;
-    new-instance v1, Lcom/android/settings/fmm/RecipientsMinusView$1;
+    new-instance v1, Lcom/android/settings_ex/fmm/RecipientsMinusView$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/fmm/RecipientsMinusView$1;-><init>(Lcom/android/settings/fmm/RecipientsMinusView;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/fmm/RecipientsMinusView$1;-><init>(Lcom/android/settings_ex/fmm/RecipientsMinusView;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -147,7 +147,7 @@
     .line 106
     const v1, 0x7f0d0330
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/fmm/RecipientsMinusView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -174,7 +174,7 @@
     .line 100
     const v1, 0x7f0d0330
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/fmm/RecipientsMinusView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 

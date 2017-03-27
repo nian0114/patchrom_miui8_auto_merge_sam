@@ -1,11 +1,11 @@
-.class Lcom/android/settings/applications/ProcessStatsDetail$PkgService;
+.class Lcom/android/settings_ex/applications/ProcessStatsDetail$PkgService;
 .super Ljava/lang/Object;
 .source "ProcessStatsDetail.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/ProcessStatsDetail;
+    value = Lcom/android/settings_ex/applications/ProcessStatsDetail;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/applications/ProcStatsEntry$Service;",
+            "Lcom/android/settings_ex/applications/ProcStatsEntry$Service;",
             ">;"
         }
     .end annotation
@@ -42,7 +42,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/applications/ProcessStatsDetail$PkgService;->mServices:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/applications/ProcessStatsDetail$PkgService;->mServices:Ljava/util/ArrayList;
 
     return-void
 .end method

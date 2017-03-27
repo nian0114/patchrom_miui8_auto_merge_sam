@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/CryptKeeper;
+.class public Lcom/android/settings_ex/CryptKeeper;
 .super Landroid/app/Activity;
 .source "CryptKeeper.java"
 
@@ -12,9 +12,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/CryptKeeper$ValidationTask;,
-        Lcom/android/settings/CryptKeeper$DecryptTask;,
-        Lcom/android/settings/CryptKeeper$NonConfigurationInstanceState;
+        Lcom/android/settings_ex/CryptKeeper$ValidationTask;,
+        Lcom/android/settings_ex/CryptKeeper$DecryptTask;,
+        Lcom/android/settings_ex/CryptKeeper$NonConfigurationInstanceState;
     }
 .end annotation
 
@@ -64,7 +64,7 @@
 
 .field private final mHandler:Landroid/os/Handler;
 
-.field mKeyProp:Lcom/android/settings/EFSProperties$KeyguardProperties;
+.field mKeyProp:Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
 
 .field private mKeypressSoundCountup:I
 
@@ -72,7 +72,7 @@
 
 .field protected mNotificationCountdown:I
 
-.field mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+.field mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
 .field private mPasswordEntry:Landroid/widget/EditText;
 
@@ -109,30 +109,30 @@
     const/4 v1, 0x0
 
     .line 177
-    sput v1, Lcom/android/settings/CryptKeeper;->mMaxFailedAttempts:I
+    sput v1, Lcom/android/settings_ex/CryptKeeper;->mMaxFailedAttempts:I
 
     .line 178
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/CryptKeeper;->mfailedAttemptCounts:Ljava/lang/Integer;
+    sput-object v0, Lcom/android/settings_ex/CryptKeeper;->mfailedAttemptCounts:Ljava/lang/Integer;
 
     .line 180
     const-string v0, ""
 
-    sput-object v0, Lcom/android/settings/CryptKeeper;->mSavedPassword:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/CryptKeeper;->mSavedPassword:Ljava/lang/String;
 
     .line 181
-    sput-boolean v1, Lcom/android/settings/CryptKeeper;->emergencyCallStatus:Z
+    sput-boolean v1, Lcom/android/settings_ex/CryptKeeper;->emergencyCallStatus:Z
 
     .line 192
     const-string v0, ""
 
-    sput-object v0, Lcom/android/settings/CryptKeeper;->mSalesCode:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/CryptKeeper;->mSalesCode:Ljava/lang/String;
 
     .line 207
-    sput v1, Lcom/android/settings/CryptKeeper;->mPasswordMaxLength:I
+    sput v1, Lcom/android/settings_ex/CryptKeeper;->mPasswordMaxLength:I
 
     return-void
 .end method
@@ -149,98 +149,98 @@
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     .line 151
-    iput-boolean v2, p0, Lcom/android/settings/CryptKeeper;->mCooldown:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/CryptKeeper;->mCooldown:Z
 
     .line 157
-    iput v2, p0, Lcom/android/settings/CryptKeeper;->mNotificationCountdown:I
+    iput v2, p0, Lcom/android/settings_ex/CryptKeeper;->mNotificationCountdown:I
 
     .line 159
-    iput v2, p0, Lcom/android/settings/CryptKeeper;->mReleaseWakeLockCountdown:I
+    iput v2, p0, Lcom/android/settings_ex/CryptKeeper;->mReleaseWakeLockCountdown:I
 
     .line 160
     const v0, 0x7f0e0c23
 
-    iput v0, p0, Lcom/android/settings/CryptKeeper;->mStatusString:I
+    iput v0, p0, Lcom/android/settings_ex/CryptKeeper;->mStatusString:I
 
     .line 161
-    iput v2, p0, Lcom/android/settings/CryptKeeper;->passwordType:I
+    iput v2, p0, Lcom/android/settings_ex/CryptKeeper;->passwordType:I
 
     .line 182
-    iput v2, p0, Lcom/android/settings/CryptKeeper;->mKeypressSoundCountup:I
+    iput v2, p0, Lcom/android/settings_ex/CryptKeeper;->mKeypressSoundCountup:I
 
     .line 195
-    iput-object v1, p0, Lcom/android/settings/CryptKeeper;->mResetButton:Landroid/widget/Button;
+    iput-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mResetButton:Landroid/widget/Button;
 
     .line 196
-    iput-boolean v2, p0, Lcom/android/settings/CryptKeeper;->mBootCompleted:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/CryptKeeper;->mBootCompleted:Z
 
     .line 197
-    iput-object v1, p0, Lcom/android/settings/CryptKeeper;->mEmergencyCall:Landroid/widget/Button;
+    iput-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mEmergencyCall:Landroid/widget/Button;
 
     .line 198
-    iput-object v1, p0, Lcom/android/settings/CryptKeeper;->mButtonLayout:Landroid/widget/LinearLayout;
+    iput-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mButtonLayout:Landroid/widget/LinearLayout;
 
     .line 199
-    iput-object v1, p0, Lcom/android/settings/CryptKeeper;->mFieldLayout:Landroid/widget/LinearLayout;
+    iput-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mFieldLayout:Landroid/widget/LinearLayout;
 
     .line 200
-    iput-object v1, p0, Lcom/android/settings/CryptKeeper;->mProgressBarLayout:Landroid/widget/ProgressBar;
+    iput-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mProgressBarLayout:Landroid/widget/ProgressBar;
 
     .line 201
-    iput-object v1, p0, Lcom/android/settings/CryptKeeper;->mWarningText:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mWarningText:Landroid/widget/TextView;
 
     .line 210
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/CryptKeeper;->mEncrypt:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/CryptKeeper;->mEncrypt:Z
 
     .line 221
-    iput-object v1, p0, Lcom/android/settings/CryptKeeper;->mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+    iput-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
     .line 222
-    iput-object v1, p0, Lcom/android/settings/CryptKeeper;->mKeyProp:Lcom/android/settings/EFSProperties$KeyguardProperties;
+    iput-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mKeyProp:Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
 
     .line 226
-    new-instance v0, Lcom/android/settings/CryptKeeper$1;
+    new-instance v0, Lcom/android/settings_ex/CryptKeeper$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/CryptKeeper$1;-><init>(Lcom/android/settings/CryptKeeper;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/CryptKeeper$1;-><init>(Lcom/android/settings_ex/CryptKeeper;)V
 
-    iput-object v0, p0, Lcom/android/settings/CryptKeeper;->mFakeUnlockAttemptRunnable:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mFakeUnlockAttemptRunnable:Ljava/lang/Runnable;
 
     .line 239
-    new-instance v0, Lcom/android/settings/CryptKeeper$2;
+    new-instance v0, Lcom/android/settings_ex/CryptKeeper$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/CryptKeeper$2;-><init>(Lcom/android/settings/CryptKeeper;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/CryptKeeper$2;-><init>(Lcom/android/settings_ex/CryptKeeper;)V
 
-    iput-object v0, p0, Lcom/android/settings/CryptKeeper;->mClearPatternRunnable:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mClearPatternRunnable:Ljava/lang/Runnable;
 
     .line 483
-    new-instance v0, Lcom/android/settings/CryptKeeper$3;
+    new-instance v0, Lcom/android/settings_ex/CryptKeeper$3;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/CryptKeeper$3;-><init>(Lcom/android/settings/CryptKeeper;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/CryptKeeper$3;-><init>(Lcom/android/settings_ex/CryptKeeper;)V
 
-    iput-object v0, p0, Lcom/android/settings/CryptKeeper;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mHandler:Landroid/os/Handler;
 
     .line 695
-    new-instance v0, Lcom/android/settings/CryptKeeper$4;
+    new-instance v0, Lcom/android/settings_ex/CryptKeeper$4;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/CryptKeeper$4;-><init>(Lcom/android/settings/CryptKeeper;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/CryptKeeper$4;-><init>(Lcom/android/settings_ex/CryptKeeper;)V
 
-    iput-object v0, p0, Lcom/android/settings/CryptKeeper;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     .line 709
-    new-instance v0, Lcom/android/settings/CryptKeeper$5;
+    new-instance v0, Lcom/android/settings_ex/CryptKeeper$5;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/CryptKeeper$5;-><init>(Lcom/android/settings/CryptKeeper;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/CryptKeeper$5;-><init>(Lcom/android/settings_ex/CryptKeeper;)V
 
-    iput-object v0, p0, Lcom/android/settings/CryptKeeper;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
     .line 1141
-    new-instance v0, Lcom/android/settings/CryptKeeper$8;
+    new-instance v0, Lcom/android/settings_ex/CryptKeeper$8;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/CryptKeeper$8;-><init>(Lcom/android/settings/CryptKeeper;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/CryptKeeper$8;-><init>(Lcom/android/settings_ex/CryptKeeper;)V
 
-    iput-object v0, p0, Lcom/android/settings/CryptKeeper;->mChooseNewLockPatternListener:Lcom/android/internal/widget/LockPatternView$OnPatternListener;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mChooseNewLockPatternListener:Lcom/android/internal/widget/LockPatternView$OnPatternListener;
 
     return-void
 .end method
@@ -250,7 +250,7 @@
 
     .prologue
     .line 111
-    sget-object v0, Lcom/android/settings/CryptKeeper;->mfailedAttemptCounts:Ljava/lang/Integer;
+    sget-object v0, Lcom/android/settings_ex/CryptKeeper;->mfailedAttemptCounts:Ljava/lang/Integer;
 
     return-object v0
 .end method
@@ -261,259 +261,259 @@
 
     .prologue
     .line 111
-    sput-object p0, Lcom/android/settings/CryptKeeper;->mfailedAttemptCounts:Ljava/lang/Integer;
+    sput-object p0, Lcom/android/settings_ex/CryptKeeper;->mfailedAttemptCounts:Ljava/lang/Integer;
 
     return-object p0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/CryptKeeper;Ljava/lang/Integer;)V
+.method static synthetic access$100(Lcom/android/settings_ex/CryptKeeper;Ljava/lang/Integer;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
     .param p1, "x1"    # Ljava/lang/Integer;
 
     .prologue
     .line 111
-    invoke-direct {p0, p1}, Lcom/android/settings/CryptKeeper;->handleBadAttempt(Ljava/lang/Integer;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/CryptKeeper;->handleBadAttempt(Ljava/lang/Integer;)V
 
     return-void
 .end method
 
-.method static synthetic access$1002(Lcom/android/settings/CryptKeeper;I)I
+.method static synthetic access$1002(Lcom/android/settings_ex/CryptKeeper;I)I
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
     .param p1, "x1"    # I
 
     .prologue
     .line 111
-    iput p1, p0, Lcom/android/settings/CryptKeeper;->mEncryptionGoneBad:I
+    iput p1, p0, Lcom/android/settings_ex/CryptKeeper;->mEncryptionGoneBad:I
 
     return p1
 .end method
 
-.method static synthetic access$1102(Lcom/android/settings/CryptKeeper;Z)Z
+.method static synthetic access$1102(Lcom/android/settings_ex/CryptKeeper;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
     .param p1, "x1"    # Z
 
     .prologue
     .line 111
-    iput-boolean p1, p0, Lcom/android/settings/CryptKeeper;->mValidationComplete:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/CryptKeeper;->mValidationComplete:Z
 
     return p1
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/CryptKeeper;)V
+.method static synthetic access$1200(Lcom/android/settings_ex/CryptKeeper;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
 
     .prologue
     .line 111
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->setupUi()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->setupUi()V
 
     return-void
 .end method
 
-.method static synthetic access$1300(Lcom/android/settings/CryptKeeper;)V
+.method static synthetic access$1300(Lcom/android/settings_ex/CryptKeeper;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
 
     .prologue
     .line 111
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->updateProgress()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->updateProgress()V
 
     return-void
 .end method
 
-.method static synthetic access$1400(Lcom/android/settings/CryptKeeper;)V
+.method static synthetic access$1400(Lcom/android/settings_ex/CryptKeeper;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
 
     .prologue
     .line 111
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->notifyUser()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->notifyUser()V
 
     return-void
 .end method
 
-.method static synthetic access$1502(Lcom/android/settings/CryptKeeper;Z)Z
+.method static synthetic access$1502(Lcom/android/settings_ex/CryptKeeper;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
     .param p1, "x1"    # Z
 
     .prologue
     .line 111
-    iput-boolean p1, p0, Lcom/android/settings/CryptKeeper;->mBootCompleted:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/CryptKeeper;->mBootCompleted:Z
 
     return p1
 .end method
 
-.method static synthetic access$1600(Lcom/android/settings/CryptKeeper;)Landroid/widget/Button;
+.method static synthetic access$1600(Lcom/android/settings_ex/CryptKeeper;)Landroid/widget/Button;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
 
     .prologue
     .line 111
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mResetButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mResetButton:Landroid/widget/Button;
 
     return-object v0
 .end method
 
-.method static synthetic access$1700(Lcom/android/settings/CryptKeeper;)I
+.method static synthetic access$1700(Lcom/android/settings_ex/CryptKeeper;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
 
     .prologue
     .line 111
-    iget v0, p0, Lcom/android/settings/CryptKeeper;->passwordType:I
+    iget v0, p0, Lcom/android/settings_ex/CryptKeeper;->passwordType:I
 
     return v0
 .end method
 
-.method static synthetic access$1702(Lcom/android/settings/CryptKeeper;I)I
+.method static synthetic access$1702(Lcom/android/settings_ex/CryptKeeper;I)I
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
     .param p1, "x1"    # I
 
     .prologue
     .line 111
-    iput p1, p0, Lcom/android/settings/CryptKeeper;->passwordType:I
+    iput p1, p0, Lcom/android/settings_ex/CryptKeeper;->passwordType:I
 
     return p1
 .end method
 
-.method static synthetic access$1800(Lcom/android/settings/CryptKeeper;)I
+.method static synthetic access$1800(Lcom/android/settings_ex/CryptKeeper;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
 
     .prologue
     .line 111
-    iget v0, p0, Lcom/android/settings/CryptKeeper;->mStatusString:I
+    iget v0, p0, Lcom/android/settings_ex/CryptKeeper;->mStatusString:I
 
     return v0
 .end method
 
-.method static synthetic access$1802(Lcom/android/settings/CryptKeeper;I)I
+.method static synthetic access$1802(Lcom/android/settings_ex/CryptKeeper;I)I
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
     .param p1, "x1"    # I
 
     .prologue
     .line 111
-    iput p1, p0, Lcom/android/settings/CryptKeeper;->mStatusString:I
+    iput p1, p0, Lcom/android/settings_ex/CryptKeeper;->mStatusString:I
 
     return p1
 .end method
 
-.method static synthetic access$1900(Lcom/android/settings/CryptKeeper;I)I
+.method static synthetic access$1900(Lcom/android/settings_ex/CryptKeeper;I)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
     .param p1, "x1"    # I
 
     .prologue
     .line 111
-    invoke-direct {p0, p1}, Lcom/android/settings/CryptKeeper;->dipToPixel(I)I
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/CryptKeeper;->dipToPixel(I)I
 
     move-result v0
 
     return v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/CryptKeeper;)Lcom/android/internal/widget/LockPatternView;
+.method static synthetic access$200(Lcom/android/settings_ex/CryptKeeper;)Lcom/android/internal/widget/LockPatternView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
 
     .prologue
     .line 111
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     return-object v0
 .end method
 
-.method static synthetic access$2000(Lcom/android/settings/CryptKeeper;)V
+.method static synthetic access$2000(Lcom/android/settings_ex/CryptKeeper;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
 
     .prologue
     .line 111
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->passwordEntryInit()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->passwordEntryInit()V
 
     return-void
 .end method
 
-.method static synthetic access$2100(Lcom/android/settings/CryptKeeper;)Z
+.method static synthetic access$2100(Lcom/android/settings_ex/CryptKeeper;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
 
     .prologue
     .line 111
-    iget-boolean v0, p0, Lcom/android/settings/CryptKeeper;->mCooldown:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/CryptKeeper;->mCooldown:Z
 
     return v0
 .end method
 
-.method static synthetic access$2200(Lcom/android/settings/CryptKeeper;)V
+.method static synthetic access$2200(Lcom/android/settings_ex/CryptKeeper;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
 
     .prologue
     .line 111
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->cooldown()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->cooldown()V
 
     return-void
 .end method
 
-.method static synthetic access$2400(Lcom/android/settings/CryptKeeper;Landroid/view/View;)V
+.method static synthetic access$2400(Lcom/android/settings_ex/CryptKeeper;Landroid/view/View;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
     .param p1, "x1"    # Landroid/view/View;
 
     .prologue
     .line 111
-    invoke-direct {p0, p1}, Lcom/android/settings/CryptKeeper;->fakeUnlockAttempt(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/CryptKeeper;->fakeUnlockAttempt(Landroid/view/View;)V
 
     return-void
 .end method
 
-.method static synthetic access$2500(Lcom/android/settings/CryptKeeper;)Landroid/widget/EditText;
+.method static synthetic access$2500(Lcom/android/settings_ex/CryptKeeper;)Landroid/widget/EditText;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
 
     .prologue
     .line 111
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
 
     return-object v0
 .end method
 
-.method static synthetic access$2600(Lcom/android/settings/CryptKeeper;)V
+.method static synthetic access$2600(Lcom/android/settings_ex/CryptKeeper;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
 
     .prologue
     .line 111
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->takeEmergencyCallAction()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->takeEmergencyCallAction()V
 
     return-void
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/CryptKeeper;)V
+.method static synthetic access$300(Lcom/android/settings_ex/CryptKeeper;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
 
     .prologue
     .line 111
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->beginAttempt()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->beginAttempt()V
 
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/CryptKeeper;)Landroid/os/storage/IMountService;
+.method static synthetic access$400(Lcom/android/settings_ex/CryptKeeper;)Landroid/os/storage/IMountService;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
 
     .prologue
     .line 111
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->getMountService()Landroid/os/storage/IMountService;
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->getMountService()Landroid/os/storage/IMountService;
 
     move-result-object v0
 
@@ -525,7 +525,7 @@
 
     .prologue
     .line 111
-    sget-object v0, Lcom/android/settings/CryptKeeper;->mSavedPassword:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/CryptKeeper;->mSavedPassword:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -536,18 +536,18 @@
 
     .prologue
     .line 111
-    sput-object p0, Lcom/android/settings/CryptKeeper;->mSavedPassword:Ljava/lang/String;
+    sput-object p0, Lcom/android/settings_ex/CryptKeeper;->mSavedPassword:Ljava/lang/String;
 
     return-object p0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/CryptKeeper;)Ljava/lang/Runnable;
+.method static synthetic access$600(Lcom/android/settings_ex/CryptKeeper;)Ljava/lang/Runnable;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
 
     .prologue
     .line 111
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mClearPatternRunnable:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mClearPatternRunnable:Ljava/lang/Runnable;
 
     return-object v0
 .end method
@@ -557,18 +557,18 @@
 
     .prologue
     .line 111
-    sget v0, Lcom/android/settings/CryptKeeper;->mMaxFailedAttempts:I
+    sget v0, Lcom/android/settings_ex/CryptKeeper;->mMaxFailedAttempts:I
 
     return v0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/CryptKeeper;)V
+.method static synthetic access$800(Lcom/android/settings_ex/CryptKeeper;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/CryptKeeper;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptKeeper;
 
     .prologue
     .line 111
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->wipeStorage()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->wipeStorage()V
 
     return-void
 .end method
@@ -580,7 +580,7 @@
     .line 333
     const v1, 0x7f0d0147
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -593,12 +593,12 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     .line 336
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mEmergencyCall:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mEmergencyCall:Landroid/widget/Button;
 
     if-eqz v1, :cond_0
 
     .line 337
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mEmergencyCall:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mEmergencyCall:Landroid/widget/Button;
 
     const/4 v2, 0x0
 
@@ -606,12 +606,12 @@
 
     .line 339
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mWarningText:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mWarningText:Landroid/widget/TextView;
 
     if-eqz v1, :cond_1
 
     .line 340
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mWarningText:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mWarningText:Landroid/widget/TextView;
 
     const/16 v2, 0x8
 
@@ -629,23 +629,23 @@
     const/4 v2, 0x0
 
     .line 1109
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
 
     if-eqz v1, :cond_0
 
     .line 1110
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->setEnabled(Z)V
 
     .line 1112
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     if-eqz v1, :cond_1
 
     .line 1113
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     invoke-virtual {v1, v2}, Lcom/android/internal/widget/LockPatternView;->setEnabled(Z)V
 
@@ -653,7 +653,7 @@
     :cond_1
     const v1, 0x7f0d0147
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -661,13 +661,13 @@
 
     .line 1117
     .local v0, "status":Landroid/widget/TextView;
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportPatternBackupPin()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportPatternBackupPin()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    iget v1, p0, Lcom/android/settings/CryptKeeper;->passwordType:I
+    iget v1, p0, Lcom/android/settings_ex/CryptKeeper;->passwordType:I
 
     const/4 v2, 0x2
 
@@ -700,20 +700,20 @@
     .line 1484
     const/16 v0, 0x14
 
-    iput v0, p0, Lcom/android/settings/CryptKeeper;->mNotificationCountdown:I
+    iput v0, p0, Lcom/android/settings_ex/CryptKeeper;->mNotificationCountdown:I
 
     .line 1488
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/android/settings/CryptKeeper;->mKeypressSoundCountup:I
+    iput v0, p0, Lcom/android/settings_ex/CryptKeeper;->mKeypressSoundCountup:I
 
     .line 1489
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 1490
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v2, 0x1388
 
@@ -729,7 +729,7 @@
 
     .prologue
     .line 1531
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeper;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -768,7 +768,7 @@
     .local v1, "pm":Landroid/content/pm/PackageManager;
     new-instance v0, Landroid/content/ComponentName;
 
-    const-class v2, Lcom/android/settings/CryptKeeper;
+    const-class v2, Lcom/android/settings_ex/CryptKeeper;
 
     invoke-direct {v0, p0, v2}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -821,7 +821,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 912
-    iget-object v2, p0, Lcom/android/settings/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iget-object v2, p0, Lcom/android/settings_ex/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-nez v2, :cond_0
 
@@ -835,7 +835,7 @@
     .line 914
     const-string v2, "power"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -851,10 +851,10 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iput-object v2, p0, Lcom/android/settings_ex/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     .line 916
-    iget-object v2, p0, Lcom/android/settings/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iget-object v2, p0, Lcom/android/settings_ex/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
@@ -863,35 +863,35 @@
     :cond_0
     const v2, 0x7f0d0153
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/ProgressBar;
 
-    iput-object v2, p0, Lcom/android/settings/CryptKeeper;->mProgressBarLayout:Landroid/widget/ProgressBar;
+    iput-object v2, p0, Lcom/android/settings_ex/CryptKeeper;->mProgressBarLayout:Landroid/widget/ProgressBar;
 
     .line 921
-    iget-object v2, p0, Lcom/android/settings/CryptKeeper;->mProgressBarLayout:Landroid/widget/ProgressBar;
+    iget-object v2, p0, Lcom/android/settings_ex/CryptKeeper;->mProgressBarLayout:Landroid/widget/ProgressBar;
 
     if-eqz v2, :cond_1
 
     .line 922
-    iget-object v2, p0, Lcom/android/settings/CryptKeeper;->mProgressBarLayout:Landroid/widget/ProgressBar;
+    iget-object v2, p0, Lcom/android/settings_ex/CryptKeeper;->mProgressBarLayout:Landroid/widget/ProgressBar;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Landroid/widget/ProgressBar;->setIndeterminate(Z)V
 
     .line 923
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
     .line 924
-    iget-object v2, p0, Lcom/android/settings/CryptKeeper;->mProgressBarLayout:Landroid/widget/ProgressBar;
+    iget-object v2, p0, Lcom/android/settings_ex/CryptKeeper;->mProgressBarLayout:Landroid/widget/ProgressBar;
 
     invoke-virtual {v2}, Landroid/widget/ProgressBar;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -904,21 +904,21 @@
     if-eqz v0, :cond_1
 
     .line 926
-    invoke-direct {p0, v4}, Lcom/android/settings/CryptKeeper;->dipToPixel(I)I
+    invoke-direct {p0, v4}, Lcom/android/settings_ex/CryptKeeper;->dipToPixel(I)I
 
     move-result v2
 
     invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout$LayoutParams;->setMarginStart(I)V
 
     .line 927
-    invoke-direct {p0, v4}, Lcom/android/settings/CryptKeeper;->dipToPixel(I)I
+    invoke-direct {p0, v4}, Lcom/android/settings_ex/CryptKeeper;->dipToPixel(I)I
 
     move-result v2
 
     invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout$LayoutParams;->setMarginEnd(I)V
 
     .line 928
-    iget-object v2, p0, Lcom/android/settings/CryptKeeper;->mProgressBarLayout:Landroid/widget/ProgressBar;
+    iget-object v2, p0, Lcom/android/settings_ex/CryptKeeper;->mProgressBarLayout:Landroid/widget/ProgressBar;
 
     invoke-virtual {v2, v0}, Landroid/widget/ProgressBar;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -927,10 +927,10 @@
     :cond_1
     const/4 v2, 0x0
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/CryptKeeper;->setBackFunctionality(Z)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/CryptKeeper;->setBackFunctionality(Z)V
 
     .line 939
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->updateProgress()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->updateProgress()V
 
     .line 940
     return-void
@@ -942,10 +942,10 @@
 
     .prologue
     .line 1137
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->beginAttempt()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->beginAttempt()V
 
     .line 1138
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mFakeUnlockAttemptRunnable:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mFakeUnlockAttemptRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0x3e8
 
@@ -992,7 +992,7 @@
     .line 1477
     const-string v0, "telecom"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1008,7 +1008,7 @@
     .line 1473
     const-string v0, "phone"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1027,28 +1027,28 @@
     const/4 v12, 0x1
 
     .line 347
-    iget-object v7, p0, Lcom/android/settings/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
+    iget-object v7, p0, Lcom/android/settings_ex/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     if-eqz v7, :cond_0
 
     .line 348
-    iget-object v7, p0, Lcom/android/settings/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
+    iget-object v7, p0, Lcom/android/settings_ex/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     sget-object v8, Lcom/android/internal/widget/LockPatternView$DisplayMode;->Wrong:Lcom/android/internal/widget/LockPatternView$DisplayMode;
 
     invoke-virtual {v7, v8}, Lcom/android/internal/widget/LockPatternView;->setDisplayMode(Lcom/android/internal/widget/LockPatternView$DisplayMode;)V
 
     .line 349
-    iget-object v7, p0, Lcom/android/settings/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
+    iget-object v7, p0, Lcom/android/settings_ex/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
-    iget-object v8, p0, Lcom/android/settings/CryptKeeper;->mClearPatternRunnable:Ljava/lang/Runnable;
+    iget-object v8, p0, Lcom/android/settings_ex/CryptKeeper;->mClearPatternRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v7, v8}, Lcom/android/internal/widget/LockPatternView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     .line 350
-    iget-object v7, p0, Lcom/android/settings/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
+    iget-object v7, p0, Lcom/android/settings_ex/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
-    iget-object v8, p0, Lcom/android/settings/CryptKeeper;->mClearPatternRunnable:Ljava/lang/Runnable;
+    iget-object v8, p0, Lcom/android/settings_ex/CryptKeeper;->mClearPatternRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v10, 0x5dc
 
@@ -1056,12 +1056,12 @@
 
     .line 354
     :cond_0
-    iget-object v7, p0, Lcom/android/settings/CryptKeeper;->mEmergencyCall:Landroid/widget/Button;
+    iget-object v7, p0, Lcom/android/settings_ex/CryptKeeper;->mEmergencyCall:Landroid/widget/Button;
 
     if-eqz v7, :cond_1
 
     .line 355
-    iget-object v7, p0, Lcom/android/settings/CryptKeeper;->mEmergencyCall:Landroid/widget/Button;
+    iget-object v7, p0, Lcom/android/settings_ex/CryptKeeper;->mEmergencyCall:Landroid/widget/Button;
 
     invoke-virtual {v7, v12}, Landroid/widget/Button;->setEnabled(Z)V
 
@@ -1082,10 +1082,10 @@
     if-eqz v7, :cond_3
 
     .line 360
-    iput-boolean v12, p0, Lcom/android/settings/CryptKeeper;->mCooldown:Z
+    iput-boolean v12, p0, Lcom/android/settings_ex/CryptKeeper;->mCooldown:Z
 
     .line 363
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->cooldown()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->cooldown()V
 
     .line 414
     :cond_2
@@ -1096,7 +1096,7 @@
     :cond_3
     const v7, 0x7f0d0147
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
@@ -1106,16 +1106,16 @@
     .local v5, "status":Landroid/widget/TextView;
     const v7, 0x7f0d014e
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v7
 
     check-cast v7, Landroid/widget/TextView;
 
-    iput-object v7, p0, Lcom/android/settings/CryptKeeper;->mWarningText:Landroid/widget/TextView;
+    iput-object v7, p0, Lcom/android/settings_ex/CryptKeeper;->mWarningText:Landroid/widget/TextView;
 
     .line 370
-    sget v7, Lcom/android/settings/CryptKeeper;->mMaxFailedAttempts:I
+    sget v7, Lcom/android/settings_ex/CryptKeeper;->mMaxFailedAttempts:I
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
@@ -1130,7 +1130,7 @@
     if-ge v2, v7, :cond_5
 
     .line 373
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeper;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -1159,14 +1159,14 @@
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 377
-    iget-object v7, p0, Lcom/android/settings/CryptKeeper;->mWarningText:Landroid/widget/TextView;
+    iget-object v7, p0, Lcom/android/settings_ex/CryptKeeper;->mWarningText:Landroid/widget/TextView;
 
     const v8, 0x7f0e024d
 
     invoke-virtual {v7, v8}, Landroid/widget/TextView;->setText(I)V
 
     .line 378
-    iget-object v7, p0, Lcom/android/settings/CryptKeeper;->mWarningText:Landroid/widget/TextView;
+    iget-object v7, p0, Lcom/android/settings_ex/CryptKeeper;->mWarningText:Landroid/widget/TextView;
 
     invoke-virtual {v7, v13}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -1174,37 +1174,37 @@
     .end local v3    # "res":Landroid/content/res/Resources;
     .end local v6    # "warning":Ljava/lang/String;
     :goto_1
-    iget-object v7, p0, Lcom/android/settings/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
+    iget-object v7, p0, Lcom/android/settings_ex/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     if-eqz v7, :cond_4
 
     .line 398
-    iget-object v7, p0, Lcom/android/settings/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
+    iget-object v7, p0, Lcom/android/settings_ex/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     sget-object v8, Lcom/android/internal/widget/LockPatternView$DisplayMode;->Wrong:Lcom/android/internal/widget/LockPatternView$DisplayMode;
 
     invoke-virtual {v7, v8}, Lcom/android/internal/widget/LockPatternView;->setDisplayMode(Lcom/android/internal/widget/LockPatternView$DisplayMode;)V
 
     .line 399
-    iget-object v7, p0, Lcom/android/settings/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
+    iget-object v7, p0, Lcom/android/settings_ex/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     invoke-virtual {v7, v12}, Lcom/android/internal/widget/LockPatternView;->setEnabled(Z)V
 
     .line 403
     :cond_4
-    iget-object v7, p0, Lcom/android/settings/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v7, p0, Lcom/android/settings_ex/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
 
     if-eqz v7, :cond_2
 
     .line 404
-    iget-object v7, p0, Lcom/android/settings/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v7, p0, Lcom/android/settings_ex/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v7, v12}, Landroid/widget/EditText;->setEnabled(Z)V
 
     .line 405
     const-string v7, "input_method"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1212,12 +1212,12 @@
 
     .line 407
     .local v1, "imm":Landroid/view/inputmethod/InputMethodManager;
-    iget-object v7, p0, Lcom/android/settings/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v7, p0, Lcom/android/settings_ex/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v1, v7, v13}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
 
     .line 409
-    invoke-virtual {p0, v13}, Lcom/android/settings/CryptKeeper;->setBackFunctionality(Z)V
+    invoke-virtual {p0, v13}, Lcom/android/settings_ex/CryptKeeper;->setBackFunctionality(Z)V
 
     goto :goto_0
 
@@ -1225,7 +1225,7 @@
     .end local v1    # "imm":Landroid/view/inputmethod/InputMethodManager;
     :cond_5
     :try_start_0
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->getMountService()Landroid/os/storage/IMountService;
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->getMountService()Landroid/os/storage/IMountService;
 
     move-result-object v4
 
@@ -1235,14 +1235,14 @@
 
     move-result v7
 
-    iput v7, p0, Lcom/android/settings/CryptKeeper;->passwordType:I
+    iput v7, p0, Lcom/android/settings_ex/CryptKeeper;->passwordType:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 388
     .end local v4    # "service":Landroid/os/storage/IMountService;
     :goto_2
-    iget v7, p0, Lcom/android/settings/CryptKeeper;->passwordType:I
+    iget v7, p0, Lcom/android/settings_ex/CryptKeeper;->passwordType:I
 
     const/4 v8, 0x3
 
@@ -1288,7 +1288,7 @@
     .line 390
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_6
-    iget v7, p0, Lcom/android/settings/CryptKeeper;->passwordType:I
+    iget v7, p0, Lcom/android/settings_ex/CryptKeeper;->passwordType:I
 
     const/4 v8, 0x2
 
@@ -1476,7 +1476,7 @@
 
     .prologue
     .line 515
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeper;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeper;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -1495,7 +1495,7 @@
 
     .prologue
     .line 520
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeper;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeper;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -1517,7 +1517,7 @@
 
     .prologue
     .line 1451
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeper;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -1550,10 +1550,10 @@
     .line 1468
     const/4 v1, 0x1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/CryptKeeper;->setBackFunctionality(Z)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/CryptKeeper;->setBackFunctionality(Z)V
 
     .line 1469
-    invoke-virtual {p0, v0}, Lcom/android/settings/CryptKeeper;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/CryptKeeper;->startActivity(Landroid/content/Intent;)V
 
     .line 1470
     return-void
@@ -1566,7 +1566,7 @@
     const/4 v4, 0x2
 
     .line 528
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mAudioManager:Landroid/media/AudioManager;
 
     if-nez v1, :cond_0
 
@@ -1580,47 +1580,47 @@
     .line 530
     const-string v1, "audio"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/media/AudioManager;
 
-    iput-object v1, p0, Lcom/android/settings/CryptKeeper;->mAudioManager:Landroid/media/AudioManager;
+    iput-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mAudioManager:Landroid/media/AudioManager;
 
     .line 534
     :cond_0
-    iget v1, p0, Lcom/android/settings/CryptKeeper;->mNotificationCountdown:I
+    iget v1, p0, Lcom/android/settings_ex/CryptKeeper;->mNotificationCountdown:I
 
     if-lez v1, :cond_3
 
     .line 535
-    iget v1, p0, Lcom/android/settings/CryptKeeper;->mNotificationCountdown:I
+    iget v1, p0, Lcom/android/settings_ex/CryptKeeper;->mNotificationCountdown:I
 
     add-int/lit8 v1, v1, -0x1
 
-    iput v1, p0, Lcom/android/settings/CryptKeeper;->mNotificationCountdown:I
+    iput v1, p0, Lcom/android/settings_ex/CryptKeeper;->mNotificationCountdown:I
 
     .line 562
     :cond_1
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v4}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 563
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v2, 0x1388
 
     invoke-virtual {v1, v4, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     .line 565
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
 
@@ -1629,16 +1629,16 @@
     if-eqz v1, :cond_2
 
     .line 567
-    iget v1, p0, Lcom/android/settings/CryptKeeper;->mReleaseWakeLockCountdown:I
+    iget v1, p0, Lcom/android/settings_ex/CryptKeeper;->mReleaseWakeLockCountdown:I
 
     if-lez v1, :cond_4
 
     .line 568
-    iget v1, p0, Lcom/android/settings/CryptKeeper;->mReleaseWakeLockCountdown:I
+    iget v1, p0, Lcom/android/settings_ex/CryptKeeper;->mReleaseWakeLockCountdown:I
 
     add-int/lit8 v1, v1, -0x1
 
-    iput v1, p0, Lcom/android/settings/CryptKeeper;->mReleaseWakeLockCountdown:I
+    iput v1, p0, Lcom/android/settings_ex/CryptKeeper;->mReleaseWakeLockCountdown:I
 
     .line 573
     :cond_2
@@ -1647,13 +1647,13 @@
 
     .line 536
     :cond_3
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mAudioManager:Landroid/media/AudioManager;
 
     if-eqz v1, :cond_1
 
     .line 543
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mAudioManager:Landroid/media/AudioManager;
 
     const/4 v2, 0x5
 
@@ -1664,7 +1664,7 @@
     .line 546
     const-string v1, "VZW"
 
-    sget-object v2, Lcom/android/settings/CryptKeeper;->mSalesCode:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/CryptKeeper;->mSalesCode:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1673,14 +1673,14 @@
     if-eqz v1, :cond_1
 
     .line 547
-    iget v1, p0, Lcom/android/settings/CryptKeeper;->mKeypressSoundCountup:I
+    iget v1, p0, Lcom/android/settings_ex/CryptKeeper;->mKeypressSoundCountup:I
 
     add-int/lit8 v1, v1, 0x1
 
-    iput v1, p0, Lcom/android/settings/CryptKeeper;->mKeypressSoundCountup:I
+    iput v1, p0, Lcom/android/settings_ex/CryptKeeper;->mKeypressSoundCountup:I
 
     .line 548
-    iget v1, p0, Lcom/android/settings/CryptKeeper;->mKeypressSoundCountup:I
+    iget v1, p0, Lcom/android/settings_ex/CryptKeeper;->mKeypressSoundCountup:I
 
     const/16 v2, 0x24
 
@@ -1689,22 +1689,22 @@
     .line 549
     const/4 v1, 0x0
 
-    iput v1, p0, Lcom/android/settings/CryptKeeper;->mKeypressSoundCountup:I
+    iput v1, p0, Lcom/android/settings_ex/CryptKeeper;->mKeypressSoundCountup:I
 
     .line 550
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v1, :cond_1
 
     .line 551
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->release()V
 
     .line 552
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcom/android/settings/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iput-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1743,7 +1743,7 @@
     .line 570
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_4
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->release()V
 
@@ -1765,47 +1765,47 @@
     .line 1171
     const v6, 0x7f0d0151
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v6
 
     check-cast v6, Landroid/widget/EditText;
 
-    iput-object v6, p0, Lcom/android/settings/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
+    iput-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
 
     .line 1172
     const v6, 0x7f0d0150
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v6
 
     check-cast v6, Landroid/widget/LinearLayout;
 
-    iput-object v6, p0, Lcom/android/settings/CryptKeeper;->mFieldLayout:Landroid/widget/LinearLayout;
+    iput-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mFieldLayout:Landroid/widget/LinearLayout;
 
     .line 1173
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
 
     if-eqz v6, :cond_2
 
     .line 1174
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v6, p0}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
     .line 1175
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v6}, Landroid/widget/EditText;->requestFocus()Z
 
     .line 1177
-    sget v6, Lcom/android/settings/CryptKeeper;->mPasswordMaxLength:I
+    sget v6, Lcom/android/settings_ex/CryptKeeper;->mPasswordMaxLength:I
 
     if-nez v6, :cond_0
 
     .line 1178
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mDPM:Landroid/app/admin/DevicePolicyManager;
 
     const/high16 v7, 0x60000
 
@@ -1813,17 +1813,17 @@
 
     move-result v6
 
-    sput v6, Lcom/android/settings/CryptKeeper;->mPasswordMaxLength:I
+    sput v6, Lcom/android/settings_ex/CryptKeeper;->mPasswordMaxLength:I
 
     .line 1179
     :cond_0
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
 
     new-array v7, v11, [Landroid/text/InputFilter;
 
     new-instance v8, Landroid/text/InputFilter$LengthFilter;
 
-    sget v9, Lcom/android/settings/CryptKeeper;->mPasswordMaxLength:I
+    sget v9, Lcom/android/settings_ex/CryptKeeper;->mPasswordMaxLength:I
 
     invoke-direct {v8, v9}, Landroid/text/InputFilter$LengthFilter;-><init>(I)V
 
@@ -1832,25 +1832,25 @@
     invoke-virtual {v6, v7}, Landroid/widget/EditText;->setFilters([Landroid/text/InputFilter;)V
 
     .line 1181
-    new-instance v5, Lcom/android/settings/CryptKeeper$9;
+    new-instance v5, Lcom/android/settings_ex/CryptKeeper$9;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/CryptKeeper$9;-><init>(Lcom/android/settings/CryptKeeper;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/CryptKeeper$9;-><init>(Lcom/android/settings_ex/CryptKeeper;)V
 
     .line 1200
     .local v5, "watcher":Landroid/text/TextWatcher;
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
     .line 1201
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mFieldLayout:Landroid/widget/LinearLayout;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mFieldLayout:Landroid/widget/LinearLayout;
 
     if-eqz v6, :cond_1
 
     .line 1202
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mFieldLayout:Landroid/widget/LinearLayout;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mFieldLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v6}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -1863,43 +1863,43 @@
     if-eqz v3, :cond_1
 
     .line 1204
-    invoke-direct {p0, v13}, Lcom/android/settings/CryptKeeper;->dipToPixel(I)I
+    invoke-direct {p0, v13}, Lcom/android/settings_ex/CryptKeeper;->dipToPixel(I)I
 
     move-result v6
 
     invoke-virtual {v3, v6}, Landroid/widget/LinearLayout$LayoutParams;->setMarginStart(I)V
 
     .line 1205
-    invoke-direct {p0, v13}, Lcom/android/settings/CryptKeeper;->dipToPixel(I)I
+    invoke-direct {p0, v13}, Lcom/android/settings_ex/CryptKeeper;->dipToPixel(I)I
 
     move-result v6
 
     invoke-virtual {v3, v6}, Landroid/widget/LinearLayout$LayoutParams;->setMarginEnd(I)V
 
     .line 1206
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mFieldLayout:Landroid/widget/LinearLayout;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mFieldLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v6, v3}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 1210
     .end local v3    # "lFieldLayoutParams":Landroid/widget/LinearLayout$LayoutParams;
     :cond_1
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v6, v5}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 1213
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v6, p0}, Landroid/widget/EditText;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
     .line 1214
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v6, p0}, Landroid/widget/EditText;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     .line 1215
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v6, p0}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
@@ -1908,29 +1908,29 @@
     :cond_2
     const v6, 0x7f0d0111
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v6
 
     check-cast v6, Lcom/android/internal/widget/LockPatternView;
 
-    iput-object v6, p0, Lcom/android/settings/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
+    iput-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     .line 1220
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     if-eqz v6, :cond_3
 
     .line 1221
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
-    iget-object v7, p0, Lcom/android/settings/CryptKeeper;->mChooseNewLockPatternListener:Lcom/android/internal/widget/LockPatternView$OnPatternListener;
+    iget-object v7, p0, Lcom/android/settings_ex/CryptKeeper;->mChooseNewLockPatternListener:Lcom/android/internal/widget/LockPatternView$OnPatternListener;
 
     invoke-virtual {v6, v7}, Lcom/android/internal/widget/LockPatternView;->setOnPatternListener(Lcom/android/internal/widget/LockPatternView$OnPatternListener;)V
 
     .line 1225
     :cond_3
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->getTelephonyManager()Landroid/telephony/TelephonyManager;
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->getTelephonyManager()Landroid/telephony/TelephonyManager;
 
     move-result-object v6
 
@@ -1943,7 +1943,7 @@
     .line 1226
     const v6, 0x7f0d0146
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1968,7 +1968,7 @@
     :cond_4
     const v6, 0x7f0d0164
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -1976,7 +1976,7 @@
     .local v1, "imeSwitcher":Landroid/view/View;
     const-string v6, "input_method"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -1986,7 +1986,7 @@
     .local v2, "imm":Landroid/view/inputmethod/InputMethodManager;
     if-eqz v1, :cond_5
 
-    invoke-direct {p0, v2, v10}, Lcom/android/settings/CryptKeeper;->hasMultipleEnabledIMEsOrSubtypes(Landroid/view/inputmethod/InputMethodManager;Z)Z
+    invoke-direct {p0, v2, v10}, Lcom/android/settings_ex/CryptKeeper;->hasMultipleEnabledIMEsOrSubtypes(Landroid/view/inputmethod/InputMethodManager;Z)Z
 
     move-result v6
 
@@ -1996,15 +1996,15 @@
     invoke-virtual {v1, v10}, Landroid/view/View;->setVisibility(I)V
 
     .line 1238
-    new-instance v6, Lcom/android/settings/CryptKeeper$10;
+    new-instance v6, Lcom/android/settings_ex/CryptKeeper$10;
 
-    invoke-direct {v6, p0, v2}, Lcom/android/settings/CryptKeeper$10;-><init>(Lcom/android/settings/CryptKeeper;Landroid/view/inputmethod/InputMethodManager;)V
+    invoke-direct {v6, p0, v2}, Lcom/android/settings_ex/CryptKeeper$10;-><init>(Lcom/android/settings_ex/CryptKeeper;Landroid/view/inputmethod/InputMethodManager;)V
 
     invoke-virtual {v1, v6}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 1249
     :cond_5
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-nez v6, :cond_6
 
@@ -2018,7 +2018,7 @@
     .line 1251
     const-string v6, "power"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -2037,35 +2037,35 @@
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iput-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     .line 1254
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v6}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
     .line 1257
     const/16 v6, 0x60
 
-    iput v6, p0, Lcom/android/settings/CryptKeeper;->mReleaseWakeLockCountdown:I
+    iput v6, p0, Lcom/android/settings_ex/CryptKeeper;->mReleaseWakeLockCountdown:I
 
     .line 1263
     .end local v4    # "pm":Landroid/os/PowerManager;
     :cond_6
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     if-nez v6, :cond_7
 
-    iget-boolean v6, p0, Lcom/android/settings/CryptKeeper;->mCooldown:Z
+    iget-boolean v6, p0, Lcom/android/settings_ex/CryptKeeper;->mCooldown:Z
 
     if-nez v6, :cond_7
 
     .line 1264
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mHandler:Landroid/os/Handler;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mHandler:Landroid/os/Handler;
 
-    new-instance v7, Lcom/android/settings/CryptKeeper$11;
+    new-instance v7, Lcom/android/settings_ex/CryptKeeper$11;
 
-    invoke-direct {v7, p0, v2}, Lcom/android/settings/CryptKeeper$11;-><init>(Lcom/android/settings/CryptKeeper;Landroid/view/inputmethod/InputMethodManager;)V
+    invoke-direct {v7, p0, v2}, Lcom/android/settings_ex/CryptKeeper$11;-><init>(Lcom/android/settings_ex/CryptKeeper;Landroid/view/inputmethod/InputMethodManager;)V
 
     const-wide/16 v8, 0x0
 
@@ -2073,10 +2073,10 @@
 
     .line 1272
     :cond_7
-    invoke-virtual {p0, v10}, Lcom/android/settings/CryptKeeper;->setBackFunctionality(Z)V
+    invoke-virtual {p0, v10}, Lcom/android/settings_ex/CryptKeeper;->setBackFunctionality(Z)V
 
     .line 1273
-    sget-object v6, Lcom/android/settings/CryptKeeper;->mSavedPassword:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/CryptKeeper;->mSavedPassword:Ljava/lang/String;
 
     const-string v7, ""
 
@@ -2087,21 +2087,21 @@
     if-nez v6, :cond_9
 
     .line 1274
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
 
     if-eqz v6, :cond_8
 
     .line 1275
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
 
-    sget-object v7, Lcom/android/settings/CryptKeeper;->mSavedPassword:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/CryptKeeper;->mSavedPassword:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 1276
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
 
-    iget-object v7, p0, Lcom/android/settings/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v7, p0, Lcom/android/settings_ex/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v7}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -2114,35 +2114,35 @@
     invoke-virtual {v6, v7}, Landroid/widget/EditText;->setSelection(I)V
 
     .line 1277
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v6, v11}, Landroid/widget/EditText;->setEnabled(Z)V
 
     .line 1281
     :cond_8
-    iput v10, p0, Lcom/android/settings/CryptKeeper;->mNotificationCountdown:I
+    iput v10, p0, Lcom/android/settings_ex/CryptKeeper;->mNotificationCountdown:I
 
     .line 1283
     :cond_9
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->setMaxPasswordAttempts()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->setMaxPasswordAttempts()V
 
     .line 1285
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeper;->updateEmergencyCallButtonState()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeper;->updateEmergencyCallButtonState()V
 
     .line 1287
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mHandler:Landroid/os/Handler;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v6, v12}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 1288
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mHandler:Landroid/os/Handler;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mHandler:Landroid/os/Handler;
 
     const-wide/32 v8, 0x1d4c0
 
     invoke-virtual {v6, v12, v8, v9}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     .line 1291
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeper;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeper;->getWindow()Landroid/view/Window;
 
     move-result-object v6
 
@@ -2161,7 +2161,7 @@
     const/4 v2, 0x1
 
     .line 1401
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->getTelephonyManager()Landroid/telephony/TelephonyManager;
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->getTelephonyManager()Landroid/telephony/TelephonyManager;
 
     move-result-object v3
 
@@ -2186,7 +2186,7 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1405
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeper;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -2210,7 +2210,7 @@
     .line 1408
     sget-object v2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
-    invoke-virtual {p0, v0, v2}, Lcom/android/settings/CryptKeeper;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
+    invoke-virtual {p0, v0, v2}, Lcom/android/settings_ex/CryptKeeper;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
     .line 1410
     .end local v0    # "intent":Landroid/content/Intent;
@@ -2236,7 +2236,7 @@
 
     .line 1538
     .local v0, "adminMaxFailedAttempts":I
-    iget-object v5, p0, Lcom/android/settings/CryptKeeper;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    iget-object v5, p0, Lcom/android/settings_ex/CryptKeeper;->mDPM:Landroid/app/admin/DevicePolicyManager;
 
     const/4 v6, 0x0
 
@@ -2269,7 +2269,7 @@
 
     .line 1543
     .local v3, "result":I
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->getMountService()Landroid/os/storage/IMountService;
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->getMountService()Landroid/os/storage/IMountService;
 
     move-result-object v4
 
@@ -2286,7 +2286,7 @@
     if-lez v0, :cond_2
 
     .line 1547
-    sput v0, Lcom/android/settings/CryptKeeper;->mMaxFailedAttempts:I
+    sput v0, Lcom/android/settings_ex/CryptKeeper;->mMaxFailedAttempts:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2312,7 +2312,7 @@
     :cond_2
     const-string v5, "VZW"
 
-    sget-object v6, Lcom/android/settings/CryptKeeper;->mSalesCode:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/CryptKeeper;->mSalesCode:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2321,13 +2321,13 @@
     if-eqz v5, :cond_3
 
     .line 1556
-    sput v8, Lcom/android/settings/CryptKeeper;->mMaxFailedAttempts:I
+    sput v8, Lcom/android/settings_ex/CryptKeeper;->mMaxFailedAttempts:I
 
     .line 1557
     if-lez v0, :cond_1
 
     .line 1558
-    sput v0, Lcom/android/settings/CryptKeeper;->mMaxFailedAttempts:I
+    sput v0, Lcom/android/settings_ex/CryptKeeper;->mMaxFailedAttempts:I
 
     goto :goto_0
 
@@ -2335,7 +2335,7 @@
     :cond_3
     const-string v5, "TNG"
 
-    sget-object v6, Lcom/android/settings/CryptKeeper;->mSalesCode:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/CryptKeeper;->mSalesCode:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2344,7 +2344,7 @@
     if-eqz v5, :cond_4
 
     .line 1561
-    sput v8, Lcom/android/settings/CryptKeeper;->mMaxFailedAttempts:I
+    sput v8, Lcom/android/settings_ex/CryptKeeper;->mMaxFailedAttempts:I
 
     goto :goto_0
 
@@ -2352,7 +2352,7 @@
     :cond_4
     const/16 v5, 0x1e
 
-    sput v5, Lcom/android/settings/CryptKeeper;->mMaxFailedAttempts:I
+    sput v5, Lcom/android/settings_ex/CryptKeeper;->mMaxFailedAttempts:I
 
     goto :goto_0
 .end method
@@ -2362,39 +2362,39 @@
 
     .prologue
     .line 730
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
     if-nez v0, :cond_0
 
     .line 731
-    invoke-static {}, Lcom/android/settings/EFSProperties;->loadODEConfig()Lcom/android/settings/EFSProperties$ODEProperties;
+    invoke-static {}, Lcom/android/settings_ex/EFSProperties;->loadODEConfig()Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/CryptKeeper;->mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
     .line 734
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mKeyProp:Lcom/android/settings/EFSProperties$KeyguardProperties;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mKeyProp:Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
 
     if-nez v0, :cond_1
 
     .line 735
-    invoke-static {}, Lcom/android/settings/EFSProperties;->loadKeyguardConfig()Lcom/android/settings/EFSProperties$KeyguardProperties;
+    invoke-static {}, Lcom/android/settings_ex/EFSProperties;->loadKeyguardConfig()Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/CryptKeeper;->mKeyProp:Lcom/android/settings/EFSProperties$KeyguardProperties;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mKeyProp:Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
 
     .line 741
     :cond_1
-    iget v0, p0, Lcom/android/settings/CryptKeeper;->mEncryptionGoneBad:I
+    iget v0, p0, Lcom/android/settings_ex/CryptKeeper;->mEncryptionGoneBad:I
 
     if-nez v0, :cond_2
 
     const-string v0, "error"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/CryptKeeper;->isDebugView(Ljava/lang/String;)Z
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/CryptKeeper;->isDebugView(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -2404,10 +2404,10 @@
     :cond_2
     const v0, 0x7f040073
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/CryptKeeper;->setContentView(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/CryptKeeper;->setContentView(I)V
 
     .line 745
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->showFactoryReset()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->showFactoryReset()V
 
     .line 861
     :cond_3
@@ -2434,7 +2434,7 @@
 
     const-string v0, "progress"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/CryptKeeper;->isDebugView(Ljava/lang/String;)Z
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/CryptKeeper;->isDebugView(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -2444,10 +2444,10 @@
     :cond_5
     const v0, 0x7f04007c
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/CryptKeeper;->setContentView(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/CryptKeeper;->setContentView(I)V
 
     .line 754
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeper;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeper;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
@@ -2477,12 +2477,12 @@
     .line 757
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/CryptKeeper;->mEncrypt:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/CryptKeeper;->mEncrypt:Z
 
     .line 758
     const v0, 0x7f0d0058
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v9
 
@@ -2497,7 +2497,7 @@
     .line 760
     const v0, 0x7f0d0155
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2508,7 +2508,7 @@
     .line 765
     .end local v9    # "tv":Landroid/widget/TextView;
     :goto_1
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->encryptionProgressInit()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->encryptionProgressInit()V
 
     goto :goto_0
 
@@ -2516,7 +2516,7 @@
     :cond_6
     const v0, 0x7f0d0156
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2529,13 +2529,13 @@
     .line 766
     .end local v10    # "type":Ljava/lang/String;
     :cond_7
-    iget-boolean v0, p0, Lcom/android/settings/CryptKeeper;->mValidationComplete:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/CryptKeeper;->mValidationComplete:Z
 
     if-nez v0, :cond_8
 
     const-string v0, "password"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/CryptKeeper;->isDebugView(Ljava/lang/String;)Z
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/CryptKeeper;->isDebugView(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -2561,13 +2561,13 @@
 
     .line 769
     .local v11, "ucsFlag":Ljava/lang/String;
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
     if-eqz v0, :cond_a
 
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
-    iget v0, v0, Lcom/android/settings/EFSProperties$ODEProperties;->enabledUCSInODE:I
+    iget v0, v0, Lcom/android/settings_ex/EFSProperties$ODEProperties;->enabledUCSInODE:I
 
     const/4 v1, 0x1
 
@@ -2613,39 +2613,39 @@
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 773
-    new-instance v0, Lcom/android/settings/UCSCryptKeeperTask;
+    new-instance v0, Lcom/android/settings_ex/UCSCryptKeeperTask;
 
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mContext:Landroid/content/Context;
 
-    iget-object v3, p0, Lcom/android/settings/CryptKeeper;->mHandler:Landroid/os/Handler;
+    iget-object v3, p0, Lcom/android/settings_ex/CryptKeeper;->mHandler:Landroid/os/Handler;
 
     const/4 v4, 0x1
 
-    iget-object v2, p0, Lcom/android/settings/CryptKeeper;->mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+    iget-object v2, p0, Lcom/android/settings_ex/CryptKeeper;->mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
-    iget v5, v2, Lcom/android/settings/EFSProperties$ODEProperties;->enabledWrap:I
+    iget v5, v2, Lcom/android/settings_ex/EFSProperties$ODEProperties;->enabledWrap:I
 
     const/4 v6, 0x1
 
     move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/android/settings/UCSCryptKeeperTask;-><init>(Landroid/content/Context;Lcom/android/settings/CryptKeeper;Landroid/os/Handler;ZIZ)V
+    invoke-direct/range {v0 .. v6}, Lcom/android/settings_ex/UCSCryptKeeperTask;-><init>(Landroid/content/Context;Lcom/android/settings_ex/CryptKeeper;Landroid/os/Handler;ZIZ)V
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/UCSCryptKeeperTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/UCSCryptKeeperTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     goto/16 :goto_0
 
     .line 775
     :cond_9
-    new-instance v0, Lcom/android/settings/UCSCryptKeeperTask;
+    new-instance v0, Lcom/android/settings_ex/UCSCryptKeeperTask;
 
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mContext:Landroid/content/Context;
 
-    iget-object v3, p0, Lcom/android/settings/CryptKeeper;->mHandler:Landroid/os/Handler;
+    iget-object v3, p0, Lcom/android/settings_ex/CryptKeeper;->mHandler:Landroid/os/Handler;
 
     const/4 v4, 0x0
 
@@ -2655,34 +2655,34 @@
 
     move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/android/settings/UCSCryptKeeperTask;-><init>(Landroid/content/Context;Lcom/android/settings/CryptKeeper;Landroid/os/Handler;ZIZ)V
+    invoke-direct/range {v0 .. v6}, Lcom/android/settings_ex/UCSCryptKeeperTask;-><init>(Landroid/content/Context;Lcom/android/settings_ex/CryptKeeper;Landroid/os/Handler;ZIZ)V
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/UCSCryptKeeperTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/UCSCryptKeeperTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     goto/16 :goto_0
 
     .line 777
     :cond_a
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mKeyProp:Lcom/android/settings/EFSProperties$KeyguardProperties;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mKeyProp:Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
 
     if-eqz v0, :cond_b
 
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mKeyProp:Lcom/android/settings/EFSProperties$KeyguardProperties;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mKeyProp:Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
 
-    iget-object v0, v0, Lcom/android/settings/EFSProperties$KeyguardProperties;->csName:[B
+    iget-object v0, v0, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->csName:[B
 
     if-eqz v0, :cond_b
 
     .line 778
-    new-instance v0, Lcom/android/settings/UCSCryptKeeperTask;
+    new-instance v0, Lcom/android/settings_ex/UCSCryptKeeperTask;
 
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mContext:Landroid/content/Context;
 
-    iget-object v3, p0, Lcom/android/settings/CryptKeeper;->mHandler:Landroid/os/Handler;
+    iget-object v3, p0, Lcom/android/settings_ex/CryptKeeper;->mHandler:Landroid/os/Handler;
 
     const/4 v4, 0x0
 
@@ -2692,27 +2692,27 @@
 
     move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/android/settings/UCSCryptKeeperTask;-><init>(Landroid/content/Context;Lcom/android/settings/CryptKeeper;Landroid/os/Handler;ZIZ)V
+    invoke-direct/range {v0 .. v6}, Lcom/android/settings_ex/UCSCryptKeeperTask;-><init>(Landroid/content/Context;Lcom/android/settings_ex/CryptKeeper;Landroid/os/Handler;ZIZ)V
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/UCSCryptKeeperTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/UCSCryptKeeperTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     goto/16 :goto_0
 
     .line 780
     :cond_b
-    new-instance v0, Lcom/android/settings/CryptKeeper$6;
+    new-instance v0, Lcom/android/settings_ex/CryptKeeper$6;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/CryptKeeper$6;-><init>(Lcom/android/settings/CryptKeeper;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/CryptKeeper$6;-><init>(Lcom/android/settings_ex/CryptKeeper;)V
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/CryptKeeper$6;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/CryptKeeper$6;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     goto/16 :goto_0
 
@@ -2720,27 +2720,27 @@
     .end local v7    # "crypto_state":Ljava/lang/String;
     .end local v11    # "ucsFlag":Ljava/lang/String;
     :cond_c
-    iget-boolean v0, p0, Lcom/android/settings/CryptKeeper;->mValidationRequested:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/CryptKeeper;->mValidationRequested:Z
 
     if-nez v0, :cond_3
 
     .line 858
-    new-instance v1, Lcom/android/settings/CryptKeeper$ValidationTask;
+    new-instance v1, Lcom/android/settings_ex/CryptKeeper$ValidationTask;
 
     const/4 v0, 0x0
 
-    invoke-direct {v1, p0, v0}, Lcom/android/settings/CryptKeeper$ValidationTask;-><init>(Lcom/android/settings/CryptKeeper;Lcom/android/settings/CryptKeeper$1;)V
+    invoke-direct {v1, p0, v0}, Lcom/android/settings_ex/CryptKeeper$ValidationTask;-><init>(Lcom/android/settings_ex/CryptKeeper;Lcom/android/settings_ex/CryptKeeper$1;)V
 
     const/4 v0, 0x0
 
     check-cast v0, [Ljava/lang/Void;
 
-    invoke-virtual {v1, v0}, Lcom/android/settings/CryptKeeper$ValidationTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/CryptKeeper$ValidationTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     .line 859
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/CryptKeeper;->mValidationRequested:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/CryptKeeper;->mValidationRequested:Z
 
     goto/16 :goto_0
 .end method
@@ -2760,16 +2760,16 @@
     .line 984
     const v0, 0x7f0d0148
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/android/settings/CryptKeeper;->mResetButton:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mResetButton:Landroid/widget/Button;
 
     .line 985
-    iget-boolean v0, p0, Lcom/android/settings/CryptKeeper;->mBootCompleted:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/CryptKeeper;->mBootCompleted:Z
 
     if-eq v0, v5, :cond_0
 
@@ -2789,34 +2789,34 @@
 
     .line 986
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mResetButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mResetButton:Landroid/widget/Button;
 
     invoke-virtual {v0, v5}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 990
     :goto_0
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mResetButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mResetButton:Landroid/widget/Button;
 
     invoke-virtual {v0, v4}, Landroid/widget/Button;->setVisibility(I)V
 
     .line 991
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mResetButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mResetButton:Landroid/widget/Button;
 
-    new-instance v1, Lcom/android/settings/CryptKeeper$7;
+    new-instance v1, Lcom/android/settings_ex/CryptKeeper$7;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/CryptKeeper$7;-><init>(Lcom/android/settings/CryptKeeper;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/CryptKeeper$7;-><init>(Lcom/android/settings_ex/CryptKeeper;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 999
-    iget v0, p0, Lcom/android/settings/CryptKeeper;->mEncryptionGoneBad:I
+    iget v0, p0, Lcom/android/settings_ex/CryptKeeper;->mEncryptionGoneBad:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_2
 
     .line 1001
-    invoke-virtual {p0, v2}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2827,7 +2827,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     .line 1002
-    invoke-virtual {p0, v3}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2843,7 +2843,7 @@
 
     .line 988
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mResetButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mResetButton:Landroid/widget/Button;
 
     invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
@@ -2851,14 +2851,14 @@
 
     .line 1003
     :cond_2
-    iget v0, p0, Lcom/android/settings/CryptKeeper;->mEncryptionGoneBad:I
+    iget v0, p0, Lcom/android/settings_ex/CryptKeeper;->mEncryptionGoneBad:I
 
     const/4 v1, 0x3
 
     if-ne v0, v1, :cond_3
 
     .line 1005
-    invoke-virtual {p0, v2}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2869,7 +2869,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     .line 1006
-    invoke-virtual {p0, v3}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2883,14 +2883,14 @@
 
     .line 1007
     :cond_3
-    iget v0, p0, Lcom/android/settings/CryptKeeper;->mEncryptionGoneBad:I
+    iget v0, p0, Lcom/android/settings_ex/CryptKeeper;->mEncryptionGoneBad:I
 
     const/4 v1, 0x4
 
     if-ne v0, v1, :cond_4
 
     .line 1009
-    invoke-virtual {p0, v2}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2901,7 +2901,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     .line 1010
-    invoke-virtual {p0, v3}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2915,7 +2915,7 @@
 
     .line 1013
     :cond_4
-    invoke-virtual {p0, v2}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2926,7 +2926,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     .line 1014
-    invoke-virtual {p0, v3}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -2944,7 +2944,7 @@
 
     .prologue
     .line 1455
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->getTelecomManager()Landroid/telecom/TelecomManager;
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->getTelecomManager()Landroid/telecom/TelecomManager;
 
     move-result-object v0
 
@@ -2967,7 +2967,7 @@
 
     .line 1459
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->launchEmergencyDialer()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->launchEmergencyDialer()V
 
     goto :goto_0
 .end method
@@ -3000,10 +3000,10 @@
     .line 1024
     const v9, 0x7f040073
 
-    invoke-virtual {p0, v9}, Lcom/android/settings/CryptKeeper;->setContentView(I)V
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/CryptKeeper;->setContentView(I)V
 
     .line 1026
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->showFactoryReset()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->showFactoryReset()V
 
     .line 1102
     :goto_0
@@ -3015,7 +3015,7 @@
 
     .line 1034
     .local v0, "TextString":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeper;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -3026,7 +3026,7 @@
     .line 1040
     .local v2, "percent":I
     :try_start_0
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->isDebugView()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->isDebugView()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -3044,14 +3044,14 @@
 
     .line 1047
     .local v3, "progress":Ljava/lang/String;
-    iget-boolean v9, p0, Lcom/android/settings/CryptKeeper;->mEncrypt:Z
+    iget-boolean v9, p0, Lcom/android/settings_ex/CryptKeeper;->mEncrypt:Z
 
     if-nez v9, :cond_6
 
     .line 1048
     const-string v9, "VZW"
 
-    sget-object v10, Lcom/android/settings/CryptKeeper;->mSalesCode:Ljava/lang/String;
+    sget-object v10, Lcom/android/settings_ex/CryptKeeper;->mSalesCode:Ljava/lang/String;
 
     invoke-virtual {v9, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3060,7 +3060,7 @@
     if-eqz v9, :cond_5
 
     .line 1049
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v9
 
@@ -3169,7 +3169,7 @@
     :goto_3
     const v9, 0x7f0d0147
 
-    invoke-virtual {p0, v9}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v8
 
@@ -3184,12 +3184,12 @@
 
     .line 1100
     :cond_2
-    iget-object v9, p0, Lcom/android/settings/CryptKeeper;->mHandler:Landroid/os/Handler;
+    iget-object v9, p0, Lcom/android/settings_ex/CryptKeeper;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v9, v12}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 1101
-    iget-object v9, p0, Lcom/android/settings/CryptKeeper;->mHandler:Landroid/os/Handler;
+    iget-object v9, p0, Lcom/android/settings_ex/CryptKeeper;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v10, 0x3e8
 
@@ -3294,7 +3294,7 @@
     :cond_6
     const-string v9, "VZW"
 
-    sget-object v10, Lcom/android/settings/CryptKeeper;->mSalesCode:Ljava/lang/String;
+    sget-object v10, Lcom/android/settings_ex/CryptKeeper;->mSalesCode:Ljava/lang/String;
 
     invoke-virtual {v9, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3303,7 +3303,7 @@
     if-eqz v9, :cond_8
 
     .line 1060
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v9
 
@@ -3408,7 +3408,7 @@
     .line 421
     const-string v2, "VZW"
 
-    sget-object v3, Lcom/android/settings/CryptKeeper;->mSalesCode:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/CryptKeeper;->mSalesCode:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3441,7 +3441,7 @@
 
     .line 430
     :cond_0
-    invoke-virtual {p0, v1}, Lcom/android/settings/CryptKeeper;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/CryptKeeper;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 431
     return-void
@@ -3501,18 +3501,18 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 602
-    iput-object p0, p0, Lcom/android/settings/CryptKeeper;->mContext:Landroid/content/Context;
+    iput-object p0, p0, Lcom/android/settings_ex/CryptKeeper;->mContext:Landroid/content/Context;
 
     .line 603
     const-string v5, "device_policy"
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Landroid/app/admin/DevicePolicyManager;
 
-    iput-object v5, p0, Lcom/android/settings/CryptKeeper;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    iput-object v5, p0, Lcom/android/settings_ex/CryptKeeper;->mDPM:Landroid/app/admin/DevicePolicyManager;
 
     .line 604
     const-string v5, "persist.omc.sales_code"
@@ -3521,12 +3521,12 @@
 
     move-result-object v5
 
-    sput-object v5, Lcom/android/settings/CryptKeeper;->mSalesCode:Ljava/lang/String;
+    sput-object v5, Lcom/android/settings_ex/CryptKeeper;->mSalesCode:Ljava/lang/String;
 
     .line 605
     const-string v5, ""
 
-    sget-object v6, Lcom/android/settings/CryptKeeper;->mSalesCode:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/CryptKeeper;->mSalesCode:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3536,7 +3536,7 @@
 
     const-string v5, "null"
 
-    sget-object v6, Lcom/android/settings/CryptKeeper;->mSalesCode:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/CryptKeeper;->mSalesCode:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3552,7 +3552,7 @@
 
     move-result-object v5
 
-    sput-object v5, Lcom/android/settings/CryptKeeper;->mSalesCode:Ljava/lang/String;
+    sput-object v5, Lcom/android/settings_ex/CryptKeeper;->mSalesCode:Ljava/lang/String;
 
     .line 611
     :cond_1
@@ -3600,7 +3600,7 @@
 
     .line 617
     :cond_2
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->isDebugView()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->isDebugView()Z
 
     move-result v5
 
@@ -3624,10 +3624,10 @@
 
     .line 618
     :cond_3
-    invoke-static {p0}, Lcom/android/settings/CryptKeeper;->disableCryptKeeperComponent(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/android/settings_ex/CryptKeeper;->disableCryptKeeperComponent(Landroid/content/Context;)V
 
     .line 626
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeper;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeper;->finish()V
 
     .line 666
     :goto_0
@@ -3643,7 +3643,7 @@
 
     .line 638
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeper;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -3658,7 +3658,7 @@
     .line 639
     const/4 v5, -0x1
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/CryptKeeper;->setRequestedOrientation(I)V
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/CryptKeeper;->setRequestedOrientation(I)V
     :try_end_0
     .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -3667,45 +3667,45 @@
     :goto_1
     const-string v5, "statusbar"
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Landroid/app/StatusBarManager;
 
-    iput-object v5, p0, Lcom/android/settings/CryptKeeper;->mStatusBar:Landroid/app/StatusBarManager;
+    iput-object v5, p0, Lcom/android/settings_ex/CryptKeeper;->mStatusBar:Landroid/app/StatusBarManager;
 
     .line 647
-    iget-object v5, p0, Lcom/android/settings/CryptKeeper;->mStatusBar:Landroid/app/StatusBarManager;
+    iget-object v5, p0, Lcom/android/settings_ex/CryptKeeper;->mStatusBar:Landroid/app/StatusBarManager;
 
     const/high16 v6, 0x3370000
 
     invoke-virtual {v5, v6}, Landroid/app/StatusBarManager;->disable(I)V
 
     .line 649
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->setAirplaneModeIfNecessary()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->setAirplaneModeIfNecessary()V
 
     .line 655
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeper;->getLastNonConfigurationInstance()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeper;->getLastNonConfigurationInstance()Ljava/lang/Object;
 
     move-result-object v1
 
     .line 656
     .local v1, "lastInstance":Ljava/lang/Object;
-    instance-of v5, v1, Lcom/android/settings/CryptKeeper$NonConfigurationInstanceState;
+    instance-of v5, v1, Lcom/android/settings_ex/CryptKeeper$NonConfigurationInstanceState;
 
     if-eqz v5, :cond_6
 
     move-object v2, v1
 
     .line 657
-    check-cast v2, Lcom/android/settings/CryptKeeper$NonConfigurationInstanceState;
+    check-cast v2, Lcom/android/settings_ex/CryptKeeper$NonConfigurationInstanceState;
 
     .line 658
-    .local v2, "retained":Lcom/android/settings/CryptKeeper$NonConfigurationInstanceState;
-    iget-object v5, v2, Lcom/android/settings/CryptKeeper$NonConfigurationInstanceState;->wakelock:Landroid/os/PowerManager$WakeLock;
+    .local v2, "retained":Lcom/android/settings_ex/CryptKeeper$NonConfigurationInstanceState;
+    iget-object v5, v2, Lcom/android/settings_ex/CryptKeeper$NonConfigurationInstanceState;->wakelock:Landroid/os/PowerManager$WakeLock;
 
-    iput-object v5, p0, Lcom/android/settings/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iput-object v5, p0, Lcom/android/settings_ex/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     .line 659
     const-string v5, "CryptKeeper"
@@ -3715,22 +3715,22 @@
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 663
-    .end local v2    # "retained":Lcom/android/settings/CryptKeeper$NonConfigurationInstanceState;
+    .end local v2    # "retained":Lcom/android/settings_ex/CryptKeeper$NonConfigurationInstanceState;
     :cond_6
     const-string v5, "phone"
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/CryptKeeper;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Landroid/telephony/TelephonyManager;
 
-    iput-object v5, p0, Lcom/android/settings/CryptKeeper;->mTelephony:Landroid/telephony/TelephonyManager;
+    iput-object v5, p0, Lcom/android/settings_ex/CryptKeeper;->mTelephony:Landroid/telephony/TelephonyManager;
 
     .line 664
-    iget-object v5, p0, Lcom/android/settings/CryptKeeper;->mTelephony:Landroid/telephony/TelephonyManager;
+    iget-object v5, p0, Lcom/android/settings_ex/CryptKeeper;->mTelephony:Landroid/telephony/TelephonyManager;
 
-    iget-object v6, p0, Lcom/android/settings/CryptKeeper;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeper;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
     const/16 v7, 0x20
 
@@ -3751,14 +3751,14 @@
 
     .prologue
     .line 886
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mTelephony:Landroid/telephony/TelephonyManager;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mTelephony:Landroid/telephony/TelephonyManager;
 
     if-eqz v0, :cond_0
 
     .line 887
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mTelephony:Landroid/telephony/TelephonyManager;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mTelephony:Landroid/telephony/TelephonyManager;
 
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
     const/4 v2, 0x0
 
@@ -3766,12 +3766,12 @@
 
     .line 890
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mStatusBar:Landroid/app/StatusBarManager;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mStatusBar:Landroid/app/StatusBarManager;
 
     if-eqz v0, :cond_1
 
     .line 891
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mStatusBar:Landroid/app/StatusBarManager;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mStatusBar:Landroid/app/StatusBarManager;
 
     const/high16 v1, 0x3370000
 
@@ -3782,7 +3782,7 @@
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
     .line 897
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v0, :cond_2
 
@@ -3794,14 +3794,14 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 899
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
     .line 900
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     .line 902
     :cond_2
@@ -3862,15 +3862,15 @@
     .line 1365
     const-string v3, ""
 
-    sput-object v3, Lcom/android/settings/CryptKeeper;->mSavedPassword:Ljava/lang/String;
+    sput-object v3, Lcom/android/settings_ex/CryptKeeper;->mSavedPassword:Ljava/lang/String;
 
     .line 1370
-    iget-object v3, p0, Lcom/android/settings/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v3, p0, Lcom/android/settings_ex/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
 
     invoke-virtual {v3, v1}, Landroid/widget/EditText;->setEnabled(Z)V
 
     .line 1371
-    invoke-virtual {p0, v1}, Lcom/android/settings/CryptKeeper;->setBackFunctionality(Z)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/CryptKeeper;->setBackFunctionality(Z)V
 
     .line 1373
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -3882,15 +3882,15 @@
     if-lt v3, v4, :cond_3
 
     .line 1374
-    new-instance v3, Lcom/android/settings/CryptKeeper$DecryptTask;
+    new-instance v3, Lcom/android/settings_ex/CryptKeeper$DecryptTask;
 
-    invoke-direct {v3, p0, v5}, Lcom/android/settings/CryptKeeper$DecryptTask;-><init>(Lcom/android/settings/CryptKeeper;Lcom/android/settings/CryptKeeper$1;)V
+    invoke-direct {v3, p0, v5}, Lcom/android/settings_ex/CryptKeeper$DecryptTask;-><init>(Lcom/android/settings_ex/CryptKeeper;Lcom/android/settings_ex/CryptKeeper$1;)V
 
     new-array v4, v2, [Ljava/lang/String;
 
     aput-object v0, v4, v1
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/CryptKeeper$DecryptTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/CryptKeeper$DecryptTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     :goto_1
     move v1, v2
@@ -3900,9 +3900,9 @@
 
     .line 1377
     :cond_3
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mPasswordEntry:Landroid/widget/EditText;
 
-    invoke-direct {p0, v1}, Lcom/android/settings/CryptKeeper;->fakeUnlockAttempt(Landroid/view/View;)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/CryptKeeper;->fakeUnlockAttempt(Landroid/view/View;)V
 
     goto :goto_1
 .end method
@@ -3915,7 +3915,7 @@
 
     .prologue
     .line 1496
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->delayAudioNotification()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->delayAudioNotification()V
 
     .line 1497
     const/4 v0, 0x0
@@ -3931,9 +3931,9 @@
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
     .line 692
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mContext:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
@@ -3956,7 +3956,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/CryptKeeper;->mBootCompleted:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/CryptKeeper;->mBootCompleted:Z
 
     .line 594
     return-void
@@ -3972,9 +3972,9 @@
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
     .line 683
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mContext:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     new-instance v2, Landroid/content/IntentFilter;
 
@@ -3987,7 +3987,7 @@
     .line 686
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/CryptKeeper;->setBackFunctionality(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/CryptKeeper;->setBackFunctionality(Z)V
 
     .line 687
     return-void
@@ -3998,14 +3998,14 @@
 
     .prologue
     .line 877
-    new-instance v0, Lcom/android/settings/CryptKeeper$NonConfigurationInstanceState;
+    new-instance v0, Lcom/android/settings_ex/CryptKeeper$NonConfigurationInstanceState;
 
-    iget-object v1, p0, Lcom/android/settings/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    invoke-direct {v0, v1}, Lcom/android/settings/CryptKeeper$NonConfigurationInstanceState;-><init>(Landroid/os/PowerManager$WakeLock;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/CryptKeeper$NonConfigurationInstanceState;-><init>(Landroid/os/PowerManager$WakeLock;)V
 
     .line 878
-    .local v0, "state":Lcom/android/settings/CryptKeeper$NonConfigurationInstanceState;
+    .local v0, "state":Lcom/android/settings_ex/CryptKeeper$NonConfigurationInstanceState;
     const-string v1, "CryptKeeper"
 
     const-string v2, "Handing wakelock off to NonConfigurationInstanceState"
@@ -4015,7 +4015,7 @@
     .line 879
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcom/android/settings/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+    iput-object v1, p0, Lcom/android/settings_ex/CryptKeeper;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     .line 880
     return-object v0
@@ -4029,7 +4029,7 @@
     .line 586
     const-string v0, "mBootCompleted"
 
-    iget-boolean v1, p0, Lcom/android/settings/CryptKeeper;->mBootCompleted:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/CryptKeeper;->mBootCompleted:Z
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
@@ -4048,7 +4048,7 @@
     invoke-super {p0}, Landroid/app/Activity;->onStart()V
 
     .line 676
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->setupUi()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->setupUi()V
 
     .line 677
     return-void
@@ -4062,14 +4062,14 @@
     invoke-super {p0}, Landroid/app/Activity;->onStop()V
 
     .line 866
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 867
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
 
@@ -4088,7 +4088,7 @@
 
     .prologue
     .line 1513
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->delayAudioNotification()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->delayAudioNotification()V
 
     .line 1514
     return-void
@@ -4101,7 +4101,7 @@
 
     .prologue
     .line 1502
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->delayAudioNotification()V
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->delayAudioNotification()V
 
     .line 1503
     const/4 v0, 0x0
@@ -4118,7 +4118,7 @@
     if-eqz p1, :cond_0
 
     .line 1130
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mStatusBar:Landroid/app/StatusBarManager;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mStatusBar:Landroid/app/StatusBarManager;
 
     const/high16 v1, 0x3370000
 
@@ -4130,7 +4130,7 @@
 
     .line 1132
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper;->mStatusBar:Landroid/app/StatusBarManager;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper;->mStatusBar:Landroid/app/StatusBarManager;
 
     const/high16 v1, 0x3770000
 
@@ -4148,7 +4148,7 @@
     .line 1419
     const v2, 0x7f0d0146
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -4158,13 +4158,13 @@
     .local v0, "emergencyCall":Landroid/widget/Button;
     const v2, 0x7f0d0145
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/CryptKeeper;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/LinearLayout;
 
-    iput-object v2, p0, Lcom/android/settings/CryptKeeper;->mButtonLayout:Landroid/widget/LinearLayout;
+    iput-object v2, p0, Lcom/android/settings_ex/CryptKeeper;->mButtonLayout:Landroid/widget/LinearLayout;
 
     .line 1422
     if-nez v0, :cond_0
@@ -4175,7 +4175,7 @@
 
     .line 1425
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->isEmergencyCallCapable()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->isEmergencyCallCapable()Z
 
     move-result v2
 
@@ -4187,14 +4187,14 @@
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setVisibility(I)V
 
     .line 1427
-    new-instance v2, Lcom/android/settings/CryptKeeper$12;
+    new-instance v2, Lcom/android/settings_ex/CryptKeeper$12;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/CryptKeeper$12;-><init>(Lcom/android/settings/CryptKeeper;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/CryptKeeper$12;-><init>(Lcom/android/settings_ex/CryptKeeper;)V
 
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 1441
-    invoke-direct {p0}, Lcom/android/settings/CryptKeeper;->getTelecomManager()Landroid/telecom/TelecomManager;
+    invoke-direct {p0}, Lcom/android/settings_ex/CryptKeeper;->getTelecomManager()Landroid/telecom/TelecomManager;
 
     move-result-object v2
 
@@ -4220,7 +4220,7 @@
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setVisibility(I)V
 
     .line 1436
-    iget-object v2, p0, Lcom/android/settings/CryptKeeper;->mButtonLayout:Landroid/widget/LinearLayout;
+    iget-object v2, p0, Lcom/android/settings_ex/CryptKeeper;->mButtonLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2, v3}, Landroid/widget/LinearLayout;->setVisibility(I)V
 

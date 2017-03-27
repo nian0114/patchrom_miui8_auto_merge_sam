@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/ModePreviewAdapter;
+.class public Lcom/android/settings_ex/ModePreviewAdapter;
 .super Landroid/widget/ArrayAdapter;
 .source "ModePreviewAdapter.java"
 
@@ -61,23 +61,23 @@
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;IILjava/util/List;)V
 
     .line 42
-    iput-object v0, p0, Lcom/android/settings/ModePreviewAdapter;->context:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/ModePreviewAdapter;->context:Landroid/content/Context;
 
     .line 45
-    iput-object v0, p0, Lcom/android/settings/ModePreviewAdapter;->mInflater:Landroid/view/LayoutInflater;
+    iput-object v0, p0, Lcom/android/settings_ex/ModePreviewAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     .line 51
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/ModePreviewAdapter;->ModePreviewList:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/ModePreviewAdapter;->ModePreviewList:Ljava/util/ArrayList;
 
     .line 54
-    iput-boolean v1, p0, Lcom/android/settings/ModePreviewAdapter;->mIsAutomatic:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ModePreviewAdapter;->mIsAutomatic:Z
 
     .line 59
-    iput-object p1, p0, Lcom/android/settings/ModePreviewAdapter;->context:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/ModePreviewAdapter;->context:Landroid/content/Context;
 
     .line 60
     const-string v0, "layout_inflater"
@@ -88,18 +88,18 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    iput-object v0, p0, Lcom/android/settings/ModePreviewAdapter;->mInflater:Landroid/view/LayoutInflater;
+    iput-object v0, p0, Lcom/android/settings_ex/ModePreviewAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     .line 63
-    iget-object v0, p0, Lcom/android/settings/ModePreviewAdapter;->ModePreviewList:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/ModePreviewAdapter;->ModePreviewList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     .line 64
-    iput-object p4, p0, Lcom/android/settings/ModePreviewAdapter;->ModePreviewList:Ljava/util/ArrayList;
+    iput-object p4, p0, Lcom/android/settings_ex/ModePreviewAdapter;->ModePreviewList:Ljava/util/ArrayList;
 
     .line 66
-    iput-boolean v1, p0, Lcom/android/settings/ModePreviewAdapter;->mIsAutomatic:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ModePreviewAdapter;->mIsAutomatic:Z
 
     .line 67
     return-void
@@ -141,7 +141,7 @@
     if-nez p2, :cond_0
 
     .line 90
-    iget-object v1, p0, Lcom/android/settings/ModePreviewAdapter;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v1, p0, Lcom/android/settings_ex/ModePreviewAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     const v2, 0x7f040125
 
@@ -170,17 +170,17 @@
 
     .line 99
     :goto_0
-    iget-boolean v1, p0, Lcom/android/settings/ModePreviewAdapter;->mIsAutomatic:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/ModePreviewAdapter;->mIsAutomatic:Z
 
     invoke-virtual {p2, v1}, Landroid/view/View;->setClickable(Z)V
 
     .line 100
-    iget-boolean v1, p0, Lcom/android/settings/ModePreviewAdapter;->mIsAutomatic:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/ModePreviewAdapter;->mIsAutomatic:Z
 
     invoke-virtual {p2, v1}, Landroid/view/View;->setFocusable(Z)V
 
     .line 101
-    iget-boolean v1, p0, Lcom/android/settings/ModePreviewAdapter;->mIsAutomatic:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/ModePreviewAdapter;->mIsAutomatic:Z
 
     if-nez v1, :cond_1
 
@@ -190,7 +190,7 @@
     invoke-virtual {p2, v1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 103
-    iget-object v1, p0, Lcom/android/settings/ModePreviewAdapter;->ModePreviewList:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/ModePreviewAdapter;->ModePreviewList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 

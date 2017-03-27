@@ -1,11 +1,11 @@
-.class Lcom/android/settings/deviceinfo/Status$8;
+.class Lcom/android/settings_ex/deviceinfo/Status$8;
 .super Landroid/os/Handler;
 .source "Status.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/Status;
+    value = Lcom/android/settings_ex/deviceinfo/Status;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/Status;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/Status;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/Status;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/Status;)V
     .locals 0
 
     .prologue
     .line 946
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/Status$8;->this$0:Lcom/android/settings/deviceinfo/Status;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/Status$8;->this$0:Lcom/android/settings_ex/deviceinfo/Status;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -168,10 +168,10 @@
 
     .line 967
     .local v2, "firstCall":Ljava/lang/String;
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/Status$8;->this$0:Lcom/android/settings/deviceinfo/Status;
+    iget-object v5, p0, Lcom/android/settings_ex/deviceinfo/Status$8;->this$0:Lcom/android/settings_ex/deviceinfo/Status;
 
-    # getter for: Lcom/android/settings/deviceinfo/Status;->mFirstCall:Landroid/preference/Preference;
-    invoke-static {v5}, Lcom/android/settings/deviceinfo/Status;->access$1300(Lcom/android/settings/deviceinfo/Status;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/deviceinfo/Status;->mFirstCall:Landroid/preference/Preference;
+    invoke-static {v5}, Lcom/android/settings_ex/deviceinfo/Status;->access$1300(Lcom/android/settings_ex/deviceinfo/Status;)Landroid/preference/Preference;
 
     move-result-object v5
 

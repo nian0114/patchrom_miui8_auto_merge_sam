@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/widget/LinkAccessibilityHelper;
-.super Lcom/android/settings/widget/ExploreByTouchHelper;
+.class public Lcom/android/settings_ex/widget/LinkAccessibilityHelper;
+.super Lcom/android/settings_ex/widget/ExploreByTouchHelper;
 .source "LinkAccessibilityHelper.java"
 
 
@@ -16,17 +16,17 @@
 
     .prologue
     .line 42
-    invoke-direct {p0, p1}, Lcom/android/settings/widget/ExploreByTouchHelper;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/widget/ExploreByTouchHelper;-><init>(Landroid/view/View;)V
 
     .line 39
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/widget/LinkAccessibilityHelper;->mTempRect:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->mTempRect:Landroid/graphics/Rect;
 
     .line 43
-    iput-object p1, p0, Lcom/android/settings/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
+    iput-object p1, p0, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
 
     .line 44
     return-void
@@ -39,7 +39,7 @@
 
     .prologue
     .line 147
-    iget-object v9, p0, Lcom/android/settings/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
+    iget-object v9, p0, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
 
     invoke-virtual {v9}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -73,7 +73,7 @@
 
     .line 153
     .local v3, "spanEnd":I
-    iget-object v9, p0, Lcom/android/settings/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
+    iget-object v9, p0, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
 
     invoke-virtual {v9}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
 
@@ -122,13 +122,13 @@
 
     .line 165
     :cond_0
-    iget-object v9, p0, Lcom/android/settings/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
+    iget-object v9, p0, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
 
     invoke-virtual {v9}, Landroid/widget/TextView;->getTotalPaddingLeft()I
 
     move-result v9
 
-    iget-object v10, p0, Lcom/android/settings/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
+    iget-object v10, p0, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
 
     invoke-virtual {v10}, Landroid/widget/TextView;->getTotalPaddingTop()I
 
@@ -155,7 +155,7 @@
 
     .prologue
     .line 123
-    iget-object v3, p0, Lcom/android/settings/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
+    iget-object v3, p0, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
 
     invoke-virtual {v3}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -213,7 +213,7 @@
 
     .prologue
     .line 135
-    iget-object v2, p0, Lcom/android/settings/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
 
     invoke-virtual {v2}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -260,7 +260,7 @@
 
     .prologue
     .line 48
-    iget-object v5, p0, Lcom/android/settings/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
+    iget-object v5, p0, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
 
     invoke-virtual {v5}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -279,7 +279,7 @@
 
     .line 51
     .local v3, "spannedText":Landroid/text/Spanned;
-    iget-object v5, p0, Lcom/android/settings/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
+    iget-object v5, p0, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
 
     invoke-virtual {v5, p1, p2}, Landroid/widget/TextView;->getOffsetForPosition(FF)I
 
@@ -343,7 +343,7 @@
     .prologue
     .line 63
     .local p1, "virtualViewIds":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
-    iget-object v7, p0, Lcom/android/settings/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
+    iget-object v7, p0, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
 
     invoke-virtual {v7}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -433,7 +433,7 @@
     if-ne p2, v1, :cond_1
 
     .line 111
-    invoke-direct {p0, p1}, Lcom/android/settings/widget/LinkAccessibilityHelper;->getSpanForOffset(I)Landroid/text/style/ClickableSpan;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->getSpanForOffset(I)Landroid/text/style/ClickableSpan;
 
     move-result-object v0
 
@@ -442,7 +442,7 @@
     if-eqz v0, :cond_0
 
     .line 113
-    iget-object v1, p0, Lcom/android/settings/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/text/style/ClickableSpan;->onClick(Landroid/view/View;)V
 
@@ -494,7 +494,7 @@
 
     .prologue
     .line 76
-    invoke-direct {p0, p1}, Lcom/android/settings/widget/LinkAccessibilityHelper;->getSpanForOffset(I)Landroid/text/style/ClickableSpan;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->getSpanForOffset(I)Landroid/text/style/ClickableSpan;
 
     move-result-object v0
 
@@ -503,7 +503,7 @@
     if-eqz v0, :cond_0
 
     .line 78
-    invoke-direct {p0, v0}, Lcom/android/settings/widget/LinkAccessibilityHelper;->getTextForSpan(Landroid/text/style/ClickableSpan;)Ljava/lang/CharSequence;
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->getTextForSpan(Landroid/text/style/ClickableSpan;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -538,7 +538,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 81
-    iget-object v1, p0, Lcom/android/settings/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -560,7 +560,7 @@
     const/4 v4, 0x1
 
     .line 87
-    invoke-direct {p0, p1}, Lcom/android/settings/widget/LinkAccessibilityHelper;->getSpanForOffset(I)Landroid/text/style/ClickableSpan;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->getSpanForOffset(I)Landroid/text/style/ClickableSpan;
 
     move-result-object v0
 
@@ -569,7 +569,7 @@
     if-eqz v0, :cond_0
 
     .line 89
-    invoke-direct {p0, v0}, Lcom/android/settings/widget/LinkAccessibilityHelper;->getTextForSpan(Landroid/text/style/ClickableSpan;)Ljava/lang/CharSequence;
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->getTextForSpan(Landroid/text/style/ClickableSpan;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -583,12 +583,12 @@
     invoke-virtual {p2, v4}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClickable(Z)V
 
     .line 96
-    iget-object v1, p0, Lcom/android/settings/widget/LinkAccessibilityHelper;->mTempRect:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->mTempRect:Landroid/graphics/Rect;
 
-    invoke-direct {p0, v0, v1}, Lcom/android/settings/widget/LinkAccessibilityHelper;->getBoundsForSpan(Landroid/text/style/ClickableSpan;Landroid/graphics/Rect;)Landroid/graphics/Rect;
+    invoke-direct {p0, v0, v1}, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->getBoundsForSpan(Landroid/text/style/ClickableSpan;Landroid/graphics/Rect;)Landroid/graphics/Rect;
 
     .line 97
-    iget-object v1, p0, Lcom/android/settings/widget/LinkAccessibilityHelper;->mTempRect:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->mTempRect:Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->isEmpty()Z
 
@@ -597,9 +597,9 @@
     if-nez v1, :cond_1
 
     .line 98
-    iget-object v1, p0, Lcom/android/settings/widget/LinkAccessibilityHelper;->mTempRect:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->mTempRect:Landroid/graphics/Rect;
 
-    invoke-direct {p0, v0, v1}, Lcom/android/settings/widget/LinkAccessibilityHelper;->getBoundsForSpan(Landroid/text/style/ClickableSpan;Landroid/graphics/Rect;)Landroid/graphics/Rect;
+    invoke-direct {p0, v0, v1}, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->getBoundsForSpan(Landroid/text/style/ClickableSpan;Landroid/graphics/Rect;)Landroid/graphics/Rect;
 
     move-result-object v1
 
@@ -639,7 +639,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 92
-    iget-object v1, p0, Lcom/android/settings/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->mView:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -674,12 +674,12 @@
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 101
-    iget-object v1, p0, Lcom/android/settings/widget/LinkAccessibilityHelper;->mTempRect:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->mTempRect:Landroid/graphics/Rect;
 
     invoke-virtual {v1, v5, v5, v4, v4}, Landroid/graphics/Rect;->set(IIII)V
 
     .line 102
-    iget-object v1, p0, Lcom/android/settings/widget/LinkAccessibilityHelper;->mTempRect:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->mTempRect:Landroid/graphics/Rect;
 
     invoke-virtual {p2, v1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setBoundsInParent(Landroid/graphics/Rect;)V
 

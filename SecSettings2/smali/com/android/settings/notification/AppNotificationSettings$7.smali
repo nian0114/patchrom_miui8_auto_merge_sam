@@ -1,4 +1,4 @@
-.class Lcom/android/settings/notification/AppNotificationSettings$7;
+.class Lcom/android/settings_ex/notification/AppNotificationSettings$7;
 .super Ljava/lang/Object;
 .source "AppNotificationSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/notification/AppNotificationSettings;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/notification/AppNotificationSettings;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/AppNotificationSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/AppNotificationSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/notification/AppNotificationSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/notification/AppNotificationSettings;)V
     .locals 0
 
     .prologue
     .line 297
-    iput-object p1, p0, Lcom/android/settings/notification/AppNotificationSettings$7;->this$0:Lcom/android/settings/notification/AppNotificationSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/AppNotificationSettings$7;->this$0:Lcom/android/settings_ex/notification/AppNotificationSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,21 +42,21 @@
 
     .prologue
     .line 300
-    iget-object v0, p0, Lcom/android/settings/notification/AppNotificationSettings$7;->this$0:Lcom/android/settings/notification/AppNotificationSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/AppNotificationSettings$7;->this$0:Lcom/android/settings_ex/notification/AppNotificationSettings;
 
-    # getter for: Lcom/android/settings/notification/AppNotificationSettings;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Lcom/android/settings/notification/AppNotificationSettings;->access$900(Lcom/android/settings/notification/AppNotificationSettings;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/notification/AppNotificationSettings;->mContext:Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/settings_ex/notification/AppNotificationSettings;->access$900(Lcom/android/settings_ex/notification/AppNotificationSettings;)Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/notification/AppNotificationSettings$7;->this$0:Lcom/android/settings/notification/AppNotificationSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/AppNotificationSettings$7;->this$0:Lcom/android/settings_ex/notification/AppNotificationSettings;
 
-    # getter for: Lcom/android/settings/notification/AppNotificationSettings;->mAppRow:Lcom/android/settings/notification/NotificationBackend$AppRow;
-    invoke-static {v1}, Lcom/android/settings/notification/AppNotificationSettings;->access$800(Lcom/android/settings/notification/AppNotificationSettings;)Lcom/android/settings/notification/NotificationBackend$AppRow;
+    # getter for: Lcom/android/settings_ex/notification/AppNotificationSettings;->mAppRow:Lcom/android/settings_ex/notification/NotificationBackend$AppRow;
+    invoke-static {v1}, Lcom/android/settings_ex/notification/AppNotificationSettings;->access$800(Lcom/android/settings_ex/notification/AppNotificationSettings;)Lcom/android/settings_ex/notification/NotificationBackend$AppRow;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/android/settings/notification/NotificationBackend$AppRow;->settingsIntent:Landroid/content/Intent;
+    iget-object v1, v1, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->settingsIntent:Landroid/content/Intent;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 

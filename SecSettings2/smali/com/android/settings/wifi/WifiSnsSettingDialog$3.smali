@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiSnsSettingDialog$3;
+.class Lcom/android/settings_ex/wifi/WifiSnsSettingDialog$3;
 .super Ljava/lang/Object;
 .source "WifiSnsSettingDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSnsSettingDialog;->makeSnsSettingDialog()V
+    value = Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->makeSnsSettingDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSnsSettingDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSnsSettingDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;)V
     .locals 0
 
     .prologue
     .line 171
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog$3;->this$0:Lcom/android/settings/wifi/WifiSnsSettingDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog$3;->this$0:Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,8 +46,8 @@
     const/4 v3, 0x1
 
     .line 174
-    # getter for: Lcom/android/settings/wifi/WifiSnsSettingDialog;->DBG:Z
-    invoke-static {}, Lcom/android/settings/wifi/WifiSnsSettingDialog;->access$200()Z
+    # getter for: Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->DBG:Z
+    invoke-static {}, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->access$200()Z
 
     move-result v0
 
@@ -82,10 +82,10 @@
     if-ne p2, v0, :cond_1
 
     .line 176
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog$3;->this$0:Lcom/android/settings/wifi/WifiSnsSettingDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog$3;->this$0:Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;
 
-    # getter for: Lcom/android/settings/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiSnsSettingDialog;->access$000(Lcom/android/settings/wifi/WifiSnsSettingDialog;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->access$000(Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -102,11 +102,11 @@
     if-ne v0, v3, :cond_2
 
     .line 178
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog$3;->this$0:Lcom/android/settings/wifi/WifiSnsSettingDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog$3;->this$0:Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;
 
     const-string v1, "ON"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/wifi/WifiSnsSettingDialog;->sendGSIMdata(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->sendGSIMdata(Ljava/lang/String;)V
 
     .line 182
     :goto_0
@@ -120,11 +120,11 @@
 
     .line 180
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog$3;->this$0:Lcom/android/settings/wifi/WifiSnsSettingDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog$3;->this$0:Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;
 
     const-string v1, "OFF"
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/wifi/WifiSnsSettingDialog;->sendGSIMdata(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->sendGSIMdata(Ljava/lang/String;)V
 
     goto :goto_0
 .end method

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/lockappshortcut/LockAppShortcutSettings$1;
+.class Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings$1;
 .super Landroid/database/ContentObserver;
 .source "LockAppShortcutSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;
+    value = Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 55
-    iput-object p1, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings$1;->this$0:Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings$1;->this$0:Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -40,10 +40,10 @@
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings$1;->this$0:Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings$1;->this$0:Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;
 
-    # invokes: Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->updateUI()V
-    invoke-static {v0}, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->access$000(Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;)V
+    # invokes: Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->updateUI()V
+    invoke-static {v0}, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->access$000(Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;)V
 
     .line 59
     return-void

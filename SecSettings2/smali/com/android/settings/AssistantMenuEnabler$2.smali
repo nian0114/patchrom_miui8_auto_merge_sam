@@ -1,4 +1,4 @@
-.class Lcom/android/settings/AssistantMenuEnabler$2;
+.class Lcom/android/settings_ex/AssistantMenuEnabler$2;
 .super Ljava/lang/Object;
 .source "AssistantMenuEnabler.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/AssistantMenuEnabler;->showExclusivePopup()V
+    value = Lcom/android/settings_ex/AssistantMenuEnabler;->showExclusivePopup()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/AssistantMenuEnabler;
+.field final synthetic this$0:Lcom/android/settings_ex/AssistantMenuEnabler;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/AssistantMenuEnabler;)V
+.method constructor <init>(Lcom/android/settings_ex/AssistantMenuEnabler;)V
     .locals 0
 
     .prologue
     .line 572
-    iput-object p1, p0, Lcom/android/settings/AssistantMenuEnabler$2;->this$0:Lcom/android/settings/AssistantMenuEnabler;
+    iput-object p1, p0, Lcom/android/settings_ex/AssistantMenuEnabler$2;->this$0:Lcom/android/settings_ex/AssistantMenuEnabler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,10 +43,10 @@
 
     .prologue
     .line 576
-    iget-object v0, p0, Lcom/android/settings/AssistantMenuEnabler$2;->this$0:Lcom/android/settings/AssistantMenuEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/AssistantMenuEnabler$2;->this$0:Lcom/android/settings_ex/AssistantMenuEnabler;
 
-    # getter for: Lcom/android/settings/AssistantMenuEnabler;->mSwitch:Landroid/widget/Switch;
-    invoke-static {v0}, Lcom/android/settings/AssistantMenuEnabler;->access$000(Lcom/android/settings/AssistantMenuEnabler;)Landroid/widget/Switch;
+    # getter for: Lcom/android/settings_ex/AssistantMenuEnabler;->mSwitch:Landroid/widget/Switch;
+    invoke-static {v0}, Lcom/android/settings_ex/AssistantMenuEnabler;->access$000(Lcom/android/settings_ex/AssistantMenuEnabler;)Landroid/widget/Switch;
 
     move-result-object v0
 

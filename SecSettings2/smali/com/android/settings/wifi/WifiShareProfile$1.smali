@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wifi/WifiShareProfile$1;
+.class Lcom/android/settings_ex/wifi/WifiShareProfile$1;
 .super Landroid/os/Handler;
 .source "WifiShareProfile.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiShareProfile;
+    value = Lcom/android/settings_ex/wifi/WifiShareProfile;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiShareProfile;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiShareProfile;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiShareProfile;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiShareProfile;)V
     .locals 0
 
     .prologue
     .line 184
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiShareProfile$1;->this$0:Lcom/android/settings/wifi/WifiShareProfile;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile$1;->this$0:Lcom/android/settings_ex/wifi/WifiShareProfile;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -52,10 +52,10 @@
 
     .line 189
     :pswitch_1
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile$1;->this$0:Lcom/android/settings/wifi/WifiShareProfile;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile$1;->this$0:Lcom/android/settings_ex/wifi/WifiShareProfile;
 
-    # getter for: Lcom/android/settings/wifi/WifiShareProfile;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiShareProfile;->access$000(Lcom/android/settings/wifi/WifiShareProfile;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/wifi/WifiShareProfile;->mContext:Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->access$000(Lcom/android/settings_ex/wifi/WifiShareProfile;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -75,38 +75,38 @@
 
     .line 192
     :pswitch_2
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile$1;->this$0:Lcom/android/settings/wifi/WifiShareProfile;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile$1;->this$0:Lcom/android/settings_ex/wifi/WifiShareProfile;
 
-    # getter for: Lcom/android/settings/wifi/WifiShareProfile;->wifiIsEnabled:Z
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiShareProfile;->access$100(Lcom/android/settings/wifi/WifiShareProfile;)Z
+    # getter for: Lcom/android/settings_ex/wifi/WifiShareProfile;->wifiIsEnabled:Z
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->access$100(Lcom/android/settings_ex/wifi/WifiShareProfile;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile$1;->this$0:Lcom/android/settings/wifi/WifiShareProfile;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile$1;->this$0:Lcom/android/settings_ex/wifi/WifiShareProfile;
 
-    # getter for: Lcom/android/settings/wifi/WifiShareProfile;->wifiP2pConnected:Z
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiShareProfile;->access$200(Lcom/android/settings/wifi/WifiShareProfile;)Z
+    # getter for: Lcom/android/settings_ex/wifi/WifiShareProfile;->wifiP2pConnected:Z
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->access$200(Lcom/android/settings_ex/wifi/WifiShareProfile;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile$1;->this$0:Lcom/android/settings/wifi/WifiShareProfile;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile$1;->this$0:Lcom/android/settings_ex/wifi/WifiShareProfile;
 
-    # getter for: Lcom/android/settings/wifi/WifiShareProfile;->mWifiManager:Landroid/net/wifi/WifiManager;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiShareProfile;->access$300(Lcom/android/settings/wifi/WifiShareProfile;)Landroid/net/wifi/WifiManager;
+    # getter for: Lcom/android/settings_ex/wifi/WifiShareProfile;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->access$300(Lcom/android/settings_ex/wifi/WifiShareProfile;)Landroid/net/wifi/WifiManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 193
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile$1;->this$0:Lcom/android/settings/wifi/WifiShareProfile;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile$1;->this$0:Lcom/android/settings_ex/wifi/WifiShareProfile;
 
-    # getter for: Lcom/android/settings/wifi/WifiShareProfile;->mWifiManager:Landroid/net/wifi/WifiManager;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiShareProfile;->access$300(Lcom/android/settings/wifi/WifiShareProfile;)Landroid/net/wifi/WifiManager;
+    # getter for: Lcom/android/settings_ex/wifi/WifiShareProfile;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiShareProfile;->access$300(Lcom/android/settings_ex/wifi/WifiShareProfile;)Landroid/net/wifi/WifiManager;
 
     move-result-object v0
 
@@ -114,9 +114,9 @@
 
     .line 195
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiShareProfile$1;->this$0:Lcom/android/settings/wifi/WifiShareProfile;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiShareProfile$1;->this$0:Lcom/android/settings_ex/wifi/WifiShareProfile;
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiShareProfile;->mHandler:Landroid/os/Handler;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiShareProfile;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x5
 

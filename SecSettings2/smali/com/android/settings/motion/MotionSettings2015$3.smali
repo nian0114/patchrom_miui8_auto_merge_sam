@@ -1,4 +1,4 @@
-.class Lcom/android/settings/motion/MotionSettings2015$3;
+.class Lcom/android/settings_ex/motion/MotionSettings2015$3;
 .super Ljava/lang/Object;
 .source "MotionSettings2015.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/motion/MotionSettings2015;->onActivityCreated(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/motion/MotionSettings2015;->onActivityCreated(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/motion/MotionSettings2015;
+.field final synthetic this$0:Lcom/android/settings_ex/motion/MotionSettings2015;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/motion/MotionSettings2015;)V
+.method constructor <init>(Lcom/android/settings_ex/motion/MotionSettings2015;)V
     .locals 0
 
     .prologue
     .line 179
-    iput-object p1, p0, Lcom/android/settings/motion/MotionSettings2015$3;->this$0:Lcom/android/settings/motion/MotionSettings2015;
+    iput-object p1, p0, Lcom/android/settings_ex/motion/MotionSettings2015$3;->this$0:Lcom/android/settings_ex/motion/MotionSettings2015;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -62,9 +62,9 @@
 
     .prologue
     .line 182
-    iget-object v0, p0, Lcom/android/settings/motion/MotionSettings2015$3;->this$0:Lcom/android/settings/motion/MotionSettings2015;
+    iget-object v0, p0, Lcom/android/settings_ex/motion/MotionSettings2015$3;->this$0:Lcom/android/settings_ex/motion/MotionSettings2015;
 
-    invoke-virtual {v0, p1}, Lcom/android/settings/motion/MotionSettings2015;->changeColor(I)V
+    invoke-virtual {v0, p1}, Lcom/android/settings_ex/motion/MotionSettings2015;->changeColor(I)V
 
     .line 183
     return-void

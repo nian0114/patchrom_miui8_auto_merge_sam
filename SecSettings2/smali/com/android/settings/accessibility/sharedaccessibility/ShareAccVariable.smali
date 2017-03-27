@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;
+.class public Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;
 .super Ljava/lang/Object;
 .source "ShareAccVariable.java"
 
@@ -610,28 +610,28 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->keyList:[Ljava/lang/String;
 
     .line 179
     new-instance v0, Landroid/content/res/Configuration;
 
     invoke-direct {v0}, Landroid/content/res/Configuration;-><init>()V
 
-    sput-object v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->mCurConfig:Landroid/content/res/Configuration;
+    sput-object v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->mCurConfig:Landroid/content/res/Configuration;
 
     .line 181
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    sput-object v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->sInstalledServices:Ljava/util/Set;
+    sput-object v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->sInstalledServices:Ljava/util/Set;
 
     .line 183
     new-instance v0, Landroid/text/TextUtils$SimpleStringSplitter;
 
     invoke-direct {v0, v5}, Landroid/text/TextUtils$SimpleStringSplitter;-><init>(C)V
 
-    sput-object v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->sStringColonSplitter:Landroid/text/TextUtils$SimpleStringSplitter;
+    sput-object v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->sStringColonSplitter:Landroid/text/TextUtils$SimpleStringSplitter;
 
     .line 191
     new-instance v0, Ljava/lang/StringBuilder;
@@ -662,7 +662,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->ACC_SETTING_FILE_INTERNAL_FOLDER_PATH:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->ACC_SETTING_FILE_INTERNAL_FOLDER_PATH:Ljava/lang/String;
 
     .line 193
     new-instance v0, Ljava/lang/StringBuilder;
@@ -687,30 +687,30 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->ACC_SETTING_FILE_MOST_INTERNAL_PATH:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->ACC_SETTING_FILE_MOST_INTERNAL_PATH:Ljava/lang/String;
 
     .line 200
     const-string v0, "yyyyMMdd"
 
-    sput-object v0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->DATE_FORMAT:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->DATE_FORMAT:Ljava/lang/String;
 
     .line 207
-    sput-object v3, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->FILE_NAME:Ljava/lang/String;
+    sput-object v3, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->FILE_NAME:Ljava/lang/String;
 
     .line 209
-    sput v4, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->SaveFlag:I
+    sput v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->SaveFlag:I
 
     .line 212
-    sput-object v3, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
+    sput-object v3, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->fis:Ljava/io/FileInputStream;
 
     .line 213
-    sput-object v3, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->ois:Ljava/io/ObjectInputStream;
+    sput-object v3, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->ois:Ljava/io/ObjectInputStream;
 
     .line 214
-    sput-object v3, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->export_internal_file:Ljava/io/File;
+    sput-object v3, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->export_internal_file:Ljava/io/File;
 
     .line 215
-    sput-object v3, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->export_external_file:Ljava/io/File;
+    sput-object v3, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->export_external_file:Ljava/io/File;
 
     return-void
 .end method

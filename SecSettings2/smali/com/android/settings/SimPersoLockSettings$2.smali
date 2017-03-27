@@ -1,11 +1,11 @@
-.class Lcom/android/settings/SimPersoLockSettings$2;
+.class Lcom/android/settings_ex/SimPersoLockSettings$2;
 .super Landroid/content/BroadcastReceiver;
 .source "SimPersoLockSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/SimPersoLockSettings;
+    value = Lcom/android/settings_ex/SimPersoLockSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/SimPersoLockSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/SimPersoLockSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/SimPersoLockSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/SimPersoLockSettings;)V
     .locals 0
 
     .prologue
     .line 137
-    iput-object p1, p0, Lcom/android/settings/SimPersoLockSettings$2;->this$0:Lcom/android/settings/SimPersoLockSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/SimPersoLockSettings$2;->this$0:Lcom/android/settings_ex/SimPersoLockSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -51,9 +51,9 @@
     if-eqz v0, :cond_0
 
     .line 141
-    iget-object v0, p0, Lcom/android/settings/SimPersoLockSettings$2;->this$0:Lcom/android/settings/SimPersoLockSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/SimPersoLockSettings$2;->this$0:Lcom/android/settings_ex/SimPersoLockSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/SimPersoLockSettings;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/SimPersoLockSettings;->finish()V
 
     .line 144
     :cond_0

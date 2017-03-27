@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageView;
+.class public Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageView;
 .super Landroid/preference/Preference;
 .source "ToggleMagnifierPreferenceFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;
+    value = Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,12 +26,12 @@
     .line 349
     const v0, 0x7f04012f
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageView;->setLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageView;->setLayoutResource(I)V
 
     .line 350
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageView;->setSelectable(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$MagnifierImageView;->setSelectable(Z)V
 
     .line 351
     return-void

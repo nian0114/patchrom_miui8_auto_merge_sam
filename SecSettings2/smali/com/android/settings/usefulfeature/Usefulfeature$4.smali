@@ -1,11 +1,11 @@
-.class Lcom/android/settings/usefulfeature/Usefulfeature$4;
+.class Lcom/android/settings_ex/usefulfeature/Usefulfeature$4;
 .super Landroid/database/ContentObserver;
 .source "Usefulfeature.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/usefulfeature/Usefulfeature;
+    value = Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+.field final synthetic this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/usefulfeature/Usefulfeature;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/usefulfeature/Usefulfeature;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 199
-    iput-object p1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$4;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iput-object p1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$4;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -42,20 +42,20 @@
     const v0, 0x7f0e0ea7
 
     .line 202
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$4;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$4;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
-    # getter for: Lcom/android/settings/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceiving:Landroid/preference/Preference;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$900(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceiving:Landroid/preference/Preference;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$900(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
     .line 203
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$4;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$4;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
-    # invokes: Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$1000(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$1000(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -70,10 +70,10 @@
     if-nez v1, :cond_1
 
     .line 204
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$4;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$4;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
-    # getter for: Lcom/android/settings/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceiving:Landroid/preference/Preference;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$900(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceiving:Landroid/preference/Preference;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$900(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -86,17 +86,17 @@
 
     .line 206
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$4;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$4;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
-    # getter for: Lcom/android/settings/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceiving:Landroid/preference/Preference;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$900(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceiving:Landroid/preference/Preference;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$900(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/usefulfeature/Usefulfeature$4;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iget-object v2, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$4;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
-    # invokes: Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v2}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$1100(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v2}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$1100(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/content/ContentResolver;
 
     move-result-object v2
 

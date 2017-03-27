@@ -1,11 +1,11 @@
-.class Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$2;
+.class Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$2;
 .super Landroid/os/Handler;
 .source "ChooseLockPassword.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
+    value = Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;)V
     .locals 0
 
     .prologue
     .line 397
-    iput-object p1, p0, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$2;->this$0:Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$2;->this$0:Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -49,19 +49,19 @@
 
     .line 402
     :pswitch_0
-    iget-object v0, p0, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$2;->this$0:Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$2;->this$0:Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;
 
-    iget-object v0, v0, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->mH:Landroid/os/Handler;
+    iget-object v0, v0, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->mH:Landroid/os/Handler;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 403
-    iget-object v0, p0, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$2;->this$0:Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$2;->this$0:Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;
 
-    # invokes: Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->showSoftInput()V
-    invoke-static {v0}, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->access$300(Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;)V
+    # invokes: Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->showSoftInput()V
+    invoke-static {v0}, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->access$300(Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;)V
 
     goto :goto_0
 

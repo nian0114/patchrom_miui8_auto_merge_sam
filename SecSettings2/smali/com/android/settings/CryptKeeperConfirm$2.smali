@@ -1,4 +1,4 @@
-.class Lcom/android/settings/CryptKeeperConfirm$2;
+.class Lcom/android/settings_ex/CryptKeeperConfirm$2;
 .super Ljava/lang/Object;
 .source "CryptKeeperConfirm.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/CryptKeeperConfirm;
+    value = Lcom/android/settings_ex/CryptKeeperConfirm;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/CryptKeeperConfirm;
+.field final synthetic this$0:Lcom/android/settings_ex/CryptKeeperConfirm;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/CryptKeeperConfirm;)V
+.method constructor <init>(Lcom/android/settings_ex/CryptKeeperConfirm;)V
     .locals 0
 
     .prologue
     .line 233
-    iput-object p1, p0, Lcom/android/settings/CryptKeeperConfirm$2;->this$0:Lcom/android/settings/CryptKeeperConfirm;
+    iput-object p1, p0, Lcom/android/settings_ex/CryptKeeperConfirm$2;->this$0:Lcom/android/settings_ex/CryptKeeperConfirm;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

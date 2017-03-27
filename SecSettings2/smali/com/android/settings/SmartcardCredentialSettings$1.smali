@@ -1,4 +1,4 @@
-.class Lcom/android/settings/SmartcardCredentialSettings$1;
+.class Lcom/android/settings_ex/SmartcardCredentialSettings$1;
 .super Ljava/lang/Object;
 .source "SmartcardCredentialSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/SmartcardCredentialSettings;->showDialog()V
+    value = Lcom/android/settings_ex/SmartcardCredentialSettings;->showDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/SmartcardCredentialSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/SmartcardCredentialSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/SmartcardCredentialSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/SmartcardCredentialSettings;)V
     .locals 0
 
     .prologue
     .line 128
-    iput-object p1, p0, Lcom/android/settings/SmartcardCredentialSettings$1;->this$0:Lcom/android/settings/SmartcardCredentialSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/SmartcardCredentialSettings$1;->this$0:Lcom/android/settings_ex/SmartcardCredentialSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,9 +42,9 @@
 
     .prologue
     .line 133
-    iget-object v0, p0, Lcom/android/settings/SmartcardCredentialSettings$1;->this$0:Lcom/android/settings/SmartcardCredentialSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/SmartcardCredentialSettings$1;->this$0:Lcom/android/settings_ex/SmartcardCredentialSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/SmartcardCredentialSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SmartcardCredentialSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 

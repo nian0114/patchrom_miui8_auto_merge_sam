@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/deviceinfo/StorageUnmountReceiver;
+.class public Lcom/android/settings_ex/deviceinfo/StorageUnmountReceiver;
 .super Landroid/content/BroadcastReceiver;
 .source "StorageUnmountReceiver.java"
 
@@ -50,15 +50,15 @@
     if-eqz v1, :cond_0
 
     .line 38
-    new-instance v3, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;
+    new-instance v3, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;
 
-    invoke-direct {v3, p1, v1}, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;-><init>(Landroid/content/Context;Landroid/os/storage/VolumeInfo;)V
+    invoke-direct {v3, p1, v1}, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;-><init>(Landroid/content/Context;Landroid/os/storage/VolumeInfo;)V
 
     const/4 v4, 0x0
 
     new-array v4, v4, [Ljava/lang/Void;
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     .line 42
     :goto_0

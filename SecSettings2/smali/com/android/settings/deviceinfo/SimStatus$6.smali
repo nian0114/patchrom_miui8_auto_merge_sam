@@ -1,11 +1,11 @@
-.class Lcom/android/settings/deviceinfo/SimStatus$6;
+.class Lcom/android/settings_ex/deviceinfo/SimStatus$6;
 .super Landroid/content/BroadcastReceiver;
 .source "SimStatus.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/SimStatus;
+    value = Lcom/android/settings_ex/deviceinfo/SimStatus;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/SimStatus;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/SimStatus;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/SimStatus;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/SimStatus;)V
     .locals 0
 
     .prologue
     .line 716
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/SimStatus$6;->this$0:Lcom/android/settings/deviceinfo/SimStatus;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/SimStatus$6;->this$0:Lcom/android/settings_ex/deviceinfo/SimStatus;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -117,7 +117,7 @@
     if-eqz v5, :cond_0
 
     .line 730
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/SimStatus$6;->this$0:Lcom/android/settings/deviceinfo/SimStatus;
+    iget-object v5, p0, Lcom/android/settings_ex/deviceinfo/SimStatus$6;->this$0:Lcom/android/settings_ex/deviceinfo/SimStatus;
 
     const/4 v6, 0x0
 
@@ -125,8 +125,8 @@
 
     move-result v6
 
-    # setter for: Lcom/android/settings/deviceinfo/SimStatus;->mImsRegistered:Z
-    invoke-static {v5, v6}, Lcom/android/settings/deviceinfo/SimStatus;->access$1102(Lcom/android/settings/deviceinfo/SimStatus;Z)Z
+    # setter for: Lcom/android/settings_ex/deviceinfo/SimStatus;->mImsRegistered:Z
+    invoke-static {v5, v6}, Lcom/android/settings_ex/deviceinfo/SimStatus;->access$1102(Lcom/android/settings_ex/deviceinfo/SimStatus;Z)Z
 
     .line 733
     :cond_0

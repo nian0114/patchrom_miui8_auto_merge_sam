@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/EFSProperties$KeyguardProperties;
+.class public Lcom/android/settings_ex/EFSProperties$KeyguardProperties;
 .super Ljava/lang/Object;
 .source "EFSProperties.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/EFSProperties;
+    value = Lcom/android/settings_ex/EFSProperties;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -45,28 +45,28 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 517
-    iput-object v1, p0, Lcom/android/settings/EFSProperties$KeyguardProperties;->csName:[B
+    iput-object v1, p0, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->csName:[B
 
     .line 518
-    iput-object v1, p0, Lcom/android/settings/EFSProperties$KeyguardProperties;->AID:[B
+    iput-object v1, p0, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->AID:[B
 
     .line 519
-    iput v0, p0, Lcom/android/settings/EFSProperties$KeyguardProperties;->storageType:I
+    iput v0, p0, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->storageType:I
 
     .line 520
-    iput v0, p0, Lcom/android/settings/EFSProperties$KeyguardProperties;->enabledSCP:I
+    iput v0, p0, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->enabledSCP:I
 
     .line 521
-    iput v0, p0, Lcom/android/settings/EFSProperties$KeyguardProperties;->pinMinLength:I
+    iput v0, p0, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->pinMinLength:I
 
     .line 522
-    iput v0, p0, Lcom/android/settings/EFSProperties$KeyguardProperties;->pinMaxLength:I
+    iput v0, p0, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->pinMaxLength:I
 
     .line 523
-    iput v0, p0, Lcom/android/settings/EFSProperties$KeyguardProperties;->pukMinLength:I
+    iput v0, p0, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->pukMinLength:I
 
     .line 524
-    iput v0, p0, Lcom/android/settings/EFSProperties$KeyguardProperties;->pukMaxLength:I
+    iput v0, p0, Lcom/android/settings_ex/EFSProperties$KeyguardProperties;->pukMaxLength:I
 
     .line 525
     return-void

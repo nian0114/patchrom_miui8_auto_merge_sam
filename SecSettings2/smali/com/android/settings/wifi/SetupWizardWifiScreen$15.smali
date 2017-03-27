@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/SetupWizardWifiScreen$15;
+.class Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$15;
 .super Ljava/lang/Object;
 .source "SetupWizardWifiScreen.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/SetupWizardWifiScreen;->showAlertDialog(I)V
+    value = Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->showAlertDialog(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
     .locals 0
 
     .prologue
     .line 521
-    iput-object p1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$15;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$15;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

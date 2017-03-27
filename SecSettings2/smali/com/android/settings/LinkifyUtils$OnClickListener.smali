@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/LinkifyUtils$OnClickListener;
+.class public interface abstract Lcom/android/settings_ex/LinkifyUtils$OnClickListener;
 .super Ljava/lang/Object;
 .source "LinkifyUtils.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/LinkifyUtils;
+    value = Lcom/android/settings_ex/LinkifyUtils;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

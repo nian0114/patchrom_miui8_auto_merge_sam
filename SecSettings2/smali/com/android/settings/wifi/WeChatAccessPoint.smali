@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/WeChatAccessPoint;
+.class public Lcom/android/settings_ex/wifi/WeChatAccessPoint;
 .super Ljava/lang/Object;
 .source "WeChatAccessPoint.java"
 
@@ -48,21 +48,21 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lcom/android/settings/wifi/WeChatAccessPoint;->mSsidList:Ljava/util/ArrayList;
+    sput-object v0, Lcom/android/settings_ex/wifi/WeChatAccessPoint;->mSsidList:Ljava/util/ArrayList;
 
     .line 23
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lcom/android/settings/wifi/WeChatAccessPoint;->mBssidList:Ljava/util/ArrayList;
+    sput-object v0, Lcom/android/settings_ex/wifi/WeChatAccessPoint;->mBssidList:Ljava/util/ArrayList;
 
     .line 24
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lcom/android/settings/wifi/WeChatAccessPoint;->mStoreNameList:Ljava/util/ArrayList;
+    sput-object v0, Lcom/android/settings_ex/wifi/WeChatAccessPoint;->mStoreNameList:Ljava/util/ArrayList;
 
     return-void
 .end method
@@ -85,17 +85,17 @@
 
     .prologue
     .line 32
-    sget-object v0, Lcom/android/settings/wifi/WeChatAccessPoint;->mSsidList:Ljava/util/ArrayList;
+    sget-object v0, Lcom/android/settings_ex/wifi/WeChatAccessPoint;->mSsidList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     .line 33
-    sget-object v0, Lcom/android/settings/wifi/WeChatAccessPoint;->mBssidList:Ljava/util/ArrayList;
+    sget-object v0, Lcom/android/settings_ex/wifi/WeChatAccessPoint;->mBssidList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     .line 34
-    sget-object v0, Lcom/android/settings/wifi/WeChatAccessPoint;->mStoreNameList:Ljava/util/ArrayList;
+    sget-object v0, Lcom/android/settings_ex/wifi/WeChatAccessPoint;->mStoreNameList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
@@ -109,17 +109,17 @@
 
     .prologue
     .line 39
-    sget-object v4, Lcom/android/settings/wifi/WeChatAccessPoint;->mSsidList:Ljava/util/ArrayList;
+    sget-object v4, Lcom/android/settings_ex/wifi/WeChatAccessPoint;->mSsidList:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
     .line 40
-    sget-object v4, Lcom/android/settings/wifi/WeChatAccessPoint;->mBssidList:Ljava/util/ArrayList;
+    sget-object v4, Lcom/android/settings_ex/wifi/WeChatAccessPoint;->mBssidList:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
     .line 41
-    sget-object v4, Lcom/android/settings/wifi/WeChatAccessPoint;->mStoreNameList:Ljava/util/ArrayList;
+    sget-object v4, Lcom/android/settings_ex/wifi/WeChatAccessPoint;->mStoreNameList:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
@@ -176,7 +176,7 @@
 
     const/4 v5, 0x0
 
-    invoke-virtual {p0, p1, v4, v5}, Lcom/android/settings/wifi/WeChatAccessPoint;->saveConfiguration(Landroid/content/Context;IZ)V
+    invoke-virtual {p0, p1, v4, v5}, Lcom/android/settings_ex/wifi/WeChatAccessPoint;->saveConfiguration(Landroid/content/Context;IZ)V
 
     goto :goto_0
 
@@ -227,7 +227,7 @@
 
     move-result-object v2
 
-    sget-object v3, Lcom/android/settings/wifi/WeChatAccessPoint;->mSsidList:Ljava/util/ArrayList;
+    sget-object v3, Lcom/android/settings_ex/wifi/WeChatAccessPoint;->mSsidList:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -253,7 +253,7 @@
 
     .local v0, "index":I
     :goto_0
-    sget-object v1, Lcom/android/settings/wifi/WeChatAccessPoint;->mSsidList:Ljava/util/ArrayList;
+    sget-object v1, Lcom/android/settings_ex/wifi/WeChatAccessPoint;->mSsidList:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -274,7 +274,7 @@
 
     move-result-object v3
 
-    sget-object v1, Lcom/android/settings/wifi/WeChatAccessPoint;->mSsidList:Ljava/util/ArrayList;
+    sget-object v1, Lcom/android/settings_ex/wifi/WeChatAccessPoint;->mSsidList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -292,7 +292,7 @@
 
     move-result-object v3
 
-    sget-object v1, Lcom/android/settings/wifi/WeChatAccessPoint;->mBssidList:Ljava/util/ArrayList;
+    sget-object v1, Lcom/android/settings_ex/wifi/WeChatAccessPoint;->mBssidList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -311,7 +311,7 @@
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 70
-    sget-object v1, Lcom/android/settings/wifi/WeChatAccessPoint;->mSsidList:Ljava/util/ArrayList;
+    sget-object v1, Lcom/android/settings_ex/wifi/WeChatAccessPoint;->mSsidList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -325,7 +325,7 @@
 
     if-eqz v1, :cond_0
 
-    sget-object v1, Lcom/android/settings/wifi/WeChatAccessPoint;->mBssidList:Ljava/util/ArrayList;
+    sget-object v1, Lcom/android/settings_ex/wifi/WeChatAccessPoint;->mBssidList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -340,7 +340,7 @@
     if-eqz v1, :cond_0
 
     .line 71
-    sget-object v1, Lcom/android/settings/wifi/WeChatAccessPoint;->mStoreNameList:Ljava/util/ArrayList;
+    sget-object v1, Lcom/android/settings_ex/wifi/WeChatAccessPoint;->mStoreNameList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -503,13 +503,13 @@
     .local p1, "ssidList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .local p2, "bssidList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .local p3, "storeNameList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
-    sput-object p1, Lcom/android/settings/wifi/WeChatAccessPoint;->mSsidList:Ljava/util/ArrayList;
+    sput-object p1, Lcom/android/settings_ex/wifi/WeChatAccessPoint;->mSsidList:Ljava/util/ArrayList;
 
     .line 59
-    sput-object p2, Lcom/android/settings/wifi/WeChatAccessPoint;->mBssidList:Ljava/util/ArrayList;
+    sput-object p2, Lcom/android/settings_ex/wifi/WeChatAccessPoint;->mBssidList:Ljava/util/ArrayList;
 
     .line 60
-    sput-object p3, Lcom/android/settings/wifi/WeChatAccessPoint;->mStoreNameList:Ljava/util/ArrayList;
+    sput-object p3, Lcom/android/settings_ex/wifi/WeChatAccessPoint;->mStoreNameList:Ljava/util/ArrayList;
 
     .line 61
     return-void

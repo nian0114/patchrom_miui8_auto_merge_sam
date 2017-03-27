@@ -1,11 +1,11 @@
-.class Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment$2;
+.class Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment$2;
 .super Landroid/database/ContentObserver;
 .source "ChooseLockGeneric.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment;
+    value = Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 331
-    iput-object p1, p0, Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment$2;->this$0:Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment$2;->this$0:Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -40,9 +40,9 @@
 
     .prologue
     .line 334
-    iget-object v0, p0, Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment$2;->this$0:Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment$2;->this$0:Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment;
 
-    invoke-virtual {v0}, Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment;->wManagerChanged()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment;->wManagerChanged()V
 
     .line 335
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiSettings$1;
+.class Lcom/android/settings_ex/wifi/WifiSettings$1;
 .super Ljava/lang/Object;
 .source "WifiSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiSettings;
+    value = Lcom/android/settings_ex/wifi/WifiSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSettings;)V
     .locals 0
 
     .prologue
     .line 630
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSettings$1;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSettings$1;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,10 +48,10 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 643
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings$1;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSettings$1;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mAddDelAnimator:Lcom/sec/android/touchwiz/animator/TwAddDeleteListAnimator;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiSettings;->access$500(Lcom/android/settings/wifi/WifiSettings;)Lcom/sec/android/touchwiz/animator/TwAddDeleteListAnimator;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mAddDelAnimator:Lcom/sec/android/touchwiz/animator/TwAddDeleteListAnimator;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiSettings;->access$500(Lcom/android/settings_ex/wifi/WifiSettings;)Lcom/sec/android/touchwiz/animator/TwAddDeleteListAnimator;
 
     move-result-object v0
 
@@ -67,10 +67,10 @@
 
     .line 645
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings$1;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSettings$1;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # invokes: Lcom/android/settings/wifi/WifiSettings;->addToAdapter()V
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiSettings;->access$800(Lcom/android/settings/wifi/WifiSettings;)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiSettings;->addToAdapter()V
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiSettings;->access$800(Lcom/android/settings_ex/wifi/WifiSettings;)V
 
     goto :goto_0
 .end method
@@ -88,12 +88,12 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 662
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings$1;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSettings$1;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
     const/4 v1, 0x0
 
-    # setter for: Lcom/android/settings/wifi/WifiSettings;->mIsRunningAnimation:Z
-    invoke-static {v0, v1}, Lcom/android/settings/wifi/WifiSettings;->access$902(Lcom/android/settings/wifi/WifiSettings;Z)Z
+    # setter for: Lcom/android/settings_ex/wifi/WifiSettings;->mIsRunningAnimation:Z
+    invoke-static {v0, v1}, Lcom/android/settings_ex/wifi/WifiSettings;->access$902(Lcom/android/settings_ex/wifi/WifiSettings;Z)Z
 
     .line 663
     return-void
@@ -127,10 +127,10 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 634
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings$1;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSettings$1;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mAddDelAnimator:Lcom/sec/android/touchwiz/animator/TwAddDeleteListAnimator;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiSettings;->access$500(Lcom/android/settings/wifi/WifiSettings;)Lcom/sec/android/touchwiz/animator/TwAddDeleteListAnimator;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mAddDelAnimator:Lcom/sec/android/touchwiz/animator/TwAddDeleteListAnimator;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiSettings;->access$500(Lcom/android/settings_ex/wifi/WifiSettings;)Lcom/sec/android/touchwiz/animator/TwAddDeleteListAnimator;
 
     move-result-object v0
 
@@ -141,10 +141,10 @@
     if-eqz v0, :cond_0
 
     .line 635
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings$1;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSettings$1;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # invokes: Lcom/android/settings/wifi/WifiSettings;->addDeleteFromAdapter()V
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiSettings;->access$600(Lcom/android/settings/wifi/WifiSettings;)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiSettings;->addDeleteFromAdapter()V
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiSettings;->access$600(Lcom/android/settings_ex/wifi/WifiSettings;)V
 
     .line 639
     :goto_0
@@ -152,10 +152,10 @@
 
     .line 637
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings$1;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSettings$1;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # invokes: Lcom/android/settings/wifi/WifiSettings;->deleteFromAdapter()V
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiSettings;->access$700(Lcom/android/settings/wifi/WifiSettings;)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiSettings;->deleteFromAdapter()V
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiSettings;->access$700(Lcom/android/settings_ex/wifi/WifiSettings;)V
 
     goto :goto_0
 .end method

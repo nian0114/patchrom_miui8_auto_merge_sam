@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/applications/LinearColorPreference;
+.class public Lcom/android/settings_ex/applications/LinearColorPreference;
 .super Landroid/preference/Preference;
 .source "LinearColorPreference.java"
 
@@ -10,7 +10,7 @@
 
 .field mGreenRatio:F
 
-.field mOnRegionTappedListener:Lcom/android/settings/applications/LinearColorBar$OnRegionTappedListener;
+.field mOnRegionTappedListener:Lcom/android/settings_ex/applications/LinearColorBar$OnRegionTappedListener;
 
 .field mRedColor:I
 
@@ -37,41 +37,41 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/applications/LinearColorBar;
+    check-cast v0, Lcom/android/settings_ex/applications/LinearColorBar;
 
     .line 69
-    .local v0, "colors":Lcom/android/settings/applications/LinearColorBar;
+    .local v0, "colors":Lcom/android/settings_ex/applications/LinearColorBar;
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/applications/LinearColorBar;->setShowIndicator(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/applications/LinearColorBar;->setShowIndicator(Z)V
 
     .line 70
-    iget v1, p0, Lcom/android/settings/applications/LinearColorPreference;->mRedColor:I
+    iget v1, p0, Lcom/android/settings_ex/applications/LinearColorPreference;->mRedColor:I
 
-    iget v2, p0, Lcom/android/settings/applications/LinearColorPreference;->mYellowColor:I
+    iget v2, p0, Lcom/android/settings_ex/applications/LinearColorPreference;->mYellowColor:I
 
-    iget v3, p0, Lcom/android/settings/applications/LinearColorPreference;->mGreenColor:I
+    iget v3, p0, Lcom/android/settings_ex/applications/LinearColorPreference;->mGreenColor:I
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/applications/LinearColorBar;->setColors(III)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings_ex/applications/LinearColorBar;->setColors(III)V
 
     .line 71
-    iget v1, p0, Lcom/android/settings/applications/LinearColorPreference;->mRedRatio:F
+    iget v1, p0, Lcom/android/settings_ex/applications/LinearColorPreference;->mRedRatio:F
 
-    iget v2, p0, Lcom/android/settings/applications/LinearColorPreference;->mYellowRatio:F
+    iget v2, p0, Lcom/android/settings_ex/applications/LinearColorPreference;->mYellowRatio:F
 
-    iget v3, p0, Lcom/android/settings/applications/LinearColorPreference;->mGreenRatio:F
+    iget v3, p0, Lcom/android/settings_ex/applications/LinearColorPreference;->mGreenRatio:F
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/applications/LinearColorBar;->setRatios(FFF)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings_ex/applications/LinearColorBar;->setRatios(FFF)V
 
     .line 72
-    iget v1, p0, Lcom/android/settings/applications/LinearColorPreference;->mColoredRegions:I
+    iget v1, p0, Lcom/android/settings_ex/applications/LinearColorPreference;->mColoredRegions:I
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/applications/LinearColorBar;->setColoredRegions(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/applications/LinearColorBar;->setColoredRegions(I)V
 
     .line 73
-    iget-object v1, p0, Lcom/android/settings/applications/LinearColorPreference;->mOnRegionTappedListener:Lcom/android/settings/applications/LinearColorBar$OnRegionTappedListener;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/LinearColorPreference;->mOnRegionTappedListener:Lcom/android/settings_ex/applications/LinearColorBar$OnRegionTappedListener;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/applications/LinearColorBar;->setOnRegionTappedListener(Lcom/android/settings/applications/LinearColorBar$OnRegionTappedListener;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/applications/LinearColorBar;->setOnRegionTappedListener(Lcom/android/settings_ex/applications/LinearColorBar$OnRegionTappedListener;)V
 
     .line 74
     return-void

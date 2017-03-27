@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/TRoamingSettings$10;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/TRoamingSettings$10;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "TRoamingSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/TRoamingSettings;
+    value = Lcom/android/settings_ex/TRoamingSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 838
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -60,19 +60,19 @@
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 860
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportLTERoaming()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportLTERoaming()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isExceptionalUSIM()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isExceptionalUSIM()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticOPENModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticOPENModel()Z
 
     move-result v1
 
@@ -86,7 +86,7 @@
 
     .line 864
     :cond_1
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticKTTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticKTTModel()Z
 
     move-result v1
 
@@ -104,13 +104,13 @@
 
     .line 869
     :cond_2
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticKTTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticKTTModel()Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticOPENModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticOPENModel()Z
 
     move-result v1
 
@@ -141,7 +141,7 @@
 
     if-eqz v1, :cond_5
 
-    invoke-static {}, Lcom/android/settings/Utils;->isExceptionalUSIM()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isExceptionalUSIM()Z
 
     move-result v1
 

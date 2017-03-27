@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fmm/SimChangeAlert$8;
+.class Lcom/android/settings_ex/fmm/SimChangeAlert$8;
 .super Ljava/lang/Object;
 .source "SimChangeAlert.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fmm/SimChangeAlert;->showNotificationChargeDialog()V
+    value = Lcom/android/settings_ex/fmm/SimChangeAlert;->showNotificationChargeDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fmm/SimChangeAlert;
+.field final synthetic this$0:Lcom/android/settings_ex/fmm/SimChangeAlert;
 
 .field final synthetic val$chkbox:Landroid/widget/CheckBox;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fmm/SimChangeAlert;Landroid/widget/CheckBox;)V
+.method constructor <init>(Lcom/android/settings_ex/fmm/SimChangeAlert;Landroid/widget/CheckBox;)V
     .locals 0
 
     .prologue
     .line 313
-    iput-object p1, p0, Lcom/android/settings/fmm/SimChangeAlert$8;->this$0:Lcom/android/settings/fmm/SimChangeAlert;
+    iput-object p1, p0, Lcom/android/settings_ex/fmm/SimChangeAlert$8;->this$0:Lcom/android/settings_ex/fmm/SimChangeAlert;
 
-    iput-object p2, p0, Lcom/android/settings/fmm/SimChangeAlert$8;->val$chkbox:Landroid/widget/CheckBox;
+    iput-object p2, p0, Lcom/android/settings_ex/fmm/SimChangeAlert$8;->val$chkbox:Landroid/widget/CheckBox;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,7 +47,7 @@
 
     .prologue
     .line 316
-    iget-object v0, p0, Lcom/android/settings/fmm/SimChangeAlert$8;->val$chkbox:Landroid/widget/CheckBox;
+    iget-object v0, p0, Lcom/android/settings_ex/fmm/SimChangeAlert$8;->val$chkbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
 
@@ -58,7 +58,7 @@
     .line 317
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/android/settings/fmm/SimChangeAlert;->chkboxFlag:Z
+    sput-boolean v0, Lcom/android/settings_ex/fmm/SimChangeAlert;->chkboxFlag:Z
 
     .line 319
     :cond_0

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiWarningDialog$2;
+.class Lcom/android/settings_ex/wifi/WifiWarningDialog$2;
 .super Ljava/lang/Object;
 .source "WifiWarningDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiWarningDialog;->showEnableWarningDialog()V
+    value = Lcom/android/settings_ex/wifi/WifiWarningDialog;->showEnableWarningDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiWarningDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiWarningDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiWarningDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiWarningDialog;)V
     .locals 0
 
     .prologue
     .line 138
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiWarningDialog$2;->this$0:Lcom/android/settings/wifi/WifiWarningDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog$2;->this$0:Lcom/android/settings_ex/wifi/WifiWarningDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,10 +53,10 @@
     if-ne p2, v1, :cond_0
 
     .line 142
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiWarningDialog$2;->this$0:Lcom/android/settings/wifi/WifiWarningDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog$2;->this$0:Lcom/android/settings_ex/wifi/WifiWarningDialog;
 
-    # invokes: Lcom/android/settings/wifi/WifiWarningDialog;->wifiWarningDialogPressCancel()V
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiWarningDialog;->access$100(Lcom/android/settings/wifi/WifiWarningDialog;)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiWarningDialog;->wifiWarningDialogPressCancel()V
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiWarningDialog;->access$100(Lcom/android/settings_ex/wifi/WifiWarningDialog;)V
 
     .line 143
     const/4 v0, 0x1

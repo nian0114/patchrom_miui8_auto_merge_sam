@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApWarning$5;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$5;
 .super Ljava/lang/Object;
 .source "WifiApWarning.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/mobileap/WifiApWarning;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WifiApWarning;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WifiApWarning;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;)V
     .locals 0
 
     .prologue
     .line 380
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApWarning$5;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWarning;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$5;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,17 +42,17 @@
 
     .prologue
     .line 383
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWarning$5;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWarning;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$5;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApWarning;->mApEnableWarnDoNotShowAgain:Landroid/widget/CheckBox;
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WifiApWarning;->access$800(Lcom/android/settings/wifi/mobileap/WifiApWarning;)Landroid/widget/CheckBox;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->mApEnableWarnDoNotShowAgain:Landroid/widget/CheckBox;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->access$800(Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;)Landroid/widget/CheckBox;
 
     move-result-object v1
 
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWarning$5;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWarning;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$5;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApWarning;->mApEnableWarnDoNotShowAgain:Landroid/widget/CheckBox;
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WifiApWarning;->access$800(Lcom/android/settings/wifi/mobileap/WifiApWarning;)Landroid/widget/CheckBox;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->mApEnableWarnDoNotShowAgain:Landroid/widget/CheckBox;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->access$800(Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;)Landroid/widget/CheckBox;
 
     move-result-object v0
 

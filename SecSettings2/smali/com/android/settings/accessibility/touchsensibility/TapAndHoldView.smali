@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;
+.class public Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;
 .super Landroid/widget/ImageView;
 .source "TapAndHoldView.java"
 
@@ -41,7 +41,7 @@
     .line 24
     const-wide/16 v0, 0x0
 
-    sput-wide v0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->touch_time:J
+    sput-wide v0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->touch_time:J
 
     return-void
 .end method
@@ -61,44 +61,44 @@
     invoke-direct {p0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     .line 21
-    iput v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->startX:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->startX:F
 
     .line 22
-    iput v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->startY:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->startY:F
 
     .line 25
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->final_touch_time:J
+    iput-wide v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->final_touch_time:J
 
     .line 27
-    iput-boolean v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->isLongPressDone:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->isLongPressDone:Z
 
     .line 28
-    iput-boolean v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->blockLongPress:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->blockLongPress:Z
 
     .line 29
-    iput-boolean v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->isStartCounting:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->isStartCounting:Z
 
     .line 36
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
 
     .line 38
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     .line 39
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setDither(Z)V
 
     .line 54
-    invoke-direct {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->initView()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->initView()V
 
     .line 55
     return-void
@@ -120,44 +120,44 @@
     invoke-direct {p0, p1, p2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 21
-    iput v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->startX:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->startX:F
 
     .line 22
-    iput v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->startY:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->startY:F
 
     .line 25
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->final_touch_time:J
+    iput-wide v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->final_touch_time:J
 
     .line 27
-    iput-boolean v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->isLongPressDone:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->isLongPressDone:Z
 
     .line 28
-    iput-boolean v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->blockLongPress:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->blockLongPress:Z
 
     .line 29
-    iput-boolean v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->isStartCounting:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->isStartCounting:Z
 
     .line 36
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
 
     .line 38
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     .line 39
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setDither(Z)V
 
     .line 49
-    invoke-direct {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->initView()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->initView()V
 
     .line 50
     return-void
@@ -180,44 +180,44 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 21
-    iput v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->startX:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->startX:F
 
     .line 22
-    iput v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->startY:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->startY:F
 
     .line 25
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->final_touch_time:J
+    iput-wide v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->final_touch_time:J
 
     .line 27
-    iput-boolean v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->isLongPressDone:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->isLongPressDone:Z
 
     .line 28
-    iput-boolean v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->blockLongPress:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->blockLongPress:Z
 
     .line 29
-    iput-boolean v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->isStartCounting:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->isStartCounting:Z
 
     .line 36
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
 
     .line 38
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     .line 39
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setDither(Z)V
 
     .line 44
-    invoke-direct {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->initView()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->initView()V
 
     .line 45
     return-void
@@ -228,7 +228,7 @@
 
     .prologue
     .line 58
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -238,10 +238,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->mBitmapTapStandBy:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->mBitmapTapStandBy:Landroid/graphics/Bitmap;
 
     .line 60
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -251,10 +251,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->mBitmapTapConfirm:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->mBitmapTapConfirm:Landroid/graphics/Bitmap;
 
     .line 62
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -264,10 +264,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->mBitmapHoldStandBy:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->mBitmapHoldStandBy:Landroid/graphics/Bitmap;
 
     .line 64
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -277,12 +277,12 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->mBitmapHoldConfirm:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->mBitmapHoldConfirm:Landroid/graphics/Bitmap;
 
     .line 66
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->currentTapAndHoldState:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->currentTapAndHoldState:I
 
     .line 67
     return-void
@@ -295,7 +295,7 @@
 
     .prologue
     .line 165
-    iget v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->currentTapAndHoldState:I
+    iget v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->currentTapAndHoldState:I
 
     if-eqz v2, :cond_1
 
@@ -306,14 +306,14 @@
 
     .line 167
     .local v0, "uptime":J
-    sget-wide v2, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->touch_time:J
+    sget-wide v2, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->touch_time:J
 
     sub-long v2, v0, v2
 
-    iput-wide v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->final_touch_time:J
+    iput-wide v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->final_touch_time:J
 
     .line 168
-    iget-wide v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->final_touch_time:J
+    iget-wide v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->final_touch_time:J
 
     const-wide/16 v4, 0x1f4
 
@@ -324,18 +324,18 @@
     .line 169
     const/4 v2, 0x3
 
-    iput v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->currentTapAndHoldState:I
+    iput v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->currentTapAndHoldState:I
 
     .line 170
     const/4 v2, 0x1
 
-    iput-boolean v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->isLongPressDone:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->isLongPressDone:Z
 
     .line 172
     :cond_0
     const/4 v2, 0x0
 
-    iput-boolean v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->isStartCounting:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->isStartCounting:Z
 
     .line 174
     .end local v0    # "uptime":J
@@ -348,7 +348,7 @@
 
     .prologue
     .line 145
-    iget-boolean v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->isLongPressDone:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->isLongPressDone:Z
 
     return v0
 .end method
@@ -371,7 +371,7 @@
 
     .line 76
     :goto_0
-    iget v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->currentTapAndHoldState:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->currentTapAndHoldState:I
 
     packed-switch v0, :pswitch_data_0
 
@@ -380,26 +380,26 @@
 
     const-string v1, "Unknown Tap and Hold State"
 
-    invoke-static {v0, v1}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogE(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogE(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 101
     :goto_1
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->invalidate()V
 
     .line 102
     return-void
 
     .line 78
     :pswitch_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->mBitmapTapStandBy:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->mBitmapTapStandBy:Landroid/graphics/Bitmap;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->getWidth()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->getWidth()I
 
     move-result v1
 
     int-to-float v1, v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->mBitmapTapStandBy:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->mBitmapTapStandBy:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -411,13 +411,13 @@
 
     div-float/2addr v1, v4
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->getHeight()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->getHeight()I
 
     move-result v2
 
     int-to-float v2, v2
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->mBitmapTapStandBy:Landroid/graphics/Bitmap;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->mBitmapTapStandBy:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -429,7 +429,7 @@
 
     div-float/2addr v2, v4
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
@@ -437,11 +437,11 @@
 
     .line 83
     :pswitch_1
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->mBitmapTapConfirm:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->mBitmapTapConfirm:Landroid/graphics/Bitmap;
 
-    iget v1, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->startX:F
+    iget v1, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->startX:F
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->mBitmapTapConfirm:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->mBitmapTapConfirm:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -453,9 +453,9 @@
 
     sub-float/2addr v1, v2
 
-    iget v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->startY:F
+    iget v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->startY:F
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->mBitmapTapConfirm:Landroid/graphics/Bitmap;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->mBitmapTapConfirm:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -467,7 +467,7 @@
 
     sub-float/2addr v2, v3
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
@@ -475,11 +475,11 @@
 
     .line 88
     :pswitch_2
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->mBitmapHoldStandBy:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->mBitmapHoldStandBy:Landroid/graphics/Bitmap;
 
-    iget v1, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->startX:F
+    iget v1, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->startX:F
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->mBitmapHoldStandBy:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->mBitmapHoldStandBy:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -491,9 +491,9 @@
 
     sub-float/2addr v1, v2
 
-    iget v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->startY:F
+    iget v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->startY:F
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->mBitmapHoldStandBy:Landroid/graphics/Bitmap;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->mBitmapHoldStandBy:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -505,7 +505,7 @@
 
     sub-float/2addr v2, v3
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
@@ -513,11 +513,11 @@
 
     .line 93
     :pswitch_3
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->mBitmapHoldConfirm:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->mBitmapHoldConfirm:Landroid/graphics/Bitmap;
 
-    iget v1, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->startX:F
+    iget v1, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->startX:F
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->mBitmapHoldConfirm:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->mBitmapHoldConfirm:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -529,9 +529,9 @@
 
     sub-float/2addr v1, v2
 
-    iget v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->startY:F
+    iget v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->startY:F
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->mBitmapHoldConfirm:Landroid/graphics/Bitmap;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->mBitmapHoldConfirm:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -543,7 +543,7 @@
 
     sub-float/2addr v2, v3
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
@@ -570,7 +570,7 @@
 
     .prologue
     .line 141
-    iget-wide v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->final_touch_time:J
+    iget-wide v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->final_touch_time:J
 
     return-wide v0
 .end method
@@ -580,7 +580,7 @@
 
     .prologue
     .line 149
-    iget-boolean v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->isStartCounting:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->isStartCounting:Z
 
     return v0
 .end method
@@ -593,22 +593,22 @@
     invoke-super {p0}, Landroid/widget/ImageView;->onDetachedFromWindow()V
 
     .line 134
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->mBitmapTapStandBy:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->mBitmapTapStandBy:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
     .line 135
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->mBitmapTapConfirm:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->mBitmapTapConfirm:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
     .line 136
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->mBitmapHoldStandBy:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->mBitmapHoldStandBy:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
     .line 137
-    iget-object v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->mBitmapHoldConfirm:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->mBitmapHoldConfirm:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
@@ -645,38 +645,38 @@
 
     move-result v2
 
-    iput v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->startX:F
+    iput v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->startX:F
 
     .line 109
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v2
 
-    iput v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->startY:F
+    iput v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->startY:F
 
     .line 110
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    sput-wide v2, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->touch_time:J
+    sput-wide v2, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->touch_time:J
 
     .line 111
-    iput v4, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->currentTapAndHoldState:I
+    iput v4, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->currentTapAndHoldState:I
 
     .line 112
-    iput-boolean v5, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->isLongPressDone:Z
+    iput-boolean v5, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->isLongPressDone:Z
 
     .line 113
-    iput-boolean v5, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->blockLongPress:Z
+    iput-boolean v5, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->blockLongPress:Z
 
     .line 114
-    iput-boolean v4, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->isStartCounting:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->isStartCounting:Z
 
     .line 124
     :cond_0
     :goto_0
-    sget-wide v2, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->touch_time:J
+    sget-wide v2, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->touch_time:J
 
     sub-long v2, v0, v2
 
@@ -684,22 +684,22 @@
 
     if-ltz v2, :cond_1
 
-    iget-boolean v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->isLongPressDone:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->isLongPressDone:Z
 
     if-nez v2, :cond_1
 
-    iget-boolean v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->blockLongPress:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->blockLongPress:Z
 
     if-nez v2, :cond_1
 
     .line 125
     const/4 v2, 0x2
 
-    iput v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->currentTapAndHoldState:I
+    iput v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->currentTapAndHoldState:I
 
     .line 127
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->invalidate()V
 
     .line 128
     return v4
@@ -713,14 +713,14 @@
     if-ne v2, v4, :cond_0
 
     .line 116
-    sget-wide v2, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->touch_time:J
+    sget-wide v2, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->touch_time:J
 
     sub-long v2, v0, v2
 
-    iput-wide v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->final_touch_time:J
+    iput-wide v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->final_touch_time:J
 
     .line 117
-    iget-wide v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->final_touch_time:J
+    iget-wide v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->final_touch_time:J
 
     cmp-long v2, v2, v6
 
@@ -729,14 +729,14 @@
     .line 118
     const/4 v2, 0x3
 
-    iput v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->currentTapAndHoldState:I
+    iput v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->currentTapAndHoldState:I
 
     .line 119
-    iput-boolean v4, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->isLongPressDone:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->isLongPressDone:Z
 
     .line 121
     :cond_3
-    iput-boolean v5, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->isStartCounting:Z
+    iput-boolean v5, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->isStartCounting:Z
 
     goto :goto_0
 .end method
@@ -752,33 +752,33 @@
     const/4 v1, 0x0
 
     .line 153
-    iput v1, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->currentTapAndHoldState:I
+    iput v1, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->currentTapAndHoldState:I
 
     .line 154
-    iput v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->startX:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->startX:F
 
     .line 155
-    iput v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->startY:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->startY:F
 
     .line 156
-    sput-wide v2, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->touch_time:J
+    sput-wide v2, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->touch_time:J
 
     .line 157
-    iput-wide v2, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->final_touch_time:J
+    iput-wide v2, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->final_touch_time:J
 
     .line 158
-    iput-boolean v1, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->isLongPressDone:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->isLongPressDone:Z
 
     .line 159
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->blockLongPress:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->blockLongPress:Z
 
     .line 160
-    iput-boolean v1, p0, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->isStartCounting:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->isStartCounting:Z
 
     .line 161
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/touchsensibility/TapAndHoldView;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldView;->invalidate()V
 
     .line 162
     return-void

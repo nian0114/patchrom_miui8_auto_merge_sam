@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/deviceinfo/StorageWizardFormatProgress$SlowWarningFragment;
+.class public Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress$SlowWarningFragment;
 .super Landroid/app/DialogFragment;
 .source "StorageWizardFormatProgress.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/StorageWizardFormatProgress;
+    value = Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -33,7 +33,7 @@
 
     .prologue
     .line 231
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardFormatProgress$SlowWarningFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress$SlowWarningFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -45,23 +45,23 @@
 
     .line 235
     .local v0, "builder":Landroid/app/AlertDialog$Builder;
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardFormatProgress$SlowWarningFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress$SlowWarningFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/deviceinfo/StorageWizardFormatProgress;
+    check-cast v4, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress;
 
     .line 237
-    .local v4, "target":Lcom/android/settings/deviceinfo/StorageWizardFormatProgress;
-    # invokes: Lcom/android/settings/deviceinfo/StorageWizardFormatProgress;->getDiskDescription()Ljava/lang/String;
-    invoke-static {v4}, Lcom/android/settings/deviceinfo/StorageWizardFormatProgress;->access$400(Lcom/android/settings/deviceinfo/StorageWizardFormatProgress;)Ljava/lang/String;
+    .local v4, "target":Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress;
+    # invokes: Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress;->getDiskDescription()Ljava/lang/String;
+    invoke-static {v4}, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress;->access$400(Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 238
     .local v2, "descrip":Ljava/lang/String;
-    # invokes: Lcom/android/settings/deviceinfo/StorageWizardFormatProgress;->getGenericDiskDescription()Ljava/lang/String;
-    invoke-static {v4}, Lcom/android/settings/deviceinfo/StorageWizardFormatProgress;->access$500(Lcom/android/settings/deviceinfo/StorageWizardFormatProgress;)Ljava/lang/String;
+    # invokes: Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress;->getGenericDiskDescription()Ljava/lang/String;
+    invoke-static {v4}, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress;->access$500(Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -81,7 +81,7 @@
 
     aput-object v3, v6, v7
 
-    invoke-virtual {p0, v5, v6}, Lcom/android/settings/deviceinfo/StorageWizardFormatProgress$SlowWarningFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v5, v6}, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress$SlowWarningFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -90,9 +90,9 @@
     .line 241
     const v5, 0x104000a
 
-    new-instance v6, Lcom/android/settings/deviceinfo/StorageWizardFormatProgress$SlowWarningFragment$1;
+    new-instance v6, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress$SlowWarningFragment$1;
 
-    invoke-direct {v6, p0}, Lcom/android/settings/deviceinfo/StorageWizardFormatProgress$SlowWarningFragment$1;-><init>(Lcom/android/settings/deviceinfo/StorageWizardFormatProgress$SlowWarningFragment;)V
+    invoke-direct {v6, p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress$SlowWarningFragment$1;-><init>(Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress$SlowWarningFragment;)V
 
     invoke-virtual {v0, v5, v6}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 

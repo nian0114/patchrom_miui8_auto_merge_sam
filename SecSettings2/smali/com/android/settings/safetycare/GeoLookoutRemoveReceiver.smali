@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/safetycare/GeoLookoutRemoveReceiver;
+.class public Lcom/android/settings_ex/safetycare/GeoLookoutRemoveReceiver;
 .super Landroid/content/BroadcastReceiver;
 .source "GeoLookoutRemoveReceiver.java"
 
@@ -117,7 +117,7 @@
     invoke-static {v3, v4, v5}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 31
-    invoke-static {}, Lcom/android/settings/Utils;->isJapanModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isJapanModel()Z
 
     move-result v3
 

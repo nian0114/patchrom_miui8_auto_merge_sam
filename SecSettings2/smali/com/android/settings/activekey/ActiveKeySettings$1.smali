@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/activekey/ActiveKeySettings$1;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/activekey/ActiveKeySettings$1;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "ActiveKeySettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/activekey/ActiveKeySettings;
+    value = Lcom/android/settings_ex/activekey/ActiveKeySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 234
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -51,7 +51,7 @@
 
     .line 239
     .local v0, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v1, Lcom/android/settings/activekey/ActiveKeySettings;
+    const-class v1, Lcom/android/settings_ex/activekey/ActiveKeySettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -60,7 +60,7 @@
     iput-object v1, v0, Landroid/provider/SearchIndexableResource;->className:Ljava/lang/String;
 
     .line 240
-    invoke-static {}, Lcom/android/settings/Utils;->hasXcoverKeySetting()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->hasXcoverKeySetting()Z
 
     move-result v1
 

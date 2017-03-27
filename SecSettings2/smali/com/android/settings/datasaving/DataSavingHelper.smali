@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/datasaving/DataSavingHelper;
+.class public Lcom/android/settings_ex/datasaving/DataSavingHelper;
 .super Ljava/lang/Object;
 .source "DataSavingHelper.java"
 
@@ -6,8 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/datasaving/DataSavingHelper$TrafficServiceConnectionListener;,
-        Lcom/android/settings/datasaving/DataSavingHelper$SavingServiceConnectionListener;
+        Lcom/android/settings_ex/datasaving/DataSavingHelper$TrafficServiceConnectionListener;,
+        Lcom/android/settings_ex/datasaving/DataSavingHelper$SavingServiceConnectionListener;
     }
 .end annotation
 
@@ -15,7 +15,7 @@
 # static fields
 .field private static sContext:Landroid/content/Context;
 
-.field private static sInstance:Lcom/android/settings/datasaving/DataSavingHelper;
+.field private static sInstance:Lcom/android/settings_ex/datasaving/DataSavingHelper;
 
 
 # instance fields
@@ -34,7 +34,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/datasaving/DataSavingHelper$SavingServiceConnectionListener;",
+            "Lcom/android/settings_ex/datasaving/DataSavingHelper$SavingServiceConnectionListener;",
             ">;"
         }
     .end annotation
@@ -51,7 +51,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/datasaving/DataSavingHelper$TrafficServiceConnectionListener;",
+            "Lcom/android/settings_ex/datasaving/DataSavingHelper$TrafficServiceConnectionListener;",
             ">;"
         }
     .end annotation
@@ -70,10 +70,10 @@
     const/4 v0, 0x0
 
     .line 47
-    sput-object v0, Lcom/android/settings/datasaving/DataSavingHelper;->sInstance:Lcom/android/settings/datasaving/DataSavingHelper;
+    sput-object v0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->sInstance:Lcom/android/settings_ex/datasaving/DataSavingHelper;
 
     .line 48
-    sput-object v0, Lcom/android/settings/datasaving/DataSavingHelper;->sContext:Landroid/content/Context;
+    sput-object v0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->sContext:Landroid/content/Context;
 
     return-void
 .end method
@@ -90,184 +90,184 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 49
-    iput-object v2, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mAppContext:Landroid/content/Context;
+    iput-object v2, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mAppContext:Landroid/content/Context;
 
     .line 50
     const-wide/32 v0, 0x6400000
 
-    iput-wide v0, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavedBytes:J
+    iput-wide v0, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavedBytes:J
 
     .line 68
-    iput-boolean v3, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mNeedToBindSavingService:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mNeedToBindSavingService:Z
 
     .line 69
-    iput-boolean v3, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mNeedToBindTrafficService:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mNeedToBindTrafficService:Z
 
     .line 71
-    iput-object v2, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
+    iput-object v2, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
 
     .line 72
-    iput-object v2, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mTrafficService:Lcom/opera/max/sdk/traffic/ITrafficService;
+    iput-object v2, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mTrafficService:Lcom/opera/max/sdk/traffic/ITrafficService;
 
     .line 73
-    iput-object v2, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mCurrentIMSI:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mCurrentIMSI:Ljava/lang/String;
 
     .line 74
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mStateListenerRegistered:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mStateListenerRegistered:Z
 
     .line 88
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavingListeners:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavingListeners:Ljava/util/ArrayList;
 
     .line 89
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mTrafficListeners:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mTrafficListeners:Ljava/util/ArrayList;
 
     .line 91
-    new-instance v0, Lcom/android/settings/datasaving/DataSavingHelper$1;
+    new-instance v0, Lcom/android/settings_ex/datasaving/DataSavingHelper$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/datasaving/DataSavingHelper$1;-><init>(Lcom/android/settings/datasaving/DataSavingHelper;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/datasaving/DataSavingHelper$1;-><init>(Lcom/android/settings_ex/datasaving/DataSavingHelper;)V
 
-    iput-object v0, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavingServiceConnection:Landroid/content/ServiceConnection;
+    iput-object v0, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavingServiceConnection:Landroid/content/ServiceConnection;
 
     .line 126
-    new-instance v0, Lcom/android/settings/datasaving/DataSavingHelper$2;
+    new-instance v0, Lcom/android/settings_ex/datasaving/DataSavingHelper$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/datasaving/DataSavingHelper$2;-><init>(Lcom/android/settings/datasaving/DataSavingHelper;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/datasaving/DataSavingHelper$2;-><init>(Lcom/android/settings_ex/datasaving/DataSavingHelper;)V
 
-    iput-object v0, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mTrafficServiceConnection:Landroid/content/ServiceConnection;
+    iput-object v0, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mTrafficServiceConnection:Landroid/content/ServiceConnection;
 
     .line 223
-    sget-object v0, Lcom/android/settings/datasaving/DataSavingHelper;->sContext:Landroid/content/Context;
+    sget-object v0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->sContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mAppContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mAppContext:Landroid/content/Context;
 
     .line 224
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/datasaving/DataSavingHelper;)Lcom/opera/max/sdk/saving/ISavingService;
+.method static synthetic access$000(Lcom/android/settings_ex/datasaving/DataSavingHelper;)Lcom/opera/max/sdk/saving/ISavingService;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/datasaving/DataSavingHelper;
+    .param p0, "x0"    # Lcom/android/settings_ex/datasaving/DataSavingHelper;
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
+    iget-object v0, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
 
     return-object v0
 .end method
 
-.method static synthetic access$002(Lcom/android/settings/datasaving/DataSavingHelper;Lcom/opera/max/sdk/saving/ISavingService;)Lcom/opera/max/sdk/saving/ISavingService;
+.method static synthetic access$002(Lcom/android/settings_ex/datasaving/DataSavingHelper;Lcom/opera/max/sdk/saving/ISavingService;)Lcom/opera/max/sdk/saving/ISavingService;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/datasaving/DataSavingHelper;
+    .param p0, "x0"    # Lcom/android/settings_ex/datasaving/DataSavingHelper;
     .param p1, "x1"    # Lcom/opera/max/sdk/saving/ISavingService;
 
     .prologue
     .line 45
-    iput-object p1, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
+    iput-object p1, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
 
     return-object p1
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/datasaving/DataSavingHelper;)Ljava/util/ArrayList;
+.method static synthetic access$100(Lcom/android/settings_ex/datasaving/DataSavingHelper;)Ljava/util/ArrayList;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/datasaving/DataSavingHelper;
+    .param p0, "x0"    # Lcom/android/settings_ex/datasaving/DataSavingHelper;
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavingListeners:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavingListeners:Ljava/util/ArrayList;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/datasaving/DataSavingHelper;)Z
+.method static synthetic access$200(Lcom/android/settings_ex/datasaving/DataSavingHelper;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/datasaving/DataSavingHelper;
+    .param p0, "x0"    # Lcom/android/settings_ex/datasaving/DataSavingHelper;
 
     .prologue
     .line 45
-    iget-boolean v0, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mNeedToBindSavingService:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mNeedToBindSavingService:Z
 
     return v0
 .end method
 
-.method static synthetic access$202(Lcom/android/settings/datasaving/DataSavingHelper;Z)Z
+.method static synthetic access$202(Lcom/android/settings_ex/datasaving/DataSavingHelper;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/datasaving/DataSavingHelper;
+    .param p0, "x0"    # Lcom/android/settings_ex/datasaving/DataSavingHelper;
     .param p1, "x1"    # Z
 
     .prologue
     .line 45
-    iput-boolean p1, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mNeedToBindSavingService:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mNeedToBindSavingService:Z
 
     return p1
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/datasaving/DataSavingHelper;)Lcom/opera/max/sdk/traffic/ITrafficService;
+.method static synthetic access$300(Lcom/android/settings_ex/datasaving/DataSavingHelper;)Lcom/opera/max/sdk/traffic/ITrafficService;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/datasaving/DataSavingHelper;
+    .param p0, "x0"    # Lcom/android/settings_ex/datasaving/DataSavingHelper;
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mTrafficService:Lcom/opera/max/sdk/traffic/ITrafficService;
+    iget-object v0, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mTrafficService:Lcom/opera/max/sdk/traffic/ITrafficService;
 
     return-object v0
 .end method
 
-.method static synthetic access$302(Lcom/android/settings/datasaving/DataSavingHelper;Lcom/opera/max/sdk/traffic/ITrafficService;)Lcom/opera/max/sdk/traffic/ITrafficService;
+.method static synthetic access$302(Lcom/android/settings_ex/datasaving/DataSavingHelper;Lcom/opera/max/sdk/traffic/ITrafficService;)Lcom/opera/max/sdk/traffic/ITrafficService;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/datasaving/DataSavingHelper;
+    .param p0, "x0"    # Lcom/android/settings_ex/datasaving/DataSavingHelper;
     .param p1, "x1"    # Lcom/opera/max/sdk/traffic/ITrafficService;
 
     .prologue
     .line 45
-    iput-object p1, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mTrafficService:Lcom/opera/max/sdk/traffic/ITrafficService;
+    iput-object p1, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mTrafficService:Lcom/opera/max/sdk/traffic/ITrafficService;
 
     return-object p1
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/datasaving/DataSavingHelper;)Ljava/util/ArrayList;
+.method static synthetic access$400(Lcom/android/settings_ex/datasaving/DataSavingHelper;)Ljava/util/ArrayList;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/datasaving/DataSavingHelper;
+    .param p0, "x0"    # Lcom/android/settings_ex/datasaving/DataSavingHelper;
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mTrafficListeners:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mTrafficListeners:Ljava/util/ArrayList;
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/datasaving/DataSavingHelper;)Z
+.method static synthetic access$500(Lcom/android/settings_ex/datasaving/DataSavingHelper;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/datasaving/DataSavingHelper;
+    .param p0, "x0"    # Lcom/android/settings_ex/datasaving/DataSavingHelper;
 
     .prologue
     .line 45
-    iget-boolean v0, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mNeedToBindTrafficService:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mNeedToBindTrafficService:Z
 
     return v0
 .end method
 
-.method static synthetic access$502(Lcom/android/settings/datasaving/DataSavingHelper;Z)Z
+.method static synthetic access$502(Lcom/android/settings_ex/datasaving/DataSavingHelper;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/datasaving/DataSavingHelper;
+    .param p0, "x0"    # Lcom/android/settings_ex/datasaving/DataSavingHelper;
     .param p1, "x1"    # Z
 
     .prologue
     .line 45
-    iput-boolean p1, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mNeedToBindTrafficService:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mNeedToBindTrafficService:Z
 
     return p1
 .end method
@@ -297,14 +297,14 @@
 
     .prologue
     .line 238
-    invoke-direct {p0}, Lcom/android/settings/datasaving/DataSavingHelper;->isSupportMultiSIM()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/datasaving/DataSavingHelper;->isSupportMultiSIM()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
     .line 239
-    sget-object v1, Lcom/android/settings/datasaving/DataSavingHelper;->sContext:Landroid/content/Context;
+    sget-object v1, Lcom/android/settings_ex/datasaving/DataSavingHelper;->sContext:Landroid/content/Context;
 
     const-string v2, "phone"
 
@@ -326,7 +326,7 @@
     return-object v1
 
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/datasaving/DataSavingHelper;->getCurrentDataSoltId()I
+    invoke-direct {p0}, Lcom/android/settings_ex/datasaving/DataSavingHelper;->getCurrentDataSoltId()I
 
     move-result v1
 
@@ -337,35 +337,35 @@
     goto :goto_0
 .end method
 
-.method public static getInstance(Landroid/content/Context;)Lcom/android/settings/datasaving/DataSavingHelper;
+.method public static getInstance(Landroid/content/Context;)Lcom/android/settings_ex/datasaving/DataSavingHelper;
     .locals 1
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 158
-    sget-object v0, Lcom/android/settings/datasaving/DataSavingHelper;->sContext:Landroid/content/Context;
+    sget-object v0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->sContext:Landroid/content/Context;
 
     if-nez v0, :cond_0
 
     .line 159
-    sput-object p0, Lcom/android/settings/datasaving/DataSavingHelper;->sContext:Landroid/content/Context;
+    sput-object p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->sContext:Landroid/content/Context;
 
     .line 161
     :cond_0
-    sget-object v0, Lcom/android/settings/datasaving/DataSavingHelper;->sInstance:Lcom/android/settings/datasaving/DataSavingHelper;
+    sget-object v0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->sInstance:Lcom/android/settings_ex/datasaving/DataSavingHelper;
 
     if-nez v0, :cond_1
 
     .line 162
-    new-instance v0, Lcom/android/settings/datasaving/DataSavingHelper;
+    new-instance v0, Lcom/android/settings_ex/datasaving/DataSavingHelper;
 
-    invoke-direct {v0}, Lcom/android/settings/datasaving/DataSavingHelper;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/datasaving/DataSavingHelper;-><init>()V
 
-    sput-object v0, Lcom/android/settings/datasaving/DataSavingHelper;->sInstance:Lcom/android/settings/datasaving/DataSavingHelper;
+    sput-object v0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->sInstance:Lcom/android/settings_ex/datasaving/DataSavingHelper;
 
     .line 165
     :cond_1
-    sget-object v0, Lcom/android/settings/datasaving/DataSavingHelper;->sInstance:Lcom/android/settings/datasaving/DataSavingHelper;
+    sget-object v0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->sInstance:Lcom/android/settings_ex/datasaving/DataSavingHelper;
 
     return-object v0
 .end method
@@ -444,7 +444,7 @@
 
     .prologue
     .line 384
-    sget-object v0, Lcom/android/settings/datasaving/DataSavingHelper;->sContext:Landroid/content/Context;
+    sget-object v0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->sContext:Landroid/content/Context;
 
     if-nez v0, :cond_0
 
@@ -456,7 +456,7 @@
     return-object v0
 
     :cond_0
-    sget-object v0, Lcom/android/settings/datasaving/DataSavingHelper;->sContext:Landroid/content/Context;
+    sget-object v0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->sContext:Landroid/content/Context;
 
     invoke-static {v0, p0, p1}, Landroid/text/format/Formatter;->formatFileSize(Landroid/content/Context;J)Ljava/lang/String;
 
@@ -474,7 +474,7 @@
     const/4 v2, 0x0
 
     .line 255
-    sget-object v3, Lcom/android/settings/datasaving/DataSavingHelper;->sContext:Landroid/content/Context;
+    sget-object v3, Lcom/android/settings_ex/datasaving/DataSavingHelper;->sContext:Landroid/content/Context;
 
     const-string v4, "phone"
 
@@ -523,7 +523,7 @@
 
     .line 396
     .local v3, "result":Z
-    invoke-virtual {p0}, Lcom/android/settings/datasaving/DataSavingHelper;->isSavingServiceBound()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/datasaving/DataSavingHelper;->isSavingServiceBound()Z
 
     move-result v4
 
@@ -531,13 +531,13 @@
 
     .line 398
     :try_start_0
-    iget-object v4, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mAppContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mAppContext:Landroid/content/Context;
 
-    invoke-direct {p0}, Lcom/android/settings/datasaving/DataSavingHelper;->getSavingServiceIntent()Landroid/content/Intent;
+    invoke-direct {p0}, Lcom/android/settings_ex/datasaving/DataSavingHelper;->getSavingServiceIntent()Landroid/content/Intent;
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavingServiceConnection:Landroid/content/ServiceConnection;
+    iget-object v6, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavingServiceConnection:Landroid/content/ServiceConnection;
 
     const/4 v7, 0x1
 
@@ -585,7 +585,7 @@
     .line 408
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_1
-    iget-object v4, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavingListeners:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavingListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -604,16 +604,16 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/datasaving/DataSavingHelper$SavingServiceConnectionListener;
+    check-cast v2, Lcom/android/settings_ex/datasaving/DataSavingHelper$SavingServiceConnectionListener;
 
     .line 409
-    .local v2, "listener":Lcom/android/settings/datasaving/DataSavingHelper$SavingServiceConnectionListener;
+    .local v2, "listener":Lcom/android/settings_ex/datasaving/DataSavingHelper$SavingServiceConnectionListener;
     if-eqz v2, :cond_2
 
     .line 410
-    iget-object v4, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
+    iget-object v4, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
 
-    invoke-interface {v2, v4}, Lcom/android/settings/datasaving/DataSavingHelper$SavingServiceConnectionListener;->onConnected(Lcom/opera/max/sdk/saving/ISavingService;)V
+    invoke-interface {v2, v4}, Lcom/android/settings_ex/datasaving/DataSavingHelper$SavingServiceConnectionListener;->onConnected(Lcom/opera/max/sdk/saving/ISavingService;)V
 
     goto :goto_1
 .end method
@@ -623,22 +623,22 @@
 
     .prologue
     .line 183
-    iget-object v0, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mAppContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mAppContext:Landroid/content/Context;
 
     if-eqz v0, :cond_0
 
     .line 184
-    invoke-direct {p0}, Lcom/android/settings/datasaving/DataSavingHelper;->getDefaultDataIMSI()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/datasaving/DataSavingHelper;->getDefaultDataIMSI()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mCurrentIMSI:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mCurrentIMSI:Ljava/lang/String;
 
     .line 185
-    invoke-virtual {p0}, Lcom/android/settings/datasaving/DataSavingHelper;->bindSavingService()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/datasaving/DataSavingHelper;->bindSavingService()Z
 
     .line 186
-    invoke-virtual {p0}, Lcom/android/settings/datasaving/DataSavingHelper;->bindTrafficService()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/datasaving/DataSavingHelper;->bindTrafficService()V
 
     .line 190
     :goto_0
@@ -660,19 +660,19 @@
 
     .prologue
     .line 435
-    iget-object v3, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mTrafficService:Lcom/opera/max/sdk/traffic/ITrafficService;
+    iget-object v3, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mTrafficService:Lcom/opera/max/sdk/traffic/ITrafficService;
 
     if-nez v3, :cond_1
 
     .line 437
     :try_start_0
-    iget-object v3, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mAppContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mAppContext:Landroid/content/Context;
 
-    invoke-direct {p0}, Lcom/android/settings/datasaving/DataSavingHelper;->getTrafficServiceIntent()Landroid/content/Intent;
+    invoke-direct {p0}, Lcom/android/settings_ex/datasaving/DataSavingHelper;->getTrafficServiceIntent()Landroid/content/Intent;
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mTrafficServiceConnection:Landroid/content/ServiceConnection;
+    iget-object v5, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mTrafficServiceConnection:Landroid/content/ServiceConnection;
 
     const/4 v6, 0x1
 
@@ -713,7 +713,7 @@
     .line 445
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mTrafficListeners:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mTrafficListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -732,16 +732,16 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/datasaving/DataSavingHelper$TrafficServiceConnectionListener;
+    check-cast v2, Lcom/android/settings_ex/datasaving/DataSavingHelper$TrafficServiceConnectionListener;
 
     .line 446
-    .local v2, "listener":Lcom/android/settings/datasaving/DataSavingHelper$TrafficServiceConnectionListener;
+    .local v2, "listener":Lcom/android/settings_ex/datasaving/DataSavingHelper$TrafficServiceConnectionListener;
     if-eqz v2, :cond_2
 
     .line 447
-    iget-object v3, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mTrafficService:Lcom/opera/max/sdk/traffic/ITrafficService;
+    iget-object v3, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mTrafficService:Lcom/opera/max/sdk/traffic/ITrafficService;
 
-    invoke-interface {v2, v3}, Lcom/android/settings/datasaving/DataSavingHelper$TrafficServiceConnectionListener;->onConnected(Lcom/opera/max/sdk/traffic/ITrafficService;)V
+    invoke-interface {v2, v3}, Lcom/android/settings_ex/datasaving/DataSavingHelper$TrafficServiceConnectionListener;->onConnected(Lcom/opera/max/sdk/traffic/ITrafficService;)V
 
     goto :goto_1
 .end method
@@ -808,7 +808,7 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 365
-    iget-object v3, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mTrafficService:Lcom/opera/max/sdk/traffic/ITrafficService;
+    iget-object v3, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mTrafficService:Lcom/opera/max/sdk/traffic/ITrafficService;
 
     if-eqz v3, :cond_0
 
@@ -821,9 +821,9 @@
 
     .line 368
     :try_start_0
-    iget-object v3, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mTrafficService:Lcom/opera/max/sdk/traffic/ITrafficService;
+    iget-object v3, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mTrafficService:Lcom/opera/max/sdk/traffic/ITrafficService;
 
-    iget-object v4, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mCurrentIMSI:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mCurrentIMSI:Ljava/lang/String;
 
     const/4 v10, 0x1
 
@@ -904,7 +904,7 @@
 
     move-object/from16 v0, p0
 
-    iput-wide v2, v0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavedBytes:J
+    iput-wide v2, v0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavedBytes:J
 
     .line 340
     const-string v2, "DataSavingHelper"
@@ -946,7 +946,7 @@
     .line 341
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/datasaving/DataSavingHelper;->mTrafficService:Lcom/opera/max/sdk/traffic/ITrafficService;
+    iget-object v2, v0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mTrafficService:Lcom/opera/max/sdk/traffic/ITrafficService;
 
     if-eqz v2, :cond_1
 
@@ -966,7 +966,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/datasaving/DataSavingHelper;->mCurrentIMSI:Ljava/lang/String;
+    iget-object v4, v0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mCurrentIMSI:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -981,11 +981,11 @@
     .line 344
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/datasaving/DataSavingHelper;->mTrafficService:Lcom/opera/max/sdk/traffic/ITrafficService;
+    iget-object v2, v0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mTrafficService:Lcom/opera/max/sdk/traffic/ITrafficService;
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/datasaving/DataSavingHelper;->mCurrentIMSI:Ljava/lang/String;
+    iget-object v3, v0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mCurrentIMSI:Ljava/lang/String;
 
     const/4 v8, 0x1
 
@@ -1039,7 +1039,7 @@
     .local v12, "entry":Lcom/opera/max/sdk/traffic/TrafficEntry;
     move-object/from16 v0, p0
 
-    iget-wide v2, v0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavedBytes:J
+    iget-wide v2, v0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavedBytes:J
 
     iget-wide v4, v12, Lcom/opera/max/sdk/traffic/TrafficEntry;->saveBytes:J
 
@@ -1047,7 +1047,7 @@
 
     move-object/from16 v0, p0
 
-    iput-wide v2, v0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavedBytes:J
+    iput-wide v2, v0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavedBytes:J
 
     .line 349
     add-int/lit8 v13, v13, 0x1
@@ -1075,7 +1075,7 @@
 
     move-object/from16 v0, p0
 
-    iget-wide v4, v0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavedBytes:J
+    iget-wide v4, v0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavedBytes:J
 
     invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -1095,7 +1095,7 @@
     :goto_1
     move-object/from16 v0, p0
 
-    iget-wide v2, v0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavedBytes:J
+    iget-wide v2, v0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavedBytes:J
 
     return-wide v2
 
@@ -1122,7 +1122,7 @@
 
     .prologue
     .line 391
-    iget-object v0, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
+    iget-object v0, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
 
     if-eqz v0, :cond_0
 
@@ -1143,7 +1143,7 @@
 
     .prologue
     .line 193
-    iget-boolean v1, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mStateListenerRegistered:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mStateListenerRegistered:Z
 
     if-eqz v1, :cond_1
 
@@ -1154,20 +1154,20 @@
 
     .line 197
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
+    iget-object v1, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
 
     if-eqz v1, :cond_0
 
     .line 199
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
+    iget-object v1, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
 
     invoke-interface {v1, p1}, Lcom/opera/max/sdk/saving/ISavingService;->registerStateListener(Lcom/opera/max/sdk/saving/IStateListener;)V
 
     .line 200
     const/4 v1, 0x1
 
-    iput-boolean v1, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mStateListenerRegistered:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mStateListenerRegistered:Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1184,19 +1184,19 @@
     goto :goto_0
 .end method
 
-.method public registerServiceConnectionListener(Lcom/android/settings/datasaving/DataSavingHelper$SavingServiceConnectionListener;Lcom/android/settings/datasaving/DataSavingHelper$TrafficServiceConnectionListener;)V
+.method public registerServiceConnectionListener(Lcom/android/settings_ex/datasaving/DataSavingHelper$SavingServiceConnectionListener;Lcom/android/settings_ex/datasaving/DataSavingHelper$TrafficServiceConnectionListener;)V
     .locals 1
-    .param p1, "savingServiceConnectionListener"    # Lcom/android/settings/datasaving/DataSavingHelper$SavingServiceConnectionListener;
-    .param p2, "trafficServiceConnectionListener"    # Lcom/android/settings/datasaving/DataSavingHelper$TrafficServiceConnectionListener;
+    .param p1, "savingServiceConnectionListener"    # Lcom/android/settings_ex/datasaving/DataSavingHelper$SavingServiceConnectionListener;
+    .param p2, "trafficServiceConnectionListener"    # Lcom/android/settings_ex/datasaving/DataSavingHelper$TrafficServiceConnectionListener;
 
     .prologue
     .line 171
-    iget-object v0, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavingListeners:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavingListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 172
-    iget-object v0, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mTrafficListeners:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mTrafficListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1210,7 +1210,7 @@
 
     .prologue
     .line 247
-    iput-object p1, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mCurrentIMSI:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mCurrentIMSI:Ljava/lang/String;
 
     .line 248
     return-void
@@ -1221,7 +1221,7 @@
 
     .prologue
     .line 227
-    iget-object v1, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mTrafficService:Lcom/opera/max/sdk/traffic/ITrafficService;
+    iget-object v1, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mTrafficService:Lcom/opera/max/sdk/traffic/ITrafficService;
 
     if-nez v1, :cond_0
 
@@ -1232,9 +1232,9 @@
     .line 231
     :cond_0
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mTrafficService:Lcom/opera/max/sdk/traffic/ITrafficService;
+    iget-object v1, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mTrafficService:Lcom/opera/max/sdk/traffic/ITrafficService;
 
-    invoke-direct {p0}, Lcom/android/settings/datasaving/DataSavingHelper;->getDefaultDataIMSI()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/datasaving/DataSavingHelper;->getDefaultDataIMSI()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1260,13 +1260,13 @@
 
     .prologue
     .line 269
-    iget-object v1, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
+    iget-object v1, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
 
     if-eqz v1, :cond_0
 
     .line 271
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
+    iget-object v1, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
 
     invoke-interface {v1}, Lcom/opera/max/sdk/saving/ISavingService;->startSaving()V
 
@@ -1317,7 +1317,7 @@
 
     .prologue
     .line 283
-    iget-object v1, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
+    iget-object v1, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
 
     if-eqz v1, :cond_0
 
@@ -1330,7 +1330,7 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 286
-    iget-object v1, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
+    iget-object v1, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
 
     invoke-interface {v1}, Lcom/opera/max/sdk/saving/ISavingService;->stopSaving()V
     :try_end_0
@@ -1369,19 +1369,19 @@
     goto :goto_0
 .end method
 
-.method public unRegisterServiceConnectionListener(Lcom/android/settings/datasaving/DataSavingHelper$SavingServiceConnectionListener;Lcom/android/settings/datasaving/DataSavingHelper$TrafficServiceConnectionListener;)V
+.method public unRegisterServiceConnectionListener(Lcom/android/settings_ex/datasaving/DataSavingHelper$SavingServiceConnectionListener;Lcom/android/settings_ex/datasaving/DataSavingHelper$TrafficServiceConnectionListener;)V
     .locals 1
-    .param p1, "savingServiceConnectionListener"    # Lcom/android/settings/datasaving/DataSavingHelper$SavingServiceConnectionListener;
-    .param p2, "trafficServiceConnectionListener"    # Lcom/android/settings/datasaving/DataSavingHelper$TrafficServiceConnectionListener;
+    .param p1, "savingServiceConnectionListener"    # Lcom/android/settings_ex/datasaving/DataSavingHelper$SavingServiceConnectionListener;
+    .param p2, "trafficServiceConnectionListener"    # Lcom/android/settings_ex/datasaving/DataSavingHelper$TrafficServiceConnectionListener;
 
     .prologue
     .line 178
-    iget-object v0, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavingListeners:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavingListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     .line 179
-    iget-object v0, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mTrafficListeners:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mTrafficListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
@@ -1395,7 +1395,7 @@
 
     .prologue
     .line 208
-    iget-boolean v1, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mStateListenerRegistered:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mStateListenerRegistered:Z
 
     if-nez v1, :cond_1
 
@@ -1406,20 +1406,20 @@
 
     .line 212
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
+    iget-object v1, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
 
     if-eqz v1, :cond_0
 
     .line 214
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
+    iget-object v1, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mSavingService:Lcom/opera/max/sdk/saving/ISavingService;
 
     invoke-interface {v1, p1}, Lcom/opera/max/sdk/saving/ISavingService;->unregisterStateListener(Lcom/opera/max/sdk/saving/IStateListener;)V
 
     .line 215
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lcom/android/settings/datasaving/DataSavingHelper;->mStateListenerRegistered:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/datasaving/DataSavingHelper;->mStateListenerRegistered:Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 

@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settings/wfd/WifiDisplaySettings$24;
+.class synthetic Lcom/android/settings_ex/wfd/WifiDisplaySettings$24;
 .super Ljava/lang/Object;
 .source "WifiDisplaySettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wfd/WifiDisplaySettings;
+    value = Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -32,10 +32,10 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/settings/wfd/WifiDisplaySettings$24;->$SwitchMap$com$samsung$android$allshare$ServiceConnector$ServiceState:[I
+    sput-object v0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$24;->$SwitchMap$com$samsung$android$allshare$ServiceConnector$ServiceState:[I
 
     :try_start_0
-    sget-object v0, Lcom/android/settings/wfd/WifiDisplaySettings$24;->$SwitchMap$com$samsung$android$allshare$ServiceConnector$ServiceState:[I
+    sget-object v0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$24;->$SwitchMap$com$samsung$android$allshare$ServiceConnector$ServiceState:[I
 
     sget-object v1, Lcom/samsung/android/allshare/ServiceConnector$ServiceState;->DISABLED:Lcom/samsung/android/allshare/ServiceConnector$ServiceState;
 
@@ -51,7 +51,7 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/android/settings/wfd/WifiDisplaySettings$24;->$SwitchMap$com$samsung$android$allshare$ServiceConnector$ServiceState:[I
+    sget-object v0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$24;->$SwitchMap$com$samsung$android$allshare$ServiceConnector$ServiceState:[I
 
     sget-object v1, Lcom/samsung/android/allshare/ServiceConnector$ServiceState;->ENABLED:Lcom/samsung/android/allshare/ServiceConnector$ServiceState;
 

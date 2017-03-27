@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settingslib/bluetooth/PbapServerProfile$1;
+.class synthetic Lcom/android/settings_exlib/bluetooth/PbapServerProfile$1;
 .super Ljava/lang/Object;
 .source "PbapServerProfile.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/bluetooth/PbapServerProfile;
+    value = Lcom/android/settings_exlib/bluetooth/PbapServerProfile;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

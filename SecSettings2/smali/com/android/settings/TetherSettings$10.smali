@@ -1,4 +1,4 @@
-.class Lcom/android/settings/TetherSettings$10;
+.class Lcom/android/settings_ex/TetherSettings$10;
 .super Ljava/lang/Object;
 .source "TetherSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/TetherSettings;->onCreateDialog(I)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/TetherSettings;->onCreateDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/TetherSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/TetherSettings;
 
 .field final synthetic val$dnsCheckBox:Landroid/widget/CheckBox;
 
@@ -26,16 +26,16 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/TetherSettings;Landroid/content/SharedPreferences$Editor;Landroid/widget/CheckBox;)V
+.method constructor <init>(Lcom/android/settings_ex/TetherSettings;Landroid/content/SharedPreferences$Editor;Landroid/widget/CheckBox;)V
     .locals 0
 
     .prologue
     .line 468
-    iput-object p1, p0, Lcom/android/settings/TetherSettings$10;->this$0:Lcom/android/settings/TetherSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/TetherSettings$10;->this$0:Lcom/android/settings_ex/TetherSettings;
 
-    iput-object p2, p0, Lcom/android/settings/TetherSettings$10;->val$edit:Landroid/content/SharedPreferences$Editor;
+    iput-object p2, p0, Lcom/android/settings_ex/TetherSettings$10;->val$edit:Landroid/content/SharedPreferences$Editor;
 
-    iput-object p3, p0, Lcom/android/settings/TetherSettings$10;->val$dnsCheckBox:Landroid/widget/CheckBox;
+    iput-object p3, p0, Lcom/android/settings_ex/TetherSettings$10;->val$dnsCheckBox:Landroid/widget/CheckBox;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,11 +51,11 @@
 
     .prologue
     .line 471
-    iget-object v0, p0, Lcom/android/settings/TetherSettings$10;->val$edit:Landroid/content/SharedPreferences$Editor;
+    iget-object v0, p0, Lcom/android/settings_ex/TetherSettings$10;->val$edit:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "pref_dns_first_usb_tether_dialog"
 
-    iget-object v2, p0, Lcom/android/settings/TetherSettings$10;->val$dnsCheckBox:Landroid/widget/CheckBox;
+    iget-object v2, p0, Lcom/android/settings_ex/TetherSettings$10;->val$dnsCheckBox:Landroid/widget/CheckBox;
 
     invoke-virtual {v2}, Landroid/widget/CheckBox;->isChecked()Z
 
@@ -64,23 +64,23 @@
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 473
-    iget-object v0, p0, Lcom/android/settings/TetherSettings$10;->val$edit:Landroid/content/SharedPreferences$Editor;
+    iget-object v0, p0, Lcom/android/settings_ex/TetherSettings$10;->val$edit:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 474
-    invoke-static {}, Lcom/android/settings/Utils;->isMetroPCS()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMetroPCS()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 475
-    iget-object v0, p0, Lcom/android/settings/TetherSettings$10;->this$0:Lcom/android/settings/TetherSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/TetherSettings$10;->this$0:Lcom/android/settings_ex/TetherSettings;
 
     const/16 v1, 0x8
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/TetherSettings;->showDialog(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/TetherSettings;->showDialog(I)V
 
     .line 479
     :goto_0
@@ -88,10 +88,10 @@
 
     .line 477
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/TetherSettings$10;->this$0:Lcom/android/settings/TetherSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/TetherSettings$10;->this$0:Lcom/android/settings_ex/TetherSettings;
 
-    # invokes: Lcom/android/settings/TetherSettings;->goToTetheringHelp()V
-    invoke-static {v0}, Lcom/android/settings/TetherSettings;->access$1000(Lcom/android/settings/TetherSettings;)V
+    # invokes: Lcom/android/settings_ex/TetherSettings;->goToTetheringHelp()V
+    invoke-static {v0}, Lcom/android/settings_ex/TetherSettings;->access$1000(Lcom/android/settings_ex/TetherSettings;)V
 
     goto :goto_0
 .end method

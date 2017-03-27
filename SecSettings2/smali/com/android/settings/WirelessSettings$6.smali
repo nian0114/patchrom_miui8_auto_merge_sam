@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/WirelessSettings$6;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/WirelessSettings$6;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "WirelessSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/WirelessSettings;
+    value = Lcom/android/settings_ex/WirelessSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 708
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -79,7 +79,7 @@
 
     move-object/from16 v0, p1
 
-    invoke-static {v0, v14}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v14}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v3
 
@@ -96,7 +96,7 @@
     :goto_1
     if-nez v4, :cond_0
 
-    invoke-static/range {p1 .. p1}, Lcom/android/settings/Utils;->isShopDemo(Landroid/content/Context;)Z
+    invoke-static/range {p1 .. p1}, Lcom/android/settings_ex/Utils;->isShopDemo(Landroid/content/Context;)Z
 
     move-result v14
 
@@ -150,8 +150,8 @@
 
     move-result v14
 
-    # setter for: Lcom/android/settings/WirelessSettings;->mTetheredDataML:I
-    invoke-static {v14}, Lcom/android/settings/WirelessSettings;->access$402(I)I
+    # setter for: Lcom/android/settings_ex/WirelessSettings;->mTetheredDataML:I
+    invoke-static {v14}, Lcom/android/settings_ex/WirelessSettings;->access$402(I)I
 
     .line 763
     const-string v14, "WirelessSettings"
@@ -166,8 +166,8 @@
 
     move-result-object v15
 
-    # getter for: Lcom/android/settings/WirelessSettings;->mTetheredDataML:I
-    invoke-static {}, Lcom/android/settings/WirelessSettings;->access$400()I
+    # getter for: Lcom/android/settings_ex/WirelessSettings;->mTetheredDataML:I
+    invoke-static {}, Lcom/android/settings_ex/WirelessSettings;->access$400()I
 
     move-result v16
 
@@ -189,8 +189,8 @@
     .line 766
     const-string v14, "MTR"
 
-    # getter for: Lcom/android/settings/WirelessSettings;->sSalesCode:Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/WirelessSettings;->access$500()Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/WirelessSettings;->sSalesCode:Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/WirelessSettings;->access$500()Ljava/lang/String;
 
     move-result-object v15
 
@@ -209,7 +209,7 @@
     :cond_2
     if-nez v4, :cond_3
 
-    invoke-static/range {p1 .. p1}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static/range {p1 .. p1}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v14
 
@@ -223,13 +223,13 @@
 
     .line 773
     :cond_4
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v12
 
     .line 774
     .local v12, "sSalesCode":Ljava/lang/String;
-    invoke-static/range {p1 .. p1}, Lcom/android/settings/Utils;->isTablet(Landroid/content/Context;)Z
+    invoke-static/range {p1 .. p1}, Lcom/android/settings_ex/Utils;->isTablet(Landroid/content/Context;)Z
 
     move-result v14
 
@@ -327,7 +327,7 @@
 
     move-object/from16 v0, p1
 
-    invoke-static {v0, v14}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v14}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v14
 
@@ -386,8 +386,8 @@
 
     if-eqz v14, :cond_b
 
-    # getter for: Lcom/android/settings/WirelessSettings;->mTetheredDataML:I
-    invoke-static {}, Lcom/android/settings/WirelessSettings;->access$400()I
+    # getter for: Lcom/android/settings_ex/WirelessSettings;->mTetheredDataML:I
+    invoke-static {}, Lcom/android/settings_ex/WirelessSettings;->access$400()I
 
     move-result v14
 
@@ -404,7 +404,7 @@
     .line 826
     :cond_b
     :goto_3
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportSmartBonding()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportSmartBonding()Z
 
     move-result v14
 
@@ -440,19 +440,19 @@
     invoke-virtual {v11, v14}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 839
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportMptcp()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportMptcp()Z
 
     move-result v14
 
     if-eqz v14, :cond_f
 
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticLGTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticLGTModel()Z
 
     move-result v14
 
     if-nez v14, :cond_e
 
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticSKTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticSKTModel()Z
 
     move-result v14
 
@@ -586,8 +586,8 @@
 
     if-eqz v14, :cond_b
 
-    # getter for: Lcom/android/settings/WirelessSettings;->mTetheredDataML:I
-    invoke-static {}, Lcom/android/settings/WirelessSettings;->access$400()I
+    # getter for: Lcom/android/settings_ex/WirelessSettings;->mTetheredDataML:I
+    invoke-static {}, Lcom/android/settings_ex/WirelessSettings;->access$400()I
 
     move-result v14
 
@@ -622,8 +622,8 @@
 
     if-eqz v15, :cond_19
 
-    # getter for: Lcom/android/settings/WirelessSettings;->mTetheredDataML:I
-    invoke-static {}, Lcom/android/settings/WirelessSettings;->access$400()I
+    # getter for: Lcom/android/settings_ex/WirelessSettings;->mTetheredDataML:I
+    invoke-static {}, Lcom/android/settings_ex/WirelessSettings;->access$400()I
 
     move-result v15
 
@@ -654,7 +654,7 @@
             "Z)",
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/search/SearchIndexableRaw;",
+            "Lcom/android/settings_ex/search/SearchIndexableRaw;",
             ">;"
         }
     .end annotation
@@ -666,42 +666,42 @@
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     .line 724
-    .local v2, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/search/SearchIndexableRaw;>;"
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    .local v2, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/search/SearchIndexableRaw;>;"
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 725
-    .local v0, "raw":Lcom/android/settings/search/SearchIndexableRaw;
+    .local v0, "raw":Lcom/android/settings_ex/search/SearchIndexableRaw;
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
     .line 727
     .local v1, "res":Landroid/content/res/Resources;
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportMptcp()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportMptcp()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticSKTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticSKTModel()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
     .line 728
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    .end local v0    # "raw":Lcom/android/settings/search/SearchIndexableRaw;
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    .end local v0    # "raw":Lcom/android/settings_ex/search/SearchIndexableRaw;
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 729
-    .restart local v0    # "raw":Lcom/android/settings/search/SearchIndexableRaw;
+    .restart local v0    # "raw":Lcom/android/settings_ex/search/SearchIndexableRaw;
     const-string v3, "multi_path"
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 730
     const v3, 0x7f0e1011
@@ -710,7 +710,7 @@
 
     move-result-object v3
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 731
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -744,7 +744,7 @@
 
     .line 713
     .local v0, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v1, Lcom/android/settings/WirelessSettings;
+    const-class v1, Lcom/android/settings_ex/WirelessSettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

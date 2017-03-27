@@ -1,23 +1,23 @@
-.class public Lcom/android/settings/mirrorlink/MirrorLink;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/mirrorlink/MirrorLink;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "MirrorLink.java"
 
 # interfaces
 .implements Landroid/preference/Preference$OnPreferenceChangeListener;
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/mirrorlink/MirrorLink$TetherChangeReceiver;,
-        Lcom/android/settings/mirrorlink/MirrorLink$MirrorlinkListener;
+        Lcom/android/settings_ex/mirrorlink/MirrorLink$TetherChangeReceiver;,
+        Lcom/android/settings_ex/mirrorlink/MirrorLink$MirrorlinkListener;
     }
 .end annotation
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # instance fields
@@ -30,7 +30,7 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;",
+            "Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;",
             ">;"
         }
     .end annotation
@@ -42,9 +42,9 @@
 
 .field private mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
 
-.field private mMirrorLinkAppPreference:Lcom/android/settings/mirrorlink/MirrorLinkApplicationsPreference;
+.field private mMirrorLinkAppPreference:Lcom/android/settings_ex/mirrorlink/MirrorLinkApplicationsPreference;
 
-.field private mMirrorlinkListener:Lcom/android/settings/mirrorlink/MirrorLink$MirrorlinkListener;
+.field private mMirrorlinkListener:Lcom/android/settings_ex/mirrorlink/MirrorLink$MirrorlinkListener;
 
 .field private mPkgMngr:Landroid/content/pm/PackageManager;
 
@@ -75,11 +75,11 @@
 
     .prologue
     .line 761
-    new-instance v0, Lcom/android/settings/mirrorlink/MirrorLink$3;
+    new-instance v0, Lcom/android/settings_ex/mirrorlink/MirrorLink$3;
 
-    invoke-direct {v0}, Lcom/android/settings/mirrorlink/MirrorLink$3;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/mirrorlink/MirrorLink$3;-><init>()V
 
-    sput-object v0, Lcom/android/settings/mirrorlink/MirrorLink;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -91,184 +91,184 @@
     const/4 v1, 0x0
 
     .line 88
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 96
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
+    iput-object v0, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
 
     .line 98
-    iput-boolean v1, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mTetheringEnabled:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mTetheringEnabled:Z
 
     .line 110
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mTetherChoice:I
+    iput v0, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mTetherChoice:I
 
     .line 116
-    iput-boolean v1, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTetherEnabling:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTetherEnabling:Z
 
     .line 182
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mListDevices:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mListDevices:Ljava/util/List;
 
     .line 293
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/mirrorlink/MirrorLink;)Lcom/mirrorlink/android/service/IMirrorlinkManager;
+.method static synthetic access$000(Lcom/android/settings_ex/mirrorlink/MirrorLink;)Lcom/mirrorlink/android/service/IMirrorlinkManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/mirrorlink/MirrorLink;
+    .param p0, "x0"    # Lcom/android/settings_ex/mirrorlink/MirrorLink;
 
     .prologue
     .line 88
-    iget-object v0, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
+    iget-object v0, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
 
     return-object v0
 .end method
 
-.method static synthetic access$002(Lcom/android/settings/mirrorlink/MirrorLink;Lcom/mirrorlink/android/service/IMirrorlinkManager;)Lcom/mirrorlink/android/service/IMirrorlinkManager;
+.method static synthetic access$002(Lcom/android/settings_ex/mirrorlink/MirrorLink;Lcom/mirrorlink/android/service/IMirrorlinkManager;)Lcom/mirrorlink/android/service/IMirrorlinkManager;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/mirrorlink/MirrorLink;
+    .param p0, "x0"    # Lcom/android/settings_ex/mirrorlink/MirrorLink;
     .param p1, "x1"    # Lcom/mirrorlink/android/service/IMirrorlinkManager;
 
     .prologue
     .line 88
-    iput-object p1, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
+    iput-object p1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
 
     return-object p1
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/mirrorlink/MirrorLink;)Lcom/android/settings/mirrorlink/MirrorLink$MirrorlinkListener;
+.method static synthetic access$100(Lcom/android/settings_ex/mirrorlink/MirrorLink;)Lcom/android/settings_ex/mirrorlink/MirrorLink$MirrorlinkListener;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/mirrorlink/MirrorLink;
+    .param p0, "x0"    # Lcom/android/settings_ex/mirrorlink/MirrorLink;
 
     .prologue
     .line 88
-    iget-object v0, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorlinkListener:Lcom/android/settings/mirrorlink/MirrorLink$MirrorlinkListener;
+    iget-object v0, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorlinkListener:Lcom/android/settings_ex/mirrorlink/MirrorLink$MirrorlinkListener;
 
     return-object v0
 .end method
 
-.method static synthetic access$102(Lcom/android/settings/mirrorlink/MirrorLink;Lcom/android/settings/mirrorlink/MirrorLink$MirrorlinkListener;)Lcom/android/settings/mirrorlink/MirrorLink$MirrorlinkListener;
+.method static synthetic access$102(Lcom/android/settings_ex/mirrorlink/MirrorLink;Lcom/android/settings_ex/mirrorlink/MirrorLink$MirrorlinkListener;)Lcom/android/settings_ex/mirrorlink/MirrorLink$MirrorlinkListener;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/mirrorlink/MirrorLink;
-    .param p1, "x1"    # Lcom/android/settings/mirrorlink/MirrorLink$MirrorlinkListener;
+    .param p0, "x0"    # Lcom/android/settings_ex/mirrorlink/MirrorLink;
+    .param p1, "x1"    # Lcom/android/settings_ex/mirrorlink/MirrorLink$MirrorlinkListener;
 
     .prologue
     .line 88
-    iput-object p1, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorlinkListener:Lcom/android/settings/mirrorlink/MirrorLink$MirrorlinkListener;
+    iput-object p1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorlinkListener:Lcom/android/settings_ex/mirrorlink/MirrorLink$MirrorlinkListener;
 
     return-object p1
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/mirrorlink/MirrorLink;)Ljava/util/List;
+.method static synthetic access$1100(Lcom/android/settings_ex/mirrorlink/MirrorLink;)Ljava/util/List;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/mirrorlink/MirrorLink;
+    .param p0, "x0"    # Lcom/android/settings_ex/mirrorlink/MirrorLink;
 
     .prologue
     .line 88
-    iget-object v0, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mListDevices:Ljava/util/List;
+    iget-object v0, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mListDevices:Ljava/util/List;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/mirrorlink/MirrorLink;)V
+.method static synthetic access$300(Lcom/android/settings_ex/mirrorlink/MirrorLink;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/mirrorlink/MirrorLink;
+    .param p0, "x0"    # Lcom/android/settings_ex/mirrorlink/MirrorLink;
 
     .prologue
     .line 88
-    invoke-direct {p0}, Lcom/android/settings/mirrorlink/MirrorLink;->updateMirrorLinkApplications()V
+    invoke-direct {p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->updateMirrorLinkApplications()V
 
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/mirrorlink/MirrorLink;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
+.method static synthetic access$400(Lcom/android/settings_ex/mirrorlink/MirrorLink;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/mirrorlink/MirrorLink;
+    .param p0, "x0"    # Lcom/android/settings_ex/mirrorlink/MirrorLink;
     .param p1, "x1"    # [Ljava/lang/String;
     .param p2, "x2"    # [Ljava/lang/String;
     .param p3, "x3"    # [Ljava/lang/String;
 
     .prologue
     .line 88
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/settings/mirrorlink/MirrorLink;->updateState([Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->updateState([Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method static synthetic access$502(Lcom/android/settings/mirrorlink/MirrorLink;Z)Z
+.method static synthetic access$502(Lcom/android/settings_ex/mirrorlink/MirrorLink;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/mirrorlink/MirrorLink;
+    .param p0, "x0"    # Lcom/android/settings_ex/mirrorlink/MirrorLink;
     .param p1, "x1"    # Z
 
     .prologue
     .line 88
-    iput-boolean p1, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mMassStorageActive:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMassStorageActive:Z
 
     return p1
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/mirrorlink/MirrorLink;)V
+.method static synthetic access$600(Lcom/android/settings_ex/mirrorlink/MirrorLink;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/mirrorlink/MirrorLink;
+    .param p0, "x0"    # Lcom/android/settings_ex/mirrorlink/MirrorLink;
 
     .prologue
     .line 88
-    invoke-direct {p0}, Lcom/android/settings/mirrorlink/MirrorLink;->updateState()V
+    invoke-direct {p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->updateState()V
 
     return-void
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/mirrorlink/MirrorLink;)Z
+.method static synthetic access$700(Lcom/android/settings_ex/mirrorlink/MirrorLink;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/mirrorlink/MirrorLink;
+    .param p0, "x0"    # Lcom/android/settings_ex/mirrorlink/MirrorLink;
 
     .prologue
     .line 88
-    iget-boolean v0, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbConnected:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbConnected:Z
 
     return v0
 .end method
 
-.method static synthetic access$702(Lcom/android/settings/mirrorlink/MirrorLink;Z)Z
+.method static synthetic access$702(Lcom/android/settings_ex/mirrorlink/MirrorLink;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/mirrorlink/MirrorLink;
+    .param p0, "x0"    # Lcom/android/settings_ex/mirrorlink/MirrorLink;
     .param p1, "x1"    # Z
 
     .prologue
     .line 88
-    iput-boolean p1, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbConnected:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbConnected:Z
 
     return p1
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/mirrorlink/MirrorLink;)Landroid/content/ContentResolver;
+.method static synthetic access$800(Lcom/android/settings_ex/mirrorlink/MirrorLink;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/mirrorlink/MirrorLink;
+    .param p0, "x0"    # Lcom/android/settings_ex/mirrorlink/MirrorLink;
 
     .prologue
     .line 88
-    invoke-virtual {p0}, Lcom/android/settings/mirrorlink/MirrorLink;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$902(Lcom/android/settings/mirrorlink/MirrorLink;Z)Z
+.method static synthetic access$902(Lcom/android/settings_ex/mirrorlink/MirrorLink;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/mirrorlink/MirrorLink;
+    .param p0, "x0"    # Lcom/android/settings_ex/mirrorlink/MirrorLink;
     .param p1, "x1"    # Z
 
     .prologue
     .line 88
-    iput-boolean p1, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mTetheringEnabled:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mTetheringEnabled:Z
 
     return p1
 .end method
@@ -280,11 +280,11 @@
     const/4 v3, 0x0
 
     .line 325
-    iget-object v1, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
+    iget-object v1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorlinkListener:Lcom/android/settings/mirrorlink/MirrorLink$MirrorlinkListener;
+    iget-object v1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorlinkListener:Lcom/android/settings_ex/mirrorlink/MirrorLink$MirrorlinkListener;
 
     if-eqz v1, :cond_0
 
@@ -296,17 +296,17 @@
     invoke-virtual {v1, v2}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     .line 327
-    iget-object v1, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mServiceCon:Landroid/content/ServiceConnection;
+    iget-object v2, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mServiceCon:Landroid/content/ServiceConnection;
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
     .line 329
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
+    iget-object v1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
 
-    iget-object v2, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorlinkListener:Lcom/android/settings/mirrorlink/MirrorLink$MirrorlinkListener;
+    iget-object v2, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorlinkListener:Lcom/android/settings_ex/mirrorlink/MirrorLink$MirrorlinkListener;
 
     invoke-interface {v1, v2}, Lcom/mirrorlink/android/service/IMirrorlinkManager;->unRegisterListener(Lcom/mirrorlink/android/service/IMirrorlinkListener;)V
     :try_end_0
@@ -314,10 +314,10 @@
 
     .line 333
     :goto_0
-    iput-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
+    iput-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
 
     .line 334
-    iput-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorlinkListener:Lcom/android/settings/mirrorlink/MirrorLink$MirrorlinkListener;
+    iput-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorlinkListener:Lcom/android/settings_ex/mirrorlink/MirrorLink$MirrorlinkListener;
 
     .line 336
     :cond_0
@@ -388,7 +388,7 @@
     .line 714
     const-string v7, "usb"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/mirrorlink/MirrorLink;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -419,7 +419,7 @@
     :cond_0
     const-string v7, "connectivity"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/mirrorlink/MirrorLink;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -474,7 +474,7 @@
     if-eqz v7, :cond_3
 
     .line 741
-    iget-object v5, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     const v6, 0x7f0e0765
 
@@ -516,13 +516,13 @@
     .line 744
     .end local v1    # "e":Ljava/io/FileNotFoundException;
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/mirrorlink/MirrorLink;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
 
     const-string v8, "usb_tethering_enabled"
 
-    iget-object v9, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v9}, Landroid/preference/SwitchPreference;->isChecked()Z
 
@@ -546,7 +546,7 @@
 
     .prologue
     .line 703
-    iget v0, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mTetherChoice:I
+    iget v0, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mTetherChoice:I
 
     packed-switch v0, :pswitch_data_0
 
@@ -558,7 +558,7 @@
     :pswitch_0
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/android/settings/mirrorlink/MirrorLink;->setNcmTethering(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->setNcmTethering(Z)V
 
     goto :goto_0
 
@@ -586,7 +586,7 @@
 
     .line 434
     .local v9, "mPm":Landroid/content/pm/PackageManager;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/mirrorlink/MirrorLink;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -633,14 +633,14 @@
     :try_start_0
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
+    iget-object v14, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
 
     if-eqz v14, :cond_3
 
     .line 449
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
+    iget-object v14, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
 
     invoke-interface {v14}, Lcom/mirrorlink/android/service/IMirrorlinkManager;->getAllAppList()Ljava/util/List;
     :try_end_0
@@ -663,18 +663,18 @@
     .line 457
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
+    iget-object v14, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
 
     if-eqz v14, :cond_0
 
     .line 458
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/mirrorlink/MirrorLink;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v14
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
+    iget-object v15, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v14, v15}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
@@ -702,14 +702,14 @@
     :cond_4
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
+    iget-object v14, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
 
     if-nez v14, :cond_7
 
     .line 462
     new-instance v14, Landroid/preference/PreferenceCategory;
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/mirrorlink/MirrorLink;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getActivity()Landroid/app/Activity;
 
     move-result-object v15
 
@@ -717,12 +717,12 @@
 
     move-object/from16 v0, p0
 
-    iput-object v14, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
+    iput-object v14, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
 
     .line 463
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
+    iget-object v14, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
 
     const-string v15, "mirror_link_applications"
 
@@ -731,7 +731,7 @@
     .line 464
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
+    iget-object v14, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
 
     const v15, 0x7f0e13dc
 
@@ -751,7 +751,7 @@
 
     move/from16 v1, v18
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/mirrorlink/MirrorLink;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getString(I)Ljava/lang/String;
 
     move-result-object v18
 
@@ -761,20 +761,20 @@
 
     move-object/from16 v1, v16
 
-    invoke-virtual {v0, v15, v1}, Lcom/android/settings/mirrorlink/MirrorLink;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v15, v1}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v15
 
     invoke-virtual {v14, v15}, Landroid/preference/PreferenceCategory;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 465
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/mirrorlink/MirrorLink;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v14
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
+    iget-object v15, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v14, v15}, Landroid/preference/PreferenceScreen;->addPreference(Landroid/preference/Preference;)Z
 
@@ -786,7 +786,7 @@
     .local v5, "appListInfo":Landroid/os/Bundle;
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mListDevices:Ljava/util/List;
+    iget-object v14, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mListDevices:Ljava/util/List;
 
     invoke-interface {v14}, Ljava/util/List;->clear()V
 
@@ -825,7 +825,7 @@
     if-nez v14, :cond_5
 
     .line 476
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/mirrorlink/MirrorLink;->getPreferenceManager()Landroid/preference/PreferenceManager;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getPreferenceManager()Landroid/preference/PreferenceManager;
 
     move-result-object v14
 
@@ -852,7 +852,7 @@
     .line 480
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
+    iget-object v14, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v14, v13}, Landroid/preference/PreferenceCategory;->addPreference(Landroid/preference/Preference;)Z
 
@@ -937,14 +937,14 @@
     :try_start_1
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
+    iget-object v14, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
 
     if-eqz v14, :cond_6
 
     .line 489
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
+    iget-object v14, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
 
     invoke-interface {v14, v12}, Lcom/mirrorlink/android/service/IMirrorlinkManager;->getApplicationElements(Ljava/lang/String;)Landroid/os/Bundle;
 
@@ -977,7 +977,7 @@
     if-eqz v5, :cond_0
 
     .line 495
-    new-instance v11, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;
+    new-instance v11, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;
 
     const-string v14, "pkgName"
 
@@ -985,17 +985,17 @@
 
     move-result-object v14
 
-    invoke-direct {v11, v14}, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;-><init>(Ljava/lang/String;)V
+    invoke-direct {v11, v14}, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;-><init>(Ljava/lang/String;)V
 
     .line 496
-    .local v11, "mlapp":Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;
+    .local v11, "mlapp":Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;
     const-string v14, "EntitiesName"
 
     invoke-virtual {v5, v14}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v14
 
-    iput-object v14, v11, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;->mEntityName:Ljava/lang/String;
+    iput-object v14, v11, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;->mEntityName:Ljava/lang/String;
 
     .line 497
     const-string v14, "AppStatus"
@@ -1004,7 +1004,7 @@
 
     move-result-object v14
 
-    iput-object v14, v11, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;->mStatus:Ljava/lang/String;
+    iput-object v14, v11, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;->mStatus:Ljava/lang/String;
 
     .line 498
     const-string v14, "VALID_DATE"
@@ -1013,7 +1013,7 @@
 
     move-result-object v14
 
-    iput-object v14, v11, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;->mValidDate:Ljava/lang/String;
+    iput-object v14, v11, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;->mValidDate:Ljava/lang/String;
 
     .line 499
     const-string v14, "RESTRICTED"
@@ -1022,7 +1022,7 @@
 
     move-result-object v14
 
-    iput-object v14, v11, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;->mRestricted:Ljava/lang/String;
+    iput-object v14, v11, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;->mRestricted:Ljava/lang/String;
 
     .line 500
     const-string v14, "NONRESTRICTED"
@@ -1031,23 +1031,23 @@
 
     move-result-object v14
 
-    iput-object v14, v11, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;->mNonRestricted:Ljava/lang/String;
+    iput-object v14, v11, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;->mNonRestricted:Ljava/lang/String;
 
     .line 502
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mListDevices:Ljava/util/List;
+    iget-object v14, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mListDevices:Ljava/util/List;
 
     invoke-interface {v14, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 504
-    new-instance v14, Lcom/android/settings/mirrorlink/MirrorLinkApplicationsPreference;
+    new-instance v14, Lcom/android/settings_ex/mirrorlink/MirrorLinkApplicationsPreference;
 
-    invoke-direct {v14, v6}, Lcom/android/settings/mirrorlink/MirrorLinkApplicationsPreference;-><init>(Landroid/content/Context;)V
+    invoke-direct {v14, v6}, Lcom/android/settings_ex/mirrorlink/MirrorLinkApplicationsPreference;-><init>(Landroid/content/Context;)V
 
     move-object/from16 v0, p0
 
-    iput-object v14, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorLinkAppPreference:Lcom/android/settings/mirrorlink/MirrorLinkApplicationsPreference;
+    iput-object v14, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorLinkAppPreference:Lcom/android/settings_ex/mirrorlink/MirrorLinkApplicationsPreference;
 
     .line 507
     const/4 v14, 0x1
@@ -1060,16 +1060,16 @@
     .local v3, "appIcon":Landroid/graphics/drawable/Drawable;
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorLinkAppPreference:Lcom/android/settings/mirrorlink/MirrorLinkApplicationsPreference;
+    iget-object v14, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorLinkAppPreference:Lcom/android/settings_ex/mirrorlink/MirrorLinkApplicationsPreference;
 
-    invoke-virtual {v14, v8}, Lcom/android/settings/mirrorlink/MirrorLinkApplicationsPreference;->setIndex(I)V
+    invoke-virtual {v14, v8}, Lcom/android/settings_ex/mirrorlink/MirrorLinkApplicationsPreference;->setIndex(I)V
 
     .line 509
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorLinkAppPreference:Lcom/android/settings/mirrorlink/MirrorLinkApplicationsPreference;
+    iget-object v14, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorLinkAppPreference:Lcom/android/settings_ex/mirrorlink/MirrorLinkApplicationsPreference;
 
-    invoke-virtual {v14, v3}, Lcom/android/settings/mirrorlink/MirrorLinkApplicationsPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v14, v3}, Lcom/android/settings_ex/mirrorlink/MirrorLinkApplicationsPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 510
     const/4 v14, 0x0
@@ -1082,62 +1082,62 @@
     .local v2, "ainfo":Landroid/content/pm/ApplicationInfo;
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorLinkAppPreference:Lcom/android/settings/mirrorlink/MirrorLinkApplicationsPreference;
+    iget-object v14, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorLinkAppPreference:Lcom/android/settings_ex/mirrorlink/MirrorLinkApplicationsPreference;
 
     invoke-virtual {v9, v2}, Landroid/content/pm/PackageManager;->getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
 
     move-result-object v15
 
-    invoke-virtual {v14, v15}, Lcom/android/settings/mirrorlink/MirrorLinkApplicationsPreference;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v14, v15}, Lcom/android/settings_ex/mirrorlink/MirrorLinkApplicationsPreference;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 512
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorLinkAppPreference:Lcom/android/settings/mirrorlink/MirrorLinkApplicationsPreference;
+    iget-object v14, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorLinkAppPreference:Lcom/android/settings_ex/mirrorlink/MirrorLinkApplicationsPreference;
 
     invoke-static {v8}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v15
 
-    invoke-virtual {v14, v15}, Lcom/android/settings/mirrorlink/MirrorLinkApplicationsPreference;->setKey(Ljava/lang/String;)V
+    invoke-virtual {v14, v15}, Lcom/android/settings_ex/mirrorlink/MirrorLinkApplicationsPreference;->setKey(Ljava/lang/String;)V
 
     .line 513
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorLinkAppPreference:Lcom/android/settings/mirrorlink/MirrorLinkApplicationsPreference;
+    iget-object v14, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorLinkAppPreference:Lcom/android/settings_ex/mirrorlink/MirrorLinkApplicationsPreference;
 
-    iget-object v15, v11, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;->mStatus:Ljava/lang/String;
+    iget-object v15, v11, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;->mStatus:Ljava/lang/String;
 
-    invoke-virtual {v14, v15}, Lcom/android/settings/mirrorlink/MirrorLinkApplicationsPreference;->setValidCheck(Ljava/lang/String;)V
+    invoke-virtual {v14, v15}, Lcom/android/settings_ex/mirrorlink/MirrorLinkApplicationsPreference;->setValidCheck(Ljava/lang/String;)V
 
     .line 515
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorLinkAppPreference:Lcom/android/settings/mirrorlink/MirrorLinkApplicationsPreference;
+    iget-object v14, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorLinkAppPreference:Lcom/android/settings_ex/mirrorlink/MirrorLinkApplicationsPreference;
 
-    new-instance v15, Lcom/android/settings/mirrorlink/MirrorLink$2;
+    new-instance v15, Lcom/android/settings_ex/mirrorlink/MirrorLink$2;
 
     move-object/from16 v0, p0
 
-    invoke-direct {v15, v0}, Lcom/android/settings/mirrorlink/MirrorLink$2;-><init>(Lcom/android/settings/mirrorlink/MirrorLink;)V
+    invoke-direct {v15, v0}, Lcom/android/settings_ex/mirrorlink/MirrorLink$2;-><init>(Lcom/android/settings_ex/mirrorlink/MirrorLink;)V
 
-    invoke-virtual {v14, v15}, Lcom/android/settings/mirrorlink/MirrorLinkApplicationsPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
+    invoke-virtual {v14, v15}, Lcom/android/settings_ex/mirrorlink/MirrorLinkApplicationsPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 548
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
+    iget-object v14, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
 
     if-eqz v14, :cond_6
 
     .line 549
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
+    iget-object v14, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorLinkAppPreference:Lcom/android/settings/mirrorlink/MirrorLinkApplicationsPreference;
+    iget-object v15, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorLinkAppPreference:Lcom/android/settings_ex/mirrorlink/MirrorLinkApplicationsPreference;
 
     invoke-virtual {v14, v15}, Landroid/preference/PreferenceCategory;->addPreference(Landroid/preference/Preference;)Z
     :try_end_1
@@ -1147,7 +1147,7 @@
     .line 483
     .end local v2    # "ainfo":Landroid/content/pm/ApplicationInfo;
     .end local v3    # "appIcon":Landroid/graphics/drawable/Drawable;
-    .end local v11    # "mlapp":Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;
+    .end local v11    # "mlapp":Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;
     :cond_6
     :goto_4
     add-int/lit8 v8, v8, 0x1
@@ -1161,7 +1161,7 @@
     :cond_7
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
+    iget-object v14, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMirrorLinkAppCategory:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v14}, Landroid/preference/PreferenceCategory;->removeAll()V
 
@@ -1226,7 +1226,7 @@
     .line 562
     const-string v4, "connectivity"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/mirrorlink/MirrorLink;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1252,7 +1252,7 @@
 
     .line 567
     .local v2, "errored":[Ljava/lang/String;
-    invoke-direct {p0, v0, v3, v2}, Lcom/android/settings/mirrorlink/MirrorLink;->updateState([Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
+    invoke-direct {p0, v0, v3, v2}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->updateState([Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
 
     .line 568
     return-void
@@ -1266,7 +1266,7 @@
 
     .prologue
     .line 571
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/settings/mirrorlink/MirrorLink;->updateUsbState([Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->updateUsbState([Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
 
     .line 572
     return-void
@@ -1286,7 +1286,7 @@
 
     move-object/from16 v1, v17
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/mirrorlink/MirrorLink;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v5
 
@@ -1296,7 +1296,7 @@
     .local v5, "cm":Landroid/net/ConnectivityManager;
     move-object/from16 v0, p0
 
-    iget-boolean v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbConnected:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbConnected:Z
 
     move/from16 v17, v0
 
@@ -1304,7 +1304,7 @@
 
     move-object/from16 v0, p0
 
-    iget-boolean v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mMassStorageActive:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMassStorageActive:Z
 
     move/from16 v17, v0
 
@@ -1343,7 +1343,7 @@
     .local v11, "s":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbRegexs:[Ljava/lang/String;
+    iget-object v4, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbRegexs:[Ljava/lang/String;
 
     .local v4, "arr$":[Ljava/lang/String;
     array-length v9, v4
@@ -1445,7 +1445,7 @@
     :cond_4
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     move-object/from16 v17, v0
 
@@ -1456,7 +1456,7 @@
     .line 585
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     move-object/from16 v17, v0
 
@@ -1471,12 +1471,12 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/mirrorlink/MirrorLink;->mTetheringEnabled:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mTetheringEnabled:Z
 
     .line 587
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     move-object/from16 v17, v0
 
@@ -1531,7 +1531,7 @@
     .restart local v11    # "s":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbRegexs:[Ljava/lang/String;
+    iget-object v4, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbRegexs:[Ljava/lang/String;
 
     .restart local v4    # "arr$":[Ljava/lang/String;
     array-length v9, v4
@@ -1584,7 +1584,7 @@
 
     move-object/from16 v1, v17
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/mirrorlink/MirrorLink;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v13
 
@@ -1597,7 +1597,7 @@
     .line 602
     const-string v17, "TMB"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v18
 
@@ -1609,7 +1609,7 @@
 
     const-string v17, "TMK"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v18
 
@@ -1640,7 +1640,7 @@
 
     move/from16 v1, v17
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/mirrorlink/MirrorLink;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getString(I)Ljava/lang/String;
 
     move-result-object v17
 
@@ -1660,7 +1660,7 @@
 
     move/from16 v1, v20
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/mirrorlink/MirrorLink;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getString(I)Ljava/lang/String;
 
     move-result-object v20
 
@@ -1674,7 +1674,7 @@
     .local v2, "activeSubtext":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     move-object/from16 v17, v0
 
@@ -1685,7 +1685,7 @@
     .line 606
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     move-object/from16 v17, v0
 
@@ -1696,7 +1696,7 @@
     .line 607
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     move-object/from16 v17, v0
 
@@ -1718,13 +1718,13 @@
 
     move-object/from16 v1, v17
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/mirrorlink/MirrorLink;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v17
 
     check-cast v17, Landroid/hardware/usb/UsbManager;
 
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/mirrorlink/MirrorLink;->isUsbSideSyncModeEnabled(Landroid/hardware/usb/UsbManager;)Z
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->isUsbSideSyncModeEnabled(Landroid/hardware/usb/UsbManager;)Z
 
     move-result v12
 
@@ -1735,7 +1735,7 @@
     .line 613
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     move-object/from16 v17, v0
 
@@ -1746,7 +1746,7 @@
     .line 614
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     move-object/from16 v17, v0
 
@@ -1757,7 +1757,7 @@
     .line 615
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     move-object/from16 v17, v0
 
@@ -1775,7 +1775,7 @@
 
     move/from16 v1, v17
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/mirrorlink/MirrorLink;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getString(I)Ljava/lang/String;
 
     move-result-object v17
 
@@ -1795,7 +1795,7 @@
 
     move/from16 v1, v20
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/mirrorlink/MirrorLink;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getString(I)Ljava/lang/String;
 
     move-result-object v20
 
@@ -1809,7 +1809,7 @@
     .restart local v2    # "activeSubtext":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     move-object/from16 v17, v0
 
@@ -1820,7 +1820,7 @@
     .line 619
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     move-object/from16 v17, v0
 
@@ -1831,7 +1831,7 @@
     .line 620
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     move-object/from16 v17, v0
 
@@ -1850,7 +1850,7 @@
     .line 625
     move-object/from16 v0, p0
 
-    iget-boolean v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mTetheringEnabled:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mTetheringEnabled:Z
 
     move/from16 v17, v0
 
@@ -1859,7 +1859,7 @@
     .line 626
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     move-object/from16 v17, v0
 
@@ -1870,7 +1870,7 @@
     .line 627
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     move-object/from16 v17, v0
 
@@ -1887,7 +1887,7 @@
     .line 632
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     move-object/from16 v17, v0
 
@@ -1899,7 +1899,7 @@
     :goto_7
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     move-object/from16 v17, v0
 
@@ -1910,7 +1910,7 @@
     .line 639
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     move-object/from16 v17, v0
 
@@ -1924,7 +1924,7 @@
     :cond_10
     move-object/from16 v0, p0
 
-    iget-boolean v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mMassStorageActive:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMassStorageActive:Z
 
     move/from16 v17, v0
 
@@ -1933,7 +1933,7 @@
     .line 634
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     move-object/from16 v17, v0
 
@@ -1947,7 +1947,7 @@
     :cond_11
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     move-object/from16 v17, v0
 
@@ -1978,10 +1978,10 @@
     .line 684
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/mirrorlink/MirrorLink;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->setHasOptionsMenu(Z)V
 
     .line 685
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 686
     return-void
@@ -1997,7 +1997,7 @@
     const/4 v2, -0x1
 
     .line 689
-    invoke-super {p0, p1, p2, p3}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 690
     if-nez p1, :cond_0
@@ -2006,7 +2006,7 @@
     if-ne p2, v2, :cond_1
 
     .line 692
-    invoke-direct {p0}, Lcom/android/settings/mirrorlink/MirrorLink;->startTethering()V
+    invoke-direct {p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->startTethering()V
 
     .line 700
     :cond_0
@@ -2015,14 +2015,14 @@
 
     .line 696
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 697
-    iput v2, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mTetherChoice:I
+    iput v2, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mTetherChoice:I
 
     goto :goto_0
 .end method
@@ -2037,58 +2037,58 @@
     const/4 v4, 0x1
 
     .line 209
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 210
     const v3, 0x7f080073
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/mirrorlink/MirrorLink;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->addPreferencesFromResource(I)V
 
     .line 212
-    invoke-virtual {p0}, Lcom/android/settings/mirrorlink/MirrorLink;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->activity:Landroid/app/Activity;
+    iput-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->activity:Landroid/app/Activity;
 
     .line 213
-    iget-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->activity:Landroid/app/Activity;
+    iget-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->activity:Landroid/app/Activity;
 
     invoke-virtual {v3}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mContext:Landroid/content/Context;
+    iput-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mContext:Landroid/content/Context;
 
     .line 214
-    iget-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mPkgMngr:Landroid/content/pm/PackageManager;
+    iput-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mPkgMngr:Landroid/content/pm/PackageManager;
 
     .line 216
     const-string v3, "ncm_usb_tether_settings"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/mirrorlink/MirrorLink;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
     check-cast v3, Landroid/preference/SwitchPreference;
 
-    iput-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iput-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     .line 217
-    iget-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v3, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 219
     const-string v3, "connectivity"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/mirrorlink/MirrorLink;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -2100,10 +2100,10 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbRegexs:[Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbRegexs:[Ljava/lang/String;
 
     .line 223
-    iget-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbRegexs:[Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbRegexs:[Ljava/lang/String;
 
     array-length v3, v3
 
@@ -2116,7 +2116,7 @@
     :goto_0
     if-eqz v2, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isMonkeyRunning()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMonkeyRunning()Z
 
     move-result v3
 
@@ -2124,17 +2124,17 @@
 
     .line 226
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/mirrorlink/MirrorLink;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v3
 
-    iget-object v6, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v3, v6}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 229
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/mirrorlink/MirrorLink;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -2144,14 +2144,14 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mProvisionApp:[Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mProvisionApp:[Ljava/lang/String;
 
     .line 231
-    new-instance v3, Lcom/android/settings/mirrorlink/MirrorLink$1;
+    new-instance v3, Lcom/android/settings_ex/mirrorlink/MirrorLink$1;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/mirrorlink/MirrorLink$1;-><init>(Lcom/android/settings/mirrorlink/MirrorLink;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink$1;-><init>(Lcom/android/settings_ex/mirrorlink/MirrorLink;)V
 
-    iput-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mServiceCon:Landroid/content/ServiceConnection;
+    iput-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mServiceCon:Landroid/content/ServiceConnection;
 
     .line 266
     new-instance v0, Landroid/content/Intent;
@@ -2173,7 +2173,7 @@
     invoke-virtual {v0, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     .line 268
-    invoke-virtual {p0}, Lcom/android/settings/mirrorlink/MirrorLink;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
 
@@ -2211,9 +2211,9 @@
     invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 273
-    iget-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mContext:Landroid/content/Context;
 
-    iget-object v5, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mServiceCon:Landroid/content/ServiceConnection;
+    iget-object v5, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mServiceCon:Landroid/content/ServiceConnection;
 
     invoke-virtual {v3, v0, v5, v4}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
@@ -2241,10 +2241,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mMenuMore:Landroid/view/MenuItem;
+    iput-object v0, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMenuMore:Landroid/view/MenuItem;
 
     .line 279
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     .line 280
     return-void
@@ -2262,10 +2262,10 @@
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     .line 425
-    invoke-direct {p0}, Lcom/android/settings/mirrorlink/MirrorLink;->doUnbindFromService()V
+    invoke-direct {p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->doUnbindFromService()V
 
     .line 426
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroy()V
 
     .line 427
     return-void
@@ -2286,7 +2286,7 @@
     packed-switch v1, :pswitch_data_0
 
     .line 290
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v1
 
@@ -2295,15 +2295,15 @@
 
     .line 286
     :pswitch_0
-    invoke-virtual {p0}, Lcom/android/settings/mirrorlink/MirrorLink;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SubSettings;
+    check-cast v0, Lcom/android/settings_ex/SubSettings;
 
     .line 287
-    .local v0, "subSettings":Lcom/android/settings/SubSettings;
-    const-class v1, Lcom/android/settings/mirrorlink/MirrorLinkDeviceUID;
+    .local v0, "subSettings":Lcom/android/settings_ex/SubSettings;
+    const-class v1, Lcom/android/settings_ex/mirrorlink/MirrorLinkDeviceUID;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -2317,7 +2317,7 @@
 
     move-object v5, v2
 
-    invoke-virtual/range {v0 .. v6}, Lcom/android/settings/SubSettings;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
+    invoke-virtual/range {v0 .. v6}, Lcom/android/settings_ex/SubSettings;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
 
     .line 288
     const/4 v1, 0x1
@@ -2336,10 +2336,10 @@
 
     .prologue
     .line 365
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 366
-    invoke-direct {p0}, Lcom/android/settings/mirrorlink/MirrorLink;->doUnbindFromService()V
+    invoke-direct {p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->doUnbindFromService()V
 
     .line 367
     return-void
@@ -2356,7 +2356,7 @@
     const/4 v1, 0x1
 
     .line 749
-    iget-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     if-ne p1, v3, :cond_1
 
@@ -2373,25 +2373,25 @@
     if-eqz v0, :cond_0
 
     .line 752
-    iput v1, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mTetherChoice:I
+    iput v1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mTetherChoice:I
 
     .line 754
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v3, v0}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 755
-    invoke-direct {p0, v0}, Lcom/android/settings/mirrorlink/MirrorLink;->setNcmTethering(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->setNcmTethering(Z)V
 
     .line 756
-    invoke-virtual {p0}, Lcom/android/settings/mirrorlink/MirrorLink;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
     const-string v4, "usb_tethering_enabled"
 
-    iget-object v5, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v5}, Landroid/preference/SwitchPreference;->isChecked()Z
 
@@ -2424,13 +2424,13 @@
     const/4 v2, 0x0
 
     .line 373
-    iput-boolean v2, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mOpenDetailMenu:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mOpenDetailMenu:Z
 
     .line 374
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 375
-    iget-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
+    iget-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mservice:Lcom/mirrorlink/android/service/IMirrorlinkManager;
 
     if-nez v3, :cond_1
 
@@ -2461,7 +2461,7 @@
     invoke-virtual {v0, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     .line 379
-    invoke-virtual {p0}, Lcom/android/settings/mirrorlink/MirrorLink;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
 
@@ -2486,25 +2486,25 @@
     .line 383
     .restart local v0    # "bindToML":Landroid/content/Intent;
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mContext:Landroid/content/Context;
 
-    iget-object v4, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mServiceCon:Landroid/content/ServiceConnection;
+    iget-object v4, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mServiceCon:Landroid/content/ServiceConnection;
 
     invoke-virtual {v3, v0, v4, v1}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
     .line 387
     .end local v0    # "bindToML":Landroid/content/Intent;
     :cond_1
-    invoke-direct {p0}, Lcom/android/settings/mirrorlink/MirrorLink;->updateState()V
+    invoke-direct {p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->updateState()V
 
     .line 407
-    invoke-virtual {p0}, Lcom/android/settings/mirrorlink/MirrorLink;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
     const-string v4, "usb_tethering_enabled"
 
-    iget-object v5, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v5}, Landroid/preference/SwitchPreference;->isChecked()Z
 
@@ -2528,10 +2528,10 @@
 
     .prologue
     .line 340
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onStart()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onStart()V
 
     .line 342
-    invoke-virtual {p0}, Lcom/android/settings/mirrorlink/MirrorLink;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2547,16 +2547,16 @@
 
     move-result v3
 
-    iput-boolean v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mMassStorageActive:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mMassStorageActive:Z
 
     .line 345
-    new-instance v3, Lcom/android/settings/mirrorlink/MirrorLink$TetherChangeReceiver;
+    new-instance v3, Lcom/android/settings_ex/mirrorlink/MirrorLink$TetherChangeReceiver;
 
     const/4 v4, 0x0
 
-    invoke-direct {v3, p0, v4}, Lcom/android/settings/mirrorlink/MirrorLink$TetherChangeReceiver;-><init>(Lcom/android/settings/mirrorlink/MirrorLink;Lcom/android/settings/mirrorlink/MirrorLink$1;)V
+    invoke-direct {v3, p0, v4}, Lcom/android/settings_ex/mirrorlink/MirrorLink$TetherChangeReceiver;-><init>(Lcom/android/settings_ex/mirrorlink/MirrorLink;Lcom/android/settings_ex/mirrorlink/MirrorLink$1;)V
 
-    iput-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mTetherChangeReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mTetherChangeReceiver:Landroid/content/BroadcastReceiver;
 
     .line 346
     new-instance v1, Landroid/content/IntentFilter;
@@ -2567,7 +2567,7 @@
 
     .line 347
     .local v1, "filter":Landroid/content/IntentFilter;
-    iget-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mTetherChangeReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mTetherChangeReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v3, v1}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -2587,7 +2587,7 @@
     invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 351
-    iget-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mTetherChangeReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mTetherChangeReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v3, v1}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -2614,20 +2614,20 @@
     invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
     .line 357
-    iget-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mTetherChangeReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mTetherChangeReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v3, v1}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 359
     if-eqz v2, :cond_0
 
-    iget-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mTetherChangeReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mTetherChangeReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v3, v0, v2}, Landroid/content/BroadcastReceiver;->onReceive(Landroid/content/Context;Landroid/content/Intent;)V
 
     .line 361
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/mirrorlink/MirrorLink;->updateState()V
+    invoke-direct {p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->updateState()V
 
     .line 362
     return-void
@@ -2640,30 +2640,30 @@
     const/4 v0, 0x1
 
     .line 414
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onStop()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onStop()V
 
     .line 415
-    invoke-virtual {p0}, Lcom/android/settings/mirrorlink/MirrorLink;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mTetherChangeReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mTetherChangeReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 416
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mTetherChangeReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mTetherChangeReceiver:Landroid/content/BroadcastReceiver;
 
     .line 418
-    invoke-virtual {p0}, Lcom/android/settings/mirrorlink/MirrorLink;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
     const-string v2, "usb_tethering_enabled"
 
-    iget-object v3, p0, Lcom/android/settings/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink;->mUsbTether:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v3}, Landroid/preference/SwitchPreference;->isChecked()Z
 

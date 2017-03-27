@@ -1,4 +1,4 @@
-.class Lcom/android/settings/AssistantMenuEnabler$3;
+.class Lcom/android/settings_ex/AssistantMenuEnabler$3;
 .super Ljava/lang/Object;
 .source "AssistantMenuEnabler.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/AssistantMenuEnabler;->showExclusivePopup()V
+    value = Lcom/android/settings_ex/AssistantMenuEnabler;->showExclusivePopup()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/AssistantMenuEnabler;
+.field final synthetic this$0:Lcom/android/settings_ex/AssistantMenuEnabler;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/AssistantMenuEnabler;)V
+.method constructor <init>(Lcom/android/settings_ex/AssistantMenuEnabler;)V
     .locals 0
 
     .prologue
     .line 560
-    iput-object p1, p0, Lcom/android/settings/AssistantMenuEnabler$3;->this$0:Lcom/android/settings/AssistantMenuEnabler;
+    iput-object p1, p0, Lcom/android/settings_ex/AssistantMenuEnabler$3;->this$0:Lcom/android/settings_ex/AssistantMenuEnabler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -64,30 +64,30 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     .line 566
-    iget-object v1, p0, Lcom/android/settings/AssistantMenuEnabler$3;->this$0:Lcom/android/settings/AssistantMenuEnabler;
+    iget-object v1, p0, Lcom/android/settings_ex/AssistantMenuEnabler$3;->this$0:Lcom/android/settings_ex/AssistantMenuEnabler;
 
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuEnabler$3;->this$0:Lcom/android/settings/AssistantMenuEnabler;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuEnabler$3;->this$0:Lcom/android/settings_ex/AssistantMenuEnabler;
 
-    # getter for: Lcom/android/settings/AssistantMenuEnabler;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcom/android/settings/AssistantMenuEnabler;->access$100(Lcom/android/settings/AssistantMenuEnabler;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/AssistantMenuEnabler;->mContext:Landroid/content/Context;
+    invoke-static {v2}, Lcom/android/settings_ex/AssistantMenuEnabler;->access$100(Lcom/android/settings_ex/AssistantMenuEnabler;)Landroid/content/Context;
 
     move-result-object v2
 
-    sget v3, Lcom/android/settings/AssistantMenuEnabler;->option_flag:I
+    sget v3, Lcom/android/settings_ex/AssistantMenuEnabler;->option_flag:I
 
-    invoke-virtual {v1, v2, v3}, Lcom/android/settings/AssistantMenuEnabler;->turnOffExlusiveOptions(Landroid/content/Context;I)V
+    invoke-virtual {v1, v2, v3}, Lcom/android/settings_ex/AssistantMenuEnabler;->turnOffExlusiveOptions(Landroid/content/Context;I)V
 
     .line 567
-    iget-object v1, p0, Lcom/android/settings/AssistantMenuEnabler$3;->this$0:Lcom/android/settings/AssistantMenuEnabler;
+    iget-object v1, p0, Lcom/android/settings_ex/AssistantMenuEnabler$3;->this$0:Lcom/android/settings_ex/AssistantMenuEnabler;
 
-    # invokes: Lcom/android/settings/AssistantMenuEnabler;->switchOnToast()V
-    invoke-static {v1}, Lcom/android/settings/AssistantMenuEnabler;->access$200(Lcom/android/settings/AssistantMenuEnabler;)V
+    # invokes: Lcom/android/settings_ex/AssistantMenuEnabler;->switchOnToast()V
+    invoke-static {v1}, Lcom/android/settings_ex/AssistantMenuEnabler;->access$200(Lcom/android/settings_ex/AssistantMenuEnabler;)V
 
     .line 568
-    iget-object v1, p0, Lcom/android/settings/AssistantMenuEnabler$3;->this$0:Lcom/android/settings/AssistantMenuEnabler;
+    iget-object v1, p0, Lcom/android/settings_ex/AssistantMenuEnabler$3;->this$0:Lcom/android/settings_ex/AssistantMenuEnabler;
 
-    # getter for: Lcom/android/settings/AssistantMenuEnabler;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/AssistantMenuEnabler;->access$100(Lcom/android/settings/AssistantMenuEnabler;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/AssistantMenuEnabler;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/AssistantMenuEnabler;->access$100(Lcom/android/settings_ex/AssistantMenuEnabler;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -100,20 +100,20 @@
     invoke-static {v1, v2, v4}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 569
-    iget-object v1, p0, Lcom/android/settings/AssistantMenuEnabler$3;->this$0:Lcom/android/settings/AssistantMenuEnabler;
+    iget-object v1, p0, Lcom/android/settings_ex/AssistantMenuEnabler$3;->this$0:Lcom/android/settings_ex/AssistantMenuEnabler;
 
-    # getter for: Lcom/android/settings/AssistantMenuEnabler;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/AssistantMenuEnabler;->access$100(Lcom/android/settings/AssistantMenuEnabler;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/AssistantMenuEnabler;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/AssistantMenuEnabler;->access$100(Lcom/android/settings_ex/AssistantMenuEnabler;)Landroid/content/Context;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     .line 570
-    iget-object v1, p0, Lcom/android/settings/AssistantMenuEnabler$3;->this$0:Lcom/android/settings/AssistantMenuEnabler;
+    iget-object v1, p0, Lcom/android/settings_ex/AssistantMenuEnabler$3;->this$0:Lcom/android/settings_ex/AssistantMenuEnabler;
 
-    # getter for: Lcom/android/settings/AssistantMenuEnabler;->mSwitch:Landroid/widget/Switch;
-    invoke-static {v1}, Lcom/android/settings/AssistantMenuEnabler;->access$000(Lcom/android/settings/AssistantMenuEnabler;)Landroid/widget/Switch;
+    # getter for: Lcom/android/settings_ex/AssistantMenuEnabler;->mSwitch:Landroid/widget/Switch;
+    invoke-static {v1}, Lcom/android/settings_ex/AssistantMenuEnabler;->access$000(Lcom/android/settings_ex/AssistantMenuEnabler;)Landroid/widget/Switch;
 
     move-result-object v1
 

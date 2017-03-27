@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/DropDownPreference$Callback;
+.class public interface abstract Lcom/android/settings_ex/DropDownPreference$Callback;
 .super Ljava/lang/Object;
 .source "DropDownPreference.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DropDownPreference;
+    value = Lcom/android/settings_ex/DropDownPreference;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/DeviceInfoSettings$InstallTimeBroadcastReceiver;
+.class Lcom/android/settings_ex/DeviceInfoSettings$InstallTimeBroadcastReceiver;
 .super Landroid/content/BroadcastReceiver;
 .source "DeviceInfoSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DeviceInfoSettings;
+    value = Lcom/android/settings_ex/DeviceInfoSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,30 +15,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DeviceInfoSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/DeviceInfoSettings;
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/settings/DeviceInfoSettings;)V
+.method private constructor <init>(Lcom/android/settings_ex/DeviceInfoSettings;)V
     .locals 0
 
     .prologue
     .line 313
-    iput-object p1, p0, Lcom/android/settings/DeviceInfoSettings$InstallTimeBroadcastReceiver;->this$0:Lcom/android/settings/DeviceInfoSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/DeviceInfoSettings$InstallTimeBroadcastReceiver;->this$0:Lcom/android/settings_ex/DeviceInfoSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/DeviceInfoSettings;Lcom/android/settings/DeviceInfoSettings$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/DeviceInfoSettings;Lcom/android/settings_ex/DeviceInfoSettings$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/DeviceInfoSettings;
-    .param p2, "x1"    # Lcom/android/settings/DeviceInfoSettings$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/DeviceInfoSettings;
+    .param p2, "x1"    # Lcom/android/settings_ex/DeviceInfoSettings$1;
 
     .prologue
     .line 313
-    invoke-direct {p0, p1}, Lcom/android/settings/DeviceInfoSettings$InstallTimeBroadcastReceiver;-><init>(Lcom/android/settings/DeviceInfoSettings;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/DeviceInfoSettings$InstallTimeBroadcastReceiver;-><init>(Lcom/android/settings_ex/DeviceInfoSettings;)V
 
     return-void
 .end method
@@ -107,10 +107,10 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 330
-    iget-object v1, p0, Lcom/android/settings/DeviceInfoSettings$InstallTimeBroadcastReceiver;->this$0:Lcom/android/settings/DeviceInfoSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/DeviceInfoSettings$InstallTimeBroadcastReceiver;->this$0:Lcom/android/settings_ex/DeviceInfoSettings;
 
-    # invokes: Lcom/android/settings/DeviceInfoSettings;->updateInstallTime()V
-    invoke-static {v1}, Lcom/android/settings/DeviceInfoSettings;->access$100(Lcom/android/settings/DeviceInfoSettings;)V
+    # invokes: Lcom/android/settings_ex/DeviceInfoSettings;->updateInstallTime()V
+    invoke-static {v1}, Lcom/android/settings_ex/DeviceInfoSettings;->access$100(Lcom/android/settings_ex/DeviceInfoSettings;)V
 
     goto :goto_0
 .end method

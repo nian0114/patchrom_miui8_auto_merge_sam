@@ -1,4 +1,4 @@
-.class Lcom/android/settings/personalpage/PersonalPageLockTypeFragment$1;
+.class Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment$1;
 .super Ljava/lang/Object;
 .source "PersonalPageLockTypeFragment.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;
+    value = Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;
 
 
 # virtual methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 398
-    iget-object v0, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment$1;->this$0:Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment$1;->this$0:Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;
 
-    invoke-virtual {v0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->finish()V
 
     .line 399
     return-void

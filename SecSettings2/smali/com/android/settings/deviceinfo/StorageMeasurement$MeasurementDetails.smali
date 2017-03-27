@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/deviceinfo/StorageMeasurement$MeasurementDetails;
+.class public Lcom/android/settings_ex/deviceinfo/StorageMeasurement$MeasurementDetails;
 .super Ljava/lang/Object;
 .source "StorageMeasurement.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/StorageMeasurement;
+    value = Lcom/android/settings_ex/deviceinfo/StorageMeasurement;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -67,56 +67,56 @@
 
     invoke-direct {v0}, Landroid/util/SparseLongArray;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StorageMeasurement$MeasurementDetails;->audioSize:Landroid/util/SparseLongArray;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageMeasurement$MeasurementDetails;->audioSize:Landroid/util/SparseLongArray;
 
     .line 117
     new-instance v0, Landroid/util/SparseLongArray;
 
     invoke-direct {v0}, Landroid/util/SparseLongArray;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StorageMeasurement$MeasurementDetails;->imageSize:Landroid/util/SparseLongArray;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageMeasurement$MeasurementDetails;->imageSize:Landroid/util/SparseLongArray;
 
     .line 118
     new-instance v0, Landroid/util/SparseLongArray;
 
     invoke-direct {v0}, Landroid/util/SparseLongArray;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StorageMeasurement$MeasurementDetails;->videoSize:Landroid/util/SparseLongArray;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageMeasurement$MeasurementDetails;->videoSize:Landroid/util/SparseLongArray;
 
     .line 119
     new-instance v0, Landroid/util/SparseLongArray;
 
     invoke-direct {v0}, Landroid/util/SparseLongArray;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StorageMeasurement$MeasurementDetails;->metaSize:Landroid/util/SparseLongArray;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageMeasurement$MeasurementDetails;->metaSize:Landroid/util/SparseLongArray;
 
     .line 135
     new-instance v0, Landroid/util/SparseLongArray;
 
     invoke-direct {v0}, Landroid/util/SparseLongArray;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StorageMeasurement$MeasurementDetails;->appsSize:Landroid/util/SparseLongArray;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageMeasurement$MeasurementDetails;->appsSize:Landroid/util/SparseLongArray;
 
     .line 154
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StorageMeasurement$MeasurementDetails;->mediaSize:Landroid/util/SparseArray;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageMeasurement$MeasurementDetails;->mediaSize:Landroid/util/SparseArray;
 
     .line 160
     new-instance v0, Landroid/util/SparseLongArray;
 
     invoke-direct {v0}, Landroid/util/SparseLongArray;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StorageMeasurement$MeasurementDetails;->miscSize:Landroid/util/SparseLongArray;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageMeasurement$MeasurementDetails;->miscSize:Landroid/util/SparseLongArray;
 
     .line 166
     new-instance v0, Landroid/util/SparseLongArray;
 
     invoke-direct {v0}, Landroid/util/SparseLongArray;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StorageMeasurement$MeasurementDetails;->usersSize:Landroid/util/SparseLongArray;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageMeasurement$MeasurementDetails;->usersSize:Landroid/util/SparseLongArray;
 
     return-void
 .end method

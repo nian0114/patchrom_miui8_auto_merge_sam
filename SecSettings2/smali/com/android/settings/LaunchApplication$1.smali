@@ -1,4 +1,4 @@
-.class Lcom/android/settings/LaunchApplication$1;
+.class Lcom/android/settings_ex/LaunchApplication$1;
 .super Ljava/lang/Object;
 .source "LaunchApplication.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/LaunchApplication;
+    value = Lcom/android/settings_ex/LaunchApplication;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/LaunchApplication;
+.field final synthetic this$0:Lcom/android/settings_ex/LaunchApplication;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/LaunchApplication;)V
+.method constructor <init>(Lcom/android/settings_ex/LaunchApplication;)V
     .locals 0
 
     .prologue
     .line 89
-    iput-object p1, p0, Lcom/android/settings/LaunchApplication$1;->this$0:Lcom/android/settings/LaunchApplication;
+    iput-object p1, p0, Lcom/android/settings_ex/LaunchApplication$1;->this$0:Lcom/android/settings_ex/LaunchApplication;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -83,9 +83,9 @@
     invoke-virtual {v1, v3}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     .line 98
-    iget-object v3, p0, Lcom/android/settings/LaunchApplication$1;->this$0:Lcom/android/settings/LaunchApplication;
+    iget-object v3, p0, Lcom/android/settings_ex/LaunchApplication$1;->this$0:Lcom/android/settings_ex/LaunchApplication;
 
-    invoke-virtual {v3, v1}, Lcom/android/settings/LaunchApplication;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v3, v1}, Lcom/android/settings_ex/LaunchApplication;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 

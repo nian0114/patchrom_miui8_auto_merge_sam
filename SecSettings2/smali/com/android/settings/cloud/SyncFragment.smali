@@ -1,17 +1,17 @@
-.class public abstract Lcom/android/settings/cloud/SyncFragment;
+.class public abstract Lcom/android/settings_ex/cloud/SyncFragment;
 .super Landroid/preference/PreferenceFragment;
 .source "SyncFragment.java"
 
 # interfaces
 .implements Landroid/preference/Preference$OnPreferenceClickListener;
-.implements Lcom/android/settings/cloud/CloudDialog$DialogListener;
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/cloud/CloudDialog$DialogListener;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # instance fields
-.field private dialogFragment:Lcom/android/settings/cloud/CloudDialog;
+.field private dialogFragment:Lcom/android/settings_ex/cloud/CloudDialog;
 
-.field protected mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+.field protected mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
 .field protected mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
@@ -29,13 +29,13 @@
     invoke-direct {p0}, Landroid/preference/PreferenceFragment;-><init>()V
 
     .line 43
-    iput-object v0, p0, Lcom/android/settings/cloud/SyncFragment;->dialogFragment:Lcom/android/settings/cloud/CloudDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/SyncFragment;->dialogFragment:Lcom/android/settings_ex/cloud/CloudDialog;
 
     .line 47
-    iput-object v0, p0, Lcom/android/settings/cloud/SyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/SyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
     .line 50
-    iput-object v0, p0, Lcom/android/settings/cloud/SyncFragment;->syncDescriptionPref:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/SyncFragment;->syncDescriptionPref:Landroid/preference/Preference;
 
     return-void
 .end method
@@ -45,11 +45,11 @@
 
     .prologue
     .line 239
-    invoke-virtual {p0}, Lcom/android/settings/cloud/SyncFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/SyncFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isConnected(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isConnected(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -78,7 +78,7 @@
 
     .prologue
     .line 159
-    invoke-virtual {p0}, Lcom/android/settings/cloud/SyncFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/SyncFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -119,14 +119,14 @@
     const/4 v3, 0x1
 
     .line 211
-    iget-object v2, p0, Lcom/android/settings/cloud/SyncFragment;->dialogFragment:Lcom/android/settings/cloud/CloudDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/SyncFragment;->dialogFragment:Lcom/android/settings_ex/cloud/CloudDialog;
 
     if-eqz v2, :cond_0
 
     .line 212
-    iget-object v2, p0, Lcom/android/settings/cloud/SyncFragment;->dialogFragment:Lcom/android/settings/cloud/CloudDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/SyncFragment;->dialogFragment:Lcom/android/settings_ex/cloud/CloudDialog;
 
-    invoke-virtual {v2}, Lcom/android/settings/cloud/CloudDialog;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {v2}, Lcom/android/settings_ex/cloud/CloudDialog;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -153,25 +153,25 @@
     .restart local v0    # "args":Landroid/os/Bundle;
     .restart local v1    # "type":I
     :pswitch_0
-    iget-object v2, p0, Lcom/android/settings/cloud/SyncFragment;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/SyncFragment;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 218
     const/4 v2, 0x0
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/cloud/SyncFragment;->updateScreen(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/cloud/SyncFragment;->updateScreen(I)V
 
     goto :goto_0
 
     .line 221
     :pswitch_1
-    iget-object v2, p0, Lcom/android/settings/cloud/SyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/SyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v2, v3}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
 
     .line 222
-    invoke-virtual {p0, v3}, Lcom/android/settings/cloud/SyncFragment;->updateScreen(I)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/cloud/SyncFragment;->updateScreen(I)V
 
     goto :goto_0
 
@@ -188,7 +188,7 @@
 
     .prologue
     .line 230
-    invoke-virtual {p0}, Lcom/android/settings/cloud/SyncFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/SyncFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -205,14 +205,14 @@
     invoke-virtual {v1, v2, v3}, Landroid/app/ActionBar;->setDisplayOptions(II)V
 
     .line 233
-    iget-object v1, p0, Lcom/android/settings/cloud/SyncFragment;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/SyncFragment;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v1, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 234
-    iget-object v1, p0, Lcom/android/settings/cloud/SyncFragment;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/SyncFragment;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 235
     invoke-super {p0}, Landroid/preference/PreferenceFragment;->onPause()V
@@ -230,14 +230,14 @@
     const/4 v3, 0x0
 
     .line 189
-    iget-object v2, p0, Lcom/android/settings/cloud/SyncFragment;->dialogFragment:Lcom/android/settings/cloud/CloudDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/SyncFragment;->dialogFragment:Lcom/android/settings_ex/cloud/CloudDialog;
 
     if-eqz v2, :cond_0
 
     .line 190
-    iget-object v2, p0, Lcom/android/settings/cloud/SyncFragment;->dialogFragment:Lcom/android/settings/cloud/CloudDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/SyncFragment;->dialogFragment:Lcom/android/settings_ex/cloud/CloudDialog;
 
-    invoke-virtual {v2}, Lcom/android/settings/cloud/CloudDialog;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {v2}, Lcom/android/settings_ex/cloud/CloudDialog;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -264,19 +264,19 @@
     .restart local v0    # "args":Landroid/os/Bundle;
     .restart local v1    # "type":I
     :pswitch_0
-    invoke-virtual {p0, v3}, Lcom/android/settings/cloud/SyncFragment;->updateScreen(I)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/cloud/SyncFragment;->updateScreen(I)V
 
     .line 196
-    invoke-virtual {p0, v3}, Lcom/android/settings/cloud/SyncFragment;->broadcastStatus(I)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/cloud/SyncFragment;->broadcastStatus(I)V
 
     goto :goto_0
 
     .line 199
     :pswitch_1
-    invoke-virtual {p0, v4}, Lcom/android/settings/cloud/SyncFragment;->updateScreen(I)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/cloud/SyncFragment;->updateScreen(I)V
 
     .line 200
-    invoke-virtual {p0, v4}, Lcom/android/settings/cloud/SyncFragment;->broadcastStatus(I)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/cloud/SyncFragment;->broadcastStatus(I)V
 
     goto :goto_0
 
@@ -298,16 +298,16 @@
     const/4 v2, 0x1
 
     .line 130
-    invoke-direct {p0}, Lcom/android/settings/cloud/SyncFragment;->isNetworkAvailable()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/cloud/SyncFragment;->isNetworkAvailable()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
     .line 131
-    iget-object v4, p0, Lcom/android/settings/cloud/SyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/SyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
-    iget-object v1, p0, Lcom/android/settings/cloud/SyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/SyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v1}, Landroid/preference/CheckBoxPreference;->isChecked()Z
 
@@ -321,16 +321,16 @@
     invoke-virtual {v4, v1}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
 
     .line 132
-    invoke-virtual {p0, v2}, Lcom/android/settings/cloud/SyncFragment;->updateScreen(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/cloud/SyncFragment;->updateScreen(I)V
 
     .line 133
-    invoke-virtual {p0}, Lcom/android/settings/cloud/SyncFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/SyncFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     const v4, 0x7f0e12a3
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/cloud/SyncFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/cloud/SyncFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -352,7 +352,7 @@
 
     .line 138
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/cloud/SyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/SyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {p1, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -361,7 +361,7 @@
     if-eqz v1, :cond_2
 
     .line 139
-    iget-object v1, p0, Lcom/android/settings/cloud/SyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/SyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v1}, Landroid/preference/CheckBoxPreference;->isChecked()Z
 
@@ -372,13 +372,13 @@
     if-eqz v0, :cond_3
 
     .line 142
-    invoke-virtual {p0, v2}, Lcom/android/settings/cloud/SyncFragment;->broadcastStatus(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/cloud/SyncFragment;->broadcastStatus(I)V
 
     .line 150
     .end local v0    # "isCheck":Z
     :cond_2
     :goto_2
-    invoke-virtual {p0, v2}, Lcom/android/settings/cloud/SyncFragment;->updateScreen(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/cloud/SyncFragment;->updateScreen(I)V
 
     move v3, v2
 
@@ -392,25 +392,25 @@
 
     const v4, 0x7f0e12a7
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/cloud/SyncFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/cloud/SyncFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {v1, v4, p0}, Lcom/android/settings/cloud/CloudDialog;->getInstance(ILjava/lang/String;Lcom/android/settings/cloud/CloudDialog$DialogListener;)Lcom/android/settings/cloud/CloudDialog;
+    invoke-static {v1, v4, p0}, Lcom/android/settings_ex/cloud/CloudDialog;->getInstance(ILjava/lang/String;Lcom/android/settings_ex/cloud/CloudDialog$DialogListener;)Lcom/android/settings_ex/cloud/CloudDialog;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/cloud/SyncFragment;->dialogFragment:Lcom/android/settings/cloud/CloudDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/cloud/SyncFragment;->dialogFragment:Lcom/android/settings_ex/cloud/CloudDialog;
 
     .line 146
-    iget-object v1, p0, Lcom/android/settings/cloud/SyncFragment;->dialogFragment:Lcom/android/settings/cloud/CloudDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/SyncFragment;->dialogFragment:Lcom/android/settings_ex/cloud/CloudDialog;
 
-    invoke-virtual {v1, v3}, Lcom/android/settings/cloud/CloudDialog;->setCancelable(Z)V
+    invoke-virtual {v1, v3}, Lcom/android/settings_ex/cloud/CloudDialog;->setCancelable(Z)V
 
     .line 147
-    iget-object v1, p0, Lcom/android/settings/cloud/SyncFragment;->dialogFragment:Lcom/android/settings/cloud/CloudDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/SyncFragment;->dialogFragment:Lcom/android/settings_ex/cloud/CloudDialog;
 
-    invoke-virtual {v1, p0}, Lcom/android/settings/cloud/CloudDialog;->show(Lcom/android/settings/cloud/SyncFragment;)V
+    invoke-virtual {v1, p0}, Lcom/android/settings_ex/cloud/CloudDialog;->show(Lcom/android/settings_ex/cloud/SyncFragment;)V
 
     goto :goto_2
 .end method
@@ -427,28 +427,28 @@
     invoke-super {p0}, Landroid/preference/PreferenceFragment;->onResume()V
 
     .line 64
-    invoke-virtual {p0}, Lcom/android/settings/cloud/SyncFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/SyncFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 65
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/cloud/SyncFragment;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+    iput-object v4, p0, Lcom/android/settings_ex/cloud/SyncFragment;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 67
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getInstance()Lcom/android/settings/cloud/CloudSettings;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getInstance()Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v3
 
     .line 68
-    .local v3, "settings":Lcom/android/settings/cloud/CloudSettings;
-    invoke-virtual {p0}, Lcom/android/settings/cloud/SyncFragment;->getActivity()Landroid/app/Activity;
+    .local v3, "settings":Lcom/android/settings_ex/cloud/CloudSettings;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/SyncFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -456,11 +456,11 @@
 
     move-result-object v4
 
-    invoke-virtual {v3}, Lcom/android/settings/cloud/CloudSettings;->getContentPath()Landroid/net/Uri;
+    invoke-virtual {v3}, Lcom/android/settings_ex/cloud/CloudSettings;->getContentPath()Landroid/net/Uri;
 
     move-result-object v5
 
-    invoke-virtual {v3}, Lcom/android/settings/cloud/CloudSettings;->getContentKey()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/android/settings_ex/cloud/CloudSettings;->getContentKey()Ljava/lang/String;
 
     move-result-object v6
 
@@ -470,15 +470,15 @@
 
     .line 70
     .local v1, "bundle":Landroid/os/Bundle;
-    invoke-static {v1}, Lcom/android/settings/cloud/CloudSettings;->getInstance(Landroid/os/Bundle;)Lcom/android/settings/cloud/CloudSettings;
+    invoke-static {v1}, Lcom/android/settings_ex/cloud/CloudSettings;->getInstance(Landroid/os/Bundle;)Lcom/android/settings_ex/cloud/CloudSettings;
 
     .line 72
-    instance-of v4, v0, Lcom/android/settings/SettingsActivity;
+    instance-of v4, v0, Lcom/android/settings_ex/SettingsActivity;
 
     if-eqz v4, :cond_0
 
     .line 73
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -490,7 +490,7 @@
 
     .line 76
     .local v2, "padding":I
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v4
 
@@ -520,7 +520,7 @@
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 106
-    invoke-direct {p0}, Lcom/android/settings/cloud/SyncFragment;->isNetworkAvailable()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/cloud/SyncFragment;->isNetworkAvailable()Z
 
     move-result v0
 
@@ -535,16 +535,16 @@
     invoke-virtual {p1, v0}, Landroid/widget/Switch;->setChecked(Z)V
 
     .line 108
-    invoke-virtual {p0, v2}, Lcom/android/settings/cloud/SyncFragment;->updateScreen(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/cloud/SyncFragment;->updateScreen(I)V
 
     .line 109
-    invoke-virtual {p0}, Lcom/android/settings/cloud/SyncFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/SyncFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     const v2, 0x7f0e12a3
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/cloud/SyncFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/cloud/SyncFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -569,11 +569,11 @@
     if-eqz p2, :cond_2
 
     .line 116
-    invoke-virtual {p0, v2}, Lcom/android/settings/cloud/SyncFragment;->broadcastStatus(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/cloud/SyncFragment;->broadcastStatus(I)V
 
     .line 124
     :goto_2
-    invoke-virtual {p0, v2}, Lcom/android/settings/cloud/SyncFragment;->updateScreen(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/cloud/SyncFragment;->updateScreen(I)V
 
     goto :goto_1
 
@@ -583,25 +583,25 @@
 
     const v1, 0x7f0e12b4
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/cloud/SyncFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/cloud/SyncFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1, p0}, Lcom/android/settings/cloud/CloudDialog;->getInstance(ILjava/lang/String;Lcom/android/settings/cloud/CloudDialog$DialogListener;)Lcom/android/settings/cloud/CloudDialog;
+    invoke-static {v0, v1, p0}, Lcom/android/settings_ex/cloud/CloudDialog;->getInstance(ILjava/lang/String;Lcom/android/settings_ex/cloud/CloudDialog$DialogListener;)Lcom/android/settings_ex/cloud/CloudDialog;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/cloud/SyncFragment;->dialogFragment:Lcom/android/settings/cloud/CloudDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/SyncFragment;->dialogFragment:Lcom/android/settings_ex/cloud/CloudDialog;
 
     .line 121
-    iget-object v0, p0, Lcom/android/settings/cloud/SyncFragment;->dialogFragment:Lcom/android/settings/cloud/CloudDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/SyncFragment;->dialogFragment:Lcom/android/settings_ex/cloud/CloudDialog;
 
-    invoke-virtual {v0, v2}, Lcom/android/settings/cloud/CloudDialog;->setCancelable(Z)V
+    invoke-virtual {v0, v2}, Lcom/android/settings_ex/cloud/CloudDialog;->setCancelable(Z)V
 
     .line 122
-    iget-object v0, p0, Lcom/android/settings/cloud/SyncFragment;->dialogFragment:Lcom/android/settings/cloud/CloudDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/SyncFragment;->dialogFragment:Lcom/android/settings_ex/cloud/CloudDialog;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/cloud/CloudDialog;->show(Lcom/android/settings/cloud/SyncFragment;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/cloud/CloudDialog;->show(Lcom/android/settings_ex/cloud/SyncFragment;)V
 
     goto :goto_2
 .end method
@@ -618,16 +618,16 @@
 
     .prologue
     .line 166
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getInstance()Lcom/android/settings/cloud/CloudSettings;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getInstance()Lcom/android/settings_ex/cloud/CloudSettings;
 
     move-result-object v0
 
     .line 168
-    .local v0, "settings":Lcom/android/settings/cloud/CloudSettings;
+    .local v0, "settings":Lcom/android/settings_ex/cloud/CloudSettings;
     if-nez v0, :cond_1
 
     .line 170
-    invoke-virtual {p0}, Lcom/android/settings/cloud/SyncFragment;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/SyncFragment;->finish()V
 
     .line 182
     :cond_0
@@ -636,14 +636,14 @@
 
     .line 171
     :cond_1
-    invoke-virtual {v0}, Lcom/android/settings/cloud/CloudSettings;->isAccountSet()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/cloud/CloudSettings;->isAccountSet()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
     .line 173
-    invoke-virtual {p0}, Lcom/android/settings/cloud/SyncFragment;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/SyncFragment;->finish()V
 
     goto :goto_0
 
@@ -652,13 +652,13 @@
     if-nez p1, :cond_3
 
     .line 177
-    iget-object v1, p0, Lcom/android/settings/cloud/SyncFragment;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/SyncFragment;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1}, Lcom/android/settings/widget/SwitchBar;->isChecked()Z
+    invoke-virtual {v1}, Lcom/android/settings_ex/widget/SwitchBar;->isChecked()Z
 
     move-result v1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/cloud/SyncFragment;->togglePreferences(Z)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/cloud/SyncFragment;->togglePreferences(Z)V
 
     goto :goto_0
 
@@ -669,13 +669,13 @@
     if-ne p1, v1, :cond_0
 
     .line 179
-    iget-object v1, p0, Lcom/android/settings/cloud/SyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/SyncFragment;->mPrefWifiOnly:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v1}, Landroid/preference/CheckBoxPreference;->isChecked()Z
 
     move-result v1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/cloud/SyncFragment;->toggleCheckbox(Z)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/cloud/SyncFragment;->toggleCheckbox(Z)V
 
     goto :goto_0
 .end method

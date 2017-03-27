@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/personalpage/PersonalPageSettings$5;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/personalpage/PersonalPageSettings$5;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "PersonalPageSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/personalpage/PersonalPageSettings;
+    value = Lcom/android/settings_ex/personalpage/PersonalPageSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 505
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -57,7 +57,7 @@
 
     .line 515
     .local v1, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v2, Lcom/android/settings/personalpage/PersonalPageSettings;
+    const-class v2, Lcom/android/settings_ex/personalpage/PersonalPageSettings;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

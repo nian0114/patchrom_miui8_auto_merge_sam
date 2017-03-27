@@ -1,4 +1,4 @@
-.class Lcom/android/settings/nearby/NearbyEnabler$HandleShareContentType;
+.class Lcom/android/settings_ex/nearby/NearbyEnabler$HandleShareContentType;
 .super Ljava/lang/Object;
 .source "NearbyEnabler.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/nearby/NearbyEnabler;
+    value = Lcom/android/settings_ex/nearby/NearbyEnabler;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,30 +18,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nearby/NearbyEnabler;
+.field final synthetic this$0:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/settings/nearby/NearbyEnabler;)V
+.method private constructor <init>(Lcom/android/settings_ex/nearby/NearbyEnabler;)V
     .locals 0
 
     .prologue
     .line 1215
-    iput-object p1, p0, Lcom/android/settings/nearby/NearbyEnabler$HandleShareContentType;->this$0:Lcom/android/settings/nearby/NearbyEnabler;
+    iput-object p1, p0, Lcom/android/settings_ex/nearby/NearbyEnabler$HandleShareContentType;->this$0:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/nearby/NearbyEnabler;Lcom/android/settings/nearby/NearbyEnabler$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/nearby/NearbyEnabler;Lcom/android/settings_ex/nearby/NearbyEnabler$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/nearby/NearbyEnabler;
-    .param p2, "x1"    # Lcom/android/settings/nearby/NearbyEnabler$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/nearby/NearbyEnabler;
+    .param p2, "x1"    # Lcom/android/settings_ex/nearby/NearbyEnabler$1;
 
     .prologue
     .line 1215
-    invoke-direct {p0, p1}, Lcom/android/settings/nearby/NearbyEnabler$HandleShareContentType;-><init>(Lcom/android/settings/nearby/NearbyEnabler;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/nearby/NearbyEnabler$HandleShareContentType;-><init>(Lcom/android/settings_ex/nearby/NearbyEnabler;)V
 
     return-void
 .end method
@@ -57,8 +57,8 @@
     const/4 v7, 0x0
 
     .line 1220
-    # getter for: Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
-    invoke-static {}, Lcom/android/settings/nearby/NearbyEnabler;->access$700()Lcom/android/settings/nearby/IMediaServer;
+    # getter for: Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
+    invoke-static {}, Lcom/android/settings_ex/nearby/NearbyEnabler;->access$700()Lcom/android/settings_ex/nearby/IMediaServer;
 
     move-result-object v8
 
@@ -78,12 +78,12 @@
     .line 1225
     :cond_1
     :try_start_0
-    # getter for: Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
-    invoke-static {}, Lcom/android/settings/nearby/NearbyEnabler;->access$700()Lcom/android/settings/nearby/IMediaServer;
+    # getter for: Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
+    invoke-static {}, Lcom/android/settings_ex/nearby/NearbyEnabler;->access$700()Lcom/android/settings_ex/nearby/IMediaServer;
 
     move-result-object v8
 
-    invoke-interface {v8}, Lcom/android/settings/nearby/IMediaServer;->getSharedMediaType()I
+    invoke-interface {v8}, Lcom/android/settings_ex/nearby/IMediaServer;->getSharedMediaType()I
 
     move-result v3
 
@@ -140,12 +140,12 @@
 
     .line 1250
     :goto_3
-    # getter for: Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
-    invoke-static {}, Lcom/android/settings/nearby/NearbyEnabler;->access$700()Lcom/android/settings/nearby/IMediaServer;
+    # getter for: Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
+    invoke-static {}, Lcom/android/settings_ex/nearby/NearbyEnabler;->access$700()Lcom/android/settings_ex/nearby/IMediaServer;
 
     move-result-object v8
 
-    invoke-interface {v8, v3}, Lcom/android/settings/nearby/IMediaServer;->setSharedMediaType(I)V
+    invoke-interface {v8, v3}, Lcom/android/settings_ex/nearby/IMediaServer;->setSharedMediaType(I)V
 
     .line 1251
     const-string v8, "NearbyEnabler"
@@ -174,13 +174,13 @@
 
     move-result-object v10
 
-    invoke-static {v8, v9, v10}, Lcom/android/settings/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v9, v10}, Lcom/android/settings_ex/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1253
-    iget-object v8, p0, Lcom/android/settings/nearby/NearbyEnabler$HandleShareContentType;->this$0:Lcom/android/settings/nearby/NearbyEnabler;
+    iget-object v8, p0, Lcom/android/settings_ex/nearby/NearbyEnabler$HandleShareContentType;->this$0:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
-    # getter for: Lcom/android/settings/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
-    invoke-static {v8}, Lcom/android/settings/nearby/NearbyEnabler;->access$1300(Lcom/android/settings/nearby/NearbyEnabler;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/nearby/NearbyEnabler;->mContext:Landroid/content/Context;
+    invoke-static {v8}, Lcom/android/settings_ex/nearby/NearbyEnabler;->access$1300(Lcom/android/settings_ex/nearby/NearbyEnabler;)Landroid/content/Context;
 
     move-result-object v8
 
@@ -279,7 +279,7 @@
 
     move-result-object v10
 
-    invoke-static {v8, v9, v10}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v9, v10}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 .end method

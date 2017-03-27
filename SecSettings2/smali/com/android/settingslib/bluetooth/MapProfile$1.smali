@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settingslib/bluetooth/MapProfile$1;
+.class synthetic Lcom/android/settings_exlib/bluetooth/MapProfile$1;
 .super Ljava/lang/Object;
 .source "MapProfile.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/bluetooth/MapProfile;
+    value = Lcom/android/settings_exlib/bluetooth/MapProfile;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

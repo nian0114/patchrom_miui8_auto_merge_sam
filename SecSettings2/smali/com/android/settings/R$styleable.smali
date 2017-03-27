@@ -1,11 +1,11 @@
-.class public final Lcom/android/settings/R$styleable;
+.class public final Lcom/android/settings_ex/R$styleable;
 .super Ljava/lang/Object;
 .source "R.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/R;
+    value = Lcom/android/settings_ex/R;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -160,7 +160,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/android/settings/R$styleable;->ActionBar:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->ActionBar:[I
 
     new-array v0, v3, [I
 
@@ -168,7 +168,7 @@
 
     aput v1, v0, v2
 
-    sput-object v0, Lcom/android/settings/R$styleable;->ActionBarLayout:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->ActionBarLayout:[I
 
     new-array v0, v3, [I
 
@@ -176,47 +176,47 @@
 
     aput v1, v0, v2
 
-    sput-object v0, Lcom/android/settings/R$styleable;->ActionMenuItemView:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->ActionMenuItemView:[I
 
     new-array v0, v2, [I
 
-    sput-object v0, Lcom/android/settings/R$styleable;->ActionMenuView:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->ActionMenuView:[I
 
     new-array v0, v6, [I
 
     fill-array-data v0, :array_1
 
-    sput-object v0, Lcom/android/settings/R$styleable;->ActionMode:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->ActionMode:[I
 
     new-array v0, v4, [I
 
     fill-array-data v0, :array_2
 
-    sput-object v0, Lcom/android/settings/R$styleable;->ActivityChooserView:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->ActivityChooserView:[I
 
     new-array v0, v6, [I
 
     fill-array-data v0, :array_3
 
-    sput-object v0, Lcom/android/settings/R$styleable;->AlertDialog:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->AlertDialog:[I
 
     new-array v0, v5, [I
 
     fill-array-data v0, :array_4
 
-    sput-object v0, Lcom/android/settings/R$styleable;->AppBarLayout:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->AppBarLayout:[I
 
     new-array v0, v4, [I
 
     fill-array-data v0, :array_5
 
-    sput-object v0, Lcom/android/settings/R$styleable;->AppBarLayout_LayoutParams:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->AppBarLayout_LayoutParams:[I
 
     new-array v0, v4, [I
 
     fill-array-data v0, :array_6
 
-    sput-object v0, Lcom/android/settings/R$styleable;->AppCompatTextView:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->AppCompatTextView:[I
 
     const/16 v0, 0xd
 
@@ -224,13 +224,13 @@
 
     fill-array-data v0, :array_7
 
-    sput-object v0, Lcom/android/settings/R$styleable;->BatteryHistoryChart:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->BatteryHistoryChart:[I
 
     new-array v0, v6, [I
 
     fill-array-data v0, :array_8
 
-    sput-object v0, Lcom/android/settings/R$styleable;->ChartGridView:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->ChartGridView:[I
 
     const/4 v0, 0x4
 
@@ -238,7 +238,7 @@
 
     fill-array-data v0, :array_9
 
-    sput-object v0, Lcom/android/settings/R$styleable;->ChartNetworkSeriesView:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->ChartNetworkSeriesView:[I
 
     const/4 v0, 0x7
 
@@ -246,19 +246,19 @@
 
     fill-array-data v0, :array_a
 
-    sput-object v0, Lcom/android/settings/R$styleable;->ChartSweepView:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->ChartSweepView:[I
 
     new-array v0, v4, [I
 
     fill-array-data v0, :array_b
 
-    sput-object v0, Lcom/android/settings/R$styleable;->ChartView:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->ChartView:[I
 
     new-array v0, v4, [I
 
     fill-array-data v0, :array_c
 
-    sput-object v0, Lcom/android/settings/R$styleable;->CollapsingAppBarLayout_LayoutParams:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->CollapsingAppBarLayout_LayoutParams:[I
 
     const/16 v0, 0xe
 
@@ -266,19 +266,19 @@
 
     fill-array-data v0, :array_d
 
-    sput-object v0, Lcom/android/settings/R$styleable;->CollapsingToolbarLayout:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->CollapsingToolbarLayout:[I
 
     new-array v0, v5, [I
 
     fill-array-data v0, :array_e
 
-    sput-object v0, Lcom/android/settings/R$styleable;->CompoundButton:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->CompoundButton:[I
 
     new-array v0, v4, [I
 
     fill-array-data v0, :array_f
 
-    sput-object v0, Lcom/android/settings/R$styleable;->CoordinatorLayout:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->CoordinatorLayout:[I
 
     const/4 v0, 0x5
 
@@ -286,7 +286,7 @@
 
     fill-array-data v0, :array_10
 
-    sput-object v0, Lcom/android/settings/R$styleable;->CoordinatorLayout_LayoutParams:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->CoordinatorLayout_LayoutParams:[I
 
     const/16 v0, 0x8
 
@@ -294,19 +294,19 @@
 
     fill-array-data v0, :array_11
 
-    sput-object v0, Lcom/android/settings/R$styleable;->DrawerArrowToggle:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->DrawerArrowToggle:[I
 
     new-array v0, v4, [I
 
     fill-array-data v0, :array_12
 
-    sput-object v0, Lcom/android/settings/R$styleable;->DropDownPreference:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->DropDownPreference:[I
 
     new-array v0, v4, [I
 
     fill-array-data v0, :array_13
 
-    sput-object v0, Lcom/android/settings/R$styleable;->FingerprintEffectView:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->FingerprintEffectView:[I
 
     const/16 v0, 0x8
 
@@ -314,7 +314,7 @@
 
     fill-array-data v0, :array_14
 
-    sput-object v0, Lcom/android/settings/R$styleable;->FloatingActionButton:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->FloatingActionButton:[I
 
     new-array v0, v3, [I
 
@@ -322,7 +322,7 @@
 
     aput v1, v0, v2
 
-    sput-object v0, Lcom/android/settings/R$styleable;->IconPreferenceScreen:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->IconPreferenceScreen:[I
 
     const/16 v0, 0x9
 
@@ -330,7 +330,7 @@
 
     fill-array-data v0, :array_15
 
-    sput-object v0, Lcom/android/settings/R$styleable;->LinearLayoutCompat:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->LinearLayoutCompat:[I
 
     const/4 v0, 0x4
 
@@ -338,19 +338,19 @@
 
     fill-array-data v0, :array_16
 
-    sput-object v0, Lcom/android/settings/R$styleable;->LinearLayoutCompat_Layout:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->LinearLayoutCompat_Layout:[I
 
     new-array v0, v4, [I
 
     fill-array-data v0, :array_17
 
-    sput-object v0, Lcom/android/settings/R$styleable;->ListPopupWindow:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->ListPopupWindow:[I
 
     new-array v0, v6, [I
 
     fill-array-data v0, :array_18
 
-    sput-object v0, Lcom/android/settings/R$styleable;->MenuGroup:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->MenuGroup:[I
 
     const/16 v0, 0x11
 
@@ -358,7 +358,7 @@
 
     fill-array-data v0, :array_19
 
-    sput-object v0, Lcom/android/settings/R$styleable;->MenuItem:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->MenuItem:[I
 
     const/16 v0, 0x8
 
@@ -366,7 +366,7 @@
 
     fill-array-data v0, :array_1a
 
-    sput-object v0, Lcom/android/settings/R$styleable;->MenuView:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->MenuView:[I
 
     const/16 v0, 0xa
 
@@ -374,19 +374,19 @@
 
     fill-array-data v0, :array_1b
 
-    sput-object v0, Lcom/android/settings/R$styleable;->NavigationView:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->NavigationView:[I
 
     new-array v0, v4, [I
 
     fill-array-data v0, :array_1c
 
-    sput-object v0, Lcom/android/settings/R$styleable;->PercentageBarChart:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->PercentageBarChart:[I
 
     new-array v0, v4, [I
 
     fill-array-data v0, :array_1d
 
-    sput-object v0, Lcom/android/settings/R$styleable;->PopupWindow:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->PopupWindow:[I
 
     new-array v0, v3, [I
 
@@ -394,13 +394,13 @@
 
     aput v1, v0, v2
 
-    sput-object v0, Lcom/android/settings/R$styleable;->PopupWindowBackgroundState:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->PopupWindowBackgroundState:[I
 
     new-array v0, v5, [I
 
     fill-array-data v0, :array_1e
 
-    sput-object v0, Lcom/android/settings/R$styleable;->Preference:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->Preference:[I
 
     new-array v0, v3, [I
 
@@ -408,7 +408,7 @@
 
     aput v1, v0, v2
 
-    sput-object v0, Lcom/android/settings/R$styleable;->ProfileDefaultRingtonePreference:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->ProfileDefaultRingtonePreference:[I
 
     new-array v0, v3, [I
 
@@ -416,7 +416,7 @@
 
     aput v1, v0, v2
 
-    sput-object v0, Lcom/android/settings/R$styleable;->ScrimInsetsFrameLayout:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->ScrimInsetsFrameLayout:[I
 
     new-array v0, v3, [I
 
@@ -424,7 +424,7 @@
 
     aput v1, v0, v2
 
-    sput-object v0, Lcom/android/settings/R$styleable;->ScrollingViewBehavior_Params:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->ScrollingViewBehavior_Params:[I
 
     const/16 v0, 0x11
 
@@ -432,19 +432,19 @@
 
     fill-array-data v0, :array_1f
 
-    sput-object v0, Lcom/android/settings/R$styleable;->SearchView:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->SearchView:[I
 
     new-array v0, v4, [I
 
     fill-array-data v0, :array_20
 
-    sput-object v0, Lcom/android/settings/R$styleable;->SettingsDBMatching:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->SettingsDBMatching:[I
 
     new-array v0, v4, [I
 
     fill-array-data v0, :array_21
 
-    sput-object v0, Lcom/android/settings/R$styleable;->SettingsTile:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->SettingsTile:[I
 
     new-array v0, v3, [I
 
@@ -452,7 +452,7 @@
 
     aput v1, v0, v2
 
-    sput-object v0, Lcom/android/settings/R$styleable;->SetupWizardIllustration:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->SetupWizardIllustration:[I
 
     new-array v0, v3, [I
 
@@ -460,13 +460,13 @@
 
     aput v1, v0, v2
 
-    sput-object v0, Lcom/android/settings/R$styleable;->ShowSettingsInOtherMode:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->ShowSettingsInOtherMode:[I
 
     new-array v0, v5, [I
 
     fill-array-data v0, :array_22
 
-    sput-object v0, Lcom/android/settings/R$styleable;->SnackbarLayout:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->SnackbarLayout:[I
 
     const/4 v0, 0x4
 
@@ -474,7 +474,7 @@
 
     fill-array-data v0, :array_23
 
-    sput-object v0, Lcom/android/settings/R$styleable;->Spinner:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->Spinner:[I
 
     new-array v0, v3, [I
 
@@ -482,7 +482,7 @@
 
     aput v1, v0, v2
 
-    sput-object v0, Lcom/android/settings/R$styleable;->SuwIllustration:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->SuwIllustration:[I
 
     const/16 v0, 0x9
 
@@ -490,7 +490,7 @@
 
     fill-array-data v0, :array_24
 
-    sput-object v0, Lcom/android/settings/R$styleable;->SuwSetupWizardLayout:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->SuwSetupWizardLayout:[I
 
     new-array v0, v3, [I
 
@@ -498,7 +498,7 @@
 
     aput v1, v0, v2
 
-    sput-object v0, Lcom/android/settings/R$styleable;->SuwStickyHeaderListView:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->SuwStickyHeaderListView:[I
 
     const/16 v0, 0xa
 
@@ -506,7 +506,7 @@
 
     fill-array-data v0, :array_25
 
-    sput-object v0, Lcom/android/settings/R$styleable;->SwitchCompat:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->SwitchCompat:[I
 
     const/16 v0, 0x10
 
@@ -514,7 +514,7 @@
 
     fill-array-data v0, :array_26
 
-    sput-object v0, Lcom/android/settings/R$styleable;->TabLayout:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->TabLayout:[I
 
     const/4 v0, 0x5
 
@@ -522,13 +522,13 @@
 
     fill-array-data v0, :array_27
 
-    sput-object v0, Lcom/android/settings/R$styleable;->TextAppearance:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->TextAppearance:[I
 
     new-array v0, v6, [I
 
     fill-array-data v0, :array_28
 
-    sput-object v0, Lcom/android/settings/R$styleable;->TextInputLayout:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->TextInputLayout:[I
 
     const/16 v0, 0x6c
 
@@ -536,7 +536,7 @@
 
     fill-array-data v0, :array_29
 
-    sput-object v0, Lcom/android/settings/R$styleable;->Theme:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->Theme:[I
 
     const/16 v0, 0x19
 
@@ -544,13 +544,13 @@
 
     fill-array-data v0, :array_2a
 
-    sput-object v0, Lcom/android/settings/R$styleable;->Toolbar:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->Toolbar:[I
 
     new-array v0, v4, [I
 
     fill-array-data v0, :array_2b
 
-    sput-object v0, Lcom/android/settings/R$styleable;->TwTouchPunchView:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->TwTouchPunchView:[I
 
     const/4 v0, 0x5
 
@@ -558,19 +558,19 @@
 
     fill-array-data v0, :array_2c
 
-    sput-object v0, Lcom/android/settings/R$styleable;->View:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->View:[I
 
     new-array v0, v5, [I
 
     fill-array-data v0, :array_2d
 
-    sput-object v0, Lcom/android/settings/R$styleable;->ViewBackgroundHelper:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->ViewBackgroundHelper:[I
 
     new-array v0, v5, [I
 
     fill-array-data v0, :array_2e
 
-    sput-object v0, Lcom/android/settings/R$styleable;->ViewStubCompat:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->ViewStubCompat:[I
 
     new-array v0, v3, [I
 
@@ -578,7 +578,7 @@
 
     aput v1, v0, v2
 
-    sput-object v0, Lcom/android/settings/R$styleable;->WifiEncryptionState:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->WifiEncryptionState:[I
 
     new-array v0, v3, [I
 
@@ -586,7 +586,7 @@
 
     aput v1, v0, v2
 
-    sput-object v0, Lcom/android/settings/R$styleable;->WifiGigaState:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->WifiGigaState:[I
 
     new-array v0, v3, [I
 
@@ -594,7 +594,7 @@
 
     aput v1, v0, v2
 
-    sput-object v0, Lcom/android/settings/R$styleable;->WifiWeChatState:[I
+    sput-object v0, Lcom/android/settings_ex/R$styleable;->WifiWeChatState:[I
 
     return-void
 

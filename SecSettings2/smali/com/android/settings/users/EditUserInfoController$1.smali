@@ -1,4 +1,4 @@
-.class Lcom/android/settings/users/EditUserInfoController$1;
+.class Lcom/android/settings_ex/users/EditUserInfoController$1;
 .super Ljava/lang/Object;
 .source "EditUserInfoController.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/users/EditUserInfoController;->createDialog(Landroid/app/Fragment;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;ILcom/android/settings/users/EditUserInfoController$OnContentChangedCallback;Landroid/os/UserHandle;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/users/EditUserInfoController;->createDialog(Landroid/app/Fragment;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;ILcom/android/settings_ex/users/EditUserInfoController$OnContentChangedCallback;Landroid/os/UserHandle;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/users/EditUserInfoController;
+.field final synthetic this$0:Lcom/android/settings_ex/users/EditUserInfoController;
 
 .field final synthetic val$activity:Landroid/app/Activity;
 
@@ -26,16 +26,16 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/users/EditUserInfoController;Landroid/widget/EditText;Landroid/app/Activity;)V
+.method constructor <init>(Lcom/android/settings_ex/users/EditUserInfoController;Landroid/widget/EditText;Landroid/app/Activity;)V
     .locals 0
 
     .prologue
     .line 132
-    iput-object p1, p0, Lcom/android/settings/users/EditUserInfoController$1;->this$0:Lcom/android/settings/users/EditUserInfoController;
+    iput-object p1, p0, Lcom/android/settings_ex/users/EditUserInfoController$1;->this$0:Lcom/android/settings_ex/users/EditUserInfoController;
 
-    iput-object p2, p0, Lcom/android/settings/users/EditUserInfoController$1;->val$userNameView:Landroid/widget/EditText;
+    iput-object p2, p0, Lcom/android/settings_ex/users/EditUserInfoController$1;->val$userNameView:Landroid/widget/EditText;
 
-    iput-object p3, p0, Lcom/android/settings/users/EditUserInfoController$1;->val$activity:Landroid/app/Activity;
+    iput-object p3, p0, Lcom/android/settings_ex/users/EditUserInfoController$1;->val$activity:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -72,22 +72,22 @@
 
     move-result v0
 
-    # getter for: Lcom/android/settings/users/EditUserInfoController;->USER_NAME_MAX_LENGTH:I
-    invoke-static {}, Lcom/android/settings/users/EditUserInfoController;->access$000()I
+    # getter for: Lcom/android/settings_ex/users/EditUserInfoController;->USER_NAME_MAX_LENGTH:I
+    invoke-static {}, Lcom/android/settings_ex/users/EditUserInfoController;->access$000()I
 
     move-result v1
 
     if-gt v0, v1, :cond_0
 
     .line 154
-    iget-object v0, p0, Lcom/android/settings/users/EditUserInfoController$1;->this$0:Lcom/android/settings/users/EditUserInfoController;
+    iget-object v0, p0, Lcom/android/settings_ex/users/EditUserInfoController$1;->this$0:Lcom/android/settings_ex/users/EditUserInfoController;
 
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    # setter for: Lcom/android/settings/users/EditUserInfoController;->prevText:Ljava/lang/String;
-    invoke-static {v0, v1}, Lcom/android/settings/users/EditUserInfoController;->access$102(Lcom/android/settings/users/EditUserInfoController;Ljava/lang/String;)Ljava/lang/String;
+    # setter for: Lcom/android/settings_ex/users/EditUserInfoController;->prevText:Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/android/settings_ex/users/EditUserInfoController;->access$102(Lcom/android/settings_ex/users/EditUserInfoController;Ljava/lang/String;)Ljava/lang/String;
 
     .line 156
     :cond_0
@@ -105,7 +105,7 @@
     const/4 v8, 0x0
 
     .line 136
-    iget-object v2, p0, Lcom/android/settings/users/EditUserInfoController$1;->val$userNameView:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/users/EditUserInfoController$1;->val$userNameView:Landroid/widget/EditText;
 
     invoke-virtual {v2}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -123,18 +123,18 @@
 
     move-result v2
 
-    # getter for: Lcom/android/settings/users/EditUserInfoController;->USER_NAME_MAX_LENGTH:I
-    invoke-static {}, Lcom/android/settings/users/EditUserInfoController;->access$000()I
+    # getter for: Lcom/android/settings_ex/users/EditUserInfoController;->USER_NAME_MAX_LENGTH:I
+    invoke-static {}, Lcom/android/settings_ex/users/EditUserInfoController;->access$000()I
 
     move-result v3
 
     if-le v2, v3, :cond_1
 
     .line 139
-    iget-object v2, p0, Lcom/android/settings/users/EditUserInfoController$1;->val$userNameView:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/users/EditUserInfoController$1;->val$userNameView:Landroid/widget/EditText;
 
-    # getter for: Lcom/android/settings/users/EditUserInfoController;->USER_NAME_MAX_LENGTH:I
-    invoke-static {}, Lcom/android/settings/users/EditUserInfoController;->access$000()I
+    # getter for: Lcom/android/settings_ex/users/EditUserInfoController;->USER_NAME_MAX_LENGTH:I
+    invoke-static {}, Lcom/android/settings_ex/users/EditUserInfoController;->access$000()I
 
     move-result v3
 
@@ -145,18 +145,18 @@
     invoke-virtual {v2, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 140
-    iget-object v2, p0, Lcom/android/settings/users/EditUserInfoController$1;->this$0:Lcom/android/settings/users/EditUserInfoController;
+    iget-object v2, p0, Lcom/android/settings_ex/users/EditUserInfoController$1;->this$0:Lcom/android/settings_ex/users/EditUserInfoController;
 
-    iget-object v2, v2, Lcom/android/settings/users/EditUserInfoController;->mMaxToast:Landroid/widget/Toast;
+    iget-object v2, v2, Lcom/android/settings_ex/users/EditUserInfoController;->mMaxToast:Landroid/widget/Toast;
 
     if-nez v2, :cond_2
 
     .line 141
-    iget-object v2, p0, Lcom/android/settings/users/EditUserInfoController$1;->this$0:Lcom/android/settings/users/EditUserInfoController;
+    iget-object v2, p0, Lcom/android/settings_ex/users/EditUserInfoController$1;->this$0:Lcom/android/settings_ex/users/EditUserInfoController;
 
-    iget-object v3, p0, Lcom/android/settings/users/EditUserInfoController$1;->val$activity:Landroid/app/Activity;
+    iget-object v3, p0, Lcom/android/settings_ex/users/EditUserInfoController$1;->val$activity:Landroid/app/Activity;
 
-    iget-object v4, p0, Lcom/android/settings/users/EditUserInfoController$1;->val$activity:Landroid/app/Activity;
+    iget-object v4, p0, Lcom/android/settings_ex/users/EditUserInfoController$1;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {v4}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
@@ -168,8 +168,8 @@
 
     new-array v6, v6, [Ljava/lang/Object;
 
-    # getter for: Lcom/android/settings/users/EditUserInfoController;->USER_NAME_MAX_LENGTH:I
-    invoke-static {}, Lcom/android/settings/users/EditUserInfoController;->access$000()I
+    # getter for: Lcom/android/settings_ex/users/EditUserInfoController;->USER_NAME_MAX_LENGTH:I
+    invoke-static {}, Lcom/android/settings_ex/users/EditUserInfoController;->access$000()I
 
     move-result v7
 
@@ -187,21 +187,21 @@
 
     move-result-object v3
 
-    iput-object v3, v2, Lcom/android/settings/users/EditUserInfoController;->mMaxToast:Landroid/widget/Toast;
+    iput-object v3, v2, Lcom/android/settings_ex/users/EditUserInfoController;->mMaxToast:Landroid/widget/Toast;
 
     .line 142
-    iget-object v2, p0, Lcom/android/settings/users/EditUserInfoController$1;->this$0:Lcom/android/settings/users/EditUserInfoController;
+    iget-object v2, p0, Lcom/android/settings_ex/users/EditUserInfoController$1;->this$0:Lcom/android/settings_ex/users/EditUserInfoController;
 
-    iget-object v2, v2, Lcom/android/settings/users/EditUserInfoController;->mMaxToast:Landroid/widget/Toast;
+    iget-object v2, v2, Lcom/android/settings_ex/users/EditUserInfoController;->mMaxToast:Landroid/widget/Toast;
 
     invoke-virtual {v2}, Landroid/widget/Toast;->show()V
 
     .line 146
     :cond_0
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/users/EditUserInfoController$1;->val$userNameView:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/users/EditUserInfoController$1;->val$userNameView:Landroid/widget/EditText;
 
-    iget-object v3, p0, Lcom/android/settings/users/EditUserInfoController$1;->val$userNameView:Landroid/widget/EditText;
+    iget-object v3, p0, Lcom/android/settings_ex/users/EditUserInfoController$1;->val$userNameView:Landroid/widget/EditText;
 
     invoke-virtual {v3}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -219,15 +219,15 @@
 
     .line 143
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/users/EditUserInfoController$1;->this$0:Lcom/android/settings/users/EditUserInfoController;
+    iget-object v2, p0, Lcom/android/settings_ex/users/EditUserInfoController$1;->this$0:Lcom/android/settings_ex/users/EditUserInfoController;
 
-    iget-object v2, v2, Lcom/android/settings/users/EditUserInfoController;->mMaxToast:Landroid/widget/Toast;
+    iget-object v2, v2, Lcom/android/settings_ex/users/EditUserInfoController;->mMaxToast:Landroid/widget/Toast;
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/android/settings/users/EditUserInfoController$1;->this$0:Lcom/android/settings/users/EditUserInfoController;
+    iget-object v2, p0, Lcom/android/settings_ex/users/EditUserInfoController$1;->this$0:Lcom/android/settings_ex/users/EditUserInfoController;
 
-    iget-object v2, v2, Lcom/android/settings/users/EditUserInfoController;->mMaxToast:Landroid/widget/Toast;
+    iget-object v2, v2, Lcom/android/settings_ex/users/EditUserInfoController;->mMaxToast:Landroid/widget/Toast;
 
     invoke-virtual {v2}, Landroid/widget/Toast;->getView()Landroid/view/View;
 
@@ -240,9 +240,9 @@
     if-nez v2, :cond_0
 
     .line 144
-    iget-object v2, p0, Lcom/android/settings/users/EditUserInfoController$1;->this$0:Lcom/android/settings/users/EditUserInfoController;
+    iget-object v2, p0, Lcom/android/settings_ex/users/EditUserInfoController$1;->this$0:Lcom/android/settings_ex/users/EditUserInfoController;
 
-    iget-object v2, v2, Lcom/android/settings/users/EditUserInfoController;->mMaxToast:Landroid/widget/Toast;
+    iget-object v2, v2, Lcom/android/settings_ex/users/EditUserInfoController;->mMaxToast:Landroid/widget/Toast;
 
     invoke-virtual {v2}, Landroid/widget/Toast;->show()V
 

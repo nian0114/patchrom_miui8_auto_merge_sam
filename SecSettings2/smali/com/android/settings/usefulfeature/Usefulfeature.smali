@@ -1,15 +1,15 @@
-.class public Lcom/android/settings/usefulfeature/Usefulfeature;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/usefulfeature/Usefulfeature;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "Usefulfeature.java"
 
 # interfaces
 .implements Landroid/preference/Preference$OnPreferenceChangeListener;
 .implements Landroid/preference/Preference$OnPreferenceClickListener;
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 .field private static componentNameOfDoubleTapOnHomeCommandIntent:Ljava/lang/String;
 
@@ -110,19 +110,19 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMotionFeatures:[Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMotionFeatures:[Ljava/lang/String;
 
     .line 124
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/android/settings/usefulfeature/Usefulfeature;->mContext:Landroid/content/Context;
+    sput-object v0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mContext:Landroid/content/Context;
 
     .line 806
-    new-instance v0, Lcom/android/settings/usefulfeature/Usefulfeature$8;
+    new-instance v0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$8;
 
-    invoke-direct {v0}, Lcom/android/settings/usefulfeature/Usefulfeature$8;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature$8;-><init>()V
 
-    sput-object v0, Lcom/android/settings/usefulfeature/Usefulfeature;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -132,7 +132,7 @@
 
     .prologue
     .line 58
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 131
     const-string v0, "hongbao"
@@ -151,148 +151,148 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mHongbaoEnabled:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mHongbaoEnabled:Z
 
     .line 141
-    new-instance v0, Lcom/android/settings/usefulfeature/Usefulfeature$1;
+    new-instance v0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$1;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/usefulfeature/Usefulfeature$1;-><init>(Lcom/android/settings/usefulfeature/Usefulfeature;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature$1;-><init>(Lcom/android/settings_ex/usefulfeature/Usefulfeature;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeToCaptureObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeToCaptureObserver:Landroid/database/ContentObserver;
 
     .line 149
-    new-instance v0, Lcom/android/settings/usefulfeature/Usefulfeature$2;
+    new-instance v0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$2;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/usefulfeature/Usefulfeature$2;-><init>(Lcom/android/settings/usefulfeature/Usefulfeature;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature$2;-><init>(Lcom/android/settings_ex/usefulfeature/Usefulfeature;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
 
     .line 185
-    new-instance v0, Lcom/android/settings/usefulfeature/Usefulfeature$3;
+    new-instance v0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$3;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/usefulfeature/Usefulfeature$3;-><init>(Lcom/android/settings/usefulfeature/Usefulfeature;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature$3;-><init>(Lcom/android/settings_ex/usefulfeature/Usefulfeature;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMultiWindowObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMultiWindowObserver:Landroid/database/ContentObserver;
 
     .line 199
-    new-instance v0, Lcom/android/settings/usefulfeature/Usefulfeature$4;
+    new-instance v0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$4;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/usefulfeature/Usefulfeature$4;-><init>(Lcom/android/settings/usefulfeature/Usefulfeature;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature$4;-><init>(Lcom/android/settings_ex/usefulfeature/Usefulfeature;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceivingObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceivingObserver:Landroid/database/ContentObserver;
 
     .line 211
-    new-instance v0, Lcom/android/settings/usefulfeature/Usefulfeature$5;
+    new-instance v0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$5;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/usefulfeature/Usefulfeature$5;-><init>(Lcom/android/settings/usefulfeature/Usefulfeature;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature$5;-><init>(Lcom/android/settings_ex/usefulfeature/Usefulfeature;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbersObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbersObserver:Landroid/database/ContentObserver;
 
     .line 219
-    new-instance v0, Lcom/android/settings/usefulfeature/Usefulfeature$6;
+    new-instance v0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$6;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/usefulfeature/Usefulfeature$6;-><init>(Lcom/android/settings/usefulfeature/Usefulfeature;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature$6;-><init>(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)V
 
-    iput-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
+    iput-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
     .line 584
-    new-instance v0, Lcom/android/settings/usefulfeature/Usefulfeature$7;
+    new-instance v0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$7;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/usefulfeature/Usefulfeature$7;-><init>(Lcom/android/settings/usefulfeature/Usefulfeature;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature$7;-><init>(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)V
 
-    iput-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mIntentReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
+.method static synthetic access$000(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/Usefulfeature;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/content/ContentResolver;
+.method static synthetic access$100(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/Usefulfeature;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
     .prologue
     .line 58
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/content/ContentResolver;
+.method static synthetic access$1000(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/Usefulfeature;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
     .prologue
     .line 58
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/content/ContentResolver;
+.method static synthetic access$1100(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/Usefulfeature;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
     .prologue
     .line 58
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/PreferenceScreen;
+.method static synthetic access$1200(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/PreferenceScreen;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/Usefulfeature;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
 
     return-object v0
 .end method
 
-.method static synthetic access$1300(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/content/ContentResolver;
+.method static synthetic access$1300(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/Usefulfeature;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
     .prologue
     .line 58
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -304,7 +304,7 @@
 
     .prologue
     .line 58
-    invoke-static {}, Lcom/android/settings/usefulfeature/Usefulfeature;->isSupportSmartCall()Z
+    invoke-static {}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->isSupportSmartCall()Z
 
     move-result v0
 
@@ -316,7 +316,7 @@
 
     .prologue
     .line 58
-    invoke-static {}, Lcom/android/settings/usefulfeature/Usefulfeature;->isSupportMCC()Z
+    invoke-static {}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->isSupportMCC()Z
 
     move-result v0
 
@@ -328,7 +328,7 @@
 
     .prologue
     .line 58
-    sget-object v0, Lcom/android/settings/usefulfeature/Usefulfeature;->mContext:Landroid/content/Context;
+    sget-object v0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
@@ -338,101 +338,101 @@
 
     .prologue
     .line 58
-    sget-object v0, Lcom/android/settings/usefulfeature/Usefulfeature;->componentNameOfDoubleTapOnHomeCommandIntent:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->componentNameOfDoubleTapOnHomeCommandIntent:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/content/ContentResolver;
+.method static synthetic access$200(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/Usefulfeature;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
     .prologue
     .line 58
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
+.method static synthetic access$300(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/Usefulfeature;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
+.method static synthetic access$400(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/Usefulfeature;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
+.method static synthetic access$500(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/Usefulfeature;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
+.method static synthetic access$600(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/Usefulfeature;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
 
     return-object v0
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/content/ContentResolver;
+.method static synthetic access$700(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/Usefulfeature;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
     .prologue
     .line 58
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/content/ContentResolver;
+.method static synthetic access$800(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/Usefulfeature;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
     .prologue
     .line 58
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
+.method static synthetic access$900(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/Usefulfeature;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceiving:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceiving:Landroid/preference/Preference;
 
     return-object v0
 .end method
@@ -462,18 +462,18 @@
 
     .line 673
     :cond_1
-    sget-object v6, Lcom/android/settings/usefulfeature/Usefulfeature;->mSupportMcc:[Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mSupportMcc:[Ljava/lang/String;
 
     if-eqz v6, :cond_0
 
-    sget-object v6, Lcom/android/settings/usefulfeature/Usefulfeature;->mSupportMcc:[Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mSupportMcc:[Ljava/lang/String;
 
     array-length v6, v6
 
     if-eqz v6, :cond_0
 
     .line 676
-    sget-object v0, Lcom/android/settings/usefulfeature/Usefulfeature;->mSupportMcc:[Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mSupportMcc:[Ljava/lang/String;
 
     .local v0, "arr$":[Ljava/lang/String;
     array-length v2, v0
@@ -576,7 +576,7 @@
     if-ge v0, v1, :cond_1
 
     .line 753
-    invoke-static {v0}, Lcom/android/settings/usefulfeature/Usefulfeature;->isSimCardInserted(I)Z
+    invoke-static {v0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->isSimCardInserted(I)Z
 
     move-result v3
 
@@ -650,7 +650,7 @@
 
     .prologue
     .line 704
-    invoke-static {}, Lcom/android/settings/usefulfeature/Usefulfeature;->isSimMccMncReady()Z
+    invoke-static {}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->isSimMccMncReady()Z
 
     move-result v2
 
@@ -707,7 +707,7 @@
 
     .prologue
     .line 715
-    invoke-static {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->isSimMccMncReady(I)Z
+    invoke-static {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->isSimMccMncReady(I)Z
 
     move-result v2
 
@@ -760,7 +760,7 @@
 
     .prologue
     .line 762
-    invoke-static {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getMultiSimIccType(I)Ljava/lang/String;
+    invoke-static {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getMultiSimIccType(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -797,7 +797,7 @@
 
     .line 784
     .local v0, "returnValue":Z
-    sget-object v3, Lcom/android/settings/usefulfeature/Usefulfeature;->mContext:Landroid/content/Context;
+    sget-object v3, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mContext:Landroid/content/Context;
 
     if-nez v3, :cond_0
 
@@ -807,7 +807,7 @@
 
     .line 789
     :cond_0
-    invoke-static {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->isSimCardInserted(I)Z
+    invoke-static {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->isSimCardInserted(I)Z
 
     move-result v3
 
@@ -823,7 +823,7 @@
     if-ne p0, v1, :cond_4
 
     .line 795
-    sget-object v3, Lcom/android/settings/usefulfeature/Usefulfeature;->mContext:Landroid/content/Context;
+    sget-object v3, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -859,7 +859,7 @@
     if-nez p0, :cond_2
 
     .line 797
-    sget-object v3, Lcom/android/settings/usefulfeature/Usefulfeature;->mContext:Landroid/content/Context;
+    sget-object v3, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -993,7 +993,7 @@
 
     if-le v4, v2, :cond_1
 
-    invoke-static {}, Lcom/android/settings/usefulfeature/Usefulfeature;->isSupportSmartCall()Z
+    invoke-static {}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->isSupportSmartCall()Z
 
     move-result v4
 
@@ -1045,7 +1045,7 @@
 
     .line 647
     .local v3, "mSim2Support":Z
-    invoke-static {}, Lcom/android/settings/usefulfeature/Usefulfeature;->getSimMcc()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getSimMcc()Ljava/lang/String;
 
     move-result-object v4
 
@@ -1084,43 +1084,43 @@
     if-eqz v8, :cond_3
 
     :cond_0
-    invoke-static {}, Lcom/android/settings/usefulfeature/Usefulfeature;->getInsertedSimCard()I
+    invoke-static {}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getInsertedSimCard()I
 
     move-result v8
 
     if-le v8, v7, :cond_3
 
-    invoke-static {v6}, Lcom/android/settings/usefulfeature/Usefulfeature;->isSimCardStatusOn(I)Z
+    invoke-static {v6}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->isSimCardStatusOn(I)Z
 
     move-result v8
 
     if-eqz v8, :cond_3
 
-    invoke-static {v7}, Lcom/android/settings/usefulfeature/Usefulfeature;->isSimCardStatusOn(I)Z
+    invoke-static {v7}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->isSimCardStatusOn(I)Z
 
     move-result v8
 
     if-eqz v8, :cond_3
 
     .line 655
-    invoke-static {v6}, Lcom/android/settings/usefulfeature/Usefulfeature;->getSimMcc(I)Ljava/lang/String;
+    invoke-static {v6}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getSimMcc(I)Ljava/lang/String;
 
     move-result-object v0
 
     .line 656
     .local v0, "mSim1Mcc":Ljava/lang/String;
-    invoke-static {v7}, Lcom/android/settings/usefulfeature/Usefulfeature;->getSimMcc(I)Ljava/lang/String;
+    invoke-static {v7}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getSimMcc(I)Ljava/lang/String;
 
     move-result-object v2
 
     .line 658
     .local v2, "mSim2Mcc":Ljava/lang/String;
-    invoke-static {v0}, Lcom/android/settings/usefulfeature/Usefulfeature;->checkMccSmartCall(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->checkMccSmartCall(Ljava/lang/String;)Z
 
     move-result v1
 
     .line 659
-    invoke-static {v2}, Lcom/android/settings/usefulfeature/Usefulfeature;->checkMccSmartCall(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->checkMccSmartCall(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -1173,7 +1173,7 @@
     return v6
 
     :cond_3
-    invoke-static {v4}, Lcom/android/settings/usefulfeature/Usefulfeature;->checkMccSmartCall(Ljava/lang/String;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->checkMccSmartCall(Ljava/lang/String;)Z
 
     move-result v6
 
@@ -1224,11 +1224,11 @@
 
     .line 614
     .local v0, "cscData":[Ljava/lang/String;
-    sget-object v5, Lcom/android/settings/usefulfeature/Usefulfeature;->mContext:Landroid/content/Context;
+    sget-object v5, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mContext:Landroid/content/Context;
 
     const-string v6, "com.samsung.android.smartcallprovider"
 
-    invoke-static {v5, v6}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v5, v6}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v3
 
@@ -1339,7 +1339,7 @@
 
     move-result-object v2
 
-    sput-object v2, Lcom/android/settings/usefulfeature/Usefulfeature;->mSupportMcc:[Ljava/lang/String;
+    sput-object v2, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mSupportMcc:[Ljava/lang/String;
 
     .line 641
     .end local v0    # "cscSmartCallData":[Ljava/lang/String;
@@ -1369,7 +1369,7 @@
     const/4 v2, 0x1
 
     .line 488
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 490
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
@@ -1390,12 +1390,12 @@
     if-ne v0, v2, :cond_1
 
     .line 492
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v0, v3}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 493
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v0, v3}, Landroid/preference/Preference;->setEnabled(Z)V
 
@@ -1406,12 +1406,12 @@
 
     .line 495
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v0, v2}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 496
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v0, v2}, Landroid/preference/Preference;->setEnabled(Z)V
 
@@ -1430,10 +1430,10 @@
     const/4 v10, 0x1
 
     .line 242
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 243
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -1441,26 +1441,26 @@
 
     move-result-object v8
 
-    sput-object v8, Lcom/android/settings/usefulfeature/Usefulfeature;->mContext:Landroid/content/Context;
+    sput-object v8, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mContext:Landroid/content/Context;
 
     .line 244
     const-string v8, "phone"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v8
 
     check-cast v8, Landroid/telephony/TelephonyManager;
 
-    iput-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    iput-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     .line 246
     const v8, 0x7f0800ce
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->addPreferencesFromResource(I)V
 
     .line 247
-    invoke-static {}, Lcom/android/settings/usefulfeature/Usefulfeature;->setSupportMccSmartCall()V
+    invoke-static {}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->setSupportMccSmartCall()V
 
     .line 248
     new-instance v1, Landroid/content/IntentFilter;
@@ -1469,7 +1469,7 @@
 
     .line 249
     .local v1, "filter":Landroid/content/IntentFilter;
-    invoke-static {}, Lcom/android/settings/usefulfeature/Usefulfeature;->isSupportMCC()Z
+    invoke-static {}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->isSupportMCC()Z
 
     move-result v8
 
@@ -1482,16 +1482,16 @@
 
     .line 252
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
-    iget-object v9, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mIntentReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v9, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v8, v9, v1, v11, v11}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
     .line 254
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -1507,21 +1507,21 @@
     .local v3, "isKioskContainer":Z
     const-string v8, "game_home"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v8
 
     check-cast v8, Landroid/preference/PreferenceScreen;
 
-    iput-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mGameHome:Landroid/preference/PreferenceScreen;
+    iput-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mGameHome:Landroid/preference/PreferenceScreen;
 
     .line 256
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mGameHome:Landroid/preference/PreferenceScreen;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mGameHome:Landroid/preference/PreferenceScreen;
 
     if-eqz v8, :cond_1
 
     .line 257
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mGameHome:Landroid/preference/PreferenceScreen;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mGameHome:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v8, p0}, Landroid/preference/PreferenceScreen;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -1529,26 +1529,26 @@
     :cond_1
     const-string v8, "identify_unsaved_numbers"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v8
 
     check-cast v8, Landroid/preference/PreferenceScreen;
 
-    iput-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
+    iput-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
 
     .line 261
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
 
     if-eqz v8, :cond_2
 
     .line 262
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v8, p0}, Landroid/preference/PreferenceScreen;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 263
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v8, v10}, Landroid/preference/PreferenceScreen;->setTwSummaryColorToColorPrimaryDark(Z)V
 
@@ -1556,54 +1556,54 @@
     :cond_2
     const-string v8, "category_two"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v8
 
     check-cast v8, Landroid/preference/PreferenceCategory;
 
-    iput-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mCategoryTwo:Landroid/preference/PreferenceCategory;
+    iput-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mCategoryTwo:Landroid/preference/PreferenceCategory;
 
     .line 267
     const-string v8, "onehand_operation_settings"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v8
 
     check-cast v8, Landroid/preference/PreferenceScreen;
 
-    iput-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mOneHandOperation:Landroid/preference/PreferenceScreen;
+    iput-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mOneHandOperation:Landroid/preference/PreferenceScreen;
 
     .line 269
     const-string v8, "category_three"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v8
 
     check-cast v8, Landroid/preference/PreferenceCategory;
 
-    iput-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mCategoryThree:Landroid/preference/PreferenceCategory;
+    iput-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mCategoryThree:Landroid/preference/PreferenceCategory;
 
     .line 270
     const-string v8, "quick_camera_launch"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v8
 
     check-cast v8, Landroid/preference/SwitchPreference;
 
-    iput-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mQuickCameraLaunch:Landroid/preference/SwitchPreference;
+    iput-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mQuickCameraLaunch:Landroid/preference/SwitchPreference;
 
     .line 271
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mQuickCameraLaunch:Landroid/preference/SwitchPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mQuickCameraLaunch:Landroid/preference/SwitchPreference;
 
     if-eqz v8, :cond_3
 
     .line 272
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mQuickCameraLaunch:Landroid/preference/SwitchPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mQuickCameraLaunch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v8, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -1611,19 +1611,19 @@
     :cond_3
     const-string v8, "pick_up_switch"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v8
 
-    iput-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
+    iput-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
 
     .line 275
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
 
     if-eqz v8, :cond_4
 
     .line 276
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v8, v10}, Landroid/preference/Preference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
@@ -1631,19 +1631,19 @@
     :cond_4
     const-string v8, "pick_up_to_call_out_switch"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v8
 
-    iput-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
+    iput-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
 
     .line 279
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
 
     if-eqz v8, :cond_5
 
     .line 280
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v8, v10}, Landroid/preference/Preference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
@@ -1651,19 +1651,19 @@
     :cond_5
     const-string v8, "smart_capture"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v8
 
-    iput-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mSamrtCapture:Landroid/preference/Preference;
+    iput-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mSamrtCapture:Landroid/preference/Preference;
 
     .line 283
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mSamrtCapture:Landroid/preference/Preference;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mSamrtCapture:Landroid/preference/Preference;
 
     if-eqz v8, :cond_6
 
     .line 284
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mSamrtCapture:Landroid/preference/Preference;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mSamrtCapture:Landroid/preference/Preference;
 
     invoke-virtual {v8, v10}, Landroid/preference/Preference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
@@ -1671,19 +1671,19 @@
     :cond_6
     const-string v8, "merged_mute_or_pause_switch"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v8
 
-    iput-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
+    iput-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
 
     .line 287
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
 
     if-eqz v8, :cond_7
 
     .line 288
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v8, v10}, Landroid/preference/Preference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
@@ -1691,19 +1691,19 @@
     :cond_7
     const-string v8, "palm_swipe_switch"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v8
 
-    iput-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
+    iput-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
 
     .line 291
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
 
     if-eqz v8, :cond_8
 
     .line 292
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v8, v10}, Landroid/preference/Preference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
@@ -1711,44 +1711,44 @@
     :cond_8
     const-string v8, "multi_window_setting_switch"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v8
 
-    iput-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
+    iput-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
 
     .line 295
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
 
     if-eqz v8, :cond_9
 
     .line 296
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v8, v10}, Landroid/preference/Preference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 299
     :cond_9
-    iget-boolean v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mHongbaoEnabled:Z
+    iget-boolean v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mHongbaoEnabled:Z
 
     if-eqz v8, :cond_15
 
     .line 300
     const-string v8, "accelerate_hongbao_receiving"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v8
 
-    iput-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceiving:Landroid/preference/Preference;
+    iput-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceiving:Landroid/preference/Preference;
 
     .line 301
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceiving:Landroid/preference/Preference;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceiving:Landroid/preference/Preference;
 
     if-eqz v8, :cond_a
 
     .line 302
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceiving:Landroid/preference/Preference;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceiving:Landroid/preference/Preference;
 
     invoke-virtual {v8, v10}, Landroid/preference/Preference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
@@ -1757,41 +1757,41 @@
     :goto_0
     const-string v8, "category_four"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v8
 
     check-cast v8, Landroid/preference/PreferenceCategory;
 
-    iput-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mCategoryFour:Landroid/preference/PreferenceCategory;
+    iput-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mCategoryFour:Landroid/preference/PreferenceCategory;
 
     .line 309
     const-string v8, "galaxy_labs"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v8
 
-    iput-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mGalaxyLabs:Landroid/preference/Preference;
+    iput-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mGalaxyLabs:Landroid/preference/Preference;
 
     .line 310
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mGalaxyLabs:Landroid/preference/Preference;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mGalaxyLabs:Landroid/preference/Preference;
 
     if-eqz v8, :cond_b
 
     .line 311
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mGalaxyLabs:Landroid/preference/Preference;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mGalaxyLabs:Landroid/preference/Preference;
 
     invoke-virtual {v8, p0}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 312
-    iget-object v8, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mGalaxyLabs:Landroid/preference/Preference;
+    iget-object v8, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mGalaxyLabs:Landroid/preference/Preference;
 
     invoke-virtual {v8, v11}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 315
     :cond_b
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -1801,17 +1801,17 @@
 
     const-string v9, "com.samsung.android.game.gametools"
 
-    invoke-static {v8, v9}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v8, v9}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v8
 
     if-eqz v8, :cond_c
 
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v8
 
-    invoke-static {v8}, Lcom/android/settings/Utils;->isEasyModeStatus(Landroid/content/ContentResolver;)Z
+    invoke-static {v8}, Lcom/android/settings_ex/Utils;->isEasyModeStatus(Landroid/content/ContentResolver;)Z
 
     move-result v8
 
@@ -1821,17 +1821,17 @@
     :cond_c
     const-string v8, "game_home"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
 
     .line 319
     :cond_d
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v8
 
     if-nez v8, :cond_f
 
-    invoke-static {}, Lcom/android/settings/usefulfeature/Usefulfeature;->isSupportSmartCall()Z
+    invoke-static {}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->isSupportSmartCall()Z
 
     move-result v8
 
@@ -1847,11 +1847,11 @@
     :cond_e
     const-string v8, "identify_unsaved_numbers"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
 
     .line 322
     :cond_f
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v8
 
@@ -1863,16 +1863,16 @@
     :cond_10
     const-string v8, "category_two"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
 
     .line 325
     const-string v8, "onehand_operation_settings"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
 
     .line 328
     :cond_11
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v8
 
@@ -1882,12 +1882,12 @@
 
     move-result-object v8
 
-    sput-object v8, Lcom/android/settings/usefulfeature/Usefulfeature;->componentNameOfDoubleTapOnHomeCommandIntent:Ljava/lang/String;
+    sput-object v8, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->componentNameOfDoubleTapOnHomeCommandIntent:Ljava/lang/String;
 
     .line 329
     const-string v8, "com.sec.android.app.camera/com.sec.android.app.camera.Camera"
 
-    sget-object v9, Lcom/android/settings/usefulfeature/Usefulfeature;->componentNameOfDoubleTapOnHomeCommandIntent:Ljava/lang/String;
+    sget-object v9, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->componentNameOfDoubleTapOnHomeCommandIntent:Ljava/lang/String;
 
     invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1898,11 +1898,11 @@
     .line 330
     const-string v8, "quick_camera_launch"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
 
     .line 333
     :cond_12
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -1912,7 +1912,7 @@
 
     const-string v9, "com.samsung.android.app.scrollcapture"
 
-    invoke-static {v8, v9}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v8, v9}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v8
 
@@ -1921,11 +1921,11 @@
     .line 334
     const-string v8, "smart_capture"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
 
     .line 336
     :cond_13
-    sget-object v0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMotionFeatures:[Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMotionFeatures:[Ljava/lang/String;
 
     .local v0, "arr$":[Ljava/lang/String;
     array-length v6, v0
@@ -1941,18 +1941,18 @@
 
     .line 337
     .local v7, "motionFeature":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
-    invoke-static {v8, v7}, Lcom/android/settings/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v8, v7}, Lcom/android/settings_ex/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v8
 
     if-nez v8, :cond_14
 
     .line 338
-    invoke-virtual {p0, v7}, Lcom/android/settings/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
 
     .line 336
     :cond_14
@@ -1968,7 +1968,7 @@
     :cond_15
     const-string v8, "accelerate_hongbao_receiving"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -1977,11 +1977,11 @@
     .restart local v2    # "i$":I
     .restart local v6    # "len$":I
     :cond_16
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v8
 
-    invoke-static {v8}, Lcom/android/settings/Utils;->isEasyModeStatus(Landroid/content/ContentResolver;)Z
+    invoke-static {v8}, Lcom/android/settings_ex/Utils;->isEasyModeStatus(Landroid/content/ContentResolver;)Z
 
     move-result v8
 
@@ -1990,11 +1990,11 @@
     .line 342
     const-string v8, "multi_window_setting_switch"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
 
     .line 344
     :cond_17
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -2004,7 +2004,7 @@
 
     const-string v9, "com.samsung.android.app.galaxylabs"
 
-    invoke-static {v8, v9}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v8, v9}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v8
 
@@ -2013,16 +2013,16 @@
     .line 345
     const-string v8, "category_four"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
 
     .line 346
     const-string v8, "galaxy_labs"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
 
     .line 349
     :cond_18
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v8
 
@@ -2035,11 +2035,11 @@
     if-eqz v8, :cond_19
 
     .line 350
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v8
 
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v9
 
@@ -2077,7 +2077,7 @@
     .line 359
     const-string v8, "multi_window_setting_switch"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->removePreference(Ljava/lang/String;)V
 
     .line 362
     :cond_1b
@@ -2089,16 +2089,16 @@
 
     .prologue
     .line 527
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mIntentReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 528
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroy()V
 
     .line 529
     return-void
@@ -2109,56 +2109,56 @@
 
     .prologue
     .line 503
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 504
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
 
     if-eqz v0, :cond_0
 
     .line 505
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeToCaptureObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeToCaptureObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 507
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
 
     if-eqz v0, :cond_1
 
     .line 508
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMultiWindowObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMultiWindowObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 510
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
 
     if-eqz v0, :cond_2
 
     .line 511
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbersObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbersObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 512
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
     const/4 v2, 0x0
 
@@ -2166,49 +2166,49 @@
 
     .line 514
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
 
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
 
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
 
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
 
     if-eqz v0, :cond_4
 
     .line 515
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 517
     :cond_4
-    iget-boolean v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mHongbaoEnabled:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mHongbaoEnabled:Z
 
     if-eqz v0, :cond_5
 
     .line 518
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceiving:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceiving:Landroid/preference/Preference;
 
     if-eqz v0, :cond_5
 
     .line 519
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceivingObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceivingObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
@@ -2249,7 +2249,7 @@
     .line 572
     .local v1, "value":I
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mQuickCameraLaunch:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mQuickCameraLaunch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {p1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -2258,7 +2258,7 @@
     if-eqz v2, :cond_0
 
     .line 573
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mQuickCameraLaunch:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mQuickCameraLaunch:Landroid/preference/SwitchPreference;
 
     move-object v2, p2
 
@@ -2271,7 +2271,7 @@
     invoke-virtual {v5, v2}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 574
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -2290,7 +2290,7 @@
     if-eqz v2, :cond_2
 
     .line 576
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -2300,7 +2300,7 @@
 
     const/16 v6, 0x3e8
 
-    invoke-static {v2, v4, v5, v6}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-static {v2, v4, v5, v6}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 581
     :cond_0
@@ -2319,7 +2319,7 @@
     .end local p2    # "objValue":Ljava/lang/Object;
     .restart local v1    # "value":I
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -2327,7 +2327,7 @@
 
     const-string v6, "UFQC"
 
-    invoke-static {v2, v5, v6, v4}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-static {v2, v5, v6, v4}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_1
 .end method
@@ -2338,7 +2338,7 @@
 
     .prologue
     .line 534
-    iget-object v2, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mGameHome:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mGameHome:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {p1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -2360,7 +2360,7 @@
 
     .line 537
     .local v1, "intent":Landroid/content/Intent;
-    invoke-virtual {p0, v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2392,7 +2392,7 @@
     .line 542
     .end local v0    # "e":Landroid/content/ActivityNotFoundException;
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {p1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -2420,7 +2420,7 @@
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 547
-    invoke-virtual {p0, v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->startActivity(Landroid/content/Intent;)V
     :try_end_1
     .catch Landroid/content/ActivityNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -2447,7 +2447,7 @@
     .line 552
     .end local v0    # "e":Landroid/content/ActivityNotFoundException;
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mGalaxyLabs:Landroid/preference/Preference;
+    iget-object v2, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mGalaxyLabs:Landroid/preference/Preference;
 
     invoke-virtual {p1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -2475,7 +2475,7 @@
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 557
-    invoke-virtual {p0, v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->startActivity(Landroid/content/Intent;)V
     :try_end_2
     .catch Landroid/content/ActivityNotFoundException; {:try_start_2 .. :try_end_2} :catch_2
 
@@ -2513,7 +2513,7 @@
     const/4 v9, 0x0
 
     .line 366
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 368
     invoke-static {v9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -2530,7 +2530,7 @@
 
     .line 373
     .local v4, "selectionArgs":[Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -2538,7 +2538,7 @@
 
     const-string v11, "isScreenCaptureEnabled"
 
-    invoke-static {v5, v10, v11, v4}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-static {v5, v10, v11, v4}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v1
 
@@ -2557,7 +2557,7 @@
 
     .line 383
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -2578,37 +2578,37 @@
 
     .line 387
     :cond_1
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
 
     if-eqz v5, :cond_3
 
     .line 388
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v5
 
     if-nez v5, :cond_2
 
     .line 389
-    sget-object v5, Lcom/android/settings/usefulfeature/Usefulfeature;->mContext:Landroid/content/Context;
+    sget-object v5, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mContext:Landroid/content/Context;
 
-    invoke-static {v5}, Lcom/android/settings/Utils;->isNoSIM(Landroid/content/Context;)Z
+    invoke-static {v5}, Lcom/android/settings_ex/Utils;->isNoSIM(Landroid/content/Context;)Z
 
     move-result v5
 
     if-eqz v5, :cond_f
 
     .line 390
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v5, v9}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
     .line 401
     :cond_2
     :goto_0
-    iget-object v10, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
+    iget-object v10, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
 
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -2626,7 +2626,7 @@
     invoke-virtual {v10, v5}, Landroid/preference/PreferenceScreen;->setSummary(I)V
 
     .line 402
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -2636,20 +2636,20 @@
 
     move-result-object v10
 
-    iget-object v11, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbersObserver:Landroid/database/ContentObserver;
+    iget-object v11, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbersObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v5, v10, v8, v11}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 403
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    iget-object v10, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
+    iget-object v10, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
     invoke-virtual {v5, v10, v8}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
     .line 405
     :cond_3
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mQuickCameraLaunch:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mQuickCameraLaunch:Landroid/preference/SwitchPreference;
 
     if-eqz v5, :cond_4
 
@@ -2661,9 +2661,9 @@
     if-nez v5, :cond_13
 
     .line 407
-    iget-object v10, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mQuickCameraLaunch:Landroid/preference/SwitchPreference;
+    iget-object v10, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mQuickCameraLaunch:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -2683,7 +2683,7 @@
     .line 413
     :cond_4
     :goto_3
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
 
     if-eqz v5, :cond_5
 
@@ -2691,14 +2691,14 @@
     if-ne v3, v8, :cond_14
 
     .line 415
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v5, v9}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 421
     :cond_5
     :goto_4
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
 
     if-eqz v5, :cond_6
 
@@ -2706,14 +2706,14 @@
     if-ne v3, v8, :cond_16
 
     .line 423
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v5, v9}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 429
     :cond_6
     :goto_5
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
 
     if-eqz v5, :cond_7
 
@@ -2721,14 +2721,14 @@
     if-ne v3, v8, :cond_18
 
     .line 431
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v5, v9}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 437
     :cond_7
     :goto_6
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
 
     if-eqz v5, :cond_8
 
@@ -2747,17 +2747,17 @@
     invoke-static {v5, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 441
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v5, v9}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 442
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v5, v7}, Landroid/preference/Preference;->setSummary(I)V
 
     .line 443
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -2767,7 +2767,7 @@
 
     .line 450
     :goto_7
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -2777,18 +2777,18 @@
 
     move-result-object v10
 
-    iget-object v11, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeToCaptureObserver:Landroid/database/ContentObserver;
+    iget-object v11, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeToCaptureObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v5, v10, v8, v11}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 452
     :cond_8
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
 
     if-eqz v5, :cond_9
 
     .line 453
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -2801,18 +2801,18 @@
     if-nez v5, :cond_1c
 
     .line 454
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v5, v9}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 455
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v5, v7}, Landroid/preference/Preference;->setSummary(I)V
 
     .line 460
     :goto_8
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -2822,20 +2822,20 @@
 
     move-result-object v10
 
-    iget-object v11, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMultiWindowObserver:Landroid/database/ContentObserver;
+    iget-object v11, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMultiWindowObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v5, v10, v8, v11}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 462
     :cond_9
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mSamrtCapture:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mSamrtCapture:Landroid/preference/Preference;
 
     if-eqz v5, :cond_a
 
     .line 463
-    iget-object v10, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mSamrtCapture:Landroid/preference/Preference;
+    iget-object v10, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mSamrtCapture:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -2854,25 +2854,25 @@
 
     .line 465
     :cond_a
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
 
     if-nez v5, :cond_b
 
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
 
     if-nez v5, :cond_b
 
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
 
     if-nez v5, :cond_b
 
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
 
     if-eqz v5, :cond_c
 
     .line 466
     :cond_b
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -2882,7 +2882,7 @@
 
     move-result-object v10
 
-    iget-object v11, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
+    iget-object v11, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
 
     invoke-virtual {v5, v10, v8, v11}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -2901,7 +2901,7 @@
     if-eqz v5, :cond_d
 
     .line 470
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -2916,31 +2916,31 @@
     if-ne v5, v8, :cond_d
 
     .line 472
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v5, v9}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 473
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v5, v9}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 477
     .end local v0    # "conf":Landroid/content/res/Configuration;
     :cond_d
-    iget-boolean v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mHongbaoEnabled:Z
+    iget-boolean v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mHongbaoEnabled:Z
 
     if-eqz v5, :cond_e
 
     .line 478
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceiving:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceiving:Landroid/preference/Preference;
 
     if-eqz v5, :cond_e
 
     .line 479
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceiving:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceiving:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v10
 
@@ -2956,7 +2956,7 @@
     invoke-virtual {v5, v6}, Landroid/preference/Preference;->setSummary(I)V
 
     .line 480
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -2966,7 +2966,7 @@
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceivingObserver:Landroid/database/ContentObserver;
+    iget-object v7, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mAccelerateHongbaoReceivingObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v5, v6, v8, v7}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -2976,29 +2976,29 @@
 
     .line 392
     :cond_f
-    sget-object v5, Lcom/android/settings/usefulfeature/Usefulfeature;->mContext:Landroid/content/Context;
+    sget-object v5, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mContext:Landroid/content/Context;
 
-    invoke-static {v5}, Lcom/android/settings/Utils;->isRoaming(Landroid/content/Context;)Z
+    invoke-static {v5}, Lcom/android/settings_ex/Utils;->isRoaming(Landroid/content/Context;)Z
 
     move-result v5
 
     if-nez v5, :cond_2
 
     .line 393
-    invoke-static {}, Lcom/android/settings/usefulfeature/Usefulfeature;->isSupportMCC()Z
+    invoke-static {}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->isSupportMCC()Z
 
     move-result v5
 
     if-eqz v5, :cond_10
 
-    invoke-static {}, Lcom/android/settings/usefulfeature/Usefulfeature;->isSupportMccSmartCall()Z
+    invoke-static {}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->isSupportMccSmartCall()Z
 
     move-result v5
 
     if-nez v5, :cond_10
 
     .line 394
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v5, v9}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -3006,7 +3006,7 @@
 
     .line 396
     :cond_10
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mIdentifyUnsavedNumbers:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v5, v8}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -3026,12 +3026,12 @@
 
     .line 409
     :cond_13
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mQuickCameraLaunch:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mQuickCameraLaunch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v5, v9}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 410
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mQuickCameraLaunch:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mQuickCameraLaunch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v5, v9}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
@@ -3039,14 +3039,14 @@
 
     .line 417
     :cond_14
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v5, v8}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 418
-    iget-object v10, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
+    iget-object v10, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -3072,14 +3072,14 @@
 
     .line 425
     :cond_16
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v5, v8}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 426
-    iget-object v10, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
+    iget-object v10, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -3105,14 +3105,14 @@
 
     .line 433
     :cond_18
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v5, v8}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 434
-    iget-object v10, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
+    iget-object v10, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -3138,14 +3138,14 @@
 
     .line 445
     :cond_1a
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v5, v8}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 446
-    iget-object v10, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
+    iget-object v10, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -3171,14 +3171,14 @@
 
     .line 457
     :cond_1c
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
 
     invoke-virtual {v5, v8}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 458
-    iget-object v10, p0, Lcom/android/settings/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
+    iget-object v10, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMultiWindowSettingSwitch:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 

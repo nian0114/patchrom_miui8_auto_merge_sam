@@ -1,4 +1,4 @@
-.class abstract Lcom/android/settings/guide/GuiderBase;
+.class abstract Lcom/android/settings_ex/guide/GuiderBase;
 .super Ljava/lang/Object;
 .source "GuiderBase.java"
 
@@ -26,7 +26,7 @@
     .end annotation
 .end field
 
-.field protected mHelpDialog:Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;
+.field protected mHelpDialog:Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;
 
 .field private mIsSwitcherOn:Z
 
@@ -43,7 +43,7 @@
     .line 36
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/guide/GuiderBase;->mIsSwitcherOn:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/guide/GuiderBase;->mIsSwitcherOn:Z
 
     .line 51
     if-nez p1, :cond_0
@@ -63,7 +63,7 @@
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/android/settings/guide/GuiderBase;->mActivityRef:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Lcom/android/settings_ex/guide/GuiderBase;->mActivityRef:Ljava/lang/ref/WeakReference;
 
     .line 56
     new-instance v0, Ljava/lang/ref/WeakReference;
@@ -80,7 +80,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/android/settings/guide/GuiderBase;->mFragmentRef:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Lcom/android/settings_ex/guide/GuiderBase;->mFragmentRef:Ljava/lang/ref/WeakReference;
 
     .line 58
     return-void
@@ -93,20 +93,20 @@
 
     .prologue
     .line 72
-    iget-object v1, p0, Lcom/android/settings/guide/GuiderBase;->mHelpDialog:Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/guide/GuiderBase;->mHelpDialog:Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;
 
     if-eqz v1, :cond_0
 
     .line 74
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/guide/GuiderBase;->mHelpDialog:Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/guide/GuiderBase;->mHelpDialog:Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;
 
-    invoke-virtual {v1}, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->dismiss()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->dismiss()V
 
     .line 75
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcom/android/settings/guide/GuiderBase;->mHelpDialog:Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/guide/GuiderBase;->mHelpDialog:Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -151,11 +151,11 @@
 
     .prologue
     .line 139
-    iget-object v0, p0, Lcom/android/settings/guide/GuiderBase;->mActivityRef:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/android/settings_ex/guide/GuiderBase;->mActivityRef:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/guide/GuiderBase;->mActivityRef:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/android/settings_ex/guide/GuiderBase;->mActivityRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -177,11 +177,11 @@
 
     .prologue
     .line 146
-    iget-object v0, p0, Lcom/android/settings/guide/GuiderBase;->mFragmentRef:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/android/settings_ex/guide/GuiderBase;->mFragmentRef:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/guide/GuiderBase;->mFragmentRef:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/android/settings_ex/guide/GuiderBase;->mFragmentRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -205,7 +205,7 @@
     .line 106
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/guide/GuiderBase;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/guide/GuiderBase;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -213,7 +213,7 @@
 
     .line 107
     .local v1, "builderstart":Landroid/app/AlertDialog$Builder;
-    invoke-virtual {p0}, Lcom/android/settings/guide/GuiderBase;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/guide/GuiderBase;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -265,9 +265,9 @@
 
     move-result-object v4
 
-    new-instance v5, Lcom/android/settings/guide/GuiderBase$1;
+    new-instance v5, Lcom/android/settings_ex/guide/GuiderBase$1;
 
-    invoke-direct {v5, p0, v0}, Lcom/android/settings/guide/GuiderBase$1;-><init>(Lcom/android/settings/guide/GuiderBase;Landroid/app/Activity;)V
+    invoke-direct {v5, p0, v0}, Lcom/android/settings_ex/guide/GuiderBase$1;-><init>(Lcom/android/settings_ex/guide/GuiderBase;Landroid/app/Activity;)V
 
     invoke-virtual {v3, v4, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 

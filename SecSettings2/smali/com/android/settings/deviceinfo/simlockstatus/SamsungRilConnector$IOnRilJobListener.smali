@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector$IOnRilJobListener;
+.class public interface abstract Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector$IOnRilJobListener;
 .super Ljava/lang/Object;
 .source "SamsungRilConnector.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/simlockstatus/SamsungRilConnector;
+    value = Lcom/android/settings_ex/deviceinfo/simlockstatus/SamsungRilConnector;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

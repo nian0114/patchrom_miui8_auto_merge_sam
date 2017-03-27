@@ -1,4 +1,4 @@
-.class Lcom/android/settings/WeatherSettings$1;
+.class Lcom/android/settings_ex/WeatherSettings$1;
 .super Ljava/lang/Object;
 .source "WeatherSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/WeatherSettings;->showAddCityPopup()V
+    value = Lcom/android/settings_ex/WeatherSettings;->showAddCityPopup()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/WeatherSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/WeatherSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/WeatherSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/WeatherSettings;)V
     .locals 0
 
     .prologue
     .line 178
-    iput-object p1, p0, Lcom/android/settings/WeatherSettings$1;->this$0:Lcom/android/settings/WeatherSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/WeatherSettings$1;->this$0:Lcom/android/settings_ex/WeatherSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,16 +43,16 @@
 
     .prologue
     .line 181
-    iget-object v0, p0, Lcom/android/settings/WeatherSettings$1;->this$0:Lcom/android/settings/WeatherSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/WeatherSettings$1;->this$0:Lcom/android/settings_ex/WeatherSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/WeatherSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/WeatherSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/WeatherSettings;->launchWeatherWidgetSettingView(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/WeatherSettings;->launchWeatherWidgetSettingView(Landroid/content/Context;)Z
 
     .line 182
-    iget-object v0, p0, Lcom/android/settings/WeatherSettings$1;->this$0:Lcom/android/settings/WeatherSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/WeatherSettings$1;->this$0:Lcom/android/settings_ex/WeatherSettings;
 
     const/4 v1, 0x1
 
@@ -60,22 +60,22 @@
 
     move-result-object v1
 
-    # setter for: Lcom/android/settings/WeatherSettings;->mBackFlag:Ljava/lang/Boolean;
-    invoke-static {v0, v1}, Lcom/android/settings/WeatherSettings;->access$002(Lcom/android/settings/WeatherSettings;Ljava/lang/Boolean;)Ljava/lang/Boolean;
+    # setter for: Lcom/android/settings_ex/WeatherSettings;->mBackFlag:Ljava/lang/Boolean;
+    invoke-static {v0, v1}, Lcom/android/settings_ex/WeatherSettings;->access$002(Lcom/android/settings_ex/WeatherSettings;Ljava/lang/Boolean;)Ljava/lang/Boolean;
 
     .line 183
-    iget-object v0, p0, Lcom/android/settings/WeatherSettings$1;->this$0:Lcom/android/settings/WeatherSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/WeatherSettings$1;->this$0:Lcom/android/settings_ex/WeatherSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/WeatherSettings;->checkNetwork()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/WeatherSettings;->checkNetwork()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 184
-    iget-object v0, p0, Lcom/android/settings/WeatherSettings$1;->this$0:Lcom/android/settings/WeatherSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/WeatherSettings$1;->this$0:Lcom/android/settings_ex/WeatherSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/WeatherSettings;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/WeatherSettings;->finish()V
 
     .line 186
     :cond_0

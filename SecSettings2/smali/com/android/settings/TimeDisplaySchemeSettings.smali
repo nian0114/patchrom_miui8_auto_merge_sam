@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/TimeDisplaySchemeSettings;
+.class public Lcom/android/settings_ex/TimeDisplaySchemeSettings;
 .super Landroid/app/DialogFragment;
 .source "TimeDisplaySchemeSettings.java"
 
@@ -29,30 +29,30 @@
     .line 39
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/android/settings/TimeDisplaySchemeSettings;->mTimeType:I
+    iput v0, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->mTimeType:I
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/TimeDisplaySchemeSettings;)I
+.method static synthetic access$000(Lcom/android/settings_ex/TimeDisplaySchemeSettings;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/TimeDisplaySchemeSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/TimeDisplaySchemeSettings;
 
     .prologue
     .line 34
-    iget v0, p0, Lcom/android/settings/TimeDisplaySchemeSettings;->mTimeType:I
+    iget v0, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->mTimeType:I
 
     return v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/TimeDisplaySchemeSettings;I)V
+.method static synthetic access$100(Lcom/android/settings_ex/TimeDisplaySchemeSettings;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/TimeDisplaySchemeSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/TimeDisplaySchemeSettings;
     .param p1, "x1"    # I
 
     .prologue
     .line 34
-    invoke-direct {p0, p1}, Lcom/android/settings/TimeDisplaySchemeSettings;->setTimeDisplayScheme(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->setTimeDisplayScheme(I)V
 
     return-void
 .end method
@@ -66,7 +66,7 @@
 
     .line 141
     .local v0, "timeType":I
-    invoke-virtual {p0}, Lcom/android/settings/TimeDisplaySchemeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -107,10 +107,10 @@
 
     check-cast v0, Landroid/widget/RadioButton;
 
-    iput-object v0, p0, Lcom/android/settings/TimeDisplaySchemeSettings;->mBeijingTime:Landroid/widget/RadioButton;
+    iput-object v0, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->mBeijingTime:Landroid/widget/RadioButton;
 
     .line 92
-    iget-object v0, p0, Lcom/android/settings/TimeDisplaySchemeSettings;->mBeijingTime:Landroid/widget/RadioButton;
+    iget-object v0, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->mBeijingTime:Landroid/widget/RadioButton;
 
     invoke-virtual {v0, p0}, Landroid/widget/RadioButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -123,32 +123,32 @@
 
     check-cast v0, Landroid/widget/RadioButton;
 
-    iput-object v0, p0, Lcom/android/settings/TimeDisplaySchemeSettings;->mLocalTime:Landroid/widget/RadioButton;
+    iput-object v0, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->mLocalTime:Landroid/widget/RadioButton;
 
     .line 94
-    iget-object v0, p0, Lcom/android/settings/TimeDisplaySchemeSettings;->mLocalTime:Landroid/widget/RadioButton;
+    iget-object v0, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->mLocalTime:Landroid/widget/RadioButton;
 
     invoke-virtual {v0, p0}, Landroid/widget/RadioButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 95
-    invoke-direct {p0}, Lcom/android/settings/TimeDisplaySchemeSettings;->setTimeDisplaySchemeInit()V
+    invoke-direct {p0}, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->setTimeDisplaySchemeInit()V
 
     .line 96
     return-void
 .end method
 
-.method static newInstance(I)Lcom/android/settings/TimeDisplaySchemeSettings;
+.method static newInstance(I)Lcom/android/settings_ex/TimeDisplaySchemeSettings;
     .locals 3
     .param p0, "title"    # I
 
     .prologue
     .line 47
-    new-instance v1, Lcom/android/settings/TimeDisplaySchemeSettings;
+    new-instance v1, Lcom/android/settings_ex/TimeDisplaySchemeSettings;
 
-    invoke-direct {v1}, Lcom/android/settings/TimeDisplaySchemeSettings;-><init>()V
+    invoke-direct {v1}, Lcom/android/settings_ex/TimeDisplaySchemeSettings;-><init>()V
 
     .line 48
-    .local v1, "frag":Lcom/android/settings/TimeDisplaySchemeSettings;
+    .local v1, "frag":Lcom/android/settings_ex/TimeDisplaySchemeSettings;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
@@ -160,7 +160,7 @@
     invoke-virtual {v0, v2, p0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 50
-    invoke-virtual {v1, v0}, Lcom/android/settings/TimeDisplaySchemeSettings;->setArguments(Landroid/os/Bundle;)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->setArguments(Landroid/os/Bundle;)V
 
     .line 51
     return-object v1
@@ -175,7 +175,7 @@
     if-nez p1, :cond_0
 
     .line 147
-    invoke-virtual {p0}, Lcom/android/settings/TimeDisplaySchemeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -195,7 +195,7 @@
 
     .line 149
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/TimeDisplaySchemeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -219,19 +219,19 @@
     const/4 v1, 0x1
 
     .line 130
-    invoke-direct {p0}, Lcom/android/settings/TimeDisplaySchemeSettings;->getTimeDisplayScheme()I
+    invoke-direct {p0}, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->getTimeDisplayScheme()I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/TimeDisplaySchemeSettings;->mTimeType:I
+    iput v0, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->mTimeType:I
 
     .line 132
-    iget v0, p0, Lcom/android/settings/TimeDisplaySchemeSettings;->mTimeType:I
+    iget v0, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->mTimeType:I
 
     if-nez v0, :cond_0
 
     .line 133
-    iget-object v0, p0, Lcom/android/settings/TimeDisplaySchemeSettings;->mBeijingTime:Landroid/widget/RadioButton;
+    iget-object v0, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->mBeijingTime:Landroid/widget/RadioButton;
 
     invoke-virtual {v0, v1}, Landroid/widget/RadioButton;->setChecked(Z)V
 
@@ -241,7 +241,7 @@
 
     .line 135
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/TimeDisplaySchemeSettings;->mLocalTime:Landroid/widget/RadioButton;
+    iget-object v0, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->mLocalTime:Landroid/widget/RadioButton;
 
     invoke-virtual {v0, v1}, Landroid/widget/RadioButton;->setChecked(Z)V
 
@@ -265,10 +265,10 @@
     packed-switch v0, :pswitch_data_0
 
     .line 119
-    iput v1, p0, Lcom/android/settings/TimeDisplaySchemeSettings;->mTimeType:I
+    iput v1, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->mTimeType:I
 
     .line 120
-    iget-object v0, p0, Lcom/android/settings/TimeDisplaySchemeSettings;->mLocalTime:Landroid/widget/RadioButton;
+    iget-object v0, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->mLocalTime:Landroid/widget/RadioButton;
 
     invoke-virtual {v0, v1}, Landroid/widget/RadioButton;->setChecked(Z)V
 
@@ -280,10 +280,10 @@
     :pswitch_0
     const/4 v0, 0x1
 
-    iput v0, p0, Lcom/android/settings/TimeDisplaySchemeSettings;->mTimeType:I
+    iput v0, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->mTimeType:I
 
     .line 124
-    iget-object v0, p0, Lcom/android/settings/TimeDisplaySchemeSettings;->mBeijingTime:Landroid/widget/RadioButton;
+    iget-object v0, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->mBeijingTime:Landroid/widget/RadioButton;
 
     invoke-virtual {v0, v1}, Landroid/widget/RadioButton;->setChecked(Z)V
 
@@ -306,7 +306,7 @@
     const/4 v3, 0x0
 
     .line 62
-    invoke-virtual {p0}, Lcom/android/settings/TimeDisplaySchemeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -316,17 +316,17 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/TimeDisplaySchemeSettings;->mView:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->mView:Landroid/view/View;
 
     .line 64
-    iget-object v0, p0, Lcom/android/settings/TimeDisplaySchemeSettings;->mView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->mView:Landroid/view/View;
 
-    invoke-direct {p0, v0}, Lcom/android/settings/TimeDisplaySchemeSettings;->initView(Landroid/view/View;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->initView(Landroid/view/View;)V
 
     .line 65
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/TimeDisplaySchemeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -338,13 +338,13 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/TimeDisplaySchemeSettings;->mView:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->mView:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/android/settings/TimeDisplaySchemeSettings;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->getArguments()Landroid/os/Bundle;
 
     move-result-object v1
 
@@ -360,9 +360,9 @@
 
     const v1, 0x7f0e083a
 
-    new-instance v2, Lcom/android/settings/TimeDisplaySchemeSettings$1;
+    new-instance v2, Lcom/android/settings_ex/TimeDisplaySchemeSettings$1;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/TimeDisplaySchemeSettings$1;-><init>(Lcom/android/settings/TimeDisplaySchemeSettings;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/TimeDisplaySchemeSettings$1;-><init>(Lcom/android/settings_ex/TimeDisplaySchemeSettings;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -378,10 +378,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/TimeDisplaySchemeSettings;->mAlertDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->mAlertDialog:Landroid/app/AlertDialog;
 
     .line 86
-    iget-object v0, p0, Lcom/android/settings/TimeDisplaySchemeSettings;->mAlertDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/TimeDisplaySchemeSettings;->mAlertDialog:Landroid/app/AlertDialog;
 
     return-object v0
 .end method

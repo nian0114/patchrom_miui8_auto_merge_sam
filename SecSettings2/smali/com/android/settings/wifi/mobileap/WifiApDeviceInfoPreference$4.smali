@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApDeviceInfoPreference$4;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApDeviceInfoPreference$4;
 .super Ljava/lang/Object;
 .source "WifiApDeviceInfoPreference.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/mobileap/WifiApDeviceInfoPreference;->showDialog(I)V
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApDeviceInfoPreference;->showDialog(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WifiApDeviceInfoPreference;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApDeviceInfoPreference;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WifiApDeviceInfoPreference;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WifiApDeviceInfoPreference;)V
     .locals 0
 
     .prologue
     .line 177
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApDeviceInfoPreference$4;->this$0:Lcom/android/settings/wifi/mobileap/WifiApDeviceInfoPreference;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApDeviceInfoPreference$4;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApDeviceInfoPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,17 +43,17 @@
 
     .prologue
     .line 180
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApDeviceInfoPreference$4;->this$0:Lcom/android/settings/wifi/mobileap/WifiApDeviceInfoPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApDeviceInfoPreference$4;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApDeviceInfoPreference;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApDeviceInfoPreference;->mSpinner:Landroid/widget/Spinner;
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WifiApDeviceInfoPreference;->access$300(Lcom/android/settings/wifi/mobileap/WifiApDeviceInfoPreference;)Landroid/widget/Spinner;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApDeviceInfoPreference;->mSpinner:Landroid/widget/Spinner;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApDeviceInfoPreference;->access$300(Lcom/android/settings_ex/wifi/mobileap/WifiApDeviceInfoPreference;)Landroid/widget/Spinner;
 
     move-result-object v1
 
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApDeviceInfoPreference$4;->this$0:Lcom/android/settings/wifi/mobileap/WifiApDeviceInfoPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApDeviceInfoPreference$4;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApDeviceInfoPreference;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApDeviceInfoPreference;->mAllowAll:Z
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WifiApDeviceInfoPreference;->access$000(Lcom/android/settings/wifi/mobileap/WifiApDeviceInfoPreference;)Z
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApDeviceInfoPreference;->mAllowAll:Z
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApDeviceInfoPreference;->access$000(Lcom/android/settings_ex/wifi/mobileap/WifiApDeviceInfoPreference;)Z
 
     move-result v0
 
@@ -65,10 +65,10 @@
     invoke-virtual {v1, v0}, Landroid/widget/Spinner;->setSelection(I)V
 
     .line 181
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApDeviceInfoPreference$4;->this$0:Lcom/android/settings/wifi/mobileap/WifiApDeviceInfoPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApDeviceInfoPreference$4;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApDeviceInfoPreference;
 
-    # invokes: Lcom/android/settings/wifi/mobileap/WifiApDeviceInfoPreference;->notifyChanged()V
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WifiApDeviceInfoPreference;->access$600(Lcom/android/settings/wifi/mobileap/WifiApDeviceInfoPreference;)V
+    # invokes: Lcom/android/settings_ex/wifi/mobileap/WifiApDeviceInfoPreference;->notifyChanged()V
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApDeviceInfoPreference;->access$600(Lcom/android/settings_ex/wifi/mobileap/WifiApDeviceInfoPreference;)V
 
     .line 182
     return-void

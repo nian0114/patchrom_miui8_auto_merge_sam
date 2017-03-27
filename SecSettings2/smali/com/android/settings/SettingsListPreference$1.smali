@@ -1,4 +1,4 @@
-.class Lcom/android/settings/SettingsListPreference$1;
+.class Lcom/android/settings_ex/SettingsListPreference$1;
 .super Ljava/lang/Object;
 .source "SettingsListPreference.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/SettingsListPreference;->showDialog(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/SettingsListPreference;->showDialog(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/SettingsListPreference;
+.field final synthetic this$0:Lcom/android/settings_ex/SettingsListPreference;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/SettingsListPreference;)V
+.method constructor <init>(Lcom/android/settings_ex/SettingsListPreference;)V
     .locals 0
 
     .prologue
     .line 97
-    iput-object p1, p0, Lcom/android/settings/SettingsListPreference$1;->this$0:Lcom/android/settings/SettingsListPreference;
+    iput-object p1, p0, Lcom/android/settings_ex/SettingsListPreference$1;->this$0:Lcom/android/settings_ex/SettingsListPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,19 +42,19 @@
 
     .prologue
     .line 100
-    iget-object v0, p0, Lcom/android/settings/SettingsListPreference$1;->this$0:Lcom/android/settings/SettingsListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/SettingsListPreference$1;->this$0:Lcom/android/settings_ex/SettingsListPreference;
 
-    # getter for: Lcom/android/settings/SettingsListPreference;->mDialog:Landroid/app/Dialog;
-    invoke-static {v0}, Lcom/android/settings/SettingsListPreference;->access$000(Lcom/android/settings/SettingsListPreference;)Landroid/app/Dialog;
+    # getter for: Lcom/android/settings_ex/SettingsListPreference;->mDialog:Landroid/app/Dialog;
+    invoke-static {v0}, Lcom/android/settings_ex/SettingsListPreference;->access$000(Lcom/android/settings_ex/SettingsListPreference;)Landroid/app/Dialog;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/SettingsListPreference$1;->this$0:Lcom/android/settings/SettingsListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/SettingsListPreference$1;->this$0:Lcom/android/settings_ex/SettingsListPreference;
 
-    # getter for: Lcom/android/settings/SettingsListPreference;->mDialog:Landroid/app/Dialog;
-    invoke-static {v0}, Lcom/android/settings/SettingsListPreference;->access$000(Lcom/android/settings/SettingsListPreference;)Landroid/app/Dialog;
+    # getter for: Lcom/android/settings_ex/SettingsListPreference;->mDialog:Landroid/app/Dialog;
+    invoke-static {v0}, Lcom/android/settings_ex/SettingsListPreference;->access$000(Lcom/android/settings_ex/SettingsListPreference;)Landroid/app/Dialog;
 
     move-result-object v0
 
@@ -65,10 +65,10 @@
     if-eqz v0, :cond_0
 
     .line 101
-    iget-object v0, p0, Lcom/android/settings/SettingsListPreference$1;->this$0:Lcom/android/settings/SettingsListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/SettingsListPreference$1;->this$0:Lcom/android/settings_ex/SettingsListPreference;
 
-    # getter for: Lcom/android/settings/SettingsListPreference;->mDialog:Landroid/app/Dialog;
-    invoke-static {v0}, Lcom/android/settings/SettingsListPreference;->access$000(Lcom/android/settings/SettingsListPreference;)Landroid/app/Dialog;
+    # getter for: Lcom/android/settings_ex/SettingsListPreference;->mDialog:Landroid/app/Dialog;
+    invoke-static {v0}, Lcom/android/settings_ex/SettingsListPreference;->access$000(Lcom/android/settings_ex/SettingsListPreference;)Landroid/app/Dialog;
 
     move-result-object v0
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/Password$1;
+.class Lcom/android/settings_ex/Password$1;
 .super Ljava/lang/Object;
 .source "Password.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/Password;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/Password;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/Password;
+.field final synthetic this$0:Lcom/android/settings_ex/Password;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/Password;)V
+.method constructor <init>(Lcom/android/settings_ex/Password;)V
     .locals 0
 
     .prologue
     .line 94
-    iput-object p1, p0, Lcom/android/settings/Password$1;->this$0:Lcom/android/settings/Password;
+    iput-object p1, p0, Lcom/android/settings_ex/Password$1;->this$0:Lcom/android/settings_ex/Password;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -66,10 +66,10 @@
 
     if-eq p2, v5, :cond_1
 
-    iget-object v1, p0, Lcom/android/settings/Password$1;->this$0:Lcom/android/settings/Password;
+    iget-object v1, p0, Lcom/android/settings_ex/Password$1;->this$0:Lcom/android/settings_ex/Password;
 
-    # getter for: Lcom/android/settings/Password;->mDigits:Landroid/widget/TextView;
-    invoke-static {v1}, Lcom/android/settings/Password;->access$000(Lcom/android/settings/Password;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/Password;->mDigits:Landroid/widget/TextView;
+    invoke-static {v1}, Lcom/android/settings_ex/Password;->access$000(Lcom/android/settings_ex/Password;)Landroid/widget/TextView;
 
     move-result-object v1
 

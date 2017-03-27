@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+.class public Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 .super Landroid/app/Fragment;
 .source "SettingsMenuEditorFragment.java"
 
@@ -6,9 +6,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$8;,
-        Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;,
-        Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;
+        Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$8;,
+        Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;,
+        Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;
     }
 .end annotation
 
@@ -44,18 +44,18 @@
 
 .field private mDisplayWidth:I
 
-.field private mDragItem:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+.field private mDragItem:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
-.field private mGridViewAdapterLower:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+.field private mGridViewAdapterLower:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-.field private mGridViewAdapterUpper:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+.field private mGridViewAdapterUpper:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
 .field private mGridViewItemListLower:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;",
+            "Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;",
             ">;"
         }
     .end annotation
@@ -66,7 +66,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;",
+            "Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;",
             ">;"
         }
     .end annotation
@@ -93,7 +93,7 @@
         value = {
             "Ljava/util/HashMap",
             "<",
-            "Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;",
+            "Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;",
             "Ljava/lang/Integer;",
             ">;"
         }
@@ -105,7 +105,7 @@
         value = {
             "Ljava/util/HashMap",
             "<",
-            "Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;",
+            "Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;",
             "Ljava/lang/Integer;",
             ">;"
         }
@@ -158,7 +158,7 @@
 
 .field private mResources:Landroid/content/res/Resources;
 
-.field private mScrollDirection:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+.field private mScrollDirection:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
 .field private mSettingsMenuEditorActionBar:Landroid/app/ActionBar;
 
@@ -199,17 +199,17 @@
     .line 94
     const-string v0, "menuItemTotalCount"
 
-    sput-object v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->keyMenuItemTotalCount:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->keyMenuItemTotalCount:Ljava/lang/String;
 
     .line 96
     const-string v0, "lowerItemTotalCount"
 
-    sput-object v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->keyLowerItemTotalCount:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->keyLowerItemTotalCount:Ljava/lang/String;
 
     .line 112
     const-string v0, "AM_SETTINGS_PREFS"
 
-    sput-object v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->assistantmenuSettingsPrefs:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->assistantmenuSettingsPrefs:Ljava/lang/String;
 
     return-void
 .end method
@@ -232,177 +232,177 @@
     invoke-direct {p0}, Landroid/app/Fragment;-><init>()V
 
     .line 58
-    iput v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
+    iput v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
 
     .line 60
-    iput v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
+    iput v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
 
     .line 68
-    iput v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDisplayWidth:I
+    iput v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDisplayWidth:I
 
     .line 70
-    iput v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDisplayHeight:I
+    iput v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDisplayHeight:I
 
     .line 72
-    iput v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTotalUpperItemCount:I
+    iput v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTotalUpperItemCount:I
 
     .line 74
-    iput v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTotalLowerItemCount:I
+    iput v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTotalLowerItemCount:I
 
     .line 76
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
     .line 78
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
     .line 80
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
 
     .line 82
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLowerParam:Landroid/widget/LinearLayout$LayoutParams;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLowerParam:Landroid/widget/LinearLayout$LayoutParams;
 
     .line 85
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
     .line 88
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
     .line 90
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
 
     .line 92
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mSettingsMenuEditorActionBar:Landroid/app/ActionBar;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mSettingsMenuEditorActionBar:Landroid/app/ActionBar;
 
     .line 100
-    iput v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
+    iput v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
 
     .line 102
-    iput v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
+    iput v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
 
     .line 104
-    iput v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewUpperDetectedItemId:I
+    iput v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewUpperDetectedItemId:I
 
     .line 106
-    iput v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewLowerDetectedItemId:I
+    iput v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewLowerDetectedItemId:I
 
     .line 108
-    iput-boolean v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsdetectedUpper:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsdetectedUpper:Z
 
     .line 110
-    iput v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPreDetectedItemId:I
+    iput v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPreDetectedItemId:I
 
     .line 114
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     .line 117
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     .line 119
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIconImgMap:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIconImgMap:Ljava/util/HashMap;
 
     .line 121
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIconStringMap:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIconStringMap:Ljava/util/HashMap;
 
     .line 123
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrefsDefaltValue:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrefsDefaltValue:Ljava/util/HashMap;
 
     .line 125
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNotPrefsDefaltValue:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNotPrefsDefaltValue:Ljava/util/HashMap;
 
     .line 127
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mAssistantMenuSettingsPrefs:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mAssistantMenuSettingsPrefs:Landroid/content/SharedPreferences;
 
     .line 129
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
 
     .line 131
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetItemBmp:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetItemBmp:Landroid/graphics/Bitmap;
 
     .line 133
-    iput v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpX:F
+    iput v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpX:F
 
     .line 135
-    iput v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
+    iput v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
 
     .line 137
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mResources:Landroid/content/res/Resources;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mResources:Landroid/content/res/Resources;
 
     .line 139
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWindowManager:Landroid/view/WindowManager;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWindowManager:Landroid/view/WindowManager;
 
     .line 141
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     .line 144
-    iput-boolean v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsWidgetVisible:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsWidgetVisible:Z
 
     .line 146
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     .line 148
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDialog:Landroid/app/AlertDialog;
 
     .line 150
-    iput v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrePositionX:F
+    iput v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrePositionX:F
 
     .line 152
-    iput v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrePositionY:F
+    iput v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrePositionY:F
 
     .line 157
-    iput v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->StatusBarHeight:I
+    iput v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->StatusBarHeight:I
 
     .line 165
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
 
     .line 167
-    iput-boolean v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsTranslateAnimationEnd:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsTranslateAnimationEnd:Z
 
     .line 179
-    sget-object v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->SCROLL_UP:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    sget-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->SCROLL_UP:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mScrollDirection:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mScrollDirection:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
     .line 183
-    new-instance v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$1;
+    new-instance v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$1;-><init>(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$1;-><init>(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mSettingsMenuEditorHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mSettingsMenuEditorHandler:Landroid/os/Handler;
 
     .line 368
-    new-instance v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$4;
+    new-instance v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$4;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$4;-><init>(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$4;-><init>(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewTouchListener:Landroid/view/View$OnTouchListener;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewTouchListener:Landroid/view/View$OnTouchListener;
 
     .line 451
-    new-instance v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$5;
+    new-instance v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$5;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$5;-><init>(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$5;-><init>(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlbartouchListener:Landroid/view/View$OnTouchListener;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlbartouchListener:Landroid/view/View$OnTouchListener;
 
     .line 498
-    new-instance v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$6;
+    new-instance v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$6;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$6;-><init>(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$6;-><init>(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateUpperGridViwAnimationListner:Landroid/view/animation/Animation$AnimationListener;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateUpperGridViwAnimationListner:Landroid/view/animation/Animation$AnimationListener;
 
     .line 521
-    new-instance v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$7;
+    new-instance v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$7;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$7;-><init>(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$7;-><init>(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateLowerGridViwAnimationListner:Landroid/view/animation/Animation$AnimationListener;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateLowerGridViwAnimationListner:Landroid/view/animation/Animation$AnimationListener;
 
     .line 1357
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTouchSyncObj:Ljava/lang/Object;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTouchSyncObj:Ljava/lang/Object;
 
     return-void
 .end method
@@ -424,7 +424,7 @@
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsTranslateAnimationEnd:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsTranslateAnimationEnd:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -437,24 +437,24 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 489
-    iget-boolean v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsTranslateAnimationEnd:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsTranslateAnimationEnd:Z
 
     if-nez v0, :cond_0
 
     .line 490
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsTranslateAnimationEnd:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsTranslateAnimationEnd:Z
 
     .line 492
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
 
     .line 493
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
 
     .line 496
     :cond_0
@@ -472,14 +472,14 @@
     const/4 v2, -0x1
 
     .line 903
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
 
     if-eq v0, v2, :cond_0
 
     .line 904
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->getChildAt(I)Landroid/view/View;
 
@@ -488,9 +488,9 @@
     if-eqz v0, :cond_0
 
     .line 905
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->getChildAt(I)Landroid/view/View;
 
@@ -504,14 +504,14 @@
 
     .line 910
     :cond_0
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
 
     if-eq v0, v2, :cond_1
 
     .line 911
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->getChildAt(I)Landroid/view/View;
 
@@ -520,9 +520,9 @@
     if-eqz v0, :cond_1
 
     .line 912
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->getChildAt(I)Landroid/view/View;
 
@@ -536,27 +536,27 @@
 
     .line 917
     :cond_1
-    iput v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPreDetectedItemId:I
+    iput v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPreDetectedItemId:I
 
     .line 919
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
 
     .line 920
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
 
     .line 922
     const/4 v0, 0x0
 
     const/4 v1, 0x2
 
-    invoke-direct {p0, v0, v1}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ChangelayoutByLine(ZI)V
+    invoke-direct {p0, v0, v1}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ChangelayoutByLine(ZI)V
 
     .line 924
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->SaveSettings()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->SaveSettings()V
 
     .line 925
     return-void
@@ -578,7 +578,7 @@
     const v7, 0x7f0c0465
 
     .line 729
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
     invoke-virtual {v4}, Landroid/widget/GridView;->getHeight()I
 
@@ -588,7 +588,7 @@
 
     .line 730
     .local v3, "x":I
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetOrientationPortraite()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetOrientationPortraite()Z
 
     move-result v0
 
@@ -596,7 +596,7 @@
     .local v0, "isPortrait":Z
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -607,7 +607,7 @@
     if-ge v3, v4, :cond_1
 
     .line 735
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -618,30 +618,30 @@
     .line 788
     :cond_0
     :goto_0
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
 
     iput v3, v4, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
     .line 789
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-virtual {v4, v5}, Landroid/widget/GridView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 792
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLowerParam:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLowerParam:Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-direct {p0, v3}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetGridViewLowerHeight(I)I
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetGridViewLowerHeight(I)I
 
     move-result v5
 
     iput v5, v4, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
     .line 793
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLowerParam:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLowerParam:Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-virtual {v4, v5}, Landroid/widget/GridView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -652,7 +652,7 @@
     :cond_1
     if-nez v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -663,7 +663,7 @@
     if-ge v3, v4, :cond_2
 
     .line 739
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -678,13 +678,13 @@
     if-ltz p1, :cond_c
 
     .line 741
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-    invoke-virtual {v4}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;->getCount()I
+    invoke-virtual {v4}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;->getCount()I
 
     move-result v4
 
-    invoke-direct {p0, v4}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetGridViewLine(I)I
+    invoke-direct {p0, v4}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetGridViewLine(I)I
 
     move-result v1
 
@@ -722,7 +722,7 @@
 
     .line 746
     .local v2, "maxHeight":I
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetOrientationPortraite()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetOrientationPortraite()Z
 
     move-result v4
 
@@ -732,7 +732,7 @@
     if-ne v1, v9, :cond_3
 
     .line 748
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -754,7 +754,7 @@
     if-ne v1, v10, :cond_4
 
     .line 751
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -771,7 +771,7 @@
     if-ne v1, v11, :cond_5
 
     .line 754
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -790,7 +790,7 @@
     if-ne v1, v4, :cond_6
 
     .line 757
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -809,7 +809,7 @@
     if-ne v1, v4, :cond_7
 
     .line 760
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -836,7 +836,7 @@
     if-ne v1, v9, :cond_9
 
     .line 767
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -851,7 +851,7 @@
     if-ne v1, v10, :cond_a
 
     .line 770
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -868,7 +868,7 @@
     if-ne v1, v11, :cond_b
 
     .line 773
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -920,13 +920,13 @@
 
     .line 805
     .local v1, "x":I
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-    invoke-virtual {v2}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;->getCount()I
+    invoke-virtual {v2}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;->getCount()I
 
     move-result v2
 
-    invoke-direct {p0, v2}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetGridViewLine(I)I
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetGridViewLine(I)I
 
     move-result v0
 
@@ -960,7 +960,7 @@
     if-eq v0, v2, :cond_0
 
     .line 809
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetOrientationPortraite()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetOrientationPortraite()Z
 
     move-result v2
 
@@ -970,7 +970,7 @@
     if-ne v0, v5, :cond_1
 
     .line 811
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -983,23 +983,23 @@
     .line 850
     :cond_0
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
 
     iput v1, v2, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
     .line 851
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-virtual {v2, v3}, Landroid/widget/GridView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 854
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLowerParam:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLowerParam:Landroid/widget/LinearLayout$LayoutParams;
 
-    iget v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDisplayHeight:I
+    iget v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDisplayHeight:I
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mResources:Landroid/content/res/Resources;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mResources:Landroid/content/res/Resources;
 
     const v5, 0x7f0c0464
 
@@ -1009,7 +1009,7 @@
 
     sub-int/2addr v3, v4
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mSettingsMenuEditorActionBar:Landroid/app/ActionBar;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mSettingsMenuEditorActionBar:Landroid/app/ActionBar;
 
     invoke-virtual {v4}, Landroid/app/ActionBar;->getHeight()I
 
@@ -1019,7 +1019,7 @@
 
     sub-int/2addr v3, v1
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
 
     invoke-virtual {v4}, Landroid/widget/ImageView;->getHeight()I
 
@@ -1030,9 +1030,9 @@
     iput v3, v2, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
     .line 860
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLowerParam:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLowerParam:Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-virtual {v2, v3}, Landroid/widget/GridView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -1045,7 +1045,7 @@
     if-ne v0, v6, :cond_2
 
     .line 814
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1062,7 +1062,7 @@
     if-ne v0, v7, :cond_3
 
     .line 817
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1081,7 +1081,7 @@
     if-ne v0, v2, :cond_4
 
     .line 820
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1100,7 +1100,7 @@
     if-ne v0, v2, :cond_5
 
     .line 823
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1127,7 +1127,7 @@
     if-ne v0, v5, :cond_7
 
     .line 831
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1144,7 +1144,7 @@
     if-ne v0, v6, :cond_8
 
     .line 834
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1161,7 +1161,7 @@
     if-ne v0, v7, :cond_9
 
     .line 837
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1175,9 +1175,9 @@
     if-ne p2, v5, :cond_0
 
     .line 840
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
     invoke-virtual {v3}, Landroid/widget/GridView;->getCount()I
 
@@ -1225,7 +1225,7 @@
     .local v15, "rectWidget":Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpX:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpX:F
 
     move/from16 v18, v0
 
@@ -1237,7 +1237,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
 
     move/from16 v19, v0
 
@@ -1249,7 +1249,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpX:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpX:F
 
     move/from16 v20, v0
 
@@ -1261,7 +1261,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
 
     move-object/from16 v21, v0
 
@@ -1273,7 +1273,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
+    iget v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
 
     move/from16 v21, v0
 
@@ -1285,7 +1285,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
 
     move-object/from16 v22, v0
 
@@ -1374,7 +1374,7 @@
     .local v14, "rectItemY":I
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
 
     move-object/from16 v18, v0
 
@@ -1386,7 +1386,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
 
     move-object/from16 v19, v0
 
@@ -1516,87 +1516,87 @@
     const/4 v3, -0x1
 
     .line 1131
-    iput v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewUpperDetectedItemId:I
+    iput v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewUpperDetectedItemId:I
 
     .line 1132
-    iput v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewLowerDetectedItemId:I
+    iput v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewLowerDetectedItemId:I
 
     .line 1134
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->IsLowerGridViewArea()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->IsLowerGridViewArea()Z
 
     move-result v0
 
     if-nez v0, :cond_6
 
     .line 1136
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-direct {p0, v0, v1}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->CheckIntersects(Landroid/widget/GridView;Landroid/widget/LinearLayout$LayoutParams;)I
+    invoke-direct {p0, v0, v1}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->CheckIntersects(Landroid/widget/GridView;Landroid/widget/LinearLayout$LayoutParams;)I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewUpperDetectedItemId:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewUpperDetectedItemId:I
 
     .line 1137
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewUpperDetectedItemId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewUpperDetectedItemId:I
 
     if-eq v0, v3, :cond_3
 
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewUpperDetectedItemId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewUpperDetectedItemId:I
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
 
     if-eq v0, v1, :cond_3
 
     .line 1139
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     .line 1140
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     .line 1141
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewUpperDetectedItemId:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewUpperDetectedItemId:I
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     invoke-virtual {v0, v1, v2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
     .line 1143
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
 
     if-ne v0, v3, :cond_2
 
     .line 1145
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
 
-    iget v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewUpperDetectedItemId:I
+    iget v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewUpperDetectedItemId:I
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
 
     .line 1154
     :goto_0
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewUpperDetectedItemId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewUpperDetectedItemId:I
 
-    iput v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
 
     .line 1184
     :cond_0
     :goto_1
-    iput v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
+    iput v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
 
     .line 1239
     :cond_1
@@ -1605,9 +1605,9 @@
 
     .line 1148
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -1615,63 +1615,63 @@
 
     add-int/lit8 v1, v1, -0x1
 
-    iget v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewUpperDetectedItemId:I
+    iget v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewUpperDetectedItemId:I
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
 
     .line 1150
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
 
     goto :goto_0
 
     .line 1156
     :cond_3
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewUpperDetectedItemId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewUpperDetectedItemId:I
 
     if-ne v0, v3, :cond_0
 
     .line 1158
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     .line 1159
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     .line 1160
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 1161
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
 
     if-eq v0, v3, :cond_4
 
     .line 1163
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -1679,10 +1679,10 @@
 
     add-int/lit8 v2, v2, -0x1
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
 
     .line 1165
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -1690,26 +1690,26 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
 
     goto :goto_1
 
     .line 1168
     :cond_4
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
 
     .line 1170
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -1717,17 +1717,17 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
 
     .line 1172
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
 
     .line 1174
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -1736,111 +1736,111 @@
     if-ne v0, v1, :cond_5
 
     .line 1175
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
 
     goto/16 :goto_1
 
     .line 1177
     :cond_5
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
 
     goto/16 :goto_1
 
     .line 1187
     :cond_6
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPreDetectedItemId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPreDetectedItemId:I
 
     if-ne v0, v3, :cond_1
 
     .line 1189
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLowerParam:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLowerParam:Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-direct {p0, v0, v1}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->CheckIntersects(Landroid/widget/GridView;Landroid/widget/LinearLayout$LayoutParams;)I
+    invoke-direct {p0, v0, v1}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->CheckIntersects(Landroid/widget/GridView;Landroid/widget/LinearLayout$LayoutParams;)I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewLowerDetectedItemId:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewLowerDetectedItemId:I
 
     .line 1190
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewLowerDetectedItemId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewLowerDetectedItemId:I
 
     if-eq v0, v3, :cond_9
 
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewLowerDetectedItemId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewLowerDetectedItemId:I
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
 
     if-eq v0, v1, :cond_9
 
     .line 1193
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     .line 1194
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     .line 1195
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewLowerDetectedItemId:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewLowerDetectedItemId:I
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     invoke-virtual {v0, v1, v2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
     .line 1197
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
 
     if-ne v0, v3, :cond_8
 
     .line 1199
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
 
-    iget v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewLowerDetectedItemId:I
+    iget v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewLowerDetectedItemId:I
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
 
     .line 1208
     :goto_3
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewLowerDetectedItemId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewLowerDetectedItemId:I
 
-    iput v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
 
     .line 1236
     :cond_7
     :goto_4
-    iput v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
+    iput v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
 
     goto/16 :goto_2
 
     .line 1203
     :cond_8
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -1848,63 +1848,63 @@
 
     add-int/lit8 v1, v1, -0x1
 
-    iget v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewLowerDetectedItemId:I
+    iget v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewLowerDetectedItemId:I
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
 
     .line 1205
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
 
     goto :goto_3
 
     .line 1210
     :cond_9
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewLowerDetectedItemId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNewLowerDetectedItemId:I
 
     if-ne v0, v3, :cond_7
 
     .line 1212
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     .line 1213
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     .line 1214
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 1215
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
 
     if-eq v0, v3, :cond_a
 
     .line 1217
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -1912,10 +1912,10 @@
 
     add-int/lit8 v2, v2, -0x1
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
 
     .line 1219
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -1923,26 +1923,26 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
 
     goto :goto_4
 
     .line 1222
     :cond_a
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
 
     .line 1224
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -1950,17 +1950,17 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
 
     .line 1225
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
 
     .line 1227
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -1969,25 +1969,25 @@
     if-ne v0, v1, :cond_b
 
     .line 1228
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
 
     goto/16 :goto_4
 
     .line 1230
     :cond_b
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemAnimationRun(Landroid/widget/GridView;II)V
 
     goto/16 :goto_4
 .end method
@@ -2025,7 +2025,7 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1324
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetOrientationPortraite()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetOrientationPortraite()Z
 
     move-result v1
 
@@ -2035,7 +2035,7 @@
     if-ltz p1, :cond_0
 
     .line 1326
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
 
     if-gt p1, v1, :cond_1
 
@@ -2049,7 +2049,7 @@
 
     .line 1328
     :cond_1
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
 
     mul-int/lit8 v1, v1, 0x2
 
@@ -2062,7 +2062,7 @@
 
     .line 1330
     :cond_2
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
 
     mul-int/lit8 v1, v1, 0x3
 
@@ -2075,7 +2075,7 @@
 
     .line 1332
     :cond_3
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
 
     mul-int/lit8 v1, v1, 0x4
 
@@ -2088,7 +2088,7 @@
 
     .line 1334
     :cond_4
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
 
     mul-int/lit8 v1, v1, 0x5
 
@@ -2114,7 +2114,7 @@
     if-ltz p1, :cond_0
 
     .line 1342
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
 
     if-gt p1, v1, :cond_7
 
@@ -2125,7 +2125,7 @@
 
     .line 1344
     :cond_7
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
 
     mul-int/lit8 v1, v1, 0x2
 
@@ -2138,7 +2138,7 @@
 
     .line 1346
     :cond_8
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
 
     mul-int/lit8 v1, v1, 0x3
 
@@ -2166,9 +2166,9 @@
 
     .prologue
     .line 1243
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDisplayHeight:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDisplayHeight:I
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mResources:Landroid/content/res/Resources;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mResources:Landroid/content/res/Resources;
 
     const v2, 0x7f0c0464
 
@@ -2178,7 +2178,7 @@
 
     sub-int/2addr v0, v1
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mSettingsMenuEditorActionBar:Landroid/app/ActionBar;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mSettingsMenuEditorActionBar:Landroid/app/ActionBar;
 
     invoke-virtual {v1}, Landroid/app/ActionBar;->getHeight()I
 
@@ -2188,7 +2188,7 @@
 
     sub-int/2addr v0, p1
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->getHeight()I
 
@@ -2206,7 +2206,7 @@
     const/4 v0, 0x1
 
     .line 1254
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -2239,7 +2239,7 @@
 
     .line 1263
     .local v0, "displaySize":Landroid/graphics/Point;
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -2260,12 +2260,12 @@
     .line 1265
     iget v3, v0, Landroid/graphics/Point;->x:I
 
-    iput v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDisplayWidth:I
+    iput v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDisplayWidth:I
 
     .line 1266
     iget v3, v0, Landroid/graphics/Point;->y:I
 
-    iput v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDisplayHeight:I
+    iput v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDisplayHeight:I
 
     .line 1268
     new-instance v1, Landroid/graphics/Rect;
@@ -2274,7 +2274,7 @@
 
     .line 1269
     .local v1, "rectgle":Landroid/graphics/Rect;
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -2293,21 +2293,21 @@
     .line 1271
     iget v3, v1, Landroid/graphics/Rect;->top:I
 
-    iput v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->StatusBarHeight:I
+    iput v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->StatusBarHeight:I
 
     .line 1273
     return-void
 .end method
 
-.method private GridViewScroll(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;)V
+.method private GridViewScroll(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;)V
     .locals 2
-    .param p1, "direction"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    .param p1, "direction"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
     .prologue
     .line 1276
-    sget-object v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$8;->$SwitchMap$com$android$settings$accessibility$assistantmenu$SettingsMenuEditorFragment$SCROLL_MOTION:[I
+    sget-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$8;->$SwitchMap$com$android$settings$accessibility$assistantmenu$SettingsMenuEditorFragment$SCROLL_MOTION:[I
 
-    invoke-virtual {p1}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->ordinal()I
+    invoke-virtual {p1}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->ordinal()I
 
     move-result v1
 
@@ -2321,7 +2321,7 @@
 
     .line 1278
     :pswitch_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
     const/4 v1, 0x1
 
@@ -2331,7 +2331,7 @@
 
     .line 1281
     :pswitch_1
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
     const/4 v1, -0x1
 
@@ -2356,21 +2356,21 @@
     const/4 v4, 0x1
 
     .line 558
-    invoke-virtual {p0, v4}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->setHasOptionsMenu(Z)V
 
     .line 559
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mResources:Landroid/content/res/Resources;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mResources:Landroid/content/res/Resources;
 
     .line 562
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
 
     const-string v2, "window"
 
@@ -2380,14 +2380,14 @@
 
     check-cast v0, Landroid/view/WindowManager;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWindowManager:Landroid/view/WindowManager;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWindowManager:Landroid/view/WindowManager;
 
     .line 565
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    sget-object v2, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->assistantmenuSettingsPrefs:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->assistantmenuSettingsPrefs:Ljava/lang/String;
 
     const/4 v3, 0x0
 
@@ -2395,10 +2395,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mAssistantMenuSettingsPrefs:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mAssistantMenuSettingsPrefs:Landroid/content/SharedPreferences;
 
     .line 568
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2406,51 +2406,51 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mSettingsMenuEditorActionBar:Landroid/app/ActionBar;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mSettingsMenuEditorActionBar:Landroid/app/ActionBar;
 
     .line 573
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     .line 575
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     .line 577
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/accessibility/assistantmenu/SettingsUtil;->AddOptionalMenuIfNeed(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsUtil;->AddOptionalMenuIfNeed(Landroid/content/Context;)Z
 
     .line 579
-    sget-object v0, Lcom/android/settings/accessibility/assistantmenu/SettingsUtil;->mIconImgMap:Ljava/util/HashMap;
+    sget-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsUtil;->mIconImgMap:Ljava/util/HashMap;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIconImgMap:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIconImgMap:Ljava/util/HashMap;
 
     .line 580
-    sget-object v0, Lcom/android/settings/accessibility/assistantmenu/SettingsUtil;->mIconStringMap:Ljava/util/HashMap;
+    sget-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsUtil;->mIconStringMap:Ljava/util/HashMap;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIconStringMap:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIconStringMap:Ljava/util/HashMap;
 
     .line 588
-    sget-object v0, Lcom/android/settings/accessibility/assistantmenu/SettingsUtil;->mPrefsDefaltValueWcursor:Ljava/util/HashMap;
+    sget-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsUtil;->mPrefsDefaltValueWcursor:Ljava/util/HashMap;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrefsDefaltValue:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrefsDefaltValue:Ljava/util/HashMap;
 
     .line 589
-    sget-object v0, Lcom/android/settings/accessibility/assistantmenu/SettingsUtil;->mNotPrefsDefaltValueWcursor:Ljava/util/HashMap;
+    sget-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsUtil;->mNotPrefsDefaltValueWcursor:Ljava/util/HashMap;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNotPrefsDefaltValue:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNotPrefsDefaltValue:Ljava/util/HashMap;
 
     .line 592
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2458,9 +2458,9 @@
 
     move-result-object v0
 
-    sget-object v2, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->keyMenuItemTotalCount:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->keyMenuItemTotalCount:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrefsDefaltValue:Ljava/util/HashMap;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrefsDefaltValue:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->size()I
 
@@ -2470,10 +2470,10 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTotalUpperItemCount:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTotalUpperItemCount:I
 
     .line 593
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2481,9 +2481,9 @@
 
     move-result-object v0
 
-    sget-object v2, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->keyLowerItemTotalCount:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->keyLowerItemTotalCount:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNotPrefsDefaltValue:Ljava/util/HashMap;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNotPrefsDefaltValue:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->size()I
 
@@ -2493,25 +2493,25 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTotalLowerItemCount:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTotalLowerItemCount:I
 
     .line 597
     new-instance v0, Landroid/widget/ImageView;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     invoke-direct {v0, v2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
 
     .line 600
     const/4 v7, 0x0
 
     .local v7, "i":I
     :goto_0
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTotalUpperItemCount:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTotalUpperItemCount:I
 
     if-ge v7, v0, :cond_4
 
@@ -2522,7 +2522,7 @@
 
     .line 602
     .local v8, "position":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2554,29 +2554,29 @@
 
     .line 603
     .local v9, "value":Ljava/lang/String;
-    sget-object v6, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->None:Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    sget-object v6, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->None:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
     .line 605
-    .local v6, "act":Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    .local v6, "act":Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
     if-eqz v9, :cond_2
 
     .line 606
-    invoke-static {v9}, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->valueOf(Ljava/lang/String;)Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    invoke-static {v9}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->valueOf(Ljava/lang/String;)Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
     move-result-object v6
 
     .line 610
     :goto_1
-    sget-object v0, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->None:Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    sget-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->None:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
     if-eq v6, v0, :cond_1
 
     .line 612
-    sget-object v0, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->Restart:Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    sget-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->Restart:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
     if-eq v6, v0, :cond_0
 
-    sget-object v0, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->PowerOff:Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    sget-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->PowerOff:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
     if-ne v6, v0, :cond_3
 
@@ -2597,7 +2597,7 @@
 
     .line 608
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrefsDefaltValue:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrefsDefaltValue:Ljava/util/HashMap;
 
     invoke-virtual {v0, v8}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2605,7 +2605,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->valueOf(Ljava/lang/String;)Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->valueOf(Ljava/lang/String;)Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
     move-result-object v6
 
@@ -2613,9 +2613,9 @@
 
     .line 616
     :cond_3
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
-    invoke-direct {p0, v6}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->MakeSettingItem(Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;)Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    invoke-direct {p0, v6}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->MakeSettingItem(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;)Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     move-result-object v2
 
@@ -2624,14 +2624,14 @@
     goto :goto_2
 
     .line 621
-    .end local v6    # "act":Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    .end local v6    # "act":Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
     .end local v8    # "position":Ljava/lang/String;
     .end local v9    # "value":Ljava/lang/String;
     :cond_4
     const/4 v7, 0x0
 
     :goto_3
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTotalLowerItemCount:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTotalLowerItemCount:I
 
     if-ge v7, v0, :cond_8
 
@@ -2642,7 +2642,7 @@
 
     .line 624
     .restart local v8    # "position":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2674,24 +2674,24 @@
 
     .line 625
     .restart local v9    # "value":Ljava/lang/String;
-    sget-object v6, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->None:Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    sget-object v6, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->None:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
     .line 626
-    .restart local v6    # "act":Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    .restart local v6    # "act":Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
     if-eqz v9, :cond_6
 
     .line 627
-    invoke-static {v9}, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->valueOf(Ljava/lang/String;)Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    invoke-static {v9}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->valueOf(Ljava/lang/String;)Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
     move-result-object v6
 
     .line 633
     :goto_4
-    sget-object v0, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->Restart:Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    sget-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->Restart:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
     if-eq v6, v0, :cond_5
 
-    sget-object v0, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->PowerOff:Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    sget-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->PowerOff:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
     if-ne v6, v0, :cond_7
 
@@ -2711,7 +2711,7 @@
 
     .line 629
     :cond_6
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNotPrefsDefaltValue:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNotPrefsDefaltValue:Ljava/util/HashMap;
 
     invoke-virtual {v0, v8}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2719,7 +2719,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->valueOf(Ljava/lang/String;)Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->valueOf(Ljava/lang/String;)Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
     move-result-object v6
 
@@ -2727,9 +2727,9 @@
 
     .line 637
     :cond_7
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
-    invoke-direct {p0, v6}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->MakeSettingItem(Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;)Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    invoke-direct {p0, v6}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->MakeSettingItem(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;)Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     move-result-object v2
 
@@ -2738,19 +2738,19 @@
     goto :goto_5
 
     .line 641
-    .end local v6    # "act":Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    .end local v6    # "act":Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
     .end local v8    # "position":Ljava/lang/String;
     .end local v9    # "value":Ljava/lang/String;
     :cond_8
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     invoke-static {v0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
     .line 643
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->InitUI()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->InitUI()V
 
     .line 645
-    invoke-direct {p0, v4, v4}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ChangelayoutByLine(ZI)V
+    invoke-direct {p0, v4, v4}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ChangelayoutByLine(ZI)V
 
     .line 647
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
@@ -2765,10 +2765,10 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/view/WindowManager$LayoutParams;-><init>(IIIII)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     .line 653
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     const/16 v1, 0x33
 
@@ -2785,10 +2785,10 @@
     const v3, 0x7f0401d7
 
     .line 274
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetWindowSize()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetWindowSize()V
 
     .line 276
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->lin_Layout:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->lin_Layout:Landroid/widget/LinearLayout;
 
     const v1, 0x7f0d04a5
 
@@ -2798,10 +2798,10 @@
 
     check-cast v0, Landroid/widget/GridView;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
     .line 277
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
     invoke-virtual {v0}, Landroid/widget/GridView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -2809,10 +2809,10 @@
 
     check-cast v0, Landroid/widget/LinearLayout$LayoutParams;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
 
     .line 279
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->lin_Layout:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->lin_Layout:Landroid/widget/LinearLayout;
 
     const v1, 0x7f0d04a6
 
@@ -2822,10 +2822,10 @@
 
     check-cast v0, Landroid/widget/GridView;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
     .line 280
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
     invoke-virtual {v0}, Landroid/widget/GridView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -2833,10 +2833,10 @@
 
     check-cast v0, Landroid/widget/LinearLayout$LayoutParams;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLowerParam:Landroid/widget/LinearLayout$LayoutParams;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLowerParam:Landroid/widget/LinearLayout$LayoutParams;
 
     .line 282
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->lin_Layout:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->lin_Layout:Landroid/widget/LinearLayout;
 
     const v1, 0x7f0d04a7
 
@@ -2846,81 +2846,81 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
 
     .line 288
-    new-instance v0, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    new-instance v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
-    sget-object v2, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;->MINUS_IMAGE_MODE:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;
+    sget-object v2, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;->MINUS_IMAGE_MODE:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;
 
-    invoke-direct {v0, p0, v3, v1, v2}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;-><init>(Landroid/app/Fragment;ILjava/util/ArrayList;Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;)V
+    invoke-direct {v0, p0, v3, v1, v2}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;-><init>(Landroid/app/Fragment;ILjava/util/ArrayList;Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
     .line 291
-    new-instance v0, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    new-instance v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
-    sget-object v2, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;->PLUS_IMAGE_MODE:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;
+    sget-object v2, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;->PLUS_IMAGE_MODE:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;
 
-    invoke-direct {v0, p0, v3, v1, v2}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;-><init>(Landroid/app/Fragment;ILjava/util/ArrayList;Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;)V
+    invoke-direct {v0, p0, v3, v1, v2}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;-><init>(Landroid/app/Fragment;ILjava/util/ArrayList;Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
     .line 295
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 296
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewTouchListener:Landroid/view/View$OnTouchListener;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewTouchListener:Landroid/view/View$OnTouchListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     .line 297
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    new-instance v1, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$2;
+    new-instance v1, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$2;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$2;-><init>(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$2;-><init>(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 309
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 310
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewTouchListener:Landroid/view/View$OnTouchListener;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewTouchListener:Landroid/view/View$OnTouchListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     .line 311
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
-    new-instance v1, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$3;
+    new-instance v1, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$3;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$3;-><init>(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$3;-><init>(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 321
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->InitResolution()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->InitResolution()V
 
     .line 323
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2939,24 +2939,24 @@
     if-ne v0, v1, :cond_0
 
     .line 324
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setNumColumns(I)V
 
     .line 325
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setNumColumns(I)V
 
     .line 333
     :goto_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlbartouchListener:Landroid/view/View$OnTouchListener;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlbartouchListener:Landroid/view/View$OnTouchListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
@@ -2965,16 +2965,16 @@
 
     .line 328
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setNumColumns(I)V
 
     .line 329
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setNumColumns(I)V
 
@@ -2994,16 +2994,16 @@
 
     .line 1117
     .local v1, "loc":[I
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
 
     invoke-virtual {v4, v1}, Landroid/widget/ImageView;->getLocationOnScreen([I)V
 
     .line 1118
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     iget v4, v4, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v5}, Landroid/widget/ImageView;->getHeight()I
 
@@ -3015,7 +3015,7 @@
     .local v2, "widgetBottomY":I
     aget v4, v1, v3
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
 
     invoke-virtual {v5}, Landroid/widget/ImageView;->getHeight()I
 
@@ -3074,24 +3074,24 @@
 
     .line 1294
     .local v1, "rectActionbar":Landroid/graphics/Rect;
-    iget-object v5, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
 
     invoke-virtual {v5, v0}, Landroid/widget/ImageView;->getLocationOnScreen([I)V
 
     .line 1295
-    iget v5, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpX:F
+    iget v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpX:F
 
     float-to-int v5, v5
 
-    iget v6, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
+    iget v6, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
 
     float-to-int v6, v6
 
-    iget v7, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpX:F
+    iget v7, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpX:F
 
     float-to-int v7, v7
 
-    iget-object v8, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
+    iget-object v8, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v8}, Landroid/widget/ImageView;->getWidth()I
 
@@ -3099,11 +3099,11 @@
 
     add-int/2addr v7, v8
 
-    iget v8, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
+    iget v8, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
 
     float-to-int v8, v8
 
-    iget-object v9, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v9}, Landroid/widget/ImageView;->getHeight()I
 
@@ -3118,13 +3118,13 @@
 
     aget v6, v0, v11
 
-    iget v7, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->StatusBarHeight:I
+    iget v7, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->StatusBarHeight:I
 
     sub-int/2addr v6, v7
 
     aget v7, v0, v10
 
-    iget-object v8, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
+    iget-object v8, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
 
     invoke-virtual {v8}, Landroid/widget/ImageView;->getWidth()I
 
@@ -3134,7 +3134,7 @@
 
     aget v8, v0, v11
 
-    iget-object v9, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
 
     invoke-virtual {v9}, Landroid/widget/ImageView;->getHeight()I
 
@@ -3142,7 +3142,7 @@
 
     add-int/2addr v8, v9
 
-    iget v9, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->StatusBarHeight:I
+    iget v9, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->StatusBarHeight:I
 
     sub-int/2addr v8, v9
 
@@ -3186,9 +3186,9 @@
     invoke-virtual {v5, v6}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     .line 1304
-    iget v5, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDisplayWidth:I
+    iget v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDisplayWidth:I
 
-    iget-object v6, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mSettingsMenuEditorActionBar:Landroid/app/ActionBar;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mSettingsMenuEditorActionBar:Landroid/app/ActionBar;
 
     invoke-virtual {v6}, Landroid/app/ActionBar;->getHeight()I
 
@@ -3204,9 +3204,9 @@
     if-eqz v5, :cond_0
 
     .line 1307
-    sget-object v5, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->SCROLL_UP:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    sget-object v5, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->SCROLL_UP:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
-    iput-object v5, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mScrollDirection:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    iput-object v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mScrollDirection:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
     .line 1308
     const/4 v4, 0x1
@@ -3247,9 +3247,9 @@
     if-eqz v5, :cond_1
 
     .line 1310
-    sget-object v5, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->SCROLL_DOWN:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    sget-object v5, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->SCROLL_DOWN:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
-    iput-object v5, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mScrollDirection:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    iput-object v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mScrollDirection:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
     .line 1311
     const/4 v4, 0x1
@@ -3314,14 +3314,14 @@
     if-gt v1, p3, :cond_e
 
     .line 942
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetOrientationPortraite()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetOrientationPortraite()Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
     .line 943
-    iget v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
+    iget v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
 
     rem-int v2, v1, v2
 
@@ -3330,7 +3330,7 @@
     .line 944
     new-instance v2, Landroid/view/animation/TranslateAnimation;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -3344,11 +3344,11 @@
 
     invoke-direct {v2, v6, v3, v6, v6}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
 
     .line 970
     :goto_1
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
 
     const-wide/16 v4, 0x12c
 
@@ -3375,17 +3375,17 @@
 
     .line 978
     :cond_1
-    iput-boolean v9, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsTranslateAnimationEnd:Z
+    iput-boolean v9, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsTranslateAnimationEnd:Z
 
     .line 979
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateUpperGridViwAnimationListner:Landroid/view/animation/Animation$AnimationListener;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateUpperGridViwAnimationListner:Landroid/view/animation/Animation$AnimationListener;
 
     invoke-virtual {v2, v3}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
     .line 981
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mSettingsMenuEditorHandler:Landroid/os/Handler;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mSettingsMenuEditorHandler:Landroid/os/Handler;
 
     const-wide/16 v4, 0x1f4
 
@@ -3404,7 +3404,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {v2, v3}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
@@ -3418,7 +3418,7 @@
     :cond_3
     new-instance v2, Landroid/view/animation/TranslateAnimation;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -3430,7 +3430,7 @@
 
     int-to-float v3, v3
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -3446,13 +3446,13 @@
 
     invoke-direct {v2, v6, v3, v6, v4}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
 
     goto :goto_1
 
     .line 956
     :cond_4
-    iget v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
+    iget v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
 
     rem-int v2, v1, v2
 
@@ -3461,7 +3461,7 @@
     .line 957
     new-instance v2, Landroid/view/animation/TranslateAnimation;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -3477,7 +3477,7 @@
 
     invoke-direct {v2, v6, v3, v6, v6}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
 
     goto :goto_1
 
@@ -3485,7 +3485,7 @@
     :cond_5
     new-instance v2, Landroid/view/animation/TranslateAnimation;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -3499,7 +3499,7 @@
 
     int-to-float v3, v3
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -3513,7 +3513,7 @@
 
     invoke-direct {v2, v6, v3, v6, v4}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
 
     goto/16 :goto_1
 
@@ -3553,7 +3553,7 @@
     if-gt v1, v2, :cond_e
 
     .line 993
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetOrientationPortraite()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetOrientationPortraite()Z
 
     move-result v2
 
@@ -3562,7 +3562,7 @@
     .line 994
     add-int/lit8 v2, v1, 0x1
 
-    iget v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
+    iget v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
 
     rem-int/2addr v2, v3
 
@@ -3571,7 +3571,7 @@
     .line 995
     new-instance v2, Landroid/view/animation/TranslateAnimation;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -3583,11 +3583,11 @@
 
     invoke-direct {v2, v6, v3, v6, v6}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
 
     .line 1019
     :goto_4
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
 
     const-wide/16 v4, 0x12c
 
@@ -3616,17 +3616,17 @@
 
     .line 1027
     :cond_8
-    iput-boolean v9, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsTranslateAnimationEnd:Z
+    iput-boolean v9, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsTranslateAnimationEnd:Z
 
     .line 1028
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateUpperGridViwAnimationListner:Landroid/view/animation/Animation$AnimationListener;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateUpperGridViwAnimationListner:Landroid/view/animation/Animation$AnimationListener;
 
     invoke-virtual {v2, v3}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
     .line 1030
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mSettingsMenuEditorHandler:Landroid/os/Handler;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mSettingsMenuEditorHandler:Landroid/os/Handler;
 
     const-wide/16 v4, 0x1f4
 
@@ -3645,7 +3645,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
 
     invoke-virtual {v2, v3}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
@@ -3659,7 +3659,7 @@
     :cond_a
     new-instance v2, Landroid/view/animation/TranslateAnimation;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -3671,7 +3671,7 @@
 
     int-to-float v3, v3
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -3685,7 +3685,7 @@
 
     invoke-direct {v2, v6, v3, v6, v4}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
 
     goto :goto_4
 
@@ -3693,7 +3693,7 @@
     :cond_b
     add-int/lit8 v2, v1, 0x1
 
-    iget v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
+    iget v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
 
     rem-int/2addr v2, v3
 
@@ -3702,7 +3702,7 @@
     .line 1007
     new-instance v2, Landroid/view/animation/TranslateAnimation;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -3714,7 +3714,7 @@
 
     invoke-direct {v2, v6, v3, v6, v6}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
 
     goto :goto_4
 
@@ -3722,7 +3722,7 @@
     :cond_c
     new-instance v2, Landroid/view/animation/TranslateAnimation;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -3734,7 +3734,7 @@
 
     int-to-float v3, v3
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -3746,7 +3746,7 @@
 
     invoke-direct {v2, v6, v3, v6, v4}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTranslateAnimation:Landroid/view/animation/Animation;
 
     goto/16 :goto_4
 
@@ -3781,13 +3781,13 @@
     return-void
 .end method
 
-.method private MakeSettingItem(Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;)Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+.method private MakeSettingItem(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;)Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
     .locals 5
-    .param p1, "act"    # Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    .param p1, "act"    # Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
     .prologue
     .line 658
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIconImgMap:Ljava/util/HashMap;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIconImgMap:Ljava/util/HashMap;
 
     invoke-virtual {v4, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -3801,7 +3801,7 @@
 
     .line 660
     .local v0, "img":I
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIconStringMap:Ljava/util/HashMap;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIconStringMap:Ljava/util/HashMap;
 
     invoke-virtual {v4, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -3815,7 +3815,7 @@
 
     .line 662
     .local v1, "name":I
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mResources:Landroid/content/res/Resources;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mResources:Landroid/content/res/Resources;
 
     invoke-virtual {v4, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3823,12 +3823,12 @@
 
     .line 664
     .local v3, "strname":Ljava/lang/String;
-    new-instance v2, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    new-instance v2, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
-    invoke-direct {v2, v0, p1, v3}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;-><init>(ILcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;Ljava/lang/String;)V
+    invoke-direct {v2, v0, p1, v3}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;-><init>(ILcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;Ljava/lang/String;)V
 
     .line 665
-    .local v2, "settingItem":Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    .local v2, "settingItem":Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
     return-object v2
 .end method
 
@@ -3839,29 +3839,29 @@
     const/4 v2, 0x1
 
     .line 890
-    iget-boolean v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsWidgetVisible:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsWidgetVisible:Z
 
     if-eqz v0, :cond_0
 
     .line 891
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWindowManager:Landroid/view/WindowManager;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWindowManager:Landroid/view/WindowManager;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
 
     invoke-interface {v0, v1}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
 
     .line 892
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsWidgetVisible:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsWidgetVisible:Z
 
     .line 894
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
     invoke-virtual {v0, v2}, Landroid/widget/GridView;->setEnabled(Z)V
 
     .line 895
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
     invoke-virtual {v0, v2}, Landroid/widget/GridView;->setEnabled(Z)V
 
@@ -3877,12 +3877,12 @@
     const/4 v4, 0x1
 
     .line 688
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
     .line 689
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
@@ -3891,7 +3891,7 @@
 
     .local v1, "i":I
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrefsDefaltValue:Ljava/util/HashMap;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrefsDefaltValue:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->size()I
 
@@ -3900,7 +3900,7 @@
     if-ge v1, v2, :cond_2
 
     .line 693
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrefsDefaltValue:Ljava/util/HashMap;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrefsDefaltValue:Ljava/util/HashMap;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -3946,13 +3946,13 @@
 
     .line 698
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
-    invoke-static {v0}, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->valueOf(Ljava/lang/String;)Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->valueOf(Ljava/lang/String;)Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
     move-result-object v3
 
-    invoke-direct {p0, v3}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->MakeSettingItem(Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;)Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->MakeSettingItem(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;)Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     move-result-object v3
 
@@ -3966,7 +3966,7 @@
     const/4 v1, 0x0
 
     :goto_2
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNotPrefsDefaltValue:Ljava/util/HashMap;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNotPrefsDefaltValue:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->size()I
 
@@ -3975,7 +3975,7 @@
     if-ge v1, v2, :cond_5
 
     .line 703
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNotPrefsDefaltValue:Ljava/util/HashMap;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mNotPrefsDefaltValue:Ljava/util/HashMap;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -4021,13 +4021,13 @@
 
     .line 708
     :cond_4
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
-    invoke-static {v0}, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->valueOf(Ljava/lang/String;)Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->valueOf(Ljava/lang/String;)Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
     move-result-object v3
 
-    invoke-direct {p0, v3}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->MakeSettingItem(Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;)Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->MakeSettingItem(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;)Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     move-result-object v3
 
@@ -4038,52 +4038,52 @@
     .line 711
     .end local v0    # "act":Ljava/lang/String;
     :cond_5
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     invoke-static {v2}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
     .line 713
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-    invoke-virtual {v2}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v2}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
 
     .line 714
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-    invoke-virtual {v2}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v2}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
 
     .line 716
-    invoke-direct {p0, v4, v4}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ChangelayoutByLine(ZI)V
+    invoke-direct {p0, v4, v4}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ChangelayoutByLine(ZI)V
 
     .line 718
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLowerParam:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLowerParam:Landroid/widget/LinearLayout$LayoutParams;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
 
     iget v3, v3, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    invoke-direct {p0, v3}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetGridViewLowerHeight(I)I
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetGridViewLowerHeight(I)I
 
     move-result v3
 
     iput v3, v2, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
     .line 720
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-virtual {v2, v3}, Landroid/widget/GridView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 721
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-virtual {v2, v3}, Landroid/widget/GridView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 723
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->SaveSettings()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->SaveSettings()V
 
     .line 724
     return-void
@@ -4094,7 +4094,7 @@
 
     .prologue
     .line 671
-    iget-object v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -4109,7 +4109,7 @@
     if-ge v0, v2, :cond_0
 
     .line 673
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -4139,19 +4139,19 @@
 
     move-result-object v5
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    check-cast v3, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
-    invoke-virtual {v3}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;->getAct()Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    invoke-virtual {v3}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;->getAct()Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->toString()Ljava/lang/String;
 
     move-result-object v3
 
@@ -4164,7 +4164,7 @@
 
     .line 675
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -4172,12 +4172,12 @@
 
     move-result-object v3
 
-    sget-object v4, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->keyMenuItemTotalCount:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->keyMenuItemTotalCount:Ljava/lang/String;
 
     invoke-static {v3, v4, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 677
-    iget-object v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -4191,7 +4191,7 @@
     if-ge v0, v1, :cond_1
 
     .line 679
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -4221,19 +4221,19 @@
 
     move-result-object v5
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    check-cast v3, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
-    invoke-virtual {v3}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;->getAct()Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    invoke-virtual {v3}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;->getAct()Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->toString()Ljava/lang/String;
 
     move-result-object v3
 
@@ -4246,7 +4246,7 @@
 
     .line 682
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -4254,7 +4254,7 @@
 
     move-result-object v3
 
-    sget-object v4, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->keyLowerItemTotalCount:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->keyLowerItemTotalCount:Ljava/lang/String;
 
     invoke-static {v3, v4, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
@@ -4267,48 +4267,48 @@
 
     .prologue
     .line 864
-    iget-boolean v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsWidgetVisible:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsWidgetVisible:Z
 
     if-nez v0, :cond_0
 
     .line 865
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpX:F
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpX:F
 
     float-to-int v1, v1
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->x:I
 
     .line 866
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
 
     float-to-int v1, v1
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->y:I
 
     .line 868
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetItemBmp:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetItemBmp:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     .line 870
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWindowManager:Landroid/view/WindowManager;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWindowManager:Landroid/view/WindowManager;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 871
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsWidgetVisible:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsWidgetVisible:Z
 
     .line 872
     const-string v0, "SettingsMenuEditorFragment"
@@ -4323,7 +4323,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     iget v2, v2, Landroid/view/WindowManager$LayoutParams;->x:I
 
@@ -4337,7 +4337,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     iget v2, v2, Landroid/view/WindowManager$LayoutParams;->y:I
 
@@ -4361,34 +4361,34 @@
 
     .prologue
     .line 879
-    iget-boolean v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsWidgetVisible:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsWidgetVisible:Z
 
     if-eqz v0, :cond_0
 
     .line 880
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpX:F
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpX:F
 
     float-to-int v1, v1
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->x:I
 
     .line 881
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
 
     float-to-int v1, v1
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->y:I
 
     .line 882
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWindowManager:Landroid/view/WindowManager;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWindowManager:Landroid/view/WindowManager;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -4405,7 +4405,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     iget v2, v2, Landroid/view/WindowManager$LayoutParams;->x:I
 
@@ -4419,7 +4419,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     iget v2, v2, Landroid/view/WindowManager$LayoutParams;->y:I
 
@@ -4438,319 +4438,319 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;)V
+.method static synthetic access$000(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
-    .param p1, "x1"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p1, "x1"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
     .prologue
     .line 52
-    invoke-direct {p0, p1}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GridViewScroll(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GridViewScroll(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;)V
 
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
+.method static synthetic access$100(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     .prologue
     .line 52
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->AfterTranslateAnimationEnd()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->AfterTranslateAnimationEnd()V
 
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+.method static synthetic access$1000(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     .prologue
     .line 52
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mScrollDirection:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mScrollDirection:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
     return-object v0
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)Z
+.method static synthetic access$1100(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     .prologue
     .line 52
-    iget-boolean v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsTranslateAnimationEnd:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsTranslateAnimationEnd:Z
 
     return v0
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
+.method static synthetic access$1200(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     .prologue
     .line 52
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->FindNearItem()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->FindNearItem()V
 
     return-void
 .end method
 
-.method static synthetic access$1300(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
+.method static synthetic access$1300(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     .prologue
     .line 52
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->RemoveWidget()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->RemoveWidget()V
 
     return-void
 .end method
 
-.method static synthetic access$1400(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
+.method static synthetic access$1400(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     .prologue
     .line 52
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->AssignDragItem()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->AssignDragItem()V
 
     return-void
 .end method
 
-.method static synthetic access$1500(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)Landroid/widget/ImageView;
+.method static synthetic access$1500(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)Landroid/widget/ImageView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     .prologue
     .line 52
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
 
     return-object v0
 .end method
 
-.method static synthetic access$1600(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;I)V
+.method static synthetic access$1600(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
     .param p1, "x1"    # I
 
     .prologue
     .line 52
-    invoke-direct {p0, p1}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ChangelayoutByGap(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ChangelayoutByGap(I)V
 
     return-void
 .end method
 
-.method static synthetic access$1700(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)I
+.method static synthetic access$1700(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     .prologue
     .line 52
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
 
     return v0
 .end method
 
-.method static synthetic access$1800(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+.method static synthetic access$1800(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     .prologue
     .line 52
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
     return-object v0
 .end method
 
-.method static synthetic access$1900(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+.method static synthetic access$1900(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     .prologue
     .line 52
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)Z
+.method static synthetic access$200(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     .prologue
     .line 52
-    iget-boolean v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsWidgetVisible:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsWidgetVisible:Z
 
     return v0
 .end method
 
-.method static synthetic access$2000(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)Z
+.method static synthetic access$2000(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     .prologue
     .line 52
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetOrientationPortraite()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetOrientationPortraite()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method static synthetic access$2100(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)I
+.method static synthetic access$2100(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     .prologue
     .line 52
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
 
     return v0
 .end method
 
-.method static synthetic access$2200(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)I
+.method static synthetic access$2200(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     .prologue
     .line 52
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
 
     return v0
 .end method
 
-.method static synthetic access$2300(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)Landroid/widget/GridView;
+.method static synthetic access$2300(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)Landroid/widget/GridView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     .prologue
     .line 52
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
     return-object v0
 .end method
 
-.method static synthetic access$2400(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;ZI)V
+.method static synthetic access$2400(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;ZI)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
     .param p1, "x1"    # Z
     .param p2, "x2"    # I
 
     .prologue
     .line 52
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ChangelayoutByLine(ZI)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ChangelayoutByLine(ZI)V
 
     return-void
 .end method
 
-.method static synthetic access$316(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;F)F
+.method static synthetic access$316(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;F)F
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
     .param p1, "x1"    # F
 
     .prologue
     .line 52
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpX:F
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpX:F
 
     add-float/2addr v0, p1
 
-    iput v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpX:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpX:F
 
     return v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)F
+.method static synthetic access$400(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)F
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     .prologue
     .line 52
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrePositionX:F
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrePositionX:F
 
     return v0
 .end method
 
-.method static synthetic access$402(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;F)F
+.method static synthetic access$402(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;F)F
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
     .param p1, "x1"    # F
 
     .prologue
     .line 52
-    iput p1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrePositionX:F
+    iput p1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrePositionX:F
 
     return p1
 .end method
 
-.method static synthetic access$516(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;F)F
+.method static synthetic access$516(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;F)F
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
     .param p1, "x1"    # F
 
     .prologue
     .line 52
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
 
     add-float/2addr v0, p1
 
-    iput v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
 
     return v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)F
+.method static synthetic access$600(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)F
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     .prologue
     .line 52
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrePositionY:F
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrePositionY:F
 
     return v0
 .end method
 
-.method static synthetic access$602(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;F)F
+.method static synthetic access$602(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;F)F
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
     .param p1, "x1"    # F
 
     .prologue
     .line 52
-    iput p1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrePositionY:F
+    iput p1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrePositionY:F
 
     return p1
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
+.method static synthetic access$700(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     .prologue
     .line 52
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->UpdateWidget()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->UpdateWidget()V
 
     return-void
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)Z
+.method static synthetic access$800(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     .prologue
     .line 52
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->IsScrollArea()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->IsScrollArea()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;)Landroid/os/Handler;
+.method static synthetic access$900(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     .prologue
     .line 52
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mSettingsMenuEditorHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mSettingsMenuEditorHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
@@ -4762,7 +4762,7 @@
 
     .prologue
     .line 1609
-    iget-boolean v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsWidgetVisible:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsWidgetVisible:Z
 
     return v0
 .end method
@@ -4772,7 +4772,7 @@
 
     .prologue
     .line 1605
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
 
     return v0
 .end method
@@ -4782,7 +4782,7 @@
 
     .prologue
     .line 1597
-    iget-boolean v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsTranslateAnimationEnd:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsTranslateAnimationEnd:Z
 
     return v0
 .end method
@@ -4792,7 +4792,7 @@
 
     .prologue
     .line 1601
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
 
     return v0
 .end method
@@ -4814,7 +4814,7 @@
 
     .line 1620
     .local v3, "metrics":Landroid/util/DisplayMetrics;
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -4990,12 +4990,12 @@
     .line 1657
     const/4 v8, 0x3
 
-    iput v8, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
+    iput v8, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
 
     .line 1658
     const/4 v8, 0x5
 
-    iput v8, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
+    iput v8, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
 
     .line 1668
     :goto_0
@@ -5012,12 +5012,12 @@
     if-ne v2, v8, :cond_3
 
     .line 1660
-    iput v11, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
+    iput v11, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
 
     .line 1661
     const/16 v8, 0x8
 
-    iput v8, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
+    iput v8, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
 
     goto :goto_0
 
@@ -5030,33 +5030,33 @@
     invoke-static {v8, v9}, Landroid/util/secutil/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1665
-    iput v11, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
+    iput v11, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
 
     .line 1666
     const/4 v8, 0x6
 
-    iput v8, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
+    iput v8, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
 
     goto :goto_0
 .end method
 
-.method public ItemClick(Landroid/view/View;ILcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;)V
+.method public ItemClick(Landroid/view/View;ILcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;)V
     .locals 8
     .param p1, "view"    # Landroid/view/View;
     .param p2, "position"    # I
-    .param p3, "imageMode"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;
+    .param p3, "imageMode"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;
 
     .prologue
     .line 1361
-    iget-object v5, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTouchSyncObj:Ljava/lang/Object;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTouchSyncObj:Ljava/lang/Object;
 
     monitor-enter v5
 
     .line 1362
     :try_start_0
-    sget-object v4, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$8;->$SwitchMap$com$android$settings$accessibility$assistantmenu$SettingsMenuEditorFragment$IMAGE_MODE:[I
+    sget-object v4, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$8;->$SwitchMap$com$android$settings$accessibility$assistantmenu$SettingsMenuEditorFragment$IMAGE_MODE:[I
 
-    invoke-virtual {p3}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;->ordinal()I
+    invoke-virtual {p3}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;->ordinal()I
 
     move-result v6
 
@@ -5082,16 +5082,16 @@
     invoke-static {v4, v6}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1366
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     if-eqz v4, :cond_0
 
     .line 1370
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     if-eqz v4, :cond_1
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
@@ -5101,55 +5101,55 @@
 
     .line 1373
     :cond_1
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     invoke-virtual {v4, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    check-cast v4, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
-    invoke-virtual {v4}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;->getAct()Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    invoke-virtual {v4}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;->getAct()Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
     move-result-object v3
 
     .line 1374
-    .local v3, "itemAct":Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
-    sget-object v4, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->PressHomeKey:Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    .local v3, "itemAct":Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    sget-object v4, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->PressHomeKey:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    sget-object v4, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->SettingEnter:Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    sget-object v4, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->SettingEnter:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
     .line 1379
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     invoke-virtual {v4, p2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    check-cast v2, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     .line 1381
-    .local v2, "item":Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    .local v2, "item":Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 1383
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-    invoke-virtual {v4}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v4}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
 
     .line 1385
     const-string v4, "SettingsMenuEditorFragment"
@@ -5164,7 +5164,7 @@
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v7, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
     invoke-virtual {v7}, Landroid/widget/GridView;->getFirstVisiblePosition()I
 
@@ -5180,7 +5180,7 @@
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v7, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
     invoke-virtual {v7}, Landroid/widget/GridView;->getLastVisiblePosition()I
 
@@ -5197,7 +5197,7 @@
     invoke-static {v4, v6}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1392
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetOrientationPortraite()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetOrientationPortraite()Z
 
     move-result v1
 
@@ -5205,12 +5205,12 @@
     .local v1, "isPortrait":Z
     if-eqz v1, :cond_4
 
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
 
     .line 1396
     .local v0, "columnItemCount":I
     :goto_2
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
     invoke-virtual {v4}, Landroid/widget/GridView;->getCount()I
 
@@ -5220,7 +5220,7 @@
 
     if-eqz v4, :cond_2
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
     invoke-virtual {v4}, Landroid/widget/GridView;->getCount()I
 
@@ -5230,7 +5230,7 @@
 
     .line 1399
     :cond_2
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
     invoke-virtual {v4}, Landroid/widget/GridView;->getFirstVisiblePosition()I
 
@@ -5238,13 +5238,13 @@
 
     if-nez v4, :cond_3
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
     invoke-virtual {v4}, Landroid/widget/GridView;->getCount()I
 
     move-result v4
 
-    iget-object v6, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
     invoke-virtual {v6}, Landroid/widget/GridView;->getLastVisiblePosition()I
 
@@ -5257,24 +5257,24 @@
 
     const/4 v6, 0x1
 
-    invoke-direct {p0, v4, v6}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ChangelayoutByLine(ZI)V
+    invoke-direct {p0, v4, v6}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ChangelayoutByLine(ZI)V
 
     .line 1409
     :cond_3
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-    invoke-virtual {v4}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v4}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
 
     .line 1410
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->SaveSettings()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->SaveSettings()V
 
     goto/16 :goto_0
 
     .line 1445
     .end local v0    # "columnItemCount":I
     .end local v1    # "isPortrait":Z
-    .end local v2    # "item":Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
-    .end local v3    # "itemAct":Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    .end local v2    # "item":Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
+    .end local v3    # "itemAct":Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
     :catchall_0
     move-exception v4
 
@@ -5286,18 +5286,18 @@
 
     .line 1393
     .restart local v1    # "isPortrait":Z
-    .restart local v2    # "item":Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
-    .restart local v3    # "itemAct":Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    .restart local v2    # "item":Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
+    .restart local v3    # "itemAct":Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
     :cond_4
     :try_start_1
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
 
     goto :goto_2
 
     .line 1415
     .end local v1    # "isPortrait":Z
-    .end local v2    # "item":Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
-    .end local v3    # "itemAct":Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    .end local v2    # "item":Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
+    .end local v3    # "itemAct":Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
     :pswitch_1
     const-string v4, "SettingsMenuEditorFragment"
 
@@ -5306,7 +5306,7 @@
     invoke-static {v4, v6}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1419
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
@@ -5346,38 +5346,38 @@
 
     .line 1424
     :cond_5
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     invoke-virtual {v4, p2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    check-cast v2, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     .line 1425
-    .restart local v2    # "item":Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    .restart local v2    # "item":Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 1427
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-    invoke-virtual {v4}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v4}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
 
     .line 1431
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-    invoke-virtual {v4}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v4}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
 
     .line 1435
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
     invoke-virtual {v4}, Landroid/widget/GridView;->getCount()I
 
     move-result v4
 
-    iget-object v6, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
     invoke-virtual {v6}, Landroid/widget/GridView;->getLastVisiblePosition()I
 
@@ -5390,11 +5390,11 @@
 
     const/4 v6, 0x1
 
-    invoke-direct {p0, v4, v6}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ChangelayoutByLine(ZI)V
+    invoke-direct {p0, v4, v6}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ChangelayoutByLine(ZI)V
 
     .line 1439
     :cond_6
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->SaveSettings()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->SaveSettings()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -5408,11 +5408,11 @@
     .end packed-switch
 .end method
 
-.method public ItemLongClick(Landroid/view/View;ILcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;)Z
+.method public ItemLongClick(Landroid/view/View;ILcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;)Z
     .locals 9
     .param p1, "view"    # Landroid/view/View;
     .param p2, "position"    # I
-    .param p3, "imageMode"    # Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;
+    .param p3, "imageMode"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;
 
     .prologue
     const/4 v8, 0x1
@@ -5441,17 +5441,17 @@
     invoke-static {v4, v5}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1452
-    iget-object v5, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTouchSyncObj:Ljava/lang/Object;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTouchSyncObj:Ljava/lang/Object;
 
     monitor-enter v5
 
     .line 1453
     :try_start_0
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetItemBmp:Landroid/graphics/Bitmap;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetItemBmp:Landroid/graphics/Bitmap;
 
     if-eqz v4, :cond_0
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetItemBmp:Landroid/graphics/Bitmap;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetItemBmp:Landroid/graphics/Bitmap;
 
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->isRecycled()Z
 
@@ -5460,7 +5460,7 @@
     if-nez v4, :cond_0
 
     .line 1454
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetItemBmp:Landroid/graphics/Bitmap;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetItemBmp:Landroid/graphics/Bitmap;
 
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->recycle()V
 
@@ -5487,27 +5487,27 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetItemBmp:Landroid/graphics/Bitmap;
+    iput-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetItemBmp:Landroid/graphics/Bitmap;
 
     .line 1462
     const/4 v2, 0x0
 
     .line 1463
-    .local v2, "itemAct":Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    .local v2, "itemAct":Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
     const/4 v4, 0x2
 
     new-array v3, v4, [I
 
     .line 1464
     .local v3, "loc":[I
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->lin_Layout:Landroid/widget/LinearLayout;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->lin_Layout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4, v3}, Landroid/widget/LinearLayout;->getLocationOnScreen([I)V
 
     .line 1466
-    sget-object v4, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$8;->$SwitchMap$com$android$settings$accessibility$assistantmenu$SettingsMenuEditorFragment$IMAGE_MODE:[I
+    sget-object v4, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$8;->$SwitchMap$com$android$settings$accessibility$assistantmenu$SettingsMenuEditorFragment$IMAGE_MODE:[I
 
-    invoke-virtual {p3}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;->ordinal()I
+    invoke-virtual {p3}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;->ordinal()I
 
     move-result v6
 
@@ -5519,9 +5519,9 @@
     :goto_0
     if-eqz v2, :cond_1
 
-    sget-object v4, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->PressHomeKey:Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    sget-object v4, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->PressHomeKey:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
-    invoke-virtual {v2, v4}, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v4}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -5530,9 +5530,9 @@
     :cond_1
     if-eqz v2, :cond_3
 
-    sget-object v4, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->SettingEnter:Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    sget-object v4, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->SettingEnter:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
-    invoke-virtual {v2, v4}, Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v4}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -5563,11 +5563,11 @@
     invoke-static {v4, v6}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1515
-    iput p2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPreDetectedItemId:I
+    iput p2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPreDetectedItemId:I
 
     .line 1518
     :cond_3
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ShowWidget()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ShowWidget()V
 
     .line 1520
     monitor-exit v5
@@ -5577,46 +5577,46 @@
 
     .line 1468
     :pswitch_0
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     invoke-virtual {v4, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    check-cast v4, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
-    invoke-virtual {v4}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;->getAct()Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    invoke-virtual {v4}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;->getAct()Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
     move-result-object v2
 
     .line 1472
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterUpper:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-    invoke-virtual {v4}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v4}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
 
     .line 1473
-    iput p2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
+    iput p2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
 
     .line 1474
     const/4 v4, -0x1
 
-    iput v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
+    iput v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
 
     .line 1475
     const/4 v4, 0x1
 
-    iput-boolean v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsdetectedUpper:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsdetectedUpper:Z
 
     .line 1476
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     invoke-virtual {v4, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    check-cast v4, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
-    iput-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    iput-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     .line 1478
     invoke-virtual {p1}, Landroid/view/View;->getX()F
@@ -5631,7 +5631,7 @@
 
     add-float/2addr v4, v6
 
-    iput v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpX:F
+    iput v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpX:F
 
     .line 1479
     invoke-virtual {p1}, Landroid/view/View;->getY()F
@@ -5646,7 +5646,7 @@
 
     add-float/2addr v4, v6
 
-    iget-object v6, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
 
     iget v6, v6, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
@@ -5654,13 +5654,13 @@
 
     add-float/2addr v4, v6
 
-    iget v6, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->StatusBarHeight:I
+    iget v6, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->StatusBarHeight:I
 
     int-to-float v6, v6
 
     sub-float/2addr v4, v6
 
-    iput v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
+    iput v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
 
     .line 1484
     sget-object v4, Ljava/lang/System;->out:Ljava/io/PrintStream;
@@ -5675,7 +5675,7 @@
 
     move-result-object v6
 
-    iget v7, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
+    iget v7, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -5702,7 +5702,7 @@
     invoke-virtual {v4, v6}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     .line 1485
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
     const/4 v6, 0x0
 
@@ -5713,7 +5713,7 @@
     .line 1520
     .end local v0    # "ItemView":Landroid/view/View;
     .end local v1    # "copy":Landroid/graphics/Bitmap;
-    .end local v2    # "itemAct":Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    .end local v2    # "itemAct":Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
     .end local v3    # "loc":[I
     :catchall_0
     move-exception v4
@@ -5727,50 +5727,50 @@
     .line 1489
     .restart local v0    # "ItemView":Landroid/view/View;
     .restart local v1    # "copy":Landroid/graphics/Bitmap;
-    .restart local v2    # "itemAct":Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    .restart local v2    # "itemAct":Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
     .restart local v3    # "loc":[I
     :pswitch_1
     :try_start_1
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     invoke-virtual {v4, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    check-cast v4, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
-    invoke-virtual {v4}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;->getAct()Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    invoke-virtual {v4}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;->getAct()Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
     move-result-object v2
 
     .line 1493
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewAdapterLower:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-    invoke-virtual {v4}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v4}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;->notifyDataSetChanged()V
 
     .line 1494
-    iput p2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
+    iput p2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mLowerDetectedItemId:I
 
     .line 1495
     const/4 v4, -0x1
 
-    iput v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
+    iput v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mUpperDetectedItemId:I
 
     .line 1496
     const/4 v4, 0x0
 
-    iput-boolean v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsdetectedUpper:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsdetectedUpper:Z
 
     .line 1497
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     invoke-virtual {v4, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    check-cast v4, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
-    iput-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    iput-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDragItem:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     .line 1499
     invoke-virtual {p1}, Landroid/view/View;->getX()F
@@ -5785,7 +5785,7 @@
 
     add-float/2addr v4, v6
 
-    iput v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpX:F
+    iput v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpX:F
 
     .line 1500
     invoke-virtual {p1}, Landroid/view/View;->getY()F
@@ -5800,7 +5800,7 @@
 
     add-float/2addr v4, v6
 
-    iget-object v6, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
 
     iget v6, v6, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
@@ -5808,7 +5808,7 @@
 
     add-float/2addr v4, v6
 
-    iget-object v6, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
     invoke-virtual {v6}, Landroid/widget/GridView;->getHeight()I
 
@@ -5818,7 +5818,7 @@
 
     add-float/2addr v4, v6
 
-    iget-object v6, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
 
     invoke-virtual {v6}, Landroid/widget/ImageView;->getHeight()I
 
@@ -5828,16 +5828,16 @@
 
     add-float/2addr v4, v6
 
-    iget v6, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->StatusBarHeight:I
+    iget v6, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->StatusBarHeight:I
 
     int-to-float v6, v6
 
     sub-float/2addr v4, v6
 
-    iput v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
+    iput v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWdigetItemBmpY:F
 
     .line 1503
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
     const/4 v6, 0x0
 
@@ -5867,14 +5867,14 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrePositionX:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrePositionX:F
 
     .line 1526
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrePositionY:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mPrePositionY:F
 
     .line 1527
     return-void
@@ -5886,13 +5886,13 @@
 
     .prologue
     .line 1584
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTouchSyncObj:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mTouchSyncObj:Ljava/lang/Object;
 
     monitor-enter v1
 
     .line 1585
     :try_start_0
-    iget-boolean v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsWidgetVisible:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsWidgetVisible:Z
 
     if-eqz v0, :cond_0
 
@@ -5904,10 +5904,10 @@
     invoke-static {v0, v2}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1588
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->RemoveWidget()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->RemoveWidget()V
 
     .line 1589
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->AssignDragItem()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->AssignDragItem()V
 
     .line 1590
     const/4 v0, 0x1
@@ -5953,25 +5953,25 @@
     invoke-super {p0, p1}, Landroid/app/Fragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 243
-    iget-boolean v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsWidgetVisible:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mIsWidgetVisible:Z
 
     if-eqz v0, :cond_0
 
     .line 244
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->RemoveWidget()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->RemoveWidget()V
 
     .line 245
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->AssignDragItem()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->AssignDragItem()V
 
     .line 249
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetWindowSize()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GetWindowSize()V
 
     .line 250
-    invoke-direct {p0, v1, v1}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ChangelayoutByLine(ZI)V
+    invoke-direct {p0, v1, v1}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ChangelayoutByLine(ZI)V
 
     .line 251
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->InitResolution()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->InitResolution()V
 
     .line 253
     iget v0, p1, Landroid/content/res/Configuration;->orientation:I
@@ -5981,23 +5981,23 @@
     if-ne v0, v1, :cond_1
 
     .line 254
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setNumColumns(I)V
 
     .line 255
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_LANDSCAPE_COLUMN_ITEM_COUNT:I
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setNumColumns(I)V
 
     .line 256
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -6008,9 +6008,9 @@
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setColumnWidth(I)V
 
     .line 257
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -6026,23 +6026,23 @@
 
     .line 259
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setNumColumns(I)V
 
     .line 260
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->GRIDVIEW_PORTRAIT_COLUMN_ITEM_COUNT:I
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setNumColumns(I)V
 
     .line 261
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -6053,9 +6053,9 @@
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setColumnWidth(I)V
 
     .line 262
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -6081,10 +6081,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mReset:Landroid/view/MenuItem;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mReset:Landroid/view/MenuItem;
 
     .line 339
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mReset:Landroid/view/MenuItem;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mReset:Landroid/view/MenuItem;
 
     const/4 v1, 0x2
 
@@ -6106,7 +6106,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->frag_Act:Landroid/app/Activity;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->frag_Act:Landroid/app/Activity;
 
     .line 206
     const v0, 0x7f0401d6
@@ -6119,16 +6119,16 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->lin_Layout:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->lin_Layout:Landroid/widget/LinearLayout;
 
     .line 207
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->Init()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->Init()V
 
     .line 208
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->InitResolution()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->InitResolution()V
 
     .line 209
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->lin_Layout:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->lin_Layout:Landroid/widget/LinearLayout;
 
     return-object v0
 .end method
@@ -6143,32 +6143,32 @@
     invoke-super {p0}, Landroid/app/Fragment;->onDestroy()V
 
     .line 216
-    iput-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetImageView:Landroid/widget/ImageView;
 
     .line 217
-    iput-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpper:Landroid/widget/GridView;
 
     .line 218
-    iput-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLower:Landroid/widget/GridView;
 
     .line 219
-    iput-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewUpperParam:Landroid/widget/LinearLayout$LayoutParams;
 
     .line 220
-    iput-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLowerParam:Landroid/widget/LinearLayout$LayoutParams;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewLowerParam:Landroid/widget/LinearLayout$LayoutParams;
 
     .line 221
-    iput-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mControlBar:Landroid/widget/ImageView;
 
     .line 222
-    iput-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mSettingsMenuEditorActionBar:Landroid/app/ActionBar;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mSettingsMenuEditorActionBar:Landroid/app/ActionBar;
 
     .line 223
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetItemBmp:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetItemBmp:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetItemBmp:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetItemBmp:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
@@ -6177,40 +6177,40 @@
     if-nez v0, :cond_0
 
     .line 224
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetItemBmp:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetItemBmp:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
     .line 226
     :cond_0
-    iput-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetItemBmp:Landroid/graphics/Bitmap;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mWidgetItemBmp:Landroid/graphics/Bitmap;
 
     .line 228
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_1
 
     .line 229
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     .line 230
-    iput-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListUpper:Ljava/util/ArrayList;
 
     .line 233
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_2
 
     .line 234
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     .line 235
-    iput-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mGridViewItemListLower:Ljava/util/ArrayList;
 
     .line 237
     :cond_2
@@ -6225,12 +6225,12 @@
     invoke-super {p0}, Landroid/app/Fragment;->onDestroyView()V
 
     .line 345
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
     .line 347
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->cancel()V
 
@@ -6260,7 +6260,7 @@
 
     .line 355
     :sswitch_1
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ResetSettings()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ResetSettings()V
 
     .line 356
     const/4 v0, 0x1

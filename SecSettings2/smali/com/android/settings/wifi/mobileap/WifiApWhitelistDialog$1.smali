@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog$1;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog$1;
 .super Ljava/lang/Object;
 .source "WifiApWhitelistDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;)V
     .locals 0
 
     .prologue
     .line 92
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog$1;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog$1;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

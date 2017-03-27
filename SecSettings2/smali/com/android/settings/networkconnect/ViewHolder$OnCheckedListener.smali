@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/networkconnect/ViewHolder$OnCheckedListener;
+.class public interface abstract Lcom/android/settings_ex/networkconnect/ViewHolder$OnCheckedListener;
 .super Ljava/lang/Object;
 .source "ViewHolder.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/networkconnect/ViewHolder;
+    value = Lcom/android/settings_ex/networkconnect/ViewHolder;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

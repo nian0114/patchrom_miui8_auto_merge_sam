@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/nearby/DMSUtil;
+.class public Lcom/android/settings_ex/nearby/DMSUtil;
 .super Ljava/lang/Object;
 .source "DMSUtil.java"
 
@@ -13,7 +13,7 @@
 
     .line 73
     .local v0, "sales_code":Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/csc/CscParser;->getSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/csc/CscParser;->getSalesCode()Ljava/lang/String;
 
     move-result-object v0
 
@@ -60,7 +60,7 @@
     const/4 v0, 0x0
 
     .line 86
-    invoke-static {p0, v0, v0}, Lcom/android/settings/nearby/DMSUtil;->isNetworkConnected(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {p0, v0, v0}, Lcom/android/settings_ex/nearby/DMSUtil;->isNetworkConnected(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
@@ -107,7 +107,7 @@
 
     move-result-object v10
 
-    invoke-static {v8, v9, v10}, Lcom/android/settings/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v9, v10}, Lcom/android/settings_ex/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 92
     const-string v8, "connectivity"
@@ -216,7 +216,7 @@
 
     move-result-object v10
 
-    invoke-static {v8, v9, v10}, Lcom/android/settings/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v9, v10}, Lcom/android/settings_ex/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 109
     :cond_1
@@ -346,7 +346,7 @@
 
     move-result-object v10
 
-    invoke-static {v8, v9, v10}, Lcom/android/settings/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v9, v10}, Lcom/android/settings_ex/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 130
     :cond_4
@@ -407,7 +407,7 @@
 
     move-result-object v10
 
-    invoke-static {v8, v9, v10}, Lcom/android/settings/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v9, v10}, Lcom/android/settings_ex/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 149
     if-nez v6, :cond_5
@@ -468,7 +468,7 @@
 
     move-result-object v10
 
-    invoke-static {v8, v9, v10}, Lcom/android/settings/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v9, v10}, Lcom/android/settings_ex/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 104
     sget-object v8, Landroid/net/NetworkInfo$DetailedState;->CONNECTED:Landroid/net/NetworkInfo$DetailedState;
@@ -559,7 +559,7 @@
 
     move-result-object v10
 
-    invoke-static {v8, v9, v10}, Lcom/android/settings/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v9, v10}, Lcom/android/settings_ex/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 125
     sget-object v8, Landroid/net/NetworkInfo$DetailedState;->CONNECTED:Landroid/net/NetworkInfo$DetailedState;
@@ -653,7 +653,7 @@
 
     .prologue
     .line 64
-    invoke-static {}, Lcom/android/settings/nearby/DMSUtil;->getSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/nearby/DMSUtil;->getSalesCode()Ljava/lang/String;
 
     move-result-object v0
 
@@ -733,7 +733,7 @@
 
     move-result-object v4
 
-    invoke-static {v2, v3, v4}, Lcom/android/settings/nearby/DLog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3, v4}, Lcom/android/settings_ex/nearby/DLog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 173
     return-void

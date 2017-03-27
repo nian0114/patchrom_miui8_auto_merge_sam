@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accounts/AccountSettings$2;
+.class Lcom/android/settings_ex/accounts/AccountSettings$2;
 .super Ljava/lang/Object;
 .source "AccountSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accounts/AccountSettings;->addAABAccount()V
+    value = Lcom/android/settings_ex/accounts/AccountSettings;->addAABAccount()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accounts/AccountSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/accounts/AccountSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accounts/AccountSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/accounts/AccountSettings;)V
     .locals 0
 
     .prologue
     .line 330
-    iput-object p1, p0, Lcom/android/settings/accounts/AccountSettings$2;->this$0:Lcom/android/settings/accounts/AccountSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/accounts/AccountSettings$2;->this$0:Lcom/android/settings_ex/accounts/AccountSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,9 +50,9 @@
 
     .line 334
     .local v1, "intent":Landroid/content/Intent;
-    iget-object v3, p0, Lcom/android/settings/accounts/AccountSettings$2;->this$0:Lcom/android/settings/accounts/AccountSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/accounts/AccountSettings$2;->this$0:Lcom/android/settings_ex/accounts/AccountSettings;
 
-    invoke-virtual {v3}, Lcom/android/settings/accounts/AccountSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v3}, Lcom/android/settings_ex/accounts/AccountSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -76,10 +76,10 @@
 
     if-ne v3, v6, :cond_0
 
-    iget-object v3, p0, Lcom/android/settings/accounts/AccountSettings$2;->this$0:Lcom/android/settings/accounts/AccountSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/accounts/AccountSettings$2;->this$0:Lcom/android/settings_ex/accounts/AccountSettings;
 
-    # invokes: Lcom/android/settings/accounts/AccountSettings;->checkIfSameSimUsed(Landroid/content/Context;)Z
-    invoke-static {v3, v2}, Lcom/android/settings/accounts/AccountSettings;->access$300(Lcom/android/settings/accounts/AccountSettings;Landroid/content/Context;)Z
+    # invokes: Lcom/android/settings_ex/accounts/AccountSettings;->checkIfSameSimUsed(Landroid/content/Context;)Z
+    invoke-static {v3, v2}, Lcom/android/settings_ex/accounts/AccountSettings;->access$300(Lcom/android/settings_ex/accounts/AccountSettings;Landroid/content/Context;)Z
 
     move-result v3
 

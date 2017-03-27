@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/HelpUtils;
+.class public Lcom/android/settings_ex/HelpUtils;
 .super Ljava/lang/Object;
 .source "HelpUtils.java"
 
@@ -15,18 +15,18 @@
 
     .prologue
     .line 42
-    const-class v0, Lcom/android/settings/HelpUtils;
+    const-class v0, Lcom/android/settings_ex/HelpUtils;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/HelpUtils;->TAG:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/HelpUtils;->TAG:Ljava/lang/String;
 
     .line 65
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/android/settings/HelpUtils;->sCachedVersionCode:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/HelpUtils;->sCachedVersionCode:Ljava/lang/String;
 
     return-void
 .end method
@@ -119,7 +119,7 @@
 
     .line 130
     .local v2, "intent":Landroid/content/Intent;
-    invoke-static {p0, v2, p2}, Lcom/android/settings/HelpUtils;->addIntentParameters(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)V
+    invoke-static {p0, v2, p2}, Lcom/android/settings_ex/HelpUtils;->addIntentParameters(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)V
 
     .line 131
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -159,7 +159,7 @@
 
     move-result-object v3
 
-    invoke-static {p0, v3, p2}, Lcom/android/settings/HelpUtils;->getHelpIntent(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-static {p0, v3, p2}, Lcom/android/settings_ex/HelpUtils;->getHelpIntent(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
     :try_end_0
     .catch Ljava/net/URISyntaxException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -184,7 +184,7 @@
 
     move-result-object v3
 
-    invoke-static {p0, v3}, Lcom/android/settings/HelpUtils;->uriWithAddedParameters(Landroid/content/Context;Landroid/net/Uri;)Landroid/net/Uri;
+    invoke-static {p0, v3}, Lcom/android/settings_ex/HelpUtils;->uriWithAddedParameters(Landroid/content/Context;Landroid/net/Uri;)Landroid/net/Uri;
 
     move-result-object v1
 
@@ -230,7 +230,7 @@
 
     move-result-object v1
 
-    invoke-static {p0, v0, v1, p3}, Lcom/android/settings/HelpUtils;->prepareHelpMenuItem(Landroid/app/Activity;Landroid/view/MenuItem;Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {p0, v0, v1, p3}, Lcom/android/settings_ex/HelpUtils;->prepareHelpMenuItem(Landroid/app/Activity;Landroid/view/MenuItem;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -258,7 +258,7 @@
 
     .line 73
     .local v0, "helpItem":Landroid/view/MenuItem;
-    invoke-static {p0, v0, p2, p3}, Lcom/android/settings/HelpUtils;->prepareHelpMenuItem(Landroid/app/Activity;Landroid/view/MenuItem;Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {p0, v0, p2, p3}, Lcom/android/settings_ex/HelpUtils;->prepareHelpMenuItem(Landroid/app/Activity;Landroid/view/MenuItem;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -293,7 +293,7 @@
 
     .line 100
     :cond_0
-    invoke-static {p0, p2, p3}, Lcom/android/settings/HelpUtils;->getHelpIntent(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-static {p0, p2, p3}, Lcom/android/settings_ex/HelpUtils;->getHelpIntent(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -302,9 +302,9 @@
     if-eqz v0, :cond_1
 
     .line 105
-    new-instance v3, Lcom/android/settings/HelpUtils$1;
+    new-instance v3, Lcom/android/settings_ex/HelpUtils$1;
 
-    invoke-direct {v3, p0, v0}, Lcom/android/settings/HelpUtils$1;-><init>(Landroid/app/Activity;Landroid/content/Intent;)V
+    invoke-direct {v3, p0, v0}, Lcom/android/settings_ex/HelpUtils$1;-><init>(Landroid/app/Activity;Landroid/content/Intent;)V
 
     invoke-interface {p1, v3}, Landroid/view/MenuItem;->setOnMenuItemClickListener(Landroid/view/MenuItem$OnMenuItemClickListener;)Landroid/view/MenuItem;
 
@@ -352,7 +352,7 @@
     invoke-virtual {v0, v3, v4}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     .line 178
-    sget-object v3, Lcom/android/settings/HelpUtils;->sCachedVersionCode:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/HelpUtils;->sCachedVersionCode:Ljava/lang/String;
 
     if-nez v3, :cond_0
 
@@ -380,12 +380,12 @@
 
     move-result-object v3
 
-    sput-object v3, Lcom/android/settings/HelpUtils;->sCachedVersionCode:Ljava/lang/String;
+    sput-object v3, Lcom/android/settings_ex/HelpUtils;->sCachedVersionCode:Ljava/lang/String;
 
     .line 187
     const-string v3, "version"
 
-    sget-object v4, Lcom/android/settings/HelpUtils;->sCachedVersionCode:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/HelpUtils;->sCachedVersionCode:Ljava/lang/String;
 
     invoke-virtual {v0, v3, v4}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
     :try_end_0
@@ -406,7 +406,7 @@
 
     .line 191
     .local v1, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
-    sget-object v3, Lcom/android/settings/HelpUtils;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/HelpUtils;->TAG:Ljava/lang/String;
 
     const-string v4, "Invalid package name for context"
 
@@ -419,7 +419,7 @@
     :cond_0
     const-string v3, "version"
 
-    sget-object v4, Lcom/android/settings/HelpUtils;->sCachedVersionCode:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/HelpUtils;->sCachedVersionCode:Ljava/lang/String;
 
     invoke-virtual {v0, v3, v4}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/rcs/RcsUtils;
+.class public Lcom/android/settings_ex/rcs/RcsUtils;
 .super Ljava/lang/Object;
 .source "RcsUtils.java"
 
@@ -6,9 +6,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/rcs/RcsUtils$CustomCscParser;,
-        Lcom/android/settings/rcs/RcsUtils$RcsFeatures;,
-        Lcom/android/settings/rcs/RcsUtils$RcsFeature;
+        Lcom/android/settings_ex/rcs/RcsUtils$CustomCscParser;,
+        Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;,
+        Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;
     }
 .end annotation
 
@@ -16,7 +16,7 @@
 # static fields
 .field private static final LOG_TAG:Ljava/lang/String;
 
-.field private static sInstance:Lcom/android/settings/rcs/RcsUtils;
+.field private static sInstance:Lcom/android/settings_ex/rcs/RcsUtils;
 
 
 # instance fields
@@ -24,7 +24,7 @@
 
 .field private mIsOmcSupport:Z
 
-.field private mRcsFeatures:Lcom/android/settings/rcs/RcsUtils$RcsFeatures;
+.field private mRcsFeatures:Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;
 
 
 # direct methods
@@ -33,18 +33,18 @@
 
     .prologue
     .line 42
-    const-class v0, Lcom/android/settings/rcs/RcsUtils;
+    const-class v0, Lcom/android/settings_ex/rcs/RcsUtils;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
 
     .line 71
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/android/settings/rcs/RcsUtils;->sInstance:Lcom/android/settings/rcs/RcsUtils;
+    sput-object v0, Lcom/android/settings_ex/rcs/RcsUtils;->sInstance:Lcom/android/settings_ex/rcs/RcsUtils;
 
     return-void
 .end method
@@ -59,7 +59,7 @@
     .line 69
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/rcs/RcsUtils;->mRcsFeatures:Lcom/android/settings/rcs/RcsUtils$RcsFeatures;
+    iput-object v0, p0, Lcom/android/settings_ex/rcs/RcsUtils;->mRcsFeatures:Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;
 
     .line 91
     return-void
@@ -76,13 +76,13 @@
     .line 69
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcom/android/settings/rcs/RcsUtils;->mRcsFeatures:Lcom/android/settings/rcs/RcsUtils$RcsFeatures;
+    iput-object v1, p0, Lcom/android/settings_ex/rcs/RcsUtils;->mRcsFeatures:Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;
 
     .line 94
     if-nez p1, :cond_0
 
     .line 95
-    sget-object v1, Lcom/android/settings/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
 
     const-string v2, "The given context is null"
 
@@ -94,7 +94,7 @@
 
     .line 99
     :cond_0
-    iput-object p1, p0, Lcom/android/settings/rcs/RcsUtils;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/rcs/RcsUtils;->mContext:Landroid/content/Context;
 
     .line 105
     new-instance v0, Ljava/io/File;
@@ -114,14 +114,14 @@
     const/4 v1, 0x1
 
     :goto_1
-    iput-boolean v1, p0, Lcom/android/settings/rcs/RcsUtils;->mIsOmcSupport:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/rcs/RcsUtils;->mIsOmcSupport:Z
 
     .line 108
-    new-instance v1, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;
+    new-instance v1, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;-><init>(Lcom/android/settings/rcs/RcsUtils;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;-><init>(Lcom/android/settings_ex/rcs/RcsUtils;)V
 
-    iput-object v1, p0, Lcom/android/settings/rcs/RcsUtils;->mRcsFeatures:Lcom/android/settings/rcs/RcsUtils$RcsFeatures;
+    iput-object v1, p0, Lcom/android/settings_ex/rcs/RcsUtils;->mRcsFeatures:Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;
 
     goto :goto_0
 
@@ -137,7 +137,7 @@
 
     .prologue
     .line 41
-    sget-object v0, Lcom/android/settings/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -154,17 +154,17 @@
 
     .line 228
     .local v5, "value":Ljava/lang/String;
-    new-instance v3, Lcom/android/settings/rcs/RcsUtils$CustomCscParser;
+    new-instance v3, Lcom/android/settings_ex/rcs/RcsUtils$CustomCscParser;
 
     const-string v7, "/system/csc/customer.xml"
 
-    invoke-direct {v3, v7}, Lcom/android/settings/rcs/RcsUtils$CustomCscParser;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v7}, Lcom/android/settings_ex/rcs/RcsUtils$CustomCscParser;-><init>(Ljava/lang/String;)V
 
     .line 230
-    .local v3, "parser":Lcom/android/settings/rcs/RcsUtils$CustomCscParser;
+    .local v3, "parser":Lcom/android/settings_ex/rcs/RcsUtils$CustomCscParser;
     const-string v7, "Settings.IMSSetting"
 
-    invoke-virtual {v3, v7}, Lcom/android/settings/rcs/RcsUtils$CustomCscParser;->search(Ljava/lang/String;)Lorg/w3c/dom/Node;
+    invoke-virtual {v3, v7}, Lcom/android/settings_ex/rcs/RcsUtils$CustomCscParser;->search(Ljava/lang/String;)Lorg/w3c/dom/Node;
 
     move-result-object v1
 
@@ -173,7 +173,7 @@
     if-nez v1, :cond_1
 
     .line 232
-    sget-object v7, Lcom/android/settings/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
 
     const-string v8, "getEnabledRcsFromMps: No Settings.IMSSetting node"
 
@@ -188,7 +188,7 @@
     :cond_1
     const-string v7, "Setting"
 
-    invoke-virtual {v3, v1, v7}, Lcom/android/settings/rcs/RcsUtils$CustomCscParser;->searchList(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/NodeList;
+    invoke-virtual {v3, v1, v7}, Lcom/android/settings_ex/rcs/RcsUtils$CustomCscParser;->searchList(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/NodeList;
 
     move-result-object v2
 
@@ -197,7 +197,7 @@
     if-nez v2, :cond_2
 
     .line 237
-    sget-object v7, Lcom/android/settings/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
 
     const-string v8, "getEnabledRcsFromMps: No Setting node"
 
@@ -224,13 +224,13 @@
 
     const-string v8, "NetworkName"
 
-    invoke-virtual {v3, v7, v8}, Lcom/android/settings/rcs/RcsUtils$CustomCscParser;->search(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
+    invoke-virtual {v3, v7, v8}, Lcom/android/settings_ex/rcs/RcsUtils$CustomCscParser;->search(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
     move-result-object v4
 
     .line 246
     .local v4, "tempNode":Lorg/w3c/dom/Node;
-    invoke-virtual {v3, v4}, Lcom/android/settings/rcs/RcsUtils$CustomCscParser;->getValue(Lorg/w3c/dom/Node;)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/rcs/RcsUtils$CustomCscParser;->getValue(Lorg/w3c/dom/Node;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -241,7 +241,7 @@
     if-eqz v7, :cond_6
 
     .line 247
-    sget-object v7, Lcom/android/settings/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
 
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -270,7 +270,7 @@
 
     const-string v8, "RCS"
 
-    invoke-virtual {v3, v7, v8}, Lcom/android/settings/rcs/RcsUtils$CustomCscParser;->search(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
+    invoke-virtual {v3, v7, v8}, Lcom/android/settings_ex/rcs/RcsUtils$CustomCscParser;->search(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
     move-result-object v4
 
@@ -280,12 +280,12 @@
     .line 251
     const-string v7, "EnableRCS"
 
-    invoke-virtual {v3, v4, v7}, Lcom/android/settings/rcs/RcsUtils$CustomCscParser;->search(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
+    invoke-virtual {v3, v4, v7}, Lcom/android/settings_ex/rcs/RcsUtils$CustomCscParser;->search(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
     move-result-object v4
 
     .line 257
-    invoke-virtual {v3, v4}, Lcom/android/settings/rcs/RcsUtils$CustomCscParser;->getValue(Lorg/w3c/dom/Node;)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/rcs/RcsUtils$CustomCscParser;->getValue(Lorg/w3c/dom/Node;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -300,7 +300,7 @@
 
     .line 260
     :cond_3
-    sget-object v7, Lcom/android/settings/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
 
     const-string v8, "getEnabledRcsFromMps: EnableRCS is null"
 
@@ -310,7 +310,7 @@
 
     .line 253
     :cond_4
-    sget-object v7, Lcom/android/settings/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
 
     const-string v8, "getEnabledRcsFromMps: No RCS node"
 
@@ -343,26 +343,26 @@
     goto :goto_1
 .end method
 
-.method public static getInstance(Landroid/content/Context;)Lcom/android/settings/rcs/RcsUtils;
+.method public static getInstance(Landroid/content/Context;)Lcom/android/settings_ex/rcs/RcsUtils;
     .locals 1
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 83
-    sget-object v0, Lcom/android/settings/rcs/RcsUtils;->sInstance:Lcom/android/settings/rcs/RcsUtils;
+    sget-object v0, Lcom/android/settings_ex/rcs/RcsUtils;->sInstance:Lcom/android/settings_ex/rcs/RcsUtils;
 
     if-nez v0, :cond_0
 
     .line 84
-    new-instance v0, Lcom/android/settings/rcs/RcsUtils;
+    new-instance v0, Lcom/android/settings_ex/rcs/RcsUtils;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/rcs/RcsUtils;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/rcs/RcsUtils;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/android/settings/rcs/RcsUtils;->sInstance:Lcom/android/settings/rcs/RcsUtils;
+    sput-object v0, Lcom/android/settings_ex/rcs/RcsUtils;->sInstance:Lcom/android/settings_ex/rcs/RcsUtils;
 
     .line 87
     :cond_0
-    sget-object v0, Lcom/android/settings/rcs/RcsUtils;->sInstance:Lcom/android/settings/rcs/RcsUtils;
+    sget-object v0, Lcom/android/settings_ex/rcs/RcsUtils;->sInstance:Lcom/android/settings_ex/rcs/RcsUtils;
 
     return-object v0
 .end method
@@ -372,7 +372,7 @@
 
     .prologue
     .line 112
-    iget-object v2, p0, Lcom/android/settings/rcs/RcsUtils;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/rcs/RcsUtils;->mContext:Landroid/content/Context;
 
     const-string v3, "phone"
 
@@ -432,7 +432,7 @@
 
     .line 131
     :cond_0
-    sget-object v7, Lcom/android/settings/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
 
     const-string v8, "getNetworkName: MCCMNC is null"
 
@@ -444,17 +444,17 @@
 
     .line 135
     :cond_1
-    new-instance v3, Lcom/android/settings/rcs/RcsUtils$CustomCscParser;
+    new-instance v3, Lcom/android/settings_ex/rcs/RcsUtils$CustomCscParser;
 
     const-string v7, "/system/csc/customer.xml"
 
-    invoke-direct {v3, v7}, Lcom/android/settings/rcs/RcsUtils$CustomCscParser;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v7}, Lcom/android/settings_ex/rcs/RcsUtils$CustomCscParser;-><init>(Ljava/lang/String;)V
 
     .line 137
-    .local v3, "parser":Lcom/android/settings/rcs/RcsUtils$CustomCscParser;
+    .local v3, "parser":Lcom/android/settings_ex/rcs/RcsUtils$CustomCscParser;
     const-string v7, "GeneralInfo"
 
-    invoke-virtual {v3, v7}, Lcom/android/settings/rcs/RcsUtils$CustomCscParser;->search(Ljava/lang/String;)Lorg/w3c/dom/Node;
+    invoke-virtual {v3, v7}, Lcom/android/settings_ex/rcs/RcsUtils$CustomCscParser;->search(Ljava/lang/String;)Lorg/w3c/dom/Node;
 
     move-result-object v1
 
@@ -463,7 +463,7 @@
     if-nez v1, :cond_2
 
     .line 139
-    sget-object v7, Lcom/android/settings/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
 
     const-string v8, "getNetworkName: No GenralInfo node"
 
@@ -475,7 +475,7 @@
     :cond_2
     const-string v7, "NetworkInfo"
 
-    invoke-virtual {v3, v1, v7}, Lcom/android/settings/rcs/RcsUtils$CustomCscParser;->searchList(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/NodeList;
+    invoke-virtual {v3, v1, v7}, Lcom/android/settings_ex/rcs/RcsUtils$CustomCscParser;->searchList(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/NodeList;
 
     move-result-object v2
 
@@ -484,7 +484,7 @@
     if-nez v2, :cond_3
 
     .line 145
-    sget-object v7, Lcom/android/settings/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
 
     const-string v8, "getNetworkName: No NetworkInfo node"
 
@@ -511,13 +511,13 @@
 
     const-string v7, "MCCMNC"
 
-    invoke-virtual {v3, v6, v7}, Lcom/android/settings/rcs/RcsUtils$CustomCscParser;->search(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
+    invoke-virtual {v3, v6, v7}, Lcom/android/settings_ex/rcs/RcsUtils$CustomCscParser;->search(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
     move-result-object v4
 
     .line 154
     .local v4, "tempNode":Lorg/w3c/dom/Node;
-    invoke-virtual {v3, v4}, Lcom/android/settings/rcs/RcsUtils$CustomCscParser;->getValue(Lorg/w3c/dom/Node;)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/rcs/RcsUtils$CustomCscParser;->getValue(Lorg/w3c/dom/Node;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -528,7 +528,7 @@
     if-eqz v6, :cond_5
 
     .line 155
-    sget-object v6, Lcom/android/settings/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -557,12 +557,12 @@
 
     const-string v7, "NetworkName"
 
-    invoke-virtual {v3, v6, v7}, Lcom/android/settings/rcs/RcsUtils$CustomCscParser;->search(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
+    invoke-virtual {v3, v6, v7}, Lcom/android/settings_ex/rcs/RcsUtils$CustomCscParser;->search(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
     move-result-object v4
 
     .line 158
-    invoke-virtual {v3, v4}, Lcom/android/settings/rcs/RcsUtils$CustomCscParser;->getValue(Lorg/w3c/dom/Node;)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/rcs/RcsUtils$CustomCscParser;->getValue(Lorg/w3c/dom/Node;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -583,25 +583,25 @@
 
 
 # virtual methods
-.method public getRcsFeatures()Lcom/android/settings/rcs/RcsUtils$RcsFeatures;
+.method public getRcsFeatures()Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;
     .locals 1
 
     .prologue
     .line 168
-    iget-object v0, p0, Lcom/android/settings/rcs/RcsUtils;->mRcsFeatures:Lcom/android/settings/rcs/RcsUtils$RcsFeatures;
+    iget-object v0, p0, Lcom/android/settings_ex/rcs/RcsUtils;->mRcsFeatures:Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;
 
     if-nez v0, :cond_0
 
     .line 169
-    new-instance v0, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;
+    new-instance v0, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;-><init>(Lcom/android/settings/rcs/RcsUtils;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;-><init>(Lcom/android/settings_ex/rcs/RcsUtils;)V
 
-    iput-object v0, p0, Lcom/android/settings/rcs/RcsUtils;->mRcsFeatures:Lcom/android/settings/rcs/RcsUtils$RcsFeatures;
+    iput-object v0, p0, Lcom/android/settings_ex/rcs/RcsUtils;->mRcsFeatures:Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;
 
     .line 172
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/rcs/RcsUtils;->mRcsFeatures:Lcom/android/settings/rcs/RcsUtils$RcsFeatures;
+    iget-object v0, p0, Lcom/android/settings_ex/rcs/RcsUtils;->mRcsFeatures:Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;
 
     return-object v0
 .end method
@@ -635,15 +635,15 @@
 
     .line 182
     .local v1, "cscUseMpsForIms":Z
-    iget-object v6, p0, Lcom/android/settings/rcs/RcsUtils;->mRcsFeatures:Lcom/android/settings/rcs/RcsUtils$RcsFeatures;
+    iget-object v6, p0, Lcom/android/settings_ex/rcs/RcsUtils;->mRcsFeatures:Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;
 
-    invoke-virtual {v6}, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;->isRcsUiForOpen()Z
+    invoke-virtual {v6}, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;->isRcsUiForOpen()Z
 
     move-result v3
 
     .line 184
     .local v3, "isRcsUiForOpen":Z
-    sget-object v6, Lcom/android/settings/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -703,11 +703,11 @@
     if-eqz v3, :cond_0
 
     .line 192
-    invoke-direct {p0}, Lcom/android/settings/rcs/RcsUtils;->getMccMnc()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/rcs/RcsUtils;->getMccMnc()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-direct {p0, v6}, Lcom/android/settings/rcs/RcsUtils;->getNetworkName(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v6}, Lcom/android/settings_ex/rcs/RcsUtils;->getNetworkName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -723,7 +723,7 @@
     const/4 v5, 0x0
 
     .line 198
-    sget-object v6, Lcom/android/settings/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
 
     const-string v7, "isRcsEnabledInCsc: RCS service is not availble(couldn\'t find matched network name)"
 
@@ -734,7 +734,7 @@
     .end local v4    # "networkName":Ljava/lang/String;
     :cond_0
     :goto_0
-    sget-object v6, Lcom/android/settings/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -778,7 +778,7 @@
     if-nez v6, :cond_0
 
     .line 200
-    invoke-direct {p0, v4}, Lcom/android/settings/rcs/RcsUtils;->getEnabledRcsFromMps(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-direct {p0, v4}, Lcom/android/settings_ex/rcs/RcsUtils;->getEnabledRcsFromMps(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v2
 
@@ -789,7 +789,7 @@
     const/4 v5, 0x0
 
     .line 204
-    sget-object v6, Lcom/android/settings/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
 
     const-string v7, "isRcsEnabledInCsc: RCS service is not available(couldn\'t find feature tag)"
 
@@ -804,7 +804,7 @@
     move-result v5
 
     .line 207
-    sget-object v6, Lcom/android/settings/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
 

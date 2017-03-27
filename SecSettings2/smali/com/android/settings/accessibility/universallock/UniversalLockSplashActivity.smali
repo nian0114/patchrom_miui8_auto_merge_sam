@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "UniversalLockSplashActivity.java"
 
 # interfaces
@@ -7,7 +7,7 @@
 
 
 # static fields
-.field private static mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+.field private static mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
 
 # instance fields
@@ -33,9 +33,9 @@
 
 .field mSwitchStateObserver:Landroid/database/ContentObserver;
 
-.field private mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+.field private mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
-.field private mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+.field private mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
 
 # direct methods
@@ -44,199 +44,199 @@
 
     .prologue
     .line 40
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 70
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->isSharedDevice:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->isSharedDevice:Z
 
     .line 155
-    new-instance v0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity$1;
+    new-instance v0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity$1;-><init>(Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity$1;-><init>(Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->_preferenceListener:Landroid/preference/Preference$OnPreferenceChangeListener;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->_preferenceListener:Landroid/preference/Preference$OnPreferenceChangeListener;
 
     .line 187
-    new-instance v0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity$2;
+    new-instance v0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity$2;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity$2;-><init>(Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity$2;-><init>(Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSwitchStateObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSwitchStateObserver:Landroid/database/ContentObserver;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;)Landroid/preference/SwitchPreference;
+.method static synthetic access$000(Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;)Landroid/preference/SwitchPreference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetVisibility:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetVisibility:Landroid/preference/SwitchPreference;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;)Landroid/content/ContentResolver;
+.method static synthetic access$100(Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;
 
     .prologue
     .line 40
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;)Landroid/content/ContentResolver;
+.method static synthetic access$1000(Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;
 
     .prologue
     .line 40
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;)Landroid/content/ContentResolver;
+.method static synthetic access$1100(Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;
 
     .prologue
     .line 40
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$1200()Lcom/android/settings/widget/SwitchBar;
+.method static synthetic access$1200()Lcom/android/settings_ex/widget/SwitchBar;
     .locals 1
 
     .prologue
     .line 40
-    sget-object v0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+    sget-object v0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
     return-object v0
 .end method
 
-.method static synthetic access$1300(Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;)Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+.method static synthetic access$1300(Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;)Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;)Landroid/content/ContentResolver;
+.method static synthetic access$200(Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;
 
     .prologue
     .line 40
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;)Landroid/preference/SwitchPreference;
+.method static synthetic access$300(Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;)Landroid/preference/SwitchPreference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetVibration:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetVibration:Landroid/preference/SwitchPreference;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;)Landroid/content/ContentResolver;
+.method static synthetic access$400(Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;
 
     .prologue
     .line 40
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;)Landroid/content/ContentResolver;
+.method static synthetic access$500(Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;
 
     .prologue
     .line 40
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;)Landroid/preference/SwitchPreference;
+.method static synthetic access$600(Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;)Landroid/preference/SwitchPreference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetBeep:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetBeep:Landroid/preference/SwitchPreference;
 
     return-object v0
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;)Landroid/content/ContentResolver;
+.method static synthetic access$700(Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;
 
     .prologue
     .line 40
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;)Landroid/content/ContentResolver;
+.method static synthetic access$800(Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;
 
     .prologue
     .line 40
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;)Landroid/preference/SwitchPreference;
+.method static synthetic access$900(Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;)Landroid/preference/SwitchPreference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetVoice:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetVoice:Landroid/preference/SwitchPreference;
 
     return-object v0
 .end method
@@ -248,78 +248,78 @@
     .line 105
     const-string v0, "unlock_set_or_change"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetLockScreen:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetLockScreen:Landroid/preference/Preference;
 
     .line 106
     const-string v0, "lock_screen_visible"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/SwitchPreference;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetVisibility:Landroid/preference/SwitchPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetVisibility:Landroid/preference/SwitchPreference;
 
     .line 107
     const-string v0, "lock_screen_vibration"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/SwitchPreference;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetVibration:Landroid/preference/SwitchPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetVibration:Landroid/preference/SwitchPreference;
 
     .line 108
     const-string v0, "lock_screen_beep"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/SwitchPreference;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetBeep:Landroid/preference/SwitchPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetBeep:Landroid/preference/SwitchPreference;
 
     .line 109
     const-string v0, "lock_screen_voice"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/SwitchPreference;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetVoice:Landroid/preference/SwitchPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetVoice:Landroid/preference/SwitchPreference;
 
     .line 110
     const-string v0, "descriptionText"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mShowDescription:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mShowDescription:Landroid/preference/Preference;
 
     .line 111
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->isTouchExplorationEnabled()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->isTouchExplorationEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 112
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mShowDescription:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mShowDescription:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -335,18 +335,18 @@
     :cond_0
     const-string v0, "lock_screen_options_category"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceCategory;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mFeedback:Landroid/preference/PreferenceCategory;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mFeedback:Landroid/preference/PreferenceCategory;
 
     .line 114
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mFeedback:Landroid/preference/PreferenceCategory;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mFeedback:Landroid/preference/PreferenceCategory;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -358,7 +358,7 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -385,11 +385,11 @@
 
     .prologue
     .line 317
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getContext()Landroid/content/Context;
 
     const-string v2, "vibrator"
 
@@ -401,11 +401,11 @@
 
     .line 318
     .local v0, "vibrator":Landroid/os/Vibrator;
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->hasHaptic(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->hasHaptic(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -436,7 +436,7 @@
 
     .prologue
     .line 126
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -447,11 +447,11 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 127
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetVibration:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetVibration:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
@@ -464,30 +464,30 @@
 
     .prologue
     .line 138
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetVisibility:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetVisibility:Landroid/preference/SwitchPreference;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->_preferenceListener:Landroid/preference/Preference$OnPreferenceChangeListener;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->_preferenceListener:Landroid/preference/Preference$OnPreferenceChangeListener;
 
     invoke-virtual {v0, v1}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 139
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetVibration:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetVibration:Landroid/preference/SwitchPreference;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->_preferenceListener:Landroid/preference/Preference$OnPreferenceChangeListener;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->_preferenceListener:Landroid/preference/Preference$OnPreferenceChangeListener;
 
     invoke-virtual {v0, v1}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 140
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetBeep:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetBeep:Landroid/preference/SwitchPreference;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->_preferenceListener:Landroid/preference/Preference$OnPreferenceChangeListener;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->_preferenceListener:Landroid/preference/Preference$OnPreferenceChangeListener;
 
     invoke-virtual {v0, v1}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 141
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetVoice:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetVoice:Landroid/preference/SwitchPreference;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->_preferenceListener:Landroid/preference/Preference$OnPreferenceChangeListener;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->_preferenceListener:Landroid/preference/Preference$OnPreferenceChangeListener;
 
     invoke-virtual {v0, v1}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -516,12 +516,12 @@
     const/4 v1, 0x1
 
     .line 228
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->toggleSettings()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->toggleSettings()V
 
     .line 229
-    iget-object v3, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetVisibility:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetVisibility:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -539,9 +539,9 @@
     invoke-virtual {v3, v0}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 230
-    iget-object v3, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetVibration:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetVibration:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -559,9 +559,9 @@
     invoke-virtual {v3, v0}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 231
-    iget-object v3, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetBeep:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetBeep:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -579,9 +579,9 @@
     invoke-virtual {v3, v0}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 232
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetVoice:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetVoice:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -630,7 +630,7 @@
 
     .prologue
     .line 256
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 257
     const-string v0, "UniversalLockSplashActivity"
@@ -640,18 +640,18 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 258
-    sget-object v0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+    sget-object v0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 259
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
-    new-instance v1, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity$3;
+    new-instance v1, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity$3;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity$3;-><init>(Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity$3;-><init>(Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;)V
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings_ex/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
 
     .line 280
     return-void
@@ -663,37 +663,37 @@
 
     .prologue
     .line 245
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 247
     const v0, 0x7f0800a2
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->addPreferencesFromResource(I)V
 
     .line 249
-    new-instance v0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    new-instance v0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;-><init>(Landroid/app/Activity;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
     .line 250
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 251
-    invoke-direct {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->initPreferences()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->initPreferences()V
 
     .line 252
     return-void
@@ -704,7 +704,7 @@
 
     .prologue
     .line 388
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroyView()V
 
     .line 389
     const-string v0, "UniversalLockSplashActivity"
@@ -714,23 +714,23 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 390
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings_ex/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
 
     .line 391
-    sget-object v0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+    sget-object v0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 392
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSwitchStateObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSwitchStateObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
@@ -753,7 +753,7 @@
     packed-switch v0, :pswitch_data_0
 
     .line 382
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v1
 
@@ -762,7 +762,7 @@
 
     .line 379
     :pswitch_0
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->finish()V
 
     .line 380
     const/4 v1, 0x1
@@ -824,7 +824,7 @@
 
     move-object v1, p0
 
-    invoke-virtual/range {v0 .. v5}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->startFragment(Landroid/app/Fragment;Ljava/lang/String;IILandroid/os/Bundle;)Z
+    invoke-virtual/range {v0 .. v5}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->startFragment(Landroid/app/Fragment;Ljava/lang/String;IILandroid/os/Bundle;)Z
 
     .line 92
     const/4 v0, 0x1
@@ -834,7 +834,7 @@
     return v0
 
     :cond_0
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v0
 
@@ -848,7 +848,7 @@
     const/4 v3, 0x0
 
     .line 290
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 291
     const-string v1, "UniversalLockSplashActivity"
@@ -858,17 +858,17 @@
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 293
-    invoke-direct {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->isVibrationSupport()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->isVibrationSupport()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
     .line 294
-    invoke-direct {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->removeVibrationPreference()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->removeVibrationPreference()V
 
     .line 295
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -878,16 +878,16 @@
 
     .line 297
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->setSummary()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->setSummary()V
 
     .line 298
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->loadSettings()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->loadSettings()V
 
     .line 299
-    invoke-direct {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->setListeners()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->setListeners()V
 
     .line 302
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -918,24 +918,24 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->isSharedDevice:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->isSharedDevice:Z
 
     .line 305
-    iget-boolean v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->isSharedDevice:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->isSharedDevice:Z
 
     if-eqz v1, :cond_1
 
     .line 306
-    sget-object v1, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+    sget-object v1, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, v3}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v1, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 307
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings_ex/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
 
     .line 308
     const-string v1, "UniversalLockSplashActivity"
@@ -950,7 +950,7 @@
 
     move-result-object v2
 
-    iget-boolean v3, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->isSharedDevice:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->isSharedDevice:Z
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -964,7 +964,7 @@
 
     .line 313
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -976,7 +976,7 @@
 
     const/4 v3, 0x1
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSwitchStateObserver:Landroid/database/ContentObserver;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSwitchStateObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -991,31 +991,31 @@
 
     .prologue
     .line 146
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 147
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 148
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    sput-object v1, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+    sput-object v1, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 149
-    sget-object v1, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+    sget-object v1, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1}, Lcom/android/settings/widget/SwitchBar;->getSwitch()Lcom/android/settings/widget/ToggleSwitch;
+    invoke-virtual {v1}, Lcom/android/settings_ex/widget/SwitchBar;->getSwitch()Lcom/android/settings_ex/widget/ToggleSwitch;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
     .line 150
     return-void
@@ -1026,9 +1026,9 @@
 
     .prologue
     .line 332
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
-    invoke-virtual {v1}, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->getResIDForCurrentLockScreen()I
+    invoke-virtual {v1}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->getResIDForCurrentLockScreen()I
 
     move-result v0
 
@@ -1037,7 +1037,7 @@
     if-nez v0, :cond_0
 
     .line 339
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
@@ -1055,12 +1055,12 @@
     .line 345
     :cond_0
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetLockScreen:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetLockScreen:Landroid/preference/Preference;
 
     invoke-virtual {v1, v0}, Landroid/preference/Preference;->setSummary(I)V
 
     .line 346
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetLockScreen:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetLockScreen:Landroid/preference/Preference;
 
     const/4 v2, 0x1
 
@@ -1085,7 +1085,7 @@
     const/4 v1, 0x0
 
     .line 205
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -1123,27 +1123,27 @@
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 209
-    sget-object v1, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mActionBarSwitch:Lcom/android/settings/widget/SwitchBar;
+    sget-object v1, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mActionBarSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, v0}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     .line 210
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetVisibility:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetVisibility:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v0}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 211
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetVibration:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetVibration:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v0}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 212
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetVoice:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetVoice:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v0}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 213
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSplashActivity;->mSetBeep:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSplashActivity;->mSetBeep:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v0}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 

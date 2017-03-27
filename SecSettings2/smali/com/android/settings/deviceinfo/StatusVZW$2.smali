@@ -1,11 +1,11 @@
-.class Lcom/android/settings/deviceinfo/StatusVZW$2;
+.class Lcom/android/settings_ex/deviceinfo/StatusVZW$2;
 .super Landroid/content/BroadcastReceiver;
 .source "StatusVZW.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/StatusVZW;
+    value = Lcom/android/settings_ex/deviceinfo/StatusVZW;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/StatusVZW;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
     .locals 0
 
     .prologue
     .line 346
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/StatusVZW$2;->this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW$2;->this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -70,7 +70,7 @@
     if-nez v1, :cond_0
 
     .line 353
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW$2;->this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW$2;->this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     const-string v2, "Result"
 
@@ -80,14 +80,14 @@
 
     move-result v2
 
-    # setter for: Lcom/android/settings/deviceinfo/StatusVZW;->isSysScopeStatus:I
-    invoke-static {v1, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->access$502(Lcom/android/settings/deviceinfo/StatusVZW;I)I
+    # setter for: Lcom/android/settings_ex/deviceinfo/StatusVZW;->isSysScopeStatus:I
+    invoke-static {v1, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->access$502(Lcom/android/settings_ex/deviceinfo/StatusVZW;I)I
 
     .line 354
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW$2;->this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW$2;->this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
-    # invokes: Lcom/android/settings/deviceinfo/StatusVZW;->changeSysScopeStatus()V
-    invoke-static {v1}, Lcom/android/settings/deviceinfo/StatusVZW;->access$600(Lcom/android/settings/deviceinfo/StatusVZW;)V
+    # invokes: Lcom/android/settings_ex/deviceinfo/StatusVZW;->changeSysScopeStatus()V
+    invoke-static {v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->access$600(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
 
     .line 357
     :cond_0

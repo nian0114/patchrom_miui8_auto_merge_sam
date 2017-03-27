@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settings/KiesLocationReceiver$1;
+.class synthetic Lcom/android/settings_ex/KiesLocationReceiver$1;
 .super Ljava/lang/Object;
 .source "KiesLocationReceiver.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/KiesLocationReceiver;
+    value = Lcom/android/settings_ex/KiesLocationReceiver;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

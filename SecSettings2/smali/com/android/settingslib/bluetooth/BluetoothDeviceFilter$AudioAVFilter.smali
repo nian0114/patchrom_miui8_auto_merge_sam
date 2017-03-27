@@ -1,11 +1,11 @@
-.class final Lcom/android/settingslib/bluetooth/BluetoothDeviceFilter$AudioAVFilter;
-.super Lcom/android/settingslib/bluetooth/BluetoothDeviceFilter$ClassUuidFilter;
+.class final Lcom/android/settings_exlib/bluetooth/BluetoothDeviceFilter$AudioAVFilter;
+.super Lcom/android/settings_exlib/bluetooth/BluetoothDeviceFilter$ClassUuidFilter;
 .source "BluetoothDeviceFilter.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/bluetooth/BluetoothDeviceFilter;
+    value = Lcom/android/settings_exlib/bluetooth/BluetoothDeviceFilter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,18 +22,18 @@
     .line 206
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/android/settingslib/bluetooth/BluetoothDeviceFilter$ClassUuidFilter;-><init>(Lcom/android/settingslib/bluetooth/BluetoothDeviceFilter$1;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_exlib/bluetooth/BluetoothDeviceFilter$ClassUuidFilter;-><init>(Lcom/android/settings_exlib/bluetooth/BluetoothDeviceFilter$1;)V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settingslib/bluetooth/BluetoothDeviceFilter$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_exlib/bluetooth/BluetoothDeviceFilter$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settingslib/bluetooth/BluetoothDeviceFilter$1;
+    .param p1, "x0"    # Lcom/android/settings_exlib/bluetooth/BluetoothDeviceFilter$1;
 
     .prologue
     .line 206
-    invoke-direct {p0}, Lcom/android/settingslib/bluetooth/BluetoothDeviceFilter$AudioAVFilter;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_exlib/bluetooth/BluetoothDeviceFilter$AudioAVFilter;-><init>()V
 
     return-void
 .end method
@@ -52,7 +52,7 @@
     if-eqz p1, :cond_3
 
     .line 210
-    sget-object v1, Lcom/android/settingslib/bluetooth/A2dpProfile;->SINK_UUIDS:[Landroid/os/ParcelUuid;
+    sget-object v1, Lcom/android/settings_exlib/bluetooth/A2dpProfile;->SINK_UUIDS:[Landroid/os/ParcelUuid;
 
     invoke-static {p1, v1}, Landroid/bluetooth/BluetoothUuid;->containsAnyUuid([Landroid/os/ParcelUuid;[Landroid/os/ParcelUuid;)Z
 

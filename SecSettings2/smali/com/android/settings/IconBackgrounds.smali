@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/IconBackgrounds;
+.class public Lcom/android/settings_ex/IconBackgrounds;
 .super Landroid/app/Activity;
 .source "IconBackgrounds.java"
 
@@ -42,68 +42,68 @@
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     .line 56
-    iput-boolean v0, p0, Lcom/android/settings/IconBackgrounds;->isEnabledShowBtnBg:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/IconBackgrounds;->isEnabledShowBtnBg:Z
 
     .line 57
-    iput-boolean v0, p0, Lcom/android/settings/IconBackgrounds;->isIconBackgrounds:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/IconBackgrounds;->isIconBackgrounds:Z
 
     .line 59
-    new-instance v0, Lcom/android/settings/IconBackgrounds$1;
+    new-instance v0, Lcom/android/settings_ex/IconBackgrounds$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/IconBackgrounds$1;-><init>(Lcom/android/settings/IconBackgrounds;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/IconBackgrounds$1;-><init>(Lcom/android/settings_ex/IconBackgrounds;)V
 
-    iput-object v0, p0, Lcom/android/settings/IconBackgrounds;->mIconBackgroundsClickListener:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/android/settings_ex/IconBackgrounds;->mIconBackgroundsClickListener:Landroid/view/View$OnClickListener;
 
     .line 72
-    new-instance v0, Lcom/android/settings/IconBackgrounds$2;
+    new-instance v0, Lcom/android/settings_ex/IconBackgrounds$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/IconBackgrounds$2;-><init>(Lcom/android/settings/IconBackgrounds;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/IconBackgrounds$2;-><init>(Lcom/android/settings_ex/IconBackgrounds;)V
 
-    iput-object v0, p0, Lcom/android/settings/IconBackgrounds;->mIconOnlyClickListener:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/android/settings_ex/IconBackgrounds;->mIconOnlyClickListener:Landroid/view/View$OnClickListener;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/IconBackgrounds;)Landroid/widget/RadioButton;
+.method static synthetic access$000(Lcom/android/settings_ex/IconBackgrounds;)Landroid/widget/RadioButton;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/IconBackgrounds;
+    .param p0, "x0"    # Lcom/android/settings_ex/IconBackgrounds;
 
     .prologue
     .line 37
-    iget-object v0, p0, Lcom/android/settings/IconBackgrounds;->mIconBackgroundsRadio:Landroid/widget/RadioButton;
+    iget-object v0, p0, Lcom/android/settings_ex/IconBackgrounds;->mIconBackgroundsRadio:Landroid/widget/RadioButton;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/IconBackgrounds;)Landroid/widget/RadioButton;
+.method static synthetic access$100(Lcom/android/settings_ex/IconBackgrounds;)Landroid/widget/RadioButton;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/IconBackgrounds;
+    .param p0, "x0"    # Lcom/android/settings_ex/IconBackgrounds;
 
     .prologue
     .line 37
-    iget-object v0, p0, Lcom/android/settings/IconBackgrounds;->mIconOnlyRadio:Landroid/widget/RadioButton;
+    iget-object v0, p0, Lcom/android/settings_ex/IconBackgrounds;->mIconOnlyRadio:Landroid/widget/RadioButton;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/IconBackgrounds;)Landroid/widget/ImageView;
+.method static synthetic access$200(Lcom/android/settings_ex/IconBackgrounds;)Landroid/widget/ImageView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/IconBackgrounds;
+    .param p0, "x0"    # Lcom/android/settings_ex/IconBackgrounds;
 
     .prologue
     .line 37
-    iget-object v0, p0, Lcom/android/settings/IconBackgrounds;->mPreviewImage:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/settings_ex/IconBackgrounds;->mPreviewImage:Landroid/widget/ImageView;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/IconBackgrounds;)Z
+.method static synthetic access$300(Lcom/android/settings_ex/IconBackgrounds;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/IconBackgrounds;
+    .param p0, "x0"    # Lcom/android/settings_ex/IconBackgrounds;
 
     .prologue
     .line 37
-    iget-boolean v0, p0, Lcom/android/settings/IconBackgrounds;->isIconBackgrounds:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/IconBackgrounds;->isIconBackgrounds:Z
 
     return v0
 .end method
@@ -113,21 +113,21 @@
 
     .prologue
     .line 133
-    invoke-virtual {p0}, Lcom/android/settings/IconBackgrounds;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/IconBackgrounds;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/IconBackgrounds;->mActionBar:Landroid/app/ActionBar;
+    iput-object v0, p0, Lcom/android/settings_ex/IconBackgrounds;->mActionBar:Landroid/app/ActionBar;
 
     .line 134
-    iget-object v0, p0, Lcom/android/settings/IconBackgrounds;->mActionBar:Landroid/app/ActionBar;
+    iget-object v0, p0, Lcom/android/settings_ex/IconBackgrounds;->mActionBar:Landroid/app/ActionBar;
 
     const/16 v1, 0x10
 
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setDisplayOptions(I)V
 
     .line 135
-    iget-object v0, p0, Lcom/android/settings/IconBackgrounds;->mActionBar:Landroid/app/ActionBar;
+    iget-object v0, p0, Lcom/android/settings_ex/IconBackgrounds;->mActionBar:Landroid/app/ActionBar;
 
     const v1, 0x7f040082
 
@@ -159,19 +159,19 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 89
-    invoke-virtual {p0}, Lcom/android/settings/IconBackgrounds;->getBaseContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/IconBackgrounds;->getBaseContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/IconBackgrounds;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/IconBackgrounds;->mContext:Landroid/content/Context;
 
     .line 91
     const v0, 0x7f04010e
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/IconBackgrounds;->setContentView(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/IconBackgrounds;->setContentView(I)V
 
     .line 93
-    invoke-virtual {p0}, Lcom/android/settings/IconBackgrounds;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/IconBackgrounds;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -186,82 +186,82 @@
     move v0, v1
 
     :goto_0
-    iput-boolean v0, p0, Lcom/android/settings/IconBackgrounds;->isEnabledShowBtnBg:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/IconBackgrounds;->isEnabledShowBtnBg:Z
 
     .line 95
-    invoke-direct {p0}, Lcom/android/settings/IconBackgrounds;->configureActionBar()V
+    invoke-direct {p0}, Lcom/android/settings_ex/IconBackgrounds;->configureActionBar()V
 
     .line 97
     const v0, 0x7f0d02fd
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/IconBackgrounds;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/IconBackgrounds;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/android/settings/IconBackgrounds;->mIconBackgroundsLayout:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/android/settings_ex/IconBackgrounds;->mIconBackgroundsLayout:Landroid/widget/LinearLayout;
 
     .line 98
     const v0, 0x7f0d02ff
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/IconBackgrounds;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/IconBackgrounds;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/android/settings/IconBackgrounds;->mIconOnlyLayout:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/android/settings_ex/IconBackgrounds;->mIconOnlyLayout:Landroid/widget/LinearLayout;
 
     .line 100
     const v0, 0x7f0d0281
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/IconBackgrounds;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/IconBackgrounds;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/android/settings/IconBackgrounds;->mPreviewImage:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/android/settings_ex/IconBackgrounds;->mPreviewImage:Landroid/widget/ImageView;
 
     .line 102
     const v0, 0x7f0d02fe
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/IconBackgrounds;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/IconBackgrounds;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/RadioButton;
 
-    iput-object v0, p0, Lcom/android/settings/IconBackgrounds;->mIconBackgroundsRadio:Landroid/widget/RadioButton;
+    iput-object v0, p0, Lcom/android/settings_ex/IconBackgrounds;->mIconBackgroundsRadio:Landroid/widget/RadioButton;
 
     .line 103
     const v0, 0x7f0d0300
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/IconBackgrounds;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/IconBackgrounds;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/RadioButton;
 
-    iput-object v0, p0, Lcom/android/settings/IconBackgrounds;->mIconOnlyRadio:Landroid/widget/RadioButton;
+    iput-object v0, p0, Lcom/android/settings_ex/IconBackgrounds;->mIconOnlyRadio:Landroid/widget/RadioButton;
 
     .line 105
-    iget-object v0, p0, Lcom/android/settings/IconBackgrounds;->mIconBackgroundsLayout:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/android/settings_ex/IconBackgrounds;->mIconBackgroundsLayout:Landroid/widget/LinearLayout;
 
-    iget-object v3, p0, Lcom/android/settings/IconBackgrounds;->mIconBackgroundsClickListener:Landroid/view/View$OnClickListener;
+    iget-object v3, p0, Lcom/android/settings_ex/IconBackgrounds;->mIconBackgroundsClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 106
-    iget-object v0, p0, Lcom/android/settings/IconBackgrounds;->mIconOnlyLayout:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/android/settings_ex/IconBackgrounds;->mIconOnlyLayout:Landroid/widget/LinearLayout;
 
-    iget-object v3, p0, Lcom/android/settings/IconBackgrounds;->mIconOnlyClickListener:Landroid/view/View$OnClickListener;
+    iget-object v3, p0, Lcom/android/settings_ex/IconBackgrounds;->mIconOnlyClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 108
-    invoke-virtual {p0}, Lcom/android/settings/IconBackgrounds;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/IconBackgrounds;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -276,27 +276,27 @@
     move v2, v1
 
     :cond_0
-    iput-boolean v2, p0, Lcom/android/settings/IconBackgrounds;->isIconBackgrounds:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/IconBackgrounds;->isIconBackgrounds:Z
 
     .line 109
-    iget-boolean v0, p0, Lcom/android/settings/IconBackgrounds;->isIconBackgrounds:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/IconBackgrounds;->isIconBackgrounds:Z
 
     if-eqz v0, :cond_3
 
     .line 110
-    iget-object v0, p0, Lcom/android/settings/IconBackgrounds;->mIconBackgroundsRadio:Landroid/widget/RadioButton;
+    iget-object v0, p0, Lcom/android/settings_ex/IconBackgrounds;->mIconBackgroundsRadio:Landroid/widget/RadioButton;
 
     invoke-virtual {v0, v1}, Landroid/widget/RadioButton;->setChecked(Z)V
 
     .line 111
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 112
-    iget-object v0, p0, Lcom/android/settings/IconBackgrounds;->mPreviewImage:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/settings_ex/IconBackgrounds;->mPreviewImage:Landroid/widget/ImageView;
 
     const v1, 0x7f02010b
 
@@ -314,7 +314,7 @@
 
     .line 114
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/IconBackgrounds;->mPreviewImage:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/settings_ex/IconBackgrounds;->mPreviewImage:Landroid/widget/ImageView;
 
     const v1, 0x7f02010a
 
@@ -324,19 +324,19 @@
 
     .line 117
     :cond_3
-    iget-object v0, p0, Lcom/android/settings/IconBackgrounds;->mIconOnlyRadio:Landroid/widget/RadioButton;
+    iget-object v0, p0, Lcom/android/settings_ex/IconBackgrounds;->mIconOnlyRadio:Landroid/widget/RadioButton;
 
     invoke-virtual {v0, v1}, Landroid/widget/RadioButton;->setChecked(Z)V
 
     .line 118
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
     .line 119
-    iget-object v0, p0, Lcom/android/settings/IconBackgrounds;->mPreviewImage:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/settings_ex/IconBackgrounds;->mPreviewImage:Landroid/widget/ImageView;
 
     const v1, 0x7f02010d
 
@@ -346,7 +346,7 @@
 
     .line 121
     :cond_4
-    iget-object v0, p0, Lcom/android/settings/IconBackgrounds;->mPreviewImage:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/settings_ex/IconBackgrounds;->mPreviewImage:Landroid/widget/ImageView;
 
     const v1, 0x7f02010c
 
@@ -366,12 +366,12 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
     .line 142
-    iget-object v1, p0, Lcom/android/settings/IconBackgrounds;->mActionBar:Landroid/app/ActionBar;
+    iget-object v1, p0, Lcom/android/settings_ex/IconBackgrounds;->mActionBar:Landroid/app/ActionBar;
 
     if-eqz v1, :cond_0
 
     .line 143
-    iget-object v1, p0, Lcom/android/settings/IconBackgrounds;->mActionBar:Landroid/app/ActionBar;
+    iget-object v1, p0, Lcom/android/settings_ex/IconBackgrounds;->mActionBar:Landroid/app/ActionBar;
 
     invoke-virtual {v1}, Landroid/app/ActionBar;->getCustomView()Landroid/view/View;
 
@@ -390,21 +390,21 @@
 
     check-cast v1, Landroid/widget/Button;
 
-    iput-object v1, p0, Lcom/android/settings/IconBackgrounds;->mcancelButton:Landroid/widget/Button;
+    iput-object v1, p0, Lcom/android/settings_ex/IconBackgrounds;->mcancelButton:Landroid/widget/Button;
 
     .line 146
-    iget-object v1, p0, Lcom/android/settings/IconBackgrounds;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/IconBackgrounds;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/settings/IconBackgrounds;->mcancelButton:Landroid/widget/Button;
+    iget-object v2, p0, Lcom/android/settings_ex/IconBackgrounds;->mcancelButton:Landroid/widget/Button;
 
-    invoke-static {v1, v2}, Lcom/android/settings/Utils;->setMaxFontScale(Landroid/content/Context;Landroid/widget/Button;)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/Utils;->setMaxFontScale(Landroid/content/Context;Landroid/widget/Button;)V
 
     .line 147
-    iget-object v1, p0, Lcom/android/settings/IconBackgrounds;->mcancelButton:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/android/settings_ex/IconBackgrounds;->mcancelButton:Landroid/widget/Button;
 
-    new-instance v2, Lcom/android/settings/IconBackgrounds$3;
+    new-instance v2, Lcom/android/settings_ex/IconBackgrounds$3;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/IconBackgrounds$3;-><init>(Lcom/android/settings/IconBackgrounds;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/IconBackgrounds$3;-><init>(Lcom/android/settings_ex/IconBackgrounds;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -417,43 +417,43 @@
 
     check-cast v1, Landroid/widget/Button;
 
-    iput-object v1, p0, Lcom/android/settings/IconBackgrounds;->mSaveButton:Landroid/widget/Button;
+    iput-object v1, p0, Lcom/android/settings_ex/IconBackgrounds;->mSaveButton:Landroid/widget/Button;
 
     .line 155
-    iget-object v1, p0, Lcom/android/settings/IconBackgrounds;->mSaveButton:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/android/settings_ex/IconBackgrounds;->mSaveButton:Landroid/widget/Button;
 
     const v2, 0x7f0e0d19
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setText(I)V
 
     .line 156
-    iget-object v1, p0, Lcom/android/settings/IconBackgrounds;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/IconBackgrounds;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/settings/IconBackgrounds;->mSaveButton:Landroid/widget/Button;
+    iget-object v2, p0, Lcom/android/settings_ex/IconBackgrounds;->mSaveButton:Landroid/widget/Button;
 
-    invoke-static {v1, v2}, Lcom/android/settings/Utils;->setMaxFontScale(Landroid/content/Context;Landroid/widget/Button;)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/Utils;->setMaxFontScale(Landroid/content/Context;Landroid/widget/Button;)V
 
     .line 157
-    iget-object v1, p0, Lcom/android/settings/IconBackgrounds;->mSaveButton:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/android/settings_ex/IconBackgrounds;->mSaveButton:Landroid/widget/Button;
 
-    new-instance v2, Lcom/android/settings/IconBackgrounds$4;
+    new-instance v2, Lcom/android/settings_ex/IconBackgrounds$4;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/IconBackgrounds$4;-><init>(Lcom/android/settings/IconBackgrounds;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/IconBackgrounds$4;-><init>(Lcom/android/settings_ex/IconBackgrounds;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 175
-    iget-boolean v1, p0, Lcom/android/settings/IconBackgrounds;->isEnabledShowBtnBg:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/IconBackgrounds;->isEnabledShowBtnBg:Z
 
     if-eqz v1, :cond_0
 
     .line 176
-    iget-object v1, p0, Lcom/android/settings/IconBackgrounds;->mcancelButton:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/android/settings_ex/IconBackgrounds;->mcancelButton:Landroid/widget/Button;
 
     invoke-virtual {v1, v3}, Landroid/widget/Button;->setBackgroundResource(I)V
 
     .line 177
-    iget-object v1, p0, Lcom/android/settings/IconBackgrounds;->mSaveButton:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/android/settings_ex/IconBackgrounds;->mSaveButton:Landroid/widget/Button;
 
     invoke-virtual {v1, v3}, Landroid/widget/Button;->setBackgroundResource(I)V
 
@@ -473,11 +473,11 @@
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
     .line 129
-    invoke-virtual {p0}, Lcom/android/settings/IconBackgrounds;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/IconBackgrounds;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/android/settings/Utils;->applyLandscapeFullScreen(Landroid/content/Context;Landroid/view/Window;)V
+    invoke-static {p0, v0}, Lcom/android/settings_ex/Utils;->applyLandscapeFullScreen(Landroid/content/Context;Landroid/view/Window;)V
 
     .line 130
     return-void

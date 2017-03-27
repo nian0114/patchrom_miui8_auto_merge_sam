@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/AccessibilitySettingsVision$23;
+.class Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$23;
 .super Ljava/lang/Object;
 .source "AccessibilitySettingsVision.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/AccessibilitySettingsVision;->onCreateDialog(I)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->onCreateDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)V
     .locals 0
 
     .prologue
     .line 1382
-    iput-object p1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$23;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$23;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

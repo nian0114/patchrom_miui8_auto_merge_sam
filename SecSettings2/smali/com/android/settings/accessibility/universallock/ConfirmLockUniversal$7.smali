@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$7;
+.class Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$7;
 .super Ljava/lang/Object;
 .source "ConfirmLockUniversal.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->attachListeners()V
+    value = Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->attachListeners()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)V
     .locals 0
 
     .prologue
     .line 573
-    iput-object p1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$7;->this$0:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$7;->this$0:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,10 +42,10 @@
 
     .prologue
     .line 576
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$7;->this$0:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$7;->this$0:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
-    # invokes: Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->checkForCorrectPassword()V
-    invoke-static {v0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->access$1400(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)V
+    # invokes: Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->checkForCorrectPassword()V
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->access$1400(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)V
 
     .line 577
     return-void

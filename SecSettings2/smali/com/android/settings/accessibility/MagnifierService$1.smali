@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessibility/MagnifierService$1;
+.class Lcom/android/settings_ex/accessibility/MagnifierService$1;
 .super Landroid/database/ContentObserver;
 .source "MagnifierService.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/MagnifierService;
+    value = Lcom/android/settings_ex/accessibility/MagnifierService;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/MagnifierService;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/MagnifierService;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/MagnifierService;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 57
-    iput-object p1, p0, Lcom/android/settings/accessibility/MagnifierService$1;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/MagnifierService$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -47,9 +47,9 @@
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
     .line 60
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierService$1;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierService$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
-    iget-object v3, v3, Lcom/android/settings/accessibility/MagnifierService;->mContext:Landroid/content/Context;
+    iget-object v3, v3, Lcom/android/settings_ex/accessibility/MagnifierService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -70,16 +70,16 @@
 
     .line 64
     :try_start_0
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierService$1;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierService$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
-    iget-object v2, v2, Lcom/android/settings/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v2, v2, Lcom/android/settings_ex/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    invoke-virtual {v2}, Lcom/android/settings/accessibility/MagnifierSurfaceView;->removeView()V
+    invoke-virtual {v2}, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->removeView()V
 
     .line 65
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierService$1;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierService$1;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
-    invoke-virtual {v2}, Lcom/android/settings/accessibility/MagnifierService;->stopSelf()V
+    invoke-virtual {v2}, Lcom/android/settings_ex/accessibility/MagnifierService;->stopSelf()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

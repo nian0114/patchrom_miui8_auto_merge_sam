@@ -1,4 +1,4 @@
-.class Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$3;
+.class Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$3;
 .super Ljava/lang/Object;
 .source "NfcAdvancedRoutingSetting.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->showErrorDialog(Ljava/lang/String;)V
+    value = Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->showErrorDialog(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;
+.field final synthetic this$0:Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;)V
+.method constructor <init>(Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;)V
     .locals 0
 
     .prologue
     .line 285
-    iput-object p1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$3;->this$0:Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;
+    iput-object p1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$3;->this$0:Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,23 +42,23 @@
 
     .prologue
     .line 288
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$3;->this$0:Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$3;->this$0:Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;
 
-    # getter for: Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
-    invoke-static {v0}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->access$300(Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;)Landroid/widget/ListView;
+    # getter for: Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
+    invoke-static {v0}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->access$300(Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;)Landroid/widget/ListView;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$3;->this$0:Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$3;->this$0:Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$3;->this$0:Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$3;->this$0:Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;
 
-    # getter for: Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mCurrentKey:Ljava/lang/String;
-    invoke-static {v2}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->access$200(Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mCurrentKey:Ljava/lang/String;
+    invoke-static {v2}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->access$200(Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->getItemPosition(Ljava/lang/String;)I
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->getItemPosition(Ljava/lang/String;)I
 
     move-result v1
 

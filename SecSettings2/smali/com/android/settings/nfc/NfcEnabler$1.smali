@@ -1,11 +1,11 @@
-.class Lcom/android/settings/nfc/NfcEnabler$1;
+.class Lcom/android/settings_ex/nfc/NfcEnabler$1;
 .super Landroid/content/BroadcastReceiver;
 .source "NfcEnabler.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/nfc/NfcEnabler;
+    value = Lcom/android/settings_ex/nfc/NfcEnabler;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nfc/NfcEnabler;
+.field final synthetic this$0:Lcom/android/settings_ex/nfc/NfcEnabler;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/nfc/NfcEnabler;)V
+.method constructor <init>(Lcom/android/settings_ex/nfc/NfcEnabler;)V
     .locals 0
 
     .prologue
     .line 84
-    iput-object p1, p0, Lcom/android/settings/nfc/NfcEnabler$1;->this$0:Lcom/android/settings/nfc/NfcEnabler;
+    iput-object p1, p0, Lcom/android/settings_ex/nfc/NfcEnabler$1;->this$0:Lcom/android/settings_ex/nfc/NfcEnabler;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -55,7 +55,7 @@
     if-eqz v1, :cond_1
 
     .line 89
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcEnabler$1;->this$0:Lcom/android/settings/nfc/NfcEnabler;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcEnabler$1;->this$0:Lcom/android/settings_ex/nfc/NfcEnabler;
 
     const-string v2, "android.nfc.extra.ADAPTER_STATE"
 
@@ -65,8 +65,8 @@
 
     move-result v2
 
-    # invokes: Lcom/android/settings/nfc/NfcEnabler;->handleNfcStateChanged(I)V
-    invoke-static {v1, v2}, Lcom/android/settings/nfc/NfcEnabler;->access$000(Lcom/android/settings/nfc/NfcEnabler;I)V
+    # invokes: Lcom/android/settings_ex/nfc/NfcEnabler;->handleNfcStateChanged(I)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/nfc/NfcEnabler;->access$000(Lcom/android/settings_ex/nfc/NfcEnabler;I)V
 
     .line 94
     :cond_0
@@ -84,10 +84,10 @@
     if-eqz v1, :cond_0
 
     .line 92
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcEnabler$1;->this$0:Lcom/android/settings/nfc/NfcEnabler;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcEnabler$1;->this$0:Lcom/android/settings_ex/nfc/NfcEnabler;
 
-    # invokes: Lcom/android/settings/nfc/NfcEnabler;->handleNfcStateABeamChanged()V
-    invoke-static {v1}, Lcom/android/settings/nfc/NfcEnabler;->access$100(Lcom/android/settings/nfc/NfcEnabler;)V
+    # invokes: Lcom/android/settings_ex/nfc/NfcEnabler;->handleNfcStateABeamChanged()V
+    invoke-static {v1}, Lcom/android/settings_ex/nfc/NfcEnabler;->access$100(Lcom/android/settings_ex/nfc/NfcEnabler;)V
 
     goto :goto_0
 .end method

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity$1;
+.class Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity$1;
 .super Landroid/content/BroadcastReceiver;
 .source "WifiConnectionHandlerActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;
+    value = Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;)V
     .locals 0
 
     .prologue
     .line 44
-    iput-object p1, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity$1;->this$0:Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity$1;->this$0:Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -109,41 +109,41 @@
 
     .line 54
     :try_start_0
-    iget-object v3, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity$1;->this$0:Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity$1;->this$0:Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;
 
-    # getter for: Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mIsReceiverRegistered:Z
-    invoke-static {v3}, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->access$000(Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;)Z
+    # getter for: Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mIsReceiverRegistered:Z
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->access$000(Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
     .line 55
-    iget-object v3, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity$1;->this$0:Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity$1;->this$0:Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;
 
-    iget-object v4, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity$1;->this$0:Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity$1;->this$0:Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;
 
-    # getter for: Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mReceiver:Landroid/content/BroadcastReceiver;
-    invoke-static {v4}, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->access$100(Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;)Landroid/content/BroadcastReceiver;
+    # getter for: Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mReceiver:Landroid/content/BroadcastReceiver;
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->access$100(Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;)Landroid/content/BroadcastReceiver;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 56
-    iget-object v3, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity$1;->this$0:Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity$1;->this$0:Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;
 
     const/4 v4, 0x0
 
-    # setter for: Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mIsReceiverRegistered:Z
-    invoke-static {v3, v4}, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->access$002(Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;Z)Z
+    # setter for: Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mIsReceiverRegistered:Z
+    invoke-static {v3, v4}, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->access$002(Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;Z)Z
 
     .line 58
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity$1;->this$0:Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity$1;->this$0:Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;
 
-    # getter for: Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mDateConnectionDialog:Landroid/app/AlertDialog;
-    invoke-static {v3}, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->access$200(Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;)Landroid/app/AlertDialog;
+    # getter for: Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mDateConnectionDialog:Landroid/app/AlertDialog;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->access$200(Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;)Landroid/app/AlertDialog;
 
     move-result-object v3
 

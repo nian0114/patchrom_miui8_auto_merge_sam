@@ -1,9 +1,9 @@
-.class public Lcom/android/settings/nfc/NfcOsaifukeitaiLock;
+.class public Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;
 .super Landroid/app/Fragment;
 .source "NfcOsaifukeitaiLock.java"
 
 # interfaces
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # instance fields
@@ -13,7 +13,7 @@
 
 .field private activity:Landroid/app/Activity;
 
-.field private activitySwitchBar:Lcom/android/settings/SettingsActivity;
+.field private activitySwitchBar:Lcom/android/settings_ex/SettingsActivity;
 
 .field private final carrier:Ljava/lang/String;
 
@@ -25,7 +25,7 @@
 
 .field private mOldActivityTitle:Ljava/lang/CharSequence;
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 .field private mTextView:Landroid/widget/TextView;
 
@@ -33,7 +33,7 @@
 
 .field public mbSwitchBar:Z
 
-.field private myNfcOsaifukeitaiLock:Lcom/android/settings/nfc/NfcOsaifukeitaiLock;
+.field private myNfcOsaifukeitaiLock:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;
 
 
 # direct methods
@@ -47,7 +47,7 @@
     .line 63
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mbSwitchBar:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mbSwitchBar:Z
 
     .line 67
     const-string v0, "persist.omc.sales_code"
@@ -56,7 +56,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->OMC_SALES_CODE:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->OMC_SALES_CODE:Ljava/lang/String;
 
     .line 68
     const-string v0, "ro.csc.sales_code"
@@ -65,14 +65,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->CSC_SALES_CODE:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->CSC_SALES_CODE:Ljava/lang/String;
 
     .line 69
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->OMC_SALES_CODE:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->OMC_SALES_CODE:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->OMC_SALES_CODE:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->OMC_SALES_CODE:Ljava/lang/String;
 
     const-string v1, ""
 
@@ -83,21 +83,21 @@
     if-eqz v0, :cond_1
 
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->CSC_SALES_CODE:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->CSC_SALES_CODE:Ljava/lang/String;
 
     :goto_0
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->carrier:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->carrier:Ljava/lang/String;
 
     .line 72
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mFelicaLockResultCode:I
+    iput v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mFelicaLockResultCode:I
 
     return-void
 
     .line 69
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->OMC_SALES_CODE:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->OMC_SALES_CODE:Ljava/lang/String;
 
     goto :goto_0
 .end method
@@ -126,7 +126,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 89
-    iget-boolean v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mbSwitchBar:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mbSwitchBar:Z
 
     return v0
 .end method
@@ -147,34 +147,34 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 95
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->activitySwitchBar:Lcom/android/settings/SettingsActivity;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->activitySwitchBar:Lcom/android/settings_ex/SettingsActivity;
 
     .line 96
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->activitySwitchBar:Lcom/android/settings/SettingsActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->activitySwitchBar:Lcom/android/settings_ex/SettingsActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 97
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 98
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 99
     const-string v0, "[NfcOsaifukeitaiLock]"
@@ -229,7 +229,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 222
-    iput p2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mFelicaLockResultCode:I
+    iput p2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mFelicaLockResultCode:I
 
     .line 223
     const/4 v0, 0x1
@@ -242,7 +242,7 @@
 
     .line 224
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
@@ -273,23 +273,23 @@
     invoke-static {v1, v3}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 108
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
 
     .line 109
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/SettingsActivity;
+    check-cast v1, Lcom/android/settings_ex/SettingsActivity;
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->activitySwitchBar:Lcom/android/settings/SettingsActivity;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->activitySwitchBar:Lcom/android/settings_ex/SettingsActivity;
 
     .line 110
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -297,26 +297,26 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     .line 112
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->activitySwitchBar:Lcom/android/settings/SettingsActivity;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->activitySwitchBar:Lcom/android/settings_ex/SettingsActivity;
 
-    invoke-virtual {v1}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    invoke-virtual {v1}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 113
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
 
     instance-of v1, v1, Landroid/preference/PreferenceActivity;
 
     if-eqz v1, :cond_0
 
     .line 114
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
@@ -330,12 +330,12 @@
 
     .line 116
     .local v0, "padding":I
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, v2, v2, v0, v2}, Lcom/android/settings/widget/SwitchBar;->setPaddingRelative(IIII)V
+    invoke-virtual {v1, v2, v2, v0, v2}, Lcom/android/settings_ex/widget/SwitchBar;->setPaddingRelative(IIII)V
 
     .line 117
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
@@ -344,13 +344,13 @@
     invoke-virtual {v1, v4, v4}, Landroid/app/ActionBar;->setDisplayOptions(II)V
 
     .line 119
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v1
 
-    iget-object v3, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     new-instance v4, Landroid/app/ActionBar$LayoutParams;
 
@@ -361,7 +361,7 @@
     invoke-virtual {v1, v3, v4}, Landroid/app/ActionBar;->setCustomView(Landroid/view/View;Landroid/app/ActionBar$LayoutParams;)V
 
     .line 123
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
@@ -371,10 +371,10 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mOldActivityTitle:Ljava/lang/CharSequence;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mOldActivityTitle:Ljava/lang/CharSequence;
 
     .line 124
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
@@ -387,7 +387,7 @@
     .line 126
     .end local v0    # "padding":I
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->carrier:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->carrier:Ljava/lang/String;
 
     const/4 v1, -0x1
 
@@ -404,17 +404,17 @@
     .line 140
     new-instance v1, Landroid/content/Intent;
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
 
-    const-class v3, Lcom/android/settings/nfc/NfcOsaifukeitaiLockDCM;
+    const-class v3, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockDCM;
 
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mIntent:Landroid/content/Intent;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mIntent:Landroid/content/Intent;
 
     .line 143
     :goto_1
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mIntent:Landroid/content/Intent;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mIntent:Landroid/content/Intent;
 
     const-string v2, "com.samsung.felicalock"
 
@@ -474,70 +474,70 @@
 
     .line 128
     :pswitch_0
-    new-instance v1, Lcom/android/settings/nfc/NfcOsaifukeitaiLockDCM;
+    new-instance v1, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockDCM;
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
 
-    invoke-direct {v1, v2}, Lcom/android/settings/nfc/NfcOsaifukeitaiLockDCM;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v1, v2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockDCM;-><init>(Landroid/app/Activity;)V
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->myNfcOsaifukeitaiLock:Lcom/android/settings/nfc/NfcOsaifukeitaiLock;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->myNfcOsaifukeitaiLock:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;
 
     .line 129
     new-instance v1, Landroid/content/Intent;
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
 
-    const-class v3, Lcom/android/settings/nfc/NfcOsaifukeitaiLockDCM;
+    const-class v3, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockDCM;
 
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mIntent:Landroid/content/Intent;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mIntent:Landroid/content/Intent;
 
     goto :goto_1
 
     .line 132
     :pswitch_1
-    new-instance v1, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;
+    new-instance v1, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
 
-    invoke-direct {v1, v2}, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v1, v2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;-><init>(Landroid/app/Activity;)V
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->myNfcOsaifukeitaiLock:Lcom/android/settings/nfc/NfcOsaifukeitaiLock;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->myNfcOsaifukeitaiLock:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;
 
     .line 133
     new-instance v1, Landroid/content/Intent;
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
 
-    const-class v3, Lcom/android/settings/nfc/NfcOsaifukeitaiLockKDI;
+    const-class v3, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockKDI;
 
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mIntent:Landroid/content/Intent;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mIntent:Landroid/content/Intent;
 
     goto :goto_1
 
     .line 136
     :pswitch_2
-    new-instance v1, Lcom/android/settings/nfc/NfcOsaifukeitaiLockSBM;
+    new-instance v1, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockSBM;
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
 
-    invoke-direct {v1, v2}, Lcom/android/settings/nfc/NfcOsaifukeitaiLockSBM;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v1, v2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockSBM;-><init>(Landroid/app/Activity;)V
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->myNfcOsaifukeitaiLock:Lcom/android/settings/nfc/NfcOsaifukeitaiLock;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->myNfcOsaifukeitaiLock:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;
 
     .line 137
     new-instance v1, Landroid/content/Intent;
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
 
-    const-class v3, Lcom/android/settings/nfc/NfcOsaifukeitaiLockSBM;
+    const-class v3, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLockSBM;
 
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mIntent:Landroid/content/Intent;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mIntent:Landroid/content/Intent;
 
     goto :goto_1
 
@@ -573,10 +573,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mView:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mView:Landroid/view/View;
 
     .line 152
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mView:Landroid/view/View;
 
     const v1, 0x7f0d0385
 
@@ -586,10 +586,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mTextView:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mTextView:Landroid/widget/TextView;
 
     .line 153
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mView:Landroid/view/View;
 
     return-object v0
 .end method
@@ -609,7 +609,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 209
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -622,12 +622,12 @@
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setCustomView(Landroid/view/View;)V
 
     .line 210
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mOldActivityTitle:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mOldActivityTitle:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_0
 
     .line 211
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -635,7 +635,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mOldActivityTitle:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mOldActivityTitle:Ljava/lang/CharSequence;
 
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
@@ -666,29 +666,29 @@
     invoke-super {p0}, Landroid/app/Fragment;->onPause()V
 
     .line 195
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->myNfcOsaifukeitaiLock:Lcom/android/settings/nfc/NfcOsaifukeitaiLock;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->myNfcOsaifukeitaiLock:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;
 
     if-eqz v0, :cond_0
 
     .line 196
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->myNfcOsaifukeitaiLock:Lcom/android/settings/nfc/NfcOsaifukeitaiLock;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->myNfcOsaifukeitaiLock:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;
 
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->onPause(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->onPause(Landroid/content/Context;)V
 
     .line 199
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_1
 
     .line 200
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 202
     :cond_1
@@ -726,7 +726,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 163
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->myNfcOsaifukeitaiLock:Lcom/android/settings/nfc/NfcOsaifukeitaiLock;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->myNfcOsaifukeitaiLock:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;
 
     if-nez v0, :cond_1
 
@@ -737,25 +737,25 @@
 
     .line 167
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->myNfcOsaifukeitaiLock:Lcom/android/settings/nfc/NfcOsaifukeitaiLock;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->myNfcOsaifukeitaiLock:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;
 
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->onResume(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->onResume(Landroid/content/Context;)V
 
     .line 169
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->myNfcOsaifukeitaiLock:Lcom/android/settings/nfc/NfcOsaifukeitaiLock;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->myNfcOsaifukeitaiLock:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;
 
-    invoke-virtual {v0}, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->getLockState()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->getLockState()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 170
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mTextView:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mTextView:Landroid/widget/TextView;
 
     const v1, 0x7f0e1789
 
@@ -763,43 +763,43 @@
 
     .line 175
     :goto_1
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_0
 
     .line 176
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->myNfcOsaifukeitaiLock:Lcom/android/settings/nfc/NfcOsaifukeitaiLock;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->myNfcOsaifukeitaiLock:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;
 
-    invoke-virtual {v1}, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->getSwitchBarState()Z
+    invoke-virtual {v1}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->getSwitchBarState()Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 177
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 178
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 179
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     goto :goto_0
 
     .line 172
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mTextView:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mTextView:Landroid/widget/TextView;
 
     const v1, 0x7f0e1788
 
@@ -824,7 +824,7 @@
 
     .prologue
     .line 230
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->activity:Landroid/app/Activity;
 
     if-eqz v1, :cond_0
 
@@ -841,7 +841,7 @@
 
     move-result-object v2
 
-    iget v3, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mFelicaLockResultCode:I
+    iget v3, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mFelicaLockResultCode:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -868,11 +868,11 @@
 
     .line 234
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->mIntent:Landroid/content/Intent;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->mIntent:Landroid/content/Intent;
 
     const/16 v2, 0x1000
 
-    invoke-virtual {p0, v1, v2}, Lcom/android/settings/nfc/NfcOsaifukeitaiLock;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v1, v2}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiLock;->startActivityForResult(Landroid/content/Intent;I)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 

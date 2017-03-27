@@ -1,4 +1,4 @@
-.class Lcom/android/settings/notification/NotificationsSubSettings$5$1;
+.class Lcom/android/settings_ex/notification/NotificationsSubSettings$5$1;
 .super Ljava/lang/Object;
 .source "NotificationsSubSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/notification/NotificationsSubSettings$5;->setSetting(Landroid/content/Context;I)Z
+    value = Lcom/android/settings_ex/notification/NotificationsSubSettings$5;->setSetting(Landroid/content/Context;I)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/NotificationsSubSettings$5;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/NotificationsSubSettings$5;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/notification/NotificationsSubSettings$5;)V
+.method constructor <init>(Lcom/android/settings_ex/notification/NotificationsSubSettings$5;)V
     .locals 0
 
     .prologue
     .line 262
-    iput-object p1, p0, Lcom/android/settings/notification/NotificationsSubSettings$5$1;->this$0:Lcom/android/settings/notification/NotificationsSubSettings$5;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/NotificationsSubSettings$5$1;->this$0:Lcom/android/settings_ex/notification/NotificationsSubSettings$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,8 +41,8 @@
 
     .prologue
     .line 265
-    # getter for: Lcom/android/settings/notification/NotificationsSubSettings;->mAudioManager:Landroid/media/AudioManager;
-    invoke-static {}, Lcom/android/settings/notification/NotificationsSubSettings;->access$500()Landroid/media/AudioManager;
+    # getter for: Lcom/android/settings_ex/notification/NotificationsSubSettings;->mAudioManager:Landroid/media/AudioManager;
+    invoke-static {}, Lcom/android/settings_ex/notification/NotificationsSubSettings;->access$500()Landroid/media/AudioManager;
 
     move-result-object v0
 

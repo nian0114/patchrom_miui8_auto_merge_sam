@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice$4;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice$4;
 .super Ljava/lang/Object;
 .source "WifiApConnectedDevice.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;->onBindView(Landroid/view/View;)V
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;->onBindView(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;)V
     .locals 0
 
     .prologue
     .line 207
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice$4;->this$0:Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice$4;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,12 +42,12 @@
 
     .prologue
     .line 210
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice$4;->this$0:Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice$4;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;
 
     const/4 v1, 0x6
 
-    # invokes: Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;->showDialog(I)V
-    invoke-static {v0, v1}, Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;->access$000(Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;I)V
+    # invokes: Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;->showDialog(I)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;->access$000(Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;I)V
 
     .line 211
     const/4 v0, 0x1

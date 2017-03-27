@@ -1,11 +1,11 @@
-.class Lcom/android/settings/vpn2/LockdownConfigFragment$TitleAdapter;
+.class Lcom/android/settings_ex/vpn2/LockdownConfigFragment$TitleAdapter;
 .super Landroid/widget/ArrayAdapter;
 .source "LockdownConfigFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/vpn2/LockdownConfigFragment;
+    value = Lcom/android/settings_ex/vpn2/LockdownConfigFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/notification/NotificationsSubSettings$5;
-.super Lcom/android/settings/notification/SettingPref;
+.class final Lcom/android/settings_ex/notification/NotificationsSubSettings$5;
+.super Lcom/android/settings_ex/notification/SettingPref;
 .source "NotificationsSubSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/NotificationsSubSettings;
+    value = Lcom/android/settings_ex/notification/NotificationsSubSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 
     .prologue
     .line 256
-    invoke-direct/range {p0 .. p5}, Lcom/android/settings/notification/SettingPref;-><init>(ILjava/lang/String;Ljava/lang/String;I[I)V
+    invoke-direct/range {p0 .. p5}, Lcom/android/settings_ex/notification/SettingPref;-><init>(ILjava/lang/String;Ljava/lang/String;I[I)V
 
     return-void
 .end method
@@ -42,8 +42,8 @@
     if-eqz p2, :cond_0
 
     .line 260
-    # getter for: Lcom/android/settings/notification/NotificationsSubSettings;->mAudioManager:Landroid/media/AudioManager;
-    invoke-static {}, Lcom/android/settings/notification/NotificationsSubSettings;->access$500()Landroid/media/AudioManager;
+    # getter for: Lcom/android/settings_ex/notification/NotificationsSubSettings;->mAudioManager:Landroid/media/AudioManager;
+    invoke-static {}, Lcom/android/settings_ex/notification/NotificationsSubSettings;->access$500()Landroid/media/AudioManager;
 
     move-result-object v0
 
@@ -51,7 +51,7 @@
 
     .line 269
     :goto_0
-    invoke-super {p0, p1, p2}, Lcom/android/settings/notification/SettingPref;->setSetting(Landroid/content/Context;I)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/notification/SettingPref;->setSetting(Landroid/content/Context;I)Z
 
     move-result v0
 
@@ -63,9 +63,9 @@
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    new-instance v1, Lcom/android/settings/notification/NotificationsSubSettings$5$1;
+    new-instance v1, Lcom/android/settings_ex/notification/NotificationsSubSettings$5$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/notification/NotificationsSubSettings$5$1;-><init>(Lcom/android/settings/notification/NotificationsSubSettings$5;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/notification/NotificationsSubSettings$5$1;-><init>(Lcom/android/settings_ex/notification/NotificationsSubSettings$5;)V
 
     const-wide/16 v2, 0x12c
 

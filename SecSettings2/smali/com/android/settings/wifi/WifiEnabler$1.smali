@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wifi/WifiEnabler$1;
+.class Lcom/android/settings_ex/wifi/WifiEnabler$1;
 .super Landroid/content/BroadcastReceiver;
 .source "WifiEnabler.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiEnabler;
+    value = Lcom/android/settings_ex/wifi/WifiEnabler;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiEnabler;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiEnabler;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiEnabler;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiEnabler;)V
     .locals 0
 
     .prologue
     .line 82
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiEnabler$1;->this$0:Lcom/android/settings/wifi/WifiEnabler;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiEnabler$1;->this$0:Lcom/android/settings_ex/wifi/WifiEnabler;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -57,7 +57,7 @@
     if-eqz v3, :cond_1
 
     .line 87
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiEnabler$1;->this$0:Lcom/android/settings/wifi/WifiEnabler;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiEnabler$1;->this$0:Lcom/android/settings_ex/wifi/WifiEnabler;
 
     const-string v4, "wifi_state"
 
@@ -65,8 +65,8 @@
 
     move-result v4
 
-    # invokes: Lcom/android/settings/wifi/WifiEnabler;->handleWifiStateChanged(I)V
-    invoke-static {v3, v4}, Lcom/android/settings/wifi/WifiEnabler;->access$000(Lcom/android/settings/wifi/WifiEnabler;I)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiEnabler;->handleWifiStateChanged(I)V
+    invoke-static {v3, v4}, Lcom/android/settings_ex/wifi/WifiEnabler;->access$000(Lcom/android/settings_ex/wifi/WifiEnabler;I)V
 
     .line 107
     :cond_0
@@ -84,10 +84,10 @@
     if-eqz v3, :cond_2
 
     .line 90
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiEnabler$1;->this$0:Lcom/android/settings/wifi/WifiEnabler;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiEnabler$1;->this$0:Lcom/android/settings_ex/wifi/WifiEnabler;
 
-    # getter for: Lcom/android/settings/wifi/WifiEnabler;->mConnected:Ljava/util/concurrent/atomic/AtomicBoolean;
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiEnabler;->access$100(Lcom/android/settings/wifi/WifiEnabler;)Ljava/util/concurrent/atomic/AtomicBoolean;
+    # getter for: Lcom/android/settings_ex/wifi/WifiEnabler;->mConnected:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiEnabler;->access$100(Lcom/android/settings_ex/wifi/WifiEnabler;)Ljava/util/concurrent/atomic/AtomicBoolean;
 
     move-result-object v3
 
@@ -98,7 +98,7 @@
     if-nez v3, :cond_0
 
     .line 91
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiEnabler$1;->this$0:Lcom/android/settings/wifi/WifiEnabler;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiEnabler$1;->this$0:Lcom/android/settings_ex/wifi/WifiEnabler;
 
     const-string v3, "newState"
 
@@ -112,8 +112,8 @@
 
     move-result-object v3
 
-    # invokes: Lcom/android/settings/wifi/WifiEnabler;->handleStateChanged(Landroid/net/NetworkInfo$DetailedState;)V
-    invoke-static {v4, v3}, Lcom/android/settings/wifi/WifiEnabler;->access$200(Lcom/android/settings/wifi/WifiEnabler;Landroid/net/NetworkInfo$DetailedState;)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiEnabler;->handleStateChanged(Landroid/net/NetworkInfo$DetailedState;)V
+    invoke-static {v4, v3}, Lcom/android/settings_ex/wifi/WifiEnabler;->access$200(Lcom/android/settings_ex/wifi/WifiEnabler;Landroid/net/NetworkInfo$DetailedState;)V
 
     goto :goto_0
 
@@ -138,10 +138,10 @@
 
     .line 97
     .local v1, "info":Landroid/net/NetworkInfo;
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiEnabler$1;->this$0:Lcom/android/settings/wifi/WifiEnabler;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiEnabler$1;->this$0:Lcom/android/settings_ex/wifi/WifiEnabler;
 
-    # getter for: Lcom/android/settings/wifi/WifiEnabler;->mConnected:Ljava/util/concurrent/atomic/AtomicBoolean;
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiEnabler;->access$100(Lcom/android/settings/wifi/WifiEnabler;)Ljava/util/concurrent/atomic/AtomicBoolean;
+    # getter for: Lcom/android/settings_ex/wifi/WifiEnabler;->mConnected:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiEnabler;->access$100(Lcom/android/settings_ex/wifi/WifiEnabler;)Ljava/util/concurrent/atomic/AtomicBoolean;
 
     move-result-object v3
 
@@ -152,14 +152,14 @@
     invoke-virtual {v3, v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
     .line 98
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiEnabler$1;->this$0:Lcom/android/settings/wifi/WifiEnabler;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiEnabler$1;->this$0:Lcom/android/settings_ex/wifi/WifiEnabler;
 
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->getDetailedState()Landroid/net/NetworkInfo$DetailedState;
 
     move-result-object v4
 
-    # invokes: Lcom/android/settings/wifi/WifiEnabler;->handleStateChanged(Landroid/net/NetworkInfo$DetailedState;)V
-    invoke-static {v3, v4}, Lcom/android/settings/wifi/WifiEnabler;->access$200(Lcom/android/settings/wifi/WifiEnabler;Landroid/net/NetworkInfo$DetailedState;)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiEnabler;->handleStateChanged(Landroid/net/NetworkInfo$DetailedState;)V
+    invoke-static {v3, v4}, Lcom/android/settings_ex/wifi/WifiEnabler;->access$200(Lcom/android/settings_ex/wifi/WifiEnabler;Landroid/net/NetworkInfo$DetailedState;)V
 
     goto :goto_0
 
@@ -193,20 +193,20 @@
 
     .line 102
     :cond_4
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiEnabler$1;->this$0:Lcom/android/settings/wifi/WifiEnabler;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiEnabler$1;->this$0:Lcom/android/settings_ex/wifi/WifiEnabler;
 
-    # invokes: Lcom/android/settings/wifi/WifiEnabler;->isWifiSharingEnabled()Z
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiEnabler;->access$300(Lcom/android/settings/wifi/WifiEnabler;)Z
+    # invokes: Lcom/android/settings_ex/wifi/WifiEnabler;->isWifiSharingEnabled()Z
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiEnabler;->access$300(Lcom/android/settings_ex/wifi/WifiEnabler;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
     .line 104
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiEnabler$1;->this$0:Lcom/android/settings/wifi/WifiEnabler;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiEnabler$1;->this$0:Lcom/android/settings_ex/wifi/WifiEnabler;
 
-    # getter for: Lcom/android/settings/wifi/WifiEnabler;->mSwitch:Landroid/widget/Switch;
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiEnabler;->access$400(Lcom/android/settings/wifi/WifiEnabler;)Landroid/widget/Switch;
+    # getter for: Lcom/android/settings_ex/wifi/WifiEnabler;->mSwitch:Landroid/widget/Switch;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiEnabler;->access$400(Lcom/android/settings_ex/wifi/WifiEnabler;)Landroid/widget/Switch;
 
     move-result-object v3
 

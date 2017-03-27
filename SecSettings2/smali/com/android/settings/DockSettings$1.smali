@@ -1,11 +1,11 @@
-.class Lcom/android/settings/DockSettings$1;
+.class Lcom/android/settings_ex/DockSettings$1;
 .super Landroid/content/BroadcastReceiver;
 .source "DockSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DockSettings;
+    value = Lcom/android/settings_ex/DockSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DockSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/DockSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DockSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/DockSettings;)V
     .locals 0
 
     .prologue
     .line 103
-    iput-object p1, p0, Lcom/android/settings/DockSettings$1;->this$0:Lcom/android/settings/DockSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/DockSettings$1;->this$0:Lcom/android/settings_ex/DockSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -118,10 +118,10 @@
     if-ne v0, v5, :cond_2
 
     .line 113
-    iget-object v1, p0, Lcom/android/settings/DockSettings$1;->this$0:Lcom/android/settings/DockSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings$1;->this$0:Lcom/android/settings_ex/DockSettings;
 
-    # getter for: Lcom/android/settings/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
-    invoke-static {v1}, Lcom/android/settings/DockSettings;->access$000(Lcom/android/settings/DockSettings;)Landroid/preference/ListPreference;
+    # getter for: Lcom/android/settings_ex/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
+    invoke-static {v1}, Lcom/android/settings_ex/DockSettings;->access$000(Lcom/android/settings_ex/DockSettings;)Landroid/preference/ListPreference;
 
     move-result-object v1
 
@@ -132,10 +132,10 @@
     if-eqz v1, :cond_0
 
     .line 114
-    iget-object v1, p0, Lcom/android/settings/DockSettings$1;->this$0:Lcom/android/settings/DockSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings$1;->this$0:Lcom/android/settings_ex/DockSettings;
 
-    # getter for: Lcom/android/settings/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
-    invoke-static {v1}, Lcom/android/settings/DockSettings;->access$000(Lcom/android/settings/DockSettings;)Landroid/preference/ListPreference;
+    # getter for: Lcom/android/settings_ex/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
+    invoke-static {v1}, Lcom/android/settings_ex/DockSettings;->access$000(Lcom/android/settings_ex/DockSettings;)Landroid/preference/ListPreference;
 
     move-result-object v1
 
@@ -147,20 +147,20 @@
 
     .line 117
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/DockSettings$1;->this$0:Lcom/android/settings/DockSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings$1;->this$0:Lcom/android/settings_ex/DockSettings;
 
-    # getter for: Lcom/android/settings/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
-    invoke-static {v1}, Lcom/android/settings/DockSettings;->access$000(Lcom/android/settings/DockSettings;)Landroid/preference/ListPreference;
+    # getter for: Lcom/android/settings_ex/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
+    invoke-static {v1}, Lcom/android/settings_ex/DockSettings;->access$000(Lcom/android/settings_ex/DockSettings;)Landroid/preference/ListPreference;
 
     move-result-object v1
 
     invoke-virtual {v1, v4}, Landroid/preference/ListPreference;->setEnabled(Z)V
 
     .line 118
-    iget-object v1, p0, Lcom/android/settings/DockSettings$1;->this$0:Lcom/android/settings/DockSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings$1;->this$0:Lcom/android/settings_ex/DockSettings;
 
-    # getter for: Lcom/android/settings/DockSettings;->mCradleEnable:Landroid/preference/CheckBoxPreference;
-    invoke-static {v1}, Lcom/android/settings/DockSettings;->access$100(Lcom/android/settings/DockSettings;)Landroid/preference/CheckBoxPreference;
+    # getter for: Lcom/android/settings_ex/DockSettings;->mCradleEnable:Landroid/preference/CheckBoxPreference;
+    invoke-static {v1}, Lcom/android/settings_ex/DockSettings;->access$100(Lcom/android/settings_ex/DockSettings;)Landroid/preference/CheckBoxPreference;
 
     move-result-object v1
 
@@ -175,20 +175,20 @@
     .line 120
     .restart local v0    # "state":I
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/DockSettings$1;->this$0:Lcom/android/settings/DockSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings$1;->this$0:Lcom/android/settings_ex/DockSettings;
 
-    # getter for: Lcom/android/settings/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
-    invoke-static {v1}, Lcom/android/settings/DockSettings;->access$000(Lcom/android/settings/DockSettings;)Landroid/preference/ListPreference;
+    # getter for: Lcom/android/settings_ex/DockSettings;->mAudioOutput:Landroid/preference/ListPreference;
+    invoke-static {v1}, Lcom/android/settings_ex/DockSettings;->access$000(Lcom/android/settings_ex/DockSettings;)Landroid/preference/ListPreference;
 
     move-result-object v1
 
     invoke-virtual {v1, v5}, Landroid/preference/ListPreference;->setEnabled(Z)V
 
     .line 121
-    iget-object v1, p0, Lcom/android/settings/DockSettings$1;->this$0:Lcom/android/settings/DockSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/DockSettings$1;->this$0:Lcom/android/settings_ex/DockSettings;
 
-    # getter for: Lcom/android/settings/DockSettings;->mCradleEnable:Landroid/preference/CheckBoxPreference;
-    invoke-static {v1}, Lcom/android/settings/DockSettings;->access$100(Lcom/android/settings/DockSettings;)Landroid/preference/CheckBoxPreference;
+    # getter for: Lcom/android/settings_ex/DockSettings;->mCradleEnable:Landroid/preference/CheckBoxPreference;
+    invoke-static {v1}, Lcom/android/settings_ex/DockSettings;->access$100(Lcom/android/settings_ex/DockSettings;)Landroid/preference/CheckBoxPreference;
 
     move-result-object v1
 

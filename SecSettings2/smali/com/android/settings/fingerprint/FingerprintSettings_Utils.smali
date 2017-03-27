@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/fingerprint/FingerprintSettings_Utils;
+.class public Lcom/android/settings_ex/fingerprint/FingerprintSettings_Utils;
 .super Ljava/lang/Object;
 .source "FingerprintSettings_Utils.java"
 

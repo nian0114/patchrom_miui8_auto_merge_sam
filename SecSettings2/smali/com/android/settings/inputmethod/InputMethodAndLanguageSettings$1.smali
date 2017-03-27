@@ -1,11 +1,11 @@
-.class Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings$1;
+.class Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings$1;
 .super Landroid/database/ContentObserver;
 .source "InputMethodAndLanguageSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;
+    value = Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 148
-    iput-object p1, p0, Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings$1;->this$0:Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings$1;->this$0:Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -40,17 +40,17 @@
 
     .prologue
     .line 151
-    iget-object v0, p0, Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings$1;->this$0:Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings$1;->this$0:Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;
 
-    # getter for: Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;->mHandwritingLanguage:Landroid/preference/Preference;
-    invoke-static {v0}, Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;->access$100(Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;->mHandwritingLanguage:Landroid/preference/Preference;
+    invoke-static {v0}, Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;->access$100(Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings$1;->this$0:Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings$1;->this$0:Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;
 
-    # invokes: Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;->getSelectLanguage()Ljava/lang/String;
-    invoke-static {v1}, Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;->access$000(Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;)Ljava/lang/String;
+    # invokes: Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;->getSelectLanguage()Ljava/lang/String;
+    invoke-static {v1}, Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;->access$000(Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;)Ljava/lang/String;
 
     move-result-object v1
 

@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settings/SaveChosenLockWorkerBase$1;
+.class synthetic Lcom/android/settings_ex/SaveChosenLockWorkerBase$1;
 .super Ljava/lang/Object;
 .source "SaveChosenLockWorkerBase.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/SaveChosenLockWorkerBase;
+    value = Lcom/android/settings_ex/SaveChosenLockWorkerBase;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

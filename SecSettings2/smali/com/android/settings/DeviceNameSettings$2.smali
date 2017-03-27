@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DeviceNameSettings$2;
+.class Lcom/android/settings_ex/DeviceNameSettings$2;
 .super Ljava/lang/Object;
 .source "DeviceNameSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DeviceNameSettings;->initView(Landroid/view/View;)V
+    value = Lcom/android/settings_ex/DeviceNameSettings;->initView(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DeviceNameSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/DeviceNameSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DeviceNameSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/DeviceNameSettings;)V
     .locals 0
 
     .prologue
     .line 170
-    iput-object p1, p0, Lcom/android/settings/DeviceNameSettings$2;->this$0:Lcom/android/settings/DeviceNameSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/DeviceNameSettings$2;->this$0:Lcom/android/settings_ex/DeviceNameSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

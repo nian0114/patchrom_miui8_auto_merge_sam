@@ -1,11 +1,11 @@
-.class Lcom/android/settings/deviceinfo/StorageWizardFormatProgress$SilentObserver;
+.class Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress$SilentObserver;
 .super Landroid/content/pm/IPackageMoveObserver$Stub;
 .source "StorageWizardFormatProgress.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/StorageWizardFormatProgress;
+    value = Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,13 +25,13 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/deviceinfo/StorageWizardFormatProgress$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/deviceinfo/StorageWizardFormatProgress$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress$1;
 
     .prologue
     .line 309
-    invoke-direct {p0}, Lcom/android/settings/deviceinfo/StorageWizardFormatProgress$SilentObserver;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress$SilentObserver;-><init>()V
 
     return-void
 .end method

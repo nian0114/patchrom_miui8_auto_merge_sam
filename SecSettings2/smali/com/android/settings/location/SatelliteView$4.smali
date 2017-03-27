@@ -1,4 +1,4 @@
-.class Lcom/android/settings/location/SatelliteView$4;
+.class Lcom/android/settings_ex/location/SatelliteView$4;
 .super Ljava/lang/Object;
 .source "SatelliteView.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/location/SatelliteView;
+    value = Lcom/android/settings_ex/location/SatelliteView;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/location/SatelliteView;
+.field final synthetic this$0:Lcom/android/settings_ex/location/SatelliteView;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/location/SatelliteView;)V
+.method constructor <init>(Lcom/android/settings_ex/location/SatelliteView;)V
     .locals 0
 
     .prologue
     .line 397
-    iput-object p1, p0, Lcom/android/settings/location/SatelliteView$4;->this$0:Lcom/android/settings/location/SatelliteView;
+    iput-object p1, p0, Lcom/android/settings_ex/location/SatelliteView$4;->this$0:Lcom/android/settings_ex/location/SatelliteView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -84,25 +84,25 @@
 
     .line 409
     .local v12, "time":J
-    # setter for: Lcom/android/settings/location/SatelliteView;->mLongitude:D
-    invoke-static {v10, v11}, Lcom/android/settings/location/SatelliteView;->access$202(D)D
+    # setter for: Lcom/android/settings_ex/location/SatelliteView;->mLongitude:D
+    invoke-static {v10, v11}, Lcom/android/settings_ex/location/SatelliteView;->access$202(D)D
 
     .line 410
-    # setter for: Lcom/android/settings/location/SatelliteView;->mLatitude:D
-    invoke-static {v8, v9}, Lcom/android/settings/location/SatelliteView;->access$302(D)D
+    # setter for: Lcom/android/settings_ex/location/SatelliteView;->mLatitude:D
+    invoke-static {v8, v9}, Lcom/android/settings_ex/location/SatelliteView;->access$302(D)D
 
     .line 411
-    # setter for: Lcom/android/settings/location/SatelliteView;->mAltitude:D
-    invoke-static {v4, v5}, Lcom/android/settings/location/SatelliteView;->access$402(D)D
+    # setter for: Lcom/android/settings_ex/location/SatelliteView;->mAltitude:D
+    invoke-static {v4, v5}, Lcom/android/settings_ex/location/SatelliteView;->access$402(D)D
 
     .line 412
-    # setter for: Lcom/android/settings/location/SatelliteView;->mBearing:F
-    invoke-static {v3}, Lcom/android/settings/location/SatelliteView;->access$502(F)F
+    # setter for: Lcom/android/settings_ex/location/SatelliteView;->mBearing:F
+    invoke-static {v3}, Lcom/android/settings_ex/location/SatelliteView;->access$502(F)F
 
     .line 414
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/location/SatelliteView$4;->this$0:Lcom/android/settings/location/SatelliteView;
+    iget-object v14, v0, Lcom/android/settings_ex/location/SatelliteView$4;->this$0:Lcom/android/settings_ex/location/SatelliteView;
 
     const/high16 v15, 0x45610000    # 3600.0f
 
@@ -118,34 +118,34 @@
 
     move-wide/from16 v0, v16
 
-    # setter for: Lcom/android/settings/location/SatelliteView;->mSpeed:D
-    invoke-static {v14, v0, v1}, Lcom/android/settings/location/SatelliteView;->access$602(Lcom/android/settings/location/SatelliteView;D)D
+    # setter for: Lcom/android/settings_ex/location/SatelliteView;->mSpeed:D
+    invoke-static {v14, v0, v1}, Lcom/android/settings_ex/location/SatelliteView;->access$602(Lcom/android/settings_ex/location/SatelliteView;D)D
 
     .line 415
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/location/SatelliteView$4;->this$0:Lcom/android/settings/location/SatelliteView;
+    iget-object v14, v0, Lcom/android/settings_ex/location/SatelliteView$4;->this$0:Lcom/android/settings_ex/location/SatelliteView;
 
-    # setter for: Lcom/android/settings/location/SatelliteView;->mAccuracy:F
-    invoke-static {v14, v2}, Lcom/android/settings/location/SatelliteView;->access$702(Lcom/android/settings/location/SatelliteView;F)F
+    # setter for: Lcom/android/settings_ex/location/SatelliteView;->mAccuracy:F
+    invoke-static {v14, v2}, Lcom/android/settings_ex/location/SatelliteView;->access$702(Lcom/android/settings_ex/location/SatelliteView;F)F
 
     .line 416
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/location/SatelliteView$4;->this$0:Lcom/android/settings/location/SatelliteView;
+    iget-object v14, v0, Lcom/android/settings_ex/location/SatelliteView$4;->this$0:Lcom/android/settings_ex/location/SatelliteView;
 
-    # setter for: Lcom/android/settings/location/SatelliteView;->mTime:J
-    invoke-static {v14, v12, v13}, Lcom/android/settings/location/SatelliteView;->access$802(Lcom/android/settings/location/SatelliteView;J)J
+    # setter for: Lcom/android/settings_ex/location/SatelliteView;->mTime:J
+    invoke-static {v14, v12, v13}, Lcom/android/settings_ex/location/SatelliteView;->access$802(Lcom/android/settings_ex/location/SatelliteView;J)J
 
     .line 418
     new-instance v6, Ljava/util/Date;
 
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/location/SatelliteView$4;->this$0:Lcom/android/settings/location/SatelliteView;
+    iget-object v14, v0, Lcom/android/settings_ex/location/SatelliteView$4;->this$0:Lcom/android/settings_ex/location/SatelliteView;
 
-    # getter for: Lcom/android/settings/location/SatelliteView;->mTime:J
-    invoke-static {v14}, Lcom/android/settings/location/SatelliteView;->access$800(Lcom/android/settings/location/SatelliteView;)J
+    # getter for: Lcom/android/settings_ex/location/SatelliteView;->mTime:J
+    invoke-static {v14}, Lcom/android/settings_ex/location/SatelliteView;->access$800(Lcom/android/settings_ex/location/SatelliteView;)J
 
     move-result-wide v14
 
@@ -155,7 +155,7 @@
     .local v6, "date":Ljava/util/Date;
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/location/SatelliteView$4;->this$0:Lcom/android/settings/location/SatelliteView;
+    iget-object v14, v0, Lcom/android/settings_ex/location/SatelliteView$4;->this$0:Lcom/android/settings_ex/location/SatelliteView;
 
     invoke-static {}, Ljava/text/DateFormat;->getDateInstance()Ljava/text/DateFormat;
 
@@ -165,14 +165,14 @@
 
     move-result-object v15
 
-    iput-object v15, v14, Lcom/android/settings/location/SatelliteView;->calendarDate:Ljava/lang/String;
+    iput-object v15, v14, Lcom/android/settings_ex/location/SatelliteView;->calendarDate:Ljava/lang/String;
 
     .line 421
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/location/SatelliteView$4;->this$0:Lcom/android/settings/location/SatelliteView;
+    iget-object v14, v0, Lcom/android/settings_ex/location/SatelliteView$4;->this$0:Lcom/android/settings_ex/location/SatelliteView;
 
-    invoke-virtual {v14}, Lcom/android/settings/location/SatelliteView;->showSVStatus()V
+    invoke-virtual {v14}, Lcom/android/settings_ex/location/SatelliteView;->showSVStatus()V
 
     .line 422
     return-void
@@ -184,9 +184,9 @@
 
     .prologue
     .line 427
-    iget-object v0, p0, Lcom/android/settings/location/SatelliteView$4;->this$0:Lcom/android/settings/location/SatelliteView;
+    iget-object v0, p0, Lcom/android/settings_ex/location/SatelliteView$4;->this$0:Lcom/android/settings_ex/location/SatelliteView;
 
-    invoke-virtual {v0}, Lcom/android/settings/location/SatelliteView;->showSVStatus()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/location/SatelliteView;->showSVStatus()V
 
     .line 428
     return-void
@@ -198,9 +198,9 @@
 
     .prologue
     .line 433
-    iget-object v0, p0, Lcom/android/settings/location/SatelliteView$4;->this$0:Lcom/android/settings/location/SatelliteView;
+    iget-object v0, p0, Lcom/android/settings_ex/location/SatelliteView$4;->this$0:Lcom/android/settings_ex/location/SatelliteView;
 
-    invoke-virtual {v0}, Lcom/android/settings/location/SatelliteView;->showSVStatus()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/location/SatelliteView;->showSVStatus()V
 
     .line 434
     return-void
@@ -214,9 +214,9 @@
 
     .prologue
     .line 439
-    iget-object v0, p0, Lcom/android/settings/location/SatelliteView$4;->this$0:Lcom/android/settings/location/SatelliteView;
+    iget-object v0, p0, Lcom/android/settings_ex/location/SatelliteView$4;->this$0:Lcom/android/settings_ex/location/SatelliteView;
 
-    invoke-virtual {v0}, Lcom/android/settings/location/SatelliteView;->showSVStatus()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/location/SatelliteView;->showSVStatus()V
 
     .line 440
     return-void

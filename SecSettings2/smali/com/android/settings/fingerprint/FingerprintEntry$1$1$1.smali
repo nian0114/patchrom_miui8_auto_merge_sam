@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fingerprint/FingerprintEntry$1$1$1;
+.class Lcom/android/settings_ex/fingerprint/FingerprintEntry$1$1$1;
 .super Ljava/lang/Object;
 .source "FingerprintEntry.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fingerprint/FingerprintEntry$1$1;->run()V
+    value = Lcom/android/settings_ex/fingerprint/FingerprintEntry$1$1;->run()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$2:Lcom/android/settings/fingerprint/FingerprintEntry$1$1;
+.field final synthetic this$2:Lcom/android/settings_ex/fingerprint/FingerprintEntry$1$1;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/FingerprintEntry$1$1;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintEntry$1$1;)V
     .locals 0
 
     .prologue
     .line 266
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintEntry$1$1$1;->this$2:Lcom/android/settings/fingerprint/FingerprintEntry$1$1;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry$1$1$1;->this$2:Lcom/android/settings_ex/fingerprint/FingerprintEntry$1$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,14 +41,14 @@
 
     .prologue
     .line 269
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry$1$1$1;->this$2:Lcom/android/settings/fingerprint/FingerprintEntry$1$1;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry$1$1$1;->this$2:Lcom/android/settings_ex/fingerprint/FingerprintEntry$1$1;
 
-    iget-object v0, v0, Lcom/android/settings/fingerprint/FingerprintEntry$1$1;->this$1:Lcom/android/settings/fingerprint/FingerprintEntry$1;
+    iget-object v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintEntry$1$1;->this$1:Lcom/android/settings_ex/fingerprint/FingerprintEntry$1;
 
-    iget-object v0, v0, Lcom/android/settings/fingerprint/FingerprintEntry$1;->this$0:Lcom/android/settings/fingerprint/FingerprintEntry;
+    iget-object v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintEntry$1;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintEntry;
 
-    # invokes: Lcom/android/settings/fingerprint/FingerprintEntry;->showDatabaseFailureDialog()V
-    invoke-static {v0}, Lcom/android/settings/fingerprint/FingerprintEntry;->access$500(Lcom/android/settings/fingerprint/FingerprintEntry;)V
+    # invokes: Lcom/android/settings_ex/fingerprint/FingerprintEntry;->showDatabaseFailureDialog()V
+    invoke-static {v0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->access$500(Lcom/android/settings_ex/fingerprint/FingerprintEntry;)V
 
     .line 270
     return-void

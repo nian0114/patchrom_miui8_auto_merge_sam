@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/WifiPickerDialog;
+.class public Lcom/android/settings_ex/wifi/WifiPickerDialog;
 .super Landroid/app/Activity;
 .source "WifiPickerDialog.java"
 
@@ -28,26 +28,26 @@
     .line 47
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiPickerDialog;->mLastToast:Landroid/widget/Toast;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->mLastToast:Landroid/widget/Toast;
 
     .line 49
-    new-instance v0, Lcom/android/settings/wifi/WifiPickerDialog$1;
+    new-instance v0, Lcom/android/settings_ex/wifi/WifiPickerDialog$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/wifi/WifiPickerDialog$1;-><init>(Lcom/android/settings/wifi/WifiPickerDialog;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/wifi/WifiPickerDialog$1;-><init>(Lcom/android/settings_ex/wifi/WifiPickerDialog;)V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiPickerDialog;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->mReceiver:Landroid/content/BroadcastReceiver;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/wifi/WifiPickerDialog;Z)V
+.method static synthetic access$000(Lcom/android/settings_ex/wifi/WifiPickerDialog;Z)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiPickerDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiPickerDialog;
     .param p1, "x1"    # Z
 
     .prologue
     .line 38
-    invoke-direct {p0, p1}, Lcom/android/settings/wifi/WifiPickerDialog;->requestSystemKeyEvents(Z)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/wifi/WifiPickerDialog;->requestSystemKeyEvents(Z)V
 
     return-void
 .end method
@@ -59,7 +59,7 @@
     const/4 v4, 0x1
 
     .line 190
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiPickerDialog;->am:Landroid/app/ActivityManager;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->am:Landroid/app/ActivityManager;
 
     invoke-virtual {v5}, Landroid/app/ActivityManager;->isInLockTaskMode()Z
 
@@ -107,7 +107,7 @@
     if-eqz v1, :cond_2
 
     .line 197
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiPickerDialog;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
 
     invoke-virtual {v5}, Landroid/view/accessibility/AccessibilityManager;->isEnabled()Z
 
@@ -116,7 +116,7 @@
     if-eqz v5, :cond_1
 
     .line 198
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiPickerDialog;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiPickerDialog;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -133,19 +133,19 @@
     .line 209
     .local v3, "text":I
     :goto_0
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiPickerDialog;->mLastToast:Landroid/widget/Toast;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->mLastToast:Landroid/widget/Toast;
 
     if-eqz v5, :cond_0
 
     .line 210
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiPickerDialog;->mLastToast:Landroid/widget/Toast;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->mLastToast:Landroid/widget/Toast;
 
     invoke-virtual {v5}, Landroid/widget/Toast;->cancel()V
 
     .line 211
     const/4 v5, 0x0
 
-    iput-object v5, p0, Lcom/android/settings/wifi/WifiPickerDialog;->mLastToast:Landroid/widget/Toast;
+    iput-object v5, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->mLastToast:Landroid/widget/Toast;
 
     .line 213
     :cond_0
@@ -155,10 +155,10 @@
 
     move-result-object v5
 
-    iput-object v5, p0, Lcom/android/settings/wifi/WifiPickerDialog;->mLastToast:Landroid/widget/Toast;
+    iput-object v5, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->mLastToast:Landroid/widget/Toast;
 
     .line 214
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiPickerDialog;->mLastToast:Landroid/widget/Toast;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->mLastToast:Landroid/widget/Toast;
 
     invoke-virtual {v5}, Landroid/widget/Toast;->show()V
 
@@ -171,7 +171,7 @@
     .line 200
     .restart local v1    # "hasPermanentMenuKey":Z
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiPickerDialog;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiPickerDialog;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -191,7 +191,7 @@
     .line 203
     .end local v3    # "text":I
     :cond_2
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiPickerDialog;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
 
     invoke-virtual {v5}, Landroid/view/accessibility/AccessibilityManager;->isEnabled()Z
 
@@ -200,7 +200,7 @@
     if-eqz v5, :cond_3
 
     .line 204
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiPickerDialog;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiPickerDialog;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -220,7 +220,7 @@
     .line 206
     .end local v3    # "text":I
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiPickerDialog;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiPickerDialog;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -265,40 +265,40 @@
 
     .prologue
     .line 122
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiPickerDialog;->getComponentName()Landroid/content/ComponentName;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiPickerDialog;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v0
 
     .line 124
     .local v0, "component":Landroid/content/ComponentName;
     :try_start_0
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiPickerDialog;->mWindowmanager:Landroid/view/IWindowManager;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->mWindowmanager:Landroid/view/IWindowManager;
 
     if-eqz v2, :cond_0
 
     .line 125
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiPickerDialog;->mWindowmanager:Landroid/view/IWindowManager;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->mWindowmanager:Landroid/view/IWindowManager;
 
     const/4 v3, 0x4
 
     invoke-interface {v2, v3, v0, p1}, Landroid/view/IWindowManager;->requestSystemKeyEvent(ILandroid/content/ComponentName;Z)Z
 
     .line 126
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiPickerDialog;->mWindowmanager:Landroid/view/IWindowManager;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->mWindowmanager:Landroid/view/IWindowManager;
 
     const/4 v3, 0x3
 
     invoke-interface {v2, v3, v0, p1}, Landroid/view/IWindowManager;->requestSystemKeyEvent(ILandroid/content/ComponentName;Z)Z
 
     .line 127
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiPickerDialog;->mWindowmanager:Landroid/view/IWindowManager;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->mWindowmanager:Landroid/view/IWindowManager;
 
     const/16 v3, 0xbb
 
     invoke-interface {v2, v3, v0, p1}, Landroid/view/IWindowManager;->requestSystemKeyEvent(ILandroid/content/ComponentName;Z)Z
 
     .line 128
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiPickerDialog;->mWindowmanager:Landroid/view/IWindowManager;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->mWindowmanager:Landroid/view/IWindowManager;
 
     const/16 v3, 0x3e9
 
@@ -346,7 +346,7 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 179
-    iget v0, p0, Lcom/android/settings/wifi/WifiPickerDialog;->mLastOrientation:I
+    iget v0, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->mLastOrientation:I
 
     iget v1, p1, Landroid/content/res/Configuration;->orientation:I
 
@@ -356,7 +356,7 @@
     :cond_0
     iget v0, p1, Landroid/content/res/Configuration;->orientation:I
 
-    iput v0, p0, Lcom/android/settings/wifi/WifiPickerDialog;->mLastOrientation:I
+    iput v0, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->mLastOrientation:I
 
     .line 186
     return-void
@@ -373,24 +373,24 @@
     .line 72
     const-string v4, "accessibility"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/wifi/WifiPickerDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/wifi/WifiPickerDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/view/accessibility/AccessibilityManager;
 
-    iput-object v4, p0, Lcom/android/settings/wifi/WifiPickerDialog;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
+    iput-object v4, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
 
     .line 73
     const-string v4, "activity"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/wifi/WifiPickerDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/wifi/WifiPickerDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/app/ActivityManager;
 
-    iput-object v4, p0, Lcom/android/settings/wifi/WifiPickerDialog;->am:Landroid/app/ActivityManager;
+    iput-object v4, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->am:Landroid/app/ActivityManager;
 
     .line 74
     const-string v4, "window"
@@ -403,13 +403,13 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/wifi/WifiPickerDialog;->mWindowmanager:Landroid/view/IWindowManager;
+    iput-object v4, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->mWindowmanager:Landroid/view/IWindowManager;
 
     .line 81
     const v4, 0x7f040277
 
     :try_start_0
-    invoke-virtual {p0, v4}, Lcom/android/settings/wifi/WifiPickerDialog;->setContentView(I)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/wifi/WifiPickerDialog;->setContentView(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -417,10 +417,10 @@
     :goto_0
     const v4, 0x7f0e038e
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/wifi/WifiPickerDialog;->setTitle(I)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/wifi/WifiPickerDialog;->setTitle(I)V
 
     .line 89
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiPickerDialog;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiPickerDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v4
 
@@ -470,12 +470,12 @@
     invoke-virtual {v3, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 102
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiPickerDialog;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v4, v3}, Lcom/android/settings/wifi/WifiPickerDialog;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v4, v3}, Lcom/android/settings_ex/wifi/WifiPickerDialog;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 103
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiPickerDialog;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiPickerDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v4
 
@@ -521,7 +521,7 @@
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 85
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiPickerDialog;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiPickerDialog;->finish()V
 
     goto :goto_0
 .end method
@@ -531,14 +531,14 @@
 
     .prologue
     .line 227
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiPickerDialog;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->mReceiver:Landroid/content/BroadcastReceiver;
 
     if-eqz v0, :cond_0
 
     .line 228
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiPickerDialog;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiPickerDialog;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/wifi/WifiPickerDialog;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wifi/WifiPickerDialog;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 230
     :cond_0
@@ -573,7 +573,7 @@
 
     .line 111
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiPickerDialog;->checkAndShowWindowPinnedMsg()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiPickerDialog;->checkAndShowWindowPinnedMsg()Z
 
     move-result v0
 
@@ -631,7 +631,7 @@
     .line 169
     const-string v2, "statusbar"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/wifi/WifiPickerDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/wifi/WifiPickerDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -656,7 +656,7 @@
     .local v0, "intent":Landroid/content/Intent;
     sget-object v2, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
 
-    invoke-virtual {p0, v0, v2}, Lcom/android/settings/wifi/WifiPickerDialog;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
+    invoke-virtual {p0, v0, v2}, Lcom/android/settings_ex/wifi/WifiPickerDialog;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
     .line 174
     return-void

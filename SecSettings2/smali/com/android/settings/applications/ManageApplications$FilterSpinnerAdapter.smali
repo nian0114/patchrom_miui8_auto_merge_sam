@@ -1,11 +1,11 @@
-.class Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;
+.class Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;
 .super Landroid/widget/ArrayAdapter;
 .source "ManageApplications.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/ManageApplications;
+    value = Lcom/android/settings_ex/applications/ManageApplications;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -35,17 +35,17 @@
     .end annotation
 .end field
 
-.field private final mManageApplications:Lcom/android/settings/applications/ManageApplications;
+.field private final mManageApplications:Lcom/android/settings_ex/applications/ManageApplications;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/settings/applications/ManageApplications;)V
+.method public constructor <init>(Lcom/android/settings_ex/applications/ManageApplications;)V
     .locals 2
-    .param p1, "manageApplications"    # Lcom/android/settings/applications/ManageApplications;
+    .param p1, "manageApplications"    # Lcom/android/settings_ex/applications/ManageApplications;
 
     .prologue
     .line 923
-    invoke-virtual {p1}, Lcom/android/settings/applications/ManageApplications;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p1}, Lcom/android/settings_ex/applications/ManageApplications;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -58,15 +58,15 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
 
     .line 924
     const v0, 0x1090009
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->setDropDownViewResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->setDropDownViewResource(I)V
 
     .line 925
-    iput-object p1, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mManageApplications:Lcom/android/settings/applications/ManageApplications;
+    iput-object p1, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mManageApplications:Lcom/android/settings_ex/applications/ManageApplications;
 
     .line 926
     return-void
@@ -78,13 +78,13 @@
 
     .prologue
     .line 984
-    iget-object v0, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mManageApplications:Lcom/android/settings/applications/ManageApplications;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mManageApplications:Lcom/android/settings_ex/applications/ManageApplications;
 
-    sget-object v1, Lcom/android/settings/applications/ManageApplications;->FILTER_LABELS:[I
+    sget-object v1, Lcom/android/settings_ex/applications/ManageApplications;->FILTER_LABELS:[I
 
     aget v1, v1, p1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/applications/ManageApplications;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/applications/ManageApplications;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -103,7 +103,7 @@
     const/4 v3, 0x0
 
     .line 956
-    iget-object v0, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -122,7 +122,7 @@
 
     .line 959
     :cond_1
-    sget-boolean v0, Lcom/android/settings/applications/ManageApplications;->DEBUG:Z
+    sget-boolean v0, Lcom/android/settings_ex/applications/ManageApplications;->DEBUG:Z
 
     if-eqz v0, :cond_2
 
@@ -150,19 +150,19 @@
 
     .line 960
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
 
     invoke-static {v0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
     .line 961
-    iget-object v0, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mManageApplications:Lcom/android/settings/applications/ManageApplications;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mManageApplications:Lcom/android/settings_ex/applications/ManageApplications;
 
-    # getter for: Lcom/android/settings/applications/ManageApplications;->mSpinnerHeader:Landroid/view/View;
-    invoke-static {v0}, Lcom/android/settings/applications/ManageApplications;->access$400(Lcom/android/settings/applications/ManageApplications;)Landroid/view/View;
+    # getter for: Lcom/android/settings_ex/applications/ManageApplications;->mSpinnerHeader:Landroid/view/View;
+    invoke-static {v0}, Lcom/android/settings_ex/applications/ManageApplications;->access$400(Lcom/android/settings_ex/applications/ManageApplications;)Landroid/view/View;
 
     move-result-object v2
 
-    iget-object v0, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -178,17 +178,17 @@
     invoke-virtual {v2, v0}, Landroid/view/View;->setVisibility(I)V
 
     .line 963
-    invoke-virtual {p0}, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->notifyDataSetChanged()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->notifyDataSetChanged()V
 
     .line 964
-    iget-object v0, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mManageApplications:Lcom/android/settings/applications/ManageApplications;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mManageApplications:Lcom/android/settings_ex/applications/ManageApplications;
 
-    iget v0, v0, Lcom/android/settings/applications/ManageApplications;->mFilter:I
+    iget v0, v0, Lcom/android/settings_ex/applications/ManageApplications;->mFilter:I
 
     if-ne v0, p1, :cond_0
 
     .line 965
-    iget-object v0, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -197,7 +197,7 @@
     if-lez v0, :cond_0
 
     .line 966
-    sget-boolean v0, Lcom/android/settings/applications/ManageApplications;->DEBUG:Z
+    sget-boolean v0, Lcom/android/settings_ex/applications/ManageApplications;->DEBUG:Z
 
     if-eqz v0, :cond_3
 
@@ -213,7 +213,7 @@
 
     move-result-object v2
 
-    iget-object v4, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -231,23 +231,23 @@
 
     .line 967
     :cond_3
-    iget-object v0, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mManageApplications:Lcom/android/settings/applications/ManageApplications;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mManageApplications:Lcom/android/settings_ex/applications/ManageApplications;
 
-    # getter for: Lcom/android/settings/applications/ManageApplications;->mFilterSpinner:Landroid/widget/Spinner;
-    invoke-static {v0}, Lcom/android/settings/applications/ManageApplications;->access$500(Lcom/android/settings/applications/ManageApplications;)Landroid/widget/Spinner;
+    # getter for: Lcom/android/settings_ex/applications/ManageApplications;->mFilterSpinner:Landroid/widget/Spinner;
+    invoke-static {v0}, Lcom/android/settings_ex/applications/ManageApplications;->access$500(Lcom/android/settings_ex/applications/ManageApplications;)Landroid/widget/Spinner;
 
     move-result-object v0
 
     invoke-virtual {v0, v3}, Landroid/widget/Spinner;->setSelection(I)V
 
     .line 968
-    iget-object v0, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mManageApplications:Lcom/android/settings/applications/ManageApplications;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mManageApplications:Lcom/android/settings_ex/applications/ManageApplications;
 
     const-wide/16 v4, 0x0
 
     move-object v2, v1
 
-    invoke-virtual/range {v0 .. v5}, Lcom/android/settings/applications/ManageApplications;->onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    invoke-virtual/range {v0 .. v5}, Lcom/android/settings_ex/applications/ManageApplications;->onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
 
     goto :goto_0
 
@@ -270,7 +270,7 @@
     const/4 v3, 0x0
 
     .line 941
-    iget-object v0, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -289,7 +289,7 @@
 
     .line 942
     :cond_1
-    sget-boolean v0, Lcom/android/settings/applications/ManageApplications;->DEBUG:Z
+    sget-boolean v0, Lcom/android/settings_ex/applications/ManageApplications;->DEBUG:Z
 
     if-eqz v0, :cond_2
 
@@ -317,7 +317,7 @@
 
     .line 943
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -326,19 +326,19 @@
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 944
-    iget-object v0, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
 
     invoke-static {v0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
     .line 945
-    iget-object v0, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mManageApplications:Lcom/android/settings/applications/ManageApplications;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mManageApplications:Lcom/android/settings_ex/applications/ManageApplications;
 
-    # getter for: Lcom/android/settings/applications/ManageApplications;->mSpinnerHeader:Landroid/view/View;
-    invoke-static {v0}, Lcom/android/settings/applications/ManageApplications;->access$400(Lcom/android/settings/applications/ManageApplications;)Landroid/view/View;
+    # getter for: Lcom/android/settings_ex/applications/ManageApplications;->mSpinnerHeader:Landroid/view/View;
+    invoke-static {v0}, Lcom/android/settings_ex/applications/ManageApplications;->access$400(Lcom/android/settings_ex/applications/ManageApplications;)Landroid/view/View;
 
     move-result-object v2
 
-    iget-object v0, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -352,10 +352,10 @@
     invoke-virtual {v2, v0}, Landroid/view/View;->setVisibility(I)V
 
     .line 947
-    invoke-virtual {p0}, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->notifyDataSetChanged()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->notifyDataSetChanged()V
 
     .line 948
-    iget-object v0, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -364,7 +364,7 @@
     if-ne v0, v5, :cond_0
 
     .line 949
-    sget-boolean v0, Lcom/android/settings/applications/ManageApplications;->DEBUG:Z
+    sget-boolean v0, Lcom/android/settings_ex/applications/ManageApplications;->DEBUG:Z
 
     if-eqz v0, :cond_3
 
@@ -392,23 +392,23 @@
 
     .line 950
     :cond_3
-    iget-object v0, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mManageApplications:Lcom/android/settings/applications/ManageApplications;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mManageApplications:Lcom/android/settings_ex/applications/ManageApplications;
 
-    # getter for: Lcom/android/settings/applications/ManageApplications;->mFilterSpinner:Landroid/widget/Spinner;
-    invoke-static {v0}, Lcom/android/settings/applications/ManageApplications;->access$500(Lcom/android/settings/applications/ManageApplications;)Landroid/widget/Spinner;
+    # getter for: Lcom/android/settings_ex/applications/ManageApplications;->mFilterSpinner:Landroid/widget/Spinner;
+    invoke-static {v0}, Lcom/android/settings_ex/applications/ManageApplications;->access$500(Lcom/android/settings_ex/applications/ManageApplications;)Landroid/widget/Spinner;
 
     move-result-object v0
 
     invoke-virtual {v0, v3}, Landroid/widget/Spinner;->setSelection(I)V
 
     .line 951
-    iget-object v0, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mManageApplications:Lcom/android/settings/applications/ManageApplications;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mManageApplications:Lcom/android/settings_ex/applications/ManageApplications;
 
     const-wide/16 v4, 0x0
 
     move-object v2, v1
 
-    invoke-virtual/range {v0 .. v5}, Lcom/android/settings/applications/ManageApplications;->onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    invoke-virtual/range {v0 .. v5}, Lcom/android/settings_ex/applications/ManageApplications;->onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
 
     goto :goto_0
 
@@ -424,7 +424,7 @@
 
     .prologue
     .line 975
-    iget-object v0, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -439,7 +439,7 @@
 
     .prologue
     .line 929
-    iget-object v0, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -460,7 +460,7 @@
 
     .prologue
     .line 980
-    iget-object v0, p0, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->mFilterOptions:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -472,7 +472,7 @@
 
     move-result v0
 
-    invoke-direct {p0, v0}, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->getFilterString(I)Ljava/lang/CharSequence;
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->getFilterString(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -485,7 +485,7 @@
 
     .prologue
     .line 914
-    invoke-virtual {p0, p1}, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->getItem(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->getItem(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -502,7 +502,7 @@
     if-eqz p2, :cond_0
 
     .line 934
-    invoke-virtual {p0, p1}, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->enableFilter(I)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->enableFilter(I)V
 
     .line 938
     :goto_0
@@ -510,7 +510,7 @@
 
     .line 936
     :cond_0
-    invoke-virtual {p0, p1}, Lcom/android/settings/applications/ManageApplications$FilterSpinnerAdapter;->disableFilter(I)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/applications/ManageApplications$FilterSpinnerAdapter;->disableFilter(I)V
 
     goto :goto_0
 .end method

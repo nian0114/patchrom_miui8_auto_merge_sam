@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;
+.class public Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;
 .super Landroid/os/AsyncTask;
 .source "StorageSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/StorageSettings;
+    value = Lcom/android/settings_ex/deviceinfo/StorageSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -50,10 +50,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;->mContext:Landroid/content/Context;
 
     .line 392
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;->mContext:Landroid/content/Context;
 
     const-class v1, Landroid/os/storage/StorageManager;
 
@@ -63,23 +63,23 @@
 
     check-cast v0, Landroid/os/storage/StorageManager;
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;->mStorageManager:Landroid/os/storage/StorageManager;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;->mStorageManager:Landroid/os/storage/StorageManager;
 
     .line 393
     invoke-virtual {p2}, Landroid/os/storage/VolumeInfo;->getId()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;->mVolumeId:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;->mVolumeId:Ljava/lang/String;
 
     .line 394
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;->mStorageManager:Landroid/os/storage/StorageManager;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;->mStorageManager:Landroid/os/storage/StorageManager;
 
     invoke-virtual {v0, p2}, Landroid/os/storage/StorageManager;->getBestVolumeDescription(Landroid/os/storage/VolumeInfo;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;->mDescription:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;->mDescription:Ljava/lang/String;
 
     .line 395
     return-void
@@ -94,9 +94,9 @@
     .prologue
     .line 400
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;->mStorageManager:Landroid/os/storage/StorageManager;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;->mStorageManager:Landroid/os/storage/StorageManager;
 
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;->mVolumeId:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;->mVolumeId:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Landroid/os/storage/StorageManager;->unmount(Ljava/lang/String;)V
     :try_end_0
@@ -127,7 +127,7 @@
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "x0":[Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Exception;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Exception;
 
     move-result-object v0
 
@@ -147,15 +147,15 @@
     if-nez p1, :cond_0
 
     .line 410
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;->mContext:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;->mContext:Landroid/content/Context;
 
     const v2, 0x7f0e06c5
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    iget-object v4, p0, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;->mDescription:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;->mDescription:Ljava/lang/String;
 
     aput-object v4, v3, v5
 
@@ -187,7 +187,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;->mVolumeId:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;->mVolumeId:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -200,15 +200,15 @@
     invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 414
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;->mContext:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;->mContext:Landroid/content/Context;
 
     const v2, 0x7f0e06c6
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    iget-object v4, p0, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;->mDescription:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;->mDescription:Ljava/lang/String;
 
     aput-object v4, v3, v5
 
@@ -234,7 +234,7 @@
     check-cast p1, Ljava/lang/Exception;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/deviceinfo/StorageSettings$UnmountTask;->onPostExecute(Ljava/lang/Exception;)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/deviceinfo/StorageSettings$UnmountTask;->onPostExecute(Ljava/lang/Exception;)V
 
     return-void
 .end method

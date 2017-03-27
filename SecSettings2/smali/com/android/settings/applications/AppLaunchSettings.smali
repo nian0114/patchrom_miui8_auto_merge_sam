@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/applications/AppLaunchSettings;
-.super Lcom/android/settings/applications/AppInfoWithHeader;
+.class public Lcom/android/settings_ex/applications/AppLaunchSettings;
+.super Lcom/android/settings_ex/applications/AppInfoWithHeader;
 .source "AppLaunchSettings.java"
 
 # interfaces
@@ -16,9 +16,9 @@
 
 .field private mAppDomainUrls:Landroid/preference/Preference;
 
-.field private mAppLinkState:Lcom/android/settings/DropDownPreference;
+.field private mAppLinkState:Lcom/android/settings_ex/DropDownPreference;
 
-.field private mClearDefaultsPreference:Lcom/android/settings/applications/ClearDefaultsPreference;
+.field private mClearDefaultsPreference:Lcom/android/settings_ex/applications/ClearDefaultsPreference;
 
 .field private mHasDomainUrls:Z
 
@@ -59,7 +59,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/applications/AppLaunchSettings;->sBrowserIntent:Landroid/content/Intent;
+    sput-object v0, Lcom/android/settings_ex/applications/AppLaunchSettings;->sBrowserIntent:Landroid/content/Intent;
 
     .line 66
     return-void
@@ -70,19 +70,19 @@
 
     .prologue
     .line 52
-    invoke-direct {p0}, Lcom/android/settings/applications/AppInfoWithHeader;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/applications/AppInfoWithHeader;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/applications/AppLaunchSettings;I)Z
+.method static synthetic access$000(Lcom/android/settings_ex/applications/AppLaunchSettings;I)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/applications/AppLaunchSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/applications/AppLaunchSettings;
     .param p1, "x1"    # I
 
     .prologue
     .line 52
-    invoke-direct {p0, p1}, Lcom/android/settings/applications/AppLaunchSettings;->updateAppLinkState(I)Z
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/applications/AppLaunchSettings;->updateAppLinkState(I)Z
 
     move-result v0
 
@@ -100,27 +100,27 @@
     const/4 v2, 0x0
 
     .line 135
-    iget-boolean v4, p0, Lcom/android/settings/applications/AppLaunchSettings;->mIsBrowser:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mIsBrowser:Z
 
     if-eqz v4, :cond_1
 
     .line 137
-    iget-object v3, p0, Lcom/android/settings/applications/AppLaunchSettings;->mAppLinkState:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mAppLinkState:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v3, v1}, Lcom/android/settings/DropDownPreference;->setShouldDisableView(Z)V
+    invoke-virtual {v3, v1}, Lcom/android/settings_ex/DropDownPreference;->setShouldDisableView(Z)V
 
     .line 138
-    iget-object v3, p0, Lcom/android/settings/applications/AppLaunchSettings;->mAppLinkState:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mAppLinkState:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v3, v2}, Lcom/android/settings/DropDownPreference;->setEnabled(Z)V
+    invoke-virtual {v3, v2}, Lcom/android/settings_ex/DropDownPreference;->setEnabled(Z)V
 
     .line 139
-    iget-object v3, p0, Lcom/android/settings/applications/AppLaunchSettings;->mAppDomainUrls:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mAppDomainUrls:Landroid/preference/Preference;
 
     invoke-virtual {v3, v1}, Landroid/preference/Preference;->setShouldDisableView(Z)V
 
     .line 140
-    iget-object v1, p0, Lcom/android/settings/applications/AppLaunchSettings;->mAppDomainUrls:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mAppDomainUrls:Landroid/preference/Preference;
 
     invoke-virtual {v1, v2}, Landroid/preference/Preference;->setEnabled(Z)V
 
@@ -131,7 +131,7 @@
 
     .line 147
     :cond_1
-    iget-object v4, p0, Lcom/android/settings/applications/AppLaunchSettings;->mAppLinkState:Lcom/android/settings/DropDownPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mAppLinkState:Lcom/android/settings_ex/DropDownPreference;
 
     const v5, 0x7f0e0f0d
 
@@ -141,10 +141,10 @@
 
     move-result-object v6
 
-    invoke-virtual {v4, v5, v6}, Lcom/android/settings/DropDownPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v4, v5, v6}, Lcom/android/settings_ex/DropDownPreference;->addItem(ILjava/lang/Object;)V
 
     .line 149
-    iget-object v4, p0, Lcom/android/settings/applications/AppLaunchSettings;->mAppLinkState:Lcom/android/settings/DropDownPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mAppLinkState:Lcom/android/settings_ex/DropDownPreference;
 
     const v5, 0x7f0e0f0e
 
@@ -152,10 +152,10 @@
 
     move-result-object v6
 
-    invoke-virtual {v4, v5, v6}, Lcom/android/settings/DropDownPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v4, v5, v6}, Lcom/android/settings_ex/DropDownPreference;->addItem(ILjava/lang/Object;)V
 
     .line 151
-    iget-object v4, p0, Lcom/android/settings/applications/AppLaunchSettings;->mAppLinkState:Lcom/android/settings/DropDownPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mAppLinkState:Lcom/android/settings_ex/DropDownPreference;
 
     const v5, 0x7f0e0f0f
 
@@ -165,33 +165,33 @@
 
     move-result-object v6
 
-    invoke-virtual {v4, v5, v6}, Lcom/android/settings/DropDownPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v4, v5, v6}, Lcom/android/settings_ex/DropDownPreference;->addItem(ILjava/lang/Object;)V
 
     .line 154
-    iget-object v4, p0, Lcom/android/settings/applications/AppLaunchSettings;->mAppLinkState:Lcom/android/settings/DropDownPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mAppLinkState:Lcom/android/settings_ex/DropDownPreference;
 
-    iget-boolean v5, p0, Lcom/android/settings/applications/AppLaunchSettings;->mHasDomainUrls:Z
+    iget-boolean v5, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mHasDomainUrls:Z
 
     if-eqz v5, :cond_3
 
-    iget-object v5, p0, Lcom/android/settings/applications/AppLaunchSettings;->entries:[Ljava/lang/CharSequence;
+    iget-object v5, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->entries:[Ljava/lang/CharSequence;
 
     array-length v5, v5
 
     if-eqz v5, :cond_3
 
     :goto_1
-    invoke-virtual {v4, v1}, Lcom/android/settings/DropDownPreference;->setEnabled(Z)V
+    invoke-virtual {v4, v1}, Lcom/android/settings_ex/DropDownPreference;->setEnabled(Z)V
 
     .line 155
-    iget-boolean v1, p0, Lcom/android/settings/applications/AppLaunchSettings;->mHasDomainUrls:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mHasDomainUrls:Z
 
     if-eqz v1, :cond_0
 
     .line 159
-    iget-object v1, p0, Lcom/android/settings/applications/AppLaunchSettings;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mPm:Landroid/content/pm/PackageManager;
 
-    iget-object v2, p0, Lcom/android/settings/applications/AppLaunchSettings;->mPackageName:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mPackageName:Ljava/lang/String;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -203,7 +203,7 @@
 
     .line 160
     .local v0, "state":I
-    iget-object v1, p0, Lcom/android/settings/applications/AppLaunchSettings;->mAppLinkState:Lcom/android/settings/DropDownPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mAppLinkState:Lcom/android/settings_ex/DropDownPreference;
 
     if-nez v0, :cond_2
 
@@ -215,16 +215,16 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
 
     .line 166
-    iget-object v1, p0, Lcom/android/settings/applications/AppLaunchSettings;->mAppLinkState:Lcom/android/settings/DropDownPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mAppLinkState:Lcom/android/settings_ex/DropDownPreference;
 
-    new-instance v2, Lcom/android/settings/applications/AppLaunchSettings$1;
+    new-instance v2, Lcom/android/settings_ex/applications/AppLaunchSettings$1;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/applications/AppLaunchSettings$1;-><init>(Lcom/android/settings/applications/AppLaunchSettings;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/applications/AppLaunchSettings$1;-><init>(Lcom/android/settings_ex/applications/AppLaunchSettings;)V
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/DropDownPreference;->setCallback(Lcom/android/settings/DropDownPreference$Callback;)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/DropDownPreference;->setCallback(Lcom/android/settings_ex/DropDownPreference$Callback;)V
 
     goto :goto_0
 
@@ -258,9 +258,9 @@
     .line 203
     .local p2, "iviList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/IntentFilterVerificationInfo;>;"
     .local p3, "filters":Ljava/util/List;, "Ljava/util/List<Landroid/content/IntentFilter;>;"
-    iget-object v1, p0, Lcom/android/settings/applications/AppLaunchSettings;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mPm:Landroid/content/pm/PackageManager;
 
-    invoke-static {v1, p1}, Lcom/android/settings/Utils;->getHandledDomains(Landroid/content/pm/PackageManager;Ljava/lang/String;)Landroid/util/ArraySet;
+    invoke-static {v1, p1}, Lcom/android/settings_ex/Utils;->getHandledDomains(Landroid/content/pm/PackageManager;Ljava/lang/String;)Landroid/util/ArraySet;
 
     move-result-object v0
 
@@ -287,14 +287,14 @@
 
     .prologue
     .line 107
-    sget-object v4, Lcom/android/settings/applications/AppLaunchSettings;->sBrowserIntent:Landroid/content/Intent;
+    sget-object v4, Lcom/android/settings_ex/applications/AppLaunchSettings;->sBrowserIntent:Landroid/content/Intent;
 
     invoke-virtual {v4, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 108
-    iget-object v4, p0, Lcom/android/settings/applications/AppLaunchSettings;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mPm:Landroid/content/pm/PackageManager;
 
-    sget-object v5, Lcom/android/settings/applications/AppLaunchSettings;->sBrowserIntent:Landroid/content/Intent;
+    sget-object v5, Lcom/android/settings_ex/applications/AppLaunchSettings;->sBrowserIntent:Landroid/content/Intent;
 
     const/high16 v6, 0x20000
 
@@ -368,7 +368,7 @@
     const/4 v4, 0x0
 
     .line 177
-    iget-boolean v5, p0, Lcom/android/settings/applications/AppLaunchSettings;->mIsBrowser:Z
+    iget-boolean v5, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mIsBrowser:Z
 
     if-eqz v5, :cond_1
 
@@ -385,9 +385,9 @@
 
     .line 184
     .local v3, "userId":I
-    iget-object v5, p0, Lcom/android/settings/applications/AppLaunchSettings;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v5, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mPm:Landroid/content/pm/PackageManager;
 
-    iget-object v6, p0, Lcom/android/settings/applications/AppLaunchSettings;->mPackageName:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v5, v6, v3}, Landroid/content/pm/PackageManager;->getIntentVerificationStatus(Ljava/lang/String;I)I
 
@@ -398,9 +398,9 @@
     if-eq v0, p1, :cond_0
 
     .line 190
-    iget-object v5, p0, Lcom/android/settings/applications/AppLaunchSettings;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v5, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mPm:Landroid/content/pm/PackageManager;
 
-    iget-object v6, p0, Lcom/android/settings/applications/AppLaunchSettings;->mPackageName:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v5, v6, p1, v3}, Landroid/content/pm/PackageManager;->updateIntentVerificationStatus(Ljava/lang/String;II)Z
 
@@ -411,9 +411,9 @@
     if-eqz v1, :cond_3
 
     .line 193
-    iget-object v5, p0, Lcom/android/settings/applications/AppLaunchSettings;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v5, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mPm:Landroid/content/pm/PackageManager;
 
-    iget-object v6, p0, Lcom/android/settings/applications/AppLaunchSettings;->mPackageName:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v5, v6, v3}, Landroid/content/pm/PackageManager;->getIntentVerificationStatus(Ljava/lang/String;I)I
 
@@ -485,7 +485,7 @@
     const/4 v4, 0x0
 
     .line 121
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppLaunchSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/AppLaunchSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -515,7 +515,7 @@
     :goto_1
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/android/settings/applications/AppLaunchSettings;->entries:[Ljava/lang/CharSequence;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->entries:[Ljava/lang/CharSequence;
 
     aget-object v3, v3, v4
 
@@ -554,46 +554,46 @@
     const/4 v5, 0x0
 
     .line 79
-    invoke-super {p0, p1}, Lcom/android/settings/applications/AppInfoWithHeader;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/applications/AppInfoWithHeader;->onCreate(Landroid/os/Bundle;)V
 
     .line 81
     const v3, 0x7f080060
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/applications/AppLaunchSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/applications/AppLaunchSettings;->addPreferencesFromResource(I)V
 
     .line 82
     const-string v3, "app_launch_supported_domain_urls"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/applications/AppLaunchSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/applications/AppLaunchSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/applications/AppLaunchSettings;->mAppDomainUrls:Landroid/preference/Preference;
+    iput-object v3, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mAppDomainUrls:Landroid/preference/Preference;
 
     .line 83
     const-string v3, "app_launch_clear_defaults"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/applications/AppLaunchSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/applications/AppLaunchSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/settings/applications/ClearDefaultsPreference;
+    check-cast v3, Lcom/android/settings_ex/applications/ClearDefaultsPreference;
 
-    iput-object v3, p0, Lcom/android/settings/applications/AppLaunchSettings;->mClearDefaultsPreference:Lcom/android/settings/applications/ClearDefaultsPreference;
+    iput-object v3, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mClearDefaultsPreference:Lcom/android/settings_ex/applications/ClearDefaultsPreference;
 
     .line 84
     const-string v3, "app_link_state"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/applications/AppLaunchSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/applications/AppLaunchSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/settings/DropDownPreference;
+    check-cast v3, Lcom/android/settings_ex/DropDownPreference;
 
-    iput-object v3, p0, Lcom/android/settings/applications/AppLaunchSettings;->mAppLinkState:Lcom/android/settings/DropDownPreference;
+    iput-object v3, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mAppLinkState:Lcom/android/settings_ex/DropDownPreference;
 
     .line 86
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppLaunchSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/AppLaunchSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -601,21 +601,21 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/applications/AppLaunchSettings;->mPm:Landroid/content/pm/PackageManager;
+    iput-object v3, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mPm:Landroid/content/pm/PackageManager;
 
     .line 88
-    iget-object v3, p0, Lcom/android/settings/applications/AppLaunchSettings;->mPackageName:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mPackageName:Ljava/lang/String;
 
-    invoke-direct {p0, v3}, Lcom/android/settings/applications/AppLaunchSettings;->isBrowserApp(Ljava/lang/String;)Z
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/applications/AppLaunchSettings;->isBrowserApp(Ljava/lang/String;)Z
 
     move-result v3
 
-    iput-boolean v3, p0, Lcom/android/settings/applications/AppLaunchSettings;->mIsBrowser:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mIsBrowser:Z
 
     .line 89
-    iget-object v3, p0, Lcom/android/settings/applications/AppLaunchSettings;->mAppEntry:Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mAppEntry:Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
 
-    iget-object v3, v3, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
+    iget-object v3, v3, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
 
     iget v3, v3, Landroid/content/pm/ApplicationInfo;->privateFlags:I
 
@@ -626,17 +626,17 @@
     move v3, v4
 
     :goto_0
-    iput-boolean v3, p0, Lcom/android/settings/applications/AppLaunchSettings;->mHasDomainUrls:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mHasDomainUrls:Z
 
     .line 92
-    iget-boolean v3, p0, Lcom/android/settings/applications/AppLaunchSettings;->mIsBrowser:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mIsBrowser:Z
 
     if-nez v3, :cond_0
 
     .line 93
-    iget-object v3, p0, Lcom/android/settings/applications/AppLaunchSettings;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mPm:Landroid/content/pm/PackageManager;
 
-    iget-object v6, p0, Lcom/android/settings/applications/AppLaunchSettings;->mPackageName:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v3, v6}, Landroid/content/pm/PackageManager;->getIntentFilterVerifications(Ljava/lang/String;)Ljava/util/List;
 
@@ -644,9 +644,9 @@
 
     .line 94
     .local v2, "iviList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/IntentFilterVerificationInfo;>;"
-    iget-object v3, p0, Lcom/android/settings/applications/AppLaunchSettings;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mPm:Landroid/content/pm/PackageManager;
 
-    iget-object v6, p0, Lcom/android/settings/applications/AppLaunchSettings;->mPackageName:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v3, v6}, Landroid/content/pm/PackageManager;->getAllIntentFilters(Ljava/lang/String;)Ljava/util/List;
 
@@ -654,38 +654,38 @@
 
     .line 95
     .local v1, "filters":Ljava/util/List;, "Ljava/util/List<Landroid/content/IntentFilter;>;"
-    iget-object v3, p0, Lcom/android/settings/applications/AppLaunchSettings;->mPackageName:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mPackageName:Ljava/lang/String;
 
-    invoke-direct {p0, v3, v2, v1}, Lcom/android/settings/applications/AppLaunchSettings;->getEntries(Ljava/lang/String;Ljava/util/List;Ljava/util/List;)[Ljava/lang/CharSequence;
+    invoke-direct {p0, v3, v2, v1}, Lcom/android/settings_ex/applications/AppLaunchSettings;->getEntries(Ljava/lang/String;Ljava/util/List;Ljava/util/List;)[Ljava/lang/CharSequence;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/applications/AppLaunchSettings;->entries:[Ljava/lang/CharSequence;
+    iput-object v3, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->entries:[Ljava/lang/CharSequence;
 
     .line 96
-    iget-object v3, p0, Lcom/android/settings/applications/AppLaunchSettings;->entries:[Ljava/lang/CharSequence;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->entries:[Ljava/lang/CharSequence;
 
     if-eqz v3, :cond_2
 
-    iget-object v3, p0, Lcom/android/settings/applications/AppLaunchSettings;->entries:[Ljava/lang/CharSequence;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->entries:[Ljava/lang/CharSequence;
 
     array-length v0, v3
 
     .line 97
     .local v0, "entrySize":I
     :goto_1
-    iget-object v3, p0, Lcom/android/settings/applications/AppLaunchSettings;->mAppDomainUrls:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mAppDomainUrls:Landroid/preference/Preference;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/applications/AppLaunchSettings;->getSummary(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/applications/AppLaunchSettings;->getSummary(I)Ljava/lang/CharSequence;
 
     move-result-object v6
 
     invoke-virtual {v3, v6}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 98
-    iget-object v3, p0, Lcom/android/settings/applications/AppLaunchSettings;->mAppDomainUrls:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mAppDomainUrls:Landroid/preference/Preference;
 
-    iget-object v6, p0, Lcom/android/settings/applications/AppLaunchSettings;->entries:[Ljava/lang/CharSequence;
+    iget-object v6, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->entries:[Ljava/lang/CharSequence;
 
     array-length v6, v6
 
@@ -699,7 +699,7 @@
     .end local v1    # "filters":Ljava/util/List;, "Ljava/util/List<Landroid/content/IntentFilter;>;"
     .end local v2    # "iviList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/IntentFilterVerificationInfo;>;"
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/applications/AppLaunchSettings;->buildStateDropDown()V
+    invoke-direct {p0}, Lcom/android/settings_ex/applications/AppLaunchSettings;->buildStateDropDown()V
 
     .line 102
     return-void
@@ -747,7 +747,7 @@
     const/4 v4, 0x0
 
     .line 235
-    iget-object v0, p0, Lcom/android/settings/applications/AppLaunchSettings;->mAppDomainUrls:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mAppDomainUrls:Landroid/preference/Preference;
 
     if-ne v0, p2, :cond_0
 
@@ -760,18 +760,18 @@
     .local v2, "args":Landroid/os/Bundle;
     const-string v0, "entries"
 
-    iget-object v1, p0, Lcom/android/settings/applications/AppLaunchSettings;->entries:[Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->entries:[Ljava/lang/CharSequence;
 
     invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putCharSequenceArray(Ljava/lang/String;[Ljava/lang/CharSequence;)V
 
     .line 239
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppLaunchSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/AppLaunchSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
-    const-class v1, Lcom/android/settings/applications/AppDomainsFragment;
+    const-class v1, Lcom/android/settings_ex/applications/AppDomainsFragment;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -783,7 +783,7 @@
 
     move-object v5, v4
 
-    invoke-virtual/range {v0 .. v6}, Lcom/android/settings/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
+    invoke-virtual/range {v0 .. v6}, Lcom/android/settings_ex/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
 
     .line 242
     const/4 v0, 0x1
@@ -794,7 +794,7 @@
     return v0
 
     :cond_0
-    invoke-super {p0, p1, p2}, Lcom/android/settings/applications/AppInfoWithHeader;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/applications/AppInfoWithHeader;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v0
 
@@ -806,18 +806,18 @@
 
     .prologue
     .line 209
-    iget-object v0, p0, Lcom/android/settings/applications/AppLaunchSettings;->mClearDefaultsPreference:Lcom/android/settings/applications/ClearDefaultsPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mClearDefaultsPreference:Lcom/android/settings_ex/applications/ClearDefaultsPreference;
 
-    iget-object v1, p0, Lcom/android/settings/applications/AppLaunchSettings;->mPackageName:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mPackageName:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/applications/ClearDefaultsPreference;->setPackageName(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/applications/ClearDefaultsPreference;->setPackageName(Ljava/lang/String;)V
 
     .line 210
-    iget-object v0, p0, Lcom/android/settings/applications/AppLaunchSettings;->mClearDefaultsPreference:Lcom/android/settings/applications/ClearDefaultsPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mClearDefaultsPreference:Lcom/android/settings_ex/applications/ClearDefaultsPreference;
 
-    iget-object v1, p0, Lcom/android/settings/applications/AppLaunchSettings;->mAppEntry:Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/AppLaunchSettings;->mAppEntry:Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/applications/ClearDefaultsPreference;->setAppEntry(Lcom/android/settingslib/applications/ApplicationsState$AppEntry;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/applications/ClearDefaultsPreference;->setAppEntry(Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;)V
 
     .line 211
     const/4 v0, 0x1

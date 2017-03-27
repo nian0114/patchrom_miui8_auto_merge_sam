@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settings/deviceinfo/StorageMeasurement$1;
+.class synthetic Lcom/android/settings_ex/deviceinfo/StorageMeasurement$1;
 .super Ljava/lang/Object;
 .source "StorageMeasurement.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/StorageMeasurement;
+    value = Lcom/android/settings_ex/deviceinfo/StorageMeasurement;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

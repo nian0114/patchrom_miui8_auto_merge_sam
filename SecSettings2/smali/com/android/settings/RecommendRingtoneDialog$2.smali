@@ -1,4 +1,4 @@
-.class Lcom/android/settings/RecommendRingtoneDialog$2;
+.class Lcom/android/settings_ex/RecommendRingtoneDialog$2;
 .super Ljava/lang/Object;
 .source "RecommendRingtoneDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/RecommendRingtoneDialog;
+    value = Lcom/android/settings_ex/RecommendRingtoneDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/RecommendRingtoneDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/RecommendRingtoneDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/RecommendRingtoneDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/RecommendRingtoneDialog;)V
     .locals 0
 
     .prologue
     .line 132
-    iput-object p1, p0, Lcom/android/settings/RecommendRingtoneDialog$2;->this$0:Lcom/android/settings/RecommendRingtoneDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/RecommendRingtoneDialog$2;->this$0:Lcom/android/settings_ex/RecommendRingtoneDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -97,19 +97,19 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 141
-    iget-object v0, p0, Lcom/android/settings/RecommendRingtoneDialog$2;->this$0:Lcom/android/settings/RecommendRingtoneDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog$2;->this$0:Lcom/android/settings_ex/RecommendRingtoneDialog;
 
-    # getter for: Lcom/android/settings/RecommendRingtoneDialog;->ringtone:Landroid/media/Ringtone;
-    invoke-static {v0}, Lcom/android/settings/RecommendRingtoneDialog;->access$200(Lcom/android/settings/RecommendRingtoneDialog;)Landroid/media/Ringtone;
+    # getter for: Lcom/android/settings_ex/RecommendRingtoneDialog;->ringtone:Landroid/media/Ringtone;
+    invoke-static {v0}, Lcom/android/settings_ex/RecommendRingtoneDialog;->access$200(Lcom/android/settings_ex/RecommendRingtoneDialog;)Landroid/media/Ringtone;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/settings/RecommendRingtoneDialog$2;->this$0:Lcom/android/settings/RecommendRingtoneDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog$2;->this$0:Lcom/android/settings_ex/RecommendRingtoneDialog;
 
-    # getter for: Lcom/android/settings/RecommendRingtoneDialog;->ringtone:Landroid/media/Ringtone;
-    invoke-static {v0}, Lcom/android/settings/RecommendRingtoneDialog;->access$200(Lcom/android/settings/RecommendRingtoneDialog;)Landroid/media/Ringtone;
+    # getter for: Lcom/android/settings_ex/RecommendRingtoneDialog;->ringtone:Landroid/media/Ringtone;
+    invoke-static {v0}, Lcom/android/settings_ex/RecommendRingtoneDialog;->access$200(Lcom/android/settings_ex/RecommendRingtoneDialog;)Landroid/media/Ringtone;
 
     move-result-object v0
 
@@ -117,27 +117,27 @@
 
     .line 142
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/RecommendRingtoneDialog$2;->this$0:Lcom/android/settings/RecommendRingtoneDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog$2;->this$0:Lcom/android/settings_ex/RecommendRingtoneDialog;
 
-    # getter for: Lcom/android/settings/RecommendRingtoneDialog;->mAudioManager:Landroid/media/AudioManager;
-    invoke-static {v0}, Lcom/android/settings/RecommendRingtoneDialog;->access$700(Lcom/android/settings/RecommendRingtoneDialog;)Landroid/media/AudioManager;
+    # getter for: Lcom/android/settings_ex/RecommendRingtoneDialog;->mAudioManager:Landroid/media/AudioManager;
+    invoke-static {v0}, Lcom/android/settings_ex/RecommendRingtoneDialog;->access$700(Lcom/android/settings_ex/RecommendRingtoneDialog;)Landroid/media/AudioManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 143
-    iget-object v0, p0, Lcom/android/settings/RecommendRingtoneDialog$2;->this$0:Lcom/android/settings/RecommendRingtoneDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/RecommendRingtoneDialog$2;->this$0:Lcom/android/settings_ex/RecommendRingtoneDialog;
 
-    # getter for: Lcom/android/settings/RecommendRingtoneDialog;->mAudioManager:Landroid/media/AudioManager;
-    invoke-static {v0}, Lcom/android/settings/RecommendRingtoneDialog;->access$700(Lcom/android/settings/RecommendRingtoneDialog;)Landroid/media/AudioManager;
+    # getter for: Lcom/android/settings_ex/RecommendRingtoneDialog;->mAudioManager:Landroid/media/AudioManager;
+    invoke-static {v0}, Lcom/android/settings_ex/RecommendRingtoneDialog;->access$700(Lcom/android/settings_ex/RecommendRingtoneDialog;)Landroid/media/AudioManager;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/RecommendRingtoneDialog$2;->this$0:Lcom/android/settings/RecommendRingtoneDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/RecommendRingtoneDialog$2;->this$0:Lcom/android/settings_ex/RecommendRingtoneDialog;
 
-    # getter for: Lcom/android/settings/RecommendRingtoneDialog;->mAudioFocusListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
-    invoke-static {v1}, Lcom/android/settings/RecommendRingtoneDialog;->access$800(Lcom/android/settings/RecommendRingtoneDialog;)Landroid/media/AudioManager$OnAudioFocusChangeListener;
+    # getter for: Lcom/android/settings_ex/RecommendRingtoneDialog;->mAudioFocusListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
+    invoke-static {v1}, Lcom/android/settings_ex/RecommendRingtoneDialog;->access$800(Lcom/android/settings_ex/RecommendRingtoneDialog;)Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
     move-result-object v1
 

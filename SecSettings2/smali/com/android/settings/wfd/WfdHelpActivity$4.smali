@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wfd/WfdHelpActivity$4;
+.class Lcom/android/settings_ex/wfd/WfdHelpActivity$4;
 .super Ljava/lang/Object;
 .source "WfdHelpActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wfd/WfdHelpActivity;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/wfd/WfdHelpActivity;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wfd/WfdHelpActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/wfd/WfdHelpActivity;
 
 .field final synthetic val$alertDialog:Landroid/app/AlertDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wfd/WfdHelpActivity;Landroid/app/AlertDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/wfd/WfdHelpActivity;Landroid/app/AlertDialog;)V
     .locals 0
 
     .prologue
     .line 125
-    iput-object p1, p0, Lcom/android/settings/wfd/WfdHelpActivity$4;->this$0:Lcom/android/settings/wfd/WfdHelpActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/wfd/WfdHelpActivity$4;->this$0:Lcom/android/settings_ex/wfd/WfdHelpActivity;
 
-    iput-object p2, p0, Lcom/android/settings/wfd/WfdHelpActivity$4;->val$alertDialog:Landroid/app/AlertDialog;
+    iput-object p2, p0, Lcom/android/settings_ex/wfd/WfdHelpActivity$4;->val$alertDialog:Landroid/app/AlertDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,14 +53,14 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 129
-    iget-object v0, p0, Lcom/android/settings/wfd/WfdHelpActivity$4;->val$alertDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WfdHelpActivity$4;->val$alertDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 130
-    iget-object v0, p0, Lcom/android/settings/wfd/WfdHelpActivity$4;->this$0:Lcom/android/settings/wfd/WfdHelpActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WfdHelpActivity$4;->this$0:Lcom/android/settings_ex/wfd/WfdHelpActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/wfd/WfdHelpActivity;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/wfd/WfdHelpActivity;->finish()V
 
     .line 131
     return-void

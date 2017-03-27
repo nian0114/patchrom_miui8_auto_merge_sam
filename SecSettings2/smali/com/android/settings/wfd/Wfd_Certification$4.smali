@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wfd/Wfd_Certification$4;
+.class Lcom/android/settings_ex/wfd/Wfd_Certification$4;
 .super Landroid/preference/ListPreference;
 .source "Wfd_Certification.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wfd/Wfd_Certification;->buildCertificationMenu(Landroid/preference/PreferenceScreen;)V
+    value = Lcom/android/settings_ex/wfd/Wfd_Certification;->buildCertificationMenu(Landroid/preference/PreferenceScreen;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wfd/Wfd_Certification;
+.field final synthetic this$0:Lcom/android/settings_ex/wfd/Wfd_Certification;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wfd/Wfd_Certification;Landroid/content/Context;)V
+.method constructor <init>(Lcom/android/settings_ex/wfd/Wfd_Certification;Landroid/content/Context;)V
     .locals 0
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
     .line 172
-    iput-object p1, p0, Lcom/android/settings/wfd/Wfd_Certification$4;->this$0:Lcom/android/settings/wfd/Wfd_Certification;
+    iput-object p1, p0, Lcom/android/settings_ex/wfd/Wfd_Certification$4;->this$0:Lcom/android/settings_ex/wfd/Wfd_Certification;
 
     invoke-direct {p0, p2}, Landroid/preference/ListPreference;-><init>(Landroid/content/Context;)V
 
@@ -46,9 +46,9 @@
     if-eqz p1, :cond_0
 
     .line 177
-    iget-object v0, p0, Lcom/android/settings/wfd/Wfd_Certification$4;->this$0:Lcom/android/settings/wfd/Wfd_Certification;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/Wfd_Certification$4;->this$0:Lcom/android/settings_ex/wfd/Wfd_Certification;
 
-    invoke-virtual {p0}, Lcom/android/settings/wfd/Wfd_Certification$4;->getValue()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wfd/Wfd_Certification$4;->getValue()Ljava/lang/String;
 
     move-result-object v1
 
@@ -56,29 +56,29 @@
 
     move-result v1
 
-    # setter for: Lcom/android/settings/wfd/Wfd_Certification;->mWpsConfig:I
-    invoke-static {v0, v1}, Lcom/android/settings/wfd/Wfd_Certification;->access$702(Lcom/android/settings/wfd/Wfd_Certification;I)I
+    # setter for: Lcom/android/settings_ex/wfd/Wfd_Certification;->mWpsConfig:I
+    invoke-static {v0, v1}, Lcom/android/settings_ex/wfd/Wfd_Certification;->access$702(Lcom/android/settings_ex/wfd/Wfd_Certification;I)I
 
     .line 178
     const-string v0, "%1$s"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/wfd/Wfd_Certification$4;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wfd/Wfd_Certification$4;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 179
-    iget-object v0, p0, Lcom/android/settings/wfd/Wfd_Certification$4;->this$0:Lcom/android/settings/wfd/Wfd_Certification;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/Wfd_Certification$4;->this$0:Lcom/android/settings_ex/wfd/Wfd_Certification;
 
-    # getter for: Lcom/android/settings/wfd/Wfd_Certification;->mWifiDisplaySettings:Lcom/android/settings/wfd/WifiDisplaySettings;
-    invoke-static {v0}, Lcom/android/settings/wfd/Wfd_Certification;->access$800(Lcom/android/settings/wfd/Wfd_Certification;)Lcom/android/settings/wfd/WifiDisplaySettings;
+    # getter for: Lcom/android/settings_ex/wfd/Wfd_Certification;->mWifiDisplaySettings:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
+    invoke-static {v0}, Lcom/android/settings_ex/wfd/Wfd_Certification;->access$800(Lcom/android/settings_ex/wfd/Wfd_Certification;)Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/settings/wfd/WifiDisplaySettings;->invalidate()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/wfd/WifiDisplaySettings;->invalidate()V
 
     .line 180
-    iget-object v0, p0, Lcom/android/settings/wfd/Wfd_Certification$4;->this$0:Lcom/android/settings/wfd/Wfd_Certification;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/Wfd_Certification$4;->this$0:Lcom/android/settings_ex/wfd/Wfd_Certification;
 
-    # getter for: Lcom/android/settings/wfd/Wfd_Certification;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Lcom/android/settings/wfd/Wfd_Certification;->access$000(Lcom/android/settings/wfd/Wfd_Certification;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/wfd/Wfd_Certification;->mContext:Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/settings_ex/wfd/Wfd_Certification;->access$000(Lcom/android/settings_ex/wfd/Wfd_Certification;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -88,10 +88,10 @@
 
     const-string v1, "wifi_display_wps_config"
 
-    iget-object v2, p0, Lcom/android/settings/wfd/Wfd_Certification$4;->this$0:Lcom/android/settings/wfd/Wfd_Certification;
+    iget-object v2, p0, Lcom/android/settings_ex/wfd/Wfd_Certification$4;->this$0:Lcom/android/settings_ex/wfd/Wfd_Certification;
 
-    # getter for: Lcom/android/settings/wfd/Wfd_Certification;->mWpsConfig:I
-    invoke-static {v2}, Lcom/android/settings/wfd/Wfd_Certification;->access$700(Lcom/android/settings/wfd/Wfd_Certification;)I
+    # getter for: Lcom/android/settings_ex/wfd/Wfd_Certification;->mWpsConfig:I
+    invoke-static {v2}, Lcom/android/settings_ex/wfd/Wfd_Certification;->access$700(Lcom/android/settings_ex/wfd/Wfd_Certification;)I
 
     move-result v2
 

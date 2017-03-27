@@ -1,11 +1,11 @@
-.class Lcom/android/settings/DisplaySettings$8;
+.class Lcom/android/settings_ex/DisplaySettings$8;
 .super Landroid/database/ContentObserver;
 .source "DisplaySettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DisplaySettings;
+    value = Lcom/android/settings_ex/DisplaySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DisplaySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/DisplaySettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DisplaySettings;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/DisplaySettings;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 317
-    iput-object p1, p0, Lcom/android/settings/DisplaySettings$8;->this$0:Lcom/android/settings/DisplaySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/DisplaySettings$8;->this$0:Lcom/android/settings_ex/DisplaySettings;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -46,36 +46,36 @@
     const/4 v5, 0x0
 
     .line 320
-    iget-object v2, p0, Lcom/android/settings/DisplaySettings$8;->this$0:Lcom/android/settings/DisplaySettings;
+    iget-object v2, p0, Lcom/android/settings_ex/DisplaySettings$8;->this$0:Lcom/android/settings_ex/DisplaySettings;
 
-    # getter for: Lcom/android/settings/DisplaySettings;->mNightClock:Landroid/preference/PreferenceScreen;
-    invoke-static {v2}, Lcom/android/settings/DisplaySettings;->access$700(Lcom/android/settings/DisplaySettings;)Landroid/preference/PreferenceScreen;
+    # getter for: Lcom/android/settings_ex/DisplaySettings;->mNightClock:Landroid/preference/PreferenceScreen;
+    invoke-static {v2}, Lcom/android/settings_ex/DisplaySettings;->access$700(Lcom/android/settings_ex/DisplaySettings;)Landroid/preference/PreferenceScreen;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
     .line 321
-    iget-object v2, p0, Lcom/android/settings/DisplaySettings$8;->this$0:Lcom/android/settings/DisplaySettings;
+    iget-object v2, p0, Lcom/android/settings_ex/DisplaySettings$8;->this$0:Lcom/android/settings_ex/DisplaySettings;
 
-    # getter for: Lcom/android/settings/DisplaySettings;->mNightClockAOD:Z
-    invoke-static {v2}, Lcom/android/settings/DisplaySettings;->access$800(Lcom/android/settings/DisplaySettings;)Z
+    # getter for: Lcom/android/settings_ex/DisplaySettings;->mNightClockAOD:Z
+    invoke-static {v2}, Lcom/android/settings_ex/DisplaySettings;->access$800(Lcom/android/settings_ex/DisplaySettings;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
     .line 322
-    iget-object v2, p0, Lcom/android/settings/DisplaySettings$8;->this$0:Lcom/android/settings/DisplaySettings;
+    iget-object v2, p0, Lcom/android/settings_ex/DisplaySettings$8;->this$0:Lcom/android/settings_ex/DisplaySettings;
 
-    # getter for: Lcom/android/settings/DisplaySettings;->mNightClock:Landroid/preference/PreferenceScreen;
-    invoke-static {v2}, Lcom/android/settings/DisplaySettings;->access$700(Lcom/android/settings/DisplaySettings;)Landroid/preference/PreferenceScreen;
+    # getter for: Lcom/android/settings_ex/DisplaySettings;->mNightClock:Landroid/preference/PreferenceScreen;
+    invoke-static {v2}, Lcom/android/settings_ex/DisplaySettings;->access$700(Lcom/android/settings_ex/DisplaySettings;)Landroid/preference/PreferenceScreen;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/DisplaySettings$8;->this$0:Lcom/android/settings/DisplaySettings;
+    iget-object v3, p0, Lcom/android/settings_ex/DisplaySettings$8;->this$0:Lcom/android/settings_ex/DisplaySettings;
 
-    invoke-virtual {v3}, Lcom/android/settings/DisplaySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v3}, Lcom/android/settings_ex/DisplaySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -103,16 +103,16 @@
 
     .line 324
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/DisplaySettings$8;->this$0:Lcom/android/settings/DisplaySettings;
+    iget-object v2, p0, Lcom/android/settings_ex/DisplaySettings$8;->this$0:Lcom/android/settings_ex/DisplaySettings;
 
-    # getter for: Lcom/android/settings/DisplaySettings;->mNightClock:Landroid/preference/PreferenceScreen;
-    invoke-static {v2}, Lcom/android/settings/DisplaySettings;->access$700(Lcom/android/settings/DisplaySettings;)Landroid/preference/PreferenceScreen;
+    # getter for: Lcom/android/settings_ex/DisplaySettings;->mNightClock:Landroid/preference/PreferenceScreen;
+    invoke-static {v2}, Lcom/android/settings_ex/DisplaySettings;->access$700(Lcom/android/settings_ex/DisplaySettings;)Landroid/preference/PreferenceScreen;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/DisplaySettings$8;->this$0:Lcom/android/settings/DisplaySettings;
+    iget-object v3, p0, Lcom/android/settings_ex/DisplaySettings$8;->this$0:Lcom/android/settings_ex/DisplaySettings;
 
-    invoke-virtual {v3}, Lcom/android/settings/DisplaySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v3}, Lcom/android/settings_ex/DisplaySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 

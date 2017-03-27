@@ -1,4 +1,4 @@
-.class Lcom/android/settings/notification/BlockNotificationList$1;
+.class Lcom/android/settings_ex/notification/BlockNotificationList$1;
 .super Ljava/lang/Object;
 .source "BlockNotificationList.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/BlockNotificationList;
+    value = Lcom/android/settings_ex/notification/BlockNotificationList;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/BlockNotificationList;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/notification/BlockNotificationList;)V
+.method constructor <init>(Lcom/android/settings_ex/notification/BlockNotificationList;)V
     .locals 0
 
     .prologue
     .line 208
-    iput-object p1, p0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,12 +43,12 @@
     .line 211
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v21, v0
 
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->mRows:Landroid/util/ArrayMap;
-    invoke-static/range {v21 .. v21}, Lcom/android/settings/notification/BlockNotificationList;->access$000(Lcom/android/settings/notification/BlockNotificationList;)Landroid/util/ArrayMap;
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->mRows:Landroid/util/ArrayMap;
+    invoke-static/range {v21 .. v21}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$000(Lcom/android/settings_ex/notification/BlockNotificationList;)Landroid/util/ArrayMap;
 
     move-result-object v24
 
@@ -62,8 +62,8 @@
 
     .line 213
     .local v22, "start":J
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->DEBUG:Z
-    invoke-static {}, Lcom/android/settings/notification/BlockNotificationList;->access$100()Z
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->DEBUG:Z
+    invoke-static {}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$100()Z
 
     move-result v21
 
@@ -83,12 +83,12 @@
     :cond_0
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v21, v0
 
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->mRows:Landroid/util/ArrayMap;
-    invoke-static/range {v21 .. v21}, Lcom/android/settings/notification/BlockNotificationList;->access$000(Lcom/android/settings/notification/BlockNotificationList;)Landroid/util/ArrayMap;
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->mRows:Landroid/util/ArrayMap;
+    invoke-static/range {v21 .. v21}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$000(Lcom/android/settings_ex/notification/BlockNotificationList;)Landroid/util/ArrayMap;
 
     move-result-object v21
 
@@ -97,12 +97,12 @@
     .line 215
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v21, v0
 
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->mSortedRows:Ljava/util/ArrayList;
-    invoke-static/range {v21 .. v21}, Lcom/android/settings/notification/BlockNotificationList;->access$200(Lcom/android/settings/notification/BlockNotificationList;)Ljava/util/ArrayList;
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->mSortedRows:Ljava/util/ArrayList;
+    invoke-static/range {v21 .. v21}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$200(Lcom/android/settings_ex/notification/BlockNotificationList;)Ljava/util/ArrayList;
 
     move-result-object v21
 
@@ -117,11 +117,11 @@
     .local v5, "appInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v21, v0
 
-    invoke-virtual/range {v21 .. v21}, Lcom/android/settings/notification/BlockNotificationList;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {v21 .. v21}, Lcom/android/settings_ex/notification/BlockNotificationList;->getActivity()Landroid/app/Activity;
 
     move-result-object v21
 
@@ -137,11 +137,11 @@
     :cond_1
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v21, v0
 
-    invoke-virtual/range {v21 .. v21}, Lcom/android/settings/notification/BlockNotificationList;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {v21 .. v21}, Lcom/android/settings_ex/notification/BlockNotificationList;->getActivity()Landroid/app/Activity;
 
     move-result-object v21
 
@@ -153,12 +153,12 @@
     .local v17, "pm":Landroid/content/pm/PackageManager;
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v21, v0
 
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->mLauncherApps:Landroid/content/pm/LauncherApps;
-    invoke-static/range {v21 .. v21}, Lcom/android/settings/notification/BlockNotificationList;->access$300(Lcom/android/settings/notification/BlockNotificationList;)Landroid/content/pm/LauncherApps;
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->mLauncherApps:Landroid/content/pm/LauncherApps;
+    invoke-static/range {v21 .. v21}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$300(Lcom/android/settings_ex/notification/BlockNotificationList;)Landroid/content/pm/LauncherApps;
 
     move-result-object v21
 
@@ -180,8 +180,8 @@
 
     .line 224
     .local v14, "lais":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/LauncherActivityInfo;>;"
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->DEBUG:Z
-    invoke-static {}, Lcom/android/settings/notification/BlockNotificationList;->access$100()Z
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->DEBUG:Z
+    invoke-static {}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$100()Z
 
     move-result v21
 
@@ -219,8 +219,8 @@
 
     .line 226
     .local v13, "lai":Landroid/content/pm/LauncherActivityInfo;
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->DEBUG:Z
-    invoke-static {}, Lcom/android/settings/notification/BlockNotificationList;->access$100()Z
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->DEBUG:Z
+    invoke-static {}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$100()Z
 
     move-result v21
 
@@ -282,8 +282,8 @@
 
     move/from16 v2, v25
 
-    # invokes: Lcom/android/settings/notification/BlockNotificationList;->findPackageInfo(Landroid/content/pm/PackageManager;Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
-    invoke-static {v0, v1, v2}, Lcom/android/settings/notification/BlockNotificationList;->access$400(Landroid/content/pm/PackageManager;Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    # invokes: Lcom/android/settings_ex/notification/BlockNotificationList;->findPackageInfo(Landroid/content/pm/PackageManager;Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$400(Landroid/content/pm/PackageManager;Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object v11
 
@@ -291,7 +291,7 @@
     .local v11, "info":Landroid/content/pm/PackageInfo;
     move-object/from16 v0, v17
 
-    invoke-static {v0, v11}, Lcom/android/settings/Utils;->isSystemPackage(Landroid/content/pm/PackageManager;Landroid/content/pm/PackageInfo;)Z
+    invoke-static {v0, v11}, Lcom/android/settings_ex/Utils;->isSystemPackage(Landroid/content/pm/PackageManager;Landroid/content/pm/PackageInfo;)Z
 
     move-result v21
 
@@ -301,7 +301,7 @@
 
     move-object/from16 v21, v0
 
-    invoke-static/range {v21 .. v21}, Lcom/android/settings/Utils;->showBlockNotiication(Ljava/lang/String;)Z
+    invoke-static/range {v21 .. v21}, Lcom/android/settings_ex/Utils;->showBlockNotiication(Ljava/lang/String;)Z
 
     move-result v21
 
@@ -360,23 +360,23 @@
     :cond_5
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v21, v0
 
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->mPM:Landroid/content/pm/PackageManager;
-    invoke-static/range {v21 .. v21}, Lcom/android/settings/notification/BlockNotificationList;->access$500(Lcom/android/settings/notification/BlockNotificationList;)Landroid/content/pm/PackageManager;
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->mPM:Landroid/content/pm/PackageManager;
+    invoke-static/range {v21 .. v21}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$500(Lcom/android/settings_ex/notification/BlockNotificationList;)Landroid/content/pm/PackageManager;
 
     move-result-object v21
 
-    invoke-static/range {v21 .. v21}, Lcom/android/settings/notification/BlockNotificationList;->queryNotificationConfigActivities(Landroid/content/pm/PackageManager;)Ljava/util/List;
+    invoke-static/range {v21 .. v21}, Lcom/android/settings_ex/notification/BlockNotificationList;->queryNotificationConfigActivities(Landroid/content/pm/PackageManager;)Ljava/util/List;
 
     move-result-object v18
 
     .line 238
     .local v18, "resolvedConfigActivities":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->DEBUG:Z
-    invoke-static {}, Lcom/android/settings/notification/BlockNotificationList;->access$100()Z
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->DEBUG:Z
+    invoke-static {}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$100()Z
 
     move-result v21
 
@@ -413,8 +413,8 @@
 
     .line 240
     .local v19, "ri":Landroid/content/pm/ResolveInfo;
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->DEBUG:Z
-    invoke-static {}, Lcom/android/settings/notification/BlockNotificationList;->access$100()Z
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->DEBUG:Z
+    invoke-static {}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$100()Z
 
     move-result v21
 
@@ -508,8 +508,8 @@
 
     move/from16 v2, v25
 
-    # invokes: Lcom/android/settings/notification/BlockNotificationList;->findPackageInfo(Landroid/content/pm/PackageManager;Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
-    invoke-static {v0, v1, v2}, Lcom/android/settings/notification/BlockNotificationList;->access$400(Landroid/content/pm/PackageManager;Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    # invokes: Lcom/android/settings_ex/notification/BlockNotificationList;->findPackageInfo(Landroid/content/pm/PackageManager;Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$400(Landroid/content/pm/PackageManager;Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object v11
 
@@ -517,7 +517,7 @@
     .restart local v11    # "info":Landroid/content/pm/PackageInfo;
     move-object/from16 v0, v17
 
-    invoke-static {v0, v11}, Lcom/android/settings/Utils;->isSystemPackage(Landroid/content/pm/PackageManager;Landroid/content/pm/PackageInfo;)Z
+    invoke-static {v0, v11}, Lcom/android/settings_ex/Utils;->isSystemPackage(Landroid/content/pm/PackageManager;Landroid/content/pm/PackageInfo;)Z
 
     move-result v21
 
@@ -571,12 +571,12 @@
     .restart local v4    # "appInfo":Landroid/content/pm/ApplicationInfo;
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v21, v0
 
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->excludeKnoxApp:[Ljava/lang/String;
-    invoke-static/range {v21 .. v21}, Lcom/android/settings/notification/BlockNotificationList;->access$600(Lcom/android/settings/notification/BlockNotificationList;)[Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->excludeKnoxApp:[Ljava/lang/String;
+    invoke-static/range {v21 .. v21}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$600(Lcom/android/settings_ex/notification/BlockNotificationList;)[Ljava/lang/String;
 
     move-result-object v6
 
@@ -619,12 +619,12 @@
     :cond_a
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v21, v0
 
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->mHideApp:Z
-    invoke-static/range {v21 .. v21}, Lcom/android/settings/notification/BlockNotificationList;->access$700(Lcom/android/settings/notification/BlockNotificationList;)Z
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->mHideApp:Z
+    invoke-static/range {v21 .. v21}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$700(Lcom/android/settings_ex/notification/BlockNotificationList;)Z
 
     move-result v21
 
@@ -633,12 +633,12 @@
     .line 264
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v21, v0
 
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->hide_app_notification_list:[Ljava/lang/String;
-    invoke-static/range {v21 .. v21}, Lcom/android/settings/notification/BlockNotificationList;->access$800(Lcom/android/settings/notification/BlockNotificationList;)[Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->hide_app_notification_list:[Ljava/lang/String;
+    invoke-static/range {v21 .. v21}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$800(Lcom/android/settings_ex/notification/BlockNotificationList;)[Ljava/lang/String;
 
     move-result-object v6
 
@@ -727,12 +727,12 @@
     .local v12, "key":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v21, v0
 
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->mRows:Landroid/util/ArrayMap;
-    invoke-static/range {v21 .. v21}, Lcom/android/settings/notification/BlockNotificationList;->access$000(Lcom/android/settings/notification/BlockNotificationList;)Landroid/util/ArrayMap;
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->mRows:Landroid/util/ArrayMap;
+    invoke-static/range {v21 .. v21}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$000(Lcom/android/settings_ex/notification/BlockNotificationList;)Landroid/util/ArrayMap;
 
     move-result-object v21
 
@@ -747,23 +747,23 @@
     .line 281
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v21, v0
 
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->mPM:Landroid/content/pm/PackageManager;
-    invoke-static/range {v21 .. v21}, Lcom/android/settings/notification/BlockNotificationList;->access$500(Lcom/android/settings/notification/BlockNotificationList;)Landroid/content/pm/PackageManager;
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->mPM:Landroid/content/pm/PackageManager;
+    invoke-static/range {v21 .. v21}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$500(Lcom/android/settings_ex/notification/BlockNotificationList;)Landroid/content/pm/PackageManager;
 
     move-result-object v21
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v25, v0
 
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->mBackend:Lcom/android/settings/notification/NotificationBackend;
-    invoke-static/range {v25 .. v25}, Lcom/android/settings/notification/BlockNotificationList;->access$900(Lcom/android/settings/notification/BlockNotificationList;)Lcom/android/settings/notification/NotificationBackend;
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->mBackend:Lcom/android/settings_ex/notification/NotificationBackend;
+    invoke-static/range {v25 .. v25}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$900(Lcom/android/settings_ex/notification/BlockNotificationList;)Lcom/android/settings_ex/notification/NotificationBackend;
 
     move-result-object v25
 
@@ -771,20 +771,20 @@
 
     move-object/from16 v1, v25
 
-    invoke-static {v0, v11, v1}, Lcom/android/settings/notification/BlockNotificationList;->loadAppRow(Landroid/content/pm/PackageManager;Landroid/content/pm/ApplicationInfo;Lcom/android/settings/notification/NotificationBackend;)Lcom/android/settings/notification/BlockNotificationList$AppRow;
+    invoke-static {v0, v11, v1}, Lcom/android/settings_ex/notification/BlockNotificationList;->loadAppRow(Landroid/content/pm/PackageManager;Landroid/content/pm/ApplicationInfo;Lcom/android/settings_ex/notification/NotificationBackend;)Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;
 
     move-result-object v20
 
     .line 282
-    .local v20, "row":Lcom/android/settings/notification/BlockNotificationList$AppRow;
+    .local v20, "row":Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v21, v0
 
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->mRows:Landroid/util/ArrayMap;
-    invoke-static/range {v21 .. v21}, Lcom/android/settings/notification/BlockNotificationList;->access$000(Lcom/android/settings/notification/BlockNotificationList;)Landroid/util/ArrayMap;
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->mRows:Landroid/util/ArrayMap;
+    invoke-static/range {v21 .. v21}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$000(Lcom/android/settings_ex/notification/BlockNotificationList;)Landroid/util/ArrayMap;
 
     move-result-object v21
 
@@ -799,27 +799,27 @@
     .line 285
     .end local v11    # "info":Landroid/content/pm/ApplicationInfo;
     .end local v12    # "key":Ljava/lang/String;
-    .end local v20    # "row":Lcom/android/settings/notification/BlockNotificationList$AppRow;
+    .end local v20    # "row":Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;
     :cond_10
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v21, v0
 
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->mPM:Landroid/content/pm/PackageManager;
-    invoke-static/range {v21 .. v21}, Lcom/android/settings/notification/BlockNotificationList;->access$500(Lcom/android/settings/notification/BlockNotificationList;)Landroid/content/pm/PackageManager;
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->mPM:Landroid/content/pm/PackageManager;
+    invoke-static/range {v21 .. v21}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$500(Lcom/android/settings_ex/notification/BlockNotificationList;)Landroid/content/pm/PackageManager;
 
     move-result-object v21
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v25, v0
 
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->mRows:Landroid/util/ArrayMap;
-    invoke-static/range {v25 .. v25}, Lcom/android/settings/notification/BlockNotificationList;->access$000(Lcom/android/settings/notification/BlockNotificationList;)Landroid/util/ArrayMap;
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->mRows:Landroid/util/ArrayMap;
+    invoke-static/range {v25 .. v25}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$000(Lcom/android/settings_ex/notification/BlockNotificationList;)Landroid/util/ArrayMap;
 
     move-result-object v25
 
@@ -829,28 +829,28 @@
 
     move-object/from16 v2, v18
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/notification/BlockNotificationList;->applyConfigActivities(Landroid/content/pm/PackageManager;Landroid/util/ArrayMap;Ljava/util/List;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/notification/BlockNotificationList;->applyConfigActivities(Landroid/content/pm/PackageManager;Landroid/util/ArrayMap;Ljava/util/List;)V
 
     .line 287
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v21, v0
 
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->mSortedRows:Ljava/util/ArrayList;
-    invoke-static/range {v21 .. v21}, Lcom/android/settings/notification/BlockNotificationList;->access$200(Lcom/android/settings/notification/BlockNotificationList;)Ljava/util/ArrayList;
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->mSortedRows:Ljava/util/ArrayList;
+    invoke-static/range {v21 .. v21}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$200(Lcom/android/settings_ex/notification/BlockNotificationList;)Ljava/util/ArrayList;
 
     move-result-object v21
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v25, v0
 
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->mRows:Landroid/util/ArrayMap;
-    invoke-static/range {v25 .. v25}, Lcom/android/settings/notification/BlockNotificationList;->access$000(Lcom/android/settings/notification/BlockNotificationList;)Landroid/util/ArrayMap;
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->mRows:Landroid/util/ArrayMap;
+    invoke-static/range {v25 .. v25}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$000(Lcom/android/settings_ex/notification/BlockNotificationList;)Landroid/util/ArrayMap;
 
     move-result-object v25
 
@@ -867,17 +867,17 @@
     .line 288
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v21, v0
 
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->mSortedRows:Ljava/util/ArrayList;
-    invoke-static/range {v21 .. v21}, Lcom/android/settings/notification/BlockNotificationList;->access$200(Lcom/android/settings/notification/BlockNotificationList;)Ljava/util/ArrayList;
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->mSortedRows:Ljava/util/ArrayList;
+    invoke-static/range {v21 .. v21}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$200(Lcom/android/settings_ex/notification/BlockNotificationList;)Ljava/util/ArrayList;
 
     move-result-object v21
 
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->mRowComparator:Ljava/util/Comparator;
-    invoke-static {}, Lcom/android/settings/notification/BlockNotificationList;->access$1000()Ljava/util/Comparator;
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->mRowComparator:Ljava/util/Comparator;
+    invoke-static {}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$1000()Ljava/util/Comparator;
 
     move-result-object v25
 
@@ -890,23 +890,23 @@
     .line 299
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v21, v0
 
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->mHandler:Landroid/os/Handler;
-    invoke-static/range {v21 .. v21}, Lcom/android/settings/notification/BlockNotificationList;->access$1200(Lcom/android/settings/notification/BlockNotificationList;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->mHandler:Landroid/os/Handler;
+    invoke-static/range {v21 .. v21}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$1200(Lcom/android/settings_ex/notification/BlockNotificationList;)Landroid/os/Handler;
 
     move-result-object v21
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v25, v0
 
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->mRefreshAppsListRunnable:Ljava/lang/Runnable;
-    invoke-static/range {v25 .. v25}, Lcom/android/settings/notification/BlockNotificationList;->access$1100(Lcom/android/settings/notification/BlockNotificationList;)Ljava/lang/Runnable;
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->mRefreshAppsListRunnable:Ljava/lang/Runnable;
+    invoke-static/range {v25 .. v25}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$1100(Lcom/android/settings_ex/notification/BlockNotificationList;)Ljava/lang/Runnable;
 
     move-result-object v25
 
@@ -925,8 +925,8 @@
 
     .line 301
     .local v8, "elapsed":J
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->DEBUG:Z
-    invoke-static {}, Lcom/android/settings/notification/BlockNotificationList;->access$100()Z
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->DEBUG:Z
+    invoke-static {}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$100()Z
 
     move-result v21
 
@@ -946,12 +946,12 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v26, v0
 
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->mRows:Landroid/util/ArrayMap;
-    invoke-static/range {v26 .. v26}, Lcom/android/settings/notification/BlockNotificationList;->access$000(Lcom/android/settings/notification/BlockNotificationList;)Landroid/util/ArrayMap;
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->mRows:Landroid/util/ArrayMap;
+    invoke-static/range {v26 .. v26}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$000(Lcom/android/settings_ex/notification/BlockNotificationList;)Landroid/util/ArrayMap;
 
     move-result-object v26
 
@@ -989,12 +989,12 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/notification/BlockNotificationList$1;->this$0:Lcom/android/settings/notification/BlockNotificationList;
+    iget-object v0, v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;->this$0:Lcom/android/settings_ex/notification/BlockNotificationList;
 
     move-object/from16 v26, v0
 
-    # getter for: Lcom/android/settings/notification/BlockNotificationList;->mSortedRows:Ljava/util/ArrayList;
-    invoke-static/range {v26 .. v26}, Lcom/android/settings/notification/BlockNotificationList;->access$200(Lcom/android/settings/notification/BlockNotificationList;)Ljava/util/ArrayList;
+    # getter for: Lcom/android/settings_ex/notification/BlockNotificationList;->mSortedRows:Ljava/util/ArrayList;
+    invoke-static/range {v26 .. v26}, Lcom/android/settings_ex/notification/BlockNotificationList;->access$200(Lcom/android/settings_ex/notification/BlockNotificationList;)Ljava/util/ArrayList;
 
     move-result-object v26
 

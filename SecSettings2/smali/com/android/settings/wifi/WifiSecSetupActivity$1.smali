@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wifi/WifiSecSetupActivity$1;
+.class Lcom/android/settings_ex/wifi/WifiSecSetupActivity$1;
 .super Landroid/content/BroadcastReceiver;
 .source "WifiSecSetupActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSecSetupActivity;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSecSetupActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSecSetupActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSecSetupActivity;)V
     .locals 0
 
     .prologue
     .line 269
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSecSetupActivity$1;->this$0:Lcom/android/settings/wifi/WifiSecSetupActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$1;->this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -40,10 +40,10 @@
 
     .prologue
     .line 272
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSecSetupActivity$1;->this$0:Lcom/android/settings/wifi/WifiSecSetupActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$1;->this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
 
-    # invokes: Lcom/android/settings/wifi/WifiSecSetupActivity;->handleEvent(Landroid/content/Context;Landroid/content/Intent;)V
-    invoke-static {v0, p1, p2}, Lcom/android/settings/wifi/WifiSecSetupActivity;->access$000(Lcom/android/settings/wifi/WifiSecSetupActivity;Landroid/content/Context;Landroid/content/Intent;)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->handleEvent(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-static {v0, p1, p2}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->access$000(Lcom/android/settings_ex/wifi/WifiSecSetupActivity;Landroid/content/Context;Landroid/content/Intent;)V
 
     .line 273
     return-void

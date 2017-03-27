@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/Settings$WifiP2pSettingsActivity;
-.super Lcom/android/settings/SettingsActivityWrapper;
+.class public Lcom/android/settings_ex/Settings$WifiP2pSettingsActivity;
+.super Lcom/android/settings_ex/SettingsActivityWrapper;
 .source "Settings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/Settings;
+    value = Lcom/android/settings_ex/Settings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 133
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivityWrapper;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivityWrapper;-><init>()V
 
     return-void
 .end method

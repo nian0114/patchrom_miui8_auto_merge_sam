@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/RingtoneSettingTabActivity;
+.class public Lcom/android/settings_ex/RingtoneSettingTabActivity;
 .super Landroid/app/TabActivity;
 .source "RingtoneSettingTabActivity.java"
 
@@ -31,7 +31,7 @@
     .line 77
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/RingtoneSettingTabActivity;->receiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/RingtoneSettingTabActivity;->receiver:Landroid/content/BroadcastReceiver;
 
     return-void
 .end method
@@ -41,7 +41,7 @@
 
     .prologue
     .line 113
-    invoke-virtual {p0}, Lcom/android/settings/RingtoneSettingTabActivity;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RingtoneSettingTabActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
@@ -75,7 +75,7 @@
     .local v0, "retString":Ljava/lang/String;
     const-string v3, "CTC"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v4
 
@@ -122,7 +122,7 @@
     if-nez v3, :cond_2
 
     .line 176
-    invoke-virtual {p0}, Lcom/android/settings/RingtoneSettingTabActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RingtoneSettingTabActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -149,7 +149,7 @@
     if-nez p1, :cond_7
 
     .line 198
-    invoke-virtual {p0, v6}, Lcom/android/settings/RingtoneSettingTabActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/RingtoneSettingTabActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -162,7 +162,7 @@
     .restart local v1    # "simState1":Ljava/lang/String;
     .restart local v2    # "simState2":Ljava/lang/String;
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/RingtoneSettingTabActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RingtoneSettingTabActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -185,7 +185,7 @@
     if-nez v3, :cond_4
 
     .line 182
-    invoke-virtual {p0}, Lcom/android/settings/RingtoneSettingTabActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RingtoneSettingTabActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -197,7 +197,7 @@
 
     .line 184
     :cond_4
-    invoke-virtual {p0}, Lcom/android/settings/RingtoneSettingTabActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RingtoneSettingTabActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -216,7 +216,7 @@
     if-nez p1, :cond_6
 
     .line 189
-    invoke-virtual {p0}, Lcom/android/settings/RingtoneSettingTabActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RingtoneSettingTabActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -230,7 +230,7 @@
 
     .line 192
     :cond_6
-    invoke-virtual {p0}, Lcom/android/settings/RingtoneSettingTabActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RingtoneSettingTabActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -244,7 +244,7 @@
 
     .line 200
     :cond_7
-    invoke-virtual {p0, v7}, Lcom/android/settings/RingtoneSettingTabActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/RingtoneSettingTabActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -295,21 +295,21 @@
 
     .line 136
     .local v1, "tabName":Ljava/lang/String;
-    sget-object v2, Lcom/android/settings/RingtoneSettingTabActivity;->mTabHost:Landroid/widget/TabHost;
+    sget-object v2, Lcom/android/settings_ex/RingtoneSettingTabActivity;->mTabHost:Landroid/widget/TabHost;
 
-    sget-object v3, Lcom/android/settings/RingtoneSettingTabActivity;->mTabHost:Landroid/widget/TabHost;
+    sget-object v3, Lcom/android/settings_ex/RingtoneSettingTabActivity;->mTabHost:Landroid/widget/TabHost;
 
     invoke-virtual {v3, v1}, Landroid/widget/TabHost;->newTabSpec(Ljava/lang/String;)Landroid/widget/TabHost$TabSpec;
 
     move-result-object v3
 
-    invoke-direct {p0, p1}, Lcom/android/settings/RingtoneSettingTabActivity;->getSimName(I)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/RingtoneSettingTabActivity;->getSimName(I)Ljava/lang/String;
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/RingtoneSettingTabActivity;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/RingtoneSettingTabActivity;->mContext:Landroid/content/Context;
 
-    invoke-static {v5, p1}, Lcom/android/settings/Utils;->getSimIcon(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v5, p1}, Lcom/android/settings_ex/Utils;->getSimIcon(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v5
 
@@ -338,14 +338,14 @@
     invoke-super {p0, p1}, Landroid/app/TabActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 82
-    invoke-virtual {p0}, Lcom/android/settings/RingtoneSettingTabActivity;->getBaseContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RingtoneSettingTabActivity;->getBaseContext()Landroid/content/Context;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/RingtoneSettingTabActivity;->mContext:Landroid/content/Context;
+    iput-object v2, p0, Lcom/android/settings_ex/RingtoneSettingTabActivity;->mContext:Landroid/content/Context;
 
     .line 83
-    iget-object v2, p0, Lcom/android/settings/RingtoneSettingTabActivity;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/RingtoneSettingTabActivity;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Landroid/telephony/SubscriptionManager;->from(Landroid/content/Context;)Landroid/telephony/SubscriptionManager;
 
@@ -360,10 +360,10 @@
     const/4 v2, 0x0
 
     :goto_0
-    iput v2, p0, Lcom/android/settings/RingtoneSettingTabActivity;->multiSimNum:I
+    iput v2, p0, Lcom/android/settings_ex/RingtoneSettingTabActivity;->multiSimNum:I
 
     .line 85
-    invoke-virtual {p0}, Lcom/android/settings/RingtoneSettingTabActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RingtoneSettingTabActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -376,7 +376,7 @@
     if-eqz v2, :cond_0
 
     .line 86
-    invoke-virtual {p0}, Lcom/android/settings/RingtoneSettingTabActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RingtoneSettingTabActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -392,19 +392,19 @@
 
     .line 87
     .local v1, "tab_title":Ljava/lang/String;
-    invoke-virtual {p0, v1}, Lcom/android/settings/RingtoneSettingTabActivity;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/RingtoneSettingTabActivity;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 90
     .end local v1    # "tab_title":Ljava/lang/String;
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/RingtoneSettingTabActivity;->getTabHost()Landroid/widget/TabHost;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RingtoneSettingTabActivity;->getTabHost()Landroid/widget/TabHost;
 
     move-result-object v2
 
-    sput-object v2, Lcom/android/settings/RingtoneSettingTabActivity;->mTabHost:Landroid/widget/TabHost;
+    sput-object v2, Lcom/android/settings_ex/RingtoneSettingTabActivity;->mTabHost:Landroid/widget/TabHost;
 
     .line 91
-    sget-object v2, Lcom/android/settings/RingtoneSettingTabActivity;->mTabHost:Landroid/widget/TabHost;
+    sget-object v2, Lcom/android/settings_ex/RingtoneSettingTabActivity;->mTabHost:Landroid/widget/TabHost;
 
     invoke-virtual {v2, p0}, Landroid/widget/TabHost;->setOnTabChangedListener(Landroid/widget/TabHost$OnTabChangeListener;)V
 
@@ -413,12 +413,12 @@
 
     .local v0, "simSlotNum":I
     :goto_1
-    iget v2, p0, Lcom/android/settings/RingtoneSettingTabActivity;->multiSimNum:I
+    iget v2, p0, Lcom/android/settings_ex/RingtoneSettingTabActivity;->multiSimNum:I
 
     if-ge v0, v2, :cond_2
 
     .line 94
-    invoke-direct {p0, v0}, Lcom/android/settings/RingtoneSettingTabActivity;->setupSimTab(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/RingtoneSettingTabActivity;->setupSimTab(I)V
 
     .line 93
     add-int/lit8 v0, v0, 0x1
@@ -428,7 +428,7 @@
     .line 83
     .end local v0    # "simSlotNum":I
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/RingtoneSettingTabActivity;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/RingtoneSettingTabActivity;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Landroid/telephony/SubscriptionManager;->from(Landroid/content/Context;)Landroid/telephony/SubscriptionManager;
 
@@ -447,14 +447,14 @@
     .line 96
     .restart local v0    # "simSlotNum":I
     :cond_2
-    sget-object v2, Lcom/android/settings/RingtoneSettingTabActivity;->mTabHost:Landroid/widget/TabHost;
+    sget-object v2, Lcom/android/settings_ex/RingtoneSettingTabActivity;->mTabHost:Landroid/widget/TabHost;
 
-    iget v3, p0, Lcom/android/settings/RingtoneSettingTabActivity;->mActivePhone:I
+    iget v3, p0, Lcom/android/settings_ex/RingtoneSettingTabActivity;->mActivePhone:I
 
     invoke-virtual {v2, v3}, Landroid/widget/TabHost;->setCurrentTab(I)V
 
     .line 97
-    invoke-direct {p0}, Lcom/android/settings/RingtoneSettingTabActivity;->configureActionBar()V
+    invoke-direct {p0}, Lcom/android/settings_ex/RingtoneSettingTabActivity;->configureActionBar()V
 
     .line 98
     return-void
@@ -482,7 +482,7 @@
 
     .line 104
     :pswitch_0
-    invoke-virtual {p0}, Lcom/android/settings/RingtoneSettingTabActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/RingtoneSettingTabActivity;->finish()V
 
     .line 105
     const/4 v0, 0x1
@@ -504,9 +504,9 @@
     invoke-super {p0}, Landroid/app/TabActivity;->onPause()V
 
     .line 166
-    iget-object v0, p0, Lcom/android/settings/RingtoneSettingTabActivity;->receiver:Landroid/content/BroadcastReceiver;
+    iget-object v0, p0, Lcom/android/settings_ex/RingtoneSettingTabActivity;->receiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/RingtoneSettingTabActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/RingtoneSettingTabActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 167
     return-void
@@ -526,12 +526,12 @@
 
     .local v3, "simSlotNum":I
     :goto_0
-    iget v4, p0, Lcom/android/settings/RingtoneSettingTabActivity;->multiSimNum:I
+    iget v4, p0, Lcom/android/settings_ex/RingtoneSettingTabActivity;->multiSimNum:I
 
     if-ge v3, v4, :cond_0
 
     .line 145
-    sget-object v4, Lcom/android/settings/RingtoneSettingTabActivity;->mTabHost:Landroid/widget/TabHost;
+    sget-object v4, Lcom/android/settings_ex/RingtoneSettingTabActivity;->mTabHost:Landroid/widget/TabHost;
 
     invoke-virtual {v4}, Landroid/widget/TabHost;->getTabWidget()Landroid/widget/TabWidget;
 
@@ -551,9 +551,9 @@
 
     .line 146
     .local v1, "simIcon":Landroid/widget/ImageView;
-    iget-object v4, p0, Lcom/android/settings/RingtoneSettingTabActivity;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/RingtoneSettingTabActivity;->mContext:Landroid/content/Context;
 
-    invoke-static {v4, v3}, Lcom/android/settings/Utils;->getSimIcon(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v4, v3}, Lcom/android/settings_ex/Utils;->getSimIcon(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
@@ -563,7 +563,7 @@
     invoke-virtual {v1, v6}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 148
-    sget-object v4, Lcom/android/settings/RingtoneSettingTabActivity;->mTabHost:Landroid/widget/TabHost;
+    sget-object v4, Lcom/android/settings_ex/RingtoneSettingTabActivity;->mTabHost:Landroid/widget/TabHost;
 
     invoke-virtual {v4}, Landroid/widget/TabHost;->getTabWidget()Landroid/widget/TabWidget;
 
@@ -583,7 +583,7 @@
 
     .line 149
     .local v2, "simName":Landroid/widget/TextView;
-    invoke-direct {p0, v3}, Lcom/android/settings/RingtoneSettingTabActivity;->getSimName(I)Ljava/lang/String;
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/RingtoneSettingTabActivity;->getSimName(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -614,16 +614,16 @@
 
     .line 154
     .local v0, "filter":Landroid/content/IntentFilter;
-    new-instance v4, Lcom/android/settings/RingtoneSettingTabActivity$1;
+    new-instance v4, Lcom/android/settings_ex/RingtoneSettingTabActivity$1;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/RingtoneSettingTabActivity$1;-><init>(Lcom/android/settings/RingtoneSettingTabActivity;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/RingtoneSettingTabActivity$1;-><init>(Lcom/android/settings_ex/RingtoneSettingTabActivity;)V
 
-    iput-object v4, p0, Lcom/android/settings/RingtoneSettingTabActivity;->receiver:Landroid/content/BroadcastReceiver;
+    iput-object v4, p0, Lcom/android/settings_ex/RingtoneSettingTabActivity;->receiver:Landroid/content/BroadcastReceiver;
 
     .line 161
-    iget-object v4, p0, Lcom/android/settings/RingtoneSettingTabActivity;->receiver:Landroid/content/BroadcastReceiver;
+    iget-object v4, p0, Lcom/android/settings_ex/RingtoneSettingTabActivity;->receiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v4, v0}, Lcom/android/settings/RingtoneSettingTabActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v4, v0}, Lcom/android/settings_ex/RingtoneSettingTabActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 162
     return-void
@@ -639,7 +639,7 @@
 
     .local v0, "simSlotNum":I
     :goto_0
-    iget v2, p0, Lcom/android/settings/RingtoneSettingTabActivity;->multiSimNum:I
+    iget v2, p0, Lcom/android/settings_ex/RingtoneSettingTabActivity;->multiSimNum:I
 
     if-ge v0, v2, :cond_1
 
@@ -671,7 +671,7 @@
     if-eqz v2, :cond_0
 
     .line 125
-    iput v0, p0, Lcom/android/settings/RingtoneSettingTabActivity;->mActivePhone:I
+    iput v0, p0, Lcom/android/settings_ex/RingtoneSettingTabActivity;->mActivePhone:I
 
     .line 122
     :cond_0

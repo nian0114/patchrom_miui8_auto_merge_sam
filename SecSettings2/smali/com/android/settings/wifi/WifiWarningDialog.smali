@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/WifiWarningDialog;
+.class public Lcom/android/settings_ex/wifi/WifiWarningDialog;
 .super Landroid/app/Activity;
 .source "WifiWarningDialog.java"
 
@@ -24,34 +24,34 @@
     .line 43
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
 
     .line 47
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mIsLightTheme:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mIsLightTheme:Z
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/wifi/WifiWarningDialog;)V
+.method static synthetic access$000(Lcom/android/settings_ex/wifi/WifiWarningDialog;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiWarningDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiWarningDialog;
 
     .prologue
     .line 39
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiWarningDialog;->wifiWarningDialogPressOK()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiWarningDialog;->wifiWarningDialogPressOK()V
 
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/wifi/WifiWarningDialog;)V
+.method static synthetic access$100(Lcom/android/settings_ex/wifi/WifiWarningDialog;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiWarningDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiWarningDialog;
 
     .prologue
     .line 39
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiWarningDialog;->wifiWarningDialogPressCancel()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiWarningDialog;->wifiWarningDialogPressCancel()V
 
     return-void
 .end method
@@ -68,25 +68,25 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 106
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
 
     if-eqz v3, :cond_0
 
     .line 107
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v3}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 108
     const/4 v3, 0x0
 
-    iput-object v3, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
+    iput-object v3, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
 
     .line 111
     :cond_0
     const-string v3, "statusbar"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/wifi/WifiWarningDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/wifi/WifiWarningDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -101,13 +101,13 @@
 
     .line 116
     :cond_1
-    new-instance v0, Lcom/android/settings/wifi/WifiWarningDialog$1;
+    new-instance v0, Lcom/android/settings_ex/wifi/WifiWarningDialog$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/wifi/WifiWarningDialog$1;-><init>(Lcom/android/settings/wifi/WifiWarningDialog;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/wifi/WifiWarningDialog$1;-><init>(Lcom/android/settings_ex/wifi/WifiWarningDialog;)V
 
     .line 126
     .local v0, "listener":Landroid/content/DialogInterface$OnClickListener;
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mEnableWarningDialogIntent:Landroid/content/Intent;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mEnableWarningDialogIntent:Landroid/content/Intent;
 
     const-string v4, "dialog_name"
 
@@ -119,11 +119,11 @@
     .local v2, "name":Ljava/lang/String;
     new-instance v4, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiWarningDialog;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiWarningDialog;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v5
 
-    iget-boolean v3, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mIsLightTheme:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mIsLightTheme:Z
 
     if-eqz v3, :cond_2
 
@@ -154,7 +154,7 @@
 
     aput-object v7, v5, v6
 
-    invoke-virtual {p0, v4, v5}, Lcom/android/settings/wifi/WifiWarningDialog;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v4, v5}, Lcom/android/settings_ex/wifi/WifiWarningDialog;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -174,17 +174,17 @@
 
     move-result-object v3
 
-    new-instance v4, Lcom/android/settings/wifi/WifiWarningDialog$3;
+    new-instance v4, Lcom/android/settings_ex/wifi/WifiWarningDialog$3;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/wifi/WifiWarningDialog$3;-><init>(Lcom/android/settings/wifi/WifiWarningDialog;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/wifi/WifiWarningDialog$3;-><init>(Lcom/android/settings_ex/wifi/WifiWarningDialog;)V
 
     invoke-virtual {v3, v4}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v3
 
-    new-instance v4, Lcom/android/settings/wifi/WifiWarningDialog$2;
+    new-instance v4, Lcom/android/settings_ex/wifi/WifiWarningDialog$2;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/wifi/WifiWarningDialog$2;-><init>(Lcom/android/settings/wifi/WifiWarningDialog;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/wifi/WifiWarningDialog$2;-><init>(Lcom/android/settings_ex/wifi/WifiWarningDialog;)V
 
     invoke-virtual {v3, v4}, Landroid/app/AlertDialog$Builder;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)Landroid/app/AlertDialog$Builder;
 
@@ -194,10 +194,10 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
+    iput-object v3, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
 
     .line 149
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v3}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
@@ -208,7 +208,7 @@
     invoke-virtual {v3, v4}, Landroid/view/Window;->setType(I)V
 
     .line 150
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v3}, Landroid/app/AlertDialog;->show()V
 
@@ -253,26 +253,26 @@
 
     .line 159
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiWarningDialog;->isFinishing()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiWarningDialog;->isFinishing()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
     .line 160
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
 
     if-eqz v2, :cond_0
 
     .line 161
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v2}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 162
     const/4 v2, 0x0
 
-    iput-object v2, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
 
     .line 163
     const-string v2, "WifiWarningDialog"
@@ -304,7 +304,7 @@
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 165
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiWarningDialog;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiWarningDialog;->finish()V
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -351,32 +351,32 @@
     iput v2, v1, Landroid/os/Message;->what:I
 
     .line 177
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v2, v1}, Landroid/net/wifi/WifiManager;->callSECApi(Landroid/os/Message;)I
 
     .line 179
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiWarningDialog;->isFinishing()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiWarningDialog;->isFinishing()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
     .line 180
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
 
     if-eqz v2, :cond_0
 
     .line 181
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v2}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 182
     const/4 v2, 0x0
 
-    iput-object v2, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
 
     .line 183
     const-string v2, "WifiWarningDialog"
@@ -408,7 +408,7 @@
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 185
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiWarningDialog;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiWarningDialog;->finish()V
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -449,31 +449,31 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 52
-    invoke-virtual {p0, v3}, Lcom/android/settings/wifi/WifiWarningDialog;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/wifi/WifiWarningDialog;->requestWindowFeature(I)Z
 
     .line 53
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiWarningDialog;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiWarningDialog;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mEnableWarningDialogIntent:Landroid/content/Intent;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mEnableWarningDialogIntent:Landroid/content/Intent;
 
     .line 54
     const-string v1, "wifi"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/WifiWarningDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/WifiWarningDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/net/wifi/WifiManager;
 
-    iput-object v1, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     .line 55
-    iput-boolean v3, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mIsLightTheme:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mIsLightTheme:Z
 
     .line 57
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mEnableWarningDialogIntent:Landroid/content/Intent;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mEnableWarningDialogIntent:Landroid/content/Intent;
 
     const-string v2, "dialog_type"
 
@@ -499,7 +499,7 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 60
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiWarningDialog;->showEnableWarningDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiWarningDialog;->showEnableWarningDialog()V
 
     .line 62
     :cond_0
@@ -514,24 +514,24 @@
 
     .prologue
     .line 85
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
     .line 86
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->cancel()V
 
     .line 87
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 88
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
 
     .line 90
     :cond_0
@@ -573,7 +573,7 @@
     .line 68
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/wifi/WifiWarningDialog;->setVisible(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wifi/WifiWarningDialog;->setVisible(Z)V
 
     .line 69
     return-void
@@ -584,31 +584,31 @@
 
     .prologue
     .line 73
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiWarningDialog;->isFinishing()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiWarningDialog;->isFinishing()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 74
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
     .line 75
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->cancel()V
 
     .line 76
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 77
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiWarningDialog;->mWifiEnableWarningDialog:Landroid/app/AlertDialog;
 
     .line 80
     :cond_0

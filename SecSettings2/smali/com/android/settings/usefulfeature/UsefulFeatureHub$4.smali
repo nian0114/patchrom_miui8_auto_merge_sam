@@ -1,4 +1,4 @@
-.class Lcom/android/settings/usefulfeature/UsefulFeatureHub$4;
+.class Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$4;
 .super Ljava/lang/Object;
 .source "UsefulFeatureHub.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/usefulfeature/UsefulFeatureHub;->makeTalkBackDisablePopup()V
+    value = Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->makeTalkBackDisablePopup()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+.field final synthetic this$0:Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)V
+.method constructor <init>(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)V
     .locals 0
 
     .prologue
     .line 503
-    iput-object p1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$4;->this$0:Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    iput-object p1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$4;->this$0:Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,10 +43,10 @@
 
     .prologue
     .line 505
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$4;->this$0:Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$4;->this$0:Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
-    # invokes: Lcom/android/settings/usefulfeature/UsefulFeatureHub;->dismissAllDialog()V
-    invoke-static {v0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->access$800(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)V
+    # invokes: Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->dismissAllDialog()V
+    invoke-static {v0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->access$800(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)V
 
     .line 506
     return-void

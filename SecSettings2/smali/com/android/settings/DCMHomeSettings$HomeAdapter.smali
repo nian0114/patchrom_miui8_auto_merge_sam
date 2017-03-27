@@ -1,11 +1,11 @@
-.class Lcom/android/settings/DCMHomeSettings$HomeAdapter;
+.class Lcom/android/settings_ex/DCMHomeSettings$HomeAdapter;
 .super Landroid/widget/ArrayAdapter;
 .source "DCMHomeSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DCMHomeSettings;
+    value = Lcom/android/settings_ex/DCMHomeSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,11 +24,11 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DCMHomeSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/DCMHomeSettings;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/settings/DCMHomeSettings;Landroid/content/Context;ILjava/util/List;)V
+.method public constructor <init>(Lcom/android/settings_ex/DCMHomeSettings;Landroid/content/Context;ILjava/util/List;)V
     .locals 0
     .param p2, "context"    # Landroid/content/Context;
     .param p3, "textViewResourceId"    # I
@@ -47,7 +47,7 @@
     .prologue
     .line 507
     .local p4, "items":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
-    iput-object p1, p0, Lcom/android/settings/DCMHomeSettings$HomeAdapter;->this$0:Lcom/android/settings/DCMHomeSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/DCMHomeSettings$HomeAdapter;->this$0:Lcom/android/settings_ex/DCMHomeSettings;
 
     .line 508
     invoke-direct {p0, p2, p3, p4}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
@@ -66,10 +66,10 @@
 
     .prologue
     .line 514
-    iget-object v5, p0, Lcom/android/settings/DCMHomeSettings$HomeAdapter;->this$0:Lcom/android/settings/DCMHomeSettings;
+    iget-object v5, p0, Lcom/android/settings_ex/DCMHomeSettings$HomeAdapter;->this$0:Lcom/android/settings_ex/DCMHomeSettings;
 
-    # getter for: Lcom/android/settings/DCMHomeSettings;->mHasEasyLauncher:Z
-    invoke-static {v5}, Lcom/android/settings/DCMHomeSettings;->access$500(Lcom/android/settings/DCMHomeSettings;)Z
+    # getter for: Lcom/android/settings_ex/DCMHomeSettings;->mHasEasyLauncher:Z
+    invoke-static {v5}, Lcom/android/settings_ex/DCMHomeSettings;->access$500(Lcom/android/settings_ex/DCMHomeSettings;)Z
 
     move-result v5
 
@@ -163,7 +163,7 @@
     .local v0, "button":Landroid/widget/RadioButton;
     const/4 v5, 0x0
 
-    invoke-static {v5}, Lcom/android/settings/Utils;->isTablet(Landroid/content/Context;)Z
+    invoke-static {v5}, Lcom/android/settings_ex/Utils;->isTablet(Landroid/content/Context;)Z
 
     move-result v5
 
@@ -180,10 +180,10 @@
 
     .line 546
     :goto_1
-    iget-object v5, p0, Lcom/android/settings/DCMHomeSettings$HomeAdapter;->this$0:Lcom/android/settings/DCMHomeSettings;
+    iget-object v5, p0, Lcom/android/settings_ex/DCMHomeSettings$HomeAdapter;->this$0:Lcom/android/settings_ex/DCMHomeSettings;
 
-    # getter for: Lcom/android/settings/DCMHomeSettings;->mCurrentHome:I
-    invoke-static {v5}, Lcom/android/settings/DCMHomeSettings;->access$100(Lcom/android/settings/DCMHomeSettings;)I
+    # getter for: Lcom/android/settings_ex/DCMHomeSettings;->mCurrentHome:I
+    invoke-static {v5}, Lcom/android/settings_ex/DCMHomeSettings;->access$100(Lcom/android/settings_ex/DCMHomeSettings;)I
 
     move-result v5
 
@@ -215,9 +215,9 @@
     .restart local v3    # "label":Landroid/widget/TextView;
     .restart local v4    # "summary":Landroid/widget/TextView;
     :pswitch_0
-    iget-object v5, p0, Lcom/android/settings/DCMHomeSettings$HomeAdapter;->this$0:Lcom/android/settings/DCMHomeSettings;
+    iget-object v5, p0, Lcom/android/settings_ex/DCMHomeSettings$HomeAdapter;->this$0:Lcom/android/settings_ex/DCMHomeSettings;
 
-    invoke-virtual {v5}, Lcom/android/settings/DCMHomeSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v5}, Lcom/android/settings_ex/DCMHomeSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -243,9 +243,9 @@
 
     .line 535
     :pswitch_1
-    iget-object v5, p0, Lcom/android/settings/DCMHomeSettings$HomeAdapter;->this$0:Lcom/android/settings/DCMHomeSettings;
+    iget-object v5, p0, Lcom/android/settings_ex/DCMHomeSettings$HomeAdapter;->this$0:Lcom/android/settings_ex/DCMHomeSettings;
 
-    invoke-virtual {v5}, Lcom/android/settings/DCMHomeSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v5}, Lcom/android/settings_ex/DCMHomeSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -271,9 +271,9 @@
 
     .line 540
     :pswitch_2
-    iget-object v5, p0, Lcom/android/settings/DCMHomeSettings$HomeAdapter;->this$0:Lcom/android/settings/DCMHomeSettings;
+    iget-object v5, p0, Lcom/android/settings_ex/DCMHomeSettings$HomeAdapter;->this$0:Lcom/android/settings_ex/DCMHomeSettings;
 
-    invoke-virtual {v5}, Lcom/android/settings/DCMHomeSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v5}, Lcom/android/settings_ex/DCMHomeSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -303,9 +303,9 @@
     .end local v3    # "label":Landroid/widget/TextView;
     .end local v4    # "summary":Landroid/widget/TextView;
     :cond_3
-    iget-object v5, p0, Lcom/android/settings/DCMHomeSettings$HomeAdapter;->this$0:Lcom/android/settings/DCMHomeSettings;
+    iget-object v5, p0, Lcom/android/settings_ex/DCMHomeSettings$HomeAdapter;->this$0:Lcom/android/settings_ex/DCMHomeSettings;
 
-    iget-object v5, v5, Lcom/android/settings/DCMHomeSettings;->mHomeApps:Ljava/util/List;
+    iget-object v5, v5, Lcom/android/settings_ex/DCMHomeSettings;->mHomeApps:Ljava/util/List;
 
     invoke-interface {v5, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -369,10 +369,10 @@
 
     iget-object v5, v5, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    iget-object v6, p0, Lcom/android/settings/DCMHomeSettings$HomeAdapter;->this$0:Lcom/android/settings/DCMHomeSettings;
+    iget-object v6, p0, Lcom/android/settings_ex/DCMHomeSettings$HomeAdapter;->this$0:Lcom/android/settings_ex/DCMHomeSettings;
 
-    # getter for: Lcom/android/settings/DCMHomeSettings;->mPm:Landroid/content/pm/PackageManager;
-    invoke-static {v6}, Lcom/android/settings/DCMHomeSettings;->access$600(Lcom/android/settings/DCMHomeSettings;)Landroid/content/pm/PackageManager;
+    # getter for: Lcom/android/settings_ex/DCMHomeSettings;->mPm:Landroid/content/pm/PackageManager;
+    invoke-static {v6}, Lcom/android/settings_ex/DCMHomeSettings;->access$600(Lcom/android/settings_ex/DCMHomeSettings;)Landroid/content/pm/PackageManager;
 
     move-result-object v6
 
@@ -387,10 +387,10 @@
 
     iget-object v5, v5, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    iget-object v6, p0, Lcom/android/settings/DCMHomeSettings$HomeAdapter;->this$0:Lcom/android/settings/DCMHomeSettings;
+    iget-object v6, p0, Lcom/android/settings_ex/DCMHomeSettings$HomeAdapter;->this$0:Lcom/android/settings_ex/DCMHomeSettings;
 
-    # getter for: Lcom/android/settings/DCMHomeSettings;->mPm:Landroid/content/pm/PackageManager;
-    invoke-static {v6}, Lcom/android/settings/DCMHomeSettings;->access$600(Lcom/android/settings/DCMHomeSettings;)Landroid/content/pm/PackageManager;
+    # getter for: Lcom/android/settings_ex/DCMHomeSettings;->mPm:Landroid/content/pm/PackageManager;
+    invoke-static {v6}, Lcom/android/settings_ex/DCMHomeSettings;->access$600(Lcom/android/settings_ex/DCMHomeSettings;)Landroid/content/pm/PackageManager;
 
     move-result-object v6
 
@@ -405,10 +405,10 @@
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 562
-    iget-object v5, p0, Lcom/android/settings/DCMHomeSettings$HomeAdapter;->this$0:Lcom/android/settings/DCMHomeSettings;
+    iget-object v5, p0, Lcom/android/settings_ex/DCMHomeSettings$HomeAdapter;->this$0:Lcom/android/settings_ex/DCMHomeSettings;
 
-    # getter for: Lcom/android/settings/DCMHomeSettings;->mCurrentHome:I
-    invoke-static {v5}, Lcom/android/settings/DCMHomeSettings;->access$100(Lcom/android/settings/DCMHomeSettings;)I
+    # getter for: Lcom/android/settings_ex/DCMHomeSettings;->mCurrentHome:I
+    invoke-static {v5}, Lcom/android/settings_ex/DCMHomeSettings;->access$100(Lcom/android/settings_ex/DCMHomeSettings;)I
 
     move-result v5
 

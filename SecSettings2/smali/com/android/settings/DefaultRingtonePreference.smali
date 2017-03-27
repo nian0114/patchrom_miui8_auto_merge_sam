@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/DefaultRingtonePreference;
+.class public Lcom/android/settings_ex/DefaultRingtonePreference;
 .super Landroid/preference/RingtonePreference;
 .source "DefaultRingtonePreference.java"
 
@@ -8,13 +8,13 @@
 
 .field private mActivePhone:I
 
-.field private mResultListener:Lcom/android/settings/RingtoneRecommender$OnHighlightResultListener;
+.field private mResultListener:Lcom/android/settings_ex/RingtoneRecommender$OnHighlightResultListener;
 
-.field private mRingtoneDual:Lcom/android/settings/DualSoundRingtoneSettings;
+.field private mRingtoneDual:Lcom/android/settings_ex/DualSoundRingtoneSettings;
 
-.field private mRingtoneNotificationSettings:Lcom/android/settings/notification/NotificationSettings;
+.field private mRingtoneNotificationSettings:Lcom/android/settings_ex/notification/NotificationSettings;
 
-.field private mRingtoneNotificationsSubSettings:Lcom/android/settings/notification/NotificationsSubSettings;
+.field private mRingtoneNotificationsSubSettings:Lcom/android/settings_ex/notification/NotificationsSubSettings;
 
 
 # direct methods
@@ -34,35 +34,35 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/DefaultRingtonePreference;->isWidget:Ljava/lang/Boolean;
+    iput-object v3, p0, Lcom/android/settings_ex/DefaultRingtonePreference;->isWidget:Ljava/lang/Boolean;
 
     .line 187
-    new-instance v3, Lcom/android/settings/DefaultRingtonePreference$1;
+    new-instance v3, Lcom/android/settings_ex/DefaultRingtonePreference$1;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/DefaultRingtonePreference$1;-><init>(Lcom/android/settings/DefaultRingtonePreference;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/DefaultRingtonePreference$1;-><init>(Lcom/android/settings_ex/DefaultRingtonePreference;)V
 
-    iput-object v3, p0, Lcom/android/settings/DefaultRingtonePreference;->mResultListener:Lcom/android/settings/RingtoneRecommender$OnHighlightResultListener;
+    iput-object v3, p0, Lcom/android/settings_ex/DefaultRingtonePreference;->mResultListener:Lcom/android/settings_ex/RingtoneRecommender$OnHighlightResultListener;
 
     .line 52
     :try_start_0
     move-object v0, p1
 
-    check-cast v0, Lcom/android/settings/DualSoundRingtoneSettings;
+    check-cast v0, Lcom/android/settings_ex/DualSoundRingtoneSettings;
 
     move-object v1, v0
 
     .line 53
-    .local v1, "dualSound":Lcom/android/settings/DualSoundRingtoneSettings;
-    invoke-virtual {v1}, Lcom/android/settings/DualSoundRingtoneSettings;->getmActivePhone()I
+    .local v1, "dualSound":Lcom/android/settings_ex/DualSoundRingtoneSettings;
+    invoke-virtual {v1}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->getmActivePhone()I
 
     move-result v3
 
-    iput v3, p0, Lcom/android/settings/DefaultRingtonePreference;->mActivePhone:I
+    iput v3, p0, Lcom/android/settings_ex/DefaultRingtonePreference;->mActivePhone:I
     :try_end_0
     .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 58
-    .end local v1    # "dualSound":Lcom/android/settings/DualSoundRingtoneSettings;
+    .end local v1    # "dualSound":Lcom/android/settings_ex/DualSoundRingtoneSettings;
     :goto_0
     const-string v3, "DefaultRingtonePreference"
 
@@ -76,7 +76,7 @@
 
     move-result-object v4
 
-    iget v5, p0, Lcom/android/settings/DefaultRingtonePreference;->mActivePhone:I
+    iget v5, p0, Lcom/android/settings_ex/DefaultRingtonePreference;->mActivePhone:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -89,17 +89,17 @@
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 59
-    invoke-virtual {p0}, Lcom/android/settings/DefaultRingtonePreference;->getRingtoneType()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/DefaultRingtonePreference;->getRingtoneType()I
 
     move-result v3
 
-    iget v4, p0, Lcom/android/settings/DefaultRingtonePreference;->mActivePhone:I
+    iget v4, p0, Lcom/android/settings_ex/DefaultRingtonePreference;->mActivePhone:I
 
     invoke-static {v3, v4}, Landroid/media/RingtoneManager;->convertSettingForType(II)I
 
     move-result v3
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/DefaultRingtonePreference;->setRingtoneType(I)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/DefaultRingtonePreference;->setRingtoneType(I)V
 
     .line 60
     return-void
@@ -110,7 +110,7 @@
 
     .line 55
     .local v2, "ex":Ljava/lang/ClassCastException;
-    iput v4, p0, Lcom/android/settings/DefaultRingtonePreference;->mActivePhone:I
+    iput v4, p0, Lcom/android/settings_ex/DefaultRingtonePreference;->mActivePhone:I
 
     .line 56
     const-string v3, "DefaultRingtonePreference"
@@ -125,7 +125,7 @@
 
     move-result-object v4
 
-    iget v5, p0, Lcom/android/settings/DefaultRingtonePreference;->mActivePhone:I
+    iget v5, p0, Lcom/android/settings_ex/DefaultRingtonePreference;->mActivePhone:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -179,30 +179,30 @@
     if-ne p2, v3, :cond_0
 
     .line 136
-    invoke-static {}, Lcom/android/settings/Utils;->isMultisimModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMultisimModel()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
     .line 137
-    iget-object v1, p0, Lcom/android/settings/DefaultRingtonePreference;->mRingtoneDual:Lcom/android/settings/DualSoundRingtoneSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/DefaultRingtonePreference;->mRingtoneDual:Lcom/android/settings_ex/DualSoundRingtoneSettings;
 
     if-nez v1, :cond_2
 
     .line 141
-    iget-object v1, p0, Lcom/android/settings/DefaultRingtonePreference;->mRingtoneNotificationSettings:Lcom/android/settings/notification/NotificationSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/DefaultRingtonePreference;->mRingtoneNotificationSettings:Lcom/android/settings_ex/notification/NotificationSettings;
 
-    invoke-virtual {p0}, Lcom/android/settings/DefaultRingtonePreference;->getRingtoneType()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/DefaultRingtonePreference;->getRingtoneType()I
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/notification/NotificationSettings;->onMusicPickerChosen(I)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/notification/NotificationSettings;->onMusicPickerChosen(I)V
 
     .line 155
     :cond_0
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/DefaultRingtonePreference;->isWidget:Ljava/lang/Boolean;
+    iget-object v1, p0, Lcom/android/settings_ex/DefaultRingtonePreference;->isWidget:Ljava/lang/Boolean;
 
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -219,12 +219,12 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/DefaultRingtonePreference;->isWidget:Ljava/lang/Boolean;
+    iput-object v1, p0, Lcom/android/settings_ex/DefaultRingtonePreference;->isWidget:Ljava/lang/Boolean;
 
     .line 160
-    iget-object v1, p0, Lcom/android/settings/DefaultRingtonePreference;->mRingtoneNotificationSettings:Lcom/android/settings/notification/NotificationSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/DefaultRingtonePreference;->mRingtoneNotificationSettings:Lcom/android/settings_ex/notification/NotificationSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/notification/NotificationSettings;->finish()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/notification/NotificationSettings;->finish()V
 
     .line 163
     :cond_1
@@ -236,25 +236,25 @@
 
     .line 144
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/DefaultRingtonePreference;->mRingtoneDual:Lcom/android/settings/DualSoundRingtoneSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/DefaultRingtonePreference;->mRingtoneDual:Lcom/android/settings_ex/DualSoundRingtoneSettings;
 
-    invoke-virtual {p0}, Lcom/android/settings/DefaultRingtonePreference;->getRingtoneType()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/DefaultRingtonePreference;->getRingtoneType()I
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/DualSoundRingtoneSettings;->onMusicPickerChosen(I)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->onMusicPickerChosen(I)V
 
     goto :goto_0
 
     .line 150
     :cond_3
-    iget-object v1, p0, Lcom/android/settings/DefaultRingtonePreference;->mRingtoneNotificationSettings:Lcom/android/settings/notification/NotificationSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/DefaultRingtonePreference;->mRingtoneNotificationSettings:Lcom/android/settings_ex/notification/NotificationSettings;
 
-    invoke-virtual {p0}, Lcom/android/settings/DefaultRingtonePreference;->getRingtoneType()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/DefaultRingtonePreference;->getRingtoneType()I
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/notification/NotificationSettings;->onMusicPickerChosen(I)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/notification/NotificationSettings;->onMusicPickerChosen(I)V
 
     goto :goto_0
 .end method
@@ -289,7 +289,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/android/settings/DefaultRingtonePreference;->mActivePhone:I
+    iget v2, p0, Lcom/android/settings_ex/DefaultRingtonePreference;->mActivePhone:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -302,13 +302,13 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 74
-    invoke-virtual {p0}, Lcom/android/settings/DefaultRingtonePreference;->getRingtoneType()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/DefaultRingtonePreference;->getRingtoneType()I
 
     move-result v0
 
     if-eq v0, v3, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settings/DefaultRingtonePreference;->getRingtoneType()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/DefaultRingtonePreference;->getRingtoneType()I
 
     move-result v0
 
@@ -325,7 +325,7 @@
     .line 77
     const-string v0, "neutral_button_text"
 
-    invoke-virtual {p0}, Lcom/android/settings/DefaultRingtonePreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DefaultRingtonePreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -354,11 +354,11 @@
 
     .prologue
     .line 127
-    invoke-virtual {p0}, Lcom/android/settings/DefaultRingtonePreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DefaultRingtonePreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/android/settings/DefaultRingtonePreference;->getRingtoneType()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/DefaultRingtonePreference;->getRingtoneType()I
 
     move-result v1
 
@@ -375,11 +375,11 @@
 
     .prologue
     .line 85
-    invoke-virtual {p0}, Lcom/android/settings/DefaultRingtonePreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DefaultRingtonePreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/android/settings/DefaultRingtonePreference;->getRingtoneType()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/DefaultRingtonePreference;->getRingtoneType()I
 
     move-result v1
 
@@ -391,7 +391,7 @@
     .line 95
     new-instance v9, Landroid/media/RingtoneManager;
 
-    invoke-virtual {p0}, Lcom/android/settings/DefaultRingtonePreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DefaultRingtonePreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -421,7 +421,7 @@
     .line 102
     .local v6, "c":Landroid/database/Cursor;
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/DefaultRingtonePreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DefaultRingtonePreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -479,35 +479,35 @@
 
     .line 106
     .local v7, "mFilePath":Ljava/lang/String;
-    new-instance v8, Lcom/android/settings/RingtoneRecommender;
+    new-instance v8, Lcom/android/settings_ex/RingtoneRecommender;
 
-    invoke-direct {v8}, Lcom/android/settings/RingtoneRecommender;-><init>()V
+    invoke-direct {v8}, Lcom/android/settings_ex/RingtoneRecommender;-><init>()V
 
     .line 107
-    .local v8, "mRecommender":Lcom/android/settings/RingtoneRecommender;
-    invoke-virtual {v8, v7}, Lcom/android/settings/RingtoneRecommender;->open(Ljava/lang/String;)I
+    .local v8, "mRecommender":Lcom/android/settings_ex/RingtoneRecommender;
+    invoke-virtual {v8, v7}, Lcom/android/settings_ex/RingtoneRecommender;->open(Ljava/lang/String;)I
 
     move-result v0
 
     if-nez v0, :cond_2
 
     .line 108
-    invoke-virtual {v8}, Lcom/android/settings/RingtoneRecommender;->is_extractable()Z
+    invoke-virtual {v8}, Lcom/android/settings_ex/RingtoneRecommender;->is_extractable()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
     .line 109
-    iget-object v0, p0, Lcom/android/settings/DefaultRingtonePreference;->mResultListener:Lcom/android/settings/RingtoneRecommender$OnHighlightResultListener;
+    iget-object v0, p0, Lcom/android/settings_ex/DefaultRingtonePreference;->mResultListener:Lcom/android/settings_ex/RingtoneRecommender$OnHighlightResultListener;
 
-    invoke-virtual {v8, v0}, Lcom/android/settings/RingtoneRecommender;->doExtract(Lcom/android/settings/RingtoneRecommender$OnHighlightResultListener;)Z
+    invoke-virtual {v8, v0}, Lcom/android/settings_ex/RingtoneRecommender;->doExtract(Lcom/android/settings_ex/RingtoneRecommender$OnHighlightResultListener;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 117
     .end local v7    # "mFilePath":Ljava/lang/String;
-    .end local v8    # "mRecommender":Lcom/android/settings/RingtoneRecommender;
+    .end local v8    # "mRecommender":Lcom/android/settings_ex/RingtoneRecommender;
     :cond_2
     :goto_1
     if-eqz v6, :cond_0
@@ -519,15 +519,15 @@
 
     .line 111
     .restart local v7    # "mFilePath":Ljava/lang/String;
-    .restart local v8    # "mRecommender":Lcom/android/settings/RingtoneRecommender;
+    .restart local v8    # "mRecommender":Lcom/android/settings_ex/RingtoneRecommender;
     :cond_3
     const/4 v0, 0x1
 
     :try_start_1
-    iput-boolean v0, v8, Lcom/android/settings/RingtoneRecommender;->mIsOpen:Z
+    iput-boolean v0, v8, Lcom/android/settings_ex/RingtoneRecommender;->mIsOpen:Z
 
     .line 112
-    invoke-virtual {v8}, Lcom/android/settings/RingtoneRecommender;->close()Z
+    invoke-virtual {v8}, Lcom/android/settings_ex/RingtoneRecommender;->close()Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -535,7 +535,7 @@
 
     .line 117
     .end local v7    # "mFilePath":Ljava/lang/String;
-    .end local v8    # "mRecommender":Lcom/android/settings/RingtoneRecommender;
+    .end local v8    # "mRecommender":Lcom/android/settings_ex/RingtoneRecommender;
     :catchall_0
     move-exception v0
 
@@ -548,37 +548,37 @@
     throw v0
 .end method
 
-.method public setObject(Lcom/android/settings/notification/NotificationSettings;)V
+.method public setObject(Lcom/android/settings_ex/notification/NotificationSettings;)V
     .locals 0
-    .param p1, "soundSettings"    # Lcom/android/settings/notification/NotificationSettings;
+    .param p1, "soundSettings"    # Lcom/android/settings_ex/notification/NotificationSettings;
 
     .prologue
     .line 173
-    iput-object p1, p0, Lcom/android/settings/DefaultRingtonePreference;->mRingtoneNotificationSettings:Lcom/android/settings/notification/NotificationSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/DefaultRingtonePreference;->mRingtoneNotificationSettings:Lcom/android/settings_ex/notification/NotificationSettings;
 
     .line 174
     return-void
 .end method
 
-.method public setObject(Lcom/android/settings/notification/NotificationsSubSettings;)V
+.method public setObject(Lcom/android/settings_ex/notification/NotificationsSubSettings;)V
     .locals 0
-    .param p1, "soundSettings"    # Lcom/android/settings/notification/NotificationsSubSettings;
+    .param p1, "soundSettings"    # Lcom/android/settings_ex/notification/NotificationsSubSettings;
 
     .prologue
     .line 178
-    iput-object p1, p0, Lcom/android/settings/DefaultRingtonePreference;->mRingtoneNotificationsSubSettings:Lcom/android/settings/notification/NotificationsSubSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/DefaultRingtonePreference;->mRingtoneNotificationsSubSettings:Lcom/android/settings_ex/notification/NotificationsSubSettings;
 
     .line 179
     return-void
 .end method
 
-.method public setObjectDual(Lcom/android/settings/DualSoundRingtoneSettings;)V
+.method public setObjectDual(Lcom/android/settings_ex/DualSoundRingtoneSettings;)V
     .locals 0
-    .param p1, "soundSettings"    # Lcom/android/settings/DualSoundRingtoneSettings;
+    .param p1, "soundSettings"    # Lcom/android/settings_ex/DualSoundRingtoneSettings;
 
     .prologue
     .line 183
-    iput-object p1, p0, Lcom/android/settings/DefaultRingtonePreference;->mRingtoneDual:Lcom/android/settings/DualSoundRingtoneSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/DefaultRingtonePreference;->mRingtoneDual:Lcom/android/settings_ex/DualSoundRingtoneSettings;
 
     .line 184
     return-void

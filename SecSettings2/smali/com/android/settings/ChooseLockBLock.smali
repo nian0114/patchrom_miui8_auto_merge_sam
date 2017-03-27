@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/ChooseLockBLock;
+.class public Lcom/android/settings_ex/ChooseLockBLock;
 .super Landroid/app/Activity;
 .source "ChooseLockBLock.java"
 
@@ -43,7 +43,7 @@
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    const-class v2, Lcom/android/settings/ChooseLockGeneric$InternalActivity;
+    const-class v2, Lcom/android/settings_ex/ChooseLockGeneric$InternalActivity;
 
     invoke-virtual {v1, p0, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
@@ -75,17 +75,17 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 37
-    invoke-virtual {p0, v0}, Lcom/android/settings/ChooseLockBLock;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/ChooseLockBLock;->startActivity(Landroid/content/Intent;)V
 
     .line 38
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockBLock;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockBLock;->finish()V
 
     goto :goto_0
 
     .line 41
     .end local v0    # "fallBackIntent":Landroid/content/Intent;
     :sswitch_1
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockBLock;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockBLock;->finish()V
 
     goto :goto_0
 
@@ -110,12 +110,12 @@
     .line 21
     const v2, 0x7f040054
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/ChooseLockBLock;->setContentView(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/ChooseLockBLock;->setContentView(I)V
 
     .line 22
     const v2, 0x7f0d00f8
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/ChooseLockBLock;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/ChooseLockBLock;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -125,7 +125,7 @@
     .local v0, "cancelBtn":Landroid/widget/Button;
     const v2, 0x7f0d010a
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/ChooseLockBLock;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/ChooseLockBLock;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 

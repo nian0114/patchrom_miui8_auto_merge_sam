@@ -1,4 +1,4 @@
-.class Lcom/android/settings/TetherSettings$7;
+.class Lcom/android/settings_ex/TetherSettings$7;
 .super Ljava/lang/Object;
 .source "TetherSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/TetherSettings;->onCreateDialog(I)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/TetherSettings;->onCreateDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/TetherSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/TetherSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/TetherSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/TetherSettings;)V
     .locals 0
 
     .prologue
     .line 431
-    iput-object p1, p0, Lcom/android/settings/TetherSettings$7;->this$0:Lcom/android/settings/TetherSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/TetherSettings$7;->this$0:Lcom/android/settings_ex/TetherSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,10 +47,10 @@
     const/4 v5, 0x0
 
     .line 433
-    iget-object v2, p0, Lcom/android/settings/TetherSettings$7;->this$0:Lcom/android/settings/TetherSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/TetherSettings$7;->this$0:Lcom/android/settings_ex/TetherSettings;
 
-    # getter for: Lcom/android/settings/TetherSettings;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcom/android/settings/TetherSettings;->access$700(Lcom/android/settings/TetherSettings;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/TetherSettings;->mContext:Landroid/content/Context;
+    invoke-static {v2}, Lcom/android/settings_ex/TetherSettings;->access$700(Lcom/android/settings_ex/TetherSettings;)Landroid/content/Context;
 
     move-result-object v2
 
@@ -94,10 +94,10 @@
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 436
-    iget-object v2, p0, Lcom/android/settings/TetherSettings$7;->this$0:Lcom/android/settings/TetherSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/TetherSettings$7;->this$0:Lcom/android/settings_ex/TetherSettings;
 
-    # getter for: Lcom/android/settings/TetherSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
-    invoke-static {v2}, Lcom/android/settings/TetherSettings;->access$800(Lcom/android/settings/TetherSettings;)Landroid/net/wifi/WifiManager;
+    # getter for: Lcom/android/settings_ex/TetherSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {v2}, Lcom/android/settings_ex/TetherSettings;->access$800(Lcom/android/settings_ex/TetherSettings;)Landroid/net/wifi/WifiManager;
 
     move-result-object v2
 
@@ -113,10 +113,10 @@
 
     .line 442
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/TetherSettings$7;->this$0:Lcom/android/settings/TetherSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/TetherSettings$7;->this$0:Lcom/android/settings_ex/TetherSettings;
 
-    # invokes: Lcom/android/settings/TetherSettings;->startProvisioningIfNecessary(I)V
-    invoke-static {v2, v6}, Lcom/android/settings/TetherSettings;->access$400(Lcom/android/settings/TetherSettings;I)V
+    # invokes: Lcom/android/settings_ex/TetherSettings;->startProvisioningIfNecessary(I)V
+    invoke-static {v2, v6}, Lcom/android/settings_ex/TetherSettings;->access$400(Lcom/android/settings_ex/TetherSettings;I)V
 
     .line 443
     return-void

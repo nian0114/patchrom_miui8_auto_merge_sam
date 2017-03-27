@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DeviceNameSettings$4;
+.class Lcom/android/settings_ex/DeviceNameSettings$4;
 .super Ljava/lang/Object;
 .source "DeviceNameSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DeviceNameSettings;->showInputMethod()V
+    value = Lcom/android/settings_ex/DeviceNameSettings;->showInputMethod()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DeviceNameSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/DeviceNameSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DeviceNameSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/DeviceNameSettings;)V
     .locals 0
 
     .prologue
     .line 227
-    iput-object p1, p0, Lcom/android/settings/DeviceNameSettings$4;->this$0:Lcom/android/settings/DeviceNameSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/DeviceNameSettings$4;->this$0:Lcom/android/settings_ex/DeviceNameSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,9 +42,9 @@
     .prologue
     .line 232
     :try_start_0
-    iget-object v2, p0, Lcom/android/settings/DeviceNameSettings$4;->this$0:Lcom/android/settings/DeviceNameSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/DeviceNameSettings$4;->this$0:Lcom/android/settings_ex/DeviceNameSettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/DeviceNameSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Lcom/android/settings_ex/DeviceNameSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -58,10 +58,10 @@
 
     .line 233
     .local v1, "imm":Landroid/view/inputmethod/InputMethodManager;
-    iget-object v2, p0, Lcom/android/settings/DeviceNameSettings$4;->this$0:Lcom/android/settings/DeviceNameSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/DeviceNameSettings$4;->this$0:Lcom/android/settings_ex/DeviceNameSettings;
 
-    # getter for: Lcom/android/settings/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
-    invoke-static {v2}, Lcom/android/settings/DeviceNameSettings;->access$300(Lcom/android/settings/DeviceNameSettings;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
+    invoke-static {v2}, Lcom/android/settings_ex/DeviceNameSettings;->access$300(Lcom/android/settings_ex/DeviceNameSettings;)Landroid/widget/EditText;
 
     move-result-object v2
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/print/PrintSettingsFragment$3;
+.class Lcom/android/settings_ex/print/PrintSettingsFragment$3;
 .super Ljava/lang/Object;
 .source "PrintSettingsFragment.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/print/PrintSettingsFragment;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/print/PrintSettingsFragment;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field private mLastClickTime:J
 
-.field final synthetic this$0:Lcom/android/settings/print/PrintSettingsFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/print/PrintSettingsFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/print/PrintSettingsFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/print/PrintSettingsFragment;)V
     .locals 0
 
     .prologue
     .line 181
-    iput-object p1, p0, Lcom/android/settings/print/PrintSettingsFragment$3;->this$0:Lcom/android/settings/print/PrintSettingsFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/print/PrintSettingsFragment$3;->this$0:Lcom/android/settings_ex/print/PrintSettingsFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,7 +50,7 @@
 
     move-result-wide v4
 
-    iget-wide v6, p0, Lcom/android/settings/print/PrintSettingsFragment$3;->mLastClickTime:J
+    iget-wide v6, p0, Lcom/android/settings_ex/print/PrintSettingsFragment$3;->mLastClickTime:J
 
     sub-long/2addr v4, v6
 
@@ -70,7 +70,7 @@
 
     move-result-wide v4
 
-    iput-wide v4, p0, Lcom/android/settings/print/PrintSettingsFragment$3;->mLastClickTime:J
+    iput-wide v4, p0, Lcom/android/settings_ex/print/PrintSettingsFragment$3;->mLastClickTime:J
 
     .line 190
     new-instance v1, Landroid/content/Intent;
@@ -87,10 +87,10 @@
 
     .line 191
     .local v1, "playStoreIntent":Landroid/content/Intent;
-    iget-object v3, p0, Lcom/android/settings/print/PrintSettingsFragment$3;->this$0:Lcom/android/settings/print/PrintSettingsFragment;
+    iget-object v3, p0, Lcom/android/settings_ex/print/PrintSettingsFragment$3;->this$0:Lcom/android/settings_ex/print/PrintSettingsFragment;
 
-    # invokes: Lcom/android/settings/print/PrintSettingsFragment;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v3}, Lcom/android/settings/print/PrintSettingsFragment;->access$300(Lcom/android/settings/print/PrintSettingsFragment;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/print/PrintSettingsFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v3}, Lcom/android/settings_ex/print/PrintSettingsFragment;->access$300(Lcom/android/settings_ex/print/PrintSettingsFragment;)Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -124,9 +124,9 @@
     .restart local v1    # "playStoreIntent":Landroid/content/Intent;
     :cond_1
     :try_start_0
-    iget-object v3, p0, Lcom/android/settings/print/PrintSettingsFragment$3;->this$0:Lcom/android/settings/print/PrintSettingsFragment;
+    iget-object v3, p0, Lcom/android/settings_ex/print/PrintSettingsFragment$3;->this$0:Lcom/android/settings_ex/print/PrintSettingsFragment;
 
-    invoke-virtual {v3, v1}, Lcom/android/settings/print/PrintSettingsFragment;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v3, v1}, Lcom/android/settings_ex/print/PrintSettingsFragment;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 

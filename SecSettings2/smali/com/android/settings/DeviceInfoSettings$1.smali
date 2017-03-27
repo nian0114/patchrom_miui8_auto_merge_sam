@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DeviceInfoSettings$1;
+.class Lcom/android/settings_ex/DeviceInfoSettings$1;
 .super Ljava/lang/Object;
 .source "DeviceInfoSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DeviceInfoSettings;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/DeviceInfoSettings;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DeviceInfoSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/DeviceInfoSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DeviceInfoSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/DeviceInfoSettings;)V
     .locals 0
 
     .prologue
     .line 600
-    iput-object p1, p0, Lcom/android/settings/DeviceInfoSettings$1;->this$0:Lcom/android/settings/DeviceInfoSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/DeviceInfoSettings$1;->this$0:Lcom/android/settings_ex/DeviceInfoSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,10 +42,10 @@
 
     .prologue
     .line 604
-    iget-object v0, p0, Lcom/android/settings/DeviceInfoSettings$1;->this$0:Lcom/android/settings/DeviceInfoSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/DeviceInfoSettings$1;->this$0:Lcom/android/settings_ex/DeviceInfoSettings;
 
-    # invokes: Lcom/android/settings/DeviceInfoSettings;->showNtcApprovalInfo()V
-    invoke-static {v0}, Lcom/android/settings/DeviceInfoSettings;->access$400(Lcom/android/settings/DeviceInfoSettings;)V
+    # invokes: Lcom/android/settings_ex/DeviceInfoSettings;->showNtcApprovalInfo()V
+    invoke-static {v0}, Lcom/android/settings_ex/DeviceInfoSettings;->access$400(Lcom/android/settings_ex/DeviceInfoSettings;)V
 
     .line 605
     const/4 v0, 0x0

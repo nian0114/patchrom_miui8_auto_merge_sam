@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/nfc/PaymentSettings$PaymentAppPreference;
+.class public Lcom/android/settings_ex/nfc/PaymentSettings$PaymentAppPreference;
 .super Landroid/preference/Preference;
 .source "PaymentSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/nfc/PaymentSettings;
+    value = Lcom/android/settings_ex/nfc/PaymentSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private final appInfo:Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;
+.field private final appInfo:Lcom/android/settings_ex/nfc/PaymentBackend$PaymentAppInfo;
 
 .field private isTrusted:Z
 
@@ -25,11 +25,11 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/nfc/NfcAdapter;Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;Landroid/view/View$OnClickListener;Landroid/view/View$OnLongClickListener;)V
+.method public constructor <init>(Landroid/content/Context;Landroid/nfc/NfcAdapter;Lcom/android/settings_ex/nfc/PaymentBackend$PaymentAppInfo;Landroid/view/View$OnClickListener;Landroid/view/View$OnLongClickListener;)V
     .locals 2
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "mNfcAdapter"    # Landroid/nfc/NfcAdapter;
-    .param p3, "appInfo"    # Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;
+    .param p3, "appInfo"    # Lcom/android/settings_ex/nfc/PaymentBackend$PaymentAppInfo;
     .param p4, "listener"    # Landroid/view/View$OnClickListener;
     .param p5, "longListener"    # Landroid/view/View$OnLongClickListener;
 
@@ -40,21 +40,21 @@
     .line 372
     const v0, 0x7f04014f
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/nfc/PaymentSettings$PaymentAppPreference;->setLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/nfc/PaymentSettings$PaymentAppPreference;->setLayoutResource(I)V
 
     .line 373
-    iput-object p3, p0, Lcom/android/settings/nfc/PaymentSettings$PaymentAppPreference;->appInfo:Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;
+    iput-object p3, p0, Lcom/android/settings_ex/nfc/PaymentSettings$PaymentAppPreference;->appInfo:Lcom/android/settings_ex/nfc/PaymentBackend$PaymentAppInfo;
 
     .line 374
-    iput-object p4, p0, Lcom/android/settings/nfc/PaymentSettings$PaymentAppPreference;->listener:Landroid/view/View$OnClickListener;
+    iput-object p4, p0, Lcom/android/settings_ex/nfc/PaymentSettings$PaymentAppPreference;->listener:Landroid/view/View$OnClickListener;
 
     .line 375
-    iput-object p5, p0, Lcom/android/settings/nfc/PaymentSettings$PaymentAppPreference;->longListener:Landroid/view/View$OnLongClickListener;
+    iput-object p5, p0, Lcom/android/settings_ex/nfc/PaymentSettings$PaymentAppPreference;->longListener:Landroid/view/View$OnLongClickListener;
 
     .line 376
     const-string v0, "SIM"
 
-    iget-object v1, p3, Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;->componentName:Landroid/content/ComponentName;
+    iget-object v1, p3, Lcom/android/settings_ex/nfc/PaymentBackend$PaymentAppInfo;->componentName:Landroid/content/ComponentName;
 
     invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -64,7 +64,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/nfc/PaymentSettings$PaymentAppPreference;->isTrusted:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/nfc/PaymentSettings$PaymentAppPreference;->isTrusted:Z
 
     .line 377
     return-void
@@ -91,24 +91,24 @@
 
     .line 384
     .local v1, "radioButton":Landroid/widget/RadioButton;
-    iget-object v3, p0, Lcom/android/settings/nfc/PaymentSettings$PaymentAppPreference;->appInfo:Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;
+    iget-object v3, p0, Lcom/android/settings_ex/nfc/PaymentSettings$PaymentAppPreference;->appInfo:Lcom/android/settings_ex/nfc/PaymentBackend$PaymentAppInfo;
 
-    iget-boolean v3, v3, Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;->isDefault:Z
+    iget-boolean v3, v3, Lcom/android/settings_ex/nfc/PaymentBackend$PaymentAppInfo;->isDefault:Z
 
     invoke-virtual {v1, v3}, Landroid/widget/RadioButton;->setChecked(Z)V
 
     .line 385
-    iget-object v3, p0, Lcom/android/settings/nfc/PaymentSettings$PaymentAppPreference;->listener:Landroid/view/View$OnClickListener;
+    iget-object v3, p0, Lcom/android/settings_ex/nfc/PaymentSettings$PaymentAppPreference;->listener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v1, v3}, Landroid/widget/RadioButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 386
-    iget-object v3, p0, Lcom/android/settings/nfc/PaymentSettings$PaymentAppPreference;->longListener:Landroid/view/View$OnLongClickListener;
+    iget-object v3, p0, Lcom/android/settings_ex/nfc/PaymentSettings$PaymentAppPreference;->longListener:Landroid/view/View$OnLongClickListener;
 
     invoke-virtual {v1, v3}, Landroid/widget/RadioButton;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
     .line 387
-    iget-object v3, p0, Lcom/android/settings/nfc/PaymentSettings$PaymentAppPreference;->appInfo:Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;
+    iget-object v3, p0, Lcom/android/settings_ex/nfc/PaymentSettings$PaymentAppPreference;->appInfo:Lcom/android/settings_ex/nfc/PaymentBackend$PaymentAppInfo;
 
     invoke-virtual {v1, v3}, Landroid/widget/RadioButton;->setTag(Ljava/lang/Object;)V
 
@@ -123,31 +123,31 @@
 
     .line 390
     .local v0, "banner":Landroid/widget/ImageView;
-    iget-object v3, p0, Lcom/android/settings/nfc/PaymentSettings$PaymentAppPreference;->appInfo:Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;
+    iget-object v3, p0, Lcom/android/settings_ex/nfc/PaymentSettings$PaymentAppPreference;->appInfo:Lcom/android/settings_ex/nfc/PaymentBackend$PaymentAppInfo;
 
-    iget-object v3, v3, Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;->banner:Landroid/graphics/drawable/Drawable;
+    iget-object v3, v3, Lcom/android/settings_ex/nfc/PaymentBackend$PaymentAppInfo;->banner:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 391
-    iget-object v3, p0, Lcom/android/settings/nfc/PaymentSettings$PaymentAppPreference;->listener:Landroid/view/View$OnClickListener;
+    iget-object v3, p0, Lcom/android/settings_ex/nfc/PaymentSettings$PaymentAppPreference;->listener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 392
-    iget-object v3, p0, Lcom/android/settings/nfc/PaymentSettings$PaymentAppPreference;->longListener:Landroid/view/View$OnLongClickListener;
+    iget-object v3, p0, Lcom/android/settings_ex/nfc/PaymentSettings$PaymentAppPreference;->longListener:Landroid/view/View$OnLongClickListener;
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
     .line 393
-    iget-object v3, p0, Lcom/android/settings/nfc/PaymentSettings$PaymentAppPreference;->appInfo:Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;
+    iget-object v3, p0, Lcom/android/settings_ex/nfc/PaymentSettings$PaymentAppPreference;->appInfo:Lcom/android/settings_ex/nfc/PaymentBackend$PaymentAppInfo;
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setTag(Ljava/lang/Object;)V
 
     .line 394
-    iget-object v3, p0, Lcom/android/settings/nfc/PaymentSettings$PaymentAppPreference;->appInfo:Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;
+    iget-object v3, p0, Lcom/android/settings_ex/nfc/PaymentSettings$PaymentAppPreference;->appInfo:Lcom/android/settings_ex/nfc/PaymentBackend$PaymentAppInfo;
 
-    iget-object v3, v3, Lcom/android/settings/nfc/PaymentBackend$PaymentAppInfo;->label:Ljava/lang/CharSequence;
+    iget-object v3, v3, Lcom/android/settings_ex/nfc/PaymentBackend$PaymentAppInfo;->label:Ljava/lang/CharSequence;
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
@@ -162,7 +162,7 @@
 
     .line 397
     .local v2, "trusted":Landroid/widget/ImageView;
-    iget-boolean v3, p0, Lcom/android/settings/nfc/PaymentSettings$PaymentAppPreference;->isTrusted:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/nfc/PaymentSettings$PaymentAppPreference;->isTrusted:Z
 
     if-eqz v3, :cond_0
 

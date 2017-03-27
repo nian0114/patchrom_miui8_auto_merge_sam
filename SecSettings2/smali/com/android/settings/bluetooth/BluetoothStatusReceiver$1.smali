@@ -1,11 +1,11 @@
-.class Lcom/android/settings/bluetooth/BluetoothStatusReceiver$1;
+.class Lcom/android/settings_ex/bluetooth/BluetoothStatusReceiver$1;
 .super Landroid/os/Handler;
 .source "BluetoothStatusReceiver.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/bluetooth/BluetoothStatusReceiver;
+    value = Lcom/android/settings_ex/bluetooth/BluetoothStatusReceiver;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/bluetooth/BluetoothStatusReceiver;
+.field final synthetic this$0:Lcom/android/settings_ex/bluetooth/BluetoothStatusReceiver;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/bluetooth/BluetoothStatusReceiver;)V
+.method constructor <init>(Lcom/android/settings_ex/bluetooth/BluetoothStatusReceiver;)V
     .locals 0
 
     .prologue
     .line 51
-    iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothStatusReceiver$1;->this$0:Lcom/android/settings/bluetooth/BluetoothStatusReceiver;
+    iput-object p1, p0, Lcom/android/settings_ex/bluetooth/BluetoothStatusReceiver$1;->this$0:Lcom/android/settings_ex/bluetooth/BluetoothStatusReceiver;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -70,10 +70,10 @@
 
     .line 60
     :try_start_0
-    iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothStatusReceiver$1;->this$0:Lcom/android/settings/bluetooth/BluetoothStatusReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/bluetooth/BluetoothStatusReceiver$1;->this$0:Lcom/android/settings_ex/bluetooth/BluetoothStatusReceiver;
 
-    # getter for: Lcom/android/settings/bluetooth/BluetoothStatusReceiver;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcom/android/settings/bluetooth/BluetoothStatusReceiver;->access$000(Lcom/android/settings/bluetooth/BluetoothStatusReceiver;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/bluetooth/BluetoothStatusReceiver;->mContext:Landroid/content/Context;
+    invoke-static {v2}, Lcom/android/settings_ex/bluetooth/BluetoothStatusReceiver;->access$000(Lcom/android/settings_ex/bluetooth/BluetoothStatusReceiver;)Landroid/content/Context;
 
     move-result-object v2
 

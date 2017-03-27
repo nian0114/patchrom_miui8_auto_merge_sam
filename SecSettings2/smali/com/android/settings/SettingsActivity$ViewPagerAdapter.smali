@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/SettingsActivity$ViewPagerAdapter;
+.class public Lcom/android/settings_ex/SettingsActivity$ViewPagerAdapter;
 .super Landroid/support/v4/view/PagerAdapter;
 .source "SettingsActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/SettingsActivity;
+    value = Lcom/android/settings_ex/SettingsActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,22 +17,22 @@
 # instance fields
 .field private mContext:Landroid/content/Context;
 
-.field final synthetic this$0:Lcom/android/settings/SettingsActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/SettingsActivity;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/settings/SettingsActivity;Landroid/content/Context;)V
+.method public constructor <init>(Lcom/android/settings_ex/SettingsActivity;Landroid/content/Context;)V
     .locals 0
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
     .line 1518
-    iput-object p1, p0, Lcom/android/settings/SettingsActivity$ViewPagerAdapter;->this$0:Lcom/android/settings/SettingsActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/SettingsActivity$ViewPagerAdapter;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
     invoke-direct {p0}, Landroid/support/v4/view/PagerAdapter;-><init>()V
 
     .line 1519
-    iput-object p2, p0, Lcom/android/settings/SettingsActivity$ViewPagerAdapter;->mContext:Landroid/content/Context;
+    iput-object p2, p0, Lcom/android/settings_ex/SettingsActivity$ViewPagerAdapter;->mContext:Landroid/content/Context;
 
     .line 1520
     return-void
@@ -65,10 +65,10 @@
 
     .prologue
     .line 1523
-    iget-object v0, p0, Lcom/android/settings/SettingsActivity$ViewPagerAdapter;->this$0:Lcom/android/settings/SettingsActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/SettingsActivity$ViewPagerAdapter;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
-    # getter for: Lcom/android/settings/SettingsActivity;->mDashboardTabcategories:Ljava/util/List;
-    invoke-static {v0}, Lcom/android/settings/SettingsActivity;->access$1300(Lcom/android/settings/SettingsActivity;)Ljava/util/List;
+    # getter for: Lcom/android/settings_ex/SettingsActivity;->mDashboardTabcategories:Ljava/util/List;
+    invoke-static {v0}, Lcom/android/settings_ex/SettingsActivity;->access$1300(Lcom/android/settings_ex/SettingsActivity;)Ljava/util/List;
 
     move-result-object v0
 
@@ -96,10 +96,10 @@
 
     .line 1534
     .local v2, "curPager":Landroid/support/v4/view/ViewPager;
-    iget-object v4, p0, Lcom/android/settings/SettingsActivity$ViewPagerAdapter;->this$0:Lcom/android/settings/SettingsActivity;
+    iget-object v4, p0, Lcom/android/settings_ex/SettingsActivity$ViewPagerAdapter;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
-    # getter for: Lcom/android/settings/SettingsActivity;->mDashboardTabcategories:Ljava/util/List;
-    invoke-static {v4}, Lcom/android/settings/SettingsActivity;->access$1300(Lcom/android/settings/SettingsActivity;)Ljava/util/List;
+    # getter for: Lcom/android/settings_ex/SettingsActivity;->mDashboardTabcategories:Ljava/util/List;
+    invoke-static {v4}, Lcom/android/settings_ex/SettingsActivity;->access$1300(Lcom/android/settings_ex/SettingsActivity;)Ljava/util/List;
 
     move-result-object v4
 
@@ -107,16 +107,16 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/dashboard/DashboardCategory;
+    check-cast v0, Lcom/android/settings_ex/dashboard/DashboardCategory;
 
     .line 1535
-    .local v0, "category":Lcom/android/settings/dashboard/DashboardCategory;
-    iget-object v5, p0, Lcom/android/settings/SettingsActivity$ViewPagerAdapter;->this$0:Lcom/android/settings/SettingsActivity;
+    .local v0, "category":Lcom/android/settings_ex/dashboard/DashboardCategory;
+    iget-object v5, p0, Lcom/android/settings_ex/SettingsActivity$ViewPagerAdapter;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
-    iget-object v4, p0, Lcom/android/settings/SettingsActivity$ViewPagerAdapter;->this$0:Lcom/android/settings/SettingsActivity;
+    iget-object v4, p0, Lcom/android/settings_ex/SettingsActivity$ViewPagerAdapter;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
-    # getter for: Lcom/android/settings/SettingsActivity;->mDashboardTabcategories:Ljava/util/List;
-    invoke-static {v4}, Lcom/android/settings/SettingsActivity;->access$1300(Lcom/android/settings/SettingsActivity;)Ljava/util/List;
+    # getter for: Lcom/android/settings_ex/SettingsActivity;->mDashboardTabcategories:Ljava/util/List;
+    invoke-static {v4}, Lcom/android/settings_ex/SettingsActivity;->access$1300(Lcom/android/settings_ex/SettingsActivity;)Ljava/util/List;
 
     move-result-object v4
 
@@ -124,11 +124,11 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/dashboard/DashboardCategory;
+    check-cast v4, Lcom/android/settings_ex/dashboard/DashboardCategory;
 
-    iget-object v6, p0, Lcom/android/settings/SettingsActivity$ViewPagerAdapter;->mContext:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/settings_ex/SettingsActivity$ViewPagerAdapter;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v5, v4, v6}, Lcom/android/settings/SettingsActivity;->updateTabTileView(Lcom/android/settings/dashboard/DashboardCategory;Landroid/content/Context;)Landroid/view/View;
+    invoke-virtual {v5, v4, v6}, Lcom/android/settings_ex/SettingsActivity;->updateTabTileView(Lcom/android/settings_ex/dashboard/DashboardCategory;Landroid/content/Context;)Landroid/view/View;
 
     move-result-object v1
 

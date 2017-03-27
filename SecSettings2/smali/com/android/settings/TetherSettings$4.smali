@@ -1,4 +1,4 @@
-.class Lcom/android/settings/TetherSettings$4;
+.class Lcom/android/settings_ex/TetherSettings$4;
 .super Ljava/lang/Object;
 .source "TetherSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/TetherSettings;->onCreateDialog(I)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/TetherSettings;->onCreateDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/TetherSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/TetherSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/TetherSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/TetherSettings;)V
     .locals 0
 
     .prologue
     .line 417
-    iput-object p1, p0, Lcom/android/settings/TetherSettings$4;->this$0:Lcom/android/settings/TetherSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/TetherSettings$4;->this$0:Lcom/android/settings_ex/TetherSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,10 +43,10 @@
 
     .prologue
     .line 419
-    iget-object v0, p0, Lcom/android/settings/TetherSettings$4;->this$0:Lcom/android/settings/TetherSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/TetherSettings$4;->this$0:Lcom/android/settings_ex/TetherSettings;
 
-    # getter for: Lcom/android/settings/TetherSettings;->mUsbTether:Landroid/preference/SwitchPreference;
-    invoke-static {v0}, Lcom/android/settings/TetherSettings;->access$600(Lcom/android/settings/TetherSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/TetherSettings;->mUsbTether:Landroid/preference/SwitchPreference;
+    invoke-static {v0}, Lcom/android/settings_ex/TetherSettings;->access$600(Lcom/android/settings_ex/TetherSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v0
 

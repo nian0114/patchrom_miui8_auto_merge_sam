@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/WifiOffloadDialog;
+.class public Lcom/android/settings_ex/wifi/WifiOffloadDialog;
 .super Landroid/app/Activity;
 .source "WifiOffloadDialog.java"
 
@@ -30,46 +30,46 @@
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     .line 29
-    iput-object v1, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mActivityMgr:Landroid/app/ActivityManager;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mActivityMgr:Landroid/app/ActivityManager;
 
     .line 30
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mIsUserAction:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mIsUserAction:Z
 
     .line 31
-    iput-object v1, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mPackageName:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mPackageName:Ljava/lang/String;
 
     .line 33
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mTaskID:I
+    iput v0, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mTaskID:I
 
     .line 34
-    iput-object v1, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->dialogLayout:Landroid/view/View;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->dialogLayout:Landroid/view/View;
 
     return-void
 .end method
 
-.method static synthetic access$002(Lcom/android/settings/wifi/WifiOffloadDialog;Z)Z
+.method static synthetic access$002(Lcom/android/settings_ex/wifi/WifiOffloadDialog;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiOffloadDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiOffloadDialog;
     .param p1, "x1"    # Z
 
     .prologue
     .line 25
-    iput-boolean p1, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mIsUserAction:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mIsUserAction:Z
 
     return p1
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/wifi/WifiOffloadDialog;)Landroid/net/wifi/WifiOffloadManager;
+.method static synthetic access$100(Lcom/android/settings_ex/wifi/WifiOffloadDialog;)Landroid/net/wifi/WifiOffloadManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiOffloadDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiOffloadDialog;
 
     .prologue
     .line 25
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mWifiOffloadManager:Landroid/net/wifi/WifiOffloadManager;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mWifiOffloadManager:Landroid/net/wifi/WifiOffloadManager;
 
     return-object v0
 .end method
@@ -80,7 +80,7 @@
 
     .prologue
     .line 172
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiOffloadDialog;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -98,7 +98,7 @@
 
     .prologue
     .line 150
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mActivityMgr:Landroid/app/ActivityManager;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mActivityMgr:Landroid/app/ActivityManager;
 
     const/4 v1, 0x1
 
@@ -130,31 +130,31 @@
     .line 47
     const-string v5, "activity"
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/wifi/WifiOffloadDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Landroid/app/ActivityManager;
 
-    iput-object v5, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mActivityMgr:Landroid/app/ActivityManager;
+    iput-object v5, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mActivityMgr:Landroid/app/ActivityManager;
 
     .line 48
     const-string v5, "wifioffload"
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/wifi/WifiOffloadDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Landroid/net/wifi/WifiOffloadManager;
 
-    iput-object v5, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mWifiOffloadManager:Landroid/net/wifi/WifiOffloadManager;
+    iput-object v5, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mWifiOffloadManager:Landroid/net/wifi/WifiOffloadManager;
 
     .line 50
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiOffloadDialog;->getTaskId()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->getTaskId()I
 
     move-result v5
 
-    iput v5, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mTaskID:I
+    iput v5, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mTaskID:I
 
     .line 52
     new-instance v1, Landroid/app/AlertDialog$Builder;
@@ -168,7 +168,7 @@
     invoke-virtual {v1, v5}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 56
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiOffloadDialog;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v3
 
@@ -176,7 +176,7 @@
     .local v3, "inflater":Landroid/view/LayoutInflater;
     const v6, 0x7f040268
 
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiOffloadDialog;->getCurrentFocus()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->getCurrentFocus()Landroid/view/View;
 
     move-result-object v5
 
@@ -186,10 +186,10 @@
 
     move-result-object v5
 
-    iput-object v5, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->dialogLayout:Landroid/view/View;
+    iput-object v5, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->dialogLayout:Landroid/view/View;
 
     .line 59
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->dialogLayout:Landroid/view/View;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->dialogLayout:Landroid/view/View;
 
     const v6, 0x7f0d060c
 
@@ -204,15 +204,15 @@
     if-eqz v4, :cond_0
 
     .line 61
-    new-instance v5, Lcom/android/settings/wifi/WifiOffloadDialog$1;
+    new-instance v5, Lcom/android/settings_ex/wifi/WifiOffloadDialog$1;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/wifi/WifiOffloadDialog$1;-><init>(Lcom/android/settings/wifi/WifiOffloadDialog;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/wifi/WifiOffloadDialog$1;-><init>(Lcom/android/settings_ex/wifi/WifiOffloadDialog;)V
 
     invoke-virtual {v4, v5}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 72
     :cond_0
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->dialogLayout:Landroid/view/View;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->dialogLayout:Landroid/view/View;
 
     const v6, 0x7f0d060d
 
@@ -227,15 +227,15 @@
     if-eqz v2, :cond_1
 
     .line 74
-    new-instance v5, Lcom/android/settings/wifi/WifiOffloadDialog$2;
+    new-instance v5, Lcom/android/settings_ex/wifi/WifiOffloadDialog$2;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/wifi/WifiOffloadDialog$2;-><init>(Lcom/android/settings/wifi/WifiOffloadDialog;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/wifi/WifiOffloadDialog$2;-><init>(Lcom/android/settings_ex/wifi/WifiOffloadDialog;)V
 
     invoke-virtual {v2, v5}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 84
     :cond_1
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->dialogLayout:Landroid/view/View;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->dialogLayout:Landroid/view/View;
 
     invoke-virtual {v1, v5}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
 
@@ -246,9 +246,9 @@
 
     .line 88
     .local v0, "alertDialog":Landroid/app/AlertDialog;
-    new-instance v5, Lcom/android/settings/wifi/WifiOffloadDialog$3;
+    new-instance v5, Lcom/android/settings_ex/wifi/WifiOffloadDialog$3;
 
-    invoke-direct {v5, p0, v0}, Lcom/android/settings/wifi/WifiOffloadDialog$3;-><init>(Lcom/android/settings/wifi/WifiOffloadDialog;Landroid/app/AlertDialog;)V
+    invoke-direct {v5, p0, v0}, Lcom/android/settings_ex/wifi/WifiOffloadDialog$3;-><init>(Lcom/android/settings_ex/wifi/WifiOffloadDialog;Landroid/app/AlertDialog;)V
 
     invoke-virtual {v0, v5}, Landroid/app/AlertDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
@@ -264,7 +264,7 @@
 
     .prologue
     .line 166
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->dialogLayout:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->dialogLayout:Landroid/view/View;
 
     const v3, 0x7f0d060a
 
@@ -278,7 +278,7 @@
     .local v1, "wifiFragmentLayout":Landroid/widget/FrameLayout;
     const v2, 0x7f0c02ee
 
-    invoke-direct {p0, v2}, Lcom/android/settings/wifi/WifiOffloadDialog;->getDimension(I)I
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->getDimension(I)I
 
     move-result v0
 
@@ -303,10 +303,10 @@
     .line 141
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mIsUserAction:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mIsUserAction:Z
 
     .line 142
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mWifiOffloadManager:Landroid/net/wifi/WifiOffloadManager;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mWifiOffloadManager:Landroid/net/wifi/WifiOffloadManager;
 
     if-eqz v0, :cond_0
 
@@ -318,7 +318,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 144
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mWifiOffloadManager:Landroid/net/wifi/WifiOffloadManager;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mWifiOffloadManager:Landroid/net/wifi/WifiOffloadManager;
 
     invoke-virtual {v0}, Landroid/net/wifi/WifiOffloadManager;->startTimer()V
 
@@ -351,7 +351,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mOrientation:I
+    iget v2, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mOrientation:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -364,20 +364,20 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 158
-    iget v0, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mOrientation:I
+    iget v0, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mOrientation:I
 
     iget v1, p1, Landroid/content/res/Configuration;->orientation:I
 
     if-eq v0, v1, :cond_0
 
     .line 159
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiOffloadDialog;->updateLayoutOnOrientationChange()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->updateLayoutOnOrientationChange()V
 
     .line 161
     :cond_0
     iget v0, p1, Landroid/content/res/Configuration;->orientation:I
 
-    iput v0, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mOrientation:I
+    iput v0, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mOrientation:I
 
     .line 162
     return-void
@@ -392,7 +392,7 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 40
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiOffloadDialog;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -407,7 +407,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mPackageName:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mPackageName:Ljava/lang/String;
 
     .line 44
     :cond_0
@@ -422,14 +422,14 @@
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
     .line 115
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiOffloadDialog;->getTaskId()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->getTaskId()I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mTaskID:I
+    iput v0, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mTaskID:I
 
     .line 117
-    iget-boolean v0, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mIsUserAction:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mIsUserAction:Z
 
     if-nez v0, :cond_0
 
@@ -446,7 +446,7 @@
 
     move-result-object v1
 
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiOffloadDialog;->getTopActivityFromStack()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->getTopActivityFromStack()Ljava/lang/String;
 
     move-result-object v2
 
@@ -473,7 +473,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mPackageName:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -486,17 +486,17 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 121
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiOffloadDialog;->getTopActivityFromStack()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->getTopActivityFromStack()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiOffloadDialog;->getTopActivityFromStack()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->getTopActivityFromStack()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mPackageName:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -517,7 +517,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mTaskID:I
+    iget v2, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mTaskID:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -530,9 +530,9 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 123
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mWifiOffloadManager:Landroid/net/wifi/WifiOffloadManager;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mWifiOffloadManager:Landroid/net/wifi/WifiOffloadManager;
 
-    iget v1, p0, Lcom/android/settings/wifi/WifiOffloadDialog;->mTaskID:I
+    iget v1, p0, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->mTaskID:I
 
     invoke-virtual {v0, v1}, Landroid/net/wifi/WifiOffloadManager;->checkAppNeedsMoveToFront(I)V
 
@@ -550,7 +550,7 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onPostCreate(Landroid/os/Bundle;)V
 
     .line 107
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiOffloadDialog;->initialize()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->initialize()V
 
     .line 108
     return-void
@@ -566,7 +566,7 @@
     .line 133
     const-string v1, "statusbar"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/WifiOffloadDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/WifiOffloadDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 

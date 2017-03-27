@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/sfinderconnect/SFinderConnectProvider;
+.class public Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;
 .super Landroid/content/ContentProvider;
 .source "SFinderConnectProvider.java"
 
@@ -29,13 +29,13 @@
     const/4 v3, 0x1
 
     .line 22
-    const-class v0, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;
+    const-class v0, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->TAG:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->TAG:Ljava/lang/String;
 
     .line 24
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
@@ -48,7 +48,7 @@
 
     move-result v0
 
-    sput v0, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->QUERY_PARSER_VERSION:I
+    sput v0, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->QUERY_PARSER_VERSION:I
 
     .line 28
     const-string v0, "content://com.android.settings.sfinderconncet"
@@ -57,7 +57,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->CONTENT_URI:Landroid/net/Uri;
+    sput-object v0, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->CONTENT_URI:Landroid/net/Uri;
 
     .line 35
     const/16 v0, 0xb
@@ -128,7 +128,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->SEARCH_PROJECTION:[Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->SEARCH_PROJECTION:[Ljava/lang/String;
 
     .line 51
     new-instance v0, Landroid/content/UriMatcher;
@@ -137,10 +137,10 @@
 
     invoke-direct {v0, v1}, Landroid/content/UriMatcher;-><init>(I)V
 
-    sput-object v0, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->uriMatcher:Landroid/content/UriMatcher;
+    sput-object v0, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     .line 52
-    sget-object v0, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->uriMatcher:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     const-string v1, "com.android.settings.sfinderconncet"
 
@@ -149,7 +149,7 @@
     invoke-virtual {v0, v1, v2, v4}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 53
-    sget-object v0, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->uriMatcher:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     const-string v1, "com.android.settings.sfinderconncet"
 
@@ -180,7 +180,7 @@
     .line 138
     new-instance v14, Landroid/database/MatrixCursor;
 
-    sget-object v17, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->SEARCH_PROJECTION:[Ljava/lang/String;
+    sget-object v17, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->SEARCH_PROJECTION:[Ljava/lang/String;
 
     move-object/from16 v0, v17
 
@@ -200,11 +200,11 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->mContext:Landroid/content/Context;
 
     move-object/from16 v18, v0
 
-    invoke-static/range {v18 .. v18}, Lcom/android/settings/search/Index;->getInstance(Landroid/content/Context;)Lcom/android/settings/search/Index;
+    invoke-static/range {v18 .. v18}, Lcom/android/settings_ex/search/Index;->getInstance(Landroid/content/Context;)Lcom/android/settings_ex/search/Index;
 
     move-result-object v18
 
@@ -212,7 +212,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/search/Index;->searchTile(Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/search/Index;->searchTile(Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v18
 
@@ -223,11 +223,11 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->mContext:Landroid/content/Context;
 
     move-object/from16 v18, v0
 
-    invoke-static/range {v18 .. v18}, Lcom/android/settings/search/Index;->getInstance(Landroid/content/Context;)Lcom/android/settings/search/Index;
+    invoke-static/range {v18 .. v18}, Lcom/android/settings_ex/search/Index;->getInstance(Landroid/content/Context;)Lcom/android/settings_ex/search/Index;
 
     move-result-object v18
 
@@ -235,7 +235,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/search/Index;->searchSubMenu(Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/search/Index;->searchSubMenu(Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v18
 
@@ -367,7 +367,7 @@
     .line 160
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->mContext:Landroid/content/Context;
 
     move-object/from16 v17, v0
 
@@ -424,7 +424,7 @@
 
     move/from16 v0, v18
 
-    invoke-static {v2, v0}, Lcom/android/settings/Utils;->getTileBackgroundId(II)I
+    invoke-static {v2, v0}, Lcom/android/settings_ex/Utils;->getTileBackgroundId(II)I
 
     move-result v18
 
@@ -438,7 +438,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->mContext:Landroid/content/Context;
 
     move-object/from16 v18, v0
 
@@ -560,7 +560,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->mContext:Landroid/content/Context;
 
     move-object/from16 v18, v0
 
@@ -740,18 +740,18 @@
 
     .prologue
     .line 77
-    sget-object v0, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->TAG:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->TAG:Ljava/lang/String;
 
     const-string v1, "onCreate"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 78
-    invoke-virtual {p0}, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->mContext:Landroid/content/Context;
 
     .line 79
     const/4 v0, 0x1
@@ -787,7 +787,7 @@
 
     .line 88
     .local v1, "limit":Ljava/lang/String;
-    sget-object v6, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -813,7 +813,7 @@
     if-nez p4, :cond_2
 
     .line 91
-    sget-object v6, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->TAG:Ljava/lang/String;
 
     const-string v7, "findo all search"
 
@@ -836,7 +836,7 @@
 
     const/4 v7, -0x1
 
-    invoke-direct {p0, v6, v7}, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->getResult(Ljava/lang/String;I)Landroid/database/Cursor;
+    invoke-direct {p0, v6, v7}, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->getResult(Ljava/lang/String;I)Landroid/database/Cursor;
 
     move-result-object v2
 
@@ -852,7 +852,7 @@
 
     move-result v7
 
-    invoke-direct {p0, v6, v7}, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->getResult(Ljava/lang/String;I)Landroid/database/Cursor;
+    invoke-direct {p0, v6, v7}, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->getResult(Ljava/lang/String;I)Landroid/database/Cursor;
 
     move-result-object v2
 
@@ -866,7 +866,7 @@
 
     .line 99
     .local v4, "searchWord":Ljava/lang/String;
-    sget v6, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->QUERY_PARSER_VERSION:I
+    sget v6, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->QUERY_PARSER_VERSION:I
 
     const/4 v7, 0x1
 
@@ -892,7 +892,7 @@
 
     .line 113
     :cond_3
-    sget-object v6, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -919,7 +919,7 @@
 
     .line 115
     .local v2, "result":Landroid/database/Cursor;
-    sget-object v6, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->uriMatcher:Landroid/content/UriMatcher;
+    sget-object v6, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     invoke-virtual {v6, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
@@ -1047,7 +1047,7 @@
     .end local v5    # "words":[Ljava/lang/String;
     .restart local v2    # "result":Landroid/database/Cursor;
     :pswitch_0
-    sget-object v6, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->TAG:Ljava/lang/String;
 
     const-string v7, "findo serach suggest"
 
@@ -1068,7 +1068,7 @@
     :cond_6
     const/4 v6, -0x1
 
-    invoke-direct {p0, v4, v6}, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->getResult(Ljava/lang/String;I)Landroid/database/Cursor;
+    invoke-direct {p0, v4, v6}, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->getResult(Ljava/lang/String;I)Landroid/database/Cursor;
 
     move-result-object v2
 
@@ -1077,7 +1077,7 @@
     if-eqz v2, :cond_8
 
     .line 130
-    sget-object v6, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -1111,7 +1111,7 @@
 
     move-result v6
 
-    invoke-direct {p0, v4, v6}, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->getResult(Ljava/lang/String;I)Landroid/database/Cursor;
+    invoke-direct {p0, v4, v6}, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->getResult(Ljava/lang/String;I)Landroid/database/Cursor;
 
     move-result-object v2
 
@@ -1120,7 +1120,7 @@
 
     .line 132
     :cond_8
-    sget-object v6, Lcom/android/settings/sfinderconnect/SFinderConnectProvider;->TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/sfinderconnect/SFinderConnectProvider;->TAG:Ljava/lang/String;
 
     const-string v7, "result is null"
 

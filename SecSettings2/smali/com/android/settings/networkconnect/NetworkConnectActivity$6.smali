@@ -1,4 +1,4 @@
-.class Lcom/android/settings/networkconnect/NetworkConnectActivity$6;
+.class Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$6;
 .super Ljava/lang/Object;
 .source "NetworkConnectActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    value = Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,16 +28,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/networkconnect/NetworkConnectActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)V
     .locals 0
 
     .prologue
     .line 380
-    iput-object p1, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -64,23 +64,23 @@
 
     .prologue
     .line 470
-    new-instance v0, Lcom/android/settings/net/SummaryForAllUidLoader;
+    new-instance v0, Lcom/android/settings_ex/net/SummaryForAllUidLoader;
 
-    iget-object v1, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v1, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$300(Lcom/android/settings/networkconnect/NetworkConnectActivity;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$300(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)Landroid/content/Context;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v2, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mStatsSession:Landroid/net/INetworkStatsSession;
-    invoke-static {v2}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$800(Lcom/android/settings/networkconnect/NetworkConnectActivity;)Landroid/net/INetworkStatsSession;
+    # getter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mStatsSession:Landroid/net/INetworkStatsSession;
+    invoke-static {v2}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$800(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)Landroid/net/INetworkStatsSession;
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2, p2}, Lcom/android/settings/net/SummaryForAllUidLoader;-><init>(Landroid/content/Context;Landroid/net/INetworkStatsSession;Landroid/os/Bundle;)V
+    invoke-direct {v0, v1, v2, p2}, Lcom/android/settings_ex/net/SummaryForAllUidLoader;-><init>(Landroid/content/Context;Landroid/net/INetworkStatsSession;Landroid/os/Bundle;)V
 
     return-object v0
 .end method
@@ -107,14 +107,14 @@
     const/4 v10, 0x0
 
     .line 389
-    sget-boolean v6, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mIsNeedReLoad:Z
+    sget-boolean v6, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mIsNeedReLoad:Z
 
     if-eqz v6, :cond_4
 
-    iget-object v6, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v6, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mIsDataLoadFinished:Z
-    invoke-static {v6}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$500(Lcom/android/settings/networkconnect/NetworkConnectActivity;)Z
+    # getter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mIsDataLoadFinished:Z
+    invoke-static {v6}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$500(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)Z
 
     move-result v6
 
@@ -129,12 +129,12 @@
 
     .line 392
     .local v4, "wifiTotal":J
-    sget-object v6, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidWifiMap:Ljava/util/Map;
+    sget-object v6, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidWifiMap:Ljava/util/Map;
 
     invoke-interface {v6}, Ljava/util/Map;->clear()V
 
     .line 393
-    sget-object v6, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidWifiLongTypeMap:Ljava/util/Map;
+    sget-object v6, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidWifiLongTypeMap:Ljava/util/Map;
 
     invoke-interface {v6}, Ljava/util/Map;->clear()V
 
@@ -155,7 +155,7 @@
     move-result-object v0
 
     .line 396
-    sget-object v6, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidWifiMap:Ljava/util/Map;
+    sget-object v6, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidWifiMap:Ljava/util/Map;
 
     iget v7, v0, Landroid/net/NetworkStats$Entry;->uid:I
 
@@ -179,7 +179,7 @@
     add-long v4, v6, v8
 
     .line 398
-    sget-object v6, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidWifiMap:Ljava/util/Map;
+    sget-object v6, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidWifiMap:Ljava/util/Map;
 
     iget v7, v0, Landroid/net/NetworkStats$Entry;->uid:I
 
@@ -187,15 +187,15 @@
 
     move-result-object v7
 
-    # invokes: Lcom/android/settings/networkconnect/NetworkConnectActivity;->formatFileSizeMB(J)Ljava/lang/String;
-    invoke-static {v4, v5}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$400(J)Ljava/lang/String;
+    # invokes: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->formatFileSizeMB(J)Ljava/lang/String;
+    invoke-static {v4, v5}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$400(J)Ljava/lang/String;
 
     move-result-object v8
 
     invoke-interface {v6, v7, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 399
-    sget-object v6, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidWifiLongTypeMap:Ljava/util/Map;
+    sget-object v6, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidWifiLongTypeMap:Ljava/util/Map;
 
     iget v7, v0, Landroid/net/NetworkStats$Entry;->uid:I
 
@@ -227,7 +227,7 @@
     add-long v4, v6, v8
 
     .line 403
-    sget-object v6, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidWifiMap:Ljava/util/Map;
+    sget-object v6, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidWifiMap:Ljava/util/Map;
 
     iget v7, v0, Landroid/net/NetworkStats$Entry;->uid:I
 
@@ -235,15 +235,15 @@
 
     move-result-object v7
 
-    # invokes: Lcom/android/settings/networkconnect/NetworkConnectActivity;->formatFileSizeMB(J)Ljava/lang/String;
-    invoke-static {v4, v5}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$400(J)Ljava/lang/String;
+    # invokes: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->formatFileSizeMB(J)Ljava/lang/String;
+    invoke-static {v4, v5}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$400(J)Ljava/lang/String;
 
     move-result-object v8
 
     invoke-interface {v6, v7, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 404
-    sget-object v6, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidWifiLongTypeMap:Ljava/util/Map;
+    sget-object v6, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidWifiLongTypeMap:Ljava/util/Map;
 
     iget v7, v0, Landroid/net/NetworkStats$Entry;->uid:I
 
@@ -264,7 +264,7 @@
     const/4 v1, 0x0
 
     :goto_2
-    sget-object v6, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v6, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v6}, Ljava/util/List;->size()I
 
@@ -273,21 +273,21 @@
     if-ge v1, v6, :cond_3
 
     .line 408
-    sget-object v6, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v6, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v6, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
 
-    check-cast v6, Lcom/android/settings/networkconnect/ApplicationNetInfo;
+    check-cast v6, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;
 
-    invoke-virtual {v6}, Lcom/android/settings/networkconnect/ApplicationNetInfo;->getUid()I
+    invoke-virtual {v6}, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->getUid()I
 
     move-result v2
 
     .line 409
     .local v2, "uid":I
-    sget-object v6, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidWifiLongTypeMap:Ljava/util/Map;
+    sget-object v6, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidWifiLongTypeMap:Ljava/util/Map;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -300,15 +300,15 @@
     if-eqz v6, :cond_2
 
     .line 410
-    sget-object v6, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v6, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v6, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
 
-    check-cast v6, Lcom/android/settings/networkconnect/ApplicationNetInfo;
+    check-cast v6, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;
 
-    sget-object v7, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidWifiLongTypeMap:Ljava/util/Map;
+    sget-object v7, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidWifiLongTypeMap:Ljava/util/Map;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -324,7 +324,7 @@
 
     move-result-wide v8
 
-    invoke-virtual {v6, v8, v9}, Lcom/android/settings/networkconnect/ApplicationNetInfo;->setWlanTotal(J)V
+    invoke-virtual {v6, v8, v9}, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->setWlanTotal(J)V
 
     .line 407
     :cond_2
@@ -335,102 +335,102 @@
     .line 413
     .end local v2    # "uid":I
     :cond_3
-    sput-boolean v10, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mIsNeedReLoad:Z
+    sput-boolean v10, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mIsNeedReLoad:Z
 
     .line 415
     .end local v0    # "entry":Landroid/net/NetworkStats$Entry;
     .end local v1    # "i":I
     .end local v4    # "wifiTotal":J
     :cond_4
-    iget-object v6, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v6, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    new-instance v7, Lcom/android/settings/networkconnect/FirewallAdapter;
+    new-instance v7, Lcom/android/settings_ex/networkconnect/FirewallAdapter;
 
-    iget-object v8, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v8, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mContext:Landroid/content/Context;
-    invoke-static {v8}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$300(Lcom/android/settings/networkconnect/NetworkConnectActivity;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mContext:Landroid/content/Context;
+    invoke-static {v8}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$300(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)Landroid/content/Context;
 
     move-result-object v8
 
-    sget-object v9, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v9, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
-    invoke-direct {v7, v8, v9}, Lcom/android/settings/networkconnect/FirewallAdapter;-><init>(Landroid/content/Context;Ljava/util/List;)V
+    invoke-direct {v7, v8, v9}, Lcom/android/settings_ex/networkconnect/FirewallAdapter;-><init>(Landroid/content/Context;Ljava/util/List;)V
 
-    # setter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mFirewallAdapter:Lcom/android/settings/networkconnect/FirewallAdapter;
-    invoke-static {v6, v7}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$902(Lcom/android/settings/networkconnect/NetworkConnectActivity;Lcom/android/settings/networkconnect/FirewallAdapter;)Lcom/android/settings/networkconnect/FirewallAdapter;
+    # setter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mFirewallAdapter:Lcom/android/settings_ex/networkconnect/FirewallAdapter;
+    invoke-static {v6, v7}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$902(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;Lcom/android/settings_ex/networkconnect/FirewallAdapter;)Lcom/android/settings_ex/networkconnect/FirewallAdapter;
 
     .line 416
-    iget-object v6, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v6, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mFirewallAdapter:Lcom/android/settings/networkconnect/FirewallAdapter;
-    invoke-static {v6}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$900(Lcom/android/settings/networkconnect/NetworkConnectActivity;)Lcom/android/settings/networkconnect/FirewallAdapter;
+    # getter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mFirewallAdapter:Lcom/android/settings_ex/networkconnect/FirewallAdapter;
+    invoke-static {v6}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$900(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)Lcom/android/settings_ex/networkconnect/FirewallAdapter;
 
     move-result-object v6
 
-    new-instance v7, Lcom/android/settings/networkconnect/NetworkConnectActivity$6$1;
+    new-instance v7, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$6$1;
 
-    invoke-direct {v7, p0}, Lcom/android/settings/networkconnect/NetworkConnectActivity$6$1;-><init>(Lcom/android/settings/networkconnect/NetworkConnectActivity$6;)V
+    invoke-direct {v7, p0}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$6$1;-><init>(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$6;)V
 
-    invoke-virtual {v6, v7}, Lcom/android/settings/networkconnect/FirewallAdapter;->setItemCheckBoxListener(Lcom/android/settings/networkconnect/FirewallAdapter$OnItemCheckBoxListener;)V
+    invoke-virtual {v6, v7}, Lcom/android/settings_ex/networkconnect/FirewallAdapter;->setItemCheckBoxListener(Lcom/android/settings_ex/networkconnect/FirewallAdapter$OnItemCheckBoxListener;)V
 
     .line 454
-    iget-object v6, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v6, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mListView:Landroid/widget/ListView;
-    invoke-static {v6}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$1400(Lcom/android/settings/networkconnect/NetworkConnectActivity;)Landroid/widget/ListView;
+    # getter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mListView:Landroid/widget/ListView;
+    invoke-static {v6}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$1400(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)Landroid/widget/ListView;
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v7, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mFirewallAdapter:Lcom/android/settings/networkconnect/FirewallAdapter;
-    invoke-static {v7}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$900(Lcom/android/settings/networkconnect/NetworkConnectActivity;)Lcom/android/settings/networkconnect/FirewallAdapter;
+    # getter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mFirewallAdapter:Lcom/android/settings_ex/networkconnect/FirewallAdapter;
+    invoke-static {v7}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$900(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)Lcom/android/settings_ex/networkconnect/FirewallAdapter;
 
     move-result-object v7
 
     invoke-virtual {v6, v7}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 455
-    iget-object v6, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v6, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mFirewallAdapter:Lcom/android/settings/networkconnect/FirewallAdapter;
-    invoke-static {v6}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$900(Lcom/android/settings/networkconnect/NetworkConnectActivity;)Lcom/android/settings/networkconnect/FirewallAdapter;
+    # getter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mFirewallAdapter:Lcom/android/settings_ex/networkconnect/FirewallAdapter;
+    invoke-static {v6}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$900(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)Lcom/android/settings_ex/networkconnect/FirewallAdapter;
 
     move-result-object v6
 
     if-eqz v6, :cond_5
 
     .line 456
-    iget-object v6, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v6, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mFirewallAdapter:Lcom/android/settings/networkconnect/FirewallAdapter;
-    invoke-static {v6}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$900(Lcom/android/settings/networkconnect/NetworkConnectActivity;)Lcom/android/settings/networkconnect/FirewallAdapter;
+    # getter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mFirewallAdapter:Lcom/android/settings_ex/networkconnect/FirewallAdapter;
+    invoke-static {v6}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$900(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)Lcom/android/settings_ex/networkconnect/FirewallAdapter;
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidDataMap:Ljava/util/Map;
+    sget-object v7, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidDataMap:Ljava/util/Map;
 
-    invoke-virtual {v6, v7}, Lcom/android/settings/networkconnect/FirewallAdapter;->bindDataStats(Ljava/util/Map;)V
+    invoke-virtual {v6, v7}, Lcom/android/settings_ex/networkconnect/FirewallAdapter;->bindDataStats(Ljava/util/Map;)V
 
     .line 457
-    iget-object v6, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v6, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mFirewallAdapter:Lcom/android/settings/networkconnect/FirewallAdapter;
-    invoke-static {v6}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$900(Lcom/android/settings/networkconnect/NetworkConnectActivity;)Lcom/android/settings/networkconnect/FirewallAdapter;
+    # getter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mFirewallAdapter:Lcom/android/settings_ex/networkconnect/FirewallAdapter;
+    invoke-static {v6}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$900(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)Lcom/android/settings_ex/networkconnect/FirewallAdapter;
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidWifiMap:Ljava/util/Map;
+    sget-object v7, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidWifiMap:Ljava/util/Map;
 
-    invoke-virtual {v6, v7}, Lcom/android/settings/networkconnect/FirewallAdapter;->bindWifiStats(Ljava/util/Map;)V
+    invoke-virtual {v6, v7}, Lcom/android/settings_ex/networkconnect/FirewallAdapter;->bindWifiStats(Ljava/util/Map;)V
 
     .line 459
     :cond_5
-    iget-object v6, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v6, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mListView:Landroid/widget/ListView;
-    invoke-static {v6}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$1400(Lcom/android/settings/networkconnect/NetworkConnectActivity;)Landroid/widget/ListView;
+    # getter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mListView:Landroid/widget/ListView;
+    invoke-static {v6}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$1400(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)Landroid/widget/ListView;
 
     move-result-object v6
 
@@ -441,20 +441,20 @@
     if-nez v6, :cond_6
 
     .line 460
-    iget-object v6, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v6, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mWlanText:Landroid/widget/TextView;
-    invoke-static {v6}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$1500(Lcom/android/settings/networkconnect/NetworkConnectActivity;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mWlanText:Landroid/widget/TextView;
+    invoke-static {v6}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$1500(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)Landroid/widget/TextView;
 
     move-result-object v6
 
     invoke-virtual {v6, v11}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 461
-    iget-object v6, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v6, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mMobileText:Landroid/widget/TextView;
-    invoke-static {v6}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$1600(Lcom/android/settings/networkconnect/NetworkConnectActivity;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mMobileText:Landroid/widget/TextView;
+    invoke-static {v6}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$1600(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)Landroid/widget/TextView;
 
     move-result-object v6
 
@@ -462,26 +462,26 @@
 
     .line 463
     :cond_6
-    new-instance v3, Lcom/android/settings/networkconnect/NetworkManagerUtils;
+    new-instance v3, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;
 
-    iget-object v6, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v6, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mContext:Landroid/content/Context;
-    invoke-static {v6}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$300(Lcom/android/settings/networkconnect/NetworkConnectActivity;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mContext:Landroid/content/Context;
+    invoke-static {v6}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$300(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)Landroid/content/Context;
 
     move-result-object v6
 
-    invoke-direct {v3, v6}, Lcom/android/settings/networkconnect/NetworkManagerUtils;-><init>(Landroid/content/Context;)V
+    invoke-direct {v3, v6}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;-><init>(Landroid/content/Context;)V
 
     .line 464
-    .local v3, "utils":Lcom/android/settings/networkconnect/NetworkManagerUtils;
-    invoke-virtual {v3}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->sortInNormalStatus()V
+    .local v3, "utils":Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;
+    invoke-virtual {v3}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->sortInNormalStatus()V
 
     .line 465
-    iget-object v6, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v6, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$6;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # setter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mIsDataLoadFinished:Z
-    invoke-static {v6, v10}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$502(Lcom/android/settings/networkconnect/NetworkConnectActivity;Z)Z
+    # setter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mIsDataLoadFinished:Z
+    invoke-static {v6, v10}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$502(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;Z)Z
 
     .line 466
     return-void
@@ -497,7 +497,7 @@
     check-cast p2, Landroid/net/NetworkStats;
 
     .end local p2    # "x1":Ljava/lang/Object;
-    invoke-virtual {p0, p1, p2}, Lcom/android/settings/networkconnect/NetworkConnectActivity$6;->onLoadFinished(Landroid/content/Loader;Landroid/net/NetworkStats;)V
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$6;->onLoadFinished(Landroid/content/Loader;Landroid/net/NetworkStats;)V
 
     return-void
 .end method
@@ -517,7 +517,7 @@
     .prologue
     .line 384
     .local p1, "arg0":Landroid/content/Loader;, "Landroid/content/Loader<Landroid/net/NetworkStats;>;"
-    sget-object v0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidWifiMap:Ljava/util/Map;
+    sget-object v0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidWifiMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 

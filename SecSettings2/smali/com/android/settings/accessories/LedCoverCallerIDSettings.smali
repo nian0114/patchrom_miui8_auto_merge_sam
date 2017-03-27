@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/accessories/LedCoverCallerIDSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "LedCoverCallerIDSettings.java"
 
 # interfaces
@@ -9,9 +9,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIdAdapter;,
-        Lcom/android/settings/accessories/LedCoverCallerIDSettings$ViewHolder;,
-        Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIDInfo;
+        Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIdAdapter;,
+        Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$ViewHolder;,
+        Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIDInfo;
     }
 .end annotation
 
@@ -22,13 +22,13 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIDInfo;",
+            "Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIDInfo;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private mCallerIdAdapter:Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIdAdapter;
+.field private mCallerIdAdapter:Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIdAdapter;
 
 .field private mChangeMode:Ljava/lang/Boolean;
 
@@ -43,7 +43,7 @@
     const/4 v1, 0x0
 
     .line 54
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 62
     const/4 v0, 0x0
@@ -52,26 +52,26 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mChangeMode:Ljava/lang/Boolean;
+    iput-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mChangeMode:Ljava/lang/Boolean;
 
     .line 64
-    iput-object v1, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mGridList:Landroid/widget/GridView;
+    iput-object v1, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mGridList:Landroid/widget/GridView;
 
     .line 122
-    iput-object v1, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
+    iput-object v1, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
 
     .line 175
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/accessories/LedCoverCallerIDSettings;I)Landroid/graphics/drawable/Drawable;
+.method static synthetic access$000(Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;I)Landroid/graphics/drawable/Drawable;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessories/LedCoverCallerIDSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;
     .param p1, "x1"    # I
 
     .prologue
     .line 54
-    invoke-direct {p0, p1}, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->encircle(I)Landroid/graphics/drawable/Drawable;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->encircle(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -83,7 +83,7 @@
 
     .prologue
     .line 236
-    iget-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
+    iget-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
 
     if-nez v0, :cond_0
 
@@ -100,7 +100,7 @@
 
     .line 240
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
+    iget-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -134,26 +134,26 @@
     if-ge v12, v13, :cond_2
 
     .line 247
-    iget-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
+    iget-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
 
     invoke-interface {v0, v12}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIDInfo;
+    check-cast v0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIDInfo;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIDInfo;->resetCallerIDCount()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIDInfo;->resetCallerIDCount()V
 
     .line 248
-    iget-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
+    iget-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
 
     invoke-interface {v0, v12}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIDInfo;
+    check-cast v0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIDInfo;
 
-    iget v0, v0, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIDInfo;->mId:I
+    iget v0, v0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIDInfo;->mId:I
 
     aput v12, v6, v0
 
@@ -169,7 +169,7 @@
     .line 253
     .local v7, "c":Landroid/database/Cursor;
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -315,7 +315,7 @@
     if-nez v0, :cond_3
 
     .line 275
-    iget-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
+    iget-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
 
     invoke-static {v8}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -327,9 +327,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIDInfo;
+    check-cast v0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIDInfo;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIDInfo;->increaseCallerIDCount()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIDInfo;->increaseCallerIDCount()V
 
     goto :goto_2
 
@@ -373,14 +373,14 @@
     .end local v11    # "e":Landroid/database/sqlite/SQLiteException;
     .restart local v9    # "contactCount":I
     :cond_4
-    iget-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mCallerIdAdapter:Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIdAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mCallerIdAdapter:Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIdAdapter;
 
     if-eqz v0, :cond_5
 
     .line 281
-    iget-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mCallerIdAdapter:Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIdAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mCallerIdAdapter:Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIdAdapter;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIdAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIdAdapter;->notifyDataSetChanged()V
 
     .line 282
     :cond_5
@@ -397,7 +397,7 @@
     const/4 v12, 0x0
 
     :goto_3
-    iget-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
+    iget-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -411,7 +411,7 @@
     .line 289
     const v0, 0x7f0e12ef
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -421,15 +421,15 @@
 
     const/4 v3, 0x0
 
-    iget-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
+    iget-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
 
     invoke-interface {v0, v12}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIDInfo;
+    check-cast v0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIDInfo;
 
-    iget v0, v0, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIDInfo;->mCallerIDCount:I
+    iget v0, v0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIDInfo;->mCallerIDCount:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -450,7 +450,7 @@
 
     .line 292
     :cond_7
-    invoke-virtual {p0}, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -462,7 +462,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 .end method
@@ -619,7 +619,7 @@
 
     .prologue
     .line 296
-    invoke-virtual {p0}, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -648,11 +648,11 @@
     .end local v1    # "bitmapDrawable":Landroid/graphics/drawable/BitmapDrawable;
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->encircle(Landroid/graphics/Bitmap;Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, v3}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->encircle(Landroid/graphics/Bitmap;Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
@@ -661,7 +661,7 @@
     .line 302
     .end local v0    # "bitmap":Landroid/graphics/Bitmap;
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -698,7 +698,7 @@
 
     move-result-object v2
 
-    invoke-static {p0, v0, v0}, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->createCircularClip(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
+    invoke-static {p0, v0, v0}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->createCircularClip(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
 
     move-result-object v3
 
@@ -714,7 +714,7 @@
     const/4 v4, 0x0
 
     .line 125
-    iget-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
+    iget-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
 
     if-nez v0, :cond_0
 
@@ -723,11 +723,11 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
 
     .line 130
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -743,7 +743,7 @@
 
     .line 132
     .local v9, "name_array":Landroid/content/res/TypedArray;
-    invoke-virtual {p0}, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -759,7 +759,7 @@
 
     .line 134
     .local v7, "icon_array":Landroid/content/res/TypedArray;
-    invoke-virtual {p0}, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -786,9 +786,9 @@
     if-ge v6, v0, :cond_1
 
     .line 137
-    iget-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
+    iget-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
 
-    new-instance v1, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIDInfo;
+    new-instance v1, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIDInfo;
 
     invoke-virtual {v8, v6, v4}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -802,7 +802,7 @@
 
     move-result v5
 
-    invoke-direct {v1, p0, v2, v3, v5}, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIDInfo;-><init>(Lcom/android/settings/accessories/LedCoverCallerIDSettings;III)V
+    invoke-direct {v1, p0, v2, v3, v5}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIDInfo;-><init>(Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;III)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -817,7 +817,7 @@
     .end local v8    # "index_array":Landroid/content/res/TypedArray;
     .end local v9    # "name_array":Landroid/content/res/TypedArray;
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
+    iget-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
@@ -835,31 +835,31 @@
     invoke-virtual {v7}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 143
-    new-instance v0, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIdAdapter;
+    new-instance v0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIdAdapter;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     const v3, 0x7f040121
 
-    iget-object v5, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
+    iget-object v5, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mCallerIDInfoList:Ljava/util/List;
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIdAdapter;-><init>(Lcom/android/settings/accessories/LedCoverCallerIDSettings;Landroid/content/Context;IILjava/util/List;)V
+    invoke-direct/range {v0 .. v5}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIdAdapter;-><init>(Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;Landroid/content/Context;IILjava/util/List;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mCallerIdAdapter:Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIdAdapter;
+    iput-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mCallerIdAdapter:Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIdAdapter;
 
     .line 146
-    iget-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mGridList:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mGridList:Landroid/widget/GridView;
 
-    iget-object v1, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mCallerIdAdapter:Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIdAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mCallerIdAdapter:Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIdAdapter;
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 147
-    iget-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mGridList:Landroid/widget/GridView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mGridList:Landroid/widget/GridView;
 
     invoke-virtual {v0, p0}, Landroid/widget/GridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
@@ -885,10 +885,10 @@
 
     .prologue
     .line 87
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 88
-    invoke-direct {p0}, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->makeCallerIDList()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->makeCallerIDList()V
 
     .line 89
     return-void
@@ -900,10 +900,10 @@
 
     .prologue
     .line 68
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 70
-    invoke-virtual {p0}, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -921,10 +921,10 @@
 
     check-cast v1, Ljava/lang/Boolean;
 
-    iput-object v1, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mChangeMode:Ljava/lang/Boolean;
+    iput-object v1, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mChangeMode:Ljava/lang/Boolean;
 
     .line 72
-    iget-object v1, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mChangeMode:Ljava/lang/Boolean;
+    iget-object v1, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mChangeMode:Ljava/lang/Boolean;
 
     if-nez v1, :cond_0
 
@@ -935,11 +935,11 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mChangeMode:Ljava/lang/Boolean;
+    iput-object v1, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mChangeMode:Ljava/lang/Boolean;
 
     .line 74
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mChangeMode:Ljava/lang/Boolean;
+    iget-object v1, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mChangeMode:Ljava/lang/Boolean;
 
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -950,7 +950,7 @@
     if-ne v1, v2, :cond_1
 
     .line 75
-    invoke-virtual {p0}, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -993,7 +993,7 @@
 
     check-cast v1, Landroid/widget/GridView;
 
-    iput-object v1, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mGridList:Landroid/widget/GridView;
+    iput-object v1, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mGridList:Landroid/widget/GridView;
 
     .line 82
     return-object v0
@@ -1010,7 +1010,7 @@
     const/4 v3, 0x0
 
     .line 152
-    iget-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mChangeMode:Ljava/lang/Boolean;
+    iget-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mChangeMode:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -1027,35 +1027,35 @@
     .local v7, "result":Landroid/content/Intent;
     const-string v1, "selected_id"
 
-    iget-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mCallerIdAdapter:Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIdAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mCallerIdAdapter:Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIdAdapter;
 
-    invoke-virtual {v0, p3}, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIdAdapter;->getItem(I)Ljava/lang/Object;
+    invoke-virtual {v0, p3}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIdAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIDInfo;
+    check-cast v0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIDInfo;
 
-    iget v0, v0, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIDInfo;->mId:I
+    iget v0, v0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIDInfo;->mId:I
 
     invoke-virtual {v7, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 155
     const-string v1, "contact_count"
 
-    iget-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mCallerIdAdapter:Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIdAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mCallerIdAdapter:Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIdAdapter;
 
-    invoke-virtual {v0, p3}, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIdAdapter;->getItem(I)Ljava/lang/Object;
+    invoke-virtual {v0, p3}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIdAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIDInfo;
+    check-cast v0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIDInfo;
 
-    iget v0, v0, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIDInfo;->mCallerIDCount:I
+    iget v0, v0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIDInfo;->mCallerIDCount:I
 
     invoke-virtual {v7, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 156
-    invoke-virtual {p0}, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1064,7 +1064,7 @@
     invoke-virtual {v0, v1, v7}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
     .line 157
-    invoke-virtual {p0}, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1085,39 +1085,39 @@
     .local v2, "args":Landroid/os/Bundle;
     const-string v1, "selected_id"
 
-    iget-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mCallerIdAdapter:Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIdAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mCallerIdAdapter:Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIdAdapter;
 
-    invoke-virtual {v0, p3}, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIdAdapter;->getItem(I)Ljava/lang/Object;
+    invoke-virtual {v0, p3}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIdAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIDInfo;
+    check-cast v0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIDInfo;
 
-    iget v0, v0, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIDInfo;->mId:I
+    iget v0, v0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIDInfo;->mId:I
 
     invoke-virtual {v2, v1, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 161
     const-string v1, "contact_count"
 
-    iget-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mCallerIdAdapter:Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIdAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mCallerIdAdapter:Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIdAdapter;
 
-    invoke-virtual {v0, p3}, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIdAdapter;->getItem(I)Ljava/lang/Object;
+    invoke-virtual {v0, p3}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIdAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIDInfo;
+    check-cast v0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIDInfo;
 
-    iget v0, v0, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIDInfo;->mCallerIDCount:I
+    iget v0, v0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIDInfo;->mCallerIDCount:I
 
     invoke-virtual {v2, v1, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 162
-    invoke-virtual {p0}, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    const-class v1, Lcom/android/settings/accessories/LedCoverCallerIDList;
+    const-class v1, Lcom/android/settings_ex/accessories/LedCoverCallerIDList;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -1125,19 +1125,19 @@
 
     const/4 v4, 0x0
 
-    iget-object v5, p0, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->mCallerIdAdapter:Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIdAdapter;
+    iget-object v5, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->mCallerIdAdapter:Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIdAdapter;
 
-    invoke-virtual {v5, p3}, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIdAdapter;->getItem(I)Ljava/lang/Object;
+    invoke-virtual {v5, p3}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIdAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIDInfo;
+    check-cast v5, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIDInfo;
 
-    iget v5, v5, Lcom/android/settings/accessories/LedCoverCallerIDSettings$CallerIDInfo;->mName:I
+    iget v5, v5, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings$CallerIDInfo;->mName:I
 
     move-object v6, v3
 
-    invoke-static/range {v0 .. v6}, Lcom/android/settings/Utils;->startWithFragment(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Fragment;IILjava/lang/CharSequence;)V
+    invoke-static/range {v0 .. v6}, Lcom/android/settings_ex/Utils;->startWithFragment(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Fragment;IILjava/lang/CharSequence;)V
 
     goto :goto_0
 .end method
@@ -1147,7 +1147,7 @@
 
     .prologue
     .line 221
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 222
     return-void
@@ -1158,10 +1158,10 @@
 
     .prologue
     .line 226
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 232
-    invoke-direct {p0}, Lcom/android/settings/accessories/LedCoverCallerIDSettings;->checkCallerIDContactCount()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSettings;->checkCallerIDContactCount()V
 
     .line 233
     return-void

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;
+.class public Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;
 .super Landroid/view/ViewGroup;
 .source "MatchParentShrinkingLinearLayout.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+        Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     }
 .end annotation
 
@@ -164,7 +164,7 @@
     .line 172
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, v0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 173
     return-void
@@ -179,7 +179,7 @@
     .line 176
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 177
     return-void
@@ -195,7 +195,7 @@
     .line 181
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 182
     return-void
@@ -219,21 +219,21 @@
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 86
-    iput-boolean v4, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mBaselineAligned:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mBaselineAligned:Z
 
     .line 96
-    iput v5, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mBaselineAlignedChildIndex:I
+    iput v5, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mBaselineAlignedChildIndex:I
 
     .line 104
-    iput v6, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mBaselineChildTop:I
+    iput v6, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mBaselineChildTop:I
 
     .line 110
     const v3, 0x800033
 
-    iput v3, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mGravity:I
+    iput v3, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mGravity:I
 
     .line 169
-    iput v5, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mLayoutDirection:I
+    iput v5, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mLayoutDirection:I
 
     .line 188
     sget-object v3, Lcom/android/internal/R$styleable;->LinearLayout:[I
@@ -253,7 +253,7 @@
     if-ltz v2, :cond_0
 
     .line 193
-    invoke-virtual {p0, v2}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->setOrientation(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->setOrientation(I)V
 
     .line 196
     :cond_0
@@ -265,7 +265,7 @@
     if-ltz v2, :cond_1
 
     .line 198
-    invoke-virtual {p0, v2}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->setGravity(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->setGravity(I)V
 
     .line 201
     :cond_1
@@ -280,7 +280,7 @@
     if-nez v1, :cond_2
 
     .line 203
-    invoke-virtual {p0, v1}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->setBaselineAligned(Z)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->setBaselineAligned(Z)V
 
     .line 206
     :cond_2
@@ -292,7 +292,7 @@
 
     move-result v3
 
-    iput v3, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mWeightSum:F
+    iput v3, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mWeightSum:F
 
     .line 208
     const/4 v3, 0x3
@@ -301,7 +301,7 @@
 
     move-result v3
 
-    iput v3, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mBaselineAlignedChildIndex:I
+    iput v3, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mBaselineAlignedChildIndex:I
 
     .line 211
     const/4 v3, 0x6
@@ -310,7 +310,7 @@
 
     move-result v3
 
-    iput-boolean v3, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mUseLargestChild:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mUseLargestChild:Z
 
     .line 213
     const/4 v3, 0x5
@@ -319,7 +319,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->setDividerDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->setDividerDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 214
     const/4 v3, 0x7
@@ -328,7 +328,7 @@
 
     move-result v3
 
-    iput v3, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mShowDividers:I
+    iput v3, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mShowDividers:I
 
     .line 215
     const/16 v3, 0x8
@@ -337,7 +337,7 @@
 
     move-result v3
 
-    iput v3, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDividerPadding:I
+    iput v3, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDividerPadding:I
 
     .line 217
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
@@ -355,7 +355,7 @@
     const/4 v3, 0x0
 
     .line 959
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getMeasuredWidth()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getMeasuredWidth()I
 
     move-result v0
 
@@ -374,7 +374,7 @@
     if-ge v6, p1, :cond_1
 
     .line 962
-    invoke-virtual {p0, v6}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getVirtualChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getVirtualChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -393,18 +393,18 @@
 
     move-result-object v7
 
-    check-cast v7, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    check-cast v7, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
 
     .line 967
-    .local v7, "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
-    iget v0, v7, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->width:I
+    .local v7, "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    iget v0, v7, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->width:I
 
     const/4 v4, -0x1
 
     if-ne v0, v4, :cond_0
 
     .line 970
-    iget v8, v7, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->height:I
+    iget v8, v7, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->height:I
 
     .line 971
     .local v8, "oldHeight":I
@@ -412,7 +412,7 @@
 
     move-result v0
 
-    iput v0, v7, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->height:I
+    iput v0, v7, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->height:I
 
     move-object v0, p0
 
@@ -421,13 +421,13 @@
     move v5, v3
 
     .line 974
-    invoke-virtual/range {v0 .. v5}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->measureChildWithMargins(Landroid/view/View;IIII)V
+    invoke-virtual/range {v0 .. v5}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->measureChildWithMargins(Landroid/view/View;IIII)V
 
     .line 975
-    iput v8, v7, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->height:I
+    iput v8, v7, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->height:I
 
     .line 961
-    .end local v7    # "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    .end local v7    # "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     .end local v8    # "oldHeight":I
     :cond_0
     add-int/lit8 v6, v6, 0x1
@@ -468,7 +468,7 @@
 
     .prologue
     .line 1443
-    instance-of v0, p1, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    instance-of v0, p1, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
 
     return v0
 .end method
@@ -479,13 +479,13 @@
 
     .prologue
     .line 358
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getVirtualChildCount()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getVirtualChildCount()I
 
     move-result v1
 
     .line 359
     .local v1, "count":I
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->isLayoutRtl()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->isLayoutRtl()Z
 
     move-result v3
 
@@ -498,7 +498,7 @@
     if-ge v2, v1, :cond_2
 
     .line 361
-    invoke-virtual {p0, v2}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getVirtualChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getVirtualChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -515,7 +515,7 @@
     if-eq v6, v7, :cond_0
 
     .line 364
-    invoke-virtual {p0, v2}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->hasDividerBeforeChildAt(I)Z
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->hasDividerBeforeChildAt(I)Z
 
     move-result v6
 
@@ -526,10 +526,10 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    check-cast v4, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
 
     .line 367
-    .local v4, "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    .local v4, "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     if-eqz v3, :cond_1
 
     .line 368
@@ -537,17 +537,17 @@
 
     move-result v6
 
-    iget v7, v4, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->rightMargin:I
+    iget v7, v4, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->rightMargin:I
 
     add-int v5, v6, v7
 
     .line 372
     .local v5, "position":I
     :goto_1
-    invoke-virtual {p0, p1, v5}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->drawVerticalDivider(Landroid/graphics/Canvas;I)V
+    invoke-virtual {p0, p1, v5}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->drawVerticalDivider(Landroid/graphics/Canvas;I)V
 
     .line 360
-    .end local v4    # "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    .end local v4    # "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     .end local v5    # "position":I
     :cond_0
     add-int/lit8 v2, v2, 0x1
@@ -555,17 +555,17 @@
     goto :goto_0
 
     .line 370
-    .restart local v4    # "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    .restart local v4    # "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     :cond_1
     invoke-virtual {v0}, Landroid/view/View;->getLeft()I
 
     move-result v6
 
-    iget v7, v4, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->leftMargin:I
+    iget v7, v4, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->leftMargin:I
 
     sub-int/2addr v6, v7
 
-    iget v7, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDividerWidth:I
+    iget v7, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDividerWidth:I
 
     sub-int v5, v6, v7
 
@@ -574,10 +574,10 @@
 
     .line 377
     .end local v0    # "child":Landroid/view/View;
-    .end local v4    # "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    .end local v4    # "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     .end local v5    # "position":I
     :cond_2
-    invoke-virtual {p0, v1}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->hasDividerBeforeChildAt(I)Z
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->hasDividerBeforeChildAt(I)Z
 
     move-result v6
 
@@ -586,7 +586,7 @@
     .line 378
     add-int/lit8 v6, v1, -0x1
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getVirtualChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getVirtualChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -598,14 +598,14 @@
     if-eqz v3, :cond_4
 
     .line 382
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getPaddingLeft()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getPaddingLeft()I
 
     move-result v5
 
     .line 394
     .restart local v5    # "position":I
     :goto_2
-    invoke-virtual {p0, p1, v5}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->drawVerticalDivider(Landroid/graphics/Canvas;I)V
+    invoke-virtual {p0, p1, v5}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->drawVerticalDivider(Landroid/graphics/Canvas;I)V
 
     .line 396
     .end local v0    # "child":Landroid/view/View;
@@ -616,17 +616,17 @@
     .line 384
     .restart local v0    # "child":Landroid/view/View;
     :cond_4
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getWidth()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getWidth()I
 
     move-result v6
 
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getPaddingRight()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getPaddingRight()I
 
     move-result v7
 
     sub-int/2addr v6, v7
 
-    iget v7, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDividerWidth:I
+    iget v7, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDividerWidth:I
 
     sub-int v5, v6, v7
 
@@ -640,10 +640,10 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    check-cast v4, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
 
     .line 388
-    .restart local v4    # "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    .restart local v4    # "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     if-eqz v3, :cond_6
 
     .line 389
@@ -651,11 +651,11 @@
 
     move-result v6
 
-    iget v7, v4, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->leftMargin:I
+    iget v7, v4, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->leftMargin:I
 
     sub-int/2addr v6, v7
 
-    iget v7, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDividerWidth:I
+    iget v7, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDividerWidth:I
 
     sub-int v5, v6, v7
 
@@ -669,7 +669,7 @@
 
     move-result v6
 
-    iget v7, v4, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->rightMargin:I
+    iget v7, v4, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->rightMargin:I
 
     add-int v5, v6, v7
 
@@ -683,7 +683,7 @@
 
     .prologue
     .line 331
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getVirtualChildCount()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getVirtualChildCount()I
 
     move-result v2
 
@@ -696,7 +696,7 @@
     if-ge v3, v2, :cond_1
 
     .line 333
-    invoke-virtual {p0, v3}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getVirtualChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getVirtualChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -713,7 +713,7 @@
     if-eq v6, v7, :cond_0
 
     .line 336
-    invoke-virtual {p0, v3}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->hasDividerBeforeChildAt(I)Z
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->hasDividerBeforeChildAt(I)Z
 
     move-result v6
 
@@ -724,28 +724,28 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    check-cast v4, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
 
     .line 338
-    .local v4, "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    .local v4, "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     invoke-virtual {v1}, Landroid/view/View;->getTop()I
 
     move-result v6
 
-    iget v7, v4, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->topMargin:I
+    iget v7, v4, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->topMargin:I
 
     sub-int/2addr v6, v7
 
-    iget v7, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDividerHeight:I
+    iget v7, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDividerHeight:I
 
     sub-int v5, v6, v7
 
     .line 339
     .local v5, "top":I
-    invoke-virtual {p0, p1, v5}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->drawHorizontalDivider(Landroid/graphics/Canvas;I)V
+    invoke-virtual {p0, p1, v5}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->drawHorizontalDivider(Landroid/graphics/Canvas;I)V
 
     .line 332
-    .end local v4    # "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    .end local v4    # "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     .end local v5    # "top":I
     :cond_0
     add-int/lit8 v3, v3, 0x1
@@ -755,7 +755,7 @@
     .line 344
     .end local v1    # "child":Landroid/view/View;
     :cond_1
-    invoke-virtual {p0, v2}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->hasDividerBeforeChildAt(I)Z
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->hasDividerBeforeChildAt(I)Z
 
     move-result v6
 
@@ -764,7 +764,7 @@
     .line 345
     add-int/lit8 v6, v2, -0x1
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getVirtualChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getVirtualChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -777,23 +777,23 @@
     if-nez v1, :cond_3
 
     .line 348
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getHeight()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getHeight()I
 
     move-result v6
 
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getPaddingBottom()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getPaddingBottom()I
 
     move-result v7
 
     sub-int/2addr v6, v7
 
-    iget v7, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDividerHeight:I
+    iget v7, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDividerHeight:I
 
     sub-int v0, v6, v7
 
     .line 353
     :goto_1
-    invoke-virtual {p0, p1, v0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->drawHorizontalDivider(Landroid/graphics/Canvas;I)V
+    invoke-virtual {p0, p1, v0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->drawHorizontalDivider(Landroid/graphics/Canvas;I)V
 
     .line 355
     .end local v0    # "bottom":I
@@ -809,15 +809,15 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    check-cast v4, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
 
     .line 351
-    .restart local v4    # "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    .restart local v4    # "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     invoke-virtual {v1}, Landroid/view/View;->getBottom()I
 
     move-result v6
 
-    iget v7, v4, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->bottomMargin:I
+    iget v7, v4, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->bottomMargin:I
 
     add-int v0, v6, v7
 
@@ -831,38 +831,38 @@
 
     .prologue
     .line 399
-    iget-object v0, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDivider:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDivider:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getPaddingLeft()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getPaddingLeft()I
 
     move-result v1
 
-    iget v2, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDividerPadding:I
+    iget v2, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDividerPadding:I
 
     add-int/2addr v1, v2
 
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getWidth()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getWidth()I
 
     move-result v2
 
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getPaddingRight()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getPaddingRight()I
 
     move-result v3
 
     sub-int/2addr v2, v3
 
-    iget v3, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDividerPadding:I
+    iget v3, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDividerPadding:I
 
     sub-int/2addr v2, v3
 
-    iget v3, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDividerHeight:I
+    iget v3, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDividerHeight:I
 
     add-int/2addr v3, p2
 
     invoke-virtual {v0, v1, p2, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     .line 401
-    iget-object v0, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDivider:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDivider:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
@@ -877,38 +877,38 @@
 
     .prologue
     .line 405
-    iget-object v0, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDivider:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDivider:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getPaddingTop()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getPaddingTop()I
 
     move-result v1
 
-    iget v2, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDividerPadding:I
+    iget v2, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDividerPadding:I
 
     add-int/2addr v1, v2
 
-    iget v2, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDividerWidth:I
+    iget v2, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDividerWidth:I
 
     add-int/2addr v2, p2
 
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getHeight()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getHeight()I
 
     move-result v3
 
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getPaddingBottom()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getPaddingBottom()I
 
     move-result v4
 
     sub-int/2addr v3, v4
 
-    iget v4, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDividerPadding:I
+    iget v4, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDividerPadding:I
 
     sub-int/2addr v3, v4
 
     invoke-virtual {v0, p2, v1, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     .line 407
-    iget-object v0, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDivider:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDivider:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
@@ -927,56 +927,56 @@
     .line 1455
     const-string v0, "layout:baselineAligned"
 
-    iget-boolean v1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mBaselineAligned:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mBaselineAligned:Z
 
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewHierarchyEncoder;->addProperty(Ljava/lang/String;Z)V
 
     .line 1456
     const-string v0, "layout:baselineAlignedChildIndex"
 
-    iget v1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mBaselineAlignedChildIndex:I
+    iget v1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mBaselineAlignedChildIndex:I
 
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewHierarchyEncoder;->addProperty(Ljava/lang/String;I)V
 
     .line 1457
     const-string v0, "measurement:baselineChildTop"
 
-    iget v1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mBaselineChildTop:I
+    iget v1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mBaselineChildTop:I
 
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewHierarchyEncoder;->addProperty(Ljava/lang/String;I)V
 
     .line 1458
     const-string v0, "measurement:orientation"
 
-    iget v1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mOrientation:I
+    iget v1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mOrientation:I
 
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewHierarchyEncoder;->addProperty(Ljava/lang/String;I)V
 
     .line 1459
     const-string v0, "measurement:gravity"
 
-    iget v1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mGravity:I
+    iget v1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mGravity:I
 
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewHierarchyEncoder;->addProperty(Ljava/lang/String;I)V
 
     .line 1460
     const-string v0, "measurement:totalLength"
 
-    iget v1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewHierarchyEncoder;->addProperty(Ljava/lang/String;I)V
 
     .line 1461
     const-string v0, "layout:totalLength"
 
-    iget v1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewHierarchyEncoder;->addProperty(Ljava/lang/String;I)V
 
     .line 1462
     const-string v0, "layout:useLargestChild"
 
-    iget-boolean v1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mUseLargestChild:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mUseLargestChild:Z
 
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewHierarchyEncoder;->addProperty(Ljava/lang/String;Z)V
 
@@ -989,28 +989,28 @@
 
     .prologue
     .line 45
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->generateDefaultLayoutParams()Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->generateDefaultLayoutParams()Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method protected generateDefaultLayoutParams()Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+.method protected generateDefaultLayoutParams()Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     .locals 3
 
     .prologue
     const/4 v2, -0x2
 
     .line 1426
-    iget v0, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mOrientation:I
+    iget v0, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mOrientation:I
 
     if-nez v0, :cond_0
 
     .line 1427
-    new-instance v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    new-instance v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
 
-    invoke-direct {v0, v2, v2}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;-><init>(II)V
+    invoke-direct {v0, v2, v2}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;-><init>(II)V
 
     .line 1431
     :goto_0
@@ -1018,18 +1018,18 @@
 
     .line 1428
     :cond_0
-    iget v0, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mOrientation:I
+    iget v0, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mOrientation:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_1
 
     .line 1429
-    new-instance v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    new-instance v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
 
     const/4 v1, -0x1
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;-><init>(II)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;-><init>(II)V
 
     goto :goto_0
 
@@ -1046,7 +1046,7 @@
 
     .prologue
     .line 45
-    invoke-virtual {p0, p1}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->generateLayoutParams(Landroid/util/AttributeSet;)Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->generateLayoutParams(Landroid/util/AttributeSet;)Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
 
     move-result-object v0
 
@@ -1059,39 +1059,39 @@
 
     .prologue
     .line 45
-    invoke-virtual {p0, p1}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public generateLayoutParams(Landroid/util/AttributeSet;)Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+.method public generateLayoutParams(Landroid/util/AttributeSet;)Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     .locals 2
     .param p1, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
     .line 1413
-    new-instance v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    new-instance v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
 
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1, p1}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {v0, v1, p1}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-object v0
 .end method
 
-.method protected generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+.method protected generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     .locals 1
     .param p1, "p"    # Landroid/view/ViewGroup$LayoutParams;
 
     .prologue
     .line 1436
-    new-instance v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    new-instance v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
 
-    invoke-direct {v0, p1}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-object v0
 .end method
@@ -1101,7 +1101,7 @@
 
     .prologue
     .line 1448
-    const-class v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;
+    const-class v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -1117,7 +1117,7 @@
     const/4 v5, -0x1
 
     .line 467
-    iget v6, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mBaselineAlignedChildIndex:I
+    iget v6, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mBaselineAlignedChildIndex:I
 
     if-gez v6, :cond_1
 
@@ -1133,11 +1133,11 @@
 
     .line 471
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getChildCount()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getChildCount()I
 
     move-result v6
 
-    iget v7, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mBaselineAlignedChildIndex:I
+    iget v7, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mBaselineAlignedChildIndex:I
 
     if-gt v6, v7, :cond_2
 
@@ -1152,9 +1152,9 @@
 
     .line 476
     :cond_2
-    iget v6, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mBaselineAlignedChildIndex:I
+    iget v6, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mBaselineAlignedChildIndex:I
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1169,7 +1169,7 @@
     if-ne v1, v5, :cond_3
 
     .line 480
-    iget v6, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mBaselineAlignedChildIndex:I
+    iget v6, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mBaselineAlignedChildIndex:I
 
     if-eqz v6, :cond_0
 
@@ -1184,18 +1184,18 @@
 
     .line 496
     :cond_3
-    iget v2, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mBaselineChildTop:I
+    iget v2, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mBaselineChildTop:I
 
     .line 498
     .local v2, "childTop":I
-    iget v5, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mOrientation:I
+    iget v5, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mOrientation:I
 
     const/4 v6, 0x1
 
     if-ne v5, v6, :cond_4
 
     .line 499
-    iget v5, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mGravity:I
+    iget v5, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mGravity:I
 
     and-int/lit8 v4, v5, 0x70
 
@@ -1216,11 +1216,11 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    check-cast v3, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
 
     .line 515
-    .local v3, "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
-    iget v5, v3, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->topMargin:I
+    .local v3, "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    iget v5, v3, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->topMargin:I
 
     add-int/2addr v5, v2
 
@@ -1229,20 +1229,20 @@
     goto :goto_0
 
     .line 503
-    .end local v3    # "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    .end local v3    # "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     .restart local v4    # "majorGravity":I
     :sswitch_0
-    iget v5, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mBottom:I
+    iget v5, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mBottom:I
 
-    iget v6, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTop:I
-
-    sub-int/2addr v5, v6
-
-    iget v6, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingBottom:I
+    iget v6, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTop:I
 
     sub-int/2addr v5, v6
 
-    iget v6, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v6, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingBottom:I
+
+    sub-int/2addr v5, v6
+
+    iget v6, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     sub-int v2, v5, v6
 
@@ -1251,21 +1251,21 @@
 
     .line 507
     :sswitch_1
-    iget v5, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mBottom:I
+    iget v5, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mBottom:I
 
-    iget v6, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTop:I
-
-    sub-int/2addr v5, v6
-
-    iget v6, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingTop:I
+    iget v6, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTop:I
 
     sub-int/2addr v5, v6
 
-    iget v6, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingBottom:I
+    iget v6, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingTop:I
 
     sub-int/2addr v5, v6
 
-    iget v6, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v6, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingBottom:I
+
+    sub-int/2addr v5, v6
+
+    iget v6, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     sub-int/2addr v5, v6
 
@@ -1323,7 +1323,7 @@
 
     .prologue
     .line 552
-    invoke-virtual {p0, p1}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1335,7 +1335,7 @@
 
     .prologue
     .line 565
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getChildCount()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getChildCount()I
 
     move-result v0
 
@@ -1355,7 +1355,7 @@
     if-nez p1, :cond_2
 
     .line 614
-    iget v4, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mShowDividers:I
+    iget v4, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mShowDividers:I
 
     and-int/lit8 v4, v4, 0x1
 
@@ -1374,14 +1374,14 @@
 
     .line 615
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getChildCount()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getChildCount()I
 
     move-result v4
 
     if-ne p1, v4, :cond_3
 
     .line 616
-    iget v4, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mShowDividers:I
+    iget v4, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mShowDividers:I
 
     and-int/lit8 v4, v4, 0x4
 
@@ -1393,7 +1393,7 @@
 
     .line 617
     :cond_3
-    iget v2, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mShowDividers:I
+    iget v2, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mShowDividers:I
 
     and-int/lit8 v2, v2, 0x2
 
@@ -1411,7 +1411,7 @@
     if-ltz v1, :cond_4
 
     .line 620
-    invoke-virtual {p0, v1}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -1456,7 +1456,7 @@
 
     .prologue
     .line 1216
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->isLayoutRtl()Z
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->isLayoutRtl()Z
 
     move-result v20
 
@@ -1464,7 +1464,7 @@
     .local v20, "isLayoutRtl":Z
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingTop:I
+    iget v0, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingTop:I
 
     move/from16 v27, v0
 
@@ -1476,7 +1476,7 @@
     .local v18, "height":I
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingBottom:I
+    iget v2, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingBottom:I
 
     sub-int v10, v18, v2
 
@@ -1486,13 +1486,13 @@
 
     move-object/from16 v0, p0
 
-    iget v4, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingBottom:I
+    iget v4, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingBottom:I
 
     sub-int v13, v2, v4
 
     .line 1229
     .local v13, "childSpace":I
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getVirtualChildCount()I
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getVirtualChildCount()I
 
     move-result v14
 
@@ -1500,7 +1500,7 @@
     .local v14, "count":I
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mGravity:I
+    iget v2, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mGravity:I
 
     const v4, 0x800007
 
@@ -1510,7 +1510,7 @@
     .local v23, "majorGravity":I
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mGravity:I
+    iget v2, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mGravity:I
 
     and-int/lit8 v26, v2, 0x70
 
@@ -1518,13 +1518,13 @@
     .local v26, "minorGravity":I
     move-object/from16 v0, p0
 
-    iget-boolean v8, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mBaselineAligned:Z
+    iget-boolean v8, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mBaselineAligned:Z
 
     .line 1236
     .local v8, "baselineAligned":Z
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mMaxAscent:[I
+    iget-object v0, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mMaxAscent:[I
 
     move-object/from16 v24, v0
 
@@ -1532,13 +1532,13 @@
     .local v24, "maxAscent":[I
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mMaxDescent:[I
+    iget-object v0, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mMaxDescent:[I
 
     move-object/from16 v25, v0
 
     .line 1239
     .local v25, "maxDescent":[I
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getLayoutDirection()I
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getLayoutDirection()I
 
     move-result v21
 
@@ -1557,7 +1557,7 @@
     .line 1253
     move-object/from16 v0, p0
 
-    iget v12, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingLeft:I
+    iget v12, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingLeft:I
 
     .line 1257
     .local v12, "childLeft":I
@@ -1597,7 +1597,7 @@
     .local v11, "childIndex":I
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v11}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getVirtualChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v11}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getVirtualChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
@@ -1608,7 +1608,7 @@
     .line 1270
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v11}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->measureNullChild(I)I
+    invoke-virtual {v0, v11}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->measureNullChild(I)I
 
     move-result v2
 
@@ -1631,7 +1631,7 @@
     :sswitch_0
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingLeft:I
+    iget v2, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingLeft:I
 
     add-int v2, v2, p3
 
@@ -1639,7 +1639,7 @@
 
     move-object/from16 v0, p0
 
-    iget v4, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v4, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     sub-int v12, v2, v4
 
@@ -1652,13 +1652,13 @@
     :sswitch_1
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingLeft:I
+    iget v2, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingLeft:I
 
     sub-int v4, p3, p1
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v0, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     move/from16 v29, v0
 
@@ -1708,15 +1708,15 @@
 
     move-result-object v22
 
-    check-cast v22, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    check-cast v22, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
 
     .line 1279
-    .local v22, "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    .local v22, "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     if-eqz v8, :cond_3
 
     move-object/from16 v0, v22
 
-    iget v2, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->height:I
+    iget v2, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->height:I
 
     const/4 v4, -0x1
 
@@ -1731,7 +1731,7 @@
     :cond_3
     move-object/from16 v0, v22
 
-    iget v0, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->gravity:I
+    iget v0, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->gravity:I
 
     move/from16 v17, v0
 
@@ -1757,7 +1757,7 @@
     :goto_3
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v11}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->hasDividerBeforeChildAt(I)Z
+    invoke-virtual {v0, v11}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->hasDividerBeforeChildAt(I)Z
 
     move-result v2
 
@@ -1766,7 +1766,7 @@
     .line 1325
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDividerWidth:I
+    iget v2, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDividerWidth:I
 
     add-int/2addr v12, v2
 
@@ -1774,14 +1774,14 @@
     :cond_6
     move-object/from16 v0, v22
 
-    iget v2, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->leftMargin:I
+    iget v2, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->leftMargin:I
 
     add-int/2addr v12, v2
 
     .line 1329
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getLocationOffset(Landroid/view/View;)I
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getLocationOffset(Landroid/view/View;)I
 
     move-result v2
 
@@ -1789,18 +1789,18 @@
 
     move-object/from16 v2, p0
 
-    invoke-direct/range {v2 .. v7}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->setChildFrame(Landroid/view/View;IIII)V
+    invoke-direct/range {v2 .. v7}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->setChildFrame(Landroid/view/View;IIII)V
 
     .line 1331
     move-object/from16 v0, v22
 
-    iget v2, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->rightMargin:I
+    iget v2, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->rightMargin:I
 
     add-int/2addr v2, v6
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getNextLocationOffset(Landroid/view/View;)I
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getNextLocationOffset(Landroid/view/View;)I
 
     move-result v4
 
@@ -1811,7 +1811,7 @@
     .line 1334
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v3, v11}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getChildrenSkipCount(Landroid/view/View;I)I
+    invoke-virtual {v0, v3, v11}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getChildrenSkipCount(Landroid/view/View;I)I
 
     move-result v2
 
@@ -1824,7 +1824,7 @@
     :sswitch_2
     move-object/from16 v0, v22
 
-    iget v2, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->topMargin:I
+    iget v2, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->topMargin:I
 
     add-int v5, v27, v2
 
@@ -1856,13 +1856,13 @@
 
     move-object/from16 v0, v22
 
-    iget v4, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->topMargin:I
+    iget v4, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->topMargin:I
 
     add-int/2addr v2, v4
 
     move-object/from16 v0, v22
 
-    iget v4, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->bottomMargin:I
+    iget v4, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->bottomMargin:I
 
     sub-int v5, v2, v4
 
@@ -1877,7 +1877,7 @@
 
     move-object/from16 v0, v22
 
-    iget v4, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->bottomMargin:I
+    iget v4, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->bottomMargin:I
 
     sub-int v5, v2, v4
 
@@ -1916,7 +1916,7 @@
     .end local v11    # "childIndex":I
     .end local v15    # "descent":I
     .end local v17    # "gravity":I
-    .end local v22    # "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    .end local v22    # "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     :cond_7
     return-void
 
@@ -1947,7 +1947,7 @@
     .line 1111
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingLeft:I
+    iget v0, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingLeft:I
 
     move/from16 v18, v0
 
@@ -1959,7 +1959,7 @@
     .local v19, "width":I
     move-object/from16 v0, p0
 
-    iget v1, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingRight:I
+    iget v1, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingRight:I
 
     sub-int v8, v19, v1
 
@@ -1969,13 +1969,13 @@
 
     move-object/from16 v0, p0
 
-    iget v4, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingRight:I
+    iget v4, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingRight:I
 
     sub-int v9, v1, v4
 
     .line 1123
     .local v9, "childSpace":I
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getVirtualChildCount()I
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getVirtualChildCount()I
 
     move-result v11
 
@@ -1983,7 +1983,7 @@
     .local v11, "count":I
     move-object/from16 v0, p0
 
-    iget v1, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mGravity:I
+    iget v1, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mGravity:I
 
     and-int/lit8 v16, v1, 0x70
 
@@ -1991,7 +1991,7 @@
     .local v16, "majorGravity":I
     move-object/from16 v0, p0
 
-    iget v1, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mGravity:I
+    iget v1, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mGravity:I
 
     const v4, 0x800007
 
@@ -2004,7 +2004,7 @@
     .line 1141
     move-object/from16 v0, p0
 
-    iget v10, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingTop:I
+    iget v10, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingTop:I
 
     .line 1145
     .local v10, "childTop":I
@@ -2018,7 +2018,7 @@
     .line 1146
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v13}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getVirtualChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v13}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getVirtualChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -2029,7 +2029,7 @@
     .line 1148
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v13}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->measureNullChild(I)I
+    invoke-virtual {v0, v13}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->measureNullChild(I)I
 
     move-result v1
 
@@ -2049,7 +2049,7 @@
     :sswitch_0
     move-object/from16 v0, p0
 
-    iget v1, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingTop:I
+    iget v1, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingTop:I
 
     add-int v1, v1, p4
 
@@ -2057,7 +2057,7 @@
 
     move-object/from16 v0, p0
 
-    iget v4, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v4, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     sub-int v10, v1, v4
 
@@ -2070,13 +2070,13 @@
     :sswitch_1
     move-object/from16 v0, p0
 
-    iget v1, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingTop:I
+    iget v1, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingTop:I
 
     sub-int v4, p4, p2
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v0, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     move/from16 v20, v0
 
@@ -2119,11 +2119,11 @@
 
     move-result-object v15
 
-    check-cast v15, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    check-cast v15, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
 
     .line 1156
-    .local v15, "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
-    iget v12, v15, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->gravity:I
+    .local v15, "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    iget v12, v15, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->gravity:I
 
     .line 1157
     .local v12, "gravity":I
@@ -2134,7 +2134,7 @@
 
     .line 1160
     :cond_2
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getLayoutDirection()I
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getLayoutDirection()I
 
     move-result v14
 
@@ -2151,7 +2151,7 @@
     sparse-switch v1, :sswitch_data_1
 
     .line 1174
-    iget v1, v15, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->leftMargin:I
+    iget v1, v15, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->leftMargin:I
 
     add-int v3, v18, v1
 
@@ -2160,7 +2160,7 @@
     :goto_3
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v13}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->hasDividerBeforeChildAt(I)Z
+    invoke-virtual {v0, v13}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->hasDividerBeforeChildAt(I)Z
 
     move-result v1
 
@@ -2169,20 +2169,20 @@
     .line 1179
     move-object/from16 v0, p0
 
-    iget v1, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDividerHeight:I
+    iget v1, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDividerHeight:I
 
     add-int/2addr v10, v1
 
     .line 1182
     :cond_3
-    iget v1, v15, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->topMargin:I
+    iget v1, v15, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->topMargin:I
 
     add-int/2addr v10, v1
 
     .line 1183
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v2}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getLocationOffset(Landroid/view/View;)I
+    invoke-virtual {v0, v2}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getLocationOffset(Landroid/view/View;)I
 
     move-result v1
 
@@ -2190,16 +2190,16 @@
 
     move-object/from16 v1, p0
 
-    invoke-direct/range {v1 .. v6}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->setChildFrame(Landroid/view/View;IIII)V
+    invoke-direct/range {v1 .. v6}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->setChildFrame(Landroid/view/View;IIII)V
 
     .line 1185
-    iget v1, v15, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->bottomMargin:I
+    iget v1, v15, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->bottomMargin:I
 
     add-int/2addr v1, v6
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v2}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getNextLocationOffset(Landroid/view/View;)I
+    invoke-virtual {v0, v2}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getNextLocationOffset(Landroid/view/View;)I
 
     move-result v4
 
@@ -2210,7 +2210,7 @@
     .line 1187
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v2, v13}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getChildrenSkipCount(Landroid/view/View;I)I
+    invoke-virtual {v0, v2, v13}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getChildrenSkipCount(Landroid/view/View;I)I
 
     move-result v1
 
@@ -2227,11 +2227,11 @@
 
     add-int v1, v1, v18
 
-    iget v4, v15, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->leftMargin:I
+    iget v4, v15, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->leftMargin:I
 
     add-int/2addr v1, v4
 
-    iget v4, v15, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->rightMargin:I
+    iget v4, v15, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->rightMargin:I
 
     sub-int v3, v1, v4
 
@@ -2244,7 +2244,7 @@
     :sswitch_3
     sub-int v1, v8, v5
 
-    iget v4, v15, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->rightMargin:I
+    iget v4, v15, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->rightMargin:I
 
     sub-int v3, v1, v4
 
@@ -2260,7 +2260,7 @@
     .end local v7    # "absoluteGravity":I
     .end local v12    # "gravity":I
     .end local v14    # "layoutDirection":I
-    .end local v15    # "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    .end local v15    # "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     :cond_4
     return-void
 
@@ -2304,7 +2304,7 @@
 
     move v5, p6
 
-    invoke-virtual/range {v0 .. v5}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->measureChildWithMargins(Landroid/view/View;IIII)V
+    invoke-virtual/range {v0 .. v5}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->measureChildWithMargins(Landroid/view/View;IIII)V
 
     .line 1064
     return-void
@@ -2348,7 +2348,7 @@
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iput v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     .line 643
     const/16 v27, 0x0
@@ -2375,7 +2375,7 @@
 
     .line 650
     .local v33, "totalWeight":F
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getVirtualChildCount()I
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getVirtualChildCount()I
 
     move-result v17
 
@@ -2403,13 +2403,13 @@
     .local v31, "skippedMeasure":Z
     move-object/from16 v0, p0
 
-    iget v12, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mBaselineAlignedChildIndex:I
+    iget v12, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mBaselineAlignedChildIndex:I
 
     .line 659
     .local v12, "baselineChildIndex":I
     move-object/from16 v0, p0
 
-    iget-boolean v0, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mUseLargestChild:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mUseLargestChild:Z
 
     move/from16 v34, v0
 
@@ -2430,7 +2430,7 @@
     .line 665
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v5}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getVirtualChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v5}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getVirtualChildAt(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -2441,11 +2441,11 @@
     .line 668
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v5}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->measureNullChild(I)I
+    invoke-virtual {v0, v5}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->measureNullChild(I)I
 
     move-result v6
 
@@ -2453,7 +2453,7 @@
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iput v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     .line 664
     :goto_1
@@ -2474,7 +2474,7 @@
     .line 673
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v4, v5}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getChildrenSkipCount(Landroid/view/View;I)I
+    invoke-virtual {v0, v4, v5}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getChildrenSkipCount(Landroid/view/View;I)I
 
     move-result v3
 
@@ -2487,7 +2487,7 @@
     :cond_1
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v5}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->hasDividerBeforeChildAt(I)Z
+    invoke-virtual {v0, v5}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->hasDividerBeforeChildAt(I)Z
 
     move-result v3
 
@@ -2496,17 +2496,17 @@
     .line 678
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     move-object/from16 v0, p0
 
-    iget v6, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDividerHeight:I
+    iget v6, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDividerHeight:I
 
     add-int/2addr v3, v6
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iput v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     .line 681
     :cond_2
@@ -2514,13 +2514,13 @@
 
     move-result-object v23
 
-    check-cast v23, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    check-cast v23, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
 
     .line 683
-    .local v23, "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    .local v23, "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     move-object/from16 v0, v23
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->weight:F
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->weight:F
 
     add-float v33, v33, v3
 
@@ -2533,13 +2533,13 @@
 
     move-object/from16 v0, v23
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->height:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->height:I
 
     if-nez v3, :cond_5
 
     move-object/from16 v0, v23
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->weight:F
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->weight:F
 
     const/4 v6, 0x0
 
@@ -2550,7 +2550,7 @@
     .line 689
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v0, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     move/from16 v32, v0
 
@@ -2558,13 +2558,13 @@
     .local v32, "totalLength":I
     move-object/from16 v0, v23
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->topMargin:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->topMargin:I
 
     add-int v3, v3, v32
 
     move-object/from16 v0, v23
 
-    iget v6, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->bottomMargin:I
+    iget v6, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->bottomMargin:I
 
     add-int/2addr v3, v6
 
@@ -2576,7 +2576,7 @@
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iput v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     .line 691
     const/16 v31, 0x1
@@ -2593,11 +2593,11 @@
     .line 731
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mBaselineChildTop:I
+    iput v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mBaselineChildTop:I
 
     .line 737
     :cond_4
@@ -2605,7 +2605,7 @@
 
     move-object/from16 v0, v23
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->weight:F
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->weight:F
 
     const/4 v6, 0x0
 
@@ -2631,13 +2631,13 @@
     .local v29, "oldHeight":I
     move-object/from16 v0, v23
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->height:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->height:I
 
     if-nez v3, :cond_6
 
     move-object/from16 v0, v23
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->weight:F
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->weight:F
 
     const/4 v6, 0x0
 
@@ -2653,7 +2653,7 @@
 
     move-object/from16 v0, v23
 
-    iput v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->height:I
+    iput v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->height:I
 
     .line 708
     :cond_6
@@ -2667,7 +2667,7 @@
 
     move-object/from16 v0, p0
 
-    iget v9, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v9, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     :goto_3
     move-object/from16 v3, p0
@@ -2676,7 +2676,7 @@
 
     move/from16 v8, p2
 
-    invoke-virtual/range {v3 .. v9}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->measureChildBeforeLayout(Landroid/view/View;IIIII)V
+    invoke-virtual/range {v3 .. v9}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->measureChildBeforeLayout(Landroid/view/View;IIIII)V
 
     .line 712
     const/high16 v3, -0x80000000
@@ -2690,7 +2690,7 @@
 
     move-object/from16 v1, v23
 
-    iput v0, v1, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->height:I
+    iput v0, v1, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->height:I
 
     .line 716
     :cond_7
@@ -2702,7 +2702,7 @@
     .local v14, "childHeight":I
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v0, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     move/from16 v32, v0
 
@@ -2712,19 +2712,19 @@
 
     move-object/from16 v0, v23
 
-    iget v6, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->topMargin:I
+    iget v6, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->topMargin:I
 
     add-int/2addr v3, v6
 
     move-object/from16 v0, v23
 
-    iget v6, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->bottomMargin:I
+    iget v6, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->bottomMargin:I
 
     add-int/2addr v3, v6
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v4}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getNextLocationOffset(Landroid/view/View;)I
+    invoke-virtual {v0, v4}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getNextLocationOffset(Landroid/view/View;)I
 
     move-result v6
 
@@ -2738,7 +2738,7 @@
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iput v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     .line 721
     if-eqz v34, :cond_3
@@ -2776,7 +2776,7 @@
 
     move-object/from16 v0, v23
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->width:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->width:I
 
     const/4 v6, -0x1
 
@@ -2792,11 +2792,11 @@
     :cond_a
     move-object/from16 v0, v23
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->leftMargin:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->leftMargin:I
 
     move-object/from16 v0, v23
 
-    iget v6, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->rightMargin:I
+    iget v6, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->rightMargin:I
 
     add-int v24, v3, v6
 
@@ -2819,7 +2819,7 @@
 
     move-result v3
 
-    invoke-static {v15, v3}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->combineMeasuredStates(II)I
+    invoke-static {v15, v3}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->combineMeasuredStates(II)I
 
     move-result v15
 
@@ -2828,7 +2828,7 @@
 
     move-object/from16 v0, v23
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->width:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->width:I
 
     const/4 v6, -0x1
 
@@ -2840,7 +2840,7 @@
     :goto_4
     move-object/from16 v0, v23
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->weight:F
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->weight:F
 
     const/4 v6, 0x0
 
@@ -2865,7 +2865,7 @@
     :goto_6
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v4, v5}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getChildrenSkipCount(Landroid/view/View;I)I
+    invoke-virtual {v0, v4, v5}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getChildrenSkipCount(Landroid/view/View;I)I
 
     move-result v3
 
@@ -2908,7 +2908,7 @@
 
     .line 775
     .end local v4    # "child":Landroid/view/View;
-    .end local v23    # "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    .end local v23    # "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     .end local v24    # "margin":I
     .end local v26    # "matchWidthLocally":Z
     .end local v28    # "measuredWidth":I
@@ -2916,7 +2916,7 @@
     :cond_f
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     if-lez v3, :cond_10
 
@@ -2924,7 +2924,7 @@
 
     move/from16 v1, v17
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->hasDividerBeforeChildAt(I)Z
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->hasDividerBeforeChildAt(I)Z
 
     move-result v3
 
@@ -2933,17 +2933,17 @@
     .line 776
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     move-object/from16 v0, p0
 
-    iget v6, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDividerHeight:I
+    iget v6, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDividerHeight:I
 
     add-int/2addr v3, v6
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iput v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     .line 779
     :cond_10
@@ -2963,7 +2963,7 @@
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iput v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     .line 783
     const/4 v5, 0x0
@@ -2976,7 +2976,7 @@
     .line 784
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v5}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getVirtualChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v5}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getVirtualChildAt(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -2987,11 +2987,11 @@
     .line 787
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v5}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->measureNullChild(I)I
+    invoke-virtual {v0, v5}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->measureNullChild(I)I
 
     move-result v6
 
@@ -2999,7 +2999,7 @@
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iput v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     .line 783
     :goto_9
@@ -3020,7 +3020,7 @@
     .line 792
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v4, v5}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getChildrenSkipCount(Landroid/view/View;I)I
+    invoke-virtual {v0, v4, v5}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getChildrenSkipCount(Landroid/view/View;I)I
 
     move-result v3
 
@@ -3035,13 +3035,13 @@
 
     move-result-object v23
 
-    check-cast v23, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    check-cast v23, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
 
     .line 799
-    .restart local v23    # "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    .restart local v23    # "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v0, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     move/from16 v32, v0
 
@@ -3051,19 +3051,19 @@
 
     move-object/from16 v0, v23
 
-    iget v6, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->topMargin:I
+    iget v6, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->topMargin:I
 
     add-int/2addr v3, v6
 
     move-object/from16 v0, v23
 
-    iget v6, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->bottomMargin:I
+    iget v6, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->bottomMargin:I
 
     add-int/2addr v3, v6
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v4}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getNextLocationOffset(Landroid/view/View;)I
+    invoke-virtual {v0, v4}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getNextLocationOffset(Landroid/view/View;)I
 
     move-result v6
 
@@ -3077,26 +3077,26 @@
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iput v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     goto :goto_9
 
     .line 806
     .end local v4    # "child":Landroid/view/View;
-    .end local v23    # "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    .end local v23    # "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     .end local v32    # "totalLength":I
     :cond_14
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     move-object/from16 v0, p0
 
-    iget v6, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingTop:I
+    iget v6, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingTop:I
 
     move-object/from16 v0, p0
 
-    iget v7, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingBottom:I
+    iget v7, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingBottom:I
 
     add-int/2addr v6, v7
 
@@ -3104,18 +3104,18 @@
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iput v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     .line 808
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v0, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     move/from16 v20, v0
 
     .line 811
     .local v20, "heightSize":I
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getSuggestedMinimumHeight()I
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getSuggestedMinimumHeight()I
 
     move-result v3
 
@@ -3132,7 +3132,7 @@
 
     move/from16 v1, p2
 
-    invoke-static {v0, v1, v3}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->resolveSizeAndState(III)I
+    invoke-static {v0, v1, v3}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->resolveSizeAndState(III)I
 
     move-result v21
 
@@ -3145,7 +3145,7 @@
     .line 820
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     sub-int v18, v20, v3
 
@@ -3165,7 +3165,7 @@
     :cond_15
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mWeightSum:F
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mWeightSum:F
 
     const/4 v6, 0x0
 
@@ -3175,7 +3175,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mWeightSum:F
+    iget v0, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mWeightSum:F
 
     move/from16 v35, v0
 
@@ -3186,7 +3186,7 @@
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iput v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     .line 826
     const/4 v5, 0x0
@@ -3199,7 +3199,7 @@
     .line 827
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v5}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getVirtualChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v5}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getVirtualChildAt(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -3235,13 +3235,13 @@
 
     move-result-object v23
 
-    check-cast v23, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    check-cast v23, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
 
     .line 835
-    .restart local v23    # "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    .restart local v23    # "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     move-object/from16 v0, v23
 
-    iget v13, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->weight:F
+    iget v13, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->weight:F
 
     .line 838
     .local v13, "childExtra":F
@@ -3276,33 +3276,33 @@
     .line 844
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingLeft:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingLeft:I
 
     move-object/from16 v0, p0
 
-    iget v6, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingRight:I
+    iget v6, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingRight:I
 
     add-int/2addr v3, v6
 
     move-object/from16 v0, v23
 
-    iget v6, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->leftMargin:I
+    iget v6, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->leftMargin:I
 
     add-int/2addr v3, v6
 
     move-object/from16 v0, v23
 
-    iget v6, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->rightMargin:I
+    iget v6, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->rightMargin:I
 
     add-int/2addr v3, v6
 
     move-object/from16 v0, v23
 
-    iget v6, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->width:I
+    iget v6, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->width:I
 
     move/from16 v0, p1
 
-    invoke-static {v0, v3, v6}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getChildMeasureSpec(III)I
+    invoke-static {v0, v3, v6}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getChildMeasureSpec(III)I
 
     move-result v16
 
@@ -3310,7 +3310,7 @@
     .local v16, "childWidthMeasureSpec":I
     move-object/from16 v0, v23
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->height:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->height:I
 
     if-nez v3, :cond_18
 
@@ -3357,7 +3357,7 @@
 
     and-int/lit16 v3, v3, -0x100
 
-    invoke-static {v15, v3}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->combineMeasuredStates(II)I
+    invoke-static {v15, v3}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->combineMeasuredStates(II)I
 
     move-result v15
 
@@ -3367,11 +3367,11 @@
     :goto_e
     move-object/from16 v0, v23
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->leftMargin:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->leftMargin:I
 
     move-object/from16 v0, v23
 
-    iget v6, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->rightMargin:I
+    iget v6, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->rightMargin:I
 
     add-int v24, v3, v6
 
@@ -3398,7 +3398,7 @@
 
     move-object/from16 v0, v23
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->width:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->width:I
 
     const/4 v6, -0x1
 
@@ -3424,7 +3424,7 @@
 
     move-object/from16 v0, v23
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->width:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->width:I
 
     const/4 v6, -0x1
 
@@ -3436,7 +3436,7 @@
     :goto_11
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v0, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     move/from16 v32, v0
 
@@ -3450,19 +3450,19 @@
 
     move-object/from16 v0, v23
 
-    iget v6, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->topMargin:I
+    iget v6, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->topMargin:I
 
     add-int/2addr v3, v6
 
     move-object/from16 v0, v23
 
-    iget v6, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->bottomMargin:I
+    iget v6, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->bottomMargin:I
 
     add-int/2addr v3, v6
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v4}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getNextLocationOffset(Landroid/view/View;)I
+    invoke-virtual {v0, v4}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getNextLocationOffset(Landroid/view/View;)I
 
     move-result v6
 
@@ -3476,7 +3476,7 @@
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iput v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     goto/16 :goto_c
 
@@ -3519,7 +3519,7 @@
 
     move-object/from16 v0, v23
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->height:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->height:I
 
     const/4 v6, -0x1
 
@@ -3528,33 +3528,33 @@
     .line 872
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingLeft:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingLeft:I
 
     move-object/from16 v0, p0
 
-    iget v6, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingRight:I
+    iget v6, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingRight:I
 
     add-int/2addr v3, v6
 
     move-object/from16 v0, v23
 
-    iget v6, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->leftMargin:I
+    iget v6, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->leftMargin:I
 
     add-int/2addr v3, v6
 
     move-object/from16 v0, v23
 
-    iget v6, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->rightMargin:I
+    iget v6, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->rightMargin:I
 
     add-int/2addr v3, v6
 
     move-object/from16 v0, v23
 
-    iget v6, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->width:I
+    iget v6, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->width:I
 
     move/from16 v0, p1
 
-    invoke-static {v0, v3, v6}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getChildMeasureSpec(III)I
+    invoke-static {v0, v3, v6}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getChildMeasureSpec(III)I
 
     move-result v16
 
@@ -3601,7 +3601,7 @@
 
     and-int/lit16 v3, v3, -0x100
 
-    invoke-static {v15, v3}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->combineMeasuredStates(II)I
+    invoke-static {v15, v3}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->combineMeasuredStates(II)I
 
     move-result v15
 
@@ -3634,21 +3634,21 @@
     .line 909
     .end local v4    # "child":Landroid/view/View;
     .end local v13    # "childExtra":F
-    .end local v23    # "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    .end local v23    # "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     .end local v26    # "matchWidthLocally":Z
     .end local v28    # "measuredWidth":I
     :cond_22
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     move-object/from16 v0, p0
 
-    iget v6, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingTop:I
+    iget v6, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingTop:I
 
     move-object/from16 v0, p0
 
-    iget v7, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingBottom:I
+    iget v7, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingBottom:I
 
     add-int/2addr v6, v7
 
@@ -3656,7 +3656,7 @@
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
+    iput v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mTotalLength:I
 
     .line 940
     .end local v35    # "weightSum":F
@@ -3676,18 +3676,18 @@
     :cond_24
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingLeft:I
+    iget v3, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingLeft:I
 
     move-object/from16 v0, p0
 
-    iget v6, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mPaddingRight:I
+    iget v6, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mPaddingRight:I
 
     add-int/2addr v3, v6
 
     add-int v27, v27, v3
 
     .line 947
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getSuggestedMinimumWidth()I
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getSuggestedMinimumWidth()I
 
     move-result v3
 
@@ -3702,7 +3702,7 @@
 
     move/from16 v1, p1
 
-    invoke-static {v0, v1, v15}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->resolveSizeAndState(III)I
+    invoke-static {v0, v1, v15}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->resolveSizeAndState(III)I
 
     move-result v3
 
@@ -3710,7 +3710,7 @@
 
     move/from16 v1, v21
 
-    invoke-virtual {v0, v3, v1}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->setMeasuredDimension(II)V
+    invoke-virtual {v0, v3, v1}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->setMeasuredDimension(II)V
 
     .line 952
     if-eqz v25, :cond_25
@@ -3722,7 +3722,7 @@
 
     move/from16 v2, p2
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->forceUniformWidth(II)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->forceUniformWidth(II)V
 
     .line 955
     :cond_25
@@ -3756,7 +3756,7 @@
     .line 920
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v5}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->getVirtualChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v5}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->getVirtualChildAt(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -3785,13 +3785,13 @@
 
     move-result-object v23
 
-    check-cast v23, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    check-cast v23, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
 
     .line 928
-    .restart local v23    # "lp":Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+    .restart local v23    # "lp":Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
     move-object/from16 v0, v23
 
-    iget v13, v0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->weight:F
+    iget v13, v0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->weight:F
 
     .line 929
     .restart local v13    # "childExtra":F
@@ -3831,7 +3831,7 @@
 
     .prologue
     .line 319
-    iget-object v0, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDivider:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDivider:Landroid/graphics/drawable/Drawable;
 
     if-nez v0, :cond_0
 
@@ -3841,20 +3841,20 @@
 
     .line 323
     :cond_0
-    iget v0, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mOrientation:I
+    iget v0, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mOrientation:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_1
 
     .line 324
-    invoke-virtual {p0, p1}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->drawDividersVertical(Landroid/graphics/Canvas;)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->drawDividersVertical(Landroid/graphics/Canvas;)V
 
     goto :goto_0
 
     .line 326
     :cond_1
-    invoke-virtual {p0, p1}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->drawDividersHorizontal(Landroid/graphics/Canvas;)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->drawDividersHorizontal(Landroid/graphics/Canvas;)V
 
     goto :goto_0
 .end method
@@ -3869,14 +3869,14 @@
 
     .prologue
     .line 1091
-    iget v0, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mOrientation:I
+    iget v0, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mOrientation:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
     .line 1092
-    invoke-virtual {p0, p2, p3, p4, p5}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->layoutVertical(IIII)V
+    invoke-virtual {p0, p2, p3, p4, p5}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->layoutVertical(IIII)V
 
     .line 1096
     :goto_0
@@ -3884,7 +3884,7 @@
 
     .line 1094
     :cond_0
-    invoke-virtual {p0, p2, p3, p4, p5}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->layoutHorizontal(IIII)V
+    invoke-virtual {p0, p2, p3, p4, p5}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->layoutHorizontal(IIII)V
 
     goto :goto_0
 .end method
@@ -3896,14 +3896,14 @@
 
     .prologue
     .line 598
-    iget v0, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mOrientation:I
+    iget v0, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mOrientation:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
     .line 599
-    invoke-virtual {p0, p1, p2}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->measureVertical(II)V
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->measureVertical(II)V
 
     .line 603
     :goto_0
@@ -3911,7 +3911,7 @@
 
     .line 601
     :cond_0
-    invoke-virtual {p0, p1, p2}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->measureHorizontal(II)V
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->measureHorizontal(II)V
 
     goto :goto_0
 .end method
@@ -3925,20 +3925,20 @@
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onRtlPropertiesChanged(I)V
 
     .line 1195
-    iget v0, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mLayoutDirection:I
+    iget v0, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mLayoutDirection:I
 
     if-eq p1, v0, :cond_0
 
     .line 1196
-    iput p1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mLayoutDirection:I
+    iput p1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mLayoutDirection:I
 
     .line 1197
-    iget v0, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mOrientation:I
+    iget v0, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mOrientation:I
 
     if-nez v0, :cond_0
 
     .line 1198
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->requestLayout()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->requestLayout()V
 
     .line 1201
     :cond_0
@@ -3953,7 +3953,7 @@
 
     .prologue
     .line 431
-    iput-boolean p1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mBaselineAligned:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mBaselineAligned:Z
 
     .line 432
     return-void
@@ -3967,7 +3967,7 @@
     const/4 v0, 0x0
 
     .line 269
-    iget-object v1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDivider:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDivider:Landroid/graphics/drawable/Drawable;
 
     if-ne p1, v1, :cond_0
 
@@ -3977,7 +3977,7 @@
 
     .line 272
     :cond_0
-    iput-object p1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDivider:Landroid/graphics/drawable/Drawable;
+    iput-object p1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDivider:Landroid/graphics/drawable/Drawable;
 
     .line 273
     if-eqz p1, :cond_2
@@ -3987,14 +3987,14 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDividerWidth:I
+    iput v1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDividerWidth:I
 
     .line 275
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDividerHeight:I
+    iput v1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDividerHeight:I
 
     .line 280
     :goto_1
@@ -4003,19 +4003,19 @@
     const/4 v0, 0x1
 
     :cond_1
-    invoke-virtual {p0, v0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->setWillNotDraw(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->setWillNotDraw(Z)V
 
     .line 281
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->requestLayout()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->requestLayout()V
 
     goto :goto_0
 
     .line 277
     :cond_2
-    iput v0, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDividerWidth:I
+    iput v0, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDividerWidth:I
 
     .line 278
-    iput v0, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mDividerHeight:I
+    iput v0, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mDividerHeight:I
 
     goto :goto_1
 .end method
@@ -4028,7 +4028,7 @@
 
     .prologue
     .line 1379
-    iget v0, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mGravity:I
+    iget v0, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mGravity:I
 
     if-eq v0, p1, :cond_2
 
@@ -4055,10 +4055,10 @@
 
     .line 1388
     :cond_1
-    iput p1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mGravity:I
+    iput p1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mGravity:I
 
     .line 1389
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->requestLayout()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->requestLayout()V
 
     .line 1391
     :cond_2
@@ -4071,15 +4071,15 @@
 
     .prologue
     .line 1351
-    iget v0, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mOrientation:I
+    iget v0, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mOrientation:I
 
     if-eq v0, p1, :cond_0
 
     .line 1352
-    iput p1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->mOrientation:I
+    iput p1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->mOrientation:I
 
     .line 1353
-    invoke-virtual {p0}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;->requestLayout()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;->requestLayout()V
 
     .line 1355
     :cond_0

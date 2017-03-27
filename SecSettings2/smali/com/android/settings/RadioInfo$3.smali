@@ -1,4 +1,4 @@
-.class Lcom/android/settings/RadioInfo$3;
+.class Lcom/android/settings_ex/RadioInfo$3;
 .super Ljava/lang/Object;
 .source "RadioInfo.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/RadioInfo;->updatePingState()V
+    value = Lcom/android/settings_ex/RadioInfo;->updatePingState()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/RadioInfo;
+.field final synthetic this$0:Lcom/android/settings_ex/RadioInfo;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/RadioInfo;)V
+.method constructor <init>(Lcom/android/settings_ex/RadioInfo;)V
     .locals 0
 
     .prologue
     .line 788
-    iput-object p1, p0, Lcom/android/settings/RadioInfo$3;->this$0:Lcom/android/settings/RadioInfo;
+    iput-object p1, p0, Lcom/android/settings_ex/RadioInfo$3;->this$0:Lcom/android/settings_ex/RadioInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,51 +41,51 @@
 
     .prologue
     .line 790
-    iget-object v0, p0, Lcom/android/settings/RadioInfo$3;->this$0:Lcom/android/settings/RadioInfo;
+    iget-object v0, p0, Lcom/android/settings_ex/RadioInfo$3;->this$0:Lcom/android/settings_ex/RadioInfo;
 
-    # getter for: Lcom/android/settings/RadioInfo;->mPingIpAddr:Landroid/widget/TextView;
-    invoke-static {v0}, Lcom/android/settings/RadioInfo;->access$2600(Lcom/android/settings/RadioInfo;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/RadioInfo;->mPingIpAddr:Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/android/settings_ex/RadioInfo;->access$2600(Lcom/android/settings_ex/RadioInfo;)Landroid/widget/TextView;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/RadioInfo$3;->this$0:Lcom/android/settings/RadioInfo;
+    iget-object v1, p0, Lcom/android/settings_ex/RadioInfo$3;->this$0:Lcom/android/settings_ex/RadioInfo;
 
-    # getter for: Lcom/android/settings/RadioInfo;->mPingIpAddrResult:Ljava/lang/String;
-    invoke-static {v1}, Lcom/android/settings/RadioInfo;->access$2500(Lcom/android/settings/RadioInfo;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/RadioInfo;->mPingIpAddrResult:Ljava/lang/String;
+    invoke-static {v1}, Lcom/android/settings_ex/RadioInfo;->access$2500(Lcom/android/settings_ex/RadioInfo;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 791
-    iget-object v0, p0, Lcom/android/settings/RadioInfo$3;->this$0:Lcom/android/settings/RadioInfo;
+    iget-object v0, p0, Lcom/android/settings_ex/RadioInfo$3;->this$0:Lcom/android/settings_ex/RadioInfo;
 
-    # getter for: Lcom/android/settings/RadioInfo;->mPingHostname:Landroid/widget/TextView;
-    invoke-static {v0}, Lcom/android/settings/RadioInfo;->access$2800(Lcom/android/settings/RadioInfo;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/RadioInfo;->mPingHostname:Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/android/settings_ex/RadioInfo;->access$2800(Lcom/android/settings_ex/RadioInfo;)Landroid/widget/TextView;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/RadioInfo$3;->this$0:Lcom/android/settings/RadioInfo;
+    iget-object v1, p0, Lcom/android/settings_ex/RadioInfo$3;->this$0:Lcom/android/settings_ex/RadioInfo;
 
-    # getter for: Lcom/android/settings/RadioInfo;->mPingHostnameResult:Ljava/lang/String;
-    invoke-static {v1}, Lcom/android/settings/RadioInfo;->access$2700(Lcom/android/settings/RadioInfo;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/RadioInfo;->mPingHostnameResult:Ljava/lang/String;
+    invoke-static {v1}, Lcom/android/settings_ex/RadioInfo;->access$2700(Lcom/android/settings_ex/RadioInfo;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 792
-    iget-object v0, p0, Lcom/android/settings/RadioInfo$3;->this$0:Lcom/android/settings/RadioInfo;
+    iget-object v0, p0, Lcom/android/settings_ex/RadioInfo$3;->this$0:Lcom/android/settings_ex/RadioInfo;
 
-    # getter for: Lcom/android/settings/RadioInfo;->mHttpClientTest:Landroid/widget/TextView;
-    invoke-static {v0}, Lcom/android/settings/RadioInfo;->access$3000(Lcom/android/settings/RadioInfo;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/RadioInfo;->mHttpClientTest:Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/android/settings_ex/RadioInfo;->access$3000(Lcom/android/settings_ex/RadioInfo;)Landroid/widget/TextView;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/RadioInfo$3;->this$0:Lcom/android/settings/RadioInfo;
+    iget-object v1, p0, Lcom/android/settings_ex/RadioInfo$3;->this$0:Lcom/android/settings_ex/RadioInfo;
 
-    # getter for: Lcom/android/settings/RadioInfo;->mHttpClientTestResult:Ljava/lang/String;
-    invoke-static {v1}, Lcom/android/settings/RadioInfo;->access$2900(Lcom/android/settings/RadioInfo;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/RadioInfo;->mHttpClientTestResult:Ljava/lang/String;
+    invoke-static {v1}, Lcom/android/settings_ex/RadioInfo;->access$2900(Lcom/android/settings_ex/RadioInfo;)Ljava/lang/String;
 
     move-result-object v1
 

@@ -1,12 +1,12 @@
-.class public Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "TrafficSettingsActivity.java"
 
 # interfaces
 .implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
 .implements Landroid/preference/Preference$OnPreferenceChangeListener;
 .implements Landroid/preference/Preference$OnPreferenceClickListener;
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # static fields
@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 .field private restrictData:Landroid/preference/SwitchPreference;
 
@@ -45,23 +45,23 @@
     .line 53
     const-string v0, "settings/TrafficSettings"
 
-    sput-object v0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
 
     .line 86
-    sput v1, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
+    sput v1, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
 
     .line 87
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->enableOfTrafficSettings:Z
+    sput-boolean v0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->enableOfTrafficSettings:Z
 
     .line 88
-    sput v1, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->subId:I
+    sput v1, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->subId:I
 
     .line 89
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->isEnable:Z
+    sput-boolean v0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->isEnable:Z
 
     return-void
 .end method
@@ -71,12 +71,12 @@
 
     .prologue
     .line 50
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 90
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     return-void
 .end method
@@ -101,30 +101,30 @@
     const/4 v4, 0x0
 
     .line 224
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 225
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 226
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 227
-    sget-boolean v2, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->enableOfTrafficSettings:Z
+    sget-boolean v2, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->enableOfTrafficSettings:Z
 
     if-nez v2, :cond_1
 
     .line 228
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -138,19 +138,19 @@
 
     .line 229
     .local v1, "editor":Landroid/content/SharedPreferences$Editor;
-    sget v2, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
+    sget v2, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
 
     if-nez v2, :cond_2
 
     .line 230
     const-string v2, "switch_traffic_settings"
 
-    sget-boolean v3, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->enableOfTrafficSettings:Z
+    sget-boolean v3, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->enableOfTrafficSettings:Z
 
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 231
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -168,35 +168,35 @@
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 240
-    sget-boolean v2, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->enableOfTrafficSettings:Z
+    sget-boolean v2, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->enableOfTrafficSettings:Z
 
-    sput-boolean v2, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->isEnable:Z
+    sput-boolean v2, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->isEnable:Z
 
     .line 241
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    sget-boolean v3, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->enableOfTrafficSettings:Z
+    sget-boolean v3, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->enableOfTrafficSettings:Z
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 243
     .end local v1    # "editor":Landroid/content/SharedPreferences$Editor;
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    sget-boolean v3, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->isEnable:Z
+    sget-boolean v3, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->isEnable:Z
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 244
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v2}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 245
-    iget-object v2, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v2, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 246
     return-void
@@ -204,7 +204,7 @@
     .line 234
     .restart local v1    # "editor":Landroid/content/SharedPreferences$Editor;
     :cond_2
-    sget v2, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
+    sget v2, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
 
     const/4 v3, 0x1
 
@@ -213,12 +213,12 @@
     .line 235
     const-string v2, "switch_traffic_settings_1"
 
-    sget-boolean v3, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->enableOfTrafficSettings:Z
+    sget-boolean v3, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->enableOfTrafficSettings:Z
 
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 236
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -243,22 +243,22 @@
     const/4 v9, 0x0
 
     .line 95
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 96
     const v6, 0x7f0800c7
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->addPreferencesFromResource(I)V
 
     .line 99
-    sput-boolean v10, Lcom/android/settings/DataUsageSummary;->isFromTrafficStings:Z
+    sput-boolean v10, Lcom/android/settings_ex/DataUsageSummary;->isFromTrafficStings:Z
 
     .line 100
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -284,7 +284,7 @@
 
     .line 101
     .local v4, "setDataLimitTitle":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -292,10 +292,10 @@
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->shp:Landroid/content/SharedPreferences;
+    iput-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->shp:Landroid/content/SharedPreferences;
 
     .line 102
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -325,7 +325,7 @@
 
     .line 107
     .local v1, "mStartDay":I
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->shp:Landroid/content/SharedPreferences;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->shp:Landroid/content/SharedPreferences;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -337,7 +337,7 @@
 
     move-result-object v7
 
-    sget v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->subId:I
+    sget v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->subId:I
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -354,7 +354,7 @@
     move-result-object v2
 
     .line 108
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->shp:Landroid/content/SharedPreferences;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->shp:Landroid/content/SharedPreferences;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -366,7 +366,7 @@
 
     move-result-object v7
 
-    sget v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->subId:I
+    sget v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->subId:I
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -383,7 +383,7 @@
     move-result-object v5
 
     .line 109
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->shp:Landroid/content/SharedPreferences;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->shp:Landroid/content/SharedPreferences;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -395,7 +395,7 @@
 
     move-result-object v7
 
-    sget v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->subId:I
+    sget v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->subId:I
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -410,7 +410,7 @@
     move-result v3
 
     .line 110
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->shp:Landroid/content/SharedPreferences;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->shp:Landroid/content/SharedPreferences;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -422,7 +422,7 @@
 
     move-result-object v7
 
-    sget v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->subId:I
+    sget v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->subId:I
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -437,7 +437,7 @@
     move-result v1
 
     .line 111
-    sget v6, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
+    sget v6, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
 
     if-nez v6, :cond_c
 
@@ -467,39 +467,39 @@
     .line 117
     const-string v6, "set_data_limit"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
     check-cast v6, Landroid/preference/PreferenceScreen;
 
-    iput-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
+    iput-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
 
     .line 120
     const-string v6, "restrict_data_check_box"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
     check-cast v6, Landroid/preference/SwitchPreference;
 
-    iput-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->restrictData:Landroid/preference/SwitchPreference;
+    iput-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->restrictData:Landroid/preference/SwitchPreference;
 
     .line 121
     const-string v6, "data_warning_set"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
     check-cast v6, Landroid/preference/ListPreference;
 
-    iput-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
+    iput-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
 
     .line 123
     :try_start_0
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportAutoVerfiyTraffic()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportAutoVerfiyTraffic()Z
 
     move-result v6
 
@@ -508,19 +508,19 @@
     .line 124
     const-string v6, "set_package_start_date"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
     check-cast v6, Landroid/preference/PreferenceScreen;
 
-    iput-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
+    iput-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 135
     :goto_0
-    sget-object v6, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -532,7 +532,7 @@
 
     move-result-object v7
 
-    sget v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
+    sget v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -545,59 +545,59 @@
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 136
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v6
 
     const-string v7, "set_data_limit_1"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v7
 
     invoke-virtual {v6, v7}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 137
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v6
 
     const-string v7, "data_warning_set_1"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v7
 
     invoke-virtual {v6, v7}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 138
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v6
 
     const-string v7, "restrict_data_check_box_1"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v7
 
     invoke-virtual {v6, v7}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 139
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v6
 
     const-string v7, "set_package_start_date_1"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v7
 
     invoke-virtual {v6, v7}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 141
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->shp:Landroid/content/SharedPreferences;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->shp:Landroid/content/SharedPreferences;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -609,7 +609,7 @@
 
     move-result-object v7
 
-    sget v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->subId:I
+    sget v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->subId:I
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -623,33 +623,33 @@
 
     move-result v6
 
-    sput-boolean v6, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->isEnable:Z
+    sput-boolean v6, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->isEnable:Z
 
     .line 177
     :goto_1
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
 
     if-eqz v6, :cond_0
 
     .line 181
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v6, p0}, Landroid/preference/PreferenceScreen;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 183
     :cond_0
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
 
     if-eqz v6, :cond_1
 
     .line 184
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v6, p0}, Landroid/preference/PreferenceScreen;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 186
     :cond_1
-    sget-object v6, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -661,7 +661,7 @@
 
     move-result-object v7
 
-    sget v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
+    sget v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -674,43 +674,43 @@
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 187
-    sget-boolean v6, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->isEnable:Z
+    sget-boolean v6, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->isEnable:Z
 
     if-eqz v6, :cond_f
 
-    sget v6, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
+    sget v6, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
 
     if-eq v6, v10, :cond_2
 
-    sget v6, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
+    sget v6, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
 
     if-nez v6, :cond_f
 
     .line 188
     :cond_2
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
 
     if-eqz v6, :cond_3
 
     .line 189
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v6, v10}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
     .line 191
     :cond_3
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->restrictData:Landroid/preference/SwitchPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->restrictData:Landroid/preference/SwitchPreference;
 
     if-eqz v6, :cond_4
 
     .line 192
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->restrictData:Landroid/preference/SwitchPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->restrictData:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v6, v10}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 193
     :cond_4
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
 
     if-eqz v6, :cond_5
 
@@ -729,68 +729,68 @@
     if-nez v6, :cond_5
 
     .line 194
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
 
     invoke-virtual {v6, v10}, Landroid/preference/ListPreference;->setEnabled(Z)V
 
     .line 195
     :cond_5
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
 
     if-eqz v6, :cond_6
 
     .line 196
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v6, v10}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
     .line 209
     :cond_6
     :goto_2
-    sget-boolean v6, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->enableOfTrafficSettings:Z
+    sget-boolean v6, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->enableOfTrafficSettings:Z
 
     if-nez v6, :cond_a
 
     .line 210
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
 
     if-eqz v6, :cond_7
 
     .line 211
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v6, v9}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
     .line 213
     :cond_7
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->restrictData:Landroid/preference/SwitchPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->restrictData:Landroid/preference/SwitchPreference;
 
     if-eqz v6, :cond_8
 
     .line 214
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->restrictData:Landroid/preference/SwitchPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->restrictData:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v6, v9}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 215
     :cond_8
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
 
     if-eqz v6, :cond_9
 
     .line 216
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
 
     invoke-virtual {v6, v9}, Landroid/preference/ListPreference;->setEnabled(Z)V
 
     .line 217
     :cond_9
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
 
     if-eqz v6, :cond_a
 
     .line 218
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v6, v9}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -801,13 +801,13 @@
     .line 127
     :cond_b
     :try_start_1
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v6
 
     const-string v7, "package_start_cate"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v7
 
@@ -825,7 +825,7 @@
 
     .line 142
     :cond_c
-    sget v6, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
+    sget v6, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
 
     if-ne v6, v10, :cond_e
 
@@ -855,39 +855,39 @@
     .line 148
     const-string v6, "set_data_limit_1"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
     check-cast v6, Landroid/preference/PreferenceScreen;
 
-    iput-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
+    iput-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
 
     .line 151
     const-string v6, "restrict_data_check_box_1"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
     check-cast v6, Landroid/preference/SwitchPreference;
 
-    iput-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->restrictData:Landroid/preference/SwitchPreference;
+    iput-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->restrictData:Landroid/preference/SwitchPreference;
 
     .line 152
     const-string v6, "data_warning_set_1"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
     check-cast v6, Landroid/preference/ListPreference;
 
-    iput-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
+    iput-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
 
     .line 154
     :try_start_2
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportAutoVerfiyTraffic()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportAutoVerfiyTraffic()Z
 
     move-result v6
 
@@ -896,19 +896,19 @@
     .line 155
     const-string v6, "set_package_start_date_1"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
     check-cast v6, Landroid/preference/PreferenceScreen;
 
-    iput-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
+    iput-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
     .line 165
     :goto_3
-    sget-object v6, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -920,7 +920,7 @@
 
     move-result-object v7
 
-    sget v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
+    sget v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -933,59 +933,59 @@
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 166
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v6
 
     const-string v7, "set_data_limit"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v7
 
     invoke-virtual {v6, v7}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 167
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v6
 
     const-string v7, "data_warning_set"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v7
 
     invoke-virtual {v6, v7}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 168
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v6
 
     const-string v7, "restrict_data_check_box"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v7
 
     invoke-virtual {v6, v7}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 169
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v6
 
     const-string v7, "set_package_start_date"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v7
 
     invoke-virtual {v6, v7}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 172
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->shp:Landroid/content/SharedPreferences;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->shp:Landroid/content/SharedPreferences;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -997,7 +997,7 @@
 
     move-result-object v7
 
-    sget v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->subId:I
+    sget v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->subId:I
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1011,20 +1011,20 @@
 
     move-result v6
 
-    sput-boolean v6, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->isEnable:Z
+    sput-boolean v6, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->isEnable:Z
 
     goto/16 :goto_1
 
     .line 157
     :cond_d
     :try_start_3
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v6
 
     const-string v7, "package_start_cate_1"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v7
 
@@ -1042,61 +1042,61 @@
 
     .line 175
     :cond_e
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->finish()V
 
     goto/16 :goto_1
 
     .line 197
     :cond_f
-    sget v6, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
+    sget v6, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
 
     if-eq v6, v10, :cond_10
 
-    sget v6, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
+    sget v6, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
 
     if-nez v6, :cond_6
 
     .line 198
     :cond_10
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
 
     if-eqz v6, :cond_11
 
     .line 199
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v6, v9}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
     .line 201
     :cond_11
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->restrictData:Landroid/preference/SwitchPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->restrictData:Landroid/preference/SwitchPreference;
 
     if-eqz v6, :cond_12
 
     .line 202
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->restrictData:Landroid/preference/SwitchPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->restrictData:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v6, v9}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 203
     :cond_12
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
 
     if-eqz v6, :cond_13
 
     .line 204
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
 
     invoke-virtual {v6, v9}, Landroid/preference/ListPreference;->setEnabled(Z)V
 
     .line 205
     :cond_13
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
 
     if-eqz v6, :cond_6
 
     .line 206
-    iget-object v6, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v6, v9}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -1108,17 +1108,17 @@
 
     .prologue
     .line 323
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroyView()V
 
     .line 325
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_0
 
     .line 326
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 327
     :cond_0
@@ -1130,7 +1130,7 @@
 
     .prologue
     .line 331
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 332
     new-instance v0, Landroid/content/Intent;
@@ -1144,14 +1144,14 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 334
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 335
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 
@@ -1183,48 +1183,48 @@
 
     .prologue
     .line 481
-    sget-object v3, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
 
     const-string v4, "---->onPreferenceClick<-----"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 483
-    iget-object v3, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
+    iget-object v3, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
 
     if-ne p1, v3, :cond_1
 
     .line 484
-    sget v2, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sget v2, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     .line 485
     .local v2, "temp":I
-    sget v3, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
+    sget v3, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
 
-    sput v3, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sput v3, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     .line 486
-    sget v3, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->subId:I
+    sget v3, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->subId:I
 
-    sput v3, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->subId:I
+    sput v3, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->subId:I
 
     .line 487
-    new-instance v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;
+    new-instance v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;
 
-    invoke-direct {v0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;-><init>()V
 
     .line 488
-    .local v0, "cycleEditor":Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getFragmentManager()Landroid/app/FragmentManager;
+    .local v0, "cycleEditor":Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v3
 
     const-string v4, "DatePickDialog"
 
-    invoke-virtual {v0, v3, v4}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v0, v3, v4}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     .line 495
-    .end local v0    # "cycleEditor":Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;
+    .end local v0    # "cycleEditor":Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$CycleEditorFragment;
     .end local v2    # "temp":I
     :cond_0
     :goto_0
@@ -1234,34 +1234,34 @@
 
     .line 489
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
+    iget-object v3, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
 
     if-ne p1, v3, :cond_0
 
     .line 490
-    sget v3, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
+    sget v3, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
 
-    sput v3, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->simSlot:I
+    sput v3, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->simSlot:I
 
     .line 491
-    sget v3, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->subId:I
+    sget v3, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->subId:I
 
-    sput v3, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->subId:I
+    sput v3, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->subId:I
 
     .line 492
-    new-instance v1, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;
+    new-instance v1, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;
 
-    invoke-direct {v1}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;-><init>()V
+    invoke-direct {v1}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;-><init>()V
 
     .line 493
-    .local v1, "limitEditor":Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getFragmentManager()Landroid/app/FragmentManager;
+    .local v1, "limitEditor":Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v3
 
     const-string v4, "DataLimitDialog"
 
-    invoke-virtual {v1, v3, v4}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v1, v3, v4}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataLimitFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -1275,10 +1275,10 @@
     const/4 v11, 0x0
 
     .line 249
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 250
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v8
 
@@ -1289,7 +1289,7 @@
     invoke-interface {v8, p0}, Landroid/content/SharedPreferences;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
 
     .line 252
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -1321,7 +1321,7 @@
 
     move-result-object v8
 
-    sget v9, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->subId:I
+    sget v9, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->subId:I
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1338,7 +1338,7 @@
     move-result-object v2
 
     .line 262
-    sget-object v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
+    sget-object v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -1377,7 +1377,7 @@
     if-nez v8, :cond_2
 
     .line 265
-    iget-object v8, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
+    iget-object v8, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -1400,12 +1400,12 @@
     invoke-virtual {v8, v9}, Landroid/preference/PreferenceScreen;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 266
-    sget-boolean v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->isEnable:Z
+    sget-boolean v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->isEnable:Z
 
     if-eqz v8, :cond_1
 
     .line 267
-    iget-object v8, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
 
     const/4 v9, 0x1
 
@@ -1430,7 +1430,7 @@
 
     move-result-object v8
 
-    sget v9, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->subId:I
+    sget v9, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->subId:I
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1447,7 +1447,7 @@
     move-result-object v7
 
     .line 281
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -1465,7 +1465,7 @@
 
     move-result-object v9
 
-    sget v10, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->subId:I
+    sget v10, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->subId:I
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1478,7 +1478,7 @@
     invoke-static {v8, v9, v7}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 283
-    iget-object v8, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
 
     invoke-virtual {v8, v7}, Landroid/preference/ListPreference;->setValue(Ljava/lang/String;)V
 
@@ -1501,7 +1501,7 @@
     if-ne v6, v8, :cond_3
 
     .line 292
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -1513,7 +1513,7 @@
 
     .line 296
     :goto_3
-    sget-object v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
+    sget-object v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -1537,7 +1537,7 @@
 
     .line 298
     :try_start_2
-    iget-object v8, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
 
     invoke-virtual {v8, v7}, Landroid/preference/ListPreference;->setSummary(Ljava/lang/CharSequence;)V
     :try_end_2
@@ -1559,7 +1559,7 @@
 
     move-result-object v8
 
-    sget v9, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->subId:I
+    sget v9, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->subId:I
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1574,7 +1574,7 @@
     move-result v3
 
     .line 304
-    iget-object v8, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->restrictData:Landroid/preference/SwitchPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->restrictData:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v8, v3}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
@@ -1593,7 +1593,7 @@
 
     move-result-object v8
 
-    sget v9, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->subId:I
+    sget v9, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->subId:I
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1608,7 +1608,7 @@
     move-result v1
 
     .line 312
-    sget-object v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
+    sget-object v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -1635,7 +1635,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
@@ -1666,7 +1666,7 @@
     .line 315
     .local v5, "showDay":Ljava/lang/String;
     :try_start_3
-    iget-object v8, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
+    iget-object v8, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v8, v5}, Landroid/preference/PreferenceScreen;->setSummary(Ljava/lang/CharSequence;)V
     :try_end_3
@@ -1684,7 +1684,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v9, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
+    sget-object v9, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1731,7 +1731,7 @@
     .end local v7    # "warningValue":Ljava/lang/String;
     :cond_2
     :try_start_4
-    iget-object v8, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
 
     const/4 v9, 0x0
 
@@ -1747,7 +1747,7 @@
 
     .line 273
     .restart local v0    # "e":Ljava/lang/Exception;
-    sget-object v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
+    sget-object v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -1784,7 +1784,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v9, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
+    sget-object v9, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1858,7 +1858,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v9, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
+    sget-object v9, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1908,7 +1908,7 @@
     const/4 v11, 0x1
 
     .line 393
-    sget-object v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
+    sget-object v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -1931,7 +1931,7 @@
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 394
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -1963,7 +1963,7 @@
 
     .line 396
     :cond_0
-    sget-object v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
+    sget-object v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
 
     const-string v9, "KEY_SET_DATA_LIMIT"
 
@@ -1974,7 +1974,7 @@
 
     .line 398
     .local v3, "mTotal":Ljava/lang/String;
-    sget v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
+    sget v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
 
     if-ne v8, v11, :cond_8
 
@@ -1999,7 +1999,7 @@
 
     move-result-object v8
 
-    sget v9, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->subId:I
+    sget v9, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->subId:I
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2031,7 +2031,7 @@
     if-nez v8, :cond_9
 
     .line 407
-    iget-object v8, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
+    iget-object v8, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -2054,7 +2054,7 @@
     invoke-virtual {v8, v9}, Landroid/preference/PreferenceScreen;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 408
-    iget-object v8, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
 
     const/4 v9, 0x1
 
@@ -2088,7 +2088,7 @@
 
     .line 419
     .local v7, "warningValue":Ljava/lang/String;
-    sget v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
+    sget v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
 
     if-ne v8, v11, :cond_a
 
@@ -2113,7 +2113,7 @@
 
     move-result-object v8
 
-    sget v9, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->subId:I
+    sget v9, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->subId:I
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2129,7 +2129,7 @@
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 426
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -2147,7 +2147,7 @@
 
     move-result-object v9
 
-    sget v10, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->subId:I
+    sget v10, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->subId:I
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2178,7 +2178,7 @@
     if-ne v6, v8, :cond_b
 
     .line 436
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -2190,7 +2190,7 @@
 
     .line 440
     :goto_4
-    sget-object v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
+    sget-object v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -2214,7 +2214,7 @@
 
     .line 443
     :try_start_2
-    iget-object v8, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
 
     invoke-virtual {v8, v7}, Landroid/preference/ListPreference;->setSummary(Ljava/lang/CharSequence;)V
     :try_end_2
@@ -2247,7 +2247,7 @@
 
     .line 451
     .local v2, "mStartDay":I
-    sget v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
+    sget v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
 
     if-ne v8, v11, :cond_c
 
@@ -2270,7 +2270,7 @@
 
     move-result-object v8
 
-    sget v9, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->subId:I
+    sget v9, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->subId:I
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2286,7 +2286,7 @@
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 458
-    sget-object v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
+    sget-object v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -2313,7 +2313,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
@@ -2344,7 +2344,7 @@
     .line 461
     .local v5, "showDay":Ljava/lang/String;
     :try_start_3
-    iget-object v8, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
+    iget-object v8, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v8, v5}, Landroid/preference/PreferenceScreen;->setSummary(Ljava/lang/CharSequence;)V
     :try_end_3
@@ -2377,7 +2377,7 @@
 
     .line 469
     .local v4, "restrictOn":Z
-    sget v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
+    sget v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
 
     if-ne v8, v11, :cond_d
 
@@ -2400,7 +2400,7 @@
 
     move-result-object v8
 
-    sget v9, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->subId:I
+    sget v9, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->subId:I
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2436,14 +2436,14 @@
     .line 410
     :cond_9
     :try_start_4
-    iget-object v8, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
+    iget-object v8, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
 
     const-string v9, ""
 
     invoke-virtual {v8, v9}, Landroid/preference/PreferenceScreen;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 411
-    iget-object v8, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
 
     const/4 v9, 0x0
 
@@ -2459,7 +2459,7 @@
 
     .line 414
     .local v0, "e":Ljava/lang/Exception;
-    sget-object v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
+    sget-object v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -2509,7 +2509,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v9, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
+    sget-object v9, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2579,7 +2579,7 @@
 
     .line 445
     .restart local v0    # "e":Ljava/lang/Exception;
-    sget-object v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
+    sget-object v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -2624,7 +2624,7 @@
 
     .line 463
     .restart local v0    # "e":Ljava/lang/Exception;
-    sget-object v8, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
+    sget-object v8, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -2674,7 +2674,7 @@
     const/4 v7, 0x1
 
     .line 342
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -2709,7 +2709,7 @@
 
     move-result-object v4
 
-    sget v5, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->subId:I
+    sget v5, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->subId:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2722,7 +2722,7 @@
     invoke-interface {v0, v4, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 351
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -2740,7 +2740,7 @@
 
     move-result-object v5
 
-    sget v6, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->subId:I
+    sget v6, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->subId:I
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2756,7 +2756,7 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 361
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -2797,7 +2797,7 @@
 
     move-result-object v4
 
-    sget v5, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->subId:I
+    sget v5, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->subId:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2814,7 +2814,7 @@
     move-result-object v2
 
     .line 371
-    sget-object v4, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2839,22 +2839,22 @@
     .line 373
     if-eqz p2, :cond_5
 
-    sget v4, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
+    sget v4, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
 
     if-eq v4, v7, :cond_3
 
-    sget v4, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
+    sget v4, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
 
     if-nez v4, :cond_5
 
     .line 374
     :cond_3
-    iget-object v4, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
+    iget-object v4, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v4, v7}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
     .line 376
-    iget-object v4, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->restrictData:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->restrictData:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4, v7}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
@@ -2874,18 +2874,18 @@
     if-nez v4, :cond_4
 
     .line 378
-    iget-object v4, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
 
     invoke-virtual {v4, v7}, Landroid/preference/ListPreference;->setEnabled(Z)V
 
     .line 379
     :cond_4
-    iget-object v4, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
+    iget-object v4, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
 
     if-eqz v4, :cond_0
 
     .line 380
-    iget-object v4, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
+    iget-object v4, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v4, v7}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -2893,37 +2893,37 @@
 
     .line 381
     :cond_5
-    sget v4, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
+    sget v4, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
 
     if-eq v4, v7, :cond_6
 
-    sget v4, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
+    sget v4, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->simSlot:I
 
     if-nez v4, :cond_0
 
     .line 382
     :cond_6
-    iget-object v4, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
+    iget-object v4, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setDataLimit:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v4, v8}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
     .line 384
-    iget-object v4, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->restrictData:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->restrictData:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4, v8}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 385
-    iget-object v4, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setWarning:Landroid/preference/ListPreference;
 
     invoke-virtual {v4, v8}, Landroid/preference/ListPreference;->setEnabled(Z)V
 
     .line 386
-    iget-object v4, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
+    iget-object v4, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
 
     if-eqz v4, :cond_0
 
     .line 387
-    iget-object v4, p0, Lcom/android/settings/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
+    iget-object v4, p0, Lcom/android/settings_ex/trafficmanager/settings/TrafficSettingsActivity;->setPackageStartDate:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v4, v8}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 

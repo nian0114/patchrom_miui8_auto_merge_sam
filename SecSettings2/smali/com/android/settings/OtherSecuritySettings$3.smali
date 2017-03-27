@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settings/OtherSecuritySettings$3;
+.class synthetic Lcom/android/settings_ex/OtherSecuritySettings$3;
 .super Ljava/lang/Object;
 .source "OtherSecuritySettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/OtherSecuritySettings;
+    value = Lcom/android/settings_ex/OtherSecuritySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
 
     .prologue
     .line 720
-    invoke-static {}, Lcom/android/settings/OtherSecuritySettings$PWState;->values()[Lcom/android/settings/OtherSecuritySettings$PWState;
+    invoke-static {}, Lcom/android/settings_ex/OtherSecuritySettings$PWState;->values()[Lcom/android/settings_ex/OtherSecuritySettings$PWState;
 
     move-result-object v0
 
@@ -32,12 +32,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/settings/OtherSecuritySettings$3;->$SwitchMap$com$android$settings$OtherSecuritySettings$PWState:[I
+    sput-object v0, Lcom/android/settings_ex/OtherSecuritySettings$3;->$SwitchMap$com$android$settings$OtherSecuritySettings$PWState:[I
 
     :try_start_0
-    sget-object v0, Lcom/android/settings/OtherSecuritySettings$3;->$SwitchMap$com$android$settings$OtherSecuritySettings$PWState:[I
+    sget-object v0, Lcom/android/settings_ex/OtherSecuritySettings$3;->$SwitchMap$com$android$settings$OtherSecuritySettings$PWState:[I
 
-    sget-object v1, Lcom/android/settings/OtherSecuritySettings$PWState;->NEW:Lcom/android/settings/OtherSecuritySettings$PWState;
+    sget-object v1, Lcom/android/settings_ex/OtherSecuritySettings$PWState;->NEW:Lcom/android/settings_ex/OtherSecuritySettings$PWState;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -51,9 +51,9 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/android/settings/OtherSecuritySettings$3;->$SwitchMap$com$android$settings$OtherSecuritySettings$PWState:[I
+    sget-object v0, Lcom/android/settings_ex/OtherSecuritySettings$3;->$SwitchMap$com$android$settings$OtherSecuritySettings$PWState:[I
 
-    sget-object v1, Lcom/android/settings/OtherSecuritySettings$PWState;->CONFIRM:Lcom/android/settings/OtherSecuritySettings$PWState;
+    sget-object v1, Lcom/android/settings_ex/OtherSecuritySettings$PWState;->CONFIRM:Lcom/android/settings_ex/OtherSecuritySettings$PWState;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -67,9 +67,9 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/android/settings/OtherSecuritySettings$3;->$SwitchMap$com$android$settings$OtherSecuritySettings$PWState:[I
+    sget-object v0, Lcom/android/settings_ex/OtherSecuritySettings$3;->$SwitchMap$com$android$settings$OtherSecuritySettings$PWState:[I
 
-    sget-object v1, Lcom/android/settings/OtherSecuritySettings$PWState;->CURRENT:Lcom/android/settings/OtherSecuritySettings$PWState;
+    sget-object v1, Lcom/android/settings_ex/OtherSecuritySettings$PWState;->CURRENT:Lcom/android/settings_ex/OtherSecuritySettings$PWState;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 

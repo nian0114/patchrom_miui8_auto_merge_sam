@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApWarning$28;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$28;
 .super Ljava/lang/Object;
 .source "WifiApWarning.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/mobileap/WifiApWarning;->showNextHotspotDialog(I)V
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->showNextHotspotDialog(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WifiApWarning;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WifiApWarning;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;)V
     .locals 0
 
     .prologue
     .line 845
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApWarning$28;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWarning;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$28;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,12 +43,12 @@
 
     .prologue
     .line 847
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApWarning$28;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWarning;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$28;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;
 
     const/4 v1, 0x0
 
-    # invokes: Lcom/android/settings/wifi/mobileap/WifiApWarning;->startProvisioningIfNecessary(I)V
-    invoke-static {v0, v1}, Lcom/android/settings/wifi/mobileap/WifiApWarning;->access$2300(Lcom/android/settings/wifi/mobileap/WifiApWarning;I)V
+    # invokes: Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->startProvisioningIfNecessary(I)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->access$2300(Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;I)V
 
     .line 848
     return-void

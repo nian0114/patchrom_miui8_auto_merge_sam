@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/PinnedHeaderListFragment;
+.class public Lcom/android/settings_ex/PinnedHeaderListFragment;
 .super Landroid/app/ListFragment;
 .source "PinnedHeaderListFragment.java"
 

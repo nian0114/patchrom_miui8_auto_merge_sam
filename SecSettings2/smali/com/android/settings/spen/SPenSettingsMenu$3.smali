@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/spen/SPenSettingsMenu$3;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/spen/SPenSettingsMenu$3;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "SPenSettingsMenu.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/spen/SPenSettingsMenu;
+    value = Lcom/android/settings_ex/spen/SPenSettingsMenu;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 437
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -52,7 +52,7 @@
     .local v0, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v1, "com.sec.android.app.SPenKeeper"
 
-    invoke-static {p1, v1}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v1}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -65,7 +65,7 @@
 
     .line 462
     :cond_0
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportAddtionalFeedback()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportAddtionalFeedback()Z
 
     move-result v1
 
@@ -84,7 +84,7 @@
     .line 471
     :cond_1
     :goto_0
-    invoke-static {p1}, Lcom/android/settings/Utils;->isSupportPenUsp10(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isSupportPenUsp10(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -101,13 +101,13 @@
 
     .line 466
     :cond_2
-    invoke-static {p1}, Lcom/android/settings/Utils;->hasHaptic(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->hasHaptic(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->isEnableIntensity(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isEnableIntensity(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -165,7 +165,7 @@
 
     .line 446
     .local v1, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v2, Lcom/android/settings/spen/SPenSettingsMenu;
+    const-class v2, Lcom/android/settings_ex/spen/SPenSettingsMenu;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

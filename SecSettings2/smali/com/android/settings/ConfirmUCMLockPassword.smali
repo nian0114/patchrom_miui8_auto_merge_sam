@@ -1,12 +1,12 @@
-.class public Lcom/android/settings/ConfirmUCMLockPassword;
-.super Lcom/android/settings/ConfirmDeviceCredentialBaseActivity;
+.class public Lcom/android/settings_ex/ConfirmUCMLockPassword;
+.super Lcom/android/settings_ex/ConfirmDeviceCredentialBaseActivity;
 .source "ConfirmUCMLockPassword.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/ConfirmUCMLockPassword$ConfirmUCMLockPasswordFragment;
+        Lcom/android/settings_ex/ConfirmUCMLockPassword$ConfirmUCMLockPasswordFragment;
     }
 .end annotation
 
@@ -31,21 +31,21 @@
     const/4 v0, 0x0
 
     .line 69
-    sput-boolean v0, Lcom/android/settings/ConfirmUCMLockPassword;->mFromPersonalPage:Z
+    sput-boolean v0, Lcom/android/settings_ex/ConfirmUCMLockPassword;->mFromPersonalPage:Z
 
     .line 70
-    sput-boolean v0, Lcom/android/settings/ConfirmUCMLockPassword;->mFromPrivateBox:Z
+    sput-boolean v0, Lcom/android/settings_ex/ConfirmUCMLockPassword;->mFromPrivateBox:Z
 
     .line 72
-    sput-boolean v0, Lcom/android/settings/ConfirmUCMLockPassword;->mPersonalPage_isPin:Z
+    sput-boolean v0, Lcom/android/settings_ex/ConfirmUCMLockPassword;->mPersonalPage_isPin:Z
 
     .line 73
-    sput-boolean v0, Lcom/android/settings/ConfirmUCMLockPassword;->mFromAppLock:Z
+    sput-boolean v0, Lcom/android/settings_ex/ConfirmUCMLockPassword;->mFromAppLock:Z
 
     .line 74
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/android/settings/ConfirmUCMLockPassword;->mCsNameUri:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/ConfirmUCMLockPassword;->mCsNameUri:Ljava/lang/String;
 
     return-void
 .end method
@@ -55,7 +55,7 @@
 
     .prologue
     .line 66
-    invoke-direct {p0}, Lcom/android/settings/ConfirmDeviceCredentialBaseActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseActivity;-><init>()V
 
     .line 108
     return-void
@@ -67,7 +67,7 @@
 
     .prologue
     .line 66
-    sput-boolean p0, Lcom/android/settings/ConfirmUCMLockPassword;->mFromPersonalPage:Z
+    sput-boolean p0, Lcom/android/settings_ex/ConfirmUCMLockPassword;->mFromPersonalPage:Z
 
     return p0
 .end method
@@ -78,7 +78,7 @@
 
     .prologue
     .line 66
-    sput-boolean p0, Lcom/android/settings/ConfirmUCMLockPassword;->mPersonalPage_isPin:Z
+    sput-boolean p0, Lcom/android/settings_ex/ConfirmUCMLockPassword;->mPersonalPage_isPin:Z
 
     return p0
 .end method
@@ -88,7 +88,7 @@
 
     .prologue
     .line 66
-    sget-object v0, Lcom/android/settings/ConfirmUCMLockPassword;->mCsNameUri:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/ConfirmUCMLockPassword;->mCsNameUri:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -99,7 +99,7 @@
 
     .prologue
     .line 66
-    sput-object p0, Lcom/android/settings/ConfirmUCMLockPassword;->mCsNameUri:Ljava/lang/String;
+    sput-object p0, Lcom/android/settings_ex/ConfirmUCMLockPassword;->mCsNameUri:Ljava/lang/String;
 
     return-object p0
 .end method
@@ -148,7 +148,7 @@
     .line 80
     new-instance v0, Landroid/content/Intent;
 
-    invoke-super {p0}, Lcom/android/settings/ConfirmDeviceCredentialBaseActivity;->getIntent()Landroid/content/Intent;
+    invoke-super {p0}, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -158,7 +158,7 @@
     .local v0, "modIntent":Landroid/content/Intent;
     const-string v1, ":settings:show_fragment"
 
-    const-class v2, Lcom/android/settings/ConfirmUCMLockPassword$ConfirmUCMLockPasswordFragment;
+    const-class v2, Lcom/android/settings_ex/ConfirmUCMLockPassword$ConfirmUCMLockPasswordFragment;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -183,7 +183,7 @@
 
     .prologue
     .line 95
-    const-class v0, Lcom/android/settings/ConfirmUCMLockPassword$ConfirmUCMLockPasswordFragment;
+    const-class v0, Lcom/android/settings_ex/ConfirmUCMLockPassword$ConfirmUCMLockPasswordFragment;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -213,10 +213,10 @@
 
     .prologue
     .line 101
-    invoke-super {p0, p1}, Lcom/android/settings/ConfirmDeviceCredentialBaseActivity;->onWindowFocusChanged(Z)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseActivity;->onWindowFocusChanged(Z)V
 
     .line 102
-    invoke-virtual {p0}, Lcom/android/settings/ConfirmUCMLockPassword;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ConfirmUCMLockPassword;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
 
@@ -230,15 +230,15 @@
     .local v0, "fragment":Landroid/app/Fragment;
     if-eqz v0, :cond_0
 
-    instance-of v1, v0, Lcom/android/settings/ConfirmUCMLockPassword$ConfirmUCMLockPasswordFragment;
+    instance-of v1, v0, Lcom/android/settings_ex/ConfirmUCMLockPassword$ConfirmUCMLockPasswordFragment;
 
     if-eqz v1, :cond_0
 
     .line 104
-    check-cast v0, Lcom/android/settings/ConfirmUCMLockPassword$ConfirmUCMLockPasswordFragment;
+    check-cast v0, Lcom/android/settings_ex/ConfirmUCMLockPassword$ConfirmUCMLockPasswordFragment;
 
     .end local v0    # "fragment":Landroid/app/Fragment;
-    invoke-virtual {v0, p1}, Lcom/android/settings/ConfirmUCMLockPassword$ConfirmUCMLockPasswordFragment;->onWindowFocusChanged(Z)V
+    invoke-virtual {v0, p1}, Lcom/android/settings_ex/ConfirmUCMLockPassword$ConfirmUCMLockPasswordFragment;->onWindowFocusChanged(Z)V
 
     .line 106
     :cond_0

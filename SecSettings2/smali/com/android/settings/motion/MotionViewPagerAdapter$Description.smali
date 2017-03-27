@@ -1,11 +1,11 @@
-.class Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
+.class Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
 .super Ljava/lang/Object;
 .source "MotionViewPagerAdapter.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/motion/MotionViewPagerAdapter;
+    value = Lcom/android/settings_ex/motion/MotionViewPagerAdapter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -37,16 +37,16 @@
     .line 36
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->key:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->key:Ljava/lang/String;
 
     .line 37
-    iput v1, p0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->animation:I
+    iput v1, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->animation:I
 
     .line 38
-    iput v1, p0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->title:I
+    iput v1, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->title:I
 
     .line 39
-    iput v1, p0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->summary:I
+    iput v1, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->summary:I
 
     .line 40
     return-void

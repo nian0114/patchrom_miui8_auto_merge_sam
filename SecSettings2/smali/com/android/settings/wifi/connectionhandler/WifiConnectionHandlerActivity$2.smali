@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity$2;
+.class Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity$2;
 .super Ljava/lang/Object;
 .source "WifiConnectionHandlerActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->showdataConnectionDialog()V
+    value = Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->showdataConnectionDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;
 
 .field final synthetic val$mcheck:Landroid/widget/CheckBox;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;Landroid/widget/CheckBox;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;Landroid/widget/CheckBox;)V
     .locals 0
 
     .prologue
     .line 107
-    iput-object p1, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity$2;->this$0:Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity$2;->this$0:Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;
 
-    iput-object p2, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity$2;->val$mcheck:Landroid/widget/CheckBox;
+    iput-object p2, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity$2;->val$mcheck:Landroid/widget/CheckBox;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -61,7 +61,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity$2;->val$mcheck:Landroid/widget/CheckBox;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity$2;->val$mcheck:Landroid/widget/CheckBox;
 
     invoke-virtual {v4}, Landroid/widget/CheckBox;->isChecked()Z
 
@@ -78,7 +78,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 111
-    iget-object v2, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity$2;->val$mcheck:Landroid/widget/CheckBox;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity$2;->val$mcheck:Landroid/widget/CheckBox;
 
     invoke-virtual {v2}, Landroid/widget/CheckBox;->isChecked()Z
 
@@ -87,10 +87,10 @@
     if-eqz v2, :cond_0
 
     .line 112
-    iget-object v2, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity$2;->this$0:Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity$2;->this$0:Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;
 
-    # getter for: Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mDoNotShow:Landroid/content/SharedPreferences;
-    invoke-static {v2}, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->access$300(Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;)Landroid/content/SharedPreferences;
+    # getter for: Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mDoNotShow:Landroid/content/SharedPreferences;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->access$300(Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;)Landroid/content/SharedPreferences;
 
     move-result-object v2
 
@@ -110,10 +110,10 @@
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 115
-    iget-object v2, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity$2;->this$0:Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity$2;->this$0:Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;
 
-    # getter for: Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mBeforeValue:Landroid/content/SharedPreferences;
-    invoke-static {v2}, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->access$400(Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;)Landroid/content/SharedPreferences;
+    # getter for: Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mBeforeValue:Landroid/content/SharedPreferences;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->access$400(Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;)Landroid/content/SharedPreferences;
 
     move-result-object v2
 
@@ -141,9 +141,9 @@
     .end local v0    # "edit_beforeValue":Landroid/content/SharedPreferences$Editor;
     .end local v1    # "edit_boolean":Landroid/content/SharedPreferences$Editor;
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity$2;->this$0:Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity$2;->this$0:Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;
 
-    invoke-virtual {v2, v5}, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->OnOffData(Z)V
+    invoke-virtual {v2, v5}, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->OnOffData(Z)V
 
     .line 121
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V

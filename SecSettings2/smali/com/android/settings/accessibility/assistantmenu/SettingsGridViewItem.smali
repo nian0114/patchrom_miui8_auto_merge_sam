@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+.class public Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 .super Ljava/lang/Object;
 .source "SettingsGridViewItem.java"
 
@@ -12,14 +12,14 @@
         "Ljava/lang/Object;",
         "Ljava/lang/Comparable",
         "<",
-        "Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;",
+        "Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field private mAct:Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+.field private mAct:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
 .field private mIcon:I
 
@@ -27,10 +27,10 @@
 
 
 # direct methods
-.method constructor <init>(ILcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;Ljava/lang/String;)V
+.method constructor <init>(ILcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;Ljava/lang/String;)V
     .locals 0
     .param p1, "icon"    # I
-    .param p2, "act"    # Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    .param p2, "act"    # Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
     .param p3, "name"    # Ljava/lang/String;
 
     .prologue
@@ -38,13 +38,13 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 16
-    iput p1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;->mIcon:I
+    iput p1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;->mIcon:I
 
     .line 17
-    iput-object p3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;->mName:Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;->mName:Ljava/lang/String;
 
     .line 18
-    iput-object p2, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;->mAct:Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    iput-object p2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;->mAct:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
     .line 19
     return-void
@@ -52,15 +52,15 @@
 
 
 # virtual methods
-.method public compareTo(Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;)I
+.method public compareTo(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;)I
     .locals 2
-    .param p1, "otherItem"    # Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    .param p1, "otherItem"    # Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     .prologue
     .line 48
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;->mName:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;->mName:Ljava/lang/String;
 
-    iget-object v1, p1, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;->mName:Ljava/lang/String;
+    iget-object v1, p1, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;->mName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
@@ -75,22 +75,22 @@
 
     .prologue
     .line 7
-    check-cast p1, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;
+    check-cast p1, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;->compareTo(Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;)I
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;->compareTo(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;)I
 
     move-result v0
 
     return v0
 .end method
 
-.method getAct()Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+.method getAct()Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
     .locals 1
 
     .prologue
     .line 30
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;->mAct:Lcom/android/settings/accessibility/assistantmenu/AssistantMenuUIAct$Act;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;->mAct:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantMenuUIAct$Act;
 
     return-object v0
 .end method
@@ -100,7 +100,7 @@
 
     .prologue
     .line 22
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;->mIcon:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;->mIcon:I
 
     return v0
 .end method
@@ -110,7 +110,7 @@
 
     .prologue
     .line 26
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewItem;->mName:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewItem;->mName:Ljava/lang/String;
 
     return-object v0
 .end method

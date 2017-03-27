@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/WfcHelper;
+.class public Lcom/android/settings_ex/wifi/WfcHelper;
 .super Ljava/lang/Object;
 .source "WfcHelper.java"
 
@@ -6,9 +6,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/wifi/WfcHelper$WfcStateTask;,
-        Lcom/android/settings/wifi/WfcHelper$WfcStateObserver;,
-        Lcom/android/settings/wifi/WfcHelper$WfcStateChangedListener;
+        Lcom/android/settings_ex/wifi/WfcHelper$WfcStateTask;,
+        Lcom/android/settings_ex/wifi/WfcHelper$WfcStateObserver;,
+        Lcom/android/settings_ex/wifi/WfcHelper$WfcStateChangedListener;
     }
 .end annotation
 
@@ -31,7 +31,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/wifi/WfcHelper;->WFC_STATE_CONTENT_URI:Landroid/net/Uri;
+    sput-object v0, Lcom/android/settings_ex/wifi/WfcHelper;->WFC_STATE_CONTENT_URI:Landroid/net/Uri;
 
     .line 21
     const-string v0, "content://com.oem.smartwifisupport.provider/wfc_is_provisioned"
@@ -40,7 +40,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/wifi/WfcHelper;->WFC_IS_PROVISIONED_CONTENT_URI:Landroid/net/Uri;
+    sput-object v0, Lcom/android/settings_ex/wifi/WfcHelper;->WFC_IS_PROVISIONED_CONTENT_URI:Landroid/net/Uri;
 
     return-void
 .end method

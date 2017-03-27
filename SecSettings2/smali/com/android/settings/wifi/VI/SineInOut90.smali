@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/VI/SineInOut90;
+.class public Lcom/android/settings_ex/wifi/VI/SineInOut90;
 .super Ljava/lang/Object;
 .source "SineInOut90.java"
 
@@ -60,7 +60,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/android/settings/wifi/VI/SineInOut90;->segments:[[F
+    sput-object v0, Lcom/android/settings_ex/wifi/VI/SineInOut90;->segments:[[F
 
     return-void
 
@@ -127,7 +127,7 @@
 
     .line 22
     .local v0, "_loc_5":F
-    sget-object v6, Lcom/android/settings/wifi/VI/SineInOut90;->segments:[[F
+    sget-object v6, Lcom/android/settings_ex/wifi/VI/SineInOut90;->segments:[[F
 
     array-length v1, v6
 
@@ -147,14 +147,14 @@
 
     .line 24
     .local v4, "_loc_9":I
-    sget-object v6, Lcom/android/settings/wifi/VI/SineInOut90;->segments:[[F
+    sget-object v6, Lcom/android/settings_ex/wifi/VI/SineInOut90;->segments:[[F
 
     array-length v6, v6
 
     if-lt v4, v6, :cond_0
 
     .line 25
-    sget-object v6, Lcom/android/settings/wifi/VI/SineInOut90;->segments:[[F
+    sget-object v6, Lcom/android/settings_ex/wifi/VI/SineInOut90;->segments:[[F
 
     array-length v6, v6
 
@@ -178,7 +178,7 @@
 
     .line 28
     .local v2, "_loc_7":F
-    sget-object v6, Lcom/android/settings/wifi/VI/SineInOut90;->segments:[[F
+    sget-object v6, Lcom/android/settings_ex/wifi/VI/SineInOut90;->segments:[[F
 
     aget-object v3, v6, v4
 

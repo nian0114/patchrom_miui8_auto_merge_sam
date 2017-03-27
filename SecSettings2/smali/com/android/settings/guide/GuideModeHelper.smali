@@ -1,4 +1,4 @@
-.class public final Lcom/android/settings/guide/GuideModeHelper;
+.class public final Lcom/android/settings_ex/guide/GuideModeHelper;
 .super Ljava/lang/Object;
 .source "GuideModeHelper.java"
 
@@ -15,29 +15,29 @@
     .line 61
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/android/settings/guide/GuideModeHelper;->mIsTablet:Z
+    sput-boolean v0, Lcom/android/settings_ex/guide/GuideModeHelper;->mIsTablet:Z
 
     return-void
 .end method
 
-.method static synthetic access$000(Landroid/view/View;Lcom/android/settings/helpdialog/TwHelpDialog;Landroid/app/Activity;)Z
+.method static synthetic access$000(Landroid/view/View;Lcom/android/settings_ex/helpdialog/TwHelpDialog;Landroid/app/Activity;)Z
     .locals 1
     .param p0, "x0"    # Landroid/view/View;
-    .param p1, "x1"    # Lcom/android/settings/helpdialog/TwHelpDialog;
+    .param p1, "x1"    # Lcom/android/settings_ex/helpdialog/TwHelpDialog;
     .param p2, "x2"    # Landroid/app/Activity;
 
     .prologue
     .line 39
-    invoke-static {p0, p1, p2}, Lcom/android/settings/guide/GuideModeHelper;->placeHandPointer(Landroid/view/View;Lcom/android/settings/helpdialog/TwHelpDialog;Landroid/app/Activity;)Z
+    invoke-static {p0, p1, p2}, Lcom/android/settings_ex/guide/GuideModeHelper;->placeHandPointer(Landroid/view/View;Lcom/android/settings_ex/helpdialog/TwHelpDialog;Landroid/app/Activity;)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method static drawActionPointerForSwitcher(Lcom/android/settings/helpdialog/TwHelpDialog;Landroid/app/Activity;)V
+.method static drawActionPointerForSwitcher(Lcom/android/settings_ex/helpdialog/TwHelpDialog;Landroid/app/Activity;)V
     .locals 5
-    .param p0, "dialog"    # Lcom/android/settings/helpdialog/TwHelpDialog;
+    .param p0, "dialog"    # Lcom/android/settings_ex/helpdialog/TwHelpDialog;
     .param p1, "activity"    # Landroid/app/Activity;
 
     .prologue
@@ -72,7 +72,7 @@
     if-eqz v2, :cond_0
 
     .line 192
-    invoke-static {v2, p0, p1}, Lcom/android/settings/guide/GuideModeHelper;->placeHandPointer(Landroid/view/View;Lcom/android/settings/helpdialog/TwHelpDialog;Landroid/app/Activity;)Z
+    invoke-static {v2, p0, p1}, Lcom/android/settings_ex/guide/GuideModeHelper;->placeHandPointer(Landroid/view/View;Lcom/android/settings_ex/helpdialog/TwHelpDialog;Landroid/app/Activity;)Z
 
     move-result v4
 
@@ -85,9 +85,9 @@
 
     .line 195
     .local v3, "vto":Landroid/view/ViewTreeObserver;
-    new-instance v1, Lcom/android/settings/guide/GuideModeHelper$1;
+    new-instance v1, Lcom/android/settings_ex/guide/GuideModeHelper$1;
 
-    invoke-direct {v1, v2, p0, p1, v3}, Lcom/android/settings/guide/GuideModeHelper$1;-><init>(Landroid/view/View;Lcom/android/settings/helpdialog/TwHelpDialog;Landroid/app/Activity;Landroid/view/ViewTreeObserver;)V
+    invoke-direct {v1, v2, p0, p1, v3}, Lcom/android/settings_ex/guide/GuideModeHelper$1;-><init>(Landroid/view/View;Lcom/android/settings_ex/helpdialog/TwHelpDialog;Landroid/app/Activity;Landroid/view/ViewTreeObserver;)V
 
     .line 209
     .local v1, "listener":Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
@@ -174,7 +174,7 @@
     if-nez v0, :cond_0
 
     .line 78
-    invoke-static {p1}, Lcom/android/settings/guide/GuideModeHelper;->getGuideModeFromBundle(Landroid/os/Bundle;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/android/settings_ex/guide/GuideModeHelper;->getGuideModeFromBundle(Landroid/os/Bundle;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -196,11 +196,11 @@
 
     .prologue
     .line 467
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v0
 
-    sput-boolean v0, Lcom/android/settings/guide/GuideModeHelper;->mIsTablet:Z
+    sput-boolean v0, Lcom/android/settings_ex/guide/GuideModeHelper;->mIsTablet:Z
 
     .line 468
     return-void
@@ -366,15 +366,15 @@
 
     .prologue
     .line 456
-    sget-boolean v0, Lcom/android/settings/guide/GuideModeHelper;->mIsTablet:Z
+    sget-boolean v0, Lcom/android/settings_ex/guide/GuideModeHelper;->mIsTablet:Z
 
     return v0
 .end method
 
-.method private static placeHandPointer(Landroid/view/View;Lcom/android/settings/helpdialog/TwHelpDialog;Landroid/app/Activity;)Z
+.method private static placeHandPointer(Landroid/view/View;Lcom/android/settings_ex/helpdialog/TwHelpDialog;Landroid/app/Activity;)Z
     .locals 13
     .param p0, "view"    # Landroid/view/View;
-    .param p1, "dialog"    # Lcom/android/settings/helpdialog/TwHelpDialog;
+    .param p1, "dialog"    # Lcom/android/settings_ex/helpdialog/TwHelpDialog;
     .param p2, "activity"    # Landroid/app/Activity;
 
     .prologue
@@ -389,7 +389,7 @@
 
     .line 230
     .local v8, "viewX":I
-    invoke-virtual {p1, v12}, Lcom/android/settings/helpdialog/TwHelpDialog;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v12}, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -399,17 +399,17 @@
     .local v2, "handPointer":Landroid/widget/ImageView;
     const v10, 0x7f0d000f
 
-    invoke-virtual {p1, v10}, Lcom/android/settings/helpdialog/TwHelpDialog;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v10}, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->findViewById(I)Landroid/view/View;
 
     move-result-object v6
 
-    check-cast v6, Lcom/android/settings/helpdialog/TwTouchPunchView;
+    check-cast v6, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;
 
     .line 232
-    .local v6, "punchView":Lcom/android/settings/helpdialog/TwTouchPunchView;
+    .local v6, "punchView":Lcom/android/settings_ex/helpdialog/TwTouchPunchView;
     const v10, 0x7f0d0012
 
-    invoke-virtual {p1, v10}, Lcom/android/settings/helpdialog/TwHelpDialog;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v10}, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -499,7 +499,7 @@
     .line 258
     const v10, 0x7f0d0011
 
-    invoke-virtual {p1, v10}, Lcom/android/settings/helpdialog/TwHelpDialog;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v10}, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -522,7 +522,7 @@
     if-eqz v6, :cond_2
 
     .line 271
-    invoke-virtual {v6}, Lcom/android/settings/helpdialog/TwTouchPunchView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v6}, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v5
 
@@ -533,10 +533,10 @@
     iput v8, v5, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
 
     .line 276
-    invoke-virtual {v6, v5}, Lcom/android/settings/helpdialog/TwTouchPunchView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v6, v5}, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 277
-    invoke-virtual {v6}, Lcom/android/settings/helpdialog/TwTouchPunchView;->invalidate()V
+    invoke-virtual {v6}, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->invalidate()V
 
     .line 284
     .end local v5    # "punchParams":Landroid/widget/RelativeLayout$LayoutParams;
@@ -628,7 +628,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/ListView;->setEnabled(Z)V
 
     .line 425
-    invoke-static {}, Lcom/android/settings/guide/GuideFragment;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/guide/GuideFragment;->isTablet()Z
 
     move-result v1
 
@@ -678,7 +678,7 @@
 
     .line 442
     :cond_0
-    invoke-static {}, Lcom/android/settings/guide/GuideFragment;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/guide/GuideFragment;->isTablet()Z
 
     move-result v1
 

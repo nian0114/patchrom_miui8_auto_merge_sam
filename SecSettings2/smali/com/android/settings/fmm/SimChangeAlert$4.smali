@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fmm/SimChangeAlert$4;
+.class Lcom/android/settings_ex/fmm/SimChangeAlert$4;
 .super Ljava/lang/Object;
 .source "SimChangeAlert.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fmm/SimChangeAlert;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    value = Lcom/android/settings_ex/fmm/SimChangeAlert;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fmm/SimChangeAlert;
+.field final synthetic this$0:Lcom/android/settings_ex/fmm/SimChangeAlert;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fmm/SimChangeAlert;)V
+.method constructor <init>(Lcom/android/settings_ex/fmm/SimChangeAlert;)V
     .locals 0
 
     .prologue
     .line 247
-    iput-object p1, p0, Lcom/android/settings/fmm/SimChangeAlert$4;->this$0:Lcom/android/settings/fmm/SimChangeAlert;
+    iput-object p1, p0, Lcom/android/settings_ex/fmm/SimChangeAlert$4;->this$0:Lcom/android/settings_ex/fmm/SimChangeAlert;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -80,10 +80,10 @@
     if-le v0, v2, :cond_0
 
     .line 253
-    iget-object v0, p0, Lcom/android/settings/fmm/SimChangeAlert$4;->this$0:Lcom/android/settings/fmm/SimChangeAlert;
+    iget-object v0, p0, Lcom/android/settings_ex/fmm/SimChangeAlert$4;->this$0:Lcom/android/settings_ex/fmm/SimChangeAlert;
 
-    # getter for: Lcom/android/settings/fmm/SimChangeAlert;->mAlertMessage:Landroid/widget/EditText;
-    invoke-static {v0}, Lcom/android/settings/fmm/SimChangeAlert;->access$300(Lcom/android/settings/fmm/SimChangeAlert;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/fmm/SimChangeAlert;->mAlertMessage:Landroid/widget/EditText;
+    invoke-static {v0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->access$300(Lcom/android/settings_ex/fmm/SimChangeAlert;)Landroid/widget/EditText;
 
     move-result-object v0
 
@@ -98,31 +98,31 @@
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 254
-    iget-object v0, p0, Lcom/android/settings/fmm/SimChangeAlert$4;->this$0:Lcom/android/settings/fmm/SimChangeAlert;
+    iget-object v0, p0, Lcom/android/settings_ex/fmm/SimChangeAlert$4;->this$0:Lcom/android/settings_ex/fmm/SimChangeAlert;
 
-    # getter for: Lcom/android/settings/fmm/SimChangeAlert;->mAlertMessage:Landroid/widget/EditText;
-    invoke-static {v0}, Lcom/android/settings/fmm/SimChangeAlert;->access$300(Lcom/android/settings/fmm/SimChangeAlert;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/fmm/SimChangeAlert;->mAlertMessage:Landroid/widget/EditText;
+    invoke-static {v0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->access$300(Lcom/android/settings_ex/fmm/SimChangeAlert;)Landroid/widget/EditText;
 
     move-result-object v0
 
     invoke-virtual {v0, v2}, Landroid/widget/EditText;->setSelection(I)V
 
     .line 255
-    iget-object v0, p0, Lcom/android/settings/fmm/SimChangeAlert$4;->this$0:Lcom/android/settings/fmm/SimChangeAlert;
+    iget-object v0, p0, Lcom/android/settings_ex/fmm/SimChangeAlert$4;->this$0:Lcom/android/settings_ex/fmm/SimChangeAlert;
 
-    # getter for: Lcom/android/settings/fmm/SimChangeAlert;->mMaxToast:Landroid/widget/Toast;
-    invoke-static {v0}, Lcom/android/settings/fmm/SimChangeAlert;->access$400(Lcom/android/settings/fmm/SimChangeAlert;)Landroid/widget/Toast;
+    # getter for: Lcom/android/settings_ex/fmm/SimChangeAlert;->mMaxToast:Landroid/widget/Toast;
+    invoke-static {v0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->access$400(Lcom/android/settings_ex/fmm/SimChangeAlert;)Landroid/widget/Toast;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
     .line 256
-    iget-object v0, p0, Lcom/android/settings/fmm/SimChangeAlert$4;->this$0:Lcom/android/settings/fmm/SimChangeAlert;
+    iget-object v0, p0, Lcom/android/settings_ex/fmm/SimChangeAlert$4;->this$0:Lcom/android/settings_ex/fmm/SimChangeAlert;
 
-    iget-object v1, p0, Lcom/android/settings/fmm/SimChangeAlert$4;->this$0:Lcom/android/settings/fmm/SimChangeAlert;
+    iget-object v1, p0, Lcom/android/settings_ex/fmm/SimChangeAlert$4;->this$0:Lcom/android/settings_ex/fmm/SimChangeAlert;
 
-    invoke-virtual {v1}, Lcom/android/settings/fmm/SimChangeAlert;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/android/settings_ex/fmm/SimChangeAlert;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -132,14 +132,14 @@
 
     move-result-object v1
 
-    # setter for: Lcom/android/settings/fmm/SimChangeAlert;->mMaxToast:Landroid/widget/Toast;
-    invoke-static {v0, v1}, Lcom/android/settings/fmm/SimChangeAlert;->access$402(Lcom/android/settings/fmm/SimChangeAlert;Landroid/widget/Toast;)Landroid/widget/Toast;
+    # setter for: Lcom/android/settings_ex/fmm/SimChangeAlert;->mMaxToast:Landroid/widget/Toast;
+    invoke-static {v0, v1}, Lcom/android/settings_ex/fmm/SimChangeAlert;->access$402(Lcom/android/settings_ex/fmm/SimChangeAlert;Landroid/widget/Toast;)Landroid/widget/Toast;
 
     .line 257
-    iget-object v0, p0, Lcom/android/settings/fmm/SimChangeAlert$4;->this$0:Lcom/android/settings/fmm/SimChangeAlert;
+    iget-object v0, p0, Lcom/android/settings_ex/fmm/SimChangeAlert$4;->this$0:Lcom/android/settings_ex/fmm/SimChangeAlert;
 
-    # getter for: Lcom/android/settings/fmm/SimChangeAlert;->mMaxToast:Landroid/widget/Toast;
-    invoke-static {v0}, Lcom/android/settings/fmm/SimChangeAlert;->access$400(Lcom/android/settings/fmm/SimChangeAlert;)Landroid/widget/Toast;
+    # getter for: Lcom/android/settings_ex/fmm/SimChangeAlert;->mMaxToast:Landroid/widget/Toast;
+    invoke-static {v0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->access$400(Lcom/android/settings_ex/fmm/SimChangeAlert;)Landroid/widget/Toast;
 
     move-result-object v0
 
@@ -152,19 +152,19 @@
 
     .line 258
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/fmm/SimChangeAlert$4;->this$0:Lcom/android/settings/fmm/SimChangeAlert;
+    iget-object v0, p0, Lcom/android/settings_ex/fmm/SimChangeAlert$4;->this$0:Lcom/android/settings_ex/fmm/SimChangeAlert;
 
-    # getter for: Lcom/android/settings/fmm/SimChangeAlert;->mMaxToast:Landroid/widget/Toast;
-    invoke-static {v0}, Lcom/android/settings/fmm/SimChangeAlert;->access$400(Lcom/android/settings/fmm/SimChangeAlert;)Landroid/widget/Toast;
+    # getter for: Lcom/android/settings_ex/fmm/SimChangeAlert;->mMaxToast:Landroid/widget/Toast;
+    invoke-static {v0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->access$400(Lcom/android/settings_ex/fmm/SimChangeAlert;)Landroid/widget/Toast;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/fmm/SimChangeAlert$4;->this$0:Lcom/android/settings/fmm/SimChangeAlert;
+    iget-object v0, p0, Lcom/android/settings_ex/fmm/SimChangeAlert$4;->this$0:Lcom/android/settings_ex/fmm/SimChangeAlert;
 
-    # getter for: Lcom/android/settings/fmm/SimChangeAlert;->mMaxToast:Landroid/widget/Toast;
-    invoke-static {v0}, Lcom/android/settings/fmm/SimChangeAlert;->access$400(Lcom/android/settings/fmm/SimChangeAlert;)Landroid/widget/Toast;
+    # getter for: Lcom/android/settings_ex/fmm/SimChangeAlert;->mMaxToast:Landroid/widget/Toast;
+    invoke-static {v0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->access$400(Lcom/android/settings_ex/fmm/SimChangeAlert;)Landroid/widget/Toast;
 
     move-result-object v0
 
@@ -179,10 +179,10 @@
     if-nez v0, :cond_0
 
     .line 259
-    iget-object v0, p0, Lcom/android/settings/fmm/SimChangeAlert$4;->this$0:Lcom/android/settings/fmm/SimChangeAlert;
+    iget-object v0, p0, Lcom/android/settings_ex/fmm/SimChangeAlert$4;->this$0:Lcom/android/settings_ex/fmm/SimChangeAlert;
 
-    # getter for: Lcom/android/settings/fmm/SimChangeAlert;->mMaxToast:Landroid/widget/Toast;
-    invoke-static {v0}, Lcom/android/settings/fmm/SimChangeAlert;->access$400(Lcom/android/settings/fmm/SimChangeAlert;)Landroid/widget/Toast;
+    # getter for: Lcom/android/settings_ex/fmm/SimChangeAlert;->mMaxToast:Landroid/widget/Toast;
+    invoke-static {v0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->access$400(Lcom/android/settings_ex/fmm/SimChangeAlert;)Landroid/widget/Toast;
 
     move-result-object v0
 

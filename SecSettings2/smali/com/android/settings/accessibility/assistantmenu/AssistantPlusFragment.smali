@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+.class public Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 .super Landroid/preference/PreferenceFragment;
 .source "AssistantPlusFragment.java"
 
@@ -45,9 +45,9 @@
 
 .field private mLoadComplete:Z
 
-.field protected mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field protected mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-.field protected mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+.field protected mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
 .field private messageHandler:Landroid/os/Handler;
 
@@ -66,7 +66,7 @@
     .line 54
     const-string v0, "AssistantPlusFragment"
 
-    sput-object v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
 
     return-void
 .end method
@@ -83,42 +83,42 @@
     invoke-direct {p0}, Landroid/preference/PreferenceFragment;-><init>()V
 
     .line 68
-    iput-boolean v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mEAMEnable:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mEAMEnable:Z
 
     .line 69
-    iput-boolean v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mLoadComplete:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mLoadComplete:Z
 
     .line 70
-    iput v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mEAMprov:I
+    iput v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mEAMprov:I
 
     .line 71
-    iput v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
+    iput v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
 
     .line 72
-    iput v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->appsWithEAM:I
+    iput v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->appsWithEAM:I
 
     .line 73
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mAssistantMenuSettingsPrefs:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mAssistantMenuSettingsPrefs:Landroid/content/SharedPreferences;
 
     .line 74
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
 
     .line 76
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->appList:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->appList:Ljava/util/ArrayList;
 
     .line 79
-    iput-boolean v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->sIsPhone:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->sIsPhone:Z
 
     .line 80
-    new-instance v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$1;
+    new-instance v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$1;-><init>(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$1;-><init>(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->messageHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->messageHandler:Landroid/os/Handler;
 
     return-void
 .end method
@@ -132,7 +132,7 @@
 
     .local v1, "i":I
     :goto_0
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v4}, Landroid/preference/PreferenceScreen;->getPreferenceCount()I
 
@@ -141,7 +141,7 @@
     if-ge v1, v4, :cond_0
 
     .line 429
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v4, v1}, Landroid/preference/PreferenceScreen;->getPreference(I)Landroid/preference/Preference;
 
@@ -161,7 +161,7 @@
 
     .line 431
     .local v0, "appTitle":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->appList:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->appList:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
 
@@ -184,202 +184,202 @@
     return-void
 .end method
 
-.method static synthetic access$002(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;Z)Z
+.method static synthetic access$002(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
     .param p1, "x1"    # Z
 
     .prologue
     .line 53
-    iput-boolean p1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mLoadComplete:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mLoadComplete:Z
 
     return p1
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)Landroid/app/ProgressDialog;
+.method static synthetic access$100(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)Landroid/app/ProgressDialog;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->progressDialog:Landroid/app/ProgressDialog;
 
     return-object v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+.method static synthetic access$1000(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
     .param p1, "x1"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
     .line 53
-    invoke-direct {p0, p1}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->resizeIcon(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->resizeIcon(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)Landroid/content/SharedPreferences;
+.method static synthetic access$1100(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)Landroid/content/SharedPreferences;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mAssistantMenuSettingsPrefs:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mAssistantMenuSettingsPrefs:Landroid/content/SharedPreferences;
 
     return-object v0
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)V
+.method static synthetic access$1200(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     .prologue
     .line 53
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->OrderAppData()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->OrderAppData()V
 
     return-void
 .end method
 
-.method static synthetic access$1300(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)Landroid/os/Handler;
+.method static synthetic access$1300(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->messageHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->messageHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)I
+.method static synthetic access$200(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     .prologue
     .line 53
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
 
     return v0
 .end method
 
-.method static synthetic access$208(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)I
+.method static synthetic access$208(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)I
     .locals 2
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     .prologue
     .line 53
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
 
     add-int/lit8 v1, v0, 0x1
 
-    iput v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
+    iput v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
 
     return v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)I
+.method static synthetic access$300(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     .prologue
     .line 53
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->appsWithEAM:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->appsWithEAM:I
 
     return v0
 .end method
 
-.method static synthetic access$308(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)I
+.method static synthetic access$308(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)I
     .locals 2
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     .prologue
     .line 53
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->appsWithEAM:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->appsWithEAM:I
 
     add-int/lit8 v1, v0, 0x1
 
-    iput v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->appsWithEAM:I
+    iput v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->appsWithEAM:I
 
     return v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)Landroid/preference/SwitchPreference;
+.method static synthetic access$400(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)Landroid/preference/SwitchPreference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkboxPref:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkboxPref:Landroid/preference/SwitchPreference;
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)Landroid/preference/PreferenceScreen;
+.method static synthetic access$500(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)Landroid/preference/PreferenceScreen;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)I
+.method static synthetic access$600(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     .prologue
     .line 53
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mEAMprov:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mEAMprov:I
 
     return v0
 .end method
 
-.method static synthetic access$602(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;I)I
+.method static synthetic access$602(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;I)I
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
     .param p1, "x1"    # I
 
     .prologue
     .line 53
-    iput p1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mEAMprov:I
+    iput p1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mEAMprov:I
 
     return p1
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)Z
+.method static synthetic access$700(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     .prologue
     .line 53
-    iget-boolean v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mEAMEnable:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mEAMEnable:Z
 
     return v0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)Z
+.method static synthetic access$800(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     .prologue
     .line 53
-    iget-boolean v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->sIsPhone:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->sIsPhone:Z
 
     return v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)Ljava/util/ArrayList;
+.method static synthetic access$900(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)Ljava/util/ArrayList;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->appList:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->appList:Ljava/util/ArrayList;
 
     return-object v0
 .end method
@@ -389,12 +389,12 @@
 
     .prologue
     .line 198
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->onInstallSwitchBarToggleSwitch()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->onInstallSwitchBarToggleSwitch()V
 
     .line 199
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 200
     return-void
@@ -406,19 +406,19 @@
 
     .prologue
     .line 422
-    new-instance v1, Lcom/android/settings/IconResizer;
+    new-instance v1, Lcom/android/settings_ex/IconResizer;
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
 
-    invoke-direct {v1, v2}, Lcom/android/settings/IconResizer;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Lcom/android/settings_ex/IconResizer;-><init>(Landroid/content/Context;)V
 
     .line 423
-    .local v1, "mIconResizer":Lcom/android/settings/IconResizer;
+    .local v1, "mIconResizer":Lcom/android/settings_ex/IconResizer;
     const/4 v0, 0x0
 
     .line 424
     .local v0, "icon":Landroid/graphics/drawable/Drawable;
-    invoke-virtual {v1, p1}, Lcom/android/settings/IconResizer;->createIconThumbnail(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, p1}, Lcom/android/settings_ex/IconResizer;->createIconThumbnail(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -435,7 +435,7 @@
     const/4 v4, 0x0
 
     .line 266
-    sget-object v1, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -447,7 +447,7 @@
 
     move-result-object v2
 
-    iget v3, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mEAMprov:I
+    iget v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mEAMprov:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -460,7 +460,7 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 268
-    iget v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mEAMprov:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mEAMprov:I
 
     if-nez v1, :cond_2
 
@@ -469,7 +469,7 @@
 
     .local v0, "i":I
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1}, Landroid/preference/PreferenceScreen;->getPreferenceCount()I
 
@@ -478,7 +478,7 @@
     if-ge v0, v1, :cond_0
 
     .line 270
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v0}, Landroid/preference/PreferenceScreen;->getPreference(I)Landroid/preference/Preference;
 
@@ -495,9 +495,9 @@
 
     .line 272
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, v4}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v1, v4}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     .line 281
     :cond_1
@@ -506,16 +506,16 @@
     .line 275
     .end local v0    # "i":I
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, v5}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v1, v5}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     .line 276
     const/4 v0, 0x0
 
     .restart local v0    # "i":I
     :goto_1
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1}, Landroid/preference/PreferenceScreen;->getPreferenceCount()I
 
@@ -524,7 +524,7 @@
     if-ge v0, v1, :cond_1
 
     .line 277
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v0}, Landroid/preference/PreferenceScreen;->getPreference(I)Landroid/preference/Preference;
 
@@ -547,11 +547,11 @@
 
     .prologue
     .line 338
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
 
     const-string v1, ""
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -565,14 +565,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->progressDialog:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->progressDialog:Landroid/app/ProgressDialog;
 
     .line 339
-    new-instance v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;
+    new-instance v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;-><init>(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;-><init>(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)V
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->start()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->start()V
 
     .line 420
     return-void
@@ -583,7 +583,7 @@
 
     .prologue
     .line 150
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -612,24 +612,24 @@
     invoke-super {p0, p1}, Landroid/preference/PreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 142
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 143
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 144
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -644,19 +644,19 @@
     const/4 v1, 0x1
 
     :cond_0
-    invoke-virtual {v2, v1}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v2, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     .line 145
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1}, Lcom/android/settings/widget/SwitchBar;->getSwitch()Lcom/android/settings/widget/ToggleSwitch;
+    invoke-virtual {v1}, Lcom/android/settings_ex/widget/SwitchBar;->getSwitch()Lcom/android/settings_ex/widget/ToggleSwitch;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
     .line 146
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->installSwitchBarToggleSwitch()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->installSwitchBarToggleSwitch()V
 
     .line 147
     return-void
@@ -680,7 +680,7 @@
 
     .local v0, "i":I
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1}, Landroid/preference/PreferenceScreen;->getPreferenceCount()I
 
@@ -689,7 +689,7 @@
     if-ge v0, v1, :cond_0
 
     .line 315
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v0}, Landroid/preference/PreferenceScreen;->getPreference(I)Landroid/preference/Preference;
 
@@ -706,10 +706,10 @@
 
     .line 318
     :cond_0
-    iput v4, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mEAMprov:I
+    iput v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mEAMprov:I
 
     .line 319
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -720,7 +720,7 @@
     invoke-static {v1, v2, v4}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 322
-    sget-object v1, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -732,7 +732,7 @@
 
     move-result-object v2
 
-    iget-boolean v3, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mEAMEnable:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mEAMEnable:Z
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -759,7 +759,7 @@
 
     .restart local v0    # "i":I
     :goto_2
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1}, Landroid/preference/PreferenceScreen;->getPreferenceCount()I
 
@@ -768,7 +768,7 @@
     if-ge v0, v1, :cond_3
 
     .line 326
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v0}, Landroid/preference/PreferenceScreen;->getPreference(I)Landroid/preference/Preference;
 
@@ -785,7 +785,7 @@
 
     .line 328
     :cond_3
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -796,10 +796,10 @@
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 331
-    iput v3, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mEAMprov:I
+    iput v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mEAMprov:I
 
     .line 332
-    sget-object v1, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -811,7 +811,7 @@
 
     move-result-object v2
 
-    iget-boolean v3, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mEAMEnable:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mEAMEnable:Z
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -839,27 +839,27 @@
     .line 97
     const v2, 0x7f08004a
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->addPreferencesFromResource(I)V
 
     .line 98
     invoke-super {p0}, Landroid/preference/PreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
 
     .line 100
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
 
     invoke-virtual {v2}, Landroid/app/Activity;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->packMngr:Landroid/content/pm/PackageManager;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->packMngr:Landroid/content/pm/PackageManager;
 
     .line 102
     :try_start_0
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
 
     const-string v3, "com.samsung.android.app.assistantmenu"
 
@@ -869,10 +869,10 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->astMenuContext:Landroid/content/Context;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->astMenuContext:Landroid/content/Context;
 
     .line 104
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->astMenuContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->astMenuContext:Landroid/content/Context;
 
     const-string v3, "ASSISTANTPLUS_PREFS"
 
@@ -882,13 +882,13 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mAssistantMenuSettingsPrefs:Landroid/content/SharedPreferences;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mAssistantMenuSettingsPrefs:Landroid/content/SharedPreferences;
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 111
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
 
     invoke-virtual {v2}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -902,10 +902,10 @@
 
     move-result v2
 
-    iput v2, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mEAMprov:I
+    iput v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mEAMprov:I
 
     .line 114
-    sget-object v2, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -917,7 +917,7 @@
 
     move-result-object v3
 
-    iget-boolean v4, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mEAMEnable:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mEAMEnable:Z
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -929,7 +929,7 @@
 
     move-result-object v3
 
-    iget v4, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mEAMprov:I
+    iget v4, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mEAMprov:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -942,7 +942,7 @@
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 119
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
 
     invoke-virtual {v2}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
@@ -953,39 +953,39 @@
     .line 125
     const-string v2, "eam_options"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
     check-cast v2, Landroid/preference/PreferenceScreen;
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
 
     .line 128
     const-string v2, "selectAll_pref"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
     check-cast v2, Landroid/preference/SwitchPreference;
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkboxPref:Landroid/preference/SwitchPreference;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkboxPref:Landroid/preference/SwitchPreference;
 
     .line 129
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkboxPref:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkboxPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v2, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 130
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkboxPref:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkboxPref:Landroid/preference/SwitchPreference;
 
     const/4 v3, -0x1
 
     invoke-virtual {v2, v3}, Landroid/preference/SwitchPreference;->setOrder(I)V
 
     .line 131
-    iget-object v2, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
 
     const-string v3, "phone"
 
@@ -1001,10 +1001,10 @@
 
     move-result v2
 
-    iput-boolean v2, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->sIsPhone:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->sIsPhone:Z
 
     .line 134
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->fetchData()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->fetchData()V
 
     .line 136
     return-void
@@ -1029,12 +1029,12 @@
     invoke-super {p0}, Landroid/preference/PreferenceFragment;->onDestroy()V
 
     .line 156
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mActionBarLayout:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mActionBarLayout:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
     .line 157
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mActionBarLayout:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mActionBarLayout:Landroid/view/View;
 
     const/4 v1, 0x4
 
@@ -1050,13 +1050,13 @@
 
     .prologue
     .line 166
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
-    new-instance v1, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$2;
+    new-instance v1, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$2;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$2;-><init>(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$2;-><init>(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)V
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings_ex/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
 
     .line 195
     return-void
@@ -1069,28 +1069,28 @@
     const/4 v3, 0x0
 
     .line 294
-    iget-boolean v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mLoadComplete:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mLoadComplete:Z
 
     if-eqz v0, :cond_1
 
     .line 296
-    iget v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
 
     if-nez v0, :cond_1
 
     .line 297
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->isChecked()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->isChecked()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 298
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
@@ -1110,12 +1110,12 @@
 
     .line 300
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     .line 301
-    iget-object v0, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1126,7 +1126,7 @@
     invoke-static {v0, v1, v3}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 303
-    sget-object v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1138,7 +1138,7 @@
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mEAMEnable:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mEAMEnable:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1181,7 +1181,7 @@
 
     .line 208
     .local v0, "checkValue":Ljava/lang/Boolean;
-    iget-object v5, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mAssistantMenuSettingsPrefs:Landroid/content/SharedPreferences;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mAssistantMenuSettingsPrefs:Landroid/content/SharedPreferences;
 
     invoke-interface {v5}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -1198,7 +1198,7 @@
     if-eqz v5, :cond_4
 
     .line 210
-    iget-object v5, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkboxPref:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkboxPref:Landroid/preference/SwitchPreference;
 
     check-cast p2, Ljava/lang/Boolean;
 
@@ -1217,9 +1217,9 @@
     if-eqz v5, :cond_0
 
     .line 212
-    iget v5, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->appsWithEAM:I
+    iget v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->appsWithEAM:I
 
-    iput v5, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
+    iput v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
 
     .line 217
     :goto_0
@@ -1227,7 +1227,7 @@
 
     .local v2, "i":I
     :goto_1
-    iget-object v5, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v5}, Landroid/preference/PreferenceScreen;->getPreferenceCount()I
 
@@ -1236,7 +1236,7 @@
     if-ge v2, v5, :cond_2
 
     .line 218
-    sget-object v6, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1248,7 +1248,7 @@
 
     move-result-object v7
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v5, v2}, Landroid/preference/PreferenceScreen;->getPreference(I)Landroid/preference/Preference;
 
@@ -1275,7 +1275,7 @@
     invoke-static {v6, v5}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 224
-    iget-object v5, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v5, v2}, Landroid/preference/PreferenceScreen;->getPreference(I)Landroid/preference/Preference;
 
@@ -1297,7 +1297,7 @@
     if-eqz v5, :cond_1
 
     .line 227
-    iget-object v5, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v5, v2}, Landroid/preference/PreferenceScreen;->getPreference(I)Landroid/preference/Preference;
 
@@ -1320,14 +1320,14 @@
     .line 214
     .end local v2    # "i":I
     :cond_0
-    iput v8, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
+    iput v8, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
 
     goto :goto_0
 
     .line 231
     .restart local v2    # "i":I
     :cond_1
-    iget-object v5, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v5, v2}, Landroid/preference/PreferenceScreen;->getPreference(I)Landroid/preference/Preference;
 
@@ -1372,14 +1372,14 @@
     const/4 v4, 0x1
 
     .line 244
-    iget v5, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
+    iget v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
 
     add-int/lit8 v5, v5, 0x1
 
-    iput v5, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
+    iput v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
 
     .line 245
-    sget-object v5, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -1391,7 +1391,7 @@
 
     move-result-object v6
 
-    iget v7, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
+    iget v7, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1421,7 +1421,7 @@
     invoke-virtual {p1, v5}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 253
-    sget-object v5, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -1453,14 +1453,14 @@
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 255
-    iget v5, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
+    iget v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
 
-    iget v6, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->appsWithEAM:I
+    iget v6, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->appsWithEAM:I
 
     if-ne v5, v6, :cond_6
 
     .line 256
-    iget-object v5, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkboxPref:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkboxPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v5, v9}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
@@ -1473,14 +1473,14 @@
     const/4 v4, 0x0
 
     .line 248
-    iget v5, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
+    iget v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
 
     add-int/lit8 v5, v5, -0x1
 
-    iput v5, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
+    iput v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
 
     .line 249
-    sget-object v5, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -1492,7 +1492,7 @@
 
     move-result-object v6
 
-    iget v7, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
+    iget v7, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1510,14 +1510,14 @@
     .end local p1    # "arg0":Landroid/preference/Preference;
     .end local p2    # "arg1":Ljava/lang/Object;
     :cond_6
-    iget v5, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
+    iget v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
 
-    iget v6, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->appsWithEAM:I
+    iget v6, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->appsWithEAM:I
 
     if-ge v5, v6, :cond_3
 
     .line 258
-    iget-object v5, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkboxPref:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkboxPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v5, v8}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
@@ -1532,7 +1532,7 @@
     invoke-super {p0}, Landroid/preference/PreferenceFragment;->onResume()V
 
     .line 288
-    invoke-direct {p0}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->updateAssistantMenuSaving()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->updateAssistantMenuSaving()V
 
     .line 289
     return-void

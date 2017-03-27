@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/wifi/mobileap/WifiApSettings$31;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$31;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "WifiApSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 2590
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -101,13 +101,13 @@
 
     move-result v4
 
-    # setter for: Lcom/android/settings/wifi/mobileap/WifiApSettings;->mTetheredData:I
-    invoke-static {v4}, Lcom/android/settings/wifi/mobileap/WifiApSettings;->access$5502(I)I
+    # setter for: Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->mTetheredData:I
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->access$5502(I)I
 
     .line 2597
     const-string v4, "SPRINT"
 
-    sget-object v5, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -115,8 +115,8 @@
 
     if-eqz v4, :cond_0
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApSettings;->mTetheredData:I
-    invoke-static {}, Lcom/android/settings/wifi/mobileap/WifiApSettings;->access$5500()I
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->mTetheredData:I
+    invoke-static {}, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->access$5500()I
 
     move-result v4
 
@@ -146,7 +146,7 @@
 
     .line 2602
     .local v3, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v4, Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    const-class v4, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
     invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

@@ -1,12 +1,12 @@
-.class public Lcom/android/settings/ConfirmLockEnterpriseIdentity;
-.super Lcom/android/settings/SettingsActivity;
+.class public Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity;
+.super Lcom/android/settings_ex/SettingsActivity;
 .source "ConfirmLockEnterpriseIdentity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+        Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
     }
 .end annotation
 
@@ -17,7 +17,7 @@
 
     .prologue
     .line 73
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivity;-><init>()V
 
     .line 104
     return-void
@@ -32,7 +32,7 @@
     .line 82
     new-instance v0, Landroid/content/Intent;
 
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->getIntent()Landroid/content/Intent;
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -42,7 +42,7 @@
     .local v0, "modIntent":Landroid/content/Intent;
     const-string v1, ":settings:show_fragment"
 
-    const-class v2, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    const-class v2, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -67,7 +67,7 @@
 
     .prologue
     .line 90
-    const-class v0, Lcom/android/settings/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
+    const-class v0, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity$ConfirmLockEnterpriseIdentityFragment;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -97,18 +97,18 @@
 
     .prologue
     .line 99
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 100
     const v1, 0x7f0e07c1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/ConfirmLockEnterpriseIdentity;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
     .line 101
     .local v0, "msg":Ljava/lang/CharSequence;
-    invoke-virtual {p0, v0}, Lcom/android/settings/ConfirmLockEnterpriseIdentity;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/ConfirmLockEnterpriseIdentity;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 102
     return-void

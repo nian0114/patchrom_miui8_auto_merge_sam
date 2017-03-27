@@ -1,14 +1,14 @@
-.class Lcom/android/settings/powersavingmode/GenericPowerSavingMode$3;
+.class Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode$3;
 .super Ljava/lang/Object;
 .source "GenericPowerSavingMode.java"
 
 # interfaces
-.implements Lcom/android/settings/DropDownPreference$Callback;
+.implements Lcom/android/settings_ex/DropDownPreference$Callback;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->initEntry()V
+    value = Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->initEntry()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/powersavingmode/GenericPowerSavingMode;
+.field final synthetic this$0:Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/powersavingmode/GenericPowerSavingMode;)V
+.method constructor <init>(Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;)V
     .locals 0
 
     .prologue
     .line 179
-    iput-object p1, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode$3;->this$0:Lcom/android/settings/powersavingmode/GenericPowerSavingMode;
+    iput-object p1, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode$3;->this$0:Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -65,10 +65,10 @@
     if-eqz v2, :cond_0
 
     .line 184
-    iget-object v2, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode$3;->this$0:Lcom/android/settings/powersavingmode/GenericPowerSavingMode;
+    iget-object v2, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode$3;->this$0:Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;
 
-    # invokes: Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v2}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->access$400(Lcom/android/settings/powersavingmode/GenericPowerSavingMode;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v2}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->access$400(Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;)Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -85,9 +85,9 @@
     if-eq v0, v1, :cond_0
 
     .line 186
-    iget-object v2, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode$3;->this$0:Lcom/android/settings/powersavingmode/GenericPowerSavingMode;
+    iget-object v2, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode$3;->this$0:Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;
 
-    invoke-virtual {v2}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -99,15 +99,15 @@
 
     move-result-object v5
 
-    invoke-static {v2, v3, v4, v5}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3, v4, v5}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 189
     .end local v0    # "priv":I
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode$3;->this$0:Lcom/android/settings/powersavingmode/GenericPowerSavingMode;
+    iget-object v2, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode$3;->this$0:Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;
 
-    # invokes: Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v2}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->access$500(Lcom/android/settings/powersavingmode/GenericPowerSavingMode;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v2}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->access$500(Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;)Landroid/content/ContentResolver;
 
     move-result-object v2
 

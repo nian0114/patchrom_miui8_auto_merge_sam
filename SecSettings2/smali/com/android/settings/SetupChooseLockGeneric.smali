@@ -1,12 +1,12 @@
-.class public Lcom/android/settings/SetupChooseLockGeneric;
-.super Lcom/android/settings/ChooseLockGeneric;
+.class public Lcom/android/settings_ex/SetupChooseLockGeneric;
+.super Lcom/android/settings_ex/ChooseLockGeneric;
 .source "SetupChooseLockGeneric.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/SetupChooseLockGeneric$SetupChooseLockGenericFragment;
+        Lcom/android/settings_ex/SetupChooseLockGeneric$SetupChooseLockGenericFragment;
     }
 .end annotation
 
@@ -17,7 +17,7 @@
 
     .prologue
     .line 42
-    invoke-direct {p0}, Lcom/android/settings/ChooseLockGeneric;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ChooseLockGeneric;-><init>()V
 
     .line 60
     return-void
@@ -39,7 +39,7 @@
 
     .prologue
     .line 51
-    const-class v0, Lcom/android/settings/SetupChooseLockGeneric$SetupChooseLockGenericFragment;
+    const-class v0, Lcom/android/settings_ex/SetupChooseLockGeneric$SetupChooseLockGenericFragment;
 
     return-object v0
 .end method
@@ -50,7 +50,7 @@
 
     .prologue
     .line 46
-    const-class v0, Lcom/android/settings/SetupChooseLockGeneric$SetupChooseLockGenericFragment;
+    const-class v0, Lcom/android/settings_ex/SetupChooseLockGeneric$SetupChooseLockGenericFragment;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -71,16 +71,16 @@
 
     .prologue
     .line 56
-    invoke-virtual {p0}, Lcom/android/settings/SetupChooseLockGeneric;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SetupChooseLockGeneric;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/SetupWizardUtils;->getTheme(Landroid/content/Intent;)I
+    invoke-static {v0}, Lcom/android/settings_ex/SetupWizardUtils;->getTheme(Landroid/content/Intent;)I
 
     move-result p2
 
     .line 57
-    invoke-super {p0, p1, p2, p3}, Lcom/android/settings/ChooseLockGeneric;->onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings_ex/ChooseLockGeneric;->onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
 
     .line 58
     return-void

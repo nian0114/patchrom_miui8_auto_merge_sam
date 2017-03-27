@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/AppListPreferenceWithSettings;
-.super Lcom/android/settings/AppListPreference;
+.class public Lcom/android/settings_ex/AppListPreferenceWithSettings;
+.super Lcom/android/settings_ex/AppListPreference;
 .source "AppListPreferenceWithSettings.java"
 
 
@@ -17,24 +17,24 @@
 
     .prologue
     .line 19
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/AppListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/AppListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 20
     const v0, 0x7f0401a0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/AppListPreferenceWithSettings;->setWidgetLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/AppListPreferenceWithSettings;->setWidgetLayoutResource(I)V
 
     .line 21
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/AppListPreferenceWithSettings;)Landroid/content/ComponentName;
+.method static synthetic access$000(Lcom/android/settings_ex/AppListPreferenceWithSettings;)Landroid/content/ComponentName;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/AppListPreferenceWithSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/AppListPreferenceWithSettings;
 
     .prologue
     .line 13
-    iget-object v0, p0, Lcom/android/settings/AppListPreferenceWithSettings;->mSettingsComponent:Landroid/content/ComponentName;
+    iget-object v0, p0, Lcom/android/settings_ex/AppListPreferenceWithSettings;->mSettingsComponent:Landroid/content/ComponentName;
 
     return-object v0
 .end method
@@ -44,7 +44,7 @@
 
     .prologue
     .line 44
-    iget-object v0, p0, Lcom/android/settings/AppListPreferenceWithSettings;->mSettingsIcon:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/AppListPreferenceWithSettings;->mSettingsIcon:Landroid/view/View;
 
     if-nez v0, :cond_0
 
@@ -54,12 +54,12 @@
 
     .line 48
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/AppListPreferenceWithSettings;->mSettingsComponent:Landroid/content/ComponentName;
+    iget-object v0, p0, Lcom/android/settings_ex/AppListPreferenceWithSettings;->mSettingsComponent:Landroid/content/ComponentName;
 
     if-nez v0, :cond_1
 
     .line 49
-    iget-object v0, p0, Lcom/android/settings/AppListPreferenceWithSettings;->mSettingsIcon:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/AppListPreferenceWithSettings;->mSettingsIcon:Landroid/view/View;
 
     const/16 v1, 0x8
 
@@ -69,7 +69,7 @@
 
     .line 51
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/AppListPreferenceWithSettings;->mSettingsIcon:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/AppListPreferenceWithSettings;->mSettingsIcon:Landroid/view/View;
 
     const/4 v1, 0x0
 
@@ -88,7 +88,7 @@
     const/4 v3, 0x0
 
     .line 25
-    invoke-super {p0, p1}, Lcom/android/settings/AppListPreference;->onBindView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/AppListPreference;->onBindView(Landroid/view/View;)V
 
     .line 27
     const v1, 0x7f0d041c
@@ -97,19 +97,19 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/AppListPreferenceWithSettings;->mSettingsIcon:Landroid/view/View;
+    iput-object v1, p0, Lcom/android/settings_ex/AppListPreferenceWithSettings;->mSettingsIcon:Landroid/view/View;
 
     .line 28
-    iget-object v1, p0, Lcom/android/settings/AppListPreferenceWithSettings;->mSettingsIcon:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/AppListPreferenceWithSettings;->mSettingsIcon:Landroid/view/View;
 
-    new-instance v2, Lcom/android/settings/AppListPreferenceWithSettings$1;
+    new-instance v2, Lcom/android/settings_ex/AppListPreferenceWithSettings$1;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/AppListPreferenceWithSettings$1;-><init>(Lcom/android/settings/AppListPreferenceWithSettings;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/AppListPreferenceWithSettings$1;-><init>(Lcom/android/settings_ex/AppListPreferenceWithSettings;)V
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 37
-    iget-object v1, p0, Lcom/android/settings/AppListPreferenceWithSettings;->mSettingsIcon:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/AppListPreferenceWithSettings;->mSettingsIcon:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -122,7 +122,7 @@
     invoke-virtual {v0, v3, v3, v3, v3}, Landroid/view/ViewGroup;->setPaddingRelative(IIII)V
 
     .line 40
-    invoke-direct {p0}, Lcom/android/settings/AppListPreferenceWithSettings;->updateSettingsVisibility()V
+    invoke-direct {p0}, Lcom/android/settings_ex/AppListPreferenceWithSettings;->updateSettingsVisibility()V
 
     .line 41
     return-void
@@ -134,10 +134,10 @@
 
     .prologue
     .line 56
-    iput-object p1, p0, Lcom/android/settings/AppListPreferenceWithSettings;->mSettingsComponent:Landroid/content/ComponentName;
+    iput-object p1, p0, Lcom/android/settings_ex/AppListPreferenceWithSettings;->mSettingsComponent:Landroid/content/ComponentName;
 
     .line 57
-    invoke-direct {p0}, Lcom/android/settings/AppListPreferenceWithSettings;->updateSettingsVisibility()V
+    invoke-direct {p0}, Lcom/android/settings_ex/AppListPreferenceWithSettings;->updateSettingsVisibility()V
 
     .line 58
     return-void

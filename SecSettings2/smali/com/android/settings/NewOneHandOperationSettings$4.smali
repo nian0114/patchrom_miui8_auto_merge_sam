@@ -1,4 +1,4 @@
-.class Lcom/android/settings/NewOneHandOperationSettings$4;
+.class Lcom/android/settings_ex/NewOneHandOperationSettings$4;
 .super Ljava/lang/Object;
 .source "NewOneHandOperationSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/NewOneHandOperationSettings;->reduceSizeDisablePopup()V
+    value = Lcom/android/settings_ex/NewOneHandOperationSettings;->reduceSizeDisablePopup()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/NewOneHandOperationSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/NewOneHandOperationSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/NewOneHandOperationSettings;)V
     .locals 0
 
     .prologue
     .line 358
-    iput-object p1, p0, Lcom/android/settings/NewOneHandOperationSettings$4;->this$0:Lcom/android/settings/NewOneHandOperationSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/NewOneHandOperationSettings$4;->this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,9 +45,9 @@
     const/4 v1, 0x0
 
     .line 360
-    iget-object v0, p0, Lcom/android/settings/NewOneHandOperationSettings$4;->this$0:Lcom/android/settings/NewOneHandOperationSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings$4;->this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -56,16 +56,16 @@
     invoke-static {v0, v2, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 361
-    iget-object v0, p0, Lcom/android/settings/NewOneHandOperationSettings$4;->this$0:Lcom/android/settings/NewOneHandOperationSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings$4;->this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
-    # getter for: Lcom/android/settings/NewOneHandOperationSettings;->mReduceScreenSize:Landroid/preference/SwitchPreference;
-    invoke-static {v0}, Lcom/android/settings/NewOneHandOperationSettings;->access$100(Lcom/android/settings/NewOneHandOperationSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/NewOneHandOperationSettings;->mReduceScreenSize:Landroid/preference/SwitchPreference;
+    invoke-static {v0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->access$100(Lcom/android/settings_ex/NewOneHandOperationSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v2
 
-    iget-object v0, p0, Lcom/android/settings/NewOneHandOperationSettings$4;->this$0:Lcom/android/settings/NewOneHandOperationSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings$4;->this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -83,10 +83,10 @@
     invoke-virtual {v2, v0}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 362
-    iget-object v0, p0, Lcom/android/settings/NewOneHandOperationSettings$4;->this$0:Lcom/android/settings/NewOneHandOperationSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings$4;->this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
-    # invokes: Lcom/android/settings/NewOneHandOperationSettings;->reduceSizeBroadcast(I)V
-    invoke-static {v0, v1}, Lcom/android/settings/NewOneHandOperationSettings;->access$200(Lcom/android/settings/NewOneHandOperationSettings;I)V
+    # invokes: Lcom/android/settings_ex/NewOneHandOperationSettings;->reduceSizeBroadcast(I)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/NewOneHandOperationSettings;->access$200(Lcom/android/settings_ex/NewOneHandOperationSettings;I)V
 
     .line 363
     return-void

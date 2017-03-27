@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog$1;
+.class Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog$1;
 .super Ljava/lang/Object;
 .source "FingerprintSamsungAccountDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;)V
     .locals 0
 
     .prologue
     .line 79
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog$1;->this$0:Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog$1;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,14 +50,14 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 83
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog$1;->this$0:Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog$1;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;->listener:Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog$SamsungAccountDialogFragmentListener;
-    invoke-static {v0}, Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;->access$000(Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;)Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog$SamsungAccountDialogFragmentListener;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;->listener:Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog$SamsungAccountDialogFragmentListener;
+    invoke-static {v0}, Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;->access$000(Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;)Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog$SamsungAccountDialogFragmentListener;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog$SamsungAccountDialogFragmentListener;->onCancelSamsungAccountDialog()V
+    invoke-interface {v0}, Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog$SamsungAccountDialogFragmentListener;->onCancelSamsungAccountDialog()V
 
     .line 84
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/p2p/WifiP2pSettings$8$2;
+.class Lcom/android/settings_ex/wifi/p2p/WifiP2pSettings$8$2;
 .super Ljava/lang/Object;
 .source "WifiP2pSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/p2p/WifiP2pSettings$8;->onClick(Landroid/content/DialogInterface;I)V
+    value = Lcom/android/settings_ex/wifi/p2p/WifiP2pSettings$8;->onClick(Landroid/content/DialogInterface;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/wifi/p2p/WifiP2pSettings$8;
+.field final synthetic this$1:Lcom/android/settings_ex/wifi/p2p/WifiP2pSettings$8;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/p2p/WifiP2pSettings$8;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/p2p/WifiP2pSettings$8;)V
     .locals 0
 
     .prologue
     .line 832
-    iput-object p1, p0, Lcom/android/settings/wifi/p2p/WifiP2pSettings$8$2;->this$1:Lcom/android/settings/wifi/p2p/WifiP2pSettings$8;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pSettings$8$2;->this$1:Lcom/android/settings_ex/wifi/p2p/WifiP2pSettings$8;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -65,16 +65,16 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 839
-    iget-object v0, p0, Lcom/android/settings/wifi/p2p/WifiP2pSettings$8$2;->this$1:Lcom/android/settings/wifi/p2p/WifiP2pSettings$8;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pSettings$8$2;->this$1:Lcom/android/settings_ex/wifi/p2p/WifiP2pSettings$8;
 
-    iget-object v0, v0, Lcom/android/settings/wifi/p2p/WifiP2pSettings$8;->this$0:Lcom/android/settings/wifi/p2p/WifiP2pSettings;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/p2p/WifiP2pSettings$8;->this$0:Lcom/android/settings_ex/wifi/p2p/WifiP2pSettings;
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    # invokes: Lcom/android/settings/wifi/p2p/WifiP2pSettings;->setScanTimer(ZZ)V
-    invoke-static {v0, v1, v2}, Lcom/android/settings/wifi/p2p/WifiP2pSettings;->access$700(Lcom/android/settings/wifi/p2p/WifiP2pSettings;ZZ)V
+    # invokes: Lcom/android/settings_ex/wifi/p2p/WifiP2pSettings;->setScanTimer(ZZ)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/wifi/p2p/WifiP2pSettings;->access$700(Lcom/android/settings_ex/wifi/p2p/WifiP2pSettings;ZZ)V
 
     .line 840
     return-void
@@ -92,16 +92,16 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 835
-    iget-object v0, p0, Lcom/android/settings/wifi/p2p/WifiP2pSettings$8$2;->this$1:Lcom/android/settings/wifi/p2p/WifiP2pSettings$8;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pSettings$8$2;->this$1:Lcom/android/settings_ex/wifi/p2p/WifiP2pSettings$8;
 
-    iget-object v0, v0, Lcom/android/settings/wifi/p2p/WifiP2pSettings$8;->this$0:Lcom/android/settings/wifi/p2p/WifiP2pSettings;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/p2p/WifiP2pSettings$8;->this$0:Lcom/android/settings_ex/wifi/p2p/WifiP2pSettings;
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    # invokes: Lcom/android/settings/wifi/p2p/WifiP2pSettings;->setScanTimer(ZZ)V
-    invoke-static {v0, v1, v2}, Lcom/android/settings/wifi/p2p/WifiP2pSettings;->access$700(Lcom/android/settings/wifi/p2p/WifiP2pSettings;ZZ)V
+    # invokes: Lcom/android/settings_ex/wifi/p2p/WifiP2pSettings;->setScanTimer(ZZ)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/wifi/p2p/WifiP2pSettings;->access$700(Lcom/android/settings_ex/wifi/p2p/WifiP2pSettings;ZZ)V
 
     .line 836
     return-void

@@ -1,4 +1,4 @@
-.class public final Lcom/android/settings/search/SearchIndexableResources;
+.class public final Lcom/android/settings_ex/search/SearchIndexableResources;
 .super Ljava/lang/Object;
 .source "SearchIndexableResources.java"
 
@@ -40,26 +40,26 @@
     .line 68
     const/4 v0, 0x0
 
-    sput v0, Lcom/android/settings/search/SearchIndexableResources;->NO_DATA_RES_ID:I
+    sput v0, Lcom/android/settings_ex/search/SearchIndexableResources;->NO_DATA_RES_ID:I
 
     .line 69
     const/4 v0, -0x1
 
-    sput v0, Lcom/android/settings/search/SearchIndexableResources;->MANY_DATA_RES_ID:I
+    sput v0, Lcom/android/settings_ex/search/SearchIndexableResources;->MANY_DATA_RES_ID:I
 
     .line 71
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/android/settings/search/SearchIndexableResources;->sResMap:Ljava/util/HashMap;
+    sput-object v0, Lcom/android/settings_ex/search/SearchIndexableResources;->sResMap:Ljava/util/HashMap;
 
     .line 349
-    new-instance v0, Lcom/android/settings/search/SearchIndexableResources$1;
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableResources$1;
 
-    invoke-direct {v0}, Lcom/android/settings/search/SearchIndexableResources$1;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/search/SearchIndexableResources$1;-><init>()V
 
-    sput-object v0, Lcom/android/settings/search/SearchIndexableResources;->mComparator:Ljava/util/Comparator;
+    sput-object v0, Lcom/android/settings_ex/search/SearchIndexableResources;->mComparator:Ljava/util/Comparator;
 
     return-void
 .end method
@@ -70,7 +70,7 @@
 
     .prologue
     .line 322
-    sget-object v0, Lcom/android/settings/search/SearchIndexableResources;->sResMap:Ljava/util/HashMap;
+    sget-object v0, Lcom/android/settings_ex/search/SearchIndexableResources;->sResMap:Ljava/util/HashMap;
 
     iget-object v1, p0, Landroid/provider/SearchIndexableResource;->className:Ljava/lang/String;
 
@@ -85,7 +85,7 @@
 
     .prologue
     .line 318
-    sget-object v0, Lcom/android/settings/search/SearchIndexableResources;->sResMap:Ljava/util/HashMap;
+    sget-object v0, Lcom/android/settings_ex/search/SearchIndexableResources;->sResMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
@@ -99,7 +99,7 @@
 
     .prologue
     .line 334
-    sget-object v0, Lcom/android/settings/search/SearchIndexableResources;->sResMap:Ljava/util/HashMap;
+    sget-object v0, Lcom/android/settings_ex/search/SearchIndexableResources;->sResMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -116,7 +116,7 @@
 
     .prologue
     .line 326
-    sget-object v0, Lcom/android/settings/search/SearchIndexableResources;->sResMap:Ljava/util/HashMap;
+    sget-object v0, Lcom/android/settings_ex/search/SearchIndexableResources;->sResMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -152,7 +152,7 @@
 
     .line 340
     .local v0, "data":Ljava/util/List;, "Ljava/util/List<Landroid/provider/SearchIndexableResource;>;"
-    sget-object v2, Lcom/android/settings/search/SearchIndexableResources;->sResMap:Ljava/util/HashMap;
+    sget-object v2, Lcom/android/settings_ex/search/SearchIndexableResources;->sResMap:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
@@ -162,7 +162,7 @@
 
     .line 342
     :try_start_0
-    sget-object v2, Lcom/android/settings/search/SearchIndexableResources;->mComparator:Ljava/util/Comparator;
+    sget-object v2, Lcom/android/settings_ex/search/SearchIndexableResources;->mComparator:Ljava/util/Comparator;
 
     invoke-static {v0, v2}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
     :try_end_0

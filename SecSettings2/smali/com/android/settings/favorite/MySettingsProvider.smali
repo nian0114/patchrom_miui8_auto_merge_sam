@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/favorite/MySettingsProvider;
+.class public Lcom/android/settings_ex/favorite/MySettingsProvider;
 .super Landroid/content/ContentProvider;
 .source "MySettingsProvider.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/favorite/MySettingsProvider$DatabaseHelper;
+        Lcom/android/settings_ex/favorite/MySettingsProvider$DatabaseHelper;
     }
 .end annotation
 
@@ -59,7 +59,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/favorite/MySettingsProvider;->FAVORITE_CONTENT_URI:Landroid/net/Uri;
+    sput-object v0, Lcom/android/settings_ex/favorite/MySettingsProvider;->FAVORITE_CONTENT_URI:Landroid/net/Uri;
 
     .line 57
     const-string v0, "content://com.android.settings.mysettings/frequent"
@@ -68,7 +68,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/favorite/MySettingsProvider;->FREQUENT_CONTENT_URI:Landroid/net/Uri;
+    sput-object v0, Lcom/android/settings_ex/favorite/MySettingsProvider;->FREQUENT_CONTENT_URI:Landroid/net/Uri;
 
     .line 84
     new-instance v0, Landroid/content/UriMatcher;
@@ -77,10 +77,10 @@
 
     invoke-direct {v0, v1}, Landroid/content/UriMatcher;-><init>(I)V
 
-    sput-object v0, Lcom/android/settings/favorite/MySettingsProvider;->uriMatcher:Landroid/content/UriMatcher;
+    sput-object v0, Lcom/android/settings_ex/favorite/MySettingsProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     .line 85
-    sget-object v0, Lcom/android/settings/favorite/MySettingsProvider;->uriMatcher:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/android/settings_ex/favorite/MySettingsProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     const-string v1, "com.android.settings.mysettings"
 
@@ -91,7 +91,7 @@
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 86
-    sget-object v0, Lcom/android/settings/favorite/MySettingsProvider;->uriMatcher:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/android/settings_ex/favorite/MySettingsProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     const-string v1, "com.android.settings.mysettings"
 
@@ -102,7 +102,7 @@
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 87
-    sget-object v0, Lcom/android/settings/favorite/MySettingsProvider;->uriMatcher:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/android/settings_ex/favorite/MySettingsProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     const-string v1, "com.android.settings.mysettings"
 
@@ -113,7 +113,7 @@
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 88
-    sget-object v0, Lcom/android/settings/favorite/MySettingsProvider;->uriMatcher:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/android/settings_ex/favorite/MySettingsProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     const-string v1, "com.android.settings.mysettings"
 
@@ -154,7 +154,7 @@
 
     .line 295
     .local v0, "count":I
-    sget-object v3, Lcom/android/settings/favorite/MySettingsProvider;->uriMatcher:Landroid/content/UriMatcher;
+    sget-object v3, Lcom/android/settings_ex/favorite/MySettingsProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     invoke-virtual {v3, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
@@ -189,7 +189,7 @@
 
     .line 297
     :pswitch_0
-    iget-object v3, p0, Lcom/android/settings/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v3, p0, Lcom/android/settings_ex/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v4, "favorite"
 
@@ -199,7 +199,7 @@
 
     .line 317
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/favorite/MySettingsProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/favorite/MySettingsProvider;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -222,7 +222,7 @@
 
     .line 301
     .local v1, "id":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v4, p0, Lcom/android/settings_ex/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v5, "favorite"
 
@@ -293,7 +293,7 @@
     .line 306
     .end local v1    # "id":Ljava/lang/String;
     :pswitch_2
-    iget-object v3, p0, Lcom/android/settings/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v3, p0, Lcom/android/settings_ex/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v4, "frequent"
 
@@ -312,7 +312,7 @@
 
     .line 310
     .local v2, "id2":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v4, p0, Lcom/android/settings_ex/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v5, "frequent"
 
@@ -408,7 +408,7 @@
 
     .prologue
     .line 234
-    sget-object v3, Lcom/android/settings/favorite/MySettingsProvider;->uriMatcher:Landroid/content/UriMatcher;
+    sget-object v3, Lcom/android/settings_ex/favorite/MySettingsProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     invoke-virtual {v3, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
@@ -448,12 +448,12 @@
 
     .line 238
     .local v1, "TABLE_NAME":Ljava/lang/String;
-    sget-object v0, Lcom/android/settings/favorite/MySettingsProvider;->FAVORITE_CONTENT_URI:Landroid/net/Uri;
+    sget-object v0, Lcom/android/settings_ex/favorite/MySettingsProvider;->FAVORITE_CONTENT_URI:Landroid/net/Uri;
 
     .line 247
     .local v0, "CONTENT_URI":Landroid/net/Uri;
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v3, p0, Lcom/android/settings_ex/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v6, ""
 
@@ -476,7 +476,7 @@
 
     .line 252
     .local v2, "newUri":Landroid/net/Uri;
-    invoke-virtual {p0}, Lcom/android/settings/favorite/MySettingsProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/favorite/MySettingsProvider;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -501,7 +501,7 @@
 
     .line 242
     .restart local v1    # "TABLE_NAME":Ljava/lang/String;
-    sget-object v0, Lcom/android/settings/favorite/MySettingsProvider;->FREQUENT_CONTENT_URI:Landroid/net/Uri;
+    sget-object v0, Lcom/android/settings_ex/favorite/MySettingsProvider;->FREQUENT_CONTENT_URI:Landroid/net/Uri;
 
     .line 243
     .restart local v0    # "CONTENT_URI":Landroid/net/Uri;
@@ -550,26 +550,26 @@
 
     .prologue
     .line 186
-    invoke-virtual {p0}, Lcom/android/settings/favorite/MySettingsProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/favorite/MySettingsProvider;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     .line 187
     .local v0, "context":Landroid/content/Context;
-    new-instance v1, Lcom/android/settings/favorite/MySettingsProvider$DatabaseHelper;
+    new-instance v1, Lcom/android/settings_ex/favorite/MySettingsProvider$DatabaseHelper;
 
-    invoke-direct {v1, v0}, Lcom/android/settings/favorite/MySettingsProvider$DatabaseHelper;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v0}, Lcom/android/settings_ex/favorite/MySettingsProvider$DatabaseHelper;-><init>(Landroid/content/Context;)V
 
     .line 188
-    .local v1, "dbHelper":Lcom/android/settings/favorite/MySettingsProvider$DatabaseHelper;
-    invoke-virtual {v1}, Lcom/android/settings/favorite/MySettingsProvider$DatabaseHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    .local v1, "dbHelper":Lcom/android/settings_ex/favorite/MySettingsProvider$DatabaseHelper;
+    invoke-virtual {v1}, Lcom/android/settings_ex/favorite/MySettingsProvider$DatabaseHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
+    iput-object v2, p0, Lcom/android/settings_ex/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     .line 190
-    iget-object v2, p0, Lcom/android/settings/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v2, p0, Lcom/android/settings_ex/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v2, :cond_0
 
@@ -602,7 +602,7 @@
 
     .line 200
     .local v0, "queryBuilder":Landroid/database/sqlite/SQLiteQueryBuilder;
-    sget-object v1, Lcom/android/settings/favorite/MySettingsProvider;->uriMatcher:Landroid/content/UriMatcher;
+    sget-object v1, Lcom/android/settings_ex/favorite/MySettingsProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     invoke-virtual {v1, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
@@ -642,7 +642,7 @@
     invoke-virtual {v0, v1}, Landroid/database/sqlite/SQLiteQueryBuilder;->setTables(Ljava/lang/String;)V
 
     .line 204
-    sget-object v1, Lcom/android/settings/favorite/MySettingsProvider;->FavoriteMap:Ljava/util/HashMap;
+    sget-object v1, Lcom/android/settings_ex/favorite/MySettingsProvider;->FavoriteMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, v1}, Landroid/database/sqlite/SQLiteQueryBuilder;->setProjectionMap(Ljava/util/Map;)V
 
@@ -664,7 +664,7 @@
 
     .line 223
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v1, p0, Lcom/android/settings_ex/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     move-object v2, p2
 
@@ -682,7 +682,7 @@
 
     .line 225
     .local v8, "cursor":Landroid/database/Cursor;
-    invoke-virtual {p0}, Lcom/android/settings/favorite/MySettingsProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/favorite/MySettingsProvider;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -731,7 +731,7 @@
     invoke-virtual {v0, v1}, Landroid/database/sqlite/SQLiteQueryBuilder;->setTables(Ljava/lang/String;)V
 
     .line 211
-    sget-object v1, Lcom/android/settings/favorite/MySettingsProvider;->FrequentMap:Ljava/util/HashMap;
+    sget-object v1, Lcom/android/settings_ex/favorite/MySettingsProvider;->FrequentMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, v1}, Landroid/database/sqlite/SQLiteQueryBuilder;->setProjectionMap(Ljava/util/Map;)V
 
@@ -790,7 +790,7 @@
 
     .line 264
     .local v0, "count":I
-    sget-object v1, Lcom/android/settings/favorite/MySettingsProvider;->uriMatcher:Landroid/content/UriMatcher;
+    sget-object v1, Lcom/android/settings_ex/favorite/MySettingsProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     invoke-virtual {v1, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
@@ -825,7 +825,7 @@
 
     .line 266
     :pswitch_0
-    iget-object v1, p0, Lcom/android/settings/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v1, p0, Lcom/android/settings_ex/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v2, "favorite"
 
@@ -835,7 +835,7 @@
 
     .line 286
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/favorite/MySettingsProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/favorite/MySettingsProvider;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -852,7 +852,7 @@
 
     .line 269
     :pswitch_1
-    iget-object v2, p0, Lcom/android/settings/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v2, p0, Lcom/android/settings_ex/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v3, "favorite"
 
@@ -926,7 +926,7 @@
 
     .line 275
     :pswitch_2
-    iget-object v1, p0, Lcom/android/settings/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v1, p0, Lcom/android/settings_ex/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v2, "frequent"
 
@@ -939,7 +939,7 @@
 
     .line 278
     :pswitch_3
-    iget-object v2, p0, Lcom/android/settings/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v2, p0, Lcom/android/settings_ex/favorite/MySettingsProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v3, "frequent"
 

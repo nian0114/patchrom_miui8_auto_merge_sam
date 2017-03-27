@@ -1,4 +1,4 @@
-.class Lcom/android/settings/bluetooth/DevicePickerActivity$4$2;
+.class Lcom/android/settings_ex/bluetooth/DevicePickerActivity$4$2;
 .super Ljava/lang/Object;
 .source "DevicePickerActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/bluetooth/DevicePickerActivity$4;->onShow(Landroid/content/DialogInterface;)V
+    value = Lcom/android/settings_ex/bluetooth/DevicePickerActivity$4;->onShow(Landroid/content/DialogInterface;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/bluetooth/DevicePickerActivity$4;
+.field final synthetic this$1:Lcom/android/settings_ex/bluetooth/DevicePickerActivity$4;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/bluetooth/DevicePickerActivity$4;)V
+.method constructor <init>(Lcom/android/settings_ex/bluetooth/DevicePickerActivity$4;)V
     .locals 0
 
     .prologue
     .line 381
-    iput-object p1, p0, Lcom/android/settings/bluetooth/DevicePickerActivity$4$2;->this$1:Lcom/android/settings/bluetooth/DevicePickerActivity$4;
+    iput-object p1, p0, Lcom/android/settings_ex/bluetooth/DevicePickerActivity$4$2;->this$1:Lcom/android/settings_ex/bluetooth/DevicePickerActivity$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,23 +42,23 @@
 
     .prologue
     .line 384
-    iget-object v0, p0, Lcom/android/settings/bluetooth/DevicePickerActivity$4$2;->this$1:Lcom/android/settings/bluetooth/DevicePickerActivity$4;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/DevicePickerActivity$4$2;->this$1:Lcom/android/settings_ex/bluetooth/DevicePickerActivity$4;
 
-    iget-object v0, v0, Lcom/android/settings/bluetooth/DevicePickerActivity$4;->this$0:Lcom/android/settings/bluetooth/DevicePickerActivity;
+    iget-object v0, v0, Lcom/android/settings_ex/bluetooth/DevicePickerActivity$4;->this$0:Lcom/android/settings_ex/bluetooth/DevicePickerActivity;
 
-    iget-boolean v0, v0, Lcom/android/settings/bluetooth/DevicePickerActivity;->mIsTablet:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/bluetooth/DevicePickerActivity;->mIsTablet:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/bluetooth/DevicePickerActivity$4$2;->this$1:Lcom/android/settings/bluetooth/DevicePickerActivity$4;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/DevicePickerActivity$4$2;->this$1:Lcom/android/settings_ex/bluetooth/DevicePickerActivity$4;
 
-    iget-object v0, v0, Lcom/android/settings/bluetooth/DevicePickerActivity$4;->this$0:Lcom/android/settings/bluetooth/DevicePickerActivity;
+    iget-object v0, v0, Lcom/android/settings_ex/bluetooth/DevicePickerActivity$4;->this$0:Lcom/android/settings_ex/bluetooth/DevicePickerActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/bluetooth/DevicePickerActivity;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/android/settings_ex/bluetooth/DevicePickerActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/bluetooth/DevicePickerActivity;->isInLockTaskMode(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/bluetooth/DevicePickerActivity;->isInLockTaskMode(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -66,12 +66,12 @@
 
     .line 385
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/bluetooth/DevicePickerActivity$4$2;->this$1:Lcom/android/settings/bluetooth/DevicePickerActivity$4;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/DevicePickerActivity$4$2;->this$1:Lcom/android/settings_ex/bluetooth/DevicePickerActivity$4;
 
-    iget-object v0, v0, Lcom/android/settings/bluetooth/DevicePickerActivity$4;->this$0:Lcom/android/settings/bluetooth/DevicePickerActivity;
+    iget-object v0, v0, Lcom/android/settings_ex/bluetooth/DevicePickerActivity$4;->this$0:Lcom/android/settings_ex/bluetooth/DevicePickerActivity;
 
-    # getter for: Lcom/android/settings/bluetooth/DevicePickerActivity;->alertDialog:Landroid/app/AlertDialog;
-    invoke-static {v0}, Lcom/android/settings/bluetooth/DevicePickerActivity;->access$600(Lcom/android/settings/bluetooth/DevicePickerActivity;)Landroid/app/AlertDialog;
+    # getter for: Lcom/android/settings_ex/bluetooth/DevicePickerActivity;->alertDialog:Landroid/app/AlertDialog;
+    invoke-static {v0}, Lcom/android/settings_ex/bluetooth/DevicePickerActivity;->access$600(Lcom/android/settings_ex/bluetooth/DevicePickerActivity;)Landroid/app/AlertDialog;
 
     move-result-object v0
 
@@ -79,11 +79,11 @@
 
     .line 387
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/bluetooth/DevicePickerActivity$4$2;->this$1:Lcom/android/settings/bluetooth/DevicePickerActivity$4;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/DevicePickerActivity$4$2;->this$1:Lcom/android/settings_ex/bluetooth/DevicePickerActivity$4;
 
-    iget-object v0, v0, Lcom/android/settings/bluetooth/DevicePickerActivity$4;->this$0:Lcom/android/settings/bluetooth/DevicePickerActivity;
+    iget-object v0, v0, Lcom/android/settings_ex/bluetooth/DevicePickerActivity$4;->this$0:Lcom/android/settings_ex/bluetooth/DevicePickerActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/bluetooth/DevicePickerActivity;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/bluetooth/DevicePickerActivity;->finish()V
 
     .line 388
     return-void

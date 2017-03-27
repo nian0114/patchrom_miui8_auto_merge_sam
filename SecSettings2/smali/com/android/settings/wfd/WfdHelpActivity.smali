@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wfd/WfdHelpActivity;
+.class public Lcom/android/settings_ex/wfd/WfdHelpActivity;
 .super Landroid/app/Activity;
 .source "WfdHelpActivity.java"
 
@@ -24,36 +24,36 @@
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     .line 57
-    iput-boolean v0, p0, Lcom/android/settings/wfd/WfdHelpActivity;->mWriteTagMode:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wfd/WfdHelpActivity;->mWriteTagMode:Z
 
     .line 58
-    iput-boolean v0, p0, Lcom/android/settings/wfd/WfdHelpActivity;->mIsReadOnlyChecked:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wfd/WfdHelpActivity;->mIsReadOnlyChecked:Z
 
     .line 64
-    new-instance v0, Lcom/android/settings/wfd/WfdHelpActivity$1;
+    new-instance v0, Lcom/android/settings_ex/wfd/WfdHelpActivity$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/wfd/WfdHelpActivity$1;-><init>(Lcom/android/settings/wfd/WfdHelpActivity;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/wfd/WfdHelpActivity$1;-><init>(Lcom/android/settings_ex/wfd/WfdHelpActivity;)V
 
-    iput-object v0, p0, Lcom/android/settings/wfd/WfdHelpActivity;->mCheckBoxListener:Landroid/widget/CompoundButton$OnCheckedChangeListener;
+    iput-object v0, p0, Lcom/android/settings_ex/wfd/WfdHelpActivity;->mCheckBoxListener:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
     .line 71
-    new-instance v0, Lcom/android/settings/wfd/WfdHelpActivity$2;
+    new-instance v0, Lcom/android/settings_ex/wfd/WfdHelpActivity$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/wfd/WfdHelpActivity$2;-><init>(Lcom/android/settings/wfd/WfdHelpActivity;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/wfd/WfdHelpActivity$2;-><init>(Lcom/android/settings_ex/wfd/WfdHelpActivity;)V
 
-    iput-object v0, p0, Lcom/android/settings/wfd/WfdHelpActivity;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/wfd/WfdHelpActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
     return-void
 .end method
 
-.method static synthetic access$002(Lcom/android/settings/wfd/WfdHelpActivity;Z)Z
+.method static synthetic access$002(Lcom/android/settings_ex/wfd/WfdHelpActivity;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wfd/WfdHelpActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/wfd/WfdHelpActivity;
     .param p1, "x1"    # Z
 
     .prologue
     .line 54
-    iput-boolean p1, p0, Lcom/android/settings/wfd/WfdHelpActivity;->mIsReadOnlyChecked:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/wfd/WfdHelpActivity;->mIsReadOnlyChecked:Z
 
     return p1
 .end method
@@ -127,7 +127,7 @@
     .line 154
     new-instance v0, Landroid/content/Intent;
 
-    const-class v1, Lcom/android/settings/wfd/WfdPickerDialog;
+    const-class v1, Lcom/android/settings_ex/wfd/WfdPickerDialog;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -148,7 +148,7 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 158
-    invoke-virtual {p0, v0}, Lcom/android/settings/wfd/WfdHelpActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wfd/WfdHelpActivity;->startActivity(Landroid/content/Intent;)V
 
     .line 159
     return-void
@@ -168,7 +168,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 192
-    invoke-virtual {p0}, Lcom/android/settings/wfd/WfdHelpActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wfd/WfdHelpActivity;->finish()V
 
     .line 193
     return-void
@@ -206,14 +206,14 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 85
-    invoke-virtual {p0}, Lcom/android/settings/wfd/WfdHelpActivity;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wfd/WfdHelpActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v7
 
     invoke-virtual {v7, v10}, Landroid/view/Window;->requestFeature(I)Z
 
     .line 86
-    invoke-virtual {p0}, Lcom/android/settings/wfd/WfdHelpActivity;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wfd/WfdHelpActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v7
 
@@ -240,12 +240,12 @@
     invoke-virtual {v5, v7}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 91
-    iget-object v7, p0, Lcom/android/settings/wfd/WfdHelpActivity;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v7, p0, Lcom/android/settings_ex/wfd/WfdHelpActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v7, v5}, Lcom/android/settings/wfd/WfdHelpActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v7, v5}, Lcom/android/settings_ex/wfd/WfdHelpActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 93
-    invoke-virtual {p0}, Lcom/android/settings/wfd/WfdHelpActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wfd/WfdHelpActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v7
 
@@ -294,7 +294,7 @@
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 98
-    iput-boolean v11, p0, Lcom/android/settings/wfd/WfdHelpActivity;->mWriteTagMode:Z
+    iput-boolean v11, p0, Lcom/android/settings_ex/wfd/WfdHelpActivity;->mWriteTagMode:Z
 
     .line 99
     const v7, 0x7f0e10f7
@@ -306,10 +306,10 @@
     invoke-virtual {v7}, Landroid/widget/Toast;->show()V
 
     .line 100
-    invoke-direct {p0}, Lcom/android/settings/wfd/WfdHelpActivity;->startWfdPickerDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wfd/WfdHelpActivity;->startWfdPickerDialog()V
 
     .line 101
-    invoke-virtual {p0}, Lcom/android/settings/wfd/WfdHelpActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wfd/WfdHelpActivity;->finish()V
 
     .line 151
     :cond_0
@@ -334,7 +334,7 @@
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 105
-    iput-boolean v10, p0, Lcom/android/settings/wfd/WfdHelpActivity;->mWriteTagMode:Z
+    iput-boolean v10, p0, Lcom/android/settings_ex/wfd/WfdHelpActivity;->mWriteTagMode:Z
 
     .line 107
     new-instance v1, Landroid/app/AlertDialog$Builder;
@@ -350,14 +350,14 @@
     .line 109
     const v7, 0x7f0e083b
 
-    new-instance v8, Lcom/android/settings/wfd/WfdHelpActivity$3;
+    new-instance v8, Lcom/android/settings_ex/wfd/WfdHelpActivity$3;
 
-    invoke-direct {v8, p0}, Lcom/android/settings/wfd/WfdHelpActivity$3;-><init>(Lcom/android/settings/wfd/WfdHelpActivity;)V
+    invoke-direct {v8, p0}, Lcom/android/settings_ex/wfd/WfdHelpActivity$3;-><init>(Lcom/android/settings_ex/wfd/WfdHelpActivity;)V
 
     invoke-virtual {v1, v7, v8}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 115
-    invoke-virtual {p0}, Lcom/android/settings/wfd/WfdHelpActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wfd/WfdHelpActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v3
 
@@ -365,7 +365,7 @@
     .local v3, "inflater":Landroid/view/LayoutInflater;
     const v8, 0x7f04023a
 
-    invoke-virtual {p0}, Lcom/android/settings/wfd/WfdHelpActivity;->getCurrentFocus()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wfd/WfdHelpActivity;->getCurrentFocus()Landroid/view/View;
 
     move-result-object v7
 
@@ -382,7 +382,7 @@
     .line 119
     const v7, 0x7f0d0551
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/wfd/WfdHelpActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/wfd/WfdHelpActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v6
 
@@ -393,7 +393,7 @@
     if-eqz v6, :cond_2
 
     .line 121
-    iget-object v7, p0, Lcom/android/settings/wfd/WfdHelpActivity;->mCheckBoxListener:Landroid/widget/CompoundButton$OnCheckedChangeListener;
+    iget-object v7, p0, Lcom/android/settings_ex/wfd/WfdHelpActivity;->mCheckBoxListener:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
     invoke-virtual {v6, v7}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
@@ -405,9 +405,9 @@
 
     .line 125
     .local v0, "alertDialog":Landroid/app/AlertDialog;
-    new-instance v7, Lcom/android/settings/wfd/WfdHelpActivity$4;
+    new-instance v7, Lcom/android/settings_ex/wfd/WfdHelpActivity$4;
 
-    invoke-direct {v7, p0, v0}, Lcom/android/settings/wfd/WfdHelpActivity$4;-><init>(Lcom/android/settings/wfd/WfdHelpActivity;Landroid/app/AlertDialog;)V
+    invoke-direct {v7, p0, v0}, Lcom/android/settings_ex/wfd/WfdHelpActivity$4;-><init>(Lcom/android/settings_ex/wfd/WfdHelpActivity;Landroid/app/AlertDialog;)V
 
     invoke-virtual {v0, v7}, Landroid/app/AlertDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
@@ -432,9 +432,9 @@
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
     .line 186
-    iget-object v0, p0, Lcom/android/settings/wfd/WfdHelpActivity;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WfdHelpActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/wfd/WfdHelpActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wfd/WfdHelpActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 187
     return-void
@@ -467,7 +467,7 @@
 
     move-result-object v7
 
-    iget-boolean v8, p0, Lcom/android/settings/wfd/WfdHelpActivity;->mWriteTagMode:Z
+    iget-boolean v8, p0, Lcom/android/settings_ex/wfd/WfdHelpActivity;->mWriteTagMode:Z
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -480,7 +480,7 @@
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 205
-    iget-boolean v6, p0, Lcom/android/settings/wfd/WfdHelpActivity;->mWriteTagMode:Z
+    iget-boolean v6, p0, Lcom/android/settings_ex/wfd/WfdHelpActivity;->mWriteTagMode:Z
 
     if-eqz v6, :cond_3
 
@@ -502,7 +502,7 @@
     .local v2, "mDisplayManager":Landroid/hardware/display/DisplayManager;
     const-string v6, "display"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/wfd/WfdHelpActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/wfd/WfdHelpActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -555,7 +555,7 @@
     if-eqz v0, :cond_1
 
     .line 220
-    invoke-direct {p0, v0}, Lcom/android/settings/wfd/WfdHelpActivity;->makeNdefMessage(Ljava/lang/String;)Landroid/nfc/NdefMessage;
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/wfd/WfdHelpActivity;->makeNdefMessage(Ljava/lang/String;)Landroid/nfc/NdefMessage;
 
     move-result-object v3
 
@@ -571,7 +571,7 @@
 
     .line 223
     .local v1, "detectedTag":Landroid/nfc/Tag;
-    invoke-virtual {p0, v3, v1}, Lcom/android/settings/wfd/WfdHelpActivity;->writeTag(Landroid/nfc/NdefMessage;Landroid/nfc/Tag;)Z
+    invoke-virtual {p0, v3, v1}, Lcom/android/settings_ex/wfd/WfdHelpActivity;->writeTag(Landroid/nfc/NdefMessage;Landroid/nfc/Tag;)Z
 
     move-result v6
 
@@ -588,7 +588,7 @@
 
     .line 229
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/wfd/WfdHelpActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wfd/WfdHelpActivity;->finish()V
 
     .line 235
     .end local v0    # "connectAddr":Ljava/lang/String;
@@ -901,7 +901,7 @@
     invoke-virtual {v2, p1}, Landroid/nfc/tech/Ndef;->writeNdefMessage(Landroid/nfc/NdefMessage;)V
 
     .line 262
-    iget-boolean v6, p0, Lcom/android/settings/wfd/WfdHelpActivity;->mIsReadOnlyChecked:Z
+    iget-boolean v6, p0, Lcom/android/settings_ex/wfd/WfdHelpActivity;->mIsReadOnlyChecked:Z
 
     if-eqz v6, :cond_4
 
@@ -926,7 +926,7 @@
 
     invoke-direct {v6, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/wfd/WfdHelpActivity;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/wfd/WfdHelpActivity;->sendBroadcast(Landroid/content/Intent;)V
 
     move v4, v5
 

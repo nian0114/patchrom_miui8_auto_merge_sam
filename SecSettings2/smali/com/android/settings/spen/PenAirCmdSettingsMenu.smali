@@ -1,14 +1,14 @@
-.class public Lcom/android/settings/spen/PenAirCmdSettingsMenu;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "PenAirCmdSettingsMenu.java"
 
 # interfaces
 .implements Landroid/preference/Preference$OnPreferenceChangeListener;
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # instance fields
@@ -37,11 +37,11 @@
 
     .prologue
     .line 303
-    new-instance v0, Lcom/android/settings/spen/PenAirCmdSettingsMenu$2;
+    new-instance v0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu$2;
 
-    invoke-direct {v0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu$2;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu$2;-><init>()V
 
-    sput-object v0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -53,40 +53,40 @@
     const/4 v1, 0x0
 
     .line 65
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 85
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mShortcutList:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mShortcutList:Ljava/lang/String;
 
     .line 86
-    iput-boolean v1, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->bUpdated:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->bUpdated:Z
 
     .line 87
-    iput-boolean v1, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->IntentUpdated:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->IntentUpdated:Z
 
     .line 94
-    new-instance v0, Lcom/android/settings/spen/PenAirCmdSettingsMenu$1;
+    new-instance v0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu$1;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/spen/PenAirCmdSettingsMenu$1;-><init>(Lcom/android/settings/spen/PenAirCmdSettingsMenu;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu$1;-><init>(Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mAirCmdObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mAirCmdObserver:Landroid/database/ContentObserver;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/spen/PenAirCmdSettingsMenu;)V
+.method static synthetic access$000(Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/spen/PenAirCmdSettingsMenu;
+    .param p0, "x0"    # Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;
 
     .prologue
     .line 65
-    invoke-direct {p0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->updateEnableState()V
+    invoke-direct {p0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->updateEnableState()V
 
     return-void
 .end method
@@ -130,7 +130,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mShortcutList:Ljava/lang/String;
+    iget-object v0, v0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mShortcutList:Ljava/lang/String;
 
     move-object/from16 v17, v0
 
@@ -147,7 +147,7 @@
     .line 188
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mShortcutList:Ljava/lang/String;
+    iget-object v15, v0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mShortcutList:Ljava/lang/String;
 
     invoke-static {v15}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -158,7 +158,7 @@
     .line 189
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mShortcutList:Ljava/lang/String;
+    iget-object v15, v0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mShortcutList:Ljava/lang/String;
 
     const-string v16, ","
 
@@ -188,7 +188,7 @@
     .line 194
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mActivity:Landroid/app/Activity;
+    iget-object v15, v0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v15}, Landroid/app/Activity;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -198,7 +198,7 @@
     .local v14, "pm":Landroid/content/pm/PackageManager;
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mActivity:Landroid/app/Activity;
+    iget-object v15, v0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mActivity:Landroid/app/Activity;
 
     const-string v16, "execute"
 
@@ -271,7 +271,7 @@
     if-eqz v2, :cond_2
 
     .line 212
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v15
 
@@ -566,7 +566,7 @@
     .line 243
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mAppsAndFunctionsPref:Landroid/preference/Preference;
+    iget-object v15, v0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mAppsAndFunctionsPref:Landroid/preference/Preference;
 
     invoke-virtual {v15, v13}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -580,7 +580,7 @@
     :cond_9
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mAppsAndFunctionsPref:Landroid/preference/Preference;
+    iget-object v15, v0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mAppsAndFunctionsPref:Landroid/preference/Preference;
 
     const v16, 0x7f0e16a4
 
@@ -593,7 +593,7 @@
     :cond_a
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mAppsAndFunctionsPref:Landroid/preference/Preference;
+    iget-object v15, v0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mAppsAndFunctionsPref:Landroid/preference/Preference;
 
     const v16, 0x7f0e16a4
 
@@ -625,7 +625,7 @@
     .line 156
     const/16 v2, 0x3e8
 
-    invoke-virtual {p0, v1, v2}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v1, v2}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->startActivityForResult(Landroid/content/Intent;I)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -656,7 +656,7 @@
     const/4 v1, 0x0
 
     .line 148
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -668,7 +668,7 @@
 
     .line 149
     .local v0, "isEnable":I
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v2
 
@@ -724,10 +724,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mShortcutList:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mShortcutList:Ljava/lang/String;
 
     .line 168
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -738,12 +738,12 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 169
-    invoke-direct {p0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->appsCountSummaryUpdate()V
+    invoke-direct {p0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->appsCountSummaryUpdate()V
 
     .line 170
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->bUpdated:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->bUpdated:Z
 
     .line 174
     :cond_0
@@ -756,45 +756,45 @@
 
     .prologue
     .line 102
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 104
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mActivity:Landroid/app/Activity;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mActivity:Landroid/app/Activity;
 
     .line 105
-    iget-object v0, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mActivity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mContext:Landroid/content/Context;
 
     .line 107
     const v0, 0x7f080086
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->addPreferencesFromResource(I)V
 
     .line 108
     const-string v0, "key_air_cmd_apps_and_functions"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mAppsAndFunctionsPref:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mAppsAndFunctionsPref:Landroid/preference/Preference;
 
     .line 109
-    iget-object v0, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mAppsAndFunctionsPref:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mAppsAndFunctionsPref:Landroid/preference/Preference;
 
     if-eqz v0, :cond_0
 
     .line 110
-    iget-object v0, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mAppsAndFunctionsPref:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mAppsAndFunctionsPref:Landroid/preference/Preference;
 
     const/4 v1, 0x1
 
@@ -804,41 +804,41 @@
     :cond_0
     const-string v0, "key_air_cmd_use_minimized"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/SwitchPreference;
 
-    iput-object v0, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mUseMinimizedSwitchPref:Landroid/preference/SwitchPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mUseMinimizedSwitchPref:Landroid/preference/SwitchPreference;
 
     .line 114
-    iget-object v0, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mUseMinimizedSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mUseMinimizedSwitchPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v0, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 116
     const-string v0, "key_air_cmd_detachment_option"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/SwitchPreference;
 
-    iput-object v0, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mDetachmentOptionSwitchPref:Landroid/preference/SwitchPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mDetachmentOptionSwitchPref:Landroid/preference/SwitchPreference;
 
     .line 117
-    iget-object v0, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mDetachmentOptionSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mDetachmentOptionSwitchPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v0, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 118
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mDetachmentOptionSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mDetachmentOptionSwitchPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
@@ -851,7 +851,7 @@
 
     .prologue
     .line 262
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroy()V
 
     .line 263
     return-void
@@ -862,14 +862,14 @@
 
     .prologue
     .line 255
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 256
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mAirCmdObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mAirCmdObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
@@ -912,7 +912,7 @@
 
     .line 293
     .local v1, "value":Z
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -952,7 +952,7 @@
 
     .line 297
     .restart local v1    # "value":Z
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -975,7 +975,7 @@
 
     .prologue
     .line 272
-    iget-object v2, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mAppsAndFunctionsPref:Landroid/preference/Preference;
+    iget-object v2, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mAppsAndFunctionsPref:Landroid/preference/Preference;
 
     invoke-virtual {p2, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1001,7 +1001,7 @@
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 277
-    invoke-virtual {p0, v1}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1026,7 +1026,7 @@
     .line 282
     .end local v0    # "e":Landroid/content/ActivityNotFoundException;
     :cond_0
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v2
 
@@ -1042,7 +1042,7 @@
     const/4 v3, 0x0
 
     .line 124
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 125
     const-string v1, "PenAirCmdSettingsMenu"
@@ -1052,7 +1052,7 @@
     invoke-static {v1, v4}, Landroid/util/secutil/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 126
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -1076,12 +1076,12 @@
 
     if-eqz v1, :cond_1
 
-    iget-boolean v1, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->IntentUpdated:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->IntentUpdated:Z
 
     if-nez v1, :cond_1
 
     .line 128
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -1095,10 +1095,10 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mShortcutList:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mShortcutList:Ljava/lang/String;
 
     .line 129
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -1109,16 +1109,16 @@
     invoke-static {v1, v4, v5}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 130
-    invoke-direct {p0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->appsCountSummaryUpdate()V
+    invoke-direct {p0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->appsCountSummaryUpdate()V
 
     .line 131
-    iput-boolean v2, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->IntentUpdated:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->IntentUpdated:Z
 
     .line 137
     :goto_0
-    iget-object v4, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mUseMinimizedSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mUseMinimizedSwitchPref:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -1136,9 +1136,9 @@
     invoke-virtual {v4, v1}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 138
-    iget-object v1, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mDetachmentOptionSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mDetachmentOptionSwitchPref:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1156,10 +1156,10 @@
     invoke-virtual {v1, v3}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 140
-    invoke-direct {p0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->updateEnableState()V
+    invoke-direct {p0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->updateEnableState()V
 
     .line 142
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -1169,7 +1169,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->mAirCmdObserver:Landroid/database/ContentObserver;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->mAirCmdObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v1, v3, v2, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -1178,17 +1178,17 @@
 
     .line 133
     :cond_1
-    iget-boolean v1, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->bUpdated:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->bUpdated:Z
 
     if-nez v1, :cond_2
 
-    invoke-direct {p0}, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->getShortCutList()V
+    invoke-direct {p0}, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->getShortCutList()V
 
     goto :goto_0
 
     .line 134
     :cond_2
-    iput-boolean v3, p0, Lcom/android/settings/spen/PenAirCmdSettingsMenu;->bUpdated:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;->bUpdated:Z
 
     goto :goto_0
 
@@ -1204,7 +1204,7 @@
 
     .prologue
     .line 267
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onStop()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onStop()V
 
     .line 268
     return-void

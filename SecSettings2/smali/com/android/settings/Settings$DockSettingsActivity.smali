@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/Settings$DockSettingsActivity;
-.super Lcom/android/settings/SettingsActivityWrapper;
+.class public Lcom/android/settings_ex/Settings$DockSettingsActivity;
+.super Lcom/android/settings_ex/SettingsActivityWrapper;
 .source "Settings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/Settings;
+    value = Lcom/android/settings_ex/Settings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 288
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivityWrapper;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivityWrapper;-><init>()V
 
     return-void
 .end method
@@ -33,17 +33,17 @@
 
     .prologue
     .line 291
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsActivityWrapper;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsActivityWrapper;->onCreate(Landroid/os/Bundle;)V
 
     .line 292
-    invoke-static {p0}, Lcom/android/settings/Utils;->hasDockSettings(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/android/settings_ex/Utils;->hasDockSettings(Landroid/content/Context;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 293
-    invoke-virtual {p0}, Lcom/android/settings/Settings$DockSettingsActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings$DockSettingsActivity;->finish()V
 
     .line 295
     :cond_0

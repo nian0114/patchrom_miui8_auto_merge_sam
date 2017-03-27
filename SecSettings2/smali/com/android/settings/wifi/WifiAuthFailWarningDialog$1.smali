@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wifi/WifiAuthFailWarningDialog$1;
+.class Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog$1;
 .super Landroid/content/BroadcastReceiver;
 .source "WifiAuthFailWarningDialog.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiAuthFailWarningDialog;
+    value = Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiAuthFailWarningDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiAuthFailWarningDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog;)V
     .locals 0
 
     .prologue
     .line 65
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiAuthFailWarningDialog$1;->this$0:Lcom/android/settings/wifi/WifiAuthFailWarningDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog$1;->this$0:Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 

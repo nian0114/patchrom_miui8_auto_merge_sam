@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;
+.class public Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;
 .super Landroid/app/Activity;
 .source "WifiSnsPoorConnectionActivity.java"
 
@@ -34,7 +34,7 @@
     const/4 v0, 0x0
 
     :cond_0
-    sput-boolean v0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->DBG:Z
+    sput-boolean v0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->DBG:Z
 
     return-void
 .end method
@@ -49,13 +49,13 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;)Landroid/content/Context;
+.method static synthetic access$000(Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
@@ -75,7 +75,7 @@
     const/4 v6, 0x1
 
     .line 72
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v7
 
@@ -97,9 +97,9 @@
 
     .line 75
     .local v3, "textView":Landroid/widget/TextView;
-    iget-object v7, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
+    iget-object v7, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
 
-    invoke-static {v7}, Lcom/android/settings/Utils;->locateSmartNetworkSwitch(Landroid/content/Context;)I
+    invoke-static {v7}, Lcom/android/settings_ex/Utils;->locateSmartNetworkSwitch(Landroid/content/Context;)I
 
     move-result v7
 
@@ -110,7 +110,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v8, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -126,7 +126,7 @@
 
     move-result-object v7
 
-    iget-object v8, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
 
     const v9, 0x7f0e0529
 
@@ -148,7 +148,7 @@
     :goto_0
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
-    iget-object v7, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
+    iget-object v7, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
 
     invoke-direct {v2, v7}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -162,7 +162,7 @@
     invoke-virtual {v2, v7}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 86
-    iget-object v7, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
+    iget-object v7, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -176,21 +176,21 @@
 
     .line 87
     .local v1, "radioButtonItems":[Ljava/lang/CharSequence;
-    iget-boolean v7, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mEnabled:Z
+    iget-boolean v7, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mEnabled:Z
 
     if-eqz v7, :cond_0
 
     move v5, v6
 
     :cond_0
-    new-instance v7, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity$1;
+    new-instance v7, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity$1;
 
-    invoke-direct {v7, p0}, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity$1;-><init>(Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;)V
+    invoke-direct {v7, p0}, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity$1;-><init>(Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;)V
 
     invoke-virtual {v2, v1, v5, v7}, Landroid/app/AlertDialog$Builder;->setSingleChoiceItems([Ljava/lang/CharSequence;ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 131
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
 
     const v7, 0x7f0e0545
 
@@ -198,16 +198,16 @@
 
     move-result-object v5
 
-    new-instance v7, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity$2;
+    new-instance v7, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity$2;
 
-    invoke-direct {v7, p0}, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity$2;-><init>(Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;)V
+    invoke-direct {v7, p0}, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity$2;-><init>(Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;)V
 
     invoke-virtual {v2, v5, v7}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 149
-    new-instance v5, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity$3;
+    new-instance v5, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity$3;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity$3;-><init>(Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity$3;-><init>(Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;)V
 
     invoke-virtual {v2, v5}, Landroid/app/AlertDialog$Builder;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)Landroid/app/AlertDialog$Builder;
 
@@ -216,15 +216,15 @@
 
     move-result-object v5
 
-    iput-object v5, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mSnsPoorConnectionDialog:Landroid/app/AlertDialog;
+    iput-object v5, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mSnsPoorConnectionDialog:Landroid/app/AlertDialog;
 
     .line 170
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mSnsPoorConnectionDialog:Landroid/app/AlertDialog;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mSnsPoorConnectionDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v5, v10}, Landroid/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
     .line 171
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mSnsPoorConnectionDialog:Landroid/app/AlertDialog;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mSnsPoorConnectionDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v5}, Landroid/app/AlertDialog;->getListView()Landroid/widget/ListView;
 
@@ -235,12 +235,12 @@
     invoke-virtual {v0, v4, v11, v10}, Landroid/widget/ListView;->addHeaderView(Landroid/view/View;Ljava/lang/Object;Z)V
 
     .line 174
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mSnsPoorConnectionDialog:Landroid/app/AlertDialog;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mSnsPoorConnectionDialog:Landroid/app/AlertDialog;
 
     if-eqz v5, :cond_2
 
     .line 175
-    sget-boolean v5, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->DBG:Z
+    sget-boolean v5, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->DBG:Z
 
     if-eqz v5, :cond_1
 
@@ -256,7 +256,7 @@
 
     move-result-object v7
 
-    iget-boolean v8, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mEnabled:Z
+    iget-boolean v8, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mEnabled:Z
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -270,7 +270,7 @@
 
     .line 176
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -279,7 +279,7 @@
     invoke-static {v5, v7, v6}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 177
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mSnsPoorConnectionDialog:Landroid/app/AlertDialog;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mSnsPoorConnectionDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v5}, Landroid/app/AlertDialog;->show()V
 
@@ -296,7 +296,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v8, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -312,7 +312,7 @@
 
     move-result-object v7
 
-    iget-object v8, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
 
     const v9, 0x7f0e0528
 
@@ -345,7 +345,7 @@
     invoke-super {p0}, Landroid/app/Activity;->finish()V
 
     .line 184
-    invoke-virtual {p0, v0, v0}, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->overridePendingTransition(II)V
+    invoke-virtual {p0, v0, v0}, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->overridePendingTransition(II)V
 
     .line 185
     return-void
@@ -364,13 +364,13 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 56
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->requestWindowFeature(I)Z
 
     .line 57
-    iput-object p0, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
+    iput-object p0, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
 
     .line 58
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
 
     const-string v3, "wifi"
 
@@ -380,13 +380,13 @@
 
     check-cast v0, Landroid/net/wifi/WifiManager;
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     .line 60
-    invoke-virtual {p0, v2}, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->setVisible(Z)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->setVisible(Z)V
 
     .line 63
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -403,10 +403,10 @@
     move v0, v1
 
     :goto_0
-    iput-boolean v0, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mEnabled:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mEnabled:Z
 
     .line 66
-    sget-boolean v0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->DBG:Z
+    sget-boolean v0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->DBG:Z
 
     if-eqz v0, :cond_0
 
@@ -418,7 +418,7 @@
 
     .line 68
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->showSnsPoorConnectionDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->showSnsPoorConnectionDialog()V
 
     .line 69
     return-void
@@ -489,12 +489,12 @@
     iput-object v0, v4, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     .line 202
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     if-eqz v5, :cond_0
 
     .line 203
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v5, v4}, Landroid/net/wifi/WifiManager;->callSECApi(Landroid/os/Message;)I
 

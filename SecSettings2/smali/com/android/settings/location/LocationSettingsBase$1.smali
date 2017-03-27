@@ -1,11 +1,11 @@
-.class Lcom/android/settings/location/LocationSettingsBase$1;
+.class Lcom/android/settings_ex/location/LocationSettingsBase$1;
 .super Landroid/content/BroadcastReceiver;
 .source "LocationSettingsBase.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/location/LocationSettingsBase;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/location/LocationSettingsBase;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/location/LocationSettingsBase;
+.field final synthetic this$0:Lcom/android/settings_ex/location/LocationSettingsBase;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/location/LocationSettingsBase;)V
+.method constructor <init>(Lcom/android/settings_ex/location/LocationSettingsBase;)V
     .locals 0
 
     .prologue
     .line 81
-    iput-object p1, p0, Lcom/android/settings/location/LocationSettingsBase$1;->this$0:Lcom/android/settings/location/LocationSettingsBase;
+    iput-object p1, p0, Lcom/android/settings_ex/location/LocationSettingsBase$1;->this$0:Lcom/android/settings_ex/location/LocationSettingsBase;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -75,9 +75,9 @@
 
     .line 87
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/location/LocationSettingsBase$1;->this$0:Lcom/android/settings/location/LocationSettingsBase;
+    iget-object v0, p0, Lcom/android/settings_ex/location/LocationSettingsBase$1;->this$0:Lcom/android/settings_ex/location/LocationSettingsBase;
 
-    invoke-virtual {v0}, Lcom/android/settings/location/LocationSettingsBase;->refreshLocationMode()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/location/LocationSettingsBase;->refreshLocationMode()V
 
     .line 88
     return-void

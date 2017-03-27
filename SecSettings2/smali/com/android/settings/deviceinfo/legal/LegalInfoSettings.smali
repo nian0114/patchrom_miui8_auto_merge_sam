@@ -1,13 +1,13 @@
-.class public Lcom/android/settings/deviceinfo/legal/LegalInfoSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/deviceinfo/legal/LegalInfoSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "LegalInfoSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # direct methods
@@ -16,11 +16,11 @@
 
     .prologue
     .line 155
-    new-instance v0, Lcom/android/settings/deviceinfo/legal/LegalInfoSettings$1;
+    new-instance v0, Lcom/android/settings_ex/deviceinfo/legal/LegalInfoSettings$1;
 
-    invoke-direct {v0}, Lcom/android/settings/deviceinfo/legal/LegalInfoSettings$1;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/deviceinfo/legal/LegalInfoSettings$1;-><init>()V
 
-    sput-object v0, Lcom/android/settings/deviceinfo/legal/LegalInfoSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/deviceinfo/legal/LegalInfoSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -30,7 +30,7 @@
 
     .prologue
     .line 48
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     return-void
 .end method
@@ -43,7 +43,7 @@
     const/4 v2, 0x0
 
     .line 139
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/legal/LegalInfoSettings;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/legal/LegalInfoSettings;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
@@ -145,21 +145,21 @@
     const/4 v2, 0x1
 
     .line 70
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 72
     const v8, 0x7f080064
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/deviceinfo/legal/LegalInfoSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/deviceinfo/legal/LegalInfoSettings;->addPreferencesFromResource(I)V
 
     .line 73
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/legal/LegalInfoSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/legal/LegalInfoSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
     .line 75
     .local v5, "parentPreference":Landroid/preference/PreferenceScreen;
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/legal/LegalInfoSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/legal/LegalInfoSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -167,25 +167,25 @@
     .local v1, "act":Landroid/app/Activity;
     const-string v8, "terms"
 
-    invoke-static {v1, v5, v8, v2}, Lcom/android/settings/Utils;->updatePreferenceToSpecificActivityOrRemove(Landroid/content/Context;Landroid/preference/PreferenceGroup;Ljava/lang/String;I)Z
+    invoke-static {v1, v5, v8, v2}, Lcom/android/settings_ex/Utils;->updatePreferenceToSpecificActivityOrRemove(Landroid/content/Context;Landroid/preference/PreferenceGroup;Ljava/lang/String;I)Z
 
     .line 79
     const-string v8, "license"
 
-    invoke-static {v1, v5, v8, v2}, Lcom/android/settings/Utils;->updatePreferenceToSpecificActivityOrRemove(Landroid/content/Context;Landroid/preference/PreferenceGroup;Ljava/lang/String;I)Z
+    invoke-static {v1, v5, v8, v2}, Lcom/android/settings_ex/Utils;->updatePreferenceToSpecificActivityOrRemove(Landroid/content/Context;Landroid/preference/PreferenceGroup;Ljava/lang/String;I)Z
 
     .line 81
     const-string v8, "copyright"
 
-    invoke-static {v1, v5, v8, v2}, Lcom/android/settings/Utils;->updatePreferenceToSpecificActivityOrRemove(Landroid/content/Context;Landroid/preference/PreferenceGroup;Ljava/lang/String;I)Z
+    invoke-static {v1, v5, v8, v2}, Lcom/android/settings_ex/Utils;->updatePreferenceToSpecificActivityOrRemove(Landroid/content/Context;Landroid/preference/PreferenceGroup;Ljava/lang/String;I)Z
 
     .line 83
     const-string v8, "webview_license"
 
-    invoke-static {v1, v5, v8, v2}, Lcom/android/settings/Utils;->updatePreferenceToSpecificActivityOrRemove(Landroid/content/Context;Landroid/preference/PreferenceGroup;Ljava/lang/String;I)Z
+    invoke-static {v1, v5, v8, v2}, Lcom/android/settings_ex/Utils;->updatePreferenceToSpecificActivityOrRemove(Landroid/content/Context;Landroid/preference/PreferenceGroup;Ljava/lang/String;I)Z
 
     .line 86
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v6
 
@@ -193,13 +193,13 @@
     .local v6, "salesCode":Ljava/lang/String;
     const-string v8, "samsung_legal"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/deviceinfo/legal/LegalInfoSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/deviceinfo/legal/LegalInfoSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     .line 88
     .local v0, "SamsungLegal":Landroid/preference/Preference;
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/legal/LegalInfoSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/legal/LegalInfoSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v8
 
@@ -214,7 +214,7 @@
     .line 90
     .local v2, "confirmed":Z
     :goto_0
-    invoke-static {}, Lcom/android/settings/Utils;->isJapanModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isJapanModel()Z
 
     move-result v7
 
@@ -230,11 +230,11 @@
     .line 95
     const-string v7, "samsung_legal"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/deviceinfo/legal/LegalInfoSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/deviceinfo/legal/LegalInfoSettings;->removePreference(Ljava/lang/String;)V
 
     .line 98
     :cond_1
-    invoke-static {}, Lcom/android/settings/Utils;->isAllNAVendor()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isAllNAVendor()Z
 
     move-result v7
 
@@ -244,7 +244,7 @@
     invoke-virtual {v0, v10}, Landroid/preference/Preference;->setIntent(Landroid/content/Intent;)V
 
     .line 100
-    const-class v7, Lcom/android/settings/deviceinfo/legal/SamsungLegalInfo;
+    const-class v7, Lcom/android/settings_ex/deviceinfo/legal/SamsungLegalInfo;
 
     invoke-virtual {v7}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -257,19 +257,19 @@
     :goto_1
     const-string v7, "com.samsung.safetyinformation"
 
-    invoke-direct {p0, v7}, Lcom/android/settings/deviceinfo/legal/LegalInfoSettings;->isPackageLoaded(Ljava/lang/String;)Z
+    invoke-direct {p0, v7}, Lcom/android/settings_ex/deviceinfo/legal/LegalInfoSettings;->isPackageLoaded(Ljava/lang/String;)Z
 
     move-result v7
 
     if-eqz v7, :cond_3
 
-    invoke-static {}, Lcom/android/settings/Utils;->isAllNAVendor()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isAllNAVendor()Z
 
     move-result v7
 
     if-nez v7, :cond_3
 
-    invoke-static {}, Lcom/android/settings/Utils;->isJapanModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isJapanModel()Z
 
     move-result v7
 
@@ -279,11 +279,11 @@
     :cond_3
     const-string v7, "safetyinfomation"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/deviceinfo/legal/LegalInfoSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/deviceinfo/legal/LegalInfoSettings;->removePreference(Ljava/lang/String;)V
 
     .line 112
     :cond_4
-    invoke-static {}, Lcom/android/settings/Utils;->isSprModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSprModel()Z
 
     move-result v7
 
@@ -300,7 +300,7 @@
     .line 113
     const-string v7, "privacy_alert"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/deviceinfo/legal/LegalInfoSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/deviceinfo/legal/LegalInfoSettings;->removePreference(Ljava/lang/String;)V
 
     .line 121
     :cond_5
@@ -321,7 +321,7 @@
     .line 124
     const-string v7, "divx_license_settings"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/deviceinfo/legal/LegalInfoSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/deviceinfo/legal/LegalInfoSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
@@ -369,7 +369,7 @@
 
     .line 103
     :cond_9
-    invoke-static {v10}, Lcom/android/settings/Utils;->isTablet(Landroid/content/Context;)Z
+    invoke-static {v10}, Lcom/android/settings_ex/Utils;->isTablet(Landroid/content/Context;)Z
 
     move-result v7
 

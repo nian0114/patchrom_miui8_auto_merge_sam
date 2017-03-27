@@ -1,10 +1,10 @@
-.class public Lcom/android/settingslib/animation/DisappearAnimationUtils;
-.super Lcom/android/settingslib/animation/AppearAnimationUtils;
+.class public Lcom/android/settings_exlib/animation/DisappearAnimationUtils;
+.super Lcom/android/settings_exlib/animation/AppearAnimationUtils;
 .source "DisappearAnimationUtils.java"
 
 
 # static fields
-.field private static final ROW_TRANSLATION_SCALER:Lcom/android/settingslib/animation/AppearAnimationUtils$RowTranslationScaler;
+.field private static final ROW_TRANSLATION_SCALER:Lcom/android/settings_exlib/animation/AppearAnimationUtils$RowTranslationScaler;
 
 
 # direct methods
@@ -13,11 +13,11 @@
 
     .prologue
     .line 51
-    new-instance v0, Lcom/android/settingslib/animation/DisappearAnimationUtils$1;
+    new-instance v0, Lcom/android/settings_exlib/animation/DisappearAnimationUtils$1;
 
-    invoke-direct {v0}, Lcom/android/settingslib/animation/DisappearAnimationUtils$1;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_exlib/animation/DisappearAnimationUtils$1;-><init>()V
 
-    sput-object v0, Lcom/android/settingslib/animation/DisappearAnimationUtils;->ROW_TRANSLATION_SCALER:Lcom/android/settingslib/animation/AppearAnimationUtils$RowTranslationScaler;
+    sput-object v0, Lcom/android/settings_exlib/animation/DisappearAnimationUtils;->ROW_TRANSLATION_SCALER:Lcom/android/settings_exlib/animation/AppearAnimationUtils$RowTranslationScaler;
 
     return-void
 .end method
@@ -32,7 +32,7 @@
 
     .prologue
     .line 36
-    sget-object v7, Lcom/android/settingslib/animation/DisappearAnimationUtils;->ROW_TRANSLATION_SCALER:Lcom/android/settingslib/animation/AppearAnimationUtils$RowTranslationScaler;
+    sget-object v7, Lcom/android/settings_exlib/animation/DisappearAnimationUtils;->ROW_TRANSLATION_SCALER:Lcom/android/settings_exlib/animation/AppearAnimationUtils$RowTranslationScaler;
 
     move-object v0, p0
 
@@ -46,32 +46,32 @@
 
     move-object v6, p6
 
-    invoke-direct/range {v0 .. v7}, Lcom/android/settingslib/animation/DisappearAnimationUtils;-><init>(Landroid/content/Context;JFFLandroid/view/animation/Interpolator;Lcom/android/settingslib/animation/AppearAnimationUtils$RowTranslationScaler;)V
+    invoke-direct/range {v0 .. v7}, Lcom/android/settings_exlib/animation/DisappearAnimationUtils;-><init>(Landroid/content/Context;JFFLandroid/view/animation/Interpolator;Lcom/android/settings_exlib/animation/AppearAnimationUtils$RowTranslationScaler;)V
 
     .line 38
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;JFFLandroid/view/animation/Interpolator;Lcom/android/settingslib/animation/AppearAnimationUtils$RowTranslationScaler;)V
+.method public constructor <init>(Landroid/content/Context;JFFLandroid/view/animation/Interpolator;Lcom/android/settings_exlib/animation/AppearAnimationUtils$RowTranslationScaler;)V
     .locals 2
     .param p1, "ctx"    # Landroid/content/Context;
     .param p2, "duration"    # J
     .param p4, "translationScaleFactor"    # F
     .param p5, "delayScaleFactor"    # F
     .param p6, "interpolator"    # Landroid/view/animation/Interpolator;
-    .param p7, "rowScaler"    # Lcom/android/settingslib/animation/AppearAnimationUtils$RowTranslationScaler;
+    .param p7, "rowScaler"    # Lcom/android/settings_exlib/animation/AppearAnimationUtils$RowTranslationScaler;
 
     .prologue
     .line 42
-    invoke-direct/range {p0 .. p6}, Lcom/android/settingslib/animation/AppearAnimationUtils;-><init>(Landroid/content/Context;JFFLandroid/view/animation/Interpolator;)V
+    invoke-direct/range {p0 .. p6}, Lcom/android/settings_exlib/animation/AppearAnimationUtils;-><init>(Landroid/content/Context;JFFLandroid/view/animation/Interpolator;)V
 
     .line 43
-    iput-object p7, p0, Lcom/android/settingslib/animation/DisappearAnimationUtils;->mRowTranslationScaler:Lcom/android/settingslib/animation/AppearAnimationUtils$RowTranslationScaler;
+    iput-object p7, p0, Lcom/android/settings_exlib/animation/DisappearAnimationUtils;->mRowTranslationScaler:Lcom/android/settings_exlib/animation/AppearAnimationUtils$RowTranslationScaler;
 
     .line 44
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settingslib/animation/DisappearAnimationUtils;->mAppearing:Z
+    iput-boolean v0, p0, Lcom/android/settings_exlib/animation/DisappearAnimationUtils;->mAppearing:Z
 
     .line 45
     return-void

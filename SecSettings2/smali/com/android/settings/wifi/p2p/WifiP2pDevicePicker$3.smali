@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/p2p/WifiP2pDevicePicker$3;
+.class Lcom/android/settings_ex/wifi/p2p/WifiP2pDevicePicker$3;
 .super Ljava/lang/Object;
 .source "WifiP2pDevicePicker.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/p2p/WifiP2pDevicePicker;->onActivityCreated(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/wifi/p2p/WifiP2pDevicePicker;->onActivityCreated(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/p2p/WifiP2pDevicePicker;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/p2p/WifiP2pDevicePicker;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/p2p/WifiP2pDevicePicker;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/p2p/WifiP2pDevicePicker;)V
     .locals 0
 
     .prologue
     .line 527
-    iput-object p1, p0, Lcom/android/settings/wifi/p2p/WifiP2pDevicePicker$3;->this$0:Lcom/android/settings/wifi/p2p/WifiP2pDevicePicker;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDevicePicker$3;->this$0:Lcom/android/settings_ex/wifi/p2p/WifiP2pDevicePicker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -64,10 +64,10 @@
 
     .line 533
     :pswitch_0
-    iget-object v1, p0, Lcom/android/settings/wifi/p2p/WifiP2pDevicePicker$3;->this$0:Lcom/android/settings/wifi/p2p/WifiP2pDevicePicker;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/p2p/WifiP2pDevicePicker$3;->this$0:Lcom/android/settings_ex/wifi/p2p/WifiP2pDevicePicker;
 
-    # invokes: Lcom/android/settings/wifi/p2p/WifiP2pDevicePicker;->checkAndShowWindowPinnedMsg()Z
-    invoke-static {v1}, Lcom/android/settings/wifi/p2p/WifiP2pDevicePicker;->access$3300(Lcom/android/settings/wifi/p2p/WifiP2pDevicePicker;)Z
+    # invokes: Lcom/android/settings_ex/wifi/p2p/WifiP2pDevicePicker;->checkAndShowWindowPinnedMsg()Z
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/p2p/WifiP2pDevicePicker;->access$3300(Lcom/android/settings_ex/wifi/p2p/WifiP2pDevicePicker;)Z
 
     move-result v1
 

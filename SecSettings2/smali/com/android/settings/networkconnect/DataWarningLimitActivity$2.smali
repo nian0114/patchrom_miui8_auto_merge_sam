@@ -1,4 +1,4 @@
-.class Lcom/android/settings/networkconnect/DataWarningLimitActivity$2;
+.class Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity$2;
 .super Ljava/lang/Object;
 .source "DataWarningLimitActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/networkconnect/DataWarningLimitActivity;
+    value = Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/networkconnect/DataWarningLimitActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/networkconnect/DataWarningLimitActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;)V
     .locals 0
 
     .prologue
     .line 210
-    iput-object p1, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity$2;->this$0:Lcom/android/settings/networkconnect/DataWarningLimitActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity$2;->this$0:Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,17 +42,17 @@
 
     .prologue
     .line 213
-    iget-object v0, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity$2;->this$0:Lcom/android/settings/networkconnect/DataWarningLimitActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity$2;->this$0:Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSwitch:Landroid/widget/Switch;
-    invoke-static {v0}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->access$300(Lcom/android/settings/networkconnect/DataWarningLimitActivity;)Landroid/widget/Switch;
+    # getter for: Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSwitch:Landroid/widget/Switch;
+    invoke-static {v0}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->access$300(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;)Landroid/widget/Switch;
 
     move-result-object v1
 
-    iget-object v0, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity$2;->this$0:Lcom/android/settings/networkconnect/DataWarningLimitActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity$2;->this$0:Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/DataWarningLimitActivity;->mSwitch:Landroid/widget/Switch;
-    invoke-static {v0}, Lcom/android/settings/networkconnect/DataWarningLimitActivity;->access$300(Lcom/android/settings/networkconnect/DataWarningLimitActivity;)Landroid/widget/Switch;
+    # getter for: Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->mSwitch:Landroid/widget/Switch;
+    invoke-static {v0}, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;->access$300(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity;)Landroid/widget/Switch;
 
     move-result-object v0
 

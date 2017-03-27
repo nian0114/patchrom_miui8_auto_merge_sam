@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/KnoxFingerprintNotice;
-.super Lcom/android/settings/SettingsActivity;
+.class public Lcom/android/settings_ex/KnoxFingerprintNotice;
+.super Lcom/android/settings_ex/SettingsActivity;
 .source "KnoxFingerprintNotice.java"
 
 
@@ -27,24 +27,24 @@
 
     .prologue
     .line 25
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivity;-><init>()V
 
     .line 27
     const-string v0, "KnoxFingerprintNotice"
 
-    iput-object v0, p0, Lcom/android/settings/KnoxFingerprintNotice;->TAG:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->TAG:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/KnoxFingerprintNotice;I)V
+.method static synthetic access$000(Lcom/android/settings_ex/KnoxFingerprintNotice;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/KnoxFingerprintNotice;
+    .param p0, "x0"    # Lcom/android/settings_ex/KnoxFingerprintNotice;
     .param p1, "x1"    # I
 
     .prologue
     .line 25
-    invoke-direct {p0, p1}, Lcom/android/settings/KnoxFingerprintNotice;->sendIntentToKnoxKeyguard(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/KnoxFingerprintNotice;->sendIntentToKnoxKeyguard(I)V
 
     return-void
 .end method
@@ -59,7 +59,7 @@
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    const-class v2, Lcom/android/settings/KnoxFingerprintNotice;
+    const-class v2, Lcom/android/settings_ex/KnoxFingerprintNotice;
 
     invoke-virtual {v1, p0, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
@@ -77,7 +77,7 @@
 
     .prologue
     .line 61
-    invoke-static {p0}, Lcom/android/settings/KnoxFingerprintNotice;->createIntent(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-static {p0}, Lcom/android/settings_ex/KnoxFingerprintNotice;->createIntent(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -157,7 +157,7 @@
 
     invoke-direct {v1, v2}, Landroid/os/UserHandle;-><init>(I)V
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/KnoxFingerprintNotice;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings_ex/KnoxFingerprintNotice;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
     .line 162
     return-void
@@ -172,7 +172,7 @@
     .line 50
     new-instance v0, Landroid/content/Intent;
 
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->getIntent()Landroid/content/Intent;
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -206,10 +206,10 @@
     const/4 v6, 0x0
 
     .line 83
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 84
-    invoke-virtual {p0}, Lcom/android/settings/KnoxFingerprintNotice;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/KnoxFingerprintNotice;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -223,66 +223,66 @@
 
     move-result v2
 
-    iput v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mRequested:I
+    iput v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mRequested:I
 
     .line 86
     new-instance v2, Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-direct {v2, p0}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    iput-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 87
     const v2, 0x7f040118
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/KnoxFingerprintNotice;->setContentView(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/KnoxFingerprintNotice;->setContentView(I)V
 
     .line 89
     const v2, 0x7f0d0102
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/KnoxFingerprintNotice;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/KnoxFingerprintNotice;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/TextView;
 
-    iput-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mHeading:Landroid/widget/TextView;
+    iput-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mHeading:Landroid/widget/TextView;
 
     .line 90
     const v2, 0x7f0d0316
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/KnoxFingerprintNotice;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/KnoxFingerprintNotice;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/TextView;
 
-    iput-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mFingerprintText:Landroid/widget/TextView;
+    iput-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mFingerprintText:Landroid/widget/TextView;
 
     .line 91
     const v2, 0x7f0d0317
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/KnoxFingerprintNotice;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/KnoxFingerprintNotice;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/TextView;
 
-    iput-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mFingerprintHelpText:Landroid/widget/TextView;
+    iput-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mFingerprintHelpText:Landroid/widget/TextView;
 
     .line 92
     const v2, 0x7f0d0319
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/KnoxFingerprintNotice;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/KnoxFingerprintNotice;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/TextView;
 
-    iput-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mPasswordText:Landroid/widget/TextView;
+    iput-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mPasswordText:Landroid/widget/TextView;
 
     .line 93
-    iget-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v2, v6}, Lcom/android/internal/widget/LockPatternUtils;->isSecure(I)Z
 
@@ -291,7 +291,7 @@
     if-eqz v2, :cond_2
 
     .line 94
-    iget-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v2, v6}, Lcom/android/internal/widget/LockPatternUtils;->getKeyguardStoredPasswordQuality(I)I
 
@@ -327,9 +327,9 @@
     if-gt v0, v2, :cond_0
 
     .line 97
-    iget-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mFingerprintHelpText:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mFingerprintHelpText:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v9}, Lcom/android/settings/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -337,7 +337,7 @@
 
     const v5, 0x7f0e11f2
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -364,7 +364,7 @@
 
     move-result-object v3
 
-    iget v4, p0, Lcom/android/settings/KnoxFingerprintNotice;->mRequested:I
+    iget v4, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mRequested:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -377,7 +377,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 110
-    iget v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mRequested:I
+    iget v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mRequested:I
 
     packed-switch v2, :pswitch_data_0
 
@@ -393,20 +393,20 @@
     :pswitch_0
     const v2, 0x7f0d031a
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/KnoxFingerprintNotice;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/KnoxFingerprintNotice;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Landroid/widget/Button;
 
-    iput-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mStartBtn:Landroid/widget/Button;
+    iput-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mStartBtn:Landroid/widget/Button;
 
     .line 142
-    iget-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mStartBtn:Landroid/widget/Button;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mStartBtn:Landroid/widget/Button;
 
-    new-instance v3, Lcom/android/settings/KnoxFingerprintNotice$1;
+    new-instance v3, Lcom/android/settings_ex/KnoxFingerprintNotice$1;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/KnoxFingerprintNotice$1;-><init>(Lcom/android/settings/KnoxFingerprintNotice;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/KnoxFingerprintNotice$1;-><init>(Lcom/android/settings_ex/KnoxFingerprintNotice;)V
 
     invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -421,9 +421,9 @@
     if-ge v0, v2, :cond_1
 
     .line 100
-    iget-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mFingerprintHelpText:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mFingerprintHelpText:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v9}, Lcom/android/settings/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -431,7 +431,7 @@
 
     const v5, 0x7f0e11f5
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -447,9 +447,9 @@
 
     .line 103
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mFingerprintHelpText:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mFingerprintHelpText:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v9}, Lcom/android/settings/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -457,7 +457,7 @@
 
     const v5, 0x7f0e11f3
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -474,7 +474,7 @@
     .line 107
     .end local v0    # "deviceQuality":I
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mFingerprintHelpText:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mFingerprintHelpText:Landroid/widget/TextView;
 
     const-string v3, ""
 
@@ -494,9 +494,9 @@
 
     .line 119
     :pswitch_2
-    iget-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mHeading:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mHeading:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -506,18 +506,18 @@
 
     .line 122
     :pswitch_3
-    iget-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mHeading:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mHeading:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 123
-    iget-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mPasswordText:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mPasswordText:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -527,29 +527,29 @@
 
     .line 126
     :pswitch_4
-    iget-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mHeading:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mHeading:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 127
-    iget-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mFingerprintText:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mFingerprintText:Landroid/widget/TextView;
 
     const v3, 0x7f0e026b
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 128
-    iget-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mPasswordText:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mPasswordText:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -559,36 +559,36 @@
 
     .line 131
     :pswitch_5
-    iget-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mHeading:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mHeading:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 132
-    iget-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mFingerprintText:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mFingerprintText:Landroid/widget/TextView;
 
     const v3, 0x7f0e026b
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 133
-    iget-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mPasswordText:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mPasswordText:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/KnoxFingerprintNotice;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 134
-    iget-object v2, p0, Lcom/android/settings/KnoxFingerprintNotice;->mFingerprintHelpText:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxFingerprintNotice;->mFingerprintHelpText:Landroid/widget/TextView;
 
     const-string v3, ""
 
@@ -615,7 +615,7 @@
 
     .prologue
     .line 167
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->onDestroy()V
 
     .line 168
     return-void
@@ -643,10 +643,10 @@
     if-ne p1, v2, :cond_1
 
     .line 70
-    invoke-virtual {p0, v1}, Lcom/android/settings/KnoxFingerprintNotice;->setResult(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/KnoxFingerprintNotice;->setResult(I)V
 
     .line 71
-    invoke-virtual {p0}, Lcom/android/settings/KnoxFingerprintNotice;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/KnoxFingerprintNotice;->finish()V
 
     .line 72
     const/4 v0, 0x1
@@ -657,11 +657,11 @@
 
     .line 75
     :cond_1
-    invoke-direct {p0, v1}, Lcom/android/settings/KnoxFingerprintNotice;->sendIntentToKnoxKeyguard(I)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/KnoxFingerprintNotice;->sendIntentToKnoxKeyguard(I)V
 
     .line 78
     :cond_2
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v0
 

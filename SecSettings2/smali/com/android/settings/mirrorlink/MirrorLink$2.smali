@@ -1,4 +1,4 @@
-.class Lcom/android/settings/mirrorlink/MirrorLink$2;
+.class Lcom/android/settings_ex/mirrorlink/MirrorLink$2;
 .super Ljava/lang/Object;
 .source "MirrorLink.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/mirrorlink/MirrorLink;->updateMirrorLinkApplications()V
+    value = Lcom/android/settings_ex/mirrorlink/MirrorLink;->updateMirrorLinkApplications()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/mirrorlink/MirrorLink;
+.field final synthetic this$0:Lcom/android/settings_ex/mirrorlink/MirrorLink;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/mirrorlink/MirrorLink;)V
+.method constructor <init>(Lcom/android/settings_ex/mirrorlink/MirrorLink;)V
     .locals 0
 
     .prologue
     .line 515
-    iput-object p1, p0, Lcom/android/settings/mirrorlink/MirrorLink$2;->this$0:Lcom/android/settings/mirrorlink/MirrorLink;
+    iput-object p1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink$2;->this$0:Lcom/android/settings_ex/mirrorlink/MirrorLink;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -70,10 +70,10 @@
 
     .line 524
     .local v2, "args":Landroid/os/Bundle;
-    iget-object v1, p0, Lcom/android/settings/mirrorlink/MirrorLink$2;->this$0:Lcom/android/settings/mirrorlink/MirrorLink;
+    iget-object v1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink$2;->this$0:Lcom/android/settings_ex/mirrorlink/MirrorLink;
 
-    # getter for: Lcom/android/settings/mirrorlink/MirrorLink;->mListDevices:Ljava/util/List;
-    invoke-static {v1}, Lcom/android/settings/mirrorlink/MirrorLink;->access$1100(Lcom/android/settings/mirrorlink/MirrorLink;)Ljava/util/List;
+    # getter for: Lcom/android/settings_ex/mirrorlink/MirrorLink;->mListDevices:Ljava/util/List;
+    invoke-static {v1}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->access$1100(Lcom/android/settings_ex/mirrorlink/MirrorLink;)Ljava/util/List;
 
     move-result-object v1
 
@@ -81,10 +81,10 @@
 
     move-result-object v9
 
-    check-cast v9, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;
+    check-cast v9, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;
 
     .line 525
-    .local v9, "mlSelectedApp":Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;
+    .local v9, "mlSelectedApp":Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;
     const-string v1, "id"
 
     invoke-virtual {v2, v1, v8}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
@@ -92,42 +92,42 @@
     .line 526
     const-string v1, "entity_name"
 
-    iget-object v3, v9, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;->mEntityName:Ljava/lang/String;
+    iget-object v3, v9, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;->mEntityName:Ljava/lang/String;
 
     invoke-virtual {v2, v1, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 527
     const-string v1, "name"
 
-    iget-object v3, v9, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;->mAppName:Ljava/lang/String;
+    iget-object v3, v9, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;->mAppName:Ljava/lang/String;
 
     invoke-virtual {v2, v1, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 528
     const-string v1, "non_restricted"
 
-    iget-object v3, v9, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;->mNonRestricted:Ljava/lang/String;
+    iget-object v3, v9, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;->mNonRestricted:Ljava/lang/String;
 
     invoke-virtual {v2, v1, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 529
     const-string v1, "restricted"
 
-    iget-object v3, v9, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;->mRestricted:Ljava/lang/String;
+    iget-object v3, v9, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;->mRestricted:Ljava/lang/String;
 
     invoke-virtual {v2, v1, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 530
     const-string v1, "status"
 
-    iget-object v3, v9, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;->mStatus:Ljava/lang/String;
+    iget-object v3, v9, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;->mStatus:Ljava/lang/String;
 
     invoke-virtual {v2, v1, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 531
     const-string v1, "vaild_date"
 
-    iget-object v3, v9, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;->mValidDate:Ljava/lang/String;
+    iget-object v3, v9, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;->mValidDate:Ljava/lang/String;
 
     invoke-virtual {v2, v1, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -174,7 +174,7 @@
 
     move-result-object v3
 
-    iget-object v5, v9, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;->mEntityName:Ljava/lang/String;
+    iget-object v5, v9, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;->mEntityName:Ljava/lang/String;
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -199,7 +199,7 @@
 
     move-result-object v3
 
-    iget-object v5, v9, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;->mAppName:Ljava/lang/String;
+    iget-object v5, v9, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;->mAppName:Ljava/lang/String;
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -224,7 +224,7 @@
 
     move-result-object v3
 
-    iget-object v5, v9, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;->mNonRestricted:Ljava/lang/String;
+    iget-object v5, v9, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;->mNonRestricted:Ljava/lang/String;
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -249,7 +249,7 @@
 
     move-result-object v3
 
-    iget-object v5, v9, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;->mRestricted:Ljava/lang/String;
+    iget-object v5, v9, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;->mRestricted:Ljava/lang/String;
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -274,7 +274,7 @@
 
     move-result-object v3
 
-    iget-object v5, v9, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;->mStatus:Ljava/lang/String;
+    iget-object v5, v9, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;->mStatus:Ljava/lang/String;
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -299,7 +299,7 @@
 
     move-result-object v3
 
-    iget-object v5, v9, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;->mValidDate:Ljava/lang/String;
+    iget-object v5, v9, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;->mValidDate:Ljava/lang/String;
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -313,17 +313,17 @@
 
     .line 542
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/mirrorlink/MirrorLink$2;->this$0:Lcom/android/settings/mirrorlink/MirrorLink;
+    iget-object v1, p0, Lcom/android/settings_ex/mirrorlink/MirrorLink$2;->this$0:Lcom/android/settings_ex/mirrorlink/MirrorLink;
 
-    invoke-virtual {v1}, Lcom/android/settings/mirrorlink/MirrorLink;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/mirrorlink/MirrorLink;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SubSettings;
+    check-cast v0, Lcom/android/settings_ex/SubSettings;
 
     .line 543
-    .local v0, "subSettings":Lcom/android/settings/SubSettings;
-    const-class v1, Lcom/android/settings/mirrorlink/MirrorLinkAppDetail;
+    .local v0, "subSettings":Lcom/android/settings_ex/SubSettings;
+    const-class v1, Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -333,13 +333,13 @@
 
     move-object v5, v4
 
-    invoke-virtual/range {v0 .. v6}, Lcom/android/settings/SubSettings;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
+    invoke-virtual/range {v0 .. v6}, Lcom/android/settings_ex/SubSettings;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
 
     .line 545
-    .end local v0    # "subSettings":Lcom/android/settings/SubSettings;
+    .end local v0    # "subSettings":Lcom/android/settings_ex/SubSettings;
     .end local v2    # "args":Landroid/os/Bundle;
     .end local v7    # "mDebug":Z
-    .end local v9    # "mlSelectedApp":Lcom/android/settings/mirrorlink/MirrorLinkAppDetail$MlApp;
+    .end local v9    # "mlSelectedApp":Lcom/android/settings_ex/mirrorlink/MirrorLinkAppDetail$MlApp;
     :cond_1
     return v6
 .end method

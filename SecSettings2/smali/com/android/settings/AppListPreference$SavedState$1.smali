@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/AppListPreference$SavedState$1;
+.class final Lcom/android/settings_ex/AppListPreference$SavedState$1;
 .super Ljava/lang/Object;
 .source "AppListPreference.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/AppListPreference$SavedState;
+    value = Lcom/android/settings_ex/AppListPreference$SavedState;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Landroid/os/Parcelable$Creator",
         "<",
-        "Lcom/android/settings/AppListPreference$SavedState;",
+        "Lcom/android/settings_ex/AppListPreference$SavedState;",
         ">;"
     }
 .end annotation
@@ -40,7 +40,7 @@
 
 
 # virtual methods
-.method public createFromParcel(Landroid/os/Parcel;)Lcom/android/settings/AppListPreference$SavedState;
+.method public createFromParcel(Landroid/os/Parcel;)Lcom/android/settings_ex/AppListPreference$SavedState;
     .locals 5
     .param p1, "source"    # Landroid/os/Parcel;
 
@@ -83,9 +83,9 @@
 
     .line 233
     .local v2, "superState":Landroid/os/Parcelable;
-    new-instance v4, Lcom/android/settings/AppListPreference$SavedState;
+    new-instance v4, Lcom/android/settings_ex/AppListPreference$SavedState;
 
-    invoke-direct {v4, v0, v3, v1, v2}, Lcom/android/settings/AppListPreference$SavedState;-><init>([Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLandroid/os/Parcelable;)V
+    invoke-direct {v4, v0, v3, v1, v2}, Lcom/android/settings_ex/AppListPreference$SavedState;-><init>([Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZLandroid/os/Parcelable;)V
 
     return-object v4
 
@@ -104,20 +104,20 @@
 
     .prologue
     .line 226
-    invoke-virtual {p0, p1}, Lcom/android/settings/AppListPreference$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/settings/AppListPreference$SavedState;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/AppListPreference$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/settings_ex/AppListPreference$SavedState;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public newArray(I)[Lcom/android/settings/AppListPreference$SavedState;
+.method public newArray(I)[Lcom/android/settings_ex/AppListPreference$SavedState;
     .locals 1
     .param p1, "size"    # I
 
     .prologue
     .line 238
-    new-array v0, p1, [Lcom/android/settings/AppListPreference$SavedState;
+    new-array v0, p1, [Lcom/android/settings_ex/AppListPreference$SavedState;
 
     return-object v0
 .end method
@@ -128,7 +128,7 @@
 
     .prologue
     .line 226
-    invoke-virtual {p0, p1}, Lcom/android/settings/AppListPreference$SavedState$1;->newArray(I)[Lcom/android/settings/AppListPreference$SavedState;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/AppListPreference$SavedState$1;->newArray(I)[Lcom/android/settings_ex/AppListPreference$SavedState;
 
     move-result-object v0
 

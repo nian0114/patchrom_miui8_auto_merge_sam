@@ -1,4 +1,4 @@
-.class Lcom/android/settings/nfc/NfcEnabler$4;
+.class Lcom/android/settings_ex/nfc/NfcEnabler$4;
 .super Ljava/lang/Object;
 .source "NfcEnabler.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/nfc/NfcEnabler;->makeAlertDialog()V
+    value = Lcom/android/settings_ex/nfc/NfcEnabler;->makeAlertDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nfc/NfcEnabler;
+.field final synthetic this$0:Lcom/android/settings_ex/nfc/NfcEnabler;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/nfc/NfcEnabler;)V
+.method constructor <init>(Lcom/android/settings_ex/nfc/NfcEnabler;)V
     .locals 0
 
     .prologue
     .line 473
-    iput-object p1, p0, Lcom/android/settings/nfc/NfcEnabler$4;->this$0:Lcom/android/settings/nfc/NfcEnabler;
+    iput-object p1, p0, Lcom/android/settings_ex/nfc/NfcEnabler$4;->this$0:Lcom/android/settings_ex/nfc/NfcEnabler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,24 +44,24 @@
     const/4 v1, 0x1
 
     .line 475
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcEnabler$4;->this$0:Lcom/android/settings/nfc/NfcEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcEnabler$4;->this$0:Lcom/android/settings_ex/nfc/NfcEnabler;
 
-    # getter for: Lcom/android/settings/nfc/NfcEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v0}, Lcom/android/settings/nfc/NfcEnabler;->access$300(Lcom/android/settings/nfc/NfcEnabler;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/nfc/NfcEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v0}, Lcom/android/settings_ex/nfc/NfcEnabler;->access$300(Lcom/android/settings_ex/nfc/NfcEnabler;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 476
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcEnabler$4;->this$0:Lcom/android/settings/nfc/NfcEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcEnabler$4;->this$0:Lcom/android/settings_ex/nfc/NfcEnabler;
 
-    # getter for: Lcom/android/settings/nfc/NfcEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v0}, Lcom/android/settings/nfc/NfcEnabler;->access$300(Lcom/android/settings/nfc/NfcEnabler;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/nfc/NfcEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v0}, Lcom/android/settings_ex/nfc/NfcEnabler;->access$300(Lcom/android/settings_ex/nfc/NfcEnabler;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 477
     return-void

@@ -1,4 +1,4 @@
-.class public interface abstract Lcom/android/settings/nearby/IMediaServer;
+.class public interface abstract Lcom/android/settings_ex/nearby/IMediaServer;
 .super Ljava/lang/Object;
 .source "IMediaServer.java"
 
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/nearby/IMediaServer$Stub;
+        Lcom/android/settings_ex/nearby/IMediaServer$Stub;
     }
 .end annotation
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiSettings$39;
+.class Lcom/android/settings_ex/wifi/WifiSettings$39;
 .super Ljava/lang/Object;
 .source "WifiSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSettings;->showMaliciousHotspotDialog(Ljava/lang/String;Landroid/net/wifi/WifiConfiguration;ILandroid/net/wifi/WifiManager$ActionListener;Ljava/lang/String;)V
+    value = Lcom/android/settings_ex/wifi/WifiSettings;->showMaliciousHotspotDialog(Ljava/lang/String;Landroid/net/wifi/WifiConfiguration;ILandroid/net/wifi/WifiManager$ActionListener;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
 .field final synthetic val$mBssid:Ljava/lang/String;
 
@@ -30,20 +30,20 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSettings;Ljava/lang/String;Landroid/net/wifi/WifiConfiguration;ILandroid/net/wifi/WifiManager$ActionListener;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSettings;Ljava/lang/String;Landroid/net/wifi/WifiConfiguration;ILandroid/net/wifi/WifiManager$ActionListener;)V
     .locals 0
 
     .prologue
     .line 6241
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSettings$39;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSettings$39;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    iput-object p2, p0, Lcom/android/settings/wifi/WifiSettings$39;->val$mBssid:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/settings_ex/wifi/WifiSettings$39;->val$mBssid:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/android/settings/wifi/WifiSettings$39;->val$mConfig:Landroid/net/wifi/WifiConfiguration;
+    iput-object p3, p0, Lcom/android/settings_ex/wifi/WifiSettings$39;->val$mConfig:Landroid/net/wifi/WifiConfiguration;
 
-    iput p4, p0, Lcom/android/settings/wifi/WifiSettings$39;->val$mNetworkId:I
+    iput p4, p0, Lcom/android/settings_ex/wifi/WifiSettings$39;->val$mNetworkId:I
 
-    iput-object p5, p0, Lcom/android/settings/wifi/WifiSettings$39;->val$mListener:Landroid/net/wifi/WifiManager$ActionListener;
+    iput-object p5, p0, Lcom/android/settings_ex/wifi/WifiSettings$39;->val$mListener:Landroid/net/wifi/WifiManager$ActionListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -66,9 +66,9 @@
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 6246
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiSettings$39;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiSettings$39;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    iget-object v4, v4, Lcom/android/settings/wifi/WifiSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v4, v4, Lcom/android/settings_ex/wifi/WifiSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v4}, Landroid/net/wifi/WifiManager;->getSBlacklist()Ljava/lang/String;
 
@@ -78,7 +78,7 @@
     .local v3, "sBlackList":Ljava/lang/String;
     if-eqz v3, :cond_0
 
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiSettings$39;->val$mBssid:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiSettings$39;->val$mBssid:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -87,9 +87,9 @@
     if-eqz v4, :cond_0
 
     .line 6248
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiSettings$39;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiSettings$39;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    iget-object v4, v4, Lcom/android/settings/wifi/WifiSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v4, v4, Lcom/android/settings_ex/wifi/WifiSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v4}, Landroid/net/wifi/WifiManager;->clearSBlacklist()Z
 
@@ -124,19 +124,19 @@
     .end local v2    # "line":Ljava/lang/String;
     :cond_0
     :goto_1
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiSettings$39;->val$mConfig:Landroid/net/wifi/WifiConfiguration;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiSettings$39;->val$mConfig:Landroid/net/wifi/WifiConfiguration;
 
     if-nez v4, :cond_3
 
     .line 6266
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiSettings$39;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiSettings$39;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    iget v5, p0, Lcom/android/settings/wifi/WifiSettings$39;->val$mNetworkId:I
+    iget v5, p0, Lcom/android/settings_ex/wifi/WifiSettings$39;->val$mNetworkId:I
 
-    iget-object v6, p0, Lcom/android/settings/wifi/WifiSettings$39;->val$mListener:Landroid/net/wifi/WifiManager$ActionListener;
+    iget-object v6, p0, Lcom/android/settings_ex/wifi/WifiSettings$39;->val$mListener:Landroid/net/wifi/WifiManager$ActionListener;
 
-    # invokes: Lcom/android/settings/wifi/WifiSettings;->connectNetwork(ILandroid/net/wifi/WifiManager$ActionListener;)V
-    invoke-static {v4, v5, v6}, Lcom/android/settings/wifi/WifiSettings;->access$5000(Lcom/android/settings/wifi/WifiSettings;ILandroid/net/wifi/WifiManager$ActionListener;)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiSettings;->connectNetwork(ILandroid/net/wifi/WifiManager$ActionListener;)V
+    invoke-static {v4, v5, v6}, Lcom/android/settings_ex/wifi/WifiSettings;->access$5000(Lcom/android/settings_ex/wifi/WifiSettings;ILandroid/net/wifi/WifiManager$ActionListener;)V
 
     .line 6270
     :goto_2
@@ -150,7 +150,7 @@
     .restart local v2    # "line":Ljava/lang/String;
     :cond_1
     :try_start_1
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiSettings$39;->val$mBssid:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiSettings$39;->val$mBssid:Ljava/lang/String;
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -159,11 +159,11 @@
     if-nez v4, :cond_2
 
     .line 6256
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiSettings$39;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiSettings$39;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    iget-object v4, v4, Lcom/android/settings/wifi/WifiSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v4, v4, Lcom/android/settings_ex/wifi/WifiSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
 
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiSettings$39;->val$mBssid:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiSettings$39;->val$mBssid:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Landroid/net/wifi/WifiManager;->addToSBlacklist(Ljava/lang/String;)Z
     :try_end_1
@@ -207,7 +207,7 @@
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/wifi/WifiSettings$39;->val$mBssid:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/wifi/WifiSettings$39;->val$mBssid:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -233,14 +233,14 @@
     .end local v0    # "br":Ljava/io/BufferedReader;
     .end local v2    # "line":Ljava/lang/String;
     :cond_3
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiSettings$39;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiSettings$39;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiSettings$39;->val$mConfig:Landroid/net/wifi/WifiConfiguration;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiSettings$39;->val$mConfig:Landroid/net/wifi/WifiConfiguration;
 
-    iget-object v6, p0, Lcom/android/settings/wifi/WifiSettings$39;->val$mListener:Landroid/net/wifi/WifiManager$ActionListener;
+    iget-object v6, p0, Lcom/android/settings_ex/wifi/WifiSettings$39;->val$mListener:Landroid/net/wifi/WifiManager$ActionListener;
 
-    # invokes: Lcom/android/settings/wifi/WifiSettings;->connectNetwork(Landroid/net/wifi/WifiConfiguration;Landroid/net/wifi/WifiManager$ActionListener;)V
-    invoke-static {v4, v5, v6}, Lcom/android/settings/wifi/WifiSettings;->access$4800(Lcom/android/settings/wifi/WifiSettings;Landroid/net/wifi/WifiConfiguration;Landroid/net/wifi/WifiManager$ActionListener;)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiSettings;->connectNetwork(Landroid/net/wifi/WifiConfiguration;Landroid/net/wifi/WifiManager$ActionListener;)V
+    invoke-static {v4, v5, v6}, Lcom/android/settings_ex/wifi/WifiSettings;->access$4800(Lcom/android/settings_ex/wifi/WifiSettings;Landroid/net/wifi/WifiConfiguration;Landroid/net/wifi/WifiManager$ActionListener;)V
 
     goto :goto_2
 .end method

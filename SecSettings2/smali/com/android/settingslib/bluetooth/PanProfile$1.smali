@@ -1,11 +1,11 @@
-.class final Lcom/android/settingslib/bluetooth/PanProfile$1;
+.class final Lcom/android/settings_exlib/bluetooth/PanProfile$1;
 .super Ljava/util/HashSet;
 .source "PanProfile.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/bluetooth/PanProfile;
+    value = Lcom/android/settings_exlib/bluetooth/PanProfile;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,12 +34,12 @@
     .line 57
     const-string v0, "PANNAP"
 
-    invoke-virtual {p0, v0}, Lcom/android/settingslib/bluetooth/PanProfile$1;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v0}, Lcom/android/settings_exlib/bluetooth/PanProfile$1;->add(Ljava/lang/Object;)Z
 
     .line 58
     const-string v0, "PANU"
 
-    invoke-virtual {p0, v0}, Lcom/android/settingslib/bluetooth/PanProfile$1;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v0}, Lcom/android/settings_exlib/bluetooth/PanProfile$1;->add(Ljava/lang/Object;)Z
 
     .line 59
     return-void

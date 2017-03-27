@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/csc/CscParser$CscNodeList;
+.class public Lcom/android/settings_ex/csc/CscParser$CscNodeList;
 .super Ljava/lang/Object;
 .source "CscParser.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/csc/CscParser;
+    value = Lcom/android/settings_ex/csc/CscParser;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,7 +43,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/csc/CscParser$CscNodeList;->children:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/csc/CscParser$CscNodeList;->children:Ljava/util/ArrayList;
 
     return-void
 .end method
@@ -56,7 +56,7 @@
 
     .prologue
     .line 51
-    iget-object v0, p0, Lcom/android/settings/csc/CscParser$CscNodeList;->children:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscParser$CscNodeList;->children:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -69,7 +69,7 @@
 
     .prologue
     .line 56
-    iget-object v0, p0, Lcom/android/settings/csc/CscParser$CscNodeList;->children:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscParser$CscNodeList;->children:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -84,7 +84,7 @@
 
     .prologue
     .line 61
-    iget-object v0, p0, Lcom/android/settings/csc/CscParser$CscNodeList;->children:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/csc/CscParser$CscNodeList;->children:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/DualSoundRingtoneSettings$3;
+.class Lcom/android/settings_ex/DualSoundRingtoneSettings$3;
 .super Landroid/content/BroadcastReceiver;
 .source "DualSoundRingtoneSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DualSoundRingtoneSettings;->onResume()V
+    value = Lcom/android/settings_ex/DualSoundRingtoneSettings;->onResume()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DualSoundRingtoneSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/DualSoundRingtoneSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DualSoundRingtoneSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/DualSoundRingtoneSettings;)V
     .locals 0
 
     .prologue
     .line 256
-    iput-object p1, p0, Lcom/android/settings/DualSoundRingtoneSettings$3;->this$0:Lcom/android/settings/DualSoundRingtoneSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings$3;->this$0:Lcom/android/settings_ex/DualSoundRingtoneSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -40,9 +40,9 @@
 
     .prologue
     .line 260
-    iget-object v0, p0, Lcom/android/settings/DualSoundRingtoneSettings$3;->this$0:Lcom/android/settings/DualSoundRingtoneSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings$3;->this$0:Lcom/android/settings_ex/DualSoundRingtoneSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/DualSoundRingtoneSettings;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->finish()V
 
     .line 261
     return-void

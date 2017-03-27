@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/motion/MotionViewPagerAdapter;
+.class public Lcom/android/settings_ex/motion/MotionViewPagerAdapter;
 .super Landroid/support/v4/view/PagerAdapter;
 .source "MotionViewPagerAdapter.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
+        Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
     }
 .end annotation
 
@@ -19,7 +19,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/motion/MotionViewPagerAdapter$Description;",
+            "Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;",
             ">;"
         }
     .end annotation
@@ -42,20 +42,20 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     .line 45
-    iput-object p1, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->context:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->context:Landroid/content/Context;
 
     .line 46
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->mInflater:Landroid/view/LayoutInflater;
+    iput-object v0, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     .line 48
-    invoke-direct {p0}, Lcom/android/settings/motion/MotionViewPagerAdapter;->setDescriptions()V
+    invoke-direct {p0}, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->setDescriptions()V
 
     .line 49
     return-void
@@ -66,38 +66,38 @@
 
     .prologue
     .line 122
-    new-instance v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
+    new-instance v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
 
-    invoke-direct {v0}, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;-><init>()V
 
     .line 125
-    .local v0, "description":Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
-    iget-object v1, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->context:Landroid/content/Context;
+    .local v0, "description":Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->context:Landroid/content/Context;
 
     const-string v2, "pick_up_to_call_out_switch"
 
-    invoke-static {v1, v2}, Lcom/android/settings/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lcom/android/settings_ex/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 126
-    new-instance v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
+    new-instance v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
 
-    .end local v0    # "description":Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
-    invoke-direct {v0}, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;-><init>()V
+    .end local v0    # "description":Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
+    invoke-direct {v0}, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;-><init>()V
 
     .line 127
-    .restart local v0    # "description":Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
+    .restart local v0    # "description":Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
     const-string v1, "pick_up_to_call_out_switch"
 
-    iput-object v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->key:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->key:Ljava/lang/String;
 
     .line 128
-    iget-object v1, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->context:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isDualFolderType(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isDualFolderType(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -106,18 +106,18 @@
     .line 129
     const v1, 0x7f020265
 
-    iput v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->animation:I
 
     .line 133
     :goto_0
     const v1, 0x7f0e1265
 
-    iput v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->title:I
+    iput v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->title:I
 
     .line 134
     const-string v1, "VZW"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v2
 
@@ -130,52 +130,52 @@
     .line 135
     const v1, 0x7f0e1277
 
-    iput v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->summary:I
 
     .line 139
     :goto_1
-    iget-object v1, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 143
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->context:Landroid/content/Context;
 
     const-string v2, "pick_up_switch"
 
-    invoke-static {v1, v2}, Lcom/android/settings/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lcom/android/settings_ex/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 144
-    new-instance v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
+    new-instance v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
 
-    .end local v0    # "description":Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
-    invoke-direct {v0}, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;-><init>()V
+    .end local v0    # "description":Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
+    invoke-direct {v0}, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;-><init>()V
 
     .line 145
-    .restart local v0    # "description":Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
+    .restart local v0    # "description":Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
     const-string v1, "pick_up_switch"
 
-    iput-object v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->key:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->key:Ljava/lang/String;
 
     .line 146
     const v1, 0x7f020272
 
-    iput v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->animation:I
 
     .line 147
     const v1, 0x7f0e1266
 
-    iput v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->title:I
+    iput v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->title:I
 
     .line 148
     const-string v1, "VZW"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v2
 
@@ -188,40 +188,40 @@
     .line 149
     const v1, 0x7f0e1279
 
-    iput v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->summary:I
 
     .line 153
     :goto_2
-    iget-object v1, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 157
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->context:Landroid/content/Context;
 
     const-string v2, "merged_mute_or_pause_switch"
 
-    invoke-static {v1, v2}, Lcom/android/settings/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lcom/android/settings_ex/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
     .line 158
-    new-instance v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
+    new-instance v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
 
-    .end local v0    # "description":Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
-    invoke-direct {v0}, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;-><init>()V
+    .end local v0    # "description":Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
+    invoke-direct {v0}, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;-><init>()V
 
     .line 159
-    .restart local v0    # "description":Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
+    .restart local v0    # "description":Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
     const-string v1, "merged_mute_or_pause_switch"
 
-    iput-object v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->key:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->key:Ljava/lang/String;
 
     .line 160
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v1
 
@@ -230,26 +230,26 @@
     .line 161
     const v1, 0x7f0200ed
 
-    iput v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->animation:I
 
     .line 165
     :goto_3
     const v1, 0x7f0e1267
 
-    iput v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->title:I
+    iput v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->title:I
 
     .line 166
-    iget-object v1, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->context:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    iget-object v1, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->context:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isVoiceCapable(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isVoiceCapable(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -259,99 +259,99 @@
     :cond_2
     const v1, 0x7f0e1281
 
-    iput v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->summary:I
 
     .line 171
     :goto_4
-    iget-object v1, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 175
     :cond_3
-    iget-object v1, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->context:Landroid/content/Context;
 
     const-string v2, "palm_swipe_switch"
 
-    invoke-static {v1, v2}, Lcom/android/settings/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lcom/android/settings_ex/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
     .line 176
-    new-instance v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
+    new-instance v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
 
-    .end local v0    # "description":Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
-    invoke-direct {v0}, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;-><init>()V
+    .end local v0    # "description":Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
+    invoke-direct {v0}, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;-><init>()V
 
     .line 177
-    .restart local v0    # "description":Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
+    .restart local v0    # "description":Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
     const-string v1, "palm_swipe_switch"
 
-    iput-object v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->key:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->key:Ljava/lang/String;
 
     .line 178
     const v1, 0x7f0200eb
 
-    iput v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->animation:I
 
     .line 179
     const v1, 0x7f0e1269
 
-    iput v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->title:I
+    iput v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->title:I
 
     .line 180
     const v1, 0x7f0e127a
 
-    iput v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->summary:I
 
     .line 181
-    iget-object v1, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 185
     :cond_4
-    iget-object v1, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->context:Landroid/content/Context;
 
     const-string v2, "multi_window_setting_switch"
 
-    invoke-static {v1, v2}, Lcom/android/settings/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lcom/android/settings_ex/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
     .line 186
-    new-instance v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
+    new-instance v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
 
-    .end local v0    # "description":Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
-    invoke-direct {v0}, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;-><init>()V
+    .end local v0    # "description":Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
+    invoke-direct {v0}, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;-><init>()V
 
     .line 187
-    .restart local v0    # "description":Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
+    .restart local v0    # "description":Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
     const-string v1, "multi_window_setting_switch"
 
-    iput-object v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->key:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->key:Ljava/lang/String;
 
     .line 188
     const v1, 0x7f02026c
 
-    iput v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->animation:I
 
     .line 189
     const v1, 0x7f0e126a
 
-    iput v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->title:I
+    iput v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->title:I
 
     .line 190
     const v1, 0x7f0e126b
 
-    iput v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->summary:I
 
     .line 191
-    iget-object v1, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -363,7 +363,7 @@
     :cond_6
     const v1, 0x7f020264
 
-    iput v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->animation:I
 
     goto/16 :goto_0
 
@@ -371,7 +371,7 @@
     :cond_7
     const v1, 0x7f0e1276
 
-    iput v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->summary:I
 
     goto/16 :goto_1
 
@@ -379,7 +379,7 @@
     :cond_8
     const v1, 0x7f0e1278
 
-    iput v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->summary:I
 
     goto/16 :goto_2
 
@@ -387,7 +387,7 @@
     :cond_9
     const v1, 0x7f0200ec
 
-    iput v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->animation:I
 
     goto/16 :goto_3
 
@@ -395,7 +395,7 @@
     :cond_a
     const v1, 0x7f0e127f
 
-    iput v1, v0, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->summary:I
 
     goto :goto_4
 .end method
@@ -427,7 +427,7 @@
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -465,7 +465,7 @@
 
     .local v0, "i":I
     :goto_1
-    iget-object v2, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -474,15 +474,15 @@
     if-ge v0, v2, :cond_2
 
     .line 114
-    iget-object v2, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
+    check-cast v2, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
 
-    iget-object v2, v2, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->key:Ljava/lang/String;
+    iget-object v2, v2, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->key:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -517,7 +517,7 @@
 
     .line 65
     .local v4, "v":Landroid/view/View;
-    iget-object v5, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v5, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     const v6, 0x7f040164
 
@@ -565,15 +565,15 @@
 
     .line 71
     .local v1, "mAnimationView":Landroid/widget/ImageView;
-    iget-object v5, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v5, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
+    check-cast v5, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
 
-    iget v5, v5, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->title:I
+    iget v5, v5, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->title:I
 
     if-nez v5, :cond_1
 
@@ -582,15 +582,15 @@
 
     .line 78
     :goto_0
-    iget-object v5, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v5, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
+    check-cast v5, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
 
-    iget v5, v5, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->summary:I
+    iget v5, v5, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->summary:I
 
     if-nez v5, :cond_2
 
@@ -599,15 +599,15 @@
 
     .line 85
     :goto_1
-    iget-object v5, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v5, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
+    check-cast v5, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
 
-    iget v5, v5, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->animation:I
+    iget v5, v5, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->animation:I
 
     if-nez v5, :cond_3
 
@@ -631,15 +631,15 @@
     invoke-virtual {v3, v8}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 75
-    iget-object v5, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v5, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
+    check-cast v5, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
 
-    iget v5, v5, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->title:I
+    iget v5, v5, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->title:I
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setText(I)V
 
@@ -650,15 +650,15 @@
     invoke-virtual {v2, v8}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 82
-    iget-object v5, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v5, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
+    check-cast v5, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
 
-    iget v5, v5, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->summary:I
+    iget v5, v5, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->summary:I
 
     invoke-virtual {v2, v5}, Landroid/widget/TextView;->setText(I)V
 
@@ -669,15 +669,15 @@
     invoke-virtual {v1, v8}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 89
-    iget-object v5, p0, Lcom/android/settings/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v5, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;
+    check-cast v5, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;
 
-    iget v5, v5, Lcom/android/settings/motion/MotionViewPagerAdapter$Description;->animation:I
+    iget v5, v5, Lcom/android/settings_ex/motion/MotionViewPagerAdapter$Description;->animation:I
 
     invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setImageResource(I)V
 

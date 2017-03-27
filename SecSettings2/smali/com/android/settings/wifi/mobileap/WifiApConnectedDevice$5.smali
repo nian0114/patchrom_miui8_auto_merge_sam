@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice$5;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice$5;
 .super Ljava/lang/Object;
 .source "WifiApConnectedDevice.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;->onClick(Landroid/content/DialogInterface;I)V
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;->onClick(Landroid/content/DialogInterface;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;
 
 .field final synthetic val$msgId:I
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;I)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;I)V
     .locals 0
 
     .prologue
     .line 391
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice$5;->this$0:Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice$5;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;
 
-    iput p2, p0, Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice$5;->val$msgId:I
+    iput p2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice$5;->val$msgId:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,10 +47,10 @@
     const/4 v10, 0x1
 
     .line 395
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice$5;->this$0:Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice$5;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;->mContext:Landroid/content/Context;
-    invoke-static {v4}, Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;->access$200(Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;->mContext:Landroid/content/Context;
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;->access$200(Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;)Landroid/content/Context;
 
     move-result-object v4
 
@@ -74,10 +74,10 @@
 
     .line 396
     .local v0, "color":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice$5;->this$0:Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice$5;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;->mContext:Landroid/content/Context;
-    invoke-static {v4}, Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;->access$200(Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;->mContext:Landroid/content/Context;
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;->access$200(Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;)Landroid/content/Context;
 
     move-result-object v4
 
@@ -85,7 +85,7 @@
 
     move-result-object v4
 
-    iget v5, p0, Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice$5;->val$msgId:I
+    iget v5, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice$5;->val$msgId:I
 
     new-array v6, v10, [Ljava/lang/Object;
 
@@ -111,10 +111,10 @@
 
     move-result-object v8
 
-    iget-object v9, p0, Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice$5;->this$0:Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;
+    iget-object v9, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice$5;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;->mDeviceName:Ljava/lang/String;
-    invoke-static {v9}, Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;->access$300(Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;->mDeviceName:Ljava/lang/String;
+    invoke-static {v9}, Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;->access$300(Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;)Ljava/lang/String;
 
     move-result-object v9
 
@@ -144,10 +144,10 @@
 
     .line 399
     .local v2, "toastMsg":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice$5;->this$0:Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice$5;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;->mContext:Landroid/content/Context;
-    invoke-static {v4}, Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;->access$200(Lcom/android/settings/wifi/mobileap/WifiApConnectedDevice;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;->mContext:Landroid/content/Context;
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;->access$200(Lcom/android/settings_ex/wifi/mobileap/WifiApConnectedDevice;)Landroid/content/Context;
 
     move-result-object v4
 

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/fingerprint/FingerprintSwitchPreference;
+.class public Lcom/android/settings_ex/fingerprint/FingerprintSwitchPreference;
 .super Landroid/preference/SwitchPreference;
 .source "FingerprintSwitchPreference.java"
 

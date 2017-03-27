@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accounts/AccountPreferenceBase$2;
+.class Lcom/android/settings_ex/accounts/AccountPreferenceBase$2;
 .super Ljava/lang/Object;
 .source "AccountPreferenceBase.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accounts/AccountPreferenceBase;->addAlibabaAccountPreference(Landroid/preference/PreferenceScreen;Landroid/content/Context;)V
+    value = Lcom/android/settings_ex/accounts/AccountPreferenceBase;->addAlibabaAccountPreference(Landroid/preference/PreferenceScreen;Landroid/content/Context;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accounts/AccountPreferenceBase;
+.field final synthetic this$0:Lcom/android/settings_ex/accounts/AccountPreferenceBase;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accounts/AccountPreferenceBase;)V
+.method constructor <init>(Lcom/android/settings_ex/accounts/AccountPreferenceBase;)V
     .locals 0
 
     .prologue
     .line 335
-    iput-object p1, p0, Lcom/android/settings/accounts/AccountPreferenceBase$2;->this$0:Lcom/android/settings/accounts/AccountPreferenceBase;
+    iput-object p1, p0, Lcom/android/settings_ex/accounts/AccountPreferenceBase$2;->this$0:Lcom/android/settings_ex/accounts/AccountPreferenceBase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,7 +51,7 @@
     .line 340
     const/4 v2, 0x1
 
-    sput-boolean v2, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isFirstStartWifiForSamsungCloud:Z
+    sput-boolean v2, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isFirstStartWifiForSamsungCloud:Z
 
     .line 341
     new-instance v1, Landroid/content/Intent;
@@ -63,9 +63,9 @@
     .line 343
     .local v1, "intent":Landroid/content/Intent;
     :try_start_0
-    iget-object v2, p0, Lcom/android/settings/accounts/AccountPreferenceBase$2;->this$0:Lcom/android/settings/accounts/AccountPreferenceBase;
+    iget-object v2, p0, Lcom/android/settings_ex/accounts/AccountPreferenceBase$2;->this$0:Lcom/android/settings_ex/accounts/AccountPreferenceBase;
 
-    invoke-virtual {v2, v1}, Lcom/android/settings/accounts/AccountPreferenceBase;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v2, v1}, Lcom/android/settings_ex/accounts/AccountPreferenceBase;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/TRoamingSettings$7;
+.class Lcom/android/settings_ex/TRoamingSettings$7;
 .super Landroid/content/BroadcastReceiver;
 .source "TRoamingSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/TRoamingSettings;
+    value = Lcom/android/settings_ex/TRoamingSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/TRoamingSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/TRoamingSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/TRoamingSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/TRoamingSettings;)V
     .locals 0
 
     .prologue
     .line 563
-    iput-object p1, p0, Lcom/android/settings/TRoamingSettings$7;->this$0:Lcom/android/settings/TRoamingSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/TRoamingSettings$7;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -55,20 +55,20 @@
     if-eqz v1, :cond_1
 
     .line 567
-    iget-object v1, p0, Lcom/android/settings/TRoamingSettings$7;->this$0:Lcom/android/settings/TRoamingSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/TRoamingSettings$7;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
-    # getter for: Lcom/android/settings/TRoamingSettings;->mUseDataRoaming:Landroid/preference/SwitchPreference;
-    invoke-static {v1}, Lcom/android/settings/TRoamingSettings;->access$100(Lcom/android/settings/TRoamingSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/TRoamingSettings;->mUseDataRoaming:Landroid/preference/SwitchPreference;
+    invoke-static {v1}, Lcom/android/settings_ex/TRoamingSettings;->access$100(Lcom/android/settings_ex/TRoamingSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
     .line 568
-    iget-object v1, p0, Lcom/android/settings/TRoamingSettings$7;->this$0:Lcom/android/settings/TRoamingSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/TRoamingSettings$7;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
-    # getter for: Lcom/android/settings/TRoamingSettings;->mUseDataRoaming:Landroid/preference/SwitchPreference;
-    invoke-static {v1}, Lcom/android/settings/TRoamingSettings;->access$100(Lcom/android/settings/TRoamingSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/TRoamingSettings;->mUseDataRoaming:Landroid/preference/SwitchPreference;
+    invoke-static {v1}, Lcom/android/settings_ex/TRoamingSettings;->access$100(Lcom/android/settings_ex/TRoamingSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v1
 
@@ -92,36 +92,36 @@
     if-eqz v1, :cond_0
 
     .line 570
-    iget-object v1, p0, Lcom/android/settings/TRoamingSettings$7;->this$0:Lcom/android/settings/TRoamingSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/TRoamingSettings$7;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
-    # getter for: Lcom/android/settings/TRoamingSettings;->mBackgroundData:Landroid/preference/SwitchPreference;
-    invoke-static {v1}, Lcom/android/settings/TRoamingSettings;->access$300(Lcom/android/settings/TRoamingSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/TRoamingSettings;->mBackgroundData:Landroid/preference/SwitchPreference;
+    invoke-static {v1}, Lcom/android/settings_ex/TRoamingSettings;->access$300(Lcom/android/settings_ex/TRoamingSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/TRoamingSettings$7;->this$0:Lcom/android/settings/TRoamingSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/TRoamingSettings$7;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
-    # invokes: Lcom/android/settings/TRoamingSettings;->isRestrictBackgroundEnabled()Z
-    invoke-static {v2}, Lcom/android/settings/TRoamingSettings;->access$900(Lcom/android/settings/TRoamingSettings;)Z
+    # invokes: Lcom/android/settings_ex/TRoamingSettings;->isRestrictBackgroundEnabled()Z
+    invoke-static {v2}, Lcom/android/settings_ex/TRoamingSettings;->access$900(Lcom/android/settings_ex/TRoamingSettings;)Z
 
     move-result v2
 
     invoke-virtual {v1, v2}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 571
-    iget-object v1, p0, Lcom/android/settings/TRoamingSettings$7;->this$0:Lcom/android/settings/TRoamingSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/TRoamingSettings$7;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
-    # getter for: Lcom/android/settings/TRoamingSettings;->loadingDialog:Landroid/app/ProgressDialog;
-    invoke-static {v1}, Lcom/android/settings/TRoamingSettings;->access$1000(Lcom/android/settings/TRoamingSettings;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/TRoamingSettings;->loadingDialog:Landroid/app/ProgressDialog;
+    invoke-static {v1}, Lcom/android/settings_ex/TRoamingSettings;->access$1000(Lcom/android/settings_ex/TRoamingSettings;)Landroid/app/ProgressDialog;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/settings/TRoamingSettings$7;->this$0:Lcom/android/settings/TRoamingSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/TRoamingSettings$7;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
-    # getter for: Lcom/android/settings/TRoamingSettings;->mBackgroundData:Landroid/preference/SwitchPreference;
-    invoke-static {v1}, Lcom/android/settings/TRoamingSettings;->access$300(Lcom/android/settings/TRoamingSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/TRoamingSettings;->mBackgroundData:Landroid/preference/SwitchPreference;
+    invoke-static {v1}, Lcom/android/settings_ex/TRoamingSettings;->access$300(Lcom/android/settings_ex/TRoamingSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v1
 

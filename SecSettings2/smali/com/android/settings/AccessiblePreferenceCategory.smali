@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/AccessiblePreferenceCategory;
+.class public Lcom/android/settings_ex/AccessiblePreferenceCategory;
 .super Landroid/preference/PreferenceCategory;
 .source "AccessiblePreferenceCategory.java"
 
@@ -31,7 +31,7 @@
     invoke-super {p0, p1}, Landroid/preference/PreferenceCategory;->onBindView(Landroid/view/View;)V
 
     .line 41
-    iget-object v0, p0, Lcom/android/settings/AccessiblePreferenceCategory;->mContentDescription:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/AccessiblePreferenceCategory;->mContentDescription:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
@@ -45,7 +45,7 @@
 
     .prologue
     .line 34
-    iput-object p1, p0, Lcom/android/settings/AccessiblePreferenceCategory;->mContentDescription:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/AccessiblePreferenceCategory;->mContentDescription:Ljava/lang/String;
 
     .line 35
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/users/UserSettings$7;
+.class Lcom/android/settings_ex/users/UserSettings$7;
 .super Ljava/lang/Object;
 .source "UserSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/users/UserSettings;->onCreateDialog(I)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/users/UserSettings;->onCreateDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/users/UserSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/users/UserSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/users/UserSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/users/UserSettings;)V
     .locals 0
 
     .prologue
     .line 642
-    iput-object p1, p0, Lcom/android/settings/users/UserSettings$7;->this$0:Lcom/android/settings/users/UserSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/users/UserSettings$7;->this$0:Lcom/android/settings_ex/users/UserSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,17 +43,17 @@
 
     .prologue
     .line 644
-    iget-object v0, p0, Lcom/android/settings/users/UserSettings$7;->this$0:Lcom/android/settings/users/UserSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserSettings$7;->this$0:Lcom/android/settings_ex/users/UserSettings;
 
-    iget-object v1, p0, Lcom/android/settings/users/UserSettings$7;->this$0:Lcom/android/settings/users/UserSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/users/UserSettings$7;->this$0:Lcom/android/settings_ex/users/UserSettings;
 
-    # getter for: Lcom/android/settings/users/UserSettings;->mAddedUserId:I
-    invoke-static {v1}, Lcom/android/settings/users/UserSettings;->access$1200(Lcom/android/settings/users/UserSettings;)I
+    # getter for: Lcom/android/settings_ex/users/UserSettings;->mAddedUserId:I
+    invoke-static {v1}, Lcom/android/settings_ex/users/UserSettings;->access$1200(Lcom/android/settings_ex/users/UserSettings;)I
 
     move-result v1
 
-    # invokes: Lcom/android/settings/users/UserSettings;->switchUserNow(I)V
-    invoke-static {v0, v1}, Lcom/android/settings/users/UserSettings;->access$1300(Lcom/android/settings/users/UserSettings;I)V
+    # invokes: Lcom/android/settings_ex/users/UserSettings;->switchUserNow(I)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/users/UserSettings;->access$1300(Lcom/android/settings_ex/users/UserSettings;I)V
 
     .line 645
     return-void

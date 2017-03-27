@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/widget/SpinnerCustomTextView;
+.class public Lcom/android/settings_ex/widget/SpinnerCustomTextView;
 .super Landroid/widget/TextView;
 .source "SpinnerCustomTextView.java"
 
@@ -18,12 +18,12 @@
     invoke-direct {p0, p1, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 33
-    iput-object p1, p0, Lcom/android/settings/widget/SpinnerCustomTextView;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/widget/SpinnerCustomTextView;->mContext:Landroid/content/Context;
 
     .line 34
-    iget-object v0, p0, Lcom/android/settings/widget/SpinnerCustomTextView;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/widget/SpinnerCustomTextView;->mContext:Landroid/content/Context;
 
-    invoke-static {v0, p0}, Lcom/android/settings/Utils;->setMaxFontScale(Landroid/content/Context;Landroid/widget/TextView;)V
+    invoke-static {v0, p0}, Lcom/android/settings_ex/Utils;->setMaxFontScale(Landroid/content/Context;Landroid/widget/TextView;)V
 
     .line 35
     return-void

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/notification/DummyPreference;
+.class public Lcom/android/settings_ex/notification/DummyPreference;
 .super Landroid/preference/Preference;
 .source "DummyPreference.java"
 
@@ -16,7 +16,7 @@
     .line 21
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lcom/android/settings/notification/DummyPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, v0}, Lcom/android/settings_ex/notification/DummyPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 22
     return-void
@@ -32,7 +32,7 @@
     invoke-direct {p0, p1, p2}, Landroid/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 26
-    iput-object p1, p0, Lcom/android/settings/notification/DummyPreference;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/DummyPreference;->mContext:Landroid/content/Context;
 
     .line 27
     return-void
@@ -48,7 +48,7 @@
     .line 31
     new-instance v1, Landroid/view/View;
 
-    iget-object v2, p0, Lcom/android/settings/notification/DummyPreference;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/DummyPreference;->mContext:Landroid/content/Context;
 
     invoke-direct {v1, v2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 

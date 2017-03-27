@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/nearby/ListItemListener;
+.class public Lcom/android/settings_ex/nearby/ListItemListener;
 .super Ljava/lang/Object;
 .source "ListItemListener.java"
 
@@ -34,17 +34,17 @@
     .line 15
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/nearby/ListItemListener;->mButton:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/android/settings_ex/nearby/ListItemListener;->mButton:Landroid/widget/Button;
 
     .line 17
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/nearby/ListItemListener;->mCheckedItem:Ljava/util/LinkedHashMap;
+    iput-object v0, p0, Lcom/android/settings_ex/nearby/ListItemListener;->mCheckedItem:Ljava/util/LinkedHashMap;
 
     .line 20
-    iput-object p1, p0, Lcom/android/settings/nearby/ListItemListener;->mButton:Landroid/widget/Button;
+    iput-object p1, p0, Lcom/android/settings_ex/nearby/ListItemListener;->mButton:Landroid/widget/Button;
 
     .line 21
     return-void
@@ -67,7 +67,7 @@
 
     .prologue
     .line 44
-    iget-object v0, p0, Lcom/android/settings/nearby/ListItemListener;->mCheckedItem:Ljava/util/LinkedHashMap;
+    iget-object v0, p0, Lcom/android/settings_ex/nearby/ListItemListener;->mCheckedItem:Ljava/util/LinkedHashMap;
 
     return-object v0
 .end method
@@ -110,7 +110,7 @@
 
     .line 27
     .local v0, "key":Ljava/lang/String;
-    iget-object v1, p0, Lcom/android/settings/nearby/ListItemListener;->mCheckedItem:Ljava/util/LinkedHashMap;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/ListItemListener;->mCheckedItem:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v1, v0}, Ljava/util/LinkedHashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -119,13 +119,13 @@
     if-eqz v1, :cond_0
 
     .line 28
-    iget-object v1, p0, Lcom/android/settings/nearby/ListItemListener;->mCheckedItem:Ljava/util/LinkedHashMap;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/ListItemListener;->mCheckedItem:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v1, v0}, Ljava/util/LinkedHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 33
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/nearby/ListItemListener;->mCheckedItem:Ljava/util/LinkedHashMap;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/ListItemListener;->mCheckedItem:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v1}, Ljava/util/LinkedHashMap;->isEmpty()Z
 
@@ -134,7 +134,7 @@
     if-eqz v1, :cond_1
 
     .line 35
-    iget-object v1, p0, Lcom/android/settings/nearby/ListItemListener;->mButton:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/ListItemListener;->mButton:Landroid/widget/Button;
 
     const/4 v2, 0x0
 
@@ -146,7 +146,7 @@
 
     .line 30
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/nearby/ListItemListener;->mCheckedItem:Ljava/util/LinkedHashMap;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/ListItemListener;->mCheckedItem:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v1, v0, v0}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -154,7 +154,7 @@
 
     .line 38
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/nearby/ListItemListener;->mButton:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/ListItemListener;->mButton:Landroid/widget/Button;
 
     const/4 v2, 0x1
 

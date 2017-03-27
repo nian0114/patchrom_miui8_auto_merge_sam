@@ -1,4 +1,4 @@
-.class Lcom/android/settings/applock/AppLockSettingsActivity$2;
+.class Lcom/android/settings_ex/applock/AppLockSettingsActivity$2;
 .super Ljava/lang/Object;
 .source "AppLockSettingsActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applock/AppLockSettingsActivity;
+    value = Lcom/android/settings_ex/applock/AppLockSettingsActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/applock/AppLockSettingsActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/applock/AppLockSettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/applock/AppLockSettingsActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/applock/AppLockSettingsActivity;)V
     .locals 0
 
     .prologue
     .line 93
-    iput-object p1, p0, Lcom/android/settings/applock/AppLockSettingsActivity$2;->this$0:Lcom/android/settings/applock/AppLockSettingsActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$2;->this$0:Lcom/android/settings_ex/applock/AppLockSettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,12 +42,12 @@
 
     .prologue
     .line 96
-    iget-object v1, p0, Lcom/android/settings/applock/AppLockSettingsActivity$2;->this$0:Lcom/android/settings/applock/AppLockSettingsActivity;
+    iget-object v1, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$2;->this$0:Lcom/android/settings_ex/applock/AppLockSettingsActivity;
 
-    iget-object v0, p0, Lcom/android/settings/applock/AppLockSettingsActivity$2;->this$0:Lcom/android/settings/applock/AppLockSettingsActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/AppLockSettingsActivity$2;->this$0:Lcom/android/settings_ex/applock/AppLockSettingsActivity;
 
-    # getter for: Lcom/android/settings/applock/AppLockSettingsActivity;->mMasterSwitch:Landroid/widget/Switch;
-    invoke-static {v0}, Lcom/android/settings/applock/AppLockSettingsActivity;->access$200(Lcom/android/settings/applock/AppLockSettingsActivity;)Landroid/widget/Switch;
+    # getter for: Lcom/android/settings_ex/applock/AppLockSettingsActivity;->mMasterSwitch:Landroid/widget/Switch;
+    invoke-static {v0}, Lcom/android/settings_ex/applock/AppLockSettingsActivity;->access$200(Lcom/android/settings_ex/applock/AppLockSettingsActivity;)Landroid/widget/Switch;
 
     move-result-object v0
 
@@ -64,7 +64,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/android/settings/applock/AppLockSettingsActivity;->setMasterSwitchView(Ljava/lang/Boolean;)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/applock/AppLockSettingsActivity;->setMasterSwitchView(Ljava/lang/Boolean;)V
 
     .line 97
     return-void

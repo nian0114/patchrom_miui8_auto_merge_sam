@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity$3;
+.class Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity$3;
 .super Ljava/lang/Object;
 .source "WifiSnsPoorConnectionActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->showSnsPoorConnectionDialog()V
+    value = Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->showSnsPoorConnectionDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;)V
     .locals 0
 
     .prologue
     .line 149
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity$3;->this$0:Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity$3;->this$0:Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -70,10 +70,10 @@
     if-nez v1, :cond_1
 
     .line 155
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity$3;->this$0:Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity$3;->this$0:Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;
 
-    # getter for: Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->access$000(Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->access$000(Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -90,17 +90,17 @@
     if-ne v1, v0, :cond_0
 
     .line 157
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity$3;->this$0:Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity$3;->this$0:Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;
 
     const-string v2, "POOR_DIALOG_ON"
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->sendGSIMdata(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->sendGSIMdata(Ljava/lang/String;)V
 
     .line 161
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity$3;->this$0:Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity$3;->this$0:Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;
 
-    invoke-virtual {v1}, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->finish()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->finish()V
 
     .line 164
     :goto_1
@@ -108,11 +108,11 @@
 
     .line 159
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity$3;->this$0:Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity$3;->this$0:Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;
 
     const-string v2, "POOR_DIALOG_OFF"
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/wifi/WifiSnsPoorConnectionActivity;->sendGSIMdata(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/wifi/WifiSnsPoorConnectionActivity;->sendGSIMdata(Ljava/lang/String;)V
 
     goto :goto_0
 

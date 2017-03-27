@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen android:title="@string/active_key_title"
   xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings_ex">
     <PreferenceCategory android:title="@string/category_customize" android:key="customize_category_key">
         <PreferenceScreen android:title="@string/active_key_short_press" android:key="short_press_key" />
         <PreferenceScreen android:title="@string/active_key_long_press" android:key="long_press_key" />

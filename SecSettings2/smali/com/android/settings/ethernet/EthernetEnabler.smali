@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/ethernet/EthernetEnabler;
+.class public Lcom/android/settings_ex/ethernet/EthernetEnabler;
 .super Ljava/lang/Object;
 .source "EthernetEnabler.java"
 
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/ethernet/EthernetEnabler$EthernetEnableTask;
+        Lcom/android/settings_ex/ethernet/EthernetEnabler$EthernetEnableTask;
     }
 .end annotation
 
@@ -19,7 +19,7 @@
 
 .field private mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
 
-.field private mEthConfigDialog:Lcom/android/settings/ethernet/EthernetConfigDialog;
+.field private mEthConfigDialog:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
 .field private mEthConfigPref:Landroid/preference/Preference;
 
@@ -27,7 +27,7 @@
 
 .field private final mEthStateReceiver:Landroid/content/BroadcastReceiver;
 
-.field private mEthernetSettings:Lcom/android/settings/ethernet/EthernetSettings;
+.field private mEthernetSettings:Lcom/android/settings_ex/ethernet/EthernetSettings;
 
 .field private final mIntentFilter:Landroid/content/IntentFilter;
 
@@ -57,33 +57,33 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 49
-    iput v5, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mStartMode:I
+    iput v5, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mStartMode:I
 
     .line 57
-    new-instance v0, Lcom/android/settings/ethernet/EthernetEnabler$1;
+    new-instance v0, Lcom/android/settings_ex/ethernet/EthernetEnabler$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/ethernet/EthernetEnabler$1;-><init>(Lcom/android/settings/ethernet/EthernetEnabler;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/ethernet/EthernetEnabler$1;-><init>(Lcom/android/settings_ex/ethernet/EthernetEnabler;)V
 
-    iput-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthStateReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthStateReceiver:Landroid/content/BroadcastReceiver;
 
     .line 139
-    iput-object p1, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mContext:Landroid/content/Context;
 
     .line 140
-    iput-object p3, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
+    iput-object p3, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
 
     .line 141
-    iput-object p4, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthConfigPref:Landroid/preference/Preference;
+    iput-object p4, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthConfigPref:Landroid/preference/Preference;
 
     .line 142
-    iput-object p2, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iput-object p2, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
     .line 144
     invoke-virtual {p3}, Landroid/preference/CheckBoxPreference;->getSummary()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mOriginalSummary:Ljava/lang/CharSequence;
+    iput-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mOriginalSummary:Ljava/lang/CharSequence;
 
     .line 145
     invoke-virtual {p3, v3}, Landroid/preference/CheckBoxPreference;->setPersistent(Z)V
@@ -101,7 +101,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iget-object v2, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
     invoke-virtual {v2}, Landroid/net/EthernetManager;->getEthState()I
 
@@ -117,7 +117,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iget-object v2, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
     invoke-virtual {v2}, Landroid/net/EthernetManager;->getStackConnected()Z
 
@@ -133,7 +133,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iget-object v2, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
     invoke-virtual {v2}, Landroid/net/EthernetManager;->getHWConnected()Z
 
@@ -149,7 +149,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iget-object v2, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
     invoke-virtual {v2}, Landroid/net/EthernetManager;->getCheckConnecting()I
 
@@ -166,7 +166,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 150
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
     invoke-virtual {v0}, Landroid/net/EthernetManager;->getEthState()I
 
@@ -177,19 +177,19 @@
     if-ne v0, v1, :cond_3
 
     .line 151
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v0, v4}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
 
     .line 152
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
 
     const v1, 0x7f0e00e0
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setSummary(I)V
 
     .line 171
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
     invoke-virtual {v0}, Landroid/net/EthernetManager;->getStackConnected()Z
 
@@ -197,7 +197,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
     invoke-virtual {v0}, Landroid/net/EthernetManager;->getHWConnected()Z
 
@@ -207,7 +207,7 @@
 
     .line 174
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
     invoke-virtual {v0}, Landroid/net/EthernetManager;->getCheckConnecting()I
 
@@ -216,19 +216,19 @@
     if-ne v0, v4, :cond_2
 
     .line 175
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v0, v3}, Landroid/preference/CheckBoxPreference;->setEnabled(Z)V
 
     .line 176
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v0, v6}, Landroid/preference/CheckBoxPreference;->setSummary(I)V
 
     .line 178
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
     invoke-virtual {v0, v5}, Landroid/net/EthernetManager;->setEthernetState(I)V
 
@@ -239,29 +239,29 @@
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mIntentFilter:Landroid/content/IntentFilter;
+    iput-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mIntentFilter:Landroid/content/IntentFilter;
 
     .line 198
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mIntentFilter:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mIntentFilter:Landroid/content/IntentFilter;
 
     const-string v1, "samsung.net.ethernet.ETH_STATE_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 200
-    iput v4, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mStartMode:I
+    iput v4, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mStartMode:I
 
     .line 202
     return-void
 
     .line 181
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v0, v3}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
 
     .line 182
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
 
     const v1, 0x7f0e15f9
 
@@ -271,7 +271,7 @@
 
     .line 186
     :cond_3
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
     invoke-virtual {v0}, Landroid/net/EthernetManager;->getEthState()I
 
@@ -280,62 +280,62 @@
     if-ne v0, v5, :cond_1
 
     .line 187
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v0, v3}, Landroid/preference/CheckBoxPreference;->setEnabled(Z)V
 
     .line 188
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v0, v6}, Landroid/preference/CheckBoxPreference;->setSummary(I)V
 
     goto :goto_0
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/ethernet/EthernetEnabler;II)V
+.method static synthetic access$000(Lcom/android/settings_ex/ethernet/EthernetEnabler;II)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ethernet/EthernetEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/ethernet/EthernetEnabler;
     .param p1, "x1"    # I
     .param p2, "x2"    # I
 
     .prologue
     .line 26
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/ethernet/EthernetEnabler;->handleEthStateChanged(II)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/ethernet/EthernetEnabler;->handleEthStateChanged(II)V
 
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/ethernet/EthernetEnabler;Landroid/net/NetworkInfo;)V
+.method static synthetic access$100(Lcom/android/settings_ex/ethernet/EthernetEnabler;Landroid/net/NetworkInfo;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ethernet/EthernetEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/ethernet/EthernetEnabler;
     .param p1, "x1"    # Landroid/net/NetworkInfo;
 
     .prologue
     .line 26
-    invoke-direct {p0, p1}, Lcom/android/settings/ethernet/EthernetEnabler;->handleNetworkStateChanged(Landroid/net/NetworkInfo;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/ethernet/EthernetEnabler;->handleNetworkStateChanged(Landroid/net/NetworkInfo;)V
 
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/ethernet/EthernetEnabler;)Landroid/net/EthernetManager;
+.method static synthetic access$200(Lcom/android/settings_ex/ethernet/EthernetEnabler;)Landroid/net/EthernetManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ethernet/EthernetEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/ethernet/EthernetEnabler;
 
     .prologue
     .line 26
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/ethernet/EthernetEnabler;Z)V
+.method static synthetic access$300(Lcom/android/settings_ex/ethernet/EthernetEnabler;Z)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ethernet/EthernetEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/ethernet/EthernetEnabler;
     .param p1, "x1"    # Z
 
     .prologue
     .line 26
-    invoke-direct {p0, p1}, Lcom/android/settings/ethernet/EthernetEnabler;->postEnableTaskFinishedUIUpdate(Z)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/ethernet/EthernetEnabler;->postEnableTaskFinishedUIUpdate(Z)V
 
     return-void
 .end method
@@ -355,7 +355,7 @@
     const/4 v1, 0x1
 
     .line 287
-    iget-object v3, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iget-object v3, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
     invoke-virtual {v3}, Landroid/net/EthernetManager;->getEthState()I
 
@@ -405,7 +405,7 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iget-object v5, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
     invoke-virtual {v5}, Landroid/net/EthernetManager;->getCheckConnecting()I
 
@@ -422,7 +422,7 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 293
-    iget-object v3, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iget-object v3, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
     invoke-virtual {v3}, Landroid/net/EthernetManager;->getCheckConnecting()I
 
@@ -431,7 +431,7 @@
     if-ne v3, v1, :cond_0
 
     .line 294
-    iput v1, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mStartMode:I
+    iput v1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mStartMode:I
 
     .line 295
     const-string v1, "SettingsEthEnabler"
@@ -454,7 +454,7 @@
     if-ne p2, v6, :cond_1
 
     :goto_1
-    invoke-virtual {p0, v1}, Lcom/android/settings/ethernet/EthernetEnabler;->setEthEnabled(Z)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/ethernet/EthernetEnabler;->setEthEnabled(Z)V
 
     goto :goto_0
 
@@ -473,10 +473,10 @@
     if-ne p2, v6, :cond_3
 
     :goto_2
-    invoke-virtual {p0, v1}, Lcom/android/settings/ethernet/EthernetEnabler;->setEthEnabled(Z)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/ethernet/EthernetEnabler;->setEthEnabled(Z)V
 
     .line 303
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
 
     const v2, 0x7f0e15fb
 
@@ -508,7 +508,7 @@
     if-ne p2, v6, :cond_6
 
     :goto_3
-    invoke-virtual {p0, v1}, Lcom/android/settings/ethernet/EthernetEnabler;->setEthEnabled(Z)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/ethernet/EthernetEnabler;->setEthEnabled(Z)V
 
     goto :goto_0
 
@@ -558,7 +558,7 @@
     const/4 v3, 0x1
 
     .line 108
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
     invoke-virtual {v1}, Landroid/net/EthernetManager;->getEthState()I
 
@@ -574,12 +574,12 @@
 
     .line 113
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v1, p1}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
 
     .line 114
-    iget-object v2, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
 
     if-eqz p1, :cond_2
 
@@ -589,7 +589,7 @@
     invoke-virtual {v2, v1}, Landroid/preference/CheckBoxPreference;->setSummary(I)V
 
     .line 116
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v1, v3}, Landroid/preference/CheckBoxPreference;->setEnabled(Z)V
 
@@ -611,7 +611,7 @@
 
     .prologue
     .line 205
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
     return-object v0
 .end method
@@ -661,7 +661,7 @@
     if-nez v0, :cond_0
 
     .line 228
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
     const/4 v1, 0x1
 
@@ -676,7 +676,7 @@
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/ethernet/EthernetEnabler;->setEthEnabled(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/ethernet/EthernetEnabler;->setEthEnabled(Z)V
 
     .line 231
     const/4 v0, 0x0
@@ -691,17 +691,17 @@
     .line 217
     const/4 v0, 0x3
 
-    iput v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mStartMode:I
+    iput v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mStartMode:I
 
     .line 218
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mContext:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthStateReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthStateReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 219
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
 
     const/4 v1, 0x0
 
@@ -716,7 +716,7 @@
 
     .prologue
     .line 209
-    iget v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mStartMode:I
+    iget v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mStartMode:I
 
     const/4 v1, 0x1
 
@@ -725,20 +725,20 @@
     .line 210
     const/4 v0, 0x2
 
-    iput v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mStartMode:I
+    iput v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mStartMode:I
 
     .line 212
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mContext:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthStateReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthStateReceiver:Landroid/content/BroadcastReceiver;
 
-    iget-object v2, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mIntentFilter:Landroid/content/IntentFilter;
+    iget-object v2, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mIntentFilter:Landroid/content/IntentFilter;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 213
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v0, p0}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -776,7 +776,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iget-object v3, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
     invoke-virtual {v3}, Landroid/net/EthernetManager;->getEthState()I
 
@@ -796,14 +796,14 @@
     if-ne p1, v4, :cond_1
 
     .line 274
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/preference/CheckBoxPreference;->setEnabled(Z)V
 
     .line 276
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
 
     const v2, 0x7f0e15fa
 
@@ -816,7 +816,7 @@
 
     .line 278
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
     invoke-virtual {v1}, Landroid/net/EthernetManager;->getEthState()I
 
@@ -827,7 +827,7 @@
     if-eq v0, v4, :cond_0
 
     .line 281
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
 
     const/4 v2, 0x1
 
@@ -836,13 +836,13 @@
     goto :goto_0
 .end method
 
-.method public setConfigDialog(Lcom/android/settings/ethernet/EthernetConfigDialog;)V
+.method public setConfigDialog(Lcom/android/settings_ex/ethernet/EthernetConfigDialog;)V
     .locals 0
-    .param p1, "Dialog"    # Lcom/android/settings/ethernet/EthernetConfigDialog;
+    .param p1, "Dialog"    # Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
     .prologue
     .line 75
-    iput-object p1, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthConfigDialog:Lcom/android/settings/ethernet/EthernetConfigDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthConfigDialog:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
     .line 76
     return-void
@@ -862,7 +862,7 @@
     const/4 v5, 0x1
 
     .line 237
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
     invoke-virtual {v1}, Landroid/net/EthernetManager;->getEthState()I
 
@@ -915,7 +915,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 244
-    invoke-direct {p0, p1}, Lcom/android/settings/ethernet/EthernetEnabler;->postEnableTaskFinishedUIUpdate(Z)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/ethernet/EthernetEnabler;->postEnableTaskFinishedUIUpdate(Z)V
 
     .line 267
     :goto_0
@@ -923,7 +923,7 @@
 
     .line 249
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v1, v6}, Landroid/preference/CheckBoxPreference;->setEnabled(Z)V
 
@@ -937,7 +937,7 @@
     if-eqz p1, :cond_2
 
     .line 252
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthManager:Landroid/net/EthernetManager;
 
     invoke-virtual {v1}, Landroid/net/EthernetManager;->ethConfigured()Z
 
@@ -946,22 +946,22 @@
     if-eq v1, v5, :cond_1
 
     .line 254
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthConfigDialog:Lcom/android/settings/ethernet/EthernetConfigDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthConfigDialog:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
-    invoke-virtual {v1}, Lcom/android/settings/ethernet/EthernetConfigDialog;->enableAfterConfig()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->enableAfterConfig()V
 
     .line 255
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthernetSettings:Lcom/android/settings/ethernet/EthernetSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthernetSettings:Lcom/android/settings_ex/ethernet/EthernetSettings;
 
-    invoke-virtual {v1, v5}, Lcom/android/settings/ethernet/EthernetSettings;->showEthernetSettingsDialog(I)V
+    invoke-virtual {v1, v5}, Lcom/android/settings_ex/ethernet/EthernetSettings;->showEthernetSettingsDialog(I)V
 
     goto :goto_0
 
     .line 261
     :cond_1
-    new-instance v1, Lcom/android/settings/ethernet/EthernetEnabler$EthernetEnableTask;
+    new-instance v1, Lcom/android/settings_ex/ethernet/EthernetEnabler$EthernetEnableTask;
 
-    invoke-direct {v1, p0, v7}, Lcom/android/settings/ethernet/EthernetEnabler$EthernetEnableTask;-><init>(Lcom/android/settings/ethernet/EthernetEnabler;Lcom/android/settings/ethernet/EthernetEnabler$1;)V
+    invoke-direct {v1, p0, v7}, Lcom/android/settings_ex/ethernet/EthernetEnabler$EthernetEnableTask;-><init>(Lcom/android/settings_ex/ethernet/EthernetEnabler;Lcom/android/settings_ex/ethernet/EthernetEnabler$1;)V
 
     new-array v2, v4, [Ljava/lang/String;
 
@@ -989,10 +989,10 @@
 
     aput-object v3, v2, v5
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/ethernet/EthernetEnabler$EthernetEnableTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/ethernet/EthernetEnabler$EthernetEnableTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     .line 262
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthCheckBoxPref:Landroid/preference/CheckBoxPreference;
 
     const v2, 0x7f0e15fa
 
@@ -1002,9 +1002,9 @@
 
     .line 265
     :cond_2
-    new-instance v1, Lcom/android/settings/ethernet/EthernetEnabler$EthernetEnableTask;
+    new-instance v1, Lcom/android/settings_ex/ethernet/EthernetEnabler$EthernetEnableTask;
 
-    invoke-direct {v1, p0, v7}, Lcom/android/settings/ethernet/EthernetEnabler$EthernetEnableTask;-><init>(Lcom/android/settings/ethernet/EthernetEnabler;Lcom/android/settings/ethernet/EthernetEnabler$1;)V
+    invoke-direct {v1, p0, v7}, Lcom/android/settings_ex/ethernet/EthernetEnabler$EthernetEnableTask;-><init>(Lcom/android/settings_ex/ethernet/EthernetEnabler;Lcom/android/settings_ex/ethernet/EthernetEnabler$1;)V
 
     new-array v2, v4, [Ljava/lang/String;
 
@@ -1032,18 +1032,18 @@
 
     aput-object v3, v2, v5
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/ethernet/EthernetEnabler$EthernetEnableTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/ethernet/EthernetEnabler$EthernetEnableTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     goto :goto_0
 .end method
 
-.method public setEthernetSettings(Lcom/android/settings/ethernet/EthernetSettings;)V
+.method public setEthernetSettings(Lcom/android/settings_ex/ethernet/EthernetSettings;)V
     .locals 0
-    .param p1, "EthSettings"    # Lcom/android/settings/ethernet/EthernetSettings;
+    .param p1, "EthSettings"    # Lcom/android/settings_ex/ethernet/EthernetSettings;
 
     .prologue
     .line 79
-    iput-object p1, p0, Lcom/android/settings/ethernet/EthernetEnabler;->mEthernetSettings:Lcom/android/settings/ethernet/EthernetSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler;->mEthernetSettings:Lcom/android/settings_ex/ethernet/EthernetSettings;
 
     .line 80
     return-void

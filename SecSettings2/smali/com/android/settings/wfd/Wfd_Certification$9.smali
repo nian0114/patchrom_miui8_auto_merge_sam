@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wfd/Wfd_Certification$9;
+.class Lcom/android/settings_ex/wfd/Wfd_Certification$9;
 .super Ljava/lang/Object;
 .source "Wfd_Certification.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wfd/Wfd_Certification;->setListenMode(Z)V
+    value = Lcom/android/settings_ex/wfd/Wfd_Certification;->setListenMode(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wfd/Wfd_Certification;
+.field final synthetic this$0:Lcom/android/settings_ex/wfd/Wfd_Certification;
 
 .field final synthetic val$enable:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wfd/Wfd_Certification;Z)V
+.method constructor <init>(Lcom/android/settings_ex/wfd/Wfd_Certification;Z)V
     .locals 0
 
     .prologue
     .line 288
-    iput-object p1, p0, Lcom/android/settings/wfd/Wfd_Certification$9;->this$0:Lcom/android/settings/wfd/Wfd_Certification;
+    iput-object p1, p0, Lcom/android/settings_ex/wfd/Wfd_Certification$9;->this$0:Lcom/android/settings_ex/wfd/Wfd_Certification;
 
-    iput-boolean p2, p0, Lcom/android/settings/wfd/Wfd_Certification$9;->val$enable:Z
+    iput-boolean p2, p0, Lcom/android/settings_ex/wfd/Wfd_Certification$9;->val$enable:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -58,7 +58,7 @@
 
     move-result-object v2
 
-    iget-boolean v0, p0, Lcom/android/settings/wfd/Wfd_Certification$9;->val$enable:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wfd/Wfd_Certification$9;->val$enable:Z
 
     if-eqz v0, :cond_0
 
@@ -118,7 +118,7 @@
 
     move-result-object v2
 
-    iget-boolean v0, p0, Lcom/android/settings/wfd/Wfd_Certification$9;->val$enable:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wfd/Wfd_Certification$9;->val$enable:Z
 
     if-eqz v0, :cond_0
 

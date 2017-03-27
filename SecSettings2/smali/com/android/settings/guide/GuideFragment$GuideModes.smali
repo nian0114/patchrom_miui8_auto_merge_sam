@@ -1,11 +1,11 @@
-.class final enum Lcom/android/settings/guide/GuideFragment$GuideModes;
+.class final enum Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 .super Ljava/lang/Enum;
 .source "GuideFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/guide/GuideFragment;
+    value = Lcom/android/settings_ex/guide/GuideFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,22 +17,22 @@
     value = {
         "Ljava/lang/Enum",
         "<",
-        "Lcom/android/settings/guide/GuideFragment$GuideModes;",
+        "Lcom/android/settings_ex/guide/GuideFragment$GuideModes;",
         ">;"
     }
 .end annotation
 
 
 # static fields
-.field private static final synthetic $VALUES:[Lcom/android/settings/guide/GuideFragment$GuideModes;
+.field private static final synthetic $VALUES:[Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
-.field public static final enum BLUETOOTH:Lcom/android/settings/guide/GuideFragment$GuideModes;
+.field public static final enum BLUETOOTH:Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
-.field public static final enum BLUETOOTH_SETTING:Lcom/android/settings/guide/GuideFragment$GuideModes;
+.field public static final enum BLUETOOTH_SETTING:Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
-.field public static final enum WIFI:Lcom/android/settings/guide/GuideFragment$GuideModes;
+.field public static final enum WIFI:Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
-.field public static final enum WIFI_SETTINGS:Lcom/android/settings/guide/GuideFragment$GuideModes;
+.field public static final enum WIFI_SETTINGS:Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
 
 # direct methods
@@ -49,63 +49,63 @@
     const/4 v2, 0x0
 
     .line 154
-    new-instance v0, Lcom/android/settings/guide/GuideFragment$GuideModes;
+    new-instance v0, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
     const-string v1, "WIFI"
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/guide/GuideFragment$GuideModes;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/settings/guide/GuideFragment$GuideModes;->WIFI:Lcom/android/settings/guide/GuideFragment$GuideModes;
+    sput-object v0, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;->WIFI:Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
     .line 155
-    new-instance v0, Lcom/android/settings/guide/GuideFragment$GuideModes;
+    new-instance v0, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
     const-string v1, "WIFI_SETTINGS"
 
-    invoke-direct {v0, v1, v3}, Lcom/android/settings/guide/GuideFragment$GuideModes;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v3}, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/settings/guide/GuideFragment$GuideModes;->WIFI_SETTINGS:Lcom/android/settings/guide/GuideFragment$GuideModes;
+    sput-object v0, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;->WIFI_SETTINGS:Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
     .line 156
-    new-instance v0, Lcom/android/settings/guide/GuideFragment$GuideModes;
+    new-instance v0, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
     const-string v1, "BLUETOOTH"
 
-    invoke-direct {v0, v1, v4}, Lcom/android/settings/guide/GuideFragment$GuideModes;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v4}, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/settings/guide/GuideFragment$GuideModes;->BLUETOOTH:Lcom/android/settings/guide/GuideFragment$GuideModes;
+    sput-object v0, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;->BLUETOOTH:Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
     .line 157
-    new-instance v0, Lcom/android/settings/guide/GuideFragment$GuideModes;
+    new-instance v0, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
     const-string v1, "BLUETOOTH_SETTING"
 
-    invoke-direct {v0, v1, v5}, Lcom/android/settings/guide/GuideFragment$GuideModes;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v5}, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/settings/guide/GuideFragment$GuideModes;->BLUETOOTH_SETTING:Lcom/android/settings/guide/GuideFragment$GuideModes;
+    sput-object v0, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;->BLUETOOTH_SETTING:Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
     .line 153
     const/4 v0, 0x4
 
-    new-array v0, v0, [Lcom/android/settings/guide/GuideFragment$GuideModes;
+    new-array v0, v0, [Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
-    sget-object v1, Lcom/android/settings/guide/GuideFragment$GuideModes;->WIFI:Lcom/android/settings/guide/GuideFragment$GuideModes;
+    sget-object v1, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;->WIFI:Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/android/settings/guide/GuideFragment$GuideModes;->WIFI_SETTINGS:Lcom/android/settings/guide/GuideFragment$GuideModes;
+    sget-object v1, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;->WIFI_SETTINGS:Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/android/settings/guide/GuideFragment$GuideModes;->BLUETOOTH:Lcom/android/settings/guide/GuideFragment$GuideModes;
+    sget-object v1, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;->BLUETOOTH:Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
     aput-object v1, v0, v4
 
-    sget-object v1, Lcom/android/settings/guide/GuideFragment$GuideModes;->BLUETOOTH_SETTING:Lcom/android/settings/guide/GuideFragment$GuideModes;
+    sget-object v1, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;->BLUETOOTH_SETTING:Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
     aput-object v1, v0, v5
 
-    sput-object v0, Lcom/android/settings/guide/GuideFragment$GuideModes;->$VALUES:[Lcom/android/settings/guide/GuideFragment$GuideModes;
+    sput-object v0, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;->$VALUES:[Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
     return-void
 .end method
@@ -125,35 +125,35 @@
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcom/android/settings/guide/GuideFragment$GuideModes;
+.method public static valueOf(Ljava/lang/String;)Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
     .locals 1
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 153
-    const-class v0, Lcom/android/settings/guide/GuideFragment$GuideModes;
+    const-class v0, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/guide/GuideFragment$GuideModes;
+    check-cast v0, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
     return-object v0
 .end method
 
-.method public static values()[Lcom/android/settings/guide/GuideFragment$GuideModes;
+.method public static values()[Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
     .locals 1
 
     .prologue
     .line 153
-    sget-object v0, Lcom/android/settings/guide/GuideFragment$GuideModes;->$VALUES:[Lcom/android/settings/guide/GuideFragment$GuideModes;
+    sget-object v0, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;->$VALUES:[Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
-    invoke-virtual {v0}, [Lcom/android/settings/guide/GuideFragment$GuideModes;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [Lcom/android/settings_ex/guide/GuideFragment$GuideModes;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lcom/android/settings/guide/GuideFragment$GuideModes;
+    check-cast v0, [Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
     return-object v0
 .end method

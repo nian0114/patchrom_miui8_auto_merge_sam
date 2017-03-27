@@ -1,11 +1,11 @@
-.class Lcom/android/settings/deviceinfo/StatusVZW$11;
+.class Lcom/android/settings_ex/deviceinfo/StatusVZW$11;
 .super Landroid/database/ContentObserver;
 .source "StatusVZW.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/StatusVZW;
+    value = Lcom/android/settings_ex/deviceinfo/StatusVZW;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/StatusVZW;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/StatusVZW;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 1561
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/StatusVZW$11;->this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW$11;->this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -67,13 +67,13 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1566
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW$11;->this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW$11;->this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
-    new-instance v1, Lcom/android/settings/deviceinfo/StatusVZW$11$1;
+    new-instance v1, Lcom/android/settings_ex/deviceinfo/StatusVZW$11$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/deviceinfo/StatusVZW$11$1;-><init>(Lcom/android/settings/deviceinfo/StatusVZW$11;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW$11$1;-><init>(Lcom/android/settings_ex/deviceinfo/StatusVZW$11;)V
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->runOnUiThread(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 1572
     return-void

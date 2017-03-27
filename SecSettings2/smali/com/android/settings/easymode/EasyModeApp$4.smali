@@ -1,4 +1,4 @@
-.class Lcom/android/settings/easymode/EasyModeApp$4;
+.class Lcom/android/settings_ex/easymode/EasyModeApp$4;
 .super Ljava/lang/Object;
 .source "EasyModeApp.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/easymode/EasyModeApp;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    value = Lcom/android/settings_ex/easymode/EasyModeApp;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/easymode/EasyModeApp;
+.field final synthetic this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/easymode/EasyModeApp;)V
+.method constructor <init>(Lcom/android/settings_ex/easymode/EasyModeApp;)V
     .locals 0
 
     .prologue
     .line 993
-    iput-object p1, p0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iput-object p1, p0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,22 +44,22 @@
     .line 996
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    invoke-static {}, Lcom/android/settings/Utils;->isDashboardTab()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDashboardTab()Z
 
     move-result v13
 
-    # setter for: Lcom/android/settings/easymode/EasyModeApp;->bEnableTab:Z
-    invoke-static {v12, v13}, Lcom/android/settings/easymode/EasyModeApp;->access$202(Lcom/android/settings/easymode/EasyModeApp;Z)Z
+    # setter for: Lcom/android/settings_ex/easymode/EasyModeApp;->bEnableTab:Z
+    invoke-static {v12, v13}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$202(Lcom/android/settings_ex/easymode/EasyModeApp;Z)Z
 
     .line 998
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    # getter for: Lcom/android/settings/easymode/EasyModeApp;->bEnableTab:Z
-    invoke-static {v12}, Lcom/android/settings/easymode/EasyModeApp;->access$200(Lcom/android/settings/easymode/EasyModeApp;)Z
+    # getter for: Lcom/android/settings_ex/easymode/EasyModeApp;->bEnableTab:Z
+    invoke-static {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$200(Lcom/android/settings_ex/easymode/EasyModeApp;)Z
 
     move-result v12
 
@@ -68,38 +68,38 @@
     .line 999
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    invoke-virtual {v12}, Lcom/android/settings/easymode/EasyModeApp;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
-    check-cast v12, Lcom/android/settings/SettingsActivity;
+    check-cast v12, Lcom/android/settings_ex/SettingsActivity;
 
-    invoke-virtual {v12}, Lcom/android/settings/SettingsActivity;->setRedrawTab()V
+    invoke-virtual {v12}, Lcom/android/settings_ex/SettingsActivity;->setRedrawTab()V
 
     .line 1002
     :cond_0
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    # invokes: Lcom/android/settings/easymode/EasyModeApp;->goToPersonal()V
-    invoke-static {v12}, Lcom/android/settings/easymode/EasyModeApp;->access$300(Lcom/android/settings/easymode/EasyModeApp;)V
+    # invokes: Lcom/android/settings_ex/easymode/EasyModeApp;->goToPersonal()V
+    invoke-static {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$300(Lcom/android/settings_ex/easymode/EasyModeApp;)V
 
     .line 1003
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    # getter for: Lcom/android/settings/easymode/EasyModeApp;->mEasyModeEnabler:Lcom/android/settings/easymode/EasyModeEnabler;
-    invoke-static {v12}, Lcom/android/settings/easymode/EasyModeApp;->access$400(Lcom/android/settings/easymode/EasyModeApp;)Lcom/android/settings/easymode/EasyModeEnabler;
+    # getter for: Lcom/android/settings_ex/easymode/EasyModeApp;->mEasyModeEnabler:Lcom/android/settings_ex/easymode/EasyModeEnabler;
+    invoke-static {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$400(Lcom/android/settings_ex/easymode/EasyModeApp;)Lcom/android/settings_ex/easymode/EasyModeEnabler;
 
     move-result-object v12
 
     const-string v13, "easy_mode_switch"
 
-    invoke-virtual {v12, v13}, Lcom/android/settings/easymode/EasyModeEnabler;->getEasyModeAppState(Ljava/lang/String;)I
+    invoke-virtual {v12, v13}, Lcom/android/settings_ex/easymode/EasyModeEnabler;->getEasyModeAppState(Ljava/lang/String;)I
 
     move-result v9
 
@@ -113,10 +113,10 @@
     .local v5, "homeActivities":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/pm/ResolveInfo;>;"
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    # getter for: Lcom/android/settings/easymode/EasyModeApp;->mPm:Landroid/content/pm/PackageManager;
-    invoke-static {v12}, Lcom/android/settings/easymode/EasyModeApp;->access$500(Lcom/android/settings/easymode/EasyModeApp;)Landroid/content/pm/PackageManager;
+    # getter for: Lcom/android/settings_ex/easymode/EasyModeApp;->mPm:Landroid/content/pm/PackageManager;
+    invoke-static {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$500(Lcom/android/settings_ex/easymode/EasyModeApp;)Landroid/content/pm/PackageManager;
 
     move-result-object v12
 
@@ -150,10 +150,10 @@
 
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v14, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    # getter for: Lcom/android/settings/easymode/EasyModeApp;->mModeState:I
-    invoke-static {v14}, Lcom/android/settings/easymode/EasyModeApp;->access$600(Lcom/android/settings/easymode/EasyModeApp;)I
+    # getter for: Lcom/android/settings_ex/easymode/EasyModeApp;->mModeState:I
+    invoke-static {v14}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$600(Lcom/android/settings_ex/easymode/EasyModeApp;)I
 
     move-result v14
 
@@ -182,10 +182,10 @@
 
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v14, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    # invokes: Lcom/android/settings/easymode/EasyModeApp;->isDefaultEasyLauncher()Z
-    invoke-static {v14}, Lcom/android/settings/easymode/EasyModeApp;->access$700(Lcom/android/settings/easymode/EasyModeApp;)Z
+    # invokes: Lcom/android/settings_ex/easymode/EasyModeApp;->isDefaultEasyLauncher()Z
+    invoke-static {v14}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$700(Lcom/android/settings_ex/easymode/EasyModeApp;)Z
 
     move-result v14
 
@@ -202,10 +202,10 @@
     .line 1008
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    # invokes: Lcom/android/settings/easymode/EasyModeApp;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v12}, Lcom/android/settings/easymode/EasyModeApp;->access$800(Lcom/android/settings/easymode/EasyModeApp;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/easymode/EasyModeApp;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$800(Lcom/android/settings_ex/easymode/EasyModeApp;)Landroid/content/ContentResolver;
 
     move-result-object v13
 
@@ -213,10 +213,10 @@
 
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    # getter for: Lcom/android/settings/easymode/EasyModeApp;->easy_mode_select_all:Landroid/preference/SwitchPreference;
-    invoke-static {v12}, Lcom/android/settings/easymode/EasyModeApp;->access$900(Lcom/android/settings/easymode/EasyModeApp;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/easymode/EasyModeApp;->easy_mode_select_all:Landroid/preference/SwitchPreference;
+    invoke-static {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$900(Lcom/android/settings_ex/easymode/EasyModeApp;)Landroid/preference/SwitchPreference;
 
     move-result-object v12
 
@@ -234,12 +234,12 @@
     .line 1010
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
     const-string v13, "activity"
 
-    # invokes: Lcom/android/settings/easymode/EasyModeApp;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-    invoke-static {v12, v13}, Lcom/android/settings/easymode/EasyModeApp;->access$1000(Lcom/android/settings/easymode/EasyModeApp;Ljava/lang/String;)Ljava/lang/Object;
+    # invokes: Lcom/android/settings_ex/easymode/EasyModeApp;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v12, v13}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$1000(Lcom/android/settings_ex/easymode/EasyModeApp;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -278,10 +278,10 @@
     .line 1013
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    # getter for: Lcom/android/settings/easymode/EasyModeApp;->mModeState:I
-    invoke-static {v12}, Lcom/android/settings/easymode/EasyModeApp;->access$600(Lcom/android/settings/easymode/EasyModeApp;)I
+    # getter for: Lcom/android/settings_ex/easymode/EasyModeApp;->mModeState:I
+    invoke-static {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$600(Lcom/android/settings_ex/easymode/EasyModeApp;)I
 
     move-result v12
 
@@ -292,10 +292,10 @@
     .line 1014
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    # invokes: Lcom/android/settings/easymode/EasyModeApp;->showPinWindowToast()V
-    invoke-static {v12}, Lcom/android/settings/easymode/EasyModeApp;->access$1100(Lcom/android/settings/easymode/EasyModeApp;)V
+    # invokes: Lcom/android/settings_ex/easymode/EasyModeApp;->showPinWindowToast()V
+    invoke-static {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$1100(Lcom/android/settings_ex/easymode/EasyModeApp;)V
 
     .line 1085
     :goto_1
@@ -315,10 +315,10 @@
     :cond_2
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    # getter for: Lcom/android/settings/easymode/EasyModeApp;->mModeState:I
-    invoke-static {v12}, Lcom/android/settings/easymode/EasyModeApp;->access$600(Lcom/android/settings/easymode/EasyModeApp;)I
+    # getter for: Lcom/android/settings_ex/easymode/EasyModeApp;->mModeState:I
+    invoke-static {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$600(Lcom/android/settings_ex/easymode/EasyModeApp;)I
 
     move-result v12
 
@@ -326,10 +326,10 @@
 
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    # invokes: Lcom/android/settings/easymode/EasyModeApp;->checkLeastOnEasyMode()Z
-    invoke-static {v12}, Lcom/android/settings/easymode/EasyModeApp;->access$1200(Lcom/android/settings/easymode/EasyModeApp;)Z
+    # invokes: Lcom/android/settings_ex/easymode/EasyModeApp;->checkLeastOnEasyMode()Z
+    invoke-static {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$1200(Lcom/android/settings_ex/easymode/EasyModeApp;)Z
 
     move-result v12
 
@@ -338,9 +338,9 @@
     .line 1019
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    invoke-virtual {v12}, Lcom/android/settings/easymode/EasyModeApp;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
@@ -362,10 +362,10 @@
 
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    # getter for: Lcom/android/settings/easymode/EasyModeApp;->mModeState:I
-    invoke-static {v12}, Lcom/android/settings/easymode/EasyModeApp;->access$600(Lcom/android/settings/easymode/EasyModeApp;)I
+    # getter for: Lcom/android/settings_ex/easymode/EasyModeApp;->mModeState:I
+    invoke-static {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$600(Lcom/android/settings_ex/easymode/EasyModeApp;)I
 
     move-result v12
 
@@ -376,57 +376,57 @@
     .line 1021
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    invoke-virtual {v12}, Lcom/android/settings/easymode/EasyModeApp;->setStandardFont()V
+    invoke-virtual {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->setStandardFont()V
 
     .line 1022
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
     const/4 v13, 0x0
 
-    invoke-virtual {v12, v13}, Lcom/android/settings/easymode/EasyModeApp;->setDefaultLauncher(Z)V
+    invoke-virtual {v12, v13}, Lcom/android/settings_ex/easymode/EasyModeApp;->setDefaultLauncher(Z)V
 
     .line 1023
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
     const/4 v13, 0x0
 
-    # setter for: Lcom/android/settings/easymode/EasyModeApp;->selected_value:I
-    invoke-static {v12, v13}, Lcom/android/settings/easymode/EasyModeApp;->access$1302(Lcom/android/settings/easymode/EasyModeApp;I)I
+    # setter for: Lcom/android/settings_ex/easymode/EasyModeApp;->selected_value:I
+    invoke-static {v12, v13}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$1302(Lcom/android/settings_ex/easymode/EasyModeApp;I)I
 
     .line 1024
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    # getter for: Lcom/android/settings/easymode/EasyModeApp;->mEasyModeEnabler:Lcom/android/settings/easymode/EasyModeEnabler;
-    invoke-static {v12}, Lcom/android/settings/easymode/EasyModeApp;->access$400(Lcom/android/settings/easymode/EasyModeApp;)Lcom/android/settings/easymode/EasyModeEnabler;
+    # getter for: Lcom/android/settings_ex/easymode/EasyModeApp;->mEasyModeEnabler:Lcom/android/settings_ex/easymode/EasyModeEnabler;
+    invoke-static {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$400(Lcom/android/settings_ex/easymode/EasyModeApp;)Lcom/android/settings_ex/easymode/EasyModeEnabler;
 
     move-result-object v12
 
-    invoke-virtual {v12}, Lcom/android/settings/easymode/EasyModeEnabler;->startStandardMode()V
+    invoke-virtual {v12}, Lcom/android/settings_ex/easymode/EasyModeEnabler;->startStandardMode()V
 
     .line 1025
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
     const/4 v13, 0x0
 
-    # invokes: Lcom/android/settings/easymode/EasyModeApp;->startLauncher(Z)V
-    invoke-static {v12, v13}, Lcom/android/settings/easymode/EasyModeApp;->access$1400(Lcom/android/settings/easymode/EasyModeApp;Z)V
+    # invokes: Lcom/android/settings_ex/easymode/EasyModeApp;->startLauncher(Z)V
+    invoke-static {v12, v13}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$1400(Lcom/android/settings_ex/easymode/EasyModeApp;Z)V
 
     .line 1026
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    invoke-virtual {v12}, Lcom/android/settings/easymode/EasyModeApp;->finish()V
+    invoke-virtual {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->finish()V
 
     goto :goto_1
 
@@ -438,10 +438,10 @@
 
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    # getter for: Lcom/android/settings/easymode/EasyModeApp;->mModeState:I
-    invoke-static {v12}, Lcom/android/settings/easymode/EasyModeApp;->access$600(Lcom/android/settings/easymode/EasyModeApp;)I
+    # getter for: Lcom/android/settings_ex/easymode/EasyModeApp;->mModeState:I
+    invoke-static {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$600(Lcom/android/settings_ex/easymode/EasyModeApp;)I
 
     move-result v12
 
@@ -463,9 +463,9 @@
     .line 1029
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    invoke-virtual {v12}, Lcom/android/settings/easymode/EasyModeApp;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->getResources()Landroid/content/res/Resources;
 
     move-result-object v12
 
@@ -484,17 +484,17 @@
     .line 1031
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    invoke-virtual {v12}, Lcom/android/settings/easymode/EasyModeApp;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v13, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    invoke-virtual {v13}, Lcom/android/settings/easymode/EasyModeApp;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v13}, Lcom/android/settings_ex/easymode/EasyModeApp;->getResources()Landroid/content/res/Resources;
 
     move-result-object v13
 
@@ -508,11 +508,11 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v0, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
     move-object/from16 v17, v0
 
-    invoke-virtual/range {v17 .. v17}, Lcom/android/settings/easymode/EasyModeApp;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {v17 .. v17}, Lcom/android/settings_ex/easymode/EasyModeApp;->getResources()Landroid/content/res/Resources;
 
     move-result-object v17
 
@@ -551,9 +551,9 @@
     .local v10, "mWpopup":Ljava/lang/Boolean;
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    invoke-virtual {v12}, Lcom/android/settings/easymode/EasyModeApp;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
@@ -650,9 +650,9 @@
 
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    invoke-virtual {v12}, Lcom/android/settings/easymode/EasyModeApp;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
@@ -667,22 +667,22 @@
     .line 1052
     const v12, 0x104000a
 
-    new-instance v13, Lcom/android/settings/easymode/EasyModeApp$4$1;
+    new-instance v13, Lcom/android/settings_ex/easymode/EasyModeApp$4$1;
 
     move-object/from16 v0, p0
 
-    invoke-direct {v13, v0}, Lcom/android/settings/easymode/EasyModeApp$4$1;-><init>(Lcom/android/settings/easymode/EasyModeApp$4;)V
+    invoke-direct {v13, v0}, Lcom/android/settings_ex/easymode/EasyModeApp$4$1;-><init>(Lcom/android/settings_ex/easymode/EasyModeApp$4;)V
 
     invoke-virtual {v1, v12, v13}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 1059
     const/high16 v12, 0x1040000
 
-    new-instance v13, Lcom/android/settings/easymode/EasyModeApp$4$2;
+    new-instance v13, Lcom/android/settings_ex/easymode/EasyModeApp$4$2;
 
     move-object/from16 v0, p0
 
-    invoke-direct {v13, v0}, Lcom/android/settings/easymode/EasyModeApp$4$2;-><init>(Lcom/android/settings/easymode/EasyModeApp$4;)V
+    invoke-direct {v13, v0}, Lcom/android/settings_ex/easymode/EasyModeApp$4$2;-><init>(Lcom/android/settings_ex/easymode/EasyModeApp$4;)V
 
     invoke-virtual {v1, v12, v13}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -706,10 +706,10 @@
     :cond_8
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    # invokes: Lcom/android/settings/easymode/EasyModeApp;->applyEasyMode()V
-    invoke-static {v12}, Lcom/android/settings/easymode/EasyModeApp;->access$1500(Lcom/android/settings/easymode/EasyModeApp;)V
+    # invokes: Lcom/android/settings_ex/easymode/EasyModeApp;->applyEasyMode()V
+    invoke-static {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$1500(Lcom/android/settings_ex/easymode/EasyModeApp;)V
 
     goto/16 :goto_1
 
@@ -723,10 +723,10 @@
 
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    # getter for: Lcom/android/settings/easymode/EasyModeApp;->mModeState:I
-    invoke-static {v12}, Lcom/android/settings/easymode/EasyModeApp;->access$600(Lcom/android/settings/easymode/EasyModeApp;)I
+    # getter for: Lcom/android/settings_ex/easymode/EasyModeApp;->mModeState:I
+    invoke-static {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$600(Lcom/android/settings_ex/easymode/EasyModeApp;)I
 
     move-result v12
 
@@ -736,10 +736,10 @@
 
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    # invokes: Lcom/android/settings/easymode/EasyModeApp;->isDefaultEasyLauncher()Z
-    invoke-static {v12}, Lcom/android/settings/easymode/EasyModeApp;->access$700(Lcom/android/settings/easymode/EasyModeApp;)Z
+    # invokes: Lcom/android/settings_ex/easymode/EasyModeApp;->isDefaultEasyLauncher()Z
+    invoke-static {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$700(Lcom/android/settings_ex/easymode/EasyModeApp;)Z
 
     move-result v12
 
@@ -751,21 +751,21 @@
     :cond_a
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
     const/4 v13, 0x0
 
-    invoke-virtual {v12, v13}, Lcom/android/settings/easymode/EasyModeApp;->setDefaultLauncher(Z)V
+    invoke-virtual {v12, v13}, Lcom/android/settings_ex/easymode/EasyModeApp;->setDefaultLauncher(Z)V
 
     .line 1073
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
     const/4 v13, 0x0
 
-    # invokes: Lcom/android/settings/easymode/EasyModeApp;->startLauncher(Z)V
-    invoke-static {v12, v13}, Lcom/android/settings/easymode/EasyModeApp;->access$1400(Lcom/android/settings/easymode/EasyModeApp;Z)V
+    # invokes: Lcom/android/settings_ex/easymode/EasyModeApp;->startLauncher(Z)V
+    invoke-static {v12, v13}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$1400(Lcom/android/settings_ex/easymode/EasyModeApp;Z)V
 
     goto/16 :goto_1
 
@@ -775,10 +775,10 @@
 
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    # getter for: Lcom/android/settings/easymode/EasyModeApp;->mModeState:I
-    invoke-static {v12}, Lcom/android/settings/easymode/EasyModeApp;->access$600(Lcom/android/settings/easymode/EasyModeApp;)I
+    # getter for: Lcom/android/settings_ex/easymode/EasyModeApp;->mModeState:I
+    invoke-static {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$600(Lcom/android/settings_ex/easymode/EasyModeApp;)I
 
     move-result v12
 
@@ -787,18 +787,18 @@
     .line 1075
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    # invokes: Lcom/android/settings/easymode/EasyModeApp;->saveEasyModeApps()V
-    invoke-static {v12}, Lcom/android/settings/easymode/EasyModeApp;->access$1600(Lcom/android/settings/easymode/EasyModeApp;)V
+    # invokes: Lcom/android/settings_ex/easymode/EasyModeApp;->saveEasyModeApps()V
+    invoke-static {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$1600(Lcom/android/settings_ex/easymode/EasyModeApp;)V
 
     .line 1076
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    # invokes: Lcom/android/settings/easymode/EasyModeApp;->isDefaultEasyLauncher()Z
-    invoke-static {v12}, Lcom/android/settings/easymode/EasyModeApp;->access$700(Lcom/android/settings/easymode/EasyModeApp;)Z
+    # invokes: Lcom/android/settings_ex/easymode/EasyModeApp;->isDefaultEasyLauncher()Z
+    invoke-static {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$700(Lcom/android/settings_ex/easymode/EasyModeApp;)Z
 
     move-result v12
 
@@ -807,9 +807,9 @@
     .line 1077
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    invoke-virtual {v12}, Lcom/android/settings/easymode/EasyModeApp;->finish()V
+    invoke-virtual {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->finish()V
 
     goto/16 :goto_1
 
@@ -817,21 +817,21 @@
     :cond_c
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
     const/4 v13, 0x1
 
-    invoke-virtual {v12, v13}, Lcom/android/settings/easymode/EasyModeApp;->setDefaultLauncher(Z)V
+    invoke-virtual {v12, v13}, Lcom/android/settings_ex/easymode/EasyModeApp;->setDefaultLauncher(Z)V
 
     .line 1080
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
     const/4 v13, 0x1
 
-    # invokes: Lcom/android/settings/easymode/EasyModeApp;->startLauncher(Z)V
-    invoke-static {v12, v13}, Lcom/android/settings/easymode/EasyModeApp;->access$1400(Lcom/android/settings/easymode/EasyModeApp;Z)V
+    # invokes: Lcom/android/settings_ex/easymode/EasyModeApp;->startLauncher(Z)V
+    invoke-static {v12, v13}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$1400(Lcom/android/settings_ex/easymode/EasyModeApp;Z)V
 
     goto/16 :goto_1
 
@@ -839,9 +839,9 @@
     :cond_d
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/easymode/EasyModeApp$4;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v12, v0, Lcom/android/settings_ex/easymode/EasyModeApp$4;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    invoke-virtual {v12}, Lcom/android/settings/easymode/EasyModeApp;->finish()V
+    invoke-virtual {v12}, Lcom/android/settings_ex/easymode/EasyModeApp;->finish()V
 
     goto/16 :goto_1
 .end method

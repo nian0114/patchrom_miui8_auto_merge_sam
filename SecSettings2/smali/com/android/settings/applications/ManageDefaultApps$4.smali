@@ -1,4 +1,4 @@
-.class Lcom/android/settings/applications/ManageDefaultApps$4;
+.class Lcom/android/settings_ex/applications/ManageDefaultApps$4;
 .super Ljava/lang/Object;
 .source "ManageDefaultApps.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/applications/ManageDefaultApps;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/applications/ManageDefaultApps;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/applications/ManageDefaultApps;
+.field final synthetic this$0:Lcom/android/settings_ex/applications/ManageDefaultApps;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/applications/ManageDefaultApps;)V
+.method constructor <init>(Lcom/android/settings_ex/applications/ManageDefaultApps;)V
     .locals 0
 
     .prologue
     .line 351
-    iput-object p1, p0, Lcom/android/settings/applications/ManageDefaultApps$4;->this$0:Lcom/android/settings/applications/ManageDefaultApps;
+    iput-object p1, p0, Lcom/android/settings_ex/applications/ManageDefaultApps$4;->this$0:Lcom/android/settings_ex/applications/ManageDefaultApps;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -65,10 +65,10 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     .line 359
-    iget-object v1, p0, Lcom/android/settings/applications/ManageDefaultApps$4;->this$0:Lcom/android/settings/applications/ManageDefaultApps;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/ManageDefaultApps$4;->this$0:Lcom/android/settings_ex/applications/ManageDefaultApps;
 
-    # invokes: Lcom/android/settings/applications/ManageDefaultApps;->hasDefaultAppByMDM(Landroid/content/Intent;)Z
-    invoke-static {v1, v0}, Lcom/android/settings/applications/ManageDefaultApps;->access$600(Lcom/android/settings/applications/ManageDefaultApps;Landroid/content/Intent;)Z
+    # invokes: Lcom/android/settings_ex/applications/ManageDefaultApps;->hasDefaultAppByMDM(Landroid/content/Intent;)Z
+    invoke-static {v1, v0}, Lcom/android/settings_ex/applications/ManageDefaultApps;->access$600(Lcom/android/settings_ex/applications/ManageDefaultApps;Landroid/content/Intent;)Z
 
     move-result v1
 

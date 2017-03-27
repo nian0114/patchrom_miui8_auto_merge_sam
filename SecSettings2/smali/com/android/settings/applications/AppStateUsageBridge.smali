@@ -1,18 +1,18 @@
-.class public Lcom/android/settings/applications/AppStateUsageBridge;
-.super Lcom/android/settings/applications/AppStateAppOpsBridge;
+.class public Lcom/android/settings_ex/applications/AppStateUsageBridge;
+.super Lcom/android/settings_ex/applications/AppStateAppOpsBridge;
 .source "AppStateUsageBridge.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/applications/AppStateUsageBridge$UsageState;
+        Lcom/android/settings_ex/applications/AppStateUsageBridge$UsageState;
     }
 .end annotation
 
 
 # static fields
-.field public static final FILTER_APP_USAGE:Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+.field public static final FILTER_APP_USAGE:Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;
 
 .field private static final PM_PERMISSION:[Ljava/lang/String;
 
@@ -38,7 +38,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lcom/android/settings/applications/AppStateUsageBridge;->list:Ljava/util/List;
+    sput-object v0, Lcom/android/settings_ex/applications/AppStateUsageBridge;->list:Ljava/util/List;
 
     .line 42
     const/4 v0, 0x1
@@ -51,29 +51,29 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/android/settings/applications/AppStateUsageBridge;->PM_PERMISSION:[Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/applications/AppStateUsageBridge;->PM_PERMISSION:[Ljava/lang/String;
 
     .line 80
-    new-instance v0, Lcom/android/settings/applications/AppStateUsageBridge$1;
+    new-instance v0, Lcom/android/settings_ex/applications/AppStateUsageBridge$1;
 
-    invoke-direct {v0}, Lcom/android/settings/applications/AppStateUsageBridge$1;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/applications/AppStateUsageBridge$1;-><init>()V
 
-    sput-object v0, Lcom/android/settings/applications/AppStateUsageBridge;->FILTER_APP_USAGE:Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+    sput-object v0, Lcom/android/settings_ex/applications/AppStateUsageBridge;->FILTER_APP_USAGE:Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/android/settingslib/applications/ApplicationsState;Lcom/android/settings/applications/AppStateBaseBridge$Callback;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/android/settings_exlib/applications/ApplicationsState;Lcom/android/settings_ex/applications/AppStateBaseBridge$Callback;)V
     .locals 8
     .param p1, "context"    # Landroid/content/Context;
-    .param p2, "appState"    # Lcom/android/settingslib/applications/ApplicationsState;
-    .param p3, "callback"    # Lcom/android/settings/applications/AppStateBaseBridge$Callback;
+    .param p2, "appState"    # Lcom/android/settings_exlib/applications/ApplicationsState;
+    .param p3, "callback"    # Lcom/android/settings_ex/applications/AppStateBaseBridge$Callback;
 
     .prologue
     .line 47
     const/16 v4, 0x2b
 
-    sget-object v5, Lcom/android/settings/applications/AppStateUsageBridge;->PM_PERMISSION:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/applications/AppStateUsageBridge;->PM_PERMISSION:[Ljava/lang/String;
 
     move-object v0, p0
 
@@ -83,7 +83,7 @@
 
     move-object v3, p3
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/settings/applications/AppStateAppOpsBridge;-><init>(Landroid/content/Context;Lcom/android/settingslib/applications/ApplicationsState;Lcom/android/settings/applications/AppStateBaseBridge$Callback;I[Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Lcom/android/settings_ex/applications/AppStateAppOpsBridge;-><init>(Landroid/content/Context;Lcom/android/settings_exlib/applications/ApplicationsState;Lcom/android/settings_ex/applications/AppStateBaseBridge$Callback;I[Ljava/lang/String;)V
 
     .line 49
     :try_start_0
@@ -97,7 +97,7 @@
 
     .line 50
     .local v7, "manager":Landroid/os/PersonaManager;
-    sget-object v0, Lcom/android/settings/applications/AppStateUsageBridge;->list:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/applications/AppStateUsageBridge;->list:Ljava/util/List;
 
     invoke-virtual {v7}, Landroid/os/PersonaManager;->getContainerHideUsageStatsApps()Ljava/util/List;
 
@@ -140,46 +140,46 @@
 
     .prologue
     .line 35
-    sget-object v0, Lcom/android/settings/applications/AppStateUsageBridge;->list:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/applications/AppStateUsageBridge;->list:Ljava/util/List;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public getUsageInfo(Ljava/lang/String;I)Lcom/android/settings/applications/AppStateUsageBridge$UsageState;
+.method public getUsageInfo(Ljava/lang/String;I)Lcom/android/settings_ex/applications/AppStateUsageBridge$UsageState;
     .locals 2
     .param p1, "pkg"    # Ljava/lang/String;
     .param p2, "uid"    # I
 
     .prologue
     .line 65
-    invoke-super {p0, p1, p2}, Lcom/android/settings/applications/AppStateAppOpsBridge;->getPermissionInfo(Ljava/lang/String;I)Lcom/android/settings/applications/AppStateAppOpsBridge$PermissionState;
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/applications/AppStateAppOpsBridge;->getPermissionInfo(Ljava/lang/String;I)Lcom/android/settings_ex/applications/AppStateAppOpsBridge$PermissionState;
 
     move-result-object v0
 
     .line 66
-    .local v0, "permissionState":Lcom/android/settings/applications/AppStateAppOpsBridge$PermissionState;
-    new-instance v1, Lcom/android/settings/applications/AppStateUsageBridge$UsageState;
+    .local v0, "permissionState":Lcom/android/settings_ex/applications/AppStateAppOpsBridge$PermissionState;
+    new-instance v1, Lcom/android/settings_ex/applications/AppStateUsageBridge$UsageState;
 
-    invoke-direct {v1, v0}, Lcom/android/settings/applications/AppStateUsageBridge$UsageState;-><init>(Lcom/android/settings/applications/AppStateAppOpsBridge$PermissionState;)V
+    invoke-direct {v1, v0}, Lcom/android/settings_ex/applications/AppStateUsageBridge$UsageState;-><init>(Lcom/android/settings_ex/applications/AppStateAppOpsBridge$PermissionState;)V
 
     return-object v1
 .end method
 
-.method protected updateExtraInfo(Lcom/android/settingslib/applications/ApplicationsState$AppEntry;Ljava/lang/String;I)V
+.method protected updateExtraInfo(Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;Ljava/lang/String;I)V
     .locals 1
-    .param p1, "app"    # Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+    .param p1, "app"    # Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
     .param p2, "pkg"    # Ljava/lang/String;
     .param p3, "uid"    # I
 
     .prologue
     .line 61
-    invoke-virtual {p0, p2, p3}, Lcom/android/settings/applications/AppStateUsageBridge;->getUsageInfo(Ljava/lang/String;I)Lcom/android/settings/applications/AppStateUsageBridge$UsageState;
+    invoke-virtual {p0, p2, p3}, Lcom/android/settings_ex/applications/AppStateUsageBridge;->getUsageInfo(Ljava/lang/String;I)Lcom/android/settings_ex/applications/AppStateUsageBridge$UsageState;
 
     move-result-object v0
 
-    iput-object v0, p1, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->extraInfo:Ljava/lang/Object;
+    iput-object v0, p1, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->extraInfo:Ljava/lang/Object;
 
     .line 62
     return-void

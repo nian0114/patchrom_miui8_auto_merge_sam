@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/cloud/CloudDialog$DialogListener;
+.class public interface abstract Lcom/android/settings_ex/cloud/CloudDialog$DialogListener;
 .super Ljava/lang/Object;
 .source "CloudDialog.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/cloud/CloudDialog;
+    value = Lcom/android/settings_ex/cloud/CloudDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/ApnEditor$2;
+.class Lcom/android/settings_ex/ApnEditor$2;
 .super Ljava/lang/Object;
 .source "ApnEditor.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/ApnEditor;->onCreateDialog(I)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/ApnEditor;->onCreateDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/ApnEditor;
+.field final synthetic this$0:Lcom/android/settings_ex/ApnEditor;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/ApnEditor;)V
+.method constructor <init>(Lcom/android/settings_ex/ApnEditor;)V
     .locals 0
 
     .prologue
     .line 1316
-    iput-object p1, p0, Lcom/android/settings/ApnEditor$2;->this$0:Lcom/android/settings/ApnEditor;
+    iput-object p1, p0, Lcom/android/settings_ex/ApnEditor$2;->this$0:Lcom/android/settings_ex/ApnEditor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,9 +43,9 @@
 
     .prologue
     .line 1318
-    iget-object v0, p0, Lcom/android/settings/ApnEditor$2;->this$0:Lcom/android/settings/ApnEditor;
+    iget-object v0, p0, Lcom/android/settings_ex/ApnEditor$2;->this$0:Lcom/android/settings_ex/ApnEditor;
 
-    invoke-virtual {v0}, Lcom/android/settings/ApnEditor;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/ApnEditor;->finish()V
 
     .line 1319
     return-void

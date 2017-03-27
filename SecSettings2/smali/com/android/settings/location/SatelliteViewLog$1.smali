@@ -1,4 +1,4 @@
-.class Lcom/android/settings/location/SatelliteViewLog$1;
+.class Lcom/android/settings_ex/location/SatelliteViewLog$1;
 .super Ljava/lang/Object;
 .source "SatelliteViewLog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/location/SatelliteViewLog;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/location/SatelliteViewLog;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/location/SatelliteViewLog;
+.field final synthetic this$0:Lcom/android/settings_ex/location/SatelliteViewLog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/location/SatelliteViewLog;)V
+.method constructor <init>(Lcom/android/settings_ex/location/SatelliteViewLog;)V
     .locals 0
 
     .prologue
     .line 67
-    iput-object p1, p0, Lcom/android/settings/location/SatelliteViewLog$1;->this$0:Lcom/android/settings/location/SatelliteViewLog;
+    iput-object p1, p0, Lcom/android/settings_ex/location/SatelliteViewLog$1;->this$0:Lcom/android/settings_ex/location/SatelliteViewLog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,10 +42,10 @@
 
     .prologue
     .line 70
-    iget-object v0, p0, Lcom/android/settings/location/SatelliteViewLog$1;->this$0:Lcom/android/settings/location/SatelliteViewLog;
+    iget-object v0, p0, Lcom/android/settings_ex/location/SatelliteViewLog$1;->this$0:Lcom/android/settings_ex/location/SatelliteViewLog;
 
-    # invokes: Lcom/android/settings/location/SatelliteViewLog;->clearFile()V
-    invoke-static {v0}, Lcom/android/settings/location/SatelliteViewLog;->access$000(Lcom/android/settings/location/SatelliteViewLog;)V
+    # invokes: Lcom/android/settings_ex/location/SatelliteViewLog;->clearFile()V
+    invoke-static {v0}, Lcom/android/settings_ex/location/SatelliteViewLog;->access$000(Lcom/android/settings_ex/location/SatelliteViewLog;)V
 
     .line 71
     return-void

@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/Utils$7;
+.class final Lcom/android/settings_ex/Utils$7;
 .super Ljava/lang/Object;
 .source "Utils.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/Utils;->startSearchIndexing(Landroid/app/Activity;)V
+    value = Lcom/android/settings_ex/Utils;->startSearchIndexing(Landroid/app/Activity;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
 
     .prologue
     .line 6410
-    iput-object p1, p0, Lcom/android/settings/Utils$7;->val$context:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/Utils$7;->val$context:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,13 +41,13 @@
 
     .prologue
     .line 6414
-    iget-object v0, p0, Lcom/android/settings/Utils$7;->val$context:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/Utils$7;->val$context:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/android/settings/search/Index;->getInstance(Landroid/content/Context;)Lcom/android/settings/search/Index;
+    invoke-static {v0}, Lcom/android/settings_ex/search/Index;->getInstance(Landroid/content/Context;)Lcom/android/settings_ex/search/Index;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/settings/search/Index;->init()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/search/Index;->init()V
 
     .line 6415
     return-void

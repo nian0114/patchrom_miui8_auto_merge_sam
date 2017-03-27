@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$IconTouchDialog$1;
+.class Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$IconTouchDialog$1;
 .super Ljava/lang/Object;
 .source "FingerprintEnrollEnrolling.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$IconTouchDialog;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$IconTouchDialog;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$IconTouchDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$IconTouchDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$IconTouchDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$IconTouchDialog;)V
     .locals 0
 
     .prologue
     .line 392
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$IconTouchDialog$1;->this$0:Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$IconTouchDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$IconTouchDialog$1;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$IconTouchDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

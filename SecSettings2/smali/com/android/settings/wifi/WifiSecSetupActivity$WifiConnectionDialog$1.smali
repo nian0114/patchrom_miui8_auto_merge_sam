@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog$1;
+.class final Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog$1;
 .super Ljava/lang/Object;
 .source "WifiSecSetupActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog;->forget()V
+    value = Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog;->forget()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

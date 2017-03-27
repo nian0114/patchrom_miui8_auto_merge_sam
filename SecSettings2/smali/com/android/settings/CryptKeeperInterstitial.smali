@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/CryptKeeperInterstitial;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/CryptKeeperInterstitial;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "CryptKeeperInterstitial.java"
 
 # interfaces
@@ -31,12 +31,12 @@
 
     .prologue
     .line 59
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 66
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/CryptKeeperInterstitial;->ucmPasswordcsName:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->ucmPasswordcsName:Ljava/lang/String;
 
     return-void
 .end method
@@ -49,7 +49,7 @@
     const/4 v2, 0x1
 
     .line 279
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeperInterstitial;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeperInterstitial;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -59,17 +59,17 @@
 
     .line 280
     .local v1, "res":Landroid/content/res/Resources;
-    new-instance v0, Lcom/android/settings/ChooseLockSettingsHelper;
+    new-instance v0, Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeperInterstitial;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeperInterstitial;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    invoke-direct {v0, v3, p0}, Lcom/android/settings/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;Landroid/app/Fragment;)V
+    invoke-direct {v0, v3, p0}, Lcom/android/settings_ex/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;Landroid/app/Fragment;)V
 
     .line 282
-    .local v0, "helper":Lcom/android/settings/ChooseLockSettingsHelper;
-    invoke-virtual {v0}, Lcom/android/settings/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
+    .local v0, "helper":Lcom/android/settings_ex/ChooseLockSettingsHelper;
+    invoke-virtual {v0}, Lcom/android/settings_ex/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
 
     move-result-object v3
 
@@ -84,7 +84,7 @@
     if-nez v3, :cond_0
 
     .line 285
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeperInterstitial;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeperInterstitial;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -101,7 +101,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v0, p1, v3, v2}, Lcom/android/settings/ChooseLockSettingsHelper;->launchConfirmationActivity(ILjava/lang/CharSequence;Z)Z
+    invoke-virtual {v0, p1, v3, v2}, Lcom/android/settings_ex/ChooseLockSettingsHelper;->launchConfirmationActivity(ILjava/lang/CharSequence;Z)Z
 
     move-result v2
 
@@ -114,15 +114,15 @@
 
     .prologue
     .line 241
-    iput-boolean p1, p0, Lcom/android/settings/CryptKeeperInterstitial;->mPasswordRequired:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mPasswordRequired:Z
 
     .line 242
-    iget-object v2, p0, Lcom/android/settings/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v2, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v2, p1}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 243
-    iget-object v3, p0, Lcom/android/settings/CryptKeeperInterstitial;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v3, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     if-nez p1, :cond_1
 
@@ -132,15 +132,15 @@
     invoke-virtual {v3, v2}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 246
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeperInterstitial;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeperInterstitial;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/SettingsActivity;
+    check-cast v1, Lcom/android/settings_ex/SettingsActivity;
 
     .line 247
-    .local v1, "sa":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v1}, Lcom/android/settings/SettingsActivity;->getResultIntentData()Landroid/content/Intent;
+    .local v1, "sa":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/SettingsActivity;->getResultIntentData()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -156,13 +156,13 @@
 
     .line 250
     .restart local v0    # "resultIntentData":Landroid/content/Intent;
-    invoke-virtual {v1, v0}, Lcom/android/settings/SettingsActivity;->setResultIntentData(Landroid/content/Intent;)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/SettingsActivity;->setResultIntentData(Landroid/content/Intent;)V
 
     .line 252
     :cond_0
     const-string v2, "extra_require_password"
 
-    iget-boolean v3, p0, Lcom/android/settings/CryptKeeperInterstitial;->mPasswordRequired:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mPasswordRequired:Z
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
@@ -171,7 +171,7 @@
 
     .line 243
     .end local v0    # "resultIntentData":Landroid/content/Intent;
-    .end local v1    # "sa":Lcom/android/settings/SettingsActivity;
+    .end local v1    # "sa":Lcom/android/settings_ex/SettingsActivity;
     :cond_1
     const/4 v2, 0x0
 
@@ -228,7 +228,7 @@
 
     .line 330
     :goto_1
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeperInterstitial;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeperInterstitial;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -273,7 +273,7 @@
     const/4 v4, -0x1
 
     .line 295
-    invoke-super {p0, p1, p2, p3}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 296
     const/16 v2, 0x37
@@ -292,14 +292,14 @@
     if-eqz p3, :cond_0
 
     .line 303
-    iget-object v2, p0, Lcom/android/settings/CryptKeeperInterstitial;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v2, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    iget-boolean v3, p0, Lcom/android/settings/CryptKeeperInterstitial;->mPasswordRequired:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mPasswordRequired:Z
 
     invoke-virtual {v2, v3}, Lcom/android/internal/widget/LockPatternUtils;->setCredentialRequiredToDecrypt(Z)V
 
     .line 304
-    iget-boolean v2, p0, Lcom/android/settings/CryptKeeperInterstitial;->mPasswordRequired:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mPasswordRequired:Z
 
     if-eqz v2, :cond_2
 
@@ -312,7 +312,7 @@
     .line 307
     .local v1, "type":I
     :goto_1
-    iget-boolean v2, p0, Lcom/android/settings/CryptKeeperInterstitial;->mPasswordRequired:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mPasswordRequired:Z
 
     if-eqz v2, :cond_3
 
@@ -325,7 +325,7 @@
     .line 310
     .local v0, "password":Ljava/lang/String;
     :goto_2
-    invoke-direct {p0, v1, v0}, Lcom/android/settings/CryptKeeperInterstitial;->showFinalConfirmation(ILjava/lang/String;)V
+    invoke-direct {p0, v1, v0}, Lcom/android/settings_ex/CryptKeeperInterstitial;->showFinalConfirmation(ILjava/lang/String;)V
 
     goto :goto_0
 
@@ -359,7 +359,7 @@
     .line 258
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/android/settings/CryptKeeperInterstitial;->setRequirePasswordState(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/CryptKeeperInterstitial;->setRequirePasswordState(Z)V
 
     .line 262
     :cond_0
@@ -375,7 +375,7 @@
     .line 260
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/android/settings/CryptKeeperInterstitial;->setRequirePasswordState(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/CryptKeeperInterstitial;->setRequirePasswordState(Z)V
 
     goto :goto_0
 .end method
@@ -390,14 +390,14 @@
     const/4 v2, 0x0
 
     .line 172
-    iget-object v1, p0, Lcom/android/settings/CryptKeeperInterstitial;->mChangePWButton:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mChangePWButton:Landroid/widget/Button;
 
     if-ne p1, v1, :cond_1
 
     .line 173
     const/16 v1, 0x37
 
-    invoke-direct {p0, v1}, Lcom/android/settings/CryptKeeperInterstitial;->runKeyguardConfirmation(I)Z
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/CryptKeeperInterstitial;->runKeyguardConfirmation(I)Z
 
     move-result v1
 
@@ -417,12 +417,12 @@
 
     .line 176
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     if-ne p1, v1, :cond_3
 
     .line 177
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeperInterstitial;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeperInterstitial;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -438,24 +438,24 @@
     .local v0, "accEn":Z
     if-eqz v0, :cond_2
 
-    iget-boolean v1, p0, Lcom/android/settings/CryptKeeperInterstitial;->mPasswordRequired:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mPasswordRequired:Z
 
     if-nez v1, :cond_2
 
     .line 179
-    invoke-direct {p0, v2}, Lcom/android/settings/CryptKeeperInterstitial;->setRequirePasswordState(Z)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/CryptKeeperInterstitial;->setRequirePasswordState(Z)V
 
     .line 180
-    invoke-virtual {p0, v3}, Lcom/android/settings/CryptKeeperInterstitial;->showDialog(I)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/CryptKeeperInterstitial;->showDialog(I)V
 
     .line 184
     :goto_1
-    iget-object v1, p0, Lcom/android/settings/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v1, v3}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 185
-    iget-object v1, p0, Lcom/android/settings/CryptKeeperInterstitial;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v1, v2}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
@@ -463,22 +463,22 @@
 
     .line 182
     :cond_2
-    invoke-direct {p0, v3}, Lcom/android/settings/CryptKeeperInterstitial;->setRequirePasswordState(Z)V
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/CryptKeeperInterstitial;->setRequirePasswordState(Z)V
 
     goto :goto_1
 
     .line 187
     .end local v0    # "accEn":Z
     :cond_3
-    invoke-direct {p0, v2}, Lcom/android/settings/CryptKeeperInterstitial;->setRequirePasswordState(Z)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/CryptKeeperInterstitial;->setRequirePasswordState(Z)V
 
     .line 188
-    iget-object v1, p0, Lcom/android/settings/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v1, v2}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 189
-    iget-object v1, p0, Lcom/android/settings/CryptKeeperInterstitial;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v1, v3}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
@@ -506,7 +506,7 @@
 
     .line 197
     :pswitch_0
-    iget-object v5, p0, Lcom/android/settings/CryptKeeperInterstitial;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v5, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -530,7 +530,7 @@
     .line 216
     .local v2, "messageId":I
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeperInterstitial;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeperInterstitial;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -560,7 +560,7 @@
     :goto_1
     new-instance v5, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeperInterstitial;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeperInterstitial;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -574,7 +574,7 @@
 
     aput-object v0, v6, v7
 
-    invoke-virtual {p0, v2, v6}, Lcom/android/settings/CryptKeeperInterstitial;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v2, v6}, Lcom/android/settings_ex/CryptKeeperInterstitial;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -647,7 +647,7 @@
 
     move-result-object v5
 
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeperInterstitial;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeperInterstitial;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v6
 
@@ -685,13 +685,13 @@
     .line 86
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/CryptKeeperInterstitial;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptKeeperInterstitial;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/CryptKeeperInterstitial;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 87
     const v0, 0x7f040074
@@ -711,12 +711,12 @@
 
     .prologue
     .line 267
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 268
     const-string v1, "selected_button"
 
-    iget-object v0, p0, Lcom/android/settings/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v0}, Landroid/widget/CheckedTextView;->isChecked()Z
 
@@ -750,7 +750,7 @@
     const/4 v7, 0x1
 
     .line 92
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 93
     const v6, 0x7f0d014b
@@ -761,7 +761,7 @@
 
     check-cast v6, Landroid/widget/CheckedTextView;
 
-    iput-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iput-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     .line 95
     const v6, 0x7f0d014c
@@ -772,7 +772,7 @@
 
     check-cast v6, Landroid/widget/CheckedTextView;
 
-    iput-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iput-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     .line 97
     const v6, 0x7f0d0149
@@ -783,7 +783,7 @@
 
     check-cast v6, Landroid/widget/TextView;
 
-    iput-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mEncryptionMessage:Landroid/widget/TextView;
+    iput-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mEncryptionMessage:Landroid/widget/TextView;
 
     .line 99
     const v6, 0x7f0d014d
@@ -794,7 +794,7 @@
 
     check-cast v6, Landroid/widget/Button;
 
-    iput-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mChangePWButton:Landroid/widget/Button;
+    iput-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mChangePWButton:Landroid/widget/Button;
 
     .line 100
     const v6, 0x7f0d014a
@@ -805,15 +805,15 @@
 
     check-cast v6, Landroid/widget/LinearLayout;
 
-    iput-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mSelectOptionLayout:Landroid/widget/LinearLayout;
+    iput-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mSelectOptionLayout:Landroid/widget/LinearLayout;
 
     .line 101
-    iget-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mChangePWButton:Landroid/widget/Button;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mChangePWButton:Landroid/widget/Button;
 
     invoke-virtual {v6, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 105
-    iget-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -825,7 +825,7 @@
 
     .line 106
     .local v2, "forFingerprint":I
-    iget-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -856,27 +856,27 @@
     .line 137
     .local v1, "enableId":I
     :goto_1
-    iget-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mEncryptionMessage:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mEncryptionMessage:Landroid/widget/TextView;
 
     invoke-virtual {v6, v3}, Landroid/widget/TextView;->setText(I)V
 
     .line 139
-    iget-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v6, p0}, Landroid/widget/CheckedTextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 140
-    iget-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v6, v1}, Landroid/widget/CheckedTextView;->setText(I)V
 
     .line 141
-    iget-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v6, p0}, Landroid/widget/CheckedTextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 142
-    iget-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     const v9, 0x7f0e0ecc
 
@@ -899,12 +899,12 @@
     .line 146
     .local v5, "value":Z
     :goto_2
-    iget-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v6, v5}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 147
-    iget-object v9, p0, Lcom/android/settings/CryptKeeperInterstitial;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v9, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     if-nez v5, :cond_6
 
@@ -914,7 +914,7 @@
     invoke-virtual {v9, v6}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 148
-    invoke-direct {p0, v5}, Lcom/android/settings/CryptKeeperInterstitial;->setRequirePasswordState(Z)V
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/CryptKeeperInterstitial;->setRequirePasswordState(Z)V
 
     .line 153
     .end local v5    # "value":Z
@@ -927,14 +927,14 @@
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->ucmPasswordcsName:Ljava/lang/String;
+    iput-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->ucmPasswordcsName:Ljava/lang/String;
 
     .line 154
-    iget-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->ucmPasswordcsName:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->ucmPasswordcsName:Ljava/lang/String;
 
     if-eqz v6, :cond_0
 
-    iget-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->ucmPasswordcsName:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->ucmPasswordcsName:Ljava/lang/String;
 
     const-string v9, ""
 
@@ -944,7 +944,7 @@
 
     if-nez v6, :cond_0
 
-    iget-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->ucmPasswordcsName:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->ucmPasswordcsName:Ljava/lang/String;
 
     const-string v9, "none"
 
@@ -955,22 +955,22 @@
     if-nez v6, :cond_0
 
     .line 155
-    iget-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v6, v8}, Landroid/widget/CheckedTextView;->setEnabled(Z)V
 
     .line 156
-    iget-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v6, v8}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 157
-    iget-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v6, v7}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 158
-    invoke-direct {p0, v8}, Lcom/android/settings/CryptKeeperInterstitial;->setRequirePasswordState(Z)V
+    invoke-direct {p0, v8}, Lcom/android/settings_ex/CryptKeeperInterstitial;->setRequirePasswordState(Z)V
 
     .line 161
     :cond_0
@@ -981,22 +981,22 @@
     if-eqz v6, :cond_1
 
     .line 162
-    iget-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v6, v7}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 163
-    iget-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v6, v8}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 164
-    iget-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mDontRequirePasswordToDecryptButton:Landroid/widget/CheckedTextView;
 
     invoke-virtual {v6, v8}, Landroid/widget/CheckedTextView;->setEnabled(Z)V
 
     .line 165
-    invoke-direct {p0, v7}, Lcom/android/settings/CryptKeeperInterstitial;->setRequirePasswordState(Z)V
+    invoke-direct {p0, v7}, Lcom/android/settings_ex/CryptKeeperInterstitial;->setRequirePasswordState(Z)V
 
     .line 168
     .end local v1    # "enableId":I
@@ -1011,12 +1011,12 @@
 
     .line 114
     .restart local v3    # "msgId":I
-    iget-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mEncryptionMessage:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mEncryptionMessage:Landroid/widget/TextView;
 
     invoke-virtual {v6, v3}, Landroid/widget/TextView;->setText(I)V
 
     .line 115
-    iget-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mSelectOptionLayout:Landroid/widget/LinearLayout;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mSelectOptionLayout:Landroid/widget/LinearLayout;
 
     const/16 v7, 0x8
 
@@ -1095,13 +1095,13 @@
     .line 150
     .end local v5    # "value":Z
     :cond_7
-    iget-object v6, p0, Lcom/android/settings/CryptKeeperInterstitial;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v6, p0, Lcom/android/settings_ex/CryptKeeperInterstitial;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v6, v8}, Lcom/android/internal/widget/LockPatternUtils;->isCredentialRequiredToDecrypt(Z)Z
 
     move-result v6
 
-    invoke-direct {p0, v6}, Lcom/android/settings/CryptKeeperInterstitial;->setRequirePasswordState(Z)V
+    invoke-direct {p0, v6}, Lcom/android/settings_ex/CryptKeeperInterstitial;->setRequirePasswordState(Z)V
 
     goto/16 :goto_4
 

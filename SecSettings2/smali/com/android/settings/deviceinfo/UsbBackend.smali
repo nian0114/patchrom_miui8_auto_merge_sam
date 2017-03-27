@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/deviceinfo/UsbBackend;
+.class public Lcom/android/settings_ex/deviceinfo/UsbBackend;
 .super Ljava/lang/Object;
 .source "UsbBackend.java"
 
@@ -31,7 +31,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 56
-    sput-object p1, Lcom/android/settings/deviceinfo/UsbBackend;->mContext:Landroid/content/Context;
+    sput-object p1, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mContext:Landroid/content/Context;
 
     .line 57
     const/4 v5, 0x0
@@ -56,14 +56,14 @@
 
     move-result v5
 
-    iput-boolean v5, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mIsUnlocked:Z
+    iput-boolean v5, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mIsUnlocked:Z
 
     .line 61
     invoke-static {p1}, Landroid/os/UserManager;->get(Landroid/content/Context;)Landroid/os/UserManager;
 
     move-result-object v5
 
-    iput-object v5, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mUserManager:Landroid/os/UserManager;
+    iput-object v5, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mUserManager:Landroid/os/UserManager;
 
     .line 62
     const-class v5, Landroid/hardware/usb/UsbManager;
@@ -74,10 +74,10 @@
 
     check-cast v5, Landroid/hardware/usb/UsbManager;
 
-    iput-object v5, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
+    iput-object v5, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
 
     .line 64
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mUserManager:Landroid/os/UserManager;
+    iget-object v5, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mUserManager:Landroid/os/UserManager;
 
     const-string v6, "no_usb_file_transfer"
 
@@ -85,10 +85,10 @@
 
     move-result v5
 
-    iput-boolean v5, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mRestricted:Z
+    iput-boolean v5, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mRestricted:Z
 
     .line 65
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
+    iget-object v5, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
 
     invoke-virtual {v5}, Landroid/hardware/usb/UsbManager;->getPorts()[Landroid/hardware/usb/UsbPort;
 
@@ -107,7 +107,7 @@
     if-ge v1, v0, :cond_0
 
     .line 70
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
+    iget-object v5, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
 
     aget-object v6, v3, v1
 
@@ -126,10 +126,10 @@
     .line 72
     aget-object v5, v3, v1
 
-    iput-object v5, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mPort:Landroid/hardware/usb/UsbPort;
+    iput-object v5, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mPort:Landroid/hardware/usb/UsbPort;
 
     .line 73
-    iput-object v4, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mPortStatus:Landroid/hardware/usb/UsbPortStatus;
+    iput-object v4, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
     .line 77
     .end local v4    # "status":Landroid/hardware/usb/UsbPortStatus;
@@ -200,7 +200,7 @@
     :pswitch_0
     const-string v0, "VZW"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v1
 
@@ -218,7 +218,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 141
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
 
     const-string v1, "vzw_charging"
 
@@ -230,7 +230,7 @@
 
     .line 118
     :pswitch_1
-    sget-object v0, Lcom/android/settings/deviceinfo/UsbBackend;->mContext:Landroid/content/Context;
+    sget-object v0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -250,7 +250,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 120
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
 
     const-string v1, "mtp"
 
@@ -267,7 +267,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 125
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
 
     const-string v1, "ptp"
 
@@ -284,7 +284,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 130
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
 
     const-string v1, "midi"
 
@@ -301,7 +301,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 135
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
 
     const-string v1, "mass_storage"
 
@@ -318,7 +318,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 144
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
 
     const-string v1, "sec_charging"
 
@@ -350,12 +350,12 @@
     const/4 v0, 0x1
 
     .line 80
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mPort:Landroid/hardware/usb/UsbPort;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mPort:Landroid/hardware/usb/UsbPort;
 
     if-eqz v1, :cond_1
 
     .line 81
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mPortStatus:Landroid/hardware/usb/UsbPortStatus;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
     invoke-virtual {v1}, Landroid/hardware/usb/UsbPortStatus;->getCurrentPowerRole()I
 
@@ -366,7 +366,7 @@
     .line 83
     .local v0, "power":I
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/UsbBackend;->getUsbDataMode()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/UsbBackend;->getUsbDataMode()I
 
     move-result v1
 
@@ -385,7 +385,7 @@
 
     .line 85
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/UsbBackend;->getUsbDataMode()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/UsbBackend;->getUsbDataMode()I
 
     move-result v1
 
@@ -401,7 +401,7 @@
     const/4 v0, 0x0
 
     .line 89
-    iget-boolean v1, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mIsUnlocked:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mIsUnlocked:Z
 
     if-nez v1, :cond_1
 
@@ -419,7 +419,7 @@
 
     .line 92
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
 
     const-string v2, "mtp"
 
@@ -443,7 +443,7 @@
 
     .line 95
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
 
     const-string v2, "ptp"
 
@@ -467,7 +467,7 @@
 
     .line 98
     :cond_3
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
 
     const-string v2, "midi"
 
@@ -491,7 +491,7 @@
 
     .line 101
     :cond_4
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
 
     const-string v2, "mass_storage"
 
@@ -515,7 +515,7 @@
 
     .line 104
     :cond_5
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
 
     const-string v2, "sec_charging"
 
@@ -536,7 +536,7 @@
 
     .line 107
     :cond_6
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
 
     const-string v2, "vzw_charging"
 
@@ -568,7 +568,7 @@
     const/4 v2, 0x1
 
     .line 172
-    iget-boolean v3, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mRestricted:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mRestricted:Z
 
     if-eqz v3, :cond_1
 
@@ -589,12 +589,12 @@
 
     .line 177
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mPort:Landroid/hardware/usb/UsbPort;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mPort:Landroid/hardware/usb/UsbPort;
 
     if-eqz v3, :cond_4
 
     .line 178
-    invoke-direct {p0, p1}, Lcom/android/settings/deviceinfo/UsbBackend;->modeToPower(I)I
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/deviceinfo/UsbBackend;->modeToPower(I)I
 
     move-result v0
 
@@ -605,7 +605,7 @@
     if-eqz v3, :cond_2
 
     .line 181
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mPortStatus:Landroid/hardware/usb/UsbPortStatus;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
     invoke-virtual {v1, v0, v5}, Landroid/hardware/usb/UsbPortStatus;->isRoleCombinationSupported(II)Z
 
@@ -615,7 +615,7 @@
 
     .line 185
     :cond_2
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mPortStatus:Landroid/hardware/usb/UsbPortStatus;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
     invoke-virtual {v3, v0, v5}, Landroid/hardware/usb/UsbPortStatus;->isRoleCombinationSupported(II)Z
 
@@ -623,7 +623,7 @@
 
     if-nez v3, :cond_3
 
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mPortStatus:Landroid/hardware/usb/UsbPortStatus;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
     invoke-virtual {v3, v0, v2}, Landroid/hardware/usb/UsbPortStatus;->isRoleCombinationSupported(II)Z
 
@@ -662,12 +662,12 @@
     const/4 v0, 0x1
 
     .line 152
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mPort:Landroid/hardware/usb/UsbPort;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mPort:Landroid/hardware/usb/UsbPort;
 
     if-eqz v2, :cond_0
 
     .line 153
-    invoke-direct {p0, p1}, Lcom/android/settings/deviceinfo/UsbBackend;->modeToPower(I)I
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/deviceinfo/UsbBackend;->modeToPower(I)I
 
     move-result v1
 
@@ -677,7 +677,7 @@
 
     if-nez v2, :cond_1
 
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mPortStatus:Landroid/hardware/usb/UsbPortStatus;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
     invoke-virtual {v2, v1, v0}, Landroid/hardware/usb/UsbPortStatus;->isRoleCombinationSupported(II)Z
 
@@ -688,9 +688,9 @@
     .line 160
     .local v0, "dataRole":I
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mUsbManager:Landroid/hardware/usb/UsbManager;
 
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/UsbBackend;->mPort:Landroid/hardware/usb/UsbPort;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/UsbBackend;->mPort:Landroid/hardware/usb/UsbPort;
 
     invoke-virtual {v2, v3, v1, v0}, Landroid/hardware/usb/UsbManager;->setPortRoles(Landroid/hardware/usb/UsbPort;II)V
 
@@ -723,7 +723,7 @@
     .line 163
     and-int/lit8 v2, p1, 0xe
 
-    invoke-direct {p0, v2}, Lcom/android/settings/deviceinfo/UsbBackend;->setUsbFunction(I)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/deviceinfo/UsbBackend;->setUsbFunction(I)V
 
     .line 164
     return-void

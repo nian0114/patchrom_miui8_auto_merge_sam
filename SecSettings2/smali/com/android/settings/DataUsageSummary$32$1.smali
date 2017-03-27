@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DataUsageSummary$32$1;
+.class Lcom/android/settings_ex/DataUsageSummary$32$1;
 .super Ljava/lang/Object;
 .source "DataUsageSummary.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DataUsageSummary$32;->onClick(Landroid/view/View;)V
+    value = Lcom/android/settings_ex/DataUsageSummary$32;->onClick(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/DataUsageSummary$32;
+.field final synthetic this$1:Lcom/android/settings_ex/DataUsageSummary$32;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DataUsageSummary$32;)V
+.method constructor <init>(Lcom/android/settings_ex/DataUsageSummary$32;)V
     .locals 0
 
     .prologue
     .line 3637
-    iput-object p1, p0, Lcom/android/settings/DataUsageSummary$32$1;->this$1:Lcom/android/settings/DataUsageSummary$32;
+    iput-object p1, p0, Lcom/android/settings_ex/DataUsageSummary$32$1;->this$1:Lcom/android/settings_ex/DataUsageSummary$32;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,30 +43,30 @@
 
     .prologue
     .line 3640
-    iget-object v0, p0, Lcom/android/settings/DataUsageSummary$32$1;->this$1:Lcom/android/settings/DataUsageSummary$32;
+    iget-object v0, p0, Lcom/android/settings_ex/DataUsageSummary$32$1;->this$1:Lcom/android/settings_ex/DataUsageSummary$32;
 
-    iget-object v0, v0, Lcom/android/settings/DataUsageSummary$32;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v0, v0, Lcom/android/settings_ex/DataUsageSummary$32;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
     const/4 v1, 0x1
 
-    # invokes: Lcom/android/settings/DataUsageSummary;->resetTimeData(I)V
-    invoke-static {v0, v1}, Lcom/android/settings/DataUsageSummary;->access$5600(Lcom/android/settings/DataUsageSummary;I)V
+    # invokes: Lcom/android/settings_ex/DataUsageSummary;->resetTimeData(I)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/DataUsageSummary;->access$5600(Lcom/android/settings_ex/DataUsageSummary;I)V
 
     .line 3641
-    iget-object v0, p0, Lcom/android/settings/DataUsageSummary$32$1;->this$1:Lcom/android/settings/DataUsageSummary$32;
+    iget-object v0, p0, Lcom/android/settings_ex/DataUsageSummary$32$1;->this$1:Lcom/android/settings_ex/DataUsageSummary$32;
 
-    iget-object v0, v0, Lcom/android/settings/DataUsageSummary$32;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v0, v0, Lcom/android/settings_ex/DataUsageSummary$32;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
-    # getter for: Lcom/android/settings/DataUsageSummary;->mTotalSent_menu:Landroid/view/View;
-    invoke-static {v0}, Lcom/android/settings/DataUsageSummary;->access$5800(Lcom/android/settings/DataUsageSummary;)Landroid/view/View;
+    # getter for: Lcom/android/settings_ex/DataUsageSummary;->mTotalSent_menu:Landroid/view/View;
+    invoke-static {v0}, Lcom/android/settings_ex/DataUsageSummary;->access$5800(Lcom/android/settings_ex/DataUsageSummary;)Landroid/view/View;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/DataUsageSummary$32$1;->this$1:Lcom/android/settings/DataUsageSummary$32;
+    iget-object v1, p0, Lcom/android/settings_ex/DataUsageSummary$32$1;->this$1:Lcom/android/settings_ex/DataUsageSummary$32;
 
-    iget-object v1, v1, Lcom/android/settings/DataUsageSummary$32;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v1, v1, Lcom/android/settings_ex/DataUsageSummary$32;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
-    invoke-virtual {v1}, Lcom/android/settings/DataUsageSummary;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/DataUsageSummary;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -76,8 +76,8 @@
 
     move-result-object v1
 
-    # invokes: Lcom/android/settings/DataUsageSummary;->setPreferenceSummary(Landroid/view/View;Ljava/lang/CharSequence;)V
-    invoke-static {v0, v1}, Lcom/android/settings/DataUsageSummary;->access$2400(Landroid/view/View;Ljava/lang/CharSequence;)V
+    # invokes: Lcom/android/settings_ex/DataUsageSummary;->setPreferenceSummary(Landroid/view/View;Ljava/lang/CharSequence;)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/DataUsageSummary;->access$2400(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     .line 3642
     return-void

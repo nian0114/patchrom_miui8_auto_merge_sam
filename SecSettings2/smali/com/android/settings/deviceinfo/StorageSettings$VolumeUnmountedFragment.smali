@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/deviceinfo/StorageSettings$VolumeUnmountedFragment;
+.class public Lcom/android/settings_ex/deviceinfo/StorageSettings$VolumeUnmountedFragment;
 .super Landroid/app/DialogFragment;
 .source "StorageSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/StorageSettings;
+    value = Lcom/android/settings_ex/deviceinfo/StorageSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,18 +43,18 @@
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 425
-    new-instance v1, Lcom/android/settings/deviceinfo/StorageSettings$VolumeUnmountedFragment;
+    new-instance v1, Lcom/android/settings_ex/deviceinfo/StorageSettings$VolumeUnmountedFragment;
 
-    invoke-direct {v1}, Lcom/android/settings/deviceinfo/StorageSettings$VolumeUnmountedFragment;-><init>()V
+    invoke-direct {v1}, Lcom/android/settings_ex/deviceinfo/StorageSettings$VolumeUnmountedFragment;-><init>()V
 
     .line 426
-    .local v1, "dialog":Lcom/android/settings/deviceinfo/StorageSettings$VolumeUnmountedFragment;
-    invoke-virtual {v1, v0}, Lcom/android/settings/deviceinfo/StorageSettings$VolumeUnmountedFragment;->setArguments(Landroid/os/Bundle;)V
+    .local v1, "dialog":Lcom/android/settings_ex/deviceinfo/StorageSettings$VolumeUnmountedFragment;
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/deviceinfo/StorageSettings$VolumeUnmountedFragment;->setArguments(Landroid/os/Bundle;)V
 
     .line 427
     const/4 v2, 0x0
 
-    invoke-virtual {v1, p0, v2}, Lcom/android/settings/deviceinfo/StorageSettings$VolumeUnmountedFragment;->setTargetFragment(Landroid/app/Fragment;I)V
+    invoke-virtual {v1, p0, v2}, Lcom/android/settings_ex/deviceinfo/StorageSettings$VolumeUnmountedFragment;->setTargetFragment(Landroid/app/Fragment;I)V
 
     .line 428
     invoke-virtual {p0}, Landroid/app/Fragment;->getFragmentManager()Landroid/app/FragmentManager;
@@ -63,7 +63,7 @@
 
     const-string v3, "volume_unmounted"
 
-    invoke-virtual {v1, v2, v3}, Lcom/android/settings/deviceinfo/StorageSettings$VolumeUnmountedFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v3}, Lcom/android/settings_ex/deviceinfo/StorageSettings$VolumeUnmountedFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     .line 429
     return-void
@@ -77,7 +77,7 @@
 
     .prologue
     .line 433
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageSettings$VolumeUnmountedFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageSettings$VolumeUnmountedFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -93,7 +93,7 @@
 
     .line 436
     .local v2, "sm":Landroid/os/storage/StorageManager;
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageSettings$VolumeUnmountedFragment;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageSettings$VolumeUnmountedFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v5
 
@@ -135,7 +135,7 @@
 
     aput-object v8, v6, v7
 
-    invoke-virtual {p0, v5, v6}, Lcom/android/settings/deviceinfo/StorageSettings$VolumeUnmountedFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v5, v6}, Lcom/android/settings_ex/deviceinfo/StorageSettings$VolumeUnmountedFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -144,9 +144,9 @@
     .line 442
     const v5, 0x7f0e06aa
 
-    new-instance v6, Lcom/android/settings/deviceinfo/StorageSettings$VolumeUnmountedFragment$1;
+    new-instance v6, Lcom/android/settings_ex/deviceinfo/StorageSettings$VolumeUnmountedFragment$1;
 
-    invoke-direct {v6, p0, v1, v3}, Lcom/android/settings/deviceinfo/StorageSettings$VolumeUnmountedFragment$1;-><init>(Lcom/android/settings/deviceinfo/StorageSettings$VolumeUnmountedFragment;Landroid/content/Context;Landroid/os/storage/VolumeInfo;)V
+    invoke-direct {v6, p0, v1, v3}, Lcom/android/settings_ex/deviceinfo/StorageSettings$VolumeUnmountedFragment$1;-><init>(Lcom/android/settings_ex/deviceinfo/StorageSettings$VolumeUnmountedFragment;Landroid/content/Context;Landroid/os/storage/VolumeInfo;)V
 
     invoke-virtual {v0, v5, v6}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/deviceinfo/ImeiInformation$2;
+.class Lcom/android/settings_ex/deviceinfo/ImeiInformation$2;
 .super Ljava/lang/Object;
 .source "ImeiInformation.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/deviceinfo/ImeiInformation;->setPreferenceValue(I)V
+    value = Lcom/android/settings_ex/deviceinfo/ImeiInformation;->setPreferenceValue(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/ImeiInformation;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/ImeiInformation;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/ImeiInformation;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/ImeiInformation;)V
     .locals 0
 
     .prologue
     .line 207
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/ImeiInformation$2;->this$0:Lcom/android/settings/deviceinfo/ImeiInformation;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation$2;->this$0:Lcom/android/settings_ex/deviceinfo/ImeiInformation;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -55,9 +55,9 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 212
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/ImeiInformation$2;->this$0:Lcom/android/settings/deviceinfo/ImeiInformation;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation$2;->this$0:Lcom/android/settings_ex/deviceinfo/ImeiInformation;
 
-    invoke-virtual {v1, v0}, Lcom/android/settings/deviceinfo/ImeiInformation;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->startActivity(Landroid/content/Intent;)V
 
     .line 213
     const/4 v1, 0x1

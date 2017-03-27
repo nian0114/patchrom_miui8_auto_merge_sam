@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/personalvibration/VibrationPatternListAdapter;
+.class public Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;
 .super Landroid/widget/BaseAdapter;
 .source "VibrationPatternListAdapter.java"
 
@@ -31,42 +31,42 @@
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
     .line 45
-    iput-object v0, p0, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->context:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->context:Landroid/content/Context;
 
     .line 48
-    iput-object v0, p0, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->mInflater:Landroid/view/LayoutInflater;
+    iput-object v0, p0, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     .line 51
-    iput-object v0, p0, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->mPackageManager:Landroid/content/pm/PackageManager;
+    iput-object v0, p0, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->mPackageManager:Landroid/content/pm/PackageManager;
 
     .line 54
     new-instance v0, Ljava/util/Vector;
 
     invoke-direct {v0}, Ljava/util/Vector;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->mPatternNames:Ljava/util/Vector;
+    iput-object v0, p0, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->mPatternNames:Ljava/util/Vector;
 
     .line 57
     new-instance v0, Ljava/util/Vector;
 
     invoke-direct {v0}, Ljava/util/Vector;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->mPatternTypes:Ljava/util/Vector;
+    iput-object v0, p0, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->mPatternTypes:Ljava/util/Vector;
 
     .line 58
     new-instance v0, Ljava/util/Vector;
 
     invoke-direct {v0}, Ljava/util/Vector;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->mPatternString:Ljava/util/Vector;
+    iput-object v0, p0, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->mPatternString:Ljava/util/Vector;
 
     .line 60
     const-string v0, " "
 
-    iput-object v0, p0, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->defaultPattern:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->defaultPattern:Ljava/lang/String;
 
     .line 67
-    iput-object p1, p0, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->context:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->context:Landroid/content/Context;
 
     .line 68
     const-string v0, "layout_inflater"
@@ -77,7 +77,7 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    iput-object v0, p0, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->mInflater:Landroid/view/LayoutInflater;
+    iput-object v0, p0, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     .line 69
     return-void
@@ -90,7 +90,7 @@
 
     .prologue
     .line 75
-    iget-object v0, p0, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->mPatternNames:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->mPatternNames:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->size()I
 
@@ -127,7 +127,7 @@
 
     .prologue
     .line 98
-    iget-object v1, p0, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->mPatternNames:Ljava/util/Vector;
+    iget-object v1, p0, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->mPatternNames:Ljava/util/Vector;
 
     invoke-virtual {v1, p1}, Ljava/util/Vector;->elementAt(I)Ljava/lang/Object;
 
@@ -176,14 +176,14 @@
     if-nez p2, :cond_0
 
     .line 121
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
     .line 122
-    iget-object v4, p0, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v4, p0, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     const v5, 0x7f04021e
 
@@ -204,14 +204,14 @@
 
     .line 130
     .local v2, "v":Landroid/widget/TextView;
-    invoke-virtual {p0, p1}, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->getPatternName(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->getPatternName(I)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 131
-    iget-object v4, p0, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->context:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->context:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -228,7 +228,7 @@
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setTextSize(F)V
 
     .line 133
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v4
 
@@ -236,7 +236,7 @@
 
     const-string v4, "BRI"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v5
 
@@ -248,7 +248,7 @@
 
     const-string v4, "TGY"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v5
 
@@ -264,7 +264,7 @@
 
     .line 140
     :cond_2
-    iget-object v4, p0, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->context:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->context:Landroid/content/Context;
 
     const-string v5, "window"
 
@@ -301,7 +301,7 @@
     .end local v2    # "v":Landroid/widget/TextView;
     .end local v3    # "wm":Landroid/view/WindowManager;
     :cond_3
-    iget-object v4, p0, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v4, p0, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     const v5, 0x7f040125
 
@@ -319,22 +319,22 @@
     const/4 v2, 0x0
 
     .line 151
-    iget-object v0, p0, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->mPatternNames:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->mPatternNames:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->removeAllElements()V
 
     .line 152
-    iget-object v0, p0, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->mPatternTypes:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->mPatternTypes:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->removeAllElements()V
 
     .line 153
-    iget-object v0, p0, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->mPatternString:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->mPatternString:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->removeAllElements()V
 
     .line 154
-    iget-object v0, p0, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->context:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->context:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -496,7 +496,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 170
-    iget-object v0, p0, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->mPatternNames:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->mPatternNames:Ljava/util/Vector;
 
     const-string v1, "vibration_name"
 
@@ -511,7 +511,7 @@
     invoke-virtual {v0, v1}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
     .line 171
-    iget-object v0, p0, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->mPatternString:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->mPatternString:Ljava/util/Vector;
 
     const-string v1, "vibration_pattern"
 
@@ -530,7 +530,7 @@
     invoke-virtual {v0, v1}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
     .line 172
-    iget-object v0, p0, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->mPatternTypes:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->mPatternTypes:Ljava/util/Vector;
 
     const-string v1, "vibration_type"
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/applications/AppStorageSettings$2;
+.class Lcom/android/settings_ex/applications/AppStorageSettings$2;
 .super Ljava/lang/Object;
 .source "AppStorageSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/applications/AppStorageSettings;->createDialog(II)Landroid/app/AlertDialog;
+    value = Lcom/android/settings_ex/applications/AppStorageSettings;->createDialog(II)Landroid/app/AlertDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/applications/AppStorageSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/applications/AppStorageSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/applications/AppStorageSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/applications/AppStorageSettings;)V
     .locals 0
 
     .prologue
     .line 478
-    iput-object p1, p0, Lcom/android/settings/applications/AppStorageSettings$2;->this$0:Lcom/android/settings/applications/AppStorageSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/applications/AppStorageSettings$2;->this$0:Lcom/android/settings_ex/applications/AppStorageSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,19 +45,19 @@
     const/4 v1, 0x0
 
     .line 480
-    iget-object v0, p0, Lcom/android/settings/applications/AppStorageSettings$2;->this$0:Lcom/android/settings/applications/AppStorageSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/AppStorageSettings$2;->this$0:Lcom/android/settings_ex/applications/AppStorageSettings;
 
-    # getter for: Lcom/android/settings/applications/AppStorageSettings;->mClearDataButton:Landroid/widget/Button;
-    invoke-static {v0}, Lcom/android/settings/applications/AppStorageSettings;->access$100(Lcom/android/settings/applications/AppStorageSettings;)Landroid/widget/Button;
+    # getter for: Lcom/android/settings_ex/applications/AppStorageSettings;->mClearDataButton:Landroid/widget/Button;
+    invoke-static {v0}, Lcom/android/settings_ex/applications/AppStorageSettings;->access$100(Lcom/android/settings_ex/applications/AppStorageSettings;)Landroid/widget/Button;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 482
-    iget-object v0, p0, Lcom/android/settings/applications/AppStorageSettings$2;->this$0:Lcom/android/settings/applications/AppStorageSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/AppStorageSettings$2;->this$0:Lcom/android/settings_ex/applications/AppStorageSettings;
 
-    invoke-virtual {v0, v1, v1}, Lcom/android/settings/applications/AppStorageSettings;->setIntentAndFinish(ZZ)V
+    invoke-virtual {v0, v1, v1}, Lcom/android/settings_ex/applications/AppStorageSettings;->setIntentAndFinish(ZZ)V
 
     .line 483
     return-void

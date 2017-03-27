@@ -1,4 +1,4 @@
-.class Lcom/android/settings/ApnSettings$8;
+.class Lcom/android/settings_ex/ApnSettings$8;
 .super Ljava/lang/Object;
 .source "ApnSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/ApnSettings;
+    value = Lcom/android/settings_ex/ApnSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/ApnSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/ApnSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/ApnSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/ApnSettings;)V
     .locals 0
 
     .prologue
     .line 736
-    iput-object p1, p0, Lcom/android/settings/ApnSettings$8;->this$0:Lcom/android/settings/ApnSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/ApnSettings$8;->this$0:Lcom/android/settings_ex/ApnSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -59,20 +59,20 @@
     invoke-static {v1, v2}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 740
-    iget-object v1, p0, Lcom/android/settings/ApnSettings$8;->this$0:Lcom/android/settings/ApnSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/ApnSettings$8;->this$0:Lcom/android/settings_ex/ApnSettings;
 
-    # getter for: Lcom/android/settings/ApnSettings;->mCpaAlertDialog:Landroid/app/AlertDialog;
-    invoke-static {v1}, Lcom/android/settings/ApnSettings;->access$800(Lcom/android/settings/ApnSettings;)Landroid/app/AlertDialog;
+    # getter for: Lcom/android/settings_ex/ApnSettings;->mCpaAlertDialog:Landroid/app/AlertDialog;
+    invoke-static {v1}, Lcom/android/settings_ex/ApnSettings;->access$800(Lcom/android/settings_ex/ApnSettings;)Landroid/app/AlertDialog;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
     .line 741
-    iget-object v1, p0, Lcom/android/settings/ApnSettings$8;->this$0:Lcom/android/settings/ApnSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/ApnSettings$8;->this$0:Lcom/android/settings_ex/ApnSettings;
 
-    # getter for: Lcom/android/settings/ApnSettings;->mCpaAlertDialog:Landroid/app/AlertDialog;
-    invoke-static {v1}, Lcom/android/settings/ApnSettings;->access$800(Lcom/android/settings/ApnSettings;)Landroid/app/AlertDialog;
+    # getter for: Lcom/android/settings_ex/ApnSettings;->mCpaAlertDialog:Landroid/app/AlertDialog;
+    invoke-static {v1}, Lcom/android/settings_ex/ApnSettings;->access$800(Lcom/android/settings_ex/ApnSettings;)Landroid/app/AlertDialog;
 
     move-result-object v1
 
@@ -80,11 +80,11 @@
 
     .line 743
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/ApnSettings$8;->this$0:Lcom/android/settings/ApnSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/ApnSettings$8;->this$0:Lcom/android/settings_ex/ApnSettings;
 
     const/16 v2, 0x7e
 
-    invoke-virtual {v1, v0, v2}, Lcom/android/settings/ApnSettings;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {v1, v0, v2}, Lcom/android/settings_ex/ApnSettings;->startActivityForResult(Landroid/content/Intent;I)V
 
     .line 744
     return-void

@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/notification/PriorityNotiAppList$AppRow;
-.super Lcom/android/settings/notification/PriorityNotiAppList$Row;
+.class public Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;
+.super Lcom/android/settings_ex/notification/PriorityNotiAppList$Row;
 .source "PriorityNotiAppList.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/PriorityNotiAppList;
+    value = Lcom/android/settings_ex/notification/PriorityNotiAppList;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -42,7 +42,7 @@
     .line 465
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/android/settings/notification/PriorityNotiAppList$Row;-><init>(Lcom/android/settings/notification/PriorityNotiAppList$1;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/notification/PriorityNotiAppList$Row;-><init>(Lcom/android/settings_ex/notification/PriorityNotiAppList$1;)V
 
     return-void
 .end method

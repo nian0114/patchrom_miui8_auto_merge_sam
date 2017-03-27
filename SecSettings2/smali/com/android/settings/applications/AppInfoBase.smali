@@ -1,15 +1,15 @@
-.class public abstract Lcom/android/settings/applications/AppInfoBase;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public abstract Lcom/android/settings_ex/applications/AppInfoBase;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "AppInfoBase.java"
 
 # interfaces
-.implements Lcom/android/settingslib/applications/ApplicationsState$Callbacks;
+.implements Lcom/android/settings_exlib/applications/ApplicationsState$Callbacks;
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/applications/AppInfoBase$MyAlertDialogFragment;
+        Lcom/android/settings_ex/applications/AppInfoBase$MyAlertDialogFragment;
     }
 .end annotation
 
@@ -21,7 +21,7 @@
 # instance fields
 .field protected mAppControlRestricted:Z
 
-.field protected mAppEntry:Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+.field protected mAppEntry:Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
 
 .field protected mDpm:Landroid/app/admin/DevicePolicyManager;
 
@@ -33,9 +33,9 @@
 
 .field protected mPm:Landroid/content/pm/PackageManager;
 
-.field protected mSession:Lcom/android/settingslib/applications/ApplicationsState$Session;
+.field protected mSession:Lcom/android/settings_exlib/applications/ApplicationsState$Session;
 
-.field protected mState:Lcom/android/settingslib/applications/ApplicationsState;
+.field protected mState:Lcom/android/settings_exlib/applications/ApplicationsState;
 
 .field protected mUsbManager:Landroid/hardware/usb/IUsbManager;
 
@@ -50,13 +50,13 @@
 
     .prologue
     .line 52
-    const-class v0, Lcom/android/settings/applications/AppInfoBase;
+    const-class v0, Lcom/android/settings_ex/applications/AppInfoBase;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/applications/AppInfoBase;->TAG:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/applications/AppInfoBase;->TAG:Ljava/lang/String;
 
     return-void
 .end method
@@ -66,12 +66,12 @@
 
     .prologue
     .line 46
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 55
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/applications/AppInfoBase;->mAppControlRestricted:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mAppControlRestricted:Z
 
     .line 208
     return-void
@@ -131,7 +131,7 @@
 
     move-object v5, v3
 
-    invoke-static/range {v0 .. v6}, Lcom/android/settings/Utils;->onBuildStartFragmentIntent(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;ILjava/lang/CharSequence;Z)Landroid/content/Intent;
+    invoke-static/range {v0 .. v6}, Lcom/android/settings_ex/Utils;->onBuildStartFragmentIntent(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;ILjava/lang/CharSequence;Z)Landroid/content/Intent;
 
     move-result-object v7
 
@@ -174,15 +174,15 @@
 
     .prologue
     .line 76
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 77
     const/4 v2, 0x0
 
-    iput-boolean v2, p0, Lcom/android/settings/applications/AppInfoBase;->mFinishing:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mFinishing:Z
 
     .line 79
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppInfoBase;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/AppInfoBase;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -190,23 +190,23 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settingslib/applications/ApplicationsState;->getInstance(Landroid/app/Application;)Lcom/android/settingslib/applications/ApplicationsState;
+    invoke-static {v2}, Lcom/android/settings_exlib/applications/ApplicationsState;->getInstance(Landroid/app/Application;)Lcom/android/settings_exlib/applications/ApplicationsState;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/applications/AppInfoBase;->mState:Lcom/android/settingslib/applications/ApplicationsState;
+    iput-object v2, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mState:Lcom/android/settings_exlib/applications/ApplicationsState;
 
     .line 80
-    iget-object v2, p0, Lcom/android/settings/applications/AppInfoBase;->mState:Lcom/android/settingslib/applications/ApplicationsState;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mState:Lcom/android/settings_exlib/applications/ApplicationsState;
 
-    invoke-virtual {v2, p0}, Lcom/android/settingslib/applications/ApplicationsState;->newSession(Lcom/android/settingslib/applications/ApplicationsState$Callbacks;)Lcom/android/settingslib/applications/ApplicationsState$Session;
+    invoke-virtual {v2, p0}, Lcom/android/settings_exlib/applications/ApplicationsState;->newSession(Lcom/android/settings_exlib/applications/ApplicationsState$Callbacks;)Lcom/android/settings_exlib/applications/ApplicationsState$Session;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/applications/AppInfoBase;->mSession:Lcom/android/settingslib/applications/ApplicationsState$Session;
+    iput-object v2, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mSession:Lcom/android/settings_exlib/applications/ApplicationsState$Session;
 
     .line 81
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppInfoBase;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/AppInfoBase;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -220,7 +220,7 @@
 
     check-cast v2, Landroid/app/admin/DevicePolicyManager;
 
-    iput-object v2, p0, Lcom/android/settings/applications/AppInfoBase;->mDpm:Landroid/app/admin/DevicePolicyManager;
+    iput-object v2, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mDpm:Landroid/app/admin/DevicePolicyManager;
 
     .line 83
     const-string v2, "user"
@@ -231,14 +231,14 @@
 
     check-cast v2, Landroid/os/UserManager;
 
-    iput-object v2, p0, Lcom/android/settings/applications/AppInfoBase;->mUserManager:Landroid/os/UserManager;
+    iput-object v2, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mUserManager:Landroid/os/UserManager;
 
     .line 84
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/applications/AppInfoBase;->mPm:Landroid/content/pm/PackageManager;
+    iput-object v2, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mPm:Landroid/content/pm/PackageManager;
 
     .line 85
     const-string v2, "usb"
@@ -253,10 +253,10 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/applications/AppInfoBase;->mUsbManager:Landroid/hardware/usb/IUsbManager;
+    iput-object v2, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mUsbManager:Landroid/hardware/usb/IUsbManager;
 
     .line 88
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppInfoBase;->retrieveAppEntry()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/AppInfoBase;->retrieveAppEntry()Ljava/lang/String;
 
     .line 89
     return-void
@@ -291,7 +291,7 @@
 
     .prologue
     .line 193
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppInfoBase;->refreshUi()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/AppInfoBase;->refreshUi()Z
 
     .line 194
     return-void
@@ -311,12 +311,12 @@
 
     .prologue
     .line 104
-    iget-object v0, p0, Lcom/android/settings/applications/AppInfoBase;->mSession:Lcom/android/settingslib/applications/ApplicationsState$Session;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mSession:Lcom/android/settings_exlib/applications/ApplicationsState$Session;
 
-    invoke-virtual {v0}, Lcom/android/settingslib/applications/ApplicationsState$Session;->pause()V
+    invoke-virtual {v0}, Lcom/android/settings_exlib/applications/ApplicationsState$Session;->pause()V
 
     .line 105
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 106
     return-void
@@ -329,14 +329,14 @@
             "(",
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settingslib/applications/ApplicationsState$AppEntry;",
+            "Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;",
             ">;)V"
         }
     .end annotation
 
     .prologue
     .line 164
-    .local p1, "apps":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/settingslib/applications/ApplicationsState$AppEntry;>;"
+    .local p1, "apps":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;>;"
     return-void
 .end method
 
@@ -347,15 +347,15 @@
     const/4 v2, 0x1
 
     .line 93
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 94
-    iget-object v0, p0, Lcom/android/settings/applications/AppInfoBase;->mSession:Lcom/android/settingslib/applications/ApplicationsState$Session;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mSession:Lcom/android/settings_exlib/applications/ApplicationsState$Session;
 
-    invoke-virtual {v0}, Lcom/android/settingslib/applications/ApplicationsState$Session;->resume()V
+    invoke-virtual {v0}, Lcom/android/settings_exlib/applications/ApplicationsState$Session;->resume()V
 
     .line 95
-    iget-object v0, p0, Lcom/android/settings/applications/AppInfoBase;->mUserManager:Landroid/os/UserManager;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mUserManager:Landroid/os/UserManager;
 
     const-string v1, "no_control_apps"
 
@@ -363,17 +363,17 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/applications/AppInfoBase;->mAppControlRestricted:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mAppControlRestricted:Z
 
     .line 97
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppInfoBase;->refreshUi()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/AppInfoBase;->refreshUi()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 98
-    invoke-virtual {p0, v2, v2}, Lcom/android/settings/applications/AppInfoBase;->setIntentAndFinish(ZZ)V
+    invoke-virtual {p0, v2, v2}, Lcom/android/settings_ex/applications/AppInfoBase;->setIntentAndFinish(ZZ)V
 
     .line 100
     :cond_0
@@ -399,7 +399,7 @@
     const/4 v4, 0x0
 
     .line 109
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppInfoBase;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/AppInfoBase;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -414,17 +414,17 @@
     move-result-object v3
 
     :goto_0
-    iput-object v3, p0, Lcom/android/settings/applications/AppInfoBase;->mPackageName:Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mPackageName:Ljava/lang/String;
 
     .line 111
-    iget-object v3, p0, Lcom/android/settings/applications/AppInfoBase;->mPackageName:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mPackageName:Ljava/lang/String;
 
     if-nez v3, :cond_0
 
     .line 112
     if-nez v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppInfoBase;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/AppInfoBase;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -446,7 +446,7 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/applications/AppInfoBase;->mPackageName:Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mPackageName:Ljava/lang/String;
 
     .line 118
     .end local v2    # "intent":Landroid/content/Intent;
@@ -455,33 +455,33 @@
 
     move-result v3
 
-    iput v3, p0, Lcom/android/settings/applications/AppInfoBase;->mUserId:I
+    iput v3, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mUserId:I
 
     .line 119
-    iget-object v3, p0, Lcom/android/settings/applications/AppInfoBase;->mState:Lcom/android/settingslib/applications/ApplicationsState;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mState:Lcom/android/settings_exlib/applications/ApplicationsState;
 
-    iget-object v5, p0, Lcom/android/settings/applications/AppInfoBase;->mPackageName:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mPackageName:Ljava/lang/String;
 
-    iget v6, p0, Lcom/android/settings/applications/AppInfoBase;->mUserId:I
+    iget v6, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mUserId:I
 
-    invoke-virtual {v3, v5, v6}, Lcom/android/settingslib/applications/ApplicationsState;->getEntry(Ljava/lang/String;I)Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+    invoke-virtual {v3, v5, v6}, Lcom/android/settings_exlib/applications/ApplicationsState;->getEntry(Ljava/lang/String;I)Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/applications/AppInfoBase;->mAppEntry:Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+    iput-object v3, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mAppEntry:Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
 
     .line 120
-    iget-object v3, p0, Lcom/android/settings/applications/AppInfoBase;->mAppEntry:Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mAppEntry:Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
 
     if-eqz v3, :cond_3
 
     .line 123
     :try_start_0
-    iget-object v3, p0, Lcom/android/settings/applications/AppInfoBase;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mPm:Landroid/content/pm/PackageManager;
 
-    iget-object v4, p0, Lcom/android/settings/applications/AppInfoBase;->mAppEntry:Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mAppEntry:Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
 
-    iget-object v4, v4, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
+    iget-object v4, v4, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
 
     iget-object v4, v4, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
@@ -491,13 +491,13 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/applications/AppInfoBase;->mPackageInfo:Landroid/content/pm/PackageInfo;
+    iput-object v3, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mPackageInfo:Landroid/content/pm/PackageInfo;
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 135
     :goto_2
-    iget-object v3, p0, Lcom/android/settings/applications/AppInfoBase;->mPackageName:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mPackageName:Ljava/lang/String;
 
     return-object v3
 
@@ -527,7 +527,7 @@
 
     .line 128
     .local v1, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
-    sget-object v3, Lcom/android/settings/applications/AppInfoBase;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/applications/AppInfoBase;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -539,9 +539,9 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/applications/AppInfoBase;->mAppEntry:Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+    iget-object v5, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mAppEntry:Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
 
-    iget-object v5, v5, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
+    iget-object v5, v5, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
 
     iget-object v5, v5, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
@@ -560,14 +560,14 @@
     .line 131
     .end local v1    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_3
-    sget-object v3, Lcom/android/settings/applications/AppInfoBase;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/applications/AppInfoBase;->TAG:Ljava/lang/String;
 
     const-string v5, "Missing AppEntry; maybe reinstalling?"
 
     invoke-static {v3, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 132
-    iput-object v4, p0, Lcom/android/settings/applications/AppInfoBase;->mPackageInfo:Landroid/content/pm/PackageInfo;
+    iput-object v4, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mPackageInfo:Landroid/content/pm/PackageInfo;
 
     goto :goto_2
 .end method
@@ -590,22 +590,22 @@
     invoke-virtual {v0, v2, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 142
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppInfoBase;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/AppInfoBase;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/SettingsActivity;
+    check-cast v1, Lcom/android/settings_ex/SettingsActivity;
 
     .line 143
-    .local v1, "sa":Lcom/android/settings/SettingsActivity;
+    .local v1, "sa":Lcom/android/settings_ex/SettingsActivity;
     const/4 v2, -0x1
 
-    invoke-virtual {v1, p0, v2, v0}, Lcom/android/settings/SettingsActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
+    invoke-virtual {v1, p0, v2, v0}, Lcom/android/settings_ex/SettingsActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
 
     .line 144
     const/4 v2, 0x1
 
-    iput-boolean v2, p0, Lcom/android/settings/applications/AppInfoBase;->mFinishing:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/applications/AppInfoBase;->mFinishing:Z
 
     .line 145
     return-void
@@ -618,7 +618,7 @@
 
     .prologue
     .line 148
-    invoke-static {p1, p2}, Lcom/android/settings/applications/AppInfoBase$MyAlertDialogFragment;->newInstance(II)Lcom/android/settings/applications/AppInfoBase$MyAlertDialogFragment;
+    invoke-static {p1, p2}, Lcom/android/settings_ex/applications/AppInfoBase$MyAlertDialogFragment;->newInstance(II)Lcom/android/settings_ex/applications/AppInfoBase$MyAlertDialogFragment;
 
     move-result-object v0
 
@@ -629,7 +629,7 @@
     invoke-virtual {v0, p0, v1}, Landroid/app/DialogFragment;->setTargetFragment(Landroid/app/Fragment;I)V
 
     .line 150
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppInfoBase;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/AppInfoBase;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
 

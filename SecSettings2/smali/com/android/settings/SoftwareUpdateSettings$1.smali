@@ -1,4 +1,4 @@
-.class Lcom/android/settings/SoftwareUpdateSettings$1;
+.class Lcom/android/settings_ex/SoftwareUpdateSettings$1;
 .super Ljava/lang/Object;
 .source "SoftwareUpdateSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/SoftwareUpdateSettings;->InitComponent()V
+    value = Lcom/android/settings_ex/SoftwareUpdateSettings;->InitComponent()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/SoftwareUpdateSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/SoftwareUpdateSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/SoftwareUpdateSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/SoftwareUpdateSettings;)V
     .locals 0
 
     .prologue
     .line 442
-    iput-object p1, p0, Lcom/android/settings/SoftwareUpdateSettings$1;->this$0:Lcom/android/settings/SoftwareUpdateSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/SoftwareUpdateSettings$1;->this$0:Lcom/android/settings_ex/SoftwareUpdateSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -61,9 +61,9 @@
     invoke-static {v2, v4}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 448
-    iget-object v2, p0, Lcom/android/settings/SoftwareUpdateSettings$1;->this$0:Lcom/android/settings/SoftwareUpdateSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/SoftwareUpdateSettings$1;->this$0:Lcom/android/settings_ex/SoftwareUpdateSettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/SoftwareUpdateSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v2}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -95,16 +95,16 @@
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 454
-    iget-object v2, p0, Lcom/android/settings/SoftwareUpdateSettings$1;->this$0:Lcom/android/settings/SoftwareUpdateSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/SoftwareUpdateSettings$1;->this$0:Lcom/android/settings_ex/SoftwareUpdateSettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     invoke-virtual {v2, v1}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 456
-    iget-object v2, p0, Lcom/android/settings/SoftwareUpdateSettings$1;->this$0:Lcom/android/settings/SoftwareUpdateSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/SoftwareUpdateSettings$1;->this$0:Lcom/android/settings_ex/SoftwareUpdateSettings;
 
     const-string v4, "com.samsung.omcagent.intent.WIFI_ONLY"
 
@@ -112,8 +112,8 @@
 
     move-result-object v5
 
-    # invokes: Lcom/android/settings/SoftwareUpdateSettings;->sendOmcUpdate(Ljava/lang/String;Ljava/lang/Boolean;)Z
-    invoke-static {v2, v4, v5}, Lcom/android/settings/SoftwareUpdateSettings;->access$400(Lcom/android/settings/SoftwareUpdateSettings;Ljava/lang/String;Ljava/lang/Boolean;)Z
+    # invokes: Lcom/android/settings_ex/SoftwareUpdateSettings;->sendOmcUpdate(Ljava/lang/String;Ljava/lang/Boolean;)Z
+    invoke-static {v2, v4, v5}, Lcom/android/settings_ex/SoftwareUpdateSettings;->access$400(Lcom/android/settings_ex/SoftwareUpdateSettings;Ljava/lang/String;Ljava/lang/Boolean;)Z
 
     .line 458
     return v3

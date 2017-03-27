@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/sfinderconnect/Hex;
+.class public Lcom/android/settings_ex/sfinderconnect/Hex;
 .super Ljava/lang/Object;
 .source "Hex.java"
 
@@ -27,17 +27,17 @@
 
     fill-array-data v1, :array_0
 
-    sput-object v1, Lcom/android/settings/sfinderconnect/Hex;->HEX_DIGITS:[C
+    sput-object v1, Lcom/android/settings_ex/sfinderconnect/Hex;->HEX_DIGITS:[C
 
     .line 30
     new-array v1, v4, [C
 
-    sput-object v1, Lcom/android/settings/sfinderconnect/Hex;->FIRST_CHAR:[C
+    sput-object v1, Lcom/android/settings_ex/sfinderconnect/Hex;->FIRST_CHAR:[C
 
     .line 31
     new-array v1, v4, [C
 
-    sput-object v1, Lcom/android/settings/sfinderconnect/Hex;->SECOND_CHAR:[C
+    sput-object v1, Lcom/android/settings_ex/sfinderconnect/Hex;->SECOND_CHAR:[C
 
     .line 33
     const/4 v0, 0x0
@@ -47,9 +47,9 @@
     if-ge v0, v4, :cond_0
 
     .line 34
-    sget-object v1, Lcom/android/settings/sfinderconnect/Hex;->FIRST_CHAR:[C
+    sget-object v1, Lcom/android/settings_ex/sfinderconnect/Hex;->FIRST_CHAR:[C
 
-    sget-object v2, Lcom/android/settings/sfinderconnect/Hex;->HEX_DIGITS:[C
+    sget-object v2, Lcom/android/settings_ex/sfinderconnect/Hex;->HEX_DIGITS:[C
 
     shr-int/lit8 v3, v0, 0x4
 
@@ -60,9 +60,9 @@
     aput-char v2, v1, v0
 
     .line 35
-    sget-object v1, Lcom/android/settings/sfinderconnect/Hex;->SECOND_CHAR:[C
+    sget-object v1, Lcom/android/settings_ex/sfinderconnect/Hex;->SECOND_CHAR:[C
 
-    sget-object v2, Lcom/android/settings/sfinderconnect/Hex;->HEX_DIGITS:[C
+    sget-object v2, Lcom/android/settings_ex/sfinderconnect/Hex;->HEX_DIGITS:[C
 
     and-int/lit8 v3, v0, 0xf
 
@@ -81,7 +81,7 @@
 
     new-array v1, v1, [B
 
-    sput-object v1, Lcom/android/settings/sfinderconnect/Hex;->DIGITS:[B
+    sput-object v1, Lcom/android/settings_ex/sfinderconnect/Hex;->DIGITS:[B
 
     .line 41
     const/4 v0, 0x0
@@ -92,7 +92,7 @@
     if-gt v0, v1, :cond_1
 
     .line 42
-    sget-object v1, Lcom/android/settings/sfinderconnect/Hex;->DIGITS:[B
+    sget-object v1, Lcom/android/settings_ex/sfinderconnect/Hex;->DIGITS:[B
 
     const/4 v2, -0x1
 
@@ -114,7 +114,7 @@
     if-ge v0, v1, :cond_2
 
     .line 45
-    sget-object v1, Lcom/android/settings/sfinderconnect/Hex;->DIGITS:[B
+    sget-object v1, Lcom/android/settings_ex/sfinderconnect/Hex;->DIGITS:[B
 
     add-int/lit8 v2, v0, 0x30
 
@@ -137,7 +137,7 @@
     if-ge v0, v1, :cond_3
 
     .line 48
-    sget-object v1, Lcom/android/settings/sfinderconnect/Hex;->DIGITS:[B
+    sget-object v1, Lcom/android/settings_ex/sfinderconnect/Hex;->DIGITS:[B
 
     add-int/lit8 v2, v0, 0x41
 
@@ -148,7 +148,7 @@
     aput-byte v3, v1, v2
 
     .line 49
-    sget-object v1, Lcom/android/settings/sfinderconnect/Hex;->DIGITS:[B
+    sget-object v1, Lcom/android/settings_ex/sfinderconnect/Hex;->DIGITS:[B
 
     add-int/lit8 v2, v0, 0x61
 
@@ -258,7 +258,7 @@
 
     .end local v3    # "j":I
     .local v4, "j":I
-    sget-object v5, Lcom/android/settings/sfinderconnect/Hex;->FIRST_CHAR:[C
+    sget-object v5, Lcom/android/settings_ex/sfinderconnect/Hex;->FIRST_CHAR:[C
 
     aget-char v5, v5, v2
 
@@ -269,7 +269,7 @@
 
     .end local v4    # "j":I
     .restart local v3    # "j":I
-    sget-object v5, Lcom/android/settings/sfinderconnect/Hex;->SECOND_CHAR:[C
+    sget-object v5, Lcom/android/settings_ex/sfinderconnect/Hex;->SECOND_CHAR:[C
 
     aget-char v5, v5, v2
 

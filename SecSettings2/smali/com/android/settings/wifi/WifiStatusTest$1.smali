@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wifi/WifiStatusTest$1;
+.class Lcom/android/settings_ex/wifi/WifiStatusTest$1;
 .super Landroid/content/BroadcastReceiver;
 .source "WifiStatusTest.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiStatusTest;
+    value = Lcom/android/settings_ex/wifi/WifiStatusTest;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiStatusTest;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiStatusTest;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiStatusTest;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiStatusTest;)V
     .locals 0
 
     .prologue
     .line 87
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiStatusTest$1;->this$0:Lcom/android/settings/wifi/WifiStatusTest;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiStatusTest$1;->this$0:Lcom/android/settings_ex/wifi/WifiStatusTest;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -55,7 +55,7 @@
     if-eqz v0, :cond_1
 
     .line 91
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiStatusTest$1;->this$0:Lcom/android/settings/wifi/WifiStatusTest;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiStatusTest$1;->this$0:Lcom/android/settings_ex/wifi/WifiStatusTest;
 
     const-string v1, "wifi_state"
 
@@ -65,8 +65,8 @@
 
     move-result v1
 
-    # invokes: Lcom/android/settings/wifi/WifiStatusTest;->handleWifiStateChanged(I)V
-    invoke-static {v0, v1}, Lcom/android/settings/wifi/WifiStatusTest;->access$000(Lcom/android/settings/wifi/WifiStatusTest;I)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiStatusTest;->handleWifiStateChanged(I)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/wifi/WifiStatusTest;->access$000(Lcom/android/settings_ex/wifi/WifiStatusTest;I)V
 
     .line 112
     :cond_0
@@ -88,7 +88,7 @@
     if-eqz v0, :cond_2
 
     .line 94
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiStatusTest$1;->this$0:Lcom/android/settings/wifi/WifiStatusTest;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiStatusTest$1;->this$0:Lcom/android/settings_ex/wifi/WifiStatusTest;
 
     const-string v0, "networkInfo"
 
@@ -98,8 +98,8 @@
 
     check-cast v0, Landroid/net/NetworkInfo;
 
-    # invokes: Lcom/android/settings/wifi/WifiStatusTest;->handleNetworkStateChanged(Landroid/net/NetworkInfo;)V
-    invoke-static {v1, v0}, Lcom/android/settings/wifi/WifiStatusTest;->access$100(Lcom/android/settings/wifi/WifiStatusTest;Landroid/net/NetworkInfo;)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiStatusTest;->handleNetworkStateChanged(Landroid/net/NetworkInfo;)V
+    invoke-static {v1, v0}, Lcom/android/settings_ex/wifi/WifiStatusTest;->access$100(Lcom/android/settings_ex/wifi/WifiStatusTest;Landroid/net/NetworkInfo;)V
 
     goto :goto_0
 
@@ -118,10 +118,10 @@
     if-eqz v0, :cond_3
 
     .line 97
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiStatusTest$1;->this$0:Lcom/android/settings/wifi/WifiStatusTest;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiStatusTest$1;->this$0:Lcom/android/settings_ex/wifi/WifiStatusTest;
 
-    # invokes: Lcom/android/settings/wifi/WifiStatusTest;->handleScanResultsAvailable()V
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiStatusTest;->access$200(Lcom/android/settings/wifi/WifiStatusTest;)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiStatusTest;->handleScanResultsAvailable()V
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiStatusTest;->access$200(Lcom/android/settings_ex/wifi/WifiStatusTest;)V
 
     goto :goto_0
 
@@ -153,7 +153,7 @@
     if-eqz v0, :cond_4
 
     .line 101
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiStatusTest$1;->this$0:Lcom/android/settings/wifi/WifiStatusTest;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiStatusTest$1;->this$0:Lcom/android/settings_ex/wifi/WifiStatusTest;
 
     const-string v0, "newState"
 
@@ -175,8 +175,8 @@
 
     move-result v3
 
-    # invokes: Lcom/android/settings/wifi/WifiStatusTest;->handleSupplicantStateChanged(Landroid/net/wifi/SupplicantState;ZI)V
-    invoke-static {v1, v0, v2, v3}, Lcom/android/settings/wifi/WifiStatusTest;->access$300(Lcom/android/settings/wifi/WifiStatusTest;Landroid/net/wifi/SupplicantState;ZI)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiStatusTest;->handleSupplicantStateChanged(Landroid/net/wifi/SupplicantState;ZI)V
+    invoke-static {v1, v0, v2, v3}, Lcom/android/settings_ex/wifi/WifiStatusTest;->access$300(Lcom/android/settings_ex/wifi/WifiStatusTest;Landroid/net/wifi/SupplicantState;ZI)V
 
     goto :goto_0
 
@@ -195,7 +195,7 @@
     if-eqz v0, :cond_5
 
     .line 106
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiStatusTest$1;->this$0:Lcom/android/settings/wifi/WifiStatusTest;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiStatusTest$1;->this$0:Lcom/android/settings_ex/wifi/WifiStatusTest;
 
     const-string v1, "newRssi"
 
@@ -203,8 +203,8 @@
 
     move-result v1
 
-    # invokes: Lcom/android/settings/wifi/WifiStatusTest;->handleSignalChanged(I)V
-    invoke-static {v0, v1}, Lcom/android/settings/wifi/WifiStatusTest;->access$400(Lcom/android/settings/wifi/WifiStatusTest;I)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiStatusTest;->handleSignalChanged(I)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/wifi/WifiStatusTest;->access$400(Lcom/android/settings_ex/wifi/WifiStatusTest;I)V
 
     goto :goto_0
 

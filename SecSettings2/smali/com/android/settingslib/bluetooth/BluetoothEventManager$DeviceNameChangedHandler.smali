@@ -1,14 +1,14 @@
-.class Lcom/android/settingslib/bluetooth/BluetoothEventManager$DeviceNameChangedHandler;
+.class Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$DeviceNameChangedHandler;
 .super Ljava/lang/Object;
 .source "BluetoothEventManager.java"
 
 # interfaces
-.implements Lcom/android/settingslib/bluetooth/BluetoothEventManager$Handler;
+.implements Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$Handler;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/bluetooth/BluetoothEventManager;
+    value = Lcom/android/settings_exlib/bluetooth/BluetoothEventManager;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,13 +28,13 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settingslib/bluetooth/BluetoothEventManager$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settingslib/bluetooth/BluetoothEventManager$1;
+    .param p1, "x0"    # Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$1;
 
     .prologue
     .line 317
-    invoke-direct {p0}, Lcom/android/settingslib/bluetooth/BluetoothEventManager$DeviceNameChangedHandler;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_exlib/bluetooth/BluetoothEventManager$DeviceNameChangedHandler;-><init>()V
 
     return-void
 .end method
@@ -56,7 +56,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 321
-    invoke-static {p1}, Lcom/android/settingslib/bluetooth/Utils;->updateDeviceName(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/android/settings_exlib/bluetooth/Utils;->updateDeviceName(Landroid/content/Context;)V
 
     .line 322
     return-void

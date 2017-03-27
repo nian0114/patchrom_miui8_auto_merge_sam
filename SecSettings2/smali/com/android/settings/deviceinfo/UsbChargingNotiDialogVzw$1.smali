@@ -1,11 +1,11 @@
-.class Lcom/android/settings/deviceinfo/UsbChargingNotiDialogVzw$1;
+.class Lcom/android/settings_ex/deviceinfo/UsbChargingNotiDialogVzw$1;
 .super Landroid/content/BroadcastReceiver;
 .source "UsbChargingNotiDialogVzw.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/UsbChargingNotiDialogVzw;
+    value = Lcom/android/settings_ex/deviceinfo/UsbChargingNotiDialogVzw;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/UsbChargingNotiDialogVzw;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/UsbChargingNotiDialogVzw;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/UsbChargingNotiDialogVzw;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/UsbChargingNotiDialogVzw;)V
     .locals 0
 
     .prologue
     .line 19
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/UsbChargingNotiDialogVzw$1;->this$0:Lcom/android/settings/deviceinfo/UsbChargingNotiDialogVzw;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/UsbChargingNotiDialogVzw$1;->this$0:Lcom/android/settings_ex/deviceinfo/UsbChargingNotiDialogVzw;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -53,10 +53,10 @@
     if-nez v0, :cond_0
 
     .line 24
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/UsbChargingNotiDialogVzw$1;->this$0:Lcom/android/settings/deviceinfo/UsbChargingNotiDialogVzw;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/UsbChargingNotiDialogVzw$1;->this$0:Lcom/android/settings_ex/deviceinfo/UsbChargingNotiDialogVzw;
 
-    # getter for: Lcom/android/settings/deviceinfo/UsbChargingNotiDialogVzw;->mDialog:Landroid/app/AlertDialog;
-    invoke-static {v1}, Lcom/android/settings/deviceinfo/UsbChargingNotiDialogVzw;->access$000(Lcom/android/settings/deviceinfo/UsbChargingNotiDialogVzw;)Landroid/app/AlertDialog;
+    # getter for: Lcom/android/settings_ex/deviceinfo/UsbChargingNotiDialogVzw;->mDialog:Landroid/app/AlertDialog;
+    invoke-static {v1}, Lcom/android/settings_ex/deviceinfo/UsbChargingNotiDialogVzw;->access$000(Lcom/android/settings_ex/deviceinfo/UsbChargingNotiDialogVzw;)Landroid/app/AlertDialog;
 
     move-result-object v1
 

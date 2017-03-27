@@ -1,11 +1,11 @@
-.class Lcom/android/settings/DualSoundRingtoneSettings$1;
+.class Lcom/android/settings_ex/DualSoundRingtoneSettings$1;
 .super Landroid/os/Handler;
 .source "DualSoundRingtoneSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DualSoundRingtoneSettings;
+    value = Lcom/android/settings_ex/DualSoundRingtoneSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DualSoundRingtoneSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/DualSoundRingtoneSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DualSoundRingtoneSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/DualSoundRingtoneSettings;)V
     .locals 0
 
     .prologue
     .line 109
-    iput-object p1, p0, Lcom/android/settings/DualSoundRingtoneSettings$1;->this$0:Lcom/android/settings/DualSoundRingtoneSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings$1;->this$0:Lcom/android/settings_ex/DualSoundRingtoneSettings;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -49,10 +49,10 @@
 
     .line 113
     :pswitch_0
-    iget-object v0, p0, Lcom/android/settings/DualSoundRingtoneSettings$1;->this$0:Lcom/android/settings/DualSoundRingtoneSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings$1;->this$0:Lcom/android/settings_ex/DualSoundRingtoneSettings;
 
-    # getter for: Lcom/android/settings/DualSoundRingtoneSettings;->mRingtonePreference:Landroid/preference/Preference;
-    invoke-static {v0}, Lcom/android/settings/DualSoundRingtoneSettings;->access$000(Lcom/android/settings/DualSoundRingtoneSettings;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/DualSoundRingtoneSettings;->mRingtonePreference:Landroid/preference/Preference;
+    invoke-static {v0}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->access$000(Lcom/android/settings_ex/DualSoundRingtoneSettings;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -66,10 +66,10 @@
 
     .line 117
     :pswitch_1
-    iget-object v0, p0, Lcom/android/settings/DualSoundRingtoneSettings$1;->this$0:Lcom/android/settings/DualSoundRingtoneSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/DualSoundRingtoneSettings$1;->this$0:Lcom/android/settings_ex/DualSoundRingtoneSettings;
 
-    # getter for: Lcom/android/settings/DualSoundRingtoneSettings;->mNotificationPreference:Landroid/preference/Preference;
-    invoke-static {v0}, Lcom/android/settings/DualSoundRingtoneSettings;->access$100(Lcom/android/settings/DualSoundRingtoneSettings;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/DualSoundRingtoneSettings;->mNotificationPreference:Landroid/preference/Preference;
+    invoke-static {v0}, Lcom/android/settings_ex/DualSoundRingtoneSettings;->access$100(Lcom/android/settings_ex/DualSoundRingtoneSettings;)Landroid/preference/Preference;
 
     move-result-object v1
 

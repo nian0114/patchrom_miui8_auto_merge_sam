@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/SetupWizardWifiScreen;
+.class public Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 .super Landroid/app/Activity;
 .source "SetupWizardWifiScreen.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;
+        Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;
     }
 .end annotation
 
@@ -32,7 +32,7 @@
 
 .field private mConnectionResult:I
 
-.field private mConnectivityCheckTask:Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;
+.field private mConnectivityCheckTask:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;
 
 .field private mContext:Landroid/content/Context;
 
@@ -66,7 +66,7 @@
 
 .field private mWifiScreenSubText:Landroid/widget/TextView;
 
-.field private mWifiSettings:Lcom/android/settings/wifi/WifiSettings;
+.field private mWifiSettings:Lcom/android/settings_ex/wifi/WifiSettings;
 
 .field private mWifiSettingsView:Landroid/view/View;
 
@@ -88,207 +88,207 @@
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     .line 74
-    iput-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mConnCheckProgressDialog:Landroid/app/ProgressDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mConnCheckProgressDialog:Landroid/app/ProgressDialog;
 
     .line 75
-    iput-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiSettings:Lcom/android/settings/wifi/WifiSettings;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiSettings:Lcom/android/settings_ex/wifi/WifiSettings;
 
     .line 79
-    iput-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
 
     .line 80
-    iput-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
 
     .line 81
-    iput-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     .line 82
-    iput-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiScreenSubText:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiScreenSubText:Landroid/widget/TextView;
 
     .line 84
-    iput v2, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mConnectionResult:I
+    iput v2, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mConnectionResult:I
 
     .line 85
-    iput v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mSuccessWifiConNID:I
+    iput v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mSuccessWifiConNID:I
 
     .line 86
-    iput-boolean v2, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->isApCheckDone:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->isApCheckDone:Z
 
     .line 87
-    iput-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->intentExtras:Landroid/os/Bundle;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->intentExtras:Landroid/os/Bundle;
 
     .line 88
-    iput-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mPositiveButtonText:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mPositiveButtonText:Landroid/widget/TextView;
 
     .line 89
-    iput-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mNegativeButtonText:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mNegativeButtonText:Landroid/widget/TextView;
 
     .line 90
-    iput-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mNegativeButtonLayout:Landroid/widget/LinearLayout;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mNegativeButtonLayout:Landroid/widget/LinearLayout;
 
     .line 92
-    iput-boolean v2, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mIsWifiConnected:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mIsWifiConnected:Z
 
     .line 94
-    iput-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mConnectivityCheckTask:Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mConnectivityCheckTask:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;
 
     .line 96
-    iput-boolean v2, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mIsFragmentCreated:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mIsFragmentCreated:Z
 
     .line 98
-    iput v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiAPId:I
+    iput v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiAPId:I
 
     .line 107
     const/high16 v0, 0x42f00000    # 120.0f
 
-    iput v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->transX:F
+    iput v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->transX:F
 
     .line 108
     const/high16 v0, 0x43600000    # 224.0f
 
-    iput v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->button_transY:F
+    iput v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->button_transY:F
 
     .line 110
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->handler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->handler:Landroid/os/Handler;
 
     .line 112
-    iput-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mAddNetwork:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mAddNetwork:Landroid/widget/TextView;
 
     .line 118
-    iput-boolean v2, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->isWifiPromptScreen:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->isWifiPromptScreen:Z
 
     .line 369
-    new-instance v0, Lcom/android/settings/wifi/SetupWizardWifiScreen$6;
+    new-instance v0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$6;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen$6;-><init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$6;-><init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mHandler:Landroid/os/Handler;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/wifi/SetupWizardWifiScreen;)I
+.method static synthetic access$000(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     .prologue
     .line 57
-    iget v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mConnectionResult:I
+    iget v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mConnectionResult:I
 
     return v0
 .end method
 
-.method static synthetic access$002(Lcom/android/settings/wifi/SetupWizardWifiScreen;I)I
+.method static synthetic access$002(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;I)I
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
     .param p1, "x1"    # I
 
     .prologue
     .line 57
-    iput p1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mConnectionResult:I
+    iput p1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mConnectionResult:I
 
     return p1
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/wifi/SetupWizardWifiScreen;)Landroid/content/Context;
+.method static synthetic access$100(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     .prologue
     .line 57
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/wifi/SetupWizardWifiScreen;)Landroid/view/View;
+.method static synthetic access$1000(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)Landroid/view/View;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     .prologue
     .line 57
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiSettingsView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiSettingsView:Landroid/view/View;
 
     return-object v0
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/wifi/SetupWizardWifiScreen;)Landroid/view/View;
+.method static synthetic access$1100(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)Landroid/view/View;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     .prologue
     .line 57
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mButtonView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mButtonView:Landroid/view/View;
 
     return-object v0
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/wifi/SetupWizardWifiScreen;)Landroid/os/Handler;
+.method static synthetic access$1200(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     .prologue
     .line 57
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->handler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->handler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic access$1400(Lcom/android/settings/wifi/SetupWizardWifiScreen;)Landroid/app/ProgressDialog;
+.method static synthetic access$1400(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)Landroid/app/ProgressDialog;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     .prologue
     .line 57
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
 
     return-object v0
 .end method
 
-.method static synthetic access$1500(Lcom/android/settings/wifi/SetupWizardWifiScreen;)Landroid/widget/TextView;
+.method static synthetic access$1500(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)Landroid/widget/TextView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     .prologue
     .line 57
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mPositiveButtonText:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mPositiveButtonText:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method static synthetic access$1600(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+.method static synthetic access$1600(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     .prologue
     .line 57
-    invoke-direct {p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->wifiConnSuccess()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->wifiConnSuccess()V
 
     return-void
 .end method
 
-.method static synthetic access$1700(Lcom/android/settings/wifi/SetupWizardWifiScreen;)Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;
+.method static synthetic access$1700(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     .prologue
     .line 57
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mConnectivityCheckTask:Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mConnectivityCheckTask:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/wifi/SetupWizardWifiScreen;)Z
+.method static synthetic access$200(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     .prologue
     .line 57
-    iget-boolean v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mIsGoogleFRPLocked:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mIsGoogleFRPLocked:Z
 
     return v0
 .end method
@@ -299,90 +299,90 @@
 
     .prologue
     .line 57
-    invoke-static {p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->isDeviceProvisioned(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->isDeviceProvisioned(Landroid/content/Context;)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/wifi/SetupWizardWifiScreen;Landroid/content/Context;Landroid/content/Intent;)V
+.method static synthetic access$400(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
     .param p1, "x1"    # Landroid/content/Context;
     .param p2, "x2"    # Landroid/content/Intent;
 
     .prologue
     .line 57
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->handleConnectionEvent(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->handleConnectionEvent(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/wifi/SetupWizardWifiScreen;)Lcom/android/settings/wifi/WifiSettings;
+.method static synthetic access$500(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)Lcom/android/settings_ex/wifi/WifiSettings;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     .prologue
     .line 57
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiSettings:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiSettings:Lcom/android/settings_ex/wifi/WifiSettings;
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/wifi/SetupWizardWifiScreen;)Z
+.method static synthetic access$600(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     .prologue
     .line 57
-    iget-boolean v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mIsWifiConnected:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mIsWifiConnected:Z
 
     return v0
 .end method
 
-.method static synthetic access$602(Lcom/android/settings/wifi/SetupWizardWifiScreen;Z)Z
+.method static synthetic access$602(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
     .param p1, "x1"    # Z
 
     .prologue
     .line 57
-    iput-boolean p1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mIsWifiConnected:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mIsWifiConnected:Z
 
     return p1
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/wifi/SetupWizardWifiScreen;)Z
+.method static synthetic access$700(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     .prologue
     .line 57
-    iget-boolean v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->isWifiPromptScreen:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->isWifiPromptScreen:Z
 
     return v0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/wifi/SetupWizardWifiScreen;I)V
+.method static synthetic access$800(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
     .param p1, "x1"    # I
 
     .prologue
     .line 57
-    invoke-direct {p0, p1}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->showAlertDialog(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->showAlertDialog(I)V
 
     return-void
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/wifi/SetupWizardWifiScreen;)Landroid/net/wifi/WifiManager;
+.method static synthetic access$900(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)Landroid/net/wifi/WifiManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     .prologue
     .line 57
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     return-object v0
 .end method
@@ -393,7 +393,7 @@
 
     .prologue
     .line 610
-    invoke-virtual {p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -505,39 +505,39 @@
     if-eqz v4, :cond_2
 
     .line 328
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiManager:Landroid/net/wifi/WifiManager;
 
-    invoke-static {v4}, Lcom/android/settings/wifi/WifiConnectivityUtils;->getWifiNetworkID(Landroid/net/wifi/WifiManager;)I
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->getWifiNetworkID(Landroid/net/wifi/WifiManager;)I
 
     move-result v1
 
     .line 329
     .local v1, "currentAPId":I
-    iget v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiAPId:I
+    iget v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiAPId:I
 
     if-eq v4, v1, :cond_1
 
     .line 330
-    iput v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiAPId:I
+    iput v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiAPId:I
 
     .line 331
-    invoke-direct {p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->showConnProgressDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->showConnProgressDialog()V
 
     .line 332
-    new-instance v4, Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;
+    new-instance v4, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;
 
     const/4 v5, 0x0
 
-    invoke-direct {v4, p0, v5}, Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;-><init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;Lcom/android/settings/wifi/SetupWizardWifiScreen$1;)V
+    invoke-direct {v4, p0, v5}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;-><init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$1;)V
 
-    iput-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mConnectivityCheckTask:Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;
+    iput-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mConnectivityCheckTask:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;
 
     .line 333
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mConnectivityCheckTask:Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mConnectivityCheckTask:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;
 
     new-array v5, v7, [Ljava/lang/Void;
 
-    invoke-virtual {v4, v5}, Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v4, v5}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     .line 367
     .end local v1    # "currentAPId":I
@@ -561,24 +561,24 @@
     .line 338
     .end local v1    # "currentAPId":I
     :cond_2
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mPositiveButtonText:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mPositiveButtonText:Landroid/widget/TextView;
 
     const v5, 0x7f0e141d
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 339
-    iput-boolean v7, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mIsWifiConnected:Z
+    iput-boolean v7, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mIsWifiConnected:Z
 
     .line 340
-    iput v9, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mSuccessWifiConNID:I
+    iput v9, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mSuccessWifiConNID:I
 
     .line 341
-    iput v9, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiAPId:I
+    iput v9, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiAPId:I
 
     goto :goto_0
 
@@ -628,26 +628,26 @@
     if-ne v3, v10, :cond_4
 
     .line 348
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mNegativeButtonText:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mNegativeButtonText:Landroid/widget/TextView;
 
     invoke-virtual {v4, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 349
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mNegativeButtonLayout:Landroid/widget/LinearLayout;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mNegativeButtonLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4, v8}, Landroid/widget/LinearLayout;->setClickable(Z)V
 
     .line 350
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mNegativeButtonLayout:Landroid/widget/LinearLayout;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mNegativeButtonLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4, v8}, Landroid/widget/LinearLayout;->setEnabled(Z)V
 
     .line 351
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiScreenSubText:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiScreenSubText:Landroid/widget/TextView;
 
     const v5, 0x7f0e1422
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -660,26 +660,26 @@
     if-ne v3, v8, :cond_0
 
     .line 353
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mNegativeButtonText:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mNegativeButtonText:Landroid/widget/TextView;
 
     invoke-virtual {v4, v11}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 354
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mNegativeButtonLayout:Landroid/widget/LinearLayout;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mNegativeButtonLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4, v7}, Landroid/widget/LinearLayout;->setClickable(Z)V
 
     .line 355
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mNegativeButtonLayout:Landroid/widget/LinearLayout;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mNegativeButtonLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4, v7}, Landroid/widget/LinearLayout;->setEnabled(Z)V
 
     .line 356
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiScreenSubText:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiScreenSubText:Landroid/widget/TextView;
 
     const v5, 0x7f0e1423
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -699,7 +699,7 @@
     if-eqz v4, :cond_0
 
     .line 359
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v4}, Landroid/net/wifi/WifiManager;->getScanResults()Ljava/util/List;
 
@@ -712,11 +712,11 @@
     if-lez v4, :cond_6
 
     .line 360
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiScreenSubText:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiScreenSubText:Landroid/widget/TextView;
 
     const v5, 0x7f0e1422
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -733,18 +733,18 @@
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 363
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiScreenSubText:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiScreenSubText:Landroid/widget/TextView;
 
     const v5, 0x7f0e1421
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 364
-    invoke-direct {p0, v10}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->showAlertDialog(I)V
+    invoke-direct {p0, v10}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->showAlertDialog(I)V
 
     goto/16 :goto_0
 .end method
@@ -771,82 +771,82 @@
 
     .line 211
     .local v0, "activity":Landroid/app/Activity;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiConnectivityUtils;->setCustomTitle(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->setCustomTitle(Landroid/app/Activity;)V
 
     .line 212
     const v3, 0x7f0d0649
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/TextView;
 
-    iput-object v3, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiScreenSubText:Landroid/widget/TextView;
+    iput-object v3, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiScreenSubText:Landroid/widget/TextView;
 
     .line 213
     const v3, 0x7f0d064d
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/TextView;
 
-    iput-object v3, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mPositiveButtonText:Landroid/widget/TextView;
+    iput-object v3, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mPositiveButtonText:Landroid/widget/TextView;
 
     .line 214
     const v3, 0x7f0d064c
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/TextView;
 
-    iput-object v3, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mNegativeButtonText:Landroid/widget/TextView;
+    iput-object v3, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mNegativeButtonText:Landroid/widget/TextView;
 
     .line 215
-    invoke-virtual {p0, v8}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/LinearLayout;
 
-    iput-object v3, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mNegativeButtonLayout:Landroid/widget/LinearLayout;
+    iput-object v3, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mNegativeButtonLayout:Landroid/widget/LinearLayout;
 
     .line 216
     const v3, 0x7f0d0648
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/LinearLayout;
 
-    iput-object v3, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiSettingsView:Landroid/view/View;
+    iput-object v3, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiSettingsView:Landroid/view/View;
 
     .line 217
     const v3, 0x7f0d053d
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/RelativeLayout;
 
-    iput-object v3, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mButtonView:Landroid/view/View;
+    iput-object v3, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mButtonView:Landroid/view/View;
 
     .line 218
     const v3, 0x7f0d0647
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/TextView;
 
-    iput-object v3, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mAddNetwork:Landroid/widget/TextView;
+    iput-object v3, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mAddNetwork:Landroid/widget/TextView;
 
     .line 220
     const-string v3, "SetupWizard --> SetupWizardWifiScreen"
@@ -861,7 +861,7 @@
 
     move-result-object v4
 
-    iget v5, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->isFirstEnterWifiSetupWizard:I
+    iget v5, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->isFirstEnterWifiSetupWizard:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -874,17 +874,17 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 221
-    iget v3, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->isFirstEnterWifiSetupWizard:I
+    iget v3, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->isFirstEnterWifiSetupWizard:I
 
     if-ne v3, v7, :cond_0
 
     .line 222
-    iget-object v3, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v3, v7}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
 
     .line 223
-    invoke-virtual {p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -894,7 +894,7 @@
 
     .line 229
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v3}, Landroid/net/wifi/WifiManager;->getWifiState()I
 
@@ -903,28 +903,28 @@
     if-ne v3, v7, :cond_1
 
     .line 230
-    iget-object v3, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mNegativeButtonText:Landroid/widget/TextView;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mNegativeButtonText:Landroid/widget/TextView;
 
     const/4 v4, 0x4
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 231
-    iget-object v3, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mNegativeButtonLayout:Landroid/widget/LinearLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mNegativeButtonLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v3, v6}, Landroid/widget/LinearLayout;->setClickable(Z)V
 
     .line 232
-    iget-object v3, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mNegativeButtonLayout:Landroid/widget/LinearLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mNegativeButtonLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v3, v6}, Landroid/widget/LinearLayout;->setEnabled(Z)V
 
     .line 233
-    iget-object v3, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiScreenSubText:Landroid/widget/TextView;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiScreenSubText:Landroid/widget/TextView;
 
     const v4, 0x7f0e1423
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -932,7 +932,7 @@
 
     .line 236
     :cond_1
-    invoke-virtual {p0, v8}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -940,16 +940,16 @@
 
     .line 237
     .local v1, "negativeButtonLayout":Landroid/widget/LinearLayout;
-    new-instance v3, Lcom/android/settings/wifi/SetupWizardWifiScreen$2;
+    new-instance v3, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$2;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen$2;-><init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$2;-><init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
 
     invoke-virtual {v1, v3}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 243
     const v3, 0x7f0d064a
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -957,23 +957,23 @@
 
     .line 244
     .local v2, "positiveButtonLayout":Landroid/widget/LinearLayout;
-    new-instance v3, Lcom/android/settings/wifi/SetupWizardWifiScreen$3;
+    new-instance v3, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$3;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen$3;-><init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$3;-><init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
 
     invoke-virtual {v2, v3}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 258
-    iget-object v3, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mAddNetwork:Landroid/widget/TextView;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mAddNetwork:Landroid/widget/TextView;
 
-    new-instance v4, Lcom/android/settings/wifi/SetupWizardWifiScreen$4;
+    new-instance v4, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$4;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen$4;-><init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$4;-><init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 266
-    invoke-direct {p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->resetAnimation()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->resetAnimation()V
 
     .line 267
     return-void
@@ -1203,24 +1203,24 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 271
-    iget-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiSettingsView:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiSettingsView:Landroid/view/View;
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setAlpha(F)V
 
     .line 273
-    iget-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mButtonView:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mButtonView:Landroid/view/View;
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setAlpha(F)V
 
     .line 274
-    iget-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mButtonView:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mButtonView:Landroid/view/View;
 
-    iget v2, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->button_transY:F
+    iget v2, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->button_transY:F
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setTranslationY(F)V
 
     .line 276
-    iget-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiSettingsView:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiSettingsView:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
@@ -1228,9 +1228,9 @@
 
     .line 277
     .local v0, "observer":Landroid/view/ViewTreeObserver;
-    new-instance v1, Lcom/android/settings/wifi/SetupWizardWifiScreen$5;
+    new-instance v1, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$5;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen$5;-><init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$5;-><init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
@@ -1282,7 +1282,7 @@
 
     move-result-object v2
 
-    iget v3, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mConnectionResult:I
+    iget v3, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mConnectionResult:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1295,11 +1295,11 @@
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 430
-    iget-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->isShowing()Z
 
@@ -1308,14 +1308,14 @@
     if-eqz v1, :cond_0
 
     .line 431
-    iget-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 432
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
 
     .line 434
     :cond_0
@@ -1334,15 +1334,15 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
 
     .line 531
-    iget-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1, v4}, Landroid/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
     .line 532
-    iget-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mContext:Landroid/content/Context;
 
     check-cast v1, Landroid/app/Activity;
 
@@ -1353,7 +1353,7 @@
     if-nez v1, :cond_1
 
     .line 533
-    iget-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
@@ -1363,7 +1363,7 @@
     if-ne p1, v1, :cond_1
 
     .line 535
-    iget-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
 
     const/4 v2, -0x2
 
@@ -1379,14 +1379,14 @@
 
     .line 437
     :pswitch_1
-    iget-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiManager:Landroid/net/wifi/WifiManager;
 
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiConnectivityUtils;->forgetNetWork(Landroid/net/wifi/WifiManager;)V
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->forgetNetWork(Landroid/net/wifi/WifiManager;)V
 
     .line 438
     const v1, 0x7f0e1424
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1395,7 +1395,7 @@
     .line 439
     const v1, 0x7f0e1425
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1405,13 +1405,13 @@
     invoke-virtual {v0, v4}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
     .line 441
-    invoke-virtual {p0, v5}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    new-instance v2, Lcom/android/settings/wifi/SetupWizardWifiScreen$8;
+    new-instance v2, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$8;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen$8;-><init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$8;-><init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1421,7 +1421,7 @@
     :pswitch_2
     const v1, 0x7f0e1426
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1430,7 +1430,7 @@
     .line 450
     const v1, 0x7f0e1427
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1439,33 +1439,33 @@
     .line 451
     const v1, 0x7f0e1429
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    new-instance v2, Lcom/android/settings/wifi/SetupWizardWifiScreen$9;
+    new-instance v2, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$9;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen$9;-><init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$9;-><init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 472
     const v1, 0x7f0e01ba
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    new-instance v2, Lcom/android/settings/wifi/SetupWizardWifiScreen$10;
+    new-instance v2, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$10;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen$10;-><init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$10;-><init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 479
-    new-instance v1, Lcom/android/settings/wifi/SetupWizardWifiScreen$11;
+    new-instance v1, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$11;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen$11;-><init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$11;-><init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1478,7 +1478,7 @@
     .line 489
     const v1, 0x7f0e16a5
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1487,13 +1487,13 @@
     .line 490
     const v1, 0x7f0e01bd
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    new-instance v2, Lcom/android/settings/wifi/SetupWizardWifiScreen$12;
+    new-instance v2, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$12;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen$12;-><init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$12;-><init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1503,7 +1503,7 @@
     :pswitch_4
     const v1, 0x7f0e142a
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1512,7 +1512,7 @@
     .line 500
     const v1, 0x7f0e142b
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1522,13 +1522,13 @@
     invoke-virtual {v0, v4}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
     .line 502
-    invoke-virtual {p0, v5}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    new-instance v2, Lcom/android/settings/wifi/SetupWizardWifiScreen$13;
+    new-instance v2, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$13;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen$13;-><init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$13;-><init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1538,7 +1538,7 @@
     :pswitch_5
     const v1, 0x7f0e142e
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1547,7 +1547,7 @@
     .line 511
     const v1, 0x7f0e142d
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1559,26 +1559,26 @@
     .line 513
     const v1, 0x7f0e0455
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    new-instance v2, Lcom/android/settings/wifi/SetupWizardWifiScreen$14;
+    new-instance v2, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$14;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen$14;-><init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$14;-><init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 521
     const v1, 0x7f0e142f
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    new-instance v2, Lcom/android/settings/wifi/SetupWizardWifiScreen$15;
+    new-instance v2, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$15;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen$15;-><init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$15;-><init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1615,11 +1615,11 @@
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 402
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->isShowing()Z
 
@@ -1628,20 +1628,20 @@
     if-eqz v0, :cond_0
 
     .line 403
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
     .line 404
-    iput-object v3, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
+    iput-object v3, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
 
     .line 406
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->isShowing()Z
 
@@ -1650,12 +1650,12 @@
     if-eqz v0, :cond_1
 
     .line 407
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 408
-    iput-object v3, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
+    iput-object v3, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
 
     .line 410
     :cond_1
@@ -1663,47 +1663,47 @@
 
     invoke-direct {v0, p0}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
 
     .line 411
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
 
     const v1, 0x7f0e142c
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
     .line 412
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setIndeterminate(Z)V
 
     .line 413
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0, v2}, Landroid/app/ProgressDialog;->setCancelable(Z)V
 
     .line 414
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0, v2}, Landroid/app/ProgressDialog;->setCanceledOnTouchOutside(Z)V
 
     .line 415
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
 
-    new-instance v1, Lcom/android/settings/wifi/SetupWizardWifiScreen$7;
+    new-instance v1, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$7;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen$7;-><init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$7;-><init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
     .line 425
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->show()V
 
@@ -1720,7 +1720,7 @@
     .line 600
     const v0, 0x7f0d0648
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
@@ -1730,13 +1730,13 @@
     .local v5, "wifiFragmentlayout":Landroid/widget/LinearLayout;
     const v0, 0x7f0c01e7
 
-    invoke-direct {p0, v0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getDimension(I)I
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getDimension(I)I
 
     move-result v1
 
     const v0, 0x7f0c01e8
 
-    invoke-direct {p0, v0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getDimension(I)I
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getDimension(I)I
 
     move-result v3
 
@@ -1744,7 +1744,7 @@
 
     move v4, v2
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->setMargins(IIIILandroid/widget/LinearLayout;)V
+    invoke-direct/range {v0 .. v5}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->setMargins(IIIILandroid/widget/LinearLayout;)V
 
     .line 603
     return-void
@@ -1764,32 +1764,32 @@
     .line 580
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mIsWifiConnected:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mIsWifiConnected:Z
 
     .line 581
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mPositiveButtonText:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mPositiveButtonText:Landroid/widget/TextView;
 
     const v1, 0x7f0e141c
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 582
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiManager:Landroid/net/wifi/WifiManager;
 
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiConnectivityUtils;->getWifiNetworkID(Landroid/net/wifi/WifiManager;)I
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->getWifiNetworkID(Landroid/net/wifi/WifiManager;)I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mSuccessWifiConNID:I
+    iput v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mSuccessWifiConNID:I
 
     .line 583
-    iget v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mSuccessWifiConNID:I
+    iget v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mSuccessWifiConNID:I
 
-    iput v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiAPId:I
+    iput v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiAPId:I
 
     .line 584
     return-void
@@ -1852,7 +1852,7 @@
     if-ne p2, v3, :cond_0
 
     .line 591
-    invoke-direct {p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->wifiConnSuccess()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->wifiConnSuccess()V
 
     .line 592
     new-instance v0, Landroid/content/Intent;
@@ -1863,15 +1863,15 @@
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "is_wifi_connected"
 
-    iget-boolean v2, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mIsWifiConnected:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mIsWifiConnected:Z
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 594
-    invoke-virtual {p0, v3, v0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->setResult(ILandroid/content/Intent;)V
+    invoke-virtual {p0, v3, v0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->setResult(ILandroid/content/Intent;)V
 
     .line 595
-    invoke-virtual {p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->finish()V
 
     .line 597
     .end local v0    # "intent":Landroid/content/Intent;
@@ -1893,10 +1893,10 @@
     .line 543
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->setResult(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->setResult(I)V
 
     .line 544
-    invoke-virtual {p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->finish()V
 
     .line 545
     return-void
@@ -1950,7 +1950,7 @@
 
     .line 574
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->updateLayoutMarginOnOrienationChange()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->updateLayoutMarginOnOrienationChange()V
 
     .line 576
     :cond_1
@@ -1975,14 +1975,14 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 176
-    invoke-virtual {p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 177
-    invoke-virtual {p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
@@ -1990,7 +1990,7 @@
 
     .line 179
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -1998,10 +1998,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->intentExtras:Landroid/os/Bundle;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->intentExtras:Landroid/os/Bundle;
 
     .line 180
-    invoke-virtual {p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -2014,7 +2014,7 @@
     if-eqz v0, :cond_1
 
     .line 181
-    invoke-virtual {p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -2026,17 +2026,17 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->isWifiPromptScreen:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->isWifiPromptScreen:Z
 
     .line 184
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->isSCamera()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->isSCamera()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v0
 
@@ -2044,11 +2044,11 @@
 
     .line 185
     :cond_2
-    invoke-virtual {p0, v3}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->setRequestedOrientation(I)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->setRequestedOrientation(I)V
 
     .line 187
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -2058,24 +2058,24 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->isFirstEnterWifiSetupWizard:I
+    iput v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->isFirstEnterWifiSetupWizard:I
 
     .line 188
     const v0, 0x7f040281
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->setContentView(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->setContentView(I)V
 
     .line 189
-    iput-object p0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mContext:Landroid/content/Context;
+    iput-object p0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mContext:Landroid/content/Context;
 
     .line 191
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->readGoogleFRPFlag(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->readGoogleFRPFlag(Landroid/content/Context;)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mIsGoogleFRPLocked:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mIsGoogleFRPLocked:Z
 
     .line 193
     const-string v0, "persist.sys.vzw_wifi_running"
@@ -2087,51 +2087,51 @@
     .line 194
     const-string v0, "wifi"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/net/wifi/WifiManager;
 
-    iput-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     .line 195
-    invoke-direct {p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->initializeView()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->initializeView()V
 
     .line 196
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mFilter:Landroid/content/IntentFilter;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mFilter:Landroid/content/IntentFilter;
 
     .line 197
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mFilter:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mFilter:Landroid/content/IntentFilter;
 
     const-string v1, "android.net.wifi.STATE_CHANGE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 198
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mFilter:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mFilter:Landroid/content/IntentFilter;
 
     const-string v1, "android.net.wifi.WIFI_STATE_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 199
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mFilter:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mFilter:Landroid/content/IntentFilter;
 
     const-string v1, "android.net.wifi.SCAN_RESULTS"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 200
-    new-instance v0, Lcom/android/settings/wifi/SetupWizardWifiScreen$1;
+    new-instance v0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen$1;-><init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$1;-><init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mReceiver:Landroid/content/BroadcastReceiver;
 
     .line 206
     return-void
@@ -2151,11 +2151,11 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 550
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->isShowing()Z
 
@@ -2164,20 +2164,20 @@
     if-eqz v0, :cond_0
 
     .line 551
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
     .line 552
-    iput-object v2, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mProgressDialog:Landroid/app/ProgressDialog;
 
     .line 554
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->isShowing()Z
 
@@ -2186,12 +2186,12 @@
     if-eqz v0, :cond_1
 
     .line 555
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 556
-    iput-object v2, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mDialog:Landroid/app/AlertDialog;
 
     .line 558
     :cond_1
@@ -2213,9 +2213,9 @@
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 298
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 299
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
@@ -2236,7 +2236,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 305
-    iget-boolean v2, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mIsFragmentCreated:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mIsFragmentCreated:Z
 
     if-nez v2, :cond_0
 
@@ -2252,14 +2252,14 @@
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setId(I)V
 
     .line 308
-    new-instance v2, Lcom/android/settings/wifi/WifiSettings;
+    new-instance v2, Lcom/android/settings_ex/wifi/WifiSettings;
 
-    invoke-direct {v2}, Lcom/android/settings/wifi/WifiSettings;-><init>()V
+    invoke-direct {v2}, Lcom/android/settings_ex/wifi/WifiSettings;-><init>()V
 
-    iput-object v2, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiSettings:Lcom/android/settings/wifi/WifiSettings;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiSettings:Lcom/android/settings_ex/wifi/WifiSettings;
 
     .line 310
-    invoke-virtual {p0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v2
 
@@ -2273,7 +2273,7 @@
 
     move-result v2
 
-    iget-object v3, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiSettings:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiSettings:Lcom/android/settings_ex/wifi/WifiSettings;
 
     invoke-virtual {v1, v2, v3}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
 
@@ -2283,17 +2283,17 @@
     .line 313
     const/4 v2, 0x1
 
-    iput-boolean v2, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mIsFragmentCreated:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mIsFragmentCreated:Z
 
     .line 316
     .end local v0    # "frame":Landroid/widget/FrameLayout;
     .end local v1    # "ft":Landroid/app/FragmentTransaction;
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    iget-object v3, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mFilter:Landroid/content/IntentFilter;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mFilter:Landroid/content/IntentFilter;
 
-    invoke-virtual {p0, v2, v3}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v2, v3}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 317
     invoke-super {p0}, Landroid/app/Activity;->onResume()V

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wifi/WifiSettings$2;
+.class Lcom/android/settings_ex/wifi/WifiSettings$2;
 .super Landroid/os/Handler;
 .source "WifiSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiSettings;
+    value = Lcom/android/settings_ex/wifi/WifiSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSettings;)V
     .locals 0
 
     .prologue
     .line 666
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSettings$2;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSettings$2;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -39,9 +39,9 @@
 
     .prologue
     .line 669
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings$2;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSettings$2;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/wifi/WifiSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/wifi/WifiSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -78,10 +78,10 @@
 
     .line 674
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings$2;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSettings$2;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mIsRunningAnimation:Z
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiSettings;->access$900(Lcom/android/settings/wifi/WifiSettings;)Z
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mIsRunningAnimation:Z
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiSettings;->access$900(Lcom/android/settings_ex/wifi/WifiSettings;)Z
 
     move-result v1
 
@@ -121,7 +121,7 @@
     .line 676
     iget v1, p1, Landroid/os/Message;->what:I
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/WifiSettings$2;->removeMessages(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/WifiSettings$2;->removeMessages(I)V
 
     .line 678
     invoke-static {p1}, Landroid/os/Message;->obtain(Landroid/os/Message;)Landroid/os/Message;
@@ -132,7 +132,7 @@
     .local v0, "newMsg":Landroid/os/Message;
     const-wide/16 v2, 0x64
 
-    invoke-virtual {p0, v0, v2, v3}, Lcom/android/settings/wifi/WifiSettings$2;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {p0, v0, v2, v3}, Lcom/android/settings_ex/wifi/WifiSettings$2;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     goto :goto_0
 
@@ -172,7 +172,7 @@
 
     .line 687
     :pswitch_0
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings$2;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSettings$2;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
     const/4 v2, 0x1
 
@@ -180,14 +180,14 @@
 
     move-result-object v2
 
-    # invokes: Lcom/android/settings/wifi/WifiSettings;->updateAccessPoints(Ljava/lang/Boolean;)V
-    invoke-static {v1, v2}, Lcom/android/settings/wifi/WifiSettings;->access$1000(Lcom/android/settings/wifi/WifiSettings;Ljava/lang/Boolean;)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiSettings;->updateAccessPoints(Ljava/lang/Boolean;)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/wifi/WifiSettings;->access$1000(Lcom/android/settings_ex/wifi/WifiSettings;Ljava/lang/Boolean;)V
 
     goto :goto_0
 
     .line 690
     :pswitch_1
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings$2;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSettings$2;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
     const/4 v2, 0x0
 
@@ -195,8 +195,8 @@
 
     move-result-object v2
 
-    # invokes: Lcom/android/settings/wifi/WifiSettings;->updateAccessPoints(Ljava/lang/Boolean;)V
-    invoke-static {v1, v2}, Lcom/android/settings/wifi/WifiSettings;->access$1000(Lcom/android/settings/wifi/WifiSettings;Ljava/lang/Boolean;)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiSettings;->updateAccessPoints(Ljava/lang/Boolean;)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/wifi/WifiSettings;->access$1000(Lcom/android/settings_ex/wifi/WifiSettings;Ljava/lang/Boolean;)V
 
     goto :goto_0
 

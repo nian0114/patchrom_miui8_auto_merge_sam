@@ -1,4 +1,4 @@
-.class Lcom/android/settings/CryptKeeper$2;
+.class Lcom/android/settings_ex/CryptKeeper$2;
 .super Ljava/lang/Object;
 .source "CryptKeeper.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/CryptKeeper;
+    value = Lcom/android/settings_ex/CryptKeeper;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/CryptKeeper;
+.field final synthetic this$0:Lcom/android/settings_ex/CryptKeeper;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/CryptKeeper;)V
+.method constructor <init>(Lcom/android/settings_ex/CryptKeeper;)V
     .locals 0
 
     .prologue
     .line 239
-    iput-object p1, p0, Lcom/android/settings/CryptKeeper$2;->this$0:Lcom/android/settings/CryptKeeper;
+    iput-object p1, p0, Lcom/android/settings_ex/CryptKeeper$2;->this$0:Lcom/android/settings_ex/CryptKeeper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,10 +41,10 @@
 
     .prologue
     .line 242
-    iget-object v0, p0, Lcom/android/settings/CryptKeeper$2;->this$0:Lcom/android/settings/CryptKeeper;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptKeeper$2;->this$0:Lcom/android/settings_ex/CryptKeeper;
 
-    # getter for: Lcom/android/settings/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
-    invoke-static {v0}, Lcom/android/settings/CryptKeeper;->access$200(Lcom/android/settings/CryptKeeper;)Lcom/android/internal/widget/LockPatternView;
+    # getter for: Lcom/android/settings_ex/CryptKeeper;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
+    invoke-static {v0}, Lcom/android/settings_ex/CryptKeeper;->access$200(Lcom/android/settings_ex/CryptKeeper;)Lcom/android/internal/widget/LockPatternView;
 
     move-result-object v0
 

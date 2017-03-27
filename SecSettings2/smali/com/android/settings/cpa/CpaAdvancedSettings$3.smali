@@ -1,4 +1,4 @@
-.class Lcom/android/settings/cpa/CpaAdvancedSettings$3;
+.class Lcom/android/settings_ex/cpa/CpaAdvancedSettings$3;
 .super Ljava/lang/Object;
 .source "CpaAdvancedSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/cpa/CpaAdvancedSettings;->onCreateDialog(I)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->onCreateDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/cpa/CpaAdvancedSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/cpa/CpaAdvancedSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/cpa/CpaAdvancedSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/cpa/CpaAdvancedSettings;)V
     .locals 0
 
     .prologue
     .line 717
-    iput-object p1, p0, Lcom/android/settings/cpa/CpaAdvancedSettings$3;->this$0:Lcom/android/settings/cpa/CpaAdvancedSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings$3;->this$0:Lcom/android/settings_ex/cpa/CpaAdvancedSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,9 +43,9 @@
 
     .prologue
     .line 719
-    iget-object v0, p0, Lcom/android/settings/cpa/CpaAdvancedSettings$3;->this$0:Lcom/android/settings/cpa/CpaAdvancedSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings$3;->this$0:Lcom/android/settings_ex/cpa/CpaAdvancedSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/cpa/CpaAdvancedSettings;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->finish()V
 
     .line 720
     return-void

@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/fuelgauge/InactiveApps;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/fuelgauge/InactiveApps;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "InactiveApps.java"
 
 # interfaces
@@ -16,7 +16,7 @@
 
     .prologue
     .line 35
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     return-void
 .end method
@@ -28,7 +28,7 @@
     const/4 v11, 0x0
 
     .line 59
-    invoke-virtual {p0}, Lcom/android/settings/fuelgauge/InactiveApps;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fuelgauge/InactiveApps;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v8
 
@@ -40,7 +40,7 @@
     invoke-virtual {v8, v11}, Landroid/preference/PreferenceGroup;->setOrderingAsAdded(Z)V
 
     .line 62
-    invoke-virtual {p0}, Lcom/android/settings/fuelgauge/InactiveApps;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fuelgauge/InactiveApps;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -137,7 +137,7 @@
     invoke-virtual {v5, v6}, Landroid/preference/Preference;->setKey(Ljava/lang/String;)V
 
     .line 76
-    invoke-direct {p0, v5}, Lcom/android/settings/fuelgauge/InactiveApps;->updateSummary(Landroid/preference/Preference;)V
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/fuelgauge/InactiveApps;->updateSummary(Landroid/preference/Preference;)V
 
     .line 77
     invoke-virtual {v5, p0}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
@@ -161,7 +161,7 @@
 
     .prologue
     .line 84
-    iget-object v1, p0, Lcom/android/settings/fuelgauge/InactiveApps;->mUsageStats:Landroid/app/usage/UsageStatsManager;
+    iget-object v1, p0, Lcom/android/settings_ex/fuelgauge/InactiveApps;->mUsageStats:Landroid/app/usage/UsageStatsManager;
 
     invoke-virtual {p1}, Landroid/preference/Preference;->getKey()Ljava/lang/String;
 
@@ -208,10 +208,10 @@
 
     .prologue
     .line 46
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 48
-    invoke-virtual {p0}, Lcom/android/settings/fuelgauge/InactiveApps;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fuelgauge/InactiveApps;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -223,12 +223,12 @@
 
     check-cast v0, Landroid/app/usage/UsageStatsManager;
 
-    iput-object v0, p0, Lcom/android/settings/fuelgauge/InactiveApps;->mUsageStats:Landroid/app/usage/UsageStatsManager;
+    iput-object v0, p0, Lcom/android/settings_ex/fuelgauge/InactiveApps;->mUsageStats:Landroid/app/usage/UsageStatsManager;
 
     .line 49
     const v0, 0x7f08005d
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/fuelgauge/InactiveApps;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/fuelgauge/InactiveApps;->addPreferencesFromResource(I)V
 
     .line 50
     return-void
@@ -248,9 +248,9 @@
 
     .line 93
     .local v0, "packageName":Ljava/lang/String;
-    iget-object v3, p0, Lcom/android/settings/fuelgauge/InactiveApps;->mUsageStats:Landroid/app/usage/UsageStatsManager;
+    iget-object v3, p0, Lcom/android/settings_ex/fuelgauge/InactiveApps;->mUsageStats:Landroid/app/usage/UsageStatsManager;
 
-    iget-object v1, p0, Lcom/android/settings/fuelgauge/InactiveApps;->mUsageStats:Landroid/app/usage/UsageStatsManager;
+    iget-object v1, p0, Lcom/android/settings_ex/fuelgauge/InactiveApps;->mUsageStats:Landroid/app/usage/UsageStatsManager;
 
     invoke-virtual {v1, v0}, Landroid/app/usage/UsageStatsManager;->isAppInactive(Ljava/lang/String;)Z
 
@@ -264,7 +264,7 @@
     invoke-virtual {v3, v0, v1}, Landroid/app/usage/UsageStatsManager;->setAppInactive(Ljava/lang/String;Z)V
 
     .line 94
-    invoke-direct {p0, p1}, Lcom/android/settings/fuelgauge/InactiveApps;->updateSummary(Landroid/preference/Preference;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/fuelgauge/InactiveApps;->updateSummary(Landroid/preference/Preference;)V
 
     .line 95
     return v2
@@ -281,10 +281,10 @@
 
     .prologue
     .line 54
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 55
-    invoke-direct {p0}, Lcom/android/settings/fuelgauge/InactiveApps;->init()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fuelgauge/InactiveApps;->init()V
 
     .line 56
     return-void

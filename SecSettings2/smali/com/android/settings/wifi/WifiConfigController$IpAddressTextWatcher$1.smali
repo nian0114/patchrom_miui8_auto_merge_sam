@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiConfigController$IpAddressTextWatcher$1;
+.class Lcom/android/settings_ex/wifi/WifiConfigController$IpAddressTextWatcher$1;
 .super Ljava/lang/Object;
 .source "WifiConfigController.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiConfigController$IpAddressTextWatcher;->afterTextChanged(Landroid/text/Editable;)V
+    value = Lcom/android/settings_ex/wifi/WifiConfigController$IpAddressTextWatcher;->afterTextChanged(Landroid/text/Editable;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/wifi/WifiConfigController$IpAddressTextWatcher;
+.field final synthetic this$1:Lcom/android/settings_ex/wifi/WifiConfigController$IpAddressTextWatcher;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiConfigController$IpAddressTextWatcher;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiConfigController$IpAddressTextWatcher;)V
     .locals 0
 
     .prologue
     .line 3444
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiConfigController$IpAddressTextWatcher$1;->this$1:Lcom/android/settings/wifi/WifiConfigController$IpAddressTextWatcher;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiConfigController$IpAddressTextWatcher$1;->this$1:Lcom/android/settings_ex/wifi/WifiConfigController$IpAddressTextWatcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +41,11 @@
 
     .prologue
     .line 3446
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiConfigController$IpAddressTextWatcher$1;->this$1:Lcom/android/settings/wifi/WifiConfigController$IpAddressTextWatcher;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiConfigController$IpAddressTextWatcher$1;->this$1:Lcom/android/settings_ex/wifi/WifiConfigController$IpAddressTextWatcher;
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiConfigController$IpAddressTextWatcher;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiConfigController$IpAddressTextWatcher;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/WifiConfigController;->enableSubmitIfAppropriate()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/wifi/WifiConfigController;->enableSubmitIfAppropriate()V
 
     .line 3447
     return-void

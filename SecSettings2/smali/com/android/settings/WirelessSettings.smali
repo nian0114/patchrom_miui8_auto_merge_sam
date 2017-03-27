@@ -1,15 +1,15 @@
-.class public Lcom/android/settings/WirelessSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/WirelessSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "WirelessSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # static fields
 .field private static final DBG:Z
 
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 .field private static mTetheredDataML:I
 
@@ -35,9 +35,9 @@
 
 .field private mPm:Landroid/content/pm/PackageManager;
 
-.field private mRcsSettings:Lcom/android/settings/rcs/RcsSettings;
+.field private mRcsSettings:Lcom/android/settings_ex/rcs/RcsSettings;
 
-.field private mRcsUtils:Lcom/android/settings/rcs/RcsUtils;
+.field private mRcsUtils:Lcom/android/settings_ex/rcs/RcsUtils;
 
 .field private mSmartBonding:Landroid/preference/PreferenceScreen;
 
@@ -77,17 +77,17 @@
     move v0, v1
 
     :cond_0
-    sput-boolean v0, Lcom/android/settings/WirelessSettings;->DBG:Z
+    sput-boolean v0, Lcom/android/settings_ex/WirelessSettings;->DBG:Z
 
     .line 116
-    sput v1, Lcom/android/settings/WirelessSettings;->mTetheredDataML:I
+    sput v1, Lcom/android/settings_ex/WirelessSettings;->mTetheredDataML:I
 
     .line 707
-    new-instance v0, Lcom/android/settings/WirelessSettings$6;
+    new-instance v0, Lcom/android/settings_ex/WirelessSettings$6;
 
-    invoke-direct {v0}, Lcom/android/settings/WirelessSettings$6;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/WirelessSettings$6;-><init>()V
 
-    sput-object v0, Lcom/android/settings/WirelessSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/WirelessSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -97,107 +97,107 @@
 
     .prologue
     .line 90
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 115
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/android/settings/WirelessSettings;->mTetheredData:I
+    iput v0, p0, Lcom/android/settings_ex/WirelessSettings;->mTetheredData:I
 
     .line 142
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/WirelessSettings;->mRcsSettings:Lcom/android/settings/rcs/RcsSettings;
+    iput-object v0, p0, Lcom/android/settings_ex/WirelessSettings;->mRcsSettings:Lcom/android/settings_ex/rcs/RcsSettings;
 
     .line 144
-    new-instance v0, Lcom/android/settings/WirelessSettings$1;
+    new-instance v0, Lcom/android/settings_ex/WirelessSettings$1;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/WirelessSettings$1;-><init>(Lcom/android/settings/WirelessSettings;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/WirelessSettings$1;-><init>(Lcom/android/settings_ex/WirelessSettings;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/WirelessSettings;->mAirPlaneObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/WirelessSettings;->mAirPlaneObserver:Landroid/database/ContentObserver;
 
     .line 162
-    new-instance v0, Lcom/android/settings/WirelessSettings$2;
+    new-instance v0, Lcom/android/settings_ex/WirelessSettings$2;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/WirelessSettings$2;-><init>(Lcom/android/settings/WirelessSettings;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/WirelessSettings$2;-><init>(Lcom/android/settings_ex/WirelessSettings;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/WirelessSettings;->mSmartBondingObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/WirelessSettings;->mSmartBondingObserver:Landroid/database/ContentObserver;
 
     .line 180
-    new-instance v0, Lcom/android/settings/WirelessSettings$3;
+    new-instance v0, Lcom/android/settings_ex/WirelessSettings$3;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/WirelessSettings$3;-><init>(Lcom/android/settings/WirelessSettings;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/WirelessSettings$3;-><init>(Lcom/android/settings_ex/WirelessSettings;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/WirelessSettings;->mNearbyScanningObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/WirelessSettings;->mNearbyScanningObserver:Landroid/database/ContentObserver;
 
     .line 273
-    new-instance v0, Lcom/android/settings/WirelessSettings$4;
+    new-instance v0, Lcom/android/settings_ex/WirelessSettings$4;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/WirelessSettings$4;-><init>(Lcom/android/settings/WirelessSettings;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/WirelessSettings$4;-><init>(Lcom/android/settings_ex/WirelessSettings;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/WirelessSettings;->mEthernetStateReceiver:Landroid/database/ContentObserver;
-
-    return-void
-.end method
-
-.method static synthetic access$000(Lcom/android/settings/WirelessSettings;)Landroid/preference/PreferenceScreen;
-    .locals 1
-    .param p0, "x0"    # Lcom/android/settings/WirelessSettings;
-
-    .prologue
-    .line 90
-    iget-object v0, p0, Lcom/android/settings/WirelessSettings;->mSmartBonding:Landroid/preference/PreferenceScreen;
-
-    return-object v0
-.end method
-
-.method static synthetic access$100(Lcom/android/settings/WirelessSettings;)Landroid/preference/PreferenceScreen;
-    .locals 1
-    .param p0, "x0"    # Lcom/android/settings/WirelessSettings;
-
-    .prologue
-    .line 90
-    iget-object v0, p0, Lcom/android/settings/WirelessSettings;->mNearbyScanning:Landroid/preference/PreferenceScreen;
-
-    return-object v0
-.end method
-
-.method static synthetic access$200(Lcom/android/settings/WirelessSettings;Ljava/lang/String;)V
-    .locals 0
-    .param p0, "x0"    # Lcom/android/settings/WirelessSettings;
-    .param p1, "x1"    # Ljava/lang/String;
-
-    .prologue
-    .line 90
-    invoke-direct {p0, p1}, Lcom/android/settings/WirelessSettings;->log(Ljava/lang/String;)V
+    iput-object v0, p0, Lcom/android/settings_ex/WirelessSettings;->mEthernetStateReceiver:Landroid/database/ContentObserver;
 
     return-void
 .end method
 
-.method static synthetic access$302(Lcom/android/settings/WirelessSettings;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$000(Lcom/android/settings_ex/WirelessSettings;)Landroid/preference/PreferenceScreen;
+    .locals 1
+    .param p0, "x0"    # Lcom/android/settings_ex/WirelessSettings;
+
+    .prologue
+    .line 90
+    iget-object v0, p0, Lcom/android/settings_ex/WirelessSettings;->mSmartBonding:Landroid/preference/PreferenceScreen;
+
+    return-object v0
+.end method
+
+.method static synthetic access$100(Lcom/android/settings_ex/WirelessSettings;)Landroid/preference/PreferenceScreen;
+    .locals 1
+    .param p0, "x0"    # Lcom/android/settings_ex/WirelessSettings;
+
+    .prologue
+    .line 90
+    iget-object v0, p0, Lcom/android/settings_ex/WirelessSettings;->mNearbyScanning:Landroid/preference/PreferenceScreen;
+
+    return-object v0
+.end method
+
+.method static synthetic access$200(Lcom/android/settings_ex/WirelessSettings;Ljava/lang/String;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/WirelessSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/WirelessSettings;
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 90
-    iput-object p1, p0, Lcom/android/settings/WirelessSettings;->mManageMobilePlanMessage:Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/WirelessSettings;->log(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method static synthetic access$302(Lcom/android/settings_ex/WirelessSettings;Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
+    .param p0, "x0"    # Lcom/android/settings_ex/WirelessSettings;
+    .param p1, "x1"    # Ljava/lang/String;
+
+    .prologue
+    .line 90
+    iput-object p1, p0, Lcom/android/settings_ex/WirelessSettings;->mManageMobilePlanMessage:Ljava/lang/String;
 
     return-object p1
 .end method
@@ -207,7 +207,7 @@
 
     .prologue
     .line 90
-    sget v0, Lcom/android/settings/WirelessSettings;->mTetheredDataML:I
+    sget v0, Lcom/android/settings_ex/WirelessSettings;->mTetheredDataML:I
 
     return v0
 .end method
@@ -218,7 +218,7 @@
 
     .prologue
     .line 90
-    sput p0, Lcom/android/settings/WirelessSettings;->mTetheredDataML:I
+    sput p0, Lcom/android/settings_ex/WirelessSettings;->mTetheredDataML:I
 
     return p0
 .end method
@@ -228,7 +228,7 @@
 
     .prologue
     .line 90
-    sget-object v0, Lcom/android/settings/WirelessSettings;->sSalesCode:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/WirelessSettings;->sSalesCode:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -275,7 +275,7 @@
     .local v8, "testModeintent":Z
     const-string v12, "wifi"
 
-    invoke-virtual {p0, v12}, Lcom/android/settings/WirelessSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v12}, Lcom/android/settings_ex/WirelessSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v9
 
@@ -305,7 +305,7 @@
 
     .line 869
     :goto_0
-    sget-boolean v12, Lcom/android/settings/WirelessSettings;->DBG:Z
+    sget-boolean v12, Lcom/android/settings_ex/WirelessSettings;->DBG:Z
 
     if-eqz v12, :cond_4
 
@@ -564,7 +564,7 @@
     const/4 v3, 0x0
 
     .line 901
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WirelessSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -574,12 +574,12 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/WirelessSettings;->mAirPlaneObserver:Landroid/database/ContentObserver;
+    iget-object v2, p0, Lcom/android/settings_ex/WirelessSettings;->mAirPlaneObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 902
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WirelessSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -589,7 +589,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/WirelessSettings;->mSmartBondingObserver:Landroid/database/ContentObserver;
+    iget-object v2, p0, Lcom/android/settings_ex/WirelessSettings;->mSmartBondingObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -644,7 +644,7 @@
 
     .line 696
     :cond_0
-    invoke-super {p0, p1, p2, p3}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 697
     return-void
@@ -656,7 +656,7 @@
 
     .prologue
     .line 314
-    invoke-super/range {p0 .. p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super/range {p0 .. p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 315
     if-eqz p1, :cond_0
@@ -676,7 +676,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/WirelessSettings;->mManageMobilePlanMessage:Ljava/lang/String;
+    iput-object v0, v1, Lcom/android/settings_ex/WirelessSettings;->mManageMobilePlanMessage:Ljava/lang/String;
 
     .line 318
     :cond_0
@@ -692,7 +692,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mManageMobilePlanMessage:Ljava/lang/String;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mManageMobilePlanMessage:Ljava/lang/String;
 
     move-object/from16 v20, v0
 
@@ -708,7 +708,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-direct {v0, v1}, Lcom/android/settings/WirelessSettings;->log(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->log(Ljava/lang/String;)V
 
     .line 320
     const-string v19, "connectivity"
@@ -717,7 +717,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v19
 
@@ -727,7 +727,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/WirelessSettings;->mCm:Landroid/net/ConnectivityManager;
+    iput-object v0, v1, Lcom/android/settings_ex/WirelessSettings;->mCm:Landroid/net/ConnectivityManager;
 
     .line 321
     const-string v19, "phone"
@@ -736,7 +736,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v19
 
@@ -746,10 +746,10 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/WirelessSettings;->mTm:Landroid/telephony/TelephonyManager;
+    iput-object v0, v1, Lcom/android/settings_ex/WirelessSettings;->mTm:Landroid/telephony/TelephonyManager;
 
     .line 322
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v19
 
@@ -757,7 +757,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/WirelessSettings;->mPm:Landroid/content/pm/PackageManager;
+    iput-object v0, v1, Lcom/android/settings_ex/WirelessSettings;->mPm:Landroid/content/pm/PackageManager;
 
     .line 323
     const-string v19, "user"
@@ -766,7 +766,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v19
 
@@ -776,7 +776,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/WirelessSettings;->mUm:Landroid/os/UserManager;
+    iput-object v0, v1, Lcom/android/settings_ex/WirelessSettings;->mUm:Landroid/os/UserManager;
 
     .line 324
     const-string v19, "wifi"
@@ -785,7 +785,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v19
 
@@ -795,10 +795,10 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/WirelessSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iput-object v0, v1, Lcom/android/settings_ex/WirelessSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     .line 326
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v19
 
@@ -810,7 +810,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/WirelessSettings;->mContext:Landroid/content/Context;
+    iput-object v0, v1, Lcom/android/settings_ex/WirelessSettings;->mContext:Landroid/content/Context;
 
     .line 328
     const v19, 0x7f0800ea
@@ -819,7 +819,7 @@
 
     move/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->addPreferencesFromResource(I)V
 
     .line 330
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
@@ -835,17 +835,17 @@
     .line 333
     .local v8, "isSecondaryUser":Z
     :goto_0
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     .line 335
     .local v2, "activity":Landroid/app/Activity;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v19
 
-    invoke-static/range {v19 .. v19}, Lcom/android/settings/nearbyscan/Util;->getDBInt(Landroid/content/ContentResolver;)I
+    invoke-static/range {v19 .. v19}, Lcom/android/settings_ex/nearbyscan/Util;->getDBInt(Landroid/content/ContentResolver;)I
 
     move-result v14
 
@@ -860,7 +860,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->removePreference(Ljava/lang/String;)V
 
     .line 348
     :cond_1
@@ -871,7 +871,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v19
 
@@ -881,7 +881,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/WirelessSettings;->mButtonWfc:Landroid/preference/PreferenceScreen;
+    iput-object v0, v1, Lcom/android/settings_ex/WirelessSettings;->mButtonWfc:Landroid/preference/PreferenceScreen;
 
     .line 349
     const-string v19, "wifi_ap_settings"
@@ -890,7 +890,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v19
 
@@ -900,12 +900,12 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/WirelessSettings;->mWifiApSettings:Landroid/preference/PreferenceScreen;
+    iput-object v0, v1, Lcom/android/settings_ex/WirelessSettings;->mWifiApSettings:Landroid/preference/PreferenceScreen;
 
     .line 350
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mWifiApSettings:Landroid/preference/PreferenceScreen;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mWifiApSettings:Landroid/preference/PreferenceScreen;
 
     move-object/from16 v19, v0
 
@@ -914,7 +914,7 @@
     .line 351
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mWifiApSettings:Landroid/preference/PreferenceScreen;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mWifiApSettings:Landroid/preference/PreferenceScreen;
 
     move-object/from16 v19, v0
 
@@ -924,11 +924,11 @@
 
     .line 353
     :cond_2
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v19
 
-    sput-object v19, Lcom/android/settings/WirelessSettings;->sSalesCode:Ljava/lang/String;
+    sput-object v19, Lcom/android/settings_ex/WirelessSettings;->sSalesCode:Ljava/lang/String;
 
     .line 355
     invoke-virtual {v2}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
@@ -943,13 +943,13 @@
 
     .line 358
     .local v16, "toggleable":Ljava/lang/String;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v19
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mWifiApSettings:Landroid/preference/PreferenceScreen;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mWifiApSettings:Landroid/preference/PreferenceScreen;
 
     move-object/from16 v20, v0
 
@@ -960,11 +960,11 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
-    invoke-static/range {v19 .. v19}, Lcom/android/settings/Utils;->isShopDemo(Landroid/content/Context;)Z
+    invoke-static/range {v19 .. v19}, Lcom/android/settings_ex/Utils;->isShopDemo(Landroid/content/Context;)Z
 
     move-result v19
 
@@ -972,7 +972,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mUm:Landroid/os/UserManager;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mUm:Landroid/os/UserManager;
 
     move-object/from16 v19, v0
 
@@ -992,7 +992,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->removePreference(Ljava/lang/String;)V
 
     .line 364
     const-string v19, "vpn_settings_for_att"
@@ -1001,7 +1001,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->removePreference(Ljava/lang/String;)V
 
     .line 368
     :cond_4
@@ -1023,11 +1023,11 @@
     :cond_5
     if-nez v8, :cond_6
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v19
 
-    invoke-static/range {v19 .. v19}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static/range {v19 .. v19}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v19
 
@@ -1035,7 +1035,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mUm:Landroid/os/UserManager;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mUm:Landroid/os/UserManager;
 
     move-object/from16 v19, v0
 
@@ -1055,21 +1055,21 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->removePreference(Ljava/lang/String;)V
 
     .line 379
     :cond_7
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v15
 
     .line 380
     .local v15, "sSalesCode":Ljava/lang/String;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v19
 
-    invoke-static/range {v19 .. v19}, Lcom/android/settings/Utils;->isTablet(Landroid/content/Context;)Z
+    invoke-static/range {v19 .. v19}, Lcom/android/settings_ex/Utils;->isTablet(Landroid/content/Context;)Z
 
     move-result v19
 
@@ -1093,7 +1093,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->removePreference(Ljava/lang/String;)V
 
     .line 384
     :cond_9
@@ -1114,7 +1114,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v13
 
@@ -1128,10 +1128,10 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->removePreference(Ljava/lang/String;)V
 
     .line 387
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v19
 
@@ -1157,7 +1157,7 @@
     .line 393
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     move-object/from16 v19, v0
 
@@ -1171,16 +1171,16 @@
 
     move-object/from16 v1, p0
 
-    iput v0, v1, Lcom/android/settings/WirelessSettings;->mTetheredData:I
+    iput v0, v1, Lcom/android/settings_ex/WirelessSettings;->mTetheredData:I
 
     .line 394
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/WirelessSettings;->mTetheredData:I
+    iget v0, v0, Lcom/android/settings_ex/WirelessSettings;->mTetheredData:I
 
     move/from16 v19, v0
 
-    sput v19, Lcom/android/settings/WirelessSettings;->mTetheredDataML:I
+    sput v19, Lcom/android/settings_ex/WirelessSettings;->mTetheredDataML:I
 
     .line 396
     const-string v19, "tether_settings"
@@ -1189,7 +1189,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v19
 
@@ -1199,7 +1199,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/WirelessSettings;->mTetheringSettings:Landroid/preference/PreferenceScreen;
+    iput-object v0, v1, Lcom/android/settings_ex/WirelessSettings;->mTetheringSettings:Landroid/preference/PreferenceScreen;
 
     .line 397
     const-string v19, "connectivity"
@@ -1224,7 +1224,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mUm:Landroid/os/UserManager;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mUm:Landroid/os/UserManager;
 
     move-object/from16 v19, v0
 
@@ -1250,20 +1250,20 @@
     :cond_b
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mTetheringSettings:Landroid/preference/PreferenceScreen;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mTetheringSettings:Landroid/preference/PreferenceScreen;
 
     move-object/from16 v19, v0
 
     if-eqz v19, :cond_c
 
     .line 403
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v19
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mTetheringSettings:Landroid/preference/PreferenceScreen;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mTetheringSettings:Landroid/preference/PreferenceScreen;
 
     move-object/from16 v20, v0
 
@@ -1310,7 +1310,7 @@
 
     move-result-object v20
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v21
 
@@ -1326,7 +1326,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/WirelessSettings;->mTetheredData:I
+    iget v0, v0, Lcom/android/settings_ex/WirelessSettings;->mTetheredData:I
 
     move/from16 v21, v0
 
@@ -1343,13 +1343,13 @@
     .line 425
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
     const-string v20, "com.ipsec.vpnclient"
 
-    invoke-static/range {v19 .. v20}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static/range {v19 .. v20}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v6
 
@@ -1364,11 +1364,11 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->removePreference(Ljava/lang/String;)V
 
     .line 435
     :goto_3
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v19
 
@@ -1397,7 +1397,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -1413,11 +1413,11 @@
     .line 442
     .local v18, "wfcPreferenceScreen":Landroid/preference/PreferenceScreen;
     :try_start_0
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->getPreferenceManager()Landroid/preference/PreferenceManager;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->getPreferenceManager()Landroid/preference/PreferenceManager;
 
     move-result-object v19
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v20
 
@@ -1442,12 +1442,12 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/WirelessSettings;->mWfcSwitchPreference:Lcom/samsung/tmowfc/wfcutils/WfcSwitchPreference;
+    iput-object v0, v1, Lcom/android/settings_ex/WirelessSettings;->mWfcSwitchPreference:Lcom/samsung/tmowfc/wfcutils/WfcSwitchPreference;
 
     .line 445
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mWfcSwitchPreference:Lcom/samsung/tmowfc/wfcutils/WfcSwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mWfcSwitchPreference:Lcom/samsung/tmowfc/wfcutils/WfcSwitchPreference;
 
     move-object/from16 v19, v0
 
@@ -1458,13 +1458,13 @@
     invoke-virtual/range {v19 .. v20}, Lcom/samsung/tmowfc/wfcutils/WfcSwitchPreference;->setOrder(I)V
 
     .line 446
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v19
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mWfcSwitchPreference:Lcom/samsung/tmowfc/wfcutils/WfcSwitchPreference;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mWfcSwitchPreference:Lcom/samsung/tmowfc/wfcutils/WfcSwitchPreference;
 
     move-object/from16 v20, v0
 
@@ -1476,7 +1476,7 @@
     .end local v18    # "wfcPreferenceScreen":Landroid/preference/PreferenceScreen;
     :cond_d
     :goto_4
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v19
 
@@ -1489,11 +1489,11 @@
     .line 460
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
-    invoke-static/range {v19 .. v19}, Lcom/android/settings/rcs/RcsUtils;->getInstance(Landroid/content/Context;)Lcom/android/settings/rcs/RcsUtils;
+    invoke-static/range {v19 .. v19}, Lcom/android/settings_ex/rcs/RcsUtils;->getInstance(Landroid/content/Context;)Lcom/android/settings_ex/rcs/RcsUtils;
 
     move-result-object v19
 
@@ -1501,35 +1501,35 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/WirelessSettings;->mRcsUtils:Lcom/android/settings/rcs/RcsUtils;
+    iput-object v0, v1, Lcom/android/settings_ex/WirelessSettings;->mRcsUtils:Lcom/android/settings_ex/rcs/RcsUtils;
 
     .line 461
-    new-instance v19, Lcom/android/settings/rcs/RcsSettings;
+    new-instance v19, Lcom/android/settings_ex/rcs/RcsSettings;
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v20
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v21
 
-    invoke-direct/range {v19 .. v21}, Lcom/android/settings/rcs/RcsSettings;-><init>(Landroid/content/Context;Landroid/preference/PreferenceScreen;)V
+    invoke-direct/range {v19 .. v21}, Lcom/android/settings_ex/rcs/RcsSettings;-><init>(Landroid/content/Context;Landroid/preference/PreferenceScreen;)V
 
     move-object/from16 v0, v19
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/WirelessSettings;->mRcsSettings:Lcom/android/settings/rcs/RcsSettings;
+    iput-object v0, v1, Lcom/android/settings_ex/WirelessSettings;->mRcsSettings:Lcom/android/settings_ex/rcs/RcsSettings;
 
     .line 463
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v19
 
     const-string v20, "com.samsung.rcs"
 
-    invoke-static/range {v19 .. v20}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static/range {v19 .. v20}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v7
 
@@ -1547,11 +1547,11 @@
     .line 467
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mRcsSettings:Lcom/android/settings/rcs/RcsSettings;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mRcsSettings:Lcom/android/settings_ex/rcs/RcsSettings;
 
     move-object/from16 v19, v0
 
-    invoke-virtual/range {v19 .. v19}, Lcom/android/settings/rcs/RcsSettings;->disableAllRcsSettingsPreference()V
+    invoke-virtual/range {v19 .. v19}, Lcom/android/settings_ex/rcs/RcsSettings;->disableAllRcsSettingsPreference()V
 
     .line 472
     :goto_5
@@ -1566,7 +1566,7 @@
     if-eqz v19, :cond_e
 
     .line 473
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v19
 
@@ -1576,7 +1576,7 @@
 
     move-object/from16 v1, v20
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v20
 
@@ -1584,7 +1584,7 @@
 
     .line 476
     :cond_e
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v19
 
@@ -1597,7 +1597,7 @@
     .line 478
     .local v9, "isSupportMirrorLink":Z
     :try_start_1
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v19
 
@@ -1625,7 +1625,7 @@
 
     if-eqz v19, :cond_10
 
-    sget v19, Lcom/android/settings/WirelessSettings;->mTetheredDataML:I
+    sget v19, Lcom/android/settings_ex/WirelessSettings;->mTetheredDataML:I
 
     const/16 v20, 0x3
 
@@ -1643,7 +1643,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->removePreference(Ljava/lang/String;)V
 
     .line 494
     :cond_10
@@ -1654,14 +1654,14 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v19
 
     if-eqz v19, :cond_11
 
     .line 495
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v19
 
@@ -1671,7 +1671,7 @@
 
     move-object/from16 v1, v20
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v20
 
@@ -1679,7 +1679,7 @@
 
     .line 503
     :cond_11
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportSmartBonding()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportSmartBonding()Z
 
     move-result v19
 
@@ -1692,14 +1692,14 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->removePreference(Ljava/lang/String;)V
 
     .line 513
     :cond_12
     :goto_7
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -1707,7 +1707,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-direct {v0, v1}, Lcom/android/settings/WirelessSettings;->isContainerOnlyMode(Landroid/content/Context;)Z
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->isContainerOnlyMode(Landroid/content/Context;)Z
 
     move-result v19
 
@@ -1720,7 +1720,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->removePreference(Ljava/lang/String;)V
 
     .line 515
     const-string v19, "vpn_settings_for_att"
@@ -1729,7 +1729,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->removePreference(Ljava/lang/String;)V
 
     .line 519
     :cond_13
@@ -1755,23 +1755,23 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->removePreference(Ljava/lang/String;)V
 
     .line 524
     :cond_15
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportMptcp()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportMptcp()Z
 
     move-result v19
 
     if-eqz v19, :cond_17
 
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticLGTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticLGTModel()Z
 
     move-result v19
 
     if-nez v19, :cond_16
 
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticSKTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticSKTModel()Z
 
     move-result v19
 
@@ -1788,7 +1788,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->removePreference(Ljava/lang/String;)V
 
     .line 533
     :cond_18
@@ -1823,7 +1823,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v19
 
@@ -1833,12 +1833,12 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/WirelessSettings;->mNearbyScanning:Landroid/preference/PreferenceScreen;
+    iput-object v0, v1, Lcom/android/settings_ex/WirelessSettings;->mNearbyScanning:Landroid/preference/PreferenceScreen;
 
     .line 341
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mNearbyScanning:Landroid/preference/PreferenceScreen;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mNearbyScanning:Landroid/preference/PreferenceScreen;
 
     move-object/from16 v19, v0
 
@@ -1847,7 +1847,7 @@
     .line 342
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mNearbyScanning:Landroid/preference/PreferenceScreen;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mNearbyScanning:Landroid/preference/PreferenceScreen;
 
     move-object/from16 v19, v0
 
@@ -1858,7 +1858,7 @@
     .line 343
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mNearbyScanning:Landroid/preference/PreferenceScreen;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mNearbyScanning:Landroid/preference/PreferenceScreen;
 
     move-object/from16 v20, v0
 
@@ -1890,7 +1890,7 @@
     .restart local v15    # "sSalesCode":Ljava/lang/String;
     .restart local v16    # "toggleable":Ljava/lang/String;
     :cond_1c
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->isHotspotTestMode()Z
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->isHotspotTestMode()Z
 
     move-result v19
 
@@ -1899,7 +1899,7 @@
     .line 407
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mTetheringSettings:Landroid/preference/PreferenceScreen;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mTetheringSettings:Landroid/preference/PreferenceScreen;
 
     move-object/from16 v19, v0
 
@@ -1910,7 +1910,7 @@
     .line 408
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mTetheringSettings:Landroid/preference/PreferenceScreen;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mTetheringSettings:Landroid/preference/PreferenceScreen;
 
     move-object/from16 v19, v0
 
@@ -1924,19 +1924,19 @@
     :cond_1d
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mTetheringSettings:Landroid/preference/PreferenceScreen;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mTetheringSettings:Landroid/preference/PreferenceScreen;
 
     move-object/from16 v19, v0
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mContext:Landroid/content/Context;
 
     move-object/from16 v20, v0
 
     move-object/from16 v0, v20
 
-    invoke-static {v0, v3}, Lcom/android/settings/Utils;->getTetheringSummary(Landroid/content/Context;Landroid/net/ConnectivityManager;)I
+    invoke-static {v0, v3}, Lcom/android/settings_ex/Utils;->getTetheringSummary(Landroid/content/Context;Landroid/net/ConnectivityManager;)I
 
     move-result v20
 
@@ -1945,7 +1945,7 @@
     .line 412
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mTetheringSettings:Landroid/preference/PreferenceScreen;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mTetheringSettings:Landroid/preference/PreferenceScreen;
 
     move-object/from16 v19, v0
 
@@ -1956,15 +1956,15 @@
     .line 416
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mTetheringSettings:Landroid/preference/PreferenceScreen;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mTetheringSettings:Landroid/preference/PreferenceScreen;
 
     move-object/from16 v20, v0
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/WirelessSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v19
 
-    invoke-static/range {v19 .. v19}, Lcom/android/settings/TetherSettings;->isProvisioningNeededButUnavailable(Landroid/content/Context;)Z
+    invoke-static/range {v19 .. v19}, Lcom/android/settings_ex/TetherSettings;->isProvisioningNeededButUnavailable(Landroid/content/Context;)Z
 
     move-result v19
 
@@ -1995,7 +1995,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->removePreference(Ljava/lang/String;)V
 
     goto/16 :goto_3
 
@@ -2026,11 +2026,11 @@
     :cond_20
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mRcsSettings:Lcom/android/settings/rcs/RcsSettings;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mRcsSettings:Lcom/android/settings_ex/rcs/RcsSettings;
 
     move-object/from16 v19, v0
 
-    invoke-virtual/range {v19 .. v19}, Lcom/android/settings/rcs/RcsSettings;->updateRcsSettingsVisibility()V
+    invoke-virtual/range {v19 .. v19}, Lcom/android/settings_ex/rcs/RcsSettings;->updateRcsSettingsVisibility()V
 
     goto/16 :goto_5
 
@@ -2068,7 +2068,7 @@
 
     if-eqz v19, :cond_10
 
-    sget v19, Lcom/android/settings/WirelessSettings;->mTetheredDataML:I
+    sget v19, Lcom/android/settings_ex/WirelessSettings;->mTetheredDataML:I
 
     const/16 v20, 0x3
 
@@ -2086,7 +2086,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->removePreference(Ljava/lang/String;)V
 
     goto/16 :goto_6
 
@@ -2109,7 +2109,7 @@
 
     if-eqz v20, :cond_23
 
-    sget v20, Lcom/android/settings/WirelessSettings;->mTetheredDataML:I
+    sget v20, Lcom/android/settings_ex/WirelessSettings;->mTetheredDataML:I
 
     const/16 v21, 0x3
 
@@ -2127,7 +2127,7 @@
 
     move-object/from16 v1, v20
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->removePreference(Ljava/lang/String;)V
 
     :cond_23
     throw v19
@@ -2140,7 +2140,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v19
 
@@ -2150,12 +2150,12 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/WirelessSettings;->mSmartBonding:Landroid/preference/PreferenceScreen;
+    iput-object v0, v1, Lcom/android/settings_ex/WirelessSettings;->mSmartBonding:Landroid/preference/PreferenceScreen;
 
     .line 507
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mSmartBonding:Landroid/preference/PreferenceScreen;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mSmartBonding:Landroid/preference/PreferenceScreen;
 
     move-object/from16 v19, v0
 
@@ -2164,7 +2164,7 @@
     .line 508
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/WirelessSettings;->mSmartBonding:Landroid/preference/PreferenceScreen;
+    iget-object v0, v0, Lcom/android/settings_ex/WirelessSettings;->mSmartBonding:Landroid/preference/PreferenceScreen;
 
     move-object/from16 v19, v0
 
@@ -2176,7 +2176,7 @@
 
     .line 527
     :cond_25
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticSKTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticSKTModel()Z
 
     move-result v19
 
@@ -2189,7 +2189,7 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v10
 
@@ -2237,13 +2237,13 @@
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/android/settings/WirelessSettings;->log(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/WirelessSettings;->log(Ljava/lang/String;)V
 
     .line 285
     packed-switch p1, :pswitch_data_0
 
     .line 300
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreateDialog(I)Landroid/app/Dialog;
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreateDialog(I)Landroid/app/Dialog;
 
     move-result-object v0
 
@@ -2254,13 +2254,13 @@
     :pswitch_0
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WirelessSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    iget-object v1, p0, Lcom/android/settings/WirelessSettings;->mManageMobilePlanMessage:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/WirelessSettings;->mManageMobilePlanMessage:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
@@ -2274,9 +2274,9 @@
 
     const v1, 0x104000a
 
-    new-instance v2, Lcom/android/settings/WirelessSettings$5;
+    new-instance v2, Lcom/android/settings_ex/WirelessSettings$5;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/WirelessSettings$5;-><init>(Lcom/android/settings/WirelessSettings;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/WirelessSettings$5;-><init>(Lcom/android/settings_ex/WirelessSettings;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -2302,14 +2302,14 @@
 
     .prologue
     .line 683
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 687
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WirelessSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/WirelessSettings;->mNearbyScanningObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/WirelessSettings;->mNearbyScanningObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
@@ -2342,10 +2342,10 @@
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/android/settings/WirelessSettings;->log(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/WirelessSettings;->log(Ljava/lang/String;)V
 
     .line 205
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v0
 
@@ -2357,10 +2357,10 @@
 
     .prologue
     .line 537
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 539
-    iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mUm:Landroid/os/UserManager;
+    iget-object v11, p0, Lcom/android/settings_ex/WirelessSettings;->mUm:Landroid/os/UserManager;
 
     const-string v12, "no_config_tethering"
 
@@ -2371,22 +2371,22 @@
     if-eqz v11, :cond_0
 
     .line 540
-    iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mTetheringSettings:Landroid/preference/PreferenceScreen;
+    iget-object v11, p0, Lcom/android/settings_ex/WirelessSettings;->mTetheringSettings:Landroid/preference/PreferenceScreen;
 
     if-eqz v11, :cond_0
 
     .line 541
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WirelessSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v11
 
-    iget-object v12, p0, Lcom/android/settings/WirelessSettings;->mTetheringSettings:Landroid/preference/PreferenceScreen;
+    iget-object v12, p0, Lcom/android/settings_ex/WirelessSettings;->mTetheringSettings:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v11, v12}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 545
     :cond_0
-    iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mUm:Landroid/os/UserManager;
+    iget-object v11, p0, Lcom/android/settings_ex/WirelessSettings;->mUm:Landroid/os/UserManager;
 
     const-string v12, "no_config_vpn"
 
@@ -2399,16 +2399,16 @@
     .line 546
     const-string v11, "vpn_settings"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v11}, Lcom/android/settings_ex/WirelessSettings;->removePreference(Ljava/lang/String;)V
 
     .line 547
     const-string v11, "vpn_settings_for_att"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v11}, Lcom/android/settings_ex/WirelessSettings;->removePreference(Ljava/lang/String;)V
 
     .line 550
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WirelessSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v11
 
@@ -2420,14 +2420,14 @@
 
     const/4 v13, 0x1
 
-    iget-object v14, p0, Lcom/android/settings/WirelessSettings;->mNearbyScanningObserver:Landroid/database/ContentObserver;
+    iget-object v14, p0, Lcom/android/settings_ex/WirelessSettings;->mNearbyScanningObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v11, v12, v13, v14}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 553
     const-string v11, "VZW"
 
-    sget-object v12, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v12, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v11, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2436,11 +2436,11 @@
     if-eqz v11, :cond_2
 
     .line 554
-    iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v11, p0, Lcom/android/settings_ex/WirelessSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     if-eqz v11, :cond_e
 
-    iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v11, p0, Lcom/android/settings_ex/WirelessSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v11}, Landroid/net/wifi/WifiManager;->getWifiApState()I
 
@@ -2451,7 +2451,7 @@
     if-ne v11, v12, :cond_e
 
     .line 555
-    iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mWifiApSettings:Landroid/preference/PreferenceScreen;
+    iget-object v11, p0, Lcom/android/settings_ex/WirelessSettings;->mWifiApSettings:Landroid/preference/PreferenceScreen;
 
     const v12, 0x7f0e0511
 
@@ -2461,13 +2461,13 @@
     :cond_2
     :goto_0
     :try_start_0
-    iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mContext:Landroid/content/Context;
+    iget-object v11, p0, Lcom/android/settings_ex/WirelessSettings;->mContext:Landroid/content/Context;
 
     const-string v12, "content://com.sec.knox.provider/RestrictionPolicy4"
 
     const-string v13, "isVpnAllowed"
 
-    invoke-static {v11, v12, v13}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v11, v12, v13}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
@@ -2493,7 +2493,7 @@
     .line 566
     const-string v11, "vpn_settings"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v11}, Lcom/android/settings_ex/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v11
 
@@ -2502,7 +2502,7 @@
     .line 567
     const-string v11, "vpn_settings"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v11}, Lcom/android/settings_ex/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v11
 
@@ -2516,7 +2516,7 @@
     :cond_3
     const-string v11, "vpn_settings_for_att"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v11}, Lcom/android/settings_ex/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v11
 
@@ -2525,7 +2525,7 @@
     .line 570
     const-string v11, "vpn_settings_for_att"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v11}, Lcom/android/settings_ex/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v11
 
@@ -2555,18 +2555,18 @@
     if-eqz v11, :cond_5
 
     .line 581
-    iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mWfcSwitchPreference:Lcom/samsung/tmowfc/wfcutils/WfcSwitchPreference;
+    iget-object v11, p0, Lcom/android/settings_ex/WirelessSettings;->mWfcSwitchPreference:Lcom/samsung/tmowfc/wfcutils/WfcSwitchPreference;
 
     if-eqz v11, :cond_5
 
     .line 582
-    iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mWfcSwitchPreference:Lcom/samsung/tmowfc/wfcutils/WfcSwitchPreference;
+    iget-object v11, p0, Lcom/android/settings_ex/WirelessSettings;->mWfcSwitchPreference:Lcom/samsung/tmowfc/wfcutils/WfcSwitchPreference;
 
     invoke-virtual {v11}, Lcom/samsung/tmowfc/wfcutils/WfcSwitchPreference;->onResume()V
 
     .line 588
     :cond_5
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WirelessSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -2579,22 +2579,22 @@
     if-eqz v11, :cond_10
 
     .line 590
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WirelessSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v11
 
-    iget-object v12, p0, Lcom/android/settings/WirelessSettings;->mButtonWfc:Landroid/preference/PreferenceScreen;
+    iget-object v12, p0, Lcom/android/settings_ex/WirelessSettings;->mButtonWfc:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v11, v12}, Landroid/preference/PreferenceScreen;->addPreference(Landroid/preference/Preference;)Z
 
     .line 592
-    iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mButtonWfc:Landroid/preference/PreferenceScreen;
+    iget-object v11, p0, Lcom/android/settings_ex/WirelessSettings;->mButtonWfc:Landroid/preference/PreferenceScreen;
 
     invoke-static {v1}, Lcom/android/ims/ImsManager;->getWfcMode(Landroid/content/Context;)I
 
     move-result v12
 
-    invoke-static {v1, v12}, Lcom/android/settings/WifiCallingSettings;->getWfcModeSummary(Landroid/content/Context;I)I
+    invoke-static {v1, v12}, Lcom/android/settings_ex/WifiCallingSettings;->getWfcModeSummary(Landroid/content/Context;I)I
 
     move-result v12
 
@@ -2602,13 +2602,13 @@
 
     .line 608
     :goto_3
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WirelessSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v11
 
     const-string v12, "com.samsung.rcs"
 
-    invoke-static {v11, v12}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v11, v12}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v3
 
@@ -2624,13 +2624,13 @@
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 612
-    iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mRcsSettings:Lcom/android/settings/rcs/RcsSettings;
+    iget-object v11, p0, Lcom/android/settings_ex/WirelessSettings;->mRcsSettings:Lcom/android/settings_ex/rcs/RcsSettings;
 
-    invoke-virtual {v11}, Lcom/android/settings/rcs/RcsSettings;->disableAllRcsSettingsPreference()V
+    invoke-virtual {v11}, Lcom/android/settings_ex/rcs/RcsSettings;->disableAllRcsSettingsPreference()V
 
     .line 625
     :goto_4
-    iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mContext:Landroid/content/Context;
+    iget-object v11, p0, Lcom/android/settings_ex/WirelessSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v11}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2658,11 +2658,11 @@
     :cond_6
     const-string v11, "vpn_settings"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v11}, Lcom/android/settings_ex/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v12
 
-    iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mContext:Landroid/content/Context;
+    iget-object v11, p0, Lcom/android/settings_ex/WirelessSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v11}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2685,22 +2685,22 @@
 
     .line 631
     :cond_7
-    iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mNearbyScanning:Landroid/preference/PreferenceScreen;
+    iget-object v11, p0, Lcom/android/settings_ex/WirelessSettings;->mNearbyScanning:Landroid/preference/PreferenceScreen;
 
     if-eqz v11, :cond_8
 
     .line 632
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WirelessSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v11
 
-    invoke-static {v11}, Lcom/android/settings/nearbyscan/Util;->getDBInt(Landroid/content/ContentResolver;)I
+    invoke-static {v11}, Lcom/android/settings_ex/nearbyscan/Util;->getDBInt(Landroid/content/ContentResolver;)I
 
     move-result v8
 
     .line 633
     .local v8, "nsValue":I
-    iget-object v12, p0, Lcom/android/settings/WirelessSettings;->mNearbyScanning:Landroid/preference/PreferenceScreen;
+    iget-object v12, p0, Lcom/android/settings_ex/WirelessSettings;->mNearbyScanning:Landroid/preference/PreferenceScreen;
 
     const/4 v11, 0x1
 
@@ -2714,7 +2714,7 @@
     .line 636
     .end local v8    # "nsValue":I
     :cond_8
-    iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mSmartBonding:Landroid/preference/PreferenceScreen;
+    iget-object v11, p0, Lcom/android/settings_ex/WirelessSettings;->mSmartBonding:Landroid/preference/PreferenceScreen;
 
     if-eqz v11, :cond_9
 
@@ -2726,7 +2726,7 @@
     if-eqz v11, :cond_14
 
     .line 638
-    iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mSmartBonding:Landroid/preference/PreferenceScreen;
+    iget-object v11, p0, Lcom/android/settings_ex/WirelessSettings;->mSmartBonding:Landroid/preference/PreferenceScreen;
 
     const v12, 0x7f0e0ea7
 
@@ -2737,7 +2737,7 @@
     :goto_7
     const-string v11, "multi_path"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v11}, Lcom/android/settings_ex/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v7
 
@@ -2753,7 +2753,7 @@
     invoke-virtual {v7, v11}, Landroid/preference/PreferenceScreen;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 647
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WirelessSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v11
 
@@ -2774,7 +2774,7 @@
 
     .line 650
     :cond_a
-    invoke-direct {p0}, Lcom/android/settings/WirelessSettings;->registerForObserver()V
+    invoke-direct {p0}, Lcom/android/settings_ex/WirelessSettings;->registerForObserver()V
 
     .line 655
     const/4 v11, 0x1
@@ -2789,7 +2789,7 @@
 
     .line 656
     .local v9, "selectionArgs":[Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WirelessSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v11
 
@@ -2797,13 +2797,13 @@
 
     const-string v13, "isWifiEnabled"
 
-    invoke-static {v11, v12, v13, v9}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-static {v11, v12, v13, v9}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v6
 
     .line 658
     .local v6, "isWiFiEnabled":I
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WirelessSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v11
 
@@ -2811,7 +2811,7 @@
 
     const-string v13, "isCellularDataAllowed"
 
-    invoke-static {v11, v12, v13}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v11, v12, v13}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v4
 
@@ -2828,12 +2828,12 @@
 
     .line 664
     :cond_c
-    iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mSmartBonding:Landroid/preference/PreferenceScreen;
+    iget-object v11, p0, Lcom/android/settings_ex/WirelessSettings;->mSmartBonding:Landroid/preference/PreferenceScreen;
 
     if-eqz v11, :cond_d
 
     .line 665
-    iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mSmartBonding:Landroid/preference/PreferenceScreen;
+    iget-object v11, p0, Lcom/android/settings_ex/WirelessSettings;->mSmartBonding:Landroid/preference/PreferenceScreen;
 
     const/4 v12, 0x0
 
@@ -2852,7 +2852,7 @@
     .end local v9    # "selectionArgs":[Ljava/lang/String;
     .end local v10    # "toggleable":Ljava/lang/String;
     :cond_e
-    iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mWifiApSettings:Landroid/preference/PreferenceScreen;
+    iget-object v11, p0, Lcom/android/settings_ex/WirelessSettings;->mWifiApSettings:Landroid/preference/PreferenceScreen;
 
     const v12, 0x7f0e0512
 
@@ -2884,16 +2884,16 @@
     :cond_10
     const-string v11, "wifi_calling_settings"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v11}, Lcom/android/settings_ex/WirelessSettings;->removePreference(Ljava/lang/String;)V
 
     goto/16 :goto_3
 
     .line 614
     .restart local v3    # "hasSecRcsPackage":Z
     :cond_11
-    iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mRcsSettings:Lcom/android/settings/rcs/RcsSettings;
+    iget-object v11, p0, Lcom/android/settings_ex/WirelessSettings;->mRcsSettings:Lcom/android/settings_ex/rcs/RcsSettings;
 
-    invoke-virtual {v11}, Lcom/android/settings/rcs/RcsSettings;->updateRcsSettingsVisibility()V
+    invoke-virtual {v11}, Lcom/android/settings_ex/rcs/RcsSettings;->updateRcsSettingsVisibility()V
 
     goto/16 :goto_4
 
@@ -2914,9 +2914,9 @@
     .line 640
     .end local v8    # "nsValue":I
     :cond_14
-    iget-object v12, p0, Lcom/android/settings/WirelessSettings;->mSmartBonding:Landroid/preference/PreferenceScreen;
+    iget-object v12, p0, Lcom/android/settings_ex/WirelessSettings;->mSmartBonding:Landroid/preference/PreferenceScreen;
 
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WirelessSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v11
 
@@ -2956,10 +2956,10 @@
 
     .prologue
     .line 674
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 676
-    iget-object v0, p0, Lcom/android/settings/WirelessSettings;->mManageMobilePlanMessage:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/WirelessSettings;->mManageMobilePlanMessage:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -2970,7 +2970,7 @@
     .line 677
     const-string v0, "mManageMobilePlanMessage"
 
-    iget-object v1, p0, Lcom/android/settings/WirelessSettings;->mManageMobilePlanMessage:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/WirelessSettings;->mManageMobilePlanMessage:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 

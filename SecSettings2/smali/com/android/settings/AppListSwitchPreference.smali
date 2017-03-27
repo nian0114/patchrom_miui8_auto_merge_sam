@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/AppListSwitchPreference;
-.super Lcom/android/settings/AppListPreference;
+.class public Lcom/android/settings_ex/AppListSwitchPreference;
+.super Lcom/android/settings_ex/AppListPreference;
 .source "AppListSwitchPreference.java"
 
 
@@ -19,7 +19,7 @@
 
     const v1, 0x7f0f01b8
 
-    invoke-direct {p0, p1, p2, v0, v1}, Lcom/android/settings/AppListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-direct {p0, p1, p2, v0, v1}, Lcom/android/settings_ex/AppListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 23
     return-void
@@ -33,7 +33,7 @@
 
     .prologue
     .line 27
-    invoke-super {p0, p1}, Lcom/android/settings/AppListPreference;->onBindView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/AppListPreference;->onBindView(Landroid/view/View;)V
 
     .line 28
     const v0, 0x1020456
@@ -44,17 +44,17 @@
 
     check-cast v0, Landroid/widget/Checkable;
 
-    iput-object v0, p0, Lcom/android/settings/AppListSwitchPreference;->mSwitch:Landroid/widget/Checkable;
+    iput-object v0, p0, Lcom/android/settings_ex/AppListSwitchPreference;->mSwitch:Landroid/widget/Checkable;
 
     .line 29
-    iget-object v0, p0, Lcom/android/settings/AppListSwitchPreference;->mSwitch:Landroid/widget/Checkable;
+    iget-object v0, p0, Lcom/android/settings_ex/AppListSwitchPreference;->mSwitch:Landroid/widget/Checkable;
 
     if-eqz v0, :cond_0
 
     .line 30
-    iget-object v1, p0, Lcom/android/settings/AppListSwitchPreference;->mSwitch:Landroid/widget/Checkable;
+    iget-object v1, p0, Lcom/android/settings_ex/AppListSwitchPreference;->mSwitch:Landroid/widget/Checkable;
 
-    invoke-virtual {p0}, Lcom/android/settings/AppListSwitchPreference;->getValue()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AppListSwitchPreference;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
@@ -82,15 +82,15 @@
 
     .prologue
     .line 56
-    invoke-super {p0, p1}, Lcom/android/settings/AppListPreference;->setValue(Ljava/lang/String;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/AppListPreference;->setValue(Ljava/lang/String;)V
 
     .line 57
-    iget-object v0, p0, Lcom/android/settings/AppListSwitchPreference;->mSwitch:Landroid/widget/Checkable;
+    iget-object v0, p0, Lcom/android/settings_ex/AppListSwitchPreference;->mSwitch:Landroid/widget/Checkable;
 
     if-eqz v0, :cond_0
 
     .line 58
-    iget-object v1, p0, Lcom/android/settings/AppListSwitchPreference;->mSwitch:Landroid/widget/Checkable;
+    iget-object v1, p0, Lcom/android/settings_ex/AppListSwitchPreference;->mSwitch:Landroid/widget/Checkable;
 
     if-eqz p1, :cond_1
 
@@ -118,21 +118,21 @@
     const/4 v2, 0x0
 
     .line 36
-    invoke-virtual {p0}, Lcom/android/settings/AppListSwitchPreference;->getValue()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AppListSwitchPreference;->getValue()Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
     .line 38
-    invoke-virtual {p0, v2}, Lcom/android/settings/AppListSwitchPreference;->callChangeListener(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/AppListSwitchPreference;->callChangeListener(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 39
-    invoke-virtual {p0, v2}, Lcom/android/settings/AppListSwitchPreference;->setValue(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/AppListSwitchPreference;->setValue(Ljava/lang/String;)V
 
     .line 52
     :cond_0
@@ -141,13 +141,13 @@
 
     .line 41
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/AppListSwitchPreference;->getEntryValues()[Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AppListSwitchPreference;->getEntryValues()[Ljava/lang/CharSequence;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {p0}, Lcom/android/settings/AppListSwitchPreference;->getEntryValues()[Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AppListSwitchPreference;->getEntryValues()[Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -169,7 +169,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lcom/android/settings/AppListSwitchPreference;->getKey()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AppListSwitchPreference;->getKey()Ljava/lang/String;
 
     move-result-object v3
 
@@ -187,7 +187,7 @@
 
     .line 43
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/AppListSwitchPreference;->getEntryValues()[Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AppListSwitchPreference;->getEntryValues()[Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -198,7 +198,7 @@
     if-ne v1, v2, :cond_4
 
     .line 45
-    invoke-virtual {p0}, Lcom/android/settings/AppListSwitchPreference;->getEntryValues()[Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AppListSwitchPreference;->getEntryValues()[Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -212,21 +212,21 @@
 
     .line 46
     .local v0, "value":Ljava/lang/String;
-    invoke-virtual {p0, v0}, Lcom/android/settings/AppListSwitchPreference;->callChangeListener(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/AppListSwitchPreference;->callChangeListener(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 47
-    invoke-virtual {p0, v0}, Lcom/android/settings/AppListSwitchPreference;->setValue(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/AppListSwitchPreference;->setValue(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 50
     .end local v0    # "value":Ljava/lang/String;
     :cond_4
-    invoke-super {p0, p1}, Lcom/android/settings/AppListPreference;->showDialog(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/AppListPreference;->showDialog(Landroid/os/Bundle;)V
 
     goto :goto_0
 .end method

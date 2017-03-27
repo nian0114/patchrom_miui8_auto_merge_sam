@@ -1,11 +1,11 @@
-.class Lcom/android/settings/favorite/MySettingsProvider$DatabaseHelper;
+.class Lcom/android/settings_ex/favorite/MySettingsProvider$DatabaseHelper;
 .super Landroid/database/sqlite/SQLiteOpenHelper;
 .source "MySettingsProvider.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/favorite/MySettingsProvider;
+    value = Lcom/android/settings_ex/favorite/MySettingsProvider;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -38,10 +38,10 @@
     .line 118
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/android/settings/favorite/MySettingsProvider$DatabaseHelper;->saved_cnt:I
+    iput v0, p0, Lcom/android/settings_ex/favorite/MySettingsProvider$DatabaseHelper;->saved_cnt:I
 
     .line 122
-    iput-object p1, p0, Lcom/android/settings/favorite/MySettingsProvider$DatabaseHelper;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/favorite/MySettingsProvider$DatabaseHelper;->mContext:Landroid/content/Context;
 
     .line 123
     return-void
@@ -60,22 +60,22 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 161
-    .local v0, "categories":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/dashboard/DashboardCategory;>;"
-    new-instance v6, Lcom/android/settings/search/ValueTrackerActivity;
+    .local v0, "categories":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/dashboard/DashboardCategory;>;"
+    new-instance v6, Lcom/android/settings_ex/search/ValueTrackerActivity;
 
-    iget-object v7, p0, Lcom/android/settings/favorite/MySettingsProvider$DatabaseHelper;->mContext:Landroid/content/Context;
+    iget-object v7, p0, Lcom/android/settings_ex/favorite/MySettingsProvider$DatabaseHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v7
 
-    invoke-direct {v6, v7}, Lcom/android/settings/search/ValueTrackerActivity;-><init>(Landroid/content/Context;)V
+    invoke-direct {v6, v7}, Lcom/android/settings_ex/search/ValueTrackerActivity;-><init>(Landroid/content/Context;)V
 
     .line 163
-    .local v6, "vta":Lcom/android/settings/search/ValueTrackerActivity;
+    .local v6, "vta":Lcom/android/settings_ex/search/ValueTrackerActivity;
     const-string v7, "default_mode"
 
-    invoke-virtual {v6, v0, v7}, Lcom/android/settings/search/ValueTrackerActivity;->buildDashboardCategories(Ljava/util/List;Ljava/lang/String;)V
+    invoke-virtual {v6, v0, v7}, Lcom/android/settings_ex/search/ValueTrackerActivity;->buildDashboardCategories(Ljava/util/List;Ljava/lang/String;)V
 
     .line 168
     const-string v8, "MySettingsProvider"
@@ -94,9 +94,9 @@
 
     move-result-object v7
 
-    check-cast v7, Lcom/android/settings/dashboard/DashboardCategory;
+    check-cast v7, Lcom/android/settings_ex/dashboard/DashboardCategory;
 
-    invoke-virtual {v7}, Lcom/android/settings/dashboard/DashboardCategory;->getTilesCount()I
+    invoke-virtual {v7}, Lcom/android/settings_ex/dashboard/DashboardCategory;->getTilesCount()I
 
     move-result v7
 
@@ -119,9 +119,9 @@
 
     move-result-object v7
 
-    check-cast v7, Lcom/android/settings/dashboard/DashboardCategory;
+    check-cast v7, Lcom/android/settings_ex/dashboard/DashboardCategory;
 
-    invoke-virtual {v7}, Lcom/android/settings/dashboard/DashboardCategory;->getTilesCount()I
+    invoke-virtual {v7}, Lcom/android/settings_ex/dashboard/DashboardCategory;->getTilesCount()I
 
     move-result v7
 
@@ -132,21 +132,21 @@
 
     move-result-object v7
 
-    check-cast v7, Lcom/android/settings/dashboard/DashboardCategory;
+    check-cast v7, Lcom/android/settings_ex/dashboard/DashboardCategory;
 
-    invoke-virtual {v7, v2}, Lcom/android/settings/dashboard/DashboardCategory;->getTile(I)Lcom/android/settings/dashboard/DashboardTile;
+    invoke-virtual {v7, v2}, Lcom/android/settings_ex/dashboard/DashboardCategory;->getTile(I)Lcom/android/settings_ex/dashboard/DashboardTile;
 
     move-result-object v4
 
     .line 171
-    .local v4, "tile":Lcom/android/settings/dashboard/DashboardTile;
-    iget-object v7, p0, Lcom/android/settings/favorite/MySettingsProvider$DatabaseHelper;->mContext:Landroid/content/Context;
+    .local v4, "tile":Lcom/android/settings_ex/dashboard/DashboardTile;
+    iget-object v7, p0, Lcom/android/settings_ex/favorite/MySettingsProvider$DatabaseHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
-    iget-wide v8, v4, Lcom/android/settings/dashboard/DashboardTile;->id:J
+    iget-wide v8, v4, Lcom/android/settings_ex/dashboard/DashboardTile;->id:J
 
     long-to-int v8, v8
 
@@ -156,13 +156,13 @@
 
     .line 172
     .local v3, "key":Ljava/lang/String;
-    iget-object v7, p0, Lcom/android/settings/favorite/MySettingsProvider$DatabaseHelper;->mContext:Landroid/content/Context;
+    iget-object v7, p0, Lcom/android/settings_ex/favorite/MySettingsProvider$DatabaseHelper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
-    iget v8, v4, Lcom/android/settings/dashboard/DashboardTile;->categoryId:I
+    iget v8, v4, Lcom/android/settings_ex/dashboard/DashboardTile;->categoryId:I
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getResourceEntryName(I)Ljava/lang/String;
 
@@ -209,7 +209,7 @@
     .line 181
     .end local v1    # "categoryId":Ljava/lang/String;
     .end local v3    # "key":Ljava/lang/String;
-    .end local v4    # "tile":Lcom/android/settings/dashboard/DashboardTile;
+    .end local v4    # "tile":Lcom/android/settings_ex/dashboard/DashboardTile;
     .end local v5    # "values":Landroid/content/ContentValues;
     :cond_0
     return-void
@@ -233,7 +233,7 @@
     invoke-virtual {p1, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     .line 129
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v0
 
@@ -254,7 +254,7 @@
     if-nez v1, :cond_0
 
     .line 131
-    invoke-direct {p0, p1}, Lcom/android/settings/favorite/MySettingsProvider$DatabaseHelper;->initFavorDB(Landroid/database/sqlite/SQLiteDatabase;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/favorite/MySettingsProvider$DatabaseHelper;->initFavorDB(Landroid/database/sqlite/SQLiteDatabase;)V
 
     .line 133
     :cond_0
@@ -313,7 +313,7 @@
     if-ne p3, v0, :cond_0
 
     .line 141
-    invoke-static {}, Lcom/android/settings/Utils;->isEnabledSmartManager()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isEnabledSmartManager()Z
 
     move-result v0
 

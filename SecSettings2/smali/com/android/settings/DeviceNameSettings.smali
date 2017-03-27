@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/DeviceNameSettings;
+.class public Lcom/android/settings_ex/DeviceNameSettings;
 .super Landroid/app/DialogFragment;
 .source "DeviceNameSettings.java"
 
@@ -9,13 +9,13 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/DeviceNameSettings$ConfirmationDialogFragmentListener;
+        Lcom/android/settings_ex/DeviceNameSettings$ConfirmationDialogFragmentListener;
     }
 .end annotation
 
 
 # instance fields
-.field private listener:Lcom/android/settings/DeviceNameSettings$ConfirmationDialogFragmentListener;
+.field private listener:Lcom/android/settings_ex/DeviceNameSettings$ConfirmationDialogFragmentListener;
 
 .field private mAlertDialog:Landroid/app/AlertDialog;
 
@@ -43,103 +43,103 @@
     .line 57
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/DeviceNameSettings;->mTempName:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/DeviceNameSettings;->mTempName:Ljava/lang/String;
 
     .line 58
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/DeviceNameSettings;->mResetTextAction:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/DeviceNameSettings;->mResetTextAction:Z
 
     .line 60
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/DeviceNameSettings;)Z
+.method static synthetic access$000(Lcom/android/settings_ex/DeviceNameSettings;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/DeviceNameSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/DeviceNameSettings;
 
     .prologue
     .line 47
-    iget-boolean v0, p0, Lcom/android/settings/DeviceNameSettings;->mResetTextAction:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/DeviceNameSettings;->mResetTextAction:Z
 
     return v0
 .end method
 
-.method static synthetic access$002(Lcom/android/settings/DeviceNameSettings;Z)Z
+.method static synthetic access$002(Lcom/android/settings_ex/DeviceNameSettings;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/DeviceNameSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/DeviceNameSettings;
     .param p1, "x1"    # Z
 
     .prologue
     .line 47
-    iput-boolean p1, p0, Lcom/android/settings/DeviceNameSettings;->mResetTextAction:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/DeviceNameSettings;->mResetTextAction:Z
 
     return p1
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/DeviceNameSettings;)Landroid/app/AlertDialog;
+.method static synthetic access$100(Lcom/android/settings_ex/DeviceNameSettings;)Landroid/app/AlertDialog;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/DeviceNameSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/DeviceNameSettings;
 
     .prologue
     .line 47
-    iget-object v0, p0, Lcom/android/settings/DeviceNameSettings;->mAlertDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/DeviceNameSettings;->mAlertDialog:Landroid/app/AlertDialog;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/DeviceNameSettings;)Landroid/support/design/widget/TextInputLayout;
+.method static synthetic access$200(Lcom/android/settings_ex/DeviceNameSettings;)Landroid/support/design/widget/TextInputLayout;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/DeviceNameSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/DeviceNameSettings;
 
     .prologue
     .line 47
-    iget-object v0, p0, Lcom/android/settings/DeviceNameSettings;->mTextInputLayoutId:Landroid/support/design/widget/TextInputLayout;
+    iget-object v0, p0, Lcom/android/settings_ex/DeviceNameSettings;->mTextInputLayoutId:Landroid/support/design/widget/TextInputLayout;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/DeviceNameSettings;)Landroid/widget/EditText;
+.method static synthetic access$300(Lcom/android/settings_ex/DeviceNameSettings;)Landroid/widget/EditText;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/DeviceNameSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/DeviceNameSettings;
 
     .prologue
     .line 47
-    iget-object v0, p0, Lcom/android/settings/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/DeviceNameSettings;)Ljava/lang/String;
+.method static synthetic access$400(Lcom/android/settings_ex/DeviceNameSettings;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/DeviceNameSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/DeviceNameSettings;
 
     .prologue
     .line 47
-    iget-object v0, p0, Lcom/android/settings/DeviceNameSettings;->mTempName:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/DeviceNameSettings;->mTempName:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$402(Lcom/android/settings/DeviceNameSettings;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$402(Lcom/android/settings_ex/DeviceNameSettings;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/DeviceNameSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/DeviceNameSettings;
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 47
-    iput-object p1, p0, Lcom/android/settings/DeviceNameSettings;->mTempName:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/DeviceNameSettings;->mTempName:Ljava/lang/String;
 
     return-object p1
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/DeviceNameSettings;)Landroid/widget/ScrollView;
+.method static synthetic access$500(Lcom/android/settings_ex/DeviceNameSettings;)Landroid/widget/ScrollView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/DeviceNameSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/DeviceNameSettings;
 
     .prologue
     .line 47
-    iget-object v0, p0, Lcom/android/settings/DeviceNameSettings;->mDeviceNameScrollView:Landroid/widget/ScrollView;
+    iget-object v0, p0, Lcom/android/settings_ex/DeviceNameSettings;->mDeviceNameScrollView:Landroid/widget/ScrollView;
 
     return-object v0
 .end method
@@ -152,7 +152,7 @@
     const/4 v6, 0x1
 
     .line 154
-    invoke-virtual {p0}, Lcom/android/settings/DeviceNameSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DeviceNameSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -170,10 +170,10 @@
 
     .line 156
     .local v1, "deviceName":Ljava/lang/String;
-    iput-object v1, p0, Lcom/android/settings/DeviceNameSettings;->mTempName:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/DeviceNameSettings;->mTempName:Ljava/lang/String;
 
     .line 157
-    iget-object v4, p0, Lcom/android/settings/DeviceNameSettings;->mView:Landroid/view/View;
+    iget-object v4, p0, Lcom/android/settings_ex/DeviceNameSettings;->mView:Landroid/view/View;
 
     const v5, 0x7f0d01f5
 
@@ -183,10 +183,10 @@
 
     check-cast v4, Landroid/widget/ScrollView;
 
-    iput-object v4, p0, Lcom/android/settings/DeviceNameSettings;->mDeviceNameScrollView:Landroid/widget/ScrollView;
+    iput-object v4, p0, Lcom/android/settings_ex/DeviceNameSettings;->mDeviceNameScrollView:Landroid/widget/ScrollView;
 
     .line 158
-    iget-object v4, p0, Lcom/android/settings/DeviceNameSettings;->mView:Landroid/view/View;
+    iget-object v4, p0, Lcom/android/settings_ex/DeviceNameSettings;->mView:Landroid/view/View;
 
     const v5, 0x7f0d01f7
 
@@ -196,19 +196,19 @@
 
     check-cast v4, Landroid/support/design/widget/TextInputLayout;
 
-    iput-object v4, p0, Lcom/android/settings/DeviceNameSettings;->mTextInputLayoutId:Landroid/support/design/widget/TextInputLayout;
+    iput-object v4, p0, Lcom/android/settings_ex/DeviceNameSettings;->mTextInputLayoutId:Landroid/support/design/widget/TextInputLayout;
 
     .line 159
-    iget-object v4, p0, Lcom/android/settings/DeviceNameSettings;->mTextInputLayoutId:Landroid/support/design/widget/TextInputLayout;
+    iget-object v4, p0, Lcom/android/settings_ex/DeviceNameSettings;->mTextInputLayoutId:Landroid/support/design/widget/TextInputLayout;
 
     invoke-virtual {v4}, Landroid/support/design/widget/TextInputLayout;->getEditText()Landroid/widget/EditText;
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
+    iput-object v4, p0, Lcom/android/settings_ex/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
 
     .line 160
-    iget-object v4, p0, Lcom/android/settings/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
 
     invoke-virtual {v4, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
@@ -221,7 +221,7 @@
 
     .line 163
     :try_start_0
-    iget-object v4, p0, Lcom/android/settings/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -234,40 +234,40 @@
     .line 168
     :cond_0
     :goto_0
-    iget-object v4, p0, Lcom/android/settings/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
 
     invoke-virtual {v4, v6}, Landroid/widget/EditText;->setEnabled(Z)V
 
     .line 169
-    iget-object v4, p0, Lcom/android/settings/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
 
     invoke-virtual {v4}, Landroid/widget/EditText;->selectAll()V
 
     .line 170
-    iget-object v4, p0, Lcom/android/settings/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
 
-    new-instance v5, Lcom/android/settings/DeviceNameSettings$2;
+    new-instance v5, Lcom/android/settings_ex/DeviceNameSettings$2;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/DeviceNameSettings$2;-><init>(Lcom/android/settings/DeviceNameSettings;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/DeviceNameSettings$2;-><init>(Lcom/android/settings_ex/DeviceNameSettings;)V
 
     invoke-virtual {v4, v5}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
     .line 180
-    iget-object v4, p0, Lcom/android/settings/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
 
     const-string v5, "disableAutoReplacement=true"
 
     invoke-virtual {v4, v5}, Landroid/widget/EditText;->setPrivateImeOptions(Ljava/lang/String;)V
 
     .line 181
-    iget-object v4, p0, Lcom/android/settings/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
 
     const-string v5, "disableEmoticonInput=true"
 
     invoke-virtual {v4, v5}, Landroid/widget/EditText;->setPrivateImeOptions(Ljava/lang/String;)V
 
     .line 182
-    iget-object v4, p0, Lcom/android/settings/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
 
     invoke-virtual {v4, v6}, Landroid/widget/EditText;->getInputExtras(Z)Landroid/os/Bundle;
 
@@ -282,7 +282,7 @@
     invoke-virtual {v0, v4, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 184
-    invoke-direct {p0}, Lcom/android/settings/DeviceNameSettings;->showInputMethod()V
+    invoke-direct {p0}, Lcom/android/settings_ex/DeviceNameSettings;->showInputMethod()V
 
     .line 185
     return-void
@@ -303,18 +303,18 @@
     goto :goto_0
 .end method
 
-.method public static newInstance(I)Lcom/android/settings/DeviceNameSettings;
+.method public static newInstance(I)Lcom/android/settings_ex/DeviceNameSettings;
     .locals 3
     .param p0, "title"    # I
 
     .prologue
     .line 67
-    new-instance v1, Lcom/android/settings/DeviceNameSettings;
+    new-instance v1, Lcom/android/settings_ex/DeviceNameSettings;
 
-    invoke-direct {v1}, Lcom/android/settings/DeviceNameSettings;-><init>()V
+    invoke-direct {v1}, Lcom/android/settings_ex/DeviceNameSettings;-><init>()V
 
     .line 68
-    .local v1, "frag":Lcom/android/settings/DeviceNameSettings;
+    .local v1, "frag":Lcom/android/settings_ex/DeviceNameSettings;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
@@ -326,7 +326,7 @@
     invoke-virtual {v0, v2, p0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 70
-    invoke-virtual {v1, v0}, Lcom/android/settings/DeviceNameSettings;->setArguments(Landroid/os/Bundle;)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/DeviceNameSettings;->setArguments(Landroid/os/Bundle;)V
 
     .line 71
     return-object v1
@@ -337,7 +337,7 @@
 
     .prologue
     .line 214
-    iget-object v0, p0, Lcom/android/settings/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->isEnabled()Z
 
@@ -346,16 +346,16 @@
     if-eqz v0, :cond_0
 
     .line 215
-    iget-object v0, p0, Lcom/android/settings/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
     .line 216
-    iget-object v0, p0, Lcom/android/settings/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
 
-    new-instance v1, Lcom/android/settings/DeviceNameSettings$3;
+    new-instance v1, Lcom/android/settings_ex/DeviceNameSettings$3;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/DeviceNameSettings$3;-><init>(Lcom/android/settings/DeviceNameSettings;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/DeviceNameSettings$3;-><init>(Lcom/android/settings_ex/DeviceNameSettings;)V
 
     const-wide/16 v2, 0x190
 
@@ -367,11 +367,11 @@
 
     .line 227
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
 
-    new-instance v1, Lcom/android/settings/DeviceNameSettings$4;
+    new-instance v1, Lcom/android/settings_ex/DeviceNameSettings$4;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/DeviceNameSettings$4;-><init>(Lcom/android/settings/DeviceNameSettings;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/DeviceNameSettings$4;-><init>(Lcom/android/settings_ex/DeviceNameSettings;)V
 
     const-wide/16 v2, 0x1
 
@@ -398,7 +398,7 @@
 
     .line 196
     :pswitch_0
-    invoke-virtual {p0}, Lcom/android/settings/DeviceNameSettings;->saveToDb()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/DeviceNameSettings;->saveToDb()V
 
     .line 197
     new-instance v0, Landroid/content/Intent;
@@ -409,35 +409,35 @@
 
     .line 198
     .local v0, "intent":Landroid/content/Intent;
-    invoke-virtual {p0}, Lcom/android/settings/DeviceNameSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DeviceNameSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 199
-    iget-object v1, p0, Lcom/android/settings/DeviceNameSettings;->listener:Lcom/android/settings/DeviceNameSettings$ConfirmationDialogFragmentListener;
+    iget-object v1, p0, Lcom/android/settings_ex/DeviceNameSettings;->listener:Lcom/android/settings_ex/DeviceNameSettings$ConfirmationDialogFragmentListener;
 
     if-eqz v1, :cond_0
 
     .line 200
-    iget-object v1, p0, Lcom/android/settings/DeviceNameSettings;->listener:Lcom/android/settings/DeviceNameSettings$ConfirmationDialogFragmentListener;
+    iget-object v1, p0, Lcom/android/settings_ex/DeviceNameSettings;->listener:Lcom/android/settings_ex/DeviceNameSettings$ConfirmationDialogFragmentListener;
 
-    invoke-interface {v1}, Lcom/android/settings/DeviceNameSettings$ConfirmationDialogFragmentListener;->onPositiveClick()V
+    invoke-interface {v1}, Lcom/android/settings_ex/DeviceNameSettings$ConfirmationDialogFragmentListener;->onPositiveClick()V
 
     goto :goto_0
 
     .line 204
     .end local v0    # "intent":Landroid/content/Intent;
     :pswitch_1
-    iget-object v1, p0, Lcom/android/settings/DeviceNameSettings;->listener:Lcom/android/settings/DeviceNameSettings$ConfirmationDialogFragmentListener;
+    iget-object v1, p0, Lcom/android/settings_ex/DeviceNameSettings;->listener:Lcom/android/settings_ex/DeviceNameSettings$ConfirmationDialogFragmentListener;
 
     if-eqz v1, :cond_0
 
     .line 205
-    iget-object v1, p0, Lcom/android/settings/DeviceNameSettings;->listener:Lcom/android/settings/DeviceNameSettings$ConfirmationDialogFragmentListener;
+    iget-object v1, p0, Lcom/android/settings_ex/DeviceNameSettings;->listener:Lcom/android/settings_ex/DeviceNameSettings$ConfirmationDialogFragmentListener;
 
-    invoke-interface {v1}, Lcom/android/settings/DeviceNameSettings$ConfirmationDialogFragmentListener;->onNegativeClick()V
+    invoke-interface {v1}, Lcom/android/settings_ex/DeviceNameSettings$ConfirmationDialogFragmentListener;->onNegativeClick()V
 
     goto :goto_0
 
@@ -459,7 +459,7 @@
     const/4 v3, 0x0
 
     .line 77
-    invoke-virtual {p0}, Lcom/android/settings/DeviceNameSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DeviceNameSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -473,29 +473,29 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/DeviceNameSettings;->mView:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/settings_ex/DeviceNameSettings;->mView:Landroid/view/View;
 
     .line 78
-    iget-object v0, p0, Lcom/android/settings/DeviceNameSettings;->mView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/DeviceNameSettings;->mView:Landroid/view/View;
 
-    invoke-direct {p0, v0}, Lcom/android/settings/DeviceNameSettings;->initView(Landroid/view/View;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/DeviceNameSettings;->initView(Landroid/view/View;)V
 
     .line 80
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/DeviceNameSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DeviceNameSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    iget-object v1, p0, Lcom/android/settings/DeviceNameSettings;->mView:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/DeviceNameSettings;->mView:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/android/settings/DeviceNameSettings;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DeviceNameSettings;->getArguments()Landroid/os/Bundle;
 
     move-result-object v1
 
@@ -525,19 +525,19 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/DeviceNameSettings;->mAlertDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/DeviceNameSettings;->mAlertDialog:Landroid/app/AlertDialog;
 
     .line 86
-    iget-object v0, p0, Lcom/android/settings/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
 
-    new-instance v1, Lcom/android/settings/DeviceNameSettings$1;
+    new-instance v1, Lcom/android/settings_ex/DeviceNameSettings$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/DeviceNameSettings$1;-><init>(Lcom/android/settings/DeviceNameSettings;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/DeviceNameSettings$1;-><init>(Lcom/android/settings_ex/DeviceNameSettings;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 150
-    iget-object v0, p0, Lcom/android/settings/DeviceNameSettings;->mAlertDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/DeviceNameSettings;->mAlertDialog:Landroid/app/AlertDialog;
 
     return-object v0
 .end method
@@ -554,7 +554,7 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 262
-    invoke-virtual {p0}, Lcom/android/settings/DeviceNameSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DeviceNameSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -568,7 +568,7 @@
 
     .line 263
     .local v0, "imm":Landroid/view/inputmethod/InputMethodManager;
-    iget-object v1, p0, Lcom/android/settings/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->getWindowToken()Landroid/os/IBinder;
 
@@ -579,14 +579,14 @@
     invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
     .line 264
-    iget-object v1, p0, Lcom/android/settings/DeviceNameSettings;->listener:Lcom/android/settings/DeviceNameSettings$ConfirmationDialogFragmentListener;
+    iget-object v1, p0, Lcom/android/settings_ex/DeviceNameSettings;->listener:Lcom/android/settings_ex/DeviceNameSettings$ConfirmationDialogFragmentListener;
 
     if-eqz v1, :cond_0
 
     .line 265
-    iget-object v1, p0, Lcom/android/settings/DeviceNameSettings;->listener:Lcom/android/settings/DeviceNameSettings$ConfirmationDialogFragmentListener;
+    iget-object v1, p0, Lcom/android/settings_ex/DeviceNameSettings;->listener:Lcom/android/settings_ex/DeviceNameSettings$ConfirmationDialogFragmentListener;
 
-    invoke-interface {v1}, Lcom/android/settings/DeviceNameSettings$ConfirmationDialogFragmentListener;->onDismiss()V
+    invoke-interface {v1}, Lcom/android/settings_ex/DeviceNameSettings$ConfirmationDialogFragmentListener;->onDismiss()V
 
     .line 268
     :cond_0
@@ -604,14 +604,14 @@
     invoke-super {p0}, Landroid/app/DialogFragment;->onResume()V
 
     .line 245
-    invoke-direct {p0}, Lcom/android/settings/DeviceNameSettings;->showInputMethod()V
+    invoke-direct {p0}, Lcom/android/settings_ex/DeviceNameSettings;->showInputMethod()V
 
     .line 246
-    iget-object v0, p0, Lcom/android/settings/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
 
-    new-instance v1, Lcom/android/settings/DeviceNameSettings$5;
+    new-instance v1, Lcom/android/settings_ex/DeviceNameSettings$5;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/DeviceNameSettings$5;-><init>(Lcom/android/settings/DeviceNameSettings;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/DeviceNameSettings$5;-><init>(Lcom/android/settings_ex/DeviceNameSettings;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
@@ -624,7 +624,7 @@
 
     .prologue
     .line 273
-    invoke-virtual {p0}, Lcom/android/settings/DeviceNameSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DeviceNameSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -634,7 +634,7 @@
 
     .line 274
     .local v1, "res":Landroid/content/ContentResolver;
-    iget-object v2, p0, Lcom/android/settings/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/DeviceNameSettings;->mEditText:Landroid/widget/EditText;
 
     invoke-virtual {v2}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -662,13 +662,13 @@
     return-void
 .end method
 
-.method public setConfirmationDialogFragmentListener(Lcom/android/settings/DeviceNameSettings$ConfirmationDialogFragmentListener;)V
+.method public setConfirmationDialogFragmentListener(Lcom/android/settings_ex/DeviceNameSettings$ConfirmationDialogFragmentListener;)V
     .locals 0
-    .param p1, "listener"    # Lcom/android/settings/DeviceNameSettings$ConfirmationDialogFragmentListener;
+    .param p1, "listener"    # Lcom/android/settings_ex/DeviceNameSettings$ConfirmationDialogFragmentListener;
 
     .prologue
     .line 189
-    iput-object p1, p0, Lcom/android/settings/DeviceNameSettings;->listener:Lcom/android/settings/DeviceNameSettings$ConfirmationDialogFragmentListener;
+    iput-object p1, p0, Lcom/android/settings_ex/DeviceNameSettings;->listener:Lcom/android/settings_ex/DeviceNameSettings$ConfirmationDialogFragmentListener;
 
     .line 190
     return-void

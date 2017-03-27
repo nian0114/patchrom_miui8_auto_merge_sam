@@ -1,4 +1,4 @@
-.class Lcom/android/settings/Utils$IndexAscCompare;
+.class Lcom/android/settings_ex/Utils$IndexAscCompare;
 .super Ljava/lang/Object;
 .source "Utils.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/Utils;
+    value = Lcom/android/settings_ex/Utils;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Ljava/util/Comparator",
         "<",
-        "Lcom/android/settings/dashboard/DashboardTile;",
+        "Lcom/android/settings_ex/dashboard/DashboardTile;",
         ">;"
     }
 .end annotation
@@ -33,7 +33,7 @@
         value = {
             "Ljava/util/HashMap",
             "<",
-            "Lcom/android/settings/dashboard/DashboardTile;",
+            "Lcom/android/settings_ex/dashboard/DashboardTile;",
             "Ljava/lang/Integer;",
             ">;"
         }
@@ -49,7 +49,7 @@
             "(",
             "Ljava/util/HashMap",
             "<",
-            "Lcom/android/settings/dashboard/DashboardTile;",
+            "Lcom/android/settings_ex/dashboard/DashboardTile;",
             "Ljava/lang/Integer;",
             ">;)V"
         }
@@ -57,11 +57,11 @@
 
     .prologue
     .line 5503
-    .local p1, "maps":Ljava/util/HashMap;, "Ljava/util/HashMap<Lcom/android/settings/dashboard/DashboardTile;Ljava/lang/Integer;>;"
+    .local p1, "maps":Ljava/util/HashMap;, "Ljava/util/HashMap<Lcom/android/settings_ex/dashboard/DashboardTile;Ljava/lang/Integer;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 5505
-    iput-object p1, p0, Lcom/android/settings/Utils$IndexAscCompare;->maps:Ljava/util/HashMap;
+    iput-object p1, p0, Lcom/android/settings_ex/Utils$IndexAscCompare;->maps:Ljava/util/HashMap;
 
     .line 5506
     return-void
@@ -69,14 +69,14 @@
 
 
 # virtual methods
-.method public compare(Lcom/android/settings/dashboard/DashboardTile;Lcom/android/settings/dashboard/DashboardTile;)I
+.method public compare(Lcom/android/settings_ex/dashboard/DashboardTile;Lcom/android/settings_ex/dashboard/DashboardTile;)I
     .locals 3
-    .param p1, "arg0"    # Lcom/android/settings/dashboard/DashboardTile;
-    .param p2, "arg1"    # Lcom/android/settings/dashboard/DashboardTile;
+    .param p1, "arg0"    # Lcom/android/settings_ex/dashboard/DashboardTile;
+    .param p2, "arg1"    # Lcom/android/settings_ex/dashboard/DashboardTile;
 
     .prologue
     .line 5511
-    iget-object v2, p0, Lcom/android/settings/Utils$IndexAscCompare;->maps:Ljava/util/HashMap;
+    iget-object v2, p0, Lcom/android/settings_ex/Utils$IndexAscCompare;->maps:Ljava/util/HashMap;
 
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -90,7 +90,7 @@
 
     .line 5512
     .local v0, "a":I
-    iget-object v2, p0, Lcom/android/settings/Utils$IndexAscCompare;->maps:Ljava/util/HashMap;
+    iget-object v2, p0, Lcom/android/settings_ex/Utils$IndexAscCompare;->maps:Ljava/util/HashMap;
 
     invoke-virtual {v2, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -131,13 +131,13 @@
 
     .prologue
     .line 5500
-    check-cast p1, Lcom/android/settings/dashboard/DashboardTile;
+    check-cast p1, Lcom/android/settings_ex/dashboard/DashboardTile;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    check-cast p2, Lcom/android/settings/dashboard/DashboardTile;
+    check-cast p2, Lcom/android/settings_ex/dashboard/DashboardTile;
 
     .end local p2    # "x1":Ljava/lang/Object;
-    invoke-virtual {p0, p1, p2}, Lcom/android/settings/Utils$IndexAscCompare;->compare(Lcom/android/settings/dashboard/DashboardTile;Lcom/android/settings/dashboard/DashboardTile;)I
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings_ex/Utils$IndexAscCompare;->compare(Lcom/android/settings_ex/dashboard/DashboardTile;Lcom/android/settings_ex/dashboard/DashboardTile;)I
 
     move-result v0
 

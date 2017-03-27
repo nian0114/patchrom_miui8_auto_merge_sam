@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/applications/UsageAccessDetails;
-.super Lcom/android/settings/applications/AppInfoWithHeader;
+.class public Lcom/android/settings_ex/applications/UsageAccessDetails;
+.super Lcom/android/settings_ex/applications/AppInfoWithHeader;
 .source "UsageAccessDetails.java"
 
 # interfaces
@@ -16,13 +16,13 @@
 
 .field private mSwitchPref:Landroid/preference/SwitchPreference;
 
-.field private mUsageBridge:Lcom/android/settings/applications/AppStateUsageBridge;
+.field private mUsageBridge:Lcom/android/settings_ex/applications/AppStateUsageBridge;
 
 .field private mUsageDesc:Landroid/preference/Preference;
 
 .field private mUsagePrefs:Landroid/preference/Preference;
 
-.field private mUsageState:Lcom/android/settings/applications/AppStateUsageBridge$UsageState;
+.field private mUsageState:Lcom/android/settings_ex/applications/AppStateUsageBridge$UsageState;
 
 
 # direct methods
@@ -31,7 +31,7 @@
 
     .prologue
     .line 40
-    invoke-direct {p0}, Lcom/android/settings/applications/AppInfoWithHeader;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/applications/AppInfoWithHeader;-><init>()V
 
     return-void
 .end method
@@ -42,17 +42,17 @@
 
     .prologue
     .line 122
-    iget-object v1, p0, Lcom/android/settings/applications/UsageAccessDetails;->mAppOpsManager:Landroid/app/AppOpsManager;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mAppOpsManager:Landroid/app/AppOpsManager;
 
     const/16 v2, 0x2b
 
-    iget-object v0, p0, Lcom/android/settings/applications/UsageAccessDetails;->mPackageInfo:Landroid/content/pm/PackageInfo;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mPackageInfo:Landroid/content/pm/PackageInfo;
 
     iget-object v0, v0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v3, v0, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    iget-object v4, p0, Lcom/android/settings/applications/UsageAccessDetails;->mPackageName:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mPackageName:Ljava/lang/String;
 
     if-eqz p1, :cond_0
 
@@ -101,24 +101,24 @@
 
     .prologue
     .line 61
-    invoke-super {p0, p1}, Lcom/android/settings/applications/AppInfoWithHeader;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/applications/AppInfoWithHeader;->onCreate(Landroid/os/Bundle;)V
 
     .line 63
-    invoke-virtual {p0}, Lcom/android/settings/applications/UsageAccessDetails;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/UsageAccessDetails;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     .line 64
     .local v0, "context":Landroid/content/Context;
-    new-instance v1, Lcom/android/settings/applications/AppStateUsageBridge;
+    new-instance v1, Lcom/android/settings_ex/applications/AppStateUsageBridge;
 
-    iget-object v2, p0, Lcom/android/settings/applications/UsageAccessDetails;->mState:Lcom/android/settingslib/applications/ApplicationsState;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mState:Lcom/android/settings_exlib/applications/ApplicationsState;
 
     const/4 v3, 0x0
 
-    invoke-direct {v1, v0, v2, v3}, Lcom/android/settings/applications/AppStateUsageBridge;-><init>(Landroid/content/Context;Lcom/android/settingslib/applications/ApplicationsState;Lcom/android/settings/applications/AppStateBaseBridge$Callback;)V
+    invoke-direct {v1, v0, v2, v3}, Lcom/android/settings_ex/applications/AppStateUsageBridge;-><init>(Landroid/content/Context;Lcom/android/settings_exlib/applications/ApplicationsState;Lcom/android/settings_ex/applications/AppStateBaseBridge$Callback;)V
 
-    iput-object v1, p0, Lcom/android/settings/applications/UsageAccessDetails;->mUsageBridge:Lcom/android/settings/applications/AppStateUsageBridge;
+    iput-object v1, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mUsageBridge:Lcom/android/settings_ex/applications/AppStateUsageBridge;
 
     .line 65
     const-string v1, "appops"
@@ -129,7 +129,7 @@
 
     check-cast v1, Landroid/app/AppOpsManager;
 
-    iput-object v1, p0, Lcom/android/settings/applications/UsageAccessDetails;->mAppOpsManager:Landroid/app/AppOpsManager;
+    iput-object v1, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mAppOpsManager:Landroid/app/AppOpsManager;
 
     .line 66
     const-class v1, Landroid/app/admin/DevicePolicyManager;
@@ -140,44 +140,44 @@
 
     check-cast v1, Landroid/app/admin/DevicePolicyManager;
 
-    iput-object v1, p0, Lcom/android/settings/applications/UsageAccessDetails;->mDpm:Landroid/app/admin/DevicePolicyManager;
+    iput-object v1, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mDpm:Landroid/app/admin/DevicePolicyManager;
 
     .line 68
     const v1, 0x7f080017
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/applications/UsageAccessDetails;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/applications/UsageAccessDetails;->addPreferencesFromResource(I)V
 
     .line 69
     const-string v1, "app_ops_settings_switch"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/applications/UsageAccessDetails;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/applications/UsageAccessDetails;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/SwitchPreference;
 
-    iput-object v1, p0, Lcom/android/settings/applications/UsageAccessDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
+    iput-object v1, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
 
     .line 70
     const-string v1, "app_ops_settings_preference"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/applications/UsageAccessDetails;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/applications/UsageAccessDetails;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/applications/UsageAccessDetails;->mUsagePrefs:Landroid/preference/Preference;
+    iput-object v1, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mUsagePrefs:Landroid/preference/Preference;
 
     .line 71
     const-string v1, "app_ops_settings_description"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/applications/UsageAccessDetails;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/applications/UsageAccessDetails;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/applications/UsageAccessDetails;->mUsageDesc:Landroid/preference/Preference;
+    iput-object v1, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mUsageDesc:Landroid/preference/Preference;
 
     .line 73
-    invoke-virtual {p0}, Lcom/android/settings/applications/UsageAccessDetails;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/UsageAccessDetails;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 
@@ -186,33 +186,33 @@
     invoke-virtual {v1, v2}, Landroid/preference/PreferenceScreen;->setTitle(I)V
 
     .line 74
-    iget-object v1, p0, Lcom/android/settings/applications/UsageAccessDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
 
     const v2, 0x7f0e0f23
 
     invoke-virtual {v1, v2}, Landroid/preference/SwitchPreference;->setTitle(I)V
 
     .line 75
-    iget-object v1, p0, Lcom/android/settings/applications/UsageAccessDetails;->mUsagePrefs:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mUsagePrefs:Landroid/preference/Preference;
 
     const v2, 0x7f0e0f24
 
     invoke-virtual {v1, v2}, Landroid/preference/Preference;->setTitle(I)V
 
     .line 76
-    iget-object v1, p0, Lcom/android/settings/applications/UsageAccessDetails;->mUsageDesc:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mUsageDesc:Landroid/preference/Preference;
 
     const v2, 0x7f0e0f25
 
     invoke-virtual {v1, v2}, Landroid/preference/Preference;->setSummary(I)V
 
     .line 78
-    iget-object v1, p0, Lcom/android/settings/applications/UsageAccessDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 79
-    iget-object v1, p0, Lcom/android/settings/applications/UsageAccessDetails;->mUsagePrefs:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mUsagePrefs:Landroid/preference/Preference;
 
     invoke-virtual {v1, p0}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -229,13 +229,13 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/applications/UsageAccessDetails;->mPackageName:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/applications/UsageAccessDetails;->mSettingsIntent:Landroid/content/Intent;
+    iput-object v1, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mSettingsIntent:Landroid/content/Intent;
 
     .line 84
     return-void
@@ -252,12 +252,12 @@
     const/4 v0, 0x0
 
     .line 103
-    iget-object v2, p0, Lcom/android/settings/applications/UsageAccessDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
 
     if-ne p1, v2, :cond_3
 
     .line 104
-    iget-object v2, p0, Lcom/android/settings/applications/UsageAccessDetails;->mUsageState:Lcom/android/settings/applications/AppStateUsageBridge$UsageState;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mUsageState:Lcom/android/settings_ex/applications/AppStateUsageBridge$UsageState;
 
     if-eqz v2, :cond_2
 
@@ -268,26 +268,26 @@
 
     move-result v2
 
-    iget-object v3, p0, Lcom/android/settings/applications/UsageAccessDetails;->mUsageState:Lcom/android/settings/applications/AppStateUsageBridge$UsageState;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mUsageState:Lcom/android/settings_ex/applications/AppStateUsageBridge$UsageState;
 
-    invoke-virtual {v3}, Lcom/android/settings/applications/AppStateUsageBridge$UsageState;->isPermissible()Z
+    invoke-virtual {v3}, Lcom/android/settings_ex/applications/AppStateUsageBridge$UsageState;->isPermissible()Z
 
     move-result v3
 
     if-eq v2, v3, :cond_2
 
     .line 105
-    iget-object v2, p0, Lcom/android/settings/applications/UsageAccessDetails;->mUsageState:Lcom/android/settings/applications/AppStateUsageBridge$UsageState;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mUsageState:Lcom/android/settings_ex/applications/AppStateUsageBridge$UsageState;
 
-    invoke-virtual {v2}, Lcom/android/settings/applications/AppStateUsageBridge$UsageState;->isPermissible()Z
+    invoke-virtual {v2}, Lcom/android/settings_ex/applications/AppStateUsageBridge$UsageState;->isPermissible()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/android/settings/applications/UsageAccessDetails;->mDpm:Landroid/app/admin/DevicePolicyManager;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mDpm:Landroid/app/admin/DevicePolicyManager;
 
-    iget-object v3, p0, Lcom/android/settings/applications/UsageAccessDetails;->mPackageName:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Landroid/app/admin/DevicePolicyManager;->isProfileOwnerApp(Ljava/lang/String;)Z
 
@@ -298,7 +298,7 @@
     .line 106
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/applications/UsageAccessDetails;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/UsageAccessDetails;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -334,9 +334,9 @@
 
     .line 113
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/applications/UsageAccessDetails;->mUsageState:Lcom/android/settings/applications/AppStateUsageBridge$UsageState;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mUsageState:Lcom/android/settings_ex/applications/AppStateUsageBridge$UsageState;
 
-    invoke-virtual {v2}, Lcom/android/settings/applications/AppStateUsageBridge$UsageState;->isPermissible()Z
+    invoke-virtual {v2}, Lcom/android/settings_ex/applications/AppStateUsageBridge$UsageState;->isPermissible()Z
 
     move-result v2
 
@@ -345,10 +345,10 @@
     move v0, v1
 
     :cond_1
-    invoke-direct {p0, v0}, Lcom/android/settings/applications/UsageAccessDetails;->setHasAccess(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/applications/UsageAccessDetails;->setHasAccess(Z)V
 
     .line 114
-    invoke-virtual {p0}, Lcom/android/settings/applications/UsageAccessDetails;->refreshUi()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/UsageAccessDetails;->refreshUi()Z
 
     .line 118
     :cond_2
@@ -368,26 +368,26 @@
 
     .prologue
     .line 88
-    iget-object v1, p0, Lcom/android/settings/applications/UsageAccessDetails;->mUsagePrefs:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mUsagePrefs:Landroid/preference/Preference;
 
     if-ne p1, v1, :cond_1
 
     .line 89
-    iget-object v1, p0, Lcom/android/settings/applications/UsageAccessDetails;->mSettingsIntent:Landroid/content/Intent;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mSettingsIntent:Landroid/content/Intent;
 
     if-eqz v1, :cond_0
 
     .line 91
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/applications/UsageAccessDetails;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/UsageAccessDetails;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/applications/UsageAccessDetails;->mSettingsIntent:Landroid/content/Intent;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mSettingsIntent:Landroid/content/Intent;
 
     new-instance v3, Landroid/os/UserHandle;
 
-    iget v4, p0, Lcom/android/settings/applications/UsageAccessDetails;->mUserId:I
+    iget v4, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mUserId:I
 
     invoke-direct {v3, v4}, Landroid/os/UserHandle;-><init>(I)V
 
@@ -410,7 +410,7 @@
 
     .line 93
     .local v0, "e":Landroid/content/ActivityNotFoundException;
-    sget-object v1, Lcom/android/settings/applications/UsageAccessDetails;->TAG:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/applications/UsageAccessDetails;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -422,7 +422,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/applications/UsageAccessDetails;->mSettingsIntent:Landroid/content/Intent;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mSettingsIntent:Landroid/content/Intent;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -449,57 +449,57 @@
 
     .prologue
     .line 128
-    iget-object v3, p0, Lcom/android/settings/applications/UsageAccessDetails;->mUsageBridge:Lcom/android/settings/applications/AppStateUsageBridge;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mUsageBridge:Lcom/android/settings_ex/applications/AppStateUsageBridge;
 
-    iget-object v4, p0, Lcom/android/settings/applications/UsageAccessDetails;->mPackageName:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mPackageName:Ljava/lang/String;
 
-    iget-object v5, p0, Lcom/android/settings/applications/UsageAccessDetails;->mPackageInfo:Landroid/content/pm/PackageInfo;
+    iget-object v5, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mPackageInfo:Landroid/content/pm/PackageInfo;
 
     iget-object v5, v5, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v5, v5, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    invoke-virtual {v3, v4, v5}, Lcom/android/settings/applications/AppStateUsageBridge;->getUsageInfo(Ljava/lang/String;I)Lcom/android/settings/applications/AppStateUsageBridge$UsageState;
+    invoke-virtual {v3, v4, v5}, Lcom/android/settings_ex/applications/AppStateUsageBridge;->getUsageInfo(Ljava/lang/String;I)Lcom/android/settings_ex/applications/AppStateUsageBridge$UsageState;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/applications/UsageAccessDetails;->mUsageState:Lcom/android/settings/applications/AppStateUsageBridge$UsageState;
+    iput-object v3, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mUsageState:Lcom/android/settings_ex/applications/AppStateUsageBridge$UsageState;
 
     .line 131
-    iget-object v3, p0, Lcom/android/settings/applications/UsageAccessDetails;->mUsageState:Lcom/android/settings/applications/AppStateUsageBridge$UsageState;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mUsageState:Lcom/android/settings_ex/applications/AppStateUsageBridge$UsageState;
 
-    invoke-virtual {v3}, Lcom/android/settings/applications/AppStateUsageBridge$UsageState;->isPermissible()Z
+    invoke-virtual {v3}, Lcom/android/settings_ex/applications/AppStateUsageBridge$UsageState;->isPermissible()Z
 
     move-result v0
 
     .line 132
     .local v0, "hasAccess":Z
-    iget-object v3, p0, Lcom/android/settings/applications/UsageAccessDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v3, v0}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 133
-    iget-object v3, p0, Lcom/android/settings/applications/UsageAccessDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
 
-    iget-object v4, p0, Lcom/android/settings/applications/UsageAccessDetails;->mUsageState:Lcom/android/settings/applications/AppStateUsageBridge$UsageState;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mUsageState:Lcom/android/settings_ex/applications/AppStateUsageBridge$UsageState;
 
-    iget-boolean v4, v4, Lcom/android/settings/applications/AppStateUsageBridge$UsageState;->permissionDeclared:Z
+    iget-boolean v4, v4, Lcom/android/settings_ex/applications/AppStateUsageBridge$UsageState;->permissionDeclared:Z
 
     invoke-virtual {v3, v4}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 134
-    iget-object v3, p0, Lcom/android/settings/applications/UsageAccessDetails;->mUsagePrefs:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mUsagePrefs:Landroid/preference/Preference;
 
     invoke-virtual {v3, v0}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 136
-    iget-object v3, p0, Lcom/android/settings/applications/UsageAccessDetails;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mPm:Landroid/content/pm/PackageManager;
 
-    iget-object v4, p0, Lcom/android/settings/applications/UsageAccessDetails;->mSettingsIntent:Landroid/content/Intent;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mSettingsIntent:Landroid/content/Intent;
 
     const/16 v5, 0x80
 
-    iget v6, p0, Lcom/android/settings/applications/UsageAccessDetails;->mUserId:I
+    iget v6, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mUserId:I
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/content/pm/PackageManager;->resolveActivityAsUser(Landroid/content/Intent;II)Landroid/content/pm/ResolveInfo;
 
@@ -512,18 +512,18 @@
     .line 139
     const-string v3, "app_ops_settings_preference"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/applications/UsageAccessDetails;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/applications/UsageAccessDetails;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
     if-nez v3, :cond_0
 
     .line 140
-    invoke-virtual {p0}, Lcom/android/settings/applications/UsageAccessDetails;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/UsageAccessDetails;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/applications/UsageAccessDetails;->mUsagePrefs:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mUsagePrefs:Landroid/preference/Preference;
 
     invoke-virtual {v3, v4}, Landroid/preference/PreferenceScreen;->addPreference(Landroid/preference/Preference;)Z
 
@@ -535,7 +535,7 @@
 
     .line 143
     .local v1, "metaData":Landroid/os/Bundle;
-    iget-object v3, p0, Lcom/android/settings/applications/UsageAccessDetails;->mSettingsIntent:Landroid/content/Intent;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mSettingsIntent:Landroid/content/Intent;
 
     new-instance v4, Landroid/content/ComponentName;
 
@@ -563,7 +563,7 @@
     if-eqz v3, :cond_1
 
     .line 147
-    iget-object v3, p0, Lcom/android/settings/applications/UsageAccessDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
 
     const-string v4, "android.settings.metadata.USAGE_ACCESS_REASON"
 
@@ -585,18 +585,18 @@
     :cond_2
     const-string v3, "app_ops_settings_preference"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/applications/UsageAccessDetails;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/applications/UsageAccessDetails;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
     .line 152
-    invoke-virtual {p0}, Lcom/android/settings/applications/UsageAccessDetails;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/UsageAccessDetails;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/applications/UsageAccessDetails;->mUsagePrefs:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/UsageAccessDetails;->mUsagePrefs:Landroid/preference/Preference;
 
     invoke-virtual {v3, v4}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 

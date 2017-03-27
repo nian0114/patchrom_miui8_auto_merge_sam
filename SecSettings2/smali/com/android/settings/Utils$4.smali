@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/Utils$4;
+.class final Lcom/android/settings_ex/Utils$4;
 .super Ljava/lang/Object;
 .source "Utils.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/Utils;->setViewShown(Landroid/view/View;ZZ)V
+    value = Lcom/android/settings_ex/Utils;->setViewShown(Landroid/view/View;ZZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
 
     .prologue
     .line 3018
-    iput-object p1, p0, Lcom/android/settings/Utils$4;->val$view:Landroid/view/View;
+    iput-object p1, p0, Lcom/android/settings_ex/Utils$4;->val$view:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,7 +42,7 @@
 
     .prologue
     .line 3029
-    iget-object v0, p0, Lcom/android/settings/Utils$4;->val$view:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/Utils$4;->val$view:Landroid/view/View;
 
     const/4 v1, 0x4
 

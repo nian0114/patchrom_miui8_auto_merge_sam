@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wfd/WfdSettingsUtils;
+.class public Lcom/android/settings_ex/wfd/WfdSettingsUtils;
 .super Ljava/lang/Object;
 .source "WfdSettingsUtils.java"
 

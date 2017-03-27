@@ -1,11 +1,11 @@
-.class Lcom/android/settings/nfc/NfcOsaifukeitaiRemoteLock$1;
+.class Lcom/android/settings_ex/nfc/NfcOsaifukeitaiRemoteLock$1;
 .super Landroid/content/BroadcastReceiver;
 .source "NfcOsaifukeitaiRemoteLock.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/nfc/NfcOsaifukeitaiRemoteLock;
+    value = Lcom/android/settings_ex/nfc/NfcOsaifukeitaiRemoteLock;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nfc/NfcOsaifukeitaiRemoteLock;
+.field final synthetic this$0:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiRemoteLock;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/nfc/NfcOsaifukeitaiRemoteLock;)V
+.method constructor <init>(Lcom/android/settings_ex/nfc/NfcOsaifukeitaiRemoteLock;)V
     .locals 0
 
     .prologue
     .line 69
-    iput-object p1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiRemoteLock$1;->this$0:Lcom/android/settings/nfc/NfcOsaifukeitaiRemoteLock;
+    iput-object p1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiRemoteLock$1;->this$0:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiRemoteLock;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 

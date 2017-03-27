@@ -1,11 +1,11 @@
-.class Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;
+.class Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter$1;
 .super Landroid/widget/Filter;
 .source "PrintServiceSettingsFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->getFilter()Landroid/widget/Filter;
+    value = Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;->getFilter()Landroid/widget/Filter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
+.field final synthetic this$1:Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;)V
+.method constructor <init>(Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;)V
     .locals 0
 
     .prologue
     .line 555
-    iput-object p1, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
+    iput-object p1, p0, Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;
 
     invoke-direct {p0}, Landroid/widget/Filter;-><init>()V
 
@@ -39,10 +39,10 @@
 
     .prologue
     .line 558
-    iget-object v6, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
+    iget-object v6, p0, Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;
 
-    # getter for: Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->mLock:Ljava/lang/Object;
-    invoke-static {v6}, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->access$1100(Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;)Ljava/lang/Object;
+    # getter for: Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;->mLock:Ljava/lang/Object;
+    invoke-static {v6}, Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;->access$1100(Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;)Ljava/lang/Object;
 
     move-result-object v7
 
@@ -89,10 +89,10 @@
 
     .line 565
     .local v0, "constraintLowerCase":Ljava/lang/String;
-    iget-object v6, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
+    iget-object v6, p0, Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;
 
-    # getter for: Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->mPrinters:Ljava/util/List;
-    invoke-static {v6}, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->access$1200(Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;)Ljava/util/List;
+    # getter for: Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;->mPrinters:Ljava/util/List;
+    invoke-static {v6}, Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;->access$1200(Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;)Ljava/util/List;
 
     move-result-object v6
 
@@ -109,10 +109,10 @@
     if-ge v2, v4, :cond_2
 
     .line 567
-    iget-object v6, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
+    iget-object v6, p0, Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;
 
-    # getter for: Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->mPrinters:Ljava/util/List;
-    invoke-static {v6}, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->access$1200(Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;)Ljava/util/List;
+    # getter for: Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;->mPrinters:Ljava/util/List;
+    invoke-static {v6}, Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;->access$1200(Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;)Ljava/util/List;
 
     move-result-object v6
 
@@ -187,10 +187,10 @@
 
     .prologue
     .line 581
-    iget-object v1, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;
 
-    # getter for: Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->mLock:Ljava/lang/Object;
-    invoke-static {v1}, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->access$1100(Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;)Ljava/lang/Object;
+    # getter for: Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;->mLock:Ljava/lang/Object;
+    invoke-static {v1}, Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;->access$1100(Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -198,16 +198,16 @@
 
     .line 582
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;
 
-    # setter for: Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->mLastSearchString:Ljava/lang/CharSequence;
-    invoke-static {v1, p1}, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->access$1302(Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    # setter for: Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;->mLastSearchString:Ljava/lang/CharSequence;
+    invoke-static {v1, p1}, Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;->access$1302(Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     .line 583
-    iget-object v1, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;
 
-    # getter for: Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->mFilteredPrinters:Ljava/util/List;
-    invoke-static {v1}, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->access$1400(Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;)Ljava/util/List;
+    # getter for: Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;->mFilteredPrinters:Ljava/util/List;
+    invoke-static {v1}, Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;->access$1400(Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;)Ljava/util/List;
 
     move-result-object v1
 
@@ -217,17 +217,17 @@
     if-nez p2, :cond_0
 
     .line 585
-    iget-object v1, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;
 
-    # getter for: Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->mFilteredPrinters:Ljava/util/List;
-    invoke-static {v1}, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->access$1400(Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;)Ljava/util/List;
+    # getter for: Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;->mFilteredPrinters:Ljava/util/List;
+    invoke-static {v1}, Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;->access$1400(Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;)Ljava/util/List;
 
     move-result-object v1
 
-    iget-object v3, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
+    iget-object v3, p0, Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;
 
-    # getter for: Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->mPrinters:Ljava/util/List;
-    invoke-static {v3}, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->access$1200(Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;)Ljava/util/List;
+    # getter for: Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;->mPrinters:Ljava/util/List;
+    invoke-static {v3}, Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;->access$1200(Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;)Ljava/util/List;
 
     move-result-object v3
 
@@ -240,9 +240,9 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 591
-    iget-object v1, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;
 
-    invoke-virtual {v1}, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;->notifyDataSetChanged()V
 
     .line 592
     return-void
@@ -256,10 +256,10 @@
 
     .line 588
     .local v0, "printers":Ljava/util/List;, "Ljava/util/List<Landroid/print/PrinterInfo;>;"
-    iget-object v1, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;
 
-    # getter for: Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->mFilteredPrinters:Ljava/util/List;
-    invoke-static {v1}, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->access$1400(Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;)Ljava/util/List;
+    # getter for: Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;->mFilteredPrinters:Ljava/util/List;
+    invoke-static {v1}, Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;->access$1400(Lcom/android/settings_ex/print/PrintServiceSettingsFragment$PrintersAdapter;)Ljava/util/List;
 
     move-result-object v1
 

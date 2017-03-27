@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApSettings$19;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$19;
 .super Ljava/lang/Object;
 .source "WifiApSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/mobileap/WifiApSettings;->warnForHiddenNetwork()V
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->warnForHiddenNetwork()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WifiApSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;)V
     .locals 0
 
     .prologue
     .line 1668
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApSettings$19;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$19;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,10 +46,10 @@
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     .line 1673
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSettings$19;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$19;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApSettings;->mWifiConfig:Landroid/net/wifi/WifiConfiguration;
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WifiApSettings;->access$800(Lcom/android/settings/wifi/mobileap/WifiApSettings;)Landroid/net/wifi/WifiConfiguration;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->mWifiConfig:Landroid/net/wifi/WifiConfiguration;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->access$800(Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;)Landroid/net/wifi/WifiConfiguration;
 
     move-result-object v0
 
@@ -64,10 +64,10 @@
     if-eqz v0, :cond_0
 
     .line 1674
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSettings$19;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$19;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
-    # invokes: Lcom/android/settings/wifi/mobileap/WifiApSettings;->warnForOpenNetwork()V
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WifiApSettings;->access$3900(Lcom/android/settings/wifi/mobileap/WifiApSettings;)V
+    # invokes: Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->warnForOpenNetwork()V
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->access$3900(Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;)V
 
     .line 1679
     :goto_0
@@ -75,10 +75,10 @@
 
     .line 1676
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSettings$19;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$19;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
-    # invokes: Lcom/android/settings/wifi/mobileap/WifiApSettings;->setWifiApConfigData()V
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WifiApSettings;->access$4800(Lcom/android/settings/wifi/mobileap/WifiApSettings;)V
+    # invokes: Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->setWifiApConfigData()V
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->access$4800(Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;)V
 
     goto :goto_0
 .end method

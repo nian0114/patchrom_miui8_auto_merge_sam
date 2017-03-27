@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/PreferenceWithLongSummary;
+.class public Lcom/android/settings_ex/PreferenceWithLongSummary;
 .super Landroid/preference/Preference;
 .source "PreferenceWithLongSummary.java"
 

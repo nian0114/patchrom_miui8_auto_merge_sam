@@ -1,9 +1,9 @@
-.class public abstract Lcom/android/settings/notification/ZenModeRuleSettingsBase;
-.super Lcom/android/settings/notification/ZenModeSettingsBase;
+.class public abstract Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;
+.super Lcom/android/settings_ex/notification/ZenModeSettingsBase;
 .source "ZenModeRuleSettingsBase.java"
 
 # interfaces
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # static fields
@@ -25,9 +25,9 @@
 
 .field private mRuleName:Landroid/preference/Preference;
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-.field private mZenMode:Lcom/android/settings/DropDownPreference;
+.field private mZenMode:Lcom/android/settings_ex/DropDownPreference;
 
 
 # direct methods
@@ -36,9 +36,9 @@
 
     .prologue
     .line 50
-    sget-boolean v0, Lcom/android/settings/notification/ZenModeSettingsBase;->DEBUG:Z
+    sget-boolean v0, Lcom/android/settings_ex/notification/ZenModeSettingsBase;->DEBUG:Z
 
-    sput-boolean v0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->DEBUG:Z
+    sput-boolean v0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->DEBUG:Z
 
     return-void
 .end method
@@ -48,41 +48,41 @@
 
     .prologue
     .line 47
-    invoke-direct {p0}, Lcom/android/settings/notification/ZenModeSettingsBase;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/ZenModeSettingsBase;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/notification/ZenModeRuleSettingsBase;)V
+.method static synthetic access$000(Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/notification/ZenModeRuleSettingsBase;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;
 
     .prologue
     .line 47
-    invoke-direct {p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->showRuleNameDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->showRuleNameDialog()V
 
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/notification/ZenModeRuleSettingsBase;)Ljava/lang/String;
+.method static synthetic access$100(Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/ZenModeRuleSettingsBase;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;
 
     .prologue
     .line 47
-    iget-object v0, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mRuleId:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mRuleId:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$202(Lcom/android/settings/notification/ZenModeRuleSettingsBase;Z)Z
+.method static synthetic access$202(Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/notification/ZenModeRuleSettingsBase;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;
     .param p1, "x1"    # Z
 
     .prologue
     .line 47
-    iput-boolean p1, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mDeleting:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mDeleting:Z
 
     return p1
 .end method
@@ -92,11 +92,11 @@
 
     .prologue
     .line 226
-    iget-object v0, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mConfig:Landroid/service/notification/ZenModeConfig;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mConfig:Landroid/service/notification/ZenModeConfig;
 
     iget-object v0, v0, Landroid/service/notification/ZenModeConfig;->automaticRules:Landroid/util/ArrayMap;
 
-    iget-object v1, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mRuleId:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mRuleId:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -104,10 +104,10 @@
 
     check-cast v0, Landroid/service/notification/ZenModeConfig$ZenRule;
 
-    iput-object v0, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
 
     .line 227
-    sget-boolean v0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->DEBUG:Z
+    sget-boolean v0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
@@ -123,7 +123,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -137,16 +137,16 @@
 
     .line 228
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->setRule(Landroid/service/notification/ZenModeConfig$ZenRule;)Z
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->setRule(Landroid/service/notification/ZenModeConfig$ZenRule;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 229
-    invoke-direct {p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->toastAndFinish()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->toastAndFinish()V
 
     .line 230
     const/4 v0, 0x1
@@ -168,7 +168,7 @@
     .line 236
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
-    iget-object v3, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mContext:Landroid/content/Context;
 
     invoke-direct {v2, v3}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -180,13 +180,13 @@
 
     const/4 v5, 0x0
 
-    iget-object v6, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
 
     iget-object v6, v6, Landroid/service/notification/ZenModeConfig$ZenRule;->name:Ljava/lang/String;
 
     aput-object v6, v4, v5
 
-    invoke-virtual {p0, v3, v4}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v3, v4}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -204,9 +204,9 @@
 
     const v3, 0x7f0e0e6f
 
-    new-instance v4, Lcom/android/settings/notification/ZenModeRuleSettingsBase$4;
+    new-instance v4, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase$4;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase$4;-><init>(Lcom/android/settings/notification/ZenModeRuleSettingsBase;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase$4;-><init>(Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;)V
 
     invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -243,17 +243,17 @@
 
     .prologue
     .line 213
-    new-instance v0, Lcom/android/settings/notification/ZenModeRuleSettingsBase$3;
+    new-instance v0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase$3;
 
-    iget-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mContext:Landroid/content/Context;
 
     const/4 v3, 0x0
 
-    iget-object v1, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
 
     iget-object v4, v1, Landroid/service/notification/ZenModeConfig$ZenRule;->name:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mConfig:Landroid/service/notification/ZenModeConfig;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mConfig:Landroid/service/notification/ZenModeConfig;
 
     invoke-virtual {v1}, Landroid/service/notification/ZenModeConfig;->getAutomaticRuleNames()Landroid/util/ArraySet;
 
@@ -261,9 +261,9 @@
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/settings/notification/ZenModeRuleSettingsBase$3;-><init>(Lcom/android/settings/notification/ZenModeRuleSettingsBase;Landroid/content/Context;Lcom/android/settings/notification/ServiceListing;Ljava/lang/String;Landroid/util/ArraySet;)V
+    invoke-direct/range {v0 .. v5}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase$3;-><init>(Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;Landroid/content/Context;Lcom/android/settings_ex/notification/ServiceListing;Ljava/lang/String;Landroid/util/ArraySet;)V
 
-    invoke-virtual {v0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase$3;->show()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase$3;->show()V
 
     .line 223
     return-void
@@ -274,12 +274,12 @@
 
     .prologue
     .line 256
-    iget-boolean v0, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mDeleting:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mDeleting:Z
 
     if-nez v0, :cond_0
 
     .line 257
-    iget-object v0, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mContext:Landroid/content/Context;
 
     const v1, 0x7f0e0e80
 
@@ -293,7 +293,7 @@
 
     .line 260
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -310,18 +310,18 @@
     .line 269
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mDisableListeners:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mDisableListeners:Z
 
     .line 270
-    invoke-direct {p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->updateRuleName()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->updateRuleName()V
 
     .line 271
-    invoke-virtual {p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->updateControlsInternal()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->updateControlsInternal()V
 
     .line 272
-    iget-object v0, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mZenMode:Lcom/android/settings/DropDownPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mZenMode:Lcom/android/settings_ex/DropDownPreference;
 
-    iget-object v1, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
 
     iget v1, v1, Landroid/service/notification/ZenModeConfig$ZenRule;->zenMode:I
 
@@ -329,27 +329,27 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
 
     .line 273
-    iget-object v0, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_0
 
     .line 274
-    iget-object v0, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    iget-object v1, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
 
     iget-boolean v1, v1, Landroid/service/notification/ZenModeConfig$ZenRule;->enabled:Z
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 276
     :cond_0
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mDisableListeners:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mDisableListeners:Z
 
     .line 277
     return-void
@@ -360,20 +360,20 @@
 
     .prologue
     .line 264
-    invoke-virtual {p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
 
     iget-object v1, v1, Landroid/service/notification/ZenModeConfig$ZenRule;->name:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 265
-    iget-object v0, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mRuleName:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mRuleName:Landroid/preference/Preference;
 
-    iget-object v1, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
 
     iget-object v1, v1, Landroid/service/notification/ZenModeConfig$ZenRule;->name:Ljava/lang/String;
 
@@ -397,32 +397,32 @@
 
     .prologue
     .line 137
-    invoke-super {p0, p1}, Lcom/android/settings/notification/ZenModeSettingsBase;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/notification/ZenModeSettingsBase;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 139
-    invoke-virtual {p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 140
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v1, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 141
-    iget-object v1, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v1, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 142
-    iget-object v1, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 143
     return-void
@@ -436,17 +436,17 @@
     const/4 v5, 0x1
 
     .line 75
-    invoke-super {p0, p1}, Lcom/android/settings/notification/ZenModeSettingsBase;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/notification/ZenModeSettingsBase;->onCreate(Landroid/os/Bundle;)V
 
     .line 77
-    invoke-virtual {p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mContext:Landroid/content/Context;
+    iput-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mContext:Landroid/content/Context;
 
     .line 79
-    invoke-virtual {p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -456,7 +456,7 @@
 
     .line 80
     .local v0, "intent":Landroid/content/Intent;
-    sget-boolean v2, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->DEBUG:Z
+    sget-boolean v2, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
@@ -494,7 +494,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 83
-    invoke-direct {p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->toastAndFinish()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->toastAndFinish()V
 
     .line 127
     :cond_1
@@ -509,10 +509,10 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mRuleId:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mRuleId:Ljava/lang/String;
 
     .line 88
-    sget-boolean v2, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->DEBUG:Z
+    sget-boolean v2, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->DEBUG:Z
 
     if-eqz v2, :cond_3
 
@@ -528,7 +528,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mRuleId:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mRuleId:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -542,20 +542,20 @@
 
     .line 89
     :cond_3
-    invoke-direct {p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->refreshRuleOrFinish()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->refreshRuleOrFinish()Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
     .line 93
-    invoke-virtual {p0, v5}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->setHasOptionsMenu(Z)V
 
     .line 95
-    invoke-virtual {p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->onCreateInternal()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->onCreateInternal()V
 
     .line 97
-    invoke-virtual {p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 
@@ -567,14 +567,14 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mRuleName:Landroid/preference/Preference;
+    iput-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mRuleName:Landroid/preference/Preference;
 
     .line 99
-    iget-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mRuleName:Landroid/preference/Preference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mRuleName:Landroid/preference/Preference;
 
-    new-instance v3, Lcom/android/settings/notification/ZenModeRuleSettingsBase$1;
+    new-instance v3, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase$1;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase$1;-><init>(Lcom/android/settings/notification/ZenModeRuleSettingsBase;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase$1;-><init>(Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;)V
 
     invoke-virtual {v2, v3}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -585,12 +585,12 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/DropDownPreference;
+    check-cast v2, Lcom/android/settings_ex/DropDownPreference;
 
-    iput-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mZenMode:Lcom/android/settings/DropDownPreference;
+    iput-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mZenMode:Lcom/android/settings_ex/DropDownPreference;
 
     .line 108
-    iget-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mZenMode:Lcom/android/settings/DropDownPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mZenMode:Lcom/android/settings_ex/DropDownPreference;
 
     const v3, 0x7f0e0e2f
 
@@ -598,10 +598,10 @@
 
     move-result-object v4
 
-    invoke-virtual {v2, v3, v4}, Lcom/android/settings/DropDownPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v2, v3, v4}, Lcom/android/settings_ex/DropDownPreference;->addItem(ILjava/lang/Object;)V
 
     .line 110
-    iget-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mZenMode:Lcom/android/settings/DropDownPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mZenMode:Lcom/android/settings_ex/DropDownPreference;
 
     const v3, 0x7f0e0e30
 
@@ -611,10 +611,10 @@
 
     move-result-object v4
 
-    invoke-virtual {v2, v3, v4}, Lcom/android/settings/DropDownPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v2, v3, v4}, Lcom/android/settings_ex/DropDownPreference;->addItem(ILjava/lang/Object;)V
 
     .line 111
-    iget-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mZenMode:Lcom/android/settings/DropDownPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mZenMode:Lcom/android/settings_ex/DropDownPreference;
 
     const v3, 0x7f0e0e31
 
@@ -624,32 +624,32 @@
 
     move-result-object v4
 
-    invoke-virtual {v2, v3, v4}, Lcom/android/settings/DropDownPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v2, v3, v4}, Lcom/android/settings_ex/DropDownPreference;->addItem(ILjava/lang/Object;)V
 
     .line 113
-    iget-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mZenMode:Lcom/android/settings/DropDownPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mZenMode:Lcom/android/settings_ex/DropDownPreference;
 
-    new-instance v3, Lcom/android/settings/notification/ZenModeRuleSettingsBase$2;
+    new-instance v3, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase$2;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase$2;-><init>(Lcom/android/settings/notification/ZenModeRuleSettingsBase;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase$2;-><init>(Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;)V
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/DropDownPreference;->setCallback(Lcom/android/settings/DropDownPreference$Callback;)V
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/DropDownPreference;->setCallback(Lcom/android/settings_ex/DropDownPreference$Callback;)V
 
     .line 125
-    iget-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mZenMode:Lcom/android/settings/DropDownPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mZenMode:Lcom/android/settings_ex/DropDownPreference;
 
     const/16 v3, 0xa
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/DropDownPreference;->setOrder(I)V
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/DropDownPreference;->setOrder(I)V
 
     .line 126
-    iget-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mZenMode:Lcom/android/settings/DropDownPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mZenMode:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->getZenModeDependency()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->getZenModeDependency()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/DropDownPreference;->setDependency(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/DropDownPreference;->setDependency(Ljava/lang/String;)V
 
     goto/16 :goto_0
 .end method
@@ -664,7 +664,7 @@
 
     .prologue
     .line 197
-    sget-boolean v0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->DEBUG:Z
+    sget-boolean v0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
@@ -689,17 +689,17 @@
 
     .prologue
     .line 147
-    invoke-super {p0}, Lcom/android/settings/notification/ZenModeSettingsBase;->onDestroyView()V
+    invoke-super {p0}, Lcom/android/settings_ex/notification/ZenModeSettingsBase;->onDestroyView()V
 
     .line 148
-    iget-object v0, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 149
-    iget-object v0, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 150
     return-void
@@ -711,7 +711,7 @@
 
     .prologue
     .line 203
-    sget-boolean v0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->DEBUG:Z
+    sget-boolean v0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
@@ -752,14 +752,14 @@
     if-ne v0, v1, :cond_1
 
     .line 205
-    iget-object v0, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mContext:Landroid/content/Context;
 
     const/16 v1, 0xae
 
     invoke-static {v0, v1}, Lcom/android/internal/logging/MetricsLogger;->action(Landroid/content/Context;I)V
 
     .line 206
-    invoke-direct {p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->showDeleteRuleDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->showDeleteRuleDialog()V
 
     .line 207
     const/4 v0, 0x1
@@ -769,7 +769,7 @@
     return v0
 
     :cond_1
-    invoke-super {p0, p1}, Lcom/android/settings/notification/ZenModeSettingsBase;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/android/settings_ex/notification/ZenModeSettingsBase;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v0
 
@@ -781,10 +781,10 @@
 
     .prologue
     .line 131
-    invoke-super {p0}, Lcom/android/settings/notification/ZenModeSettingsBase;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/notification/ZenModeSettingsBase;->onResume()V
 
     .line 132
-    invoke-direct {p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->updateControls()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->updateControls()V
 
     .line 133
     return-void
@@ -799,7 +799,7 @@
     const/4 v5, 0x0
 
     .line 154
-    sget-boolean v2, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->DEBUG:Z
+    sget-boolean v2, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
@@ -827,7 +827,7 @@
 
     .line 155
     :cond_0
-    iget-boolean v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mDisableListeners:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mDisableListeners:Z
 
     if-eqz v2, :cond_2
 
@@ -842,21 +842,21 @@
 
     .line 157
     .local v0, "enabled":Z
-    iget-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
 
     iget-boolean v2, v2, Landroid/service/notification/ZenModeConfig$ZenRule;->enabled:Z
 
     if-eq v0, v2, :cond_1
 
     .line 158
-    iget-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mContext:Landroid/content/Context;
 
     const/16 v3, 0xb0
 
     invoke-static {v2, v3, v0}, Lcom/android/internal/logging/MetricsLogger;->action(Landroid/content/Context;IZ)V
 
     .line 159
-    sget-boolean v2, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->DEBUG:Z
+    sget-boolean v2, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->DEBUG:Z
 
     if-eqz v2, :cond_3
 
@@ -884,25 +884,25 @@
 
     .line 160
     :cond_3
-    iget-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
 
     iput-boolean v0, v2, Landroid/service/notification/ZenModeConfig$ZenRule;->enabled:Z
 
     .line 161
-    iget-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
 
     iput-boolean v5, v2, Landroid/service/notification/ZenModeConfig$ZenRule;->snoozing:Z
 
     .line 162
-    iget-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mConfig:Landroid/service/notification/ZenModeConfig;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mConfig:Landroid/service/notification/ZenModeConfig;
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->setZenModeConfig(Landroid/service/notification/ZenModeConfig;)Z
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->setZenModeConfig(Landroid/service/notification/ZenModeConfig;)Z
 
     .line 163
     if-eqz v0, :cond_4
 
     .line 164
-    invoke-virtual {p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->getEnabledToastText()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->getEnabledToastText()I
 
     move-result v1
 
@@ -911,16 +911,16 @@
     if-eqz v1, :cond_1
 
     .line 166
-    iget-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mContext:Landroid/content/Context;
 
     invoke-static {v2, v1, v5}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mEnabledToast:Landroid/widget/Toast;
+    iput-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mEnabledToast:Landroid/widget/Toast;
 
     .line 167
-    iget-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mEnabledToast:Landroid/widget/Toast;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mEnabledToast:Landroid/widget/Toast;
 
     invoke-virtual {v2}, Landroid/widget/Toast;->show()V
 
@@ -929,12 +929,12 @@
     .line 170
     .end local v1    # "toastText":I
     :cond_4
-    iget-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mEnabledToast:Landroid/widget/Toast;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mEnabledToast:Landroid/widget/Toast;
 
     if-eqz v2, :cond_1
 
     .line 171
-    iget-object v2, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mEnabledToast:Landroid/widget/Toast;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mEnabledToast:Landroid/widget/Toast;
 
     invoke-virtual {v2}, Landroid/widget/Toast;->cancel()V
 
@@ -954,14 +954,14 @@
 
     .prologue
     .line 190
-    invoke-direct {p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->refreshRuleOrFinish()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->refreshRuleOrFinish()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 191
-    invoke-direct {p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->updateControls()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->updateControls()V
 
     .line 193
     :cond_0
@@ -980,28 +980,28 @@
 
     .prologue
     .line 177
-    iget-object v0, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
 
     iput-object p1, v0, Landroid/service/notification/ZenModeConfig$ZenRule;->conditionId:Landroid/net/Uri;
 
     .line 178
-    iget-object v0, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Landroid/service/notification/ZenModeConfig$ZenRule;->condition:Landroid/service/notification/Condition;
 
     .line 179
-    iget-object v0, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Landroid/service/notification/ZenModeConfig$ZenRule;->snoozing:Z
 
     .line 180
-    iget-object v0, p0, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->mConfig:Landroid/service/notification/ZenModeConfig;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->mConfig:Landroid/service/notification/ZenModeConfig;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->setZenModeConfig(Landroid/service/notification/ZenModeConfig;)Z
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->setZenModeConfig(Landroid/service/notification/ZenModeConfig;)Z
 
     .line 181
     return-void

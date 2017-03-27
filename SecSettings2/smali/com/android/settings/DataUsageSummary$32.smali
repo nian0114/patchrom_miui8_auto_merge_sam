@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DataUsageSummary$32;
+.class Lcom/android/settings_ex/DataUsageSummary$32;
 .super Ljava/lang/Object;
 .source "DataUsageSummary.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DataUsageSummary;
+    value = Lcom/android/settings_ex/DataUsageSummary;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DataUsageSummary;
+.field final synthetic this$0:Lcom/android/settings_ex/DataUsageSummary;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DataUsageSummary;)V
+.method constructor <init>(Lcom/android/settings_ex/DataUsageSummary;)V
     .locals 0
 
     .prologue
     .line 3631
-    iput-object p1, p0, Lcom/android/settings/DataUsageSummary$32;->this$0:Lcom/android/settings/DataUsageSummary;
+    iput-object p1, p0, Lcom/android/settings_ex/DataUsageSummary$32;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,9 +44,9 @@
     .line 3634
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    iget-object v1, p0, Lcom/android/settings/DataUsageSummary$32;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v1, p0, Lcom/android/settings_ex/DataUsageSummary$32;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
-    invoke-virtual {v1}, Lcom/android/settings/DataUsageSummary;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/DataUsageSummary;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -66,18 +66,18 @@
     .line 3637
     const v1, 0x104000a
 
-    new-instance v2, Lcom/android/settings/DataUsageSummary$32$1;
+    new-instance v2, Lcom/android/settings_ex/DataUsageSummary$32$1;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/DataUsageSummary$32$1;-><init>(Lcom/android/settings/DataUsageSummary$32;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/DataUsageSummary$32$1;-><init>(Lcom/android/settings_ex/DataUsageSummary$32;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 3644
     const/high16 v1, 0x1040000
 
-    new-instance v2, Lcom/android/settings/DataUsageSummary$32$2;
+    new-instance v2, Lcom/android/settings_ex/DataUsageSummary$32$2;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/DataUsageSummary$32$2;-><init>(Lcom/android/settings/DataUsageSummary$32;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/DataUsageSummary$32$2;-><init>(Lcom/android/settings_ex/DataUsageSummary$32;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 

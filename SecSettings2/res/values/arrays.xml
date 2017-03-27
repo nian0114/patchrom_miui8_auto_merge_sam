@@ -1253,7 +1253,7 @@
         <item>com.samsung.android.snote</item>
     </string-array>
     <string-array name="applock_white_list_pkg">
-        <item>com.android.settings</item>
+        <item>com.android.settings_ex</item>
         <item>com.samsung.android.sm</item>
         <item>com.android.stk</item>
         <item>com.android.stk2</item>

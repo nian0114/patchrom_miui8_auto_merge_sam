@@ -12,7 +12,7 @@
             </LinearLayout>
             <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/buttons">
                 <include layout="@layout/data_usage_infomation_land" />
-                <com.android.settings.widget.DataUsageListView android:id="@android:id/list" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/buttons" android:smoothScrollbar="true" style="@style/PreferenceFragmentListSinglePane" />
+                <com.android.settings_ex.widget.DataUsageListView android:id="@android:id/list" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/buttons" android:smoothScrollbar="true" style="@style/PreferenceFragmentListSinglePane" />
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>

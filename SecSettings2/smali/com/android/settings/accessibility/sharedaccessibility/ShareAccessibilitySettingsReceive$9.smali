@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsReceive$9;
+.class Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsReceive$9;
 .super Ljava/lang/Object;
 .source "ShareAccessibilitySettingsReceive.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsReceive;
+    value = Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsReceive;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsReceive;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsReceive;
 
 
 # virtual methods
@@ -29,9 +29,9 @@
 
     .prologue
     .line 274
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsReceive$9;->this$0:Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsReceive;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsReceive$9;->this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsReceive;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsReceive;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsReceive;->finish()V
 
     .line 275
     return-void

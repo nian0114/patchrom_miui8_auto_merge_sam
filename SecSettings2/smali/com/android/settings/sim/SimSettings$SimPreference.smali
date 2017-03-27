@@ -1,11 +1,11 @@
-.class Lcom/android/settings/sim/SimSettings$SimPreference;
+.class Lcom/android/settings_ex/sim/SimSettings$SimPreference;
 .super Landroid/preference/Preference;
 .source "SimSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/sim/SimSettings;
+    value = Lcom/android/settings_ex/sim/SimSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,11 +21,11 @@
 
 .field private mSubInfoRecord:Landroid/telephony/SubscriptionInfo;
 
-.field final synthetic this$0:Lcom/android/settings/sim/SimSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/sim/SimSettings;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/settings/sim/SimSettings;Landroid/content/Context;Landroid/telephony/SubscriptionInfo;I)V
+.method public constructor <init>(Lcom/android/settings_ex/sim/SimSettings;Landroid/content/Context;Landroid/telephony/SubscriptionInfo;I)V
     .locals 2
     .param p2, "context"    # Landroid/content/Context;
     .param p3, "subInfoRecord"    # Landroid/telephony/SubscriptionInfo;
@@ -33,19 +33,19 @@
 
     .prologue
     .line 261
-    iput-object p1, p0, Lcom/android/settings/sim/SimSettings$SimPreference;->this$0:Lcom/android/settings/sim/SimSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->this$0:Lcom/android/settings_ex/sim/SimSettings;
 
     .line 262
     invoke-direct {p0, p2}, Landroid/preference/Preference;-><init>(Landroid/content/Context;)V
 
     .line 264
-    iput-object p2, p0, Lcom/android/settings/sim/SimSettings$SimPreference;->mContext:Landroid/content/Context;
+    iput-object p2, p0, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->mContext:Landroid/content/Context;
 
     .line 265
-    iput-object p3, p0, Lcom/android/settings/sim/SimSettings$SimPreference;->mSubInfoRecord:Landroid/telephony/SubscriptionInfo;
+    iput-object p3, p0, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->mSubInfoRecord:Landroid/telephony/SubscriptionInfo;
 
     .line 266
-    iput p4, p0, Lcom/android/settings/sim/SimSettings$SimPreference;->mSlotId:I
+    iput p4, p0, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->mSlotId:I
 
     .line 267
     new-instance v0, Ljava/lang/StringBuilder;
@@ -58,7 +58,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/android/settings/sim/SimSettings$SimPreference;->mSlotId:I
+    iget v1, p0, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->mSlotId:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -68,22 +68,22 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/sim/SimSettings$SimPreference;->setKey(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->setKey(Ljava/lang/String;)V
 
     .line 268
-    invoke-virtual {p0}, Lcom/android/settings/sim/SimSettings$SimPreference;->update()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->update()V
 
     .line 269
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/sim/SimSettings$SimPreference;)I
+.method static synthetic access$100(Lcom/android/settings_ex/sim/SimSettings$SimPreference;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/sim/SimSettings$SimPreference;
+    .param p0, "x0"    # Lcom/android/settings_ex/sim/SimSettings$SimPreference;
 
     .prologue
     .line 256
-    invoke-direct {p0}, Lcom/android/settings/sim/SimSettings$SimPreference;->getSlotId()I
+    invoke-direct {p0}, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->getSlotId()I
 
     move-result v0
 
@@ -95,7 +95,7 @@
 
     .prologue
     .line 293
-    iget v0, p0, Lcom/android/settings/sim/SimSettings$SimPreference;->mSlotId:I
+    iget v0, p0, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->mSlotId:I
 
     return v0
 .end method
@@ -111,7 +111,7 @@
     const/4 v4, 0x0
 
     .line 272
-    iget-object v1, p0, Lcom/android/settings/sim/SimSettings$SimPreference;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -119,7 +119,7 @@
 
     .line 274
     .local v0, "res":Landroid/content/res/Resources;
-    iget-object v1, p0, Lcom/android/settings/sim/SimSettings$SimPreference;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -133,7 +133,7 @@
 
     new-array v2, v5, [Ljava/lang/Object;
 
-    iget v3, p0, Lcom/android/settings/sim/SimSettings$SimPreference;->mSlotId:I
+    iget v3, p0, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->mSlotId:I
 
     add-int/lit8 v3, v3, 0x1
 
@@ -147,20 +147,20 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/sim/SimSettings$SimPreference;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 276
-    iget-object v1, p0, Lcom/android/settings/sim/SimSettings$SimPreference;->mSubInfoRecord:Landroid/telephony/SubscriptionInfo;
+    iget-object v1, p0, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->mSubInfoRecord:Landroid/telephony/SubscriptionInfo;
 
     if-eqz v1, :cond_1
 
     .line 277
-    iget-object v1, p0, Lcom/android/settings/sim/SimSettings$SimPreference;->this$0:Lcom/android/settings/sim/SimSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->this$0:Lcom/android/settings_ex/sim/SimSettings;
 
-    iget-object v2, p0, Lcom/android/settings/sim/SimSettings$SimPreference;->mSubInfoRecord:Landroid/telephony/SubscriptionInfo;
+    iget-object v2, p0, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->mSubInfoRecord:Landroid/telephony/SubscriptionInfo;
 
-    # invokes: Lcom/android/settings/sim/SimSettings;->getPhoneNumber(Landroid/telephony/SubscriptionInfo;)Ljava/lang/String;
-    invoke-static {v1, v2}, Lcom/android/settings/sim/SimSettings;->access$200(Lcom/android/settings/sim/SimSettings;Landroid/telephony/SubscriptionInfo;)Ljava/lang/String;
+    # invokes: Lcom/android/settings_ex/sim/SimSettings;->getPhoneNumber(Landroid/telephony/SubscriptionInfo;)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/android/settings_ex/sim/SimSettings;->access$200(Lcom/android/settings_ex/sim/SimSettings;Landroid/telephony/SubscriptionInfo;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -171,21 +171,21 @@
     if-eqz v1, :cond_0
 
     .line 278
-    iget-object v1, p0, Lcom/android/settings/sim/SimSettings$SimPreference;->mSubInfoRecord:Landroid/telephony/SubscriptionInfo;
+    iget-object v1, p0, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->mSubInfoRecord:Landroid/telephony/SubscriptionInfo;
 
     invoke-virtual {v1}, Landroid/telephony/SubscriptionInfo;->getDisplayName()Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/sim/SimSettings$SimPreference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 284
     :goto_0
     new-instance v1, Landroid/graphics/drawable/BitmapDrawable;
 
-    iget-object v2, p0, Lcom/android/settings/sim/SimSettings$SimPreference;->mSubInfoRecord:Landroid/telephony/SubscriptionInfo;
+    iget-object v2, p0, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->mSubInfoRecord:Landroid/telephony/SubscriptionInfo;
 
-    iget-object v3, p0, Lcom/android/settings/sim/SimSettings$SimPreference;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v3}, Landroid/telephony/SubscriptionInfo;->createIconBitmap(Landroid/content/Context;)Landroid/graphics/Bitmap;
 
@@ -193,7 +193,7 @@
 
     invoke-direct {v1, v0, v2}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/sim/SimSettings$SimPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 290
     :goto_1
@@ -205,7 +205,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p0, Lcom/android/settings/sim/SimSettings$SimPreference;->mSubInfoRecord:Landroid/telephony/SubscriptionInfo;
+    iget-object v2, p0, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->mSubInfoRecord:Landroid/telephony/SubscriptionInfo;
 
     invoke-virtual {v2}, Landroid/telephony/SubscriptionInfo;->getDisplayName()Ljava/lang/CharSequence;
 
@@ -221,12 +221,12 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/sim/SimSettings$SimPreference;->this$0:Lcom/android/settings/sim/SimSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->this$0:Lcom/android/settings_ex/sim/SimSettings;
 
-    iget-object v3, p0, Lcom/android/settings/sim/SimSettings$SimPreference;->mSubInfoRecord:Landroid/telephony/SubscriptionInfo;
+    iget-object v3, p0, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->mSubInfoRecord:Landroid/telephony/SubscriptionInfo;
 
-    # invokes: Lcom/android/settings/sim/SimSettings;->getPhoneNumber(Landroid/telephony/SubscriptionInfo;)Ljava/lang/String;
-    invoke-static {v2, v3}, Lcom/android/settings/sim/SimSettings;->access$200(Lcom/android/settings/sim/SimSettings;Landroid/telephony/SubscriptionInfo;)Ljava/lang/String;
+    # invokes: Lcom/android/settings_ex/sim/SimSettings;->getPhoneNumber(Landroid/telephony/SubscriptionInfo;)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/android/settings_ex/sim/SimSettings;->access$200(Lcom/android/settings_ex/sim/SimSettings;Landroid/telephony/SubscriptionInfo;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -238,10 +238,10 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/sim/SimSettings$SimPreference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 282
-    invoke-virtual {p0, v5}, Lcom/android/settings/sim/SimSettings$SimPreference;->setEnabled(Z)V
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->setEnabled(Z)V
 
     goto :goto_0
 
@@ -249,15 +249,15 @@
     :cond_1
     const v1, 0x7f0e0dca
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/sim/SimSettings$SimPreference;->setSummary(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->setSummary(I)V
 
     .line 287
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/sim/SimSettings$SimPreference;->setFragment(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->setFragment(Ljava/lang/String;)V
 
     .line 288
-    invoke-virtual {p0, v4}, Lcom/android/settings/sim/SimSettings$SimPreference;->setEnabled(Z)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/sim/SimSettings$SimPreference;->setEnabled(Z)V
 
     goto :goto_1
 .end method

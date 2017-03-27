@@ -1,4 +1,4 @@
-.class Lcom/android/settings/bluetooth/DeviceProfilesSettings$2;
+.class Lcom/android/settings_ex/bluetooth/DeviceProfilesSettings$2;
 .super Ljava/lang/Object;
 .source "DeviceProfilesSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/bluetooth/DeviceProfilesSettings;->onResume()V
+    value = Lcom/android/settings_ex/bluetooth/DeviceProfilesSettings;->onResume()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/bluetooth/DeviceProfilesSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/bluetooth/DeviceProfilesSettings;
 
 .field final synthetic val$et:Landroid/widget/EditText;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/bluetooth/DeviceProfilesSettings;Landroid/widget/EditText;)V
+.method constructor <init>(Lcom/android/settings_ex/bluetooth/DeviceProfilesSettings;Landroid/widget/EditText;)V
     .locals 0
 
     .prologue
     .line 341
-    iput-object p1, p0, Lcom/android/settings/bluetooth/DeviceProfilesSettings$2;->this$0:Lcom/android/settings/bluetooth/DeviceProfilesSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/bluetooth/DeviceProfilesSettings$2;->this$0:Lcom/android/settings_ex/bluetooth/DeviceProfilesSettings;
 
-    iput-object p2, p0, Lcom/android/settings/bluetooth/DeviceProfilesSettings$2;->val$et:Landroid/widget/EditText;
+    iput-object p2, p0, Lcom/android/settings_ex/bluetooth/DeviceProfilesSettings$2;->val$et:Landroid/widget/EditText;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
 
     .prologue
     .line 343
-    iget-object v1, p0, Lcom/android/settings/bluetooth/DeviceProfilesSettings$2;->val$et:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/bluetooth/DeviceProfilesSettings$2;->val$et:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->getContext()Landroid/content/Context;
 
@@ -61,7 +61,7 @@
 
     .line 344
     .local v0, "inputManager":Landroid/view/inputmethod/InputMethodManager;
-    iget-object v1, p0, Lcom/android/settings/bluetooth/DeviceProfilesSettings$2;->val$et:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/bluetooth/DeviceProfilesSettings$2;->val$et:Landroid/widget/EditText;
 
     const/4 v2, 0x1
 

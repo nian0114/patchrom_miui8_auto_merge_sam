@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/applications/ProcessStatsDetail$4;
+.class final Lcom/android/settings_ex/applications/ProcessStatsDetail$4;
 .super Ljava/lang/Object;
 .source "ProcessStatsDetail.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/ProcessStatsDetail;
+    value = Lcom/android/settings_ex/applications/ProcessStatsDetail;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Ljava/util/Comparator",
         "<",
-        "Lcom/android/settings/applications/ProcessStatsDetail$PkgService;",
+        "Lcom/android/settings_ex/applications/ProcessStatsDetail$PkgService;",
         ">;"
     }
 .end annotation
@@ -40,16 +40,16 @@
 
 
 # virtual methods
-.method public compare(Lcom/android/settings/applications/ProcessStatsDetail$PkgService;Lcom/android/settings/applications/ProcessStatsDetail$PkgService;)I
+.method public compare(Lcom/android/settings_ex/applications/ProcessStatsDetail$PkgService;Lcom/android/settings_ex/applications/ProcessStatsDetail$PkgService;)I
     .locals 4
-    .param p1, "lhs"    # Lcom/android/settings/applications/ProcessStatsDetail$PkgService;
-    .param p2, "rhs"    # Lcom/android/settings/applications/ProcessStatsDetail$PkgService;
+    .param p1, "lhs"    # Lcom/android/settings_ex/applications/ProcessStatsDetail$PkgService;
+    .param p2, "rhs"    # Lcom/android/settings_ex/applications/ProcessStatsDetail$PkgService;
 
     .prologue
     .line 321
-    iget-wide v0, p1, Lcom/android/settings/applications/ProcessStatsDetail$PkgService;->mDuration:J
+    iget-wide v0, p1, Lcom/android/settings_ex/applications/ProcessStatsDetail$PkgService;->mDuration:J
 
-    iget-wide v2, p2, Lcom/android/settings/applications/ProcessStatsDetail$PkgService;->mDuration:J
+    iget-wide v2, p2, Lcom/android/settings_ex/applications/ProcessStatsDetail$PkgService;->mDuration:J
 
     cmp-long v0, v0, v2
 
@@ -64,9 +64,9 @@
 
     .line 323
     :cond_0
-    iget-wide v0, p1, Lcom/android/settings/applications/ProcessStatsDetail$PkgService;->mDuration:J
+    iget-wide v0, p1, Lcom/android/settings_ex/applications/ProcessStatsDetail$PkgService;->mDuration:J
 
-    iget-wide v2, p2, Lcom/android/settings/applications/ProcessStatsDetail$PkgService;->mDuration:J
+    iget-wide v2, p2, Lcom/android/settings_ex/applications/ProcessStatsDetail$PkgService;->mDuration:J
 
     cmp-long v0, v0, v2
 
@@ -91,13 +91,13 @@
 
     .prologue
     .line 318
-    check-cast p1, Lcom/android/settings/applications/ProcessStatsDetail$PkgService;
+    check-cast p1, Lcom/android/settings_ex/applications/ProcessStatsDetail$PkgService;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    check-cast p2, Lcom/android/settings/applications/ProcessStatsDetail$PkgService;
+    check-cast p2, Lcom/android/settings_ex/applications/ProcessStatsDetail$PkgService;
 
     .end local p2    # "x1":Ljava/lang/Object;
-    invoke-virtual {p0, p1, p2}, Lcom/android/settings/applications/ProcessStatsDetail$4;->compare(Lcom/android/settings/applications/ProcessStatsDetail$PkgService;Lcom/android/settings/applications/ProcessStatsDetail$PkgService;)I
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings_ex/applications/ProcessStatsDetail$4;->compare(Lcom/android/settings_ex/applications/ProcessStatsDetail$PkgService;Lcom/android/settings_ex/applications/ProcessStatsDetail$PkgService;)I
 
     move-result v0
 

@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/CancellablePreference$OnCancelListener;
+.class public interface abstract Lcom/android/settings_ex/CancellablePreference$OnCancelListener;
 .super Ljava/lang/Object;
 .source "CancellablePreference.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/CancellablePreference;
+    value = Lcom/android/settings_ex/CancellablePreference;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract onCancel(Lcom/android/settings/CancellablePreference;)V
+.method public abstract onCancel(Lcom/android/settings_ex/CancellablePreference;)V
 .end method

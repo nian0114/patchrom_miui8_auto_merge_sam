@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accounts/AccountSettings$HelpClickListener;
+.class Lcom/android/settings_ex/accounts/AccountSettings$HelpClickListener;
 .super Ljava/lang/Object;
 .source "AccountSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accounts/AccountSettings;
+    value = Lcom/android/settings_ex/accounts/AccountSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,30 +18,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accounts/AccountSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/accounts/AccountSettings;
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/settings/accounts/AccountSettings;)V
+.method private constructor <init>(Lcom/android/settings_ex/accounts/AccountSettings;)V
     .locals 0
 
     .prologue
     .line 947
-    iput-object p1, p0, Lcom/android/settings/accounts/AccountSettings$HelpClickListener;->this$0:Lcom/android/settings/accounts/AccountSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/accounts/AccountSettings$HelpClickListener;->this$0:Lcom/android/settings_ex/accounts/AccountSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/accounts/AccountSettings;Lcom/android/settings/accounts/AccountSettings$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/accounts/AccountSettings;Lcom/android/settings_ex/accounts/AccountSettings$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/accounts/AccountSettings;
-    .param p2, "x1"    # Lcom/android/settings/accounts/AccountSettings$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/accounts/AccountSettings;
+    .param p2, "x1"    # Lcom/android/settings_ex/accounts/AccountSettings$1;
 
     .prologue
     .line 947
-    invoke-direct {p0, p1}, Lcom/android/settings/accounts/AccountSettings$HelpClickListener;-><init>(Lcom/android/settings/accounts/AccountSettings;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/accounts/AccountSettings$HelpClickListener;-><init>(Lcom/android/settings_ex/accounts/AccountSettings;)V
 
     return-void
 .end method
@@ -54,13 +54,13 @@
 
     .prologue
     .line 951
-    iget-object v1, p0, Lcom/android/settings/accounts/AccountSettings$HelpClickListener;->this$0:Lcom/android/settings/accounts/AccountSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/accounts/AccountSettings$HelpClickListener;->this$0:Lcom/android/settings_ex/accounts/AccountSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/accounts/AccountSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/accounts/AccountSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isSupportOnlineHelpMenu(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isSupportOnlineHelpMenu(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -82,9 +82,9 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 954
-    iget-object v1, p0, Lcom/android/settings/accounts/AccountSettings$HelpClickListener;->this$0:Lcom/android/settings/accounts/AccountSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/accounts/AccountSettings$HelpClickListener;->this$0:Lcom/android/settings_ex/accounts/AccountSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/accounts/AccountSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/accounts/AccountSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -100,13 +100,13 @@
 
     .line 955
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/accounts/AccountSettings$HelpClickListener;->this$0:Lcom/android/settings/accounts/AccountSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/accounts/AccountSettings$HelpClickListener;->this$0:Lcom/android/settings_ex/accounts/AccountSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/accounts/AccountSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/accounts/AccountSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isSupportOfflineHelpMenu(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isSupportOfflineHelpMenu(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -128,9 +128,9 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 958
-    iget-object v1, p0, Lcom/android/settings/accounts/AccountSettings$HelpClickListener;->this$0:Lcom/android/settings/accounts/AccountSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/accounts/AccountSettings$HelpClickListener;->this$0:Lcom/android/settings_ex/accounts/AccountSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/accounts/AccountSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/accounts/AccountSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 

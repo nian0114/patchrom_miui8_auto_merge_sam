@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/notification/SeekBarVolumizerDTMF;
+.class public Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;
 .super Ljava/lang/Object;
 .source "SeekBarVolumizerDTMF.java"
 
@@ -10,8 +10,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/notification/SeekBarVolumizerDTMF$H;,
-        Lcom/android/settings/notification/SeekBarVolumizerDTMF$Callback;
+        Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF$H;,
+        Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF$Callback;
     }
 .end annotation
 
@@ -19,7 +19,7 @@
 # instance fields
 .field private final mAudioManager:Landroid/media/AudioManager;
 
-.field private final mCallback:Lcom/android/settings/notification/SeekBarVolumizerDTMF$Callback;
+.field private final mCallback:Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF$Callback;
 
 .field private final mContext:Landroid/content/Context;
 
@@ -45,12 +45,12 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;ILandroid/net/Uri;Lcom/android/settings/notification/SeekBarVolumizerDTMF$Callback;)V
+.method public constructor <init>(Landroid/content/Context;ILandroid/net/Uri;Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF$Callback;)V
     .locals 3
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "streamType"    # I
     .param p3, "defaultUri"    # Landroid/net/Uri;
-    .param p4, "callback"    # Lcom/android/settings/notification/SeekBarVolumizerDTMF$Callback;
+    .param p4, "callback"    # Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF$Callback;
 
     .prologue
     const/4 v2, 0x2
@@ -61,21 +61,21 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 61
-    iput v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mLastProgress:I
+    iput v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mLastProgress:I
 
     .line 63
-    iput v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mVolumeBeforeMute:I
+    iput v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mVolumeBeforeMute:I
 
     .line 64
-    iput v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mLastWaitingToneVolume:I
+    iput v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mLastWaitingToneVolume:I
 
     .line 65
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mToneGenerator:Landroid/media/ToneGenerator;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mToneGenerator:Landroid/media/ToneGenerator;
 
     .line 75
-    iput-object p1, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mContext:Landroid/content/Context;
 
     .line 76
     const-string v0, "audio"
@@ -86,27 +86,27 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    iput-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mAudioManager:Landroid/media/AudioManager;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mAudioManager:Landroid/media/AudioManager;
 
     .line 78
-    iput p2, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mStreamType:I
+    iput p2, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mStreamType:I
 
     .line 79
-    iput-object p4, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mCallback:Lcom/android/settings/notification/SeekBarVolumizerDTMF$Callback;
+    iput-object p4, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mCallback:Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF$Callback;
 
     .line 80
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mAudioManager:Landroid/media/AudioManager;
 
-    iget v1, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mStreamType:I
+    iget v1, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mStreamType:I
 
     invoke-virtual {v0, v1}, Landroid/media/AudioManager;->getStreamVolume(I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mOriginalStreamVolume:I
+    iput v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mOriginalStreamVolume:I
 
     .line 81
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -118,13 +118,13 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mLastWaitingToneVolume:I
+    iput v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mLastWaitingToneVolume:I
 
     .line 83
     if-nez p3, :cond_0
 
     .line 84
-    iget v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mStreamType:I
+    iget v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mStreamType:I
 
     if-ne v0, v2, :cond_1
 
@@ -134,14 +134,14 @@
     .line 92
     :cond_0
     :goto_0
-    iput-object p3, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mDefaultUri:Landroid/net/Uri;
+    iput-object p3, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mDefaultUri:Landroid/net/Uri;
 
     .line 93
     return-void
 
     .line 86
     :cond_1
-    iget v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mStreamType:I
+    iget v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mStreamType:I
 
     const/4 v1, 0x5
 
@@ -159,25 +159,25 @@
     goto :goto_0
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/notification/SeekBarVolumizerDTMF;)Landroid/widget/SeekBar;
+.method static synthetic access$000(Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;)Landroid/widget/SeekBar;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/SeekBarVolumizerDTMF;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;
 
     .prologue
     .line 43
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mSeekBar:Landroid/widget/SeekBar;
 
     return-object v0
 .end method
 
-.method static synthetic access$102(Lcom/android/settings/notification/SeekBarVolumizerDTMF;I)I
+.method static synthetic access$102(Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;I)I
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/notification/SeekBarVolumizerDTMF;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;
     .param p1, "x1"    # I
 
     .prologue
     .line 43
-    iput p1, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mLastProgress:I
+    iput p1, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mLastProgress:I
 
     return p1
 .end method
@@ -187,25 +187,25 @@
 
     .prologue
     .line 126
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mContext:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mDefaultUri:Landroid/net/Uri;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mDefaultUri:Landroid/net/Uri;
 
     invoke-static {v0, v1}, Landroid/media/RingtoneManager;->getRingtone(Landroid/content/Context;Landroid/net/Uri;)Landroid/media/Ringtone;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mRingtone:Landroid/media/Ringtone;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mRingtone:Landroid/media/Ringtone;
 
     .line 127
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mRingtone:Landroid/media/Ringtone;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mRingtone:Landroid/media/Ringtone;
 
     if-eqz v0, :cond_0
 
     .line 128
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mRingtone:Landroid/media/Ringtone;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mRingtone:Landroid/media/Ringtone;
 
-    iget v1, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mStreamType:I
+    iget v1, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mStreamType:I
 
     invoke-virtual {v0, v1}, Landroid/media/Ringtone;->setStreamType(I)V
 
@@ -219,21 +219,21 @@
 
     .prologue
     .line 140
-    invoke-virtual {p0}, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->isSamplePlaying()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->isSamplePlaying()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 141
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mCallback:Lcom/android/settings/notification/SeekBarVolumizerDTMF$Callback;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mCallback:Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF$Callback;
 
     if-eqz v0, :cond_0
 
     .line 142
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mCallback:Lcom/android/settings/notification/SeekBarVolumizerDTMF$Callback;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mCallback:Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF$Callback;
 
-    invoke-interface {v0, p0}, Lcom/android/settings/notification/SeekBarVolumizerDTMF$Callback;->onSampleStarting(Lcom/android/settings/notification/SeekBarVolumizerDTMF;)V
+    invoke-interface {v0, p0}, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF$Callback;->onSampleStarting(Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;)V
 
     .line 145
     :cond_0
@@ -245,12 +245,12 @@
 
     .prologue
     .line 156
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mRingtone:Landroid/media/Ringtone;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mRingtone:Landroid/media/Ringtone;
 
     if-eqz v0, :cond_0
 
     .line 157
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mRingtone:Landroid/media/Ringtone;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mRingtone:Landroid/media/Ringtone;
 
     invoke-virtual {v0}, Landroid/media/Ringtone;->stop()V
 
@@ -273,7 +273,7 @@
     const/4 v1, 0x1
 
     .line 133
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
 
     if-nez v0, :cond_0
 
@@ -283,20 +283,20 @@
 
     .line 134
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 135
-    iget-object v2, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
 
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->isSamplePlaying()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->isSamplePlaying()Z
 
     move-result v0
 
@@ -320,19 +320,19 @@
 
     .prologue
     .line 215
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mToneGenerator:Landroid/media/ToneGenerator;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mToneGenerator:Landroid/media/ToneGenerator;
 
     if-eqz v0, :cond_0
 
     .line 216
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mToneGenerator:Landroid/media/ToneGenerator;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mToneGenerator:Landroid/media/ToneGenerator;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/media/ToneGenerator;->setVolume(F)V
 
     .line 217
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mToneGenerator:Landroid/media/ToneGenerator;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mToneGenerator:Landroid/media/ToneGenerator;
 
     invoke-virtual {v0}, Landroid/media/ToneGenerator;->stopTone()V
 
@@ -386,11 +386,11 @@
 
     .line 107
     :pswitch_0
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mAudioManager:Landroid/media/AudioManager;
 
-    iget v1, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mStreamType:I
+    iget v1, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mStreamType:I
 
-    iget v2, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mLastProgress:I
+    iget v2, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mLastProgress:I
 
     const/16 v3, 0x400
 
@@ -400,19 +400,19 @@
 
     .line 111
     :pswitch_1
-    invoke-direct {p0}, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->onStartSample()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->onStartSample()V
 
     goto :goto_0
 
     .line 114
     :pswitch_2
-    invoke-direct {p0}, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->onStopSample()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->onStopSample()V
 
     goto :goto_0
 
     .line 117
     :pswitch_3
-    invoke-direct {p0}, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->onInitSample()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->onInitSample()V
 
     goto :goto_0
 
@@ -433,11 +433,11 @@
 
     .prologue
     .line 237
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mRingtone:Landroid/media/Ringtone;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mRingtone:Landroid/media/Ringtone;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mRingtone:Landroid/media/Ringtone;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mRingtone:Landroid/media/Ringtone;
 
     invoke-virtual {v0}, Landroid/media/Ringtone;->isPlaying()Z
 
@@ -473,10 +473,10 @@
 
     .line 195
     :cond_1
-    invoke-direct {p0}, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->stopToneGenerator()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->stopToneGenerator()V
 
     .line 197
-    iget-object v1, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -487,7 +487,7 @@
     invoke-static {v1, v2, p2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 201
-    iget-object v1, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mToneGenerator:Landroid/media/ToneGenerator;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mToneGenerator:Landroid/media/ToneGenerator;
 
     if-nez v1, :cond_2
 
@@ -500,7 +500,7 @@
 
     invoke-direct {v1, v2, v3}, Landroid/media/ToneGenerator;-><init>(II)V
 
-    iput-object v1, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mToneGenerator:Landroid/media/ToneGenerator;
+    iput-object v1, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mToneGenerator:Landroid/media/ToneGenerator;
 
     .line 204
     :cond_2
@@ -518,9 +518,9 @@
 
     .line 206
     .local v0, "volFloat":F
-    iget-object v1, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mToneGenerator:Landroid/media/ToneGenerator;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mToneGenerator:Landroid/media/ToneGenerator;
 
-    iget-object v2, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mAudioManager:Landroid/media/AudioManager;
 
     const-string v3, "situation=15;device=0"
 
@@ -537,7 +537,7 @@
     invoke-virtual {v1, v2}, Landroid/media/ToneGenerator;->setVolume(F)V
 
     .line 207
-    iget-object v1, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mToneGenerator:Landroid/media/ToneGenerator;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mToneGenerator:Landroid/media/ToneGenerator;
 
     const/16 v2, 0x16
 
@@ -546,17 +546,17 @@
     invoke-virtual {v1, v2, v3}, Landroid/media/ToneGenerator;->startTone(II)Z
 
     .line 208
-    iput p2, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mLastProgress:I
+    iput p2, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mLastProgress:I
 
     .line 209
-    iget-object v1, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mCallback:Lcom/android/settings/notification/SeekBarVolumizerDTMF$Callback;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mCallback:Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF$Callback;
 
     if-eqz v1, :cond_0
 
     .line 210
-    iget-object v1, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mCallback:Lcom/android/settings/notification/SeekBarVolumizerDTMF$Callback;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mCallback:Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF$Callback;
 
-    invoke-interface {v1, p1, p2, p3}, Lcom/android/settings/notification/SeekBarVolumizerDTMF$Callback;->onProgressChanged(Landroid/widget/SeekBar;IZ)V
+    invoke-interface {v1, p1, p2, p3}, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF$Callback;->onProgressChanged(Landroid/widget/SeekBar;IZ)V
 
     goto :goto_0
 .end method
@@ -567,7 +567,7 @@
 
     .prologue
     .line 230
-    invoke-direct {p0}, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->postStartSample()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->postStartSample()V
 
     .line 231
     return-void
@@ -589,7 +589,7 @@
     const/4 v2, 0x2
 
     .line 148
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
 
     if-nez v0, :cond_0
 
@@ -599,21 +599,21 @@
 
     .line 150
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 151
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 152
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
@@ -630,7 +630,7 @@
 
     .prologue
     .line 96
-    iput-object p1, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mSeekBar:Landroid/widget/SeekBar;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mSeekBar:Landroid/widget/SeekBar;
 
     .line 98
     const/4 v0, 0x4
@@ -638,21 +638,21 @@
     invoke-virtual {p1, v0}, Landroid/widget/SeekBar;->setMax(I)V
 
     .line 99
-    iget-object v1, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mSeekBar:Landroid/widget/SeekBar;
 
-    iget v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mLastProgress:I
+    iget v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mLastProgress:I
 
     const/4 v2, -0x1
 
     if-le v0, v2, :cond_0
 
-    iget v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mLastProgress:I
+    iget v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mLastProgress:I
 
     :goto_0
     invoke-virtual {v1, v0}, Landroid/widget/SeekBar;->setProgress(I)V
 
     .line 100
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mSeekBar:Landroid/widget/SeekBar;
 
     invoke-virtual {v0, p0}, Landroid/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
 
@@ -661,7 +661,7 @@
 
     .line 99
     :cond_0
-    iget v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mLastWaitingToneVolume:I
+    iget v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mLastWaitingToneVolume:I
 
     goto :goto_0
 .end method
@@ -671,7 +671,7 @@
 
     .prologue
     .line 177
-    iget-object v1, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
 
     if-eqz v1, :cond_0
 
@@ -700,10 +700,10 @@
 
     invoke-direct {v1, v2, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
 
-    iput-object v1, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
+    iput-object v1, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
 
     .line 181
-    iget-object v1, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x3
 
@@ -719,7 +719,7 @@
     const/4 v1, 0x0
 
     .line 163
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
 
     if-nez v0, :cond_0
 
@@ -729,32 +729,32 @@
 
     .line 164
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->postStopSample()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->postStopSample()V
 
     .line 165
-    invoke-direct {p0}, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->stopToneGenerator()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->stopToneGenerator()V
 
     .line 166
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mToneGenerator:Landroid/media/ToneGenerator;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mToneGenerator:Landroid/media/ToneGenerator;
 
     if-eqz v0, :cond_1
 
     .line 167
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mToneGenerator:Landroid/media/ToneGenerator;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mToneGenerator:Landroid/media/ToneGenerator;
 
     invoke-virtual {v0}, Landroid/media/ToneGenerator;->release()V
 
     .line 168
-    iput-object v1, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mToneGenerator:Landroid/media/ToneGenerator;
+    iput-object v1, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mToneGenerator:Landroid/media/ToneGenerator;
 
     .line 171
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mSeekBar:Landroid/widget/SeekBar;
 
     invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
 
     .line 172
-    iget-object v0, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
@@ -763,7 +763,7 @@
     invoke-virtual {v0}, Landroid/os/Looper;->quitSafely()V
 
     .line 173
-    iput-object v1, p0, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
+    iput-object v1, p0, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->mHandler:Landroid/os/Handler;
 
     goto :goto_0
 .end method
@@ -773,7 +773,7 @@
 
     .prologue
     .line 264
-    invoke-virtual {p0}, Lcom/android/settings/notification/SeekBarVolumizerDTMF;->postStopSample()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/SeekBarVolumizerDTMF;->postStopSample()V
 
     .line 265
     return-void

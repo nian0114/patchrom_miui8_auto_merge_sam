@@ -1,11 +1,11 @@
-.class Lcom/android/settings/fingerprint/FingerprintSettings$1;
+.class Lcom/android/settings_ex/fingerprint/FingerprintSettings$1;
 .super Landroid/hardware/fingerprint/FingerprintManager$AuthenticationCallback;
 .source "FingerprintSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fingerprint/FingerprintSettings;
+    value = Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/FingerprintSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings;)V
     .locals 0
 
     .prologue
     .line 206
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintSettings$1;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$1;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
     invoke-direct {p0}, Landroid/hardware/fingerprint/FingerprintManager$AuthenticationCallback;-><init>()V
 
@@ -40,10 +40,10 @@
 
     .prologue
     .line 220
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings$1;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$1;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintSettings;->mHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/settings/fingerprint/FingerprintSettings;->access$000(Lcom/android/settings/fingerprint/FingerprintSettings;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintSettings;->mHandler:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings;->access$000(Lcom/android/settings_ex/fingerprint/FingerprintSettings;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -66,10 +66,10 @@
 
     .prologue
     .line 215
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings$1;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$1;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintSettings;->mHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/settings/fingerprint/FingerprintSettings;->access$000(Lcom/android/settings/fingerprint/FingerprintSettings;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintSettings;->mHandler:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings;->access$000(Lcom/android/settings_ex/fingerprint/FingerprintSettings;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -92,10 +92,10 @@
 
     .prologue
     .line 226
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings$1;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$1;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintSettings;->mHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/settings/fingerprint/FingerprintSettings;->access$000(Lcom/android/settings/fingerprint/FingerprintSettings;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintSettings;->mHandler:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings;->access$000(Lcom/android/settings_ex/fingerprint/FingerprintSettings;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -129,10 +129,10 @@
 
     .line 210
     .local v0, "fingerId":I
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintSettings$1;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$1;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintSettings;->mHandler:Landroid/os/Handler;
-    invoke-static {v1}, Lcom/android/settings/fingerprint/FingerprintSettings;->access$000(Lcom/android/settings/fingerprint/FingerprintSettings;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintSettings;->mHandler:Landroid/os/Handler;
+    invoke-static {v1}, Lcom/android/settings_ex/fingerprint/FingerprintSettings;->access$000(Lcom/android/settings_ex/fingerprint/FingerprintSettings;)Landroid/os/Handler;
 
     move-result-object v1
 

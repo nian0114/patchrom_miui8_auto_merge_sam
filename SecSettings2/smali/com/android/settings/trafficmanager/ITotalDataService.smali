@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/trafficmanager/ITotalDataService;
+.class public Lcom/android/settings_ex/trafficmanager/ITotalDataService;
 .super Landroid/app/Service;
 .source "ITotalDataService.java"
 
@@ -34,43 +34,43 @@
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
     .line 49
-    iput-wide v2, p0, Lcom/android/settings/trafficmanager/ITotalDataService;->mStart:J
+    iput-wide v2, p0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mStart:J
 
     .line 50
-    iput-wide v2, p0, Lcom/android/settings/trafficmanager/ITotalDataService;->mEnd:J
+    iput-wide v2, p0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mEnd:J
 
     .line 51
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/ITotalDataService;->mStatsSession:Landroid/net/INetworkStatsSession;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mStatsSession:Landroid/net/INetworkStatsSession;
 
     .line 52
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/ITotalDataService;->mStatsService:Landroid/net/INetworkStatsService;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mStatsService:Landroid/net/INetworkStatsService;
 
     .line 53
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/ITotalDataService;->mNetWorkHistory:Landroid/net/NetworkStatsHistory;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mNetWorkHistory:Landroid/net/NetworkStatsHistory;
 
     .line 54
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/ITotalDataService;->mNetWorkTemplate:Landroid/net/NetworkTemplate;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mNetWorkTemplate:Landroid/net/NetworkTemplate;
 
     .line 55
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/ITotalDataService;->mTelManager:Landroid/telephony/TelephonyManager;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mTelManager:Landroid/telephony/TelephonyManager;
 
     .line 57
-    new-instance v0, Lcom/android/settings/trafficmanager/ITotalDataService$1;
+    new-instance v0, Lcom/android/settings_ex/trafficmanager/ITotalDataService$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/trafficmanager/ITotalDataService$1;-><init>(Lcom/android/settings/trafficmanager/ITotalDataService;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/trafficmanager/ITotalDataService$1;-><init>(Lcom/android/settings_ex/trafficmanager/ITotalDataService;)V
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/ITotalDataService;->stub:Lcom/samsung/android/trafficmanager/ITotalData$Stub;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->stub:Lcom/samsung/android/trafficmanager/ITotalData$Stub;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/trafficmanager/ITotalDataService;)J
+.method static synthetic access$000(Lcom/android/settings_ex/trafficmanager/ITotalDataService;)J
     .locals 2
-    .param p0, "x0"    # Lcom/android/settings/trafficmanager/ITotalDataService;
+    .param p0, "x0"    # Lcom/android/settings_ex/trafficmanager/ITotalDataService;
 
     .prologue
     .line 38
-    invoke-direct {p0}, Lcom/android/settings/trafficmanager/ITotalDataService;->getTotalUsedData()J
+    invoke-direct {p0}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getTotalUsedData()J
 
     move-result-wide v0
 
@@ -133,7 +133,7 @@
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/android/settings/trafficmanager/ITotalDataService;->mStart:J
+    iput-wide v2, p0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mStart:J
 
     .line 175
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
@@ -171,7 +171,7 @@
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/android/settings/trafficmanager/ITotalDataService;->mEnd:J
+    iput-wide v2, p0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mEnd:J
 
     .line 185
     :goto_0
@@ -209,7 +209,7 @@
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/android/settings/trafficmanager/ITotalDataService;->mEnd:J
+    iput-wide v2, p0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mEnd:J
 
     .line 181
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
@@ -247,7 +247,7 @@
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/android/settings/trafficmanager/ITotalDataService;->mStart:J
+    iput-wide v2, p0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mStart:J
 
     goto :goto_0
 .end method
@@ -266,7 +266,7 @@
     .line 133
     .local v2, "lConfirmTime":J
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/ITotalDataService;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -278,7 +278,7 @@
 
     move-result-object v5
 
-    invoke-direct {p0}, Lcom/android/settings/trafficmanager/ITotalDataService;->getSubId()I
+    invoke-direct {p0}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getSubId()I
 
     move-result v6
 
@@ -340,7 +340,7 @@
 
     .line 149
     .local v2, "confirmTrafficString":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/ITotalDataService;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
 
@@ -352,7 +352,7 @@
 
     move-result-object v8
 
-    invoke-direct {p0}, Lcom/android/settings/trafficmanager/ITotalDataService;->getSubId()I
+    invoke-direct {p0}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getSubId()I
 
     move-result v9
 
@@ -526,7 +526,7 @@
     .line 115
     .local v1, "iStart":I
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/ITotalDataService;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -538,7 +538,7 @@
 
     move-result-object v4
 
-    invoke-direct {p0}, Lcom/android/settings/trafficmanager/ITotalDataService;->getSubId()I
+    invoke-direct {p0}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getSubId()I
 
     move-result v5
 
@@ -636,7 +636,7 @@
 
     .prologue
     .line 99
-    invoke-direct {p0}, Lcom/android/settings/trafficmanager/ITotalDataService;->isSupportMultiSIM()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->isSupportMultiSIM()Z
 
     move-result v1
 
@@ -645,7 +645,7 @@
     .line 100
     const-string v1, "phone"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/trafficmanager/ITotalDataService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -663,7 +663,7 @@
     return-object v1
 
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/trafficmanager/ITotalDataService;->getCurrentDataSoltId()I
+    invoke-direct {p0}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getCurrentDataSoltId()I
 
     move-result v1
 
@@ -679,13 +679,13 @@
 
     .prologue
     .line 188
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/trafficmanager/ITotalDataService;->getStartDay()I
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getStartDay()I
 
     move-result v3
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v3}, Lcom/android/settings/trafficmanager/ITotalDataService;->getBounds(I)V
+    invoke-direct {v0, v3}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getBounds(I)V
 
     .line 189
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
@@ -698,7 +698,7 @@
 
     .line 190
     .local v8, "currentTime":J
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/trafficmanager/ITotalDataService;->getConfirmTime()J
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getConfirmTime()J
 
     move-result-wide v12
 
@@ -724,7 +724,7 @@
 
     .line 196
     .local v19, "switchOnLimit":Ljava/lang/String;
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/trafficmanager/ITotalDataService;->getCurrentDataSoltId()I
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getCurrentDataSoltId()I
 
     move-result v3
 
@@ -759,7 +759,7 @@
     .local v24, "totalUsedBytes":J
     move-object/from16 v0, p0
 
-    iget-wide v4, v0, Lcom/android/settings/trafficmanager/ITotalDataService;->mStart:J
+    iget-wide v4, v0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mStart:J
 
     cmp-long v3, v12, v4
 
@@ -776,13 +776,13 @@
     if-eqz v3, :cond_1
 
     .line 205
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/trafficmanager/ITotalDataService;->getConfirmTraffic()J
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getConfirmTraffic()J
 
     move-result-wide v20
 
     .line 207
     :try_start_0
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/trafficmanager/ITotalDataService;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -794,7 +794,7 @@
 
     move-result-object v4
 
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/trafficmanager/ITotalDataService;->getSubId()I
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getSubId()I
 
     move-result v5
 
@@ -818,7 +818,7 @@
     :try_start_1
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/trafficmanager/ITotalDataService;->mStatsService:Landroid/net/INetworkStatsService;
+    iget-object v3, v0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mStatsService:Landroid/net/INetworkStatsService;
 
     invoke-interface {v3}, Landroid/net/INetworkStatsService;->openSession()Landroid/net/INetworkStatsSession;
 
@@ -826,16 +826,16 @@
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/android/settings/trafficmanager/ITotalDataService;->mStatsSession:Landroid/net/INetworkStatsSession;
+    iput-object v3, v0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mStatsSession:Landroid/net/INetworkStatsSession;
 
     .line 215
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/trafficmanager/ITotalDataService;->mStatsSession:Landroid/net/INetworkStatsSession;
+    iget-object v3, v0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mStatsSession:Landroid/net/INetworkStatsSession;
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/trafficmanager/ITotalDataService;->mNetWorkTemplate:Landroid/net/NetworkTemplate;
+    iget-object v4, v0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mNetWorkTemplate:Landroid/net/NetworkTemplate;
 
     const/16 v5, 0xa
 
@@ -845,12 +845,12 @@
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/android/settings/trafficmanager/ITotalDataService;->mNetWorkHistory:Landroid/net/NetworkStatsHistory;
+    iput-object v3, v0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mNetWorkHistory:Landroid/net/NetworkStatsHistory;
 
     .line 218
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/trafficmanager/ITotalDataService;->mNetWorkHistory:Landroid/net/NetworkStatsHistory;
+    iget-object v3, v0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mNetWorkHistory:Landroid/net/NetworkStatsHistory;
 
     if-nez v3, :cond_3
 
@@ -894,15 +894,15 @@
     :try_start_2
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/trafficmanager/ITotalDataService;->mNetWorkHistory:Landroid/net/NetworkStatsHistory;
+    iget-object v3, v0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mNetWorkHistory:Landroid/net/NetworkStatsHistory;
 
     move-object/from16 v0, p0
 
-    iget-wide v4, v0, Lcom/android/settings/trafficmanager/ITotalDataService;->mStart:J
+    iget-wide v4, v0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mStart:J
 
     move-object/from16 v0, p0
 
-    iget-wide v6, v0, Lcom/android/settings/trafficmanager/ITotalDataService;->mEnd:J
+    iget-wide v6, v0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mEnd:J
 
     const/4 v10, 0x0
 
@@ -988,7 +988,7 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 231
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/trafficmanager/ITotalDataService;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -1002,7 +1002,7 @@
 
     move-result-object v4
 
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/trafficmanager/ITotalDataService;->getSubId()I
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getSubId()I
 
     move-result v5
 
@@ -1023,7 +1023,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/trafficmanager/ITotalDataService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v14
 
@@ -1125,7 +1125,7 @@
     if-nez v3, :cond_2
 
     .line 244
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/trafficmanager/ITotalDataService;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -1176,7 +1176,7 @@
     const/4 v0, 0x1
 
     .line 92
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/ITotalDataService;->mTelManager:Landroid/telephony/TelephonyManager;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mTelManager:Landroid/telephony/TelephonyManager;
 
     if-nez v1, :cond_0
 
@@ -1185,11 +1185,11 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/trafficmanager/ITotalDataService;->mTelManager:Landroid/telephony/TelephonyManager;
+    iput-object v1, p0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mTelManager:Landroid/telephony/TelephonyManager;
 
     .line 95
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/trafficmanager/ITotalDataService;->mTelManager:Landroid/telephony/TelephonyManager;
+    iget-object v1, p0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mTelManager:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getPhoneCount()I
 
@@ -1231,10 +1231,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/ITotalDataService;->mStatsService:Landroid/net/INetworkStatsService;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mStatsService:Landroid/net/INetworkStatsService;
 
     .line 74
-    invoke-direct {p0}, Lcom/android/settings/trafficmanager/ITotalDataService;->getSubscriberId()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getSubscriberId()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1242,21 +1242,21 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/ITotalDataService;->mNetWorkTemplate:Landroid/net/NetworkTemplate;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mNetWorkTemplate:Landroid/net/NetworkTemplate;
 
     .line 75
     const-string v0, "phone"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/trafficmanager/ITotalDataService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/ITotalDataService;->mTelManager:Landroid/telephony/TelephonyManager;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->mTelManager:Landroid/telephony/TelephonyManager;
 
     .line 76
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/ITotalDataService;->stub:Lcom/samsung/android/trafficmanager/ITotalData$Stub;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/ITotalDataService;->stub:Lcom/samsung/android/trafficmanager/ITotalData$Stub;
 
     return-object v0
 .end method

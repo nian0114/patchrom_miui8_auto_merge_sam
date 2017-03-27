@@ -1,21 +1,21 @@
-.class public Lcom/android/settings/net/DataUsageMeteredSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/net/DataUsageMeteredSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "DataUsageMeteredSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/net/DataUsageMeteredSettings$MeteredPreference;
+        Lcom/android/settings_ex/net/DataUsageMeteredSettings$MeteredPreference;
     }
 .end annotation
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # instance fields
@@ -25,7 +25,7 @@
 
 .field private mMobileCategory:Landroid/preference/PreferenceCategory;
 
-.field private mPolicyEditor:Lcom/android/settings/net/NetworkPolicyEditor;
+.field private mPolicyEditor:Lcom/android/settings_ex/net/NetworkPolicyEditor;
 
 .field private mPolicyManager:Landroid/net/NetworkPolicyManager;
 
@@ -46,11 +46,11 @@
 
     .prologue
     .line 224
-    new-instance v0, Lcom/android/settings/net/DataUsageMeteredSettings$2;
+    new-instance v0, Lcom/android/settings_ex/net/DataUsageMeteredSettings$2;
 
-    invoke-direct {v0}, Lcom/android/settings/net/DataUsageMeteredSettings$2;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/net/DataUsageMeteredSettings$2;-><init>()V
 
-    sput-object v0, Lcom/android/settings/net/DataUsageMeteredSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -60,24 +60,24 @@
 
     .prologue
     .line 80
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 81
-    new-instance v0, Lcom/android/settings/net/DataUsageMeteredSettings$1;
+    new-instance v0, Lcom/android/settings_ex/net/DataUsageMeteredSettings$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/net/DataUsageMeteredSettings$1;-><init>(Lcom/android/settings/net/DataUsageMeteredSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/net/DataUsageMeteredSettings$1;-><init>(Lcom/android/settings_ex/net/DataUsageMeteredSettings;)V
 
-    iput-object v0, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mReceiver:Landroid/content/BroadcastReceiver;
 
     .line 90
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mFilter:Landroid/content/IntentFilter;
+    iput-object v0, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mFilter:Landroid/content/IntentFilter;
 
     .line 91
-    iget-object v0, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mFilter:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mFilter:Landroid/content/IntentFilter;
 
     const-string v1, "android.net.wifi.WIFI_STATE_CHANGED"
 
@@ -87,25 +87,25 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/net/DataUsageMeteredSettings;Landroid/content/Context;)V
+.method static synthetic access$000(Lcom/android/settings_ex/net/DataUsageMeteredSettings;Landroid/content/Context;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/net/DataUsageMeteredSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/net/DataUsageMeteredSettings;
     .param p1, "x1"    # Landroid/content/Context;
 
     .prologue
     .line 60
-    invoke-direct {p0, p1}, Lcom/android/settings/net/DataUsageMeteredSettings;->updateNetworks(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->updateNetworks(Landroid/content/Context;)V
 
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/net/DataUsageMeteredSettings;)Lcom/android/settings/net/NetworkPolicyEditor;
+.method static synthetic access$100(Lcom/android/settings_ex/net/DataUsageMeteredSettings;)Lcom/android/settings_ex/net/NetworkPolicyEditor;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/net/DataUsageMeteredSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/net/DataUsageMeteredSettings;
 
     .prologue
     .line 60
-    iget-object v0, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mPolicyEditor:Lcom/android/settings/net/NetworkPolicyEditor;
+    iget-object v0, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mPolicyEditor:Lcom/android/settings_ex/net/NetworkPolicyEditor;
 
     return-object v0
 .end method
@@ -127,17 +127,17 @@
 
     .line 182
     .local v2, "template":Landroid/net/NetworkTemplate;
-    new-instance v1, Lcom/android/settings/net/DataUsageMeteredSettings$MeteredPreference;
+    new-instance v1, Lcom/android/settings_ex/net/DataUsageMeteredSettings$MeteredPreference;
 
-    invoke-direct {v1, p0, p1, v2}, Lcom/android/settings/net/DataUsageMeteredSettings$MeteredPreference;-><init>(Lcom/android/settings/net/DataUsageMeteredSettings;Landroid/content/Context;Landroid/net/NetworkTemplate;)V
+    invoke-direct {v1, p0, p1, v2}, Lcom/android/settings_ex/net/DataUsageMeteredSettings$MeteredPreference;-><init>(Lcom/android/settings_ex/net/DataUsageMeteredSettings;Landroid/content/Context;Landroid/net/NetworkTemplate;)V
 
     .line 183
-    .local v1, "pref":Lcom/android/settings/net/DataUsageMeteredSettings$MeteredPreference;
+    .local v1, "pref":Lcom/android/settings_ex/net/DataUsageMeteredSettings$MeteredPreference;
     invoke-static {v0}, Landroid/net/wifi/WifiInfo;->removeDoubleQuotes(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Lcom/android/settings/net/DataUsageMeteredSettings$MeteredPreference;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v3}, Lcom/android/settings_ex/net/DataUsageMeteredSettings$MeteredPreference;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 184
     return-object v1
@@ -151,32 +151,32 @@
     const/4 v4, 0x0
 
     .line 148
-    invoke-virtual {p0}, Lcom/android/settings/net/DataUsageMeteredSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mMobileCategory:Landroid/preference/PreferenceCategory;
+    iget-object v3, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mMobileCategory:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v2, v3}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 151
-    iget-object v2, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mWifiCategory:Landroid/preference/PreferenceCategory;
+    iget-object v2, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mWifiCategory:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v2}, Landroid/preference/PreferenceCategory;->removeAll()V
 
     .line 153
     const/4 v2, 0x1
 
-    iput-boolean v2, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->removeDivider:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->removeDivider:Z
 
     .line 154
-    invoke-static {p1}, Lcom/android/settings/DataUsageSummary;->hasWifiRadio(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/DataUsageSummary;->hasWifiRadio(Landroid/content/Context;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    iget-object v2, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v2, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v2}, Landroid/net/wifi/WifiManager;->isWifiEnabled()Z
 
@@ -185,7 +185,7 @@
     if-eqz v2, :cond_1
 
     .line 155
-    iget-object v2, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v2, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v2}, Landroid/net/wifi/WifiManager;->getConfiguredNetworks()Ljava/util/List;
 
@@ -194,7 +194,7 @@
     if-eqz v2, :cond_2
 
     .line 156
-    iget-object v2, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v2, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v2}, Landroid/net/wifi/WifiManager;->getConfiguredNetworks()Ljava/util/List;
 
@@ -226,16 +226,16 @@
     if-eqz v2, :cond_0
 
     .line 158
-    iget-object v2, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mWifiCategory:Landroid/preference/PreferenceCategory;
+    iget-object v2, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mWifiCategory:Landroid/preference/PreferenceCategory;
 
-    invoke-direct {p0, p1, v0}, Lcom/android/settings/net/DataUsageMeteredSettings;->buildWifiPref(Landroid/content/Context;Landroid/net/wifi/WifiConfiguration;)Landroid/preference/Preference;
+    invoke-direct {p0, p1, v0}, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->buildWifiPref(Landroid/content/Context;Landroid/net/wifi/WifiConfiguration;)Landroid/preference/Preference;
 
     move-result-object v3
 
     invoke-virtual {v2, v3}, Landroid/preference/PreferenceCategory;->addPreference(Landroid/preference/Preference;)Z
 
     .line 159
-    iput-boolean v4, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->removeDivider:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->removeDivider:Z
 
     goto :goto_0
 
@@ -243,14 +243,14 @@
     .end local v0    # "config":Landroid/net/wifi/WifiConfiguration;
     .end local v1    # "i$":Ljava/util/Iterator;
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mWifiCategory:Landroid/preference/PreferenceCategory;
+    iget-object v2, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mWifiCategory:Landroid/preference/PreferenceCategory;
 
-    iget-object v3, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mWifiDisabled:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mWifiDisabled:Landroid/preference/Preference;
 
     invoke-virtual {v2, v3}, Landroid/preference/PreferenceCategory;->addPreference(Landroid/preference/Preference;)Z
 
     .line 166
-    iput-boolean v4, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->removeDivider:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->removeDivider:Z
 
     .line 168
     :cond_2
@@ -279,7 +279,7 @@
     .line 133
     const-string v2, "layout_inflater"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/net/DataUsageMeteredSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -301,15 +301,15 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->divider:Landroid/view/View;
+    iput-object v2, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->divider:Landroid/view/View;
 
     .line 136
-    iget-boolean v2, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->removeDivider:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->removeDivider:Z
 
     if-eqz v2, :cond_0
 
     .line 137
-    iget-object v2, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->divider:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->divider:Landroid/view/View;
 
     const/16 v3, 0x8
 
@@ -317,7 +317,7 @@
 
     .line 139
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/net/DataUsageMeteredSettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v2
 
@@ -326,7 +326,7 @@
     invoke-virtual {v2, v0, v4, v3}, Landroid/widget/ListView;->addFooterView(Landroid/view/View;Ljava/lang/Object;Z)V
 
     .line 140
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 141
     return-void
@@ -338,10 +338,10 @@
 
     .prologue
     .line 113
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 114
-    invoke-virtual {p0}, Lcom/android/settings/net/DataUsageMeteredSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -351,7 +351,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mPolicyManager:Landroid/net/NetworkPolicyManager;
+    iput-object v1, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mPolicyManager:Landroid/net/NetworkPolicyManager;
 
     .line 117
     const-string v1, "wifi"
@@ -362,60 +362,60 @@
 
     check-cast v1, Landroid/net/wifi/WifiManager;
 
-    iput-object v1, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iput-object v1, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     .line 119
-    new-instance v1, Lcom/android/settings/net/NetworkPolicyEditor;
+    new-instance v1, Lcom/android/settings_ex/net/NetworkPolicyEditor;
 
-    iget-object v2, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mPolicyManager:Landroid/net/NetworkPolicyManager;
+    iget-object v2, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mPolicyManager:Landroid/net/NetworkPolicyManager;
 
-    invoke-direct {v1, v2}, Lcom/android/settings/net/NetworkPolicyEditor;-><init>(Landroid/net/NetworkPolicyManager;)V
+    invoke-direct {v1, v2}, Lcom/android/settings_ex/net/NetworkPolicyEditor;-><init>(Landroid/net/NetworkPolicyManager;)V
 
-    iput-object v1, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mPolicyEditor:Lcom/android/settings/net/NetworkPolicyEditor;
+    iput-object v1, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mPolicyEditor:Lcom/android/settings_ex/net/NetworkPolicyEditor;
 
     .line 120
-    iget-object v1, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mPolicyEditor:Lcom/android/settings/net/NetworkPolicyEditor;
+    iget-object v1, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mPolicyEditor:Lcom/android/settings_ex/net/NetworkPolicyEditor;
 
-    invoke-virtual {v1}, Lcom/android/settings/net/NetworkPolicyEditor;->read()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/net/NetworkPolicyEditor;->read()V
 
     .line 122
     const v1, 0x7f080031
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/net/DataUsageMeteredSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->addPreferencesFromResource(I)V
 
     .line 123
     const-string v1, "mobile"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/net/DataUsageMeteredSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/PreferenceCategory;
 
-    iput-object v1, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mMobileCategory:Landroid/preference/PreferenceCategory;
+    iput-object v1, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mMobileCategory:Landroid/preference/PreferenceCategory;
 
     .line 124
     const-string v1, "wifi"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/net/DataUsageMeteredSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/PreferenceCategory;
 
-    iput-object v1, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mWifiCategory:Landroid/preference/PreferenceCategory;
+    iput-object v1, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mWifiCategory:Landroid/preference/PreferenceCategory;
 
     .line 125
     const-string v1, "wifi_disabled"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/net/DataUsageMeteredSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mWifiDisabled:Landroid/preference/Preference;
+    iput-object v1, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mWifiDisabled:Landroid/preference/Preference;
 
     .line 127
-    invoke-direct {p0, v0}, Lcom/android/settings/net/DataUsageMeteredSettings;->updateNetworks(Landroid/content/Context;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->updateNetworks(Landroid/content/Context;)V
 
     .line 128
     return-void
@@ -426,14 +426,14 @@
 
     .prologue
     .line 101
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 102
-    invoke-virtual {p0}, Lcom/android/settings/net/DataUsageMeteredSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
@@ -446,16 +446,16 @@
 
     .prologue
     .line 95
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 96
-    invoke-virtual {p0}, Lcom/android/settings/net/DataUsageMeteredSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    iget-object v2, p0, Lcom/android/settings/net/DataUsageMeteredSettings;->mFilter:Landroid/content/IntentFilter;
+    iget-object v2, p0, Lcom/android/settings_ex/net/DataUsageMeteredSettings;->mFilter:Landroid/content/IntentFilter;
 
     invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 

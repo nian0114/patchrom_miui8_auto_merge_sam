@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/helpdialog/TwHelpDialog;
+.class public Lcom/android/settings_ex/helpdialog/TwHelpDialog;
 .super Landroid/app/Dialog;
 .source "TwHelpDialog.java"
 
@@ -6,8 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/helpdialog/TwHelpDialog$1;,
-        Lcom/android/settings/helpdialog/TwHelpDialog$TouchMode;
+        Lcom/android/settings_ex/helpdialog/TwHelpDialog$1;,
+        Lcom/android/settings_ex/helpdialog/TwHelpDialog$TouchMode;
     }
 .end annotation
 
@@ -17,7 +17,7 @@
 
 .field private mShowWrongInputToast:Z
 
-.field private mTouchTransparencyMode:Lcom/android/settings/helpdialog/TwHelpDialog$TouchMode;
+.field private mTouchTransparencyMode:Lcom/android/settings_ex/helpdialog/TwHelpDialog$TouchMode;
 
 .field private mWrongInputToast:Landroid/widget/Toast;
 
@@ -38,30 +38,30 @@
     invoke-direct {p0, p1, v2}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
 
     .line 42
-    sget-object v2, Lcom/android/settings/helpdialog/TwHelpDialog$TouchMode;->TRANSPARENT:Lcom/android/settings/helpdialog/TwHelpDialog$TouchMode;
+    sget-object v2, Lcom/android/settings_ex/helpdialog/TwHelpDialog$TouchMode;->TRANSPARENT:Lcom/android/settings_ex/helpdialog/TwHelpDialog$TouchMode;
 
-    iput-object v2, p0, Lcom/android/settings/helpdialog/TwHelpDialog;->mTouchTransparencyMode:Lcom/android/settings/helpdialog/TwHelpDialog$TouchMode;
+    iput-object v2, p0, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->mTouchTransparencyMode:Lcom/android/settings_ex/helpdialog/TwHelpDialog$TouchMode;
 
     .line 44
     const/4 v2, 0x0
 
-    iput-object v2, p0, Lcom/android/settings/helpdialog/TwHelpDialog;->mWrongInputToast:Landroid/widget/Toast;
+    iput-object v2, p0, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->mWrongInputToast:Landroid/widget/Toast;
 
     .line 45
-    iput-boolean v5, p0, Lcom/android/settings/helpdialog/TwHelpDialog;->mShowWrongInputToast:Z
+    iput-boolean v5, p0, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->mShowWrongInputToast:Z
 
     .line 46
-    iput-boolean v4, p0, Lcom/android/settings/helpdialog/TwHelpDialog;->fPunchEvent:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->fPunchEvent:Z
 
     .line 62
-    invoke-static {}, Lcom/android/settings/Utils;->isFullScreenSupported()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isFullScreenSupported()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
     .line 63
-    invoke-virtual {p0}, Lcom/android/settings/helpdialog/TwHelpDialog;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
@@ -96,7 +96,7 @@
     .end local v0    # "lp":Landroid/view/WindowManager$LayoutParams;
     .end local v1    # "window":Landroid/view/Window;
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/helpdialog/TwHelpDialog;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v2
 
@@ -105,9 +105,9 @@
     invoke-virtual {v2, v3}, Landroid/view/Window;->addFlags(I)V
 
     .line 74
-    sget-object v2, Lcom/android/settings/helpdialog/TwHelpDialog$TouchMode;->TRANSPARENT:Lcom/android/settings/helpdialog/TwHelpDialog$TouchMode;
+    sget-object v2, Lcom/android/settings_ex/helpdialog/TwHelpDialog$TouchMode;->TRANSPARENT:Lcom/android/settings_ex/helpdialog/TwHelpDialog$TouchMode;
 
-    iput-object v2, p0, Lcom/android/settings/helpdialog/TwHelpDialog;->mTouchTransparencyMode:Lcom/android/settings/helpdialog/TwHelpDialog$TouchMode;
+    iput-object v2, p0, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->mTouchTransparencyMode:Lcom/android/settings_ex/helpdialog/TwHelpDialog$TouchMode;
 
     .line 75
     const v2, 0x7f0e10bb
@@ -116,13 +116,13 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/helpdialog/TwHelpDialog;->mWrongInputToast:Landroid/widget/Toast;
+    iput-object v2, p0, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->mWrongInputToast:Landroid/widget/Toast;
 
     .line 77
-    iput-boolean v5, p0, Lcom/android/settings/helpdialog/TwHelpDialog;->mShowWrongInputToast:Z
+    iput-boolean v5, p0, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->mShowWrongInputToast:Z
 
     .line 78
-    iput-boolean v4, p0, Lcom/android/settings/helpdialog/TwHelpDialog;->fPunchEvent:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->fPunchEvent:Z
 
     .line 79
     return-void
@@ -175,15 +175,15 @@
     if-ne v4, v5, :cond_1
 
     .line 106
-    iput-boolean v2, p0, Lcom/android/settings/helpdialog/TwHelpDialog;->fPunchEvent:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->fPunchEvent:Z
 
     .line 111
     :cond_1
-    sget-object v4, Lcom/android/settings/helpdialog/TwHelpDialog$1;->$SwitchMap$com$android$settings$helpdialog$TwHelpDialog$TouchMode:[I
+    sget-object v4, Lcom/android/settings_ex/helpdialog/TwHelpDialog$1;->$SwitchMap$com$android$settings$helpdialog$TwHelpDialog$TouchMode:[I
 
-    iget-object v5, p0, Lcom/android/settings/helpdialog/TwHelpDialog;->mTouchTransparencyMode:Lcom/android/settings/helpdialog/TwHelpDialog$TouchMode;
+    iget-object v5, p0, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->mTouchTransparencyMode:Lcom/android/settings_ex/helpdialog/TwHelpDialog$TouchMode;
 
-    invoke-virtual {v5}, Lcom/android/settings/helpdialog/TwHelpDialog$TouchMode;->ordinal()I
+    invoke-virtual {v5}, Lcom/android/settings_ex/helpdialog/TwHelpDialog$TouchMode;->ordinal()I
 
     move-result v5
 
@@ -192,7 +192,7 @@
     packed-switch v4, :pswitch_data_0
 
     .line 166
-    invoke-virtual {p0}, Lcom/android/settings/helpdialog/TwHelpDialog;->getOwnerActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->getOwnerActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -221,7 +221,7 @@
 
     .line 175
     :cond_3
-    iput-boolean v3, p0, Lcom/android/settings/helpdialog/TwHelpDialog;->fPunchEvent:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->fPunchEvent:Z
 
     :cond_4
     move v2, v3
@@ -231,12 +231,12 @@
 
     .line 114
     :pswitch_0
-    iget-boolean v4, p0, Lcom/android/settings/helpdialog/TwHelpDialog;->fPunchEvent:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->fPunchEvent:Z
 
     if-eqz v4, :cond_6
 
     .line 115
-    invoke-virtual {p0}, Lcom/android/settings/helpdialog/TwHelpDialog;->getOwnerActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->getOwnerActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -246,7 +246,7 @@
     if-nez v0, :cond_5
 
     .line 119
-    invoke-virtual {p0, v6}, Lcom/android/settings/helpdialog/TwHelpDialog;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -265,7 +265,7 @@
     if-ne v0, v2, :cond_2
 
     .line 125
-    invoke-virtual {p0, v6}, Lcom/android/settings/helpdialog/TwHelpDialog;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -281,12 +281,12 @@
     .line 132
     .end local v1    # "containerView":Landroid/view/View;
     :cond_6
-    iget-boolean v4, p0, Lcom/android/settings/helpdialog/TwHelpDialog;->mShowWrongInputToast:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->mShowWrongInputToast:Z
 
     if-eqz v4, :cond_2
 
     .line 133
-    iget-object v4, p0, Lcom/android/settings/helpdialog/TwHelpDialog;->mWrongInputToast:Landroid/widget/Toast;
+    iget-object v4, p0, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->mWrongInputToast:Landroid/widget/Toast;
 
     invoke-virtual {v4}, Landroid/widget/Toast;->show()V
 
@@ -294,14 +294,14 @@
 
     .line 140
     :pswitch_1
-    iget-boolean v4, p0, Lcom/android/settings/helpdialog/TwHelpDialog;->fPunchEvent:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->fPunchEvent:Z
 
     if-eqz v4, :cond_8
 
     if-eq v0, v7, :cond_8
 
     .line 141
-    invoke-virtual {p0}, Lcom/android/settings/helpdialog/TwHelpDialog;->getOwnerActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->getOwnerActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -311,7 +311,7 @@
     if-nez v0, :cond_7
 
     .line 145
-    invoke-virtual {p0, v6}, Lcom/android/settings/helpdialog/TwHelpDialog;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -330,7 +330,7 @@
     if-ne v0, v2, :cond_2
 
     .line 151
-    invoke-virtual {p0, v6}, Lcom/android/settings/helpdialog/TwHelpDialog;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -346,14 +346,14 @@
     .line 158
     .end local v1    # "containerView":Landroid/view/View;
     :cond_8
-    iget-boolean v4, p0, Lcom/android/settings/helpdialog/TwHelpDialog;->mShowWrongInputToast:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->mShowWrongInputToast:Z
 
     if-eqz v4, :cond_2
 
     if-eq v0, v7, :cond_2
 
     .line 159
-    iget-object v4, p0, Lcom/android/settings/helpdialog/TwHelpDialog;->mWrongInputToast:Landroid/widget/Toast;
+    iget-object v4, p0, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->mWrongInputToast:Landroid/widget/Toast;
 
     invoke-virtual {v4}, Landroid/widget/Toast;->show()V
 
@@ -375,19 +375,19 @@
 
     .prologue
     .line 90
-    iput-boolean p1, p0, Lcom/android/settings/helpdialog/TwHelpDialog;->mShowWrongInputToast:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->mShowWrongInputToast:Z
 
     .line 91
     return-void
 .end method
 
-.method public setTouchTransparencyMode(Lcom/android/settings/helpdialog/TwHelpDialog$TouchMode;)V
+.method public setTouchTransparencyMode(Lcom/android/settings_ex/helpdialog/TwHelpDialog$TouchMode;)V
     .locals 0
-    .param p1, "touchTransparencyMode"    # Lcom/android/settings/helpdialog/TwHelpDialog$TouchMode;
+    .param p1, "touchTransparencyMode"    # Lcom/android/settings_ex/helpdialog/TwHelpDialog$TouchMode;
 
     .prologue
     .line 82
-    iput-object p1, p0, Lcom/android/settings/helpdialog/TwHelpDialog;->mTouchTransparencyMode:Lcom/android/settings/helpdialog/TwHelpDialog$TouchMode;
+    iput-object p1, p0, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->mTouchTransparencyMode:Lcom/android/settings_ex/helpdialog/TwHelpDialog$TouchMode;
 
     .line 83
     return-void

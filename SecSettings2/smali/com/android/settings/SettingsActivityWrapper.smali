@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/SettingsActivityWrapper;
-.super Lcom/android/settings/SettingsActivity;
+.class public Lcom/android/settings_ex/SettingsActivityWrapper;
+.super Lcom/android/settings_ex/SettingsActivity;
 .source "SettingsActivityWrapper.java"
 
 
@@ -9,7 +9,7 @@
 
     .prologue
     .line 23
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivity;-><init>()V
 
     return-void
 .end method
@@ -24,24 +24,24 @@
     const/4 v1, 0x1
 
     .line 26
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 28
-    invoke-virtual {p0}, Lcom/android/settings/SettingsActivityWrapper;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SettingsActivityWrapper;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 29
-    invoke-virtual {p0}, Lcom/android/settings/SettingsActivityWrapper;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SettingsActivityWrapper;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
     .line 30
-    invoke-virtual {p0}, Lcom/android/settings/SettingsActivityWrapper;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SettingsActivityWrapper;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
@@ -65,7 +65,7 @@
     packed-switch v0, :pswitch_data_0
 
     .line 42
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsActivity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsActivity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v0
 
@@ -74,7 +74,7 @@
 
     .line 38
     :pswitch_0
-    invoke-virtual {p0}, Lcom/android/settings/SettingsActivityWrapper;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/SettingsActivityWrapper;->finish()V
 
     .line 39
     const/4 v0, 0x1

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment$4;
+.class Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment$4;
 .super Landroid/preference/Preference;
 .source "ToggleAccessControlPreferenceFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    value = Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;Landroid/content/Context;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;Landroid/content/Context;)V
     .locals 0
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
     .line 235
-    iput-object p1, p0, Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment$4;->this$0:Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment$4;->this$0:Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;
 
     invoke-direct {p0, p2}, Landroid/preference/Preference;-><init>(Landroid/content/Context;)V
 
@@ -53,14 +53,14 @@
 
     .line 240
     .local v1, "interactionHelpImage":Landroid/widget/ImageView;
-    iget-object v2, p0, Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment$4;->this$0:Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment$4;->this$0:Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;
 
-    # getter for: Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;->access$300(Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;->mContext:Landroid/content/Context;
+    invoke-static {v2}, Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;->access$300(Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;)Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/accessibility/ToggleAccessControlPreferenceFragment;->FolderTypeFeature(Landroid/content/Context;)I
+    invoke-static {v2}, Lcom/android/settings_ex/accessibility/ToggleAccessControlPreferenceFragment;->FolderTypeFeature(Landroid/content/Context;)I
 
     move-result v2
 

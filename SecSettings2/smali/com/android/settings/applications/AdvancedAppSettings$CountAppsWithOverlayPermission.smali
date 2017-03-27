@@ -1,11 +1,11 @@
-.class Lcom/android/settings/applications/AdvancedAppSettings$CountAppsWithOverlayPermission;
+.class Lcom/android/settings_ex/applications/AdvancedAppSettings$CountAppsWithOverlayPermission;
 .super Landroid/os/AsyncTask;
 .source "AdvancedAppSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/AdvancedAppSettings;
+    value = Lcom/android/settings_ex/applications/AdvancedAppSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,7 +17,7 @@
     value = {
         "Landroid/os/AsyncTask",
         "<",
-        "Lcom/android/settings/applications/AppStateOverlayBridge;",
+        "Lcom/android/settings_ex/applications/AppStateOverlayBridge;",
         "Ljava/lang/Void;",
         "Ljava/lang/Integer;",
         ">;"
@@ -28,13 +28,13 @@
 # instance fields
 .field numOfPackagesRequestedPermission:I
 
-.field final synthetic this$0:Lcom/android/settings/applications/AdvancedAppSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/applications/AdvancedAppSettings;
 
 
 # virtual methods
-.method protected varargs doInBackground([Lcom/android/settings/applications/AppStateOverlayBridge;)Ljava/lang/Integer;
+.method protected varargs doInBackground([Lcom/android/settings_ex/applications/AppStateOverlayBridge;)Ljava/lang/Integer;
     .locals 2
-    .param p1, "params"    # [Lcom/android/settings/applications/AppStateOverlayBridge;
+    .param p1, "params"    # [Lcom/android/settings_ex/applications/AppStateOverlayBridge;
 
     .prologue
     .line 144
@@ -43,15 +43,15 @@
     aget-object v0, p1, v1
 
     .line 145
-    .local v0, "overlayBridge":Lcom/android/settings/applications/AppStateOverlayBridge;
-    invoke-virtual {v0}, Lcom/android/settings/applications/AppStateOverlayBridge;->getNumberOfPackagesWithPermission()I
+    .local v0, "overlayBridge":Lcom/android/settings_ex/applications/AppStateOverlayBridge;
+    invoke-virtual {v0}, Lcom/android/settings_ex/applications/AppStateOverlayBridge;->getNumberOfPackagesWithPermission()I
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/applications/AdvancedAppSettings$CountAppsWithOverlayPermission;->numOfPackagesRequestedPermission:I
+    iput v1, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings$CountAppsWithOverlayPermission;->numOfPackagesRequestedPermission:I
 
     .line 147
-    invoke-virtual {v0}, Lcom/android/settings/applications/AppStateOverlayBridge;->getNumberOfPackagesCanDrawOverlay()I
+    invoke-virtual {v0}, Lcom/android/settings_ex/applications/AppStateOverlayBridge;->getNumberOfPackagesCanDrawOverlay()I
 
     move-result v1
 
@@ -68,10 +68,10 @@
 
     .prologue
     .line 138
-    check-cast p1, [Lcom/android/settings/applications/AppStateOverlayBridge;
+    check-cast p1, [Lcom/android/settings_ex/applications/AppStateOverlayBridge;
 
     .end local p1    # "x0":[Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/applications/AdvancedAppSettings$CountAppsWithOverlayPermission;->doInBackground([Lcom/android/settings/applications/AppStateOverlayBridge;)Ljava/lang/Integer;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/applications/AdvancedAppSettings$CountAppsWithOverlayPermission;->doInBackground([Lcom/android/settings_ex/applications/AppStateOverlayBridge;)Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -84,25 +84,25 @@
 
     .prologue
     .line 153
-    iget-object v0, p0, Lcom/android/settings/applications/AdvancedAppSettings$CountAppsWithOverlayPermission;->this$0:Lcom/android/settings/applications/AdvancedAppSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings$CountAppsWithOverlayPermission;->this$0:Lcom/android/settings_ex/applications/AdvancedAppSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/applications/AdvancedAppSettings;->isAdded()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/applications/AdvancedAppSettings;->isAdded()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 154
-    iget-object v0, p0, Lcom/android/settings/applications/AdvancedAppSettings$CountAppsWithOverlayPermission;->this$0:Lcom/android/settings/applications/AdvancedAppSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings$CountAppsWithOverlayPermission;->this$0:Lcom/android/settings_ex/applications/AdvancedAppSettings;
 
-    # getter for: Lcom/android/settings/applications/AdvancedAppSettings;->mSystemAlertWindowPreference:Landroid/preference/Preference;
-    invoke-static {v0}, Lcom/android/settings/applications/AdvancedAppSettings;->access$200(Lcom/android/settings/applications/AdvancedAppSettings;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/applications/AdvancedAppSettings;->mSystemAlertWindowPreference:Landroid/preference/Preference;
+    invoke-static {v0}, Lcom/android/settings_ex/applications/AdvancedAppSettings;->access$200(Lcom/android/settings_ex/applications/AdvancedAppSettings;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/applications/AdvancedAppSettings$CountAppsWithOverlayPermission;->this$0:Lcom/android/settings/applications/AdvancedAppSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings$CountAppsWithOverlayPermission;->this$0:Lcom/android/settings_ex/applications/AdvancedAppSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/applications/AdvancedAppSettings;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/android/settings_ex/applications/AdvancedAppSettings;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -118,7 +118,7 @@
 
     const/4 v4, 0x1
 
-    iget v5, p0, Lcom/android/settings/applications/AdvancedAppSettings$CountAppsWithOverlayPermission;->numOfPackagesRequestedPermission:I
+    iget v5, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings$CountAppsWithOverlayPermission;->numOfPackagesRequestedPermission:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -146,7 +146,7 @@
     check-cast p1, Ljava/lang/Integer;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/applications/AdvancedAppSettings$CountAppsWithOverlayPermission;->onPostExecute(Ljava/lang/Integer;)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/applications/AdvancedAppSettings$CountAppsWithOverlayPermission;->onPostExecute(Ljava/lang/Integer;)V
 
     return-void
 .end method

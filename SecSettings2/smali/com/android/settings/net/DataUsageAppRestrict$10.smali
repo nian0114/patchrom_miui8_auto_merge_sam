@@ -1,11 +1,11 @@
-.class Lcom/android/settings/net/DataUsageAppRestrict$10;
+.class Lcom/android/settings_ex/net/DataUsageAppRestrict$10;
 .super Landroid/content/BroadcastReceiver;
 .source "DataUsageAppRestrict.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/net/DataUsageAppRestrict;
+    value = Lcom/android/settings_ex/net/DataUsageAppRestrict;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/net/DataUsageAppRestrict;
+.field final synthetic this$0:Lcom/android/settings_ex/net/DataUsageAppRestrict;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/net/DataUsageAppRestrict;)V
+.method constructor <init>(Lcom/android/settings_ex/net/DataUsageAppRestrict;)V
     .locals 0
 
     .prologue
     .line 668
-    iput-object p1, p0, Lcom/android/settings/net/DataUsageAppRestrict$10;->this$0:Lcom/android/settings/net/DataUsageAppRestrict;
+    iput-object p1, p0, Lcom/android/settings_ex/net/DataUsageAppRestrict$10;->this$0:Lcom/android/settings_ex/net/DataUsageAppRestrict;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -47,14 +47,14 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 674
-    # getter for: Lcom/android/settings/net/DataUsageAppRestrict;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {}, Lcom/android/settings/net/DataUsageAppRestrict;->access$500()Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/net/DataUsageAppRestrict;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {}, Lcom/android/settings_ex/net/DataUsageAppRestrict;->access$500()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 675
     return-void

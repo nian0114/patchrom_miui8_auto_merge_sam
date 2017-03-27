@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/common/DummyActionBar;
+.class public Lcom/android/settings_ex/common/DummyActionBar;
 .super Landroid/app/ActionBar;
 .source "DummyActionBar.java"
 

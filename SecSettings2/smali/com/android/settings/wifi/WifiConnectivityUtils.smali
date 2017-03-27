@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/WifiConnectivityUtils;
+.class public Lcom/android/settings_ex/wifi/WifiConnectivityUtils;
 .super Ljava/lang/Object;
 .source "WifiConnectivityUtils.java"
 
@@ -25,14 +25,14 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/android/settings/wifi/WifiConnectivityUtils;->mId:[I
+    sput-object v0, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->mId:[I
 
     .line 40
-    new-instance v0, Lcom/android/settings/wifi/WifiConnectivityUtils$1;
+    new-instance v0, Lcom/android/settings_ex/wifi/WifiConnectivityUtils$1;
 
-    invoke-direct {v0}, Lcom/android/settings/wifi/WifiConnectivityUtils$1;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/wifi/WifiConnectivityUtils$1;-><init>()V
 
-    sput-object v0, Lcom/android/settings/wifi/WifiConnectivityUtils;->mWiFiActionListener:Landroid/net/wifi/WifiManager$ActionListener;
+    sput-object v0, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->mWiFiActionListener:Landroid/net/wifi/WifiManager$ActionListener;
 
     return-void
 
@@ -136,7 +136,7 @@
     .line 214
     iget v3, v0, Landroid/net/wifi/WifiConfiguration;->networkId:I
 
-    sget-object v4, Lcom/android/settings/wifi/WifiConnectivityUtils;->mWiFiActionListener:Landroid/net/wifi/WifiManager$ActionListener;
+    sget-object v4, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->mWiFiActionListener:Landroid/net/wifi/WifiManager$ActionListener;
 
     invoke-virtual {p0, v3, v4}, Landroid/net/wifi/WifiManager;->forget(ILandroid/net/wifi/WifiManager$ActionListener;)V
 
@@ -201,12 +201,12 @@
 
     .line 113
     .local v3, "isCaptivePortal":Z
-    sget-object v6, Lcom/android/settings/wifi/WifiConnectivityUtils;->mServer:Ljava/net/InetAddress;
+    sget-object v6, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->mServer:Ljava/net/InetAddress;
 
     if-eqz v6, :cond_0
 
     .line 114
-    sget-object v6, Lcom/android/settings/wifi/WifiConnectivityUtils;->mServer:Ljava/net/InetAddress;
+    sget-object v6, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->mServer:Ljava/net/InetAddress;
 
     invoke-virtual {v6}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
@@ -241,7 +241,7 @@
 
     move-result-object v6
 
-    sput-object v6, Lcom/android/settings/wifi/WifiConnectivityUtils;->mUrl:Ljava/lang/String;
+    sput-object v6, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->mUrl:Ljava/lang/String;
 
     .line 117
     const-string v6, "SetupWizard --> WifiConnectivityUtils"
@@ -256,7 +256,7 @@
 
     move-result-object v8
 
-    sget-object v9, Lcom/android/settings/wifi/WifiConnectivityUtils;->mUrl:Ljava/lang/String;
+    sget-object v9, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->mUrl:Ljava/lang/String;
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -272,7 +272,7 @@
     :try_start_0
     new-instance v4, Ljava/net/URL;
 
-    sget-object v6, Lcom/android/settings/wifi/WifiConnectivityUtils;->mUrl:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->mUrl:Ljava/lang/String;
 
     invoke-direct {v4, v6}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
@@ -738,19 +738,19 @@
     :cond_1
     const-string v5, "connectivitycheck.android.com"
 
-    invoke-static {v5}, Lcom/android/settings/wifi/WifiConnectivityUtils;->lookupHost(Ljava/lang/String;)Ljava/net/InetAddress;
+    invoke-static {v5}, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->lookupHost(Ljava/lang/String;)Ljava/net/InetAddress;
 
     move-result-object v5
 
-    sput-object v5, Lcom/android/settings/wifi/WifiConnectivityUtils;->mServer:Ljava/net/InetAddress;
+    sput-object v5, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->mServer:Ljava/net/InetAddress;
 
     .line 59
-    sget-object v5, Lcom/android/settings/wifi/WifiConnectivityUtils;->mServer:Ljava/net/InetAddress;
+    sget-object v5, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->mServer:Ljava/net/InetAddress;
 
     if-eqz v5, :cond_2
 
     .line 60
-    sget-object v5, Lcom/android/settings/wifi/WifiConnectivityUtils;->mServer:Ljava/net/InetAddress;
+    sget-object v5, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->mServer:Ljava/net/InetAddress;
 
     invoke-virtual {v5}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
@@ -995,13 +995,13 @@
 
     .line 182
     .local v3, "steps":Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/wifi/WifiConnectivityUtils;->isZeroDevice()Z
+    invoke-static {}, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->isZeroDevice()Z
 
     move-result v6
 
     if-nez v6, :cond_0
 
-    invoke-static {}, Lcom/android/settings/wifi/WifiConnectivityUtils;->isZeroFDevice()Z
+    invoke-static {}, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->isZeroFDevice()Z
 
     move-result v6
 
@@ -1069,7 +1069,7 @@
     if-ge v0, v2, :cond_2
 
     .line 196
-    sget-object v6, Lcom/android/settings/wifi/WifiConnectivityUtils;->mId:[I
+    sget-object v6, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->mId:[I
 
     aget v6, v6, v0
 

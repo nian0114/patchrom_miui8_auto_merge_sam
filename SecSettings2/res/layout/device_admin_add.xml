@@ -21,8 +21,8 @@
     </ScrollView>
     <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:measureWithLargestChild="true" style="@style/SecurityPreferenceButtonContainer">
         <LinearLayout android:orientation="horizontal" android:id="@id/leftSpacer" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.25" />
-        <com.android.settings.widget.BottomBarButton android:layout_gravity="end" android:id="@id/cancel_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/cancel" android:maxLines="2" android:layout_weight="1.0" style="@style/SecurityPreferenceButton" />
-        <com.android.settings.widget.BottomBarButton android:layout_gravity="start" android:id="@id/action_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="2" android:layout_weight="1.0" style="@style/SecurityPreferenceButton" />
+        <com.android.settings_ex.widget.BottomBarButton android:layout_gravity="end" android:id="@id/cancel_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/cancel" android:maxLines="2" android:layout_weight="1.0" style="@style/SecurityPreferenceButton" />
+        <com.android.settings_ex.widget.BottomBarButton android:layout_gravity="start" android:id="@id/action_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="2" android:layout_weight="1.0" style="@style/SecurityPreferenceButton" />
         <LinearLayout android:orientation="horizontal" android:id="@id/rightSpacer" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.25" />
     </LinearLayout>
 </LinearLayout>

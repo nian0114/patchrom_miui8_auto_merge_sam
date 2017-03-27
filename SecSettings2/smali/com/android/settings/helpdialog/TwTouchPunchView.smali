@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/helpdialog/TwTouchPunchView;
+.class public Lcom/android/settings_ex/helpdialog/TwTouchPunchView;
 .super Landroid/view/View;
 .source "TwTouchPunchView.java"
 
@@ -30,7 +30,7 @@
     .line 45
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lcom/android/settings/helpdialog/TwTouchPunchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, v0}, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 46
     return-void
@@ -45,7 +45,7 @@
     .line 49
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings/helpdialog/TwTouchPunchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 50
     return-void
@@ -66,47 +66,47 @@
     .line 33
     const-string v1, ""
 
-    iput-object v1, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mShape:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mShape:Ljava/lang/String;
 
     .line 34
-    iput-boolean v3, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mShapeShow:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mShapeShow:Z
 
     .line 35
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mBrush:Landroid/graphics/Paint;
+    iput-object v1, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mBrush:Landroid/graphics/Paint;
 
     .line 36
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v1, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iput-object v1, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     .line 37
     const/4 v1, 0x0
 
-    iput v1, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mRadius:F
+    iput v1, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mRadius:F
 
     .line 38
-    iput-boolean v3, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mInitialized:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mInitialized:Z
 
     .line 40
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v1, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->positionRect:Landroid/graphics/Rect;
+    iput-object v1, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->positionRect:Landroid/graphics/Rect;
 
     .line 42
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v1, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mGlobalRect:Landroid/graphics/Rect;
+    iput-object v1, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mGlobalRect:Landroid/graphics/Rect;
 
     .line 57
-    sget-object v1, Lcom/android/settings/R$styleable;->TwTouchPunchView:[I
+    sget-object v1, Lcom/android/settings_ex/R$styleable;->TwTouchPunchView:[I
 
     invoke-virtual {p1, p2, v1, p3, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -118,7 +118,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mShape:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mShape:Ljava/lang/String;
 
     .line 60
     const/4 v1, 0x1
@@ -127,7 +127,7 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mShapeShow:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mShapeShow:Z
 
     .line 61
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
@@ -137,31 +137,31 @@
 
     invoke-direct {v1}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v1, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mBrush:Landroid/graphics/Paint;
+    iput-object v1, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mBrush:Landroid/graphics/Paint;
 
     .line 63
-    iget-object v1, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mBrush:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mBrush:Landroid/graphics/Paint;
 
     const v2, 0xffff00
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 64
-    iget-object v1, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mBrush:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mBrush:Landroid/graphics/Paint;
 
     sget-object v2, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
     .line 65
-    iget-object v1, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mBrush:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mBrush:Landroid/graphics/Paint;
 
     const/16 v2, 0x8c
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setAlpha(I)V
 
     .line 66
-    iput-boolean v3, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mInitialized:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mInitialized:Z
 
     .line 67
     return-void
@@ -175,25 +175,25 @@
 
     .prologue
     .line 140
-    iget-boolean v2, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mInitialized:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mInitialized:Z
 
     if-eqz v2, :cond_0
 
     .line 141
-    iget-object v2, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mBrush:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mBrush:Landroid/graphics/Paint;
 
     if-eqz v2, :cond_0
 
-    iget-boolean v2, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mShapeShow:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mShapeShow:Z
 
     if-eqz v2, :cond_0
 
     .line 142
-    iget-object v2, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mShape:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mShape:Ljava/lang/String;
 
     if-eqz v2, :cond_1
 
-    iget-object v2, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mShape:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mShape:Ljava/lang/String;
 
     const-string v3, "circle"
 
@@ -204,15 +204,15 @@
     if-eqz v2, :cond_1
 
     .line 143
-    invoke-virtual {p0}, Lcom/android/settings/helpdialog/TwTouchPunchView;->getTranslationX()F
+    invoke-virtual {p0}, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->getTranslationX()F
 
     move-result v2
 
-    iget-object v3, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v3, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v3, v3, Landroid/graphics/Rect;->right:I
 
-    iget-object v4, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v4, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v4, v4, Landroid/graphics/Rect;->left:I
 
@@ -224,15 +224,15 @@
 
     add-float/2addr v2, v3
 
-    invoke-virtual {p0}, Lcom/android/settings/helpdialog/TwTouchPunchView;->getTranslationY()F
+    invoke-virtual {p0}, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->getTranslationY()F
 
     move-result v3
 
-    iget-object v4, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v4, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v4, v4, Landroid/graphics/Rect;->bottom:I
 
-    iget-object v5, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v5, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v5, v5, Landroid/graphics/Rect;->top:I
 
@@ -244,9 +244,9 @@
 
     add-float/2addr v3, v4
 
-    iget v4, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mRadius:F
+    iget v4, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mRadius:F
 
-    iget-object v5, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mBrush:Landroid/graphics/Paint;
+    iget-object v5, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mBrush:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v2, v3, v4, v5}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
@@ -257,7 +257,7 @@
 
     .line 148
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/helpdialog/TwTouchPunchView;->getTranslationX()F
+    invoke-virtual {p0}, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->getTranslationX()F
 
     move-result v2
 
@@ -265,7 +265,7 @@
 
     .line 149
     .local v0, "xTranslation":I
-    invoke-virtual {p0}, Lcom/android/settings/helpdialog/TwTouchPunchView;->getTranslationY()F
+    invoke-virtual {p0}, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->getTranslationY()F
 
     move-result v2
 
@@ -273,13 +273,13 @@
 
     .line 150
     .local v1, "yTranslation":I
-    iget-object v2, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->positionRect:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->positionRect:Landroid/graphics/Rect;
 
-    iget-object v3, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v3, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v3, v3, Landroid/graphics/Rect;->right:I
 
-    iget-object v4, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v4, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v4, v4, Landroid/graphics/Rect;->left:I
 
@@ -287,11 +287,11 @@
 
     add-int/2addr v3, v0
 
-    iget-object v4, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v4, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v4, v4, Landroid/graphics/Rect;->bottom:I
 
-    iget-object v5, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v5, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v5, v5, Landroid/graphics/Rect;->top:I
 
@@ -302,9 +302,9 @@
     invoke-virtual {v2, v0, v1, v3, v4}, Landroid/graphics/Rect;->set(IIII)V
 
     .line 153
-    iget-object v2, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->positionRect:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->positionRect:Landroid/graphics/Rect;
 
-    iget-object v3, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mBrush:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mBrush:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v2, v3}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
@@ -325,7 +325,7 @@
     const/4 v7, 0x1
 
     .line 163
-    iget-boolean v1, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mInitialized:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mInitialized:Z
 
     if-eqz v1, :cond_0
 
@@ -333,26 +333,26 @@
 
     .line 164
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     invoke-virtual {v1, p2, p3, p4, p5}, Landroid/graphics/Rect;->set(IIII)V
 
     .line 165
-    iget-object v1, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->right:I
 
-    iget-object v2, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->left:I
 
     sub-int/2addr v1, v2
 
-    iget-object v2, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->bottom:I
 
-    iget-object v3, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v3, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v3, v3, Landroid/graphics/Rect;->top:I
 
@@ -360,11 +360,11 @@
 
     if-le v1, v2, :cond_2
 
-    iget-object v1, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->bottom:I
 
-    iget-object v2, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->top:I
 
@@ -375,7 +375,7 @@
     int-to-float v1, v1
 
     :goto_0
-    iput v1, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mRadius:F
+    iput v1, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mRadius:F
 
     .line 168
     const/4 v1, 0x2
@@ -384,10 +384,10 @@
 
     .line 169
     .local v0, "l":[I
-    invoke-virtual {p0, v0}, Lcom/android/settings/helpdialog/TwTouchPunchView;->getLocationOnScreen([I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->getLocationOnScreen([I)V
 
     .line 170
-    iget-object v1, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mGlobalRect:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mGlobalRect:Landroid/graphics/Rect;
 
     aget v2, v0, v4
 
@@ -395,7 +395,7 @@
 
     aget v4, v0, v4
 
-    invoke-virtual {p0}, Lcom/android/settings/helpdialog/TwTouchPunchView;->getWidth()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->getWidth()I
 
     move-result v5
 
@@ -403,7 +403,7 @@
 
     aget v5, v0, v7
 
-    invoke-virtual {p0}, Lcom/android/settings/helpdialog/TwTouchPunchView;->getHeight()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->getHeight()I
 
     move-result v6
 
@@ -412,10 +412,10 @@
     invoke-virtual {v1, v2, v3, v4, v5}, Landroid/graphics/Rect;->set(IIII)V
 
     .line 171
-    iput-boolean v7, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mInitialized:Z
+    iput-boolean v7, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mInitialized:Z
 
     .line 172
-    invoke-virtual {p0}, Lcom/android/settings/helpdialog/TwTouchPunchView;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->invalidate()V
 
     .line 174
     .end local v0    # "l":[I
@@ -424,11 +424,11 @@
 
     .line 165
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->right:I
 
-    iget-object v2, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->left:I
 
@@ -457,7 +457,7 @@
 
     .line 76
     .local v2, "flags":I
-    iget-boolean v5, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mInitialized:Z
+    iget-boolean v5, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mInitialized:Z
 
     if-nez v5, :cond_1
 
@@ -468,11 +468,11 @@
 
     .line 80
     :cond_1
-    iget-object v5, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mShape:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mShape:Ljava/lang/String;
 
     if-eqz v5, :cond_2
 
-    iget-object v5, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mShape:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mShape:Ljava/lang/String;
 
     const-string v6, "circle"
 
@@ -487,15 +487,15 @@
 
     move-result v5
 
-    invoke-virtual {p0}, Lcom/android/settings/helpdialog/TwTouchPunchView;->getTranslationX()F
+    invoke-virtual {p0}, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->getTranslationX()F
 
     move-result v6
 
-    iget-object v7, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v7, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v7, v7, Landroid/graphics/Rect;->right:I
 
-    iget-object v8, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v8, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v8, v8, Landroid/graphics/Rect;->left:I
 
@@ -519,15 +519,15 @@
 
     move-result v5
 
-    invoke-virtual {p0}, Lcom/android/settings/helpdialog/TwTouchPunchView;->getTranslationY()F
+    invoke-virtual {p0}, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->getTranslationY()F
 
     move-result v8
 
-    iget-object v9, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v9, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v9, v9, Landroid/graphics/Rect;->bottom:I
 
-    iget-object v10, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v10, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v10, v10, Landroid/graphics/Rect;->top:I
 
@@ -555,7 +555,7 @@
 
     .line 86
     .local v0, "diff":D
-    iget v5, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mRadius:F
+    iget v5, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mRadius:F
 
     float-to-double v6, v5
 
@@ -573,7 +573,7 @@
     .line 90
     .end local v0    # "diff":D
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/helpdialog/TwTouchPunchView;->getTranslationX()F
+    invoke-virtual {p0}, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->getTranslationX()F
 
     move-result v5
 
@@ -581,7 +581,7 @@
 
     .line 91
     .local v3, "xTranslation":I
-    invoke-virtual {p0}, Lcom/android/settings/helpdialog/TwTouchPunchView;->getTranslationY()F
+    invoke-virtual {p0}, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->getTranslationY()F
 
     move-result v5
 
@@ -589,13 +589,13 @@
 
     .line 92
     .local v4, "yTranslation":I
-    iget-object v5, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->positionRect:Landroid/graphics/Rect;
+    iget-object v5, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->positionRect:Landroid/graphics/Rect;
 
-    iget-object v6, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v6, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v6, v6, Landroid/graphics/Rect;->right:I
 
-    iget-object v7, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v7, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v7, v7, Landroid/graphics/Rect;->left:I
 
@@ -603,11 +603,11 @@
 
     add-int/2addr v6, v3
 
-    iget-object v7, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v7, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v7, v7, Landroid/graphics/Rect;->bottom:I
 
-    iget-object v8, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
+    iget-object v8, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->mHitRect:Landroid/graphics/Rect;
 
     iget v8, v8, Landroid/graphics/Rect;->top:I
 
@@ -618,7 +618,7 @@
     invoke-virtual {v5, v3, v4, v6, v7}, Landroid/graphics/Rect;->set(IIII)V
 
     .line 96
-    iget-object v5, p0, Lcom/android/settings/helpdialog/TwTouchPunchView;->positionRect:Landroid/graphics/Rect;
+    iget-object v5, p0, Lcom/android/settings_ex/helpdialog/TwTouchPunchView;->positionRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 

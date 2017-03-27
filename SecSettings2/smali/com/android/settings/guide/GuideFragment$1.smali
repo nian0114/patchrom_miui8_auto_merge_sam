@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settings/guide/GuideFragment$1;
+.class synthetic Lcom/android/settings_ex/guide/GuideFragment$1;
 .super Ljava/lang/Object;
 .source "GuideFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/guide/GuideFragment;
+    value = Lcom/android/settings_ex/guide/GuideFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
 
     .prologue
     .line 672
-    invoke-static {}, Lcom/android/settings/guide/GuideFragment$SettingsHeader;->values()[Lcom/android/settings/guide/GuideFragment$SettingsHeader;
+    invoke-static {}, Lcom/android/settings_ex/guide/GuideFragment$SettingsHeader;->values()[Lcom/android/settings_ex/guide/GuideFragment$SettingsHeader;
 
     move-result-object v0
 
@@ -34,12 +34,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/settings/guide/GuideFragment$1;->$SwitchMap$com$android$settings$guide$GuideFragment$SettingsHeader:[I
+    sput-object v0, Lcom/android/settings_ex/guide/GuideFragment$1;->$SwitchMap$com$android$settings$guide$GuideFragment$SettingsHeader:[I
 
     :try_start_0
-    sget-object v0, Lcom/android/settings/guide/GuideFragment$1;->$SwitchMap$com$android$settings$guide$GuideFragment$SettingsHeader:[I
+    sget-object v0, Lcom/android/settings_ex/guide/GuideFragment$1;->$SwitchMap$com$android$settings$guide$GuideFragment$SettingsHeader:[I
 
-    sget-object v1, Lcom/android/settings/guide/GuideFragment$SettingsHeader;->WIFI:Lcom/android/settings/guide/GuideFragment$SettingsHeader;
+    sget-object v1, Lcom/android/settings_ex/guide/GuideFragment$SettingsHeader;->WIFI:Lcom/android/settings_ex/guide/GuideFragment$SettingsHeader;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -53,9 +53,9 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/android/settings/guide/GuideFragment$1;->$SwitchMap$com$android$settings$guide$GuideFragment$SettingsHeader:[I
+    sget-object v0, Lcom/android/settings_ex/guide/GuideFragment$1;->$SwitchMap$com$android$settings$guide$GuideFragment$SettingsHeader:[I
 
-    sget-object v1, Lcom/android/settings/guide/GuideFragment$SettingsHeader;->BLUETOOTH:Lcom/android/settings/guide/GuideFragment$SettingsHeader;
+    sget-object v1, Lcom/android/settings_ex/guide/GuideFragment$SettingsHeader;->BLUETOOTH:Lcom/android/settings_ex/guide/GuideFragment$SettingsHeader;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -69,7 +69,7 @@
 
     .line 187
     :goto_1
-    invoke-static {}, Lcom/android/settings/guide/GuideFragment$GuideModes;->values()[Lcom/android/settings/guide/GuideFragment$GuideModes;
+    invoke-static {}, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;->values()[Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
     move-result-object v0
 
@@ -77,12 +77,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/settings/guide/GuideFragment$1;->$SwitchMap$com$android$settings$guide$GuideFragment$GuideModes:[I
+    sput-object v0, Lcom/android/settings_ex/guide/GuideFragment$1;->$SwitchMap$com$android$settings$guide$GuideFragment$GuideModes:[I
 
     :try_start_2
-    sget-object v0, Lcom/android/settings/guide/GuideFragment$1;->$SwitchMap$com$android$settings$guide$GuideFragment$GuideModes:[I
+    sget-object v0, Lcom/android/settings_ex/guide/GuideFragment$1;->$SwitchMap$com$android$settings$guide$GuideFragment$GuideModes:[I
 
-    sget-object v1, Lcom/android/settings/guide/GuideFragment$GuideModes;->BLUETOOTH:Lcom/android/settings/guide/GuideFragment$GuideModes;
+    sget-object v1, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;->BLUETOOTH:Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -96,9 +96,9 @@
 
     :goto_2
     :try_start_3
-    sget-object v0, Lcom/android/settings/guide/GuideFragment$1;->$SwitchMap$com$android$settings$guide$GuideFragment$GuideModes:[I
+    sget-object v0, Lcom/android/settings_ex/guide/GuideFragment$1;->$SwitchMap$com$android$settings$guide$GuideFragment$GuideModes:[I
 
-    sget-object v1, Lcom/android/settings/guide/GuideFragment$GuideModes;->BLUETOOTH_SETTING:Lcom/android/settings/guide/GuideFragment$GuideModes;
+    sget-object v1, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;->BLUETOOTH_SETTING:Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -112,9 +112,9 @@
 
     :goto_3
     :try_start_4
-    sget-object v0, Lcom/android/settings/guide/GuideFragment$1;->$SwitchMap$com$android$settings$guide$GuideFragment$GuideModes:[I
+    sget-object v0, Lcom/android/settings_ex/guide/GuideFragment$1;->$SwitchMap$com$android$settings$guide$GuideFragment$GuideModes:[I
 
-    sget-object v1, Lcom/android/settings/guide/GuideFragment$GuideModes;->WIFI:Lcom/android/settings/guide/GuideFragment$GuideModes;
+    sget-object v1, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;->WIFI:Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -128,9 +128,9 @@
 
     :goto_4
     :try_start_5
-    sget-object v0, Lcom/android/settings/guide/GuideFragment$1;->$SwitchMap$com$android$settings$guide$GuideFragment$GuideModes:[I
+    sget-object v0, Lcom/android/settings_ex/guide/GuideFragment$1;->$SwitchMap$com$android$settings$guide$GuideFragment$GuideModes:[I
 
-    sget-object v1, Lcom/android/settings/guide/GuideFragment$GuideModes;->WIFI_SETTINGS:Lcom/android/settings/guide/GuideFragment$GuideModes;
+    sget-object v1, Lcom/android/settings_ex/guide/GuideFragment$GuideModes;->WIFI_SETTINGS:Lcom/android/settings_ex/guide/GuideFragment$GuideModes;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 

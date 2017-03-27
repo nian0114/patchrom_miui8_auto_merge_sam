@@ -5,5 +5,5 @@
         <TextView android:textAppearance="@style/TextAppearance.Switch" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/applock_master_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:textAlignment="viewStart" android:layout_marginStart="@dimen/applock_switchbar_text_margin_start" />
         <Switch android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/applock_master_switch" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" />
     </LinearLayout>
-    <fragment android:name="com.android.settings.applock.AppLockSettingsActivity$AppLockListFragment" android:id="@id/list_fragement" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <fragment android:name="com.android.settings_ex.applock.AppLockSettingsActivity$AppLockListFragment" android:id="@id/list_fragement" android:layout_width="wrap_content" android:layout_height="wrap_content" />
 </LinearLayout>

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/nfc/NfcOsaifuConfigAccess;
+.class public Lcom/android/settings_ex/nfc/NfcOsaifuConfigAccess;
 .super Ljava/lang/Object;
 .source "NfcOsaifuConfigAccess.java"
 

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/ManualDisplayActivity;
+.class public Lcom/android/settings_ex/ManualDisplayActivity;
 .super Landroid/app/Activity;
 .source "ManualDisplayActivity.java"
 
@@ -30,7 +30,7 @@
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
     .line 83
-    invoke-virtual {p0}, Lcom/android/settings/ManualDisplayActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/ManualDisplayActivity;->finish()V
 
     .line 84
     return-void
@@ -47,7 +47,7 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 44
-    invoke-virtual {p0}, Lcom/android/settings/ManualDisplayActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ManualDisplayActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -62,7 +62,7 @@
     if-nez v5, :cond_0
 
     .line 47
-    invoke-virtual {p0}, Lcom/android/settings/ManualDisplayActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/ManualDisplayActivity;->finish()V
 
     .line 50
     :cond_0
@@ -90,7 +90,7 @@
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 53
-    invoke-direct {p0}, Lcom/android/settings/ManualDisplayActivity;->showErrorAndFinish()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ManualDisplayActivity;->showErrorAndFinish()V
 
     .line 78
     :goto_0
@@ -151,7 +151,7 @@
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 60
-    invoke-direct {p0}, Lcom/android/settings/ManualDisplayActivity;->showErrorAndFinish()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ManualDisplayActivity;->showErrorAndFinish()V
 
     goto :goto_0
 
@@ -178,7 +178,7 @@
 
     const v6, 0x7f0e07b7
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/ManualDisplayActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/ManualDisplayActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
@@ -196,10 +196,10 @@
 
     .line 72
     :try_start_0
-    invoke-virtual {p0, v2}, Lcom/android/settings/ManualDisplayActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/ManualDisplayActivity;->startActivity(Landroid/content/Intent;)V
 
     .line 73
-    invoke-virtual {p0}, Lcom/android/settings/ManualDisplayActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/ManualDisplayActivity;->finish()V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -218,7 +218,7 @@
     invoke-static {v5, v6, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 76
-    invoke-direct {p0}, Lcom/android/settings/ManualDisplayActivity;->showErrorAndFinish()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ManualDisplayActivity;->showErrorAndFinish()V
 
     goto :goto_0
 .end method

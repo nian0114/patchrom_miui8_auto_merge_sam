@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/widget/MultiSelectionActionMode$ObservableActionModeCallback;
+.class public interface abstract Lcom/android/settings_ex/widget/MultiSelectionActionMode$ObservableActionModeCallback;
 .super Ljava/lang/Object;
 .source "MultiSelectionActionMode.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/widget/MultiSelectionActionMode;
+    value = Lcom/android/settings_ex/widget/MultiSelectionActionMode;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

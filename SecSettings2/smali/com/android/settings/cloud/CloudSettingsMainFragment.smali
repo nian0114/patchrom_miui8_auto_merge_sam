@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/cloud/CloudSettingsMainFragment;
+.class public Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 .super Landroid/preference/PreferenceFragment;
 .source "CloudSettingsMainFragment.java"
 
@@ -67,7 +67,7 @@
 
 .field private mRestore:Landroid/preference/Preference;
 
-.field private mSettings:Lcom/android/settings/cloud/CloudSettings;
+.field private mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
 
 .field private mStorage:Ljava/lang/String;
 
@@ -90,7 +90,7 @@
     .line 249
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isFirstStartWifiForSamsungCloud:Z
+    sput-boolean v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isFirstStartWifiForSamsungCloud:Z
 
     return-void
 .end method
@@ -109,241 +109,241 @@
     invoke-direct {p0}, Landroid/preference/PreferenceFragment;-><init>()V
 
     .line 92
-    iput-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
+    iput-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
 
     .line 216
-    iput-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->dialogFragment:Landroid/app/DialogFragment;
+    iput-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->dialogFragment:Landroid/app/DialogFragment;
 
     .line 221
-    iput-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mCloudReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mCloudReceiver:Landroid/content/BroadcastReceiver;
 
     .line 224
-    iput-boolean v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isDropboxAvailable:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isDropboxAvailable:Z
 
     .line 226
-    iput-boolean v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isBackupAppAvailable:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isBackupAppAvailable:Z
 
     .line 227
-    iput-boolean v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isSyncAvailable:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isSyncAvailable:Z
 
     .line 229
-    iput-boolean v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isQuotaStorageAvailable:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isQuotaStorageAvailable:Z
 
     .line 231
-    iput-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
 
     .line 233
-    iput-boolean v2, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mIsConnected:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mIsConnected:Z
 
     .line 237
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->processAction:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->processAction:Ljava/lang/String;
 
     .line 239
-    iput-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mProgressDialog:Landroid/app/ProgressDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mProgressDialog:Landroid/app/ProgressDialog;
 
     .line 241
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mValidationStatus:I
+    iput v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mValidationStatus:I
 
     .line 243
-    iput-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->toastMsg:Landroid/widget/Toast;
+    iput-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->toastMsg:Landroid/widget/Toast;
 
     .line 244
-    iput-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mMobileDataChargeDialog:Landroid/app/AlertDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mMobileDataChargeDialog:Landroid/app/AlertDialog;
 
     .line 246
-    iput-boolean v2, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mIsMobileConnected:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mIsMobileConnected:Z
 
     .line 1179
-    new-instance v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$3;
+    new-instance v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$3;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment$3;-><init>(Lcom/android/settings/cloud/CloudSettingsMainFragment;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$3;-><init>(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)V
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->setSyncAccountListener:Landroid/preference/Preference$OnPreferenceClickListener;
-
-    return-void
-.end method
-
-.method static synthetic access$000(Lcom/android/settings/cloud/CloudSettingsMainFragment;)V
-    .locals 0
-    .param p0, "x0"    # Lcom/android/settings/cloud/CloudSettingsMainFragment;
-
-    .prologue
-    .line 79
-    invoke-direct {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->dismissProgress()V
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->setSyncAccountListener:Landroid/preference/Preference$OnPreferenceClickListener;
 
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/cloud/CloudSettingsMainFragment;)Lcom/android/settings/cloud/CloudSettings;
-    .locals 1
-    .param p0, "x0"    # Lcom/android/settings/cloud/CloudSettingsMainFragment;
-
-    .prologue
-    .line 79
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
-
-    return-object v0
-.end method
-
-.method static synthetic access$1000(Lcom/android/settings/cloud/CloudSettingsMainFragment;)Landroid/app/DialogFragment;
-    .locals 1
-    .param p0, "x0"    # Lcom/android/settings/cloud/CloudSettingsMainFragment;
-
-    .prologue
-    .line 79
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->dialogFragment:Landroid/app/DialogFragment;
-
-    return-object v0
-.end method
-
-.method static synthetic access$1002(Lcom/android/settings/cloud/CloudSettingsMainFragment;Landroid/app/DialogFragment;)Landroid/app/DialogFragment;
+.method static synthetic access$000(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
+
+    .prologue
+    .line 79
+    invoke-direct {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->dismissProgress()V
+
+    return-void
+.end method
+
+.method static synthetic access$100(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)Lcom/android/settings_ex/cloud/CloudSettings;
+    .locals 1
+    .param p0, "x0"    # Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
+
+    .prologue
+    .line 79
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1000(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)Landroid/app/DialogFragment;
+    .locals 1
+    .param p0, "x0"    # Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
+
+    .prologue
+    .line 79
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->dialogFragment:Landroid/app/DialogFragment;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1002(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;Landroid/app/DialogFragment;)Landroid/app/DialogFragment;
+    .locals 0
+    .param p0, "x0"    # Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
     .param p1, "x1"    # Landroid/app/DialogFragment;
 
     .prologue
     .line 79
-    iput-object p1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->dialogFragment:Landroid/app/DialogFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->dialogFragment:Landroid/app/DialogFragment;
 
     return-object p1
 .end method
 
-.method static synthetic access$102(Lcom/android/settings/cloud/CloudSettingsMainFragment;Lcom/android/settings/cloud/CloudSettings;)Lcom/android/settings/cloud/CloudSettings;
+.method static synthetic access$102(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;Lcom/android/settings_ex/cloud/CloudSettings;)Lcom/android/settings_ex/cloud/CloudSettings;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/cloud/CloudSettingsMainFragment;
-    .param p1, "x1"    # Lcom/android/settings/cloud/CloudSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
+    .param p1, "x1"    # Lcom/android/settings_ex/cloud/CloudSettings;
 
     .prologue
     .line 79
-    iput-object p1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
 
     return-object p1
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/cloud/CloudSettingsMainFragment;)V
+.method static synthetic access$200(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     .prologue
     .line 79
-    invoke-direct {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->updatePreferences()V
+    invoke-direct {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->updatePreferences()V
 
     return-void
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/cloud/CloudSettingsMainFragment;)V
+.method static synthetic access$300(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     .prologue
     .line 79
-    invoke-direct {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->requestCloudStorageUsage()V
+    invoke-direct {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->requestCloudStorageUsage()V
 
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/cloud/CloudSettingsMainFragment;)Z
+.method static synthetic access$400(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     .prologue
     .line 79
-    iget-boolean v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mIsConnected:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mIsConnected:Z
 
     return v0
 .end method
 
-.method static synthetic access$402(Lcom/android/settings/cloud/CloudSettingsMainFragment;Z)Z
+.method static synthetic access$402(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
     .param p1, "x1"    # Z
 
     .prologue
     .line 79
-    iput-boolean p1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mIsConnected:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mIsConnected:Z
 
     return p1
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/cloud/CloudSettingsMainFragment;)Landroid/preference/Preference;
+.method static synthetic access$500(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)Landroid/preference/Preference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefUsage:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefUsage:Landroid/preference/Preference;
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/cloud/CloudSettingsMainFragment;)Ljava/lang/String;
+.method static synthetic access$600(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$602(Lcom/android/settings/cloud/CloudSettingsMainFragment;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$602(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 79
-    iput-object p1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
 
     return-object p1
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/cloud/CloudSettingsMainFragment;)I
+.method static synthetic access$700(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     .prologue
     .line 79
-    iget v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mValidationStatus:I
+    iget v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mValidationStatus:I
 
     return v0
 .end method
 
-.method static synthetic access$702(Lcom/android/settings/cloud/CloudSettingsMainFragment;I)I
+.method static synthetic access$702(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;I)I
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
     .param p1, "x1"    # I
 
     .prologue
     .line 79
-    iput p1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mValidationStatus:I
+    iput p1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mValidationStatus:I
 
     return p1
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/cloud/CloudSettingsMainFragment;)Landroid/app/ProgressDialog;
+.method static synthetic access$800(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)Landroid/app/ProgressDialog;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mProgressDialog:Landroid/app/ProgressDialog;
 
     return-object v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/cloud/CloudSettingsMainFragment;)V
+.method static synthetic access$900(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     .prologue
     .line 79
-    invoke-direct {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->requestCloudAuthentication()V
+    invoke-direct {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->requestCloudAuthentication()V
 
     return-void
 .end method
@@ -353,17 +353,17 @@
 
     .prologue
     .line 1320
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->dialogFragment:Landroid/app/DialogFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->dialogFragment:Landroid/app/DialogFragment;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -374,17 +374,17 @@
     if-nez v0, :cond_0
 
     .line 1323
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->dialogFragment:Landroid/app/DialogFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->dialogFragment:Landroid/app/DialogFragment;
 
     invoke-virtual {v0}, Landroid/app/DialogFragment;->dismiss()V
 
     .line 1325
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mProgressTimer:Landroid/os/CountDownTimer;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mProgressTimer:Landroid/os/CountDownTimer;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mProgressTimer:Landroid/os/CountDownTimer;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mProgressTimer:Landroid/os/CountDownTimer;
 
     invoke-virtual {v0}, Landroid/os/CountDownTimer;->cancel()V
 
@@ -408,25 +408,25 @@
 
     .line 707
     .local v1, "summaryText":Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->getSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->getSalesCode()Ljava/lang/String;
 
     move-result-object v0
 
     .line 708
     .local v0, "salesCode":Ljava/lang/String;
-    iget-object v2, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
 
     if-eqz v2, :cond_1
 
     .line 709
     const v2, 0x7f0e12ad
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
     .line 710
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->isChinaModel()Z
 
     move-result v2
 
@@ -459,7 +459,7 @@
 
     aput-object v5, v4, v6
 
-    invoke-virtual {p0, v3, v4}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v3, v4}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -518,7 +518,7 @@
 
     aput-object v5, v4, v7
 
-    invoke-virtual {p0, v3, v4}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v3, v4}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -542,77 +542,77 @@
     .line 481
     const-string v0, "cloud_description"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefCloudDescription:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefCloudDescription:Landroid/preference/Preference;
 
     .line 482
     const-string v0, "dropbox_sync_account"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefDropboxAccount:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefDropboxAccount:Landroid/preference/Preference;
 
     .line 483
     const-string v0, "pref_set_account"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefSetAccount:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefSetAccount:Landroid/preference/Preference;
 
     .line 484
     const-string v0, "pref_usage"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefUsage:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefUsage:Landroid/preference/Preference;
 
     .line 485
     const-string v0, "pref_photos"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefPhotos:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefPhotos:Landroid/preference/Preference;
 
     .line 486
     const-string v0, "pref_videos"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefVideos:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefVideos:Landroid/preference/Preference;
 
     .line 487
     const-string v0, "pref_musics"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefMusics:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefMusics:Landroid/preference/Preference;
 
     .line 488
     const-string v0, "pref_document"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefDocument:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefDocument:Landroid/preference/Preference;
 
     .line 489
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefDropboxAccount:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefDropboxAccount:Landroid/preference/Preference;
 
     invoke-virtual {v0, p0}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -639,7 +639,7 @@
     :pswitch_0
     const v0, 0x7f0e12b5
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -649,7 +649,7 @@
     :pswitch_1
     const v0, 0x7f0e12b6
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -659,7 +659,7 @@
     :pswitch_2
     const v0, 0x7f0e12b7
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -667,14 +667,14 @@
 
     .line 730
     :pswitch_3
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
 
     if-eqz v0, :cond_0
 
     .line 731
     const v0, 0x7f0e12ab
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -684,9 +684,9 @@
 
     const/4 v2, 0x0
 
-    iget-object v3, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
 
-    invoke-virtual {v3}, Lcom/android/settings/cloud/CloudSettings;->getDocumentSyncFolderName()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/android/settings_ex/cloud/CloudSettings;->getDocumentSyncFolderName()Ljava/lang/String;
 
     move-result-object v3
 
@@ -696,7 +696,7 @@
 
     const v3, 0x7f0e1299
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -726,7 +726,7 @@
     .prologue
     .line 328
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -744,7 +744,7 @@
 
     .line 352
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -752,18 +752,18 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->accountManager:Landroid/accounts/AccountManager;
+    iput-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->accountManager:Landroid/accounts/AccountManager;
 
     .line 358
     const v1, 0x7f08002b
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->addPreferencesFromResource(I)V
 
     .line 359
-    invoke-direct {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getPreferencesReference()V
+    invoke-direct {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getPreferencesReference()V
 
     .line 360
-    invoke-direct {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->updatePreferences()V
+    invoke-direct {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->updatePreferences()V
 
     .line 376
     return-void
@@ -776,7 +776,7 @@
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isDropboxAvailable:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isDropboxAvailable:Z
 
     goto :goto_0
 .end method
@@ -876,16 +876,16 @@
 
     .prologue
     .line 789
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mCloudReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mCloudReceiver:Landroid/content/BroadcastReceiver;
 
     if-nez v1, :cond_0
 
     .line 790
-    new-instance v1, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;
+    new-instance v1, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment$2;-><init>(Lcom/android/settings/cloud/CloudSettingsMainFragment;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$2;-><init>(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;)V
 
-    iput-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mCloudReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mCloudReceiver:Landroid/content/BroadcastReceiver;
 
     .line 921
     new-instance v0, Landroid/content/IntentFilter;
@@ -911,11 +911,11 @@
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 926
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mCloudReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mCloudReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -960,7 +960,7 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 423
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -975,7 +975,7 @@
 
     .prologue
     .line 763
-    iget-boolean v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isDropboxAvailable:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isDropboxAvailable:Z
 
     if-nez v1, :cond_0
 
@@ -1012,14 +1012,14 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 769
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 770
-    invoke-direct {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showDelayedProgress()V
+    invoke-direct {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showDelayedProgress()V
 
     goto :goto_0
 .end method
@@ -1056,7 +1056,7 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 782
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -1071,17 +1071,17 @@
 
     .prologue
     .line 1303
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mProgressTimer:Landroid/os/CountDownTimer;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mProgressTimer:Landroid/os/CountDownTimer;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mProgressTimer:Landroid/os/CountDownTimer;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mProgressTimer:Landroid/os/CountDownTimer;
 
     invoke-virtual {v0}, Landroid/os/CountDownTimer;->cancel()V
 
     .line 1305
     :cond_0
-    new-instance v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$4;
+    new-instance v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$4;
 
     const-wide/16 v2, 0x1f4
 
@@ -1089,12 +1089,12 @@
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/settings/cloud/CloudSettingsMainFragment$4;-><init>(Lcom/android/settings/cloud/CloudSettingsMainFragment;JJ)V
+    invoke-direct/range {v0 .. v5}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$4;-><init>(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;JJ)V
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mProgressTimer:Landroid/os/CountDownTimer;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mProgressTimer:Landroid/os/CountDownTimer;
 
     .line 1316
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mProgressTimer:Landroid/os/CountDownTimer;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mProgressTimer:Landroid/os/CountDownTimer;
 
     invoke-virtual {v0}, Landroid/os/CountDownTimer;->start()Landroid/os/CountDownTimer;
 
@@ -1164,7 +1164,7 @@
 
     move-result-object v4
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -1179,20 +1179,20 @@
     invoke-static {v0, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1277
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/android/settings/SettingsActivity;
+    instance-of v0, v0, Lcom/android/settings_ex/SettingsActivity;
 
     if-eqz v0, :cond_0
 
     .line 1279
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     move-object v4, v2
 
@@ -1200,7 +1200,7 @@
 
     move v6, p1
 
-    invoke-virtual/range {v0 .. v6}, Lcom/android/settings/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
+    invoke-virtual/range {v0 .. v6}, Lcom/android/settings_ex/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
 
     .line 1285
     :goto_1
@@ -1208,7 +1208,7 @@
 
     .line 1257
     :pswitch_0
-    const-class v0, Lcom/android/settings/cloud/CloudPhotosSyncFragment;
+    const-class v0, Lcom/android/settings_ex/cloud/CloudPhotosSyncFragment;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
@@ -1222,7 +1222,7 @@
 
     .line 1262
     :pswitch_1
-    const-class v0, Lcom/android/settings/cloud/CloudVideosSyncFragment;
+    const-class v0, Lcom/android/settings_ex/cloud/CloudVideosSyncFragment;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
@@ -1236,7 +1236,7 @@
 
     .line 1266
     :pswitch_2
-    const-class v0, Lcom/android/settings/cloud/CloudMusicsSyncFragment;
+    const-class v0, Lcom/android/settings_ex/cloud/CloudMusicsSyncFragment;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
@@ -1250,7 +1250,7 @@
 
     .line 1270
     :pswitch_3
-    const-class v0, Lcom/android/settings/cloud/CloudDocumentSyncFragment;
+    const-class v0, Lcom/android/settings_ex/cloud/CloudDocumentSyncFragment;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
@@ -1264,7 +1264,7 @@
 
     .line 1282
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1314,7 +1314,7 @@
 
     const v3, 0x7f0e0be6
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -1329,12 +1329,12 @@
     const/4 v2, 0x3
 
     :try_start_0
-    invoke-virtual {p0, v1, v2}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v1, v2}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->startActivityForResult(Landroid/content/Intent;I)V
 
     .line 1296
     const/4 v2, 0x0
 
-    sput-boolean v2, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isFirstStartWifiForSamsungCloud:Z
+    sput-boolean v2, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isFirstStartWifiForSamsungCloud:Z
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1358,16 +1358,16 @@
 
     .prologue
     .line 940
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mCloudReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mCloudReceiver:Landroid/content/BroadcastReceiver;
 
     if-eqz v0, :cond_0
 
     .line 941
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mCloudReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mCloudReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
@@ -1375,7 +1375,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mCloudReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mCloudReceiver:Landroid/content/BroadcastReceiver;
 
     .line 943
     return-void
@@ -1396,51 +1396,51 @@
     const/4 v7, 0x0
 
     .line 630
-    iget-boolean v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isDropboxAvailable:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isDropboxAvailable:Z
 
     if-eqz v4, :cond_0
 
     .line 631
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
 
     if-eqz v4, :cond_7
 
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
 
-    invoke-virtual {v4}, Lcom/android/settings/cloud/CloudSettings;->getAccountName()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/android/settings_ex/cloud/CloudSettings;->getAccountName()Ljava/lang/String;
 
     move-result-object v4
 
     if-eqz v4, :cond_7
 
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
 
-    invoke-virtual {v4}, Lcom/android/settings/cloud/CloudSettings;->isAccountSet()Z
+    invoke-virtual {v4}, Lcom/android/settings_ex/cloud/CloudSettings;->isAccountSet()Z
 
     move-result v4
 
     if-eqz v4, :cond_7
 
     .line 633
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->isChinaModel()Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
     .line 634
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefCloudDescription:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefCloudDescription:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5, v8}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v4, v5, v8}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 635
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefDropboxAccount:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefDropboxAccount:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -1454,132 +1454,132 @@
 
     .line 639
     :goto_0
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefDropboxAccount:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefDropboxAccount:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5, v8}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v4, v5, v8}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 640
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefDropboxAccount:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefDropboxAccount:Landroid/preference/Preference;
 
-    iget-object v5, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
+    iget-object v5, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
 
-    invoke-virtual {v5}, Lcom/android/settings/cloud/CloudSettings;->getAccountName()Ljava/lang/String;
+    invoke-virtual {v5}, Lcom/android/settings_ex/cloud/CloudSettings;->getAccountName()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v4, v5}, Landroid/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 641
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefSetAccount:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefSetAccount:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5, v7}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v4, v5, v7}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 643
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefUsage:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefUsage:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5, v8}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v4, v5, v8}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 644
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefPhotos:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefPhotos:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
+    iget-object v6, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
 
-    invoke-virtual {v6, v8}, Lcom/android/settings/cloud/CloudSettings;->isSupportSync(I)Z
+    invoke-virtual {v6, v8}, Lcom/android/settings_ex/cloud/CloudSettings;->isSupportSync(I)Z
 
     move-result v6
 
-    invoke-direct {p0, v4, v5, v6}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v4, v5, v6}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 645
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefVideos:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefVideos:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
+    iget-object v6, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
 
-    invoke-virtual {v6, v10}, Lcom/android/settings/cloud/CloudSettings;->isSupportSync(I)Z
+    invoke-virtual {v6, v10}, Lcom/android/settings_ex/cloud/CloudSettings;->isSupportSync(I)Z
 
     move-result v6
 
-    invoke-direct {p0, v4, v5, v6}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v4, v5, v6}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 646
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefMusics:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefMusics:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
+    iget-object v6, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
 
-    invoke-virtual {v6, v11}, Lcom/android/settings/cloud/CloudSettings;->isSupportSync(I)Z
+    invoke-virtual {v6, v11}, Lcom/android/settings_ex/cloud/CloudSettings;->isSupportSync(I)Z
 
     move-result v6
 
-    invoke-direct {p0, v4, v5, v6}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v4, v5, v6}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 647
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefDocument:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefDocument:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
+    iget-object v6, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
 
     const/4 v7, 0x4
 
-    invoke-virtual {v6, v7}, Lcom/android/settings/cloud/CloudSettings;->isSupportSync(I)Z
+    invoke-virtual {v6, v7}, Lcom/android/settings_ex/cloud/CloudSettings;->isSupportSync(I)Z
 
     move-result v6
 
-    invoke-direct {p0, v4, v5, v6}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v4, v5, v6}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 649
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefPhotos:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefPhotos:Landroid/preference/Preference;
 
     invoke-virtual {v4, p0}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 650
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefVideos:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefVideos:Landroid/preference/Preference;
 
     invoke-virtual {v4, p0}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 651
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefMusics:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefMusics:Landroid/preference/Preference;
 
     invoke-virtual {v4, p0}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 652
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefDocument:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefDocument:Landroid/preference/Preference;
 
     invoke-virtual {v4, p0}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 654
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
 
     if-nez v4, :cond_2
 
     .line 655
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefUsage:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefUsage:Landroid/preference/Preference;
 
     const v5, 0x7f0e06a4
 
@@ -1587,17 +1587,17 @@
 
     .line 660
     :goto_1
-    iget-object v5, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefPhotos:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefPhotos:Landroid/preference/Preference;
 
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
 
-    invoke-virtual {v4}, Lcom/android/settings/cloud/CloudSettings;->isPhotoSync()Z
+    invoke-virtual {v4}, Lcom/android/settings_ex/cloud/CloudSettings;->isPhotoSync()Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
-    invoke-direct {p0, v8}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getSyncSummaryString(I)Ljava/lang/String;
+    invoke-direct {p0, v8}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getSyncSummaryString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1605,17 +1605,17 @@
     invoke-virtual {v5, v4}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 662
-    iget-object v5, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefVideos:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefVideos:Landroid/preference/Preference;
 
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
 
-    invoke-virtual {v4}, Lcom/android/settings/cloud/CloudSettings;->isVideoSync()Z
+    invoke-virtual {v4}, Lcom/android/settings_ex/cloud/CloudSettings;->isVideoSync()Z
 
     move-result v4
 
     if-eqz v4, :cond_4
 
-    invoke-direct {p0, v10}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getSyncSummaryString(I)Ljava/lang/String;
+    invoke-direct {p0, v10}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getSyncSummaryString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1623,17 +1623,17 @@
     invoke-virtual {v5, v4}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 664
-    iget-object v5, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefMusics:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefMusics:Landroid/preference/Preference;
 
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
 
-    invoke-virtual {v4}, Lcom/android/settings/cloud/CloudSettings;->isMusicSync()Z
+    invoke-virtual {v4}, Lcom/android/settings_ex/cloud/CloudSettings;->isMusicSync()Z
 
     move-result v4
 
     if-eqz v4, :cond_5
 
-    invoke-direct {p0, v11}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getSyncSummaryString(I)Ljava/lang/String;
+    invoke-direct {p0, v11}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getSyncSummaryString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1641,11 +1641,11 @@
     invoke-virtual {v5, v4}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 666
-    iget-object v5, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefDocument:Landroid/preference/Preference;
+    iget-object v5, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefDocument:Landroid/preference/Preference;
 
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings/cloud/CloudSettings;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mSettings:Lcom/android/settings_ex/cloud/CloudSettings;
 
-    invoke-virtual {v4}, Lcom/android/settings/cloud/CloudSettings;->isDocumentSync()Z
+    invoke-virtual {v4}, Lcom/android/settings_ex/cloud/CloudSettings;->isDocumentSync()Z
 
     move-result v4
 
@@ -1653,7 +1653,7 @@
 
     const/4 v4, 0x4
 
-    invoke-direct {p0, v4}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getSyncSummaryString(I)Ljava/lang/String;
+    invoke-direct {p0, v4}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getSyncSummaryString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1667,21 +1667,21 @@
 
     .line 637
     :cond_1
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefCloudDescription:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefCloudDescription:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5, v7}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v4, v5, v7}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     goto/16 :goto_0
 
     .line 657
     :cond_2
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefUsage:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefUsage:Landroid/preference/Preference;
 
-    iget-object v5, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mStorage:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -1689,7 +1689,7 @@
 
     .line 660
     :cond_3
-    invoke-virtual {p0, v9}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1697,7 +1697,7 @@
 
     .line 662
     :cond_4
-    invoke-virtual {p0, v9}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1705,7 +1705,7 @@
 
     .line 664
     :cond_5
-    invoke-virtual {p0, v9}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1713,7 +1713,7 @@
 
     .line 666
     :cond_6
-    invoke-virtual {p0, v9}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1721,35 +1721,35 @@
 
     .line 670
     :cond_7
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->isChinaModel()Z
 
     move-result v4
 
     if-eqz v4, :cond_9
 
     .line 671
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefCloudDescription:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefCloudDescription:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5, v8}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v4, v5, v8}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 675
     :goto_7
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefSetAccount:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefSetAccount:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5, v8}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v4, v5, v8}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 678
     const v4, 0x7f0e12ac
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1758,21 +1758,21 @@
     if-eqz v2, :cond_8
 
     .line 681
-    invoke-static {}, Lcom/android/settings/cloud/CloudSettings;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/cloud/CloudSettings;->isChinaModel()Z
 
     move-result v4
 
     if-eqz v4, :cond_a
 
     .line 682
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefSetAccount:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefSetAccount:Landroid/preference/Preference;
 
     invoke-virtual {v4, v2}, Landroid/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 683
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefSetAccount:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefSetAccount:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -1787,85 +1787,85 @@
     .line 694
     :cond_8
     :goto_8
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefSetAccount:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefSetAccount:Landroid/preference/Preference;
 
-    iget-object v5, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->setSyncAccountListener:Landroid/preference/Preference$OnPreferenceClickListener;
+    iget-object v5, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->setSyncAccountListener:Landroid/preference/Preference$OnPreferenceClickListener;
 
     invoke-virtual {v4, v5}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 695
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefUsage:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefUsage:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5, v7}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v4, v5, v7}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 696
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefPhotos:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefPhotos:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5, v7}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v4, v5, v7}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 697
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefVideos:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefVideos:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5, v7}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v4, v5, v7}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 698
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefMusics:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefMusics:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5, v7}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v4, v5, v7}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 699
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefDocument:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefDocument:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5, v7}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v4, v5, v7}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 700
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefDropboxAccount:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefDropboxAccount:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5, v7}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v4, v5, v7}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     goto/16 :goto_6
 
     .line 673
     .end local v2    # "linkAccount":Ljava/lang/String;
     :cond_9
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefCloudDescription:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefCloudDescription:Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5, v7}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v4, v5, v7}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     goto :goto_7
 
     .line 685
     .restart local v2    # "linkAccount":Ljava/lang/String;
     :cond_a
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -1887,7 +1887,7 @@
 
     const v5, 0x7f0e1299
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -1906,14 +1906,14 @@
 
     .line 689
     .local v3, "text":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefSetAccount:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefSetAccount:Landroid/preference/Preference;
 
     invoke-virtual {v4, v3}, Landroid/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 690
-    iget-object v4, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefSetAccount:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefSetAccount:Landroid/preference/Preference;
 
-    invoke-direct {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getLinkAccountSummary()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getLinkAccountSummary()Ljava/lang/String;
 
     move-result-object v5
 
@@ -1936,7 +1936,7 @@
     .line 301
     .local v2, "info":Landroid/content/pm/PackageInfo;
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -1955,7 +1955,7 @@
     .line 302
     const/4 v3, 0x1
 
-    iput-boolean v3, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mIsBackupVersionOld:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mIsBackupVersionOld:Z
 
     .line 303
     iget-object v3, v2, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1967,7 +1967,7 @@
     .line 304
     const/4 v3, 0x0
 
-    iput-boolean v3, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isBackupAppAvailable:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isBackupAppAvailable:Z
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1975,7 +1975,7 @@
     :cond_0
     :goto_0
     :try_start_1
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -2001,7 +2001,7 @@
     .line 319
     const/4 v3, 0x0
 
-    iput-boolean v3, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isQuotaStorageAvailable:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isQuotaStorageAvailable:Z
     :try_end_1
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_2
 
@@ -2017,7 +2017,7 @@
     .line 307
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :try_start_2
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -2036,7 +2036,7 @@
     .line 308
     const/4 v3, 0x0
 
-    iput-boolean v3, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mIsBackupVersionOld:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mIsBackupVersionOld:Z
 
     .line 309
     iget-object v3, v2, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -2048,7 +2048,7 @@
     .line 310
     const/4 v3, 0x0
 
-    iput-boolean v3, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isBackupAppAvailable:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isBackupAppAvailable:Z
     :try_end_2
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2 .. :try_end_2} :catch_1
 
@@ -2060,7 +2060,7 @@
 
     .line 312
     .local v1, "e1":Landroid/content/pm/PackageManager$NameNotFoundException;
-    iput-boolean v6, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isBackupAppAvailable:Z
+    iput-boolean v6, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isBackupAppAvailable:Z
 
     goto :goto_0
 
@@ -2072,7 +2072,7 @@
 
     .line 321
     .restart local v0    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
-    iput-boolean v6, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isQuotaStorageAvailable:Z
+    iput-boolean v6, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isQuotaStorageAvailable:Z
 
     goto :goto_1
 .end method
@@ -2085,7 +2085,7 @@
 
     .prologue
     .line 1099
-    invoke-direct {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->dismissProgress()V
+    invoke-direct {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->dismissProgress()V
 
     .line 1101
     packed-switch p1, :pswitch_data_0
@@ -2148,23 +2148,23 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1118
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isConnected(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isConnected(Landroid/content/Context;)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mIsConnected:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mIsConnected:Z
 
     .line 1119
-    iget-boolean v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mIsConnected:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mIsConnected:Z
 
     if-nez v0, :cond_0
 
     .line 1120
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2192,37 +2192,37 @@
     invoke-super {p0, p1}, Landroid/preference/PreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 258
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isConnected(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isConnected(Landroid/content/Context;)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mIsConnected:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mIsConnected:Z
 
     .line 259
-    invoke-direct {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->init()V
+    invoke-direct {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->init()V
 
     .line 261
-    iget-boolean v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mIsConnected:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mIsConnected:Z
 
     if-nez v0, :cond_2
 
     .line 263
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->toastMsg:Landroid/widget/Toast;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->toastMsg:Landroid/widget/Toast;
 
     if-nez v0, :cond_0
 
     .line 264
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     const v1, 0x7f0e12a3
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2232,15 +2232,15 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->toastMsg:Landroid/widget/Toast;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->toastMsg:Landroid/widget/Toast;
 
     .line 266
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->toastMsg:Landroid/widget/Toast;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->toastMsg:Landroid/widget/Toast;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->toastMsg:Landroid/widget/Toast;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->toastMsg:Landroid/widget/Toast;
 
     invoke-virtual {v0}, Landroid/widget/Toast;->getView()Landroid/view/View;
 
@@ -2253,30 +2253,30 @@
     if-nez v0, :cond_1
 
     .line 267
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->toastMsg:Landroid/widget/Toast;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->toastMsg:Landroid/widget/Toast;
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
     .line 270
     :cond_1
-    sget-boolean v0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isFirstStartWifiForSamsungCloud:Z
+    sget-boolean v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isFirstStartWifiForSamsungCloud:Z
 
     if-eqz v0, :cond_2
 
     .line 271
-    invoke-direct {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->startWifiActivity()V
+    invoke-direct {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->startWifiActivity()V
 
     .line 273
     :cond_2
-    new-instance v0, Lcom/android/settings/cloud/CloudSettingsMainFragment$1;
+    new-instance v0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$1;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/cloud/CloudSettingsMainFragment$1;-><init>(Lcom/android/settings/cloud/CloudSettingsMainFragment;Landroid/content/Context;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$1;-><init>(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mProgressDialog:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mProgressDialog:Landroid/app/ProgressDialog;
 
     .line 279
     return-void
@@ -2287,7 +2287,7 @@
 
     .prologue
     .line 428
-    invoke-direct {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->unregisterCloudReceiver()V
+    invoke-direct {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->unregisterCloudReceiver()V
 
     .line 429
     invoke-super {p0}, Landroid/preference/PreferenceFragment;->onDestroyView()V
@@ -2304,10 +2304,10 @@
     invoke-super {p0}, Landroid/preference/PreferenceFragment;->onPause()V
 
     .line 293
-    invoke-direct {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->dismissProgress()V
+    invoke-direct {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->dismissProgress()V
 
     .line 294
-    invoke-direct {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->unregisterCloudReceiver()V
+    invoke-direct {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->unregisterCloudReceiver()V
 
     .line 295
     return-void
@@ -2327,23 +2327,23 @@
     const/4 v6, 0x0
 
     .line 962
-    iget-boolean v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mIsConnected:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mIsConnected:Z
 
     if-nez v0, :cond_2
 
     .line 965
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->toastMsg:Landroid/widget/Toast;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->toastMsg:Landroid/widget/Toast;
 
     if-nez v0, :cond_0
 
     .line 966
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     const v1, 0x7f0e12a3
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2351,15 +2351,15 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->toastMsg:Landroid/widget/Toast;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->toastMsg:Landroid/widget/Toast;
 
     .line 968
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->toastMsg:Landroid/widget/Toast;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->toastMsg:Landroid/widget/Toast;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->toastMsg:Landroid/widget/Toast;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->toastMsg:Landroid/widget/Toast;
 
     invoke-virtual {v0}, Landroid/widget/Toast;->getView()Landroid/view/View;
 
@@ -2372,7 +2372,7 @@
     if-nez v0, :cond_1
 
     .line 969
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->toastMsg:Landroid/widget/Toast;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->toastMsg:Landroid/widget/Toast;
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
@@ -2383,7 +2383,7 @@
 
     .line 980
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefPhotos:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefPhotos:Landroid/preference/Preference;
 
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -2392,13 +2392,13 @@
     if-eqz v0, :cond_3
 
     .line 981
-    invoke-direct {p0, v6}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->startFragment(I)V
+    invoke-direct {p0, v6}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->startFragment(I)V
 
     goto :goto_0
 
     .line 982
     :cond_3
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefVideos:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefVideos:Landroid/preference/Preference;
 
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -2407,13 +2407,13 @@
     if-eqz v0, :cond_4
 
     .line 983
-    invoke-direct {p0, v8}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->startFragment(I)V
+    invoke-direct {p0, v8}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->startFragment(I)V
 
     goto :goto_0
 
     .line 984
     :cond_4
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefMusics:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefMusics:Landroid/preference/Preference;
 
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -2424,13 +2424,13 @@
     .line 985
     const/4 v0, 0x2
 
-    invoke-direct {p0, v0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->startFragment(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->startFragment(I)V
 
     goto :goto_0
 
     .line 986
     :cond_5
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefDocument:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefDocument:Landroid/preference/Preference;
 
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -2441,13 +2441,13 @@
     .line 987
     const/4 v0, 0x3
 
-    invoke-direct {p0, v0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->startFragment(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->startFragment(I)V
 
     goto :goto_0
 
     .line 1008
     :cond_6
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefDropboxAccount:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefDropboxAccount:Landroid/preference/Preference;
 
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -2456,7 +2456,7 @@
     if-eqz v0, :cond_1
 
     .line 1009
-    sget-boolean v0, Lcom/android/settings/cloud/CloudSettingConstants;->C_CHINA:Z
+    sget-boolean v0, Lcom/android/settings_ex/cloud/CloudSettingConstants;->C_CHINA:Z
 
     if-eqz v0, :cond_7
 
@@ -2465,25 +2465,25 @@
 
     const v1, 0x7f0e0c19
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1, v5}, Lcom/android/settings/cloud/CloudDialog;->getInstance(ILjava/lang/String;Lcom/android/settings/cloud/CloudDialog$DialogListener;)Lcom/android/settings/cloud/CloudDialog;
+    invoke-static {v0, v1, v5}, Lcom/android/settings_ex/cloud/CloudDialog;->getInstance(ILjava/lang/String;Lcom/android/settings_ex/cloud/CloudDialog$DialogListener;)Lcom/android/settings_ex/cloud/CloudDialog;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->dialogFragment:Landroid/app/DialogFragment;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->dialogFragment:Landroid/app/DialogFragment;
 
     .line 1012
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->dialogFragment:Landroid/app/DialogFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->dialogFragment:Landroid/app/DialogFragment;
 
     invoke-virtual {v0, v6}, Landroid/app/DialogFragment;->setCancelable(Z)V
 
     .line 1013
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->dialogFragment:Landroid/app/DialogFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->dialogFragment:Landroid/app/DialogFragment;
 
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
 
@@ -2495,7 +2495,7 @@
 
     .line 1016
     :cond_7
-    iget-object v0, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->accountManager:Landroid/accounts/AccountManager;
+    iget-object v0, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->accountManager:Landroid/accounts/AccountManager;
 
     const-string v1, "com.dropbox.android.account"
 
@@ -2523,22 +2523,22 @@
     invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     .line 1021
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/android/settings/SettingsActivity;
+    instance-of v0, v0, Lcom/android/settings_ex/SettingsActivity;
 
     if-eqz v0, :cond_8
 
     .line 1022
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
-    const-class v1, Lcom/android/settings/accounts/AccountSyncSettings;
+    const-class v1, Lcom/android/settings_ex/accounts/AccountSyncSettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
@@ -2548,19 +2548,19 @@
 
     iget-object v4, v4, Landroid/accounts/Account;->name:Ljava/lang/String;
 
-    invoke-virtual/range {v0 .. v6}, Lcom/android/settings/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
+    invoke-virtual/range {v0 .. v6}, Lcom/android/settings_ex/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
 
     goto/16 :goto_0
 
     .line 1026
     :cond_8
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceActivity;
 
-    const-class v1, Lcom/android/settings/accounts/AccountSyncSettings;
+    const-class v1, Lcom/android/settings_ex/accounts/AccountSyncSettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
@@ -2583,16 +2583,16 @@
     invoke-super {p0}, Landroid/preference/PreferenceFragment;->onResume()V
 
     .line 284
-    invoke-direct {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->registerCloudReceiver()V
+    invoke-direct {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->registerCloudReceiver()V
 
     .line 285
-    invoke-direct {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->requestCloudStatus()V
+    invoke-direct {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->requestCloudStatus()V
 
     .line 286
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->checkBackupAvailble()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->checkBackupAvailble()V
 
     .line 287
-    invoke-direct {p0}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->updatePreferences()V
+    invoke-direct {p0}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->updatePreferences()V
 
     .line 288
     return-void
@@ -2607,74 +2607,74 @@
     const/4 v3, 0x0
 
     .line 1132
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mVerifySamsungAccount:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mVerifySamsungAccount:Landroid/preference/Preference;
 
-    iget-object v2, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
 
-    invoke-direct {p0, v1, v2, v3}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v1, v2, v3}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 1133
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefAddSamsungAccount:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefAddSamsungAccount:Landroid/preference/Preference;
 
-    iget-object v2, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
 
-    invoke-direct {p0, v1, v2, v3}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v1, v2, v3}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 1134
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefSamsungAccount:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefSamsungAccount:Landroid/preference/Preference;
 
-    iget-object v2, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
 
-    invoke-direct {p0, v1, v2, v4}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v1, v2, v4}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 1136
-    iget-boolean v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isSyncAvailable:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isSyncAvailable:Z
 
     if-eqz v1, :cond_0
 
     .line 1137
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mDataSync:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mDataSync:Landroid/preference/Preference;
 
-    iget-object v2, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
 
-    invoke-direct {p0, v1, v2, v4}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v1, v2, v4}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 1138
     :cond_0
-    iget-boolean v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isBackupAppAvailable:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isBackupAppAvailable:Z
 
     if-eqz v1, :cond_3
 
     .line 1139
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mBackUp:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mBackUp:Landroid/preference/Preference;
 
-    iget-object v2, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
 
-    invoke-direct {p0, v1, v2, v4}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v1, v2, v4}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 1140
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mRestore:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mRestore:Landroid/preference/Preference;
 
-    iget-object v2, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
 
-    invoke-direct {p0, v1, v2, v4}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v1, v2, v4}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 1145
     :goto_0
-    iget-boolean v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->isQuotaStorageAvailable:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->isQuotaStorageAvailable:Z
 
     if-eqz v1, :cond_1
 
     .line 1146
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mQuotaStorage:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mQuotaStorage:Landroid/preference/Preference;
 
-    iget-object v2, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
 
-    invoke-direct {p0, v1, v2, v4}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v1, v2, v4}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 1148
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->accountManager:Landroid/accounts/AccountManager;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->accountManager:Landroid/accounts/AccountManager;
 
     const-string v2, "com.osp.app.signin"
 
@@ -2689,7 +2689,7 @@
     if-lez v1, :cond_2
 
     .line 1151
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefSamsungAccount:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefSamsungAccount:Landroid/preference/Preference;
 
     aget-object v2, v0, v3
 
@@ -2699,7 +2699,7 @@
 
     .line 1155
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v1}, Landroid/app/ProgressDialog;->dismiss()V
 
@@ -2709,18 +2709,18 @@
     .line 1142
     .end local v0    # "samsungAccount":[Landroid/accounts/Account;
     :cond_3
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mBackUp:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mBackUp:Landroid/preference/Preference;
 
-    iget-object v2, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
 
-    invoke-direct {p0, v1, v2, v3}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v1, v2, v3}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 1143
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mRestore:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mRestore:Landroid/preference/Preference;
 
-    iget-object v2, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
 
-    invoke-direct {p0, v1, v2, v3}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v1, v2, v3}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     goto :goto_0
 .end method
@@ -2734,21 +2734,21 @@
     const/4 v3, 0x0
 
     .line 1159
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mVerifySamsungAccount:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mVerifySamsungAccount:Landroid/preference/Preference;
 
-    iget-object v2, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
 
-    invoke-direct {p0, v1, v2, v4}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v1, v2, v4}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 1160
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefSamsungAccount:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefSamsungAccount:Landroid/preference/Preference;
 
-    iget-object v2, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
 
-    invoke-direct {p0, v1, v2, v4}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v1, v2, v4}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 1161
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->accountManager:Landroid/accounts/AccountManager;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->accountManager:Landroid/accounts/AccountManager;
 
     const-string v2, "com.osp.app.signin"
 
@@ -2763,7 +2763,7 @@
     if-lez v1, :cond_0
 
     .line 1164
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefSamsungAccount:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefSamsungAccount:Landroid/preference/Preference;
 
     aget-object v2, v0, v3
 
@@ -2773,42 +2773,42 @@
 
     .line 1168
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mPrefAddSamsungAccount:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mPrefAddSamsungAccount:Landroid/preference/Preference;
 
-    iget-object v2, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
 
-    invoke-direct {p0, v1, v2, v3}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v1, v2, v3}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 1169
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mDataSync:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mDataSync:Landroid/preference/Preference;
 
-    iget-object v2, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
 
-    invoke-direct {p0, v1, v2, v3}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v1, v2, v3}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 1170
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mQuotaStorage:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mQuotaStorage:Landroid/preference/Preference;
 
-    iget-object v2, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
 
-    invoke-direct {p0, v1, v2, v3}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v1, v2, v3}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 1171
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mBackUp:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mBackUp:Landroid/preference/Preference;
 
-    iget-object v2, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
 
-    invoke-direct {p0, v1, v2, v3}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v1, v2, v3}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 1172
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mRestore:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mRestore:Landroid/preference/Preference;
 
-    iget-object v2, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
+    iget-object v2, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->categorySamsungServices:Landroid/preference/PreferenceGroup;
 
-    invoke-direct {p0, v1, v2, v3}, Lcom/android/settings/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
+    invoke-direct {p0, v1, v2, v3}, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->showPreference(Landroid/preference/Preference;Landroid/preference/PreferenceGroup;Z)V
 
     .line 1174
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v1}, Landroid/app/ProgressDialog;->dismiss()V
 

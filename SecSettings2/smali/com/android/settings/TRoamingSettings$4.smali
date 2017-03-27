@@ -1,4 +1,4 @@
-.class Lcom/android/settings/TRoamingSettings$4;
+.class Lcom/android/settings_ex/TRoamingSettings$4;
 .super Ljava/lang/Object;
 .source "TRoamingSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/TRoamingSettings;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    value = Lcom/android/settings_ex/TRoamingSettings;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/TRoamingSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/TRoamingSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/TRoamingSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/TRoamingSettings;)V
     .locals 0
 
     .prologue
     .line 535
-    iput-object p1, p0, Lcom/android/settings/TRoamingSettings$4;->this$0:Lcom/android/settings/TRoamingSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/TRoamingSettings$4;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -74,9 +74,9 @@
 
     .line 542
     :try_start_0
-    iget-object v2, p0, Lcom/android/settings/TRoamingSettings$4;->this$0:Lcom/android/settings/TRoamingSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/TRoamingSettings$4;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
-    invoke-virtual {v2, v1}, Lcom/android/settings/TRoamingSettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v2, v1}, Lcom/android/settings_ex/TRoamingSettings;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 

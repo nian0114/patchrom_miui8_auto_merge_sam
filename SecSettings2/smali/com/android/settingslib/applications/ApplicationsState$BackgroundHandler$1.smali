@@ -1,11 +1,11 @@
-.class Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler$1;
+.class Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler$1;
 .super Landroid/content/pm/IPackageStatsObserver$Stub;
 .source "ApplicationsState.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;
+    value = Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;
+.field final synthetic this$1:Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;)V
+.method constructor <init>(Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;)V
     .locals 0
 
     .prologue
     .line 973
-    iput-object p1, p0, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;
+    iput-object p1, p0, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageStatsObserver$Stub;-><init>()V
 
@@ -46,11 +46,11 @@
     .local v10, "sizeChanged":Z
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;
+    iget-object v12, v0, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;
 
-    iget-object v12, v12, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settingslib/applications/ApplicationsState;
+    iget-object v12, v12, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settings_exlib/applications/ApplicationsState;
 
-    iget-object v13, v12, Lcom/android/settingslib/applications/ApplicationsState;->mEntriesMap:Landroid/util/SparseArray;
+    iget-object v13, v12, Lcom/android/settings_exlib/applications/ApplicationsState;->mEntriesMap:Landroid/util/SparseArray;
 
     monitor-enter v13
 
@@ -58,11 +58,11 @@
     :try_start_0
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;
+    iget-object v12, v0, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;
 
-    iget-object v12, v12, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settingslib/applications/ApplicationsState;
+    iget-object v12, v12, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settings_exlib/applications/ApplicationsState;
 
-    iget-object v12, v12, Lcom/android/settingslib/applications/ApplicationsState;->mEntriesMap:Landroid/util/SparseArray;
+    iget-object v12, v12, Lcom/android/settings_exlib/applications/ApplicationsState;->mEntriesMap:Landroid/util/SparseArray;
 
     move-object/from16 v0, p1
 
@@ -75,7 +75,7 @@
     check-cast v11, Ljava/util/HashMap;
 
     .line 979
-    .local v11, "userMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/settingslib/applications/ApplicationsState$AppEntry;>;"
+    .local v11, "userMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;>;"
     if-nez v11, :cond_0
 
     .line 981
@@ -95,10 +95,10 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+    check-cast v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
 
     .line 984
-    .local v2, "entry":Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+    .local v2, "entry":Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
     if-eqz v2, :cond_3
 
     .line 985
@@ -110,12 +110,12 @@
     const/4 v12, 0x0
 
     :try_start_1
-    iput-boolean v12, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->sizeStale:Z
+    iput-boolean v12, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->sizeStale:Z
 
     .line 987
     const-wide/16 v14, 0x0
 
-    iput-wide v14, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->sizeLoadStart:J
+    iput-wide v14, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->sizeLoadStart:J
 
     .line 988
     move-object/from16 v0, p1
@@ -150,14 +150,14 @@
 
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;
+    iget-object v12, v0, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;
 
-    iget-object v12, v12, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settingslib/applications/ApplicationsState;
+    iget-object v12, v12, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settings_exlib/applications/ApplicationsState;
 
     move-object/from16 v0, p1
 
-    # invokes: Lcom/android/settingslib/applications/ApplicationsState;->getTotalInternalSize(Landroid/content/pm/PackageStats;)J
-    invoke-static {v12, v0}, Lcom/android/settingslib/applications/ApplicationsState;->access$300(Lcom/android/settingslib/applications/ApplicationsState;Landroid/content/pm/PackageStats;)J
+    # invokes: Lcom/android/settings_exlib/applications/ApplicationsState;->getTotalInternalSize(Landroid/content/pm/PackageStats;)J
+    invoke-static {v12, v0}, Lcom/android/settings_exlib/applications/ApplicationsState;->access$300(Lcom/android/settings_exlib/applications/ApplicationsState;Landroid/content/pm/PackageStats;)J
 
     move-result-wide v16
 
@@ -165,13 +165,13 @@
 
     .line 994
     .local v8, "newSize":J
-    iget-wide v14, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->size:J
+    iget-wide v14, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->size:J
 
     cmp-long v12, v14, v8
 
     if-nez v12, :cond_1
 
-    iget-wide v14, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->cacheSize:J
+    iget-wide v14, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->cacheSize:J
 
     move-object/from16 v0, p1
 
@@ -183,7 +183,7 @@
 
     if-nez v12, :cond_1
 
-    iget-wide v14, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->codeSize:J
+    iget-wide v14, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->codeSize:J
 
     move-object/from16 v0, p1
 
@@ -195,7 +195,7 @@
 
     if-nez v12, :cond_1
 
-    iget-wide v14, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->dataSize:J
+    iget-wide v14, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->dataSize:J
 
     move-object/from16 v0, p1
 
@@ -207,19 +207,19 @@
 
     if-nez v12, :cond_1
 
-    iget-wide v14, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->externalCodeSize:J
+    iget-wide v14, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->externalCodeSize:J
 
     cmp-long v12, v14, v4
 
     if-nez v12, :cond_1
 
-    iget-wide v14, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->externalDataSize:J
+    iget-wide v14, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->externalDataSize:J
 
     cmp-long v12, v14, v6
 
     if-nez v12, :cond_1
 
-    iget-wide v14, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->externalCacheSize:J
+    iget-wide v14, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->externalCacheSize:J
 
     move-object/from16 v0, p1
 
@@ -233,121 +233,121 @@
 
     .line 1001
     :cond_1
-    iput-wide v8, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->size:J
+    iput-wide v8, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->size:J
 
     .line 1002
     move-object/from16 v0, p1
 
     iget-wide v14, v0, Landroid/content/pm/PackageStats;->cacheSize:J
 
-    iput-wide v14, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->cacheSize:J
+    iput-wide v14, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->cacheSize:J
 
     .line 1003
     move-object/from16 v0, p1
 
     iget-wide v14, v0, Landroid/content/pm/PackageStats;->codeSize:J
 
-    iput-wide v14, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->codeSize:J
+    iput-wide v14, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->codeSize:J
 
     .line 1004
     move-object/from16 v0, p1
 
     iget-wide v14, v0, Landroid/content/pm/PackageStats;->dataSize:J
 
-    iput-wide v14, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->dataSize:J
+    iput-wide v14, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->dataSize:J
 
     .line 1005
-    iput-wide v4, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->externalCodeSize:J
+    iput-wide v4, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->externalCodeSize:J
 
     .line 1006
-    iput-wide v6, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->externalDataSize:J
+    iput-wide v6, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->externalDataSize:J
 
     .line 1007
     move-object/from16 v0, p1
 
     iget-wide v14, v0, Landroid/content/pm/PackageStats;->externalCacheSize:J
 
-    iput-wide v14, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->externalCacheSize:J
+    iput-wide v14, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->externalCacheSize:J
 
     .line 1008
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;
+    iget-object v12, v0, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;
 
-    iget-object v12, v12, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settingslib/applications/ApplicationsState;
+    iget-object v12, v12, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settings_exlib/applications/ApplicationsState;
 
-    iget-wide v14, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->size:J
+    iget-wide v14, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->size:J
 
-    # invokes: Lcom/android/settingslib/applications/ApplicationsState;->getSizeStr(J)Ljava/lang/String;
-    invoke-static {v12, v14, v15}, Lcom/android/settingslib/applications/ApplicationsState;->access$400(Lcom/android/settingslib/applications/ApplicationsState;J)Ljava/lang/String;
+    # invokes: Lcom/android/settings_exlib/applications/ApplicationsState;->getSizeStr(J)Ljava/lang/String;
+    invoke-static {v12, v14, v15}, Lcom/android/settings_exlib/applications/ApplicationsState;->access$400(Lcom/android/settings_exlib/applications/ApplicationsState;J)Ljava/lang/String;
 
     move-result-object v12
 
-    iput-object v12, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->sizeStr:Ljava/lang/String;
+    iput-object v12, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->sizeStr:Ljava/lang/String;
 
     .line 1009
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;
+    iget-object v12, v0, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;
 
-    iget-object v12, v12, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settingslib/applications/ApplicationsState;
+    iget-object v12, v12, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settings_exlib/applications/ApplicationsState;
 
     move-object/from16 v0, p1
 
-    # invokes: Lcom/android/settingslib/applications/ApplicationsState;->getTotalInternalSize(Landroid/content/pm/PackageStats;)J
-    invoke-static {v12, v0}, Lcom/android/settingslib/applications/ApplicationsState;->access$300(Lcom/android/settingslib/applications/ApplicationsState;Landroid/content/pm/PackageStats;)J
+    # invokes: Lcom/android/settings_exlib/applications/ApplicationsState;->getTotalInternalSize(Landroid/content/pm/PackageStats;)J
+    invoke-static {v12, v0}, Lcom/android/settings_exlib/applications/ApplicationsState;->access$300(Lcom/android/settings_exlib/applications/ApplicationsState;Landroid/content/pm/PackageStats;)J
 
     move-result-wide v14
 
-    iput-wide v14, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->internalSize:J
+    iput-wide v14, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->internalSize:J
 
     .line 1010
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;
+    iget-object v12, v0, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;
 
-    iget-object v12, v12, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settingslib/applications/ApplicationsState;
+    iget-object v12, v12, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settings_exlib/applications/ApplicationsState;
 
-    iget-wide v14, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->internalSize:J
+    iget-wide v14, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->internalSize:J
 
-    # invokes: Lcom/android/settingslib/applications/ApplicationsState;->getSizeStr(J)Ljava/lang/String;
-    invoke-static {v12, v14, v15}, Lcom/android/settingslib/applications/ApplicationsState;->access$400(Lcom/android/settingslib/applications/ApplicationsState;J)Ljava/lang/String;
+    # invokes: Lcom/android/settings_exlib/applications/ApplicationsState;->getSizeStr(J)Ljava/lang/String;
+    invoke-static {v12, v14, v15}, Lcom/android/settings_exlib/applications/ApplicationsState;->access$400(Lcom/android/settings_exlib/applications/ApplicationsState;J)Ljava/lang/String;
 
     move-result-object v12
 
-    iput-object v12, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->internalSizeStr:Ljava/lang/String;
+    iput-object v12, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->internalSizeStr:Ljava/lang/String;
 
     .line 1011
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;
+    iget-object v12, v0, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;
 
-    iget-object v12, v12, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settingslib/applications/ApplicationsState;
+    iget-object v12, v12, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settings_exlib/applications/ApplicationsState;
 
     move-object/from16 v0, p1
 
-    # invokes: Lcom/android/settingslib/applications/ApplicationsState;->getTotalExternalSize(Landroid/content/pm/PackageStats;)J
-    invoke-static {v12, v0}, Lcom/android/settingslib/applications/ApplicationsState;->access$500(Lcom/android/settingslib/applications/ApplicationsState;Landroid/content/pm/PackageStats;)J
+    # invokes: Lcom/android/settings_exlib/applications/ApplicationsState;->getTotalExternalSize(Landroid/content/pm/PackageStats;)J
+    invoke-static {v12, v0}, Lcom/android/settings_exlib/applications/ApplicationsState;->access$500(Lcom/android/settings_exlib/applications/ApplicationsState;Landroid/content/pm/PackageStats;)J
 
     move-result-wide v14
 
-    iput-wide v14, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->externalSize:J
+    iput-wide v14, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->externalSize:J
 
     .line 1012
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;
+    iget-object v12, v0, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;
 
-    iget-object v12, v12, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settingslib/applications/ApplicationsState;
+    iget-object v12, v12, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settings_exlib/applications/ApplicationsState;
 
-    iget-wide v14, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->externalSize:J
+    iget-wide v14, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->externalSize:J
 
-    # invokes: Lcom/android/settingslib/applications/ApplicationsState;->getSizeStr(J)Ljava/lang/String;
-    invoke-static {v12, v14, v15}, Lcom/android/settingslib/applications/ApplicationsState;->access$400(Lcom/android/settingslib/applications/ApplicationsState;J)Ljava/lang/String;
+    # invokes: Lcom/android/settings_exlib/applications/ApplicationsState;->getSizeStr(J)Ljava/lang/String;
+    invoke-static {v12, v14, v15}, Lcom/android/settings_exlib/applications/ApplicationsState;->access$400(Lcom/android/settings_exlib/applications/ApplicationsState;J)Ljava/lang/String;
 
     move-result-object v12
 
-    iput-object v12, v2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->externalSizeStr:Ljava/lang/String;
+    iput-object v12, v2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->externalSizeStr:Ljava/lang/String;
 
     .line 1015
     const/4 v10, 0x1
@@ -365,11 +365,11 @@
     :try_start_2
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;
+    iget-object v12, v0, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;
 
-    iget-object v12, v12, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settingslib/applications/ApplicationsState;
+    iget-object v12, v12, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settings_exlib/applications/ApplicationsState;
 
-    iget-object v12, v12, Lcom/android/settingslib/applications/ApplicationsState;->mMainHandler:Lcom/android/settingslib/applications/ApplicationsState$MainHandler;
+    iget-object v12, v12, Lcom/android/settings_exlib/applications/ApplicationsState;->mMainHandler:Lcom/android/settings_exlib/applications/ApplicationsState$MainHandler;
 
     const/4 v14, 0x4
 
@@ -377,7 +377,7 @@
 
     iget-object v15, v0, Landroid/content/pm/PackageStats;->packageName:Ljava/lang/String;
 
-    invoke-virtual {v12, v14, v15}, Lcom/android/settingslib/applications/ApplicationsState$MainHandler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {v12, v14, v15}, Lcom/android/settings_exlib/applications/ApplicationsState$MainHandler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v3
 
@@ -385,13 +385,13 @@
     .local v3, "msg":Landroid/os/Message;
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;
+    iget-object v12, v0, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;
 
-    iget-object v12, v12, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settingslib/applications/ApplicationsState;
+    iget-object v12, v12, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settings_exlib/applications/ApplicationsState;
 
-    iget-object v12, v12, Lcom/android/settingslib/applications/ApplicationsState;->mMainHandler:Lcom/android/settingslib/applications/ApplicationsState$MainHandler;
+    iget-object v12, v12, Lcom/android/settings_exlib/applications/ApplicationsState;->mMainHandler:Lcom/android/settings_exlib/applications/ApplicationsState$MainHandler;
 
-    invoke-virtual {v12, v3}, Lcom/android/settingslib/applications/ApplicationsState$MainHandler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v12, v3}, Lcom/android/settings_exlib/applications/ApplicationsState$MainHandler;->sendMessage(Landroid/os/Message;)Z
 
     .line 1024
     .end local v3    # "msg":Landroid/os/Message;
@@ -401,21 +401,21 @@
     :cond_3
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;
+    iget-object v12, v0, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;
 
-    iget-object v12, v12, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settingslib/applications/ApplicationsState;
+    iget-object v12, v12, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settings_exlib/applications/ApplicationsState;
 
-    iget-object v12, v12, Lcom/android/settingslib/applications/ApplicationsState;->mCurComputingSizePkg:Ljava/lang/String;
+    iget-object v12, v12, Lcom/android/settings_exlib/applications/ApplicationsState;->mCurComputingSizePkg:Ljava/lang/String;
 
     if-eqz v12, :cond_4
 
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;
+    iget-object v12, v0, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;
 
-    iget-object v12, v12, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settingslib/applications/ApplicationsState;
+    iget-object v12, v12, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settings_exlib/applications/ApplicationsState;
 
-    iget-object v12, v12, Lcom/android/settingslib/applications/ApplicationsState;->mCurComputingSizePkg:Ljava/lang/String;
+    iget-object v12, v12, Lcom/android/settings_exlib/applications/ApplicationsState;->mCurComputingSizePkg:Ljava/lang/String;
 
     move-object/from16 v0, p1
 
@@ -429,11 +429,11 @@
 
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;
+    iget-object v12, v0, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;
 
-    iget-object v12, v12, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settingslib/applications/ApplicationsState;
+    iget-object v12, v12, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settings_exlib/applications/ApplicationsState;
 
-    iget v12, v12, Lcom/android/settingslib/applications/ApplicationsState;->mCurComputingSizeUserId:I
+    iget v12, v12, Lcom/android/settings_exlib/applications/ApplicationsState;->mCurComputingSizeUserId:I
 
     move-object/from16 v0, p1
 
@@ -444,22 +444,22 @@
     .line 1027
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;
+    iget-object v12, v0, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;
 
-    iget-object v12, v12, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settingslib/applications/ApplicationsState;
+    iget-object v12, v12, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;->this$0:Lcom/android/settings_exlib/applications/ApplicationsState;
 
     const/4 v14, 0x0
 
-    iput-object v14, v12, Lcom/android/settingslib/applications/ApplicationsState;->mCurComputingSizePkg:Ljava/lang/String;
+    iput-object v14, v12, Lcom/android/settings_exlib/applications/ApplicationsState;->mCurComputingSizePkg:Ljava/lang/String;
 
     .line 1028
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;
+    iget-object v12, v0, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;
 
     const/4 v14, 0x4
 
-    invoke-virtual {v12, v14}, Lcom/android/settingslib/applications/ApplicationsState$BackgroundHandler;->sendEmptyMessage(I)Z
+    invoke-virtual {v12, v14}, Lcom/android/settings_exlib/applications/ApplicationsState$BackgroundHandler;->sendEmptyMessage(I)Z
 
     .line 1031
     :cond_4
@@ -467,8 +467,8 @@
 
     goto/16 :goto_0
 
-    .end local v2    # "entry":Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
-    .end local v11    # "userMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/settingslib/applications/ApplicationsState$AppEntry;>;"
+    .end local v2    # "entry":Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
+    .end local v11    # "userMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;>;"
     :catchall_0
     move-exception v12
 
@@ -479,8 +479,8 @@
     throw v12
 
     .line 1017
-    .restart local v2    # "entry":Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
-    .restart local v11    # "userMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/settingslib/applications/ApplicationsState$AppEntry;>;"
+    .restart local v2    # "entry":Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
+    .restart local v11    # "userMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;>;"
     :catchall_1
     move-exception v12
 

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/IntervalSeekBar$Line;
+.class Lcom/android/settings_ex/IntervalSeekBar$Line;
 .super Ljava/lang/Object;
 .source "IntervalSeekBar.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/IntervalSeekBar;
+    value = Lcom/android/settings_ex/IntervalSeekBar;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -33,13 +33,13 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/IntervalSeekBar$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/IntervalSeekBar$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/IntervalSeekBar$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/IntervalSeekBar$1;
 
     .prologue
     .line 121
-    invoke-direct {p0}, Lcom/android/settings/IntervalSeekBar$Line;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/IntervalSeekBar$Line;-><init>()V
 
     return-void
 .end method

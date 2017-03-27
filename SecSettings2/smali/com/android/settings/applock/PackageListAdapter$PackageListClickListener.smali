@@ -1,4 +1,4 @@
-.class Lcom/android/settings/applock/PackageListAdapter$PackageListClickListener;
+.class Lcom/android/settings_ex/applock/PackageListAdapter$PackageListClickListener;
 .super Ljava/lang/Object;
 .source "PackageListAdapter.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applock/PackageListAdapter;
+    value = Lcom/android/settings_ex/applock/PackageListAdapter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,25 +18,25 @@
 
 
 # instance fields
-.field private mHolder:Lcom/android/settings/applock/PackageListAdapter$ViewHolder;
+.field private mHolder:Lcom/android/settings_ex/applock/PackageListAdapter$ViewHolder;
 
-.field final synthetic this$0:Lcom/android/settings/applock/PackageListAdapter;
+.field final synthetic this$0:Lcom/android/settings_ex/applock/PackageListAdapter;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/settings/applock/PackageListAdapter;ILcom/android/settings/applock/PackageListAdapter$ViewHolder;)V
+.method public constructor <init>(Lcom/android/settings_ex/applock/PackageListAdapter;ILcom/android/settings_ex/applock/PackageListAdapter$ViewHolder;)V
     .locals 0
     .param p2, "pos"    # I
-    .param p3, "holder"    # Lcom/android/settings/applock/PackageListAdapter$ViewHolder;
+    .param p3, "holder"    # Lcom/android/settings_ex/applock/PackageListAdapter$ViewHolder;
 
     .prologue
     .line 149
-    iput-object p1, p0, Lcom/android/settings/applock/PackageListAdapter$PackageListClickListener;->this$0:Lcom/android/settings/applock/PackageListAdapter;
+    iput-object p1, p0, Lcom/android/settings_ex/applock/PackageListAdapter$PackageListClickListener;->this$0:Lcom/android/settings_ex/applock/PackageListAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 150
-    iput-object p3, p0, Lcom/android/settings/applock/PackageListAdapter$PackageListClickListener;->mHolder:Lcom/android/settings/applock/PackageListAdapter$ViewHolder;
+    iput-object p3, p0, Lcom/android/settings_ex/applock/PackageListAdapter$PackageListClickListener;->mHolder:Lcom/android/settings_ex/applock/PackageListAdapter$ViewHolder;
 
     .line 151
     return-void
@@ -50,13 +50,13 @@
 
     .prologue
     .line 155
-    iget-object v0, p0, Lcom/android/settings/applock/PackageListAdapter$PackageListClickListener;->mHolder:Lcom/android/settings/applock/PackageListAdapter$ViewHolder;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/PackageListAdapter$PackageListClickListener;->mHolder:Lcom/android/settings_ex/applock/PackageListAdapter$ViewHolder;
 
-    iget-object v1, v0, Lcom/android/settings/applock/PackageListAdapter$ViewHolder;->mLockSwitch:Landroid/widget/Switch;
+    iget-object v1, v0, Lcom/android/settings_ex/applock/PackageListAdapter$ViewHolder;->mLockSwitch:Landroid/widget/Switch;
 
-    iget-object v0, p0, Lcom/android/settings/applock/PackageListAdapter$PackageListClickListener;->mHolder:Lcom/android/settings/applock/PackageListAdapter$ViewHolder;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/PackageListAdapter$PackageListClickListener;->mHolder:Lcom/android/settings_ex/applock/PackageListAdapter$ViewHolder;
 
-    iget-object v0, v0, Lcom/android/settings/applock/PackageListAdapter$ViewHolder;->mLockSwitch:Landroid/widget/Switch;
+    iget-object v0, v0, Lcom/android/settings_ex/applock/PackageListAdapter$ViewHolder;->mLockSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v0}, Landroid/widget/Switch;->isChecked()Z
 

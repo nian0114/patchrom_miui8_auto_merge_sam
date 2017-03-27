@@ -1,4 +1,4 @@
-.class Lcom/android/settings/bluetooth/BluetoothDevicePreference$1;
+.class Lcom/android/settings_ex/bluetooth/BluetoothDevicePreference$1;
 .super Ljava/lang/Object;
 .source "BluetoothDevicePreference.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/bluetooth/BluetoothDevicePreference;->onClick(Landroid/view/View;)V
+    value = Lcom/android/settings_ex/bluetooth/BluetoothDevicePreference;->onClick(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/bluetooth/BluetoothDevicePreference;
+.field final synthetic this$0:Lcom/android/settings_ex/bluetooth/BluetoothDevicePreference;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/bluetooth/BluetoothDevicePreference;)V
+.method constructor <init>(Lcom/android/settings_ex/bluetooth/BluetoothDevicePreference;)V
     .locals 0
 
     .prologue
     .line 240
-    iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothDevicePreference$1;->this$0:Lcom/android/settings/bluetooth/BluetoothDevicePreference;
+    iput-object p1, p0, Lcom/android/settings_ex/bluetooth/BluetoothDevicePreference$1;->this$0:Lcom/android/settings_ex/bluetooth/BluetoothDevicePreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -59,8 +59,8 @@
     .line 248
     const/4 v1, 0x1
 
-    # setter for: Lcom/android/settings/bluetooth/BluetoothDevicePreference;->mClickable:Z
-    invoke-static {v1}, Lcom/android/settings/bluetooth/BluetoothDevicePreference;->access$002(Z)Z
+    # setter for: Lcom/android/settings_ex/bluetooth/BluetoothDevicePreference;->mClickable:Z
+    invoke-static {v1}, Lcom/android/settings_ex/bluetooth/BluetoothDevicePreference;->access$002(Z)Z
 
     .line 249
     return-void

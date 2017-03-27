@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/deviceinfo/ImeiInformation;
-.super Lcom/android/settings/InstrumentedPreferenceActivity;
+.class public Lcom/android/settings_ex/deviceinfo/ImeiInformation;
+.super Lcom/android/settings_ex/InstrumentedPreferenceActivity;
 .source "ImeiInformation.java"
 
 
@@ -33,47 +33,47 @@
 
     .prologue
     .line 47
-    invoke-direct {p0}, Lcom/android/settings/InstrumentedPreferenceActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/InstrumentedPreferenceActivity;-><init>()V
 
     .line 59
     const-string v0, "000"
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_three:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_three:Ljava/lang/String;
 
     .line 60
     const-string v0, "0000"
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_four:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_four:Ljava/lang/String;
 
     .line 61
     const-string v0, "00000"
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_five:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_five:Ljava/lang/String;
 
     .line 62
     const-string v0, "000000"
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_six:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_six:Ljava/lang/String;
 
     .line 63
     const-string v0, "0000000"
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_seven:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_seven:Ljava/lang/String;
 
     .line 64
     const-string v0, "00000000"
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_eight:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_eight:Ljava/lang/String;
 
     .line 65
     const-string v0, "000000000"
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_nine:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_nine:Ljava/lang/String;
 
     .line 70
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->isMultiSIM:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->isMultiSIM:Z
 
     return-void
 .end method
@@ -163,7 +163,7 @@
     if-ne v0, v2, :cond_1
 
     .line 350
-    invoke-direct {p0, p1}, Lcom/android/settings/deviceinfo/ImeiInformation;->convertHexaESNtoDec(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->convertHexaESNtoDec(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -179,7 +179,7 @@
     if-ne v0, v2, :cond_0
 
     .line 352
-    invoke-direct {p0, p1}, Lcom/android/settings/deviceinfo/ImeiInformation;->convertHexaMEIDtoDec(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->convertHexaMEIDtoDec(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -295,7 +295,7 @@
 
     .line 388
     :pswitch_4
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_three:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_three:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -303,7 +303,7 @@
 
     .line 391
     :pswitch_5
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_four:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_four:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -311,7 +311,7 @@
 
     .line 394
     :pswitch_6
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_five:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_five:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -319,7 +319,7 @@
 
     .line 397
     :pswitch_7
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_six:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_six:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -327,7 +327,7 @@
 
     .line 400
     :pswitch_8
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_seven:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_seven:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -448,7 +448,7 @@
 
     .line 425
     :pswitch_2
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_three:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_three:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -456,7 +456,7 @@
 
     .line 428
     :pswitch_3
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_four:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_four:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -464,7 +464,7 @@
 
     .line 431
     :pswitch_4
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_five:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_five:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -472,7 +472,7 @@
 
     .line 434
     :pswitch_5
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_six:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_six:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -480,7 +480,7 @@
 
     .line 437
     :pswitch_6
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_seven:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_seven:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -488,7 +488,7 @@
 
     .line 440
     :pswitch_7
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_eight:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_eight:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -496,7 +496,7 @@
 
     .line 443
     :pswitch_8
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_nine:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_nine:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -520,7 +520,7 @@
 
     .line 457
     :pswitch_b
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_three:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_three:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -528,7 +528,7 @@
 
     .line 460
     :pswitch_c
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_four:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_four:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -536,7 +536,7 @@
 
     .line 463
     :pswitch_d
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_five:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_five:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -544,7 +544,7 @@
 
     .line 466
     :pswitch_e
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_six:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_six:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -552,7 +552,7 @@
 
     .line 469
     :pswitch_f
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->zero_seven:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->zero_seven:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -605,7 +605,7 @@
     .local v0, "imei":Ljava/lang/String;
     const-string v2, "USC"
 
-    sget-object v3, Lcom/android/settings/deviceinfo/ImeiInformation;->sSalesCode:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -615,7 +615,7 @@
 
     const-string v2, "XAR"
 
-    sget-object v3, Lcom/android/settings/deviceinfo/ImeiInformation;->sSalesCode:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -650,7 +650,7 @@
     :cond_2
     const-string v2, "VZW"
 
-    sget-object v3, Lcom/android/settings/deviceinfo/ImeiInformation;->sSalesCode:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -661,7 +661,7 @@
     if-eqz v0, :cond_1
 
     .line 264
-    invoke-direct {p0, v0}, Lcom/android/settings/deviceinfo/ImeiInformation;->convert2VZWFormat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->convert2VZWFormat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -688,7 +688,7 @@
     .local v0, "iccId":Ljava/lang/String;
     const-string v2, "VZW"
 
-    sget-object v3, Lcom/android/settings/deviceinfo/ImeiInformation;->sSalesCode:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -699,7 +699,7 @@
     if-eqz v0, :cond_0
 
     .line 252
-    invoke-direct {p0, v0}, Lcom/android/settings/deviceinfo/ImeiInformation;->convert2VZWFormat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->convert2VZWFormat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -817,7 +817,7 @@
 
     move-result-object v4
 
-    invoke-direct {p0, v0}, Lcom/android/settings/deviceinfo/ImeiInformation;->convertDeviceIdtoDec(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->convertDeviceIdtoDec(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v5
 
@@ -869,7 +869,7 @@
     :cond_2
     const-string v4, "VZW"
 
-    sget-object v5, Lcom/android/settings/deviceinfo/ImeiInformation;->sSalesCode:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -877,13 +877,13 @@
 
     if-nez v4, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isMetroPCS()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMetroPCS()Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticModel()Z
 
     move-result v4
 
@@ -937,7 +937,7 @@
     if-le p1, v1, :cond_0
 
     :goto_0
-    iput-boolean v1, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->isMultiSIM:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->isMultiSIM:Z
 
     .line 114
     const/4 v0, 0x0
@@ -949,13 +949,13 @@
     .line 115
     const v1, 0x7f080037
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/deviceinfo/ImeiInformation;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->addPreferencesFromResource(I)V
 
     .line 116
-    invoke-direct {p0, v0}, Lcom/android/settings/deviceinfo/ImeiInformation;->setPreferenceValue(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->setPreferenceValue(I)V
 
     .line 117
-    invoke-direct {p0, v0}, Lcom/android/settings/deviceinfo/ImeiInformation;->setNewKey(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->setNewKey(I)V
 
     .line 114
     add-int/lit8 v0, v0, 0x1
@@ -981,7 +981,7 @@
 
     .prologue
     .line 328
-    invoke-virtual {p0, p1}, Lcom/android/settings/deviceinfo/ImeiInformation;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
@@ -990,7 +990,7 @@
     if-eqz v0, :cond_0
 
     .line 330
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/ImeiInformation;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 
@@ -1007,7 +1007,7 @@
 
     .prologue
     .line 287
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/ImeiInformation;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v4
 
@@ -1077,7 +1077,7 @@
     invoke-virtual {v3, v2}, Landroid/preference/Preference;->setKey(Ljava/lang/String;)V
 
     .line 295
-    invoke-direct {p0, v3, p1}, Lcom/android/settings/deviceinfo/ImeiInformation;->updateTitle(Landroid/preference/Preference;I)V
+    invoke-direct {p0, v3, p1}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->updateTitle(Landroid/preference/Preference;I)V
 
     .line 289
     :cond_0
@@ -1117,7 +1117,7 @@
 
     if-eq v5, v8, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isMetroPCS()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMetroPCS()Z
 
     move-result v5
 
@@ -1125,7 +1125,7 @@
 
     const-string v5, "VZW"
 
-    sget-object v6, Lcom/android/settings/deviceinfo/ImeiInformation;->sSalesCode:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1135,7 +1135,7 @@
 
     .line 128
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/ImeiInformation;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -1150,7 +1150,7 @@
     .line 129
     const-string v5, "min_number"
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/deviceinfo/ImeiInformation;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v5
 
@@ -1162,7 +1162,7 @@
     :cond_1
     const-string v5, "VZW"
 
-    sget-object v6, Lcom/android/settings/deviceinfo/ImeiInformation;->sSalesCode:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1183,13 +1183,13 @@
     if-eqz v5, :cond_3
 
     :cond_2
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticModel()Z
 
     move-result v5
 
     if-nez v5, :cond_3
 
-    invoke-static {}, Lcom/android/settings/Utils;->isMetroPCS()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMetroPCS()Z
 
     move-result v5
 
@@ -1199,16 +1199,16 @@
     :cond_3
     const-string v5, "min_number"
 
-    invoke-direct {p0, v5}, Lcom/android/settings/deviceinfo/ImeiInformation;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 136
     const-string v5, "prl_version"
 
-    invoke-direct {p0, v5}, Lcom/android/settings/deviceinfo/ImeiInformation;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 144
     :goto_0
-    invoke-direct {p0, p1}, Lcom/android/settings/deviceinfo/ImeiInformation;->getMeidNumber(I)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->getMeidNumber(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1219,13 +1219,13 @@
     .line 146
     const-string v5, "meid_number"
 
-    invoke-direct {p0, v5}, Lcom/android/settings/deviceinfo/ImeiInformation;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 151
     :goto_1
     const-string v5, "VZW"
 
-    sget-object v6, Lcom/android/settings/deviceinfo/ImeiInformation;->sSalesCode:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1233,7 +1233,7 @@
 
     if-nez v5, :cond_4
 
-    invoke-static {}, Lcom/android/settings/Utils;->isMetroPCS()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMetroPCS()Z
 
     move-result v5
 
@@ -1243,24 +1243,24 @@
     :cond_4
     const-string v5, "meid_number"
 
-    invoke-direct {p0, v5}, Lcom/android/settings/deviceinfo/ImeiInformation;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 155
     :cond_5
     const-string v5, "imei"
 
-    invoke-direct {p0, p1}, Lcom/android/settings/deviceinfo/ImeiInformation;->getIMEI(I)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->getIMEI(I)Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-direct {p0, v5, v6}, Lcom/android/settings/deviceinfo/ImeiInformation;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v5, v6}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 156
     const-string v6, "imei_sv"
 
     const-string v5, "phone"
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/deviceinfo/ImeiInformation;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v5
 
@@ -1270,10 +1270,10 @@
 
     move-result-object v5
 
-    invoke-direct {p0, v6, v5}, Lcom/android/settings/deviceinfo/ImeiInformation;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v6, v5}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 160
-    invoke-static {}, Lcom/android/settings/Utils;->isMetroPCS()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMetroPCS()Z
 
     move-result v5
 
@@ -1287,7 +1287,7 @@
 
     const-string v5, "VZW"
 
-    sget-object v6, Lcom/android/settings/deviceinfo/ImeiInformation;->sSalesCode:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1299,17 +1299,17 @@
     :cond_6
     const-string v5, "icc_id"
 
-    invoke-direct {p0, p1}, Lcom/android/settings/deviceinfo/ImeiInformation;->getIccId(I)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->getIccId(I)Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-direct {p0, v5, v6}, Lcom/android/settings/deviceinfo/ImeiInformation;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v5, v6}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 184
     .end local v2    # "meidNumber":Ljava/lang/String;
     :cond_7
     :goto_2
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticModel()Z
 
     move-result v5
 
@@ -1317,7 +1317,7 @@
 
     const-string v5, "DCM"
 
-    sget-object v6, Lcom/android/settings/deviceinfo/ImeiInformation;->sSalesCode:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1329,7 +1329,7 @@
     :cond_8
     const-string v5, "imei_sv"
 
-    invoke-direct {p0, v5}, Lcom/android/settings/deviceinfo/ImeiInformation;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 189
     :cond_9
@@ -1379,7 +1379,7 @@
     :cond_a
     const-string v5, "eri_version"
 
-    invoke-direct {p0, v5, v4}, Lcom/android/settings/deviceinfo/ImeiInformation;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v5, v4}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 203
     .end local v0    # "ERI_SysProp":Ljava/lang/String;
@@ -1400,7 +1400,7 @@
     .line 204
     const-string v5, "imei"
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/deviceinfo/ImeiInformation;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -1412,9 +1412,9 @@
     invoke-virtual {v1, v7}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 207
-    new-instance v5, Lcom/android/settings/deviceinfo/ImeiInformation$2;
+    new-instance v5, Lcom/android/settings_ex/deviceinfo/ImeiInformation$2;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/deviceinfo/ImeiInformation$2;-><init>(Lcom/android/settings/deviceinfo/ImeiInformation;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/deviceinfo/ImeiInformation$2;-><init>(Lcom/android/settings_ex/deviceinfo/ImeiInformation;)V
 
     invoke-virtual {v1, v5}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -1431,7 +1431,7 @@
 
     move-result-object v6
 
-    invoke-direct {p0, v5, v6}, Lcom/android/settings/deviceinfo/ImeiInformation;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v5, v6}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 139
     const-string v5, "prl_version"
@@ -1440,7 +1440,7 @@
 
     move-result-object v6
 
-    invoke-direct {p0, v5, v6}, Lcom/android/settings/deviceinfo/ImeiInformation;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v5, v6}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -1449,7 +1449,7 @@
     :cond_d
     const-string v5, "meid_number"
 
-    invoke-direct {p0, v5, v2}, Lcom/android/settings/deviceinfo/ImeiInformation;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v5, v2}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -1457,7 +1457,7 @@
     :cond_e
     const-string v5, "icc_id"
 
-    invoke-direct {p0, v5}, Lcom/android/settings/deviceinfo/ImeiInformation;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -1470,14 +1470,14 @@
 
     move-result-object v6
 
-    invoke-direct {p0, v5, v6}, Lcom/android/settings/deviceinfo/ImeiInformation;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v5, v6}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 172
     const-string v6, "imei_sv"
 
     const-string v5, "phone"
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/deviceinfo/ImeiInformation;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v5
 
@@ -1487,27 +1487,27 @@
 
     move-result-object v5
 
-    invoke-direct {p0, v6, v5}, Lcom/android/settings/deviceinfo/ImeiInformation;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v6, v5}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 177
     const-string v5, "prl_version"
 
-    invoke-direct {p0, v5}, Lcom/android/settings/deviceinfo/ImeiInformation;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 178
     const-string v5, "meid_number"
 
-    invoke-direct {p0, v5}, Lcom/android/settings/deviceinfo/ImeiInformation;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 179
     const-string v5, "min_number"
 
-    invoke-direct {p0, v5}, Lcom/android/settings/deviceinfo/ImeiInformation;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 180
     const-string v5, "icc_id"
 
-    invoke-direct {p0, v5}, Lcom/android/settings/deviceinfo/ImeiInformation;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     goto/16 :goto_2
 
@@ -1515,7 +1515,7 @@
     :cond_10
     const-string v5, "eri_version"
 
-    invoke-direct {p0, v5}, Lcom/android/settings/deviceinfo/ImeiInformation;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     goto :goto_3
 .end method
@@ -1527,7 +1527,7 @@
 
     .prologue
     .line 312
-    invoke-virtual {p0, p1}, Lcom/android/settings/deviceinfo/ImeiInformation;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
@@ -1540,7 +1540,7 @@
     if-eqz v1, :cond_0
 
     .line 315
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/ImeiInformation;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -1582,7 +1582,7 @@
 
     .line 303
     .local v0, "title":Ljava/lang/String;
-    iget-boolean v1, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->isMultiSIM:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->isMultiSIM:Z
 
     if-eqz v1, :cond_0
 
@@ -1601,7 +1601,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/ImeiInformation;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1661,26 +1661,26 @@
 
     .prologue
     .line 74
-    invoke-super {p0, p1}, Lcom/android/settings/InstrumentedPreferenceActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/InstrumentedPreferenceActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 75
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v1
 
-    sput-object v1, Lcom/android/settings/deviceinfo/ImeiInformation;->sSalesCode:Ljava/lang/String;
+    sput-object v1, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->sSalesCode:Ljava/lang/String;
 
     .line 76
     invoke-static {p0}, Landroid/telephony/SubscriptionManager;->from(Landroid/content/Context;)Landroid/telephony/SubscriptionManager;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/deviceinfo/ImeiInformation;->mSubscriptionManager:Landroid/telephony/SubscriptionManager;
+    iput-object v1, p0, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->mSubscriptionManager:Landroid/telephony/SubscriptionManager;
 
     .line 77
     const-string v1, "phone"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/deviceinfo/ImeiInformation;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1692,16 +1692,16 @@
 
     move-result v1
 
-    invoke-direct {p0, v1}, Lcom/android/settings/deviceinfo/ImeiInformation;->initPreferenceScreen(I)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->initPreferenceScreen(I)V
 
     .line 83
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/ImeiInformation;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->getListView()Landroid/widget/ListView;
 
     move-result-object v1
 
-    new-instance v2, Lcom/android/settings/deviceinfo/ImeiInformation$1;
+    new-instance v2, Lcom/android/settings_ex/deviceinfo/ImeiInformation$1;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/deviceinfo/ImeiInformation$1;-><init>(Lcom/android/settings/deviceinfo/ImeiInformation;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/deviceinfo/ImeiInformation$1;-><init>(Lcom/android/settings_ex/deviceinfo/ImeiInformation;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/ListView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
 
@@ -1714,14 +1714,14 @@
 
     .prologue
     .line 106
-    invoke-super {p0}, Lcom/android/settings/InstrumentedPreferenceActivity;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/InstrumentedPreferenceActivity;->onResume()V
 
     .line 107
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/ImeiInformation;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/ImeiInformation;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/android/settings/Utils;->applyLandscapeFullScreen(Landroid/content/Context;Landroid/view/Window;)V
+    invoke-static {p0, v0}, Lcom/android/settings_ex/Utils;->applyLandscapeFullScreen(Landroid/content/Context;Landroid/view/Window;)V
 
     .line 108
     return-void

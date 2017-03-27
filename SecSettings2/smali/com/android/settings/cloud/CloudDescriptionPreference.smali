@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/cloud/CloudDescriptionPreference;
+.class public Lcom/android/settings_ex/cloud/CloudDescriptionPreference;
 .super Landroid/preference/Preference;
 .source "CloudDescriptionPreference.java"
 
@@ -20,7 +20,7 @@
     .line 14
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/cloud/CloudDescriptionPreference;->cloudDescriptionTextView:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/cloud/CloudDescriptionPreference;->cloudDescriptionTextView:Landroid/widget/TextView;
 
     .line 19
     return-void
@@ -45,15 +45,15 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/android/settings/cloud/CloudDescriptionPreference;->cloudDescriptionTextView:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/cloud/CloudDescriptionPreference;->cloudDescriptionTextView:Landroid/widget/TextView;
 
     .line 25
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudDescriptionPreference;->cloudDescriptionTextView:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudDescriptionPreference;->cloudDescriptionTextView:Landroid/widget/TextView;
 
     if-eqz v1, :cond_0
 
     .line 26
-    invoke-virtual {p0}, Lcom/android/settings/cloud/CloudDescriptionPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/cloud/CloudDescriptionPreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -65,7 +65,7 @@
 
     .line 27
     .local v0, "text":Ljava/lang/String;
-    iget-object v1, p0, Lcom/android/settings/cloud/CloudDescriptionPreference;->cloudDescriptionTextView:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/cloud/CloudDescriptionPreference;->cloudDescriptionTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 

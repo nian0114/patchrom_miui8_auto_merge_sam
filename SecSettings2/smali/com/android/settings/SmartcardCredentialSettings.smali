@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/SmartcardCredentialSettings;
+.class public Lcom/android/settings_ex/SmartcardCredentialSettings;
 .super Landroid/preference/PreferenceFragment;
 .source "SmartcardCredentialSettings.java"
 
@@ -20,7 +20,7 @@
     .line 34
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/SmartcardCredentialSettings;->mDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/SmartcardCredentialSettings;->mDialog:Landroid/app/AlertDialog;
 
     return-void
 .end method
@@ -30,14 +30,14 @@
 
     .prologue
     .line 119
-    iget-object v0, p0, Lcom/android/settings/SmartcardCredentialSettings;->mDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/SmartcardCredentialSettings;->mDialog:Landroid/app/AlertDialog;
 
     if-nez v0, :cond_0
 
     .line 120
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/SmartcardCredentialSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SmartcardCredentialSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -59,20 +59,20 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/SmartcardCredentialSettings;->mDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/SmartcardCredentialSettings;->mDialog:Landroid/app/AlertDialog;
 
     .line 126
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/SmartcardCredentialSettings;->mDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/SmartcardCredentialSettings;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
     .line 128
-    iget-object v0, p0, Lcom/android/settings/SmartcardCredentialSettings;->mDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/SmartcardCredentialSettings;->mDialog:Landroid/app/AlertDialog;
 
-    new-instance v1, Lcom/android/settings/SmartcardCredentialSettings$1;
+    new-instance v1, Lcom/android/settings_ex/SmartcardCredentialSettings$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/SmartcardCredentialSettings$1;-><init>(Lcom/android/settings/SmartcardCredentialSettings;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/SmartcardCredentialSettings$1;-><init>(Lcom/android/settings_ex/SmartcardCredentialSettings;)V
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
@@ -93,18 +93,18 @@
     .line 42
     const v0, 0x7f0800b9
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/SmartcardCredentialSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/SmartcardCredentialSettings;->addPreferencesFromResource(I)V
 
     .line 43
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/SmartcardCredentialSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SmartcardCredentialSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/SmartcardCredentialSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object v0, p0, Lcom/android/settings_ex/SmartcardCredentialSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 46
     return-void
@@ -161,7 +161,7 @@
     if-eqz v2, :cond_1
 
     .line 101
-    invoke-direct {p0}, Lcom/android/settings/SmartcardCredentialSettings;->showDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SmartcardCredentialSettings;->showDialog()V
 
     .line 114
     :cond_0
@@ -181,7 +181,7 @@
     if-eqz v2, :cond_2
 
     .line 108
-    invoke-direct {p0}, Lcom/android/settings/SmartcardCredentialSettings;->showDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SmartcardCredentialSettings;->showDialog()V
 
     goto :goto_0
 
@@ -201,7 +201,7 @@
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 112
-    invoke-virtual {p0, v0}, Lcom/android/settings/SmartcardCredentialSettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/SmartcardCredentialSettings;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 .end method
@@ -214,7 +214,7 @@
     invoke-super {p0}, Landroid/preference/PreferenceFragment;->onResume()V
 
     .line 53
-    invoke-virtual {p0}, Lcom/android/settings/SmartcardCredentialSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SmartcardCredentialSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v2
 
@@ -262,7 +262,7 @@
     :cond_1
     new-instance v1, Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/SmartcardCredentialSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SmartcardCredentialSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 

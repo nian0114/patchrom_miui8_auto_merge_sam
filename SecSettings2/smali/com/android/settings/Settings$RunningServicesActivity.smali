@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/Settings$RunningServicesActivity;
-.super Lcom/android/settings/SettingsActivity;
+.class public Lcom/android/settings_ex/Settings$RunningServicesActivity;
+.super Lcom/android/settings_ex/SettingsActivity;
 .source "Settings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/Settings;
+    value = Lcom/android/settings_ex/Settings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 297
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivity;-><init>()V
 
     return-void
 .end method

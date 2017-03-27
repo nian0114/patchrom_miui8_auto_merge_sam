@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/WifiSnsSettingDialog;
+.class public Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;
 .super Ljava/lang/Object;
 .source "WifiSnsSettingDialog.java"
 
@@ -38,7 +38,7 @@
     const/4 v0, 0x0
 
     :cond_0
-    sput-boolean v0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->DBG:Z
+    sput-boolean v0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->DBG:Z
 
     .line 47
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -51,7 +51,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mDisconnectWeakAP:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mDisconnectWeakAP:Ljava/lang/String;
 
     return-void
 .end method
@@ -69,13 +69,13 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 52
-    iput-boolean v1, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mIsSetupWizardAndDefaultOff:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mIsSetupWizardAndDefaultOff:Z
 
     .line 55
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
 
     .line 56
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -90,10 +90,10 @@
     if-ne v2, v0, :cond_1
 
     :goto_0
-    iput-boolean v0, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mEnabled:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mEnabled:Z
 
     .line 58
-    sget-boolean v0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->DBG:Z
+    sget-boolean v0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->DBG:Z
 
     if-eqz v0, :cond_0
 
@@ -109,7 +109,7 @@
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mEnabled:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mEnabled:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -123,7 +123,7 @@
 
     .line 60
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
 
     const-string v1, "wifi"
 
@@ -133,10 +133,10 @@
 
     check-cast v0, Landroid/net/wifi/WifiManager;
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     .line 62
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiSnsSettingDialog;->makeSnsSettingDialog()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->makeSnsSettingDialog()V
 
     .line 63
     return-void
@@ -162,13 +162,13 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 52
-    iput-boolean v2, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mIsSetupWizardAndDefaultOff:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mIsSetupWizardAndDefaultOff:Z
 
     .line 66
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
 
     .line 67
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
 
     const-string v3, "wifi"
 
@@ -178,18 +178,18 @@
 
     check-cast v0, Landroid/net/wifi/WifiManager;
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     .line 68
-    iput-boolean p2, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mIsSetupWizardAndDefaultOff:Z
+    iput-boolean p2, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mIsSetupWizardAndDefaultOff:Z
 
     .line 69
-    iget-boolean v0, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mIsSetupWizardAndDefaultOff:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mIsSetupWizardAndDefaultOff:Z
 
     if-eqz v0, :cond_0
 
     .line 70
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -201,7 +201,7 @@
 
     .line 73
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -218,10 +218,10 @@
     move v0, v1
 
     :goto_0
-    iput-boolean v0, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mEnabled:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mEnabled:Z
 
     .line 75
-    sget-boolean v0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->DBG:Z
+    sget-boolean v0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->DBG:Z
 
     if-eqz v0, :cond_1
 
@@ -237,7 +237,7 @@
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mEnabled:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mEnabled:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -251,7 +251,7 @@
 
     .line 77
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiSnsSettingDialog;->makeSnsSettingDialog()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->makeSnsSettingDialog()V
 
     .line 78
     return-void
@@ -263,13 +263,13 @@
     goto :goto_0
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/wifi/WifiSnsSettingDialog;)Landroid/content/Context;
+.method static synthetic access$000(Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiSnsSettingDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;
 
     .prologue
     .line 44
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
@@ -279,7 +279,7 @@
 
     .prologue
     .line 44
-    sget-object v0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mDisconnectWeakAP:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mDisconnectWeakAP:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -289,7 +289,7 @@
 
     .prologue
     .line 44
-    sget-boolean v0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->DBG:Z
+    sget-boolean v0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->DBG:Z
 
     return v0
 .end method
@@ -301,7 +301,7 @@
 
     .prologue
     .line 193
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mSnsSettingDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mSnsSettingDialog:Landroid/app/AlertDialog;
 
     return-object v0
 .end method
@@ -319,7 +319,7 @@
     const v10, 0x7f0e052a
 
     .line 81
-    iget-object v8, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
 
     const-string v9, "layout_inflater"
 
@@ -349,14 +349,14 @@
 
     .line 84
     .local v4, "textView":Landroid/widget/TextView;
-    iget-boolean v8, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mIsSetupWizardAndDefaultOff:Z
+    iget-boolean v8, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mIsSetupWizardAndDefaultOff:Z
 
     if-eqz v8, :cond_1
 
     .line 85
-    iget-object v8, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
 
-    invoke-static {v8}, Lcom/android/settings/Utils;->locateSmartNetworkSwitch(Landroid/content/Context;)I
+    invoke-static {v8}, Lcom/android/settings_ex/Utils;->locateSmartNetworkSwitch(Landroid/content/Context;)I
 
     move-result v8
 
@@ -367,7 +367,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v9, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
 
     invoke-virtual {v9, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -383,7 +383,7 @@
 
     move-result-object v8
 
-    iget-object v9, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
 
     const v10, 0x7f0e0529
 
@@ -405,7 +405,7 @@
     :goto_0
     new-instance v3, Landroid/app/AlertDialog$Builder;
 
-    iget-object v8, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
 
     invoke-direct {v3, v8}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -419,7 +419,7 @@
     invoke-virtual {v3, v8}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 103
-    iget-object v8, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -433,19 +433,19 @@
 
     .line 104
     .local v2, "radioButtonItems":[Ljava/lang/CharSequence;
-    iget-boolean v8, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mEnabled:Z
+    iget-boolean v8, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mEnabled:Z
 
     if-eqz v8, :cond_3
 
     :goto_1
-    new-instance v7, Lcom/android/settings/wifi/WifiSnsSettingDialog$1;
+    new-instance v7, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog$1;
 
-    invoke-direct {v7, p0}, Lcom/android/settings/wifi/WifiSnsSettingDialog$1;-><init>(Lcom/android/settings/wifi/WifiSnsSettingDialog;)V
+    invoke-direct {v7, p0}, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog$1;-><init>(Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;)V
 
     invoke-virtual {v3, v2, v6, v7}, Landroid/app/AlertDialog$Builder;->setSingleChoiceItems([Ljava/lang/CharSequence;ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 153
-    iget-object v6, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
 
     const v7, 0x7f0e0545
 
@@ -453,16 +453,16 @@
 
     move-result-object v6
 
-    new-instance v7, Lcom/android/settings/wifi/WifiSnsSettingDialog$2;
+    new-instance v7, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog$2;
 
-    invoke-direct {v7, p0}, Lcom/android/settings/wifi/WifiSnsSettingDialog$2;-><init>(Lcom/android/settings/wifi/WifiSnsSettingDialog;)V
+    invoke-direct {v7, p0}, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog$2;-><init>(Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;)V
 
     invoke-virtual {v3, v6, v7}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 171
-    new-instance v6, Lcom/android/settings/wifi/WifiSnsSettingDialog$3;
+    new-instance v6, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog$3;
 
-    invoke-direct {v6, p0}, Lcom/android/settings/wifi/WifiSnsSettingDialog$3;-><init>(Lcom/android/settings/wifi/WifiSnsSettingDialog;)V
+    invoke-direct {v6, p0}, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog$3;-><init>(Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;)V
 
     invoke-virtual {v3, v6}, Landroid/app/AlertDialog$Builder;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)Landroid/app/AlertDialog$Builder;
 
@@ -471,10 +471,10 @@
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mSnsSettingDialog:Landroid/app/AlertDialog;
+    iput-object v6, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mSnsSettingDialog:Landroid/app/AlertDialog;
 
     .line 188
-    iget-object v6, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mSnsSettingDialog:Landroid/app/AlertDialog;
+    iget-object v6, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mSnsSettingDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v6}, Landroid/app/AlertDialog;->getListView()Landroid/widget/ListView;
 
@@ -498,7 +498,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v9, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
 
     invoke-virtual {v9, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -514,7 +514,7 @@
 
     move-result-object v8
 
-    iget-object v9, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
 
     const v10, 0x7f0e0528
 
@@ -538,7 +538,7 @@
     :cond_1
     const-string v8, "VZW"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v9
 
@@ -549,7 +549,7 @@
     if-eqz v8, :cond_2
 
     .line 94
-    iget-object v8, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
 
     const v9, 0x7f0e0527
 
@@ -563,7 +563,7 @@
 
     .line 96
     :cond_2
-    iget-object v8, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -641,12 +641,12 @@
     iput-object v0, v4, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     .line 211
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     if-eqz v5, :cond_0
 
     .line 212
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiSnsSettingDialog;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiSnsSettingDialog;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v5, v4}, Landroid/net/wifi/WifiManager;->callSECApi(Landroid/os/Message;)I
 

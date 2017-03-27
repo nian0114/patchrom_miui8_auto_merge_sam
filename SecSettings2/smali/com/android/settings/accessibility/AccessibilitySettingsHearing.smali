@@ -1,16 +1,16 @@
-.class public Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "AccessibilitySettingsHearing.java"
 
 # interfaces
 .implements Landroid/preference/Preference$OnPreferenceChangeListener;
 .implements Landroid/preference/Preference$OnPreferenceClickListener;
-.implements Lcom/android/settings/DialogCreatable;
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/DialogCreatable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # instance fields
@@ -18,7 +18,7 @@
 
 .field private mAllSoundOffDialog:Landroid/app/AlertDialog;
 
-.field private mAudioBalancePref:Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference;
+.field private mAudioBalancePref:Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference;
 
 .field private mAudioCategory:Landroid/preference/PreferenceScreen;
 
@@ -53,11 +53,11 @@
 
     .prologue
     .line 681
-    new-instance v0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$13;
+    new-instance v0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$13;
 
-    invoke-direct {v0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$13;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$13;-><init>()V
 
-    sput-object v0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -67,151 +67,151 @@
 
     .prologue
     .line 69
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 113
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAllSoundOffDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAllSoundOffDialog:Landroid/app/AlertDialog;
 
     .line 115
-    new-instance v0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$1;
+    new-instance v0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$1;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$1;-><init>(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$1;-><init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mFlashNotification:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mFlashNotification:Landroid/database/ContentObserver;
 
     .line 122
-    new-instance v0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$2;
+    new-instance v0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$2;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$2;-><init>(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$2;-><init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mTurnOffAllSound:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mTurnOffAllSound:Landroid/database/ContentObserver;
 
     .line 129
     new-instance v0, Landroid/content/res/Configuration;
 
     invoke-direct {v0}, Landroid/content/res/Configuration;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mCurConfig:Landroid/content/res/Configuration;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mCurConfig:Landroid/content/res/Configuration;
 
     .line 245
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)Landroid/content/ContentResolver;
+.method static synthetic access$000(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
     .prologue
     .line 69
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)Landroid/preference/SwitchPreference;
+.method static synthetic access$100(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)Landroid/preference/SwitchPreference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
     .prologue
     .line 69
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mFlashNotificationCheckbox:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mFlashNotificationCheckbox:Landroid/preference/SwitchPreference;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)Landroid/content/ContentResolver;
+.method static synthetic access$200(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
     .prologue
     .line 69
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)Landroid/preference/SwitchPreference;
+.method static synthetic access$300(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)Landroid/preference/SwitchPreference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
     .prologue
     .line 69
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAllSoundOffCheckbox:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAllSoundOffCheckbox:Landroid/preference/SwitchPreference;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)Landroid/content/ContentResolver;
+.method static synthetic access$400(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
     .prologue
     .line 69
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)Landroid/content/ContentResolver;
+.method static synthetic access$500(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
     .prologue
     .line 69
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)Landroid/content/ContentResolver;
+.method static synthetic access$600(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
     .prologue
     .line 69
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)Landroid/preference/SwitchPreferenceScreen;
+.method static synthetic access$700(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)Landroid/preference/SwitchPreferenceScreen;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
     .prologue
     .line 69
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPreferenceScreen:Landroid/preference/SwitchPreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPreferenceScreen:Landroid/preference/SwitchPreferenceScreen;
 
     return-object v0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)Landroid/content/ContentResolver;
+.method static synthetic access$800(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/AccessibilitySettingsHearing;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;
 
     .prologue
     .line 69
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -229,202 +229,202 @@
     .line 437
     const-string v0, "audio_preference_key"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAudioCategory:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAudioCategory:Landroid/preference/PreferenceScreen;
 
     .line 440
     const-string v0, "sound_detector_preference"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/SwitchPreferenceScreen;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPreferenceScreen:Landroid/preference/SwitchPreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPreferenceScreen:Landroid/preference/SwitchPreferenceScreen;
 
     .line 441
     const-string v0, "sound_detector_plus_preference"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPlusPreferenceScreen:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPlusPreferenceScreen:Landroid/preference/PreferenceScreen;
 
     .line 443
     const-string v0, "flash_notification_key"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/SwitchPreference;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mFlashNotificationCheckbox:Landroid/preference/SwitchPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mFlashNotificationCheckbox:Landroid/preference/SwitchPreference;
 
     .line 444
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mFlashNotificationCheckbox:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mFlashNotificationCheckbox:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v0, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 446
     const-string v0, "all_sound_off_key"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/SwitchPreference;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAllSoundOffCheckbox:Landroid/preference/SwitchPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAllSoundOffCheckbox:Landroid/preference/SwitchPreference;
 
     .line 447
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAllSoundOffCheckbox:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAllSoundOffCheckbox:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v0, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 449
     const-string v0, "call_hearing_aid"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/SwitchPreference;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mToggleHearingAidPreference:Landroid/preference/SwitchPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mToggleHearingAidPreference:Landroid/preference/SwitchPreference;
 
     .line 450
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mToggleHearingAidPreference:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mToggleHearingAidPreference:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v0, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 452
     const-string v0, "samsung_captioning_preference_screen"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSamsungCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSamsungCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
 
     .line 453
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSamsungCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSamsungCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, p0}, Landroid/preference/PreferenceScreen;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 454
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSamsungCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSamsungCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 456
     const-string v0, "google_captioning_preference_screen"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
 
     .line 457
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, p0}, Landroid/preference/PreferenceScreen;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 458
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 460
     const-string v0, "sound_balance"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference;
+    check-cast v0, Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAudioBalancePref:Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAudioBalancePref:Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference;
 
     .line 461
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAudioBalancePref:Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAudioBalancePref:Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference;
 
     const v3, 0x7f0e0a06
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference;->setTitleDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference;->setTitleDescription(Ljava/lang/CharSequence;)V
 
     .line 463
     const-string v0, "mono_audio_key"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/SwitchPreference;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mMonoAudioCheckbox:Landroid/preference/SwitchPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mMonoAudioCheckbox:Landroid/preference/SwitchPreference;
 
     .line 464
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mMonoAudioCheckbox:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mMonoAudioCheckbox:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v0, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 466
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     const-string v3, "com.samsung.android.app.sounddetector"
 
-    invoke-static {v0, v3}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v3}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_b
 
     .line 467
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAudioCategory:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAudioCategory:Landroid/preference/PreferenceScreen;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPreferenceScreen:Landroid/preference/SwitchPreferenceScreen;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPreferenceScreen:Landroid/preference/SwitchPreferenceScreen;
 
     invoke-virtual {v0, v3}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 473
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     const-string v3, "com.samsung.android.app.advsounddetector"
 
-    invoke-static {v0, v3}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v3}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 475
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAudioCategory:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAudioCategory:Landroid/preference/PreferenceScreen;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPlusPreferenceScreen:Landroid/preference/PreferenceScreen;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPlusPreferenceScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v3}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
@@ -443,9 +443,9 @@
     if-nez v0, :cond_1
 
     .line 478
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAudioCategory:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAudioCategory:Landroid/preference/PreferenceScreen;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mFlashNotificationCheckbox:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mFlashNotificationCheckbox:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v0, v3}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
@@ -463,21 +463,21 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isVoiceCapable(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isVoiceCapable(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -485,27 +485,27 @@
 
     .line 483
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAudioCategory:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAudioCategory:Landroid/preference/PreferenceScreen;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mToggleHearingAidPreference:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mToggleHearingAidPreference:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v0, v3}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 486
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     const-string v3, "com.samsung.android.video"
 
-    invoke-static {v0, v3}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v3}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    invoke-static {}, Lcom/android/settings/Utils;->isJapanModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isJapanModel()Z
 
     move-result v0
 
@@ -518,7 +518,7 @@
     if-nez v0, :cond_5
 
     :cond_4
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -530,40 +530,40 @@
 
     .line 489
     :cond_5
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAudioCategory:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAudioCategory:Landroid/preference/PreferenceScreen;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSamsungCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSamsungCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v3}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 492
     :cond_6
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
     .line 493
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAudioCategory:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAudioCategory:Landroid/preference/PreferenceScreen;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v3}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 496
     :cond_7
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v0
 
     if-nez v0, :cond_9
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -575,7 +575,7 @@
 
     if-eqz v0, :cond_9
 
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v0
 
@@ -608,7 +608,7 @@
 
     .line 500
     :cond_9
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mFlashNotificationCheckbox:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mFlashNotificationCheckbox:Landroid/preference/SwitchPreference;
 
     const v3, 0x7f0e0a04
 
@@ -618,29 +618,29 @@
     :cond_a
     const-string v0, "audio"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/media/AudioManager;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAudioManager:Landroid/media/AudioManager;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAudioManager:Landroid/media/AudioManager;
 
     .line 505
     new-instance v0, Landroid/media/SamsungAudioManager;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
     invoke-direct {v0, v3}, Landroid/media/SamsungAudioManager;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSamsungAudioManager:Landroid/media/SamsungAudioManager;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSamsungAudioManager:Landroid/media/SamsungAudioManager;
 
     .line 507
-    iget-object v3, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mMonoAudioCheckbox:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mMonoAudioCheckbox:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -658,9 +658,9 @@
     invoke-virtual {v3, v0}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 509
-    iget-object v3, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAllSoundOffCheckbox:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAllSoundOffCheckbox:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -678,9 +678,9 @@
     invoke-virtual {v3, v0}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 511
-    iget-object v3, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mFlashNotificationCheckbox:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mFlashNotificationCheckbox:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -698,9 +698,9 @@
     invoke-virtual {v3, v0}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 513
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mToggleHearingAidPreference:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mToggleHearingAidPreference:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -720,14 +720,14 @@
 
     .line 469
     :cond_b
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPreferenceScreen:Landroid/preference/SwitchPreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPreferenceScreen:Landroid/preference/SwitchPreferenceScreen;
 
     invoke-virtual {v0, p0}, Landroid/preference/SwitchPreferenceScreen;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 470
-    iget-object v3, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPreferenceScreen:Landroid/preference/SwitchPreferenceScreen;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPreferenceScreen:Landroid/preference/SwitchPreferenceScreen;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -789,9 +789,9 @@
     const/4 v2, 0x0
 
     .line 193
-    iget-object v3, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mMonoAudioCheckbox:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mMonoAudioCheckbox:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -809,9 +809,9 @@
     invoke-virtual {v3, v0}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 195
-    iget-object v3, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAllSoundOffCheckbox:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAllSoundOffCheckbox:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -829,9 +829,9 @@
     invoke-virtual {v3, v0}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 197
-    iget-object v3, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mFlashNotificationCheckbox:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mFlashNotificationCheckbox:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -849,9 +849,9 @@
     invoke-virtual {v3, v0}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 199
-    iget-object v3, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mToggleHearingAidPreference:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mToggleHearingAidPreference:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -869,9 +869,9 @@
     invoke-virtual {v3, v0}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 201
-    iget-object v3, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPreferenceScreen:Landroid/preference/SwitchPreferenceScreen;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPreferenceScreen:Landroid/preference/SwitchPreferenceScreen;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -889,7 +889,7 @@
     invoke-virtual {v3, v0}, Landroid/preference/SwitchPreferenceScreen;->setChecked(Z)V
 
     .line 203
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -902,13 +902,13 @@
     if-ne v0, v1, :cond_6
 
     .line 205
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v5}, Landroid/preference/PreferenceScreen;->setSummary(I)V
 
     .line 209
     :goto_5
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -921,13 +921,13 @@
     if-ne v0, v1, :cond_7
 
     .line 211
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSamsungCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSamsungCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v5}, Landroid/preference/PreferenceScreen;->setSummary(I)V
 
     .line 217
     :goto_6
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->isWiredHeadsetOn()Z
 
@@ -935,7 +935,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSamsungAudioManager:Landroid/media/SamsungAudioManager;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSamsungAudioManager:Landroid/media/SamsungAudioManager;
 
     invoke-virtual {v0}, Landroid/media/SamsungAudioManager;->isSafeMediaVolumeDeviceOn()Z
 
@@ -945,9 +945,9 @@
 
     .line 218
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAudioBalancePref:Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAudioBalancePref:Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference;->setEnabled(Z)V
 
     .line 222
     :goto_7
@@ -985,7 +985,7 @@
 
     .line 207
     :cond_6
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v6}, Landroid/preference/PreferenceScreen;->setSummary(I)V
 
@@ -993,7 +993,7 @@
 
     .line 213
     :cond_7
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSamsungCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSamsungCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v6}, Landroid/preference/PreferenceScreen;->setSummary(I)V
 
@@ -1001,9 +1001,9 @@
 
     .line 220
     :cond_8
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAudioBalancePref:Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAudioBalancePref:Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference;
 
-    invoke-virtual {v0, v2}, Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference;->setEnabled(Z)V
+    invoke-virtual {v0, v2}, Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference;->setEnabled(Z)V
 
     goto :goto_7
 .end method
@@ -1026,27 +1026,27 @@
 
     .prologue
     .line 151
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 152
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isDualFolderType(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isDualFolderType(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 153
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getListView()Landroid/widget/ListView;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$3;
+    new-instance v1, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$3;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$3;-><init>(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$3;-><init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
@@ -1062,7 +1062,7 @@
     .prologue
     .line 134
     :try_start_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mCurConfig:Landroid/content/res/Configuration;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mCurConfig:Landroid/content/res/Configuration;
 
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -1078,7 +1078,7 @@
 
     .line 138
     :goto_0
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 139
     return-void
@@ -1096,15 +1096,15 @@
 
     .prologue
     .line 143
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 144
     const v0, 0x7f080005
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->addPreferencesFromResource(I)V
 
     .line 146
-    invoke-direct {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->initializeAllPreferences()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->initializeAllPreferences()V
 
     .line 147
     return-void
@@ -1116,7 +1116,7 @@
 
     .prologue
     .line 520
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
@@ -1131,7 +1131,7 @@
 
     .line 523
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
@@ -1143,7 +1143,7 @@
     .local v6, "mSharedPreferences":Landroid/content/SharedPreferences;
     const-string v9, "layout_inflater"
 
-    invoke-virtual {p0, v9}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -1188,7 +1188,7 @@
     :sswitch_0
     new-instance v9, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
 
@@ -1206,9 +1206,9 @@
 
     const v10, 0x7f0e081f
 
-    new-instance v11, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$6;
+    new-instance v11, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$6;
 
-    invoke-direct {v11, p0, v1, v7}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$6;-><init>(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;Landroid/content/SharedPreferences$Editor;Landroid/widget/CheckBox;)V
+    invoke-direct {v11, p0, v1, v7}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$6;-><init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;Landroid/content/SharedPreferences$Editor;Landroid/widget/CheckBox;)V
 
     invoke-virtual {v9, v10, v11}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1216,17 +1216,17 @@
 
     const/high16 v10, 0x1040000
 
-    new-instance v11, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$5;
+    new-instance v11, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$5;
 
-    invoke-direct {v11, p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$5;-><init>(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)V
+    invoke-direct {v11, p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$5;-><init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)V
 
     invoke-virtual {v9, v10, v11}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v9
 
-    new-instance v10, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$4;
+    new-instance v10, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$4;
 
-    invoke-direct {v10, p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$4;-><init>(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)V
+    invoke-direct {v10, p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$4;-><init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)V
 
     invoke-virtual {v9, v10}, Landroid/app/AlertDialog$Builder;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1252,7 +1252,7 @@
     :sswitch_1
     new-instance v9, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
 
@@ -1266,9 +1266,9 @@
 
     const v10, 0x7f0e081f
 
-    new-instance v11, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$8;
+    new-instance v11, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$8;
 
-    invoke-direct {v11, p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$8;-><init>(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)V
+    invoke-direct {v11, p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$8;-><init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)V
 
     invoke-virtual {v9, v10, v11}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1280,9 +1280,9 @@
 
     move-result-object v9
 
-    new-instance v10, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$7;
+    new-instance v10, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$7;
 
-    invoke-direct {v10, p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$7;-><init>(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)V
+    invoke-direct {v10, p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$7;-><init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)V
 
     invoke-virtual {v9, v10}, Landroid/app/AlertDialog$Builder;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1296,7 +1296,7 @@
 
     .line 590
     :sswitch_2
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
@@ -1312,7 +1312,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
 
@@ -1346,7 +1346,7 @@
 
     .line 592
     .local v8, "message":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
@@ -1356,7 +1356,7 @@
 
     const-string v10, "com.google.android.marvin.talkback"
 
-    invoke-static {v9, v10}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v9, v10}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v9
 
@@ -1377,7 +1377,7 @@
 
     move-result-object v9
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
 
@@ -1397,7 +1397,7 @@
 
     .line 594
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
@@ -1407,7 +1407,7 @@
 
     const-string v10, "com.samsung.android.app.talkback"
 
-    invoke-static {v9, v10}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v9, v10}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v9
 
@@ -1428,7 +1428,7 @@
 
     move-result-object v9
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
 
@@ -1450,7 +1450,7 @@
     :cond_2
     new-instance v9, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
 
@@ -1462,9 +1462,9 @@
 
     const v10, 0x7f0e01bd
 
-    new-instance v11, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$11;
+    new-instance v11, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$11;
 
-    invoke-direct {v11, p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$11;-><init>(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)V
+    invoke-direct {v11, p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$11;-><init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)V
 
     invoke-virtual {v9, v10, v11}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1472,17 +1472,17 @@
 
     const/high16 v10, 0x1040000
 
-    new-instance v11, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$10;
+    new-instance v11, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$10;
 
-    invoke-direct {v11, p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$10;-><init>(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)V
+    invoke-direct {v11, p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$10;-><init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)V
 
     invoke-virtual {v9, v10, v11}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v9
 
-    new-instance v10, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$9;
+    new-instance v10, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$9;
 
-    invoke-direct {v10, p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing$9;-><init>(Lcom/android/settings/accessibility/AccessibilitySettingsHearing;)V
+    invoke-direct {v10, p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing$9;-><init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;)V
 
     invoke-virtual {v9, v10}, Landroid/app/AlertDialog$Builder;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1492,10 +1492,10 @@
 
     move-result-object v9
 
-    iput-object v9, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAllSoundOffDialog:Landroid/app/AlertDialog;
+    iput-object v9, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAllSoundOffDialog:Landroid/app/AlertDialog;
 
     .line 645
-    iget-object v5, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAllSoundOffDialog:Landroid/app/AlertDialog;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAllSoundOffDialog:Landroid/app/AlertDialog;
 
     goto/16 :goto_0
 
@@ -1515,29 +1515,29 @@
 
     .prologue
     .line 226
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mFlashNotification:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mFlashNotification:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 227
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mTurnOffAllSound:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mTurnOffAllSound:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 228
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAllSoundOffDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAllSoundOffDialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAllSoundOffDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAllSoundOffDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->isShowing()Z
 
@@ -1546,18 +1546,18 @@
     if-eqz v0, :cond_0
 
     .line 229
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAllSoundOffDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAllSoundOffDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 230
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAudioBalancePref:Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAudioBalancePref:Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference;->releaseMediaPlayer()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference;->releaseMediaPlayer()V
 
     .line 231
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 232
     return-void
@@ -1581,7 +1581,7 @@
     .local v11, "value":Z
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mMonoAudioCheckbox:Landroid/preference/SwitchPreference;
+    iget-object v12, v0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mMonoAudioCheckbox:Landroid/preference/SwitchPreference;
 
     move-object/from16 v0, p1
 
@@ -1600,7 +1600,7 @@
 
     .line 267
     .local v8, "mono_intent":Landroid/content/Intent;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v13
 
@@ -1624,7 +1624,7 @@
     invoke-virtual {v8, v13, v12}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 269
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
@@ -1637,7 +1637,7 @@
 
     const-string v13, "Mono Audio broadcast"
 
-    invoke-static {v12, v13}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v12, v13}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 271
     const/4 v12, 0x1
@@ -1665,7 +1665,7 @@
     :cond_2
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAllSoundOffCheckbox:Landroid/preference/SwitchPreference;
+    iget-object v12, v0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAllSoundOffCheckbox:Landroid/preference/SwitchPreference;
 
     move-object/from16 v0, p1
 
@@ -1687,11 +1687,11 @@
     if-eqz v11, :cond_4
 
     .line 275
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
-    invoke-static {v12}, Lcom/android/settings/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
+    invoke-static {v12}, Lcom/android/settings_ex/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
 
     move-result v12
 
@@ -1702,7 +1702,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v12}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->showDialog(I)V
+    invoke-virtual {v0, v12}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->showDialog(I)V
 
     .line 277
     const/4 v12, 0x0
@@ -1711,7 +1711,7 @@
 
     .line 279
     :cond_3
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v12
 
@@ -1730,7 +1730,7 @@
 
     .line 300
     :goto_3
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
@@ -1743,7 +1743,7 @@
 
     const-string v13, "All sound off broadcast"
 
-    invoke-static {v12, v13}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v12, v13}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 302
     const/4 v12, 0x1
@@ -1752,7 +1752,7 @@
 
     .line 291
     :cond_4
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v12
 
@@ -1768,7 +1768,7 @@
 
     if-eq v12, v13, :cond_5
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v12
 
@@ -1786,11 +1786,11 @@
 
     .line 293
     :cond_5
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v13
 
@@ -1815,7 +1815,7 @@
 
     .line 296
     :cond_6
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v12
 
@@ -1839,7 +1839,7 @@
     :cond_7
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mFlashNotificationCheckbox:Landroid/preference/SwitchPreference;
+    iget-object v12, v0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mFlashNotificationCheckbox:Landroid/preference/SwitchPreference;
 
     move-object/from16 v0, p1
 
@@ -1850,7 +1850,7 @@
     if-eqz v12, :cond_10
 
     .line 304
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
@@ -1887,7 +1887,7 @@
     if-eqz v12, :cond_e
 
     .line 308
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v12
 
@@ -1906,7 +1906,7 @@
     if-nez v12, :cond_9
 
     .line 309
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v13
 
@@ -1940,7 +1940,7 @@
 
     .line 314
     .local v3, "isMotionEnabled":Ljava/lang/Boolean;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v12
 
@@ -1954,7 +1954,7 @@
 
     if-eqz v12, :cond_a
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v12
 
@@ -1968,7 +1968,7 @@
 
     if-eqz v12, :cond_a
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v12
 
@@ -2002,11 +2002,11 @@
     if-nez v12, :cond_c
 
     .line 322
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v13
 
@@ -2018,7 +2018,7 @@
 
     const/16 v16, 0x0
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v17
 
@@ -2044,14 +2044,14 @@
 
     .line 324
     :cond_c
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
-    invoke-static {v12}, Lcom/android/settings/Utils;->turnOnMotionEngine(Landroid/content/Context;)V
+    invoke-static {v12}, Lcom/android/settings_ex/Utils;->turnOnMotionEngine(Landroid/content/Context;)V
 
     .line 325
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v12
 
@@ -2062,7 +2062,7 @@
     invoke-static {v12, v13, v14}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 326
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v12
 
@@ -2073,7 +2073,7 @@
     invoke-static {v12, v13, v14}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 327
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v12
 
@@ -2084,7 +2084,7 @@
     invoke-static {v12, v13, v14}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 328
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v12
 
@@ -2095,7 +2095,7 @@
     invoke-static {v12, v13, v14}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 329
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
@@ -2103,7 +2103,7 @@
 
     const-string v14, "FLNO"
 
-    invoke-static {v12, v13, v14}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v12, v13, v14}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 337
     .end local v3    # "isMotionEnabled":Ljava/lang/Boolean;
@@ -2115,7 +2115,7 @@
     .line 331
     .restart local v3    # "isMotionEnabled":Ljava/lang/Boolean;
     :cond_d
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v12
 
@@ -2130,7 +2130,7 @@
     .line 334
     .end local v3    # "isMotionEnabled":Ljava/lang/Boolean;
     :cond_e
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v13
 
@@ -2156,7 +2156,7 @@
     :cond_10
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mToggleHearingAidPreference:Landroid/preference/SwitchPreference;
+    iget-object v12, v0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mToggleHearingAidPreference:Landroid/preference/SwitchPreference;
 
     move-object/from16 v0, p1
 
@@ -2174,7 +2174,7 @@
     .line 340
     .local v2, "hac":I
     :goto_7
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v12
 
@@ -2185,7 +2185,7 @@
     .line 341
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v13, v0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAudioManager:Landroid/media/AudioManager;
 
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -2236,7 +2236,7 @@
     :cond_13
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
+    iget-object v12, v0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
 
     move-object/from16 v0, p1
 
@@ -2250,7 +2250,7 @@
     if-eqz v11, :cond_14
 
     .line 345
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v12
 
@@ -2263,7 +2263,7 @@
     .line 346
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
+    iget-object v12, v0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
 
     const v13, 0x7f0e0ea6
 
@@ -2277,7 +2277,7 @@
 
     .line 348
     :cond_14
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v12
 
@@ -2290,7 +2290,7 @@
     .line 349
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
+    iget-object v12, v0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
 
     const v13, 0x7f0e0ea7
 
@@ -2302,7 +2302,7 @@
     :cond_15
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSamsungCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
+    iget-object v12, v0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSamsungCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
 
     move-object/from16 v0, p1
 
@@ -2316,7 +2316,7 @@
     if-eqz v11, :cond_16
 
     .line 354
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v12
 
@@ -2329,7 +2329,7 @@
     .line 355
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSamsungCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
+    iget-object v12, v0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSamsungCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
 
     const v13, 0x7f0e0ea6
 
@@ -2343,7 +2343,7 @@
 
     .line 357
     :cond_16
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v12
 
@@ -2356,7 +2356,7 @@
     .line 358
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSamsungCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
+    iget-object v12, v0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSamsungCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
 
     const v13, 0x7f0e0ea7
 
@@ -2368,7 +2368,7 @@
     :cond_17
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPreferenceScreen:Landroid/preference/SwitchPreferenceScreen;
+    iget-object v12, v0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPreferenceScreen:Landroid/preference/SwitchPreferenceScreen;
 
     move-object/from16 v0, p1
 
@@ -2383,7 +2383,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v12}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v12}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v12
 
@@ -2391,12 +2391,12 @@
 
     move-object/from16 v0, p0
 
-    iput-object v12, v0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAudioManager:Landroid/media/AudioManager;
+    iput-object v12, v0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAudioManager:Landroid/media/AudioManager;
 
     .line 363
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v12, v0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v12}, Landroid/media/AudioManager;->isRecordActive()Z
 
@@ -2406,7 +2406,7 @@
     .local v7, "mic_state":Z
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v12, v0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v12}, Landroid/media/AudioManager;->isMusicActive()Z
 
@@ -2422,7 +2422,7 @@
     if-nez v9, :cond_19
 
     .line 368
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v12
 
@@ -2441,14 +2441,14 @@
 
     .line 371
     .local v5, "mIntent":Landroid/content/Intent;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
     invoke-virtual {v12, v5}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 372
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
@@ -2473,11 +2473,11 @@
     if-eqz v7, :cond_1a
 
     .line 374
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v13
 
@@ -2498,7 +2498,7 @@
     .line 375
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPreferenceScreen:Landroid/preference/SwitchPreferenceScreen;
+    iget-object v12, v0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPreferenceScreen:Landroid/preference/SwitchPreferenceScreen;
 
     const/4 v13, 0x0
 
@@ -2511,11 +2511,11 @@
     if-eqz v9, :cond_18
 
     .line 377
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v13
 
@@ -2536,7 +2536,7 @@
     .line 378
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPreferenceScreen:Landroid/preference/SwitchPreferenceScreen;
+    iget-object v12, v0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPreferenceScreen:Landroid/preference/SwitchPreferenceScreen;
 
     const/4 v13, 0x0
 
@@ -2546,7 +2546,7 @@
 
     .line 381
     :cond_1b
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v12
 
@@ -2557,7 +2557,7 @@
     invoke-static {v12, v13, v14}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 383
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
@@ -2567,7 +2567,7 @@
 
     const-string v13, "com.samsung.android.app.sounddetector.service.SoundDetectService"
 
-    invoke-static {v12, v13}, Lcom/android/settings/accessibility/AccessibilityUtils;->getServiceTaskName(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v12, v13}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->getServiceTaskName(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v12
 
@@ -2593,7 +2593,7 @@
     invoke-virtual {v6, v12}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     .line 388
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
@@ -2614,14 +2614,14 @@
 
     .line 392
     .restart local v5    # "mIntent":Landroid/content/Intent;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
     invoke-virtual {v12, v5}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 393
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
@@ -2663,7 +2663,7 @@
 
     .prologue
     .line 402
-    iget-object v2, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSamsungCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSamsungCaptioningPreferenceScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v2, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -2695,7 +2695,7 @@
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     .line 407
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2703,7 +2703,7 @@
     .end local v1    # "intent":Landroid/content/Intent;
     :cond_0
     :goto_0
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v2
 
@@ -2724,7 +2724,7 @@
     .end local v0    # "e":Landroid/content/ActivityNotFoundException;
     .end local v1    # "intent":Landroid/content/Intent;
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPreferenceScreen:Landroid/preference/SwitchPreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPreferenceScreen:Landroid/preference/SwitchPreferenceScreen;
 
     invoke-virtual {v2, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -2745,7 +2745,7 @@
 
     .line 416
     :try_start_1
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->startActivity(Landroid/content/Intent;)V
     :try_end_1
     .catch Landroid/content/ActivityNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -2765,7 +2765,7 @@
     .end local v0    # "e":Landroid/content/ActivityNotFoundException;
     .end local v1    # "intent":Landroid/content/Intent;
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPlusPreferenceScreen:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mSoundDetectorPlusPreferenceScreen:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v2, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -2786,7 +2786,7 @@
 
     .line 425
     :try_start_2
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->startActivity(Landroid/content/Intent;)V
     :try_end_2
     .catch Landroid/content/ActivityNotFoundException; {:try_start_2 .. :try_end_2} :catch_2
 
@@ -2810,18 +2810,18 @@
     const/4 v3, 0x0
 
     .line 180
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 183
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAudioBalancePref:Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAudioBalancePref:Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference;->prepareMediaPlayer()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference;->prepareMediaPlayer()V
 
     .line 185
-    invoke-direct {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->updateDefaultPreferences()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->updateDefaultPreferences()V
 
     .line 186
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -2831,12 +2831,12 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mFlashNotification:Landroid/database/ContentObserver;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mFlashNotification:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 188
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -2846,7 +2846,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mTurnOffAllSound:Landroid/database/ContentObserver;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mTurnOffAllSound:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -2859,10 +2859,10 @@
 
     .prologue
     .line 257
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onStart()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onStart()V
 
     .line 258
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->getListView()Landroid/widget/ListView;
 
     move-result-object v0
 
@@ -2881,12 +2881,12 @@
 
     .prologue
     .line 236
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsHearing;->mAudioBalancePref:Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsHearing;->mAudioBalancePref:Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference;->releaseMediaPlayer()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference;->releaseMediaPlayer()V
 
     .line 237
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onStop()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onStop()V
 
     .line 238
     return-void

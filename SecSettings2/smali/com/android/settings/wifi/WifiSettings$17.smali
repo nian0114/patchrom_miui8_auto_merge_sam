@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiSettings$17;
+.class Lcom/android/settings_ex/wifi/WifiSettings$17;
 .super Ljava/lang/Object;
 .source "WifiSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSettings;->onSleepPolicyPressed()V
+    value = Lcom/android/settings_ex/wifi/WifiSettings;->onSleepPolicyPressed()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSettings;)V
     .locals 0
 
     .prologue
     .line 2393
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSettings$17;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSettings$17;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,10 +56,10 @@
     if-ne v3, v0, :cond_0
 
     .line 2397
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings$17;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSettings$17;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # invokes: Lcom/android/settings/wifi/WifiSettings;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiSettings;->access$2400(Lcom/android/settings/wifi/WifiSettings;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/wifi/WifiSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiSettings;->access$2400(Lcom/android/settings_ex/wifi/WifiSettings;)Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -85,10 +85,10 @@
     if-ne v2, v0, :cond_1
 
     .line 2399
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings$17;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSettings$17;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # invokes: Lcom/android/settings/wifi/WifiSettings;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiSettings;->access$2500(Lcom/android/settings/wifi/WifiSettings;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/wifi/WifiSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiSettings;->access$2500(Lcom/android/settings_ex/wifi/WifiSettings;)Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -100,10 +100,10 @@
 
     .line 2401
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings$17;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSettings$17;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # invokes: Lcom/android/settings/wifi/WifiSettings;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiSettings;->access$2600(Lcom/android/settings/wifi/WifiSettings;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/wifi/WifiSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiSettings;->access$2600(Lcom/android/settings_ex/wifi/WifiSettings;)Landroid/content/ContentResolver;
 
     move-result-object v0
 

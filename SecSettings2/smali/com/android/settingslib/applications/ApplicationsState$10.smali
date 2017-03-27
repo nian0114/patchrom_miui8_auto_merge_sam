@@ -1,14 +1,14 @@
-.class final Lcom/android/settingslib/applications/ApplicationsState$10;
+.class final Lcom/android/settings_exlib/applications/ApplicationsState$10;
 .super Ljava/lang/Object;
 .source "ApplicationsState.java"
 
 # interfaces
-.implements Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+.implements Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/applications/ApplicationsState;
+    value = Lcom/android/settings_exlib/applications/ApplicationsState;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,13 +30,13 @@
 
 
 # virtual methods
-.method public filterApp(Lcom/android/settingslib/applications/ApplicationsState$AppEntry;)Z
+.method public filterApp(Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;)Z
     .locals 1
-    .param p1, "entry"    # Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+    .param p1, "entry"    # Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
 
     .prologue
     .line 1366
-    iget-object v0, p1, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
+    iget-object v0, p1, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
 
     iget-boolean v0, v0, Landroid/content/pm/ApplicationInfo;->enabled:Z
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DeviceAdminAdd$3;
+.class Lcom/android/settings_ex/DeviceAdminAdd$3;
 .super Ljava/lang/Object;
 .source "DeviceAdminAdd.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DeviceAdminAdd;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/DeviceAdminAdd;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DeviceAdminAdd;
+.field final synthetic this$0:Lcom/android/settings_ex/DeviceAdminAdd;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DeviceAdminAdd;)V
+.method constructor <init>(Lcom/android/settings_ex/DeviceAdminAdd;)V
     .locals 0
 
     .prologue
     .line 325
-    iput-object p1, p0, Lcom/android/settings/DeviceAdminAdd$3;->this$0:Lcom/android/settings/DeviceAdminAdd;
+    iput-object p1, p0, Lcom/android/settings_ex/DeviceAdminAdd$3;->this$0:Lcom/android/settings_ex/DeviceAdminAdd;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,9 +44,9 @@
     .line 327
     const v0, 0x1605a
 
-    iget-object v1, p0, Lcom/android/settings/DeviceAdminAdd$3;->this$0:Lcom/android/settings/DeviceAdminAdd;
+    iget-object v1, p0, Lcom/android/settings_ex/DeviceAdminAdd$3;->this$0:Lcom/android/settings_ex/DeviceAdminAdd;
 
-    iget-object v1, v1, Lcom/android/settings/DeviceAdminAdd;->mDeviceAdmin:Landroid/app/enterprise/EnterpriseDeviceAdminInfo;
+    iget-object v1, v1, Lcom/android/settings_ex/DeviceAdminAdd;->mDeviceAdmin:Landroid/app/enterprise/EnterpriseDeviceAdminInfo;
 
     invoke-virtual {v1}, Landroid/app/enterprise/EnterpriseDeviceAdminInfo;->getActivityInfo()Landroid/content/pm/ActivityInfo;
 
@@ -59,9 +59,9 @@
     invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(II)I
 
     .line 329
-    iget-object v0, p0, Lcom/android/settings/DeviceAdminAdd$3;->this$0:Lcom/android/settings/DeviceAdminAdd;
+    iget-object v0, p0, Lcom/android/settings_ex/DeviceAdminAdd$3;->this$0:Lcom/android/settings_ex/DeviceAdminAdd;
 
-    invoke-virtual {v0}, Lcom/android/settings/DeviceAdminAdd;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/DeviceAdminAdd;->finish()V
 
     .line 330
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/AppListPreferenceWithSettings$1;
+.class Lcom/android/settings_ex/AppListPreferenceWithSettings$1;
 .super Ljava/lang/Object;
 .source "AppListPreferenceWithSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/AppListPreferenceWithSettings;->onBindView(Landroid/view/View;)V
+    value = Lcom/android/settings_ex/AppListPreferenceWithSettings;->onBindView(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/AppListPreferenceWithSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/AppListPreferenceWithSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/AppListPreferenceWithSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/AppListPreferenceWithSettings;)V
     .locals 0
 
     .prologue
     .line 28
-    iput-object p1, p0, Lcom/android/settings/AppListPreferenceWithSettings$1;->this$0:Lcom/android/settings/AppListPreferenceWithSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/AppListPreferenceWithSettings$1;->this$0:Lcom/android/settings_ex/AppListPreferenceWithSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,19 +50,19 @@
 
     .line 32
     .local v0, "intent":Landroid/content/Intent;
-    iget-object v1, p0, Lcom/android/settings/AppListPreferenceWithSettings$1;->this$0:Lcom/android/settings/AppListPreferenceWithSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/AppListPreferenceWithSettings$1;->this$0:Lcom/android/settings_ex/AppListPreferenceWithSettings;
 
-    # getter for: Lcom/android/settings/AppListPreferenceWithSettings;->mSettingsComponent:Landroid/content/ComponentName;
-    invoke-static {v1}, Lcom/android/settings/AppListPreferenceWithSettings;->access$000(Lcom/android/settings/AppListPreferenceWithSettings;)Landroid/content/ComponentName;
+    # getter for: Lcom/android/settings_ex/AppListPreferenceWithSettings;->mSettingsComponent:Landroid/content/ComponentName;
+    invoke-static {v1}, Lcom/android/settings_ex/AppListPreferenceWithSettings;->access$000(Lcom/android/settings_ex/AppListPreferenceWithSettings;)Landroid/content/ComponentName;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     .line 33
-    iget-object v1, p0, Lcom/android/settings/AppListPreferenceWithSettings$1;->this$0:Lcom/android/settings/AppListPreferenceWithSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/AppListPreferenceWithSettings$1;->this$0:Lcom/android/settings_ex/AppListPreferenceWithSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/AppListPreferenceWithSettings;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/android/settings_ex/AppListPreferenceWithSettings;->getContext()Landroid/content/Context;
 
     move-result-object v1
 

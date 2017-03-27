@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiSettings$28;
+.class Lcom/android/settings_ex/wifi/WifiSettings$28;
 .super Ljava/lang/Object;
 .source "WifiSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSettings;->onIwlanMenuPressed()V
+    value = Lcom/android/settings_ex/wifi/WifiSettings;->onIwlanMenuPressed()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSettings;)V
     .locals 0
 
     .prologue
     .line 2790
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSettings$28;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSettings$28;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -65,9 +65,9 @@
     .line 2802
     :cond_1
     :try_start_0
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiSettings$28;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiSettings$28;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    invoke-virtual {v5}, Lcom/android/settings/wifi/WifiSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v5}, Lcom/android/settings_ex/wifi/WifiSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -127,9 +127,9 @@
     invoke-virtual {v1, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 2810
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiSettings$28;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiSettings$28;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    invoke-virtual {v5}, Lcom/android/settings/wifi/WifiSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v5}, Lcom/android/settings_ex/wifi/WifiSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -159,9 +159,9 @@
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 2812
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiSettings$28;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiSettings$28;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    invoke-virtual {v5}, Lcom/android/settings/wifi/WifiSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v5}, Lcom/android/settings_ex/wifi/WifiSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 

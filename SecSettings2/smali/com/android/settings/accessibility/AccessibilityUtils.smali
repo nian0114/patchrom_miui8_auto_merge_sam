@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accessibility/AccessibilityUtils;
+.class public Lcom/android/settings_ex/accessibility/AccessibilityUtils;
 .super Ljava/lang/Object;
 .source "AccessibilityUtils.java"
 
@@ -20,7 +20,7 @@
 
     .prologue
     .line 477
-    const-class v0, Lcom/android/settings/accessibility/AccessibilityUtils;
+    const-class v0, Lcom/android/settings_ex/accessibility/AccessibilityUtils;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
@@ -65,7 +65,7 @@
 
     .prologue
     .line 495
-    const-class v0, Lcom/android/settings/accessibility/AccessibilityUtils;
+    const-class v0, Lcom/android/settings_ex/accessibility/AccessibilityUtils;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
@@ -136,7 +136,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;)V
+    invoke-static {v3}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;)V
 
     .line 460
     const/4 v1, 0x0
@@ -178,7 +178,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;)V
+    invoke-static {v3}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;)V
 
     .line 464
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -252,7 +252,7 @@
     .line 59
     const-string v5, "context is null"
 
-    invoke-static {v5}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;)V
+    invoke-static {v5}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;)V
 
     .line 60
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
@@ -295,7 +295,7 @@
 
     .line 70
     .local v3, "enabledServices":Ljava/util/Set;, "Ljava/util/Set<Landroid/content/ComponentName;>;"
-    sget-object v0, Lcom/android/settings/accessibility/AccessibilitySettings;->sStringColonSplitter:Landroid/text/TextUtils$SimpleStringSplitter;
+    sget-object v0, Lcom/android/settings_ex/accessibility/AccessibilitySettings;->sStringColonSplitter:Landroid/text/TextUtils$SimpleStringSplitter;
 
     .line 71
     .local v0, "colonSplitter":Landroid/text/TextUtils$SimpleStringSplitter;
@@ -637,7 +637,7 @@
     :cond_1
     const-string v3, "com.samsung.android.app.talkback"
 
-    invoke-static {p0, v3}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v3}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v3
 
@@ -678,7 +678,7 @@
 
     .line 194
     :cond_3
-    invoke-static {p0}, Lcom/android/settings/Utils;->isUniversalSwitchSupportMultiUserKnoxMode(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/android/settings_ex/Utils;->isUniversalSwitchSupportMultiUserKnoxMode(Landroid/content/Context;)Z
 
     move-result v3
 
@@ -944,13 +944,13 @@
     .local v5, "talkback":I
     const-string v9, "com.samsung.android.universalswitch"
 
-    invoke-static {p0, v9}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v9}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v9
 
     if-eqz v9, :cond_0
 
-    invoke-static {p0}, Lcom/android/settings/Utils;->isUniversalSwitchSupportMultiUserKnoxMode(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/android/settings_ex/Utils;->isUniversalSwitchSupportMultiUserKnoxMode(Landroid/content/Context;)Z
 
     move-result v9
 
@@ -1003,7 +1003,7 @@
     :cond_0
     const-string v9, "com.google.android.marvin.talkback"
 
-    invoke-static {p0, v9}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v9}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v9
 
@@ -1011,7 +1011,7 @@
 
     const-string v9, "com.samsung.android.app.talkback"
 
-    invoke-static {p0, v9}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v9}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v9
 
@@ -1019,7 +1019,7 @@
 
     .line 336
     :cond_1
-    invoke-static {p0}, Lcom/android/settings/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/android/settings_ex/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
 
     move-result v9
 
@@ -1032,7 +1032,7 @@
     add-int/lit8 v3, v3, 0x1
 
     .line 338
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v9
 
@@ -1184,7 +1184,7 @@
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "putString couldn\'t be executed."
 
-    invoke-static {v2}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogE(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogE(Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -1253,7 +1253,7 @@
 
     if-lez v0, :cond_0
 
-    invoke-static {p0}, Lcom/android/settings/Utils;->isUniversalSwitchSupportMultiUserKnoxMode(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/android/settings_ex/Utils;->isUniversalSwitchSupportMultiUserKnoxMode(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -1269,12 +1269,12 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 362
-    invoke-static {p0, v2}, Lcom/android/settings/accessibility/AccessibilityUtils;->turnOnOffUniversalInput(Landroid/content/Context;Z)V
+    invoke-static {p0, v2}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->turnOnOffUniversalInput(Landroid/content/Context;Z)V
 
     .line 363
     const-string v0, "turnOnOffUniversalInput - Universal Input off in"
 
-    invoke-static {v0}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;)V
 
     .line 366
     :cond_0
@@ -1285,10 +1285,10 @@
     .line 367
     const-string v0, "turnOffScreenReaderExclusiveOptions - 0x10"
 
-    invoke-static {v0}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;)V
 
     .line 368
-    invoke-static {p0}, Lcom/android/settings/Utils;->turnOffTalkBack(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/android/settings_ex/Utils;->turnOffTalkBack(Landroid/content/Context;)Z
 
     .line 370
     :cond_1
@@ -1328,7 +1328,7 @@
 
     move-result-object v14
 
-    invoke-static {v14}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;)V
+    invoke-static {v14}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;)V
 
     .line 228
     const/16 v1, 0x3a
@@ -1343,7 +1343,7 @@
 
     .line 231
     .local v12, "sStringColonSplitter":Landroid/text/TextUtils$SimpleStringSplitter;
-    invoke-static/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilityUtils;->getEnabledServicesFromSettings(Landroid/content/Context;)Ljava/util/Set;
+    invoke-static/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->getEnabledServicesFromSettings(Landroid/content/Context;)Ljava/util/Set;
 
     move-result-object v6
 
@@ -1466,7 +1466,7 @@
     invoke-interface {v6, v13}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     .line 248
-    sget-object v11, Lcom/android/settings/accessibility/AccessibilitySettings;->sInstalledServices:Ljava/util/Set;
+    sget-object v11, Lcom/android/settings_ex/accessibility/AccessibilitySettings;->sInstalledServices:Ljava/util/Set;
 
     .line 249
     .local v11, "installedServices":Ljava/util/Set;, "Ljava/util/Set<Landroid/content/ComponentName;>;"
@@ -1515,7 +1515,7 @@
     :cond_6
     if-nez p1, :cond_2
 
-    invoke-static/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilityUtils;->isDirectAccessDBEnabled(Landroid/content/Context;)Z
+    invoke-static/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->isDirectAccessDBEnabled(Landroid/content/Context;)Z
 
     move-result v14
 
@@ -1691,7 +1691,7 @@
 
     move-result-object v14
 
-    invoke-static {v14}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;)V
+    invoke-static {v14}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;)V
 
     .line 379
     const/16 v1, 0x3a
@@ -1706,7 +1706,7 @@
 
     .line 382
     .local v12, "sStringColonSplitter":Landroid/text/TextUtils$SimpleStringSplitter;
-    invoke-static/range {p0 .. p0}, Lcom/android/settings/accessibility/AccessibilityUtils;->getEnabledServicesFromSettings(Landroid/content/Context;)Ljava/util/Set;
+    invoke-static/range {p0 .. p0}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->getEnabledServicesFromSettings(Landroid/content/Context;)Ljava/util/Set;
 
     move-result-object v6
 
@@ -1797,7 +1797,7 @@
     invoke-interface {v6, v13}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     .line 399
-    sget-object v11, Lcom/android/settings/accessibility/AccessibilitySettings;->sInstalledServices:Ljava/util/Set;
+    sget-object v11, Lcom/android/settings_ex/accessibility/AccessibilitySettings;->sInstalledServices:Ljava/util/Set;
 
     .line 400
     .local v11, "installedServices":Ljava/util/Set;, "Ljava/util/Set<Landroid/content/ComponentName;>;"

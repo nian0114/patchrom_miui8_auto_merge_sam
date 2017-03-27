@@ -1,11 +1,11 @@
-.class Lcom/android/settings/applications/ManageDefaultApps$2;
+.class Lcom/android/settings_ex/applications/ManageDefaultApps$2;
 .super Lcom/android/internal/content/PackageMonitor;
 .source "ManageDefaultApps.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/ManageDefaultApps;
+    value = Lcom/android/settings_ex/applications/ManageDefaultApps;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/applications/ManageDefaultApps;
+.field final synthetic this$0:Lcom/android/settings_ex/applications/ManageDefaultApps;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/applications/ManageDefaultApps;)V
+.method constructor <init>(Lcom/android/settings_ex/applications/ManageDefaultApps;)V
     .locals 0
 
     .prologue
     .line 105
-    iput-object p1, p0, Lcom/android/settings/applications/ManageDefaultApps$2;->this$0:Lcom/android/settings/applications/ManageDefaultApps;
+    iput-object p1, p0, Lcom/android/settings_ex/applications/ManageDefaultApps$2;->this$0:Lcom/android/settings_ex/applications/ManageDefaultApps;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
 
@@ -36,17 +36,17 @@
 
     .prologue
     .line 127
-    iget-object v0, p0, Lcom/android/settings/applications/ManageDefaultApps$2;->this$0:Lcom/android/settings/applications/ManageDefaultApps;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageDefaultApps$2;->this$0:Lcom/android/settings_ex/applications/ManageDefaultApps;
 
-    # getter for: Lcom/android/settings/applications/ManageDefaultApps;->mHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/settings/applications/ManageDefaultApps;->access$200(Lcom/android/settings/applications/ManageDefaultApps;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/applications/ManageDefaultApps;->mHandler:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/settings_ex/applications/ManageDefaultApps;->access$200(Lcom/android/settings_ex/applications/ManageDefaultApps;)Landroid/os/Handler;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/applications/ManageDefaultApps$2;->this$0:Lcom/android/settings/applications/ManageDefaultApps;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/ManageDefaultApps$2;->this$0:Lcom/android/settings_ex/applications/ManageDefaultApps;
 
-    # getter for: Lcom/android/settings/applications/ManageDefaultApps;->mUpdateRunnable:Ljava/lang/Runnable;
-    invoke-static {v1}, Lcom/android/settings/applications/ManageDefaultApps;->access$100(Lcom/android/settings/applications/ManageDefaultApps;)Ljava/lang/Runnable;
+    # getter for: Lcom/android/settings_ex/applications/ManageDefaultApps;->mUpdateRunnable:Ljava/lang/Runnable;
+    invoke-static {v1}, Lcom/android/settings_ex/applications/ManageDefaultApps;->access$100(Lcom/android/settings_ex/applications/ManageDefaultApps;)Ljava/lang/Runnable;
 
     move-result-object v1
 
@@ -67,7 +67,7 @@
 
     .prologue
     .line 108
-    invoke-direct {p0}, Lcom/android/settings/applications/ManageDefaultApps$2;->sendUpdate()V
+    invoke-direct {p0}, Lcom/android/settings_ex/applications/ManageDefaultApps$2;->sendUpdate()V
 
     .line 109
     return-void
@@ -80,7 +80,7 @@
 
     .prologue
     .line 113
-    invoke-direct {p0}, Lcom/android/settings/applications/ManageDefaultApps$2;->sendUpdate()V
+    invoke-direct {p0}, Lcom/android/settings_ex/applications/ManageDefaultApps$2;->sendUpdate()V
 
     .line 114
     return-void
@@ -93,7 +93,7 @@
 
     .prologue
     .line 118
-    invoke-direct {p0}, Lcom/android/settings/applications/ManageDefaultApps$2;->sendUpdate()V
+    invoke-direct {p0}, Lcom/android/settings_ex/applications/ManageDefaultApps$2;->sendUpdate()V
 
     .line 119
     return-void
@@ -106,7 +106,7 @@
 
     .prologue
     .line 123
-    invoke-direct {p0}, Lcom/android/settings/applications/ManageDefaultApps$2;->sendUpdate()V
+    invoke-direct {p0}, Lcom/android/settings_ex/applications/ManageDefaultApps$2;->sendUpdate()V
 
     .line 124
     return-void

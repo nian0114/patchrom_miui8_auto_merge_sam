@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/KiesLocationReceiver;
+.class public Lcom/android/settings_ex/KiesLocationReceiver;
 .super Landroid/content/BroadcastReceiver;
 .source "KiesLocationReceiver.java"
 
@@ -6,9 +6,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/KiesLocationReceiver$1;,
-        Lcom/android/settings/KiesLocationReceiver$Encryption;,
-        Lcom/android/settings/KiesLocationReceiver$KiesOperation;
+        Lcom/android/settings_ex/KiesLocationReceiver$1;,
+        Lcom/android/settings_ex/KiesLocationReceiver$Encryption;,
+        Lcom/android/settings_ex/KiesLocationReceiver$KiesOperation;
     }
 .end annotation
 
@@ -125,22 +125,22 @@
 
     .line 100
     :goto_1
-    new-instance v2, Lcom/android/settings/KiesLocationReceiver$KiesOperation;
+    new-instance v2, Lcom/android/settings_ex/KiesLocationReceiver$KiesOperation;
 
-    invoke-direct {v2, p0, p1, v1, p2}, Lcom/android/settings/KiesLocationReceiver$KiesOperation;-><init>(Lcom/android/settings/KiesLocationReceiver;Landroid/content/Context;ILandroid/content/Intent;)V
+    invoke-direct {v2, p0, p1, v1, p2}, Lcom/android/settings_ex/KiesLocationReceiver$KiesOperation;-><init>(Lcom/android/settings_ex/KiesLocationReceiver;Landroid/content/Context;ILandroid/content/Intent;)V
 
     .line 101
-    .local v2, "task":Lcom/android/settings/KiesLocationReceiver$KiesOperation;
+    .local v2, "task":Lcom/android/settings_ex/KiesLocationReceiver$KiesOperation;
     const/4 v3, 0x0
 
     new-array v3, v3, [Ljava/lang/Void;
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/KiesLocationReceiver$KiesOperation;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/KiesLocationReceiver$KiesOperation;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     goto :goto_0
 
     .line 93
-    .end local v2    # "task":Lcom/android/settings/KiesLocationReceiver$KiesOperation;
+    .end local v2    # "task":Lcom/android/settings_ex/KiesLocationReceiver$KiesOperation;
     :cond_4
     const-string v3, "com.sec.android.intent.action.REQUEST_RESTORE_LOCATIONSERVICEVZW"
 

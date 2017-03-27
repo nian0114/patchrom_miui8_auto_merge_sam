@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wfd/WifiDisplaySettings$15;
+.class Lcom/android/settings_ex/wfd/WifiDisplaySettings$15;
 .super Ljava/lang/Object;
 .source "WifiDisplaySettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wfd/WifiDisplaySettings;->createDongleRenameDialog()Landroid/app/AlertDialog;
+    value = Lcom/android/settings_ex/wfd/WifiDisplaySettings;->createDongleRenameDialog()Landroid/app/AlertDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wfd/WifiDisplaySettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wfd/WifiDisplaySettings;)V
     .locals 0
 
     .prologue
     .line 2038
-    iput-object p1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$15;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$15;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -84,17 +84,17 @@
     if-nez v2, :cond_0
 
     .line 2050
-    iget-object v2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$15;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iget-object v2, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$15;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/wfd/WifiDisplaySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Lcom/android/settings_ex/wfd/WifiDisplaySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/wfd/WifiDisplaySettings$15;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iget-object v3, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$15;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
     const v4, 0x7f0e10f3
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/wfd/WifiDisplaySettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/wfd/WifiDisplaySettings;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 

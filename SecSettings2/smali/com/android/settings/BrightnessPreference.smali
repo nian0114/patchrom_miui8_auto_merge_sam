@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/BrightnessPreference;
+.class public Lcom/android/settings_ex/BrightnessPreference;
 .super Landroid/preference/SeekBarDialogPreference;
 .source "BrightnessPreference.java"
 
@@ -12,8 +12,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/BrightnessPreference$SavedState;,
-        Lcom/android/settings/BrightnessPreference$Listener;
+        Lcom/android/settings_ex/BrightnessPreference$SavedState;,
+        Lcom/android/settings_ex/BrightnessPreference$Listener;
     }
 .end annotation
 
@@ -47,7 +47,7 @@
 
 .field private mFlipCloseStatus:Z
 
-.field private mListener:Lcom/android/settings/BrightnessPreference$Listener;
+.field private mListener:Lcom/android/settings_ex/BrightnessPreference$Listener;
 
 .field private mMaxBrightness:I
 
@@ -92,7 +92,7 @@
     .line 399
     const/4 v2, 0x0
 
-    invoke-direct {p0, v2}, Lcom/android/settings/BrightnessPreference;->getBrightnessMode(I)I
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/BrightnessPreference;->getBrightnessMode(I)I
 
     move-result v1
 
@@ -102,12 +102,12 @@
 
     .line 408
     .local v0, "brightness":F
-    iget v2, p0, Lcom/android/settings/BrightnessPreference;->mCurBrightness:I
+    iget v2, p0, Lcom/android/settings_ex/BrightnessPreference;->mCurBrightness:I
 
     if-gez v2, :cond_0
 
     .line 409
-    invoke-virtual {p0}, Lcom/android/settings/BrightnessPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/BrightnessPreference;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -127,15 +127,15 @@
 
     .line 415
     :goto_0
-    iget v2, p0, Lcom/android/settings/BrightnessPreference;->mScreenBrightnessMinimum:I
+    iget v2, p0, Lcom/android/settings_ex/BrightnessPreference;->mScreenBrightnessMinimum:I
 
     int-to-float v2, v2
 
     sub-float v2, v0, v2
 
-    iget v3, p0, Lcom/android/settings/BrightnessPreference;->mScreenBrightnessMaximum:I
+    iget v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mScreenBrightnessMaximum:I
 
-    iget v4, p0, Lcom/android/settings/BrightnessPreference;->mScreenBrightnessMinimum:I
+    iget v4, p0, Lcom/android/settings_ex/BrightnessPreference;->mScreenBrightnessMinimum:I
 
     sub-int/2addr v3, v4
 
@@ -154,7 +154,7 @@
 
     .line 412
     :cond_0
-    iget v2, p0, Lcom/android/settings/BrightnessPreference;->mCurBrightness:I
+    iget v2, p0, Lcom/android/settings_ex/BrightnessPreference;->mCurBrightness:I
 
     int-to-float v0, v2
 
@@ -172,7 +172,7 @@
     .line 426
     .local v0, "brightnessMode":I
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/BrightnessPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/BrightnessPreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -204,9 +204,9 @@
 
     .prologue
     .line 445
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
 
-    invoke-direct {p0}, Lcom/android/settings/BrightnessPreference;->getBrightness()I
+    invoke-direct {p0}, Lcom/android/settings_ex/BrightnessPreference;->getBrightness()I
 
     move-result v1
 
@@ -223,7 +223,7 @@
     const/4 v3, 0x1
 
     .line 506
-    iget-boolean v0, p0, Lcom/android/settings/BrightnessPreference;->mRestoredOldState:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mRestoredOldState:Z
 
     if-eqz v0, :cond_0
 
@@ -233,25 +233,25 @@
 
     .line 510
     :cond_0
-    iget-boolean v0, p0, Lcom/android/settings/BrightnessPreference;->mAutomaticAvailable:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mAutomaticAvailable:Z
 
     if-eqz v0, :cond_1
 
     .line 511
-    iget v0, p0, Lcom/android/settings/BrightnessPreference;->mOldAutomatic:I
+    iget v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mOldAutomatic:I
 
-    invoke-direct {p0, v0}, Lcom/android/settings/BrightnessPreference;->setMode(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/BrightnessPreference;->setMode(I)V
 
     .line 514
     :cond_1
-    iget v0, p0, Lcom/android/settings/BrightnessPreference;->mOldBrightness:I
+    iget v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mOldBrightness:I
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, v0, v1}, Lcom/android/settings/BrightnessPreference;->setBrightness(IZ)V
+    invoke-direct {p0, v0, v1}, Lcom/android/settings_ex/BrightnessPreference;->setBrightness(IZ)V
 
     .line 516
-    invoke-virtual {p0}, Lcom/android/settings/BrightnessPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/BrightnessPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -261,17 +261,17 @@
 
     const-string v1, "screen_brightness"
 
-    iget v2, p0, Lcom/android/settings/BrightnessPreference;->mOldBrightness_DB:I
+    iget v2, p0, Lcom/android/settings_ex/BrightnessPreference;->mOldBrightness_DB:I
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 519
-    iget-boolean v0, p0, Lcom/android/settings/BrightnessPreference;->supportAutoBrightnessDetail:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/BrightnessPreference;->supportAutoBrightnessDetail:Z
 
     if-eqz v0, :cond_2
 
     .line 520
-    invoke-virtual {p0}, Lcom/android/settings/BrightnessPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/BrightnessPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -281,21 +281,21 @@
 
     const-string v1, "auto_brightness_detail"
 
-    iget v2, p0, Lcom/android/settings/BrightnessPreference;->mOldAutoDetailLevel:I
+    iget v2, p0, Lcom/android/settings_ex/BrightnessPreference;->mOldAutoDetailLevel:I
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 523
     :cond_2
-    iput-boolean v3, p0, Lcom/android/settings/BrightnessPreference;->mRestoredOldState:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mRestoredOldState:Z
 
     .line 524
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/BrightnessPreference;->mCurBrightness:I
+    iput v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mCurBrightness:I
 
     .line 525
-    iput-boolean v3, p0, Lcom/android/settings/BrightnessPreference;->dissmissflag:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/BrightnessPreference;->dissmissflag:Z
 
     goto :goto_0
 .end method
@@ -307,7 +307,7 @@
 
     .prologue
     .line 529
-    iget-boolean v3, p0, Lcom/android/settings/BrightnessPreference;->mAutomaticMode:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mAutomaticMode:Z
 
     if-eqz v3, :cond_0
 
@@ -317,9 +317,9 @@
 
     .line 550
     :cond_0
-    iget v3, p0, Lcom/android/settings/BrightnessPreference;->mScreenBrightnessMaximum:I
+    iget v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mScreenBrightnessMaximum:I
 
-    iget v4, p0, Lcom/android/settings/BrightnessPreference;->mScreenBrightnessMinimum:I
+    iget v4, p0, Lcom/android/settings_ex/BrightnessPreference;->mScreenBrightnessMinimum:I
 
     sub-int v1, v3, v4
 
@@ -337,7 +337,7 @@
 
     move-result v3
 
-    iget v4, p0, Lcom/android/settings/BrightnessPreference;->mScreenBrightnessMinimum:I
+    iget v4, p0, Lcom/android/settings_ex/BrightnessPreference;->mScreenBrightnessMinimum:I
 
     add-int p1, v3, v4
 
@@ -367,10 +367,10 @@
     .line 562
     const/4 v3, -0x1
 
-    iput v3, p0, Lcom/android/settings/BrightnessPreference;->mCurBrightness:I
+    iput v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mCurBrightness:I
 
     .line 563
-    invoke-virtual {p0}, Lcom/android/settings/BrightnessPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/BrightnessPreference;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -397,7 +397,7 @@
     .line 567
     .restart local v0    # "power":Landroid/os/IPowerManager;
     :cond_2
-    iput p1, p0, Lcom/android/settings/BrightnessPreference;->mCurBrightness:I
+    iput p1, p0, Lcom/android/settings_ex/BrightnessPreference;->mCurBrightness:I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -417,10 +417,10 @@
     move v0, v1
 
     :goto_0
-    iput-boolean v0, p0, Lcom/android/settings/BrightnessPreference;->mAutomaticMode:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mAutomaticMode:Z
 
     .line 576
-    invoke-virtual {p0}, Lcom/android/settings/BrightnessPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/BrightnessPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -433,16 +433,16 @@
     invoke-static {v0, v2, p1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 579
-    iget-boolean v0, p0, Lcom/android/settings/BrightnessPreference;->mSupportFolderType:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mSupportFolderType:Z
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/android/settings/BrightnessPreference;->mFlipCloseStatus:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mFlipCloseStatus:Z
 
     if-eqz v0, :cond_0
 
     .line 580
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setEnabled(Z)V
 
@@ -478,27 +478,27 @@
     invoke-super {p0, p1}, Landroid/preference/SeekBarDialogPreference;->onBindDialogView(Landroid/view/View;)V
 
     .line 185
-    iput v9, p0, Lcom/android/settings/BrightnessPreference;->mCurBrightness:I
+    iput v9, p0, Lcom/android/settings_ex/BrightnessPreference;->mCurBrightness:I
 
     .line 186
-    iput-boolean v5, p0, Lcom/android/settings/BrightnessPreference;->dissmissflag:Z
+    iput-boolean v5, p0, Lcom/android/settings_ex/BrightnessPreference;->dissmissflag:Z
 
     .line 187
-    invoke-static {p1}, Lcom/android/settings/BrightnessPreference;->getSeekBar(Landroid/view/View;)Landroid/widget/SeekBar;
+    invoke-static {p1}, Lcom/android/settings_ex/BrightnessPreference;->getSeekBar(Landroid/view/View;)Landroid/widget/SeekBar;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iput-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     .line 189
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     const/16 v6, 0x2710
 
     invoke-virtual {v3, v6}, Landroid/widget/SeekBar;->setMax(I)V
 
     .line 191
-    iget-boolean v3, p0, Lcom/android/settings/BrightnessPreference;->supportAutoBrightnessDetail:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/BrightnessPreference;->supportAutoBrightnessDetail:Z
 
     if-eqz v3, :cond_0
 
@@ -511,7 +511,7 @@
 
     check-cast v3, Landroid/widget/LinearLayout;
 
-    iput-object v3, p0, Lcom/android/settings/BrightnessPreference;->mTwSeekBarLayout:Landroid/widget/LinearLayout;
+    iput-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mTwSeekBarLayout:Landroid/widget/LinearLayout;
 
     .line 193
     const v3, 0x7f0d03e2
@@ -522,7 +522,7 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    iput-object v3, p0, Lcom/android/settings/BrightnessPreference;->mTwSeekBarText:Landroid/widget/TextView;
+    iput-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mTwSeekBarText:Landroid/widget/TextView;
 
     .line 195
     const v3, 0x7f0d03e3
@@ -533,7 +533,7 @@
 
     check-cast v3, Landroid/widget/LinearLayout;
 
-    iput-object v3, p0, Lcom/android/settings/BrightnessPreference;->auto_detail_custom_layout:Landroid/widget/LinearLayout;
+    iput-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->auto_detail_custom_layout:Landroid/widget/LinearLayout;
 
     .line 196
     const v3, 0x7f0d03de
@@ -544,27 +544,27 @@
 
     check-cast v3, Landroid/widget/LinearLayout;
 
-    iput-object v3, p0, Lcom/android/settings/BrightnessPreference;->seekbar_layout:Landroid/widget/LinearLayout;
+    iput-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->seekbar_layout:Landroid/widget/LinearLayout;
 
     .line 197
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->mTwSeekBarLayout:Landroid/widget/LinearLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mTwSeekBarLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v3, v7}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 198
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->auto_detail_custom_layout:Landroid/widget/LinearLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->auto_detail_custom_layout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v3, v7}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 200
-    invoke-direct {p0, v5}, Lcom/android/settings/BrightnessPreference;->getBrightnessMode(I)I
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/BrightnessPreference;->getBrightnessMode(I)I
 
     move-result v3
 
     if-eqz v3, :cond_2
 
     .line 201
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->seekbar_layout:Landroid/widget/LinearLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->seekbar_layout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v3, v7}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
@@ -576,13 +576,13 @@
     invoke-static {v3, v6}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 203
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->mTwSeekBarLayout:Landroid/widget/LinearLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mTwSeekBarLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v3, v5}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 209
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/BrightnessPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/BrightnessPreference;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -596,10 +596,10 @@
 
     move-result v3
 
-    iput v3, p0, Lcom/android/settings/BrightnessPreference;->mOldAutoDetailLevel:I
+    iput v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mOldAutoDetailLevel:I
 
     .line 210
-    iget v3, p0, Lcom/android/settings/BrightnessPreference;->mOldAutoDetailLevel:I
+    iget v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mOldAutoDetailLevel:I
 
     div-int/lit8 v3, v3, 0x14
 
@@ -645,7 +645,7 @@
 
     .line 224
     :goto_1
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->mTwSeekBarText:Landroid/widget/TextView;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mTwSeekBarText:Landroid/widget/TextView;
 
     invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -653,14 +653,14 @@
     .end local v1    # "defaultProgress":I
     .end local v2    # "progressValue":Ljava/lang/String;
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/BrightnessPreference;->getBrightness()I
+    invoke-direct {p0}, Lcom/android/settings_ex/BrightnessPreference;->getBrightness()I
 
     move-result v3
 
-    iput v3, p0, Lcom/android/settings/BrightnessPreference;->mOldBrightness:I
+    iput v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mOldBrightness:I
 
     .line 229
-    invoke-virtual {p0}, Lcom/android/settings/BrightnessPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/BrightnessPreference;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -674,7 +674,7 @@
 
     move-result v3
 
-    iput v3, p0, Lcom/android/settings/BrightnessPreference;->mOldBrightness_DB:I
+    iput v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mOldBrightness_DB:I
 
     .line 233
     const v3, 0x7f0d03ef
@@ -685,7 +685,7 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    iput-object v3, p0, Lcom/android/settings/BrightnessPreference;->mTextView:Landroid/widget/TextView;
+    iput-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mTextView:Landroid/widget/TextView;
 
     .line 234
     const v3, 0x7f0d03dd
@@ -696,10 +696,10 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    iput-object v3, p0, Lcom/android/settings/BrightnessPreference;->mAutoNotiTextView:Landroid/widget/TextView;
+    iput-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mAutoNotiTextView:Landroid/widget/TextView;
 
     .line 235
-    invoke-virtual {p0}, Lcom/android/settings/BrightnessPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/BrightnessPreference;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -707,10 +707,10 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/BrightnessPreference;->mSharedPreference:Landroid/content/SharedPreferences;
+    iput-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mSharedPreference:Landroid/content/SharedPreferences;
 
     .line 236
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->mSharedPreference:Landroid/content/SharedPreferences;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mSharedPreference:Landroid/content/SharedPreferences;
 
     const-string v6, "pref_siop_brightness"
 
@@ -718,10 +718,10 @@
 
     move-result v3
 
-    iput v3, p0, Lcom/android/settings/BrightnessPreference;->mMaxBrightness:I
+    iput v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mMaxBrightness:I
 
     .line 237
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->mSharedPreference:Landroid/content/SharedPreferences;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mSharedPreference:Landroid/content/SharedPreferences;
 
     const-string v6, "pref_siop_brightness_change_type"
 
@@ -729,19 +729,19 @@
 
     move-result v3
 
-    iput v3, p0, Lcom/android/settings/BrightnessPreference;->mChangeType:I
+    iput v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mChangeType:I
 
     .line 238
-    iget v3, p0, Lcom/android/settings/BrightnessPreference;->mMaxBrightness:I
+    iget v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mMaxBrightness:I
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/BrightnessPreference;->returnMaxBrightness(I)I
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/BrightnessPreference;->returnMaxBrightness(I)I
 
     move-result v3
 
-    iput v3, p0, Lcom/android/settings/BrightnessPreference;->mMaxBrightness:I
+    iput v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mMaxBrightness:I
 
     .line 240
-    invoke-virtual {p0}, Lcom/android/settings/BrightnessPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/BrightnessPreference;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -755,12 +755,12 @@
 
     move-result v3
 
-    iget v6, p0, Lcom/android/settings/BrightnessPreference;->mMaxBrightness:I
+    iget v6, p0, Lcom/android/settings_ex/BrightnessPreference;->mMaxBrightness:I
 
     if-le v3, v6, :cond_4
 
     .line 242
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     const/16 v6, 0x2710
 
@@ -768,14 +768,14 @@
 
     .line 247
     :goto_2
-    iget v3, p0, Lcom/android/settings/BrightnessPreference;->mMaxBrightness:I
+    iget v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mMaxBrightness:I
 
     const/16 v6, 0xff
 
     if-ne v3, v6, :cond_5
 
     .line 248
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->mTextView:Landroid/widget/TextView;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mTextView:Landroid/widget/TextView;
 
     invoke-virtual {v3, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -790,7 +790,7 @@
 
     check-cast v3, Landroid/widget/CheckBox;
 
-    iput-object v3, p0, Lcom/android/settings/BrightnessPreference;->mCheckBox:Landroid/widget/CheckBox;
+    iput-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mCheckBox:Landroid/widget/CheckBox;
 
     .line 259
     const v3, 0x7f0d03dc
@@ -801,46 +801,46 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    iput-object v3, p0, Lcom/android/settings/BrightnessPreference;->mCheckBoxButton:Landroid/widget/TextView;
+    iput-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mCheckBoxButton:Landroid/widget/TextView;
 
     .line 261
-    iget-boolean v3, p0, Lcom/android/settings/BrightnessPreference;->mAutomaticAvailable:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mAutomaticAvailable:Z
 
     if-eqz v3, :cond_9
 
     .line 262
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->mCheckBox:Landroid/widget/CheckBox;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mCheckBox:Landroid/widget/CheckBox;
 
     invoke-virtual {v3, p0}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     .line 263
-    invoke-direct {p0, v5}, Lcom/android/settings/BrightnessPreference;->getBrightnessMode(I)I
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/BrightnessPreference;->getBrightnessMode(I)I
 
     move-result v3
 
-    iput v3, p0, Lcom/android/settings/BrightnessPreference;->mOldAutomatic:I
+    iput v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mOldAutomatic:I
 
     .line 264
-    iget v3, p0, Lcom/android/settings/BrightnessPreference;->mOldAutomatic:I
+    iget v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mOldAutomatic:I
 
     if-ne v3, v4, :cond_7
 
     move v3, v4
 
     :goto_4
-    iput-boolean v3, p0, Lcom/android/settings/BrightnessPreference;->mAutomaticMode:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mAutomaticMode:Z
 
     .line 265
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->mCheckBox:Landroid/widget/CheckBox;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mCheckBox:Landroid/widget/CheckBox;
 
-    iget-boolean v6, p0, Lcom/android/settings/BrightnessPreference;->mAutomaticMode:Z
+    iget-boolean v6, p0, Lcom/android/settings_ex/BrightnessPreference;->mAutomaticMode:Z
 
     invoke-virtual {v3, v6}, Landroid/widget/CheckBox;->setChecked(Z)V
 
     .line 266
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
 
-    iget-boolean v6, p0, Lcom/android/settings/BrightnessPreference;->mAutomaticMode:Z
+    iget-boolean v6, p0, Lcom/android/settings_ex/BrightnessPreference;->mAutomaticMode:Z
 
     if-eqz v6, :cond_8
 
@@ -849,12 +849,12 @@
 
     .line 275
     :goto_6
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     invoke-virtual {v3, p0}, Landroid/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
 
     .line 276
-    invoke-virtual {p0}, Lcom/android/settings/BrightnessPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/BrightnessPreference;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -870,10 +870,10 @@
     .local v0, "config":Landroid/content/res/Configuration;
     iget v3, v0, Landroid/content/res/Configuration;->hardKeyboardHidden:I
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/BrightnessPreference;->setFlipCloseStatus(I)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/BrightnessPreference;->setFlipCloseStatus(I)V
 
     .line 278
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->mAutoNotiTextView:Landroid/widget/TextView;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mAutoNotiTextView:Landroid/widget/TextView;
 
     invoke-virtual {v3, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -883,7 +883,7 @@
     .line 205
     .end local v0    # "config":Landroid/content/res/Configuration;
     :cond_2
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->seekbar_layout:Landroid/widget/LinearLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->seekbar_layout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v3, v5}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
@@ -921,9 +921,9 @@
     .end local v1    # "defaultProgress":I
     .end local v2    # "progressValue":Ljava/lang/String;
     :cond_4
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
 
-    iget v6, p0, Lcom/android/settings/BrightnessPreference;->mOldBrightness:I
+    iget v6, p0, Lcom/android/settings_ex/BrightnessPreference;->mOldBrightness:I
 
     invoke-virtual {v3, v6}, Landroid/widget/SeekBar;->setProgress(I)V
 
@@ -931,12 +931,12 @@
 
     .line 250
     :cond_5
-    iget v3, p0, Lcom/android/settings/BrightnessPreference;->mChangeType:I
+    iget v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mChangeType:I
 
     if-nez v3, :cond_6
 
     .line 251
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->mTextView:Landroid/widget/TextView;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mTextView:Landroid/widget/TextView;
 
     const v6, 0x7f0e111e
 
@@ -946,12 +946,12 @@
 
     .line 252
     :cond_6
-    iget v3, p0, Lcom/android/settings/BrightnessPreference;->mChangeType:I
+    iget v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mChangeType:I
 
     if-ne v3, v4, :cond_1
 
     .line 253
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->mTextView:Landroid/widget/TextView;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mTextView:Landroid/widget/TextView;
 
     const v6, 0x7f0e111f
 
@@ -973,17 +973,17 @@
 
     .line 269
     :cond_9
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->mCheckBox:Landroid/widget/CheckBox;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mCheckBox:Landroid/widget/CheckBox;
 
     invoke-virtual {v3, v7}, Landroid/widget/CheckBox;->setVisibility(I)V
 
     .line 271
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     invoke-virtual {v3, v4}, Landroid/widget/SeekBar;->setEnabled(Z)V
 
     .line 272
-    invoke-direct {p0}, Lcom/android/settings/BrightnessPreference;->onBrightnessChanged()V
+    invoke-direct {p0}, Lcom/android/settings_ex/BrightnessPreference;->onBrightnessChanged()V
 
     goto :goto_6
 .end method
@@ -999,7 +999,7 @@
     const/4 v2, 0x0
 
     .line 379
-    iget-boolean v0, p0, Lcom/android/settings/BrightnessPreference;->dissmissflag:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/BrightnessPreference;->dissmissflag:Z
 
     if-nez v0, :cond_1
 
@@ -1009,10 +1009,10 @@
     move v0, v1
 
     :goto_0
-    invoke-direct {p0, v0}, Lcom/android/settings/BrightnessPreference;->setMode(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/BrightnessPreference;->setMode(I)V
 
     .line 385
-    invoke-virtual {p0}, Lcom/android/settings/BrightnessPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/BrightnessPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -1028,12 +1028,12 @@
 
     move-result v0
 
-    iget v3, p0, Lcom/android/settings/BrightnessPreference;->mMaxBrightness:I
+    iget v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mMaxBrightness:I
 
     if-le v0, v3, :cond_3
 
     .line 387
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     const/16 v3, 0x2710
 
@@ -1041,9 +1041,9 @@
 
     .line 393
     :goto_1
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
 
-    iget-boolean v3, p0, Lcom/android/settings/BrightnessPreference;->mAutomaticMode:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mAutomaticMode:Z
 
     if-eqz v3, :cond_0
 
@@ -1053,13 +1053,13 @@
     invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setEnabled(Z)V
 
     .line 394
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     invoke-virtual {v0}, Landroid/widget/SeekBar;->getProgress()I
 
     move-result v0
 
-    invoke-direct {p0, v0, v2}, Lcom/android/settings/BrightnessPreference;->setBrightness(IZ)V
+    invoke-direct {p0, v0, v2}, Lcom/android/settings_ex/BrightnessPreference;->setBrightness(IZ)V
 
     .line 396
     :cond_1
@@ -1073,9 +1073,9 @@
 
     .line 389
     :cond_3
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
 
-    invoke-direct {p0}, Lcom/android/settings/BrightnessPreference;->getBrightness()I
+    invoke-direct {p0}, Lcom/android/settings_ex/BrightnessPreference;->getBrightness()I
 
     move-result v3
 
@@ -1093,7 +1093,7 @@
     invoke-super {p0, p1}, Landroid/preference/SeekBarDialogPreference;->onDialogClosed(Z)V
 
     .line 492
-    invoke-virtual {p0}, Lcom/android/settings/BrightnessPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/BrightnessPreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -1106,7 +1106,7 @@
     if-eqz p1, :cond_0
 
     .line 495
-    iget-object v1, p0, Lcom/android/settings/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v1, p0, Lcom/android/settings_ex/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     invoke-virtual {v1}, Landroid/widget/SeekBar;->getProgress()I
 
@@ -1114,21 +1114,21 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {p0, v1, v2}, Lcom/android/settings/BrightnessPreference;->setBrightness(IZ)V
+    invoke-direct {p0, v1, v2}, Lcom/android/settings_ex/BrightnessPreference;->setBrightness(IZ)V
 
     .line 500
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/BrightnessPreference;->mBrightnessObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/BrightnessPreference;->mBrightnessObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 501
-    iget-object v1, p0, Lcom/android/settings/BrightnessPreference;->mBrightnessModeObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/BrightnessPreference;->mBrightnessModeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 502
-    iget-object v1, p0, Lcom/android/settings/BrightnessPreference;->mAutoBrightnessDetailObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/BrightnessPreference;->mAutoBrightnessDetailObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
@@ -1137,7 +1137,7 @@
 
     .line 497
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/BrightnessPreference;->restoreOldState()V
+    invoke-direct {p0}, Lcom/android/settings_ex/BrightnessPreference;->restoreOldState()V
 
     goto :goto_0
 .end method
@@ -1155,23 +1155,23 @@
     if-eqz p3, :cond_0
 
     .line 323
-    iget-boolean v0, p0, Lcom/android/settings/BrightnessPreference;->mDualFolderType:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mDualFolderType:Z
 
     if-eqz v0, :cond_0
 
     .line 324
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->mCheckBox:Landroid/widget/CheckBox;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mCheckBox:Landroid/widget/CheckBox;
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setChecked(Z)V
 
     .line 328
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     if-ne p1, v0, :cond_1
 
     .line 329
-    invoke-direct {p0, p2, v1}, Lcom/android/settings/BrightnessPreference;->setBrightness(IZ)V
+    invoke-direct {p0, p2, v1}, Lcom/android/settings_ex/BrightnessPreference;->setBrightness(IZ)V
 
     .line 331
     :cond_1
@@ -1248,7 +1248,7 @@
 
     .line 345
     .local v1, "val":I
-    invoke-virtual {p0}, Lcom/android/settings/BrightnessPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/BrightnessPreference;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -1261,7 +1261,7 @@
     invoke-static {v2, v3, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 349
-    iget-object v2, p0, Lcom/android/settings/BrightnessPreference;->mTwSeekBarText:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/BrightnessPreference;->mTwSeekBarText:Landroid/widget/TextView;
 
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -1314,7 +1314,7 @@
 
     move-result-object v1
 
-    const-class v4, Lcom/android/settings/BrightnessPreference$SavedState;
+    const-class v4, Lcom/android/settings_ex/BrightnessPreference$SavedState;
 
     invoke-virtual {v1, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1334,48 +1334,48 @@
     move-object v0, p1
 
     .line 653
-    check-cast v0, Lcom/android/settings/BrightnessPreference$SavedState;
+    check-cast v0, Lcom/android/settings_ex/BrightnessPreference$SavedState;
 
     .line 654
-    .local v0, "myState":Lcom/android/settings/BrightnessPreference$SavedState;
-    invoke-virtual {v0}, Lcom/android/settings/BrightnessPreference$SavedState;->getSuperState()Landroid/os/Parcelable;
+    .local v0, "myState":Lcom/android/settings_ex/BrightnessPreference$SavedState;
+    invoke-virtual {v0}, Lcom/android/settings_ex/BrightnessPreference$SavedState;->getSuperState()Landroid/os/Parcelable;
 
     move-result-object v1
 
     invoke-super {p0, v1}, Landroid/preference/SeekBarDialogPreference;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
     .line 655
-    iget v1, v0, Lcom/android/settings/BrightnessPreference$SavedState;->oldProgress:I
+    iget v1, v0, Lcom/android/settings_ex/BrightnessPreference$SavedState;->oldProgress:I
 
-    iput v1, p0, Lcom/android/settings/BrightnessPreference;->mOldBrightness:I
+    iput v1, p0, Lcom/android/settings_ex/BrightnessPreference;->mOldBrightness:I
 
     .line 656
-    iget-boolean v1, v0, Lcom/android/settings/BrightnessPreference$SavedState;->oldAutomatic:Z
+    iget-boolean v1, v0, Lcom/android/settings_ex/BrightnessPreference$SavedState;->oldAutomatic:Z
 
     if-eqz v1, :cond_2
 
     move v1, v2
 
     :goto_1
-    iput v1, p0, Lcom/android/settings/BrightnessPreference;->mOldAutomatic:I
+    iput v1, p0, Lcom/android/settings_ex/BrightnessPreference;->mOldAutomatic:I
 
     .line 657
-    iget-boolean v1, v0, Lcom/android/settings/BrightnessPreference$SavedState;->automatic:Z
+    iget-boolean v1, v0, Lcom/android/settings_ex/BrightnessPreference$SavedState;->automatic:Z
 
     if-eqz v1, :cond_3
 
     :goto_2
-    invoke-direct {p0, v2}, Lcom/android/settings/BrightnessPreference;->setMode(I)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/BrightnessPreference;->setMode(I)V
 
     .line 658
-    iget v1, v0, Lcom/android/settings/BrightnessPreference$SavedState;->progress:I
+    iget v1, v0, Lcom/android/settings_ex/BrightnessPreference$SavedState;->progress:I
 
-    invoke-direct {p0, v1, v3}, Lcom/android/settings/BrightnessPreference;->setBrightness(IZ)V
+    invoke-direct {p0, v1, v3}, Lcom/android/settings_ex/BrightnessPreference;->setBrightness(IZ)V
 
     .line 659
-    iget v1, v0, Lcom/android/settings/BrightnessPreference$SavedState;->curBrightness:I
+    iget v1, v0, Lcom/android/settings_ex/BrightnessPreference$SavedState;->curBrightness:I
 
-    iput v1, p0, Lcom/android/settings/BrightnessPreference;->mCurBrightness:I
+    iput v1, p0, Lcom/android/settings_ex/BrightnessPreference;->mCurBrightness:I
 
     goto :goto_0
 
@@ -1405,13 +1405,13 @@
 
     .line 627
     .local v1, "superState":Landroid/os/Parcelable;
-    invoke-virtual {p0}, Lcom/android/settings/BrightnessPreference;->getDialog()Landroid/app/Dialog;
+    invoke-virtual {p0}, Lcom/android/settings_ex/BrightnessPreference;->getDialog()Landroid/app/Dialog;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settings/BrightnessPreference;->getDialog()Landroid/app/Dialog;
+    invoke-virtual {p0}, Lcom/android/settings_ex/BrightnessPreference;->getDialog()Landroid/app/Dialog;
 
     move-result-object v3
 
@@ -1430,46 +1430,46 @@
 
     .line 632
     :cond_1
-    new-instance v0, Lcom/android/settings/BrightnessPreference$SavedState;
+    new-instance v0, Lcom/android/settings_ex/BrightnessPreference$SavedState;
 
-    invoke-direct {v0, v1}, Lcom/android/settings/BrightnessPreference$SavedState;-><init>(Landroid/os/Parcelable;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/BrightnessPreference$SavedState;-><init>(Landroid/os/Parcelable;)V
 
     .line 633
-    .local v0, "myState":Lcom/android/settings/BrightnessPreference$SavedState;
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->mCheckBox:Landroid/widget/CheckBox;
+    .local v0, "myState":Lcom/android/settings_ex/BrightnessPreference$SavedState;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mCheckBox:Landroid/widget/CheckBox;
 
     invoke-virtual {v3}, Landroid/widget/CheckBox;->isChecked()Z
 
     move-result v3
 
-    iput-boolean v3, v0, Lcom/android/settings/BrightnessPreference$SavedState;->automatic:Z
+    iput-boolean v3, v0, Lcom/android/settings_ex/BrightnessPreference$SavedState;->automatic:Z
 
     .line 634
-    iget-object v3, p0, Lcom/android/settings/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     invoke-virtual {v3}, Landroid/widget/SeekBar;->getProgress()I
 
     move-result v3
 
-    iput v3, v0, Lcom/android/settings/BrightnessPreference$SavedState;->progress:I
+    iput v3, v0, Lcom/android/settings_ex/BrightnessPreference$SavedState;->progress:I
 
     .line 635
-    iget v3, p0, Lcom/android/settings/BrightnessPreference;->mOldAutomatic:I
+    iget v3, p0, Lcom/android/settings_ex/BrightnessPreference;->mOldAutomatic:I
 
     if-ne v3, v2, :cond_2
 
     :goto_1
-    iput-boolean v2, v0, Lcom/android/settings/BrightnessPreference$SavedState;->oldAutomatic:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/BrightnessPreference$SavedState;->oldAutomatic:Z
 
     .line 636
-    iget v2, p0, Lcom/android/settings/BrightnessPreference;->mOldBrightness:I
+    iget v2, p0, Lcom/android/settings_ex/BrightnessPreference;->mOldBrightness:I
 
-    iput v2, v0, Lcom/android/settings/BrightnessPreference$SavedState;->oldProgress:I
+    iput v2, v0, Lcom/android/settings_ex/BrightnessPreference$SavedState;->oldProgress:I
 
     .line 637
-    iget v2, p0, Lcom/android/settings/BrightnessPreference;->mCurBrightness:I
+    iget v2, p0, Lcom/android/settings_ex/BrightnessPreference;->mCurBrightness:I
 
-    iput v2, v0, Lcom/android/settings/BrightnessPreference$SavedState;->curBrightness:I
+    iput v2, v0, Lcom/android/settings_ex/BrightnessPreference$SavedState;->curBrightness:I
 
     goto :goto_0
 
@@ -1497,7 +1497,7 @@
     .line 361
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/BrightnessPreference;->mTracking:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mTracking:Z
 
     .line 362
     const-string v0, "BrightnessPreference"
@@ -1512,7 +1512,7 @@
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcom/android/settings/BrightnessPreference;->mTracking:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/BrightnessPreference;->mTracking:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1525,7 +1525,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 364
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->mListener:Lcom/android/settings/BrightnessPreference$Listener;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mListener:Lcom/android/settings_ex/BrightnessPreference$Listener;
 
     if-eqz v0, :cond_0
 
@@ -1551,7 +1551,7 @@
     .line 370
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/BrightnessPreference;->mTracking:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mTracking:Z
 
     .line 371
     const-string v0, "BrightnessPreference"
@@ -1566,7 +1566,7 @@
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcom/android/settings/BrightnessPreference;->mTracking:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/BrightnessPreference;->mTracking:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1579,7 +1579,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 373
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->mListener:Lcom/android/settings/BrightnessPreference$Listener;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mListener:Lcom/android/settings_ex/BrightnessPreference$Listener;
 
     if-eqz v0, :cond_0
 
@@ -1622,17 +1622,17 @@
     const/4 v1, 0x0
 
     .line 585
-    iget-boolean v0, p0, Lcom/android/settings/BrightnessPreference;->mDualFolderType:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mDualFolderType:Z
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settings/BrightnessPreference;->getDialog()Landroid/app/Dialog;
+    invoke-virtual {p0}, Lcom/android/settings_ex/BrightnessPreference;->getDialog()Landroid/app/Dialog;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settings/BrightnessPreference;->getDialog()Landroid/app/Dialog;
+    invoke-virtual {p0}, Lcom/android/settings_ex/BrightnessPreference;->getDialog()Landroid/app/Dialog;
 
     move-result-object v0
 
@@ -1652,17 +1652,17 @@
 
     .line 588
     :pswitch_0
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->mCheckBox:Landroid/widget/CheckBox;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mCheckBox:Landroid/widget/CheckBox;
 
     invoke-virtual {v0, v3}, Landroid/widget/CheckBox;->setEnabled(Z)V
 
     .line 589
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->mCheckBoxButton:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mCheckBoxButton:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 591
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->mCheckBox:Landroid/widget/CheckBox;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mCheckBox:Landroid/widget/CheckBox;
 
     invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
 
@@ -1671,12 +1671,12 @@
     if-eqz v0, :cond_1
 
     .line 592
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->seekbar_layout:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->seekbar_layout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 593
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->mTwSeekBarLayout:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mTwSeekBarLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
@@ -1684,12 +1684,12 @@
 
     .line 595
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->seekbar_layout:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->seekbar_layout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 596
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->mTwSeekBarLayout:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mTwSeekBarLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
@@ -1697,36 +1697,36 @@
 
     .line 601
     :pswitch_1
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->mCheckBox:Landroid/widget/CheckBox;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mCheckBox:Landroid/widget/CheckBox;
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setEnabled(Z)V
 
     .line 602
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->seekbar_layout:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->seekbar_layout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 603
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     invoke-virtual {v0, v3}, Landroid/widget/SeekBar;->setEnabled(Z)V
 
     .line 604
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->mTwSeekBarLayout:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mTwSeekBarLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 605
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->mCheckBoxButton:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mCheckBoxButton:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 606
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference;->mCheckBoxButton:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mCheckBoxButton:Landroid/widget/TextView;
 
-    new-instance v1, Lcom/android/settings/BrightnessPreference$4;
+    new-instance v1, Lcom/android/settings_ex/BrightnessPreference$4;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/BrightnessPreference$4;-><init>(Lcom/android/settings/BrightnessPreference;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/BrightnessPreference$4;-><init>(Lcom/android/settings_ex/BrightnessPreference;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
@@ -1751,7 +1751,7 @@
     invoke-super {p0, p1}, Landroid/preference/SeekBarDialogPreference;->showDialog(Landroid/os/Bundle;)V
 
     .line 170
-    invoke-virtual {p0}, Lcom/android/settings/BrightnessPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/BrightnessPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -1765,12 +1765,12 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/BrightnessPreference;->mBrightnessObserver:Landroid/database/ContentObserver;
+    iget-object v2, p0, Lcom/android/settings_ex/BrightnessPreference;->mBrightnessObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 173
-    invoke-virtual {p0}, Lcom/android/settings/BrightnessPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/BrightnessPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -1784,12 +1784,12 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/BrightnessPreference;->mBrightnessModeObserver:Landroid/database/ContentObserver;
+    iget-object v2, p0, Lcom/android/settings_ex/BrightnessPreference;->mBrightnessModeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 176
-    invoke-virtual {p0}, Lcom/android/settings/BrightnessPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/BrightnessPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -1803,14 +1803,14 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/BrightnessPreference;->mAutoBrightnessDetailObserver:Landroid/database/ContentObserver;
+    iget-object v2, p0, Lcom/android/settings_ex/BrightnessPreference;->mAutoBrightnessDetailObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 179
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/BrightnessPreference;->mRestoredOldState:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/BrightnessPreference;->mRestoredOldState:Z
 
     .line 180
     return-void

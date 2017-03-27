@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/Settings$DataUsageSummaryActivity;
-.super Lcom/android/settings/SettingsActivityWrapper;
+.class public Lcom/android/settings_ex/Settings$DataUsageSummaryActivity;
+.super Lcom/android/settings_ex/SettingsActivityWrapper;
 .source "Settings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/Settings;
+    value = Lcom/android/settings_ex/Settings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 308
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivityWrapper;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivityWrapper;-><init>()V
 
     return-void
 .end method
@@ -35,7 +35,7 @@
     const/4 v4, 0x1
 
     .line 311
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsActivityWrapper;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsActivityWrapper;->onCreate(Landroid/os/Bundle;)V
 
     .line 312
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
@@ -47,7 +47,7 @@
     if-lt v2, v3, :cond_1
 
     .line 313
-    invoke-virtual {p0}, Lcom/android/settings/Settings$DataUsageSummaryActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings$DataUsageSummaryActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -72,21 +72,21 @@
     :cond_0
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/android/settings/Settings$DataUsageSummaryActivity;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings$DataUsageSummaryActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
     .line 319
-    invoke-virtual {p0}, Lcom/android/settings/Settings$DataUsageSummaryActivity;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings$DataUsageSummaryActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v2
 
     invoke-virtual {v2, v4}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
     .line 320
-    invoke-virtual {p0}, Lcom/android/settings/Settings$DataUsageSummaryActivity;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings$DataUsageSummaryActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v2
 
@@ -105,7 +105,7 @@
 
     .prologue
     .line 327
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportCHNSmartManager()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportCHNSmartManager()Z
 
     move-result v0
 
@@ -129,7 +129,7 @@
 
     .line 334
     :cond_1
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsActivityWrapper;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsActivityWrapper;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v0
 
@@ -138,7 +138,7 @@
 
     .line 330
     :pswitch_0
-    invoke-virtual {p0}, Lcom/android/settings/Settings$DataUsageSummaryActivity;->onBackPressed()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings$DataUsageSummaryActivity;->onBackPressed()V
 
     .line 331
     const/4 v0, 0x1

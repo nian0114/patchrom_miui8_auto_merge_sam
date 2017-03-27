@@ -1,11 +1,11 @@
-.class Lcom/android/settings/guide/WifiSettingsGuider$1;
+.class Lcom/android/settings_ex/guide/WifiSettingsGuider$1;
 .super Landroid/os/Handler;
 .source "WifiSettingsGuider.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/guide/WifiSettingsGuider;
+    value = Lcom/android/settings_ex/guide/WifiSettingsGuider;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/guide/WifiSettingsGuider;
+.field final synthetic this$0:Lcom/android/settings_ex/guide/WifiSettingsGuider;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/guide/WifiSettingsGuider;)V
+.method constructor <init>(Lcom/android/settings_ex/guide/WifiSettingsGuider;)V
     .locals 0
 
     .prologue
     .line 145
-    iput-object p1, p0, Lcom/android/settings/guide/WifiSettingsGuider$1;->this$0:Lcom/android/settings/guide/WifiSettingsGuider;
+    iput-object p1, p0, Lcom/android/settings_ex/guide/WifiSettingsGuider$1;->this$0:Lcom/android/settings_ex/guide/WifiSettingsGuider;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -49,19 +49,19 @@
 
     .line 151
     :pswitch_0
-    iget-object v0, p0, Lcom/android/settings/guide/WifiSettingsGuider$1;->this$0:Lcom/android/settings/guide/WifiSettingsGuider;
+    iget-object v0, p0, Lcom/android/settings_ex/guide/WifiSettingsGuider$1;->this$0:Lcom/android/settings_ex/guide/WifiSettingsGuider;
 
-    # getter for: Lcom/android/settings/guide/WifiSettingsGuider;->mActivity:Landroid/app/Activity;
-    invoke-static {v0}, Lcom/android/settings/guide/WifiSettingsGuider;->access$000(Lcom/android/settings/guide/WifiSettingsGuider;)Landroid/app/Activity;
+    # getter for: Lcom/android/settings_ex/guide/WifiSettingsGuider;->mActivity:Landroid/app/Activity;
+    invoke-static {v0}, Lcom/android/settings_ex/guide/WifiSettingsGuider;->access$000(Lcom/android/settings_ex/guide/WifiSettingsGuider;)Landroid/app/Activity;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
     .line 152
-    iget-object v0, p0, Lcom/android/settings/guide/WifiSettingsGuider$1;->this$0:Lcom/android/settings/guide/WifiSettingsGuider;
+    iget-object v0, p0, Lcom/android/settings_ex/guide/WifiSettingsGuider$1;->this$0:Lcom/android/settings_ex/guide/WifiSettingsGuider;
 
-    invoke-virtual {v0}, Lcom/android/settings/guide/WifiSettingsGuider;->onDestroy()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/guide/WifiSettingsGuider;->onDestroy()V
 
     goto :goto_0
 

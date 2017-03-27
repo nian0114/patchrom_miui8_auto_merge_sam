@@ -1,11 +1,11 @@
-.class Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
+.class Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
 .super Ljava/lang/Object;
 .source "UsefulFeatureHub.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    value = Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -41,22 +41,22 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 87
-    iput-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->key:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->key:Ljava/lang/String;
 
     .line 88
-    iput v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->animation:I
+    iput v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->animation:I
 
     .line 89
-    iput v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->title:I
+    iput v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->title:I
 
     .line 90
-    iput v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->summary:I
+    iput v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->summary:I
 
     .line 91
-    iput-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->db:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->db:Ljava/lang/String;
 
     .line 92
-    iput-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->feature:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->feature:Ljava/lang/String;
 
     .line 93
     return-void

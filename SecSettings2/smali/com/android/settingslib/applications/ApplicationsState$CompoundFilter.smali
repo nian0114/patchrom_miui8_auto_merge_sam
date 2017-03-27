@@ -1,14 +1,14 @@
-.class public Lcom/android/settingslib/applications/ApplicationsState$CompoundFilter;
+.class public Lcom/android/settings_exlib/applications/ApplicationsState$CompoundFilter;
 .super Ljava/lang/Object;
 .source "ApplicationsState.java"
 
 # interfaces
-.implements Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+.implements Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/applications/ApplicationsState;
+    value = Lcom/android/settings_exlib/applications/ApplicationsState;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,26 +18,26 @@
 
 
 # instance fields
-.field private final mFirstFilter:Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+.field private final mFirstFilter:Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;
 
-.field private final mSecondFilter:Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+.field private final mSecondFilter:Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/settingslib/applications/ApplicationsState$AppFilter;Lcom/android/settingslib/applications/ApplicationsState$AppFilter;)V
+.method public constructor <init>(Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;)V
     .locals 0
-    .param p1, "first"    # Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
-    .param p2, "second"    # Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+    .param p1, "first"    # Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;
+    .param p2, "second"    # Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;
 
     .prologue
     .line 1456
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1457
-    iput-object p1, p0, Lcom/android/settingslib/applications/ApplicationsState$CompoundFilter;->mFirstFilter:Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+    iput-object p1, p0, Lcom/android/settings_exlib/applications/ApplicationsState$CompoundFilter;->mFirstFilter:Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;
 
     .line 1458
-    iput-object p2, p0, Lcom/android/settingslib/applications/ApplicationsState$CompoundFilter;->mSecondFilter:Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+    iput-object p2, p0, Lcom/android/settings_exlib/applications/ApplicationsState$CompoundFilter;->mSecondFilter:Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;
 
     .line 1459
     return-void
@@ -45,23 +45,23 @@
 
 
 # virtual methods
-.method public filterApp(Lcom/android/settingslib/applications/ApplicationsState$AppEntry;)Z
+.method public filterApp(Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;)Z
     .locals 1
-    .param p1, "info"    # Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+    .param p1, "info"    # Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
 
     .prologue
     .line 1469
-    iget-object v0, p0, Lcom/android/settingslib/applications/ApplicationsState$CompoundFilter;->mFirstFilter:Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+    iget-object v0, p0, Lcom/android/settings_exlib/applications/ApplicationsState$CompoundFilter;->mFirstFilter:Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;
 
-    invoke-interface {v0, p1}, Lcom/android/settingslib/applications/ApplicationsState$AppFilter;->filterApp(Lcom/android/settingslib/applications/ApplicationsState$AppEntry;)Z
+    invoke-interface {v0, p1}, Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;->filterApp(Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settingslib/applications/ApplicationsState$CompoundFilter;->mSecondFilter:Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+    iget-object v0, p0, Lcom/android/settings_exlib/applications/ApplicationsState$CompoundFilter;->mSecondFilter:Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;
 
-    invoke-interface {v0, p1}, Lcom/android/settingslib/applications/ApplicationsState$AppFilter;->filterApp(Lcom/android/settingslib/applications/ApplicationsState$AppEntry;)Z
+    invoke-interface {v0, p1}, Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;->filterApp(Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;)Z
 
     move-result v0
 
@@ -83,14 +83,14 @@
 
     .prologue
     .line 1463
-    iget-object v0, p0, Lcom/android/settingslib/applications/ApplicationsState$CompoundFilter;->mFirstFilter:Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+    iget-object v0, p0, Lcom/android/settings_exlib/applications/ApplicationsState$CompoundFilter;->mFirstFilter:Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;
 
-    invoke-interface {v0}, Lcom/android/settingslib/applications/ApplicationsState$AppFilter;->init()V
+    invoke-interface {v0}, Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;->init()V
 
     .line 1464
-    iget-object v0, p0, Lcom/android/settingslib/applications/ApplicationsState$CompoundFilter;->mSecondFilter:Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+    iget-object v0, p0, Lcom/android/settings_exlib/applications/ApplicationsState$CompoundFilter;->mSecondFilter:Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;
 
-    invoke-interface {v0}, Lcom/android/settingslib/applications/ApplicationsState$AppFilter;->init()V
+    invoke-interface {v0}, Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;->init()V
 
     .line 1465
     return-void

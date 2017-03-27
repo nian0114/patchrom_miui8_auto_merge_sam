@@ -1,12 +1,12 @@
-.class public Lcom/android/settings/ChooseLockAdditionalPin;
-.super Lcom/android/settings/SettingsActivity;
+.class public Lcom/android/settings_ex/ChooseLockAdditionalPin;
+.super Lcom/android/settings_ex/SettingsActivity;
 .source "ChooseLockAdditionalPin.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;
+        Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;
     }
 .end annotation
 
@@ -35,27 +35,27 @@
     const/4 v0, 0x0
 
     .line 72
-    sput-boolean v0, Lcom/android/settings/ChooseLockAdditionalPin;->mFromPersonalPage:Z
+    sput-boolean v0, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mFromPersonalPage:Z
 
     .line 73
-    sput-boolean v0, Lcom/android/settings/ChooseLockAdditionalPin;->mForPrivateModeBackupKey:Z
+    sput-boolean v0, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mForPrivateModeBackupKey:Z
 
     .line 74
-    sput-boolean v0, Lcom/android/settings/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
+    sput-boolean v0, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
 
     .line 76
-    sput-boolean v0, Lcom/android/settings/ChooseLockAdditionalPin;->mFromAppLock:Z
+    sput-boolean v0, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mFromAppLock:Z
 
     .line 77
-    sput-boolean v0, Lcom/android/settings/ChooseLockAdditionalPin;->mForAppLockBackupKey:Z
+    sput-boolean v0, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mForAppLockBackupKey:Z
 
     .line 78
-    sput-boolean v0, Lcom/android/settings/ChooseLockAdditionalPin;->mForFingerprint:Z
+    sput-boolean v0, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mForFingerprint:Z
 
     .line 79
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/android/settings/ChooseLockAdditionalPin;->mImm:Landroid/view/inputmethod/InputMethodManager;
+    sput-object v0, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mImm:Landroid/view/inputmethod/InputMethodManager;
 
     return-void
 .end method
@@ -65,7 +65,7 @@
 
     .prologue
     .line 67
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivity;-><init>()V
 
     .line 136
     return-void
@@ -76,7 +76,7 @@
 
     .prologue
     .line 67
-    sget-object v0, Lcom/android/settings/ChooseLockAdditionalPin;->mImm:Landroid/view/inputmethod/InputMethodManager;
+    sget-object v0, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mImm:Landroid/view/inputmethod/InputMethodManager;
 
     return-object v0
 .end method
@@ -86,7 +86,7 @@
 
     .prologue
     .line 67
-    sget-boolean v0, Lcom/android/settings/ChooseLockAdditionalPin;->mForPrivateModeBackupKey:Z
+    sget-boolean v0, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mForPrivateModeBackupKey:Z
 
     return v0
 .end method
@@ -96,7 +96,7 @@
 
     .prologue
     .line 67
-    sget-boolean v0, Lcom/android/settings/ChooseLockAdditionalPin;->mForAppLockBackupKey:Z
+    sget-boolean v0, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mForAppLockBackupKey:Z
 
     return v0
 .end method
@@ -106,7 +106,7 @@
 
     .prologue
     .line 67
-    sget-boolean v0, Lcom/android/settings/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
+    sget-boolean v0, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
 
     return v0
 .end method
@@ -116,7 +116,7 @@
 
     .prologue
     .line 67
-    sget-boolean v0, Lcom/android/settings/ChooseLockAdditionalPin;->mFromPersonalPage:Z
+    sget-boolean v0, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mFromPersonalPage:Z
 
     return v0
 .end method
@@ -126,7 +126,7 @@
 
     .prologue
     .line 67
-    sget-boolean v0, Lcom/android/settings/ChooseLockAdditionalPin;->mFromAppLock:Z
+    sget-boolean v0, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mFromAppLock:Z
 
     return v0
 .end method
@@ -136,7 +136,7 @@
 
     .prologue
     .line 67
-    sget-boolean v0, Lcom/android/settings/ChooseLockAdditionalPin;->mForFingerprint:Z
+    sget-boolean v0, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mForFingerprint:Z
 
     return v0
 .end method
@@ -150,7 +150,7 @@
     .line 83
     new-instance v0, Landroid/content/Intent;
 
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->getIntent()Landroid/content/Intent;
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -160,7 +160,7 @@
     .local v0, "modIntent":Landroid/content/Intent;
     const-string v1, ":settings:show_fragment"
 
-    const-class v2, Lcom/android/settings/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;
+    const-class v2, Lcom/android/settings_ex/ChooseLockAdditionalPin$ChooseLockAdditionalPinFragment;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -200,7 +200,7 @@
     .line 100
     const/4 v1, 0x0
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isTablet(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isTablet(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -209,14 +209,14 @@
     .line 101
     const/4 v1, 0x1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/ChooseLockAdditionalPin;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->requestWindowFeature(I)Z
 
     .line 103
     :cond_0
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 104
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -226,10 +226,10 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/android/settings/ChooseLockAdditionalPin;->mFromPersonalPage:Z
+    sput-boolean v1, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mFromPersonalPage:Z
 
     .line 105
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -239,10 +239,10 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/android/settings/ChooseLockAdditionalPin;->mFromAppLock:Z
+    sput-boolean v1, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mFromAppLock:Z
 
     .line 107
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -252,10 +252,10 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/android/settings/ChooseLockAdditionalPin;->mForPrivateModeBackupKey:Z
+    sput-boolean v1, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mForPrivateModeBackupKey:Z
 
     .line 108
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -265,10 +265,10 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/android/settings/ChooseLockAdditionalPin;->mForAppLockBackupKey:Z
+    sput-boolean v1, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mForAppLockBackupKey:Z
 
     .line 110
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -278,10 +278,10 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/android/settings/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
+    sput-boolean v1, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mIsFromKnoxFinger:Z
 
     .line 112
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -291,7 +291,7 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/android/settings/ChooseLockAdditionalPin;->mForFingerprint:Z
+    sput-boolean v1, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mForFingerprint:Z
 
     .line 114
     const-string v1, "ChooseLockAdditionalPin"
@@ -306,7 +306,7 @@
 
     move-result-object v2
 
-    sget-boolean v3, Lcom/android/settings/ChooseLockAdditionalPin;->mFromAppLock:Z
+    sget-boolean v3, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mFromAppLock:Z
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -323,11 +323,11 @@
 
     .line 117
     .local v0, "msg":Ljava/lang/CharSequence;
-    sget-boolean v1, Lcom/android/settings/ChooseLockAdditionalPin;->mFromPersonalPage:Z
+    sget-boolean v1, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mFromPersonalPage:Z
 
     if-nez v1, :cond_1
 
-    sget-boolean v1, Lcom/android/settings/ChooseLockAdditionalPin;->mFromAppLock:Z
+    sget-boolean v1, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mFromAppLock:Z
 
     if-eqz v1, :cond_2
 
@@ -335,22 +335,22 @@
     :cond_1
     const v1, 0x7f0e07be
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/ChooseLockAdditionalPin;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->getText(I)Ljava/lang/CharSequence;
 
     .line 122
     :goto_0
-    invoke-virtual {p0, v0}, Lcom/android/settings/ChooseLockAdditionalPin;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 123
     const-string v1, "input_method"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/ChooseLockAdditionalPin;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/view/inputmethod/InputMethodManager;
 
-    sput-object v1, Lcom/android/settings/ChooseLockAdditionalPin;->mImm:Landroid/view/inputmethod/InputMethodManager;
+    sput-object v1, Lcom/android/settings_ex/ChooseLockAdditionalPin;->mImm:Landroid/view/inputmethod/InputMethodManager;
 
     .line 124
     return-void
@@ -359,7 +359,7 @@
     :cond_2
     const v1, 0x7f0e07da
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/ChooseLockAdditionalPin;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->getText(I)Ljava/lang/CharSequence;
 
     goto :goto_0
 .end method
@@ -369,7 +369,7 @@
 
     .prologue
     .line 128
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v1
 
@@ -378,7 +378,7 @@
     .line 129
     const-string v1, "input_method"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/ChooseLockAdditionalPin;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -386,7 +386,7 @@
 
     .line 130
     .local v0, "imm":Landroid/view/inputmethod/InputMethodManager;
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockAdditionalPin;->getActivityToken()Landroid/os/IBinder;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockAdditionalPin;->getActivityToken()Landroid/os/IBinder;
 
     move-result-object v1
 
@@ -397,7 +397,7 @@
     .line 132
     .end local v0    # "imm":Landroid/view/inputmethod/InputMethodManager;
     :cond_0
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->onDestroy()V
 
     .line 133
     return-void

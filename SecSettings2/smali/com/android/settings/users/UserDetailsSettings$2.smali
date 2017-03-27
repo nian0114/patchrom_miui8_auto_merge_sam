@@ -1,4 +1,4 @@
-.class Lcom/android/settings/users/UserDetailsSettings$2;
+.class Lcom/android/settings_ex/users/UserDetailsSettings$2;
 .super Ljava/lang/Object;
 .source "UserDetailsSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/users/UserDetailsSettings;->onCreateDialog(I)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/users/UserDetailsSettings;->onCreateDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/users/UserDetailsSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/users/UserDetailsSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/users/UserDetailsSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/users/UserDetailsSettings;)V
     .locals 0
 
     .prologue
     .line 178
-    iput-object p1, p0, Lcom/android/settings/users/UserDetailsSettings$2;->this$0:Lcom/android/settings/users/UserDetailsSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/users/UserDetailsSettings$2;->this$0:Lcom/android/settings_ex/users/UserDetailsSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,11 +43,11 @@
 
     .prologue
     .line 180
-    iget-object v0, p0, Lcom/android/settings/users/UserDetailsSettings$2;->this$0:Lcom/android/settings/users/UserDetailsSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/users/UserDetailsSettings$2;->this$0:Lcom/android/settings_ex/users/UserDetailsSettings;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/users/UserDetailsSettings;->enableCallsAndSms(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/users/UserDetailsSettings;->enableCallsAndSms(Z)V
 
     .line 181
     return-void

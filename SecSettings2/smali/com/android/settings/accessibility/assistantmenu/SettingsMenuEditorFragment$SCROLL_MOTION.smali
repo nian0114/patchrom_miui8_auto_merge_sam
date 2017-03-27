@@ -1,11 +1,11 @@
-.class public final enum Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+.class public final enum Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 .super Ljava/lang/Enum;
 .source "SettingsMenuEditorFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    value = Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,18 +17,18 @@
     value = {
         "Ljava/lang/Enum",
         "<",
-        "Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;",
+        "Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;",
         ">;"
     }
 .end annotation
 
 
 # static fields
-.field private static final synthetic $VALUES:[Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+.field private static final synthetic $VALUES:[Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
-.field public static final enum SCROLL_DOWN:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+.field public static final enum SCROLL_DOWN:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
-.field public static final enum SCROLL_UP:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+.field public static final enum SCROLL_UP:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
 
 # direct methods
@@ -41,36 +41,36 @@
     const/4 v2, 0x0
 
     .line 170
-    new-instance v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    new-instance v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
     const-string v1, "SCROLL_UP"
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->SCROLL_UP:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    sput-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->SCROLL_UP:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
-    new-instance v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    new-instance v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
     const-string v1, "SCROLL_DOWN"
 
-    invoke-direct {v0, v1, v3}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v3}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->SCROLL_DOWN:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    sput-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->SCROLL_DOWN:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
     .line 169
     const/4 v0, 0x2
 
-    new-array v0, v0, [Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    new-array v0, v0, [Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
-    sget-object v1, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->SCROLL_UP:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    sget-object v1, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->SCROLL_UP:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->SCROLL_DOWN:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    sget-object v1, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->SCROLL_DOWN:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
     aput-object v1, v0, v3
 
-    sput-object v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->$VALUES:[Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    sput-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->$VALUES:[Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
     return-void
 .end method
@@ -90,35 +90,35 @@
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+.method public static valueOf(Ljava/lang/String;)Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
     .locals 1
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 169
-    const-class v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    const-class v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    check-cast v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
     return-object v0
 .end method
 
-.method public static values()[Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+.method public static values()[Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
     .locals 1
 
     .prologue
     .line 169
-    sget-object v0, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->$VALUES:[Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    sget-object v0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->$VALUES:[Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
-    invoke-virtual {v0}, [Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
+    check-cast v0, [Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$SCROLL_MOTION;
 
     return-object v0
 .end method

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet;
+.class Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet;
 .super Landroid/os/AsyncTask;
 .source "WifiSecSetupActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiSecSetupActivity;
+    value = Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,30 +26,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSecSetupActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/settings/wifi/WifiSecSetupActivity;)V
+.method private constructor <init>(Lcom/android/settings_ex/wifi/WifiSecSetupActivity;)V
     .locals 0
 
     .prologue
     .line 967
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet;->this$0:Lcom/android/settings/wifi/WifiSecSetupActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet;->this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/wifi/WifiSecSetupActivity;Lcom/android/settings/wifi/WifiSecSetupActivity$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/wifi/WifiSecSetupActivity;Lcom/android/settings_ex/wifi/WifiSecSetupActivity$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/wifi/WifiSecSetupActivity;
-    .param p2, "x1"    # Lcom/android/settings/wifi/WifiSecSetupActivity$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
+    .param p2, "x1"    # Lcom/android/settings_ex/wifi/WifiSecSetupActivity$1;
 
     .prologue
     .line 967
-    invoke-direct {p0, p1}, Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet;-><init>(Lcom/android/settings/wifi/WifiSecSetupActivity;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet;-><init>(Lcom/android/settings_ex/wifi/WifiSecSetupActivity;)V
 
     return-void
 .end method
@@ -70,8 +70,8 @@
     const/4 v9, 0x0
 
     .line 1002
-    # getter for: Lcom/android/settings/wifi/WifiSecSetupActivity;->mContext:Landroid/content/Context;
-    invoke-static {}, Lcom/android/settings/wifi/WifiSecSetupActivity;->access$1000()Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->access$1000()Landroid/content/Context;
 
     move-result-object v6
 
@@ -112,8 +112,8 @@
 
     .line 1012
     :cond_1
-    # getter for: Lcom/android/settings/wifi/WifiSecSetupActivity;->mContext:Landroid/content/Context;
-    invoke-static {}, Lcom/android/settings/wifi/WifiSecSetupActivity;->access$1000()Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->access$1000()Landroid/content/Context;
 
     move-result-object v6
 
@@ -162,8 +162,8 @@
     move-result-object v0
 
     .line 1022
-    # getter for: Lcom/android/settings/wifi/WifiSecSetupActivity;->mIsWifiConnected:Z
-    invoke-static {}, Lcom/android/settings/wifi/WifiSecSetupActivity;->access$1100()Z
+    # getter for: Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->mIsWifiConnected:Z
+    invoke-static {}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->access$1100()Z
 
     move-result v6
 
@@ -178,11 +178,11 @@
     if-eqz v6, :cond_6
 
     .line 1023
-    iget-object v6, p0, Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet;->this$0:Lcom/android/settings/wifi/WifiSecSetupActivity;
+    iget-object v6, p0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet;->this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
 
     const-string v7, "wifi"
 
-    invoke-virtual {v6, v7}, Lcom/android/settings/wifi/WifiSecSetupActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v6, v7}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v5
 
@@ -190,10 +190,10 @@
 
     .line 1024
     .local v5, "wm":Landroid/net/wifi/WifiManager;
-    iget-object v6, p0, Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet;->this$0:Lcom/android/settings/wifi/WifiSecSetupActivity;
+    iget-object v6, p0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet;->this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
 
-    # invokes: Lcom/android/settings/wifi/WifiSecSetupActivity;->isCaptivePortal()I
-    invoke-static {v6}, Lcom/android/settings/wifi/WifiSecSetupActivity;->access$1200(Lcom/android/settings/wifi/WifiSecSetupActivity;)I
+    # invokes: Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->isCaptivePortal()I
+    invoke-static {v6}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->access$1200(Lcom/android/settings_ex/wifi/WifiSecSetupActivity;)I
 
     move-result v2
 
@@ -222,8 +222,8 @@
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1026
-    # setter for: Lcom/android/settings/wifi/WifiSecSetupActivity;->mIsWifiConnected:Z
-    invoke-static {v9}, Lcom/android/settings/wifi/WifiSecSetupActivity;->access$1102(Z)Z
+    # setter for: Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->mIsWifiConnected:Z
+    invoke-static {v9}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->access$1102(Z)Z
 
     .line 1027
     if-ne v2, v11, :cond_3
@@ -341,7 +341,7 @@
     check-cast p1, [Landroid/net/NetworkInfo;
 
     .end local p1    # "x0":[Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet;->doInBackground([Landroid/net/NetworkInfo;)Ljava/lang/Integer;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet;->doInBackground([Landroid/net/NetworkInfo;)Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -357,13 +357,13 @@
     invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
 
     .line 1046
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet;->this$0:Lcom/android/settings/wifi/WifiSecSetupActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet;->this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
 
-    new-instance v1, Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet$2;
+    new-instance v1, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet$2;
 
-    invoke-direct {v1, p0, p1}, Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet$2;-><init>(Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet;Ljava/lang/Integer;)V
+    invoke-direct {v1, p0, p1}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet$2;-><init>(Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet;Ljava/lang/Integer;)V
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/wifi/WifiSecSetupActivity;->runOnUiThread(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 1072
     return-void
@@ -378,7 +378,7 @@
     check-cast p1, Ljava/lang/Integer;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet;->onPostExecute(Ljava/lang/Integer;)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet;->onPostExecute(Ljava/lang/Integer;)V
 
     return-void
 .end method
@@ -391,13 +391,13 @@
     invoke-super {p0}, Landroid/os/AsyncTask;->onPreExecute()V
 
     .line 992
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet;->this$0:Lcom/android/settings/wifi/WifiSecSetupActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet;->this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
 
-    new-instance v1, Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet$1;
+    new-instance v1, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet$1;-><init>(Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet$1;-><init>(Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet;)V
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/wifi/WifiSecSetupActivity;->runOnUiThread(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 998
     return-void

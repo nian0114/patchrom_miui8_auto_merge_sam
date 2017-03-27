@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/UnlockEffect$RadioAdapter;
+.class public Lcom/android/settings_ex/UnlockEffect$RadioAdapter;
 .super Landroid/widget/ArrayAdapter;
 .source "UnlockEffect.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/UnlockEffect;
+    value = Lcom/android/settings_ex/UnlockEffect;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -39,7 +39,7 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;I[Ljava/lang/Object;)V
 
     .line 373
-    iput-object p1, p0, Lcom/android/settings/UnlockEffect$RadioAdapter;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/UnlockEffect$RadioAdapter;->mContext:Landroid/content/Context;
 
     .line 374
     return-void
@@ -60,7 +60,7 @@
     if-nez p2, :cond_0
 
     .line 377
-    iget-object v1, p0, Lcom/android/settings/UnlockEffect$RadioAdapter;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/UnlockEffect$RadioAdapter;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
@@ -68,7 +68,7 @@
 
     .line 378
     .local v0, "li":Landroid/view/LayoutInflater;
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v1
 

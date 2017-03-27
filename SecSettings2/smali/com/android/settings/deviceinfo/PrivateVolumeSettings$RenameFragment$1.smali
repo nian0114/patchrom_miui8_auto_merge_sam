@@ -1,4 +1,4 @@
-.class Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment$1;
+.class Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment$1;
 .super Ljava/lang/Object;
 .source "PrivateVolumeSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment;
 
 .field final synthetic val$fsUuid:Ljava/lang/String;
 
@@ -28,18 +28,18 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment;Landroid/os/storage/StorageManager;Ljava/lang/String;Landroid/widget/EditText;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment;Landroid/os/storage/StorageManager;Ljava/lang/String;Landroid/widget/EditText;)V
     .locals 0
 
     .prologue
     .line 770
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment$1;->this$0:Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment$1;->this$0:Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment;
 
-    iput-object p2, p0, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment$1;->val$storageManager:Landroid/os/storage/StorageManager;
+    iput-object p2, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment$1;->val$storageManager:Landroid/os/storage/StorageManager;
 
-    iput-object p3, p0, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment$1;->val$fsUuid:Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment$1;->val$fsUuid:Ljava/lang/String;
 
-    iput-object p4, p0, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment$1;->val$nickname:Landroid/widget/EditText;
+    iput-object p4, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment$1;->val$nickname:Landroid/widget/EditText;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -55,11 +55,11 @@
 
     .prologue
     .line 774
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment$1;->val$storageManager:Landroid/os/storage/StorageManager;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment$1;->val$storageManager:Landroid/os/storage/StorageManager;
 
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment$1;->val$fsUuid:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment$1;->val$fsUuid:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment$1;->val$nickname:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment$1;->val$nickname:Landroid/widget/EditText;
 
     invoke-virtual {v2}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 

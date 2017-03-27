@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$3;
+.class Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$3;
 .super Ljava/lang/Object;
 .source "AccessibilityDialogPreference.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    value = Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;)V
     .locals 0
 
     .prologue
     .line 125
-    iput-object p1, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$3;->this$0:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$3;->this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,10 +42,10 @@
 
     .prologue
     .line 128
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$3;->this$0:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$3;->this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
-    # getter for: Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
-    invoke-static {v0}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->access$200(Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;)Landroid/widget/Spinner;
+    # getter for: Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->access$200(Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;)Landroid/widget/Spinner;
 
     move-result-object v0
 
@@ -54,10 +54,10 @@
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setSoundEffectsEnabled(Z)V
 
     .line 129
-    iget-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$3;->this$0:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$3;->this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
-    # getter for: Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
-    invoke-static {v0}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->access$200(Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;)Landroid/widget/Spinner;
+    # getter for: Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mSpinner:Landroid/widget/Spinner;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->access$200(Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;)Landroid/widget/Spinner;
 
     move-result-object v0
 

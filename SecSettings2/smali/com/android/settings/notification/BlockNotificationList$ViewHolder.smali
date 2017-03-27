@@ -1,11 +1,11 @@
-.class Lcom/android/settings/notification/BlockNotificationList$ViewHolder;
+.class Lcom/android/settings_ex/notification/BlockNotificationList$ViewHolder;
 .super Ljava/lang/Object;
 .source "BlockNotificationList.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/BlockNotificationList;
+    value = Lcom/android/settings_ex/notification/BlockNotificationList;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -35,13 +35,13 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/notification/BlockNotificationList$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/notification/BlockNotificationList$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/notification/BlockNotificationList$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/notification/BlockNotificationList$1;
 
     .prologue
     .line 388
-    invoke-direct {p0}, Lcom/android/settings/notification/BlockNotificationList$ViewHolder;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/BlockNotificationList$ViewHolder;-><init>()V
 
     return-void
 .end method

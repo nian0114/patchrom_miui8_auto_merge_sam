@@ -1,4 +1,4 @@
-.class Lcom/android/settings/HomeSettings$1;
+.class Lcom/android/settings_ex/HomeSettings$1;
 .super Ljava/lang/Object;
 .source "HomeSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/HomeSettings;
+    value = Lcom/android/settings_ex/HomeSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/HomeSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/HomeSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/HomeSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/HomeSettings;)V
     .locals 0
 
     .prologue
     .line 112
-    iput-object p1, p0, Lcom/android/settings/HomeSettings$1;->this$0:Lcom/android/settings/HomeSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/HomeSettings$1;->this$0:Lcom/android/settings_ex/HomeSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -54,10 +54,10 @@
 
     .line 116
     .local v0, "index":I
-    iget-object v2, p0, Lcom/android/settings/HomeSettings$1;->this$0:Lcom/android/settings/HomeSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/HomeSettings$1;->this$0:Lcom/android/settings_ex/HomeSettings;
 
-    # getter for: Lcom/android/settings/HomeSettings;->mPrefs:Ljava/util/ArrayList;
-    invoke-static {v2}, Lcom/android/settings/HomeSettings;->access$200(Lcom/android/settings/HomeSettings;)Ljava/util/ArrayList;
+    # getter for: Lcom/android/settings_ex/HomeSettings;->mPrefs:Ljava/util/ArrayList;
+    invoke-static {v2}, Lcom/android/settings_ex/HomeSettings;->access$200(Lcom/android/settings_ex/HomeSettings;)Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -65,40 +65,40 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/HomeSettings$HomeAppPreference;
+    check-cast v1, Lcom/android/settings_ex/HomeSettings$HomeAppPreference;
 
     .line 117
-    .local v1, "pref":Lcom/android/settings/HomeSettings$HomeAppPreference;
-    iget-boolean v2, v1, Lcom/android/settings/HomeSettings$HomeAppPreference;->isChecked:Z
+    .local v1, "pref":Lcom/android/settings_ex/HomeSettings$HomeAppPreference;
+    iget-boolean v2, v1, Lcom/android/settings_ex/HomeSettings$HomeAppPreference;->isChecked:Z
 
     if-nez v2, :cond_1
 
     .line 118
-    iget-object v2, p0, Lcom/android/settings/HomeSettings$1;->this$0:Lcom/android/settings/HomeSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/HomeSettings$1;->this$0:Lcom/android/settings_ex/HomeSettings;
 
-    invoke-virtual {v2, v1}, Lcom/android/settings/HomeSettings;->makeCurrentHome(Lcom/android/settings/HomeSettings$HomeAppPreference;)V
+    invoke-virtual {v2, v1}, Lcom/android/settings_ex/HomeSettings;->makeCurrentHome(Lcom/android/settings_ex/HomeSettings$HomeAppPreference;)V
 
     .line 119
-    iget-object v2, p0, Lcom/android/settings/HomeSettings$1;->this$0:Lcom/android/settings/HomeSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/HomeSettings$1;->this$0:Lcom/android/settings_ex/HomeSettings;
 
-    iget-object v2, v2, Lcom/android/settings/HomeSettings;->mHomeChangeToast:Landroid/widget/Toast;
+    iget-object v2, v2, Lcom/android/settings_ex/HomeSettings;->mHomeChangeToast:Landroid/widget/Toast;
 
     if-eqz v2, :cond_0
 
     .line 120
-    iget-object v2, p0, Lcom/android/settings/HomeSettings$1;->this$0:Lcom/android/settings/HomeSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/HomeSettings$1;->this$0:Lcom/android/settings_ex/HomeSettings;
 
-    iget-object v2, v2, Lcom/android/settings/HomeSettings;->mHomeChangeToast:Landroid/widget/Toast;
+    iget-object v2, v2, Lcom/android/settings_ex/HomeSettings;->mHomeChangeToast:Landroid/widget/Toast;
 
     invoke-virtual {v2}, Landroid/widget/Toast;->cancel()V
 
     .line 122
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/HomeSettings$1;->this$0:Lcom/android/settings/HomeSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/HomeSettings$1;->this$0:Lcom/android/settings_ex/HomeSettings;
 
-    iget-object v3, p0, Lcom/android/settings/HomeSettings$1;->this$0:Lcom/android/settings/HomeSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/HomeSettings$1;->this$0:Lcom/android/settings_ex/HomeSettings;
 
-    invoke-virtual {v3}, Lcom/android/settings/HomeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v3}, Lcom/android/settings_ex/HomeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -110,12 +110,12 @@
 
     move-result-object v3
 
-    iput-object v3, v2, Lcom/android/settings/HomeSettings;->mHomeChangeToast:Landroid/widget/Toast;
+    iput-object v3, v2, Lcom/android/settings_ex/HomeSettings;->mHomeChangeToast:Landroid/widget/Toast;
 
     .line 123
-    iget-object v2, p0, Lcom/android/settings/HomeSettings$1;->this$0:Lcom/android/settings/HomeSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/HomeSettings$1;->this$0:Lcom/android/settings_ex/HomeSettings;
 
-    iget-object v2, v2, Lcom/android/settings/HomeSettings;->mHomeChangeToast:Landroid/widget/Toast;
+    iget-object v2, v2, Lcom/android/settings_ex/HomeSettings;->mHomeChangeToast:Landroid/widget/Toast;
 
     invoke-virtual {v2}, Landroid/widget/Toast;->show()V
 

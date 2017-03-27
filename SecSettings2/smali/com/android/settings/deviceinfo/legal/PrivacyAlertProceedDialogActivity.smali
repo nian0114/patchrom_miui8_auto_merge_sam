@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/deviceinfo/legal/PrivacyAlertProceedDialogActivity;
+.class public Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertProceedDialogActivity;
 .super Lcom/android/internal/app/AlertActivity;
 .source "PrivacyAlertProceedDialogActivity.java"
 
@@ -23,7 +23,7 @@
 
     .prologue
     .line 73
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v6
 
@@ -47,7 +47,7 @@
 
     .line 76
     .local v3, "contentView":Landroid/widget/TextView;
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -61,7 +61,7 @@
     .local v0, "carrierBrandalpha":Ljava/lang/String;
     const v6, 0x7f0e13cc
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -138,7 +138,7 @@
     .line 90
     const v6, 0x7f0e13ca
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -153,7 +153,7 @@
     .line 93
     .end local v2    # "contentText":Ljava/lang/String;
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -212,7 +212,7 @@
     :cond_2
     const v6, 0x7f0e13cb
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -220,7 +220,7 @@
     :cond_3
     const v6, 0x7f0e13c9
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
@@ -255,7 +255,7 @@
 
     .line 52
     .local v0, "alertDialogBuilder":Landroid/app/AlertDialog$Builder;
-    invoke-direct {p0}, Lcom/android/settings/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->getContentView()Landroid/view/View;
+    invoke-direct {p0}, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->getContentView()Landroid/view/View;
 
     move-result-object v1
 
@@ -271,16 +271,16 @@
     .line 55
     const v2, 0x104000a
 
-    new-instance v3, Lcom/android/settings/deviceinfo/legal/PrivacyAlertProceedDialogActivity$1;
+    new-instance v3, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertProceedDialogActivity$1;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/deviceinfo/legal/PrivacyAlertProceedDialogActivity$1;-><init>(Lcom/android/settings/deviceinfo/legal/PrivacyAlertProceedDialogActivity;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertProceedDialogActivity$1;-><init>(Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertProceedDialogActivity;)V
 
     invoke-virtual {v0, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 61
-    new-instance v2, Lcom/android/settings/deviceinfo/legal/PrivacyAlertProceedDialogActivity$2;
+    new-instance v2, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertProceedDialogActivity$2;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/deviceinfo/legal/PrivacyAlertProceedDialogActivity$2;-><init>(Lcom/android/settings/deviceinfo/legal/PrivacyAlertProceedDialogActivity;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertProceedDialogActivity$2;-><init>(Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertProceedDialogActivity;)V
 
     invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
 
@@ -289,10 +289,10 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->mProceedAlertDialog:Landroid/app/AlertDialog;
+    iput-object v2, p0, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->mProceedAlertDialog:Landroid/app/AlertDialog;
 
     .line 69
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->mProceedAlertDialog:Landroid/app/AlertDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->mProceedAlertDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v2}, Landroid/app/AlertDialog;->show()V
 
@@ -311,10 +311,10 @@
     invoke-super {p0, p1}, Lcom/android/internal/app/AlertActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 46
-    invoke-direct {p0}, Lcom/android/settings/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->showProceedDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->showProceedDialog()V
 
     .line 47
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->setupAlert()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertProceedDialogActivity;->setupAlert()V
 
     .line 48
     return-void

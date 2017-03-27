@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/accessibility/MagnifierService$DetectBinder;
+.class public Lcom/android/settings_ex/accessibility/MagnifierService$DetectBinder;
 .super Landroid/os/Binder;
 .source "MagnifierService.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/MagnifierService;
+    value = Lcom/android/settings_ex/accessibility/MagnifierService;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/MagnifierService;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/settings/accessibility/MagnifierService;)V
+.method public constructor <init>(Lcom/android/settings_ex/accessibility/MagnifierService;)V
     .locals 0
 
     .prologue
     .line 128
-    iput-object p1, p0, Lcom/android/settings/accessibility/MagnifierService$DetectBinder;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/MagnifierService$DetectBinder;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
@@ -33,12 +33,12 @@
 
 
 # virtual methods
-.method public getService()Lcom/android/settings/accessibility/MagnifierService;
+.method public getService()Lcom/android/settings_ex/accessibility/MagnifierService;
     .locals 1
 
     .prologue
     .line 130
-    iget-object v0, p0, Lcom/android/settings/accessibility/MagnifierService$DetectBinder;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/MagnifierService$DetectBinder;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
     return-object v0
 .end method

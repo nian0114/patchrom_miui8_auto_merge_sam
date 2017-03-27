@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/nearbyscan/Util;
+.class public Lcom/android/settings_ex/nearbyscan/Util;
 .super Ljava/lang/Object;
 .source "Util.java"
 
@@ -15,7 +15,7 @@
     .line 18
     const/4 v0, -0x1
 
-    sput v0, Lcom/android/settings/nearbyscan/Util;->misAppInstalled:I
+    sput v0, Lcom/android/settings_ex/nearbyscan/Util;->misAppInstalled:I
 
     return-void
 .end method
@@ -288,7 +288,7 @@
     const/4 v0, 0x1
 
     .line 99
-    sget v1, Lcom/android/settings/nearbyscan/Util;->misAppInstalled:I
+    sget v1, Lcom/android/settings_ex/nearbyscan/Util;->misAppInstalled:I
 
     const/4 v2, -0x1
 
@@ -299,11 +299,11 @@
 
     const/16 v2, 0x28
 
-    invoke-static {p0, v1, v2}, Lcom/android/settings/nearbyscan/Util;->isAppInstalled(Landroid/content/Context;Ljava/lang/String;I)I
+    invoke-static {p0, v1, v2}, Lcom/android/settings_ex/nearbyscan/Util;->isAppInstalled(Landroid/content/Context;Ljava/lang/String;I)I
 
     move-result v1
 
-    sput v1, Lcom/android/settings/nearbyscan/Util;->misAppInstalled:I
+    sput v1, Lcom/android/settings_ex/nearbyscan/Util;->misAppInstalled:I
 
     .line 102
     :cond_0
@@ -319,7 +319,7 @@
 
     move-result-object v2
 
-    sget v3, Lcom/android/settings/nearbyscan/Util;->misAppInstalled:I
+    sget v3, Lcom/android/settings_ex/nearbyscan/Util;->misAppInstalled:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -332,7 +332,7 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 103
-    sget v1, Lcom/android/settings/nearbyscan/Util;->misAppInstalled:I
+    sget v1, Lcom/android/settings_ex/nearbyscan/Util;->misAppInstalled:I
 
     if-ne v1, v0, :cond_1
 
@@ -407,7 +407,7 @@
 
     .line 35
     .local v0, "cr":Landroid/content/ContentResolver;
-    invoke-static {v0}, Lcom/android/settings/nearbyscan/Util;->getDBInt(Landroid/content/ContentResolver;)I
+    invoke-static {v0}, Lcom/android/settings_ex/nearbyscan/Util;->getDBInt(Landroid/content/ContentResolver;)I
 
     move-result v2
 

@@ -1,15 +1,15 @@
-.class public Lcom/android/settings/powersavingmode/GenericPowerSavingMode;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "GenericPowerSavingMode.java"
 
 # interfaces
 .implements Landroid/preference/Preference$OnPreferenceChangeListener;
-.implements Lcom/android/settings/search/Indexable;
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/search/Indexable;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # instance fields
@@ -33,9 +33,9 @@
 
 .field private mRestrictBackData:Landroid/preference/SwitchPreference;
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-.field private mTurnOnAutomatically:Lcom/android/settings/DropDownPreference;
+.field private mTurnOnAutomatically:Lcom/android/settings_ex/DropDownPreference;
 
 
 # direct methods
@@ -44,11 +44,11 @@
 
     .prologue
     .line 319
-    new-instance v0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode$5;
+    new-instance v0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode$5;
 
-    invoke-direct {v0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode$5;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode$5;-><init>()V
 
-    sput-object v0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -60,116 +60,116 @@
     const/4 v0, 0x0
 
     .line 87
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 71
-    iput-boolean v0, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mNoHeader:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mNoHeader:Z
 
     .line 72
-    iput-boolean v0, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mIsCharger:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mIsCharger:Z
 
     .line 74
-    new-instance v0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode$1;
+    new-instance v0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode$1;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode$1;-><init>(Lcom/android/settings/powersavingmode/GenericPowerSavingMode;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode$1;-><init>(Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mLowPowerModeObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mLowPowerModeObserver:Landroid/database/ContentObserver;
 
     .line 261
-    new-instance v0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode$4;
+    new-instance v0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode$4;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode$4;-><init>(Lcom/android/settings/powersavingmode/GenericPowerSavingMode;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode$4;-><init>(Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;)V
 
-    iput-object v0, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
 
     .line 87
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/powersavingmode/GenericPowerSavingMode;)Landroid/content/ContentResolver;
+.method static synthetic access$000(Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/powersavingmode/GenericPowerSavingMode;
+    .param p0, "x0"    # Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;
 
     .prologue
     .line 56
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/powersavingmode/GenericPowerSavingMode;)Lcom/android/settings/widget/SwitchBar;
+.method static synthetic access$100(Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;)Lcom/android/settings_ex/widget/SwitchBar;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/powersavingmode/GenericPowerSavingMode;
+    .param p0, "x0"    # Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;
 
     .prologue
     .line 56
-    iget-object v0, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/powersavingmode/GenericPowerSavingMode;)Lcom/android/settings/DropDownPreference;
+.method static synthetic access$200(Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;)Lcom/android/settings_ex/DropDownPreference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/powersavingmode/GenericPowerSavingMode;
+    .param p0, "x0"    # Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;
 
     .prologue
     .line 56
-    iget-object v0, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mTurnOnAutomatically:Lcom/android/settings/DropDownPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mTurnOnAutomatically:Lcom/android/settings_ex/DropDownPreference;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/powersavingmode/GenericPowerSavingMode;)Landroid/content/Context;
+.method static synthetic access$300(Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/powersavingmode/GenericPowerSavingMode;
+    .param p0, "x0"    # Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;
 
     .prologue
     .line 56
-    iget-object v0, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/powersavingmode/GenericPowerSavingMode;)Landroid/content/ContentResolver;
+.method static synthetic access$400(Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/powersavingmode/GenericPowerSavingMode;
+    .param p0, "x0"    # Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;
 
     .prologue
     .line 56
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/powersavingmode/GenericPowerSavingMode;)Landroid/content/ContentResolver;
+.method static synthetic access$500(Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/powersavingmode/GenericPowerSavingMode;
+    .param p0, "x0"    # Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;
 
     .prologue
     .line 56
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$602(Lcom/android/settings/powersavingmode/GenericPowerSavingMode;Z)Z
+.method static synthetic access$602(Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/powersavingmode/GenericPowerSavingMode;
+    .param p0, "x0"    # Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;
     .param p1, "x1"    # Z
 
     .prologue
     .line 56
-    iput-boolean p1, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mIsCharger:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mIsCharger:Z
 
     return p1
 .end method
@@ -179,9 +179,9 @@
 
     .prologue
     .line 337
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mContext:Landroid/content/Context;
 
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -222,12 +222,12 @@
 
     .prologue
     .line 163
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mTurnOnAutomatically:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mTurnOnAutomatically:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v3}, Lcom/android/settings/DropDownPreference;->clearItems()V
+    invoke-virtual {v3}, Lcom/android/settings_ex/DropDownPreference;->clearItems()V
 
     .line 164
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -237,30 +237,30 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->entryValue:[Ljava/lang/CharSequence;
+    iput-object v3, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->entryValue:[Ljava/lang/CharSequence;
 
     .line 165
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->entryValue:[Ljava/lang/CharSequence;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->entryValue:[Ljava/lang/CharSequence;
 
     array-length v3, v3
 
     new-array v3, v3, [Ljava/lang/String;
 
-    iput-object v3, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->entry:[Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->entry:[Ljava/lang/String;
 
     .line 166
     const/4 v1, 0x0
 
     .local v1, "start":I
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->entryValue:[Ljava/lang/CharSequence;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->entryValue:[Ljava/lang/CharSequence;
 
     array-length v3, v3
 
     if-ge v1, v3, :cond_2
 
     .line 167
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->entryValue:[Ljava/lang/CharSequence;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->entryValue:[Ljava/lang/CharSequence;
 
     aget-object v3, v3, v1
 
@@ -315,7 +315,7 @@
     if-eqz v3, :cond_0
 
     .line 170
-    invoke-static {v0}, Lcom/android/settings/Utils;->formatPercentage(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->formatPercentage(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -324,11 +324,11 @@
     if-nez v0, :cond_1
 
     .line 173
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->entry:[Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->entry:[Ljava/lang/String;
 
     const v4, 0x7f0e131a
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -336,9 +336,9 @@
 
     .line 177
     :goto_1
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mTurnOnAutomatically:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mTurnOnAutomatically:Lcom/android/settings_ex/DropDownPreference;
 
-    iget-object v4, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->entry:[Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->entry:[Ljava/lang/String;
 
     aget-object v4, v4, v1
 
@@ -346,7 +346,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v3, v4, v5}, Lcom/android/settings/DropDownPreference;->addItem(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {v3, v4, v5}, Lcom/android/settings_ex/DropDownPreference;->addItem(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 166
     add-int/lit8 v1, v1, 0x1
@@ -355,7 +355,7 @@
 
     .line 175
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->entry:[Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->entry:[Ljava/lang/String;
 
     const v4, 0x7f0e131b
 
@@ -367,7 +367,7 @@
 
     aput-object v2, v5, v6
 
-    invoke-virtual {p0, v4, v5}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v4, v5}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -379,13 +379,13 @@
     .end local v0    # "count":I
     .end local v2    # "summary":Ljava/lang/String;
     :cond_2
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mTurnOnAutomatically:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mTurnOnAutomatically:Lcom/android/settings_ex/DropDownPreference;
 
-    new-instance v4, Lcom/android/settings/powersavingmode/GenericPowerSavingMode$3;
+    new-instance v4, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode$3;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode$3;-><init>(Lcom/android/settings/powersavingmode/GenericPowerSavingMode;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode$3;-><init>(Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;)V
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/DropDownPreference;->setCallback(Lcom/android/settings/DropDownPreference$Callback;)V
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/DropDownPreference;->setCallback(Lcom/android/settings_ex/DropDownPreference$Callback;)V
 
     .line 193
     return-void
@@ -396,7 +396,7 @@
 
     .prologue
     .line 128
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -418,50 +418,50 @@
     .local v0, "isEnableAutoPowerMode":Ljava/lang/Boolean;
     const-string v1, "turn_on_automatically"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/DropDownPreference;
+    check-cast v1, Lcom/android/settings_ex/DropDownPreference;
 
-    iput-object v1, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mTurnOnAutomatically:Lcom/android/settings/DropDownPreference;
+    iput-object v1, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mTurnOnAutomatically:Lcom/android/settings_ex/DropDownPreference;
 
     .line 130
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mDescriptionPreference:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mDescriptionPreference:Landroid/preference/Preference;
 
     if-nez v1, :cond_0
 
     .line 131
-    new-instance v1, Lcom/android/settings/powersavingmode/GenericPowerSavingMode$2;
+    new-instance v1, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode$2;
 
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-direct {v1, p0, v2, v0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode$2;-><init>(Lcom/android/settings/powersavingmode/GenericPowerSavingMode;Landroid/content/Context;Ljava/lang/Boolean;)V
+    invoke-direct {v1, p0, v2, v0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode$2;-><init>(Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;Landroid/content/Context;Ljava/lang/Boolean;)V
 
-    iput-object v1, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mDescriptionPreference:Landroid/preference/Preference;
+    iput-object v1, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mDescriptionPreference:Landroid/preference/Preference;
 
     .line 149
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mDescriptionPreference:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mDescriptionPreference:Landroid/preference/Preference;
 
     const v2, 0x7f04016f
 
     invoke-virtual {v1, v2}, Landroid/preference/Preference;->setLayoutResource(I)V
 
     .line 150
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mDescriptionPreference:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mDescriptionPreference:Landroid/preference/Preference;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/preference/Preference;->setSelectable(Z)V
 
     .line 151
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mDescriptionPreference:Landroid/preference/Preference;
+    iget-object v2, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mDescriptionPreference:Landroid/preference/Preference;
 
     invoke-virtual {v1, v2}, Landroid/preference/PreferenceScreen;->addPreference(Landroid/preference/Preference;)Z
 
@@ -469,30 +469,30 @@
     :cond_0
     new-instance v1, Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     invoke-direct {v1, v2}, Landroid/preference/SwitchPreference;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mRestrictBackData:Landroid/preference/SwitchPreference;
+    iput-object v1, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mRestrictBackData:Landroid/preference/SwitchPreference;
 
     .line 154
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mRestrictBackData:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mRestrictBackData:Landroid/preference/SwitchPreference;
 
     const v2, 0x7f0e131d
 
     invoke-virtual {v1, v2}, Landroid/preference/SwitchPreference;->setTitle(I)V
 
     .line 155
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mRestrictBackData:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mRestrictBackData:Landroid/preference/SwitchPreference;
 
     const v2, 0x7f0e131e
 
     invoke-virtual {v1, v2}, Landroid/preference/SwitchPreference;->setSummary(I)V
 
     .line 156
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mRestrictBackData:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mRestrictBackData:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -506,11 +506,11 @@
     if-ne v1, v2, :cond_1
 
     .line 158
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mRestrictBackData:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mRestrictBackData:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v2}, Landroid/preference/PreferenceScreen;->addPreference(Landroid/preference/Preference;)Z
 
@@ -525,10 +525,10 @@
 
     .prologue
     .line 113
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 114
-    iget-boolean v0, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mCreated:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mCreated:Z
 
     if-eqz v0, :cond_1
 
@@ -541,7 +541,7 @@
     :cond_1
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mCreated:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mCreated:Z
 
     .line 116
     const-string v0, "GenericPowerSavingMode"
@@ -551,43 +551,43 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 118
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mContext:Landroid/content/Context;
 
     .line 119
-    iget-object v0, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mContext:Landroid/content/Context;
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v0, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 120
-    iget-object v0, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 122
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isFolderModel(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isFolderModel(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 123
-    iget-object v0, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->requestFocus()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->requestFocus()Z
 
     goto :goto_0
 .end method
@@ -602,21 +602,21 @@
     const/4 v3, 0x0
 
     .line 97
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 98
     const v5, 0x7f080055
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->addPreferencesFromResource(I)V
 
     .line 99
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->initPreference()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->initPreference()V
 
     .line 100
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->initEntry()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->initEntry()V
 
     .line 102
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -632,7 +632,7 @@
 
     .line 103
     .local v2, "header":Z
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v5
 
@@ -643,15 +643,15 @@
     move v3, v4
 
     :cond_0
-    iput-boolean v3, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mNoHeader:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mNoHeader:Z
 
     .line 104
-    iget-boolean v3, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mNoHeader:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mNoHeader:Z
 
     if-eqz v3, :cond_1
 
     .line 105
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -694,7 +694,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 216
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroy()V
 
     .line 217
     return-void
@@ -712,17 +712,17 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 206
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroyView()V
 
     .line 207
-    iget-object v0, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_0
 
     .line 208
-    iget-object v0, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 210
     :cond_0
@@ -742,7 +742,7 @@
     packed-switch v0, :pswitch_data_0
 
     .line 284
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v0
 
@@ -751,7 +751,7 @@
 
     .line 281
     :pswitch_0
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->finish()V
 
     .line 282
     const/4 v0, 0x1
@@ -779,14 +779,14 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 249
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 250
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -800,45 +800,45 @@
 
     .line 251
     .local v0, "Index":I
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mTurnOnAutomatically:Lcom/android/settings/DropDownPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mTurnOnAutomatically:Lcom/android/settings_ex/DropDownPreference;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
 
     .line 253
     .end local v0    # "Index":I
     :cond_0
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 254
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v1, :cond_1
 
     .line 255
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v1, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 257
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mLowPowerModeObserver:Landroid/database/ContentObserver;
+    iget-object v2, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mLowPowerModeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v1, v2}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 258
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
@@ -855,7 +855,7 @@
     const/4 v2, 0x1
 
     .line 343
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mRestrictBackData:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mRestrictBackData:Landroid/preference/SwitchPreference;
 
     if-ne p1, v1, :cond_0
 
@@ -869,7 +869,7 @@
 
     .line 345
     .local v0, "value":Z
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -911,10 +911,10 @@
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 222
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 223
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -931,7 +931,7 @@
     .line 224
     .local v2, "checked":Z
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -948,7 +948,7 @@
     .line 225
     .local v3, "npsmchecked":Z
     :goto_1
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -965,12 +965,12 @@
     .line 227
     .local v1, "backDataOff":Z
     :goto_2
-    iget-object v6, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v6, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v6, :cond_0
 
     .line 228
-    iget-object v7, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v7, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v2, :cond_5
 
@@ -979,16 +979,16 @@
     move v6, v4
 
     :goto_3
-    invoke-virtual {v7, v6}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v7, v6}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 229
-    iget-object v6, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v6, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v6, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v6, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 232
     :cond_0
-    iget-object v7, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mTurnOnAutomatically:Lcom/android/settings/DropDownPreference;
+    iget-object v7, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mTurnOnAutomatically:Lcom/android/settings_ex/DropDownPreference;
 
     if-eqz v2, :cond_6
 
@@ -997,10 +997,10 @@
     move v6, v4
 
     :goto_4
-    invoke-virtual {v7, v6}, Lcom/android/settings/DropDownPreference;->setEnabled(Z)V
+    invoke-virtual {v7, v6}, Lcom/android/settings_ex/DropDownPreference;->setEnabled(Z)V
 
     .line 233
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -1015,7 +1015,7 @@
     if-eqz v3, :cond_1
 
     .line 235
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -1027,16 +1027,16 @@
 
     .line 237
     :cond_1
-    iget-object v6, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mTurnOnAutomatically:Lcom/android/settings/DropDownPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mTurnOnAutomatically:Lcom/android/settings_ex/DropDownPreference;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
 
-    invoke-virtual {v6, v7}, Lcom/android/settings/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
+    invoke-virtual {v6, v7}, Lcom/android/settings_ex/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
 
     .line 238
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -1046,21 +1046,21 @@
 
     move-result-object v7
 
-    iget-object v8, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mLowPowerModeObserver:Landroid/database/ContentObserver;
+    iget-object v8, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mLowPowerModeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v6, v7, v4, v8}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 240
-    iget-object v6, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mTurnOnAutomatically:Lcom/android/settings/DropDownPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mTurnOnAutomatically:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v6, v4}, Lcom/android/settings/DropDownPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
+    invoke-virtual {v6, v4}, Lcom/android/settings_ex/DropDownPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 241
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v7, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
 
     new-instance v8, Landroid/content/IntentFilter;
 
@@ -1071,12 +1071,12 @@
     invoke-virtual {v6, v7, v8}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 243
-    iget-object v6, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mRestrictBackData:Landroid/preference/SwitchPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mRestrictBackData:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v6, v1}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 244
-    iget-object v6, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mRestrictBackData:Landroid/preference/SwitchPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mRestrictBackData:Landroid/preference/SwitchPreference;
 
     if-eqz v2, :cond_7
 
@@ -1145,7 +1145,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 199
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onStop()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onStop()V
 
     .line 200
     return-void
@@ -1188,7 +1188,7 @@
     if-eqz p2, :cond_0
 
     .line 292
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -1208,10 +1208,10 @@
     if-eqz v2, :cond_0
 
     .line 294
-    invoke-direct {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->showDisableNpsmToast()V
+    invoke-direct {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->showDisableNpsmToast()V
 
     .line 295
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -1220,7 +1220,7 @@
     invoke-static {v5, v6, v3}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 296
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -1229,7 +1229,7 @@
     invoke-static {v5, v6, v3}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 297
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -1251,7 +1251,7 @@
     invoke-virtual {v0, v5, v6}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 300
-    iget-object v5, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5, v0}, Landroid/content/Context;->stopService(Landroid/content/Intent;)Z
 
@@ -1259,17 +1259,17 @@
     .end local v0    # "intent":Landroid/content/Intent;
     .end local v2    # "npsmchecked":Z
     :cond_0
-    iget-object v5, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mTurnOnAutomatically:Lcom/android/settings/DropDownPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mTurnOnAutomatically:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v5, p2}, Lcom/android/settings/DropDownPreference;->setEnabled(Z)V
+    invoke-virtual {v5, p2}, Lcom/android/settings_ex/DropDownPreference;->setEnabled(Z)V
 
     .line 305
-    iget-object v5, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mRestrictBackData:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mRestrictBackData:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v5, p2}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 306
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -1283,7 +1283,7 @@
     invoke-static {v5, v6, v3}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 307
-    iget-boolean v3, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mIsCharger:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mIsCharger:Z
 
     if-eqz v3, :cond_2
 
@@ -1293,14 +1293,14 @@
     .line 310
     const v3, 0x7f0e1302
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
     .line 315
     .local v1, "msg":Ljava/lang/String;
     :goto_1
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->mContext:Landroid/content/Context;
 
     invoke-static {v3, v1, v4}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
@@ -1323,7 +1323,7 @@
     :cond_4
     const v3, 0x7f0e1303
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/powersavingmode/GenericPowerSavingMode;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/powersavingmode/GenericPowerSavingMode;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 

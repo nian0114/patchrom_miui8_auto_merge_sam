@@ -1,4 +1,4 @@
-.class Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment$2;
+.class Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment$2;
 .super Ljava/lang/Object;
 .source "RedactionInterstitial.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;)V
     .locals 0
 
     .prologue
     .line 153
-    iput-object p1, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment$2;->this$0:Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment$2;->this$0:Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,10 +41,10 @@
 
     .prologue
     .line 157
-    iget-object v0, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment$2;->this$0:Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment$2;->this$0:Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;
 
-    # getter for: Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mRedactSensitiveButton:Landroid/widget/CheckedTextView;
-    invoke-static {v0}, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->access$100(Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;)Landroid/widget/CheckedTextView;
+    # getter for: Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mRedactSensitiveButton:Landroid/widget/CheckedTextView;
+    invoke-static {v0}, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->access$100(Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;)Landroid/widget/CheckedTextView;
 
     move-result-object v0
 
@@ -57,16 +57,16 @@
     if-le v0, v1, :cond_0
 
     .line 158
-    iget-object v0, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment$2;->this$0:Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment$2;->this$0:Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;
 
-    # getter for: Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->mRedactSensitiveButton:Landroid/widget/CheckedTextView;
-    invoke-static {v0}, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->access$100(Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;)Landroid/widget/CheckedTextView;
+    # getter for: Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->mRedactSensitiveButton:Landroid/widget/CheckedTextView;
+    invoke-static {v0}, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->access$100(Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;)Landroid/widget/CheckedTextView;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment$2;->this$0:Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment$2;->this$0:Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;
 
-    invoke-virtual {v1}, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 

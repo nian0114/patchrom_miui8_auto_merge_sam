@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiSecSetupActivity$7;
+.class Lcom/android/settings_ex/wifi/WifiSecSetupActivity$7;
 .super Ljava/lang/Object;
 .source "WifiSecSetupActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSecSetupActivity;->updateLayoutMargin(Landroid/content/res/Configuration;)V
+    value = Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->updateLayoutMargin(Landroid/content/res/Configuration;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSecSetupActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSecSetupActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSecSetupActivity;)V
     .locals 0
 
     .prologue
     .line 686
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSecSetupActivity$7;->this$0:Lcom/android/settings/wifi/WifiSecSetupActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$7;->this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,13 +44,13 @@
     const/4 v1, 0x1
 
     .line 689
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSecSetupActivity$7;->this$0:Lcom/android/settings/wifi/WifiSecSetupActivity;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$7;->this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
 
-    invoke-virtual {v2}, Lcom/android/settings/wifi/WifiSecSetupActivity;->getBaseContext()Landroid/content/Context;
+    invoke-virtual {v2}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->getBaseContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->locateSmartNetworkSwitch(Landroid/content/Context;)I
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->locateSmartNetworkSwitch(Landroid/content/Context;)I
 
     move-result v2
 
@@ -61,10 +61,10 @@
     .line 690
     .local v0, "showSmartNetworkSwitchMenu":Z
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSecSetupActivity$7;->this$0:Lcom/android/settings/wifi/WifiSecSetupActivity;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$7;->this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
 
-    # getter for: Lcom/android/settings/wifi/WifiSecSetupActivity;->popup:Landroid/widget/PopupMenu;
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiSecSetupActivity;->access$800(Lcom/android/settings/wifi/WifiSecSetupActivity;)Landroid/widget/PopupMenu;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->popup:Landroid/widget/PopupMenu;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->access$800(Lcom/android/settings_ex/wifi/WifiSecSetupActivity;)Landroid/widget/PopupMenu;
 
     move-result-object v2
 
@@ -81,20 +81,20 @@
     invoke-interface {v2, v0}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
     .line 691
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSecSetupActivity$7;->this$0:Lcom/android/settings/wifi/WifiSecSetupActivity;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$7;->this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
 
-    # getter for: Lcom/android/settings/wifi/WifiSecSetupActivity;->popup:Landroid/widget/PopupMenu;
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiSecSetupActivity;->access$800(Lcom/android/settings/wifi/WifiSecSetupActivity;)Landroid/widget/PopupMenu;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->popup:Landroid/widget/PopupMenu;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->access$800(Lcom/android/settings_ex/wifi/WifiSecSetupActivity;)Landroid/widget/PopupMenu;
 
     move-result-object v2
 
     invoke-virtual {v2}, Landroid/widget/PopupMenu;->show()V
 
     .line 692
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSecSetupActivity$7;->this$0:Lcom/android/settings/wifi/WifiSecSetupActivity;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$7;->this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
 
-    # setter for: Lcom/android/settings/wifi/WifiSecSetupActivity;->mIsPopupMenu:Z
-    invoke-static {v2, v1}, Lcom/android/settings/wifi/WifiSecSetupActivity;->access$702(Lcom/android/settings/wifi/WifiSecSetupActivity;Z)Z
+    # setter for: Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->mIsPopupMenu:Z
+    invoke-static {v2, v1}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->access$702(Lcom/android/settings_ex/wifi/WifiSecSetupActivity;Z)Z
 
     .line 693
     return-void

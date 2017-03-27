@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/TestingSettingsBroadcastReceiver;
+.class public Lcom/android/settings_ex/TestingSettingsBroadcastReceiver;
 .super Landroid/content/BroadcastReceiver;
 .source "TestingSettingsBroadcastReceiver.java"
 
@@ -27,7 +27,7 @@
     .local v0, "issEnabled":Z
     const-string v1, "com.samsung.android.isag.issmanager"
 
-    invoke-static {p0, v1}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v1}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -35,7 +35,7 @@
 
     const-string v1, "com.sec.android.security.LogGuard"
 
-    invoke-static {p0, v1}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v1}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -161,13 +161,13 @@
     if-eqz v2, :cond_1
 
     .line 27
-    invoke-static {}, Lcom/android/settings/TestingSettingsBroadcastReceiver;->isShipMode()Z
+    invoke-static {}, Lcom/android/settings_ex/TestingSettingsBroadcastReceiver;->isShipMode()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    invoke-static {p1}, Lcom/android/settings/TestingSettingsBroadcastReceiver;->isISSEnabled(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/TestingSettingsBroadcastReceiver;->isISSEnabled(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -211,13 +211,13 @@
     if-eqz v2, :cond_2
 
     .line 33
-    invoke-static {}, Lcom/android/settings/TestingSettingsBroadcastReceiver;->isShipMode()Z
+    invoke-static {}, Lcom/android/settings_ex/TestingSettingsBroadcastReceiver;->isShipMode()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    invoke-static {p1}, Lcom/android/settings/TestingSettingsBroadcastReceiver;->isISSEnabled(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/TestingSettingsBroadcastReceiver;->isISSEnabled(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -247,7 +247,7 @@
 
     .line 40
     :cond_2
-    const-class v2, Lcom/android/settings/TestingSettings;
+    const-class v2, Lcom/android/settings_ex/TestingSettings;
 
     invoke-virtual {v1, p1, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 

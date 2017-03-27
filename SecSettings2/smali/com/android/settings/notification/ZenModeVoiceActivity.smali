@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/notification/ZenModeVoiceActivity;
-.super Lcom/android/settings/utils/VoiceSettingsActivity;
+.class public Lcom/android/settings_ex/notification/ZenModeVoiceActivity;
+.super Lcom/android/settings_ex/utils/VoiceSettingsActivity;
 .source "ZenModeVoiceActivity.java"
 
 
@@ -9,7 +9,7 @@
 
     .prologue
     .line 43
-    invoke-direct {p0}, Lcom/android/settings/utils/VoiceSettingsActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/utils/VoiceSettingsActivity;-><init>()V
 
     return-void
 .end method
@@ -50,7 +50,7 @@
     :cond_0
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v7}, Lcom/android/settings/notification/ZenModeVoiceActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v7}, Lcom/android/settings_ex/notification/ZenModeVoiceActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v11
 
@@ -131,7 +131,7 @@
 
     .line 114
     .local v5, "formattedTime":Ljava/lang/CharSequence;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/notification/ZenModeVoiceActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/notification/ZenModeVoiceActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -345,12 +345,12 @@
 
     .line 60
     :cond_1
-    invoke-direct {p0, v3, v1}, Lcom/android/settings/notification/ZenModeVoiceActivity;->setZenModeConfig(ILandroid/service/notification/Condition;)V
+    invoke-direct {p0, v3, v1}, Lcom/android/settings_ex/notification/ZenModeVoiceActivity;->setZenModeConfig(ILandroid/service/notification/Condition;)V
 
     .line 62
     const-string v4, "audio"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/notification/ZenModeVoiceActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/notification/ZenModeVoiceActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -369,11 +369,11 @@
 
     .line 69
     :cond_2
-    invoke-direct {p0, v3, v2}, Lcom/android/settings/notification/ZenModeVoiceActivity;->getChangeSummary(II)Ljava/lang/CharSequence;
+    invoke-direct {p0, v3, v2}, Lcom/android/settings_ex/notification/ZenModeVoiceActivity;->getChangeSummary(II)Ljava/lang/CharSequence;
 
     move-result-object v4
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/notification/ZenModeVoiceActivity;->notifySuccess(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/notification/ZenModeVoiceActivity;->notifySuccess(Ljava/lang/CharSequence;)V
 
     .line 74
     .end local v0    # "audioManager":Landroid/media/AudioManager;
@@ -392,7 +392,7 @@
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 72
-    invoke-virtual {p0}, Lcom/android/settings/notification/ZenModeVoiceActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/ZenModeVoiceActivity;->finish()V
 
     goto :goto_0
 .end method

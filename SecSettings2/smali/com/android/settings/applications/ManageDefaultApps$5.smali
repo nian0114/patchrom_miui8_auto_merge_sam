@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/applications/ManageDefaultApps$5;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/applications/ManageDefaultApps$5;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "ManageDefaultApps.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/ManageDefaultApps;
+    value = Lcom/android/settings_ex/applications/ManageDefaultApps;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 446
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -68,7 +68,7 @@
 
     .line 463
     .local v0, "isRestrictedUser":Z
-    invoke-static {p1}, Lcom/android/settings/applications/DefaultSmsPreference;->isAvailable(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/applications/DefaultSmsPreference;->isAvailable(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -84,7 +84,7 @@
 
     .line 467
     :cond_1
-    invoke-static {p1}, Lcom/android/settings/applications/DefaultPhonePreference;->isAvailable(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/applications/DefaultPhonePreference;->isAvailable(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -97,7 +97,7 @@
 
     .line 471
     :cond_2
-    invoke-static {p1}, Lcom/android/settings/applications/DefaultEmergencyPreference;->isAvailable(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/applications/DefaultEmergencyPreference;->isAvailable(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -137,7 +137,7 @@
 
     .line 451
     .local v0, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v1, Lcom/android/settings/applications/ManageDefaultApps;
+    const-class v1, Lcom/android/settings_ex/applications/ManageDefaultApps;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

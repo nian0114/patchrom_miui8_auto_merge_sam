@@ -1,4 +1,4 @@
-.class Lcom/android/settings/applications/UninstallMultipleScreen$4;
+.class Lcom/android/settings_ex/applications/UninstallMultipleScreen$4;
 .super Ljava/lang/Object;
 .source "UninstallMultipleScreen.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/applications/UninstallMultipleScreen;->showConfirmationDialog()V
+    value = Lcom/android/settings_ex/applications/UninstallMultipleScreen;->showConfirmationDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/applications/UninstallMultipleScreen;
+.field final synthetic this$0:Lcom/android/settings_ex/applications/UninstallMultipleScreen;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/applications/UninstallMultipleScreen;)V
+.method constructor <init>(Lcom/android/settings_ex/applications/UninstallMultipleScreen;)V
     .locals 0
 
     .prologue
     .line 205
-    iput-object p1, p0, Lcom/android/settings/applications/UninstallMultipleScreen$4;->this$0:Lcom/android/settings/applications/UninstallMultipleScreen;
+    iput-object p1, p0, Lcom/android/settings_ex/applications/UninstallMultipleScreen$4;->this$0:Lcom/android/settings_ex/applications/UninstallMultipleScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,10 +43,10 @@
 
     .prologue
     .line 209
-    iget-object v3, p0, Lcom/android/settings/applications/UninstallMultipleScreen$4;->this$0:Lcom/android/settings/applications/UninstallMultipleScreen;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/UninstallMultipleScreen$4;->this$0:Lcom/android/settings_ex/applications/UninstallMultipleScreen;
 
-    # getter for: Lcom/android/settings/applications/UninstallMultipleScreen;->mAppListView:Landroid/widget/ListView;
-    invoke-static {v3}, Lcom/android/settings/applications/UninstallMultipleScreen;->access$100(Lcom/android/settings/applications/UninstallMultipleScreen;)Landroid/widget/ListView;
+    # getter for: Lcom/android/settings_ex/applications/UninstallMultipleScreen;->mAppListView:Landroid/widget/ListView;
+    invoke-static {v3}, Lcom/android/settings_ex/applications/UninstallMultipleScreen;->access$100(Lcom/android/settings_ex/applications/UninstallMultipleScreen;)Landroid/widget/ListView;
 
     move-result-object v3
 
@@ -60,10 +60,10 @@
 
     .local v1, "i":I
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/applications/UninstallMultipleScreen$4;->this$0:Lcom/android/settings/applications/UninstallMultipleScreen;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/UninstallMultipleScreen$4;->this$0:Lcom/android/settings_ex/applications/UninstallMultipleScreen;
 
-    # getter for: Lcom/android/settings/applications/UninstallMultipleScreen;->mAppListView:Landroid/widget/ListView;
-    invoke-static {v3}, Lcom/android/settings/applications/UninstallMultipleScreen;->access$100(Lcom/android/settings/applications/UninstallMultipleScreen;)Landroid/widget/ListView;
+    # getter for: Lcom/android/settings_ex/applications/UninstallMultipleScreen;->mAppListView:Landroid/widget/ListView;
+    invoke-static {v3}, Lcom/android/settings_ex/applications/UninstallMultipleScreen;->access$100(Lcom/android/settings_ex/applications/UninstallMultipleScreen;)Landroid/widget/ListView;
 
     move-result-object v3
 
@@ -81,30 +81,30 @@
     if-eqz v3, :cond_0
 
     .line 213
-    iget-object v3, p0, Lcom/android/settings/applications/UninstallMultipleScreen$4;->this$0:Lcom/android/settings/applications/UninstallMultipleScreen;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/UninstallMultipleScreen$4;->this$0:Lcom/android/settings_ex/applications/UninstallMultipleScreen;
 
-    # getter for: Lcom/android/settings/applications/UninstallMultipleScreen;->mAdapter:Lcom/android/settings/applications/UninstallMultipleScreen$AppAdapter;
-    invoke-static {v3}, Lcom/android/settings/applications/UninstallMultipleScreen;->access$700(Lcom/android/settings/applications/UninstallMultipleScreen;)Lcom/android/settings/applications/UninstallMultipleScreen$AppAdapter;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v1}, Lcom/android/settings/applications/UninstallMultipleScreen$AppAdapter;->getItem(I)Ljava/lang/Object;
+    # getter for: Lcom/android/settings_ex/applications/UninstallMultipleScreen;->mAdapter:Lcom/android/settings_ex/applications/UninstallMultipleScreen$AppAdapter;
+    invoke-static {v3}, Lcom/android/settings_ex/applications/UninstallMultipleScreen;->access$700(Lcom/android/settings_ex/applications/UninstallMultipleScreen;)Lcom/android/settings_ex/applications/UninstallMultipleScreen$AppAdapter;
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/settings/applications/UninstallMultipleScreen$PInfo;
+    invoke-virtual {v3, v1}, Lcom/android/settings_ex/applications/UninstallMultipleScreen$AppAdapter;->getItem(I)Ljava/lang/Object;
 
-    # getter for: Lcom/android/settings/applications/UninstallMultipleScreen$PInfo;->pname:Ljava/lang/String;
-    invoke-static {v3}, Lcom/android/settings/applications/UninstallMultipleScreen$PInfo;->access$800(Lcom/android/settings/applications/UninstallMultipleScreen$PInfo;)Ljava/lang/String;
+    move-result-object v3
+
+    check-cast v3, Lcom/android/settings_ex/applications/UninstallMultipleScreen$PInfo;
+
+    # getter for: Lcom/android/settings_ex/applications/UninstallMultipleScreen$PInfo;->pname:Ljava/lang/String;
+    invoke-static {v3}, Lcom/android/settings_ex/applications/UninstallMultipleScreen$PInfo;->access$800(Lcom/android/settings_ex/applications/UninstallMultipleScreen$PInfo;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 214
     .local v2, "pkgName":Ljava/lang/String;
-    iget-object v3, p0, Lcom/android/settings/applications/UninstallMultipleScreen$4;->this$0:Lcom/android/settings/applications/UninstallMultipleScreen;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/UninstallMultipleScreen$4;->this$0:Lcom/android/settings_ex/applications/UninstallMultipleScreen;
 
-    # getter for: Lcom/android/settings/applications/UninstallMultipleScreen;->selectedPackages:Ljava/util/List;
-    invoke-static {v3}, Lcom/android/settings/applications/UninstallMultipleScreen;->access$400(Lcom/android/settings/applications/UninstallMultipleScreen;)Ljava/util/List;
+    # getter for: Lcom/android/settings_ex/applications/UninstallMultipleScreen;->selectedPackages:Ljava/util/List;
+    invoke-static {v3}, Lcom/android/settings_ex/applications/UninstallMultipleScreen;->access$400(Lcom/android/settings_ex/applications/UninstallMultipleScreen;)Ljava/util/List;
 
     move-result-object v3
 
@@ -122,10 +122,10 @@
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     .line 221
-    iget-object v3, p0, Lcom/android/settings/applications/UninstallMultipleScreen$4;->this$0:Lcom/android/settings/applications/UninstallMultipleScreen;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/UninstallMultipleScreen$4;->this$0:Lcom/android/settings_ex/applications/UninstallMultipleScreen;
 
-    # getter for: Lcom/android/settings/applications/UninstallMultipleScreen;->selectedPackages:Ljava/util/List;
-    invoke-static {v3}, Lcom/android/settings/applications/UninstallMultipleScreen;->access$400(Lcom/android/settings/applications/UninstallMultipleScreen;)Ljava/util/List;
+    # getter for: Lcom/android/settings_ex/applications/UninstallMultipleScreen;->selectedPackages:Ljava/util/List;
+    invoke-static {v3}, Lcom/android/settings_ex/applications/UninstallMultipleScreen;->access$400(Lcom/android/settings_ex/applications/UninstallMultipleScreen;)Ljava/util/List;
 
     move-result-object v3
 
@@ -136,27 +136,27 @@
     if-lez v3, :cond_2
 
     .line 222
-    iget-object v3, p0, Lcom/android/settings/applications/UninstallMultipleScreen$4;->this$0:Lcom/android/settings/applications/UninstallMultipleScreen;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/UninstallMultipleScreen$4;->this$0:Lcom/android/settings_ex/applications/UninstallMultipleScreen;
 
-    # getter for: Lcom/android/settings/applications/UninstallMultipleScreen;->mProgressDialog:Landroid/app/ProgressDialog;
-    invoke-static {v3}, Lcom/android/settings/applications/UninstallMultipleScreen;->access$500(Lcom/android/settings/applications/UninstallMultipleScreen;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/applications/UninstallMultipleScreen;->mProgressDialog:Landroid/app/ProgressDialog;
+    invoke-static {v3}, Lcom/android/settings_ex/applications/UninstallMultipleScreen;->access$500(Lcom/android/settings_ex/applications/UninstallMultipleScreen;)Landroid/app/ProgressDialog;
 
     move-result-object v3
 
     invoke-virtual {v3}, Landroid/app/ProgressDialog;->show()V
 
     .line 223
-    iget-object v3, p0, Lcom/android/settings/applications/UninstallMultipleScreen$4;->this$0:Lcom/android/settings/applications/UninstallMultipleScreen;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/UninstallMultipleScreen$4;->this$0:Lcom/android/settings_ex/applications/UninstallMultipleScreen;
 
-    iget-object v4, p0, Lcom/android/settings/applications/UninstallMultipleScreen$4;->this$0:Lcom/android/settings/applications/UninstallMultipleScreen;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/UninstallMultipleScreen$4;->this$0:Lcom/android/settings_ex/applications/UninstallMultipleScreen;
 
-    # getter for: Lcom/android/settings/applications/UninstallMultipleScreen;->selectedPackages:Ljava/util/List;
-    invoke-static {v4}, Lcom/android/settings/applications/UninstallMultipleScreen;->access$400(Lcom/android/settings/applications/UninstallMultipleScreen;)Ljava/util/List;
+    # getter for: Lcom/android/settings_ex/applications/UninstallMultipleScreen;->selectedPackages:Ljava/util/List;
+    invoke-static {v4}, Lcom/android/settings_ex/applications/UninstallMultipleScreen;->access$400(Lcom/android/settings_ex/applications/UninstallMultipleScreen;)Ljava/util/List;
 
     move-result-object v4
 
-    # invokes: Lcom/android/settings/applications/UninstallMultipleScreen;->UninstallPackages(Ljava/util/List;)V
-    invoke-static {v3, v4}, Lcom/android/settings/applications/UninstallMultipleScreen;->access$600(Lcom/android/settings/applications/UninstallMultipleScreen;Ljava/util/List;)V
+    # invokes: Lcom/android/settings_ex/applications/UninstallMultipleScreen;->UninstallPackages(Ljava/util/List;)V
+    invoke-static {v3, v4}, Lcom/android/settings_ex/applications/UninstallMultipleScreen;->access$600(Lcom/android/settings_ex/applications/UninstallMultipleScreen;Ljava/util/List;)V
 
     .line 227
     :goto_1
@@ -164,9 +164,9 @@
 
     .line 225
     :cond_2
-    iget-object v3, p0, Lcom/android/settings/applications/UninstallMultipleScreen$4;->this$0:Lcom/android/settings/applications/UninstallMultipleScreen;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/UninstallMultipleScreen$4;->this$0:Lcom/android/settings_ex/applications/UninstallMultipleScreen;
 
-    invoke-virtual {v3}, Lcom/android/settings/applications/UninstallMultipleScreen;->finish()V
+    invoke-virtual {v3}, Lcom/android/settings_ex/applications/UninstallMultipleScreen;->finish()V
 
     goto :goto_1
 .end method

@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/deviceinfo/BatteryInfoSettings$2;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings$2;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "BatteryInfoSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/BatteryInfoSettings;
+    value = Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 190
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -50,8 +50,8 @@
 
     .line 204
     .local v3, "keys":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
-    # invokes: Lcom/android/settings/deviceinfo/BatteryInfoSettings;->getBatteryLife()I
-    invoke-static {}, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->access$200()I
+    # invokes: Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->getBatteryLife()I
+    invoke-static {}, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->access$200()I
 
     move-result v1
 
@@ -59,7 +59,7 @@
     .local v1, "battery_life":I
     if-lez v1, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isJapanModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isJapanModel()Z
 
     move-result v6
 
@@ -167,7 +167,7 @@
 
     .line 215
     :cond_5
-    invoke-static {}, Lcom/android/settings/Utils;->isLDUModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isLDUModel()Z
 
     move-result v6
 
@@ -230,7 +230,7 @@
 
     .line 195
     .local v0, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v1, Lcom/android/settings/deviceinfo/BatteryInfoSettings;
+    const-class v1, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/TintablePreference;
+.class public Lcom/android/settings_ex/TintablePreference;
 .super Landroid/preference/Preference;
 .source "TintablePreference.java"
 
@@ -32,7 +32,7 @@
     invoke-super {p0, p1}, Landroid/preference/Preference;->onBindView(Landroid/view/View;)V
 
     .line 42
-    iget v0, p0, Lcom/android/settings/TintablePreference;->mTintColor:I
+    iget v0, p0, Lcom/android/settings_ex/TintablePreference;->mTintColor:I
 
     if-eqz v0, :cond_0
 
@@ -45,7 +45,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iget v1, p0, Lcom/android/settings/TintablePreference;->mTintColor:I
+    iget v1, p0, Lcom/android/settings_ex/TintablePreference;->mTintColor:I
 
     invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 

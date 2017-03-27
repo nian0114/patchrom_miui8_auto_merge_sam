@@ -1,4 +1,4 @@
-.class Lcom/android/settings/dashboard/DashboardEditFavoriteSummary$DashboardEditFavoriteActionModeCallBack$1;
+.class Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary$DashboardEditFavoriteActionModeCallBack$1;
 .super Ljava/lang/Object;
 .source "DashboardEditFavoriteSummary.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/dashboard/DashboardEditFavoriteSummary$DashboardEditFavoriteActionModeCallBack;->onCreateActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
+    value = Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary$DashboardEditFavoriteActionModeCallBack;->onCreateActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/dashboard/DashboardEditFavoriteSummary$DashboardEditFavoriteActionModeCallBack;
+.field final synthetic this$1:Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary$DashboardEditFavoriteActionModeCallBack;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/dashboard/DashboardEditFavoriteSummary$DashboardEditFavoriteActionModeCallBack;)V
+.method constructor <init>(Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary$DashboardEditFavoriteActionModeCallBack;)V
     .locals 0
 
     .prologue
     .line 321
-    iput-object p1, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteSummary$DashboardEditFavoriteActionModeCallBack$1;->this$1:Lcom/android/settings/dashboard/DashboardEditFavoriteSummary$DashboardEditFavoriteActionModeCallBack;
+    iput-object p1, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary$DashboardEditFavoriteActionModeCallBack$1;->this$1:Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary$DashboardEditFavoriteActionModeCallBack;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,12 +42,12 @@
 
     .prologue
     .line 323
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardEditFavoriteSummary$DashboardEditFavoriteActionModeCallBack$1;->this$1:Lcom/android/settings/dashboard/DashboardEditFavoriteSummary$DashboardEditFavoriteActionModeCallBack;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary$DashboardEditFavoriteActionModeCallBack$1;->this$1:Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary$DashboardEditFavoriteActionModeCallBack;
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardEditFavoriteSummary$DashboardEditFavoriteActionModeCallBack;->this$0:Lcom/android/settings/dashboard/DashboardEditFavoriteSummary;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary$DashboardEditFavoriteActionModeCallBack;->this$0:Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary;
 
-    # getter for: Lcom/android/settings/dashboard/DashboardEditFavoriteSummary;->mActionMode:Landroid/view/ActionMode;
-    invoke-static {v0}, Lcom/android/settings/dashboard/DashboardEditFavoriteSummary;->access$300(Lcom/android/settings/dashboard/DashboardEditFavoriteSummary;)Landroid/view/ActionMode;
+    # getter for: Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary;->mActionMode:Landroid/view/ActionMode;
+    invoke-static {v0}, Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary;->access$300(Lcom/android/settings_ex/dashboard/DashboardEditFavoriteSummary;)Landroid/view/ActionMode;
 
     move-result-object v0
 

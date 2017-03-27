@@ -1,11 +1,11 @@
-.class Lcom/android/settings/spen/DirectPenInputSettings$1;
+.class Lcom/android/settings_ex/spen/DirectPenInputSettings$1;
 .super Landroid/database/ContentObserver;
 .source "DirectPenInputSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/spen/DirectPenInputSettings;
+    value = Lcom/android/settings_ex/spen/DirectPenInputSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/spen/DirectPenInputSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/spen/DirectPenInputSettings;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/spen/DirectPenInputSettings;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 90
-    iput-object p1, p0, Lcom/android/settings/spen/DirectPenInputSettings$1;->this$0:Lcom/android/settings/spen/DirectPenInputSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings$1;->this$0:Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -42,10 +42,10 @@
     const/4 v0, 0x0
 
     .line 93
-    iget-object v1, p0, Lcom/android/settings/spen/DirectPenInputSettings$1;->this$0:Lcom/android/settings/spen/DirectPenInputSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings$1;->this$0:Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
-    # getter for: Lcom/android/settings/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
-    invoke-static {v1}, Lcom/android/settings/spen/DirectPenInputSettings;->access$000(Lcom/android/settings/spen/DirectPenInputSettings;)Landroid/app/Activity;
+    # getter for: Lcom/android/settings_ex/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
+    invoke-static {v1}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->access$000(Lcom/android/settings_ex/spen/DirectPenInputSettings;)Landroid/app/Activity;
 
     move-result-object v1
 
@@ -53,10 +53,10 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/spen/DirectPenInputSettings$1;->this$0:Lcom/android/settings/spen/DirectPenInputSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings$1;->this$0:Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
-    # getter for: Lcom/android/settings/spen/DirectPenInputSettings;->URI_PEN_WRITING_BUDDY:Ljava/lang/String;
-    invoke-static {v2}, Lcom/android/settings/spen/DirectPenInputSettings;->access$100(Lcom/android/settings/spen/DirectPenInputSettings;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/spen/DirectPenInputSettings;->URI_PEN_WRITING_BUDDY:Ljava/lang/String;
+    invoke-static {v2}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->access$100(Lcom/android/settings_ex/spen/DirectPenInputSettings;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -71,20 +71,20 @@
     .line 95
     .local v0, "directPenState":Z
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/spen/DirectPenInputSettings$1;->this$0:Lcom/android/settings/spen/DirectPenInputSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings$1;->this$0:Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
-    # getter for: Lcom/android/settings/spen/DirectPenInputSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v1}, Lcom/android/settings/spen/DirectPenInputSettings;->access$200(Lcom/android/settings/spen/DirectPenInputSettings;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/spen/DirectPenInputSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v1}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->access$200(Lcom/android/settings_ex/spen/DirectPenInputSettings;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 96
-    iget-object v1, p0, Lcom/android/settings/spen/DirectPenInputSettings$1;->this$0:Lcom/android/settings/spen/DirectPenInputSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings$1;->this$0:Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
-    # invokes: Lcom/android/settings/spen/DirectPenInputSettings;->setPreferenceEnabled()V
-    invoke-static {v1}, Lcom/android/settings/spen/DirectPenInputSettings;->access$300(Lcom/android/settings/spen/DirectPenInputSettings;)V
+    # invokes: Lcom/android/settings_ex/spen/DirectPenInputSettings;->setPreferenceEnabled()V
+    invoke-static {v1}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->access$300(Lcom/android/settings_ex/spen/DirectPenInputSettings;)V
 
     .line 97
     return-void

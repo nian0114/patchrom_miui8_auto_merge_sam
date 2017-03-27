@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen android:title="@string/air_turn_title"
   xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings_ex"
   xmlns:touchwiz="http://schemas.android.com/apk/res/touchwiz">
     <Preference android:title="@string/learn_about_the_sensor_title" android:key="learn_about_the_sensor" android:widgetLayout="@layout/round_more_icon" />
     <PreferenceCategory android:title="@string/category_applications" android:key="applications_category" />

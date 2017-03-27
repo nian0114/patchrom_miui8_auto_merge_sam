@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settings/helpdialog/TwHelpDialog$1;
+.class synthetic Lcom/android/settings_ex/helpdialog/TwHelpDialog$1;
 .super Ljava/lang/Object;
 .source "TwHelpDialog.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/helpdialog/TwHelpDialog;
+    value = Lcom/android/settings_ex/helpdialog/TwHelpDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
 
     .prologue
     .line 111
-    invoke-static {}, Lcom/android/settings/helpdialog/TwHelpDialog$TouchMode;->values()[Lcom/android/settings/helpdialog/TwHelpDialog$TouchMode;
+    invoke-static {}, Lcom/android/settings_ex/helpdialog/TwHelpDialog$TouchMode;->values()[Lcom/android/settings_ex/helpdialog/TwHelpDialog$TouchMode;
 
     move-result-object v0
 
@@ -32,12 +32,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/settings/helpdialog/TwHelpDialog$1;->$SwitchMap$com$android$settings$helpdialog$TwHelpDialog$TouchMode:[I
+    sput-object v0, Lcom/android/settings_ex/helpdialog/TwHelpDialog$1;->$SwitchMap$com$android$settings$helpdialog$TwHelpDialog$TouchMode:[I
 
     :try_start_0
-    sget-object v0, Lcom/android/settings/helpdialog/TwHelpDialog$1;->$SwitchMap$com$android$settings$helpdialog$TwHelpDialog$TouchMode:[I
+    sget-object v0, Lcom/android/settings_ex/helpdialog/TwHelpDialog$1;->$SwitchMap$com$android$settings$helpdialog$TwHelpDialog$TouchMode:[I
 
-    sget-object v1, Lcom/android/settings/helpdialog/TwHelpDialog$TouchMode;->OPAQUE:Lcom/android/settings/helpdialog/TwHelpDialog$TouchMode;
+    sget-object v1, Lcom/android/settings_ex/helpdialog/TwHelpDialog$TouchMode;->OPAQUE:Lcom/android/settings_ex/helpdialog/TwHelpDialog$TouchMode;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -51,9 +51,9 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/android/settings/helpdialog/TwHelpDialog$1;->$SwitchMap$com$android$settings$helpdialog$TwHelpDialog$TouchMode:[I
+    sget-object v0, Lcom/android/settings_ex/helpdialog/TwHelpDialog$1;->$SwitchMap$com$android$settings$helpdialog$TwHelpDialog$TouchMode:[I
 
-    sget-object v1, Lcom/android/settings/helpdialog/TwHelpDialog$TouchMode;->OPAQUE_NO_MOVE:Lcom/android/settings/helpdialog/TwHelpDialog$TouchMode;
+    sget-object v1, Lcom/android/settings_ex/helpdialog/TwHelpDialog$TouchMode;->OPAQUE_NO_MOVE:Lcom/android/settings_ex/helpdialog/TwHelpDialog$TouchMode;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -67,9 +67,9 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/android/settings/helpdialog/TwHelpDialog$1;->$SwitchMap$com$android$settings$helpdialog$TwHelpDialog$TouchMode:[I
+    sget-object v0, Lcom/android/settings_ex/helpdialog/TwHelpDialog$1;->$SwitchMap$com$android$settings$helpdialog$TwHelpDialog$TouchMode:[I
 
-    sget-object v1, Lcom/android/settings/helpdialog/TwHelpDialog$TouchMode;->TRANSPARENT:Lcom/android/settings/helpdialog/TwHelpDialog$TouchMode;
+    sget-object v1, Lcom/android/settings_ex/helpdialog/TwHelpDialog$TouchMode;->TRANSPARENT:Lcom/android/settings_ex/helpdialog/TwHelpDialog$TouchMode;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 

@@ -1,4 +1,4 @@
-.class public final Lcom/android/settings/handwritingsearch/ResourceManagerContract$Langs;
+.class public final Lcom/android/settings_ex/handwritingsearch/ResourceManagerContract$Langs;
 .super Ljava/lang/Object;
 .source "ResourceManagerContract.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/handwritingsearch/ResourceManagerContract;
+    value = Lcom/android/settings_ex/handwritingsearch/ResourceManagerContract;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -33,7 +33,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/android/settings/handwritingsearch/ResourceManagerContract;->getAuthority()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/handwritingsearch/ResourceManagerContract;->getAuthority()Ljava/lang/String;
 
     move-result-object v1
 

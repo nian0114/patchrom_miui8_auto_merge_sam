@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/notification/ZenAccessSettings$2;
+.class final Lcom/android/settings_ex/notification/ZenAccessSettings$2;
 .super Ljava/lang/Object;
 .source "ZenAccessSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/notification/ZenAccessSettings;->setAccess(Landroid/content/Context;Ljava/lang/String;Z)V
+    value = Lcom/android/settings_ex/notification/ZenAccessSettings;->setAccess(Landroid/content/Context;Ljava/lang/String;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -31,11 +31,11 @@
 
     .prologue
     .line 157
-    iput-object p1, p0, Lcom/android/settings/notification/ZenAccessSettings$2;->val$context:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/ZenAccessSettings$2;->val$context:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/android/settings/notification/ZenAccessSettings$2;->val$pkg:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/settings_ex/notification/ZenAccessSettings$2;->val$pkg:Ljava/lang/String;
 
-    iput-boolean p3, p0, Lcom/android/settings/notification/ZenAccessSettings$2;->val$access:Z
+    iput-boolean p3, p0, Lcom/android/settings_ex/notification/ZenAccessSettings$2;->val$access:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,7 +49,7 @@
 
     .prologue
     .line 160
-    iget-object v1, p0, Lcom/android/settings/notification/ZenAccessSettings$2;->val$context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/ZenAccessSettings$2;->val$context:Landroid/content/Context;
 
     const-class v2, Landroid/app/NotificationManager;
 
@@ -61,9 +61,9 @@
 
     .line 161
     .local v0, "mgr":Landroid/app/NotificationManager;
-    iget-object v1, p0, Lcom/android/settings/notification/ZenAccessSettings$2;->val$pkg:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/ZenAccessSettings$2;->val$pkg:Ljava/lang/String;
 
-    iget-boolean v2, p0, Lcom/android/settings/notification/ZenAccessSettings$2;->val$access:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/notification/ZenAccessSettings$2;->val$access:Z
 
     invoke-virtual {v0, v1, v2}, Landroid/app/NotificationManager;->setNotificationPolicyAccessGranted(Ljava/lang/String;Z)V
 

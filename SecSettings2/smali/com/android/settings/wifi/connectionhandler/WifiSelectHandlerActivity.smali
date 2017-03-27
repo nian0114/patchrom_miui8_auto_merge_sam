@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;
+.class public Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;
 .super Lcom/android/internal/app/AlertActivity;
 .source "WifiSelectHandlerActivity.java"
 
@@ -39,7 +39,7 @@
     invoke-super {p0}, Lcom/android/internal/app/AlertActivity;->finish()V
 
     .line 113
-    invoke-virtual {p0, v0, v0}, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->overridePendingTransition(II)V
+    invoke-virtual {p0, v0, v0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->overridePendingTransition(II)V
 
     .line 114
     return-void
@@ -64,7 +64,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->mcheck:Landroid/widget/CheckBox;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->mcheck:Landroid/widget/CheckBox;
 
     invoke-virtual {v4}, Landroid/widget/CheckBox;->isChecked()Z
 
@@ -81,7 +81,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 76
-    iget-object v2, p0, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->mSharedPreferences_donotshow:Landroid/content/SharedPreferences;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->mSharedPreferences_donotshow:Landroid/content/SharedPreferences;
 
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -91,7 +91,7 @@
     .local v1, "edit_boolean":Landroid/content/SharedPreferences$Editor;
     const-string v2, "asktowlan_do_not_show"
 
-    iget-object v3, p0, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->mcheck:Landroid/widget/CheckBox;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->mcheck:Landroid/widget/CheckBox;
 
     invoke-virtual {v3}, Landroid/widget/CheckBox;->isChecked()Z
 
@@ -118,7 +118,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 82
-    iget-object v2, p0, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->mcheck:Landroid/widget/CheckBox;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->mcheck:Landroid/widget/CheckBox;
 
     invoke-virtual {v2}, Landroid/widget/CheckBox;->isChecked()Z
 
@@ -127,7 +127,7 @@
     if-eqz v2, :cond_0
 
     .line 83
-    iget-object v2, p0, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->mSharedPreferences_beforeValue:Landroid/content/SharedPreferences;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->mSharedPreferences_beforeValue:Landroid/content/SharedPreferences;
 
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -154,10 +154,10 @@
     .line 88
     .end local v0    # "edit_beforeValue":Landroid/content/SharedPreferences$Editor;
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->sendIntent()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->sendIntent()V
 
     .line 89
-    invoke-virtual {p0}, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->finish()V
 
     goto :goto_0
 
@@ -170,7 +170,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 93
-    iget-object v2, p0, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->mcheck:Landroid/widget/CheckBox;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->mcheck:Landroid/widget/CheckBox;
 
     invoke-virtual {v2}, Landroid/widget/CheckBox;->isChecked()Z
 
@@ -179,7 +179,7 @@
     if-eqz v2, :cond_1
 
     .line 94
-    iget-object v2, p0, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->mSharedPreferences_beforeValue:Landroid/content/SharedPreferences;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->mSharedPreferences_beforeValue:Landroid/content/SharedPreferences;
 
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -206,7 +206,7 @@
     .line 99
     .end local v0    # "edit_beforeValue":Landroid/content/SharedPreferences$Editor;
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->finish()V
 
     goto :goto_0
 
@@ -244,17 +244,17 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->mSharedPreferences_donotshow:Landroid/content/SharedPreferences;
+    iput-object v3, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->mSharedPreferences_donotshow:Landroid/content/SharedPreferences;
 
     .line 40
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->mSharedPreferences_beforeValue:Landroid/content/SharedPreferences;
+    iput-object v3, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->mSharedPreferences_beforeValue:Landroid/content/SharedPreferences;
 
     .line 41
-    iget-object v3, p0, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->mSharedPreferences_donotshow:Landroid/content/SharedPreferences;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->mSharedPreferences_donotshow:Landroid/content/SharedPreferences;
 
     const-string v4, "asktowlan_do_not_show"
 
@@ -264,7 +264,7 @@
 
     .line 42
     .local v1, "do_not_show_again":Z
-    iget-object v3, p0, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->mSharedPreferences_beforeValue:Landroid/content/SharedPreferences;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->mSharedPreferences_beforeValue:Landroid/content/SharedPreferences;
 
     const-string v4, "asktowlan_value"
 
@@ -310,10 +310,10 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 47
-    invoke-virtual {p0}, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->sendIntent()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->sendIntent()V
 
     .line 48
-    invoke-virtual {p0}, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->finish()V
 
     .line 70
     :goto_0
@@ -328,7 +328,7 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 52
-    invoke-virtual {p0}, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->finish()V
 
     goto :goto_0
 
@@ -336,20 +336,20 @@
     :cond_1
     const-string v3, "layout_inflater"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/view/LayoutInflater;
 
-    iput-object v3, p0, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->mInflater:Landroid/view/LayoutInflater;
+    iput-object v3, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->mInflater:Landroid/view/LayoutInflater;
 
     .line 57
-    iget-object v0, p0, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     .line 58
     .local v0, "ap":Lcom/android/internal/app/AlertController$AlertParams;
-    iget-object v3, p0, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->mInflater:Landroid/view/LayoutInflater;
 
     const v4, 0x7f040261
 
@@ -362,7 +362,7 @@
     iput-object v3, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
 
     .line 59
-    invoke-virtual {p0}, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -375,7 +375,7 @@
     iput-object v3, v0, Lcom/android/internal/app/AlertController$AlertParams;->mTitle:Ljava/lang/CharSequence;
 
     .line 60
-    invoke-virtual {p0}, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -391,7 +391,7 @@
     iput-object p0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mPositiveButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
     .line 62
-    invoke-virtual {p0}, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -407,7 +407,7 @@
     iput-object p0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mNegativeButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
     .line 64
-    invoke-virtual {p0}, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -436,7 +436,7 @@
 
     check-cast v3, Landroid/widget/CheckBox;
 
-    iput-object v3, p0, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->mcheck:Landroid/widget/CheckBox;
+    iput-object v3, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->mcheck:Landroid/widget/CheckBox;
 
     .line 68
     iget-object v3, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
@@ -448,7 +448,7 @@
     invoke-virtual {v3, v6}, Landroid/view/View;->setVisibility(I)V
 
     .line 69
-    invoke-virtual {p0}, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->setupAlert()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->setupAlert()V
 
     goto :goto_0
 .end method
@@ -474,7 +474,7 @@
     invoke-super {p0}, Lcom/android/internal/app/AlertActivity;->onResume()V
 
     .line 118
-    iget-object v2, p0, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->mSharedPreferences_donotshow:Landroid/content/SharedPreferences;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->mSharedPreferences_donotshow:Landroid/content/SharedPreferences;
 
     const-string v3, "asktowlan_do_not_show"
 
@@ -484,7 +484,7 @@
 
     .line 119
     .local v0, "do_not_show_again":Z
-    iget-object v2, p0, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->mSharedPreferences_beforeValue:Landroid/content/SharedPreferences;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->mSharedPreferences_beforeValue:Landroid/content/SharedPreferences;
 
     const-string v3, "asktowlan_value"
 
@@ -530,10 +530,10 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 124
-    invoke-virtual {p0}, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->sendIntent()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->sendIntent()V
 
     .line 125
-    invoke-virtual {p0}, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->finish()V
 
     .line 133
     :cond_0
@@ -549,7 +549,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 129
-    invoke-virtual {p0}, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->finish()V
 
     goto :goto_0
 .end method
@@ -591,10 +591,10 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     .line 141
-    invoke-virtual {p0, v0}, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->startActivity(Landroid/content/Intent;)V
 
     .line 142
-    invoke-virtual {p0}, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;->finish()V
 
     .line 143
     return-void

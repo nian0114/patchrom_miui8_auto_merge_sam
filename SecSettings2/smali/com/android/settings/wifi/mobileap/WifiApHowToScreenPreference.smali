@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;
+.class public Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;
 .super Landroid/preference/Preference;
 .source "WifiApHowToScreenPreference.java"
 
@@ -31,33 +31,33 @@
     .line 43
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
 
     .line 44
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
 
     .line 45
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mPreSharedKey:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mPreSharedKey:Ljava/lang/String;
 
     .line 46
-    iput-boolean v1, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mHiddenSsid:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mHiddenSsid:Z
 
     .line 47
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mWpaString:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mWpaString:Ljava/lang/String;
 
     .line 48
-    iput-boolean v1, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mShouldShowSummary:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mShouldShowSummary:Z
 
     .line 52
     const v0, 0x7f040249
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->setLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->setLayoutResource(I)V
 
     .line 53
     return-void
@@ -129,7 +129,7 @@
     invoke-virtual {v0, v6}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 67
-    iget-object v6, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mPreSharedKey:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mPreSharedKey:Ljava/lang/String;
 
     invoke-virtual {v6}, Ljava/lang/String;->isEmpty()Z
 
@@ -138,7 +138,7 @@
     if-eqz v6, :cond_4
 
     .line 68
-    iget-boolean v6, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mHiddenSsid:Z
+    iget-boolean v6, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mHiddenSsid:Z
 
     if-eqz v6, :cond_1
 
@@ -148,7 +148,7 @@
     invoke-virtual {v2, v6}, Landroid/widget/TextView;->setText(I)V
 
     .line 70
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
@@ -160,13 +160,13 @@
 
     const/4 v9, 0x0
 
-    iget-object v10, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
 
     aput-object v10, v8, v9
 
     const/4 v9, 0x1
 
-    iget-object v10, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
 
     invoke-static {v10}, Landroid/text/Html;->escapeHtml(Ljava/lang/CharSequence;)Ljava/lang/String;
 
@@ -185,7 +185,7 @@
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 71
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
@@ -197,13 +197,13 @@
 
     const/4 v9, 0x0
 
-    iget-object v10, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
 
     aput-object v10, v8, v9
 
     const/4 v9, 0x1
 
-    iget-object v10, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
 
     invoke-static {v10}, Landroid/text/Html;->escapeHtml(Ljava/lang/CharSequence;)Ljava/lang/String;
 
@@ -224,7 +224,7 @@
     .line 72
     const-string v6, "TMO"
 
-    sget-object v7, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -255,7 +255,7 @@
 
     .line 123
     .local v1, "summary":Landroid/widget/TextView;
-    iget-boolean v6, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mShouldShowSummary:Z
+    iget-boolean v6, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mShouldShowSummary:Z
 
     if-eqz v6, :cond_9
 
@@ -283,7 +283,7 @@
     .line 79
     const-string v6, "SPRINT"
 
-    sget-object v7, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -298,7 +298,7 @@
 
     .line 84
     :goto_2
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
@@ -310,13 +310,13 @@
 
     const/4 v9, 0x0
 
-    iget-object v10, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
 
     aput-object v10, v8, v9
 
     const/4 v9, 0x1
 
-    iget-object v10, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
 
     invoke-static {v10}, Landroid/text/Html;->escapeHtml(Ljava/lang/CharSequence;)Ljava/lang/String;
 
@@ -337,7 +337,7 @@
     .line 85
     const-string v6, "VZW"
 
-    sget-object v7, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -347,7 +347,7 @@
 
     const-string v6, "TMO"
 
-    sget-object v7, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -357,7 +357,7 @@
 
     const-string v6, "SPRINT"
 
-    sget-object v7, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -367,7 +367,7 @@
 
     const-string v6, "ATT"
 
-    sget-object v7, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -377,7 +377,7 @@
 
     const-string v6, "MTR"
 
-    sget-object v7, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -387,7 +387,7 @@
 
     const-string v6, "USC"
 
-    sget-object v7, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -410,7 +410,7 @@
 
     .line 82
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
@@ -422,13 +422,13 @@
 
     const/4 v9, 0x0
 
-    iget-object v10, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
 
     aput-object v10, v8, v9
 
     const/4 v9, 0x1
 
-    iget-object v10, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
 
     invoke-static {v10}, Landroid/text/Html;->escapeHtml(Ljava/lang/CharSequence;)Ljava/lang/String;
 
@@ -450,7 +450,7 @@
 
     .line 93
     :cond_4
-    iget-boolean v6, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mHiddenSsid:Z
+    iget-boolean v6, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mHiddenSsid:Z
 
     if-eqz v6, :cond_5
 
@@ -460,7 +460,7 @@
     invoke-virtual {v2, v6}, Landroid/widget/TextView;->setText(I)V
 
     .line 95
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
@@ -472,13 +472,13 @@
 
     const/4 v9, 0x0
 
-    iget-object v10, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
 
     aput-object v10, v8, v9
 
     const/4 v9, 0x1
 
-    iget-object v10, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
 
     invoke-static {v10}, Landroid/text/Html;->escapeHtml(Ljava/lang/CharSequence;)Ljava/lang/String;
 
@@ -497,7 +497,7 @@
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 96
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
@@ -509,13 +509,13 @@
 
     const/4 v9, 0x0
 
-    iget-object v10, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
 
     aput-object v10, v8, v9
 
     const/4 v9, 0x1
 
-    iget-object v10, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
 
     invoke-static {v10}, Landroid/text/Html;->escapeHtml(Ljava/lang/CharSequence;)Ljava/lang/String;
 
@@ -525,7 +525,7 @@
 
     const/4 v9, 0x2
 
-    iget-object v10, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mPreSharedKey:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mPreSharedKey:Ljava/lang/String;
 
     invoke-static {v10}, Landroid/text/Html;->escapeHtml(Ljava/lang/CharSequence;)Ljava/lang/String;
 
@@ -546,7 +546,7 @@
     .line 97
     const-string v6, "TMO"
 
-    sget-object v7, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -575,7 +575,7 @@
     .line 103
     const-string v6, "SPRINT"
 
-    sget-object v7, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -590,7 +590,7 @@
 
     .line 108
     :goto_3
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
@@ -602,13 +602,13 @@
 
     const/4 v9, 0x0
 
-    iget-object v10, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
 
     aput-object v10, v8, v9
 
     const/4 v9, 0x1
 
-    iget-object v10, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
 
     invoke-static {v10}, Landroid/text/Html;->escapeHtml(Ljava/lang/CharSequence;)Ljava/lang/String;
 
@@ -618,7 +618,7 @@
 
     const/4 v9, 0x2
 
-    iget-object v10, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mPreSharedKey:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mPreSharedKey:Ljava/lang/String;
 
     invoke-static {v10}, Landroid/text/Html;->escapeHtml(Ljava/lang/CharSequence;)Ljava/lang/String;
 
@@ -639,7 +639,7 @@
     .line 109
     const-string v6, "VZW"
 
-    sget-object v7, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -649,7 +649,7 @@
 
     const-string v6, "TMO"
 
-    sget-object v7, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -659,7 +659,7 @@
 
     const-string v6, "SPRINT"
 
-    sget-object v7, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -669,7 +669,7 @@
 
     const-string v6, "ATT"
 
-    sget-object v7, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -679,7 +679,7 @@
 
     const-string v6, "MTR"
 
-    sget-object v7, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -689,7 +689,7 @@
 
     const-string v6, "USC"
 
-    sget-object v7, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -701,7 +701,7 @@
     :cond_6
     const-string v6, "SPRINT"
 
-    sget-object v7, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -710,7 +710,7 @@
     if-eqz v6, :cond_8
 
     .line 113
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
@@ -722,13 +722,13 @@
 
     const/4 v9, 0x0
 
-    iget-object v10, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
 
     aput-object v10, v8, v9
 
     const/4 v9, 0x1
 
-    iget-object v10, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
 
     invoke-static {v10}, Landroid/text/Html;->escapeHtml(Ljava/lang/CharSequence;)Ljava/lang/String;
 
@@ -738,7 +738,7 @@
 
     const/4 v9, 0x2
 
-    iget-object v10, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mPreSharedKey:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mPreSharedKey:Ljava/lang/String;
 
     invoke-static {v10}, Landroid/text/Html;->escapeHtml(Ljava/lang/CharSequence;)Ljava/lang/String;
 
@@ -748,7 +748,7 @@
 
     const/4 v9, 0x3
 
-    iget-object v10, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mWpaString:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mWpaString:Ljava/lang/String;
 
     aput-object v10, v8, v9
 
@@ -772,7 +772,7 @@
 
     .line 106
     :cond_7
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
@@ -784,13 +784,13 @@
 
     const/4 v9, 0x0
 
-    iget-object v10, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
 
     aput-object v10, v8, v9
 
     const/4 v9, 0x1
 
-    iget-object v10, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
 
     invoke-static {v10}, Landroid/text/Html;->escapeHtml(Ljava/lang/CharSequence;)Ljava/lang/String;
 
@@ -837,19 +837,19 @@
 
     .prologue
     .line 134
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
 
     .line 135
-    iput-object p2, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
 
     .line 136
-    iput-object p3, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mPreSharedKey:Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mPreSharedKey:Ljava/lang/String;
 
     .line 137
-    iput-boolean p4, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mHiddenSsid:Z
+    iput-boolean p4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mHiddenSsid:Z
 
     .line 138
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->notifyHierarchyChanged()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->notifyHierarchyChanged()V
 
     .line 139
     return-void
@@ -865,22 +865,22 @@
 
     .prologue
     .line 152
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
 
     .line 153
-    iput-object p2, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
 
     .line 154
-    iput-object p3, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mPreSharedKey:Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mPreSharedKey:Ljava/lang/String;
 
     .line 155
-    iput-boolean p4, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mHiddenSsid:Z
+    iput-boolean p4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mHiddenSsid:Z
 
     .line 156
-    iput-object p5, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mWpaString:Ljava/lang/String;
+    iput-object p5, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mWpaString:Ljava/lang/String;
 
     .line 157
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->notifyHierarchyChanged()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->notifyHierarchyChanged()V
 
     .line 158
     return-void
@@ -894,21 +894,21 @@
 
     .prologue
     .line 143
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mText_color:Ljava/lang/String;
 
     .line 144
-    iput-object p2, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mSsid:Ljava/lang/String;
 
     .line 145
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mPreSharedKey:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mPreSharedKey:Ljava/lang/String;
 
     .line 146
-    iput-boolean p3, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mHiddenSsid:Z
+    iput-boolean p3, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mHiddenSsid:Z
 
     .line 147
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->notifyHierarchyChanged()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->notifyHierarchyChanged()V
 
     .line 148
     return-void
@@ -921,7 +921,7 @@
     .line 162
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/wifi/mobileap/WifiApHowToScreenPreference;->mShouldShowSummary:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApHowToScreenPreference;->mShouldShowSummary:Z
 
     .line 163
     return-void

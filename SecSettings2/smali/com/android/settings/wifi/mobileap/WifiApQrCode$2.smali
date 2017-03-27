@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApQrCode$2;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode$2;
 .super Ljava/lang/Object;
 .source "WifiApQrCode.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/mobileap/WifiApQrCode;->onActivityCreated(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->onActivityCreated(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WifiApQrCode;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WifiApQrCode;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;)V
     .locals 0
 
     .prologue
     .line 124
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode$2;->this$0:Lcom/android/settings/wifi/mobileap/WifiApQrCode;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode$2;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,9 +42,9 @@
 
     .prologue
     .line 127
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode$2;->this$0:Lcom/android/settings/wifi/mobileap/WifiApQrCode;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode$2;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->startShareQrCode()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->startShareQrCode()V
 
     .line 128
     return-void

@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settings/UserCredentialsSettings$8;
+.class synthetic Lcom/android/settings_ex/UserCredentialsSettings$8;
 .super Ljava/lang/Object;
 .source "UserCredentialsSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/UserCredentialsSettings;
+    value = Lcom/android/settings_ex/UserCredentialsSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
 
     .prologue
     .line 134
-    invoke-static {}, Lcom/android/settings/UserCredentialsSettings$Tab;->values()[Lcom/android/settings/UserCredentialsSettings$Tab;
+    invoke-static {}, Lcom/android/settings_ex/UserCredentialsSettings$Tab;->values()[Lcom/android/settings_ex/UserCredentialsSettings$Tab;
 
     move-result-object v0
 
@@ -32,12 +32,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/settings/UserCredentialsSettings$8;->$SwitchMap$com$android$settings$UserCredentialsSettings$Tab:[I
+    sput-object v0, Lcom/android/settings_ex/UserCredentialsSettings$8;->$SwitchMap$com$android$settings$UserCredentialsSettings$Tab:[I
 
     :try_start_0
-    sget-object v0, Lcom/android/settings/UserCredentialsSettings$8;->$SwitchMap$com$android$settings$UserCredentialsSettings$Tab:[I
+    sget-object v0, Lcom/android/settings_ex/UserCredentialsSettings$8;->$SwitchMap$com$android$settings$UserCredentialsSettings$Tab:[I
 
-    sget-object v1, Lcom/android/settings/UserCredentialsSettings$Tab;->SYSTEM:Lcom/android/settings/UserCredentialsSettings$Tab;
+    sget-object v1, Lcom/android/settings_ex/UserCredentialsSettings$Tab;->SYSTEM:Lcom/android/settings_ex/UserCredentialsSettings$Tab;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -51,9 +51,9 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/android/settings/UserCredentialsSettings$8;->$SwitchMap$com$android$settings$UserCredentialsSettings$Tab:[I
+    sget-object v0, Lcom/android/settings_ex/UserCredentialsSettings$8;->$SwitchMap$com$android$settings$UserCredentialsSettings$Tab:[I
 
-    sget-object v1, Lcom/android/settings/UserCredentialsSettings$Tab;->WIFI:Lcom/android/settings/UserCredentialsSettings$Tab;
+    sget-object v1, Lcom/android/settings_ex/UserCredentialsSettings$Tab;->WIFI:Lcom/android/settings_ex/UserCredentialsSettings$Tab;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 

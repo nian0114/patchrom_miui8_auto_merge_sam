@@ -1,11 +1,11 @@
-.class Lcom/android/settings/widget/FloatingActionButton$1;
+.class Lcom/android/settings_ex/widget/FloatingActionButton$1;
 .super Landroid/view/ViewOutlineProvider;
 .source "FloatingActionButton.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/widget/FloatingActionButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    value = Lcom/android/settings_ex/widget/FloatingActionButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/widget/FloatingActionButton;
+.field final synthetic this$0:Lcom/android/settings_ex/widget/FloatingActionButton;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/widget/FloatingActionButton;)V
+.method constructor <init>(Lcom/android/settings_ex/widget/FloatingActionButton;)V
     .locals 0
 
     .prologue
     .line 35
-    iput-object p1, p0, Lcom/android/settings/widget/FloatingActionButton$1;->this$0:Lcom/android/settings/widget/FloatingActionButton;
+    iput-object p1, p0, Lcom/android/settings_ex/widget/FloatingActionButton$1;->this$0:Lcom/android/settings_ex/widget/FloatingActionButton;
 
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
 
@@ -42,15 +42,15 @@
     const/4 v2, 0x0
 
     .line 38
-    iget-object v0, p0, Lcom/android/settings/widget/FloatingActionButton$1;->this$0:Lcom/android/settings/widget/FloatingActionButton;
+    iget-object v0, p0, Lcom/android/settings_ex/widget/FloatingActionButton$1;->this$0:Lcom/android/settings_ex/widget/FloatingActionButton;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/FloatingActionButton;->getWidth()I
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/FloatingActionButton;->getWidth()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/android/settings/widget/FloatingActionButton$1;->this$0:Lcom/android/settings/widget/FloatingActionButton;
+    iget-object v1, p0, Lcom/android/settings_ex/widget/FloatingActionButton$1;->this$0:Lcom/android/settings_ex/widget/FloatingActionButton;
 
-    invoke-virtual {v1}, Lcom/android/settings/widget/FloatingActionButton;->getHeight()I
+    invoke-virtual {v1}, Lcom/android/settings_ex/widget/FloatingActionButton;->getHeight()I
 
     move-result v1
 

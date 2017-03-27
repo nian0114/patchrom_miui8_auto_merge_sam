@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/IwlanEnabler$2;
+.class Lcom/android/settings_ex/wifi/IwlanEnabler$2;
 .super Ljava/lang/Object;
 .source "IwlanEnabler.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/IwlanEnabler;->showAlertDialog(Ljava/lang/String;)V
+    value = Lcom/android/settings_ex/wifi/IwlanEnabler;->showAlertDialog(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/IwlanEnabler;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/IwlanEnabler;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/IwlanEnabler;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/IwlanEnabler;)V
     .locals 0
 
     .prologue
     .line 418
-    iput-object p1, p0, Lcom/android/settings/wifi/IwlanEnabler$2;->this$0:Lcom/android/settings/wifi/IwlanEnabler;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/IwlanEnabler$2;->this$0:Lcom/android/settings_ex/wifi/IwlanEnabler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

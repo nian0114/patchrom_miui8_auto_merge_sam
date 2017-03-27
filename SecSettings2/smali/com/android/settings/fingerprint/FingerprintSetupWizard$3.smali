@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fingerprint/FingerprintSetupWizard$3;
+.class Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard$3;
 .super Ljava/lang/Object;
 .source "FingerprintSetupWizard.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fingerprint/FingerprintSetupWizard;->resetAnimation()V
+    value = Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->resetAnimation()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/FingerprintSetupWizard;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/FingerprintSetupWizard;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;)V
     .locals 0
 
     .prologue
     .line 309
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard$3;->this$0:Lcom/android/settings/fingerprint/FingerprintSetupWizard;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard$3;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,10 +41,10 @@
 
     .prologue
     .line 312
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard$3;->this$0:Lcom/android/settings/fingerprint/FingerprintSetupWizard;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard$3;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintSetupWizard;->titleArea:Landroid/view/View;
-    invoke-static {v0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->access$100(Lcom/android/settings/fingerprint/FingerprintSetupWizard;)Landroid/view/View;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->titleArea:Landroid/view/View;
+    invoke-static {v0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->access$100(Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;)Landroid/view/View;
 
     move-result-object v0
 
@@ -55,16 +55,16 @@
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
     .line 313
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard$3;->this$0:Lcom/android/settings/fingerprint/FingerprintSetupWizard;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard$3;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintSetupWizard;->handler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard;->access$300(Lcom/android/settings/fingerprint/FingerprintSetupWizard;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->handler:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->access$300(Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;)Landroid/os/Handler;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/settings/fingerprint/FingerprintSetupWizard$3$1;
+    new-instance v1, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard$3$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/fingerprint/FingerprintSetupWizard$3$1;-><init>(Lcom/android/settings/fingerprint/FingerprintSetupWizard$3;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard$3$1;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard$3;)V
 
     const-wide/16 v2, 0x190
 

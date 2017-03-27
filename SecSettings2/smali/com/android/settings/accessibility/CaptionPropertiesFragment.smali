@@ -1,34 +1,34 @@
-.class public Lcom/android/settings/accessibility/CaptionPropertiesFragment;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "CaptionPropertiesFragment.java"
 
 # interfaces
 .implements Landroid/preference/Preference$OnPreferenceChangeListener;
-.implements Lcom/android/settings/accessibility/ListDialogPreference$OnValueChangedListener;
+.implements Lcom/android/settings_ex/accessibility/ListDialogPreference$OnValueChangedListener;
 
 
 # instance fields
-.field private mBackgroundColor:Lcom/android/settings/accessibility/ColorPreference;
+.field private mBackgroundColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-.field private mBackgroundOpacity:Lcom/android/settings/accessibility/ColorPreference;
+.field private mBackgroundOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
 .field private mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
 
 .field private mCustom:Landroid/preference/PreferenceCategory;
 
-.field private mEdgeColor:Lcom/android/settings/accessibility/ColorPreference;
+.field private mEdgeColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-.field private mEdgeType:Lcom/android/settings/accessibility/EdgeTypePreference;
+.field private mEdgeType:Lcom/android/settings_ex/accessibility/EdgeTypePreference;
 
 .field private mFontSize:Landroid/preference/ListPreference;
 
-.field private mForegroundColor:Lcom/android/settings/accessibility/ColorPreference;
+.field private mForegroundColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-.field private mForegroundOpacity:Lcom/android/settings/accessibility/ColorPreference;
+.field private mForegroundOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-.field private mLocale:Lcom/android/settings/accessibility/LocalePreference;
+.field private mLocale:Lcom/android/settings_ex/accessibility/LocalePreference;
 
-.field private mPreset:Lcom/android/settings/accessibility/PresetPreference;
+.field private mPreset:Lcom/android/settings_ex/accessibility/PresetPreference;
 
 .field private mPreviewText:Lcom/android/internal/widget/SubtitleView;
 
@@ -38,15 +38,15 @@
 
 .field private mShowingCustom:Z
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-.field private mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+.field private mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
 .field private mTypeface:Landroid/preference/ListPreference;
 
-.field private mWindowColor:Lcom/android/settings/accessibility/ColorPreference;
+.field private mWindowColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-.field private mWindowOpacity:Lcom/android/settings/accessibility/ColorPreference;
+.field private mWindowOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
 .field private params:Landroid/widget/LinearLayout$LayoutParams;
 
@@ -57,40 +57,40 @@
 
     .prologue
     .line 55
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/accessibility/CaptionPropertiesFragment;)V
+.method static synthetic access$000(Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/CaptionPropertiesFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;
 
     .prologue
     .line 55
-    invoke-direct {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->refreshPreviewText()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->refreshPreviewText()V
 
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/accessibility/CaptionPropertiesFragment;)Lcom/android/settings/widget/SwitchBar;
+.method static synthetic access$100(Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;)Lcom/android/settings_ex/widget/SwitchBar;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/CaptionPropertiesFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;
 
     .prologue
     .line 55
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/accessibility/CaptionPropertiesFragment;)Lcom/android/internal/widget/SubtitleView;
+.method static synthetic access$200(Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;)Lcom/android/internal/widget/SubtitleView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/CaptionPropertiesFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;
 
     .prologue
     .line 55
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mPreviewText:Lcom/android/internal/widget/SubtitleView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mPreviewText:Lcom/android/internal/widget/SubtitleView;
 
     return-object v0
 .end method
@@ -153,7 +153,7 @@
     if-eqz v3, :cond_0
 
     .line 229
-    invoke-static {v0, v3, v7}, Lcom/android/settings/accessibility/AccessibilityUtils;->getTextForLocale(Landroid/content/Context;Ljava/util/Locale;I)Ljava/lang/CharSequence;
+    invoke-static {v0, v3, v7}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->getTextForLocale(Landroid/content/Context;Ljava/util/Locale;I)Ljava/lang/CharSequence;
 
     move-result-object v4
 
@@ -184,27 +184,27 @@
     .line 270
     const-string v9, "captioning_locale"
 
-    invoke-virtual {p0, v9}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v9
 
-    check-cast v9, Lcom/android/settings/accessibility/LocalePreference;
+    check-cast v9, Lcom/android/settings_ex/accessibility/LocalePreference;
 
-    iput-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mLocale:Lcom/android/settings/accessibility/LocalePreference;
+    iput-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mLocale:Lcom/android/settings_ex/accessibility/LocalePreference;
 
     .line 271
     const-string v9, "captioning_font_size"
 
-    invoke-virtual {p0, v9}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v9
 
     check-cast v9, Landroid/preference/ListPreference;
 
-    iput-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mFontSize:Landroid/preference/ListPreference;
+    iput-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mFontSize:Landroid/preference/ListPreference;
 
     .line 273
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -228,47 +228,47 @@
     .local v6, "presetTitles":[Ljava/lang/String;
     const-string v9, "captioning_preset"
 
-    invoke-virtual {p0, v9}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v9
 
-    check-cast v9, Lcom/android/settings/accessibility/PresetPreference;
+    check-cast v9, Lcom/android/settings_ex/accessibility/PresetPreference;
 
-    iput-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mPreset:Lcom/android/settings/accessibility/PresetPreference;
+    iput-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mPreset:Lcom/android/settings_ex/accessibility/PresetPreference;
 
     .line 278
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mPreset:Lcom/android/settings/accessibility/PresetPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mPreset:Lcom/android/settings_ex/accessibility/PresetPreference;
 
-    invoke-virtual {v9, v7}, Lcom/android/settings/accessibility/PresetPreference;->setValues([I)V
+    invoke-virtual {v9, v7}, Lcom/android/settings_ex/accessibility/PresetPreference;->setValues([I)V
 
     .line 279
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mPreset:Lcom/android/settings/accessibility/PresetPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mPreset:Lcom/android/settings_ex/accessibility/PresetPreference;
 
-    invoke-virtual {v9, v6}, Lcom/android/settings/accessibility/PresetPreference;->setTitles([Ljava/lang/CharSequence;)V
+    invoke-virtual {v9, v6}, Lcom/android/settings_ex/accessibility/PresetPreference;->setTitles([Ljava/lang/CharSequence;)V
 
     .line 280
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mPreset:Lcom/android/settings/accessibility/PresetPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mPreset:Lcom/android/settings_ex/accessibility/PresetPreference;
 
-    invoke-virtual {v9, v11}, Lcom/android/settings/accessibility/PresetPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
+    invoke-virtual {v9, v11}, Lcom/android/settings_ex/accessibility/PresetPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 282
     const-string v9, "custom"
 
-    invoke-virtual {p0, v9}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v9
 
     check-cast v9, Landroid/preference/PreferenceCategory;
 
-    iput-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
+    iput-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
 
     .line 283
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v9, v11}, Landroid/preference/PreferenceCategory;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 284
-    iput-boolean v11, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mShowingCustom:Z
+    iput-boolean v11, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mShowingCustom:Z
 
     .line 286
     const v9, 0x7f110060
@@ -287,7 +287,7 @@
 
     .line 288
     .local v2, "colorTitles":[Ljava/lang/String;
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
 
     const-string v10, "captioning_foreground_color"
 
@@ -295,24 +295,24 @@
 
     move-result-object v9
 
-    check-cast v9, Lcom/android/settings/accessibility/ColorPreference;
+    check-cast v9, Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    iput-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mForegroundColor:Lcom/android/settings/accessibility/ColorPreference;
+    iput-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mForegroundColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
     .line 289
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mForegroundColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mForegroundColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v9, v2}, Lcom/android/settings/accessibility/ColorPreference;->setTitles([Ljava/lang/CharSequence;)V
+    invoke-virtual {v9, v2}, Lcom/android/settings_ex/accessibility/ColorPreference;->setTitles([Ljava/lang/CharSequence;)V
 
     .line 290
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mForegroundColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mForegroundColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v9, v3}, Lcom/android/settings/accessibility/ColorPreference;->setValues([I)V
+    invoke-virtual {v9, v3}, Lcom/android/settings_ex/accessibility/ColorPreference;->setValues([I)V
 
     .line 291
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mForegroundColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mForegroundColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v9, v11}, Lcom/android/settings/accessibility/ColorPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
+    invoke-virtual {v9, v11}, Lcom/android/settings_ex/accessibility/ColorPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 293
     const v9, 0x7f110062
@@ -331,7 +331,7 @@
 
     .line 296
     .local v4, "opacityTitles":[Ljava/lang/String;
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
 
     const-string v10, "captioning_foreground_opacity"
 
@@ -339,27 +339,27 @@
 
     move-result-object v9
 
-    check-cast v9, Lcom/android/settings/accessibility/ColorPreference;
+    check-cast v9, Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    iput-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mForegroundOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iput-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mForegroundOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
     .line 297
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mForegroundOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mForegroundOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v9, v4}, Lcom/android/settings/accessibility/ColorPreference;->setTitles([Ljava/lang/CharSequence;)V
+    invoke-virtual {v9, v4}, Lcom/android/settings_ex/accessibility/ColorPreference;->setTitles([Ljava/lang/CharSequence;)V
 
     .line 298
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mForegroundOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mForegroundOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v9, v5}, Lcom/android/settings/accessibility/ColorPreference;->setValues([I)V
+    invoke-virtual {v9, v5}, Lcom/android/settings_ex/accessibility/ColorPreference;->setValues([I)V
 
     .line 299
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mForegroundOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mForegroundOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v9, v11}, Lcom/android/settings/accessibility/ColorPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
+    invoke-virtual {v9, v11}, Lcom/android/settings_ex/accessibility/ColorPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 301
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
 
     const-string v10, "captioning_edge_color"
 
@@ -367,24 +367,24 @@
 
     move-result-object v9
 
-    check-cast v9, Lcom/android/settings/accessibility/ColorPreference;
+    check-cast v9, Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    iput-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mEdgeColor:Lcom/android/settings/accessibility/ColorPreference;
+    iput-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mEdgeColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
     .line 302
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mEdgeColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mEdgeColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v9, v2}, Lcom/android/settings/accessibility/ColorPreference;->setTitles([Ljava/lang/CharSequence;)V
+    invoke-virtual {v9, v2}, Lcom/android/settings_ex/accessibility/ColorPreference;->setTitles([Ljava/lang/CharSequence;)V
 
     .line 303
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mEdgeColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mEdgeColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v9, v3}, Lcom/android/settings/accessibility/ColorPreference;->setValues([I)V
+    invoke-virtual {v9, v3}, Lcom/android/settings_ex/accessibility/ColorPreference;->setValues([I)V
 
     .line 304
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mEdgeColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mEdgeColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v9, v11}, Lcom/android/settings/accessibility/ColorPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
+    invoke-virtual {v9, v11}, Lcom/android/settings_ex/accessibility/ColorPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 307
     array-length v9, v3
@@ -418,14 +418,14 @@
     .line 312
     const v9, 0x7f0e0a6c
 
-    invoke-virtual {p0, v9}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
     aput-object v9, v0, v12
 
     .line 313
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
 
     const-string v10, "captioning_background_color"
 
@@ -433,27 +433,27 @@
 
     move-result-object v9
 
-    check-cast v9, Lcom/android/settings/accessibility/ColorPreference;
+    check-cast v9, Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    iput-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mBackgroundColor:Lcom/android/settings/accessibility/ColorPreference;
+    iput-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mBackgroundColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
     .line 314
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mBackgroundColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mBackgroundColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v9, v0}, Lcom/android/settings/accessibility/ColorPreference;->setTitles([Ljava/lang/CharSequence;)V
+    invoke-virtual {v9, v0}, Lcom/android/settings_ex/accessibility/ColorPreference;->setTitles([Ljava/lang/CharSequence;)V
 
     .line 315
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mBackgroundColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mBackgroundColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v9, v1}, Lcom/android/settings/accessibility/ColorPreference;->setValues([I)V
+    invoke-virtual {v9, v1}, Lcom/android/settings_ex/accessibility/ColorPreference;->setValues([I)V
 
     .line 316
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mBackgroundColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mBackgroundColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v9, v11}, Lcom/android/settings/accessibility/ColorPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
+    invoke-virtual {v9, v11}, Lcom/android/settings_ex/accessibility/ColorPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 318
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
 
     const-string v10, "captioning_background_opacity"
 
@@ -461,27 +461,27 @@
 
     move-result-object v9
 
-    check-cast v9, Lcom/android/settings/accessibility/ColorPreference;
+    check-cast v9, Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    iput-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mBackgroundOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iput-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mBackgroundOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
     .line 319
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mBackgroundOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mBackgroundOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v9, v4}, Lcom/android/settings/accessibility/ColorPreference;->setTitles([Ljava/lang/CharSequence;)V
+    invoke-virtual {v9, v4}, Lcom/android/settings_ex/accessibility/ColorPreference;->setTitles([Ljava/lang/CharSequence;)V
 
     .line 320
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mBackgroundOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mBackgroundOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v9, v5}, Lcom/android/settings/accessibility/ColorPreference;->setValues([I)V
+    invoke-virtual {v9, v5}, Lcom/android/settings_ex/accessibility/ColorPreference;->setValues([I)V
 
     .line 321
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mBackgroundOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mBackgroundOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v9, v11}, Lcom/android/settings/accessibility/ColorPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
+    invoke-virtual {v9, v11}, Lcom/android/settings_ex/accessibility/ColorPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 323
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
 
     const-string v10, "captioning_window_color"
 
@@ -489,27 +489,27 @@
 
     move-result-object v9
 
-    check-cast v9, Lcom/android/settings/accessibility/ColorPreference;
+    check-cast v9, Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    iput-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mWindowColor:Lcom/android/settings/accessibility/ColorPreference;
+    iput-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mWindowColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
     .line 324
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mWindowColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mWindowColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v9, v0}, Lcom/android/settings/accessibility/ColorPreference;->setTitles([Ljava/lang/CharSequence;)V
+    invoke-virtual {v9, v0}, Lcom/android/settings_ex/accessibility/ColorPreference;->setTitles([Ljava/lang/CharSequence;)V
 
     .line 325
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mWindowColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mWindowColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v9, v1}, Lcom/android/settings/accessibility/ColorPreference;->setValues([I)V
+    invoke-virtual {v9, v1}, Lcom/android/settings_ex/accessibility/ColorPreference;->setValues([I)V
 
     .line 326
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mWindowColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mWindowColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v9, v11}, Lcom/android/settings/accessibility/ColorPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
+    invoke-virtual {v9, v11}, Lcom/android/settings_ex/accessibility/ColorPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 328
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
 
     const-string v10, "captioning_window_opacity"
 
@@ -517,27 +517,27 @@
 
     move-result-object v9
 
-    check-cast v9, Lcom/android/settings/accessibility/ColorPreference;
+    check-cast v9, Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    iput-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mWindowOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iput-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mWindowOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
     .line 329
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mWindowOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mWindowOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v9, v4}, Lcom/android/settings/accessibility/ColorPreference;->setTitles([Ljava/lang/CharSequence;)V
+    invoke-virtual {v9, v4}, Lcom/android/settings_ex/accessibility/ColorPreference;->setTitles([Ljava/lang/CharSequence;)V
 
     .line 330
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mWindowOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mWindowOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v9, v5}, Lcom/android/settings/accessibility/ColorPreference;->setValues([I)V
+    invoke-virtual {v9, v5}, Lcom/android/settings_ex/accessibility/ColorPreference;->setValues([I)V
 
     .line 331
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mWindowOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mWindowOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v9, v11}, Lcom/android/settings/accessibility/ColorPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
+    invoke-virtual {v9, v11}, Lcom/android/settings_ex/accessibility/ColorPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 333
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
 
     const-string v10, "captioning_edge_type"
 
@@ -545,17 +545,17 @@
 
     move-result-object v9
 
-    check-cast v9, Lcom/android/settings/accessibility/EdgeTypePreference;
+    check-cast v9, Lcom/android/settings_ex/accessibility/EdgeTypePreference;
 
-    iput-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mEdgeType:Lcom/android/settings/accessibility/EdgeTypePreference;
+    iput-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mEdgeType:Lcom/android/settings_ex/accessibility/EdgeTypePreference;
 
     .line 334
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mEdgeType:Lcom/android/settings/accessibility/EdgeTypePreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mEdgeType:Lcom/android/settings_ex/accessibility/EdgeTypePreference;
 
-    invoke-virtual {v9, v11}, Lcom/android/settings/accessibility/EdgeTypePreference;->setTwSummaryColorToColorPrimaryDark(Z)V
+    invoke-virtual {v9, v11}, Lcom/android/settings_ex/accessibility/EdgeTypePreference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 335
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
 
     const-string v10, "captioning_typeface"
 
@@ -565,10 +565,10 @@
 
     check-cast v9, Landroid/preference/ListPreference;
 
-    iput-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mTypeface:Landroid/preference/ListPreference;
+    iput-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mTypeface:Landroid/preference/ListPreference;
 
     .line 336
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mTypeface:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mTypeface:Landroid/preference/ListPreference;
 
     invoke-virtual {v9, v11}, Landroid/preference/ListPreference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
@@ -581,12 +581,12 @@
 
     .prologue
     .line 260
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->onInstallSwitchBarToggleSwitch()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->onInstallSwitchBarToggleSwitch()V
 
     .line 261
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 262
     return-void
@@ -597,83 +597,83 @@
 
     .prologue
     .line 340
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mPreset:Lcom/android/settings/accessibility/PresetPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mPreset:Lcom/android/settings_ex/accessibility/PresetPreference;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/accessibility/PresetPreference;->setOnValueChangedListener(Lcom/android/settings/accessibility/ListDialogPreference$OnValueChangedListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/accessibility/PresetPreference;->setOnValueChangedListener(Lcom/android/settings_ex/accessibility/ListDialogPreference$OnValueChangedListener;)V
 
     .line 341
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mForegroundColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mForegroundColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/accessibility/ColorPreference;->setOnValueChangedListener(Lcom/android/settings/accessibility/ListDialogPreference$OnValueChangedListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/accessibility/ColorPreference;->setOnValueChangedListener(Lcom/android/settings_ex/accessibility/ListDialogPreference$OnValueChangedListener;)V
 
     .line 342
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mForegroundOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mForegroundOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/accessibility/ColorPreference;->setOnValueChangedListener(Lcom/android/settings/accessibility/ListDialogPreference$OnValueChangedListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/accessibility/ColorPreference;->setOnValueChangedListener(Lcom/android/settings_ex/accessibility/ListDialogPreference$OnValueChangedListener;)V
 
     .line 343
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mEdgeColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mEdgeColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/accessibility/ColorPreference;->setOnValueChangedListener(Lcom/android/settings/accessibility/ListDialogPreference$OnValueChangedListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/accessibility/ColorPreference;->setOnValueChangedListener(Lcom/android/settings_ex/accessibility/ListDialogPreference$OnValueChangedListener;)V
 
     .line 344
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mBackgroundColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mBackgroundColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/accessibility/ColorPreference;->setOnValueChangedListener(Lcom/android/settings/accessibility/ListDialogPreference$OnValueChangedListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/accessibility/ColorPreference;->setOnValueChangedListener(Lcom/android/settings_ex/accessibility/ListDialogPreference$OnValueChangedListener;)V
 
     .line 345
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mBackgroundOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mBackgroundOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/accessibility/ColorPreference;->setOnValueChangedListener(Lcom/android/settings/accessibility/ListDialogPreference$OnValueChangedListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/accessibility/ColorPreference;->setOnValueChangedListener(Lcom/android/settings_ex/accessibility/ListDialogPreference$OnValueChangedListener;)V
 
     .line 346
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mWindowColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mWindowColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/accessibility/ColorPreference;->setOnValueChangedListener(Lcom/android/settings/accessibility/ListDialogPreference$OnValueChangedListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/accessibility/ColorPreference;->setOnValueChangedListener(Lcom/android/settings_ex/accessibility/ListDialogPreference$OnValueChangedListener;)V
 
     .line 347
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mWindowOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mWindowOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/accessibility/ColorPreference;->setOnValueChangedListener(Lcom/android/settings/accessibility/ListDialogPreference$OnValueChangedListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/accessibility/ColorPreference;->setOnValueChangedListener(Lcom/android/settings_ex/accessibility/ListDialogPreference$OnValueChangedListener;)V
 
     .line 348
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mEdgeType:Lcom/android/settings/accessibility/EdgeTypePreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mEdgeType:Lcom/android/settings_ex/accessibility/EdgeTypePreference;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/accessibility/EdgeTypePreference;->setOnValueChangedListener(Lcom/android/settings/accessibility/ListDialogPreference$OnValueChangedListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/accessibility/EdgeTypePreference;->setOnValueChangedListener(Lcom/android/settings_ex/accessibility/ListDialogPreference$OnValueChangedListener;)V
 
     .line 350
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mTypeface:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mTypeface:Landroid/preference/ListPreference;
 
     invoke-virtual {v0, p0}, Landroid/preference/ListPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 351
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mFontSize:Landroid/preference/ListPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mFontSize:Landroid/preference/ListPreference;
 
     invoke-virtual {v0, p0}, Landroid/preference/ListPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 352
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mLocale:Lcom/android/settings/accessibility/LocalePreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mLocale:Lcom/android/settings_ex/accessibility/LocalePreference;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/accessibility/LocalePreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/accessibility/LocalePreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 353
     return-void
 .end method
 
-.method private mergeColorOpacity(Lcom/android/settings/accessibility/ColorPreference;Lcom/android/settings/accessibility/ColorPreference;)I
+.method private mergeColorOpacity(Lcom/android/settings_ex/accessibility/ColorPreference;Lcom/android/settings_ex/accessibility/ColorPreference;)I
     .locals 5
-    .param p1, "color"    # Lcom/android/settings/accessibility/ColorPreference;
-    .param p2, "opacity"    # Lcom/android/settings/accessibility/ColorPreference;
+    .param p1, "color"    # Lcom/android/settings_ex/accessibility/ColorPreference;
+    .param p2, "opacity"    # Lcom/android/settings_ex/accessibility/ColorPreference;
 
     .prologue
     .line 416
-    invoke-virtual {p1}, Lcom/android/settings/accessibility/ColorPreference;->getValue()I
+    invoke-virtual {p1}, Lcom/android/settings_ex/accessibility/ColorPreference;->getValue()I
 
     move-result v0
 
     .line 417
     .local v0, "colorValue":I
-    invoke-virtual {p2}, Lcom/android/settings/accessibility/ColorPreference;->getValue()I
+    invoke-virtual {p2}, Lcom/android/settings_ex/accessibility/ColorPreference;->getValue()I
 
     move-result v1
 
@@ -729,10 +729,10 @@
     goto :goto_0
 .end method
 
-.method private parseColorOpacity(Lcom/android/settings/accessibility/ColorPreference;Lcom/android/settings/accessibility/ColorPreference;I)V
+.method private parseColorOpacity(Lcom/android/settings_ex/accessibility/ColorPreference;Lcom/android/settings_ex/accessibility/ColorPreference;I)V
     .locals 4
-    .param p1, "color"    # Lcom/android/settings/accessibility/ColorPreference;
-    .param p2, "opacity"    # Lcom/android/settings/accessibility/ColorPreference;
+    .param p1, "color"    # Lcom/android/settings_ex/accessibility/ColorPreference;
+    .param p2, "opacity"    # Lcom/android/settings_ex/accessibility/ColorPreference;
     .param p3, "value"    # I
 
     .prologue
@@ -761,10 +761,10 @@
 
     or-int/2addr v2, v1
 
-    invoke-virtual {p2, v2}, Lcom/android/settings/accessibility/ColorPreference;->setValue(I)V
+    invoke-virtual {p2, v2}, Lcom/android/settings_ex/accessibility/ColorPreference;->setValue(I)V
 
     .line 412
-    invoke-virtual {p1, v0}, Lcom/android/settings/accessibility/ColorPreference;->setValue(I)V
+    invoke-virtual {p1, v0}, Lcom/android/settings_ex/accessibility/ColorPreference;->setValue(I)V
 
     .line 413
     return-void
@@ -810,7 +810,7 @@
     const v9, 0x7f0e0963
 
     .line 188
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -825,14 +825,14 @@
 
     .line 194
     :cond_1
-    iget-object v4, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mPreviewText:Lcom/android/internal/widget/SubtitleView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mPreviewText:Lcom/android/internal/widget/SubtitleView;
 
     .line 195
     .local v4, "preview":Lcom/android/internal/widget/SubtitleView;
     if-eqz v4, :cond_0
 
     .line 196
-    iget-object v7, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
+    iget-object v7, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
 
     invoke-virtual {v7}, Landroid/view/accessibility/CaptioningManager;->getRawUserStyle()I
 
@@ -840,14 +840,14 @@
 
     .line 197
     .local v6, "styleId":I
-    iget-object v7, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
+    iget-object v7, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
 
-    iget-object v8, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mPreviewViewport:Landroid/view/View;
+    iget-object v8, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mPreviewViewport:Landroid/view/View;
 
-    invoke-static {v7, v4, v8, v6}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->applyCaptionProperties(Landroid/view/accessibility/CaptioningManager;Lcom/android/internal/widget/SubtitleView;Landroid/view/View;I)V
+    invoke-static {v7, v4, v8, v6}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->applyCaptionProperties(Landroid/view/accessibility/CaptioningManager;Lcom/android/internal/widget/SubtitleView;Landroid/view/View;I)V
 
     .line 199
-    iget-object v7, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
+    iget-object v7, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
 
     invoke-virtual {v7}, Landroid/view/accessibility/CaptioningManager;->getLocale()Ljava/util/Locale;
 
@@ -858,7 +858,7 @@
     if-eqz v2, :cond_2
 
     .line 201
-    invoke-static {v0, v2, v9}, Lcom/android/settings/accessibility/AccessibilityUtils;->getTextForLocale(Landroid/content/Context;Ljava/util/Locale;I)Ljava/lang/CharSequence;
+    invoke-static {v0, v2, v9}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->getTextForLocale(Landroid/content/Context;Ljava/util/Locale;I)Ljava/lang/CharSequence;
 
     move-result-object v3
 
@@ -869,7 +869,7 @@
     .line 208
     .end local v3    # "localizedText":Ljava/lang/CharSequence;
     :goto_1
-    iget-object v7, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
+    iget-object v7, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
 
     invoke-virtual {v7}, Landroid/view/accessibility/CaptioningManager;->getUserStyle()Landroid/view/accessibility/CaptioningManager$CaptionStyle;
 
@@ -884,7 +884,7 @@
     if-eqz v7, :cond_3
 
     .line 210
-    iget-object v7, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mPreviewWindow:Landroid/view/View;
+    iget-object v7, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mPreviewWindow:Landroid/view/View;
 
     iget v8, v5, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->windowColor:I
 
@@ -906,7 +906,7 @@
 
     .line 213
     .local v1, "defStyle":Landroid/view/accessibility/CaptioningManager$CaptionStyle;
-    iget-object v7, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mPreviewWindow:Landroid/view/View;
+    iget-object v7, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mPreviewWindow:Landroid/view/View;
 
     iget v8, v1, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->windowColor:I
 
@@ -924,9 +924,9 @@
     const/4 v2, 0x0
 
     .line 434
-    iget-object v3, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mPreset:Lcom/android/settings/accessibility/PresetPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mPreset:Lcom/android/settings_ex/accessibility/PresetPreference;
 
-    invoke-virtual {v3}, Lcom/android/settings/accessibility/PresetPreference;->getValue()I
+    invoke-virtual {v3}, Lcom/android/settings_ex/accessibility/PresetPreference;->getValue()I
 
     move-result v3
 
@@ -941,21 +941,21 @@
     :goto_0
     if-nez v0, :cond_2
 
-    iget-boolean v3, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mShowingCustom:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mShowingCustom:Z
 
     if-eqz v3, :cond_2
 
     .line 436
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v1, v3}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 437
-    iput-boolean v2, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mShowingCustom:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mShowingCustom:Z
 
     .line 442
     :cond_0
@@ -974,21 +974,21 @@
     :cond_2
     if-eqz v0, :cond_0
 
-    iget-boolean v2, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mShowingCustom:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mShowingCustom:Z
 
     if-nez v2, :cond_0
 
     .line 439
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCustom:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v2, v3}, Landroid/preference/PreferenceScreen;->addPreference(Landroid/preference/Preference;)Z
 
     .line 440
-    iput-boolean v1, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mShowingCustom:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mShowingCustom:Z
 
     goto :goto_1
 .end method
@@ -998,16 +998,16 @@
 
     .prologue
     .line 265
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 266
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings_ex/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
 
     .line 267
     return-void
@@ -1020,7 +1020,7 @@
     const v9, 0xffffff
 
     .line 356
-    iget-object v10, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
+    iget-object v10, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
 
     invoke-virtual {v10}, Landroid/view/accessibility/CaptioningManager;->getRawUserStyle()I
 
@@ -1028,12 +1028,12 @@
 
     .line 357
     .local v5, "preset":I
-    iget-object v10, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mPreset:Lcom/android/settings/accessibility/PresetPreference;
+    iget-object v10, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mPreset:Lcom/android/settings_ex/accessibility/PresetPreference;
 
-    invoke-virtual {v10, v5}, Lcom/android/settings/accessibility/PresetPreference;->setValue(I)V
+    invoke-virtual {v10, v5}, Lcom/android/settings_ex/accessibility/PresetPreference;->setValue(I)V
 
     .line 359
-    iget-object v10, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
+    iget-object v10, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
 
     invoke-virtual {v10}, Landroid/view/accessibility/CaptioningManager;->getFontScale()F
 
@@ -1041,7 +1041,7 @@
 
     .line 360
     .local v3, "fontSize":F
-    iget-object v10, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mFontSize:Landroid/preference/ListPreference;
+    iget-object v10, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mFontSize:Landroid/preference/ListPreference;
 
     invoke-static {v3}, Ljava/lang/Float;->toString(F)Ljava/lang/String;
 
@@ -1050,7 +1050,7 @@
     invoke-virtual {v10, v11}, Landroid/preference/ListPreference;->setValue(Ljava/lang/String;)V
 
     .line 362
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -1062,18 +1062,18 @@
 
     .line 364
     .local v0, "attrs":Landroid/view/accessibility/CaptioningManager$CaptionStyle;
-    iget-object v10, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mEdgeType:Lcom/android/settings/accessibility/EdgeTypePreference;
+    iget-object v10, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mEdgeType:Lcom/android/settings_ex/accessibility/EdgeTypePreference;
 
     iget v11, v0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->edgeType:I
 
-    invoke-virtual {v10, v11}, Lcom/android/settings/accessibility/EdgeTypePreference;->setValue(I)V
+    invoke-virtual {v10, v11}, Lcom/android/settings_ex/accessibility/EdgeTypePreference;->setValue(I)V
 
     .line 365
-    iget-object v10, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mEdgeColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v10, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mEdgeColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
     iget v11, v0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->edgeColor:I
 
-    invoke-virtual {v10, v11}, Lcom/android/settings/accessibility/ColorPreference;->setValue(I)V
+    invoke-virtual {v10, v11}, Lcom/android/settings_ex/accessibility/ColorPreference;->setValue(I)V
 
     .line 367
     invoke-virtual {v0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasForegroundColor()Z
@@ -1087,11 +1087,11 @@
     .line 369
     .local v4, "foregroundColor":I
     :goto_0
-    iget-object v10, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mForegroundColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v10, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mForegroundColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    iget-object v11, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mForegroundOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v11, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mForegroundOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-direct {p0, v10, v11, v4}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->parseColorOpacity(Lcom/android/settings/accessibility/ColorPreference;Lcom/android/settings/accessibility/ColorPreference;I)V
+    invoke-direct {p0, v10, v11, v4}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->parseColorOpacity(Lcom/android/settings_ex/accessibility/ColorPreference;Lcom/android/settings_ex/accessibility/ColorPreference;I)V
 
     .line 371
     invoke-virtual {v0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasBackgroundColor()Z
@@ -1105,11 +1105,11 @@
     .line 373
     .local v1, "backgroundColor":I
     :goto_1
-    iget-object v10, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mBackgroundColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v10, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mBackgroundColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    iget-object v11, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mBackgroundOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v11, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mBackgroundOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-direct {p0, v10, v11, v1}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->parseColorOpacity(Lcom/android/settings/accessibility/ColorPreference;Lcom/android/settings/accessibility/ColorPreference;I)V
+    invoke-direct {p0, v10, v11, v1}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->parseColorOpacity(Lcom/android/settings_ex/accessibility/ColorPreference;Lcom/android/settings_ex/accessibility/ColorPreference;I)V
 
     .line 375
     invoke-virtual {v0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasWindowColor()Z
@@ -1123,18 +1123,18 @@
     .line 377
     .local v8, "windowColor":I
     :goto_2
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mWindowColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mWindowColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    iget-object v10, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mWindowOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v10, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mWindowOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-direct {p0, v9, v10, v8}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->parseColorOpacity(Lcom/android/settings/accessibility/ColorPreference;Lcom/android/settings/accessibility/ColorPreference;I)V
+    invoke-direct {p0, v9, v10, v8}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->parseColorOpacity(Lcom/android/settings_ex/accessibility/ColorPreference;Lcom/android/settings_ex/accessibility/ColorPreference;I)V
 
     .line 379
     iget-object v7, v0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->mRawTypeface:Ljava/lang/String;
 
     .line 380
     .local v7, "rawTypeface":Ljava/lang/String;
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mTypeface:Landroid/preference/ListPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mTypeface:Landroid/preference/ListPreference;
 
     if-nez v7, :cond_0
 
@@ -1145,7 +1145,7 @@
     invoke-virtual {v9, v7}, Landroid/preference/ListPreference;->setValue(Ljava/lang/String;)V
 
     .line 382
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
 
     invoke-virtual {v9}, Landroid/view/accessibility/CaptioningManager;->getRawLocale()Ljava/lang/String;
 
@@ -1153,7 +1153,7 @@
 
     .line 383
     .local v6, "rawLocale":Ljava/lang/String;
-    iget-object v9, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mLocale:Lcom/android/settings/accessibility/LocalePreference;
+    iget-object v9, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mLocale:Lcom/android/settings_ex/accessibility/LocalePreference;
 
     if-nez v6, :cond_1
 
@@ -1161,7 +1161,7 @@
 
     .end local v6    # "rawLocale":Ljava/lang/String;
     :cond_1
-    invoke-virtual {v9, v6}, Lcom/android/settings/accessibility/LocalePreference;->setValue(Ljava/lang/String;)V
+    invoke-virtual {v9, v6}, Lcom/android/settings_ex/accessibility/LocalePreference;->setValue(Ljava/lang/String;)V
 
     .line 384
     return-void
@@ -1208,10 +1208,10 @@
 
     .prologue
     .line 166
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 168
-    iget-object v2, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
 
     invoke-virtual {v2}, Landroid/view/accessibility/CaptioningManager;->isEnabled()Z
 
@@ -1219,46 +1219,46 @@
 
     .line 169
     .local v1, "enabled":Z
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 170
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 171
-    iget-object v2, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2, v1}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v2, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     .line 172
-    iget-object v2, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2}, Lcom/android/settings/widget/SwitchBar;->getSwitch()Lcom/android/settings/widget/ToggleSwitch;
+    invoke-virtual {v2}, Lcom/android/settings_ex/widget/SwitchBar;->getSwitch()Lcom/android/settings_ex/widget/ToggleSwitch;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
     .line 174
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v2
 
     invoke-virtual {v2, v1}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
     .line 176
-    invoke-direct {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->refreshPreviewText()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->refreshPreviewText()V
 
     .line 178
-    invoke-direct {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->installSwitchBarToggleSwitch()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->installSwitchBarToggleSwitch()V
 
     .line 179
     return-void
@@ -1270,7 +1270,7 @@
 
     .prologue
     .line 492
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 494
     iget v0, p1, Landroid/content/res/Configuration;->orientation:I
@@ -1287,9 +1287,9 @@
 
     .line 495
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->params:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->params:Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -1309,9 +1309,9 @@
 
     .line 497
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->params:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->params:Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -1334,35 +1334,35 @@
 
     .prologue
     .line 108
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 110
     const-string v0, "captioning"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/accessibility/CaptioningManager;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
 
     .line 112
     const v0, 0x7f080028
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->addPreferencesFromResource(I)V
 
     .line 113
-    invoke-direct {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->initializeAllPreferences()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->initializeAllPreferences()V
 
     .line 114
-    invoke-direct {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->updateAllPreferences()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->updateAllPreferences()V
 
     .line 115
-    invoke-direct {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->refreshShowingCustom()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->refreshShowingCustom()V
 
     .line 116
-    invoke-direct {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->installUpdateListeners()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->installUpdateListeners()V
 
     .line 117
     return-void
@@ -1405,7 +1405,7 @@
 
     .line 130
     :cond_0
-    invoke-super {p0, p1, p2, p3}, Lcom/android/settings/SettingsPreferenceFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v0
 
@@ -1430,10 +1430,10 @@
 
     .prologue
     .line 183
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroyView()V
 
     .line 184
-    invoke-direct {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->removeSwitchBarToggleSwitch()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->removeSwitchBarToggleSwitch()V
 
     .line 185
     return-void
@@ -1444,13 +1444,13 @@
 
     .prologue
     .line 238
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
-    new-instance v1, Lcom/android/settings/accessibility/CaptionPropertiesFragment$2;
+    new-instance v1, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment$2;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment$2;-><init>(Lcom/android/settings/accessibility/CaptionPropertiesFragment;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment$2;-><init>(Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;)V
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings_ex/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
 
     .line 257
     return-void
@@ -1463,7 +1463,7 @@
 
     .prologue
     .line 473
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -1473,7 +1473,7 @@
 
     .line 474
     .local v0, "cr":Landroid/content/ContentResolver;
-    iget-object v1, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mTypeface:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mTypeface:Landroid/preference/ListPreference;
 
     if-ne v1, p1, :cond_1
 
@@ -1488,7 +1488,7 @@
     .line 486
     :cond_0
     :goto_0
-    invoke-direct {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->refreshPreviewText()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->refreshPreviewText()V
 
     .line 487
     const/4 v1, 0x1
@@ -1498,7 +1498,7 @@
     .line 477
     .restart local p2    # "value":Ljava/lang/Object;
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mFontSize:Landroid/preference/ListPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mFontSize:Landroid/preference/ListPreference;
 
     if-ne v1, p1, :cond_2
 
@@ -1519,7 +1519,7 @@
     .line 481
     .restart local p2    # "value":Ljava/lang/Object;
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mLocale:Lcom/android/settings/accessibility/LocalePreference;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mLocale:Lcom/android/settings_ex/accessibility/LocalePreference;
 
     if-ne v1, p1, :cond_0
 
@@ -1534,14 +1534,14 @@
     goto :goto_0
 .end method
 
-.method public onValueChanged(Lcom/android/settings/accessibility/ListDialogPreference;I)V
+.method public onValueChanged(Lcom/android/settings_ex/accessibility/ListDialogPreference;I)V
     .locals 4
-    .param p1, "preference"    # Lcom/android/settings/accessibility/ListDialogPreference;
+    .param p1, "preference"    # Lcom/android/settings_ex/accessibility/ListDialogPreference;
     .param p2, "value"    # I
 
     .prologue
     .line 446
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1551,21 +1551,21 @@
 
     .line 447
     .local v0, "cr":Landroid/content/ContentResolver;
-    iget-object v2, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mForegroundColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mForegroundColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
     if-eq v2, p1, :cond_0
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mForegroundOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mForegroundOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
     if-ne v2, p1, :cond_2
 
     .line 448
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mForegroundColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mForegroundColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mForegroundOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mForegroundOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-direct {p0, v2, v3}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mergeColorOpacity(Lcom/android/settings/accessibility/ColorPreference;Lcom/android/settings/accessibility/ColorPreference;)I
+    invoke-direct {p0, v2, v3}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mergeColorOpacity(Lcom/android/settings_ex/accessibility/ColorPreference;Lcom/android/settings_ex/accessibility/ColorPreference;)I
 
     move-result v1
 
@@ -1579,28 +1579,28 @@
     .end local v1    # "merged":I
     :cond_1
     :goto_0
-    invoke-direct {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->refreshPreviewText()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->refreshPreviewText()V
 
     .line 469
     return-void
 
     .line 451
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mBackgroundColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mBackgroundColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
     if-eq v2, p1, :cond_3
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mBackgroundOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mBackgroundOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
     if-ne v2, p1, :cond_4
 
     .line 452
     :cond_3
-    iget-object v2, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mBackgroundColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mBackgroundColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mBackgroundOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mBackgroundOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-direct {p0, v2, v3}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mergeColorOpacity(Lcom/android/settings/accessibility/ColorPreference;Lcom/android/settings/accessibility/ColorPreference;)I
+    invoke-direct {p0, v2, v3}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mergeColorOpacity(Lcom/android/settings_ex/accessibility/ColorPreference;Lcom/android/settings_ex/accessibility/ColorPreference;)I
 
     move-result v1
 
@@ -1615,21 +1615,21 @@
     .line 455
     .end local v1    # "merged":I
     :cond_4
-    iget-object v2, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mWindowColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mWindowColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
     if-eq v2, p1, :cond_5
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mWindowOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mWindowOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
     if-ne v2, p1, :cond_6
 
     .line 456
     :cond_5
-    iget-object v2, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mWindowColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mWindowColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mWindowOpacity:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mWindowOpacity:Lcom/android/settings_ex/accessibility/ColorPreference;
 
-    invoke-direct {p0, v2, v3}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mergeColorOpacity(Lcom/android/settings/accessibility/ColorPreference;Lcom/android/settings/accessibility/ColorPreference;)I
+    invoke-direct {p0, v2, v3}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mergeColorOpacity(Lcom/android/settings_ex/accessibility/ColorPreference;Lcom/android/settings_ex/accessibility/ColorPreference;)I
 
     move-result v1
 
@@ -1644,7 +1644,7 @@
     .line 459
     .end local v1    # "merged":I
     :cond_6
-    iget-object v2, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mEdgeColor:Lcom/android/settings/accessibility/ColorPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mEdgeColor:Lcom/android/settings_ex/accessibility/ColorPreference;
 
     if-ne v2, p1, :cond_7
 
@@ -1657,7 +1657,7 @@
 
     .line 461
     :cond_7
-    iget-object v2, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mPreset:Lcom/android/settings/accessibility/PresetPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mPreset:Lcom/android/settings_ex/accessibility/PresetPreference;
 
     if-ne v2, p1, :cond_8
 
@@ -1667,13 +1667,13 @@
     invoke-static {v0, v2, p2}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 463
-    invoke-direct {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->refreshShowingCustom()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->refreshShowingCustom()V
 
     goto :goto_0
 
     .line 464
     :cond_8
-    iget-object v2, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mEdgeType:Lcom/android/settings/accessibility/EdgeTypePreference;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mEdgeType:Lcom/android/settings_ex/accessibility/EdgeTypePreference;
 
     if-ne v2, p1, :cond_1
 
@@ -1692,10 +1692,10 @@
 
     .prologue
     .line 139
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 141
-    iget-object v1, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
 
     invoke-virtual {v1}, Landroid/view/accessibility/CaptioningManager;->isEnabled()Z
 
@@ -1711,10 +1711,10 @@
 
     check-cast v1, Lcom/android/internal/widget/SubtitleView;
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mPreviewText:Lcom/android/internal/widget/SubtitleView;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mPreviewText:Lcom/android/internal/widget/SubtitleView;
 
     .line 143
-    iget-object v2, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mPreviewText:Lcom/android/internal/widget/SubtitleView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mPreviewText:Lcom/android/internal/widget/SubtitleView;
 
     if-eqz v0, :cond_1
 
@@ -1730,7 +1730,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mPreviewWindow:Landroid/view/View;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mPreviewWindow:Landroid/view/View;
 
     .line 146
     const v1, 0x7f0d00f9
@@ -1739,19 +1739,19 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mPreviewViewport:Landroid/view/View;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mPreviewViewport:Landroid/view/View;
 
     .line 147
-    iget-object v1, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mPreviewViewport:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mPreviewViewport:Landroid/view/View;
 
-    new-instance v2, Lcom/android/settings/accessibility/CaptionPropertiesFragment$1;
+    new-instance v2, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment$1;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment$1;-><init>(Lcom/android/settings/accessibility/CaptionPropertiesFragment;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment$1;-><init>(Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;)V
 
     invoke-virtual {v1, v2}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
     .line 155
-    iget-object v1, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mPreviewViewport:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mPreviewViewport:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -1759,10 +1759,10 @@
 
     check-cast v1, Landroid/widget/LinearLayout$LayoutParams;
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->params:Landroid/widget/LinearLayout$LayoutParams;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->params:Landroid/widget/LinearLayout$LayoutParams;
 
     .line 157
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -1776,7 +1776,7 @@
 
     if-eq v1, v2, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -1792,9 +1792,9 @@
 
     .line 158
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->params:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->params:Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1820,9 +1820,9 @@
 
     .line 160
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->params:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->params:Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 

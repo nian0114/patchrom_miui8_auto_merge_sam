@@ -5,10 +5,10 @@
     <Preference android:persistent="false" android:title="@string/battery_level_title" android:key="battery_level" android:summary="@string/device_info_not_available" style="?android:attr/preferenceInformationStyle" />
     <Preference android:persistent="false" android:title="@string/battery_life_title" android:key="battery_life" android:summary="@string/device_info_not_available" style="?android:attr/preferenceInformationStyle" />
     <PreferenceScreen android:persistent="false" android:title="@string/sim_status_title" android:key="sim_status">
-        <intent android:targetPackage="com.android.settings" android:targetClass="com.android.settings.deviceinfo.SimStatus" />
+        <intent android:targetPackage="com.android.settings_ex" android:targetClass="com.android.settings_ex.deviceinfo.SimStatus" />
     </PreferenceScreen>
     <PreferenceScreen android:persistent="false" android:title="@string/imei_information_title" android:key="imei_info">
-        <intent android:targetPackage="com.android.settings" android:targetClass="com.android.settings.deviceinfo.ImeiInformation" />
+        <intent android:targetPackage="com.android.settings_ex" android:targetClass="com.android.settings_ex.deviceinfo.ImeiInformation" />
     </PreferenceScreen>
     <Preference android:title="@string/factory_datareset" android:key="factorydatareset" android:summary="@string/device_info_default" style="?android:preferenceInformationStyle" />
     <Preference android:persistent="false" android:title="@string/status_user_name" android:key="user_name" android:summary="@string/device_info_not_available" style="?android:attr/preferenceInformationStyle" />

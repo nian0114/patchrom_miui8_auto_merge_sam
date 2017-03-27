@@ -1,4 +1,4 @@
-.class Lcom/android/settings/location/SatelliteView$3;
+.class Lcom/android/settings_ex/location/SatelliteView$3;
 .super Ljava/lang/Object;
 .source "SatelliteView.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/location/SatelliteView;
+    value = Lcom/android/settings_ex/location/SatelliteView;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/location/SatelliteView;
+.field final synthetic this$0:Lcom/android/settings_ex/location/SatelliteView;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/location/SatelliteView;)V
+.method constructor <init>(Lcom/android/settings_ex/location/SatelliteView;)V
     .locals 0
 
     .prologue
     .line 389
-    iput-object p1, p0, Lcom/android/settings/location/SatelliteView$3;->this$0:Lcom/android/settings/location/SatelliteView;
+    iput-object p1, p0, Lcom/android/settings_ex/location/SatelliteView$3;->this$0:Lcom/android/settings_ex/location/SatelliteView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,9 +43,9 @@
 
     .prologue
     .line 393
-    iget-object v0, p0, Lcom/android/settings/location/SatelliteView$3;->this$0:Lcom/android/settings/location/SatelliteView;
+    iget-object v0, p0, Lcom/android/settings_ex/location/SatelliteView$3;->this$0:Lcom/android/settings_ex/location/SatelliteView;
 
-    invoke-virtual {v0}, Lcom/android/settings/location/SatelliteView;->showSVStatus()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/location/SatelliteView;->showSVStatus()V
 
     .line 394
     return-void

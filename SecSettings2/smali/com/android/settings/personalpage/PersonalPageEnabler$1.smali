@@ -1,11 +1,11 @@
-.class Lcom/android/settings/personalpage/PersonalPageEnabler$1;
+.class Lcom/android/settings_ex/personalpage/PersonalPageEnabler$1;
 .super Landroid/content/BroadcastReceiver;
 .source "PersonalPageEnabler.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/personalpage/PersonalPageEnabler;
+    value = Lcom/android/settings_ex/personalpage/PersonalPageEnabler;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/personalpage/PersonalPageEnabler;
+.field final synthetic this$0:Lcom/android/settings_ex/personalpage/PersonalPageEnabler;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/personalpage/PersonalPageEnabler;)V
+.method constructor <init>(Lcom/android/settings_ex/personalpage/PersonalPageEnabler;)V
     .locals 0
 
     .prologue
     .line 37
-    iput-object p1, p0, Lcom/android/settings/personalpage/PersonalPageEnabler$1;->this$0:Lcom/android/settings/personalpage/PersonalPageEnabler;
+    iput-object p1, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler$1;->this$0:Lcom/android/settings_ex/personalpage/PersonalPageEnabler;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 

@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/applications/ProcStatsData$1;
+.class final Lcom/android/settings_ex/applications/ProcStatsData$1;
 .super Ljava/lang/Object;
 .source "ProcStatsData.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/ProcStatsData;
+    value = Lcom/android/settings_ex/applications/ProcStatsData;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Ljava/util/Comparator",
         "<",
-        "Lcom/android/settings/applications/ProcStatsEntry;",
+        "Lcom/android/settings_ex/applications/ProcStatsEntry;",
         ">;"
     }
 .end annotation
@@ -40,10 +40,10 @@
 
 
 # virtual methods
-.method public compare(Lcom/android/settings/applications/ProcStatsEntry;Lcom/android/settings/applications/ProcStatsEntry;)I
+.method public compare(Lcom/android/settings_ex/applications/ProcStatsEntry;Lcom/android/settings_ex/applications/ProcStatsEntry;)I
     .locals 6
-    .param p1, "lhs"    # Lcom/android/settings/applications/ProcStatsEntry;
-    .param p2, "rhs"    # Lcom/android/settings/applications/ProcStatsEntry;
+    .param p1, "lhs"    # Lcom/android/settings_ex/applications/ProcStatsEntry;
+    .param p2, "rhs"    # Lcom/android/settings_ex/applications/ProcStatsEntry;
 
     .prologue
     const/4 v0, 0x1
@@ -51,9 +51,9 @@
     const/4 v1, -0x1
 
     .line 447
-    iget-wide v2, p1, Lcom/android/settings/applications/ProcStatsEntry;->mRunWeight:D
+    iget-wide v2, p1, Lcom/android/settings_ex/applications/ProcStatsEntry;->mRunWeight:D
 
-    iget-wide v4, p2, Lcom/android/settings/applications/ProcStatsEntry;->mRunWeight:D
+    iget-wide v4, p2, Lcom/android/settings_ex/applications/ProcStatsEntry;->mRunWeight:D
 
     cmpg-double v2, v2, v4
 
@@ -66,9 +66,9 @@
 
     .line 449
     :cond_1
-    iget-wide v2, p1, Lcom/android/settings/applications/ProcStatsEntry;->mRunWeight:D
+    iget-wide v2, p1, Lcom/android/settings_ex/applications/ProcStatsEntry;->mRunWeight:D
 
-    iget-wide v4, p2, Lcom/android/settings/applications/ProcStatsEntry;->mRunWeight:D
+    iget-wide v4, p2, Lcom/android/settings_ex/applications/ProcStatsEntry;->mRunWeight:D
 
     cmpl-double v2, v2, v4
 
@@ -81,18 +81,18 @@
 
     .line 451
     :cond_2
-    iget-wide v2, p1, Lcom/android/settings/applications/ProcStatsEntry;->mRunDuration:J
+    iget-wide v2, p1, Lcom/android/settings_ex/applications/ProcStatsEntry;->mRunDuration:J
 
-    iget-wide v4, p2, Lcom/android/settings/applications/ProcStatsEntry;->mRunDuration:J
+    iget-wide v4, p2, Lcom/android/settings_ex/applications/ProcStatsEntry;->mRunDuration:J
 
     cmp-long v2, v2, v4
 
     if-ltz v2, :cond_0
 
     .line 453
-    iget-wide v2, p1, Lcom/android/settings/applications/ProcStatsEntry;->mRunDuration:J
+    iget-wide v2, p1, Lcom/android/settings_ex/applications/ProcStatsEntry;->mRunDuration:J
 
-    iget-wide v4, p2, Lcom/android/settings/applications/ProcStatsEntry;->mRunDuration:J
+    iget-wide v4, p2, Lcom/android/settings_ex/applications/ProcStatsEntry;->mRunDuration:J
 
     cmp-long v0, v2, v4
 
@@ -117,13 +117,13 @@
 
     .prologue
     .line 444
-    check-cast p1, Lcom/android/settings/applications/ProcStatsEntry;
+    check-cast p1, Lcom/android/settings_ex/applications/ProcStatsEntry;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    check-cast p2, Lcom/android/settings/applications/ProcStatsEntry;
+    check-cast p2, Lcom/android/settings_ex/applications/ProcStatsEntry;
 
     .end local p2    # "x1":Ljava/lang/Object;
-    invoke-virtual {p0, p1, p2}, Lcom/android/settings/applications/ProcStatsData$1;->compare(Lcom/android/settings/applications/ProcStatsEntry;Lcom/android/settings/applications/ProcStatsEntry;)I
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings_ex/applications/ProcStatsData$1;->compare(Lcom/android/settings_ex/applications/ProcStatsEntry;Lcom/android/settings_ex/applications/ProcStatsEntry;)I
 
     move-result v0
 

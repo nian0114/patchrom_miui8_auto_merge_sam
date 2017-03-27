@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/applications/AppInfoBase$MyAlertDialogFragment;
+.class public Lcom/android/settings_ex/applications/AppInfoBase$MyAlertDialogFragment;
 .super Landroid/app/DialogFragment;
 .source "AppInfoBase.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/AppInfoBase;
+    value = Lcom/android/settings_ex/applications/AppInfoBase;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,19 +25,19 @@
     return-void
 .end method
 
-.method public static newInstance(II)Lcom/android/settings/applications/AppInfoBase$MyAlertDialogFragment;
+.method public static newInstance(II)Lcom/android/settings_ex/applications/AppInfoBase$MyAlertDialogFragment;
     .locals 3
     .param p0, "id"    # I
     .param p1, "errorCode"    # I
 
     .prologue
     .line 222
-    new-instance v1, Lcom/android/settings/applications/AppInfoBase$MyAlertDialogFragment;
+    new-instance v1, Lcom/android/settings_ex/applications/AppInfoBase$MyAlertDialogFragment;
 
-    invoke-direct {v1}, Lcom/android/settings/applications/AppInfoBase$MyAlertDialogFragment;-><init>()V
+    invoke-direct {v1}, Lcom/android/settings_ex/applications/AppInfoBase$MyAlertDialogFragment;-><init>()V
 
     .line 223
-    .local v1, "dialogFragment":Lcom/android/settings/applications/AppInfoBase$MyAlertDialogFragment;
+    .local v1, "dialogFragment":Lcom/android/settings_ex/applications/AppInfoBase$MyAlertDialogFragment;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
@@ -54,7 +54,7 @@
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 226
-    invoke-virtual {v1, v0}, Lcom/android/settings/applications/AppInfoBase$MyAlertDialogFragment;->setArguments(Landroid/os/Bundle;)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/applications/AppInfoBase$MyAlertDialogFragment;->setArguments(Landroid/os/Bundle;)V
 
     .line 227
     return-object v1
@@ -68,7 +68,7 @@
 
     .prologue
     .line 212
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppInfoBase$MyAlertDialogFragment;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/AppInfoBase$MyAlertDialogFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v3
 
@@ -80,7 +80,7 @@
 
     .line 213
     .local v2, "id":I
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppInfoBase$MyAlertDialogFragment;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/AppInfoBase$MyAlertDialogFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v3
 
@@ -92,13 +92,13 @@
 
     .line 214
     .local v1, "errorCode":I
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppInfoBase$MyAlertDialogFragment;->getTargetFragment()Landroid/app/Fragment;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/AppInfoBase$MyAlertDialogFragment;->getTargetFragment()Landroid/app/Fragment;
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/settings/applications/AppInfoBase;
+    check-cast v3, Lcom/android/settings_ex/applications/AppInfoBase;
 
-    invoke-virtual {v3, v2, v1}, Lcom/android/settings/applications/AppInfoBase;->createDialog(II)Landroid/app/AlertDialog;
+    invoke-virtual {v3, v2, v1}, Lcom/android/settings_ex/applications/AppInfoBase;->createDialog(II)Landroid/app/AlertDialog;
 
     move-result-object v0
 

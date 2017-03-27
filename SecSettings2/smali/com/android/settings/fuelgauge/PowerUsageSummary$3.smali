@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/fuelgauge/PowerUsageSummary$3;
+.class final Lcom/android/settings_ex/fuelgauge/PowerUsageSummary$3;
 .super Ljava/lang/Object;
 .source "PowerUsageSummary.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fuelgauge/PowerUsageSummary;->getCoalescedUsageList(Ljava/util/List;)Ljava/util/List;
+    value = Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;->getCoalescedUsageList(Ljava/util/List;)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -71,7 +71,7 @@
     check-cast p2, Lcom/android/internal/os/BatterySipper;
 
     .end local p2    # "x1":Ljava/lang/Object;
-    invoke-virtual {p0, p1, p2}, Lcom/android/settings/fuelgauge/PowerUsageSummary$3;->compare(Lcom/android/internal/os/BatterySipper;Lcom/android/internal/os/BatterySipper;)I
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings_ex/fuelgauge/PowerUsageSummary$3;->compare(Lcom/android/internal/os/BatterySipper;Lcom/android/internal/os/BatterySipper;)I
 
     move-result v0
 

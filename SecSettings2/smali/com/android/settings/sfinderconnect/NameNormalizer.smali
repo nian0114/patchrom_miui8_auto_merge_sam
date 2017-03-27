@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/sfinderconnect/NameNormalizer;
+.class public Lcom/android/settings_ex/sfinderconnect/NameNormalizer;
 .super Ljava/lang/Object;
 .source "NameNormalizer.java"
 
@@ -34,14 +34,14 @@
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->sCollatorLock:Ljava/lang/Object;
+    sput-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->sCollatorLock:Ljava/lang/Object;
 
     .line 43
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sput-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     return-void
 .end method
@@ -59,7 +59,7 @@
 
     .line 76
     .local v1, "locale":Ljava/util/Locale;
-    sget-object v2, Lcom/android/settings/sfinderconnect/NameNormalizer;->sCollatorLocale:Ljava/util/Locale;
+    sget-object v2, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->sCollatorLocale:Ljava/util/Locale;
 
     invoke-virtual {v1, v2}, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
 
@@ -73,10 +73,10 @@
 
     .line 79
     :cond_0
-    sput-object v1, Lcom/android/settings/sfinderconnect/NameNormalizer;->sCollatorLocale:Ljava/util/Locale;
+    sput-object v1, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->sCollatorLocale:Ljava/util/Locale;
 
     .line 81
-    invoke-static {v1}, Lcom/android/settings/sfinderconnect/NameNormalizer;->getCollatorLocale(Ljava/util/Locale;)Ljava/util/Locale;
+    invoke-static {v1}, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->getCollatorLocale(Ljava/util/Locale;)Ljava/util/Locale;
 
     move-result-object v0
 
@@ -88,17 +88,17 @@
 
     check-cast v2, Ljava/text/RuleBasedCollator;
 
-    sput-object v2, Lcom/android/settings/sfinderconnect/NameNormalizer;->sCachedCompressingCollator:Ljava/text/RuleBasedCollator;
+    sput-object v2, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->sCachedCompressingCollator:Ljava/text/RuleBasedCollator;
 
     .line 84
-    sget-object v2, Lcom/android/settings/sfinderconnect/NameNormalizer;->sCachedCompressingCollator:Ljava/text/RuleBasedCollator;
+    sget-object v2, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->sCachedCompressingCollator:Ljava/text/RuleBasedCollator;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Ljava/text/RuleBasedCollator;->setStrength(I)V
 
     .line 85
-    sget-object v2, Lcom/android/settings/sfinderconnect/NameNormalizer;->sCachedCompressingCollator:Ljava/text/RuleBasedCollator;
+    sget-object v2, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->sCachedCompressingCollator:Ljava/text/RuleBasedCollator;
 
     invoke-virtual {v2, v4}, Ljava/text/RuleBasedCollator;->setDecomposition(I)V
 
@@ -109,10 +109,10 @@
 
     check-cast v2, Ljava/text/RuleBasedCollator;
 
-    sput-object v2, Lcom/android/settings/sfinderconnect/NameNormalizer;->sCachedComplexityCollator:Ljava/text/RuleBasedCollator;
+    sput-object v2, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->sCachedComplexityCollator:Ljava/text/RuleBasedCollator;
 
     .line 88
-    sget-object v2, Lcom/android/settings/sfinderconnect/NameNormalizer;->sCachedComplexityCollator:Ljava/text/RuleBasedCollator;
+    sget-object v2, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->sCachedComplexityCollator:Ljava/text/RuleBasedCollator;
 
     invoke-virtual {v2, v4}, Ljava/text/RuleBasedCollator;->setStrength(I)V
 
@@ -129,7 +129,7 @@
 
     .line 112
     .local v0, "collatorLocale":Ljava/util/Locale;
-    invoke-static {}, Lcom/android/settings/sfinderconnect/NameNormalizer;->initAbnormalCollationLocale()V
+    invoke-static {}, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->initAbnormalCollationLocale()V
 
     .line 113
     invoke-virtual {v0}, Ljava/util/Locale;->toString()Ljava/lang/String;
@@ -144,7 +144,7 @@
 
     if-nez v1, :cond_0
 
-    sget-object v1, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v1, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     invoke-virtual {v0}, Ljava/util/Locale;->toString()Ljava/lang/String;
 
@@ -199,16 +199,16 @@
 
     .prologue
     .line 93
-    sget-object v1, Lcom/android/settings/sfinderconnect/NameNormalizer;->sCollatorLock:Ljava/lang/Object;
+    sget-object v1, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->sCollatorLock:Ljava/lang/Object;
 
     monitor-enter v1
 
     .line 94
     :try_start_0
-    invoke-static {}, Lcom/android/settings/sfinderconnect/NameNormalizer;->ensureCollators()V
+    invoke-static {}, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->ensureCollators()V
 
     .line 95
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->sCachedCompressingCollator:Ljava/text/RuleBasedCollator;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->sCachedCompressingCollator:Ljava/text/RuleBasedCollator;
 
     monitor-exit v1
 
@@ -230,159 +230,159 @@
 
     .prologue
     .line 46
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
     .line 47
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     const-string v1, "ga_IE"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 48
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     const-string v1, "et_EE"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 49
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     const-string v1, "mk_MK"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 50
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     const-string v1, "ms_MY"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 51
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     const-string v1, "is_IS"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 52
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     const-string v1, "kk_KZ"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 53
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     const-string v1, "uz_UZ"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 54
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     const-string v1, "gl_ES"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 55
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     const-string v1, "eu_ES"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 56
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     const-string v1, "eu_FR"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 57
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     const-string v1, "km_KH"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 58
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     const-string v1, "my_MM"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 59
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     const-string v1, "lo_LA"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 60
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     const-string v1, "kn_IN"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 61
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     const-string v1, "ml_IN"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 62
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     const-string v1, "ne_IN"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 63
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     const-string v1, "ka_GE"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 64
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     const-string v1, "hy_AM"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 65
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     const-string v1, "pa_IN"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 66
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     const-string v1, "gu_IN"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 67
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     const-string v1, "te_IN"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 68
-    sget-object v0, Lcom/android/settings/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->mAbnormalCollationLocale:Ljava/util/List;
 
     const-string v1, "si_IN"
 
@@ -550,7 +550,7 @@
     .end local v0    # "key":Ljava/text/CollationKey;
     .restart local p0    # "name":Ljava/lang/String;
     :cond_1
-    invoke-static {}, Lcom/android/settings/sfinderconnect/NameNormalizer;->getCompressingCollator()Ljava/text/RuleBasedCollator;
+    invoke-static {}, Lcom/android/settings_ex/sfinderconnect/NameNormalizer;->getCompressingCollator()Ljava/text/RuleBasedCollator;
 
     move-result-object v1
 
@@ -597,7 +597,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v1, v2}, Lcom/android/settings/sfinderconnect/Hex;->encodeHex([BZ)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/android/settings_ex/sfinderconnect/Hex;->encodeHex([BZ)Ljava/lang/String;
 
     move-result-object p0
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DropDownPreference$1;
+.class Lcom/android/settings_ex/DropDownPreference$1;
 .super Ljava/lang/Object;
 .source "DropDownPreference.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DropDownPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    value = Lcom/android/settings_ex/DropDownPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DropDownPreference;
+.field final synthetic this$0:Lcom/android/settings_ex/DropDownPreference;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DropDownPreference;)V
+.method constructor <init>(Lcom/android/settings_ex/DropDownPreference;)V
     .locals 0
 
     .prologue
     .line 55
-    iput-object p1, p0, Lcom/android/settings/DropDownPreference$1;->this$0:Lcom/android/settings/DropDownPreference;
+    iput-object p1, p0, Lcom/android/settings_ex/DropDownPreference$1;->this$0:Lcom/android/settings_ex/DropDownPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -54,11 +54,11 @@
     .prologue
     .line 58
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
-    iget-object v0, p0, Lcom/android/settings/DropDownPreference$1;->this$0:Lcom/android/settings/DropDownPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/DropDownPreference$1;->this$0:Lcom/android/settings_ex/DropDownPreference;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, p3, v1}, Lcom/android/settings/DropDownPreference;->setSelectedItem(IZ)V
+    invoke-virtual {v0, p3, v1}, Lcom/android/settings_ex/DropDownPreference;->setSelectedItem(IZ)V
 
     .line 59
     return-void

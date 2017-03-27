@@ -1,11 +1,11 @@
-.class Lcom/android/settings/WifiCallingSettings$1;
+.class Lcom/android/settings_ex/WifiCallingSettings$1;
 .super Landroid/telephony/PhoneStateListener;
 .source "WifiCallingSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/WifiCallingSettings;
+    value = Lcom/android/settings_ex/WifiCallingSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/WifiCallingSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/WifiCallingSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/WifiCallingSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/WifiCallingSettings;)V
     .locals 0
 
     .prologue
     .line 60
-    iput-object p1, p0, Lcom/android/settings/WifiCallingSettings$1;->this$0:Lcom/android/settings/WifiCallingSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/WifiCallingSettings$1;->this$0:Lcom/android/settings_ex/WifiCallingSettings;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
 
@@ -44,16 +44,16 @@
     const/4 v7, 0x0
 
     .line 69
-    iget-object v5, p0, Lcom/android/settings/WifiCallingSettings$1;->this$0:Lcom/android/settings/WifiCallingSettings;
+    iget-object v5, p0, Lcom/android/settings_ex/WifiCallingSettings$1;->this$0:Lcom/android/settings_ex/WifiCallingSettings;
 
-    invoke-virtual {v5}, Lcom/android/settings/WifiCallingSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v5}, Lcom/android/settings_ex/WifiCallingSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 70
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
     if-eqz v0, :cond_0
 
     .line 71
@@ -63,17 +63,17 @@
 
     .line 73
     .local v1, "isNonTtyOrTtyOnVolteEnabled":Z
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v4
 
     .line 74
-    .local v4, "switchBar":Lcom/android/settings/widget/SwitchBar;
-    invoke-virtual {v4}, Lcom/android/settings/widget/SwitchBar;->getSwitch()Lcom/android/settings/widget/ToggleSwitch;
+    .local v4, "switchBar":Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-virtual {v4}, Lcom/android/settings_ex/widget/SwitchBar;->getSwitch()Lcom/android/settings_ex/widget/ToggleSwitch;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/android/settings/widget/ToggleSwitch;->isChecked()Z
+    invoke-virtual {v5}, Lcom/android/settings_ex/widget/ToggleSwitch;->isChecked()Z
 
     move-result v5
 
@@ -93,12 +93,12 @@
     move v5, v6
 
     :goto_1
-    invoke-virtual {v4, v5}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v4, v5}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 80
-    iget-object v5, p0, Lcom/android/settings/WifiCallingSettings$1;->this$0:Lcom/android/settings/WifiCallingSettings;
+    iget-object v5, p0, Lcom/android/settings_ex/WifiCallingSettings$1;->this$0:Lcom/android/settings_ex/WifiCallingSettings;
 
-    invoke-virtual {v5}, Lcom/android/settings/WifiCallingSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {v5}, Lcom/android/settings_ex/WifiCallingSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
@@ -124,12 +124,12 @@
     .end local v1    # "isNonTtyOrTtyOnVolteEnabled":Z
     .end local v2    # "isWfcEnabled":Z
     .end local v3    # "pref":Landroid/preference/Preference;
-    .end local v4    # "switchBar":Lcom/android/settings/widget/SwitchBar;
+    .end local v4    # "switchBar":Lcom/android/settings_ex/widget/SwitchBar;
     :cond_0
     return-void
 
     .restart local v1    # "isNonTtyOrTtyOnVolteEnabled":Z
-    .restart local v4    # "switchBar":Lcom/android/settings/widget/SwitchBar;
+    .restart local v4    # "switchBar":Lcom/android/settings_ex/widget/SwitchBar;
     :cond_1
     move v2, v7
 

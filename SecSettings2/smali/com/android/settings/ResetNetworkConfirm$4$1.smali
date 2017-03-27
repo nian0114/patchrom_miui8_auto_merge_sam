@@ -1,4 +1,4 @@
-.class Lcom/android/settings/ResetNetworkConfirm$4$1;
+.class Lcom/android/settings_ex/ResetNetworkConfirm$4$1;
 .super Ljava/lang/Object;
 .source "ResetNetworkConfirm.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/ResetNetworkConfirm$4;->run()V
+    value = Lcom/android/settings_ex/ResetNetworkConfirm$4;->run()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/ResetNetworkConfirm$4;
+.field final synthetic this$1:Lcom/android/settings_ex/ResetNetworkConfirm$4;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/ResetNetworkConfirm$4;)V
+.method constructor <init>(Lcom/android/settings_ex/ResetNetworkConfirm$4;)V
     .locals 0
 
     .prologue
     .line 305
-    iput-object p1, p0, Lcom/android/settings/ResetNetworkConfirm$4$1;->this$1:Lcom/android/settings/ResetNetworkConfirm$4;
+    iput-object p1, p0, Lcom/android/settings_ex/ResetNetworkConfirm$4$1;->this$1:Lcom/android/settings_ex/ResetNetworkConfirm$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,12 +41,12 @@
 
     .prologue
     .line 308
-    iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm$4$1;->this$1:Lcom/android/settings/ResetNetworkConfirm$4;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetNetworkConfirm$4$1;->this$1:Lcom/android/settings_ex/ResetNetworkConfirm$4;
 
-    iget-object v0, v0, Lcom/android/settings/ResetNetworkConfirm$4;->this$0:Lcom/android/settings/ResetNetworkConfirm;
+    iget-object v0, v0, Lcom/android/settings_ex/ResetNetworkConfirm$4;->this$0:Lcom/android/settings_ex/ResetNetworkConfirm;
 
-    # getter for: Lcom/android/settings/ResetNetworkConfirm;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Lcom/android/settings/ResetNetworkConfirm;->access$1000(Lcom/android/settings/ResetNetworkConfirm;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/ResetNetworkConfirm;->mContext:Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/settings_ex/ResetNetworkConfirm;->access$1000(Lcom/android/settings_ex/ResetNetworkConfirm;)Landroid/content/Context;
 
     move-result-object v0
 

@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/fingerprint/FingerprintSettings$FingerprintPreference;
+.class public Lcom/android/settings_ex/fingerprint/FingerprintSettings$FingerprintPreference;
 .super Landroid/preference/Preference;
 .source "FingerprintSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fingerprint/FingerprintSettings;
+    value = Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,11 +19,11 @@
 
 .field private mView:Landroid/view/View;
 
-.field final synthetic this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/settings/fingerprint/FingerprintSettings;Landroid/content/Context;)V
+.method public constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings;Landroid/content/Context;)V
     .locals 1
     .param p2, "context"    # Landroid/content/Context;
 
@@ -31,13 +31,13 @@
     .line 1965
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings/fingerprint/FingerprintSettings$FingerprintPreference;-><init>(Lcom/android/settings/fingerprint/FingerprintSettings;Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings$FingerprintPreference;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 1966
     return-void
 .end method
 
-.method public constructor <init>(Lcom/android/settings/fingerprint/FingerprintSettings;Landroid/content/Context;Landroid/util/AttributeSet;)V
+.method public constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings;Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
     .param p2, "context"    # Landroid/content/Context;
     .param p3, "attrs"    # Landroid/util/AttributeSet;
@@ -46,13 +46,13 @@
     .line 1961
     const v0, 0x101008e
 
-    invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/settings/fingerprint/FingerprintSettings$FingerprintPreference;-><init>(Lcom/android/settings/fingerprint/FingerprintSettings;Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings$FingerprintPreference;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings;Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 1962
     return-void
 .end method
 
-.method public constructor <init>(Lcom/android/settings/fingerprint/FingerprintSettings;Landroid/content/Context;Landroid/util/AttributeSet;I)V
+.method public constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings;Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 6
     .param p2, "context"    # Landroid/content/Context;
     .param p3, "attrs"    # Landroid/util/AttributeSet;
@@ -72,13 +72,13 @@
 
     move v4, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/settings/fingerprint/FingerprintSettings$FingerprintPreference;-><init>(Lcom/android/settings/fingerprint/FingerprintSettings;Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-direct/range {v0 .. v5}, Lcom/android/settings_ex/fingerprint/FingerprintSettings$FingerprintPreference;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings;Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 1958
     return-void
 .end method
 
-.method public constructor <init>(Lcom/android/settings/fingerprint/FingerprintSettings;Landroid/content/Context;Landroid/util/AttributeSet;II)V
+.method public constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings;Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 0
     .param p2, "context"    # Landroid/content/Context;
     .param p3, "attrs"    # Landroid/util/AttributeSet;
@@ -87,7 +87,7 @@
 
     .prologue
     .line 1952
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintSettings$FingerprintPreference;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$FingerprintPreference;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
     .line 1953
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
@@ -103,7 +103,7 @@
 
     .prologue
     .line 1977
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings$FingerprintPreference;->mFingerprint:Landroid/hardware/fingerprint/Fingerprint;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$FingerprintPreference;->mFingerprint:Landroid/hardware/fingerprint/Fingerprint;
 
     return-object v0
 .end method
@@ -113,7 +113,7 @@
 
     .prologue
     .line 1969
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings$FingerprintPreference;->mView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$FingerprintPreference;->mView:Landroid/view/View;
 
     return-object v0
 .end method
@@ -127,7 +127,7 @@
     invoke-super {p0, p1}, Landroid/preference/Preference;->onBindView(Landroid/view/View;)V
 
     .line 1983
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintSettings$FingerprintPreference;->mView:Landroid/view/View;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$FingerprintPreference;->mView:Landroid/view/View;
 
     .line 1984
     return-void
@@ -139,7 +139,7 @@
 
     .prologue
     .line 1973
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintSettings$FingerprintPreference;->mFingerprint:Landroid/hardware/fingerprint/Fingerprint;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$FingerprintPreference;->mFingerprint:Landroid/hardware/fingerprint/Fingerprint;
 
     .line 1974
     return-void

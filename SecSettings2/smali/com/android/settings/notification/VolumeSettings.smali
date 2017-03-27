@@ -1,17 +1,17 @@
-.class public Lcom/android/settings/notification/VolumeSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/notification/VolumeSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "VolumeSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/notification/VolumeSettings$Receiver;,
-        Lcom/android/settings/notification/VolumeSettings$H;,
-        Lcom/android/settings/notification/VolumeSettings$VolumePreferenceCallback;
+        Lcom/android/settings_ex/notification/VolumeSettings$Receiver;,
+        Lcom/android/settings_ex/notification/VolumeSettings$H;,
+        Lcom/android/settings_ex/notification/VolumeSettings$VolumePreferenceCallback;
     }
 .end annotation
 
@@ -19,7 +19,7 @@
 # static fields
 .field private static final RESTRICTED_KEYS:[Ljava/lang/String;
 
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 
 
 # instance fields
@@ -27,23 +27,23 @@
 
 .field private mContext:Landroid/content/Context;
 
-.field private final mHandler:Lcom/android/settings/notification/VolumeSettings$H;
+.field private final mHandler:Lcom/android/settings_ex/notification/VolumeSettings$H;
 
 .field private mIsEmerMode:Z
 
-.field private mMusicPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+.field private mMusicPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
-.field private mNotificationPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+.field private mNotificationPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
-.field private final mReceiver:Lcom/android/settings/notification/VolumeSettings$Receiver;
+.field private final mReceiver:Lcom/android/settings_ex/notification/VolumeSettings$Receiver;
 
-.field private mRingOrNotificationPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+.field private mRingOrNotificationPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
 .field private mRingerMode:I
 
 .field private mSuppressor:Landroid/content/ComponentName;
 
-.field private mSystemPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+.field private mSystemPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
 .field private mUserManager:Landroid/os/UserManager;
 
@@ -51,14 +51,14 @@
 
 .field private mVoiceCapable:Z
 
-.field private final mVolumeCallback:Lcom/android/settings/notification/VolumeSettings$VolumePreferenceCallback;
+.field private final mVolumeCallback:Lcom/android/settings_ex/notification/VolumeSettings$VolumePreferenceCallback;
 
 .field private final mVolumePrefs:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/notification/VolumeSeekBarPreference;",
+            "Lcom/android/settings_ex/notification/VolumeSeekBarPreference;",
             ">;"
         }
     .end annotation
@@ -111,14 +111,14 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/android/settings/notification/VolumeSettings;->RESTRICTED_KEYS:[Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/notification/VolumeSettings;->RESTRICTED_KEYS:[Ljava/lang/String;
 
     .line 490
-    new-instance v0, Lcom/android/settings/notification/VolumeSettings$2;
+    new-instance v0, Lcom/android/settings_ex/notification/VolumeSettings$2;
 
-    invoke-direct {v0}, Lcom/android/settings/notification/VolumeSettings$2;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/notification/VolumeSettings$2;-><init>()V
 
-    sput-object v0, Lcom/android/settings/notification/VolumeSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/BaseSearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/notification/VolumeSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 
     return-void
 .end method
@@ -130,137 +130,137 @@
     const/4 v1, 0x0
 
     .line 73
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 95
-    new-instance v0, Lcom/android/settings/notification/VolumeSettings$VolumePreferenceCallback;
+    new-instance v0, Lcom/android/settings_ex/notification/VolumeSettings$VolumePreferenceCallback;
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/notification/VolumeSettings$VolumePreferenceCallback;-><init>(Lcom/android/settings/notification/VolumeSettings;Lcom/android/settings/notification/VolumeSettings$1;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/notification/VolumeSettings$VolumePreferenceCallback;-><init>(Lcom/android/settings_ex/notification/VolumeSettings;Lcom/android/settings_ex/notification/VolumeSettings$1;)V
 
-    iput-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mVolumeCallback:Lcom/android/settings/notification/VolumeSettings$VolumePreferenceCallback;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mVolumeCallback:Lcom/android/settings_ex/notification/VolumeSettings$VolumePreferenceCallback;
 
     .line 96
-    new-instance v0, Lcom/android/settings/notification/VolumeSettings$H;
+    new-instance v0, Lcom/android/settings_ex/notification/VolumeSettings$H;
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/notification/VolumeSettings$H;-><init>(Lcom/android/settings/notification/VolumeSettings;Lcom/android/settings/notification/VolumeSettings$1;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/notification/VolumeSettings$H;-><init>(Lcom/android/settings_ex/notification/VolumeSettings;Lcom/android/settings_ex/notification/VolumeSettings$1;)V
 
-    iput-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mHandler:Lcom/android/settings/notification/VolumeSettings$H;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mHandler:Lcom/android/settings_ex/notification/VolumeSettings$H;
 
     .line 97
-    new-instance v0, Lcom/android/settings/notification/VolumeSettings$Receiver;
+    new-instance v0, Lcom/android/settings_ex/notification/VolumeSettings$Receiver;
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/notification/VolumeSettings$Receiver;-><init>(Lcom/android/settings/notification/VolumeSettings;Lcom/android/settings/notification/VolumeSettings$1;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/notification/VolumeSettings$Receiver;-><init>(Lcom/android/settings_ex/notification/VolumeSettings;Lcom/android/settings_ex/notification/VolumeSettings$1;)V
 
-    iput-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mReceiver:Lcom/android/settings/notification/VolumeSettings$Receiver;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mReceiver:Lcom/android/settings_ex/notification/VolumeSettings$Receiver;
 
     .line 98
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mVolumePrefs:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mVolumePrefs:Ljava/util/ArrayList;
 
     .line 106
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/notification/VolumeSettings;->mIsEmerMode:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mIsEmerMode:Z
 
     .line 109
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/notification/VolumeSettings;->mRingerMode:I
+    iput v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mRingerMode:I
 
     .line 453
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/notification/VolumeSettings;)Landroid/content/Context;
+.method static synthetic access$1000(Lcom/android/settings_ex/notification/VolumeSettings;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/VolumeSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/VolumeSettings;
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/notification/VolumeSettings;)Lcom/android/settings/notification/VolumeSettings$H;
+.method static synthetic access$300(Lcom/android/settings_ex/notification/VolumeSettings;)Lcom/android/settings_ex/notification/VolumeSettings$H;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/VolumeSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/VolumeSettings;
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mHandler:Lcom/android/settings/notification/VolumeSettings$H;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mHandler:Lcom/android/settings_ex/notification/VolumeSettings$H;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/notification/VolumeSettings;)Lcom/android/settings/notification/VolumeSettings$VolumePreferenceCallback;
+.method static synthetic access$400(Lcom/android/settings_ex/notification/VolumeSettings;)Lcom/android/settings_ex/notification/VolumeSettings$VolumePreferenceCallback;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/VolumeSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/VolumeSettings;
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mVolumeCallback:Lcom/android/settings/notification/VolumeSettings$VolumePreferenceCallback;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mVolumeCallback:Lcom/android/settings_ex/notification/VolumeSettings$VolumePreferenceCallback;
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/notification/VolumeSettings;)V
+.method static synthetic access$500(Lcom/android/settings_ex/notification/VolumeSettings;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/notification/VolumeSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/VolumeSettings;
 
     .prologue
     .line 73
-    invoke-direct {p0}, Lcom/android/settings/notification/VolumeSettings;->updateEffectsSuppressor()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/VolumeSettings;->updateEffectsSuppressor()V
 
     return-void
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/notification/VolumeSettings;)V
+.method static synthetic access$600(Lcom/android/settings_ex/notification/VolumeSettings;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/notification/VolumeSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/VolumeSettings;
 
     .prologue
     .line 73
-    invoke-direct {p0}, Lcom/android/settings/notification/VolumeSettings;->updateRingerMode()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/VolumeSettings;->updateRingerMode()V
 
     return-void
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/notification/VolumeSettings;I)V
+.method static synthetic access$700(Lcom/android/settings_ex/notification/VolumeSettings;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/notification/VolumeSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/VolumeSettings;
     .param p1, "x1"    # I
 
     .prologue
     .line 73
-    invoke-direct {p0, p1}, Lcom/android/settings/notification/VolumeSettings;->updateNotificationIcon(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/notification/VolumeSettings;->updateNotificationIcon(I)V
 
     return-void
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/notification/VolumeSettings;I)V
+.method static synthetic access$800(Lcom/android/settings_ex/notification/VolumeSettings;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/notification/VolumeSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/VolumeSettings;
     .param p1, "x1"    # I
 
     .prologue
     .line 73
-    invoke-direct {p0, p1}, Lcom/android/settings/notification/VolumeSettings;->updateMusicIcon(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/notification/VolumeSettings;->updateMusicIcon(I)V
 
     return-void
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/notification/VolumeSettings;I)V
+.method static synthetic access$900(Lcom/android/settings_ex/notification/VolumeSettings;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/notification/VolumeSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/VolumeSettings;
     .param p1, "x1"    # I
 
     .prologue
     .line 73
-    invoke-direct {p0, p1}, Lcom/android/settings/notification/VolumeSettings;->updateSystemIcon(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/notification/VolumeSettings;->updateSystemIcon(I)V
 
     return-void
 .end method
@@ -271,7 +271,7 @@
 
     .prologue
     .line 358
-    iget-object v5, p0, Lcom/android/settings/notification/VolumeSettings;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -347,7 +347,7 @@
     goto :goto_0
 .end method
 
-.method private initVolumePreference(Ljava/lang/String;II)Lcom/android/settings/notification/VolumeSeekBarPreference;
+.method private initVolumePreference(Ljava/lang/String;II)Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
     .locals 2
     .param p1, "key"    # Ljava/lang/String;
     .param p2, "stream"    # I
@@ -355,28 +355,28 @@
 
     .prologue
     .line 239
-    invoke-virtual {p0, p1}, Lcom/android/settings/notification/VolumeSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/notification/VolumeSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/notification/VolumeSeekBarPreference;
+    check-cast v0, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
     .line 240
-    .local v0, "volumePref":Lcom/android/settings/notification/VolumeSeekBarPreference;
-    iget-object v1, p0, Lcom/android/settings/notification/VolumeSettings;->mVolumeCallback:Lcom/android/settings/notification/VolumeSettings$VolumePreferenceCallback;
+    .local v0, "volumePref":Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mVolumeCallback:Lcom/android/settings_ex/notification/VolumeSettings$VolumePreferenceCallback;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/notification/VolumeSeekBarPreference;->setCallback(Lcom/android/settings/notification/VolumeSeekBarPreference$Callback;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->setCallback(Lcom/android/settings_ex/notification/VolumeSeekBarPreference$Callback;)V
 
     .line 241
-    invoke-virtual {v0, p2}, Lcom/android/settings/notification/VolumeSeekBarPreference;->setStream(I)V
+    invoke-virtual {v0, p2}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->setStream(I)V
 
     .line 242
-    iget-object v1, p0, Lcom/android/settings/notification/VolumeSettings;->mVolumePrefs:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mVolumePrefs:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 243
-    invoke-virtual {v0, p3}, Lcom/android/settings/notification/VolumeSeekBarPreference;->setMuteIcon(I)V
+    invoke-virtual {v0, p3}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->setMuteIcon(I)V
 
     .line 244
     return-object v0
@@ -387,7 +387,7 @@
 
     .prologue
     .line 345
-    iget-object v2, p0, Lcom/android/settings/notification/VolumeSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Landroid/app/NotificationManager;->from(Landroid/content/Context;)Landroid/app/NotificationManager;
 
@@ -399,7 +399,7 @@
 
     .line 346
     .local v0, "suppressor":Landroid/content/ComponentName;
-    iget-object v2, p0, Lcom/android/settings/notification/VolumeSettings;->mSuppressor:Landroid/content/ComponentName;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mSuppressor:Landroid/content/ComponentName;
 
     invoke-static {v0, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -414,17 +414,17 @@
 
     .line 347
     :cond_1
-    iput-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mSuppressor:Landroid/content/ComponentName;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mSuppressor:Landroid/content/ComponentName;
 
     .line 348
-    iget-object v2, p0, Lcom/android/settings/notification/VolumeSettings;->mRingOrNotificationPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mRingOrNotificationPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
     if-eqz v2, :cond_0
 
     .line 349
     if-eqz v0, :cond_2
 
-    iget-object v2, p0, Lcom/android/settings/notification/VolumeSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mContext:Landroid/content/Context;
 
     const v3, 0x1040595
 
@@ -434,7 +434,7 @@
 
     const/4 v5, 0x0
 
-    invoke-direct {p0, v0}, Lcom/android/settings/notification/VolumeSettings;->getSuppressorCaption(Landroid/content/ComponentName;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/notification/VolumeSettings;->getSuppressorCaption(Landroid/content/ComponentName;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -447,12 +447,12 @@
     .line 352
     .local v1, "text":Ljava/lang/String;
     :goto_1
-    iget-object v2, p0, Lcom/android/settings/notification/VolumeSettings;->mRingOrNotificationPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mRingOrNotificationPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
-    invoke-virtual {v2, v1}, Lcom/android/settings/notification/VolumeSeekBarPreference;->setSuppressionText(Ljava/lang/String;)V
+    invoke-virtual {v2, v1}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->setSuppressionText(Ljava/lang/String;)V
 
     .line 353
-    invoke-direct {p0}, Lcom/android/settings/notification/VolumeSettings;->updateRingOrNotificationPreference()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/VolumeSettings;->updateRingOrNotificationPreference()V
 
     goto :goto_0
 
@@ -470,7 +470,7 @@
 
     .prologue
     .line 319
-    iget-object v1, p0, Lcom/android/settings/notification/VolumeSettings;->mMusicPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mMusicPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
     if-lez p1, :cond_0
 
@@ -479,7 +479,7 @@
     :goto_0
     const/4 v2, 0x1
 
-    invoke-virtual {v1, v0, v2}, Lcom/android/settings/notification/VolumeSeekBarPreference;->showIcon(IZ)V
+    invoke-virtual {v1, v0, v2}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->showIcon(IZ)V
 
     .line 320
     return-void
@@ -526,25 +526,25 @@
     invoke-static {v0, v1}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 295
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mNotificationPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mNotificationPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
     if-eqz v0, :cond_0
 
     .line 296
-    iget-object v4, p0, Lcom/android/settings/notification/VolumeSettings;->mNotificationPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mNotificationPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
     if-lez p1, :cond_2
 
     const v0, 0x108094e
 
     :goto_0
-    iget-boolean v1, p0, Lcom/android/settings/notification/VolumeSettings;->mVoiceCapable:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mVoiceCapable:Z
 
     if-eqz v1, :cond_5
 
-    iget-object v1, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
-    iget-object v5, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v5, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v1, v6}, Landroid/media/AudioManager;->getStreamVolume(I)I
 
@@ -555,32 +555,32 @@
     move v1, v2
 
     :goto_1
-    invoke-virtual {v4, v0, v1}, Lcom/android/settings/notification/VolumeSeekBarPreference;->showIcon(IZ)V
+    invoke-virtual {v4, v0, v1}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->showIcon(IZ)V
 
     .line 302
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->getRingerModeInternal()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
     if-eq v0, v6, :cond_6
 
-    iget-boolean v0, p0, Lcom/android/settings/notification/VolumeSettings;->mVoiceCapable:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mVoiceCapable:Z
 
     if-eqz v0, :cond_6
 
     .line 303
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mNotificationPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mNotificationPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/notification/VolumeSeekBarPreference;->setEnabled(Z)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->setEnabled(Z)V
 
     .line 308
     :cond_0
     :goto_2
-    iget-boolean v0, p0, Lcom/android/settings/notification/VolumeSettings;->mVoiceCapable:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mVoiceCapable:Z
 
     if-nez v0, :cond_1
 
@@ -588,19 +588,19 @@
     if-nez p1, :cond_7
 
     .line 310
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mSystemPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mSystemPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/notification/VolumeSeekBarPreference;->setEnabled(Z)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->setEnabled(Z)V
 
     .line 314
     :goto_3
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v0, v2}, Landroid/media/AudioManager;->getStreamVolume(I)I
 
     move-result v0
 
-    invoke-direct {p0, v0}, Lcom/android/settings/notification/VolumeSettings;->updateSystemIcon(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/notification/VolumeSettings;->updateSystemIcon(I)V
 
     .line 316
     :cond_1
@@ -608,17 +608,17 @@
 
     .line 296
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mVibrator:Landroid/os/Vibrator;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mVibrator:Landroid/os/Vibrator;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->getRingerModeInternal()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
     if-ne v0, v2, :cond_3
 
@@ -643,17 +643,17 @@
 
     .line 305
     :cond_6
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mNotificationPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mNotificationPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
-    invoke-virtual {v0, v2}, Lcom/android/settings/notification/VolumeSeekBarPreference;->setEnabled(Z)V
+    invoke-virtual {v0, v2}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->setEnabled(Z)V
 
     goto :goto_2
 
     .line 312
     :cond_7
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mSystemPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mSystemPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
-    invoke-virtual {v0, v2}, Lcom/android/settings/notification/VolumeSeekBarPreference;->setEnabled(Z)V
+    invoke-virtual {v0, v2}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->setEnabled(Z)V
 
     goto :goto_3
 .end method
@@ -691,16 +691,16 @@
     invoke-static {v0, v1}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 278
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mNotificationPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mNotificationPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
     if-eqz v0, :cond_0
 
     .line 279
-    iget-object v4, p0, Lcom/android/settings/notification/VolumeSettings;->mNotificationPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mNotificationPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
-    iget-object v1, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
     const/4 v1, 0x5
 
@@ -713,9 +713,9 @@
     const v0, 0x108094e
 
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
-    iget-object v5, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v5, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
     const/4 v5, 0x2
 
@@ -728,26 +728,26 @@
     move v1, v2
 
     :goto_1
-    invoke-virtual {v4, v0, v1}, Lcom/android/settings/notification/VolumeSeekBarPreference;->showIcon(IZ)V
+    invoke-virtual {v4, v0, v1}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->showIcon(IZ)V
 
     .line 284
-    iget-object v1, p0, Lcom/android/settings/notification/VolumeSettings;->mNotificationPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mNotificationPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
     if-eqz p1, :cond_4
 
     move v0, v2
 
     :goto_2
-    invoke-virtual {v1, v0}, Lcom/android/settings/notification/VolumeSeekBarPreference;->setEnabled(Z)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->setEnabled(Z)V
 
     .line 286
     :cond_0
     if-nez p1, :cond_5
 
     .line 287
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mSystemPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mSystemPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/notification/VolumeSeekBarPreference;->setEnabled(Z)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->setEnabled(Z)V
 
     .line 291
     :goto_3
@@ -755,17 +755,17 @@
 
     .line 279
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mVibrator:Landroid/os/Vibrator;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mVibrator:Landroid/os/Vibrator;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->getRingerModeInternal()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
     if-ne v0, v2, :cond_2
 
@@ -791,9 +791,9 @@
 
     .line 289
     :cond_5
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mSystemPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mSystemPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
-    invoke-virtual {v0, v2}, Lcom/android/settings/notification/VolumeSeekBarPreference;->setEnabled(Z)V
+    invoke-virtual {v0, v2}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->setEnabled(Z)V
 
     goto :goto_3
 .end method
@@ -814,14 +814,14 @@
     invoke-static {v2, v3}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 258
-    iget-boolean v2, p0, Lcom/android/settings/notification/VolumeSettings;->mVoiceCapable:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mVoiceCapable:Z
 
     if-eqz v2, :cond_3
 
     .line 259
-    iget-object v2, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
-    iget-object v3, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
     const/4 v3, 0x2
 
@@ -831,18 +831,18 @@
 
     .line 260
     .local v0, "mVolume":I
-    iget-object v2, p0, Lcom/android/settings/notification/VolumeSettings;->mRingOrNotificationPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mRingOrNotificationPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
-    iget-object v3, p0, Lcom/android/settings/notification/VolumeSettings;->mSuppressor:Landroid/content/ComponentName;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mSuppressor:Landroid/content/ComponentName;
 
     if-eqz v3, :cond_1
 
     :cond_0
     :goto_0
-    invoke-virtual {v2, v1, v4}, Lcom/android/settings/notification/VolumeSeekBarPreference;->showIcon(IZ)V
+    invoke-virtual {v2, v1, v4}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->showIcon(IZ)V
 
     .line 267
-    invoke-direct {p0, v0}, Lcom/android/settings/notification/VolumeSettings;->updateRingOrNotificationIcon(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/notification/VolumeSettings;->updateRingOrNotificationIcon(I)V
 
     .line 273
     :goto_1
@@ -857,7 +857,7 @@
     goto :goto_0
 
     :cond_2
-    iget v3, p0, Lcom/android/settings/notification/VolumeSettings;->mRingerMode:I
+    iget v3, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mRingerMode:I
 
     if-ne v3, v4, :cond_0
 
@@ -868,9 +868,9 @@
     .line 269
     .end local v0    # "mVolume":I
     :cond_3
-    iget-object v1, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
-    iget-object v2, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
     const/4 v2, 0x5
 
@@ -880,7 +880,7 @@
 
     .line 270
     .restart local v0    # "mVolume":I
-    invoke-direct {p0, v0}, Lcom/android/settings/notification/VolumeSettings;->updateNotificationIcon(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/notification/VolumeSettings;->updateNotificationIcon(I)V
 
     goto :goto_1
 .end method
@@ -890,7 +890,7 @@
 
     .prologue
     .line 337
-    iget-object v1, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v1}, Landroid/media/AudioManager;->getRingerModeInternal()I
 
@@ -898,13 +898,13 @@
 
     .line 339
     .local v0, "ringerMode":I
-    iput v0, p0, Lcom/android/settings/notification/VolumeSettings;->mRingerMode:I
+    iput v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mRingerMode:I
 
     .line 340
-    invoke-direct {p0}, Lcom/android/settings/notification/VolumeSettings;->updateRingOrNotificationPreference()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/VolumeSettings;->updateRingOrNotificationPreference()V
 
     .line 341
-    invoke-virtual {p0}, Lcom/android/settings/notification/VolumeSettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VolumeSettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v1
 
@@ -924,16 +924,16 @@
     const/4 v3, 0x0
 
     .line 323
-    iget-object v4, p0, Lcom/android/settings/notification/VolumeSettings;->mSystemPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mSystemPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
     if-lez p1, :cond_0
 
     const v0, 0x108094e
 
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
-    iget-object v5, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v5, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v5}, Landroid/media/AudioManager;->getUiSoundsStreamType()I
 
@@ -948,25 +948,25 @@
     move v1, v2
 
     :goto_1
-    invoke-virtual {v4, v0, v1}, Lcom/android/settings/notification/VolumeSeekBarPreference;->showIcon(IZ)V
+    invoke-virtual {v4, v0, v1}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->showIcon(IZ)V
 
     .line 324
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->getRingerModeInternal()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
     const/4 v1, 0x2
 
     if-eq v0, v1, :cond_2
 
     .line 325
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mSystemPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mSystemPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/notification/VolumeSeekBarPreference;->setEnabled(Z)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->setEnabled(Z)V
 
     .line 329
     :goto_2
@@ -985,9 +985,9 @@
 
     .line 327
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mSystemPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mSystemPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
-    invoke-virtual {v0, v2}, Lcom/android/settings/notification/VolumeSeekBarPreference;->setEnabled(Z)V
+    invoke-virtual {v0, v2}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->setEnabled(Z)V
 
     goto :goto_2
 .end method
@@ -1017,18 +1017,18 @@
     invoke-static {v0, v1}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 201
-    invoke-virtual {p0}, Lcom/android/settings/notification/VolumeSettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VolumeSettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/settings/notification/VolumeSettings$1;
+    new-instance v1, Lcom/android/settings_ex/notification/VolumeSettings$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/notification/VolumeSettings$1;-><init>(Lcom/android/settings/notification/VolumeSettings;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/notification/VolumeSettings$1;-><init>(Lcom/android/settings_ex/notification/VolumeSettings;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
     .line 233
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 234
     return-void
@@ -1046,17 +1046,17 @@
     const v5, 0x108093b
 
     .line 120
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 122
-    invoke-virtual {p0}, Lcom/android/settings/notification/VolumeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VolumeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/notification/VolumeSettings;->mContext:Landroid/content/Context;
+    iput-object v3, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mContext:Landroid/content/Context;
 
     .line 123
-    invoke-virtual {p0}, Lcom/android/settings/notification/VolumeSettings;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VolumeSettings;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -1064,19 +1064,19 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/notification/VolumeSettings;->mUserManager:Landroid/os/UserManager;
+    iput-object v3, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mUserManager:Landroid/os/UserManager;
 
     .line 124
-    iget-object v3, p0, Lcom/android/settings/notification/VolumeSettings;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mContext:Landroid/content/Context;
 
-    invoke-static {v3}, Lcom/android/settings/Utils;->isVoiceCapable(Landroid/content/Context;)Z
+    invoke-static {v3}, Lcom/android/settings_ex/Utils;->isVoiceCapable(Landroid/content/Context;)Z
 
     move-result v3
 
-    iput-boolean v3, p0, Lcom/android/settings/notification/VolumeSettings;->mVoiceCapable:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mVoiceCapable:Z
 
     .line 125
-    iget-object v3, p0, Lcom/android/settings/notification/VolumeSettings;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mContext:Landroid/content/Context;
 
     const-string v4, "audio"
 
@@ -1086,13 +1086,13 @@
 
     check-cast v3, Landroid/media/AudioManager;
 
-    iput-object v3, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iput-object v3, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
     .line 126
-    invoke-virtual {p0, v7}, Lcom/android/settings/notification/VolumeSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/notification/VolumeSettings;->addPreferencesFromResource(I)V
 
     .line 128
-    invoke-virtual {p0}, Lcom/android/settings/notification/VolumeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VolumeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -1104,21 +1104,21 @@
 
     check-cast v3, Landroid/os/Vibrator;
 
-    iput-object v3, p0, Lcom/android/settings/notification/VolumeSettings;->mVibrator:Landroid/os/Vibrator;
+    iput-object v3, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mVibrator:Landroid/os/Vibrator;
 
     .line 131
-    invoke-virtual {p0}, Lcom/android/settings/notification/VolumeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VolumeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/android/settings/Utils;->isEnabledUltraPowerSaving(Landroid/content/Context;)Z
+    invoke-static {v3}, Lcom/android/settings_ex/Utils;->isEnabledUltraPowerSaving(Landroid/content/Context;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
     .line 132
-    iput-boolean v6, p0, Lcom/android/settings/notification/VolumeSettings;->mIsEmerMode:Z
+    iput-boolean v6, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mIsEmerMode:Z
 
     .line 135
     :cond_0
@@ -1126,49 +1126,49 @@
 
     const/4 v4, 0x3
 
-    invoke-direct {p0, v3, v4, v5}, Lcom/android/settings/notification/VolumeSettings;->initVolumePreference(Ljava/lang/String;II)Lcom/android/settings/notification/VolumeSeekBarPreference;
+    invoke-direct {p0, v3, v4, v5}, Lcom/android/settings_ex/notification/VolumeSettings;->initVolumePreference(Ljava/lang/String;II)Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/notification/VolumeSettings;->mMusicPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iput-object v3, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mMusicPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
     .line 136
     const-string v3, "notification_volume"
 
     const/4 v4, 0x5
 
-    invoke-direct {p0, v3, v4, v5}, Lcom/android/settings/notification/VolumeSettings;->initVolumePreference(Ljava/lang/String;II)Lcom/android/settings/notification/VolumeSeekBarPreference;
+    invoke-direct {p0, v3, v4, v5}, Lcom/android/settings_ex/notification/VolumeSettings;->initVolumePreference(Ljava/lang/String;II)Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/notification/VolumeSettings;->mNotificationPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iput-object v3, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mNotificationPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
     .line 137
     const-string v3, "system_volume"
 
-    invoke-direct {p0, v3, v6, v5}, Lcom/android/settings/notification/VolumeSettings;->initVolumePreference(Ljava/lang/String;II)Lcom/android/settings/notification/VolumeSeekBarPreference;
+    invoke-direct {p0, v3, v6, v5}, Lcom/android/settings_ex/notification/VolumeSettings;->initVolumePreference(Ljava/lang/String;II)Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/notification/VolumeSettings;->mSystemPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iput-object v3, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mSystemPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
     .line 139
     const-string v3, "alarm_volume"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/notification/VolumeSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/notification/VolumeSettings;->removePreference(Ljava/lang/String;)V
 
     .line 140
-    iget-boolean v3, p0, Lcom/android/settings/notification/VolumeSettings;->mVoiceCapable:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mVoiceCapable:Z
 
     if-eqz v3, :cond_3
 
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticSKTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticSKTModel()Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticKTTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticKTTModel()Z
 
     move-result v3
 
@@ -1180,10 +1180,10 @@
 
     const/16 v4, 0x8
 
-    invoke-direct {p0, v3, v4, v5}, Lcom/android/settings/notification/VolumeSettings;->initVolumePreference(Ljava/lang/String;II)Lcom/android/settings/notification/VolumeSeekBarPreference;
+    invoke-direct {p0, v3, v4, v5}, Lcom/android/settings_ex/notification/VolumeSettings;->initVolumePreference(Ljava/lang/String;II)Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
     .line 142
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticSKTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticSKTModel()Z
 
     move-result v3
 
@@ -1192,12 +1192,12 @@
     .line 143
     const-string v3, "waiting_tone_volume_explanation"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/notification/VolumeSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/notification/VolumeSettings;->removePreference(Ljava/lang/String;)V
 
     .line 150
     :cond_2
     :goto_0
-    iget-boolean v3, p0, Lcom/android/settings/notification/VolumeSettings;->mVoiceCapable:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mVoiceCapable:Z
 
     if-eqz v3, :cond_4
 
@@ -1206,35 +1206,35 @@
 
     const/4 v4, 0x2
 
-    invoke-direct {p0, v3, v4, v5}, Lcom/android/settings/notification/VolumeSettings;->initVolumePreference(Ljava/lang/String;II)Lcom/android/settings/notification/VolumeSeekBarPreference;
+    invoke-direct {p0, v3, v4, v5}, Lcom/android/settings_ex/notification/VolumeSettings;->initVolumePreference(Ljava/lang/String;II)Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/notification/VolumeSettings;->mRingOrNotificationPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iput-object v3, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mRingOrNotificationPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
     .line 152
-    iget-object v3, p0, Lcom/android/settings/notification/VolumeSettings;->mRingOrNotificationPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mRingOrNotificationPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
     const v4, 0x7f0e05d2
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/notification/VolumeSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/notification/VolumeSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/notification/VolumeSeekBarPreference;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 158
     :goto_1
-    iget-boolean v3, p0, Lcom/android/settings/notification/VolumeSettings;->mIsEmerMode:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mIsEmerMode:Z
 
     if-ne v3, v6, :cond_5
 
     .line 159
-    iget-object v3, p0, Lcom/android/settings/notification/VolumeSettings;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mContext:Landroid/content/Context;
 
     const-string v4, "UPSM"
 
-    invoke-static {v3, v7, v4}, Lcom/android/settings/Utils;->getRemovePreferenceInOtherMode(Landroid/content/Context;ILjava/lang/String;)Ljava/util/ArrayList;
+    invoke-static {v3, v7, v4}, Lcom/android/settings_ex/Utils;->getRemovePreferenceInOtherMode(Landroid/content/Context;ILjava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -1263,7 +1263,7 @@
 
     .line 162
     .local v1, "list":Ljava/lang/String;
-    invoke-virtual {p0, v1}, Lcom/android/settings/notification/VolumeSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/notification/VolumeSettings;->removePreference(Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -1274,12 +1274,12 @@
     :cond_3
     const-string v3, "waiting_tone_volume"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/notification/VolumeSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/notification/VolumeSettings;->removePreference(Ljava/lang/String;)V
 
     .line 147
     const-string v3, "waiting_tone_volume_explanation"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/notification/VolumeSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/notification/VolumeSettings;->removePreference(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1287,14 +1287,14 @@
     :cond_4
     const-string v3, "ring_volume"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/notification/VolumeSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/notification/VolumeSettings;->removePreference(Ljava/lang/String;)V
 
     .line 155
-    iget-object v3, p0, Lcom/android/settings/notification/VolumeSettings;->mNotificationPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mNotificationPreference:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
     const/4 v4, 0x0
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/notification/VolumeSeekBarPreference;->setOrder(I)V
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->setOrder(I)V
 
     goto :goto_1
 
@@ -1308,19 +1308,19 @@
 
     .prologue
     .line 192
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 193
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mVolumeCallback:Lcom/android/settings/notification/VolumeSettings$VolumePreferenceCallback;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mVolumeCallback:Lcom/android/settings_ex/notification/VolumeSettings$VolumePreferenceCallback;
 
-    invoke-virtual {v0}, Lcom/android/settings/notification/VolumeSettings$VolumePreferenceCallback;->stopSample()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/notification/VolumeSettings$VolumePreferenceCallback;->stopSample()V
 
     .line 194
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mReceiver:Lcom/android/settings/notification/VolumeSettings$Receiver;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mReceiver:Lcom/android/settings_ex/notification/VolumeSettings$Receiver;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/notification/VolumeSettings$Receiver;->register(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/notification/VolumeSettings$Receiver;->register(Z)V
 
     .line 195
     return-void
@@ -1333,12 +1333,12 @@
 
     .prologue
     .line 249
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSettings;->mVolumeCallback:Lcom/android/settings/notification/VolumeSettings$VolumePreferenceCallback;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mVolumeCallback:Lcom/android/settings_ex/notification/VolumeSettings$VolumePreferenceCallback;
 
-    invoke-virtual {v0}, Lcom/android/settings/notification/VolumeSettings$VolumePreferenceCallback;->stopSample()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/notification/VolumeSettings$VolumePreferenceCallback;->stopSample()V
 
     .line 251
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v0
 
@@ -1352,30 +1352,30 @@
     const/4 v8, 0x1
 
     .line 170
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 171
-    iget-object v7, p0, Lcom/android/settings/notification/VolumeSettings;->mReceiver:Lcom/android/settings/notification/VolumeSettings$Receiver;
+    iget-object v7, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mReceiver:Lcom/android/settings_ex/notification/VolumeSettings$Receiver;
 
-    invoke-virtual {v7, v8}, Lcom/android/settings/notification/VolumeSettings$Receiver;->register(Z)V
+    invoke-virtual {v7, v8}, Lcom/android/settings_ex/notification/VolumeSettings$Receiver;->register(Z)V
 
     .line 172
-    invoke-direct {p0}, Lcom/android/settings/notification/VolumeSettings;->updateRingOrNotificationPreference()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/VolumeSettings;->updateRingOrNotificationPreference()V
 
     .line 173
-    iget-object v7, p0, Lcom/android/settings/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
+    iget-object v7, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v7, v8}, Landroid/media/AudioManager;->getStreamVolume(I)I
 
     move-result v7
 
-    invoke-direct {p0, v7}, Lcom/android/settings/notification/VolumeSettings;->updateSystemIcon(I)V
+    invoke-direct {p0, v7}, Lcom/android/settings_ex/notification/VolumeSettings;->updateSystemIcon(I)V
 
     .line 174
-    invoke-direct {p0}, Lcom/android/settings/notification/VolumeSettings;->updateEffectsSuppressor()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/VolumeSettings;->updateEffectsSuppressor()V
 
     .line 175
-    iget-object v7, p0, Lcom/android/settings/notification/VolumeSettings;->mVolumePrefs:Ljava/util/ArrayList;
+    iget-object v7, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mVolumePrefs:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1393,18 +1393,18 @@
 
     move-result-object v6
 
-    check-cast v6, Lcom/android/settings/notification/VolumeSeekBarPreference;
+    check-cast v6, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
     .line 176
-    .local v6, "volumePref":Lcom/android/settings/notification/VolumeSeekBarPreference;
-    invoke-virtual {v6}, Lcom/android/settings/notification/VolumeSeekBarPreference;->onActivityResume()V
+    .local v6, "volumePref":Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
+    invoke-virtual {v6}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->onActivityResume()V
 
     goto :goto_0
 
     .line 178
-    .end local v6    # "volumePref":Lcom/android/settings/notification/VolumeSeekBarPreference;
+    .end local v6    # "volumePref":Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
     :cond_0
-    iget-object v7, p0, Lcom/android/settings/notification/VolumeSettings;->mUserManager:Landroid/os/UserManager;
+    iget-object v7, p0, Lcom/android/settings_ex/notification/VolumeSettings;->mUserManager:Landroid/os/UserManager;
 
     const-string v9, "no_adjust_volume"
 
@@ -1414,7 +1414,7 @@
 
     .line 179
     .local v2, "isRestricted":Z
-    sget-object v0, Lcom/android/settings/notification/VolumeSettings;->RESTRICTED_KEYS:[Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/notification/VolumeSettings;->RESTRICTED_KEYS:[Ljava/lang/String;
 
     .local v0, "arr$":[Ljava/lang/String;
     array-length v4, v0
@@ -1430,7 +1430,7 @@
 
     .line 180
     .local v3, "key":Ljava/lang/String;
-    invoke-virtual {p0, v3}, Lcom/android/settings/notification/VolumeSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/notification/VolumeSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v5
 
@@ -1462,14 +1462,14 @@
     .end local v3    # "key":Ljava/lang/String;
     .end local v5    # "pref":Landroid/preference/Preference;
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/notification/VolumeSettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VolumeSettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v7
 
     invoke-virtual {v7}, Landroid/widget/ListView;->invalidateViews()V
 
     .line 187
-    invoke-virtual {p0}, Lcom/android/settings/notification/VolumeSettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VolumeSettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v7
 

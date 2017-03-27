@@ -1,11 +1,11 @@
-.class Lcom/android/settings/applock/AppLockTypeFragment$2;
+.class Lcom/android/settings_ex/applock/AppLockTypeFragment$2;
 .super Lcom/samsung/android/fingerprint/IFingerprintClient$Stub;
 .source "AppLockTypeFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/applock/AppLockTypeFragment;->identifyFinger(Landroid/os/Bundle;)I
+    value = Lcom/android/settings_ex/applock/AppLockTypeFragment;->identifyFinger(Landroid/os/Bundle;)I
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/applock/AppLockTypeFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/applock/AppLockTypeFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/applock/AppLockTypeFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/applock/AppLockTypeFragment;)V
     .locals 0
 
     .prologue
     .line 359
-    iput-object p1, p0, Lcom/android/settings/applock/AppLockTypeFragment$2;->this$0:Lcom/android/settings/applock/AppLockTypeFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment$2;->this$0:Lcom/android/settings_ex/applock/AppLockTypeFragment;
 
     invoke-direct {p0}, Lcom/samsung/android/fingerprint/IFingerprintClient$Stub;-><init>()V
 
@@ -49,13 +49,13 @@
     .line 364
     .local v1, "event":Lcom/samsung/android/fingerprint/FingerprintEvent;
     :try_start_0
-    iget-object v2, p0, Lcom/android/settings/applock/AppLockTypeFragment$2;->this$0:Lcom/android/settings/applock/AppLockTypeFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment$2;->this$0:Lcom/android/settings_ex/applock/AppLockTypeFragment;
 
     new-instance v3, Landroid/os/Handler;
 
-    iget-object v4, p0, Lcom/android/settings/applock/AppLockTypeFragment$2;->this$0:Lcom/android/settings/applock/AppLockTypeFragment;
+    iget-object v4, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment$2;->this$0:Lcom/android/settings_ex/applock/AppLockTypeFragment;
 
-    invoke-virtual {v4}, Lcom/android/settings/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v4}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -65,30 +65,30 @@
 
     invoke-direct {v3, v4}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    # setter for: Lcom/android/settings/applock/AppLockTypeFragment;->mHandler:Landroid/os/Handler;
-    invoke-static {v2, v3}, Lcom/android/settings/applock/AppLockTypeFragment;->access$002(Lcom/android/settings/applock/AppLockTypeFragment;Landroid/os/Handler;)Landroid/os/Handler;
+    # setter for: Lcom/android/settings_ex/applock/AppLockTypeFragment;->mHandler:Landroid/os/Handler;
+    invoke-static {v2, v3}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->access$002(Lcom/android/settings_ex/applock/AppLockTypeFragment;Landroid/os/Handler;)Landroid/os/Handler;
 
     .line 366
-    iget-object v2, p0, Lcom/android/settings/applock/AppLockTypeFragment$2;->this$0:Lcom/android/settings/applock/AppLockTypeFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment$2;->this$0:Lcom/android/settings_ex/applock/AppLockTypeFragment;
 
-    # getter for: Lcom/android/settings/applock/AppLockTypeFragment;->mHandler:Landroid/os/Handler;
-    invoke-static {v2}, Lcom/android/settings/applock/AppLockTypeFragment;->access$000(Lcom/android/settings/applock/AppLockTypeFragment;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/applock/AppLockTypeFragment;->mHandler:Landroid/os/Handler;
+    invoke-static {v2}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->access$000(Lcom/android/settings_ex/applock/AppLockTypeFragment;)Landroid/os/Handler;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
     .line 367
-    iget-object v2, p0, Lcom/android/settings/applock/AppLockTypeFragment$2;->this$0:Lcom/android/settings/applock/AppLockTypeFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/applock/AppLockTypeFragment$2;->this$0:Lcom/android/settings_ex/applock/AppLockTypeFragment;
 
-    # getter for: Lcom/android/settings/applock/AppLockTypeFragment;->mHandler:Landroid/os/Handler;
-    invoke-static {v2}, Lcom/android/settings/applock/AppLockTypeFragment;->access$000(Lcom/android/settings/applock/AppLockTypeFragment;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/applock/AppLockTypeFragment;->mHandler:Landroid/os/Handler;
+    invoke-static {v2}, Lcom/android/settings_ex/applock/AppLockTypeFragment;->access$000(Lcom/android/settings_ex/applock/AppLockTypeFragment;)Landroid/os/Handler;
 
     move-result-object v2
 
-    new-instance v3, Lcom/android/settings/applock/AppLockTypeFragment$2$1;
+    new-instance v3, Lcom/android/settings_ex/applock/AppLockTypeFragment$2$1;
 
-    invoke-direct {v3, p0, v1}, Lcom/android/settings/applock/AppLockTypeFragment$2$1;-><init>(Lcom/android/settings/applock/AppLockTypeFragment$2;Lcom/samsung/android/fingerprint/FingerprintEvent;)V
+    invoke-direct {v3, p0, v1}, Lcom/android/settings_ex/applock/AppLockTypeFragment$2$1;-><init>(Lcom/android/settings_ex/applock/AppLockTypeFragment$2;Lcom/samsung/android/fingerprint/FingerprintEvent;)V
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
     :try_end_0

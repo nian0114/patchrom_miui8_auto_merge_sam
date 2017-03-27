@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.class public interface abstract Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 .super Ljava/lang/Object;
 .source "Indexable.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/search/Indexable;
+    value = Lcom/android/settings_ex/search/Indexable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -37,7 +37,7 @@
             "Z)",
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/search/SearchIndexableRaw;",
+            "Lcom/android/settings_ex/search/SearchIndexableRaw;",
             ">;"
         }
     .end annotation

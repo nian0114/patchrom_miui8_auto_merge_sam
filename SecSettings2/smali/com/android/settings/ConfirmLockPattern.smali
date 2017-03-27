@@ -1,15 +1,15 @@
-.class public Lcom/android/settings/ConfirmLockPattern;
-.super Lcom/android/settings/ConfirmDeviceCredentialBaseActivity;
+.class public Lcom/android/settings_ex/ConfirmLockPattern;
+.super Lcom/android/settings_ex/ConfirmDeviceCredentialBaseActivity;
 .source "ConfirmLockPattern.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/ConfirmLockPattern$1;,
-        Lcom/android/settings/ConfirmLockPattern$ConfirmLockPatternFragment;,
-        Lcom/android/settings/ConfirmLockPattern$Stage;,
-        Lcom/android/settings/ConfirmLockPattern$InternalActivity;
+        Lcom/android/settings_ex/ConfirmLockPattern$1;,
+        Lcom/android/settings_ex/ConfirmLockPattern$ConfirmLockPatternFragment;,
+        Lcom/android/settings_ex/ConfirmLockPattern$Stage;,
+        Lcom/android/settings_ex/ConfirmLockPattern$InternalActivity;
     }
 .end annotation
 
@@ -17,7 +17,7 @@
 # static fields
 .field private static mFromPersonalPage:Z
 
-.field private static mUiStage:Lcom/android/settings/ConfirmLockPattern$Stage;
+.field private static mUiStage:Lcom/android/settings_ex/ConfirmLockPattern$Stage;
 
 
 # direct methods
@@ -26,14 +26,14 @@
 
     .prologue
     .line 63
-    sget-object v0, Lcom/android/settings/ConfirmLockPattern$Stage;->NeedToUnlock:Lcom/android/settings/ConfirmLockPattern$Stage;
+    sget-object v0, Lcom/android/settings_ex/ConfirmLockPattern$Stage;->NeedToUnlock:Lcom/android/settings_ex/ConfirmLockPattern$Stage;
 
-    sput-object v0, Lcom/android/settings/ConfirmLockPattern;->mUiStage:Lcom/android/settings/ConfirmLockPattern$Stage;
+    sput-object v0, Lcom/android/settings_ex/ConfirmLockPattern;->mUiStage:Lcom/android/settings_ex/ConfirmLockPattern$Stage;
 
     .line 74
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/android/settings/ConfirmLockPattern;->mFromPersonalPage:Z
+    sput-boolean v0, Lcom/android/settings_ex/ConfirmLockPattern;->mFromPersonalPage:Z
 
     return-void
 .end method
@@ -43,7 +43,7 @@
 
     .prologue
     .line 62
-    invoke-direct {p0}, Lcom/android/settings/ConfirmDeviceCredentialBaseActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseActivity;-><init>()V
 
     .line 90
     return-void
@@ -54,7 +54,7 @@
 
     .prologue
     .line 62
-    sget-boolean v0, Lcom/android/settings/ConfirmLockPattern;->mFromPersonalPage:Z
+    sget-boolean v0, Lcom/android/settings_ex/ConfirmLockPattern;->mFromPersonalPage:Z
 
     return v0
 .end method
@@ -65,28 +65,28 @@
 
     .prologue
     .line 62
-    sput-boolean p0, Lcom/android/settings/ConfirmLockPattern;->mFromPersonalPage:Z
+    sput-boolean p0, Lcom/android/settings_ex/ConfirmLockPattern;->mFromPersonalPage:Z
 
     return p0
 .end method
 
-.method static synthetic access$300()Lcom/android/settings/ConfirmLockPattern$Stage;
+.method static synthetic access$300()Lcom/android/settings_ex/ConfirmLockPattern$Stage;
     .locals 1
 
     .prologue
     .line 62
-    sget-object v0, Lcom/android/settings/ConfirmLockPattern;->mUiStage:Lcom/android/settings/ConfirmLockPattern$Stage;
+    sget-object v0, Lcom/android/settings_ex/ConfirmLockPattern;->mUiStage:Lcom/android/settings_ex/ConfirmLockPattern$Stage;
 
     return-object v0
 .end method
 
-.method static synthetic access$302(Lcom/android/settings/ConfirmLockPattern$Stage;)Lcom/android/settings/ConfirmLockPattern$Stage;
+.method static synthetic access$302(Lcom/android/settings_ex/ConfirmLockPattern$Stage;)Lcom/android/settings_ex/ConfirmLockPattern$Stage;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ConfirmLockPattern$Stage;
+    .param p0, "x0"    # Lcom/android/settings_ex/ConfirmLockPattern$Stage;
 
     .prologue
     .line 62
-    sput-object p0, Lcom/android/settings/ConfirmLockPattern;->mUiStage:Lcom/android/settings/ConfirmLockPattern$Stage;
+    sput-object p0, Lcom/android/settings_ex/ConfirmLockPattern;->mUiStage:Lcom/android/settings_ex/ConfirmLockPattern$Stage;
 
     return-object p0
 .end method
@@ -100,7 +100,7 @@
     .line 78
     new-instance v0, Landroid/content/Intent;
 
-    invoke-super {p0}, Lcom/android/settings/ConfirmDeviceCredentialBaseActivity;->getIntent()Landroid/content/Intent;
+    invoke-super {p0}, Lcom/android/settings_ex/ConfirmDeviceCredentialBaseActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -110,7 +110,7 @@
     .local v0, "modIntent":Landroid/content/Intent;
     const-string v1, ":settings:show_fragment"
 
-    const-class v2, Lcom/android/settings/ConfirmLockPattern$ConfirmLockPatternFragment;
+    const-class v2, Lcom/android/settings_ex/ConfirmLockPattern$ConfirmLockPatternFragment;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -135,7 +135,7 @@
 
     .prologue
     .line 86
-    const-class v0, Lcom/android/settings/ConfirmLockPattern$ConfirmLockPatternFragment;
+    const-class v0, Lcom/android/settings_ex/ConfirmLockPattern$ConfirmLockPatternFragment;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

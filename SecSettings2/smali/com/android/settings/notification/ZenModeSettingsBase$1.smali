@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settings/notification/ZenModeSettingsBase$1;
+.class synthetic Lcom/android/settings_ex/notification/ZenModeSettingsBase$1;
 .super Ljava/lang/Object;
 .source "ZenModeSettingsBase.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/ZenModeSettingsBase;
+    value = Lcom/android/settings_ex/notification/ZenModeSettingsBase;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

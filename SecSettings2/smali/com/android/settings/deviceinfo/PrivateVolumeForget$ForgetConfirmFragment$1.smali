@@ -1,4 +1,4 @@
-.class Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment$1;
+.class Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment$1;
 .super Ljava/lang/Object;
 .source "PrivateVolumeForget.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;
 
 .field final synthetic val$fsUuid:Ljava/lang/String;
 
@@ -26,16 +26,16 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;Landroid/os/storage/StorageManager;Ljava/lang/String;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;Landroid/os/storage/StorageManager;Ljava/lang/String;)V
     .locals 0
 
     .prologue
     .line 99
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment$1;->this$0:Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment$1;->this$0:Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;
 
-    iput-object p2, p0, Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment$1;->val$storage:Landroid/os/storage/StorageManager;
+    iput-object p2, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment$1;->val$storage:Landroid/os/storage/StorageManager;
 
-    iput-object p3, p0, Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment$1;->val$fsUuid:Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment$1;->val$fsUuid:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,16 +51,16 @@
 
     .prologue
     .line 102
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment$1;->val$storage:Landroid/os/storage/StorageManager;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment$1;->val$storage:Landroid/os/storage/StorageManager;
 
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment$1;->val$fsUuid:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment$1;->val$fsUuid:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/os/storage/StorageManager;->forgetVolume(Ljava/lang/String;)V
 
     .line 103
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment$1;->this$0:Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment$1;->this$0:Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;
 
-    invoke-virtual {v0}, Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 

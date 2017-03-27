@@ -1,13 +1,13 @@
-.class public Lcom/android/settings/WallpaperTypeSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/WallpaperTypeSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "WallpaperTypeSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # direct methods
@@ -16,11 +16,11 @@
 
     .prologue
     .line 78
-    new-instance v0, Lcom/android/settings/WallpaperTypeSettings$1;
+    new-instance v0, Lcom/android/settings_ex/WallpaperTypeSettings$1;
 
-    invoke-direct {v0}, Lcom/android/settings/WallpaperTypeSettings$1;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/WallpaperTypeSettings$1;-><init>()V
 
-    sput-object v0, Lcom/android/settings/WallpaperTypeSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/WallpaperTypeSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -30,7 +30,7 @@
 
     .prologue
     .line 35
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     return-void
 .end method
@@ -48,7 +48,7 @@
 
     .line 58
     .local v2, "intent":Landroid/content/Intent;
-    invoke-virtual {p0}, Lcom/android/settings/WallpaperTypeSettings;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WallpaperTypeSettings;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v5
 
@@ -62,7 +62,7 @@
 
     .line 62
     .local v8, "rList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
-    invoke-virtual {p0}, Lcom/android/settings/WallpaperTypeSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WallpaperTypeSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v4
 
@@ -95,7 +95,7 @@
     .local v1, "info":Landroid/content/pm/ResolveInfo;
     new-instance v6, Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/WallpaperTypeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WallpaperTypeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
@@ -185,15 +185,15 @@
 
     .prologue
     .line 49
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 51
     const v0, 0x7f0800d7
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/WallpaperTypeSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/WallpaperTypeSettings;->addPreferencesFromResource(I)V
 
     .line 52
-    invoke-direct {p0}, Lcom/android/settings/WallpaperTypeSettings;->populateWallpaperTypes()V
+    invoke-direct {p0}, Lcom/android/settings_ex/WallpaperTypeSettings;->populateWallpaperTypes()V
 
     .line 53
     return-void

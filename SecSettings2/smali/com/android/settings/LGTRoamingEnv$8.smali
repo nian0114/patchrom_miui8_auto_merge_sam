@@ -1,4 +1,4 @@
-.class Lcom/android/settings/LGTRoamingEnv$8;
+.class Lcom/android/settings_ex/LGTRoamingEnv$8;
 .super Ljava/lang/Object;
 .source "LGTRoamingEnv.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/LGTRoamingEnv;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/LGTRoamingEnv;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/LGTRoamingEnv;
+.field final synthetic this$0:Lcom/android/settings_ex/LGTRoamingEnv;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/LGTRoamingEnv;)V
+.method constructor <init>(Lcom/android/settings_ex/LGTRoamingEnv;)V
     .locals 0
 
     .prologue
     .line 300
-    iput-object p1, p0, Lcom/android/settings/LGTRoamingEnv$8;->this$0:Lcom/android/settings/LGTRoamingEnv;
+    iput-object p1, p0, Lcom/android/settings_ex/LGTRoamingEnv$8;->this$0:Lcom/android/settings_ex/LGTRoamingEnv;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -72,14 +72,14 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 305
-    iget-object v1, p0, Lcom/android/settings/LGTRoamingEnv$8;->this$0:Lcom/android/settings/LGTRoamingEnv;
+    iget-object v1, p0, Lcom/android/settings_ex/LGTRoamingEnv$8;->this$0:Lcom/android/settings_ex/LGTRoamingEnv;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v2
 
-    # invokes: Lcom/android/settings/LGTRoamingEnv;->toggleLteRoaming(Z)V
-    invoke-static {v1, v2}, Lcom/android/settings/LGTRoamingEnv;->access$1000(Lcom/android/settings/LGTRoamingEnv;Z)V
+    # invokes: Lcom/android/settings_ex/LGTRoamingEnv;->toggleLteRoaming(Z)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/LGTRoamingEnv;->access$1000(Lcom/android/settings_ex/LGTRoamingEnv;Z)V
 
     .line 306
     const/4 v1, 0x1

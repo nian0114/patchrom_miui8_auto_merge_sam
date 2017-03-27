@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter$1;
+.class Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter$1;
 .super Landroid/os/Handler;
 .source "SettingsGridViewAdapter.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    value = Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;)V
     .locals 0
 
     .prologue
     .line 44
-    iput-object p1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter$1;->this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter$1;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -55,10 +55,10 @@
 
     .line 50
     .local v0, "v":Landroid/view/View;
-    iget-object v1, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter$1;->this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter$1;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-    # getter for: Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;->mFragment:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
-    invoke-static {v1}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;->access$100(Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;)Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    # getter for: Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;->mFragment:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;->access$100(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;)Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     move-result-object v2
 
@@ -72,14 +72,14 @@
 
     move-result v1
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter$1;->this$0:Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter$1;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;
 
-    # getter for: Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;->mImageMode:Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;
-    invoke-static {v3}, Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;->access$000(Lcom/android/settings/accessibility/assistantmenu/SettingsGridViewAdapter;)Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;
+    # getter for: Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;->mImageMode:Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;
+    invoke-static {v3}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;->access$000(Lcom/android/settings_ex/accessibility/assistantmenu/SettingsGridViewAdapter;)Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;
 
     move-result-object v3
 
-    invoke-virtual {v2, v0, v1, v3}, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemLongClick(Landroid/view/View;ILcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;)Z
+    invoke-virtual {v2, v0, v1, v3}, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;->ItemLongClick(Landroid/view/View;ILcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment$IMAGE_MODE;)Z
 
     goto :goto_0
 

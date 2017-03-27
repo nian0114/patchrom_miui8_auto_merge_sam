@@ -1,4 +1,4 @@
-.class Lcom/android/settings/SettingsActivity$16;
+.class Lcom/android/settings_ex/SettingsActivity$16;
 .super Ljava/lang/Object;
 .source "SettingsActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/SettingsActivity;->drawDashboardTab()V
+    value = Lcom/android/settings_ex/SettingsActivity;->drawDashboardTab()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/SettingsActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/SettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/SettingsActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/SettingsActivity;)V
     .locals 0
 
     .prologue
     .line 2313
-    iput-object p1, p0, Lcom/android/settings/SettingsActivity$16;->this$0:Lcom/android/settings/SettingsActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/SettingsActivity$16;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -62,9 +62,9 @@
 
     .prologue
     .line 2316
-    iget-object v0, p0, Lcom/android/settings/SettingsActivity$16;->this$0:Lcom/android/settings/SettingsActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/SettingsActivity$16;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
-    invoke-virtual {v0, p1}, Lcom/android/settings/SettingsActivity;->centerTabItem(I)V
+    invoke-virtual {v0, p1}, Lcom/android/settings_ex/SettingsActivity;->centerTabItem(I)V
 
     .line 2317
     return-void

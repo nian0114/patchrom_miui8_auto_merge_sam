@@ -1,11 +1,11 @@
-.class public final enum Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+.class public final enum Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 .super Ljava/lang/Enum;
 .source "FingerprintPassword.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;
+    value = Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,20 +17,20 @@
     value = {
         "Ljava/lang/Enum",
         "<",
-        "Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;",
+        "Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;",
         ">;"
     }
 .end annotation
 
 
 # static fields
-.field private static final synthetic $VALUES:[Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+.field private static final synthetic $VALUES:[Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-.field public static final enum ConfirmWrong:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+.field public static final enum ConfirmWrong:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-.field public static final enum Introduction:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+.field public static final enum Introduction:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-.field public static final enum NeedToConfirm:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+.field public static final enum NeedToConfirm:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
 
 # instance fields
@@ -57,7 +57,7 @@
     const/4 v2, 0x0
 
     .line 216
-    new-instance v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    new-instance v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     const-string v1, "Introduction"
 
@@ -65,12 +65,12 @@
 
     const v5, 0x7f0e14c9
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;-><init>(Ljava/lang/String;IIII)V
+    invoke-direct/range {v0 .. v5}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;-><init>(Ljava/lang/String;IIII)V
 
-    sput-object v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->Introduction:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    sput-object v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->Introduction:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     .line 219
-    new-instance v5, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    new-instance v5, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     const-string v6, "NeedToConfirm"
 
@@ -78,12 +78,12 @@
 
     move v10, v8
 
-    invoke-direct/range {v5 .. v10}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;-><init>(Ljava/lang/String;IIII)V
+    invoke-direct/range {v5 .. v10}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;-><init>(Ljava/lang/String;IIII)V
 
-    sput-object v5, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->NeedToConfirm:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    sput-object v5, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->NeedToConfirm:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     .line 222
-    new-instance v8, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    new-instance v8, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     const-string v9, "ConfirmWrong"
 
@@ -95,28 +95,28 @@
 
     move v12, v4
 
-    invoke-direct/range {v8 .. v13}, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;-><init>(Ljava/lang/String;IIII)V
+    invoke-direct/range {v8 .. v13}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;-><init>(Ljava/lang/String;IIII)V
 
-    sput-object v8, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->ConfirmWrong:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    sput-object v8, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->ConfirmWrong:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     .line 214
     const/4 v0, 0x3
 
-    new-array v0, v0, [Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    new-array v0, v0, [Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    sget-object v1, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->Introduction:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    sget-object v1, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->Introduction:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->NeedToConfirm:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    sget-object v1, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->NeedToConfirm:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     aput-object v1, v0, v7
 
-    sget-object v1, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->ConfirmWrong:Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    sget-object v1, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->ConfirmWrong:Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     aput-object v1, v0, v14
 
-    sput-object v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->$VALUES:[Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    sput-object v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->$VALUES:[Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     return-void
 .end method
@@ -137,47 +137,47 @@
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 229
-    iput p3, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->alphaHint:I
+    iput p3, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->alphaHint:I
 
     .line 230
-    iput p4, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->buttonText:I
+    iput p4, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->buttonText:I
 
     .line 231
-    iput p5, p0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->betaHint:I
+    iput p5, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->betaHint:I
 
     .line 232
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+.method public static valueOf(Ljava/lang/String;)Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
     .locals 1
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
     .line 214
-    const-class v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    const-class v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    check-cast v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     return-object v0
 .end method
 
-.method public static values()[Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+.method public static values()[Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
     .locals 1
 
     .prologue
     .line 214
-    sget-object v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->$VALUES:[Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    sget-object v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->$VALUES:[Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
-    invoke-virtual {v0}, [Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
+    check-cast v0, [Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment$Stage;
 
     return-object v0
 .end method

@@ -1,4 +1,4 @@
-.class public final Lcom/android/settings/search/Ranking;
+.class public final Lcom/android/settings_ex/search/Ranking;
 .super Ljava/lang/Object;
 .source "Ranking.java"
 
@@ -42,29 +42,29 @@
     .line 101
     const/16 v0, 0x800
 
-    sput v0, Lcom/android/settings/search/Ranking;->sCurrentBaseRank:I
+    sput v0, Lcom/android/settings_ex/search/Ranking;->sCurrentBaseRank:I
 
     .line 103
     const/16 v0, 0x64
 
-    sput v0, Lcom/android/settings/search/Ranking;->SUB_DEPTH:I
+    sput v0, Lcom/android/settings_ex/search/Ranking;->SUB_DEPTH:I
 
     .line 105
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/android/settings/search/Ranking;->sRankMap:Ljava/util/HashMap;
+    sput-object v0, Lcom/android/settings_ex/search/Ranking;->sRankMap:Ljava/util/HashMap;
 
     .line 106
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/android/settings/search/Ranking;->sBaseRankMap:Ljava/util/HashMap;
+    sput-object v0, Lcom/android/settings_ex/search/Ranking;->sBaseRankMap:Ljava/util/HashMap;
 
     .line 188
-    sget-object v0, Lcom/android/settings/search/Ranking;->sBaseRankMap:Ljava/util/HashMap;
+    sget-object v0, Lcom/android/settings_ex/search/Ranking;->sBaseRankMap:Ljava/util/HashMap;
 
     const-string v1, "com.android.settings"
 
@@ -85,7 +85,7 @@
 
     .prologue
     .line 192
-    sget-object v0, Lcom/android/settings/search/Ranking;->sRankMap:Ljava/util/HashMap;
+    sget-object v0, Lcom/android/settings_ex/search/Ranking;->sRankMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
@@ -99,13 +99,13 @@
 
     .prologue
     .line 257
-    sget-object v2, Lcom/android/settings/search/Ranking;->sBaseRankMap:Ljava/util/HashMap;
+    sget-object v2, Lcom/android/settings_ex/search/Ranking;->sBaseRankMap:Ljava/util/HashMap;
 
     monitor-enter v2
 
     .line 258
     :try_start_0
-    sget-object v1, Lcom/android/settings/search/Ranking;->sBaseRankMap:Ljava/util/HashMap;
+    sget-object v1, Lcom/android/settings_ex/search/Ranking;->sBaseRankMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -130,16 +130,16 @@
 
     .line 262
     :cond_0
-    sget v1, Lcom/android/settings/search/Ranking;->sCurrentBaseRank:I
+    sget v1, Lcom/android/settings_ex/search/Ranking;->sCurrentBaseRank:I
 
     add-int/lit8 v1, v1, 0x1
 
-    sput v1, Lcom/android/settings/search/Ranking;->sCurrentBaseRank:I
+    sput v1, Lcom/android/settings_ex/search/Ranking;->sCurrentBaseRank:I
 
     .line 263
-    sget-object v1, Lcom/android/settings/search/Ranking;->sBaseRankMap:Ljava/util/HashMap;
+    sget-object v1, Lcom/android/settings_ex/search/Ranking;->sBaseRankMap:Ljava/util/HashMap;
 
-    sget v3, Lcom/android/settings/search/Ranking;->sCurrentBaseRank:I
+    sget v3, Lcom/android/settings_ex/search/Ranking;->sCurrentBaseRank:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -148,7 +148,7 @@
     invoke-virtual {v1, p0, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 264
-    sget v1, Lcom/android/settings/search/Ranking;->sCurrentBaseRank:I
+    sget v1, Lcom/android/settings_ex/search/Ranking;->sCurrentBaseRank:I
 
     monitor-exit v2
 
@@ -176,7 +176,7 @@
 
     .line 214
     .local v0, "categoryId":Ljava/lang/Integer;
-    sget-object v1, Lcom/android/settings/search/Ranking;->sRankMap:Ljava/util/HashMap;
+    sget-object v1, Lcom/android/settings_ex/search/Ranking;->sRankMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -184,7 +184,7 @@
 
     if-eqz v1, :cond_0
 
-    sget-object v1, Lcom/android/settings/search/Ranking;->sRankMap:Ljava/util/HashMap;
+    sget-object v1, Lcom/android/settings_ex/search/Ranking;->sRankMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -250,7 +250,7 @@
 
     .prologue
     .line 244
-    sget-object v0, Lcom/android/settings/search/Ranking;->sRankMap:Ljava/util/HashMap;
+    sget-object v0, Lcom/android/settings_ex/search/Ranking;->sRankMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -265,7 +265,7 @@
     return-object v0
 
     :cond_0
-    sget-object v0, Lcom/android/settings/search/Ranking;->sRankMap:Ljava/util/HashMap;
+    sget-object v0, Lcom/android/settings_ex/search/Ranking;->sRankMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -286,7 +286,7 @@
 
     .line 228
     .local v0, "path":Ljava/lang/String;
-    sget-object v1, Lcom/android/settings/search/Ranking;->sRankMap:Ljava/util/HashMap;
+    sget-object v1, Lcom/android/settings_ex/search/Ranking;->sRankMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -294,7 +294,7 @@
 
     if-eqz v1, :cond_0
 
-    sget-object v1, Lcom/android/settings/search/Ranking;->sRankMap:Ljava/util/HashMap;
+    sget-object v1, Lcom/android/settings_ex/search/Ranking;->sRankMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -351,7 +351,7 @@
 
     .line 221
     .local v0, "type":Ljava/lang/Integer;
-    sget-object v1, Lcom/android/settings/search/Ranking;->sRankMap:Ljava/util/HashMap;
+    sget-object v1, Lcom/android/settings_ex/search/Ranking;->sRankMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -359,7 +359,7 @@
 
     if-eqz v1, :cond_0
 
-    sget-object v1, Lcom/android/settings/search/Ranking;->sRankMap:Ljava/util/HashMap;
+    sget-object v1, Lcom/android/settings_ex/search/Ranking;->sRankMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -427,7 +427,7 @@
     const/16 v2, 0x400
 
     .line 196
-    sget-object v1, Lcom/android/settings/search/Ranking;->sRankMap:Ljava/util/HashMap;
+    sget-object v1, Lcom/android/settings_ex/search/Ranking;->sRankMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -435,7 +435,7 @@
 
     if-eqz v1, :cond_0
 
-    sget-object v1, Lcom/android/settings/search/Ranking;->sRankMap:Ljava/util/HashMap;
+    sget-object v1, Lcom/android/settings_ex/search/Ranking;->sRankMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -452,7 +452,7 @@
 
     .line 197
     :cond_1
-    sget-object v1, Lcom/android/settings/search/Ranking;->sRankMap:Ljava/util/HashMap;
+    sget-object v1, Lcom/android/settings_ex/search/Ranking;->sRankMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -491,7 +491,7 @@
     .line 234
     if-eqz p0, :cond_0
 
-    sget-object v0, Lcom/android/settings/search/Ranking;->sRankMap:Ljava/util/HashMap;
+    sget-object v0, Lcom/android/settings_ex/search/Ranking;->sRankMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -500,7 +500,7 @@
     if-nez v0, :cond_0
 
     .line 235
-    sget-object v0, Lcom/android/settings/search/Ranking;->sRankMap:Ljava/util/HashMap;
+    sget-object v0, Lcom/android/settings_ex/search/Ranking;->sRankMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -516,7 +516,7 @@
 
     .prologue
     .line 202
-    sget-object v0, Lcom/android/settings/search/Ranking;->sBaseRankMap:Ljava/util/HashMap;
+    sget-object v0, Lcom/android/settings_ex/search/Ranking;->sBaseRankMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -530,7 +530,7 @@
 
     .line 203
     :cond_0
-    sget-object v0, Lcom/android/settings/search/Ranking;->sBaseRankMap:Ljava/util/HashMap;
+    sget-object v0, Lcom/android/settings_ex/search/Ranking;->sBaseRankMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -546,7 +546,7 @@
 
     .prologue
     .line 249
-    sget-object v0, Lcom/android/settings/search/Ranking;->sRankMap:Ljava/util/HashMap;
+    sget-object v0, Lcom/android/settings_ex/search/Ranking;->sRankMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->size()I
 

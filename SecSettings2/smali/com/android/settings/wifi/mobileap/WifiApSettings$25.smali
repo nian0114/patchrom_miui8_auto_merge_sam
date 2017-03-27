@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApSettings$25;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$25;
 .super Ljava/lang/Object;
 .source "WifiApSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/mobileap/WifiApSettings;->showNoHotspotModeWarningDialog()V
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->showNoHotspotModeWarningDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WifiApSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;)V
     .locals 0
 
     .prologue
     .line 1813
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApSettings$25;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$25;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,10 +45,10 @@
     const/4 v2, 0x0
 
     .line 1815
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSettings$25;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$25;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WifiApSettings;->access$700(Lcom/android/settings/wifi/mobileap/WifiApSettings;)Landroid/net/wifi/WifiManager;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->access$700(Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;)Landroid/net/wifi/WifiManager;
 
     move-result-object v0
 
@@ -57,16 +57,16 @@
     invoke-virtual {v0, v1, v2}, Landroid/net/wifi/WifiManager;->setWifiApEnabled(Landroid/net/wifi/WifiConfiguration;Z)Z
 
     .line 1816
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSettings$25;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$25;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
-    # invokes: Lcom/android/settings/wifi/mobileap/WifiApSettings;->setRvfMode(I)V
-    invoke-static {v0, v2}, Lcom/android/settings/wifi/mobileap/WifiApSettings;->access$4900(Lcom/android/settings/wifi/mobileap/WifiApSettings;I)V
+    # invokes: Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->setRvfMode(I)V
+    invoke-static {v0, v2}, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->access$4900(Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;I)V
 
     .line 1817
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSettings$25;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$25;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
-    # setter for: Lcom/android/settings/wifi/mobileap/WifiApSettings;->isNoHotSpotModeWarningShown:Z
-    invoke-static {v0, v2}, Lcom/android/settings/wifi/mobileap/WifiApSettings;->access$5002(Lcom/android/settings/wifi/mobileap/WifiApSettings;Z)Z
+    # setter for: Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->isNoHotSpotModeWarningShown:Z
+    invoke-static {v0, v2}, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->access$5002(Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;Z)Z
 
     .line 1818
     return-void

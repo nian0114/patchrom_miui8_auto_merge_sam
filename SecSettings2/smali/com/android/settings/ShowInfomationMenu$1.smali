@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/ShowInfomationMenu$1;
+.class final Lcom/android/settings_ex/ShowInfomationMenu$1;
 .super Ljava/lang/Object;
 .source "ShowInfomationMenu.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/ShowInfomationMenu;->showWeatherWidgetMessageDialog(Landroid/content/Context;)V
+    value = Lcom/android/settings_ex/ShowInfomationMenu;->showWeatherWidgetMessageDialog(Landroid/content/Context;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

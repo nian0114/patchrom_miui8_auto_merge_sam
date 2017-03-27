@@ -1,4 +1,4 @@
-.class Lcom/android/settings/IconBackgrounds$3;
+.class Lcom/android/settings_ex/IconBackgrounds$3;
 .super Ljava/lang/Object;
 .source "IconBackgrounds.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/IconBackgrounds;->onCreateOptionsMenu(Landroid/view/Menu;)Z
+    value = Lcom/android/settings_ex/IconBackgrounds;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/IconBackgrounds;
+.field final synthetic this$0:Lcom/android/settings_ex/IconBackgrounds;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/IconBackgrounds;)V
+.method constructor <init>(Lcom/android/settings_ex/IconBackgrounds;)V
     .locals 0
 
     .prologue
     .line 147
-    iput-object p1, p0, Lcom/android/settings/IconBackgrounds$3;->this$0:Lcom/android/settings/IconBackgrounds;
+    iput-object p1, p0, Lcom/android/settings_ex/IconBackgrounds$3;->this$0:Lcom/android/settings_ex/IconBackgrounds;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,9 +42,9 @@
 
     .prologue
     .line 150
-    iget-object v0, p0, Lcom/android/settings/IconBackgrounds$3;->this$0:Lcom/android/settings/IconBackgrounds;
+    iget-object v0, p0, Lcom/android/settings_ex/IconBackgrounds$3;->this$0:Lcom/android/settings_ex/IconBackgrounds;
 
-    invoke-virtual {v0}, Lcom/android/settings/IconBackgrounds;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/IconBackgrounds;->finish()V
 
     .line 151
     return-void

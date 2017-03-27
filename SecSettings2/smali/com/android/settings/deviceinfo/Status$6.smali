@@ -1,11 +1,11 @@
-.class Lcom/android/settings/deviceinfo/Status$6;
+.class Lcom/android/settings_ex/deviceinfo/Status$6;
 .super Landroid/database/ContentObserver;
 .source "Status.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/Status;
+    value = Lcom/android/settings_ex/deviceinfo/Status;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/Status;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/Status;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/Status;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/Status;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 868
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/Status$6;->this$0:Lcom/android/settings/deviceinfo/Status;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/Status$6;->this$0:Lcom/android/settings_ex/deviceinfo/Status;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -67,13 +67,13 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 873
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/Status$6;->this$0:Lcom/android/settings/deviceinfo/Status;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/Status$6;->this$0:Lcom/android/settings_ex/deviceinfo/Status;
 
-    new-instance v1, Lcom/android/settings/deviceinfo/Status$6$1;
+    new-instance v1, Lcom/android/settings_ex/deviceinfo/Status$6$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/deviceinfo/Status$6$1;-><init>(Lcom/android/settings/deviceinfo/Status$6;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/deviceinfo/Status$6$1;-><init>(Lcom/android/settings_ex/deviceinfo/Status$6;)V
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/Status;->runOnUiThread(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/deviceinfo/Status;->runOnUiThread(Ljava/lang/Runnable;)V
 
     .line 879
     return-void

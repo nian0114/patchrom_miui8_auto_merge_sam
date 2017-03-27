@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wfd/WifiDisplaySettings$23;
+.class Lcom/android/settings_ex/wfd/WifiDisplaySettings$23;
 .super Ljava/lang/Object;
 .source "WifiDisplaySettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wfd/WifiDisplaySettings;->showInputMethod()V
+    value = Lcom/android/settings_ex/wfd/WifiDisplaySettings;->showInputMethod()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wfd/WifiDisplaySettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wfd/WifiDisplaySettings;)V
     .locals 0
 
     .prologue
     .line 2227
-    iput-object p1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$23;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$23;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,9 +42,9 @@
     .prologue
     .line 2232
     :try_start_0
-    iget-object v2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$23;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iget-object v2, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$23;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/wfd/WifiDisplaySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Lcom/android/settings_ex/wfd/WifiDisplaySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -58,10 +58,10 @@
 
     .line 2233
     .local v1, "imm":Landroid/view/inputmethod/InputMethodManager;
-    iget-object v2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$23;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iget-object v2, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$23;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
-    # getter for: Lcom/android/settings/wfd/WifiDisplaySettings;->mGlobalEditDeviceName:Landroid/widget/EditText;
-    invoke-static {v2}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$3300(Lcom/android/settings/wfd/WifiDisplaySettings;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/wfd/WifiDisplaySettings;->mGlobalEditDeviceName:Landroid/widget/EditText;
+    invoke-static {v2}, Lcom/android/settings_ex/wfd/WifiDisplaySettings;->access$3300(Lcom/android/settings_ex/wfd/WifiDisplaySettings;)Landroid/widget/EditText;
 
     move-result-object v2
 

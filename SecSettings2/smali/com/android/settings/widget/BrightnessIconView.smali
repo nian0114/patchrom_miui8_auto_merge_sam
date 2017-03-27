@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/widget/BrightnessIconView;
+.class public Lcom/android/settings_ex/widget/BrightnessIconView;
 .super Landroid/widget/ImageView;
 .source "BrightnessIconView.java"
 
@@ -22,7 +22,7 @@
     .line 20
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lcom/android/settings/widget/BrightnessIconView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, v0}, Lcom/android/settings_ex/widget/BrightnessIconView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 21
     return-void
@@ -37,7 +37,7 @@
     .line 24
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings/widget/BrightnessIconView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings_ex/widget/BrightnessIconView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 25
     return-void
@@ -53,7 +53,7 @@
     .line 28
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/settings/widget/BrightnessIconView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/settings_ex/widget/BrightnessIconView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 29
     return-void
@@ -73,18 +73,18 @@
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 14
-    iput v1, p0, Lcom/android/settings/widget/BrightnessIconView;->mInnerCircleRadious:F
+    iput v1, p0, Lcom/android/settings_ex/widget/BrightnessIconView;->mInnerCircleRadious:F
 
     .line 16
     const v0, 0x461c4000    # 10000.0f
 
-    iput v0, p0, Lcom/android/settings/widget/BrightnessIconView;->mMax:F
+    iput v0, p0, Lcom/android/settings_ex/widget/BrightnessIconView;->mMax:F
 
     .line 17
-    iput v1, p0, Lcom/android/settings/widget/BrightnessIconView;->mRatio:F
+    iput v1, p0, Lcom/android/settings_ex/widget/BrightnessIconView;->mRatio:F
 
     .line 34
-    invoke-direct {p0, p1}, Lcom/android/settings/widget/BrightnessIconView;->Init(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/widget/BrightnessIconView;->Init(Landroid/content/Context;)V
 
     .line 35
     return-void
@@ -106,33 +106,33 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/widget/BrightnessIconView;->mInnerCircleRadious:F
+    iput v0, p0, Lcom/android/settings_ex/widget/BrightnessIconView;->mInnerCircleRadious:F
 
     .line 41
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/widget/BrightnessIconView;->mCirclePaint:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/android/settings_ex/widget/BrightnessIconView;->mCirclePaint:Landroid/graphics/Paint;
 
     .line 42
-    iget-object v0, p0, Lcom/android/settings/widget/BrightnessIconView;->mCirclePaint:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/android/settings_ex/widget/BrightnessIconView;->mCirclePaint:Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     .line 43
-    iget-object v0, p0, Lcom/android/settings/widget/BrightnessIconView;->mCirclePaint:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/android/settings_ex/widget/BrightnessIconView;->mCirclePaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
     .line 44
-    iget-object v0, p0, Lcom/android/settings/widget/BrightnessIconView;->mCirclePaint:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/android/settings_ex/widget/BrightnessIconView;->mCirclePaint:Landroid/graphics/Paint;
 
-    invoke-virtual {p0}, Lcom/android/settings/widget/BrightnessIconView;->getImageTintList()Landroid/content/res/ColorStateList;
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/BrightnessIconView;->getImageTintList()Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
@@ -156,14 +156,14 @@
     .line 63
     int-to-float v0, p1
 
-    iget v1, p0, Lcom/android/settings/widget/BrightnessIconView;->mMax:F
+    iget v1, p0, Lcom/android/settings_ex/widget/BrightnessIconView;->mMax:F
 
     div-float/2addr v0, v1
 
-    iput v0, p0, Lcom/android/settings/widget/BrightnessIconView;->mRatio:F
+    iput v0, p0, Lcom/android/settings_ex/widget/BrightnessIconView;->mRatio:F
 
     .line 64
-    invoke-virtual {p0}, Lcom/android/settings/widget/BrightnessIconView;->invalidate()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/BrightnessIconView;->invalidate()V
 
     .line 65
     return-void
@@ -193,15 +193,15 @@
 
     div-float/2addr v0, v3
 
-    iget v1, p0, Lcom/android/settings/widget/BrightnessIconView;->mInnerCircleRadious:F
+    iget v1, p0, Lcom/android/settings_ex/widget/BrightnessIconView;->mInnerCircleRadious:F
 
     sub-float/2addr v0, v1
 
-    iget v1, p0, Lcom/android/settings/widget/BrightnessIconView;->mInnerCircleRadious:F
+    iget v1, p0, Lcom/android/settings_ex/widget/BrightnessIconView;->mInnerCircleRadious:F
 
     mul-float/2addr v1, v3
 
-    iget v2, p0, Lcom/android/settings/widget/BrightnessIconView;->mRatio:F
+    iget v2, p0, Lcom/android/settings_ex/widget/BrightnessIconView;->mRatio:F
 
     mul-float/2addr v1, v2
 
@@ -232,9 +232,9 @@
 
     div-float/2addr v1, v3
 
-    iget v2, p0, Lcom/android/settings/widget/BrightnessIconView;->mInnerCircleRadious:F
+    iget v2, p0, Lcom/android/settings_ex/widget/BrightnessIconView;->mInnerCircleRadious:F
 
-    iget-object v3, p0, Lcom/android/settings/widget/BrightnessIconView;->mCirclePaint:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/android/settings_ex/widget/BrightnessIconView;->mCirclePaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
@@ -253,7 +253,7 @@
     .line 59
     int-to-float v0, p1
 
-    iput v0, p0, Lcom/android/settings/widget/BrightnessIconView;->mMax:F
+    iput v0, p0, Lcom/android/settings_ex/widget/BrightnessIconView;->mMax:F
 
     .line 60
     return-void

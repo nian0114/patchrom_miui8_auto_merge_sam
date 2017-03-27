@@ -1,12 +1,12 @@
-.class public Lcom/android/settings/deviceinfo/StatusVZW;
-.super Lcom/android/settings/InstrumentedPreferenceActivity;
+.class public Lcom/android/settings_ex/deviceinfo/StatusVZW;
+.super Lcom/android/settings_ex/InstrumentedPreferenceActivity;
 .source "StatusVZW.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/deviceinfo/StatusVZW$MyHandler;
+        Lcom/android/settings_ex/deviceinfo/StatusVZW$MyHandler;
     }
 .end annotation
 
@@ -241,7 +241,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/android/settings/deviceinfo/StatusVZW;->PHONE_RELATED_ENTRIES:[Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->PHONE_RELATED_ENTRIES:[Ljava/lang/String;
 
     .line 232
     new-array v0, v7, [Ljava/lang/String;
@@ -262,7 +262,7 @@
 
     aput-object v1, v0, v6
 
-    sput-object v0, Lcom/android/settings/deviceinfo/StatusVZW;->CONNECTIVITY_INTENTS:[Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->CONNECTIVITY_INTENTS:[Ljava/lang/String;
 
     return-void
 .end method
@@ -274,200 +274,200 @@
     const/4 v1, 0x0
 
     .line 139
-    invoke-direct {p0}, Lcom/android/settings/InstrumentedPreferenceActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/InstrumentedPreferenceActivity;-><init>()V
 
     .line 184
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->user_name:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->user_name:Ljava/lang/String;
 
     .line 185
     const-string v0, "000"
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_three:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_three:Ljava/lang/String;
 
     .line 186
     const-string v0, "0000"
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_four:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_four:Ljava/lang/String;
 
     .line 187
     const-string v0, "00000"
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_five:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_five:Ljava/lang/String;
 
     .line 188
     const-string v0, "000000"
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_six:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_six:Ljava/lang/String;
 
     .line 189
     const-string v0, "0000000"
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_seven:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_seven:Ljava/lang/String;
 
     .line 190
     const-string v0, "00000000"
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_eight:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_eight:Ljava/lang/String;
 
     .line 191
     const-string v0, "000000000"
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_nine:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_nine:Ljava/lang/String;
 
     .line 193
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mServiceMessenger:Landroid/os/Messenger;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mServiceMessenger:Landroid/os/Messenger;
 
     .line 196
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->isResetFileExist:Ljava/lang/Boolean;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->isResetFileExist:Ljava/lang/Boolean;
 
     .line 278
-    iput v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mActivePhone:I
+    iput v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mActivePhone:I
 
     .line 289
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->isSysScopeStatus:I
+    iput v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->isSysScopeStatus:I
 
     .line 333
-    new-instance v0, Lcom/android/settings/deviceinfo/StatusVZW$1;
+    new-instance v0, Lcom/android/settings_ex/deviceinfo/StatusVZW$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/deviceinfo/StatusVZW$1;-><init>(Lcom/android/settings/deviceinfo/StatusVZW;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW$1;-><init>(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
 
     .line 346
-    new-instance v0, Lcom/android/settings/deviceinfo/StatusVZW$2;
+    new-instance v0, Lcom/android/settings_ex/deviceinfo/StatusVZW$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/deviceinfo/StatusVZW$2;-><init>(Lcom/android/settings/deviceinfo/StatusVZW;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW$2;-><init>(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mSysScopeReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mSysScopeReceiver:Landroid/content/BroadcastReceiver;
 
     .line 391
-    new-instance v0, Lcom/android/settings/deviceinfo/StatusVZW$4;
+    new-instance v0, Lcom/android/settings_ex/deviceinfo/StatusVZW$4;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/deviceinfo/StatusVZW$4;-><init>(Lcom/android/settings/deviceinfo/StatusVZW;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW$4;-><init>(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mAreaInfoReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mAreaInfoReceiver:Landroid/content/BroadcastReceiver;
 
     .line 409
-    new-instance v0, Lcom/android/settings/deviceinfo/StatusVZW$5;
+    new-instance v0, Lcom/android/settings_ex/deviceinfo/StatusVZW$5;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/deviceinfo/StatusVZW$5;-><init>(Lcom/android/settings/deviceinfo/StatusVZW;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW$5;-><init>(Lcom/android/settings_ex/deviceinfo/StatusVZW;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mAirplaneModeObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mAirplaneModeObserver:Landroid/database/ContentObserver;
 
     .line 419
-    new-instance v0, Lcom/android/settings/deviceinfo/StatusVZW$6;
+    new-instance v0, Lcom/android/settings_ex/deviceinfo/StatusVZW$6;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/deviceinfo/StatusVZW$6;-><init>(Lcom/android/settings/deviceinfo/StatusVZW;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW$6;-><init>(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mConnectivityReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mConnectivityReceiver:Landroid/content/BroadcastReceiver;
 
     .line 503
-    new-instance v0, Lcom/android/settings/deviceinfo/StatusVZW$7;
+    new-instance v0, Lcom/android/settings_ex/deviceinfo/StatusVZW$7;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/deviceinfo/StatusVZW$7;-><init>(Lcom/android/settings/deviceinfo/StatusVZW;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW$7;-><init>(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->rilHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->rilHandler:Landroid/os/Handler;
 
     .line 542
     new-instance v0, Landroid/os/Messenger;
 
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->rilHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->rilHandler:Landroid/os/Handler;
 
     invoke-direct {v0, v1}, Landroid/os/Messenger;-><init>(Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mSvcModeMessenger:Landroid/os/Messenger;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mSvcModeMessenger:Landroid/os/Messenger;
 
     .line 1506
-    new-instance v0, Lcom/android/settings/deviceinfo/StatusVZW$10;
+    new-instance v0, Lcom/android/settings_ex/deviceinfo/StatusVZW$10;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/deviceinfo/StatusVZW$10;-><init>(Lcom/android/settings/deviceinfo/StatusVZW;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW$10;-><init>(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mReceiver:Landroid/content/BroadcastReceiver;
 
     .line 1561
-    new-instance v0, Lcom/android/settings/deviceinfo/StatusVZW$11;
+    new-instance v0, Lcom/android/settings_ex/deviceinfo/StatusVZW$11;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/deviceinfo/StatusVZW$11;-><init>(Lcom/android/settings/deviceinfo/StatusVZW;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW$11;-><init>(Lcom/android/settings_ex/deviceinfo/StatusVZW;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mWfcObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mWfcObserver:Landroid/database/ContentObserver;
 
     .line 1840
-    new-instance v0, Lcom/android/settings/deviceinfo/StatusVZW$12;
+    new-instance v0, Lcom/android/settings_ex/deviceinfo/StatusVZW$12;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/deviceinfo/StatusVZW$12;-><init>(Lcom/android/settings/deviceinfo/StatusVZW;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW$12;-><init>(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mSecPhoneServiceConnection:Landroid/content/ServiceConnection;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mSecPhoneServiceConnection:Landroid/content/ServiceConnection;
 
     .line 1904
-    new-instance v0, Lcom/android/settings/deviceinfo/StatusVZW$13;
+    new-instance v0, Lcom/android/settings_ex/deviceinfo/StatusVZW$13;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/deviceinfo/StatusVZW$13;-><init>(Lcom/android/settings/deviceinfo/StatusVZW;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW$13;-><init>(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneHandler:Landroid/os/Handler;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/deviceinfo/StatusVZW;)Lcom/android/internal/telephony/PhoneStateIntentReceiver;
+.method static synthetic access$000(Lcom/android/settings_ex/deviceinfo/StatusVZW;)Lcom/android/internal/telephony/PhoneStateIntentReceiver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     .prologue
     .line 139
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneStateReceiver:Lcom/android/internal/telephony/PhoneStateIntentReceiver;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneStateReceiver:Lcom/android/internal/telephony/PhoneStateIntentReceiver;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/deviceinfo/StatusVZW;Landroid/telephony/ServiceState;)V
+.method static synthetic access$100(Lcom/android/settings_ex/deviceinfo/StatusVZW;Landroid/telephony/ServiceState;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
     .param p1, "x1"    # Landroid/telephony/ServiceState;
 
     .prologue
     .line 139
-    invoke-direct {p0, p1}, Lcom/android/settings/deviceinfo/StatusVZW;->updateServiceState(Landroid/telephony/ServiceState;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->updateServiceState(Landroid/telephony/ServiceState;)V
 
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/deviceinfo/StatusVZW;)[Lcom/android/internal/telephony/Phone;
+.method static synthetic access$1000(Lcom/android/settings_ex/deviceinfo/StatusVZW;)[Lcom/android/internal/telephony/Phone;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     .prologue
     .line 139
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhone:[Lcom/android/internal/telephony/Phone;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhone:[Lcom/android/internal/telephony/Phone;
 
     return-object v0
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/deviceinfo/StatusVZW;I)V
+.method static synthetic access$1100(Lcom/android/settings_ex/deviceinfo/StatusVZW;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
     .param p1, "x1"    # I
 
     .prologue
     .line 139
-    invoke-direct {p0, p1}, Lcom/android/settings/deviceinfo/StatusVZW;->updateStatus(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->updateStatus(I)V
 
     return-void
 .end method
@@ -477,18 +477,18 @@
 
     .prologue
     .line 139
-    sget-object v0, Lcom/android/settings/deviceinfo/StatusVZW;->CONNECTIVITY_INTENTS:[Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->CONNECTIVITY_INTENTS:[Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$1300(Lcom/android/settings/deviceinfo/StatusVZW;)Landroid/os/Handler;
+.method static synthetic access$1300(Lcom/android/settings_ex/deviceinfo/StatusVZW;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     .prologue
     .line 139
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
@@ -498,7 +498,7 @@
 
     .prologue
     .line 139
-    sget-object v0, Lcom/android/settings/deviceinfo/StatusVZW;->buf:[B
+    sget-object v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->buf:[B
 
     return-object v0
 .end method
@@ -509,83 +509,83 @@
 
     .prologue
     .line 139
-    sput-object p0, Lcom/android/settings/deviceinfo/StatusVZW;->buf:[B
+    sput-object p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->buf:[B
 
     return-object p0
 .end method
 
-.method static synthetic access$1500(Lcom/android/settings/deviceinfo/StatusVZW;)Landroid/preference/Preference;
+.method static synthetic access$1500(Lcom/android/settings_ex/deviceinfo/StatusVZW;)Landroid/preference/Preference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     .prologue
     .line 139
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mUserName:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mUserName:Landroid/preference/Preference;
 
     return-object v0
 .end method
 
-.method static synthetic access$1502(Lcom/android/settings/deviceinfo/StatusVZW;Landroid/preference/Preference;)Landroid/preference/Preference;
+.method static synthetic access$1502(Lcom/android/settings_ex/deviceinfo/StatusVZW;Landroid/preference/Preference;)Landroid/preference/Preference;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
     .param p1, "x1"    # Landroid/preference/Preference;
 
     .prologue
     .line 139
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mUserName:Landroid/preference/Preference;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mUserName:Landroid/preference/Preference;
 
     return-object p1
 .end method
 
-.method static synthetic access$1600(Lcom/android/settings/deviceinfo/StatusVZW;)I
+.method static synthetic access$1600(Lcom/android/settings_ex/deviceinfo/StatusVZW;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     .prologue
     .line 139
-    iget v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->NAI_length:I
+    iget v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->NAI_length:I
 
     return v0
 .end method
 
-.method static synthetic access$1602(Lcom/android/settings/deviceinfo/StatusVZW;I)I
+.method static synthetic access$1602(Lcom/android/settings_ex/deviceinfo/StatusVZW;I)I
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
     .param p1, "x1"    # I
 
     .prologue
     .line 139
-    iput p1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->NAI_length:I
+    iput p1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->NAI_length:I
 
     return p1
 .end method
 
-.method static synthetic access$1700(Lcom/android/settings/deviceinfo/StatusVZW;)Ljava/lang/String;
+.method static synthetic access$1700(Lcom/android/settings_ex/deviceinfo/StatusVZW;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     .prologue
     .line 139
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->user_name:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->user_name:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$1702(Lcom/android/settings/deviceinfo/StatusVZW;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$1702(Lcom/android/settings_ex/deviceinfo/StatusVZW;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 139
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->user_name:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->user_name:Ljava/lang/String;
 
     return-object p1
 .end method
 
-.method static synthetic access$1784(Lcom/android/settings/deviceinfo/StatusVZW;Ljava/lang/Object;)Ljava/lang/String;
+.method static synthetic access$1784(Lcom/android/settings_ex/deviceinfo/StatusVZW;Ljava/lang/Object;)Ljava/lang/String;
     .locals 2
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
     .param p1, "x1"    # Ljava/lang/Object;
 
     .prologue
@@ -594,7 +594,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->user_name:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->user_name:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -608,154 +608,154 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->user_name:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->user_name:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$1802(Lcom/android/settings/deviceinfo/StatusVZW;Z)Z
+.method static synthetic access$1802(Lcom/android/settings_ex/deviceinfo/StatusVZW;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
     .param p1, "x1"    # Z
 
     .prologue
     .line 139
-    iput-boolean p1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mImsRegistered:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mImsRegistered:Z
 
     return p1
 .end method
 
-.method static synthetic access$1900(Lcom/android/settings/deviceinfo/StatusVZW;)V
+.method static synthetic access$1900(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     .prologue
     .line 139
-    invoke-direct {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->updateRegistrationStatus()V
+    invoke-direct {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->updateRegistrationStatus()V
 
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/deviceinfo/StatusVZW;)V
+.method static synthetic access$200(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     .prologue
     .line 139
-    invoke-direct {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->updateNetworkType()V
+    invoke-direct {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->updateNetworkType()V
 
     return-void
 .end method
 
-.method static synthetic access$2002(Lcom/android/settings/deviceinfo/StatusVZW;Landroid/os/Messenger;)Landroid/os/Messenger;
+.method static synthetic access$2002(Lcom/android/settings_ex/deviceinfo/StatusVZW;Landroid/os/Messenger;)Landroid/os/Messenger;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
     .param p1, "x1"    # Landroid/os/Messenger;
 
     .prologue
     .line 139
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mServiceMessenger:Landroid/os/Messenger;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mServiceMessenger:Landroid/os/Messenger;
 
     return-object p1
 .end method
 
-.method static synthetic access$2100(Lcom/android/settings/deviceinfo/StatusVZW;)V
+.method static synthetic access$2100(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     .prologue
     .line 139
-    invoke-direct {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getOemData()V
+    invoke-direct {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getOemData()V
 
     return-void
 .end method
 
-.method static synthetic access$2200(Lcom/android/settings/deviceinfo/StatusVZW;)Landroid/preference/Preference;
+.method static synthetic access$2200(Lcom/android/settings_ex/deviceinfo/StatusVZW;)Landroid/preference/Preference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     .prologue
     .line 139
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mFirstCall:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mFirstCall:Landroid/preference/Preference;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/deviceinfo/StatusVZW;)Landroid/preference/Preference;
+.method static synthetic access$300(Lcom/android/settings_ex/deviceinfo/StatusVZW;)Landroid/preference/Preference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     .prologue
     .line 139
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mBatteryLevel:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mBatteryLevel:Landroid/preference/Preference;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/deviceinfo/StatusVZW;)Landroid/preference/Preference;
+.method static synthetic access$400(Lcom/android/settings_ex/deviceinfo/StatusVZW;)Landroid/preference/Preference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     .prologue
     .line 139
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mBatteryStatus:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mBatteryStatus:Landroid/preference/Preference;
 
     return-object v0
 .end method
 
-.method static synthetic access$502(Lcom/android/settings/deviceinfo/StatusVZW;I)I
+.method static synthetic access$502(Lcom/android/settings_ex/deviceinfo/StatusVZW;I)I
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
     .param p1, "x1"    # I
 
     .prologue
     .line 139
-    iput p1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->isSysScopeStatus:I
+    iput p1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->isSysScopeStatus:I
 
     return p1
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/deviceinfo/StatusVZW;)V
+.method static synthetic access$600(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     .prologue
     .line 139
-    invoke-direct {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->changeSysScopeStatus()V
+    invoke-direct {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->changeSysScopeStatus()V
 
     return-void
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/deviceinfo/StatusVZW;)V
+.method static synthetic access$700(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     .prologue
     .line 139
-    invoke-direct {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->updateDataState()V
+    invoke-direct {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->updateDataState()V
 
     return-void
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/deviceinfo/StatusVZW;)I
+.method static synthetic access$800(Lcom/android/settings_ex/deviceinfo/StatusVZW;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     .prologue
     .line 139
-    iget v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mActivePhone:I
+    iget v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mActivePhone:I
 
     return v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/deviceinfo/StatusVZW;Ljava/lang/String;)V
+.method static synthetic access$900(Lcom/android/settings_ex/deviceinfo/StatusVZW;Ljava/lang/String;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StatusVZW;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StatusVZW;
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 139
-    invoke-direct {p0, p1}, Lcom/android/settings/deviceinfo/StatusVZW;->updateAreaInfo(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->updateAreaInfo(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -773,7 +773,7 @@
     .line 1457
     const-string v6, "sysscope_status"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
@@ -799,7 +799,7 @@
 
     .line 1462
     .local v4, "ut":J
-    iget v6, p0, Lcom/android/settings/deviceinfo/StatusVZW;->isSysScopeStatus:I
+    iget v6, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->isSysScopeStatus:I
 
     if-ne v6, v8, :cond_0
 
@@ -810,7 +810,7 @@
     if-lez v6, :cond_0
 
     .line 1463
-    invoke-virtual {p0, v9}, Lcom/android/settings/deviceinfo/StatusVZW;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -823,14 +823,14 @@
 
     .line 1465
     :cond_0
-    iget v6, p0, Lcom/android/settings/deviceinfo/StatusVZW;->isSysScopeStatus:I
+    iget v6, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->isSysScopeStatus:I
 
     const/4 v7, 0x2
 
     if-ne v6, v7, :cond_1
 
     .line 1466
-    invoke-virtual {p0, v9}, Lcom/android/settings/deviceinfo/StatusVZW;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -838,14 +838,14 @@
 
     .line 1467
     :cond_1
-    iget v6, p0, Lcom/android/settings/deviceinfo/StatusVZW;->isSysScopeStatus:I
+    iget v6, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->isSysScopeStatus:I
 
     if-ne v6, v8, :cond_2
 
     .line 1468
     const v6, 0x7f0e1387
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/deviceinfo/StatusVZW;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -855,7 +855,7 @@
     :cond_2
     const v6, 0x7f0e1385
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/deviceinfo/StatusVZW;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -880,11 +880,11 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 1836
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mSecPhoneServiceConnection:Landroid/content/ServiceConnection;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mSecPhoneServiceConnection:Landroid/content/ServiceConnection;
 
     const/4 v2, 0x1
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
+    invoke-virtual {p0, v0, v1, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
     .line 1837
     return-void
@@ -934,7 +934,7 @@
 
     move-result-object v3
 
-    invoke-direct {p0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->pad(I)Ljava/lang/String;
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->pad(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -948,7 +948,7 @@
 
     move-result-object v3
 
-    invoke-direct {p0, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->pad(I)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->pad(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1048,7 +1048,7 @@
     if-ne v0, v2, :cond_1
 
     .line 1597
-    invoke-direct {p0, p1}, Lcom/android/settings/deviceinfo/StatusVZW;->convertHexaESNtoDec(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->convertHexaESNtoDec(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -1064,7 +1064,7 @@
     if-ne v0, v2, :cond_0
 
     .line 1599
-    invoke-direct {p0, p1}, Lcom/android/settings/deviceinfo/StatusVZW;->convertHexaMEIDtoDec(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->convertHexaMEIDtoDec(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -1180,7 +1180,7 @@
 
     .line 1635
     :pswitch_4
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_three:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_three:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1188,7 +1188,7 @@
 
     .line 1638
     :pswitch_5
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_four:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_four:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1196,7 +1196,7 @@
 
     .line 1641
     :pswitch_6
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_five:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_five:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1204,7 +1204,7 @@
 
     .line 1644
     :pswitch_7
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_six:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_six:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1212,7 +1212,7 @@
 
     .line 1647
     :pswitch_8
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_seven:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_seven:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1333,7 +1333,7 @@
 
     .line 1672
     :pswitch_2
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_three:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_three:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1341,7 +1341,7 @@
 
     .line 1675
     :pswitch_3
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_four:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_four:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1349,7 +1349,7 @@
 
     .line 1678
     :pswitch_4
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_five:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_five:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1357,7 +1357,7 @@
 
     .line 1681
     :pswitch_5
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_six:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_six:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1365,7 +1365,7 @@
 
     .line 1684
     :pswitch_6
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_seven:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_seven:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1373,7 +1373,7 @@
 
     .line 1687
     :pswitch_7
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_eight:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_eight:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1381,7 +1381,7 @@
 
     .line 1690
     :pswitch_8
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_nine:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_nine:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1405,7 +1405,7 @@
 
     .line 1704
     :pswitch_b
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_three:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_three:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1413,7 +1413,7 @@
 
     .line 1707
     :pswitch_c
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_four:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_four:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1421,7 +1421,7 @@
 
     .line 1710
     :pswitch_d
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_five:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_five:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1429,7 +1429,7 @@
 
     .line 1713
     :pswitch_e
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_six:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_six:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1437,7 +1437,7 @@
 
     .line 1716
     :pswitch_f
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->zero_seven:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->zero_seven:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1644,7 +1644,7 @@
     .local v0, "imei":Ljava/lang/String;
     const-string v2, "USC"
 
-    sget-object v3, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1654,7 +1654,7 @@
 
     const-string v2, "XAR"
 
-    sget-object v3, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1689,7 +1689,7 @@
     :cond_2
     const-string v2, "VZW"
 
-    sget-object v3, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1700,7 +1700,7 @@
     if-eqz v0, :cond_1
 
     .line 1950
-    invoke-direct {p0, v0}, Lcom/android/settings/deviceinfo/StatusVZW;->convert2VZWFormat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->convert2VZWFormat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1727,7 +1727,7 @@
     .local v0, "iccId":Ljava/lang/String;
     const-string v2, "VZW"
 
-    sget-object v3, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1738,7 +1738,7 @@
     if-eqz v0, :cond_0
 
     .line 1938
-    invoke-direct {p0, v0}, Lcom/android/settings/deviceinfo/StatusVZW;->convert2VZWFormat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->convert2VZWFormat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1753,7 +1753,7 @@
 
     .prologue
     .line 1115
-    iget-object v4, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhone:[Lcom/android/internal/telephony/Phone;
+    iget-object v4, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhone:[Lcom/android/internal/telephony/Phone;
 
     aget-object v3, v4, p1
 
@@ -1831,7 +1831,7 @@
 
     move-result-object v4
 
-    invoke-direct {p0, v0}, Lcom/android/settings/deviceinfo/StatusVZW;->convertDeviceIdtoDec(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->convertDeviceIdtoDec(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v5
 
@@ -1883,7 +1883,7 @@
     :cond_2
     const-string v4, "VZW"
 
-    sget-object v5, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1891,7 +1891,7 @@
 
     if-nez v4, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isMetroPCS()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMetroPCS()Z
 
     move-result v4
 
@@ -1946,7 +1946,7 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mHandler:Landroid/os/Handler;
+    iget-object v5, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mHandler:Landroid/os/Handler;
 
     const/16 v6, 0xe
 
@@ -1954,7 +1954,7 @@
 
     move-result-object v5
 
-    invoke-direct {p0, v4, v5}, Lcom/android/settings/deviceinfo/StatusVZW;->invokeOemRilRequestRaw([BLandroid/os/Message;)V
+    invoke-direct {p0, v4, v5}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->invokeOemRilRequestRaw([BLandroid/os/Message;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2061,7 +2061,7 @@
 
     .prologue
     .line 1138
-    iget v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mActivePhone:I
+    iget v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mActivePhone:I
 
     invoke-static {v1}, Lcom/samsung/android/telephony/MultiSimManager;->getNetworkOperatorName(I)Ljava/lang/String;
 
@@ -2071,7 +2071,7 @@
     .local v0, "opName":Ljava/lang/String;
     const-string v1, "DCM"
 
-    sget-object v2, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2093,7 +2093,7 @@
     :cond_1
     const-string v1, "KDI"
 
-    sget-object v2, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2122,7 +2122,7 @@
     :cond_2
     const-string v1, "TGY"
 
-    sget-object v2, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2130,7 +2130,7 @@
 
     if-nez v1, :cond_3
 
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v1
 
@@ -2147,7 +2147,7 @@
     if-eqz v1, :cond_4
 
     .line 1145
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
 
     const v2, 0x7f0e1388
 
@@ -2193,7 +2193,7 @@
 
     .line 1148
     :cond_5
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
 
     const v2, 0x7f0e1389
 
@@ -2223,7 +2223,7 @@
 
     .line 1150
     :cond_7
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
 
     const v2, 0x7f0e138a
 
@@ -2253,7 +2253,7 @@
 
     .line 1152
     :cond_9
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
 
     const v2, 0x7f0e138b
 
@@ -2270,9 +2270,9 @@
 
     .prologue
     .line 362
-    new-instance v0, Lcom/android/settings/deviceinfo/StatusVZW$3;
+    new-instance v0, Lcom/android/settings_ex/deviceinfo/StatusVZW$3;
 
-    invoke-direct {v0, p0, p1, p1}, Lcom/android/settings/deviceinfo/StatusVZW$3;-><init>(Lcom/android/settings/deviceinfo/StatusVZW;II)V
+    invoke-direct {v0, p0, p1, p1}, Lcom/android/settings_ex/deviceinfo/StatusVZW$3;-><init>(Lcom/android/settings_ex/deviceinfo/StatusVZW;II)V
 
     .line 388
     .local v0, "mPhoneStateListener":Landroid/telephony/PhoneStateListener;
@@ -2288,7 +2288,7 @@
     packed-switch p1, :pswitch_data_0
 
     .line 1109
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
 
     const v1, 0x7f0e00e2
 
@@ -2301,7 +2301,7 @@
 
     .line 1099
     :pswitch_0
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
 
     const v1, 0x7f0e00d5
 
@@ -2313,7 +2313,7 @@
 
     .line 1103
     :pswitch_1
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
 
     const v1, 0x7f0e00d6
 
@@ -2325,7 +2325,7 @@
 
     .line 1106
     :pswitch_2
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
 
     const v1, 0x7f0e00d8
 
@@ -2378,9 +2378,9 @@
     const/4 v2, 0x0
 
     .line 1854
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhone:[Lcom/android/internal/telephony/Phone;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhone:[Lcom/android/internal/telephony/Phone;
 
-    iget v4, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mActivePhone:I
+    iget v4, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mActivePhone:I
 
     aget-object v3, v3, v4
 
@@ -2441,7 +2441,7 @@
 
     .prologue
     .line 434
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mCM:Landroid/net/ConnectivityManager;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mCM:Landroid/net/ConnectivityManager;
 
     const/4 v1, 0x6
 
@@ -2483,18 +2483,18 @@
     invoke-virtual {p2, v0}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
     .line 490
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mSvcModeMessenger:Landroid/os/Messenger;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mSvcModeMessenger:Landroid/os/Messenger;
 
     iput-object v1, p2, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
 
     .line 493
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mServiceMessenger:Landroid/os/Messenger;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mServiceMessenger:Landroid/os/Messenger;
 
     if-eqz v1, :cond_0
 
     .line 494
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mServiceMessenger:Landroid/os/Messenger;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mServiceMessenger:Landroid/os/Messenger;
 
     invoke-virtual {v1, p2}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
 
@@ -2598,10 +2598,10 @@
     if-eqz p1, :cond_0
 
     .line 1551
-    invoke-direct {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->updateRegistrationStatus()V
+    invoke-direct {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->updateRegistrationStatus()V
 
     .line 1552
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -2609,7 +2609,7 @@
 
     const/4 v2, 0x0
 
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mWfcObserver:Landroid/database/ContentObserver;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mWfcObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -2619,11 +2619,11 @@
 
     .line 1556
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mWfcObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mWfcObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
@@ -2636,7 +2636,7 @@
 
     .prologue
     .line 1045
-    invoke-virtual {p0, p1}, Lcom/android/settings/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
@@ -2645,7 +2645,7 @@
     if-eqz v0, :cond_0
 
     .line 1047
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 
@@ -2669,7 +2669,7 @@
     .local v1, "bluetooth":Landroid/bluetooth/BluetoothAdapter;
     if-eqz v1, :cond_0
 
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mBtAddress:Landroid/preference/Preference;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mBtAddress:Landroid/preference/Preference;
 
     if-eqz v2, :cond_0
 
@@ -2694,7 +2694,7 @@
     if-nez v2, :cond_2
 
     .line 1436
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mBtAddress:Landroid/preference/Preference;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mBtAddress:Landroid/preference/Preference;
 
     invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
@@ -2717,9 +2717,9 @@
     .line 1438
     .restart local v0    # "address":Ljava/lang/String;
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mBtAddress:Landroid/preference/Preference;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mBtAddress:Landroid/preference/Preference;
 
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mUnavailable:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mUnavailable:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -2788,7 +2788,7 @@
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneHandler:Landroid/os/Handler;
+    iget-object v6, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneHandler:Landroid/os/Handler;
 
     invoke-virtual {v6, v7}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
@@ -2881,7 +2881,7 @@
 
     .prologue
     .line 1422
-    invoke-static {p0}, Lcom/android/settings/Utils;->getDefaultIpAddresses(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/android/settings_ex/Utils;->getDefaultIpAddresses(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2890,7 +2890,7 @@
     if-eqz v0, :cond_0
 
     .line 1424
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mIpAddress:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mIpAddress:Landroid/preference/Preference;
 
     invoke-virtual {v1, v0}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -2900,9 +2900,9 @@
 
     .line 1426
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mIpAddress:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mIpAddress:Landroid/preference/Preference;
 
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mUnavailable:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mUnavailable:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -2962,7 +2962,7 @@
     .line 460
     :cond_0
     :goto_0
-    iget-object v4, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhone:[Lcom/android/internal/telephony/Phone;
+    iget-object v4, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhone:[Lcom/android/internal/telephony/Phone;
 
     const/4 v5, 0x0
 
@@ -3077,18 +3077,18 @@
     if-eqz v0, :cond_0
 
     .line 1067
-    iget-object p2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mUnknown:Ljava/lang/String;
+    iget-object p2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mUnknown:Ljava/lang/String;
 
     .line 1070
     :cond_0
-    invoke-virtual {p0, p1}, Lcom/android/settings/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 1071
-    invoke-virtual {p0, p1}, Lcom/android/settings/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
@@ -3106,7 +3106,7 @@
     .line 1452
     const-string v1, "sysscope_status"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
@@ -3114,7 +3114,7 @@
     .local v0, "pref":Landroid/preference/Preference;
     const v1, 0x7f0e1387
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -3129,7 +3129,7 @@
 
     .prologue
     .line 1379
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v2}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
@@ -3144,7 +3144,7 @@
     .line 1381
     .local v0, "macAddress":Ljava/lang/String;
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mWifiMacAddress:Landroid/preference/Preference;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mWifiMacAddress:Landroid/preference/Preference;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -3152,7 +3152,7 @@
 
     if-eqz v3, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mUnavailable:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mUnavailable:Ljava/lang/String;
 
     .end local v0    # "macAddress":Ljava/lang/String;
     :cond_0
@@ -3175,14 +3175,14 @@
 
     .prologue
     .line 1372
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mWimaxMacAddress:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mWimaxMacAddress:Landroid/preference/Preference;
 
     if-eqz v1, :cond_0
 
     .line 1373
     const-string v1, "net.wimax.mac.address"
 
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mUnavailable:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mUnavailable:Ljava/lang/String;
 
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -3190,7 +3190,7 @@
 
     .line 1374
     .local v0, "macAddress":Ljava/lang/String;
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mWimaxMacAddress:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mWimaxMacAddress:Landroid/preference/Preference;
 
     invoke-virtual {v1, v0}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -3211,7 +3211,7 @@
     .line 1276
     const-string v0, "latest_area_info"
 
-    invoke-direct {p0, v0, p1}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v0, p1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1278
     :cond_0
@@ -3225,7 +3225,7 @@
     const v5, 0x7f0e00e0
 
     .line 1222
-    iget v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mActivePhone:I
+    iget v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mActivePhone:I
 
     invoke-static {v3}, Landroid/telephony/SubscriptionManager;->getSubId(I)[I
 
@@ -3247,7 +3247,7 @@
 
     .line 1225
     .local v1, "state":I
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
 
     const v4, 0x7f0e00e2
 
@@ -3263,7 +3263,7 @@
     :goto_0
     const-string v3, "VZW"
 
-    sget-object v4, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3271,14 +3271,14 @@
 
     if-eqz v3, :cond_0
 
-    invoke-direct {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->hasService()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->hasService()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
     .line 1243
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
 
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3288,14 +3288,14 @@
     :cond_0
     const-string v3, "data_state"
 
-    invoke-direct {p0, v3, v0}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v3, v0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1247
     return-void
 
     .line 1229
     :pswitch_0
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
 
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3306,7 +3306,7 @@
 
     .line 1232
     :pswitch_1
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
 
     const v4, 0x7f0e00e1
 
@@ -3319,7 +3319,7 @@
 
     .line 1235
     :pswitch_2
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
 
     const v4, 0x7f0e00df
 
@@ -3332,7 +3332,7 @@
 
     .line 1238
     :pswitch_3
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
 
     const v4, 0x7f0e00de
 
@@ -3361,9 +3361,9 @@
     .line 1159
     const-string v2, "gsm.network.type"
 
-    iget v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mActivePhone:I
+    iget v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mActivePhone:I
 
-    iget-object v4, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mUnknown:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mUnknown:Ljava/lang/String;
 
     invoke-static {v2, v3, v4}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyProperty(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
@@ -3394,7 +3394,7 @@
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1164
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaCTCModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaCTCModel()Z
 
     move-result v2
 
@@ -3403,9 +3403,9 @@
     .line 1165
     const-string v2, "gsm.voice.network.type"
 
-    iget v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mActivePhone:I
+    iget v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mActivePhone:I
 
-    iget-object v4, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mUnknown:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mUnknown:Ljava/lang/String;
 
     invoke-static {v2, v3, v4}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyProperty(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
@@ -3513,13 +3513,13 @@
     if-eqz v2, :cond_3
 
     .line 1216
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mUnknown:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mUnknown:Ljava/lang/String;
 
     .line 1218
     :cond_3
     const-string v2, "network_type"
 
-    invoke-direct {p0, v2, v0}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v2, v0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1219
     return-void
@@ -3719,14 +3719,14 @@
 
     .line 1196
     :cond_f
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mUnknown:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mUnknown:Ljava/lang/String;
 
     goto/16 :goto_0
 
     .line 1199
     .end local v1    # "voiceNetworkType":Ljava/lang/String;
     :cond_10
-    iget v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mActivePhone:I
+    iget v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mActivePhone:I
 
     invoke-static {v2}, Lcom/samsung/android/telephony/MultiSimManager;->getNetworkType(I)I
 
@@ -3739,7 +3739,7 @@
     .line 1202
     const-string v2, "VZW"
 
-    sget-object v3, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3762,7 +3762,7 @@
 
     if-eqz v2, :cond_2
 
-    iget v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mActivePhone:I
+    iget v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mActivePhone:I
 
     invoke-static {v2}, Lcom/samsung/android/telephony/MultiSimManager;->getDataState(I)I
 
@@ -3789,7 +3789,7 @@
     :cond_11
     const-string v2, "OMN"
 
-    sget-object v3, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3799,7 +3799,7 @@
 
     const-string v2, "O2U"
 
-    sget-object v3, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3809,7 +3809,7 @@
 
     const-string v2, "XEC"
 
-    sget-object v3, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3835,7 +3835,7 @@
 
     .prologue
     .line 1577
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -3874,7 +3874,7 @@
 
     .line 1251
     .local v1, "state":I
-    invoke-direct {p0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->getServiceStateString(I)Ljava/lang/String;
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getServiceStateString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -3882,7 +3882,7 @@
     .local v0, "display":Ljava/lang/String;
     const-string v2, "service_state"
 
-    invoke-direct {p0, v2, v0}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v2, v0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1255
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -3898,7 +3898,7 @@
     if-eqz v2, :cond_2
 
     .line 1256
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportChameleonRoaming()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportChameleonRoaming()Z
 
     move-result v2
 
@@ -3914,24 +3914,24 @@
     .line 1258
     const-string v2, "roaming_state"
 
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-direct {p0, v2, v3}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v2, v3}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1271
     :cond_0
     :goto_0
     const-string v2, "operator_name"
 
-    invoke-direct {p0, p1}, Lcom/android/settings/deviceinfo/StatusVZW;->getOperatorName(Landroid/telephony/ServiceState;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getOperatorName(Landroid/telephony/ServiceState;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-direct {p0, v2, v3}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v2, v3}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1272
     return-void
@@ -3940,13 +3940,13 @@
     :cond_1
     const-string v2, "roaming_state"
 
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
 
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-direct {p0, v2, v3}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v2, v3}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -3961,13 +3961,13 @@
     .line 1265
     const-string v2, "roaming_state"
 
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-direct {p0, v2, v3}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v2, v3}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -3975,13 +3975,13 @@
     :cond_3
     const-string v2, "roaming_state"
 
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
 
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-direct {p0, v2, v3}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v2, v3}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -4002,17 +4002,17 @@
     .local v15, "manager":Landroid/telephony/TelephonyManager;
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhone:[Lcom/android/internal/telephony/Phone;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhone:[Lcom/android/internal/telephony/Phone;
 
     move-object/from16 v28, v0
 
     if-eqz v28, :cond_0
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v28
 
-    invoke-static/range {v28 .. v28}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static/range {v28 .. v28}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v28
 
@@ -4020,7 +4020,7 @@
 
     .line 717
     :cond_0
-    sget-object v4, Lcom/android/settings/deviceinfo/StatusVZW;->PHONE_RELATED_ENTRIES:[Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/deviceinfo/StatusVZW;->PHONE_RELATED_ENTRIES:[Ljava/lang/String;
 
     .local v4, "arr$":[Ljava/lang/String;
     array-length v11, v4
@@ -4038,7 +4038,7 @@
     .local v10, "key":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v10}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v10}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 717
     add-int/lit8 v8, v8, 0x1
@@ -4053,7 +4053,7 @@
     :cond_1
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhone:[Lcom/android/internal/telephony/Phone;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhone:[Lcom/android/internal/telephony/Phone;
 
     move-object/from16 v28, v0
 
@@ -4062,7 +4062,7 @@
     .line 722
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mTelephonyManager:[Landroid/telephony/TelephonyManager;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mTelephonyManager:[Landroid/telephony/TelephonyManager;
 
     move-object/from16 v28, v0
 
@@ -4081,7 +4081,7 @@
 
     if-nez v28, :cond_2
 
-    invoke-static {}, Lcom/android/settings/Utils;->isMetroPCS()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMetroPCS()Z
 
     move-result v28
 
@@ -4089,7 +4089,7 @@
 
     const-string v28, "VZW"
 
-    sget-object v29, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v29, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual/range {v28 .. v29}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4101,7 +4101,7 @@
     :cond_2
     const-string v28, "VZW"
 
-    sget-object v29, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v29, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual/range {v28 .. v29}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4109,7 +4109,7 @@
 
     if-nez v28, :cond_3
 
-    invoke-static {}, Lcom/android/settings/Utils;->isMetroPCS()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMetroPCS()Z
 
     move-result v28
 
@@ -4123,13 +4123,13 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 739
     :goto_1
     const-string v28, "VZW"
 
-    sget-object v29, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v29, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual/range {v28 .. v29}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4156,7 +4156,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 741
     const-string v28, "min_number"
@@ -4165,7 +4165,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 744
     :cond_4
@@ -4181,10 +4181,10 @@
 
     move-object/from16 v2, v29
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 746
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getResources()Landroid/content/res/Resources;
 
     move-result-object v28
 
@@ -4203,7 +4203,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v28
 
@@ -4225,7 +4225,7 @@
 
     move-object/from16 v2, v29
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 751
     const-string v28, "imei"
@@ -4236,7 +4236,7 @@
 
     move/from16 v1, v29
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->getIMEI(I)Ljava/lang/String;
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getIMEI(I)Ljava/lang/String;
 
     move-result-object v29
 
@@ -4246,12 +4246,12 @@
 
     move-object/from16 v2, v29
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 752
     const-string v28, "VZW"
 
-    sget-object v29, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v29, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual/range {v28 .. v29}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4261,7 +4261,7 @@
 
     const-string v28, "TFN"
 
-    sget-object v29, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v29, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual/range {v28 .. v29}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4269,7 +4269,7 @@
 
     if-nez v28, :cond_6
 
-    invoke-static {}, Lcom/android/settings/Utils;->isMetroPCS()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMetroPCS()Z
 
     move-result v28
 
@@ -4285,7 +4285,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v28
 
@@ -4301,11 +4301,11 @@
 
     move-object/from16 v2, v28
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 758
     :goto_2
-    invoke-static {}, Lcom/android/settings/Utils;->isMetroPCS()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMetroPCS()Z
 
     move-result v28
 
@@ -4318,7 +4318,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 760
     const-string v28, "prl_version"
@@ -4327,11 +4327,11 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 763
     :cond_7
-    invoke-static {}, Lcom/android/settings/Utils;->isMetroPCS()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMetroPCS()Z
 
     move-result v28
 
@@ -4351,7 +4351,7 @@
 
     const-string v28, "VZW"
 
-    sget-object v29, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v29, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual/range {v28 .. v29}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4369,7 +4369,7 @@
 
     move/from16 v1, v29
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->getIccId(I)Ljava/lang/String;
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getIccId(I)Ljava/lang/String;
 
     move-result-object v29
 
@@ -4379,11 +4379,11 @@
 
     move-object/from16 v2, v29
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 774
     :goto_3
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaCTCModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaCTCModel()Z
 
     move-result v28
 
@@ -4391,7 +4391,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mTelephonyManager:[Landroid/telephony/TelephonyManager;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mTelephonyManager:[Landroid/telephony/TelephonyManager;
 
     move-object/from16 v28, v0
 
@@ -4414,7 +4414,7 @@
     .line 775
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mTelephonyManager:[Landroid/telephony/TelephonyManager;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mTelephonyManager:[Landroid/telephony/TelephonyManager;
 
     move-object/from16 v28, v0
 
@@ -4457,7 +4457,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mUnknown:Ljava/lang/String;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mUnknown:Ljava/lang/String;
 
     move-object/from16 v28, v0
 
@@ -4468,7 +4468,7 @@
 
     move-object/from16 v2, v28
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 780
     const-string v29, "nid_number"
@@ -4483,7 +4483,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mUnknown:Ljava/lang/String;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mUnknown:Ljava/lang/String;
 
     move-object/from16 v28, v0
 
@@ -4494,7 +4494,7 @@
 
     move-object/from16 v2, v28
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 787
     .end local v6    # "cdmaCell":Landroid/telephony/cdma/CdmaCellLocation;
@@ -4504,7 +4504,7 @@
     :goto_6
     const-string v28, "SPR"
 
-    sget-object v29, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v29, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual/range {v28 .. v29}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4513,7 +4513,7 @@
     if-eqz v28, :cond_14
 
     .line 788
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/deviceinfo/StatusVZW;->connectToRilService()V
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->connectToRilService()V
 
     .line 808
     :goto_7
@@ -4542,7 +4542,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v12
 
@@ -4558,13 +4558,13 @@
     invoke-virtual {v12, v0}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 812
-    new-instance v28, Lcom/android/settings/deviceinfo/StatusVZW$9;
+    new-instance v28, Lcom/android/settings_ex/deviceinfo/StatusVZW$9;
 
     move-object/from16 v0, v28
 
     move-object/from16 v1, p0
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW$9;-><init>(Lcom/android/settings/deviceinfo/StatusVZW;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW$9;-><init>(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
 
     move-object/from16 v0, v28
 
@@ -4590,7 +4590,7 @@
     if-nez v28, :cond_c
 
     .line 828
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticModel()Z
 
     move-result v28
 
@@ -4625,10 +4625,10 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1, v7}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v7}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 838
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/deviceinfo/StatusVZW;->updateDataState()V
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->updateDataState()V
 
     .line 840
     const/16 v27, 0x0
@@ -4637,7 +4637,7 @@
     :goto_8
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneCount:I
+    iget v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneCount:I
 
     move/from16 v28, v0
 
@@ -4650,7 +4650,7 @@
     .line 841
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneStateListener:[Landroid/telephony/PhoneStateListener;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneStateListener:[Landroid/telephony/PhoneStateListener;
 
     move-object/from16 v28, v0
 
@@ -4658,7 +4658,7 @@
 
     move/from16 v1, v27
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->getPhoneStateListener(I)Landroid/telephony/PhoneStateListener;
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getPhoneStateListener(I)Landroid/telephony/PhoneStateListener;
 
     move-result-object v29
 
@@ -4667,7 +4667,7 @@
     .line 842
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneStateListener:[Landroid/telephony/PhoneStateListener;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneStateListener:[Landroid/telephony/PhoneStateListener;
 
     move-object/from16 v28, v0
 
@@ -4691,7 +4691,7 @@
     .end local v19    # "rawNumber":Ljava/lang/String;
     .end local v27    # "simSlotNum":I
     :cond_d
-    invoke-direct/range {p0 .. p1}, Lcom/android/settings/deviceinfo/StatusVZW;->getMeidNumber(I)Ljava/lang/String;
+    invoke-direct/range {p0 .. p1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getMeidNumber(I)Ljava/lang/String;
 
     move-result-object v16
 
@@ -4706,7 +4706,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -4720,7 +4720,7 @@
 
     move-object/from16 v2, v16
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -4733,7 +4733,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     goto/16 :goto_2
 
@@ -4745,7 +4745,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     goto/16 :goto_3
 
@@ -4779,7 +4779,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 784
     const-string v28, "nid_number"
@@ -4788,7 +4788,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     goto/16 :goto_6
 
@@ -4800,7 +4800,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     goto/16 :goto_7
 
@@ -4810,7 +4810,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhone:[Lcom/android/internal/telephony/Phone;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhone:[Lcom/android/internal/telephony/Phone;
 
     move-object/from16 v29, v0
 
@@ -4826,7 +4826,7 @@
 
     move-object/from16 v2, v29
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 794
     const-string v29, "imei_sv"
@@ -4837,7 +4837,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v28
 
@@ -4853,7 +4853,7 @@
 
     move-object/from16 v2, v28
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 798
     const-string v28, "prl_version"
@@ -4862,7 +4862,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 799
     const-string v28, "meid_number"
@@ -4871,7 +4871,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 800
     const-string v28, "min_number"
@@ -4880,7 +4880,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 801
     const-string v28, "icc_id"
@@ -4889,7 +4889,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 802
     const-string v28, "sid_number"
@@ -4898,7 +4898,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 803
     const-string v28, "nid_number"
@@ -4907,7 +4907,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 804
     const-string v28, "user_name"
@@ -4916,7 +4916,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     goto/16 :goto_7
 
@@ -4929,7 +4929,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mTelephonyManager:[Landroid/telephony/TelephonyManager;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mTelephonyManager:[Landroid/telephony/TelephonyManager;
 
     move-object/from16 v29, v0
 
@@ -4954,13 +4954,13 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mShowLatestAreaInfo:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mShowLatestAreaInfo:Z
 
     .line 852
     :cond_17
     move-object/from16 v0, p0
 
-    iget-boolean v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mShowLatestAreaInfo:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mShowLatestAreaInfo:Z
 
     move/from16 v28, v0
 
@@ -4973,7 +4973,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 860
     .end local v7    # "formattedNumber":Ljava/lang/String;
@@ -4986,10 +4986,10 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 864
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/deviceinfo/StatusVZW;->setSysScopeStatus()V
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSysScopeStatus()V
 
     .line 867
     const-string v28, "ril.serialnumber"
@@ -5090,7 +5090,7 @@
 
     const-string v28, "KDI"
 
-    sget-object v29, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v29, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual/range {v28 .. v29}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5098,7 +5098,7 @@
 
     if-nez v28, :cond_1a
 
-    invoke-static {}, Lcom/android/settings/Utils;->isSprModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSprModel()Z
 
     move-result v28
 
@@ -5106,7 +5106,7 @@
 
     const-string v28, "USC"
 
-    sget-object v29, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v29, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual/range {v28 .. v29}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5116,7 +5116,7 @@
 
     const-string v28, "MTR"
 
-    sget-object v29, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v29, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual/range {v28 .. v29}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5126,7 +5126,7 @@
 
     const-string v28, "LRA"
 
-    sget-object v29, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v29, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual/range {v28 .. v29}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5136,7 +5136,7 @@
 
     const-string v28, "ACG"
 
-    sget-object v29, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v29, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual/range {v28 .. v29}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5152,11 +5152,11 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 881
     :goto_a
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticModel()Z
 
     move-result v28
 
@@ -5181,7 +5181,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 884
     const-string v28, "imei_sv"
@@ -5190,7 +5190,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 885
     const-string v28, "wifi_ip_address"
@@ -5199,7 +5199,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 887
     const-string v28, "meid_number"
@@ -5208,7 +5208,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 888
     const-string v28, "min_number"
@@ -5217,7 +5217,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 889
     const-string v28, "prl_version"
@@ -5226,10 +5226,10 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 890
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v28
 
@@ -5254,14 +5254,14 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 895
     .end local v18    # "ratedValue":Ljava/lang/String;
     :cond_1b
     const-string v28, "DCM"
 
-    sget-object v29, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v29, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual/range {v28 .. v29}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5276,7 +5276,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 897
     const-string v28, "imei_sv"
@@ -5285,7 +5285,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 900
     :cond_1c
@@ -5347,7 +5347,7 @@
 
     move-object/from16 v2, v29
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 913
     .end local v3    # "ERI_SysProp":Ljava/lang/String;
@@ -5455,7 +5455,7 @@
     .local v9, "imsSummaryStrId":I
     const-string v28, "VZW"
 
-    sget-object v29, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v29, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual/range {v28 .. v29}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5474,7 +5474,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
 
     move-object/from16 v29, v0
 
@@ -5490,7 +5490,7 @@
 
     move-object/from16 v2, v29
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 935
     .end local v5    # "bImsRegistered":Z
@@ -5509,7 +5509,7 @@
     if-eqz v28, :cond_1e
 
     .line 936
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportChameleonRoaming()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportChameleonRoaming()Z
 
     move-result v28
 
@@ -5522,21 +5522,21 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 941
     :cond_1e
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticModel()Z
 
     move-result v28
 
     if-eqz v28, :cond_28
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v28
 
-    invoke-static/range {v28 .. v28}, Lcom/android/settings/Utils;->isVoiceCapable(Landroid/content/Context;)Z
+    invoke-static/range {v28 .. v28}, Lcom/android/settings_ex/Utils;->isVoiceCapable(Landroid/content/Context;)Z
 
     move-result v28
 
@@ -5549,7 +5549,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v28
 
@@ -5557,10 +5557,10 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mFirstCall:Landroid/preference/Preference;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mFirstCall:Landroid/preference/Preference;
 
     .line 943
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/deviceinfo/StatusVZW;->setFirstCallstatus()V
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setFirstCallstatus()V
 
     .line 947
     :goto_f
@@ -5615,7 +5615,7 @@
 
     move-object/from16 v2, v25
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_a
 
@@ -5632,7 +5632,7 @@
 
     move-object/from16 v2, v29
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_b
 
@@ -5645,7 +5645,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     goto/16 :goto_b
 
@@ -5689,7 +5689,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     goto/16 :goto_e
 
@@ -5701,7 +5701,7 @@
 
     move-object/from16 v1, v28
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     goto :goto_f
 .end method
@@ -5724,10 +5724,10 @@
 
     .prologue
     .line 546
-    invoke-super/range {p0 .. p1}, Lcom/android/settings/InstrumentedPreferenceActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super/range {p0 .. p1}, Lcom/android/settings_ex/InstrumentedPreferenceActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 548
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getIntent()Landroid/content/Intent;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getIntent()Landroid/content/Intent;
 
     move-result-object v13
 
@@ -5760,7 +5760,7 @@
 
     move-object/from16 v1, p0
 
-    iput v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mActivePhone:I
+    iput v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mActivePhone:I
 
     .line 551
     const-string v22, "Status"
@@ -5777,7 +5777,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mActivePhone:I
+    iget v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mActivePhone:I
 
     move/from16 v24, v0
 
@@ -5799,19 +5799,19 @@
 
     .line 553
     :cond_0
-    new-instance v22, Lcom/android/settings/deviceinfo/StatusVZW$MyHandler;
+    new-instance v22, Lcom/android/settings_ex/deviceinfo/StatusVZW$MyHandler;
 
     move-object/from16 v0, v22
 
     move-object/from16 v1, p0
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW$MyHandler;-><init>(Lcom/android/settings/deviceinfo/StatusVZW;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW$MyHandler;-><init>(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
 
     move-object/from16 v0, v22
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mHandler:Landroid/os/Handler;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mHandler:Landroid/os/Handler;
 
     .line 554
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
@@ -5826,12 +5826,12 @@
 
     move-object/from16 v1, p0
 
-    iput v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneCount:I
+    iput v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneCount:I
 
     .line 555
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneCount:I
+    iget v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneCount:I
 
     move/from16 v22, v0
 
@@ -5845,12 +5845,12 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mTelephonyManager:[Landroid/telephony/TelephonyManager;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mTelephonyManager:[Landroid/telephony/TelephonyManager;
 
     .line 556
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneCount:I
+    iget v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneCount:I
 
     move/from16 v22, v0
 
@@ -5864,7 +5864,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneStateListener:[Landroid/telephony/PhoneStateListener;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneStateListener:[Landroid/telephony/PhoneStateListener;
 
     .line 557
     const/16 v20, 0x0
@@ -5873,7 +5873,7 @@
     :goto_0
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneCount:I
+    iget v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneCount:I
 
     move/from16 v22, v0
 
@@ -5886,7 +5886,7 @@
     .line 558
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mTelephonyManager:[Landroid/telephony/TelephonyManager;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mTelephonyManager:[Landroid/telephony/TelephonyManager;
 
     move-object/from16 v23, v0
 
@@ -5896,7 +5896,7 @@
 
     move-object/from16 v1, v22
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v22
 
@@ -5917,7 +5917,7 @@
 
     move-object/from16 v1, v22
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v22
 
@@ -5927,7 +5927,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mCM:Landroid/net/ConnectivityManager;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mCM:Landroid/net/ConnectivityManager;
 
     .line 562
     const-string v22, "wifi"
@@ -5936,7 +5936,7 @@
 
     move-object/from16 v1, v22
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v22
 
@@ -5946,7 +5946,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     .line 564
     const v22, 0x7f08003d
@@ -5955,7 +5955,7 @@
 
     move/from16 v1, v22
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->addPreferencesFromResource(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->addPreferencesFromResource(I)V
 
     .line 565
     const-string v22, "battery_level"
@@ -5964,7 +5964,7 @@
 
     move-object/from16 v1, v22
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v22
 
@@ -5972,7 +5972,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mBatteryLevel:Landroid/preference/Preference;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mBatteryLevel:Landroid/preference/Preference;
 
     .line 566
     const-string v22, "battery_status"
@@ -5981,7 +5981,7 @@
 
     move-object/from16 v1, v22
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v22
 
@@ -5989,7 +5989,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mBatteryStatus:Landroid/preference/Preference;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mBatteryStatus:Landroid/preference/Preference;
 
     .line 567
     const-string v22, "battery_life"
@@ -5998,7 +5998,7 @@
 
     move-object/from16 v1, v22
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v22
 
@@ -6006,7 +6006,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mBatteryLife:Landroid/preference/Preference;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mBatteryLife:Landroid/preference/Preference;
 
     .line 568
     const-string v22, "bt_address"
@@ -6015,7 +6015,7 @@
 
     move-object/from16 v1, v22
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v22
 
@@ -6023,7 +6023,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mBtAddress:Landroid/preference/Preference;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mBtAddress:Landroid/preference/Preference;
 
     .line 569
     const-string v22, "wifi_mac_address"
@@ -6032,7 +6032,7 @@
 
     move-object/from16 v1, v22
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v22
 
@@ -6040,7 +6040,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mWifiMacAddress:Landroid/preference/Preference;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mWifiMacAddress:Landroid/preference/Preference;
 
     .line 570
     const-string v22, "wimax_mac_address"
@@ -6049,7 +6049,7 @@
 
     move-object/from16 v1, v22
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v22
 
@@ -6057,7 +6057,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mWimaxMacAddress:Landroid/preference/Preference;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mWimaxMacAddress:Landroid/preference/Preference;
 
     .line 571
     const-string v22, "wifi_ip_address"
@@ -6066,7 +6066,7 @@
 
     move-object/from16 v1, v22
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v22
 
@@ -6074,10 +6074,10 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mIpAddress:Landroid/preference/Preference;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mIpAddress:Landroid/preference/Preference;
 
     .line 573
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getResources()Landroid/content/res/Resources;
 
     move-result-object v22
 
@@ -6085,12 +6085,12 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
 
     .line 574
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
 
     move-object/from16 v22, v0
 
@@ -6104,12 +6104,12 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mUnknown:Ljava/lang/String;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mUnknown:Ljava/lang/String;
 
     .line 575
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mRes:Landroid/content/res/Resources;
 
     move-object/from16 v22, v0
 
@@ -6123,17 +6123,17 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mUnavailable:Ljava/lang/String;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mUnavailable:Ljava/lang/String;
 
     .line 577
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v22
 
-    sput-object v22, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sput-object v22, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     .line 580
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getBatteryLife()I
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getBatteryLife()I
 
     move-result v6
 
@@ -6166,7 +6166,7 @@
     .line 582
     if-lez v6, :cond_2
 
-    invoke-static {}, Lcom/android/settings/Utils;->isJapanModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isJapanModel()Z
 
     move-result v22
 
@@ -6180,13 +6180,13 @@
 
     move-object/from16 v1, v22
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     .line 595
     :goto_1
     const-string v22, "VZW"
 
-    sget-object v23, Lcom/android/settings/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
+    sget-object v23, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sSalesCode:Ljava/lang/String;
 
     invoke-virtual/range {v22 .. v23}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -6224,7 +6224,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->isResetFileExist:Ljava/lang/Boolean;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->isResetFileExist:Ljava/lang/Boolean;
 
     .line 600
     const/4 v11, 0x0
@@ -6321,7 +6321,7 @@
 
     move-object/from16 v1, v22
 
-    invoke-direct {v0, v1, v8}, Lcom/android/settings/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v8}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setSummaryText(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -6369,11 +6369,11 @@
 
     if-nez v22, :cond_a
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v22
 
-    invoke-static/range {v22 .. v22}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static/range {v22 .. v22}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v22
 
@@ -6382,7 +6382,7 @@
     .line 637
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneCount:I
+    iget v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneCount:I
 
     move/from16 v22, v0
 
@@ -6396,7 +6396,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mPhone:[Lcom/android/internal/telephony/Phone;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhone:[Lcom/android/internal/telephony/Phone;
 
     .line 638
     const/16 v20, 0x0
@@ -6404,7 +6404,7 @@
     :goto_6
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneCount:I
+    iget v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneCount:I
 
     move/from16 v22, v0
 
@@ -6417,7 +6417,7 @@
     .line 639
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhone:[Lcom/android/internal/telephony/Phone;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhone:[Lcom/android/internal/telephony/Phone;
 
     move-object/from16 v22, v0
 
@@ -6443,7 +6443,7 @@
     .line 586
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mBatteryLife:Landroid/preference/Preference;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mBatteryLife:Landroid/preference/Preference;
 
     move-object/from16 v22, v0
 
@@ -6464,7 +6464,7 @@
     .line 588
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mBatteryLife:Landroid/preference/Preference;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mBatteryLife:Landroid/preference/Preference;
 
     move-object/from16 v22, v0
 
@@ -6478,7 +6478,7 @@
     :cond_6
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mBatteryLife:Landroid/preference/Preference;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mBatteryLife:Landroid/preference/Preference;
 
     move-object/from16 v22, v0
 
@@ -6565,7 +6565,7 @@
 
     move-object/from16 v1, v22
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->removePreferenceFromScreen(Ljava/lang/String;)V
 
     goto/16 :goto_5
 
@@ -6573,7 +6573,7 @@
     :cond_a
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneCount:I
+    iget v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneCount:I
 
     move/from16 v22, v0
 
@@ -6587,7 +6587,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mSignalStrength:[Landroid/preference/Preference;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mSignalStrength:[Landroid/preference/Preference;
 
     .line 644
     const/16 v20, 0x0
@@ -6595,7 +6595,7 @@
     :goto_9
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneCount:I
+    iget v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneCount:I
 
     move/from16 v22, v0
 
@@ -6608,7 +6608,7 @@
     .line 645
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mSignalStrength:[Landroid/preference/Preference;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mSignalStrength:[Landroid/preference/Preference;
 
     move-object/from16 v22, v0
 
@@ -6618,7 +6618,7 @@
 
     move-object/from16 v1, v23
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v23
 
@@ -6637,7 +6637,7 @@
 
     move-object/from16 v1, v22
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v22
 
@@ -6645,7 +6645,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mUptime:Landroid/preference/Preference;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mUptime:Landroid/preference/Preference;
 
     .line 649
     const-string v22, "ethernet_mac_address"
@@ -6654,7 +6654,7 @@
 
     move-object/from16 v1, v22
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v22
 
@@ -6662,23 +6662,23 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mEthernetMacAddressPref:Landroid/preference/Preference;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mEthernetMacAddressPref:Landroid/preference/Preference;
 
     .line 652
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/deviceinfo/StatusVZW;->hasBluetooth()Z
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->hasBluetooth()Z
 
     move-result v22
 
     if-nez v22, :cond_c
 
     .line 653
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v22
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mBtAddress:Landroid/preference/Preference;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mBtAddress:Landroid/preference/Preference;
 
     move-object/from16 v23, v0
 
@@ -6691,24 +6691,24 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mBtAddress:Landroid/preference/Preference;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mBtAddress:Landroid/preference/Preference;
 
     .line 657
     :cond_c
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/deviceinfo/StatusVZW;->hasWimax()Z
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->hasWimax()Z
 
     move-result v22
 
     if-nez v22, :cond_d
 
     .line 658
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v22
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mWimaxMacAddress:Landroid/preference/Preference;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mWimaxMacAddress:Landroid/preference/Preference;
 
     move-object/from16 v23, v0
 
@@ -6721,7 +6721,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mWimaxMacAddress:Landroid/preference/Preference;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mWimaxMacAddress:Landroid/preference/Preference;
 
     .line 662
     :cond_d
@@ -6733,10 +6733,10 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/deviceinfo/StatusVZW;->mConnectivityIntentFilter:Landroid/content/IntentFilter;
+    iput-object v0, v1, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mConnectivityIntentFilter:Landroid/content/IntentFilter;
 
     .line 663
-    sget-object v5, Lcom/android/settings/deviceinfo/StatusVZW;->CONNECTIVITY_INTENTS:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/deviceinfo/StatusVZW;->CONNECTIVITY_INTENTS:[Ljava/lang/String;
 
     .local v5, "arr$":[Ljava/lang/String;
     array-length v14, v5
@@ -6754,7 +6754,7 @@
     .local v21, "sintent":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/deviceinfo/StatusVZW;->mConnectivityIntentFilter:Landroid/content/IntentFilter;
+    iget-object v0, v0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mConnectivityIntentFilter:Landroid/content/IntentFilter;
 
     move-object/from16 v22, v0
 
@@ -6772,25 +6772,25 @@
     .line 667
     .end local v21    # "sintent":Ljava/lang/String;
     :cond_e
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/deviceinfo/StatusVZW;->updateConnectivity()V
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->updateConnectivity()V
 
     .line 671
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getListView()Landroid/widget/ListView;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getListView()Landroid/widget/ListView;
 
     move-result-object v22
 
-    new-instance v23, Lcom/android/settings/deviceinfo/StatusVZW$8;
+    new-instance v23, Lcom/android/settings_ex/deviceinfo/StatusVZW$8;
 
     move-object/from16 v0, v23
 
     move-object/from16 v1, p0
 
-    invoke-direct {v0, v1}, Lcom/android/settings/deviceinfo/StatusVZW$8;-><init>(Lcom/android/settings/deviceinfo/StatusVZW;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW$8;-><init>(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
 
     invoke-virtual/range {v22 .. v23}, Landroid/widget/ListView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
 
     .line 691
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v22
 
@@ -6806,7 +6806,7 @@
     .line 693
     new-instance v17, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getListView()Landroid/widget/ListView;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getListView()Landroid/widget/ListView;
 
     move-result-object v22
 
@@ -6824,7 +6824,7 @@
     .local v17, "margin_lp":Landroid/view/ViewGroup$MarginLayoutParams;
     const/16 v22, 0x0
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getResources()Landroid/content/res/Resources;
 
     move-result-object v23
 
@@ -6836,7 +6836,7 @@
 
     const/16 v24, 0x0
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getResources()Landroid/content/res/Resources;
 
     move-result-object v25
 
@@ -6877,7 +6877,7 @@
     iput v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
     .line 698
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getListView()Landroid/widget/ListView;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getListView()Landroid/widget/ListView;
 
     move-result-object v16
 
@@ -6951,7 +6951,7 @@
 
     .prologue
     .line 1876
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->finish()V
 
     .line 1877
     const/4 v0, 0x1
@@ -6966,40 +6966,40 @@
     const/4 v4, 0x0
 
     .line 1001
-    invoke-super {p0}, Lcom/android/settings/InstrumentedPreferenceActivity;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/InstrumentedPreferenceActivity;->onPause()V
 
     .line 1003
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhone:[Lcom/android/internal/telephony/Phone;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhone:[Lcom/android/internal/telephony/Phone;
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
     .line 1005
-    invoke-direct {p0, v4}, Lcom/android/settings/deviceinfo/StatusVZW;->setRssiNoti(I)V
+    invoke-direct {p0, v4}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setRssiNoti(I)V
 
     .line 1006
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneStateReceiver:Lcom/android/internal/telephony/PhoneStateIntentReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneStateReceiver:Lcom/android/internal/telephony/PhoneStateIntentReceiver;
 
     if-eqz v2, :cond_0
 
     .line 1007
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneStateReceiver:Lcom/android/internal/telephony/PhoneStateIntentReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneStateReceiver:Lcom/android/internal/telephony/PhoneStateIntentReceiver;
 
     invoke-virtual {v2}, Lcom/android/internal/telephony/PhoneStateIntentReceiver;->unregisterIntent()V
 
     .line 1008
     const/4 v2, 0x0
 
-    iput-object v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneStateReceiver:Lcom/android/internal/telephony/PhoneStateIntentReceiver;
+    iput-object v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneStateReceiver:Lcom/android/internal/telephony/PhoneStateIntentReceiver;
 
     .line 1011
     :cond_0
@@ -7007,16 +7007,16 @@
 
     .local v1, "simSlotNum":I
     :goto_0
-    iget v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneCount:I
+    iget v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneCount:I
 
     if-ge v1, v2, :cond_1
 
     .line 1012
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mTelephonyManager:[Landroid/telephony/TelephonyManager;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mTelephonyManager:[Landroid/telephony/TelephonyManager;
 
     aget-object v2, v2, v1
 
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneStateListener:[Landroid/telephony/PhoneStateListener;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneStateListener:[Landroid/telephony/PhoneStateListener;
 
     aget-object v3, v3, v1
 
@@ -7031,25 +7031,25 @@
     .end local v1    # "simSlotNum":I
     :cond_1
     :try_start_0
-    iget-boolean v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mShowLatestAreaInfo:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mShowLatestAreaInfo:Z
 
     if-eqz v2, :cond_2
 
     .line 1017
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mAreaInfoReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mAreaInfoReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 1019
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 1020
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mConnectivityReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mConnectivityReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 1026
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -7067,11 +7067,11 @@
     .line 1027
     const/4 v2, 0x0
 
-    invoke-direct {p0, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->registerForWfcRegistrationStatus(Z)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->registerForWfcRegistrationStatus(Z)V
 
     .line 1029
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -7079,20 +7079,20 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mAirplaneModeObserver:Landroid/database/ContentObserver;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mAirplaneModeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v2, v3}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 1032
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mSysScopeReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mSysScopeReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1037
     :goto_1
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mHandler:Landroid/os/Handler;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mHandler:Landroid/os/Handler;
 
     const/16 v3, 0x1f4
 
@@ -7121,75 +7121,75 @@
     const/4 v4, 0x1
 
     .line 951
-    invoke-super {p0}, Lcom/android/settings/InstrumentedPreferenceActivity;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/InstrumentedPreferenceActivity;->onResume()V
 
     .line 952
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
-    invoke-static {p0, v1}, Lcom/android/settings/Utils;->applyLandscapeFullScreen(Landroid/content/Context;Landroid/view/Window;)V
+    invoke-static {p0, v1}, Lcom/android/settings_ex/Utils;->applyLandscapeFullScreen(Landroid/content/Context;Landroid/view/Window;)V
 
     .line 954
-    iget v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mActivePhone:I
+    iget v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mActivePhone:I
 
-    invoke-direct {p0, v1}, Lcom/android/settings/deviceinfo/StatusVZW;->updateStatus(I)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->updateStatus(I)V
 
     .line 956
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhone:[Lcom/android/internal/telephony/Phone;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhone:[Lcom/android/internal/telephony/Phone;
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
     .line 958
-    invoke-direct {p0, v4}, Lcom/android/settings/deviceinfo/StatusVZW;->setRssiNoti(I)V
+    invoke-direct {p0, v4}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setRssiNoti(I)V
 
     .line 959
-    invoke-direct {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->updateDataState()V
+    invoke-direct {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->updateDataState()V
 
     .line 960
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneStateReceiver:Lcom/android/internal/telephony/PhoneStateIntentReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneStateReceiver:Lcom/android/internal/telephony/PhoneStateIntentReceiver;
 
     if-nez v1, :cond_0
 
     .line 961
     new-instance v1, Lcom/android/internal/telephony/PhoneStateIntentReceiver;
 
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mHandler:Landroid/os/Handler;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mHandler:Landroid/os/Handler;
 
     invoke-direct {v1, p0, v2}, Lcom/android/internal/telephony/PhoneStateIntentReceiver;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
 
-    iput-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneStateReceiver:Lcom/android/internal/telephony/PhoneStateIntentReceiver;
+    iput-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneStateReceiver:Lcom/android/internal/telephony/PhoneStateIntentReceiver;
 
     .line 962
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneStateReceiver:Lcom/android/internal/telephony/PhoneStateIntentReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneStateReceiver:Lcom/android/internal/telephony/PhoneStateIntentReceiver;
 
     const/16 v2, 0x12c
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/PhoneStateIntentReceiver;->notifyServiceState(I)V
 
     .line 963
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneStateReceiver:Lcom/android/internal/telephony/PhoneStateIntentReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneStateReceiver:Lcom/android/internal/telephony/PhoneStateIntentReceiver;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/PhoneStateIntentReceiver;->registerIntent()V
 
     .line 966
     :cond_0
-    iget-boolean v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mShowLatestAreaInfo:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mShowLatestAreaInfo:Z
 
     if-eqz v1, :cond_1
 
     .line 967
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mAreaInfoReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mAreaInfoReceiver:Landroid/content/BroadcastReceiver;
 
     new-instance v2, Landroid/content/IntentFilter;
 
@@ -7199,7 +7199,7 @@
 
     const-string v3, "android.permission.RECEIVE_EMERGENCY_BROADCAST"
 
-    invoke-virtual {p0, v1, v2, v3, v5}, Lcom/android/settings/deviceinfo/StatusVZW;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
+    invoke-virtual {p0, v1, v2, v3, v5}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
     .line 970
     new-instance v0, Landroid/content/Intent;
@@ -7214,21 +7214,21 @@
 
     const-string v2, "android.permission.RECEIVE_EMERGENCY_BROADCAST"
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v1, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
 
     .line 975
     .end local v0    # "getLatestIntent":Landroid/content/Intent;
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mConnectivityReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mConnectivityReceiver:Landroid/content/BroadcastReceiver;
 
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mConnectivityIntentFilter:Landroid/content/IntentFilter;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mConnectivityIntentFilter:Landroid/content/IntentFilter;
 
     const-string v3, "android.permission.CHANGE_NETWORK_STATE"
 
-    invoke-virtual {p0, v1, v2, v3, v5}, Lcom/android/settings/deviceinfo/StatusVZW;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
+    invoke-virtual {p0, v1, v2, v3, v5}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
     .line 977
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
 
     new-instance v2, Landroid/content/IntentFilter;
 
@@ -7236,10 +7236,10 @@
 
     invoke-direct {v2, v3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, v1, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v1, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 979
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mSysScopeReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mSysScopeReceiver:Landroid/content/BroadcastReceiver;
 
     new-instance v2, Landroid/content/IntentFilter;
 
@@ -7247,10 +7247,10 @@
 
     invoke-direct {v2, v3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, v1, v2}, Lcom/android/settings/deviceinfo/StatusVZW;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v1, v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 980
-    invoke-direct {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->changeSysScopeStatus()V
+    invoke-direct {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->changeSysScopeStatus()V
 
     .line 988
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -7266,11 +7266,11 @@
     if-eqz v1, :cond_2
 
     .line 989
-    invoke-direct {p0, v4}, Lcom/android/settings/deviceinfo/StatusVZW;->registerForWfcRegistrationStatus(Z)V
+    invoke-direct {p0, v4}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->registerForWfcRegistrationStatus(Z)V
 
     .line 992
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -7284,12 +7284,12 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mAirplaneModeObserver:Landroid/database/ContentObserver;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mAirplaneModeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v1, v2, v4, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 996
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mHandler:Landroid/os/Handler;
 
     const/16 v2, 0x1f4
 
@@ -7304,16 +7304,16 @@
 
     .prologue
     .line 1444
-    invoke-direct {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->setWimaxStatus()V
+    invoke-direct {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setWimaxStatus()V
 
     .line 1445
-    invoke-direct {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->setWifiStatus()V
+    invoke-direct {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setWifiStatus()V
 
     .line 1446
-    invoke-direct {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->setBtStatus()V
+    invoke-direct {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setBtStatus()V
 
     .line 1447
-    invoke-direct {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->setIpAddressStatus()V
+    invoke-direct {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->setIpAddressStatus()V
 
     .line 1448
     return-void
@@ -7374,27 +7374,27 @@
     invoke-static {v6, v7}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1289
-    iget v6, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneCount:I
+    iget v6, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneCount:I
 
     new-array v6, v6, [Landroid/preference/Preference;
 
-    iput-object v6, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mSignalStrength:[Landroid/preference/Preference;
+    iput-object v6, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mSignalStrength:[Landroid/preference/Preference;
 
     .line 1290
     const/4 v5, 0x0
 
     .local v5, "simSlotNum":I
     :goto_0
-    iget v6, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mPhoneCount:I
+    iget v6, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mPhoneCount:I
 
     if-ge v5, v6, :cond_1
 
     .line 1291
-    iget-object v6, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mSignalStrength:[Landroid/preference/Preference;
+    iget-object v6, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mSignalStrength:[Landroid/preference/Preference;
 
     const-string v7, "signal_strength"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v7
 
@@ -7404,7 +7404,7 @@
     if-ne p2, v5, :cond_0
 
     .line 1293
-    iget-object v6, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mSignalStrength:[Landroid/preference/Preference;
+    iget-object v6, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mSignalStrength:[Landroid/preference/Preference;
 
     aget-object v1, v6, v5
 
@@ -7426,7 +7426,7 @@
     if-eqz v1, :cond_2
 
     .line 1299
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -7521,18 +7521,18 @@
     if-eqz v1, :cond_2
 
     .line 1312
-    iget-boolean v6, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mImsRegistered:Z
+    iget-boolean v6, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mImsRegistered:Z
 
     if-eqz v6, :cond_4
 
     .line 1313
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->updateSignalStrengthToZeroWhenIMSRegistered()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->updateSignalStrengthToZeroWhenIMSRegistered()V
 
     goto :goto_1
 
     .line 1319
     :cond_4
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -7734,7 +7734,7 @@
     :cond_8
     const-string v6, "gsm.network.type"
 
-    iget-object v7, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mUnknown:Ljava/lang/String;
+    iget-object v7, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mUnknown:Ljava/lang/String;
 
     invoke-static {v6, p2, v7}, Lcom/samsung/android/telephony/MultiSimManager;->getTelephonyProperty(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
@@ -7754,7 +7754,7 @@
 
     if-eq v6, v3, :cond_9
 
-    iget-object v6, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mUnknown:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mUnknown:Ljava/lang/String;
 
     invoke-virtual {v0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -7779,20 +7779,20 @@
     const/4 v4, 0x0
 
     .line 1361
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StatusVZW;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
     .line 1363
     .local v0, "r":Landroid/content/res/Resources;
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mSignalStrength:[Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mSignalStrength:[Landroid/preference/Preference;
 
     aget-object v1, v1, v4
 
     if-eqz v1, :cond_0
 
     .line 1364
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mSignalStrength:[Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mSignalStrength:[Landroid/preference/Preference;
 
     aget-object v1, v1, v4
 
@@ -7899,9 +7899,9 @@
 
     .line 1486
     :cond_0
-    iget-object v4, p0, Lcom/android/settings/deviceinfo/StatusVZW;->mUptime:Landroid/preference/Preference;
+    iget-object v4, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW;->mUptime:Landroid/preference/Preference;
 
-    invoke-direct {p0, v2, v3}, Lcom/android/settings/deviceinfo/StatusVZW;->convert(J)Ljava/lang/String;
+    invoke-direct {p0, v2, v3}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->convert(J)Ljava/lang/String;
 
     move-result-object v5
 

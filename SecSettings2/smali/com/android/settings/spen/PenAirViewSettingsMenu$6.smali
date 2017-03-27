@@ -1,4 +1,4 @@
-.class Lcom/android/settings/spen/PenAirViewSettingsMenu$6;
+.class Lcom/android/settings_ex/spen/PenAirViewSettingsMenu$6;
 .super Ljava/lang/Object;
 .source "PenAirViewSettingsMenu.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/spen/PenAirViewSettingsMenu;->showTalkBackDisableDialog()V
+    value = Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->showTalkBackDisableDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/spen/PenAirViewSettingsMenu;
+.field final synthetic this$0:Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/spen/PenAirViewSettingsMenu;)V
+.method constructor <init>(Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;)V
     .locals 0
 
     .prologue
     .line 310
-    iput-object p1, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu$6;->this$0:Lcom/android/settings/spen/PenAirViewSettingsMenu;
+    iput-object p1, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu$6;->this$0:Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,8 +44,8 @@
     const/4 v0, 0x0
 
     .line 313
-    # getter for: Lcom/android/settings/spen/PenAirViewSettingsMenu;->mActivity:Landroid/app/Activity;
-    invoke-static {}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->access$000()Landroid/app/Activity;
+    # getter for: Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mActivity:Landroid/app/Activity;
+    invoke-static {}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->access$000()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -66,14 +66,14 @@
     .line 315
     .local v0, "airViewState":Z
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu$6;->this$0:Lcom/android/settings/spen/PenAirViewSettingsMenu;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu$6;->this$0:Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;
 
-    # getter for: Lcom/android/settings/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v1}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->access$100(Lcom/android/settings/spen/PenAirViewSettingsMenu;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v1}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->access$100(Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 316
     return-void

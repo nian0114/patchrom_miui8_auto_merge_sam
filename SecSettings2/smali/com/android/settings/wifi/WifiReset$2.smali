@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wifi/WifiReset$2;
+.class Lcom/android/settings_ex/wifi/WifiReset$2;
 .super Ljava/lang/Thread;
 .source "WifiReset.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiReset;->reset()V
+    value = Lcom/android/settings_ex/wifi/WifiReset;->reset()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiReset;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiReset;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiReset;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiReset;)V
     .locals 0
 
     .prologue
     .line 137
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiReset$2;->this$0:Lcom/android/settings/wifi/WifiReset;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiReset$2;->this$0:Lcom/android/settings_ex/wifi/WifiReset;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
@@ -38,10 +38,10 @@
 
     .prologue
     .line 139
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiReset$2;->this$0:Lcom/android/settings/wifi/WifiReset;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiReset$2;->this$0:Lcom/android/settings_ex/wifi/WifiReset;
 
-    # getter for: Lcom/android/settings/wifi/WifiReset;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiReset;->access$100(Lcom/android/settings/wifi/WifiReset;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/wifi/WifiReset;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiReset;->access$100(Lcom/android/settings_ex/wifi/WifiReset;)Landroid/content/Context;
 
     move-result-object v1
 

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/nearby/DMSPropertyService;
+.class public Lcom/android/settings_ex/nearby/DMSPropertyService;
 .super Landroid/app/IntentService;
 .source "DMSPropertyService.java"
 
@@ -9,7 +9,7 @@
 
     .prologue
     .line 11
-    const-class v0, Lcom/android/settings/nearby/DMSPropertyService;
+    const-class v0, Lcom/android/settings_ex/nearby/DMSPropertyService;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -44,10 +44,10 @@
 
     const-string v4, "action is null. Do not handle Intent"
 
-    invoke-static {v2, v3, v4}, Lcom/android/settings/nearby/DLog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3, v4}, Lcom/android/settings_ex/nearby/DLog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 19
-    invoke-virtual {p0}, Lcom/android/settings/nearby/DMSPropertyService;->stopSelf()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearby/DMSPropertyService;->stopSelf()V
 
     .line 25
     :cond_0
@@ -107,14 +107,14 @@
 
     move-result-object v4
 
-    invoke-static {v2, v3, v4}, Lcom/android/settings/nearby/DLog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3, v4}, Lcom/android/settings_ex/nearby/DLog;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 23
-    invoke-virtual {p0}, Lcom/android/settings/nearby/DMSPropertyService;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearby/DMSPropertyService;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lcom/android/settings/nearby/DMSUtil;->setIsServerStarted(Landroid/content/Context;I)V
+    invoke-static {v2, v1}, Lcom/android/settings_ex/nearby/DMSUtil;->setIsServerStarted(Landroid/content/Context;I)V
 
     goto :goto_0
 .end method

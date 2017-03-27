@@ -1,14 +1,14 @@
-.class final Lcom/android/settingslib/applications/ApplicationsState$13;
+.class final Lcom/android/settings_exlib/applications/ApplicationsState$13;
 .super Ljava/lang/Object;
 .source "ApplicationsState.java"
 
 # interfaces
-.implements Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+.implements Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/applications/ApplicationsState;
+    value = Lcom/android/settings_exlib/applications/ApplicationsState;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -114,9 +114,9 @@
 
 
 # virtual methods
-.method public filterApp(Lcom/android/settingslib/applications/ApplicationsState$AppEntry;)Z
+.method public filterApp(Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;)Z
     .locals 6
-    .param p1, "entry"    # Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+    .param p1, "entry"    # Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
 
     .prologue
     const/4 v3, 0x1
@@ -126,7 +126,7 @@
     .line 1396
     const-string v4, "com.skt.prod.phone"
 
-    iget-object v5, p1, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
+    iget-object v5, p1, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
 
     iget-object v5, v5, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
@@ -143,7 +143,7 @@
 
     .line 1399
     :cond_1
-    iget-object v4, p1, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
+    iget-object v4, p1, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
 
     iget v4, v4, Landroid/content/pm/ApplicationInfo;->privateFlags:I
 
@@ -158,9 +158,9 @@
 
     .line 1402
     :cond_2
-    sget-object v4, Lcom/android/settingslib/applications/ApplicationsState;->mAppWidgetManager:Landroid/appwidget/AppWidgetManager;
+    sget-object v4, Lcom/android/settings_exlib/applications/ApplicationsState;->mAppWidgetManager:Landroid/appwidget/AppWidgetManager;
 
-    iget-object v5, p1, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
+    iget-object v5, p1, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
 
     iget-object v5, v5, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
@@ -170,25 +170,25 @@
 
     .line 1404
     .local v1, "hasBindAppWidgetPermission":Z
-    sget-object v4, Lcom/android/settingslib/applications/ApplicationsState;->mPm:Landroid/content/pm/PackageManager;
+    sget-object v4, Lcom/android/settings_exlib/applications/ApplicationsState;->mPm:Landroid/content/pm/PackageManager;
 
-    iget-object v5, p1, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
+    iget-object v5, p1, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
 
     iget-object v5, v5, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    invoke-direct {p0, v4, v5}, Lcom/android/settingslib/applications/ApplicationsState$13;->hasPreferredActivities(Landroid/content/pm/PackageManager;Ljava/lang/String;)Z
+    invoke-direct {p0, v4, v5}, Lcom/android/settings_exlib/applications/ApplicationsState$13;->hasPreferredActivities(Landroid/content/pm/PackageManager;Ljava/lang/String;)Z
 
     move-result v4
 
     if-nez v4, :cond_3
 
-    sget-object v4, Lcom/android/settingslib/applications/ApplicationsState;->mUsbManager:Landroid/hardware/usb/IUsbManager;
+    sget-object v4, Lcom/android/settings_exlib/applications/ApplicationsState;->mUsbManager:Landroid/hardware/usb/IUsbManager;
 
-    iget-object v5, p1, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
+    iget-object v5, p1, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
 
     iget-object v5, v5, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    invoke-direct {p0, v4, v5}, Lcom/android/settingslib/applications/ApplicationsState$13;->hasUsbDefaults(Landroid/hardware/usb/IUsbManager;Ljava/lang/String;)Z
+    invoke-direct {p0, v4, v5}, Lcom/android/settings_exlib/applications/ApplicationsState$13;->hasUsbDefaults(Landroid/hardware/usb/IUsbManager;Ljava/lang/String;)Z
 
     move-result v4
 

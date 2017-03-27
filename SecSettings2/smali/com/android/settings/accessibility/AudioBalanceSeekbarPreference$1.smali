@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference$1;
+.class Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference$1;
 .super Landroid/content/BroadcastReceiver;
 .source "AudioBalanceSeekbarPreference.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference;
+    value = Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference;)V
     .locals 0
 
     .prologue
     .line 78
-    iput-object p1, p0, Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference$1;->this$0:Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference$1;->this$0:Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -48,9 +48,9 @@
 
     .line 84
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference$1;->this$0:Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference$1;->this$0:Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/AudioBalanceSeekbarPreference;->setDualColorSeekbar()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/AudioBalanceSeekbarPreference;->setDualColorSeekbar()V
 
     goto :goto_0
 .end method

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/LGTRoamingEnv$7;
+.class Lcom/android/settings_ex/LGTRoamingEnv$7;
 .super Ljava/lang/Object;
 .source "LGTRoamingEnv.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/LGTRoamingEnv;
+    value = Lcom/android/settings_ex/LGTRoamingEnv;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/LGTRoamingEnv;
+.field final synthetic this$0:Lcom/android/settings_ex/LGTRoamingEnv;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/LGTRoamingEnv;)V
+.method constructor <init>(Lcom/android/settings_ex/LGTRoamingEnv;)V
     .locals 0
 
     .prologue
     .line 264
-    iput-object p1, p0, Lcom/android/settings/LGTRoamingEnv$7;->this$0:Lcom/android/settings/LGTRoamingEnv;
+    iput-object p1, p0, Lcom/android/settings_ex/LGTRoamingEnv$7;->this$0:Lcom/android/settings_ex/LGTRoamingEnv;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -69,9 +69,9 @@
 
     .line 272
     :try_start_0
-    iget-object v2, p0, Lcom/android/settings/LGTRoamingEnv$7;->this$0:Lcom/android/settings/LGTRoamingEnv;
+    iget-object v2, p0, Lcom/android/settings_ex/LGTRoamingEnv$7;->this$0:Lcom/android/settings_ex/LGTRoamingEnv;
 
-    invoke-virtual {v2, v1}, Lcom/android/settings/LGTRoamingEnv;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v2, v1}, Lcom/android/settings_ex/LGTRoamingEnv;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 

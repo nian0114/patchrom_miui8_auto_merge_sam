@@ -1,4 +1,4 @@
-.class Lcom/android/settings/notification/ZenAccessSettings$ScaryWarningDialogFragment$2;
+.class Lcom/android/settings_ex/notification/ZenAccessSettings$ScaryWarningDialogFragment$2;
 .super Ljava/lang/Object;
 .source "ZenAccessSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/notification/ZenAccessSettings$ScaryWarningDialogFragment;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/notification/ZenAccessSettings$ScaryWarningDialogFragment;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/ZenAccessSettings$ScaryWarningDialogFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/ZenAccessSettings$ScaryWarningDialogFragment;
 
 .field final synthetic val$pkg:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/notification/ZenAccessSettings$ScaryWarningDialogFragment;Ljava/lang/String;)V
+.method constructor <init>(Lcom/android/settings_ex/notification/ZenAccessSettings$ScaryWarningDialogFragment;Ljava/lang/String;)V
     .locals 0
 
     .prologue
     .line 205
-    iput-object p1, p0, Lcom/android/settings/notification/ZenAccessSettings$ScaryWarningDialogFragment$2;->this$0:Lcom/android/settings/notification/ZenAccessSettings$ScaryWarningDialogFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/ZenAccessSettings$ScaryWarningDialogFragment$2;->this$0:Lcom/android/settings_ex/notification/ZenAccessSettings$ScaryWarningDialogFragment;
 
-    iput-object p2, p0, Lcom/android/settings/notification/ZenAccessSettings$ScaryWarningDialogFragment$2;->val$pkg:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/settings_ex/notification/ZenAccessSettings$ScaryWarningDialogFragment$2;->val$pkg:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,18 +47,18 @@
 
     .prologue
     .line 207
-    iget-object v0, p0, Lcom/android/settings/notification/ZenAccessSettings$ScaryWarningDialogFragment$2;->this$0:Lcom/android/settings/notification/ZenAccessSettings$ScaryWarningDialogFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/ZenAccessSettings$ScaryWarningDialogFragment$2;->this$0:Lcom/android/settings_ex/notification/ZenAccessSettings$ScaryWarningDialogFragment;
 
-    invoke-virtual {v0}, Lcom/android/settings/notification/ZenAccessSettings$ScaryWarningDialogFragment;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/android/settings_ex/notification/ZenAccessSettings$ScaryWarningDialogFragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/notification/ZenAccessSettings$ScaryWarningDialogFragment$2;->val$pkg:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/ZenAccessSettings$ScaryWarningDialogFragment$2;->val$pkg:Ljava/lang/String;
 
     const/4 v2, 0x1
 
-    # invokes: Lcom/android/settings/notification/ZenAccessSettings;->setAccess(Landroid/content/Context;Ljava/lang/String;Z)V
-    invoke-static {v0, v1, v2}, Lcom/android/settings/notification/ZenAccessSettings;->access$100(Landroid/content/Context;Ljava/lang/String;Z)V
+    # invokes: Lcom/android/settings_ex/notification/ZenAccessSettings;->setAccess(Landroid/content/Context;Ljava/lang/String;Z)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/notification/ZenAccessSettings;->access$100(Landroid/content/Context;Ljava/lang/String;Z)V
 
     .line 208
     return-void

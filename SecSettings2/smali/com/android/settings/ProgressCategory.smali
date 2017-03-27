@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/ProgressCategory;
-.super Lcom/android/settings/ProgressCategoryBase;
+.class public Lcom/android/settings_ex/ProgressCategory;
+.super Lcom/android/settings_ex/ProgressCategoryBase;
 .source "ProgressCategory.java"
 
 
@@ -20,7 +20,7 @@
     .line 35
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lcom/android/settings/ProgressCategory;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, v0}, Lcom/android/settings_ex/ProgressCategory;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 36
     return-void
@@ -35,25 +35,25 @@
     const/4 v0, 0x0
 
     .line 39
-    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings/ProgressCategoryBase;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings_ex/ProgressCategoryBase;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 31
-    iput-boolean v0, p0, Lcom/android/settings/ProgressCategory;->mProgress:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/ProgressCategory;->mProgress:Z
 
     .line 32
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/ProgressCategory;->mDivider:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/ProgressCategory;->mDivider:Z
 
     .line 40
     const v0, 0x7f04018e
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/ProgressCategory;->setLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/ProgressCategory;->setLayoutResource(I)V
 
     .line 41
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/ProgressCategory;->mEmptyTextRes:I
+    iput v0, p0, Lcom/android/settings_ex/ProgressCategory;->mEmptyTextRes:I
 
     .line 42
     return-void
@@ -69,7 +69,7 @@
     .line 46
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/settings/ProgressCategory;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/settings_ex/ProgressCategory;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 47
     return-void
@@ -84,22 +84,22 @@
 
     .prologue
     .line 50
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/settings/ProgressCategoryBase;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/settings_ex/ProgressCategoryBase;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 31
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/ProgressCategory;->mProgress:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/ProgressCategory;->mProgress:Z
 
     .line 32
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/ProgressCategory;->mDivider:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/ProgressCategory;->mDivider:Z
 
     .line 51
     const v0, 0x7f04018e
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/ProgressCategory;->setLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/ProgressCategory;->setLayoutResource(I)V
 
     .line 52
     return-void
@@ -117,7 +117,7 @@
     const/4 v3, 0x0
 
     .line 60
-    invoke-super {p0, p1}, Lcom/android/settings/ProgressCategoryBase;->onBindView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/ProgressCategoryBase;->onBindView(Landroid/view/View;)V
 
     .line 61
     const v2, 0x7f0d00f4
@@ -136,7 +136,7 @@
 
     .line 64
     .local v0, "divider":Landroid/view/View;
-    iget-boolean v2, p0, Lcom/android/settings/ProgressCategory;->mProgress:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/ProgressCategory;->mProgress:Z
 
     if-eqz v2, :cond_0
 
@@ -146,7 +146,7 @@
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
     .line 65
-    iget-boolean v2, p0, Lcom/android/settings/ProgressCategory;->mDivider:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/ProgressCategory;->mDivider:Z
 
     if-eqz v2, :cond_1
 
@@ -175,7 +175,7 @@
 
     .prologue
     .line 55
-    iput p1, p0, Lcom/android/settings/ProgressCategory;->mEmptyTextRes:I
+    iput p1, p0, Lcom/android/settings_ex/ProgressCategory;->mEmptyTextRes:I
 
     .line 56
     return-void
@@ -187,10 +187,10 @@
 
     .prologue
     .line 70
-    iput-boolean p1, p0, Lcom/android/settings/ProgressCategory;->mProgress:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/ProgressCategory;->mProgress:Z
 
     .line 71
-    invoke-virtual {p0}, Lcom/android/settings/ProgressCategory;->notifyChanged()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/ProgressCategory;->notifyChanged()V
 
     .line 72
     return-void
@@ -202,7 +202,7 @@
 
     .prologue
     .line 75
-    iput-boolean p1, p0, Lcom/android/settings/ProgressCategory;->mDivider:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/ProgressCategory;->mDivider:Z
 
     .line 76
     return-void

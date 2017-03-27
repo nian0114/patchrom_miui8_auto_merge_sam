@@ -1,11 +1,11 @@
-.class Lcom/android/settings/GlobalRoamingSettings$1;
+.class Lcom/android/settings_ex/GlobalRoamingSettings$1;
 .super Landroid/content/BroadcastReceiver;
 .source "GlobalRoamingSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/GlobalRoamingSettings;
+    value = Lcom/android/settings_ex/GlobalRoamingSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/GlobalRoamingSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/GlobalRoamingSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/GlobalRoamingSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/GlobalRoamingSettings;)V
     .locals 0
 
     .prologue
     .line 105
-    iput-object p1, p0, Lcom/android/settings/GlobalRoamingSettings$1;->this$0:Lcom/android/settings/GlobalRoamingSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/GlobalRoamingSettings$1;->this$0:Lcom/android/settings_ex/GlobalRoamingSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -99,10 +99,10 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/GlobalRoamingSettings$1;->this$0:Lcom/android/settings/GlobalRoamingSettings;
+    iget-object v4, p0, Lcom/android/settings_ex/GlobalRoamingSettings$1;->this$0:Lcom/android/settings_ex/GlobalRoamingSettings;
 
-    # invokes: Lcom/android/settings/GlobalRoamingSettings;->getDataRoamingState()Z
-    invoke-static {v4}, Lcom/android/settings/GlobalRoamingSettings;->access$000(Lcom/android/settings/GlobalRoamingSettings;)Z
+    # invokes: Lcom/android/settings_ex/GlobalRoamingSettings;->getDataRoamingState()Z
+    invoke-static {v4}, Lcom/android/settings_ex/GlobalRoamingSettings;->access$000(Lcom/android/settings_ex/GlobalRoamingSettings;)Z
 
     move-result v4
 
@@ -129,10 +129,10 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/GlobalRoamingSettings$1;->this$0:Lcom/android/settings/GlobalRoamingSettings;
+    iget-object v4, p0, Lcom/android/settings_ex/GlobalRoamingSettings$1;->this$0:Lcom/android/settings_ex/GlobalRoamingSettings;
 
-    # getter for: Lcom/android/settings/GlobalRoamingSettings;->mPolicyManager:Landroid/net/NetworkPolicyManager;
-    invoke-static {v4}, Lcom/android/settings/GlobalRoamingSettings;->access$100(Lcom/android/settings/GlobalRoamingSettings;)Landroid/net/NetworkPolicyManager;
+    # getter for: Lcom/android/settings_ex/GlobalRoamingSettings;->mPolicyManager:Landroid/net/NetworkPolicyManager;
+    invoke-static {v4}, Lcom/android/settings_ex/GlobalRoamingSettings;->access$100(Lcom/android/settings_ex/GlobalRoamingSettings;)Landroid/net/NetworkPolicyManager;
 
     move-result-object v4
 
@@ -151,47 +151,47 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 113
-    iget-object v2, p0, Lcom/android/settings/GlobalRoamingSettings$1;->this$0:Lcom/android/settings/GlobalRoamingSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/GlobalRoamingSettings$1;->this$0:Lcom/android/settings_ex/GlobalRoamingSettings;
 
-    # getter for: Lcom/android/settings/GlobalRoamingSettings;->mButtonDataRoaming:Landroid/preference/SwitchPreference;
-    invoke-static {v2}, Lcom/android/settings/GlobalRoamingSettings;->access$200(Lcom/android/settings/GlobalRoamingSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/GlobalRoamingSettings;->mButtonDataRoaming:Landroid/preference/SwitchPreference;
+    invoke-static {v2}, Lcom/android/settings_ex/GlobalRoamingSettings;->access$200(Lcom/android/settings_ex/GlobalRoamingSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
     .line 114
-    iget-object v2, p0, Lcom/android/settings/GlobalRoamingSettings$1;->this$0:Lcom/android/settings/GlobalRoamingSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/GlobalRoamingSettings$1;->this$0:Lcom/android/settings_ex/GlobalRoamingSettings;
 
-    # getter for: Lcom/android/settings/GlobalRoamingSettings;->mButtonDataRoaming:Landroid/preference/SwitchPreference;
-    invoke-static {v2}, Lcom/android/settings/GlobalRoamingSettings;->access$200(Lcom/android/settings/GlobalRoamingSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/GlobalRoamingSettings;->mButtonDataRoaming:Landroid/preference/SwitchPreference;
+    invoke-static {v2}, Lcom/android/settings_ex/GlobalRoamingSettings;->access$200(Lcom/android/settings_ex/GlobalRoamingSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/GlobalRoamingSettings$1;->this$0:Lcom/android/settings/GlobalRoamingSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/GlobalRoamingSettings$1;->this$0:Lcom/android/settings_ex/GlobalRoamingSettings;
 
-    # invokes: Lcom/android/settings/GlobalRoamingSettings;->getDataRoamingState()Z
-    invoke-static {v3}, Lcom/android/settings/GlobalRoamingSettings;->access$000(Lcom/android/settings/GlobalRoamingSettings;)Z
+    # invokes: Lcom/android/settings_ex/GlobalRoamingSettings;->getDataRoamingState()Z
+    invoke-static {v3}, Lcom/android/settings_ex/GlobalRoamingSettings;->access$000(Lcom/android/settings_ex/GlobalRoamingSettings;)Z
 
     move-result v3
 
     invoke-virtual {v2, v3}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 115
-    iget-object v2, p0, Lcom/android/settings/GlobalRoamingSettings$1;->this$0:Lcom/android/settings/GlobalRoamingSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/GlobalRoamingSettings$1;->this$0:Lcom/android/settings_ex/GlobalRoamingSettings;
 
-    # invokes: Lcom/android/settings/GlobalRoamingSettings;->getDataRoamingState()Z
-    invoke-static {v2}, Lcom/android/settings/GlobalRoamingSettings;->access$000(Lcom/android/settings/GlobalRoamingSettings;)Z
+    # invokes: Lcom/android/settings_ex/GlobalRoamingSettings;->getDataRoamingState()Z
+    invoke-static {v2}, Lcom/android/settings_ex/GlobalRoamingSettings;->access$000(Lcom/android/settings_ex/GlobalRoamingSettings;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
     .line 116
-    iget-object v2, p0, Lcom/android/settings/GlobalRoamingSettings$1;->this$0:Lcom/android/settings/GlobalRoamingSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/GlobalRoamingSettings$1;->this$0:Lcom/android/settings_ex/GlobalRoamingSettings;
 
-    # getter for: Lcom/android/settings/GlobalRoamingSettings;->mButtonDataRoaming:Landroid/preference/SwitchPreference;
-    invoke-static {v2}, Lcom/android/settings/GlobalRoamingSettings;->access$200(Lcom/android/settings/GlobalRoamingSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/GlobalRoamingSettings;->mButtonDataRoaming:Landroid/preference/SwitchPreference;
+    invoke-static {v2}, Lcom/android/settings_ex/GlobalRoamingSettings;->access$200(Lcom/android/settings_ex/GlobalRoamingSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v2
 
@@ -206,10 +206,10 @@
 
     .line 118
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/GlobalRoamingSettings$1;->this$0:Lcom/android/settings/GlobalRoamingSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/GlobalRoamingSettings$1;->this$0:Lcom/android/settings_ex/GlobalRoamingSettings;
 
-    # getter for: Lcom/android/settings/GlobalRoamingSettings;->mButtonDataRoaming:Landroid/preference/SwitchPreference;
-    invoke-static {v2}, Lcom/android/settings/GlobalRoamingSettings;->access$200(Lcom/android/settings/GlobalRoamingSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/GlobalRoamingSettings;->mButtonDataRoaming:Landroid/preference/SwitchPreference;
+    invoke-static {v2}, Lcom/android/settings_ex/GlobalRoamingSettings;->access$200(Lcom/android/settings_ex/GlobalRoamingSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v2
 
@@ -252,10 +252,10 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/GlobalRoamingSettings$1;->this$0:Lcom/android/settings/GlobalRoamingSettings;
+    iget-object v4, p0, Lcom/android/settings_ex/GlobalRoamingSettings$1;->this$0:Lcom/android/settings_ex/GlobalRoamingSettings;
 
-    # getter for: Lcom/android/settings/GlobalRoamingSettings;->mPolicyManager:Landroid/net/NetworkPolicyManager;
-    invoke-static {v4}, Lcom/android/settings/GlobalRoamingSettings;->access$100(Lcom/android/settings/GlobalRoamingSettings;)Landroid/net/NetworkPolicyManager;
+    # getter for: Lcom/android/settings_ex/GlobalRoamingSettings;->mPolicyManager:Landroid/net/NetworkPolicyManager;
+    invoke-static {v4}, Lcom/android/settings_ex/GlobalRoamingSettings;->access$100(Lcom/android/settings_ex/GlobalRoamingSettings;)Landroid/net/NetworkPolicyManager;
 
     move-result-object v4
 
@@ -297,10 +297,10 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 125
-    iget-object v2, p0, Lcom/android/settings/GlobalRoamingSettings$1;->this$0:Lcom/android/settings/GlobalRoamingSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/GlobalRoamingSettings$1;->this$0:Lcom/android/settings_ex/GlobalRoamingSettings;
 
-    # getter for: Lcom/android/settings/GlobalRoamingSettings;->mButtonBackgroundData:Landroid/preference/SwitchPreference;
-    invoke-static {v2}, Lcom/android/settings/GlobalRoamingSettings;->access$300(Lcom/android/settings/GlobalRoamingSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/GlobalRoamingSettings;->mButtonBackgroundData:Landroid/preference/SwitchPreference;
+    invoke-static {v2}, Lcom/android/settings_ex/GlobalRoamingSettings;->access$300(Lcom/android/settings_ex/GlobalRoamingSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v2
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$1;
+.class Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$1;
 .super Ljava/lang/Object;
 .source "KnoxChooseLockTwoFactor.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
+    value = Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;)V
     .locals 0
 
     .prologue
     .line 153
-    iput-object p1, p0, Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$1;->this$0:Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$1;->this$0:Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -64,24 +64,24 @@
     if-nez v2, :cond_1
 
     .line 166
-    iget-object v2, p0, Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$1;->this$0:Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$1;->this$0:Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
 
     const/4 v3, 0x0
 
-    # setter for: Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->mConfimationStarted:Z
-    invoke-static {v2, v3}, Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->access$002(Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;Z)Z
+    # setter for: Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->mConfimationStarted:Z
+    invoke-static {v2, v3}, Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->access$002(Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;Z)Z
 
     .line 167
-    iget-object v2, p0, Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$1;->this$0:Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$1;->this$0:Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
 
-    # getter for: Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->activity:Landroid/app/Activity;
-    invoke-static {v2}, Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->access$100(Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;)Landroid/app/Activity;
+    # getter for: Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->activity:Landroid/app/Activity;
+    invoke-static {v2}, Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->access$100(Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;)Landroid/app/Activity;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$1;->this$0:Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
+    iget-object v3, p0, Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$1;->this$0:Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
 
-    invoke-virtual {v3}, Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v3}, Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -100,10 +100,10 @@
     invoke-virtual {v2}, Landroid/widget/Toast;->show()V
 
     .line 168
-    iget-object v2, p0, Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$1;->this$0:Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$1;->this$0:Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
 
-    # invokes: Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->launchLockType()V
-    invoke-static {v2}, Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->access$200(Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;)V
+    # invokes: Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->launchLockType()V
+    invoke-static {v2}, Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->access$200(Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -150,18 +150,18 @@
     if-ne v2, v3, :cond_0
 
     .line 170
-    iget-object v2, p0, Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$1;->this$0:Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$1;->this$0:Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
 
     const/4 v3, 0x0
 
-    # setter for: Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->mConfimationStarted:Z
-    invoke-static {v2, v3}, Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->access$002(Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;Z)Z
+    # setter for: Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->mConfimationStarted:Z
+    invoke-static {v2, v3}, Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->access$002(Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;Z)Z
 
     .line 171
-    iget-object v2, p0, Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$1;->this$0:Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$1;->this$0:Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
 
-    # getter for: Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->mFPM:Lcom/samsung/android/fingerprint/FingerprintManager;
-    invoke-static {v2}, Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->access$300(Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;)Lcom/samsung/android/fingerprint/FingerprintManager;
+    # getter for: Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->mFPM:Lcom/samsung/android/fingerprint/FingerprintManager;
+    invoke-static {v2}, Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->access$300(Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;)Lcom/samsung/android/fingerprint/FingerprintManager;
 
     move-result-object v2
 
@@ -174,10 +174,10 @@
     if-ne v2, v3, :cond_2
 
     .line 172
-    iget-object v2, p0, Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$1;->this$0:Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$1;->this$0:Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
 
-    # getter for: Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->mFPM:Lcom/samsung/android/fingerprint/FingerprintManager;
-    invoke-static {v2}, Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->access$300(Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;)Lcom/samsung/android/fingerprint/FingerprintManager;
+    # getter for: Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->mFPM:Lcom/samsung/android/fingerprint/FingerprintManager;
+    invoke-static {v2}, Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->access$300(Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;)Lcom/samsung/android/fingerprint/FingerprintManager;
 
     move-result-object v2
 
@@ -192,10 +192,10 @@
     if-ne v2, v3, :cond_0
 
     .line 175
-    iget-object v2, p0, Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$1;->this$0:Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$1;->this$0:Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
 
-    # invokes: Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->showSensorErrorDialog()V
-    invoke-static {v2}, Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->access$400(Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;)V
+    # invokes: Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->showSensorErrorDialog()V
+    invoke-static {v2}, Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->access$400(Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 

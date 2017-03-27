@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog$2;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog$2;
 .super Ljava/lang/Object;
 .source "WifiApWhitelistDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;)V
     .locals 0
 
     .prologue
     .line 195
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog$2;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog$2;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,16 +45,16 @@
     const/4 v3, 0x0
 
     .line 197
-    sget-object v1, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->TAG:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->TAG:Ljava/lang/String;
 
     const-string v2, "OnFocusChangeListener"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 198
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog$2;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog$2;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
 
-    invoke-virtual {v1}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -72,10 +72,10 @@
 
     move-result v1
 
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog$2;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog$2;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mButtonOk:Landroid/widget/Button;
-    invoke-static {v2}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->access$000(Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;)Landroid/widget/Button;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mButtonOk:Landroid/widget/Button;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->access$000(Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;)Landroid/widget/Button;
 
     move-result-object v2
 
@@ -103,10 +103,10 @@
 
     move-result v1
 
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog$2;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog$2;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->mButtonCancel:Landroid/widget/Button;
-    invoke-static {v2}, Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;->access$100(Lcom/android/settings/wifi/mobileap/WifiApWhitelistDialog;)Landroid/widget/Button;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->mButtonCancel:Landroid/widget/Button;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;->access$100(Lcom/android/settings_ex/wifi/mobileap/WifiApWhitelistDialog;)Landroid/widget/Button;
 
     move-result-object v2
 

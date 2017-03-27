@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fingerprint/FingerprintSettings$5;
+.class Lcom/android/settings_ex/fingerprint/FingerprintSettings$5;
 .super Ljava/lang/Object;
 .source "FingerprintSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fingerprint/FingerprintSettings;->showHuntipForFingerprintIdentification()V
+    value = Lcom/android/settings_ex/fingerprint/FingerprintSettings;->showHuntipForFingerprintIdentification()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/FingerprintSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintSettings;)V
     .locals 0
 
     .prologue
     .line 804
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintSettings$5;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$5;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,20 +41,20 @@
 
     .prologue
     .line 808
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings$5;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$5;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintSettings;->notificationManager:Landroid/app/NotificationManager;
-    invoke-static {v0}, Lcom/android/settings/fingerprint/FingerprintSettings;->access$1100(Lcom/android/settings/fingerprint/FingerprintSettings;)Landroid/app/NotificationManager;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintSettings;->notificationManager:Landroid/app/NotificationManager;
+    invoke-static {v0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings;->access$1100(Lcom/android/settings_ex/fingerprint/FingerprintSettings;)Landroid/app/NotificationManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 809
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintSettings$5;->this$0:Lcom/android/settings/fingerprint/FingerprintSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintSettings$5;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSettings;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintSettings;->notificationManager:Landroid/app/NotificationManager;
-    invoke-static {v0}, Lcom/android/settings/fingerprint/FingerprintSettings;->access$1100(Lcom/android/settings/fingerprint/FingerprintSettings;)Landroid/app/NotificationManager;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintSettings;->notificationManager:Landroid/app/NotificationManager;
+    invoke-static {v0}, Lcom/android/settings_ex/fingerprint/FingerprintSettings;->access$1100(Lcom/android/settings_ex/fingerprint/FingerprintSettings;)Landroid/app/NotificationManager;
 
     move-result-object v0
 

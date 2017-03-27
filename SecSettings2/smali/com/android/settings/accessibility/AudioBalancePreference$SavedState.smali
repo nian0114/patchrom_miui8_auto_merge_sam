@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessibility/AudioBalancePreference$SavedState;
+.class Lcom/android/settings_ex/accessibility/AudioBalancePreference$SavedState;
 .super Landroid/preference/Preference$BaseSavedState;
 .source "AudioBalancePreference.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/AudioBalancePreference;
+    value = Lcom/android/settings_ex/accessibility/AudioBalancePreference;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
         value = {
             "Landroid/os/Parcelable$Creator",
             "<",
-            "Lcom/android/settings/accessibility/AudioBalancePreference$SavedState;",
+            "Lcom/android/settings_ex/accessibility/AudioBalancePreference$SavedState;",
             ">;"
         }
     .end annotation
@@ -39,11 +39,11 @@
 
     .prologue
     .line 368
-    new-instance v0, Lcom/android/settings/accessibility/AudioBalancePreference$SavedState$1;
+    new-instance v0, Lcom/android/settings_ex/accessibility/AudioBalancePreference$SavedState$1;
 
-    invoke-direct {v0}, Lcom/android/settings/accessibility/AudioBalancePreference$SavedState$1;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/accessibility/AudioBalancePreference$SavedState$1;-><init>()V
 
-    sput-object v0, Lcom/android/settings/accessibility/AudioBalancePreference$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
+    sput-object v0, Lcom/android/settings_ex/accessibility/AudioBalancePreference$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
@@ -61,14 +61,14 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/AudioBalancePreference$SavedState;->progress:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/AudioBalancePreference$SavedState;->progress:I
 
     .line 354
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/AudioBalancePreference$SavedState;->oldProgress:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/AudioBalancePreference$SavedState;->oldProgress:I
 
     .line 355
     return-void
@@ -98,12 +98,12 @@
     invoke-super {p0, p1, p2}, Landroid/preference/Preference$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
     .line 360
-    iget v0, p0, Lcom/android/settings/accessibility/AudioBalancePreference$SavedState;->progress:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/AudioBalancePreference$SavedState;->progress:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 361
-    iget v0, p0, Lcom/android/settings/accessibility/AudioBalancePreference$SavedState;->oldProgress:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/AudioBalancePreference$SavedState;->oldProgress:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 

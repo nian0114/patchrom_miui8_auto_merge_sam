@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/notification/NotificationSettings$17;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/notification/NotificationSettings$17;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "NotificationSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/NotificationSettings;
+    value = Lcom/android/settings_ex/notification/NotificationSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 1209
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -50,19 +50,19 @@
 
     .line 1248
     .local v7, "rt":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
-    invoke-static {p1}, Lcom/android/settings/Utils;->hasHaptic(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->hasHaptic(Landroid/content/Context;)Z
 
     move-result v8
 
     if-eqz v8, :cond_0
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->isEnableIntensity(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isEnableIntensity(Landroid/content/Context;)Z
 
     move-result v8
 
     if-nez v8, :cond_1
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->isVoiceCapable(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isVoiceCapable(Landroid/content/Context;)Z
 
     move-result v8
 
@@ -95,7 +95,7 @@
 
     .line 1256
     :cond_2
-    invoke-static {p1}, Lcom/android/settings/Utils;->isContainerOnlyMode(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isContainerOnlyMode(Landroid/content/Context;)Z
 
     move-result v8
 
@@ -108,7 +108,7 @@
 
     .line 1260
     :cond_3
-    invoke-static {p1}, Lcom/android/settings/Utils;->isEnabledUltraPowerSaving(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isEnabledUltraPowerSaving(Landroid/content/Context;)Z
 
     move-result v8
 
@@ -136,7 +136,7 @@
 
     .line 1266
     :cond_4
-    invoke-static {}, Lcom/android/settings/Utils;->isAllNAVendor()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isAllNAVendor()Z
 
     move-result v8
 
@@ -159,7 +159,7 @@
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 1277
-    invoke-static {}, Lcom/android/settings/Utils;->isMultisimModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMultisimModel()Z
 
     move-result v8
 
@@ -246,7 +246,7 @@
 
     .line 1298
     :cond_8
-    invoke-static {p1}, Lcom/android/settings/Utils;->isEnabledUltraPowerSaving(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isEnabledUltraPowerSaving(Landroid/content/Context;)Z
 
     move-result v8
 
@@ -274,12 +274,12 @@
 
     .line 1305
     :cond_9
-    # getter for: Lcom/android/settings/notification/NotificationSettings;->PREFS:[Lcom/android/settings/notification/SettingPref;
-    invoke-static {}, Lcom/android/settings/notification/NotificationSettings;->access$1900()[Lcom/android/settings/notification/SettingPref;
+    # getter for: Lcom/android/settings_ex/notification/NotificationSettings;->PREFS:[Lcom/android/settings_ex/notification/SettingPref;
+    invoke-static {}, Lcom/android/settings_ex/notification/NotificationSettings;->access$1900()[Lcom/android/settings_ex/notification/SettingPref;
 
     move-result-object v0
 
-    .local v0, "arr$":[Lcom/android/settings/notification/SettingPref;
+    .local v0, "arr$":[Lcom/android/settings_ex/notification/SettingPref;
     array-length v4, v0
 
     .local v4, "len$":I
@@ -292,15 +292,15 @@
     aget-object v6, v0, v3
 
     .line 1306
-    .local v6, "pref":Lcom/android/settings/notification/SettingPref;
-    invoke-virtual {v6, p1}, Lcom/android/settings/notification/SettingPref;->isApplicable(Landroid/content/Context;)Z
+    .local v6, "pref":Lcom/android/settings_ex/notification/SettingPref;
+    invoke-virtual {v6, p1}, Lcom/android/settings_ex/notification/SettingPref;->isApplicable(Landroid/content/Context;)Z
 
     move-result v8
 
     if-nez v8, :cond_a
 
     .line 1307
-    invoke-virtual {v6}, Lcom/android/settings/notification/SettingPref;->getKey()Ljava/lang/String;
+    invoke-virtual {v6}, Lcom/android/settings_ex/notification/SettingPref;->getKey()Ljava/lang/String;
 
     move-result-object v8
 
@@ -313,12 +313,12 @@
     goto :goto_1
 
     .line 1281
-    .end local v0    # "arr$":[Lcom/android/settings/notification/SettingPref;
+    .end local v0    # "arr$":[Lcom/android/settings_ex/notification/SettingPref;
     .end local v2    # "download_contents":Ljava/lang/String;
     .end local v3    # "i$":I
     .end local v4    # "len$":I
     .end local v5    # "mRingtoneType":Ljava/lang/String;
-    .end local v6    # "pref":Lcom/android/settings/notification/SettingPref;
+    .end local v6    # "pref":Lcom/android/settings_ex/notification/SettingPref;
     :cond_b
     const-string v8, "ringtone2"
 
@@ -332,19 +332,19 @@
     goto :goto_0
 
     .line 1311
-    .restart local v0    # "arr$":[Lcom/android/settings/notification/SettingPref;
+    .restart local v0    # "arr$":[Lcom/android/settings_ex/notification/SettingPref;
     .restart local v2    # "download_contents":Ljava/lang/String;
     .restart local v3    # "i$":I
     .restart local v4    # "len$":I
     .restart local v5    # "mRingtoneType":Ljava/lang/String;
     :cond_c
-    invoke-static {p1}, Lcom/android/settings/Utils;->hasHaptic(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->hasHaptic(Landroid/content/Context;)Z
 
     move-result v8
 
     if-eqz v8, :cond_d
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->isEnableIntensity(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isEnableIntensity(Landroid/content/Context;)Z
 
     move-result v8
 
@@ -401,7 +401,7 @@
 
     .line 1324
     :cond_f
-    invoke-static {p1}, Lcom/android/settings/Utils;->isVoiceCapable(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isVoiceCapable(Landroid/content/Context;)Z
 
     move-result v8
 
@@ -443,7 +443,7 @@
             "Z)",
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/search/SearchIndexableRaw;",
+            "Lcom/android/settings_ex/search/SearchIndexableRaw;",
             ">;"
         }
     .end annotation
@@ -455,29 +455,29 @@
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     .line 1226
-    .local v2, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/search/SearchIndexableRaw;>;"
+    .local v2, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/search/SearchIndexableRaw;>;"
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
     .line 1228
     .local v1, "res":Landroid/content/res/Resources;
-    invoke-static {}, Lcom/android/settings/Utils;->isAllNAVendor()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isAllNAVendor()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
     .line 1229
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 1230
-    .local v0, "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .local v0, "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     const-string v3, "notifications_sub_settings"
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 1231
     const v3, 0x7f0e05cb
@@ -486,13 +486,13 @@
 
     move-result-object v3
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     .line 1232
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 1242
-    .end local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .end local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     :cond_0
     return-object v2
 .end method
@@ -521,7 +521,7 @@
 
     .line 1214
     .local v0, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v1, Lcom/android/settings/notification/NotificationSettings;
+    const-class v1, Lcom/android/settings_ex/notification/NotificationSettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

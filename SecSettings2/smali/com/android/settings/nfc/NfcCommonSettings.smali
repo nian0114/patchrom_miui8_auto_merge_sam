@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/nfc/NfcCommonSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/nfc/NfcCommonSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "NfcCommonSettings.java"
 
 
@@ -28,17 +28,17 @@
     move v0, v1
 
     :goto_0
-    sput-boolean v0, Lcom/android/settings/nfc/NfcCommonSettings;->DBG:Z
+    sput-boolean v0, Lcom/android/settings_ex/nfc/NfcCommonSettings;->DBG:Z
 
     .line 33
-    invoke-static {}, Lcom/android/settings/Utils;->isJapanModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isJapanModel()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     :goto_1
-    sput-boolean v2, Lcom/android/settings/nfc/NfcCommonSettings;->isGlobal:Z
+    sput-boolean v2, Lcom/android/settings_ex/nfc/NfcCommonSettings;->isGlobal:Z
 
     return-void
 
@@ -60,7 +60,7 @@
 
     .prologue
     .line 30
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     return-void
 .end method
@@ -85,15 +85,15 @@
     const v2, 0x7f0d02fc
 
     .line 42
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 44
-    sget-boolean v0, Lcom/android/settings/nfc/NfcCommonSettings;->isGlobal:Z
+    sget-boolean v0, Lcom/android/settings_ex/nfc/NfcCommonSettings;->isGlobal:Z
 
     if-eqz v0, :cond_1
 
     .line 45
-    sget-boolean v0, Lcom/android/settings/nfc/NfcCommonSettings;->DBG:Z
+    sget-boolean v0, Lcom/android/settings_ex/nfc/NfcCommonSettings;->DBG:Z
 
     if-eqz v0, :cond_0
 
@@ -105,7 +105,7 @@
 
     .line 46
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcCommonSettings;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcCommonSettings;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v0
 
@@ -113,9 +113,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/settings/nfc/NfcSettings;
+    new-instance v1, Lcom/android/settings_ex/nfc/NfcSettings;
 
-    invoke-direct {v1}, Lcom/android/settings/nfc/NfcSettings;-><init>()V
+    invoke-direct {v1}, Lcom/android/settings_ex/nfc/NfcSettings;-><init>()V
 
     invoke-virtual {v0, v2, v1}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
 
@@ -129,7 +129,7 @@
 
     .line 48
     :cond_1
-    sget-boolean v0, Lcom/android/settings/nfc/NfcCommonSettings;->DBG:Z
+    sget-boolean v0, Lcom/android/settings_ex/nfc/NfcCommonSettings;->DBG:Z
 
     if-eqz v0, :cond_2
 
@@ -141,7 +141,7 @@
 
     .line 49
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcCommonSettings;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcCommonSettings;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v0
 
@@ -149,9 +149,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/settings/nfc/NfcOsaifukeitaiSettings;
+    new-instance v1, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettings;
 
-    invoke-direct {v1}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettings;-><init>()V
+    invoke-direct {v1}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettings;-><init>()V
 
     invoke-virtual {v0, v2, v1}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
 

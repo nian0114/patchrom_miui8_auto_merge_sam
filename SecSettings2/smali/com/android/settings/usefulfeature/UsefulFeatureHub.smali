@@ -1,16 +1,16 @@
-.class public Lcom/android/settings/usefulfeature/UsefulFeatureHub;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "UsefulFeatureHub.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/search/Indexable;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
+        Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
     }
 .end annotation
 
@@ -25,7 +25,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;",
+            "Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;",
             ">;"
         }
     .end annotation
@@ -43,7 +43,7 @@
 
 .field private final mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 .field private mView:Landroid/view/View;
 
@@ -56,239 +56,239 @@
     const/4 v1, 0x0
 
     .line 67
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 71
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
 
     .line 104
     const-string v0, "default"
 
-    iput-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
 
     .line 106
     const-string v0, "default"
 
-    iput-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionDBItem:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionDBItem:Ljava/lang/String;
 
     .line 108
     const-string v0, "default"
 
-    iput-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mFeatureName:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mFeatureName:Ljava/lang/String;
 
     .line 110
-    iput-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     .line 112
-    iput-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mView:Landroid/view/View;
+    iput-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mView:Landroid/view/View;
 
     .line 114
-    new-instance v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$1;
+    new-instance v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$1;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/usefulfeature/UsefulFeatureHub$1;-><init>(Lcom/android/settings/usefulfeature/UsefulFeatureHub;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$1;-><init>(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mPalmSwipeToCaptureObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mPalmSwipeToCaptureObserver:Landroid/database/ContentObserver;
 
     .line 122
-    new-instance v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$2;
+    new-instance v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$2;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/usefulfeature/UsefulFeatureHub$2;-><init>(Lcom/android/settings/usefulfeature/UsefulFeatureHub;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$2;-><init>(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
 
     .line 138
-    new-instance v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$3;
+    new-instance v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$3;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/usefulfeature/UsefulFeatureHub$3;-><init>(Lcom/android/settings/usefulfeature/UsefulFeatureHub;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$3;-><init>(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMultiWindowObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMultiWindowObserver:Landroid/database/ContentObserver;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Lcom/android/settings/widget/SwitchBar;
+.method static synthetic access$000(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Lcom/android/settings_ex/widget/SwitchBar;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
     .prologue
     .line 67
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Ljava/lang/String;
+.method static synthetic access$100(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
     .prologue
     .line 67
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/usefulfeature/UsefulFeatureHub;Z)V
+.method static synthetic access$1000(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;Z)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
     .param p1, "x1"    # Z
 
     .prologue
     .line 67
-    invoke-direct {p0, p1}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->insertlog(Z)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->insertlog(Z)V
 
     return-void
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
+.method static synthetic access$1100(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
     .prologue
     .line 67
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
+.method static synthetic access$1200(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
     .prologue
     .line 67
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$1300(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
+.method static synthetic access$1300(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
     .prologue
     .line 67
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
+.method static synthetic access$200(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
     .prologue
     .line 67
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
+.method static synthetic access$300(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
     .prologue
     .line 67
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
+.method static synthetic access$400(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
     .prologue
     .line 67
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Ljava/lang/String;
+.method static synthetic access$500(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
     .prologue
     .line 67
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionDBItem:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionDBItem:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
+.method static synthetic access$600(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
     .prologue
     .line 67
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
+.method static synthetic access$700(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
     .prologue
     .line 67
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)V
+.method static synthetic access$800(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
     .prologue
     .line 67
-    invoke-direct {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->dismissAllDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->dismissAllDialog()V
 
     return-void
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
+.method static synthetic access$900(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/usefulfeature/UsefulFeatureHub;
+    .param p0, "x0"    # Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;
 
     .prologue
     .line 67
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -315,10 +315,10 @@
 
     move-result-object v5
 
-    iput-object v5, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mView:Landroid/view/View;
+    iput-object v5, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mView:Landroid/view/View;
 
     .line 179
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mView:Landroid/view/View;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mView:Landroid/view/View;
 
     const v6, 0x7f0d03ac
 
@@ -330,7 +330,7 @@
 
     .line 180
     .local v4, "mTitleView":Landroid/widget/TextView;
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mView:Landroid/view/View;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mView:Landroid/view/View;
 
     const v6, 0x7f0d03ad
 
@@ -342,7 +342,7 @@
 
     .line 181
     .local v3, "mSummaryView":Landroid/widget/TextView;
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mView:Landroid/view/View;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mView:Landroid/view/View;
 
     const v6, 0x7f0d03ab
 
@@ -358,7 +358,7 @@
 
     .local v1, "i":I
     :goto_0
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
@@ -367,17 +367,17 @@
     if-ge v1, v5, :cond_2
 
     .line 184
-    iget-object v6, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
 
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
+    check-cast v5, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
 
-    iget-object v5, v5, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->key:Ljava/lang/String;
+    iget-object v5, v5, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->key:Ljava/lang/String;
 
     invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -386,20 +386,20 @@
     if-eqz v5, :cond_1
 
     .line 185
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
+    check-cast v5, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
 
-    iget v5, v5, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->title:I
+    iget v5, v5, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->title:I
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(I)V
 
     .line 186
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -407,69 +407,69 @@
 
     move-result-object v6
 
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
+    check-cast v5, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
 
-    iget v5, v5, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->title:I
+    iget v5, v5, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->title:I
 
     invoke-virtual {v6, v5}, Landroid/app/ActionBar;->setTitle(I)V
 
     .line 187
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
+    check-cast v5, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
 
-    iget v5, v5, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->summary:I
+    iget v5, v5, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->summary:I
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setText(I)V
 
     .line 188
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
+    check-cast v5, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
 
-    iget v5, v5, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->animation:I
+    iget v5, v5, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->animation:I
 
     invoke-virtual {v2, v5}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 189
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
+    check-cast v5, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
 
-    iget-object v5, v5, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->db:Ljava/lang/String;
+    iget-object v5, v5, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->db:Ljava/lang/String;
 
-    iput-object v5, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionDBItem:Ljava/lang/String;
+    iput-object v5, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionDBItem:Ljava/lang/String;
 
     .line 190
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
+    check-cast v5, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
 
-    iget-object v5, v5, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->feature:Ljava/lang/String;
+    iget-object v5, v5, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->feature:Ljava/lang/String;
 
-    iput-object v5, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mFeatureName:Ljava/lang/String;
+    iput-object v5, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mFeatureName:Ljava/lang/String;
 
     .line 191
     invoke-virtual {v2}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
@@ -494,14 +494,14 @@
 
     .line 197
     :cond_2
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v5
 
     if-nez v5, :cond_3
 
     .line 198
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mView:Landroid/view/View;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mView:Landroid/view/View;
 
     const/16 v5, 0x8
 
@@ -509,7 +509,7 @@
 
     .line 200
     :cond_3
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mView:Landroid/view/View;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mView:Landroid/view/View;
 
     return-object v5
 .end method
@@ -519,19 +519,19 @@
 
     .prologue
     .line 552
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
     .line 553
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 554
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     .line 556
     :cond_0
@@ -544,7 +544,7 @@
 
     .prologue
     .line 380
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
 
     const-string v1, "smart_capture"
 
@@ -554,7 +554,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
 
     const-string v1, "merged_mute_or_pause_switch"
 
@@ -568,17 +568,17 @@
     if-eqz p1, :cond_1
 
     .line 382
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     const-string v1, "com.android.settings"
 
-    iget-object v2, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mFeatureName:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mFeatureName:Ljava/lang/String;
 
     const/16 v3, 0x3e8
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 387
     :cond_0
@@ -587,17 +587,17 @@
 
     .line 384
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     const-string v1, "com.android.settings"
 
-    iget-object v2, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mFeatureName:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mFeatureName:Ljava/lang/String;
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-static {v0, v1, v2, v3}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_0
 .end method
@@ -607,14 +607,14 @@
 
     .prologue
     .line 489
-    invoke-direct {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->dismissAllDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->dismissAllDialog()V
 
     .line 490
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->getEnabledTalkbackName(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->getEnabledTalkbackName(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -622,7 +622,7 @@
     .local v0, "enabledTalkbackName":Ljava/lang/String;
     const v2, 0x7f0e0a0e
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -634,7 +634,7 @@
 
     const v5, 0x7f0e1269
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -656,7 +656,7 @@
     .local v1, "popup_msg":Ljava/lang/String;
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -668,9 +668,9 @@
 
     const v3, 0x7f0e1282
 
-    new-instance v4, Lcom/android/settings/usefulfeature/UsefulFeatureHub$5;
+    new-instance v4, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$5;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub$5;-><init>(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$5;-><init>(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)V
 
     invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -678,9 +678,9 @@
 
     const/high16 v3, 0x1040000
 
-    new-instance v4, Lcom/android/settings/usefulfeature/UsefulFeatureHub$4;
+    new-instance v4, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$4;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub$4;-><init>(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$4;-><init>(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)V
 
     invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -690,19 +690,19 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iput-object v2, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     .line 509
-    iget-object v2, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
-    new-instance v3, Lcom/android/settings/usefulfeature/UsefulFeatureHub$6;
+    new-instance v3, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$6;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub$6;-><init>(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$6;-><init>(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)V
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 516
-    iget-object v2, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v2}, Landroid/app/AlertDialog;->show()V
 
@@ -717,12 +717,12 @@
     const v5, 0x7f0e0941
 
     .line 520
-    invoke-direct {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->dismissAllDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->dismissAllDialog()V
 
     .line 521
     const v1, 0x7f0e0a0e
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -734,7 +734,7 @@
 
     const v4, 0x7f0e1269
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -742,7 +742,7 @@
 
     const/4 v3, 0x1
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -750,7 +750,7 @@
 
     const/4 v3, 0x2
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -764,7 +764,7 @@
     .local v0, "popup_msg":Ljava/lang/String;
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -776,9 +776,9 @@
 
     const v2, 0x7f0e1282
 
-    new-instance v3, Lcom/android/settings/usefulfeature/UsefulFeatureHub$8;
+    new-instance v3, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$8;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub$8;-><init>(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$8;-><init>(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)V
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -786,9 +786,9 @@
 
     const/high16 v2, 0x1040000
 
-    new-instance v3, Lcom/android/settings/usefulfeature/UsefulFeatureHub$7;
+    new-instance v3, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$7;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub$7;-><init>(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$7;-><init>(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)V
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -798,19 +798,19 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     .line 541
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
-    new-instance v2, Lcom/android/settings/usefulfeature/UsefulFeatureHub$9;
+    new-instance v2, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$9;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub$9;-><init>(Lcom/android/settings/usefulfeature/UsefulFeatureHub;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$9;-><init>(Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;)V
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 548
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
@@ -832,38 +832,38 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 391
-    new-instance v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
+    new-instance v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
 
-    invoke-direct {v0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;-><init>()V
 
     .line 393
-    .local v0, "description":Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
+    .local v0, "description":Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
 
     const-string v2, "pick_up_to_call_out_switch"
 
-    invoke-static {v1, v2}, Lcom/android/settings/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lcom/android/settings_ex/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 394
-    new-instance v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
+    new-instance v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
 
-    .end local v0    # "description":Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
-    invoke-direct {v0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;-><init>()V
+    .end local v0    # "description":Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
+    invoke-direct {v0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;-><init>()V
 
     .line 395
-    .restart local v0    # "description":Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
+    .restart local v0    # "description":Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
     const-string v1, "pick_up_to_call_out_switch"
 
-    iput-object v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->key:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->key:Ljava/lang/String;
 
     .line 396
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isDualFolderType(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isDualFolderType(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -872,18 +872,18 @@
     .line 397
     const v1, 0x7f020265
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->animation:I
 
     .line 401
     :goto_0
     const v1, 0x7f0e1265
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->title:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->title:I
 
     .line 402
     const-string v1, "VZW"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v2
 
@@ -896,62 +896,62 @@
     .line 403
     const v1, 0x7f0e1277
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->summary:I
 
     .line 407
     :goto_1
     const-string v1, "motion_pick_up_to_call_out"
 
-    iput-object v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->db:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->db:Ljava/lang/String;
 
     .line 408
     const-string v1, "UFDC"
 
-    iput-object v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->feature:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->feature:Ljava/lang/String;
 
     .line 409
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 413
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
 
     const-string v2, "pick_up_switch"
 
-    invoke-static {v1, v2}, Lcom/android/settings/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lcom/android/settings_ex/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 414
-    new-instance v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
+    new-instance v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
 
-    .end local v0    # "description":Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
-    invoke-direct {v0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;-><init>()V
+    .end local v0    # "description":Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
+    invoke-direct {v0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;-><init>()V
 
     .line 415
-    .restart local v0    # "description":Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
+    .restart local v0    # "description":Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
     const-string v1, "pick_up_switch"
 
-    iput-object v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->key:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->key:Ljava/lang/String;
 
     .line 416
     const v1, 0x7f020272
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->animation:I
 
     .line 417
     const v1, 0x7f0e1266
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->title:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->title:I
 
     .line 418
     const-string v1, "VZW"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v2
 
@@ -964,50 +964,50 @@
     .line 419
     const v1, 0x7f0e1279
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->summary:I
 
     .line 423
     :goto_2
     const-string v1, "motion_pick_up"
 
-    iput-object v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->db:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->db:Ljava/lang/String;
 
     .line 424
     const-string v1, "UFSA"
 
-    iput-object v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->feature:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->feature:Ljava/lang/String;
 
     .line 425
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 429
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
 
     const-string v2, "merged_mute_or_pause_switch"
 
-    invoke-static {v1, v2}, Lcom/android/settings/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lcom/android/settings_ex/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
     .line 430
-    new-instance v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
+    new-instance v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
 
-    .end local v0    # "description":Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
-    invoke-direct {v0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;-><init>()V
+    .end local v0    # "description":Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
+    invoke-direct {v0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;-><init>()V
 
     .line 431
-    .restart local v0    # "description":Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
+    .restart local v0    # "description":Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
     const-string v1, "merged_mute_or_pause_switch"
 
-    iput-object v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->key:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->key:Ljava/lang/String;
 
     .line 432
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v1
 
@@ -1016,26 +1016,26 @@
     .line 433
     const v1, 0x7f0200ed
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->animation:I
 
     .line 439
     :goto_3
     const v1, 0x7f0e1267
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->title:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->title:I
 
     .line 440
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isVoiceCapable(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isVoiceCapable(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -1045,183 +1045,183 @@
     :cond_2
     const v1, 0x7f0e1281
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->summary:I
 
     .line 447
     :goto_4
     const-string v1, "motion_merged_mute_pause"
 
-    iput-object v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->db:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->db:Ljava/lang/String;
 
     .line 448
     const-string v1, "UFEM"
 
-    iput-object v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->feature:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->feature:Ljava/lang/String;
 
     .line 449
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 453
     :cond_3
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
 
     const-string v2, "palm_swipe_switch"
 
-    invoke-static {v1, v2}, Lcom/android/settings/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lcom/android/settings_ex/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
     .line 454
-    new-instance v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
+    new-instance v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
 
-    .end local v0    # "description":Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
-    invoke-direct {v0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;-><init>()V
+    .end local v0    # "description":Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
+    invoke-direct {v0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;-><init>()V
 
     .line 455
-    .restart local v0    # "description":Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
+    .restart local v0    # "description":Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
     const-string v1, "palm_swipe_switch"
 
-    iput-object v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->key:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->key:Ljava/lang/String;
 
     .line 456
     const v1, 0x7f0200eb
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->animation:I
 
     .line 457
     const v1, 0x7f0e1269
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->title:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->title:I
 
     .line 458
     const v1, 0x7f0e127a
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->summary:I
 
     .line 459
     const-string v1, "surface_palm_swipe"
 
-    iput-object v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->db:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->db:Ljava/lang/String;
 
     .line 460
     const-string v1, "UFPC"
 
-    iput-object v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->feature:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->feature:Ljava/lang/String;
 
     .line 461
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 465
     :cond_4
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
 
     const-string v2, "multi_window_setting_switch"
 
-    invoke-static {v1, v2}, Lcom/android/settings/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lcom/android/settings_ex/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
     .line 466
-    new-instance v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
+    new-instance v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
 
-    .end local v0    # "description":Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
-    invoke-direct {v0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;-><init>()V
+    .end local v0    # "description":Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
+    invoke-direct {v0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;-><init>()V
 
     .line 467
-    .restart local v0    # "description":Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
+    .restart local v0    # "description":Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
     const-string v1, "multi_window_setting_switch"
 
-    iput-object v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->key:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->key:Ljava/lang/String;
 
     .line 468
     const v1, 0x7f02026c
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->animation:I
 
     .line 469
     const v1, 0x7f0e126a
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->title:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->title:I
 
     .line 470
     const v1, 0x7f0e126b
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->summary:I
 
     .line 471
     const-string v1, "db_popup_view_shortcut"
 
-    iput-object v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->db:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->db:Ljava/lang/String;
 
     .line 472
     const-string v1, "UFPG"
 
-    iput-object v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->feature:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->feature:Ljava/lang/String;
 
     .line 473
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 476
     :cond_5
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
 
     const-string v2, "com.samsung.android.app.scrollcapture"
 
-    invoke-static {v1, v2}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_6
 
     .line 477
-    new-instance v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
+    new-instance v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
 
-    .end local v0    # "description":Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
-    invoke-direct {v0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;-><init>()V
+    .end local v0    # "description":Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
+    invoke-direct {v0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;-><init>()V
 
     .line 478
-    .restart local v0    # "description":Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;
+    .restart local v0    # "description":Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;
     const-string v1, "smart_capture"
 
-    iput-object v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->key:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->key:Ljava/lang/String;
 
     .line 479
     const v1, 0x7f02029a
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->animation:I
 
     .line 480
     const v1, 0x7f0e16b9
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->title:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->title:I
 
     .line 481
     const v1, 0x7f0e16c2
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->summary:I
 
     .line 482
     const-string v1, "enable_smart_capture"
 
-    iput-object v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->db:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->db:Ljava/lang/String;
 
     .line 483
     const-string v1, "UFSC"
 
-    iput-object v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->feature:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->feature:Ljava/lang/String;
 
     .line 484
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1233,7 +1233,7 @@
     :cond_7
     const v1, 0x7f020264
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->animation:I
 
     goto/16 :goto_0
 
@@ -1241,7 +1241,7 @@
     :cond_8
     const v1, 0x7f0e1276
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->summary:I
 
     goto/16 :goto_1
 
@@ -1249,15 +1249,15 @@
     :cond_9
     const v1, 0x7f0e1278
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->summary:I
 
     goto/16 :goto_2
 
     .line 434
     :cond_a
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
 
-    invoke-static {v1, v3}, Lcom/android/settings/Utils;->isSupportMotion(Landroid/content/Context;I)Z
+    invoke-static {v1, v3}, Lcom/android/settings_ex/Utils;->isSupportMotion(Landroid/content/Context;I)Z
 
     move-result v1
 
@@ -1266,7 +1266,7 @@
     .line 435
     const v1, 0x7f0200ec
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->animation:I
 
     goto/16 :goto_3
 
@@ -1274,15 +1274,15 @@
     :cond_b
     const v1, 0x7f0200ee
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->animation:I
 
     goto/16 :goto_3
 
     .line 442
     :cond_c
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
 
-    invoke-static {v1, v3}, Lcom/android/settings/Utils;->isSupportMotion(Landroid/content/Context;I)Z
+    invoke-static {v1, v3}, Lcom/android/settings_ex/Utils;->isSupportMotion(Landroid/content/Context;I)Z
 
     move-result v1
 
@@ -1291,7 +1291,7 @@
     .line 443
     const v1, 0x7f0e127f
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->summary:I
 
     goto/16 :goto_4
 
@@ -1299,7 +1299,7 @@
     :cond_d
     const v1, 0x7f0e1280
 
-    iput v1, v0, Lcom/android/settings/usefulfeature/UsefulFeatureHub$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub$Description;->summary:I
 
     goto/16 :goto_4
 .end method
@@ -1326,7 +1326,7 @@
     const/4 v3, 0x0
 
     .line 205
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 206
     const-string v4, "UsefulFeatureHub"
@@ -1336,31 +1336,31 @@
     invoke-static {v4, v5}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 207
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 209
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v4, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 210
-    iget-object v4, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v4, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v4}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v4}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 211
     const/4 v1, 0x0
 
     .line 212
     .local v1, "switchState":Z
-    iget-object v4, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
 
     const-string v5, "smart_capture"
 
@@ -1370,7 +1370,7 @@
 
     if-nez v4, :cond_0
 
-    iget-object v4, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
 
     const-string v5, "multi_window_setting_switch"
 
@@ -1382,11 +1382,11 @@
 
     .line 213
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionDBItem:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionDBItem:Ljava/lang/String;
 
     invoke-static {v4, v5, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -1421,9 +1421,9 @@
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 218
-    iget-object v2, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2, v1}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v2, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 219
     return-void
@@ -1436,11 +1436,11 @@
 
     .line 215
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionDBItem:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionDBItem:Ljava/lang/String;
 
     invoke-static {v4, v5, v3}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -1467,10 +1467,10 @@
     const/4 v3, 0x1
 
     .line 301
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 303
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -1480,13 +1480,13 @@
 
     .line 304
     .local v0, "inflater":Landroid/view/LayoutInflater;
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getView()Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/view/ViewGroup;
 
-    invoke-direct {p0, v0, v1}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->createUsefulFeatureView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-direct {p0, v0, v1}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->createUsefulFeatureView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
 
     .line 306
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
@@ -1502,7 +1502,7 @@
     if-eqz v1, :cond_1
 
     .line 307
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
 
     const-string v2, "multi_window_setting_switch"
 
@@ -1512,7 +1512,7 @@
 
     if-nez v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
 
     const-string v2, "palm_swipe_switch"
 
@@ -1529,11 +1529,11 @@
     if-ne v1, v3, :cond_2
 
     .line 309
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 315
     :cond_1
@@ -1542,9 +1542,9 @@
 
     .line 311
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, v3}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v1, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     goto :goto_0
 .end method
@@ -1555,7 +1555,7 @@
 
     .prologue
     .line 159
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 160
     const-string v1, "UsefulFeatureHub"
@@ -1565,14 +1565,14 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 161
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
+    iput-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
 
     .line 162
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -1589,11 +1589,11 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
 
     .line 166
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->setDescriptions()V
+    invoke-direct {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->setDescriptions()V
 
     .line 167
     return-void
@@ -1616,7 +1616,7 @@
     .line 172
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->createUsefulFeatureView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-direct {p0, p1, v0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->createUsefulFeatureView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
@@ -1628,7 +1628,7 @@
 
     .prologue
     .line 342
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroyView()V
 
     .line 343
     const-string v0, "UsefulFeatureHub"
@@ -1638,9 +1638,9 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 344
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 345
     return-void
@@ -1651,7 +1651,7 @@
 
     .prologue
     .line 319
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 320
     const-string v0, "UsefulFeatureHub"
@@ -1661,12 +1661,12 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 321
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 322
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
 
     const-string v1, "palm_swipe_switch"
 
@@ -1677,26 +1677,26 @@
     if-eqz v0, :cond_0
 
     .line 323
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mPalmSwipeToCaptureObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mPalmSwipeToCaptureObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 324
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 326
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
 
     const-string v1, "smart_capture"
 
@@ -1706,7 +1706,7 @@
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
 
     const-string v1, "multi_window_setting_switch"
 
@@ -1717,17 +1717,17 @@
     if-nez v0, :cond_1
 
     .line 327
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 329
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
 
     const-string v1, "multi_window_setting_switch"
 
@@ -1738,11 +1738,11 @@
     if-eqz v0, :cond_2
 
     .line 330
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMultiWindowObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMultiWindowObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
@@ -1760,7 +1760,7 @@
     const/4 v7, 0x1
 
     .line 223
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 224
     const-string v6, "UsefulFeatureHub"
@@ -1770,7 +1770,7 @@
     invoke-static {v6, v9}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 225
-    iget-object v6, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
 
     const-string v9, "palm_swipe_switch"
 
@@ -1795,7 +1795,7 @@
 
     .line 232
     .local v4, "selectionArgs":[Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -1803,7 +1803,7 @@
 
     const-string v10, "isScreenCaptureEnabled"
 
-    invoke-static {v6, v9, v10, v4}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-static {v6, v9, v10, v4}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v1
 
@@ -1822,7 +1822,7 @@
 
     .line 242
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -1850,17 +1850,17 @@
     if-eqz v6, :cond_4
 
     .line 249
-    iget-object v6, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v6, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v6, v8}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v6, v8}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 250
-    iget-object v6, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v6, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v6, v8}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v6, v8}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 251
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -1870,33 +1870,33 @@
 
     .line 257
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/android/settings/Utils;->isStalkBackEnabled(Landroid/content/Context;)Z
+    invoke-static {v6}, Lcom/android/settings_ex/Utils;->isStalkBackEnabled(Landroid/content/Context;)Z
 
     move-result v6
 
     if-nez v6, :cond_6
 
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/android/settings/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
+    invoke-static {v6}, Lcom/android/settings_ex/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
 
     move-result v6
 
     if-nez v6, :cond_6
 
     .line 258
-    invoke-direct {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->dismissAllDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->dismissAllDialog()V
 
     .line 263
     :cond_2
     :goto_1
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -1906,12 +1906,12 @@
 
     move-result-object v9
 
-    iget-object v10, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mPalmSwipeToCaptureObserver:Landroid/database/ContentObserver;
+    iget-object v10, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mPalmSwipeToCaptureObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v6, v9, v7, v10}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 264
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -1921,7 +1921,7 @@
 
     move-result-object v9
 
-    iget-object v10, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
+    iget-object v10, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
 
     invoke-virtual {v6, v9, v7, v10}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -1944,7 +1944,7 @@
     if-eqz v6, :cond_3
 
     .line 289
-    iget-object v6, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
 
     const-string v9, "multi_window_setting_switch"
 
@@ -1955,7 +1955,7 @@
     if-eqz v6, :cond_3
 
     .line 290
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -1970,16 +1970,16 @@
     if-ne v6, v7, :cond_3
 
     .line 292
-    iget-object v6, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v6, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v6, v8}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v6, v8}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 296
     .end local v0    # "conf":Landroid/content/res/Configuration;
     :cond_3
-    iget-object v6, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v6, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v6, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v6, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 297
     return-void
@@ -1990,14 +1990,14 @@
     .restart local v3    # "onInteractionConrol":I
     .restart local v4    # "selectionArgs":[Ljava/lang/String;
     :cond_4
-    iget-object v6, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v6, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v6, v7}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v6, v7}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 254
-    iget-object v9, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v9, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -2012,7 +2012,7 @@
     move v6, v7
 
     :goto_3
-    invoke-virtual {v9, v6}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v9, v6}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     goto :goto_0
 
@@ -2023,14 +2023,14 @@
 
     .line 259
     :cond_6
-    iget-object v6, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iget-object v6, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     if-eqz v6, :cond_2
 
     .line 260
-    iget-object v6, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v6, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v6, v7}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v6, v7}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     goto :goto_1
 
@@ -2040,7 +2040,7 @@
     .end local v3    # "onInteractionConrol":I
     .end local v4    # "selectionArgs":[Ljava/lang/String;
     :cond_7
-    iget-object v6, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
 
     const-string v9, "smart_capture"
 
@@ -2051,11 +2051,11 @@
     if-eqz v6, :cond_9
 
     .line 266
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
-    iget-object v9, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionDBItem:Ljava/lang/String;
+    iget-object v9, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionDBItem:Ljava/lang/String;
 
     invoke-static {v6, v9, v7}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -2068,9 +2068,9 @@
     .line 267
     .local v5, "switchState":Z
     :goto_4
-    iget-object v6, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v6, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v6, v5}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v6, v5}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     goto :goto_2
 
@@ -2083,7 +2083,7 @@
 
     .line 268
     :cond_9
-    iget-object v6, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
 
     const-string v9, "multi_window_setting_switch"
 
@@ -2094,7 +2094,7 @@
     if-eqz v6, :cond_c
 
     .line 269
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -2107,18 +2107,18 @@
     if-nez v6, :cond_a
 
     .line 270
-    iget-object v6, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v6, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v6, v8}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v6, v8}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 271
-    iget-object v6, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v6, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v6, v8}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v6, v8}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 276
     :goto_5
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -2128,7 +2128,7 @@
 
     move-result-object v9
 
-    iget-object v10, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMultiWindowObserver:Landroid/database/ContentObserver;
+    iget-object v10, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMultiWindowObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v6, v9, v7, v10}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -2136,18 +2136,18 @@
 
     .line 273
     :cond_a
-    iget-object v6, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v6, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v6, v7}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v6, v7}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 274
-    iget-object v9, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v9, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
-    iget-object v10, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionDBItem:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionDBItem:Ljava/lang/String;
 
     invoke-static {v6, v10, v7}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -2158,7 +2158,7 @@
     move v6, v7
 
     :goto_6
-    invoke-virtual {v9, v6}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v9, v6}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     goto :goto_5
 
@@ -2169,7 +2169,7 @@
 
     .line 278
     :cond_c
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -2182,18 +2182,18 @@
     if-ne v6, v7, :cond_d
 
     .line 279
-    iget-object v6, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v6, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v6, v8}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v6, v8}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 280
-    iget-object v6, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v6, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v6, v8}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v6, v8}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 285
     :goto_7
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -2203,7 +2203,7 @@
 
     move-result-object v9
 
-    iget-object v10, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
+    iget-object v10, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
 
     invoke-virtual {v6, v9, v7, v10}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -2211,18 +2211,18 @@
 
     .line 282
     :cond_d
-    iget-object v6, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v6, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v6, v7}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v6, v7}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 283
-    iget-object v9, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v9, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
-    iget-object v10, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionDBItem:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionDBItem:Ljava/lang/String;
 
     invoke-static {v6, v10, v8}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -2233,7 +2233,7 @@
     move v6, v7
 
     :goto_8
-    invoke-virtual {v9, v6}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v9, v6}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     goto :goto_7
 
@@ -2248,7 +2248,7 @@
 
     .prologue
     .line 336
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onStop()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onStop()V
 
     .line 337
     const-string v0, "UsefulFeatureHub"
@@ -2286,7 +2286,7 @@
     .line 351
     .local v0, "value":I
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
 
     const-string v4, "palm_swipe_switch"
 
@@ -2299,7 +2299,7 @@
     .line 352
     if-ne v0, v1, :cond_2
 
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -2307,13 +2307,13 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isUniversalSwitchSupportMultiUserKnoxMode(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isUniversalSwitchSupportMultiUserKnoxMode(Landroid/content/Context;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -2321,14 +2321,14 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isUniversalSwitchEnabled(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isUniversalSwitchEnabled(Landroid/content/Context;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
     .line 354
-    invoke-direct {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->maketurnOffUniversalPopup()V
+    invoke-direct {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->maketurnOffUniversalPopup()V
 
     .line 377
     :cond_0
@@ -2347,24 +2347,24 @@
     :cond_2
     if-ne v0, v1, :cond_3
 
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
     .line 356
-    invoke-direct {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->makeTalkBackDisablePopup()V
+    invoke-direct {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->makeTalkBackDisablePopup()V
 
     goto :goto_1
 
     .line 358
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -2373,13 +2373,13 @@
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 359
-    invoke-direct {p0, p2}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->insertlog(Z)V
+    invoke-direct {p0, p2}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->insertlog(Z)V
 
     goto :goto_1
 
     .line 361
     :cond_4
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
 
     const-string v3, "merged_mute_or_pause_switch"
 
@@ -2390,7 +2390,7 @@
     if-eqz v1, :cond_6
 
     .line 362
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -2399,14 +2399,14 @@
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 363
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v1
 
     if-nez v1, :cond_5
 
     .line 364
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -2416,18 +2416,18 @@
 
     .line 366
     :cond_5
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->context:Landroid/content/Context;
 
     const/high16 v2, 0x200000
 
-    invoke-static {v1, v2}, Lcom/android/settings/Utils;->isSupportMotion(Landroid/content/Context;I)Z
+    invoke-static {v1, v2}, Lcom/android/settings_ex/Utils;->isSupportMotion(Landroid/content/Context;I)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 367
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -2439,7 +2439,7 @@
 
     .line 369
     :cond_6
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionType:Ljava/lang/String;
 
     const-string v3, "multi_window_setting_switch"
 
@@ -2450,7 +2450,7 @@
     if-eqz v1, :cond_7
 
     .line 370
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -2463,7 +2463,7 @@
     if-eqz v1, :cond_0
 
     .line 371
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -2475,16 +2475,16 @@
 
     .line 374
     :cond_7
-    invoke-virtual {p0}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->mMotionDBItem:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->mMotionDBItem:Ljava/lang/String;
 
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 375
-    invoke-direct {p0, p2}, Lcom/android/settings/usefulfeature/UsefulFeatureHub;->insertlog(Z)V
+    invoke-direct {p0, p2}, Lcom/android/settings_ex/usefulfeature/UsefulFeatureHub;->insertlog(Z)V
 
     goto/16 :goto_1
 .end method

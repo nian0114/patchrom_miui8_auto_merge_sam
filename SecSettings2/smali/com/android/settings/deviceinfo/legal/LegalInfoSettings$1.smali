@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/deviceinfo/legal/LegalInfoSettings$1;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/deviceinfo/legal/LegalInfoSettings$1;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "LegalInfoSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/legal/LegalInfoSettings;
+    value = Lcom/android/settings_ex/deviceinfo/legal/LegalInfoSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 155
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -149,13 +149,13 @@
 
     .line 215
     :cond_0
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v3
 
     .line 216
     .local v3, "salesCode":Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/Utils;->isSprModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSprModel()Z
 
     move-result v5
 
@@ -191,7 +191,7 @@
     .line 222
     .local v0, "confirmed":Z
     :goto_0
-    invoke-static {}, Lcom/android/settings/Utils;->isJapanModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isJapanModel()Z
 
     move-result v4
 
@@ -213,19 +213,19 @@
     :cond_3
     const-string v4, "com.samsung.safetyinformation"
 
-    invoke-static {p1, v4}, Lcom/android/settings/Utils;->isPackageExists(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v4}, Lcom/android/settings_ex/Utils;->isPackageExists(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v4
 
     if-eqz v4, :cond_4
 
-    invoke-static {}, Lcom/android/settings/Utils;->isAllNAVendor()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isAllNAVendor()Z
 
     move-result v4
 
     if-nez v4, :cond_4
 
-    invoke-static {}, Lcom/android/settings/Utils;->isJapanModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isJapanModel()Z
 
     move-result v4
 
@@ -241,7 +241,7 @@
     :cond_5
     const-string v4, "android.settings.TERMS"
 
-    invoke-direct {p0, p1, v4}, Lcom/android/settings/deviceinfo/legal/LegalInfoSettings$1;->checkIntentAction(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-direct {p0, p1, v4}, Lcom/android/settings_ex/deviceinfo/legal/LegalInfoSettings$1;->checkIntentAction(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v4
 
@@ -256,7 +256,7 @@
     :cond_6
     const-string v4, "android.settings.LICENSE"
 
-    invoke-direct {p0, p1, v4}, Lcom/android/settings/deviceinfo/legal/LegalInfoSettings$1;->checkIntentAction(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-direct {p0, p1, v4}, Lcom/android/settings_ex/deviceinfo/legal/LegalInfoSettings$1;->checkIntentAction(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v4
 
@@ -271,7 +271,7 @@
     :cond_7
     const-string v4, "android.settings.COPYRIGHT"
 
-    invoke-direct {p0, p1, v4}, Lcom/android/settings/deviceinfo/legal/LegalInfoSettings$1;->checkIntentAction(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-direct {p0, p1, v4}, Lcom/android/settings_ex/deviceinfo/legal/LegalInfoSettings$1;->checkIntentAction(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v4
 
@@ -286,7 +286,7 @@
     :cond_8
     const-string v4, "android.settings.WEBVIEW_LICENSE"
 
-    invoke-direct {p0, p1, v4}, Lcom/android/settings/deviceinfo/legal/LegalInfoSettings$1;->checkIntentAction(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-direct {p0, p1, v4}, Lcom/android/settings_ex/deviceinfo/legal/LegalInfoSettings$1;->checkIntentAction(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v4
 
@@ -320,7 +320,7 @@
             "Z)",
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/search/SearchIndexableRaw;",
+            "Lcom/android/settings_ex/search/SearchIndexableRaw;",
             ">;"
         }
     .end annotation
@@ -334,20 +334,20 @@
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     .line 170
-    .local v2, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/search/SearchIndexableRaw;>;"
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    .local v2, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/search/SearchIndexableRaw;>;"
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 171
-    .local v0, "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .local v0, "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     new-instance v3, Landroid/content/Intent;
 
     const-string v4, "android.settings.TERMS"
 
     invoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1, v3, v5}, Lcom/android/settings/Utils;->getPreferenceToSpecificActivityTitleInfo(Landroid/content/Context;Landroid/content/Intent;I)Ljava/lang/String;
+    invoke-static {p1, v3, v5}, Lcom/android/settings_ex/Utils;->getPreferenceToSpecificActivityTitleInfo(Landroid/content/Context;Landroid/content/Intent;I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -355,97 +355,97 @@
     .local v1, "prefTitle":Ljava/lang/String;
     const-string v3, "terms"
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 175
-    iput-object v1, v0, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 176
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 178
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    .end local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    .end local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 179
-    .restart local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .restart local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     new-instance v3, Landroid/content/Intent;
 
     const-string v4, "android.settings.LICENSE"
 
     invoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1, v3, v5}, Lcom/android/settings/Utils;->getPreferenceToSpecificActivityTitleInfo(Landroid/content/Context;Landroid/content/Intent;I)Ljava/lang/String;
+    invoke-static {p1, v3, v5}, Lcom/android/settings_ex/Utils;->getPreferenceToSpecificActivityTitleInfo(Landroid/content/Context;Landroid/content/Intent;I)Ljava/lang/String;
 
     move-result-object v1
 
     .line 182
     const-string v3, "license"
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 183
-    iput-object v1, v0, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 184
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 186
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    .end local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    .end local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 187
-    .restart local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .restart local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     new-instance v3, Landroid/content/Intent;
 
     const-string v4, "android.settings.COPYRIGHT"
 
     invoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1, v3, v5}, Lcom/android/settings/Utils;->getPreferenceToSpecificActivityTitleInfo(Landroid/content/Context;Landroid/content/Intent;I)Ljava/lang/String;
+    invoke-static {p1, v3, v5}, Lcom/android/settings_ex/Utils;->getPreferenceToSpecificActivityTitleInfo(Landroid/content/Context;Landroid/content/Intent;I)Ljava/lang/String;
 
     move-result-object v1
 
     .line 190
     const-string v3, "copyright"
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 191
-    iput-object v1, v0, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 192
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 194
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    .end local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    .end local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 195
-    .restart local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .restart local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     new-instance v3, Landroid/content/Intent;
 
     const-string v4, "android.settings.WEBVIEW_LICENSE"
 
     invoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1, v3, v5}, Lcom/android/settings/Utils;->getPreferenceToSpecificActivityTitleInfo(Landroid/content/Context;Landroid/content/Intent;I)Ljava/lang/String;
+    invoke-static {p1, v3, v5}, Lcom/android/settings_ex/Utils;->getPreferenceToSpecificActivityTitleInfo(Landroid/content/Context;Landroid/content/Intent;I)Ljava/lang/String;
 
     move-result-object v1
 
     .line 198
     const-string v3, "webview_license"
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 199
-    iput-object v1, v0, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 200
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -478,7 +478,7 @@
 
     .line 160
     .local v0, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v1, Lcom/android/settings/deviceinfo/legal/LegalInfoSettings;
+    const-class v1, Lcom/android/settings_ex/deviceinfo/legal/LegalInfoSettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

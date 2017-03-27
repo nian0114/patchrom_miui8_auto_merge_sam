@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;
-.super Lcom/android/settings/deviceinfo/StorageWizardBase;
+.class public Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;
+.super Lcom/android/settings_ex/deviceinfo/StorageWizardBase;
 .source "StorageWizardMoveProgress.java"
 
 
@@ -15,37 +15,37 @@
 
     .prologue
     .line 33
-    invoke-direct {p0}, Lcom/android/settings/deviceinfo/StorageWizardBase;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;-><init>()V
 
     .line 66
-    new-instance v0, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress$1;
+    new-instance v0, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress$1;-><init>(Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress$1;-><init>(Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->mCallback:Landroid/content/pm/PackageManager$MoveCallback;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->mCallback:Landroid/content/pm/PackageManager$MoveCallback;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;)I
+.method static synthetic access$000(Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;
 
     .prologue
     .line 33
-    iget v0, p0, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->mMoveId:I
+    iget v0, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->mMoveId:I
 
     return v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;I)Ljava/lang/CharSequence;
+.method static synthetic access$100(Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;I)Ljava/lang/CharSequence;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;
     .param p1, "x1"    # I
 
     .prologue
     .line 33
-    invoke-direct {p0, p1}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->moveStatusToMessage(I)Ljava/lang/CharSequence;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->moveStatusToMessage(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -63,7 +63,7 @@
     packed-switch p1, :pswitch_data_0
 
     .line 99
-    invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -72,7 +72,7 @@
 
     .line 88
     :pswitch_0
-    invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -82,7 +82,7 @@
     :pswitch_1
     const v0, 0x7f0e0849
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -92,7 +92,7 @@
     :pswitch_2
     const v0, 0x7f0e084a
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -102,7 +102,7 @@
     :pswitch_3
     const v0, 0x7f0e084b
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -112,7 +112,7 @@
     :pswitch_4
     const v0, 0x7f0e084c
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -141,15 +141,15 @@
     const/4 v5, 0x1
 
     .line 38
-    invoke-super {p0, p1}, Lcom/android/settings/deviceinfo/StorageWizardBase;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->onCreate(Landroid/os/Bundle;)V
 
     .line 39
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->mVolume:Landroid/os/storage/VolumeInfo;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->mVolume:Landroid/os/storage/VolumeInfo;
 
     if-nez v2, :cond_0
 
     .line 40
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->finish()V
 
     .line 58
     :goto_0
@@ -159,10 +159,10 @@
     :cond_0
     const v2, 0x7f0401fa
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->setContentView(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->setContentView(I)V
 
     .line 45
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -174,10 +174,10 @@
 
     move-result v2
 
-    iput v2, p0, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->mMoveId:I
+    iput v2, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->mMoveId:I
 
     .line 46
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -189,9 +189,9 @@
 
     .line 47
     .local v0, "appName":Ljava/lang/String;
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->mStorage:Landroid/os/storage/StorageManager;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->mStorage:Landroid/os/storage/StorageManager;
 
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->mVolume:Landroid/os/storage/VolumeInfo;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->mVolume:Landroid/os/storage/VolumeInfo;
 
     invoke-virtual {v2, v3}, Landroid/os/storage/StorageManager;->getBestVolumeDescription(Landroid/os/storage/VolumeInfo;)Ljava/lang/String;
 
@@ -199,7 +199,7 @@
 
     .line 49
     .local v1, "volumeName":Ljava/lang/String;
-    invoke-virtual {p0, v5}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->setIllustrationInternal(Z)V
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->setIllustrationInternal(Z)V
 
     .line 50
     const v2, 0x7f0e06f3
@@ -208,7 +208,7 @@
 
     aput-object v0, v3, v6
 
-    invoke-virtual {p0, v2, v3}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->setHeaderText(I[Ljava/lang/String;)V
+    invoke-virtual {p0, v2, v3}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->setHeaderText(I[Ljava/lang/String;)V
 
     .line 51
     const v2, 0x7f0e06f4
@@ -221,10 +221,10 @@
 
     aput-object v0, v3, v5
 
-    invoke-virtual {p0, v2, v3}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->setBodyText(I[Ljava/lang/String;)V
+    invoke-virtual {p0, v2, v3}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->setBodyText(I[Ljava/lang/String;)V
 
     .line 53
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->getViewGroup()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->getViewGroup()Landroid/view/ViewGroup;
 
     move-result-object v2
 
@@ -233,11 +233,11 @@
     invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     .line 56
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->mCallback:Landroid/content/pm/PackageManager$MoveCallback;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->mCallback:Landroid/content/pm/PackageManager$MoveCallback;
 
     new-instance v4, Landroid/os/Handler;
 
@@ -246,15 +246,15 @@
     invoke-virtual {v2, v3, v4}, Landroid/content/pm/PackageManager;->registerMoveCallback(Landroid/content/pm/PackageManager$MoveCallback;Landroid/os/Handler;)V
 
     .line 57
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->mCallback:Landroid/content/pm/PackageManager$MoveCallback;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->mCallback:Landroid/content/pm/PackageManager$MoveCallback;
 
-    iget v3, p0, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->mMoveId:I
+    iget v3, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->mMoveId:I
 
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v4
 
-    iget v5, p0, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->mMoveId:I
+    iget v5, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->mMoveId:I
 
     invoke-virtual {v4, v5}, Landroid/content/pm/PackageManager;->getMoveStatus(I)I
 
@@ -272,14 +272,14 @@
 
     .prologue
     .line 62
-    invoke-super {p0}, Lcom/android/settings/deviceinfo/StorageWizardBase;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->onDestroy()V
 
     .line 63
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->mCallback:Landroid/content/pm/PackageManager$MoveCallback;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->mCallback:Landroid/content/pm/PackageManager$MoveCallback;
 
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->unregisterMoveCallback(Landroid/content/pm/PackageManager$MoveCallback;)V
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/networkconnect/NetworkConnectActivity$5;
+.class Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$5;
 .super Ljava/lang/Object;
 .source "NetworkConnectActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    value = Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,16 +28,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/networkconnect/NetworkConnectActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)V
     .locals 0
 
     .prologue
     .line 335
-    iput-object p1, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$5;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$5;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -64,23 +64,23 @@
 
     .prologue
     .line 376
-    new-instance v0, Lcom/android/settings/net/SummaryForAllUidLoader;
+    new-instance v0, Lcom/android/settings_ex/net/SummaryForAllUidLoader;
 
-    iget-object v1, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$5;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v1, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$5;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$300(Lcom/android/settings/networkconnect/NetworkConnectActivity;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$300(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)Landroid/content/Context;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$5;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v2, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$5;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mStatsSession:Landroid/net/INetworkStatsSession;
-    invoke-static {v2}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$800(Lcom/android/settings/networkconnect/NetworkConnectActivity;)Landroid/net/INetworkStatsSession;
+    # getter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mStatsSession:Landroid/net/INetworkStatsSession;
+    invoke-static {v2}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$800(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)Landroid/net/INetworkStatsSession;
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2, p2}, Lcom/android/settings/net/SummaryForAllUidLoader;-><init>(Landroid/content/Context;Landroid/net/INetworkStatsSession;Landroid/os/Bundle;)V
+    invoke-direct {v0, v1, v2, p2}, Lcom/android/settings_ex/net/SummaryForAllUidLoader;-><init>(Landroid/content/Context;Landroid/net/INetworkStatsSession;Landroid/os/Bundle;)V
 
     return-object v0
 .end method
@@ -103,7 +103,7 @@
     .prologue
     .line 344
     .local p1, "loader":Landroid/content/Loader;, "Landroid/content/Loader<Landroid/net/NetworkStats;>;"
-    sget-boolean v7, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mIsNeedReLoad:Z
+    sget-boolean v7, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mIsNeedReLoad:Z
 
     if-eqz v7, :cond_3
 
@@ -116,12 +116,12 @@
 
     .line 347
     .local v0, "dataTotal":J
-    sget-object v7, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidDataMap:Ljava/util/Map;
+    sget-object v7, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidDataMap:Ljava/util/Map;
 
     invoke-interface {v7}, Ljava/util/Map;->clear()V
 
     .line 348
-    sget-object v7, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidDataLongTypeMap:Ljava/util/Map;
+    sget-object v7, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidDataLongTypeMap:Ljava/util/Map;
 
     invoke-interface {v7}, Ljava/util/Map;->clear()V
 
@@ -142,7 +142,7 @@
     move-result-object v2
 
     .line 351
-    sget-object v7, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidDataMap:Ljava/util/Map;
+    sget-object v7, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidDataMap:Ljava/util/Map;
 
     iget v8, v2, Landroid/net/NetworkStats$Entry;->uid:I
 
@@ -166,7 +166,7 @@
     add-long v0, v8, v10
 
     .line 353
-    sget-object v7, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidDataMap:Ljava/util/Map;
+    sget-object v7, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidDataMap:Ljava/util/Map;
 
     iget v8, v2, Landroid/net/NetworkStats$Entry;->uid:I
 
@@ -174,15 +174,15 @@
 
     move-result-object v8
 
-    # invokes: Lcom/android/settings/networkconnect/NetworkConnectActivity;->formatFileSizeMB(J)Ljava/lang/String;
-    invoke-static {v0, v1}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$400(J)Ljava/lang/String;
+    # invokes: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->formatFileSizeMB(J)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$400(J)Ljava/lang/String;
 
     move-result-object v9
 
     invoke-interface {v7, v8, v9}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 354
-    sget-object v7, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidDataLongTypeMap:Ljava/util/Map;
+    sget-object v7, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidDataLongTypeMap:Ljava/util/Map;
 
     iget v8, v2, Landroid/net/NetworkStats$Entry;->uid:I
 
@@ -214,7 +214,7 @@
     add-long v0, v8, v10
 
     .line 358
-    sget-object v7, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidDataMap:Ljava/util/Map;
+    sget-object v7, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidDataMap:Ljava/util/Map;
 
     iget v8, v2, Landroid/net/NetworkStats$Entry;->uid:I
 
@@ -222,15 +222,15 @@
 
     move-result-object v8
 
-    # invokes: Lcom/android/settings/networkconnect/NetworkConnectActivity;->formatFileSizeMB(J)Ljava/lang/String;
-    invoke-static {v0, v1}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$400(J)Ljava/lang/String;
+    # invokes: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->formatFileSizeMB(J)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$400(J)Ljava/lang/String;
 
     move-result-object v9
 
     invoke-interface {v7, v8, v9}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 359
-    sget-object v7, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidDataLongTypeMap:Ljava/util/Map;
+    sget-object v7, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidDataLongTypeMap:Ljava/util/Map;
 
     iget v8, v2, Landroid/net/NetworkStats$Entry;->uid:I
 
@@ -251,7 +251,7 @@
     const/4 v3, 0x0
 
     :goto_2
-    sget-object v7, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v7, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v7}, Ljava/util/List;->size()I
 
@@ -260,21 +260,21 @@
     if-ge v3, v7, :cond_3
 
     .line 363
-    sget-object v7, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v7, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v7, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v7
 
-    check-cast v7, Lcom/android/settings/networkconnect/ApplicationNetInfo;
+    check-cast v7, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;
 
-    invoke-virtual {v7}, Lcom/android/settings/networkconnect/ApplicationNetInfo;->getUid()I
+    invoke-virtual {v7}, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->getUid()I
 
     move-result v6
 
     .line 364
     .local v6, "uid":I
-    sget-object v7, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidDataLongTypeMap:Ljava/util/Map;
+    sget-object v7, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidDataLongTypeMap:Ljava/util/Map;
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -287,15 +287,15 @@
     if-eqz v7, :cond_2
 
     .line 365
-    sget-object v7, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sget-object v7, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     invoke-interface {v7, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v7
 
-    check-cast v7, Lcom/android/settings/networkconnect/ApplicationNetInfo;
+    check-cast v7, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;
 
-    sget-object v8, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidDataLongTypeMap:Ljava/util/Map;
+    sget-object v8, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidDataLongTypeMap:Ljava/util/Map;
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -311,7 +311,7 @@
 
     move-result-wide v8
 
-    invoke-virtual {v7, v8, v9}, Lcom/android/settings/networkconnect/ApplicationNetInfo;->setDataTotal(J)V
+    invoke-virtual {v7, v8, v9}, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->setDataTotal(J)V
 
     .line 362
     :cond_2
@@ -325,12 +325,12 @@
     .end local v3    # "i":I
     .end local v6    # "uid":I
     :cond_3
-    iget-object v7, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$5;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v7, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$5;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
     const/4 v8, 0x1
 
-    # setter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mIsDataLoadFinished:Z
-    invoke-static {v7, v8}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$502(Lcom/android/settings/networkconnect/NetworkConnectActivity;Z)Z
+    # setter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mIsDataLoadFinished:Z
+    invoke-static {v7, v8}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$502(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;Z)Z
 
     .line 370
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -339,10 +339,10 @@
 
     .line 371
     .local v4, "now":J
-    iget-object v7, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$5;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v7, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$5;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mContext:Landroid/content/Context;
-    invoke-static {v7}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$300(Lcom/android/settings/networkconnect/NetworkConnectActivity;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mContext:Landroid/content/Context;
+    invoke-static {v7}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$300(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)Landroid/content/Context;
 
     move-result-object v7
 
@@ -354,25 +354,25 @@
 
     const/16 v8, 0xc
 
-    iget-object v9, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$5;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v9, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$5;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    iget-object v9, v9, Lcom/android/settings/networkconnect/NetworkConnectActivity;->mWifiTemplate:Landroid/net/NetworkTemplate;
+    iget-object v9, v9, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mWifiTemplate:Landroid/net/NetworkTemplate;
 
-    iget-object v10, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$5;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v10, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$5;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # invokes: Lcom/android/settings/networkconnect/NetworkConnectActivity;->getStartTime()J
-    invoke-static {v10}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$600(Lcom/android/settings/networkconnect/NetworkConnectActivity;)J
+    # invokes: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->getStartTime()J
+    invoke-static {v10}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$600(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)J
 
     move-result-wide v10
 
-    invoke-static {v9, v10, v11, v4, v5}, Lcom/android/settings/net/SummaryForAllUidLoader;->buildArgs(Landroid/net/NetworkTemplate;JJ)Landroid/os/Bundle;
+    invoke-static {v9, v10, v11, v4, v5}, Lcom/android/settings_ex/net/SummaryForAllUidLoader;->buildArgs(Landroid/net/NetworkTemplate;JJ)Landroid/os/Bundle;
 
     move-result-object v9
 
-    iget-object v10, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$5;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v10, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$5;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mWifiCallback:Landroid/app/LoaderManager$LoaderCallbacks;
-    invoke-static {v10}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$700(Lcom/android/settings/networkconnect/NetworkConnectActivity;)Landroid/app/LoaderManager$LoaderCallbacks;
+    # getter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mWifiCallback:Landroid/app/LoaderManager$LoaderCallbacks;
+    invoke-static {v10}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$700(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)Landroid/app/LoaderManager$LoaderCallbacks;
 
     move-result-object v10
 
@@ -392,7 +392,7 @@
     check-cast p2, Landroid/net/NetworkStats;
 
     .end local p2    # "x1":Ljava/lang/Object;
-    invoke-virtual {p0, p1, p2}, Lcom/android/settings/networkconnect/NetworkConnectActivity$5;->onLoadFinished(Landroid/content/Loader;Landroid/net/NetworkStats;)V
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$5;->onLoadFinished(Landroid/content/Loader;Landroid/net/NetworkStats;)V
 
     return-void
 .end method
@@ -412,7 +412,7 @@
     .prologue
     .line 339
     .local p1, "arg0":Landroid/content/Loader;, "Landroid/content/Loader<Landroid/net/NetworkStats;>;"
-    sget-object v0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidDataMap:Ljava/util/Map;
+    sget-object v0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidDataMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 

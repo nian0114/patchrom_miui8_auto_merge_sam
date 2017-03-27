@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DeviceInfoSettings$5;
+.class Lcom/android/settings_ex/DeviceInfoSettings$5;
 .super Ljava/lang/Object;
 .source "DeviceInfoSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DeviceInfoSettings;->initDeviceInfoSoftwareUpdate()V
+    value = Lcom/android/settings_ex/DeviceInfoSettings;->initDeviceInfoSoftwareUpdate()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DeviceInfoSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/DeviceInfoSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DeviceInfoSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/DeviceInfoSettings;)V
     .locals 0
 
     .prologue
     .line 2399
-    iput-object p1, p0, Lcom/android/settings/DeviceInfoSettings$5;->this$0:Lcom/android/settings/DeviceInfoSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/DeviceInfoSettings$5;->this$0:Lcom/android/settings_ex/DeviceInfoSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -61,9 +61,9 @@
     invoke-static {v2, v4}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 2405
-    iget-object v2, p0, Lcom/android/settings/DeviceInfoSettings$5;->this$0:Lcom/android/settings/DeviceInfoSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/DeviceInfoSettings$5;->this$0:Lcom/android/settings_ex/DeviceInfoSettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/DeviceInfoSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v2}, Lcom/android/settings_ex/DeviceInfoSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -95,16 +95,16 @@
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 2411
-    iget-object v2, p0, Lcom/android/settings/DeviceInfoSettings$5;->this$0:Lcom/android/settings/DeviceInfoSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/DeviceInfoSettings$5;->this$0:Lcom/android/settings_ex/DeviceInfoSettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/DeviceInfoSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Lcom/android/settings_ex/DeviceInfoSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     invoke-virtual {v2, v1}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 2413
-    iget-object v2, p0, Lcom/android/settings/DeviceInfoSettings$5;->this$0:Lcom/android/settings/DeviceInfoSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/DeviceInfoSettings$5;->this$0:Lcom/android/settings_ex/DeviceInfoSettings;
 
     const-string v4, "com.samsung.omcagent.intent.AUTO_UPDATE"
 
@@ -112,8 +112,8 @@
 
     move-result-object v5
 
-    # invokes: Lcom/android/settings/DeviceInfoSettings;->sendOmcUpdate(Ljava/lang/String;Ljava/lang/Boolean;)Z
-    invoke-static {v2, v4, v5}, Lcom/android/settings/DeviceInfoSettings;->access$1100(Lcom/android/settings/DeviceInfoSettings;Ljava/lang/String;Ljava/lang/Boolean;)Z
+    # invokes: Lcom/android/settings_ex/DeviceInfoSettings;->sendOmcUpdate(Ljava/lang/String;Ljava/lang/Boolean;)Z
+    invoke-static {v2, v4, v5}, Lcom/android/settings_ex/DeviceInfoSettings;->access$1100(Lcom/android/settings_ex/DeviceInfoSettings;Ljava/lang/String;Ljava/lang/Boolean;)Z
 
     .line 2415
     return v3

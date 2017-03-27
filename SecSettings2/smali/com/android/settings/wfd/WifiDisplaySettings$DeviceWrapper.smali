@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;
+.class Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;
 .super Ljava/lang/Object;
 .source "WifiDisplaySettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wfd/WifiDisplaySettings;
+    value = Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -29,27 +29,27 @@
 
 .field private mWlanMacAddress:Ljava/lang/String;
 
-.field final synthetic this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/settings/wfd/WifiDisplaySettings;Lcom/samsung/android/allshare/Device;)V
+.method public constructor <init>(Lcom/android/settings_ex/wfd/WifiDisplaySettings;Lcom/samsung/android/allshare/Device;)V
     .locals 2
     .param p2, "device"    # Lcom/samsung/android/allshare/Device;
 
     .prologue
     .line 1664
-    iput-object p1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1660
     const-string v1, ""
 
-    iput-object v1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mDeviceUid:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mDeviceUid:Ljava/lang/String;
 
     .line 1665
-    iput-object p2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mDLNA:Lcom/samsung/android/allshare/Device;
+    iput-object p2, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mDLNA:Lcom/samsung/android/allshare/Device;
 
     .line 1667
     invoke-virtual {p2}, Lcom/samsung/android/allshare/Device;->getScreenSharingInfo()Ljava/lang/String;
@@ -69,7 +69,7 @@
     if-nez v1, :cond_0
 
     .line 1669
-    invoke-direct {p0, v0}, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->parseDeviceInfo(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->parseDeviceInfo(Ljava/lang/String;)V
 
     .line 1671
     :cond_0
@@ -149,7 +149,7 @@
 
     move-result-object v7
 
-    iput-object v7, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mWlanMacAddress:Ljava/lang/String;
+    iput-object v7, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mWlanMacAddress:Ljava/lang/String;
 
     .line 1679
     :cond_0
@@ -205,7 +205,7 @@
     move v7, v8
 
     :goto_2
-    iput-boolean v7, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mIsSupportMirroring:Z
+    iput-boolean v7, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mIsSupportMirroring:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -289,7 +289,7 @@
 
     move-result v7
 
-    iput-boolean v7, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mIsSupportTDLS:Z
+    iput-boolean v7, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mIsSupportTDLS:Z
 
     goto :goto_1
 
@@ -313,7 +313,7 @@
 
     move-result-object v7
 
-    iput-object v7, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mBssid:Ljava/lang/String;
+    iput-object v7, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mBssid:Ljava/lang/String;
 
     goto :goto_1
 
@@ -344,7 +344,7 @@
 
     move-result v7
 
-    iput v7, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mWlanFrequency:I
+    iput v7, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mWlanFrequency:I
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -358,7 +358,7 @@
 
     .prologue
     .line 1752
-    iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mBssid:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mBssid:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -368,7 +368,7 @@
 
     .prologue
     .line 1704
-    iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mDLNA:Lcom/samsung/android/allshare/Device;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mDLNA:Lcom/samsung/android/allshare/Device;
 
     return-object v0
 .end method
@@ -378,7 +378,7 @@
 
     .prologue
     .line 1724
-    iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mDeviceUid:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mDeviceUid:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -386,7 +386,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mDLNA:Lcom/samsung/android/allshare/Device;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mDLNA:Lcom/samsung/android/allshare/Device;
 
     invoke-virtual {v0}, Lcom/samsung/android/allshare/Device;->getID()Ljava/lang/String;
 
@@ -396,7 +396,7 @@
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mDeviceUid:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mDeviceUid:Ljava/lang/String;
 
     goto :goto_0
 .end method
@@ -406,7 +406,7 @@
 
     .prologue
     .line 1748
-    iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mDLNA:Lcom/samsung/android/allshare/Device;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mDLNA:Lcom/samsung/android/allshare/Device;
 
     invoke-virtual {v0}, Lcom/samsung/android/allshare/Device;->getIcon()Landroid/net/Uri;
 
@@ -420,7 +420,7 @@
 
     .prologue
     .line 1720
-    iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mDLNA:Lcom/samsung/android/allshare/Device;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mDLNA:Lcom/samsung/android/allshare/Device;
 
     invoke-virtual {v0}, Lcom/samsung/android/allshare/Device;->getID()Ljava/lang/String;
 
@@ -434,7 +434,7 @@
 
     .prologue
     .line 1732
-    iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mDLNA:Lcom/samsung/android/allshare/Device;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mDLNA:Lcom/samsung/android/allshare/Device;
 
     invoke-virtual {v0}, Lcom/samsung/android/allshare/Device;->getIPAddress()Ljava/lang/String;
 
@@ -448,7 +448,7 @@
 
     .prologue
     .line 1716
-    iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mDLNA:Lcom/samsung/android/allshare/Device;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mDLNA:Lcom/samsung/android/allshare/Device;
 
     invoke-virtual {v0}, Lcom/samsung/android/allshare/Device;->getModelName()Ljava/lang/String;
 
@@ -462,7 +462,7 @@
 
     .prologue
     .line 1712
-    iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mDLNA:Lcom/samsung/android/allshare/Device;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mDLNA:Lcom/samsung/android/allshare/Device;
 
     invoke-virtual {v0}, Lcom/samsung/android/allshare/Device;->getName()Ljava/lang/String;
 
@@ -476,7 +476,7 @@
 
     .prologue
     .line 1708
-    iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mDLNA:Lcom/samsung/android/allshare/Device;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mDLNA:Lcom/samsung/android/allshare/Device;
 
     invoke-virtual {v0}, Lcom/samsung/android/allshare/Device;->getScreenSharingP2pMacAddr()Ljava/lang/String;
 
@@ -490,7 +490,7 @@
 
     .prologue
     .line 1756
-    iget v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mWlanFrequency:I
+    iget v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mWlanFrequency:I
 
     return v0
 .end method
@@ -500,7 +500,7 @@
 
     .prologue
     .line 1736
-    iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mWlanMacAddress:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mWlanMacAddress:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -510,7 +510,7 @@
 
     .prologue
     .line 1740
-    iget-boolean v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mIsSupportMirroring:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mIsSupportMirroring:Z
 
     return v0
 .end method
@@ -520,7 +520,7 @@
 
     .prologue
     .line 1744
-    iget-boolean v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mIsSupportTDLS:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mIsSupportTDLS:Z
 
     return v0
 .end method
@@ -531,7 +531,7 @@
 
     .prologue
     .line 1728
-    iput-object p1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mDeviceUid:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mDeviceUid:Ljava/lang/String;
 
     .line 1729
     return-void
@@ -552,7 +552,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mDLNA:Lcom/samsung/android/allshare/Device;
+    iget-object v2, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mDLNA:Lcom/samsung/android/allshare/Device;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -578,7 +578,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mDeviceUid:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mDeviceUid:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -590,7 +590,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mWlanMacAddress:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mWlanMacAddress:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -602,7 +602,7 @@
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mIsSupportMirroring:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mIsSupportMirroring:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -614,7 +614,7 @@
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mIsSupportTDLS:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mIsSupportTDLS:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -626,7 +626,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->mBssid:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->mBssid:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

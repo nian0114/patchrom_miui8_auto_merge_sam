@@ -1,14 +1,14 @@
-.class Lcom/android/settings/AssistantMenuPreferenceFragment$8;
+.class Lcom/android/settings_ex/AssistantMenuPreferenceFragment$8;
 .super Ljava/lang/Object;
 .source "AssistantMenuPreferenceFragment.java"
 
 # interfaces
-.implements Lcom/android/settings/widget/ToggleSwitch$OnBeforeCheckedChangeListener;
+.implements Lcom/android/settings_ex/widget/ToggleSwitch$OnBeforeCheckedChangeListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/AssistantMenuPreferenceFragment;->onInstallSwitchBarToggleSwitch()V
+    value = Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->onInstallSwitchBarToggleSwitch()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/AssistantMenuPreferenceFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/AssistantMenuPreferenceFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/AssistantMenuPreferenceFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/AssistantMenuPreferenceFragment;)V
     .locals 0
 
     .prologue
     .line 489
-    iput-object p1, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$8;->this$0:Lcom/android/settings/AssistantMenuPreferenceFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$8;->this$0:Lcom/android/settings_ex/AssistantMenuPreferenceFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,26 +36,26 @@
 
 
 # virtual methods
-.method public onBeforeCheckedChanged(Lcom/android/settings/widget/ToggleSwitch;Z)Z
+.method public onBeforeCheckedChanged(Lcom/android/settings_ex/widget/ToggleSwitch;Z)Z
     .locals 4
-    .param p1, "toggleSwitch"    # Lcom/android/settings/widget/ToggleSwitch;
+    .param p1, "toggleSwitch"    # Lcom/android/settings_ex/widget/ToggleSwitch;
     .param p2, "checked"    # Z
 
     .prologue
     const/4 v1, 0x0
 
     .line 492
-    iget-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$8;->this$0:Lcom/android/settings/AssistantMenuPreferenceFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$8;->this$0:Lcom/android/settings_ex/AssistantMenuPreferenceFragment;
 
-    iget-object v0, v0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, v0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p2}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v0, p2}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     .line 494
     :try_start_0
-    iget-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$8;->this$0:Lcom/android/settings/AssistantMenuPreferenceFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$8;->this$0:Lcom/android/settings_ex/AssistantMenuPreferenceFragment;
 
-    invoke-virtual {v0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -73,9 +73,9 @@
     invoke-static {v2, v3, v0}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 496
-    iget-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$8;->this$0:Lcom/android/settings/AssistantMenuPreferenceFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$8;->this$0:Lcom/android/settings_ex/AssistantMenuPreferenceFragment;
 
-    invoke-virtual {v0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {v0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 

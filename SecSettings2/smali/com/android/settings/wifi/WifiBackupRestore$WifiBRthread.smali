@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;
+.class Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;
 .super Ljava/lang/Object;
 .source "WifiBackupRestore.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiBackupRestore;
+    value = Lcom/android/settings_ex/wifi/WifiBackupRestore;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,28 +26,28 @@
 
 .field mWifiEnabled:Z
 
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
 .field wm:Landroid/net/wifi/WifiManager;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiBackupRestore;Landroid/content/Context;Landroid/content/Intent;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiBackupRestore;Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
     .param p2, "context"    # Landroid/content/Context;
     .param p3, "intent"    # Landroid/content/Intent;
 
     .prologue
     .line 182
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 183
-    iput-object p2, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mContext:Landroid/content/Context;
+    iput-object p2, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mContext:Landroid/content/Context;
 
     .line 184
-    iput-object p3, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
+    iput-object p3, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
 
     .line 185
     return-void
@@ -107,12 +107,12 @@
     const/4 v5, -0x1
 
     .line 391
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
 
     if-nez v4, :cond_0
 
     .line 392
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mContext:Landroid/content/Context;
 
     const-string v7, "wifi"
 
@@ -122,11 +122,11 @@
 
     check-cast v4, Landroid/net/wifi/WifiManager;
 
-    iput-object v4, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
+    iput-object v4, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
 
     .line 393
     :cond_0
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v4}, Landroid/net/wifi/WifiManager;->isWifiEnabled()Z
 
@@ -134,7 +134,7 @@
 
     .line 394
     .local v2, "isWifiEnabled":Z
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v4}, Landroid/net/wifi/WifiManager;->isWifiApEnabled()Z
 
@@ -142,10 +142,10 @@
 
     .line 395
     .local v1, "isHotspotEnabled":Z
-    iput-boolean v2, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mWifiEnabled:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mWifiEnabled:Z
 
     .line 396
-    iput-boolean v1, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mHotspotEnabled:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mHotspotEnabled:Z
 
     .line 397
     const/4 v3, 0x0
@@ -155,7 +155,7 @@
     if-nez v2, :cond_4
 
     .line 399
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
 
     const/4 v7, 0x1
 
@@ -175,7 +175,7 @@
     add-int/lit8 v3, v3, 0x1
 
     .line 404
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v4}, Landroid/net/wifi/WifiManager;->isWifiEnabled()Z
     :try_end_0
@@ -250,7 +250,7 @@
 
     .prologue
     .line 638
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
     const-string v3, "AES/CBC/PKCS5Padding"
 
@@ -258,14 +258,14 @@
 
     move-result-object v3
 
-    # setter for: Lcom/android/settings/wifi/WifiBackupRestore;->cipher:Ljavax/crypto/Cipher;
-    invoke-static {v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore;->access$002(Lcom/android/settings/wifi/WifiBackupRestore;Ljavax/crypto/Cipher;)Ljavax/crypto/Cipher;
+    # setter for: Lcom/android/settings_ex/wifi/WifiBackupRestore;->cipher:Ljavax/crypto/Cipher;
+    invoke-static {v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore;->access$002(Lcom/android/settings_ex/wifi/WifiBackupRestore;Ljavax/crypto/Cipher;)Ljavax/crypto/Cipher;
 
     .line 640
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    # getter for: Lcom/android/settings/wifi/WifiBackupRestore;->cipher:Ljavax/crypto/Cipher;
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiBackupRestore;->access$000(Lcom/android/settings/wifi/WifiBackupRestore;)Ljavax/crypto/Cipher;
+    # getter for: Lcom/android/settings_ex/wifi/WifiBackupRestore;->cipher:Ljavax/crypto/Cipher;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiBackupRestore;->access$000(Lcom/android/settings_ex/wifi/WifiBackupRestore;)Ljavax/crypto/Cipher;
 
     move-result-object v2
 
@@ -286,59 +286,59 @@
 
     .line 644
     .local v1, "ivSpec":Ljava/security/spec/AlgorithmParameterSpec;
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    iget v2, v2, Lcom/android/settings/wifi/WifiBackupRestore;->mSecurityLevel:I
+    iget v2, v2, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mSecurityLevel:I
 
     const/4 v3, 0x1
 
     if-ne v2, v3, :cond_0
 
     .line 645
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
     const/16 v3, 0x10
 
     new-array v3, v3, [B
 
-    # setter for: Lcom/android/settings/wifi/WifiBackupRestore;->salt:[B
-    invoke-static {v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore;->access$102(Lcom/android/settings/wifi/WifiBackupRestore;[B)[B
+    # setter for: Lcom/android/settings_ex/wifi/WifiBackupRestore;->salt:[B
+    invoke-static {v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore;->access$102(Lcom/android/settings_ex/wifi/WifiBackupRestore;[B)[B
 
     .line 646
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    # getter for: Lcom/android/settings/wifi/WifiBackupRestore;->salt:[B
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiBackupRestore;->access$100(Lcom/android/settings/wifi/WifiBackupRestore;)[B
+    # getter for: Lcom/android/settings_ex/wifi/WifiBackupRestore;->salt:[B
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiBackupRestore;->access$100(Lcom/android/settings_ex/wifi/WifiBackupRestore;)[B
 
     move-result-object v2
 
     invoke-virtual {p1, v2}, Ljava/io/InputStream;->read([B)I
 
     .line 647
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->generatePBKDF2SecretKey()Ljavax/crypto/spec/SecretKeySpec;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->generatePBKDF2SecretKey()Ljavax/crypto/spec/SecretKeySpec;
 
     move-result-object v3
 
-    # setter for: Lcom/android/settings/wifi/WifiBackupRestore;->secretKey:Ljavax/crypto/spec/SecretKeySpec;
-    invoke-static {v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore;->access$202(Lcom/android/settings/wifi/WifiBackupRestore;Ljavax/crypto/spec/SecretKeySpec;)Ljavax/crypto/spec/SecretKeySpec;
+    # setter for: Lcom/android/settings_ex/wifi/WifiBackupRestore;->secretKey:Ljavax/crypto/spec/SecretKeySpec;
+    invoke-static {v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore;->access$202(Lcom/android/settings_ex/wifi/WifiBackupRestore;Ljavax/crypto/spec/SecretKeySpec;)Ljavax/crypto/spec/SecretKeySpec;
 
     .line 653
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    # getter for: Lcom/android/settings/wifi/WifiBackupRestore;->cipher:Ljavax/crypto/Cipher;
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiBackupRestore;->access$000(Lcom/android/settings/wifi/WifiBackupRestore;)Ljavax/crypto/Cipher;
+    # getter for: Lcom/android/settings_ex/wifi/WifiBackupRestore;->cipher:Ljavax/crypto/Cipher;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiBackupRestore;->access$000(Lcom/android/settings_ex/wifi/WifiBackupRestore;)Ljavax/crypto/Cipher;
 
     move-result-object v2
 
     const/4 v3, 0x2
 
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    # getter for: Lcom/android/settings/wifi/WifiBackupRestore;->secretKey:Ljavax/crypto/spec/SecretKeySpec;
-    invoke-static {v4}, Lcom/android/settings/wifi/WifiBackupRestore;->access$200(Lcom/android/settings/wifi/WifiBackupRestore;)Ljavax/crypto/spec/SecretKeySpec;
+    # getter for: Lcom/android/settings_ex/wifi/WifiBackupRestore;->secretKey:Ljavax/crypto/spec/SecretKeySpec;
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/WifiBackupRestore;->access$200(Lcom/android/settings_ex/wifi/WifiBackupRestore;)Ljavax/crypto/spec/SecretKeySpec;
 
     move-result-object v4
 
@@ -347,10 +347,10 @@
     .line 654
     new-instance v2, Ljavax/crypto/CipherInputStream;
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    # getter for: Lcom/android/settings/wifi/WifiBackupRestore;->cipher:Ljavax/crypto/Cipher;
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiBackupRestore;->access$000(Lcom/android/settings/wifi/WifiBackupRestore;)Ljavax/crypto/Cipher;
+    # getter for: Lcom/android/settings_ex/wifi/WifiBackupRestore;->cipher:Ljavax/crypto/Cipher;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore;->access$000(Lcom/android/settings_ex/wifi/WifiBackupRestore;)Ljavax/crypto/Cipher;
 
     move-result-object v3
 
@@ -360,14 +360,14 @@
 
     .line 649
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->generateSHA256SecretKey()Ljavax/crypto/spec/SecretKeySpec;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->generateSHA256SecretKey()Ljavax/crypto/spec/SecretKeySpec;
 
     move-result-object v3
 
-    # setter for: Lcom/android/settings/wifi/WifiBackupRestore;->secretKey:Ljavax/crypto/spec/SecretKeySpec;
-    invoke-static {v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore;->access$202(Lcom/android/settings/wifi/WifiBackupRestore;Ljavax/crypto/spec/SecretKeySpec;)Ljavax/crypto/spec/SecretKeySpec;
+    # setter for: Lcom/android/settings_ex/wifi/WifiBackupRestore;->secretKey:Ljavax/crypto/spec/SecretKeySpec;
+    invoke-static {v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore;->access$202(Lcom/android/settings_ex/wifi/WifiBackupRestore;Ljavax/crypto/spec/SecretKeySpec;)Ljavax/crypto/spec/SecretKeySpec;
 
     goto :goto_0
 .end method
@@ -402,9 +402,9 @@
     :try_start_0
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v14, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    iget v14, v14, Lcom/android/settings/wifi/WifiBackupRestore;->mOption:I
+    iget v14, v14, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mOption:I
 
     if-nez v14, :cond_5
 
@@ -437,7 +437,7 @@
     :try_start_2
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v6}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->encryptStream(Ljava/io/OutputStream;)Ljava/io/OutputStream;
+    invoke-virtual {v0, v6}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->encryptStream(Ljava/io/OutputStream;)Ljava/io/OutputStream;
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_5
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
@@ -569,9 +569,9 @@
     :try_start_6
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v14, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    iget v14, v14, Lcom/android/settings/wifi/WifiBackupRestore;->mOption:I
+    iget v14, v14, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mOption:I
 
     const/4 v15, 0x1
 
@@ -593,7 +593,7 @@
     :try_start_7
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v4}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->decryptStream(Ljava/io/InputStream;)Ljava/io/InputStream;
+    invoke-virtual {v0, v4}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->decryptStream(Ljava/io/InputStream;)Ljava/io/InputStream;
 
     move-result-object v8
 
@@ -898,7 +898,7 @@
     const/4 v4, 0x1
 
     .line 617
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
     const-string v3, "AES/CBC/PKCS5Padding"
 
@@ -906,14 +906,14 @@
 
     move-result-object v3
 
-    # setter for: Lcom/android/settings/wifi/WifiBackupRestore;->cipher:Ljavax/crypto/Cipher;
-    invoke-static {v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore;->access$002(Lcom/android/settings/wifi/WifiBackupRestore;Ljavax/crypto/Cipher;)Ljavax/crypto/Cipher;
+    # setter for: Lcom/android/settings_ex/wifi/WifiBackupRestore;->cipher:Ljavax/crypto/Cipher;
+    invoke-static {v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore;->access$002(Lcom/android/settings_ex/wifi/WifiBackupRestore;Ljavax/crypto/Cipher;)Ljavax/crypto/Cipher;
 
     .line 620
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    # getter for: Lcom/android/settings/wifi/WifiBackupRestore;->cipher:Ljavax/crypto/Cipher;
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiBackupRestore;->access$000(Lcom/android/settings/wifi/WifiBackupRestore;)Ljavax/crypto/Cipher;
+    # getter for: Lcom/android/settings_ex/wifi/WifiBackupRestore;->cipher:Ljavax/crypto/Cipher;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiBackupRestore;->access$000(Lcom/android/settings_ex/wifi/WifiBackupRestore;)Ljavax/crypto/Cipher;
 
     move-result-object v2
 
@@ -941,55 +941,55 @@
     invoke-virtual {p1, v0}, Ljava/io/OutputStream;->write([B)V
 
     .line 625
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    iget v2, v2, Lcom/android/settings/wifi/WifiBackupRestore;->mSecurityLevel:I
+    iget v2, v2, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mSecurityLevel:I
 
     if-ne v2, v4, :cond_0
 
     .line 626
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->generateEncryptSalt()[B
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->generateEncryptSalt()[B
 
     move-result-object v3
 
-    # setter for: Lcom/android/settings/wifi/WifiBackupRestore;->salt:[B
-    invoke-static {v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore;->access$102(Lcom/android/settings/wifi/WifiBackupRestore;[B)[B
+    # setter for: Lcom/android/settings_ex/wifi/WifiBackupRestore;->salt:[B
+    invoke-static {v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore;->access$102(Lcom/android/settings_ex/wifi/WifiBackupRestore;[B)[B
 
     .line 627
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    # getter for: Lcom/android/settings/wifi/WifiBackupRestore;->salt:[B
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiBackupRestore;->access$100(Lcom/android/settings/wifi/WifiBackupRestore;)[B
+    # getter for: Lcom/android/settings_ex/wifi/WifiBackupRestore;->salt:[B
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiBackupRestore;->access$100(Lcom/android/settings_ex/wifi/WifiBackupRestore;)[B
 
     move-result-object v2
 
     invoke-virtual {p1, v2}, Ljava/io/OutputStream;->write([B)V
 
     .line 628
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->generatePBKDF2SecretKey()Ljavax/crypto/spec/SecretKeySpec;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->generatePBKDF2SecretKey()Ljavax/crypto/spec/SecretKeySpec;
 
     move-result-object v3
 
-    # setter for: Lcom/android/settings/wifi/WifiBackupRestore;->secretKey:Ljavax/crypto/spec/SecretKeySpec;
-    invoke-static {v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore;->access$202(Lcom/android/settings/wifi/WifiBackupRestore;Ljavax/crypto/spec/SecretKeySpec;)Ljavax/crypto/spec/SecretKeySpec;
+    # setter for: Lcom/android/settings_ex/wifi/WifiBackupRestore;->secretKey:Ljavax/crypto/spec/SecretKeySpec;
+    invoke-static {v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore;->access$202(Lcom/android/settings_ex/wifi/WifiBackupRestore;Ljavax/crypto/spec/SecretKeySpec;)Ljavax/crypto/spec/SecretKeySpec;
 
     .line 633
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    # getter for: Lcom/android/settings/wifi/WifiBackupRestore;->cipher:Ljavax/crypto/Cipher;
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiBackupRestore;->access$000(Lcom/android/settings/wifi/WifiBackupRestore;)Ljavax/crypto/Cipher;
+    # getter for: Lcom/android/settings_ex/wifi/WifiBackupRestore;->cipher:Ljavax/crypto/Cipher;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiBackupRestore;->access$000(Lcom/android/settings_ex/wifi/WifiBackupRestore;)Ljavax/crypto/Cipher;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    # getter for: Lcom/android/settings/wifi/WifiBackupRestore;->secretKey:Ljavax/crypto/spec/SecretKeySpec;
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiBackupRestore;->access$200(Lcom/android/settings/wifi/WifiBackupRestore;)Ljavax/crypto/spec/SecretKeySpec;
+    # getter for: Lcom/android/settings_ex/wifi/WifiBackupRestore;->secretKey:Ljavax/crypto/spec/SecretKeySpec;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore;->access$200(Lcom/android/settings_ex/wifi/WifiBackupRestore;)Ljavax/crypto/spec/SecretKeySpec;
 
     move-result-object v3
 
@@ -998,10 +998,10 @@
     .line 634
     new-instance v2, Ljavax/crypto/CipherOutputStream;
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    # getter for: Lcom/android/settings/wifi/WifiBackupRestore;->cipher:Ljavax/crypto/Cipher;
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiBackupRestore;->access$000(Lcom/android/settings/wifi/WifiBackupRestore;)Ljavax/crypto/Cipher;
+    # getter for: Lcom/android/settings_ex/wifi/WifiBackupRestore;->cipher:Ljavax/crypto/Cipher;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore;->access$000(Lcom/android/settings_ex/wifi/WifiBackupRestore;)Ljavax/crypto/Cipher;
 
     move-result-object v3
 
@@ -1011,14 +1011,14 @@
 
     .line 630
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->generateSHA256SecretKey()Ljavax/crypto/spec/SecretKeySpec;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->generateSHA256SecretKey()Ljavax/crypto/spec/SecretKeySpec;
 
     move-result-object v3
 
-    # setter for: Lcom/android/settings/wifi/WifiBackupRestore;->secretKey:Ljavax/crypto/spec/SecretKeySpec;
-    invoke-static {v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore;->access$202(Lcom/android/settings/wifi/WifiBackupRestore;Ljavax/crypto/spec/SecretKeySpec;)Ljavax/crypto/spec/SecretKeySpec;
+    # setter for: Lcom/android/settings_ex/wifi/WifiBackupRestore;->secretKey:Ljavax/crypto/spec/SecretKeySpec;
+    invoke-static {v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore;->access$202(Lcom/android/settings_ex/wifi/WifiBackupRestore;Ljavax/crypto/spec/SecretKeySpec;)Ljavax/crypto/spec/SecretKeySpec;
 
     goto :goto_0
 .end method
@@ -1071,9 +1071,9 @@
 
     .line 671
     .local v4, "keyLength":I
-    iget-object v6, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v6, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    iget-object v6, v6, Lcom/android/settings/wifi/WifiBackupRestore;->mSessionKey:Ljava/lang/String;
+    iget-object v6, v6, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mSessionKey:Ljava/lang/String;
 
     invoke-virtual {v6}, Ljava/lang/String;->toCharArray()[C
 
@@ -1091,10 +1091,10 @@
     .local v3, "keyFactory":Ljavax/crypto/SecretKeyFactory;
     new-instance v5, Ljavax/crypto/spec/PBEKeySpec;
 
-    iget-object v6, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v6, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    # getter for: Lcom/android/settings/wifi/WifiBackupRestore;->salt:[B
-    invoke-static {v6}, Lcom/android/settings/wifi/WifiBackupRestore;->access$100(Lcom/android/settings/wifi/WifiBackupRestore;)[B
+    # getter for: Lcom/android/settings_ex/wifi/WifiBackupRestore;->salt:[B
+    invoke-static {v6}, Lcom/android/settings_ex/wifi/WifiBackupRestore;->access$100(Lcom/android/settings_ex/wifi/WifiBackupRestore;)[B
 
     move-result-object v6
 
@@ -1141,9 +1141,9 @@
 
     .line 609
     .local v0, "digest":Ljava/security/MessageDigest;
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    iget-object v2, v2, Lcom/android/settings/wifi/WifiBackupRestore;->mSessionKey:Ljava/lang/String;
+    iget-object v2, v2, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mSessionKey:Ljava/lang/String;
 
     const-string v3, "UTF-8"
 
@@ -1287,7 +1287,7 @@
     invoke-interface {v2, v6, v7}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     .line 437
-    invoke-direct {p0}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->getModelName()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->getModelName()Ljava/lang/String;
 
     move-result-object v6
 
@@ -1504,8 +1504,8 @@
 
     .prologue
     .line 681
-    # getter for: Lcom/android/settings/wifi/WifiBackupRestore;->mPermissions:[Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/wifi/WifiBackupRestore;->access$300()[Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/wifi/WifiBackupRestore;->mPermissions:[Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/wifi/WifiBackupRestore;->access$300()[Ljava/lang/String;
 
     move-result-object v0
 
@@ -1523,7 +1523,7 @@
 
     .line 682
     .local v3, "permission":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4, v3}, Landroid/content/Context;->checkSelfPermission(Ljava/lang/String;)I
 
@@ -1714,13 +1714,13 @@
     .line 486
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v14, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
     invoke-interface {v8}, Lorg/xmlpull/v1/XmlPullParser;->getText()Ljava/lang/String;
 
     move-result-object v15
 
-    iput-object v15, v14, Lcom/android/settings/wifi/WifiBackupRestore;->xmlModel:Ljava/lang/String;
+    iput-object v15, v14, Lcom/android/settings_ex/wifi/WifiBackupRestore;->xmlModel:Ljava/lang/String;
 
     .line 487
     const-string v14, "WifiBackupRestore"
@@ -1737,13 +1737,13 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
     move-object/from16 v16, v0
 
     move-object/from16 v0, v16
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore;->xmlModel:Ljava/lang/String;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore;->xmlModel:Ljava/lang/String;
 
     move-object/from16 v16, v0
 
@@ -1854,13 +1854,13 @@
     .line 489
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v14, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
     invoke-interface {v8}, Lorg/xmlpull/v1/XmlPullParser;->getText()Ljava/lang/String;
 
     move-result-object v15
 
-    iput-object v15, v14, Lcom/android/settings/wifi/WifiBackupRestore;->xmlConf:Ljava/lang/String;
+    iput-object v15, v14, Lcom/android/settings_ex/wifi/WifiBackupRestore;->xmlConf:Ljava/lang/String;
 
     .line 490
     const-string v14, "WifiBackupRestore"
@@ -1877,13 +1877,13 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
     move-object/from16 v16, v0
 
     move-object/from16 v0, v16
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore;->xmlConf:Ljava/lang/String;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore;->xmlConf:Ljava/lang/String;
 
     move-object/from16 v16, v0
 
@@ -2163,7 +2163,7 @@
     .line 188
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
 
     move-object/from16 v24, v0
 
@@ -2185,7 +2185,7 @@
     :cond_1
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
 
     move-object/from16 v24, v0
 
@@ -2204,7 +2204,7 @@
     .line 194
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
 
     move-object/from16 v24, v0
 
@@ -2218,7 +2218,7 @@
     .local v21, "path":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
 
     move-object/from16 v24, v0
 
@@ -2234,13 +2234,13 @@
     .local v6, "action":I
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
     move-object/from16 v24, v0
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
 
     move-object/from16 v25, v0
 
@@ -2254,18 +2254,18 @@
 
     move-object/from16 v1, v24
 
-    iput-object v0, v1, Lcom/android/settings/wifi/WifiBackupRestore;->mSessionKey:Ljava/lang/String;
+    iput-object v0, v1, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mSessionKey:Ljava/lang/String;
 
     .line 197
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
     move-object/from16 v24, v0
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
 
     move-object/from16 v25, v0
 
@@ -2279,18 +2279,18 @@
 
     move-object/from16 v1, v24
 
-    iput-object v0, v1, Lcom/android/settings/wifi/WifiBackupRestore;->mSource:Ljava/lang/String;
+    iput-object v0, v1, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mSource:Ljava/lang/String;
 
     .line 198
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
     move-object/from16 v24, v0
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
 
     move-object/from16 v25, v0
 
@@ -2304,18 +2304,18 @@
 
     move-object/from16 v1, v24
 
-    iput-object v0, v1, Lcom/android/settings/wifi/WifiBackupRestore;->mExportSessionTime:Ljava/lang/String;
+    iput-object v0, v1, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mExportSessionTime:Ljava/lang/String;
 
     .line 199
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
     move-object/from16 v24, v0
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
 
     move-object/from16 v25, v0
 
@@ -2331,7 +2331,7 @@
 
     move-object/from16 v1, v24
 
-    iput v0, v1, Lcom/android/settings/wifi/WifiBackupRestore;->mSecurityLevel:I
+    iput v0, v1, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mSecurityLevel:I
 
     .line 202
     const-string v24, "WifiBackupRestore"
@@ -2374,13 +2374,13 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
     move-object/from16 v26, v0
 
     move-object/from16 v0, v26
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore;->mSource:Ljava/lang/String;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mSource:Ljava/lang/String;
 
     move-object/from16 v26, v0
 
@@ -2397,7 +2397,7 @@
     .line 204
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
     move-object/from16 v24, v0
 
@@ -2407,10 +2407,10 @@
 
     move-object/from16 v1, v24
 
-    iput v0, v1, Lcom/android/settings/wifi/WifiBackupRestore;->mOption:I
+    iput v0, v1, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mOption:I
 
     .line 206
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->permissionCheck()Z
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->permissionCheck()Z
 
     move-result v24
 
@@ -2431,7 +2431,7 @@
 
     move/from16 v3, v26
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
 
     goto/16 :goto_0
 
@@ -2440,7 +2440,7 @@
     if-nez v6, :cond_d
 
     .line 212
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->CheckWifiState()I
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->CheckWifiState()I
 
     move-result v24
 
@@ -2467,7 +2467,7 @@
 
     move/from16 v3, v26
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
 
     goto/16 :goto_0
 
@@ -2479,7 +2479,7 @@
 
     move-object/from16 v1, v24
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->getFileSize(Ljava/lang/String;)J
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->getFileSize(Ljava/lang/String;)J
 
     move-result-wide v12
 
@@ -2513,7 +2513,7 @@
 
     move/from16 v3, v26
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
 
     goto/16 :goto_0
 
@@ -2521,7 +2521,7 @@
     :cond_4
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
 
     move-object/from16 v24, v0
 
@@ -2564,7 +2564,7 @@
 
     move/from16 v3, v26
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
 
     goto/16 :goto_0
 
@@ -2605,7 +2605,7 @@
 
     move/from16 v3, v26
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2657,7 +2657,7 @@
 
     move/from16 v3, v26
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
 
     goto/16 :goto_0
 
@@ -2749,7 +2749,7 @@
 
     move/from16 v3, v26
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
 
     goto/16 :goto_0
 
@@ -2805,7 +2805,7 @@
     .line 262
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
 
     move-object/from16 v24, v0
 
@@ -2863,7 +2863,7 @@
 
     move-object/from16 v2, v25
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->encrypt(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->encrypt(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v22
 
@@ -2899,7 +2899,7 @@
 
     move/from16 v3, v26
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
 
     goto/16 :goto_0
 
@@ -2927,7 +2927,7 @@
 
     move/from16 v3, v26
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
 
     goto/16 :goto_0
 
@@ -2938,7 +2938,7 @@
 
     move-object/from16 v1, v21
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->makeXML(Ljava/lang/String;)I
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->makeXML(Ljava/lang/String;)I
 
     move-result v22
 
@@ -2973,7 +2973,7 @@
 
     move/from16 v3, v26
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
 
     goto/16 :goto_0
 
@@ -3014,7 +3014,7 @@
     .line 292
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
 
     move-object/from16 v24, v0
 
@@ -3049,7 +3049,7 @@
 
     move/from16 v3, v26
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
 
     goto/16 :goto_0
 
@@ -3097,7 +3097,7 @@
 
     move/from16 v3, v26
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
 
     goto/16 :goto_0
 
@@ -3107,7 +3107,7 @@
     :cond_e
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
 
     move-object/from16 v24, v0
 
@@ -3126,7 +3126,7 @@
     .line 306
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
 
     move-object/from16 v24, v0
 
@@ -3140,7 +3140,7 @@
     .restart local v21    # "path":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
 
     move-object/from16 v24, v0
 
@@ -3156,13 +3156,13 @@
     .restart local v6    # "action":I
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
     move-object/from16 v24, v0
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
 
     move-object/from16 v25, v0
 
@@ -3176,18 +3176,18 @@
 
     move-object/from16 v1, v24
 
-    iput-object v0, v1, Lcom/android/settings/wifi/WifiBackupRestore;->mSessionKey:Ljava/lang/String;
+    iput-object v0, v1, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mSessionKey:Ljava/lang/String;
 
     .line 309
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
     move-object/from16 v24, v0
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
 
     move-object/from16 v25, v0
 
@@ -3201,18 +3201,18 @@
 
     move-object/from16 v1, v24
 
-    iput-object v0, v1, Lcom/android/settings/wifi/WifiBackupRestore;->mSource:Ljava/lang/String;
+    iput-object v0, v1, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mSource:Ljava/lang/String;
 
     .line 310
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
     move-object/from16 v24, v0
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mIntent:Landroid/content/Intent;
 
     move-object/from16 v25, v0
 
@@ -3228,7 +3228,7 @@
 
     move-object/from16 v1, v24
 
-    iput v0, v1, Lcom/android/settings/wifi/WifiBackupRestore;->mSecurityLevel:I
+    iput v0, v1, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mSecurityLevel:I
 
     .line 313
     const-string v24, "WifiBackupRestore"
@@ -3271,13 +3271,13 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
     move-object/from16 v26, v0
 
     move-object/from16 v0, v26
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore;->mSource:Ljava/lang/String;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mSource:Ljava/lang/String;
 
     move-object/from16 v26, v0
 
@@ -3294,7 +3294,7 @@
     .line 315
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
     move-object/from16 v24, v0
 
@@ -3304,10 +3304,10 @@
 
     move-object/from16 v1, v24
 
-    iput v0, v1, Lcom/android/settings/wifi/WifiBackupRestore;->mOption:I
+    iput v0, v1, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mOption:I
 
     .line 317
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->permissionCheck()Z
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->permissionCheck()Z
 
     move-result v24
 
@@ -3328,7 +3328,7 @@
 
     move/from16 v3, v26
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
 
     goto/16 :goto_0
 
@@ -3337,7 +3337,7 @@
     if-nez v6, :cond_16
 
     .line 323
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->CheckWifiState()I
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->CheckWifiState()I
 
     move-result v24
 
@@ -3364,13 +3364,13 @@
 
     move/from16 v3, v26
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
 
     goto/16 :goto_0
 
     .line 329
     :cond_10
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->getModelName()Ljava/lang/String;
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->getModelName()Ljava/lang/String;
 
     move-result-object v17
 
@@ -3380,7 +3380,7 @@
 
     move-object/from16 v1, v21
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->readXML(Ljava/lang/String;)I
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->readXML(Ljava/lang/String;)I
 
     move-result v22
 
@@ -3416,7 +3416,7 @@
 
     move/from16 v3, v26
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
 
     goto/16 :goto_0
 
@@ -3442,13 +3442,13 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
     move-object/from16 v25, v0
 
     move-object/from16 v0, v25
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore;->xmlConf:Ljava/lang/String;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore;->xmlConf:Ljava/lang/String;
 
     move-object/from16 v25, v0
 
@@ -3464,7 +3464,7 @@
 
     move-object/from16 v1, v24
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->getFileSize(Ljava/lang/String;)J
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->getFileSize(Ljava/lang/String;)J
 
     move-result-wide v24
 
@@ -3495,13 +3495,13 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
     move-object/from16 v25, v0
 
     move-object/from16 v0, v25
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore;->xmlConf:Ljava/lang/String;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore;->xmlConf:Ljava/lang/String;
 
     move-object/from16 v25, v0
 
@@ -3521,7 +3521,7 @@
 
     move-object/from16 v2, v25
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->encrypt(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->encrypt(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v22
 
@@ -3556,7 +3556,7 @@
 
     move/from16 v3, v26
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
 
     goto/16 :goto_0
 
@@ -3637,7 +3637,7 @@
     .line 356
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
 
     move-object/from16 v24, v0
 
@@ -3694,7 +3694,7 @@
     .line 375
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
 
     move-object/from16 v24, v0
 
@@ -3729,7 +3729,7 @@
 
     move/from16 v3, v26
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
 
     goto/16 :goto_0
 
@@ -3758,7 +3758,7 @@
 
     move/from16 v3, v26
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
 
     goto/16 :goto_0
 
@@ -3788,7 +3788,7 @@
 
     move/from16 v3, v26
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
 
     goto/16 :goto_0
 
@@ -3837,7 +3837,7 @@
 
     move/from16 v3, v26
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->sendResponse(III)V
 
     goto/16 :goto_0
 .end method
@@ -3892,7 +3892,7 @@
 
     move-result-object v2
 
-    sget-boolean v3, Lcom/android/settings/wifi/WifiBackupRestore;->mIsCanceled:Z
+    sget-boolean v3, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mIsCanceled:Z
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -3905,7 +3905,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 539
-    sget-boolean v1, Lcom/android/settings/wifi/WifiBackupRestore;->mIsCanceled:Z
+    sget-boolean v1, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mIsCanceled:Z
 
     if-eqz v1, :cond_1
 
@@ -3922,9 +3922,9 @@
 
     .line 543
     .local v0, "intent":Landroid/content/Intent;
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    iget v1, v1, Lcom/android/settings/wifi/WifiBackupRestore;->mOption:I
+    iget v1, v1, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mOption:I
 
     if-nez v1, :cond_3
 
@@ -3936,9 +3936,9 @@
     .line 545
     const-string v1, "EXPORT_SESSION_TIME"
 
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    iget-object v2, v2, Lcom/android/settings/wifi/WifiBackupRestore;->mExportSessionTime:Ljava/lang/String;
+    iget-object v2, v2, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mExportSessionTime:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -3962,18 +3962,18 @@
     .line 552
     const-string v1, "SOURCE"
 
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    iget-object v2, v2, Lcom/android/settings/wifi/WifiBackupRestore;->mSource:Ljava/lang/String;
+    iget-object v2, v2, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mSource:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 554
     const-string v1, "SmartSwitch"
 
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    iget-object v2, v2, Lcom/android/settings/wifi/WifiBackupRestore;->mSource:Ljava/lang/String;
+    iget-object v2, v2, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mSource:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3982,7 +3982,7 @@
     if-eqz v1, :cond_4
 
     .line 555
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mContext:Landroid/content/Context;
 
     const-string v2, "com.wssnps.permission.COM_WSSNPS"
 
@@ -3990,16 +3990,16 @@
 
     .line 560
     :goto_2
-    iget-boolean v1, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mWifiEnabled:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mWifiEnabled:Z
 
     if-nez v1, :cond_0
 
-    iget-boolean v1, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mHotspotEnabled:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mHotspotEnabled:Z
 
     if-nez v1, :cond_0
 
     .line 561
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->wm:Landroid/net/wifi/WifiManager;
 
     const/4 v2, 0x0
 
@@ -4009,9 +4009,9 @@
 
     .line 546
     :cond_3
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings/wifi/WifiBackupRestore;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->this$0:Lcom/android/settings_ex/wifi/WifiBackupRestore;
 
-    iget v1, v1, Lcom/android/settings/wifi/WifiBackupRestore;->mOption:I
+    iget v1, v1, Lcom/android/settings_ex/wifi/WifiBackupRestore;->mOption:I
 
     const/4 v2, 0x1
 
@@ -4026,7 +4026,7 @@
 
     .line 557
     :cond_4
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiBackupRestore$WifiBRthread;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiBackupRestore$WifiBRthread;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 

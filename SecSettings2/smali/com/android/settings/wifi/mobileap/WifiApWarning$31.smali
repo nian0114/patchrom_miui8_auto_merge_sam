@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApWarning$31;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$31;
 .super Ljava/lang/Object;
 .source "WifiApWarning.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/mobileap/WifiApWarning;->showNextHotspotDialog(I)V
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->showNextHotspotDialog(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WifiApWarning;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WifiApWarning;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;)V
     .locals 0
 
     .prologue
     .line 869
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApWarning$31;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWarning;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$31;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,10 +45,10 @@
     const/4 v4, 0x0
 
     .line 871
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApWarning$31;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWarning;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$31;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApWarning;->mWifiManager:Landroid/net/wifi/WifiManager;
-    invoke-static {v2}, Lcom/android/settings/wifi/mobileap/WifiApWarning;->access$500(Lcom/android/settings/wifi/mobileap/WifiApWarning;)Landroid/net/wifi/WifiManager;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->access$500(Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;)Landroid/net/wifi/WifiManager;
 
     move-result-object v2
 
@@ -68,10 +68,10 @@
 
     .line 874
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApWarning$31;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWarning;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$31;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApWarning;->mWifiManager:Landroid/net/wifi/WifiManager;
-    invoke-static {v2}, Lcom/android/settings/wifi/mobileap/WifiApWarning;->access$500(Lcom/android/settings/wifi/mobileap/WifiApWarning;)Landroid/net/wifi/WifiManager;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->access$500(Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;)Landroid/net/wifi/WifiManager;
 
     move-result-object v2
 
@@ -88,10 +88,10 @@
     .line 881
     :cond_1
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApWarning$31;->this$0:Lcom/android/settings/wifi/mobileap/WifiApWarning;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning$31;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;
 
-    # invokes: Lcom/android/settings/wifi/mobileap/WifiApWarning;->startProvisioningIfNecessary(I)V
-    invoke-static {v2, v4}, Lcom/android/settings/wifi/mobileap/WifiApWarning;->access$2300(Lcom/android/settings/wifi/mobileap/WifiApWarning;I)V
+    # invokes: Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->startProvisioningIfNecessary(I)V
+    invoke-static {v2, v4}, Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;->access$2300(Lcom/android/settings_ex/wifi/mobileap/WifiApWarning;I)V
 
     .line 882
     return-void

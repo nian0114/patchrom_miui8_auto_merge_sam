@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiSettings$16;
+.class Lcom/android/settings_ex/wifi/WifiSettings$16;
 .super Ljava/lang/Object;
 .source "WifiSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiSettings;
+    value = Lcom/android/settings_ex/wifi/WifiSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSettings;)V
     .locals 0
 
     .prologue
     .line 1850
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSettings$16;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSettings$16;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,10 +42,10 @@
 
     .prologue
     .line 1870
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings$16;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSettings$16;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # invokes: Lcom/android/settings/wifi/WifiSettings;->validata()V
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiSettings;->access$2300(Lcom/android/settings/wifi/WifiSettings;)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiSettings;->validata()V
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiSettings;->access$2300(Lcom/android/settings_ex/wifi/WifiSettings;)V
 
     .line 1871
     return-void
@@ -91,10 +91,10 @@
     if-le v0, v3, :cond_0
 
     .line 1855
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSettings$16;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSettings$16;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mPasswordView:Landroid/widget/EditText;
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiSettings;->access$1900(Lcom/android/settings/wifi/WifiSettings;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mPasswordView:Landroid/widget/EditText;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiSettings;->access$1900(Lcom/android/settings_ex/wifi/WifiSettings;)Landroid/widget/EditText;
 
     move-result-object v2
 
@@ -105,10 +105,10 @@
     invoke-virtual {v2, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 1856
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSettings$16;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSettings$16;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mPasswordErrorView:Landroid/widget/TextView;
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiSettings;->access$2100(Lcom/android/settings/wifi/WifiSettings;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mPasswordErrorView:Landroid/widget/TextView;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiSettings;->access$2100(Lcom/android/settings_ex/wifi/WifiSettings;)Landroid/widget/TextView;
 
     move-result-object v2
 
@@ -117,17 +117,17 @@
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
     .line 1857
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSettings$16;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSettings$16;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mPasswordView:Landroid/widget/EditText;
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiSettings;->access$1900(Lcom/android/settings/wifi/WifiSettings;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mPasswordView:Landroid/widget/EditText;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiSettings;->access$1900(Lcom/android/settings_ex/wifi/WifiSettings;)Landroid/widget/EditText;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiSettings$16;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiSettings$16;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mContext:Landroid/content/Context;
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiSettings;->access$2200(Lcom/android/settings/wifi/WifiSettings;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mContext:Landroid/content/Context;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiSettings;->access$2200(Lcom/android/settings_ex/wifi/WifiSettings;)Landroid/content/Context;
 
     move-result-object v3
 
@@ -144,27 +144,27 @@
     invoke-virtual {v2, v3}, Landroid/widget/EditText;->setBackgroundTintList(Landroid/content/res/ColorStateList;)V
 
     .line 1858
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSettings$16;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSettings$16;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mPasswordErrorView:Landroid/widget/TextView;
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiSettings;->access$2100(Lcom/android/settings/wifi/WifiSettings;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mPasswordErrorView:Landroid/widget/TextView;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiSettings;->access$2100(Lcom/android/settings_ex/wifi/WifiSettings;)Landroid/widget/TextView;
 
     move-result-object v2
 
     invoke-virtual {v2, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 1859
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSettings$16;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSettings$16;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mPasswordView:Landroid/widget/EditText;
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiSettings;->access$1900(Lcom/android/settings/wifi/WifiSettings;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mPasswordView:Landroid/widget/EditText;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiSettings;->access$1900(Lcom/android/settings_ex/wifi/WifiSettings;)Landroid/widget/EditText;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiSettings$16;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiSettings$16;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mPasswordView:Landroid/widget/EditText;
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiSettings;->access$1900(Lcom/android/settings/wifi/WifiSettings;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mPasswordView:Landroid/widget/EditText;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiSettings;->access$1900(Lcom/android/settings_ex/wifi/WifiSettings;)Landroid/widget/EditText;
 
     move-result-object v3
 
@@ -184,10 +184,10 @@
 
     .line 1861
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSettings$16;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSettings$16;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mPasswordErrorView:Landroid/widget/TextView;
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiSettings;->access$2100(Lcom/android/settings/wifi/WifiSettings;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mPasswordErrorView:Landroid/widget/TextView;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiSettings;->access$2100(Lcom/android/settings_ex/wifi/WifiSettings;)Landroid/widget/TextView;
 
     move-result-object v2
 
@@ -196,17 +196,17 @@
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 1862
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSettings$16;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSettings$16;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mPasswordView:Landroid/widget/EditText;
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiSettings;->access$1900(Lcom/android/settings/wifi/WifiSettings;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mPasswordView:Landroid/widget/EditText;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiSettings;->access$1900(Lcom/android/settings_ex/wifi/WifiSettings;)Landroid/widget/EditText;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiSettings$16;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiSettings$16;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mContext:Landroid/content/Context;
-    invoke-static {v3}, Lcom/android/settings/wifi/WifiSettings;->access$2200(Lcom/android/settings/wifi/WifiSettings;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mContext:Landroid/content/Context;
+    invoke-static {v3}, Lcom/android/settings_ex/wifi/WifiSettings;->access$2200(Lcom/android/settings_ex/wifi/WifiSettings;)Landroid/content/Context;
 
     move-result-object v3
 

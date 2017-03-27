@@ -1,11 +1,11 @@
-.class Lcom/android/settings/nearbyscan/NearbyScanning$1;
+.class Lcom/android/settings_ex/nearbyscan/NearbyScanning$1;
 .super Landroid/content/BroadcastReceiver;
 .source "NearbyScanning.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/nearbyscan/NearbyScanning;
+    value = Lcom/android/settings_ex/nearbyscan/NearbyScanning;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nearbyscan/NearbyScanning;
+.field final synthetic this$0:Lcom/android/settings_ex/nearbyscan/NearbyScanning;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/nearbyscan/NearbyScanning;)V
+.method constructor <init>(Lcom/android/settings_ex/nearbyscan/NearbyScanning;)V
     .locals 0
 
     .prologue
     .line 99
-    iput-object p1, p0, Lcom/android/settings/nearbyscan/NearbyScanning$1;->this$0:Lcom/android/settings/nearbyscan/NearbyScanning;
+    iput-object p1, p0, Lcom/android/settings_ex/nearbyscan/NearbyScanning$1;->this$0:Lcom/android/settings_ex/nearbyscan/NearbyScanning;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -69,10 +69,10 @@
     if-eqz v0, :cond_0
 
     .line 109
-    iget-object v0, p0, Lcom/android/settings/nearbyscan/NearbyScanning$1;->this$0:Lcom/android/settings/nearbyscan/NearbyScanning;
+    iget-object v0, p0, Lcom/android/settings_ex/nearbyscan/NearbyScanning$1;->this$0:Lcom/android/settings_ex/nearbyscan/NearbyScanning;
 
-    # invokes: Lcom/android/settings/nearbyscan/NearbyScanning;->updateSwitch()V
-    invoke-static {v0}, Lcom/android/settings/nearbyscan/NearbyScanning;->access$000(Lcom/android/settings/nearbyscan/NearbyScanning;)V
+    # invokes: Lcom/android/settings_ex/nearbyscan/NearbyScanning;->updateSwitch()V
+    invoke-static {v0}, Lcom/android/settings_ex/nearbyscan/NearbyScanning;->access$000(Lcom/android/settings_ex/nearbyscan/NearbyScanning;)V
 
     goto :goto_0
 .end method

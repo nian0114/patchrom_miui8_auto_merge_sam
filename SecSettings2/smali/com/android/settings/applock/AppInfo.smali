@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/applock/AppInfo;
+.class public Lcom/android/settings_ex/applock/AppInfo;
 .super Ljava/lang/Object;
 .source "AppInfo.java"
 
@@ -26,22 +26,22 @@
     .line 6
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/settings/applock/AppInfo;->appName:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/AppInfo;->appName:Ljava/lang/String;
 
     .line 7
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/settings/applock/AppInfo;->packageName:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/AppInfo;->packageName:Ljava/lang/String;
 
     .line 8
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/settings/applock/AppInfo;->mainActivity:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/AppInfo;->mainActivity:Ljava/lang/String;
 
     .line 10
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/applock/AppInfo;->appIcon:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/AppInfo;->appIcon:Landroid/graphics/drawable/Drawable;
 
     return-void
 .end method

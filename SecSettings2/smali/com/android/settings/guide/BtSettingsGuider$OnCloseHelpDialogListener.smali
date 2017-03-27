@@ -1,11 +1,11 @@
-.class interface abstract Lcom/android/settings/guide/BtSettingsGuider$OnCloseHelpDialogListener;
+.class interface abstract Lcom/android/settings_ex/guide/BtSettingsGuider$OnCloseHelpDialogListener;
 .super Ljava/lang/Object;
 .source "BtSettingsGuider.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/guide/BtSettingsGuider;
+    value = Lcom/android/settings_ex/guide/BtSettingsGuider;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

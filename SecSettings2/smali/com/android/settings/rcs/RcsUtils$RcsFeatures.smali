@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/rcs/RcsUtils$RcsFeatures;
+.class public Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;
 .super Ljava/lang/Object;
 .source "RcsUtils.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/rcs/RcsUtils;
+    value = Lcom/android/settings_ex/rcs/RcsUtils;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         value = {
             "Ljava/util/EnumSet",
             "<",
-            "Lcom/android/settings/rcs/RcsUtils$RcsFeature;",
+            "Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;",
             ">;"
         }
     .end annotation
@@ -34,22 +34,22 @@
             "Ljava/util/HashMap",
             "<",
             "Ljava/lang/String;",
-            "Lcom/android/settings/rcs/RcsUtils$RcsFeature;",
+            "Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;",
             ">;"
         }
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/android/settings/rcs/RcsUtils;
+.field final synthetic this$0:Lcom/android/settings_ex/rcs/RcsUtils;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/settings/rcs/RcsUtils;)V
+.method public constructor <init>(Lcom/android/settings_ex/rcs/RcsUtils;)V
     .locals 3
 
     .prologue
     .line 276
-    iput-object p1, p0, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;->this$0:Lcom/android/settings/rcs/RcsUtils;
+    iput-object p1, p0, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;->this$0:Lcom/android/settings_ex/rcs/RcsUtils;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -58,44 +58,44 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;->mapRcsFeature:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;->mapRcsFeature:Ljava/util/HashMap;
 
     .line 274
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;->mIsLoaded:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;->mIsLoaded:Z
 
     .line 277
-    iget-object v0, p0, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;->mapRcsFeature:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;->mapRcsFeature:Ljava/util/HashMap;
 
     const-string v1, "PARTIAL_BRANDED"
 
-    sget-object v2, Lcom/android/settings/rcs/RcsUtils$RcsFeature;->RCS_BB_PARTIAL_BRANDED:Lcom/android/settings/rcs/RcsUtils$RcsFeature;
+    sget-object v2, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;->RCS_BB_PARTIAL_BRANDED:Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 278
-    iget-object v0, p0, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;->mapRcsFeature:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;->mapRcsFeature:Ljava/util/HashMap;
 
     const-string v1, "FULL_BRANDED"
 
-    sget-object v2, Lcom/android/settings/rcs/RcsUtils$RcsFeature;->RCS_BB_FULL_BRANDED:Lcom/android/settings/rcs/RcsUtils$RcsFeature;
+    sget-object v2, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;->RCS_BB_FULL_BRANDED:Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 279
-    iget-object v0, p0, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;->mapRcsFeature:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;->mapRcsFeature:Ljava/util/HashMap;
 
     const-string v1, "RCS_UI_FOR_OPEN"
 
-    sget-object v2, Lcom/android/settings/rcs/RcsUtils$RcsFeature;->RCS_EXTRAS_RCS_UI_FOR_OPEN:Lcom/android/settings/rcs/RcsUtils$RcsFeature;
+    sget-object v2, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;->RCS_EXTRAS_RCS_UI_FOR_OPEN:Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 281
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;->loadRcsFeatures(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;->loadRcsFeatures(Z)V
 
     .line 282
     return-void
@@ -107,15 +107,15 @@
 
     .prologue
     .line 285
-    iget-boolean v6, p0, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;->mIsLoaded:Z
+    iget-boolean v6, p0, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;->mIsLoaded:Z
 
     if-eqz v6, :cond_0
 
     if-nez p1, :cond_0
 
     .line 286
-    # getter for: Lcom/android/settings/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/rcs/RcsUtils;->access$000()Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/rcs/RcsUtils;->access$000()Ljava/lang/String;
 
     move-result-object v6
 
@@ -129,13 +129,13 @@
 
     .line 290
     :cond_0
-    sget-object v6, Lcom/android/settings/rcs/RcsUtils$RcsFeature;->UNKNOWN:Lcom/android/settings/rcs/RcsUtils$RcsFeature;
+    sget-object v6, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;->UNKNOWN:Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;
 
     invoke-static {v6}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;)Ljava/util/EnumSet;
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;->mRcsFeatures:Ljava/util/EnumSet;
+    iput-object v6, p0, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;->mRcsFeatures:Ljava/util/EnumSet;
 
     .line 292
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -153,8 +153,8 @@
     if-nez v2, :cond_1
 
     .line 294
-    # getter for: Lcom/android/settings/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/rcs/RcsUtils;->access$000()Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/rcs/RcsUtils;->LOG_TAG:Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/rcs/RcsUtils;->access$000()Ljava/lang/String;
 
     move-result-object v6
 
@@ -166,14 +166,14 @@
 
     .line 298
     :cond_1
-    iget-object v6, p0, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;->mRcsFeatures:Ljava/util/EnumSet;
+    iget-object v6, p0, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;->mRcsFeatures:Ljava/util/EnumSet;
 
     invoke-virtual {v6}, Ljava/util/EnumSet;->clear()V
 
     .line 299
-    iget-object v6, p0, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;->mRcsFeatures:Ljava/util/EnumSet;
+    iget-object v6, p0, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;->mRcsFeatures:Ljava/util/EnumSet;
 
-    sget-object v7, Lcom/android/settings/rcs/RcsUtils$RcsFeature;->RCSE:Lcom/android/settings/rcs/RcsUtils$RcsFeature;
+    sget-object v7, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;->RCSE:Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;
 
     invoke-virtual {v6, v7}, Ljava/util/EnumSet;->add(Ljava/lang/Object;)Z
 
@@ -222,15 +222,15 @@
 
     .line 305
     :cond_2
-    iget-object v6, p0, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;->mRcsFeatures:Ljava/util/EnumSet;
+    iget-object v6, p0, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;->mRcsFeatures:Ljava/util/EnumSet;
 
-    sget-object v7, Lcom/android/settings/rcs/RcsUtils$RcsFeature;->RCSE:Lcom/android/settings/rcs/RcsUtils$RcsFeature;
+    sget-object v7, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;->RCSE:Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;
 
     invoke-virtual {v6, v7}, Ljava/util/EnumSet;->remove(Ljava/lang/Object;)Z
 
     .line 308
     :cond_3
-    iget-object v6, p0, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;->mapRcsFeature:Ljava/util/HashMap;
+    iget-object v6, p0, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;->mapRcsFeature:Ljava/util/HashMap;
 
     invoke-virtual {v6, v5}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -239,9 +239,9 @@
     if-eqz v6, :cond_4
 
     .line 309
-    iget-object v6, p0, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;->mRcsFeatures:Ljava/util/EnumSet;
+    iget-object v6, p0, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;->mRcsFeatures:Ljava/util/EnumSet;
 
-    iget-object v7, p0, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;->mapRcsFeature:Ljava/util/HashMap;
+    iget-object v7, p0, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;->mapRcsFeature:Ljava/util/HashMap;
 
     invoke-virtual {v7, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -260,7 +260,7 @@
     :cond_5
     const/4 v6, 0x1
 
-    iput-boolean v6, p0, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;->mIsLoaded:Z
+    iput-boolean v6, p0, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;->mIsLoaded:Z
 
     goto :goto_0
 .end method
@@ -272,9 +272,9 @@
 
     .prologue
     .line 325
-    iget-object v0, p0, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;->mRcsFeatures:Ljava/util/EnumSet;
+    iget-object v0, p0, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;->mRcsFeatures:Ljava/util/EnumSet;
 
-    sget-object v1, Lcom/android/settings/rcs/RcsUtils$RcsFeature;->RCS_BB_FULL_BRANDED:Lcom/android/settings/rcs/RcsUtils$RcsFeature;
+    sget-object v1, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;->RCS_BB_FULL_BRANDED:Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;
 
     invoke-virtual {v0, v1}, Ljava/util/EnumSet;->contains(Ljava/lang/Object;)Z
 
@@ -288,9 +288,9 @@
 
     .prologue
     .line 321
-    iget-object v0, p0, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;->mRcsFeatures:Ljava/util/EnumSet;
+    iget-object v0, p0, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;->mRcsFeatures:Ljava/util/EnumSet;
 
-    sget-object v1, Lcom/android/settings/rcs/RcsUtils$RcsFeature;->RCS_BB_PARTIAL_BRANDED:Lcom/android/settings/rcs/RcsUtils$RcsFeature;
+    sget-object v1, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;->RCS_BB_PARTIAL_BRANDED:Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;
 
     invoke-virtual {v0, v1}, Ljava/util/EnumSet;->contains(Ljava/lang/Object;)Z
 
@@ -304,9 +304,9 @@
 
     .prologue
     .line 329
-    iget-object v0, p0, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;->mRcsFeatures:Ljava/util/EnumSet;
+    iget-object v0, p0, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;->mRcsFeatures:Ljava/util/EnumSet;
 
-    sget-object v1, Lcom/android/settings/rcs/RcsUtils$RcsFeature;->RCS_EXTRAS_RCS_UI_FOR_OPEN:Lcom/android/settings/rcs/RcsUtils$RcsFeature;
+    sget-object v1, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;->RCS_EXTRAS_RCS_UI_FOR_OPEN:Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;
 
     invoke-virtual {v0, v1}, Ljava/util/EnumSet;->contains(Ljava/lang/Object;)Z
 
@@ -320,9 +320,9 @@
 
     .prologue
     .line 317
-    iget-object v0, p0, Lcom/android/settings/rcs/RcsUtils$RcsFeatures;->mRcsFeatures:Ljava/util/EnumSet;
+    iget-object v0, p0, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeatures;->mRcsFeatures:Ljava/util/EnumSet;
 
-    sget-object v1, Lcom/android/settings/rcs/RcsUtils$RcsFeature;->RCSE:Lcom/android/settings/rcs/RcsUtils$RcsFeature;
+    sget-object v1, Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;->RCSE:Lcom/android/settings_ex/rcs/RcsUtils$RcsFeature;
 
     invoke-virtual {v0, v1}, Ljava/util/EnumSet;->contains(Ljava/lang/Object;)Z
 

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wifi/mobileap/WpsApDialog$1;
+.class Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$1;
 .super Landroid/content/BroadcastReceiver;
 .source "WpsApDialog.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/mobileap/WpsApDialog;-><init>(Landroid/content/Context;ILjava/lang/String;)V
+    value = Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;-><init>(Landroid/content/Context;ILjava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WpsApDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WpsApDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;)V
     .locals 0
 
     .prologue
     .line 110
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WpsApDialog$1;->this$0:Lcom/android/settings/wifi/mobileap/WpsApDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$1;->this$0:Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -40,10 +40,10 @@
 
     .prologue
     .line 113
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WpsApDialog$1;->this$0:Lcom/android/settings/wifi/mobileap/WpsApDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog$1;->this$0:Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;
 
-    # invokes: Lcom/android/settings/wifi/mobileap/WpsApDialog;->handleEvent(Landroid/content/Context;Landroid/content/Intent;)V
-    invoke-static {v0, p1, p2}, Lcom/android/settings/wifi/mobileap/WpsApDialog;->access$000(Lcom/android/settings/wifi/mobileap/WpsApDialog;Landroid/content/Context;Landroid/content/Intent;)V
+    # invokes: Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;->handleEvent(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-static {v0, p1, p2}, Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;->access$000(Lcom/android/settings_ex/wifi/mobileap/WpsApDialog;Landroid/content/Context;Landroid/content/Intent;)V
 
     .line 114
     return-void

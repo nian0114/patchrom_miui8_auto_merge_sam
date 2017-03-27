@@ -1,11 +1,11 @@
-.class Lcom/android/settings/notification/ServiceListing$1;
+.class Lcom/android/settings_ex/notification/ServiceListing$1;
 .super Landroid/database/ContentObserver;
 .source "ServiceListing.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/ServiceListing;
+    value = Lcom/android/settings_ex/notification/ServiceListing;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/ServiceListing;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/ServiceListing;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/notification/ServiceListing;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/notification/ServiceListing;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 189
-    iput-object p1, p0, Lcom/android/settings/notification/ServiceListing$1;->this$0:Lcom/android/settings/notification/ServiceListing;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/ServiceListing$1;->this$0:Lcom/android/settings_ex/notification/ServiceListing;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -41,9 +41,9 @@
 
     .prologue
     .line 192
-    iget-object v0, p0, Lcom/android/settings/notification/ServiceListing$1;->this$0:Lcom/android/settings/notification/ServiceListing;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/ServiceListing$1;->this$0:Lcom/android/settings_ex/notification/ServiceListing;
 
-    invoke-virtual {v0}, Lcom/android/settings/notification/ServiceListing;->reload()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/android/settings_ex/notification/ServiceListing;->reload()Ljava/util/List;
 
     .line 193
     return-void

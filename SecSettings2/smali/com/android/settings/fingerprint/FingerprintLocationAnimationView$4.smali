@@ -1,11 +1,11 @@
-.class Lcom/android/settings/fingerprint/FingerprintLocationAnimationView$4;
+.class Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView$4;
 .super Landroid/animation/AnimatorListenerAdapter;
 .source "FingerprintLocationAnimationView.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->startAlphaAnimation()V
+    value = Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->startAlphaAnimation()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;)V
     .locals 0
 
     .prologue
     .line 160
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView$4;->this$0:Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView$4;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -39,12 +39,12 @@
 
     .prologue
     .line 163
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView$4;->this$0:Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView$4;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;
 
     const/4 v1, 0x0
 
-    # setter for: Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->mAlphaAnimator:Landroid/animation/ValueAnimator;
-    invoke-static {v0, v1}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->access$402(Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;Landroid/animation/ValueAnimator;)Landroid/animation/ValueAnimator;
+    # setter for: Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->mAlphaAnimator:Landroid/animation/ValueAnimator;
+    invoke-static {v0, v1}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->access$402(Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;Landroid/animation/ValueAnimator;)Landroid/animation/ValueAnimator;
 
     .line 164
     return-void

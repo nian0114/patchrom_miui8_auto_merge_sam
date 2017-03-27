@@ -1,4 +1,4 @@
-.class public final Lcom/android/settings/handwritingsearch/ResourceManagerContract;
+.class public final Lcom/android/settings_ex/handwritingsearch/ResourceManagerContract;
 .super Ljava/lang/Object;
 .source "ResourceManagerContract.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/handwritingsearch/ResourceManagerContract$Langs;
+        Lcom/android/settings_ex/handwritingsearch/ResourceManagerContract$Langs;
     }
 .end annotation
 
@@ -23,7 +23,7 @@
     .line 18
     const-string v0, "com.myscript.atk.rmc"
 
-    sput-object v0, Lcom/android/settings/handwritingsearch/ResourceManagerContract;->mAuthority:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/handwritingsearch/ResourceManagerContract;->mAuthority:Ljava/lang/String;
 
     return-void
 .end method
@@ -33,7 +33,7 @@
 
     .prologue
     .line 28
-    sget-object v0, Lcom/android/settings/handwritingsearch/ResourceManagerContract;->mAuthority:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/handwritingsearch/ResourceManagerContract;->mAuthority:Ljava/lang/String;
 
     return-object v0
 .end method

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/UnclickablePreference;
+.class public Lcom/android/settings_ex/UnclickablePreference;
 .super Landroid/preference/Preference;
 .source "UnclickablePreference.java"
 
@@ -13,7 +13,7 @@
     .line 27
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings/UnclickablePreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings_ex/UnclickablePreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 28
     return-void
@@ -30,7 +30,7 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 31
-    invoke-direct {p0}, Lcom/android/settings/UnclickablePreference;->init()V
+    invoke-direct {p0}, Lcom/android/settings_ex/UnclickablePreference;->init()V
 
     .line 32
     return-void
@@ -43,7 +43,7 @@
     .line 34
     const v0, 0x7f040199
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/UnclickablePreference;->setLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/UnclickablePreference;->setLayoutResource(I)V
 
     .line 35
     return-void
@@ -125,7 +125,7 @@
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
     .line 45
-    invoke-virtual {p0}, Lcom/android/settings/UnclickablePreference;->getSummary()Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnclickablePreference;->getSummary()Ljava/lang/CharSequence;
 
     move-result-object v3
 
@@ -136,7 +136,7 @@
     if-eqz v3, :cond_0
 
     .line 46
-    invoke-virtual {p0}, Lcom/android/settings/UnclickablePreference;->getTitle()Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnclickablePreference;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v3
 
@@ -148,14 +148,14 @@
 
     .line 48
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/UnclickablePreference;->getTitle()Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnclickablePreference;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v3
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 49
-    invoke-virtual {p0}, Lcom/android/settings/UnclickablePreference;->getSummary()Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnclickablePreference;->getSummary()Ljava/lang/CharSequence;
 
     move-result-object v3
 

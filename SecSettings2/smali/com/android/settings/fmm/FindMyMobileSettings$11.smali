@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fmm/FindMyMobileSettings$11;
+.class Lcom/android/settings_ex/fmm/FindMyMobileSettings$11;
 .super Ljava/lang/Object;
 .source "FindMyMobileSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fmm/FindMyMobileSettings;->showNotificationChargeDialog()V
+    value = Lcom/android/settings_ex/fmm/FindMyMobileSettings;->showNotificationChargeDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fmm/FindMyMobileSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/fmm/FindMyMobileSettings;
 
 .field final synthetic val$chkbox:Landroid/widget/CheckBox;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fmm/FindMyMobileSettings;Landroid/widget/CheckBox;)V
+.method constructor <init>(Lcom/android/settings_ex/fmm/FindMyMobileSettings;Landroid/widget/CheckBox;)V
     .locals 0
 
     .prologue
     .line 658
-    iput-object p1, p0, Lcom/android/settings/fmm/FindMyMobileSettings$11;->this$0:Lcom/android/settings/fmm/FindMyMobileSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/fmm/FindMyMobileSettings$11;->this$0:Lcom/android/settings_ex/fmm/FindMyMobileSettings;
 
-    iput-object p2, p0, Lcom/android/settings/fmm/FindMyMobileSettings$11;->val$chkbox:Landroid/widget/CheckBox;
+    iput-object p2, p0, Lcom/android/settings_ex/fmm/FindMyMobileSettings$11;->val$chkbox:Landroid/widget/CheckBox;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,10 +51,10 @@
     const/4 v1, 0x0
 
     .line 661
-    iget-object v3, p0, Lcom/android/settings/fmm/FindMyMobileSettings$11;->this$0:Lcom/android/settings/fmm/FindMyMobileSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/fmm/FindMyMobileSettings$11;->this$0:Lcom/android/settings_ex/fmm/FindMyMobileSettings;
 
-    # invokes: Lcom/android/settings/fmm/FindMyMobileSettings;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v3}, Lcom/android/settings/fmm/FindMyMobileSettings;->access$600(Lcom/android/settings/fmm/FindMyMobileSettings;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/fmm/FindMyMobileSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v3}, Lcom/android/settings_ex/fmm/FindMyMobileSettings;->access$600(Lcom/android/settings_ex/fmm/FindMyMobileSettings;)Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -67,10 +67,10 @@
     if-ne v3, v2, :cond_0
 
     .line 662
-    iget-object v3, p0, Lcom/android/settings/fmm/FindMyMobileSettings$11;->this$0:Lcom/android/settings/fmm/FindMyMobileSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/fmm/FindMyMobileSettings$11;->this$0:Lcom/android/settings_ex/fmm/FindMyMobileSettings;
 
-    # invokes: Lcom/android/settings/fmm/FindMyMobileSettings;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v3}, Lcom/android/settings/fmm/FindMyMobileSettings;->access$700(Lcom/android/settings/fmm/FindMyMobileSettings;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/fmm/FindMyMobileSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v3}, Lcom/android/settings_ex/fmm/FindMyMobileSettings;->access$700(Lcom/android/settings_ex/fmm/FindMyMobileSettings;)Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -94,9 +94,9 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 665
-    iget-object v3, p0, Lcom/android/settings/fmm/FindMyMobileSettings$11;->this$0:Lcom/android/settings/fmm/FindMyMobileSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/fmm/FindMyMobileSettings$11;->this$0:Lcom/android/settings_ex/fmm/FindMyMobileSettings;
 
-    invoke-virtual {v3}, Lcom/android/settings/fmm/FindMyMobileSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v3}, Lcom/android/settings_ex/fmm/FindMyMobileSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -105,17 +105,17 @@
     .line 668
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/fmm/FindMyMobileSettings$11;->this$0:Lcom/android/settings/fmm/FindMyMobileSettings;
+    iget-object v3, p0, Lcom/android/settings_ex/fmm/FindMyMobileSettings$11;->this$0:Lcom/android/settings_ex/fmm/FindMyMobileSettings;
 
-    # getter for: Lcom/android/settings/fmm/FindMyMobileSettings;->mRemoteControls:Landroid/preference/SwitchPreference;
-    invoke-static {v3}, Lcom/android/settings/fmm/FindMyMobileSettings;->access$100(Lcom/android/settings/fmm/FindMyMobileSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/fmm/FindMyMobileSettings;->mRemoteControls:Landroid/preference/SwitchPreference;
+    invoke-static {v3}, Lcom/android/settings_ex/fmm/FindMyMobileSettings;->access$100(Lcom/android/settings_ex/fmm/FindMyMobileSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/fmm/FindMyMobileSettings$11;->this$0:Lcom/android/settings/fmm/FindMyMobileSettings;
+    iget-object v4, p0, Lcom/android/settings_ex/fmm/FindMyMobileSettings$11;->this$0:Lcom/android/settings_ex/fmm/FindMyMobileSettings;
 
-    # invokes: Lcom/android/settings/fmm/FindMyMobileSettings;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v4}, Lcom/android/settings/fmm/FindMyMobileSettings;->access$800(Lcom/android/settings/fmm/FindMyMobileSettings;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/fmm/FindMyMobileSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v4}, Lcom/android/settings_ex/fmm/FindMyMobileSettings;->access$800(Lcom/android/settings_ex/fmm/FindMyMobileSettings;)Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -133,7 +133,7 @@
     invoke-virtual {v3, v1}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 671
-    iget-object v1, p0, Lcom/android/settings/fmm/FindMyMobileSettings$11;->val$chkbox:Landroid/widget/CheckBox;
+    iget-object v1, p0, Lcom/android/settings_ex/fmm/FindMyMobileSettings$11;->val$chkbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v1}, Landroid/widget/CheckBox;->isChecked()Z
 
@@ -142,7 +142,7 @@
     if-eqz v1, :cond_2
 
     .line 672
-    sput-boolean v2, Lcom/android/settings/fmm/FindMyMobileSettings;->chkboxFlag:Z
+    sput-boolean v2, Lcom/android/settings_ex/fmm/FindMyMobileSettings;->chkboxFlag:Z
 
     .line 674
     :cond_2

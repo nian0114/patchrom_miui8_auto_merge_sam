@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/flipfont/FontWriter;
+.class public Lcom/android/settings_ex/flipfont/FontWriter;
 .super Ljava/lang/Object;
 .source "FontWriter.java"
 
@@ -20,10 +20,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 45
-    iput-object v0, p0, Lcom/android/settings/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
+    iput-object v0, p0, Lcom/android/settings_ex/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     .line 46
-    iput-object v0, p0, Lcom/android/settings/flipfont/FontWriter;->osw:Ljava/io/OutputStreamWriter;
+    iput-object v0, p0, Lcom/android/settings_ex/flipfont/FontWriter;->osw:Ljava/io/OutputStreamWriter;
 
     return-void
 .end method
@@ -202,12 +202,12 @@
 
     .line 196
     :cond_1
-    iget-object v12, p0, Lcom/android/settings/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
+    iget-object v12, p0, Lcom/android/settings_ex/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     if-eqz v12, :cond_2
 
     .line 197
-    iget-object v12, p0, Lcom/android/settings/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
+    iget-object v12, p0, Lcom/android/settings_ex/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     invoke-virtual {v12}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -267,12 +267,12 @@
 
     invoke-direct {v12, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    iput-object v12, p0, Lcom/android/settings/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
+    iput-object v12, p0, Lcom/android/settings_ex/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     .line 167
     new-instance v10, Ljava/io/BufferedOutputStream;
 
-    iget-object v12, p0, Lcom/android/settings/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
+    iget-object v12, p0, Lcom/android/settings_ex/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     invoke-direct {v10, v12}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
 
@@ -322,12 +322,12 @@
 
     .line 196
     :cond_5
-    iget-object v13, p0, Lcom/android/settings/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
+    iget-object v13, p0, Lcom/android/settings_ex/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     if-eqz v13, :cond_6
 
     .line 197
-    iget-object v13, p0, Lcom/android/settings/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
+    iget-object v13, p0, Lcom/android/settings_ex/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     invoke-virtual {v13}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
@@ -348,7 +348,7 @@
     invoke-virtual {v10}, Ljava/io/BufferedOutputStream;->flush()V
 
     .line 176
-    iget-object v12, p0, Lcom/android/settings/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
+    iget-object v12, p0, Lcom/android/settings_ex/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     invoke-virtual {v12}, Ljava/io/FileOutputStream;->flush()V
 
@@ -367,12 +367,12 @@
 
     .line 196
     :cond_8
-    iget-object v12, p0, Lcom/android/settings/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
+    iget-object v12, p0, Lcom/android/settings_ex/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     if-eqz v12, :cond_2
 
     .line 197
-    iget-object v12, p0, Lcom/android/settings/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
+    iget-object v12, p0, Lcom/android/settings_ex/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     invoke-virtual {v12}, Ljava/io/FileOutputStream;->close()V
     :try_end_6
@@ -490,7 +490,7 @@
     .line 120
     aget-object v4, v3, v1
 
-    invoke-direct {p0, v2, v4}, Lcom/android/settings/flipfont/FontWriter;->deleteFolder(Ljava/io/File;Ljava/lang/String;)Z
+    invoke-direct {p0, v2, v4}, Lcom/android/settings_ex/flipfont/FontWriter;->deleteFolder(Ljava/io/File;Ljava/lang/String;)Z
 
     .line 118
     :cond_0
@@ -593,23 +593,23 @@
 
     .line 77
     :try_start_2
-    iget-object v4, p0, Lcom/android/settings/flipfont/FontWriter;->osw:Ljava/io/OutputStreamWriter;
+    iget-object v4, p0, Lcom/android/settings_ex/flipfont/FontWriter;->osw:Ljava/io/OutputStreamWriter;
 
     if-eqz v4, :cond_0
 
     .line 78
-    iget-object v4, p0, Lcom/android/settings/flipfont/FontWriter;->osw:Ljava/io/OutputStreamWriter;
+    iget-object v4, p0, Lcom/android/settings_ex/flipfont/FontWriter;->osw:Ljava/io/OutputStreamWriter;
 
     invoke-virtual {v4}, Ljava/io/OutputStreamWriter;->close()V
 
     .line 81
     :cond_0
-    iget-object v4, p0, Lcom/android/settings/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
+    iget-object v4, p0, Lcom/android/settings_ex/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     if-eqz v4, :cond_1
 
     .line 82
-    iget-object v4, p0, Lcom/android/settings/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
+    iget-object v4, p0, Lcom/android/settings_ex/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -648,19 +648,19 @@
 
     invoke-direct {v4, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    iput-object v4, p0, Lcom/android/settings/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
+    iput-object v4, p0, Lcom/android/settings_ex/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     .line 69
     new-instance v4, Ljava/io/OutputStreamWriter;
 
-    iget-object v5, p0, Lcom/android/settings/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
+    iget-object v5, p0, Lcom/android/settings_ex/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     invoke-direct {v4, v5}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;)V
 
-    iput-object v4, p0, Lcom/android/settings/flipfont/FontWriter;->osw:Ljava/io/OutputStreamWriter;
+    iput-object v4, p0, Lcom/android/settings_ex/flipfont/FontWriter;->osw:Ljava/io/OutputStreamWriter;
 
     .line 70
-    iget-object v4, p0, Lcom/android/settings/flipfont/FontWriter;->osw:Ljava/io/OutputStreamWriter;
+    iget-object v4, p0, Lcom/android/settings_ex/flipfont/FontWriter;->osw:Ljava/io/OutputStreamWriter;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -683,12 +683,12 @@
     invoke-virtual {v4, v5}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
     .line 71
-    iget-object v4, p0, Lcom/android/settings/flipfont/FontWriter;->osw:Ljava/io/OutputStreamWriter;
+    iget-object v4, p0, Lcom/android/settings_ex/flipfont/FontWriter;->osw:Ljava/io/OutputStreamWriter;
 
     invoke-virtual {v4}, Ljava/io/OutputStreamWriter;->flush()V
 
     .line 72
-    iget-object v4, p0, Lcom/android/settings/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
+    iget-object v4, p0, Lcom/android/settings_ex/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->flush()V
     :try_end_3
@@ -697,23 +697,23 @@
 
     .line 77
     :try_start_4
-    iget-object v4, p0, Lcom/android/settings/flipfont/FontWriter;->osw:Ljava/io/OutputStreamWriter;
+    iget-object v4, p0, Lcom/android/settings_ex/flipfont/FontWriter;->osw:Ljava/io/OutputStreamWriter;
 
     if-eqz v4, :cond_3
 
     .line 78
-    iget-object v4, p0, Lcom/android/settings/flipfont/FontWriter;->osw:Ljava/io/OutputStreamWriter;
+    iget-object v4, p0, Lcom/android/settings_ex/flipfont/FontWriter;->osw:Ljava/io/OutputStreamWriter;
 
     invoke-virtual {v4}, Ljava/io/OutputStreamWriter;->close()V
 
     .line 81
     :cond_3
-    iget-object v4, p0, Lcom/android/settings/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
+    iget-object v4, p0, Lcom/android/settings_ex/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     if-eqz v4, :cond_1
 
     .line 82
-    iget-object v4, p0, Lcom/android/settings/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
+    iget-object v4, p0, Lcom/android/settings_ex/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
@@ -736,23 +736,23 @@
 
     .line 77
     :try_start_5
-    iget-object v5, p0, Lcom/android/settings/flipfont/FontWriter;->osw:Ljava/io/OutputStreamWriter;
+    iget-object v5, p0, Lcom/android/settings_ex/flipfont/FontWriter;->osw:Ljava/io/OutputStreamWriter;
 
     if-eqz v5, :cond_4
 
     .line 78
-    iget-object v5, p0, Lcom/android/settings/flipfont/FontWriter;->osw:Ljava/io/OutputStreamWriter;
+    iget-object v5, p0, Lcom/android/settings_ex/flipfont/FontWriter;->osw:Ljava/io/OutputStreamWriter;
 
     invoke-virtual {v5}, Ljava/io/OutputStreamWriter;->close()V
 
     .line 81
     :cond_4
-    iget-object v5, p0, Lcom/android/settings/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
+    iget-object v5, p0, Lcom/android/settings_ex/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     if-eqz v5, :cond_5
 
     .line 82
-    iget-object v5, p0, Lcom/android/settings/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
+    iget-object v5, p0, Lcom/android/settings_ex/flipfont/FontWriter;->fOut:Ljava/io/FileOutputStream;
 
     invoke-virtual {v5}, Ljava/io/FileOutputStream;->close()V
     :try_end_5

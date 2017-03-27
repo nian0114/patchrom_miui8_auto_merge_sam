@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/UserAdapter$UserDetails;
+.class public Lcom/android/settings_ex/UserAdapter$UserDetails;
 .super Ljava/lang/Object;
 .source "UserAdapter.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/UserAdapter;
+    value = Lcom/android/settings_ex/UserAdapter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,10 +34,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 52
-    iput-object p1, p0, Lcom/android/settings/UserAdapter$UserDetails;->mUserHandle:Landroid/os/UserHandle;
+    iput-object p1, p0, Lcom/android/settings_ex/UserAdapter$UserDetails;->mUserHandle:Landroid/os/UserHandle;
 
     .line 53
-    iget-object v3, p0, Lcom/android/settings/UserAdapter$UserDetails;->mUserHandle:Landroid/os/UserHandle;
+    iget-object v3, p0, Lcom/android/settings_ex/UserAdapter$UserDetails;->mUserHandle:Landroid/os/UserHandle;
 
     invoke-virtual {v3}, Landroid/os/UserHandle;->getIdentifier()I
 
@@ -62,7 +62,7 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/UserAdapter$UserDetails;->mName:Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/settings_ex/UserAdapter$UserDetails;->mName:Ljava/lang/String;
 
     .line 57
     const v3, 0x10803ca
@@ -74,11 +74,11 @@
     .line 68
     .local v0, "icon":Landroid/graphics/drawable/Drawable;
     :goto_0
-    invoke-static {p3, v0}, Lcom/android/settings/UserAdapter$UserDetails;->encircle(Landroid/content/Context;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p3, v0}, Lcom/android/settings_ex/UserAdapter$UserDetails;->encircle(Landroid/content/Context;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/UserAdapter$UserDetails;->mIcon:Landroid/graphics/drawable/Drawable;
+    iput-object v3, p0, Lcom/android/settings_ex/UserAdapter$UserDetails;->mIcon:Landroid/graphics/drawable/Drawable;
 
     .line 69
     return-void
@@ -88,7 +88,7 @@
     :cond_0
     iget-object v3, v2, Landroid/content/pm/UserInfo;->name:Ljava/lang/String;
 
-    iput-object v3, p0, Lcom/android/settings/UserAdapter$UserDetails;->mName:Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/settings_ex/UserAdapter$UserDetails;->mName:Ljava/lang/String;
 
     .line 61
     iget v1, v2, Landroid/content/pm/UserInfo;->id:I
@@ -130,24 +130,24 @@
     goto :goto_0
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/UserAdapter$UserDetails;)Landroid/os/UserHandle;
+.method static synthetic access$000(Lcom/android/settings_ex/UserAdapter$UserDetails;)Landroid/os/UserHandle;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/UserAdapter$UserDetails;
+    .param p0, "x0"    # Lcom/android/settings_ex/UserAdapter$UserDetails;
 
     .prologue
     .line 46
-    iget-object v0, p0, Lcom/android/settings/UserAdapter$UserDetails;->mUserHandle:Landroid/os/UserHandle;
+    iget-object v0, p0, Lcom/android/settings_ex/UserAdapter$UserDetails;->mUserHandle:Landroid/os/UserHandle;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/UserAdapter$UserDetails;)Landroid/graphics/drawable/Drawable;
+.method static synthetic access$100(Lcom/android/settings_ex/UserAdapter$UserDetails;)Landroid/graphics/drawable/Drawable;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/UserAdapter$UserDetails;
+    .param p0, "x0"    # Lcom/android/settings_ex/UserAdapter$UserDetails;
 
     .prologue
     .line 46
-    iget-object v0, p0, Lcom/android/settings/UserAdapter$UserDetails;->mIcon:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/android/settings_ex/UserAdapter$UserDetails;->mIcon:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -163,7 +163,7 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/android/settings/drawable/CircleFramedDrawable;->getInstance(Landroid/content/Context;Landroid/graphics/Bitmap;)Lcom/android/settings/drawable/CircleFramedDrawable;
+    invoke-static {p0, v0}, Lcom/android/settings_ex/drawable/CircleFramedDrawable;->getInstance(Landroid/content/Context;Landroid/graphics/Bitmap;)Lcom/android/settings_ex/drawable/CircleFramedDrawable;
 
     move-result-object v0
 

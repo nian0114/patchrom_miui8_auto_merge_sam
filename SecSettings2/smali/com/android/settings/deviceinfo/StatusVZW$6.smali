@@ -1,11 +1,11 @@
-.class Lcom/android/settings/deviceinfo/StatusVZW$6;
+.class Lcom/android/settings_ex/deviceinfo/StatusVZW$6;
 .super Landroid/content/BroadcastReceiver;
 .source "StatusVZW.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/StatusVZW;
+    value = Lcom/android/settings_ex/deviceinfo/StatusVZW;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/StatusVZW;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
     .locals 0
 
     .prologue
     .line 419
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/StatusVZW$6;->this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW$6;->this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -46,8 +46,8 @@
 
     .line 423
     .local v0, "action":Ljava/lang/String;
-    # getter for: Lcom/android/settings/deviceinfo/StatusVZW;->CONNECTIVITY_INTENTS:[Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/deviceinfo/StatusVZW;->access$1200()[Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/deviceinfo/StatusVZW;->CONNECTIVITY_INTENTS:[Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->access$1200()[Ljava/lang/String;
 
     move-result-object v1
 
@@ -58,10 +58,10 @@
     if-eqz v1, :cond_0
 
     .line 424
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW$6;->this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW$6;->this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
-    # getter for: Lcom/android/settings/deviceinfo/StatusVZW;->mHandler:Landroid/os/Handler;
-    invoke-static {v1}, Lcom/android/settings/deviceinfo/StatusVZW;->access$1300(Lcom/android/settings/deviceinfo/StatusVZW;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/deviceinfo/StatusVZW;->mHandler:Landroid/os/Handler;
+    invoke-static {v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->access$1300(Lcom/android/settings_ex/deviceinfo/StatusVZW;)Landroid/os/Handler;
 
     move-result-object v1
 

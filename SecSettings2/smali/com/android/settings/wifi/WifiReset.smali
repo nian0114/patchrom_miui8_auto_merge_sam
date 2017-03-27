@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/WifiReset;
+.class public Lcom/android/settings_ex/wifi/WifiReset;
 .super Ljava/lang/Object;
 .source "WifiReset.java"
 
@@ -35,7 +35,7 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/android/settings/wifi/WifiReset;->mIsDisableWifi:Z
+    sput-boolean v0, Lcom/android/settings_ex/wifi/WifiReset;->mIsDisableWifi:Z
 
     return-void
 .end method
@@ -51,17 +51,17 @@
     .line 33
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/wifi/WifiReset;->mIsReboot:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/WifiReset;->mIsReboot:Z
 
     .line 39
-    new-instance v0, Lcom/android/settings/wifi/WifiReset$1;
+    new-instance v0, Lcom/android/settings_ex/wifi/WifiReset$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/wifi/WifiReset$1;-><init>(Lcom/android/settings/wifi/WifiReset;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/wifi/WifiReset$1;-><init>(Lcom/android/settings_ex/wifi/WifiReset;)V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiReset;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiReset;->mReceiver:Landroid/content/BroadcastReceiver;
 
     .line 53
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiReset;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiReset;->mContext:Landroid/content/Context;
 
     .line 54
     const-string v0, "wifi"
@@ -72,7 +72,7 @@
 
     check-cast v0, Landroid/net/wifi/WifiManager;
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiReset;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiReset;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     .line 55
     return-void
@@ -90,20 +90,20 @@
     .line 33
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/wifi/WifiReset;->mIsReboot:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/WifiReset;->mIsReboot:Z
 
     .line 39
-    new-instance v0, Lcom/android/settings/wifi/WifiReset$1;
+    new-instance v0, Lcom/android/settings_ex/wifi/WifiReset$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/wifi/WifiReset$1;-><init>(Lcom/android/settings/wifi/WifiReset;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/wifi/WifiReset$1;-><init>(Lcom/android/settings_ex/wifi/WifiReset;)V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiReset;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiReset;->mReceiver:Landroid/content/BroadcastReceiver;
 
     .line 58
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiReset;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiReset;->mContext:Landroid/content/Context;
 
     .line 59
-    iput-boolean p2, p0, Lcom/android/settings/wifi/WifiReset;->mIsReboot:Z
+    iput-boolean p2, p0, Lcom/android/settings_ex/wifi/WifiReset;->mIsReboot:Z
 
     .line 60
     const-string v0, "wifi"
@@ -114,41 +114,41 @@
 
     check-cast v0, Landroid/net/wifi/WifiManager;
 
-    iput-object v0, p0, Lcom/android/settings/wifi/WifiReset;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/WifiReset;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     .line 61
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/wifi/WifiReset;)Landroid/content/BroadcastReceiver;
+.method static synthetic access$000(Lcom/android/settings_ex/wifi/WifiReset;)Landroid/content/BroadcastReceiver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiReset;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiReset;
 
     .prologue
     .line 31
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiReset;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiReset;->mReceiver:Landroid/content/BroadcastReceiver;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/wifi/WifiReset;)Landroid/content/Context;
+.method static synthetic access$100(Lcom/android/settings_ex/wifi/WifiReset;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiReset;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiReset;
 
     .prologue
     .line 31
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiReset;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiReset;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/wifi/WifiReset;)Landroid/net/wifi/WifiManager;
+.method static synthetic access$200(Lcom/android/settings_ex/wifi/WifiReset;)Landroid/net/wifi/WifiManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/WifiReset;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/WifiReset;
 
     .prologue
     .line 31
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiReset;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiReset;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     return-object v0
 .end method
@@ -158,7 +158,7 @@
 
     .prologue
     .line 31
-    sget-boolean v0, Lcom/android/settings/wifi/WifiReset;->mIsDisableWifi:Z
+    sget-boolean v0, Lcom/android/settings_ex/wifi/WifiReset;->mIsDisableWifi:Z
 
     return v0
 .end method
@@ -174,7 +174,7 @@
     const/4 v5, 0x1
 
     .line 83
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiReset;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiReset;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -209,7 +209,7 @@
     invoke-static {v0, v2, v3}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 91
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiReset;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiReset;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v2}, Landroid/net/wifi/WifiManager;->isPasspointDefaultOn()Z
 
@@ -296,7 +296,7 @@
     .line 117
     const-string v2, "SKT"
 
-    sget-object v3, Lcom/android/settings/Utils;->CONFIG_OP_BRANDING:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/Utils;->CONFIG_OP_BRANDING:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -309,7 +309,7 @@
 
     .line 122
     :goto_3
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiReset;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiReset;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v2, v1}, Landroid/net/wifi/WifiManager;->callSECApi(Landroid/os/Message;)I
 
@@ -339,7 +339,7 @@
     if-eqz v2, :cond_1
 
     .line 129
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiReset;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiReset;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -356,29 +356,29 @@
     iput v2, v1, Landroid/os/Message;->what:I
 
     .line 134
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiReset;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiReset;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v2, v1}, Landroid/net/wifi/WifiManager;->callSECApi(Landroid/os/Message;)I
 
     .line 136
-    iget-boolean v2, p0, Lcom/android/settings/wifi/WifiReset;->mIsReboot:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/wifi/WifiReset;->mIsReboot:Z
 
     if-eqz v2, :cond_7
 
     .line 137
-    new-instance v2, Lcom/android/settings/wifi/WifiReset$2;
+    new-instance v2, Lcom/android/settings_ex/wifi/WifiReset$2;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/wifi/WifiReset$2;-><init>(Lcom/android/settings/wifi/WifiReset;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/wifi/WifiReset$2;-><init>(Lcom/android/settings_ex/wifi/WifiReset;)V
 
-    invoke-virtual {v2}, Lcom/android/settings/wifi/WifiReset$2;->start()V
+    invoke-virtual {v2}, Lcom/android/settings_ex/wifi/WifiReset$2;->start()V
 
     .line 156
     :goto_4
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiReset;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiReset;->mProgressDialog:Landroid/app/ProgressDialog;
 
     if-eqz v2, :cond_2
 
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiReset;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiReset;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v2}, Landroid/app/ProgressDialog;->isShowing()Z
 
@@ -387,14 +387,14 @@
     if-eqz v2, :cond_2
 
     .line 157
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiReset;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiReset;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v2}, Landroid/app/ProgressDialog;->dismiss()V
 
     .line 158
     const/4 v2, 0x0
 
-    iput-object v2, p0, Lcom/android/settings/wifi/WifiReset;->mProgressDialog:Landroid/app/ProgressDialog;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/WifiReset;->mProgressDialog:Landroid/app/ProgressDialog;
 
     .line 160
     :cond_2
@@ -434,11 +434,11 @@
 
     .line 144
     :cond_7
-    new-instance v2, Lcom/android/settings/wifi/WifiReset$3;
+    new-instance v2, Lcom/android/settings_ex/wifi/WifiReset$3;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/wifi/WifiReset$3;-><init>(Lcom/android/settings/wifi/WifiReset;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/wifi/WifiReset$3;-><init>(Lcom/android/settings_ex/wifi/WifiReset;)V
 
-    invoke-virtual {v2}, Lcom/android/settings/wifi/WifiReset$3;->start()V
+    invoke-virtual {v2}, Lcom/android/settings_ex/wifi/WifiReset$3;->start()V
 
     goto :goto_4
 .end method
@@ -450,23 +450,23 @@
     const/4 v5, 0x1
 
     .line 64
-    iget-boolean v2, p0, Lcom/android/settings/wifi/WifiReset;->mIsReboot:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/wifi/WifiReset;->mIsReboot:Z
 
     if-ne v2, v5, :cond_0
 
     .line 65
     new-instance v2, Landroid/app/ProgressDialog;
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiReset;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiReset;->mContext:Landroid/content/Context;
 
     invoke-direct {v2, v3}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
 
-    iput-object v2, p0, Lcom/android/settings/wifi/WifiReset;->mProgressDialog:Landroid/app/ProgressDialog;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/WifiReset;->mProgressDialog:Landroid/app/ProgressDialog;
 
     .line 66
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiReset;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiReset;->mProgressDialog:Landroid/app/ProgressDialog;
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiReset;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiReset;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -481,13 +481,13 @@
     invoke-virtual {v2, v3}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
     .line 67
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiReset;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiReset;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v2}, Landroid/app/ProgressDialog;->show()V
 
     .line 70
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiReset;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiReset;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v2}, Landroid/net/wifi/WifiManager;->isWifiEnabled()Z
 
@@ -495,7 +495,7 @@
 
     if-ne v2, v5, :cond_1
 
-    iget-boolean v2, p0, Lcom/android/settings/wifi/WifiReset;->mIsReboot:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/wifi/WifiReset;->mIsReboot:Z
 
     if-ne v2, v5, :cond_1
 
@@ -511,7 +511,7 @@
     iput v2, v1, Landroid/os/Message;->what:I
 
     .line 73
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiReset;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiReset;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v2, v1}, Landroid/net/wifi/WifiManager;->callSECApi(Landroid/os/Message;)I
 
@@ -524,9 +524,9 @@
 
     .line 76
     .local v0, "intent":Landroid/content/IntentFilter;
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiReset;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiReset;->mContext:Landroid/content/Context;
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiReset;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiReset;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v2, v3, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -538,7 +538,7 @@
 
     .line 78
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/wifi/WifiReset;->reset()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/WifiReset;->reset()V
 
     goto :goto_0
 .end method

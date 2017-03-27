@@ -1,11 +1,11 @@
-.class Lcom/android/settings/MasterClearModemReset$1;
+.class Lcom/android/settings_ex/MasterClearModemReset$1;
 .super Landroid/os/Handler;
 .source "MasterClearModemReset.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/MasterClearModemReset;
+    value = Lcom/android/settings_ex/MasterClearModemReset;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/MasterClearModemReset;
+.field final synthetic this$0:Lcom/android/settings_ex/MasterClearModemReset;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/MasterClearModemReset;)V
+.method constructor <init>(Lcom/android/settings_ex/MasterClearModemReset;)V
     .locals 0
 
     .prologue
     .line 68
-    iput-object p1, p0, Lcom/android/settings/MasterClearModemReset$1;->this$0:Lcom/android/settings/MasterClearModemReset;
+    iput-object p1, p0, Lcom/android/settings_ex/MasterClearModemReset$1;->this$0:Lcom/android/settings_ex/MasterClearModemReset;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -64,10 +64,10 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secI(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 88
-    iget-object v0, p0, Lcom/android/settings/MasterClearModemReset$1;->this$0:Lcom/android/settings/MasterClearModemReset;
+    iget-object v0, p0, Lcom/android/settings_ex/MasterClearModemReset$1;->this$0:Lcom/android/settings_ex/MasterClearModemReset;
 
-    # invokes: Lcom/android/settings/MasterClearModemReset;->sendMasterClearIntent()V
-    invoke-static {v0}, Lcom/android/settings/MasterClearModemReset;->access$000(Lcom/android/settings/MasterClearModemReset;)V
+    # invokes: Lcom/android/settings_ex/MasterClearModemReset;->sendMasterClearIntent()V
+    invoke-static {v0}, Lcom/android/settings_ex/MasterClearModemReset;->access$000(Lcom/android/settings_ex/MasterClearModemReset;)V
 
     goto :goto_0
 
@@ -80,10 +80,10 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 92
-    iget-object v0, p0, Lcom/android/settings/MasterClearModemReset$1;->this$0:Lcom/android/settings/MasterClearModemReset;
+    iget-object v0, p0, Lcom/android/settings_ex/MasterClearModemReset$1;->this$0:Lcom/android/settings_ex/MasterClearModemReset;
 
-    # invokes: Lcom/android/settings/MasterClearModemReset;->sendMasterClearIntent()V
-    invoke-static {v0}, Lcom/android/settings/MasterClearModemReset;->access$000(Lcom/android/settings/MasterClearModemReset;)V
+    # invokes: Lcom/android/settings_ex/MasterClearModemReset;->sendMasterClearIntent()V
+    invoke-static {v0}, Lcom/android/settings_ex/MasterClearModemReset;->access$000(Lcom/android/settings_ex/MasterClearModemReset;)V
 
     goto :goto_0
 

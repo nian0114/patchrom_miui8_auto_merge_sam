@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessories/LedCoverCallerIDSelectionList$2;
+.class Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList$2;
 .super Ljava/lang/Object;
 .source "LedCoverCallerIDSelectionList.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessories/LedCoverCallerIDSelectionList;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    value = Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessories/LedCoverCallerIDSelectionList;
+.field final synthetic this$0:Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessories/LedCoverCallerIDSelectionList;)V
+.method constructor <init>(Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList;)V
     .locals 0
 
     .prologue
     .line 181
-    iput-object p1, p0, Lcom/android/settings/accessories/LedCoverCallerIDSelectionList$2;->this$0:Lcom/android/settings/accessories/LedCoverCallerIDSelectionList;
+    iput-object p1, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList$2;->this$0:Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,12 +42,12 @@
 
     .prologue
     .line 184
-    iget-object v0, p0, Lcom/android/settings/accessories/LedCoverCallerIDSelectionList$2;->this$0:Lcom/android/settings/accessories/LedCoverCallerIDSelectionList;
+    iget-object v0, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList$2;->this$0:Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList;
 
-    iget-object v1, p0, Lcom/android/settings/accessories/LedCoverCallerIDSelectionList$2;->this$0:Lcom/android/settings/accessories/LedCoverCallerIDSelectionList;
+    iget-object v1, p0, Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList$2;->this$0:Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList;
 
-    # getter for: Lcom/android/settings/accessories/LedCoverCallerIDSelectionList;->mSelectAllCheckbox:Landroid/widget/CheckBox;
-    invoke-static {v1}, Lcom/android/settings/accessories/LedCoverCallerIDSelectionList;->access$000(Lcom/android/settings/accessories/LedCoverCallerIDSelectionList;)Landroid/widget/CheckBox;
+    # getter for: Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList;->mSelectAllCheckbox:Landroid/widget/CheckBox;
+    invoke-static {v1}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList;->access$000(Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList;)Landroid/widget/CheckBox;
 
     move-result-object v1
 
@@ -55,8 +55,8 @@
 
     move-result v1
 
-    # invokes: Lcom/android/settings/accessories/LedCoverCallerIDSelectionList;->ToggleAllCheck(Z)V
-    invoke-static {v0, v1}, Lcom/android/settings/accessories/LedCoverCallerIDSelectionList;->access$100(Lcom/android/settings/accessories/LedCoverCallerIDSelectionList;Z)V
+    # invokes: Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList;->ToggleAllCheck(Z)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList;->access$100(Lcom/android/settings_ex/accessories/LedCoverCallerIDSelectionList;Z)V
 
     .line 185
     return-void

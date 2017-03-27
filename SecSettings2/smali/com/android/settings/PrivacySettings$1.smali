@@ -1,4 +1,4 @@
-.class Lcom/android/settings/PrivacySettings$1;
+.class Lcom/android/settings_ex/PrivacySettings$1;
 .super Ljava/lang/Object;
 .source "PrivacySettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/PrivacySettings;
+    value = Lcom/android/settings_ex/PrivacySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/PrivacySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/PrivacySettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/PrivacySettings;)V
+.method constructor <init>(Lcom/android/settings_ex/PrivacySettings;)V
     .locals 0
 
     .prologue
     .line 275
-    iput-object p1, p0, Lcom/android/settings/PrivacySettings$1;->this$0:Lcom/android/settings/PrivacySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/PrivacySettings$1;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,10 +44,10 @@
     const/4 v12, 0x1
 
     .line 279
-    iget-object v8, p0, Lcom/android/settings/PrivacySettings$1;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v8, p0, Lcom/android/settings_ex/PrivacySettings$1;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
-    # getter for: Lcom/android/settings/PrivacySettings;->mDiagnostics:Landroid/preference/PreferenceScreen;
-    invoke-static {v8}, Lcom/android/settings/PrivacySettings;->access$000(Lcom/android/settings/PrivacySettings;)Landroid/preference/PreferenceScreen;
+    # getter for: Lcom/android/settings_ex/PrivacySettings;->mDiagnostics:Landroid/preference/PreferenceScreen;
+    invoke-static {v8}, Lcom/android/settings_ex/PrivacySettings;->access$000(Lcom/android/settings_ex/PrivacySettings;)Landroid/preference/PreferenceScreen;
 
     move-result-object v8
 
@@ -75,8 +75,8 @@
 
     .line 283
     .local v1, "cn":Landroid/content/ComponentName;
-    # getter for: Lcom/android/settings/PrivacySettings;->hasCorrectMyAccount:Z
-    invoke-static {}, Lcom/android/settings/PrivacySettings;->access$100()Z
+    # getter for: Lcom/android/settings_ex/PrivacySettings;->hasCorrectMyAccount:Z
+    invoke-static {}, Lcom/android/settings_ex/PrivacySettings;->access$100()Z
 
     move-result v8
 
@@ -97,9 +97,9 @@
     invoke-virtual {v4, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     .line 289
-    iget-object v8, p0, Lcom/android/settings/PrivacySettings$1;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v8, p0, Lcom/android/settings_ex/PrivacySettings$1;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
-    invoke-virtual {v8, v4}, Lcom/android/settings/PrivacySettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v8, v4}, Lcom/android/settings_ex/PrivacySettings;->startActivity(Landroid/content/Intent;)V
 
     .line 364
     .end local v1    # "cn":Landroid/content/ComponentName;
@@ -126,25 +126,25 @@
     .line 291
     .end local v4    # "intent":Landroid/content/Intent;
     :cond_2
-    iget-object v8, p0, Lcom/android/settings/PrivacySettings$1;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v8, p0, Lcom/android/settings_ex/PrivacySettings$1;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
-    # getter for: Lcom/android/settings/PrivacySettings;->mSmartSwitch:Landroid/preference/Preference;
-    invoke-static {v8}, Lcom/android/settings/PrivacySettings;->access$200(Lcom/android/settings/PrivacySettings;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/PrivacySettings;->mSmartSwitch:Landroid/preference/Preference;
+    invoke-static {v8}, Lcom/android/settings_ex/PrivacySettings;->access$200(Lcom/android/settings_ex/PrivacySettings;)Landroid/preference/Preference;
 
     move-result-object v8
 
     if-ne p1, v8, :cond_5
 
     .line 292
-    iget-object v8, p0, Lcom/android/settings/PrivacySettings$1;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v8, p0, Lcom/android/settings_ex/PrivacySettings$1;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
-    invoke-virtual {v8}, Lcom/android/settings/PrivacySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v8}, Lcom/android/settings_ex/PrivacySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
     const-string v9, "com.sec.android.easyMover"
 
-    invoke-static {v8, v9}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v8, v9}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v8
 
@@ -155,17 +155,17 @@
 
     .line 294
     .local v7, "mMessage":Ljava/lang/CharSequence;
-    iget-object v8, p0, Lcom/android/settings/PrivacySettings$1;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v8, p0, Lcom/android/settings_ex/PrivacySettings$1;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
     const v9, 0x7f0e1752
 
-    invoke-virtual {v8, v9}, Lcom/android/settings/PrivacySettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {v8, v9}, Lcom/android/settings_ex/PrivacySettings;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     .line 295
     .local v0, "appName":Ljava/lang/String;
-    iget-object v8, p0, Lcom/android/settings/PrivacySettings$1;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v8, p0, Lcom/android/settings_ex/PrivacySettings$1;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
     const v9, 0x7f0e0fa3
 
@@ -175,7 +175,7 @@
 
     aput-object v0, v10, v11
 
-    invoke-virtual {v8, v9, v10}, Lcom/android/settings/PrivacySettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v8, v9, v10}, Lcom/android/settings_ex/PrivacySettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -186,9 +186,9 @@
     .local v5, "mAlertDlg":Landroid/app/AlertDialog;
     new-instance v8, Landroid/app/AlertDialog$Builder;
 
-    iget-object v9, p0, Lcom/android/settings/PrivacySettings$1;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v9, p0, Lcom/android/settings_ex/PrivacySettings$1;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
-    invoke-virtual {v9}, Lcom/android/settings/PrivacySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v9}, Lcom/android/settings_ex/PrivacySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
@@ -204,9 +204,9 @@
 
     const v9, 0x7f0e113c
 
-    new-instance v10, Lcom/android/settings/PrivacySettings$1$2;
+    new-instance v10, Lcom/android/settings_ex/PrivacySettings$1$2;
 
-    invoke-direct {v10, p0}, Lcom/android/settings/PrivacySettings$1$2;-><init>(Lcom/android/settings/PrivacySettings$1;)V
+    invoke-direct {v10, p0}, Lcom/android/settings_ex/PrivacySettings$1$2;-><init>(Lcom/android/settings_ex/PrivacySettings$1;)V
 
     invoke-virtual {v8, v9, v10}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -214,9 +214,9 @@
 
     const/high16 v9, 0x1040000
 
-    new-instance v10, Lcom/android/settings/PrivacySettings$1$1;
+    new-instance v10, Lcom/android/settings_ex/PrivacySettings$1$1;
 
-    invoke-direct {v10, p0}, Lcom/android/settings/PrivacySettings$1$1;-><init>(Lcom/android/settings/PrivacySettings$1;)V
+    invoke-direct {v10, p0}, Lcom/android/settings_ex/PrivacySettings$1$1;-><init>(Lcom/android/settings_ex/PrivacySettings$1;)V
 
     invoke-virtual {v8, v9, v10}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -232,9 +232,9 @@
     .end local v7    # "mMessage":Ljava/lang/CharSequence;
     :cond_3
     :try_start_0
-    iget-object v8, p0, Lcom/android/settings/PrivacySettings$1;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v8, p0, Lcom/android/settings_ex/PrivacySettings$1;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
-    invoke-virtual {v8}, Lcom/android/settings/PrivacySettings;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {v8}, Lcom/android/settings_ex/PrivacySettings;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v8
 
@@ -249,9 +249,9 @@
     if-eqz v3, :cond_4
 
     .line 339
-    iget-object v8, p0, Lcom/android/settings/PrivacySettings$1;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v8, p0, Lcom/android/settings_ex/PrivacySettings$1;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
-    invoke-virtual {v8, v3}, Lcom/android/settings/PrivacySettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v8, v3}, Lcom/android/settings_ex/PrivacySettings;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -293,9 +293,9 @@
     invoke-virtual {v4, v8}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 343
-    iget-object v8, p0, Lcom/android/settings/PrivacySettings$1;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v8, p0, Lcom/android/settings_ex/PrivacySettings$1;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
-    invoke-virtual {v8, v4}, Lcom/android/settings/PrivacySettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v8, v4}, Lcom/android/settings_ex/PrivacySettings;->startActivity(Landroid/content/Intent;)V
     :try_end_1
     .catch Landroid/content/ActivityNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -305,10 +305,10 @@
     .end local v3    # "i":Landroid/content/Intent;
     .end local v4    # "intent":Landroid/content/Intent;
     :cond_5
-    iget-object v8, p0, Lcom/android/settings/PrivacySettings$1;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v8, p0, Lcom/android/settings_ex/PrivacySettings$1;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
-    # getter for: Lcom/android/settings/PrivacySettings;->mSamsungAutoClean:Landroid/preference/Preference;
-    invoke-static {v8}, Lcom/android/settings/PrivacySettings;->access$300(Lcom/android/settings/PrivacySettings;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/PrivacySettings;->mSamsungAutoClean:Landroid/preference/Preference;
+    invoke-static {v8}, Lcom/android/settings_ex/PrivacySettings;->access$300(Lcom/android/settings_ex/PrivacySettings;)Landroid/preference/Preference;
 
     move-result-object v8
 
@@ -323,19 +323,19 @@
 
     .line 353
     .local v6, "mIntent":Landroid/content/Intent;
-    iget-object v8, p0, Lcom/android/settings/PrivacySettings$1;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v8, p0, Lcom/android/settings_ex/PrivacySettings$1;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
-    invoke-virtual {v8, v6}, Lcom/android/settings/PrivacySettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v8, v6}, Lcom/android/settings_ex/PrivacySettings;->startActivity(Landroid/content/Intent;)V
 
     goto/16 :goto_1
 
     .line 355
     .end local v6    # "mIntent":Landroid/content/Intent;
     :cond_6
-    iget-object v8, p0, Lcom/android/settings/PrivacySettings$1;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v8, p0, Lcom/android/settings_ex/PrivacySettings$1;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
-    # getter for: Lcom/android/settings/PrivacySettings;->mSamsungBackup:Landroid/preference/Preference;
-    invoke-static {v8}, Lcom/android/settings/PrivacySettings;->access$400(Lcom/android/settings/PrivacySettings;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/PrivacySettings;->mSamsungBackup:Landroid/preference/Preference;
+    invoke-static {v8}, Lcom/android/settings_ex/PrivacySettings;->access$400(Lcom/android/settings_ex/PrivacySettings;)Landroid/preference/Preference;
 
     move-result-object v8
 
@@ -346,19 +346,19 @@
     if-eqz v8, :cond_7
 
     .line 356
-    iget-object v8, p0, Lcom/android/settings/PrivacySettings$1;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v8, p0, Lcom/android/settings_ex/PrivacySettings$1;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
-    # invokes: Lcom/android/settings/PrivacySettings;->onBackUpClicked()V
-    invoke-static {v8}, Lcom/android/settings/PrivacySettings;->access$500(Lcom/android/settings/PrivacySettings;)V
+    # invokes: Lcom/android/settings_ex/PrivacySettings;->onBackUpClicked()V
+    invoke-static {v8}, Lcom/android/settings_ex/PrivacySettings;->access$500(Lcom/android/settings_ex/PrivacySettings;)V
 
     goto/16 :goto_1
 
     .line 358
     :cond_7
-    iget-object v8, p0, Lcom/android/settings/PrivacySettings$1;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v8, p0, Lcom/android/settings_ex/PrivacySettings$1;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
-    # getter for: Lcom/android/settings/PrivacySettings;->mSamsungRestore:Landroid/preference/Preference;
-    invoke-static {v8}, Lcom/android/settings/PrivacySettings;->access$600(Lcom/android/settings/PrivacySettings;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/PrivacySettings;->mSamsungRestore:Landroid/preference/Preference;
+    invoke-static {v8}, Lcom/android/settings_ex/PrivacySettings;->access$600(Lcom/android/settings_ex/PrivacySettings;)Landroid/preference/Preference;
 
     move-result-object v8
 
@@ -369,19 +369,19 @@
     if-eqz v8, :cond_8
 
     .line 359
-    iget-object v8, p0, Lcom/android/settings/PrivacySettings$1;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v8, p0, Lcom/android/settings_ex/PrivacySettings$1;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
-    # invokes: Lcom/android/settings/PrivacySettings;->onRestoreClicked()V
-    invoke-static {v8}, Lcom/android/settings/PrivacySettings;->access$700(Lcom/android/settings/PrivacySettings;)V
+    # invokes: Lcom/android/settings_ex/PrivacySettings;->onRestoreClicked()V
+    invoke-static {v8}, Lcom/android/settings_ex/PrivacySettings;->access$700(Lcom/android/settings_ex/PrivacySettings;)V
 
     goto/16 :goto_1
 
     .line 361
     :cond_8
-    iget-object v8, p0, Lcom/android/settings/PrivacySettings$1;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v8, p0, Lcom/android/settings_ex/PrivacySettings$1;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
-    # getter for: Lcom/android/settings/PrivacySettings;->mSamsungStorage:Landroid/preference/Preference;
-    invoke-static {v8}, Lcom/android/settings/PrivacySettings;->access$800(Lcom/android/settings/PrivacySettings;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/PrivacySettings;->mSamsungStorage:Landroid/preference/Preference;
+    invoke-static {v8}, Lcom/android/settings_ex/PrivacySettings;->access$800(Lcom/android/settings_ex/PrivacySettings;)Landroid/preference/Preference;
 
     move-result-object v8
 
@@ -392,10 +392,10 @@
     if-eqz v8, :cond_0
 
     .line 362
-    iget-object v8, p0, Lcom/android/settings/PrivacySettings$1;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v8, p0, Lcom/android/settings_ex/PrivacySettings$1;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
-    # invokes: Lcom/android/settings/PrivacySettings;->onStorageClicked()V
-    invoke-static {v8}, Lcom/android/settings/PrivacySettings;->access$900(Lcom/android/settings/PrivacySettings;)V
+    # invokes: Lcom/android/settings_ex/PrivacySettings;->onStorageClicked()V
+    invoke-static {v8}, Lcom/android/settings_ex/PrivacySettings;->access$900(Lcom/android/settings_ex/PrivacySettings;)V
 
     goto/16 :goto_1
 .end method

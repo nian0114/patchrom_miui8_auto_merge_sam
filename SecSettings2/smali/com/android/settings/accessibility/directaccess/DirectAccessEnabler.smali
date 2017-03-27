@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;
+.class public Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;
 .super Ljava/lang/Object;
 .source "DirectAccessEnabler.java"
 
@@ -27,47 +27,47 @@
     .line 20
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mDialog:Landroid/app/AlertDialog;
 
     .line 23
-    iput-object p1, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mContext:Landroid/content/Context;
 
     .line 24
-    iput-object p2, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mSwitch:Landroid/widget/Switch;
+    iput-object p2, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mSwitch:Landroid/widget/Switch;
 
     .line 25
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;)Landroid/app/AlertDialog;
+.method static synthetic access$000(Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;)Landroid/app/AlertDialog;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;
 
     .prologue
     .line 15
-    iget-object v0, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mDialog:Landroid/app/AlertDialog;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;)Landroid/content/Context;
+.method static synthetic access$100(Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;
 
     .prologue
     .line 15
-    iget-object v0, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;)Landroid/widget/Switch;
+.method static synthetic access$200(Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;)Landroid/widget/Switch;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;
 
     .prologue
     .line 15
-    iget-object v0, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mSwitch:Landroid/widget/Switch;
 
     return-object v0
 .end method
@@ -79,23 +79,23 @@
     const/4 v7, 0x1
 
     .line 88
-    iget-object v1, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mDialog:Landroid/app/AlertDialog;
 
     if-eqz v1, :cond_0
 
     .line 89
-    iget-object v1, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 90
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mDialog:Landroid/app/AlertDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mDialog:Landroid/app/AlertDialog;
 
     .line 93
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mContext:Landroid/content/Context;
 
     const v2, 0x7f0e0fa4
 
@@ -103,7 +103,7 @@
 
     const/4 v4, 0x0
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mContext:Landroid/content/Context;
 
     const v6, 0x7f0e0a1b
 
@@ -121,7 +121,7 @@
     .local v0, "dialog_title":Ljava/lang/String;
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mContext:Landroid/content/Context;
 
     invoke-direct {v1, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -133,9 +133,9 @@
 
     const v2, 0x7f0e081f
 
-    new-instance v3, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler$2;
+    new-instance v3, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler$2;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler$2;-><init>(Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler$2;-><init>(Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;)V
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -143,9 +143,9 @@
 
     const/high16 v2, 0x1040000
 
-    new-instance v3, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler$1;
+    new-instance v3, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler$1;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler$1;-><init>(Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler$1;-><init>(Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;)V
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -159,24 +159,24 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mDialog:Landroid/app/AlertDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mDialog:Landroid/app/AlertDialog;
 
     .line 113
-    iget-object v1, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1, v7}, Landroid/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
     .line 114
-    iget-object v1, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mDialog:Landroid/app/AlertDialog;
 
-    new-instance v2, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler$3;
+    new-instance v2, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler$3;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler$3;-><init>(Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler$3;-><init>(Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;)V
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
     .line 123
-    iget-object v1, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
@@ -197,7 +197,7 @@
     const/4 v4, 0x0
 
     .line 29
-    iget-object v2, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -216,7 +216,7 @@
     if-nez v1, :cond_1
 
     .line 33
-    iget-object v2, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -233,7 +233,7 @@
     if-ne v0, v5, :cond_0
 
     .line 35
-    invoke-direct {p0}, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->showExclusiveDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->showExclusiveDialog()V
 
     .line 48
     .end local v0    # "reduce_screen_state":I
@@ -243,7 +243,7 @@
     .line 37
     .restart local v0    # "reduce_screen_state":I
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v2, v5}, Landroid/widget/Switch;->setChecked(Z)V
 
@@ -252,10 +252,10 @@
 
     const-string v3, "switch is on"
 
-    invoke-static {v2, v3}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 39
-    iget-object v2, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -275,12 +275,12 @@
     if-ne v1, v5, :cond_2
 
     .line 42
-    iget-object v2, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v2, v4}, Landroid/widget/Switch;->setChecked(Z)V
 
     .line 43
-    iget-object v2, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -295,7 +295,7 @@
 
     const-string v3, "switch is off"
 
-    invoke-static {v2, v3}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -305,7 +305,7 @@
 
     const-string v3, "switch error"
 
-    invoke-static {v2, v3}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -315,7 +315,7 @@
 
     .prologue
     .line 65
-    iget-object v0, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mSwitch:Landroid/widget/Switch;
 
     const/4 v1, 0x0
 
@@ -334,7 +334,7 @@
     const/4 v3, 0x0
 
     .line 51
-    iget-object v1, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -351,18 +351,18 @@
     if-ne v0, v4, :cond_0
 
     .line 54
-    iget-object v1, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v1, v4}, Landroid/widget/Switch;->setEnabled(Z)V
 
     .line 55
-    iget-object v1, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v1, v4}, Landroid/widget/Switch;->setChecked(Z)V
 
     .line 61
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v1, p0}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
@@ -371,12 +371,12 @@
 
     .line 57
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v1, v3}, Landroid/widget/Switch;->setChecked(Z)V
 
     .line 58
-    iget-object v1, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v1, v3}, Landroid/widget/Switch;->setEnabled(Z)V
 

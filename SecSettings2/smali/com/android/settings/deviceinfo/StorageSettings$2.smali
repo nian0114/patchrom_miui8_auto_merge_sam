@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/deviceinfo/StorageSettings$2;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/deviceinfo/StorageSettings$2;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "StorageSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/StorageSettings;
+    value = Lcom/android/settings_ex/deviceinfo/StorageSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 498
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
             "Z)",
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/search/SearchIndexableRaw;",
+            "Lcom/android/settings_ex/search/SearchIndexableRaw;",
             ">;"
         }
     .end annotation
@@ -52,25 +52,25 @@
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 514
-    .local v1, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/search/SearchIndexableRaw;>;"
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    .local v1, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/search/SearchIndexableRaw;>;"
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 515
-    .local v0, "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .local v0, "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     invoke-virtual {p1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, v0, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v2, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 516
     invoke-virtual {p1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, v0, Lcom/android/settings/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
+    iput-object v2, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
 
     .line 517
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -103,7 +103,7 @@
 
     .line 505
     .local v0, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v1, Lcom/android/settings/deviceinfo/StorageSettings;
+    const-class v1, Lcom/android/settings_ex/deviceinfo/StorageSettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -112,7 +112,7 @@
     iput-object v1, v0, Landroid/provider/SearchIndexableResource;->className:Ljava/lang/String;
 
     .line 506
-    sget v1, Lcom/android/settings/search/SearchIndexableResources;->NO_DATA_RES_ID:I
+    sget v1, Lcom/android/settings_ex/search/SearchIndexableResources;->NO_DATA_RES_ID:I
 
     iput v1, v0, Landroid/provider/SearchIndexableResource;->xmlResId:I
 

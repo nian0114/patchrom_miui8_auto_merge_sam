@@ -1,11 +1,11 @@
-.class Lcom/android/settings/TRoamingSettings$2;
+.class Lcom/android/settings_ex/TRoamingSettings$2;
 .super Landroid/database/ContentObserver;
 .source "TRoamingSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/TRoamingSettings;
+    value = Lcom/android/settings_ex/TRoamingSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/TRoamingSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/TRoamingSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/TRoamingSettings;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/TRoamingSettings;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 159
-    iput-object p1, p0, Lcom/android/settings/TRoamingSettings$2;->this$0:Lcom/android/settings/TRoamingSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/TRoamingSettings$2;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -42,17 +42,17 @@
     const/4 v3, 0x0
 
     .line 162
-    iget-object v0, p0, Lcom/android/settings/TRoamingSettings$2;->this$0:Lcom/android/settings/TRoamingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/TRoamingSettings$2;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
-    # getter for: Lcom/android/settings/TRoamingSettings;->mUseLTERoaming:Landroid/preference/SwitchPreference;
-    invoke-static {v0}, Lcom/android/settings/TRoamingSettings;->access$400(Lcom/android/settings/TRoamingSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/TRoamingSettings;->mUseLTERoaming:Landroid/preference/SwitchPreference;
+    invoke-static {v0}, Lcom/android/settings_ex/TRoamingSettings;->access$400(Lcom/android/settings_ex/TRoamingSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/TRoamingSettings$2;->this$0:Lcom/android/settings/TRoamingSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/TRoamingSettings$2;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
-    # invokes: Lcom/android/settings/TRoamingSettings;->isLTERoamingEnabled()Z
-    invoke-static {v1}, Lcom/android/settings/TRoamingSettings;->access$500(Lcom/android/settings/TRoamingSettings;)Z
+    # invokes: Lcom/android/settings_ex/TRoamingSettings;->isLTERoamingEnabled()Z
+    invoke-static {v1}, Lcom/android/settings_ex/TRoamingSettings;->access$500(Lcom/android/settings_ex/TRoamingSettings;)Z
 
     move-result v1
 
@@ -71,10 +71,10 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/TRoamingSettings$2;->this$0:Lcom/android/settings/TRoamingSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/TRoamingSettings$2;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
-    # invokes: Lcom/android/settings/TRoamingSettings;->isLTERoamingEnabled()Z
-    invoke-static {v2}, Lcom/android/settings/TRoamingSettings;->access$500(Lcom/android/settings/TRoamingSettings;)Z
+    # invokes: Lcom/android/settings_ex/TRoamingSettings;->isLTERoamingEnabled()Z
+    invoke-static {v2}, Lcom/android/settings_ex/TRoamingSettings;->access$500(Lcom/android/settings_ex/TRoamingSettings;)Z
 
     move-result v2
 
@@ -89,29 +89,29 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 164
-    iget-object v0, p0, Lcom/android/settings/TRoamingSettings$2;->this$0:Lcom/android/settings/TRoamingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/TRoamingSettings$2;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
-    # invokes: Lcom/android/settings/TRoamingSettings;->isLTERoamingEnabled()Z
-    invoke-static {v0}, Lcom/android/settings/TRoamingSettings;->access$500(Lcom/android/settings/TRoamingSettings;)Z
+    # invokes: Lcom/android/settings_ex/TRoamingSettings;->isLTERoamingEnabled()Z
+    invoke-static {v0}, Lcom/android/settings_ex/TRoamingSettings;->access$500(Lcom/android/settings_ex/TRoamingSettings;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 165
-    iget-object v0, p0, Lcom/android/settings/TRoamingSettings$2;->this$0:Lcom/android/settings/TRoamingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/TRoamingSettings$2;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
-    # getter for: Lcom/android/settings/TRoamingSettings;->mHDVoiceRoaming:Landroid/preference/SwitchPreference;
-    invoke-static {v0}, Lcom/android/settings/TRoamingSettings;->access$600(Lcom/android/settings/TRoamingSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/TRoamingSettings;->mHDVoiceRoaming:Landroid/preference/SwitchPreference;
+    invoke-static {v0}, Lcom/android/settings_ex/TRoamingSettings;->access$600(Lcom/android/settings_ex/TRoamingSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v0
 
     invoke-virtual {v0, v3}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 166
-    iget-object v0, p0, Lcom/android/settings/TRoamingSettings$2;->this$0:Lcom/android/settings/TRoamingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/TRoamingSettings$2;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/TRoamingSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/android/settings_ex/TRoamingSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -124,19 +124,19 @@
     if-eqz v0, :cond_0
 
     .line 167
-    iget-object v0, p0, Lcom/android/settings/TRoamingSettings$2;->this$0:Lcom/android/settings/TRoamingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/TRoamingSettings$2;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
-    # getter for: Lcom/android/settings/TRoamingSettings;->mHDVoiceRoaming:Landroid/preference/SwitchPreference;
-    invoke-static {v0}, Lcom/android/settings/TRoamingSettings;->access$600(Lcom/android/settings/TRoamingSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/TRoamingSettings;->mHDVoiceRoaming:Landroid/preference/SwitchPreference;
+    invoke-static {v0}, Lcom/android/settings_ex/TRoamingSettings;->access$600(Lcom/android/settings_ex/TRoamingSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v0
 
     invoke-virtual {v0, v3}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 168
-    iget-object v0, p0, Lcom/android/settings/TRoamingSettings$2;->this$0:Lcom/android/settings/TRoamingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/TRoamingSettings$2;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/TRoamingSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/android/settings_ex/TRoamingSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -151,10 +151,10 @@
 
     .line 171
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/TRoamingSettings$2;->this$0:Lcom/android/settings/TRoamingSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/TRoamingSettings$2;->this$0:Lcom/android/settings_ex/TRoamingSettings;
 
-    # getter for: Lcom/android/settings/TRoamingSettings;->mHDVoiceRoaming:Landroid/preference/SwitchPreference;
-    invoke-static {v0}, Lcom/android/settings/TRoamingSettings;->access$600(Lcom/android/settings/TRoamingSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/TRoamingSettings;->mHDVoiceRoaming:Landroid/preference/SwitchPreference;
+    invoke-static {v0}, Lcom/android/settings_ex/TRoamingSettings;->access$600(Lcom/android/settings_ex/TRoamingSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v0
 

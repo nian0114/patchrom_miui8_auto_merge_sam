@@ -1,10 +1,10 @@
-.class public Lcom/android/settings/fmm/SimChangeAlert;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/fmm/SimChangeAlert;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "SimChangeAlert.java"
 
 # interfaces
 .implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # static fields
@@ -28,7 +28,7 @@
 
 .field private mMaxToast:Landroid/widget/Toast;
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 .field mView:Landroid/view/View;
 
@@ -39,92 +39,92 @@
 
     .prologue
     .line 65
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 147
-    new-instance v0, Lcom/android/settings/fmm/SimChangeAlert$1;
+    new-instance v0, Lcom/android/settings_ex/fmm/SimChangeAlert$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/fmm/SimChangeAlert$1;-><init>(Lcom/android/settings/fmm/SimChangeAlert;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/fmm/SimChangeAlert$1;-><init>(Lcom/android/settings_ex/fmm/SimChangeAlert;)V
 
-    iput-object v0, p0, Lcom/android/settings/fmm/SimChangeAlert;->AlterMessageLengthFilter:Landroid/text/InputFilter;
+    iput-object v0, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->AlterMessageLengthFilter:Landroid/text/InputFilter;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/fmm/SimChangeAlert;)Landroid/widget/LinearLayout;
+.method static synthetic access$000(Lcom/android/settings_ex/fmm/SimChangeAlert;)Landroid/widget/LinearLayout;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fmm/SimChangeAlert;
+    .param p0, "x0"    # Lcom/android/settings_ex/fmm/SimChangeAlert;
 
     .prologue
     .line 65
-    iget-object v0, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/fmm/SimChangeAlert;)Landroid/widget/EditText;
+.method static synthetic access$100(Lcom/android/settings_ex/fmm/SimChangeAlert;)Landroid/widget/EditText;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fmm/SimChangeAlert;
+    .param p0, "x0"    # Lcom/android/settings_ex/fmm/SimChangeAlert;
 
     .prologue
     .line 65
-    iget-object v0, p0, Lcom/android/settings/fmm/SimChangeAlert;->mLinkedContact:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mLinkedContact:Landroid/widget/EditText;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/fmm/SimChangeAlert;)Landroid/view/LayoutInflater;
+.method static synthetic access$200(Lcom/android/settings_ex/fmm/SimChangeAlert;)Landroid/view/LayoutInflater;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fmm/SimChangeAlert;
+    .param p0, "x0"    # Lcom/android/settings_ex/fmm/SimChangeAlert;
 
     .prologue
     .line 65
-    iget-object v0, p0, Lcom/android/settings/fmm/SimChangeAlert;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v0, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mInflater:Landroid/view/LayoutInflater;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/fmm/SimChangeAlert;)Landroid/widget/EditText;
+.method static synthetic access$300(Lcom/android/settings_ex/fmm/SimChangeAlert;)Landroid/widget/EditText;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fmm/SimChangeAlert;
+    .param p0, "x0"    # Lcom/android/settings_ex/fmm/SimChangeAlert;
 
     .prologue
     .line 65
-    iget-object v0, p0, Lcom/android/settings/fmm/SimChangeAlert;->mAlertMessage:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mAlertMessage:Landroid/widget/EditText;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/fmm/SimChangeAlert;)Landroid/widget/Toast;
+.method static synthetic access$400(Lcom/android/settings_ex/fmm/SimChangeAlert;)Landroid/widget/Toast;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fmm/SimChangeAlert;
+    .param p0, "x0"    # Lcom/android/settings_ex/fmm/SimChangeAlert;
 
     .prologue
     .line 65
-    iget-object v0, p0, Lcom/android/settings/fmm/SimChangeAlert;->mMaxToast:Landroid/widget/Toast;
+    iget-object v0, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mMaxToast:Landroid/widget/Toast;
 
     return-object v0
 .end method
 
-.method static synthetic access$402(Lcom/android/settings/fmm/SimChangeAlert;Landroid/widget/Toast;)Landroid/widget/Toast;
+.method static synthetic access$402(Lcom/android/settings_ex/fmm/SimChangeAlert;Landroid/widget/Toast;)Landroid/widget/Toast;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/fmm/SimChangeAlert;
+    .param p0, "x0"    # Lcom/android/settings_ex/fmm/SimChangeAlert;
     .param p1, "x1"    # Landroid/widget/Toast;
 
     .prologue
     .line 65
-    iput-object p1, p0, Lcom/android/settings/fmm/SimChangeAlert;->mMaxToast:Landroid/widget/Toast;
+    iput-object p1, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mMaxToast:Landroid/widget/Toast;
 
     return-object p1
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/fmm/SimChangeAlert;)Lcom/android/settings/widget/SwitchBar;
+.method static synthetic access$500(Lcom/android/settings_ex/fmm/SimChangeAlert;)Lcom/android/settings_ex/widget/SwitchBar;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fmm/SimChangeAlert;
+    .param p0, "x0"    # Lcom/android/settings_ex/fmm/SimChangeAlert;
 
     .prologue
     .line 65
-    iget-object v0, p0, Lcom/android/settings/fmm/SimChangeAlert;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     return-object v0
 .end method
@@ -165,7 +165,7 @@
 
     move-result-object v2
 
-    invoke-direct {p0, v2, p2}, Lcom/android/settings/fmm/SimChangeAlert;->enableDisableView(Landroid/view/View;Z)V
+    invoke-direct {p0, v2, p2}, Lcom/android/settings_ex/fmm/SimChangeAlert;->enableDisableView(Landroid/view/View;Z)V
 
     .line 582
     add-int/lit8 v1, v1, 0x1
@@ -215,7 +215,7 @@
     .line 423
     .local v8, "MTStatus":Ljava/lang/String;
     :goto_0
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fmm/SimChangeAlert;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->getResources()Landroid/content/res/Resources;
 
     move-result-object v15
 
@@ -229,7 +229,7 @@
     .local v7, "MTSender":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/fmm/SimChangeAlert;->mAlertMessage:Landroid/widget/EditText;
+    iget-object v15, v0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mAlertMessage:Landroid/widget/EditText;
 
     invoke-virtual {v15}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -315,7 +315,7 @@
     :goto_2
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v15, v0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v15}, Landroid/widget/LinearLayout;->getChildCount()I
 
@@ -326,37 +326,37 @@
     .line 433
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v15, v0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v15, v12}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/fmm/RecipientsMinusView;
+    check-cast v1, Lcom/android/settings_ex/fmm/RecipientsMinusView;
 
     .line 434
-    .local v1, "ChildView":Lcom/android/settings/fmm/RecipientsMinusView;
-    invoke-virtual {v1}, Lcom/android/settings/fmm/RecipientsMinusView;->isExist()Z
+    .local v1, "ChildView":Lcom/android/settings_ex/fmm/RecipientsMinusView;
+    invoke-virtual {v1}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->isExist()Z
 
     move-result v15
 
     if-eqz v15, :cond_3
 
     .line 435
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v15
 
     if-nez v15, :cond_2
 
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticLGTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticLGTModel()Z
 
     move-result v15
 
     if-nez v15, :cond_2
 
     .line 436
-    invoke-virtual {v1}, Lcom/android/settings/fmm/RecipientsMinusView;->getPhoneNumber()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->getPhoneNumber()Ljava/lang/String;
 
     move-result-object v15
 
@@ -368,7 +368,7 @@
 
     if-nez v15, :cond_2
 
-    invoke-virtual {v1}, Lcom/android/settings/fmm/RecipientsMinusView;->getPhoneNumber()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->getPhoneNumber()Ljava/lang/String;
 
     move-result-object v15
 
@@ -381,7 +381,7 @@
     if-nez v15, :cond_2
 
     .line 438
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
 
     move-result-object v15
 
@@ -396,13 +396,13 @@
     invoke-virtual {v15}, Landroid/widget/Toast;->show()V
 
     .line 440
-    invoke-virtual {v1}, Lcom/android/settings/fmm/RecipientsMinusView;->setFocus()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->setFocus()V
 
     .line 441
     const/4 v15, 0x0
 
     .line 502
-    .end local v1    # "ChildView":Lcom/android/settings/fmm/RecipientsMinusView;
+    .end local v1    # "ChildView":Lcom/android/settings_ex/fmm/RecipientsMinusView;
     :goto_3
     return v15
 
@@ -432,7 +432,7 @@
     goto/16 :goto_1
 
     .line 444
-    .restart local v1    # "ChildView":Lcom/android/settings/fmm/RecipientsMinusView;
+    .restart local v1    # "ChildView":Lcom/android/settings_ex/fmm/RecipientsMinusView;
     .restart local v5    # "MTEnabled":Ljava/lang/String;
     .restart local v10    # "count":I
     .restart local v12    # "i":I
@@ -440,7 +440,7 @@
     add-int/lit8 v10, v10, 0x1
 
     .line 446
-    invoke-virtual {v1}, Lcom/android/settings/fmm/RecipientsMinusView;->getPhoneNumber()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->getPhoneNumber()Ljava/lang/String;
 
     move-result-object v15
 
@@ -455,7 +455,7 @@
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v1}, Lcom/android/settings/fmm/RecipientsMinusView;->getPhoneNumber()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->getPhoneNumber()Ljava/lang/String;
 
     move-result-object v16
 
@@ -491,7 +491,7 @@
     goto :goto_4
 
     .line 454
-    .end local v1    # "ChildView":Lcom/android/settings/fmm/RecipientsMinusView;
+    .end local v1    # "ChildView":Lcom/android/settings_ex/fmm/RecipientsMinusView;
     :cond_5
     :goto_5
     const/4 v15, 0x5
@@ -524,7 +524,7 @@
 
     .line 461
     :cond_7
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
 
     move-result-object v15
 
@@ -570,7 +570,7 @@
 
     .line 471
     :cond_a
-    invoke-static {}, Lcom/android/settings/Utils;->isMultisimModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMultisimModel()Z
 
     move-result v15
 
@@ -701,16 +701,16 @@
     .line 495
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/fmm/SimChangeAlert;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v15, v0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v15}, Lcom/android/settings/widget/SwitchBar;->isChecked()Z
+    invoke-virtual {v15}, Lcom/android/settings_ex/widget/SwitchBar;->isChecked()Z
 
     move-result v15
 
     if-eqz v15, :cond_11
 
     .line 496
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
 
     move-result-object v15
 
@@ -726,7 +726,7 @@
 
     .line 500
     :goto_7
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
 
     move-result-object v15
 
@@ -747,14 +747,14 @@
 
     .line 477
     :cond_d
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticLGTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticLGTModel()Z
 
     move-result v15
 
     if-eqz v15, :cond_10
 
     .line 479
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
 
     move-result-object v15
 
@@ -894,7 +894,7 @@
 
     .line 498
     :cond_11
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
 
     move-result-object v15
 
@@ -936,7 +936,7 @@
 
     .local v4, "i":I
     :goto_0
-    iget-object v9, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v9, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v9}, Landroid/widget/LinearLayout;->getChildCount()I
 
@@ -945,24 +945,24 @@
     if-ge v4, v9, :cond_1
 
     .line 525
-    iget-object v9, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v9, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v9, v4}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/fmm/RecipientsMinusView;
+    check-cast v0, Lcom/android/settings_ex/fmm/RecipientsMinusView;
 
     .line 527
-    .local v0, "ChildView":Lcom/android/settings/fmm/RecipientsMinusView;
-    invoke-virtual {v0}, Lcom/android/settings/fmm/RecipientsMinusView;->isExist()Z
+    .local v0, "ChildView":Lcom/android/settings_ex/fmm/RecipientsMinusView;
+    invoke-virtual {v0}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->isExist()Z
 
     move-result v9
 
     if-eqz v9, :cond_0
 
     .line 528
-    invoke-virtual {v0}, Lcom/android/settings/fmm/RecipientsMinusView;->getPhoneNumber()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->getPhoneNumber()Ljava/lang/String;
 
     move-result-object v9
 
@@ -1004,7 +1004,7 @@
 
     .line 532
     .local v7, "phNum":Ljava/lang/String;
-    invoke-virtual {v0, v7}, Lcom/android/settings/fmm/RecipientsMinusView;->setPhoneNumber(Ljava/lang/String;)V
+    invoke-virtual {v0, v7}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->setPhoneNumber(Ljava/lang/String;)V
 
     move v2, v3
 
@@ -1019,9 +1019,9 @@
     goto :goto_0
 
     .line 540
-    .end local v0    # "ChildView":Lcom/android/settings/fmm/RecipientsMinusView;
+    .end local v0    # "ChildView":Lcom/android/settings_ex/fmm/RecipientsMinusView;
     :cond_1
-    iget-object v9, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v9, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v9}, Landroid/widget/LinearLayout;->getChildCount()I
 
@@ -1037,11 +1037,11 @@
     if-le v9, v2, :cond_2
 
     .line 543
-    iget-object v9, p0, Lcom/android/settings/fmm/SimChangeAlert;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v9, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mInflater:Landroid/view/LayoutInflater;
 
     const v10, 0x7f040123
 
-    iget-object v11, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v11, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     const/4 v12, 0x0
 
@@ -1053,12 +1053,12 @@
 
     .line 545
     .local v1, "MinusLayout":Landroid/widget/LinearLayout;
-    iget-object v9, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v9, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v9, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 546
-    iget-object v9, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v9, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     add-int/lit8 v6, v5, 0x1
 
@@ -1068,10 +1068,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/fmm/RecipientsMinusView;
+    check-cast v0, Lcom/android/settings_ex/fmm/RecipientsMinusView;
 
     .line 547
-    .restart local v0    # "ChildView":Lcom/android/settings/fmm/RecipientsMinusView;
+    .restart local v0    # "ChildView":Lcom/android/settings_ex/fmm/RecipientsMinusView;
     add-int/lit8 v3, v2, 0x1
 
     .end local v2    # "count":I
@@ -1096,7 +1096,7 @@
 
     .line 549
     .restart local v7    # "phNum":Ljava/lang/String;
-    invoke-virtual {v0, v7}, Lcom/android/settings/fmm/RecipientsMinusView;->setPhoneNumber(Ljava/lang/String;)V
+    invoke-virtual {v0, v7}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->setPhoneNumber(Ljava/lang/String;)V
 
     move v5, v6
 
@@ -1110,7 +1110,7 @@
     goto :goto_1
 
     .line 551
-    .end local v0    # "ChildView":Lcom/android/settings/fmm/RecipientsMinusView;
+    .end local v0    # "ChildView":Lcom/android/settings_ex/fmm/RecipientsMinusView;
     .end local v1    # "MinusLayout":Landroid/widget/LinearLayout;
     .end local v7    # "phNum":Ljava/lang/String;
     .end local v8    # "result":Ljava/lang/String;
@@ -1131,7 +1131,7 @@
 
     .local v2, "i":I
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v3}, Landroid/widget/LinearLayout;->getChildCount()I
 
@@ -1140,24 +1140,24 @@
     if-ge v2, v3, :cond_1
 
     .line 509
-    iget-object v3, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v3, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v3, v2}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/fmm/RecipientsMinusView;
+    check-cast v0, Lcom/android/settings_ex/fmm/RecipientsMinusView;
 
     .line 511
-    .local v0, "ChildView":Lcom/android/settings/fmm/RecipientsMinusView;
-    invoke-virtual {v0}, Lcom/android/settings/fmm/RecipientsMinusView;->isExist()Z
+    .local v0, "ChildView":Lcom/android/settings_ex/fmm/RecipientsMinusView;
+    invoke-virtual {v0}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->isExist()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
     .line 512
-    invoke-virtual {v0}, Lcom/android/settings/fmm/RecipientsMinusView;->getPhoneNumber()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->getPhoneNumber()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1177,7 +1177,7 @@
     goto :goto_0
 
     .line 518
-    .end local v0    # "ChildView":Lcom/android/settings/fmm/RecipientsMinusView;
+    .end local v0    # "ChildView":Lcom/android/settings_ex/fmm/RecipientsMinusView;
     :cond_1
     return v1
 .end method
@@ -1365,7 +1365,7 @@
 
     .line 414
     :cond_6
-    iget-object v11, p0, Lcom/android/settings/fmm/SimChangeAlert;->mAlertMessage:Landroid/widget/EditText;
+    iget-object v11, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mAlertMessage:Landroid/widget/EditText;
 
     invoke-virtual {v11, v5}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
@@ -1379,9 +1379,9 @@
     .end local v9    # "rec4":Ljava/lang/String;
     .end local v10    # "rec5":Ljava/lang/String;
     :cond_7
-    iget-object v11, p0, Lcom/android/settings/fmm/SimChangeAlert;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v11, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mInflater:Landroid/view/LayoutInflater;
 
-    iget-object v12, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v12, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v11, v14, v12, v13}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -1391,12 +1391,12 @@
 
     .line 351
     .local v1, "MinusLayout":Landroid/widget/LinearLayout;
-    iget-object v11, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v11, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v11, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 352
-    iget-object v11, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v11, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     add-int/lit8 v4, v3, 0x1
 
@@ -1406,11 +1406,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/fmm/RecipientsMinusView;
+    check-cast v0, Lcom/android/settings_ex/fmm/RecipientsMinusView;
 
     .line 353
-    .local v0, "ChildView":Lcom/android/settings/fmm/RecipientsMinusView;
-    invoke-virtual {v0, v6}, Lcom/android/settings/fmm/RecipientsMinusView;->setPhoneNumber(Ljava/lang/String;)V
+    .local v0, "ChildView":Lcom/android/settings_ex/fmm/RecipientsMinusView;
+    invoke-virtual {v0, v6}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->setPhoneNumber(Ljava/lang/String;)V
 
     move v3, v4
 
@@ -1419,13 +1419,13 @@
     goto/16 :goto_0
 
     .line 362
-    .end local v0    # "ChildView":Lcom/android/settings/fmm/RecipientsMinusView;
+    .end local v0    # "ChildView":Lcom/android/settings_ex/fmm/RecipientsMinusView;
     .end local v1    # "MinusLayout":Landroid/widget/LinearLayout;
     .restart local v7    # "rec2":Ljava/lang/String;
     :cond_8
-    iget-object v11, p0, Lcom/android/settings/fmm/SimChangeAlert;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v11, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mInflater:Landroid/view/LayoutInflater;
 
-    iget-object v12, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v12, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v11, v14, v12, v13}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -1435,12 +1435,12 @@
 
     .line 364
     .restart local v1    # "MinusLayout":Landroid/widget/LinearLayout;
-    iget-object v11, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v11, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v11, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 365
-    iget-object v11, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v11, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     add-int/lit8 v4, v3, 0x1
 
@@ -1450,11 +1450,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/fmm/RecipientsMinusView;
+    check-cast v0, Lcom/android/settings_ex/fmm/RecipientsMinusView;
 
     .line 366
-    .restart local v0    # "ChildView":Lcom/android/settings/fmm/RecipientsMinusView;
-    invoke-virtual {v0, v7}, Lcom/android/settings/fmm/RecipientsMinusView;->setPhoneNumber(Ljava/lang/String;)V
+    .restart local v0    # "ChildView":Lcom/android/settings_ex/fmm/RecipientsMinusView;
+    invoke-virtual {v0, v7}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->setPhoneNumber(Ljava/lang/String;)V
 
     move v3, v4
 
@@ -1463,13 +1463,13 @@
     goto/16 :goto_1
 
     .line 375
-    .end local v0    # "ChildView":Lcom/android/settings/fmm/RecipientsMinusView;
+    .end local v0    # "ChildView":Lcom/android/settings_ex/fmm/RecipientsMinusView;
     .end local v1    # "MinusLayout":Landroid/widget/LinearLayout;
     .restart local v8    # "rec3":Ljava/lang/String;
     :cond_9
-    iget-object v11, p0, Lcom/android/settings/fmm/SimChangeAlert;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v11, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mInflater:Landroid/view/LayoutInflater;
 
-    iget-object v12, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v12, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v11, v14, v12, v13}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -1479,12 +1479,12 @@
 
     .line 377
     .restart local v1    # "MinusLayout":Landroid/widget/LinearLayout;
-    iget-object v11, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v11, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v11, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 378
-    iget-object v11, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v11, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     add-int/lit8 v4, v3, 0x1
 
@@ -1494,11 +1494,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/fmm/RecipientsMinusView;
+    check-cast v0, Lcom/android/settings_ex/fmm/RecipientsMinusView;
 
     .line 379
-    .restart local v0    # "ChildView":Lcom/android/settings/fmm/RecipientsMinusView;
-    invoke-virtual {v0, v8}, Lcom/android/settings/fmm/RecipientsMinusView;->setPhoneNumber(Ljava/lang/String;)V
+    .restart local v0    # "ChildView":Lcom/android/settings_ex/fmm/RecipientsMinusView;
+    invoke-virtual {v0, v8}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->setPhoneNumber(Ljava/lang/String;)V
 
     move v3, v4
 
@@ -1507,13 +1507,13 @@
     goto/16 :goto_2
 
     .line 388
-    .end local v0    # "ChildView":Lcom/android/settings/fmm/RecipientsMinusView;
+    .end local v0    # "ChildView":Lcom/android/settings_ex/fmm/RecipientsMinusView;
     .end local v1    # "MinusLayout":Landroid/widget/LinearLayout;
     .restart local v9    # "rec4":Ljava/lang/String;
     :cond_a
-    iget-object v11, p0, Lcom/android/settings/fmm/SimChangeAlert;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v11, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mInflater:Landroid/view/LayoutInflater;
 
-    iget-object v12, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v12, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v11, v14, v12, v13}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -1523,12 +1523,12 @@
 
     .line 390
     .restart local v1    # "MinusLayout":Landroid/widget/LinearLayout;
-    iget-object v11, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v11, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v11, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 391
-    iget-object v11, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v11, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     add-int/lit8 v4, v3, 0x1
 
@@ -1538,11 +1538,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/fmm/RecipientsMinusView;
+    check-cast v0, Lcom/android/settings_ex/fmm/RecipientsMinusView;
 
     .line 392
-    .restart local v0    # "ChildView":Lcom/android/settings/fmm/RecipientsMinusView;
-    invoke-virtual {v0, v9}, Lcom/android/settings/fmm/RecipientsMinusView;->setPhoneNumber(Ljava/lang/String;)V
+    .restart local v0    # "ChildView":Lcom/android/settings_ex/fmm/RecipientsMinusView;
+    invoke-virtual {v0, v9}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->setPhoneNumber(Ljava/lang/String;)V
 
     move v3, v4
 
@@ -1551,13 +1551,13 @@
     goto/16 :goto_3
 
     .line 401
-    .end local v0    # "ChildView":Lcom/android/settings/fmm/RecipientsMinusView;
+    .end local v0    # "ChildView":Lcom/android/settings_ex/fmm/RecipientsMinusView;
     .end local v1    # "MinusLayout":Landroid/widget/LinearLayout;
     .restart local v10    # "rec5":Ljava/lang/String;
     :cond_b
-    iget-object v11, p0, Lcom/android/settings/fmm/SimChangeAlert;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v11, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mInflater:Landroid/view/LayoutInflater;
 
-    iget-object v12, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v12, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v11, v14, v12, v13}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -1567,12 +1567,12 @@
 
     .line 403
     .restart local v1    # "MinusLayout":Landroid/widget/LinearLayout;
-    iget-object v11, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v11, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v11, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 404
-    iget-object v11, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v11, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     add-int/lit8 v4, v3, 0x1
 
@@ -1582,11 +1582,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/fmm/RecipientsMinusView;
+    check-cast v0, Lcom/android/settings_ex/fmm/RecipientsMinusView;
 
     .line 405
-    .restart local v0    # "ChildView":Lcom/android/settings/fmm/RecipientsMinusView;
-    invoke-virtual {v0, v10}, Lcom/android/settings/fmm/RecipientsMinusView;->setPhoneNumber(Ljava/lang/String;)V
+    .restart local v0    # "ChildView":Lcom/android/settings_ex/fmm/RecipientsMinusView;
+    invoke-virtual {v0, v10}, Lcom/android/settings_ex/fmm/RecipientsMinusView;->setPhoneNumber(Ljava/lang/String;)V
 
     move v3, v4
 
@@ -1605,43 +1605,43 @@
     const/4 v2, 0x0
 
     .line 121
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 123
-    invoke-virtual {p0}, Lcom/android/settings/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 124
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/fmm/SimChangeAlert;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v3, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 125
-    iget-object v3, p0, Lcom/android/settings/fmm/SimChangeAlert;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v3, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v3, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 126
-    iget-object v3, p0, Lcom/android/settings/fmm/SimChangeAlert;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v3}, Lcom/android/settings/widget/SwitchBar;->getSwitch()Lcom/android/settings/widget/ToggleSwitch;
+    invoke-virtual {v3}, Lcom/android/settings_ex/widget/SwitchBar;->getSwitch()Lcom/android/settings_ex/widget/ToggleSwitch;
 
     move-result-object v3
 
     const v4, 0x7f0d04b8
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/widget/ToggleSwitch;->setNextFocusDownId(I)V
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/widget/ToggleSwitch;->setNextFocusDownId(I)V
 
     .line 127
-    iget-object v3, p0, Lcom/android/settings/fmm/SimChangeAlert;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {p0}, Lcom/android/settings/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1658,12 +1658,12 @@
     if-ne v4, v1, :cond_0
 
     :goto_0
-    invoke-virtual {v3, v1}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v3, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 129
-    iget-object v1, p0, Lcom/android/settings/fmm/SimChangeAlert;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 130
     return-void
@@ -1683,7 +1683,7 @@
 
     .prologue
     .line 292
-    invoke-super {p0, p1, p2, p3}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 294
     const/4 v0, -0x1
@@ -1712,7 +1712,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/fmm/SimChangeAlert;->SetContactNumber(Ljava/util/ArrayList;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->SetContactNumber(Ljava/util/ArrayList;)V
 
     goto :goto_0
 .end method
@@ -1727,18 +1727,18 @@
     if-eqz p2, :cond_0
 
     .line 284
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    sget-boolean v0, Lcom/android/settings/fmm/SimChangeAlert;->chkboxFlag:Z
+    sget-boolean v0, Lcom/android/settings_ex/fmm/SimChangeAlert;->chkboxFlag:Z
 
     if-nez v0, :cond_0
 
     .line 285
-    invoke-virtual {p0}, Lcom/android/settings/fmm/SimChangeAlert;->showNotificationChargeDialog()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->showNotificationChargeDialog()V
 
     .line 288
     :cond_0
@@ -1751,12 +1751,12 @@
 
     .prologue
     .line 114
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 116
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/fmm/SimChangeAlert;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->setHasOptionsMenu(Z)V
 
     .line 117
     return-void
@@ -1782,7 +1782,7 @@
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setShowAsAction(I)V
 
     .line 175
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     .line 176
     return-void
@@ -1800,7 +1800,7 @@
     const/4 v4, 0x0
 
     .line 180
-    iput-object p1, p0, Lcom/android/settings/fmm/SimChangeAlert;->mInflater:Landroid/view/LayoutInflater;
+    iput-object p1, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mInflater:Landroid/view/LayoutInflater;
 
     .line 181
     const v2, 0x7f0401e5
@@ -1809,10 +1809,10 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/fmm/SimChangeAlert;->mView:Landroid/view/View;
+    iput-object v2, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mView:Landroid/view/View;
 
     .line 182
-    iget-object v2, p0, Lcom/android/settings/fmm/SimChangeAlert;->mView:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mView:Landroid/view/View;
 
     const v5, 0x7f0d04be
 
@@ -1822,16 +1822,16 @@
 
     check-cast v2, Landroid/widget/LinearLayout;
 
-    iput-object v2, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iput-object v2, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     .line 184
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticLGTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticLGTModel()Z
 
     move-result v2
 
@@ -1839,7 +1839,7 @@
 
     .line 185
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/fmm/SimChangeAlert;->mView:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mView:Landroid/view/View;
 
     const v5, 0x7f0d04b9
 
@@ -1858,7 +1858,7 @@
     .line 189
     .end local v1    # "textView":Landroid/widget/TextView;
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/fmm/SimChangeAlert;->mView:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mView:Landroid/view/View;
 
     const v5, 0x7f0d04b8
 
@@ -1868,21 +1868,21 @@
 
     check-cast v2, Landroid/widget/EditText;
 
-    iput-object v2, p0, Lcom/android/settings/fmm/SimChangeAlert;->mAlertMessage:Landroid/widget/EditText;
+    iput-object v2, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mAlertMessage:Landroid/widget/EditText;
 
     .line 190
-    iget-object v2, p0, Lcom/android/settings/fmm/SimChangeAlert;->mAlertMessage:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mAlertMessage:Landroid/widget/EditText;
 
     new-array v5, v3, [Landroid/text/InputFilter;
 
-    iget-object v6, p0, Lcom/android/settings/fmm/SimChangeAlert;->AlterMessageLengthFilter:Landroid/text/InputFilter;
+    iget-object v6, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->AlterMessageLengthFilter:Landroid/text/InputFilter;
 
     aput-object v6, v5, v4
 
     invoke-virtual {v2, v5}, Landroid/widget/EditText;->setFilters([Landroid/text/InputFilter;)V
 
     .line 194
-    iget-object v2, p0, Lcom/android/settings/fmm/SimChangeAlert;->mView:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mView:Landroid/view/View;
 
     const v5, 0x7f0d04ba
 
@@ -1892,10 +1892,10 @@
 
     check-cast v2, Landroid/widget/EditText;
 
-    iput-object v2, p0, Lcom/android/settings/fmm/SimChangeAlert;->mLinkedContact:Landroid/widget/EditText;
+    iput-object v2, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mLinkedContact:Landroid/widget/EditText;
 
     .line 195
-    iget-object v2, p0, Lcom/android/settings/fmm/SimChangeAlert;->mView:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mView:Landroid/view/View;
 
     const v5, 0x7f0d04bb
 
@@ -1905,14 +1905,14 @@
 
     .line 196
     .local v0, "createBtn":Landroid/view/View;
-    new-instance v2, Lcom/android/settings/fmm/SimChangeAlert$2;
+    new-instance v2, Lcom/android/settings_ex/fmm/SimChangeAlert$2;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/fmm/SimChangeAlert$2;-><init>(Lcom/android/settings/fmm/SimChangeAlert;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/fmm/SimChangeAlert$2;-><init>(Lcom/android/settings_ex/fmm/SimChangeAlert;)V
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 230
-    iget-object v2, p0, Lcom/android/settings/fmm/SimChangeAlert;->mView:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mView:Landroid/view/View;
 
     const v5, 0x7f0d04bd
 
@@ -1922,33 +1922,33 @@
 
     check-cast v2, Landroid/widget/Button;
 
-    iput-object v2, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContact:Landroid/widget/Button;
+    iput-object v2, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContact:Landroid/widget/Button;
 
     .line 231
-    iget-object v2, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContact:Landroid/widget/Button;
+    iget-object v2, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContact:Landroid/widget/Button;
 
-    new-instance v5, Lcom/android/settings/fmm/SimChangeAlert$3;
+    new-instance v5, Lcom/android/settings_ex/fmm/SimChangeAlert$3;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/fmm/SimChangeAlert$3;-><init>(Lcom/android/settings/fmm/SimChangeAlert;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/fmm/SimChangeAlert$3;-><init>(Lcom/android/settings_ex/fmm/SimChangeAlert;)V
 
     invoke-virtual {v2, v5}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 246
-    invoke-virtual {p0}, Lcom/android/settings/fmm/SimChangeAlert;->init()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->init()V
 
     .line 247
-    iget-object v2, p0, Lcom/android/settings/fmm/SimChangeAlert;->mAlertMessage:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mAlertMessage:Landroid/widget/EditText;
 
-    new-instance v5, Lcom/android/settings/fmm/SimChangeAlert$4;
+    new-instance v5, Lcom/android/settings_ex/fmm/SimChangeAlert$4;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/fmm/SimChangeAlert$4;-><init>(Lcom/android/settings/fmm/SimChangeAlert;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/fmm/SimChangeAlert$4;-><init>(Lcom/android/settings_ex/fmm/SimChangeAlert;)V
 
     invoke-virtual {v2, v5}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 275
-    iget-object v5, p0, Lcom/android/settings/fmm/SimChangeAlert;->mView:Landroid/view/View;
+    iget-object v5, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mView:Landroid/view/View;
 
-    invoke-virtual {p0}, Lcom/android/settings/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1967,10 +1967,10 @@
     move v2, v3
 
     :goto_0
-    invoke-direct {p0, v5, v2}, Lcom/android/settings/fmm/SimChangeAlert;->enableDisableView(Landroid/view/View;Z)V
+    invoke-direct {p0, v5, v2}, Lcom/android/settings_ex/fmm/SimChangeAlert;->enableDisableView(Landroid/view/View;Z)V
 
     .line 278
-    iget-object v2, p0, Lcom/android/settings/fmm/SimChangeAlert;->mView:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mView:Landroid/view/View;
 
     return-object v2
 
@@ -1986,7 +1986,7 @@
 
     .prologue
     .line 556
-    invoke-virtual {p0}, Lcom/android/settings/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -2000,7 +2000,7 @@
 
     .line 558
     .local v0, "imm":Landroid/view/inputmethod/InputMethodManager;
-    iget-object v1, p0, Lcom/android/settings/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mContent:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->getWindowToken()Landroid/os/IBinder;
 
@@ -2011,17 +2011,17 @@
     invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
     .line 560
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroyView()V
 
     .line 562
-    iget-object v1, p0, Lcom/android/settings/fmm/SimChangeAlert;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v1, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 563
-    iget-object v1, p0, Lcom/android/settings/fmm/SimChangeAlert;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 564
     return-void
@@ -2040,7 +2040,7 @@
     packed-switch v0, :pswitch_data_0
 
     .line 167
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v0
 
@@ -2049,14 +2049,14 @@
 
     .line 162
     :pswitch_0
-    invoke-virtual {p0}, Lcom/android/settings/fmm/SimChangeAlert;->DoSave()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->DoSave()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 163
-    invoke-virtual {p0}, Lcom/android/settings/fmm/SimChangeAlert;->finishFragment()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->finishFragment()V
 
     .line 164
     :cond_0
@@ -2078,7 +2078,7 @@
 
     .prologue
     .line 134
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 135
     return-void
@@ -2089,22 +2089,22 @@
 
     .prologue
     .line 139
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onStop()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onStop()V
 
     .line 141
-    iget-object v0, p0, Lcom/android/settings/fmm/SimChangeAlert;->mActionBarLayout:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mActionBarLayout:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
     .line 142
-    iget-object v0, p0, Lcom/android/settings/fmm/SimChangeAlert;->mActionBarLayout:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mActionBarLayout:Landroid/view/View;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 143
-    invoke-virtual {p0}, Lcom/android/settings/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2128,26 +2128,26 @@
 
     .prologue
     .line 568
-    iget-object v0, p0, Lcom/android/settings/fmm/SimChangeAlert;->mView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/fmm/SimChangeAlert;->mView:Landroid/view/View;
 
-    invoke-direct {p0, v0, p2}, Lcom/android/settings/fmm/SimChangeAlert;->enableDisableView(Landroid/view/View;Z)V
+    invoke-direct {p0, v0, p2}, Lcom/android/settings_ex/fmm/SimChangeAlert;->enableDisableView(Landroid/view/View;Z)V
 
     .line 569
     if-eqz p2, :cond_0
 
     .line 570
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    sget-boolean v0, Lcom/android/settings/fmm/SimChangeAlert;->chkboxFlag:Z
+    sget-boolean v0, Lcom/android/settings_ex/fmm/SimChangeAlert;->chkboxFlag:Z
 
     if-nez v0, :cond_0
 
     .line 571
-    invoke-virtual {p0}, Lcom/android/settings/fmm/SimChangeAlert;->showNotificationChargeDialog()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->showNotificationChargeDialog()V
 
     .line 574
     :cond_0
@@ -2159,7 +2159,7 @@
 
     .prologue
     .line 304
-    invoke-virtual {p0}, Lcom/android/settings/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -2187,16 +2187,16 @@
 
     .line 307
     .local v0, "chkbox":Landroid/widget/CheckBox;
-    new-instance v3, Lcom/android/settings/fmm/SimChangeAlert$5;
+    new-instance v3, Lcom/android/settings_ex/fmm/SimChangeAlert$5;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/fmm/SimChangeAlert$5;-><init>(Lcom/android/settings/fmm/SimChangeAlert;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/fmm/SimChangeAlert$5;-><init>(Lcom/android/settings_ex/fmm/SimChangeAlert;)V
 
     invoke-virtual {v0, v3}, Landroid/widget/CheckBox;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 311
     new-instance v3, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fmm/SimChangeAlert;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -2214,9 +2214,9 @@
 
     const v4, 0x104000a
 
-    new-instance v5, Lcom/android/settings/fmm/SimChangeAlert$8;
+    new-instance v5, Lcom/android/settings_ex/fmm/SimChangeAlert$8;
 
-    invoke-direct {v5, p0, v0}, Lcom/android/settings/fmm/SimChangeAlert$8;-><init>(Lcom/android/settings/fmm/SimChangeAlert;Landroid/widget/CheckBox;)V
+    invoke-direct {v5, p0, v0}, Lcom/android/settings_ex/fmm/SimChangeAlert$8;-><init>(Lcom/android/settings_ex/fmm/SimChangeAlert;Landroid/widget/CheckBox;)V
 
     invoke-virtual {v3, v4, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -2224,17 +2224,17 @@
 
     const/high16 v4, 0x1040000
 
-    new-instance v5, Lcom/android/settings/fmm/SimChangeAlert$7;
+    new-instance v5, Lcom/android/settings_ex/fmm/SimChangeAlert$7;
 
-    invoke-direct {v5, p0, v0}, Lcom/android/settings/fmm/SimChangeAlert$7;-><init>(Lcom/android/settings/fmm/SimChangeAlert;Landroid/widget/CheckBox;)V
+    invoke-direct {v5, p0, v0}, Lcom/android/settings_ex/fmm/SimChangeAlert$7;-><init>(Lcom/android/settings_ex/fmm/SimChangeAlert;Landroid/widget/CheckBox;)V
 
     invoke-virtual {v3, v4, v5}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v3
 
-    new-instance v4, Lcom/android/settings/fmm/SimChangeAlert$6;
+    new-instance v4, Lcom/android/settings_ex/fmm/SimChangeAlert$6;
 
-    invoke-direct {v4, p0, v0}, Lcom/android/settings/fmm/SimChangeAlert$6;-><init>(Lcom/android/settings/fmm/SimChangeAlert;Landroid/widget/CheckBox;)V
+    invoke-direct {v4, p0, v0}, Lcom/android/settings_ex/fmm/SimChangeAlert$6;-><init>(Lcom/android/settings_ex/fmm/SimChangeAlert;Landroid/widget/CheckBox;)V
 
     invoke-virtual {v3, v4}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
 

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/CancellablePreference;
+.class public Lcom/android/settings_ex/CancellablePreference;
 .super Landroid/preference/Preference;
 .source "CancellablePreference.java"
 
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/CancellablePreference$OnCancelListener;
+        Lcom/android/settings_ex/CancellablePreference$OnCancelListener;
     }
 .end annotation
 
@@ -17,7 +17,7 @@
 # instance fields
 .field private mCancellable:Z
 
-.field private mListener:Lcom/android/settings/CancellablePreference$OnCancelListener;
+.field private mListener:Lcom/android/settings_ex/CancellablePreference$OnCancelListener;
 
 
 # virtual methods
@@ -40,7 +40,7 @@
 
     .line 54
     .local v0, "cancel":Landroid/widget/ImageView;
-    iget-boolean v1, p0, Lcom/android/settings/CancellablePreference;->mCancellable:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/CancellablePreference;->mCancellable:Z
 
     if-eqz v1, :cond_0
 
@@ -68,14 +68,14 @@
 
     .prologue
     .line 60
-    iget-object v0, p0, Lcom/android/settings/CancellablePreference;->mListener:Lcom/android/settings/CancellablePreference$OnCancelListener;
+    iget-object v0, p0, Lcom/android/settings_ex/CancellablePreference;->mListener:Lcom/android/settings_ex/CancellablePreference$OnCancelListener;
 
     if-eqz v0, :cond_0
 
     .line 61
-    iget-object v0, p0, Lcom/android/settings/CancellablePreference;->mListener:Lcom/android/settings/CancellablePreference$OnCancelListener;
+    iget-object v0, p0, Lcom/android/settings_ex/CancellablePreference;->mListener:Lcom/android/settings_ex/CancellablePreference$OnCancelListener;
 
-    invoke-interface {v0, p0}, Lcom/android/settings/CancellablePreference$OnCancelListener;->onCancel(Lcom/android/settings/CancellablePreference;)V
+    invoke-interface {v0, p0}, Lcom/android/settings_ex/CancellablePreference$OnCancelListener;->onCancel(Lcom/android/settings_ex/CancellablePreference;)V
 
     .line 63
     :cond_0
@@ -88,22 +88,22 @@
 
     .prologue
     .line 41
-    iput-boolean p1, p0, Lcom/android/settings/CancellablePreference;->mCancellable:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/CancellablePreference;->mCancellable:Z
 
     .line 42
-    invoke-virtual {p0}, Lcom/android/settings/CancellablePreference;->notifyChanged()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/CancellablePreference;->notifyChanged()V
 
     .line 43
     return-void
 .end method
 
-.method public setOnCancelListener(Lcom/android/settings/CancellablePreference$OnCancelListener;)V
+.method public setOnCancelListener(Lcom/android/settings_ex/CancellablePreference$OnCancelListener;)V
     .locals 0
-    .param p1, "listener"    # Lcom/android/settings/CancellablePreference$OnCancelListener;
+    .param p1, "listener"    # Lcom/android/settings_ex/CancellablePreference$OnCancelListener;
 
     .prologue
     .line 46
-    iput-object p1, p0, Lcom/android/settings/CancellablePreference;->mListener:Lcom/android/settings/CancellablePreference$OnCancelListener;
+    iput-object p1, p0, Lcom/android/settings_ex/CancellablePreference;->mListener:Lcom/android/settings_ex/CancellablePreference$OnCancelListener;
 
     .line 47
     return-void

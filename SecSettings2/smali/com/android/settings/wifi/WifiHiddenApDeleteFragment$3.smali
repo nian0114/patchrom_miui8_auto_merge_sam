@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiHiddenApDeleteFragment$3;
+.class Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment$3;
 .super Ljava/lang/Object;
 .source "WifiHiddenApDeleteFragment.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    value = Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;)V
     .locals 0
 
     .prologue
     .line 138
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -58,10 +58,10 @@
     const/4 v2, 0x0
 
     .line 141
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;
 
-    # getter for: Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->mListView:Landroid/widget/ListView;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->access$300(Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;)Landroid/widget/ListView;
+    # getter for: Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->mListView:Landroid/widget/ListView;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->access$300(Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;)Landroid/widget/ListView;
 
     move-result-object v0
 
@@ -72,20 +72,20 @@
     if-lez v0, :cond_1
 
     .line 142
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;
 
-    # getter for: Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->mRemoveButton:Landroid/view/View;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->access$400(Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;)Landroid/view/View;
+    # getter for: Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->mRemoveButton:Landroid/view/View;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->access$400(Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;)Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setEnabled(Z)V
 
     .line 143
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;
 
-    # getter for: Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->mRemoveTextView:Landroid/widget/TextView;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->access$500(Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->mRemoveTextView:Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->access$500(Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;)Landroid/widget/TextView;
 
     move-result-object v0
 
@@ -93,10 +93,10 @@
 
     .line 149
     :goto_0
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;
 
-    # getter for: Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->mListView:Landroid/widget/ListView;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->access$300(Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;)Landroid/widget/ListView;
+    # getter for: Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->mListView:Landroid/widget/ListView;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->access$300(Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;)Landroid/widget/ListView;
 
     move-result-object v0
 
@@ -104,10 +104,10 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;
 
-    # getter for: Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->mList:Ljava/util/ArrayList;
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->access$200(Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;)Ljava/util/ArrayList;
+    # getter for: Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->mList:Ljava/util/ArrayList;
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->access$200(Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -118,10 +118,10 @@
     if-ne v0, v1, :cond_2
 
     .line 150
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;
 
-    # getter for: Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->mSelectAllCheckbox:Landroid/widget/CheckBox;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->access$100(Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;)Landroid/widget/CheckBox;
+    # getter for: Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->mSelectAllCheckbox:Landroid/widget/CheckBox;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->access$100(Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;)Landroid/widget/CheckBox;
 
     move-result-object v0
 
@@ -130,17 +130,17 @@
     .line 155
     :cond_0
     :goto_1
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;
 
-    # getter for: Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->mCountTextView:Landroid/widget/TextView;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->access$600(Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->mCountTextView:Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->access$600(Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;)Landroid/widget/TextView;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;
 
-    # getter for: Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->mListView:Landroid/widget/ListView;
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->access$300(Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;)Landroid/widget/ListView;
+    # getter for: Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->mListView:Landroid/widget/ListView;
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->access$300(Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;)Landroid/widget/ListView;
 
     move-result-object v1
 
@@ -159,20 +159,20 @@
 
     .line 145
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;
 
-    # getter for: Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->mRemoveButton:Landroid/view/View;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->access$400(Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;)Landroid/view/View;
+    # getter for: Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->mRemoveButton:Landroid/view/View;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->access$400(Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;)Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setEnabled(Z)V
 
     .line 146
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;
 
-    # getter for: Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->mRemoveTextView:Landroid/widget/TextView;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->access$500(Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->mRemoveTextView:Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->access$500(Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;)Landroid/widget/TextView;
 
     move-result-object v0
 
@@ -184,10 +184,10 @@
 
     .line 151
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;
 
-    # getter for: Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->mSelectAllCheckbox:Landroid/widget/CheckBox;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->access$100(Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;)Landroid/widget/CheckBox;
+    # getter for: Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->mSelectAllCheckbox:Landroid/widget/CheckBox;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->access$100(Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;)Landroid/widget/CheckBox;
 
     move-result-object v0
 
@@ -198,10 +198,10 @@
     if-eqz v0, :cond_0
 
     .line 152
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment$3;->this$0:Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;
 
-    # getter for: Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->mSelectAllCheckbox:Landroid/widget/CheckBox;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;->access$100(Lcom/android/settings/wifi/WifiHiddenApDeleteFragment;)Landroid/widget/CheckBox;
+    # getter for: Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->mSelectAllCheckbox:Landroid/widget/CheckBox;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;->access$100(Lcom/android/settings_ex/wifi/WifiHiddenApDeleteFragment;)Landroid/widget/CheckBox;
 
     move-result-object v0
 

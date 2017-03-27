@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/activekey/AppList;
+.class public Lcom/android/settings_ex/activekey/AppList;
 .super Landroid/app/ListActivity;
 .source "AppList.java"
 
@@ -9,16 +9,16 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/activekey/AppList$1;,
-        Lcom/android/settings/activekey/AppList$AlphaComparator;,
-        Lcom/android/settings/activekey/AppList$AppListAdapter;,
-        Lcom/android/settings/activekey/AppList$AppListItem;
+        Lcom/android/settings_ex/activekey/AppList$1;,
+        Lcom/android/settings_ex/activekey/AppList$AlphaComparator;,
+        Lcom/android/settings_ex/activekey/AppList$AppListAdapter;,
+        Lcom/android/settings_ex/activekey/AppList$AppListItem;
     }
 .end annotation
 
 
 # instance fields
-.field private mAppListAdapter:Lcom/android/settings/activekey/AppList$AppListAdapter;
+.field private mAppListAdapter:Lcom/android/settings_ex/activekey/AppList$AppListAdapter;
 
 .field private mPm:Landroid/content/pm/PackageManager;
 
@@ -52,10 +52,10 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v2}, Lcom/android/settings/activekey/AppList;->setResult(I)V
+    invoke-virtual {v0, v2}, Lcom/android/settings_ex/activekey/AppList;->setResult(I)V
 
     .line 84
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/activekey/AppList;->getIntent()Landroid/content/Intent;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/activekey/AppList;->getIntent()Landroid/content/Intent;
 
     move-result-object v30
 
@@ -73,16 +73,16 @@
 
     move-object/from16 v0, p0
 
-    iput-object v2, v0, Lcom/android/settings/activekey/AppList;->pressed_type:Ljava/lang/String;
+    iput-object v2, v0, Lcom/android/settings_ex/activekey/AppList;->pressed_type:Ljava/lang/String;
 
     .line 87
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/activekey/AppList;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/activekey/AppList;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
     move-object/from16 v0, p0
 
-    iput-object v2, v0, Lcom/android/settings/activekey/AppList;->mPm:Landroid/content/pm/PackageManager;
+    iput-object v2, v0, Lcom/android/settings_ex/activekey/AppList;->mPm:Landroid/content/pm/PackageManager;
 
     .line 88
     new-instance v23, Landroid/content/Intent;
@@ -104,7 +104,7 @@
     .line 90
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/activekey/AppList;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v2, v0, Lcom/android/settings_ex/activekey/AppList;->mPm:Landroid/content/pm/PackageManager;
 
     const/16 v3, 0x20
 
@@ -121,7 +121,7 @@
     invoke-direct {v13}, Ljava/util/ArrayList;-><init>()V
 
     .line 94
-    .local v13, "appList":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/activekey/AppList$AppListItem;>;"
+    .local v13, "appList":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/activekey/AppList$AppListItem;>;"
     invoke-interface/range {v22 .. v22}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v29
@@ -142,7 +142,7 @@
 
     .line 95
     .local v26, "app":Landroid/content/pm/ResolveInfo;
-    new-instance v27, Lcom/android/settings/activekey/AppList$AppListItem;
+    new-instance v27, Lcom/android/settings_ex/activekey/AppList$AppListItem;
 
     move-object/from16 v0, v26
 
@@ -162,7 +162,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/android/settings/activekey/AppList;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v5, v0, Lcom/android/settings_ex/activekey/AppList;->mPm:Landroid/content/pm/PackageManager;
 
     invoke-virtual {v2, v5}, Landroid/content/pm/ActivityInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
@@ -176,7 +176,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lcom/android/settings/activekey/AppList;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v6, v0, Lcom/android/settings_ex/activekey/AppList;->mPm:Landroid/content/pm/PackageManager;
 
     invoke-virtual {v5, v6}, Landroid/content/pm/ActivityInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
 
@@ -184,10 +184,10 @@
 
     move-object/from16 v0, v27
 
-    invoke-direct {v0, v3, v4, v2, v5}, Lcom/android/settings/activekey/AppList$AppListItem;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {v0, v3, v4, v2, v5}, Lcom/android/settings_ex/activekey/AppList$AppListItem;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
 
     .line 98
-    .local v27, "appListitem":Lcom/android/settings/activekey/AppList$AppListItem;
+    .local v27, "appListitem":Lcom/android/settings_ex/activekey/AppList$AppListItem;
     move-object/from16 v0, v27
 
     invoke-interface {v13, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -196,24 +196,24 @@
 
     .line 102
     .end local v26    # "app":Landroid/content/pm/ResolveInfo;
-    .end local v27    # "appListitem":Lcom/android/settings/activekey/AppList$AppListItem;
+    .end local v27    # "appListitem":Lcom/android/settings_ex/activekey/AppList$AppListItem;
     :cond_0
-    new-instance v25, Lcom/android/settings/activekey/AppList$AlphaComparator;
+    new-instance v25, Lcom/android/settings_ex/activekey/AppList$AlphaComparator;
 
     const/4 v2, 0x0
 
     move-object/from16 v0, v25
 
-    invoke-direct {v0, v2}, Lcom/android/settings/activekey/AppList$AlphaComparator;-><init>(Lcom/android/settings/activekey/AppList$1;)V
+    invoke-direct {v0, v2}, Lcom/android/settings_ex/activekey/AppList$AlphaComparator;-><init>(Lcom/android/settings_ex/activekey/AppList$1;)V
 
     .line 103
-    .local v25, "alphaComparator":Lcom/android/settings/activekey/AppList$AlphaComparator;
+    .local v25, "alphaComparator":Lcom/android/settings_ex/activekey/AppList$AlphaComparator;
     move-object/from16 v0, v25
 
     invoke-static {v13, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
     .line 106
-    invoke-static {}, Lcom/android/settings/Utils;->hasXcoverKeySetting()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->hasXcoverKeySetting()Z
 
     move-result v2
 
@@ -225,8 +225,8 @@
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
     .line 108
-    .local v7, "xcoverAppList":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/activekey/AppList$AppListItem;>;"
-    new-instance v28, Lcom/android/settings/activekey/AppList$AppListItem;
+    .local v7, "xcoverAppList":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/activekey/AppList$AppListItem;>;"
+    new-instance v28, Lcom/android/settings_ex/activekey/AppList$AppListItem;
 
     const-string v2, "noaction"
 
@@ -236,7 +236,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v4}, Lcom/android/settings/activekey/AppList;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v4}, Lcom/android/settings_ex/activekey/AppList;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -244,16 +244,16 @@
 
     move-object/from16 v0, v28
 
-    invoke-direct {v0, v2, v3, v4, v5}, Lcom/android/settings/activekey/AppList$AppListItem;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {v0, v2, v3, v4, v5}, Lcom/android/settings_ex/activekey/AppList$AppListItem;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
 
     .line 110
-    .local v28, "donothing":Lcom/android/settings/activekey/AppList$AppListItem;
+    .local v28, "donothing":Lcom/android/settings_ex/activekey/AppList$AppListItem;
     move-object/from16 v0, v28
 
     invoke-interface {v7, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 111
-    new-instance v33, Lcom/android/settings/activekey/AppList$AppListItem;
+    new-instance v33, Lcom/android/settings_ex/activekey/AppList$AppListItem;
 
     const-string v2, "torch"
 
@@ -263,11 +263,11 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v4}, Lcom/android/settings/activekey/AppList;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v4}, Lcom/android/settings_ex/activekey/AppList;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/activekey/AppList;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/activekey/AppList;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -279,10 +279,10 @@
 
     move-object/from16 v0, v33
 
-    invoke-direct {v0, v2, v3, v4, v5}, Lcom/android/settings/activekey/AppList$AppListItem;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {v0, v2, v3, v4, v5}, Lcom/android/settings_ex/activekey/AppList$AppListItem;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
 
     .line 114
-    .local v33, "torch":Lcom/android/settings/activekey/AppList$AppListItem;
+    .local v33, "torch":Lcom/android/settings_ex/activekey/AppList$AppListItem;
     move-object/from16 v0, v33
 
     invoke-interface {v7, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -291,7 +291,7 @@
     invoke-interface {v7, v13}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     .line 116
-    new-instance v2, Lcom/android/settings/activekey/AppList$AppListAdapter;
+    new-instance v2, Lcom/android/settings_ex/activekey/AppList$AppListAdapter;
 
     const v5, 0x7f04012c
 
@@ -301,18 +301,18 @@
 
     move-object/from16 v4, p0
 
-    invoke-direct/range {v2 .. v7}, Lcom/android/settings/activekey/AppList$AppListAdapter;-><init>(Lcom/android/settings/activekey/AppList;Landroid/content/Context;IILjava/util/List;)V
+    invoke-direct/range {v2 .. v7}, Lcom/android/settings_ex/activekey/AppList$AppListAdapter;-><init>(Lcom/android/settings_ex/activekey/AppList;Landroid/content/Context;IILjava/util/List;)V
 
     move-object/from16 v0, p0
 
-    iput-object v2, v0, Lcom/android/settings/activekey/AppList;->mAppListAdapter:Lcom/android/settings/activekey/AppList$AppListAdapter;
+    iput-object v2, v0, Lcom/android/settings_ex/activekey/AppList;->mAppListAdapter:Lcom/android/settings_ex/activekey/AppList$AppListAdapter;
 
     .line 123
-    .end local v7    # "xcoverAppList":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/activekey/AppList$AppListItem;>;"
-    .end local v28    # "donothing":Lcom/android/settings/activekey/AppList$AppListItem;
-    .end local v33    # "torch":Lcom/android/settings/activekey/AppList$AppListItem;
+    .end local v7    # "xcoverAppList":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/activekey/AppList$AppListItem;>;"
+    .end local v28    # "donothing":Lcom/android/settings_ex/activekey/AppList$AppListItem;
+    .end local v33    # "torch":Lcom/android/settings_ex/activekey/AppList$AppListItem;
     :goto_1
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/activekey/AppList;->getListView()Landroid/widget/ListView;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/activekey/AppList;->getListView()Landroid/widget/ListView;
 
     move-result-object v31
 
@@ -320,7 +320,7 @@
     .local v31, "list_view":Landroid/widget/ListView;
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/activekey/AppList;->mAppListAdapter:Lcom/android/settings/activekey/AppList$AppListAdapter;
+    iget-object v2, v0, Lcom/android/settings_ex/activekey/AppList;->mAppListAdapter:Lcom/android/settings_ex/activekey/AppList$AppListAdapter;
 
     move-object/from16 v0, v31
 
@@ -334,7 +334,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 128
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/activekey/AppList;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/activekey/AppList;->getResources()Landroid/content/res/Resources;
 
     move-result-object v32
 
@@ -360,11 +360,11 @@
 
     .line 131
     .local v18, "divider_inset_size":I
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/activekey/AppList;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/activekey/AppList;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isRTL(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isRTL(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -373,7 +373,7 @@
     .line 132
     new-instance v14, Landroid/graphics/drawable/InsetDrawable;
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/activekey/AppList;->getListView()Landroid/widget/ListView;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/activekey/AppList;->getListView()Landroid/widget/ListView;
 
     move-result-object v2
 
@@ -391,7 +391,7 @@
 
     .line 133
     .local v14, "insetdivider":Landroid/graphics/drawable/InsetDrawable;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/activekey/AppList;->getListView()Landroid/widget/ListView;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/activekey/AppList;->getListView()Landroid/widget/ListView;
 
     move-result-object v2
 
@@ -399,7 +399,7 @@
 
     .line 140
     :goto_2
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/activekey/AppList;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/activekey/AppList;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v24
 
@@ -425,7 +425,7 @@
     .end local v31    # "list_view":Landroid/widget/ListView;
     .end local v32    # "resources":Landroid/content/res/Resources;
     :cond_2
-    new-instance v8, Lcom/android/settings/activekey/AppList$AppListAdapter;
+    new-instance v8, Lcom/android/settings_ex/activekey/AppList$AppListAdapter;
 
     const v11, 0x7f04012c
 
@@ -435,11 +435,11 @@
 
     move-object/from16 v10, p0
 
-    invoke-direct/range {v8 .. v13}, Lcom/android/settings/activekey/AppList$AppListAdapter;-><init>(Lcom/android/settings/activekey/AppList;Landroid/content/Context;IILjava/util/List;)V
+    invoke-direct/range {v8 .. v13}, Lcom/android/settings_ex/activekey/AppList$AppListAdapter;-><init>(Lcom/android/settings_ex/activekey/AppList;Landroid/content/Context;IILjava/util/List;)V
 
     move-object/from16 v0, p0
 
-    iput-object v8, v0, Lcom/android/settings/activekey/AppList;->mAppListAdapter:Lcom/android/settings/activekey/AppList$AppListAdapter;
+    iput-object v8, v0, Lcom/android/settings_ex/activekey/AppList;->mAppListAdapter:Lcom/android/settings_ex/activekey/AppList$AppListAdapter;
 
     goto :goto_1
 
@@ -450,7 +450,7 @@
     :cond_3
     new-instance v14, Landroid/graphics/drawable/InsetDrawable;
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/activekey/AppList;->getListView()Landroid/widget/ListView;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/activekey/AppList;->getListView()Landroid/widget/ListView;
 
     move-result-object v2
 
@@ -470,7 +470,7 @@
 
     .line 136
     .restart local v14    # "insetdivider":Landroid/graphics/drawable/InsetDrawable;
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/activekey/AppList;->getListView()Landroid/widget/ListView;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/activekey/AppList;->getListView()Landroid/widget/ListView;
 
     move-result-object v2
 
@@ -506,15 +506,15 @@
 
     move-result-object v4
 
-    iget-object v2, p0, Lcom/android/settings/activekey/AppList;->mAppListAdapter:Lcom/android/settings/activekey/AppList$AppListAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/activekey/AppList;->mAppListAdapter:Lcom/android/settings_ex/activekey/AppList$AppListAdapter;
 
-    invoke-virtual {v2, p3}, Lcom/android/settings/activekey/AppList$AppListAdapter;->getItem(I)Ljava/lang/Object;
+    invoke-virtual {v2, p3}, Lcom/android/settings_ex/activekey/AppList$AppListAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/activekey/AppList$AppListItem;
+    check-cast v2, Lcom/android/settings_ex/activekey/AppList$AppListItem;
 
-    iget-object v2, v2, Lcom/android/settings/activekey/AppList$AppListItem;->mActivityName:Ljava/lang/String;
+    iget-object v2, v2, Lcom/android/settings_ex/activekey/AppList$AppListItem;->mActivityName:Ljava/lang/String;
 
     invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -539,15 +539,15 @@
 
     move-result-object v4
 
-    iget-object v2, p0, Lcom/android/settings/activekey/AppList;->mAppListAdapter:Lcom/android/settings/activekey/AppList$AppListAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/activekey/AppList;->mAppListAdapter:Lcom/android/settings_ex/activekey/AppList$AppListAdapter;
 
-    invoke-virtual {v2, p3}, Lcom/android/settings/activekey/AppList$AppListAdapter;->getItem(I)Ljava/lang/Object;
+    invoke-virtual {v2, p3}, Lcom/android/settings_ex/activekey/AppList$AppListAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/activekey/AppList$AppListItem;
+    check-cast v2, Lcom/android/settings_ex/activekey/AppList$AppListItem;
 
-    iget-object v2, v2, Lcom/android/settings/activekey/AppList$AppListItem;->mLabel:Ljava/lang/String;
+    iget-object v2, v2, Lcom/android/settings_ex/activekey/AppList$AppListItem;->mLabel:Ljava/lang/String;
 
     invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -562,30 +562,30 @@
     .line 163
     const-string v3, "selected_app"
 
-    iget-object v2, p0, Lcom/android/settings/activekey/AppList;->mAppListAdapter:Lcom/android/settings/activekey/AppList$AppListAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/activekey/AppList;->mAppListAdapter:Lcom/android/settings_ex/activekey/AppList$AppListAdapter;
 
-    invoke-virtual {v2, p3}, Lcom/android/settings/activekey/AppList$AppListAdapter;->getItem(I)Ljava/lang/Object;
+    invoke-virtual {v2, p3}, Lcom/android/settings_ex/activekey/AppList$AppListAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/activekey/AppList$AppListItem;
+    check-cast v2, Lcom/android/settings_ex/activekey/AppList$AppListItem;
 
-    iget-object v2, v2, Lcom/android/settings/activekey/AppList$AppListItem;->mActivityName:Ljava/lang/String;
+    iget-object v2, v2, Lcom/android/settings_ex/activekey/AppList$AppListItem;->mActivityName:Ljava/lang/String;
 
     invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 164
     const-string v3, "selected_app_title"
 
-    iget-object v2, p0, Lcom/android/settings/activekey/AppList;->mAppListAdapter:Lcom/android/settings/activekey/AppList$AppListAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/activekey/AppList;->mAppListAdapter:Lcom/android/settings_ex/activekey/AppList$AppListAdapter;
 
-    invoke-virtual {v2, p3}, Lcom/android/settings/activekey/AppList$AppListAdapter;->getItem(I)Ljava/lang/Object;
+    invoke-virtual {v2, p3}, Lcom/android/settings_ex/activekey/AppList$AppListAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/activekey/AppList$AppListItem;
+    check-cast v2, Lcom/android/settings_ex/activekey/AppList$AppListItem;
 
-    iget-object v2, v2, Lcom/android/settings/activekey/AppList$AppListItem;->mLabel:Ljava/lang/String;
+    iget-object v2, v2, Lcom/android/settings_ex/activekey/AppList$AppListItem;->mLabel:Ljava/lang/String;
 
     invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -594,15 +594,15 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p0, Lcom/android/settings/activekey/AppList;->mAppListAdapter:Lcom/android/settings/activekey/AppList$AppListAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/activekey/AppList;->mAppListAdapter:Lcom/android/settings_ex/activekey/AppList$AppListAdapter;
 
-    invoke-virtual {v2, p3}, Lcom/android/settings/activekey/AppList$AppListAdapter;->getItem(I)Ljava/lang/Object;
+    invoke-virtual {v2, p3}, Lcom/android/settings_ex/activekey/AppList$AppListAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/activekey/AppList$AppListItem;
+    check-cast v2, Lcom/android/settings_ex/activekey/AppList$AppListItem;
 
-    iget-object v2, v2, Lcom/android/settings/activekey/AppList$AppListItem;->mPackageName:Ljava/lang/String;
+    iget-object v2, v2, Lcom/android/settings_ex/activekey/AppList$AppListItem;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -614,15 +614,15 @@
 
     move-result-object v3
 
-    iget-object v2, p0, Lcom/android/settings/activekey/AppList;->mAppListAdapter:Lcom/android/settings/activekey/AppList$AppListAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/activekey/AppList;->mAppListAdapter:Lcom/android/settings_ex/activekey/AppList$AppListAdapter;
 
-    invoke-virtual {v2, p3}, Lcom/android/settings/activekey/AppList$AppListAdapter;->getItem(I)Ljava/lang/Object;
+    invoke-virtual {v2, p3}, Lcom/android/settings_ex/activekey/AppList$AppListAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/activekey/AppList$AppListItem;
+    check-cast v2, Lcom/android/settings_ex/activekey/AppList$AppListItem;
 
-    iget-object v2, v2, Lcom/android/settings/activekey/AppList$AppListItem;->mActivityName:Ljava/lang/String;
+    iget-object v2, v2, Lcom/android/settings_ex/activekey/AppList$AppListItem;->mActivityName:Ljava/lang/String;
 
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -634,7 +634,7 @@
 
     .line 169
     .local v0, "app":Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/Utils;->hasXcoverKeySetting()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->hasXcoverKeySetting()Z
 
     move-result v2
 
@@ -656,7 +656,7 @@
     :cond_0
     const-string v2, "short"
 
-    iget-object v3, p0, Lcom/android/settings/activekey/AppList;->pressed_type:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/activekey/AppList;->pressed_type:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -665,7 +665,7 @@
     if-eqz v2, :cond_2
 
     .line 175
-    invoke-virtual {p0}, Lcom/android/settings/activekey/AppList;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/activekey/AppList;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -676,7 +676,7 @@
     .line 184
     :cond_1
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/activekey/AppList;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/activekey/AppList;->finish()V
 
     .line 185
     return-void
@@ -685,7 +685,7 @@
     :cond_2
     const-string v2, "long"
 
-    iget-object v3, p0, Lcom/android/settings/activekey/AppList;->pressed_type:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/activekey/AppList;->pressed_type:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -694,14 +694,14 @@
     if-eqz v2, :cond_1
 
     .line 177
-    invoke-static {}, Lcom/android/settings/Utils;->hasXcoverKeySetting()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->hasXcoverKeySetting()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
     .line 178
-    invoke-virtual {p0}, Lcom/android/settings/activekey/AppList;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/activekey/AppList;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -713,7 +713,7 @@
 
     .line 180
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/activekey/AppList;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/activekey/AppList;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -753,7 +753,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 152
-    invoke-virtual {p0}, Lcom/android/settings/activekey/AppList;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/activekey/AppList;->finish()V
 
     .line 153
     const/4 v0, 0x1

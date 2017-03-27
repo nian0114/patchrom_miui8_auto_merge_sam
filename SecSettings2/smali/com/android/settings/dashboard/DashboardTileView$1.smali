@@ -1,4 +1,4 @@
-.class Lcom/android/settings/dashboard/DashboardTileView$1;
+.class Lcom/android/settings_ex/dashboard/DashboardTileView$1;
 .super Ljava/lang/Object;
 .source "DashboardTileView.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/dashboard/DashboardTileView;->showOnlineHelpDialog()V
+    value = Lcom/android/settings_ex/dashboard/DashboardTileView;->showOnlineHelpDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/dashboard/DashboardTileView;
+.field final synthetic this$0:Lcom/android/settings_ex/dashboard/DashboardTileView;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/dashboard/DashboardTileView;)V
+.method constructor <init>(Lcom/android/settings_ex/dashboard/DashboardTileView;)V
     .locals 0
 
     .prologue
     .line 250
-    iput-object p1, p0, Lcom/android/settings/dashboard/DashboardTileView$1;->this$0:Lcom/android/settings/dashboard/DashboardTileView;
+    iput-object p1, p0, Lcom/android/settings_ex/dashboard/DashboardTileView$1;->this$0:Lcom/android/settings_ex/dashboard/DashboardTileView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

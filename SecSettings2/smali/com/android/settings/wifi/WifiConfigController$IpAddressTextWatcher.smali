@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiConfigController$IpAddressTextWatcher;
+.class Lcom/android/settings_ex/wifi/WifiConfigController$IpAddressTextWatcher;
 .super Ljava/lang/Object;
 .source "WifiConfigController.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiConfigController;
+    value = Lcom/android/settings_ex/wifi/WifiConfigController;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,22 +20,22 @@
 # instance fields
 .field final editText:Landroid/widget/EditText;
 
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiConfigController;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/settings/wifi/WifiConfigController;Landroid/widget/EditText;)V
+.method public constructor <init>(Lcom/android/settings_ex/wifi/WifiConfigController;Landroid/widget/EditText;)V
     .locals 0
     .param p2, "edit"    # Landroid/widget/EditText;
 
     .prologue
     .line 3438
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiConfigController$IpAddressTextWatcher;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiConfigController$IpAddressTextWatcher;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3439
-    iput-object p2, p0, Lcom/android/settings/wifi/WifiConfigController$IpAddressTextWatcher;->editText:Landroid/widget/EditText;
+    iput-object p2, p0, Lcom/android/settings_ex/wifi/WifiConfigController$IpAddressTextWatcher;->editText:Landroid/widget/EditText;
 
     .line 3440
     return-void
@@ -49,16 +49,16 @@
 
     .prologue
     .line 3444
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiConfigController$IpAddressTextWatcher;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiConfigController$IpAddressTextWatcher;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
-    # getter for: Lcom/android/settings/wifi/WifiConfigController;->mTextViewChangedHandler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiConfigController;->access$900(Lcom/android/settings/wifi/WifiConfigController;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/wifi/WifiConfigController;->mTextViewChangedHandler:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiConfigController;->access$900(Lcom/android/settings_ex/wifi/WifiConfigController;)Landroid/os/Handler;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/settings/wifi/WifiConfigController$IpAddressTextWatcher$1;
+    new-instance v1, Lcom/android/settings_ex/wifi/WifiConfigController$IpAddressTextWatcher$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/wifi/WifiConfigController$IpAddressTextWatcher$1;-><init>(Lcom/android/settings/wifi/WifiConfigController$IpAddressTextWatcher;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/wifi/WifiConfigController$IpAddressTextWatcher$1;-><init>(Lcom/android/settings_ex/wifi/WifiConfigController$IpAddressTextWatcher;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -154,7 +154,7 @@
     .line 3466
     .end local v2    # "temp":C
     :cond_3
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiConfigController$IpAddressTextWatcher;->editText:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiConfigController$IpAddressTextWatcher;->editText:Landroid/widget/EditText;
 
     if-eqz v4, :cond_4
 
@@ -165,14 +165,14 @@
     if-nez v4, :cond_4
 
     .line 3467
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiConfigController$IpAddressTextWatcher;->editText:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiConfigController$IpAddressTextWatcher;->editText:Landroid/widget/EditText;
 
     invoke-virtual {v4, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 3468
-    iget-object v4, p0, Lcom/android/settings/wifi/WifiConfigController$IpAddressTextWatcher;->editText:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/WifiConfigController$IpAddressTextWatcher;->editText:Landroid/widget/EditText;
 
-    iget-object v5, p0, Lcom/android/settings/wifi/WifiConfigController$IpAddressTextWatcher;->editText:Landroid/widget/EditText;
+    iget-object v5, p0, Lcom/android/settings_ex/wifi/WifiConfigController$IpAddressTextWatcher;->editText:Landroid/widget/EditText;
 
     invoke-virtual {v5}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/SetupWizardWifiScreen$14;
+.class Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$14;
 .super Ljava/lang/Object;
 .source "SetupWizardWifiScreen.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/SetupWizardWifiScreen;->showAlertDialog(I)V
+    value = Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->showAlertDialog(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
     .locals 0
 
     .prologue
     .line 513
-    iput-object p1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$14;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$14;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,16 +46,16 @@
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     .line 517
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$14;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$14;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     const/4 v1, -0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->setResult(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->setResult(I)V
 
     .line 518
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$14;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$14;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->finish()V
 
     .line 519
     return-void

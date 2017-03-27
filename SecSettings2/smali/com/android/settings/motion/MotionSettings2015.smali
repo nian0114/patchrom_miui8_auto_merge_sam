@@ -1,15 +1,15 @@
-.class public Lcom/android/settings/motion/MotionSettings2015;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/motion/MotionSettings2015;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "MotionSettings2015.java"
 
 # interfaces
 .implements Landroid/preference/Preference$OnPreferenceChangeListener;
 .implements Landroid/preference/Preference$OnPreferenceClickListener;
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 .field public static final mMotionFeatures:[Ljava/lang/String;
 
@@ -35,9 +35,9 @@
 
 .field private mResolver:Landroid/content/ContentResolver;
 
-.field private mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+.field private mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-.field private mViewPagerAdapter:Lcom/android/settings/motion/MotionViewPagerAdapter;
+.field private mViewPagerAdapter:Lcom/android/settings_ex/motion/MotionViewPagerAdapter;
 
 
 # direct methods
@@ -80,14 +80,14 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/android/settings/motion/MotionSettings2015;->mMotionFeatures:[Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/motion/MotionSettings2015;->mMotionFeatures:[Ljava/lang/String;
 
     .line 341
-    new-instance v0, Lcom/android/settings/motion/MotionSettings2015$5;
+    new-instance v0, Lcom/android/settings_ex/motion/MotionSettings2015$5;
 
-    invoke-direct {v0}, Lcom/android/settings/motion/MotionSettings2015$5;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/motion/MotionSettings2015$5;-><init>()V
 
-    sput-object v0, Lcom/android/settings/motion/MotionSettings2015;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/motion/MotionSettings2015;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -97,117 +97,117 @@
 
     .prologue
     .line 44
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 59
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/motion/MotionSettings2015;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     .line 72
-    new-instance v0, Lcom/android/settings/motion/MotionSettings2015$1;
+    new-instance v0, Lcom/android/settings_ex/motion/MotionSettings2015$1;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/motion/MotionSettings2015$1;-><init>(Lcom/android/settings/motion/MotionSettings2015;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/motion/MotionSettings2015$1;-><init>(Lcom/android/settings_ex/motion/MotionSettings2015;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/motion/MotionSettings2015;->mPalmSwipeToCaptureObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPalmSwipeToCaptureObserver:Landroid/database/ContentObserver;
 
     .line 80
-    new-instance v0, Lcom/android/settings/motion/MotionSettings2015$2;
+    new-instance v0, Lcom/android/settings_ex/motion/MotionSettings2015$2;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/motion/MotionSettings2015$2;-><init>(Lcom/android/settings/motion/MotionSettings2015;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/motion/MotionSettings2015$2;-><init>(Lcom/android/settings_ex/motion/MotionSettings2015;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/motion/MotionSettings2015;->mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/motion/MotionSettings2015;)Landroid/preference/SwitchPreference;
+.method static synthetic access$000(Lcom/android/settings_ex/motion/MotionSettings2015;)Landroid/preference/SwitchPreference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/motion/MotionSettings2015;
+    .param p0, "x0"    # Lcom/android/settings_ex/motion/MotionSettings2015;
 
     .prologue
     .line 44
-    iget-object v0, p0, Lcom/android/settings/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/motion/MotionSettings2015;)Landroid/content/ContentResolver;
+.method static synthetic access$100(Lcom/android/settings_ex/motion/MotionSettings2015;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/motion/MotionSettings2015;
+    .param p0, "x0"    # Lcom/android/settings_ex/motion/MotionSettings2015;
 
     .prologue
     .line 44
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/motion/MotionSettings2015;)Landroid/content/ContentResolver;
+.method static synthetic access$200(Lcom/android/settings_ex/motion/MotionSettings2015;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/motion/MotionSettings2015;
+    .param p0, "x0"    # Lcom/android/settings_ex/motion/MotionSettings2015;
 
     .prologue
     .line 44
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/motion/MotionSettings2015;)Lcom/android/settings/WrapContentHeightViewPager;
+.method static synthetic access$300(Lcom/android/settings_ex/motion/MotionSettings2015;)Lcom/android/settings_ex/WrapContentHeightViewPager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/motion/MotionSettings2015;
+    .param p0, "x0"    # Lcom/android/settings_ex/motion/MotionSettings2015;
 
     .prologue
     .line 44
-    iget-object v0, p0, Lcom/android/settings/motion/MotionSettings2015;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v0, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/motion/MotionSettings2015;)Landroid/content/ContentResolver;
+.method static synthetic access$400(Lcom/android/settings_ex/motion/MotionSettings2015;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/motion/MotionSettings2015;
+    .param p0, "x0"    # Lcom/android/settings_ex/motion/MotionSettings2015;
 
     .prologue
     .line 44
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/motion/MotionSettings2015;)Landroid/content/ContentResolver;
+.method static synthetic access$500(Lcom/android/settings_ex/motion/MotionSettings2015;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/motion/MotionSettings2015;
+    .param p0, "x0"    # Lcom/android/settings_ex/motion/MotionSettings2015;
 
     .prologue
     .line 44
-    iget-object v0, p0, Lcom/android/settings/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
+    iget-object v0, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/motion/MotionSettings2015;)Landroid/content/ContentResolver;
+.method static synthetic access$600(Lcom/android/settings_ex/motion/MotionSettings2015;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/motion/MotionSettings2015;
+    .param p0, "x0"    # Lcom/android/settings_ex/motion/MotionSettings2015;
 
     .prologue
     .line 44
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -219,19 +219,19 @@
 
     .prologue
     .line 426
-    iget-object v0, p0, Lcom/android/settings/motion/MotionSettings2015;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
     .line 427
-    iget-object v0, p0, Lcom/android/settings/motion/MotionSettings2015;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 428
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/motion/MotionSettings2015;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     .line 430
     :cond_0
@@ -243,14 +243,14 @@
 
     .prologue
     .line 373
-    invoke-direct {p0}, Lcom/android/settings/motion/MotionSettings2015;->dismissAllDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->dismissAllDialog()V
 
     .line 374
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->getEnabledTalkbackName(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->getEnabledTalkbackName(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -258,7 +258,7 @@
     .local v0, "enabledTalkbackName":Ljava/lang/String;
     const v2, 0x7f0e0a0e
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/motion/MotionSettings2015;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/motion/MotionSettings2015;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -270,7 +270,7 @@
 
     const v5, 0x7f0e1269
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/motion/MotionSettings2015;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/motion/MotionSettings2015;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -292,7 +292,7 @@
     .local v1, "popup_msg":Ljava/lang/String;
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -304,9 +304,9 @@
 
     const v3, 0x7f0e1282
 
-    new-instance v4, Lcom/android/settings/motion/MotionSettings2015$6;
+    new-instance v4, Lcom/android/settings_ex/motion/MotionSettings2015$6;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/motion/MotionSettings2015$6;-><init>(Lcom/android/settings/motion/MotionSettings2015;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/motion/MotionSettings2015$6;-><init>(Lcom/android/settings_ex/motion/MotionSettings2015;)V
 
     invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -324,19 +324,19 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/motion/MotionSettings2015;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iput-object v2, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     .line 388
-    iget-object v2, p0, Lcom/android/settings/motion/MotionSettings2015;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
-    new-instance v3, Lcom/android/settings/motion/MotionSettings2015$7;
+    new-instance v3, Lcom/android/settings_ex/motion/MotionSettings2015$7;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/motion/MotionSettings2015$7;-><init>(Lcom/android/settings/motion/MotionSettings2015;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/motion/MotionSettings2015$7;-><init>(Lcom/android/settings_ex/motion/MotionSettings2015;)V
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 395
-    iget-object v2, p0, Lcom/android/settings/motion/MotionSettings2015;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v2}, Landroid/app/AlertDialog;->show()V
 
@@ -351,12 +351,12 @@
     const v5, 0x7f0e0941
 
     .line 399
-    invoke-direct {p0}, Lcom/android/settings/motion/MotionSettings2015;->dismissAllDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->dismissAllDialog()V
 
     .line 400
     const v1, 0x7f0e0a0e
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/motion/MotionSettings2015;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/motion/MotionSettings2015;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -368,7 +368,7 @@
 
     const v4, 0x7f0e1269
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/motion/MotionSettings2015;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/motion/MotionSettings2015;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -376,7 +376,7 @@
 
     const/4 v3, 0x1
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/motion/MotionSettings2015;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/motion/MotionSettings2015;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -384,7 +384,7 @@
 
     const/4 v3, 0x2
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/motion/MotionSettings2015;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/motion/MotionSettings2015;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -398,7 +398,7 @@
     .local v0, "popup_msg":Ljava/lang/String;
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -410,9 +410,9 @@
 
     const v2, 0x7f0e1282
 
-    new-instance v3, Lcom/android/settings/motion/MotionSettings2015$8;
+    new-instance v3, Lcom/android/settings_ex/motion/MotionSettings2015$8;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/motion/MotionSettings2015$8;-><init>(Lcom/android/settings/motion/MotionSettings2015;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/motion/MotionSettings2015$8;-><init>(Lcom/android/settings_ex/motion/MotionSettings2015;)V
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -430,19 +430,19 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/motion/MotionSettings2015;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     .line 415
-    iget-object v1, p0, Lcom/android/settings/motion/MotionSettings2015;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
-    new-instance v2, Lcom/android/settings/motion/MotionSettings2015$9;
+    new-instance v2, Lcom/android/settings_ex/motion/MotionSettings2015$9;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/motion/MotionSettings2015$9;-><init>(Lcom/android/settings/motion/MotionSettings2015;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/motion/MotionSettings2015$9;-><init>(Lcom/android/settings_ex/motion/MotionSettings2015;)V
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 422
-    iget-object v1, p0, Lcom/android/settings/motion/MotionSettings2015;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
@@ -462,7 +462,7 @@
 
     .local v0, "i":I
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/motion/MotionSettings2015;->mPointArea:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPointArea:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->getChildCount()I
 
@@ -471,7 +471,7 @@
     if-ge v0, v1, :cond_0
 
     .line 228
-    iget-object v1, p0, Lcom/android/settings/motion/MotionSettings2015;->mPointArea:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPointArea:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
@@ -490,7 +490,7 @@
 
     .line 230
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/motion/MotionSettings2015;->mPointArea:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPointArea:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, p1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
@@ -528,10 +528,10 @@
     const/4 v9, 0x1
 
     .line 171
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 172
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -559,47 +559,47 @@
 
     move-result-object v6
 
-    check-cast v6, Lcom/android/settings/WrapContentHeightViewPager;
+    check-cast v6, Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    iput-object v6, p0, Lcom/android/settings/motion/MotionSettings2015;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iput-object v6, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
     .line 176
-    new-instance v6, Lcom/android/settings/motion/MotionViewPagerAdapter;
+    new-instance v6, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;
 
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
-    invoke-direct {v6, v7}, Lcom/android/settings/motion/MotionViewPagerAdapter;-><init>(Landroid/content/Context;)V
+    invoke-direct {v6, v7}, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;-><init>(Landroid/content/Context;)V
 
-    iput-object v6, p0, Lcom/android/settings/motion/MotionSettings2015;->mViewPagerAdapter:Lcom/android/settings/motion/MotionViewPagerAdapter;
+    iput-object v6, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mViewPagerAdapter:Lcom/android/settings_ex/motion/MotionViewPagerAdapter;
 
     .line 177
-    iget-object v6, p0, Lcom/android/settings/motion/MotionSettings2015;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v6, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    iget-object v7, p0, Lcom/android/settings/motion/MotionSettings2015;->mViewPagerAdapter:Lcom/android/settings/motion/MotionViewPagerAdapter;
+    iget-object v7, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mViewPagerAdapter:Lcom/android/settings_ex/motion/MotionViewPagerAdapter;
 
-    invoke-virtual {v6, v7}, Lcom/android/settings/WrapContentHeightViewPager;->setAdapter(Landroid/support/v4/view/PagerAdapter;)V
+    invoke-virtual {v6, v7}, Lcom/android/settings_ex/WrapContentHeightViewPager;->setAdapter(Landroid/support/v4/view/PagerAdapter;)V
 
     .line 178
-    iget-object v6, p0, Lcom/android/settings/motion/MotionSettings2015;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v6, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    iget-object v7, p0, Lcom/android/settings/motion/MotionSettings2015;->mViewPagerAdapter:Lcom/android/settings/motion/MotionViewPagerAdapter;
+    iget-object v7, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mViewPagerAdapter:Lcom/android/settings_ex/motion/MotionViewPagerAdapter;
 
-    invoke-virtual {v7}, Lcom/android/settings/motion/MotionViewPagerAdapter;->getCount()I
+    invoke-virtual {v7}, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->getCount()I
 
     move-result v7
 
-    invoke-virtual {v6, v7}, Lcom/android/settings/WrapContentHeightViewPager;->setOffscreenPageLimit(I)V
+    invoke-virtual {v6, v7}, Lcom/android/settings_ex/WrapContentHeightViewPager;->setOffscreenPageLimit(I)V
 
     .line 179
-    iget-object v6, p0, Lcom/android/settings/motion/MotionSettings2015;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v6, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    new-instance v7, Lcom/android/settings/motion/MotionSettings2015$3;
+    new-instance v7, Lcom/android/settings_ex/motion/MotionSettings2015$3;
 
-    invoke-direct {v7, p0}, Lcom/android/settings/motion/MotionSettings2015$3;-><init>(Lcom/android/settings/motion/MotionSettings2015;)V
+    invoke-direct {v7, p0}, Lcom/android/settings_ex/motion/MotionSettings2015$3;-><init>(Lcom/android/settings_ex/motion/MotionSettings2015;)V
 
-    invoke-virtual {v6, v7}, Lcom/android/settings/WrapContentHeightViewPager;->setOnPageChangeListener(Landroid/support/v4/view/ViewPager$OnPageChangeListener;)V
+    invoke-virtual {v6, v7}, Lcom/android/settings_ex/WrapContentHeightViewPager;->setOnPageChangeListener(Landroid/support/v4/view/ViewPager$OnPageChangeListener;)V
 
     .line 192
     const v6, 0x7f0d02ea
@@ -610,12 +610,12 @@
 
     check-cast v6, Landroid/widget/LinearLayout;
 
-    iput-object v6, p0, Lcom/android/settings/motion/MotionSettings2015;->mPointArea:Landroid/widget/LinearLayout;
+    iput-object v6, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPointArea:Landroid/widget/LinearLayout;
 
     .line 193
-    iget-object v6, p0, Lcom/android/settings/motion/MotionSettings2015;->mViewPagerAdapter:Lcom/android/settings/motion/MotionViewPagerAdapter;
+    iget-object v6, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mViewPagerAdapter:Lcom/android/settings_ex/motion/MotionViewPagerAdapter;
 
-    invoke-virtual {v6}, Lcom/android/settings/motion/MotionViewPagerAdapter;->getCount()I
+    invoke-virtual {v6}, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->getCount()I
 
     move-result v5
 
@@ -644,7 +644,7 @@
     .local v4, "point":Landroid/widget/ImageView;
     const v6, 0x7f0e1283
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/motion/MotionSettings2015;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/motion/MotionSettings2015;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
@@ -673,14 +673,14 @@
     invoke-virtual {v4, v6}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 200
-    new-instance v6, Lcom/android/settings/motion/MotionSettings2015$4;
+    new-instance v6, Lcom/android/settings_ex/motion/MotionSettings2015$4;
 
-    invoke-direct {v6, p0, v0}, Lcom/android/settings/motion/MotionSettings2015$4;-><init>(Lcom/android/settings/motion/MotionSettings2015;I)V
+    invoke-direct {v6, p0, v0}, Lcom/android/settings_ex/motion/MotionSettings2015$4;-><init>(Lcom/android/settings_ex/motion/MotionSettings2015;I)V
 
     invoke-virtual {v4, v6}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 207
-    iget-object v6, p0, Lcom/android/settings/motion/MotionSettings2015;->mPointArea:Landroid/widget/LinearLayout;
+    iget-object v6, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPointArea:Landroid/widget/LinearLayout;
 
     invoke-virtual {v6, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
@@ -693,7 +693,7 @@
     .end local v0    # "current":I
     .end local v4    # "point":Landroid/widget/ImageView;
     :cond_0
-    iget-object v6, p0, Lcom/android/settings/motion/MotionSettings2015;->mPointArea:Landroid/widget/LinearLayout;
+    iget-object v6, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPointArea:Landroid/widget/LinearLayout;
 
     invoke-virtual {v6}, Landroid/widget/LinearLayout;->getChildCount()I
 
@@ -702,7 +702,7 @@
     if-lez v6, :cond_1
 
     .line 211
-    iget-object v6, p0, Lcom/android/settings/motion/MotionSettings2015;->mPointArea:Landroid/widget/LinearLayout;
+    iget-object v6, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPointArea:Landroid/widget/LinearLayout;
 
     invoke-virtual {v6, v11}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
@@ -716,7 +716,7 @@
 
     .line 214
     :cond_1
-    iget-object v6, p0, Lcom/android/settings/motion/MotionSettings2015;->mPointArea:Landroid/widget/LinearLayout;
+    iget-object v6, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPointArea:Landroid/widget/LinearLayout;
 
     invoke-virtual {v6}, Landroid/widget/LinearLayout;->getChildCount()I
 
@@ -725,7 +725,7 @@
     if-ne v6, v9, :cond_2
 
     .line 215
-    iget-object v6, p0, Lcom/android/settings/motion/MotionSettings2015;->mPointArea:Landroid/widget/LinearLayout;
+    iget-object v6, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPointArea:Landroid/widget/LinearLayout;
 
     const/16 v7, 0x8
 
@@ -733,14 +733,14 @@
 
     .line 222
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getListView()Landroid/widget/ListView;
 
     move-result-object v6
 
     invoke-virtual {v6, v1, v10, v9}, Landroid/widget/ListView;->addHeaderView(Landroid/view/View;Ljava/lang/Object;Z)V
 
     .line 223
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getListView()Landroid/widget/ListView;
 
     move-result-object v6
 
@@ -758,17 +758,17 @@
     const/4 v4, 0x1
 
     .line 135
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 137
-    iget-object v1, p0, Lcom/android/settings/motion/MotionSettings2015;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
     if-eqz v1, :cond_0
 
     .line 138
-    iget-object v1, p0, Lcom/android/settings/motion/MotionSettings2015;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    invoke-virtual {v1}, Lcom/android/settings/WrapContentHeightViewPager;->getCurrentItem()I
+    invoke-virtual {v1}, Lcom/android/settings_ex/WrapContentHeightViewPager;->getCurrentItem()I
 
     move-result v0
 
@@ -800,27 +800,27 @@
     if-ltz v0, :cond_0
 
     .line 142
-    iget-object v1, p0, Lcom/android/settings/motion/MotionSettings2015;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    iget-object v2, p0, Lcom/android/settings/motion/MotionSettings2015;->mViewPagerAdapter:Lcom/android/settings/motion/MotionViewPagerAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mViewPagerAdapter:Lcom/android/settings_ex/motion/MotionViewPagerAdapter;
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/WrapContentHeightViewPager;->setAdapter(Landroid/support/v4/view/PagerAdapter;)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/WrapContentHeightViewPager;->setAdapter(Landroid/support/v4/view/PagerAdapter;)V
 
     .line 143
-    iget-object v1, p0, Lcom/android/settings/motion/MotionSettings2015;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    iget-object v2, p0, Lcom/android/settings/motion/MotionSettings2015;->mViewPagerAdapter:Lcom/android/settings/motion/MotionViewPagerAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mViewPagerAdapter:Lcom/android/settings_ex/motion/MotionViewPagerAdapter;
 
-    invoke-virtual {v2}, Lcom/android/settings/motion/MotionViewPagerAdapter;->getCount()I
+    invoke-virtual {v2}, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->getCount()I
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/WrapContentHeightViewPager;->setOffscreenPageLimit(I)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/WrapContentHeightViewPager;->setOffscreenPageLimit(I)V
 
     .line 144
-    iget-object v1, p0, Lcom/android/settings/motion/MotionSettings2015;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    invoke-virtual {v1, v0}, Lcom/android/settings/WrapContentHeightViewPager;->setCurrentItem(I)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/WrapContentHeightViewPager;->setCurrentItem(I)V
 
     .line 148
     .end local v0    # "position":I
@@ -843,7 +843,7 @@
     if-ne v1, v4, :cond_2
 
     .line 150
-    iget-object v1, p0, Lcom/android/settings/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
 
     const/4 v2, 0x0
 
@@ -856,7 +856,7 @@
 
     .line 152
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v4}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
@@ -869,132 +869,132 @@
 
     .prologue
     .line 102
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 103
     const/4 v4, 0x1
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/motion/MotionSettings2015;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/motion/MotionSettings2015;->setHasOptionsMenu(Z)V
 
     .line 105
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
+    iput-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
 
     .line 107
     const v4, 0x7f080077
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/motion/MotionSettings2015;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/motion/MotionSettings2015;->addPreferencesFromResource(I)V
 
     .line 109
     const-string v4, "pick_up_switch"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/motion/MotionSettings2015;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/motion/MotionSettings2015;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     check-cast v4, Landroid/preference/SwitchPreference;
 
-    iput-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mPickUpSwitch:Landroid/preference/SwitchPreference;
+    iput-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPickUpSwitch:Landroid/preference/SwitchPreference;
 
     .line 110
     const-string v4, "pick_up_to_call_out_switch"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/motion/MotionSettings2015;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/motion/MotionSettings2015;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     check-cast v4, Landroid/preference/SwitchPreference;
 
-    iput-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mPickUpToCallOutSwitch:Landroid/preference/SwitchPreference;
+    iput-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPickUpToCallOutSwitch:Landroid/preference/SwitchPreference;
 
     .line 111
     const-string v4, "merged_mute_or_pause_switch"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/motion/MotionSettings2015;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/motion/MotionSettings2015;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     check-cast v4, Landroid/preference/SwitchPreference;
 
-    iput-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mMergedMutePauseSwitch:Landroid/preference/SwitchPreference;
+    iput-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mMergedMutePauseSwitch:Landroid/preference/SwitchPreference;
 
     .line 112
     const-string v4, "palm_swipe_switch"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/motion/MotionSettings2015;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/motion/MotionSettings2015;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     check-cast v4, Landroid/preference/SwitchPreference;
 
-    iput-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
+    iput-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
 
     .line 113
     const-string v4, "multi_window_setting_switch"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/motion/MotionSettings2015;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/motion/MotionSettings2015;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     check-cast v4, Landroid/preference/SwitchPreference;
 
-    iput-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mMultiWindowSettingSwitch:Landroid/preference/SwitchPreference;
+    iput-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mMultiWindowSettingSwitch:Landroid/preference/SwitchPreference;
 
     .line 115
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mPickUpSwitch:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPickUpSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 116
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mPickUpSwitch:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPickUpSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 117
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mPickUpToCallOutSwitch:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPickUpToCallOutSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 118
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mPickUpToCallOutSwitch:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPickUpToCallOutSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 119
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mMergedMutePauseSwitch:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mMergedMutePauseSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 120
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mMergedMutePauseSwitch:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mMergedMutePauseSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 121
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 122
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 123
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mMultiWindowSettingSwitch:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mMultiWindowSettingSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 124
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mMultiWindowSettingSwitch:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mMultiWindowSettingSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v4, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 126
-    sget-object v0, Lcom/android/settings/motion/MotionSettings2015;->mMotionFeatures:[Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/motion/MotionSettings2015;->mMotionFeatures:[Ljava/lang/String;
 
     .local v0, "arr$":[Ljava/lang/String;
     array-length v2, v0
@@ -1010,18 +1010,18 @@
 
     .line 127
     .local v3, "motionFeature":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    invoke-static {v4, v3}, Lcom/android/settings/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v4, v3}, Lcom/android/settings_ex/Utils;->isSupportMotionFeature(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
     .line 128
-    invoke-virtual {p0, v3}, Lcom/android/settings/motion/MotionSettings2015;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/motion/MotionSettings2015;->removePreference(Ljava/lang/String;)V
 
     .line 126
     :cond_0
@@ -1040,28 +1040,28 @@
 
     .prologue
     .line 296
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 298
-    iget-object v0, p0, Lcom/android/settings/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
 
     if-eqz v0, :cond_0
 
     .line 299
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/motion/MotionSettings2015;->mPalmSwipeToCaptureObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPalmSwipeToCaptureObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 300
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/motion/MotionSettings2015;->mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
@@ -1099,9 +1099,9 @@
     .line 309
     .local v2, "value":I
     :goto_0
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mViewPagerAdapter:Lcom/android/settings/motion/MotionViewPagerAdapter;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mViewPagerAdapter:Lcom/android/settings_ex/motion/MotionViewPagerAdapter;
 
-    invoke-virtual {v4, v0}, Lcom/android/settings/motion/MotionViewPagerAdapter;->getItemPosition(Ljava/lang/Object;)I
+    invoke-virtual {v4, v0}, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->getItemPosition(Ljava/lang/Object;)I
 
     move-result v1
 
@@ -1110,13 +1110,13 @@
     if-ltz v1, :cond_0
 
     .line 311
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    invoke-virtual {v4, v1}, Lcom/android/settings/WrapContentHeightViewPager;->setCurrentItem(I)V
+    invoke-virtual {v4, v1}, Lcom/android/settings_ex/WrapContentHeightViewPager;->setCurrentItem(I)V
 
     .line 314
     :cond_0
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mPickUpSwitch:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPickUpSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {p1, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1125,7 +1125,7 @@
     if-eqz v4, :cond_3
 
     .line 315
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
 
     const-string v5, "motion_pick_up"
 
@@ -1148,7 +1148,7 @@
     .restart local v1    # "position":I
     .restart local v2    # "value":I
     :cond_3
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mPickUpToCallOutSwitch:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPickUpToCallOutSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {p1, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1157,7 +1157,7 @@
     if-eqz v4, :cond_4
 
     .line 317
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
 
     const-string v5, "motion_pick_up_to_call_out"
 
@@ -1167,7 +1167,7 @@
 
     .line 318
     :cond_4
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mMergedMutePauseSwitch:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mMergedMutePauseSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {p1, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1176,21 +1176,21 @@
     if-eqz v4, :cond_6
 
     .line 319
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
 
     const-string v5, "motion_merged_mute_pause"
 
     invoke-static {v4, v5, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 320
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v4
 
     if-nez v4, :cond_5
 
     .line 321
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
 
     const-string v5, "motion_overturn"
 
@@ -1198,7 +1198,7 @@
 
     .line 323
     :cond_5
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
 
     const-string v5, "surface_palm_touch"
 
@@ -1208,7 +1208,7 @@
 
     .line 324
     :cond_6
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {p1, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1219,7 +1219,7 @@
     .line 325
     if-ne v2, v3, :cond_7
 
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1227,13 +1227,13 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->isUniversalSwitchSupportMultiUserKnoxMode(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->isUniversalSwitchSupportMultiUserKnoxMode(Landroid/content/Context;)Z
 
     move-result v4
 
     if-eqz v4, :cond_7
 
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1241,14 +1241,14 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->isUniversalSwitchEnabled(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->isUniversalSwitchEnabled(Landroid/content/Context;)Z
 
     move-result v4
 
     if-eqz v4, :cond_7
 
     .line 327
-    invoke-direct {p0}, Lcom/android/settings/motion/MotionSettings2015;->maketurnOffUniversalPopup()V
+    invoke-direct {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->maketurnOffUniversalPopup()V
 
     goto :goto_1
 
@@ -1256,24 +1256,24 @@
     :cond_7
     if-ne v2, v3, :cond_8
 
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
 
     move-result v4
 
     if-eqz v4, :cond_8
 
     .line 329
-    invoke-direct {p0}, Lcom/android/settings/motion/MotionSettings2015;->makeTalkBackDisablePopup()V
+    invoke-direct {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->makeTalkBackDisablePopup()V
 
     goto :goto_1
 
     .line 331
     :cond_8
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
 
     const-string v5, "surface_palm_swipe"
 
@@ -1283,7 +1283,7 @@
 
     .line 333
     :cond_9
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mMultiWindowSettingSwitch:Landroid/preference/SwitchPreference;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mMultiWindowSettingSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {p1, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1292,7 +1292,7 @@
     if-eqz v4, :cond_1
 
     .line 334
-    iget-object v4, p0, Lcom/android/settings/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
+    iget-object v4, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
 
     const-string v5, "db_popup_view_shortcut"
 
@@ -1313,9 +1313,9 @@
 
     .line 161
     .local v0, "key":Ljava/lang/String;
-    iget-object v2, p0, Lcom/android/settings/motion/MotionSettings2015;->mViewPagerAdapter:Lcom/android/settings/motion/MotionViewPagerAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mViewPagerAdapter:Lcom/android/settings_ex/motion/MotionViewPagerAdapter;
 
-    invoke-virtual {v2, v0}, Lcom/android/settings/motion/MotionViewPagerAdapter;->getItemPosition(Ljava/lang/Object;)I
+    invoke-virtual {v2, v0}, Lcom/android/settings_ex/motion/MotionViewPagerAdapter;->getItemPosition(Ljava/lang/Object;)I
 
     move-result v1
 
@@ -1324,9 +1324,9 @@
     if-ltz v1, :cond_0
 
     .line 163
-    iget-object v2, p0, Lcom/android/settings/motion/MotionSettings2015;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v2, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    invoke-virtual {v2, v1}, Lcom/android/settings/WrapContentHeightViewPager;->setCurrentItem(I)V
+    invoke-virtual {v2, v1}, Lcom/android/settings_ex/WrapContentHeightViewPager;->setCurrentItem(I)V
 
     .line 166
     :cond_0
@@ -1344,7 +1344,7 @@
     const/4 v7, 0x0
 
     .line 236
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 238
     invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -1361,7 +1361,7 @@
 
     .line 243
     .local v4, "selectionArgs":[Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -1369,7 +1369,7 @@
 
     const-string v9, "isScreenCaptureEnabled"
 
-    invoke-static {v5, v8, v9, v4}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-static {v5, v8, v9, v4}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v1
 
@@ -1388,9 +1388,9 @@
 
     .line 252
     :cond_0
-    iget-object v8, p0, Lcom/android/settings/motion/MotionSettings2015;->mPickUpSwitch:Landroid/preference/SwitchPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPickUpSwitch:Landroid/preference/SwitchPreference;
 
-    iget-object v5, p0, Lcom/android/settings/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
+    iget-object v5, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
 
     const-string v9, "motion_pick_up"
 
@@ -1406,9 +1406,9 @@
     invoke-virtual {v8, v5}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 254
-    iget-object v8, p0, Lcom/android/settings/motion/MotionSettings2015;->mPickUpToCallOutSwitch:Landroid/preference/SwitchPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPickUpToCallOutSwitch:Landroid/preference/SwitchPreference;
 
-    iget-object v5, p0, Lcom/android/settings/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
+    iget-object v5, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
 
     const-string v9, "motion_pick_up_to_call_out"
 
@@ -1424,9 +1424,9 @@
     invoke-virtual {v8, v5}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 256
-    iget-object v8, p0, Lcom/android/settings/motion/MotionSettings2015;->mMergedMutePauseSwitch:Landroid/preference/SwitchPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mMergedMutePauseSwitch:Landroid/preference/SwitchPreference;
 
-    iget-object v5, p0, Lcom/android/settings/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
+    iget-object v5, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
 
     const-string v9, "motion_merged_mute_pause"
 
@@ -1442,9 +1442,9 @@
     invoke-virtual {v8, v5}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 258
-    iget-object v8, p0, Lcom/android/settings/motion/MotionSettings2015;->mMultiWindowSettingSwitch:Landroid/preference/SwitchPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mMultiWindowSettingSwitch:Landroid/preference/SwitchPreference;
 
-    iget-object v5, p0, Lcom/android/settings/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
+    iget-object v5, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
 
     const-string v9, "db_popup_view_shortcut"
 
@@ -1460,7 +1460,7 @@
     invoke-virtual {v8, v5}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 261
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -1481,7 +1481,7 @@
 
     .line 267
     :cond_1
-    iget-object v5, p0, Lcom/android/settings/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
 
     if-eqz v5, :cond_2
 
@@ -1493,17 +1493,17 @@
     if-eqz v5, :cond_9
 
     .line 269
-    iget-object v5, p0, Lcom/android/settings/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v5, v7}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 270
-    iget-object v5, p0, Lcom/android/settings/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v5, v7}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 271
-    iget-object v5, p0, Lcom/android/settings/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
+    iget-object v5, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
 
     const-string v8, "surface_palm_swipe"
 
@@ -1512,12 +1512,12 @@
     .line 280
     :cond_2
     :goto_4
-    iget-object v5, p0, Lcom/android/settings/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
 
     if-eqz v5, :cond_3
 
     .line 281
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -1527,12 +1527,12 @@
 
     move-result-object v8
 
-    iget-object v9, p0, Lcom/android/settings/motion/MotionSettings2015;->mPalmSwipeToCaptureObserver:Landroid/database/ContentObserver;
+    iget-object v9, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPalmSwipeToCaptureObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v5, v8, v6, v9}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 282
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -1542,7 +1542,7 @@
 
     move-result-object v8
 
-    iget-object v9, p0, Lcom/android/settings/motion/MotionSettings2015;->mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
+    iget-object v9, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPalmSwipeToCaptureObserverInteraction:Landroid/database/ContentObserver;
 
     invoke-virtual {v5, v8, v6, v9}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -1561,7 +1561,7 @@
     if-eqz v5, :cond_4
 
     .line 286
-    invoke-virtual {p0}, Lcom/android/settings/motion/MotionSettings2015;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -1576,7 +1576,7 @@
     if-ne v5, v6, :cond_4
 
     .line 288
-    iget-object v5, p0, Lcom/android/settings/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v5, v7}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
@@ -1613,14 +1613,14 @@
     .line 273
     .restart local v3    # "onInteractionConrol":I
     :cond_9
-    iget-object v5, p0, Lcom/android/settings/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v5, v6}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 274
-    iget-object v8, p0, Lcom/android/settings/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
+    iget-object v8, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
 
-    iget-object v5, p0, Lcom/android/settings/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
+    iget-object v5, p0, Lcom/android/settings_ex/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
 
     const-string v9, "surface_palm_swipe"
 

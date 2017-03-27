@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/location/AGPSFunctionSwitchList;
+.class public Lcom/android/settings_ex/location/AGPSFunctionSwitchList;
 .super Landroid/app/Activity;
 .source "AGPSFunctionSwitchList.java"
 
@@ -49,7 +49,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 120
-    invoke-virtual {p0}, Lcom/android/settings/location/AGPSFunctionSwitchList;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -58,7 +58,7 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 121
-    invoke-virtual {p0}, Lcom/android/settings/location/AGPSFunctionSwitchList;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->finish()V
 
     .line 124
     :goto_0
@@ -73,7 +73,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 102
-    invoke-virtual {p0}, Lcom/android/settings/location/AGPSFunctionSwitchList;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -82,7 +82,7 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 103
-    invoke-virtual {p0}, Lcom/android/settings/location/AGPSFunctionSwitchList;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->finish()V
 
     goto :goto_0
 
@@ -95,7 +95,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 108
-    invoke-virtual {p0}, Lcom/android/settings/location/AGPSFunctionSwitchList;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -106,7 +106,7 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 109
-    invoke-virtual {p0}, Lcom/android/settings/location/AGPSFunctionSwitchList;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->finish()V
 
     goto :goto_0
 
@@ -119,7 +119,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 114
-    invoke-virtual {p0}, Lcom/android/settings/location/AGPSFunctionSwitchList;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -130,7 +130,7 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 115
-    invoke-virtual {p0}, Lcom/android/settings/location/AGPSFunctionSwitchList;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->finish()V
 
     goto :goto_0
 
@@ -156,10 +156,10 @@
     .line 38
     const v1, 0x7f040023
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/location/AGPSFunctionSwitchList;->setContentView(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->setContentView(I)V
 
     .line 41
-    invoke-virtual {p0}, Lcom/android/settings/location/AGPSFunctionSwitchList;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -196,57 +196,57 @@
     .line 45
     const v1, 0x7f0d0097
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/location/AGPSFunctionSwitchList;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/RadioButton;
 
-    iput-object v1, p0, Lcom/android/settings/location/AGPSFunctionSwitchList;->mRadioButton1:Landroid/widget/RadioButton;
+    iput-object v1, p0, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->mRadioButton1:Landroid/widget/RadioButton;
 
     .line 46
     const v1, 0x7f0d0098
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/location/AGPSFunctionSwitchList;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/RadioButton;
 
-    iput-object v1, p0, Lcom/android/settings/location/AGPSFunctionSwitchList;->mRadioButton2:Landroid/widget/RadioButton;
+    iput-object v1, p0, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->mRadioButton2:Landroid/widget/RadioButton;
 
     .line 47
     const v1, 0x7f0d0099
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/location/AGPSFunctionSwitchList;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/RadioButton;
 
-    iput-object v1, p0, Lcom/android/settings/location/AGPSFunctionSwitchList;->mRadioButton3:Landroid/widget/RadioButton;
+    iput-object v1, p0, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->mRadioButton3:Landroid/widget/RadioButton;
 
     .line 49
     packed-switch v0, :pswitch_data_0
 
     .line 60
-    iget-object v1, p0, Lcom/android/settings/location/AGPSFunctionSwitchList;->mRadioButton1:Landroid/widget/RadioButton;
+    iget-object v1, p0, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->mRadioButton1:Landroid/widget/RadioButton;
 
     invoke-virtual {v1, v4}, Landroid/widget/RadioButton;->setChecked(Z)V
 
     .line 64
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/location/AGPSFunctionSwitchList;->mRadioButton1:Landroid/widget/RadioButton;
+    iget-object v1, p0, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->mRadioButton1:Landroid/widget/RadioButton;
 
     invoke-virtual {v1, p0}, Landroid/widget/RadioButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 65
-    iget-object v1, p0, Lcom/android/settings/location/AGPSFunctionSwitchList;->mRadioButton2:Landroid/widget/RadioButton;
+    iget-object v1, p0, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->mRadioButton2:Landroid/widget/RadioButton;
 
     invoke-virtual {v1, p0}, Landroid/widget/RadioButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 66
-    iget-object v1, p0, Lcom/android/settings/location/AGPSFunctionSwitchList;->mRadioButton3:Landroid/widget/RadioButton;
+    iget-object v1, p0, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->mRadioButton3:Landroid/widget/RadioButton;
 
     invoke-virtual {v1, p0}, Landroid/widget/RadioButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -255,7 +255,7 @@
 
     .line 51
     :pswitch_0
-    iget-object v1, p0, Lcom/android/settings/location/AGPSFunctionSwitchList;->mRadioButton1:Landroid/widget/RadioButton;
+    iget-object v1, p0, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->mRadioButton1:Landroid/widget/RadioButton;
 
     invoke-virtual {v1, v4}, Landroid/widget/RadioButton;->setChecked(Z)V
 
@@ -263,7 +263,7 @@
 
     .line 54
     :pswitch_1
-    iget-object v1, p0, Lcom/android/settings/location/AGPSFunctionSwitchList;->mRadioButton2:Landroid/widget/RadioButton;
+    iget-object v1, p0, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->mRadioButton2:Landroid/widget/RadioButton;
 
     invoke-virtual {v1, v4}, Landroid/widget/RadioButton;->setChecked(Z)V
 
@@ -271,7 +271,7 @@
 
     .line 57
     :pswitch_2
-    iget-object v1, p0, Lcom/android/settings/location/AGPSFunctionSwitchList;->mRadioButton3:Landroid/widget/RadioButton;
+    iget-object v1, p0, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->mRadioButton3:Landroid/widget/RadioButton;
 
     invoke-virtual {v1, v4}, Landroid/widget/RadioButton;->setChecked(Z)V
 
@@ -298,7 +298,7 @@
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
     .line 75
-    invoke-virtual {p0}, Lcom/android/settings/location/AGPSFunctionSwitchList;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -335,41 +335,41 @@
     .line 78
     const v1, 0x7f0d0097
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/location/AGPSFunctionSwitchList;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/RadioButton;
 
-    iput-object v1, p0, Lcom/android/settings/location/AGPSFunctionSwitchList;->mRadioButton1:Landroid/widget/RadioButton;
+    iput-object v1, p0, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->mRadioButton1:Landroid/widget/RadioButton;
 
     .line 79
     const v1, 0x7f0d0098
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/location/AGPSFunctionSwitchList;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/RadioButton;
 
-    iput-object v1, p0, Lcom/android/settings/location/AGPSFunctionSwitchList;->mRadioButton2:Landroid/widget/RadioButton;
+    iput-object v1, p0, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->mRadioButton2:Landroid/widget/RadioButton;
 
     .line 80
     const v1, 0x7f0d0099
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/location/AGPSFunctionSwitchList;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/RadioButton;
 
-    iput-object v1, p0, Lcom/android/settings/location/AGPSFunctionSwitchList;->mRadioButton3:Landroid/widget/RadioButton;
+    iput-object v1, p0, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->mRadioButton3:Landroid/widget/RadioButton;
 
     .line 82
     packed-switch v0, :pswitch_data_0
 
     .line 93
-    iget-object v1, p0, Lcom/android/settings/location/AGPSFunctionSwitchList;->mRadioButton1:Landroid/widget/RadioButton;
+    iget-object v1, p0, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->mRadioButton1:Landroid/widget/RadioButton;
 
     invoke-virtual {v1, v4}, Landroid/widget/RadioButton;->setChecked(Z)V
 
@@ -379,7 +379,7 @@
 
     .line 84
     :pswitch_0
-    iget-object v1, p0, Lcom/android/settings/location/AGPSFunctionSwitchList;->mRadioButton1:Landroid/widget/RadioButton;
+    iget-object v1, p0, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->mRadioButton1:Landroid/widget/RadioButton;
 
     invoke-virtual {v1, v4}, Landroid/widget/RadioButton;->setChecked(Z)V
 
@@ -387,7 +387,7 @@
 
     .line 87
     :pswitch_1
-    iget-object v1, p0, Lcom/android/settings/location/AGPSFunctionSwitchList;->mRadioButton2:Landroid/widget/RadioButton;
+    iget-object v1, p0, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->mRadioButton2:Landroid/widget/RadioButton;
 
     invoke-virtual {v1, v4}, Landroid/widget/RadioButton;->setChecked(Z)V
 
@@ -395,7 +395,7 @@
 
     .line 90
     :pswitch_2
-    iget-object v1, p0, Lcom/android/settings/location/AGPSFunctionSwitchList;->mRadioButton3:Landroid/widget/RadioButton;
+    iget-object v1, p0, Lcom/android/settings_ex/location/AGPSFunctionSwitchList;->mRadioButton3:Landroid/widget/RadioButton;
 
     invoke-virtual {v1, v4}, Landroid/widget/RadioButton;->setChecked(Z)V
 

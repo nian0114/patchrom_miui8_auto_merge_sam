@@ -1,4 +1,4 @@
-.class Lcom/android/settings/spen/AirButtonHelp$3;
+.class Lcom/android/settings_ex/spen/AirButtonHelp$3;
 .super Ljava/lang/Object;
 .source "AirButtonHelp.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/spen/AirButtonHelp;->showTalkBackDisableDialog()V
+    value = Lcom/android/settings_ex/spen/AirButtonHelp;->showTalkBackDisableDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/spen/AirButtonHelp;
+.field final synthetic this$0:Lcom/android/settings_ex/spen/AirButtonHelp;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/spen/AirButtonHelp;)V
+.method constructor <init>(Lcom/android/settings_ex/spen/AirButtonHelp;)V
     .locals 0
 
     .prologue
     .line 212
-    iput-object p1, p0, Lcom/android/settings/spen/AirButtonHelp$3;->this$0:Lcom/android/settings/spen/AirButtonHelp;
+    iput-object p1, p0, Lcom/android/settings_ex/spen/AirButtonHelp$3;->this$0:Lcom/android/settings_ex/spen/AirButtonHelp;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,10 +45,10 @@
     const/4 v2, 0x0
 
     .line 215
-    iget-object v0, p0, Lcom/android/settings/spen/AirButtonHelp$3;->this$0:Lcom/android/settings/spen/AirButtonHelp;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/AirButtonHelp$3;->this$0:Lcom/android/settings_ex/spen/AirButtonHelp;
 
-    # getter for: Lcom/android/settings/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
-    invoke-static {v0}, Lcom/android/settings/spen/AirButtonHelp;->access$000(Lcom/android/settings/spen/AirButtonHelp;)Landroid/app/Activity;
+    # getter for: Lcom/android/settings_ex/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
+    invoke-static {v0}, Lcom/android/settings_ex/spen/AirButtonHelp;->access$000(Lcom/android/settings_ex/spen/AirButtonHelp;)Landroid/app/Activity;
 
     move-result-object v0
 
@@ -61,10 +61,10 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 217
-    iget-object v0, p0, Lcom/android/settings/spen/AirButtonHelp$3;->this$0:Lcom/android/settings/spen/AirButtonHelp;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/AirButtonHelp$3;->this$0:Lcom/android/settings_ex/spen/AirButtonHelp;
 
-    # getter for: Lcom/android/settings/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
-    invoke-static {v0}, Lcom/android/settings/spen/AirButtonHelp;->access$000(Lcom/android/settings/spen/AirButtonHelp;)Landroid/app/Activity;
+    # getter for: Lcom/android/settings_ex/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
+    invoke-static {v0}, Lcom/android/settings_ex/spen/AirButtonHelp;->access$000(Lcom/android/settings_ex/spen/AirButtonHelp;)Landroid/app/Activity;
 
     move-result-object v0
 
@@ -77,20 +77,20 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 219
-    iget-object v0, p0, Lcom/android/settings/spen/AirButtonHelp$3;->this$0:Lcom/android/settings/spen/AirButtonHelp;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/AirButtonHelp$3;->this$0:Lcom/android/settings_ex/spen/AirButtonHelp;
 
-    # getter for: Lcom/android/settings/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
-    invoke-static {v0}, Lcom/android/settings/spen/AirButtonHelp;->access$000(Lcom/android/settings/spen/AirButtonHelp;)Landroid/app/Activity;
+    # getter for: Lcom/android/settings_ex/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
+    invoke-static {v0}, Lcom/android/settings_ex/spen/AirButtonHelp;->access$000(Lcom/android/settings_ex/spen/AirButtonHelp;)Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->turnOffTalkBack(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->turnOffTalkBack(Landroid/content/Context;)Z
 
     .line 220
-    iget-object v0, p0, Lcom/android/settings/spen/AirButtonHelp$3;->this$0:Lcom/android/settings/spen/AirButtonHelp;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/AirButtonHelp$3;->this$0:Lcom/android/settings_ex/spen/AirButtonHelp;
 
-    # getter for: Lcom/android/settings/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
-    invoke-static {v0}, Lcom/android/settings/spen/AirButtonHelp;->access$000(Lcom/android/settings/spen/AirButtonHelp;)Landroid/app/Activity;
+    # getter for: Lcom/android/settings_ex/spen/AirButtonHelp;->mActivity:Landroid/app/Activity;
+    invoke-static {v0}, Lcom/android/settings_ex/spen/AirButtonHelp;->access$000(Lcom/android/settings_ex/spen/AirButtonHelp;)Landroid/app/Activity;
 
     move-result-object v0
 

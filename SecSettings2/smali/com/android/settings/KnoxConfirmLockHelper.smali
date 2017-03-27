@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/KnoxConfirmLockHelper;
+.class public Lcom/android/settings_ex/KnoxConfirmLockHelper;
 .super Ljava/lang/Object;
 .source "KnoxConfirmLockHelper.java"
 
@@ -33,10 +33,10 @@
     const/4 v0, 0x0
 
     .line 28
-    sput v0, Lcom/android/settings/KnoxConfirmLockHelper;->maxAttempts:I
+    sput v0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maxAttempts:I
 
     .line 29
-    sput v0, Lcom/android/settings/KnoxConfirmLockHelper;->totalAttempts:I
+    sput v0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->totalAttempts:I
 
     return-void
 .end method
@@ -52,24 +52,24 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 23
-    iput-object v0, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
 
     .line 25
-    iput-object v0, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mPm:Landroid/os/PersonaManager;
+    iput-object v0, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mPm:Landroid/os/PersonaManager;
 
     .line 26
-    iput-object v0, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mDpm:Landroid/app/admin/DevicePolicyManager;
+    iput-object v0, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mDpm:Landroid/app/admin/DevicePolicyManager;
 
     .line 42
-    iput-object p1, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
 
     .line 43
-    invoke-direct {p0}, Lcom/android/settings/KnoxConfirmLockHelper;->getLockAttemptPolicy()V
+    invoke-direct {p0}, Lcom/android/settings_ex/KnoxConfirmLockHelper;->getLockAttemptPolicy()V
 
     .line 48
     const/4 v0, 0x5
 
-    iput v0, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mDialogTheme:I
+    iput v0, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mDialogTheme:I
 
     .line 50
     return-void
@@ -84,9 +84,9 @@
     .line 169
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
-    iget-object v2, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
 
-    iget v3, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mDialogTheme:I
+    iget v3, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mDialogTheme:I
 
     invoke-direct {v1, v2, v3}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
@@ -98,7 +98,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
 
     const v3, 0x7f0e0f8c
 
@@ -133,7 +133,7 @@
     const/16 v6, 0x3e8
 
     .line 54
-    iget-object v4, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
 
     const-string v5, "persona"
 
@@ -143,10 +143,10 @@
 
     check-cast v4, Landroid/os/PersonaManager;
 
-    iput-object v4, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mPm:Landroid/os/PersonaManager;
+    iput-object v4, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mPm:Landroid/os/PersonaManager;
 
     .line 55
-    iget-object v4, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
 
     const-string v5, "device_policy"
 
@@ -156,10 +156,10 @@
 
     check-cast v4, Landroid/app/admin/DevicePolicyManager;
 
-    iput-object v4, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mDpm:Landroid/app/admin/DevicePolicyManager;
+    iput-object v4, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mDpm:Landroid/app/admin/DevicePolicyManager;
 
     .line 57
-    iget-object v4, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mPm:Landroid/os/PersonaManager;
+    iget-object v4, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mPm:Landroid/os/PersonaManager;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -171,7 +171,7 @@
 
     .line 59
     .local v2, "pInfo":Landroid/content/pm/PersonaInfo;
-    iget-object v4, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
 
     const-string v5, "enterprise_policy"
 
@@ -199,7 +199,7 @@
 
     move-result v4
 
-    iput v4, p0, Lcom/android/settings/KnoxConfirmLockHelper;->maximumFailedPasswordsForDisable:I
+    iput v4, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maximumFailedPasswordsForDisable:I
 
     .line 64
     const/4 v4, 0x0
@@ -208,26 +208,26 @@
 
     move-result v4
 
-    iput v4, p0, Lcom/android/settings/KnoxConfirmLockHelper;->maximumFailedPasswordsForWipe:I
+    iput v4, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maximumFailedPasswordsForWipe:I
 
     .line 66
-    iget v4, p0, Lcom/android/settings/KnoxConfirmLockHelper;->maximumFailedPasswordsForWipe:I
+    iget v4, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maximumFailedPasswordsForWipe:I
 
     if-gtz v4, :cond_1
 
-    iget v4, p0, Lcom/android/settings/KnoxConfirmLockHelper;->maximumFailedPasswordsForDisable:I
+    iget v4, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maximumFailedPasswordsForDisable:I
 
     if-gtz v4, :cond_1
 
     .line 67
     const/16 v4, 0xa
 
-    sput v4, Lcom/android/settings/KnoxConfirmLockHelper;->maxAttempts:I
+    sput v4, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maxAttempts:I
 
     .line 68
     const/16 v4, 0x3ea
 
-    iput v4, p0, Lcom/android/settings/KnoxConfirmLockHelper;->lockPolicy:I
+    iput v4, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->lockPolicy:I
 
     .line 83
     :goto_0
@@ -238,81 +238,81 @@
     if-eqz v4, :cond_0
 
     .line 84
-    iget v4, p0, Lcom/android/settings/KnoxConfirmLockHelper;->maximumFailedPasswordsForWipe:I
+    iget v4, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maximumFailedPasswordsForWipe:I
 
-    sput v4, Lcom/android/settings/KnoxConfirmLockHelper;->maxAttempts:I
+    sput v4, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maxAttempts:I
 
     .line 87
     :cond_0
-    iget-object v4, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mDpm:Landroid/app/admin/DevicePolicyManager;
+    iget-object v4, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mDpm:Landroid/app/admin/DevicePolicyManager;
 
     invoke-virtual {v4}, Landroid/app/admin/DevicePolicyManager;->getCurrentFailedPasswordAttempts()I
 
     move-result v4
 
-    sput v4, Lcom/android/settings/KnoxConfirmLockHelper;->totalAttempts:I
+    sput v4, Lcom/android/settings_ex/KnoxConfirmLockHelper;->totalAttempts:I
 
     .line 88
     return-void
 
     .line 69
     :cond_1
-    iget v4, p0, Lcom/android/settings/KnoxConfirmLockHelper;->maximumFailedPasswordsForWipe:I
+    iget v4, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maximumFailedPasswordsForWipe:I
 
     if-gtz v4, :cond_2
 
     .line 70
-    iget v4, p0, Lcom/android/settings/KnoxConfirmLockHelper;->maximumFailedPasswordsForDisable:I
+    iget v4, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maximumFailedPasswordsForDisable:I
 
-    sput v4, Lcom/android/settings/KnoxConfirmLockHelper;->maxAttempts:I
+    sput v4, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maxAttempts:I
 
     .line 71
-    iput v7, p0, Lcom/android/settings/KnoxConfirmLockHelper;->lockPolicy:I
+    iput v7, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->lockPolicy:I
 
     goto :goto_0
 
     .line 72
     :cond_2
-    iget v4, p0, Lcom/android/settings/KnoxConfirmLockHelper;->maximumFailedPasswordsForDisable:I
+    iget v4, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maximumFailedPasswordsForDisable:I
 
     if-gtz v4, :cond_3
 
     .line 73
-    iget v4, p0, Lcom/android/settings/KnoxConfirmLockHelper;->maximumFailedPasswordsForWipe:I
+    iget v4, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maximumFailedPasswordsForWipe:I
 
-    sput v4, Lcom/android/settings/KnoxConfirmLockHelper;->maxAttempts:I
+    sput v4, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maxAttempts:I
 
     .line 74
-    iput v6, p0, Lcom/android/settings/KnoxConfirmLockHelper;->lockPolicy:I
+    iput v6, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->lockPolicy:I
 
     goto :goto_0
 
     .line 75
     :cond_3
-    iget v4, p0, Lcom/android/settings/KnoxConfirmLockHelper;->maximumFailedPasswordsForWipe:I
+    iget v4, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maximumFailedPasswordsForWipe:I
 
-    iget v5, p0, Lcom/android/settings/KnoxConfirmLockHelper;->maximumFailedPasswordsForDisable:I
+    iget v5, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maximumFailedPasswordsForDisable:I
 
     if-gt v4, v5, :cond_4
 
     .line 76
-    iget v4, p0, Lcom/android/settings/KnoxConfirmLockHelper;->maximumFailedPasswordsForWipe:I
+    iget v4, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maximumFailedPasswordsForWipe:I
 
-    sput v4, Lcom/android/settings/KnoxConfirmLockHelper;->maxAttempts:I
+    sput v4, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maxAttempts:I
 
     .line 77
-    iput v6, p0, Lcom/android/settings/KnoxConfirmLockHelper;->lockPolicy:I
+    iput v6, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->lockPolicy:I
 
     goto :goto_0
 
     .line 79
     :cond_4
-    iget v4, p0, Lcom/android/settings/KnoxConfirmLockHelper;->maximumFailedPasswordsForDisable:I
+    iget v4, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maximumFailedPasswordsForDisable:I
 
-    sput v4, Lcom/android/settings/KnoxConfirmLockHelper;->maxAttempts:I
+    sput v4, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maxAttempts:I
 
     .line 80
-    iput v7, p0, Lcom/android/settings/KnoxConfirmLockHelper;->lockPolicy:I
+    iput v7, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->lockPolicy:I
 
     goto :goto_0
 .end method
@@ -334,7 +334,7 @@
     const/4 v7, 0x0
 
     .line 96
-    iget-object v3, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mDpm:Landroid/app/admin/DevicePolicyManager;
+    iget-object v3, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mDpm:Landroid/app/admin/DevicePolicyManager;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -343,39 +343,39 @@
     invoke-virtual {v3, v4}, Landroid/app/admin/DevicePolicyManager;->reportFailedPasswordAttempt(I)V
 
     .line 97
-    iget-object v3, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mDpm:Landroid/app/admin/DevicePolicyManager;
+    iget-object v3, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mDpm:Landroid/app/admin/DevicePolicyManager;
 
     invoke-virtual {v3}, Landroid/app/admin/DevicePolicyManager;->getCurrentFailedPasswordAttempts()I
 
     move-result v3
 
-    sput v3, Lcom/android/settings/KnoxConfirmLockHelper;->totalAttempts:I
+    sput v3, Lcom/android/settings_ex/KnoxConfirmLockHelper;->totalAttempts:I
 
     .line 98
-    sget v3, Lcom/android/settings/KnoxConfirmLockHelper;->maxAttempts:I
+    sget v3, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maxAttempts:I
 
-    sget v4, Lcom/android/settings/KnoxConfirmLockHelper;->totalAttempts:I
+    sget v4, Lcom/android/settings_ex/KnoxConfirmLockHelper;->totalAttempts:I
 
     sub-int v2, v3, v4
 
     .line 100
     .local v2, "ret":I
-    sget v3, Lcom/android/settings/KnoxConfirmLockHelper;->totalAttempts:I
+    sget v3, Lcom/android/settings_ex/KnoxConfirmLockHelper;->totalAttempts:I
 
-    sget v4, Lcom/android/settings/KnoxConfirmLockHelper;->maxAttempts:I
+    sget v4, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maxAttempts:I
 
     if-lt v3, v4, :cond_4
 
     .line 101
-    invoke-virtual {p0}, Lcom/android/settings/KnoxConfirmLockHelper;->resetNumberOfAttempts()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/KnoxConfirmLockHelper;->resetNumberOfAttempts()V
 
     .line 102
-    iget-object v3, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mPm:Landroid/os/PersonaManager;
+    iget-object v3, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mPm:Landroid/os/PersonaManager;
 
     invoke-virtual {v3, v6}, Landroid/os/PersonaManager;->launchPersonaHome(I)Z
 
     .line 103
-    iget v3, p0, Lcom/android/settings/KnoxConfirmLockHelper;->lockPolicy:I
+    iget v3, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->lockPolicy:I
 
     if-ne v3, v5, :cond_2
 
@@ -505,7 +505,7 @@
     .line 131
     .end local v1    # "errorCode":I
     :cond_2
-    iget v3, p0, Lcom/android/settings/KnoxConfirmLockHelper;->lockPolicy:I
+    iget v3, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->lockPolicy:I
 
     const/16 v4, 0x3e9
 
@@ -519,7 +519,7 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 134
-    iget-object v3, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mPm:Landroid/os/PersonaManager;
+    iget-object v3, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mPm:Landroid/os/PersonaManager;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -531,7 +531,7 @@
 
     .line 135
     :cond_3
-    iget v3, p0, Lcom/android/settings/KnoxConfirmLockHelper;->lockPolicy:I
+    iget v3, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->lockPolicy:I
 
     const/16 v4, 0x3ea
 
@@ -545,7 +545,7 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 138
-    iget-object v3, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mPm:Landroid/os/PersonaManager;
+    iget-object v3, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mPm:Landroid/os/PersonaManager;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -557,21 +557,21 @@
 
     .line 140
     :cond_4
-    sget v3, Lcom/android/settings/KnoxConfirmLockHelper;->totalAttempts:I
+    sget v3, Lcom/android/settings_ex/KnoxConfirmLockHelper;->totalAttempts:I
 
-    sget v4, Lcom/android/settings/KnoxConfirmLockHelper;->maxAttempts:I
+    sget v4, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maxAttempts:I
 
     add-int/lit8 v4, v4, -0x1
 
     if-ne v3, v4, :cond_6
 
     .line 141
-    iget v3, p0, Lcom/android/settings/KnoxConfirmLockHelper;->lockPolicy:I
+    iget v3, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->lockPolicy:I
 
     if-ne v3, v5, :cond_5
 
     .line 142
-    iget-object v3, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
 
     const v4, 0x7f0e0279
 
@@ -581,7 +581,7 @@
 
     new-array v4, v8, [Ljava/lang/Object;
 
-    sget v5, Lcom/android/settings/KnoxConfirmLockHelper;->maxAttempts:I
+    sget v5, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maxAttempts:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -593,13 +593,13 @@
 
     move-result-object v3
 
-    invoke-direct {p0, v7, v3}, Lcom/android/settings/KnoxConfirmLockHelper;->ShowDialog(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v7, v3}, Lcom/android/settings_ex/KnoxConfirmLockHelper;->ShowDialog(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 144
     :cond_5
-    iget-object v3, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
 
     const v4, 0x7f0e0277
 
@@ -609,7 +609,7 @@
 
     new-array v4, v8, [Ljava/lang/Object;
 
-    sget v5, Lcom/android/settings/KnoxConfirmLockHelper;->maxAttempts:I
+    sget v5, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maxAttempts:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -621,15 +621,15 @@
 
     move-result-object v3
 
-    invoke-direct {p0, v7, v3}, Lcom/android/settings/KnoxConfirmLockHelper;->ShowDialog(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v7, v3}, Lcom/android/settings_ex/KnoxConfirmLockHelper;->ShowDialog(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 146
     :cond_6
-    sget v3, Lcom/android/settings/KnoxConfirmLockHelper;->maxAttempts:I
+    sget v3, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maxAttempts:I
 
-    sget v4, Lcom/android/settings/KnoxConfirmLockHelper;->totalAttempts:I
+    sget v4, Lcom/android/settings_ex/KnoxConfirmLockHelper;->totalAttempts:I
 
     sub-int/2addr v3, v4
 
@@ -638,12 +638,12 @@
     if-ge v3, v4, :cond_0
 
     .line 147
-    iget v3, p0, Lcom/android/settings/KnoxConfirmLockHelper;->lockPolicy:I
+    iget v3, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->lockPolicy:I
 
     if-ne v3, v5, :cond_7
 
     .line 148
-    iget-object v3, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
 
     const v4, 0x7f0e027a
 
@@ -653,7 +653,7 @@
 
     new-array v4, v9, [Ljava/lang/Object;
 
-    sget v5, Lcom/android/settings/KnoxConfirmLockHelper;->maxAttempts:I
+    sget v5, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maxAttempts:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -661,9 +661,9 @@
 
     aput-object v5, v4, v6
 
-    sget v5, Lcom/android/settings/KnoxConfirmLockHelper;->maxAttempts:I
+    sget v5, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maxAttempts:I
 
-    sget v6, Lcom/android/settings/KnoxConfirmLockHelper;->totalAttempts:I
+    sget v6, Lcom/android/settings_ex/KnoxConfirmLockHelper;->totalAttempts:I
 
     sub-int/2addr v5, v6
 
@@ -677,13 +677,13 @@
 
     move-result-object v3
 
-    invoke-direct {p0, v7, v3}, Lcom/android/settings/KnoxConfirmLockHelper;->ShowDialog(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v7, v3}, Lcom/android/settings_ex/KnoxConfirmLockHelper;->ShowDialog(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 150
     :cond_7
-    iget-object v3, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
 
     const v4, 0x7f0e0278
 
@@ -693,7 +693,7 @@
 
     new-array v4, v9, [Ljava/lang/Object;
 
-    sget v5, Lcom/android/settings/KnoxConfirmLockHelper;->maxAttempts:I
+    sget v5, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maxAttempts:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -701,9 +701,9 @@
 
     aput-object v5, v4, v6
 
-    sget v5, Lcom/android/settings/KnoxConfirmLockHelper;->maxAttempts:I
+    sget v5, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maxAttempts:I
 
-    sget v6, Lcom/android/settings/KnoxConfirmLockHelper;->totalAttempts:I
+    sget v6, Lcom/android/settings_ex/KnoxConfirmLockHelper;->totalAttempts:I
 
     sub-int/2addr v5, v6
 
@@ -717,7 +717,7 @@
 
     move-result-object v3
 
-    invoke-direct {p0, v7, v3}, Lcom/android/settings/KnoxConfirmLockHelper;->ShowDialog(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v7, v3}, Lcom/android/settings_ex/KnoxConfirmLockHelper;->ShowDialog(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -742,7 +742,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 92
-    iget-object v0, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mDpm:Landroid/app/admin/DevicePolicyManager;
+    iget-object v0, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mDpm:Landroid/app/admin/DevicePolicyManager;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -779,16 +779,16 @@
 
     .line 161
     :cond_0
-    sget v0, Lcom/android/settings/KnoxConfirmLockHelper;->maxAttempts:I
+    sget v0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maxAttempts:I
 
-    sget v1, Lcom/android/settings/KnoxConfirmLockHelper;->totalAttempts:I
+    sget v1, Lcom/android/settings_ex/KnoxConfirmLockHelper;->totalAttempts:I
 
     sub-int/2addr v0, v1
 
     if-ne v0, v2, :cond_1
 
     .line 162
-    iget-object v0, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
 
     const v1, 0x7f0e1481
 
@@ -814,7 +814,7 @@
 
     .line 164
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/KnoxConfirmLockHelper;->mContext:Landroid/content/Context;
 
     const v1, 0x7f0e1482
 
@@ -824,9 +824,9 @@
 
     new-array v1, v2, [Ljava/lang/Object;
 
-    sget v2, Lcom/android/settings/KnoxConfirmLockHelper;->maxAttempts:I
+    sget v2, Lcom/android/settings_ex/KnoxConfirmLockHelper;->maxAttempts:I
 
-    sget v3, Lcom/android/settings/KnoxConfirmLockHelper;->totalAttempts:I
+    sget v3, Lcom/android/settings_ex/KnoxConfirmLockHelper;->totalAttempts:I
 
     sub-int/2addr v2, v3
 

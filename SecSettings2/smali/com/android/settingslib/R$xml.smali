@@ -1,11 +1,11 @@
-.class public final Lcom/android/settingslib/R$xml;
+.class public final Lcom/android/settings_exlib/R$xml;
 .super Ljava/lang/Object;
 .source "R.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/R;
+    value = Lcom/android/settings_exlib/R;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

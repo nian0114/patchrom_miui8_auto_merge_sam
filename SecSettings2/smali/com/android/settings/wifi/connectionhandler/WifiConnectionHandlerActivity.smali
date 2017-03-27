@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;
+.class public Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;
 .super Lcom/android/internal/app/AlertActivity;
 .source "WifiConnectionHandlerActivity.java"
 
@@ -30,81 +30,81 @@
     .line 38
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mIsReceiverRegistered:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mIsReceiverRegistered:Z
 
     .line 44
-    new-instance v0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity$1;
+    new-instance v0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity$1;-><init>(Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity$1;-><init>(Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;)V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;)Z
+.method static synthetic access$000(Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;
 
     .prologue
     .line 35
-    iget-boolean v0, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mIsReceiverRegistered:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mIsReceiverRegistered:Z
 
     return v0
 .end method
 
-.method static synthetic access$002(Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;Z)Z
+.method static synthetic access$002(Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;
     .param p1, "x1"    # Z
 
     .prologue
     .line 35
-    iput-boolean p1, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mIsReceiverRegistered:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mIsReceiverRegistered:Z
 
     return p1
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;)Landroid/content/BroadcastReceiver;
+.method static synthetic access$100(Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;)Landroid/content/BroadcastReceiver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;
 
     .prologue
     .line 35
-    iget-object v0, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;)Landroid/app/AlertDialog;
+.method static synthetic access$200(Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;)Landroid/app/AlertDialog;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;
 
     .prologue
     .line 35
-    iget-object v0, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mDateConnectionDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mDateConnectionDialog:Landroid/app/AlertDialog;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;)Landroid/content/SharedPreferences;
+.method static synthetic access$300(Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;)Landroid/content/SharedPreferences;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;
 
     .prologue
     .line 35
-    iget-object v0, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mDoNotShow:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mDoNotShow:Landroid/content/SharedPreferences;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;)Landroid/content/SharedPreferences;
+.method static synthetic access$400(Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;)Landroid/content/SharedPreferences;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;
 
     .prologue
     .line 35
-    iget-object v0, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mBeforeValue:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mBeforeValue:Landroid/content/SharedPreferences;
 
     return-object v0
 .end method
@@ -118,16 +118,16 @@
     .line 97
     const-string v4, "layout_inflater"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/view/LayoutInflater;
 
-    iput-object v4, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mInflater:Landroid/view/LayoutInflater;
+    iput-object v4, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mInflater:Landroid/view/LayoutInflater;
 
     .line 98
-    iget-object v4, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mInflater:Landroid/view/LayoutInflater;
 
     const v5, 0x7f0400b6
 
@@ -149,7 +149,7 @@
 
     .line 100
     .local v3, "message":Landroid/widget/TextView;
-    invoke-virtual {p0}, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -178,7 +178,7 @@
 
     .line 104
     .local v1, "alertDialogBuilder":Landroid/app/AlertDialog$Builder;
-    invoke-virtual {p0}, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -194,7 +194,7 @@
     invoke-virtual {v1, v0}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
 
     .line 107
-    invoke-virtual {p0}, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -204,14 +204,14 @@
 
     move-result-object v4
 
-    new-instance v5, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity$2;
+    new-instance v5, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity$2;
 
-    invoke-direct {v5, p0, v2}, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity$2;-><init>(Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;Landroid/widget/CheckBox;)V
+    invoke-direct {v5, p0, v2}, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity$2;-><init>(Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;Landroid/widget/CheckBox;)V
 
     invoke-virtual {v1, v4, v5}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 124
-    invoke-virtual {p0}, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -221,9 +221,9 @@
 
     move-result-object v4
 
-    new-instance v5, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity$3;
+    new-instance v5, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity$3;
 
-    invoke-direct {v5, p0, v2}, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity$3;-><init>(Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;Landroid/widget/CheckBox;)V
+    invoke-direct {v5, p0, v2}, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity$3;-><init>(Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;Landroid/widget/CheckBox;)V
 
     invoke-virtual {v1, v4, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -232,20 +232,20 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mDateConnectionDialog:Landroid/app/AlertDialog;
+    iput-object v4, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mDateConnectionDialog:Landroid/app/AlertDialog;
 
     .line 155
-    iget-object v4, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mDateConnectionDialog:Landroid/app/AlertDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mDateConnectionDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v4, v7}, Landroid/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
     .line 156
-    iget-object v4, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mDateConnectionDialog:Landroid/app/AlertDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mDateConnectionDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v4, v7}, Landroid/app/AlertDialog;->setCancelable(Z)V
 
     .line 157
-    iget-object v4, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mDateConnectionDialog:Landroid/app/AlertDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mDateConnectionDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v4}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
@@ -256,7 +256,7 @@
     invoke-virtual {v4, v5}, Landroid/view/Window;->setType(I)V
 
     .line 158
-    iget-object v4, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mDateConnectionDialog:Landroid/app/AlertDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mDateConnectionDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v4}, Landroid/app/AlertDialog;->show()V
 
@@ -274,7 +274,7 @@
     .line 206
     const-string v1, "connectivity"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -322,43 +322,43 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mDoNotShow:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mDoNotShow:Landroid/content/SharedPreferences;
 
     .line 70
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mBeforeValue:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mBeforeValue:Landroid/content/SharedPreferences;
 
     .line 72
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mIntentFilter:Landroid/content/IntentFilter;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mIntentFilter:Landroid/content/IntentFilter;
 
     .line 73
-    iget-object v0, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mIntentFilter:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mIntentFilter:Landroid/content/IntentFilter;
 
     const-string v1, "android.net.wifi.STATE_CHANGE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 74
-    iget-object v0, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    iget-object v1, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mIntentFilter:Landroid/content/IntentFilter;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mIntentFilter:Landroid/content/IntentFilter;
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 75
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->mIsReceiverRegistered:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->mIsReceiverRegistered:Z
 
     .line 93
-    invoke-direct {p0}, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;->showdataConnectionDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;->showdataConnectionDialog()V
 
     .line 95
     return-void

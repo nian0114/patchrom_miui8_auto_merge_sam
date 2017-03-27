@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DeviceAdminAdd$4;
+.class Lcom/android/settings_ex/DeviceAdminAdd$4;
 .super Ljava/lang/Object;
 .source "DeviceAdminAdd.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DeviceAdminAdd;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/DeviceAdminAdd;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DeviceAdminAdd;
+.field final synthetic this$0:Lcom/android/settings_ex/DeviceAdminAdd;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DeviceAdminAdd;)V
+.method constructor <init>(Lcom/android/settings_ex/DeviceAdminAdd;)V
     .locals 0
 
     .prologue
     .line 334
-    iput-object p1, p0, Lcom/android/settings/DeviceAdminAdd$4;->this$0:Lcom/android/settings/DeviceAdminAdd;
+    iput-object p1, p0, Lcom/android/settings_ex/DeviceAdminAdd$4;->this$0:Lcom/android/settings_ex/DeviceAdminAdd;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,16 +42,16 @@
 
     .prologue
     .line 336
-    iget-object v0, p0, Lcom/android/settings/DeviceAdminAdd$4;->this$0:Lcom/android/settings/DeviceAdminAdd;
+    iget-object v0, p0, Lcom/android/settings_ex/DeviceAdminAdd$4;->this$0:Lcom/android/settings_ex/DeviceAdminAdd;
 
-    iget-boolean v0, v0, Lcom/android/settings/DeviceAdminAdd;->mAdding:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/DeviceAdminAdd;->mAdding:Z
 
     if-eqz v0, :cond_1
 
     .line 337
-    iget-object v0, p0, Lcom/android/settings/DeviceAdminAdd$4;->this$0:Lcom/android/settings/DeviceAdminAdd;
+    iget-object v0, p0, Lcom/android/settings_ex/DeviceAdminAdd$4;->this$0:Lcom/android/settings_ex/DeviceAdminAdd;
 
-    invoke-virtual {v0}, Lcom/android/settings/DeviceAdminAdd;->addAndFinish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/DeviceAdminAdd;->addAndFinish()V
 
     .line 364
     :cond_0
@@ -60,9 +60,9 @@
 
     .line 338
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/DeviceAdminAdd$4;->this$0:Lcom/android/settings/DeviceAdminAdd;
+    iget-object v0, p0, Lcom/android/settings_ex/DeviceAdminAdd$4;->this$0:Lcom/android/settings_ex/DeviceAdminAdd;
 
-    iget-boolean v0, v0, Lcom/android/settings/DeviceAdminAdd;->mWaitingForRemoveMsg:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/DeviceAdminAdd;->mWaitingForRemoveMsg:Z
 
     if-nez v0, :cond_0
 
@@ -78,39 +78,39 @@
 
     .line 345
     :goto_1
-    iget-object v0, p0, Lcom/android/settings/DeviceAdminAdd$4;->this$0:Lcom/android/settings/DeviceAdminAdd;
+    iget-object v0, p0, Lcom/android/settings_ex/DeviceAdminAdd$4;->this$0:Lcom/android/settings_ex/DeviceAdminAdd;
 
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lcom/android/settings/DeviceAdminAdd;->mWaitingForRemoveMsg:Z
+    iput-boolean v1, v0, Lcom/android/settings_ex/DeviceAdminAdd;->mWaitingForRemoveMsg:Z
 
     .line 346
-    iget-object v0, p0, Lcom/android/settings/DeviceAdminAdd$4;->this$0:Lcom/android/settings/DeviceAdminAdd;
+    iget-object v0, p0, Lcom/android/settings_ex/DeviceAdminAdd$4;->this$0:Lcom/android/settings_ex/DeviceAdminAdd;
 
-    iget-object v0, v0, Lcom/android/settings/DeviceAdminAdd;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
+    iget-object v0, v0, Lcom/android/settings_ex/DeviceAdminAdd;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    iget-object v1, p0, Lcom/android/settings/DeviceAdminAdd$4;->this$0:Lcom/android/settings/DeviceAdminAdd;
+    iget-object v1, p0, Lcom/android/settings_ex/DeviceAdminAdd$4;->this$0:Lcom/android/settings_ex/DeviceAdminAdd;
 
-    iget-object v1, v1, Lcom/android/settings/DeviceAdminAdd;->mDeviceAdmin:Landroid/app/enterprise/EnterpriseDeviceAdminInfo;
+    iget-object v1, v1, Lcom/android/settings_ex/DeviceAdminAdd;->mDeviceAdmin:Landroid/app/enterprise/EnterpriseDeviceAdminInfo;
 
     invoke-virtual {v1}, Landroid/app/enterprise/EnterpriseDeviceAdminInfo;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v1
 
-    new-instance v2, Lcom/android/settings/DeviceAdminAdd$4$1;
+    new-instance v2, Lcom/android/settings_ex/DeviceAdminAdd$4$1;
 
-    iget-object v3, p0, Lcom/android/settings/DeviceAdminAdd$4;->this$0:Lcom/android/settings/DeviceAdminAdd;
+    iget-object v3, p0, Lcom/android/settings_ex/DeviceAdminAdd$4;->this$0:Lcom/android/settings_ex/DeviceAdminAdd;
 
-    iget-object v3, v3, Lcom/android/settings/DeviceAdminAdd;->mHandler:Landroid/os/Handler;
+    iget-object v3, v3, Lcom/android/settings_ex/DeviceAdminAdd;->mHandler:Landroid/os/Handler;
 
-    invoke-direct {v2, p0, v3}, Lcom/android/settings/DeviceAdminAdd$4$1;-><init>(Lcom/android/settings/DeviceAdminAdd$4;Landroid/os/Handler;)V
+    invoke-direct {v2, p0, v3}, Lcom/android/settings_ex/DeviceAdminAdd$4$1;-><init>(Lcom/android/settings_ex/DeviceAdminAdd$4;Landroid/os/Handler;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/enterprise/EnterpriseDeviceManager;->getRemoveWarning(Landroid/content/ComponentName;Landroid/os/RemoteCallback;)V
 
     .line 358
-    iget-object v0, p0, Lcom/android/settings/DeviceAdminAdd$4;->this$0:Lcom/android/settings/DeviceAdminAdd;
+    iget-object v0, p0, Lcom/android/settings_ex/DeviceAdminAdd$4;->this$0:Lcom/android/settings_ex/DeviceAdminAdd;
 
-    invoke-virtual {v0}, Lcom/android/settings/DeviceAdminAdd;->getWindow()Landroid/view/Window;
+    invoke-virtual {v0}, Lcom/android/settings_ex/DeviceAdminAdd;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
@@ -122,9 +122,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/settings/DeviceAdminAdd$4$2;
+    new-instance v1, Lcom/android/settings_ex/DeviceAdminAdd$4$2;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/DeviceAdminAdd$4$2;-><init>(Lcom/android/settings/DeviceAdminAdd$4;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/DeviceAdminAdd$4$2;-><init>(Lcom/android/settings_ex/DeviceAdminAdd$4;)V
 
     const-wide/16 v2, 0x7d0
 

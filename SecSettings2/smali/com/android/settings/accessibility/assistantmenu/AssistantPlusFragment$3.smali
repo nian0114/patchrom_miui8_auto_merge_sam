@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;
+.class Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;
 .super Ljava/lang/Thread;
 .source "AssistantPlusFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->fetchData()V
+    value = Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->fetchData()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)V
     .locals 0
 
     .prologue
     .line 339
-    iput-object p1, p0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
@@ -41,13 +41,13 @@
     :try_start_0
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     move-object/from16 v17, v0
 
     move-object/from16 v0, v17
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
 
     move-object/from16 v17, v0
 
@@ -149,7 +149,7 @@
     .line 363
     const/16 v17, 0x0
 
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/Utils;->isTablet(Landroid/content/Context;)Z
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/Utils;->isTablet(Landroid/content/Context;)Z
 
     move-result v17
 
@@ -171,13 +171,13 @@
     :cond_2
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     move-object/from16 v17, v0
 
     move-object/from16 v0, v17
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->packMngr:Landroid/content/pm/PackageManager;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->packMngr:Landroid/content/pm/PackageManager;
 
     move-object/from16 v17, v0
 
@@ -195,13 +195,13 @@
     .local v1, "ai":Landroid/content/pm/ApplicationInfo;
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     move-object/from16 v17, v0
 
     move-object/from16 v0, v17
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->packMngr:Landroid/content/pm/PackageManager;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->packMngr:Landroid/content/pm/PackageManager;
 
     move-object/from16 v17, v0
 
@@ -239,12 +239,12 @@
     .line 369
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->sIsPhone:Z
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->access$800(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)Z
+    # getter for: Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->sIsPhone:Z
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->access$800(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)Z
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -256,13 +256,13 @@
     :try_start_1
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     move-object/from16 v17, v0
 
     move-object/from16 v0, v17
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->packMngr:Landroid/content/pm/PackageManager;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->packMngr:Landroid/content/pm/PackageManager;
 
     move-object/from16 v17, v0
 
@@ -285,13 +285,13 @@
     .line 374
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     move-object/from16 v17, v0
 
     move-object/from16 v0, v17
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->packMngr:Landroid/content/pm/PackageManager;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->packMngr:Landroid/content/pm/PackageManager;
 
     move-object/from16 v17, v0
 
@@ -312,15 +312,15 @@
     .line 377
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     move-object/from16 v17, v0
 
-    invoke-virtual/range {v17 .. v17}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v17
 
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v17
 
@@ -363,25 +363,25 @@
     :try_start_2
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     move-object/from16 v17, v0
 
-    # operator++ for: Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->appsWithEAM:I
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->access$308(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)I
+    # operator++ for: Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->appsWithEAM:I
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->access$308(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)I
 
     .line 386
     new-instance v5, Landroid/preference/SwitchPreference;
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     move-object/from16 v17, v0
 
     move-object/from16 v0, v17
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->context:Landroid/app/Activity;
 
     move-object/from16 v17, v0
 
@@ -405,12 +405,12 @@
     .line 389
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->appList:Ljava/util/ArrayList;
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->access$900(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)Ljava/util/ArrayList;
+    # getter for: Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->appList:Ljava/util/ArrayList;
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->access$900(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)Ljava/util/ArrayList;
 
     move-result-object v17
 
@@ -421,19 +421,19 @@
     .line 390
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     move-object/from16 v17, v0
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     move-object/from16 v18, v0
 
     move-object/from16 v0, v18
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->packMngr:Landroid/content/pm/PackageManager;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->packMngr:Landroid/content/pm/PackageManager;
 
     move-object/from16 v18, v0
 
@@ -443,8 +443,8 @@
 
     move-result-object v18
 
-    # invokes: Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->resizeIcon(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
-    invoke-static/range {v17 .. v18}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->access$1000(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    # invokes: Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->resizeIcon(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static/range {v17 .. v18}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->access$1000(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v17
 
@@ -455,12 +455,12 @@
     .line 391
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mAssistantMenuSettingsPrefs:Landroid/content/SharedPreferences;
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->access$1100(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)Landroid/content/SharedPreferences;
+    # getter for: Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mAssistantMenuSettingsPrefs:Landroid/content/SharedPreferences;
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->access$1100(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)Landroid/content/SharedPreferences;
 
     move-result-object v17
 
@@ -492,15 +492,15 @@
     .line 395
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     move-object/from16 v17, v0
 
-    # operator++ for: Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->access$208(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)I
+    # operator++ for: Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->access$208(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)I
 
     .line 396
-    sget-object v17, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
+    sget-object v17, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
 
     new-instance v18, Ljava/lang/StringBuilder;
 
@@ -514,12 +514,12 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     move-object/from16 v19, v0
 
-    # getter for: Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
-    invoke-static/range {v19 .. v19}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->access$200(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)I
+    # getter for: Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
+    invoke-static/range {v19 .. v19}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->access$200(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)I
 
     move-result v19
 
@@ -537,7 +537,7 @@
     :goto_3
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     move-object/from16 v17, v0
 
@@ -548,12 +548,12 @@
     .line 406
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->access$500(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)Landroid/preference/PreferenceScreen;
+    # getter for: Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->eamPrefScreen:Landroid/preference/PreferenceScreen;
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->access$500(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)Landroid/preference/PreferenceScreen;
 
     move-result-object v17
 
@@ -564,12 +564,12 @@
     .line 407
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->mEAMprov:I
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->access$600(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)I
+    # getter for: Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->mEAMprov:I
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->access$600(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)I
 
     move-result v17
 
@@ -607,12 +607,12 @@
     :cond_5
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->appList:Ljava/util/ArrayList;
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->access$900(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)Ljava/util/ArrayList;
+    # getter for: Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->appList:Ljava/util/ArrayList;
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->access$900(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)Ljava/util/ArrayList;
 
     move-result-object v17
 
@@ -621,22 +621,22 @@
     .line 416
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     move-object/from16 v17, v0
 
-    # invokes: Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->OrderAppData()V
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->access$1200(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)V
+    # invokes: Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->OrderAppData()V
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->access$1200(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)V
 
     .line 417
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     move-object/from16 v17, v0
 
-    # getter for: Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->messageHandler:Landroid/os/Handler;
-    invoke-static/range {v17 .. v17}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->access$1300(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->messageHandler:Landroid/os/Handler;
+    invoke-static/range {v17 .. v17}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->access$1300(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)Landroid/os/Handler;
 
     move-result-object v17
 
@@ -679,7 +679,7 @@
     invoke-virtual {v5, v0}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 399
-    sget-object v17, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
+    sget-object v17, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->TAG:Ljava/lang/String;
 
     new-instance v18, Ljava/lang/StringBuilder;
 
@@ -693,12 +693,12 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment$3;->this$0:Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     move-object/from16 v19, v0
 
-    # getter for: Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
-    invoke-static/range {v19 .. v19}, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;->access$200(Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;)I
+    # getter for: Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->checkCount:I
+    invoke-static/range {v19 .. v19}, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;->access$200(Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;)I
 
     move-result v19
 

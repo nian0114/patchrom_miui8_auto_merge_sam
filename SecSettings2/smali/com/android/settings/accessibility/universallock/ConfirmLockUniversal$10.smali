@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$10;
+.class Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$10;
 .super Ljava/lang/Object;
 .source "ConfirmLockUniversal.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    value = Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)V
     .locals 0
 
     .prologue
     .line 940
-    iput-object p1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$10;->this$0:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$10;->this$0:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,10 +41,10 @@
 
     .prologue
     .line 942
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$10;->this$0:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$10;->this$0:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
-    invoke-static {v0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->access$000(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)Lcom/android/internal/widget/DirectionLockView;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->access$000(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)Lcom/android/internal/widget/DirectionLockView;
 
     move-result-object v0
 

@@ -1,4 +1,4 @@
-.class public abstract Lcom/android/settings/deviceinfo/MigrateEstimateTask;
+.class public abstract Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;
 .super Landroid/os/AsyncTask;
 .source "MigrateEstimateTask.java"
 
@@ -52,7 +52,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    sput-object v0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->DEFAULT_CONTAINER_COMPONENT:Landroid/content/ComponentName;
+    sput-object v0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->DEFAULT_CONTAINER_COMPONENT:Landroid/content/ComponentName;
 
     return-void
 .end method
@@ -74,16 +74,16 @@
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mConnected:Ljava/util/concurrent/CountDownLatch;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mConnected:Ljava/util/concurrent/CountDownLatch;
 
     .line 59
-    iput-wide v2, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mSizeBytes:J
+    iput-wide v2, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mSizeBytes:J
 
     .line 60
-    iput-wide v2, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mTimeMillis:J
+    iput-wide v2, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mTimeMillis:J
 
     .line 63
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mContext:Landroid/content/Context;
 
     .line 64
     const-class v0, Landroid/os/storage/StorageManager;
@@ -94,7 +94,7 @@
 
     check-cast v0, Landroid/os/storage/StorageManager;
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mStorage:Landroid/os/storage/StorageManager;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mStorage:Landroid/os/storage/StorageManager;
 
     .line 65
     return-void
@@ -116,7 +116,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mSizeBytes:J
+    iput-wide v0, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mSizeBytes:J
 
     .line 69
     return-void
@@ -130,7 +130,7 @@
     .line 72
     const-string v0, "size_bytes"
 
-    iget-wide v2, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mSizeBytes:J
+    iget-wide v2, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mSizeBytes:J
 
     invoke-virtual {p1, v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
@@ -148,14 +148,14 @@
     const/4 v8, 0x0
 
     .line 77
-    iget-wide v6, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mSizeBytes:J
+    iget-wide v6, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mSizeBytes:J
 
     cmp-long v5, v6, v10
 
     if-eqz v5, :cond_0
 
     .line 78
-    iget-wide v6, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mSizeBytes:J
+    iget-wide v6, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mSizeBytes:J
 
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -167,7 +167,7 @@
 
     .line 81
     :cond_0
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -179,7 +179,7 @@
 
     .line 82
     .local v4, "privateVol":Landroid/os/storage/VolumeInfo;
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mStorage:Landroid/os/storage/StorageManager;
+    iget-object v5, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mStorage:Landroid/os/storage/StorageManager;
 
     invoke-virtual {v5, v4}, Landroid/os/storage/StorageManager;->findEmulatedForPrivate(Landroid/os/storage/VolumeInfo;)Landroid/os/storage/VolumeInfo;
 
@@ -246,7 +246,7 @@
 
     invoke-direct {v5}, Landroid/content/Intent;-><init>()V
 
-    sget-object v6, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->DEFAULT_CONTAINER_COMPONENT:Landroid/content/ComponentName;
+    sget-object v6, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->DEFAULT_CONTAINER_COMPONENT:Landroid/content/ComponentName;
 
     invoke-virtual {v5, v6}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
@@ -254,7 +254,7 @@
 
     .line 93
     .local v2, "intent":Landroid/content/Intent;
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mContext:Landroid/content/Context;
 
     const/4 v6, 0x1
 
@@ -264,7 +264,7 @@
 
     .line 96
     :try_start_0
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mConnected:Ljava/util/concurrent/CountDownLatch;
+    iget-object v5, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mConnected:Ljava/util/concurrent/CountDownLatch;
 
     const-wide/16 v6, 0xf
 
@@ -277,7 +277,7 @@
     if-eqz v5, :cond_2
 
     .line 97
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mService:Lcom/android/internal/app/IMediaContainerService;
+    iget-object v5, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mService:Lcom/android/internal/app/IMediaContainerService;
 
     invoke-interface {v5, v3}, Lcom/android/internal/app/IMediaContainerService;->calculateDirectorySize(Ljava/lang/String;)J
 
@@ -292,14 +292,14 @@
     move-result-object v5
 
     .line 102
-    iget-object v6, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mContext:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6, p0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
     goto :goto_0
 
     :cond_2
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5, p0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
@@ -350,7 +350,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 102
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5, p0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
@@ -360,7 +360,7 @@
     :catchall_0
     move-exception v5
 
-    iget-object v6, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mContext:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6, p0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
@@ -384,7 +384,7 @@
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "x0":[Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Long;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Long;
 
     move-result-object v0
 
@@ -403,10 +403,10 @@
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mSizeBytes:J
+    iput-wide v2, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mSizeBytes:J
 
     .line 111
-    iget-wide v2, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mSizeBytes:J
+    iget-wide v2, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mSizeBytes:J
 
     mul-long/2addr v2, v6
 
@@ -414,21 +414,21 @@
 
     div-long/2addr v2, v4
 
-    iput-wide v2, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mTimeMillis:J
+    iput-wide v2, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mTimeMillis:J
 
     .line 112
-    iget-wide v2, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mTimeMillis:J
+    iget-wide v2, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mTimeMillis:J
 
     invoke-static {v2, v3, v6, v7}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mTimeMillis:J
+    iput-wide v2, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mTimeMillis:J
 
     .line 114
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mContext:Landroid/content/Context;
 
-    iget-wide v4, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mSizeBytes:J
+    iget-wide v4, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mSizeBytes:J
 
     invoke-static {v2, v4, v5}, Landroid/text/format/Formatter;->formatFileSize(Landroid/content/Context;J)Ljava/lang/String;
 
@@ -436,7 +436,7 @@
 
     .line 115
     .local v0, "size":Ljava/lang/String;
-    iget-wide v2, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mTimeMillis:J
+    iget-wide v2, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mTimeMillis:J
 
     invoke-static {v2, v3}, Landroid/text/format/DateUtils;->formatDuration(J)Ljava/lang/CharSequence;
 
@@ -448,7 +448,7 @@
 
     .line 116
     .local v1, "time":Ljava/lang/String;
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->onPostExecute(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->onPostExecute(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 117
     return-void
@@ -463,7 +463,7 @@
     check-cast p1, Ljava/lang/Long;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->onPostExecute(Ljava/lang/Long;)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->onPostExecute(Ljava/lang/Long;)V
 
     return-void
 .end method
@@ -482,10 +482,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mService:Lcom/android/internal/app/IMediaContainerService;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mService:Lcom/android/internal/app/IMediaContainerService;
 
     .line 124
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/MigrateEstimateTask;->mConnected:Ljava/util/concurrent/CountDownLatch;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;->mConnected:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 

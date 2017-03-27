@@ -1,14 +1,14 @@
-.class final Lcom/android/settings/applications/AppStateWriteSettingsBridge$1;
+.class final Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge$1;
 .super Ljava/lang/Object;
 .source "AppStateWriteSettingsBridge.java"
 
 # interfaces
-.implements Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+.implements Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/AppStateWriteSettingsBridge;
+    value = Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,13 +30,13 @@
 
 
 # virtual methods
-.method public filterApp(Lcom/android/settingslib/applications/ApplicationsState$AppEntry;)Z
+.method public filterApp(Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;)Z
     .locals 1
-    .param p1, "info"    # Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+    .param p1, "info"    # Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
 
     .prologue
     .line 88
-    iget-object v0, p1, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->extraInfo:Ljava/lang/Object;
+    iget-object v0, p1, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->extraInfo:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/applications/DefaultAssistPreference$Info;
+.class Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;
 .super Ljava/lang/Object;
 .source "DefaultAssistPreference.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/DefaultAssistPreference;
+    value = Lcom/android/settings_ex/applications/DefaultAssistPreference;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,12 +30,12 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 204
-    iput-object p1, p0, Lcom/android/settings/applications/DefaultAssistPreference$Info;->component:Landroid/content/ComponentName;
+    iput-object p1, p0, Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;->component:Landroid/content/ComponentName;
 
     .line 205
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/applications/DefaultAssistPreference$Info;->voiceInteractionServiceInfo:Landroid/service/voice/VoiceInteractionServiceInfo;
+    iput-object v0, p0, Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;->voiceInteractionServiceInfo:Landroid/service/voice/VoiceInteractionServiceInfo;
 
     .line 206
     return-void
@@ -51,10 +51,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 209
-    iput-object p1, p0, Lcom/android/settings/applications/DefaultAssistPreference$Info;->component:Landroid/content/ComponentName;
+    iput-object p1, p0, Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;->component:Landroid/content/ComponentName;
 
     .line 210
-    iput-object p2, p0, Lcom/android/settings/applications/DefaultAssistPreference$Info;->voiceInteractionServiceInfo:Landroid/service/voice/VoiceInteractionServiceInfo;
+    iput-object p2, p0, Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;->voiceInteractionServiceInfo:Landroid/service/voice/VoiceInteractionServiceInfo;
 
     .line 211
     return-void
@@ -67,7 +67,7 @@
 
     .prologue
     .line 214
-    iget-object v0, p0, Lcom/android/settings/applications/DefaultAssistPreference$Info;->voiceInteractionServiceInfo:Landroid/service/voice/VoiceInteractionServiceInfo;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/DefaultAssistPreference$Info;->voiceInteractionServiceInfo:Landroid/service/voice/VoiceInteractionServiceInfo;
 
     if-eqz v0, :cond_0
 

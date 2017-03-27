@@ -1,4 +1,4 @@
-.class Lcom/android/settings/applock/PackageListAdapter$OnSwitchCheckedChangeListener;
+.class Lcom/android/settings_ex/applock/PackageListAdapter$OnSwitchCheckedChangeListener;
 .super Ljava/lang/Object;
 .source "PackageListAdapter.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applock/PackageListAdapter;
+    value = Lcom/android/settings_ex/applock/PackageListAdapter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,25 +18,25 @@
 
 
 # instance fields
-.field private mHolder:Lcom/android/settings/applock/PackageListAdapter$ViewHolder;
+.field private mHolder:Lcom/android/settings_ex/applock/PackageListAdapter$ViewHolder;
 
-.field final synthetic this$0:Lcom/android/settings/applock/PackageListAdapter;
+.field final synthetic this$0:Lcom/android/settings_ex/applock/PackageListAdapter;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/settings/applock/PackageListAdapter;ILcom/android/settings/applock/PackageListAdapter$ViewHolder;)V
+.method public constructor <init>(Lcom/android/settings_ex/applock/PackageListAdapter;ILcom/android/settings_ex/applock/PackageListAdapter$ViewHolder;)V
     .locals 0
     .param p2, "pos"    # I
-    .param p3, "holder"    # Lcom/android/settings/applock/PackageListAdapter$ViewHolder;
+    .param p3, "holder"    # Lcom/android/settings_ex/applock/PackageListAdapter$ViewHolder;
 
     .prologue
     .line 163
-    iput-object p1, p0, Lcom/android/settings/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings/applock/PackageListAdapter;
+    iput-object p1, p0, Lcom/android/settings_ex/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings_ex/applock/PackageListAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 164
-    iput-object p3, p0, Lcom/android/settings/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->mHolder:Lcom/android/settings/applock/PackageListAdapter$ViewHolder;
+    iput-object p3, p0, Lcom/android/settings_ex/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->mHolder:Lcom/android/settings_ex/applock/PackageListAdapter$ViewHolder;
 
     .line 165
     return-void
@@ -65,43 +65,43 @@
 
     .line 170
     .local v0, "appId":I
-    iget-object v4, p0, Lcom/android/settings/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings/applock/PackageListAdapter;
+    iget-object v4, p0, Lcom/android/settings_ex/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings_ex/applock/PackageListAdapter;
 
-    iget-object v4, v4, Lcom/android/settings/applock/PackageListAdapter;->mAppList:Ljava/util/ArrayList;
+    iget-object v4, v4, Lcom/android/settings_ex/applock/PackageListAdapter;->mAppList:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/applock/AppInfo;
+    check-cast v4, Lcom/android/settings_ex/applock/AppInfo;
 
-    iget-object v2, v4, Lcom/android/settings/applock/AppInfo;->packageName:Ljava/lang/String;
+    iget-object v2, v4, Lcom/android/settings_ex/applock/AppInfo;->packageName:Ljava/lang/String;
 
     .line 171
     .local v2, "pkgName":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings/applock/PackageListAdapter;
+    iget-object v4, p0, Lcom/android/settings_ex/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings_ex/applock/PackageListAdapter;
 
-    iget-object v5, v4, Lcom/android/settings/applock/PackageListAdapter;->mPackageInfoUtil:Lcom/android/settings/applock/PackageInfoUtil;
+    iget-object v5, v4, Lcom/android/settings_ex/applock/PackageListAdapter;->mPackageInfoUtil:Lcom/android/settings_ex/applock/PackageInfoUtil;
 
-    iget-object v4, p0, Lcom/android/settings/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings/applock/PackageListAdapter;
+    iget-object v4, p0, Lcom/android/settings_ex/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings_ex/applock/PackageListAdapter;
 
-    iget-object v4, v4, Lcom/android/settings/applock/PackageListAdapter;->mAppList:Ljava/util/ArrayList;
+    iget-object v4, v4, Lcom/android/settings_ex/applock/PackageListAdapter;->mAppList:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/applock/AppInfo;
+    check-cast v4, Lcom/android/settings_ex/applock/AppInfo;
 
-    invoke-virtual {v5, v4}, Lcom/android/settings/applock/PackageInfoUtil;->getStoredName(Lcom/android/settings/applock/AppInfo;)Ljava/lang/String;
+    invoke-virtual {v5, v4}, Lcom/android/settings_ex/applock/PackageInfoUtil;->getStoredName(Lcom/android/settings_ex/applock/AppInfo;)Ljava/lang/String;
 
     move-result-object v3
 
     .line 172
     .local v3, "storedName":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->mHolder:Lcom/android/settings/applock/PackageListAdapter$ViewHolder;
+    iget-object v4, p0, Lcom/android/settings_ex/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->mHolder:Lcom/android/settings_ex/applock/PackageListAdapter$ViewHolder;
 
-    iget-object v4, v4, Lcom/android/settings/applock/PackageListAdapter$ViewHolder;->mLockSwitch:Landroid/widget/Switch;
+    iget-object v4, v4, Lcom/android/settings_ex/applock/PackageListAdapter$ViewHolder;->mLockSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v4}, Landroid/widget/Switch;->isChecked()Z
 
@@ -110,21 +110,21 @@
     if-eqz v4, :cond_0
 
     .line 173
-    iget-object v4, p0, Lcom/android/settings/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings/applock/PackageListAdapter;
+    iget-object v4, p0, Lcom/android/settings_ex/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings_ex/applock/PackageListAdapter;
 
-    iget-object v4, v4, Lcom/android/settings/applock/PackageListAdapter;->mPackageInfoUtil:Lcom/android/settings/applock/PackageInfoUtil;
+    iget-object v4, v4, Lcom/android/settings_ex/applock/PackageListAdapter;->mPackageInfoUtil:Lcom/android/settings_ex/applock/PackageInfoUtil;
 
-    iget-object v5, p0, Lcom/android/settings/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings/applock/PackageListAdapter;
+    iget-object v5, p0, Lcom/android/settings_ex/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings_ex/applock/PackageListAdapter;
 
-    iget-object v5, v5, Lcom/android/settings/applock/PackageListAdapter;->mContext:Landroid/content/Context;
+    iget-object v5, v5, Lcom/android/settings_ex/applock/PackageListAdapter;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v4, v5, v2, v3}, Lcom/android/settings/applock/PackageInfoUtil;->storePackageState(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v4, v5, v2, v3}, Lcom/android/settings_ex/applock/PackageInfoUtil;->storePackageState(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 178
     :goto_0
-    iget-object v4, p0, Lcom/android/settings/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings/applock/PackageListAdapter;
+    iget-object v4, p0, Lcom/android/settings_ex/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings_ex/applock/PackageListAdapter;
 
-    iget-object v4, v4, Lcom/android/settings/applock/PackageListAdapter;->mHandler:Landroid/os/Handler;
+    iget-object v4, v4, Lcom/android/settings_ex/applock/PackageListAdapter;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v4, v7}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
@@ -132,9 +132,9 @@
 
     .line 179
     .local v1, "msg":Landroid/os/Message;
-    iget-object v4, p0, Lcom/android/settings/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings/applock/PackageListAdapter;
+    iget-object v4, p0, Lcom/android/settings_ex/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings_ex/applock/PackageListAdapter;
 
-    iget-object v4, v4, Lcom/android/settings/applock/PackageListAdapter;->mHandler:Landroid/os/Handler;
+    iget-object v4, v4, Lcom/android/settings_ex/applock/PackageListAdapter;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v4, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
@@ -144,30 +144,30 @@
     .line 175
     .end local v1    # "msg":Landroid/os/Message;
     :cond_0
-    iget-object v4, p0, Lcom/android/settings/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings/applock/PackageListAdapter;
+    iget-object v4, p0, Lcom/android/settings_ex/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings_ex/applock/PackageListAdapter;
 
-    iget-object v4, v4, Lcom/android/settings/applock/PackageListAdapter;->mPackageInfoUtil:Lcom/android/settings/applock/PackageInfoUtil;
+    iget-object v4, v4, Lcom/android/settings_ex/applock/PackageListAdapter;->mPackageInfoUtil:Lcom/android/settings_ex/applock/PackageInfoUtil;
 
-    iget-object v5, p0, Lcom/android/settings/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings/applock/PackageListAdapter;
+    iget-object v5, p0, Lcom/android/settings_ex/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings_ex/applock/PackageListAdapter;
 
-    iget-object v5, v5, Lcom/android/settings/applock/PackageListAdapter;->mContext:Landroid/content/Context;
+    iget-object v5, v5, Lcom/android/settings_ex/applock/PackageListAdapter;->mContext:Landroid/content/Context;
 
     invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v6
 
-    invoke-virtual {v4, v5, v2, v6}, Lcom/android/settings/applock/PackageInfoUtil;->removePackageState(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Boolean;)V
+    invoke-virtual {v4, v5, v2, v6}, Lcom/android/settings_ex/applock/PackageInfoUtil;->removePackageState(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Boolean;)V
 
     .line 176
-    iget-object v4, p0, Lcom/android/settings/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings/applock/PackageListAdapter;
+    iget-object v4, p0, Lcom/android/settings_ex/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings_ex/applock/PackageListAdapter;
 
-    iget-object v4, v4, Lcom/android/settings/applock/PackageListAdapter;->mPackageInfoUtil:Lcom/android/settings/applock/PackageInfoUtil;
+    iget-object v4, v4, Lcom/android/settings_ex/applock/PackageListAdapter;->mPackageInfoUtil:Lcom/android/settings_ex/applock/PackageInfoUtil;
 
-    iget-object v5, p0, Lcom/android/settings/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings/applock/PackageListAdapter;
+    iget-object v5, p0, Lcom/android/settings_ex/applock/PackageListAdapter$OnSwitchCheckedChangeListener;->this$0:Lcom/android/settings_ex/applock/PackageListAdapter;
 
-    iget-object v5, v5, Lcom/android/settings/applock/PackageListAdapter;->mContext:Landroid/content/Context;
+    iget-object v5, v5, Lcom/android/settings_ex/applock/PackageListAdapter;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v4, v5, v3}, Lcom/android/settings/applock/PackageInfoUtil;->removeFolderInfo(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-virtual {v4, v5, v3}, Lcom/android/settings_ex/applock/PackageInfoUtil;->removeFolderInfo(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

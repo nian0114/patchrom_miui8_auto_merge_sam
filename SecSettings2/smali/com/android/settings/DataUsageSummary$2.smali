@@ -1,11 +1,11 @@
-.class Lcom/android/settings/DataUsageSummary$2;
+.class Lcom/android/settings_ex/DataUsageSummary$2;
 .super Landroid/database/ContentObserver;
 .source "DataUsageSummary.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DataUsageSummary;
+    value = Lcom/android/settings_ex/DataUsageSummary;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DataUsageSummary;
+.field final synthetic this$0:Lcom/android/settings_ex/DataUsageSummary;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DataUsageSummary;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/DataUsageSummary;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 730
-    iput-object p1, p0, Lcom/android/settings/DataUsageSummary$2;->this$0:Lcom/android/settings/DataUsageSummary;
+    iput-object p1, p0, Lcom/android/settings_ex/DataUsageSummary$2;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -52,10 +52,10 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/DataUsageSummary$2;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v2, p0, Lcom/android/settings_ex/DataUsageSummary$2;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
-    # getter for: Lcom/android/settings/DataUsageSummary;->mMobileDataEnabled:Ljava/lang/Boolean;
-    invoke-static {v2}, Lcom/android/settings/DataUsageSummary;->access$1300(Lcom/android/settings/DataUsageSummary;)Ljava/lang/Boolean;
+    # getter for: Lcom/android/settings_ex/DataUsageSummary;->mMobileDataEnabled:Ljava/lang/Boolean;
+    invoke-static {v2}, Lcom/android/settings_ex/DataUsageSummary;->access$1300(Lcom/android/settings_ex/DataUsageSummary;)Ljava/lang/Boolean;
 
     move-result-object v2
 
@@ -70,12 +70,12 @@
     invoke-static {v0, v1}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 733
-    iget-object v0, p0, Lcom/android/settings/DataUsageSummary$2;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v0, p0, Lcom/android/settings_ex/DataUsageSummary$2;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
-    iget-object v1, p0, Lcom/android/settings/DataUsageSummary$2;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v1, p0, Lcom/android/settings_ex/DataUsageSummary$2;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
-    # getter for: Lcom/android/settings/DataUsageSummary;->mConnService:Landroid/net/ConnectivityManager;
-    invoke-static {v1}, Lcom/android/settings/DataUsageSummary;->access$1400(Lcom/android/settings/DataUsageSummary;)Landroid/net/ConnectivityManager;
+    # getter for: Lcom/android/settings_ex/DataUsageSummary;->mConnService:Landroid/net/ConnectivityManager;
+    invoke-static {v1}, Lcom/android/settings_ex/DataUsageSummary;->access$1400(Lcom/android/settings_ex/DataUsageSummary;)Landroid/net/ConnectivityManager;
 
     move-result-object v1
 
@@ -87,8 +87,8 @@
 
     move-result-object v1
 
-    # setter for: Lcom/android/settings/DataUsageSummary;->mMobileDataEnabled:Ljava/lang/Boolean;
-    invoke-static {v0, v1}, Lcom/android/settings/DataUsageSummary;->access$1302(Lcom/android/settings/DataUsageSummary;Ljava/lang/Boolean;)Ljava/lang/Boolean;
+    # setter for: Lcom/android/settings_ex/DataUsageSummary;->mMobileDataEnabled:Ljava/lang/Boolean;
+    invoke-static {v0, v1}, Lcom/android/settings_ex/DataUsageSummary;->access$1302(Lcom/android/settings_ex/DataUsageSummary;Ljava/lang/Boolean;)Ljava/lang/Boolean;
 
     .line 734
     const-string v0, "DataUsage"
@@ -103,10 +103,10 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/DataUsageSummary$2;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v2, p0, Lcom/android/settings_ex/DataUsageSummary$2;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
-    # getter for: Lcom/android/settings/DataUsageSummary;->mMobileDataEnabled:Ljava/lang/Boolean;
-    invoke-static {v2}, Lcom/android/settings/DataUsageSummary;->access$1300(Lcom/android/settings/DataUsageSummary;)Ljava/lang/Boolean;
+    # getter for: Lcom/android/settings_ex/DataUsageSummary;->mMobileDataEnabled:Ljava/lang/Boolean;
+    invoke-static {v2}, Lcom/android/settings_ex/DataUsageSummary;->access$1300(Lcom/android/settings_ex/DataUsageSummary;)Ljava/lang/Boolean;
 
     move-result-object v2
 
@@ -121,12 +121,12 @@
     invoke-static {v0, v1}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 735
-    iget-object v0, p0, Lcom/android/settings/DataUsageSummary$2;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v0, p0, Lcom/android/settings_ex/DataUsageSummary$2;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
     const/4 v1, 0x0
 
-    # invokes: Lcom/android/settings/DataUsageSummary;->updatePolicy(Z)V
-    invoke-static {v0, v1}, Lcom/android/settings/DataUsageSummary;->access$400(Lcom/android/settings/DataUsageSummary;Z)V
+    # invokes: Lcom/android/settings_ex/DataUsageSummary;->updatePolicy(Z)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/DataUsageSummary;->access$400(Lcom/android/settings_ex/DataUsageSummary;Z)V
 
     .line 736
     return-void

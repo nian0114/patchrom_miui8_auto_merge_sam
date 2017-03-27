@@ -1,14 +1,14 @@
-.class Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;
+.class Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;
 .super Ljava/lang/Object;
 .source "IMediaServer.java"
 
 # interfaces
-.implements Lcom/android/settings/nearby/IMediaServer;
+.implements Lcom/android/settings_ex/nearby/IMediaServer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/nearby/IMediaServer$Stub;
+    value = Lcom/android/settings_ex/nearby/IMediaServer$Stub;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -31,7 +31,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 239
-    iput-object p1, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iput-object p1, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     .line 240
     return-void
@@ -67,7 +67,7 @@
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     .line 529
-    iget-object v2, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0xe
 
@@ -106,7 +106,7 @@
 
     .prologue
     .line 243
-    iget-object v0, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v0, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
 .end method
@@ -139,7 +139,7 @@
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     .line 582
-    iget-object v3, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x11
 
@@ -208,7 +208,7 @@
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     .line 602
-    iget-object v3, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x12
 
@@ -277,7 +277,7 @@
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     .line 437
-    iget-object v3, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x9
 
@@ -346,7 +346,7 @@
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     .line 622
-    iget-object v3, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x13
 
@@ -415,7 +415,7 @@
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     .line 642
-    iget-object v3, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x14
 
@@ -484,7 +484,7 @@
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     .line 346
-    iget-object v3, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x5
 
@@ -553,7 +553,7 @@
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     .line 392
-    iget-object v3, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x7
 
@@ -624,7 +624,7 @@
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     .line 457
-    iget-object v3, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0xa
 
@@ -700,7 +700,7 @@
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     .line 294
-    iget-object v3, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x3
 
@@ -774,7 +774,7 @@
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     .line 564
-    iget-object v2, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x10
 
@@ -836,7 +836,7 @@
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     .line 512
-    iget-object v2, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0xd
 
@@ -902,7 +902,7 @@
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 662
-    iget-object v2, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x15
 
@@ -968,7 +968,7 @@
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 680
-    iget-object v2, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x16
 
@@ -1034,7 +1034,7 @@
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 547
-    iget-object v2, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0xf
 
@@ -1100,7 +1100,7 @@
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 495
-    iget-object v2, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0xc
 
@@ -1166,7 +1166,7 @@
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 477
-    iget-object v2, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0xb
 
@@ -1232,7 +1232,7 @@
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 417
-    iget-object v3, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v4, 0x8
 
@@ -1305,7 +1305,7 @@
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 321
-    iget-object v2, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x4
 
@@ -1371,7 +1371,7 @@
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 372
-    iget-object v3, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v3, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x6
 
@@ -1440,7 +1440,7 @@
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     .line 259
-    iget-object v2, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x1
 
@@ -1502,7 +1502,7 @@
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     .line 276
-    iget-object v2, p0, Lcom/android/settings/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v2, p0, Lcom/android/settings_ex/nearby/IMediaServer$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v3, 0x2
 

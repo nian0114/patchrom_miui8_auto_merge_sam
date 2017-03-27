@@ -1,4 +1,4 @@
-.class Lcom/android/settings/UserCredentialsSettings$3;
+.class Lcom/android/settings_ex/UserCredentialsSettings$3;
 .super Ljava/lang/Object;
 .source "UserCredentialsSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/UserCredentialsSettings;->showCertDialog(Lcom/android/settings/UserCredentialsSettings$CertHolder;)V
+    value = Lcom/android/settings_ex/UserCredentialsSettings;->showCertDialog(Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/UserCredentialsSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/UserCredentialsSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/UserCredentialsSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/UserCredentialsSettings;)V
     .locals 0
 
     .prologue
     .line 683
-    iput-object p1, p0, Lcom/android/settings/UserCredentialsSettings$3;->this$0:Lcom/android/settings/UserCredentialsSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/UserCredentialsSettings$3;->this$0:Lcom/android/settings_ex/UserCredentialsSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

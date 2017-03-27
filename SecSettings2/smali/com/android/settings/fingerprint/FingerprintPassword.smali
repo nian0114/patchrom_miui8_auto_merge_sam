@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/fingerprint/FingerprintPassword;
+.class public Lcom/android/settings_ex/fingerprint/FingerprintPassword;
 .super Landroid/preference/PreferenceActivity;
 .source "FingerprintPassword.java"
 
@@ -6,8 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;,
-        Lcom/android/settings/fingerprint/FingerprintPassword$onKeyBackListener;
+        Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;,
+        Lcom/android/settings_ex/fingerprint/FingerprintPassword$onKeyBackListener;
     }
 .end annotation
 
@@ -29,7 +29,7 @@
 
 
 # instance fields
-.field private mOnKeyBackListener:Lcom/android/settings/fingerprint/FingerprintPassword$onKeyBackListener;
+.field private mOnKeyBackListener:Lcom/android/settings_ex/fingerprint/FingerprintPassword$onKeyBackListener;
 
 
 # direct methods
@@ -42,21 +42,21 @@
     .line 75
     const-string v0, ""
 
-    sput-object v0, Lcom/android/settings/fingerprint/FingerprintPassword;->mFingerprintPreviousStage:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mFingerprintPreviousStage:Ljava/lang/String;
 
     .line 76
-    sput v1, Lcom/android/settings/fingerprint/FingerprintPassword;->mFingerprintIndex:I
+    sput v1, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mFingerprintIndex:I
 
     .line 78
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/android/settings/fingerprint/FingerprintPassword;->mFingerpintOwnName:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mFingerpintOwnName:Ljava/lang/String;
 
     .line 80
-    sput-boolean v1, Lcom/android/settings/fingerprint/FingerprintPassword;->mIsSetupWizard:Z
+    sput-boolean v1, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mIsSetupWizard:Z
 
     .line 84
-    sput-boolean v1, Lcom/android/settings/fingerprint/FingerprintPassword;->isScreenRotated:Z
+    sput-boolean v1, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->isScreenRotated:Z
 
     return-void
 .end method
@@ -77,7 +77,7 @@
 
     .prologue
     .line 63
-    sget-boolean v0, Lcom/android/settings/fingerprint/FingerprintPassword;->mIsSetupWizard:Z
+    sget-boolean v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mIsSetupWizard:Z
 
     return v0
 .end method
@@ -87,7 +87,7 @@
 
     .prologue
     .line 63
-    sget-object v0, Lcom/android/settings/fingerprint/FingerprintPassword;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    sget-object v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mDPM:Landroid/app/admin/DevicePolicyManager;
 
     return-object v0
 .end method
@@ -98,7 +98,7 @@
 
     .prologue
     .line 63
-    sput-object p0, Lcom/android/settings/fingerprint/FingerprintPassword;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    sput-object p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mDPM:Landroid/app/admin/DevicePolicyManager;
 
     return-object p0
 .end method
@@ -108,7 +108,7 @@
 
     .prologue
     .line 63
-    sget-object v0, Lcom/android/settings/fingerprint/FingerprintPassword;->window:Landroid/view/Window;
+    sget-object v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->window:Landroid/view/Window;
 
     return-object v0
 .end method
@@ -119,7 +119,7 @@
 
     .prologue
     .line 63
-    sput-object p0, Lcom/android/settings/fingerprint/FingerprintPassword;->window:Landroid/view/Window;
+    sput-object p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->window:Landroid/view/Window;
 
     return-object p0
 .end method
@@ -129,7 +129,7 @@
 
     .prologue
     .line 63
-    sget-object v0, Lcom/android/settings/fingerprint/FingerprintPassword;->mFingerprintPreviousStage:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mFingerprintPreviousStage:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -177,7 +177,7 @@
     .local v0, "modIntent":Landroid/content/Intent;
     const-string v1, ":android:show_fragment"
 
-    const-class v2, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;
+    const-class v2, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -202,7 +202,7 @@
 
     .prologue
     .line 96
-    const-class v0, Lcom/android/settings/fingerprint/FingerprintPassword$FingerprintPasswordFragment;
+    const-class v0, Lcom/android/settings_ex/fingerprint/FingerprintPassword$FingerprintPasswordFragment;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -252,7 +252,7 @@
 
     .prologue
     .line 105
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -267,18 +267,18 @@
 
     check-cast v3, Ljava/lang/String;
 
-    sput-object v3, Lcom/android/settings/fingerprint/FingerprintPassword;->mFingerprintPreviousStage:Ljava/lang/String;
+    sput-object v3, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mFingerprintPreviousStage:Ljava/lang/String;
 
     .line 108
     const-string v3, "fingerprint_setup_wizard"
 
-    sget-object v4, Lcom/android/settings/fingerprint/FingerprintPassword;->mFingerprintPreviousStage:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mFingerprintPreviousStage:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
-    sput-boolean v3, Lcom/android/settings/fingerprint/FingerprintPassword;->mIsSetupWizard:Z
+    sput-boolean v3, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mIsSetupWizard:Z
 
     .line 109
     const-string v3, "fingerIndex"
@@ -289,7 +289,7 @@
 
     move-result v3
 
-    sput v3, Lcom/android/settings/fingerprint/FingerprintPassword;->mFingerprintIndex:I
+    sput v3, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mFingerprintIndex:I
 
     .line 110
     const-string v3, "ownName"
@@ -298,7 +298,7 @@
 
     move-result-object v3
 
-    sput-object v3, Lcom/android/settings/fingerprint/FingerprintPassword;->mFingerpintOwnName:Ljava/lang/String;
+    sput-object v3, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mFingerpintOwnName:Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -307,7 +307,7 @@
     invoke-super {p0, p1}, Landroid/preference/PreferenceActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 118
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v3
 
@@ -316,30 +316,30 @@
     .line 119
     const/4 v3, 0x0
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/fingerprint/FingerprintPassword;->setFinishOnTouchOutside(Z)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->setFinishOnTouchOutside(Z)V
 
     .line 121
     :cond_0
     const v3, 0x7f0e07be
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/fingerprint/FingerprintPassword;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v2
 
     .line 122
     .local v2, "msg":Ljava/lang/CharSequence;
-    invoke-virtual {p0, v2, v2}, Lcom/android/settings/fingerprint/FingerprintPassword;->showBreadCrumbs(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v2, v2}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->showBreadCrumbs(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
 
     .line 123
     const-string v3, "device_policy"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/fingerprint/FingerprintPassword;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/app/admin/DevicePolicyManager;
 
-    sput-object v3, Lcom/android/settings/fingerprint/FingerprintPassword;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    sput-object v3, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mDPM:Landroid/app/admin/DevicePolicyManager;
 
     .line 124
     return-void
@@ -363,7 +363,7 @@
 
     move-result-object v4
 
-    sget-object v5, Lcom/android/settings/fingerprint/FingerprintPassword;->mFingerprintPreviousStage:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mFingerprintPreviousStage:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -375,7 +375,7 @@
 
     move-result-object v4
 
-    sget v5, Lcom/android/settings/fingerprint/FingerprintPassword;->mFingerprintIndex:I
+    sget v5, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mFingerprintIndex:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -387,7 +387,7 @@
 
     move-result-object v4
 
-    sget-object v5, Lcom/android/settings/fingerprint/FingerprintPassword;->mFingerpintOwnName:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mFingerpintOwnName:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -439,9 +439,9 @@
     if-ne p1, v1, :cond_0
 
     .line 137
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintPassword;->mOnKeyBackListener:Lcom/android/settings/fingerprint/FingerprintPassword$onKeyBackListener;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mOnKeyBackListener:Lcom/android/settings_ex/fingerprint/FingerprintPassword$onKeyBackListener;
 
-    invoke-interface {v1}, Lcom/android/settings/fingerprint/FingerprintPassword$onKeyBackListener;->onKeyBack()Z
+    invoke-interface {v1}, Lcom/android/settings_ex/fingerprint/FingerprintPassword$onKeyBackListener;->onKeyBack()Z
 
     move-result v1
 
@@ -455,10 +455,10 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 139
-    invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintPassword;->setResult(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->setResult(I)V
 
     .line 140
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintPassword;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->finish()V
 
     .line 145
     :cond_0
@@ -470,16 +470,16 @@
     return v0
 .end method
 
-.method setOnKeyBackListener(Lcom/android/settings/fingerprint/FingerprintPassword$onKeyBackListener;)V
+.method setOnKeyBackListener(Lcom/android/settings_ex/fingerprint/FingerprintPassword$onKeyBackListener;)V
     .locals 0
-    .param p1, "listener"    # Lcom/android/settings/fingerprint/FingerprintPassword$onKeyBackListener;
+    .param p1, "listener"    # Lcom/android/settings_ex/fingerprint/FingerprintPassword$onKeyBackListener;
 
     .prologue
     .line 149
     if-eqz p1, :cond_0
 
     .line 150
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintPassword;->mOnKeyBackListener:Lcom/android/settings/fingerprint/FingerprintPassword$onKeyBackListener;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintPassword;->mOnKeyBackListener:Lcom/android/settings_ex/fingerprint/FingerprintPassword$onKeyBackListener;
 
     .line 152
     :cond_0

@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/wifi/WifiShareProfile$WifiShareProfileApInfo;
+.class public Lcom/android/settings_ex/wifi/WifiShareProfile$WifiShareProfileApInfo;
 .super Ljava/lang/Object;
 .source "WifiShareProfile.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiShareProfile;
+    value = Lcom/android/settings_ex/wifi/WifiShareProfile;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -37,16 +37,16 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 177
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiShareProfile$WifiShareProfileApInfo;->ssid:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiShareProfile$WifiShareProfileApInfo;->ssid:Ljava/lang/String;
 
     .line 178
-    iput-object p2, p0, Lcom/android/settings/wifi/WifiShareProfile$WifiShareProfileApInfo;->index:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/settings_ex/wifi/WifiShareProfile$WifiShareProfileApInfo;->index:Ljava/lang/String;
 
     .line 179
-    iput-object p3, p0, Lcom/android/settings/wifi/WifiShareProfile$WifiShareProfileApInfo;->network:Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/settings_ex/wifi/WifiShareProfile$WifiShareProfileApInfo;->network:Ljava/lang/String;
 
     .line 180
-    iput p4, p0, Lcom/android/settings/wifi/WifiShareProfile$WifiShareProfileApInfo;->priority:I
+    iput p4, p0, Lcom/android/settings_ex/wifi/WifiShareProfile$WifiShareProfileApInfo;->priority:I
 
     .line 181
     return-void

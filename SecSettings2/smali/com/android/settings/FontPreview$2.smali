@@ -1,4 +1,4 @@
-.class Lcom/android/settings/FontPreview$2;
+.class Lcom/android/settings_ex/FontPreview$2;
 .super Ljava/lang/Object;
 .source "FontPreview.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/FontPreview;->setFontsizeLayoutSevenOrEleven(Z)V
+    value = Lcom/android/settings_ex/FontPreview;->setFontsizeLayoutSevenOrEleven(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/FontPreview;
+.field final synthetic this$0:Lcom/android/settings_ex/FontPreview;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/FontPreview;)V
+.method constructor <init>(Lcom/android/settings_ex/FontPreview;)V
     .locals 0
 
     .prologue
     .line 331
-    iput-object p1, p0, Lcom/android/settings/FontPreview$2;->this$0:Lcom/android/settings/FontPreview;
+    iput-object p1, p0, Lcom/android/settings_ex/FontPreview$2;->this$0:Lcom/android/settings_ex/FontPreview;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
     .line 335
     new-instance v0, Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/android/settings/FontPreview$2;->this$0:Lcom/android/settings/FontPreview;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview$2;->this$0:Lcom/android/settings_ex/FontPreview;
 
     invoke-direct {v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
@@ -54,10 +54,10 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setGravity(I)V
 
     .line 337
-    iget-object v1, p0, Lcom/android/settings/FontPreview$2;->this$0:Lcom/android/settings/FontPreview;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview$2;->this$0:Lcom/android/settings_ex/FontPreview;
 
-    # getter for: Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/FontPreview;->access$500(Lcom/android/settings/FontPreview;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/FontPreview;->access$500(Lcom/android/settings_ex/FontPreview;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -76,10 +76,10 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 338
-    iget-object v1, p0, Lcom/android/settings/FontPreview$2;->this$0:Lcom/android/settings/FontPreview;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview$2;->this$0:Lcom/android/settings_ex/FontPreview;
 
-    # getter for: Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/FontPreview;->access$500(Lcom/android/settings/FontPreview;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/FontPreview;->access$500(Lcom/android/settings_ex/FontPreview;)Landroid/content/Context;
 
     move-result-object v1
 

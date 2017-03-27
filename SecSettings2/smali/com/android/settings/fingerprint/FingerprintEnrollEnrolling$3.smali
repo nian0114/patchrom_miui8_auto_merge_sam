@@ -1,11 +1,11 @@
-.class Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$3;
+.class Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$3;
 .super Landroid/animation/AnimatorListenerAdapter;
 .source "FingerprintEnrollEnrolling.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->animateFlash()V
+    value = Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;->animateFlash()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,20 +15,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;
 
 .field final synthetic val$listener:Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
     .locals 0
 
     .prologue
     .line 200
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$3;->this$0:Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$3;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;
 
-    iput-object p2, p0, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$3;->val$listener:Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+    iput-object p2, p0, Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$3;->val$listener:Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -49,10 +49,10 @@
 
     const/4 v2, 0x0
 
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$3;->this$0:Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$3;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->mIndicatorBackgroundActivatedColor:I
-    invoke-static {v3}, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->access$400(Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;)I
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;->mIndicatorBackgroundActivatedColor:I
+    invoke-static {v3}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;->access$400(Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;)I
 
     move-result v3
 
@@ -60,10 +60,10 @@
 
     const/4 v2, 0x1
 
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$3;->this$0:Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$3;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->mIndicatorBackgroundRestingColor:I
-    invoke-static {v3}, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->access$500(Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;)I
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;->mIndicatorBackgroundRestingColor:I
+    invoke-static {v3}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;->access$500(Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;)I
 
     move-result v3
 
@@ -75,7 +75,7 @@
 
     .line 205
     .local v0, "anim":Landroid/animation/ValueAnimator;
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$3;->val$listener:Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$3;->val$listener:Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -85,10 +85,10 @@
     invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     .line 207
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$3;->this$0:Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$3;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->mLinearOutSlowInInterpolator:Landroid/view/animation/Interpolator;
-    invoke-static {v1}, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->access$600(Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;)Landroid/view/animation/Interpolator;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;->mLinearOutSlowInInterpolator:Landroid/view/animation/Interpolator;
+    invoke-static {v1}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;->access$600(Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;)Landroid/view/animation/Interpolator;
 
     move-result-object v1
 

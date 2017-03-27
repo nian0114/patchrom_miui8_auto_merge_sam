@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/AccessibilitySettingsVision$22;
+.class Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$22;
 .super Ljava/lang/Object;
 .source "AccessibilitySettingsVision.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/AccessibilitySettingsVision;->onCreateDialog(I)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->onCreateDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)V
     .locals 0
 
     .prologue
     .line 1326
-    iput-object p1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$22;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$22;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,10 +47,10 @@
     const/4 v5, 0x1
 
     .line 1328
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$22;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$22;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    # invokes: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v1}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$3800(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$3800(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -59,10 +59,10 @@
     invoke-static {v1, v2, v6}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 1329
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$22;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$22;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    # invokes: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v1}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$3900(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$3900(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -71,9 +71,9 @@
     invoke-static {v1, v2, v5}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 1330
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$22;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$22;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    invoke-virtual {v1}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -83,15 +83,15 @@
 
     const-string v4, "Accessibility settings"
 
-    invoke-static {v1, v2, v3, v4}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3, v4}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1331
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$22;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$22;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
     const-string v2, "accessibility"
 
-    # invokes: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-    invoke-static {v1, v2}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$4000(Lcom/android/settings/accessibility/AccessibilitySettingsVision;Ljava/lang/String;)Ljava/lang/Object;
+    # invokes: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v1, v2}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$4000(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -99,16 +99,16 @@
 
     .line 1332
     .local v0, "mAccessibilityManager":Landroid/view/accessibility/AccessibilityManager;
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$22;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$22;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    # invokes: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->setColorWeaknessMode(Z)V
-    invoke-static {v1, v6}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$2500(Lcom/android/settings/accessibility/AccessibilitySettingsVision;Z)V
+    # invokes: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->setColorWeaknessMode(Z)V
+    invoke-static {v1, v6}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$2500(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;Z)V
 
     .line 1333
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$22;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$22;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    # getter for: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->mHighContrastCheckbox:Landroid/preference/SwitchPreference;
-    invoke-static {v1}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$1400(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->mHighContrastCheckbox:Landroid/preference/SwitchPreference;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$1400(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)Landroid/preference/SwitchPreference;
 
     move-result-object v1
 

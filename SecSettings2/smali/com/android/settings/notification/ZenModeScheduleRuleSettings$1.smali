@@ -1,4 +1,4 @@
-.class Lcom/android/settings/notification/ZenModeScheduleRuleSettings$1;
+.class Lcom/android/settings_ex/notification/ZenModeScheduleRuleSettings$1;
 .super Ljava/lang/Object;
 .source "ZenModeScheduleRuleSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/notification/ZenModeScheduleRuleSettings;->onCreateInternal()V
+    value = Lcom/android/settings_ex/notification/ZenModeScheduleRuleSettings;->onCreateInternal()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/ZenModeScheduleRuleSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/ZenModeScheduleRuleSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/notification/ZenModeScheduleRuleSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/notification/ZenModeScheduleRuleSettings;)V
     .locals 0
 
     .prologue
     .line 87
-    iput-object p1, p0, Lcom/android/settings/notification/ZenModeScheduleRuleSettings$1;->this$0:Lcom/android/settings/notification/ZenModeScheduleRuleSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/ZenModeScheduleRuleSettings$1;->this$0:Lcom/android/settings_ex/notification/ZenModeScheduleRuleSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,10 +42,10 @@
 
     .prologue
     .line 90
-    iget-object v0, p0, Lcom/android/settings/notification/ZenModeScheduleRuleSettings$1;->this$0:Lcom/android/settings/notification/ZenModeScheduleRuleSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/ZenModeScheduleRuleSettings$1;->this$0:Lcom/android/settings_ex/notification/ZenModeScheduleRuleSettings;
 
-    # invokes: Lcom/android/settings/notification/ZenModeScheduleRuleSettings;->showDaysDialog()V
-    invoke-static {v0}, Lcom/android/settings/notification/ZenModeScheduleRuleSettings;->access$000(Lcom/android/settings/notification/ZenModeScheduleRuleSettings;)V
+    # invokes: Lcom/android/settings_ex/notification/ZenModeScheduleRuleSettings;->showDaysDialog()V
+    invoke-static {v0}, Lcom/android/settings_ex/notification/ZenModeScheduleRuleSettings;->access$000(Lcom/android/settings_ex/notification/ZenModeScheduleRuleSettings;)V
 
     .line 91
     const/4 v0, 0x1

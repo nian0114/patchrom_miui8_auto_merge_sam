@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;
+.class public Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;
 .super Landroid/content/BroadcastReceiver;
 .source "WifiIntentReciever.java"
 
@@ -31,18 +31,18 @@
     .line 38
     sget-object v0, Landroid/net/NetworkInfo$DetailedState;->DISCONNECTED:Landroid/net/NetworkInfo$DetailedState;
 
-    sput-object v0, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->prestate:Landroid/net/NetworkInfo$DetailedState;
+    sput-object v0, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->prestate:Landroid/net/NetworkInfo$DetailedState;
 
     .line 39
-    sput v1, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->mCountryChina:I
+    sput v1, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->mCountryChina:I
 
     .line 40
-    sput v1, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->mSalesCodeCHM:I
+    sput v1, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->mSalesCodeCHM:I
 
     .line 41
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->isWps:Z
+    sput-boolean v0, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->isWps:Z
 
     return-void
 .end method
@@ -63,12 +63,12 @@
 
     .prologue
     .line 207
-    iget-object v0, p0, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->connMgr:Landroid/net/ConnectivityManager;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->connMgr:Landroid/net/ConnectivityManager;
 
     if-eqz v0, :cond_0
 
     .line 208
-    iget-object v0, p0, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->connMgr:Landroid/net/ConnectivityManager;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->connMgr:Landroid/net/ConnectivityManager;
 
     invoke-virtual {v0, p1}, Landroid/net/ConnectivityManager;->setMobileDataEnabled(Z)V
 
@@ -183,7 +183,7 @@
 
     .line 149
     .local v2, "isAirPlane":Z
-    sget v7, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->mSalesCodeCHM:I
+    sget v7, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->mSalesCodeCHM:I
 
     if-ne v7, v8, :cond_0
 
@@ -207,7 +207,7 @@
     :goto_0
     if-nez v2, :cond_1
 
-    invoke-direct {p0, p1}, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->isSIMCardReady(Landroid/content/Context;)Z
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->isSIMCardReady(Landroid/content/Context;)Z
 
     move-result v7
 
@@ -222,14 +222,14 @@
 
     check-cast v7, Landroid/net/ConnectivityManager;
 
-    iput-object v7, p0, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->connMgr:Landroid/net/ConnectivityManager;
+    iput-object v7, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->connMgr:Landroid/net/ConnectivityManager;
 
     .line 158
-    iget-object v7, p0, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->connMgr:Landroid/net/ConnectivityManager;
+    iget-object v7, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->connMgr:Landroid/net/ConnectivityManager;
 
     if-eqz v7, :cond_1
 
-    iget-object v7, p0, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->connMgr:Landroid/net/ConnectivityManager;
+    iget-object v7, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->connMgr:Landroid/net/ConnectivityManager;
 
     invoke-virtual {v7}, Landroid/net/ConnectivityManager;->getMobileDataEnabled()Z
 
@@ -237,12 +237,12 @@
 
     if-eqz v7, :cond_1
 
-    sget-boolean v7, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->isWps:Z
+    sget-boolean v7, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->isWps:Z
 
     if-nez v7, :cond_1
 
     .line 159
-    sget v7, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->mSalesCodeCHM:I
+    sget v7, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->mSalesCodeCHM:I
 
     if-ne v7, v8, :cond_5
 
@@ -251,17 +251,17 @@
 
     move-result-object v7
 
-    iput-object v7, p0, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->mDoNotShow:Landroid/content/SharedPreferences;
+    iput-object v7, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->mDoNotShow:Landroid/content/SharedPreferences;
 
     .line 161
     invoke-static {p1}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v7
 
-    iput-object v7, p0, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->mBeforeValue:Landroid/content/SharedPreferences;
+    iput-object v7, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->mBeforeValue:Landroid/content/SharedPreferences;
 
     .line 162
-    iget-object v7, p0, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->mDoNotShow:Landroid/content/SharedPreferences;
+    iget-object v7, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->mDoNotShow:Landroid/content/SharedPreferences;
 
     const-string v10, "connhan_do_not_show"
 
@@ -271,7 +271,7 @@
 
     .line 163
     .local v0, "do_not_show_again":Z
-    iget-object v7, p0, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->mBeforeValue:Landroid/content/SharedPreferences;
+    iget-object v7, p0, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->mBeforeValue:Landroid/content/SharedPreferences;
 
     const-string v10, "connhan_value"
 
@@ -317,7 +317,7 @@
     invoke-static {v7, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 168
-    invoke-direct {p0, v8}, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->OnOffData(Z)V
+    invoke-direct {p0, v8}, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->OnOffData(Z)V
 
     .line 205
     .end local v0    # "do_not_show_again":Z
@@ -343,19 +343,19 @@
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 171
-    invoke-direct {p0, v9}, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->OnOffData(Z)V
+    invoke-direct {p0, v9}, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->OnOffData(Z)V
 
     goto :goto_1
 
     .line 174
     :cond_4
-    invoke-direct {p0, v9}, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->OnOffData(Z)V
+    invoke-direct {p0, v9}, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->OnOffData(Z)V
 
     .line 176
     :try_start_0
     new-instance v4, Landroid/content/Intent;
 
-    const-class v7, Lcom/android/settings/wifi/connectionhandler/WifiConnectionHandlerActivity;
+    const-class v7, Lcom/android/settings_ex/wifi/connectionhandler/WifiConnectionHandlerActivity;
 
     invoke-direct {v4, p1, v7}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -525,7 +525,7 @@
 
     .prologue
     .line 47
-    sget v13, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->mCountryChina:I
+    sget v13, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->mCountryChina:I
 
     const/4 v14, -0x1
 
@@ -555,13 +555,13 @@
     .line 50
     const/4 v13, 0x1
 
-    sput v13, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->mCountryChina:I
+    sput v13, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->mCountryChina:I
 
     .line 55
     .end local v5    # "countryCode":Ljava/lang/String;
     :cond_0
     :goto_0
-    sget v13, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->mCountryChina:I
+    sget v13, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->mCountryChina:I
 
     const/4 v14, 0x1
 
@@ -574,7 +574,7 @@
 
     .line 59
     .local v1, "action":Ljava/lang/String;
-    sget v13, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->mSalesCodeCHM:I
+    sget v13, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->mSalesCodeCHM:I
 
     const/4 v14, -0x1
 
@@ -604,7 +604,7 @@
     .line 62
     const/4 v13, 0x1
 
-    sput v13, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->mSalesCodeCHM:I
+    sput v13, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->mSalesCodeCHM:I
 
     .line 68
     .end local v9    # "salesCode":Ljava/lang/String;
@@ -629,10 +629,10 @@
 
     move-result v13
 
-    sput-boolean v13, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->isWps:Z
+    sput-boolean v13, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->isWps:Z
 
     .line 72
-    sget v13, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->mSalesCodeCHM:I
+    sget v13, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->mSalesCodeCHM:I
 
     const/4 v14, 0x1
 
@@ -687,7 +687,7 @@
     .local v2, "args":Landroid/os/Bundle;
     const-string v14, "enable"
 
-    sget-boolean v13, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->isWps:Z
+    sget-boolean v13, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->isWps:Z
 
     if-nez v13, :cond_5
 
@@ -712,7 +712,7 @@
 
     move-result-object v14
 
-    sget-boolean v15, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->isWps:Z
+    sget-boolean v15, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->isWps:Z
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -753,7 +753,7 @@
     :cond_3
     const/4 v13, 0x0
 
-    sput v13, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->mCountryChina:I
+    sput v13, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->mCountryChina:I
 
     goto/16 :goto_0
 
@@ -764,7 +764,7 @@
     :cond_4
     const/4 v13, 0x0
 
-    sput v13, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->mSalesCodeCHM:I
+    sput v13, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->mSalesCodeCHM:I
 
     goto :goto_1
 
@@ -812,25 +812,25 @@
 
     .line 98
     .local v6, "currentState":Landroid/net/NetworkInfo$DetailedState;
-    sget-object v13, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->prestate:Landroid/net/NetworkInfo$DetailedState;
+    sget-object v13, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->prestate:Landroid/net/NetworkInfo$DetailedState;
 
     if-eq v13, v6, :cond_2
 
     .line 101
-    sget-object v13, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->prestate:Landroid/net/NetworkInfo$DetailedState;
+    sget-object v13, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->prestate:Landroid/net/NetworkInfo$DetailedState;
 
     sget-object v14, Landroid/net/NetworkInfo$DetailedState;->DISCONNECTED:Landroid/net/NetworkInfo$DetailedState;
 
     if-eq v13, v14, :cond_7
 
-    sget-object v13, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->prestate:Landroid/net/NetworkInfo$DetailedState;
+    sget-object v13, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->prestate:Landroid/net/NetworkInfo$DetailedState;
 
     sget-object v14, Landroid/net/NetworkInfo$DetailedState;->OBTAINING_IPADDR:Landroid/net/NetworkInfo$DetailedState;
 
     if-ne v13, v14, :cond_8
 
     :cond_7
-    sget-object v13, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->prestate:Landroid/net/NetworkInfo$DetailedState;
+    sget-object v13, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->prestate:Landroid/net/NetworkInfo$DetailedState;
 
     sget-object v14, Landroid/net/NetworkInfo$DetailedState;->SCANNING:Landroid/net/NetworkInfo$DetailedState;
 
@@ -879,24 +879,24 @@
     if-nez v13, :cond_a
 
     .line 112
-    invoke-direct/range {p0 .. p1}, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->showPrompt(Landroid/content/Context;)V
+    invoke-direct/range {p0 .. p1}, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->showPrompt(Landroid/content/Context;)V
 
     .line 114
     :cond_a
-    sput-object v6, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->prestate:Landroid/net/NetworkInfo$DetailedState;
+    sput-object v6, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->prestate:Landroid/net/NetworkInfo$DetailedState;
 
     goto :goto_3
 
     .line 115
     .end local v3    # "bssid":Ljava/lang/String;
     :cond_b
-    sget-object v13, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->prestate:Landroid/net/NetworkInfo$DetailedState;
+    sget-object v13, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->prestate:Landroid/net/NetworkInfo$DetailedState;
 
     sget-object v14, Landroid/net/NetworkInfo$DetailedState;->CONNECTED:Landroid/net/NetworkInfo$DetailedState;
 
     if-ne v13, v14, :cond_c
 
-    sget-object v13, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->prestate:Landroid/net/NetworkInfo$DetailedState;
+    sget-object v13, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->prestate:Landroid/net/NetworkInfo$DetailedState;
 
     sget-object v14, Landroid/net/NetworkInfo$DetailedState;->SCANNING:Landroid/net/NetworkInfo$DetailedState;
 
@@ -938,14 +938,14 @@
     if-eqz v3, :cond_2
 
     .line 125
-    sput-object v6, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->prestate:Landroid/net/NetworkInfo$DetailedState;
+    sput-object v6, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->prestate:Landroid/net/NetworkInfo$DetailedState;
 
     goto/16 :goto_3
 
     .line 128
     .end local v3    # "bssid":Ljava/lang/String;
     :cond_e
-    sput-object v6, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->prestate:Landroid/net/NetworkInfo$DetailedState;
+    sput-object v6, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->prestate:Landroid/net/NetworkInfo$DetailedState;
 
     goto/16 :goto_3
 
@@ -953,7 +953,7 @@
     .end local v6    # "currentState":Landroid/net/NetworkInfo$DetailedState;
     .end local v7    # "mNetworkInfo":Landroid/net/NetworkInfo;
     :cond_f
-    sget v13, Lcom/android/settings/wifi/connectionhandler/WifiIntentReciever;->mSalesCodeCHM:I
+    sget v13, Lcom/android/settings_ex/wifi/connectionhandler/WifiIntentReciever;->mSalesCodeCHM:I
 
     const/4 v14, 0x1
 
@@ -989,7 +989,7 @@
     .line 137
     new-instance v10, Landroid/content/Intent;
 
-    const-class v13, Lcom/android/settings/wifi/connectionhandler/WifiSelectHandlerActivity;
+    const-class v13, Lcom/android/settings_ex/wifi/connectionhandler/WifiSelectHandlerActivity;
 
     move-object/from16 v0, p1
 

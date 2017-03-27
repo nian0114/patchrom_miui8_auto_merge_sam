@@ -1,4 +1,4 @@
-.class public abstract Lcom/android/settings/deviceinfo/StorageWizardBase;
+.class public abstract Lcom/android/settings_ex/deviceinfo/StorageWizardBase;
 .super Landroid/app/Activity;
 .source "StorageWizardBase.java"
 
@@ -30,11 +30,11 @@
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     .line 215
-    new-instance v0, Lcom/android/settings/deviceinfo/StorageWizardBase$2;
+    new-instance v0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/deviceinfo/StorageWizardBase$2;-><init>(Lcom/android/settings/deviceinfo/StorageWizardBase;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase$2;-><init>(Lcom/android/settings_ex/deviceinfo/StorageWizardBase;)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mStorageListener:Landroid/os/storage/StorageEventListener;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mStorageListener:Landroid/os/storage/StorageEventListener;
 
     return-void
 .end method
@@ -47,7 +47,7 @@
 
     .prologue
     .line 206
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mStorage:Landroid/os/storage/StorageManager;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mStorage:Landroid/os/storage/StorageManager;
 
     invoke-virtual {v3}, Landroid/os/storage/StorageManager;->getVolumes()Ljava/util/List;
 
@@ -75,7 +75,7 @@
 
     .line 208
     .local v1, "vol":Landroid/os/storage/VolumeInfo;
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mDisk:Landroid/os/storage/DiskInfo;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mDisk:Landroid/os/storage/DiskInfo;
 
     invoke-virtual {v3}, Landroid/os/storage/DiskInfo;->getId()Ljava/lang/String;
 
@@ -113,7 +113,7 @@
 
     .prologue
     .line 149
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mCustomNext:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mCustomNext:Landroid/widget/TextView;
 
     return-object v0
 .end method
@@ -125,7 +125,7 @@
     .line 161
     const v0, 0x7f0d04d9
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardBase;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -141,7 +141,7 @@
     .line 157
     const v0, 0x7f0d02aa
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardBase;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -155,7 +155,7 @@
 
     .prologue
     .line 153
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mCustomIncludeLL:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mCustomIncludeLL:Landroid/view/ViewGroup;
 
     return-object v0
 .end method
@@ -171,21 +171,21 @@
     .line 60
     const/4 v2, 0x1
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/deviceinfo/StorageWizardBase;->setRequestedOrientation(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->setRequestedOrientation(I)V
 
     .line 61
     const-class v2, Landroid/os/storage/StorageManager;
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/deviceinfo/StorageWizardBase;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/os/storage/StorageManager;
 
-    iput-object v2, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mStorage:Landroid/os/storage/StorageManager;
+    iput-object v2, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mStorage:Landroid/os/storage/StorageManager;
 
     .line 63
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardBase;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -204,17 +204,17 @@
     if-nez v2, :cond_0
 
     .line 65
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mStorage:Landroid/os/storage/StorageManager;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mStorage:Landroid/os/storage/StorageManager;
 
     invoke-virtual {v2, v1}, Landroid/os/storage/StorageManager;->findVolumeById(Ljava/lang/String;)Landroid/os/storage/VolumeInfo;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mVolume:Landroid/os/storage/VolumeInfo;
+    iput-object v2, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mVolume:Landroid/os/storage/VolumeInfo;
 
     .line 68
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardBase;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -233,30 +233,30 @@
     if-nez v2, :cond_3
 
     .line 70
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mStorage:Landroid/os/storage/StorageManager;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mStorage:Landroid/os/storage/StorageManager;
 
     invoke-virtual {v2, v0}, Landroid/os/storage/StorageManager;->findDiskById(Ljava/lang/String;)Landroid/os/storage/DiskInfo;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mDisk:Landroid/os/storage/DiskInfo;
+    iput-object v2, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mDisk:Landroid/os/storage/DiskInfo;
 
     .line 75
     :cond_1
     :goto_0
     const v2, 0x7f0f0228
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/deviceinfo/StorageWizardBase;->setTheme(I)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->setTheme(I)V
 
     .line 77
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mDisk:Landroid/os/storage/DiskInfo;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mDisk:Landroid/os/storage/DiskInfo;
 
     if-eqz v2, :cond_2
 
     .line 78
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mStorage:Landroid/os/storage/StorageManager;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mStorage:Landroid/os/storage/StorageManager;
 
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mStorageListener:Landroid/os/storage/StorageEventListener;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mStorageListener:Landroid/os/storage/StorageEventListener;
 
     invoke-virtual {v2, v3}, Landroid/os/storage/StorageManager;->registerListener(Landroid/os/storage/StorageEventListener;)V
 
@@ -266,18 +266,18 @@
 
     .line 71
     :cond_3
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mVolume:Landroid/os/storage/VolumeInfo;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mVolume:Landroid/os/storage/VolumeInfo;
 
     if-eqz v2, :cond_1
 
     .line 72
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mVolume:Landroid/os/storage/VolumeInfo;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mVolume:Landroid/os/storage/VolumeInfo;
 
     invoke-virtual {v2}, Landroid/os/storage/VolumeInfo;->getDisk()Landroid/os/storage/DiskInfo;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mDisk:Landroid/os/storage/DiskInfo;
+    iput-object v2, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mDisk:Landroid/os/storage/DiskInfo;
 
     goto :goto_0
 .end method
@@ -287,9 +287,9 @@
 
     .prologue
     .line 144
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mStorage:Landroid/os/storage/StorageManager;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mStorage:Landroid/os/storage/StorageManager;
 
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mStorageListener:Landroid/os/storage/StorageEventListener;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mStorageListener:Landroid/os/storage/StorageEventListener;
 
     invoke-virtual {v0, v1}, Landroid/os/storage/StorageManager;->unregisterListener(Landroid/os/storage/StorageEventListener;)V
 
@@ -323,7 +323,7 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onPostCreate(Landroid/os/Bundle;)V
 
     .line 123
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardBase;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->getWindow()Landroid/view/Window;
 
     move-result-object v2
 
@@ -337,7 +337,7 @@
     invoke-virtual {v2, v6}, Landroid/view/Window;->setStatusBarColor(I)V
 
     .line 129
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mCustomNav:Landroid/view/View;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mCustomNav:Landroid/view/View;
 
     const/16 v4, 0x500
 
@@ -346,7 +346,7 @@
     .line 132
     const v3, 0x7f0d04e3
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/deviceinfo/StorageWizardBase;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -368,7 +368,7 @@
     .line 137
     const v3, 0x7f0d04dc
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/deviceinfo/StorageWizardBase;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -401,13 +401,13 @@
     .line 177
     const v0, 0x7f0d04ce
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardBase;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/settings/deviceinfo/StorageWizardBase;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -430,7 +430,7 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->setContentView(I)V
 
     .line 87
-    invoke-virtual {p0, v5}, Lcom/android/settings/deviceinfo/StorageWizardBase;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
@@ -442,7 +442,7 @@
 
     .line 89
     .local v2, "navParent":Landroid/view/ViewGroup;
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardBase;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v3
 
@@ -452,10 +452,10 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mCustomNav:Landroid/view/View;
+    iput-object v3, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mCustomNav:Landroid/view/View;
 
     .line 92
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mCustomNav:Landroid/view/View;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mCustomNav:Landroid/view/View;
 
     const v4, 0x7f0d04d8
 
@@ -465,10 +465,10 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    iput-object v3, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mCustomNext:Landroid/widget/TextView;
+    iput-object v3, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mCustomNext:Landroid/widget/TextView;
 
     .line 93
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mCustomNav:Landroid/view/View;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mCustomNav:Landroid/view/View;
 
     const v4, 0x7f0d04d7
 
@@ -478,10 +478,10 @@
 
     check-cast v3, Landroid/view/ViewGroup;
 
-    iput-object v3, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mCustomLL:Landroid/view/ViewGroup;
+    iput-object v3, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mCustomLL:Landroid/view/ViewGroup;
 
     .line 94
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mCustomNav:Landroid/view/View;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mCustomNav:Landroid/view/View;
 
     invoke-virtual {v3, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -489,19 +489,19 @@
 
     check-cast v3, Landroid/view/ViewGroup;
 
-    iput-object v3, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mCustomIncludeLL:Landroid/view/ViewGroup;
+    iput-object v3, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mCustomIncludeLL:Landroid/view/ViewGroup;
 
     .line 96
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mCustomLL:Landroid/view/ViewGroup;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mCustomLL:Landroid/view/ViewGroup;
 
-    new-instance v4, Lcom/android/settings/deviceinfo/StorageWizardBase$1;
+    new-instance v4, Lcom/android/settings_ex/deviceinfo/StorageWizardBase$1;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/deviceinfo/StorageWizardBase$1;-><init>(Lcom/android/settings/deviceinfo/StorageWizardBase;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase$1;-><init>(Lcom/android/settings_ex/deviceinfo/StorageWizardBase;)V
 
     invoke-virtual {v3, v4}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 103
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardBase;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -521,7 +521,7 @@
     if-eqz v1, :cond_1
 
     .line 106
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mCustomLL:Landroid/view/ViewGroup;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mCustomLL:Landroid/view/ViewGroup;
 
     const v4, 0x7f02035f
 
@@ -554,7 +554,7 @@
     invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->removeViewAt(I)V
 
     .line 113
-    iget-object v3, p0, Lcom/android/settings/deviceinfo/StorageWizardBase;->mCustomNav:Landroid/view/View;
+    iget-object v3, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->mCustomNav:Landroid/view/View;
 
     invoke-virtual {v2, v3, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
 
@@ -575,7 +575,7 @@
 
     .prologue
     .line 165
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardBase;->getProgressBar()Landroid/widget/ProgressBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->getProgressBar()Landroid/widget/ProgressBar;
 
     move-result-object v0
 
@@ -584,7 +584,7 @@
     .line 166
     const v0, 0x7f0d04da
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardBase;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -617,20 +617,20 @@
 
     .prologue
     .line 171
-    invoke-virtual {p0, p1, p2}, Lcom/android/settings/deviceinfo/StorageWizardBase;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 172
     .local v0, "headerText":Ljava/lang/CharSequence;
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardBase;->getSetupWizardLayout()Lcom/android/setupwizardlib/SetupWizardLayout;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->getSetupWizardLayout()Lcom/android/setupwizardlib/SetupWizardLayout;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Lcom/android/setupwizardlib/SetupWizardLayout;->setHeaderText(Ljava/lang/CharSequence;)V
 
     .line 173
-    invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardBase;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 174
     return-void
@@ -647,7 +647,7 @@
     if-eqz p1, :cond_0
 
     .line 189
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardBase;->getSetupWizardLayout()Lcom/android/setupwizardlib/SetupWizardLayout;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->getSetupWizardLayout()Lcom/android/setupwizardlib/SetupWizardLayout;
 
     move-result-object v0
 
@@ -661,7 +661,7 @@
 
     .line 192
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardBase;->getSetupWizardLayout()Lcom/android/setupwizardlib/SetupWizardLayout;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->getSetupWizardLayout()Lcom/android/setupwizardlib/SetupWizardLayout;
 
     move-result-object v0
 
@@ -678,7 +678,7 @@
 
     .prologue
     .line 198
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardBase;->getSetupWizardLayout()Lcom/android/setupwizardlib/SetupWizardLayout;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->getSetupWizardLayout()Lcom/android/setupwizardlib/SetupWizardLayout;
 
     move-result-object v0
 
@@ -697,7 +697,7 @@
     .line 182
     const v1, 0x7f0d04cf
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/deviceinfo/StorageWizardBase;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -705,7 +705,7 @@
 
     .line 183
     .local v0, "secondBody":Landroid/widget/TextView;
-    invoke-virtual {p0, p1, p2}, Lcom/android/settings/deviceinfo/StorageWizardBase;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 

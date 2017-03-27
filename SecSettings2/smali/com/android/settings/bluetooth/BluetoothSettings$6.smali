@@ -1,4 +1,4 @@
-.class Lcom/android/settings/bluetooth/BluetoothSettings$6;
+.class Lcom/android/settings_ex/bluetooth/BluetoothSettings$6;
 .super Ljava/lang/Object;
 .source "BluetoothSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/bluetooth/BluetoothSettings;->ShowChinaPermissionPopUp()V
+    value = Lcom/android/settings_ex/bluetooth/BluetoothSettings;->ShowChinaPermissionPopUp()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/bluetooth/BluetoothSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/bluetooth/BluetoothSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/bluetooth/BluetoothSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/bluetooth/BluetoothSettings;)V
     .locals 0
 
     .prologue
     .line 1016
-    iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothSettings$6;->this$0:Lcom/android/settings/bluetooth/BluetoothSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/bluetooth/BluetoothSettings$6;->this$0:Lcom/android/settings_ex/bluetooth/BluetoothSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

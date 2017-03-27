@@ -1,4 +1,4 @@
-.class Lcom/android/settings/personalpage/PersonalPageLockTypeFragment$2$1$1;
+.class Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment$2$1$1;
 .super Ljava/lang/Object;
 .source "PersonalPageLockTypeFragment.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/personalpage/PersonalPageLockTypeFragment$2$1;->run()V
+    value = Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment$2$1;->run()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$2:Lcom/android/settings/personalpage/PersonalPageLockTypeFragment$2$1;
+.field final synthetic this$2:Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment$2$1;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/personalpage/PersonalPageLockTypeFragment$2$1;)V
+.method constructor <init>(Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment$2$1;)V
     .locals 0
 
     .prologue
     .line 456
-    iput-object p1, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment$2$1$1;->this$2:Lcom/android/settings/personalpage/PersonalPageLockTypeFragment$2$1;
+    iput-object p1, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment$2$1$1;->this$2:Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment$2$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

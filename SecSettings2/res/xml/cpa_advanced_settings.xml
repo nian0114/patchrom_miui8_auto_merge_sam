@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen android:title="@string/advanced_network_settings_title" android:key="cpa_apn_edit"
   xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings_ex">
     <EditTextPreference android:singleLine="true" android:maxLength="64" android:title="@string/apn_apn" android:key="apn_apn" android:widgetLayout="@layout/round_more_icon" android:dialogTitle="@string/apn_apn" android:inputType="textEmailAddress" />
     <EditTextPreference android:singleLine="true" android:maxLength="64" android:title="@string/apn_user" android:key="apn_user" android:widgetLayout="@layout/round_more_icon" android:dialogTitle="@string/apn_user" android:inputType="textEmailAddress" />
     <EditTextPreference android:singleLine="true" android:maxLength="64" android:title="@string/apn_password" android:key="apn_password" android:widgetLayout="@layout/round_more_icon" android:dialogTitle="@string/apn_password" android:inputType="textPassword" />

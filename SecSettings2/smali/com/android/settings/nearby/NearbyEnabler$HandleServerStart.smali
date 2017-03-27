@@ -1,4 +1,4 @@
-.class Lcom/android/settings/nearby/NearbyEnabler$HandleServerStart;
+.class Lcom/android/settings_ex/nearby/NearbyEnabler$HandleServerStart;
 .super Ljava/lang/Object;
 .source "NearbyEnabler.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/nearby/NearbyEnabler;
+    value = Lcom/android/settings_ex/nearby/NearbyEnabler;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,13 +28,13 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/nearby/NearbyEnabler$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/nearby/NearbyEnabler$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/nearby/NearbyEnabler$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/nearby/NearbyEnabler$1;
 
     .prologue
     .line 1167
-    invoke-direct {p0}, Lcom/android/settings/nearby/NearbyEnabler$HandleServerStart;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/nearby/NearbyEnabler$HandleServerStart;-><init>()V
 
     return-void
 .end method
@@ -52,8 +52,8 @@
     const/4 v2, 0x0
 
     .line 1170
-    # getter for: Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
-    invoke-static {}, Lcom/android/settings/nearby/NearbyEnabler;->access$700()Lcom/android/settings/nearby/IMediaServer;
+    # getter for: Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
+    invoke-static {}, Lcom/android/settings_ex/nearby/NearbyEnabler;->access$700()Lcom/android/settings_ex/nearby/IMediaServer;
 
     move-result-object v3
 
@@ -87,12 +87,12 @@
     if-ne v3, v1, :cond_2
 
     .line 1175
-    # getter for: Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
-    invoke-static {}, Lcom/android/settings/nearby/NearbyEnabler;->access$700()Lcom/android/settings/nearby/IMediaServer;
+    # getter for: Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
+    invoke-static {}, Lcom/android/settings_ex/nearby/NearbyEnabler;->access$700()Lcom/android/settings_ex/nearby/IMediaServer;
 
     move-result-object v3
 
-    invoke-interface {v3}, Lcom/android/settings/nearby/IMediaServer;->startMediaServer()V
+    invoke-interface {v3}, Lcom/android/settings_ex/nearby/IMediaServer;->startMediaServer()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -126,7 +126,7 @@
 
     move-result-object v4
 
-    invoke-static {v1, v3, v4}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3, v4}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     move v1, v2
 
@@ -137,12 +137,12 @@
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_2
     :try_start_1
-    # getter for: Lcom/android/settings/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings/nearby/IMediaServer;
-    invoke-static {}, Lcom/android/settings/nearby/NearbyEnabler;->access$700()Lcom/android/settings/nearby/IMediaServer;
+    # getter for: Lcom/android/settings_ex/nearby/NearbyEnabler;->mIMediaServer:Lcom/android/settings_ex/nearby/IMediaServer;
+    invoke-static {}, Lcom/android/settings_ex/nearby/NearbyEnabler;->access$700()Lcom/android/settings_ex/nearby/IMediaServer;
 
     move-result-object v3
 
-    invoke-interface {v3}, Lcom/android/settings/nearby/IMediaServer;->stopMediaServer()V
+    invoke-interface {v3}, Lcom/android/settings_ex/nearby/IMediaServer;->stopMediaServer()V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 

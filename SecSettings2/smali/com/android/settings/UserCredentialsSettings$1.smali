@@ -1,4 +1,4 @@
-.class Lcom/android/settings/UserCredentialsSettings$1;
+.class Lcom/android/settings_ex/UserCredentialsSettings$1;
 .super Ljava/lang/Object;
 .source "UserCredentialsSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/UserCredentialsSettings;->addTab(Lcom/android/settings/UserCredentialsSettings$Tab;)V
+    value = Lcom/android/settings_ex/UserCredentialsSettings;->addTab(Lcom/android/settings_ex/UserCredentialsSettings$Tab;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/UserCredentialsSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/UserCredentialsSettings;
 
-.field final synthetic val$adapter:Lcom/android/settings/UserCredentialsSettings$UserCertificateAdapter;
+.field final synthetic val$adapter:Lcom/android/settings_ex/UserCredentialsSettings$UserCertificateAdapter;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/UserCredentialsSettings;Lcom/android/settings/UserCredentialsSettings$UserCertificateAdapter;)V
+.method constructor <init>(Lcom/android/settings_ex/UserCredentialsSettings;Lcom/android/settings_ex/UserCredentialsSettings$UserCertificateAdapter;)V
     .locals 0
 
     .prologue
     .line 314
-    iput-object p1, p0, Lcom/android/settings/UserCredentialsSettings$1;->this$0:Lcom/android/settings/UserCredentialsSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/UserCredentialsSettings$1;->this$0:Lcom/android/settings_ex/UserCredentialsSettings;
 
-    iput-object p2, p0, Lcom/android/settings/UserCredentialsSettings$1;->val$adapter:Lcom/android/settings/UserCredentialsSettings$UserCertificateAdapter;
+    iput-object p2, p0, Lcom/android/settings_ex/UserCredentialsSettings$1;->val$adapter:Lcom/android/settings_ex/UserCredentialsSettings$UserCertificateAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -58,16 +58,16 @@
     .prologue
     .line 317
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
-    iget-object v0, p0, Lcom/android/settings/UserCredentialsSettings$1;->this$0:Lcom/android/settings/UserCredentialsSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/UserCredentialsSettings$1;->this$0:Lcom/android/settings_ex/UserCredentialsSettings;
 
-    iget-object v1, p0, Lcom/android/settings/UserCredentialsSettings$1;->val$adapter:Lcom/android/settings/UserCredentialsSettings$UserCertificateAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/UserCredentialsSettings$1;->val$adapter:Lcom/android/settings_ex/UserCredentialsSettings$UserCertificateAdapter;
 
-    invoke-virtual {v1, p3}, Lcom/android/settings/UserCredentialsSettings$UserCertificateAdapter;->getItem(I)Lcom/android/settings/UserCredentialsSettings$CertHolder;
+    invoke-virtual {v1, p3}, Lcom/android/settings_ex/UserCredentialsSettings$UserCertificateAdapter;->getItem(I)Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;
 
     move-result-object v1
 
-    # invokes: Lcom/android/settings/UserCredentialsSettings;->showCertDialog(Lcom/android/settings/UserCredentialsSettings$CertHolder;)V
-    invoke-static {v0, v1}, Lcom/android/settings/UserCredentialsSettings;->access$800(Lcom/android/settings/UserCredentialsSettings;Lcom/android/settings/UserCredentialsSettings$CertHolder;)V
+    # invokes: Lcom/android/settings_ex/UserCredentialsSettings;->showCertDialog(Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/UserCredentialsSettings;->access$800(Lcom/android/settings_ex/UserCredentialsSettings;Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;)V
 
     .line 318
     return-void

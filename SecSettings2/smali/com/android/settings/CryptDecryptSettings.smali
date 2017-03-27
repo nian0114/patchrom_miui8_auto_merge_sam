@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/CryptDecryptSettings;
-.super Lcom/android/settings/InstrumentedFragment;
+.class public Lcom/android/settings_ex/CryptDecryptSettings;
+.super Lcom/android/settings_ex/InstrumentedFragment;
 .source "CryptDecryptSettings.java"
 
 
@@ -18,7 +18,7 @@
 
 .field private mIntentReceiver:Landroid/content/BroadcastReceiver;
 
-.field mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+.field mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
 .field private mParent:Landroid/app/Activity;
 
@@ -41,112 +41,112 @@
     const/4 v1, 0x0
 
     .line 64
-    invoke-direct {p0}, Lcom/android/settings/InstrumentedFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/InstrumentedFragment;-><init>()V
 
     .line 88
-    iput-object v1, p0, Lcom/android/settings/CryptDecryptSettings;->mDem:Landroid/dirEncryption/DirEncryptionManager;
+    iput-object v1, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mDem:Landroid/dirEncryption/DirEncryptionManager;
 
     .line 89
     new-instance v0, Landroid/dirEncryption/SDCardEncryptionPolicies;
 
     invoke-direct {v0}, Landroid/dirEncryption/SDCardEncryptionPolicies;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mUserPolicies:Landroid/dirEncryption/SDCardEncryptionPolicies;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mUserPolicies:Landroid/dirEncryption/SDCardEncryptionPolicies;
 
     .line 93
-    iput-object v1, p0, Lcom/android/settings/CryptDecryptSettings;->mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+    iput-object v1, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
     .line 96
-    new-instance v0, Lcom/android/settings/CryptDecryptSettings$1;
+    new-instance v0, Lcom/android/settings_ex/CryptDecryptSettings$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/CryptDecryptSettings$1;-><init>(Lcom/android/settings/CryptDecryptSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/CryptDecryptSettings$1;-><init>(Lcom/android/settings_ex/CryptDecryptSettings;)V
 
-    iput-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mIntentReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
     .line 135
-    new-instance v0, Lcom/android/settings/CryptDecryptSettings$2;
+    new-instance v0, Lcom/android/settings_ex/CryptDecryptSettings$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/CryptDecryptSettings$2;-><init>(Lcom/android/settings/CryptDecryptSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/CryptDecryptSettings$2;-><init>(Lcom/android/settings_ex/CryptDecryptSettings;)V
 
-    iput-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mInitiateListener:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mInitiateListener:Landroid/view/View$OnClickListener;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/CryptDecryptSettings;)Landroid/dirEncryption/DirEncryptionManager;
+.method static synthetic access$000(Lcom/android/settings_ex/CryptDecryptSettings;)Landroid/dirEncryption/DirEncryptionManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/CryptDecryptSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptDecryptSettings;
 
     .prologue
     .line 64
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mDem:Landroid/dirEncryption/DirEncryptionManager;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mDem:Landroid/dirEncryption/DirEncryptionManager;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/CryptDecryptSettings;)Landroid/widget/Button;
+.method static synthetic access$100(Lcom/android/settings_ex/CryptDecryptSettings;)Landroid/widget/Button;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/CryptDecryptSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptDecryptSettings;
 
     .prologue
     .line 64
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mInitiateButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mInitiateButton:Landroid/widget/Button;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/CryptDecryptSettings;)Landroid/view/View;
+.method static synthetic access$200(Lcom/android/settings_ex/CryptDecryptSettings;)Landroid/view/View;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/CryptDecryptSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptDecryptSettings;
 
     .prologue
     .line 64
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mPowerWarning:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mPowerWarning:Landroid/view/View;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/CryptDecryptSettings;)Landroid/widget/TextView;
+.method static synthetic access$300(Lcom/android/settings_ex/CryptDecryptSettings;)Landroid/widget/TextView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/CryptDecryptSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptDecryptSettings;
 
     .prologue
     .line 64
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mBatteryWarning:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mBatteryWarning:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/CryptDecryptSettings;)Landroid/view/View;
+.method static synthetic access$400(Lcom/android/settings_ex/CryptDecryptSettings;)Landroid/view/View;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/CryptDecryptSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptDecryptSettings;
 
     .prologue
     .line 64
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mSDcardOngoingWarning:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mSDcardOngoingWarning:Landroid/view/View;
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/CryptDecryptSettings;)Landroid/widget/TextView;
+.method static synthetic access$500(Lcom/android/settings_ex/CryptDecryptSettings;)Landroid/widget/TextView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/CryptDecryptSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptDecryptSettings;
 
     .prologue
     .line 64
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mPasswordWarning:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mPasswordWarning:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/CryptDecryptSettings;I)Z
+.method static synthetic access$600(Lcom/android/settings_ex/CryptDecryptSettings;I)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/CryptDecryptSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/CryptDecryptSettings;
     .param p1, "x1"    # I
 
     .prologue
     .line 64
-    invoke-direct {p0, p1}, Lcom/android/settings/CryptDecryptSettings;->runKeyguardConfirmation(I)Z
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/CryptDecryptSettings;->runKeyguardConfirmation(I)Z
 
     move-result v0
 
@@ -161,7 +161,7 @@
 
     .prologue
     .line 314
-    invoke-virtual {p0}, Lcom/android/settings/CryptDecryptSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptDecryptSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -241,7 +241,7 @@
     const/4 v2, 0x1
 
     .line 251
-    iget-object v3, p0, Lcom/android/settings/CryptDecryptSettings;->mParent:Landroid/app/Activity;
+    iget-object v3, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mParent:Landroid/app/Activity;
 
     invoke-virtual {v3}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
@@ -249,21 +249,21 @@
 
     .line 252
     .local v1, "res":Landroid/content/res/Resources;
-    new-instance v0, Lcom/android/settings/ChooseLockSettingsHelper;
+    new-instance v0, Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
-    iget-object v3, p0, Lcom/android/settings/CryptDecryptSettings;->mParent:Landroid/app/Activity;
+    iget-object v3, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mParent:Landroid/app/Activity;
 
-    invoke-direct {v0, v3, p0}, Lcom/android/settings/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;Landroid/app/Fragment;)V
+    invoke-direct {v0, v3, p0}, Lcom/android/settings_ex/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;Landroid/app/Fragment;)V
 
     .line 258
-    .local v0, "helper":Lcom/android/settings/ChooseLockSettingsHelper;
-    iget-object v3, p0, Lcom/android/settings/CryptDecryptSettings;->mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+    .local v0, "helper":Lcom/android/settings_ex/ChooseLockSettingsHelper;
+    iget-object v3, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
     if-eqz v3, :cond_0
 
-    iget-object v3, p0, Lcom/android/settings/CryptDecryptSettings;->mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+    iget-object v3, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
-    iget v3, v3, Lcom/android/settings/EFSProperties$ODEProperties;->enabledUCSInODE:I
+    iget v3, v3, Lcom/android/settings_ex/EFSProperties$ODEProperties;->enabledUCSInODE:I
 
     if-ne v3, v2, :cond_0
 
@@ -280,9 +280,9 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/CryptDecryptSettings;->mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+    iget-object v5, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
-    iget v5, v5, Lcom/android/settings/EFSProperties$ODEProperties;->enabledUCSInODE:I
+    iget v5, v5, Lcom/android/settings_ex/EFSProperties$ODEProperties;->enabledUCSInODE:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -295,7 +295,7 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 260
-    invoke-virtual {v0, p1, v6, v6, v2}, Lcom/android/settings/ChooseLockSettingsHelper;->launchConfirmationActivityforUCMODE(ILjava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+    invoke-virtual {v0, p1, v6, v6, v2}, Lcom/android/settings_ex/ChooseLockSettingsHelper;->launchConfirmationActivityforUCMODE(ILjava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
 
     move-result v2
 
@@ -305,7 +305,7 @@
 
     .line 271
     :cond_0
-    invoke-virtual {v0}, Lcom/android/settings/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
+    invoke-virtual {v0}, Lcom/android/settings_ex/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
 
     move-result-object v3
 
@@ -322,7 +322,7 @@
     .line 273
     const-string v3, ""
 
-    invoke-direct {p0, v2, v3}, Lcom/android/settings/CryptDecryptSettings;->showFinalConfirmation(ILjava/lang/String;)V
+    invoke-direct {p0, v2, v3}, Lcom/android/settings_ex/CryptDecryptSettings;->showFinalConfirmation(ILjava/lang/String;)V
 
     goto :goto_0
 
@@ -334,7 +334,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v0, p1, v3, v2}, Lcom/android/settings/ChooseLockSettingsHelper;->launchConfirmationActivity(ILjava/lang/CharSequence;Z)Z
+    invoke-virtual {v0, p1, v3, v2}, Lcom/android/settings_ex/ChooseLockSettingsHelper;->launchConfirmationActivity(ILjava/lang/CharSequence;Z)Z
 
     move-result v2
 
@@ -352,7 +352,7 @@
     .line 301
     new-instance v0, Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/CryptDecryptSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptDecryptSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -360,7 +360,7 @@
 
     .line 302
     .local v0, "preference":Landroid/preference/Preference;
-    const-class v1, Lcom/android/settings/CryptDecryptConfirm;
+    const-class v1, Lcom/android/settings_ex/CryptDecryptConfirm;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -374,21 +374,21 @@
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setTitle(I)V
 
     .line 304
-    invoke-direct {p0, v0, p1, p2}, Lcom/android/settings/CryptDecryptSettings;->addEncryptionInfoToPreference(Landroid/preference/Preference;ILjava/lang/String;)V
+    invoke-direct {p0, v0, p1, p2}, Lcom/android/settings_ex/CryptDecryptSettings;->addEncryptionInfoToPreference(Landroid/preference/Preference;ILjava/lang/String;)V
 
     .line 305
-    iget-object v1, p0, Lcom/android/settings/CryptDecryptSettings;->mParent:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mParent:Landroid/app/Activity;
 
-    instance-of v1, v1, Lcom/android/settings/SettingsActivity;
+    instance-of v1, v1, Lcom/android/settings_ex/SettingsActivity;
 
     if-eqz v1, :cond_0
 
     .line 306
-    iget-object v1, p0, Lcom/android/settings/CryptDecryptSettings;->mParent:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mParent:Landroid/app/Activity;
 
-    check-cast v1, Lcom/android/settings/SettingsActivity;
+    check-cast v1, Lcom/android/settings_ex/SettingsActivity;
 
-    invoke-virtual {v1, v2, v0}, Lcom/android/settings/SettingsActivity;->onPreferenceStartFragment(Landroid/preference/PreferenceFragment;Landroid/preference/Preference;)Z
+    invoke-virtual {v1, v2, v0}, Lcom/android/settings_ex/SettingsActivity;->onPreferenceStartFragment(Landroid/preference/PreferenceFragment;Landroid/preference/Preference;)Z
 
     .line 311
     :goto_0
@@ -396,7 +396,7 @@
 
     .line 309
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/CryptDecryptSettings;->mParent:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mParent:Landroid/app/Activity;
 
     check-cast v1, Landroid/preference/PreferenceActivity;
 
@@ -423,10 +423,10 @@
 
     .prologue
     .line 230
-    invoke-super {p0, p1}, Lcom/android/settings/InstrumentedFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/InstrumentedFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 231
-    invoke-virtual {p0}, Lcom/android/settings/CryptDecryptSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptDecryptSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -473,7 +473,7 @@
     const/4 v3, -0x1
 
     .line 283
-    invoke-super {p0, p1, p2, p3}, Lcom/android/settings/InstrumentedFragment;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings_ex/InstrumentedFragment;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 285
     const/16 v2, 0x37
@@ -515,7 +515,7 @@
     if-nez v2, :cond_0
 
     .line 295
-    invoke-direct {p0, v1, v0}, Lcom/android/settings/CryptDecryptSettings;->showFinalConfirmation(ILjava/lang/String;)V
+    invoke-direct {p0, v1, v0}, Lcom/android/settings_ex/CryptDecryptSettings;->showFinalConfirmation(ILjava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -526,13 +526,13 @@
 
     .prologue
     .line 153
-    invoke-super {p0, p1}, Lcom/android/settings/InstrumentedFragment;->onAttach(Landroid/app/Activity;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/InstrumentedFragment;->onAttach(Landroid/app/Activity;)V
 
     .line 154
-    iput-object p1, p0, Lcom/android/settings/CryptDecryptSettings;->mParent:Landroid/app/Activity;
+    iput-object p1, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mParent:Landroid/app/Activity;
 
     .line 155
-    iput-object p0, p0, Lcom/android/settings/CryptDecryptSettings;->mThis:Landroid/app/Fragment;
+    iput-object p0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mThis:Landroid/app/Fragment;
 
     .line 156
     const-string v0, "CryptDecrypt"
@@ -565,24 +565,24 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mContentView:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mContentView:Landroid/view/View;
 
     .line 163
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mIntentFilter:Landroid/content/IntentFilter;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mIntentFilter:Landroid/content/IntentFilter;
 
     .line 164
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mIntentFilter:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mIntentFilter:Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.BATTERY_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 166
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mContentView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mContentView:Landroid/view/View;
 
     const v1, 0x7f0d0141
 
@@ -592,22 +592,22 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mInitiateButton:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mInitiateButton:Landroid/widget/Button;
 
     .line 167
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mInitiateButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mInitiateButton:Landroid/widget/Button;
 
-    iget-object v1, p0, Lcom/android/settings/CryptDecryptSettings;->mInitiateListener:Landroid/view/View$OnClickListener;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mInitiateListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 168
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mInitiateButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mInitiateButton:Landroid/widget/Button;
 
     invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 170
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mContentView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mContentView:Landroid/view/View;
 
     const v1, 0x7f0d013c
 
@@ -615,10 +615,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mPowerWarning:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mPowerWarning:Landroid/view/View;
 
     .line 171
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mContentView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mContentView:Landroid/view/View;
 
     const v1, 0x7f0d013d
 
@@ -628,15 +628,15 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mBatteryWarning:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mBatteryWarning:Landroid/widget/TextView;
 
     .line 172
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mBatteryWarning:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mBatteryWarning:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
     .line 173
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mBatteryWarning:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mBatteryWarning:Landroid/widget/TextView;
 
     const v1, 0x7f0e023e
 
@@ -650,7 +650,7 @@
 
     aput-object v3, v2, v4
 
-    invoke-virtual {p0, v1, v2}, Lcom/android/settings/CryptDecryptSettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v1, v2}, Lcom/android/settings_ex/CryptDecryptSettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -660,7 +660,7 @@
 
     .line 180
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mContentView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mContentView:Landroid/view/View;
 
     const v1, 0x7f0d013e
 
@@ -670,15 +670,15 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mPasswordWarning:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mPasswordWarning:Landroid/widget/TextView;
 
     .line 181
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mPasswordWarning:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mPasswordWarning:Landroid/widget/TextView;
 
     if-eqz v0, :cond_1
 
     .line 182
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mPasswordWarning:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mPasswordWarning:Landroid/widget/TextView;
 
     const v1, 0x7f0e02ab
 
@@ -692,7 +692,7 @@
 
     aput-object v3, v2, v4
 
-    invoke-virtual {p0, v1, v2}, Lcom/android/settings/CryptDecryptSettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v1, v2}, Lcom/android/settings_ex/CryptDecryptSettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -704,23 +704,23 @@
     :cond_1
     new-instance v0, Landroid/dirEncryption/DirEncryptionManager;
 
-    iget-object v1, p0, Lcom/android/settings/CryptDecryptSettings;->mParent:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mParent:Landroid/app/Activity;
 
     invoke-direct {v0, v1}, Landroid/dirEncryption/DirEncryptionManager;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mDem:Landroid/dirEncryption/DirEncryptionManager;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mDem:Landroid/dirEncryption/DirEncryptionManager;
 
     .line 190
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mDem:Landroid/dirEncryption/DirEncryptionManager;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mDem:Landroid/dirEncryption/DirEncryptionManager;
 
     invoke-virtual {v0}, Landroid/dirEncryption/DirEncryptionManager;->getSDCardEncryptionPrefs()Landroid/dirEncryption/SDCardEncryptionPolicies;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mUserPolicies:Landroid/dirEncryption/SDCardEncryptionPolicies;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mUserPolicies:Landroid/dirEncryption/SDCardEncryptionPolicies;
 
     .line 191
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mUserPolicies:Landroid/dirEncryption/SDCardEncryptionPolicies;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mUserPolicies:Landroid/dirEncryption/SDCardEncryptionPolicies;
 
     if-nez v0, :cond_2
 
@@ -729,20 +729,20 @@
 
     invoke-direct {v0}, Landroid/dirEncryption/SDCardEncryptionPolicies;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mUserPolicies:Landroid/dirEncryption/SDCardEncryptionPolicies;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mUserPolicies:Landroid/dirEncryption/SDCardEncryptionPolicies;
 
     .line 195
     :cond_2
     const/4 v0, 0x2
 
-    iget-object v1, p0, Lcom/android/settings/CryptDecryptSettings;->mUserPolicies:Landroid/dirEncryption/SDCardEncryptionPolicies;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mUserPolicies:Landroid/dirEncryption/SDCardEncryptionPolicies;
 
     iget v1, v1, Landroid/dirEncryption/SDCardEncryptionPolicies;->mEnc:I
 
     if-ne v0, v1, :cond_3
 
     .line 196
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mContentView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mContentView:Landroid/view/View;
 
     const v1, 0x7f0d013f
 
@@ -750,17 +750,17 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mSDcardOngoingWarning:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mSDcardOngoingWarning:Landroid/view/View;
 
     .line 201
     :goto_0
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mContentView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mContentView:Landroid/view/View;
 
     return-object v0
 
     .line 198
     :cond_3
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mContentView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mContentView:Landroid/view/View;
 
     const v1, 0x7f0d0140
 
@@ -768,7 +768,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mSDcardOngoingWarning:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mSDcardOngoingWarning:Landroid/view/View;
 
     goto :goto_0
 .end method
@@ -778,14 +778,14 @@
 
     .prologue
     .line 224
-    invoke-super {p0}, Lcom/android/settings/InstrumentedFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/InstrumentedFragment;->onPause()V
 
     .line 225
-    invoke-virtual {p0}, Lcom/android/settings/CryptDecryptSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptDecryptSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/CryptDecryptSettings;->mIntentReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
@@ -798,28 +798,28 @@
 
     .prologue
     .line 211
-    invoke-super {p0}, Lcom/android/settings/InstrumentedFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/InstrumentedFragment;->onResume()V
 
     .line 215
-    invoke-static {}, Lcom/android/settings/EFSProperties;->loadODEConfig()Lcom/android/settings/EFSProperties$ODEProperties;
+    invoke-static {}, Lcom/android/settings_ex/EFSProperties;->loadODEConfig()Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mOdeProp:Lcom/android/settings/EFSProperties$ODEProperties;
+    iput-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mOdeProp:Lcom/android/settings_ex/EFSProperties$ODEProperties;
 
     .line 218
-    invoke-virtual {p0}, Lcom/android/settings/CryptDecryptSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/CryptDecryptSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/CryptDecryptSettings;->mIntentReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    iget-object v2, p0, Lcom/android/settings/CryptDecryptSettings;->mIntentFilter:Landroid/content/IntentFilter;
+    iget-object v2, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mIntentFilter:Landroid/content/IntentFilter;
 
     invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 219
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings;->mInitiateButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings;->mInitiateButton:Landroid/widget/Button;
 
     const v1, 0x7f0e102c
 

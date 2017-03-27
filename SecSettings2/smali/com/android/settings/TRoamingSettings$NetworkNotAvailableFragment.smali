@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment;
+.class public Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment;
 .super Landroid/app/DialogFragment;
 .source "TRoamingSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/TRoamingSettings;
+    value = Lcom/android/settings_ex/TRoamingSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,22 +27,22 @@
     invoke-direct {p0}, Landroid/app/DialogFragment;-><init>()V
 
     .line 790
-    new-instance v0, Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment$2;
+    new-instance v0, Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment$2;-><init>(Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment$2;-><init>(Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment;)V
 
-    iput-object v0, p0, Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment;->mCustomerCenterCall:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment;->mCustomerCenterCall:Landroid/view/View$OnClickListener;
 
     return-void
 .end method
 
-.method public static show(Lcom/android/settings/TRoamingSettings;)V
+.method public static show(Lcom/android/settings_ex/TRoamingSettings;)V
     .locals 3
-    .param p0, "parent"    # Lcom/android/settings/TRoamingSettings;
+    .param p0, "parent"    # Lcom/android/settings_ex/TRoamingSettings;
 
     .prologue
     .line 762
-    invoke-virtual {p0}, Lcom/android/settings/TRoamingSettings;->isAdded()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/TRoamingSettings;->isAdded()Z
 
     move-result v1
 
@@ -54,24 +54,24 @@
 
     .line 764
     :cond_0
-    new-instance v0, Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment;
+    new-instance v0, Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment;
 
-    invoke-direct {v0}, Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment;-><init>()V
 
     .line 765
-    .local v0, "dialog":Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment;
+    .local v0, "dialog":Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment;
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p0, v1}, Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment;->setTargetFragment(Landroid/app/Fragment;I)V
+    invoke-virtual {v0, p0, v1}, Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment;->setTargetFragment(Landroid/app/Fragment;I)V
 
     .line 766
-    invoke-virtual {p0}, Lcom/android/settings/TRoamingSettings;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/TRoamingSettings;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
 
     const-string v2, "NetworkNotAvaiable"
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -86,8 +86,8 @@
     .line 771
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    # getter for: Lcom/android/settings/TRoamingSettings;->mContext:Landroid/content/Context;
-    invoke-static {}, Lcom/android/settings/TRoamingSettings;->access$1100()Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/TRoamingSettings;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/android/settings_ex/TRoamingSettings;->access$1100()Landroid/content/Context;
 
     move-result-object v4
 
@@ -95,8 +95,8 @@
 
     .line 772
     .local v0, "builder":Landroid/app/AlertDialog$Builder;
-    # getter for: Lcom/android/settings/TRoamingSettings;->mContext:Landroid/content/Context;
-    invoke-static {}, Lcom/android/settings/TRoamingSettings;->access$1100()Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/TRoamingSettings;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/android/settings_ex/TRoamingSettings;->access$1100()Landroid/content/Context;
 
     move-result-object v4
 
@@ -136,16 +136,16 @@
 
     .line 780
     .local v3, "mCustomerCenter":Landroid/view/View;
-    iget-object v4, p0, Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment;->mCustomerCenterCall:Landroid/view/View$OnClickListener;
+    iget-object v4, p0, Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment;->mCustomerCenterCall:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 782
     const v4, 0x7f0e083a
 
-    new-instance v5, Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment$1;
+    new-instance v5, Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment$1;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment$1;-><init>(Lcom/android/settings/TRoamingSettings$NetworkNotAvailableFragment;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment$1;-><init>(Lcom/android/settings_ex/TRoamingSettings$NetworkNotAvailableFragment;)V
 
     invoke-virtual {v0, v4, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/CryptDecryptSettings$2;
+.class Lcom/android/settings_ex/CryptDecryptSettings$2;
 .super Ljava/lang/Object;
 .source "CryptDecryptSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/CryptDecryptSettings;
+    value = Lcom/android/settings_ex/CryptDecryptSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/CryptDecryptSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/CryptDecryptSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/CryptDecryptSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/CryptDecryptSettings;)V
     .locals 0
 
     .prologue
     .line 135
-    iput-object p1, p0, Lcom/android/settings/CryptDecryptSettings$2;->this$0:Lcom/android/settings/CryptDecryptSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/CryptDecryptSettings$2;->this$0:Lcom/android/settings_ex/CryptDecryptSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,12 +42,12 @@
 
     .prologue
     .line 138
-    iget-object v0, p0, Lcom/android/settings/CryptDecryptSettings$2;->this$0:Lcom/android/settings/CryptDecryptSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/CryptDecryptSettings$2;->this$0:Lcom/android/settings_ex/CryptDecryptSettings;
 
     const/16 v1, 0x37
 
-    # invokes: Lcom/android/settings/CryptDecryptSettings;->runKeyguardConfirmation(I)Z
-    invoke-static {v0, v1}, Lcom/android/settings/CryptDecryptSettings;->access$600(Lcom/android/settings/CryptDecryptSettings;I)Z
+    # invokes: Lcom/android/settings_ex/CryptDecryptSettings;->runKeyguardConfirmation(I)Z
+    invoke-static {v0, v1}, Lcom/android/settings_ex/CryptDecryptSettings;->access$600(Lcom/android/settings_ex/CryptDecryptSettings;I)Z
 
     move-result v0
 
@@ -56,9 +56,9 @@
     .line 140
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    iget-object v1, p0, Lcom/android/settings/CryptDecryptSettings$2;->this$0:Lcom/android/settings/CryptDecryptSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/CryptDecryptSettings$2;->this$0:Lcom/android/settings_ex/CryptDecryptSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/CryptDecryptSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/CryptDecryptSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 

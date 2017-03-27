@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/accessibility/PresetPreference;
-.super Lcom/android/settings/accessibility/ListDialogPreference;
+.class public Lcom/android/settings_ex/accessibility/PresetPreference;
+.super Lcom/android/settings_ex/accessibility/ListDialogPreference;
 .source "PresetPreference.java"
 
 
@@ -17,20 +17,20 @@
 
     .prologue
     .line 36
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/accessibility/ListDialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/accessibility/ListDialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 37
-    iput-object p1, p0, Lcom/android/settings/accessibility/PresetPreference;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/PresetPreference;->mContext:Landroid/content/Context;
 
     .line 38
     const v0, 0x7f0400f0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/PresetPreference;->setDialogLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/PresetPreference;->setDialogLayoutResource(I)V
 
     .line 39
     const v0, 0x7f0401a8
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/PresetPreference;->setListItemLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/PresetPreference;->setListItemLayoutResource(I)V
 
     .line 41
     const-string v0, "captioning"
@@ -41,7 +41,7 @@
 
     check-cast v0, Landroid/view/accessibility/CaptioningManager;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/PresetPreference;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/PresetPreference;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
 
     .line 43
     return-void
@@ -74,18 +74,18 @@
 
     .line 55
     .local v0, "previewText":Lcom/android/internal/widget/SubtitleView;
-    invoke-virtual {p0, p2}, Lcom/android/settings/accessibility/PresetPreference;->getValueAt(I)I
+    invoke-virtual {p0, p2}, Lcom/android/settings_ex/accessibility/PresetPreference;->getValueAt(I)I
 
     move-result v4
 
     .line 56
     .local v4, "value":I
-    iget-object v5, p0, Lcom/android/settings/accessibility/PresetPreference;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/PresetPreference;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
 
-    invoke-static {v5, v0, v1, v4}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->applyCaptionProperties(Landroid/view/accessibility/CaptioningManager;Lcom/android/internal/widget/SubtitleView;Landroid/view/View;I)V
+    invoke-static {v5, v0, v1, v4}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->applyCaptionProperties(Landroid/view/accessibility/CaptioningManager;Lcom/android/internal/widget/SubtitleView;Landroid/view/View;I)V
 
     .line 61
-    iget-object v5, p0, Lcom/android/settings/accessibility/PresetPreference;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/PresetPreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -102,7 +102,7 @@
     invoke-virtual {v0, v5}, Lcom/android/internal/widget/SubtitleView;->setTextSize(F)V
 
     .line 63
-    invoke-virtual {p0, p2}, Lcom/android/settings/accessibility/PresetPreference;->getTitleAt(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, p2}, Lcom/android/settings_ex/accessibility/PresetPreference;->getTitleAt(I)Ljava/lang/CharSequence;
 
     move-result-object v3
 
@@ -134,7 +134,7 @@
 
     .prologue
     .line 47
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/PresetPreference;->getValue()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/PresetPreference;->getValue()I
 
     move-result v0
 
@@ -142,7 +142,7 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-super {p0}, Lcom/android/settings/accessibility/ListDialogPreference;->shouldDisableDependents()Z
+    invoke-super {p0}, Lcom/android/settings_ex/accessibility/ListDialogPreference;->shouldDisableDependents()Z
 
     move-result v0
 

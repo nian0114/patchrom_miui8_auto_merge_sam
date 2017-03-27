@@ -1,4 +1,4 @@
-.class Lcom/android/settings/personalvibration/SelectPatternDialog$1;
+.class Lcom/android/settings_ex/personalvibration/SelectPatternDialog$1;
 .super Ljava/lang/Object;
 .source "SelectPatternDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/personalvibration/SelectPatternDialog;->showRenameDialog(I)Z
+    value = Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->showRenameDialog(I)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/personalvibration/SelectPatternDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/personalvibration/SelectPatternDialog;
 
 .field final synthetic val$EditPattern:Landroid/widget/TextView;
 
@@ -26,16 +26,16 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/personalvibration/SelectPatternDialog;Landroid/view/inputmethod/InputMethodManager;Landroid/widget/TextView;)V
+.method constructor <init>(Lcom/android/settings_ex/personalvibration/SelectPatternDialog;Landroid/view/inputmethod/InputMethodManager;Landroid/widget/TextView;)V
     .locals 0
 
     .prologue
     .line 473
-    iput-object p1, p0, Lcom/android/settings/personalvibration/SelectPatternDialog$1;->this$0:Lcom/android/settings/personalvibration/SelectPatternDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog$1;->this$0:Lcom/android/settings_ex/personalvibration/SelectPatternDialog;
 
-    iput-object p2, p0, Lcom/android/settings/personalvibration/SelectPatternDialog$1;->val$imm:Landroid/view/inputmethod/InputMethodManager;
+    iput-object p2, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog$1;->val$imm:Landroid/view/inputmethod/InputMethodManager;
 
-    iput-object p3, p0, Lcom/android/settings/personalvibration/SelectPatternDialog$1;->val$EditPattern:Landroid/widget/TextView;
+    iput-object p3, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog$1;->val$EditPattern:Landroid/widget/TextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,9 +51,9 @@
 
     .prologue
     .line 475
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog$1;->val$imm:Landroid/view/inputmethod/InputMethodManager;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog$1;->val$imm:Landroid/view/inputmethod/InputMethodManager;
 
-    iget-object v1, p0, Lcom/android/settings/personalvibration/SelectPatternDialog$1;->val$EditPattern:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog$1;->val$EditPattern:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getWindowToken()Landroid/os/IBinder;
 

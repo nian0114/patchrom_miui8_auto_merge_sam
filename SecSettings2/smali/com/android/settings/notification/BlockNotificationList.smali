@@ -1,19 +1,19 @@
-.class public Lcom/android/settings/notification/BlockNotificationList;
-.super Lcom/android/settings/PinnedHeaderListFragment;
+.class public Lcom/android/settings_ex/notification/BlockNotificationList;
+.super Lcom/android/settings_ex/PinnedHeaderListFragment;
 .source "BlockNotificationList.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/notification/BlockNotificationList$AppRow;,
-        Lcom/android/settings/notification/BlockNotificationList$Row;,
-        Lcom/android/settings/notification/BlockNotificationList$ClickListener;,
-        Lcom/android/settings/notification/BlockNotificationList$NotificationAppAdapter;,
-        Lcom/android/settings/notification/BlockNotificationList$ViewHolder;
+        Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;,
+        Lcom/android/settings_ex/notification/BlockNotificationList$Row;,
+        Lcom/android/settings_ex/notification/BlockNotificationList$ClickListener;,
+        Lcom/android/settings_ex/notification/BlockNotificationList$NotificationAppAdapter;,
+        Lcom/android/settings_ex/notification/BlockNotificationList$ViewHolder;
     }
 .end annotation
 
@@ -23,14 +23,14 @@
 
 .field private static final DEBUG:Z
 
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 .field private static final mRowComparator:Ljava/util/Comparator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Comparator",
             "<",
-            "Lcom/android/settings/notification/BlockNotificationList$AppRow;",
+            "Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;",
             ">;"
         }
     .end annotation
@@ -44,9 +44,9 @@
 
 .field private hide_app_notification_list:[Ljava/lang/String;
 
-.field private mAdapter:Lcom/android/settings/notification/BlockNotificationList$NotificationAppAdapter;
+.field private mAdapter:Lcom/android/settings_ex/notification/BlockNotificationList$NotificationAppAdapter;
 
-.field private final mBackend:Lcom/android/settings/notification/NotificationBackend;
+.field private final mBackend:Lcom/android/settings_ex/notification/NotificationBackend;
 
 .field private final mCollectAppsRunnable:Ljava/lang/Runnable;
 
@@ -72,7 +72,7 @@
             "Landroid/util/ArrayMap",
             "<",
             "Ljava/lang/String;",
-            "Lcom/android/settings/notification/BlockNotificationList$AppRow;",
+            "Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;",
             ">;"
         }
     .end annotation
@@ -94,7 +94,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/notification/BlockNotificationList$AppRow;",
+            "Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;",
             ">;"
         }
     .end annotation
@@ -117,7 +117,7 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/android/settings/notification/BlockNotificationList;->DEBUG:Z
+    sput-boolean v0, Lcom/android/settings_ex/notification/BlockNotificationList;->DEBUG:Z
 
     .line 93
     new-instance v0, Landroid/content/Intent;
@@ -132,21 +132,21 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/notification/BlockNotificationList;->APP_NOTIFICATION_PREFS_CATEGORY_INTENT:Landroid/content/Intent;
+    sput-object v0, Lcom/android/settings_ex/notification/BlockNotificationList;->APP_NOTIFICATION_PREFS_CATEGORY_INTENT:Landroid/content/Intent;
 
     .line 539
-    new-instance v0, Lcom/android/settings/notification/BlockNotificationList$3;
+    new-instance v0, Lcom/android/settings_ex/notification/BlockNotificationList$3;
 
-    invoke-direct {v0}, Lcom/android/settings/notification/BlockNotificationList$3;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/notification/BlockNotificationList$3;-><init>()V
 
-    sput-object v0, Lcom/android/settings/notification/BlockNotificationList;->mRowComparator:Ljava/util/Comparator;
+    sput-object v0, Lcom/android/settings_ex/notification/BlockNotificationList;->mRowComparator:Ljava/util/Comparator;
 
     .line 565
-    new-instance v0, Lcom/android/settings/notification/BlockNotificationList$4;
+    new-instance v0, Lcom/android/settings_ex/notification/BlockNotificationList$4;
 
-    invoke-direct {v0}, Lcom/android/settings/notification/BlockNotificationList$4;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/notification/BlockNotificationList$4;-><init>()V
 
-    sput-object v0, Lcom/android/settings/notification/BlockNotificationList;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/notification/BlockNotificationList;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -158,50 +158,50 @@
     const/4 v2, 0x0
 
     .line 79
-    invoke-direct {p0}, Lcom/android/settings/PinnedHeaderListFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/PinnedHeaderListFragment;-><init>()V
 
     .line 87
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mSortedRows:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mSortedRows:Ljava/util/ArrayList;
 
     .line 90
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mHandler:Landroid/os/Handler;
 
     .line 91
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mRows:Landroid/util/ArrayMap;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mRows:Landroid/util/ArrayMap;
 
     .line 92
-    new-instance v0, Lcom/android/settings/notification/NotificationBackend;
+    new-instance v0, Lcom/android/settings_ex/notification/NotificationBackend;
 
-    invoke-direct {v0}, Lcom/android/settings/notification/NotificationBackend;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/notification/NotificationBackend;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mBackend:Lcom/android/settings/notification/NotificationBackend;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mBackend:Lcom/android/settings_ex/notification/NotificationBackend;
 
     .line 96
-    iput-boolean v2, p0, Lcom/android/settings/notification/BlockNotificationList;->mHideApp:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mHideApp:Z
 
     .line 97
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mSections:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mSections:Ljava/util/ArrayList;
 
     .line 98
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->hide_app_list:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->hide_app_list:Ljava/lang/String;
 
     .line 100
     const/4 v0, 0x5
@@ -236,33 +236,33 @@
 
     aput-object v2, v0, v1
 
-    iput-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->excludeKnoxApp:[Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->excludeKnoxApp:[Ljava/lang/String;
 
     .line 208
-    new-instance v0, Lcom/android/settings/notification/BlockNotificationList$1;
+    new-instance v0, Lcom/android/settings_ex/notification/BlockNotificationList$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/notification/BlockNotificationList$1;-><init>(Lcom/android/settings/notification/BlockNotificationList;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/notification/BlockNotificationList$1;-><init>(Lcom/android/settings_ex/notification/BlockNotificationList;)V
 
-    iput-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mCollectAppsRunnable:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mCollectAppsRunnable:Ljava/lang/Runnable;
 
     .line 314
-    new-instance v0, Lcom/android/settings/notification/BlockNotificationList$2;
+    new-instance v0, Lcom/android/settings_ex/notification/BlockNotificationList$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/notification/BlockNotificationList$2;-><init>(Lcom/android/settings/notification/BlockNotificationList;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/notification/BlockNotificationList$2;-><init>(Lcom/android/settings_ex/notification/BlockNotificationList;)V
 
-    iput-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mRefreshAppsListRunnable:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mRefreshAppsListRunnable:Ljava/lang/Runnable;
 
     .line 527
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/notification/BlockNotificationList;)Landroid/util/ArrayMap;
+.method static synthetic access$000(Lcom/android/settings_ex/notification/BlockNotificationList;)Landroid/util/ArrayMap;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/BlockNotificationList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/BlockNotificationList;
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mRows:Landroid/util/ArrayMap;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mRows:Landroid/util/ArrayMap;
 
     return-object v0
 .end method
@@ -272,7 +272,7 @@
 
     .prologue
     .line 79
-    sget-boolean v0, Lcom/android/settings/notification/BlockNotificationList;->DEBUG:Z
+    sget-boolean v0, Lcom/android/settings_ex/notification/BlockNotificationList;->DEBUG:Z
 
     return v0
 .end method
@@ -282,95 +282,95 @@
 
     .prologue
     .line 79
-    sget-object v0, Lcom/android/settings/notification/BlockNotificationList;->mRowComparator:Ljava/util/Comparator;
+    sget-object v0, Lcom/android/settings_ex/notification/BlockNotificationList;->mRowComparator:Ljava/util/Comparator;
 
     return-object v0
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/notification/BlockNotificationList;)Ljava/lang/Runnable;
+.method static synthetic access$1100(Lcom/android/settings_ex/notification/BlockNotificationList;)Ljava/lang/Runnable;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/BlockNotificationList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/BlockNotificationList;
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mRefreshAppsListRunnable:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mRefreshAppsListRunnable:Ljava/lang/Runnable;
 
     return-object v0
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/notification/BlockNotificationList;)Landroid/os/Handler;
+.method static synthetic access$1200(Lcom/android/settings_ex/notification/BlockNotificationList;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/BlockNotificationList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/BlockNotificationList;
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic access$1300(Lcom/android/settings/notification/BlockNotificationList;)V
+.method static synthetic access$1300(Lcom/android/settings_ex/notification/BlockNotificationList;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/notification/BlockNotificationList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/BlockNotificationList;
 
     .prologue
     .line 79
-    invoke-direct {p0}, Lcom/android/settings/notification/BlockNotificationList;->refreshDisplayedItems()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/BlockNotificationList;->refreshDisplayedItems()V
 
     return-void
 .end method
 
-.method static synthetic access$1400(Lcom/android/settings/notification/BlockNotificationList;)Lcom/android/settings/notification/BlockNotificationList$NotificationAppAdapter;
+.method static synthetic access$1400(Lcom/android/settings_ex/notification/BlockNotificationList;)Lcom/android/settings_ex/notification/BlockNotificationList$NotificationAppAdapter;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/BlockNotificationList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/BlockNotificationList;
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mAdapter:Lcom/android/settings/notification/BlockNotificationList$NotificationAppAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mAdapter:Lcom/android/settings_ex/notification/BlockNotificationList$NotificationAppAdapter;
 
     return-object v0
 .end method
 
-.method static synthetic access$1500(Lcom/android/settings/notification/BlockNotificationList;)Landroid/widget/TextView;
+.method static synthetic access$1500(Lcom/android/settings_ex/notification/BlockNotificationList;)Landroid/widget/TextView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/BlockNotificationList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/BlockNotificationList;
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mTextView:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mTextView:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method static synthetic access$1600(Lcom/android/settings/notification/BlockNotificationList;)Landroid/view/LayoutInflater;
+.method static synthetic access$1600(Lcom/android/settings_ex/notification/BlockNotificationList;)Landroid/view/LayoutInflater;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/BlockNotificationList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/BlockNotificationList;
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mInflater:Landroid/view/LayoutInflater;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/notification/BlockNotificationList;)Ljava/util/ArrayList;
+.method static synthetic access$200(Lcom/android/settings_ex/notification/BlockNotificationList;)Ljava/util/ArrayList;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/BlockNotificationList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/BlockNotificationList;
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mSortedRows:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mSortedRows:Ljava/util/ArrayList;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/notification/BlockNotificationList;)Landroid/content/pm/LauncherApps;
+.method static synthetic access$300(Lcom/android/settings_ex/notification/BlockNotificationList;)Landroid/content/pm/LauncherApps;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/BlockNotificationList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/BlockNotificationList;
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mLauncherApps:Landroid/content/pm/LauncherApps;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mLauncherApps:Landroid/content/pm/LauncherApps;
 
     return-object v0
 .end method
@@ -383,64 +383,64 @@
 
     .prologue
     .line 79
-    invoke-static {p0, p1, p2}, Lcom/android/settings/notification/BlockNotificationList;->findPackageInfo(Landroid/content/pm/PackageManager;Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    invoke-static {p0, p1, p2}, Lcom/android/settings_ex/notification/BlockNotificationList;->findPackageInfo(Landroid/content/pm/PackageManager;Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/notification/BlockNotificationList;)Landroid/content/pm/PackageManager;
+.method static synthetic access$500(Lcom/android/settings_ex/notification/BlockNotificationList;)Landroid/content/pm/PackageManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/BlockNotificationList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/BlockNotificationList;
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mPM:Landroid/content/pm/PackageManager;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mPM:Landroid/content/pm/PackageManager;
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/notification/BlockNotificationList;)[Ljava/lang/String;
+.method static synthetic access$600(Lcom/android/settings_ex/notification/BlockNotificationList;)[Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/BlockNotificationList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/BlockNotificationList;
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->excludeKnoxApp:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->excludeKnoxApp:[Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/notification/BlockNotificationList;)Z
+.method static synthetic access$700(Lcom/android/settings_ex/notification/BlockNotificationList;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/BlockNotificationList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/BlockNotificationList;
 
     .prologue
     .line 79
-    iget-boolean v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mHideApp:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mHideApp:Z
 
     return v0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/notification/BlockNotificationList;)[Ljava/lang/String;
+.method static synthetic access$800(Lcom/android/settings_ex/notification/BlockNotificationList;)[Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/BlockNotificationList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/BlockNotificationList;
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->hide_app_notification_list:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->hide_app_notification_list:[Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/notification/BlockNotificationList;)Lcom/android/settings/notification/NotificationBackend;
+.method static synthetic access$900(Lcom/android/settings_ex/notification/BlockNotificationList;)Lcom/android/settings_ex/notification/NotificationBackend;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/BlockNotificationList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/BlockNotificationList;
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mBackend:Lcom/android/settings/notification/NotificationBackend;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mBackend:Lcom/android/settings_ex/notification/NotificationBackend;
 
     return-object v0
 .end method
@@ -455,7 +455,7 @@
             "Landroid/util/ArrayMap",
             "<",
             "Ljava/lang/String;",
-            "Lcom/android/settings/notification/BlockNotificationList$AppRow;",
+            "Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;",
             ">;",
             "Ljava/util/List",
             "<",
@@ -466,9 +466,9 @@
 
     .prologue
     .line 398
-    .local p1, "rows":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Lcom/android/settings/notification/BlockNotificationList$AppRow;>;"
+    .local p1, "rows":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;>;"
     .local p2, "resolveInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
-    sget-boolean v5, Lcom/android/settings/notification/BlockNotificationList;->DEBUG:Z
+    sget-boolean v5, Lcom/android/settings_ex/notification/BlockNotificationList;->DEBUG:Z
 
     if-eqz v5, :cond_0
 
@@ -553,10 +553,10 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/notification/BlockNotificationList$AppRow;
+    check-cast v4, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;
 
     .line 404
-    .local v4, "row":Lcom/android/settings/notification/BlockNotificationList$AppRow;
+    .local v4, "row":Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;
     if-nez v4, :cond_2
 
     .line 405
@@ -603,7 +603,7 @@
     .end local v1    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "ri":Landroid/content/pm/ResolveInfo;
-    .end local v4    # "row":Lcom/android/settings/notification/BlockNotificationList$AppRow;
+    .end local v4    # "row":Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;
     :cond_1
     const-string v5, ""
 
@@ -614,9 +614,9 @@
     .restart local v1    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .restart local v2    # "i$":Ljava/util/Iterator;
     .restart local v3    # "ri":Landroid/content/pm/ResolveInfo;
-    .restart local v4    # "row":Lcom/android/settings/notification/BlockNotificationList$AppRow;
+    .restart local v4    # "row":Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;
     :cond_2
-    iget-object v5, v4, Lcom/android/settings/notification/BlockNotificationList$AppRow;->settingsIntent:Landroid/content/Intent;
+    iget-object v5, v4, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;->settingsIntent:Landroid/content/Intent;
 
     if-eqz v5, :cond_3
 
@@ -663,7 +663,7 @@
     :cond_3
     new-instance v5, Landroid/content/Intent;
 
-    sget-object v6, Lcom/android/settings/notification/BlockNotificationList;->APP_NOTIFICATION_PREFS_CATEGORY_INTENT:Landroid/content/Intent;
+    sget-object v6, Lcom/android/settings_ex/notification/BlockNotificationList;->APP_NOTIFICATION_PREFS_CATEGORY_INTENT:Landroid/content/Intent;
 
     invoke-direct {v5, v6}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
@@ -675,7 +675,7 @@
 
     move-result-object v5
 
-    iput-object v5, v4, Lcom/android/settings/notification/BlockNotificationList$AppRow;->settingsIntent:Landroid/content/Intent;
+    iput-object v5, v4, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;->settingsIntent:Landroid/content/Intent;
 
     goto :goto_1
 
@@ -683,7 +683,7 @@
     .end local v0    # "activityInfo":Landroid/content/pm/ActivityInfo;
     .end local v1    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v3    # "ri":Landroid/content/pm/ResolveInfo;
-    .end local v4    # "row":Lcom/android/settings/notification/BlockNotificationList$AppRow;
+    .end local v4    # "row":Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;
     :cond_4
     return-void
 .end method
@@ -708,11 +708,11 @@
     invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 165
-    invoke-virtual {p0}, Lcom/android/settings/notification/BlockNotificationList;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/BlockNotificationList;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    const-class v1, Lcom/android/settings/applications/ManageApplications;
+    const-class v1, Lcom/android/settings_ex/applications/ManageApplications;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -724,7 +724,7 @@
 
     move-object v6, v3
 
-    invoke-static/range {v0 .. v6}, Lcom/android/settings/Utils;->startWithFragment(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Fragment;IILjava/lang/CharSequence;)V
+    invoke-static/range {v0 .. v6}, Lcom/android/settings_ex/Utils;->startWithFragment(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Fragment;IILjava/lang/CharSequence;)V
 
     .line 166
     return-void
@@ -835,30 +835,30 @@
     goto :goto_1
 .end method
 
-.method public static loadAppRow(Landroid/content/pm/PackageManager;Landroid/content/pm/ApplicationInfo;Lcom/android/settings/notification/NotificationBackend;)Lcom/android/settings/notification/BlockNotificationList$AppRow;
+.method public static loadAppRow(Landroid/content/pm/PackageManager;Landroid/content/pm/ApplicationInfo;Lcom/android/settings_ex/notification/NotificationBackend;)Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;
     .locals 6
     .param p0, "pm"    # Landroid/content/pm/PackageManager;
     .param p1, "app"    # Landroid/content/pm/ApplicationInfo;
-    .param p2, "backend"    # Lcom/android/settings/notification/NotificationBackend;
+    .param p2, "backend"    # Lcom/android/settings_ex/notification/NotificationBackend;
 
     .prologue
     const/4 v5, 0x1
 
     .line 361
-    new-instance v0, Lcom/android/settings/notification/BlockNotificationList$AppRow;
+    new-instance v0, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;
 
-    invoke-direct {v0}, Lcom/android/settings/notification/BlockNotificationList$AppRow;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;-><init>()V
 
     .line 362
-    .local v0, "row":Lcom/android/settings/notification/BlockNotificationList$AppRow;
+    .local v0, "row":Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;
     iget-object v2, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    iput-object v2, v0, Lcom/android/settings/notification/BlockNotificationList$AppRow;->pkg:Ljava/lang/String;
+    iput-object v2, v0, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;->pkg:Ljava/lang/String;
 
     .line 363
     iget v2, p1, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    iput v2, v0, Lcom/android/settings/notification/BlockNotificationList$AppRow;->uid:I
+    iput v2, v0, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;->uid:I
 
     .line 365
     :try_start_0
@@ -866,7 +866,7 @@
 
     move-result-object v2
 
-    iput-object v2, v0, Lcom/android/settings/notification/BlockNotificationList$AppRow;->label:Ljava/lang/CharSequence;
+    iput-object v2, v0, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;->label:Ljava/lang/CharSequence;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -876,40 +876,40 @@
 
     move-result-object v2
 
-    iput-object v2, v0, Lcom/android/settings/notification/BlockNotificationList$AppRow;->icon:Landroid/graphics/drawable/Drawable;
+    iput-object v2, v0, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;->icon:Landroid/graphics/drawable/Drawable;
 
     .line 371
-    iget-object v2, v0, Lcom/android/settings/notification/BlockNotificationList$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;->pkg:Ljava/lang/String;
 
-    iget v3, v0, Lcom/android/settings/notification/BlockNotificationList$AppRow;->uid:I
+    iget v3, v0, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;->uid:I
 
-    invoke-virtual {p2, v2, v3}, Lcom/android/settings/notification/NotificationBackend;->getNotificationsBanned(Ljava/lang/String;I)Z
+    invoke-virtual {p2, v2, v3}, Lcom/android/settings_ex/notification/NotificationBackend;->getNotificationsBanned(Ljava/lang/String;I)Z
 
     move-result v2
 
-    iput-boolean v2, v0, Lcom/android/settings/notification/BlockNotificationList$AppRow;->banned:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;->banned:Z
 
     .line 372
-    iget-object v2, v0, Lcom/android/settings/notification/BlockNotificationList$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;->pkg:Ljava/lang/String;
 
-    iget v3, v0, Lcom/android/settings/notification/BlockNotificationList$AppRow;->uid:I
+    iget v3, v0, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;->uid:I
 
-    invoke-virtual {p2, v2, v3}, Lcom/android/settings/notification/NotificationBackend;->getHighPriority(Ljava/lang/String;I)Z
+    invoke-virtual {p2, v2, v3}, Lcom/android/settings_ex/notification/NotificationBackend;->getHighPriority(Ljava/lang/String;I)Z
 
     move-result v2
 
-    iput-boolean v2, v0, Lcom/android/settings/notification/BlockNotificationList$AppRow;->priority:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;->priority:Z
 
     .line 373
-    iget-object v2, v0, Lcom/android/settings/notification/BlockNotificationList$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;->pkg:Ljava/lang/String;
 
-    iget v3, v0, Lcom/android/settings/notification/BlockNotificationList$AppRow;->uid:I
+    iget v3, v0, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;->uid:I
 
-    invoke-virtual {p2, v2, v3}, Lcom/android/settings/notification/NotificationBackend;->getSensitive(Ljava/lang/String;I)Z
+    invoke-virtual {p2, v2, v3}, Lcom/android/settings_ex/notification/NotificationBackend;->getSensitive(Ljava/lang/String;I)Z
 
     move-result v2
 
-    iput-boolean v2, v0, Lcom/android/settings/notification/BlockNotificationList$AppRow;->sensitive:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;->sensitive:Z
 
     .line 374
     return-object v0
@@ -932,7 +932,7 @@
 
     move-result-object v3
 
-    iget-object v4, v0, Lcom/android/settings/notification/BlockNotificationList$AppRow;->pkg:Ljava/lang/String;
+    iget-object v4, v0, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;->pkg:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -945,9 +945,9 @@
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 368
-    iget-object v2, v0, Lcom/android/settings/notification/BlockNotificationList$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;->pkg:Ljava/lang/String;
 
-    iput-object v2, v0, Lcom/android/settings/notification/BlockNotificationList$AppRow;->label:Ljava/lang/CharSequence;
+    iput-object v2, v0, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;->label:Ljava/lang/CharSequence;
 
     goto :goto_0
 .end method
@@ -957,7 +957,7 @@
 
     .prologue
     .line 205
-    iget-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mCollectAppsRunnable:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mCollectAppsRunnable:Ljava/lang/Runnable;
 
     invoke-static {v0}, Landroid/os/AsyncTask;->execute(Ljava/lang/Runnable;)V
 
@@ -982,7 +982,7 @@
 
     .prologue
     .line 378
-    sget-boolean v1, Lcom/android/settings/notification/BlockNotificationList;->DEBUG:Z
+    sget-boolean v1, Lcom/android/settings_ex/notification/BlockNotificationList;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
@@ -998,7 +998,7 @@
 
     move-result-object v2
 
-    sget-object v3, Lcom/android/settings/notification/BlockNotificationList;->APP_NOTIFICATION_PREFS_CATEGORY_INTENT:Landroid/content/Intent;
+    sget-object v3, Lcom/android/settings_ex/notification/BlockNotificationList;->APP_NOTIFICATION_PREFS_CATEGORY_INTENT:Landroid/content/Intent;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1012,7 +1012,7 @@
 
     .line 380
     :cond_0
-    sget-object v1, Lcom/android/settings/notification/BlockNotificationList;->APP_NOTIFICATION_PREFS_CATEGORY_INTENT:Landroid/content/Intent;
+    sget-object v1, Lcom/android/settings_ex/notification/BlockNotificationList;->APP_NOTIFICATION_PREFS_CATEGORY_INTENT:Landroid/content/Intent;
 
     const/4 v2, 0x0
 
@@ -1030,7 +1030,7 @@
 
     .prologue
     .line 326
-    sget-boolean v6, Lcom/android/settings/notification/BlockNotificationList;->DEBUG:Z
+    sget-boolean v6, Lcom/android/settings_ex/notification/BlockNotificationList;->DEBUG:Z
 
     if-eqz v6, :cond_0
 
@@ -1042,12 +1042,12 @@
 
     .line 327
     :cond_0
-    iget-object v6, p0, Lcom/android/settings/notification/BlockNotificationList;->mAdapter:Lcom/android/settings/notification/BlockNotificationList$NotificationAppAdapter;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mAdapter:Lcom/android/settings_ex/notification/BlockNotificationList$NotificationAppAdapter;
 
-    invoke-virtual {v6}, Lcom/android/settings/notification/BlockNotificationList$NotificationAppAdapter;->clear()V
+    invoke-virtual {v6}, Lcom/android/settings_ex/notification/BlockNotificationList$NotificationAppAdapter;->clear()V
 
     .line 328
-    iget-object v7, p0, Lcom/android/settings/notification/BlockNotificationList;->mSortedRows:Ljava/util/ArrayList;
+    iget-object v7, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mSortedRows:Ljava/util/ArrayList;
 
     monitor-enter v7
 
@@ -1057,7 +1057,7 @@
     .line 330
     .local v5, "section":Ljava/lang/String;
     :try_start_0
-    iget-object v6, p0, Lcom/android/settings/notification/BlockNotificationList;->mSortedRows:Ljava/util/ArrayList;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mSortedRows:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
@@ -1076,20 +1076,20 @@
     if-ge v3, v0, :cond_1
 
     .line 333
-    iget-object v6, p0, Lcom/android/settings/notification/BlockNotificationList;->mSortedRows:Ljava/util/ArrayList;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mSortedRows:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/notification/BlockNotificationList$AppRow;
+    check-cast v4, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 343
-    .local v4, "row":Lcom/android/settings/notification/BlockNotificationList$AppRow;
+    .local v4, "row":Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;
     :try_start_1
-    iput-boolean v2, v4, Lcom/android/settings/notification/BlockNotificationList$AppRow;->first:Z
+    iput-boolean v2, v4, Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;->first:Z
     :try_end_1
     .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -1097,9 +1097,9 @@
     .line 347
     :goto_1
     :try_start_2
-    iget-object v6, p0, Lcom/android/settings/notification/BlockNotificationList;->mAdapter:Lcom/android/settings/notification/BlockNotificationList$NotificationAppAdapter;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mAdapter:Lcom/android/settings_ex/notification/BlockNotificationList$NotificationAppAdapter;
 
-    invoke-virtual {v6, v4}, Lcom/android/settings/notification/BlockNotificationList$NotificationAppAdapter;->add(Ljava/lang/Object;)V
+    invoke-virtual {v6, v4}, Lcom/android/settings_ex/notification/BlockNotificationList$NotificationAppAdapter;->add(Ljava/lang/Object;)V
 
     .line 348
     const/4 v2, 0x0
@@ -1124,7 +1124,7 @@
     .end local v1    # "e":Ljava/lang/NullPointerException;
     .end local v2    # "first":Z
     .end local v3    # "i":I
-    .end local v4    # "row":Lcom/android/settings/notification/BlockNotificationList$AppRow;
+    .end local v4    # "row":Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;
     :catchall_0
     move-exception v6
 
@@ -1144,12 +1144,12 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     .line 351
-    iget-object v6, p0, Lcom/android/settings/notification/BlockNotificationList;->mListViewState:Landroid/os/Parcelable;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mListViewState:Landroid/os/Parcelable;
 
     if-eqz v6, :cond_3
 
     .line 352
-    sget-boolean v6, Lcom/android/settings/notification/BlockNotificationList;->DEBUG:Z
+    sget-boolean v6, Lcom/android/settings_ex/notification/BlockNotificationList;->DEBUG:Z
 
     if-eqz v6, :cond_2
 
@@ -1161,22 +1161,22 @@
 
     .line 353
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/notification/BlockNotificationList;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/BlockNotificationList;->getListView()Landroid/widget/ListView;
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/notification/BlockNotificationList;->mListViewState:Landroid/os/Parcelable;
+    iget-object v7, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mListViewState:Landroid/os/Parcelable;
 
     invoke-virtual {v6, v7}, Landroid/widget/ListView;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
     .line 354
     const/4 v6, 0x0
 
-    iput-object v6, p0, Lcom/android/settings/notification/BlockNotificationList;->mListViewState:Landroid/os/Parcelable;
+    iput-object v6, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mListViewState:Landroid/os/Parcelable;
 
     .line 356
     :cond_3
-    sget-boolean v6, Lcom/android/settings/notification/BlockNotificationList;->DEBUG:Z
+    sget-boolean v6, Lcom/android/settings_ex/notification/BlockNotificationList;->DEBUG:Z
 
     if-eqz v6, :cond_4
 
@@ -1192,7 +1192,7 @@
 
     move-result-object v7
 
-    iget-object v8, p0, Lcom/android/settings/notification/BlockNotificationList;->mSortedRows:Ljava/util/ArrayList;
+    iget-object v8, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mSortedRows:Ljava/util/ArrayList;
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
 
@@ -1227,19 +1227,19 @@
 
     .prologue
     .line 179
-    invoke-super {p0, p1}, Lcom/android/settings/PinnedHeaderListFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/PinnedHeaderListFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 180
-    invoke-virtual {p0}, Lcom/android/settings/notification/BlockNotificationList;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/BlockNotificationList;->getListView()Landroid/widget/ListView;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/notification/BlockNotificationList;->mAdapter:Lcom/android/settings/notification/BlockNotificationList$NotificationAppAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mAdapter:Lcom/android/settings_ex/notification/BlockNotificationList$NotificationAppAdapter;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 181
-    invoke-virtual {p0}, Lcom/android/settings/notification/BlockNotificationList;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/BlockNotificationList;->getListView()Landroid/widget/ListView;
 
     move-result-object v0
 
@@ -1259,26 +1259,26 @@
     const/4 v2, 0x1
 
     .line 116
-    invoke-super {p0, p1}, Lcom/android/settings/PinnedHeaderListFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/PinnedHeaderListFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 118
-    invoke-virtual {p0}, Lcom/android/settings/notification/BlockNotificationList;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/BlockNotificationList;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mContext:Landroid/content/Context;
 
     .line 119
-    iget-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mPM:Landroid/content/pm/PackageManager;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mPM:Landroid/content/pm/PackageManager;
 
     .line 120
-    iget-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mContext:Landroid/content/Context;
 
     const-string v1, "layout_inflater"
 
@@ -1288,10 +1288,10 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    iput-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mInflater:Landroid/view/LayoutInflater;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mInflater:Landroid/view/LayoutInflater;
 
     .line 122
-    iget-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mContext:Landroid/content/Context;
 
     const-string v1, "launcherapps"
 
@@ -1301,19 +1301,19 @@
 
     check-cast v0, Landroid/content/pm/LauncherApps;
 
-    iput-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mLauncherApps:Landroid/content/pm/LauncherApps;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mLauncherApps:Landroid/content/pm/LauncherApps;
 
     .line 123
-    new-instance v0, Lcom/android/settings/notification/BlockNotificationList$NotificationAppAdapter;
+    new-instance v0, Lcom/android/settings_ex/notification/BlockNotificationList$NotificationAppAdapter;
 
-    iget-object v1, p0, Lcom/android/settings/notification/BlockNotificationList;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/notification/BlockNotificationList$NotificationAppAdapter;-><init>(Lcom/android/settings/notification/BlockNotificationList;Landroid/content/Context;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/notification/BlockNotificationList$NotificationAppAdapter;-><init>(Lcom/android/settings_ex/notification/BlockNotificationList;Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mAdapter:Lcom/android/settings/notification/BlockNotificationList$NotificationAppAdapter;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mAdapter:Lcom/android/settings_ex/notification/BlockNotificationList$NotificationAppAdapter;
 
     .line 127
-    invoke-virtual {p0}, Lcom/android/settings/notification/BlockNotificationList;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/BlockNotificationList;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1332,14 +1332,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->hide_app_list:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->hide_app_list:Ljava/lang/String;
 
     .line 130
-    iget-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->hide_app_list:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->hide_app_list:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->hide_app_list:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->hide_app_list:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -1348,10 +1348,10 @@
     if-nez v0, :cond_0
 
     .line 131
-    iput-boolean v2, p0, Lcom/android/settings/notification/BlockNotificationList;->mHideApp:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mHideApp:Z
 
     .line 132
-    iget-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->hide_app_list:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->hide_app_list:Ljava/lang/String;
 
     const-string v1, ","
 
@@ -1359,10 +1359,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->hide_app_notification_list:[Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->hide_app_notification_list:[Ljava/lang/String;
 
     .line 133
-    iget-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->hide_app_notification_list:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->hide_app_notification_list:[Ljava/lang/String;
 
     if-nez v0, :cond_0
 
@@ -1376,11 +1376,11 @@
     .line 135
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mHideApp:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mHideApp:Z
 
     .line 138
     :cond_0
-    invoke-virtual {p0, v2}, Lcom/android/settings/notification/BlockNotificationList;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/notification/BlockNotificationList;->setHasOptionsMenu(Z)V
 
     .line 140
     return-void
@@ -1439,7 +1439,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/android/settings/notification/BlockNotificationList;->mTextView:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mTextView:Landroid/widget/TextView;
 
     .line 174
     return-object v0
@@ -1450,12 +1450,12 @@
 
     .prologue
     .line 193
-    invoke-super {p0}, Lcom/android/settings/PinnedHeaderListFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/android/settings_ex/PinnedHeaderListFragment;->onDestroyView()V
 
     .line 194
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mListViewState:Landroid/os/Parcelable;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mListViewState:Landroid/os/Parcelable;
 
     .line 195
     return-void
@@ -1475,7 +1475,7 @@
 
     .line 159
     :goto_0
-    invoke-super {p0, p1}, Lcom/android/settings/PinnedHeaderListFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/android/settings_ex/PinnedHeaderListFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v0
 
@@ -1483,7 +1483,7 @@
 
     .line 154
     :pswitch_0
-    invoke-direct {p0}, Lcom/android/settings/notification/BlockNotificationList;->callAdvancedAppNotifications()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/BlockNotificationList;->callAdvancedAppNotifications()V
 
     goto :goto_0
 
@@ -1499,10 +1499,10 @@
 
     .prologue
     .line 199
-    invoke-super {p0}, Lcom/android/settings/PinnedHeaderListFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/PinnedHeaderListFragment;->onPause()V
 
     .line 200
-    sget-boolean v0, Lcom/android/settings/notification/BlockNotificationList;->DEBUG:Z
+    sget-boolean v0, Lcom/android/settings_ex/notification/BlockNotificationList;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
@@ -1514,7 +1514,7 @@
 
     .line 201
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/notification/BlockNotificationList;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/BlockNotificationList;->getListView()Landroid/widget/ListView;
 
     move-result-object v0
 
@@ -1522,7 +1522,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/notification/BlockNotificationList;->mListViewState:Landroid/os/Parcelable;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/BlockNotificationList;->mListViewState:Landroid/os/Parcelable;
 
     .line 202
     return-void
@@ -1533,10 +1533,10 @@
 
     .prologue
     .line 187
-    invoke-super {p0}, Lcom/android/settings/PinnedHeaderListFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/PinnedHeaderListFragment;->onResume()V
 
     .line 188
-    invoke-direct {p0}, Lcom/android/settings/notification/BlockNotificationList;->loadAppsList()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/BlockNotificationList;->loadAppsList()V
 
     .line 189
     return-void

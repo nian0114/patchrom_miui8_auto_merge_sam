@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;
+.class Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;
 .super Ljava/lang/Object;
 .source "ChooseLockUniversal.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->attachListeners()V
+    value = Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->attachListeners()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)V
     .locals 0
 
     .prologue
     .line 549
-    iput-object p1, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -55,34 +55,34 @@
     invoke-static {v6, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 553
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
-    invoke-static {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$500(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/DirectionLockView;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    invoke-static {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$500(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/DirectionLockView;
 
     move-result-object v6
 
     invoke-virtual {v6, v9}, Lcom/android/internal/widget/DirectionLockView;->setEnabled(Z)V
 
     .line 556
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mCurrentScreenStage:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$ScreenStage;
-    invoke-static {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$600(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$ScreenStage;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mCurrentScreenStage:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$ScreenStage;
+    invoke-static {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$600(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$ScreenStage;
 
     move-result-object v6
 
-    sget-object v7, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$ScreenStage;->ENTER_DIRECTION_SCREEN:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$ScreenStage;
+    sget-object v7, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$ScreenStage;->ENTER_DIRECTION_SCREEN:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$ScreenStage;
 
     if-ne v6, v7, :cond_2
 
     .line 558
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    iget-object v7, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v7, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
-    invoke-static {v7}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$500(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/DirectionLockView;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    invoke-static {v7}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$500(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/DirectionLockView;
 
     move-result-object v7
 
@@ -90,34 +90,34 @@
 
     move-result-object v7
 
-    # setter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mFirstPassword:Ljava/lang/String;
-    invoke-static {v6, v7}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$702(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;Ljava/lang/String;)Ljava/lang/String;
+    # setter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mFirstPassword:Ljava/lang/String;
+    invoke-static {v6, v7}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$702(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;Ljava/lang/String;)Ljava/lang/String;
 
     .line 560
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
-    invoke-static {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$500(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/DirectionLockView;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    invoke-static {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$500(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/DirectionLockView;
 
     move-result-object v6
 
     invoke-virtual {v6}, Lcom/android/internal/widget/DirectionLockView;->resetPassword()V
 
     .line 561
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
-    invoke-static {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$500(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/DirectionLockView;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    invoke-static {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$500(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/DirectionLockView;
 
     move-result-object v6
 
     invoke-virtual {v6}, Lcom/android/internal/widget/DirectionLockView;->clearScreen()V
 
     .line 563
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mRightButton:Landroid/widget/Button;
-    invoke-static {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$800(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Landroid/widget/Button;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mRightButton:Landroid/widget/Button;
+    invoke-static {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$800(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Landroid/widget/Button;
 
     move-result-object v6
 
@@ -126,36 +126,36 @@
     invoke-virtual {v6, v7}, Landroid/widget/Button;->setText(I)V
 
     .line 564
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mRightButton:Landroid/widget/Button;
-    invoke-static {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$800(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Landroid/widget/Button;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mRightButton:Landroid/widget/Button;
+    invoke-static {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$800(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Landroid/widget/Button;
 
     move-result-object v6
 
     invoke-virtual {v6, v8}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 565
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mLeftButton:Landroid/widget/Button;
-    invoke-static {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$900(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Landroid/widget/Button;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mLeftButton:Landroid/widget/Button;
+    invoke-static {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$900(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Landroid/widget/Button;
 
     move-result-object v6
 
     invoke-virtual {v6, v8}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 567
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
-    invoke-static {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$1000(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
+    invoke-static {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$1000(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Landroid/widget/TextView;
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v7, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    invoke-virtual {v7}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v7}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -168,24 +168,24 @@
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 569
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
-    invoke-static {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$1100(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mUniversalLockSettingsHelper:Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
+    invoke-static {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$1100(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->isTouchExplorationEnabled()Z
+    invoke-virtual {v6}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->isTouchExplorationEnabled()Z
 
     move-result v6
 
     if-eqz v6, :cond_0
 
     .line 570
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
-    invoke-static {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$1000(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
+    invoke-static {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$1000(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Landroid/widget/TextView;
 
     move-result-object v6
 
@@ -193,10 +193,10 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v8, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v8, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
-    invoke-static {v8}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$1000(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
+    invoke-static {v8}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$1000(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Landroid/widget/TextView;
 
     move-result-object v8
 
@@ -214,9 +214,9 @@
 
     move-result-object v7
 
-    iget-object v8, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v8, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    invoke-virtual {v8}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v8}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v8
 
@@ -242,47 +242,47 @@
 
     .line 576
     :cond_0
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    sget-object v7, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$ScreenStage;->CONFIRM_DIRECTION_SCREEN:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$ScreenStage;
+    sget-object v7, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$ScreenStage;->CONFIRM_DIRECTION_SCREEN:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$ScreenStage;
 
-    # setter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mCurrentScreenStage:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$ScreenStage;
-    invoke-static {v6, v7}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$602(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$ScreenStage;)Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$ScreenStage;
+    # setter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mCurrentScreenStage:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$ScreenStage;
+    invoke-static {v6, v7}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$602(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$ScreenStage;)Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$ScreenStage;
 
     .line 577
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mGreyStepCircleList:Ljava/util/ArrayList;
-    invoke-static {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$200(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Ljava/util/ArrayList;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mGreyStepCircleList:Ljava/util/ArrayList;
+    invoke-static {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$200(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Ljava/util/ArrayList;
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v7, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
-    invoke-static {v7}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$000(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Landroid/widget/ImageView;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
+    invoke-static {v7}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$000(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Landroid/widget/ImageView;
 
     move-result-object v7
 
     invoke-virtual {v6, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 578
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # invokes: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->clearStepCircles()V
-    invoke-static {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$1200(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)V
+    # invokes: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->clearStepCircles()V
+    invoke-static {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$1200(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)V
 
     .line 580
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # setter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
-    invoke-static {v6, v10}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$002(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;Landroid/widget/ImageView;)Landroid/widget/ImageView;
+    # setter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
+    invoke-static {v6, v10}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$002(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;Landroid/widget/ImageView;)Landroid/widget/ImageView;
 
     .line 581
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # setter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mOldStepCircle:Landroid/widget/ImageView;
-    invoke-static {v6, v10}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$402(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;Landroid/widget/ImageView;)Landroid/widget/ImageView;
+    # setter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mOldStepCircle:Landroid/widget/ImageView;
+    invoke-static {v6, v10}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$402(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;Landroid/widget/ImageView;)Landroid/widget/ImageView;
 
     .line 651
     :cond_1
@@ -291,17 +291,17 @@
 
     .line 588
     :cond_2
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mFirstPassword:Ljava/lang/String;
-    invoke-static {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$700(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mFirstPassword:Ljava/lang/String;
+    invoke-static {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$700(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Ljava/lang/String;
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v7, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
-    invoke-static {v7}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$500(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/DirectionLockView;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    invoke-static {v7}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$500(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/DirectionLockView;
 
     move-result-object v7
 
@@ -323,7 +323,7 @@
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 591
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportPatternBackupPin()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportPatternBackupPin()Z
 
     move-result v6
 
@@ -342,13 +342,13 @@
 
     invoke-direct {v6}, Landroid/content/Intent;-><init>()V
 
-    iget-object v7, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v7, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    invoke-virtual {v7}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v7}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v7
 
-    const-class v8, Lcom/android/settings/ChooseLockAdditionalPin;
+    const-class v8, Lcom/android/settings_ex/ChooseLockAdditionalPin;
 
     invoke-virtual {v6, v7, v8}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
@@ -389,10 +389,10 @@
     .line 606
     const-string v6, "firstlock"
 
-    iget-object v7, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v7, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
-    invoke-static {v7}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$500(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/DirectionLockView;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    invoke-static {v7}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$500(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/DirectionLockView;
 
     move-result-object v7
 
@@ -416,14 +416,14 @@
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 612
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    invoke-virtual {v6, v1}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v6, v1}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->startActivity(Landroid/content/Intent;)V
 
     .line 613
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    invoke-virtual {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->finish()V
+    invoke-virtual {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->finish()V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -453,10 +453,10 @@
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 622
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
-    invoke-static {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$1300(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/LockPatternUtils;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    invoke-static {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$1300(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/LockPatternUtils;
 
     move-result-object v6
 
@@ -470,9 +470,9 @@
 
     .line 624
     .local v5, "wasSecureBefore":Z
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    invoke-virtual {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -481,17 +481,17 @@
     invoke-static {v6, v7, v9}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 625
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
-    invoke-static {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$1300(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/LockPatternUtils;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    invoke-static {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$1300(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/LockPatternUtils;
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v7, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
-    invoke-static {v7}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$1300(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/LockPatternUtils;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    invoke-static {v7}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$1300(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/LockPatternUtils;
 
     move-result-object v7
 
@@ -502,27 +502,27 @@
     invoke-virtual {v6, v7}, Lcom/android/internal/widget/LockPatternUtils;->clearLock(I)V
 
     .line 626
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
-    invoke-static {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$1300(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/LockPatternUtils;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    invoke-static {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$1300(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/LockPatternUtils;
 
     move-result-object v6
 
     invoke-virtual {v6, v9}, Lcom/android/internal/widget/LockPatternUtils;->setLockPatternEnabled(Z)V
 
     .line 627
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
-    invoke-static {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$1300(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/LockPatternUtils;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    invoke-static {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$1300(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/LockPatternUtils;
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v7, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
-    invoke-static {v7}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$500(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/DirectionLockView;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    invoke-static {v7}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$500(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/DirectionLockView;
 
     move-result-object v7
 
@@ -537,30 +537,30 @@
     invoke-virtual {v6, v7}, Lcom/android/internal/widget/LockPatternUtils;->saveLockUniversal(Ljava/util/List;)V
 
     .line 628
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    invoke-virtual {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->finish()V
+    invoke-virtual {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->finish()V
 
     .line 630
     if-nez v5, :cond_1
 
     .line 632
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    invoke-virtual {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/android/settings/notification/RedactionInterstitial;->createStartIntent(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-static {v6}, Lcom/android/settings_ex/notification/RedactionInterstitial;->createStartIntent(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v1
 
     .line 634
     .restart local v1    # "intent":Landroid/content/Intent;
     :try_start_1
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    invoke-virtual {v6, v1}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v6, v1}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->startActivity(Landroid/content/Intent;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -576,26 +576,26 @@
     .end local v1    # "intent":Landroid/content/Intent;
     .end local v5    # "wasSecureBefore":Z
     :cond_4
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mRightButton:Landroid/widget/Button;
-    invoke-static {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$800(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Landroid/widget/Button;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mRightButton:Landroid/widget/Button;
+    invoke-static {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$800(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Landroid/widget/Button;
 
     move-result-object v6
 
     invoke-virtual {v6, v8}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 645
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
-    invoke-static {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$1000(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mHeaderTextView:Landroid/widget/TextView;
+    invoke-static {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$1000(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Landroid/widget/TextView;
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v7, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    invoke-virtual {v7}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v7}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -608,20 +608,20 @@
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 647
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
-    invoke-static {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$500(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/DirectionLockView;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    invoke-static {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$500(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/DirectionLockView;
 
     move-result-object v6
 
     invoke-virtual {v6}, Lcom/android/internal/widget/DirectionLockView;->resetPassword()V
 
     .line 648
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal$5;->this$0:Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
-    invoke-static {v6}, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;->access$500(Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/DirectionLockView;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->mDirectionView:Lcom/android/internal/widget/DirectionLockView;
+    invoke-static {v6}, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;->access$500(Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;)Lcom/android/internal/widget/DirectionLockView;
 
     move-result-object v6
 

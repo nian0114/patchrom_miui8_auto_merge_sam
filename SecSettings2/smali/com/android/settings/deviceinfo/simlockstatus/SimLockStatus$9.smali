@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/deviceinfo/simlockstatus/SimLockStatus$9;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/deviceinfo/simlockstatus/SimLockStatus$9;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "SimLockStatus.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/simlockstatus/SimLockStatus;
+    value = Lcom/android/settings_ex/deviceinfo/simlockstatus/SimLockStatus;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 436
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -51,7 +51,7 @@
 
     .line 442
     .local v0, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v1, Lcom/android/settings/deviceinfo/simlockstatus/SimLockStatus;
+    const-class v1, Lcom/android/settings_ex/deviceinfo/simlockstatus/SimLockStatus;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/ethernet/EthernetConfigDialog$1;
+.class Lcom/android/settings_ex/ethernet/EthernetConfigDialog$1;
 .super Ljava/lang/Object;
 .source "EthernetConfigDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/ethernet/EthernetConfigDialog;->buildDialogContent(Landroid/content/Context;)I
+    value = Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->buildDialogContent(Landroid/content/Context;)I
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/ethernet/EthernetConfigDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/ethernet/EthernetConfigDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/ethernet/EthernetConfigDialog;)V
     .locals 0
 
     .prologue
     .line 120
-    iput-object p1, p0, Lcom/android/settings/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings/ethernet/EthernetConfigDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,10 +44,10 @@
     const/4 v3, 0x1
 
     .line 122
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings/ethernet/EthernetConfigDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
-    # getter for: Lcom/android/settings/ethernet/EthernetConfigDialog;->staticInputView:Landroid/view/View;
-    invoke-static {v1}, Lcom/android/settings/ethernet/EthernetConfigDialog;->access$000(Lcom/android/settings/ethernet/EthernetConfigDialog;)Landroid/view/View;
+    # getter for: Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->staticInputView:Landroid/view/View;
+    invoke-static {v1}, Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->access$000(Lcom/android/settings_ex/ethernet/EthernetConfigDialog;)Landroid/view/View;
 
     move-result-object v1
 
@@ -56,37 +56,37 @@
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
     .line 123
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings/ethernet/EthernetConfigDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
-    # getter for: Lcom/android/settings/ethernet/EthernetConfigDialog;->mIpaddr:Landroid/widget/EditText;
-    invoke-static {v1}, Lcom/android/settings/ethernet/EthernetConfigDialog;->access$100(Lcom/android/settings/ethernet/EthernetConfigDialog;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->mIpaddr:Landroid/widget/EditText;
+    invoke-static {v1}, Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->access$100(Lcom/android/settings_ex/ethernet/EthernetConfigDialog;)Landroid/widget/EditText;
 
     move-result-object v1
 
     invoke-virtual {v1, v3}, Landroid/widget/EditText;->setEnabled(Z)V
 
     .line 124
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings/ethernet/EthernetConfigDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
-    # getter for: Lcom/android/settings/ethernet/EthernetConfigDialog;->mIpaddr:Landroid/widget/EditText;
-    invoke-static {v1}, Lcom/android/settings/ethernet/EthernetConfigDialog;->access$100(Lcom/android/settings/ethernet/EthernetConfigDialog;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->mIpaddr:Landroid/widget/EditText;
+    invoke-static {v1}, Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->access$100(Lcom/android/settings_ex/ethernet/EthernetConfigDialog;)Landroid/widget/EditText;
 
     move-result-object v1
 
     invoke-virtual {v1}, Landroid/widget/EditText;->requestFocus()Z
 
     .line 125
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings/ethernet/EthernetConfigDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
-    # getter for: Lcom/android/settings/ethernet/EthernetConfigDialog;->mConTypeManual:Landroid/widget/RadioButton;
-    invoke-static {v1}, Lcom/android/settings/ethernet/EthernetConfigDialog;->access$200(Lcom/android/settings/ethernet/EthernetConfigDialog;)Landroid/widget/RadioButton;
+    # getter for: Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->mConTypeManual:Landroid/widget/RadioButton;
+    invoke-static {v1}, Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->access$200(Lcom/android/settings_ex/ethernet/EthernetConfigDialog;)Landroid/widget/RadioButton;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings/ethernet/EthernetConfigDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
-    # getter for: Lcom/android/settings/ethernet/EthernetConfigDialog;->mIpaddr:Landroid/widget/EditText;
-    invoke-static {v2}, Lcom/android/settings/ethernet/EthernetConfigDialog;->access$100(Lcom/android/settings/ethernet/EthernetConfigDialog;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->mIpaddr:Landroid/widget/EditText;
+    invoke-static {v2}, Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->access$100(Lcom/android/settings_ex/ethernet/EthernetConfigDialog;)Landroid/widget/EditText;
 
     move-result-object v2
 
@@ -97,18 +97,18 @@
     invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setNextFocusDownId(I)V
 
     .line 126
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings/ethernet/EthernetConfigDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
     const/4 v2, -0x1
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/ethernet/EthernetConfigDialog;->getButton(I)Landroid/widget/Button;
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings/ethernet/EthernetConfigDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
-    # getter for: Lcom/android/settings/ethernet/EthernetConfigDialog;->mGw:Landroid/widget/EditText;
-    invoke-static {v2}, Lcom/android/settings/ethernet/EthernetConfigDialog;->access$300(Lcom/android/settings/ethernet/EthernetConfigDialog;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->mGw:Landroid/widget/EditText;
+    invoke-static {v2}, Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->access$300(Lcom/android/settings_ex/ethernet/EthernetConfigDialog;)Landroid/widget/EditText;
 
     move-result-object v2
 
@@ -119,18 +119,18 @@
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setNextFocusUpId(I)V
 
     .line 127
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings/ethernet/EthernetConfigDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
     const/4 v2, -0x2
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/ethernet/EthernetConfigDialog;->getButton(I)Landroid/widget/Button;
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings/ethernet/EthernetConfigDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
-    # getter for: Lcom/android/settings/ethernet/EthernetConfigDialog;->mGw:Landroid/widget/EditText;
-    invoke-static {v2}, Lcom/android/settings/ethernet/EthernetConfigDialog;->access$300(Lcom/android/settings/ethernet/EthernetConfigDialog;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->mGw:Landroid/widget/EditText;
+    invoke-static {v2}, Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->access$300(Lcom/android/settings_ex/ethernet/EthernetConfigDialog;)Landroid/widget/EditText;
 
     move-result-object v2
 
@@ -141,9 +141,9 @@
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setNextFocusUpId(I)V
 
     .line 128
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings/ethernet/EthernetConfigDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
-    invoke-virtual {v1}, Lcom/android/settings/ethernet/EthernetConfigDialog;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -161,49 +161,49 @@
 
     .line 129
     .local v0, "imm":Landroid/view/inputmethod/InputMethodManager;
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings/ethernet/EthernetConfigDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
-    # getter for: Lcom/android/settings/ethernet/EthernetConfigDialog;->mIpaddr:Landroid/widget/EditText;
-    invoke-static {v1}, Lcom/android/settings/ethernet/EthernetConfigDialog;->access$100(Lcom/android/settings/ethernet/EthernetConfigDialog;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->mIpaddr:Landroid/widget/EditText;
+    invoke-static {v1}, Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->access$100(Lcom/android/settings_ex/ethernet/EthernetConfigDialog;)Landroid/widget/EditText;
 
     move-result-object v1
 
     invoke-virtual {v0, v1, v3}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
 
     .line 130
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings/ethernet/EthernetConfigDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
-    # getter for: Lcom/android/settings/ethernet/EthernetConfigDialog;->mDns:Landroid/widget/EditText;
-    invoke-static {v1}, Lcom/android/settings/ethernet/EthernetConfigDialog;->access$400(Lcom/android/settings/ethernet/EthernetConfigDialog;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->mDns:Landroid/widget/EditText;
+    invoke-static {v1}, Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->access$400(Lcom/android/settings_ex/ethernet/EthernetConfigDialog;)Landroid/widget/EditText;
 
     move-result-object v1
 
     invoke-virtual {v1, v3}, Landroid/widget/EditText;->setEnabled(Z)V
 
     .line 131
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings/ethernet/EthernetConfigDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
-    # getter for: Lcom/android/settings/ethernet/EthernetConfigDialog;->mGw:Landroid/widget/EditText;
-    invoke-static {v1}, Lcom/android/settings/ethernet/EthernetConfigDialog;->access$300(Lcom/android/settings/ethernet/EthernetConfigDialog;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->mGw:Landroid/widget/EditText;
+    invoke-static {v1}, Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->access$300(Lcom/android/settings_ex/ethernet/EthernetConfigDialog;)Landroid/widget/EditText;
 
     move-result-object v1
 
     invoke-virtual {v1, v3}, Landroid/widget/EditText;->setEnabled(Z)V
 
     .line 132
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings/ethernet/EthernetConfigDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
-    # getter for: Lcom/android/settings/ethernet/EthernetConfigDialog;->mMask:Landroid/widget/EditText;
-    invoke-static {v1}, Lcom/android/settings/ethernet/EthernetConfigDialog;->access$500(Lcom/android/settings/ethernet/EthernetConfigDialog;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->mMask:Landroid/widget/EditText;
+    invoke-static {v1}, Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->access$500(Lcom/android/settings_ex/ethernet/EthernetConfigDialog;)Landroid/widget/EditText;
 
     move-result-object v1
 
     invoke-virtual {v1, v3}, Landroid/widget/EditText;->setEnabled(Z)V
 
     .line 133
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings/ethernet/EthernetConfigDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetConfigDialog$1;->this$0:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
-    invoke-virtual {v1}, Lcom/android/settings/ethernet/EthernetConfigDialog;->enableSaveIfAppropriate()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->enableSaveIfAppropriate()V
 
     .line 134
     return-void

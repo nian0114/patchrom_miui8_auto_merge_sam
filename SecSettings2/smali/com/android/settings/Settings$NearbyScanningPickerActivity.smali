@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/Settings$NearbyScanningPickerActivity;
-.super Lcom/android/settings/SettingsActivityWrapper;
+.class public Lcom/android/settings_ex/Settings$NearbyScanningPickerActivity;
+.super Lcom/android/settings_ex/SettingsActivityWrapper;
 .source "Settings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/Settings;
+    value = Lcom/android/settings_ex/Settings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 459
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivityWrapper;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivityWrapper;-><init>()V
 
     return-void
 .end method
@@ -34,7 +34,7 @@
     .line 463
     new-instance v0, Landroid/content/Intent;
 
-    invoke-super {p0}, Lcom/android/settings/SettingsActivityWrapper;->getIntent()Landroid/content/Intent;
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivityWrapper;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -53,7 +53,7 @@
     .line 465
     const-string v1, ":settings:show_fragment"
 
-    const-class v2, Lcom/android/settings/nearbyscan/NearbyScanning;
+    const-class v2, Lcom/android/settings_ex/nearbyscan/NearbyScanning;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

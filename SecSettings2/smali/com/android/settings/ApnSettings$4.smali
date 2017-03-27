@@ -1,11 +1,11 @@
-.class Lcom/android/settings/ApnSettings$4;
+.class Lcom/android/settings_ex/ApnSettings$4;
 .super Landroid/database/ContentObserver;
 .source "ApnSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/ApnSettings;
+    value = Lcom/android/settings_ex/ApnSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/ApnSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/ApnSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/ApnSettings;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/ApnSettings;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 239
-    iput-object p1, p0, Lcom/android/settings/ApnSettings$4;->this$0:Lcom/android/settings/ApnSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/ApnSettings$4;->this$0:Lcom/android/settings_ex/ApnSettings;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -43,9 +43,9 @@
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
     .line 243
-    iget-object v0, p0, Lcom/android/settings/ApnSettings$4;->this$0:Lcom/android/settings/ApnSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/ApnSettings$4;->this$0:Lcom/android/settings_ex/ApnSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/ApnSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/android/settings_ex/ApnSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -62,9 +62,9 @@
     if-ne v0, v1, :cond_0
 
     .line 244
-    iget-object v0, p0, Lcom/android/settings/ApnSettings$4;->this$0:Lcom/android/settings/ApnSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/ApnSettings$4;->this$0:Lcom/android/settings_ex/ApnSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/ApnSettings;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/ApnSettings;->finish()V
 
     .line 246
     :cond_0

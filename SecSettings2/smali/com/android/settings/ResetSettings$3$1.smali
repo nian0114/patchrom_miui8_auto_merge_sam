@@ -1,4 +1,4 @@
-.class Lcom/android/settings/ResetSettings$3$1;
+.class Lcom/android/settings_ex/ResetSettings$3$1;
 .super Ljava/lang/Object;
 .source "ResetSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/ResetSettings$3;->onClick(Landroid/view/View;)V
+    value = Lcom/android/settings_ex/ResetSettings$3;->onClick(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/ResetSettings$3;
+.field final synthetic this$1:Lcom/android/settings_ex/ResetSettings$3;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/ResetSettings$3;)V
+.method constructor <init>(Lcom/android/settings_ex/ResetSettings$3;)V
     .locals 0
 
     .prologue
     .line 229
-    iput-object p1, p0, Lcom/android/settings/ResetSettings$3$1;->this$1:Lcom/android/settings/ResetSettings$3;
+    iput-object p1, p0, Lcom/android/settings_ex/ResetSettings$3$1;->this$1:Lcom/android/settings_ex/ResetSettings$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

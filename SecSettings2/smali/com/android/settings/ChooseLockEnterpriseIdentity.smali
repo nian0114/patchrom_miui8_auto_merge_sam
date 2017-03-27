@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/ChooseLockEnterpriseIdentity;
+.class public Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;
 .super Landroid/app/Activity;
 .source "ChooseLockEnterpriseIdentity.java"
 
@@ -6,8 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/ChooseLockEnterpriseIdentity$1;,
-        Lcom/android/settings/ChooseLockEnterpriseIdentity$PerformUserAuthTask;
+        Lcom/android/settings_ex/ChooseLockEnterpriseIdentity$1;,
+        Lcom/android/settings_ex/ChooseLockEnterpriseIdentity$PerformUserAuthTask;
     }
 .end annotation
 
@@ -67,224 +67,224 @@
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     .line 64
-    iput-boolean v1, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mIsPasswordChangeEnforced:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mIsPasswordChangeEnforced:Z
 
     .line 65
-    iput-boolean v1, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mEnforceWithoutCancel:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mEnforceWithoutCancel:Z
 
     .line 70
     const/4 v0, 0x4
 
-    iput v0, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
+    iput v0, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
 
     .line 71
     const/16 v0, 0x10
 
-    iput v0, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMaxLength:I
+    iput v0, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMaxLength:I
 
     .line 72
-    iput v1, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLetters:I
+    iput v1, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLetters:I
 
     .line 73
-    iput v1, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinUpperCase:I
+    iput v1, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinUpperCase:I
 
     .line 74
-    iput v1, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLowerCase:I
+    iput v1, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLowerCase:I
 
     .line 75
-    iput v1, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinSymbols:I
+    iput v1, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinSymbols:I
 
     .line 76
-    iput v1, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinNumeric:I
+    iput v1, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinNumeric:I
 
     .line 77
-    iput v1, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinNonLetter:I
+    iput v1, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinNonLetter:I
 
     .line 78
-    iput-object v2, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mOldPassword:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mOldPassword:Ljava/lang/String;
 
     .line 79
-    iput-object v2, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mOldEnterprisePassword:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mOldEnterprisePassword:Ljava/lang/String;
 
     .line 80
-    iput-boolean v1, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->hasPwdPatternRestriction:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->hasPwdPatternRestriction:Z
 
     .line 81
     const/high16 v0, 0x60000
 
-    iput v0, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mRequestedQuality:I
+    iput v0, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mRequestedQuality:I
 
     .line 201
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/ChooseLockEnterpriseIdentity;)Landroid/content/Context;
+.method static synthetic access$100(Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockEnterpriseIdentity;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/ChooseLockEnterpriseIdentity;)I
+.method static synthetic access$1000(Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockEnterpriseIdentity;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;
 
     .prologue
     .line 58
-    iget v0, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinNonLetter:I
+    iget v0, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinNonLetter:I
 
     return v0
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/ChooseLockEnterpriseIdentity;)Landroid/app/enterprise/PasswordPolicy;
+.method static synthetic access$1100(Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;)Landroid/app/enterprise/PasswordPolicy;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockEnterpriseIdentity;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     return-object v0
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/ChooseLockEnterpriseIdentity;)Landroid/app/enterprise/sso/GenericSSO;
+.method static synthetic access$1200(Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;)Landroid/app/enterprise/sso/GenericSSO;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockEnterpriseIdentity;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mGenericSSO:Landroid/app/enterprise/sso/GenericSSO;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mGenericSSO:Landroid/app/enterprise/sso/GenericSSO;
 
     return-object v0
 .end method
 
-.method static synthetic access$1300(Lcom/android/settings/ChooseLockEnterpriseIdentity;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$1300(Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockEnterpriseIdentity;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 58
-    invoke-direct {p0, p1}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->validatePassword(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->validatePassword(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$1400(Lcom/android/settings/ChooseLockEnterpriseIdentity;Ljava/lang/String;Ljava/lang/String;)V
+.method static synthetic access$1400(Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockEnterpriseIdentity;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;
     .param p1, "x1"    # Ljava/lang/String;
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
     .line 58
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->handleAuthSuccess(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->handleAuthSuccess(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method static synthetic access$1500(Lcom/android/settings/ChooseLockEnterpriseIdentity;I)V
+.method static synthetic access$1500(Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockEnterpriseIdentity;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;
     .param p1, "x1"    # I
 
     .prologue
     .line 58
-    invoke-direct {p0, p1}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->handleAuthFail(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->handleAuthFail(I)V
 
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/ChooseLockEnterpriseIdentity;)Ljava/lang/String;
+.method static synthetic access$200(Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockEnterpriseIdentity;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mOldEnterprisePassword:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mOldEnterprisePassword:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/ChooseLockEnterpriseIdentity;)I
+.method static synthetic access$300(Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockEnterpriseIdentity;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;
 
     .prologue
     .line 58
-    iget v0, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
+    iget v0, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
 
     return v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/ChooseLockEnterpriseIdentity;)I
+.method static synthetic access$400(Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockEnterpriseIdentity;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;
 
     .prologue
     .line 58
-    iget v0, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMaxLength:I
+    iget v0, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMaxLength:I
 
     return v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/ChooseLockEnterpriseIdentity;)I
+.method static synthetic access$500(Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockEnterpriseIdentity;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;
 
     .prologue
     .line 58
-    iget v0, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLetters:I
+    iget v0, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLetters:I
 
     return v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/ChooseLockEnterpriseIdentity;)I
+.method static synthetic access$600(Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockEnterpriseIdentity;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;
 
     .prologue
     .line 58
-    iget v0, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinUpperCase:I
+    iget v0, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinUpperCase:I
 
     return v0
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/ChooseLockEnterpriseIdentity;)I
+.method static synthetic access$700(Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockEnterpriseIdentity;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;
 
     .prologue
     .line 58
-    iget v0, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLowerCase:I
+    iget v0, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLowerCase:I
 
     return v0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/ChooseLockEnterpriseIdentity;)I
+.method static synthetic access$800(Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockEnterpriseIdentity;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;
 
     .prologue
     .line 58
-    iget v0, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinSymbols:I
+    iget v0, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinSymbols:I
 
     return v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/ChooseLockEnterpriseIdentity;)I
+.method static synthetic access$900(Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockEnterpriseIdentity;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;
 
     .prologue
     .line 58
-    iget v0, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinNumeric:I
+    iget v0, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinNumeric:I
 
     return v0
 .end method
@@ -326,7 +326,7 @@
 
     .line 420
     .local v6, "result":I
-    iget-object v9, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
 
     const-string v10, "content://com.sec.knox.provider/PasswordPolicy2"
 
@@ -334,7 +334,7 @@
 
     const/4 v12, 0x0
 
-    invoke-static {v9, v10, v11, v12}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabledInt(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-static {v9, v10, v11, v12}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabledInt(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v4
 
@@ -354,7 +354,7 @@
     if-eqz v2, :cond_7
 
     .line 429
-    iget-object v9, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -478,12 +478,12 @@
 
     move-result v9
 
-    invoke-direct {p0, v9, v5}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->scheduleNextPwdChange(II)V
+    invoke-direct {p0, v9, v5}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->scheduleNextPwdChange(II)V
 
     .line 456
     .end local v3    # "enforceWithoutCancel":Z
     :cond_3
-    iget-boolean v9, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mIsPasswordChangeEnforced:Z
+    iget-boolean v9, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mIsPasswordChangeEnforced:Z
 
     if-eqz v9, :cond_6
 
@@ -501,11 +501,11 @@
     const/16 v6, 0x6b
 
     .line 461
-    iget-object v9, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
 
     const v10, 0x7f0e16cc
 
-    invoke-virtual {p0, v10}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v10}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getString(I)Ljava/lang/String;
 
     move-result-object v10
 
@@ -517,14 +517,14 @@
 
     .line 466
     :cond_5
-    invoke-direct {p0, v6}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->sendIntentToKnoxKeyguard(I)V
+    invoke-direct {p0, v6}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->sendIntentToKnoxKeyguard(I)V
 
     .line 470
     :cond_6
-    invoke-virtual {p0, v8}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->setResult(I)V
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->setResult(I)V
 
     .line 471
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->finish()V
 
     .line 473
     return-void
@@ -593,7 +593,7 @@
     const/4 v7, 0x0
 
     .line 366
-    iget-object v3, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v3, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -602,7 +602,7 @@
     invoke-virtual {v3, v4}, Lcom/android/internal/widget/LockPatternUtils;->clearLock(I)V
 
     .line 372
-    iget-object v3, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v3, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -611,7 +611,7 @@
     invoke-virtual {v3, v8, v4}, Lcom/android/internal/widget/LockPatternUtils;->setEnterpriseIdentitySelected(ZI)Z
 
     .line 375
-    iget-object v3, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v3, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     const/4 v4, 0x0
 
@@ -624,7 +624,7 @@
     invoke-virtual {v3, p2, v4, v5, v6}, Lcom/android/internal/widget/LockPatternUtils;->saveLockPassword(Ljava/lang/String;Ljava/lang/String;II)V
 
     .line 377
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -633,7 +633,7 @@
     invoke-static {v3, v4, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 380
-    iget-boolean v3, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mIsPasswordChangeEnforced:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mIsPasswordChangeEnforced:Z
 
     if-eqz v3, :cond_0
 
@@ -649,7 +649,7 @@
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 385
-    invoke-virtual {p0, v2}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 389
     new-instance v0, Landroid/content/Intent;
@@ -660,7 +660,7 @@
 
     .line 390
     .local v0, "intent":Landroid/content/Intent;
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -680,31 +680,31 @@
 
     .line 394
     .local v1, "sender":Landroid/app/PendingIntent;
-    iget-object v3, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mAlarmManager:Landroid/app/AlarmManager;
+    iget-object v3, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mAlarmManager:Landroid/app/AlarmManager;
 
     invoke-virtual {v3, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
     .line 395
-    iget-object v3, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
 
     const-string v4, "content://com.sec.knox.provider/PasswordPolicy2"
 
     const-string v5, "setPwdChangeRequested"
 
-    invoke-static {v3, v4, v5, v7}, Lcom/android/settings/Utils;->setEnterprisePolicyInt(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-static {v3, v4, v5, v7}, Lcom/android/settings_ex/Utils;->setEnterprisePolicyInt(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 403
-    invoke-direct {p0, v8}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->sendIntentToKnoxKeyguard(I)V
+    invoke-direct {p0, v8}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->sendIntentToKnoxKeyguard(I)V
 
     .line 408
     .end local v0    # "intent":Landroid/content/Intent;
     .end local v1    # "sender":Landroid/app/PendingIntent;
     .end local v2    # "warningClearIntent":Landroid/content/Intent;
     :cond_0
-    invoke-virtual {p0, v8}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->setResult(I)V
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->setResult(I)V
 
     .line 409
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->finish()V
 
     .line 414
     return-void
@@ -739,7 +739,7 @@
 
     .line 479
     .local v0, "intent":Landroid/content/Intent;
-    iget-object v4, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
 
     const/4 v5, 0x0
 
@@ -755,14 +755,14 @@
 
     .line 482
     .local v1, "sender":Landroid/app/PendingIntent;
-    iget-object v4, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mAlarmManager:Landroid/app/AlarmManager;
+    iget-object v4, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mAlarmManager:Landroid/app/AlarmManager;
 
     const/4 v5, 0x2
 
     invoke-virtual {v4, v5, v2, v3, v1}, Landroid/app/AlarmManager;->set(IJLandroid/app/PendingIntent;)V
 
     .line 484
-    iget-object v4, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
 
     const-string v5, "content://com.sec.knox.provider/PasswordPolicy2"
 
@@ -770,7 +770,7 @@
 
     const/4 v7, -0x1
 
-    invoke-static {v4, v5, v6, v7}, Lcom/android/settings/Utils;->setEnterprisePolicyInt(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-static {v4, v5, v6, v7}, Lcom/android/settings_ex/Utils;->setEnterprisePolicyInt(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 490
     const-string v4, "ChooseLockEnterpriseIdentity"
@@ -875,7 +875,7 @@
 
     invoke-direct {v1, v2}, Landroid/os/UserHandle;-><init>(I)V
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
     .line 362
     return-void
@@ -887,12 +887,12 @@
 
     .prologue
     .line 497
-    iget-boolean v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->hasPwdPatternRestriction:Z
+    iget-boolean v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->hasPwdPatternRestriction:Z
 
     if-eqz v8, :cond_6
 
     .line 502
-    iget-object v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v8, p1}, Landroid/app/enterprise/PasswordPolicy;->hasForbiddenNumericSequence(Ljava/lang/String;)Z
 
@@ -909,7 +909,7 @@
 
     const/4 v10, 0x0
 
-    iget-object v11, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v11, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v11}, Landroid/app/enterprise/PasswordPolicy;->getMaximumNumericSequenceLength()I
 
@@ -923,7 +923,7 @@
 
     aput-object v11, v9, v10
 
-    invoke-virtual {p0, v8, v9}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v8, v9}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -933,7 +933,7 @@
 
     .line 508
     :cond_0
-    iget-object v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v8, p1}, Landroid/app/enterprise/PasswordPolicy;->hasForbiddenCharacterSequence(Ljava/lang/String;)Z
 
@@ -950,7 +950,7 @@
 
     const/4 v10, 0x0
 
-    iget-object v11, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v11, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v11}, Landroid/app/enterprise/PasswordPolicy;->getMaximumCharacterSequenceLength()I
 
@@ -964,7 +964,7 @@
 
     aput-object v11, v9, v10
 
-    invoke-virtual {p0, v8, v9}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v8, v9}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -972,9 +972,9 @@
 
     .line 514
     :cond_1
-    iget-object v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
-    iget-object v9, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mOldPassword:Ljava/lang/String;
+    iget-object v9, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mOldPassword:Ljava/lang/String;
 
     invoke-virtual {v8, p1, v9}, Landroid/app/enterprise/PasswordPolicy;->hasForbiddenStringDistance(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -991,7 +991,7 @@
 
     const/4 v10, 0x0
 
-    iget-object v11, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v11, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v11}, Landroid/app/enterprise/PasswordPolicy;->getMinimumCharacterChangeLength()I
 
@@ -1003,7 +1003,7 @@
 
     aput-object v11, v9, v10
 
-    invoke-virtual {p0, v8, v9}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v8, v9}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -1011,7 +1011,7 @@
 
     .line 520
     :cond_2
-    iget-object v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v8, p1}, Landroid/app/enterprise/PasswordPolicy;->hasForbiddenData(Ljava/lang/String;)Z
 
@@ -1022,7 +1022,7 @@
     .line 521
     const v8, 0x7f0e1189
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
@@ -1030,7 +1030,7 @@
 
     .line 524
     :cond_3
-    iget-object v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v8, p1}, Landroid/app/enterprise/PasswordPolicy;->hasMaxRepeatedCharacters(Ljava/lang/String;)Z
 
@@ -1047,7 +1047,7 @@
 
     const/4 v10, 0x0
 
-    iget-object v11, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v11, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v11}, Landroid/app/enterprise/PasswordPolicy;->getMaximumCharacterOccurences()I
 
@@ -1059,7 +1059,7 @@
 
     aput-object v11, v9, v10
 
-    invoke-virtual {p0, v8, v9}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v8, v9}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -1067,7 +1067,7 @@
 
     .line 530
     :cond_4
-    iget-object v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v8, p1}, Landroid/app/enterprise/PasswordPolicy;->isPasswordPatternMatched(Ljava/lang/String;)Z
 
@@ -1078,7 +1078,7 @@
     .line 531
     const v8, 0x7f0e118c
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
@@ -1099,7 +1099,7 @@
 
     move-result v8
 
-    iget v9, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
+    iget v9, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
 
     if-ge v8, v9, :cond_7
 
@@ -1112,7 +1112,7 @@
 
     const/4 v10, 0x0
 
-    iget v11, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
+    iget v11, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
 
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1120,7 +1120,7 @@
 
     aput-object v11, v9, v10
 
-    invoke-virtual {p0, v8, v9}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v8, v9}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -1132,7 +1132,7 @@
 
     move-result v8
 
-    iget v9, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMaxLength:I
+    iget v9, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMaxLength:I
 
     if-le v8, v9, :cond_8
 
@@ -1145,7 +1145,7 @@
 
     const/4 v10, 0x0
 
-    iget v11, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMaxLength:I
+    iget v11, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMaxLength:I
 
     add-int/lit8 v11, v11, 0x1
 
@@ -1155,7 +1155,7 @@
 
     aput-object v11, v9, v10
 
-    invoke-virtual {p0, v8, v9}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v8, v9}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -1219,7 +1219,7 @@
     :cond_9
     const v8, 0x7f0e02b3
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
@@ -1296,18 +1296,18 @@
     .end local v0    # "c":C
     .end local v1    # "i":I
     :cond_e
-    iget v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLetters:I
+    iget v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLetters:I
 
     if-ge v2, v8, :cond_f
 
     .line 579
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
     const v9, 0x7f130002
 
-    iget v10, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLetters:I
+    iget v10, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLetters:I
 
     invoke-virtual {v8, v9, v10}, Landroid/content/res/Resources;->getQuantityString(II)Ljava/lang/String;
 
@@ -1319,7 +1319,7 @@
 
     const/4 v10, 0x0
 
-    iget v11, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLetters:I
+    iget v11, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLetters:I
 
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1335,18 +1335,18 @@
 
     .line 583
     :cond_f
-    iget v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinNumeric:I
+    iget v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinNumeric:I
 
     if-ge v5, v8, :cond_10
 
     .line 584
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
     const v9, 0x7f130005
 
-    iget v10, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinNumeric:I
+    iget v10, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinNumeric:I
 
     invoke-virtual {v8, v9, v10}, Landroid/content/res/Resources;->getQuantityString(II)Ljava/lang/String;
 
@@ -1358,7 +1358,7 @@
 
     const/4 v10, 0x0
 
-    iget v11, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinNumeric:I
+    iget v11, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinNumeric:I
 
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1374,18 +1374,18 @@
 
     .line 588
     :cond_10
-    iget v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLowerCase:I
+    iget v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLowerCase:I
 
     if-ge v3, v8, :cond_11
 
     .line 589
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
     const v9, 0x7f130003
 
-    iget v10, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLowerCase:I
+    iget v10, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLowerCase:I
 
     invoke-virtual {v8, v9, v10}, Landroid/content/res/Resources;->getQuantityString(II)Ljava/lang/String;
 
@@ -1397,7 +1397,7 @@
 
     const/4 v10, 0x0
 
-    iget v11, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLowerCase:I
+    iget v11, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLowerCase:I
 
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1413,18 +1413,18 @@
 
     .line 593
     :cond_11
-    iget v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinUpperCase:I
+    iget v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinUpperCase:I
 
     if-ge v7, v8, :cond_12
 
     .line 594
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
     const v9, 0x7f130004
 
-    iget v10, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinUpperCase:I
+    iget v10, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinUpperCase:I
 
     invoke-virtual {v8, v9, v10}, Landroid/content/res/Resources;->getQuantityString(II)Ljava/lang/String;
 
@@ -1436,7 +1436,7 @@
 
     const/4 v10, 0x0
 
-    iget v11, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinUpperCase:I
+    iget v11, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinUpperCase:I
 
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1452,18 +1452,18 @@
 
     .line 598
     :cond_12
-    iget v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinSymbols:I
+    iget v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinSymbols:I
 
     if-ge v6, v8, :cond_13
 
     .line 599
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
     const v9, 0x7f130006
 
-    iget v10, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinSymbols:I
+    iget v10, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinSymbols:I
 
     invoke-virtual {v8, v9, v10}, Landroid/content/res/Resources;->getQuantityString(II)Ljava/lang/String;
 
@@ -1475,7 +1475,7 @@
 
     const/4 v10, 0x0
 
-    iget v11, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinSymbols:I
+    iget v11, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinSymbols:I
 
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1491,18 +1491,18 @@
 
     .line 603
     :cond_13
-    iget v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinNonLetter:I
+    iget v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinNonLetter:I
 
     if-ge v4, v8, :cond_14
 
     .line 604
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
     const v9, 0x7f130007
 
-    iget v10, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinNonLetter:I
+    iget v10, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinNonLetter:I
 
     invoke-virtual {v8, v9, v10}, Landroid/content/res/Resources;->getQuantityString(II)Ljava/lang/String;
 
@@ -1514,7 +1514,7 @@
 
     const/4 v10, 0x0
 
-    iget v11, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinNonLetter:I
+    iget v11, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinNonLetter:I
 
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1530,7 +1530,7 @@
 
     .line 617
     :cond_14
-    iget-object v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v8}, Landroid/app/enterprise/PasswordPolicy;->getMaximumNumericSequenceLength()I
 
@@ -1538,7 +1538,7 @@
 
     if-nez v8, :cond_15
 
-    iget-object v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     const/4 v9, 0x1
 
@@ -1548,7 +1548,7 @@
 
     if-nez v8, :cond_15
 
-    iget-object v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v8}, Landroid/app/enterprise/PasswordPolicy;->getMaximumCharacterOccurences()I
 
@@ -1556,7 +1556,7 @@
 
     if-nez v8, :cond_15
 
-    iget-object v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v8}, Landroid/app/enterprise/PasswordPolicy;->getMaximumCharacterSequenceLength()I
 
@@ -1564,7 +1564,7 @@
 
     if-nez v8, :cond_15
 
-    iget-object v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v8}, Landroid/app/enterprise/PasswordPolicy;->getMinimumCharacterChangeLength()I
 
@@ -1574,7 +1574,7 @@
 
     .line 622
     :cond_15
-    iget-object v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v8, p1}, Landroid/app/enterprise/PasswordPolicy;->hasForbiddenNumericSequence(Ljava/lang/String;)Z
 
@@ -1591,7 +1591,7 @@
 
     const/4 v10, 0x0
 
-    iget-object v11, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v11, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v11}, Landroid/app/enterprise/PasswordPolicy;->getMaximumNumericSequenceLength()I
 
@@ -1603,7 +1603,7 @@
 
     aput-object v11, v9, v10
 
-    invoke-virtual {p0, v8, v9}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v8, v9}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -1611,7 +1611,7 @@
 
     .line 628
     :cond_16
-    iget-object v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v8, p1}, Landroid/app/enterprise/PasswordPolicy;->hasForbiddenCharacterSequence(Ljava/lang/String;)Z
 
@@ -1628,7 +1628,7 @@
 
     const/4 v10, 0x0
 
-    iget-object v11, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v11, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v11}, Landroid/app/enterprise/PasswordPolicy;->getMaximumCharacterSequenceLength()I
 
@@ -1640,7 +1640,7 @@
 
     aput-object v11, v9, v10
 
-    invoke-virtual {p0, v8, v9}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v8, v9}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -1648,9 +1648,9 @@
 
     .line 634
     :cond_17
-    iget-object v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
-    iget-object v9, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mOldPassword:Ljava/lang/String;
+    iget-object v9, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mOldPassword:Ljava/lang/String;
 
     invoke-virtual {v8, p1, v9}, Landroid/app/enterprise/PasswordPolicy;->hasForbiddenStringDistance(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -1667,7 +1667,7 @@
 
     const/4 v10, 0x0
 
-    iget-object v11, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v11, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v11}, Landroid/app/enterprise/PasswordPolicy;->getMinimumCharacterChangeLength()I
 
@@ -1679,7 +1679,7 @@
 
     aput-object v11, v9, v10
 
-    invoke-virtual {p0, v8, v9}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v8, v9}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -1687,7 +1687,7 @@
 
     .line 640
     :cond_18
-    iget-object v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v8, p1}, Landroid/app/enterprise/PasswordPolicy;->hasForbiddenData(Ljava/lang/String;)Z
 
@@ -1698,7 +1698,7 @@
     .line 641
     const v8, 0x7f0e1189
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
@@ -1706,7 +1706,7 @@
 
     .line 644
     :cond_19
-    iget-object v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v8, p1}, Landroid/app/enterprise/PasswordPolicy;->hasMaxRepeatedCharacters(Ljava/lang/String;)Z
 
@@ -1723,7 +1723,7 @@
 
     const/4 v10, 0x0
 
-    iget-object v11, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v11, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v11}, Landroid/app/enterprise/PasswordPolicy;->getMaximumCharacterOccurences()I
 
@@ -1735,7 +1735,7 @@
 
     aput-object v11, v9, v10
 
-    invoke-virtual {p0, v8, v9}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v8, v9}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -1743,7 +1743,7 @@
 
     .line 650
     :cond_1a
-    iget-object v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v8, p1}, Landroid/app/enterprise/PasswordPolicy;->isPasswordPatternMatched(Ljava/lang/String;)Z
 
@@ -1754,7 +1754,7 @@
     .line 651
     const v8, 0x7f0e118c
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
@@ -1786,28 +1786,28 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 91
-    iput-object p0, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
+    iput-object p0, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
 
     .line 92
     new-instance v6, Lcom/android/internal/widget/LockPatternUtils;
 
-    iget-object v7, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
+    iget-object v7, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
 
     invoke-direct {v6, v7}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    iput-object v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 93
-    iget-object v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
 
     invoke-static {v6}, Landroid/app/enterprise/sso/GenericSSO;->getInstance(Landroid/content/Context;)Landroid/app/enterprise/sso/GenericSSO;
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mGenericSSO:Landroid/app/enterprise/sso/GenericSSO;
+    iput-object v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mGenericSSO:Landroid/app/enterprise/sso/GenericSSO;
 
     .line 94
-    iget-object v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
 
     const-string v7, "alarm"
 
@@ -1817,10 +1817,10 @@
 
     check-cast v6, Landroid/app/AlarmManager;
 
-    iput-object v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mAlarmManager:Landroid/app/AlarmManager;
+    iput-object v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mAlarmManager:Landroid/app/AlarmManager;
 
     .line 97
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockEnterpriseIdentity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->getIntent()Landroid/content/Intent;
 
     move-result-object v4
 
@@ -1844,7 +1844,7 @@
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mOldEnterprisePassword:Ljava/lang/String;
+    iput-object v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mOldEnterprisePassword:Ljava/lang/String;
 
     .line 102
     if-eqz v1, :cond_0
@@ -1858,19 +1858,19 @@
     if-eqz v6, :cond_0
 
     .line 104
-    iput-boolean v9, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mIsPasswordChangeEnforced:Z
+    iput-boolean v9, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mIsPasswordChangeEnforced:Z
 
     .line 107
     :cond_0
     const-string v6, "lockscreen.password_type"
 
-    iget v7, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mRequestedQuality:I
+    iget v7, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mRequestedQuality:I
 
     invoke-virtual {v4, v6, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v6
 
-    iget-object v7, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v7, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v7, v5}, Lcom/android/internal/widget/LockPatternUtils;->getRequestedPasswordQuality(I)I
 
@@ -1880,18 +1880,18 @@
 
     move-result v6
 
-    iput v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mRequestedQuality:I
+    iput v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mRequestedQuality:I
 
     .line 110
     const-string v6, "lockscreen.password_min"
 
-    iget v7, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
+    iget v7, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
 
     invoke-virtual {v4, v6, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v6
 
-    iget-object v7, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v7, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v7, v5}, Lcom/android/internal/widget/LockPatternUtils;->getRequestedMinimumPasswordLength(I)I
 
@@ -1901,29 +1901,29 @@
 
     move-result v6
 
-    iput v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
+    iput v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
 
     .line 113
     const-string v6, "lockscreen.password_max"
 
-    iget v7, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMaxLength:I
+    iget v7, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMaxLength:I
 
     invoke-virtual {v4, v6, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v6
 
-    iput v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMaxLength:I
+    iput v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMaxLength:I
 
     .line 115
     const-string v6, "lockscreen.password_min_letters"
 
-    iget v7, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLetters:I
+    iget v7, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLetters:I
 
     invoke-virtual {v4, v6, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v6
 
-    iget-object v7, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v7, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v7, v5}, Lcom/android/internal/widget/LockPatternUtils;->getRequestedPasswordMinimumLetters(I)I
 
@@ -1933,18 +1933,18 @@
 
     move-result v6
 
-    iput v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLetters:I
+    iput v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLetters:I
 
     .line 118
     const-string v6, "lockscreen.password_min_uppercase"
 
-    iget v7, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinUpperCase:I
+    iget v7, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinUpperCase:I
 
     invoke-virtual {v4, v6, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v6
 
-    iget-object v7, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v7, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v7, v5}, Lcom/android/internal/widget/LockPatternUtils;->getRequestedPasswordMinimumUpperCase(I)I
 
@@ -1954,18 +1954,18 @@
 
     move-result v6
 
-    iput v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinUpperCase:I
+    iput v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinUpperCase:I
 
     .line 121
     const-string v6, "lockscreen.password_min_lowercase"
 
-    iget v7, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLowerCase:I
+    iget v7, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLowerCase:I
 
     invoke-virtual {v4, v6, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v6
 
-    iget-object v7, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v7, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v7, v5}, Lcom/android/internal/widget/LockPatternUtils;->getRequestedPasswordMinimumLowerCase(I)I
 
@@ -1975,18 +1975,18 @@
 
     move-result v6
 
-    iput v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLowerCase:I
+    iput v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLowerCase:I
 
     .line 124
     const-string v6, "lockscreen.password_min_numeric"
 
-    iget v7, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinNumeric:I
+    iget v7, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinNumeric:I
 
     invoke-virtual {v4, v6, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v6
 
-    iget-object v7, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v7, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v7, v5}, Lcom/android/internal/widget/LockPatternUtils;->getRequestedPasswordMinimumNumeric(I)I
 
@@ -1996,18 +1996,18 @@
 
     move-result v6
 
-    iput v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinNumeric:I
+    iput v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinNumeric:I
 
     .line 127
     const-string v6, "lockscreen.password_min_symbols"
 
-    iget v7, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinSymbols:I
+    iget v7, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinSymbols:I
 
     invoke-virtual {v4, v6, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v6
 
-    iget-object v7, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v7, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v7, v5}, Lcom/android/internal/widget/LockPatternUtils;->getRequestedPasswordMinimumSymbols(I)I
 
@@ -2017,18 +2017,18 @@
 
     move-result v6
 
-    iput v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinSymbols:I
+    iput v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinSymbols:I
 
     .line 130
     const-string v6, "lockscreen.password_min_nonletter"
 
-    iget v7, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinNonLetter:I
+    iget v7, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinNonLetter:I
 
     invoke-virtual {v4, v6, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v6
 
-    iget-object v7, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v7, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v7, v5}, Lcom/android/internal/widget/LockPatternUtils;->getRequestedPasswordMinimumNonLetter(I)I
 
@@ -2038,10 +2038,10 @@
 
     move-result v6
 
-    iput v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinNonLetter:I
+    iput v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinNonLetter:I
 
     .line 135
-    iget-object v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v6, v5}, Lcom/android/internal/widget/LockPatternUtils;->getRequestedMinimumPasswordLength(I)I
 
@@ -2050,7 +2050,7 @@
     if-nez v6, :cond_1
 
     .line 137
-    iget-object v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
 
     const-string v7, "device_policy"
 
@@ -2069,14 +2069,14 @@
     if-eqz v6, :cond_1
 
     .line 141
-    iget v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mRequestedQuality:I
+    iget v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mRequestedQuality:I
 
     const/high16 v7, 0x20000
 
     if-ne v6, v7, :cond_7
 
     .line 142
-    iput v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
+    iput v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
 
     .line 151
     .end local v3    # "dpm":Landroid/app/admin/DevicePolicyManager;
@@ -2088,27 +2088,27 @@
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mOldPassword:Ljava/lang/String;
+    iput-object v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mOldPassword:Ljava/lang/String;
 
     .line 152
     const/4 v0, 0x4
 
     .line 154
     .local v0, "MIN_PWD_LENGTH":I
-    iget v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
+    iget v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
 
     if-lt v6, v8, :cond_8
 
-    iget v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
+    iget v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
 
-    iget v7, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMaxLength:I
+    iget v7, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMaxLength:I
 
     if-ge v6, v7, :cond_8
 
     .line 163
     :cond_2
     :goto_1
-    iget-object v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mContext:Landroid/content/Context;
 
     const-string v7, "enterprise_policy"
 
@@ -2118,30 +2118,30 @@
 
     check-cast v6, Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    iput-object v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
+    iput-object v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     .line 166
-    iget-object v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-eqz v6, :cond_3
 
     .line 167
-    iget-object v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     invoke-virtual {v6}, Landroid/app/enterprise/EnterpriseDeviceManager;->getPasswordPolicy()Landroid/app/enterprise/PasswordPolicy;
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iput-object v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     .line 170
     :cond_3
-    iget-object v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     if-eqz v6, :cond_4
 
     .line 171
-    iget-object v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPwdPolicy:Landroid/app/enterprise/PasswordPolicy;
 
     invoke-virtual {v6, v9}, Landroid/app/enterprise/PasswordPolicy;->getRequiredPwdPatternRestrictions(Z)Ljava/lang/String;
 
@@ -2150,25 +2150,25 @@
     if-eqz v6, :cond_4
 
     .line 172
-    iput-boolean v9, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->hasPwdPatternRestriction:Z
+    iput-boolean v9, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->hasPwdPatternRestriction:Z
 
     .line 189
     :cond_4
-    iget v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
+    iget v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
 
     if-ge v6, v8, :cond_5
 
     .line 190
-    iput v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
+    iput v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
 
     .line 193
     :cond_5
-    iget v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMaxLength:I
+    iget v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMaxLength:I
 
     if-le v6, v10, :cond_6
 
     .line 194
-    iput v10, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMaxLength:I
+    iput v10, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMaxLength:I
 
     .line 196
     :cond_6
@@ -2176,9 +2176,9 @@
 
     .line 197
     .local v2, "arg":Ljava/lang/String;
-    new-instance v6, Lcom/android/settings/ChooseLockEnterpriseIdentity$PerformUserAuthTask;
+    new-instance v6, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity$PerformUserAuthTask;
 
-    invoke-direct {v6, p0, v11}, Lcom/android/settings/ChooseLockEnterpriseIdentity$PerformUserAuthTask;-><init>(Lcom/android/settings/ChooseLockEnterpriseIdentity;Lcom/android/settings/ChooseLockEnterpriseIdentity$1;)V
+    invoke-direct {v6, p0, v11}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity$PerformUserAuthTask;-><init>(Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;Lcom/android/settings_ex/ChooseLockEnterpriseIdentity$1;)V
 
     new-array v7, v9, [Ljava/lang/String;
 
@@ -2186,7 +2186,7 @@
 
     aput-object v2, v7, v8
 
-    invoke-virtual {v6, v7}, Lcom/android/settings/ChooseLockEnterpriseIdentity$PerformUserAuthTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v6, v7}, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity$PerformUserAuthTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     .line 199
     return-void
@@ -2198,7 +2198,7 @@
     :cond_7
     const/4 v6, 0x6
 
-    iput v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
+    iput v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
 
     goto :goto_0
 
@@ -2206,27 +2206,27 @@
     .end local v3    # "dpm":Landroid/app/admin/DevicePolicyManager;
     .restart local v0    # "MIN_PWD_LENGTH":I
     :cond_8
-    iget v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
+    iget v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
 
     if-ge v6, v8, :cond_9
 
     .line 158
-    iput v8, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
+    iput v8, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
 
     goto :goto_1
 
     .line 159
     :cond_9
-    iget v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
+    iget v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
 
-    iget v7, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMaxLength:I
+    iget v7, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMaxLength:I
 
     if-le v6, v7, :cond_2
 
     .line 160
-    iget v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMaxLength:I
+    iget v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMaxLength:I
 
-    iput v6, p0, Lcom/android/settings/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
+    iput v6, p0, Lcom/android/settings_ex/ChooseLockEnterpriseIdentity;->mPasswordMinLength:I
 
     goto :goto_1
 .end method

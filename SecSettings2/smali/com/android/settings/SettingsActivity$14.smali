@@ -1,4 +1,4 @@
-.class Lcom/android/settings/SettingsActivity$14;
+.class Lcom/android/settings_ex/SettingsActivity$14;
 .super Ljava/lang/Object;
 .source "SettingsActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/SettingsActivity;->onResume()V
+    value = Lcom/android/settings_ex/SettingsActivity;->onResume()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/SettingsActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/SettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/SettingsActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/SettingsActivity;)V
     .locals 0
 
     .prologue
     .line 1804
-    iput-object p1, p0, Lcom/android/settings/SettingsActivity$14;->this$0:Lcom/android/settings/SettingsActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/SettingsActivity$14;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,12 +43,12 @@
 
     .prologue
     .line 1807
-    iget-object v0, p0, Lcom/android/settings/SettingsActivity$14;->this$0:Lcom/android/settings/SettingsActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/SettingsActivity$14;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
     const/4 v1, 0x1
 
-    # invokes: Lcom/android/settings/SettingsActivity;->invalidateCategories(Z)V
-    invoke-static {v0, v1}, Lcom/android/settings/SettingsActivity;->access$1400(Lcom/android/settings/SettingsActivity;Z)V
+    # invokes: Lcom/android/settings_ex/SettingsActivity;->invalidateCategories(Z)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/SettingsActivity;->access$1400(Lcom/android/settings_ex/SettingsActivity;Z)V
 
     .line 1808
     return-void

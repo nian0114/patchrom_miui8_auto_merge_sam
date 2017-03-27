@@ -1,11 +1,11 @@
-.class Lcom/android/settings/fuelgauge/PowerUsageSummary$1;
+.class Lcom/android/settings_ex/fuelgauge/PowerUsageSummary$1;
 .super Landroid/database/ContentObserver;
 .source "PowerUsageSummary.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fuelgauge/PowerUsageSummary;
+    value = Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fuelgauge/PowerUsageSummary;
+.field final synthetic this$0:Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fuelgauge/PowerUsageSummary;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 131
-    iput-object p1, p0, Lcom/android/settings/fuelgauge/PowerUsageSummary$1;->this$0:Lcom/android/settings/fuelgauge/PowerUsageSummary;
+    iput-object p1, p0, Lcom/android/settings_ex/fuelgauge/PowerUsageSummary$1;->this$0:Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -40,16 +40,16 @@
 
     .prologue
     .line 134
-    iget-object v0, p0, Lcom/android/settings/fuelgauge/PowerUsageSummary$1;->this$0:Lcom/android/settings/fuelgauge/PowerUsageSummary;
+    iget-object v0, p0, Lcom/android/settings_ex/fuelgauge/PowerUsageSummary$1;->this$0:Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;
 
-    # getter for: Lcom/android/settings/fuelgauge/PowerUsageSummary;->mPowerSavingModePref:Landroid/preference/PreferenceScreen;
-    invoke-static {v0}, Lcom/android/settings/fuelgauge/PowerUsageSummary;->access$000(Lcom/android/settings/fuelgauge/PowerUsageSummary;)Landroid/preference/PreferenceScreen;
+    # getter for: Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;->mPowerSavingModePref:Landroid/preference/PreferenceScreen;
+    invoke-static {v0}, Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;->access$000(Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;)Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 
-    iget-object v0, p0, Lcom/android/settings/fuelgauge/PowerUsageSummary$1;->this$0:Lcom/android/settings/fuelgauge/PowerUsageSummary;
+    iget-object v0, p0, Lcom/android/settings_ex/fuelgauge/PowerUsageSummary$1;->this$0:Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;
 
-    invoke-virtual {v0}, Lcom/android/settings/fuelgauge/PowerUsageSummary;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/fuelgauge/PowerUsageSummary;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 

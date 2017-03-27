@@ -1,4 +1,4 @@
-.class interface abstract Lcom/android/settings/guide/GuiderLifecycleListener;
+.class interface abstract Lcom/android/settings_ex/guide/GuiderLifecycleListener;
 .super Ljava/lang/Object;
 .source "GuiderLifecycleListener.java"
 

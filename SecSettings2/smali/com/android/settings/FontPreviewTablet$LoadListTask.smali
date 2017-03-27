@@ -1,11 +1,11 @@
-.class Lcom/android/settings/FontPreviewTablet$LoadListTask;
+.class Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;
 .super Landroid/os/AsyncTask;
 .source "FontPreviewTablet.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/FontPreviewTablet;
+    value = Lcom/android/settings_ex/FontPreviewTablet;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,35 +28,35 @@
 # instance fields
 .field private mProgressDialog:Landroid/app/ProgressDialog;
 
-.field final synthetic this$0:Lcom/android/settings/FontPreviewTablet;
+.field final synthetic this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/settings/FontPreviewTablet;)V
+.method private constructor <init>(Lcom/android/settings_ex/FontPreviewTablet;)V
     .locals 1
 
     .prologue
     .line 1337
-    iput-object p1, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iput-object p1, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
     .line 1338
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->mProgressDialog:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->mProgressDialog:Landroid/app/ProgressDialog;
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/FontPreviewTablet;Lcom/android/settings/FontPreviewTablet$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/FontPreviewTablet;Lcom/android/settings_ex/FontPreviewTablet$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/FontPreviewTablet;
-    .param p2, "x1"    # Lcom/android/settings/FontPreviewTablet$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/FontPreviewTablet;
+    .param p2, "x1"    # Lcom/android/settings_ex/FontPreviewTablet$1;
 
     .prologue
     .line 1337
-    invoke-direct {p0, p1}, Lcom/android/settings/FontPreviewTablet$LoadListTask;-><init>(Lcom/android/settings/FontPreviewTablet;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;-><init>(Lcom/android/settings_ex/FontPreviewTablet;)V
 
     return-void
 .end method
@@ -72,7 +72,7 @@
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "x0":[Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/FontPreviewTablet$LoadListTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
 
     move-result-object v0
 
@@ -100,23 +100,23 @@
     .line 1365
     .local v5, "loop":I
     :try_start_0
-    invoke-static {}, Lcom/android/settings/flipfont/FontListAdapter;->destroyInstance()V
+    invoke-static {}, Lcom/android/settings_ex/flipfont/FontListAdapter;->destroyInstance()V
 
     .line 1366
-    iget-object v6, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
     const/4 v7, 0x0
 
-    # setter for: Lcom/android/settings/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
-    invoke-static {v6, v7}, Lcom/android/settings/FontPreviewTablet;->access$702(Lcom/android/settings/FontPreviewTablet;Lcom/android/settings/flipfont/FontListAdapter;)Lcom/android/settings/flipfont/FontListAdapter;
+    # setter for: Lcom/android/settings_ex/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
+    invoke-static {v6, v7}, Lcom/android/settings_ex/FontPreviewTablet;->access$702(Lcom/android/settings_ex/FontPreviewTablet;Lcom/android/settings_ex/flipfont/FontListAdapter;)Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     .line 1368
-    iget-object v6, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    iget-object v7, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v7, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    # getter for: Lcom/android/settings/FontPreviewTablet;->mFontStyleListView:Landroid/widget/ListView;
-    invoke-static {v7}, Lcom/android/settings/FontPreviewTablet;->access$800(Lcom/android/settings/FontPreviewTablet;)Landroid/widget/ListView;
+    # getter for: Lcom/android/settings_ex/FontPreviewTablet;->mFontStyleListView:Landroid/widget/ListView;
+    invoke-static {v7}, Lcom/android/settings_ex/FontPreviewTablet;->access$800(Lcom/android/settings_ex/FontPreviewTablet;)Landroid/widget/ListView;
 
     move-result-object v7
 
@@ -124,63 +124,63 @@
 
     move-result-object v7
 
-    invoke-static {v7}, Lcom/android/settings/flipfont/FontListAdapter;->getInstanceFontListAdapter(Landroid/content/Context;)Lcom/android/settings/flipfont/FontListAdapter;
+    invoke-static {v7}, Lcom/android/settings_ex/flipfont/FontListAdapter;->getInstanceFontListAdapter(Landroid/content/Context;)Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     move-result-object v7
 
-    # setter for: Lcom/android/settings/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
-    invoke-static {v6, v7}, Lcom/android/settings/FontPreviewTablet;->access$702(Lcom/android/settings/FontPreviewTablet;Lcom/android/settings/flipfont/FontListAdapter;)Lcom/android/settings/flipfont/FontListAdapter;
+    # setter for: Lcom/android/settings_ex/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
+    invoke-static {v6, v7}, Lcom/android/settings_ex/FontPreviewTablet;->access$702(Lcom/android/settings_ex/FontPreviewTablet;Lcom/android/settings_ex/flipfont/FontListAdapter;)Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     .line 1369
-    iget-object v6, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    # getter for: Lcom/android/settings/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
-    invoke-static {v6}, Lcom/android/settings/FontPreviewTablet;->access$700(Lcom/android/settings/FontPreviewTablet;)Lcom/android/settings/flipfont/FontListAdapter;
+    # getter for: Lcom/android/settings_ex/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
+    invoke-static {v6}, Lcom/android/settings_ex/FontPreviewTablet;->access$700(Lcom/android/settings_ex/FontPreviewTablet;)Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lcom/android/settings/flipfont/FontListAdapter;->setInitDownloadFontAndThemeFont()V
+    invoke-virtual {v6}, Lcom/android/settings_ex/flipfont/FontListAdapter;->setInitDownloadFontAndThemeFont()V
 
     .line 1371
-    iget-object v6, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    # getter for: Lcom/android/settings/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
-    invoke-static {v6}, Lcom/android/settings/FontPreviewTablet;->access$700(Lcom/android/settings/FontPreviewTablet;)Lcom/android/settings/flipfont/FontListAdapter;
+    # getter for: Lcom/android/settings_ex/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
+    invoke-static {v6}, Lcom/android/settings_ex/FontPreviewTablet;->access$700(Lcom/android/settings_ex/FontPreviewTablet;)Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     move-result-object v6
 
     const/4 v7, 0x1
 
-    invoke-virtual {v6, v7}, Lcom/android/settings/flipfont/FontListAdapter;->setmIsFontPreviewActivity(Z)V
+    invoke-virtual {v6, v7}, Lcom/android/settings_ex/flipfont/FontListAdapter;->setmIsFontPreviewActivity(Z)V
 
     .line 1372
-    iget-object v6, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    # getter for: Lcom/android/settings/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
-    invoke-static {v6}, Lcom/android/settings/FontPreviewTablet;->access$700(Lcom/android/settings/FontPreviewTablet;)Lcom/android/settings/flipfont/FontListAdapter;
+    # getter for: Lcom/android/settings_ex/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
+    invoke-static {v6}, Lcom/android/settings_ex/FontPreviewTablet;->access$700(Lcom/android/settings_ex/FontPreviewTablet;)Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lcom/android/settings/flipfont/FontListAdapter;->loadTypefaces()V
+    invoke-virtual {v6}, Lcom/android/settings_ex/flipfont/FontListAdapter;->loadTypefaces()V
 
     .line 1375
-    iget-object v6, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    # invokes: Lcom/android/settings/FontPreviewTablet;->getFontNameFromSystem()Ljava/lang/String;
-    invoke-static {v6}, Lcom/android/settings/FontPreviewTablet;->access$900(Lcom/android/settings/FontPreviewTablet;)Ljava/lang/String;
+    # invokes: Lcom/android/settings_ex/FontPreviewTablet;->getFontNameFromSystem()Ljava/lang/String;
+    invoke-static {v6}, Lcom/android/settings_ex/FontPreviewTablet;->access$900(Lcom/android/settings_ex/FontPreviewTablet;)Ljava/lang/String;
 
     move-result-object v3
 
     .line 1376
     .local v3, "fontName":Ljava/lang/String;
-    iget-object v6, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    # getter for: Lcom/android/settings/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
-    invoke-static {v6}, Lcom/android/settings/FontPreviewTablet;->access$700(Lcom/android/settings/FontPreviewTablet;)Lcom/android/settings/flipfont/FontListAdapter;
+    # getter for: Lcom/android/settings_ex/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
+    invoke-static {v6}, Lcom/android/settings_ex/FontPreviewTablet;->access$700(Lcom/android/settings_ex/FontPreviewTablet;)Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     move-result-object v6
 
-    iget-object v6, v6, Lcom/android/settings/flipfont/FontListAdapter;->mFontNames:Ljava/util/Vector;
+    iget-object v6, v6, Lcom/android/settings_ex/flipfont/FontListAdapter;->mFontNames:Ljava/util/Vector;
 
     invoke-virtual {v6, v3}, Ljava/util/Vector;->indexOf(Ljava/lang/Object;)I
 
@@ -188,10 +188,10 @@
 
     .line 1377
     .local v2, "fontIndexPref":I
-    iget-object v6, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    # getter for: Lcom/android/settings/FontPreviewTablet;->mContext:Landroid/content/Context;
-    invoke-static {v6}, Lcom/android/settings/FontPreviewTablet;->access$500(Lcom/android/settings/FontPreviewTablet;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/FontPreviewTablet;->mContext:Landroid/content/Context;
+    invoke-static {v6}, Lcom/android/settings_ex/FontPreviewTablet;->access$500(Lcom/android/settings_ex/FontPreviewTablet;)Landroid/content/Context;
 
     move-result-object v6
 
@@ -255,23 +255,23 @@
 
     .line 1386
     :try_start_1
-    invoke-static {}, Lcom/android/settings/flipfont/FontListAdapter;->destroyInstance()V
+    invoke-static {}, Lcom/android/settings_ex/flipfont/FontListAdapter;->destroyInstance()V
 
     .line 1387
-    iget-object v6, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
     const/4 v7, 0x0
 
-    # setter for: Lcom/android/settings/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
-    invoke-static {v6, v7}, Lcom/android/settings/FontPreviewTablet;->access$702(Lcom/android/settings/FontPreviewTablet;Lcom/android/settings/flipfont/FontListAdapter;)Lcom/android/settings/flipfont/FontListAdapter;
+    # setter for: Lcom/android/settings_ex/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
+    invoke-static {v6, v7}, Lcom/android/settings_ex/FontPreviewTablet;->access$702(Lcom/android/settings_ex/FontPreviewTablet;Lcom/android/settings_ex/flipfont/FontListAdapter;)Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     .line 1389
-    iget-object v6, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    iget-object v7, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v7, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    # getter for: Lcom/android/settings/FontPreviewTablet;->mFontStyleListView:Landroid/widget/ListView;
-    invoke-static {v7}, Lcom/android/settings/FontPreviewTablet;->access$800(Lcom/android/settings/FontPreviewTablet;)Landroid/widget/ListView;
+    # getter for: Lcom/android/settings_ex/FontPreviewTablet;->mFontStyleListView:Landroid/widget/ListView;
+    invoke-static {v7}, Lcom/android/settings_ex/FontPreviewTablet;->access$800(Lcom/android/settings_ex/FontPreviewTablet;)Landroid/widget/ListView;
 
     move-result-object v7
 
@@ -279,44 +279,44 @@
 
     move-result-object v7
 
-    invoke-static {v7}, Lcom/android/settings/flipfont/FontListAdapter;->getInstanceFontListAdapter(Landroid/content/Context;)Lcom/android/settings/flipfont/FontListAdapter;
+    invoke-static {v7}, Lcom/android/settings_ex/flipfont/FontListAdapter;->getInstanceFontListAdapter(Landroid/content/Context;)Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     move-result-object v7
 
-    # setter for: Lcom/android/settings/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
-    invoke-static {v6, v7}, Lcom/android/settings/FontPreviewTablet;->access$702(Lcom/android/settings/FontPreviewTablet;Lcom/android/settings/flipfont/FontListAdapter;)Lcom/android/settings/flipfont/FontListAdapter;
+    # setter for: Lcom/android/settings_ex/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
+    invoke-static {v6, v7}, Lcom/android/settings_ex/FontPreviewTablet;->access$702(Lcom/android/settings_ex/FontPreviewTablet;Lcom/android/settings_ex/flipfont/FontListAdapter;)Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     .line 1390
-    iget-object v6, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    # getter for: Lcom/android/settings/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
-    invoke-static {v6}, Lcom/android/settings/FontPreviewTablet;->access$700(Lcom/android/settings/FontPreviewTablet;)Lcom/android/settings/flipfont/FontListAdapter;
+    # getter for: Lcom/android/settings_ex/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
+    invoke-static {v6}, Lcom/android/settings_ex/FontPreviewTablet;->access$700(Lcom/android/settings_ex/FontPreviewTablet;)Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lcom/android/settings/flipfont/FontListAdapter;->setInitDownloadFontAndThemeFont()V
+    invoke-virtual {v6}, Lcom/android/settings_ex/flipfont/FontListAdapter;->setInitDownloadFontAndThemeFont()V
 
     .line 1392
-    iget-object v6, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    # getter for: Lcom/android/settings/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
-    invoke-static {v6}, Lcom/android/settings/FontPreviewTablet;->access$700(Lcom/android/settings/FontPreviewTablet;)Lcom/android/settings/flipfont/FontListAdapter;
+    # getter for: Lcom/android/settings_ex/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
+    invoke-static {v6}, Lcom/android/settings_ex/FontPreviewTablet;->access$700(Lcom/android/settings_ex/FontPreviewTablet;)Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     move-result-object v6
 
     const/4 v7, 0x1
 
-    invoke-virtual {v6, v7}, Lcom/android/settings/flipfont/FontListAdapter;->setmIsFontPreviewActivity(Z)V
+    invoke-virtual {v6, v7}, Lcom/android/settings_ex/flipfont/FontListAdapter;->setmIsFontPreviewActivity(Z)V
 
     .line 1393
-    iget-object v6, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    # getter for: Lcom/android/settings/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
-    invoke-static {v6}, Lcom/android/settings/FontPreviewTablet;->access$700(Lcom/android/settings/FontPreviewTablet;)Lcom/android/settings/flipfont/FontListAdapter;
+    # getter for: Lcom/android/settings_ex/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
+    invoke-static {v6}, Lcom/android/settings_ex/FontPreviewTablet;->access$700(Lcom/android/settings_ex/FontPreviewTablet;)Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lcom/android/settings/flipfont/FontListAdapter;->loadTypefaces()V
+    invoke-virtual {v6}, Lcom/android/settings_ex/flipfont/FontListAdapter;->loadTypefaces()V
 
     .line 1394
     const-string v6, "FontPreview loading dialog"
@@ -342,23 +342,23 @@
     invoke-static {v6, v7}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1397
-    iget-object v6, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    # invokes: Lcom/android/settings/FontPreviewTablet;->getFontNameFromSystem()Ljava/lang/String;
-    invoke-static {v6}, Lcom/android/settings/FontPreviewTablet;->access$900(Lcom/android/settings/FontPreviewTablet;)Ljava/lang/String;
+    # invokes: Lcom/android/settings_ex/FontPreviewTablet;->getFontNameFromSystem()Ljava/lang/String;
+    invoke-static {v6}, Lcom/android/settings_ex/FontPreviewTablet;->access$900(Lcom/android/settings_ex/FontPreviewTablet;)Ljava/lang/String;
 
     move-result-object v3
 
     .line 1398
     .restart local v3    # "fontName":Ljava/lang/String;
-    iget-object v6, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    # getter for: Lcom/android/settings/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
-    invoke-static {v6}, Lcom/android/settings/FontPreviewTablet;->access$700(Lcom/android/settings/FontPreviewTablet;)Lcom/android/settings/flipfont/FontListAdapter;
+    # getter for: Lcom/android/settings_ex/FontPreviewTablet;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
+    invoke-static {v6}, Lcom/android/settings_ex/FontPreviewTablet;->access$700(Lcom/android/settings_ex/FontPreviewTablet;)Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     move-result-object v6
 
-    iget-object v6, v6, Lcom/android/settings/flipfont/FontListAdapter;->mFontNames:Ljava/util/Vector;
+    iget-object v6, v6, Lcom/android/settings_ex/flipfont/FontListAdapter;->mFontNames:Ljava/util/Vector;
 
     invoke-virtual {v6, v3}, Ljava/util/Vector;->indexOf(Ljava/lang/Object;)I
 
@@ -366,10 +366,10 @@
 
     .line 1399
     .restart local v2    # "fontIndexPref":I
-    iget-object v6, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    # getter for: Lcom/android/settings/FontPreviewTablet;->mContext:Landroid/content/Context;
-    invoke-static {v6}, Lcom/android/settings/FontPreviewTablet;->access$500(Lcom/android/settings/FontPreviewTablet;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/FontPreviewTablet;->mContext:Landroid/content/Context;
+    invoke-static {v6}, Lcom/android/settings_ex/FontPreviewTablet;->access$500(Lcom/android/settings_ex/FontPreviewTablet;)Landroid/content/Context;
 
     move-result-object v6
 
@@ -426,7 +426,7 @@
     if-lt v5, v11, :cond_1
 
     .line 1404
-    invoke-virtual {p0, v9}, Lcom/android/settings/FontPreviewTablet$LoadListTask;->cancel(Z)Z
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->cancel(Z)Z
 
     goto/16 :goto_0
 .end method
@@ -436,7 +436,7 @@
 
     .prologue
     .line 1428
-    iget-object v0, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->mProgressDialog:Landroid/app/ProgressDialog;
 
     return-object v0
 .end method
@@ -450,7 +450,7 @@
     check-cast p1, Ljava/lang/Void;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/FontPreviewTablet$LoadListTask;->onPostExecute(Ljava/lang/Void;)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->onPostExecute(Ljava/lang/Void;)V
 
     return-void
 .end method
@@ -462,25 +462,25 @@
     .prologue
     .line 1418
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    iget-object v2, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v2, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    # getter for: Lcom/android/settings/FontPreviewTablet;->mSavedInstanceState:Landroid/os/Bundle;
-    invoke-static {v2}, Lcom/android/settings/FontPreviewTablet;->access$1000(Lcom/android/settings/FontPreviewTablet;)Landroid/os/Bundle;
+    # getter for: Lcom/android/settings_ex/FontPreviewTablet;->mSavedInstanceState:Landroid/os/Bundle;
+    invoke-static {v2}, Lcom/android/settings_ex/FontPreviewTablet;->access$1000(Lcom/android/settings_ex/FontPreviewTablet;)Landroid/os/Bundle;
 
     move-result-object v2
 
-    # invokes: Lcom/android/settings/FontPreviewTablet;->setFontStyleList(Landroid/os/Bundle;)V
-    invoke-static {v1, v2}, Lcom/android/settings/FontPreviewTablet;->access$1100(Lcom/android/settings/FontPreviewTablet;Landroid/os/Bundle;)V
+    # invokes: Lcom/android/settings_ex/FontPreviewTablet;->setFontStyleList(Landroid/os/Bundle;)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/FontPreviewTablet;->access$1100(Lcom/android/settings_ex/FontPreviewTablet;Landroid/os/Bundle;)V
 
     .line 1419
-    iget-object v1, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->mProgressDialog:Landroid/app/ProgressDialog;
 
     if-eqz v1, :cond_0
 
     .line 1420
-    iget-object v1, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v1}, Landroid/app/ProgressDialog;->dismiss()V
     :try_end_0
@@ -511,11 +511,11 @@
 
     .prologue
     .line 1344
-    iget-object v1, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
     const v2, 0x7f0e07bb
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/FontPreviewTablet;->getString(I)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/FontPreviewTablet;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -523,35 +523,35 @@
     .local v0, "sMsg":Ljava/lang/String;
     new-instance v1, Landroid/app/ProgressDialog;
 
-    iget-object v2, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v2, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
     invoke-direct {v1, v2}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->mProgressDialog:Landroid/app/ProgressDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->mProgressDialog:Landroid/app/ProgressDialog;
 
     .line 1347
-    iget-object v1, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v1, v0}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
     .line 1348
-    iget-object v1, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->mProgressDialog:Landroid/app/ProgressDialog;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/app/ProgressDialog;->setCancelable(Z)V
 
     .line 1349
-    iget-object v1, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->mProgressDialog:Landroid/app/ProgressDialog;
 
-    new-instance v2, Lcom/android/settings/FontPreviewTablet$LoadListTask$1;
+    new-instance v2, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask$1;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/FontPreviewTablet$LoadListTask$1;-><init>(Lcom/android/settings/FontPreviewTablet$LoadListTask;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask$1;-><init>(Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;)V
 
     invoke-virtual {v1, v2}, Landroid/app/ProgressDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
     .line 1356
-    iget-object v1, p0, Lcom/android/settings/FontPreviewTablet$LoadListTask;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreviewTablet$LoadListTask;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v1}, Landroid/app/ProgressDialog;->show()V
 

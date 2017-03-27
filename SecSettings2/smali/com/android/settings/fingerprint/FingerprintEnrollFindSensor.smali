@@ -1,10 +1,10 @@
-.class public Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;
-.super Lcom/android/settings/fingerprint/FingerprintEnrollBase;
+.class public Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;
+.super Lcom/android/settings_ex/fingerprint/FingerprintEnrollBase;
 .source "FingerprintEnrollFindSensor.java"
 
 
 # instance fields
-.field private mAnimation:Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;
+.field private mAnimation:Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;
 
 .field private mLaunchedConfirmLock:Z
 
@@ -15,7 +15,7 @@
 
     .prologue
     .line 29
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintEnrollBase;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollBase;-><init>()V
 
     return-void
 .end method
@@ -31,7 +31,7 @@
     .line 107
     const-class v0, Landroid/hardware/fingerprint/FingerprintManager;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -43,28 +43,28 @@
 
     .line 108
     .local v6, "challenge":J
-    new-instance v1, Lcom/android/settings/ChooseLockSettingsHelper;
+    new-instance v1, Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;)V
 
     .line 109
-    .local v1, "helper":Lcom/android/settings/ChooseLockSettingsHelper;
+    .local v1, "helper":Lcom/android/settings_ex/ChooseLockSettingsHelper;
     const v0, 0x7f0e0206
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     move-object v5, v4
 
-    invoke-virtual/range {v1 .. v7}, Lcom/android/settings/ChooseLockSettingsHelper;->launchConfirmationActivity(ILjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;J)Z
+    invoke-virtual/range {v1 .. v7}, Lcom/android/settings_ex/ChooseLockSettingsHelper;->launchConfirmationActivity(ILjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;J)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 115
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->finish()V
 
     .line 119
     :goto_0
@@ -72,7 +72,7 @@
 
     .line 117
     :cond_0
-    iput-boolean v2, p0, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->mLaunchedConfirmLock:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->mLaunchedConfirmLock:Z
 
     goto :goto_0
 .end method
@@ -105,14 +105,14 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->mToken:[B
+    iput-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->mToken:[B
 
     .line 81
     const v3, 0x7f050030
 
     const v4, 0x7f050031
 
-    invoke-virtual {p0, v3, v4}, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->overridePendingTransition(II)V
+    invoke-virtual {p0, v3, v4}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->overridePendingTransition(II)V
 
     .line 104
     :cond_0
@@ -121,7 +121,7 @@
 
     .line 83
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->finish()V
 
     goto :goto_0
 
@@ -133,10 +133,10 @@
     if-ne p2, v3, :cond_3
 
     .line 87
-    invoke-virtual {p0, v3}, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->setResult(I)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->setResult(I)V
 
     .line 88
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->finish()V
 
     goto :goto_0
 
@@ -145,10 +145,10 @@
     if-ne p2, v4, :cond_4
 
     .line 90
-    invoke-virtual {p0, v4}, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->setResult(I)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->setResult(I)V
 
     .line 91
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->finish()V
 
     goto :goto_0
 
@@ -156,7 +156,7 @@
     :cond_4
     const-class v3, Landroid/hardware/fingerprint/FingerprintManager;
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -174,7 +174,7 @@
 
     .line 95
     .local v0, "enrolled":I
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -189,7 +189,7 @@
     if-lt v0, v2, :cond_0
 
     .line 98
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->finish()V
 
     goto :goto_0
 
@@ -198,7 +198,7 @@
     .end local v1    # "fpm":Landroid/hardware/fingerprint/FingerprintManager;
     .end local v2    # "max":I
     :cond_5
-    invoke-super {p0, p1, p2, p3}, Lcom/android/settings/fingerprint/FingerprintEnrollBase;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollBase;->onActivityResult(IILandroid/content/Intent;)V
 
     goto :goto_0
 .end method
@@ -209,17 +209,17 @@
 
     .prologue
     .line 41
-    invoke-super {p0, p1}, Lcom/android/settings/fingerprint/FingerprintEnrollBase;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollBase;->onCreate(Landroid/os/Bundle;)V
 
     .line 42
     const v0, 0x7f0400db
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->setContentView(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->setContentView(I)V
 
     .line 43
     const v0, 0x7f0e0212
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->setHeaderText(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->setHeaderText(I)V
 
     .line 44
     if-eqz p1, :cond_1
@@ -235,31 +235,31 @@
     const/4 v0, 0x1
 
     :goto_0
-    iput-boolean v0, p0, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->mLaunchedConfirmLock:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->mLaunchedConfirmLock:Z
 
     .line 46
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->mToken:[B
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->mToken:[B
 
     if-nez v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->mLaunchedConfirmLock:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->mLaunchedConfirmLock:Z
 
     if-nez v0, :cond_0
 
     .line 47
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->launchConfirmLock()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->launchConfirmLock()V
 
     .line 49
     :cond_0
     const v0, 0x7f0d02b1
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;
+    check-cast v0, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->mAnimation:Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->mAnimation:Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;
 
     .line 51
     return-void
@@ -276,13 +276,13 @@
 
     .prologue
     .line 73
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->getEnrollingIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->getEnrollingIntent()Landroid/content/Intent;
 
     move-result-object v0
 
     const/4 v1, 0x2
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->startActivityForResult(Landroid/content/Intent;I)V
 
     .line 74
     return-void
@@ -294,12 +294,12 @@
 
     .prologue
     .line 67
-    invoke-super {p0, p1}, Lcom/android/settings/fingerprint/FingerprintEnrollBase;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollBase;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 68
     const-string v0, "launched_confirm_lock"
 
-    iget-boolean v1, p0, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->mLaunchedConfirmLock:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->mLaunchedConfirmLock:Z
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
@@ -312,12 +312,12 @@
 
     .prologue
     .line 55
-    invoke-super {p0}, Lcom/android/settings/fingerprint/FingerprintEnrollBase;->onStart()V
+    invoke-super {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollBase;->onStart()V
 
     .line 56
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->mAnimation:Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->mAnimation:Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;
 
-    invoke-virtual {v0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->startAnimation()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->startAnimation()V
 
     .line 57
     return-void
@@ -328,12 +328,12 @@
 
     .prologue
     .line 61
-    invoke-super {p0}, Lcom/android/settings/fingerprint/FingerprintEnrollBase;->onStop()V
+    invoke-super {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollBase;->onStop()V
 
     .line 62
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEnrollFindSensor;->mAnimation:Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEnrollFindSensor;->mAnimation:Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;
 
-    invoke-virtual {v0}, Lcom/android/settings/fingerprint/FingerprintLocationAnimationView;->stopAnimation()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/fingerprint/FingerprintLocationAnimationView;->stopAnimation()V
 
     .line 63
     return-void

@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/LinkifyUtils$1;
+.class final Lcom/android/settings_ex/LinkifyUtils$1;
 .super Landroid/text/style/ClickableSpan;
 .source "LinkifyUtils.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/LinkifyUtils;->linkify(Landroid/widget/TextView;Ljava/lang/StringBuilder;Lcom/android/settings/LinkifyUtils$OnClickListener;)Z
+    value = Lcom/android/settings_ex/LinkifyUtils;->linkify(Landroid/widget/TextView;Ljava/lang/StringBuilder;Lcom/android/settings_ex/LinkifyUtils$OnClickListener;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic val$listener:Lcom/android/settings/LinkifyUtils$OnClickListener;
+.field final synthetic val$listener:Lcom/android/settings_ex/LinkifyUtils$OnClickListener;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/LinkifyUtils$OnClickListener;)V
+.method constructor <init>(Lcom/android/settings_ex/LinkifyUtils$OnClickListener;)V
     .locals 0
 
     .prologue
     .line 68
-    iput-object p1, p0, Lcom/android/settings/LinkifyUtils$1;->val$listener:Lcom/android/settings/LinkifyUtils$OnClickListener;
+    iput-object p1, p0, Lcom/android/settings_ex/LinkifyUtils$1;->val$listener:Lcom/android/settings_ex/LinkifyUtils$OnClickListener;
 
     invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
@@ -39,9 +39,9 @@
 
     .prologue
     .line 71
-    iget-object v0, p0, Lcom/android/settings/LinkifyUtils$1;->val$listener:Lcom/android/settings/LinkifyUtils$OnClickListener;
+    iget-object v0, p0, Lcom/android/settings_ex/LinkifyUtils$1;->val$listener:Lcom/android/settings_ex/LinkifyUtils$OnClickListener;
 
-    invoke-interface {v0}, Lcom/android/settings/LinkifyUtils$OnClickListener;->onClick()V
+    invoke-interface {v0}, Lcom/android/settings_ex/LinkifyUtils$OnClickListener;->onClick()V
 
     .line 72
     return-void

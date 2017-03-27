@@ -4,5 +4,5 @@
     <View android:id="@id/tile_divider" android:background="?android:listDivider" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/list_divider_height" android:layout_marginTop="@dimen/category_seperator_divider_top_margin" />
     <TextView android:id="@id/category_title" android:layout_width="fill_parent" android:layout_marginTop="@dimen/category_seperator_top_margin" style="?android:attr/listSeparatorTextViewStyle" />
     <View android:id="@id/tile_divider_bottom" android:background="?android:listDivider" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/list_divider_height" />
-    <com.android.settings.dashboard.DashboardEditFavoriteContainerView android:id="@id/category_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.android.settings_ex.dashboard.DashboardEditFavoriteContainerView android:id="@id/category_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
 </LinearLayout>

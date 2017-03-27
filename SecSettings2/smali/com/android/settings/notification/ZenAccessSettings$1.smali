@@ -1,4 +1,4 @@
-.class Lcom/android/settings/notification/ZenAccessSettings$1;
+.class Lcom/android/settings_ex/notification/ZenAccessSettings$1;
 .super Ljava/lang/Object;
 .source "ZenAccessSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/notification/ZenAccessSettings;->reloadList()V
+    value = Lcom/android/settings_ex/notification/ZenAccessSettings;->reloadList()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/ZenAccessSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/ZenAccessSettings;
 
 .field final synthetic val$label:Ljava/lang/CharSequence;
 
@@ -26,16 +26,16 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/notification/ZenAccessSettings;Ljava/lang/String;Ljava/lang/CharSequence;)V
+.method constructor <init>(Lcom/android/settings_ex/notification/ZenAccessSettings;Ljava/lang/String;Ljava/lang/CharSequence;)V
     .locals 0
 
     .prologue
     .line 131
-    iput-object p1, p0, Lcom/android/settings/notification/ZenAccessSettings$1;->this$0:Lcom/android/settings/notification/ZenAccessSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/ZenAccessSettings$1;->this$0:Lcom/android/settings_ex/notification/ZenAccessSettings;
 
-    iput-object p2, p0, Lcom/android/settings/notification/ZenAccessSettings$1;->val$pkg:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/settings_ex/notification/ZenAccessSettings$1;->val$pkg:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/android/settings/notification/ZenAccessSettings$1;->val$label:Ljava/lang/CharSequence;
+    iput-object p3, p0, Lcom/android/settings_ex/notification/ZenAccessSettings$1;->val$label:Ljava/lang/CharSequence;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -63,17 +63,17 @@
     if-nez v0, :cond_0
 
     .line 137
-    iget-object v1, p0, Lcom/android/settings/notification/ZenAccessSettings$1;->this$0:Lcom/android/settings/notification/ZenAccessSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/ZenAccessSettings$1;->this$0:Lcom/android/settings_ex/notification/ZenAccessSettings;
 
-    # getter for: Lcom/android/settings/notification/ZenAccessSettings;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/notification/ZenAccessSettings;->access$000(Lcom/android/settings/notification/ZenAccessSettings;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/notification/ZenAccessSettings;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/notification/ZenAccessSettings;->access$000(Lcom/android/settings_ex/notification/ZenAccessSettings;)Landroid/content/Context;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/notification/ZenAccessSettings$1;->val$pkg:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/ZenAccessSettings$1;->val$pkg:Ljava/lang/String;
 
-    # invokes: Lcom/android/settings/notification/ZenAccessSettings;->setAccess(Landroid/content/Context;Ljava/lang/String;Z)V
-    invoke-static {v1, v2, v0}, Lcom/android/settings/notification/ZenAccessSettings;->access$100(Landroid/content/Context;Ljava/lang/String;Z)V
+    # invokes: Lcom/android/settings_ex/notification/ZenAccessSettings;->setAccess(Landroid/content/Context;Ljava/lang/String;Z)V
+    invoke-static {v1, v2, v0}, Lcom/android/settings_ex/notification/ZenAccessSettings;->access$100(Landroid/content/Context;Ljava/lang/String;Z)V
 
     .line 138
     const/4 v1, 0x1
@@ -84,27 +84,27 @@
 
     .line 141
     :cond_0
-    new-instance v1, Lcom/android/settings/notification/ZenAccessSettings$ScaryWarningDialogFragment;
+    new-instance v1, Lcom/android/settings_ex/notification/ZenAccessSettings$ScaryWarningDialogFragment;
 
-    invoke-direct {v1}, Lcom/android/settings/notification/ZenAccessSettings$ScaryWarningDialogFragment;-><init>()V
+    invoke-direct {v1}, Lcom/android/settings_ex/notification/ZenAccessSettings$ScaryWarningDialogFragment;-><init>()V
 
-    iget-object v2, p0, Lcom/android/settings/notification/ZenAccessSettings$1;->val$pkg:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/ZenAccessSettings$1;->val$pkg:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/android/settings/notification/ZenAccessSettings$1;->val$label:Ljava/lang/CharSequence;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/ZenAccessSettings$1;->val$label:Ljava/lang/CharSequence;
 
-    invoke-virtual {v1, v2, v3}, Lcom/android/settings/notification/ZenAccessSettings$ScaryWarningDialogFragment;->setPkgInfo(Ljava/lang/String;Ljava/lang/CharSequence;)Lcom/android/settings/notification/ZenAccessSettings$ScaryWarningDialogFragment;
+    invoke-virtual {v1, v2, v3}, Lcom/android/settings_ex/notification/ZenAccessSettings$ScaryWarningDialogFragment;->setPkgInfo(Ljava/lang/String;Ljava/lang/CharSequence;)Lcom/android/settings_ex/notification/ZenAccessSettings$ScaryWarningDialogFragment;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/notification/ZenAccessSettings$1;->this$0:Lcom/android/settings/notification/ZenAccessSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/notification/ZenAccessSettings$1;->this$0:Lcom/android/settings_ex/notification/ZenAccessSettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/notification/ZenAccessSettings;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {v2}, Lcom/android/settings_ex/notification/ZenAccessSettings;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v2
 
     const-string v3, "dialog"
 
-    invoke-virtual {v1, v2, v3}, Lcom/android/settings/notification/ZenAccessSettings$ScaryWarningDialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v3}, Lcom/android/settings_ex/notification/ZenAccessSettings$ScaryWarningDialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     .line 144
     const/4 v1, 0x0

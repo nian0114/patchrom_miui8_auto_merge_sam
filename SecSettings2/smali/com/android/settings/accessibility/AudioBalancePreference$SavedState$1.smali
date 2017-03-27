@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/accessibility/AudioBalancePreference$SavedState$1;
+.class final Lcom/android/settings_ex/accessibility/AudioBalancePreference$SavedState$1;
 .super Ljava/lang/Object;
 .source "AudioBalancePreference.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/AudioBalancePreference$SavedState;
+    value = Lcom/android/settings_ex/accessibility/AudioBalancePreference$SavedState;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Landroid/os/Parcelable$Creator",
         "<",
-        "Lcom/android/settings/accessibility/AudioBalancePreference$SavedState;",
+        "Lcom/android/settings_ex/accessibility/AudioBalancePreference$SavedState;",
         ">;"
     }
 .end annotation
@@ -40,15 +40,15 @@
 
 
 # virtual methods
-.method public createFromParcel(Landroid/os/Parcel;)Lcom/android/settings/accessibility/AudioBalancePreference$SavedState;
+.method public createFromParcel(Landroid/os/Parcel;)Lcom/android/settings_ex/accessibility/AudioBalancePreference$SavedState;
     .locals 1
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
     .line 371
-    new-instance v0, Lcom/android/settings/accessibility/AudioBalancePreference$SavedState;
+    new-instance v0, Lcom/android/settings_ex/accessibility/AudioBalancePreference$SavedState;
 
-    invoke-direct {v0, p1}, Lcom/android/settings/accessibility/AudioBalancePreference$SavedState;-><init>(Landroid/os/Parcel;)V
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/accessibility/AudioBalancePreference$SavedState;-><init>(Landroid/os/Parcel;)V
 
     return-object v0
 .end method
@@ -59,20 +59,20 @@
 
     .prologue
     .line 368
-    invoke-virtual {p0, p1}, Lcom/android/settings/accessibility/AudioBalancePreference$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/settings/accessibility/AudioBalancePreference$SavedState;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/accessibility/AudioBalancePreference$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/settings_ex/accessibility/AudioBalancePreference$SavedState;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public newArray(I)[Lcom/android/settings/accessibility/AudioBalancePreference$SavedState;
+.method public newArray(I)[Lcom/android/settings_ex/accessibility/AudioBalancePreference$SavedState;
     .locals 1
     .param p1, "size"    # I
 
     .prologue
     .line 375
-    new-array v0, p1, [Lcom/android/settings/accessibility/AudioBalancePreference$SavedState;
+    new-array v0, p1, [Lcom/android/settings_ex/accessibility/AudioBalancePreference$SavedState;
 
     return-object v0
 .end method
@@ -83,7 +83,7 @@
 
     .prologue
     .line 368
-    invoke-virtual {p0, p1}, Lcom/android/settings/accessibility/AudioBalancePreference$SavedState$1;->newArray(I)[Lcom/android/settings/accessibility/AudioBalancePreference$SavedState;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/accessibility/AudioBalancePreference$SavedState$1;->newArray(I)[Lcom/android/settings_ex/accessibility/AudioBalancePreference$SavedState;
 
     move-result-object v0
 

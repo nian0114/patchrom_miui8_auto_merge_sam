@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/applications/WriteSettingsDetails;
-.super Lcom/android/settings/applications/AppInfoWithHeader;
+.class public Lcom/android/settings_ex/applications/WriteSettingsDetails;
+.super Lcom/android/settings_ex/applications/AppInfoWithHeader;
 .source "WriteSettingsDetails.java"
 
 # interfaces
@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field private mAppBridge:Lcom/android/settings/applications/AppStateWriteSettingsBridge;
+.field private mAppBridge:Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge;
 
 .field private mAppOpsManager:Landroid/app/AppOpsManager;
 
@@ -24,7 +24,7 @@
 
 .field private mWriteSettingsPrefs:Landroid/preference/Preference;
 
-.field private mWriteSettingsState:Lcom/android/settings/applications/AppStateWriteSettingsBridge$WriteSettingsState;
+.field private mWriteSettingsState:Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge$WriteSettingsState;
 
 
 # direct methods
@@ -43,7 +43,7 @@
 
     aput v2, v0, v1
 
-    sput-object v0, Lcom/android/settings/applications/WriteSettingsDetails;->APP_OPS_OP_CODE:[I
+    sput-object v0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->APP_OPS_OP_CODE:[I
 
     return-void
 .end method
@@ -53,7 +53,7 @@
 
     .prologue
     .line 45
-    invoke-direct {p0}, Lcom/android/settings/applications/AppInfoWithHeader;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/applications/AppInfoWithHeader;-><init>()V
 
     return-void
 .end method
@@ -64,17 +64,17 @@
 
     .prologue
     .line 123
-    iget-object v1, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mAppOpsManager:Landroid/app/AppOpsManager;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mAppOpsManager:Landroid/app/AppOpsManager;
 
     const/16 v2, 0x17
 
-    iget-object v0, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mPackageInfo:Landroid/content/pm/PackageInfo;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mPackageInfo:Landroid/content/pm/PackageInfo;
 
     iget-object v0, v0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v3, v0, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    iget-object v4, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mPackageName:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mPackageName:Ljava/lang/String;
 
     if-eqz p1, :cond_0
 
@@ -123,24 +123,24 @@
 
     .prologue
     .line 70
-    invoke-super {p0, p1}, Lcom/android/settings/applications/AppInfoWithHeader;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/applications/AppInfoWithHeader;->onCreate(Landroid/os/Bundle;)V
 
     .line 72
-    invoke-virtual {p0}, Lcom/android/settings/applications/WriteSettingsDetails;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/WriteSettingsDetails;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     .line 73
     .local v0, "context":Landroid/content/Context;
-    new-instance v1, Lcom/android/settings/applications/AppStateWriteSettingsBridge;
+    new-instance v1, Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge;
 
-    iget-object v2, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mState:Lcom/android/settingslib/applications/ApplicationsState;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mState:Lcom/android/settings_exlib/applications/ApplicationsState;
 
     const/4 v3, 0x0
 
-    invoke-direct {v1, v0, v2, v3}, Lcom/android/settings/applications/AppStateWriteSettingsBridge;-><init>(Landroid/content/Context;Lcom/android/settingslib/applications/ApplicationsState;Lcom/android/settings/applications/AppStateBaseBridge$Callback;)V
+    invoke-direct {v1, v0, v2, v3}, Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge;-><init>(Landroid/content/Context;Lcom/android/settings_exlib/applications/ApplicationsState;Lcom/android/settings_ex/applications/AppStateBaseBridge$Callback;)V
 
-    iput-object v1, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mAppBridge:Lcom/android/settings/applications/AppStateWriteSettingsBridge;
+    iput-object v1, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mAppBridge:Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge;
 
     .line 74
     const-string v1, "appops"
@@ -151,44 +151,44 @@
 
     check-cast v1, Landroid/app/AppOpsManager;
 
-    iput-object v1, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mAppOpsManager:Landroid/app/AppOpsManager;
+    iput-object v1, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mAppOpsManager:Landroid/app/AppOpsManager;
 
     .line 76
     const v1, 0x7f080017
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/applications/WriteSettingsDetails;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/applications/WriteSettingsDetails;->addPreferencesFromResource(I)V
 
     .line 77
     const-string v1, "app_ops_settings_switch"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/applications/WriteSettingsDetails;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/applications/WriteSettingsDetails;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/SwitchPreference;
 
-    iput-object v1, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
+    iput-object v1, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
 
     .line 78
     const-string v1, "app_ops_settings_preference"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/applications/WriteSettingsDetails;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/applications/WriteSettingsDetails;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mWriteSettingsPrefs:Landroid/preference/Preference;
+    iput-object v1, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mWriteSettingsPrefs:Landroid/preference/Preference;
 
     .line 79
     const-string v1, "app_ops_settings_description"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/applications/WriteSettingsDetails;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/applications/WriteSettingsDetails;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mWriteSettingsDesc:Landroid/preference/Preference;
+    iput-object v1, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mWriteSettingsDesc:Landroid/preference/Preference;
 
     .line 81
-    invoke-virtual {p0}, Lcom/android/settings/applications/WriteSettingsDetails;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/WriteSettingsDetails;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 
@@ -197,33 +197,33 @@
     invoke-virtual {v1, v2}, Landroid/preference/PreferenceScreen;->setTitle(I)V
 
     .line 82
-    iget-object v1, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
 
     const v2, 0x7f0e0f84
 
     invoke-virtual {v1, v2}, Landroid/preference/SwitchPreference;->setTitle(I)V
 
     .line 83
-    iget-object v1, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mWriteSettingsPrefs:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mWriteSettingsPrefs:Landroid/preference/Preference;
 
     const v2, 0x7f0e0f83
 
     invoke-virtual {v1, v2}, Landroid/preference/Preference;->setTitle(I)V
 
     .line 84
-    iget-object v1, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mWriteSettingsDesc:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mWriteSettingsDesc:Landroid/preference/Preference;
 
     const v2, 0x7f0e0f85
 
     invoke-virtual {v1, v2}, Landroid/preference/Preference;->setSummary(I)V
 
     .line 86
-    iget-object v1, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 87
-    iget-object v1, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mWriteSettingsPrefs:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mWriteSettingsPrefs:Landroid/preference/Preference;
 
     invoke-virtual {v1, p0}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
@@ -240,13 +240,13 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mPackageName:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mSettingsIntent:Landroid/content/Intent;
+    iput-object v1, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mSettingsIntent:Landroid/content/Intent;
 
     .line 92
     return-void
@@ -263,12 +263,12 @@
     const/4 v0, 0x0
 
     .line 111
-    iget-object v2, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
 
     if-ne p1, v2, :cond_2
 
     .line 112
-    iget-object v2, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mWriteSettingsState:Lcom/android/settings/applications/AppStateWriteSettingsBridge$WriteSettingsState;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mWriteSettingsState:Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge$WriteSettingsState;
 
     if-eqz v2, :cond_1
 
@@ -279,18 +279,18 @@
 
     move-result v2
 
-    iget-object v3, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mWriteSettingsState:Lcom/android/settings/applications/AppStateWriteSettingsBridge$WriteSettingsState;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mWriteSettingsState:Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge$WriteSettingsState;
 
-    invoke-virtual {v3}, Lcom/android/settings/applications/AppStateWriteSettingsBridge$WriteSettingsState;->isPermissible()Z
+    invoke-virtual {v3}, Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge$WriteSettingsState;->isPermissible()Z
 
     move-result v3
 
     if-eq v2, v3, :cond_1
 
     .line 114
-    iget-object v2, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mWriteSettingsState:Lcom/android/settings/applications/AppStateWriteSettingsBridge$WriteSettingsState;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mWriteSettingsState:Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge$WriteSettingsState;
 
-    invoke-virtual {v2}, Lcom/android/settings/applications/AppStateWriteSettingsBridge$WriteSettingsState;->isPermissible()Z
+    invoke-virtual {v2}, Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge$WriteSettingsState;->isPermissible()Z
 
     move-result v2
 
@@ -299,10 +299,10 @@
     move v0, v1
 
     :cond_0
-    invoke-direct {p0, v0}, Lcom/android/settings/applications/WriteSettingsDetails;->setCanWriteSettings(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/applications/WriteSettingsDetails;->setCanWriteSettings(Z)V
 
     .line 115
-    invoke-virtual {p0}, Lcom/android/settings/applications/WriteSettingsDetails;->refreshUi()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/WriteSettingsDetails;->refreshUi()Z
 
     .line 119
     :cond_1
@@ -322,26 +322,26 @@
 
     .prologue
     .line 96
-    iget-object v1, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mWriteSettingsPrefs:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mWriteSettingsPrefs:Landroid/preference/Preference;
 
     if-ne p1, v1, :cond_1
 
     .line 97
-    iget-object v1, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mSettingsIntent:Landroid/content/Intent;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mSettingsIntent:Landroid/content/Intent;
 
     if-eqz v1, :cond_0
 
     .line 99
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/applications/WriteSettingsDetails;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/WriteSettingsDetails;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mSettingsIntent:Landroid/content/Intent;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mSettingsIntent:Landroid/content/Intent;
 
     new-instance v3, Landroid/os/UserHandle;
 
-    iget v4, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mUserId:I
+    iget v4, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mUserId:I
 
     invoke-direct {v3, v4}, Landroid/os/UserHandle;-><init>(I)V
 
@@ -376,7 +376,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mSettingsIntent:Landroid/content/Intent;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mSettingsIntent:Landroid/content/Intent;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -403,55 +403,55 @@
 
     .prologue
     .line 147
-    iget-object v1, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mAppBridge:Lcom/android/settings/applications/AppStateWriteSettingsBridge;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mAppBridge:Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge;
 
-    iget-object v2, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mPackageName:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mPackageName:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mPackageInfo:Landroid/content/pm/PackageInfo;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mPackageInfo:Landroid/content/pm/PackageInfo;
 
     iget-object v3, v3, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v3, v3, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    invoke-virtual {v1, v2, v3}, Lcom/android/settings/applications/AppStateWriteSettingsBridge;->getWriteSettingsInfo(Ljava/lang/String;I)Lcom/android/settings/applications/AppStateWriteSettingsBridge$WriteSettingsState;
+    invoke-virtual {v1, v2, v3}, Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge;->getWriteSettingsInfo(Ljava/lang/String;I)Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge$WriteSettingsState;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mWriteSettingsState:Lcom/android/settings/applications/AppStateWriteSettingsBridge$WriteSettingsState;
+    iput-object v1, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mWriteSettingsState:Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge$WriteSettingsState;
 
     .line 150
-    iget-object v1, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mWriteSettingsState:Lcom/android/settings/applications/AppStateWriteSettingsBridge$WriteSettingsState;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mWriteSettingsState:Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge$WriteSettingsState;
 
-    invoke-virtual {v1}, Lcom/android/settings/applications/AppStateWriteSettingsBridge$WriteSettingsState;->isPermissible()Z
+    invoke-virtual {v1}, Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge$WriteSettingsState;->isPermissible()Z
 
     move-result v0
 
     .line 151
     .local v0, "canWrite":Z
-    iget-object v1, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v0}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 153
-    iget-object v1, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mSwitchPref:Landroid/preference/SwitchPreference;
 
-    iget-object v2, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mWriteSettingsState:Lcom/android/settings/applications/AppStateWriteSettingsBridge$WriteSettingsState;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mWriteSettingsState:Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge$WriteSettingsState;
 
-    iget-boolean v2, v2, Lcom/android/settings/applications/AppStateWriteSettingsBridge$WriteSettingsState;->permissionDeclared:Z
+    iget-boolean v2, v2, Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge$WriteSettingsState;->permissionDeclared:Z
 
     invoke-virtual {v1, v2}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 154
-    iget-object v1, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mWriteSettingsPrefs:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mWriteSettingsPrefs:Landroid/preference/Preference;
 
     invoke-virtual {v1, v0}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 155
-    invoke-virtual {p0}, Lcom/android/settings/applications/WriteSettingsDetails;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/WriteSettingsDetails;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mWriteSettingsPrefs:Landroid/preference/Preference;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mWriteSettingsPrefs:Landroid/preference/Preference;
 
     invoke-virtual {v1, v2}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
@@ -478,10 +478,10 @@
 
     check-cast v0, Landroid/app/AppOpsManager;
 
-    iput-object v0, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mAppOpsManager:Landroid/app/AppOpsManager;
+    iput-object v0, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mAppOpsManager:Landroid/app/AppOpsManager;
 
     .line 130
-    iget-object v1, p0, Lcom/android/settings/applications/WriteSettingsDetails;->mAppOpsManager:Landroid/app/AppOpsManager;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/WriteSettingsDetails;->mAppOpsManager:Landroid/app/AppOpsManager;
 
     const/16 v2, 0x17
 

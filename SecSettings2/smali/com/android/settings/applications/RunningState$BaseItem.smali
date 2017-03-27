@@ -1,11 +1,11 @@
-.class Lcom/android/settings/applications/RunningState$BaseItem;
+.class Lcom/android/settings_ex/applications/RunningState$BaseItem;
 .super Ljava/lang/Object;
 .source "RunningState.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/RunningState;
+    value = Lcom/android/settings_ex/applications/RunningState;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -53,10 +53,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 358
-    iput-boolean p1, p0, Lcom/android/settings/applications/RunningState$BaseItem;->mIsProcess:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/applications/RunningState$BaseItem;->mIsProcess:Z
 
     .line 359
-    iput p2, p0, Lcom/android/settings/applications/RunningState$BaseItem;->mUserId:I
+    iput p2, p0, Lcom/android/settings_ex/applications/RunningState$BaseItem;->mUserId:I
 
     .line 360
     return-void
@@ -64,21 +64,21 @@
 
 
 # virtual methods
-.method public loadIcon(Landroid/content/Context;Lcom/android/settings/applications/RunningState;)Landroid/graphics/drawable/Drawable;
+.method public loadIcon(Landroid/content/Context;Lcom/android/settings_ex/applications/RunningState;)Landroid/graphics/drawable/Drawable;
     .locals 5
     .param p1, "context"    # Landroid/content/Context;
-    .param p2, "state"    # Lcom/android/settings/applications/RunningState;
+    .param p2, "state"    # Lcom/android/settings_ex/applications/RunningState;
 
     .prologue
     .line 363
-    iget-object v2, p0, Lcom/android/settings/applications/RunningState$BaseItem;->mPackageInfo:Landroid/content/pm/PackageItemInfo;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/RunningState$BaseItem;->mPackageInfo:Landroid/content/pm/PackageItemInfo;
 
     if-eqz v2, :cond_0
 
     .line 364
-    iget-object v2, p0, Lcom/android/settings/applications/RunningState$BaseItem;->mPackageInfo:Landroid/content/pm/PackageItemInfo;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/RunningState$BaseItem;->mPackageInfo:Landroid/content/pm/PackageItemInfo;
 
-    iget-object v3, p2, Lcom/android/settings/applications/RunningState;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v3, p2, Lcom/android/settings_ex/applications/RunningState;->mPm:Landroid/content/pm/PackageManager;
 
     invoke-virtual {v2, v3}, Landroid/content/pm/PackageItemInfo;->loadUnbadgedIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
 
@@ -86,11 +86,11 @@
 
     .line 365
     .local v1, "unbadgedIcon":Landroid/graphics/drawable/Drawable;
-    iget-object v2, p2, Lcom/android/settings/applications/RunningState;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v2, p2, Lcom/android/settings_ex/applications/RunningState;->mPm:Landroid/content/pm/PackageManager;
 
     new-instance v3, Landroid/os/UserHandle;
 
-    iget v4, p0, Lcom/android/settings/applications/RunningState$BaseItem;->mUserId:I
+    iget v4, p0, Lcom/android/settings_ex/applications/RunningState$BaseItem;->mUserId:I
 
     invoke-direct {v3, v4}, Landroid/os/UserHandle;-><init>(I)V
 

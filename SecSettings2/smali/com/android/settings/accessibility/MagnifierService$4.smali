@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessibility/MagnifierService$4;
+.class Lcom/android/settings_ex/accessibility/MagnifierService$4;
 .super Lcom/samsung/android/sdk/cover/ScoverManager$StateListener;
 .source "MagnifierService.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/MagnifierService;->onCreate()V
+    value = Lcom/android/settings_ex/accessibility/MagnifierService;->onCreate()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/MagnifierService;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/MagnifierService;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/MagnifierService;)V
     .locals 0
 
     .prologue
     .line 154
-    iput-object p1, p0, Lcom/android/settings/accessibility/MagnifierService$4;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/MagnifierService$4;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
     invoke-direct {p0}, Lcom/samsung/android/sdk/cover/ScoverManager$StateListener;-><init>()V
 
@@ -48,19 +48,19 @@
     if-ne v0, v1, :cond_0
 
     .line 157
-    iget-object v0, p0, Lcom/android/settings/accessibility/MagnifierService$4;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/MagnifierService$4;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
     const/4 v1, 0x0
 
-    # setter for: Lcom/android/settings/accessibility/MagnifierService;->isScoverClosed:Z
-    invoke-static {v0, v1}, Lcom/android/settings/accessibility/MagnifierService;->access$102(Lcom/android/settings/accessibility/MagnifierService;Z)Z
+    # setter for: Lcom/android/settings_ex/accessibility/MagnifierService;->isScoverClosed:Z
+    invoke-static {v0, v1}, Lcom/android/settings_ex/accessibility/MagnifierService;->access$102(Lcom/android/settings_ex/accessibility/MagnifierService;Z)Z
 
     .line 158
-    iget-object v0, p0, Lcom/android/settings/accessibility/MagnifierService$4;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/MagnifierService$4;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/MagnifierSurfaceView;->showView()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->showView()V
 
     .line 163
     :goto_0
@@ -68,17 +68,17 @@
 
     .line 160
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/MagnifierService$4;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/MagnifierService$4;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
-    # setter for: Lcom/android/settings/accessibility/MagnifierService;->isScoverClosed:Z
-    invoke-static {v0, v1}, Lcom/android/settings/accessibility/MagnifierService;->access$102(Lcom/android/settings/accessibility/MagnifierService;Z)Z
+    # setter for: Lcom/android/settings_ex/accessibility/MagnifierService;->isScoverClosed:Z
+    invoke-static {v0, v1}, Lcom/android/settings_ex/accessibility/MagnifierService;->access$102(Lcom/android/settings_ex/accessibility/MagnifierService;Z)Z
 
     .line 161
-    iget-object v0, p0, Lcom/android/settings/accessibility/MagnifierService$4;->this$0:Lcom/android/settings/accessibility/MagnifierService;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/MagnifierService$4;->this$0:Lcom/android/settings_ex/accessibility/MagnifierService;
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/MagnifierSurfaceView;->removeView()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->removeView()V
 
     goto :goto_0
 .end method

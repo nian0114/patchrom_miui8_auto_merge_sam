@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/SettingsReceiverActivity;
+.class public Lcom/android/settings_ex/SettingsReceiverActivity;
 .super Lcom/android/internal/app/AlertActivity;
 .source "SettingsReceiverActivity.java"
 
@@ -54,7 +54,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/SettingsReceiverActivity;->mAlwaysCheck:Landroid/widget/CheckBox;
+    iget-object v4, p0, Lcom/android/settings_ex/SettingsReceiverActivity;->mAlwaysCheck:Landroid/widget/CheckBox;
 
     invoke-virtual {v4}, Landroid/widget/CheckBox;->isChecked()Z
 
@@ -71,11 +71,11 @@
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 92
-    iget-boolean v2, p0, Lcom/android/settings/SettingsReceiverActivity;->isCMCCBlock:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/SettingsReceiverActivity;->isCMCCBlock:Z
 
     if-nez v2, :cond_0
 
-    iget-object v2, p0, Lcom/android/settings/SettingsReceiverActivity;->mAlwaysCheck:Landroid/widget/CheckBox;
+    iget-object v2, p0, Lcom/android/settings_ex/SettingsReceiverActivity;->mAlwaysCheck:Landroid/widget/CheckBox;
 
     invoke-virtual {v2}, Landroid/widget/CheckBox;->isChecked()Z
 
@@ -88,7 +88,7 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {p0, v2, v3}, Lcom/android/settings/SettingsReceiverActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {p0, v2, v3}, Lcom/android/settings_ex/SettingsReceiverActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -113,7 +113,7 @@
     .end local v0    # "editor":Landroid/content/SharedPreferences$Editor;
     .end local v1    # "mSharedPreferences":Landroid/content/SharedPreferences;
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/SettingsReceiverActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/SettingsReceiverActivity;->finish()V
 
     goto :goto_0
 
@@ -135,7 +135,7 @@
     invoke-super {p0, p1}, Lcom/android/internal/app/AlertActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 50
-    invoke-virtual {p0}, Lcom/android/settings/SettingsReceiverActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SettingsReceiverActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v4
 
@@ -145,12 +145,12 @@
 
     move-result v4
 
-    iput-boolean v4, p0, Lcom/android/settings/SettingsReceiverActivity;->isCMCCBlock:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/SettingsReceiverActivity;->isCMCCBlock:Z
 
     .line 52
     const-string v4, "NoUSBPreference"
 
-    invoke-virtual {p0, v4, v7}, Lcom/android/settings/SettingsReceiverActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {p0, v4, v7}, Lcom/android/settings_ex/SettingsReceiverActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v3
 
@@ -185,7 +185,7 @@
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 54
-    iget-boolean v4, p0, Lcom/android/settings/SettingsReceiverActivity;->isCMCCBlock:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/SettingsReceiverActivity;->isCMCCBlock:Z
 
     if-nez v4, :cond_0
 
@@ -198,15 +198,15 @@
     if-eqz v4, :cond_0
 
     .line 55
-    invoke-virtual {p0}, Lcom/android/settings/SettingsReceiverActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/SettingsReceiverActivity;->finish()V
 
     .line 57
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/SettingsReceiverActivity;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v0, p0, Lcom/android/settings_ex/SettingsReceiverActivity;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     .line 59
     .local v0, "ap":Lcom/android/internal/app/AlertController$AlertParams;
-    invoke-virtual {p0}, Lcom/android/settings/SettingsReceiverActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SettingsReceiverActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -219,7 +219,7 @@
     iput-object v4, v0, Lcom/android/internal/app/AlertController$AlertParams;->mTitle:Ljava/lang/CharSequence;
 
     .line 60
-    invoke-virtual {p0}, Lcom/android/settings/SettingsReceiverActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SettingsReceiverActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -237,16 +237,16 @@
     .line 63
     const-string v4, "layout_inflater"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/SettingsReceiverActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/SettingsReceiverActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/view/LayoutInflater;
 
-    iput-object v4, p0, Lcom/android/settings/SettingsReceiverActivity;->mInflater:Landroid/view/LayoutInflater;
+    iput-object v4, p0, Lcom/android/settings_ex/SettingsReceiverActivity;->mInflater:Landroid/view/LayoutInflater;
 
     .line 64
-    iget-object v4, p0, Lcom/android/settings/SettingsReceiverActivity;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v4, p0, Lcom/android/settings_ex/SettingsReceiverActivity;->mInflater:Landroid/view/LayoutInflater;
 
     const v5, 0x7f040181
 
@@ -269,7 +269,7 @@
 
     check-cast v4, Landroid/widget/CheckBox;
 
-    iput-object v4, p0, Lcom/android/settings/SettingsReceiverActivity;->mAlwaysCheck:Landroid/widget/CheckBox;
+    iput-object v4, p0, Lcom/android/settings_ex/SettingsReceiverActivity;->mAlwaysCheck:Landroid/widget/CheckBox;
 
     .line 66
     iget-object v4, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
@@ -330,12 +330,12 @@
 
     .line 76
     :goto_0
-    iget-boolean v4, p0, Lcom/android/settings/SettingsReceiverActivity;->isCMCCBlock:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/SettingsReceiverActivity;->isCMCCBlock:Z
 
     if-eqz v4, :cond_1
 
     .line 77
-    invoke-virtual {p0}, Lcom/android/settings/SettingsReceiverActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SettingsReceiverActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -353,7 +353,7 @@
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setText(I)V
 
     .line 79
-    iget-object v4, p0, Lcom/android/settings/SettingsReceiverActivity;->mAlwaysCheck:Landroid/widget/CheckBox;
+    iget-object v4, p0, Lcom/android/settings_ex/SettingsReceiverActivity;->mAlwaysCheck:Landroid/widget/CheckBox;
 
     const/16 v5, 0x8
 
@@ -364,7 +364,7 @@
     iput-object p0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mOnClickListener:Landroid/content/DialogInterface$OnClickListener;
 
     .line 84
-    invoke-virtual {p0}, Lcom/android/settings/SettingsReceiverActivity;->setupAlert()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/SettingsReceiverActivity;->setupAlert()V
 
     .line 85
     return-void

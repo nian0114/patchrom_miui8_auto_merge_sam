@@ -1,11 +1,11 @@
-.class Lcom/android/settings/personalvibration/PersonalVibrationProvider$DatabaseHelper;
+.class Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider$DatabaseHelper;
 .super Landroid/database/sqlite/SQLiteOpenHelper;
 .source "PersonalVibrationProvider.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/personalvibration/PersonalVibrationProvider;
+    value = Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -293,7 +293,7 @@
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     .line 63
-    invoke-virtual {p0, p1}, Lcom/android/settings/personalvibration/PersonalVibrationProvider$DatabaseHelper;->initDB(Landroid/database/sqlite/SQLiteDatabase;)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider$DatabaseHelper;->initDB(Landroid/database/sqlite/SQLiteDatabase;)V
 
     .line 64
     return-void
@@ -351,7 +351,7 @@
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     .line 70
-    invoke-virtual {p0, p1}, Lcom/android/settings/personalvibration/PersonalVibrationProvider$DatabaseHelper;->onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider$DatabaseHelper;->onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
 
     .line 71
     return-void

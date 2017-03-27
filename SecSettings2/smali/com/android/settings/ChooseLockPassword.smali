@@ -1,14 +1,14 @@
-.class public Lcom/android/settings/ChooseLockPassword;
-.super Lcom/android/settings/SettingsActivity;
+.class public Lcom/android/settings_ex/ChooseLockPassword;
+.super Lcom/android/settings_ex/SettingsActivity;
 .source "ChooseLockPassword.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/ChooseLockPassword$1;,
-        Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;,
-        Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
+        Lcom/android/settings_ex/ChooseLockPassword$1;,
+        Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;,
+        Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;
     }
 .end annotation
 
@@ -49,39 +49,39 @@
     const/4 v1, 0x0
 
     .line 130
-    sput-boolean v1, Lcom/android/settings/ChooseLockPassword;->isChangePwdRequired:Z
+    sput-boolean v1, Lcom/android/settings_ex/ChooseLockPassword;->isChangePwdRequired:Z
 
     .line 136
-    sput-boolean v1, Lcom/android/settings/ChooseLockPassword;->mForFingerprint:Z
+    sput-boolean v1, Lcom/android/settings_ex/ChooseLockPassword;->mForFingerprint:Z
 
     .line 137
-    sput-boolean v1, Lcom/android/settings/ChooseLockPassword;->mIsFromKnoxFinger:Z
+    sput-boolean v1, Lcom/android/settings_ex/ChooseLockPassword;->mIsFromKnoxFinger:Z
 
     .line 138
-    sput-boolean v1, Lcom/android/settings/ChooseLockPassword;->mIsRecovery:Z
+    sput-boolean v1, Lcom/android/settings_ex/ChooseLockPassword;->mIsRecovery:Z
 
     .line 140
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/android/settings/ChooseLockPassword;->mImm:Landroid/view/inputmethod/InputMethodManager;
+    sput-object v0, Lcom/android/settings_ex/ChooseLockPassword;->mImm:Landroid/view/inputmethod/InputMethodManager;
 
     .line 142
-    sput-boolean v1, Lcom/android/settings/ChooseLockPassword;->mFromPersonalPage:Z
+    sput-boolean v1, Lcom/android/settings_ex/ChooseLockPassword;->mFromPersonalPage:Z
 
     .line 143
-    sput-boolean v1, Lcom/android/settings/ChooseLockPassword;->mPersonalPage_isPin:Z
+    sput-boolean v1, Lcom/android/settings_ex/ChooseLockPassword;->mPersonalPage_isPin:Z
 
     .line 144
-    sput-boolean v1, Lcom/android/settings/ChooseLockPassword;->mForPrivateModeBackupKey:Z
+    sput-boolean v1, Lcom/android/settings_ex/ChooseLockPassword;->mForPrivateModeBackupKey:Z
 
     .line 145
-    sput-boolean v1, Lcom/android/settings/ChooseLockPassword;->mForAppLockBackupKey:Z
+    sput-boolean v1, Lcom/android/settings_ex/ChooseLockPassword;->mForAppLockBackupKey:Z
 
     .line 147
-    sput-boolean v1, Lcom/android/settings/ChooseLockPassword;->mFromAppLock:Z
+    sput-boolean v1, Lcom/android/settings_ex/ChooseLockPassword;->mFromAppLock:Z
 
     .line 148
-    sput-boolean v1, Lcom/android/settings/ChooseLockPassword;->mAppLock_isPin:Z
+    sput-boolean v1, Lcom/android/settings_ex/ChooseLockPassword;->mAppLock_isPin:Z
 
     return-void
 .end method
@@ -91,12 +91,12 @@
 
     .prologue
     .line 119
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivity;-><init>()V
 
     .line 132
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/ChooseLockPassword;->mAllowHomeAndBack:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/ChooseLockPassword;->mAllowHomeAndBack:Z
 
     .line 1847
     return-void
@@ -107,7 +107,7 @@
 
     .prologue
     .line 119
-    sget-boolean v0, Lcom/android/settings/ChooseLockPassword;->mIsFromKnoxFinger:Z
+    sget-boolean v0, Lcom/android/settings_ex/ChooseLockPassword;->mIsFromKnoxFinger:Z
 
     return v0
 .end method
@@ -117,19 +117,19 @@
 
     .prologue
     .line 119
-    sget-boolean v0, Lcom/android/settings/ChooseLockPassword;->mIsRecovery:Z
+    sget-boolean v0, Lcom/android/settings_ex/ChooseLockPassword;->mIsRecovery:Z
 
     return v0
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/ChooseLockPassword;Z)V
+.method static synthetic access$1200(Lcom/android/settings_ex/ChooseLockPassword;Z)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockPassword;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockPassword;
     .param p1, "x1"    # Z
 
     .prologue
     .line 119
-    invoke-direct {p0, p1}, Lcom/android/settings/ChooseLockPassword;->allowHomeAndBack(Z)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/ChooseLockPassword;->allowHomeAndBack(Z)V
 
     return-void
 .end method
@@ -139,7 +139,7 @@
 
     .prologue
     .line 119
-    sget-boolean v0, Lcom/android/settings/ChooseLockPassword;->mPersonalPage_isPin:Z
+    sget-boolean v0, Lcom/android/settings_ex/ChooseLockPassword;->mPersonalPage_isPin:Z
 
     return v0
 .end method
@@ -149,31 +149,31 @@
 
     .prologue
     .line 119
-    sget-boolean v0, Lcom/android/settings/ChooseLockPassword;->mAppLock_isPin:Z
+    sget-boolean v0, Lcom/android/settings_ex/ChooseLockPassword;->mAppLock_isPin:Z
 
     return v0
 .end method
 
-.method static synthetic access$2600(Lcom/android/settings/ChooseLockPassword;I)V
+.method static synthetic access$2600(Lcom/android/settings_ex/ChooseLockPassword;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockPassword;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockPassword;
     .param p1, "x1"    # I
 
     .prologue
     .line 119
-    invoke-direct {p0, p1}, Lcom/android/settings/ChooseLockPassword;->sendIntentToKnoxKeyguard(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/ChooseLockPassword;->sendIntentToKnoxKeyguard(I)V
 
     return-void
 .end method
 
-.method static synthetic access$2700(Lcom/android/settings/ChooseLockPassword;I)V
+.method static synthetic access$2700(Lcom/android/settings_ex/ChooseLockPassword;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ChooseLockPassword;
+    .param p0, "x0"    # Lcom/android/settings_ex/ChooseLockPassword;
     .param p1, "x1"    # I
 
     .prologue
     .line 119
-    invoke-direct {p0, p1}, Lcom/android/settings/ChooseLockPassword;->sendIntentToMDMFW(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/ChooseLockPassword;->sendIntentToMDMFW(I)V
 
     return-void
 .end method
@@ -183,7 +183,7 @@
 
     .prologue
     .line 119
-    sget-object v0, Lcom/android/settings/ChooseLockPassword;->mImm:Landroid/view/inputmethod/InputMethodManager;
+    sget-object v0, Lcom/android/settings_ex/ChooseLockPassword;->mImm:Landroid/view/inputmethod/InputMethodManager;
 
     return-object v0
 .end method
@@ -194,7 +194,7 @@
 
     .prologue
     .line 119
-    sput-object p0, Lcom/android/settings/ChooseLockPassword;->mImm:Landroid/view/inputmethod/InputMethodManager;
+    sput-object p0, Lcom/android/settings_ex/ChooseLockPassword;->mImm:Landroid/view/inputmethod/InputMethodManager;
 
     return-object p0
 .end method
@@ -204,7 +204,7 @@
 
     .prologue
     .line 119
-    sget-boolean v0, Lcom/android/settings/ChooseLockPassword;->mFromPersonalPage:Z
+    sget-boolean v0, Lcom/android/settings_ex/ChooseLockPassword;->mFromPersonalPage:Z
 
     return v0
 .end method
@@ -215,7 +215,7 @@
 
     .prologue
     .line 119
-    sput-boolean p0, Lcom/android/settings/ChooseLockPassword;->mFromPersonalPage:Z
+    sput-boolean p0, Lcom/android/settings_ex/ChooseLockPassword;->mFromPersonalPage:Z
 
     return p0
 .end method
@@ -225,7 +225,7 @@
 
     .prologue
     .line 119
-    sget-boolean v0, Lcom/android/settings/ChooseLockPassword;->mFromAppLock:Z
+    sget-boolean v0, Lcom/android/settings_ex/ChooseLockPassword;->mFromAppLock:Z
 
     return v0
 .end method
@@ -236,7 +236,7 @@
 
     .prologue
     .line 119
-    sput-boolean p0, Lcom/android/settings/ChooseLockPassword;->mFromAppLock:Z
+    sput-boolean p0, Lcom/android/settings_ex/ChooseLockPassword;->mFromAppLock:Z
 
     return p0
 .end method
@@ -246,7 +246,7 @@
 
     .prologue
     .line 119
-    sget-boolean v0, Lcom/android/settings/ChooseLockPassword;->mForAppLockBackupKey:Z
+    sget-boolean v0, Lcom/android/settings_ex/ChooseLockPassword;->mForAppLockBackupKey:Z
 
     return v0
 .end method
@@ -256,7 +256,7 @@
 
     .prologue
     .line 119
-    sget-boolean v0, Lcom/android/settings/ChooseLockPassword;->mForPrivateModeBackupKey:Z
+    sget-boolean v0, Lcom/android/settings_ex/ChooseLockPassword;->mForPrivateModeBackupKey:Z
 
     return v0
 .end method
@@ -266,7 +266,7 @@
 
     .prologue
     .line 119
-    sget-boolean v0, Lcom/android/settings/ChooseLockPassword;->mForFingerprint:Z
+    sget-boolean v0, Lcom/android/settings_ex/ChooseLockPassword;->mForFingerprint:Z
 
     return v0
 .end method
@@ -277,7 +277,7 @@
 
     .prologue
     .line 279
-    iput-boolean p1, p0, Lcom/android/settings/ChooseLockPassword;->mAllowHomeAndBack:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/ChooseLockPassword;->mAllowHomeAndBack:Z
 
     .line 280
     if-nez p1, :cond_0
@@ -298,7 +298,7 @@
     const/4 v1, 0x3
 
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPassword;->getComponentName()Landroid/content/ComponentName;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPassword;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v2
 
@@ -309,7 +309,7 @@
     .line 284
     const/16 v1, 0xbb
 
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPassword;->getComponentName()Landroid/content/ComponentName;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPassword;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v2
 
@@ -320,7 +320,7 @@
     .line 285
     const/16 v1, 0x3e9
 
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPassword;->getComponentName()Landroid/content/ComponentName;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPassword;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v2
 
@@ -368,7 +368,7 @@
 
     move v4, p4
 
-    invoke-static/range {v0 .. v5}, Lcom/android/settings/ChooseLockPassword;->createIntent(Landroid/content/Context;IIIZZ)Landroid/content/Intent;
+    invoke-static/range {v0 .. v5}, Lcom/android/settings_ex/ChooseLockPassword;->createIntent(Landroid/content/Context;IIIZZ)Landroid/content/Intent;
 
     move-result-object v6
 
@@ -417,7 +417,7 @@
 
     move v4, p4
 
-    invoke-static/range {v0 .. v5}, Lcom/android/settings/ChooseLockPassword;->createIntent(Landroid/content/Context;IIIZZ)Landroid/content/Intent;
+    invoke-static/range {v0 .. v5}, Lcom/android/settings_ex/ChooseLockPassword;->createIntent(Landroid/content/Context;IIIZZ)Landroid/content/Intent;
 
     move-result-object v6
 
@@ -446,7 +446,7 @@
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    const-class v2, Lcom/android/settings/ChooseLockPassword;
+    const-class v2, Lcom/android/settings_ex/ChooseLockPassword;
 
     invoke-virtual {v1, p0, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
@@ -548,7 +548,7 @@
 
     invoke-direct {v1, v2}, Landroid/os/UserHandle;-><init>(I)V
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/ChooseLockPassword;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings_ex/ChooseLockPassword;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
     .line 310
     return-void
@@ -579,7 +579,7 @@
 
     .prologue
     .line 204
-    const-class v0, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
+    const-class v0, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;
 
     return-object v0
 .end method
@@ -591,7 +591,7 @@
     .line 152
     new-instance v0, Landroid/content/Intent;
 
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->getIntent()Landroid/content/Intent;
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -601,7 +601,7 @@
     .local v0, "modIntent":Landroid/content/Intent;
     const-string v1, ":settings:show_fragment"
 
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPassword;->getFragmentClass()Ljava/lang/Class;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPassword;->getFragmentClass()Ljava/lang/Class;
 
     move-result-object v2
 
@@ -628,7 +628,7 @@
 
     .prologue
     .line 199
-    const-class v0, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
+    const-class v0, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -660,13 +660,13 @@
     const/4 v3, 0x0
 
     .line 210
-    sput-boolean v3, Lcom/android/settings/ChooseLockPassword;->isChangePwdRequired:Z
+    sput-boolean v3, Lcom/android/settings_ex/ChooseLockPassword;->isChangePwdRequired:Z
 
     .line 215
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 217
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPassword;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPassword;->getIntent()Landroid/content/Intent;
 
     move-result-object v4
 
@@ -692,7 +692,7 @@
     .line 221
     .local v0, "mIsPin":Z
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPassword;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPassword;->getIntent()Landroid/content/Intent;
 
     move-result-object v4
 
@@ -702,10 +702,10 @@
 
     move-result v4
 
-    sput-boolean v4, Lcom/android/settings/ChooseLockPassword;->mFromPersonalPage:Z
+    sput-boolean v4, Lcom/android/settings_ex/ChooseLockPassword;->mFromPersonalPage:Z
 
     .line 222
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPassword;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPassword;->getIntent()Landroid/content/Intent;
 
     move-result-object v4
 
@@ -715,10 +715,10 @@
 
     move-result v4
 
-    sput-boolean v4, Lcom/android/settings/ChooseLockPassword;->mFromAppLock:Z
+    sput-boolean v4, Lcom/android/settings_ex/ChooseLockPassword;->mFromAppLock:Z
 
     .line 223
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPassword;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPassword;->getIntent()Landroid/content/Intent;
 
     move-result-object v4
 
@@ -728,10 +728,10 @@
 
     move-result v4
 
-    sput-boolean v4, Lcom/android/settings/ChooseLockPassword;->mPersonalPage_isPin:Z
+    sput-boolean v4, Lcom/android/settings_ex/ChooseLockPassword;->mPersonalPage_isPin:Z
 
     .line 224
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPassword;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPassword;->getIntent()Landroid/content/Intent;
 
     move-result-object v4
 
@@ -741,10 +741,10 @@
 
     move-result v4
 
-    sput-boolean v4, Lcom/android/settings/ChooseLockPassword;->mAppLock_isPin:Z
+    sput-boolean v4, Lcom/android/settings_ex/ChooseLockPassword;->mAppLock_isPin:Z
 
     .line 225
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPassword;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPassword;->getIntent()Landroid/content/Intent;
 
     move-result-object v4
 
@@ -754,7 +754,7 @@
 
     move-result v4
 
-    sput-boolean v4, Lcom/android/settings/ChooseLockPassword;->mForFingerprint:Z
+    sput-boolean v4, Lcom/android/settings_ex/ChooseLockPassword;->mForFingerprint:Z
 
     .line 226
     const-string v4, "ChooseLockPassword"
@@ -769,7 +769,7 @@
 
     move-result-object v5
 
-    sget-boolean v6, Lcom/android/settings/ChooseLockPassword;->mForFingerprint:Z
+    sget-boolean v6, Lcom/android/settings_ex/ChooseLockPassword;->mForFingerprint:Z
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -782,7 +782,7 @@
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 227
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPassword;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPassword;->getIntent()Landroid/content/Intent;
 
     move-result-object v4
 
@@ -792,10 +792,10 @@
 
     move-result v4
 
-    sput-boolean v4, Lcom/android/settings/ChooseLockPassword;->mForPrivateModeBackupKey:Z
+    sput-boolean v4, Lcom/android/settings_ex/ChooseLockPassword;->mForPrivateModeBackupKey:Z
 
     .line 228
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPassword;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPassword;->getIntent()Landroid/content/Intent;
 
     move-result-object v4
 
@@ -805,7 +805,7 @@
 
     move-result v4
 
-    sput-boolean v4, Lcom/android/settings/ChooseLockPassword;->mForAppLockBackupKey:Z
+    sput-boolean v4, Lcom/android/settings_ex/ChooseLockPassword;->mForAppLockBackupKey:Z
 
     .line 229
     const-string v4, "ChooseLockPassword"
@@ -820,7 +820,7 @@
 
     move-result-object v5
 
-    sget-boolean v6, Lcom/android/settings/ChooseLockPassword;->mForPrivateModeBackupKey:Z
+    sget-boolean v6, Lcom/android/settings_ex/ChooseLockPassword;->mForPrivateModeBackupKey:Z
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -833,7 +833,7 @@
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 231
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPassword;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPassword;->getIntent()Landroid/content/Intent;
 
     move-result-object v4
 
@@ -843,7 +843,7 @@
 
     move-result v4
 
-    sput-boolean v4, Lcom/android/settings/ChooseLockPassword;->mIsFromKnoxFinger:Z
+    sput-boolean v4, Lcom/android/settings_ex/ChooseLockPassword;->mIsFromKnoxFinger:Z
 
     .line 232
     const-string v4, "ChooseLockPassword"
@@ -858,7 +858,7 @@
 
     move-result-object v5
 
-    sget-boolean v6, Lcom/android/settings/ChooseLockPassword;->mIsFromKnoxFinger:Z
+    sget-boolean v6, Lcom/android/settings_ex/ChooseLockPassword;->mIsFromKnoxFinger:Z
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -871,7 +871,7 @@
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 234
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPassword;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPassword;->getIntent()Landroid/content/Intent;
 
     move-result-object v4
 
@@ -881,36 +881,36 @@
 
     move-result v3
 
-    sput-boolean v3, Lcom/android/settings/ChooseLockPassword;->mIsRecovery:Z
+    sput-boolean v3, Lcom/android/settings_ex/ChooseLockPassword;->mIsRecovery:Z
 
     .line 235
     const-string v2, ""
 
     .line 236
     .local v2, "msg":Ljava/lang/CharSequence;
-    sget-boolean v3, Lcom/android/settings/ChooseLockPassword;->mFromPersonalPage:Z
+    sget-boolean v3, Lcom/android/settings_ex/ChooseLockPassword;->mFromPersonalPage:Z
 
     if-nez v3, :cond_1
 
-    sget-boolean v3, Lcom/android/settings/ChooseLockPassword;->mForPrivateModeBackupKey:Z
+    sget-boolean v3, Lcom/android/settings_ex/ChooseLockPassword;->mForPrivateModeBackupKey:Z
 
     if-eqz v3, :cond_4
 
     .line 237
     :cond_1
-    sget-boolean v3, Lcom/android/settings/ChooseLockPassword;->mPersonalPage_isPin:Z
+    sget-boolean v3, Lcom/android/settings_ex/ChooseLockPassword;->mPersonalPage_isPin:Z
 
     if-eqz v3, :cond_3
 
     const v3, 0x7f0e11ca
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/ChooseLockPassword;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/ChooseLockPassword;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v2
 
     .line 244
     :goto_1
-    invoke-virtual {p0, v2}, Lcom/android/settings/ChooseLockPassword;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/ChooseLockPassword;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 245
     return-void
@@ -929,7 +929,7 @@
     :cond_3
     const v3, 0x7f0e11cc
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/ChooseLockPassword;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/ChooseLockPassword;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -941,7 +941,7 @@
 
     const v3, 0x7f0e07c0
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/ChooseLockPassword;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/ChooseLockPassword;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -951,7 +951,7 @@
     :cond_5
     const v3, 0x7f0e07be
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/ChooseLockPassword;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/ChooseLockPassword;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -963,7 +963,7 @@
 
     .prologue
     .line 315
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->onDestroy()V
 
     .line 316
     return-void
@@ -988,11 +988,11 @@
 
     .line 251
     :cond_0
-    sget-boolean v1, Lcom/android/settings/ChooseLockPassword;->isChangePwdRequired:Z
+    sget-boolean v1, Lcom/android/settings_ex/ChooseLockPassword;->isChangePwdRequired:Z
 
     if-nez v1, :cond_1
 
-    iget-boolean v1, p0, Lcom/android/settings/ChooseLockPassword;->mAllowHomeAndBack:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/ChooseLockPassword;->mAllowHomeAndBack:Z
 
     if-nez v1, :cond_4
 
@@ -1001,42 +1001,42 @@
     if-ne p1, v3, :cond_3
 
     .line 253
-    # getter for: Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->mChooseLockPasswordFragment:Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
-    invoke-static {}, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->access$000()Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
+    # getter for: Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->mChooseLockPasswordFragment:Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;
+    invoke-static {}, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->access$000()Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;
 
     move-result-object v0
 
     .line 254
-    .local v0, "mFragmentObj":Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
-    invoke-virtual {v0}, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->isAdded()Z
+    .local v0, "mFragmentObj":Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;
+    invoke-virtual {v0}, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->isAdded()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
     .line 255
-    # getter for: Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->mUiStage:Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$Stage;
-    invoke-static {v0}, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->access$100(Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;)Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$Stage;
+    # getter for: Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->mUiStage:Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$Stage;
+    invoke-static {v0}, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->access$100(Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;)Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$Stage;
 
     move-result-object v1
 
-    sget-object v2, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$Stage;->NeedToConfirm:Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$Stage;
+    sget-object v2, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$Stage;->NeedToConfirm:Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$Stage;
 
     if-eq v1, v2, :cond_2
 
-    # getter for: Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->mUiStage:Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$Stage;
-    invoke-static {v0}, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->access$100(Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;)Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$Stage;
+    # getter for: Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->mUiStage:Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$Stage;
+    invoke-static {v0}, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->access$100(Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;)Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$Stage;
 
     move-result-object v1
 
-    sget-object v2, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$Stage;->ConfirmWrong:Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$Stage;
+    sget-object v2, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$Stage;->ConfirmWrong:Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$Stage;
 
     if-ne v1, v2, :cond_3
 
     .line 256
     :cond_2
-    # getter for: Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->mPasswordEntry:Landroid/widget/TextView;
-    invoke-static {v0}, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->access$200(Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->mPasswordEntry:Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->access$200(Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;)Landroid/widget/TextView;
 
     move-result-object v1
 
@@ -1045,12 +1045,12 @@
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 257
-    sget-object v1, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$Stage;->Introduction:Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$Stage;
+    sget-object v1, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$Stage;->Introduction:Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$Stage;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->updateStage(Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$Stage;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->updateStage(Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$Stage;)V
 
     .line 261
-    .end local v0    # "mFragmentObj":Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
+    .end local v0    # "mFragmentObj":Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;
     :cond_3
     const/4 v1, 0x1
 
@@ -1060,25 +1060,25 @@
 
     .line 264
     :cond_4
-    iget-boolean v1, p0, Lcom/android/settings/ChooseLockPassword;->mAllowHomeAndBack:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/ChooseLockPassword;->mAllowHomeAndBack:Z
 
     if-eqz v1, :cond_5
 
     .line 265
-    invoke-direct {p0, v2}, Lcom/android/settings/ChooseLockPassword;->sendIntentToMDMFW(I)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/ChooseLockPassword;->sendIntentToMDMFW(I)V
 
     .line 269
     :cond_5
-    iget-boolean v1, p0, Lcom/android/settings/ChooseLockPassword;->mAllowHomeAndBack:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/ChooseLockPassword;->mAllowHomeAndBack:Z
 
     if-eqz v1, :cond_6
 
     .line 270
-    invoke-direct {p0, v2}, Lcom/android/settings/ChooseLockPassword;->sendIntentToKnoxKeyguard(I)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/ChooseLockPassword;->sendIntentToKnoxKeyguard(I)V
 
     .line 275
     :cond_6
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v1
 

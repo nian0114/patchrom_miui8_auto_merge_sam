@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessibility/AccessibilitySettingsVision$4;
+.class Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$4;
 .super Landroid/database/ContentObserver;
 .source "AccessibilitySettingsVision.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    value = Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/AccessibilitySettingsVision;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 227
-    iput-object p1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$4;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$4;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -48,13 +48,13 @@
 
     const-string v4, "mAccessControlObserver onChange() "
 
-    invoke-static {v3, v4}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogD(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 231
-    iget-object v3, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$4;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$4;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    # invokes: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v3}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$500(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v3}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$500(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -74,20 +74,20 @@
     if-eqz v0, :cond_1
 
     .line 234
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$4;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$4;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    # getter for: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->mDisplayMagnificationPreferenceScreen:Landroid/preference/PreferenceScreen;
-    invoke-static {v1}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$600(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)Landroid/preference/PreferenceScreen;
+    # getter for: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->mDisplayMagnificationPreferenceScreen:Landroid/preference/PreferenceScreen;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$600(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 
     invoke-virtual {v1, v2}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
     .line 235
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$4;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$4;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    # getter for: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->mMagnifierPreferenceScreen:Landroid/preference/PreferenceScreen;
-    invoke-static {v1}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$700(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)Landroid/preference/PreferenceScreen;
+    # getter for: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->mMagnifierPreferenceScreen:Landroid/preference/PreferenceScreen;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$700(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 
@@ -107,20 +107,20 @@
     .line 237
     .restart local v0    # "mAccessControlEnabled":Z
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$4;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$4;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    # getter for: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->mDisplayMagnificationPreferenceScreen:Landroid/preference/PreferenceScreen;
-    invoke-static {v2}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$600(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)Landroid/preference/PreferenceScreen;
+    # getter for: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->mDisplayMagnificationPreferenceScreen:Landroid/preference/PreferenceScreen;
+    invoke-static {v2}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$600(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)Landroid/preference/PreferenceScreen;
 
     move-result-object v2
 
     invoke-virtual {v2, v1}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
     .line 238
-    iget-object v2, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$4;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$4;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    # getter for: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->mMagnifierPreferenceScreen:Landroid/preference/PreferenceScreen;
-    invoke-static {v2}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$700(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)Landroid/preference/PreferenceScreen;
+    # getter for: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->mMagnifierPreferenceScreen:Landroid/preference/PreferenceScreen;
+    invoke-static {v2}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$700(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)Landroid/preference/PreferenceScreen;
 
     move-result-object v2
 

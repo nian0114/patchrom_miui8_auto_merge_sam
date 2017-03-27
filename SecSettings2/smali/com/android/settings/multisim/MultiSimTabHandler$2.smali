@@ -1,4 +1,4 @@
-.class Lcom/android/settings/multisim/MultiSimTabHandler$2;
+.class Lcom/android/settings_ex/multisim/MultiSimTabHandler$2;
 .super Ljava/lang/Object;
 .source "MultiSimTabHandler.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/multisim/MultiSimTabHandler;
+    value = Lcom/android/settings_ex/multisim/MultiSimTabHandler;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/multisim/MultiSimTabHandler;
+.field final synthetic this$0:Lcom/android/settings_ex/multisim/MultiSimTabHandler;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/multisim/MultiSimTabHandler;)V
+.method constructor <init>(Lcom/android/settings_ex/multisim/MultiSimTabHandler;)V
     .locals 0
 
     .prologue
     .line 122
-    iput-object p1, p0, Lcom/android/settings/multisim/MultiSimTabHandler$2;->this$0:Lcom/android/settings/multisim/MultiSimTabHandler;
+    iput-object p1, p0, Lcom/android/settings_ex/multisim/MultiSimTabHandler$2;->this$0:Lcom/android/settings_ex/multisim/MultiSimTabHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,10 +44,10 @@
     .line 125
     new-instance v0, Landroid/view/View;
 
-    iget-object v1, p0, Lcom/android/settings/multisim/MultiSimTabHandler$2;->this$0:Lcom/android/settings/multisim/MultiSimTabHandler;
+    iget-object v1, p0, Lcom/android/settings_ex/multisim/MultiSimTabHandler$2;->this$0:Lcom/android/settings_ex/multisim/MultiSimTabHandler;
 
-    # getter for: Lcom/android/settings/multisim/MultiSimTabHandler;->mTabHost:Landroid/widget/TabHost;
-    invoke-static {v1}, Lcom/android/settings/multisim/MultiSimTabHandler;->access$200(Lcom/android/settings/multisim/MultiSimTabHandler;)Landroid/widget/TabHost;
+    # getter for: Lcom/android/settings_ex/multisim/MultiSimTabHandler;->mTabHost:Landroid/widget/TabHost;
+    invoke-static {v1}, Lcom/android/settings_ex/multisim/MultiSimTabHandler;->access$200(Lcom/android/settings_ex/multisim/MultiSimTabHandler;)Landroid/widget/TabHost;
 
     move-result-object v1
 

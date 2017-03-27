@@ -1,4 +1,4 @@
-.class Lcom/android/settings/deviceinfo/PrivateVolumeSettings$OtherInfoFragment$1;
+.class Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$OtherInfoFragment$1;
 .super Ljava/lang/Object;
 .source "PrivateVolumeSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/deviceinfo/PrivateVolumeSettings$OtherInfoFragment;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$OtherInfoFragment;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/PrivateVolumeSettings$OtherInfoFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$OtherInfoFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/PrivateVolumeSettings$OtherInfoFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$OtherInfoFragment;)V
     .locals 0
 
     .prologue
     .line 807
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$OtherInfoFragment$1;->this$0:Lcom/android/settings/deviceinfo/PrivateVolumeSettings$OtherInfoFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$OtherInfoFragment$1;->this$0:Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$OtherInfoFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -76,22 +76,22 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     .line 815
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$OtherInfoFragment$1;->this$0:Lcom/android/settings/deviceinfo/PrivateVolumeSettings$OtherInfoFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$OtherInfoFragment$1;->this$0:Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$OtherInfoFragment;
 
-    invoke-virtual {v1}, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$OtherInfoFragment;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$OtherInfoFragment;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lcom/android/settings/Utils;->isIntentAvailable(Landroid/content/Context;Landroid/content/Intent;)Z
+    invoke-static {v1, v0}, Lcom/android/settings_ex/Utils;->isIntentAvailable(Landroid/content/Context;Landroid/content/Intent;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
     .line 816
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$OtherInfoFragment$1;->this$0:Lcom/android/settings/deviceinfo/PrivateVolumeSettings$OtherInfoFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$OtherInfoFragment$1;->this$0:Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$OtherInfoFragment;
 
-    invoke-virtual {v1}, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$OtherInfoFragment;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {v1}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$OtherInfoFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v1
 
@@ -107,9 +107,9 @@
     .line 818
     .restart local v0    # "intent":Landroid/content/Intent;
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$OtherInfoFragment$1;->this$0:Lcom/android/settings/deviceinfo/PrivateVolumeSettings$OtherInfoFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$OtherInfoFragment$1;->this$0:Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$OtherInfoFragment;
 
-    invoke-virtual {v1, v0}, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$OtherInfoFragment;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$OtherInfoFragment;->startActivity(Landroid/content/Intent;)V
 
     .line 819
     return-void

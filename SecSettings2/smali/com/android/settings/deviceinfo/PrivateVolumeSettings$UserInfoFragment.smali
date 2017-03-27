@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/deviceinfo/PrivateVolumeSettings$UserInfoFragment;
+.class public Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$UserInfoFragment;
 .super Landroid/app/DialogFragment;
 .source "PrivateVolumeSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/PrivateVolumeSettings;
+    value = Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -45,15 +45,15 @@
 
     .line 831
     :cond_0
-    new-instance v1, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$UserInfoFragment;
+    new-instance v1, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$UserInfoFragment;
 
-    invoke-direct {v1}, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$UserInfoFragment;-><init>()V
+    invoke-direct {v1}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$UserInfoFragment;-><init>()V
 
     .line 832
-    .local v1, "dialog":Lcom/android/settings/deviceinfo/PrivateVolumeSettings$UserInfoFragment;
+    .local v1, "dialog":Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$UserInfoFragment;
     const/4 v2, 0x0
 
-    invoke-virtual {v1, p0, v2}, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$UserInfoFragment;->setTargetFragment(Landroid/app/Fragment;I)V
+    invoke-virtual {v1, p0, v2}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$UserInfoFragment;->setTargetFragment(Landroid/app/Fragment;I)V
 
     .line 833
     new-instance v0, Landroid/os/Bundle;
@@ -72,7 +72,7 @@
     invoke-virtual {v0, v2, p2}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
     .line 836
-    invoke-virtual {v1, v0}, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$UserInfoFragment;->setArguments(Landroid/os/Bundle;)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$UserInfoFragment;->setArguments(Landroid/os/Bundle;)V
 
     .line 837
     invoke-virtual {p0}, Landroid/app/Fragment;->getFragmentManager()Landroid/app/FragmentManager;
@@ -81,7 +81,7 @@
 
     const-string v3, "userInfo"
 
-    invoke-virtual {v1, v2, v3}, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$UserInfoFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v3}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$UserInfoFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -94,13 +94,13 @@
 
     .prologue
     .line 842
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$UserInfoFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$UserInfoFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     .line 844
     .local v1, "context":Landroid/content/Context;
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$UserInfoFragment;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$UserInfoFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v4
 
@@ -112,7 +112,7 @@
 
     .line 845
     .local v2, "userLabel":Ljava/lang/CharSequence;
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$UserInfoFragment;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$UserInfoFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v4
 
@@ -144,7 +144,7 @@
 
     aput-object v3, v5, v6
 
-    invoke-virtual {p0, v4, v5}, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$UserInfoFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v4, v5}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$UserInfoFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 

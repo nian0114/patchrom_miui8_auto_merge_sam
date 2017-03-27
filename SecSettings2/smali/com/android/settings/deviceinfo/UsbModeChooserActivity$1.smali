@@ -1,11 +1,11 @@
-.class Lcom/android/settings/deviceinfo/UsbModeChooserActivity$1;
+.class Lcom/android/settings_ex/deviceinfo/UsbModeChooserActivity$1;
 .super Landroid/content/BroadcastReceiver;
 .source "UsbModeChooserActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/UsbModeChooserActivity;
+    value = Lcom/android/settings_ex/deviceinfo/UsbModeChooserActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/UsbModeChooserActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/UsbModeChooserActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/UsbModeChooserActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/UsbModeChooserActivity;)V
     .locals 0
 
     .prologue
     .line 68
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/UsbModeChooserActivity$1;->this$0:Lcom/android/settings/deviceinfo/UsbModeChooserActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/UsbModeChooserActivity$1;->this$0:Lcom/android/settings_ex/deviceinfo/UsbModeChooserActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -53,9 +53,9 @@
     if-nez v0, :cond_0
 
     .line 73
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/UsbModeChooserActivity$1;->this$0:Lcom/android/settings/deviceinfo/UsbModeChooserActivity;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/UsbModeChooserActivity$1;->this$0:Lcom/android/settings_ex/deviceinfo/UsbModeChooserActivity;
 
-    invoke-virtual {v1}, Lcom/android/settings/deviceinfo/UsbModeChooserActivity;->finish()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/deviceinfo/UsbModeChooserActivity;->finish()V
 
     .line 76
     :cond_0

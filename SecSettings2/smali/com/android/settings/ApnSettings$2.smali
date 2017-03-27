@@ -1,11 +1,11 @@
-.class Lcom/android/settings/ApnSettings$2;
+.class Lcom/android/settings_ex/ApnSettings$2;
 .super Landroid/content/BroadcastReceiver;
 .source "ApnSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/ApnSettings;
+    value = Lcom/android/settings_ex/ApnSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/ApnSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/ApnSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/ApnSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/ApnSettings;)V
     .locals 0
 
     .prologue
     .line 217
-    iput-object p1, p0, Lcom/android/settings/ApnSettings$2;->this$0:Lcom/android/settings/ApnSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/ApnSettings$2;->this$0:Lcom/android/settings_ex/ApnSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -66,15 +66,15 @@
     if-eqz v1, :cond_0
 
     .line 222
-    invoke-static {p1}, Lcom/android/settings/Utils;->isTetheringEnabled(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isTetheringEnabled(Landroid/content/Context;)Z
 
     move-result v0
 
     .line 223
     .local v0, "tethered":Z
-    iget-object v1, p0, Lcom/android/settings/ApnSettings$2;->this$0:Lcom/android/settings/ApnSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/ApnSettings$2;->this$0:Lcom/android/settings_ex/ApnSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/ApnSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {v1}, Lcom/android/settings_ex/ApnSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v2
 
@@ -86,9 +86,9 @@
     invoke-virtual {v2, v1}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
     .line 224
-    iget-object v1, p0, Lcom/android/settings/ApnSettings$2;->this$0:Lcom/android/settings/ApnSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/ApnSettings$2;->this$0:Lcom/android/settings_ex/ApnSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/ApnSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/ApnSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 

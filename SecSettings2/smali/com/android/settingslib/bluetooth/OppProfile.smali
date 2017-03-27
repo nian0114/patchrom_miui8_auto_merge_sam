@@ -1,9 +1,9 @@
-.class final Lcom/android/settingslib/bluetooth/OppProfile;
+.class final Lcom/android/settings_exlib/bluetooth/OppProfile;
 .super Ljava/lang/Object;
 .source "OppProfile.java"
 
 # interfaces
-.implements Lcom/android/settingslib/bluetooth/LocalBluetoothProfile;
+.implements Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfile;
 
 
 # direct methods
@@ -69,7 +69,7 @@
 
     .prologue
     .line 79
-    sget v0, Lcom/android/settingslib/R$string;->bluetooth_profile_opp:I
+    sget v0, Lcom/android/settings_exlib/R$string;->bluetooth_profile_opp:I
 
     return v0
 .end method
@@ -80,7 +80,7 @@
 
     .prologue
     .line 83
-    sget v0, Lcom/android/settingslib/R$string;->bluetooth_profile_opp:I
+    sget v0, Lcom/android/settings_exlib/R$string;->bluetooth_profile_opp:I
 
     return v0
 .end method

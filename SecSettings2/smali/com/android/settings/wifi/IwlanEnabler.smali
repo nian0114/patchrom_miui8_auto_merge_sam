@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/IwlanEnabler;
+.class public Lcom/android/settings_ex/wifi/IwlanEnabler;
 .super Ljava/lang/Object;
 .source "IwlanEnabler.java"
 
@@ -42,117 +42,117 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/wifi/IwlanEnabler;->IWLAN_FREE_SPACE:Ljava/lang/Long;
+    sput-object v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->IWLAN_FREE_SPACE:Ljava/lang/Long;
 
     .line 80
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/android/settings/wifi/IwlanEnabler;->mIsIwlanEnable:Z
+    sput-boolean v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIsIwlanEnable:Z
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/wifi/IwlanEnabler;)Z
+.method static synthetic access$000(Lcom/android/settings_ex/wifi/IwlanEnabler;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/IwlanEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/IwlanEnabler;
 
     .prologue
     .line 35
-    invoke-direct {p0}, Lcom/android/settings/wifi/IwlanEnabler;->isWifiConnected()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/IwlanEnabler;->isWifiConnected()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/wifi/IwlanEnabler;)I
+.method static synthetic access$100(Lcom/android/settings_ex/wifi/IwlanEnabler;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/IwlanEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/IwlanEnabler;
 
     .prologue
     .line 35
-    iget v0, p0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlandState:I
+    iget v0, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlandState:I
 
     return v0
 .end method
 
-.method static synthetic access$102(Lcom/android/settings/wifi/IwlanEnabler;I)I
+.method static synthetic access$102(Lcom/android/settings_ex/wifi/IwlanEnabler;I)I
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/IwlanEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/IwlanEnabler;
     .param p1, "x1"    # I
 
     .prologue
     .line 35
-    iput p1, p0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlandState:I
+    iput p1, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlandState:I
 
     return p1
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/wifi/IwlanEnabler;)Z
+.method static synthetic access$200(Lcom/android/settings_ex/wifi/IwlanEnabler;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/IwlanEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/IwlanEnabler;
 
     .prologue
     .line 35
-    invoke-direct {p0}, Lcom/android/settings/wifi/IwlanEnabler;->isAvailableDataStorage()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/IwlanEnabler;->isAvailableDataStorage()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/wifi/IwlanEnabler;)Landroid/preference/SwitchPreference;
+.method static synthetic access$300(Lcom/android/settings_ex/wifi/IwlanEnabler;)Landroid/preference/SwitchPreference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/IwlanEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/IwlanEnabler;
 
     .prologue
     .line 35
-    iget-object v0, p0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/wifi/IwlanEnabler;)Ljava/lang/String;
+.method static synthetic access$400(Lcom/android/settings_ex/wifi/IwlanEnabler;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/IwlanEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/IwlanEnabler;
 
     .prologue
     .line 35
-    iget-object v0, p0, Lcom/android/settings/wifi/IwlanEnabler;->mPdgDomainName:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mPdgDomainName:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/wifi/IwlanEnabler;)Ljava/lang/String;
+.method static synthetic access$500(Lcom/android/settings_ex/wifi/IwlanEnabler;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/IwlanEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/IwlanEnabler;
 
     .prologue
     .line 35
-    iget-object v0, p0, Lcom/android/settings/wifi/IwlanEnabler;->mDefaultPdgDomainName:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mDefaultPdgDomainName:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/wifi/IwlanEnabler;)Landroid/content/Context;
+.method static synthetic access$600(Lcom/android/settings_ex/wifi/IwlanEnabler;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/IwlanEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/IwlanEnabler;
 
     .prologue
     .line 35
-    iget-object v0, p0, Lcom/android/settings/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$702(Lcom/android/settings/wifi/IwlanEnabler;Z)Z
+.method static synthetic access$702(Lcom/android/settings_ex/wifi/IwlanEnabler;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/IwlanEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/IwlanEnabler;
     .param p1, "x1"    # Z
 
     .prologue
     .line 35
-    iput-boolean p1, p0, Lcom/android/settings/wifi/IwlanEnabler;->mIsVpnConnected:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIsVpnConnected:Z
 
     return p1
 .end method
@@ -196,7 +196,7 @@
 
     .line 433
     .local v4, "space":J
-    sget-object v7, Lcom/android/settings/wifi/IwlanEnabler;->IWLAN_FREE_SPACE:Ljava/lang/Long;
+    sget-object v7, Lcom/android/settings_ex/wifi/IwlanEnabler;->IWLAN_FREE_SPACE:Ljava/lang/Long;
 
     invoke-virtual {v7}, Ljava/lang/Long;->longValue()J
 
@@ -495,7 +495,7 @@
 
     .prologue
     .line 440
-    sget-boolean v0, Lcom/android/settings/wifi/IwlanEnabler;->mIsIwlanEnable:Z
+    sget-boolean v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIsIwlanEnable:Z
 
     return v0
 .end method
@@ -505,7 +505,7 @@
 
     .prologue
     .line 405
-    iget-object v2, p0, Lcom/android/settings/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
 
     const-string v3, "wifi"
 
@@ -532,11 +532,11 @@
     .line 408
     const/4 v2, 0x0
 
-    iput-boolean v2, p0, Lcom/android/settings/wifi/IwlanEnabler;->mIsWifiConnected:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIsWifiConnected:Z
 
     .line 413
     :goto_0
-    iget-boolean v2, p0, Lcom/android/settings/wifi/IwlanEnabler;->mIsWifiConnected:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIsWifiConnected:Z
 
     return v2
 
@@ -544,7 +544,7 @@
     :cond_0
     const/4 v2, 0x1
 
-    iput-boolean v2, p0, Lcom/android/settings/wifi/IwlanEnabler;->mIsWifiConnected:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIsWifiConnected:Z
 
     goto :goto_0
 .end method
@@ -581,7 +581,7 @@
     iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     .line 449
-    iget-object v3, p0, Lcom/android/settings/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
 
     const-string v4, "wifi"
 
@@ -611,7 +611,7 @@
 
     .line 176
     .local v1, "str":Ljava/lang/String;
-    iget-object v2, p0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v2, v4}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
@@ -627,16 +627,16 @@
 
     .line 180
     .local v0, "intent":Landroid/content/Intent;
-    iget-object v2, p0, Lcom/android/settings/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 181
-    invoke-direct {p0}, Lcom/android/settings/wifi/IwlanEnabler;->loggingIwlan()V
+    invoke-direct {p0}, Lcom/android/settings_ex/wifi/IwlanEnabler;->loggingIwlan()V
 
     .line 187
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/wifi/IwlanEnabler;->mPdgDomainName:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mPdgDomainName:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -659,7 +659,7 @@
 
     .line 184
     .restart local v0    # "intent":Landroid/content/Intent;
-    iget-object v2, p0, Lcom/android/settings/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
@@ -667,9 +667,9 @@
 
     .line 189
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/wifi/IwlanEnabler;->mPdgDomainName:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mPdgDomainName:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/android/settings/wifi/IwlanEnabler;->mDefaultPdgDomainName:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mDefaultPdgDomainName:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -678,7 +678,7 @@
     if-eqz v2, :cond_2
 
     .line 190
-    iget-object v2, p0, Lcom/android/settings/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
 
     const v3, 0x7f0e036a
 
@@ -688,14 +688,14 @@
 
     .line 195
     :goto_2
-    iget v2, p0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlandState:I
+    iget v2, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlandState:I
 
     const/4 v3, 0x2
 
     if-ne v2, v3, :cond_3
 
     .line 196
-    iget-object v2, p0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v2, v4}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
@@ -714,7 +714,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
 
     const v4, 0x7f0e0370
 
@@ -732,7 +732,7 @@
 
     .line 203
     :goto_3
-    iget-object v2, p0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v2, v1}, Landroid/preference/SwitchPreference;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -740,13 +740,13 @@
 
     .line 192
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/wifi/IwlanEnabler;->mPdgDomainName:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mPdgDomainName:Ljava/lang/String;
 
     goto :goto_2
 
     .line 199
     :cond_3
-    iget-object v2, p0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
 
     const/4 v3, 0x1
 
@@ -767,7 +767,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
 
     const v4, 0x7f0e036f
 
@@ -794,7 +794,7 @@
     .line 417
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    iget-object v1, p0, Lcom/android/settings/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -802,7 +802,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
 
     const v2, 0x7f0e0380
 
@@ -810,9 +810,9 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/android/settings/wifi/IwlanEnabler$2;
+    new-instance v2, Lcom/android/settings_ex/wifi/IwlanEnabler$2;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/wifi/IwlanEnabler$2;-><init>(Lcom/android/settings/wifi/IwlanEnabler;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/wifi/IwlanEnabler$2;-><init>(Lcom/android/settings_ex/wifi/IwlanEnabler;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -832,7 +832,7 @@
 
     .prologue
     .line 353
-    iget-object v0, p0, Lcom/android/settings/wifi/IwlanEnabler;->mDefaultPdgDomainName:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mDefaultPdgDomainName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -841,7 +841,7 @@
     if-eqz v0, :cond_0
 
     .line 354
-    iget-object v0, p0, Lcom/android/settings/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
 
     const v1, 0x7f0e036a
 
@@ -868,16 +868,16 @@
 
     move-result v0
 
-    invoke-direct {p0, v0}, Lcom/android/settings/wifi/IwlanEnabler;->setIwlanEnabled(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/wifi/IwlanEnabler;->setIwlanEnabled(Z)V
 
     .line 167
     const-string v0, "racoon"
 
-    invoke-direct {p0, v0}, Lcom/android/settings/wifi/IwlanEnabler;->isDeamonRunning(Ljava/lang/String;)Z
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/wifi/IwlanEnabler;->isDeamonRunning(Ljava/lang/String;)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/wifi/IwlanEnabler;->mIsVpnConnected:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIsVpnConnected:Z
 
     .line 169
     const/4 v0, 0x0
@@ -908,7 +908,7 @@
     .line 238
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanNetworks:Landroid/preference/PreferenceCategory;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanNetworks:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v12}, Landroid/preference/PreferenceCategory;->removeAll()V
 
@@ -955,7 +955,7 @@
     .line 248
     move-object/from16 v0, p0
 
-    iput-object v10, v0, Lcom/android/settings/wifi/IwlanEnabler;->mPdgDomainName:Ljava/lang/String;
+    iput-object v10, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mPdgDomainName:Ljava/lang/String;
 
     .line 251
     :cond_0
@@ -976,7 +976,7 @@
     .line 253
     move-object/from16 v0, p0
 
-    iput-object v2, v0, Lcom/android/settings/wifi/IwlanEnabler;->mDefaultPdgDomainName:Ljava/lang/String;
+    iput-object v2, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mDefaultPdgDomainName:Ljava/lang/String;
 
     .line 256
     :cond_1
@@ -1019,7 +1019,7 @@
     const/4 v5, 0x0
 
     .line 261
-    .local v5, "iwlanNetwork":Lcom/android/settings/wifi/IwlanNetwork;
+    .local v5, "iwlanNetwork":Lcom/android/settings_ex/wifi/IwlanNetwork;
     invoke-virtual {v6, v4}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
     move-result-object v12
@@ -1031,12 +1031,12 @@
     if-eqz v12, :cond_2
 
     .line 262
-    new-instance v5, Lcom/android/settings/wifi/IwlanNetwork;
+    new-instance v5, Lcom/android/settings_ex/wifi/IwlanNetwork;
 
-    .end local v5    # "iwlanNetwork":Lcom/android/settings/wifi/IwlanNetwork;
+    .end local v5    # "iwlanNetwork":Lcom/android/settings_ex/wifi/IwlanNetwork;
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6, v4}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
@@ -1054,27 +1054,27 @@
 
     move-result-object v15
 
-    invoke-direct {v5, v12, v13, v14, v15}, Lcom/android/settings/wifi/IwlanNetwork;-><init>(Landroid/content/Context;Lorg/json/JSONObject;ZLjava/lang/String;)V
+    invoke-direct {v5, v12, v13, v14, v15}, Lcom/android/settings_ex/wifi/IwlanNetwork;-><init>(Landroid/content/Context;Lorg/json/JSONObject;ZLjava/lang/String;)V
 
     .line 269
-    .restart local v5    # "iwlanNetwork":Lcom/android/settings/wifi/IwlanNetwork;
+    .restart local v5    # "iwlanNetwork":Lcom/android/settings_ex/wifi/IwlanNetwork;
     :goto_1
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanNetworks:Landroid/preference/PreferenceCategory;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanNetworks:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v12, v5}, Landroid/preference/PreferenceCategory;->addPreference(Landroid/preference/Preference;)Z
 
     .line 270
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v12}, Landroid/preference/SwitchPreference;->getKey()Ljava/lang/String;
 
     move-result-object v12
 
-    invoke-virtual {v5, v12}, Lcom/android/settings/wifi/IwlanNetwork;->setDependency(Ljava/lang/String;)V
+    invoke-virtual {v5, v12}, Lcom/android/settings_ex/wifi/IwlanNetwork;->setDependency(Ljava/lang/String;)V
 
     .line 258
     add-int/lit8 v4, v4, 0x1
@@ -1083,12 +1083,12 @@
 
     .line 265
     :cond_2
-    new-instance v5, Lcom/android/settings/wifi/IwlanNetwork;
+    new-instance v5, Lcom/android/settings_ex/wifi/IwlanNetwork;
 
-    .end local v5    # "iwlanNetwork":Lcom/android/settings/wifi/IwlanNetwork;
+    .end local v5    # "iwlanNetwork":Lcom/android/settings_ex/wifi/IwlanNetwork;
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6, v4}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
@@ -1106,18 +1106,18 @@
 
     move-result-object v15
 
-    invoke-direct {v5, v12, v13, v14, v15}, Lcom/android/settings/wifi/IwlanNetwork;-><init>(Landroid/content/Context;Lorg/json/JSONObject;ZLjava/lang/String;)V
+    invoke-direct {v5, v12, v13, v14, v15}, Lcom/android/settings_ex/wifi/IwlanNetwork;-><init>(Landroid/content/Context;Lorg/json/JSONObject;ZLjava/lang/String;)V
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .restart local v5    # "iwlanNetwork":Lcom/android/settings/wifi/IwlanNetwork;
+    .restart local v5    # "iwlanNetwork":Lcom/android/settings_ex/wifi/IwlanNetwork;
     goto :goto_1
 
     .line 273
     .end local v1    # "connectedNetworkName":Ljava/lang/String;
     .end local v2    # "defaultPdgDomainName":Ljava/lang/String;
     .end local v4    # "i":I
-    .end local v5    # "iwlanNetwork":Lcom/android/settings/wifi/IwlanNetwork;
+    .end local v5    # "iwlanNetwork":Lcom/android/settings_ex/wifi/IwlanNetwork;
     .end local v6    # "jsonArray":Lorg/json/JSONArray;
     .end local v8    # "jsonObject":Lorg/json/JSONObject;
     .end local v10    # "pdgDomainName":Ljava/lang/String;
@@ -1158,7 +1158,7 @@
 
     move-object/from16 v0, p0
 
-    iput v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlandState:I
+    iput v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlandState:I
 
     .line 282
     :cond_4
@@ -1183,7 +1183,7 @@
 
     move-object/from16 v0, p0
 
-    iput-object v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mPdgDomainName:Ljava/lang/String;
+    iput-object v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mPdgDomainName:Ljava/lang/String;
 
     .line 286
     :cond_5
@@ -1208,7 +1208,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v12}, Lcom/android/settings/wifi/IwlanEnabler;->getPdgName(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v12}, Lcom/android/settings_ex/wifi/IwlanEnabler;->getPdgName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
@@ -1259,26 +1259,26 @@
     :goto_4
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v12, v11}, Landroid/preference/SwitchPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 302
     move-object/from16 v0, p0
 
-    iget v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlandState:I
+    iget v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlandState:I
 
     if-gtz v12, :cond_e
 
     .line 303
     move-object/from16 v0, p0
 
-    iget-boolean v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIsWifiConnected:Z
+    iget-boolean v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIsWifiConnected:Z
 
     if-eqz v12, :cond_d
 
     .line 305
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/wifi/IwlanEnabler;->isAvailableDataStorage()Z
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/wifi/IwlanEnabler;->isAvailableDataStorage()Z
 
     move-result v12
 
@@ -1287,7 +1287,7 @@
     .line 306
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
 
     const/4 v13, 0x1
 
@@ -1297,7 +1297,7 @@
     :goto_5
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
 
     const/4 v13, 0x0
 
@@ -1308,7 +1308,7 @@
     :goto_6
     move-object/from16 v0, p0
 
-    iget v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlandState:I
+    iget v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlandState:I
 
     const/4 v13, 0x2
 
@@ -1317,7 +1317,7 @@
     .line 331
     const/4 v12, 0x1
 
-    sput-boolean v12, Lcom/android/settings/wifi/IwlanEnabler;->mIsIwlanEnable:Z
+    sput-boolean v12, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIsIwlanEnable:Z
 
     .line 336
     :goto_7
@@ -1334,7 +1334,7 @@
     .line 337
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
 
     const-string v13, "extra.IWLAN_CHECKBOX_ENABLED"
 
@@ -1363,7 +1363,7 @@
     .line 341
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v12}, Landroid/preference/SwitchPreference;->isEnabled()Z
 
@@ -1374,7 +1374,7 @@
     .line 342
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
 
     const-string v13, "extra.IWLAN_CHECKBOX_CHECKED"
 
@@ -1411,7 +1411,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v12}, Lcom/android/settings/wifi/IwlanEnabler;->showAlertDialog(Ljava/lang/String;)V
+    invoke-direct {v0, v12}, Lcom/android/settings_ex/wifi/IwlanEnabler;->showAlertDialog(Ljava/lang/String;)V
 
     .line 350
     :cond_9
@@ -1421,11 +1421,11 @@
     :cond_a
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mPdgDomainName:Ljava/lang/String;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mPdgDomainName:Ljava/lang/String;
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v12}, Lcom/android/settings/wifi/IwlanEnabler;->getPdgName(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v12}, Lcom/android/settings_ex/wifi/IwlanEnabler;->getPdgName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
@@ -1449,7 +1449,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
+    iget-object v13, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mContext:Landroid/content/Context;
 
     const v14, 0x7f0e0371
 
@@ -1471,7 +1471,7 @@
     :cond_c
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
 
     const/4 v13, 0x0
 
@@ -1483,7 +1483,7 @@
     :cond_d
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
 
     const/4 v13, 0x0
 
@@ -1495,7 +1495,7 @@
     :cond_e
     move-object/from16 v0, p0
 
-    iget v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlandState:I
+    iget v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlandState:I
 
     const/4 v13, 0x1
 
@@ -1504,7 +1504,7 @@
     .line 315
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
 
     const/4 v13, 0x0
 
@@ -1513,7 +1513,7 @@
     .line 316
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
 
     const/4 v13, 0x1
 
@@ -1525,7 +1525,7 @@
     :cond_f
     move-object/from16 v0, p0
 
-    iget v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlandState:I
+    iget v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlandState:I
 
     const/4 v13, 0x3
 
@@ -1534,7 +1534,7 @@
     .line 318
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
 
     const/4 v13, 0x0
 
@@ -1543,7 +1543,7 @@
     .line 319
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
 
     const/4 v13, 0x0
 
@@ -1555,14 +1555,14 @@
     :cond_10
     move-object/from16 v0, p0
 
-    iget v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlandState:I
+    iget v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlandState:I
 
     const/4 v13, 0x2
 
     if-ne v12, v13, :cond_6
 
     .line 322
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/wifi/IwlanEnabler;->isAvailableDataStorage()Z
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/wifi/IwlanEnabler;->isAvailableDataStorage()Z
 
     move-result v12
 
@@ -1571,7 +1571,7 @@
     .line 323
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
 
     const/4 v13, 0x1
 
@@ -1581,7 +1581,7 @@
     :goto_8
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
 
     const/4 v13, 0x1
 
@@ -1593,7 +1593,7 @@
     :cond_11
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIwlanSwitchPref:Landroid/preference/SwitchPreference;
 
     const/4 v13, 0x0
 
@@ -1605,7 +1605,7 @@
     :cond_12
     const/4 v12, 0x0
 
-    sput-boolean v12, Lcom/android/settings/wifi/IwlanEnabler;->mIsIwlanEnable:Z
+    sput-boolean v12, Lcom/android/settings_ex/wifi/IwlanEnabler;->mIsIwlanEnable:Z
 
     goto/16 :goto_7
 

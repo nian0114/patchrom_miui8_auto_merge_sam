@@ -1,11 +1,11 @@
-.class Lcom/android/settings/applications/UninstallMultipleScreen$AppAdapter;
+.class Lcom/android/settings_ex/applications/UninstallMultipleScreen$AppAdapter;
 .super Landroid/widget/BaseAdapter;
 .source "UninstallMultipleScreen.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/UninstallMultipleScreen;
+    value = Lcom/android/settings_ex/applications/UninstallMultipleScreen;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,17 +22,17 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/applications/UninstallMultipleScreen$PInfo;",
+            "Lcom/android/settings_ex/applications/UninstallMultipleScreen$PInfo;",
             ">;"
         }
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/android/settings/applications/UninstallMultipleScreen;
+.field final synthetic this$0:Lcom/android/settings_ex/applications/UninstallMultipleScreen;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/settings/applications/UninstallMultipleScreen;Landroid/content/Context;Ljava/util/ArrayList;)V
+.method public constructor <init>(Lcom/android/settings_ex/applications/UninstallMultipleScreen;Landroid/content/Context;Ljava/util/ArrayList;)V
     .locals 1
     .param p2, "context"    # Landroid/content/Context;
     .annotation system Ldalvik/annotation/Signature;
@@ -41,20 +41,20 @@
             "Landroid/content/Context;",
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/applications/UninstallMultipleScreen$PInfo;",
+            "Lcom/android/settings_ex/applications/UninstallMultipleScreen$PInfo;",
             ">;)V"
         }
     .end annotation
 
     .prologue
     .line 125
-    .local p3, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/settings/applications/UninstallMultipleScreen$PInfo;>;"
-    iput-object p1, p0, Lcom/android/settings/applications/UninstallMultipleScreen$AppAdapter;->this$0:Lcom/android/settings/applications/UninstallMultipleScreen;
+    .local p3, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/settings_ex/applications/UninstallMultipleScreen$PInfo;>;"
+    iput-object p1, p0, Lcom/android/settings_ex/applications/UninstallMultipleScreen$AppAdapter;->this$0:Lcom/android/settings_ex/applications/UninstallMultipleScreen;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
     .line 126
-    iput-object p3, p0, Lcom/android/settings/applications/UninstallMultipleScreen$AppAdapter;->mList:Ljava/util/ArrayList;
+    iput-object p3, p0, Lcom/android/settings_ex/applications/UninstallMultipleScreen$AppAdapter;->mList:Ljava/util/ArrayList;
 
     .line 127
     const-string v0, "layout_inflater"
@@ -65,7 +65,7 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    iput-object v0, p0, Lcom/android/settings/applications/UninstallMultipleScreen$AppAdapter;->mInflater:Landroid/view/LayoutInflater;
+    iput-object v0, p0, Lcom/android/settings_ex/applications/UninstallMultipleScreen$AppAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     .line 128
     return-void
@@ -78,7 +78,7 @@
 
     .prologue
     .line 133
-    iget-object v0, p0, Lcom/android/settings/applications/UninstallMultipleScreen$AppAdapter;->mList:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/UninstallMultipleScreen$AppAdapter;->mList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -93,7 +93,7 @@
 
     .prologue
     .line 139
-    iget-object v0, p0, Lcom/android/settings/applications/UninstallMultipleScreen$AppAdapter;->mList:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/UninstallMultipleScreen$AppAdapter;->mList:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -121,7 +121,7 @@
 
     .prologue
     .line 151
-    iget-object v5, p0, Lcom/android/settings/applications/UninstallMultipleScreen$AppAdapter;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v5, p0, Lcom/android/settings_ex/applications/UninstallMultipleScreen$AppAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     const v6, 0x7f0401ea
 
@@ -149,10 +149,10 @@
 
     .line 154
     .local v0, "checkBox":Landroid/widget/CheckBox;
-    iget-object v5, p0, Lcom/android/settings/applications/UninstallMultipleScreen$AppAdapter;->this$0:Lcom/android/settings/applications/UninstallMultipleScreen;
+    iget-object v5, p0, Lcom/android/settings_ex/applications/UninstallMultipleScreen$AppAdapter;->this$0:Lcom/android/settings_ex/applications/UninstallMultipleScreen;
 
-    # getter for: Lcom/android/settings/applications/UninstallMultipleScreen;->mAppListView:Landroid/widget/ListView;
-    invoke-static {v5}, Lcom/android/settings/applications/UninstallMultipleScreen;->access$100(Lcom/android/settings/applications/UninstallMultipleScreen;)Landroid/widget/ListView;
+    # getter for: Lcom/android/settings_ex/applications/UninstallMultipleScreen;->mAppListView:Landroid/widget/ListView;
+    invoke-static {v5}, Lcom/android/settings_ex/applications/UninstallMultipleScreen;->access$100(Lcom/android/settings_ex/applications/UninstallMultipleScreen;)Landroid/widget/ListView;
 
     move-result-object v5
 
@@ -177,16 +177,16 @@
 
     .line 156
     .local v1, "imageView":Landroid/widget/ImageView;
-    iget-object v5, p0, Lcom/android/settings/applications/UninstallMultipleScreen$AppAdapter;->mList:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/settings_ex/applications/UninstallMultipleScreen$AppAdapter;->mList:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/settings/applications/UninstallMultipleScreen$PInfo;
+    check-cast v5, Lcom/android/settings_ex/applications/UninstallMultipleScreen$PInfo;
 
-    # getter for: Lcom/android/settings/applications/UninstallMultipleScreen$PInfo;->icon:Landroid/graphics/drawable/Drawable;
-    invoke-static {v5}, Lcom/android/settings/applications/UninstallMultipleScreen$PInfo;->access$200(Lcom/android/settings/applications/UninstallMultipleScreen$PInfo;)Landroid/graphics/drawable/Drawable;
+    # getter for: Lcom/android/settings_ex/applications/UninstallMultipleScreen$PInfo;->icon:Landroid/graphics/drawable/Drawable;
+    invoke-static {v5}, Lcom/android/settings_ex/applications/UninstallMultipleScreen$PInfo;->access$200(Lcom/android/settings_ex/applications/UninstallMultipleScreen$PInfo;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v5
 
@@ -203,16 +203,16 @@
 
     .line 158
     .local v3, "textView":Landroid/widget/TextView;
-    iget-object v5, p0, Lcom/android/settings/applications/UninstallMultipleScreen$AppAdapter;->mList:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/settings_ex/applications/UninstallMultipleScreen$AppAdapter;->mList:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/settings/applications/UninstallMultipleScreen$PInfo;
+    check-cast v5, Lcom/android/settings_ex/applications/UninstallMultipleScreen$PInfo;
 
-    # getter for: Lcom/android/settings/applications/UninstallMultipleScreen$PInfo;->appname:Ljava/lang/String;
-    invoke-static {v5}, Lcom/android/settings/applications/UninstallMultipleScreen$PInfo;->access$300(Lcom/android/settings/applications/UninstallMultipleScreen$PInfo;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/applications/UninstallMultipleScreen$PInfo;->appname:Ljava/lang/String;
+    invoke-static {v5}, Lcom/android/settings_ex/applications/UninstallMultipleScreen$PInfo;->access$300(Lcom/android/settings_ex/applications/UninstallMultipleScreen$PInfo;)Ljava/lang/String;
 
     move-result-object v5
 

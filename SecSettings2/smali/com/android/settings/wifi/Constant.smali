@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/Constant;
+.class public Lcom/android/settings_ex/wifi/Constant;
 .super Ljava/lang/Object;
 .source "Constant.java"
 

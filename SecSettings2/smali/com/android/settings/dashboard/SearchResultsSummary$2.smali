@@ -1,4 +1,4 @@
-.class Lcom/android/settings/dashboard/SearchResultsSummary$2;
+.class Lcom/android/settings_ex/dashboard/SearchResultsSummary$2;
 .super Ljava/lang/Object;
 .source "SearchResultsSummary.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/dashboard/SearchResultsSummary;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    value = Lcom/android/settings_ex/dashboard/SearchResultsSummary;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/dashboard/SearchResultsSummary;
+.field final synthetic this$0:Lcom/android/settings_ex/dashboard/SearchResultsSummary;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/dashboard/SearchResultsSummary;)V
+.method constructor <init>(Lcom/android/settings_ex/dashboard/SearchResultsSummary;)V
     .locals 0
 
     .prologue
     .line 289
-    iput-object p1, p0, Lcom/android/settings/dashboard/SearchResultsSummary$2;->this$0:Lcom/android/settings/dashboard/SearchResultsSummary;
+    iput-object p1, p0, Lcom/android/settings_ex/dashboard/SearchResultsSummary$2;->this$0:Lcom/android/settings_ex/dashboard/SearchResultsSummary;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,9 +42,9 @@
 
     .prologue
     .line 292
-    iget-object v0, p0, Lcom/android/settings/dashboard/SearchResultsSummary$2;->this$0:Lcom/android/settings/dashboard/SearchResultsSummary;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/SearchResultsSummary$2;->this$0:Lcom/android/settings_ex/dashboard/SearchResultsSummary;
 
-    invoke-virtual {v0}, Lcom/android/settings/dashboard/SearchResultsSummary;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/dashboard/SearchResultsSummary;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/ProfileSelectDialog;
+.class public Lcom/android/settings_ex/ProfileSelectDialog;
 .super Landroid/app/DialogFragment;
 .source "ProfileSelectDialog.java"
 
@@ -43,18 +43,18 @@
 
     .prologue
     .line 45
-    new-instance v0, Lcom/android/settings/ProfileSelectDialog;
+    new-instance v0, Lcom/android/settings_ex/ProfileSelectDialog;
 
-    invoke-direct {v0}, Lcom/android/settings/ProfileSelectDialog;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/ProfileSelectDialog;-><init>()V
 
     .line 47
-    .local v0, "dialog":Lcom/android/settings/ProfileSelectDialog;
-    sput-object p1, Lcom/android/settings/ProfileSelectDialog;->mObject:Ljava/lang/Object;
+    .local v0, "dialog":Lcom/android/settings_ex/ProfileSelectDialog;
+    sput-object p1, Lcom/android/settings_ex/ProfileSelectDialog;->mObject:Ljava/lang/Object;
 
     .line 48
     const-string v1, "select_profile"
 
-    invoke-virtual {v0, p0, v1}, Lcom/android/settings/ProfileSelectDialog;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v0, p0, v1}, Lcom/android/settings_ex/ProfileSelectDialog;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     .line 49
     return-void
@@ -69,7 +69,7 @@
 
     .prologue
     .line 80
-    iget-object v1, p0, Lcom/android/settings/ProfileSelectDialog;->mUserHandle:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/settings_ex/ProfileSelectDialog;->mUserHandle:Ljava/util/List;
 
     invoke-interface {v1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -79,11 +79,11 @@
 
     .line 81
     .local v0, "user":Landroid/os/UserHandle;
-    invoke-virtual {p0}, Lcom/android/settings/ProfileSelectDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ProfileSelectDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/ProfileSelectDialog;->mIntent:Landroid/content/Intent;
+    iget-object v2, p0, Lcom/android/settings_ex/ProfileSelectDialog;->mIntent:Landroid/content/Intent;
 
     invoke-virtual {v1, v2, v0}, Landroid/app/Activity;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
@@ -100,29 +100,29 @@
     invoke-super {p0, p1}, Landroid/app/DialogFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 55
-    sget-object v0, Lcom/android/settings/ProfileSelectDialog;->mObject:Ljava/lang/Object;
+    sget-object v0, Lcom/android/settings_ex/ProfileSelectDialog;->mObject:Ljava/lang/Object;
 
-    instance-of v0, v0, Lcom/android/settings/dashboard/DashboardTile;
+    instance-of v0, v0, Lcom/android/settings_ex/dashboard/DashboardTile;
 
     if-eqz v0, :cond_0
 
     .line 56
-    sget-object v0, Lcom/android/settings/ProfileSelectDialog;->mObject:Ljava/lang/Object;
+    sget-object v0, Lcom/android/settings_ex/ProfileSelectDialog;->mObject:Ljava/lang/Object;
 
-    check-cast v0, Lcom/android/settings/dashboard/DashboardTile;
+    check-cast v0, Lcom/android/settings_ex/dashboard/DashboardTile;
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardTile;->userHandle:Ljava/util/ArrayList;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardTile;->userHandle:Ljava/util/ArrayList;
 
-    iput-object v0, p0, Lcom/android/settings/ProfileSelectDialog;->mUserHandle:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/ProfileSelectDialog;->mUserHandle:Ljava/util/List;
 
     .line 57
-    sget-object v0, Lcom/android/settings/ProfileSelectDialog;->mObject:Ljava/lang/Object;
+    sget-object v0, Lcom/android/settings_ex/ProfileSelectDialog;->mObject:Ljava/lang/Object;
 
-    check-cast v0, Lcom/android/settings/dashboard/DashboardTile;
+    check-cast v0, Lcom/android/settings_ex/dashboard/DashboardTile;
 
-    iget-object v0, v0, Lcom/android/settings/dashboard/DashboardTile;->intent:Landroid/content/Intent;
+    iget-object v0, v0, Lcom/android/settings_ex/dashboard/DashboardTile;->intent:Landroid/content/Intent;
 
-    iput-object v0, p0, Lcom/android/settings/ProfileSelectDialog;->mIntent:Landroid/content/Intent;
+    iput-object v0, p0, Lcom/android/settings_ex/ProfileSelectDialog;->mIntent:Landroid/content/Intent;
 
     .line 64
     :goto_0
@@ -130,31 +130,31 @@
 
     .line 58
     :cond_0
-    sget-object v0, Lcom/android/settings/ProfileSelectDialog;->mObject:Ljava/lang/Object;
+    sget-object v0, Lcom/android/settings_ex/ProfileSelectDialog;->mObject:Ljava/lang/Object;
 
-    instance-of v0, v0, Lcom/android/settings/ApplicationsSettings$AppSettingsPreference;
+    instance-of v0, v0, Lcom/android/settings_ex/ApplicationsSettings$AppSettingsPreference;
 
     if-eqz v0, :cond_1
 
     .line 59
-    sget-object v0, Lcom/android/settings/ProfileSelectDialog;->mObject:Ljava/lang/Object;
+    sget-object v0, Lcom/android/settings_ex/ProfileSelectDialog;->mObject:Ljava/lang/Object;
 
-    check-cast v0, Lcom/android/settings/ApplicationsSettings$AppSettingsPreference;
+    check-cast v0, Lcom/android/settings_ex/ApplicationsSettings$AppSettingsPreference;
 
-    iget-object v0, v0, Lcom/android/settings/ApplicationsSettings$AppSettingsPreference;->userHandle:Ljava/util/ArrayList;
+    iget-object v0, v0, Lcom/android/settings_ex/ApplicationsSettings$AppSettingsPreference;->userHandle:Ljava/util/ArrayList;
 
-    iput-object v0, p0, Lcom/android/settings/ProfileSelectDialog;->mUserHandle:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/ProfileSelectDialog;->mUserHandle:Ljava/util/List;
 
     .line 60
-    sget-object v0, Lcom/android/settings/ProfileSelectDialog;->mObject:Ljava/lang/Object;
+    sget-object v0, Lcom/android/settings_ex/ProfileSelectDialog;->mObject:Ljava/lang/Object;
 
-    check-cast v0, Lcom/android/settings/ApplicationsSettings$AppSettingsPreference;
+    check-cast v0, Lcom/android/settings_ex/ApplicationsSettings$AppSettingsPreference;
 
-    invoke-virtual {v0}, Lcom/android/settings/ApplicationsSettings$AppSettingsPreference;->getIntent()Landroid/content/Intent;
+    invoke-virtual {v0}, Lcom/android/settings_ex/ApplicationsSettings$AppSettingsPreference;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/ProfileSelectDialog;->mIntent:Landroid/content/Intent;
+    iput-object v0, p0, Lcom/android/settings_ex/ProfileSelectDialog;->mIntent:Landroid/content/Intent;
 
     goto :goto_0
 
@@ -175,7 +175,7 @@
 
     .prologue
     .line 68
-    invoke-virtual {p0}, Lcom/android/settings/ProfileSelectDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ProfileSelectDialog;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -191,14 +191,14 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/ProfileSelectDialog;->mUserHandle:Ljava/util/List;
+    iget-object v4, p0, Lcom/android/settings_ex/ProfileSelectDialog;->mUserHandle:Ljava/util/List;
 
-    invoke-static {v3, v2, v4}, Lcom/android/settings/Utils;->createUserAdapter(Landroid/os/UserManager;Landroid/content/Context;Ljava/util/List;)Lcom/android/settings/UserAdapter;
+    invoke-static {v3, v2, v4}, Lcom/android/settings_ex/Utils;->createUserAdapter(Landroid/os/UserManager;Landroid/content/Context;Ljava/util/List;)Lcom/android/settings_ex/UserAdapter;
 
     move-result-object v0
 
     .line 72
-    .local v0, "adapter":Lcom/android/settings/UserAdapter;
+    .local v0, "adapter":Lcom/android/settings_ex/UserAdapter;
     const v3, 0x7f0e0efd
 
     invoke-virtual {v1, v3}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;

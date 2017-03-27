@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/VI/AnimationHelper;
+.class public Lcom/android/settings_ex/wifi/VI/AnimationHelper;
 .super Ljava/lang/Object;
 .source "AnimationHelper.java"
 
@@ -45,16 +45,16 @@
 
     .line 25
     .local v1, "endAnimator":Landroid/animation/ValueAnimator;
-    new-instance v2, Lcom/android/settings/wifi/VI/AnimationHelper$1;
+    new-instance v2, Lcom/android/settings_ex/wifi/VI/AnimationHelper$1;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/wifi/VI/AnimationHelper$1;-><init>(Landroid/view/View;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/wifi/VI/AnimationHelper$1;-><init>(Landroid/view/View;)V
 
     invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     .line 36
-    new-instance v2, Lcom/android/settings/wifi/VI/AnimationHelper$2;
+    new-instance v2, Lcom/android/settings_ex/wifi/VI/AnimationHelper$2;
 
-    invoke-direct {v2, p0, p2}, Lcom/android/settings/wifi/VI/AnimationHelper$2;-><init>(Landroid/view/View;F)V
+    invoke-direct {v2, p0, p2}, Lcom/android/settings_ex/wifi/VI/AnimationHelper$2;-><init>(Landroid/view/View;F)V
 
     invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -64,9 +64,9 @@
     if-ne p7, v2, :cond_0
 
     .line 63
-    new-instance v2, Lcom/android/settings/wifi/VI/SineInOut33;
+    new-instance v2, Lcom/android/settings_ex/wifi/VI/SineInOut33;
 
-    invoke-direct {v2}, Lcom/android/settings/wifi/VI/SineInOut33;-><init>()V
+    invoke-direct {v2}, Lcom/android/settings_ex/wifi/VI/SineInOut33;-><init>()V
 
     invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
@@ -168,16 +168,16 @@
 
     .line 134
     .local v3, "endAnimator":Landroid/animation/ValueAnimator;
-    new-instance v6, Lcom/android/settings/wifi/VI/AnimationHelper$5;
+    new-instance v6, Lcom/android/settings_ex/wifi/VI/AnimationHelper$5;
 
-    invoke-direct {v6, p0}, Lcom/android/settings/wifi/VI/AnimationHelper$5;-><init>(Landroid/view/View;)V
+    invoke-direct {v6, p0}, Lcom/android/settings_ex/wifi/VI/AnimationHelper$5;-><init>(Landroid/view/View;)V
 
     invoke-virtual {v3, v6}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     .line 150
-    new-instance v6, Lcom/android/settings/wifi/VI/AnimationHelper$6;
+    new-instance v6, Lcom/android/settings_ex/wifi/VI/AnimationHelper$6;
 
-    invoke-direct {v6, p0}, Lcom/android/settings/wifi/VI/AnimationHelper$6;-><init>(Landroid/view/View;)V
+    invoke-direct {v6, p0}, Lcom/android/settings_ex/wifi/VI/AnimationHelper$6;-><init>(Landroid/view/View;)V
 
     invoke-virtual {v3, v6}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -189,18 +189,18 @@
     if-ne v0, v6, :cond_1
 
     .line 178
-    new-instance v6, Lcom/android/settings/wifi/VI/SineInOut70;
+    new-instance v6, Lcom/android/settings_ex/wifi/VI/SineInOut70;
 
-    invoke-direct {v6}, Lcom/android/settings/wifi/VI/SineInOut70;-><init>()V
+    invoke-direct {v6}, Lcom/android/settings_ex/wifi/VI/SineInOut70;-><init>()V
 
     invoke-virtual {v3, v6}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
     .line 185
     :cond_0
     :goto_0
-    new-instance v6, Lcom/android/settings/wifi/VI/SineInOut90;
+    new-instance v6, Lcom/android/settings_ex/wifi/VI/SineInOut90;
 
-    invoke-direct {v6}, Lcom/android/settings/wifi/VI/SineInOut90;-><init>()V
+    invoke-direct {v6}, Lcom/android/settings_ex/wifi/VI/SineInOut90;-><init>()V
 
     invoke-virtual {v3, v6}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
@@ -227,9 +227,9 @@
     if-ne v0, v6, :cond_2
 
     .line 180
-    new-instance v6, Lcom/android/settings/wifi/VI/SineInOut80;
+    new-instance v6, Lcom/android/settings_ex/wifi/VI/SineInOut80;
 
-    invoke-direct {v6}, Lcom/android/settings/wifi/VI/SineInOut80;-><init>()V
+    invoke-direct {v6}, Lcom/android/settings_ex/wifi/VI/SineInOut80;-><init>()V
 
     invoke-virtual {v3, v6}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
@@ -244,9 +244,9 @@
     if-ne v0, v6, :cond_0
 
     .line 182
-    new-instance v6, Lcom/android/settings/wifi/VI/SineInOut90;
+    new-instance v6, Lcom/android/settings_ex/wifi/VI/SineInOut90;
 
-    invoke-direct {v6}, Lcom/android/settings/wifi/VI/SineInOut90;-><init>()V
+    invoke-direct {v6}, Lcom/android/settings_ex/wifi/VI/SineInOut90;-><init>()V
 
     invoke-virtual {v3, v6}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 

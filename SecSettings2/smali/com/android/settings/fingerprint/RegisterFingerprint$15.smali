@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fingerprint/RegisterFingerprint$15;
+.class Lcom/android/settings_ex/fingerprint/RegisterFingerprint$15;
 .super Ljava/lang/Object;
 .source "RegisterFingerprint.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fingerprint/RegisterFingerprint;->showGuidewithTipDialog()V
+    value = Lcom/android/settings_ex/fingerprint/RegisterFingerprint;->showGuidewithTipDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/RegisterFingerprint;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/RegisterFingerprint;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/RegisterFingerprint;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/RegisterFingerprint;)V
     .locals 0
 
     .prologue
     .line 1378
-    iput-object p1, p0, Lcom/android/settings/fingerprint/RegisterFingerprint$15;->this$0:Lcom/android/settings/fingerprint/RegisterFingerprint;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/RegisterFingerprint$15;->this$0:Lcom/android/settings_ex/fingerprint/RegisterFingerprint;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,9 +50,9 @@
     invoke-static {v0, v1}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1381
-    iget-object v0, p0, Lcom/android/settings/fingerprint/RegisterFingerprint$15;->this$0:Lcom/android/settings/fingerprint/RegisterFingerprint;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/RegisterFingerprint$15;->this$0:Lcom/android/settings_ex/fingerprint/RegisterFingerprint;
 
-    invoke-virtual {v0}, Lcom/android/settings/fingerprint/RegisterFingerprint;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/fingerprint/RegisterFingerprint;->finish()V
 
     .line 1382
     return-void

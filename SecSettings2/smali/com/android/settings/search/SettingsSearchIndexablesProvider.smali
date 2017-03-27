@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/search/SettingsSearchIndexablesProvider;
+.class public Lcom/android/settings_ex/search/SettingsSearchIndexablesProvider;
 .super Landroid/provider/SearchIndexablesProvider;
 .source "SettingsSearchIndexablesProvider.java"
 
@@ -57,7 +57,7 @@
 
     .line 83
     .local v3, "result":Landroid/database/MatrixCursor;
-    invoke-static {}, Lcom/android/settings/search/SearchIndexableRaws;->getValues()Ljava/util/Collection;
+    invoke-static {}, Lcom/android/settings_ex/search/SearchIndexableRaws;->getValues()Ljava/util/Collection;
 
     move-result-object v4
 
@@ -77,10 +77,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/search/SearchIndexableRaw;
+    check-cast v1, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
     .line 84
-    .local v1, "raw":Lcom/android/settings/search/SearchIndexableRaw;
+    .local v1, "raw":Lcom/android/settings_ex/search/SearchIndexableRaw;
     const/16 v4, 0xe
 
     new-array v2, v4, [Ljava/lang/Object;
@@ -89,7 +89,7 @@
     .local v2, "ref":[Ljava/lang/Object;
     const/4 v4, 0x0
 
-    iget v5, v1, Lcom/android/settings/search/SearchIndexableRaw;->rank:I
+    iget v5, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->rank:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -100,56 +100,56 @@
     .line 86
     const/4 v4, 0x1
 
-    iget-object v5, v1, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iget-object v5, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     aput-object v5, v2, v4
 
     .line 87
     const/4 v4, 0x2
 
-    iget-object v5, v1, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iget-object v5, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     aput-object v5, v2, v4
 
     .line 88
     const/4 v4, 0x3
 
-    iget-object v5, v1, Lcom/android/settings/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
+    iget-object v5, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
 
     aput-object v5, v2, v4
 
     .line 89
     const/4 v4, 0x4
 
-    iget-object v5, v1, Lcom/android/settings/search/SearchIndexableRaw;->entries:Ljava/lang/String;
+    iget-object v5, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->entries:Ljava/lang/String;
 
     aput-object v5, v2, v4
 
     .line 90
     const/4 v4, 0x5
 
-    iget-object v5, v1, Lcom/android/settings/search/SearchIndexableRaw;->keywords:Ljava/lang/String;
+    iget-object v5, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->keywords:Ljava/lang/String;
 
     aput-object v5, v2, v4
 
     .line 91
     const/4 v4, 0x6
 
-    iget-object v5, v1, Lcom/android/settings/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
+    iget-object v5, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
 
     aput-object v5, v2, v4
 
     .line 92
     const/4 v4, 0x7
 
-    iget-object v5, v1, Lcom/android/settings/search/SearchIndexableRaw;->className:Ljava/lang/String;
+    iget-object v5, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->className:Ljava/lang/String;
 
     aput-object v5, v2, v4
 
     .line 93
     const/16 v4, 0x8
 
-    iget v5, v1, Lcom/android/settings/search/SearchIndexableRaw;->iconResId:I
+    iget v5, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->iconResId:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -160,28 +160,28 @@
     .line 94
     const/16 v4, 0x9
 
-    iget-object v5, v1, Lcom/android/settings/search/SearchIndexableRaw;->intentAction:Ljava/lang/String;
+    iget-object v5, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->intentAction:Ljava/lang/String;
 
     aput-object v5, v2, v4
 
     .line 95
     const/16 v4, 0xa
 
-    iget-object v5, v1, Lcom/android/settings/search/SearchIndexableRaw;->intentTargetPackage:Ljava/lang/String;
+    iget-object v5, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->intentTargetPackage:Ljava/lang/String;
 
     aput-object v5, v2, v4
 
     .line 96
     const/16 v4, 0xb
 
-    iget-object v5, v1, Lcom/android/settings/search/SearchIndexableRaw;->intentTargetClass:Ljava/lang/String;
+    iget-object v5, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->intentTargetClass:Ljava/lang/String;
 
     aput-object v5, v2, v4
 
     .line 97
     const/16 v4, 0xc
 
-    iget-object v5, v1, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iget-object v5, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     aput-object v5, v2, v4
 
@@ -202,7 +202,7 @@
     goto :goto_0
 
     .line 101
-    .end local v1    # "raw":Lcom/android/settings/search/SearchIndexableRaw;
+    .end local v1    # "raw":Lcom/android/settings_ex/search/SearchIndexableRaw;
     .end local v2    # "ref":[Ljava/lang/Object;
     :cond_0
     return-object v3
@@ -222,7 +222,7 @@
 
     .line 65
     .local v0, "cursor":Landroid/database/MatrixCursor;
-    invoke-static {}, Lcom/android/settings/search/SearchIndexableResources;->values()Ljava/util/Collection;
+    invoke-static {}, Lcom/android/settings_ex/search/SearchIndexableResources;->values()Ljava/util/Collection;
 
     move-result-object v4
 

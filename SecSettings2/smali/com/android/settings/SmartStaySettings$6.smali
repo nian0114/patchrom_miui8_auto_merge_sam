@@ -1,4 +1,4 @@
-.class Lcom/android/settings/SmartStaySettings$6;
+.class Lcom/android/settings_ex/SmartStaySettings$6;
 .super Ljava/lang/Object;
 .source "SmartStaySettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/SmartStaySettings;->maketurnOffUniversalPopup()V
+    value = Lcom/android/settings_ex/SmartStaySettings;->maketurnOffUniversalPopup()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/SmartStaySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/SmartStaySettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/SmartStaySettings;)V
+.method constructor <init>(Lcom/android/settings_ex/SmartStaySettings;)V
     .locals 0
 
     .prologue
     .line 246
-    iput-object p1, p0, Lcom/android/settings/SmartStaySettings$6;->this$0:Lcom/android/settings/SmartStaySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/SmartStaySettings$6;->this$0:Lcom/android/settings_ex/SmartStaySettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,9 +43,9 @@
 
     .prologue
     .line 248
-    iget-object v0, p0, Lcom/android/settings/SmartStaySettings$6;->this$0:Lcom/android/settings/SmartStaySettings;
+    iget-object v0, p0, Lcom/android/settings_ex/SmartStaySettings$6;->this$0:Lcom/android/settings_ex/SmartStaySettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/SmartStaySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SmartStaySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -53,12 +53,12 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->turnOffUniversalSwitch(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->turnOffUniversalSwitch(Landroid/content/Context;)Z
 
     .line 249
-    iget-object v0, p0, Lcom/android/settings/SmartStaySettings$6;->this$0:Lcom/android/settings/SmartStaySettings;
+    iget-object v0, p0, Lcom/android/settings_ex/SmartStaySettings$6;->this$0:Lcom/android/settings_ex/SmartStaySettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/SmartStaySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SmartStaySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/applications/AdvancedAppSettings$CountAppsWithWriteSettingsPermission;
+.class Lcom/android/settings_ex/applications/AdvancedAppSettings$CountAppsWithWriteSettingsPermission;
 .super Landroid/os/AsyncTask;
 .source "AdvancedAppSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/AdvancedAppSettings;
+    value = Lcom/android/settings_ex/applications/AdvancedAppSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,7 +17,7 @@
     value = {
         "Landroid/os/AsyncTask",
         "<",
-        "Lcom/android/settings/applications/AppStateWriteSettingsBridge;",
+        "Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge;",
         "Ljava/lang/Void;",
         "Ljava/lang/Integer;",
         ">;"
@@ -28,13 +28,13 @@
 # instance fields
 .field numOfPackagesRequestedPermission:I
 
-.field final synthetic this$0:Lcom/android/settings/applications/AdvancedAppSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/applications/AdvancedAppSettings;
 
 
 # virtual methods
-.method protected varargs doInBackground([Lcom/android/settings/applications/AppStateWriteSettingsBridge;)Ljava/lang/Integer;
+.method protected varargs doInBackground([Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge;)Ljava/lang/Integer;
     .locals 2
-    .param p1, "params"    # [Lcom/android/settings/applications/AppStateWriteSettingsBridge;
+    .param p1, "params"    # [Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge;
 
     .prologue
     .line 167
@@ -43,15 +43,15 @@
     aget-object v0, p1, v1
 
     .line 168
-    .local v0, "writeSettingsBridge":Lcom/android/settings/applications/AppStateWriteSettingsBridge;
-    invoke-virtual {v0}, Lcom/android/settings/applications/AppStateWriteSettingsBridge;->getNumberOfPackagesWithPermission()I
+    .local v0, "writeSettingsBridge":Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge;
+    invoke-virtual {v0}, Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge;->getNumberOfPackagesWithPermission()I
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/applications/AdvancedAppSettings$CountAppsWithWriteSettingsPermission;->numOfPackagesRequestedPermission:I
+    iput v1, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings$CountAppsWithWriteSettingsPermission;->numOfPackagesRequestedPermission:I
 
     .line 170
-    invoke-virtual {v0}, Lcom/android/settings/applications/AppStateWriteSettingsBridge;->getNumberOfPackagesCanWriteSettings()I
+    invoke-virtual {v0}, Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge;->getNumberOfPackagesCanWriteSettings()I
 
     move-result v1
 
@@ -68,10 +68,10 @@
 
     .prologue
     .line 161
-    check-cast p1, [Lcom/android/settings/applications/AppStateWriteSettingsBridge;
+    check-cast p1, [Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge;
 
     .end local p1    # "x0":[Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/applications/AdvancedAppSettings$CountAppsWithWriteSettingsPermission;->doInBackground([Lcom/android/settings/applications/AppStateWriteSettingsBridge;)Ljava/lang/Integer;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/applications/AdvancedAppSettings$CountAppsWithWriteSettingsPermission;->doInBackground([Lcom/android/settings_ex/applications/AppStateWriteSettingsBridge;)Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -84,25 +84,25 @@
 
     .prologue
     .line 176
-    iget-object v0, p0, Lcom/android/settings/applications/AdvancedAppSettings$CountAppsWithWriteSettingsPermission;->this$0:Lcom/android/settings/applications/AdvancedAppSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings$CountAppsWithWriteSettingsPermission;->this$0:Lcom/android/settings_ex/applications/AdvancedAppSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/applications/AdvancedAppSettings;->isAdded()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/applications/AdvancedAppSettings;->isAdded()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 177
-    iget-object v0, p0, Lcom/android/settings/applications/AdvancedAppSettings$CountAppsWithWriteSettingsPermission;->this$0:Lcom/android/settings/applications/AdvancedAppSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings$CountAppsWithWriteSettingsPermission;->this$0:Lcom/android/settings_ex/applications/AdvancedAppSettings;
 
-    # getter for: Lcom/android/settings/applications/AdvancedAppSettings;->mWriteSettingsPreference:Landroid/preference/Preference;
-    invoke-static {v0}, Lcom/android/settings/applications/AdvancedAppSettings;->access$300(Lcom/android/settings/applications/AdvancedAppSettings;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/applications/AdvancedAppSettings;->mWriteSettingsPreference:Landroid/preference/Preference;
+    invoke-static {v0}, Lcom/android/settings_ex/applications/AdvancedAppSettings;->access$300(Lcom/android/settings_ex/applications/AdvancedAppSettings;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/applications/AdvancedAppSettings$CountAppsWithWriteSettingsPermission;->this$0:Lcom/android/settings/applications/AdvancedAppSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings$CountAppsWithWriteSettingsPermission;->this$0:Lcom/android/settings_ex/applications/AdvancedAppSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/applications/AdvancedAppSettings;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/android/settings_ex/applications/AdvancedAppSettings;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -118,7 +118,7 @@
 
     const/4 v4, 0x1
 
-    iget v5, p0, Lcom/android/settings/applications/AdvancedAppSettings$CountAppsWithWriteSettingsPermission;->numOfPackagesRequestedPermission:I
+    iget v5, p0, Lcom/android/settings_ex/applications/AdvancedAppSettings$CountAppsWithWriteSettingsPermission;->numOfPackagesRequestedPermission:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -146,7 +146,7 @@
     check-cast p1, Ljava/lang/Integer;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/applications/AdvancedAppSettings$CountAppsWithWriteSettingsPermission;->onPostExecute(Ljava/lang/Integer;)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/applications/AdvancedAppSettings$CountAppsWithWriteSettingsPermission;->onPostExecute(Ljava/lang/Integer;)V
 
     return-void
 .end method

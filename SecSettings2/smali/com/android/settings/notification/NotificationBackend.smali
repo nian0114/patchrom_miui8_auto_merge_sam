@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/notification/NotificationBackend;
+.class public Lcom/android/settings_ex/notification/NotificationBackend;
 .super Ljava/lang/Object;
 .source "NotificationBackend.java"
 
@@ -6,8 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/notification/NotificationBackend$AppRow;,
-        Lcom/android/settings/notification/NotificationBackend$Row;
+        Lcom/android/settings_ex/notification/NotificationBackend$AppRow;,
+        Lcom/android/settings_ex/notification/NotificationBackend$Row;
     }
 .end annotation
 
@@ -32,7 +32,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
+    sput-object v0, Lcom/android/settings_ex/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
 
     return-void
 .end method
@@ -60,7 +60,7 @@
 
     .line 101
     :try_start_0
-    sget-object v2, Lcom/android/settings/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
+    sget-object v2, Lcom/android/settings_ex/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
 
     invoke-interface {v2, p1, p2}, Landroid/app/INotificationManager;->getPackagePriority(Ljava/lang/String;I)I
     :try_end_0
@@ -104,7 +104,7 @@
 
     .line 91
     :try_start_0
-    sget-object v3, Lcom/android/settings/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
+    sget-object v3, Lcom/android/settings_ex/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
 
     invoke-interface {v3, p1, p2}, Landroid/app/INotificationManager;->areNotificationsEnabledForPackage(Ljava/lang/String;I)Z
     :try_end_0
@@ -149,7 +149,7 @@
 
     .line 195
     :try_start_0
-    sget-object v3, Lcom/android/settings/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
+    sget-object v3, Lcom/android/settings_ex/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
 
     invoke-interface {v3, p1, p2}, Landroid/app/INotificationManager;->getPackageVisibilityOverride(Ljava/lang/String;I)I
 
@@ -209,7 +209,7 @@
 
     move-result-object v4
 
-    sget-object v5, Lcom/android/settings/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
+    sget-object v5, Lcom/android/settings_ex/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
 
     invoke-interface {v5, p1, p2}, Landroid/app/INotificationManager;->getPackageVisibilityOverride(Ljava/lang/String;I)I
 
@@ -264,7 +264,7 @@
     .prologue
     .line 121
     :try_start_0
-    sget-object v1, Lcom/android/settings/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
+    sget-object v1, Lcom/android/settings_ex/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
 
     invoke-interface {v1, p1, p2}, Landroid/app/INotificationManager;->getPackagePeekable(Ljava/lang/String;I)Z
     :try_end_0
@@ -304,7 +304,7 @@
 
     .line 163
     :try_start_0
-    sget-object v2, Lcom/android/settings/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
+    sget-object v2, Lcom/android/settings_ex/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
 
     invoke-interface {v2, p1, p2}, Landroid/app/INotificationManager;->getPackageVisibilityOverride(Ljava/lang/String;I)I
     :try_end_0
@@ -348,7 +348,7 @@
 
     .line 141
     :try_start_0
-    sget-object v2, Lcom/android/settings/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
+    sget-object v2, Lcom/android/settings_ex/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
 
     invoke-interface {v2, p1, p2}, Landroid/app/INotificationManager;->getPackageVisibilityOverride(Ljava/lang/String;I)I
     :try_end_0
@@ -382,7 +382,7 @@
     goto :goto_0
 .end method
 
-.method public loadAppRow(Landroid/content/pm/PackageManager;Landroid/content/pm/ApplicationInfo;)Lcom/android/settings/notification/NotificationBackend$AppRow;
+.method public loadAppRow(Landroid/content/pm/PackageManager;Landroid/content/pm/ApplicationInfo;)Lcom/android/settings_ex/notification/NotificationBackend$AppRow;
     .locals 6
     .param p1, "pm"    # Landroid/content/pm/PackageManager;
     .param p2, "app"    # Landroid/content/pm/ApplicationInfo;
@@ -391,20 +391,20 @@
     const/4 v5, 0x1
 
     .line 38
-    new-instance v0, Lcom/android/settings/notification/NotificationBackend$AppRow;
+    new-instance v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;
 
-    invoke-direct {v0}, Lcom/android/settings/notification/NotificationBackend$AppRow;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;-><init>()V
 
     .line 39
-    .local v0, "row":Lcom/android/settings/notification/NotificationBackend$AppRow;
+    .local v0, "row":Lcom/android/settings_ex/notification/NotificationBackend$AppRow;
     iget-object v2, p2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    iput-object v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
+    iput-object v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
 
     .line 40
     iget v2, p2, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    iput v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->uid:I
+    iput v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->uid:I
 
     .line 42
     :try_start_0
@@ -412,7 +412,7 @@
 
     move-result-object v2
 
-    iput-object v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->label:Ljava/lang/CharSequence;
+    iput-object v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->label:Ljava/lang/CharSequence;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -422,73 +422,73 @@
 
     move-result-object v2
 
-    iput-object v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->icon:Landroid/graphics/drawable/Drawable;
+    iput-object v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->icon:Landroid/graphics/drawable/Drawable;
 
     .line 48
-    iget-object v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
 
-    iget v3, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->uid:I
+    iget v3, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->uid:I
 
-    invoke-virtual {p0, v2, v3}, Lcom/android/settings/notification/NotificationBackend;->getNotificationsBanned(Ljava/lang/String;I)Z
+    invoke-virtual {p0, v2, v3}, Lcom/android/settings_ex/notification/NotificationBackend;->getNotificationsBanned(Ljava/lang/String;I)Z
 
     move-result v2
 
-    iput-boolean v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->banned:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->banned:Z
 
     .line 49
-    iget-object v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
 
-    iget v3, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->uid:I
+    iget v3, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->uid:I
 
-    invoke-virtual {p0, v2, v3}, Lcom/android/settings/notification/NotificationBackend;->getHighPriority(Ljava/lang/String;I)Z
+    invoke-virtual {p0, v2, v3}, Lcom/android/settings_ex/notification/NotificationBackend;->getHighPriority(Ljava/lang/String;I)Z
 
     move-result v2
 
-    iput-boolean v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->priority:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->priority:Z
 
     .line 50
-    iget-object v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
 
-    iget v3, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->uid:I
+    iget v3, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->uid:I
 
-    invoke-virtual {p0, v2, v3}, Lcom/android/settings/notification/NotificationBackend;->getPeekable(Ljava/lang/String;I)Z
+    invoke-virtual {p0, v2, v3}, Lcom/android/settings_ex/notification/NotificationBackend;->getPeekable(Ljava/lang/String;I)Z
 
     move-result v2
 
-    iput-boolean v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->peekable:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->peekable:Z
 
     .line 51
-    iget-object v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
 
-    iget v3, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->uid:I
+    iget v3, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->uid:I
 
-    invoke-virtual {p0, v2, v3}, Lcom/android/settings/notification/NotificationBackend;->getSensitive(Ljava/lang/String;I)Z
+    invoke-virtual {p0, v2, v3}, Lcom/android/settings_ex/notification/NotificationBackend;->getSensitive(Ljava/lang/String;I)Z
 
     move-result v2
 
-    iput-boolean v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->sensitive:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->sensitive:Z
 
     .line 52
-    iget-object v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
 
-    iget v3, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->uid:I
+    iget v3, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->uid:I
 
-    invoke-virtual {p0, v2, v3}, Lcom/android/settings/notification/NotificationBackend;->getShowonSharedeLocked(Ljava/lang/String;I)Z
+    invoke-virtual {p0, v2, v3}, Lcom/android/settings_ex/notification/NotificationBackend;->getShowonSharedeLocked(Ljava/lang/String;I)Z
 
     move-result v2
 
-    iput-boolean v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->show:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->show:Z
 
     .line 53
-    iget-object v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
 
-    iget v3, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->uid:I
+    iget v3, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->uid:I
 
-    invoke-virtual {p0, v2, v3}, Lcom/android/settings/notification/NotificationBackend;->getNotificationsStatusBar(Ljava/lang/String;I)Z
+    invoke-virtual {p0, v2, v3}, Lcom/android/settings_ex/notification/NotificationBackend;->getNotificationsStatusBar(Ljava/lang/String;I)Z
 
     move-result v2
 
-    iput-boolean v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->statusBar:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->statusBar:Z
 
     .line 54
     return-object v0
@@ -511,7 +511,7 @@
 
     move-result-object v3
 
-    iget-object v4, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
+    iget-object v4, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -524,38 +524,38 @@
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 45
-    iget-object v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
 
-    iput-object v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->label:Ljava/lang/CharSequence;
+    iput-object v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->label:Ljava/lang/CharSequence;
 
     goto :goto_0
 .end method
 
-.method public loadAppRow(Landroid/content/pm/PackageManager;Lcom/android/settingslib/applications/ApplicationsState$AppEntry;)Lcom/android/settings/notification/NotificationBackend$AppRow;
+.method public loadAppRow(Landroid/content/pm/PackageManager;Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;)Lcom/android/settings_ex/notification/NotificationBackend$AppRow;
     .locals 5
     .param p1, "pm"    # Landroid/content/pm/PackageManager;
-    .param p2, "app"    # Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+    .param p2, "app"    # Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
 
     .prologue
     .line 58
-    new-instance v0, Lcom/android/settings/notification/NotificationBackend$AppRow;
+    new-instance v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;
 
-    invoke-direct {v0}, Lcom/android/settings/notification/NotificationBackend$AppRow;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;-><init>()V
 
     .line 59
-    .local v0, "row":Lcom/android/settings/notification/NotificationBackend$AppRow;
-    iget-object v2, p2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
+    .local v0, "row":Lcom/android/settings_ex/notification/NotificationBackend$AppRow;
+    iget-object v2, p2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
 
     iget-object v2, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    iput-object v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
+    iput-object v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
 
     .line 60
-    iget-object v2, p2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
+    iget-object v2, p2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
 
     iget v2, v2, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    iput v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->uid:I
+    iput v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->uid:I
 
     .line 62
     :try_start_0
@@ -566,83 +566,83 @@
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 63
-    iget-object v2, p2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->label:Ljava/lang/String;
+    iget-object v2, p2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->label:Ljava/lang/String;
 
-    iput-object v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->label:Ljava/lang/CharSequence;
+    iput-object v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->label:Ljava/lang/CharSequence;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 68
     :goto_0
-    iget-object v2, p2, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->icon:Landroid/graphics/drawable/Drawable;
+    iget-object v2, p2, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->icon:Landroid/graphics/drawable/Drawable;
 
-    iput-object v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->icon:Landroid/graphics/drawable/Drawable;
+    iput-object v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->icon:Landroid/graphics/drawable/Drawable;
 
     .line 70
-    iget-object v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
 
-    iget v3, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->uid:I
+    iget v3, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->uid:I
 
-    invoke-virtual {p0, v2, v3}, Lcom/android/settings/notification/NotificationBackend;->getNotificationsBanned(Ljava/lang/String;I)Z
+    invoke-virtual {p0, v2, v3}, Lcom/android/settings_ex/notification/NotificationBackend;->getNotificationsBanned(Ljava/lang/String;I)Z
 
     move-result v2
 
-    iput-boolean v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->banned:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->banned:Z
 
     .line 71
-    iget-object v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
 
-    iget v3, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->uid:I
+    iget v3, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->uid:I
 
-    invoke-virtual {p0, v2, v3}, Lcom/android/settings/notification/NotificationBackend;->getHighPriority(Ljava/lang/String;I)Z
+    invoke-virtual {p0, v2, v3}, Lcom/android/settings_ex/notification/NotificationBackend;->getHighPriority(Ljava/lang/String;I)Z
 
     move-result v2
 
-    iput-boolean v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->priority:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->priority:Z
 
     .line 72
-    iget-object v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
 
-    iget v3, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->uid:I
+    iget v3, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->uid:I
 
-    invoke-virtual {p0, v2, v3}, Lcom/android/settings/notification/NotificationBackend;->getPeekable(Ljava/lang/String;I)Z
+    invoke-virtual {p0, v2, v3}, Lcom/android/settings_ex/notification/NotificationBackend;->getPeekable(Ljava/lang/String;I)Z
 
     move-result v2
 
-    iput-boolean v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->peekable:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->peekable:Z
 
     .line 73
-    iget-object v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
 
-    iget v3, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->uid:I
+    iget v3, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->uid:I
 
-    invoke-virtual {p0, v2, v3}, Lcom/android/settings/notification/NotificationBackend;->getSensitive(Ljava/lang/String;I)Z
+    invoke-virtual {p0, v2, v3}, Lcom/android/settings_ex/notification/NotificationBackend;->getSensitive(Ljava/lang/String;I)Z
 
     move-result v2
 
-    iput-boolean v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->sensitive:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->sensitive:Z
 
     .line 74
-    iget-object v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
 
-    iget v3, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->uid:I
+    iget v3, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->uid:I
 
-    invoke-virtual {p0, v2, v3}, Lcom/android/settings/notification/NotificationBackend;->getShowonSharedeLocked(Ljava/lang/String;I)Z
+    invoke-virtual {p0, v2, v3}, Lcom/android/settings_ex/notification/NotificationBackend;->getShowonSharedeLocked(Ljava/lang/String;I)Z
 
     move-result v2
 
-    iput-boolean v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->show:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->show:Z
 
     .line 75
-    iget-object v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
 
-    iget v3, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->uid:I
+    iget v3, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->uid:I
 
-    invoke-virtual {p0, v2, v3}, Lcom/android/settings/notification/NotificationBackend;->getNotificationsStatusBar(Ljava/lang/String;I)Z
+    invoke-virtual {p0, v2, v3}, Lcom/android/settings_ex/notification/NotificationBackend;->getNotificationsStatusBar(Ljava/lang/String;I)Z
 
     move-result v2
 
-    iput-boolean v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->statusBar:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->statusBar:Z
 
     .line 76
     return-object v0
@@ -665,7 +665,7 @@
 
     move-result-object v3
 
-    iget-object v4, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
+    iget-object v4, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -678,9 +678,9 @@
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 66
-    iget-object v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
 
-    iput-object v2, v0, Lcom/android/settings/notification/NotificationBackend$AppRow;->label:Ljava/lang/CharSequence;
+    iput-object v2, v0, Lcom/android/settings_ex/notification/NotificationBackend$AppRow;->label:Ljava/lang/CharSequence;
 
     goto :goto_0
 .end method
@@ -696,7 +696,7 @@
 
     .line 110
     :try_start_0
-    sget-object v3, Lcom/android/settings/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
+    sget-object v3, Lcom/android/settings_ex/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
 
     if-eqz p3, :cond_0
 
@@ -748,7 +748,7 @@
 
     .line 81
     :try_start_0
-    sget-object v4, Lcom/android/settings/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
+    sget-object v4, Lcom/android/settings_ex/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
 
     if-nez p3, :cond_0
 
@@ -796,11 +796,11 @@
     .prologue
     .line 183
     :try_start_0
-    sget-object v2, Lcom/android/settings/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
+    sget-object v2, Lcom/android/settings_ex/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
 
     if-eqz p3, :cond_0
 
-    sget-object v1, Lcom/android/settings/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
+    sget-object v1, Lcom/android/settings_ex/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
 
     invoke-interface {v1, p1, p2}, Landroid/app/INotificationManager;->getPackageVisibilityOverride(Ljava/lang/String;I)I
 
@@ -820,7 +820,7 @@
 
     .line 183
     :cond_0
-    sget-object v1, Lcom/android/settings/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
+    sget-object v1, Lcom/android/settings_ex/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
 
     invoke-interface {v1, p1, p2}, Landroid/app/INotificationManager;->getPackageVisibilityOverride(Ljava/lang/String;I)I
     :try_end_0
@@ -859,7 +859,7 @@
     .prologue
     .line 130
     :try_start_0
-    sget-object v1, Lcom/android/settings/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
+    sget-object v1, Lcom/android/settings_ex/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
 
     invoke-interface {v1, p1, p2, p3}, Landroid/app/INotificationManager;->setPackagePeekable(Ljava/lang/String;IZ)V
     :try_end_0
@@ -899,11 +899,11 @@
     .prologue
     .line 172
     :try_start_0
-    sget-object v2, Lcom/android/settings/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
+    sget-object v2, Lcom/android/settings_ex/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
 
     if-eqz p3, :cond_0
 
-    sget-object v1, Lcom/android/settings/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
+    sget-object v1, Lcom/android/settings_ex/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
 
     invoke-interface {v1, p1, p2}, Landroid/app/INotificationManager;->getPackageVisibilityOverride(Ljava/lang/String;I)I
 
@@ -923,7 +923,7 @@
 
     .line 172
     :cond_0
-    sget-object v1, Lcom/android/settings/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
+    sget-object v1, Lcom/android/settings_ex/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
 
     invoke-interface {v1, p1, p2}, Landroid/app/INotificationManager;->getPackageVisibilityOverride(Ljava/lang/String;I)I
     :try_end_0
@@ -962,11 +962,11 @@
     .prologue
     .line 150
     :try_start_0
-    sget-object v2, Lcom/android/settings/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
+    sget-object v2, Lcom/android/settings_ex/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
 
     if-eqz p3, :cond_0
 
-    sget-object v1, Lcom/android/settings/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
+    sget-object v1, Lcom/android/settings_ex/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
 
     invoke-interface {v1, p1, p2}, Landroid/app/INotificationManager;->getPackageVisibilityOverride(Ljava/lang/String;I)I
 
@@ -986,7 +986,7 @@
 
     .line 150
     :cond_0
-    sget-object v1, Lcom/android/settings/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
+    sget-object v1, Lcom/android/settings_ex/notification/NotificationBackend;->sINM:Landroid/app/INotificationManager;
 
     invoke-interface {v1, p1, p2}, Landroid/app/INotificationManager;->getPackageVisibilityOverride(Ljava/lang/String;I)I
     :try_end_0

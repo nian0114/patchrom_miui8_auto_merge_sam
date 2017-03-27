@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settingslib/bluetooth/BluetoothDeviceFilter$Filter;
+.class public interface abstract Lcom/android/settings_exlib/bluetooth/BluetoothDeviceFilter$Filter;
 .super Ljava/lang/Object;
 .source "BluetoothDeviceFilter.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/bluetooth/BluetoothDeviceFilter;
+    value = Lcom/android/settings_exlib/bluetooth/BluetoothDeviceFilter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

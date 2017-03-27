@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wifi/WifiStatusTest$7;
+.class Lcom/android/settings_ex/wifi/WifiStatusTest$7;
 .super Ljava/lang/Thread;
 .source "WifiStatusTest.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiStatusTest;->updatePingState()V
+    value = Lcom/android/settings_ex/wifi/WifiStatusTest;->updatePingState()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiStatusTest;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiStatusTest;
 
 .field final synthetic val$handler:Landroid/os/Handler;
 
@@ -23,16 +23,16 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiStatusTest;Landroid/os/Handler;Ljava/lang/Runnable;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiStatusTest;Landroid/os/Handler;Ljava/lang/Runnable;)V
     .locals 0
 
     .prologue
     .line 339
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiStatusTest$7;->this$0:Lcom/android/settings/wifi/WifiStatusTest;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiStatusTest$7;->this$0:Lcom/android/settings_ex/wifi/WifiStatusTest;
 
-    iput-object p2, p0, Lcom/android/settings/wifi/WifiStatusTest$7;->val$handler:Landroid/os/Handler;
+    iput-object p2, p0, Lcom/android/settings_ex/wifi/WifiStatusTest$7;->val$handler:Landroid/os/Handler;
 
-    iput-object p3, p0, Lcom/android/settings/wifi/WifiStatusTest$7;->val$updatePingResults:Ljava/lang/Runnable;
+    iput-object p3, p0, Lcom/android/settings_ex/wifi/WifiStatusTest$7;->val$updatePingResults:Ljava/lang/Runnable;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
@@ -46,15 +46,15 @@
 
     .prologue
     .line 342
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiStatusTest$7;->this$0:Lcom/android/settings/wifi/WifiStatusTest;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiStatusTest$7;->this$0:Lcom/android/settings_ex/wifi/WifiStatusTest;
 
-    # invokes: Lcom/android/settings/wifi/WifiStatusTest;->httpClientTest()V
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiStatusTest;->access$2500(Lcom/android/settings/wifi/WifiStatusTest;)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiStatusTest;->httpClientTest()V
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiStatusTest;->access$2500(Lcom/android/settings_ex/wifi/WifiStatusTest;)V
 
     .line 343
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiStatusTest$7;->val$handler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiStatusTest$7;->val$handler:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiStatusTest$7;->val$updatePingResults:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiStatusTest$7;->val$updatePingResults:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

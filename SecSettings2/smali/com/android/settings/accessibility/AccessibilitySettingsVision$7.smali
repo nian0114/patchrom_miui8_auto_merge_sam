@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessibility/AccessibilitySettingsVision$7;
+.class Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$7;
 .super Landroid/database/ContentObserver;
 .source "AccessibilitySettingsVision.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    value = Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/AccessibilitySettingsVision;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 266
-    iput-object p1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$7;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$7;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -44,10 +44,10 @@
     const/4 v2, 0x0
 
     .line 269
-    iget-object v3, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$7;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$7;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    # invokes: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v3}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$1100(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v3}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$1100(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -67,10 +67,10 @@
     if-eqz v0, :cond_1
 
     .line 272
-    iget-object v2, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$7;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$7;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    # getter for: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->mGreyscaleModeCheckbox:Landroid/preference/SwitchPreference;
-    invoke-static {v2}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$1200(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->mGreyscaleModeCheckbox:Landroid/preference/SwitchPreference;
+    invoke-static {v2}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$1200(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)Landroid/preference/SwitchPreference;
 
     move-result-object v2
 
@@ -90,10 +90,10 @@
     .line 274
     .restart local v0    # "mGreyscaleModeEnabled":Z
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$7;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$7;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    # getter for: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->mGreyscaleModeCheckbox:Landroid/preference/SwitchPreference;
-    invoke-static {v1}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$1200(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->mGreyscaleModeCheckbox:Landroid/preference/SwitchPreference;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$1200(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)Landroid/preference/SwitchPreference;
 
     move-result-object v1
 

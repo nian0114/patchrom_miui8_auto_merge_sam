@@ -1,14 +1,14 @@
-.class public Lcom/android/settings/bluetooth/DockService$DockBluetoothCallback;
+.class public Lcom/android/settings_ex/bluetooth/DockService$DockBluetoothCallback;
 .super Ljava/lang/Object;
 .source "DockService.java"
 
 # interfaces
-.implements Lcom/android/settingslib/bluetooth/BluetoothCallback;
+.implements Lcom/android/settings_exlib/bluetooth/BluetoothCallback;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/bluetooth/DockService;
+    value = Lcom/android/settings_ex/bluetooth/DockService;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -31,7 +31,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 936
-    iput-object p1, p0, Lcom/android/settings/bluetooth/DockService$DockBluetoothCallback;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/bluetooth/DockService$DockBluetoothCallback;->mContext:Landroid/content/Context;
 
     .line 937
     return-void
@@ -108,9 +108,9 @@
     return-void
 .end method
 
-.method public onConnectionStateChanged(Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;I)V
+.method public onConnectionStateChanged(Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;I)V
     .locals 0
-    .param p1, "cachedDevice"    # Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
+    .param p1, "cachedDevice"    # Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;
     .param p2, "state"    # I
 
     .prologue
@@ -118,23 +118,23 @@
     return-void
 .end method
 
-.method public onDeviceAdded(Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;)V
+.method public onDeviceAdded(Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;)V
     .locals 0
-    .param p1, "cachedDevice"    # Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
+    .param p1, "cachedDevice"    # Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;
 
     .prologue
     .line 940
     return-void
 .end method
 
-.method public onDeviceBondStateChanged(Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;I)V
+.method public onDeviceBondStateChanged(Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;I)V
     .locals 3
-    .param p1, "cachedDevice"    # Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
+    .param p1, "cachedDevice"    # Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;
     .param p2, "bondState"    # I
 
     .prologue
     .line 954
-    invoke-virtual {p1}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->getDevice()Landroid/bluetooth/BluetoothDevice;
+    invoke-virtual {p1}, Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;->getDevice()Landroid/bluetooth/BluetoothDevice;
 
     move-result-object v0
 
@@ -152,22 +152,22 @@
     if-eqz v1, :cond_0
 
     .line 958
-    iget-object v1, p0, Lcom/android/settings/bluetooth/DockService$DockBluetoothCallback;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/bluetooth/DockService$DockBluetoothCallback;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/android/settings/bluetooth/LocalBluetoothPreferences;->removeDockAutoConnectSetting(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/bluetooth/LocalBluetoothPreferences;->removeDockAutoConnectSetting(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 962
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/bluetooth/DockService$DockBluetoothCallback;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/bluetooth/DockService$DockBluetoothCallback;->mContext:Landroid/content/Context;
 
-    invoke-static {v2}, Lcom/android/settings/bluetooth/DockService$DockBluetoothCallback;->getDockedDeviceAddress(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/android/settings_ex/bluetooth/DockService$DockBluetoothCallback;->getDockedDeviceAddress(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -180,25 +180,25 @@
     .line 963
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v1}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->setVisible(Z)V
+    invoke-virtual {p1, v1}, Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;->setVisible(Z)V
 
     .line 967
     :cond_0
     return-void
 .end method
 
-.method public onDeviceDeleted(Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;)V
+.method public onDeviceDeleted(Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;)V
     .locals 0
-    .param p1, "cachedDevice"    # Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
+    .param p1, "cachedDevice"    # Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;
 
     .prologue
     .line 941
     return-void
 .end method
 
-.method public onProfileStateChanged(Lcom/android/settingslib/bluetooth/LocalBluetoothProfile;II)V
+.method public onProfileStateChanged(Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfile;II)V
     .locals 0
-    .param p1, "profile"    # Lcom/android/settingslib/bluetooth/LocalBluetoothProfile;
+    .param p1, "profile"    # Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfile;
     .param p2, "newState"    # I
     .param p3, "oldState"    # I
 
@@ -213,9 +213,9 @@
 
     .prologue
     .line 949
-    iget-object v0, p0, Lcom/android/settings/bluetooth/DockService$DockBluetoothCallback;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/DockService$DockBluetoothCallback;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/android/settings/bluetooth/LocalBluetoothPreferences;->persistDiscoveringTimestamp(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/android/settings_ex/bluetooth/LocalBluetoothPreferences;->persistDiscoveringTimestamp(Landroid/content/Context;)V
 
     .line 950
     return-void

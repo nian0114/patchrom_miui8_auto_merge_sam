@@ -1,11 +1,11 @@
-.class Lcom/android/settings/deviceinfo/PublicVolumeSettings$1;
+.class Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings$1;
 .super Landroid/os/storage/StorageEventListener;
 .source "PublicVolumeSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/PublicVolumeSettings;
+    value = Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/PublicVolumeSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/PublicVolumeSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;)V
     .locals 0
 
     .prologue
     .line 223
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/PublicVolumeSettings$1;->this$0:Lcom/android/settings/deviceinfo/PublicVolumeSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings$1;->this$0:Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;
 
     invoke-direct {p0}, Landroid/os/storage/StorageEventListener;-><init>()V
 
@@ -39,10 +39,10 @@
 
     .prologue
     .line 234
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/PublicVolumeSettings$1;->this$0:Lcom/android/settings/deviceinfo/PublicVolumeSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings$1;->this$0:Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;
 
-    # getter for: Lcom/android/settings/deviceinfo/PublicVolumeSettings;->mVolume:Landroid/os/storage/VolumeInfo;
-    invoke-static {v0}, Lcom/android/settings/deviceinfo/PublicVolumeSettings;->access$000(Lcom/android/settings/deviceinfo/PublicVolumeSettings;)Landroid/os/storage/VolumeInfo;
+    # getter for: Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;->mVolume:Landroid/os/storage/VolumeInfo;
+    invoke-static {v0}, Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;->access$000(Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;)Landroid/os/storage/VolumeInfo;
 
     move-result-object v0
 
@@ -61,19 +61,19 @@
     if-eqz v0, :cond_0
 
     .line 235
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/PublicVolumeSettings$1;->this$0:Lcom/android/settings/deviceinfo/PublicVolumeSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings$1;->this$0:Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;
 
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/PublicVolumeSettings$1;->this$0:Lcom/android/settings/deviceinfo/PublicVolumeSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings$1;->this$0:Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;
 
-    # getter for: Lcom/android/settings/deviceinfo/PublicVolumeSettings;->mStorageManager:Landroid/os/storage/StorageManager;
-    invoke-static {v1}, Lcom/android/settings/deviceinfo/PublicVolumeSettings;->access$200(Lcom/android/settings/deviceinfo/PublicVolumeSettings;)Landroid/os/storage/StorageManager;
+    # getter for: Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;->mStorageManager:Landroid/os/storage/StorageManager;
+    invoke-static {v1}, Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;->access$200(Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;)Landroid/os/storage/StorageManager;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/PublicVolumeSettings$1;->this$0:Lcom/android/settings/deviceinfo/PublicVolumeSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings$1;->this$0:Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;
 
-    # getter for: Lcom/android/settings/deviceinfo/PublicVolumeSettings;->mVolumeId:Ljava/lang/String;
-    invoke-static {v2}, Lcom/android/settings/deviceinfo/PublicVolumeSettings;->access$100(Lcom/android/settings/deviceinfo/PublicVolumeSettings;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;->mVolumeId:Ljava/lang/String;
+    invoke-static {v2}, Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;->access$100(Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -81,13 +81,13 @@
 
     move-result-object v1
 
-    # setter for: Lcom/android/settings/deviceinfo/PublicVolumeSettings;->mVolume:Landroid/os/storage/VolumeInfo;
-    invoke-static {v0, v1}, Lcom/android/settings/deviceinfo/PublicVolumeSettings;->access$002(Lcom/android/settings/deviceinfo/PublicVolumeSettings;Landroid/os/storage/VolumeInfo;)Landroid/os/storage/VolumeInfo;
+    # setter for: Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;->mVolume:Landroid/os/storage/VolumeInfo;
+    invoke-static {v0, v1}, Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;->access$002(Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;Landroid/os/storage/VolumeInfo;)Landroid/os/storage/VolumeInfo;
 
     .line 236
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/PublicVolumeSettings$1;->this$0:Lcom/android/settings/deviceinfo/PublicVolumeSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings$1;->this$0:Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/deviceinfo/PublicVolumeSettings;->update()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;->update()V
 
     .line 238
     :cond_0
@@ -102,10 +102,10 @@
 
     .prologue
     .line 226
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/PublicVolumeSettings$1;->this$0:Lcom/android/settings/deviceinfo/PublicVolumeSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings$1;->this$0:Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;
 
-    # getter for: Lcom/android/settings/deviceinfo/PublicVolumeSettings;->mVolume:Landroid/os/storage/VolumeInfo;
-    invoke-static {v0}, Lcom/android/settings/deviceinfo/PublicVolumeSettings;->access$000(Lcom/android/settings/deviceinfo/PublicVolumeSettings;)Landroid/os/storage/VolumeInfo;
+    # getter for: Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;->mVolume:Landroid/os/storage/VolumeInfo;
+    invoke-static {v0}, Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;->access$000(Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;)Landroid/os/storage/VolumeInfo;
 
     move-result-object v0
 
@@ -124,15 +124,15 @@
     if-eqz v0, :cond_0
 
     .line 227
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/PublicVolumeSettings$1;->this$0:Lcom/android/settings/deviceinfo/PublicVolumeSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings$1;->this$0:Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;
 
-    # setter for: Lcom/android/settings/deviceinfo/PublicVolumeSettings;->mVolume:Landroid/os/storage/VolumeInfo;
-    invoke-static {v0, p1}, Lcom/android/settings/deviceinfo/PublicVolumeSettings;->access$002(Lcom/android/settings/deviceinfo/PublicVolumeSettings;Landroid/os/storage/VolumeInfo;)Landroid/os/storage/VolumeInfo;
+    # setter for: Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;->mVolume:Landroid/os/storage/VolumeInfo;
+    invoke-static {v0, p1}, Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;->access$002(Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;Landroid/os/storage/VolumeInfo;)Landroid/os/storage/VolumeInfo;
 
     .line 228
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/PublicVolumeSettings$1;->this$0:Lcom/android/settings/deviceinfo/PublicVolumeSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings$1;->this$0:Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/deviceinfo/PublicVolumeSettings;->update()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/deviceinfo/PublicVolumeSettings;->update()V
 
     .line 230
     :cond_0

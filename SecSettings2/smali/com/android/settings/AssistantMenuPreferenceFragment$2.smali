@@ -1,11 +1,11 @@
-.class Lcom/android/settings/AssistantMenuPreferenceFragment$2;
+.class Lcom/android/settings_ex/AssistantMenuPreferenceFragment$2;
 .super Landroid/database/ContentObserver;
 .source "AssistantMenuPreferenceFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/AssistantMenuPreferenceFragment;
+    value = Lcom/android/settings_ex/AssistantMenuPreferenceFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/AssistantMenuPreferenceFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/AssistantMenuPreferenceFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/AssistantMenuPreferenceFragment;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/AssistantMenuPreferenceFragment;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 159
-    iput-object p1, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$2;->this$0:Lcom/android/settings/AssistantMenuPreferenceFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$2;->this$0:Lcom/android/settings_ex/AssistantMenuPreferenceFragment;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -40,10 +40,10 @@
 
     .prologue
     .line 162
-    iget-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$2;->this$0:Lcom/android/settings/AssistantMenuPreferenceFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$2;->this$0:Lcom/android/settings_ex/AssistantMenuPreferenceFragment;
 
-    # invokes: Lcom/android/settings/AssistantMenuPreferenceFragment;->updatePointerSizeMenuStatus()V
-    invoke-static {v0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->access$100(Lcom/android/settings/AssistantMenuPreferenceFragment;)V
+    # invokes: Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->updatePointerSizeMenuStatus()V
+    invoke-static {v0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->access$100(Lcom/android/settings_ex/AssistantMenuPreferenceFragment;)V
 
     .line 163
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/TetherSettings$15;
+.class Lcom/android/settings_ex/TetherSettings$15;
 .super Ljava/lang/Object;
 .source "TetherSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/TetherSettings;->setUsbTethering(Z)V
+    value = Lcom/android/settings_ex/TetherSettings;->setUsbTethering(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/TetherSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/TetherSettings;
 
 .field final synthetic val$mEnable:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/TetherSettings;Z)V
+.method constructor <init>(Lcom/android/settings_ex/TetherSettings;Z)V
     .locals 0
 
     .prologue
     .line 1392
-    iput-object p1, p0, Lcom/android/settings/TetherSettings$15;->this$0:Lcom/android/settings/TetherSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/TetherSettings$15;->this$0:Lcom/android/settings_ex/TetherSettings;
 
-    iput-boolean p2, p0, Lcom/android/settings/TetherSettings$15;->val$mEnable:Z
+    iput-boolean p2, p0, Lcom/android/settings_ex/TetherSettings$15;->val$mEnable:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,16 +45,16 @@
 
     .prologue
     .line 1395
-    iget-object v0, p0, Lcom/android/settings/TetherSettings$15;->this$0:Lcom/android/settings/TetherSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/TetherSettings$15;->this$0:Lcom/android/settings_ex/TetherSettings;
 
-    # getter for: Lcom/android/settings/TetherSettings;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Lcom/android/settings/TetherSettings;->access$700(Lcom/android/settings/TetherSettings;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/TetherSettings;->mContext:Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/settings_ex/TetherSettings;->access$700(Lcom/android/settings_ex/TetherSettings;)Landroid/content/Context;
 
     move-result-object v0
 
-    iget-boolean v1, p0, Lcom/android/settings/TetherSettings$15;->val$mEnable:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/TetherSettings$15;->val$mEnable:Z
 
-    invoke-static {v0, v1}, Lcom/android/settings/Utils;->checkWifiPreCondition(Landroid/content/Context;Z)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/Utils;->checkWifiPreCondition(Landroid/content/Context;Z)V
 
     .line 1396
     return-void

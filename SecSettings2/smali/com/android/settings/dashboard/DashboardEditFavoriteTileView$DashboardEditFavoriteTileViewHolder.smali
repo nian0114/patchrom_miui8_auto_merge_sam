@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/dashboard/DashboardEditFavoriteTileView$DashboardEditFavoriteTileViewHolder;
+.class public Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView$DashboardEditFavoriteTileViewHolder;
 .super Ljava/lang/Object;
 .source "DashboardEditFavoriteTileView.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/dashboard/DashboardEditFavoriteTileView;
+    value = Lcom/android/settings_ex/dashboard/DashboardEditFavoriteTileView;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

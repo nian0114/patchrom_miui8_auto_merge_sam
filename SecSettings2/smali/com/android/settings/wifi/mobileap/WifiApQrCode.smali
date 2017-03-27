@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/mobileap/WifiApQrCode;
+.class public Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;
 .super Landroid/app/Fragment;
 .source "WifiApQrCode.java"
 
@@ -50,94 +50,94 @@
     .line 58
     const-string v0, "/sdcard/Pictures/WifiApQrCode.bmp"
 
-    iput-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mQrCodePath:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mQrCodePath:Ljava/lang/String;
 
     .line 168
-    new-instance v0, Lcom/android/settings/wifi/mobileap/WifiApQrCode$4;
+    new-instance v0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode$4;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/wifi/mobileap/WifiApQrCode$4;-><init>(Lcom/android/settings/wifi/mobileap/WifiApQrCode;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode$4;-><init>(Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;)V
 
-    iput-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mConnection:Landroid/content/ServiceConnection;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mConnection:Landroid/content/ServiceConnection;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/wifi/mobileap/WifiApQrCode;)Landroid/net/wifi/WifiManager;
+.method static synthetic access$000(Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;)Landroid/net/wifi/WifiManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/mobileap/WifiApQrCode;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;
 
     .prologue
     .line 56
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     return-object v0
 .end method
 
-.method static synthetic access$102(Lcom/android/settings/wifi/mobileap/WifiApQrCode;Lcom/samsung/android/app/qragent/service/IQRService;)Lcom/samsung/android/app/qragent/service/IQRService;
+.method static synthetic access$102(Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;Lcom/samsung/android/app/qragent/service/IQRService;)Lcom/samsung/android/app/qragent/service/IQRService;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/mobileap/WifiApQrCode;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;
     .param p1, "x1"    # Lcom/samsung/android/app/qragent/service/IQRService;
 
     .prologue
     .line 56
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mBinder:Lcom/samsung/android/app/qragent/service/IQRService;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mBinder:Lcom/samsung/android/app/qragent/service/IQRService;
 
     return-object p1
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/wifi/mobileap/WifiApQrCode;)Landroid/graphics/Bitmap;
+.method static synthetic access$200(Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;)Landroid/graphics/Bitmap;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/mobileap/WifiApQrCode;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;
 
     .prologue
     .line 56
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mQrBmp:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mQrBmp:Landroid/graphics/Bitmap;
 
     return-object v0
 .end method
 
-.method static synthetic access$202(Lcom/android/settings/wifi/mobileap/WifiApQrCode;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+.method static synthetic access$202(Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/wifi/mobileap/WifiApQrCode;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;
     .param p1, "x1"    # Landroid/graphics/Bitmap;
 
     .prologue
     .line 56
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mQrBmp:Landroid/graphics/Bitmap;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mQrBmp:Landroid/graphics/Bitmap;
 
     return-object p1
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/wifi/mobileap/WifiApQrCode;)Ljava/lang/String;
+.method static synthetic access$300(Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/mobileap/WifiApQrCode;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;
 
     .prologue
     .line 56
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mQrCode:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mQrCode:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$402(Lcom/android/settings/wifi/mobileap/WifiApQrCode;J)J
+.method static synthetic access$402(Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;J)J
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/mobileap/WifiApQrCode;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;
     .param p1, "x1"    # J
 
     .prologue
     .line 56
-    iput-wide p1, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->imageTime:J
+    iput-wide p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->imageTime:J
 
     return-wide p1
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/wifi/mobileap/WifiApQrCode;)Z
+.method static synthetic access$500(Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/wifi/mobileap/WifiApQrCode;
+    .param p0, "x0"    # Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;
 
     .prologue
     .line 56
-    iget-boolean v0, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->enabled:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->enabled:Z
 
     return v0
 .end method
@@ -150,13 +150,13 @@
     const/4 v4, -0x2
 
     .line 229
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mActivity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mActionView:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mActionView:Landroid/view/View;
 
     new-instance v2, Landroid/app/ActionBar$LayoutParams;
 
@@ -169,7 +169,7 @@
     .line 233
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->setHasOptionsMenu(Z)V
 
     .line 234
     return-void
@@ -184,7 +184,7 @@
     const/4 v4, 0x0
 
     .line 203
-    iget-object v3, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mBmpUri:Landroid/net/Uri;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mBmpUri:Landroid/net/Uri;
 
     if-eqz v3, :cond_0
 
@@ -195,7 +195,7 @@
 
     .line 205
     .local v2, "values":Landroid/content/ContentValues;
-    iget-object v3, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mActivity:Landroid/app/Activity;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v3}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
@@ -207,12 +207,12 @@
 
     .line 206
     .local v1, "resolver":Landroid/content/ContentResolver;
-    iget-object v3, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mBmpUri:Landroid/net/Uri;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mBmpUri:Landroid/net/Uri;
 
     invoke-virtual {v1, v3, v4, v4}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
     .line 207
-    iput-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mBmpUri:Landroid/net/Uri;
+    iput-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mBmpUri:Landroid/net/Uri;
 
     .line 209
     .end local v1    # "resolver":Landroid/content/ContentResolver;
@@ -250,13 +250,13 @@
 
     .line 261
     .local v0, "bmp":Landroid/graphics/Bitmap;
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mBinder:Lcom/samsung/android/app/qragent/service/IQRService;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mBinder:Lcom/samsung/android/app/qragent/service/IQRService;
 
     if-eqz v2, :cond_0
 
     .line 263
     :try_start_0
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mBinder:Lcom/samsung/android/app/qragent/service/IQRService;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mBinder:Lcom/samsung/android/app/qragent/service/IQRService;
 
     invoke-interface {v2, p1}, Lcom/samsung/android/app/qragent/service/IQRService;->getQRCodeImage(Ljava/lang/String;)Landroid/graphics/Bitmap;
     :try_end_0
@@ -344,7 +344,7 @@
     :try_start_2
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mQrBmp:Landroid/graphics/Bitmap;
+    iget-object v11, v0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mQrBmp:Landroid/graphics/Bitmap;
 
     if-eqz v11, :cond_1
 
@@ -352,7 +352,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mQrBmp:Landroid/graphics/Bitmap;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mQrBmp:Landroid/graphics/Bitmap;
 
     sget-object v13, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -389,7 +389,7 @@
     .local v10, "values":Landroid/content/ContentValues;
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mActivity:Landroid/app/Activity;
+    iget-object v11, v0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v11}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
@@ -424,7 +424,7 @@
 
     move-object/from16 v0, p0
 
-    iget-wide v12, v0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->imageTime:J
+    iget-wide v12, v0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->imageTime:J
 
     invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -437,7 +437,7 @@
 
     move-object/from16 v0, p0
 
-    iget-wide v12, v0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->imageTime:J
+    iget-wide v12, v0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->imageTime:J
 
     const-wide/16 v14, 0x3e8
 
@@ -454,7 +454,7 @@
 
     move-object/from16 v0, p0
 
-    iget-wide v12, v0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->imageTime:J
+    iget-wide v12, v0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->imageTime:J
 
     const-wide/16 v14, 0x3e8
 
@@ -478,7 +478,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mQrBmp:Landroid/graphics/Bitmap;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mQrBmp:Landroid/graphics/Bitmap;
 
     invoke-virtual {v12}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -495,7 +495,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mQrBmp:Landroid/graphics/Bitmap;
+    iget-object v12, v0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mQrBmp:Landroid/graphics/Bitmap;
 
     invoke-virtual {v12}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -736,7 +736,7 @@
 
     .line 240
     .local v0, "hidden":Ljava/lang/String;
-    iget-object v6, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v6, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v6}, Landroid/net/wifi/WifiManager;->getWifiApConfiguration()Landroid/net/wifi/WifiConfiguration;
 
@@ -955,7 +955,7 @@
     invoke-super {p0, p1}, Landroid/app/Fragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 121
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mActivity:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v2}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
@@ -969,10 +969,10 @@
 
     check-cast v2, Landroid/net/wifi/WifiManager;
 
-    iput-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     .line 123
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mActionView:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mActionView:Landroid/view/View;
 
     const v3, 0x7f0d05ab
 
@@ -982,19 +982,19 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    iput-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mShareButton:Landroid/widget/TextView;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mShareButton:Landroid/widget/TextView;
 
     .line 124
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mShareButton:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mShareButton:Landroid/widget/TextView;
 
-    new-instance v3, Lcom/android/settings/wifi/mobileap/WifiApQrCode$2;
+    new-instance v3, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode$2;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/wifi/mobileap/WifiApQrCode$2;-><init>(Lcom/android/settings/wifi/mobileap/WifiApQrCode;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode$2;-><init>(Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;)V
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 130
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mActivity:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v2}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
@@ -1003,7 +1003,7 @@
     invoke-virtual {v2, v4, v4}, Landroid/app/ActionBar;->setDisplayOptions(II)V
 
     .line 132
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mView:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mView:Landroid/view/View;
 
     const v3, 0x7f0d05a9
 
@@ -1013,10 +1013,10 @@
 
     check-cast v2, Landroid/widget/ImageView;
 
-    iput-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mQrImage:Landroid/widget/ImageView;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mQrImage:Landroid/widget/ImageView;
 
     .line 133
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mView:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mView:Landroid/view/View;
 
     const v3, 0x7f0d05aa
 
@@ -1026,33 +1026,33 @@
 
     check-cast v2, Landroid/widget/Button;
 
-    iput-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mQrGenerate:Landroid/widget/Button;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mQrGenerate:Landroid/widget/Button;
 
     .line 134
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mQrGenerate:Landroid/widget/Button;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mQrGenerate:Landroid/widget/Button;
 
-    new-instance v3, Lcom/android/settings/wifi/mobileap/WifiApQrCode$3;
+    new-instance v3, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode$3;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/wifi/mobileap/WifiApQrCode$3;-><init>(Lcom/android/settings/wifi/mobileap/WifiApQrCode;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode$3;-><init>(Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;)V
 
     invoke-virtual {v2, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 142
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->getQrString()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->getQrString()Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mQrCode:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mQrCode:Ljava/lang/String;
 
     .line 144
-    iget-boolean v2, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->enabled:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->enabled:Z
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->updateView(Z)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->updateView(Z)V
 
     .line 146
     const/4 v2, 0x0
 
-    invoke-direct {p0, v2}, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->updateOptionsMenuIcon(Z)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->updateOptionsMenuIcon(Z)V
 
     .line 149
     new-instance v1, Landroid/os/Message;
@@ -1082,7 +1082,7 @@
     iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     .line 154
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v2, v1}, Landroid/net/wifi/WifiManager;->callSECApi(Landroid/os/Message;)I
 
@@ -1099,14 +1099,14 @@
     invoke-super {p0, p1}, Landroid/app/Fragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 83
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mActivity:Landroid/app/Activity;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mActivity:Landroid/app/Activity;
 
     .line 84
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -1123,7 +1123,7 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->enabled:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->enabled:Z
 
     .line 88
     :cond_0
@@ -1131,28 +1131,28 @@
 
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    iput-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mFilter:Landroid/content/IntentFilter;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mFilter:Landroid/content/IntentFilter;
 
     .line 89
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mFilter:Landroid/content/IntentFilter;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mFilter:Landroid/content/IntentFilter;
 
     const-string v2, "android.net.wifi.WIFI_AP_STATE_CHANGED"
 
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 90
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mFilter:Landroid/content/IntentFilter;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mFilter:Landroid/content/IntentFilter;
 
     const-string v2, "android.intent.action.ACTION_SHUTDOWN"
 
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 92
-    new-instance v1, Lcom/android/settings/wifi/mobileap/WifiApQrCode$1;
+    new-instance v1, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/wifi/mobileap/WifiApQrCode$1;-><init>(Lcom/android/settings/wifi/mobileap/WifiApQrCode;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode$1;-><init>(Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;)V
 
-    iput-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mReceiver:Landroid/content/BroadcastReceiver;
 
     .line 109
     return-void
@@ -1174,7 +1174,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mActionView:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mActionView:Landroid/view/View;
 
     .line 114
     const v0, 0x7f04024d
@@ -1183,10 +1183,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mView:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mView:Landroid/view/View;
 
     .line 115
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mView:Landroid/view/View;
 
     return-object v0
 .end method
@@ -1196,14 +1196,14 @@
 
     .prologue
     .line 197
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->clearQrCode()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->clearQrCode()V
 
     .line 198
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
@@ -1219,14 +1219,14 @@
 
     .prologue
     .line 189
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mConnection:Landroid/content/ServiceConnection;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mConnection:Landroid/content/ServiceConnection;
 
     if-eqz v0, :cond_0
 
     .line 190
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mActivity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mActivity:Landroid/app/Activity;
 
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mConnection:Landroid/content/ServiceConnection;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mConnection:Landroid/content/ServiceConnection;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->unbindService(Landroid/content/ServiceConnection;)V
 
@@ -1246,14 +1246,14 @@
     invoke-super {p0}, Landroid/app/Fragment;->onResume()V
 
     .line 161
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->clearQrCode()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->clearQrCode()V
 
     .line 162
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mActivity:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mActivity:Landroid/app/Activity;
 
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    iget-object v3, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mFilter:Landroid/content/IntentFilter;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mFilter:Landroid/content/IntentFilter;
 
     invoke-virtual {v1, v2, v3}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -1271,9 +1271,9 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 165
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mActivity:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mActivity:Landroid/app/Activity;
 
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mConnection:Landroid/content/ServiceConnection;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mConnection:Landroid/content/ServiceConnection;
 
     const/4 v3, 0x1
 
@@ -1288,16 +1288,16 @@
 
     .prologue
     .line 273
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mBmpUri:Landroid/net/Uri;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mBmpUri:Landroid/net/Uri;
 
     if-nez v1, :cond_0
 
     .line 274
-    invoke-virtual {p0}, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->getQrCodeUri()Landroid/net/Uri;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->getQrCodeUri()Landroid/net/Uri;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mBmpUri:Landroid/net/Uri;
+    iput-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mBmpUri:Landroid/net/Uri;
 
     .line 275
     :cond_0
@@ -1319,7 +1319,7 @@
     .line 278
     const-string v1, "android.intent.extra.STREAM"
 
-    iget-object v2, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mBmpUri:Landroid/net/Uri;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mBmpUri:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
@@ -1329,7 +1329,7 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     .line 280
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mActivity:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
@@ -1345,7 +1345,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->startActivity(Landroid/content/Intent;)V
 
     .line 281
     return-void
@@ -1364,25 +1364,25 @@
     if-eqz p1, :cond_1
 
     .line 217
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mQrBmp:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mQrBmp:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
     .line 218
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mQrImage:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mQrImage:Landroid/widget/ImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 219
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mQrImage:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mQrImage:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mQrBmp:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mQrBmp:Landroid/graphics/Bitmap;
 
     const/16 v2, 0x400
 
-    iget-object v3, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mQrBmp:Landroid/graphics/Bitmap;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mQrBmp:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -1390,7 +1390,7 @@
 
     mul-int/lit16 v3, v3, 0x400
 
-    iget-object v4, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mQrBmp:Landroid/graphics/Bitmap;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mQrBmp:Landroid/graphics/Bitmap;
 
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -1405,13 +1405,13 @@
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     .line 220
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mShareButton:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mShareButton:Landroid/widget/TextView;
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 222
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mQrGenerate:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mQrGenerate:Landroid/widget/Button;
 
     invoke-virtual {v0, v6}, Landroid/widget/Button;->setVisibility(I)V
 
@@ -1421,7 +1421,7 @@
 
     .line 224
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mQrImage:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mQrImage:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v6}, Landroid/widget/ImageView;->setVisibility(I)V
 

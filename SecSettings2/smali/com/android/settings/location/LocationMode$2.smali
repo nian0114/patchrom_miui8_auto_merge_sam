@@ -1,4 +1,4 @@
-.class Lcom/android/settings/location/LocationMode$2;
+.class Lcom/android/settings_ex/location/LocationMode$2;
 .super Ljava/lang/Object;
 .source "LocationMode.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/location/LocationMode;->onRadioButtonClicked(Lcom/android/settings/location/RadioButtonPreference;)V
+    value = Lcom/android/settings_ex/location/LocationMode;->onRadioButtonClicked(Lcom/android/settings_ex/location/RadioButtonPreference;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/location/LocationMode;
+.field final synthetic this$0:Lcom/android/settings_ex/location/LocationMode;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/location/LocationMode;)V
+.method constructor <init>(Lcom/android/settings_ex/location/LocationMode;)V
     .locals 0
 
     .prologue
     .line 183
-    iput-object p1, p0, Lcom/android/settings/location/LocationMode$2;->this$0:Lcom/android/settings/location/LocationMode;
+    iput-object p1, p0, Lcom/android/settings_ex/location/LocationMode$2;->this$0:Lcom/android/settings_ex/location/LocationMode;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

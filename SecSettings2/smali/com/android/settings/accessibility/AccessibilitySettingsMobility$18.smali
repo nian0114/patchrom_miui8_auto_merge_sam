@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/AccessibilitySettingsMobility$18;
+.class Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility$18;
 .super Ljava/lang/Object;
 .source "AccessibilitySettingsMobility.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/AccessibilitySettingsMobility;->onCreateDialog(I)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;->onCreateDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/AccessibilitySettingsMobility;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/AccessibilitySettingsMobility;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;)V
     .locals 0
 
     .prologue
     .line 686
-    iput-object p1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsMobility$18;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsMobility;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility$18;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,12 +43,12 @@
 
     .prologue
     .line 688
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsMobility$18;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsMobility;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility$18;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;
 
     const/16 v1, 0x9
 
-    # invokes: Lcom/android/settings/accessibility/AccessibilitySettingsMobility;->removeDialog(I)V
-    invoke-static {v0, v1}, Lcom/android/settings/accessibility/AccessibilitySettingsMobility;->access$2800(Lcom/android/settings/accessibility/AccessibilitySettingsMobility;I)V
+    # invokes: Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;->removeDialog(I)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;->access$2800(Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;I)V
 
     .line 689
     return-void

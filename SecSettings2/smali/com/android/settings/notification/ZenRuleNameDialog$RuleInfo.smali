@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/notification/ZenRuleNameDialog$RuleInfo;
+.class public Lcom/android/settings_ex/notification/ZenRuleNameDialog$RuleInfo;
 .super Ljava/lang/Object;
 .source "ZenRuleNameDialog.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/ZenRuleNameDialog;
+    value = Lcom/android/settings_ex/notification/ZenRuleNameDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

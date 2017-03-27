@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment;
+.class public Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment;
 .super Landroid/app/DialogFragment;
 .source "PrivateVolumeSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/PrivateVolumeSettings;
+    value = Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,14 +25,14 @@
     return-void
 .end method
 
-.method public static show(Lcom/android/settings/deviceinfo/PrivateVolumeSettings;Landroid/os/storage/VolumeInfo;)V
+.method public static show(Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings;Landroid/os/storage/VolumeInfo;)V
     .locals 4
-    .param p0, "parent"    # Lcom/android/settings/deviceinfo/PrivateVolumeSettings;
+    .param p0, "parent"    # Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings;
     .param p1, "vol"    # Landroid/os/storage/VolumeInfo;
 
     .prologue
     .line 740
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/PrivateVolumeSettings;->isAdded()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings;->isAdded()Z
 
     move-result v2
 
@@ -44,15 +44,15 @@
 
     .line 742
     :cond_0
-    new-instance v1, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment;
+    new-instance v1, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment;
 
-    invoke-direct {v1}, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment;-><init>()V
+    invoke-direct {v1}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment;-><init>()V
 
     .line 743
-    .local v1, "dialog":Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment;
+    .local v1, "dialog":Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment;
     const/4 v2, 0x0
 
-    invoke-virtual {v1, p0, v2}, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment;->setTargetFragment(Landroid/app/Fragment;I)V
+    invoke-virtual {v1, p0, v2}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment;->setTargetFragment(Landroid/app/Fragment;I)V
 
     .line 744
     new-instance v0, Landroid/os/Bundle;
@@ -70,16 +70,16 @@
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 746
-    invoke-virtual {v1, v0}, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment;->setArguments(Landroid/os/Bundle;)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment;->setArguments(Landroid/os/Bundle;)V
 
     .line 747
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/PrivateVolumeSettings;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v2
 
     const-string v3, "rename"
 
-    invoke-virtual {v1, v2, v3}, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v3}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -94,7 +94,7 @@
     const/4 v11, 0x0
 
     .line 752
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -110,7 +110,7 @@
 
     .line 755
     .local v6, "storageManager":Landroid/os/storage/StorageManager;
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v9
 
@@ -187,9 +187,9 @@
     .line 769
     const v9, 0x7f0e0a47
 
-    new-instance v10, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment$1;
+    new-instance v10, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment$1;
 
-    invoke-direct {v10, p0, v6, v3, v4}, Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment$1;-><init>(Lcom/android/settings/deviceinfo/PrivateVolumeSettings$RenameFragment;Landroid/os/storage/StorageManager;Ljava/lang/String;Landroid/widget/EditText;)V
+    invoke-direct {v10, p0, v6, v3, v4}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment$1;-><init>(Lcom/android/settings_ex/deviceinfo/PrivateVolumeSettings$RenameFragment;Landroid/os/storage/StorageManager;Ljava/lang/String;Landroid/widget/EditText;)V
 
     invoke-virtual {v0, v9, v10}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 

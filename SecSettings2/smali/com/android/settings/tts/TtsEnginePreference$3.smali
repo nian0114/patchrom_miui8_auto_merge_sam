@@ -1,4 +1,4 @@
-.class Lcom/android/settings/tts/TtsEnginePreference$3;
+.class Lcom/android/settings_ex/tts/TtsEnginePreference$3;
 .super Ljava/lang/Object;
 .source "TtsEnginePreference.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/tts/TtsEnginePreference;->getView(Landroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    value = Lcom/android/settings_ex/tts/TtsEnginePreference;->getView(Landroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/tts/TtsEnginePreference;
+.field final synthetic this$0:Lcom/android/settings_ex/tts/TtsEnginePreference;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/tts/TtsEnginePreference;)V
+.method constructor <init>(Lcom/android/settings_ex/tts/TtsEnginePreference;)V
     .locals 0
 
     .prologue
     .line 153
-    iput-object p1, p0, Lcom/android/settings/tts/TtsEnginePreference$3;->this$0:Lcom/android/settings/tts/TtsEnginePreference;
+    iput-object p1, p0, Lcom/android/settings_ex/tts/TtsEnginePreference$3;->this$0:Lcom/android/settings_ex/tts/TtsEnginePreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,10 +42,10 @@
 
     .prologue
     .line 156
-    iget-object v0, p0, Lcom/android/settings/tts/TtsEnginePreference$3;->this$0:Lcom/android/settings/tts/TtsEnginePreference;
+    iget-object v0, p0, Lcom/android/settings_ex/tts/TtsEnginePreference$3;->this$0:Lcom/android/settings_ex/tts/TtsEnginePreference;
 
-    # invokes: Lcom/android/settings/tts/TtsEnginePreference;->launchSettings()V
-    invoke-static {v0}, Lcom/android/settings/tts/TtsEnginePreference;->access$100(Lcom/android/settings/tts/TtsEnginePreference;)V
+    # invokes: Lcom/android/settings_ex/tts/TtsEnginePreference;->launchSettings()V
+    invoke-static {v0}, Lcom/android/settings_ex/tts/TtsEnginePreference;->access$100(Lcom/android/settings_ex/tts/TtsEnginePreference;)V
 
     .line 157
     return-void

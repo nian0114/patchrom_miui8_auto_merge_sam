@@ -1,4 +1,4 @@
-.class Lcom/android/settings/notification/NotificationSettings$13;
+.class Lcom/android/settings_ex/notification/NotificationSettings$13;
 .super Ljava/lang/Object;
 .source "NotificationSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/notification/NotificationSettings;->initPulse(Landroid/preference/PreferenceCategory;)V
+    value = Lcom/android/settings_ex/notification/NotificationSettings;->initPulse(Landroid/preference/PreferenceCategory;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/NotificationSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/NotificationSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/notification/NotificationSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/notification/NotificationSettings;)V
     .locals 0
 
     .prologue
     .line 913
-    iput-object p1, p0, Lcom/android/settings/notification/NotificationSettings$13;->this$0:Lcom/android/settings/notification/NotificationSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/NotificationSettings$13;->this$0:Lcom/android/settings_ex/notification/NotificationSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -52,10 +52,10 @@
 
     .line 917
     .local v0, "val":Z
-    iget-object v1, p0, Lcom/android/settings/notification/NotificationSettings$13;->this$0:Lcom/android/settings/notification/NotificationSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/NotificationSettings$13;->this$0:Lcom/android/settings_ex/notification/NotificationSettings;
 
-    # invokes: Lcom/android/settings/notification/NotificationSettings;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v1}, Lcom/android/settings/notification/NotificationSettings;->access$1300(Lcom/android/settings/notification/NotificationSettings;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/notification/NotificationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v1}, Lcom/android/settings_ex/notification/NotificationSettings;->access$1300(Lcom/android/settings_ex/notification/NotificationSettings;)Landroid/content/ContentResolver;
 
     move-result-object v2
 

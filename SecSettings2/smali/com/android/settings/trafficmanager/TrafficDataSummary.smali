@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/trafficmanager/TrafficDataSummary;
+.class public Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;
 .super Ljava/lang/Object;
 .source "TrafficDataSummary.java"
 
@@ -20,7 +20,7 @@
 
 .field private mCal_Start:Ljava/util/Calendar;
 
-.field private mChartData:Lcom/android/settings/net/ChartData;
+.field private mChartData:Lcom/android/settings_ex/net/ChartData;
 
 .field private mContext:Landroid/content/Context;
 
@@ -88,85 +88,85 @@
     .line 18
     const-string v0, "TrafficDataSummary"
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->TAG:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->TAG:Ljava/lang/String;
 
     .line 30
-    iput v4, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->DEFAULT_TRAFFIC_SUMMARY_START_DAY:I
+    iput v4, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->DEFAULT_TRAFFIC_SUMMARY_START_DAY:I
 
     .line 31
-    iput-wide v8, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->DEFAULT_TRAFFIC_TOTAL:J
+    iput-wide v8, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->DEFAULT_TRAFFIC_TOTAL:J
 
     .line 32
     const-wide/32 v0, 0x100000
 
-    iput-wide v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->MB_TO_BYTE:J
+    iput-wide v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->MB_TO_BYTE:J
 
     .line 33
     const/high16 v0, 0x42480000    # 50.0f
 
-    iput v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mFreePercent:F
+    iput v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mFreePercent:F
 
     .line 34
-    iput-object v3, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTrafficUsed:Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTrafficUsed:Ljava/lang/String;
 
     .line 35
-    iput-object v3, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTodayused:Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTodayused:Ljava/lang/String;
 
     .line 36
-    iput-wide v8, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTotalData:J
+    iput-wide v8, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTotalData:J
 
     .line 37
-    iput-object v3, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTotalTraffic:Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTotalTraffic:Ljava/lang/String;
 
     .line 38
-    iput-boolean v2, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mLoadFinihsed:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mLoadFinihsed:Z
 
     .line 39
     const-wide/16 v0, 0xa
 
-    iput-wide v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mRemainData:J
+    iput-wide v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mRemainData:J
 
     .line 40
-    iput-object v3, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mRemainTraffic:Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mRemainTraffic:Ljava/lang/String;
 
     .line 41
-    iput v4, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartDay:I
+    iput v4, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartDay:I
 
     .line 43
-    iput-wide v6, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleTime:J
+    iput-wide v6, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleTime:J
 
     .line 44
-    iput-wide v6, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleData:J
+    iput-wide v6, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleData:J
 
     .line 55
-    iput-boolean v2, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mIsExceed:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mIsExceed:Z
 
     .line 56
-    iput v2, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSimSlot:I
+    iput v2, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSimSlot:I
 
     .line 57
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iput v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     .line 58
     const/high16 v0, 0x42200000    # 40.0f
 
-    iput v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mFreeWarningValue:F
+    iput v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mFreeWarningValue:F
 
     .line 59
-    iput-boolean v2, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSettingOn:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSettingOn:Z
 
     .line 60
-    iput-boolean v2, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->isBlockData:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->isBlockData:Z
 
     .line 68
     return-void
 .end method
 
-.method public constructor <init>(Lcom/android/settings/net/ChartData;Landroid/content/Context;)V
+.method public constructor <init>(Lcom/android/settings_ex/net/ChartData;Landroid/content/Context;)V
     .locals 10
-    .param p1, "mData"    # Lcom/android/settings/net/ChartData;
+    .param p1, "mData"    # Lcom/android/settings_ex/net/ChartData;
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
@@ -186,83 +186,83 @@
     .line 18
     const-string v0, "TrafficDataSummary"
 
-    iput-object v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->TAG:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->TAG:Ljava/lang/String;
 
     .line 30
-    iput v4, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->DEFAULT_TRAFFIC_SUMMARY_START_DAY:I
+    iput v4, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->DEFAULT_TRAFFIC_SUMMARY_START_DAY:I
 
     .line 31
-    iput-wide v8, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->DEFAULT_TRAFFIC_TOTAL:J
+    iput-wide v8, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->DEFAULT_TRAFFIC_TOTAL:J
 
     .line 32
     const-wide/32 v0, 0x100000
 
-    iput-wide v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->MB_TO_BYTE:J
+    iput-wide v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->MB_TO_BYTE:J
 
     .line 33
     const/high16 v0, 0x42480000    # 50.0f
 
-    iput v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mFreePercent:F
+    iput v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mFreePercent:F
 
     .line 34
-    iput-object v3, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTrafficUsed:Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTrafficUsed:Ljava/lang/String;
 
     .line 35
-    iput-object v3, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTodayused:Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTodayused:Ljava/lang/String;
 
     .line 36
-    iput-wide v8, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTotalData:J
+    iput-wide v8, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTotalData:J
 
     .line 37
-    iput-object v3, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTotalTraffic:Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTotalTraffic:Ljava/lang/String;
 
     .line 38
-    iput-boolean v2, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mLoadFinihsed:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mLoadFinihsed:Z
 
     .line 39
     const-wide/16 v0, 0xa
 
-    iput-wide v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mRemainData:J
+    iput-wide v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mRemainData:J
 
     .line 40
-    iput-object v3, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mRemainTraffic:Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mRemainTraffic:Ljava/lang/String;
 
     .line 41
-    iput v4, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartDay:I
+    iput v4, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartDay:I
 
     .line 43
-    iput-wide v6, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleTime:J
+    iput-wide v6, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleTime:J
 
     .line 44
-    iput-wide v6, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleData:J
+    iput-wide v6, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleData:J
 
     .line 55
-    iput-boolean v2, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mIsExceed:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mIsExceed:Z
 
     .line 56
-    iput v2, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSimSlot:I
+    iput v2, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSimSlot:I
 
     .line 57
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iput v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     .line 58
     const/high16 v0, 0x42200000    # 40.0f
 
-    iput v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mFreeWarningValue:F
+    iput v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mFreeWarningValue:F
 
     .line 59
-    iput-boolean v2, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSettingOn:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSettingOn:Z
 
     .line 60
-    iput-boolean v2, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->isBlockData:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->isBlockData:Z
 
     .line 63
-    iput-object p1, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mChartData:Lcom/android/settings/net/ChartData;
+    iput-object p1, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mChartData:Lcom/android/settings_ex/net/ChartData;
 
     .line 64
-    iput-object p2, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iput-object p2, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     .line 65
     return-void
@@ -287,7 +287,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSimSlot:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSimSlot:I
 
     move/from16 v21, v0
 
@@ -316,7 +316,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v21, v0
 
@@ -333,7 +333,7 @@
     .line 77
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -349,7 +349,7 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/trafficmanager/TrafficDataSummary;->isBlockData:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->isBlockData:Z
 
     .line 80
     new-instance v19, Ljava/lang/StringBuilder;
@@ -364,7 +364,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v20, v0
 
@@ -390,7 +390,7 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/trafficmanager/TrafficDataSummary;->isBlockData:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->isBlockData:Z
 
     .line 83
     const/16 v19, 0x0
@@ -399,12 +399,12 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSettingOn:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSettingOn:Z
 
     .line 84
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSimSlot:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSimSlot:I
 
     move/from16 v19, v0
 
@@ -429,7 +429,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v20, v0
 
@@ -455,12 +455,12 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSettingOn:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSettingOn:Z
 
     .line 86
     move-object/from16 v0, p0
 
-    iget-boolean v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSettingOn:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSettingOn:Z
 
     move/from16 v19, v0
 
@@ -474,7 +474,7 @@
     :try_start_0
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -494,7 +494,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v21, v0
 
@@ -524,7 +524,7 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSettingOn:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSettingOn:Z
     :try_end_0
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -533,7 +533,7 @@
     :goto_0
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -559,7 +559,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v20, v0
 
@@ -573,7 +573,7 @@
 
     move-object/from16 v0, p0
 
-    iget-boolean v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSettingOn:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSettingOn:Z
 
     move/from16 v20, v0
 
@@ -605,7 +605,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSimSlot:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSimSlot:I
 
     move/from16 v21, v0
 
@@ -621,7 +621,7 @@
 
     move-object/from16 v0, p0
 
-    iget-boolean v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSettingOn:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSettingOn:Z
 
     move/from16 v21, v0
 
@@ -637,7 +637,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v21, v0
 
@@ -658,7 +658,7 @@
     .local v13, "mTotal":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSimSlot:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSimSlot:I
 
     move/from16 v19, v0
 
@@ -683,7 +683,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v20, v0
 
@@ -720,7 +720,7 @@
     :try_start_1
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -740,7 +740,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v21, v0
 
@@ -762,7 +762,7 @@
     :goto_2
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -788,7 +788,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v20, v0
 
@@ -827,7 +827,7 @@
 
     move-object/from16 v2, p0
 
-    iput-wide v0, v2, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTotalData:J
+    iput-wide v0, v2, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTotalData:J
 
     .line 156
     const/16 v19, 0x0
@@ -836,13 +836,13 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSettingOn:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSettingOn:Z
 
     .line 168
     :goto_4
     move-object/from16 v0, p0
 
-    iget-boolean v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSettingOn:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSettingOn:Z
 
     move/from16 v19, v0
 
@@ -855,7 +855,7 @@
 
     move-object/from16 v2, p0
 
-    iput-wide v0, v2, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTotalData:J
+    iput-wide v0, v2, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTotalData:J
 
     .line 171
     :cond_2
@@ -865,7 +865,7 @@
 
     move-object/from16 v2, p0
 
-    iput-wide v0, v2, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleTime:J
+    iput-wide v0, v2, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleTime:J
 
     .line 173
     new-instance v19, Ljava/lang/StringBuilder;
@@ -880,7 +880,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v20, v0
 
@@ -906,7 +906,7 @@
 
     move-object/from16 v2, p0
 
-    iput-wide v0, v2, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleTime:J
+    iput-wide v0, v2, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleTime:J
 
     .line 178
     const-string v4, "check_time"
@@ -920,7 +920,7 @@
     :try_start_2
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -940,7 +940,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v21, v0
 
@@ -985,7 +985,7 @@
 
     move-object/from16 v0, p0
 
-    iget-wide v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleTime:J
+    iget-wide v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleTime:J
 
     move-wide/from16 v22, v0
 
@@ -1031,7 +1031,7 @@
     .line 194
     move-object/from16 v0, p0
 
-    iget-wide v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleTime:J
+    iget-wide v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleTime:J
 
     move-wide/from16 v20, v0
 
@@ -1044,12 +1044,12 @@
     .line 195
     move-object/from16 v0, p0
 
-    iput-wide v10, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleTime:J
+    iput-wide v10, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleTime:J
 
     .line 196
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -1075,7 +1075,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v20, v0
 
@@ -1089,7 +1089,7 @@
 
     move-object/from16 v0, p0
 
-    iget-wide v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleTime:J
+    iget-wide v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleTime:J
 
     move-wide/from16 v20, v0
 
@@ -1119,7 +1119,7 @@
 
     move-object/from16 v0, p0
 
-    iget-wide v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleTime:J
+    iget-wide v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleTime:J
 
     move-wide/from16 v22, v0
 
@@ -1144,7 +1144,7 @@
 
     move-object/from16 v1, p0
 
-    iput v0, v1, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartDay:I
+    iput v0, v1, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartDay:I
 
     .line 204
     new-instance v19, Ljava/lang/StringBuilder;
@@ -1159,7 +1159,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v20, v0
 
@@ -1185,7 +1185,7 @@
 
     move-object/from16 v1, p0
 
-    iput v0, v1, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartDay:I
+    iput v0, v1, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartDay:I
 
     .line 209
     const-string v17, "set_package_start_date_value"
@@ -1199,7 +1199,7 @@
     :try_start_3
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -1221,7 +1221,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v21, v0
 
@@ -1273,7 +1273,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartDay:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartDay:I
 
     move/from16 v21, v0
 
@@ -1315,7 +1315,7 @@
     .line 225
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartDay:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartDay:I
 
     move/from16 v19, v0
 
@@ -1330,12 +1330,12 @@
     .line 226
     move-object/from16 v0, p0
 
-    iput v8, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartDay:I
+    iput v8, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartDay:I
 
     .line 227
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -1363,7 +1363,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v20, v0
 
@@ -1377,7 +1377,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartDay:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartDay:I
 
     move/from16 v20, v0
 
@@ -1409,7 +1409,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v20, v0
 
@@ -1468,7 +1468,7 @@
     :try_start_4
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -1488,7 +1488,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v21, v0
 
@@ -1629,7 +1629,7 @@
     .line 259
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -1655,7 +1655,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v20, v0
 
@@ -1698,7 +1698,7 @@
 
     move-object/from16 v2, p0
 
-    iput-wide v0, v2, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleData:J
+    iput-wide v0, v2, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleData:J
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_8
 
@@ -1711,7 +1711,7 @@
     .local v18, "warningValue":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSimSlot:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSimSlot:I
 
     move/from16 v19, v0
 
@@ -1736,7 +1736,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v20, v0
 
@@ -1775,7 +1775,7 @@
     :try_start_6
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -1795,7 +1795,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v21, v0
 
@@ -1817,7 +1817,7 @@
     :goto_9
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -1843,7 +1843,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v20, v0
 
@@ -1913,7 +1913,7 @@
 
     move-object/from16 v1, p0
 
-    iput v0, v1, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mFreeWarningValue:F
+    iput v0, v1, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mFreeWarningValue:F
 
     .line 314
     :goto_b
@@ -1931,7 +1931,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mFreeWarningValue:F
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mFreeWarningValue:F
 
     move/from16 v21, v0
 
@@ -1970,7 +1970,7 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSettingOn:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSettingOn:Z
     :try_end_7
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_7 .. :try_end_7} :catch_0
 
@@ -1988,7 +1988,7 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSettingOn:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSettingOn:Z
 
     goto/16 :goto_0
 
@@ -2008,7 +2008,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v20, v0
 
@@ -2034,12 +2034,12 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSettingOn:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSettingOn:Z
 
     .line 104
     move-object/from16 v0, p0
 
-    iget-boolean v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSettingOn:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSettingOn:Z
 
     move/from16 v19, v0
 
@@ -2053,7 +2053,7 @@
     :try_start_8
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -2073,7 +2073,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v21, v0
 
@@ -2103,7 +2103,7 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSettingOn:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSettingOn:Z
     :try_end_8
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_8 .. :try_end_8} :catch_1
 
@@ -2112,7 +2112,7 @@
     :goto_c
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -2138,7 +2138,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v20, v0
 
@@ -2152,7 +2152,7 @@
 
     move-object/from16 v0, p0
 
-    iget-boolean v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSettingOn:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSettingOn:Z
 
     move/from16 v20, v0
 
@@ -2180,7 +2180,7 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSettingOn:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSettingOn:Z
     :try_end_9
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_9 .. :try_end_9} :catch_1
 
@@ -2198,7 +2198,7 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSettingOn:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSettingOn:Z
 
     goto :goto_c
 
@@ -2220,7 +2220,7 @@
     :cond_f
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -2240,7 +2240,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v21, v0
 
@@ -2274,7 +2274,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v20, v0
 
@@ -2311,7 +2311,7 @@
     :try_start_a
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -2331,7 +2331,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v21, v0
 
@@ -2353,7 +2353,7 @@
     :goto_d
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -2379,7 +2379,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v20, v0
 
@@ -2416,7 +2416,7 @@
     :cond_11
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -2436,7 +2436,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v21, v0
 
@@ -2477,7 +2477,7 @@
 
     move-object/from16 v2, p0
 
-    iput-wide v0, v2, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTotalData:J
+    iput-wide v0, v2, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTotalData:J
     :try_end_b
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_4
 
@@ -2521,7 +2521,7 @@
 
     move-object/from16 v2, p0
 
-    iput-wide v0, v2, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTotalData:J
+    iput-wide v0, v2, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTotalData:J
 
     .line 165
     const/16 v19, 0x0
@@ -2530,7 +2530,7 @@
 
     move-object/from16 v1, p0
 
-    iput-boolean v0, v1, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSettingOn:Z
+    iput-boolean v0, v1, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSettingOn:Z
 
     goto/16 :goto_4
 
@@ -2633,7 +2633,7 @@
 
     move-object/from16 v2, p0
 
-    iput-wide v0, v2, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleData:J
+    iput-wide v0, v2, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleData:J
 
     goto/16 :goto_8
 
@@ -2654,7 +2654,7 @@
     :cond_13
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -2674,7 +2674,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v21, v0
 
@@ -2710,7 +2710,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v20, v0
 
@@ -2749,7 +2749,7 @@
     :try_start_c
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -2769,7 +2769,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v21, v0
 
@@ -2791,7 +2791,7 @@
     :goto_e
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -2817,7 +2817,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v20, v0
 
@@ -2856,7 +2856,7 @@
     :cond_15
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v19, v0
 
@@ -2876,7 +2876,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     move/from16 v21, v0
 
@@ -2925,7 +2925,7 @@
 
     move-object/from16 v1, p0
 
-    iput v0, v1, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mFreeWarningValue:F
+    iput v0, v1, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mFreeWarningValue:F
     :try_end_d
     .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_b
 
@@ -2968,7 +2968,7 @@
 
     move-object/from16 v1, p0
 
-    iput v0, v1, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mFreeWarningValue:F
+    iput v0, v1, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mFreeWarningValue:F
 
     goto/16 :goto_b
 .end method
@@ -2980,7 +2980,7 @@
 
     .prologue
     .line 513
-    iget-wide v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mEndTime:J
+    iget-wide v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mEndTime:J
 
     return-wide v0
 .end method
@@ -2990,7 +2990,7 @@
 
     .prologue
     .line 463
-    iget v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mFreePercent:F
+    iget v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mFreePercent:F
 
     return v0
 .end method
@@ -3000,7 +3000,7 @@
 
     .prologue
     .line 503
-    iget-boolean v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->isBlockData:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->isBlockData:Z
 
     return v0
 .end method
@@ -3010,7 +3010,7 @@
 
     .prologue
     .line 483
-    iget-boolean v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mIsExceed:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mIsExceed:Z
 
     return v0
 .end method
@@ -3020,7 +3020,7 @@
 
     .prologue
     .line 491
-    iget-boolean v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSettingOn:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSettingOn:Z
 
     return v0
 .end method
@@ -3030,7 +3030,7 @@
 
     .prologue
     .line 475
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mRemainTraffic:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mRemainTraffic:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -3040,7 +3040,7 @@
 
     .prologue
     .line 562
-    iget v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartDay:I
+    iget v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartDay:I
 
     return v0
 .end method
@@ -3050,7 +3050,7 @@
 
     .prologue
     .line 509
-    iget-wide v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartTime:J
+    iget-wide v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartTime:J
 
     return-wide v0
 .end method
@@ -3075,7 +3075,7 @@
 
     move-object/from16 v2, p0
 
-    iput-wide v0, v2, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCurrentTime:J
+    iput-wide v0, v2, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCurrentTime:J
 
     .line 390
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
@@ -3086,7 +3086,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Current:Ljava/util/Calendar;
+    iput-object v0, v1, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Current:Ljava/util/Calendar;
 
     .line 391
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
@@ -3097,7 +3097,7 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iput-object v0, v1, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     .line 392
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
@@ -3108,14 +3108,14 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_End:Ljava/util/Calendar;
+    iput-object v0, v1, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_End:Ljava/util/Calendar;
 
     .line 393
     new-instance v5, Ljava/util/Date;
 
     move-object/from16 v0, p0
 
-    iget-wide v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCurrentTime:J
+    iget-wide v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCurrentTime:J
 
     move-wide/from16 v18, v0
 
@@ -3127,7 +3127,7 @@
     .local v5, "date":Ljava/util/Date;
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Current:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Current:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3138,7 +3138,7 @@
     .line 396
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Current:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Current:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3152,7 +3152,7 @@
     .local v12, "mCurrent_year":I
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Current:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Current:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3166,7 +3166,7 @@
     .local v10, "mCurrent_month":I
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Current:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Current:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3180,7 +3180,7 @@
     .local v6, "mCurrent_day":I
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Current:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Current:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3194,7 +3194,7 @@
     .local v7, "mCurrent_hour":I
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Current:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Current:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3208,7 +3208,7 @@
     .local v9, "mCurrent_min":I
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Current:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Current:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3222,7 +3222,7 @@
     .local v11, "mCurrent_sec":I
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Current:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Current:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3236,7 +3236,7 @@
     .local v8, "mCurrent_mSec":I
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartDay:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartDay:I
 
     move/from16 v17, v0
 
@@ -3247,7 +3247,7 @@
     .line 404
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3262,7 +3262,7 @@
     .line 405
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3277,7 +3277,7 @@
     .line 406
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3285,7 +3285,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartDay:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartDay:I
 
     move/from16 v19, v0
 
@@ -3294,7 +3294,7 @@
     .line 407
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3307,7 +3307,7 @@
     .line 408
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3320,7 +3320,7 @@
     .line 409
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3333,7 +3333,7 @@
     .line 410
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3346,7 +3346,7 @@
     .line 411
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3358,13 +3358,13 @@
 
     move-object/from16 v2, p0
 
-    iput-wide v0, v2, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartTime:J
+    iput-wide v0, v2, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartTime:J
 
     .line 428
     :goto_0
     move-object/from16 v0, p0
 
-    iget-wide v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleTime:J
+    iget-wide v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleTime:J
 
     move-wide/from16 v18, v0
 
@@ -3377,13 +3377,13 @@
     .line 429
     move-object/from16 v0, p0
 
-    iget-wide v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleTime:J
+    iget-wide v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleTime:J
 
     move-wide/from16 v18, v0
 
     move-object/from16 v0, p0
 
-    iget-wide v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartTime:J
+    iget-wide v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartTime:J
 
     move-wide/from16 v20, v0
 
@@ -3398,7 +3398,7 @@
 
     move-object/from16 v2, p0
 
-    iput-wide v0, v2, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleTime:J
+    iput-wide v0, v2, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleTime:J
 
     .line 433
     :cond_0
@@ -3406,7 +3406,7 @@
 
     move-object/from16 v0, p0
 
-    iget-wide v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartTime:J
+    iget-wide v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartTime:J
 
     move-wide/from16 v18, v0
 
@@ -3418,7 +3418,7 @@
     .local v4, "Startdate":Ljava/util/Date;
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_End:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_End:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3429,7 +3429,7 @@
     .line 435
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_End:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_End:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3443,7 +3443,7 @@
     .local v13, "mEndMonth":I
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_End:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_End:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3464,7 +3464,7 @@
     .line 438
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_End:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_End:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3478,7 +3478,7 @@
     :goto_1
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_End:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_End:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3490,7 +3490,7 @@
 
     move-object/from16 v2, p0
 
-    iput-wide v0, v2, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mEndTime:J
+    iput-wide v0, v2, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mEndTime:J
 
     .line 444
     const-string v17, "TrafficDataSummary/LPF"
@@ -3507,7 +3507,7 @@
 
     move-object/from16 v0, p0
 
-    iget-wide v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mEndTime:J
+    iget-wide v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mEndTime:J
 
     move-wide/from16 v20, v0
 
@@ -3528,7 +3528,7 @@
     .line 445
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3543,7 +3543,7 @@
     .line 446
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3558,7 +3558,7 @@
     .line 447
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3573,7 +3573,7 @@
     .line 448
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3586,7 +3586,7 @@
     .line 449
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3599,7 +3599,7 @@
     .line 450
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3612,7 +3612,7 @@
     .line 451
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3625,7 +3625,7 @@
     .line 452
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3637,12 +3637,12 @@
 
     move-object/from16 v2, p0
 
-    iput-wide v0, v2, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTodayStartTime:J
+    iput-wide v0, v2, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTodayStartTime:J
 
     .line 453
     move-object/from16 v0, p0
 
-    iget-wide v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTodayStartTime:J
+    iget-wide v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTodayStartTime:J
 
     move-wide/from16 v18, v0
 
@@ -3654,7 +3654,7 @@
 
     move-object/from16 v2, p0
 
-    iput-wide v0, v2, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTodayEndTime:J
+    iput-wide v0, v2, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTodayEndTime:J
 
     .line 454
     const-string v17, "TrafficDataSummary/LPF"
@@ -3671,7 +3671,7 @@
 
     move-object/from16 v0, p0
 
-    iget-wide v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTodayStartTime:J
+    iget-wide v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTodayStartTime:J
 
     move-wide/from16 v20, v0
 
@@ -3704,7 +3704,7 @@
 
     move-object/from16 v0, p0
 
-    iget-wide v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCurrentTime:J
+    iget-wide v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCurrentTime:J
 
     move-wide/from16 v20, v0
 
@@ -3750,7 +3750,7 @@
     :cond_2
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3767,7 +3767,7 @@
     .line 420
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3782,7 +3782,7 @@
     .line 421
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3790,7 +3790,7 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartDay:I
+    iget v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartDay:I
 
     move/from16 v19, v0
 
@@ -3799,7 +3799,7 @@
     .line 422
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3812,7 +3812,7 @@
     .line 423
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3825,7 +3825,7 @@
     .line 424
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3838,7 +3838,7 @@
     .line 425
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3851,7 +3851,7 @@
     .line 426
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_Start:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3863,7 +3863,7 @@
 
     move-object/from16 v2, p0
 
-    iput-wide v0, v2, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartTime:J
+    iput-wide v0, v2, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartTime:J
 
     goto/16 :goto_0
 
@@ -3876,7 +3876,7 @@
     :cond_3
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_End:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_End:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3889,7 +3889,7 @@
     .line 441
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCal_End:Ljava/util/Calendar;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCal_End:Ljava/util/Calendar;
 
     move-object/from16 v17, v0
 
@@ -3907,7 +3907,7 @@
 
     .prologue
     .line 471
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTodayused:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTodayused:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -3917,7 +3917,7 @@
 
     .prologue
     .line 565
-    iget-wide v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTotalData:J
+    iget-wide v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTotalData:J
 
     return-wide v0
 .end method
@@ -3927,7 +3927,7 @@
 
     .prologue
     .line 459
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTotalTraffic:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTotalTraffic:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -3937,7 +3937,7 @@
 
     .prologue
     .line 479
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTrafficUsed:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTrafficUsed:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -3954,7 +3954,7 @@
     .line 542
     .local v4, "middle_real_value":J
     :try_start_0
-    iget-object v3, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -3970,7 +3970,7 @@
 
     move-result-object v8
 
-    iget v9, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v9, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -4011,15 +4011,15 @@
 
     .line 550
     :goto_0
-    iget-wide v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleData:J
+    iget-wide v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleData:J
 
     .line 551
     .local v0, "correct_used":J
-    iget-wide v8, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTotalData:J
+    iget-wide v8, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTotalData:J
 
     long-to-double v8, v8
 
-    iget v3, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mFreeWarningValue:F
+    iget v3, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mFreeWarningValue:F
 
     float-to-double v10, v3
 
@@ -4033,20 +4033,20 @@
 
     .line 552
     .local v6, "result":J
-    iget-wide v8, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartTime:J
+    iget-wide v8, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartTime:J
 
-    iget-wide v10, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleTime:J
+    iget-wide v10, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleTime:J
 
     cmp-long v3, v8, v10
 
     if-gtz v3, :cond_0
 
     .line 553
-    iget-wide v8, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTotalData:J
+    iget-wide v8, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTotalData:J
 
     long-to-double v8, v8
 
-    iget v3, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mFreeWarningValue:F
+    iget v3, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mFreeWarningValue:F
 
     float-to-double v10, v3
 
@@ -4115,7 +4115,7 @@
 
     .prologue
     .line 506
-    iget v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mFreeWarningValue:F
+    iget v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mFreeWarningValue:F
 
     return v0
 .end method
@@ -4130,7 +4130,7 @@
     .line 519
     .local v4, "middle_real_value":J
     :try_start_0
-    iget-object v3, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -4146,7 +4146,7 @@
 
     move-result-object v8
 
-    iget v9, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v9, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -4187,24 +4187,24 @@
 
     .line 527
     :goto_0
-    iget-wide v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleData:J
+    iget-wide v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleData:J
 
     .line 528
     .local v0, "correct_used":J
-    iget-wide v6, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTotalData:J
+    iget-wide v6, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTotalData:J
 
     .line 529
     .local v6, "result":J
-    iget-wide v8, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartTime:J
+    iget-wide v8, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartTime:J
 
-    iget-wide v10, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleTime:J
+    iget-wide v10, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleTime:J
 
     cmp-long v3, v8, v10
 
     if-gtz v3, :cond_0
 
     .line 530
-    iget-wide v8, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTotalData:J
+    iget-wide v8, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTotalData:J
 
     sub-long v10, v0, v4
 
@@ -4263,18 +4263,18 @@
 
     .prologue
     .line 487
-    iget-boolean v0, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSettingOn:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSettingOn:Z
 
     return v0
 .end method
 
-.method public setChartData(Lcom/android/settings/net/ChartData;)V
+.method public setChartData(Lcom/android/settings_ex/net/ChartData;)V
     .locals 0
-    .param p1, "mData"    # Lcom/android/settings/net/ChartData;
+    .param p1, "mData"    # Lcom/android/settings_ex/net/ChartData;
 
     .prologue
     .line 71
-    iput-object p1, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mChartData:Lcom/android/settings/net/ChartData;
+    iput-object p1, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mChartData:Lcom/android/settings_ex/net/ChartData;
 
     .line 72
     return-void
@@ -4286,7 +4286,7 @@
 
     .prologue
     .line 495
-    iput p1, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mSimSlot:I
+    iput p1, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mSimSlot:I
 
     .line 496
     return-void
@@ -4298,7 +4298,7 @@
 
     .prologue
     .line 499
-    iput p1, p0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iput p1, p0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     .line 500
     return-void
@@ -4320,22 +4320,22 @@
 
     move-object/from16 v0, p0
 
-    iput-boolean v3, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mIsExceed:Z
+    iput-boolean v3, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mIsExceed:Z
 
     .line 319
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/trafficmanager/TrafficDataSummary;->getPreferenceValue()V
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->getPreferenceValue()V
 
     .line 320
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/trafficmanager/TrafficDataSummary;->getTheTime()V
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->getTheTime()V
 
     .line 321
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v3, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v0, p0
 
-    iget-wide v4, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTotalData:J
+    iget-wide v4, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTotalData:J
 
     invoke-static {v3, v4, v5}, Landroid/text/format/Formatter;->formatFileSize(Landroid/content/Context;J)Ljava/lang/String;
 
@@ -4343,7 +4343,7 @@
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTotalTraffic:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTotalTraffic:Ljava/lang/String;
 
     .line 322
     const-wide/16 v22, 0x0
@@ -4364,7 +4364,7 @@
 
     move-object/from16 v0, p0
 
-    iget-wide v6, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleTime:J
+    iget-wide v6, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleTime:J
 
     invoke-virtual {v4, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -4391,7 +4391,7 @@
 
     move-object/from16 v0, p0
 
-    iget-wide v6, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartTime:J
+    iget-wide v6, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartTime:J
 
     invoke-virtual {v4, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -4418,7 +4418,7 @@
 
     move-object/from16 v0, p0
 
-    iget-wide v6, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCurrentTime:J
+    iget-wide v6, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCurrentTime:J
 
     invoke-virtual {v4, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -4433,11 +4433,11 @@
     .line 326
     move-object/from16 v0, p0
 
-    iget-wide v4, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartTime:J
+    iget-wide v4, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartTime:J
 
     move-object/from16 v0, p0
 
-    iget-wide v6, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleTime:J
+    iget-wide v6, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleTime:J
 
     cmp-long v3, v4, v6
 
@@ -4446,21 +4446,21 @@
     .line 327
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mChartData:Lcom/android/settings/net/ChartData;
+    iget-object v3, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mChartData:Lcom/android/settings_ex/net/ChartData;
 
-    iget-object v3, v3, Lcom/android/settings/net/ChartData;->network:Landroid/net/NetworkStatsHistory;
-
-    move-object/from16 v0, p0
-
-    iget-wide v4, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartTime:J
+    iget-object v3, v3, Lcom/android/settings_ex/net/ChartData;->network:Landroid/net/NetworkStatsHistory;
 
     move-object/from16 v0, p0
 
-    iget-wide v6, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mEndTime:J
+    iget-wide v4, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartTime:J
 
     move-object/from16 v0, p0
 
-    iget-wide v8, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCurrentTime:J
+    iget-wide v6, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mEndTime:J
+
+    move-object/from16 v0, p0
+
+    iget-wide v8, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCurrentTime:J
 
     const/4 v10, 0x0
 
@@ -4507,7 +4507,7 @@
     .line 331
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v3, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -4525,7 +4525,7 @@
 
     move-object/from16 v0, p0
 
-    iget v5, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v5, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -4542,7 +4542,7 @@
     .line 337
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v3, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-wide/from16 v0, v22
 
@@ -4552,7 +4552,7 @@
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTrafficUsed:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTrafficUsed:Ljava/lang/String;
 
     .line 362
     :goto_1
@@ -4570,7 +4570,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTrafficUsed:Ljava/lang/String;
+    iget-object v5, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTrafficUsed:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4585,21 +4585,21 @@
     .line 363
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mChartData:Lcom/android/settings/net/ChartData;
+    iget-object v3, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mChartData:Lcom/android/settings_ex/net/ChartData;
 
-    iget-object v3, v3, Lcom/android/settings/net/ChartData;->network:Landroid/net/NetworkStatsHistory;
-
-    move-object/from16 v0, p0
-
-    iget-wide v4, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTodayStartTime:J
+    iget-object v3, v3, Lcom/android/settings_ex/net/ChartData;->network:Landroid/net/NetworkStatsHistory;
 
     move-object/from16 v0, p0
 
-    iget-wide v6, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTodayEndTime:J
+    iget-wide v4, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTodayStartTime:J
 
     move-object/from16 v0, p0
 
-    iget-wide v8, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCurrentTime:J
+    iget-wide v6, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTodayEndTime:J
+
+    move-object/from16 v0, p0
+
+    iget-wide v8, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCurrentTime:J
 
     const/4 v10, 0x0
 
@@ -4622,7 +4622,7 @@
     :goto_2
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v3, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-wide/from16 v0, v18
 
@@ -4632,7 +4632,7 @@
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTodayused:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTodayused:Ljava/lang/String;
 
     .line 366
     const-string v3, "TrafficDataSummary"
@@ -4674,7 +4674,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTodayused:Ljava/lang/String;
+    iget-object v5, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTodayused:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4689,7 +4689,7 @@
     .line 368
     move-object/from16 v0, p0
 
-    iget-wide v0, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTotalData:J
+    iget-wide v0, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTotalData:J
 
     move-wide/from16 v20, v0
 
@@ -4699,7 +4699,7 @@
 
     move-object/from16 v0, p0
 
-    iput-wide v4, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mRemainData:J
+    iput-wide v4, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mRemainData:J
 
     .line 370
     const-string v3, "TrafficDataSummary"
@@ -4716,7 +4716,7 @@
 
     move-object/from16 v0, p0
 
-    iget-wide v6, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mRemainData:J
+    iget-wide v6, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mRemainData:J
 
     invoke-virtual {v4, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -4763,7 +4763,7 @@
 
     move-object/from16 v0, p0
 
-    iput-boolean v3, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mIsExceed:Z
+    iput-boolean v3, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mIsExceed:Z
 
     .line 374
     sub-long v14, v22, v20
@@ -4772,7 +4772,7 @@
     .local v14, "mRm":J
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v3, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     invoke-static {v3, v14, v15}, Landroid/text/format/Formatter;->formatFileSize(Landroid/content/Context;J)Ljava/lang/String;
 
@@ -4780,14 +4780,14 @@
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mRemainTraffic:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mRemainTraffic:Ljava/lang/String;
 
     .line 376
     const-wide/16 v4, 0x0
 
     move-object/from16 v0, p0
 
-    iput-wide v4, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mRemainData:J
+    iput-wide v4, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mRemainData:J
 
     .line 380
     .end local v14    # "mRm":J
@@ -4801,7 +4801,7 @@
     .line 381
     move-object/from16 v0, p0
 
-    iget-wide v4, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mRemainData:J
+    iget-wide v4, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mRemainData:J
 
     long-to-float v3, v4
 
@@ -4817,7 +4817,7 @@
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mFreePercent:F
+    iput v3, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mFreePercent:F
 
     .line 384
     :goto_4
@@ -4835,7 +4835,7 @@
 
     move-object/from16 v0, p0
 
-    iget v5, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mFreePercent:F
+    iget v5, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mFreePercent:F
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -4864,21 +4864,21 @@
     :cond_1
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mChartData:Lcom/android/settings/net/ChartData;
+    iget-object v3, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mChartData:Lcom/android/settings_ex/net/ChartData;
 
-    iget-object v3, v3, Lcom/android/settings/net/ChartData;->network:Landroid/net/NetworkStatsHistory;
-
-    move-object/from16 v0, p0
-
-    iget-wide v4, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mStartTime:J
+    iget-object v3, v3, Lcom/android/settings_ex/net/ChartData;->network:Landroid/net/NetworkStatsHistory;
 
     move-object/from16 v0, p0
 
-    iget-wide v6, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mEndTime:J
+    iget-wide v4, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mStartTime:J
 
     move-object/from16 v0, p0
 
-    iget-wide v8, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mCurrentTime:J
+    iget-wide v6, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mEndTime:J
+
+    move-object/from16 v0, p0
+
+    iget-wide v8, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mCurrentTime:J
 
     const/4 v10, 0x0
 
@@ -4905,7 +4905,7 @@
     :try_start_0
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v3, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -4923,7 +4923,7 @@
 
     move-object/from16 v0, p0
 
-    iget v5, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v5, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -4970,14 +4970,14 @@
 
     move-object/from16 v0, p0
 
-    iget-wide v6, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mMiddleData:J
+    iget-wide v6, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mMiddleData:J
 
     add-long v22, v4, v6
 
     .line 354
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v3, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -4995,7 +4995,7 @@
 
     move-object/from16 v0, p0
 
-    iget v5, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->subId:I
+    iget v5, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->subId:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -5012,7 +5012,7 @@
     .line 360
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v3, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-wide/from16 v0, v22
 
@@ -5022,7 +5022,7 @@
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mTrafficUsed:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mTrafficUsed:Ljava/lang/String;
 
     goto/16 :goto_1
 
@@ -5079,11 +5079,11 @@
     :cond_4
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
+    iget-object v3, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mContext:Landroid/content/Context;
 
     move-object/from16 v0, p0
 
-    iget-wide v4, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mRemainData:J
+    iget-wide v4, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mRemainData:J
 
     invoke-static {v3, v4, v5}, Landroid/text/format/Formatter;->formatFileSize(Landroid/content/Context;J)Ljava/lang/String;
 
@@ -5091,7 +5091,7 @@
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mRemainTraffic:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mRemainTraffic:Ljava/lang/String;
 
     goto/16 :goto_3
 
@@ -5101,7 +5101,7 @@
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/android/settings/trafficmanager/TrafficDataSummary;->mFreePercent:F
+    iput v3, v0, Lcom/android/settings_ex/trafficmanager/TrafficDataSummary;->mFreePercent:F
 
     goto/16 :goto_4
 .end method

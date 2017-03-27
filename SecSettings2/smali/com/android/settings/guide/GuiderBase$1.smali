@@ -1,4 +1,4 @@
-.class Lcom/android/settings/guide/GuiderBase$1;
+.class Lcom/android/settings_ex/guide/GuiderBase$1;
 .super Ljava/lang/Object;
 .source "GuiderBase.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/guide/GuiderBase;->showCompleteDialog()V
+    value = Lcom/android/settings_ex/guide/GuiderBase;->showCompleteDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/guide/GuiderBase;
+.field final synthetic this$0:Lcom/android/settings_ex/guide/GuiderBase;
 
 .field final synthetic val$activity:Landroid/app/Activity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/guide/GuiderBase;Landroid/app/Activity;)V
+.method constructor <init>(Lcom/android/settings_ex/guide/GuiderBase;Landroid/app/Activity;)V
     .locals 0
 
     .prologue
     .line 122
-    iput-object p1, p0, Lcom/android/settings/guide/GuiderBase$1;->this$0:Lcom/android/settings/guide/GuiderBase;
+    iput-object p1, p0, Lcom/android/settings_ex/guide/GuiderBase$1;->this$0:Lcom/android/settings_ex/guide/GuiderBase;
 
-    iput-object p2, p0, Lcom/android/settings/guide/GuiderBase$1;->val$activity:Landroid/app/Activity;
+    iput-object p2, p0, Lcom/android/settings_ex/guide/GuiderBase$1;->val$activity:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -62,12 +62,12 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 127
-    iget-object v1, p0, Lcom/android/settings/guide/GuiderBase$1;->val$activity:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/guide/GuiderBase$1;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {v1, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     .line 129
-    iget-object v1, p0, Lcom/android/settings/guide/GuiderBase$1;->val$activity:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/guide/GuiderBase$1;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->finish()V
 

@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
+.class public Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;
 .super Ljava/lang/Object;
 .source "HandwritingLanguagePreference.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference;
+    value = Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,13 +34,13 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 553
-    iput-object p1, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->title:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->title:Ljava/lang/String;
 
     .line 554
-    iput-object p2, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->language:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->language:Ljava/lang/String;
 
     .line 555
-    iput-object p3, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->locale:Ljava/util/Locale;
+    iput-object p3, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->locale:Ljava/util/Locale;
 
     .line 556
     return-void
@@ -53,7 +53,7 @@
 
     .prologue
     .line 559
-    iget-object v0, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->language:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->language:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -63,7 +63,7 @@
 
     .prologue
     .line 563
-    iget-object v0, p0, Lcom/android/settings/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->title:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/handwritingsearch/HandwritingLanguagePreference$LanguageInfo;->title:Ljava/lang/String;
 
     return-object v0
 .end method

@@ -1,14 +1,14 @@
-.class Lcom/android/settings/backup/ToggleBackupSettingFragment$2;
+.class Lcom/android/settings_ex/backup/ToggleBackupSettingFragment$2;
 .super Ljava/lang/Object;
 .source "ToggleBackupSettingFragment.java"
 
 # interfaces
-.implements Lcom/android/settings/widget/ToggleSwitch$OnBeforeCheckedChangeListener;
+.implements Lcom/android/settings_ex/widget/ToggleSwitch$OnBeforeCheckedChangeListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/backup/ToggleBackupSettingFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/backup/ToggleBackupSettingFragment;->onActivityCreated(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/backup/ToggleBackupSettingFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/backup/ToggleBackupSettingFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/backup/ToggleBackupSettingFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/backup/ToggleBackupSettingFragment;)V
     .locals 0
 
     .prologue
     .line 119
-    iput-object p1, p0, Lcom/android/settings/backup/ToggleBackupSettingFragment$2;->this$0:Lcom/android/settings/backup/ToggleBackupSettingFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/backup/ToggleBackupSettingFragment$2;->this$0:Lcom/android/settings_ex/backup/ToggleBackupSettingFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,9 +36,9 @@
 
 
 # virtual methods
-.method public onBeforeCheckedChanged(Lcom/android/settings/widget/ToggleSwitch;Z)Z
+.method public onBeforeCheckedChanged(Lcom/android/settings_ex/widget/ToggleSwitch;Z)Z
     .locals 2
-    .param p1, "toggleSwitch"    # Lcom/android/settings/widget/ToggleSwitch;
+    .param p1, "toggleSwitch"    # Lcom/android/settings_ex/widget/ToggleSwitch;
     .param p2, "checked"    # Z
 
     .prologue
@@ -48,10 +48,10 @@
     if-nez p2, :cond_0
 
     .line 126
-    iget-object v0, p0, Lcom/android/settings/backup/ToggleBackupSettingFragment$2;->this$0:Lcom/android/settings/backup/ToggleBackupSettingFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/backup/ToggleBackupSettingFragment$2;->this$0:Lcom/android/settings_ex/backup/ToggleBackupSettingFragment;
 
-    # invokes: Lcom/android/settings/backup/ToggleBackupSettingFragment;->showEraseBackupDialog()V
-    invoke-static {v0}, Lcom/android/settings/backup/ToggleBackupSettingFragment;->access$000(Lcom/android/settings/backup/ToggleBackupSettingFragment;)V
+    # invokes: Lcom/android/settings_ex/backup/ToggleBackupSettingFragment;->showEraseBackupDialog()V
+    invoke-static {v0}, Lcom/android/settings_ex/backup/ToggleBackupSettingFragment;->access$000(Lcom/android/settings_ex/backup/ToggleBackupSettingFragment;)V
 
     .line 131
     :goto_0
@@ -59,17 +59,17 @@
 
     .line 129
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/backup/ToggleBackupSettingFragment$2;->this$0:Lcom/android/settings/backup/ToggleBackupSettingFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/backup/ToggleBackupSettingFragment$2;->this$0:Lcom/android/settings_ex/backup/ToggleBackupSettingFragment;
 
-    # invokes: Lcom/android/settings/backup/ToggleBackupSettingFragment;->setBackupEnabled(Z)V
-    invoke-static {v0, v1}, Lcom/android/settings/backup/ToggleBackupSettingFragment;->access$100(Lcom/android/settings/backup/ToggleBackupSettingFragment;Z)V
+    # invokes: Lcom/android/settings_ex/backup/ToggleBackupSettingFragment;->setBackupEnabled(Z)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/backup/ToggleBackupSettingFragment;->access$100(Lcom/android/settings_ex/backup/ToggleBackupSettingFragment;Z)V
 
     .line 130
-    iget-object v0, p0, Lcom/android/settings/backup/ToggleBackupSettingFragment$2;->this$0:Lcom/android/settings/backup/ToggleBackupSettingFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/backup/ToggleBackupSettingFragment$2;->this$0:Lcom/android/settings_ex/backup/ToggleBackupSettingFragment;
 
-    iget-object v0, v0, Lcom/android/settings/backup/ToggleBackupSettingFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, v0, Lcom/android/settings_ex/backup/ToggleBackupSettingFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     goto :goto_0
 .end method

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/deviceinfo/StatusVZW$10;
+.class Lcom/android/settings_ex/deviceinfo/StatusVZW$10;
 .super Landroid/content/BroadcastReceiver;
 .source "StatusVZW.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/StatusVZW;
+    value = Lcom/android/settings_ex/deviceinfo/StatusVZW;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/StatusVZW;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
     .locals 0
 
     .prologue
     .line 1506
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/StatusVZW$10;->this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW$10;->this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -117,7 +117,7 @@
     if-eqz v5, :cond_0
 
     .line 1520
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/StatusVZW$10;->this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+    iget-object v5, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW$10;->this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     const/4 v6, 0x0
 
@@ -125,8 +125,8 @@
 
     move-result v6
 
-    # setter for: Lcom/android/settings/deviceinfo/StatusVZW;->mImsRegistered:Z
-    invoke-static {v5, v6}, Lcom/android/settings/deviceinfo/StatusVZW;->access$1802(Lcom/android/settings/deviceinfo/StatusVZW;Z)Z
+    # setter for: Lcom/android/settings_ex/deviceinfo/StatusVZW;->mImsRegistered:Z
+    invoke-static {v5, v6}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->access$1802(Lcom/android/settings_ex/deviceinfo/StatusVZW;Z)Z
 
     .line 1523
     :cond_0

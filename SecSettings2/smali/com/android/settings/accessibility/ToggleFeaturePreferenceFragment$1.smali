@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment$1;
+.class Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment$1;
 .super Landroid/preference/Preference;
 .source "ToggleFeaturePreferenceFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;Landroid/content/Context;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment;Landroid/content/Context;)V
     .locals 0
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
     .line 72
-    iput-object p1, p0, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment;
 
     invoke-direct {p0, p2}, Landroid/preference/Preference;-><init>(Landroid/content/Context;)V
 
@@ -38,9 +38,9 @@
 
     .prologue
     .line 97
-    iget-object v2, p0, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment;
 
-    invoke-virtual {v2}, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -108,9 +108,9 @@
     if-eqz v1, :cond_0
 
     .line 78
-    iget-object v2, p0, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment;
 
-    invoke-virtual {v2}, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -125,7 +125,7 @@
     invoke-virtual {v1, v4, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
     .line 79
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment$1;->getSummary()Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment$1;->getSummary()Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -144,9 +144,9 @@
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 83
-    iget-object v2, p0, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment$1;->this$0:Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment;
 
-    invoke-virtual {v2}, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -160,14 +160,14 @@
 
     .line 87
     :goto_0
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
     .line 88
-    invoke-direct {p0, v1}, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment$1;->sendAccessibilityEvent(Landroid/view/View;)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment$1;->sendAccessibilityEvent(Landroid/view/View;)V
 
     .line 91
     .end local v0    # "summary":Ljava/lang/CharSequence;

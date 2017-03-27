@@ -1,4 +1,4 @@
-.class Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$4;
+.class Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$4;
 .super Ljava/lang/Object;
 .source "KnoxChooseLockTwoFactor.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->showSensorErrorDialog()V
+    value = Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;->showSensorErrorDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;)V
     .locals 0
 
     .prologue
     .line 513
-    iput-object p1, p0, Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$4;->this$0:Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment$4;->this$0:Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

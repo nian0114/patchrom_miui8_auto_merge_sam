@@ -1,14 +1,14 @@
-.class Lcom/android/settings/accessibility/directaccess/DirectAccessFragment$5;
+.class Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment$5;
 .super Ljava/lang/Object;
 .source "DirectAccessFragment.java"
 
 # interfaces
-.implements Lcom/android/settings/widget/ToggleSwitch$OnBeforeCheckedChangeListener;
+.implements Lcom/android/settings_ex/widget/ToggleSwitch$OnBeforeCheckedChangeListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;->installSwitchBarToggleSwitch()V
+    value = Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;->installSwitchBarToggleSwitch()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;)V
     .locals 0
 
     .prologue
     .line 319
-    iput-object p1, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessFragment$5;->this$0:Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment$5;->this$0:Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,23 +36,23 @@
 
 
 # virtual methods
-.method public onBeforeCheckedChanged(Lcom/android/settings/widget/ToggleSwitch;Z)Z
+.method public onBeforeCheckedChanged(Lcom/android/settings_ex/widget/ToggleSwitch;Z)Z
     .locals 1
-    .param p1, "toggleSwitch"    # Lcom/android/settings/widget/ToggleSwitch;
+    .param p1, "toggleSwitch"    # Lcom/android/settings_ex/widget/ToggleSwitch;
     .param p2, "checked"    # Z
 
     .prologue
     .line 322
-    iget-object v0, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessFragment$5;->this$0:Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment$5;->this$0:Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;
 
-    iget-object v0, v0, Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, v0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p2}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v0, p2}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     .line 323
-    iget-object v0, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessFragment$5;->this$0:Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment$5;->this$0:Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/directaccess/DirectAccessFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 

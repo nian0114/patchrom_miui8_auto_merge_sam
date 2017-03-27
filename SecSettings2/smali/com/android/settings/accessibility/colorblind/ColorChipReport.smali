@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/accessibility/colorblind/ColorChipReport;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "ColorChipReport.java"
 
 # interfaces
@@ -35,13 +35,13 @@
 
 .field private mRetestDialog:Landroid/app/AlertDialog;
 
-.field private mSettingValue:Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;
+.field private mSettingValue:Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;
 
-.field protected mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field protected mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 .field private mTestCheck:I
 
-.field protected mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+.field protected mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
 .field private mUserParameter:F
 
@@ -58,71 +58,71 @@
     const/4 v0, 0x0
 
     .line 53
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 63
-    iput v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mCVDType:I
+    iput v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mCVDType:I
 
     .line 73
-    iput-boolean v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->isSwitch:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->isSwitch:Z
 
     .line 81
-    iput-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mRetestDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mRetestDialog:Landroid/app/AlertDialog;
 
     .line 83
-    iput-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mNegativeColorDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mNegativeColorDialog:Landroid/app/AlertDialog;
 
     .line 85
-    iput-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mGreyscaleDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mGreyscaleDialog:Landroid/app/AlertDialog;
 
     .line 87
-    iput-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mGreyscaleAndNegativeColorDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mGreyscaleAndNegativeColorDialog:Landroid/app/AlertDialog;
 
     .line 89
-    iput v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mTestCheck:I
+    iput v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mTestCheck:I
 
     .line 91
-    iput-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->rel:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->rel:Landroid/view/View;
 
     .line 226
-    new-instance v0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$2;
+    new-instance v0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$2;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/accessibility/colorblind/ColorChipReport$2;-><init>(Lcom/android/settings/accessibility/colorblind/ColorChipReport;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$2;-><init>(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColorBlindObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColorBlindObserver:Landroid/database/ContentObserver;
 
     .line 233
-    new-instance v0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$3;
+    new-instance v0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$3;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/accessibility/colorblind/ColorChipReport$3;-><init>(Lcom/android/settings/accessibility/colorblind/ColorChipReport;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$3;-><init>(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mNegColorObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mNegColorObserver:Landroid/database/ContentObserver;
 
     .line 255
-    new-instance v0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$4;
+    new-instance v0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$4;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/accessibility/colorblind/ColorChipReport$4;-><init>(Lcom/android/settings/accessibility/colorblind/ColorChipReport;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$4;-><init>(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mGreyscaleObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mGreyscaleObserver:Landroid/database/ContentObserver;
 
     .line 586
-    new-instance v0, Lcom/android/settings/accessibility/colorblind/ColorChipReport$16;
+    new-instance v0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$16;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport$16;-><init>(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$16;-><init>(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBarListener:Landroid/widget/SeekBar$OnSeekBarChangeListener;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBarListener:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
     return-void
 .end method
@@ -136,7 +136,7 @@
     const/4 v2, 0x0
 
     .line 654
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -201,7 +201,7 @@
     const/4 v1, 0x1
 
     .line 556
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -215,30 +215,30 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mTestCheck:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mTestCheck:I
 
     .line 557
-    iget v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mTestCheck:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mTestCheck:I
 
     if-ne v0, v1, :cond_2
 
     .line 558
-    iput-boolean v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->isSwitch:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->isSwitch:Z
 
     .line 561
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColourAdjustment:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColourAdjustment:Landroid/widget/TextView;
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setAlpha(F)V
 
     .line 562
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
 
     invoke-virtual {v0, v4}, Landroid/widget/SeekBar;->setAlpha(F)V
 
     .line 564
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
 
-    iget v3, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mUserParameter:F
+    iget v3, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mUserParameter:F
 
     const/high16 v4, 0x41200000    # 10.0f
 
@@ -249,7 +249,7 @@
     invoke-virtual {v0, v3}, Landroid/widget/SeekBar;->setProgress(I)V
 
     .line 565
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -262,21 +262,21 @@
     invoke-static {v0, v3, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 568
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColourAdjustment:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColourAdjustment:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 569
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
 
     invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setEnabled(Z)V
 
     .line 571
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    iget v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mCVDType:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mCVDType:I
 
     const/4 v4, 0x3
 
@@ -285,7 +285,7 @@
     move v0, v1
 
     :goto_0
-    iget v4, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mCVDSeverity:F
+    iget v4, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mCVDSeverity:F
 
     const v5, 0x3f19999a    # 0.6f
 
@@ -296,18 +296,18 @@
     move v2, v1
 
     :cond_0
-    iget v4, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mUserParameter:F
+    iget v4, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mUserParameter:F
 
-    invoke-static {v3, v0, v2, v4}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->setColorBlind(Landroid/content/Context;ZZF)V
+    invoke-static {v3, v0, v2, v4}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->setColorBlind(Landroid/content/Context;ZZF)V
 
     .line 572
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->isOptionsMenuEnable()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->isOptionsMenuEnable()V
 
     .line 577
     :goto_1
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     .line 578
     return-void
@@ -320,7 +320,7 @@
 
     .line 575
     :cond_2
-    invoke-direct {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->RetestOperate()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->RetestOperate()V
 
     goto :goto_1
 .end method
@@ -334,12 +334,12 @@
     const v5, 0x7f0e09b6
 
     .line 472
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mGreyscaleAndNegativeColorDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mGreyscaleAndNegativeColorDialog:Landroid/app/AlertDialog;
 
     if-eqz v1, :cond_0
 
     .line 473
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mGreyscaleAndNegativeColorDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mGreyscaleAndNegativeColorDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->isShowing()Z
 
@@ -355,7 +355,7 @@
     :cond_0
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -370,7 +370,7 @@
     .line 479
     const v1, 0x7f0e0a18
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -382,7 +382,7 @@
 
     const v4, 0x7f0e0a0f
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -390,7 +390,7 @@
 
     const/4 v3, 0x1
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -398,7 +398,7 @@
 
     const/4 v3, 0x2
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -406,7 +406,7 @@
 
     const/4 v3, 0x3
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -414,7 +414,7 @@
 
     const/4 v3, 0x4
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -429,25 +429,25 @@
     .line 483
     const v1, 0x7f0e081f
 
-    new-instance v2, Lcom/android/settings/accessibility/colorblind/ColorChipReport$13;
+    new-instance v2, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$13;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport$13;-><init>(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$13;-><init>(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 496
     const/high16 v1, 0x1040000
 
-    new-instance v2, Lcom/android/settings/accessibility/colorblind/ColorChipReport$14;
+    new-instance v2, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$14;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport$14;-><init>(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$14;-><init>(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 504
-    new-instance v1, Lcom/android/settings/accessibility/colorblind/ColorChipReport$15;
+    new-instance v1, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$15;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport$15;-><init>(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$15;-><init>(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)V
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
 
@@ -456,7 +456,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mGreyscaleAndNegativeColorDialog:Landroid/app/AlertDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mGreyscaleAndNegativeColorDialog:Landroid/app/AlertDialog;
 
     goto :goto_0
 .end method
@@ -468,12 +468,12 @@
     const v5, 0x7f0e0a68
 
     .line 427
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mGreyscaleDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mGreyscaleDialog:Landroid/app/AlertDialog;
 
     if-eqz v1, :cond_0
 
     .line 428
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mGreyscaleDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mGreyscaleDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->isShowing()Z
 
@@ -489,7 +489,7 @@
     :cond_0
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -504,7 +504,7 @@
     .line 434
     const v1, 0x7f0e0a0e
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -516,7 +516,7 @@
 
     const v4, 0x7f0e0a0f
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -524,7 +524,7 @@
 
     const/4 v3, 0x1
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -532,7 +532,7 @@
 
     const/4 v3, 0x2
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -547,25 +547,25 @@
     .line 437
     const v1, 0x7f0e081f
 
-    new-instance v2, Lcom/android/settings/accessibility/colorblind/ColorChipReport$10;
+    new-instance v2, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$10;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport$10;-><init>(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$10;-><init>(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 448
     const/high16 v1, 0x1040000
 
-    new-instance v2, Lcom/android/settings/accessibility/colorblind/ColorChipReport$11;
+    new-instance v2, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$11;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport$11;-><init>(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$11;-><init>(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 456
-    new-instance v1, Lcom/android/settings/accessibility/colorblind/ColorChipReport$12;
+    new-instance v1, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$12;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport$12;-><init>(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$12;-><init>(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)V
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
 
@@ -574,7 +574,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mGreyscaleDialog:Landroid/app/AlertDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mGreyscaleDialog:Landroid/app/AlertDialog;
 
     goto :goto_0
 .end method
@@ -584,12 +584,12 @@
 
     .prologue
     .line 383
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mNegativeColorDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mNegativeColorDialog:Landroid/app/AlertDialog;
 
     if-eqz v1, :cond_0
 
     .line 384
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mNegativeColorDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mNegativeColorDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->isShowing()Z
 
@@ -605,7 +605,7 @@
     :cond_0
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -620,7 +620,7 @@
     .line 391
     const v1, 0x7f0e0a17
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -629,25 +629,25 @@
     .line 392
     const v1, 0x7f0e081f
 
-    new-instance v2, Lcom/android/settings/accessibility/colorblind/ColorChipReport$7;
+    new-instance v2, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$7;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport$7;-><init>(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$7;-><init>(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 403
     const/high16 v1, 0x1040000
 
-    new-instance v2, Lcom/android/settings/accessibility/colorblind/ColorChipReport$8;
+    new-instance v2, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$8;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport$8;-><init>(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$8;-><init>(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 411
-    new-instance v1, Lcom/android/settings/accessibility/colorblind/ColorChipReport$9;
+    new-instance v1, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$9;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport$9;-><init>(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$9;-><init>(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)V
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
 
@@ -656,7 +656,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mNegativeColorDialog:Landroid/app/AlertDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mNegativeColorDialog:Landroid/app/AlertDialog;
 
     goto :goto_0
 .end method
@@ -672,14 +672,14 @@
     const/4 v3, 0x0
 
     .line 95
-    invoke-direct {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->CheckSwitch()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->CheckSwitch()Z
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->isSwitch:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->isSwitch:Z
 
     .line 97
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -693,10 +693,10 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mTestCheck:I
+    iput v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mTestCheck:I
 
     .line 100
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->rel:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->rel:Landroid/view/View;
 
     const v4, 0x7f0d0100
 
@@ -706,10 +706,10 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColourAdjustment:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColourAdjustment:Landroid/widget/TextView;
 
     .line 101
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->rel:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->rel:Landroid/view/View;
 
     const v4, 0x7f0d0101
 
@@ -719,26 +719,26 @@
 
     check-cast v1, Landroid/widget/SeekBar;
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
 
     .line 102
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBarListener:Landroid/widget/SeekBar$OnSeekBarChangeListener;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBarListener:Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
     invoke-virtual {v1, v4}, Landroid/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
 
     .line 103
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
 
     const/16 v4, 0xa
 
     invoke-virtual {v1, v4}, Landroid/widget/SeekBar;->setMax(I)V
 
     .line 104
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
 
-    iget v4, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mUserParameter:F
+    iget v4, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mUserParameter:F
 
     const/high16 v5, 0x41200000    # 10.0f
 
@@ -749,12 +749,12 @@
     invoke-virtual {v1, v4}, Landroid/widget/SeekBar;->setProgress(I)V
 
     .line 105
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
 
     invoke-virtual {v1, v2}, Landroid/widget/SeekBar;->setFluidEnabled(Z)V
 
     .line 107
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->rel:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->rel:Landroid/view/View;
 
     const v4, 0x7f0d00fe
 
@@ -764,15 +764,15 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mResultText:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mResultText:Landroid/widget/TextView;
 
     .line 109
-    iget v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mTestCheck:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mTestCheck:I
 
     if-nez v1, :cond_0
 
     .line 110
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mResultText:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mResultText:Landroid/widget/TextView;
 
     const v4, 0x7f0e0a11
 
@@ -780,24 +780,24 @@
 
     .line 123
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 124
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 125
-    iget-object v4, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -816,53 +816,53 @@
     move v1, v2
 
     :goto_1
-    invoke-virtual {v4, v1}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v4, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     .line 126
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1}, Lcom/android/settings/widget/SwitchBar;->getSwitch()Lcom/android/settings/widget/ToggleSwitch;
+    invoke-virtual {v1}, Lcom/android/settings_ex/widget/SwitchBar;->getSwitch()Lcom/android/settings_ex/widget/ToggleSwitch;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
     .line 128
-    invoke-direct {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->installSwitchBarToggleSwitch()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->installSwitchBarToggleSwitch()V
 
     .line 129
-    iget-boolean v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->isSwitch:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->isSwitch:Z
 
-    invoke-direct {p0, v1}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->SetSwitchOnOff(Z)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->SetSwitchOnOff(Z)V
 
     .line 130
     return-void
 
     .line 113
-    .end local v0    # "activity":Lcom/android/settings/SettingsActivity;
+    .end local v0    # "activity":Lcom/android/settings_ex/SettingsActivity;
     :cond_0
-    iget v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mCVDType:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mCVDType:I
 
-    iget-object v4, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;
 
     const/4 v4, 0x3
 
     if-ne v1, v4, :cond_1
 
     .line 114
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mResultText:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mResultText:Landroid/widget/TextView;
 
     const v4, 0x7f0e0a12
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setText(I)V
 
     .line 115
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColourAdjustment:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColourAdjustment:Landroid/widget/TextView;
 
     invoke-virtual {v1, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 116
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
 
     invoke-virtual {v1, v6}, Landroid/widget/SeekBar;->setVisibility(I)V
 
@@ -870,7 +870,7 @@
 
     .line 119
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mResultText:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mResultText:Landroid/widget/TextView;
 
     const v4, 0x7f0e0a10
 
@@ -878,7 +878,7 @@
 
     goto :goto_0
 
-    .restart local v0    # "activity":Lcom/android/settings/SettingsActivity;
+    .restart local v0    # "activity":Lcom/android/settings_ex/SettingsActivity;
     :cond_2
     move v1, v3
 
@@ -893,10 +893,10 @@
     .line 642
     const/4 v1, 0x1
 
-    iput-boolean v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->isSwitch:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->isSwitch:Z
 
     .line 643
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -937,7 +937,7 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     .line 650
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->startActivity(Landroid/content/Intent;)V
 
     .line 651
     return-void
@@ -958,7 +958,7 @@
     if-eqz p1, :cond_6
 
     .line 517
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -979,7 +979,7 @@
     .line 518
     .local v1, "mNegativeColorsEnabled":Z
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1005,10 +1005,10 @@
     if-eqz v0, :cond_3
 
     .line 521
-    invoke-direct {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->CreateGreyscaleAndNegativeColorDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->CreateGreyscaleAndNegativeColorDialog()V
 
     .line 522
-    iget-object v2, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mGreyscaleAndNegativeColorDialog:Landroid/app/AlertDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mGreyscaleAndNegativeColorDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v2}, Landroid/app/AlertDialog;->show()V
 
@@ -1038,10 +1038,10 @@
     if-eqz v1, :cond_4
 
     .line 526
-    invoke-direct {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->CreateNegativeColorDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->CreateNegativeColorDialog()V
 
     .line 527
-    iget-object v2, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mNegativeColorDialog:Landroid/app/AlertDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mNegativeColorDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v2}, Landroid/app/AlertDialog;->show()V
 
@@ -1052,10 +1052,10 @@
     if-eqz v0, :cond_5
 
     .line 530
-    invoke-direct {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->CreateGreyscaleDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->CreateGreyscaleDialog()V
 
     .line 531
-    iget-object v2, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mGreyscaleDialog:Landroid/app/AlertDialog;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mGreyscaleDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v2}, Landroid/app/AlertDialog;->show()V
 
@@ -1063,7 +1063,7 @@
 
     .line 534
     :cond_5
-    invoke-direct {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->CheckTestRecord()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->CheckTestRecord()V
 
     goto :goto_2
 
@@ -1071,25 +1071,25 @@
     .end local v0    # "mGreyscaleModeEnabled":Z
     .end local v1    # "mNegativeColorsEnabled":Z
     :cond_6
-    invoke-virtual {p0, v3}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->setHasOptionsMenu(Z)V
 
     .line 538
-    iput-boolean v3, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->isSwitch:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->isSwitch:Z
 
     .line 540
-    iget-object v4, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColourAdjustment:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColourAdjustment:Landroid/widget/TextView;
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setAlpha(F)V
 
     .line 541
-    iget-object v4, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
 
     invoke-virtual {v4, v5}, Landroid/widget/SeekBar;->setAlpha(F)V
 
     .line 542
-    iget-object v4, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
 
-    iget v5, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mUserParameter:F
+    iget v5, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mUserParameter:F
 
     const/high16 v6, 0x41200000    # 10.0f
 
@@ -1100,7 +1100,7 @@
     invoke-virtual {v4, v5}, Landroid/widget/SeekBar;->setProgress(I)V
 
     .line 544
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1113,17 +1113,17 @@
     invoke-static {v4, v5, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 546
-    iget-object v4, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColourAdjustment:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColourAdjustment:Landroid/widget/TextView;
 
     invoke-virtual {v4, p1}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 547
-    iget-object v4, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
 
     invoke-virtual {v4, p1}, Landroid/widget/SeekBar;->setEnabled(Z)V
 
     .line 548
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1135,7 +1135,7 @@
 
     if-nez v4, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1148,13 +1148,13 @@
     if-nez v4, :cond_0
 
     .line 550
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
-    iget-boolean v5, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->isSwitch:Z
+    iget-boolean v5, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->isSwitch:Z
 
-    iget v6, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mCVDSeverity:F
+    iget v6, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mCVDSeverity:F
 
     const v7, 0x3f19999a    # 0.6f
 
@@ -1163,9 +1163,9 @@
     if-gez v6, :cond_7
 
     :goto_3
-    iget v3, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mUserParameter:F
+    iget v3, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mUserParameter:F
 
-    invoke-static {v4, v5, v2, v3}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->setColorBlind(Landroid/content/Context;ZZF)V
+    invoke-static {v4, v5, v2, v3}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->setColorBlind(Landroid/content/Context;ZZF)V
 
     goto :goto_2
 
@@ -1175,171 +1175,171 @@
     goto :goto_3
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/accessibility/colorblind/ColorChipReport;Z)V
+.method static synthetic access$000(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;Z)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
     .param p1, "x1"    # Z
 
     .prologue
     .line 53
-    invoke-direct {p0, p1}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->SetSwitchOnOff(Z)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->SetSwitchOnOff(Z)V
 
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)Landroid/content/ContentResolver;
+.method static synthetic access$100(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
     .prologue
     .line 53
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)Z
+.method static synthetic access$1000(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
     .prologue
     .line 53
-    iget-boolean v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->isSwitch:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->isSwitch:Z
 
     return v0
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)I
+.method static synthetic access$1100(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
     .prologue
     .line 53
-    iget v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mCVDType:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mCVDType:I
 
     return v0
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)F
+.method static synthetic access$1200(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)F
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
     .prologue
     .line 53
-    iget v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mCVDSeverity:F
+    iget v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mCVDSeverity:F
 
     return v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)Landroid/app/AlertDialog;
+.method static synthetic access$200(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)Landroid/app/AlertDialog;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mRetestDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mRetestDialog:Landroid/app/AlertDialog;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)Landroid/content/ContentResolver;
+.method static synthetic access$300(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
     .prologue
     .line 53
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)V
+.method static synthetic access$400(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
     .prologue
     .line 53
-    invoke-direct {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->RetestOperate()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->RetestOperate()V
 
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/accessibility/colorblind/ColorChipReport;Ljava/lang/String;)Ljava/lang/Object;
+.method static synthetic access$500(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 53
-    invoke-virtual {p0, p1}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)V
+.method static synthetic access$600(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
     .prologue
     .line 53
-    invoke-direct {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->CheckTestRecord()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->CheckTestRecord()V
 
     return-void
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/accessibility/colorblind/ColorChipReport;Ljava/lang/String;)Ljava/lang/Object;
+.method static synthetic access$700(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 53
-    invoke-virtual {p0, p1}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/accessibility/colorblind/ColorChipReport;Ljava/lang/String;)Ljava/lang/Object;
+.method static synthetic access$800(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 53
-    invoke-virtual {p0, p1}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)F
+.method static synthetic access$900(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)F
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
 
     .prologue
     .line 53
-    iget v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mUserParameter:F
+    iget v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mUserParameter:F
 
     return v0
 .end method
 
-.method static synthetic access$902(Lcom/android/settings/accessibility/colorblind/ColorChipReport;F)F
+.method static synthetic access$902(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;F)F
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/colorblind/ColorChipReport;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;
     .param p1, "x1"    # F
 
     .prologue
     .line 53
-    iput p1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mUserParameter:F
+    iput p1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mUserParameter:F
 
     return p1
 .end method
@@ -1349,12 +1349,12 @@
 
     .prologue
     .line 169
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->onInstallSwitchBarToggleSwitch()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->onInstallSwitchBarToggleSwitch()V
 
     .line 170
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 171
     return-void
@@ -1365,16 +1365,16 @@
 
     .prologue
     .line 189
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 190
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings_ex/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
 
     .line 191
     return-void
@@ -1398,7 +1398,7 @@
     if-eqz p2, :cond_1
 
     :goto_0
-    invoke-static {p0, v2}, Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;->setColorWeaknessMode(Landroid/content/Context;Z)V
+    invoke-static {p0, v2}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;->setColorWeaknessMode(Landroid/content/Context;Z)V
 
     .line 666
     const-string v2, "accessibility"
@@ -1505,39 +1505,39 @@
 
     .prologue
     .line 286
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;->UpdatePrefCVDSettingValue()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;->UpdatePrefCVDSettingValue()V
 
     .line 287
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;->getCVDType()I
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;->getCVDType()I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mCVDType:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mCVDType:I
 
     .line 288
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;->getCVDseverity()F
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;->getCVDseverity()F
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mCVDSeverity:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mCVDSeverity:F
 
     .line 289
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;->getUserParameter()F
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;->getUserParameter()F
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mUserParameter:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mUserParameter:F
 
     .line 291
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1553,19 +1553,19 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mTestCheck:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mTestCheck:I
 
     .line 293
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
 
     const/16 v1, 0xa
 
     invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setMax(I)V
 
     .line 294
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColourAdjustmentSeekBar:Landroid/widget/SeekBar;
 
-    iget v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mUserParameter:F
+    iget v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mUserParameter:F
 
     const/high16 v2, 0x41200000    # 10.0f
 
@@ -1576,12 +1576,12 @@
     invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setProgress(I)V
 
     .line 296
-    iget v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mTestCheck:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mTestCheck:I
 
     if-nez v0, :cond_0
 
     .line 297
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mResultText:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mResultText:Landroid/widget/TextView;
 
     const v1, 0x7f0e0a11
 
@@ -1593,16 +1593,16 @@
 
     .line 299
     :cond_0
-    iget v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mCVDType:I
+    iget v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mCVDType:I
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;
 
     const/4 v1, 0x3
 
     if-ne v0, v1, :cond_1
 
     .line 300
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mResultText:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mResultText:Landroid/widget/TextView;
 
     const v1, 0x7f0e0a12
 
@@ -1612,7 +1612,7 @@
 
     .line 302
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mResultText:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mResultText:Landroid/widget/TextView;
 
     const v1, 0x7f0e0a10
 
@@ -1628,41 +1628,41 @@
     const/4 v2, 0x1
 
     .line 216
-    invoke-direct {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->CheckSwitch()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->CheckSwitch()Z
 
     move-result v0
 
     .line 217
     .local v0, "checkSwitch":Z
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->ReadjustLayout()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->ReadjustLayout()V
 
     .line 218
-    invoke-direct {p0, v0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->SetSwitchOnOff(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->SetSwitchOnOff(Z)V
 
     .line 219
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, v0}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     .line 221
-    iget-boolean v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->isSwitch:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->isSwitch:Z
 
     if-eqz v1, :cond_0
 
-    iget v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mCVDType:I
+    iget v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mCVDType:I
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;
 
     const/4 v3, 0x3
 
     if-eq v1, v3, :cond_0
 
     .line 222
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    iget v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mCVDSeverity:F
+    iget v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mCVDSeverity:F
 
     const v4, 0x3f19999a    # 0.6f
 
@@ -1673,9 +1673,9 @@
     move v1, v2
 
     :goto_0
-    iget v4, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mUserParameter:F
+    iget v4, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mUserParameter:F
 
-    invoke-static {v3, v2, v1, v4}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->setColorBlind(Landroid/content/Context;ZZF)V
+    invoke-static {v3, v2, v1, v4}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->setColorBlind(Landroid/content/Context;ZZF)V
 
     .line 224
     :cond_0
@@ -1703,7 +1703,7 @@
 
     .prologue
     .line 322
-    invoke-direct {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->CheckSwitch()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->CheckSwitch()Z
 
     move-result v0
 
@@ -1712,7 +1712,7 @@
     .line 323
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->setHasOptionsMenu(Z)V
 
     .line 327
     :goto_0
@@ -1722,7 +1722,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->setHasOptionsMenu(Z)V
 
     goto :goto_0
 .end method
@@ -1735,27 +1735,27 @@
     const/4 v1, 0x0
 
     .line 153
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 154
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 155
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 156
-    iget-object v2, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -1774,19 +1774,19 @@
     const/4 v1, 0x1
 
     :cond_0
-    invoke-virtual {v2, v1}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v2, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     .line 157
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1}, Lcom/android/settings/widget/SwitchBar;->getSwitch()Lcom/android/settings/widget/ToggleSwitch;
+    invoke-virtual {v1}, Lcom/android/settings_ex/widget/SwitchBar;->getSwitch()Lcom/android/settings_ex/widget/ToggleSwitch;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
     .line 159
-    invoke-direct {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->installSwitchBarToggleSwitch()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->installSwitchBarToggleSwitch()V
 
     .line 160
     return-void
@@ -1806,7 +1806,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 583
-    invoke-direct {p0, p2}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->SetSwitchOnOff(Z)V
+    invoke-direct {p0, p2}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->SetSwitchOnOff(Z)V
 
     .line 584
     return-void
@@ -1818,7 +1818,7 @@
 
     .prologue
     .line 275
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1828,7 +1828,7 @@
 
     .line 276
     .local v0, "inflater":Landroid/view/LayoutInflater;
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getView()Landroid/view/View;
 
     move-result-object v1
 
@@ -1845,13 +1845,13 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->rel:Landroid/view/View;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->rel:Landroid/view/View;
 
     .line 281
-    invoke-direct {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->InitControls()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->InitControls()V
 
     .line 282
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 283
     return-void
@@ -1866,7 +1866,7 @@
     const/4 v2, 0x0
 
     .line 309
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     .line 311
     const/4 v0, 0x1
@@ -1893,7 +1893,7 @@
 
     .prologue
     .line 135
-    invoke-super {p0, p1, p2, p3}, Lcom/android/settings/SettingsPreferenceFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     .line 137
     const v0, 0x7f040052
@@ -1904,45 +1904,45 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->rel:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->rel:Landroid/view/View;
 
     .line 139
-    new-instance v0, Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;
+    new-instance v0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;
 
     .line 140
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;->getCVDType()I
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;->getCVDType()I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mCVDType:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mCVDType:I
 
     .line 141
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;->getCVDseverity()F
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;->getCVDseverity()F
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mCVDSeverity:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mCVDSeverity:F
 
     .line 142
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;->getUserParameter()F
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;->getUserParameter()F
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mUserParameter:F
+    iput v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mUserParameter:F
 
     .line 144
     const-string v0, "ColorChipReport"
@@ -1957,7 +1957,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mCVDType:I
+    iget v2, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mCVDType:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1969,7 +1969,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mCVDSeverity:F
+    iget v2, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mCVDSeverity:F
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -1981,7 +1981,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mUserParameter:F
+    iget v2, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mUserParameter:F
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -1994,10 +1994,10 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secE(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 147
-    invoke-direct {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->InitControls()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->InitControls()V
 
     .line 148
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->rel:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->rel:Landroid/view/View;
 
     return-object v0
 .end method
@@ -2009,21 +2009,21 @@
     const/4 v1, 0x0
 
     .line 623
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;
 
     if-eqz v0, :cond_0
 
     .line 624
-    iput-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings/accessibility/colorblind/ColorChipSettingValue;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mSettingValue:Lcom/android/settings_ex/accessibility/colorblind/ColorChipSettingValue;
 
     .line 626
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mRetestDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mRetestDialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_2
 
     .line 627
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mRetestDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mRetestDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->isShowing()Z
 
@@ -2032,22 +2032,22 @@
     if-eqz v0, :cond_1
 
     .line 628
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mRetestDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mRetestDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 630
     :cond_1
-    iput-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mRetestDialog:Landroid/app/AlertDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mRetestDialog:Landroid/app/AlertDialog;
 
     .line 632
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mNegativeColorDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mNegativeColorDialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_4
 
     .line 633
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mNegativeColorDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mNegativeColorDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->isShowing()Z
 
@@ -2056,17 +2056,17 @@
     if-eqz v0, :cond_3
 
     .line 634
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mNegativeColorDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mNegativeColorDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 636
     :cond_3
-    iput-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mNegativeColorDialog:Landroid/app/AlertDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mNegativeColorDialog:Landroid/app/AlertDialog;
 
     .line 638
     :cond_4
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroy()V
 
     .line 639
     return-void
@@ -2077,10 +2077,10 @@
 
     .prologue
     .line 164
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroyView()V
 
     .line 165
-    invoke-direct {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->removeSwitchBarToggleSwitch()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->removeSwitchBarToggleSwitch()V
 
     .line 166
     return-void
@@ -2091,7 +2091,7 @@
 
     .prologue
     .line 318
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDetach()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDetach()V
 
     .line 319
     return-void
@@ -2102,13 +2102,13 @@
 
     .prologue
     .line 173
-    iget-object v0, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
-    new-instance v1, Lcom/android/settings/accessibility/colorblind/ColorChipReport$1;
+    new-instance v1, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport$1;-><init>(Lcom/android/settings/accessibility/colorblind/ColorChipReport;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport$1;-><init>(Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;)V
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings_ex/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
 
     .line 186
     return-void
@@ -2135,14 +2135,14 @@
 
     .line 333
     :sswitch_0
-    invoke-direct {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->CheckSwitch()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->CheckSwitch()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 334
-    invoke-direct {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->RetestOperate()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->RetestOperate()V
 
     goto :goto_0
 
@@ -2160,7 +2160,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mUserParameter:F
+    iget v2, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mUserParameter:F
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -2187,34 +2187,34 @@
 
     .prologue
     .line 209
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColorBlindObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColorBlindObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 210
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mNegColorObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mNegColorObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 211
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mGreyscaleObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mGreyscaleObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 212
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 213
     return-void
@@ -2234,10 +2234,10 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 196
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->isOptionsMenuEnable()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->isOptionsMenuEnable()V
 
     .line 197
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2251,12 +2251,12 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mColorBlindObserver:Landroid/database/ContentObserver;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mColorBlindObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 199
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -2266,12 +2266,12 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mNegColorObserver:Landroid/database/ContentObserver;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mNegColorObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 201
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -2281,15 +2281,15 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->mGreyscaleObserver:Landroid/database/ContentObserver;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->mGreyscaleObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 203
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/colorblind/ColorChipReport;->checkColorBlindState()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/colorblind/ColorChipReport;->checkColorBlindState()V
 
     .line 204
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 205
     return-void
@@ -2300,7 +2300,7 @@
 
     .prologue
     .line 618
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onStop()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onStop()V
 
     .line 619
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/SettingsActivity$15;
+.class Lcom/android/settings_ex/SettingsActivity$15;
 .super Ljava/lang/Object;
 .source "SettingsActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/SettingsActivity;->drawDashboardTab()V
+    value = Lcom/android/settings_ex/SettingsActivity;->drawDashboardTab()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/SettingsActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/SettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/SettingsActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/SettingsActivity;)V
     .locals 0
 
     .prologue
     .line 2249
-    iput-object p1, p0, Lcom/android/settings/SettingsActivity$15;->this$0:Lcom/android/settings/SettingsActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/SettingsActivity$15;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,10 +50,10 @@
 
     .prologue
     .line 2254
-    iget-object v0, p0, Lcom/android/settings/SettingsActivity$15;->this$0:Lcom/android/settings/SettingsActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/SettingsActivity$15;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
-    # getter for: Lcom/android/settings/SettingsActivity;->addLayoutCount:I
-    invoke-static {v0}, Lcom/android/settings/SettingsActivity;->access$1500(Lcom/android/settings/SettingsActivity;)I
+    # getter for: Lcom/android/settings_ex/SettingsActivity;->addLayoutCount:I
+    invoke-static {v0}, Lcom/android/settings_ex/SettingsActivity;->access$1500(Lcom/android/settings_ex/SettingsActivity;)I
 
     move-result v0
 
@@ -72,10 +72,10 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/SettingsActivity$15;->this$0:Lcom/android/settings/SettingsActivity;
+    iget-object v2, p0, Lcom/android/settings_ex/SettingsActivity$15;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
-    # getter for: Lcom/android/settings/SettingsActivity;->tabIndex:I
-    invoke-static {v2}, Lcom/android/settings/SettingsActivity;->access$1100(Lcom/android/settings/SettingsActivity;)I
+    # getter for: Lcom/android/settings_ex/SettingsActivity;->tabIndex:I
+    invoke-static {v2}, Lcom/android/settings_ex/SettingsActivity;->access$1100(Lcom/android/settings_ex/SettingsActivity;)I
 
     move-result v2
 
@@ -90,22 +90,22 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 2256
-    iget-object v0, p0, Lcom/android/settings/SettingsActivity$15;->this$0:Lcom/android/settings/SettingsActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/SettingsActivity$15;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
-    iget-object v1, p0, Lcom/android/settings/SettingsActivity$15;->this$0:Lcom/android/settings/SettingsActivity;
+    iget-object v1, p0, Lcom/android/settings_ex/SettingsActivity$15;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
-    # getter for: Lcom/android/settings/SettingsActivity;->tabIndex:I
-    invoke-static {v1}, Lcom/android/settings/SettingsActivity;->access$1100(Lcom/android/settings/SettingsActivity;)I
+    # getter for: Lcom/android/settings_ex/SettingsActivity;->tabIndex:I
+    invoke-static {v1}, Lcom/android/settings_ex/SettingsActivity;->access$1100(Lcom/android/settings_ex/SettingsActivity;)I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/SettingsActivity;->centerTabItem(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/SettingsActivity;->centerTabItem(I)V
 
     .line 2257
-    iget-object v0, p0, Lcom/android/settings/SettingsActivity$15;->this$0:Lcom/android/settings/SettingsActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/SettingsActivity$15;->this$0:Lcom/android/settings_ex/SettingsActivity;
 
-    # operator-- for: Lcom/android/settings/SettingsActivity;->addLayoutCount:I
-    invoke-static {v0}, Lcom/android/settings/SettingsActivity;->access$1510(Lcom/android/settings/SettingsActivity;)I
+    # operator-- for: Lcom/android/settings_ex/SettingsActivity;->addLayoutCount:I
+    invoke-static {v0}, Lcom/android/settings_ex/SettingsActivity;->access$1510(Lcom/android/settings_ex/SettingsActivity;)I
 
     .line 2259
     :cond_0

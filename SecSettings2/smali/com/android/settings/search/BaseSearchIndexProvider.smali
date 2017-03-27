@@ -1,9 +1,9 @@
-.class public Lcom/android/settings/search/BaseSearchIndexProvider;
+.class public Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .super Ljava/lang/Object;
 .source "BaseSearchIndexProvider.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.implements Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # static fields
@@ -29,7 +29,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/search/BaseSearchIndexProvider;->EMPTY_LIST:Ljava/util/List;
+    sput-object v0, Lcom/android/settings_ex/search/BaseSearchIndexProvider;->EMPTY_LIST:Ljava/util/List;
 
     return-void
 .end method
@@ -64,7 +64,7 @@
 
     .prologue
     .line 63
-    sget-object v0, Lcom/android/settings/search/BaseSearchIndexProvider;->EMPTY_LIST:Ljava/util/List;
+    sget-object v0, Lcom/android/settings_ex/search/BaseSearchIndexProvider;->EMPTY_LIST:Ljava/util/List;
 
     return-object v0
 .end method
@@ -80,7 +80,7 @@
             "Z)",
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/search/SearchIndexableRaw;",
+            "Lcom/android/settings_ex/search/SearchIndexableRaw;",
             ">;"
         }
     .end annotation
@@ -132,7 +132,7 @@
     const/4 v4, 0x0
 
     .line 37
-    invoke-static {p2}, Lcom/android/settings/search/Ranking;->getInfo(Ljava/lang/String;)[Ljava/lang/Object;
+    invoke-static {p2}, Lcom/android/settings_ex/search/Ranking;->getInfo(Ljava/lang/String;)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -183,7 +183,7 @@
 
     move-result v2
 
-    sget v3, Lcom/android/settings/search/Ranking;->SUB_DEPTH:I
+    sget v3, Lcom/android/settings_ex/search/Ranking;->SUB_DEPTH:I
 
     mul-int/2addr v2, v3
 
@@ -240,7 +240,7 @@
     aput-object v2, v1, v7
 
     .line 48
-    invoke-static {p3, v1}, Lcom/android/settings/search/Ranking;->setInfo(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {p3, v1}, Lcom/android/settings_ex/search/Ranking;->setInfo(Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method

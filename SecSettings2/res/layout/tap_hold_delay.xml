@@ -10,10 +10,10 @@
         <TextView android:id="@id/text_sec" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/longpress_sec_text" android:layout_toEndOf="@id/emptyLayout" style="@style/custom_tap_and_hold_sec_text_style" />
     </LinearLayout>
     <LinearLayout android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@string/perform_long_press_text" android:importantForAccessibility="yes">
-        <com.android.settings.accessibility.touchsensibility.TapAndHoldView android:id="@id/tapandholdview" android:background="@color/custom_tap_and_hold_view_bg" android:layout_width="fill_parent" android:layout_height="@dimen/custom_tap_and_hold_view_height" />
+        <com.android.settings_ex.accessibility.touchsensibility.TapAndHoldView android:id="@id/tapandholdview" android:background="@color/custom_tap_and_hold_view_bg" android:layout_width="fill_parent" android:layout_height="@dimen/custom_tap_and_hold_view_height" />
     </LinearLayout>
     <LinearLayout android:orientation="horizontal" android:id="@id/linearLayout" android:layout_alignParentBottom="true" style="@style/TapAndHoldDelayButtonContainer">
-        <com.android.settings.widget.BottomBarButton android:id="@id/longpress_cancel" android:text="@string/longpress_cancel_text" android:includeFontPadding="false" style="@style/TapAndHoldDelayButton" />
-        <com.android.settings.widget.BottomBarButton android:id="@id/longpress_save" android:text="@string/longpress_save_text" android:includeFontPadding="false" style="@style/TapAndHoldDelayButton" />
+        <com.android.settings_ex.widget.BottomBarButton android:id="@id/longpress_cancel" android:text="@string/longpress_cancel_text" android:includeFontPadding="false" style="@style/TapAndHoldDelayButton" />
+        <com.android.settings_ex.widget.BottomBarButton android:id="@id/longpress_save" android:text="@string/longpress_save_text" android:includeFontPadding="false" style="@style/TapAndHoldDelayButton" />
     </LinearLayout>
 </LinearLayout>

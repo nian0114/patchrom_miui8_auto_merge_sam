@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/ShowRegulatoryInformationActivity;
+.class public Lcom/android/settings_ex/ShowRegulatoryInformationActivity;
 .super Landroid/app/Activity;
 .source "ShowRegulatoryInformationActivity.java"
 
@@ -42,18 +42,18 @@
     .line 31
     const v9, 0x7f0401b4
 
-    invoke-virtual {p0, v9}, Lcom/android/settings/ShowRegulatoryInformationActivity;->setContentView(I)V
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/ShowRegulatoryInformationActivity;->setContentView(I)V
 
     .line 32
-    iput-object p0, p0, Lcom/android/settings/ShowRegulatoryInformationActivity;->mContext:Landroid/content/Context;
+    iput-object p0, p0, Lcom/android/settings_ex/ShowRegulatoryInformationActivity;->mContext:Landroid/content/Context;
 
     .line 33
     const v9, 0x7f0e07b0
 
-    invoke-virtual {p0, v9}, Lcom/android/settings/ShowRegulatoryInformationActivity;->setTitle(I)V
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/ShowRegulatoryInformationActivity;->setTitle(I)V
 
     .line 35
-    invoke-virtual {p0}, Lcom/android/settings/ShowRegulatoryInformationActivity;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ShowRegulatoryInformationActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v2
 
@@ -68,7 +68,7 @@
     :cond_0
     const v9, 0x7f0d0460
 
-    invoke-virtual {p0, v9}, Lcom/android/settings/ShowRegulatoryInformationActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/ShowRegulatoryInformationActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
@@ -142,7 +142,7 @@
     :goto_0
     if-eqz v1, :cond_3
 
-    invoke-static {}, Lcom/android/settings/Utils;->isJapanModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isJapanModel()Z
 
     move-result v9
 
@@ -151,7 +151,7 @@
     .line 49
     const-string v9, "phone"
 
-    invoke-virtual {p0, v9}, Lcom/android/settings/ShowRegulatoryInformationActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/ShowRegulatoryInformationActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v7
 

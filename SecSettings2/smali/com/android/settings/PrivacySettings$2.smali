@@ -1,4 +1,4 @@
-.class Lcom/android/settings/PrivacySettings$2;
+.class Lcom/android/settings_ex/PrivacySettings$2;
 .super Ljava/lang/Object;
 .source "PrivacySettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/PrivacySettings;
+    value = Lcom/android/settings_ex/PrivacySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/PrivacySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/PrivacySettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/PrivacySettings;)V
+.method constructor <init>(Lcom/android/settings_ex/PrivacySettings;)V
     .locals 0
 
     .prologue
     .line 368
-    iput-object p1, p0, Lcom/android/settings/PrivacySettings$2;->this$0:Lcom/android/settings/PrivacySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/PrivacySettings$2;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -70,10 +70,10 @@
 
     .line 376
     .local v2, "result":Z
-    iget-object v4, p0, Lcom/android/settings/PrivacySettings$2;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v4, p0, Lcom/android/settings_ex/PrivacySettings$2;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
-    # getter for: Lcom/android/settings/PrivacySettings;->mAutoRestore:Landroid/preference/SwitchPreference;
-    invoke-static {v4}, Lcom/android/settings/PrivacySettings;->access$1000(Lcom/android/settings/PrivacySettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/PrivacySettings;->mAutoRestore:Landroid/preference/SwitchPreference;
+    invoke-static {v4}, Lcom/android/settings_ex/PrivacySettings;->access$1000(Lcom/android/settings_ex/PrivacySettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v4
 
@@ -81,10 +81,10 @@
 
     .line 378
     :try_start_0
-    iget-object v4, p0, Lcom/android/settings/PrivacySettings$2;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v4, p0, Lcom/android/settings_ex/PrivacySettings$2;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
-    # getter for: Lcom/android/settings/PrivacySettings;->mBackupManager:Landroid/app/backup/IBackupManager;
-    invoke-static {v4}, Lcom/android/settings/PrivacySettings;->access$1100(Lcom/android/settings/PrivacySettings;)Landroid/app/backup/IBackupManager;
+    # getter for: Lcom/android/settings_ex/PrivacySettings;->mBackupManager:Landroid/app/backup/IBackupManager;
+    invoke-static {v4}, Lcom/android/settings_ex/PrivacySettings;->access$1100(Lcom/android/settings_ex/PrivacySettings;)Landroid/app/backup/IBackupManager;
 
     move-result-object v4
 
@@ -108,10 +108,10 @@
 
     .line 381
     .local v0, "e":Landroid/os/RemoteException;
-    iget-object v4, p0, Lcom/android/settings/PrivacySettings$2;->this$0:Lcom/android/settings/PrivacySettings;
+    iget-object v4, p0, Lcom/android/settings_ex/PrivacySettings$2;->this$0:Lcom/android/settings_ex/PrivacySettings;
 
-    # getter for: Lcom/android/settings/PrivacySettings;->mAutoRestore:Landroid/preference/SwitchPreference;
-    invoke-static {v4}, Lcom/android/settings/PrivacySettings;->access$1000(Lcom/android/settings/PrivacySettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/PrivacySettings;->mAutoRestore:Landroid/preference/SwitchPreference;
+    invoke-static {v4}, Lcom/android/settings_ex/PrivacySettings;->access$1000(Lcom/android/settings_ex/PrivacySettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v4
 

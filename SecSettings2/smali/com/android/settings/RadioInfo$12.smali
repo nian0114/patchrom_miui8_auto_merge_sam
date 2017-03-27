@@ -1,4 +1,4 @@
-.class Lcom/android/settings/RadioInfo$12;
+.class Lcom/android/settings_ex/RadioInfo$12;
 .super Ljava/lang/Object;
 .source "RadioInfo.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/RadioInfo;
+    value = Lcom/android/settings_ex/RadioInfo;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/RadioInfo;
+.field final synthetic this$0:Lcom/android/settings_ex/RadioInfo;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/RadioInfo;)V
+.method constructor <init>(Lcom/android/settings_ex/RadioInfo;)V
     .locals 0
 
     .prologue
     .line 927
-    iput-object p1, p0, Lcom/android/settings/RadioInfo$12;->this$0:Lcom/android/settings/RadioInfo;
+    iput-object p1, p0, Lcom/android/settings_ex/RadioInfo$12;->this$0:Lcom/android/settings_ex/RadioInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,10 +44,10 @@
     const/4 v3, 0x1
 
     .line 929
-    iget-object v1, p0, Lcom/android/settings/RadioInfo$12;->this$0:Lcom/android/settings/RadioInfo;
+    iget-object v1, p0, Lcom/android/settings_ex/RadioInfo$12;->this$0:Lcom/android/settings_ex/RadioInfo;
 
-    # getter for: Lcom/android/settings/RadioInfo;->mTelephonyManager:Landroid/telephony/TelephonyManager;
-    invoke-static {v1}, Lcom/android/settings/RadioInfo;->access$3400(Lcom/android/settings/RadioInfo;)Landroid/telephony/TelephonyManager;
+    # getter for: Lcom/android/settings_ex/RadioInfo;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    invoke-static {v1}, Lcom/android/settings_ex/RadioInfo;->access$3400(Lcom/android/settings_ex/RadioInfo;)Landroid/telephony/TelephonyManager;
 
     move-result-object v1
 
@@ -66,10 +66,10 @@
 
     .line 932
     :pswitch_1
-    iget-object v1, p0, Lcom/android/settings/RadioInfo$12;->this$0:Lcom/android/settings/RadioInfo;
+    iget-object v1, p0, Lcom/android/settings_ex/RadioInfo$12;->this$0:Lcom/android/settings_ex/RadioInfo;
 
-    # getter for: Lcom/android/settings/RadioInfo;->phone:Lcom/android/internal/telephony/Phone;
-    invoke-static {v1}, Lcom/android/settings/RadioInfo;->access$2000(Lcom/android/settings/RadioInfo;)Lcom/android/internal/telephony/Phone;
+    # getter for: Lcom/android/settings_ex/RadioInfo;->phone:Lcom/android/internal/telephony/Phone;
+    invoke-static {v1}, Lcom/android/settings_ex/RadioInfo;->access$2000(Lcom/android/settings_ex/RadioInfo;)Lcom/android/internal/telephony/Phone;
 
     move-result-object v1
 
@@ -81,10 +81,10 @@
 
     .line 935
     :pswitch_2
-    iget-object v1, p0, Lcom/android/settings/RadioInfo$12;->this$0:Lcom/android/settings/RadioInfo;
+    iget-object v1, p0, Lcom/android/settings_ex/RadioInfo$12;->this$0:Lcom/android/settings_ex/RadioInfo;
 
-    # getter for: Lcom/android/settings/RadioInfo;->phone:Lcom/android/internal/telephony/Phone;
-    invoke-static {v1}, Lcom/android/settings/RadioInfo;->access$2000(Lcom/android/settings/RadioInfo;)Lcom/android/internal/telephony/Phone;
+    # getter for: Lcom/android/settings_ex/RadioInfo;->phone:Lcom/android/internal/telephony/Phone;
+    invoke-static {v1}, Lcom/android/settings_ex/RadioInfo;->access$2000(Lcom/android/settings_ex/RadioInfo;)Lcom/android/internal/telephony/Phone;
 
     move-result-object v1
 

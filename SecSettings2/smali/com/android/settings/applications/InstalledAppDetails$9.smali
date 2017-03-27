@@ -1,14 +1,14 @@
-.class Lcom/android/settings/applications/InstalledAppDetails$9;
+.class Lcom/android/settings_ex/applications/InstalledAppDetails$9;
 .super Ljava/lang/Object;
 .source "InstalledAppDetails.java"
 
 # interfaces
-.implements Lcom/android/settings/applications/PermissionsSummaryHelper$PermissionsResultCallback;
+.implements Lcom/android/settings_ex/applications/PermissionsSummaryHelper$PermissionsResultCallback;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/InstalledAppDetails;
+    value = Lcom/android/settings_ex/applications/InstalledAppDetails;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/applications/InstalledAppDetails;
+.field final synthetic this$0:Lcom/android/settings_ex/applications/InstalledAppDetails;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/applications/InstalledAppDetails;)V
+.method constructor <init>(Lcom/android/settings_ex/applications/InstalledAppDetails;)V
     .locals 0
 
     .prologue
     .line 1324
-    iput-object p1, p0, Lcom/android/settings/applications/InstalledAppDetails$9;->this$0:Lcom/android/settings/applications/InstalledAppDetails;
+    iput-object p1, p0, Lcom/android/settings_ex/applications/InstalledAppDetails$9;->this$0:Lcom/android/settings_ex/applications/InstalledAppDetails;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,9 +45,9 @@
     const/4 v7, 0x1
 
     .line 1327
-    iget-object v5, p0, Lcom/android/settings/applications/InstalledAppDetails$9;->this$0:Lcom/android/settings/applications/InstalledAppDetails;
+    iget-object v5, p0, Lcom/android/settings_ex/applications/InstalledAppDetails$9;->this$0:Lcom/android/settings_ex/applications/InstalledAppDetails;
 
-    invoke-virtual {v5}, Lcom/android/settings/applications/InstalledAppDetails;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v5}, Lcom/android/settings_ex/applications/InstalledAppDetails;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -59,17 +59,17 @@
 
     .line 1330
     :cond_0
-    iget-object v5, p0, Lcom/android/settings/applications/InstalledAppDetails$9;->this$0:Lcom/android/settings/applications/InstalledAppDetails;
+    iget-object v5, p0, Lcom/android/settings_ex/applications/InstalledAppDetails$9;->this$0:Lcom/android/settings_ex/applications/InstalledAppDetails;
 
     const/4 v6, 0x0
 
-    # setter for: Lcom/android/settings/applications/InstalledAppDetails;->mPermissionReceiver:Landroid/content/BroadcastReceiver;
-    invoke-static {v5, v6}, Lcom/android/settings/applications/InstalledAppDetails;->access$1402(Lcom/android/settings/applications/InstalledAppDetails;Landroid/content/BroadcastReceiver;)Landroid/content/BroadcastReceiver;
+    # setter for: Lcom/android/settings_ex/applications/InstalledAppDetails;->mPermissionReceiver:Landroid/content/BroadcastReceiver;
+    invoke-static {v5, v6}, Lcom/android/settings_ex/applications/InstalledAppDetails;->access$1402(Lcom/android/settings_ex/applications/InstalledAppDetails;Landroid/content/BroadcastReceiver;)Landroid/content/BroadcastReceiver;
 
     .line 1331
-    iget-object v5, p0, Lcom/android/settings/applications/InstalledAppDetails$9;->this$0:Lcom/android/settings/applications/InstalledAppDetails;
+    iget-object v5, p0, Lcom/android/settings_ex/applications/InstalledAppDetails$9;->this$0:Lcom/android/settings_ex/applications/InstalledAppDetails;
 
-    invoke-virtual {v5}, Lcom/android/settings/applications/InstalledAppDetails;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v5}, Lcom/android/settings_ex/applications/InstalledAppDetails;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -106,10 +106,10 @@
     .end local v4    # "totalCount":I
     :cond_1
     :goto_1
-    iget-object v5, p0, Lcom/android/settings/applications/InstalledAppDetails$9;->this$0:Lcom/android/settings/applications/InstalledAppDetails;
+    iget-object v5, p0, Lcom/android/settings_ex/applications/InstalledAppDetails$9;->this$0:Lcom/android/settings_ex/applications/InstalledAppDetails;
 
-    # getter for: Lcom/android/settings/applications/InstalledAppDetails;->mPermissionsPreference:Landroid/preference/Preference;
-    invoke-static {v5}, Lcom/android/settings/applications/InstalledAppDetails;->access$1500(Lcom/android/settings/applications/InstalledAppDetails;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/applications/InstalledAppDetails;->mPermissionsPreference:Landroid/preference/Preference;
+    invoke-static {v5}, Lcom/android/settings_ex/applications/InstalledAppDetails;->access$1500(Lcom/android/settings_ex/applications/InstalledAppDetails;)Landroid/preference/Preference;
 
     move-result-object v5
 

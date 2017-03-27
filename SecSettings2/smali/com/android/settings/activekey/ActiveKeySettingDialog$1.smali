@@ -1,4 +1,4 @@
-.class Lcom/android/settings/activekey/ActiveKeySettingDialog$1;
+.class Lcom/android/settings_ex/activekey/ActiveKeySettingDialog$1;
 .super Ljava/lang/Object;
 .source "ActiveKeySettingDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/activekey/ActiveKeySettingDialog;->showProceedDialog()V
+    value = Lcom/android/settings_ex/activekey/ActiveKeySettingDialog;->showProceedDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/activekey/ActiveKeySettingDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/activekey/ActiveKeySettingDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/activekey/ActiveKeySettingDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/activekey/ActiveKeySettingDialog;)V
     .locals 0
 
     .prologue
     .line 47
-    iput-object p1, p0, Lcom/android/settings/activekey/ActiveKeySettingDialog$1;->this$0:Lcom/android/settings/activekey/ActiveKeySettingDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/activekey/ActiveKeySettingDialog$1;->this$0:Lcom/android/settings_ex/activekey/ActiveKeySettingDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -58,14 +58,14 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 53
-    iget-object v1, p0, Lcom/android/settings/activekey/ActiveKeySettingDialog$1;->this$0:Lcom/android/settings/activekey/ActiveKeySettingDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/activekey/ActiveKeySettingDialog$1;->this$0:Lcom/android/settings_ex/activekey/ActiveKeySettingDialog;
 
-    invoke-virtual {v1, v0}, Lcom/android/settings/activekey/ActiveKeySettingDialog;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/activekey/ActiveKeySettingDialog;->startActivity(Landroid/content/Intent;)V
 
     .line 54
-    iget-object v1, p0, Lcom/android/settings/activekey/ActiveKeySettingDialog$1;->this$0:Lcom/android/settings/activekey/ActiveKeySettingDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/activekey/ActiveKeySettingDialog$1;->this$0:Lcom/android/settings_ex/activekey/ActiveKeySettingDialog;
 
-    invoke-virtual {v1}, Lcom/android/settings/activekey/ActiveKeySettingDialog;->finish()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/activekey/ActiveKeySettingDialog;->finish()V
 
     .line 55
     return-void

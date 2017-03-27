@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/notification/NotificationSettings$7;
-.super Lcom/android/settings/notification/SettingPref;
+.class final Lcom/android/settings_ex/notification/NotificationSettings$7;
+.super Lcom/android/settings_ex/notification/SettingPref;
 .source "NotificationSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/NotificationSettings;
+    value = Lcom/android/settings_ex/notification/NotificationSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 
     .prologue
     .line 346
-    invoke-direct/range {p0 .. p5}, Lcom/android/settings/notification/SettingPref;-><init>(ILjava/lang/String;Ljava/lang/String;I[I)V
+    invoke-direct/range {p0 .. p5}, Lcom/android/settings_ex/notification/SettingPref;-><init>(ILjava/lang/String;Ljava/lang/String;I[I)V
 
     return-void
 .end method
@@ -38,13 +38,13 @@
 
     .prologue
     .line 349
-    invoke-static {p1}, Lcom/android/settings/Utils;->isDualFolderType(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isDualFolderType(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v0
 

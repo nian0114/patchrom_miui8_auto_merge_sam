@@ -1,11 +1,11 @@
-.class Lcom/android/settings/OtherSecuritySettings$SecuritySearchIndexProvider;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class Lcom/android/settings_ex/OtherSecuritySettings$SecuritySearchIndexProvider;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "OtherSecuritySettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/OtherSecuritySettings;
+    value = Lcom/android/settings_ex/OtherSecuritySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,11 +24,11 @@
 
     .prologue
     .line 845
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     .line 847
-    # getter for: Lcom/android/settings/OtherSecuritySettings;->MY_USER_ID:I
-    invoke-static {}, Lcom/android/settings/OtherSecuritySettings;->access$100()I
+    # getter for: Lcom/android/settings_ex/OtherSecuritySettings;->MY_USER_ID:I
+    invoke-static {}, Lcom/android/settings_ex/OtherSecuritySettings;->access$100()I
 
     move-result v0
 
@@ -37,7 +37,7 @@
     const/4 v0, 0x1
 
     :goto_0
-    iput-boolean v0, p0, Lcom/android/settings/OtherSecuritySettings$SecuritySearchIndexProvider;->mIsPrimary:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/OtherSecuritySettings$SecuritySearchIndexProvider;->mIsPrimary:Z
 
     .line 848
     return-void
@@ -74,7 +74,7 @@
 
     .line 996
     .local v0, "keys":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
-    iget-boolean v4, p0, Lcom/android/settings/OtherSecuritySettings$SecuritySearchIndexProvider;->mIsPrimary:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/OtherSecuritySettings$SecuritySearchIndexProvider;->mIsPrimary:Z
 
     if-nez v4, :cond_0
 
@@ -91,7 +91,7 @@
 
     .line 1009
     .local v1, "lockPatternUtils":Lcom/android/internal/widget/LockPatternUtils;
-    invoke-static {}, Lcom/android/settings/Utils;->isMultisimModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMultisimModel()Z
 
     move-result v4
 
@@ -99,7 +99,7 @@
 
     const-string v4, "CTC"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v5
 
@@ -169,7 +169,7 @@
     :cond_3
     const-string v4, "DCM"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v5
 
@@ -181,7 +181,7 @@
 
     const-string v4, "KDI"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v5
 
@@ -191,7 +191,7 @@
 
     if-nez v4, :cond_4
 
-    iget-boolean v4, p0, Lcom/android/settings/OtherSecuritySettings$SecuritySearchIndexProvider;->mIsPrimary:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/OtherSecuritySettings$SecuritySearchIndexProvider;->mIsPrimary:Z
 
     if-nez v4, :cond_6
 
@@ -203,7 +203,7 @@
 
     if-eqz v4, :cond_5
 
-    iget-boolean v4, p0, Lcom/android/settings/OtherSecuritySettings$SecuritySearchIndexProvider;->mIsPrimary:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/OtherSecuritySettings$SecuritySearchIndexProvider;->mIsPrimary:Z
 
     if-nez v4, :cond_6
 
@@ -265,8 +265,8 @@
 
     .line 1061
     :cond_8
-    # getter for: Lcom/android/settings/OtherSecuritySettings;->MY_USER_ID:I
-    invoke-static {}, Lcom/android/settings/OtherSecuritySettings;->access$100()I
+    # getter for: Lcom/android/settings_ex/OtherSecuritySettings;->MY_USER_ID:I
+    invoke-static {}, Lcom/android/settings_ex/OtherSecuritySettings;->access$100()I
 
     move-result v4
 
@@ -326,7 +326,7 @@
     :cond_c
     const-string v4, "USC"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v5
 
@@ -338,7 +338,7 @@
 
     const-string v4, "SPR"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v5
 
@@ -350,7 +350,7 @@
 
     const-string v4, "VMU"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v5
 
@@ -362,7 +362,7 @@
 
     const-string v4, "BST"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v5
 
@@ -374,7 +374,7 @@
 
     const-string v4, "XAS"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v5
 
@@ -386,7 +386,7 @@
 
     const-string v4, "TFN"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v5
 
@@ -406,7 +406,7 @@
 
     .line 1020
     :cond_e
-    iget-boolean v4, p0, Lcom/android/settings/OtherSecuritySettings$SecuritySearchIndexProvider;->mIsPrimary:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/OtherSecuritySettings$SecuritySearchIndexProvider;->mIsPrimary:Z
 
     if-eqz v4, :cond_f
 
@@ -426,13 +426,13 @@
 
     .line 1022
     :cond_10
-    invoke-static {p1}, Lcom/android/settings/Utils;->isShopDemo(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isShopDemo(Landroid/content/Context;)Z
 
     move-result v4
 
     if-nez v4, :cond_11
 
-    invoke-static {}, Lcom/android/settings/Utils;->isLDUModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isLDUModel()Z
 
     move-result v4
 
@@ -490,7 +490,7 @@
             "Z)",
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/search/SearchIndexableRaw;",
+            "Lcom/android/settings_ex/search/SearchIndexableRaw;",
             ">;"
         }
     .end annotation
@@ -502,7 +502,7 @@
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     .line 906
-    .local v3, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/search/SearchIndexableRaw;>;"
+    .local v3, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/search/SearchIndexableRaw;>;"
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -517,13 +517,13 @@
 
     .line 910
     .local v4, "screenTitle":Ljava/lang/String;
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 925
-    .local v0, "data":Lcom/android/settings/search/SearchIndexableRaw;
-    invoke-static {}, Lcom/android/settings/Utils;->isMultisimModel()Z
+    .local v0, "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMultisimModel()Z
 
     move-result v8
 
@@ -531,7 +531,7 @@
 
     const-string v8, "CTC"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v9
 
@@ -560,7 +560,7 @@
 
     if-nez v8, :cond_1
 
-    iget-boolean v8, p0, Lcom/android/settings/OtherSecuritySettings$SecuritySearchIndexProvider;->mIsPrimary:Z
+    iget-boolean v8, p0, Lcom/android/settings_ex/OtherSecuritySettings$SecuritySearchIndexProvider;->mIsPrimary:Z
 
     if-eqz v8, :cond_1
 
@@ -570,46 +570,46 @@
 
     if-eqz v8, :cond_1
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->isShopDemo(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isShopDemo(Landroid/content/Context;)Z
 
     move-result v8
 
     if-nez v8, :cond_1
 
-    invoke-static {}, Lcom/android/settings/Utils;->isLDUModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isLDUModel()Z
 
     move-result v8
 
     if-nez v8, :cond_1
 
     .line 931
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    .end local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    .end local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 932
-    .restart local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .restart local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     const v8, 0x7f0e0615
 
     invoke-virtual {v2, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
-    invoke-static {v8}, Lcom/android/settings/Utils;->replaceSIMString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v8}, Lcom/android/settings_ex/Utils;->replaceSIMString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    iput-object v8, v0, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v8, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 933
-    invoke-static {}, Lcom/android/settings/Utils;->isSimReady()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSimReady()Z
 
     move-result v8
 
     if-eqz v8, :cond_0
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->isAirplaneModeEnabled(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isAirplaneModeEnabled(Landroid/content/Context;)Z
 
     move-result v8
 
@@ -618,17 +618,17 @@
     .line 934
     const-string v8, "android.intent.action.MAIN"
 
-    iput-object v8, v0, Lcom/android/settings/search/SearchIndexableRaw;->intentAction:Ljava/lang/String;
+    iput-object v8, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->intentAction:Ljava/lang/String;
 
     .line 935
     const-string v8, "com.android.settings.IccLockSettings"
 
-    iput-object v8, v0, Lcom/android/settings/search/SearchIndexableRaw;->intentTargetClass:Ljava/lang/String;
+    iput-object v8, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->intentTargetClass:Ljava/lang/String;
 
     .line 936
     const-string v8, "com.android.settings"
 
-    iput-object v8, v0, Lcom/android/settings/search/SearchIndexableRaw;->intentTargetPackage:Ljava/lang/String;
+    iput-object v8, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->intentTargetPackage:Ljava/lang/String;
 
     .line 938
     :cond_0
@@ -637,21 +637,21 @@
     .line 942
     .end local v6    # "tm":Landroid/telephony/TelephonyManager;
     :cond_1
-    iget-boolean v8, p0, Lcom/android/settings/OtherSecuritySettings$SecuritySearchIndexProvider;->mIsPrimary:Z
+    iget-boolean v8, p0, Lcom/android/settings_ex/OtherSecuritySettings$SecuritySearchIndexProvider;->mIsPrimary:Z
 
     if-eqz v8, :cond_2
 
     .line 943
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    .end local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    .end local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 944
-    .restart local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .restart local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     const-string v8, "security_policy_updates"
 
-    iput-object v8, v0, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v8, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 945
     const v8, 0x7f0e1323
@@ -660,10 +660,10 @@
 
     move-result-object v8
 
-    iput-object v8, v0, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v8, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 946
-    invoke-static {}, Lcom/android/settings/Utils;->isUSA()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isUSA()Z
 
     move-result v8
 
@@ -676,11 +676,11 @@
 
     move-result-object v8
 
-    iput-object v8, v0, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v8, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     .line 955
     :goto_0
-    iput-object v4, v0, Lcom/android/settings/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
+    iput-object v4, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
 
     .line 956
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -723,16 +723,16 @@
     .line 969
     .local v5, "storageSummaryRes":I
     :goto_1
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    .end local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    .end local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 970
-    .restart local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .restart local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     const-string v8, "credential_storage_type"
 
-    iput-object v8, v0, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v8, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 971
     const v8, 0x7f0e0b8f
@@ -741,17 +741,17 @@
 
     move-result-object v8
 
-    iput-object v8, v0, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v8, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 972
     invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
-    iput-object v8, v0, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v8, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     .line 973
-    iput-object v4, v0, Lcom/android/settings/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
+    iput-object v4, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
 
     .line 974
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -779,16 +779,16 @@
     if-eqz v8, :cond_4
 
     .line 983
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    .end local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    .end local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 984
-    .restart local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .restart local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     const-string v8, "mPhonePasswordPreference"
 
-    iput-object v8, v0, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v8, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 985
     const v8, 0x7f0e1350
@@ -797,10 +797,10 @@
 
     move-result-object v8
 
-    iput-object v8, v0, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v8, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 986
-    iput-object v4, v0, Lcom/android/settings/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
+    iput-object v4, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
 
     .line 987
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -812,7 +812,7 @@
     .line 949
     .end local v7    # "um":Landroid/os/UserManager;
     :cond_5
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v8
 
@@ -825,7 +825,7 @@
 
     move-result-object v8
 
-    iput-object v8, v0, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v8, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     goto :goto_0
 
@@ -837,7 +837,7 @@
 
     move-result-object v8
 
-    iput-object v8, v0, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v8, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     goto/16 :goto_0
 
@@ -887,7 +887,7 @@
 
     .line 866
     .restart local v5    # "sir":Landroid/provider/SearchIndexableResource;
-    const-class v7, Lcom/android/settings/OtherSecuritySettings;
+    const-class v7, Lcom/android/settings_ex/OtherSecuritySettings;
 
     invoke-virtual {v7}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -935,7 +935,7 @@
     if-eqz v4, :cond_1
 
     .line 891
-    const-class v7, Lcom/android/settings/OtherSecuritySettings;
+    const-class v7, Lcom/android/settings_ex/OtherSecuritySettings;
 
     invoke-virtual {v7}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -943,7 +943,7 @@
 
     .line 892
     .local v2, "parent":Ljava/lang/String;
-    const-class v7, Lcom/android/settings/IccLockSettings;
+    const-class v7, Lcom/android/settings_ex/IccLockSettings;
 
     invoke-virtual {v7}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -963,7 +963,7 @@
 
     .line 894
     .local v1, "childTitle":Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticModel()Z
 
     move-result v7
 
@@ -989,7 +989,7 @@
     :cond_2
     const-string v7, "USC"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v8
 
@@ -1001,7 +1001,7 @@
 
     const-string v7, "SPR"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v8
 
@@ -1013,7 +1013,7 @@
 
     const-string v7, "VMU"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v8
 
@@ -1025,7 +1025,7 @@
 
     const-string v7, "BST"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v8
 
@@ -1037,7 +1037,7 @@
 
     const-string v7, "XAS"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v8
 
@@ -1049,7 +1049,7 @@
 
     const-string v7, "TFN"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v8
 
@@ -1067,7 +1067,7 @@
 
     .line 878
     :cond_4
-    iget-boolean v7, p0, Lcom/android/settings/OtherSecuritySettings$SecuritySearchIndexProvider;->mIsPrimary:Z
+    iget-boolean v7, p0, Lcom/android/settings_ex/OtherSecuritySettings$SecuritySearchIndexProvider;->mIsPrimary:Z
 
     if-eqz v7, :cond_5
 
@@ -1085,7 +1085,7 @@
 
     .line 880
     :cond_6
-    invoke-static {}, Lcom/android/settings/Utils;->isMultisimModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMultisimModel()Z
 
     move-result v7
 

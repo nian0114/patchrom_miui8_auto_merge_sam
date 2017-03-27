@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen android:key="easy_mode_apps"
   xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings_ex">
     <PreferenceCategory android:title="@string/easy_mode_settings_category_title" />
     <SwitchPreferenceScreen android:title="@string/easy_mode_select_all" android:key="easy_mode_select_all" settings:dbMatchingName="easy_mode_select_all" settings:dbMatchingTable="system" />
     <SwitchPreferenceScreen android:layout="@layout/easy_mode_preference" android:title="@string/application_name_camera" android:key="easy_mode_camera" settings:dbMatchingName="easy_mode_camera" settings:dbMatchingTable="system" />

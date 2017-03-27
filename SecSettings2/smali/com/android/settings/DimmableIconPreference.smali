@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/DimmableIconPreference;
+.class public Lcom/android/settings_ex/DimmableIconPreference;
 .super Landroid/preference/Preference;
 .source "DimmableIconPreference.java"
 
@@ -20,7 +20,7 @@
     .line 43
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/DimmableIconPreference;->mContentDescription:Ljava/lang/CharSequence;
+    iput-object v0, p0, Lcom/android/settings_ex/DimmableIconPreference;->mContentDescription:Ljava/lang/CharSequence;
 
     .line 44
     return-void
@@ -36,7 +36,7 @@
     invoke-direct {p0, p1}, Landroid/preference/Preference;-><init>(Landroid/content/Context;)V
 
     .line 48
-    iput-object p2, p0, Lcom/android/settings/DimmableIconPreference;->mContentDescription:Ljava/lang/CharSequence;
+    iput-object p2, p0, Lcom/android/settings_ex/DimmableIconPreference;->mContentDescription:Ljava/lang/CharSequence;
 
     .line 49
     return-void
@@ -48,7 +48,7 @@
 
     .prologue
     .line 52
-    invoke-virtual {p0}, Lcom/android/settings/DimmableIconPreference;->getIcon()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DimmableIconPreference;->getIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -69,7 +69,7 @@
     invoke-virtual {v2, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
     .line 55
-    invoke-virtual {p0, v0}, Lcom/android/settings/DimmableIconPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/DimmableIconPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 57
     :cond_0
@@ -93,7 +93,7 @@
     invoke-super {p0, p1}, Landroid/preference/Preference;->onBindView(Landroid/view/View;)V
 
     .line 74
-    iget-object v1, p0, Lcom/android/settings/DimmableIconPreference;->mContentDescription:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/android/settings_ex/DimmableIconPreference;->mContentDescription:Ljava/lang/CharSequence;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -112,7 +112,7 @@
 
     .line 76
     .local v0, "titleView":Landroid/widget/TextView;
-    iget-object v1, p0, Lcom/android/settings/DimmableIconPreference;->mContentDescription:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/android/settings_ex/DimmableIconPreference;->mContentDescription:Ljava/lang/CharSequence;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setContentDescription(Ljava/lang/CharSequence;)V
 
@@ -129,7 +129,7 @@
 
     .prologue
     .line 61
-    invoke-direct {p0, p2}, Lcom/android/settings/DimmableIconPreference;->dimIcon(Z)V
+    invoke-direct {p0, p2}, Lcom/android/settings_ex/DimmableIconPreference;->dimIcon(Z)V
 
     .line 62
     invoke-super {p0, p1, p2}, Landroid/preference/Preference;->onParentChanged(Landroid/preference/Preference;Z)V
@@ -149,7 +149,7 @@
     const/4 v0, 0x1
 
     :goto_0
-    invoke-direct {p0, v0}, Lcom/android/settings/DimmableIconPreference;->dimIcon(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/DimmableIconPreference;->dimIcon(Z)V
 
     .line 68
     invoke-super {p0, p1}, Landroid/preference/Preference;->setEnabled(Z)V

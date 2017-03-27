@@ -1,9 +1,9 @@
-.class public final Lcom/android/settings/personalpage/PersonalPageEnabler;
+.class public final Lcom/android/settings_ex/personalpage/PersonalPageEnabler;
 .super Landroid/preference/PreferenceActivity;
 .source "PersonalPageEnabler.java"
 
 # interfaces
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # instance fields
@@ -23,16 +23,16 @@
 
 .field private final mReceiver:Landroid/content/BroadcastReceiver;
 
-.field private mSwitch:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
 .field state:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/android/settings/widget/SwitchBar;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/android/settings_ex/widget/SwitchBar;)V
     .locals 2
     .param p1, "context"    # Landroid/content/Context;
-    .param p2, "switchBar"    # Lcom/android/settings/widget/SwitchBar;
+    .param p2, "switchBar"    # Lcom/android/settings_ex/widget/SwitchBar;
 
     .prologue
     const/4 v1, 0x0
@@ -43,31 +43,31 @@
     .line 30
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mIsInMainMenu:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mIsInMainMenu:Z
 
     .line 32
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mHeader:Landroid/preference/PreferenceActivity$Header;
+    iput-object v0, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mHeader:Landroid/preference/PreferenceActivity$Header;
 
     .line 33
-    iput v1, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mPosition:I
+    iput v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mPosition:I
 
     .line 37
-    new-instance v0, Lcom/android/settings/personalpage/PersonalPageEnabler$1;
+    new-instance v0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/personalpage/PersonalPageEnabler$1;-><init>(Lcom/android/settings/personalpage/PersonalPageEnabler;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/personalpage/PersonalPageEnabler$1;-><init>(Lcom/android/settings_ex/personalpage/PersonalPageEnabler;)V
 
-    iput-object v0, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mReceiver:Landroid/content/BroadcastReceiver;
 
     .line 49
-    iput-object p1, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
 
     .line 50
-    iput-object p2, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mSwitch:Lcom/android/settings/widget/SwitchBar;
+    iput-object p2, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 51
-    iput v1, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->state:I
+    iput v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->state:I
 
     .line 52
     new-instance v0, Landroid/content/IntentFilter;
@@ -76,24 +76,24 @@
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mIntentFilter:Landroid/content/IntentFilter;
+    iput-object v0, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mIntentFilter:Landroid/content/IntentFilter;
 
     .line 53
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/android/settings/widget/SwitchBar;Z)V
+.method public constructor <init>(Landroid/content/Context;Lcom/android/settings_ex/widget/SwitchBar;Z)V
     .locals 0
     .param p1, "context"    # Landroid/content/Context;
-    .param p2, "switchBar"    # Lcom/android/settings/widget/SwitchBar;
+    .param p2, "switchBar"    # Lcom/android/settings_ex/widget/SwitchBar;
     .param p3, "in_main_menu"    # Z
 
     .prologue
     .line 56
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/personalpage/PersonalPageEnabler;-><init>(Landroid/content/Context;Lcom/android/settings/widget/SwitchBar;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;-><init>(Landroid/content/Context;Lcom/android/settings_ex/widget/SwitchBar;)V
 
     .line 57
-    iput-boolean p3, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mIsInMainMenu:Z
+    iput-boolean p3, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mIsInMainMenu:Z
 
     .line 58
     return-void
@@ -106,7 +106,7 @@
 
     .prologue
     .line 192
-    iget-object v0, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
 
     const-string v1, "activity"
 
@@ -116,14 +116,14 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    iput-object v0, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mActivityManager:Landroid/app/ActivityManager;
+    iput-object v0, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mActivityManager:Landroid/app/ActivityManager;
 
     .line 193
-    iget-object v0, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mActivityManager:Landroid/app/ActivityManager;
+    iget-object v0, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mActivityManager:Landroid/app/ActivityManager;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mActivityManager:Landroid/app/ActivityManager;
+    iget-object v0, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mActivityManager:Landroid/app/ActivityManager;
 
     invoke-virtual {v0}, Landroid/app/ActivityManager;->isInLockTaskMode()Z
 
@@ -172,7 +172,7 @@
     const/4 v7, 0x0
 
     .line 134
-    iget-object v4, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -186,7 +186,7 @@
 
     .line 135
     .local v3, "state":I
-    iget-object v4, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -223,7 +223,7 @@
     invoke-static {v4, v5}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 139
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageEnabler;->isLockTaskMode()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->isLockTaskMode()Z
 
     move-result v4
 
@@ -233,13 +233,13 @@
     if-nez v3, :cond_0
 
     .line 141
-    iget-object v4, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mSwitch:Lcom/android/settings/widget/SwitchBar;
+    iget-object v4, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v4, v7}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v4, v7}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 145
     :goto_0
-    iget-object v4, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
 
     const v5, 0x7f0e11da
 
@@ -255,9 +255,9 @@
 
     .line 143
     :cond_0
-    iget-object v4, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mSwitch:Lcom/android/settings/widget/SwitchBar;
+    iget-object v4, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v4, v8}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v4, v8}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     goto :goto_0
 
@@ -276,7 +276,7 @@
 
     .line 152
     .local v1, "intent":Landroid/content/Intent;
-    iget-object v4, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
@@ -321,17 +321,17 @@
     if-nez v3, :cond_5
 
     .line 159
-    iget-object v4, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mSwitch:Lcom/android/settings/widget/SwitchBar;
+    iget-object v4, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v4, v7}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v4, v7}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 160
-    iget-object v4, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mSwitch:Lcom/android/settings/widget/SwitchBar;
+    iget-object v4, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v4, v7}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v4, v7}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 162
-    iget-boolean v4, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mIsInMainMenu:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mIsInMainMenu:Z
 
     if-eqz v4, :cond_4
 
@@ -366,7 +366,7 @@
     invoke-virtual {v4, v9}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 172
-    iget-object v4, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
@@ -390,9 +390,9 @@
     if-ne v3, v8, :cond_6
 
     .line 176
-    iget-object v4, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mSwitch:Lcom/android/settings/widget/SwitchBar;
+    iget-object v4, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v4, v7}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v4, v7}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 177
     const-string v4, "PersonalPageEnabler"
@@ -427,7 +427,7 @@
     invoke-virtual {v4, v9}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 183
-    iget-object v4, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
@@ -459,9 +459,9 @@
     invoke-static {v4, v5}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 187
-    iget-object v4, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mSwitch:Lcom/android/settings/widget/SwitchBar;
+    iget-object v4, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v4, v8}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v4, v8}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     goto/16 :goto_1
 .end method
@@ -493,7 +493,7 @@
 
     move-result-object v2
 
-    iget v3, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mCheck:I
+    iget v3, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mCheck:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -518,7 +518,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -541,9 +541,9 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 97
-    iget v1, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mCheck:I
+    iget v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mCheck:I
 
-    iget-object v2, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -566,19 +566,19 @@
 
     .line 103
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 104
-    iget-object v1, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mSwitch:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v1, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 105
-    iget-object v1, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
@@ -601,7 +601,7 @@
 
     .prologue
     .line 84
-    iget-object v1, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -624,26 +624,26 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 86
-    iput v0, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mCheck:I
+    iput v0, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mCheck:I
 
     .line 87
-    iget-object v1, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mSwitch:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mSwitch:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v1, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 88
-    iget-object v1, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    iget-object v3, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mIntentFilter:Landroid/content/IntentFilter;
+    iget-object v3, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mIntentFilter:Landroid/content/IntentFilter;
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 89
-    iget-object v1, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/settings/personalpage/PersonalPageEnabler;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/personalpage/PersonalPageEnabler;->mReceiver:Landroid/content/BroadcastReceiver;
 
     new-instance v3, Landroid/content/IntentFilter;
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/guide/WifiSettingsGuider$7;
+.class Lcom/android/settings_ex/guide/WifiSettingsGuider$7;
 .super Ljava/lang/Object;
 .source "WifiSettingsGuider.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/guide/WifiSettingsGuider;->initHelpDialogContent(II)V
+    value = Lcom/android/settings_ex/guide/WifiSettingsGuider;->initHelpDialogContent(II)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/guide/WifiSettingsGuider;
+.field final synthetic this$0:Lcom/android/settings_ex/guide/WifiSettingsGuider;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/guide/WifiSettingsGuider;)V
+.method constructor <init>(Lcom/android/settings_ex/guide/WifiSettingsGuider;)V
     .locals 0
 
     .prologue
     .line 678
-    iput-object p1, p0, Lcom/android/settings/guide/WifiSettingsGuider$7;->this$0:Lcom/android/settings/guide/WifiSettingsGuider;
+    iput-object p1, p0, Lcom/android/settings_ex/guide/WifiSettingsGuider$7;->this$0:Lcom/android/settings_ex/guide/WifiSettingsGuider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,30 +42,30 @@
 
     .prologue
     .line 681
-    iget-object v0, p0, Lcom/android/settings/guide/WifiSettingsGuider$7;->this$0:Lcom/android/settings/guide/WifiSettingsGuider;
+    iget-object v0, p0, Lcom/android/settings_ex/guide/WifiSettingsGuider$7;->this$0:Lcom/android/settings_ex/guide/WifiSettingsGuider;
 
-    # getter for: Lcom/android/settings/guide/WifiSettingsGuider;->onCloseHelpDialogListener:Lcom/android/settings/guide/WifiSettingsGuider$OnCloseHelpDialogListener;
-    invoke-static {v0}, Lcom/android/settings/guide/WifiSettingsGuider;->access$200(Lcom/android/settings/guide/WifiSettingsGuider;)Lcom/android/settings/guide/WifiSettingsGuider$OnCloseHelpDialogListener;
+    # getter for: Lcom/android/settings_ex/guide/WifiSettingsGuider;->onCloseHelpDialogListener:Lcom/android/settings_ex/guide/WifiSettingsGuider$OnCloseHelpDialogListener;
+    invoke-static {v0}, Lcom/android/settings_ex/guide/WifiSettingsGuider;->access$200(Lcom/android/settings_ex/guide/WifiSettingsGuider;)Lcom/android/settings_ex/guide/WifiSettingsGuider$OnCloseHelpDialogListener;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 682
-    iget-object v0, p0, Lcom/android/settings/guide/WifiSettingsGuider$7;->this$0:Lcom/android/settings/guide/WifiSettingsGuider;
+    iget-object v0, p0, Lcom/android/settings_ex/guide/WifiSettingsGuider$7;->this$0:Lcom/android/settings_ex/guide/WifiSettingsGuider;
 
-    # getter for: Lcom/android/settings/guide/WifiSettingsGuider;->onCloseHelpDialogListener:Lcom/android/settings/guide/WifiSettingsGuider$OnCloseHelpDialogListener;
-    invoke-static {v0}, Lcom/android/settings/guide/WifiSettingsGuider;->access$200(Lcom/android/settings/guide/WifiSettingsGuider;)Lcom/android/settings/guide/WifiSettingsGuider$OnCloseHelpDialogListener;
+    # getter for: Lcom/android/settings_ex/guide/WifiSettingsGuider;->onCloseHelpDialogListener:Lcom/android/settings_ex/guide/WifiSettingsGuider$OnCloseHelpDialogListener;
+    invoke-static {v0}, Lcom/android/settings_ex/guide/WifiSettingsGuider;->access$200(Lcom/android/settings_ex/guide/WifiSettingsGuider;)Lcom/android/settings_ex/guide/WifiSettingsGuider$OnCloseHelpDialogListener;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/android/settings/guide/WifiSettingsGuider$OnCloseHelpDialogListener;->OnCloseHelpDialog()V
+    invoke-interface {v0}, Lcom/android/settings_ex/guide/WifiSettingsGuider$OnCloseHelpDialogListener;->OnCloseHelpDialog()V
 
     .line 684
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/guide/WifiSettingsGuider$7;->this$0:Lcom/android/settings/guide/WifiSettingsGuider;
+    iget-object v0, p0, Lcom/android/settings_ex/guide/WifiSettingsGuider$7;->this$0:Lcom/android/settings_ex/guide/WifiSettingsGuider;
 
-    invoke-virtual {v0}, Lcom/android/settings/guide/WifiSettingsGuider;->dismissHelpDialog()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/guide/WifiSettingsGuider;->dismissHelpDialog()V
 
     .line 685
     return-void

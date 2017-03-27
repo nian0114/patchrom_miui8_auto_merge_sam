@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApSettings$15;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$15;
 .super Ljava/lang/Object;
 .source "WifiApSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/mobileap/WifiApSettings;->onCreateDialog(I)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->onCreateDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WifiApSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;)V
     .locals 0
 
     .prologue
     .line 1465
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApSettings$15;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$15;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

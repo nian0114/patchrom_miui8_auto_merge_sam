@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;
+.class public Lcom/android/settings_ex/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;
 .super Landroid/appwidget/AppWidgetProvider;
 .source "AccessibilityWidgetProviderMobileHotspot.java"
 
@@ -25,7 +25,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    sput-object v0, Lcom/android/settings/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->THIS_APPWIDGET:Landroid/content/ComponentName;
+    sput-object v0, Lcom/android/settings_ex/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->THIS_APPWIDGET:Landroid/content/ComponentName;
 
     return-void
 .end method
@@ -67,14 +67,14 @@
 
     const/4 v2, 0x1
 
-    invoke-static {p0, v2}, Lcom/android/settings/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->getLaunchPendingIntent(Landroid/content/Context;I)Landroid/app/PendingIntent;
+    invoke-static {p0, v2}, Lcom/android/settings_ex/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->getLaunchPendingIntent(Landroid/content/Context;I)Landroid/app/PendingIntent;
 
     move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
 
     .line 94
-    invoke-static {v0, p0}, Lcom/android/settings/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->updateButtons(Landroid/widget/RemoteViews;Landroid/content/Context;)V
+    invoke-static {v0, p0}, Lcom/android/settings_ex/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->updateButtons(Landroid/widget/RemoteViews;Landroid/content/Context;)V
 
     .line 95
     return-object v0
@@ -95,7 +95,7 @@
 
     .line 152
     .local v0, "launchIntent":Landroid/content/Intent;
-    const-class v2, Lcom/android/settings/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;
+    const-class v2, Lcom/android/settings_ex/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;
 
     invoke-virtual {v0, p0, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
@@ -242,13 +242,13 @@
 
     .line 202
     .local v1, "intent":Landroid/content/Intent;
-    invoke-static {p1}, Lcom/android/settings/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->getWidgetMode(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->getWidgetMode(Landroid/content/Context;)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    invoke-static {p1}, Lcom/android/settings/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->isAirplaneMode(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->isAirplaneMode(Landroid/content/Context;)Z
 
     move-result v3
 
@@ -281,15 +281,15 @@
 
     check-cast v3, Landroid/net/wifi/WifiManager;
 
-    iput-object v3, p0, Lcom/android/settings/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iput-object v3, p0, Lcom/android/settings_ex/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     .line 207
-    iget-object v3, p0, Lcom/android/settings/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     if-eqz v3, :cond_2
 
     .line 208
-    iget-object v3, p0, Lcom/android/settings/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     const/4 v4, 0x0
 
@@ -314,12 +314,12 @@
     :goto_1
     if-ne v2, v6, :cond_3
 
-    iget-object v3, p0, Lcom/android/settings/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     if-eqz v3, :cond_3
 
     .line 216
-    iget-object v3, p0, Lcom/android/settings/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->mWifiManager:Landroid/net/wifi/WifiManager;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v3, v6}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
 
@@ -330,7 +330,7 @@
 
     .line 220
     :cond_3
-    invoke-static {p1}, Lcom/android/settings/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->isAirplaneMode(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->isAirplaneMode(Landroid/content/Context;)Z
 
     move-result v3
 
@@ -374,13 +374,13 @@
 
     .line 122
     .local v0, "strTalkback":Ljava/lang/String;
-    invoke-static {p1}, Lcom/android/settings/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->getWidgetMode(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->getWidgetMode(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    invoke-static {p1}, Lcom/android/settings/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->isAirplaneMode(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->isAirplaneMode(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -430,7 +430,7 @@
 
     .prologue
     .line 104
-    invoke-static {p0}, Lcom/android/settings/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->buildUpdate(Landroid/content/Context;)Landroid/widget/RemoteViews;
+    invoke-static {p0}, Lcom/android/settings_ex/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->buildUpdate(Landroid/content/Context;)Landroid/widget/RemoteViews;
 
     move-result-object v1
 
@@ -454,7 +454,7 @@
 
     move-result-object v3
 
-    sget-object v4, Lcom/android/settings/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->THIS_APPWIDGET:Landroid/content/ComponentName;
+    sget-object v4, Lcom/android/settings_ex/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->THIS_APPWIDGET:Landroid/content/ComponentName;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -467,7 +467,7 @@
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 109
-    sget-object v2, Lcom/android/settings/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->THIS_APPWIDGET:Landroid/content/ComponentName;
+    sget-object v2, Lcom/android/settings_ex/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->THIS_APPWIDGET:Landroid/content/ComponentName;
 
     invoke-virtual {v0, v2, v1}, Landroid/appwidget/AppWidgetManager;->updateAppWidget(Landroid/content/ComponentName;Landroid/widget/RemoteViews;)V
 
@@ -602,14 +602,14 @@
     invoke-static {v4, v5}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 175
-    invoke-direct {p0, p1}, Lcom/android/settings/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->toggleWidgetMode(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->toggleWidgetMode(Landroid/content/Context;)V
 
     .line 193
     .end local v1    # "buttonId":I
     .end local v2    # "data":Landroid/net/Uri;
     :cond_0
     :goto_0
-    invoke-static {p1}, Lcom/android/settings/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->updateWidget(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/android/settings_ex/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->updateWidget(Landroid/content/Context;)V
 
     .line 197
     :cond_1
@@ -743,7 +743,7 @@
     invoke-super {p0, p1, p2, p3}, Landroid/appwidget/AppWidgetProvider;->onUpdate(Landroid/content/Context;Landroid/appwidget/AppWidgetManager;[I)V
 
     .line 62
-    invoke-static {p1}, Lcom/android/settings/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->buildUpdate(Landroid/content/Context;)Landroid/widget/RemoteViews;
+    invoke-static {p1}, Lcom/android/settings_ex/accessibilitywidget/AccessibilityWidgetProviderMobileHotspot;->buildUpdate(Landroid/content/Context;)Landroid/widget/RemoteViews;
 
     move-result-object v1
 

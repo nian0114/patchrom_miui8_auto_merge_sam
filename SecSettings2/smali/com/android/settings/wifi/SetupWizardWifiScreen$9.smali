@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/SetupWizardWifiScreen$9;
+.class Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$9;
 .super Ljava/lang/Object;
 .source "SetupWizardWifiScreen.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/SetupWizardWifiScreen;->showAlertDialog(I)V
+    value = Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->showAlertDialog(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
     .locals 0
 
     .prologue
     .line 451
-    iput-object p1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$9;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$9;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,10 +51,10 @@
     .line 457
     .local v0, "actionCaptivePortal":Ljava/lang/String;
     :try_start_0
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$9;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$9;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
-    # getter for: Lcom/android/settings/wifi/SetupWizardWifiScreen;->mContext:Landroid/content/Context;
-    invoke-static {v4}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->access$100(Lcom/android/settings/wifi/SetupWizardWifiScreen;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mContext:Landroid/content/Context;
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->access$100(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)Landroid/content/Context;
 
     move-result-object v4
 
@@ -89,11 +89,11 @@
     .line 466
     .local v3, "webViewActivity":Landroid/content/Intent;
     :try_start_1
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$9;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$9;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     const/16 v5, 0x3e8
 
-    invoke-virtual {v4, v3, v5}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {v4, v3, v5}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->startActivityForResult(Landroid/content/Intent;I)V
     :try_end_1
     .catch Landroid/content/ActivityNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DataUsageSummary$34;
+.class Lcom/android/settings_ex/DataUsageSummary$34;
 .super Ljava/lang/Object;
 .source "DataUsageSummary.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DataUsageSummary;
+    value = Lcom/android/settings_ex/DataUsageSummary;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DataUsageSummary;
+.field final synthetic this$0:Lcom/android/settings_ex/DataUsageSummary;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DataUsageSummary;)V
+.method constructor <init>(Lcom/android/settings_ex/DataUsageSummary;)V
     .locals 0
 
     .prologue
     .line 3670
-    iput-object p1, p0, Lcom/android/settings/DataUsageSummary$34;->this$0:Lcom/android/settings/DataUsageSummary;
+    iput-object p1, p0, Lcom/android/settings_ex/DataUsageSummary$34;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,9 +50,9 @@
 
     .line 3674
     .local v0, "isUDSEnable":Z
-    iget-object v3, p0, Lcom/android/settings/DataUsageSummary$34;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v3, p0, Lcom/android/settings_ex/DataUsageSummary$34;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
-    invoke-virtual {v3}, Lcom/android/settings/DataUsageSummary;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v3}, Lcom/android/settings_ex/DataUsageSummary;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -78,17 +78,17 @@
 
     const-string v2, "UDS"
 
-    # invokes: Lcom/android/settings/DataUsageSummary;->getSubFeature(Ljava/lang/String;Ljava/lang/String;)Z
-    invoke-static {v1, v2}, Lcom/android/settings/DataUsageSummary;->access$6100(Ljava/lang/String;Ljava/lang/String;)Z
+    # invokes: Lcom/android/settings_ex/DataUsageSummary;->getSubFeature(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lcom/android/settings_ex/DataUsageSummary;->access$6100(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 3677
-    iget-object v1, p0, Lcom/android/settings/DataUsageSummary$34;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v1, p0, Lcom/android/settings_ex/DataUsageSummary$34;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
-    invoke-static {v1}, Lcom/android/settings/DataUsageSummary$ConfirmUDSRestrict;->show(Lcom/android/settings/DataUsageSummary;)V
+    invoke-static {v1}, Lcom/android/settings_ex/DataUsageSummary$ConfirmUDSRestrict;->show(Lcom/android/settings_ex/DataUsageSummary;)V
 
     .line 3707
     :goto_1
@@ -102,9 +102,9 @@
 
     .line 3679
     :cond_1
-    new-instance v1, Lcom/android/settings/DataUsageSummary$34$1;
+    new-instance v1, Lcom/android/settings_ex/DataUsageSummary$34$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/DataUsageSummary$34$1;-><init>(Lcom/android/settings/DataUsageSummary$34;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/DataUsageSummary$34$1;-><init>(Lcom/android/settings_ex/DataUsageSummary$34;)V
 
     const-wide/16 v2, 0x64
 

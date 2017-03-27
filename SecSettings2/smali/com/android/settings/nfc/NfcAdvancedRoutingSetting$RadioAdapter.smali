@@ -1,11 +1,11 @@
-.class Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$RadioAdapter;
+.class Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$RadioAdapter;
 .super Landroid/widget/ArrayAdapter;
 .source "NfcAdvancedRoutingSetting.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;
+    value = Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -41,10 +41,10 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;I[Ljava/lang/Object;)V
 
     .line 235
-    iput-object p1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$RadioAdapter;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$RadioAdapter;->mContext:Landroid/content/Context;
 
     .line 236
-    iput-object p3, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$RadioAdapter;->Items:[Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$RadioAdapter;->Items:[Ljava/lang/String;
 
     .line 237
     return-void
@@ -63,7 +63,7 @@
     if-nez p2, :cond_0
 
     .line 241
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$RadioAdapter;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$RadioAdapter;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
@@ -82,11 +82,11 @@
     .line 246
     .end local v0    # "li":Landroid/view/LayoutInflater;
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$RadioAdapter;->Items:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$RadioAdapter;->Items:[Ljava/lang/String;
 
     aget-object v1, v1, p1
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$RadioAdapter;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$RadioAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -105,7 +105,7 @@
     if-eqz v1, :cond_1
 
     .line 248
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$RadioAdapter;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$RadioAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -121,11 +121,11 @@
 
     .line 251
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$RadioAdapter;->Items:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$RadioAdapter;->Items:[Ljava/lang/String;
 
     aget-object v1, v1, p1
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$RadioAdapter;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$RadioAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -144,7 +144,7 @@
     if-eqz v1, :cond_2
 
     .line 253
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$RadioAdapter;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$RadioAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

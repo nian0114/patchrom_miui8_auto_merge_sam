@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/notification/ZenModeExternalRuleSettings;
-.super Lcom/android/settings/notification/ZenModeRuleSettingsBase;
+.class public Lcom/android/settings_ex/notification/ZenModeExternalRuleSettings;
+.super Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;
 .source "ZenModeExternalRuleSettings.java"
 
 
@@ -15,12 +15,12 @@
 
     .prologue
     .line 35
-    invoke-direct {p0}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;-><init>()V
 
     return-void
 .end method
 
-.method public static getRuleInfo(Landroid/content/pm/ServiceInfo;)Lcom/android/settings/notification/ZenRuleNameDialog$RuleInfo;
+.method public static getRuleInfo(Landroid/content/pm/ServiceInfo;)Lcom/android/settings_ex/notification/ZenRuleNameDialog$RuleInfo;
     .locals 7
     .param p0, "si"    # Landroid/content/pm/ServiceInfo;
 
@@ -86,12 +86,12 @@
     if-eqz v1, :cond_0
 
     .line 115
-    new-instance v2, Lcom/android/settings/notification/ZenRuleNameDialog$RuleInfo;
+    new-instance v2, Lcom/android/settings_ex/notification/ZenRuleNameDialog$RuleInfo;
 
-    invoke-direct {v2}, Lcom/android/settings/notification/ZenRuleNameDialog$RuleInfo;-><init>()V
+    invoke-direct {v2}, Lcom/android/settings_ex/notification/ZenRuleNameDialog$RuleInfo;-><init>()V
 
     .line 116
-    .local v2, "ri":Lcom/android/settings/notification/ZenRuleNameDialog$RuleInfo;
+    .local v2, "ri":Lcom/android/settings_ex/notification/ZenRuleNameDialog$RuleInfo;
     new-instance v4, Landroid/content/ComponentName;
 
     iget-object v5, p0, Landroid/content/pm/ServiceInfo;->packageName:Ljava/lang/String;
@@ -100,22 +100,22 @@
 
     invoke-direct {v4, v5, v6}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-object v4, v2, Lcom/android/settings/notification/ZenRuleNameDialog$RuleInfo;->serviceComponent:Landroid/content/ComponentName;
+    iput-object v4, v2, Lcom/android/settings_ex/notification/ZenRuleNameDialog$RuleInfo;->serviceComponent:Landroid/content/ComponentName;
 
     .line 117
     const-string v4, "android.settings.ZEN_MODE_EXTERNAL_RULE_SETTINGS"
 
-    iput-object v4, v2, Lcom/android/settings/notification/ZenRuleNameDialog$RuleInfo;->settingsAction:Ljava/lang/String;
+    iput-object v4, v2, Lcom/android/settings_ex/notification/ZenRuleNameDialog$RuleInfo;->settingsAction:Ljava/lang/String;
 
     .line 118
-    iput-object v3, v2, Lcom/android/settings/notification/ZenRuleNameDialog$RuleInfo;->caption:Ljava/lang/String;
+    iput-object v3, v2, Lcom/android/settings_ex/notification/ZenRuleNameDialog$RuleInfo;->caption:Ljava/lang/String;
 
     .line 119
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v4
 
-    iput-object v4, v2, Lcom/android/settings/notification/ZenRuleNameDialog$RuleInfo;->defaultConditionId:Landroid/net/Uri;
+    iput-object v4, v2, Lcom/android/settings_ex/notification/ZenRuleNameDialog$RuleInfo;->defaultConditionId:Landroid/net/Uri;
 
     .line 120
     if-eqz v0, :cond_0
@@ -125,7 +125,7 @@
 
     move-result-object v4
 
-    iput-object v4, v2, Lcom/android/settings/notification/ZenRuleNameDialog$RuleInfo;->configurationActivity:Landroid/content/ComponentName;
+    iput-object v4, v2, Lcom/android/settings_ex/notification/ZenRuleNameDialog$RuleInfo;->configurationActivity:Landroid/content/ComponentName;
 
     goto :goto_0
 .end method
@@ -170,7 +170,7 @@
 
     .prologue
     .line 98
-    invoke-super {p0, p1, p2, p3}, Lcom/android/settings/notification/ZenModeRuleSettingsBase;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings_ex/notification/ZenModeRuleSettingsBase;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 99
     const/4 v1, 0x1
@@ -197,7 +197,7 @@
     .local v0, "conditionId":Landroid/net/Uri;
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/android/settings/notification/ZenModeExternalRuleSettings;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/ZenModeExternalRuleSettings;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
 
     iget-object v1, v1, Landroid/service/notification/ZenModeConfig$ZenRule;->conditionId:Landroid/net/Uri;
 
@@ -208,7 +208,7 @@
     if-nez v1, :cond_0
 
     .line 103
-    invoke-virtual {p0, v0}, Lcom/android/settings/notification/ZenModeExternalRuleSettings;->updateRule(Landroid/net/Uri;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/notification/ZenModeExternalRuleSettings;->updateRule(Landroid/net/Uri;)V
 
     .line 107
     .end local v0    # "conditionId":Landroid/net/Uri;
@@ -223,30 +223,30 @@
     .line 67
     const v3, 0x7f0800f0
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/notification/ZenModeExternalRuleSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/notification/ZenModeExternalRuleSettings;->addPreferencesFromResource(I)V
 
     .line 68
-    invoke-virtual {p0}, Lcom/android/settings/notification/ZenModeExternalRuleSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/ZenModeExternalRuleSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 
     .line 69
     .local v1, "root":Landroid/preference/PreferenceScreen;
-    iget-object v3, p0, Lcom/android/settings/notification/ZenModeExternalRuleSettings;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/ZenModeExternalRuleSettings;->mContext:Landroid/content/Context;
 
-    sget-object v4, Lcom/android/settings/notification/ZenModeAutomationSettings;->CONFIG:Lcom/android/settings/notification/ManagedServiceSettings$Config;
+    sget-object v4, Lcom/android/settings_ex/notification/ZenModeAutomationSettings;->CONFIG:Lcom/android/settings_ex/notification/ManagedServiceSettings$Config;
 
-    iget-object v5, p0, Lcom/android/settings/notification/ZenModeExternalRuleSettings;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
+    iget-object v5, p0, Lcom/android/settings_ex/notification/ZenModeExternalRuleSettings;->mRule:Landroid/service/notification/ZenModeConfig$ZenRule;
 
     iget-object v5, v5, Landroid/service/notification/ZenModeConfig$ZenRule;->component:Landroid/content/ComponentName;
 
-    invoke-static {v3, v4, v5}, Lcom/android/settings/notification/ServiceListing;->findService(Landroid/content/Context;Lcom/android/settings/notification/ManagedServiceSettings$Config;Landroid/content/ComponentName;)Landroid/content/pm/ServiceInfo;
+    invoke-static {v3, v4, v5}, Lcom/android/settings_ex/notification/ServiceListing;->findService(Landroid/content/Context;Lcom/android/settings_ex/notification/ManagedServiceSettings$Config;Landroid/content/ComponentName;)Landroid/content/pm/ServiceInfo;
 
     move-result-object v2
 
     .line 71
     .local v2, "si":Landroid/content/pm/ServiceInfo;
-    sget-boolean v3, Lcom/android/settings/notification/ZenModeExternalRuleSettings;->DEBUG:Z
+    sget-boolean v3, Lcom/android/settings_ex/notification/ZenModeExternalRuleSettings;->DEBUG:Z
 
     if-eqz v3, :cond_0
 
@@ -274,13 +274,13 @@
 
     .line 72
     :cond_0
-    invoke-static {v2}, Lcom/android/settings/notification/ZenModeExternalRuleSettings;->getRuleInfo(Landroid/content/pm/ServiceInfo;)Lcom/android/settings/notification/ZenRuleNameDialog$RuleInfo;
+    invoke-static {v2}, Lcom/android/settings_ex/notification/ZenModeExternalRuleSettings;->getRuleInfo(Landroid/content/pm/ServiceInfo;)Lcom/android/settings_ex/notification/ZenRuleNameDialog$RuleInfo;
 
     move-result-object v0
 
     .line 73
-    .local v0, "ri":Lcom/android/settings/notification/ZenRuleNameDialog$RuleInfo;
-    sget-boolean v3, Lcom/android/settings/notification/ZenModeExternalRuleSettings;->DEBUG:Z
+    .local v0, "ri":Lcom/android/settings_ex/notification/ZenRuleNameDialog$RuleInfo;
+    sget-boolean v3, Lcom/android/settings_ex/notification/ZenModeExternalRuleSettings;->DEBUG:Z
 
     if-eqz v3, :cond_1
 
@@ -314,13 +314,13 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/notification/ZenModeExternalRuleSettings;->mType:Landroid/preference/Preference;
+    iput-object v3, p0, Lcom/android/settings_ex/notification/ZenModeExternalRuleSettings;->mType:Landroid/preference/Preference;
 
     .line 75
     if-nez v0, :cond_3
 
     .line 76
-    iget-object v3, p0, Lcom/android/settings/notification/ZenModeExternalRuleSettings;->mType:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/ZenModeExternalRuleSettings;->mType:Landroid/preference/Preference;
 
     const v4, 0x7f0e0e71
 
@@ -334,18 +334,18 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/notification/ZenModeExternalRuleSettings;->mConfigure:Landroid/preference/Preference;
+    iput-object v3, p0, Lcom/android/settings_ex/notification/ZenModeExternalRuleSettings;->mConfigure:Landroid/preference/Preference;
 
     .line 82
     if-eqz v0, :cond_2
 
-    iget-object v3, v0, Lcom/android/settings/notification/ZenRuleNameDialog$RuleInfo;->configurationActivity:Landroid/content/ComponentName;
+    iget-object v3, v0, Lcom/android/settings_ex/notification/ZenRuleNameDialog$RuleInfo;->configurationActivity:Landroid/content/ComponentName;
 
     if-nez v3, :cond_4
 
     .line 83
     :cond_2
-    iget-object v3, p0, Lcom/android/settings/notification/ZenModeExternalRuleSettings;->mConfigure:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/ZenModeExternalRuleSettings;->mConfigure:Landroid/preference/Preference;
 
     const/4 v4, 0x0
 
@@ -357,9 +357,9 @@
 
     .line 78
     :cond_3
-    iget-object v3, p0, Lcom/android/settings/notification/ZenModeExternalRuleSettings;->mType:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/ZenModeExternalRuleSettings;->mType:Landroid/preference/Preference;
 
-    iget-object v4, v0, Lcom/android/settings/notification/ZenRuleNameDialog$RuleInfo;->caption:Ljava/lang/String;
+    iget-object v4, v0, Lcom/android/settings_ex/notification/ZenRuleNameDialog$RuleInfo;->caption:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -367,11 +367,11 @@
 
     .line 85
     :cond_4
-    iget-object v3, p0, Lcom/android/settings/notification/ZenModeExternalRuleSettings;->mConfigure:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/notification/ZenModeExternalRuleSettings;->mConfigure:Landroid/preference/Preference;
 
-    new-instance v4, Lcom/android/settings/notification/ZenModeExternalRuleSettings$1;
+    new-instance v4, Lcom/android/settings_ex/notification/ZenModeExternalRuleSettings$1;
 
-    invoke-direct {v4, p0, v0}, Lcom/android/settings/notification/ZenModeExternalRuleSettings$1;-><init>(Lcom/android/settings/notification/ZenModeExternalRuleSettings;Lcom/android/settings/notification/ZenRuleNameDialog$RuleInfo;)V
+    invoke-direct {v4, p0, v0}, Lcom/android/settings_ex/notification/ZenModeExternalRuleSettings$1;-><init>(Lcom/android/settings_ex/notification/ZenModeExternalRuleSettings;Lcom/android/settings_ex/notification/ZenRuleNameDialog$RuleInfo;)V
 
     invoke-virtual {v3, v4}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 

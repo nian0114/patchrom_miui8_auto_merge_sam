@@ -1,4 +1,4 @@
-.class Lcom/android/settings/spen/DirectPenInputSettings$2;
+.class Lcom/android/settings_ex/spen/DirectPenInputSettings$2;
 .super Ljava/lang/Object;
 .source "DirectPenInputSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/spen/DirectPenInputSettings;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/spen/DirectPenInputSettings;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/spen/DirectPenInputSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/spen/DirectPenInputSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/spen/DirectPenInputSettings;)V
     .locals 0
 
     .prologue
     .line 147
-    iput-object p1, p0, Lcom/android/settings/spen/DirectPenInputSettings$2;->this$0:Lcom/android/settings/spen/DirectPenInputSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings$2;->this$0:Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -71,10 +71,10 @@
 
     .line 153
     .local v1, "isChecked":Z
-    iget-object v5, p0, Lcom/android/settings/spen/DirectPenInputSettings$2;->this$0:Lcom/android/settings/spen/DirectPenInputSettings;
+    iget-object v5, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings$2;->this$0:Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
-    # getter for: Lcom/android/settings/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
-    invoke-static {v5}, Lcom/android/settings/spen/DirectPenInputSettings;->access$000(Lcom/android/settings/spen/DirectPenInputSettings;)Landroid/app/Activity;
+    # getter for: Lcom/android/settings_ex/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
+    invoke-static {v5}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->access$000(Lcom/android/settings_ex/spen/DirectPenInputSettings;)Landroid/app/Activity;
 
     move-result-object v5
 
@@ -82,10 +82,10 @@
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/spen/DirectPenInputSettings$2;->this$0:Lcom/android/settings/spen/DirectPenInputSettings;
+    iget-object v6, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings$2;->this$0:Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
-    # getter for: Lcom/android/settings/spen/DirectPenInputSettings;->URI_PEN_WRITING_BUDDY:Ljava/lang/String;
-    invoke-static {v6}, Lcom/android/settings/spen/DirectPenInputSettings;->access$100(Lcom/android/settings/spen/DirectPenInputSettings;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/spen/DirectPenInputSettings;->URI_PEN_WRITING_BUDDY:Ljava/lang/String;
+    invoke-static {v6}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->access$100(Lcom/android/settings_ex/spen/DirectPenInputSettings;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -128,10 +128,10 @@
     .line 157
     .restart local v2    # "writingBuddyOn":Z
     :cond_2
-    iget-object v5, p0, Lcom/android/settings/spen/DirectPenInputSettings$2;->this$0:Lcom/android/settings/spen/DirectPenInputSettings;
+    iget-object v5, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings$2;->this$0:Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
-    # getter for: Lcom/android/settings/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
-    invoke-static {v5}, Lcom/android/settings/spen/DirectPenInputSettings;->access$000(Lcom/android/settings/spen/DirectPenInputSettings;)Landroid/app/Activity;
+    # getter for: Lcom/android/settings_ex/spen/DirectPenInputSettings;->mActivity:Landroid/app/Activity;
+    invoke-static {v5}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->access$000(Lcom/android/settings_ex/spen/DirectPenInputSettings;)Landroid/app/Activity;
 
     move-result-object v5
 
@@ -139,10 +139,10 @@
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/spen/DirectPenInputSettings$2;->this$0:Lcom/android/settings/spen/DirectPenInputSettings;
+    iget-object v6, p0, Lcom/android/settings_ex/spen/DirectPenInputSettings$2;->this$0:Lcom/android/settings_ex/spen/DirectPenInputSettings;
 
-    # getter for: Lcom/android/settings/spen/DirectPenInputSettings;->URI_TEXT_SUGGESTION:Ljava/lang/String;
-    invoke-static {v6}, Lcom/android/settings/spen/DirectPenInputSettings;->access$400(Lcom/android/settings/spen/DirectPenInputSettings;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/spen/DirectPenInputSettings;->URI_TEXT_SUGGESTION:Ljava/lang/String;
+    invoke-static {v6}, Lcom/android/settings_ex/spen/DirectPenInputSettings;->access$400(Lcom/android/settings_ex/spen/DirectPenInputSettings;)Ljava/lang/String;
 
     move-result-object v6
 

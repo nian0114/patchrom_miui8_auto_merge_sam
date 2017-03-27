@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/WallpaperTypeSettings$1;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/WallpaperTypeSettings$1;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "WallpaperTypeSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/WallpaperTypeSettings;
+    value = Lcom/android/settings_ex/WallpaperTypeSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 79
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
             "Z)",
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/search/SearchIndexableRaw;",
+            "Lcom/android/settings_ex/search/SearchIndexableRaw;",
             ">;"
         }
     .end annotation
@@ -50,7 +50,7 @@
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
     .line 84
-    .local v7, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/search/SearchIndexableRaw;>;"
+    .local v7, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/search/SearchIndexableRaw;>;"
     new-instance v3, Landroid/content/Intent;
 
     const-string v8, "android.intent.action.SET_WALLPAPER"
@@ -107,17 +107,17 @@
 
     .line 94
     :cond_0
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 95
-    .local v0, "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .local v0, "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     invoke-interface {v4}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v8
 
-    iput-object v8, v0, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v8, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 96
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -130,26 +130,26 @@
 
     move-result-object v8
 
-    iput-object v8, v0, Lcom/android/settings/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
+    iput-object v8, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
 
     .line 98
     const-string v8, "android.intent.action.SET_WALLPAPER"
 
-    iput-object v8, v0, Lcom/android/settings/search/SearchIndexableRaw;->intentAction:Ljava/lang/String;
+    iput-object v8, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->intentAction:Ljava/lang/String;
 
     .line 99
     iget-object v8, v2, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v8, v8, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    iput-object v8, v0, Lcom/android/settings/search/SearchIndexableRaw;->intentTargetPackage:Ljava/lang/String;
+    iput-object v8, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->intentTargetPackage:Ljava/lang/String;
 
     .line 100
     iget-object v8, v2, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v8, v8, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    iput-object v8, v0, Lcom/android/settings/search/SearchIndexableRaw;->intentTargetClass:Ljava/lang/String;
+    iput-object v8, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->intentTargetClass:Ljava/lang/String;
 
     .line 101
     invoke-interface {v7, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -157,7 +157,7 @@
     goto :goto_0
 
     .line 104
-    .end local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .end local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     .end local v2    # "info":Landroid/content/pm/ResolveInfo;
     .end local v4    # "label":Ljava/lang/CharSequence;
     :cond_1

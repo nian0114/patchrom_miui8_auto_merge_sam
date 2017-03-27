@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/notification/ZenModeAutomationSettings$5;
+.class final Lcom/android/settings_ex/notification/ZenModeAutomationSettings$5;
 .super Ljava/lang/Object;
 .source "ZenModeAutomationSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/ZenModeAutomationSettings;
+    value = Lcom/android/settings_ex/notification/ZenModeAutomationSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Ljava/util/Comparator",
         "<",
-        "Lcom/android/settings/notification/ZenModeAutomationSettings$ZenRuleInfo;",
+        "Lcom/android/settings_ex/notification/ZenModeAutomationSettings$ZenRuleInfo;",
         ">;"
     }
 .end annotation
@@ -38,13 +38,13 @@
     return-void
 .end method
 
-.method private key(Lcom/android/settings/notification/ZenModeAutomationSettings$ZenRuleInfo;)Ljava/lang/String;
+.method private key(Lcom/android/settings_ex/notification/ZenModeAutomationSettings$ZenRuleInfo;)Ljava/lang/String;
     .locals 4
-    .param p1, "zri"    # Lcom/android/settings/notification/ZenModeAutomationSettings$ZenRuleInfo;
+    .param p1, "zri"    # Lcom/android/settings_ex/notification/ZenModeAutomationSettings$ZenRuleInfo;
 
     .prologue
     .line 324
-    iget-object v0, p1, Lcom/android/settings/notification/ZenModeAutomationSettings$ZenRuleInfo;->rule:Landroid/service/notification/ZenModeConfig$ZenRule;
+    iget-object v0, p1, Lcom/android/settings_ex/notification/ZenModeAutomationSettings$ZenRuleInfo;->rule:Landroid/service/notification/ZenModeConfig$ZenRule;
 
     .line 325
     .local v0, "rule":Landroid/service/notification/ZenModeConfig$ZenRule;
@@ -104,18 +104,18 @@
 
 
 # virtual methods
-.method public compare(Lcom/android/settings/notification/ZenModeAutomationSettings$ZenRuleInfo;Lcom/android/settings/notification/ZenModeAutomationSettings$ZenRuleInfo;)I
+.method public compare(Lcom/android/settings_ex/notification/ZenModeAutomationSettings$ZenRuleInfo;Lcom/android/settings_ex/notification/ZenModeAutomationSettings$ZenRuleInfo;)I
     .locals 2
-    .param p1, "lhs"    # Lcom/android/settings/notification/ZenModeAutomationSettings$ZenRuleInfo;
-    .param p2, "rhs"    # Lcom/android/settings/notification/ZenModeAutomationSettings$ZenRuleInfo;
+    .param p1, "lhs"    # Lcom/android/settings_ex/notification/ZenModeAutomationSettings$ZenRuleInfo;
+    .param p2, "rhs"    # Lcom/android/settings_ex/notification/ZenModeAutomationSettings$ZenRuleInfo;
 
     .prologue
     .line 320
-    invoke-direct {p0, p1}, Lcom/android/settings/notification/ZenModeAutomationSettings$5;->key(Lcom/android/settings/notification/ZenModeAutomationSettings$ZenRuleInfo;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/notification/ZenModeAutomationSettings$5;->key(Lcom/android/settings_ex/notification/ZenModeAutomationSettings$ZenRuleInfo;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p0, p2}, Lcom/android/settings/notification/ZenModeAutomationSettings$5;->key(Lcom/android/settings/notification/ZenModeAutomationSettings$ZenRuleInfo;)Ljava/lang/String;
+    invoke-direct {p0, p2}, Lcom/android/settings_ex/notification/ZenModeAutomationSettings$5;->key(Lcom/android/settings_ex/notification/ZenModeAutomationSettings$ZenRuleInfo;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -133,13 +133,13 @@
 
     .prologue
     .line 317
-    check-cast p1, Lcom/android/settings/notification/ZenModeAutomationSettings$ZenRuleInfo;
+    check-cast p1, Lcom/android/settings_ex/notification/ZenModeAutomationSettings$ZenRuleInfo;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    check-cast p2, Lcom/android/settings/notification/ZenModeAutomationSettings$ZenRuleInfo;
+    check-cast p2, Lcom/android/settings_ex/notification/ZenModeAutomationSettings$ZenRuleInfo;
 
     .end local p2    # "x1":Ljava/lang/Object;
-    invoke-virtual {p0, p1, p2}, Lcom/android/settings/notification/ZenModeAutomationSettings$5;->compare(Lcom/android/settings/notification/ZenModeAutomationSettings$ZenRuleInfo;Lcom/android/settings/notification/ZenModeAutomationSettings$ZenRuleInfo;)I
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings_ex/notification/ZenModeAutomationSettings$5;->compare(Lcom/android/settings_ex/notification/ZenModeAutomationSettings$ZenRuleInfo;Lcom/android/settings_ex/notification/ZenModeAutomationSettings$ZenRuleInfo;)I
 
     move-result v0
 

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/ResetSettings;
+.class public Lcom/android/settings_ex/ResetSettings;
 .super Landroid/app/Fragment;
 .source "ResetSettings.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/ResetSettings$ResetSettingsTask;
+        Lcom/android/settings_ex/ResetSettings$ResetSettingsTask;
     }
 .end annotation
 
@@ -36,7 +36,7 @@
 
 .field private resetSettingsCompleted:Z
 
-.field resetTask:Lcom/android/settings/ResetSettings$ResetSettingsTask;
+.field resetTask:Lcom/android/settings_ex/ResetSettings$ResetSettingsTask;
 
 
 # direct methods
@@ -49,7 +49,7 @@
 
     move-result v0
 
-    sput v0, Lcom/android/settings/ResetSettings;->MY_USER_ID:I
+    sput v0, Lcom/android/settings_ex/ResetSettings;->MY_USER_ID:I
 
     return-void
 .end method
@@ -66,27 +66,27 @@
     .line 91
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/ResetSettings;->mResetSoftButton:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/android/settings_ex/ResetSettings;->mResetSoftButton:Landroid/widget/Button;
 
     .line 99
-    iput-boolean v1, p0, Lcom/android/settings/ResetSettings;->databaseReset:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ResetSettings;->databaseReset:Z
 
     .line 100
-    iput-boolean v1, p0, Lcom/android/settings/ResetSettings;->resetSettingsCompleted:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/ResetSettings;->resetSettingsCompleted:Z
 
     .line 183
-    new-instance v0, Lcom/android/settings/ResetSettings$2;
+    new-instance v0, Lcom/android/settings_ex/ResetSettings$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/ResetSettings$2;-><init>(Lcom/android/settings/ResetSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/ResetSettings$2;-><init>(Lcom/android/settings_ex/ResetSettings;)V
 
-    iput-object v0, p0, Lcom/android/settings/ResetSettings;->handler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/ResetSettings;->handler:Landroid/os/Handler;
 
     .line 221
-    new-instance v0, Lcom/android/settings/ResetSettings$3;
+    new-instance v0, Lcom/android/settings_ex/ResetSettings$3;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/ResetSettings$3;-><init>(Lcom/android/settings/ResetSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/ResetSettings$3;-><init>(Lcom/android/settings_ex/ResetSettings;)V
 
-    iput-object v0, p0, Lcom/android/settings/ResetSettings;->mResetSoftListener:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/android/settings_ex/ResetSettings;->mResetSoftListener:Landroid/view/View$OnClickListener;
 
     .line 886
     return-void
@@ -97,7 +97,7 @@
 
     .prologue
     .line 827
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -118,77 +118,77 @@
     .line 831
     const v1, 0x7f0e1352
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/ResetSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/ResetSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
     const v2, 0x7f0e1354
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/ResetSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/ResetSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
     const/16 v3, 0x65
 
-    invoke-virtual {p0, v1, v2, v0, v3}, Lcom/android/settings/ResetSettings;->queryPhonepassword(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-virtual {p0, v1, v2, v0, v3}, Lcom/android/settings_ex/ResetSettings;->queryPhonepassword(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 834
     :cond_0
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/ResetSettings;)Z
+.method static synthetic access$000(Lcom/android/settings_ex/ResetSettings;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ResetSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/ResetSettings;
 
     .prologue
     .line 85
-    iget-boolean v0, p0, Lcom/android/settings/ResetSettings;->databaseReset:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/ResetSettings;->databaseReset:Z
 
     return v0
 .end method
 
-.method static synthetic access$002(Lcom/android/settings/ResetSettings;Z)Z
+.method static synthetic access$002(Lcom/android/settings_ex/ResetSettings;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ResetSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/ResetSettings;
     .param p1, "x1"    # Z
 
     .prologue
     .line 85
-    iput-boolean p1, p0, Lcom/android/settings/ResetSettings;->databaseReset:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/ResetSettings;->databaseReset:Z
 
     return p1
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/ResetSettings;)Landroid/content/Context;
+.method static synthetic access$200(Lcom/android/settings_ex/ResetSettings;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ResetSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/ResetSettings;
 
     .prologue
     .line 85
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/ResetSettings;)V
+.method static synthetic access$300(Lcom/android/settings_ex/ResetSettings;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ResetSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/ResetSettings;
 
     .prologue
     .line 85
-    invoke-direct {p0}, Lcom/android/settings/ResetSettings;->requestSoftReset()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ResetSettings;->requestSoftReset()V
 
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/ResetSettings;)V
+.method static synthetic access$400(Lcom/android/settings_ex/ResetSettings;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/ResetSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/ResetSettings;
 
     .prologue
     .line 85
-    invoke-direct {p0}, Lcom/android/settings/ResetSettings;->resetCompleted()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ResetSettings;->resetCompleted()V
 
     return-void
 .end method
@@ -198,10 +198,10 @@
 
     .prologue
     .line 866
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->resetGlobalSettings()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->resetGlobalSettings()V
 
     .line 867
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     new-instance v1, Landroid/content/Intent;
 
@@ -214,7 +214,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
     .line 868
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     new-instance v1, Landroid/content/Intent;
 
@@ -229,16 +229,16 @@
     .line 869
     new-instance v0, Landroid/app/ProgressDialog;
 
-    iget-object v1, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/ResetSettings;->progressDialog:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/ResetSettings;->progressDialog:Landroid/app/ProgressDialog;
 
     .line 870
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->progressDialog:Landroid/app/ProgressDialog;
 
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -251,14 +251,14 @@
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
     .line 871
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->progressDialog:Landroid/app/ProgressDialog;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setCancelable(Z)V
 
     .line 872
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->progressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->show()V
 
@@ -271,7 +271,7 @@
 
     .prologue
     .line 215
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->mContentView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->mContentView:Landroid/view/View;
 
     const v1, 0x7f0d0469
 
@@ -281,25 +281,25 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/android/settings/ResetSettings;->mResetSoftButton:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/android/settings_ex/ResetSettings;->mResetSoftButton:Landroid/widget/Button;
 
     .line 216
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->mResetSoftButton:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->mResetSoftButton:Landroid/widget/Button;
 
-    iget-object v1, p0, Lcom/android/settings/ResetSettings;->mResetSoftListener:Landroid/view/View$OnClickListener;
+    iget-object v1, p0, Lcom/android/settings_ex/ResetSettings;->mResetSoftListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 218
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/ResetSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object v0, p0, Lcom/android/settings_ex/ResetSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 219
     return-void
@@ -375,23 +375,23 @@
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 524
-    invoke-virtual {p0, v4}, Lcom/android/settings/ResetSettings;->getUriOfDefaultTone(I)Landroid/net/Uri;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/ResetSettings;->getUriOfDefaultTone(I)Landroid/net/Uri;
 
     move-result-object v1
 
     .line 525
     .local v1, "uri":Landroid/net/Uri;
-    iget-object v2, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-static {v2, v4, v1}, Landroid/media/RingtoneManager;->setActualDefaultRingtoneUri(Landroid/content/Context;ILandroid/net/Uri;)V
 
     .line 526
-    invoke-virtual {p0, v5}, Lcom/android/settings/ResetSettings;->getUriOfDefaultTone(I)Landroid/net/Uri;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/ResetSettings;->getUriOfDefaultTone(I)Landroid/net/Uri;
 
     move-result-object v1
 
     .line 527
-    iget-object v2, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-static {v2, v5, v1}, Landroid/media/RingtoneManager;->setActualDefaultRingtoneUri(Landroid/content/Context;ILandroid/net/Uri;)V
 
@@ -407,33 +407,33 @@
     if-ne v0, v5, :cond_0
 
     .line 530
-    invoke-virtual {p0, v7}, Lcom/android/settings/ResetSettings;->getUriOfDefaultTone(I)Landroid/net/Uri;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/ResetSettings;->getUriOfDefaultTone(I)Landroid/net/Uri;
 
     move-result-object v1
 
     .line 531
-    iget-object v2, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-static {v2, v7, v1}, Landroid/media/RingtoneManager;->setActualDefaultRingtoneUri(Landroid/content/Context;ILandroid/net/Uri;)V
 
     .line 532
-    invoke-virtual {p0, v8}, Lcom/android/settings/ResetSettings;->getUriOfDefaultTone(I)Landroid/net/Uri;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/ResetSettings;->getUriOfDefaultTone(I)Landroid/net/Uri;
 
     move-result-object v1
 
     .line 533
-    iget-object v2, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-static {v2, v8, v1}, Landroid/media/RingtoneManager;->setActualDefaultRingtoneUri(Landroid/content/Context;ILandroid/net/Uri;)V
 
     .line 535
     :cond_0
-    invoke-virtual {p0, v6}, Lcom/android/settings/ResetSettings;->getUriOfDefaultTone(I)Landroid/net/Uri;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/ResetSettings;->getUriOfDefaultTone(I)Landroid/net/Uri;
 
     move-result-object v1
 
     .line 536
-    iget-object v2, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-static {v2, v6, v1}, Landroid/media/RingtoneManager;->setActualDefaultRingtoneUri(Landroid/content/Context;ILandroid/net/Uri;)V
 
@@ -448,7 +448,7 @@
     .line 846
     const/16 v1, 0x37
 
-    invoke-direct {p0, v1}, Lcom/android/settings/ResetSettings;->runKeyguardConfirmation(I)Z
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/ResetSettings;->runKeyguardConfirmation(I)Z
 
     move-result v1
 
@@ -473,7 +473,7 @@
     if-eqz v1, :cond_2
 
     .line 851
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -491,19 +491,19 @@
     .local v0, "phone_password":Ljava/lang/String;
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isNoSIM(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isNoSIM(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcom/android/settings/ResetSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v1, p0, Lcom/android/settings_ex/ResetSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    sget v2, Lcom/android/settings/ResetSettings;->MY_USER_ID:I
+    sget v2, Lcom/android/settings_ex/ResetSettings;->MY_USER_ID:I
 
     invoke-virtual {v1, v2}, Lcom/android/internal/widget/LockPatternUtils;->isSecure(I)Z
 
@@ -512,20 +512,20 @@
     if-nez v1, :cond_1
 
     .line 856
-    invoke-direct {p0}, Lcom/android/settings/ResetSettings;->StartPassword()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ResetSettings;->StartPassword()V
 
     goto :goto_0
 
     .line 858
     :cond_1
-    invoke-direct {p0}, Lcom/android/settings/ResetSettings;->doSoftReset()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ResetSettings;->doSoftReset()V
 
     goto :goto_0
 
     .line 861
     .end local v0    # "phone_password":Ljava/lang/String;
     :cond_2
-    invoke-direct {p0}, Lcom/android/settings/ResetSettings;->doSoftReset()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ResetSettings;->doSoftReset()V
 
     goto :goto_0
 .end method
@@ -546,7 +546,7 @@
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 542
-    iget-object v8, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -554,7 +554,7 @@
 
     .line 543
     .local v1, "cr":Landroid/content/ContentResolver;
-    iget-object v8, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     const-string v9, "audio"
 
@@ -588,7 +588,7 @@
     invoke-static {v1, v8, v11}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 556
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v7
 
@@ -669,7 +669,7 @@
     invoke-static {v1, v8, v11}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 578
-    iget-object v8, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     const-string v9, "magnifier_pref"
 
@@ -822,7 +822,7 @@
     invoke-static {v1, v8, v9}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 629
-    iget-object v8, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -833,20 +833,20 @@
     invoke-static {v8, v9, v11}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 632
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
     const-string v9, "com.samsung.android.app.assistantmenu"
 
-    invoke-static {v8, v9}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v8, v9}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v8
 
     if-eqz v8, :cond_1
 
     .line 633
-    iget-object v8, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -857,7 +857,7 @@
     invoke-static {v8, v9, v11}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 635
-    iget-object v8, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -868,7 +868,7 @@
     invoke-static {v8, v9, v12}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 637
-    iget-object v8, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -879,7 +879,7 @@
     invoke-static {v8, v9, v11}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 638
-    iget-object v8, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -892,7 +892,7 @@
     invoke-static {v8, v9, v10}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 639
-    iget-object v8, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -903,7 +903,7 @@
     invoke-static {v8, v9, v11}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 640
-    iget-object v8, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -925,7 +925,7 @@
     invoke-virtual {v3, v8}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 644
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -940,7 +940,7 @@
 
     .line 647
     .local v4, "mAssistantEditMenuReset":Landroid/content/Intent;
-    iget-object v8, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8, v4}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
@@ -964,7 +964,7 @@
     invoke-virtual {v0, v8}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     .line 652
-    iget-object v8, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v8, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8, v0}, Landroid/content/Context;->stopService(Landroid/content/Intent;)Z
 
@@ -1144,7 +1144,7 @@
 
     .prologue
     .line 180
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->handler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->handler:Landroid/os/Handler;
 
     const/4 v1, 0x1
 
@@ -1178,7 +1178,7 @@
     if-eqz v0, :cond_0
 
     .line 447
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1197,7 +1197,7 @@
 
     .line 451
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1219,7 +1219,7 @@
 
     .prologue
     .line 876
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1229,17 +1229,17 @@
 
     .line 878
     .local v1, "res":Landroid/content/res/Resources;
-    new-instance v0, Lcom/android/settings/ChooseLockSettingsHelper;
+    new-instance v0, Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-direct {v0, v2, p0}, Lcom/android/settings/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;Landroid/app/Fragment;)V
+    invoke-direct {v0, v2, p0}, Lcom/android/settings_ex/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;Landroid/app/Fragment;)V
 
     .line 880
-    .local v0, "helper":Lcom/android/settings/ChooseLockSettingsHelper;
-    invoke-virtual {v0}, Lcom/android/settings/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
+    .local v0, "helper":Lcom/android/settings_ex/ChooseLockSettingsHelper;
+    invoke-virtual {v0}, Lcom/android/settings_ex/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
 
     move-result-object v2
 
@@ -1259,7 +1259,7 @@
     :cond_0
     const/4 v2, 0x0
 
-    invoke-virtual {v0, p1, v2}, Lcom/android/settings/ChooseLockSettingsHelper;->launchConfirmationActivity(ILjava/lang/CharSequence;)Z
+    invoke-virtual {v0, p1, v2}, Lcom/android/settings_ex/ChooseLockSettingsHelper;->launchConfirmationActivity(ILjava/lang/CharSequence;)Z
 
     move-result v2
 
@@ -1282,7 +1282,7 @@
 
     .line 440
     .local v0, "reason":Ljava/lang/String;
-    iget-object v2, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Landroid/app/NotificationManager;->from(Landroid/content/Context;)Landroid/app/NotificationManager;
 
@@ -1332,14 +1332,14 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 462
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     if-nez v0, :cond_2
 
     .line 463
     new-instance v11, Landroid/media/RingtoneManager;
 
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1461,7 +1461,7 @@
 
     .line 500
     .local v9, "dataPath":Ljava/lang/String;
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1567,7 +1567,7 @@
     :cond_2
     new-instance v11, Landroid/media/RingtoneManager;
 
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-direct {v11, v0}, Landroid/media/RingtoneManager;-><init>(Landroid/content/Context;)V
 
@@ -1666,15 +1666,15 @@
 
     .prologue
     .line 715
-    new-instance v0, Lcom/android/settings/csc/CscSettingsLoader;
+    new-instance v0, Lcom/android/settings_ex/csc/CscSettingsLoader;
 
-    iget-object v1, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Lcom/android/settings/csc/CscSettingsLoader;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/csc/CscSettingsLoader;-><init>(Landroid/content/Context;)V
 
     .line 716
-    .local v0, "CscSettings":Lcom/android/settings/csc/CscSettingsLoader;
-    invoke-virtual {v0}, Lcom/android/settings/csc/CscSettingsLoader;->update()V
+    .local v0, "CscSettings":Lcom/android/settings_ex/csc/CscSettingsLoader;
+    invoke-virtual {v0}, Lcom/android/settings_ex/csc/CscSettingsLoader;->update()V
 
     .line 717
     return-void
@@ -1689,11 +1689,11 @@
     invoke-super {p0, p1}, Landroid/app/Fragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 147
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iput-object v1, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     .line 148
     new-instance v0, Landroid/content/IntentFilter;
@@ -1707,16 +1707,16 @@
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 150
-    new-instance v1, Lcom/android/settings/ResetSettings$1;
+    new-instance v1, Lcom/android/settings_ex/ResetSettings$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/ResetSettings$1;-><init>(Lcom/android/settings/ResetSettings;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/ResetSettings$1;-><init>(Lcom/android/settings_ex/ResetSettings;)V
 
-    iput-object v1, p0, Lcom/android/settings/ResetSettings;->resetReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v1, p0, Lcom/android/settings_ex/ResetSettings;->resetReceiver:Landroid/content/BroadcastReceiver;
 
     .line 162
-    iget-object v1, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/settings/ResetSettings;->resetReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/ResetSettings;->resetReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -1762,7 +1762,7 @@
     if-ne p2, v2, :cond_0
 
     .line 809
-    invoke-direct {p0}, Lcom/android/settings/ResetSettings;->doSoftReset()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ResetSettings;->doSoftReset()V
 
     goto :goto_0
 
@@ -1771,7 +1771,7 @@
     if-ne p2, v2, :cond_0
 
     .line 817
-    invoke-direct {p0}, Lcom/android/settings/ResetSettings;->doSoftReset()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ResetSettings;->doSoftReset()V
 
     goto :goto_0
 
@@ -1806,10 +1806,10 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/ResetSettings;->mContentView:Landroid/view/View;
+    iput-object v1, p0, Lcom/android/settings_ex/ResetSettings;->mContentView:Landroid/view/View;
 
     .line 121
-    iget-object v1, p0, Lcom/android/settings/ResetSettings;->mContentView:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/ResetSettings;->mContentView:Landroid/view/View;
 
     const v2, 0x7f0d0468
 
@@ -1823,7 +1823,7 @@
     .local v0, "text":Landroid/widget/TextView;
     const-string v1, "VZW"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1850,7 +1850,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1868,7 +1868,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1886,7 +1886,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1906,10 +1906,10 @@
 
     .line 139
     :goto_0
-    invoke-direct {p0}, Lcom/android/settings/ResetSettings;->establishResetState()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ResetSettings;->establishResetState()V
 
     .line 140
-    iget-object v1, p0, Lcom/android/settings/ResetSettings;->mContentView:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/ResetSettings;->mContentView:Landroid/view/View;
 
     return-object v1
 
@@ -1919,7 +1919,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1937,7 +1937,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1955,7 +1955,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1981,9 +1981,9 @@
 
     .prologue
     .line 926
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/android/settings/ResetSettings;->resetReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/ResetSettings;->resetReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
@@ -2002,12 +2002,12 @@
     invoke-super {p0}, Landroid/app/Fragment;->onPause()V
 
     .line 916
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->progressDialog:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_1
 
     .line 917
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->progressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->isShowing()Z
 
@@ -2016,7 +2016,7 @@
     if-eqz v0, :cond_0
 
     .line 918
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->progressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->progressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
@@ -2024,7 +2024,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/ResetSettings;->progressDialog:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/ResetSettings;->progressDialog:Landroid/app/ProgressDialog;
 
     .line 923
     :cond_1
@@ -2068,7 +2068,7 @@
     invoke-virtual {v0, v1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 842
-    invoke-virtual {p0, v0, p4}, Lcom/android/settings/ResetSettings;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v0, p4}, Lcom/android/settings_ex/ResetSettings;->startActivityForResult(Landroid/content/Intent;I)V
 
     .line 843
     return-void
@@ -2080,28 +2080,28 @@
 
     .prologue
     .line 238
-    iput-object p1, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     .line 239
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->resetDNDSettings()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->resetDNDSettings()V
 
     .line 240
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->resetSystemSettings()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->resetSystemSettings()V
 
     .line 241
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->resetSecureSettings()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->resetSecureSettings()V
 
     .line 242
-    invoke-direct {p0}, Lcom/android/settings/ResetSettings;->resetAccessibilitySettings()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ResetSettings;->resetAccessibilitySettings()V
 
     .line 243
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->resetFontSettings()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->resetFontSettings()V
 
     .line 244
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->resetDisplayScalingSettings()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->resetDisplayScalingSettings()V
 
     .line 245
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->loadCSC()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->loadCSC()V
 
     .line 246
     return-void
@@ -2112,7 +2112,7 @@
 
     .prologue
     .line 249
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/app/NotificationManager;->from(Landroid/content/Context;)Landroid/app/NotificationManager;
 
@@ -2174,7 +2174,7 @@
     if-ne v0, v4, :cond_1
 
     .line 293
-    iget-object v2, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2200,7 +2200,7 @@
 
     .line 296
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2237,7 +2237,7 @@
     const/4 v12, 0x0
 
     .line 253
-    iget-object v9, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     const-string v10, "prefs"
 
@@ -2264,19 +2264,19 @@
 
     .line 260
     :try_start_0
-    new-instance v4, Lcom/android/settings/flipfont/FontWriter;
+    new-instance v4, Lcom/android/settings_ex/flipfont/FontWriter;
 
-    invoke-direct {v4}, Lcom/android/settings/flipfont/FontWriter;-><init>()V
+    invoke-direct {v4}, Lcom/android/settings_ex/flipfont/FontWriter;-><init>()V
 
     .line 261
-    .local v4, "fontWriter":Lcom/android/settings/flipfont/FontWriter;
-    iget-object v9, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    .local v4, "fontWriter":Lcom/android/settings_ex/flipfont/FontWriter;
+    iget-object v9, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     const-string v10, "sans.loc"
 
     const-string v11, "default#default"
 
-    invoke-virtual {v4, v9, v10, v11}, Lcom/android/settings/flipfont/FontWriter;->writeLoc(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v4, v9, v10, v11}, Lcom/android/settings_ex/flipfont/FontWriter;->writeLoc(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 264
     new-instance v1, Landroid/content/res/Configuration;
@@ -2295,9 +2295,9 @@
 
     .line 270
     .end local v1    # "config":Landroid/content/res/Configuration;
-    .end local v4    # "fontWriter":Lcom/android/settings/flipfont/FontWriter;
+    .end local v4    # "fontWriter":Lcom/android/settings_ex/flipfont/FontWriter;
     :goto_0
-    iget-object v9, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v9}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2318,7 +2318,7 @@
     invoke-static {v9, v10}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 272
-    iget-object v9, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v9}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2339,21 +2339,21 @@
 
     .line 274
     .local v5, "i":Landroid/content/Intent;
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
     const/4 v10, 0x5
 
-    invoke-static {v9, v10}, Lcom/android/settings/Utils;->getFontScale(Landroid/content/Context;I)F
+    invoke-static {v9, v10}, Lcom/android/settings_ex/Utils;->getFontScale(Landroid/content/Context;I)F
 
     move-result v0
 
     .line 275
     .local v0, "EXTRA_LARGE_FONT_SCALE":F
-    iget-object v9, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
-    invoke-static {v9, v0}, Lcom/android/settings/Utils;->getFontIndex(Landroid/content/Context;F)I
+    invoke-static {v9, v0}, Lcom/android/settings_ex/Utils;->getFontIndex(Landroid/content/Context;F)I
 
     move-result v9
 
@@ -2366,7 +2366,7 @@
 
     .line 277
     :cond_0
-    iget-object v9, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v9}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -2428,7 +2428,7 @@
     const/4 v9, 0x0
 
     .line 372
-    invoke-direct {p0}, Lcom/android/settings/ResetSettings;->getZenModeConfig()Landroid/service/notification/ZenModeConfig;
+    invoke-direct {p0}, Lcom/android/settings_ex/ResetSettings;->getZenModeConfig()Landroid/service/notification/ZenModeConfig;
 
     move-result-object v7
 
@@ -2449,7 +2449,7 @@
     iput-boolean v9, v7, Landroid/service/notification/ZenModeConfig$ZenRule;->enabled:Z
 
     .line 374
-    invoke-static {}, Lcom/android/settings/Utils;->isAllNAVendor()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isAllNAVendor()Z
 
     move-result v7
 
@@ -2488,10 +2488,10 @@
     iput-boolean v8, v5, Landroid/service/notification/ZenModeConfig;->allowAlarms:Z
 
     .line 390
-    invoke-direct {p0, v5}, Lcom/android/settings/ResetSettings;->setZenModeConfig(Landroid/service/notification/ZenModeConfig;)Z
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/ResetSettings;->setZenModeConfig(Landroid/service/notification/ZenModeConfig;)Z
 
     .line 393
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
@@ -2512,7 +2512,7 @@
     .line 395
     .local v1, "airplaneMode":I
     :goto_1
-    iget-object v7, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v7, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2527,7 +2527,7 @@
     if-eq v7, v1, :cond_0
 
     .line 396
-    iget-object v7, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v7, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2551,7 +2551,7 @@
     invoke-virtual {v4, v7, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 399
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
@@ -2560,7 +2560,7 @@
     .line 402
     .end local v4    # "intent":Landroid/content/Intent;
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
@@ -2576,7 +2576,7 @@
 
     .line 403
     .local v3, "autoTimeZone":Z
-    iget-object v7, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v7, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2600,14 +2600,14 @@
 
     .line 406
     .local v6, "timeZone":Landroid/content/Intent;
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
     invoke-virtual {v7, v6}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 407
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
@@ -2623,7 +2623,7 @@
 
     .line 408
     .local v2, "autoTime":Z
-    iget-object v7, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v7, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2647,7 +2647,7 @@
 
     .line 411
     .local v0, "actionTime":Landroid/content/Intent;
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
@@ -2656,7 +2656,7 @@
     .line 413
     const-string v7, "USC"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v10
 
@@ -2667,7 +2667,7 @@
     if-eqz v7, :cond_5
 
     .line 414
-    iget-object v7, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v7, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2679,7 +2679,7 @@
 
     .line 420
     :goto_4
-    iget-object v7, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v7, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2703,7 +2703,7 @@
     invoke-virtual {v4, v7}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 423
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
@@ -2759,7 +2759,7 @@
     .line 416
     .restart local v0    # "actionTime":Landroid/content/Intent;
     :cond_5
-    iget-object v7, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v7, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2785,7 +2785,7 @@
     const/4 v2, 0x0
 
     .line 355
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2809,7 +2809,7 @@
     if-eqz v0, :cond_2
 
     .line 357
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2817,7 +2817,7 @@
 
     const-string v4, "screensaver_activate_on_dock"
 
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2837,7 +2837,7 @@
     invoke-static {v3, v4, v0}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 359
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2845,7 +2845,7 @@
 
     const-string v3, "screensaver_activate_on_sleep"
 
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -2864,7 +2864,7 @@
 
     .line 367
     :goto_2
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2893,7 +2893,7 @@
 
     .line 362
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2901,7 +2901,7 @@
 
     const-string v4, "screensaver_activate_on_dock"
 
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -2921,7 +2921,7 @@
     invoke-static {v3, v4, v0}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 364
-    iget-object v0, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2929,7 +2929,7 @@
 
     const-string v3, "screensaver_activate_on_sleep"
 
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -2970,10 +2970,10 @@
     const/4 v4, 0x0
 
     .line 305
-    invoke-direct {p0}, Lcom/android/settings/ResetSettings;->loadDefRingtone()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ResetSettings;->loadDefRingtone()V
 
     .line 307
-    invoke-direct {p0}, Lcom/android/settings/ResetSettings;->resetSpenSettings()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ResetSettings;->resetSpenSettings()V
 
     .line 310
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -2989,7 +2989,7 @@
     if-eqz v5, :cond_0
 
     .line 311
-    iget-object v5, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -3009,7 +3009,7 @@
     .line 317
     .end local v0    # "cr":Landroid/content/ContentResolver;
     :cond_0
-    iget-object v5, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -3033,14 +3033,14 @@
     invoke-virtual {v1, v5, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 320
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
     invoke-virtual {v5, v1}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 323
-    iget-object v5, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -3065,7 +3065,7 @@
     invoke-virtual {v1, v5, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 326
-    invoke-virtual {p0}, Lcom/android/settings/ResetSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ResetSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -3085,7 +3085,7 @@
     if-eqz v5, :cond_1
 
     .line 331
-    iget-object v5, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -3127,7 +3127,7 @@
 
     .line 335
     :cond_2
-    iget-object v5, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     const-string v6, "phone"
 
@@ -3152,7 +3152,7 @@
     :goto_0
     const-string v4, "DCM"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v5
 
@@ -3163,7 +3163,7 @@
     if-eqz v4, :cond_5
 
     .line 338
-    iget-object v4, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -3195,18 +3195,18 @@
     if-nez v2, :cond_7
 
     .line 341
-    iget-object v4, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     const-string v5, "com.sec.android.app.sbrowser"
 
-    invoke-static {v4, v5}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v4, v5}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v4
 
     if-nez v4, :cond_6
 
     .line 342
-    iget-object v4, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -3222,7 +3222,7 @@
 
     .line 344
     :cond_6
-    iget-object v4, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -3238,7 +3238,7 @@
 
     .line 346
     :cond_7
-    iget-object v4, p0, Lcom/android/settings/ResetSettings;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/ResetSettings;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 

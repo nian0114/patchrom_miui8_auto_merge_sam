@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$7$1;
+.class Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$7$1;
 .super Ljava/lang/Object;
 .source "FingerprintEnrollEnrolling.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$7;->onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
+    value = Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$7;->onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$7;
+.field final synthetic this$1:Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$7;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$7;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$7;)V
     .locals 0
 
     .prologue
     .line 361
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$7$1;->this$1:Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$7;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$7$1;->this$1:Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,12 +41,12 @@
 
     .prologue
     .line 364
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$7$1;->this$1:Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$7;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$7$1;->this$1:Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$7;
 
-    iget-object v0, v0, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling$7;->this$0:Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;
+    iget-object v0, v0, Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling$7;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;
 
-    # invokes: Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->startIconAnimation()V
-    invoke-static {v0}, Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;->access$1200(Lcom/android/settings/fingerprint/FingerprintEnrollEnrolling;)V
+    # invokes: Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;->startIconAnimation()V
+    invoke-static {v0}, Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;->access$1200(Lcom/android/settings_ex/fingerprint/FingerprintEnrollEnrolling;)V
 
     .line 365
     return-void

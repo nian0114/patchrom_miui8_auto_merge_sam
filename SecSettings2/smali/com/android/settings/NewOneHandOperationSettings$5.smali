@@ -1,4 +1,4 @@
-.class Lcom/android/settings/NewOneHandOperationSettings$5;
+.class Lcom/android/settings_ex/NewOneHandOperationSettings$5;
 .super Ljava/lang/Object;
 .source "NewOneHandOperationSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/NewOneHandOperationSettings;->reduceSizeDisablePopup()V
+    value = Lcom/android/settings_ex/NewOneHandOperationSettings;->reduceSizeDisablePopup()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/NewOneHandOperationSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/NewOneHandOperationSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/NewOneHandOperationSettings;)V
     .locals 0
 
     .prologue
     .line 343
-    iput-object p1, p0, Lcom/android/settings/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings/NewOneHandOperationSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,18 +47,18 @@
     const/4 v2, 0x0
 
     .line 345
-    iget-object v0, p0, Lcom/android/settings/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings/NewOneHandOperationSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->turnOffTalkBack(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->turnOffTalkBack(Landroid/content/Context;)Z
 
     .line 346
-    iget-object v0, p0, Lcom/android/settings/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings/NewOneHandOperationSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -67,9 +67,9 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 347
-    iget-object v0, p0, Lcom/android/settings/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings/NewOneHandOperationSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -78,9 +78,9 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 348
-    iget-object v0, p0, Lcom/android/settings/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings/NewOneHandOperationSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -89,9 +89,9 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 349
-    iget-object v0, p0, Lcom/android/settings/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings/NewOneHandOperationSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -99,12 +99,12 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->turnOffUniversalSwitch(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->turnOffUniversalSwitch(Landroid/content/Context;)Z
 
     .line 350
-    iget-object v0, p0, Lcom/android/settings/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings/NewOneHandOperationSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -113,9 +113,9 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 351
-    iget-object v0, p0, Lcom/android/settings/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings/NewOneHandOperationSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -124,9 +124,9 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 352
-    iget-object v0, p0, Lcom/android/settings/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings/NewOneHandOperationSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -135,9 +135,9 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 353
-    iget-object v0, p0, Lcom/android/settings/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings/NewOneHandOperationSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -146,9 +146,9 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 354
-    iget-object v0, p0, Lcom/android/settings/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings/NewOneHandOperationSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/android/settings_ex/NewOneHandOperationSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -157,10 +157,10 @@
     invoke-static {v0, v1, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 355
-    iget-object v0, p0, Lcom/android/settings/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings/NewOneHandOperationSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/NewOneHandOperationSettings$5;->this$0:Lcom/android/settings_ex/NewOneHandOperationSettings;
 
-    # invokes: Lcom/android/settings/NewOneHandOperationSettings;->reduceSizeBroadcast(I)V
-    invoke-static {v0, v3}, Lcom/android/settings/NewOneHandOperationSettings;->access$200(Lcom/android/settings/NewOneHandOperationSettings;I)V
+    # invokes: Lcom/android/settings_ex/NewOneHandOperationSettings;->reduceSizeBroadcast(I)V
+    invoke-static {v0, v3}, Lcom/android/settings_ex/NewOneHandOperationSettings;->access$200(Lcom/android/settings_ex/NewOneHandOperationSettings;I)V
 
     .line 356
     return-void

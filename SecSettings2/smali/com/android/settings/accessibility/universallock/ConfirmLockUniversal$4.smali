@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$4;
+.class Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$4;
 .super Ljava/lang/Object;
 .source "ConfirmLockUniversal.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->initializeAnimations()V
+    value = Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->initializeAnimations()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)V
     .locals 0
 
     .prologue
     .line 429
-    iput-object p1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$4;->this$0:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$4;->this$0:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,13 +56,13 @@
 
     .line 434
     .local v1, "value":F
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$4;->this$0:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$4;->this$0:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
-    invoke-virtual {v2}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v2}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isRTL(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isRTL(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -73,10 +73,10 @@
 
     .line 436
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$4;->this$0:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$4;->this$0:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mGreyStepCircleList:Ljava/util/ArrayList;
-    invoke-static {v2}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->access$1000(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)Ljava/util/ArrayList;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mGreyStepCircleList:Ljava/util/ArrayList;
+    invoke-static {v2}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->access$1000(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)Ljava/util/ArrayList;
 
     move-result-object v2
 

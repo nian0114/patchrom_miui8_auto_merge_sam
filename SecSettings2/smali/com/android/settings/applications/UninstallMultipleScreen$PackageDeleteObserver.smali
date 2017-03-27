@@ -1,11 +1,11 @@
-.class Lcom/android/settings/applications/UninstallMultipleScreen$PackageDeleteObserver;
+.class Lcom/android/settings_ex/applications/UninstallMultipleScreen$PackageDeleteObserver;
 .super Landroid/content/pm/IPackageDeleteObserver$Stub;
 .source "UninstallMultipleScreen.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/UninstallMultipleScreen;
+    value = Lcom/android/settings_ex/applications/UninstallMultipleScreen;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/applications/UninstallMultipleScreen;
+.field final synthetic this$0:Lcom/android/settings_ex/applications/UninstallMultipleScreen;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/applications/UninstallMultipleScreen;)V
+.method constructor <init>(Lcom/android/settings_ex/applications/UninstallMultipleScreen;)V
     .locals 0
 
     .prologue
     .line 164
-    iput-object p1, p0, Lcom/android/settings/applications/UninstallMultipleScreen$PackageDeleteObserver;->this$0:Lcom/android/settings/applications/UninstallMultipleScreen;
+    iput-object p1, p0, Lcom/android/settings_ex/applications/UninstallMultipleScreen$PackageDeleteObserver;->this$0:Lcom/android/settings_ex/applications/UninstallMultipleScreen;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageDeleteObserver$Stub;-><init>()V
 
@@ -40,9 +40,9 @@
 
     .prologue
     .line 166
-    iget-object v1, p0, Lcom/android/settings/applications/UninstallMultipleScreen$PackageDeleteObserver;->this$0:Lcom/android/settings/applications/UninstallMultipleScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/UninstallMultipleScreen$PackageDeleteObserver;->this$0:Lcom/android/settings_ex/applications/UninstallMultipleScreen;
 
-    iget-object v1, v1, Lcom/android/settings/applications/UninstallMultipleScreen;->mHandler:Landroid/os/Handler;
+    iget-object v1, v1, Lcom/android/settings_ex/applications/UninstallMultipleScreen;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x1
 
@@ -58,9 +58,9 @@
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     .line 170
-    iget-object v1, p0, Lcom/android/settings/applications/UninstallMultipleScreen$PackageDeleteObserver;->this$0:Lcom/android/settings/applications/UninstallMultipleScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/UninstallMultipleScreen$PackageDeleteObserver;->this$0:Lcom/android/settings_ex/applications/UninstallMultipleScreen;
 
-    iget-object v1, v1, Lcom/android/settings/applications/UninstallMultipleScreen;->mHandler:Landroid/os/Handler;
+    iget-object v1, v1, Lcom/android/settings_ex/applications/UninstallMultipleScreen;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 

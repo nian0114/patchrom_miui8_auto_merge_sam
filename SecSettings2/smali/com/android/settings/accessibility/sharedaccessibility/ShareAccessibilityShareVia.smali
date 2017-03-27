@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;
+.class public Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;
 .super Landroid/app/Activity;
 .source "ShareAccessibilityShareVia.java"
 
@@ -18,7 +18,7 @@
     .line 33
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->mContext:Landroid/content/Context;
 
     return-void
 .end method
@@ -28,11 +28,11 @@
 
     .prologue
     .line 90
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->mContext:Landroid/content/Context;
 
     .line 91
     return-void
@@ -81,7 +81,7 @@
     if-eqz v2, :cond_0
 
     .line 222
-    invoke-static {p1}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->uriHasUserId(Landroid/net/Uri;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->uriHasUserId(Landroid/net/Uri;)Z
 
     move-result v2
 
@@ -204,7 +204,7 @@
 
     move-result-object v2
 
-    invoke-direct {p0, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->addUserIdToUri(Landroid/net/Uri;)Landroid/net/Uri;
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->addUserIdToUri(Landroid/net/Uri;)Landroid/net/Uri;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -290,7 +290,7 @@
     .line 65
     const-string v3, "FOLDERPATH"
 
-    sget-object v4, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->ACC_SETTING_FILE_MOST_INTERNAL_PATH:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->ACC_SETTING_FILE_MOST_INTERNAL_PATH:Ljava/lang/String;
 
     invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -310,7 +310,7 @@
     const/4 v3, 0x2
 
     :try_start_0
-    invoke-virtual {p0, v0, v3}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v0, v3}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->startActivityForResult(Landroid/content/Intent;I)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -329,11 +329,11 @@
     .line 75
     .end local v1    # "e":Landroid/content/ActivityNotFoundException;
     :pswitch_1
-    iget-object v3, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->mContext:Landroid/content/Context;
 
     const-string v4, "/Accessibility"
 
-    invoke-static {v3, v4}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->getExternalMemoryPath(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v4}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->getExternalMemoryPath(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -364,7 +364,7 @@
     const/4 v3, 0x2
 
     :try_start_1
-    invoke-virtual {p0, v0, v3}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v0, v3}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->startActivityForResult(Landroid/content/Intent;I)V
     :try_end_1
     .catch Landroid/content/ActivityNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -422,7 +422,7 @@
     .local v5, "uri":Landroid/net/Uri;
     aget-object v6, p1, v2
 
-    invoke-direct {p0, p0, v6}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->getMediaUri(Landroid/content/Context;Ljava/lang/String;)Landroid/net/Uri;
+    invoke-direct {p0, p0, v6}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->getMediaUri(Landroid/content/Context;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v5
 
@@ -501,11 +501,11 @@
     invoke-virtual {v4, v6, v0}, Landroid/content/Intent;->putParcelableArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
 
     .line 181
-    iget-object v6, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->mContext:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->mContext:Landroid/content/Context;
 
     const-string v7, "com.samsung.android.qconnect"
 
-    invoke-static {v6, v7}, Lcom/android/settings/Utils;->isPackageExists(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v6, v7}, Lcom/android/settings_ex/Utils;->isPackageExists(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v6
 
@@ -527,7 +527,7 @@
     .line 186
     const v6, 0x7f0e09e8
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v6
 
@@ -538,7 +538,7 @@
     .line 188
     .local v3, "intentNew":Landroid/content/Intent;
     :try_start_0
-    invoke-virtual {p0, v3}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -574,7 +574,7 @@
 
     .line 143
     .local v3, "uri":Landroid/net/Uri;
-    invoke-direct {p0, p0, p1}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->getMediaUri(Landroid/content/Context;Ljava/lang/String;)Landroid/net/Uri;
+    invoke-direct {p0, p0, p1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->getMediaUri(Landroid/content/Context;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
 
@@ -631,11 +631,11 @@
     invoke-virtual {v2, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     .line 151
-    iget-object v4, p0, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->mContext:Landroid/content/Context;
 
     const-string v5, "com.samsung.android.qconnect"
 
-    invoke-static {v4, v5}, Lcom/android/settings/Utils;->isPackageExists(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v4, v5}, Lcom/android/settings_ex/Utils;->isPackageExists(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v4
 
@@ -657,7 +657,7 @@
     .line 156
     const v4, 0x7f0e09e8
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v4
 
@@ -668,7 +668,7 @@
     .line 158
     .local v1, "intentNew":Landroid/content/Intent;
     :try_start_0
-    invoke-virtual {p0, v1}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -847,14 +847,14 @@
 
     .line 122
     :cond_0
-    invoke-direct {p0, v0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->show_share_via_multi_files([Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->show_share_via_multi_files([Ljava/lang/String;)V
 
     .line 136
     .end local v0    # "files":[Ljava/lang/String;
     .end local v1    # "i":I
     :cond_1
     :goto_1
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->finish()V
 
     .line 137
     return-void
@@ -894,7 +894,7 @@
     .line 126
     aget-object v2, v0, v5
 
-    invoke-direct {p0, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->show_share_via_single_file(Ljava/lang/String;)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->show_share_via_single_file(Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -929,11 +929,11 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 44
-    invoke-direct {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->ShareAccessibilityShareVia_Init()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->ShareAccessibilityShareVia_Init()V
 
     .line 47
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -951,7 +951,7 @@
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 49
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->finish()V
 
     .line 58
     :goto_0
@@ -959,7 +959,7 @@
 
     .line 51
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -981,7 +981,7 @@
 
     move-result v2
 
-    invoke-direct {p0, v2}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->showContent(I)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->showContent(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1001,7 +1001,7 @@
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 56
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->finish()V
 
     goto :goto_0
 .end method
@@ -1028,7 +1028,7 @@
 
     .line 97
     :pswitch_0
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilityShareVia;->finish()V
 
     goto :goto_0
 

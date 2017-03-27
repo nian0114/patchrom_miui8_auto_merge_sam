@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/UnlockEffect;
+.class public Lcom/android/settings_ex/UnlockEffect;
 .super Landroid/app/Activity;
 .source "UnlockEffect.java"
 
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/UnlockEffect$RadioAdapter;
+        Lcom/android/settings_ex/UnlockEffect$RadioAdapter;
     }
 .end annotation
 
@@ -21,7 +21,7 @@
 
 
 # instance fields
-.field private adapter:Lcom/android/settings/UnlockEffect$RadioAdapter;
+.field private adapter:Lcom/android/settings_ex/UnlockEffect$RadioAdapter;
 
 .field backgroundImage:[I
 
@@ -52,7 +52,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/android/settings/UnlockEffect;->EffectName:[I
+    sput-object v0, Lcom/android/settings_ex/UnlockEffect;->EffectName:[I
 
     return-void
 
@@ -87,27 +87,27 @@
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     .line 50
-    iput-boolean v0, p0, Lcom/android/settings/UnlockEffect;->mIsTablet:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/UnlockEffect;->mIsTablet:Z
 
     .line 54
-    iput v0, p0, Lcom/android/settings/UnlockEffect;->mDefaultUnlock:I
+    iput v0, p0, Lcom/android/settings_ex/UnlockEffect;->mDefaultUnlock:I
 
     .line 64
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/UnlockEffect;->mImageView:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/android/settings_ex/UnlockEffect;->mImageView:Landroid/widget/ImageView;
 
     .line 367
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/UnlockEffect;)I
+.method static synthetic access$000(Lcom/android/settings_ex/UnlockEffect;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/UnlockEffect;
+    .param p0, "x0"    # Lcom/android/settings_ex/UnlockEffect;
 
     .prologue
     .line 45
-    iget v0, p0, Lcom/android/settings/UnlockEffect;->mDefaultUnlock:I
+    iget v0, p0, Lcom/android/settings_ex/UnlockEffect;->mDefaultUnlock:I
 
     return v0
 .end method
@@ -117,7 +117,7 @@
 
     .prologue
     .line 161
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v2
 
@@ -129,10 +129,10 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/UnlockEffect;->mTabletView:Landroid/view/View;
+    iput-object v2, p0, Lcom/android/settings_ex/UnlockEffect;->mTabletView:Landroid/view/View;
 
     .line 162
-    invoke-direct {p0}, Lcom/android/settings/UnlockEffect;->initViewforTablet()V
+    invoke-direct {p0}, Lcom/android/settings_ex/UnlockEffect;->initViewforTablet()V
 
     .line 163
     new-instance v1, Landroid/app/AlertDialog$Builder;
@@ -141,7 +141,7 @@
 
     .line 164
     .local v1, "alertDialogBuilder":Landroid/app/AlertDialog$Builder;
-    iget-object v2, p0, Lcom/android/settings/UnlockEffect;->mTabletView:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/UnlockEffect;->mTabletView:Landroid/view/View;
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
 
@@ -153,18 +153,18 @@
     .line 166
     const v2, 0x7f0e0f8c
 
-    new-instance v3, Lcom/android/settings/UnlockEffect$1;
+    new-instance v3, Lcom/android/settings_ex/UnlockEffect$1;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/UnlockEffect$1;-><init>(Lcom/android/settings/UnlockEffect;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/UnlockEffect$1;-><init>(Lcom/android/settings_ex/UnlockEffect;)V
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 175
     const/high16 v2, 0x1040000
 
-    new-instance v3, Lcom/android/settings/UnlockEffect$2;
+    new-instance v3, Lcom/android/settings_ex/UnlockEffect$2;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/UnlockEffect$2;-><init>(Lcom/android/settings/UnlockEffect;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/UnlockEffect$2;-><init>(Lcom/android/settings_ex/UnlockEffect;)V
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -175,9 +175,9 @@
 
     .line 182
     .local v0, "alertDialog":Landroid/app/AlertDialog;
-    new-instance v2, Lcom/android/settings/UnlockEffect$3;
+    new-instance v2, Lcom/android/settings_ex/UnlockEffect$3;
 
-    invoke-direct {v2, p0, v0}, Lcom/android/settings/UnlockEffect$3;-><init>(Lcom/android/settings/UnlockEffect;Landroid/app/AlertDialog;)V
+    invoke-direct {v2, p0, v0}, Lcom/android/settings_ex/UnlockEffect$3;-><init>(Lcom/android/settings_ex/UnlockEffect;Landroid/app/AlertDialog;)V
 
     invoke-virtual {v0, v2}, Landroid/app/AlertDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
@@ -197,10 +197,10 @@
 
     invoke-direct {v0, p0}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/UnlockEffect;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object v0, p0, Lcom/android/settings_ex/UnlockEffect;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 196
-    iget-object v0, p0, Lcom/android/settings/UnlockEffect;->mTabletView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/UnlockEffect;->mTabletView:Landroid/view/View;
 
     const v1, 0x102000a
 
@@ -210,10 +210,10 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iput-object v0, p0, Lcom/android/settings/UnlockEffect;->mListView:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/android/settings_ex/UnlockEffect;->mListView:Landroid/widget/ListView;
 
     .line 197
-    iget-object v0, p0, Lcom/android/settings/UnlockEffect;->mTabletView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/UnlockEffect;->mTabletView:Landroid/view/View;
 
     const v1, 0x7f0d0281
 
@@ -223,50 +223,50 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/android/settings/UnlockEffect;->mImageView:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/android/settings_ex/UnlockEffect;->mImageView:Landroid/widget/ImageView;
 
     .line 199
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->populateUnlockEffectsOptions()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->populateUnlockEffectsOptions()V
 
     .line 201
-    new-instance v0, Lcom/android/settings/UnlockEffect$RadioAdapter;
+    new-instance v0, Lcom/android/settings_ex/UnlockEffect$RadioAdapter;
 
     const v1, 0x7f040126
 
-    sget-object v2, Lcom/android/settings/UnlockEffect;->mModeItem:[Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/UnlockEffect;->mModeItem:[Ljava/lang/String;
 
-    invoke-direct {v0, p0, v1, v2}, Lcom/android/settings/UnlockEffect$RadioAdapter;-><init>(Landroid/content/Context;I[Ljava/lang/String;)V
+    invoke-direct {v0, p0, v1, v2}, Lcom/android/settings_ex/UnlockEffect$RadioAdapter;-><init>(Landroid/content/Context;I[Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/android/settings/UnlockEffect;->adapter:Lcom/android/settings/UnlockEffect$RadioAdapter;
+    iput-object v0, p0, Lcom/android/settings_ex/UnlockEffect;->adapter:Lcom/android/settings_ex/UnlockEffect$RadioAdapter;
 
     .line 203
-    iget-object v0, p0, Lcom/android/settings/UnlockEffect;->mListView:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/android/settings_ex/UnlockEffect;->mListView:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/android/settings/UnlockEffect;->adapter:Lcom/android/settings/UnlockEffect$RadioAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/UnlockEffect;->adapter:Lcom/android/settings_ex/UnlockEffect$RadioAdapter;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 204
-    iget-object v0, p0, Lcom/android/settings/UnlockEffect;->mListView:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/android/settings_ex/UnlockEffect;->mListView:Landroid/widget/ListView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setItemsCanFocus(Z)V
 
     .line 205
-    iget-object v0, p0, Lcom/android/settings/UnlockEffect;->mListView:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/android/settings_ex/UnlockEffect;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v0, p0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 206
-    iget-object v0, p0, Lcom/android/settings/UnlockEffect;->mListView:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/android/settings_ex/UnlockEffect;->mListView:Landroid/widget/ListView;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOverScrollMode(I)V
 
     .line 208
-    invoke-direct {p0}, Lcom/android/settings/UnlockEffect;->updateImageResource()V
+    invoke-direct {p0}, Lcom/android/settings_ex/UnlockEffect;->updateImageResource()V
 
     .line 209
     return-void
@@ -277,7 +277,7 @@
 
     .prologue
     .line 212
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -289,21 +289,21 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/UnlockEffect;->mDefaultUnlock:I
+    iput v1, p0, Lcom/android/settings_ex/UnlockEffect;->mDefaultUnlock:I
 
     .line 214
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/UnlockEffect;->dbValues:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/UnlockEffect;->dbValues:[Ljava/lang/String;
 
     array-length v1, v1
 
     if-ge v0, v1, :cond_1
 
     .line 215
-    iget-object v1, p0, Lcom/android/settings/UnlockEffect;->dbValues:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/UnlockEffect;->dbValues:[Ljava/lang/String;
 
     aget-object v1, v1, v0
 
@@ -311,21 +311,21 @@
 
     move-result v1
 
-    iget v2, p0, Lcom/android/settings/UnlockEffect;->mDefaultUnlock:I
+    iget v2, p0, Lcom/android/settings_ex/UnlockEffect;->mDefaultUnlock:I
 
     if-ne v1, v2, :cond_0
 
     .line 217
-    iget-object v1, p0, Lcom/android/settings/UnlockEffect;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/UnlockEffect;->mListView:Landroid/widget/ListView;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v0, v2}, Landroid/widget/ListView;->setItemChecked(IZ)V
 
     .line 218
-    iget-object v1, p0, Lcom/android/settings/UnlockEffect;->mImageView:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/settings_ex/UnlockEffect;->mImageView:Landroid/widget/ImageView;
 
-    iget-object v2, p0, Lcom/android/settings/UnlockEffect;->backgroundImage:[I
+    iget-object v2, p0, Lcom/android/settings_ex/UnlockEffect;->backgroundImage:[I
 
     aget v2, v2, v0
 
@@ -353,12 +353,12 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 250
-    iget-boolean v0, p0, Lcom/android/settings/UnlockEffect;->mIsTablet:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/UnlockEffect;->mIsTablet:Z
 
     if-nez v0, :cond_0
 
     .line 251
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->recreate()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->recreate()V
 
     .line 252
     :cond_0
@@ -378,14 +378,14 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 107
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 108
-    invoke-direct {p0}, Lcom/android/settings/UnlockEffect;->createDialogforTablet()V
+    invoke-direct {p0}, Lcom/android/settings_ex/UnlockEffect;->createDialogforTablet()V
 
     .line 158
     :goto_0
@@ -395,24 +395,24 @@
     :cond_0
     const v1, 0x7f04012e
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/UnlockEffect;->setContentView(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/UnlockEffect;->setContentView(I)V
 
     .line 113
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
     .line 114
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v1
 
     invoke-virtual {v1, v13}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
 
     .line 115
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v1
 
@@ -424,32 +424,32 @@
 
     invoke-direct {v1, p0}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/android/settings/UnlockEffect;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object v1, p0, Lcom/android/settings_ex/UnlockEffect;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 120
     const v1, 0x102000a
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/UnlockEffect;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/UnlockEffect;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/ListView;
 
-    iput-object v1, p0, Lcom/android/settings/UnlockEffect;->mListView:Landroid/widget/ListView;
+    iput-object v1, p0, Lcom/android/settings_ex/UnlockEffect;->mListView:Landroid/widget/ListView;
 
     .line 121
     const v1, 0x7f0d0281
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/UnlockEffect;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/UnlockEffect;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/ImageView;
 
-    iput-object v1, p0, Lcom/android/settings/UnlockEffect;->mImageView:Landroid/widget/ImageView;
+    iput-object v1, p0, Lcom/android/settings_ex/UnlockEffect;->mImageView:Landroid/widget/ImageView;
 
     .line 122
-    invoke-static {p0}, Lcom/android/settings/Utils;->ConnectedMobileKeypad(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/android/settings_ex/Utils;->ConnectedMobileKeypad(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -458,7 +458,7 @@
     .line 123
     const v1, 0x7f0d033c
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/UnlockEffect;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/UnlockEffect;->findViewById(I)Landroid/view/View;
 
     move-result-object v11
 
@@ -469,27 +469,27 @@
     if-eqz v11, :cond_2
 
     .line 125
-    iget-object v1, p0, Lcom/android/settings/UnlockEffect;->mImageView:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/settings_ex/UnlockEffect;->mImageView:Landroid/widget/ImageView;
 
     const/16 v3, 0x8
 
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 126
-    iput-object v11, p0, Lcom/android/settings/UnlockEffect;->mImageView:Landroid/widget/ImageView;
+    iput-object v11, p0, Lcom/android/settings_ex/UnlockEffect;->mImageView:Landroid/widget/ImageView;
 
     .line 127
-    iget-object v1, p0, Lcom/android/settings/UnlockEffect;->mImageView:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/settings_ex/UnlockEffect;->mImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 131
     .end local v11    # "imageViewforkeyboard":Landroid/widget/ImageView;
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->populateUnlockEffectsOptions()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->populateUnlockEffectsOptions()V
 
     .line 133
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->getResources()Landroid/content/res/Resources;
 
     move-result-object v12
 
@@ -519,7 +519,7 @@
 
     .line 139
     .local v4, "divider_inset_size":I
-    invoke-static {p0}, Lcom/android/settings/Utils;->isRTL(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/android/settings_ex/Utils;->isRTL(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -528,7 +528,7 @@
     .line 140
     new-instance v0, Landroid/graphics/drawable/InsetDrawable;
 
-    iget-object v1, p0, Lcom/android/settings/UnlockEffect;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/UnlockEffect;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1}, Landroid/widget/ListView;->getDivider()Landroid/graphics/drawable/Drawable;
 
@@ -542,46 +542,46 @@
 
     .line 142
     .local v0, "insetdivider":Landroid/graphics/drawable/InsetDrawable;
-    iget-object v1, p0, Lcom/android/settings/UnlockEffect;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/UnlockEffect;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ListView;->setDivider(Landroid/graphics/drawable/Drawable;)V
 
     .line 149
     :goto_1
-    new-instance v1, Lcom/android/settings/UnlockEffect$RadioAdapter;
+    new-instance v1, Lcom/android/settings_ex/UnlockEffect$RadioAdapter;
 
     const v3, 0x7f040125
 
-    sget-object v5, Lcom/android/settings/UnlockEffect;->mModeItem:[Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/UnlockEffect;->mModeItem:[Ljava/lang/String;
 
-    invoke-direct {v1, p0, v3, v5}, Lcom/android/settings/UnlockEffect$RadioAdapter;-><init>(Landroid/content/Context;I[Ljava/lang/String;)V
+    invoke-direct {v1, p0, v3, v5}, Lcom/android/settings_ex/UnlockEffect$RadioAdapter;-><init>(Landroid/content/Context;I[Ljava/lang/String;)V
 
-    iput-object v1, p0, Lcom/android/settings/UnlockEffect;->adapter:Lcom/android/settings/UnlockEffect$RadioAdapter;
+    iput-object v1, p0, Lcom/android/settings_ex/UnlockEffect;->adapter:Lcom/android/settings_ex/UnlockEffect$RadioAdapter;
 
     .line 151
-    iget-object v1, p0, Lcom/android/settings/UnlockEffect;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/UnlockEffect;->mListView:Landroid/widget/ListView;
 
-    iget-object v3, p0, Lcom/android/settings/UnlockEffect;->adapter:Lcom/android/settings/UnlockEffect$RadioAdapter;
+    iget-object v3, p0, Lcom/android/settings_ex/UnlockEffect;->adapter:Lcom/android/settings_ex/UnlockEffect$RadioAdapter;
 
     invoke-virtual {v1, v3}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 152
-    iget-object v1, p0, Lcom/android/settings/UnlockEffect;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/UnlockEffect;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1, v2}, Landroid/widget/ListView;->setItemsCanFocus(Z)V
 
     .line 153
-    iget-object v1, p0, Lcom/android/settings/UnlockEffect;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/UnlockEffect;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1, p0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 154
-    iget-object v1, p0, Lcom/android/settings/UnlockEffect;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/UnlockEffect;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1, v13}, Landroid/widget/ListView;->setOverScrollMode(I)V
 
     .line 156
-    invoke-direct {p0}, Lcom/android/settings/UnlockEffect;->updateImageResource()V
+    invoke-direct {p0}, Lcom/android/settings_ex/UnlockEffect;->updateImageResource()V
 
     goto/16 :goto_0
 
@@ -590,7 +590,7 @@
     :cond_3
     new-instance v0, Landroid/graphics/drawable/InsetDrawable;
 
-    iget-object v1, p0, Lcom/android/settings/UnlockEffect;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/UnlockEffect;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1}, Landroid/widget/ListView;->getDivider()Landroid/graphics/drawable/Drawable;
 
@@ -610,7 +610,7 @@
 
     .line 146
     .restart local v0    # "insetdivider":Landroid/graphics/drawable/InsetDrawable;
-    iget-object v1, p0, Lcom/android/settings/UnlockEffect;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/UnlockEffect;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ListView;->setDivider(Landroid/graphics/drawable/Drawable;)V
 
@@ -635,23 +635,23 @@
     .prologue
     .line 256
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
-    iget-object v0, p0, Lcom/android/settings/UnlockEffect;->mImageView:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/settings_ex/UnlockEffect;->mImageView:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/android/settings/UnlockEffect;->backgroundImage:[I
+    iget-object v1, p0, Lcom/android/settings_ex/UnlockEffect;->backgroundImage:[I
 
     aget v1, v1, p3
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 257
-    iget-boolean v0, p0, Lcom/android/settings/UnlockEffect;->mIsTablet:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/UnlockEffect;->mIsTablet:Z
 
     if-eqz v0, :cond_0
 
     .line 258
-    iget-object v0, p0, Lcom/android/settings/UnlockEffect;->dbValues:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/UnlockEffect;->dbValues:[Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/android/settings/UnlockEffect;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/UnlockEffect;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1}, Landroid/widget/ListView;->getCheckedItemPosition()I
 
@@ -663,7 +663,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/UnlockEffect;->mDefaultUnlock:I
+    iput v0, p0, Lcom/android/settings_ex/UnlockEffect;->mDefaultUnlock:I
 
     .line 262
     :goto_0
@@ -679,7 +679,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -706,15 +706,15 @@
 
     .line 260
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     const-string v1, "lockscreen_ripple_effect"
 
-    iget-object v2, p0, Lcom/android/settings/UnlockEffect;->dbValues:[Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/UnlockEffect;->dbValues:[Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/android/settings/UnlockEffect;->mListView:Landroid/widget/ListView;
+    iget-object v3, p0, Lcom/android/settings_ex/UnlockEffect;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v3}, Landroid/widget/ListView;->getCheckedItemPosition()I
 
@@ -736,7 +736,7 @@
 
     .prologue
     .line 389
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->finish()V
 
     .line 390
     const/4 v0, 0x1
@@ -762,9 +762,9 @@
     .line 240
     .local v1, "idx":I
     :try_start_0
-    iget-object v2, p0, Lcom/android/settings/UnlockEffect;->mImageView:Landroid/widget/ImageView;
+    iget-object v2, p0, Lcom/android/settings_ex/UnlockEffect;->mImageView:Landroid/widget/ImageView;
 
-    iget-object v3, p0, Lcom/android/settings/UnlockEffect;->backgroundImage:[I
+    iget-object v3, p0, Lcom/android/settings_ex/UnlockEffect;->backgroundImage:[I
 
     aget v3, v3, v1
 
@@ -802,7 +802,7 @@
     .line 233
     const-string v0, "selected_idx"
 
-    iget-object v1, p0, Lcom/android/settings/UnlockEffect;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/UnlockEffect;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1}, Landroid/widget/ListView;->getCheckedItemPosition()I
 
@@ -854,7 +854,7 @@
 
     new-array v5, v5, [I
 
-    iput-object v5, p0, Lcom/android/settings/UnlockEffect;->backgroundImage:[I
+    iput-object v5, p0, Lcom/android/settings_ex/UnlockEffect;->backgroundImage:[I
 
     .line 291
     const-string v5, "ONLYFORSHORTCUTS"
@@ -868,7 +868,7 @@
     if-eqz v5, :cond_0
 
     .line 292
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -886,7 +886,7 @@
     invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 294
-    iget-object v5, p0, Lcom/android/settings/UnlockEffect;->backgroundImage:[I
+    iget-object v5, p0, Lcom/android/settings_ex/UnlockEffect;->backgroundImage:[I
 
     add-int/lit8 v3, v2, 0x1
 
@@ -904,14 +904,14 @@
     :cond_0
     const-string v5, "com.sec.android.app.montblanc"
 
-    invoke-static {p0, v5}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v5}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
     .line 298
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -929,7 +929,7 @@
     invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 300
-    iget-object v5, p0, Lcom/android/settings/UnlockEffect;->backgroundImage:[I
+    iget-object v5, p0, Lcom/android/settings_ex/UnlockEffect;->backgroundImage:[I
 
     add-int/lit8 v3, v2, 0x1
 
@@ -956,7 +956,7 @@
     if-eqz v5, :cond_2
 
     .line 304
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -974,7 +974,7 @@
     invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 306
-    iget-object v5, p0, Lcom/android/settings/UnlockEffect;->backgroundImage:[I
+    iget-object v5, p0, Lcom/android/settings_ex/UnlockEffect;->backgroundImage:[I
 
     add-int/lit8 v3, v2, 0x1
 
@@ -999,7 +999,7 @@
     if-eqz v5, :cond_3
 
     .line 310
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -1017,7 +1017,7 @@
     invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 312
-    iget-object v5, p0, Lcom/android/settings/UnlockEffect;->backgroundImage:[I
+    iget-object v5, p0, Lcom/android/settings_ex/UnlockEffect;->backgroundImage:[I
 
     add-int/lit8 v3, v2, 0x1
 
@@ -1042,7 +1042,7 @@
     if-eqz v5, :cond_4
 
     .line 316
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -1060,7 +1060,7 @@
     invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 318
-    iget-object v5, p0, Lcom/android/settings/UnlockEffect;->backgroundImage:[I
+    iget-object v5, p0, Lcom/android/settings_ex/UnlockEffect;->backgroundImage:[I
 
     add-int/lit8 v3, v2, 0x1
 
@@ -1087,7 +1087,7 @@
     if-eqz v5, :cond_5
 
     .line 322
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -1105,7 +1105,7 @@
     invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 324
-    iget-object v5, p0, Lcom/android/settings/UnlockEffect;->backgroundImage:[I
+    iget-object v5, p0, Lcom/android/settings_ex/UnlockEffect;->backgroundImage:[I
 
     add-int/lit8 v3, v2, 0x1
 
@@ -1132,7 +1132,7 @@
     if-eqz v5, :cond_6
 
     .line 328
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -1150,7 +1150,7 @@
     invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 330
-    iget-object v5, p0, Lcom/android/settings/UnlockEffect;->backgroundImage:[I
+    iget-object v5, p0, Lcom/android/settings_ex/UnlockEffect;->backgroundImage:[I
 
     add-int/lit8 v3, v2, 0x1
 
@@ -1177,7 +1177,7 @@
     if-eqz v5, :cond_7
 
     .line 334
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -1195,7 +1195,7 @@
     invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 336
-    iget-object v5, p0, Lcom/android/settings/UnlockEffect;->backgroundImage:[I
+    iget-object v5, p0, Lcom/android/settings_ex/UnlockEffect;->backgroundImage:[I
 
     add-int/lit8 v3, v2, 0x1
 
@@ -1222,7 +1222,7 @@
     if-eqz v5, :cond_8
 
     .line 341
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -1240,7 +1240,7 @@
     invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 343
-    iget-object v5, p0, Lcom/android/settings/UnlockEffect;->backgroundImage:[I
+    iget-object v5, p0, Lcom/android/settings_ex/UnlockEffect;->backgroundImage:[I
 
     add-int/lit8 v3, v2, 0x1
 
@@ -1267,7 +1267,7 @@
     if-eqz v5, :cond_9
 
     .line 346
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -1285,7 +1285,7 @@
     invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 348
-    iget-object v5, p0, Lcom/android/settings/UnlockEffect;->backgroundImage:[I
+    iget-object v5, p0, Lcom/android/settings_ex/UnlockEffect;->backgroundImage:[I
 
     add-int/lit8 v3, v2, 0x1
 
@@ -1312,7 +1312,7 @@
     if-eqz v5, :cond_a
 
     .line 351
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -1330,7 +1330,7 @@
     invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 353
-    iget-object v5, p0, Lcom/android/settings/UnlockEffect;->backgroundImage:[I
+    iget-object v5, p0, Lcom/android/settings_ex/UnlockEffect;->backgroundImage:[I
 
     add-int/lit8 v3, v2, 0x1
 
@@ -1357,7 +1357,7 @@
     if-eqz v5, :cond_b
 
     .line 357
-    invoke-virtual {p0}, Lcom/android/settings/UnlockEffect;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/UnlockEffect;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -1375,7 +1375,7 @@
     invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 359
-    iget-object v5, p0, Lcom/android/settings/UnlockEffect;->backgroundImage:[I
+    iget-object v5, p0, Lcom/android/settings_ex/UnlockEffect;->backgroundImage:[I
 
     add-int/lit8 v3, v2, 0x1
 
@@ -1403,7 +1403,7 @@
 
     check-cast v5, [Ljava/lang/String;
 
-    sput-object v5, Lcom/android/settings/UnlockEffect;->mModeItem:[Ljava/lang/String;
+    sput-object v5, Lcom/android/settings_ex/UnlockEffect;->mModeItem:[Ljava/lang/String;
 
     .line 363
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -1418,7 +1418,7 @@
 
     check-cast v5, [Ljava/lang/String;
 
-    iput-object v5, p0, Lcom/android/settings/UnlockEffect;->dbValues:[Ljava/lang/String;
+    iput-object v5, p0, Lcom/android/settings_ex/UnlockEffect;->dbValues:[Ljava/lang/String;
 
     .line 365
     .end local v0    # "aChangedEffectEntry":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"

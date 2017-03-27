@@ -1,14 +1,14 @@
-.class public Lcom/android/settings/SecurityPolicySettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/SecurityPolicySettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "SecurityPolicySettings.java"
 
 # interfaces
 .implements Landroid/preference/Preference$OnPreferenceChangeListener;
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # instance fields
@@ -25,11 +25,11 @@
 
     .prologue
     .line 176
-    new-instance v0, Lcom/android/settings/SecurityPolicySettings$1;
+    new-instance v0, Lcom/android/settings_ex/SecurityPolicySettings$1;
 
-    invoke-direct {v0}, Lcom/android/settings/SecurityPolicySettings$1;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/SecurityPolicySettings$1;-><init>()V
 
-    sput-object v0, Lcom/android/settings/SecurityPolicySettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/SecurityPolicySettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -39,7 +39,7 @@
 
     .prologue
     .line 46
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     return-void
 .end method
@@ -85,10 +85,10 @@
 
     .prologue
     .line 66
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 67
-    invoke-virtual {p0}, Lcom/android/settings/SecurityPolicySettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecurityPolicySettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
@@ -103,62 +103,62 @@
     :cond_0
     const v1, 0x7f08009e
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/SecurityPolicySettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/SecurityPolicySettings;->addPreferencesFromResource(I)V
 
     .line 73
-    invoke-virtual {p0}, Lcom/android/settings/SecurityPolicySettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecurityPolicySettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
     .line 75
     const-string v1, "auto_policy_update"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/SecurityPolicySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/SecurityPolicySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/SwitchPreference;
 
-    iput-object v1, p0, Lcom/android/settings/SecurityPolicySettings;->mAutoUpdatePolicy:Landroid/preference/SwitchPreference;
+    iput-object v1, p0, Lcom/android/settings_ex/SecurityPolicySettings;->mAutoUpdatePolicy:Landroid/preference/SwitchPreference;
 
     .line 76
-    iget-object v1, p0, Lcom/android/settings/SecurityPolicySettings;->mAutoUpdatePolicy:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/SecurityPolicySettings;->mAutoUpdatePolicy:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 77
     const-string v1, "use_wifi_only"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/SecurityPolicySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/SecurityPolicySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/SwitchPreference;
 
-    iput-object v1, p0, Lcom/android/settings/SecurityPolicySettings;->mUseWifiOnly:Landroid/preference/SwitchPreference;
+    iput-object v1, p0, Lcom/android/settings_ex/SecurityPolicySettings;->mUseWifiOnly:Landroid/preference/SwitchPreference;
 
     .line 78
-    iget-object v1, p0, Lcom/android/settings/SecurityPolicySettings;->mUseWifiOnly:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/SecurityPolicySettings;->mUseWifiOnly:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 79
     const-string v1, "manual_updates"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/SecurityPolicySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/SecurityPolicySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/PreferenceScreen;
 
-    iput-object v1, p0, Lcom/android/settings/SecurityPolicySettings;->mManualUpdatePolicy:Landroid/preference/PreferenceScreen;
+    iput-object v1, p0, Lcom/android/settings_ex/SecurityPolicySettings;->mManualUpdatePolicy:Landroid/preference/PreferenceScreen;
 
     .line 80
-    invoke-virtual {p0}, Lcom/android/settings/SecurityPolicySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecurityPolicySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -167,7 +167,7 @@
     .line 81
     const-string v1, "use_wifi_only"
 
-    invoke-direct {p0, v0, v1}, Lcom/android/settings/SecurityPolicySettings;->removePreferenceByKey(Landroid/preference/PreferenceScreen;Ljava/lang/String;)V
+    invoke-direct {p0, v0, v1}, Lcom/android/settings_ex/SecurityPolicySettings;->removePreferenceByKey(Landroid/preference/PreferenceScreen;Ljava/lang/String;)V
 
     .line 83
     :cond_1
@@ -217,7 +217,7 @@
     .line 140
     .local v3, "value":I
     :goto_0
-    iget-object v5, p0, Lcom/android/settings/SecurityPolicySettings;->mUseWifiOnly:Landroid/preference/SwitchPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/SecurityPolicySettings;->mUseWifiOnly:Landroid/preference/SwitchPreference;
 
     move-object v4, p2
 
@@ -230,7 +230,7 @@
     invoke-virtual {v5, v4}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 141
-    invoke-virtual {p0}, Lcom/android/settings/SecurityPolicySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecurityPolicySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -262,7 +262,7 @@
     invoke-virtual {v1, v8}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 145
-    invoke-virtual {p0}, Lcom/android/settings/SecurityPolicySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecurityPolicySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -308,7 +308,7 @@
     .line 148
     .restart local v3    # "value":I
     :goto_2
-    iget-object v7, p0, Lcom/android/settings/SecurityPolicySettings;->mAutoUpdatePolicy:Landroid/preference/SwitchPreference;
+    iget-object v7, p0, Lcom/android/settings_ex/SecurityPolicySettings;->mAutoUpdatePolicy:Landroid/preference/SwitchPreference;
 
     move-object v4, p2
 
@@ -321,7 +321,7 @@
     invoke-virtual {v7, v4}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 149
-    invoke-virtual {p0}, Lcom/android/settings/SecurityPolicySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecurityPolicySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -341,7 +341,7 @@
 
     .line 152
     .restart local v1    # "intent":Landroid/content/Intent;
-    invoke-virtual {p0}, Lcom/android/settings/SecurityPolicySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecurityPolicySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -373,7 +373,7 @@
     invoke-virtual {v0, v8}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 157
-    invoke-virtual {p0}, Lcom/android/settings/SecurityPolicySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecurityPolicySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -421,7 +421,7 @@
 
     .line 129
     .local v0, "intent":Landroid/content/Intent;
-    invoke-virtual {p0}, Lcom/android/settings/SecurityPolicySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecurityPolicySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -430,7 +430,7 @@
     .line 131
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v2
 
@@ -446,7 +446,7 @@
     const/4 v3, 0x1
 
     .line 88
-    invoke-virtual {p0}, Lcom/android/settings/SecurityPolicySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecurityPolicySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -462,7 +462,7 @@
 
     .line 114
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/SecurityPolicySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SecurityPolicySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -475,30 +475,30 @@
     if-ne v1, v3, :cond_0
 
     .line 115
-    iget-object v1, p0, Lcom/android/settings/SecurityPolicySettings;->mUseWifiOnly:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/SecurityPolicySettings;->mUseWifiOnly:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v3}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 119
     :goto_1
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 120
     return-void
 
     .line 91
     :pswitch_0
-    iget-object v1, p0, Lcom/android/settings/SecurityPolicySettings;->mAutoUpdatePolicy:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/SecurityPolicySettings;->mAutoUpdatePolicy:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v4}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 92
-    iget-object v1, p0, Lcom/android/settings/SecurityPolicySettings;->mAutoUpdatePolicy:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/SecurityPolicySettings;->mAutoUpdatePolicy:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v3}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 93
-    iget-object v1, p0, Lcom/android/settings/SecurityPolicySettings;->mManualUpdatePolicy:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/SecurityPolicySettings;->mManualUpdatePolicy:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v3}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -506,17 +506,17 @@
 
     .line 96
     :pswitch_1
-    iget-object v1, p0, Lcom/android/settings/SecurityPolicySettings;->mAutoUpdatePolicy:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/SecurityPolicySettings;->mAutoUpdatePolicy:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v3}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 97
-    iget-object v1, p0, Lcom/android/settings/SecurityPolicySettings;->mAutoUpdatePolicy:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/SecurityPolicySettings;->mAutoUpdatePolicy:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v3}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 98
-    iget-object v1, p0, Lcom/android/settings/SecurityPolicySettings;->mManualUpdatePolicy:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/SecurityPolicySettings;->mManualUpdatePolicy:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v3}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -524,17 +524,17 @@
 
     .line 101
     :pswitch_2
-    iget-object v1, p0, Lcom/android/settings/SecurityPolicySettings;->mAutoUpdatePolicy:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/SecurityPolicySettings;->mAutoUpdatePolicy:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v4}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 102
-    iget-object v1, p0, Lcom/android/settings/SecurityPolicySettings;->mAutoUpdatePolicy:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/SecurityPolicySettings;->mAutoUpdatePolicy:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v4}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 103
-    iget-object v1, p0, Lcom/android/settings/SecurityPolicySettings;->mManualUpdatePolicy:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/SecurityPolicySettings;->mManualUpdatePolicy:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v4}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -542,17 +542,17 @@
 
     .line 106
     :pswitch_3
-    iget-object v1, p0, Lcom/android/settings/SecurityPolicySettings;->mAutoUpdatePolicy:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/SecurityPolicySettings;->mAutoUpdatePolicy:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v3}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 107
-    iget-object v1, p0, Lcom/android/settings/SecurityPolicySettings;->mAutoUpdatePolicy:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/SecurityPolicySettings;->mAutoUpdatePolicy:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v4}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 108
-    iget-object v1, p0, Lcom/android/settings/SecurityPolicySettings;->mManualUpdatePolicy:Landroid/preference/PreferenceScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/SecurityPolicySettings;->mManualUpdatePolicy:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1, v3}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
@@ -560,7 +560,7 @@
 
     .line 117
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/SecurityPolicySettings;->mUseWifiOnly:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/SecurityPolicySettings;->mUseWifiOnly:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v4}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 

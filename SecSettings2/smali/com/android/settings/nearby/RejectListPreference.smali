@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/nearby/RejectListPreference;
+.class public Lcom/android/settings_ex/nearby/RejectListPreference;
 .super Landroid/preference/MultiSelectListPreference;
 .source "RejectListPreference.java"
 
@@ -12,7 +12,7 @@
 
 .field private mDialog:Landroid/app/AlertDialog;
 
-.field mEnabler:Lcom/android/settings/nearby/NearbyEnabler;
+.field mEnabler:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
 .field private mHandler:Landroid/os/Handler;
 
@@ -25,7 +25,7 @@
     .line 26
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/android/settings/nearby/RejectListPreference;->isEmptyPopup:Z
+    sput-boolean v0, Lcom/android/settings_ex/nearby/RejectListPreference;->isEmptyPopup:Z
 
     return-void
 .end method
@@ -42,33 +42,33 @@
     invoke-direct {p0, p1, p2}, Landroid/preference/MultiSelectListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 18
-    iput-object v0, p0, Lcom/android/settings/nearby/RejectListPreference;->context:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/nearby/RejectListPreference;->context:Landroid/content/Context;
 
     .line 24
-    iput-object v0, p0, Lcom/android/settings/nearby/RejectListPreference;->mDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/nearby/RejectListPreference;->mDialog:Landroid/app/AlertDialog;
 
     .line 36
-    iput-object v0, p0, Lcom/android/settings/nearby/RejectListPreference;->mEnabler:Lcom/android/settings/nearby/NearbyEnabler;
+    iput-object v0, p0, Lcom/android/settings_ex/nearby/RejectListPreference;->mEnabler:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
     .line 119
-    new-instance v0, Lcom/android/settings/nearby/RejectListPreference$3;
+    new-instance v0, Lcom/android/settings_ex/nearby/RejectListPreference$3;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/nearby/RejectListPreference$3;-><init>(Lcom/android/settings/nearby/RejectListPreference;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/nearby/RejectListPreference$3;-><init>(Lcom/android/settings_ex/nearby/RejectListPreference;)V
 
-    iput-object v0, p0, Lcom/android/settings/nearby/RejectListPreference;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/nearby/RejectListPreference;->mHandler:Landroid/os/Handler;
 
     .line 31
-    iput-object p1, p0, Lcom/android/settings/nearby/RejectListPreference;->context:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/nearby/RejectListPreference;->context:Landroid/content/Context;
 
     .line 32
     const v0, 0x7f0e10d5
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/nearby/RejectListPreference;->setPositiveButtonText(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/nearby/RejectListPreference;->setPositiveButtonText(I)V
 
     .line 33
     const v0, 0x7f0e10cd
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/nearby/RejectListPreference;->setNegativeButtonText(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/nearby/RejectListPreference;->setNegativeButtonText(I)V
 
     .line 34
     return-void
@@ -80,7 +80,7 @@
 
     .prologue
     .line 17
-    sput-boolean p0, Lcom/android/settings/nearby/RejectListPreference;->isEmptyPopup:Z
+    sput-boolean p0, Lcom/android/settings_ex/nearby/RejectListPreference;->isEmptyPopup:Z
 
     return p0
 .end method
@@ -90,14 +90,14 @@
 
     .prologue
     .line 43
-    iget-object v0, p0, Lcom/android/settings/nearby/RejectListPreference;->mEnabler:Lcom/android/settings/nearby/NearbyEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/nearby/RejectListPreference;->mEnabler:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
     if-eqz v0, :cond_0
 
     .line 44
-    iget-object v0, p0, Lcom/android/settings/nearby/RejectListPreference;->mEnabler:Lcom/android/settings/nearby/NearbyEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/nearby/RejectListPreference;->mEnabler:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
-    invoke-virtual {v0}, Lcom/android/settings/nearby/NearbyEnabler;->getRejectList()[Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->getRejectList()[Ljava/lang/String;
 
     move-result-object v0
 
@@ -116,14 +116,14 @@
 
     .prologue
     .line 50
-    iget-object v0, p0, Lcom/android/settings/nearby/RejectListPreference;->mEnabler:Lcom/android/settings/nearby/NearbyEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/nearby/RejectListPreference;->mEnabler:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
     if-eqz v0, :cond_0
 
     .line 51
-    iget-object v0, p0, Lcom/android/settings/nearby/RejectListPreference;->mEnabler:Lcom/android/settings/nearby/NearbyEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/nearby/RejectListPreference;->mEnabler:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
-    invoke-virtual {v0}, Lcom/android/settings/nearby/NearbyEnabler;->getRejectListValue()[Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/android/settings_ex/nearby/NearbyEnabler;->getRejectListValue()[Ljava/lang/String;
 
     move-result-object v0
 
@@ -151,7 +151,7 @@
 
     const-string v2, ""
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 59
     invoke-super {p0, p1}, Landroid/preference/MultiSelectListPreference;->onPrepareDialogBuilder(Landroid/app/AlertDialog$Builder;)V
@@ -160,13 +160,13 @@
     return-void
 .end method
 
-.method public setEnabler(Lcom/android/settings/nearby/NearbyEnabler;)V
+.method public setEnabler(Lcom/android/settings_ex/nearby/NearbyEnabler;)V
     .locals 0
-    .param p1, "enabler"    # Lcom/android/settings/nearby/NearbyEnabler;
+    .param p1, "enabler"    # Lcom/android/settings_ex/nearby/NearbyEnabler;
 
     .prologue
     .line 39
-    iput-object p1, p0, Lcom/android/settings/nearby/RejectListPreference;->mEnabler:Lcom/android/settings/nearby/NearbyEnabler;
+    iput-object p1, p0, Lcom/android/settings_ex/nearby/RejectListPreference;->mEnabler:Lcom/android/settings_ex/nearby/NearbyEnabler;
 
     .line 40
     return-void
@@ -186,22 +186,22 @@
 
     const-string v5, ""
 
-    invoke-static {v3, v4, v5}, Lcom/android/settings/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4, v5}, Lcom/android/settings_ex/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 66
-    invoke-direct {p0}, Lcom/android/settings/nearby/RejectListPreference;->getRejectList()[Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/nearby/RejectListPreference;->getRejectList()[Ljava/lang/String;
 
     move-result-object v1
 
     .line 67
     .local v1, "entries":[Ljava/lang/String;
-    invoke-direct {p0}, Lcom/android/settings/nearby/RejectListPreference;->getRejectListValue()[Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/nearby/RejectListPreference;->getRejectListValue()[Ljava/lang/String;
 
     move-result-object v2
 
     .line 68
     .local v2, "entryValues":[Ljava/lang/String;
-    sget-boolean v3, Lcom/android/settings/nearby/RejectListPreference;->isEmptyPopup:Z
+    sget-boolean v3, Lcom/android/settings_ex/nearby/RejectListPreference;->isEmptyPopup:Z
 
     if-eqz v3, :cond_0
 
@@ -212,7 +212,7 @@
 
     const-string v5, "isEmptyPopup is shown"
 
-    invoke-static {v3, v4, v5}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4, v5}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 101
     :goto_0
@@ -236,11 +236,11 @@
     :cond_1
     new-instance v3, Landroid/app/AlertDialog$Builder;
 
-    iget-object v4, p0, Lcom/android/settings/nearby/RejectListPreference;->context:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/nearby/RejectListPreference;->context:Landroid/content/Context;
 
     invoke-direct {v3, v4}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    iget-object v4, p0, Lcom/android/settings/nearby/RejectListPreference;->context:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/nearby/RejectListPreference;->context:Landroid/content/Context;
 
     const v5, 0x7f0e10db
 
@@ -252,7 +252,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/nearby/RejectListPreference;->context:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/nearby/RejectListPreference;->context:Landroid/content/Context;
 
     const v5, 0x7f0e10de
 
@@ -264,9 +264,9 @@
 
     move-result-object v3
 
-    new-instance v4, Lcom/android/settings/nearby/RejectListPreference$2;
+    new-instance v4, Lcom/android/settings_ex/nearby/RejectListPreference$2;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/nearby/RejectListPreference$2;-><init>(Lcom/android/settings/nearby/RejectListPreference;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/nearby/RejectListPreference$2;-><init>(Lcom/android/settings_ex/nearby/RejectListPreference;)V
 
     invoke-virtual {v3, v4}, Landroid/app/AlertDialog$Builder;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Landroid/app/AlertDialog$Builder;
 
@@ -274,9 +274,9 @@
 
     const v4, 0x7f0e10cc
 
-    new-instance v5, Lcom/android/settings/nearby/RejectListPreference$1;
+    new-instance v5, Lcom/android/settings_ex/nearby/RejectListPreference$1;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/nearby/RejectListPreference$1;-><init>(Lcom/android/settings/nearby/RejectListPreference;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/nearby/RejectListPreference$1;-><init>(Lcom/android/settings_ex/nearby/RejectListPreference;)V
 
     invoke-virtual {v3, v4, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -286,25 +286,25 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/nearby/RejectListPreference;->mDialog:Landroid/app/AlertDialog;
+    iput-object v3, p0, Lcom/android/settings_ex/nearby/RejectListPreference;->mDialog:Landroid/app/AlertDialog;
 
     .line 90
-    sput-boolean v6, Lcom/android/settings/nearby/RejectListPreference;->isEmptyPopup:Z
+    sput-boolean v6, Lcom/android/settings_ex/nearby/RejectListPreference;->isEmptyPopup:Z
 
     goto :goto_0
 
     .line 93
     :cond_2
-    invoke-virtual {p0, v1}, Lcom/android/settings/nearby/RejectListPreference;->setEntries([Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/nearby/RejectListPreference;->setEntries([Ljava/lang/CharSequence;)V
 
     .line 94
-    invoke-virtual {p0, v2}, Lcom/android/settings/nearby/RejectListPreference;->setEntryValues([Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/nearby/RejectListPreference;->setEntryValues([Ljava/lang/CharSequence;)V
 
     .line 96
     invoke-super {p0, p1}, Landroid/preference/MultiSelectListPreference;->showDialog(Landroid/os/Bundle;)V
 
     .line 98
-    invoke-virtual {p0}, Lcom/android/settings/nearby/RejectListPreference;->getDialog()Landroid/app/Dialog;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearby/RejectListPreference;->getDialog()Landroid/app/Dialog;
 
     move-result-object v0
 
@@ -312,7 +312,7 @@
 
     .line 99
     .local v0, "dialog":Landroid/app/AlertDialog;
-    iput-object v0, p0, Lcom/android/settings/nearby/RejectListPreference;->mDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/nearby/RejectListPreference;->mDialog:Landroid/app/AlertDialog;
 
     goto :goto_0
 .end method
@@ -328,15 +328,15 @@
 
     const-string v2, ""
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/nearby/DLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 106
-    iget-object v0, p0, Lcom/android/settings/nearby/RejectListPreference;->mDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/nearby/RejectListPreference;->mDialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
     .line 107
-    iget-object v0, p0, Lcom/android/settings/nearby/RejectListPreference;->mDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/nearby/RejectListPreference;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->isShowing()Z
 
@@ -351,15 +351,15 @@
 
     const-string v2, "refresh popup"
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/nearby/DLog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 109
-    iget-object v0, p0, Lcom/android/settings/nearby/RejectListPreference;->mDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/nearby/RejectListPreference;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 111
-    iget-object v0, p0, Lcom/android/settings/nearby/RejectListPreference;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/nearby/RejectListPreference;->mHandler:Landroid/os/Handler;
 
     const/16 v1, 0xbb9
 

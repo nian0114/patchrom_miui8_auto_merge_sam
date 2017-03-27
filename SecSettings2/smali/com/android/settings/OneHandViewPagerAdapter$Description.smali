@@ -1,11 +1,11 @@
-.class Lcom/android/settings/OneHandViewPagerAdapter$Description;
+.class Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;
 .super Ljava/lang/Object;
 .source "OneHandViewPagerAdapter.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/OneHandViewPagerAdapter;
+    value = Lcom/android/settings_ex/OneHandViewPagerAdapter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -37,16 +37,16 @@
     .line 48
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/OneHandViewPagerAdapter$Description;->key:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;->key:Ljava/lang/String;
 
     .line 49
-    iput v1, p0, Lcom/android/settings/OneHandViewPagerAdapter$Description;->animation:I
+    iput v1, p0, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;->animation:I
 
     .line 50
-    iput v1, p0, Lcom/android/settings/OneHandViewPagerAdapter$Description;->title:I
+    iput v1, p0, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;->title:I
 
     .line 51
-    iput v1, p0, Lcom/android/settings/OneHandViewPagerAdapter$Description;->summary:I
+    iput v1, p0, Lcom/android/settings_ex/OneHandViewPagerAdapter$Description;->summary:I
 
     .line 52
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/motion/MotionSettings2015$9;
+.class Lcom/android/settings_ex/motion/MotionSettings2015$9;
 .super Ljava/lang/Object;
 .source "MotionSettings2015.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/motion/MotionSettings2015;->maketurnOffUniversalPopup()V
+    value = Lcom/android/settings_ex/motion/MotionSettings2015;->maketurnOffUniversalPopup()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/motion/MotionSettings2015;
+.field final synthetic this$0:Lcom/android/settings_ex/motion/MotionSettings2015;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/motion/MotionSettings2015;)V
+.method constructor <init>(Lcom/android/settings_ex/motion/MotionSettings2015;)V
     .locals 0
 
     .prologue
     .line 415
-    iput-object p1, p0, Lcom/android/settings/motion/MotionSettings2015$9;->this$0:Lcom/android/settings/motion/MotionSettings2015;
+    iput-object p1, p0, Lcom/android/settings_ex/motion/MotionSettings2015$9;->this$0:Lcom/android/settings_ex/motion/MotionSettings2015;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,17 +44,17 @@
     const/4 v0, 0x0
 
     .line 418
-    iget-object v1, p0, Lcom/android/settings/motion/MotionSettings2015$9;->this$0:Lcom/android/settings/motion/MotionSettings2015;
+    iget-object v1, p0, Lcom/android/settings_ex/motion/MotionSettings2015$9;->this$0:Lcom/android/settings_ex/motion/MotionSettings2015;
 
-    # getter for: Lcom/android/settings/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
-    invoke-static {v1}, Lcom/android/settings/motion/MotionSettings2015;->access$000(Lcom/android/settings/motion/MotionSettings2015;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/motion/MotionSettings2015;->mPalmSwipeSwitch:Landroid/preference/SwitchPreference;
+    invoke-static {v1}, Lcom/android/settings_ex/motion/MotionSettings2015;->access$000(Lcom/android/settings_ex/motion/MotionSettings2015;)Landroid/preference/SwitchPreference;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/motion/MotionSettings2015$9;->this$0:Lcom/android/settings/motion/MotionSettings2015;
+    iget-object v2, p0, Lcom/android/settings_ex/motion/MotionSettings2015$9;->this$0:Lcom/android/settings_ex/motion/MotionSettings2015;
 
-    # getter for: Lcom/android/settings/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
-    invoke-static {v2}, Lcom/android/settings/motion/MotionSettings2015;->access$500(Lcom/android/settings/motion/MotionSettings2015;)Landroid/content/ContentResolver;
+    # getter for: Lcom/android/settings_ex/motion/MotionSettings2015;->mResolver:Landroid/content/ContentResolver;
+    invoke-static {v2}, Lcom/android/settings_ex/motion/MotionSettings2015;->access$500(Lcom/android/settings_ex/motion/MotionSettings2015;)Landroid/content/ContentResolver;
 
     move-result-object v2
 

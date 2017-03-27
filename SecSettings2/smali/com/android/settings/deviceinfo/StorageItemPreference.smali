@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/deviceinfo/StorageItemPreference;
+.class public Lcom/android/settings_ex/deviceinfo/StorageItemPreference;
 .super Landroid/preference/Preference;
 .source "StorageItemPreference.java"
 
@@ -31,7 +31,7 @@
     invoke-super {p0, p1}, Landroid/preference/Preference;->onBindView(Landroid/view/View;)V
 
     .line 34
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageItemPreference;->getTitleRes()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageItemPreference;->getTitleRes()I
 
     move-result v0
 
@@ -51,7 +51,7 @@
 
     .line 37
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageItemPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageItemPreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 

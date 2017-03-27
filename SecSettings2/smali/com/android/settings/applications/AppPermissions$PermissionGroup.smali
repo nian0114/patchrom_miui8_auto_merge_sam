@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/applications/AppPermissions$PermissionGroup;
+.class final Lcom/android/settings_ex/applications/AppPermissions$PermissionGroup;
 .super Ljava/lang/Object;
 .source "AppPermissions.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/AppPermissions;
+    value = Lcom/android/settings_ex/applications/AppPermissions;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,7 +21,7 @@
             "Landroid/util/ArrayMap",
             "<",
             "Ljava/lang/String;",
-            "Lcom/android/settings/applications/AppPermissions$Permission;",
+            "Lcom/android/settings_ex/applications/AppPermissions$Permission;",
             ">;"
         }
     .end annotation
@@ -41,7 +41,7 @@
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/applications/AppPermissions$PermissionGroup;->mPermissions:Landroid/util/ArrayMap;
+    iput-object v0, p0, Lcom/android/settings_ex/applications/AppPermissions$PermissionGroup;->mPermissions:Landroid/util/ArrayMap;
 
     return-void
 .end method

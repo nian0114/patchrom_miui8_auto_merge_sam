@@ -1,13 +1,13 @@
-.class public Lcom/android/settings/fingerprint/FingerprintEntry;
+.class public Lcom/android/settings_ex/fingerprint/FingerprintEntry;
 .super Landroid/app/Activity;
 .source "FingerprintEntry.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 .field public static isSearchEntry:Z
 
@@ -36,14 +36,14 @@
     .line 77
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/android/settings/fingerprint/FingerprintEntry;->isSearchEntry:Z
+    sput-boolean v0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->isSearchEntry:Z
 
     .line 369
-    new-instance v0, Lcom/android/settings/fingerprint/FingerprintEntry$6;
+    new-instance v0, Lcom/android/settings_ex/fingerprint/FingerprintEntry$6;
 
-    invoke-direct {v0}, Lcom/android/settings/fingerprint/FingerprintEntry$6;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry$6;-><init>()V
 
-    sput-object v0, Lcom/android/settings/fingerprint/FingerprintEntry;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -58,86 +58,86 @@
     .line 64
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->key:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->key:Ljava/lang/String;
 
     .line 65
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mToken:[B
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mToken:[B
 
     .line 66
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mIdentifyFingerprint:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mIdentifyFingerprint:Z
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/fingerprint/FingerprintEntry;)Landroid/content/Context;
+.method static synthetic access$000(Lcom/android/settings_ex/fingerprint/FingerprintEntry;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintEntry;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintEntry;
 
     .prologue
     .line 56
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/fingerprint/FingerprintEntry;)Landroid/os/Handler;
+.method static synthetic access$100(Lcom/android/settings_ex/fingerprint/FingerprintEntry;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintEntry;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintEntry;
 
     .prologue
     .line 56
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic access$202(Lcom/android/settings/fingerprint/FingerprintEntry;Z)Z
+.method static synthetic access$202(Lcom/android/settings_ex/fingerprint/FingerprintEntry;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintEntry;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintEntry;
     .param p1, "x1"    # Z
 
     .prologue
     .line 56
-    iput-boolean p1, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mIdentifyFingerprint:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mIdentifyFingerprint:Z
 
     return p1
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/fingerprint/FingerprintEntry;Landroid/content/Context;)V
+.method static synthetic access$300(Lcom/android/settings_ex/fingerprint/FingerprintEntry;Landroid/content/Context;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintEntry;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintEntry;
     .param p1, "x1"    # Landroid/content/Context;
 
     .prologue
     .line 56
-    invoke-direct {p0, p1}, Lcom/android/settings/fingerprint/FingerprintEntry;->startFragment(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->startFragment(Landroid/content/Context;)V
 
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/fingerprint/FingerprintEntry;I)V
+.method static synthetic access$400(Lcom/android/settings_ex/fingerprint/FingerprintEntry;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintEntry;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintEntry;
     .param p1, "x1"    # I
 
     .prologue
     .line 56
-    invoke-direct {p0, p1}, Lcom/android/settings/fingerprint/FingerprintEntry;->showSensorErrorDialog(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->showSensorErrorDialog(I)V
 
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/fingerprint/FingerprintEntry;)V
+.method static synthetic access$500(Lcom/android/settings_ex/fingerprint/FingerprintEntry;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/FingerprintEntry;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/FingerprintEntry;
 
     .prologue
     .line 56
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintEntry;->showDatabaseFailureDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->showDatabaseFailureDialog()V
 
     return-void
 .end method
@@ -147,7 +147,7 @@
 
     .prologue
     .line 133
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintEntry;->identifyFinger()I
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->identifyFinger()I
 
     move-result v0
 
@@ -188,7 +188,7 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 137
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintEntry;->showDatabaseFailureDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->showDatabaseFailureDialog()V
 
     .line 148
     :cond_0
@@ -209,12 +209,12 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 140
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
 
-    invoke-direct {p0, v1}, Lcom/android/settings/fingerprint/FingerprintEntry;->startFragment(Landroid/content/Context;)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->startFragment(Landroid/content/Context;)V
 
     .line 141
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintEntry;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->finish()V
 
     goto :goto_0
 
@@ -232,7 +232,7 @@
     if-ne v0, v1, :cond_0
 
     .line 145
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintEntry;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->finish()V
 
     goto :goto_0
 .end method
@@ -244,7 +244,7 @@
     const/4 v2, 0x0
 
     .line 151
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mGFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mGFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     const/16 v1, 0x3e8
 
@@ -308,7 +308,7 @@
     .line 233
     new-instance v2, Landroid/os/Handler;
 
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
 
@@ -316,16 +316,16 @@
 
     invoke-direct {v2, v3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    iput-object v2, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mHandler:Landroid/os/Handler;
+    iput-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mHandler:Landroid/os/Handler;
 
     .line 235
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mSFingerprintManager:Lcom/samsung/android/fingerprint/FingerprintManager;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mSFingerprintManager:Lcom/samsung/android/fingerprint/FingerprintManager;
 
-    iget-object v3, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
 
-    new-instance v4, Lcom/android/settings/fingerprint/FingerprintEntry$1;
+    new-instance v4, Lcom/android/settings_ex/fingerprint/FingerprintEntry$1;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/fingerprint/FingerprintEntry$1;-><init>(Lcom/android/settings/fingerprint/FingerprintEntry;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry$1;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintEntry;)V
 
     invoke-virtual {v2, v3, v4, v0}, Lcom/samsung/android/fingerprint/FingerprintManager;->identifyWithDialog(Landroid/content/Context;Lcom/samsung/android/fingerprint/IFingerprintClient;Landroid/os/Bundle;)I
 
@@ -356,17 +356,17 @@
 
     .line 189
     .local v0, "intent":Landroid/content/Intent;
-    new-instance v1, Lcom/android/settings/ChooseLockSettingsHelper;
+    new-instance v1, Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;)V
 
     .line 190
-    .local v1, "helper":Lcom/android/settings/ChooseLockSettingsHelper;
+    .local v1, "helper":Lcom/android/settings_ex/ChooseLockSettingsHelper;
     const/16 v2, 0x65
 
     const v3, 0x7f0e0206
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/fingerprint/FingerprintEntry;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -374,7 +374,7 @@
 
     move-object v5, v4
 
-    invoke-virtual/range {v1 .. v7}, Lcom/android/settings/ChooseLockSettingsHelper;->launchConfirmationActivity(ILjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;J)Z
+    invoke-virtual/range {v1 .. v7}, Lcom/android/settings_ex/ChooseLockSettingsHelper;->launchConfirmationActivity(ILjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;J)Z
 
     move-result v2
 
@@ -388,12 +388,12 @@
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 194
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mGFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mGFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     invoke-virtual {v2}, Landroid/hardware/fingerprint/FingerprintManager;->postEnroll()I
 
     .line 195
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintEntry;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->finish()V
 
     .line 197
     :cond_0
@@ -407,7 +407,7 @@
     .line 315
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
 
     invoke-direct {v1, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -425,9 +425,9 @@
 
     const v2, 0x104000a
 
-    new-instance v3, Lcom/android/settings/fingerprint/FingerprintEntry$4;
+    new-instance v3, Lcom/android/settings_ex/fingerprint/FingerprintEntry$4;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/fingerprint/FingerprintEntry$4;-><init>(Lcom/android/settings/fingerprint/FingerprintEntry;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry$4;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintEntry;)V
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -439,9 +439,9 @@
 
     .line 325
     .local v0, "dialog":Landroid/app/AlertDialog;
-    new-instance v1, Lcom/android/settings/fingerprint/FingerprintEntry$5;
+    new-instance v1, Lcom/android/settings_ex/fingerprint/FingerprintEntry$5;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/fingerprint/FingerprintEntry$5;-><init>(Lcom/android/settings/fingerprint/FingerprintEntry;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry$5;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintEntry;)V
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
@@ -464,7 +464,7 @@
 
     const-string v1, "VZW"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v2
 
@@ -481,7 +481,7 @@
     :cond_0
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
-    iget-object v2, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
 
     invoke-direct {v1, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -497,9 +497,9 @@
 
     const v2, 0x104000a
 
-    new-instance v3, Lcom/android/settings/fingerprint/FingerprintEntry$2;
+    new-instance v3, Lcom/android/settings_ex/fingerprint/FingerprintEntry$2;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/fingerprint/FingerprintEntry$2;-><init>(Lcom/android/settings/fingerprint/FingerprintEntry;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry$2;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintEntry;)V
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -511,9 +511,9 @@
 
     .line 305
     .local v0, "dialog":Landroid/app/AlertDialog;
-    new-instance v1, Lcom/android/settings/fingerprint/FingerprintEntry$3;
+    new-instance v1, Lcom/android/settings_ex/fingerprint/FingerprintEntry$3;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/fingerprint/FingerprintEntry$3;-><init>(Lcom/android/settings/fingerprint/FingerprintEntry;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry$3;-><init>(Lcom/android/settings_ex/fingerprint/FingerprintEntry;)V
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
@@ -545,7 +545,7 @@
     if-nez v7, :cond_1
 
     .line 338
-    iget-object v7, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
+    iget-object v7, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
 
     .line 364
     :cond_0
@@ -562,12 +562,12 @@
     .local v2, "args":Landroid/os/Bundle;
     const-string v0, ":settings:fragment_args_key"
 
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->key:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->key:Ljava/lang/String;
 
     invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 342
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->key:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->key:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -581,7 +581,7 @@
     invoke-virtual {v2, v0, v5}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 344
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->key:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->key:Ljava/lang/String;
 
     const-string v1, "support_samsung_account"
 
@@ -591,7 +591,7 @@
 
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->key:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->key:Ljava/lang/String;
 
     const-string v1, "support_web_signin"
 
@@ -601,7 +601,7 @@
 
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->key:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->key:Ljava/lang/String;
 
     const-string v1, "set_screen_lock "
 
@@ -611,7 +611,7 @@
 
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->key:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->key:Ljava/lang/String;
 
     const-string v1, "alipay_payment"
 
@@ -621,7 +621,7 @@
 
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->key:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->key:Ljava/lang/String;
 
     const-string v1, "samsung_pay"
 
@@ -633,7 +633,7 @@
 
     .line 346
     :cond_2
-    sput-boolean v5, Lcom/android/settings/fingerprint/FingerprintEntry;->isSearchEntry:Z
+    sput-boolean v5, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->isSearchEntry:Z
 
     .line 347
     const-string v0, "FpstFingerprintEntry"
@@ -648,7 +648,7 @@
 
     move-result-object v1
 
-    iget-object v5, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->key:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->key:Ljava/lang/String;
 
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -662,14 +662,14 @@
 
     .line 350
     :cond_3
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mToken:[B
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mToken:[B
 
     if-eqz v0, :cond_4
 
     .line 351
     const-string v0, "tokenFromLock"
 
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mToken:[B
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mToken:[B
 
     invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
 
@@ -677,19 +677,19 @@
     :cond_4
     const-string v0, "identifyFingerprint"
 
-    iget-boolean v1, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mIdentifyFingerprint:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mIdentifyFingerprint:Z
 
     invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 355
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
     .line 356
-    invoke-static {}, Lcom/android/settings/SettingsActivity;->getSettingsActivityContext()Landroid/content/Context;
+    invoke-static {}, Lcom/android/settings_ex/SettingsActivity;->getSettingsActivityContext()Landroid/content/Context;
 
     move-result-object v7
 
@@ -699,13 +699,13 @@
     move-object v0, v7
 
     .line 359
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     const-string v1, "com.android.settings.fingerprint.FingerprintSettings"
 
     move-object v5, v4
 
-    invoke-virtual/range {v0 .. v6}, Lcom/android/settings/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
+    invoke-virtual/range {v0 .. v6}, Lcom/android/settings_ex/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
 
     goto/16 :goto_0
 
@@ -723,7 +723,7 @@
 
     move-object v13, v4
 
-    invoke-static/range {v7 .. v13}, Lcom/android/settings/Utils;->startWithFragment(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Fragment;IILjava/lang/CharSequence;)V
+    invoke-static/range {v7 .. v13}, Lcom/android/settings_ex/Utils;->startWithFragment(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Fragment;IILjava/lang/CharSequence;)V
 
     goto/16 :goto_0
 .end method
@@ -800,16 +800,16 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mToken:[B
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mToken:[B
 
     .line 169
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
 
-    invoke-direct {p0, v0}, Lcom/android/settings/fingerprint/FingerprintEntry;->startFragment(Landroid/content/Context;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->startFragment(Landroid/content/Context;)V
 
     .line 170
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintEntry;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->finish()V
 
     .line 182
     :goto_0
@@ -817,12 +817,12 @@
 
     .line 172
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mGFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mGFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     if-eqz v0, :cond_2
 
     .line 173
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mGFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mGFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     invoke-virtual {v0}, Landroid/hardware/fingerprint/FingerprintManager;->isEnrollSession()Z
 
@@ -831,13 +831,13 @@
     if-eqz v0, :cond_2
 
     .line 174
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mGFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mGFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     invoke-virtual {v0}, Landroid/hardware/fingerprint/FingerprintManager;->postEnroll()I
 
     .line 177
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintEntry;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->finish()V
 
     goto :goto_0
 
@@ -889,19 +889,19 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 87
-    iput-object p0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
+    iput-object p0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
 
     .line 88
-    sput-boolean v4, Lcom/android/settings/fingerprint/FingerprintEntry;->isSearchEntry:Z
+    sput-boolean v4, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->isSearchEntry:Z
 
     .line 89
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintEntry;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintEntry;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -914,7 +914,7 @@
     if-eqz v0, :cond_0
 
     .line 90
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintEntry;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -924,11 +924,11 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->key:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->key:Ljava/lang/String;
 
     .line 93
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
 
     const/4 v1, 0x2
 
@@ -936,21 +936,21 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mSFingerprintManager:Lcom/samsung/android/fingerprint/FingerprintManager;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mSFingerprintManager:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     .line 94
     const-string v0, "fingerprint"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/fingerprint/FingerprintEntry;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/hardware/fingerprint/FingerprintManager;
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mGFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mGFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     .line 96
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mGFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mGFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     if-nez v0, :cond_1
 
@@ -962,7 +962,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secE(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 98
-    invoke-direct {p0, v10}, Lcom/android/settings/fingerprint/FingerprintEntry;->showSensorErrorDialog(I)V
+    invoke-direct {p0, v10}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->showSensorErrorDialog(I)V
 
     .line 130
     :goto_0
@@ -970,7 +970,7 @@
 
     .line 100
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mGFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mGFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     const/16 v1, 0xb
 
@@ -996,26 +996,26 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secE(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 102
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintEntry;->deleteAllFingerprints()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->deleteAllFingerprints()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 103
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintEntry;->showDatabaseFailureDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->showDatabaseFailureDialog()V
 
     goto :goto_0
 
     .line 105
     :cond_2
-    invoke-direct {p0, v10}, Lcom/android/settings/fingerprint/FingerprintEntry;->showSensorErrorDialog(I)V
+    invoke-direct {p0, v10}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->showSensorErrorDialog(I)V
 
     goto :goto_0
 
     .line 109
     :cond_3
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mGFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mGFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     invoke-virtual {v0}, Landroid/hardware/fingerprint/FingerprintManager;->isHardwareDetected()Z
 
@@ -1023,7 +1023,7 @@
 
     .line 110
     .local v6, "isHWdetected":Z
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mGFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mGFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     invoke-virtual {v0}, Landroid/hardware/fingerprint/FingerprintManager;->requestGetSensorStatus()I
 
@@ -1076,13 +1076,13 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secE(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 113
-    invoke-direct {p0, v10}, Lcom/android/settings/fingerprint/FingerprintEntry;->showSensorErrorDialog(I)V
+    invoke-direct {p0, v10}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->showSensorErrorDialog(I)V
 
     goto :goto_0
 
     .line 118
     :cond_5
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
 
     const-string v1, "keyguard"
 
@@ -1101,7 +1101,7 @@
     if-nez v0, :cond_6
 
     .line 121
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintEntry;->authenticateFingerprint()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->authenticateFingerprint()V
 
     goto :goto_0
 
@@ -1109,7 +1109,7 @@
     :cond_6
     new-instance v8, Lcom/android/internal/widget/LockPatternUtils;
 
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
 
     invoke-direct {v8, v0}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
@@ -1128,13 +1128,13 @@
     if-ne v0, v1, :cond_7
 
     .line 125
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintEntry;->authenticateFingerprint()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->authenticateFingerprint()V
 
     goto/16 :goto_0
 
     .line 127
     :cond_7
-    invoke-direct {p0}, Lcom/android/settings/fingerprint/FingerprintEntry;->launchChooseOrConfirmLock()V
+    invoke-direct {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->launchChooseOrConfirmLock()V
 
     goto/16 :goto_0
 .end method
@@ -1172,12 +1172,12 @@
     invoke-super {p0}, Landroid/app/Activity;->onStop()V
 
     .line 212
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mHandler:Landroid/os/Handler;
 
     if-eqz v1, :cond_0
 
     .line 213
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x0
 
@@ -1185,7 +1185,7 @@
 
     .line 216
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->mContext:Landroid/content/Context;
 
     const-string v2, "keyguard"
 
@@ -1204,7 +1204,7 @@
     if-nez v1, :cond_1
 
     .line 219
-    invoke-virtual {p0}, Lcom/android/settings/fingerprint/FingerprintEntry;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/fingerprint/FingerprintEntry;->finish()V
 
     .line 221
     :cond_1

@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/TRoamingSettings$IsNotRoamingFragment;
+.class public Lcom/android/settings_ex/TRoamingSettings$IsNotRoamingFragment;
 .super Landroid/app/DialogFragment;
 .source "TRoamingSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/TRoamingSettings;
+    value = Lcom/android/settings_ex/TRoamingSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,13 +25,13 @@
     return-void
 .end method
 
-.method public static show(Lcom/android/settings/TRoamingSettings;)V
+.method public static show(Lcom/android/settings_ex/TRoamingSettings;)V
     .locals 3
-    .param p0, "parent"    # Lcom/android/settings/TRoamingSettings;
+    .param p0, "parent"    # Lcom/android/settings_ex/TRoamingSettings;
 
     .prologue
     .line 593
-    invoke-virtual {p0}, Lcom/android/settings/TRoamingSettings;->isAdded()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/TRoamingSettings;->isAdded()Z
 
     move-result v1
 
@@ -43,24 +43,24 @@
 
     .line 595
     :cond_0
-    new-instance v0, Lcom/android/settings/TRoamingSettings$IsNotRoamingFragment;
+    new-instance v0, Lcom/android/settings_ex/TRoamingSettings$IsNotRoamingFragment;
 
-    invoke-direct {v0}, Lcom/android/settings/TRoamingSettings$IsNotRoamingFragment;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/TRoamingSettings$IsNotRoamingFragment;-><init>()V
 
     .line 596
-    .local v0, "dialog":Lcom/android/settings/TRoamingSettings$IsNotRoamingFragment;
+    .local v0, "dialog":Lcom/android/settings_ex/TRoamingSettings$IsNotRoamingFragment;
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p0, v1}, Lcom/android/settings/TRoamingSettings$IsNotRoamingFragment;->setTargetFragment(Landroid/app/Fragment;I)V
+    invoke-virtual {v0, p0, v1}, Lcom/android/settings_ex/TRoamingSettings$IsNotRoamingFragment;->setTargetFragment(Landroid/app/Fragment;I)V
 
     .line 597
-    invoke-virtual {p0}, Lcom/android/settings/TRoamingSettings;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/TRoamingSettings;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
 
     const-string v2, "DialogIsNotRoaming"
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/TRoamingSettings$IsNotRoamingFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/TRoamingSettings$IsNotRoamingFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -75,8 +75,8 @@
     .line 602
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    # getter for: Lcom/android/settings/TRoamingSettings;->mContext:Landroid/content/Context;
-    invoke-static {}, Lcom/android/settings/TRoamingSettings;->access$1100()Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/TRoamingSettings;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/android/settings_ex/TRoamingSettings;->access$1100()Landroid/content/Context;
 
     move-result-object v1
 
@@ -96,9 +96,9 @@
     .line 607
     const v1, 0x7f0e083a
 
-    new-instance v2, Lcom/android/settings/TRoamingSettings$IsNotRoamingFragment$1;
+    new-instance v2, Lcom/android/settings_ex/TRoamingSettings$IsNotRoamingFragment$1;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/TRoamingSettings$IsNotRoamingFragment$1;-><init>(Lcom/android/settings/TRoamingSettings$IsNotRoamingFragment;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/TRoamingSettings$IsNotRoamingFragment$1;-><init>(Lcom/android/settings_ex/TRoamingSettings$IsNotRoamingFragment;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 

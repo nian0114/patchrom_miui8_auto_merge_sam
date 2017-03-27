@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/bluetooth/BluetoothNoDevicePreference;
+.class public Lcom/android/settings_ex/bluetooth/BluetoothNoDevicePreference;
 .super Landroid/preference/Preference;
 .source "BluetoothNoDevicePreference.java"
 
@@ -20,10 +20,10 @@
     invoke-direct {p0, p1}, Landroid/preference/Preference;-><init>(Landroid/content/Context;)V
 
     .line 51
-    iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothNoDevicePreference;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/bluetooth/BluetoothNoDevicePreference;->mContext:Landroid/content/Context;
 
     .line 52
-    iput p2, p0, Lcom/android/settings/bluetooth/BluetoothNoDevicePreference;->mDividerHeight:I
+    iput p2, p0, Lcom/android/settings_ex/bluetooth/BluetoothNoDevicePreference;->mDividerHeight:I
 
     .line 53
     return-void
@@ -126,7 +126,7 @@
 
     sub-int v3, v1, v3
 
-    iget v4, p0, Lcom/android/settings/bluetooth/BluetoothNoDevicePreference;->mDividerHeight:I
+    iget v4, p0, Lcom/android/settings_ex/bluetooth/BluetoothNoDevicePreference;->mDividerHeight:I
 
     sub-int v1, v3, v4
 
@@ -183,7 +183,7 @@
     .line 59
     new-instance v0, Landroid/widget/LinearLayout;
 
-    invoke-virtual {p0}, Lcom/android/settings/bluetooth/BluetoothNoDevicePreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/bluetooth/BluetoothNoDevicePreference;->getContext()Landroid/content/Context;
 
     move-result-object v2
 

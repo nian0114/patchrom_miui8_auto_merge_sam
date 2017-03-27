@@ -19,7 +19,7 @@
                 <LinearLayout android:orientation="vertical" android:id="@id/frefsbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="0.0dip" style="?android:attr/actionBarStyle">
                     <Toolbar android:id="@id/prefs_toolbar" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:paddingEnd="12.0dip" android:contentInsetStart="@dimen/actionbar_contentInsetStart" />
                 </LinearLayout>
-                <com.android.settings.widget.SwitchBar android:theme="?switchBarTheme" android:id="@id/switch_bar" android:background="@drawable/switchbar_background" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:layout_marginTop="@dimen/switchbar_outer_margin_top" android:layout_marginStart="@dimen/switchbar_outer_margin_start" android:layout_marginEnd="@dimen/switchbar_outer_margin_end" android:elevation="@dimen/sub_app_bar_shadow_elevation" />
+                <com.android.settings_ex.widget.SwitchBar android:theme="?switchBarTheme" android:id="@id/switch_bar" android:background="@drawable/switchbar_background" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:layout_marginTop="@dimen/switchbar_outer_margin_top" android:layout_marginStart="@dimen/switchbar_outer_margin_start" android:layout_marginEnd="@dimen/switchbar_outer_margin_end" android:elevation="@dimen/sub_app_bar_shadow_elevation" />
                 <android.preference.PreferenceFrameLayout android:id="@id/prefs" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
             </LinearLayout>
         </LinearLayout>

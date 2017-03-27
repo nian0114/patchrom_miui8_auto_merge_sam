@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/nearbyscan/NearbyScanningBroadCastReciever;
+.class public Lcom/android/settings_ex/nearbyscan/NearbyScanningBroadCastReciever;
 .super Landroid/content/BroadcastReceiver;
 .source "NearbyScanningBroadCastReciever.java"
 
@@ -99,7 +99,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/android/settings/nearbyscan/Util;->getDBInt(Landroid/content/ContentResolver;)I
+    invoke-static {v3}, Lcom/android/settings_ex/nearbyscan/Util;->getDBInt(Landroid/content/ContentResolver;)I
 
     move-result v2
 
@@ -128,7 +128,7 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 26
-    invoke-static {p1}, Lcom/android/settings/nearbyscan/Util;->getAirPlaneModeStatus(Landroid/content/Context;)I
+    invoke-static {p1}, Lcom/android/settings_ex/nearbyscan/Util;->getAirPlaneModeStatus(Landroid/content/Context;)I
 
     move-result v3
 
@@ -138,7 +138,7 @@
     if-ne v2, v6, :cond_1
 
     .line 28
-    invoke-static {p1, v7}, Lcom/android/settings/nearbyscan/Util;->setDBInt(Landroid/content/Context;I)V
+    invoke-static {p1, v7}, Lcom/android/settings_ex/nearbyscan/Util;->setDBInt(Landroid/content/Context;I)V
 
     goto :goto_1
 
@@ -147,7 +147,7 @@
     if-ne v2, v7, :cond_1
 
     .line 32
-    invoke-static {p1, v6}, Lcom/android/settings/nearbyscan/Util;->setDBInt(Landroid/content/Context;I)V
+    invoke-static {p1, v6}, Lcom/android/settings_ex/nearbyscan/Util;->setDBInt(Landroid/content/Context;I)V
 
     goto :goto_1
 
@@ -205,7 +205,7 @@
     .line 39
     const-string v3, "com.samsung.android.beaconmanager"
 
-    invoke-static {p1, v3}, Lcom/android/settings/nearbyscan/Util;->sendInstallBroadcast(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lcom/android/settings_ex/nearbyscan/Util;->sendInstallBroadcast(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -247,7 +247,7 @@
     .line 42
     const-string v3, "com.samsung.android.easysetup"
 
-    invoke-static {p1, v3}, Lcom/android/settings/nearbyscan/Util;->sendInstallBroadcast(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lcom/android/settings_ex/nearbyscan/Util;->sendInstallBroadcast(Landroid/content/Context;Ljava/lang/String;)V
 
     goto/16 :goto_1
 .end method

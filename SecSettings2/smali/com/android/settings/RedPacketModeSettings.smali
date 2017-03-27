@@ -1,15 +1,15 @@
-.class public Lcom/android/settings/RedPacketModeSettings;
+.class public Lcom/android/settings_ex/RedPacketModeSettings;
 .super Landroid/app/Fragment;
 .source "RedPacketModeSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # instance fields
 .field private mRedPackedModeObserver:Landroid/database/ContentObserver;
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 
 # direct methods
@@ -23,29 +23,29 @@
     .line 49
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v0, p0, Lcom/android/settings_ex/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 51
-    new-instance v0, Lcom/android/settings/RedPacketModeSettings$1;
+    new-instance v0, Lcom/android/settings_ex/RedPacketModeSettings$1;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/RedPacketModeSettings$1;-><init>(Lcom/android/settings/RedPacketModeSettings;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/RedPacketModeSettings$1;-><init>(Lcom/android/settings_ex/RedPacketModeSettings;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/RedPacketModeSettings;->mRedPackedModeObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/RedPacketModeSettings;->mRedPackedModeObserver:Landroid/database/ContentObserver;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/RedPacketModeSettings;)Lcom/android/settings/widget/SwitchBar;
+.method static synthetic access$000(Lcom/android/settings_ex/RedPacketModeSettings;)Lcom/android/settings_ex/widget/SwitchBar;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/RedPacketModeSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/RedPacketModeSettings;
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/android/settings/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     return-object v0
 .end method
@@ -61,29 +61,29 @@
     invoke-super {p0, p1}, Landroid/app/Fragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 68
-    invoke-virtual {p0}, Lcom/android/settings/RedPacketModeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RedPacketModeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 69
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v1, p0, Lcom/android/settings_ex/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 70
-    iget-object v1, p0, Lcom/android/settings/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v1, :cond_0
 
     .line 71
-    iget-object v1, p0, Lcom/android/settings/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 73
     :cond_0
@@ -131,14 +131,14 @@
     invoke-super {p0}, Landroid/app/Fragment;->onDestroyView()V
 
     .line 125
-    iget-object v0, p0, Lcom/android/settings/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_0
 
     .line 126
-    iget-object v0, p0, Lcom/android/settings/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 127
     :cond_0
@@ -153,7 +153,7 @@
     invoke-super {p0}, Landroid/app/Fragment;->onPause()V
 
     .line 116
-    invoke-virtual {p0}, Lcom/android/settings/RedPacketModeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RedPacketModeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -161,19 +161,19 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/RedPacketModeSettings;->mRedPackedModeObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/RedPacketModeSettings;->mRedPackedModeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 117
-    iget-object v0, p0, Lcom/android/settings/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_0
 
     .line 118
-    iget-object v0, p0, Lcom/android/settings/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 120
     :cond_0
@@ -192,7 +192,7 @@
     invoke-super {p0}, Landroid/app/Fragment;->onResume()V
 
     .line 104
-    invoke-virtual {p0}, Lcom/android/settings/RedPacketModeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RedPacketModeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -206,17 +206,17 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/RedPacketModeSettings;->mRedPackedModeObserver:Landroid/database/ContentObserver;
+    iget-object v4, p0, Lcom/android/settings_ex/RedPacketModeSettings;->mRedPackedModeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v2, v3, v0, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 106
-    iget-object v2, p0, Lcom/android/settings/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v2, :cond_0
 
     .line 107
-    invoke-virtual {p0}, Lcom/android/settings/RedPacketModeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RedPacketModeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -235,14 +235,14 @@
     .line 108
     .local v0, "enabled":Z
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, v0}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 109
-    iget-object v1, p0, Lcom/android/settings/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v1, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 111
     .end local v0    # "enabled":Z
@@ -267,7 +267,7 @@
     const/4 v4, 0x0
 
     .line 82
-    invoke-virtual {p0}, Lcom/android/settings/RedPacketModeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RedPacketModeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -288,7 +288,7 @@
     .line 83
     .local v2, "showDialog":Z
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/RedPacketModeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RedPacketModeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -360,9 +360,9 @@
     if-eqz v2, :cond_3
 
     .line 87
-    iget-object v3, p0, Lcom/android/settings/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/RedPacketModeSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 88
     new-instance v1, Landroid/content/Intent;
@@ -373,7 +373,7 @@
 
     .line 89
     .local v1, "intent":Landroid/content/Intent;
-    invoke-virtual {p0}, Lcom/android/settings/RedPacketModeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RedPacketModeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -385,7 +385,7 @@
     if-eqz p2, :cond_0
 
     .line 94
-    invoke-virtual {p0}, Lcom/android/settings/RedPacketModeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RedPacketModeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -395,7 +395,7 @@
 
     const/16 v6, 0x3e8
 
-    invoke-static {v3, v4, v5, v6}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-static {v3, v4, v5, v6}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 99
     :cond_0
@@ -420,7 +420,7 @@
     .line 91
     .restart local v0    # "enabled":Z
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/RedPacketModeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/RedPacketModeSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 

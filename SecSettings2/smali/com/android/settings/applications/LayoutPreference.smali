@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/applications/LayoutPreference;
+.class public Lcom/android/settings_ex/applications/LayoutPreference;
 .super Landroid/preference/Preference;
 .source "LayoutPreference.java"
 
@@ -20,7 +20,7 @@
     invoke-direct {p0, p1, p2}, Landroid/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 36
-    invoke-virtual {p0, v6}, Lcom/android/settings/applications/LayoutPreference;->setSelectable(Z)V
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/applications/LayoutPreference;->setSelectable(Z)V
 
     .line 37
     sget-object v4, Lcom/android/internal/R$styleable;->Preference:[I
@@ -52,7 +52,7 @@
 
     .line 45
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/applications/LayoutPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/LayoutPreference;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -83,14 +83,14 @@
     .line 50
     const/4 v4, 0x1
 
-    invoke-static {v1, v4}, Lcom/android/settings/Utils;->forceCustomPadding(Landroid/view/View;Z)V
+    invoke-static {v1, v4}, Lcom/android/settings_ex/Utils;->forceCustomPadding(Landroid/view/View;Z)V
 
     .line 52
     :cond_1
-    iput-object v3, p0, Lcom/android/settings/applications/LayoutPreference;->mRootView:Landroid/view/View;
+    iput-object v3, p0, Lcom/android/settings_ex/applications/LayoutPreference;->mRootView:Landroid/view/View;
 
     .line 53
-    invoke-virtual {p0, v6}, Lcom/android/settings/applications/LayoutPreference;->setShouldDisableView(Z)V
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/applications/LayoutPreference;->setShouldDisableView(Z)V
 
     .line 54
     return-void
@@ -104,7 +104,7 @@
 
     .prologue
     .line 67
-    iget-object v0, p0, Lcom/android/settings/applications/LayoutPreference;->mRootView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/LayoutPreference;->mRootView:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -128,7 +128,7 @@
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/android/settings/applications/LayoutPreference;->mRootView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/LayoutPreference;->mRootView:Landroid/view/View;
 
     return-object v0
 .end method

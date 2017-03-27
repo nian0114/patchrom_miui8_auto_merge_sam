@@ -1,4 +1,4 @@
-.class Lcom/android/settings/networkconnect/DataWarningLimitActivity$1$1;
+.class Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity$1$1;
 .super Ljava/lang/Object;
 .source "DataWarningLimitActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/networkconnect/DataWarningLimitActivity$1;->onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    value = Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity$1;->onCheckedChanged(Landroid/widget/CompoundButton;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/networkconnect/DataWarningLimitActivity$1;
+.field final synthetic this$1:Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity$1;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/networkconnect/DataWarningLimitActivity$1;)V
+.method constructor <init>(Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity$1;)V
     .locals 0
 
     .prologue
     .line 187
-    iput-object p1, p0, Lcom/android/settings/networkconnect/DataWarningLimitActivity$1$1;->this$1:Lcom/android/settings/networkconnect/DataWarningLimitActivity$1;
+    iput-object p1, p0, Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity$1$1;->this$1:Lcom/android/settings_ex/networkconnect/DataWarningLimitActivity$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

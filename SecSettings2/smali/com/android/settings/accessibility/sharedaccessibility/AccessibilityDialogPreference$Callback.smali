@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;
+.class public interface abstract Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;
 .super Ljava/lang/Object;
 .source "AccessibilityDialogPreference.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    value = Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

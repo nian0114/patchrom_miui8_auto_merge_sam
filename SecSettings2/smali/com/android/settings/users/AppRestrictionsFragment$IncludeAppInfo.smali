@@ -1,11 +1,11 @@
-.class Lcom/android/settings/users/AppRestrictionsFragment$IncludeAppInfo;
+.class Lcom/android/settings_ex/users/AppRestrictionsFragment$IncludeAppInfo;
 .super Ljava/lang/Object;
 .source "AppRestrictionsFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/users/AppRestrictionsFragment;
+    value = Lcom/android/settings_ex/users/AppRestrictionsFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,7 +30,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Lcom/android/settings/users/AppRestrictionsFragment$IncludeAppInfo;->packageName:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/users/AppRestrictionsFragment$IncludeAppInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -42,7 +42,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/users/AppRestrictionsFragment$IncludeAppInfo;->activityName:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/users/AppRestrictionsFragment$IncludeAppInfo;->activityName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

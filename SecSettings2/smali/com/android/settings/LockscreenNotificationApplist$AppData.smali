@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/LockscreenNotificationApplist$AppData;
+.class public Lcom/android/settings_ex/LockscreenNotificationApplist$AppData;
 .super Ljava/lang/Object;
 .source "LockscreenNotificationApplist.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/LockscreenNotificationApplist;
+    value = Lcom/android/settings_ex/LockscreenNotificationApplist;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

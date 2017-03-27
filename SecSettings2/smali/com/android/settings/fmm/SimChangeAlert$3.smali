@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fmm/SimChangeAlert$3;
+.class Lcom/android/settings_ex/fmm/SimChangeAlert$3;
 .super Ljava/lang/Object;
 .source "SimChangeAlert.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fmm/SimChangeAlert;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    value = Lcom/android/settings_ex/fmm/SimChangeAlert;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fmm/SimChangeAlert;
+.field final synthetic this$0:Lcom/android/settings_ex/fmm/SimChangeAlert;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fmm/SimChangeAlert;)V
+.method constructor <init>(Lcom/android/settings_ex/fmm/SimChangeAlert;)V
     .locals 0
 
     .prologue
     .line 231
-    iput-object p1, p0, Lcom/android/settings/fmm/SimChangeAlert$3;->this$0:Lcom/android/settings/fmm/SimChangeAlert;
+    iput-object p1, p0, Lcom/android/settings_ex/fmm/SimChangeAlert$3;->this$0:Lcom/android/settings_ex/fmm/SimChangeAlert;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -60,9 +60,9 @@
     .line 237
     const-string v2, "existingRecipientCount"
 
-    iget-object v3, p0, Lcom/android/settings/fmm/SimChangeAlert$3;->this$0:Lcom/android/settings/fmm/SimChangeAlert;
+    iget-object v3, p0, Lcom/android/settings_ex/fmm/SimChangeAlert$3;->this$0:Lcom/android/settings_ex/fmm/SimChangeAlert;
 
-    invoke-virtual {v3}, Lcom/android/settings/fmm/SimChangeAlert;->getCountFilledRecipient()I
+    invoke-virtual {v3}, Lcom/android/settings_ex/fmm/SimChangeAlert;->getCountFilledRecipient()I
 
     move-result v3
 
@@ -76,11 +76,11 @@
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 239
-    iget-object v2, p0, Lcom/android/settings/fmm/SimChangeAlert$3;->this$0:Lcom/android/settings/fmm/SimChangeAlert;
+    iget-object v2, p0, Lcom/android/settings_ex/fmm/SimChangeAlert$3;->this$0:Lcom/android/settings_ex/fmm/SimChangeAlert;
 
     const/16 v3, 0x65
 
-    invoke-virtual {v2, v1, v3}, Lcom/android/settings/fmm/SimChangeAlert;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {v2, v1, v3}, Lcom/android/settings_ex/fmm/SimChangeAlert;->startActivityForResult(Landroid/content/Intent;I)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 

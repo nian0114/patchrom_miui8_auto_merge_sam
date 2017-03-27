@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/networkconnect/NetworkManagerActivity;
+.class public Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;
 .super Landroid/app/TabActivity;
 .source "NetworkManagerActivity.java"
 
@@ -12,7 +12,7 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/networkconnect/ApplicationNetInfo;",
+            "Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;",
             ">;"
         }
     .end annotation
@@ -129,69 +129,69 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
+    sput-object v0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mApplicationNetInfoList:Ljava/util/List;
 
     .line 54
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mWarningWhiteList:Ljava/util/List;
+    sput-object v0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mWarningWhiteList:Ljava/util/List;
 
     .line 55
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mDataBackupWhiteList:Ljava/util/List;
+    sput-object v0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mDataBackupWhiteList:Ljava/util/List;
 
     .line 56
-    sput v2, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mSlotIndex:I
+    sput v2, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mSlotIndex:I
 
     .line 57
-    sput-boolean v2, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mIsWarningStatus:Z
+    sput-boolean v2, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mIsWarningStatus:Z
 
     .line 58
-    sput-boolean v2, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mIsCurrentSlotWarning:Z
+    sput-boolean v2, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mIsCurrentSlotWarning:Z
 
     .line 59
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidDataMap:Ljava/util/Map;
+    sput-object v0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidDataMap:Ljava/util/Map;
 
     .line 60
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidWifiMap:Ljava/util/Map;
+    sput-object v0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidWifiMap:Ljava/util/Map;
 
     .line 61
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidDataLongTypeMap:Ljava/util/Map;
+    sput-object v0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidDataLongTypeMap:Ljava/util/Map;
 
     .line 62
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mUidWifiLongTypeMap:Ljava/util/Map;
+    sput-object v0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mUidWifiLongTypeMap:Ljava/util/Map;
 
     .line 63
-    sput-boolean v3, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mIsNeedReLoad:Z
+    sput-boolean v3, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mIsNeedReLoad:Z
 
     .line 64
     const-string v0, ""
 
-    sput-object v0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mSubscriberId:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mSubscriberId:Ljava/lang/String;
 
     .line 65
-    sput v3, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mSubId:I
+    sput v3, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mSubId:I
 
     .line 71
     const/4 v0, 0x3
@@ -212,7 +212,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mWhiteList:[Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mWhiteList:[Ljava/lang/String;
 
     return-void
 .end method
@@ -227,7 +227,7 @@
     .line 47
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mCurrentTab:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mCurrentTab:Ljava/lang/String;
 
     return-void
 .end method
@@ -237,31 +237,31 @@
 
     .prologue
     .line 152
-    new-instance v6, Lcom/android/settings/networkconnect/NetworkManagerUtils;
+    new-instance v6, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;
 
-    iget-object v10, p0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mContext:Landroid/content/Context;
+    iget-object v10, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mContext:Landroid/content/Context;
 
-    invoke-direct {v6, v10}, Lcom/android/settings/networkconnect/NetworkManagerUtils;-><init>(Landroid/content/Context;)V
+    invoke-direct {v6, v10}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;-><init>(Landroid/content/Context;)V
 
     .line 153
-    .local v6, "utils":Lcom/android/settings/networkconnect/NetworkManagerUtils;
+    .local v6, "utils":Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;
     const/4 v10, 0x0
 
-    sput-boolean v10, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mIsWarningStatus:Z
+    sput-boolean v10, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mIsWarningStatus:Z
 
     .line 154
     const/4 v10, 0x0
 
-    sput-boolean v10, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mIsCurrentSlotWarning:Z
+    sput-boolean v10, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mIsCurrentSlotWarning:Z
 
     .line 155
-    invoke-virtual {v6}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->getTotalUsedData()J
+    invoke-virtual {v6}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->getTotalUsedData()J
 
     move-result-wide v4
 
     .line 156
     .local v4, "usedTotalBytes":J
-    invoke-direct {p0}, Lcom/android/settings/networkconnect/NetworkManagerActivity;->getActiveSubId()I
+    invoke-direct {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->getActiveSubId()I
 
     move-result v1
 
@@ -283,7 +283,7 @@
 
     .line 161
     .local v3, "isTrafficSettingEnable":Z
-    iget-object v10, p0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mSharedpre:Landroid/content/SharedPreferences;
+    iget-object v10, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mSharedpre:Landroid/content/SharedPreferences;
 
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -310,7 +310,7 @@
     move-result-object v2
 
     .line 162
-    iget-object v10, p0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mSharedpre:Landroid/content/SharedPreferences;
+    iget-object v10, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mSharedpre:Landroid/content/SharedPreferences;
 
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -337,7 +337,7 @@
     move-result-object v7
 
     .line 163
-    iget-object v10, p0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mContext:Landroid/content/Context;
+    iget-object v10, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mContext:Landroid/content/Context;
 
     invoke-virtual {v10}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -368,7 +368,7 @@
     move-result v0
 
     .line 164
-    iget-object v10, p0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mSharedpre:Landroid/content/SharedPreferences;
+    iget-object v10, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mSharedpre:Landroid/content/SharedPreferences;
 
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -427,12 +427,12 @@
     :cond_0
     const/4 v10, 0x0
 
-    sput-boolean v10, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mIsWarningStatus:Z
+    sput-boolean v10, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mIsWarningStatus:Z
 
     .line 167
     const/4 v10, 0x0
 
-    sput-boolean v10, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mIsCurrentSlotWarning:Z
+    sput-boolean v10, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mIsCurrentSlotWarning:Z
 
     .line 179
     :cond_1
@@ -476,17 +476,17 @@
     .line 172
     const/4 v10, 0x1
 
-    sput-boolean v10, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mIsWarningStatus:Z
+    sput-boolean v10, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mIsWarningStatus:Z
 
     .line 173
-    sget v10, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mSubId:I
+    sget v10, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mSubId:I
 
     if-ne v1, v10, :cond_3
 
     .line 174
     const/4 v10, 0x1
 
-    sput-boolean v10, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mIsCurrentSlotWarning:Z
+    sput-boolean v10, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mIsCurrentSlotWarning:Z
 
     goto :goto_0
 
@@ -494,7 +494,7 @@
     :cond_3
     const/4 v10, 0x0
 
-    sput-boolean v10, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mIsCurrentSlotWarning:Z
+    sput-boolean v10, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mIsCurrentSlotWarning:Z
 
     goto :goto_0
 .end method
@@ -558,21 +558,21 @@
     .line 104
     const-string v1, "subscriberId"
 
-    sget-object v2, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mSubscriberId:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mSubscriberId:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 105
     const-string v1, "subId"
 
-    sget v2, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mSubId:I
+    sget v2, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mSubId:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 106
-    iget-object v1, p0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mTabHost:Landroid/widget/TabHost;
+    iget-object v1, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mTabHost:Landroid/widget/TabHost;
 
-    iget-object v2, p0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mTabHost:Landroid/widget/TabHost;
+    iget-object v2, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mTabHost:Landroid/widget/TabHost;
 
     const-string v3, "normal"
 
@@ -582,7 +582,7 @@
 
     const v3, 0x7f0e171d
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/networkconnect/NetworkManagerActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -620,21 +620,21 @@
     .line 113
     const-string v1, "subscriberId"
 
-    sget-object v2, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mSubscriberId:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mSubscriberId:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 114
     const-string v1, "subId"
 
-    sget v2, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mSubId:I
+    sget v2, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mSubId:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 115
-    iget-object v1, p0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mTabHost:Landroid/widget/TabHost;
+    iget-object v1, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mTabHost:Landroid/widget/TabHost;
 
-    iget-object v2, p0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mTabHost:Landroid/widget/TabHost;
+    iget-object v2, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mTabHost:Landroid/widget/TabHost;
 
     const-string v3, "warning"
 
@@ -644,7 +644,7 @@
 
     const v3, 0x7f0e0f96
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/networkconnect/NetworkManagerActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -675,7 +675,7 @@
     invoke-super {p0, p1}, Landroid/app/TabActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 76
-    invoke-virtual {p0}, Lcom/android/settings/networkconnect/NetworkManagerActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -694,7 +694,7 @@
 
     move-result-object v2
 
-    sput-object v2, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mSubscriberId:Ljava/lang/String;
+    sput-object v2, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mSubscriberId:Ljava/lang/String;
 
     .line 79
     const-string v2, "slotIndex"
@@ -705,7 +705,7 @@
 
     move-result v2
 
-    sput v2, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mSlotIndex:I
+    sput v2, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mSlotIndex:I
 
     .line 80
     const-string v2, "subId"
@@ -714,21 +714,21 @@
 
     move-result v2
 
-    sput v2, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mSubId:I
+    sput v2, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mSubId:I
 
     .line 82
     :cond_0
-    iput-object p0, p0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mContext:Landroid/content/Context;
+    iput-object p0, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mContext:Landroid/content/Context;
 
     .line 83
     invoke-static {p0}, Landroid/net/NetworkPolicyManager;->from(Landroid/content/Context;)Landroid/net/NetworkPolicyManager;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mPolicyManager:Landroid/net/NetworkPolicyManager;
+    iput-object v2, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mPolicyManager:Landroid/net/NetworkPolicyManager;
 
     .line 84
-    invoke-virtual {p0}, Lcom/android/settings/networkconnect/NetworkManagerActivity;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
@@ -737,25 +737,25 @@
     invoke-virtual {v0, v4}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
 
     .line 86
-    invoke-virtual {p0}, Lcom/android/settings/networkconnect/NetworkManagerActivity;->getTabHost()Landroid/widget/TabHost;
+    invoke-virtual {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->getTabHost()Landroid/widget/TabHost;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mTabHost:Landroid/widget/TabHost;
+    iput-object v2, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mTabHost:Landroid/widget/TabHost;
 
     .line 87
-    iget-object v2, p0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mTabHost:Landroid/widget/TabHost;
+    iget-object v2, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mTabHost:Landroid/widget/TabHost;
 
     invoke-virtual {v2, p0}, Landroid/widget/TabHost;->setOnTabChangedListener(Landroid/widget/TabHost$OnTabChangeListener;)V
 
     .line 88
-    invoke-direct {p0}, Lcom/android/settings/networkconnect/NetworkManagerActivity;->setupNormalTab()V
+    invoke-direct {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->setupNormalTab()V
 
     .line 89
-    invoke-direct {p0}, Lcom/android/settings/networkconnect/NetworkManagerActivity;->setupWarningTab()V
+    invoke-direct {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->setupWarningTab()V
 
     .line 90
-    iget-object v2, p0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mTabHost:Landroid/widget/TabHost;
+    iget-object v2, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mTabHost:Landroid/widget/TabHost;
 
     const-string v3, "normal"
 
@@ -798,7 +798,7 @@
 
     .line 122
     :pswitch_0
-    invoke-virtual {p0}, Lcom/android/settings/networkconnect/NetworkManagerActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->finish()V
 
     .line 123
     const/4 v0, 0x1
@@ -822,18 +822,18 @@
     .line 142
     const/4 v2, 0x1
 
-    sput-boolean v2, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mIsNeedReLoad:Z
+    sput-boolean v2, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mIsNeedReLoad:Z
 
     .line 143
-    new-instance v1, Lcom/android/settings/networkconnect/NetworkManagerUtils;
+    new-instance v1, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;
 
-    iget-object v2, p0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mContext:Landroid/content/Context;
 
-    invoke-direct {v1, v2}, Lcom/android/settings/networkconnect/NetworkManagerUtils;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;-><init>(Landroid/content/Context;)V
 
     .line 144
-    .local v1, "utils":Lcom/android/settings/networkconnect/NetworkManagerUtils;
-    sget-object v2, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mWarningWhiteList:Ljava/util/List;
+    .local v1, "utils":Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;
+    sget-object v2, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mWarningWhiteList:Ljava/util/List;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -845,7 +845,7 @@
 
     move-result-object v3
 
-    sget v4, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mSubId:I
+    sget v4, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mSubId:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -855,14 +855,14 @@
 
     move-result-object v3
 
-    invoke-virtual {v1, v2, v3}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->putWhiteList(Ljava/util/List;Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v3}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->putWhiteList(Ljava/util/List;Ljava/lang/String;)V
 
     .line 145
-    sget-object v2, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mDataBackupWhiteList:Ljava/util/List;
+    sget-object v2, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mDataBackupWhiteList:Ljava/util/List;
 
     const-string v3, "data_normal_app_whitelist"
 
-    invoke-virtual {v1, v2, v3}, Lcom/android/settings/networkconnect/NetworkManagerUtils;->putWhiteList(Ljava/util/List;Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v3}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;->putWhiteList(Ljava/util/List;Ljava/lang/String;)V
 
     .line 146
     new-instance v0, Landroid/content/Intent;
@@ -876,7 +876,7 @@
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 148
-    invoke-virtual {p0, v0}, Lcom/android/settings/networkconnect/NetworkManagerActivity;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 149
     return-void
@@ -890,16 +890,16 @@
     invoke-super {p0}, Landroid/app/TabActivity;->onResume()V
 
     .line 96
-    iget-object v0, p0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mSharedpre:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mSharedpre:Landroid/content/SharedPreferences;
 
     .line 97
-    invoke-direct {p0}, Lcom/android/settings/networkconnect/NetworkManagerActivity;->checkWarningStatus()V
+    invoke-direct {p0}, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->checkWarningStatus()V
 
     .line 98
     return-void

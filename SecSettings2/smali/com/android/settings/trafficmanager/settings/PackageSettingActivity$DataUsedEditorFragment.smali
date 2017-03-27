@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;
+.class public Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;
 .super Landroid/app/DialogFragment;
 .source "PackageSettingActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;
+    value = Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,19 +34,19 @@
 
     .prologue
     .line 439
-    sget-object v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;->mVertifyTrafficHandler:Landroid/os/Handler;
+    sget-object v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;->mVertifyTrafficHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method public static show(Lcom/android/settings/DataUsageSummary;Landroid/os/Handler;)V
+.method public static show(Lcom/android/settings_ex/DataUsageSummary;Landroid/os/Handler;)V
     .locals 4
-    .param p0, "parent"    # Lcom/android/settings/DataUsageSummary;
+    .param p0, "parent"    # Lcom/android/settings_ex/DataUsageSummary;
     .param p1, "handler"    # Landroid/os/Handler;
 
     .prologue
     .line 445
-    invoke-virtual {p0}, Lcom/android/settings/DataUsageSummary;->isAdded()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/DataUsageSummary;->isAdded()Z
 
     move-result v2
 
@@ -58,7 +58,7 @@
 
     .line 447
     :cond_0
-    sput-object p1, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;->mVertifyTrafficHandler:Landroid/os/Handler;
+    sput-object p1, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;->mVertifyTrafficHandler:Landroid/os/Handler;
 
     .line 448
     new-instance v0, Landroid/os/Bundle;
@@ -69,32 +69,32 @@
     .local v0, "args":Landroid/os/Bundle;
     const-string v2, "template"
 
-    iget-object v3, p0, Lcom/android/settings/DataUsageSummary;->mTemplate:Landroid/net/NetworkTemplate;
+    iget-object v3, p0, Lcom/android/settings_ex/DataUsageSummary;->mTemplate:Landroid/net/NetworkTemplate;
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     .line 451
-    new-instance v1, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;
+    new-instance v1, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;
 
-    invoke-direct {v1}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;-><init>()V
+    invoke-direct {v1}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;-><init>()V
 
     .line 452
-    .local v1, "dialog":Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;
-    invoke-virtual {v1, v0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;->setArguments(Landroid/os/Bundle;)V
+    .local v1, "dialog":Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;->setArguments(Landroid/os/Bundle;)V
 
     .line 453
     const/4 v2, 0x0
 
-    invoke-virtual {v1, p0, v2}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;->setTargetFragment(Landroid/app/Fragment;I)V
+    invoke-virtual {v1, p0, v2}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;->setTargetFragment(Landroid/app/Fragment;I)V
 
     .line 454
-    invoke-virtual {p0}, Lcom/android/settings/DataUsageSummary;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DataUsageSummary;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v2
 
     const-string v3, "dateUsedEditor"
 
-    invoke-virtual {v1, v2, v3}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v3}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -111,7 +111,7 @@
     const/4 v8, 0x0
 
     .line 459
-    invoke-virtual {p0}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -176,9 +176,9 @@
     .line 472
     const v5, 0x7f0e0ca8
 
-    new-instance v6, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment$1;
+    new-instance v6, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment$1;
 
-    invoke-direct {v6, p0, v2, v1}, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment$1;-><init>(Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;Landroid/widget/EditText;Landroid/content/Context;)V
+    invoke-direct {v6, p0, v2, v1}, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment$1;-><init>(Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$DataUsedEditorFragment;Landroid/widget/EditText;Landroid/content/Context;)V
 
     invoke-virtual {v0, v5, v6}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 

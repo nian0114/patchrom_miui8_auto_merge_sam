@@ -1,4 +1,4 @@
-.class Lcom/android/settings/Password$2;
+.class Lcom/android/settings_ex/Password$2;
 .super Ljava/lang/Object;
 .source "Password.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/Password;->showAlert(Ljava/lang/String;)V
+    value = Lcom/android/settings_ex/Password;->showAlert(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/Password;
+.field final synthetic this$0:Lcom/android/settings_ex/Password;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/Password;)V
+.method constructor <init>(Lcom/android/settings_ex/Password;)V
     .locals 0
 
     .prologue
     .line 275
-    iput-object p1, p0, Lcom/android/settings/Password$2;->this$0:Lcom/android/settings/Password;
+    iput-object p1, p0, Lcom/android/settings_ex/Password$2;->this$0:Lcom/android/settings_ex/Password;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

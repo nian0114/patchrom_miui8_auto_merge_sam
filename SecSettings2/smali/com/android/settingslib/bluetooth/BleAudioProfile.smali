@@ -1,16 +1,16 @@
-.class public final Lcom/android/settingslib/bluetooth/BleAudioProfile;
+.class public final Lcom/android/settings_exlib/bluetooth/BleAudioProfile;
 .super Ljava/lang/Object;
 .source "BleAudioProfile.java"
 
 # interfaces
-.implements Lcom/android/settingslib/bluetooth/LocalBluetoothProfile;
+.implements Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfile;
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settingslib/bluetooth/BleAudioProfile$1;,
-        Lcom/android/settingslib/bluetooth/BleAudioProfile$BleAudioServiceListener;
+        Lcom/android/settings_exlib/bluetooth/BleAudioProfile$1;,
+        Lcom/android/settings_exlib/bluetooth/BleAudioProfile$BleAudioServiceListener;
     }
 .end annotation
 
@@ -20,13 +20,13 @@
 
 
 # instance fields
-.field private final mDeviceManager:Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;
+.field private final mDeviceManager:Lcom/android/settings_exlib/bluetooth/CachedBluetoothDeviceManager;
 
 .field private mIsProfileReady:Z
 
-.field private final mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+.field private final mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
-.field private final mProfileManager:Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
+.field private final mProfileManager:Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;
 
 .field private mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
 
@@ -39,37 +39,37 @@
     .line 36
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->V:Z
+    sput-boolean v0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->V:Z
 
     return-void
 .end method
 
-.method constructor <init>(Landroid/content/Context;Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;)V
+.method constructor <init>(Landroid/content/Context;Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;Lcom/android/settings_exlib/bluetooth/CachedBluetoothDeviceManager;Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;)V
     .locals 2
     .param p1, "context"    # Landroid/content/Context;
-    .param p2, "adapter"    # Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
-    .param p3, "deviceManager"    # Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;
-    .param p4, "profileManager"    # Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
+    .param p2, "adapter"    # Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
+    .param p3, "deviceManager"    # Lcom/android/settings_exlib/bluetooth/CachedBluetoothDeviceManager;
+    .param p4, "profileManager"    # Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;
 
     .prologue
     .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 98
-    iput-object p2, p0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iput-object p2, p0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     .line 99
-    iput-object p3, p0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->mDeviceManager:Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;
+    iput-object p3, p0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->mDeviceManager:Lcom/android/settings_exlib/bluetooth/CachedBluetoothDeviceManager;
 
     .line 100
-    iput-object p4, p0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->mProfileManager:Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
+    iput-object p4, p0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->mProfileManager:Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;
 
     .line 101
-    new-instance v0, Lcom/android/settingslib/bluetooth/BleAudioProfile$BleAudioServiceListener;
+    new-instance v0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile$BleAudioServiceListener;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settingslib/bluetooth/BleAudioProfile$BleAudioServiceListener;-><init>(Lcom/android/settingslib/bluetooth/BleAudioProfile;Lcom/android/settingslib/bluetooth/BleAudioProfile$1;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_exlib/bluetooth/BleAudioProfile$BleAudioServiceListener;-><init>(Lcom/android/settings_exlib/bluetooth/BleAudioProfile;Lcom/android/settings_exlib/bluetooth/BleAudioProfile$1;)V
 
     invoke-static {p1, v0}, Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;->getProfileProxy(Landroid/content/Context;Landroid/bluetooth/BluetoothProfile$ServiceListener;)Z
 
@@ -82,75 +82,75 @@
 
     .prologue
     .line 34
-    sget-boolean v0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->V:Z
+    sget-boolean v0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->V:Z
 
     return v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settingslib/bluetooth/BleAudioProfile;)Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
+.method static synthetic access$100(Lcom/android/settings_exlib/bluetooth/BleAudioProfile;)Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settingslib/bluetooth/BleAudioProfile;
+    .param p0, "x0"    # Lcom/android/settings_exlib/bluetooth/BleAudioProfile;
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
 
     return-object v0
 .end method
 
-.method static synthetic access$102(Lcom/android/settingslib/bluetooth/BleAudioProfile;Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;)Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
+.method static synthetic access$102(Lcom/android/settings_exlib/bluetooth/BleAudioProfile;Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;)Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settingslib/bluetooth/BleAudioProfile;
+    .param p0, "x0"    # Lcom/android/settings_exlib/bluetooth/BleAudioProfile;
     .param p1, "x1"    # Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
 
     .prologue
     .line 34
-    iput-object p1, p0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
+    iput-object p1, p0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
 
     return-object p1
 .end method
 
-.method static synthetic access$200(Lcom/android/settingslib/bluetooth/BleAudioProfile;)Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;
+.method static synthetic access$200(Lcom/android/settings_exlib/bluetooth/BleAudioProfile;)Lcom/android/settings_exlib/bluetooth/CachedBluetoothDeviceManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settingslib/bluetooth/BleAudioProfile;
+    .param p0, "x0"    # Lcom/android/settings_exlib/bluetooth/BleAudioProfile;
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->mDeviceManager:Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->mDeviceManager:Lcom/android/settings_exlib/bluetooth/CachedBluetoothDeviceManager;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settingslib/bluetooth/BleAudioProfile;)Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+.method static synthetic access$300(Lcom/android/settings_exlib/bluetooth/BleAudioProfile;)Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settingslib/bluetooth/BleAudioProfile;
+    .param p0, "x0"    # Lcom/android/settings_exlib/bluetooth/BleAudioProfile;
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settingslib/bluetooth/BleAudioProfile;)Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
+.method static synthetic access$400(Lcom/android/settings_exlib/bluetooth/BleAudioProfile;)Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settingslib/bluetooth/BleAudioProfile;
+    .param p0, "x0"    # Lcom/android/settings_exlib/bluetooth/BleAudioProfile;
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->mProfileManager:Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->mProfileManager:Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;
 
     return-object v0
 .end method
 
-.method static synthetic access$502(Lcom/android/settingslib/bluetooth/BleAudioProfile;Z)Z
+.method static synthetic access$502(Lcom/android/settings_exlib/bluetooth/BleAudioProfile;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settingslib/bluetooth/BleAudioProfile;
+    .param p0, "x0"    # Lcom/android/settings_exlib/bluetooth/BleAudioProfile;
     .param p1, "x1"    # Z
 
     .prologue
     .line 34
-    iput-boolean p1, p0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->mIsProfileReady:Z
+    iput-boolean p1, p0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->mIsProfileReady:Z
 
     return p1
 .end method
@@ -192,7 +192,7 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 114
-    iget-object v3, p0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
+    iget-object v3, p0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
 
     if-nez v3, :cond_0
 
@@ -209,7 +209,7 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 117
-    invoke-virtual {p0, p1}, Lcom/android/settingslib/bluetooth/BleAudioProfile;->getConnectionStatus(Landroid/bluetooth/BluetoothDevice;)I
+    invoke-virtual {p0, p1}, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->getConnectionStatus(Landroid/bluetooth/BluetoothDevice;)I
 
     move-result v3
 
@@ -252,18 +252,18 @@
 
     .line 123
     :cond_1
-    iget-object v3, p0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->mDeviceManager:Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;
+    iget-object v3, p0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->mDeviceManager:Lcom/android/settings_exlib/bluetooth/CachedBluetoothDeviceManager;
 
-    invoke-virtual {v3, p1}, Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;->findDevice(Landroid/bluetooth/BluetoothDevice;)Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
+    invoke-virtual {v3, p1}, Lcom/android/settings_exlib/bluetooth/CachedBluetoothDeviceManager;->findDevice(Landroid/bluetooth/BluetoothDevice;)Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;
 
     move-result-object v0
 
     .line 124
-    .local v0, "cachedDevice":Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
+    .local v0, "cachedDevice":Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;
     if-eqz v0, :cond_3
 
     .line 125
-    invoke-virtual {v0}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->getGearManagerName()[B
+    invoke-virtual {v0}, Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;->getGearManagerName()[B
 
     move-result-object v1
 
@@ -301,7 +301,7 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
+    iget-object v5, p0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
 
     invoke-virtual {v5}, Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;->getEncryption()Z
 
@@ -318,11 +318,11 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 130
-    iget-object v3, p0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
+    iget-object v3, p0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
 
     sget v4, Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;->BLE_AUDIO_CHANNEL_LEFT:I
 
-    iget-object v5, p0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
+    iget-object v5, p0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
 
     invoke-virtual {v5}, Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;->getEncryption()Z
 
@@ -348,7 +348,7 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
+    iget-object v5, p0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
 
     invoke-virtual {v5}, Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;->getEncryption()Z
 
@@ -365,11 +365,11 @@
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 133
-    iget-object v3, p0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
+    iget-object v3, p0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
 
     sget v4, Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;->BLE_AUDIO_CHANNEL_RIGHT:I
 
-    iget-object v5, p0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
+    iget-object v5, p0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
 
     invoke-virtual {v5}, Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;->getEncryption()Z
 
@@ -416,7 +416,7 @@
 
     .prologue
     .line 150
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
 
     if-nez v0, :cond_0
 
@@ -443,7 +443,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 155
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
 
     invoke-virtual {v0, p1}, Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;->disconnect(Landroid/bluetooth/BluetoothDevice;)Z
 
@@ -458,7 +458,7 @@
 
     .prologue
     .line 159
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
 
     if-nez v0, :cond_0
 
@@ -470,7 +470,7 @@
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->mService:Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;
 
     invoke-virtual {v0, p1}, Lcom/broadcom/bt/service/bleaudio/BluetoothLeAudio;->getConnectionState(Landroid/bluetooth/BluetoothDevice;)I
 
@@ -485,7 +485,7 @@
 
     .prologue
     .line 202
-    sget v0, Lcom/android/settingslib/R$drawable;->list_ic_earpiece:I
+    sget v0, Lcom/android/settings_exlib/R$drawable;->list_ic_earpiece:I
 
     return v0
 .end method
@@ -496,7 +496,7 @@
 
     .prologue
     .line 188
-    sget v0, Lcom/android/settingslib/R$string;->unknown:I
+    sget v0, Lcom/android/settings_exlib/R$string;->unknown:I
 
     return v0
 .end method
@@ -507,7 +507,7 @@
 
     .prologue
     .line 192
-    sget v0, Lcom/android/settingslib/R$string;->unknown:I
+    sget v0, Lcom/android/settings_exlib/R$string;->unknown:I
 
     return v0
 .end method
@@ -539,7 +539,7 @@
 
     .prologue
     .line 197
-    sget v0, Lcom/android/settingslib/R$string;->unknown:I
+    sget v0, Lcom/android/settings_exlib/R$string;->unknown:I
 
     return v0
 .end method
@@ -580,7 +580,7 @@
 
     .prologue
     .line 92
-    iget-boolean v0, p0, Lcom/android/settingslib/bluetooth/BleAudioProfile;->mIsProfileReady:Z
+    iget-boolean v0, p0, Lcom/android/settings_exlib/bluetooth/BleAudioProfile;->mIsProfileReady:Z
 
     return v0
 .end method

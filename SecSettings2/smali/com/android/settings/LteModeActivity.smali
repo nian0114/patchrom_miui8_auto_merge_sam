@@ -1,14 +1,14 @@
-.class public Lcom/android/settings/LteModeActivity;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/LteModeActivity;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "LteModeActivity.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/search/Indexable;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 .field private static isAirplaneModeOn:Z
 
@@ -26,7 +26,7 @@
 
 .field private final mReceiver:Landroid/content/BroadcastReceiver;
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 
 # direct methods
@@ -35,11 +35,11 @@
 
     .prologue
     .line 263
-    new-instance v0, Lcom/android/settings/LteModeActivity$4;
+    new-instance v0, Lcom/android/settings_ex/LteModeActivity$4;
 
-    invoke-direct {v0}, Lcom/android/settings/LteModeActivity$4;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/LteModeActivity$4;-><init>()V
 
-    sput-object v0, Lcom/android/settings/LteModeActivity;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/LteModeActivity;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -49,37 +49,37 @@
 
     .prologue
     .line 59
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 72
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/LteModeActivity;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v0, p0, Lcom/android/settings_ex/LteModeActivity;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 78
-    new-instance v0, Lcom/android/settings/LteModeActivity$1;
+    new-instance v0, Lcom/android/settings_ex/LteModeActivity$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/LteModeActivity$1;-><init>(Lcom/android/settings/LteModeActivity;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/LteModeActivity$1;-><init>(Lcom/android/settings_ex/LteModeActivity;)V
 
-    iput-object v0, p0, Lcom/android/settings/LteModeActivity;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/LteModeActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
     .line 94
-    new-instance v0, Lcom/android/settings/LteModeActivity$2;
+    new-instance v0, Lcom/android/settings_ex/LteModeActivity$2;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/LteModeActivity$2;-><init>(Lcom/android/settings/LteModeActivity;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/LteModeActivity$2;-><init>(Lcom/android/settings_ex/LteModeActivity;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/LteModeActivity;->mLteModeObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/LteModeActivity;->mLteModeObserver:Landroid/database/ContentObserver;
 
     .line 232
-    new-instance v0, Lcom/android/settings/LteModeActivity$3;
+    new-instance v0, Lcom/android/settings_ex/LteModeActivity$3;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/LteModeActivity$3;-><init>(Lcom/android/settings/LteModeActivity;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/LteModeActivity$3;-><init>(Lcom/android/settings_ex/LteModeActivity;)V
 
-    iput-object v0, p0, Lcom/android/settings/LteModeActivity;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/LteModeActivity;->mHandler:Landroid/os/Handler;
 
     return-void
 .end method
@@ -89,7 +89,7 @@
 
     .prologue
     .line 59
-    sget-boolean v0, Lcom/android/settings/LteModeActivity;->isAirplaneModeOn:Z
+    sget-boolean v0, Lcom/android/settings_ex/LteModeActivity;->isAirplaneModeOn:Z
 
     return v0
 .end method
@@ -100,76 +100,76 @@
 
     .prologue
     .line 59
-    sput-boolean p0, Lcom/android/settings/LteModeActivity;->isAirplaneModeOn:Z
+    sput-boolean p0, Lcom/android/settings_ex/LteModeActivity;->isAirplaneModeOn:Z
 
     return p0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/LteModeActivity;Z)V
+.method static synthetic access$100(Lcom/android/settings_ex/LteModeActivity;Z)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/LteModeActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/LteModeActivity;
     .param p1, "x1"    # Z
 
     .prologue
     .line 59
-    invoke-direct {p0, p1}, Lcom/android/settings/LteModeActivity;->setSwitchChecked(Z)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/LteModeActivity;->setSwitchChecked(Z)V
 
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/LteModeActivity;)V
+.method static synthetic access$200(Lcom/android/settings_ex/LteModeActivity;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/LteModeActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/LteModeActivity;
 
     .prologue
     .line 59
-    invoke-direct {p0}, Lcom/android/settings/LteModeActivity;->updateUi()V
+    invoke-direct {p0}, Lcom/android/settings_ex/LteModeActivity;->updateUi()V
 
     return-void
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/LteModeActivity;)Landroid/content/Context;
+.method static synthetic access$300(Lcom/android/settings_ex/LteModeActivity;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LteModeActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/LteModeActivity;
 
     .prologue
     .line 59
-    iget-object v0, p0, Lcom/android/settings/LteModeActivity;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/LteModeActivity;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/LteModeActivity;)Landroid/os/Handler;
+.method static synthetic access$400(Lcom/android/settings_ex/LteModeActivity;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LteModeActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/LteModeActivity;
 
     .prologue
     .line 59
-    iget-object v0, p0, Lcom/android/settings/LteModeActivity;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/LteModeActivity;->mHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/LteModeActivity;)Z
+.method static synthetic access$500(Lcom/android/settings_ex/LteModeActivity;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LteModeActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/LteModeActivity;
 
     .prologue
     .line 59
-    invoke-direct {p0}, Lcom/android/settings/LteModeActivity;->getCardStatus()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/LteModeActivity;->getCardStatus()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/LteModeActivity;)Lcom/android/settings/widget/SwitchBar;
+.method static synthetic access$600(Lcom/android/settings_ex/LteModeActivity;)Lcom/android/settings_ex/widget/SwitchBar;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LteModeActivity;
+    .param p0, "x0"    # Lcom/android/settings_ex/LteModeActivity;
 
     .prologue
     .line 59
-    iget-object v0, p0, Lcom/android/settings/LteModeActivity;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/LteModeActivity;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     return-object v0
 .end method
@@ -265,25 +265,25 @@
 
     .prologue
     .line 186
-    iget-object v0, p0, Lcom/android/settings/LteModeActivity;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/LteModeActivity;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isAirplaneModeEnabled(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isAirplaneModeEnabled(Landroid/content/Context;)Z
 
     move-result v0
 
-    sput-boolean v0, Lcom/android/settings/LteModeActivity;->isAirplaneModeOn:Z
+    sput-boolean v0, Lcom/android/settings_ex/LteModeActivity;->isAirplaneModeOn:Z
 
     .line 187
-    sget-boolean v0, Lcom/android/settings/LteModeActivity;->isAirplaneModeOn:Z
+    sget-boolean v0, Lcom/android/settings_ex/LteModeActivity;->isAirplaneModeOn:Z
 
     if-eqz v0, :cond_1
 
     .line 188
-    iget-object v0, p0, Lcom/android/settings/LteModeActivity;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/LteModeActivity;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 195
     :cond_0
@@ -292,9 +292,9 @@
 
     .line 191
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/LteModeActivity;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/LteModeActivity;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->isChecked()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->isChecked()Z
 
     move-result v0
 
@@ -324,9 +324,9 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 193
-    iget-object v0, p0, Lcom/android/settings/LteModeActivity;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/LteModeActivity;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p1}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v0, p1}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     goto :goto_0
 .end method
@@ -340,7 +340,7 @@
     const/4 v4, 0x1
 
     .line 142
-    iget-object v1, p0, Lcom/android/settings/LteModeActivity;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/LteModeActivity;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -377,19 +377,19 @@
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 144
-    invoke-direct {p0}, Lcom/android/settings/LteModeActivity;->getCardStatus()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/LteModeActivity;->getCardStatus()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
     .line 145
-    invoke-direct {p0, v5}, Lcom/android/settings/LteModeActivity;->setSwitchChecked(Z)V
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/LteModeActivity;->setSwitchChecked(Z)V
 
     .line 146
-    iget-object v1, p0, Lcom/android/settings/LteModeActivity;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/LteModeActivity;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, v5}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v1, v5}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 156
     :goto_0
@@ -400,23 +400,23 @@
     if-ne v0, v4, :cond_1
 
     .line 150
-    invoke-direct {p0, v4}, Lcom/android/settings/LteModeActivity;->setSwitchChecked(Z)V
+    invoke-direct {p0, v4}, Lcom/android/settings_ex/LteModeActivity;->setSwitchChecked(Z)V
 
     .line 151
-    iget-object v1, p0, Lcom/android/settings/LteModeActivity;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/LteModeActivity;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, v4}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v1, v4}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     goto :goto_0
 
     .line 153
     :cond_1
-    invoke-direct {p0, v5}, Lcom/android/settings/LteModeActivity;->setSwitchChecked(Z)V
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/LteModeActivity;->setSwitchChecked(Z)V
 
     .line 154
-    iget-object v1, p0, Lcom/android/settings/LteModeActivity;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/LteModeActivity;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, v4}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v1, v4}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     goto :goto_0
 .end method
@@ -439,17 +439,17 @@
 
     .prologue
     .line 109
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 111
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaCTCModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaCTCModel()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
     .line 112
-    invoke-virtual {p0}, Lcom/android/settings/LteModeActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LteModeActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -457,24 +457,24 @@
 
     .line 115
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/LteModeActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LteModeActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 116
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/LteModeActivity;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v1, p0, Lcom/android/settings_ex/LteModeActivity;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 117
-    iget-object v1, p0, Lcom/android/settings/LteModeActivity;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/LteModeActivity;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 118
     return-void
@@ -526,10 +526,10 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    iput-object v4, p0, Lcom/android/settings/LteModeActivity;->mLteModeDesc:Landroid/widget/TextView;
+    iput-object v4, p0, Lcom/android/settings_ex/LteModeActivity;->mLteModeDesc:Landroid/widget/TextView;
 
     .line 127
-    invoke-virtual {p0}, Lcom/android/settings/LteModeActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LteModeActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -541,19 +541,19 @@
 
     .line 128
     .local v2, "prefTitle":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/LteModeActivity;->mLteModeDesc:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/LteModeActivity;->mLteModeDesc:Landroid/widget/TextView;
 
     invoke-virtual {v4, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 130
-    invoke-virtual {p0}, Lcom/android/settings/LteModeActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LteModeActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/LteModeActivity;->mContext:Landroid/content/Context;
+    iput-object v4, p0, Lcom/android/settings_ex/LteModeActivity;->mContext:Landroid/content/Context;
 
     .line 131
-    invoke-virtual {p0}, Lcom/android/settings/LteModeActivity;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LteModeActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -583,7 +583,7 @@
 
     .prologue
     .line 173
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 174
     const-string v0, "LteModeActivity"
@@ -593,25 +593,25 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 175
-    iget-object v0, p0, Lcom/android/settings/LteModeActivity;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/LteModeActivity;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 176
-    iget-object v0, p0, Lcom/android/settings/LteModeActivity;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/LteModeActivity;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/LteModeActivity;->mLteModeObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/LteModeActivity;->mLteModeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 177
-    iget-object v0, p0, Lcom/android/settings/LteModeActivity;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/LteModeActivity;->mContext:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/android/settings/LteModeActivity;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/LteModeActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
@@ -624,7 +624,7 @@
 
     .prologue
     .line 160
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 161
     const-string v0, "LteModeActivity"
@@ -634,12 +634,12 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 162
-    iget-object v0, p0, Lcom/android/settings/LteModeActivity;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/LteModeActivity;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 163
-    iget-object v0, p0, Lcom/android/settings/LteModeActivity;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/LteModeActivity;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -653,7 +653,7 @@
 
     const/4 v2, 0x1
 
-    iget-object v3, p0, Lcom/android/settings/LteModeActivity;->mLteModeObserver:Landroid/database/ContentObserver;
+    iget-object v3, p0, Lcom/android/settings_ex/LteModeActivity;->mLteModeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -662,26 +662,26 @@
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/LteModeActivity;->mFilter:Landroid/content/IntentFilter;
+    iput-object v0, p0, Lcom/android/settings_ex/LteModeActivity;->mFilter:Landroid/content/IntentFilter;
 
     .line 166
-    iget-object v0, p0, Lcom/android/settings/LteModeActivity;->mFilter:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/LteModeActivity;->mFilter:Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.AIRPLANE_MODE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 167
-    iget-object v0, p0, Lcom/android/settings/LteModeActivity;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/LteModeActivity;->mContext:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/android/settings/LteModeActivity;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/LteModeActivity;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    iget-object v2, p0, Lcom/android/settings/LteModeActivity;->mFilter:Landroid/content/IntentFilter;
+    iget-object v2, p0, Lcom/android/settings_ex/LteModeActivity;->mFilter:Landroid/content/IntentFilter;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 168
-    invoke-direct {p0}, Lcom/android/settings/LteModeActivity;->updateUi()V
+    invoke-direct {p0}, Lcom/android/settings_ex/LteModeActivity;->updateUi()V
 
     .line 169
     return-void
@@ -700,9 +700,9 @@
     const/4 v5, 0x0
 
     .line 206
-    iget-object v2, p0, Lcom/android/settings/LteModeActivity;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/LteModeActivity;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2}, Lcom/android/settings/widget/SwitchBar;->getSwitch()Lcom/android/settings/widget/ToggleSwitch;
+    invoke-virtual {v2}, Lcom/android/settings_ex/widget/SwitchBar;->getSwitch()Lcom/android/settings_ex/widget/ToggleSwitch;
 
     move-result-object v2
 
@@ -715,7 +715,7 @@
 
     .line 210
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/LteModeActivity;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/LteModeActivity;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -762,13 +762,13 @@
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 212
-    iget-object v2, p0, Lcom/android/settings/LteModeActivity;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/LteModeActivity;->mContext:Landroid/content/Context;
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isAirplaneModeEnabled(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isAirplaneModeEnabled(Landroid/content/Context;)Z
 
     move-result v2
 
-    sput-boolean v2, Lcom/android/settings/LteModeActivity;->isAirplaneModeOn:Z
+    sput-boolean v2, Lcom/android/settings_ex/LteModeActivity;->isAirplaneModeOn:Z
 
     .line 213
     const-string v2, "LteModeActivity"
@@ -783,7 +783,7 @@
 
     move-result-object v3
 
-    sget-boolean v4, Lcom/android/settings/LteModeActivity;->isAirplaneModeOn:Z
+    sget-boolean v4, Lcom/android/settings_ex/LteModeActivity;->isAirplaneModeOn:Z
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -796,18 +796,18 @@
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 214
-    sget-boolean v2, Lcom/android/settings/LteModeActivity;->isAirplaneModeOn:Z
+    sget-boolean v2, Lcom/android/settings_ex/LteModeActivity;->isAirplaneModeOn:Z
 
     if-eqz v2, :cond_2
 
     .line 215
-    invoke-direct {p0, v5}, Lcom/android/settings/LteModeActivity;->setSwitchChecked(Z)V
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/LteModeActivity;->setSwitchChecked(Z)V
 
     .line 216
     if-ne p2, v6, :cond_0
 
     .line 217
-    iget-object v2, p0, Lcom/android/settings/LteModeActivity;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/LteModeActivity;->mContext:Landroid/content/Context;
 
     const v3, 0x7f0e14ab
 
@@ -832,17 +832,17 @@
 
     .line 224
     :cond_4
-    iget-object v2, p0, Lcom/android/settings/LteModeActivity;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/LteModeActivity;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2, v5}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v2, v5}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 225
-    iget-object v2, p0, Lcom/android/settings/LteModeActivity;->mHandler:Landroid/os/Handler;
+    iget-object v2, p0, Lcom/android/settings_ex/LteModeActivity;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v2, v7}, Landroid/os/Handler;->removeMessages(I)V
 
     .line 226
-    iget-object v2, p0, Lcom/android/settings/LteModeActivity;->mHandler:Landroid/os/Handler;
+    iget-object v2, p0, Lcom/android/settings_ex/LteModeActivity;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v2, v7}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
@@ -850,14 +850,14 @@
 
     .line 227
     .local v0, "delayReady":Landroid/os/Message;
-    iget-object v2, p0, Lcom/android/settings/LteModeActivity;->mHandler:Landroid/os/Handler;
+    iget-object v2, p0, Lcom/android/settings_ex/LteModeActivity;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v4, 0x1388
 
     invoke-virtual {v2, v0, v4, v5}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     .line 228
-    invoke-virtual {p0, p2}, Lcom/android/settings/LteModeActivity;->sendLteModeChange(Z)V
+    invoke-virtual {p0, p2}, Lcom/android/settings_ex/LteModeActivity;->sendLteModeChange(Z)V
 
     goto/16 :goto_0
 .end method
@@ -904,7 +904,7 @@
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 201
-    iget-object v1, p0, Lcom/android/settings/LteModeActivity;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/LteModeActivity;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 

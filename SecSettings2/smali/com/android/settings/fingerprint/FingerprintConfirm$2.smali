@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fingerprint/FingerprintConfirm$2;
+.class Lcom/android/settings_ex/fingerprint/FingerprintConfirm$2;
 .super Ljava/lang/Object;
 .source "FingerprintConfirm.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fingerprint/FingerprintConfirm;->showSensorErrorDialog(I)V
+    value = Lcom/android/settings_ex/fingerprint/FingerprintConfirm;->showSensorErrorDialog(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/FingerprintConfirm;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/FingerprintConfirm;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/FingerprintConfirm;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintConfirm;)V
     .locals 0
 
     .prologue
     .line 193
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintConfirm$2;->this$0:Lcom/android/settings/fingerprint/FingerprintConfirm;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintConfirm$2;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintConfirm;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

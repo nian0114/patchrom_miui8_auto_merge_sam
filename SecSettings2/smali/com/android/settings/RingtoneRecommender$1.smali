@@ -1,11 +1,11 @@
-.class Lcom/android/settings/RingtoneRecommender$1;
+.class Lcom/android/settings_ex/RingtoneRecommender$1;
 .super Ljava/lang/Thread;
 .source "RingtoneRecommender.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/RingtoneRecommender;->extract()Z
+    value = Lcom/android/settings_ex/RingtoneRecommender;->extract()Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/RingtoneRecommender;
+.field final synthetic this$0:Lcom/android/settings_ex/RingtoneRecommender;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/RingtoneRecommender;Ljava/lang/String;)V
+.method constructor <init>(Lcom/android/settings_ex/RingtoneRecommender;Ljava/lang/String;)V
     .locals 0
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
     .line 253
-    iput-object p1, p0, Lcom/android/settings/RingtoneRecommender$1;->this$0:Lcom/android/settings/RingtoneRecommender;
+    iput-object p1, p0, Lcom/android/settings_ex/RingtoneRecommender$1;->this$0:Lcom/android/settings_ex/RingtoneRecommender;
 
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
@@ -49,9 +49,9 @@
     .local v3, "status":I
     :cond_0
     :goto_0
-    iget-object v4, p0, Lcom/android/settings/RingtoneRecommender$1;->this$0:Lcom/android/settings/RingtoneRecommender;
+    iget-object v4, p0, Lcom/android/settings_ex/RingtoneRecommender$1;->this$0:Lcom/android/settings_ex/RingtoneRecommender;
 
-    iget-boolean v4, v4, Lcom/android/settings/RingtoneRecommender;->mIsOpen:Z
+    iget-boolean v4, v4, Lcom/android/settings_ex/RingtoneRecommender;->mIsOpen:Z
 
     if-eqz v4, :cond_1
 
@@ -59,16 +59,16 @@
     const-wide/16 v4, 0xc8
 
     :try_start_0
-    invoke-static {v4, v5}, Lcom/android/settings/RingtoneRecommender$1;->sleep(J)V
+    invoke-static {v4, v5}, Lcom/android/settings_ex/RingtoneRecommender$1;->sleep(J)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 264
     :goto_1
-    iget-object v4, p0, Lcom/android/settings/RingtoneRecommender$1;->this$0:Lcom/android/settings/RingtoneRecommender;
+    iget-object v4, p0, Lcom/android/settings_ex/RingtoneRecommender$1;->this$0:Lcom/android/settings_ex/RingtoneRecommender;
 
-    # getter for: Lcom/android/settings/RingtoneRecommender;->mSmat:Lcom/samsung/audio/Smat;
-    invoke-static {v4}, Lcom/android/settings/RingtoneRecommender;->access$000(Lcom/android/settings/RingtoneRecommender;)Lcom/samsung/audio/Smat;
+    # getter for: Lcom/android/settings_ex/RingtoneRecommender;->mSmat:Lcom/samsung/audio/Smat;
+    invoke-static {v4}, Lcom/android/settings_ex/RingtoneRecommender;->access$000(Lcom/android/settings_ex/RingtoneRecommender;)Lcom/samsung/audio/Smat;
 
     move-result-object v4
 
@@ -106,10 +106,10 @@
     move v2, v3
 
     .line 269
-    iget-object v4, p0, Lcom/android/settings/RingtoneRecommender$1;->this$0:Lcom/android/settings/RingtoneRecommender;
+    iget-object v4, p0, Lcom/android/settings_ex/RingtoneRecommender$1;->this$0:Lcom/android/settings_ex/RingtoneRecommender;
 
-    # getter for: Lcom/android/settings/RingtoneRecommender;->mListener:Lcom/android/settings/RingtoneRecommender$OnHighlightResultListener;
-    invoke-static {v4}, Lcom/android/settings/RingtoneRecommender;->access$100(Lcom/android/settings/RingtoneRecommender;)Lcom/android/settings/RingtoneRecommender$OnHighlightResultListener;
+    # getter for: Lcom/android/settings_ex/RingtoneRecommender;->mListener:Lcom/android/settings_ex/RingtoneRecommender$OnHighlightResultListener;
+    invoke-static {v4}, Lcom/android/settings_ex/RingtoneRecommender;->access$100(Lcom/android/settings_ex/RingtoneRecommender;)Lcom/android/settings_ex/RingtoneRecommender$OnHighlightResultListener;
 
     move-result-object v4
 
@@ -126,10 +126,10 @@
 
     .line 273
     :pswitch_0
-    iget-object v4, p0, Lcom/android/settings/RingtoneRecommender$1;->this$0:Lcom/android/settings/RingtoneRecommender;
+    iget-object v4, p0, Lcom/android/settings_ex/RingtoneRecommender$1;->this$0:Lcom/android/settings_ex/RingtoneRecommender;
 
-    # getter for: Lcom/android/settings/RingtoneRecommender;->mSmat:Lcom/samsung/audio/Smat;
-    invoke-static {v4}, Lcom/android/settings/RingtoneRecommender;->access$000(Lcom/android/settings/RingtoneRecommender;)Lcom/samsung/audio/Smat;
+    # getter for: Lcom/android/settings_ex/RingtoneRecommender;->mSmat:Lcom/samsung/audio/Smat;
+    invoke-static {v4}, Lcom/android/settings_ex/RingtoneRecommender;->access$000(Lcom/android/settings_ex/RingtoneRecommender;)Lcom/samsung/audio/Smat;
 
     move-result-object v4
 
@@ -180,19 +180,19 @@
     invoke-static {v4, v5}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 279
-    iget-object v4, p0, Lcom/android/settings/RingtoneRecommender$1;->this$0:Lcom/android/settings/RingtoneRecommender;
+    iget-object v4, p0, Lcom/android/settings_ex/RingtoneRecommender$1;->this$0:Lcom/android/settings_ex/RingtoneRecommender;
 
-    # getter for: Lcom/android/settings/RingtoneRecommender;->mListener:Lcom/android/settings/RingtoneRecommender$OnHighlightResultListener;
-    invoke-static {v4}, Lcom/android/settings/RingtoneRecommender;->access$100(Lcom/android/settings/RingtoneRecommender;)Lcom/android/settings/RingtoneRecommender$OnHighlightResultListener;
+    # getter for: Lcom/android/settings_ex/RingtoneRecommender;->mListener:Lcom/android/settings_ex/RingtoneRecommender$OnHighlightResultListener;
+    invoke-static {v4}, Lcom/android/settings_ex/RingtoneRecommender;->access$100(Lcom/android/settings_ex/RingtoneRecommender;)Lcom/android/settings_ex/RingtoneRecommender$OnHighlightResultListener;
 
     move-result-object v4
 
-    invoke-interface {v4, v3, v1}, Lcom/android/settings/RingtoneRecommender$OnHighlightResultListener;->onResult(II)V
+    invoke-interface {v4, v3, v1}, Lcom/android/settings_ex/RingtoneRecommender$OnHighlightResultListener;->onResult(II)V
 
     .line 280
-    iget-object v4, p0, Lcom/android/settings/RingtoneRecommender$1;->this$0:Lcom/android/settings/RingtoneRecommender;
+    iget-object v4, p0, Lcom/android/settings_ex/RingtoneRecommender$1;->this$0:Lcom/android/settings_ex/RingtoneRecommender;
 
-    invoke-virtual {v4}, Lcom/android/settings/RingtoneRecommender;->close()Z
+    invoke-virtual {v4}, Lcom/android/settings_ex/RingtoneRecommender;->close()Z
 
     goto :goto_0
 

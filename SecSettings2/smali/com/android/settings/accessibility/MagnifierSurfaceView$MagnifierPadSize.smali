@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;
+.class public Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;
 .super Ljava/lang/Object;
 .source "MagnifierSurfaceView.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    value = Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -36,7 +36,7 @@
 
     fill-array-data v3, :array_0
 
-    iput-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
+    iput-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
 
     .line 570
     const/4 v3, 0x5
@@ -45,7 +45,7 @@
 
     fill-array-data v3, :array_1
 
-    iput-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
+    iput-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
 
     .line 573
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -88,14 +88,14 @@
 
     .line 580
     :cond_0
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
     .line 581
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
 
     const/4 v4, 0x0
 
@@ -110,7 +110,7 @@
     aput v5, v3, v4
 
     .line 582
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
 
     const/4 v4, 0x1
 
@@ -125,7 +125,7 @@
     aput v5, v3, v4
 
     .line 583
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
 
     const/4 v4, 0x2
 
@@ -140,7 +140,7 @@
     aput v5, v3, v4
 
     .line 584
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
 
     const/4 v4, 0x3
 
@@ -155,14 +155,14 @@
     aput v5, v3, v4
 
     .line 585
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
 
     const/4 v4, 0x4
 
     aput v2, v3, v4
 
     .line 587
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
 
     const/4 v4, 0x0
 
@@ -177,7 +177,7 @@
     aput v5, v3, v4
 
     .line 588
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
 
     const/4 v4, 0x1
 
@@ -192,7 +192,7 @@
     aput v5, v3, v4
 
     .line 589
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
 
     const/4 v4, 0x2
 
@@ -207,7 +207,7 @@
     aput v5, v3, v4
 
     .line 590
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
 
     const/4 v4, 0x3
 
@@ -222,7 +222,7 @@
     aput v5, v3, v4
 
     .line 591
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
 
     const/4 v4, 0x4
 
@@ -242,7 +242,7 @@
 
     .line 593
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
 
     const/4 v4, 0x0
 
@@ -257,7 +257,7 @@
     aput v5, v3, v4
 
     .line 594
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
 
     const/4 v4, 0x1
 
@@ -272,14 +272,14 @@
     aput v5, v3, v4
 
     .line 595
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->x:[I
 
     const/4 v4, 0x2
 
     aput v2, v3, v4
 
     .line 597
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
 
     const/4 v4, 0x0
 
@@ -294,7 +294,7 @@
     aput v5, v3, v4
 
     .line 598
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
 
     const/4 v4, 0x1
 
@@ -309,7 +309,7 @@
     aput v5, v3, v4
 
     .line 599
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView$MagnifierPadSize;->y:[I
 
     const/4 v4, 0x2
 

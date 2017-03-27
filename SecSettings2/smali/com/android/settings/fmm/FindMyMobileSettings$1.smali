@@ -1,11 +1,11 @@
-.class Lcom/android/settings/fmm/FindMyMobileSettings$1;
+.class Lcom/android/settings_ex/fmm/FindMyMobileSettings$1;
 .super Landroid/database/ContentObserver;
 .source "FindMyMobileSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fmm/FindMyMobileSettings;
+    value = Lcom/android/settings_ex/fmm/FindMyMobileSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fmm/FindMyMobileSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/fmm/FindMyMobileSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fmm/FindMyMobileSettings;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/fmm/FindMyMobileSettings;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 143
-    iput-object p1, p0, Lcom/android/settings/fmm/FindMyMobileSettings$1;->this$0:Lcom/android/settings/fmm/FindMyMobileSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/fmm/FindMyMobileSettings$1;->this$0:Lcom/android/settings_ex/fmm/FindMyMobileSettings;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -44,10 +44,10 @@
     const/4 v0, 0x0
 
     .line 146
-    iget-object v2, p0, Lcom/android/settings/fmm/FindMyMobileSettings$1;->this$0:Lcom/android/settings/fmm/FindMyMobileSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/fmm/FindMyMobileSettings$1;->this$0:Lcom/android/settings_ex/fmm/FindMyMobileSettings;
 
-    # invokes: Lcom/android/settings/fmm/FindMyMobileSettings;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v2}, Lcom/android/settings/fmm/FindMyMobileSettings;->access$000(Lcom/android/settings/fmm/FindMyMobileSettings;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/fmm/FindMyMobileSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v2}, Lcom/android/settings_ex/fmm/FindMyMobileSettings;->access$000(Lcom/android/settings_ex/fmm/FindMyMobileSettings;)Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -90,10 +90,10 @@
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 151
-    iget-object v2, p0, Lcom/android/settings/fmm/FindMyMobileSettings$1;->this$0:Lcom/android/settings/fmm/FindMyMobileSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/fmm/FindMyMobileSettings$1;->this$0:Lcom/android/settings_ex/fmm/FindMyMobileSettings;
 
-    # getter for: Lcom/android/settings/fmm/FindMyMobileSettings;->mRemoteControls:Landroid/preference/SwitchPreference;
-    invoke-static {v2}, Lcom/android/settings/fmm/FindMyMobileSettings;->access$100(Lcom/android/settings/fmm/FindMyMobileSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/fmm/FindMyMobileSettings;->mRemoteControls:Landroid/preference/SwitchPreference;
+    invoke-static {v2}, Lcom/android/settings_ex/fmm/FindMyMobileSettings;->access$100(Lcom/android/settings_ex/fmm/FindMyMobileSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v2
 

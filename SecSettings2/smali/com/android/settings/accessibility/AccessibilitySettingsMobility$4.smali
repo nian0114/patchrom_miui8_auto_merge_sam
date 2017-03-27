@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessibility/AccessibilitySettingsMobility$4;
+.class Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility$4;
 .super Landroid/database/ContentObserver;
 .source "AccessibilitySettingsMobility.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/AccessibilitySettingsMobility;
+    value = Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/AccessibilitySettingsMobility;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/AccessibilitySettingsMobility;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 156
-    iput-object p1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsMobility$4;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsMobility;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility$4;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -40,10 +40,10 @@
 
     .prologue
     .line 159
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsMobility$4;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsMobility;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility$4;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;
 
-    # invokes: Lcom/android/settings/accessibility/AccessibilitySettingsMobility;->updateMobilityPreferences()V
-    invoke-static {v0}, Lcom/android/settings/accessibility/AccessibilitySettingsMobility;->access$400(Lcom/android/settings/accessibility/AccessibilitySettingsMobility;)V
+    # invokes: Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;->updateMobilityPreferences()V
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;->access$400(Lcom/android/settings_ex/accessibility/AccessibilitySettingsMobility;)V
 
     .line 160
     return-void

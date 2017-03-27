@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler$1;
+.class Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler$1;
 .super Ljava/lang/Object;
 .source "DirectAccessEnabler.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->showExclusiveDialog()V
+    value = Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->showExclusiveDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;)V
     .locals 0
 
     .prologue
     .line 104
-    iput-object p1, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler$1;->this$0:Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler$1;->this$0:Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,10 +43,10 @@
 
     .prologue
     .line 107
-    iget-object v0, p0, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler$1;->this$0:Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler$1;->this$0:Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;
 
-    # getter for: Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->mDialog:Landroid/app/AlertDialog;
-    invoke-static {v0}, Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;->access$000(Lcom/android/settings/accessibility/directaccess/DirectAccessEnabler;)Landroid/app/AlertDialog;
+    # getter for: Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->mDialog:Landroid/app/AlertDialog;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;->access$000(Lcom/android/settings_ex/accessibility/directaccess/DirectAccessEnabler;)Landroid/app/AlertDialog;
 
     move-result-object v0
 

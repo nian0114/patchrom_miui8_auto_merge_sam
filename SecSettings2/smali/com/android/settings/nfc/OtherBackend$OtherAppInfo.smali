@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/nfc/OtherBackend$OtherAppInfo;
+.class public Lcom/android/settings_ex/nfc/OtherBackend$OtherAppInfo;
 .super Ljava/lang/Object;
 .source "OtherBackend.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/nfc/OtherBackend;
+    value = Lcom/android/settings_ex/nfc/OtherBackend;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

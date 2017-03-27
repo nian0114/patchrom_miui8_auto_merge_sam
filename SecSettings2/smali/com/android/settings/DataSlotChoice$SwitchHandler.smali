@@ -1,11 +1,11 @@
-.class Lcom/android/settings/DataSlotChoice$SwitchHandler;
+.class Lcom/android/settings_ex/DataSlotChoice$SwitchHandler;
 .super Landroid/os/Handler;
 .source "DataSlotChoice.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DataSlotChoice;
+    value = Lcom/android/settings_ex/DataSlotChoice;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DataSlotChoice;
+.field final synthetic this$0:Lcom/android/settings_ex/DataSlotChoice;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DataSlotChoice;)V
+.method constructor <init>(Lcom/android/settings_ex/DataSlotChoice;)V
     .locals 0
 
     .prologue
     .line 632
-    iput-object p1, p0, Lcom/android/settings/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings/DataSlotChoice;
+    iput-object p1, p0, Lcom/android/settings_ex/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings_ex/DataSlotChoice;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -63,10 +63,10 @@
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 638
-    iget-object v3, p0, Lcom/android/settings/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings/DataSlotChoice;
+    iget-object v3, p0, Lcom/android/settings_ex/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings_ex/DataSlotChoice;
 
-    # invokes: Lcom/android/settings/DataSlotChoice;->setSwitchChecked(Z)V
-    invoke-static {v3, v2}, Lcom/android/settings/DataSlotChoice;->access$1000(Lcom/android/settings/DataSlotChoice;Z)V
+    # invokes: Lcom/android/settings_ex/DataSlotChoice;->setSwitchChecked(Z)V
+    invoke-static {v3, v2}, Lcom/android/settings_ex/DataSlotChoice;->access$1000(Lcom/android/settings_ex/DataSlotChoice;Z)V
 
     goto :goto_0
 
@@ -79,10 +79,10 @@
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 642
-    iget-object v2, p0, Lcom/android/settings/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings/DataSlotChoice;
+    iget-object v2, p0, Lcom/android/settings_ex/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings_ex/DataSlotChoice;
 
-    # invokes: Lcom/android/settings/DataSlotChoice;->setSwitchChecked(Z)V
-    invoke-static {v2, v0}, Lcom/android/settings/DataSlotChoice;->access$1000(Lcom/android/settings/DataSlotChoice;Z)V
+    # invokes: Lcom/android/settings_ex/DataSlotChoice;->setSwitchChecked(Z)V
+    invoke-static {v2, v0}, Lcom/android/settings_ex/DataSlotChoice;->access$1000(Lcom/android/settings_ex/DataSlotChoice;Z)V
 
     goto :goto_0
 
@@ -95,26 +95,26 @@
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 646
-    iget-object v3, p0, Lcom/android/settings/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings/DataSlotChoice;
+    iget-object v3, p0, Lcom/android/settings_ex/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings_ex/DataSlotChoice;
 
-    # getter for: Lcom/android/settings/DataSlotChoice;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v3}, Lcom/android/settings/DataSlotChoice;->access$1100(Lcom/android/settings/DataSlotChoice;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/DataSlotChoice;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v3}, Lcom/android/settings_ex/DataSlotChoice;->access$1100(Lcom/android/settings_ex/DataSlotChoice;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v3
 
-    invoke-virtual {v3, v2}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v3, v2}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 647
-    iget-object v3, p0, Lcom/android/settings/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings/DataSlotChoice;
+    iget-object v3, p0, Lcom/android/settings_ex/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings_ex/DataSlotChoice;
 
-    # setter for: Lcom/android/settings/DataSlotChoice;->isReadySlot:Z
-    invoke-static {v3, v2}, Lcom/android/settings/DataSlotChoice;->access$1202(Lcom/android/settings/DataSlotChoice;Z)Z
+    # setter for: Lcom/android/settings_ex/DataSlotChoice;->isReadySlot:Z
+    invoke-static {v3, v2}, Lcom/android/settings_ex/DataSlotChoice;->access$1202(Lcom/android/settings_ex/DataSlotChoice;Z)Z
 
     .line 648
-    iget-object v2, p0, Lcom/android/settings/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings/DataSlotChoice;
+    iget-object v2, p0, Lcom/android/settings_ex/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings_ex/DataSlotChoice;
 
-    # invokes: Lcom/android/settings/DataSlotChoice;->updateUi()V
-    invoke-static {v2}, Lcom/android/settings/DataSlotChoice;->access$000(Lcom/android/settings/DataSlotChoice;)V
+    # invokes: Lcom/android/settings_ex/DataSlotChoice;->updateUi()V
+    invoke-static {v2}, Lcom/android/settings_ex/DataSlotChoice;->access$000(Lcom/android/settings_ex/DataSlotChoice;)V
 
     goto :goto_0
 
@@ -127,20 +127,20 @@
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 652
-    iget-object v2, p0, Lcom/android/settings/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings/DataSlotChoice;
+    iget-object v2, p0, Lcom/android/settings_ex/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings_ex/DataSlotChoice;
 
-    # getter for: Lcom/android/settings/DataSlotChoice;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v2}, Lcom/android/settings/DataSlotChoice;->access$1100(Lcom/android/settings/DataSlotChoice;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/DataSlotChoice;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v2}, Lcom/android/settings_ex/DataSlotChoice;->access$1100(Lcom/android/settings_ex/DataSlotChoice;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v2
 
-    invoke-virtual {v2, v0}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v2, v0}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 653
-    iget-object v2, p0, Lcom/android/settings/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings/DataSlotChoice;
+    iget-object v2, p0, Lcom/android/settings_ex/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings_ex/DataSlotChoice;
 
-    # setter for: Lcom/android/settings/DataSlotChoice;->isReadySlot:Z
-    invoke-static {v2, v0}, Lcom/android/settings/DataSlotChoice;->access$1202(Lcom/android/settings/DataSlotChoice;Z)Z
+    # setter for: Lcom/android/settings_ex/DataSlotChoice;->isReadySlot:Z
+    invoke-static {v2, v0}, Lcom/android/settings_ex/DataSlotChoice;->access$1202(Lcom/android/settings_ex/DataSlotChoice;Z)Z
 
     goto :goto_0
 
@@ -153,10 +153,10 @@
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 657
-    iget-object v3, p0, Lcom/android/settings/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings/DataSlotChoice;
+    iget-object v3, p0, Lcom/android/settings_ex/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings_ex/DataSlotChoice;
 
-    # getter for: Lcom/android/settings/DataSlotChoice;->mContext:Landroid/content/Context;
-    invoke-static {v3}, Lcom/android/settings/DataSlotChoice;->access$200(Lcom/android/settings/DataSlotChoice;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/DataSlotChoice;->mContext:Landroid/content/Context;
+    invoke-static {v3}, Lcom/android/settings_ex/DataSlotChoice;->access$200(Lcom/android/settings_ex/DataSlotChoice;)Landroid/content/Context;
 
     move-result-object v3
 
@@ -221,22 +221,22 @@
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 663
-    iget-object v3, p0, Lcom/android/settings/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings/DataSlotChoice;
+    iget-object v3, p0, Lcom/android/settings_ex/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings_ex/DataSlotChoice;
 
-    # getter for: Lcom/android/settings/DataSlotChoice;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v3}, Lcom/android/settings/DataSlotChoice;->access$1100(Lcom/android/settings/DataSlotChoice;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/DataSlotChoice;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v3}, Lcom/android/settings_ex/DataSlotChoice;->access$1100(Lcom/android/settings_ex/DataSlotChoice;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v3
 
-    invoke-virtual {v3, v0}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v3, v0}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 665
     .end local v0    # "isEnableData":Z
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings/DataSlotChoice;
+    iget-object v3, p0, Lcom/android/settings_ex/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings_ex/DataSlotChoice;
 
-    # setter for: Lcom/android/settings/DataSlotChoice;->isReadySlot:Z
-    invoke-static {v3, v2}, Lcom/android/settings/DataSlotChoice;->access$1202(Lcom/android/settings/DataSlotChoice;Z)Z
+    # setter for: Lcom/android/settings_ex/DataSlotChoice;->isReadySlot:Z
+    invoke-static {v3, v2}, Lcom/android/settings_ex/DataSlotChoice;->access$1202(Lcom/android/settings_ex/DataSlotChoice;Z)Z
 
     goto/16 :goto_0
 
@@ -250,10 +250,10 @@
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 669
-    iget-object v2, p0, Lcom/android/settings/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings/DataSlotChoice;
+    iget-object v2, p0, Lcom/android/settings_ex/DataSlotChoice$SwitchHandler;->this$0:Lcom/android/settings_ex/DataSlotChoice;
 
-    # invokes: Lcom/android/settings/DataSlotChoice;->updateUi()V
-    invoke-static {v2}, Lcom/android/settings/DataSlotChoice;->access$000(Lcom/android/settings/DataSlotChoice;)V
+    # invokes: Lcom/android/settings_ex/DataSlotChoice;->updateUi()V
+    invoke-static {v2}, Lcom/android/settings_ex/DataSlotChoice;->access$000(Lcom/android/settings_ex/DataSlotChoice;)V
 
     goto/16 :goto_0
 

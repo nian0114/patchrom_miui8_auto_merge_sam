@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/applications/AppDomainsFragment;
+.class public Lcom/android/settings_ex/applications/AppDomainsFragment;
 .super Landroid/app/Fragment;
 .source "AppDomainsFragment.java"
 
@@ -33,7 +33,7 @@
 
     .local v1, "i":I
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/applications/AppDomainsFragment;->mUrls:[Ljava/lang/CharSequence;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/AppDomainsFragment;->mUrls:[Ljava/lang/CharSequence;
 
     array-length v2, v2
 
@@ -54,7 +54,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/applications/AppDomainsFragment;->mUrls:[Ljava/lang/CharSequence;
+    iget-object v3, p0, Lcom/android/settings_ex/applications/AppDomainsFragment;->mUrls:[Ljava/lang/CharSequence;
 
     aget-object v3, v3, v1
 
@@ -79,7 +79,7 @@
 
     .line 63
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/applications/AppDomainsFragment;->mDescription:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/AppDomainsFragment;->mDescription:Landroid/widget/TextView;
 
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -139,10 +139,10 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    iput-object v2, p0, Lcom/android/settings/applications/AppDomainsFragment;->mDescription:Landroid/widget/TextView;
+    iput-object v2, p0, Lcom/android/settings_ex/applications/AppDomainsFragment;->mDescription:Landroid/widget/TextView;
 
     .line 47
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppDomainsFragment;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/AppDomainsFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -157,16 +157,16 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/applications/AppDomainsFragment;->mUrls:[Ljava/lang/CharSequence;
+    iput-object v2, p0, Lcom/android/settings_ex/applications/AppDomainsFragment;->mUrls:[Ljava/lang/CharSequence;
 
     .line 51
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/applications/AppDomainsFragment;->mUrls:[Ljava/lang/CharSequence;
+    iget-object v2, p0, Lcom/android/settings_ex/applications/AppDomainsFragment;->mUrls:[Ljava/lang/CharSequence;
 
     if-eqz v2, :cond_1
 
     .line 52
-    invoke-direct {p0}, Lcom/android/settings/applications/AppDomainsFragment;->setDescription()V
+    invoke-direct {p0}, Lcom/android/settings_ex/applications/AppDomainsFragment;->setDescription()V
 
     .line 55
     :cond_1

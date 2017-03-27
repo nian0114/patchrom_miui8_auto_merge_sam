@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/FontPreview;
+.class public Lcom/android/settings_ex/FontPreview;
 .super Landroid/app/Activity;
 .source "FontPreview.java"
 
@@ -11,7 +11,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/FontPreview$LoadListTask;
+        Lcom/android/settings_ex/FontPreview$LoadListTask;
     }
 .end annotation
 
@@ -81,11 +81,11 @@
 
 .field private mFontFloatSize:F
 
-.field private mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+.field private mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
 .field private mFontPreviewSizeStyleLayout:Landroid/widget/LinearLayout;
 
-.field private mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+.field private mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
 .field private mFontStyleListView:Landroid/widget/ListView;
 
@@ -105,7 +105,7 @@
 
 .field mIsSelectedCurrentThemeFont:Z
 
-.field private mLoadListTask:Lcom/android/settings/FontPreview$LoadListTask;
+.field private mLoadListTask:Lcom/android/settings_ex/FontPreview$LoadListTask;
 
 .field private mMaxTextView:Landroid/widget/TextSwitcher;
 
@@ -146,10 +146,10 @@
     const/4 v3, 0x0
 
     .line 94
-    sput-boolean v3, Lcom/android/settings/FontPreview;->DEBUG:Z
+    sput-boolean v3, Lcom/android/settings_ex/FontPreview;->DEBUG:Z
 
     .line 112
-    sput v4, Lcom/android/settings/FontPreview;->DUAL_COLOR_FOR_ELEVENLEVEL_FONT_VALUE:I
+    sput v4, Lcom/android/settings_ex/FontPreview;->DUAL_COLOR_FOR_ELEVENLEVEL_FONT_VALUE:I
 
     .line 157
     const/16 v0, 0xe
@@ -236,10 +236,10 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/android/settings/FontPreview;->apkNameList:[Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/FontPreview;->apkNameList:[Ljava/lang/String;
 
     .line 1031
-    sput-boolean v3, Lcom/android/settings/FontPreview;->REBOOT:Z
+    sput-boolean v3, Lcom/android/settings_ex/FontPreview;->REBOOT:Z
 
     return-void
 .end method
@@ -260,235 +260,235 @@
     .line 97
     const/4 v0, 0x5
 
-    iput v0, p0, Lcom/android/settings/FontPreview;->mExtraLargeFontIndex:I
+    iput v0, p0, Lcom/android/settings_ex/FontPreview;->mExtraLargeFontIndex:I
 
     .line 98
-    iput v2, p0, Lcom/android/settings/FontPreview;->mPreviousFont:I
+    iput v2, p0, Lcom/android/settings_ex/FontPreview;->mPreviousFont:I
 
     .line 101
-    iput v2, p0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iput v2, p0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
     .line 102
-    iput v2, p0, Lcom/android/settings/FontPreview;->mSavedClickedItem:I
+    iput v2, p0, Lcom/android/settings_ex/FontPreview;->mSavedClickedItem:I
 
     .line 104
     new-instance v0, Landroid/content/res/Configuration;
 
     invoke-direct {v0}, Landroid/content/res/Configuration;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/FontPreview;->mCurConfig:Landroid/content/res/Configuration;
+    iput-object v0, p0, Lcom/android/settings_ex/FontPreview;->mCurConfig:Landroid/content/res/Configuration;
 
     .line 175
-    iput-boolean v1, p0, Lcom/android/settings/FontPreview;->mDefaultUseHelvetica:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->mDefaultUseHelvetica:Z
 
     .line 176
-    iput-boolean v1, p0, Lcom/android/settings/FontPreview;->mIsAccessibilitySettingsVision:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->mIsAccessibilitySettingsVision:Z
 
     .line 177
-    iput-boolean v1, p0, Lcom/android/settings/FontPreview;->mIsChangedFontSizeSeekBar:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->mIsChangedFontSizeSeekBar:Z
 
     .line 179
-    iput-boolean v1, p0, Lcom/android/settings/FontPreview;->mIsFontLargerOn:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->mIsFontLargerOn:Z
 
     .line 180
-    iput-boolean v1, p0, Lcom/android/settings/FontPreview;->isCheckPlatformSignatures:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->isCheckPlatformSignatures:Z
 
     .line 181
-    iput-boolean v1, p0, Lcom/android/settings/FontPreview;->isCheckReleaseSignatures:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->isCheckReleaseSignatures:Z
 
     .line 182
-    iput-boolean v1, p0, Lcom/android/settings/FontPreview;->isClickSwitch:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->isClickSwitch:Z
 
     .line 183
-    iput-boolean v1, p0, Lcom/android/settings/FontPreview;->isEnabledShowBtnBg:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->isEnabledShowBtnBg:Z
 
     .line 185
-    iput-boolean v1, p0, Lcom/android/settings/FontPreview;->mIsSelectedCurrentThemeFont:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->mIsSelectedCurrentThemeFont:Z
 
     .line 1401
-    iput-boolean v1, p0, Lcom/android/settings/FontPreview;->mIsRunLoadListTask:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->mIsRunLoadListTask:Z
 
     .line 1402
-    iput-object v3, p0, Lcom/android/settings/FontPreview;->mLoadListTask:Lcom/android/settings/FontPreview$LoadListTask;
+    iput-object v3, p0, Lcom/android/settings_ex/FontPreview;->mLoadListTask:Lcom/android/settings_ex/FontPreview$LoadListTask;
 
     .line 1403
-    iput-object v3, p0, Lcom/android/settings/FontPreview;->mProgressBarLayout:Landroid/widget/RelativeLayout;
+    iput-object v3, p0, Lcom/android/settings_ex/FontPreview;->mProgressBarLayout:Landroid/widget/RelativeLayout;
 
     .line 1404
-    iput-object v3, p0, Lcom/android/settings/FontPreview;->mFontPreviewSizeStyleLayout:Landroid/widget/LinearLayout;
+    iput-object v3, p0, Lcom/android/settings_ex/FontPreview;->mFontPreviewSizeStyleLayout:Landroid/widget/LinearLayout;
 
     .line 1406
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/FontPreview;I)V
+.method static synthetic access$000(Lcom/android/settings_ex/FontPreview;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/FontPreview;
+    .param p0, "x0"    # Lcom/android/settings_ex/FontPreview;
     .param p1, "x1"    # I
 
     .prologue
     .line 83
-    invoke-direct {p0, p1}, Lcom/android/settings/FontPreview;->changeFontSizeFromSeekBar(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/FontPreview;->changeFontSizeFromSeekBar(I)V
 
     return-void
 .end method
 
-.method static synthetic access$1002(Lcom/android/settings/FontPreview;Z)Z
+.method static synthetic access$1002(Lcom/android/settings_ex/FontPreview;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/FontPreview;
+    .param p0, "x0"    # Lcom/android/settings_ex/FontPreview;
     .param p1, "x1"    # Z
 
     .prologue
     .line 83
-    iput-boolean p1, p0, Lcom/android/settings/FontPreview;->mIsRunLoadListTask:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/FontPreview;->mIsRunLoadListTask:Z
 
     return p1
 .end method
 
-.method static synthetic access$102(Lcom/android/settings/FontPreview;Z)Z
+.method static synthetic access$102(Lcom/android/settings_ex/FontPreview;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/FontPreview;
+    .param p0, "x0"    # Lcom/android/settings_ex/FontPreview;
     .param p1, "x1"    # Z
 
     .prologue
     .line 83
-    iput-boolean p1, p0, Lcom/android/settings/FontPreview;->mIsChangedFontSizeSeekBar:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/FontPreview;->mIsChangedFontSizeSeekBar:Z
 
     return p1
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/FontPreview;)Lcom/android/settings/flipfont/FontListAdapter;
+.method static synthetic access$1100(Lcom/android/settings_ex/FontPreview;)Lcom/android/settings_ex/flipfont/FontListAdapter;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/FontPreview;
+    .param p0, "x0"    # Lcom/android/settings_ex/FontPreview;
 
     .prologue
     .line 83
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     return-object v0
 .end method
 
-.method static synthetic access$1102(Lcom/android/settings/FontPreview;Lcom/android/settings/flipfont/FontListAdapter;)Lcom/android/settings/flipfont/FontListAdapter;
+.method static synthetic access$1102(Lcom/android/settings_ex/FontPreview;Lcom/android/settings_ex/flipfont/FontListAdapter;)Lcom/android/settings_ex/flipfont/FontListAdapter;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/FontPreview;
-    .param p1, "x1"    # Lcom/android/settings/flipfont/FontListAdapter;
+    .param p0, "x0"    # Lcom/android/settings_ex/FontPreview;
+    .param p1, "x1"    # Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     .prologue
     .line 83
-    iput-object p1, p0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iput-object p1, p0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     return-object p1
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/FontPreview;)Ljava/lang/String;
+.method static synthetic access$1200(Lcom/android/settings_ex/FontPreview;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/FontPreview;
+    .param p0, "x0"    # Lcom/android/settings_ex/FontPreview;
 
     .prologue
     .line 83
-    invoke-direct {p0}, Lcom/android/settings/FontPreview;->getFontNameFromSystem()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/FontPreview;->getFontNameFromSystem()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$1300(Lcom/android/settings/FontPreview;)Landroid/os/Bundle;
+.method static synthetic access$1300(Lcom/android/settings_ex/FontPreview;)Landroid/os/Bundle;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/FontPreview;
+    .param p0, "x0"    # Lcom/android/settings_ex/FontPreview;
 
     .prologue
     .line 83
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mSavedInstanceState:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mSavedInstanceState:Landroid/os/Bundle;
 
     return-object v0
 .end method
 
-.method static synthetic access$1400(Lcom/android/settings/FontPreview;Landroid/os/Bundle;)V
+.method static synthetic access$1400(Lcom/android/settings_ex/FontPreview;Landroid/os/Bundle;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/FontPreview;
+    .param p0, "x0"    # Lcom/android/settings_ex/FontPreview;
     .param p1, "x1"    # Landroid/os/Bundle;
 
     .prologue
     .line 83
-    invoke-direct {p0, p1}, Lcom/android/settings/FontPreview;->setFontStyleList(Landroid/os/Bundle;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/FontPreview;->setFontStyleList(Landroid/os/Bundle;)V
 
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/FontPreview;)I
+.method static synthetic access$200(Lcom/android/settings_ex/FontPreview;)I
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/FontPreview;
+    .param p0, "x0"    # Lcom/android/settings_ex/FontPreview;
 
     .prologue
     .line 83
-    iget v0, p0, Lcom/android/settings/FontPreview;->mExtraLargeFontIndex:I
+    iget v0, p0, Lcom/android/settings_ex/FontPreview;->mExtraLargeFontIndex:I
 
     return v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/FontPreview;)Landroid/widget/TextView;
+.method static synthetic access$300(Lcom/android/settings_ex/FontPreview;)Landroid/widget/TextView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/FontPreview;
+    .param p0, "x0"    # Lcom/android/settings_ex/FontPreview;
 
     .prologue
     .line 83
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mShowForHugeFontTextView:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mShowForHugeFontTextView:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/FontPreview;)Landroid/content/Context;
+.method static synthetic access$500(Lcom/android/settings_ex/FontPreview;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/FontPreview;
+    .param p0, "x0"    # Lcom/android/settings_ex/FontPreview;
 
     .prologue
     .line 83
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/FontPreview;)Landroid/widget/ListView;
+.method static synthetic access$600(Lcom/android/settings_ex/FontPreview;)Landroid/widget/ListView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/FontPreview;
+    .param p0, "x0"    # Lcom/android/settings_ex/FontPreview;
 
     .prologue
     .line 83
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
     return-object v0
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/FontPreview;)V
+.method static synthetic access$700(Lcom/android/settings_ex/FontPreview;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/FontPreview;
+    .param p0, "x0"    # Lcom/android/settings_ex/FontPreview;
 
     .prologue
     .line 83
-    invoke-direct {p0}, Lcom/android/settings/FontPreview;->doneFontPreview()V
+    invoke-direct {p0}, Lcom/android/settings_ex/FontPreview;->doneFontPreview()V
 
     return-void
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/FontPreview;)Landroid/widget/RelativeLayout;
+.method static synthetic access$800(Lcom/android/settings_ex/FontPreview;)Landroid/widget/RelativeLayout;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/FontPreview;
+    .param p0, "x0"    # Lcom/android/settings_ex/FontPreview;
 
     .prologue
     .line 83
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mProgressBarLayout:Landroid/widget/RelativeLayout;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mProgressBarLayout:Landroid/widget/RelativeLayout;
 
     return-object v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/FontPreview;)Landroid/widget/LinearLayout;
+.method static synthetic access$900(Lcom/android/settings_ex/FontPreview;)Landroid/widget/LinearLayout;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/FontPreview;
+    .param p0, "x0"    # Lcom/android/settings_ex/FontPreview;
 
     .prologue
     .line 83
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontPreviewSizeStyleLayout:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontPreviewSizeStyleLayout:Landroid/widget/LinearLayout;
 
     return-object v0
 .end method
@@ -505,11 +505,11 @@
 
     .line 575
     .local v0, "fontsize":F
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->floatRevisedValueList:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->floatRevisedValueList:Ljava/util/ArrayList;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->floatRevisedValueList:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->floatRevisedValueList:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -523,7 +523,7 @@
 
     .line 580
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mChangingSizeText:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mChangingSizeText:Landroid/widget/TextView;
 
     const/high16 v2, 0x41a00000    # 20.0f
 
@@ -532,17 +532,17 @@
     invoke-virtual {v1, v3, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
     .line 581
-    sput p1, Lcom/android/settings/FontPreview;->mSelectedFontSizeSeekBarProgress:I
+    sput p1, Lcom/android/settings_ex/FontPreview;->mSelectedFontSizeSeekBarProgress:I
 
     .line 582
-    iput v0, p0, Lcom/android/settings/FontPreview;->mFontFloatSize:F
+    iput v0, p0, Lcom/android/settings_ex/FontPreview;->mFontFloatSize:F
 
     .line 583
     return-void
 
     .line 578
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->floatRevisedValueList:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->floatRevisedValueList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -591,21 +591,21 @@
 
     .prologue
     .line 533
-    invoke-virtual {p0}, Lcom/android/settings/FontPreview;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/android/settings_ex/FontPreview;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/FontPreview;->mActionBar:Landroid/app/ActionBar;
+    iput-object v0, p0, Lcom/android/settings_ex/FontPreview;->mActionBar:Landroid/app/ActionBar;
 
     .line 534
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mActionBar:Landroid/app/ActionBar;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mActionBar:Landroid/app/ActionBar;
 
     const/16 v1, 0x10
 
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setDisplayOptions(I)V
 
     .line 535
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mActionBar:Landroid/app/ActionBar;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mActionBar:Landroid/app/ActionBar;
 
     const v1, 0x7f040082
 
@@ -615,9 +615,9 @@
     return-void
 .end method
 
-.method private copyFileWithCR(Lcom/android/settings/flipfont/FontWriter;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+.method private copyFileWithCR(Lcom/android/settings_ex/flipfont/FontWriter;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 7
-    .param p1, "fontWriter"    # Lcom/android/settings/flipfont/FontWriter;
+    .param p1, "fontWriter"    # Lcom/android/settings_ex/flipfont/FontWriter;
     .param p2, "dir"    # Ljava/io/File;
     .param p3, "sPackageName"    # Ljava/lang/String;
     .param p4, "sFileIn"    # Ljava/lang/String;
@@ -634,7 +634,7 @@
     .line 1270
     .local v2, "err_filecopy":Z
     :try_start_0
-    iget-object v5, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
     :try_end_0
@@ -689,7 +689,7 @@
     move-result-object v3
 
     .line 1287
-    invoke-virtual {p1, p2, v3, p5}, Lcom/android/settings/flipfont/FontWriter;->copyFontFile(Ljava/io/File;Ljava/io/InputStream;Ljava/lang/String;)Z
+    invoke-virtual {p1, p2, v3, p5}, Lcom/android/settings_ex/flipfont/FontWriter;->copyFontFile(Ljava/io/File;Ljava/io/InputStream;Ljava/lang/String;)Z
 
     move-result v2
 
@@ -746,22 +746,22 @@
     const/4 v1, 0x1
 
     .line 870
-    iget-boolean v0, p0, Lcom/android/settings/FontPreview;->mIsAccessibilitySettingsVision:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/FontPreview;->mIsAccessibilitySettingsVision:Z
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/android/settings/FontPreview;->mIsFont11Level:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/FontPreview;->mIsFont11Level:Z
 
     if-eqz v0, :cond_0
 
     .line 871
-    invoke-virtual {p0}, Lcom/android/settings/FontPreview;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/FontPreview;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
     const-string v3, "accessiblity_font_switch"
 
-    iget-boolean v0, p0, Lcom/android/settings/FontPreview;->mIsFontLargerOn:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/FontPreview;->mIsFontLargerOn:Z
 
     if-eqz v0, :cond_6
 
@@ -772,63 +772,63 @@
 
     .line 876
     :cond_0
-    iget-boolean v0, p0, Lcom/android/settings/FontPreview;->mIsChangedFontSizeSeekBar:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/FontPreview;->mIsChangedFontSizeSeekBar:Z
 
     if-nez v0, :cond_1
 
-    iget v0, p0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v0, p0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
-    iget v2, p0, Lcom/android/settings/FontPreview;->mPreviousFont:I
+    iget v2, p0, Lcom/android/settings_ex/FontPreview;->mPreviousFont:I
 
     if-eq v0, v2, :cond_5
 
     :cond_1
-    sget v0, Lcom/android/settings/FontPreview;->mSelectedFontSizeSeekBarProgress:I
+    sget v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontSizeSeekBarProgress:I
 
-    iget v2, p0, Lcom/android/settings/FontPreview;->mSelectedFontSize:I
+    iget v2, p0, Lcom/android/settings_ex/FontPreview;->mSelectedFontSize:I
 
     if-ne v0, v2, :cond_2
 
-    iget v0, p0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v0, p0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
-    iget v2, p0, Lcom/android/settings/FontPreview;->mPreviousFont:I
+    iget v2, p0, Lcom/android/settings_ex/FontPreview;->mPreviousFont:I
 
     if-eq v0, v2, :cond_5
 
     :cond_2
-    sget v0, Lcom/android/settings/FontPreview;->mSelectedFontSizeSeekBarProgress:I
+    sget v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontSizeSeekBarProgress:I
 
     if-gez v0, :cond_3
 
-    iget v0, p0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v0, p0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
     if-ltz v0, :cond_5
 
     :cond_3
-    sget v0, Lcom/android/settings/FontPreview;->mSelectedFontSizeSeekBarProgress:I
+    sget v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontSizeSeekBarProgress:I
 
-    iget v2, p0, Lcom/android/settings/FontPreview;->mSelectedFontSize:I
+    iget v2, p0, Lcom/android/settings_ex/FontPreview;->mSelectedFontSize:I
 
     if-ne v0, v2, :cond_4
 
-    iget v0, p0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v0, p0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
     if-ltz v0, :cond_5
 
     :cond_4
-    sget v0, Lcom/android/settings/FontPreview;->mSelectedFontSizeSeekBarProgress:I
+    sget v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontSizeSeekBarProgress:I
 
     if-gez v0, :cond_7
 
-    iget v0, p0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v0, p0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
-    iget v2, p0, Lcom/android/settings/FontPreview;->mPreviousFont:I
+    iget v2, p0, Lcom/android/settings_ex/FontPreview;->mPreviousFont:I
 
     if-ne v0, v2, :cond_7
 
     .line 881
     :cond_5
-    invoke-virtual {p0}, Lcom/android/settings/FontPreview;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/FontPreview;->finish()V
 
     .line 899
     :goto_1
@@ -842,27 +842,27 @@
 
     .line 885
     :cond_7
-    iget-boolean v0, p0, Lcom/android/settings/FontPreview;->mIsChangedFontSizeSeekBar:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/FontPreview;->mIsChangedFontSizeSeekBar:Z
 
     if-ne v0, v1, :cond_9
 
-    sget v0, Lcom/android/settings/FontPreview;->mSelectedFontSizeSeekBarProgress:I
+    sget v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontSizeSeekBarProgress:I
 
     if-ltz v0, :cond_9
 
-    sget v0, Lcom/android/settings/FontPreview;->mSelectedFontSizeSeekBarProgress:I
+    sget v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontSizeSeekBarProgress:I
 
-    iget v2, p0, Lcom/android/settings/FontPreview;->mSelectedFontSize:I
+    iget v2, p0, Lcom/android/settings_ex/FontPreview;->mSelectedFontSize:I
 
     if-eq v0, v2, :cond_9
 
-    iget v0, p0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v0, p0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
-    iget v2, p0, Lcom/android/settings/FontPreview;->mPreviousFont:I
+    iget v2, p0, Lcom/android/settings_ex/FontPreview;->mPreviousFont:I
 
     if-eq v0, v2, :cond_8
 
-    iget v0, p0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v0, p0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
     if-gez v0, :cond_9
 
@@ -870,33 +870,33 @@
     :cond_8
     const/4 v0, 0x2
 
-    invoke-direct {p0, v0}, Lcom/android/settings/FontPreview;->doneFontStyleOrFontSize(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/FontPreview;->doneFontStyleOrFontSize(I)V
 
     goto :goto_1
 
     .line 890
     :cond_9
-    iget v0, p0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v0, p0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
     if-ltz v0, :cond_b
 
-    iget v0, p0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v0, p0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
-    iget v2, p0, Lcom/android/settings/FontPreview;->mPreviousFont:I
+    iget v2, p0, Lcom/android/settings_ex/FontPreview;->mPreviousFont:I
 
     if-eq v0, v2, :cond_b
 
-    iget-boolean v0, p0, Lcom/android/settings/FontPreview;->mIsChangedFontSizeSeekBar:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/FontPreview;->mIsChangedFontSizeSeekBar:Z
 
     if-eqz v0, :cond_a
 
-    sget v0, Lcom/android/settings/FontPreview;->mSelectedFontSizeSeekBarProgress:I
+    sget v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontSizeSeekBarProgress:I
 
     if-ltz v0, :cond_a
 
-    sget v0, Lcom/android/settings/FontPreview;->mSelectedFontSizeSeekBarProgress:I
+    sget v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontSizeSeekBarProgress:I
 
-    iget v2, p0, Lcom/android/settings/FontPreview;->mSelectedFontSize:I
+    iget v2, p0, Lcom/android/settings_ex/FontPreview;->mSelectedFontSize:I
 
     if-ne v0, v2, :cond_b
 
@@ -904,44 +904,44 @@
     :cond_a
     const/4 v0, 0x3
 
-    invoke-direct {p0, v0}, Lcom/android/settings/FontPreview;->doneFontStyleOrFontSize(I)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/FontPreview;->doneFontStyleOrFontSize(I)V
 
     goto :goto_1
 
     .line 893
     :cond_b
-    iget-boolean v0, p0, Lcom/android/settings/FontPreview;->mIsChangedFontSizeSeekBar:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/FontPreview;->mIsChangedFontSizeSeekBar:Z
 
     if-ne v0, v1, :cond_c
 
-    sget v0, Lcom/android/settings/FontPreview;->mSelectedFontSizeSeekBarProgress:I
+    sget v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontSizeSeekBarProgress:I
 
     if-ltz v0, :cond_c
 
-    sget v0, Lcom/android/settings/FontPreview;->mSelectedFontSizeSeekBarProgress:I
+    sget v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontSizeSeekBarProgress:I
 
-    iget v2, p0, Lcom/android/settings/FontPreview;->mSelectedFontSize:I
+    iget v2, p0, Lcom/android/settings_ex/FontPreview;->mSelectedFontSize:I
 
     if-eq v0, v2, :cond_c
 
-    iget v0, p0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v0, p0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
     if-ltz v0, :cond_c
 
-    iget v0, p0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v0, p0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
-    iget v2, p0, Lcom/android/settings/FontPreview;->mPreviousFont:I
+    iget v2, p0, Lcom/android/settings_ex/FontPreview;->mPreviousFont:I
 
     if-eq v0, v2, :cond_c
 
     .line 894
-    invoke-direct {p0, v1}, Lcom/android/settings/FontPreview;->doneFontStyleOrFontSize(I)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/FontPreview;->doneFontStyleOrFontSize(I)V
 
     goto :goto_1
 
     .line 896
     :cond_c
-    invoke-virtual {p0}, Lcom/android/settings/FontPreview;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/FontPreview;->finish()V
 
     goto :goto_1
 .end method
@@ -953,11 +953,11 @@
     const/4 v6, 0x0
 
     .line 969
-    sget v0, Lcom/android/settings/FontPreview;->mSelectedFontSizeSeekBarProgress:I
+    sget v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontSizeSeekBarProgress:I
 
     .line 970
     .local v0, "fontIndex":I
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -994,7 +994,7 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 973
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1005,11 +1005,11 @@
     invoke-static {v3, v4, v0}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 975
-    iget-boolean v3, p0, Lcom/android/settings/FontPreview;->mIsFont11Level:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/FontPreview;->mIsFont11Level:Z
 
     if-eqz v3, :cond_0
 
-    iget v3, p0, Lcom/android/settings/FontPreview;->mExtraLargeFontIndex:I
+    iget v3, p0, Lcom/android/settings_ex/FontPreview;->mExtraLargeFontIndex:I
 
     if-le v0, v3, :cond_0
 
@@ -1050,7 +1050,7 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 979
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
@@ -1061,11 +1061,11 @@
     .line 981
     .end local v1    # "i":Landroid/content/Intent;
     :cond_0
-    iget v3, p0, Lcom/android/settings/FontPreview;->mExtraLargeFontIndex:I
+    iget v3, p0, Lcom/android/settings_ex/FontPreview;->mExtraLargeFontIndex:I
 
     if-gt v2, v3, :cond_1
 
-    iget v3, p0, Lcom/android/settings/FontPreview;->mExtraLargeFontIndex:I
+    iget v3, p0, Lcom/android/settings_ex/FontPreview;->mExtraLargeFontIndex:I
 
     if-le v0, v3, :cond_1
 
@@ -1092,7 +1092,7 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 985
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
@@ -1114,7 +1114,7 @@
     invoke-virtual {v1, v3, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 990
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
@@ -1145,25 +1145,25 @@
 
     .line 945
     :pswitch_0
-    invoke-direct {p0}, Lcom/android/settings/FontPreview;->doneFontSize()V
+    invoke-direct {p0}, Lcom/android/settings_ex/FontPreview;->doneFontSize()V
 
     .line 946
-    invoke-virtual {p0}, Lcom/android/settings/FontPreview;->savePreferences()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/FontPreview;->savePreferences()V
 
     .line 947
-    invoke-virtual {p0}, Lcom/android/settings/FontPreview;->onOkButtonPressed()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/FontPreview;->onOkButtonPressed()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 948
-    iget v0, p0, Lcom/android/settings/FontPreview;->mFontFloatSize:F
+    iget v0, p0, Lcom/android/settings_ex/FontPreview;->mFontFloatSize:F
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/FontPreview;->writeFontSizePreference(F)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/FontPreview;->writeFontSizePreference(F)V
 
     .line 949
-    invoke-virtual {p0}, Lcom/android/settings/FontPreview;->readFontSizePreference()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/FontPreview;->readFontSizePreference()V
 
     .line 950
     invoke-static {v1}, Ljava/lang/System;->exit(I)V
@@ -1172,27 +1172,27 @@
 
     .line 954
     :pswitch_1
-    invoke-direct {p0}, Lcom/android/settings/FontPreview;->doneFontSize()V
+    invoke-direct {p0}, Lcom/android/settings_ex/FontPreview;->doneFontSize()V
 
     .line 955
-    iget v0, p0, Lcom/android/settings/FontPreview;->mFontFloatSize:F
+    iget v0, p0, Lcom/android/settings_ex/FontPreview;->mFontFloatSize:F
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/FontPreview;->writeFontSizePreference(F)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/FontPreview;->writeFontSizePreference(F)V
 
     .line 956
-    invoke-virtual {p0}, Lcom/android/settings/FontPreview;->readFontSizePreference()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/FontPreview;->readFontSizePreference()V
 
     .line 957
-    invoke-virtual {p0}, Lcom/android/settings/FontPreview;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/FontPreview;->finish()V
 
     goto :goto_0
 
     .line 960
     :pswitch_2
-    invoke-virtual {p0}, Lcom/android/settings/FontPreview;->savePreferences()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/FontPreview;->savePreferences()V
 
     .line 961
-    invoke-virtual {p0}, Lcom/android/settings/FontPreview;->onOkButtonPressed()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/FontPreview;->onOkButtonPressed()Z
 
     move-result v0
 
@@ -1219,7 +1219,7 @@
 
     .prologue
     .line 1497
-    iget-object v5, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1239,7 +1239,7 @@
 
     .line 1500
     .local v1, "mode":I
-    iget-object v5, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     const-string v6, "prefs"
 
@@ -1249,7 +1249,7 @@
 
     .line 1502
     .local v2, "mySharedPreference":Landroid/content/SharedPreferences;
-    iget-object v5, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     const/4 v6, 0x1
 
@@ -1313,7 +1313,7 @@
 
     .line 1512
     :cond_1
-    iget-object v5, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1335,9 +1335,9 @@
 
     .line 1514
     :cond_2
-    iget-object v5, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
-    invoke-static {v5, v3}, Lcom/android/settings/Utils;->getFontName(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5, v3}, Lcom/android/settings_ex/Utils;->getFontName(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -1359,7 +1359,7 @@
     .line 372
     const v3, 0x7f0d02dd
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/FontPreview;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/FontPreview;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -1378,7 +1378,7 @@
     .line 377
     const v3, 0x7f0d02df
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/FontPreview;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/FontPreview;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -1389,13 +1389,13 @@
     .line 380
     const v3, 0x7f0d02de
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/FontPreview;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/FontPreview;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/Switch;
 
-    iput-object v3, p0, Lcom/android/settings/FontPreview;->mFontSwitch:Landroid/widget/Switch;
+    iput-object v3, p0, Lcom/android/settings_ex/FontPreview;->mFontSwitch:Landroid/widget/Switch;
 
     .line 381
     invoke-static {p0}, Landroid/view/accessibility/AccessibilityManager;->getInstance(Landroid/content/Context;)Landroid/view/accessibility/AccessibilityManager;
@@ -1411,27 +1411,27 @@
     if-eqz v3, :cond_0
 
     .line 383
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mFontSwitch:Landroid/widget/Switch;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mFontSwitch:Landroid/widget/Switch;
 
     const/4 v6, 0x0
 
     invoke-virtual {v3, v6}, Landroid/widget/Switch;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 384
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mFontSwitch:Landroid/widget/Switch;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mFontSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v3, v5}, Landroid/widget/Switch;->setClickable(Z)V
 
     .line 386
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mFontSwitch:Landroid/widget/Switch;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mFontSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v3, p0}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     .line 387
-    iget-object v6, p0, Lcom/android/settings/FontPreview;->mFontSwitch:Landroid/widget/Switch;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreview;->mFontSwitch:Landroid/widget/Switch;
 
-    iget v3, p0, Lcom/android/settings/FontPreview;->mAccessFontOnOff:I
+    iget v3, p0, Lcom/android/settings_ex/FontPreview;->mAccessFontOnOff:I
 
     if-eqz v3, :cond_2
 
@@ -1441,9 +1441,9 @@
     invoke-virtual {v6, v3}, Landroid/widget/Switch;->setChecked(Z)V
 
     .line 388
-    iget-object v4, p0, Lcom/android/settings/FontPreview;->mShowForHugeFontTextView:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/FontPreview;->mShowForHugeFontTextView:Landroid/widget/TextView;
 
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1490,52 +1490,52 @@
     if-eqz p1, :cond_5
 
     .line 394
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mMaxTextView:Landroid/widget/TextSwitcher;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mMaxTextView:Landroid/widget/TextSwitcher;
 
     if-eqz v0, :cond_0
 
     .line 395
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mMaxTextView:Landroid/widget/TextSwitcher;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mMaxTextView:Landroid/widget/TextSwitcher;
 
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mExtraHugeString:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mExtraHugeString:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextSwitcher;->setText(Ljava/lang/CharSequence;)V
 
     .line 396
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
     if-eqz v0, :cond_1
 
     .line 397
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
     const/16 v1, 0xa
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/IntervalSeekBar;->setMax(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/IntervalSeekBar;->setMax(I)V
 
     .line 398
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
     const v1, 0x7f02033e
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/IntervalSeekBar;->setDrawable(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/IntervalSeekBar;->setDrawable(I)V
 
     .line 399
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/IntervalSeekBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/IntervalSeekBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 400
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
-    invoke-virtual {p0}, Lcom/android/settings/FontPreview;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/FontPreview;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -1543,50 +1543,50 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/IntervalSeekBar;->setOverlapBackgroundForDualColor(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/IntervalSeekBar;->setOverlapBackgroundForDualColor(I)V
 
     .line 401
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
-    sget v1, Lcom/android/settings/FontPreview;->DUAL_COLOR_FOR_ELEVENLEVEL_FONT_VALUE:I
+    sget v1, Lcom/android/settings_ex/FontPreview;->DUAL_COLOR_FOR_ELEVENLEVEL_FONT_VALUE:I
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/IntervalSeekBar;->setOverlapPointForDualColor(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/IntervalSeekBar;->setOverlapPointForDualColor(I)V
 
     .line 414
     :cond_1
     :goto_0
     if-nez p2, :cond_2
 
-    iget-boolean v0, p0, Lcom/android/settings/FontPreview;->isClickSwitch:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/FontPreview;->isClickSwitch:Z
 
     if-eqz v0, :cond_3
 
     .line 415
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
     if-eqz v0, :cond_3
 
     .line 416
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
-    invoke-virtual {v0, p1}, Lcom/android/settings/IntervalSeekBar;->animationStart(Z)V
+    invoke-virtual {v0, p1}, Lcom/android/settings_ex/IntervalSeekBar;->animationStart(Z)V
 
     .line 418
     :cond_3
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/FontPreview;->isClickSwitch:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/FontPreview;->isClickSwitch:Z
 
     .line 420
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
     if-eqz v0, :cond_4
 
     .line 421
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/IntervalSeekBar;->invalidate()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/IntervalSeekBar;->invalidate()V
 
     .line 423
     :cond_4
@@ -1594,52 +1594,52 @@
 
     .line 404
     :cond_5
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mMaxTextView:Landroid/widget/TextSwitcher;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mMaxTextView:Landroid/widget/TextSwitcher;
 
     if-eqz v0, :cond_6
 
     .line 405
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mMaxTextView:Landroid/widget/TextSwitcher;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mMaxTextView:Landroid/widget/TextSwitcher;
 
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mHugeString:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mHugeString:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextSwitcher;->setText(Ljava/lang/CharSequence;)V
 
     .line 406
     :cond_6
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
     if-eqz v0, :cond_1
 
     .line 407
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
     const/4 v1, 0x6
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/IntervalSeekBar;->setMax(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/IntervalSeekBar;->setMax(I)V
 
     .line 408
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
     const v1, 0x7f02033d
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/IntervalSeekBar;->setDrawable(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/IntervalSeekBar;->setDrawable(I)V
 
     .line 409
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/IntervalSeekBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/IntervalSeekBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 410
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
-    invoke-virtual {p0}, Lcom/android/settings/FontPreview;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/FontPreview;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -1647,14 +1647,14 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/IntervalSeekBar;->setOverlapBackgroundForDualColor(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/IntervalSeekBar;->setOverlapBackgroundForDualColor(I)V
 
     .line 411
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
     const/4 v1, -0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/IntervalSeekBar;->setOverlapPointForDualColor(I)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/IntervalSeekBar;->setOverlapPointForDualColor(I)V
 
     goto :goto_0
 .end method
@@ -1669,46 +1669,46 @@
     const/4 v4, 0x1
 
     .line 441
-    iput-object p1, p0, Lcom/android/settings/FontPreview;->mSavedInstanceState:Landroid/os/Bundle;
+    iput-object p1, p0, Lcom/android/settings_ex/FontPreview;->mSavedInstanceState:Landroid/os/Bundle;
 
     .line 442
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
-    iget-object v2, p0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 445
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    invoke-virtual {v0}, Lcom/android/settings/flipfont/FontListAdapter;->isCurrentThemeFontInstalled()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/flipfont/FontListAdapter;->isCurrentThemeFontInstalled()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 446
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    invoke-virtual {v0}, Lcom/android/settings/flipfont/FontListAdapter;->isCurrentThemeFontSelected()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/flipfont/FontListAdapter;->isCurrentThemeFontSelected()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 447
-    iput-boolean v4, p0, Lcom/android/settings/FontPreview;->mIsSelectedCurrentThemeFont:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/FontPreview;->mIsSelectedCurrentThemeFont:Z
 
     .line 451
     :cond_0
     :try_start_0
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    invoke-virtual {v0}, Lcom/android/settings/flipfont/FontListAdapter;->getThemeFontCurrentPath()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/android/settings_ex/flipfont/FontListAdapter;->getThemeFontCurrentPath()Ljava/lang/String;
 
     move-result-object v6
 
@@ -1731,7 +1731,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/FontPreview;->themeFontTypeface:Landroid/graphics/Typeface;
+    iput-object v0, p0, Lcom/android/settings_ex/FontPreview;->themeFontTypeface:Landroid/graphics/Typeface;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1740,12 +1740,12 @@
     .end local v8    # "f":Ljava/io/File;
     :cond_1
     :goto_0
-    invoke-direct {p0}, Lcom/android/settings/FontPreview;->setReHeightFontStyleListview()V
+    invoke-direct {p0}, Lcom/android/settings_ex/FontPreview;->setReHeightFontStyleListview()V
 
     .line 464
     const v0, 0x7f0d02d9
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/FontPreview;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/FontPreview;->findViewById(I)Landroid/view/View;
 
     move-result-object v9
 
@@ -1753,24 +1753,24 @@
 
     .line 465
     .local v9, "fontScrollView":Landroid/widget/ScrollView;
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
     invoke-virtual {v0, p0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 466
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
-    new-instance v2, Lcom/android/settings/FontPreview$3;
+    new-instance v2, Lcom/android/settings_ex/FontPreview$3;
 
-    invoke-direct {v2, p0, v9}, Lcom/android/settings/FontPreview$3;-><init>(Lcom/android/settings/FontPreview;Landroid/widget/ScrollView;)V
+    invoke-direct {v2, p0, v9}, Lcom/android/settings_ex/FontPreview$3;-><init>(Lcom/android/settings_ex/FontPreview;Landroid/widget/ScrollView;)V
 
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
     .line 497
-    invoke-virtual {p0}, Lcom/android/settings/FontPreview;->loadPreferences()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/FontPreview;->loadPreferences()V
 
     .line 499
-    invoke-direct {p0}, Lcom/android/settings/FontPreview;->setSelectedFontStyle()V
+    invoke-direct {p0}, Lcom/android/settings_ex/FontPreview;->setSelectedFontStyle()V
 
     .line 500
     if-eqz p1, :cond_2
@@ -1789,7 +1789,7 @@
     if-le v3, v0, :cond_2
 
     .line 504
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
     invoke-virtual {v0, v3, v4}, Landroid/widget/ListView;->setItemChecked(IZ)V
 
@@ -1800,7 +1800,7 @@
 
     move-object v2, v1
 
-    invoke-virtual/range {v0 .. v5}, Lcom/android/settings/FontPreview;->onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    invoke-virtual/range {v0 .. v5}, Lcom/android/settings_ex/FontPreview;->onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
 
     .line 508
     .end local v3    # "userSelectedStyleIndex":I
@@ -1827,56 +1827,56 @@
     .line 318
     const v3, 0x7f0400ed
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/FontPreview;->setContentView(I)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/FontPreview;->setContentView(I)V
 
     .line 319
     const v3, 0x7f0d02da
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/FontPreview;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/FontPreview;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/RelativeLayout;
 
-    iput-object v3, p0, Lcom/android/settings/FontPreview;->mProgressBarLayout:Landroid/widget/RelativeLayout;
+    iput-object v3, p0, Lcom/android/settings_ex/FontPreview;->mProgressBarLayout:Landroid/widget/RelativeLayout;
 
     .line 320
     const v3, 0x7f0d02dc
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/FontPreview;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/FontPreview;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/LinearLayout;
 
-    iput-object v3, p0, Lcom/android/settings/FontPreview;->mFontPreviewSizeStyleLayout:Landroid/widget/LinearLayout;
+    iput-object v3, p0, Lcom/android/settings_ex/FontPreview;->mFontPreviewSizeStyleLayout:Landroid/widget/LinearLayout;
 
     .line 322
     const v3, 0x7f0d02e5
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/FontPreview;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/FontPreview;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/TextView;
 
-    iput-object v3, p0, Lcom/android/settings/FontPreview;->mShowForHugeFontTextView:Landroid/widget/TextView;
+    iput-object v3, p0, Lcom/android/settings_ex/FontPreview;->mShowForHugeFontTextView:Landroid/widget/TextView;
 
     .line 323
     const v3, 0x7f0d02e4
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/FontPreview;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/FontPreview;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/settings/IntervalSeekBar;
+    check-cast v3, Lcom/android/settings_ex/IntervalSeekBar;
 
-    iput-object v3, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iput-object v3, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
     .line 324
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
-    iget-object v4, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     const v5, 0x7f020357
 
@@ -1884,10 +1884,10 @@
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/IntervalSeekBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/IntervalSeekBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 325
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1899,51 +1899,51 @@
 
     move-result v3
 
-    invoke-direct {p0, v3}, Lcom/android/settings/FontPreview;->colorToColorStateList(I)Landroid/content/res/ColorStateList;
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/FontPreview;->colorToColorStateList(I)Landroid/content/res/ColorStateList;
 
     move-result-object v2
 
     .line 326
     .local v2, "tint_list":Landroid/content/res/ColorStateList;
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
-    invoke-virtual {v3, v2}, Lcom/android/settings/IntervalSeekBar;->setProgressTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v3, v2}, Lcom/android/settings_ex/IntervalSeekBar;->setProgressTintList(Landroid/content/res/ColorStateList;)V
 
     .line 327
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
-    sget v4, Lcom/android/settings/FontPreview;->DUAL_COLOR_FOR_ELEVENLEVEL_FONT_VALUE:I
+    sget v4, Lcom/android/settings_ex/FontPreview;->DUAL_COLOR_FOR_ELEVENLEVEL_FONT_VALUE:I
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/IntervalSeekBar;->setOverlapPointForDualColor(I)V
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/IntervalSeekBar;->setOverlapPointForDualColor(I)V
 
     .line 328
     const v3, 0x7f0d02e1
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/FontPreview;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/FontPreview;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/TextView;
 
-    iput-object v3, p0, Lcom/android/settings/FontPreview;->mChangingSizeText:Landroid/widget/TextView;
+    iput-object v3, p0, Lcom/android/settings_ex/FontPreview;->mChangingSizeText:Landroid/widget/TextView;
 
     .line 330
     const v3, 0x7f0d02e3
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/FontPreview;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/FontPreview;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/TextSwitcher;
 
-    iput-object v3, p0, Lcom/android/settings/FontPreview;->mMaxTextView:Landroid/widget/TextSwitcher;
+    iput-object v3, p0, Lcom/android/settings_ex/FontPreview;->mMaxTextView:Landroid/widget/TextSwitcher;
 
     .line 331
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mMaxTextView:Landroid/widget/TextSwitcher;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mMaxTextView:Landroid/widget/TextSwitcher;
 
-    new-instance v4, Lcom/android/settings/FontPreview$2;
+    new-instance v4, Lcom/android/settings_ex/FontPreview$2;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/FontPreview$2;-><init>(Lcom/android/settings/FontPreview;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/FontPreview$2;-><init>(Lcom/android/settings_ex/FontPreview;)V
 
     invoke-virtual {v3, v4}, Landroid/widget/TextSwitcher;->setFactory(Landroid/widget/ViewSwitcher$ViewFactory;)V
 
@@ -1964,12 +1964,12 @@
 
     .line 345
     .local v1, "out":Landroid/view/animation/Animation;
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mMaxTextView:Landroid/widget/TextSwitcher;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mMaxTextView:Landroid/widget/TextSwitcher;
 
     invoke-virtual {v3, v0}, Landroid/widget/TextSwitcher;->setInAnimation(Landroid/view/animation/Animation;)V
 
     .line 346
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mMaxTextView:Landroid/widget/TextSwitcher;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mMaxTextView:Landroid/widget/TextSwitcher;
 
     invoke-virtual {v3, v1}, Landroid/widget/TextSwitcher;->setOutAnimation(Landroid/view/animation/Animation;)V
 
@@ -1979,16 +1979,16 @@
     .line 349
     const v3, 0x7f0d02e2
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/FontPreview;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/FontPreview;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/TextView;
 
-    iput-object v3, p0, Lcom/android/settings/FontPreview;->mMinTextView:Landroid/widget/TextView;
+    iput-object v3, p0, Lcom/android/settings_ex/FontPreview;->mMinTextView:Landroid/widget/TextView;
 
     .line 350
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2002,10 +2002,10 @@
 
     check-cast v3, Ljava/lang/String;
 
-    iput-object v3, p0, Lcom/android/settings/FontPreview;->mHugeString:Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/settings_ex/FontPreview;->mHugeString:Ljava/lang/String;
 
     .line 351
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2019,24 +2019,24 @@
 
     check-cast v3, Ljava/lang/String;
 
-    iput-object v3, p0, Lcom/android/settings/FontPreview;->mExtraHugeString:Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/settings_ex/FontPreview;->mExtraHugeString:Ljava/lang/String;
 
     .line 352
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
     const/4 v4, -0x1
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/IntervalSeekBar;->setOverlapPointForDualColor(I)V
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/IntervalSeekBar;->setOverlapPointForDualColor(I)V
 
     .line 354
-    iget v3, p0, Lcom/android/settings/FontPreview;->mAccessFontOnOff:I
+    iget v3, p0, Lcom/android/settings_ex/FontPreview;->mAccessFontOnOff:I
 
     if-nez v3, :cond_1
 
     .line 355
-    iget-object v4, p0, Lcom/android/settings/FontPreview;->mShowForHugeFontTextView:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/FontPreview;->mShowForHugeFontTextView:Landroid/widget/TextView;
 
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2053,11 +2053,11 @@
     invoke-virtual {v4, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 356
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
     const/4 v4, 0x6
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/IntervalSeekBar;->setMax(I)V
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/IntervalSeekBar;->setMax(I)V
 
     .line 367
     :cond_0
@@ -2066,9 +2066,9 @@
 
     .line 358
     :cond_1
-    iget-object v4, p0, Lcom/android/settings/FontPreview;->mShowForHugeFontTextView:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings_ex/FontPreview;->mShowForHugeFontTextView:Landroid/widget/TextView;
 
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2085,21 +2085,21 @@
     invoke-virtual {v4, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 359
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
     const/16 v4, 0xa
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/IntervalSeekBar;->setMax(I)V
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/IntervalSeekBar;->setMax(I)V
 
     .line 360
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mMaxTextView:Landroid/widget/TextSwitcher;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mMaxTextView:Landroid/widget/TextSwitcher;
 
-    iget-object v4, p0, Lcom/android/settings/FontPreview;->mExtraHugeString:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/FontPreview;->mExtraHugeString:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Landroid/widget/TextSwitcher;->setText(Ljava/lang/CharSequence;)V
 
     .line 362
-    iget-boolean v3, p0, Lcom/android/settings/FontPreview;->mIsAccessibilitySettingsVision:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/FontPreview;->mIsAccessibilitySettingsVision:Z
 
     if-nez v3, :cond_0
 
@@ -2108,7 +2108,7 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {p0, v3, v4}, Lcom/android/settings/FontPreview;->setDim(ZZ)V
+    invoke-direct {p0, v3, v4}, Lcom/android/settings_ex/FontPreview;->setDim(ZZ)V
 
     goto :goto_0
 .end method
@@ -2120,11 +2120,11 @@
     const/4 v9, 0x0
 
     .line 511
-    iget-object v6, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
     if-eqz v6, :cond_2
 
-    iget-object v6, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
     invoke-virtual {v6}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
 
@@ -2133,7 +2133,7 @@
     if-eqz v6, :cond_2
 
     .line 512
-    iget-object v6, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
     invoke-virtual {v6}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
 
@@ -2156,7 +2156,7 @@
     if-ge v2, v0, :cond_0
 
     .line 515
-    iget-object v6, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
     invoke-virtual {v6}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
 
@@ -2164,7 +2164,7 @@
 
     const/4 v7, 0x0
 
-    iget-object v8, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v8, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
     invoke-interface {v6, v2, v7, v8}, Landroid/widget/ListAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
@@ -2189,7 +2189,7 @@
     .line 520
     .end local v3    # "listItem":Landroid/view/View;
     :cond_0
-    iget-object v6, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -2210,7 +2210,7 @@
 
     .line 525
     :cond_1
-    iget-object v6, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
     invoke-virtual {v6}, Landroid/widget/ListView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -2218,7 +2218,7 @@
 
     .line 526
     .local v4, "params":Landroid/view/ViewGroup$LayoutParams;
-    iget-object v6, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
     invoke-virtual {v6}, Landroid/widget/ListView;->getDividerHeight()I
 
@@ -2233,12 +2233,12 @@
     iput v6, v4, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     .line 527
-    iget-object v6, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
     invoke-virtual {v6, v4}, Landroid/widget/ListView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 528
-    iget-object v6, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v6, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
     invoke-virtual {v6}, Landroid/widget/ListView;->requestLayout()V
 
@@ -2259,7 +2259,7 @@
     const/4 v5, 0x1
 
     .line 803
-    iget-object v2, p0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     if-nez v2, :cond_1
 
@@ -2270,43 +2270,43 @@
 
     .line 806
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/FontPreview;->getSavedSelectedFontStringPreference()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/settings_ex/FontPreview;->getSavedSelectedFontStringPreference()Ljava/lang/String;
 
     move-result-object v1
 
     .line 809
     .local v1, "selectedFont":Ljava/lang/String;
-    iget-boolean v2, p0, Lcom/android/settings/FontPreview;->mIsSelectedCurrentThemeFont:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/FontPreview;->mIsSelectedCurrentThemeFont:Z
 
     if-eqz v2, :cond_3
 
     .line 810
-    iget-object v2, p0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    invoke-virtual {v2}, Lcom/android/settings/flipfont/FontListAdapter;->getCurrentThemeFontIndex()I
+    invoke-virtual {v2}, Lcom/android/settings_ex/flipfont/FontListAdapter;->getCurrentThemeFontIndex()I
 
     move-result v2
 
-    iput v2, p0, Lcom/android/settings/FontPreview;->mPreviousFont:I
+    iput v2, p0, Lcom/android/settings_ex/FontPreview;->mPreviousFont:I
 
     .line 852
     :cond_2
     :goto_1
-    iget-object v2, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v2, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
-    iget v3, p0, Lcom/android/settings/FontPreview;->mPreviousFont:I
+    iget v3, p0, Lcom/android/settings_ex/FontPreview;->mPreviousFont:I
 
     invoke-virtual {v2, v3, v5}, Landroid/widget/ListView;->setItemChecked(IZ)V
 
     .line 853
-    invoke-static {}, Lcom/android/settings/Utils;->isJapanModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isJapanModel()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
     .line 854
-    iget v2, p0, Lcom/android/settings/FontPreview;->mPreviousFont:I
+    iget v2, p0, Lcom/android/settings_ex/FontPreview;->mPreviousFont:I
 
     if-gez v2, :cond_0
 
@@ -2319,25 +2319,25 @@
     if-eqz v2, :cond_0
 
     .line 855
-    iget-object v2, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v2, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
     invoke-virtual {v2, v5, v5}, Landroid/widget/ListView;->setItemChecked(IZ)V
 
     .line 856
-    iput v5, p0, Lcom/android/settings/FontPreview;->mPreviousFont:I
+    iput v5, p0, Lcom/android/settings_ex/FontPreview;->mPreviousFont:I
 
     goto :goto_0
 
     .line 812
     :cond_3
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticModel()Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
     .line 813
-    iget-object v2, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2400,7 +2400,7 @@
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 825
-    iget-boolean v2, p0, Lcom/android/settings/FontPreview;->mDefaultUseHelvetica:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/FontPreview;->mDefaultUseHelvetica:Z
 
     if-eqz v2, :cond_5
 
@@ -2408,15 +2408,15 @@
     const-string v1, "HelveticaNeueRegular.xml"
 
     .line 828
-    iget-object v2, p0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    iget-object v2, v2, Lcom/android/settings/flipfont/FontListAdapter;->mTypefaceFiles:Ljava/util/Vector;
+    iget-object v2, v2, Lcom/android/settings_ex/flipfont/FontListAdapter;->mTypefaceFiles:Ljava/util/Vector;
 
     invoke-virtual {v2, v1}, Ljava/util/Vector;->indexOf(Ljava/lang/Object;)I
 
     move-result v2
 
-    iput v2, p0, Lcom/android/settings/FontPreview;->mPreviousFont:I
+    iput v2, p0, Lcom/android/settings_ex/FontPreview;->mPreviousFont:I
 
     .line 829
     const-string v2, "FontPreview"
@@ -2454,7 +2454,7 @@
 
     move-result-object v3
 
-    iget v4, p0, Lcom/android/settings/FontPreview;->mPreviousFont:I
+    iget v4, p0, Lcom/android/settings_ex/FontPreview;->mPreviousFont:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2468,21 +2468,21 @@
 
     .line 844
     :goto_3
-    iget v2, p0, Lcom/android/settings/FontPreview;->mPreviousFont:I
+    iget v2, p0, Lcom/android/settings_ex/FontPreview;->mPreviousFont:I
 
     if-gez v2, :cond_2
 
     .line 846
     const/4 v2, -0x1
 
-    iput v2, p0, Lcom/android/settings/FontPreview;->mPreviousFont:I
+    iput v2, p0, Lcom/android/settings_ex/FontPreview;->mPreviousFont:I
 
     goto/16 :goto_1
 
     .line 815
     .end local v0    # "okButton":Ljava/lang/String;
     :cond_4
-    iget-object v2, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2504,15 +2504,15 @@
     const-string v1, "default"
 
     .line 834
-    iget-object v2, p0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    iget-object v2, v2, Lcom/android/settings/flipfont/FontListAdapter;->mTypefaceFiles:Ljava/util/Vector;
+    iget-object v2, v2, Lcom/android/settings_ex/flipfont/FontListAdapter;->mTypefaceFiles:Ljava/util/Vector;
 
     invoke-virtual {v2, v1}, Ljava/util/Vector;->indexOf(Ljava/lang/Object;)I
 
     move-result v2
 
-    iput v2, p0, Lcom/android/settings/FontPreview;->mPreviousFont:I
+    iput v2, p0, Lcom/android/settings_ex/FontPreview;->mPreviousFont:I
 
     .line 835
     const-string v2, "FontPreview"
@@ -2550,7 +2550,7 @@
 
     move-result-object v3
 
-    iget v4, p0, Lcom/android/settings/FontPreview;->mPreviousFont:I
+    iget v4, p0, Lcom/android/settings_ex/FontPreview;->mPreviousFont:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2573,15 +2573,15 @@
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 840
-    iget-object v2, p0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    iget-object v2, v2, Lcom/android/settings/flipfont/FontListAdapter;->mTypefaceFiles:Ljava/util/Vector;
+    iget-object v2, v2, Lcom/android/settings_ex/flipfont/FontListAdapter;->mTypefaceFiles:Ljava/util/Vector;
 
     invoke-virtual {v2, v1}, Ljava/util/Vector;->indexOf(Ljava/lang/Object;)I
 
     move-result v2
 
-    iput v2, p0, Lcom/android/settings/FontPreview;->mPreviousFont:I
+    iput v2, p0, Lcom/android/settings_ex/FontPreview;->mPreviousFont:I
 
     .line 841
     const-string v2, "FontPreview"
@@ -2619,7 +2619,7 @@
 
     move-result-object v3
 
-    iget v4, p0, Lcom/android/settings/FontPreview;->mPreviousFont:I
+    iget v4, p0, Lcom/android/settings_ex/FontPreview;->mPreviousFont:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2639,7 +2639,7 @@
 
     .prologue
     .line 540
-    iget-object v5, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2655,10 +2655,10 @@
 
     .line 543
     .local v0, "fontSizeNames":[Ljava/lang/String;
-    iput-object v0, p0, Lcom/android/settings/FontPreview;->fontSizeStrings:[Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/FontPreview;->fontSizeStrings:[Ljava/lang/String;
 
     .line 546
-    iget-object v5, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v5, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2682,7 +2682,7 @@
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v5, p0, Lcom/android/settings/FontPreview;->floatRevisedValueList:Ljava/util/ArrayList;
+    iput-object v5, p0, Lcom/android/settings_ex/FontPreview;->floatRevisedValueList:Ljava/util/ArrayList;
 
     .line 551
     const/4 v1, 0x0
@@ -2699,7 +2699,7 @@
     invoke-virtual {v3, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 553
-    iget-object v5, p0, Lcom/android/settings/FontPreview;->floatRevisedValueList:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/settings_ex/FontPreview;->floatRevisedValueList:Ljava/util/ArrayList;
 
     aget-object v6, v4, v1
 
@@ -2724,7 +2724,7 @@
 
     .line 555
     :cond_0
-    iput-object v3, p0, Lcom/android/settings/FontPreview;->charSeqRevisedValues:Ljava/util/ArrayList;
+    iput-object v3, p0, Lcom/android/settings_ex/FontPreview;->charSeqRevisedValues:Ljava/util/ArrayList;
 
     .line 556
     return-void
@@ -2735,7 +2735,7 @@
 
     .prologue
     .line 559
-    iget-object v4, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2743,7 +2743,7 @@
 
     .line 561
     .local v1, "res":Landroid/content/res/Resources;
-    iget-object v4, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2767,7 +2767,7 @@
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v4, p0, Lcom/android/settings/FontPreview;->floatRevisedValueList:Ljava/util/ArrayList;
+    iput-object v4, p0, Lcom/android/settings_ex/FontPreview;->floatRevisedValueList:Ljava/util/ArrayList;
 
     .line 566
     const/4 v0, 0x0
@@ -2784,7 +2784,7 @@
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 568
-    iget-object v4, p0, Lcom/android/settings/FontPreview;->floatRevisedValueList:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/FontPreview;->floatRevisedValueList:Ljava/util/ArrayList;
 
     aget-object v5, v3, v0
 
@@ -2809,7 +2809,7 @@
 
     .line 570
     :cond_0
-    iput-object v2, p0, Lcom/android/settings/FontPreview;->charSeqRevisedValues:Ljava/util/ArrayList;
+    iput-object v2, p0, Lcom/android/settings_ex/FontPreview;->charSeqRevisedValues:Ljava/util/ArrayList;
 
     .line 571
     return-void
@@ -2851,9 +2851,9 @@
 
     const v3, 0x104000a
 
-    new-instance v4, Lcom/android/settings/FontPreview$8;
+    new-instance v4, Lcom/android/settings_ex/FontPreview$8;
 
-    invoke-direct {v4, p0, v1}, Lcom/android/settings/FontPreview$8;-><init>(Lcom/android/settings/FontPreview;Ljava/lang/String;)V
+    invoke-direct {v4, p0, v1}, Lcom/android/settings_ex/FontPreview$8;-><init>(Lcom/android/settings_ex/FontPreview;Ljava/lang/String;)V
 
     invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -2861,9 +2861,9 @@
 
     const/high16 v3, 0x1040000
 
-    new-instance v4, Lcom/android/settings/FontPreview$7;
+    new-instance v4, Lcom/android/settings_ex/FontPreview$7;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/FontPreview$7;-><init>(Lcom/android/settings/FontPreview;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/FontPreview$7;-><init>(Lcom/android/settings_ex/FontPreview;)V
 
     invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -2875,9 +2875,9 @@
 
     .line 1382
     .local v0, "alertDialog":Landroid/app/AlertDialog;
-    new-instance v2, Lcom/android/settings/FontPreview$9;
+    new-instance v2, Lcom/android/settings_ex/FontPreview$9;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/FontPreview$9;-><init>(Lcom/android/settings/FontPreview;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/FontPreview$9;-><init>(Lcom/android/settings_ex/FontPreview;)V
 
     invoke-virtual {v0, v2}, Landroid/app/AlertDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
@@ -2894,7 +2894,7 @@
 
     .prologue
     .line 690
-    sget-boolean v14, Lcom/android/settings/FontPreview;->DEBUG:Z
+    sget-boolean v14, Lcom/android/settings_ex/FontPreview;->DEBUG:Z
 
     if-eqz v14, :cond_0
 
@@ -2946,7 +2946,7 @@
     :cond_1
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v14}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -2958,7 +2958,7 @@
 
     .local v7, "i":I
     :goto_1
-    sget-object v14, Lcom/android/settings/FontPreview;->apkNameList:[Ljava/lang/String;
+    sget-object v14, Lcom/android/settings_ex/FontPreview;->apkNameList:[Ljava/lang/String;
 
     array-length v14, v14
 
@@ -2967,7 +2967,7 @@
     .line 701
     if-eqz p1, :cond_4
 
-    sget-object v14, Lcom/android/settings/FontPreview;->apkNameList:[Ljava/lang/String;
+    sget-object v14, Lcom/android/settings_ex/FontPreview;->apkNameList:[Ljava/lang/String;
 
     aget-object v14, v14, v7
 
@@ -2982,7 +2982,7 @@
     .line 702
     const-string v14, "android"
 
-    sget-object v15, Lcom/android/settings/FontPreview;->apkNameList:[Ljava/lang/String;
+    sget-object v15, Lcom/android/settings_ex/FontPreview;->apkNameList:[Ljava/lang/String;
 
     aget-object v15, v15, v7
 
@@ -2997,24 +2997,24 @@
     :goto_2
     move-object/from16 v0, p0
 
-    iput-boolean v14, v0, Lcom/android/settings/FontPreview;->isCheckPlatformSignatures:Z
+    iput-boolean v14, v0, Lcom/android/settings_ex/FontPreview;->isCheckPlatformSignatures:Z
 
     .line 703
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
-    sget-object v15, Lcom/android/settings/FontPreview;->apkNameList:[Ljava/lang/String;
+    sget-object v15, Lcom/android/settings_ex/FontPreview;->apkNameList:[Ljava/lang/String;
 
     aget-object v15, v15, v7
 
-    invoke-static {v14, v15}, Lcom/android/settings/Utils;->isSignatureMatch(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v14, v15}, Lcom/android/settings_ex/Utils;->isSignatureMatch(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v14
 
     move-object/from16 v0, p0
 
-    iput-boolean v14, v0, Lcom/android/settings/FontPreview;->isCheckReleaseSignatures:Z
+    iput-boolean v14, v0, Lcom/android/settings_ex/FontPreview;->isCheckReleaseSignatures:Z
 
     .line 704
     const-string v14, "FontPreview"
@@ -3043,7 +3043,7 @@
 
     move-object/from16 v0, p0
 
-    iget-boolean v0, v0, Lcom/android/settings/FontPreview;->isCheckPlatformSignatures:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/FontPreview;->isCheckPlatformSignatures:Z
 
     move/from16 v16, v0
 
@@ -3059,7 +3059,7 @@
 
     move-object/from16 v0, p0
 
-    iget-boolean v0, v0, Lcom/android/settings/FontPreview;->isCheckReleaseSignatures:Z
+    iget-boolean v0, v0, Lcom/android/settings_ex/FontPreview;->isCheckReleaseSignatures:Z
 
     move/from16 v16, v0
 
@@ -3076,13 +3076,13 @@
     .line 705
     move-object/from16 v0, p0
 
-    iget-boolean v14, v0, Lcom/android/settings/FontPreview;->isCheckPlatformSignatures:Z
+    iget-boolean v14, v0, Lcom/android/settings_ex/FontPreview;->isCheckPlatformSignatures:Z
 
     if-nez v14, :cond_2
 
     move-object/from16 v0, p0
 
-    iget-boolean v14, v0, Lcom/android/settings/FontPreview;->isCheckReleaseSignatures:Z
+    iget-boolean v14, v0, Lcom/android/settings_ex/FontPreview;->isCheckReleaseSignatures:Z
 
     if-nez v14, :cond_2
 
@@ -3116,7 +3116,7 @@
 
     .line 711
     :cond_5
-    sget-boolean v14, Lcom/android/settings/FontPreview;->DEBUG:Z
+    sget-boolean v14, Lcom/android/settings_ex/FontPreview;->DEBUG:Z
 
     if-eqz v14, :cond_6
 
@@ -3136,9 +3136,9 @@
     :try_start_0
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    iget-object v14, v14, Lcom/android/settings/flipfont/FontListAdapter;->mPackageManager:Landroid/content/pm/PackageManager;
+    iget-object v14, v14, Lcom/android/settings_ex/flipfont/FontListAdapter;->mPackageManager:Landroid/content/pm/PackageManager;
 
     const/16 v15, 0x40
 
@@ -3215,7 +3215,7 @@
     if-eqz v14, :cond_8
 
     .line 734
-    sget-boolean v14, Lcom/android/settings/FontPreview;->DEBUG:Z
+    sget-boolean v14, Lcom/android/settings_ex/FontPreview;->DEBUG:Z
 
     if-eqz v14, :cond_7
 
@@ -3234,7 +3234,7 @@
 
     .line 738
     :cond_8
-    sget-boolean v14, Lcom/android/settings/FontPreview;->DEBUG:Z
+    sget-boolean v14, Lcom/android/settings_ex/FontPreview;->DEBUG:Z
 
     if-eqz v14, :cond_9
 
@@ -3305,7 +3305,7 @@
 
     .line 765
     :goto_5
-    sget-boolean v14, Lcom/android/settings/FontPreview;->DEBUG:Z
+    sget-boolean v14, Lcom/android/settings_ex/FontPreview;->DEBUG:Z
 
     if-eqz v14, :cond_a
 
@@ -3512,7 +3512,7 @@
     if-eqz v14, :cond_c
 
     .line 783
-    sget-boolean v14, Lcom/android/settings/FontPreview;->DEBUG:Z
+    sget-boolean v14, Lcom/android/settings_ex/FontPreview;->DEBUG:Z
 
     if-eqz v14, :cond_b
 
@@ -3583,7 +3583,7 @@
 
     .line 864
     .local v0, "mode":I
-    iget-object v2, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     const-string v3, "prefs"
 
@@ -3615,7 +3615,7 @@
 
     .line 998
     .local v2, "mode":I
-    iget-object v4, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     const-string v5, "prefs"
 
@@ -3633,14 +3633,14 @@
 
     move-result v4
 
-    iput v4, p0, Lcom/android/settings/FontPreview;->mSavedClickedItem:I
+    iput v4, p0, Lcom/android/settings_ex/FontPreview;->mSavedClickedItem:I
 
     .line 1002
-    iget v1, p0, Lcom/android/settings/FontPreview;->mSavedClickedItem:I
+    iget v1, p0, Lcom/android/settings_ex/FontPreview;->mSavedClickedItem:I
 
     .line 1003
     .local v1, "fontIndexPref":I
-    iget-object v4, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -3657,7 +3657,7 @@
     if-ne v0, v6, :cond_0
 
     .line 1006
-    iget-object v4, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -3691,7 +3691,7 @@
     invoke-static {v4, v5}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1008
-    iput v1, p0, Lcom/android/settings/FontPreview;->mSavedClickedItem:I
+    iput v1, p0, Lcom/android/settings_ex/FontPreview;->mSavedClickedItem:I
 
     .line 1012
     :goto_0
@@ -3699,7 +3699,7 @@
 
     .line 1010
     :cond_0
-    iput v0, p0, Lcom/android/settings/FontPreview;->mSavedClickedItem:I
+    iput v0, p0, Lcom/android/settings_ex/FontPreview;->mSavedClickedItem:I
 
     goto :goto_0
 .end method
@@ -3709,14 +3709,14 @@
 
     .prologue
     .line 797
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
     if-eqz v0, :cond_0
 
     .line 798
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
-    iget v1, p0, Lcom/android/settings/FontPreview;->mPreviousFont:I
+    iget v1, p0, Lcom/android/settings_ex/FontPreview;->mPreviousFont:I
 
     const/4 v2, 0x1
 
@@ -3734,7 +3734,7 @@
 
     .prologue
     .line 427
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mFontSwitch:Landroid/widget/Switch;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mFontSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v1}, Landroid/widget/Switch;->isPressed()Z
 
@@ -3742,10 +3742,10 @@
 
     .line 428
     .local v0, "isPressed":Z
-    invoke-direct {p0, p2, v0}, Lcom/android/settings/FontPreview;->setDim(ZZ)V
+    invoke-direct {p0, p2, v0}, Lcom/android/settings_ex/FontPreview;->setDim(ZZ)V
 
     .line 429
-    iput-boolean p2, p0, Lcom/android/settings/FontPreview;->mIsFontLargerOn:Z
+    iput-boolean p2, p0, Lcom/android/settings_ex/FontPreview;->mIsFontLargerOn:Z
 
     .line 430
     return-void
@@ -3759,17 +3759,17 @@
     const/4 v0, 0x1
 
     .line 434
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mFontSwitch:Landroid/widget/Switch;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mFontSwitch:Landroid/widget/Switch;
 
     if-eqz v1, :cond_0
 
     .line 435
-    iput-boolean v0, p0, Lcom/android/settings/FontPreview;->isClickSwitch:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/FontPreview;->isClickSwitch:Z
 
     .line 436
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mFontSwitch:Landroid/widget/Switch;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mFontSwitch:Landroid/widget/Switch;
 
-    iget-object v2, p0, Lcom/android/settings/FontPreview;->mFontSwitch:Landroid/widget/Switch;
+    iget-object v2, p0, Lcom/android/settings_ex/FontPreview;->mFontSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v2}, Landroid/widget/Switch;->isChecked()Z
 
@@ -3800,19 +3800,19 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 190
-    iput-object p1, p0, Lcom/android/settings/FontPreview;->mSavedInstanceState:Landroid/os/Bundle;
+    iput-object p1, p0, Lcom/android/settings_ex/FontPreview;->mSavedInstanceState:Landroid/os/Bundle;
 
     .line 191
-    invoke-virtual {p0}, Lcom/android/settings/FontPreview;->getBaseContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/FontPreview;->getBaseContext()Landroid/content/Context;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iput-object v1, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     .line 193
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->getFontSize(Landroid/content/Context;)F
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->getFontSize(Landroid/content/Context;)F
 
     move-result v1
 
@@ -3850,10 +3850,10 @@
     const/4 v1, 0x1
 
     :goto_0
-    iput-boolean v1, p0, Lcom/android/settings/FontPreview;->mIsFont11Level:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->mIsFont11Level:Z
 
     .line 196
-    invoke-virtual {p0}, Lcom/android/settings/FontPreview;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/FontPreview;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -3870,21 +3870,21 @@
     const/4 v1, 0x1
 
     :goto_1
-    iput-boolean v1, p0, Lcom/android/settings/FontPreview;->isEnabledShowBtnBg:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->isEnabledShowBtnBg:Z
 
     .line 198
-    iget-boolean v1, p0, Lcom/android/settings/FontPreview;->mIsFont11Level:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->mIsFont11Level:Z
 
     if-eqz v1, :cond_0
 
     .line 199
     const/4 v1, 0x6
 
-    iput v1, p0, Lcom/android/settings/FontPreview;->mExtraLargeFontIndex:I
+    iput v1, p0, Lcom/android/settings_ex/FontPreview;->mExtraLargeFontIndex:I
 
     .line 201
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/FontPreview;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/FontPreview;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -3896,10 +3896,10 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/FontPreview;->mAccessFontOnOff:I
+    iput v1, p0, Lcom/android/settings_ex/FontPreview;->mAccessFontOnOff:I
 
     .line 204
-    iget v1, p0, Lcom/android/settings/FontPreview;->mAccessFontOnOff:I
+    iget v1, p0, Lcom/android/settings_ex/FontPreview;->mAccessFontOnOff:I
 
     const/4 v2, 0x1
 
@@ -3908,11 +3908,11 @@
     .line 205
     const/4 v1, 0x1
 
-    iput-boolean v1, p0, Lcom/android/settings/FontPreview;->mIsFontLargerOn:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->mIsFontLargerOn:Z
 
     .line 211
     :goto_2
-    invoke-virtual {p0}, Lcom/android/settings/FontPreview;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/FontPreview;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -3923,7 +3923,7 @@
     if-eqz v1, :cond_7
 
     .line 212
-    invoke-virtual {p0}, Lcom/android/settings/FontPreview;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/FontPreview;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -3937,56 +3937,56 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/FontPreview;->mIsAccessibilitySettingsVision:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->mIsAccessibilitySettingsVision:Z
 
     .line 213
-    iget-boolean v1, p0, Lcom/android/settings/FontPreview;->mIsAccessibilitySettingsVision:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->mIsAccessibilitySettingsVision:Z
 
     if-eqz v1, :cond_1
 
     .line 214
     const v1, 0x7f0e0611
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/FontPreview;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/FontPreview;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/FontPreview;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/FontPreview;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 215
-    iget-boolean v1, p0, Lcom/android/settings/FontPreview;->mIsFont11Level:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->mIsFont11Level:Z
 
     if-eqz v1, :cond_1
 
     .line 216
     const/4 v1, 0x6
 
-    iput v1, p0, Lcom/android/settings/FontPreview;->mExtraLargeFontIndex:I
+    iput v1, p0, Lcom/android/settings_ex/FontPreview;->mExtraLargeFontIndex:I
 
     .line 223
     :cond_1
     :goto_3
-    invoke-direct {p0}, Lcom/android/settings/FontPreview;->configureActionBar()V
+    invoke-direct {p0}, Lcom/android/settings_ex/FontPreview;->configureActionBar()V
 
     .line 225
-    iget-boolean v1, p0, Lcom/android/settings/FontPreview;->mIsFont11Level:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->mIsFont11Level:Z
 
-    invoke-direct {p0, v1}, Lcom/android/settings/FontPreview;->setFontsizeLayoutSevenOrEleven(Z)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/FontPreview;->setFontsizeLayoutSevenOrEleven(Z)V
 
     .line 227
-    iget-boolean v1, p0, Lcom/android/settings/FontPreview;->mIsAccessibilitySettingsVision:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->mIsAccessibilitySettingsVision:Z
 
     if-eqz v1, :cond_2
 
     .line 228
-    iget-boolean v1, p0, Lcom/android/settings/FontPreview;->mIsFont11Level:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->mIsFont11Level:Z
 
-    invoke-direct {p0, v1}, Lcom/android/settings/FontPreview;->setAccessiblityFontSizeView(Z)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/FontPreview;->setAccessiblityFontSizeView(Z)V
 
     .line 229
     const v1, 0x7f0d02e6
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/FontPreview;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/FontPreview;->findViewById(I)Landroid/view/View;
 
     move-result-object v10
 
@@ -4001,31 +4001,31 @@
     .line 234
     .end local v10    # "fontStyle":Landroid/widget/LinearLayout;
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isFolderModel(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isFolderModel(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_8
 
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v1
 
     if-eqz v1, :cond_8
 
     .line 235
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
     const/4 v2, 0x2
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/IntervalSeekBar;->setMax(I)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/IntervalSeekBar;->setMax(I)V
 
     .line 236
     const v1, 0x7f0d02e2
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/FontPreview;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/FontPreview;->findViewById(I)Landroid/view/View;
 
     move-result-object v12
 
@@ -4040,7 +4040,7 @@
     .line 238
     const v1, 0x7f0d02e3
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/FontPreview;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/FontPreview;->findViewById(I)Landroid/view/View;
 
     move-result-object v8
 
@@ -4048,41 +4048,41 @@
 
     .line 240
     .local v8, "endFontSize":Landroid/widget/TextSwitcher;
-    invoke-direct {p0}, Lcom/android/settings/FontPreview;->update3StepFontsizeList()V
+    invoke-direct {p0}, Lcom/android/settings_ex/FontPreview;->update3StepFontsizeList()V
 
     .line 245
     .end local v8    # "endFontSize":Landroid/widget/TextSwitcher;
     .end local v12    # "startFontSize":Landroid/widget/TextView;
     :goto_4
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->getSelectedFontSize(Landroid/content/Context;)I
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->getSelectedFontSize(Landroid/content/Context;)I
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/FontPreview;->mSelectedFontSize:I
+    iput v1, p0, Lcom/android/settings_ex/FontPreview;->mSelectedFontSize:I
 
     .line 246
-    iget v1, p0, Lcom/android/settings/FontPreview;->mSelectedFontSize:I
+    iget v1, p0, Lcom/android/settings_ex/FontPreview;->mSelectedFontSize:I
 
-    invoke-direct {p0, v1}, Lcom/android/settings/FontPreview;->changeFontSizeFromSeekBar(I)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/FontPreview;->changeFontSizeFromSeekBar(I)V
 
     .line 247
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
-    iget v2, p0, Lcom/android/settings/FontPreview;->mSelectedFontSize:I
+    iget v2, p0, Lcom/android/settings_ex/FontPreview;->mSelectedFontSize:I
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/IntervalSeekBar;->setProgress(I)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/IntervalSeekBar;->setProgress(I)V
 
     .line 249
-    iget v1, p0, Lcom/android/settings/FontPreview;->mSelectedFontSize:I
+    iget v1, p0, Lcom/android/settings_ex/FontPreview;->mSelectedFontSize:I
 
-    iget v2, p0, Lcom/android/settings/FontPreview;->mExtraLargeFontIndex:I
+    iget v2, p0, Lcom/android/settings_ex/FontPreview;->mExtraLargeFontIndex:I
 
     if-le v1, v2, :cond_3
 
     .line 250
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mShowForHugeFontTextView:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mShowForHugeFontTextView:Landroid/widget/TextView;
 
     const/4 v2, 0x0
 
@@ -4090,25 +4090,25 @@
 
     .line 253
     :cond_3
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/FontPreview;->mSharedPreferences:Landroid/content/SharedPreferences;
+    iput-object v1, p0, Lcom/android/settings_ex/FontPreview;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     .line 255
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mFontSizeSeekBar:Lcom/android/settings/IntervalSeekBar;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mFontSizeSeekBar:Lcom/android/settings_ex/IntervalSeekBar;
 
-    new-instance v2, Lcom/android/settings/FontPreview$1;
+    new-instance v2, Lcom/android/settings_ex/FontPreview$1;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/FontPreview$1;-><init>(Lcom/android/settings/FontPreview;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/FontPreview$1;-><init>(Lcom/android/settings_ex/FontPreview;)V
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/IntervalSeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/IntervalSeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
 
     .line 280
-    iget-boolean v1, p0, Lcom/android/settings/FontPreview;->mIsAccessibilitySettingsVision:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->mIsAccessibilitySettingsVision:Z
 
     if-eqz v1, :cond_9
 
@@ -4132,12 +4132,12 @@
     :cond_6
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lcom/android/settings/FontPreview;->mIsFontLargerOn:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->mIsFontLargerOn:Z
 
     .line 208
     const/4 v1, 0x5
 
-    iput v1, p0, Lcom/android/settings/FontPreview;->mExtraLargeFontIndex:I
+    iput v1, p0, Lcom/android/settings_ex/FontPreview;->mExtraLargeFontIndex:I
 
     goto/16 :goto_2
 
@@ -4145,17 +4145,17 @@
     :cond_7
     const v1, 0x7f0e1119
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/FontPreview;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/FontPreview;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/FontPreview;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/FontPreview;->setTitle(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_3
 
     .line 242
     :cond_8
-    invoke-direct {p0}, Lcom/android/settings/FontPreview;->update7StepFontsizeList()V
+    invoke-direct {p0}, Lcom/android/settings_ex/FontPreview;->update7StepFontsizeList()V
 
     goto :goto_4
 
@@ -4163,23 +4163,23 @@
     :cond_9
     const v1, 0x7f0d02e7
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/FontPreview;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/FontPreview;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/ListView;
 
-    iput-object v1, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iput-object v1, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
     .line 285
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/widget/ListView;->setChoiceMode(I)V
 
     .line 288
-    invoke-virtual {p0}, Lcom/android/settings/FontPreview;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/FontPreview;->getResources()Landroid/content/res/Resources;
 
     move-result-object v11
 
@@ -4209,7 +4209,7 @@
 
     .line 292
     .local v4, "divider_inset_size":I
-    invoke-static {p0}, Lcom/android/settings/Utils;->isRTL(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/android/settings_ex/Utils;->isRTL(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -4218,7 +4218,7 @@
     .line 293
     new-instance v0, Landroid/graphics/drawable/InsetDrawable;
 
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
     invoke-virtual {v1}, Landroid/widget/ListView;->getDivider()Landroid/graphics/drawable/Drawable;
 
@@ -4234,7 +4234,7 @@
 
     .line 294
     .local v0, "insetdivider":Landroid/graphics/drawable/InsetDrawable;
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ListView;->setDivider(Landroid/graphics/drawable/Drawable;)V
 
@@ -4256,37 +4256,37 @@
     invoke-virtual {v13, v1}, Landroid/widget/TextView;->setFocusable(Z)V
 
     .line 303
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
     invoke-virtual {v1, v13}, Landroid/widget/ListView;->addFooterView(Landroid/view/View;)V
 
     .line 306
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     if-nez v1, :cond_c
 
     .line 307
-    iget-boolean v1, p0, Lcom/android/settings/FontPreview;->mIsRunLoadListTask:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->mIsRunLoadListTask:Z
 
     if-nez v1, :cond_a
 
     .line 308
-    new-instance v1, Lcom/android/settings/FontPreview$LoadListTask;
+    new-instance v1, Lcom/android/settings_ex/FontPreview$LoadListTask;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2}, Lcom/android/settings/FontPreview$LoadListTask;-><init>(Lcom/android/settings/FontPreview;Lcom/android/settings/FontPreview$1;)V
+    invoke-direct {v1, p0, v2}, Lcom/android/settings_ex/FontPreview$LoadListTask;-><init>(Lcom/android/settings_ex/FontPreview;Lcom/android/settings_ex/FontPreview$1;)V
 
-    iput-object v1, p0, Lcom/android/settings/FontPreview;->mLoadListTask:Lcom/android/settings/FontPreview$LoadListTask;
+    iput-object v1, p0, Lcom/android/settings_ex/FontPreview;->mLoadListTask:Lcom/android/settings_ex/FontPreview$LoadListTask;
 
     .line 309
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mLoadListTask:Lcom/android/settings/FontPreview$LoadListTask;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mLoadListTask:Lcom/android/settings_ex/FontPreview$LoadListTask;
 
     const/4 v2, 0x0
 
     new-array v2, v2, [Ljava/lang/Void;
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/FontPreview$LoadListTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/FontPreview$LoadListTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     .line 314
     :cond_a
@@ -4305,7 +4305,7 @@
     :cond_b
     new-instance v0, Landroid/graphics/drawable/InsetDrawable;
 
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
     invoke-virtual {v1}, Landroid/widget/ListView;->getDivider()Landroid/graphics/drawable/Drawable;
 
@@ -4323,7 +4323,7 @@
 
     .line 297
     .restart local v0    # "insetdivider":Landroid/graphics/drawable/InsetDrawable;
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mFontStyleListView:Landroid/widget/ListView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ListView;->setDivider(Landroid/graphics/drawable/Drawable;)V
 
@@ -4332,7 +4332,7 @@
     .line 312
     .restart local v13    # "tvtemp":Landroid/widget/TextView;
     :cond_c
-    invoke-direct {p0, p1}, Lcom/android/settings/FontPreview;->setFontStyleList(Landroid/os/Bundle;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/FontPreview;->setFontStyleList(Landroid/os/Bundle;)V
 
     goto :goto_7
 .end method
@@ -4348,12 +4348,12 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
     .line 907
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mActionBar:Landroid/app/ActionBar;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mActionBar:Landroid/app/ActionBar;
 
     if-eqz v1, :cond_0
 
     .line 908
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mActionBar:Landroid/app/ActionBar;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mActionBar:Landroid/app/ActionBar;
 
     invoke-virtual {v1}, Landroid/app/ActionBar;->getCustomView()Landroid/view/View;
 
@@ -4372,21 +4372,21 @@
 
     check-cast v1, Landroid/widget/Button;
 
-    iput-object v1, p0, Lcom/android/settings/FontPreview;->mcancelButton:Landroid/widget/Button;
+    iput-object v1, p0, Lcom/android/settings_ex/FontPreview;->mcancelButton:Landroid/widget/Button;
 
     .line 911
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/settings/FontPreview;->mcancelButton:Landroid/widget/Button;
+    iget-object v2, p0, Lcom/android/settings_ex/FontPreview;->mcancelButton:Landroid/widget/Button;
 
-    invoke-static {v1, v2}, Lcom/android/settings/Utils;->setMaxFontScale(Landroid/content/Context;Landroid/widget/Button;)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/Utils;->setMaxFontScale(Landroid/content/Context;Landroid/widget/Button;)V
 
     .line 912
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mcancelButton:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mcancelButton:Landroid/widget/Button;
 
-    new-instance v2, Lcom/android/settings/FontPreview$4;
+    new-instance v2, Lcom/android/settings_ex/FontPreview$4;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/FontPreview$4;-><init>(Lcom/android/settings/FontPreview;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/FontPreview$4;-><init>(Lcom/android/settings_ex/FontPreview;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -4399,43 +4399,43 @@
 
     check-cast v1, Landroid/widget/Button;
 
-    iput-object v1, p0, Lcom/android/settings/FontPreview;->mSaveButton:Landroid/widget/Button;
+    iput-object v1, p0, Lcom/android/settings_ex/FontPreview;->mSaveButton:Landroid/widget/Button;
 
     .line 919
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mSaveButton:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mSaveButton:Landroid/widget/Button;
 
     const v2, 0x7f0e0d19
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setText(I)V
 
     .line 920
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/settings/FontPreview;->mSaveButton:Landroid/widget/Button;
+    iget-object v2, p0, Lcom/android/settings_ex/FontPreview;->mSaveButton:Landroid/widget/Button;
 
-    invoke-static {v1, v2}, Lcom/android/settings/Utils;->setMaxFontScale(Landroid/content/Context;Landroid/widget/Button;)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/Utils;->setMaxFontScale(Landroid/content/Context;Landroid/widget/Button;)V
 
     .line 921
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mSaveButton:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mSaveButton:Landroid/widget/Button;
 
-    new-instance v2, Lcom/android/settings/FontPreview$5;
+    new-instance v2, Lcom/android/settings_ex/FontPreview$5;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/FontPreview$5;-><init>(Lcom/android/settings/FontPreview;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/FontPreview$5;-><init>(Lcom/android/settings_ex/FontPreview;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 929
-    iget-boolean v1, p0, Lcom/android/settings/FontPreview;->isEnabledShowBtnBg:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/FontPreview;->isEnabledShowBtnBg:Z
 
     if-eqz v1, :cond_0
 
     .line 930
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mcancelButton:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mcancelButton:Landroid/widget/Button;
 
     invoke-virtual {v1, v3}, Landroid/widget/Button;->setBackgroundResource(I)V
 
     .line 931
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mSaveButton:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mSaveButton:Landroid/widget/Button;
 
     invoke-virtual {v1, v3}, Landroid/widget/Button;->setBackgroundResource(I)V
 
@@ -4455,37 +4455,37 @@
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
     .line 1484
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mLoadListTask:Lcom/android/settings/FontPreview$LoadListTask;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mLoadListTask:Lcom/android/settings_ex/FontPreview$LoadListTask;
 
     if-eqz v0, :cond_0
 
     .line 1485
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mLoadListTask:Lcom/android/settings/FontPreview$LoadListTask;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mLoadListTask:Lcom/android/settings_ex/FontPreview$LoadListTask;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/FontPreview$LoadListTask;->cancel(Z)Z
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/FontPreview$LoadListTask;->cancel(Z)Z
 
     .line 1486
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/FontPreview;->mIsRunLoadListTask:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/FontPreview;->mIsRunLoadListTask:Z
 
     .line 1489
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     if-eqz v0, :cond_1
 
     .line 1490
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    invoke-static {}, Lcom/android/settings/flipfont/FontListAdapter;->destroyInstance()V
+    invoke-static {}, Lcom/android/settings_ex/flipfont/FontListAdapter;->destroyInstance()V
 
     .line 1491
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iput-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     .line 1493
     :cond_1
@@ -4519,7 +4519,7 @@
     .local p1, "arg0":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     if-nez v14, :cond_1
 
@@ -4534,7 +4534,7 @@
 
     move-object/from16 v1, p0
 
-    iput v0, v1, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iput v0, v1, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
     .line 594
     const/4 v11, 0x0
@@ -4551,20 +4551,20 @@
     .local v10, "press_apkname":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     if-eqz v14, :cond_2
 
     .line 599
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    iget-object v14, v14, Lcom/android/settings/flipfont/FontListAdapter;->mFontPackageNames:Ljava/util/Vector;
+    iget-object v14, v14, Lcom/android/settings_ex/flipfont/FontListAdapter;->mFontPackageNames:Ljava/util/Vector;
 
     move-object/from16 v0, p0
 
-    iget v15, v0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v15, v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
     invoke-virtual {v14, v15}, Ljava/util/Vector;->elementAt(I)Ljava/lang/Object;
 
@@ -4578,7 +4578,7 @@
     :cond_2
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v14}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -4606,7 +4606,7 @@
     :try_start_0
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v14}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -4642,9 +4642,9 @@
     .line 613
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
-    invoke-static {v14, v9}, Lcom/android/settings/Utils;->isIntentAvailable(Landroid/content/Context;Landroid/content/Intent;)Z
+    invoke-static {v14, v9}, Lcom/android/settings_ex/Utils;->isIntentAvailable(Landroid/content/Context;Landroid/content/Intent;)Z
 
     move-result v14
 
@@ -4653,7 +4653,7 @@
     .line 614
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v14}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -4697,7 +4697,7 @@
     :cond_3
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v14, v9}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
     :try_end_0
@@ -4707,7 +4707,7 @@
     .end local v9    # "intent":Landroid/content/Intent;
     .end local v13    # "uri":Ljava/lang/String;
     :goto_1
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/FontPreview;->finish()V
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/FontPreview;->finish()V
 
     goto/16 :goto_0
 
@@ -4726,9 +4726,9 @@
     :cond_4
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    invoke-virtual {v14}, Lcom/android/settings/flipfont/FontListAdapter;->getCurrentThemeString()Ljava/lang/String;
+    invoke-virtual {v14}, Lcom/android/settings_ex/flipfont/FontListAdapter;->getCurrentThemeString()Ljava/lang/String;
 
     move-result-object v5
 
@@ -4745,18 +4745,18 @@
     .line 628
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->themeFontTypeface:Landroid/graphics/Typeface;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->themeFontTypeface:Landroid/graphics/Typeface;
 
     if-eqz v14, :cond_5
 
     .line 629
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mChangingSizeText:Landroid/widget/TextView;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mChangingSizeText:Landroid/widget/TextView;
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/FontPreview;->themeFontTypeface:Landroid/graphics/Typeface;
+    iget-object v15, v0, Lcom/android/settings_ex/FontPreview;->themeFontTypeface:Landroid/graphics/Typeface;
 
     invoke-virtual {v14, v15}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
@@ -4766,7 +4766,7 @@
 
     move-object/from16 v0, p0
 
-    iput-boolean v14, v0, Lcom/android/settings/FontPreview;->mIsSelectedCurrentThemeFont:Z
+    iput-boolean v14, v0, Lcom/android/settings_ex/FontPreview;->mIsSelectedCurrentThemeFont:Z
 
     goto/16 :goto_0
 
@@ -4776,7 +4776,7 @@
 
     move-object/from16 v0, p0
 
-    iput-boolean v14, v0, Lcom/android/settings/FontPreview;->mIsSelectedCurrentThemeFont:Z
+    iput-boolean v14, v0, Lcom/android/settings_ex/FontPreview;->mIsSelectedCurrentThemeFont:Z
 
     .line 637
     const/4 v14, 0x1
@@ -4788,7 +4788,7 @@
     .line 638
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v14}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -4810,11 +4810,11 @@
     :goto_2
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v15, v0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     const-string v15, "activity"
 
@@ -4859,7 +4859,7 @@
 
     move-object/from16 v0, p0
 
-    iput-object v14, v0, Lcom/android/settings/FontPreview;->mPackageName:Ljava/lang/String;
+    iput-object v14, v0, Lcom/android/settings_ex/FontPreview;->mPackageName:Ljava/lang/String;
 
     .line 661
     :cond_7
@@ -4877,7 +4877,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/FontPreview;->mPackageName:Ljava/lang/String;
+    iget-object v0, v0, Lcom/android/settings_ex/FontPreview;->mPackageName:Ljava/lang/String;
 
     move-object/from16 v16, v0
 
@@ -4894,28 +4894,28 @@
     .line 663
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     if-eqz v14, :cond_8
 
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mChangingSizeText:Landroid/widget/TextView;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mChangingSizeText:Landroid/widget/TextView;
 
     if-eqz v14, :cond_8
 
     .line 664
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mChangingSizeText:Landroid/widget/TextView;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mChangingSizeText:Landroid/widget/TextView;
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v15, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     move/from16 v0, p3
 
-    invoke-virtual {v15, v0}, Lcom/android/settings/flipfont/FontListAdapter;->getFontTypeface(I)Landroid/graphics/Typeface;
+    invoke-virtual {v15, v0}, Lcom/android/settings_ex/flipfont/FontListAdapter;->getFontTypeface(I)Landroid/graphics/Typeface;
 
     move-result-object v15
 
@@ -4931,7 +4931,7 @@
     .local v3, "apkname":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     if-eqz v14, :cond_9
 
@@ -4939,13 +4939,13 @@
     :try_start_1
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    iget-object v14, v14, Lcom/android/settings/flipfont/FontListAdapter;->mFontPackageNames:Ljava/util/Vector;
+    iget-object v14, v14, Lcom/android/settings_ex/flipfont/FontListAdapter;->mFontPackageNames:Ljava/util/Vector;
 
     move-object/from16 v0, p0
 
-    iget v15, v0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v15, v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
     invoke-virtual {v14, v15}, Ljava/util/Vector;->elementAt(I)Ljava/lang/Object;
 
@@ -4962,20 +4962,20 @@
     :goto_3
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mSavedInstanceState:Landroid/os/Bundle;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mSavedInstanceState:Landroid/os/Bundle;
 
     if-eqz v14, :cond_0
 
     .line 684
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mSavedInstanceState:Landroid/os/Bundle;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mSavedInstanceState:Landroid/os/Bundle;
 
     const-string v15, "USER_SELECTED_FONT_STYLE"
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v0, v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
     move/from16 v16, v0
 
@@ -4991,7 +4991,7 @@
     :cond_a
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v14}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -5009,57 +5009,57 @@
     .restart local v12    # "s":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     if-nez v14, :cond_b
 
     .line 645
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
-    invoke-static {v14}, Lcom/android/settings/flipfont/FontListAdapter;->getInstanceFontListAdapter(Landroid/content/Context;)Lcom/android/settings/flipfont/FontListAdapter;
+    invoke-static {v14}, Lcom/android/settings_ex/flipfont/FontListAdapter;->getInstanceFontListAdapter(Landroid/content/Context;)Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     move-result-object v14
 
     move-object/from16 v0, p0
 
-    iput-object v14, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iput-object v14, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     .line 646
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    invoke-virtual {v14}, Lcom/android/settings/flipfont/FontListAdapter;->setInitDownloadFontAndThemeFont()V
+    invoke-virtual {v14}, Lcom/android/settings_ex/flipfont/FontListAdapter;->setInitDownloadFontAndThemeFont()V
 
     .line 648
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     const/4 v15, 0x1
 
-    invoke-virtual {v14, v15}, Lcom/android/settings/flipfont/FontListAdapter;->setmIsFontPreviewActivity(Z)V
+    invoke-virtual {v14, v15}, Lcom/android/settings_ex/flipfont/FontListAdapter;->setmIsFontPreviewActivity(Z)V
 
     .line 649
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    invoke-virtual {v14}, Lcom/android/settings/flipfont/FontListAdapter;->loadTypefaces()V
+    invoke-virtual {v14}, Lcom/android/settings_ex/flipfont/FontListAdapter;->loadTypefaces()V
 
     .line 651
     :cond_b
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v14, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     move-object/from16 v0, p0
 
-    iget v15, v0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v15, v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
-    invoke-virtual {v14, v15}, Lcom/android/settings/flipfont/FontListAdapter;->getFontName(I)Ljava/lang/String;
+    invoke-virtual {v14, v15}, Lcom/android/settings_ex/flipfont/FontListAdapter;->getFontName(I)Ljava/lang/String;
 
     move-result-object v8
 
@@ -5099,16 +5099,16 @@
     .local v27, "selectedFont":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    iget-boolean v2, v0, Lcom/android/settings/FontPreview;->mIsSelectedCurrentThemeFont:Z
+    iget-boolean v2, v0, Lcom/android/settings_ex/FontPreview;->mIsSelectedCurrentThemeFont:Z
 
     if-eqz v2, :cond_1
 
     .line 1038
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v2, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    invoke-virtual {v2}, Lcom/android/settings/flipfont/FontListAdapter;->getThemeFontCurrentPath()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/android/settings_ex/flipfont/FontListAdapter;->getThemeFontCurrentPath()Ljava/lang/String;
 
     move-result-object v28
 
@@ -5172,7 +5172,7 @@
 
     .line 1180
     .local v11, "am":Landroid/app/IActivityManager;
-    sget-boolean v2, Lcom/android/settings/FontPreview;->REBOOT:Z
+    sget-boolean v2, Lcom/android/settings_ex/FontPreview;->REBOOT:Z
 
     if-nez v2, :cond_12
 
@@ -5213,7 +5213,7 @@
     .line 1198
     .end local v14    # "config":Landroid/content/res/Configuration;
     :goto_2
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v2
 
@@ -5221,13 +5221,13 @@
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/FontPreview;->mPackageName:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/FontPreview;->mPackageName:Ljava/lang/String;
 
     if-eqz v2, :cond_c
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/FontPreview;->mPackageName:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/FontPreview;->mPackageName:Ljava/lang/String;
 
     const-string v6, "sec_container_"
 
@@ -5242,7 +5242,7 @@
 
     move-object/from16 v0, p0
 
-    iput-object v2, v0, Lcom/android/settings/FontPreview;->mPackageName:Ljava/lang/String;
+    iput-object v2, v0, Lcom/android/settings_ex/FontPreview;->mPackageName:Ljava/lang/String;
 
     .line 1200
     const/4 v2, 0x1
@@ -5272,7 +5272,7 @@
 
     move-object/from16 v0, p0
 
-    iget v7, v0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v7, v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -5291,7 +5291,7 @@
     .local v5, "apkname":Ljava/lang/String;
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v2, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     if-eqz v2, :cond_2
 
@@ -5299,13 +5299,13 @@
     :try_start_2
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v2, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    iget-object v2, v2, Lcom/android/settings/flipfont/FontListAdapter;->mFontPackageNames:Ljava/util/Vector;
+    iget-object v2, v2, Lcom/android/settings_ex/flipfont/FontListAdapter;->mFontPackageNames:Ljava/util/Vector;
 
     move-object/from16 v0, p0
 
-    iget v6, v0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v6, v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
     invoke-virtual {v2, v6}, Ljava/util/Vector;->elementAt(I)Ljava/lang/Object;
 
@@ -5321,7 +5321,7 @@
     :cond_2
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v5}, Lcom/android/settings/FontPreview;->checkFont(Ljava/lang/String;)Z
+    invoke-virtual {v0, v5}, Lcom/android/settings_ex/FontPreview;->checkFont(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -5330,7 +5330,7 @@
     .line 1059
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v5}, Lcom/android/settings/FontPreview;->badFontDialog(Ljava/lang/String;)V
+    invoke-virtual {v0, v5}, Lcom/android/settings_ex/FontPreview;->badFontDialog(Ljava/lang/String;)V
 
     .line 1061
     const/4 v2, 0x0
@@ -5352,7 +5352,7 @@
     :cond_3
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v2, v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
     const/4 v6, -0x1
 
@@ -5361,11 +5361,11 @@
     .line 1065
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/android/settings/FontPreview;->mSavedClickedItem:I
+    iget v2, v0, Lcom/android/settings_ex/FontPreview;->mSavedClickedItem:I
 
     move-object/from16 v0, p0
 
-    iput v2, v0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iput v2, v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
     .line 1070
     :goto_4
@@ -5383,7 +5383,7 @@
 
     move-object/from16 v0, p0
 
-    iget v7, v0, Lcom/android/settings/FontPreview;->mSavedClickedItem:I
+    iget v7, v0, Lcom/android/settings_ex/FontPreview;->mSavedClickedItem:I
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -5398,57 +5398,57 @@
     .line 1073
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v2, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     if-nez v2, :cond_4
 
     .line 1074
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v2, v0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
-    invoke-static {v2}, Lcom/android/settings/flipfont/FontListAdapter;->getInstanceFontListAdapter(Landroid/content/Context;)Lcom/android/settings/flipfont/FontListAdapter;
+    invoke-static {v2}, Lcom/android/settings_ex/flipfont/FontListAdapter;->getInstanceFontListAdapter(Landroid/content/Context;)Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     move-result-object v2
 
     move-object/from16 v0, p0
 
-    iput-object v2, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iput-object v2, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     .line 1075
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v2, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    invoke-virtual {v2}, Lcom/android/settings/flipfont/FontListAdapter;->setInitDownloadFontAndThemeFont()V
+    invoke-virtual {v2}, Lcom/android/settings_ex/flipfont/FontListAdapter;->setInitDownloadFontAndThemeFont()V
 
     .line 1077
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v2, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     const/4 v6, 0x1
 
-    invoke-virtual {v2, v6}, Lcom/android/settings/flipfont/FontListAdapter;->setmIsFontPreviewActivity(Z)V
+    invoke-virtual {v2, v6}, Lcom/android/settings_ex/flipfont/FontListAdapter;->setmIsFontPreviewActivity(Z)V
 
     .line 1078
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v2, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    invoke-virtual {v2}, Lcom/android/settings/flipfont/FontListAdapter;->loadTypefaces()V
+    invoke-virtual {v2}, Lcom/android/settings_ex/flipfont/FontListAdapter;->loadTypefaces()V
 
     .line 1081
     :cond_4
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v2, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    iget-object v2, v2, Lcom/android/settings/flipfont/FontListAdapter;->mTypefaceFiles:Ljava/util/Vector;
+    iget-object v2, v2, Lcom/android/settings_ex/flipfont/FontListAdapter;->mTypefaceFiles:Ljava/util/Vector;
 
     move-object/from16 v0, p0
 
-    iget v6, v0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v6, v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
     invoke-virtual {v2, v6}, Ljava/util/Vector;->elementAt(I)Ljava/lang/Object;
 
@@ -5463,15 +5463,15 @@
 
     move-object/from16 v1, v27
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/FontPreview;->saveSelectedFontStringPreferences(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/FontPreview;->saveSelectedFontStringPreferences(Ljava/lang/String;)V
 
     .line 1087
-    new-instance v3, Lcom/android/settings/flipfont/FontWriter;
+    new-instance v3, Lcom/android/settings_ex/flipfont/FontWriter;
 
-    invoke-direct {v3}, Lcom/android/settings/flipfont/FontWriter;-><init>()V
+    invoke-direct {v3}, Lcom/android/settings_ex/flipfont/FontWriter;-><init>()V
 
     .line 1090
-    .local v3, "fontWriter":Lcom/android/settings/flipfont/FontWriter;
+    .local v3, "fontWriter":Lcom/android/settings_ex/flipfont/FontWriter;
     if-eqz v27, :cond_5
 
     const-string v2, "default"
@@ -5486,39 +5486,39 @@
 
     .line 1091
     :cond_5
-    sput-object v27, Lcom/android/settings/FontPreview;->persistString:Ljava/lang/String;
+    sput-object v27, Lcom/android/settings_ex/FontPreview;->persistString:Ljava/lang/String;
 
     .line 1092
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v2, v0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     const-string v6, " "
 
-    invoke-virtual {v3, v2, v6}, Lcom/android/settings/flipfont/FontWriter;->deleteFontDirectory(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-virtual {v3, v2, v6}, Lcom/android/settings_ex/flipfont/FontWriter;->deleteFontDirectory(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 1093
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v2, v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
     move-object/from16 v0, p0
 
-    iput v2, v0, Lcom/android/settings/FontPreview;->mSavedClickedItem:I
+    iput v2, v0, Lcom/android/settings_ex/FontPreview;->mSavedClickedItem:I
 
     .line 1094
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/FontPreview;->savePreferences()V
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/FontPreview;->savePreferences()V
 
     .line 1096
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v2, v0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     const-string v6, "sans.loc"
 
     const-string v7, "default#default"
 
-    invoke-virtual {v3, v2, v6, v7}, Lcom/android/settings/flipfont/FontWriter;->writeLoc(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v3, v2, v6, v7}, Lcom/android/settings_ex/flipfont/FontWriter;->writeLoc(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1098
     if-nez v27, :cond_0
@@ -5536,35 +5536,35 @@
     goto/16 :goto_3
 
     .line 1067
-    .end local v3    # "fontWriter":Lcom/android/settings/flipfont/FontWriter;
+    .end local v3    # "fontWriter":Lcom/android/settings_ex/flipfont/FontWriter;
     :cond_6
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v2, v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
     move-object/from16 v0, p0
 
-    iput v2, v0, Lcom/android/settings/FontPreview;->mSavedClickedItem:I
+    iput v2, v0, Lcom/android/settings_ex/FontPreview;->mSavedClickedItem:I
 
     goto/16 :goto_4
 
     .line 1106
-    .restart local v3    # "fontWriter":Lcom/android/settings/flipfont/FontWriter;
+    .restart local v3    # "fontWriter":Lcom/android/settings_ex/flipfont/FontWriter;
     :cond_7
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v2, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    iget-object v2, v2, Lcom/android/settings/flipfont/FontListAdapter;->mTypefaceFinder:Lcom/android/settings/flipfont/TypefaceFinder;
+    iget-object v2, v2, Lcom/android/settings_ex/flipfont/FontListAdapter;->mTypefaceFinder:Lcom/android/settings_ex/flipfont/TypefaceFinder;
 
     move-object/from16 v0, v27
 
-    invoke-virtual {v2, v0}, Lcom/android/settings/flipfont/TypefaceFinder;->findMatchingTypeface(Ljava/lang/String;)Lcom/android/settings/flipfont/Typeface;
+    invoke-virtual {v2, v0}, Lcom/android/settings_ex/flipfont/TypefaceFinder;->findMatchingTypeface(Ljava/lang/String;)Lcom/android/settings_ex/flipfont/Typeface;
 
     move-result-object v26
 
     .line 1108
-    .local v26, "sansTypeface":Lcom/android/settings/flipfont/Typeface;
+    .local v26, "sansTypeface":Lcom/android/settings_ex/flipfont/Typeface;
     move-object/from16 v25, v27
 
     .line 1109
@@ -5596,11 +5596,11 @@
     :cond_8
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v2, v0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     move-object/from16 v0, v25
 
-    invoke-virtual {v3, v2, v0}, Lcom/android/settings/flipfont/FontWriter;->createFontDirectory(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
+    invoke-virtual {v3, v2, v0}, Lcom/android/settings_ex/flipfont/FontWriter;->createFontDirectory(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v4
 
@@ -5609,7 +5609,7 @@
     const/16 v29, 0x0
 
     .line 1119
-    .local v29, "tpf":Lcom/android/settings/flipfont/TypefaceFile;
+    .local v29, "tpf":Lcom/android/settings_ex/flipfont/TypefaceFile;
     if-eqz v26, :cond_9
 
     .line 1120
@@ -5619,7 +5619,7 @@
     :goto_5
     move-object/from16 v0, v26
 
-    iget-object v2, v0, Lcom/android/settings/flipfont/Typeface;->mSansFonts:Ljava/util/List;
+    iget-object v2, v0, Lcom/android/settings_ex/flipfont/Typeface;->mSansFonts:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -5632,7 +5632,7 @@
     .line 1121
     move-object/from16 v0, v26
 
-    iget-object v2, v0, Lcom/android/settings/flipfont/Typeface;->mSansFonts:Ljava/util/List;
+    iget-object v2, v0, Lcom/android/settings_ex/flipfont/Typeface;->mSansFonts:Ljava/util/List;
 
     move/from16 v0, v19
 
@@ -5640,21 +5640,21 @@
 
     move-result-object v29
 
-    .end local v29    # "tpf":Lcom/android/settings/flipfont/TypefaceFile;
-    check-cast v29, Lcom/android/settings/flipfont/TypefaceFile;
+    .end local v29    # "tpf":Lcom/android/settings_ex/flipfont/TypefaceFile;
+    check-cast v29, Lcom/android/settings_ex/flipfont/TypefaceFile;
 
     .line 1125
-    .restart local v29    # "tpf":Lcom/android/settings/flipfont/TypefaceFile;
+    .restart local v29    # "tpf":Lcom/android/settings_ex/flipfont/TypefaceFile;
     :try_start_3
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v2, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    iget-object v2, v2, Lcom/android/settings/flipfont/FontListAdapter;->mFontPackageNames:Ljava/util/Vector;
+    iget-object v2, v2, Lcom/android/settings_ex/flipfont/FontListAdapter;->mFontPackageNames:Ljava/util/Vector;
 
     move-object/from16 v0, p0
 
-    iget v6, v0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v6, v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
     invoke-virtual {v2, v6}, Ljava/util/Vector;->elementAt(I)Ljava/lang/Object;
 
@@ -5690,9 +5690,9 @@
     .line 1127
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v2, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    iget-object v2, v2, Lcom/android/settings/flipfont/FontListAdapter;->mPackageManager:Landroid/content/pm/PackageManager;
+    iget-object v2, v2, Lcom/android/settings_ex/flipfont/FontListAdapter;->mPackageManager:Landroid/content/pm/PackageManager;
 
     const/16 v6, 0x80
 
@@ -5709,9 +5709,9 @@
     .line 1129
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v2, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
-    iget-object v2, v2, Lcom/android/settings/flipfont/FontListAdapter;->mPackageManager:Landroid/content/pm/PackageManager;
+    iget-object v2, v2, Lcom/android/settings_ex/flipfont/FontListAdapter;->mPackageManager:Landroid/content/pm/PackageManager;
 
     invoke-virtual {v2, v12}, Landroid/content/pm/PackageManager;->getResourcesForApplication(Landroid/content/pm/ApplicationInfo;)Landroid/content/res/Resources;
 
@@ -5737,7 +5737,7 @@
 
     move-result-object v6
 
-    invoke-virtual/range {v29 .. v29}, Lcom/android/settings/flipfont/TypefaceFile;->getFileName()Ljava/lang/String;
+    invoke-virtual/range {v29 .. v29}, Lcom/android/settings_ex/flipfont/TypefaceFile;->getFileName()Ljava/lang/String;
 
     move-result-object v7
 
@@ -5762,7 +5762,7 @@
 
     move-result-object v2
 
-    invoke-virtual/range {v29 .. v29}, Lcom/android/settings/flipfont/TypefaceFile;->getFileName()Ljava/lang/String;
+    invoke-virtual/range {v29 .. v29}, Lcom/android/settings_ex/flipfont/TypefaceFile;->getFileName()Ljava/lang/String;
 
     move-result-object v6
 
@@ -5780,13 +5780,13 @@
 
     .line 1133
     .local v21, "in":Ljava/io/InputStream;
-    invoke-virtual/range {v29 .. v29}, Lcom/android/settings/flipfont/TypefaceFile;->getDroidName()Ljava/lang/String;
+    invoke-virtual/range {v29 .. v29}, Lcom/android/settings_ex/flipfont/TypefaceFile;->getDroidName()Ljava/lang/String;
 
     move-result-object v2
 
     move-object/from16 v0, v21
 
-    invoke-virtual {v3, v4, v0, v2}, Lcom/android/settings/flipfont/FontWriter;->copyFontFile(Ljava/io/File;Ljava/io/InputStream;Ljava/lang/String;)Z
+    invoke-virtual {v3, v4, v0, v2}, Lcom/android/settings_ex/flipfont/FontWriter;->copyFontFile(Ljava/io/File;Ljava/io/InputStream;Ljava/lang/String;)Z
 
     move-result v17
 
@@ -5811,17 +5811,17 @@
 
     .line 1137
     .local v18, "ex":Ljava/lang/Exception;
-    invoke-virtual/range {v29 .. v29}, Lcom/android/settings/flipfont/TypefaceFile;->getFileName()Ljava/lang/String;
+    invoke-virtual/range {v29 .. v29}, Lcom/android/settings_ex/flipfont/TypefaceFile;->getFileName()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-virtual/range {v29 .. v29}, Lcom/android/settings/flipfont/TypefaceFile;->getDroidName()Ljava/lang/String;
+    invoke-virtual/range {v29 .. v29}, Lcom/android/settings_ex/flipfont/TypefaceFile;->getDroidName()Ljava/lang/String;
 
     move-result-object v7
 
     move-object/from16 v2, p0
 
-    invoke-direct/range {v2 .. v7}, Lcom/android/settings/FontPreview;->copyFileWithCR(Lcom/android/settings/flipfont/FontWriter;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-direct/range {v2 .. v7}, Lcom/android/settings_ex/FontPreview;->copyFileWithCR(Lcom/android/settings_ex/flipfont/FontWriter;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v17
 
@@ -5838,7 +5838,7 @@
     if-ne v0, v2, :cond_b
 
     .line 1149
-    sget-boolean v2, Lcom/android/settings/FontPreview;->DEBUG:Z
+    sget-boolean v2, Lcom/android/settings_ex/FontPreview;->DEBUG:Z
 
     if-eqz v2, :cond_a
 
@@ -5853,7 +5853,7 @@
     :cond_a
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v5}, Lcom/android/settings/FontPreview;->badFontDialog(Ljava/lang/String;)V
+    invoke-virtual {v0, v5}, Lcom/android/settings_ex/FontPreview;->badFontDialog(Ljava/lang/String;)V
 
     .line 1157
     const/4 v2, 0x0
@@ -5862,43 +5862,43 @@
 
     .line 1160
     :cond_b
-    sput-object v27, Lcom/android/settings/FontPreview;->persistString:Ljava/lang/String;
+    sput-object v27, Lcom/android/settings_ex/FontPreview;->persistString:Ljava/lang/String;
 
     .line 1162
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v2, v0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     move-object/from16 v0, v25
 
-    invoke-virtual {v3, v2, v0}, Lcom/android/settings/flipfont/FontWriter;->deleteFontDirectory(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-virtual {v3, v2, v0}, Lcom/android/settings_ex/flipfont/FontWriter;->deleteFontDirectory(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 1163
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v2, v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
     move-object/from16 v0, p0
 
-    iput v2, v0, Lcom/android/settings/FontPreview;->mSavedClickedItem:I
+    iput v2, v0, Lcom/android/settings_ex/FontPreview;->mSavedClickedItem:I
 
     .line 1164
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/FontPreview;->savePreferences()V
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/FontPreview;->savePreferences()V
 
     .line 1166
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v2, v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
     move-object/from16 v0, p0
 
-    iput v2, v0, Lcom/android/settings/FontPreview;->mPreviousFont:I
+    iput v2, v0, Lcom/android/settings_ex/FontPreview;->mPreviousFont:I
 
     .line 1170
     :try_start_4
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v2, v0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     const-string v6, "sans.loc"
 
@@ -5926,19 +5926,19 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v0, v0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     move-object/from16 v30, v0
 
     move-object/from16 v0, v30
 
-    iget-object v0, v0, Lcom/android/settings/flipfont/FontListAdapter;->mFontNames:Ljava/util/Vector;
+    iget-object v0, v0, Lcom/android/settings_ex/flipfont/FontListAdapter;->mFontNames:Ljava/util/Vector;
 
     move-object/from16 v30, v0
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v0, v0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
     move/from16 v31, v0
 
@@ -5960,7 +5960,7 @@
 
     move-result-object v7
 
-    invoke-virtual {v3, v2, v6, v7}, Lcom/android/settings/flipfont/FontWriter;->writeLoc(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v3, v2, v6, v7}, Lcom/android/settings_ex/flipfont/FontWriter;->writeLoc(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_4
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_2
 
@@ -5997,15 +5997,15 @@
     goto/16 :goto_0
 
     .line 1184
-    .end local v3    # "fontWriter":Lcom/android/settings/flipfont/FontWriter;
+    .end local v3    # "fontWriter":Lcom/android/settings_ex/flipfont/FontWriter;
     .end local v4    # "fontDir":Ljava/io/File;
     .end local v5    # "apkname":Ljava/lang/String;
     .end local v15    # "e":Ljava/lang/RuntimeException;
     .end local v17    # "err_filecopy":Z
     .end local v22    # "index":I
     .end local v25    # "sFontDir":Ljava/lang/String;
-    .end local v26    # "sansTypeface":Lcom/android/settings/flipfont/Typeface;
-    .end local v29    # "tpf":Lcom/android/settings/flipfont/TypefaceFile;
+    .end local v26    # "sansTypeface":Lcom/android/settings_ex/flipfont/Typeface;
+    .end local v29    # "tpf":Lcom/android/settings_ex/flipfont/TypefaceFile;
     .restart local v11    # "am":Landroid/app/IActivityManager;
     :catch_3
     move-exception v15
@@ -6021,11 +6021,11 @@
     :cond_c
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v2, v0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v6, v0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     const-string v6, "activity"
 
@@ -6229,7 +6229,7 @@
 
     .line 1227
     :cond_f
-    invoke-static {}, Lcom/android/settings/Utils;->isJapanDCMModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isJapanDCMModel()Z
 
     move-result v2
 
@@ -6309,37 +6309,37 @@
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
     .line 1468
-    iget-boolean v0, p0, Lcom/android/settings/FontPreview;->mIsAccessibilitySettingsVision:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/FontPreview;->mIsAccessibilitySettingsVision:Z
 
     if-nez v0, :cond_0
 
     .line 1469
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mFontListAdapter:Lcom/android/settings/flipfont/FontListAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mFontListAdapter:Lcom/android/settings_ex/flipfont/FontListAdapter;
 
     if-nez v0, :cond_0
 
     .line 1470
-    iget-boolean v0, p0, Lcom/android/settings/FontPreview;->mIsRunLoadListTask:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/FontPreview;->mIsRunLoadListTask:Z
 
     if-nez v0, :cond_0
 
     .line 1471
-    new-instance v0, Lcom/android/settings/FontPreview$LoadListTask;
+    new-instance v0, Lcom/android/settings_ex/FontPreview$LoadListTask;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/FontPreview$LoadListTask;-><init>(Lcom/android/settings/FontPreview;Lcom/android/settings/FontPreview$1;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/FontPreview$LoadListTask;-><init>(Lcom/android/settings_ex/FontPreview;Lcom/android/settings_ex/FontPreview$1;)V
 
-    iput-object v0, p0, Lcom/android/settings/FontPreview;->mLoadListTask:Lcom/android/settings/FontPreview$LoadListTask;
+    iput-object v0, p0, Lcom/android/settings_ex/FontPreview;->mLoadListTask:Lcom/android/settings_ex/FontPreview$LoadListTask;
 
     .line 1472
-    iget-object v0, p0, Lcom/android/settings/FontPreview;->mLoadListTask:Lcom/android/settings/FontPreview$LoadListTask;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview;->mLoadListTask:Lcom/android/settings_ex/FontPreview$LoadListTask;
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/FontPreview$LoadListTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/FontPreview$LoadListTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     .line 1473
     const-string v0, "FontPreview onResume"
@@ -6350,11 +6350,11 @@
 
     .line 1477
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/FontPreview;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/FontPreview;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/android/settings/Utils;->applyLandscapeFullScreen(Landroid/content/Context;Landroid/view/Window;)V
+    invoke-static {p0, v0}, Lcom/android/settings_ex/Utils;->applyLandscapeFullScreen(Landroid/content/Context;Landroid/view/Window;)V
 
     .line 1478
     return-void
@@ -6368,12 +6368,12 @@
     .line 1396
     const-string v0, "USER_SELECTED_FONT_STYLE"
 
-    iget v1, p0, Lcom/android/settings/FontPreview;->mSelectedFontStyleItemIndex:I
+    iget v1, p0, Lcom/android/settings_ex/FontPreview;->mSelectedFontStyleItemIndex:I
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 1397
-    iput-object p1, p0, Lcom/android/settings/FontPreview;->mSavedInstanceState:Landroid/os/Bundle;
+    iput-object p1, p0, Lcom/android/settings_ex/FontPreview;->mSavedInstanceState:Landroid/os/Bundle;
 
     .line 1398
     invoke-super {p0, p1}, Landroid/app/Activity;->onSaveInstanceState(Landroid/os/Bundle;)V
@@ -6388,7 +6388,7 @@
     .prologue
     .line 1343
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/FontPreview;->mCurConfig:Landroid/content/res/Configuration;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreview;->mCurConfig:Landroid/content/res/Configuration;
 
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -6430,7 +6430,7 @@
 
     .line 1017
     .local v1, "mode":I
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     const-string v4, "prefs"
 
@@ -6455,7 +6455,7 @@
     .line 1023
     const-string v3, "SavedClickedItem"
 
-    iget v4, p0, Lcom/android/settings/FontPreview;->mSavedClickedItem:I
+    iget v4, p0, Lcom/android/settings_ex/FontPreview;->mSavedClickedItem:I
 
     invoke-interface {v0, v3, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
@@ -6463,7 +6463,7 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 1026
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -6471,7 +6471,7 @@
 
     const-string v4, "flip_font_style"
 
-    iget v5, p0, Lcom/android/settings/FontPreview;->mSavedClickedItem:I
+    iget v5, p0, Lcom/android/settings_ex/FontPreview;->mSavedClickedItem:I
 
     invoke-static {v3, v4, v5}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
@@ -6489,7 +6489,7 @@
 
     .line 1255
     .local v1, "mode":I
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     const-string v4, "prefs"
 
@@ -6550,26 +6550,26 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1325
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     const/4 v4, 0x5
 
-    invoke-static {v3, v4}, Lcom/android/settings/Utils;->getFontScale(Landroid/content/Context;I)F
+    invoke-static {v3, v4}, Lcom/android/settings_ex/Utils;->getFontScale(Landroid/content/Context;I)F
 
     move-result v2
 
     .line 1326
     .local v2, "largeFontScale":F
-    iget-boolean v3, p0, Lcom/android/settings/FontPreview;->mIsFont11Level:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/FontPreview;->mIsFont11Level:Z
 
     if-eqz v3, :cond_0
 
     .line 1327
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mContext:Landroid/content/Context;
 
     const/4 v4, 0x6
 
-    invoke-static {v3, v4}, Lcom/android/settings/Utils;->getFontScale(Landroid/content/Context;I)F
+    invoke-static {v3, v4}, Lcom/android/settings_ex/Utils;->getFontScale(Landroid/content/Context;I)F
 
     move-result v2
 
@@ -6584,7 +6584,7 @@
 
     .line 1333
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/FontPreview;->mCurConfig:Landroid/content/res/Configuration;
+    iget-object v3, p0, Lcom/android/settings_ex/FontPreview;->mCurConfig:Landroid/content/res/Configuration;
 
     iput v1, v3, Landroid/content/res/Configuration;->fontScale:F
 
@@ -6593,7 +6593,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/FontPreview;->mCurConfig:Landroid/content/res/Configuration;
+    iget-object v4, p0, Lcom/android/settings_ex/FontPreview;->mCurConfig:Landroid/content/res/Configuration;
 
     invoke-interface {v3, v4}, Landroid/app/IActivityManager;->updatePersistentConfiguration(Landroid/content/res/Configuration;)V
     :try_end_0

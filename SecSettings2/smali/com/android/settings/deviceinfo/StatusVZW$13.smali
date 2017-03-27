@@ -1,11 +1,11 @@
-.class Lcom/android/settings/deviceinfo/StatusVZW$13;
+.class Lcom/android/settings_ex/deviceinfo/StatusVZW$13;
 .super Landroid/os/Handler;
 .source "StatusVZW.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/StatusVZW;
+    value = Lcom/android/settings_ex/deviceinfo/StatusVZW;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/StatusVZW;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
     .locals 0
 
     .prologue
     .line 1904
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/StatusVZW$13;->this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW$13;->this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -168,10 +168,10 @@
 
     .line 1925
     .local v2, "firstCall":Ljava/lang/String;
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/StatusVZW$13;->this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+    iget-object v5, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW$13;->this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
-    # getter for: Lcom/android/settings/deviceinfo/StatusVZW;->mFirstCall:Landroid/preference/Preference;
-    invoke-static {v5}, Lcom/android/settings/deviceinfo/StatusVZW;->access$2200(Lcom/android/settings/deviceinfo/StatusVZW;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/deviceinfo/StatusVZW;->mFirstCall:Landroid/preference/Preference;
+    invoke-static {v5}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->access$2200(Lcom/android/settings_ex/deviceinfo/StatusVZW;)Landroid/preference/Preference;
 
     move-result-object v5
 

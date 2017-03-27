@@ -1,133 +1,133 @@
-.class public Lcom/android/settings/Settings;
-.super Lcom/android/settings/SettingsActivity;
+.class public Lcom/android/settings_ex/Settings;
+.super Lcom/android/settings_ex/SettingsActivity;
 .source "Settings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/Settings$NearbyScanningPickerActivity;,
-        Lcom/android/settings/Settings$DeviceProfilesSettingsActivity;,
-        Lcom/android/settings/Settings$UsefulFeatureMainActivity;,
-        Lcom/android/settings/Settings$UsefulFeatureActivity;,
-        Lcom/android/settings/Settings$DomesticSettingsActivity;,
-        Lcom/android/settings/Settings$DataSlotChoice;,
-        Lcom/android/settings/Settings$LteModeActivity;,
-        Lcom/android/settings/Settings$TRoamingSettingsActivity;,
-        Lcom/android/settings/Settings$LGTCustomerService;,
-        Lcom/android/settings/Settings$LGTRoamingEnv;,
-        Lcom/android/settings/Settings$GlobalLteRoaming;,
-        Lcom/android/settings/Settings$GlobalRoamingSettingsActivity;,
-        Lcom/android/settings/Settings$PenSettingsMenuActivity;,
-        Lcom/android/settings/Settings$AirCmdSettingsActivity;,
-        Lcom/android/settings/Settings$CloudSettingActivity;,
-        Lcom/android/settings/Settings$SafetyCareEmergencyModeActivity;,
-        Lcom/android/settings/Settings$SafetyCareSettingsActivity;,
-        Lcom/android/settings/Settings$HandwritingLanguageActivity;,
-        Lcom/android/settings/Settings$SmartStaySettingsActivity;,
-        Lcom/android/settings/Settings$EasyModeAppActivity;,
-        Lcom/android/settings/Settings$AppWriteSettingsActivity;,
-        Lcom/android/settings/Settings$AppDrawOverlaySettingsActivity;,
-        Lcom/android/settings/Settings$WriteSettingsActivity;,
-        Lcom/android/settings/Settings$OverlaySettingsActivity;,
-        Lcom/android/settings/Settings$MemorySettingsActivity;,
-        Lcom/android/settings/Settings$WifiCallingSettingsActivity;,
-        Lcom/android/settings/Settings$ApnSettingsActivity;,
-        Lcom/android/settings/Settings$RedPacketModeSettingsActivity;,
-        Lcom/android/settings/Settings$TopLevelSettings;,
-        Lcom/android/settings/Settings$LockscreenMenuActivity;,
-        Lcom/android/settings/Settings$PersonalPageSettingsActivity;,
-        Lcom/android/settings/Settings$DomainsURLsAppListActivity;,
-        Lcom/android/settings/Settings$SoundEffectSettingsActivity;,
-        Lcom/android/settings/Settings$OtherSoundSettingsActivity;,
-        Lcom/android/settings/Settings$PriorityNotiAppListActivity;,
-        Lcom/android/settings/Settings$BlockNotificationListActivity;,
-        Lcom/android/settings/Settings$AppNotificationSettingsActivity;,
-        Lcom/android/settings/Settings$NotificationAppListActivity;,
-        Lcom/android/settings/Settings$NotificationSettingsActivity;,
-        Lcom/android/settings/Settings$ZenModeExternalRuleSettingsActivity;,
-        Lcom/android/settings/Settings$ZenModeEventRuleSettingsActivity;,
-        Lcom/android/settings/Settings$ZenModeScheduleRuleSettingsActivity;,
-        Lcom/android/settings/Settings$ZenModeAutomationSettingsActivity;,
-        Lcom/android/settings/Settings$ZenModePrioritySettingsActivity;,
-        Lcom/android/settings/Settings$ZenModeSettingsActivity;,
-        Lcom/android/settings/Settings$ZenModeDNDSettingsActivity;,
-        Lcom/android/settings/Settings$PrintJobSettingsActivity;,
-        Lcom/android/settings/Settings$PrintSettingsActivity;,
-        Lcom/android/settings/Settings$PaymentSettingsActivity;,
-        Lcom/android/settings/Settings$UserCredentialsSettingsActivity;,
-        Lcom/android/settings/Settings$TrustedCredentialsSettingsActivity;,
-        Lcom/android/settings/Settings$ZenAccessSettingsActivity;,
-        Lcom/android/settings/Settings$NotificationAccessSettingsActivity;,
-        Lcom/android/settings/Settings$UserSettingsActivity;,
-        Lcom/android/settings/Settings$NotificationStationActivity;,
-        Lcom/android/settings/Settings$DreamSettingsActivity;,
-        Lcom/android/settings/Settings$WifiDisplaySettingsActivity;,
-        Lcom/android/settings/Settings$AndroidBeamSettingsActivity;,
-        Lcom/android/settings/Settings$TextToSpeechSettingsActivity;,
-        Lcom/android/settings/Settings$WifiShareProfileActivity;,
-        Lcom/android/settings/Settings$SavedAccessPointsSettingsActivity;,
-        Lcom/android/settings/Settings$AdvancedWifiSettingsActivity;,
-        Lcom/android/settings/Settings$NearbySettingsActivity;,
-        Lcom/android/settings/Settings$DataUsageSummaryActivity;,
-        Lcom/android/settings/Settings$DeviceAdminSettingsActivity;,
-        Lcom/android/settings/Settings$CryptSDCardSettingsActivity;,
-        Lcom/android/settings/Settings$CryptKeeperInterstitialActivity;,
-        Lcom/android/settings/Settings$CryptKeeperSettingsActivity;,
-        Lcom/android/settings/Settings$AccountSettingsActivity;,
-        Lcom/android/settings/Settings$AccountSyncSettingsActivity;,
-        Lcom/android/settings/Settings$PowerUsageSummaryActivity;,
-        Lcom/android/settings/Settings$RunningServicesActivity;,
-        Lcom/android/settings/Settings$DockSettingsActivity;,
-        Lcom/android/settings/Settings$LedCoverCallerIDSettingsActivity;,
-        Lcom/android/settings/Settings$ActiveKeySettingsActivity;,
-        Lcom/android/settings/Settings$PrivacySettingsActivity;,
-        Lcom/android/settings/Settings$LocationSettingsActivity;,
-        Lcom/android/settings/Settings$UsageAccessSettingsActivity;,
-        Lcom/android/settings/Settings$OtherSecuritySettingsActivity;,
-        Lcom/android/settings/Settings$LockAndSecuritySettingsActivity;,
-        Lcom/android/settings/Settings$SecuritySettingsActivity;,
-        Lcom/android/settings/Settings$AssistantMenuPreferenceFragmentActivity;,
-        Lcom/android/settings/Settings$AccessibilityDaltonizerSettingsActivity;,
-        Lcom/android/settings/Settings$CaptioningSettingsActivity;,
-        Lcom/android/settings/Settings$AccessibilitySettingsVisionActivity;,
-        Lcom/android/settings/Settings$AccessibilitySettingsActivity;,
-        Lcom/android/settings/Settings$DevelopmentSettingsActivity;,
-        Lcom/android/settings/Settings$StorageUseActivity;,
-        Lcom/android/settings/Settings$HighPowerApplicationsActivity;,
-        Lcom/android/settings/Settings$AllApplicationsActivity;,
-        Lcom/android/settings/Settings$ManageAssistActivity;,
-        Lcom/android/settings/Settings$ManageApplicationsActivity;,
-        Lcom/android/settings/Settings$ApplicationSettingsActivity;,
-        Lcom/android/settings/Settings$DeviceInfoSettingsActivity;,
-        Lcom/android/settings/Settings$DisplaySettingsActivity;,
-        Lcom/android/settings/Settings$DCMHomeSettingsActivity;,
-        Lcom/android/settings/Settings$HomeSettingsActivity;,
-        Lcom/android/settings/Settings$UserDictionarySettingsActivity;,
-        Lcom/android/settings/Settings$LocalePickerActivity;,
-        Lcom/android/settings/Settings$SpellCheckersSettingsActivity;,
-        Lcom/android/settings/Settings$KeyboardLayoutPickerActivity;,
-        Lcom/android/settings/Settings$InputMethodAndLanguageSettingsActivity;,
-        Lcom/android/settings/Settings$NfcPaymentSettings;,
-        Lcom/android/settings/Settings$NfcOsaifukeitaiSettingsActivity;,
-        Lcom/android/settings/Settings$NfcSettingsActivity;,
-        Lcom/android/settings/Settings$WifiP2pSettingsActivity;,
-        Lcom/android/settings/Settings$WifiSettingsActivity;,
-        Lcom/android/settings/Settings$PublicVolumeSettingsActivity;,
-        Lcom/android/settings/Settings$PrivateVolumeSettingsActivity;,
-        Lcom/android/settings/Settings$PrivateVolumeForgetActivity;,
-        Lcom/android/settings/Settings$StorageSettingsActivity;,
-        Lcom/android/settings/Settings$DateTimeSettingsActivity;,
-        Lcom/android/settings/Settings$EthernetSettingsActivity;,
-        Lcom/android/settings/Settings$VpnSettingsActivity;,
-        Lcom/android/settings/Settings$TetherSettingsActivity;,
-        Lcom/android/settings/Settings$SimSettingsActivity;,
-        Lcom/android/settings/Settings$WifiApSettingsActivity;,
-        Lcom/android/settings/Settings$AirplaneModeSettingsActivity;,
-        Lcom/android/settings/Settings$WirelessSettingsActivity;,
-        Lcom/android/settings/Settings$BluetoothSettingsActivity;,
-        Lcom/android/settings/Settings$UltraPowerSavingModeActivity;,
-        Lcom/android/settings/Settings$GenericPowerSavingModeActivity;
+        Lcom/android/settings_ex/Settings$NearbyScanningPickerActivity;,
+        Lcom/android/settings_ex/Settings$DeviceProfilesSettingsActivity;,
+        Lcom/android/settings_ex/Settings$UsefulFeatureMainActivity;,
+        Lcom/android/settings_ex/Settings$UsefulFeatureActivity;,
+        Lcom/android/settings_ex/Settings$DomesticSettingsActivity;,
+        Lcom/android/settings_ex/Settings$DataSlotChoice;,
+        Lcom/android/settings_ex/Settings$LteModeActivity;,
+        Lcom/android/settings_ex/Settings$TRoamingSettingsActivity;,
+        Lcom/android/settings_ex/Settings$LGTCustomerService;,
+        Lcom/android/settings_ex/Settings$LGTRoamingEnv;,
+        Lcom/android/settings_ex/Settings$GlobalLteRoaming;,
+        Lcom/android/settings_ex/Settings$GlobalRoamingSettingsActivity;,
+        Lcom/android/settings_ex/Settings$PenSettingsMenuActivity;,
+        Lcom/android/settings_ex/Settings$AirCmdSettingsActivity;,
+        Lcom/android/settings_ex/Settings$CloudSettingActivity;,
+        Lcom/android/settings_ex/Settings$SafetyCareEmergencyModeActivity;,
+        Lcom/android/settings_ex/Settings$SafetyCareSettingsActivity;,
+        Lcom/android/settings_ex/Settings$HandwritingLanguageActivity;,
+        Lcom/android/settings_ex/Settings$SmartStaySettingsActivity;,
+        Lcom/android/settings_ex/Settings$EasyModeAppActivity;,
+        Lcom/android/settings_ex/Settings$AppWriteSettingsActivity;,
+        Lcom/android/settings_ex/Settings$AppDrawOverlaySettingsActivity;,
+        Lcom/android/settings_ex/Settings$WriteSettingsActivity;,
+        Lcom/android/settings_ex/Settings$OverlaySettingsActivity;,
+        Lcom/android/settings_ex/Settings$MemorySettingsActivity;,
+        Lcom/android/settings_ex/Settings$WifiCallingSettingsActivity;,
+        Lcom/android/settings_ex/Settings$ApnSettingsActivity;,
+        Lcom/android/settings_ex/Settings$RedPacketModeSettingsActivity;,
+        Lcom/android/settings_ex/Settings$TopLevelSettings;,
+        Lcom/android/settings_ex/Settings$LockscreenMenuActivity;,
+        Lcom/android/settings_ex/Settings$PersonalPageSettingsActivity;,
+        Lcom/android/settings_ex/Settings$DomainsURLsAppListActivity;,
+        Lcom/android/settings_ex/Settings$SoundEffectSettingsActivity;,
+        Lcom/android/settings_ex/Settings$OtherSoundSettingsActivity;,
+        Lcom/android/settings_ex/Settings$PriorityNotiAppListActivity;,
+        Lcom/android/settings_ex/Settings$BlockNotificationListActivity;,
+        Lcom/android/settings_ex/Settings$AppNotificationSettingsActivity;,
+        Lcom/android/settings_ex/Settings$NotificationAppListActivity;,
+        Lcom/android/settings_ex/Settings$NotificationSettingsActivity;,
+        Lcom/android/settings_ex/Settings$ZenModeExternalRuleSettingsActivity;,
+        Lcom/android/settings_ex/Settings$ZenModeEventRuleSettingsActivity;,
+        Lcom/android/settings_ex/Settings$ZenModeScheduleRuleSettingsActivity;,
+        Lcom/android/settings_ex/Settings$ZenModeAutomationSettingsActivity;,
+        Lcom/android/settings_ex/Settings$ZenModePrioritySettingsActivity;,
+        Lcom/android/settings_ex/Settings$ZenModeSettingsActivity;,
+        Lcom/android/settings_ex/Settings$ZenModeDNDSettingsActivity;,
+        Lcom/android/settings_ex/Settings$PrintJobSettingsActivity;,
+        Lcom/android/settings_ex/Settings$PrintSettingsActivity;,
+        Lcom/android/settings_ex/Settings$PaymentSettingsActivity;,
+        Lcom/android/settings_ex/Settings$UserCredentialsSettingsActivity;,
+        Lcom/android/settings_ex/Settings$TrustedCredentialsSettingsActivity;,
+        Lcom/android/settings_ex/Settings$ZenAccessSettingsActivity;,
+        Lcom/android/settings_ex/Settings$NotificationAccessSettingsActivity;,
+        Lcom/android/settings_ex/Settings$UserSettingsActivity;,
+        Lcom/android/settings_ex/Settings$NotificationStationActivity;,
+        Lcom/android/settings_ex/Settings$DreamSettingsActivity;,
+        Lcom/android/settings_ex/Settings$WifiDisplaySettingsActivity;,
+        Lcom/android/settings_ex/Settings$AndroidBeamSettingsActivity;,
+        Lcom/android/settings_ex/Settings$TextToSpeechSettingsActivity;,
+        Lcom/android/settings_ex/Settings$WifiShareProfileActivity;,
+        Lcom/android/settings_ex/Settings$SavedAccessPointsSettingsActivity;,
+        Lcom/android/settings_ex/Settings$AdvancedWifiSettingsActivity;,
+        Lcom/android/settings_ex/Settings$NearbySettingsActivity;,
+        Lcom/android/settings_ex/Settings$DataUsageSummaryActivity;,
+        Lcom/android/settings_ex/Settings$DeviceAdminSettingsActivity;,
+        Lcom/android/settings_ex/Settings$CryptSDCardSettingsActivity;,
+        Lcom/android/settings_ex/Settings$CryptKeeperInterstitialActivity;,
+        Lcom/android/settings_ex/Settings$CryptKeeperSettingsActivity;,
+        Lcom/android/settings_ex/Settings$AccountSettingsActivity;,
+        Lcom/android/settings_ex/Settings$AccountSyncSettingsActivity;,
+        Lcom/android/settings_ex/Settings$PowerUsageSummaryActivity;,
+        Lcom/android/settings_ex/Settings$RunningServicesActivity;,
+        Lcom/android/settings_ex/Settings$DockSettingsActivity;,
+        Lcom/android/settings_ex/Settings$LedCoverCallerIDSettingsActivity;,
+        Lcom/android/settings_ex/Settings$ActiveKeySettingsActivity;,
+        Lcom/android/settings_ex/Settings$PrivacySettingsActivity;,
+        Lcom/android/settings_ex/Settings$LocationSettingsActivity;,
+        Lcom/android/settings_ex/Settings$UsageAccessSettingsActivity;,
+        Lcom/android/settings_ex/Settings$OtherSecuritySettingsActivity;,
+        Lcom/android/settings_ex/Settings$LockAndSecuritySettingsActivity;,
+        Lcom/android/settings_ex/Settings$SecuritySettingsActivity;,
+        Lcom/android/settings_ex/Settings$AssistantMenuPreferenceFragmentActivity;,
+        Lcom/android/settings_ex/Settings$AccessibilityDaltonizerSettingsActivity;,
+        Lcom/android/settings_ex/Settings$CaptioningSettingsActivity;,
+        Lcom/android/settings_ex/Settings$AccessibilitySettingsVisionActivity;,
+        Lcom/android/settings_ex/Settings$AccessibilitySettingsActivity;,
+        Lcom/android/settings_ex/Settings$DevelopmentSettingsActivity;,
+        Lcom/android/settings_ex/Settings$StorageUseActivity;,
+        Lcom/android/settings_ex/Settings$HighPowerApplicationsActivity;,
+        Lcom/android/settings_ex/Settings$AllApplicationsActivity;,
+        Lcom/android/settings_ex/Settings$ManageAssistActivity;,
+        Lcom/android/settings_ex/Settings$ManageApplicationsActivity;,
+        Lcom/android/settings_ex/Settings$ApplicationSettingsActivity;,
+        Lcom/android/settings_ex/Settings$DeviceInfoSettingsActivity;,
+        Lcom/android/settings_ex/Settings$DisplaySettingsActivity;,
+        Lcom/android/settings_ex/Settings$DCMHomeSettingsActivity;,
+        Lcom/android/settings_ex/Settings$HomeSettingsActivity;,
+        Lcom/android/settings_ex/Settings$UserDictionarySettingsActivity;,
+        Lcom/android/settings_ex/Settings$LocalePickerActivity;,
+        Lcom/android/settings_ex/Settings$SpellCheckersSettingsActivity;,
+        Lcom/android/settings_ex/Settings$KeyboardLayoutPickerActivity;,
+        Lcom/android/settings_ex/Settings$InputMethodAndLanguageSettingsActivity;,
+        Lcom/android/settings_ex/Settings$NfcPaymentSettings;,
+        Lcom/android/settings_ex/Settings$NfcOsaifukeitaiSettingsActivity;,
+        Lcom/android/settings_ex/Settings$NfcSettingsActivity;,
+        Lcom/android/settings_ex/Settings$WifiP2pSettingsActivity;,
+        Lcom/android/settings_ex/Settings$WifiSettingsActivity;,
+        Lcom/android/settings_ex/Settings$PublicVolumeSettingsActivity;,
+        Lcom/android/settings_ex/Settings$PrivateVolumeSettingsActivity;,
+        Lcom/android/settings_ex/Settings$PrivateVolumeForgetActivity;,
+        Lcom/android/settings_ex/Settings$StorageSettingsActivity;,
+        Lcom/android/settings_ex/Settings$DateTimeSettingsActivity;,
+        Lcom/android/settings_ex/Settings$EthernetSettingsActivity;,
+        Lcom/android/settings_ex/Settings$VpnSettingsActivity;,
+        Lcom/android/settings_ex/Settings$TetherSettingsActivity;,
+        Lcom/android/settings_ex/Settings$SimSettingsActivity;,
+        Lcom/android/settings_ex/Settings$WifiApSettingsActivity;,
+        Lcom/android/settings_ex/Settings$AirplaneModeSettingsActivity;,
+        Lcom/android/settings_ex/Settings$WirelessSettingsActivity;,
+        Lcom/android/settings_ex/Settings$BluetoothSettingsActivity;,
+        Lcom/android/settings_ex/Settings$UltraPowerSavingModeActivity;,
+        Lcom/android/settings_ex/Settings$GenericPowerSavingModeActivity;
     }
 .end annotation
 
@@ -146,13 +146,13 @@
 
     .prologue
     .line 54
-    const-class v0, Lcom/android/settings/Settings;
+    const-class v0, Lcom/android/settings_ex/Settings;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/Settings;->LOG_TAG:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/Settings;->LOG_TAG:Ljava/lang/String;
 
     return-void
 .end method
@@ -162,7 +162,7 @@
 
     .prologue
     .line 52
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivity;-><init>()V
 
     .line 58
     const-string v0, "DeviceLockTime"
@@ -181,7 +181,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/Settings;->isDeviceLockTime:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/Settings;->isDeviceLockTime:Z
 
     .line 459
     return-void
@@ -194,21 +194,21 @@
 
     .prologue
     .line 86
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->onDestroy()V
 
     .line 87
-    invoke-virtual {p0}, Lcom/android/settings/Settings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isEasyModeStatus(Landroid/content/ContentResolver;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isEasyModeStatus(Landroid/content/ContentResolver;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 88
-    invoke-virtual {p0}, Lcom/android/settings/Settings;->unregisterAssistant()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings;->unregisterAssistant()V
 
     .line 90
     :cond_0
@@ -227,7 +227,7 @@
     if-ne p1, v0, :cond_0
 
     .line 108
-    invoke-virtual {p0}, Lcom/android/settings/Settings;->openSearchView()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings;->openSearchView()V
 
     .line 109
     const/4 v0, 0x1
@@ -237,7 +237,7 @@
     return v0
 
     :cond_0
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v0
 
@@ -249,21 +249,21 @@
 
     .prologue
     .line 77
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->onPause()V
 
     .line 78
-    invoke-virtual {p0}, Lcom/android/settings/Settings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isEasyModeStatus(Landroid/content/ContentResolver;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isEasyModeStatus(Landroid/content/ContentResolver;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 79
-    invoke-virtual {p0}, Lcom/android/settings/Settings;->unregisterAssistant()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings;->unregisterAssistant()V
 
     .line 81
     :cond_0
@@ -275,25 +275,25 @@
 
     .prologue
     .line 63
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->onResume()V
 
     .line 64
-    invoke-virtual {p0}, Lcom/android/settings/Settings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isEasyModeStatus(Landroid/content/ContentResolver;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isEasyModeStatus(Landroid/content/ContentResolver;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
     .line 65
-    invoke-virtual {p0}, Lcom/android/settings/Settings;->registerAssistant()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings;->registerAssistant()V
 
     .line 68
     :cond_0
-    iget-boolean v1, p0, Lcom/android/settings/Settings;->isDeviceLockTime:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/Settings;->isDeviceLockTime:Z
 
     if-eqz v1, :cond_1
 
@@ -304,7 +304,7 @@
 
     .line 70
     .local v0, "mLockPatternUtils":Lcom/android/internal/widget/LockPatternUtils;
-    sget-object v1, Lcom/android/settings/Settings;->LOG_TAG:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/Settings;->LOG_TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -335,7 +335,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 71
-    invoke-virtual {p0}, Lcom/android/settings/Settings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -375,14 +375,14 @@
 
     .prologue
     .line 95
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsActivity;->onWindowFocusChanged(Z)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsActivity;->onWindowFocusChanged(Z)V
 
     .line 96
-    invoke-virtual {p0}, Lcom/android/settings/Settings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isEasyModeStatus(Landroid/content/ContentResolver;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isEasyModeStatus(Landroid/content/ContentResolver;)Z
 
     move-result v0
 
@@ -391,12 +391,12 @@
     .line 97
     if-eqz p1, :cond_1
 
-    sget-boolean v0, Lcom/android/settings/dashboard/SearchResultsSummary;->mIsRunningSearchFragment:Z
+    sget-boolean v0, Lcom/android/settings_ex/dashboard/SearchResultsSummary;->mIsRunningSearchFragment:Z
 
     if-nez v0, :cond_1
 
     .line 98
-    invoke-virtual {p0}, Lcom/android/settings/Settings;->registerAssistant()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings;->registerAssistant()V
 
     .line 103
     :cond_0
@@ -405,7 +405,7 @@
 
     .line 100
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/Settings;->unregisterAssistant()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/Settings;->unregisterAssistant()V
 
     goto :goto_0
 .end method

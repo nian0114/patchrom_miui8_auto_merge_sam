@@ -1,11 +1,11 @@
-.class Lcom/android/settings/GigaLteSettings$1;
+.class Lcom/android/settings_ex/GigaLteSettings$1;
 .super Landroid/database/ContentObserver;
 .source "GigaLteSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/GigaLteSettings;
+    value = Lcom/android/settings_ex/GigaLteSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/GigaLteSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/GigaLteSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/GigaLteSettings;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/GigaLteSettings;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 103
-    iput-object p1, p0, Lcom/android/settings/GigaLteSettings$1;->this$0:Lcom/android/settings/GigaLteSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/GigaLteSettings$1;->this$0:Lcom/android/settings_ex/GigaLteSettings;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -40,32 +40,32 @@
 
     .prologue
     .line 106
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings$1;->this$0:Lcom/android/settings/GigaLteSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings$1;->this$0:Lcom/android/settings_ex/GigaLteSettings;
 
-    # getter for: Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Lcom/android/settings/GigaLteSettings;->access$000(Lcom/android/settings/GigaLteSettings;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/settings_ex/GigaLteSettings;->access$000(Lcom/android/settings_ex/GigaLteSettings;)Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isRoaming(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isRoaming(Landroid/content/Context;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings$1;->this$0:Lcom/android/settings/GigaLteSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings$1;->this$0:Lcom/android/settings_ex/GigaLteSettings;
 
-    # invokes: Lcom/android/settings/GigaLteSettings;->isSimValid()Z
-    invoke-static {v0}, Lcom/android/settings/GigaLteSettings;->access$100(Lcom/android/settings/GigaLteSettings;)Z
+    # invokes: Lcom/android/settings_ex/GigaLteSettings;->isSimValid()Z
+    invoke-static {v0}, Lcom/android/settings_ex/GigaLteSettings;->access$100(Lcom/android/settings_ex/GigaLteSettings;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings$1;->this$0:Lcom/android/settings/GigaLteSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings$1;->this$0:Lcom/android/settings_ex/GigaLteSettings;
 
-    # invokes: Lcom/android/settings/GigaLteSettings;->isTether()Z
-    invoke-static {v0}, Lcom/android/settings/GigaLteSettings;->access$200(Lcom/android/settings/GigaLteSettings;)Z
+    # invokes: Lcom/android/settings_ex/GigaLteSettings;->isTether()Z
+    invoke-static {v0}, Lcom/android/settings_ex/GigaLteSettings;->access$200(Lcom/android/settings_ex/GigaLteSettings;)Z
 
     move-result v0
 
@@ -78,21 +78,21 @@
 
     .line 107
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings$1;->this$0:Lcom/android/settings/GigaLteSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings$1;->this$0:Lcom/android/settings_ex/GigaLteSettings;
 
-    # getter for: Lcom/android/settings/GigaLteSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v0}, Lcom/android/settings/GigaLteSettings;->access$300(Lcom/android/settings/GigaLteSettings;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/GigaLteSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v0}, Lcom/android/settings_ex/GigaLteSettings;->access$300(Lcom/android/settings_ex/GigaLteSettings;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    iget-object v0, p0, Lcom/android/settings/GigaLteSettings$1;->this$0:Lcom/android/settings/GigaLteSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/GigaLteSettings$1;->this$0:Lcom/android/settings_ex/GigaLteSettings;
 
-    # getter for: Lcom/android/settings/GigaLteSettings;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Lcom/android/settings/GigaLteSettings;->access$000(Lcom/android/settings/GigaLteSettings;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/GigaLteSettings;->mContext:Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/settings_ex/GigaLteSettings;->access$000(Lcom/android/settings_ex/GigaLteSettings;)Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isAirplaneModeEnabled(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isAirplaneModeEnabled(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -101,7 +101,7 @@
     const/4 v0, 0x1
 
     :goto_1
-    invoke-virtual {v1, v0}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     goto :goto_0
 

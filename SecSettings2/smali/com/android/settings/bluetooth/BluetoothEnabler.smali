@@ -1,9 +1,9 @@
-.class public final Lcom/android/settings/bluetooth/BluetoothEnabler;
+.class public final Lcom/android/settings_ex/bluetooth/BluetoothEnabler;
 .super Ljava/lang/Object;
 .source "BluetoothEnabler.java"
 
 # interfaces
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # instance fields
@@ -15,7 +15,7 @@
 
 .field private mIsUserInteraction:Z
 
-.field private final mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+.field private final mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
 .field private mPolicyEnabled:Z
 
@@ -23,16 +23,16 @@
 
 .field private mSwitch:Landroid/widget/Switch;
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 .field private mValidListener:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/android/settings/widget/SwitchBar;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/android/settings_ex/widget/SwitchBar;)V
     .locals 4
     .param p1, "context"    # Landroid/content/Context;
-    .param p2, "switchBar"    # Lcom/android/settings/widget/SwitchBar;
+    .param p2, "switchBar"    # Lcom/android/settings_ex/widget/SwitchBar;
 
     .prologue
     const/4 v3, 0x1
@@ -43,54 +43,54 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 90
-    new-instance v1, Lcom/android/settings/bluetooth/BluetoothEnabler$1;
+    new-instance v1, Lcom/android/settings_ex/bluetooth/BluetoothEnabler$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/bluetooth/BluetoothEnabler$1;-><init>(Lcom/android/settings/bluetooth/BluetoothEnabler;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/bluetooth/BluetoothEnabler$1;-><init>(Lcom/android/settings_ex/bluetooth/BluetoothEnabler;)V
 
-    iput-object v1, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mHandler:Landroid/os/Handler;
+    iput-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mHandler:Landroid/os/Handler;
 
     .line 108
-    new-instance v1, Lcom/android/settings/bluetooth/BluetoothEnabler$2;
+    new-instance v1, Lcom/android/settings_ex/bluetooth/BluetoothEnabler$2;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/bluetooth/BluetoothEnabler$2;-><init>(Lcom/android/settings/bluetooth/BluetoothEnabler;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/bluetooth/BluetoothEnabler$2;-><init>(Lcom/android/settings_ex/bluetooth/BluetoothEnabler;)V
 
-    iput-object v1, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mReceiver:Landroid/content/BroadcastReceiver;
 
     .line 133
-    iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
 
     .line 134
-    iput-object p2, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object p2, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 135
-    invoke-virtual {p2}, Lcom/android/settings/widget/SwitchBar;->getSwitch()Lcom/android/settings/widget/ToggleSwitch;
+    invoke-virtual {p2}, Lcom/android/settings_ex/widget/SwitchBar;->getSwitch()Lcom/android/settings_ex/widget/ToggleSwitch;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
+    iput-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
 
     .line 136
-    iput-boolean v2, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mValidListener:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mValidListener:Z
 
     .line 137
-    iput-boolean v3, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mIsUserInteraction:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mIsUserInteraction:Z
 
     .line 139
-    invoke-static {p1}, Lcom/android/settings/bluetooth/Utils;->getLocalBtManager(Landroid/content/Context;)Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+    invoke-static {p1}, Lcom/android/settings_ex/bluetooth/Utils;->getLocalBtManager(Landroid/content/Context;)Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;
 
     move-result-object v0
 
     .line 140
-    .local v0, "manager":Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+    .local v0, "manager":Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;
     if-nez v0, :cond_0
 
     .line 142
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iput-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     .line 143
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v1, v2}, Landroid/widget/Switch;->setEnabled(Z)V
 
@@ -100,69 +100,69 @@
 
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    iput-object v1, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mIntentFilter:Landroid/content/IntentFilter;
+    iput-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mIntentFilter:Landroid/content/IntentFilter;
 
     .line 149
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mIntentFilter:Landroid/content/IntentFilter;
+    iget-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mIntentFilter:Landroid/content/IntentFilter;
 
     const-string v2, "android.bluetooth.adapter.action.STATE_CHANGED"
 
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 150
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mIntentFilter:Landroid/content/IntentFilter;
+    iget-object v2, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mIntentFilter:Landroid/content/IntentFilter;
 
     invoke-virtual {p1, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 153
-    iput-boolean v3, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mPolicyEnabled:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mPolicyEnabled:Z
 
     .line 155
     return-void
 
     .line 145
     :cond_0
-    invoke-virtual {v0}, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->getBluetoothAdapter()Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    invoke-virtual {v0}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothManager;->getBluetoothAdapter()Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iput-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     goto :goto_0
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/bluetooth/BluetoothEnabler;)Landroid/content/Context;
+.method static synthetic access$000(Lcom/android/settings_ex/bluetooth/BluetoothEnabler;)Landroid/content/Context;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/bluetooth/BluetoothEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/bluetooth/BluetoothEnabler;
 
     .prologue
     .line 66
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/bluetooth/BluetoothEnabler;)Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+.method static synthetic access$100(Lcom/android/settings_ex/bluetooth/BluetoothEnabler;)Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/bluetooth/BluetoothEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/bluetooth/BluetoothEnabler;
 
     .prologue
     .line 66
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     return-object v0
 .end method
 
-.method static synthetic access$202(Lcom/android/settings/bluetooth/BluetoothEnabler;Z)Z
+.method static synthetic access$202(Lcom/android/settings_ex/bluetooth/BluetoothEnabler;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/bluetooth/BluetoothEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/bluetooth/BluetoothEnabler;
     .param p1, "x1"    # Z
 
     .prologue
     .line 66
-    iput-boolean p1, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mIsUserInteraction:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mIsUserInteraction:Z
 
     return p1
 .end method
@@ -173,7 +173,7 @@
 
     .prologue
     .line 349
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v0}, Landroid/widget/Switch;->isChecked()Z
 
@@ -182,30 +182,30 @@
     if-eq p1, v0, :cond_1
 
     .line 352
-    iget-boolean v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mValidListener:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mValidListener:Z
 
     if-eqz v0, :cond_0
 
     .line 353
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 355
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v0, p1}, Landroid/widget/Switch;->setChecked(Z)V
 
     .line 356
-    iget-boolean v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mValidListener:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mValidListener:Z
 
     if-eqz v0, :cond_1
 
     .line 357
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 360
     :cond_1
@@ -220,7 +220,7 @@
     const/4 v2, 0x1
 
     .line 444
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
@@ -243,7 +243,7 @@
     invoke-virtual {v1, v2, p1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 449
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mHandler:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v2, 0x190
 
@@ -260,7 +260,7 @@
 
     .prologue
     .line 282
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mReceiver:Landroid/content/BroadcastReceiver;
 
     if-eqz v1, :cond_0
 
@@ -273,9 +273,9 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 285
-    iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
     :try_end_0
@@ -347,27 +347,27 @@
     packed-switch p1, :pswitch_data_0
 
     .line 330
-    invoke-direct {p0, v4}, Lcom/android/settings/bluetooth/BluetoothEnabler;->setChecked(Z)V
+    invoke-direct {p0, v4}, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->setChecked(Z)V
 
     .line 331
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v0, v3}, Landroid/widget/Switch;->setEnabled(Z)V
 
     .line 332
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_0
 
     .line 333
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v4}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v0, v4}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 334
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 346
     :cond_0
@@ -376,84 +376,84 @@
 
     .line 299
     :pswitch_0
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_0
 
     .line 300
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 301
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v4}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v4}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     goto :goto_0
 
     .line 305
     :pswitch_1
-    invoke-direct {p0, v3}, Lcom/android/settings/bluetooth/BluetoothEnabler;->setChecked(Z)V
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->setChecked(Z)V
 
     .line 307
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_0
 
     .line 308
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 309
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     goto :goto_0
 
     .line 315
     :pswitch_2
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_0
 
     .line 316
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v4}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v0, v4}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 317
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v4}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v4}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     goto :goto_0
 
     .line 321
     :pswitch_3
-    invoke-direct {p0, v4}, Lcom/android/settings/bluetooth/BluetoothEnabler;->setChecked(Z)V
+    invoke-direct {p0, v4}, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->setChecked(Z)V
 
     .line 322
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v0, v3}, Landroid/widget/Switch;->setEnabled(Z)V
 
     .line 323
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_0
 
     .line 324
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v4}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v0, v4}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 325
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     goto :goto_0
 
@@ -504,7 +504,7 @@
 
     move-result-object v2
 
-    iget-boolean v4, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mIsUserInteraction:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mIsUserInteraction:Z
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -516,7 +516,7 @@
 
     move-result-object v2
 
-    iget-boolean v4, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mPolicyEnabled:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mPolicyEnabled:Z
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -529,12 +529,12 @@
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 367
-    iget-boolean v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mPolicyEnabled:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mPolicyEnabled:Z
 
     if-nez v0, :cond_2
 
     .line 368
-    iget-boolean v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mIsUserInteraction:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mIsUserInteraction:Z
 
     if-eqz v0, :cond_0
 
@@ -552,7 +552,7 @@
 
     .line 372
     .local v6, "message":Ljava/lang/String;
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
 
     invoke-static {}, Landroid/os/Process;->myPid()I
 
@@ -572,37 +572,37 @@
 
     move v2, v1
 
-    invoke-static/range {v0 .. v7}, Lcom/android/settings/bluetooth/Utils;->insertMDMLog(Landroid/content/Context;IIZILjava/lang/String;Ljava/lang/String;I)V
+    invoke-static/range {v0 .. v7}, Lcom/android/settings_ex/bluetooth/Utils;->insertMDMLog(Landroid/content/Context;IIZILjava/lang/String;Ljava/lang/String;I)V
 
     .line 376
     .end local v6    # "message":Ljava/lang/String;
     :cond_0
-    iput-boolean v8, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mIsUserInteraction:Z
+    iput-boolean v8, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mIsUserInteraction:Z
 
     .line 378
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v0, v3}, Landroid/widget/Switch;->setChecked(Z)V
 
     .line 379
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v0, v3}, Landroid/widget/Switch;->setEnabled(Z)V
 
     .line 380
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_1
 
     .line 381
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 382
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/widget/SwitchBar;->setTextViewLabel(Z)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setTextViewLabel(Z)V
 
     .line 432
     :cond_1
@@ -611,14 +611,14 @@
 
     .line 387
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
 
     const/16 v2, 0x9f
 
     invoke-static {v0, v2, p2}, Lcom/android/internal/logging/MetricsLogger;->action(Landroid/content/Context;IZ)V
 
     .line 389
-    iget-boolean v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mIsUserInteraction:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mIsUserInteraction:Z
 
     if-eqz v0, :cond_3
 
@@ -637,7 +637,7 @@
 
     .line 394
     .restart local v6    # "message":Ljava/lang/String;
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
 
     invoke-static {}, Landroid/os/Process;->myPid()I
 
@@ -657,7 +657,7 @@
 
     move v2, v1
 
-    invoke-static/range {v0 .. v7}, Lcom/android/settings/bluetooth/Utils;->insertMDMLog(Landroid/content/Context;IIZILjava/lang/String;Ljava/lang/String;I)V
+    invoke-static/range {v0 .. v7}, Lcom/android/settings_ex/bluetooth/Utils;->insertMDMLog(Landroid/content/Context;IIZILjava/lang/String;Ljava/lang/String;I)V
 
     .line 409
     .end local v6    # "message":Ljava/lang/String;
@@ -665,18 +665,18 @@
     :goto_1
     if-eqz p2, :cond_4
 
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
 
     const-string v1, "bluetooth"
 
-    invoke-static {v0, v1}, Lcom/android/settingslib/WirelessUtils;->isRadioAllowed(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v1}, Lcom/android/settings_exlib/WirelessUtils;->isRadioAllowed(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
     .line 411
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
 
     const v1, 0x7f0e0398
 
@@ -691,36 +691,36 @@
 
     .line 416
     :cond_4
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
-    invoke-virtual {v0}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->stopScanning()V
+    invoke-virtual {v0}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->stopScanning()V
 
     .line 418
     :cond_5
     if-nez p2, :cond_9
 
     .line 419
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_6
 
     .line 420
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 422
     :cond_6
-    invoke-direct {p0, p2}, Lcom/android/settings/bluetooth/BluetoothEnabler;->updateBluetoothState(Z)V
+    invoke-direct {p0, p2}, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->updateBluetoothState(Z)V
 
     .line 431
     :cond_7
     :goto_2
-    iput-boolean v8, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mIsUserInteraction:Z
+    iput-boolean v8, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mIsUserInteraction:Z
 
     goto :goto_0
 
@@ -737,7 +737,7 @@
 
     .line 401
     .restart local v6    # "message":Ljava/lang/String;
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
 
     invoke-static {}, Landroid/os/Process;->myPid()I
 
@@ -757,25 +757,25 @@
 
     move v2, v1
 
-    invoke-static/range {v0 .. v7}, Lcom/android/settings/bluetooth/Utils;->insertMDMLog(Landroid/content/Context;IIZILjava/lang/String;Ljava/lang/String;I)V
+    invoke-static/range {v0 .. v7}, Lcom/android/settings_ex/bluetooth/Utils;->insertMDMLog(Landroid/content/Context;IIZILjava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_1
 
     .line 423
     .end local v6    # "message":Ljava/lang/String;
     :cond_9
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     if-eqz v0, :cond_7
 
     .line 424
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_a
 
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
-    invoke-virtual {v0}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->getBluetoothState()I
+    invoke-virtual {v0}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->getBluetoothState()I
 
     move-result v0
 
@@ -784,18 +784,18 @@
     if-ne v0, v1, :cond_a
 
     .line 425
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 427
     :cond_a
-    iget-boolean v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mIsUserInteraction:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mIsUserInteraction:Z
 
     if-eqz v0, :cond_7
 
     .line 428
-    invoke-direct {p0, p2}, Lcom/android/settings/bluetooth/BluetoothEnabler;->updateBluetoothState(Z)V
+    invoke-direct {p0, p2}, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->updateBluetoothState(Z)V
 
     goto :goto_2
 .end method
@@ -809,7 +809,7 @@
     const/4 v9, 0x0
 
     .line 239
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     if-nez v0, :cond_1
 
@@ -832,7 +832,7 @@
 
     .line 246
     .local v8, "isBluetoothEnabled":Z
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -888,7 +888,7 @@
     .line 262
     :cond_2
     :goto_2
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     if-eqz v0, :cond_3
 
@@ -896,40 +896,40 @@
 
     .line 263
     :cond_3
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v0, v9}, Landroid/widget/Switch;->setChecked(Z)V
 
     .line 264
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v0, v9}, Landroid/widget/Switch;->setEnabled(Z)V
 
     .line 265
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_4
 
     .line 266
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v9}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v9}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 270
     :cond_4
-    iget-boolean v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mPolicyEnabled:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mPolicyEnabled:Z
 
     if-eqz v0, :cond_0
 
     .line 276
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_0
 
     .line 277
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     goto :goto_0
 
@@ -1033,12 +1033,12 @@
     const/4 v10, 0x0
 
     .line 182
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     if-nez v0, :cond_0
 
     .line 183
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v0, v10}, Landroid/widget/Switch;->setEnabled(Z)V
 
@@ -1048,12 +1048,12 @@
 
     .line 187
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
 
     if-eq v0, p1, :cond_1
 
     .line 188
-    iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
 
     .line 193
     :cond_1
@@ -1069,7 +1069,7 @@
 
     .line 195
     .local v8, "isBluetoothEnabled":Z
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1135,33 +1135,33 @@
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 213
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v0, v10}, Landroid/widget/Switch;->setChecked(Z)V
 
     .line 214
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v0, v10}, Landroid/widget/Switch;->setEnabled(Z)V
 
     .line 215
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_3
 
     .line 216
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v10}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v10}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 217
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v10}, Lcom/android/settings/widget/SwitchBar;->setTextViewLabel(Z)V
+    invoke-virtual {v0, v10}, Lcom/android/settings_ex/widget/SwitchBar;->setTextViewLabel(Z)V
 
     .line 219
     :cond_3
-    iput-boolean v10, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mPolicyEnabled:Z
+    iput-boolean v10, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mPolicyEnabled:Z
 
     goto :goto_0
 
@@ -1254,32 +1254,32 @@
 
     .line 224
     :cond_5
-    iput-boolean v9, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mPolicyEnabled:Z
+    iput-boolean v9, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mPolicyEnabled:Z
 
     .line 226
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v0, v9}, Landroid/widget/Switch;->setEnabled(Z)V
 
     .line 230
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_6
 
     .line 231
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 235
     :cond_6
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
-    invoke-virtual {v0}, Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;->getBluetoothState()I
+    invoke-virtual {v0}, Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;->getBluetoothState()I
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/bluetooth/BluetoothEnabler;->handleStateChanged(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->handleStateChanged(I)V
 
     goto/16 :goto_0
 .end method
@@ -1291,7 +1291,7 @@
     const/4 v1, 0x0
 
     .line 158
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-nez v0, :cond_1
 
@@ -1304,32 +1304,32 @@
     :cond_1
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mValidListener:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mValidListener:Z
 
     .line 163
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 165
-    iget-boolean v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mPolicyEnabled:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mPolicyEnabled:Z
 
     if-nez v0, :cond_0
 
     .line 166
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v0, v1}, Landroid/widget/Switch;->setChecked(Z)V
 
     .line 167
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitch:Landroid/widget/Switch;
 
     invoke-virtual {v0, v1}, Landroid/widget/Switch;->setEnabled(Z)V
 
     .line 168
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     goto :goto_0
 .end method
@@ -1339,7 +1339,7 @@
 
     .prologue
     .line 173
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-nez v0, :cond_0
 
@@ -1351,12 +1351,12 @@
     :cond_0
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mValidListener:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mValidListener:Z
 
     .line 178
-    iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/bluetooth/BluetoothEnabler;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     goto :goto_0
 .end method

@@ -1,16 +1,16 @@
-.class public Lcom/android/settings/nearbyscan/NearbyScanning;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/nearbyscan/NearbyScanning;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "NearbyScanning.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/search/Indexable;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # instance fields
 .field private mNearbyScannigBroadCastReciver:Landroid/content/BroadcastReceiver;
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 
 # direct methods
@@ -19,25 +19,25 @@
 
     .prologue
     .line 20
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 99
-    new-instance v0, Lcom/android/settings/nearbyscan/NearbyScanning$1;
+    new-instance v0, Lcom/android/settings_ex/nearbyscan/NearbyScanning$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/nearbyscan/NearbyScanning$1;-><init>(Lcom/android/settings/nearbyscan/NearbyScanning;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/nearbyscan/NearbyScanning$1;-><init>(Lcom/android/settings_ex/nearbyscan/NearbyScanning;)V
 
-    iput-object v0, p0, Lcom/android/settings/nearbyscan/NearbyScanning;->mNearbyScannigBroadCastReciver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/nearbyscan/NearbyScanning;->mNearbyScannigBroadCastReciver:Landroid/content/BroadcastReceiver;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/nearbyscan/NearbyScanning;)V
+.method static synthetic access$000(Lcom/android/settings_ex/nearbyscan/NearbyScanning;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/nearbyscan/NearbyScanning;
+    .param p0, "x0"    # Lcom/android/settings_ex/nearbyscan/NearbyScanning;
 
     .prologue
     .line 20
-    invoke-direct {p0}, Lcom/android/settings/nearbyscan/NearbyScanning;->updateSwitch()V
+    invoke-direct {p0}, Lcom/android/settings_ex/nearbyscan/NearbyScanning;->updateSwitch()V
 
     return-void
 .end method
@@ -56,27 +56,27 @@
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 129
-    invoke-virtual {p0}, Lcom/android/settings/nearbyscan/NearbyScanning;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearbyscan/NearbyScanning;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/nearbyscan/Util;->getDBInt(Landroid/content/ContentResolver;)I
+    invoke-static {v2}, Lcom/android/settings_ex/nearbyscan/Util;->getDBInt(Landroid/content/ContentResolver;)I
 
     move-result v0
 
     .line 130
     .local v0, "statusValue":I
-    iget-object v2, p0, Lcom/android/settings/nearbyscan/NearbyScanning;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/nearbyscan/NearbyScanning;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v2, :cond_0
 
     .line 131
-    iget-object v2, p0, Lcom/android/settings/nearbyscan/NearbyScanning;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/nearbyscan/NearbyScanning;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-ne v0, v1, :cond_1
 
     :goto_0
-    invoke-virtual {v2, v1}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v2, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 133
     :cond_0
@@ -107,32 +107,32 @@
 
     .prologue
     .line 90
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 92
-    invoke-virtual {p0}, Lcom/android/settings/nearbyscan/NearbyScanning;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearbyscan/NearbyScanning;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 94
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/nearbyscan/NearbyScanning;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v1, p0, Lcom/android/settings_ex/nearbyscan/NearbyScanning;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 95
-    iget-object v1, p0, Lcom/android/settings/nearbyscan/NearbyScanning;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/nearbyscan/NearbyScanning;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v1, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 96
-    iget-object v1, p0, Lcom/android/settings/nearbyscan/NearbyScanning;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/nearbyscan/NearbyScanning;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 97
     return-void
@@ -146,7 +146,7 @@
     const/4 v3, 0x0
 
     .line 72
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 73
     const-string v1, "NearbyScanning"
@@ -158,13 +158,13 @@
     .line 74
     const v1, 0x7f080079
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/nearbyscan/NearbyScanning;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/nearbyscan/NearbyScanning;->addPreferencesFromResource(I)V
 
     .line 75
-    invoke-virtual {p0, v3}, Lcom/android/settings/nearbyscan/NearbyScanning;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/nearbyscan/NearbyScanning;->setHasOptionsMenu(Z)V
 
     .line 77
-    invoke-virtual {p0}, Lcom/android/settings/nearbyscan/NearbyScanning;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearbyscan/NearbyScanning;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -172,14 +172,14 @@
     .local v0, "ct":Landroid/content/Context;
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lcom/android/settings/nearbyscan/Util;->isBeaconManagerInstall(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/nearbyscan/Util;->isBeaconManagerInstall(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
     .line 79
-    invoke-static {v0, v3}, Lcom/android/settings/nearbyscan/Util;->setDBInt(Landroid/content/Context;I)V
+    invoke-static {v0, v3}, Lcom/android/settings_ex/nearbyscan/Util;->setDBInt(Landroid/content/Context;I)V
 
     .line 80
     const-string v1, "Not Installed BeaconManager"
@@ -202,14 +202,14 @@
 
     .prologue
     .line 60
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 61
-    invoke-virtual {p0}, Lcom/android/settings/nearbyscan/NearbyScanning;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearbyscan/NearbyScanning;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/nearbyscan/NearbyScanning;->mNearbyScannigBroadCastReciver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/nearbyscan/NearbyScanning;->mNearbyScannigBroadCastReciver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
@@ -222,7 +222,7 @@
 
     .prologue
     .line 44
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 45
     const-string v0, "NearbyScanning"
@@ -232,11 +232,11 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 47
-    invoke-virtual {p0}, Lcom/android/settings/nearbyscan/NearbyScanning;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearbyscan/NearbyScanning;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/nearbyscan/NearbyScanning;->mNearbyScannigBroadCastReciver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/nearbyscan/NearbyScanning;->mNearbyScannigBroadCastReciver:Landroid/content/BroadcastReceiver;
 
     new-instance v2, Landroid/content/IntentFilter;
 
@@ -247,7 +247,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 50
-    invoke-direct {p0}, Lcom/android/settings/nearbyscan/NearbyScanning;->updateSwitch()V
+    invoke-direct {p0}, Lcom/android/settings_ex/nearbyscan/NearbyScanning;->updateSwitch()V
 
     .line 51
     return-void
@@ -262,11 +262,11 @@
     const/4 v2, 0x1
 
     .line 116
-    invoke-virtual {p0}, Lcom/android/settings/nearbyscan/NearbyScanning;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearbyscan/NearbyScanning;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/android/settings/nearbyscan/Util;->getDBInt(Landroid/content/ContentResolver;)I
+    invoke-static {v3}, Lcom/android/settings_ex/nearbyscan/Util;->getDBInt(Landroid/content/ContentResolver;)I
 
     move-result v1
 
@@ -280,7 +280,7 @@
 
     .line 118
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/nearbyscan/NearbyScanning;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nearbyscan/NearbyScanning;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -288,7 +288,7 @@
     .local v0, "ct":Landroid/content/Context;
     if-eqz v0, :cond_1
 
-    invoke-static {v0}, Lcom/android/settings/nearbyscan/Util;->isBeaconManagerInstall(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/nearbyscan/Util;->isBeaconManagerInstall(Landroid/content/Context;)Z
 
     move-result v3
 
@@ -311,7 +311,7 @@
     if-eqz p2, :cond_3
 
     :goto_0
-    invoke-static {v0, v2}, Lcom/android/settings/nearbyscan/Util;->setDBInt(Landroid/content/Context;I)V
+    invoke-static {v0, v2}, Lcom/android/settings_ex/nearbyscan/Util;->setDBInt(Landroid/content/Context;I)V
 
     .line 125
     .end local v0    # "ct":Landroid/content/Context;

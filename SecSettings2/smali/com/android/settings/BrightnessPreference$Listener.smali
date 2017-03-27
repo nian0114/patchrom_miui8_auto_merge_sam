@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/BrightnessPreference$Listener;
+.class public interface abstract Lcom/android/settings_ex/BrightnessPreference$Listener;
 .super Ljava/lang/Object;
 .source "BrightnessPreference.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/BrightnessPreference;
+    value = Lcom/android/settings_ex/BrightnessPreference;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

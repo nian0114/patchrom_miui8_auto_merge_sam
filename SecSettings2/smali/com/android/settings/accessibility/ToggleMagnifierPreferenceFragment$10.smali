@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$10;
+.class Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$10;
 .super Ljava/lang/Object;
 .source "ToggleMagnifierPreferenceFragment.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;->showFingerMagnifierDisablePopup()V
+    value = Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;->showFingerMagnifierDisablePopup()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;)V
     .locals 0
 
     .prologue
     .line 780
-    iput-object p1, p0, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$10;->this$0:Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$10;->this$0:Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,10 +45,10 @@
     const/4 v3, 0x0
 
     .line 784
-    iget-object v1, p0, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$10;->this$0:Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$10;->this$0:Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;
 
-    # getter for: Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;->ctx:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;->access$100(Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;->ctx:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;->access$100(Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -61,14 +61,14 @@
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 787
-    iget-object v1, p0, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$10;->this$0:Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$10;->this$0:Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;
 
-    # getter for: Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;->ctx:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;->access$100(Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;->ctx:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;->access$100(Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;)Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;->getServiceTaskName(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;->getServiceTaskName(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -77,23 +77,23 @@
     .line 788
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$10;->this$0:Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$10;->this$0:Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;
 
-    # getter for: Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;->ctx:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;->access$100(Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;->ctx:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;->access$100(Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;)Landroid/content/Context;
 
     move-result-object v1
 
-    const-class v2, Lcom/android/settings/accessibility/MagnifierService;
+    const-class v2, Lcom/android/settings_ex/accessibility/MagnifierService;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 789
     .local v0, "nIntent":Landroid/content/Intent;
-    iget-object v1, p0, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$10;->this$0:Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$10;->this$0:Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;
 
-    # getter for: Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;->ctx:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;->access$100(Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;->ctx:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;->access$100(Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -102,10 +102,10 @@
     .line 791
     .end local v0    # "nIntent":Landroid/content/Intent;
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment$10;->this$0:Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment$10;->this$0:Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;
 
-    # invokes: Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;->updatedEnableState(Z)V
-    invoke-static {v1, v3}, Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;->access$200(Lcom/android/settings/accessibility/ToggleMagnifierPreferenceFragment;Z)V
+    # invokes: Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;->updatedEnableState(Z)V
+    invoke-static {v1, v3}, Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;->access$200(Lcom/android/settings_ex/accessibility/ToggleMagnifierPreferenceFragment;Z)V
 
     .line 792
     return-void

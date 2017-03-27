@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/SetupWizardWifiScreen$5$1;
+.class Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$5$1;
 .super Ljava/lang/Object;
 .source "SetupWizardWifiScreen.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/SetupWizardWifiScreen$5;->onPreDraw()Z
+    value = Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$5;->onPreDraw()Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/wifi/SetupWizardWifiScreen$5;
+.field final synthetic this$1:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$5;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/SetupWizardWifiScreen$5;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$5;)V
     .locals 0
 
     .prologue
     .line 281
-    iput-object p1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$5$1;->this$1:Lcom/android/settings/wifi/SetupWizardWifiScreen$5;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$5$1;->this$1:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -58,12 +58,12 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 285
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$5$1;->this$1:Lcom/android/settings/wifi/SetupWizardWifiScreen$5;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$5$1;->this$1:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$5;
 
-    iget-object v0, v0, Lcom/android/settings/wifi/SetupWizardWifiScreen$5;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$5;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
-    # getter for: Lcom/android/settings/wifi/SetupWizardWifiScreen;->mWifiSettingsView:Landroid/view/View;
-    invoke-static {v0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->access$1000(Lcom/android/settings/wifi/SetupWizardWifiScreen;)Landroid/view/View;
+    # getter for: Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mWifiSettingsView:Landroid/view/View;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->access$1000(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)Landroid/view/View;
 
     move-result-object v1
 
@@ -71,29 +71,29 @@
 
     const/16 v8, 0x21
 
-    invoke-static/range {v1 .. v8}, Lcom/android/settings/wifi/VI/AnimationHelper;->fadeAni(Landroid/view/View;FFJJI)V
+    invoke-static/range {v1 .. v8}, Lcom/android/settings_ex/wifi/VI/AnimationHelper;->fadeAni(Landroid/view/View;FFJJI)V
 
     .line 286
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$5$1;->this$1:Lcom/android/settings/wifi/SetupWizardWifiScreen$5;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$5$1;->this$1:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$5;
 
-    iget-object v0, v0, Lcom/android/settings/wifi/SetupWizardWifiScreen$5;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$5;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
-    # getter for: Lcom/android/settings/wifi/SetupWizardWifiScreen;->mButtonView:Landroid/view/View;
-    invoke-static {v0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->access$1100(Lcom/android/settings/wifi/SetupWizardWifiScreen;)Landroid/view/View;
+    # getter for: Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mButtonView:Landroid/view/View;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->access$1100(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)Landroid/view/View;
 
     move-result-object v7
 
     move-wide v8, v4
 
-    invoke-static/range {v7 .. v12}, Lcom/android/settings/wifi/VI/AnimationHelper;->fromBottom(Landroid/view/View;JJI)V
+    invoke-static/range {v7 .. v12}, Lcom/android/settings_ex/wifi/VI/AnimationHelper;->fromBottom(Landroid/view/View;JJI)V
 
     .line 287
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$5$1;->this$1:Lcom/android/settings/wifi/SetupWizardWifiScreen$5;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$5$1;->this$1:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$5;
 
-    iget-object v0, v0, Lcom/android/settings/wifi/SetupWizardWifiScreen$5;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$5;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
-    # getter for: Lcom/android/settings/wifi/SetupWizardWifiScreen;->mButtonView:Landroid/view/View;
-    invoke-static {v0}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->access$1100(Lcom/android/settings/wifi/SetupWizardWifiScreen;)Landroid/view/View;
+    # getter for: Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mButtonView:Landroid/view/View;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->access$1100(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)Landroid/view/View;
 
     move-result-object v1
 
@@ -101,7 +101,7 @@
 
     move v8, v12
 
-    invoke-static/range {v1 .. v8}, Lcom/android/settings/wifi/VI/AnimationHelper;->fadeAni(Landroid/view/View;FFJJI)V
+    invoke-static/range {v1 .. v8}, Lcom/android/settings_ex/wifi/VI/AnimationHelper;->fadeAni(Landroid/view/View;FFJJI)V
 
     .line 288
     return-void

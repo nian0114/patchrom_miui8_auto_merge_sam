@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settings/widget/ExploreByTouchHelper$1;
+.class synthetic Lcom/android/settings_ex/widget/ExploreByTouchHelper$1;
 .super Ljava/lang/Object;
 .source "ExploreByTouchHelper.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/widget/ExploreByTouchHelper;
+    value = Lcom/android/settings_ex/widget/ExploreByTouchHelper;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

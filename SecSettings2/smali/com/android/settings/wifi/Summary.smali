@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/Summary;
+.class Lcom/android/settings_ex/wifi/Summary;
 .super Ljava/lang/Object;
 .source "Summary.java"
 
@@ -23,7 +23,7 @@
     .line 37
     const/4 v0, 0x0
 
-    invoke-static {p0, v0, p1}, Lcom/android/settings/wifi/Summary;->get(Landroid/content/Context;Ljava/lang/String;Landroid/net/NetworkInfo$DetailedState;)Ljava/lang/String;
+    invoke-static {p0, v0, p1}, Lcom/android/settings_ex/wifi/Summary;->get(Landroid/content/Context;Ljava/lang/String;Landroid/net/NetworkInfo$DetailedState;)Ljava/lang/String;
 
     move-result-object v0
 

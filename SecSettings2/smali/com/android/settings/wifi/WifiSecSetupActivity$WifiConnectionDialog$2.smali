@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog$2;
+.class Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog$2;
 .super Ljava/lang/Object;
 .source "WifiSecSetupActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog;)V
     .locals 0
 
     .prologue
     .line 1278
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog$2;->this$0:Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog$2;->this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
 
     .prologue
     .line 1281
-    sget-object v0, Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog;->isAdded:Ljava/util/concurrent/atomic/AtomicBoolean;
+    sget-object v0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog;->isAdded:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
 
@@ -57,7 +57,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1283
-    invoke-static {}, Lcom/android/settings/wifi/WifiSecSetupActivity$WifiConnectionDialog;->forget()V
+    invoke-static {}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$WifiConnectionDialog;->forget()V
 
     .line 1284
     return-void

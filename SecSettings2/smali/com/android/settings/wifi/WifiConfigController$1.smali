@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiConfigController$1;
+.class Lcom/android/settings_ex/wifi/WifiConfigController$1;
 .super Ljava/lang/Object;
 .source "WifiConfigController.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/WifiConfigController;
+    value = Lcom/android/settings_ex/wifi/WifiConfigController;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiConfigController;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiConfigController;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiConfigController;)V
     .locals 0
 
     .prologue
     .line 960
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiConfigController$1;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiConfigController$1;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

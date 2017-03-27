@@ -1,4 +1,4 @@
-.class Lcom/android/settings/nfc/NfcListenStatusChange$NfcTypeScreen$1;
+.class Lcom/android/settings_ex/nfc/NfcListenStatusChange$NfcTypeScreen$1;
 .super Ljava/lang/Object;
 .source "NfcListenStatusChange.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/nfc/NfcListenStatusChange$NfcTypeScreen;->run()V
+    value = Lcom/android/settings_ex/nfc/NfcListenStatusChange$NfcTypeScreen;->run()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/nfc/NfcListenStatusChange$NfcTypeScreen;
+.field final synthetic this$1:Lcom/android/settings_ex/nfc/NfcListenStatusChange$NfcTypeScreen;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/nfc/NfcListenStatusChange$NfcTypeScreen;)V
+.method constructor <init>(Lcom/android/settings_ex/nfc/NfcListenStatusChange$NfcTypeScreen;)V
     .locals 0
 
     .prologue
     .line 348
-    iput-object p1, p0, Lcom/android/settings/nfc/NfcListenStatusChange$NfcTypeScreen$1;->this$1:Lcom/android/settings/nfc/NfcListenStatusChange$NfcTypeScreen;
+    iput-object p1, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$NfcTypeScreen$1;->this$1:Lcom/android/settings_ex/nfc/NfcListenStatusChange$NfcTypeScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,12 +41,12 @@
 
     .prologue
     .line 350
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcListenStatusChange$NfcTypeScreen$1;->this$1:Lcom/android/settings/nfc/NfcListenStatusChange$NfcTypeScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$NfcTypeScreen$1;->this$1:Lcom/android/settings_ex/nfc/NfcListenStatusChange$NfcTypeScreen;
 
-    iget-object v0, v0, Lcom/android/settings/nfc/NfcListenStatusChange$NfcTypeScreen;->this$0:Lcom/android/settings/nfc/NfcListenStatusChange;
+    iget-object v0, v0, Lcom/android/settings_ex/nfc/NfcListenStatusChange$NfcTypeScreen;->this$0:Lcom/android/settings_ex/nfc/NfcListenStatusChange;
 
-    # invokes: Lcom/android/settings/nfc/NfcListenStatusChange;->createScreen()V
-    invoke-static {v0}, Lcom/android/settings/nfc/NfcListenStatusChange;->access$1100(Lcom/android/settings/nfc/NfcListenStatusChange;)V
+    # invokes: Lcom/android/settings_ex/nfc/NfcListenStatusChange;->createScreen()V
+    invoke-static {v0}, Lcom/android/settings_ex/nfc/NfcListenStatusChange;->access$1100(Lcom/android/settings_ex/nfc/NfcListenStatusChange;)V
 
     .line 351
     return-void

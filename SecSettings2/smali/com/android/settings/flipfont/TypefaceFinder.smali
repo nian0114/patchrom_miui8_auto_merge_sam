@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/flipfont/TypefaceFinder;
+.class public Lcom/android/settings_ex/flipfont/TypefaceFinder;
 .super Ljava/lang/Object;
 .source "TypefaceFinder.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/flipfont/TypefaceFinder$TypefaceSortByName;
+        Lcom/android/settings_ex/flipfont/TypefaceFinder$TypefaceSortByName;
     }
 .end annotation
 
@@ -19,7 +19,7 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/flipfont/Typeface;",
+            "Lcom/android/settings_ex/flipfont/Typeface;",
             ">;"
         }
     .end annotation
@@ -39,7 +39,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     .line 173
     return-void
@@ -58,7 +58,7 @@
     .line 73
     .local v0, "cr":Landroid/content/ContentResolver;
     :try_start_0
-    iget-object v9, p0, Lcom/android/settings/flipfont/TypefaceFinder;->context:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/flipfont/TypefaceFinder;->context:Landroid/content/Context;
 
     invoke-virtual {v9}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
     :try_end_0
@@ -221,7 +221,7 @@
     .local v2, "in":Ljava/io/InputStream;
     aget-object v8, v7, v3
 
-    invoke-virtual {p0, v8, v2, p1}, Lcom/android/settings/flipfont/TypefaceFinder;->parseTypefaceXml(Ljava/lang/String;Ljava/io/InputStream;Ljava/lang/String;)V
+    invoke-virtual {p0, v8, v2, p1}, Lcom/android/settings_ex/flipfont/TypefaceFinder;->parseTypefaceXml(Ljava/lang/String;Ljava/io/InputStream;Ljava/lang/String;)V
 
     .line 105
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
@@ -252,7 +252,7 @@
 
 
 # virtual methods
-.method public findMatchingTypeface(Ljava/lang/String;)Lcom/android/settings/flipfont/Typeface;
+.method public findMatchingTypeface(Ljava/lang/String;)Lcom/android/settings_ex/flipfont/Typeface;
     .locals 3
     .param p1, "typefaceFilename"    # Ljava/lang/String;
 
@@ -261,12 +261,12 @@
     const/4 v1, 0x0
 
     .line 292
-    .local v1, "typeface":Lcom/android/settings/flipfont/Typeface;
+    .local v1, "typeface":Lcom/android/settings_ex/flipfont/Typeface;
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
+    iget-object v2, p0, Lcom/android/settings_ex/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -275,18 +275,18 @@
     if-ge v0, v2, :cond_0
 
     .line 293
-    iget-object v2, p0, Lcom/android/settings/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
+    iget-object v2, p0, Lcom/android/settings_ex/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    .end local v1    # "typeface":Lcom/android/settings/flipfont/Typeface;
-    check-cast v1, Lcom/android/settings/flipfont/Typeface;
+    .end local v1    # "typeface":Lcom/android/settings_ex/flipfont/Typeface;
+    check-cast v1, Lcom/android/settings_ex/flipfont/Typeface;
 
     .line 295
-    .restart local v1    # "typeface":Lcom/android/settings/flipfont/Typeface;
-    invoke-virtual {v1}, Lcom/android/settings/flipfont/Typeface;->getTypefaceFilename()Ljava/lang/String;
+    .restart local v1    # "typeface":Lcom/android/settings_ex/flipfont/Typeface;
+    invoke-virtual {v1}, Lcom/android/settings_ex/flipfont/Typeface;->getTypefaceFilename()Ljava/lang/String;
 
     move-result-object v2
 
@@ -333,7 +333,7 @@
     if-nez v4, :cond_0
 
     .line 129
-    invoke-direct {p0, p2}, Lcom/android/settings/flipfont/TypefaceFinder;->findTypefacesWithCR(Ljava/lang/String;)Z
+    invoke-direct {p0, p2}, Lcom/android/settings_ex/flipfont/TypefaceFinder;->findTypefacesWithCR(Ljava/lang/String;)Z
 
     move-result v4
 
@@ -393,7 +393,7 @@
     .local v2, "in":Ljava/io/InputStream;
     aget-object v4, v3, v1
 
-    invoke-virtual {p0, v4, v2, p2}, Lcom/android/settings/flipfont/TypefaceFinder;->parseTypefaceXml(Ljava/lang/String;Ljava/io/InputStream;Ljava/lang/String;)V
+    invoke-virtual {p0, v4, v2, p2}, Lcom/android/settings_ex/flipfont/TypefaceFinder;->parseTypefaceXml(Ljava/lang/String;Ljava/io/InputStream;Ljava/lang/String;)V
 
     .line 139
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
@@ -456,7 +456,7 @@
     .line 186
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/flipfont/TypefaceFinder;->context:Landroid/content/Context;
+    iget-object v14, v0, Lcom/android/settings_ex/flipfont/TypefaceFinder;->context:Landroid/content/Context;
 
     invoke-virtual {v14}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -491,11 +491,11 @@
     .line 190
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
+    iget-object v14, v0, Lcom/android/settings_ex/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
-    new-instance v15, Lcom/android/settings/flipfont/TypefaceFinder$TypefaceSortByName;
+    new-instance v15, Lcom/android/settings_ex/flipfont/TypefaceFinder$TypefaceSortByName;
 
-    invoke-direct {v15}, Lcom/android/settings/flipfont/TypefaceFinder$TypefaceSortByName;-><init>()V
+    invoke-direct {v15}, Lcom/android/settings_ex/flipfont/TypefaceFinder$TypefaceSortByName;-><init>()V
 
     invoke-static {v14, v15}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
@@ -506,7 +506,7 @@
     :goto_0
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
+    iget-object v14, v0, Lcom/android/settings_ex/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v14}, Ljava/util/List;->size()I
 
@@ -517,15 +517,15 @@
     .line 193
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
+    iget-object v14, v0, Lcom/android/settings_ex/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v14, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v14
 
-    check-cast v14, Lcom/android/settings/flipfont/Typeface;
+    check-cast v14, Lcom/android/settings_ex/flipfont/Typeface;
 
-    invoke-virtual {v14}, Lcom/android/settings/flipfont/Typeface;->getSansName()Ljava/lang/String;
+    invoke-virtual {v14}, Lcom/android/settings_ex/flipfont/Typeface;->getSansName()Ljava/lang/String;
 
     move-result-object v12
 
@@ -536,7 +536,7 @@
     .line 197
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/flipfont/TypefaceFinder;->context:Landroid/content/Context;
+    iget-object v14, v0, Lcom/android/settings_ex/flipfont/TypefaceFinder;->context:Landroid/content/Context;
 
     invoke-virtual {v14}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
@@ -546,15 +546,15 @@
     .local v1, "aManager":Landroid/content/res/AssetManager;
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
+    iget-object v14, v0, Lcom/android/settings_ex/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v14, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v14
 
-    check-cast v14, Lcom/android/settings/flipfont/Typeface;
+    check-cast v14, Lcom/android/settings_ex/flipfont/Typeface;
 
-    invoke-virtual {v14}, Lcom/android/settings/flipfont/Typeface;->getTypefaceFilename()Ljava/lang/String;
+    invoke-virtual {v14}, Lcom/android/settings_ex/flipfont/Typeface;->getTypefaceFilename()Ljava/lang/String;
 
     move-result-object v6
 
@@ -604,15 +604,15 @@
     .line 208
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
+    iget-object v14, v0, Lcom/android/settings_ex/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v14, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v14
 
-    check-cast v14, Lcom/android/settings/flipfont/Typeface;
+    check-cast v14, Lcom/android/settings_ex/flipfont/Typeface;
 
-    invoke-virtual {v14}, Lcom/android/settings/flipfont/Typeface;->getFontPackageName()Ljava/lang/String;
+    invoke-virtual {v14}, Lcom/android/settings_ex/flipfont/Typeface;->getFontPackageName()Ljava/lang/String;
 
     move-result-object v10
 
@@ -680,15 +680,15 @@
     .local v9, "newTypeface":Landroid/graphics/Typeface;
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
+    iget-object v14, v0, Lcom/android/settings_ex/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v14, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v14
 
-    check-cast v14, Lcom/android/settings/flipfont/Typeface;
+    check-cast v14, Lcom/android/settings_ex/flipfont/Typeface;
 
-    invoke-virtual {v14}, Lcom/android/settings/flipfont/Typeface;->getFontPackageName()Ljava/lang/String;
+    invoke-virtual {v14}, Lcom/android/settings_ex/flipfont/Typeface;->getFontPackageName()Ljava/lang/String;
 
     move-result-object v14
 
@@ -697,15 +697,15 @@
     .line 222
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
+    iget-object v14, v0, Lcom/android/settings_ex/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v14, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v14
 
-    check-cast v14, Lcom/android/settings/flipfont/Typeface;
+    check-cast v14, Lcom/android/settings_ex/flipfont/Typeface;
 
-    invoke-virtual {v14}, Lcom/android/settings/flipfont/Typeface;->getFontPackageName()Ljava/lang/String;
+    invoke-virtual {v14}, Lcom/android/settings_ex/flipfont/Typeface;->getFontPackageName()Ljava/lang/String;
 
     move-result-object v14
 
@@ -746,7 +746,7 @@
     .restart local v11    # "res":Landroid/content/res/Resources;
     .restart local v13    # "start_pos":I
     :cond_2
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticModel()Z
 
     move-result v14
 
@@ -755,15 +755,15 @@
     .line 227
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
+    iget-object v14, v0, Lcom/android/settings_ex/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v14, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v14
 
-    check-cast v14, Lcom/android/settings/flipfont/Typeface;
+    check-cast v14, Lcom/android/settings_ex/flipfont/Typeface;
 
-    invoke-virtual {v14}, Lcom/android/settings/flipfont/Typeface;->getFontPackageName()Ljava/lang/String;
+    invoke-virtual {v14}, Lcom/android/settings_ex/flipfont/Typeface;->getFontPackageName()Ljava/lang/String;
 
     move-result-object v14
 
@@ -784,15 +784,15 @@
     .line 234
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
+    iget-object v14, v0, Lcom/android/settings_ex/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v14, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v14
 
-    check-cast v14, Lcom/android/settings/flipfont/Typeface;
+    check-cast v14, Lcom/android/settings_ex/flipfont/Typeface;
 
-    invoke-virtual {v14}, Lcom/android/settings/flipfont/Typeface;->getTypefaceFilename()Ljava/lang/String;
+    invoke-virtual {v14}, Lcom/android/settings_ex/flipfont/Typeface;->getTypefaceFilename()Ljava/lang/String;
 
     move-result-object v14
 
@@ -803,15 +803,15 @@
     .line 235
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
+    iget-object v14, v0, Lcom/android/settings_ex/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v14, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v14
 
-    check-cast v14, Lcom/android/settings/flipfont/Typeface;
+    check-cast v14, Lcom/android/settings_ex/flipfont/Typeface;
 
-    invoke-virtual {v14}, Lcom/android/settings/flipfont/Typeface;->getFontPackageName()Ljava/lang/String;
+    invoke-virtual {v14}, Lcom/android/settings_ex/flipfont/Typeface;->getFontPackageName()Ljava/lang/String;
 
     move-result-object v14
 
@@ -906,12 +906,12 @@
 
     .line 159
     .local v5, "xr":Lorg/xml/sax/XMLReader;
-    new-instance v1, Lcom/android/settings/flipfont/TypefaceParser;
+    new-instance v1, Lcom/android/settings_ex/flipfont/TypefaceParser;
 
-    invoke-direct {v1}, Lcom/android/settings/flipfont/TypefaceParser;-><init>()V
+    invoke-direct {v1}, Lcom/android/settings_ex/flipfont/TypefaceParser;-><init>()V
 
     .line 160
-    .local v1, "fontParser":Lcom/android/settings/flipfont/TypefaceParser;
+    .local v1, "fontParser":Lcom/android/settings_ex/flipfont/TypefaceParser;
     invoke-interface {v5, v1}, Lorg/xml/sax/XMLReader;->setContentHandler(Lorg/xml/sax/ContentHandler;)V
 
     .line 161
@@ -922,27 +922,27 @@
     invoke-interface {v5, v6}, Lorg/xml/sax/XMLReader;->parse(Lorg/xml/sax/InputSource;)V
 
     .line 162
-    invoke-virtual {v1}, Lcom/android/settings/flipfont/TypefaceParser;->getParsedData()Lcom/android/settings/flipfont/Typeface;
+    invoke-virtual {v1}, Lcom/android/settings_ex/flipfont/TypefaceParser;->getParsedData()Lcom/android/settings_ex/flipfont/Typeface;
 
     move-result-object v2
 
     .line 163
-    .local v2, "newTypeface":Lcom/android/settings/flipfont/Typeface;
-    invoke-virtual {v2, p1}, Lcom/android/settings/flipfont/Typeface;->setTypefaceFilename(Ljava/lang/String;)V
+    .local v2, "newTypeface":Lcom/android/settings_ex/flipfont/Typeface;
+    invoke-virtual {v2, p1}, Lcom/android/settings_ex/flipfont/Typeface;->setTypefaceFilename(Ljava/lang/String;)V
 
     .line 164
-    invoke-virtual {v2, p3}, Lcom/android/settings/flipfont/Typeface;->setFontPackageName(Ljava/lang/String;)V
+    invoke-virtual {v2, p3}, Lcom/android/settings_ex/flipfont/Typeface;->setFontPackageName(Ljava/lang/String;)V
 
     .line 165
-    iget-object v6, p0, Lcom/android/settings/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
+    iget-object v6, p0, Lcom/android/settings_ex/flipfont/TypefaceFinder;->mTypefaces:Ljava/util/List;
 
     invoke-interface {v6, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 170
-    .end local v1    # "fontParser":Lcom/android/settings/flipfont/TypefaceParser;
-    .end local v2    # "newTypeface":Lcom/android/settings/flipfont/Typeface;
+    .end local v1    # "fontParser":Lcom/android/settings_ex/flipfont/TypefaceParser;
+    .end local v2    # "newTypeface":Lcom/android/settings_ex/flipfont/Typeface;
     .end local v3    # "sp":Ljavax/xml/parsers/SAXParser;
     .end local v4    # "spf":Ljavax/xml/parsers/SAXParserFactory;
     .end local v5    # "xr":Lorg/xml/sax/XMLReader;

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/dashboard/DashboardSummarySplit$9;
+.class Lcom/android/settings_ex/dashboard/DashboardSummarySplit$9;
 .super Ljava/lang/Object;
 .source "DashboardSummarySplit.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/dashboard/DashboardSummarySplit;->showOnlineHelpDialog(Landroid/content/Intent;)V
+    value = Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->showOnlineHelpDialog(Landroid/content/Intent;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/dashboard/DashboardSummarySplit;
+.field final synthetic this$0:Lcom/android/settings_ex/dashboard/DashboardSummarySplit;
 
 .field final synthetic val$checkboxView:Landroid/widget/CheckBox;
 
@@ -28,18 +28,18 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/dashboard/DashboardSummarySplit;Landroid/widget/CheckBox;Landroid/content/SharedPreferences$Editor;Landroid/content/Intent;)V
+.method constructor <init>(Lcom/android/settings_ex/dashboard/DashboardSummarySplit;Landroid/widget/CheckBox;Landroid/content/SharedPreferences$Editor;Landroid/content/Intent;)V
     .locals 0
 
     .prologue
     .line 842
-    iput-object p1, p0, Lcom/android/settings/dashboard/DashboardSummarySplit$9;->this$0:Lcom/android/settings/dashboard/DashboardSummarySplit;
+    iput-object p1, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$9;->this$0:Lcom/android/settings_ex/dashboard/DashboardSummarySplit;
 
-    iput-object p2, p0, Lcom/android/settings/dashboard/DashboardSummarySplit$9;->val$checkboxView:Landroid/widget/CheckBox;
+    iput-object p2, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$9;->val$checkboxView:Landroid/widget/CheckBox;
 
-    iput-object p3, p0, Lcom/android/settings/dashboard/DashboardSummarySplit$9;->val$edit:Landroid/content/SharedPreferences$Editor;
+    iput-object p3, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$9;->val$edit:Landroid/content/SharedPreferences$Editor;
 
-    iput-object p4, p0, Lcom/android/settings/dashboard/DashboardSummarySplit$9;->val$mIntent:Landroid/content/Intent;
+    iput-object p4, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$9;->val$mIntent:Landroid/content/Intent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -55,7 +55,7 @@
 
     .prologue
     .line 844
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit$9;->val$checkboxView:Landroid/widget/CheckBox;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$9;->val$checkboxView:Landroid/widget/CheckBox;
 
     invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
 
@@ -64,7 +64,7 @@
     if-eqz v0, :cond_0
 
     .line 845
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit$9;->val$edit:Landroid/content/SharedPreferences$Editor;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$9;->val$edit:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "onlinehelp_show_dialog"
 
@@ -73,15 +73,15 @@
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 846
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit$9;->val$edit:Landroid/content/SharedPreferences$Editor;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$9;->val$edit:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 848
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit$9;->this$0:Lcom/android/settings/dashboard/DashboardSummarySplit;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$9;->this$0:Lcom/android/settings_ex/dashboard/DashboardSummarySplit;
 
-    invoke-virtual {v0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -89,16 +89,16 @@
 
     const-string v2, "HQST"
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 849
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardSummarySplit$9;->this$0:Lcom/android/settings/dashboard/DashboardSummarySplit;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$9;->this$0:Lcom/android/settings_ex/dashboard/DashboardSummarySplit;
 
-    invoke-virtual {v0}, Lcom/android/settings/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/dashboard/DashboardSummarySplit;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/dashboard/DashboardSummarySplit$9;->val$mIntent:Landroid/content/Intent;
+    iget-object v1, p0, Lcom/android/settings_ex/dashboard/DashboardSummarySplit$9;->val$mIntent:Landroid/content/Intent;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 

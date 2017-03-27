@@ -1,14 +1,14 @@
-.class public Lcom/android/settings/powersavingmode/PowerSavingModeUltra;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "PowerSavingModeUltra.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/search/Indexable;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # instance fields
@@ -32,7 +32,7 @@
 
 .field private mSwitch:Landroid/widget/Switch;
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 .field private mTelephonyManager:Landroid/telephony/TelephonyManager;
 
@@ -51,11 +51,11 @@
 
     .prologue
     .line 463
-    new-instance v0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra$3;
+    new-instance v0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra$3;
 
-    invoke-direct {v0}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra$3;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra$3;-><init>()V
 
-    sput-object v0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -65,83 +65,83 @@
 
     .prologue
     .line 116
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 108
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->isSharedDevice:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->isSharedDevice:Z
 
     .line 118
-    new-instance v0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra$1;
+    new-instance v0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra$1;-><init>(Lcom/android/settings/powersavingmode/PowerSavingModeUltra;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra$1;-><init>(Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;)V
 
-    iput-object v0, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mEmerReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mEmerReceiver:Landroid/content/BroadcastReceiver;
 
     .line 133
-    new-instance v0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra$2;
+    new-instance v0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra$2;-><init>(Lcom/android/settings/powersavingmode/PowerSavingModeUltra;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra$2;-><init>(Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;)V
 
-    iput-object v0, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
+    iput-object v0, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
     .line 116
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/powersavingmode/PowerSavingModeUltra;)Lcom/android/settings/widget/SwitchBar;
+.method static synthetic access$000(Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;)Lcom/android/settings_ex/widget/SwitchBar;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/powersavingmode/PowerSavingModeUltra;
+    .param p0, "x0"    # Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;
 
     .prologue
     .line 90
-    iget-object v0, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/powersavingmode/PowerSavingModeUltra;)Landroid/telephony/TelephonyManager;
+.method static synthetic access$100(Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;)Landroid/telephony/TelephonyManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/powersavingmode/PowerSavingModeUltra;
+    .param p0, "x0"    # Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;
 
     .prologue
     .line 90
-    iget-object v0, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    iget-object v0, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/powersavingmode/PowerSavingModeUltra;)Z
+.method static synthetic access$200(Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/powersavingmode/PowerSavingModeUltra;
+    .param p0, "x0"    # Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;
 
     .prologue
     .line 90
-    iget-boolean v0, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mWasVideo:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mWasVideo:Z
 
     return v0
 .end method
 
-.method static synthetic access$202(Lcom/android/settings/powersavingmode/PowerSavingModeUltra;Z)Z
+.method static synthetic access$202(Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/powersavingmode/PowerSavingModeUltra;
+    .param p0, "x0"    # Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;
     .param p1, "x1"    # Z
 
     .prologue
     .line 90
-    iput-boolean p1, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mWasVideo:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mWasVideo:Z
 
     return p1
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/powersavingmode/PowerSavingModeUltra;)Z
+.method static synthetic access$300(Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/powersavingmode/PowerSavingModeUltra;
+    .param p0, "x0"    # Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;
 
     .prologue
     .line 90
-    iget-boolean v0, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->isSharedDevice:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->isSharedDevice:Z
 
     return v0
 .end method
@@ -163,7 +163,7 @@
 
     .prologue
     .line 453
-    iget-object v0, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
     const-string v1, "activity"
 
@@ -173,14 +173,14 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    iput-object v0, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mActivityManager:Landroid/app/ActivityManager;
+    iput-object v0, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mActivityManager:Landroid/app/ActivityManager;
 
     .line 454
-    iget-object v0, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mActivityManager:Landroid/app/ActivityManager;
+    iget-object v0, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mActivityManager:Landroid/app/ActivityManager;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mActivityManager:Landroid/app/ActivityManager;
+    iget-object v0, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mActivityManager:Landroid/app/ActivityManager;
 
     invoke-virtual {v0}, Landroid/app/ActivityManager;->isInLockTaskMode()Z
 
@@ -222,23 +222,23 @@
 
     .prologue
     .line 171
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 173
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isFolderModel(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isFolderModel(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 174
-    iget-object v0, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->requestFocus()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->requestFocus()Z
 
     .line 176
     :cond_0
@@ -251,18 +251,18 @@
 
     .prologue
     .line 165
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 166
     const-string v0, "phone"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    iput-object v0, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    iput-object v0, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     .line 167
     return-void
@@ -275,7 +275,7 @@
 
     .prologue
     .line 310
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     .line 311
     return-void
@@ -289,39 +289,39 @@
 
     .prologue
     .line 180
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
-    iput-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iput-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
     .line 181
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
-    check-cast v9, Lcom/android/settings/SettingsActivity;
+    check-cast v9, Lcom/android/settings_ex/SettingsActivity;
 
-    invoke-virtual {v9}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    invoke-virtual {v9}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v9
 
-    iput-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 182
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v9}, Lcom/android/settings/widget/SwitchBar;->getSwitch()Lcom/android/settings/widget/ToggleSwitch;
+    invoke-virtual {v9}, Lcom/android/settings_ex/widget/SwitchBar;->getSwitch()Lcom/android/settings_ex/widget/ToggleSwitch;
 
     move-result-object v9
 
-    iput-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitch:Landroid/widget/Switch;
+    iput-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitch:Landroid/widget/Switch;
 
     .line 183
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v9}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v9}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 186
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
@@ -341,15 +341,15 @@
     if-eqz v9, :cond_0
 
     .line 189
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     const/4 v10, 0x0
 
-    invoke-virtual {v9, v10}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v9, v10}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 194
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
@@ -374,7 +374,7 @@
 
     move-result v9
 
-    iput-boolean v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->isSharedDevice:Z
+    iput-boolean v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->isSharedDevice:Z
 
     .line 199
     const-string v9, "PowerSavingModeUltra"
@@ -389,7 +389,7 @@
 
     move-result-object v10
 
-    iget-boolean v11, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->isSharedDevice:Z
+    iget-boolean v11, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->isSharedDevice:Z
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -421,7 +421,7 @@
 
     check-cast v9, Landroid/widget/ImageView;
 
-    iput-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mImageTablet:Landroid/widget/ImageView;
+    iput-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mImageTablet:Landroid/widget/ImageView;
 
     .line 206
     const v9, 0x7f0d03c9
@@ -432,7 +432,7 @@
 
     check-cast v9, Landroid/widget/ImageView;
 
-    iput-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mImagePhone:Landroid/widget/ImageView;
+    iput-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mImagePhone:Landroid/widget/ImageView;
 
     .line 207
     const v9, 0x7f0d03cb
@@ -441,7 +441,7 @@
 
     move-result-object v9
 
-    iput-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->divider_1:Landroid/view/View;
+    iput-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->divider_1:Landroid/view/View;
 
     .line 208
     const v9, 0x7f0d03ce
@@ -450,19 +450,19 @@
 
     move-result-object v9
 
-    iput-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->divider_2:Landroid/view/View;
+    iput-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->divider_2:Landroid/view/View;
 
     .line 209
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
-    invoke-static {v9}, Lcom/android/settings/Utils;->isTablet(Landroid/content/Context;)Z
+    invoke-static {v9}, Lcom/android/settings_ex/Utils;->isTablet(Landroid/content/Context;)Z
 
     move-result v9
 
     if-eqz v9, :cond_c
 
     .line 210
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mImagePhone:Landroid/widget/ImageView;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mImagePhone:Landroid/widget/ImageView;
 
     const/16 v10, 0x8
 
@@ -476,7 +476,7 @@
     if-nez v9, :cond_b
 
     .line 215
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mImageTablet:Landroid/widget/ImageView;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mImageTablet:Landroid/widget/ImageView;
 
     const v10, 0x7f0202b1
 
@@ -492,7 +492,7 @@
 
     check-cast v9, Landroid/widget/TextView;
 
-    iput-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mUltraText:Landroid/widget/TextView;
+    iput-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mUltraText:Landroid/widget/TextView;
 
     .line 226
     invoke-static {}, Lcom/sec/android/emergencymode/EmergencyManager;->supportGrayScreen()Z
@@ -502,12 +502,12 @@
     if-nez v9, :cond_2
 
     .line 227
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mUltraText:Landroid/widget/TextView;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mUltraText:Landroid/widget/TextView;
 
     if-eqz v9, :cond_2
 
     .line 228
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mUltraText:Landroid/widget/TextView;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mUltraText:Landroid/widget/TextView;
 
     const v10, 0x7f0e1306
 
@@ -523,17 +523,17 @@
 
     check-cast v9, Landroid/widget/TextView;
 
-    iput-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mUltraDisclaimerText:Landroid/widget/TextView;
+    iput-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mUltraDisclaimerText:Landroid/widget/TextView;
 
     .line 232
-    invoke-static {}, Lcom/android/settings/Utils;->isJapanModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isJapanModel()Z
 
     move-result v9
 
     if-eqz v9, :cond_3
 
     .line 233
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mUltraDisclaimerText:Landroid/widget/TextView;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mUltraDisclaimerText:Landroid/widget/TextView;
 
     const/16 v10, 0x8
 
@@ -559,7 +559,7 @@
     .local v4, "layout":Landroid/widget/LinearLayout;
     const-string v9, "VZW"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v10
 
@@ -570,7 +570,7 @@
     if-eqz v9, :cond_4
 
     .line 240
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
@@ -601,7 +601,7 @@
     invoke-virtual {v6, v9, v10}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
 
     .line 243
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
     invoke-virtual {v9}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -634,7 +634,7 @@
     if-eqz v9, :cond_5
 
     .line 249
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
     const v10, 0x7f0e130d
 
@@ -646,7 +646,7 @@
 
     .line 251
     :cond_5
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
     const v10, 0x7f0e130e
 
@@ -657,14 +657,14 @@
     invoke-virtual {v8, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 252
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaCMCCModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaCMCCModel()Z
 
     move-result v9
 
     if-eqz v9, :cond_e
 
     .line 253
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
     invoke-virtual {v9}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -678,7 +678,7 @@
 
     if-nez v9, :cond_6
 
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
     invoke-virtual {v9}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -694,7 +694,7 @@
 
     .line 254
     :cond_6
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
     const v10, 0x7f0e1312
 
@@ -706,16 +706,16 @@
 
     .line 258
     :goto_1
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
-    invoke-static {v9}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {v9}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v9
 
     if-nez v9, :cond_7
 
     .line 259
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
     const v10, 0x7f0e1313
 
@@ -726,7 +726,7 @@
     invoke-virtual {v8, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 260
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
     const v10, 0x7f0e1310
 
@@ -741,7 +741,7 @@
     :goto_2
     const-string v9, "DCM"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v10
 
@@ -752,7 +752,7 @@
     if-eqz v9, :cond_8
 
     .line 273
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
     const v10, 0x7f0e1314
 
@@ -766,7 +766,7 @@
     :cond_8
     const-string v9, "VZW"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v10
 
@@ -777,7 +777,7 @@
     if-nez v9, :cond_9
 
     .line 277
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
     const v10, 0x7f0e1315
 
@@ -813,7 +813,7 @@
     if-eqz v5, :cond_a
 
     .line 283
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
 
     move-result-object v9
 
@@ -852,7 +852,7 @@
     .end local v6    # "text":Landroid/widget/TextView;
     .end local v8    # "warningString":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_b
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mImageTablet:Landroid/widget/ImageView;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mImageTablet:Landroid/widget/ImageView;
 
     const v10, 0x7f0202b0
 
@@ -862,21 +862,21 @@
 
     .line 221
     :cond_c
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mImageTablet:Landroid/widget/ImageView;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mImageTablet:Landroid/widget/ImageView;
 
     const/16 v10, 0x8
 
     invoke-virtual {v9, v10}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 222
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->divider_1:Landroid/view/View;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->divider_1:Landroid/view/View;
 
     const/16 v10, 0x8
 
     invoke-virtual {v9, v10}, Landroid/view/View;->setVisibility(I)V
 
     .line 223
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->divider_2:Landroid/view/View;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->divider_2:Landroid/view/View;
 
     const/16 v10, 0x8
 
@@ -888,7 +888,7 @@
     .restart local v4    # "layout":Landroid/widget/LinearLayout;
     .restart local v8    # "warningString":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_d
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
     const v10, 0x7f0e1318
 
@@ -902,16 +902,16 @@
 
     .line 263
     :cond_e
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
-    invoke-static {v9}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {v9}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v9
 
     if-nez v9, :cond_f
 
     .line 264
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
     const v10, 0x7f0e130f
 
@@ -923,7 +923,7 @@
 
     .line 266
     :cond_f
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
     invoke-virtual {v9}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -937,7 +937,7 @@
 
     if-nez v9, :cond_10
 
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
     invoke-virtual {v9}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -953,7 +953,7 @@
 
     .line 267
     :cond_10
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
     const v10, 0x7f0e1311
 
@@ -967,7 +967,7 @@
 
     .line 269
     :cond_11
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
     const v10, 0x7f0e1318
 
@@ -982,34 +982,34 @@
     .line 291
     .restart local v2    # "i$":Ljava/util/Iterator;
     :cond_12
-    iget-boolean v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->isSharedDevice:Z
+    iget-boolean v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->isSharedDevice:Z
 
     if-eqz v9, :cond_13
 
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v9, :cond_13
 
     .line 292
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     const/4 v10, 0x0
 
-    invoke-virtual {v9, v10}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v9, v10}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 293
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     const/4 v10, 0x0
 
-    invoke-virtual {v9, v10}, Lcom/android/settings/widget/SwitchBar;->setClickable(Z)V
+    invoke-virtual {v9, v10}, Lcom/android/settings_ex/widget/SwitchBar;->setClickable(Z)V
 
     .line 294
-    iget-object v9, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v9, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     const/4 v10, 0x0
 
-    invoke-virtual {v9, v10}, Lcom/android/settings/widget/SwitchBar;->setFocusable(Z)V
+    invoke-virtual {v9, v10}, Lcom/android/settings_ex/widget/SwitchBar;->setFocusable(Z)V
 
     .line 295
     const-string v9, "PowerSavingModeUltra"
@@ -1024,7 +1024,7 @@
 
     move-result-object v10
 
-    iget-boolean v11, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->isSharedDevice:Z
+    iget-boolean v11, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->isSharedDevice:Z
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1053,7 +1053,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 422
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroy()V
 
     .line 423
     return-void
@@ -1071,12 +1071,12 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 414
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroyView()V
 
     .line 415
-    iget-object v0, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 416
     return-void
@@ -1095,7 +1095,7 @@
     packed-switch v4, :pswitch_data_0
 
     .line 339
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v4
 
@@ -1105,7 +1105,7 @@
     .line 319
     :pswitch_0
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v4
 
@@ -1145,7 +1145,7 @@
     invoke-virtual {v2, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 326
-    invoke-virtual {p0, v2}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1190,35 +1190,35 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 395
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 396
-    iget-boolean v0, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mValidListener:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mValidListener:Z
 
     if-eqz v0, :cond_0
 
     .line 397
-    iget-object v0, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 398
-    iput-boolean v2, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mValidListener:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mValidListener:Z
 
     .line 400
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mEmerReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mEmerReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 401
-    iget-object v0, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    iget-object v0, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
     invoke-virtual {v0, v1, v2}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
@@ -1242,17 +1242,17 @@
     invoke-static {v3, v6}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 346
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 347
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v3, :cond_0
 
     .line 348
-    iget-object v6, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitch:Landroid/widget/Switch;
+    iget-object v6, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitch:Landroid/widget/Switch;
 
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -1271,7 +1271,7 @@
 
     .line 351
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -1284,7 +1284,7 @@
     if-eqz v2, :cond_1
 
     .line 353
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v3, :cond_1
 
@@ -1295,36 +1295,36 @@
     if-eqz v3, :cond_1
 
     .line 354
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v3, v5}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v3, v5}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 358
     :cond_1
-    iget-boolean v3, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mValidListener:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mValidListener:Z
 
     if-nez v3, :cond_3
 
     .line 359
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v3, :cond_2
 
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v3, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v3, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 360
     :cond_2
-    iput-boolean v4, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mValidListener:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mValidListener:Z
 
     .line 363
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    iget-object v6, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mEmerReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v6, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mEmerReceiver:Landroid/content/BroadcastReceiver;
 
     new-instance v7, Landroid/content/IntentFilter;
 
@@ -1335,7 +1335,7 @@
     invoke-virtual {v3, v6, v7}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 365
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     const-string v6, "video"
 
@@ -1343,7 +1343,7 @@
 
     move-result v3
 
-    iput-boolean v3, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mWasVideo:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mWasVideo:Z
 
     .line 366
     const-string v3, "PowerSavingModeUltra"
@@ -1358,7 +1358,7 @@
 
     move-result-object v6
 
-    iget-boolean v7, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mWasVideo:Z
+    iget-boolean v7, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mWasVideo:Z
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1371,34 +1371,34 @@
     invoke-static {v3, v6}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 367
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v3, :cond_4
 
     .line 368
-    iget-object v6, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v6, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    iget-boolean v3, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mWasVideo:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mWasVideo:Z
 
     if-nez v3, :cond_9
 
     move v3, v4
 
     :goto_1
-    invoke-virtual {v6, v3}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v6, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 369
     :cond_4
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    iget-object v6, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
+    iget-object v6, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
     const/16 v7, 0x800
 
     invoke-virtual {v3, v6, v7}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
     .line 372
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -1410,18 +1410,18 @@
     .local v0, "isContainerOnlyMode":Z
     if-eqz v0, :cond_5
 
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v3, :cond_5
 
     .line 374
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v3, v5}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v3, v5}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 376
     :cond_5
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -1429,47 +1429,47 @@
 
     const-string v7, "isKioskModeEnabled"
 
-    invoke-static {v3, v6, v7}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v6, v7}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
     .line 377
     .local v1, "isKioskModeEnabled":I
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v3, :cond_6
 
     if-ne v1, v4, :cond_6
 
     .line 378
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v3, v5}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v3, v5}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 382
     :cond_6
-    iget-boolean v3, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->isSharedDevice:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->isSharedDevice:Z
 
     if-eqz v3, :cond_7
 
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v3, :cond_7
 
     .line 383
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v3, v5}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v3, v5}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 384
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v3, v5}, Lcom/android/settings/widget/SwitchBar;->setClickable(Z)V
+    invoke-virtual {v3, v5}, Lcom/android/settings_ex/widget/SwitchBar;->setClickable(Z)V
 
     .line 385
-    iget-object v3, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v3, v5}, Lcom/android/settings/widget/SwitchBar;->setFocusable(Z)V
+    invoke-virtual {v3, v5}, Lcom/android/settings_ex/widget/SwitchBar;->setFocusable(Z)V
 
     .line 386
     const-string v3, "PowerSavingModeUltra"
@@ -1484,7 +1484,7 @@
 
     move-result-object v4
 
-    iget-boolean v5, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->isSharedDevice:Z
+    iget-boolean v5, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->isSharedDevice:Z
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1529,7 +1529,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 407
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onStop()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onStop()V
 
     .line 408
     return-void
@@ -1551,21 +1551,21 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 434
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->isLockTaskMode()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->isLockTaskMode()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 435
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 436
-    iget-object v1, p0, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->mContext:Landroid/content/Context;
 
     const v2, 0x7f0e131c
 
@@ -1598,7 +1598,7 @@
     if-eqz v1, :cond_2
 
     .line 442
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -1608,7 +1608,7 @@
 
     const-string v4, "ON"
 
-    invoke-static {v1, v2, v3, v4}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3, v4}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 444
     :cond_2
@@ -1637,7 +1637,7 @@
     invoke-virtual {v0, v1, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 448
-    invoke-virtual {p0}, Lcom/android/settings/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/powersavingmode/PowerSavingModeUltra;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 

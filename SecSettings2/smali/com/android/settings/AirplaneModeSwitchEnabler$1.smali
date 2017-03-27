@@ -1,11 +1,11 @@
-.class Lcom/android/settings/AirplaneModeSwitchEnabler$1;
+.class Lcom/android/settings_ex/AirplaneModeSwitchEnabler$1;
 .super Landroid/os/Handler;
 .source "AirplaneModeSwitchEnabler.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/AirplaneModeSwitchEnabler;
+    value = Lcom/android/settings_ex/AirplaneModeSwitchEnabler;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/AirplaneModeSwitchEnabler;
+.field final synthetic this$0:Lcom/android/settings_ex/AirplaneModeSwitchEnabler;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/AirplaneModeSwitchEnabler;)V
+.method constructor <init>(Lcom/android/settings_ex/AirplaneModeSwitchEnabler;)V
     .locals 0
 
     .prologue
     .line 88
-    iput-object p1, p0, Lcom/android/settings/AirplaneModeSwitchEnabler$1;->this$0:Lcom/android/settings/AirplaneModeSwitchEnabler;
+    iput-object p1, p0, Lcom/android/settings_ex/AirplaneModeSwitchEnabler$1;->this$0:Lcom/android/settings_ex/AirplaneModeSwitchEnabler;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -49,10 +49,10 @@
 
     .line 93
     :pswitch_0
-    iget-object v0, p0, Lcom/android/settings/AirplaneModeSwitchEnabler$1;->this$0:Lcom/android/settings/AirplaneModeSwitchEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/AirplaneModeSwitchEnabler$1;->this$0:Lcom/android/settings_ex/AirplaneModeSwitchEnabler;
 
-    # invokes: Lcom/android/settings/AirplaneModeSwitchEnabler;->onAirplaneModeChanged()V
-    invoke-static {v0}, Lcom/android/settings/AirplaneModeSwitchEnabler;->access$000(Lcom/android/settings/AirplaneModeSwitchEnabler;)V
+    # invokes: Lcom/android/settings_ex/AirplaneModeSwitchEnabler;->onAirplaneModeChanged()V
+    invoke-static {v0}, Lcom/android/settings_ex/AirplaneModeSwitchEnabler;->access$000(Lcom/android/settings_ex/AirplaneModeSwitchEnabler;)V
 
     goto :goto_0
 

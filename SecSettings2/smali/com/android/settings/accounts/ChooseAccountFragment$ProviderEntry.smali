@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;
+.class Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;
 .super Ljava/lang/Object;
 .source "ChooseAccountFragment.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accounts/ChooseAccountFragment;
+    value = Lcom/android/settings_ex/accounts/ChooseAccountFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Ljava/lang/Comparable",
         "<",
-        "Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;",
+        "Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;",
         ">;"
     }
 .end annotation
@@ -44,42 +44,42 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 141
-    iput-object p1, p0, Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;->name:Ljava/lang/CharSequence;
+    iput-object p1, p0, Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;->name:Ljava/lang/CharSequence;
 
     .line 142
-    iput-object p2, p0, Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;->type:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;->type:Ljava/lang/String;
 
     .line 143
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;)Ljava/lang/String;
+.method static synthetic access$200(Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;
+    .param p0, "x0"    # Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;
 
     .prologue
     .line 137
-    iget-object v0, p0, Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;->type:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;->type:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;)Ljava/lang/CharSequence;
+.method static synthetic access$300(Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;)Ljava/lang/CharSequence;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;
+    .param p0, "x0"    # Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;
 
     .prologue
     .line 137
-    iget-object v0, p0, Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;->name:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;->name:Ljava/lang/CharSequence;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public compareTo(Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;)I
+.method public compareTo(Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;)I
     .locals 4
-    .param p1, "another"    # Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;
+    .param p1, "another"    # Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;
 
     .prologue
     const/4 v1, 0x1
@@ -89,7 +89,7 @@
     .line 147
     const-string v2, "com.osp.app.signin"
 
-    iget-object v3, p0, Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;->type:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;->type:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -106,7 +106,7 @@
     :cond_1
     const-string v2, "com.osp.app.signin"
 
-    iget-object v3, p1, Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;->type:Ljava/lang/String;
+    iget-object v3, p1, Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;->type:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -123,7 +123,7 @@
     :cond_2
     const-string v2, "com.samsung.android.coreapps"
 
-    iget-object v3, p0, Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;->type:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;->type:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -134,7 +134,7 @@
     .line 157
     const-string v2, "com.osp.app.signin"
 
-    iget-object v3, p1, Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;->type:Ljava/lang/String;
+    iget-object v3, p1, Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;->type:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -151,7 +151,7 @@
     :cond_3
     const-string v2, "com.samsung.android.coreapps"
 
-    iget-object v3, p1, Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;->type:Ljava/lang/String;
+    iget-object v3, p1, Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;->type:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -162,7 +162,7 @@
     .line 165
     const-string v2, "com.osp.app.signin"
 
-    iget-object v3, p0, Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;->type:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;->type:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -177,12 +177,12 @@
 
     .line 173
     :cond_4
-    iget-object v2, p0, Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;->name:Ljava/lang/CharSequence;
+    iget-object v2, p0, Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;->name:Ljava/lang/CharSequence;
 
     if-eqz v2, :cond_0
 
     .line 176
-    iget-object v0, p1, Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;->name:Ljava/lang/CharSequence;
+    iget-object v0, p1, Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;->name:Ljava/lang/CharSequence;
 
     if-nez v0, :cond_5
 
@@ -193,9 +193,9 @@
 
     .line 179
     :cond_5
-    iget-object v0, p0, Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;->name:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;->name:Ljava/lang/CharSequence;
 
-    iget-object v1, p1, Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;->name:Ljava/lang/CharSequence;
+    iget-object v1, p1, Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;->name:Ljava/lang/CharSequence;
 
     invoke-static {v0, v1}, Lcom/android/internal/util/CharSequences;->compareToIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)I
 
@@ -210,10 +210,10 @@
 
     .prologue
     .line 137
-    check-cast p1, Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;
+    check-cast p1, Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;->compareTo(Lcom/android/settings/accounts/ChooseAccountFragment$ProviderEntry;)I
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;->compareTo(Lcom/android/settings_ex/accounts/ChooseAccountFragment$ProviderEntry;)I
 
     move-result v0
 

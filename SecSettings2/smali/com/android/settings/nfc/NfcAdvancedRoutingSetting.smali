@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;
+.class public Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;
 .super Landroid/app/Activity;
 .source "NfcAdvancedRoutingSetting.java"
 
@@ -9,13 +9,13 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$RadioAdapter;
+        Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$RadioAdapter;
     }
 .end annotation
 
 
 # instance fields
-.field private adapter:Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$RadioAdapter;
+.field private adapter:Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$RadioAdapter;
 
 .field private mCardEmuManager:Landroid/nfc/cardemulation/CardEmulation;
 
@@ -62,58 +62,58 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;)Landroid/nfc/cardemulation/CardEmulation;
+.method static synthetic access$000(Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;)Landroid/nfc/cardemulation/CardEmulation;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;
+    .param p0, "x0"    # Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mCardEmuManager:Landroid/nfc/cardemulation/CardEmulation;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mCardEmuManager:Landroid/nfc/cardemulation/CardEmulation;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;)Landroid/nfc/NfcAdapter;
+.method static synthetic access$100(Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;)Landroid/nfc/NfcAdapter;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;
+    .param p0, "x0"    # Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;)Ljava/lang/String;
+.method static synthetic access$200(Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;
+    .param p0, "x0"    # Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mCurrentKey:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mCurrentKey:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$202(Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$202(Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;
+    .param p0, "x0"    # Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 58
-    iput-object p1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mCurrentKey:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mCurrentKey:Ljava/lang/String;
 
     return-object p1
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;)Landroid/widget/ListView;
+.method static synthetic access$300(Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;)Landroid/widget/ListView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;
+    .param p0, "x0"    # Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
 
     return-object v0
 .end method
@@ -126,7 +126,7 @@
 
     .prologue
     .line 155
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mKeyList:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mKeyList:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -143,7 +143,7 @@
 
     .prologue
     .line 151
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mKeyList:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mKeyList:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
 
@@ -173,7 +173,7 @@
 
     .line 209
     :pswitch_0
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
@@ -183,7 +183,7 @@
 
     .line 213
     :pswitch_1
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
@@ -212,42 +212,42 @@
     .line 82
     const v1, 0x7f040148
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->setContentView(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->setContentView(I)V
 
     .line 84
     invoke-static {p0}, Landroid/nfc/NfcAdapter;->getDefaultAdapter(Landroid/content/Context;)Landroid/nfc/NfcAdapter;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     .line 85
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     invoke-static {v1}, Landroid/nfc/cardemulation/CardEmulation;->getInstance(Landroid/nfc/NfcAdapter;)Landroid/nfc/cardemulation/CardEmulation;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mCardEmuManager:Landroid/nfc/cardemulation/CardEmulation;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mCardEmuManager:Landroid/nfc/cardemulation/CardEmulation;
 
     .line 87
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mModeItem:Ljava/util/ArrayList;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mModeItem:Ljava/util/ArrayList;
 
     .line 88
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mKeyList:Ljava/util/ArrayList;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mKeyList:Ljava/util/ArrayList;
 
     .line 91
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mModeItem:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mModeItem:Ljava/util/ArrayList;
 
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -260,16 +260,16 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 92
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mKeyList:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mKeyList:Ljava/util/ArrayList;
 
     const-string v2, "UICC"
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 95
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mModeItem:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mModeItem:Ljava/util/ArrayList;
 
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -282,7 +282,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 96
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mKeyList:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mKeyList:Ljava/util/ArrayList;
 
     const-string v2, "DH"
 
@@ -314,9 +314,9 @@
     if-nez v1, :cond_0
 
     .line 101
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mModeItem:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mModeItem:Ljava/util/ArrayList;
 
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -329,7 +329,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 102
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mKeyList:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mKeyList:Ljava/util/ArrayList;
 
     const-string v2, "ESE"
 
@@ -337,9 +337,9 @@
 
     .line 107
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mModeItem:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mModeItem:Ljava/util/ArrayList;
 
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -352,7 +352,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 108
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mKeyList:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mKeyList:Ljava/util/ArrayList;
 
     const-string v2, "AUTO_SELECT"
 
@@ -361,16 +361,16 @@
     .line 111
     const v1, 0x7f0d0377
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/ListView;
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
 
     .line 113
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->getResources()Landroid/content/res/Resources;
 
     move-result-object v10
 
@@ -400,7 +400,7 @@
 
     .line 117
     .local v4, "divider_inset_size":I
-    invoke-static {p0}, Lcom/android/settings/Utils;->isRTL(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/android/settings_ex/Utils;->isRTL(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -409,7 +409,7 @@
     .line 118
     new-instance v0, Landroid/graphics/drawable/InsetDrawable;
 
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1}, Landroid/widget/ListView;->getDivider()Landroid/graphics/drawable/Drawable;
 
@@ -425,15 +425,15 @@
 
     .line 119
     .local v0, "insetdivider":Landroid/graphics/drawable/InsetDrawable;
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ListView;->setDivider(Landroid/graphics/drawable/Drawable;)V
 
     .line 125
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mModeItem:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mModeItem:Ljava/util/ArrayList;
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mModeItem:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mModeItem:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -449,23 +449,23 @@
 
     .line 126
     .local v9, "items":[Ljava/lang/String;
-    new-instance v1, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$RadioAdapter;
+    new-instance v1, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$RadioAdapter;
 
     const v2, 0x7f040125
 
-    invoke-direct {v1, p0, v2, v9}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$RadioAdapter;-><init>(Landroid/content/Context;I[Ljava/lang/String;)V
+    invoke-direct {v1, p0, v2, v9}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$RadioAdapter;-><init>(Landroid/content/Context;I[Ljava/lang/String;)V
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->adapter:Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$RadioAdapter;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->adapter:Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$RadioAdapter;
 
     .line 128
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->adapter:Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$RadioAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->adapter:Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$RadioAdapter;
 
     invoke-virtual {v1, v2}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 129
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
 
     const/4 v2, 0x0
 
@@ -473,19 +473,19 @@
 
     .line 132
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     invoke-virtual {v1}, Landroid/nfc/NfcAdapter;->getDefaultRoutingDestination()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mCurrentRoute:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mCurrentRoute:Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 137
     :goto_1
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mCardEmuManager:Landroid/nfc/cardemulation/CardEmulation;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mCardEmuManager:Landroid/nfc/cardemulation/CardEmulation;
 
     invoke-virtual {v1}, Landroid/nfc/cardemulation/CardEmulation;->supportsAutoRouting()Z
 
@@ -494,11 +494,11 @@
     if-eqz v1, :cond_2
 
     .line 138
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
 
     const-string v2, "AUTO_SELECT"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->getItemPosition(Ljava/lang/String;)I
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->getItemPosition(Ljava/lang/String;)I
 
     move-result v2
 
@@ -509,16 +509,16 @@
     .line 139
     const-string v1, "AUTO_SELECT"
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mCurrentKey:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mCurrentKey:Ljava/lang/String;
 
     .line 145
     :goto_2
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1, p0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 146
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
 
     const/4 v2, 0x2
 
@@ -533,7 +533,7 @@
     :cond_1
     new-instance v0, Landroid/graphics/drawable/InsetDrawable;
 
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1}, Landroid/widget/ListView;->getDivider()Landroid/graphics/drawable/Drawable;
 
@@ -551,7 +551,7 @@
 
     .line 122
     .restart local v0    # "insetdivider":Landroid/graphics/drawable/InsetDrawable;
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ListView;->setDivider(Landroid/graphics/drawable/Drawable;)V
 
@@ -575,11 +575,11 @@
     .line 141
     .end local v8    # "e":Ljava/lang/Exception;
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mListView:Landroid/widget/ListView;
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mCurrentRoute:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mCurrentRoute:Ljava/lang/String;
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->getItemPosition(Ljava/lang/String;)I
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->getItemPosition(Ljava/lang/String;)I
 
     move-result v2
 
@@ -588,9 +588,9 @@
     invoke-virtual {v1, v2, v3}, Landroid/widget/ListView;->setItemChecked(IZ)V
 
     .line 142
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mCurrentRoute:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mCurrentRoute:Ljava/lang/String;
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mCurrentKey:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mCurrentKey:Ljava/lang/String;
 
     goto :goto_2
 .end method
@@ -636,7 +636,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0, p3}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->getItemKey(I)Ljava/lang/String;
+    invoke-virtual {p0, p3}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->getItemKey(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -652,7 +652,7 @@
 
     .line 180
     :try_start_0
-    invoke-virtual {p0, p3}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->getItemKey(I)Ljava/lang/String;
+    invoke-virtual {p0, p3}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->getItemKey(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -665,17 +665,17 @@
     if-eqz v1, :cond_0
 
     .line 181
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mCardEmuManager:Landroid/nfc/cardemulation/CardEmulation;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mCardEmuManager:Landroid/nfc/cardemulation/CardEmulation;
 
     invoke-virtual {v1}, Landroid/nfc/cardemulation/CardEmulation;->enableAutoRouting()Z
 
     .line 182
     const-string v1, "AUTO_SELECT"
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->mCurrentKey:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->mCurrentKey:Ljava/lang/String;
 
     .line 183
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->finish()V
 
     .line 200
     :goto_0
@@ -683,11 +683,11 @@
 
     .line 187
     :cond_0
-    invoke-virtual {p0, p3}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->getItemKey(I)Ljava/lang/String;
+    invoke-virtual {p0, p3}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->getItemKey(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->showErrorDialog(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->showErrorDialog(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -743,7 +743,7 @@
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
     .line 167
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -758,7 +758,7 @@
     if-ne v0, v1, :cond_1
 
     .line 168
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
@@ -771,7 +771,7 @@
 
     .line 170
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -786,7 +786,7 @@
     if-ne v0, v1, :cond_0
 
     .line 171
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
@@ -821,9 +821,9 @@
 
     const v2, 0x104000a
 
-    new-instance v3, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$2;
+    new-instance v3, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$2;
 
-    invoke-direct {v3, p0, p1}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$2;-><init>(Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;Ljava/lang/String;)V
+    invoke-direct {v3, p0, p1}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$2;-><init>(Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;Ljava/lang/String;)V
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -831,9 +831,9 @@
 
     const/high16 v2, 0x1040000
 
-    new-instance v3, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$1;
+    new-instance v3, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$1;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$1;-><init>(Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$1;-><init>(Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;)V
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -850,9 +850,9 @@
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
     .line 285
-    new-instance v1, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$3;
+    new-instance v1, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$3;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$3;-><init>(Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$3;-><init>(Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;)V
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 

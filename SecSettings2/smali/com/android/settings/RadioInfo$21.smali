@@ -1,4 +1,4 @@
-.class Lcom/android/settings/RadioInfo$21;
+.class Lcom/android/settings_ex/RadioInfo$21;
 .super Ljava/lang/Object;
 .source "RadioInfo.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/RadioInfo;
+    value = Lcom/android/settings_ex/RadioInfo;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/RadioInfo;
+.field final synthetic this$0:Lcom/android/settings_ex/RadioInfo;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/RadioInfo;)V
+.method constructor <init>(Lcom/android/settings_ex/RadioInfo;)V
     .locals 0
 
     .prologue
     .line 1117
-    iput-object p1, p0, Lcom/android/settings/RadioInfo$21;->this$0:Lcom/android/settings/RadioInfo;
+    iput-object p1, p0, Lcom/android/settings_ex/RadioInfo$21;->this$0:Lcom/android/settings_ex/RadioInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,10 +42,10 @@
 
     .prologue
     .line 1119
-    iget-object v0, p0, Lcom/android/settings/RadioInfo$21;->this$0:Lcom/android/settings/RadioInfo;
+    iget-object v0, p0, Lcom/android/settings_ex/RadioInfo$21;->this$0:Lcom/android/settings_ex/RadioInfo;
 
-    # getter for: Lcom/android/settings/RadioInfo;->updateSmscButton:Landroid/widget/Button;
-    invoke-static {v0}, Lcom/android/settings/RadioInfo;->access$2400(Lcom/android/settings/RadioInfo;)Landroid/widget/Button;
+    # getter for: Lcom/android/settings_ex/RadioInfo;->updateSmscButton:Landroid/widget/Button;
+    invoke-static {v0}, Lcom/android/settings_ex/RadioInfo;->access$2400(Lcom/android/settings_ex/RadioInfo;)Landroid/widget/Button;
 
     move-result-object v0
 
@@ -54,17 +54,17 @@
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 1120
-    iget-object v0, p0, Lcom/android/settings/RadioInfo$21;->this$0:Lcom/android/settings/RadioInfo;
+    iget-object v0, p0, Lcom/android/settings_ex/RadioInfo$21;->this$0:Lcom/android/settings_ex/RadioInfo;
 
-    # getter for: Lcom/android/settings/RadioInfo;->phone:Lcom/android/internal/telephony/Phone;
-    invoke-static {v0}, Lcom/android/settings/RadioInfo;->access$2000(Lcom/android/settings/RadioInfo;)Lcom/android/internal/telephony/Phone;
+    # getter for: Lcom/android/settings_ex/RadioInfo;->phone:Lcom/android/internal/telephony/Phone;
+    invoke-static {v0}, Lcom/android/settings_ex/RadioInfo;->access$2000(Lcom/android/settings_ex/RadioInfo;)Lcom/android/internal/telephony/Phone;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/RadioInfo$21;->this$0:Lcom/android/settings/RadioInfo;
+    iget-object v1, p0, Lcom/android/settings_ex/RadioInfo$21;->this$0:Lcom/android/settings_ex/RadioInfo;
 
-    # getter for: Lcom/android/settings/RadioInfo;->smsc:Landroid/widget/EditText;
-    invoke-static {v1}, Lcom/android/settings/RadioInfo;->access$2300(Lcom/android/settings/RadioInfo;)Landroid/widget/EditText;
+    # getter for: Lcom/android/settings_ex/RadioInfo;->smsc:Landroid/widget/EditText;
+    invoke-static {v1}, Lcom/android/settings_ex/RadioInfo;->access$2300(Lcom/android/settings_ex/RadioInfo;)Landroid/widget/EditText;
 
     move-result-object v1
 
@@ -76,10 +76,10 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/RadioInfo$21;->this$0:Lcom/android/settings/RadioInfo;
+    iget-object v2, p0, Lcom/android/settings_ex/RadioInfo$21;->this$0:Lcom/android/settings_ex/RadioInfo;
 
-    # getter for: Lcom/android/settings/RadioInfo;->mHandler:Landroid/os/Handler;
-    invoke-static {v2}, Lcom/android/settings/RadioInfo;->access$4600(Lcom/android/settings/RadioInfo;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/RadioInfo;->mHandler:Landroid/os/Handler;
+    invoke-static {v2}, Lcom/android/settings_ex/RadioInfo;->access$4600(Lcom/android/settings_ex/RadioInfo;)Landroid/os/Handler;
 
     move-result-object v2
 

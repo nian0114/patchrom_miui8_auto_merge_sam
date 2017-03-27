@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiSettings$41;
+.class Lcom/android/settings_ex/wifi/WifiSettings$41;
 .super Ljava/lang/Object;
 .source "WifiSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSettings;->showMaliciousHotspotDialog(Ljava/lang/String;Landroid/net/wifi/WifiConfiguration;ILandroid/net/wifi/WifiManager$ActionListener;Ljava/lang/String;)V
+    value = Lcom/android/settings_ex/wifi/WifiSettings;->showMaliciousHotspotDialog(Ljava/lang/String;Landroid/net/wifi/WifiConfiguration;ILandroid/net/wifi/WifiManager$ActionListener;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSettings;)V
     .locals 0
 
     .prologue
     .line 6282
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSettings$41;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSettings$41;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,12 +42,12 @@
 
     .prologue
     .line 6284
-    iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings$41;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WifiSettings$41;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
     const/4 v1, 0x0
 
-    # setter for: Lcom/android/settings/wifi/WifiSettings;->skipMaliciousHotspotCheck:Z
-    invoke-static {v0, v1}, Lcom/android/settings/wifi/WifiSettings;->access$5102(Lcom/android/settings/wifi/WifiSettings;Z)Z
+    # setter for: Lcom/android/settings_ex/wifi/WifiSettings;->skipMaliciousHotspotCheck:Z
+    invoke-static {v0, v1}, Lcom/android/settings_ex/wifi/WifiSettings;->access$5102(Lcom/android/settings_ex/wifi/WifiSettings;Z)Z
 
     .line 6285
     return-void

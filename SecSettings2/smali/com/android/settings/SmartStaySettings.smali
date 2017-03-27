@@ -1,10 +1,10 @@
-.class public Lcom/android/settings/SmartStaySettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/SmartStaySettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "SmartStaySettings.java"
 
 # interfaces
 .implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # instance fields
@@ -14,7 +14,7 @@
 
 .field private mSmartStayObserver:Landroid/database/ContentObserver;
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 .field private mView:Landroid/view/View;
 
@@ -25,34 +25,34 @@
 
     .prologue
     .line 45
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 49
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/SmartStaySettings;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/SmartStaySettings;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     .line 52
-    new-instance v0, Lcom/android/settings/SmartStaySettings$1;
+    new-instance v0, Lcom/android/settings_ex/SmartStaySettings$1;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/SmartStaySettings$1;-><init>(Lcom/android/settings/SmartStaySettings;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/SmartStaySettings$1;-><init>(Lcom/android/settings_ex/SmartStaySettings;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/SmartStaySettings;->mSmartStayObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/SmartStaySettings;->mSmartStayObserver:Landroid/database/ContentObserver;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/SmartStaySettings;)Lcom/android/settings/widget/SwitchBar;
+.method static synthetic access$000(Lcom/android/settings_ex/SmartStaySettings;)Lcom/android/settings_ex/widget/SwitchBar;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/SmartStaySettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/SmartStaySettings;
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/android/settings/SmartStaySettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/SmartStaySettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     return-object v0
 .end method
@@ -62,19 +62,19 @@
 
     .prologue
     .line 265
-    iget-object v0, p0, Lcom/android/settings/SmartStaySettings;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/SmartStaySettings;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
     .line 266
-    iget-object v0, p0, Lcom/android/settings/SmartStaySettings;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/SmartStaySettings;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 267
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/SmartStaySettings;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/SmartStaySettings;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     .line 269
     :cond_0
@@ -94,12 +94,12 @@
     const/4 v6, 0x0
 
     .line 197
-    invoke-direct {p0}, Lcom/android/settings/SmartStaySettings;->dismissAllDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SmartStaySettings;->dismissAllDialog()V
 
     .line 199
     const v4, 0x7f0e0fb4
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/SmartStaySettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/SmartStaySettings;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -107,7 +107,7 @@
     .local v1, "galaxyTalkbackString":Ljava/lang/String;
     const v4, 0x7f0e111a
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/SmartStaySettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/SmartStaySettings;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -119,7 +119,7 @@
 
     aput-object v2, v5, v6
 
-    invoke-virtual {p0, v4, v5}, Lcom/android/settings/SmartStaySettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v4, v5}, Lcom/android/settings_ex/SmartStaySettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -129,9 +129,9 @@
 
     .line 204
     .local v0, "dialogSummary":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/SmartStaySettings;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/SmartStaySettings;->mContext:Landroid/content/Context;
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->isGEDTalkBackEnabled(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->isGEDTalkBackEnabled(Landroid/content/Context;)Z
 
     move-result v4
 
@@ -144,7 +144,7 @@
 
     aput-object v1, v4, v7
 
-    invoke-virtual {p0, v9, v4}, Lcom/android/settings/SmartStaySettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v9, v4}, Lcom/android/settings_ex/SmartStaySettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -152,7 +152,7 @@
     :goto_0
     new-instance v4, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/SmartStaySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SmartStaySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -164,9 +164,9 @@
 
     const v5, 0x7f0e081f
 
-    new-instance v6, Lcom/android/settings/SmartStaySettings$4;
+    new-instance v6, Lcom/android/settings_ex/SmartStaySettings$4;
 
-    invoke-direct {v6, p0}, Lcom/android/settings/SmartStaySettings$4;-><init>(Lcom/android/settings/SmartStaySettings;)V
+    invoke-direct {v6, p0}, Lcom/android/settings_ex/SmartStaySettings$4;-><init>(Lcom/android/settings_ex/SmartStaySettings;)V
 
     invoke-virtual {v4, v5, v6}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -184,19 +184,19 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/SmartStaySettings;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iput-object v4, p0, Lcom/android/settings_ex/SmartStaySettings;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     .line 225
-    iget-object v4, p0, Lcom/android/settings/SmartStaySettings;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/SmartStaySettings;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
-    new-instance v5, Lcom/android/settings/SmartStaySettings$5;
+    new-instance v5, Lcom/android/settings_ex/SmartStaySettings$5;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/SmartStaySettings$5;-><init>(Lcom/android/settings/SmartStaySettings;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/SmartStaySettings$5;-><init>(Lcom/android/settings_ex/SmartStaySettings;)V
 
     invoke-virtual {v4, v5}, Landroid/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 232
-    iget-object v4, p0, Lcom/android/settings/SmartStaySettings;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iget-object v4, p0, Lcom/android/settings_ex/SmartStaySettings;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v4}, Landroid/app/AlertDialog;->show()V
 
@@ -207,7 +207,7 @@
     :cond_0
     const-string v4, "TalkBack"
 
-    invoke-virtual {p0}, Lcom/android/settings/SmartStaySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SmartStaySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -215,7 +215,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/android/settings/Utils;->getEnabledTalkbackName(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v5}, Lcom/android/settings_ex/Utils;->getEnabledTalkbackName(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -228,7 +228,7 @@
     .line 208
     const v4, 0x7f0e0a20
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/SmartStaySettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/SmartStaySettings;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -240,7 +240,7 @@
 
     aput-object v1, v4, v7
 
-    invoke-virtual {p0, v9, v4}, Lcom/android/settings/SmartStaySettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v9, v4}, Lcom/android/settings_ex/SmartStaySettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -260,10 +260,10 @@
     const/4 v6, 0x0
 
     .line 236
-    invoke-direct {p0}, Lcom/android/settings/SmartStaySettings;->dismissAllDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SmartStaySettings;->dismissAllDialog()V
 
     .line 237
-    invoke-virtual {p0, v5}, Lcom/android/settings/SmartStaySettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/SmartStaySettings;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -275,7 +275,7 @@
 
     aput-object v1, v4, v6
 
-    invoke-virtual {p0, v3, v4}, Lcom/android/settings/SmartStaySettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v3, v4}, Lcom/android/settings_ex/SmartStaySettings;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -283,7 +283,7 @@
     .local v2, "smartStayTitle":Ljava/lang/String;
     const v3, 0x7f0e0a0e
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/SmartStaySettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/SmartStaySettings;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -291,13 +291,13 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/SmartStaySettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/SmartStaySettings;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
     aput-object v5, v4, v6
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/SmartStaySettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/SmartStaySettings;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -305,7 +305,7 @@
 
     const/4 v5, 0x2
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/SmartStaySettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/SmartStaySettings;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
@@ -319,7 +319,7 @@
     .local v0, "popup_msg":Ljava/lang/String;
     new-instance v3, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/SmartStaySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SmartStaySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -331,9 +331,9 @@
 
     const v4, 0x7f0e081f
 
-    new-instance v5, Lcom/android/settings/SmartStaySettings$6;
+    new-instance v5, Lcom/android/settings_ex/SmartStaySettings$6;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/SmartStaySettings$6;-><init>(Lcom/android/settings/SmartStaySettings;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/SmartStaySettings$6;-><init>(Lcom/android/settings_ex/SmartStaySettings;)V
 
     invoke-virtual {v3, v4, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -351,19 +351,19 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/SmartStaySettings;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iput-object v3, p0, Lcom/android/settings_ex/SmartStaySettings;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     .line 254
-    iget-object v3, p0, Lcom/android/settings/SmartStaySettings;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/SmartStaySettings;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
-    new-instance v4, Lcom/android/settings/SmartStaySettings$7;
+    new-instance v4, Lcom/android/settings_ex/SmartStaySettings$7;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/SmartStaySettings$7;-><init>(Lcom/android/settings/SmartStaySettings;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/SmartStaySettings$7;-><init>(Lcom/android/settings_ex/SmartStaySettings;)V
 
     invoke-virtual {v3, v4}, Landroid/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 261
-    iget-object v3, p0, Lcom/android/settings/SmartStaySettings;->mAllDisabledDialog:Landroid/app/AlertDialog;
+    iget-object v3, p0, Lcom/android/settings_ex/SmartStaySettings;->mAllDisabledDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v3}, Landroid/app/AlertDialog;->show()V
 
@@ -389,27 +389,27 @@
 
     .prologue
     .line 88
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 90
-    invoke-virtual {p0}, Lcom/android/settings/SmartStaySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SmartStaySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 92
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/SmartStaySettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v1, p0, Lcom/android/settings_ex/SmartStaySettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 93
-    iget-object v1, p0, Lcom/android/settings/SmartStaySettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/SmartStaySettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v1, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 94
     return-void
@@ -431,14 +431,14 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 153
-    invoke-direct {p0}, Lcom/android/settings/SmartStaySettings;->makeTalkBackDisablePopup()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SmartStaySettings;->makeTalkBackDisablePopup()V
 
     .line 171
     :goto_0
@@ -450,7 +450,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isUniversalSwitchEnabled(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isUniversalSwitchEnabled(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -460,20 +460,20 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isUniversalSwitchSupportMultiUserKnoxMode(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isUniversalSwitchSupportMultiUserKnoxMode(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 157
-    invoke-direct {p0}, Lcom/android/settings/SmartStaySettings;->maketurnOffUniversalPopup()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SmartStaySettings;->maketurnOffUniversalPopup()V
 
     goto :goto_0
 
     .line 160
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/SmartStaySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SmartStaySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -487,7 +487,7 @@
 
     .line 162
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/SmartStaySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SmartStaySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -496,9 +496,9 @@
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 163
-    iget-object v1, p0, Lcom/android/settings/SmartStaySettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/SmartStaySettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, v3}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v1, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 164
     new-instance v0, Landroid/os/Handler;
@@ -507,9 +507,9 @@
 
     .line 165
     .local v0, "mHandler":Landroid/os/Handler;
-    new-instance v1, Lcom/android/settings/SmartStaySettings$2;
+    new-instance v1, Lcom/android/settings_ex/SmartStaySettings$2;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/SmartStaySettings$2;-><init>(Lcom/android/settings/SmartStaySettings;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/SmartStaySettings$2;-><init>(Lcom/android/settings_ex/SmartStaySettings;)V
 
     const-wide/16 v2, 0x1f4
 
@@ -524,12 +524,12 @@
 
     .prologue
     .line 130
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 131
     const-string v6, "layout_inflater"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/SmartStaySettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/SmartStaySettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -547,7 +547,7 @@
 
     .line 133
     .local v3, "newView":Landroid/view/View;
-    invoke-virtual {p0}, Lcom/android/settings/SmartStaySettings;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SmartStaySettings;->getView()Landroid/view/View;
 
     move-result-object v5
 
@@ -561,22 +561,22 @@
     invoke-virtual {v5, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     .line 137
-    iget-object v6, p0, Lcom/android/settings/SmartStaySettings;->mContext:Landroid/content/Context;
+    iget-object v6, p0, Lcom/android/settings_ex/SmartStaySettings;->mContext:Landroid/content/Context;
 
-    invoke-static {v6}, Lcom/android/settings/Utils;->isFolderModel(Landroid/content/Context;)Z
+    invoke-static {v6}, Lcom/android/settings_ex/Utils;->isFolderModel(Landroid/content/Context;)Z
 
     move-result v6
 
     if-eqz v6, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v6
 
     if-eqz v6, :cond_0
 
     .line 138
-    iget-object v6, p0, Lcom/android/settings/SmartStaySettings;->mView:Landroid/view/View;
+    iget-object v6, p0, Lcom/android/settings_ex/SmartStaySettings;->mView:Landroid/view/View;
 
     const v7, 0x7f0d04c7
 
@@ -595,7 +595,7 @@
     .line 142
     .end local v1    # "dualFolderLayout":Landroid/widget/LinearLayout;
     :cond_0
-    iget-object v6, p0, Lcom/android/settings/SmartStaySettings;->mView:Landroid/view/View;
+    iget-object v6, p0, Lcom/android/settings_ex/SmartStaySettings;->mView:Landroid/view/View;
 
     const v7, 0x7f0d04c4
 
@@ -641,34 +641,34 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/SmartStaySettings;->mView:Landroid/view/View;
+    iput-object v3, p0, Lcom/android/settings_ex/SmartStaySettings;->mView:Landroid/view/View;
 
     .line 71
-    iget-object v3, p0, Lcom/android/settings/SmartStaySettings;->mView:Landroid/view/View;
+    iget-object v3, p0, Lcom/android/settings_ex/SmartStaySettings;->mView:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/SmartStaySettings;->mContext:Landroid/content/Context;
+    iput-object v3, p0, Lcom/android/settings_ex/SmartStaySettings;->mContext:Landroid/content/Context;
 
     .line 73
-    iget-object v3, p0, Lcom/android/settings/SmartStaySettings;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/SmartStaySettings;->mContext:Landroid/content/Context;
 
-    invoke-static {v3}, Lcom/android/settings/Utils;->isFolderModel(Landroid/content/Context;)Z
+    invoke-static {v3}, Lcom/android/settings_ex/Utils;->isFolderModel(Landroid/content/Context;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
     .line 74
-    iget-object v3, p0, Lcom/android/settings/SmartStaySettings;->mView:Landroid/view/View;
+    iget-object v3, p0, Lcom/android/settings_ex/SmartStaySettings;->mView:Landroid/view/View;
 
     const v4, 0x7f0d04c7
 
@@ -687,7 +687,7 @@
     .line 78
     .end local v1    # "dualFolderLayout":Landroid/widget/LinearLayout;
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/SmartStaySettings;->mView:Landroid/view/View;
+    iget-object v3, p0, Lcom/android/settings_ex/SmartStaySettings;->mView:Landroid/view/View;
 
     const v4, 0x7f0d04c4
 
@@ -714,7 +714,7 @@
 
     .line 83
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/SmartStaySettings;->mView:Landroid/view/View;
+    iget-object v3, p0, Lcom/android/settings_ex/SmartStaySettings;->mView:Landroid/view/View;
 
     return-object v3
 .end method
@@ -724,22 +724,22 @@
 
     .prologue
     .line 120
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroy()V
 
     .line 122
-    iget-object v0, p0, Lcom/android/settings/SmartStaySettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/SmartStaySettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_0
 
     .line 123
-    iget-object v0, p0, Lcom/android/settings/SmartStaySettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/SmartStaySettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 124
-    iget-object v0, p0, Lcom/android/settings/SmartStaySettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/SmartStaySettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 126
     :cond_0
@@ -751,25 +751,25 @@
 
     .prologue
     .line 98
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 100
-    iget-object v0, p0, Lcom/android/settings/SmartStaySettings;->mSmartStayObserver:Landroid/database/ContentObserver;
+    iget-object v0, p0, Lcom/android/settings_ex/SmartStaySettings;->mSmartStayObserver:Landroid/database/ContentObserver;
 
     if-eqz v0, :cond_0
 
     .line 101
-    invoke-virtual {p0}, Lcom/android/settings/SmartStaySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SmartStaySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/SmartStaySettings;->mSmartStayObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/SmartStaySettings;->mSmartStayObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 103
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/SmartStaySettings;->dismissAllDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SmartStaySettings;->dismissAllDialog()V
 
     .line 104
     return-void
@@ -784,15 +784,15 @@
     const/4 v1, 0x0
 
     .line 108
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 109
-    iget-object v2, p0, Lcom/android/settings/SmartStaySettings;->mSmartStayObserver:Landroid/database/ContentObserver;
+    iget-object v2, p0, Lcom/android/settings_ex/SmartStaySettings;->mSmartStayObserver:Landroid/database/ContentObserver;
 
     if-eqz v2, :cond_0
 
     .line 110
-    invoke-virtual {p0}, Lcom/android/settings/SmartStaySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SmartStaySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -802,20 +802,20 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/SmartStaySettings;->mSmartStayObserver:Landroid/database/ContentObserver;
+    iget-object v4, p0, Lcom/android/settings_ex/SmartStaySettings;->mSmartStayObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v2, v3, v0, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 112
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/SmartStaySettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/SmartStaySettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v2, :cond_1
 
     .line 113
-    iget-object v2, p0, Lcom/android/settings/SmartStaySettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/SmartStaySettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {p0}, Lcom/android/settings/SmartStaySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SmartStaySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -828,12 +828,12 @@
     if-eqz v3, :cond_2
 
     :goto_0
-    invoke-virtual {v2, v0}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v2, v0}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 114
-    iget-object v0, p0, Lcom/android/settings/SmartStaySettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/SmartStaySettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 116
     :cond_1
@@ -862,14 +862,14 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 177
-    invoke-direct {p0}, Lcom/android/settings/SmartStaySettings;->makeTalkBackDisablePopup()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SmartStaySettings;->makeTalkBackDisablePopup()V
 
     .line 194
     :goto_0
@@ -881,20 +881,20 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isUniversalSwitchEnabled(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isUniversalSwitchEnabled(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 180
-    invoke-direct {p0}, Lcom/android/settings/SmartStaySettings;->maketurnOffUniversalPopup()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SmartStaySettings;->maketurnOffUniversalPopup()V
 
     goto :goto_0
 
     .line 183
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/SmartStaySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SmartStaySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -908,7 +908,7 @@
 
     .line 185
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/SmartStaySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SmartStaySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -917,9 +917,9 @@
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 186
-    iget-object v1, p0, Lcom/android/settings/SmartStaySettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/SmartStaySettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, v3}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v1, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 187
     new-instance v0, Landroid/os/Handler;
@@ -928,9 +928,9 @@
 
     .line 188
     .local v0, "mHandler":Landroid/os/Handler;
-    new-instance v1, Lcom/android/settings/SmartStaySettings$3;
+    new-instance v1, Lcom/android/settings_ex/SmartStaySettings$3;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/SmartStaySettings$3;-><init>(Lcom/android/settings/SmartStaySettings;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/SmartStaySettings$3;-><init>(Lcom/android/settings_ex/SmartStaySettings;)V
 
     const-wide/16 v2, 0x1f4
 

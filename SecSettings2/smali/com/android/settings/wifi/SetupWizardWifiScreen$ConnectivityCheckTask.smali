@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;
+.class Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;
 .super Landroid/os/AsyncTask;
 .source "SetupWizardWifiScreen.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    value = Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,30 +26,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+.method private constructor <init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
     .locals 0
 
     .prologue
     .line 121
-    iput-object p1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;Lcom/android/settings/wifi/SetupWizardWifiScreen$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/wifi/SetupWizardWifiScreen;
-    .param p2, "x1"    # Lcom/android/settings/wifi/SetupWizardWifiScreen$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
+    .param p2, "x1"    # Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$1;
 
     .prologue
     .line 121
-    invoke-direct {p0, p1}, Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;-><init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;-><init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
 
     return-void
 .end method
@@ -65,7 +65,7 @@
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "x0":[Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
 
     move-result-object v0
 
@@ -109,57 +109,57 @@
     .line 144
     :cond_0
     :goto_0
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
-    # getter for: Lcom/android/settings/wifi/SetupWizardWifiScreen;->mContext:Landroid/content/Context;
-    invoke-static {v4}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->access$100(Lcom/android/settings/wifi/SetupWizardWifiScreen;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mContext:Landroid/content/Context;
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->access$100(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/settings/wifi/WifiConnectivityUtils;->isWiFiConnAvailable(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->isWiFiConnAvailable(Landroid/content/Context;)Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
     .line 146
-    invoke-static {}, Lcom/android/settings/wifi/WifiConnectivityUtils;->isCaptivePortalNetwork()Z
+    invoke-static {}, Lcom/android/settings_ex/wifi/WifiConnectivityUtils;->isCaptivePortalNetwork()Z
 
     move-result v4
 
     if-eqz v4, :cond_2
 
     .line 147
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
-    # getter for: Lcom/android/settings/wifi/SetupWizardWifiScreen;->mIsGoogleFRPLocked:Z
-    invoke-static {v4}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->access$200(Lcom/android/settings/wifi/SetupWizardWifiScreen;)Z
+    # getter for: Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mIsGoogleFRPLocked:Z
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->access$200(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
-    # getter for: Lcom/android/settings/wifi/SetupWizardWifiScreen;->mContext:Landroid/content/Context;
-    invoke-static {v4}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->access$100(Lcom/android/settings/wifi/SetupWizardWifiScreen;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mContext:Landroid/content/Context;
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->access$100(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)Landroid/content/Context;
 
     move-result-object v4
 
-    # invokes: Lcom/android/settings/wifi/SetupWizardWifiScreen;->isDeviceProvisioned(Landroid/content/Context;)Z
-    invoke-static {v4}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->access$300(Landroid/content/Context;)Z
+    # invokes: Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->isDeviceProvisioned(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->access$300(Landroid/content/Context;)Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
     .line 148
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     const/4 v5, 0x4
 
-    # setter for: Lcom/android/settings/wifi/SetupWizardWifiScreen;->mConnectionResult:I
-    invoke-static {v4, v5}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->access$002(Lcom/android/settings/wifi/SetupWizardWifiScreen;I)I
+    # setter for: Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mConnectionResult:I
+    invoke-static {v4, v5}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->access$002(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;I)I
 
     .line 167
     :goto_1
@@ -198,23 +198,23 @@
     .line 150
     .end local v1    # "e":Ljava/lang/InterruptedException;
     :cond_1
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     const/4 v5, 0x1
 
-    # setter for: Lcom/android/settings/wifi/SetupWizardWifiScreen;->mConnectionResult:I
-    invoke-static {v4, v5}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->access$002(Lcom/android/settings/wifi/SetupWizardWifiScreen;I)I
+    # setter for: Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mConnectionResult:I
+    invoke-static {v4, v5}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->access$002(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;I)I
 
     goto :goto_1
 
     .line 153
     :cond_2
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     const/4 v5, 0x0
 
-    # setter for: Lcom/android/settings/wifi/SetupWizardWifiScreen;->mConnectionResult:I
-    invoke-static {v4, v5}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->access$002(Lcom/android/settings/wifi/SetupWizardWifiScreen;I)I
+    # setter for: Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mConnectionResult:I
+    invoke-static {v4, v5}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->access$002(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;I)I
 
     goto :goto_1
 
@@ -241,12 +241,12 @@
     if-gez v0, :cond_0
 
     .line 166
-    iget-object v4, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     const/4 v5, -0x1
 
-    # setter for: Lcom/android/settings/wifi/SetupWizardWifiScreen;->mConnectionResult:I
-    invoke-static {v4, v5}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->access$002(Lcom/android/settings/wifi/SetupWizardWifiScreen;I)I
+    # setter for: Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mConnectionResult:I
+    invoke-static {v4, v5}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->access$002(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;I)I
 
     goto :goto_1
 
@@ -297,7 +297,7 @@
     check-cast p1, Ljava/lang/Void;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->onPostExecute(Ljava/lang/Void;)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->onPostExecute(Ljava/lang/Void;)V
 
     return-void
 .end method
@@ -320,10 +320,10 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
-    # getter for: Lcom/android/settings/wifi/SetupWizardWifiScreen;->mConnectionResult:I
-    invoke-static {v2}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->access$000(Lcom/android/settings/wifi/SetupWizardWifiScreen;)I
+    # getter for: Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mConnectionResult:I
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->access$000(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)I
 
     move-result v2
 
@@ -338,18 +338,18 @@
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 127
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
-    iget-object v0, v0, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mHandler:Landroid/os/Handler;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mHandler:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
-    iget-object v1, v1, Lcom/android/settings/wifi/SetupWizardWifiScreen;->mHandler:Landroid/os/Handler;
+    iget-object v1, v1, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mHandler:Landroid/os/Handler;
 
-    iget-object v2, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$ConnectivityCheckTask;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
-    # getter for: Lcom/android/settings/wifi/SetupWizardWifiScreen;->mConnectionResult:I
-    invoke-static {v2}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->access$000(Lcom/android/settings/wifi/SetupWizardWifiScreen;)I
+    # getter for: Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->mConnectionResult:I
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->access$000(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)I
 
     move-result v2
 

@@ -1,13 +1,13 @@
-.class public Lcom/android/settings/deviceinfo/BatteryInfoSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "BatteryInfoSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # instance fields
@@ -32,11 +32,11 @@
 
     .prologue
     .line 190
-    new-instance v0, Lcom/android/settings/deviceinfo/BatteryInfoSettings$2;
+    new-instance v0, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings$2;
 
-    invoke-direct {v0}, Lcom/android/settings/deviceinfo/BatteryInfoSettings$2;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings$2;-><init>()V
 
-    sput-object v0, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -46,36 +46,36 @@
 
     .prologue
     .line 45
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 73
-    new-instance v0, Lcom/android/settings/deviceinfo/BatteryInfoSettings$1;
+    new-instance v0, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/deviceinfo/BatteryInfoSettings$1;-><init>(Lcom/android/settings/deviceinfo/BatteryInfoSettings;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings$1;-><init>(Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/deviceinfo/BatteryInfoSettings;)Landroid/preference/Preference;
+.method static synthetic access$000(Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;)Landroid/preference/Preference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/BatteryInfoSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->mBatteryLevel:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->mBatteryLevel:Landroid/preference/Preference;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/deviceinfo/BatteryInfoSettings;)Landroid/preference/Preference;
+.method static synthetic access$100(Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;)Landroid/preference/Preference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/BatteryInfoSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->mBatteryStatus:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->mBatteryStatus:Landroid/preference/Preference;
 
     return-object v0
 .end method
@@ -85,7 +85,7 @@
 
     .prologue
     .line 45
-    invoke-static {}, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->getBatteryLife()I
+    invoke-static {}, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->getBatteryLife()I
 
     move-result v0
 
@@ -264,42 +264,42 @@
 
     .prologue
     .line 87
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 89
     const v6, 0x7f080022
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->addPreferencesFromResource(I)V
 
     .line 91
     const-string v6, "battery_level"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->mBatteryLevel:Landroid/preference/Preference;
+    iput-object v6, p0, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->mBatteryLevel:Landroid/preference/Preference;
 
     .line 92
     const-string v6, "battery_status"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->mBatteryStatus:Landroid/preference/Preference;
+    iput-object v6, p0, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->mBatteryStatus:Landroid/preference/Preference;
 
     .line 93
     const-string v6, "battery_life"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->mBatteryLife:Landroid/preference/Preference;
+    iput-object v6, p0, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->mBatteryLife:Landroid/preference/Preference;
 
     .line 96
-    invoke-static {}, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->getBatteryLife()I
+    invoke-static {}, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->getBatteryLife()I
 
     move-result v1
 
@@ -330,7 +330,7 @@
     .line 98
     if-lez v1, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isJapanModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isJapanModel()Z
 
     move-result v6
 
@@ -340,35 +340,35 @@
     :cond_0
     const-string v6, "battery_life"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->removePreference(Ljava/lang/String;)V
 
     .line 111
     :goto_0
     const-string v6, "fcc_id"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->mFccId:Landroid/preference/Preference;
+    iput-object v6, p0, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->mFccId:Landroid/preference/Preference;
 
     .line 112
     const-string v6, "rated_value"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->mRated:Landroid/preference/Preference;
+    iput-object v6, p0, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->mRated:Landroid/preference/Preference;
 
     .line 113
     const-string v6, "battery_capacity"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->mBatteryCapacity:Landroid/preference/Preference;
+    iput-object v6, p0, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->mBatteryCapacity:Landroid/preference/Preference;
 
     .line 115
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
@@ -426,7 +426,7 @@
     .line 120
     const-string v6, "fcc_id"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->removePreference(Ljava/lang/String;)V
 
     .line 131
     :goto_1
@@ -441,7 +441,7 @@
     .line 132
     const-string v6, "rated_value"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->removePreference(Ljava/lang/String;)V
 
     .line 136
     :goto_2
@@ -456,7 +456,7 @@
     .line 137
     const-string v6, "battery_capacity"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->removePreference(Ljava/lang/String;)V
 
     .line 141
     :goto_3
@@ -473,7 +473,7 @@
     if-lt v1, v6, :cond_2
 
     .line 102
-    iget-object v6, p0, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->mBatteryLife:Landroid/preference/Preference;
+    iget-object v6, p0, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->mBatteryLife:Landroid/preference/Preference;
 
     const v7, 0x7f0e1570
 
@@ -488,7 +488,7 @@
     if-lt v1, v6, :cond_3
 
     .line 104
-    iget-object v6, p0, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->mBatteryLife:Landroid/preference/Preference;
+    iget-object v6, p0, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->mBatteryLife:Landroid/preference/Preference;
 
     const v7, 0x7f0e1571
 
@@ -498,7 +498,7 @@
 
     .line 106
     :cond_3
-    iget-object v6, p0, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->mBatteryLife:Landroid/preference/Preference;
+    iget-object v6, p0, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->mBatteryLife:Landroid/preference/Preference;
 
     const v7, 0x7f0e1572
 
@@ -512,7 +512,7 @@
     .restart local v4    # "productName":Ljava/lang/String;
     .restart local v5    # "ratedValue":Ljava/lang/String;
     :cond_4
-    invoke-static {}, Lcom/android/settings/Utils;->isLDUModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isLDUModel()Z
 
     move-result v6
 
@@ -546,13 +546,13 @@
     :cond_5
     const-string v6, "fcc_id"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->removePreference(Ljava/lang/String;)V
 
     goto :goto_1
 
     .line 125
     :cond_6
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -574,7 +574,7 @@
     .local v3, "fccIdStr":Ljava/lang/String;
     sget-object v6, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    invoke-static {v6}, Lcom/android/settings/Utils;->hasDSModelNumberInOneAP(Ljava/lang/String;)Z
+    invoke-static {v6}, Lcom/android/settings_ex/Utils;->hasDSModelNumberInOneAP(Ljava/lang/String;)Z
 
     move-result v6
 
@@ -582,14 +582,14 @@
 
     sget-object v6, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    invoke-static {v6}, Lcom/android/settings/Utils;->isFccIDDualSimSupported(Ljava/lang/String;)Z
+    invoke-static {v6}, Lcom/android/settings_ex/Utils;->isFccIDDualSimSupported(Ljava/lang/String;)Z
 
     move-result v6
 
     if-eqz v6, :cond_7
 
     .line 127
-    iget-object v6, p0, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->mFccId:Landroid/preference/Preference;
+    iget-object v6, p0, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->mFccId:Landroid/preference/Preference;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -615,7 +615,7 @@
 
     .line 129
     :cond_7
-    iget-object v6, p0, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->mFccId:Landroid/preference/Preference;
+    iget-object v6, p0, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->mFccId:Landroid/preference/Preference;
 
     invoke-virtual {v6, v3}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -624,7 +624,7 @@
     .line 134
     .end local v3    # "fccIdStr":Ljava/lang/String;
     :cond_8
-    iget-object v6, p0, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->mRated:Landroid/preference/Preference;
+    iget-object v6, p0, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->mRated:Landroid/preference/Preference;
 
     invoke-virtual {v6, v5}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -632,7 +632,7 @@
 
     .line 139
     :cond_9
-    iget-object v6, p0, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->mBatteryCapacity:Landroid/preference/Preference;
+    iget-object v6, p0, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->mBatteryCapacity:Landroid/preference/Preference;
 
     invoke-virtual {v6, v0}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -644,14 +644,14 @@
 
     .prologue
     .line 160
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 162
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
@@ -664,14 +664,14 @@
 
     .prologue
     .line 151
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 153
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/BatteryInfoSettings;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/BatteryInfoSettings;->mBatteryInfoReceiver:Landroid/content/BroadcastReceiver;
 
     new-instance v2, Landroid/content/IntentFilter;
 

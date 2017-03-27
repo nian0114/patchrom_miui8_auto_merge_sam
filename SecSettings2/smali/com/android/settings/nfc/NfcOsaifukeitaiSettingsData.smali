@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+.class public Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 .super Ljava/lang/Object;
 .source "NfcOsaifukeitaiSettingsData.java"
 
@@ -29,13 +29,13 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 40
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mContext:Landroid/content/Context;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mContext:Landroid/content/Context;
 
     .line 41
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mRceciverContext:Landroid/content/Context;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mRceciverContext:Landroid/content/Context;
 
     .line 42
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     .line 56
     const-string v1, "persist.omc.sales_code"
@@ -44,7 +44,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->OMC_SALES_CODE:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->OMC_SALES_CODE:Ljava/lang/String;
 
     .line 57
     const-string v1, "ro.csc.sales_code"
@@ -53,14 +53,14 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->CSC_SALES_CODE:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->CSC_SALES_CODE:Ljava/lang/String;
 
     .line 58
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->OMC_SALES_CODE:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->OMC_SALES_CODE:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->OMC_SALES_CODE:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->OMC_SALES_CODE:Ljava/lang/String;
 
     const-string v2, ""
 
@@ -71,10 +71,10 @@
     if-eqz v1, :cond_2
 
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->CSC_SALES_CODE:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->CSC_SALES_CODE:Ljava/lang/String;
 
     :goto_0
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->carrier:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->carrier:Ljava/lang/String;
 
     .line 153
     const-string v1, "[NfcOsaifukeitaiSettingsData]"
@@ -114,21 +114,21 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 155
-    iput-object p1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mContext:Landroid/content/Context;
 
     .line 156
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Landroid/nfc/NfcAdapter;->getDefaultAdapter(Landroid/content/Context;)Landroid/nfc/NfcAdapter;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     .line 158
     const-string v1, "KDI"
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->carrier:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->carrier:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -146,7 +146,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mRceciverContext:Landroid/content/Context;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mRceciverContext:Landroid/content/Context;
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -164,7 +164,7 @@
 
     .line 58
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->OMC_SALES_CODE:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->OMC_SALES_CODE:Ljava/lang/String;
 
     goto :goto_0
 
@@ -203,7 +203,7 @@
     .local v0, "ret":Z
     const-string v2, "KDI"
 
-    iget-object v3, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->carrier:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->carrier:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -285,7 +285,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 291
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     if-nez v1, :cond_0
 
@@ -305,7 +305,7 @@
 
     .line 296
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     invoke-virtual {v1}, Landroid/nfc/NfcAdapter;->isNdefPushEnabled()Z
 
@@ -656,7 +656,7 @@
     .local v0, "ret":Z
     const-string v2, "KDI"
 
-    iget-object v3, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->carrier:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->carrier:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -676,7 +676,7 @@
     .end local v1    # "ret":I
     .restart local v0    # "ret":Z
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->getSharedPre_KoreaNetwork()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->getSharedPre_KoreaNetwork()Z
 
     move-result v2
 
@@ -698,7 +698,7 @@
     .line 442
     .end local v1    # "ret":I
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->getSharedPre_CashbeeApkInstall()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->getSharedPre_CashbeeApkInstall()Z
 
     move-result v2
 
@@ -774,12 +774,12 @@
 
     .line 364
     .local v1, "ret":I
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     if-eqz v2, :cond_0
 
     .line 365
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     invoke-virtual {v2}, Landroid/nfc/NfcAdapter;->getListenMode()I
 
@@ -871,7 +871,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 267
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     if-nez v1, :cond_0
 
@@ -891,7 +891,7 @@
 
     .line 272
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     invoke-virtual {v1}, Landroid/nfc/NfcAdapter;->getAdapterRwP2pState()I
 
@@ -948,7 +948,7 @@
     .local v0, "ret":Z
     const-string v3, "KDI"
 
-    iget-object v4, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->carrier:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->carrier:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -968,7 +968,7 @@
     .end local v1    # "ret":I
     .restart local v0    # "ret":Z
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mRceciverContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mRceciverContext:Landroid/content/Context;
 
     if-nez v3, :cond_1
 
@@ -981,7 +981,7 @@
     .line 418
     .end local v1    # "ret":I
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mRceciverContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mRceciverContext:Landroid/content/Context;
 
     const-string v4, "NfcOsaifukeitaiSettings_prefs"
 
@@ -1059,7 +1059,7 @@
     .local v0, "ret":Z
     const-string v3, "KDI"
 
-    iget-object v4, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->carrier:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->carrier:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1079,7 +1079,7 @@
     .end local v1    # "ret":I
     .restart local v0    # "ret":Z
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mRceciverContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mRceciverContext:Landroid/content/Context;
 
     if-nez v3, :cond_1
 
@@ -1092,7 +1092,7 @@
     .line 396
     .end local v1    # "ret":I
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mRceciverContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mRceciverContext:Landroid/content/Context;
 
     const-string v4, "NfcOsaifukeitaiSettings_prefs"
 
@@ -1217,7 +1217,7 @@
     .line 216
     const-string v4, "SBM"
 
-    iget-object v5, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->carrier:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->carrier:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
     :try_end_1
@@ -1508,7 +1508,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 304
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     if-nez v1, :cond_0
 
@@ -1535,7 +1535,7 @@
     if-eqz p1, :cond_1
 
     .line 312
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     invoke-virtual {v1}, Landroid/nfc/NfcAdapter;->enableNdefPush()Z
 
@@ -1575,7 +1575,7 @@
 
     .line 314
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     invoke-virtual {v1}, Landroid/nfc/NfcAdapter;->disableNdefPush()Z
 
@@ -1663,12 +1663,12 @@
 
     .line 347
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     if-eqz v2, :cond_0
 
     .line 348
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     invoke-virtual {v2, v0}, Landroid/nfc/NfcAdapter;->setListenMode(I)I
 
@@ -1789,7 +1789,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 279
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     if-nez v1, :cond_0
 
@@ -1809,7 +1809,7 @@
 
     .line 284
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     invoke-virtual {v1, p1}, Landroid/nfc/NfcAdapter;->setRwP2pMode(Z)Z
 

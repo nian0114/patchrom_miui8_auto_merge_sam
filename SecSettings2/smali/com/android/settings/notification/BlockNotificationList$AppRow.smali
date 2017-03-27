@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/notification/BlockNotificationList$AppRow;
-.super Lcom/android/settings/notification/BlockNotificationList$Row;
+.class public Lcom/android/settings_ex/notification/BlockNotificationList$AppRow;
+.super Lcom/android/settings_ex/notification/BlockNotificationList$Row;
 .source "BlockNotificationList.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/BlockNotificationList;
+    value = Lcom/android/settings_ex/notification/BlockNotificationList;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -42,7 +42,7 @@
     .line 527
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/android/settings/notification/BlockNotificationList$Row;-><init>(Lcom/android/settings/notification/BlockNotificationList$1;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/notification/BlockNotificationList$Row;-><init>(Lcom/android/settings_ex/notification/BlockNotificationList$1;)V
 
     return-void
 .end method

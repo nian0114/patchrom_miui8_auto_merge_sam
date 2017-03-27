@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/vpn2/ManageablePreference;
+.class public Lcom/android/settings_ex/vpn2/ManageablePreference;
 .super Landroid/preference/Preference;
 .source "ManageablePreference.java"
 
@@ -31,24 +31,24 @@
     .line 35
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/vpn2/ManageablePreference;->manageable:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/vpn2/ManageablePreference;->manageable:Z
 
     .line 38
-    sput-object p1, Lcom/android/settings/vpn2/ManageablePreference;->mContext:Landroid/content/Context;
+    sput-object p1, Lcom/android/settings_ex/vpn2/ManageablePreference;->mContext:Landroid/content/Context;
 
     .line 39
-    iput-object p3, p0, Lcom/android/settings/vpn2/ManageablePreference;->mListener:Landroid/view/View$OnClickListener;
+    iput-object p3, p0, Lcom/android/settings_ex/vpn2/ManageablePreference;->mListener:Landroid/view/View$OnClickListener;
 
     .line 40
-    invoke-virtual {p0, v1}, Lcom/android/settings/vpn2/ManageablePreference;->setPersistent(Z)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/vpn2/ManageablePreference;->setPersistent(Z)V
 
     .line 41
-    invoke-virtual {p0, v1}, Lcom/android/settings/vpn2/ManageablePreference;->setOrder(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/vpn2/ManageablePreference;->setOrder(I)V
 
     .line 42
     const v0, 0x7f04019d
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/vpn2/ManageablePreference;->setWidgetLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/vpn2/ManageablePreference;->setWidgetLayoutResource(I)V
 
     .line 43
     return-void
@@ -62,7 +62,7 @@
 
     .prologue
     .line 58
-    iput-boolean p1, p0, Lcom/android/settings/vpn2/ManageablePreference;->manageable:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/vpn2/ManageablePreference;->manageable:Z
 
     .line 59
     return-void
@@ -82,26 +82,26 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/vpn2/ManageablePreference;->mManageView:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/settings_ex/vpn2/ManageablePreference;->mManageView:Landroid/view/View;
 
     .line 48
-    iget-object v0, p0, Lcom/android/settings/vpn2/ManageablePreference;->mManageView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/vpn2/ManageablePreference;->mManageView:Landroid/view/View;
 
-    iget-object v1, p0, Lcom/android/settings/vpn2/ManageablePreference;->mListener:Landroid/view/View$OnClickListener;
+    iget-object v1, p0, Lcom/android/settings_ex/vpn2/ManageablePreference;->mListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 49
-    iget-object v0, p0, Lcom/android/settings/vpn2/ManageablePreference;->mManageView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/vpn2/ManageablePreference;->mManageView:Landroid/view/View;
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     .line 50
-    iget-boolean v0, p0, Lcom/android/settings/vpn2/ManageablePreference;->manageable:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/vpn2/ManageablePreference;->manageable:Z
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/vpn2/ManageablePreference;->mManageView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/vpn2/ManageablePreference;->mManageView:Landroid/view/View;
 
     const/16 v1, 0x8
 
@@ -109,7 +109,7 @@
 
     .line 52
     :cond_0
-    sget-object v0, Lcom/android/settings/vpn2/ManageablePreference;->mContext:Landroid/content/Context;
+    sget-object v0, Lcom/android/settings_ex/vpn2/ManageablePreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

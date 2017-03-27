@@ -1,4 +1,4 @@
-.class Lcom/android/settings/BrightnessPreference$4;
+.class Lcom/android/settings_ex/BrightnessPreference$4;
 .super Ljava/lang/Object;
 .source "BrightnessPreference.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/BrightnessPreference;->setFlipCloseStatus(I)V
+    value = Lcom/android/settings_ex/BrightnessPreference;->setFlipCloseStatus(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/BrightnessPreference;
+.field final synthetic this$0:Lcom/android/settings_ex/BrightnessPreference;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/BrightnessPreference;)V
+.method constructor <init>(Lcom/android/settings_ex/BrightnessPreference;)V
     .locals 0
 
     .prologue
     .line 606
-    iput-object p1, p0, Lcom/android/settings/BrightnessPreference$4;->this$0:Lcom/android/settings/BrightnessPreference;
+    iput-object p1, p0, Lcom/android/settings_ex/BrightnessPreference$4;->this$0:Lcom/android/settings_ex/BrightnessPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -52,9 +52,9 @@
     if-nez v0, :cond_0
 
     .line 610
-    iget-object v0, p0, Lcom/android/settings/BrightnessPreference$4;->this$0:Lcom/android/settings/BrightnessPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/BrightnessPreference$4;->this$0:Lcom/android/settings_ex/BrightnessPreference;
 
-    invoke-virtual {v0}, Lcom/android/settings/BrightnessPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/android/settings_ex/BrightnessPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 

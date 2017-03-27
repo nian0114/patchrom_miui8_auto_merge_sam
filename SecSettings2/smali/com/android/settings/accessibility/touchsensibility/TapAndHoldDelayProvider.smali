@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accessibility/touchsensibility/TapAndHoldDelayProvider;
+.class public Lcom/android/settings_ex/accessibility/touchsensibility/TapAndHoldDelayProvider;
 .super Ljava/lang/Object;
 .source "TapAndHoldDelayProvider.java"
 
@@ -18,7 +18,7 @@
 
     const-string v3, "Context is null"
 
-    invoke-static {v2, v3}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogE(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogE(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 30
     const/4 v0, 0x0
@@ -52,7 +52,7 @@
 
     const-string v3, "Unkown timeout length"
 
-    invoke-static {v2, v3}, Lcom/android/settings/accessibility/AccessibilityUtils;->LogE(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->LogE(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 

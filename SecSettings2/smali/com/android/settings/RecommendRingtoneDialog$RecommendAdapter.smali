@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/RecommendRingtoneDialog$RecommendAdapter;
+.class public Lcom/android/settings_ex/RecommendRingtoneDialog$RecommendAdapter;
 .super Landroid/widget/BaseAdapter;
 .source "RecommendRingtoneDialog.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/RecommendRingtoneDialog;
+    value = Lcom/android/settings_ex/RecommendRingtoneDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/RecommendRingtoneDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/RecommendRingtoneDialog;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/settings/RecommendRingtoneDialog;)V
+.method public constructor <init>(Lcom/android/settings_ex/RecommendRingtoneDialog;)V
     .locals 0
 
     .prologue
     .line 159
-    iput-object p1, p0, Lcom/android/settings/RecommendRingtoneDialog$RecommendAdapter;->this$0:Lcom/android/settings/RecommendRingtoneDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/RecommendRingtoneDialog$RecommendAdapter;->this$0:Lcom/android/settings_ex/RecommendRingtoneDialog;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
@@ -126,10 +126,10 @@
 
     .line 191
     :goto_1
-    iget-object v5, p0, Lcom/android/settings/RecommendRingtoneDialog$RecommendAdapter;->this$0:Lcom/android/settings/RecommendRingtoneDialog;
+    iget-object v5, p0, Lcom/android/settings_ex/RecommendRingtoneDialog$RecommendAdapter;->this$0:Lcom/android/settings_ex/RecommendRingtoneDialog;
 
-    # getter for: Lcom/android/settings/RecommendRingtoneDialog;->mSelectedPosition:I
-    invoke-static {v5}, Lcom/android/settings/RecommendRingtoneDialog;->access$000(Lcom/android/settings/RecommendRingtoneDialog;)I
+    # getter for: Lcom/android/settings_ex/RecommendRingtoneDialog;->mSelectedPosition:I
+    invoke-static {v5}, Lcom/android/settings_ex/RecommendRingtoneDialog;->access$000(Lcom/android/settings_ex/RecommendRingtoneDialog;)I
 
     move-result v5
 
@@ -149,10 +149,10 @@
     .end local v2    # "text2":Landroid/widget/TextView;
     .end local v3    # "view":Landroid/view/View;
     :cond_1
-    iget-object v5, p0, Lcom/android/settings/RecommendRingtoneDialog$RecommendAdapter;->this$0:Lcom/android/settings/RecommendRingtoneDialog;
+    iget-object v5, p0, Lcom/android/settings_ex/RecommendRingtoneDialog$RecommendAdapter;->this$0:Lcom/android/settings_ex/RecommendRingtoneDialog;
 
-    # getter for: Lcom/android/settings/RecommendRingtoneDialog;->mInflater:Landroid/view/LayoutInflater;
-    invoke-static {v5}, Lcom/android/settings/RecommendRingtoneDialog;->access$900(Lcom/android/settings/RecommendRingtoneDialog;)Landroid/view/LayoutInflater;
+    # getter for: Lcom/android/settings_ex/RecommendRingtoneDialog;->mInflater:Landroid/view/LayoutInflater;
+    invoke-static {v5}, Lcom/android/settings_ex/RecommendRingtoneDialog;->access$900(Lcom/android/settings_ex/RecommendRingtoneDialog;)Landroid/view/LayoutInflater;
 
     move-result-object v5
 

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/LockscreenMenuSettings$ScreenLockSearchIndexProvider;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class Lcom/android/settings_ex/LockscreenMenuSettings$ScreenLockSearchIndexProvider;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "LockscreenMenuSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/LockscreenMenuSettings;
+    value = Lcom/android/settings_ex/LockscreenMenuSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,16 +26,16 @@
 
     .prologue
     .line 884
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     .line 885
-    const-class v0, Lcom/android/settings/LockscreenMenuSettings;
+    const-class v0, Lcom/android/settings_ex/LockscreenMenuSettings;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->mClassName:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->mClassName:Ljava/lang/String;
 
     .line 886
     return-void
@@ -53,7 +53,7 @@
     if-eqz v1, :cond_0
 
     .line 1043
-    sget-object v1, Lcom/android/settings/LockscreenMenuSettings;->mContext:Landroid/content/Context;
+    sget-object v1, Lcom/android/settings_ex/LockscreenMenuSettings;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Landroid/os/UserManager;->get(Landroid/content/Context;)Landroid/os/UserManager;
 
@@ -120,7 +120,7 @@
 
     .line 1057
     .local v1, "isSupportLMM":Z
-    invoke-static {p1}, Lcom/android/settings/Utils;->isSupportLMM(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isSupportLMM(Landroid/content/Context;)Z
 
     move-result v3
 
@@ -141,24 +141,24 @@
 
     .line 1062
     .local v0, "hasFMMDMClient":Z
-    invoke-static {p1}, Lcom/android/settings/Utils;->hasFMMDMClient(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->hasFMMDMClient(Landroid/content/Context;)Z
 
     move-result v0
 
     .line 1064
-    invoke-static {p1}, Lcom/android/settings/Utils;->isSupportedActionMemo(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isSupportedActionMemo(Landroid/content/Context;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->isSupportedActionMemo(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isSupportedActionMemo(Landroid/content/Context;)Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    iget-object v3, p0, Lcom/android/settings/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->mLockUtil:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->mLockUtil:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -170,7 +170,7 @@
 
     if-nez v3, :cond_1
 
-    iget-object v3, p0, Lcom/android/settings/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->mLockUtil:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->mLockUtil:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -195,7 +195,7 @@
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 1072
-    iget-object v3, p0, Lcom/android/settings/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->mLockUtil:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->mLockUtil:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -214,7 +214,7 @@
 
     .line 1076
     :cond_3
-    iget-object v3, p0, Lcom/android/settings/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->mLockUtil:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->mLockUtil:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -226,7 +226,7 @@
 
     if-nez v3, :cond_4
 
-    iget-object v3, p0, Lcom/android/settings/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->mLockUtil:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->mLockUtil:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -250,7 +250,7 @@
 
     .line 1081
     :cond_4
-    iget-object v3, p0, Lcom/android/settings/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->mLockUtil:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->mLockUtil:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -269,7 +269,7 @@
 
     .line 1085
     :cond_5
-    invoke-static {}, Lcom/android/settings/Utils;->isSprModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSprModel()Z
 
     move-result v3
 
@@ -300,13 +300,13 @@
 
     .line 1093
     :cond_8
-    invoke-static {p1}, Lcom/android/settings/Utils;->isShopDemo(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isShopDemo(Landroid/content/Context;)Z
 
     move-result v3
 
     if-nez v3, :cond_9
 
-    invoke-static {}, Lcom/android/settings/Utils;->isLDUModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isLDUModel()Z
 
     move-result v3
 
@@ -335,7 +335,7 @@
 
     .line 1100
     :cond_a
-    invoke-static {p1}, Lcom/android/settings/Utils;->hasFingerprintFeature(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->hasFingerprintFeature(Landroid/content/Context;)Z
 
     move-result v3
 
@@ -396,7 +396,7 @@
 
     .line 1102
     :cond_d
-    invoke-direct {p0}, Lcom/android/settings/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->isGuestUser()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->isGuestUser()Z
 
     move-result v3
 
@@ -421,7 +421,7 @@
             "Z)",
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/search/SearchIndexableRaw;",
+            "Lcom/android/settings_ex/search/SearchIndexableRaw;",
             ">;"
         }
     .end annotation
@@ -435,22 +435,22 @@
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
     .line 969
-    .local v5, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/search/SearchIndexableRaw;>;"
+    .local v5, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/search/SearchIndexableRaw;>;"
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
     .line 972
     .local v4, "res":Landroid/content/res/Resources;
-    new-instance v1, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v1, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    invoke-direct {v1, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 973
-    .local v1, "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .local v1, "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     const-string v6, "show_information"
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 974
     const v6, 0x7f0e16c5
@@ -459,23 +459,23 @@
 
     move-result-object v6
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 975
-    invoke-static {p1}, Lcom/android/settings/Utils;->isCoverVerified(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isCoverVerified(Landroid/content/Context;)Z
 
     move-result v6
 
     if-eqz v6, :cond_4
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->hasCoverSettingOptions(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->hasCoverSettingOptions(Landroid/content/Context;)Z
 
     move-result v6
 
     if-eqz v6, :cond_4
 
     .line 976
-    invoke-static {p1}, Lcom/android/settings/Utils;->getTypeOfCover(Landroid/content/Context;)I
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->getTypeOfCover(Landroid/content/Context;)I
 
     move-result v0
 
@@ -492,7 +492,7 @@
 
     move-result-object v6
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     .line 988
     .end local v0    # "covertype":I
@@ -501,22 +501,22 @@
 
     move-result-object v6
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
 
     .line 989
     invoke-interface {v5, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 991
-    new-instance v1, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v1, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    .end local v1    # "data":Lcom/android/settings/search/SearchIndexableRaw;
-    invoke-direct {v1, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    .end local v1    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
+    invoke-direct {v1, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 992
-    .restart local v1    # "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .restart local v1    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     const-string v6, "toggle_install_applications"
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 993
     const v6, 0x7f0e0804
@@ -525,10 +525,10 @@
 
     move-result-object v6
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 994
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v6
 
@@ -541,7 +541,7 @@
 
     move-result-object v6
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     .line 999
     :goto_1
@@ -549,7 +549,7 @@
 
     move-result-object v6
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
 
     .line 1000
     invoke-interface {v5, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -559,7 +559,7 @@
 
     .line 1003
     .local v3, "isSupportLMM":Z
-    invoke-static {p1}, Lcom/android/settings/Utils;->isSupportLMM(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isSupportLMM(Landroid/content/Context;)Z
 
     move-result v6
 
@@ -580,7 +580,7 @@
 
     .line 1008
     .local v2, "hasFMMDMClient":Z
-    invoke-static {p1}, Lcom/android/settings/Utils;->hasFMMDMClient(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->hasFMMDMClient(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -590,16 +590,16 @@
     if-nez v2, :cond_1
 
     .line 1011
-    new-instance v1, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v1, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    .end local v1    # "data":Lcom/android/settings/search/SearchIndexableRaw;
-    invoke-direct {v1, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    .end local v1    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
+    invoke-direct {v1, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 1012
-    .restart local v1    # "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .restart local v1    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     const-string v6, "find_my_mobile"
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 1013
     const v6, 0x7f0e1331
@@ -608,47 +608,47 @@
 
     move-result-object v6
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 1014
     const-string v6, ""
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
 
     .line 1015
     const-string v6, ""
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     .line 1016
     invoke-virtual {v4, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
 
     .line 1017
     invoke-interface {v5, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 1020
     :cond_1
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportPowerKey()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportPowerKey()Z
 
     move-result v6
 
     if-nez v6, :cond_2
 
     .line 1021
-    new-instance v1, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v1, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    .end local v1    # "data":Lcom/android/settings/search/SearchIndexableRaw;
-    invoke-direct {v1, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    .end local v1    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
+    invoke-direct {v1, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 1022
-    .restart local v1    # "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .restart local v1    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     const-string v6, "secured_lock_settigns"
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 1023
     const v6, 0x7f0e14f7
@@ -657,40 +657,40 @@
 
     move-result-object v6
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 1024
     const-string v6, ""
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
 
     .line 1025
     const-string v6, ""
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     .line 1026
     invoke-virtual {v4, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
 
     .line 1027
     invoke-interface {v5, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 1031
     :cond_2
-    new-instance v1, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v1, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    .end local v1    # "data":Lcom/android/settings/search/SearchIndexableRaw;
-    invoke-direct {v1, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    .end local v1    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
+    invoke-direct {v1, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 1032
-    .restart local v1    # "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .restart local v1    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     const-string v6, "other_security_settings"
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 1033
     const v6, 0x7f0e14d6
@@ -699,7 +699,7 @@
 
     move-result-object v6
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 1034
     const v6, 0x7f0e14d7
@@ -708,14 +708,14 @@
 
     move-result-object v6
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     .line 1035
     invoke-virtual {v4, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
 
     .line 1036
     invoke-interface {v5, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -734,14 +734,14 @@
 
     move-result-object v6
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     goto/16 :goto_0
 
     .line 982
     .end local v0    # "covertype":I
     :cond_4
-    invoke-static {p1}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v6
 
@@ -754,7 +754,7 @@
 
     move-result-object v6
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     goto/16 :goto_0
 
@@ -766,7 +766,7 @@
 
     move-result-object v6
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     goto/16 :goto_0
 
@@ -778,7 +778,7 @@
 
     move-result-object v6
 
-    iput-object v6, v1, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v6, v1, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     goto/16 :goto_1
 .end method
@@ -805,7 +805,7 @@
 
     invoke-direct {v10, p1}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    iput-object v10, p0, Lcom/android/settings/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->mLockUtil:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object v10, p0, Lcom/android/settings_ex/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->mLockUtil:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 891
     new-instance v8, Ljava/util/ArrayList;
@@ -820,7 +820,7 @@
 
     .line 895
     .local v9, "sir":Landroid/provider/SearchIndexableResource;
-    iget-object v10, p0, Lcom/android/settings/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->mClassName:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->mClassName:Ljava/lang/String;
 
     iput-object v10, v9, Landroid/provider/SearchIndexableResource;->className:Ljava/lang/String;
 
@@ -833,7 +833,7 @@
     invoke-interface {v8, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 899
-    const-class v10, Lcom/android/settings/LockscreenMenuSettings;
+    const-class v10, Lcom/android/settings_ex/LockscreenMenuSettings;
 
     invoke-virtual {v10}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -857,10 +857,10 @@
 
     .line 902
     .local v1, "childTitle":Ljava/lang/String;
-    invoke-virtual {p0, p1, v6, v0, v1}, Lcom/android/settings/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->initDirectMenuInfo(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, v6, v0, v1}, Lcom/android/settings_ex/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->initDirectMenuInfo(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 904
-    const-class v10, Lcom/android/settings/OtherSecuritySettings;
+    const-class v10, Lcom/android/settings_ex/OtherSecuritySettings;
 
     invoke-virtual {v10}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -878,10 +878,10 @@
     move-result-object v1
 
     .line 906
-    invoke-virtual {p0, p1, v6, v0, v1}, Lcom/android/settings/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->initDirectMenuInfo(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, v6, v0, v1}, Lcom/android/settings_ex/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->initDirectMenuInfo(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 908
-    invoke-static {p1}, Lcom/android/settings/Utils;->hasFMMDMClient(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->hasFMMDMClient(Landroid/content/Context;)Z
 
     move-result v3
 
@@ -889,7 +889,7 @@
     .local v3, "hasFMMDMClient":Z
     const-string v10, "TFN"
 
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v11
 
@@ -916,11 +916,11 @@
     move-result-object v1
 
     .line 914
-    invoke-virtual {p0, p1, v6, v0, v1}, Lcom/android/settings/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->initDirectMenuInfo(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, v6, v0, v1}, Lcom/android/settings_ex/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->initDirectMenuInfo(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 917
     :cond_0
-    invoke-static {p1}, Lcom/android/settings/Utils;->hasFingerprintFeature(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->hasFingerprintFeature(Landroid/content/Context;)Z
 
     move-result v10
 
@@ -941,12 +941,12 @@
     move-result-object v1
 
     .line 921
-    invoke-virtual {p0, p1, v6, v0, v1}, Lcom/android/settings/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->initDirectMenuInfo(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, v6, v0, v1}, Lcom/android/settings_ex/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->initDirectMenuInfo(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 925
     :cond_1
-    # getter for: Lcom/android/settings/LockscreenMenuSettings;->MY_USER_ID:I
-    invoke-static {}, Lcom/android/settings/LockscreenMenuSettings;->access$200()I
+    # getter for: Lcom/android/settings_ex/LockscreenMenuSettings;->MY_USER_ID:I
+    invoke-static {}, Lcom/android/settings_ex/LockscreenMenuSettings;->access$200()I
 
     move-result v10
 
@@ -959,13 +959,13 @@
     :goto_0
     if-eqz v5, :cond_3
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->isShopDemo(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isShopDemo(Landroid/content/Context;)Z
 
     move-result v10
 
     if-nez v10, :cond_3
 
-    invoke-static {}, Lcom/android/settings/Utils;->isLDUModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isLDUModel()Z
 
     move-result v10
 
@@ -994,7 +994,7 @@
 
     .line 938
     .restart local v9    # "sir":Landroid/provider/SearchIndexableResource;
-    iget-object v10, p0, Lcom/android/settings/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->mClassName:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->mClassName:Ljava/lang/String;
 
     iput-object v10, v9, Landroid/provider/SearchIndexableResource;->className:Ljava/lang/String;
 
@@ -1005,19 +1005,19 @@
     invoke-interface {v8, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 943
-    new-instance v2, Lcom/android/settings/encryption/EncryptionPreferenceManager;
+    new-instance v2, Lcom/android/settings_ex/encryption/EncryptionPreferenceManager;
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v10
 
-    invoke-direct {v2, v10}, Lcom/android/settings/encryption/EncryptionPreferenceManager;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, v10}, Lcom/android/settings_ex/encryption/EncryptionPreferenceManager;-><init>(Landroid/content/Context;)V
 
     .line 945
-    .local v2, "epm":Lcom/android/settings/encryption/EncryptionPreferenceManager;
+    .local v2, "epm":Lcom/android/settings_ex/encryption/EncryptionPreferenceManager;
     if-eqz v2, :cond_2
 
-    invoke-virtual {v2}, Lcom/android/settings/encryption/EncryptionPreferenceManager;->isSDcardEncryptionPossible()Z
+    invoke-virtual {v2}, Lcom/android/settings_ex/encryption/EncryptionPreferenceManager;->isSDcardEncryptionPossible()Z
 
     move-result v10
 
@@ -1054,7 +1054,7 @@
 
     .line 953
     .restart local v9    # "sir":Landroid/provider/SearchIndexableResource;
-    iget-object v10, p0, Lcom/android/settings/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->mClassName:Ljava/lang/String;
+    iget-object v10, p0, Lcom/android/settings_ex/LockscreenMenuSettings$ScreenLockSearchIndexProvider;->mClassName:Ljava/lang/String;
 
     iput-object v10, v9, Landroid/provider/SearchIndexableResource;->className:Ljava/lang/String;
 
@@ -1070,7 +1070,7 @@
     invoke-interface {v8, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 962
-    .end local v2    # "epm":Lcom/android/settings/encryption/EncryptionPreferenceManager;
+    .end local v2    # "epm":Lcom/android/settings_ex/encryption/EncryptionPreferenceManager;
     .end local v7    # "resId":I
     :cond_3
     return-object v8
@@ -1091,7 +1091,7 @@
     goto :goto_1
 
     .line 950
-    .restart local v2    # "epm":Lcom/android/settings/encryption/EncryptionPreferenceManager;
+    .restart local v2    # "epm":Lcom/android/settings_ex/encryption/EncryptionPreferenceManager;
     .restart local v4    # "mDPM":Landroid/app/admin/DevicePolicyManager;
     :cond_6
     const v7, 0x7f0800af

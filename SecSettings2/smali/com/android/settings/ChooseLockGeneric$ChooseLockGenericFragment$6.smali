@@ -1,4 +1,4 @@
-.class Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment$6;
+.class Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment$6;
 .super Ljava/lang/Object;
 .source "ChooseLockGeneric.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment;->showSensorErrorDialog(I)V
+    value = Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment;->showSensorErrorDialog(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment;)V
     .locals 0
 
     .prologue
     .line 1720
-    iput-object p1, p0, Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment$6;->this$0:Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment$6;->this$0:Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,9 +42,9 @@
 
     .prologue
     .line 1723
-    iget-object v0, p0, Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment$6;->this$0:Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment$6;->this$0:Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment;
 
-    invoke-virtual {v0}, Lcom/android/settings/ChooseLockGeneric$ChooseLockGenericFragment;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/ChooseLockGeneric$ChooseLockGenericFragment;->finish()V
 
     .line 1724
     return-void

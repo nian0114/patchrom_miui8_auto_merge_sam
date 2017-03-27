@@ -1,4 +1,4 @@
-.class Lcom/android/settings/notification/NotificationSettings$11;
+.class Lcom/android/settings_ex/notification/NotificationSettings$11;
 .super Ljava/lang/Object;
 .source "NotificationSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/notification/NotificationSettings;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/notification/NotificationSettings;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/NotificationSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/NotificationSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/notification/NotificationSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/notification/NotificationSettings;)V
     .locals 0
 
     .prologue
     .line 525
-    iput-object p1, p0, Lcom/android/settings/notification/NotificationSettings$11;->this$0:Lcom/android/settings/notification/NotificationSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/NotificationSettings$11;->this$0:Lcom/android/settings_ex/notification/NotificationSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,10 +42,10 @@
 
     .prologue
     .line 527
-    iget-object v0, p0, Lcom/android/settings/notification/NotificationSettings$11;->this$0:Lcom/android/settings/notification/NotificationSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/NotificationSettings$11;->this$0:Lcom/android/settings_ex/notification/NotificationSettings;
 
-    # invokes: Lcom/android/settings/notification/NotificationSettings;->startRingtoneSetting()V
-    invoke-static {v0}, Lcom/android/settings/notification/NotificationSettings;->access$600(Lcom/android/settings/notification/NotificationSettings;)V
+    # invokes: Lcom/android/settings_ex/notification/NotificationSettings;->startRingtoneSetting()V
+    invoke-static {v0}, Lcom/android/settings_ex/notification/NotificationSettings;->access$600(Lcom/android/settings_ex/notification/NotificationSettings;)V
 
     .line 528
     const/4 v0, 0x1

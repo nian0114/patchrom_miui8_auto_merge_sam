@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/TRoamingSettings$BetterDontMessFragment;
+.class public Lcom/android/settings_ex/TRoamingSettings$BetterDontMessFragment;
 .super Landroid/app/DialogFragment;
 .source "TRoamingSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/TRoamingSettings;
+    value = Lcom/android/settings_ex/TRoamingSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -35,8 +35,8 @@
     .line 627
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    # getter for: Lcom/android/settings/TRoamingSettings;->mContext:Landroid/content/Context;
-    invoke-static {}, Lcom/android/settings/TRoamingSettings;->access$1100()Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/TRoamingSettings;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/android/settings_ex/TRoamingSettings;->access$1100()Landroid/content/Context;
 
     move-result-object v1
 
@@ -56,18 +56,18 @@
     .line 631
     const v1, 0x7f0e083a
 
-    new-instance v2, Lcom/android/settings/TRoamingSettings$BetterDontMessFragment$1;
+    new-instance v2, Lcom/android/settings_ex/TRoamingSettings$BetterDontMessFragment$1;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/TRoamingSettings$BetterDontMessFragment$1;-><init>(Lcom/android/settings/TRoamingSettings$BetterDontMessFragment;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/TRoamingSettings$BetterDontMessFragment$1;-><init>(Lcom/android/settings_ex/TRoamingSettings$BetterDontMessFragment;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 643
     const v1, 0x7f0e01ba
 
-    new-instance v2, Lcom/android/settings/TRoamingSettings$BetterDontMessFragment$2;
+    new-instance v2, Lcom/android/settings_ex/TRoamingSettings$BetterDontMessFragment$2;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/TRoamingSettings$BetterDontMessFragment$2;-><init>(Lcom/android/settings/TRoamingSettings$BetterDontMessFragment;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/TRoamingSettings$BetterDontMessFragment$2;-><init>(Lcom/android/settings_ex/TRoamingSettings$BetterDontMessFragment;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 

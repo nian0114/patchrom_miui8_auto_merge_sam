@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/personalvibration/PersonalVibrationProvider;
+.class public Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider;
 .super Landroid/content/ContentProvider;
 .source "PersonalVibrationProvider.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/personalvibration/PersonalVibrationProvider$DatabaseHelper;
+        Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider$DatabaseHelper;
     }
 .end annotation
 
@@ -33,7 +33,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/personalvibration/PersonalVibrationProvider;->CONTENT_URI:Landroid/net/Uri;
+    sput-object v0, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider;->CONTENT_URI:Landroid/net/Uri;
 
     .line 49
     new-instance v0, Landroid/content/UriMatcher;
@@ -42,10 +42,10 @@
 
     invoke-direct {v0, v1}, Landroid/content/UriMatcher;-><init>(I)V
 
-    sput-object v0, Lcom/android/settings/personalvibration/PersonalVibrationProvider;->uriMatcher:Landroid/content/UriMatcher;
+    sput-object v0, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     .line 50
-    sget-object v0, Lcom/android/settings/personalvibration/PersonalVibrationProvider;->uriMatcher:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     const-string v1, "com.android.settings.personalvibration.PersonalVibrationProvider"
 
@@ -56,7 +56,7 @@
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 51
-    sget-object v0, Lcom/android/settings/personalvibration/PersonalVibrationProvider;->uriMatcher:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     const-string v1, "com.android.settings.personalvibration.PersonalVibrationProvider"
 
@@ -91,7 +91,7 @@
 
     .prologue
     .line 174
-    iget-object v1, p0, Lcom/android/settings/personalvibration/PersonalVibrationProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v1, p0, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v2, "registerinfo"
 
@@ -101,7 +101,7 @@
 
     .line 189
     .local v0, "count":I
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/PersonalVibrationProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -137,7 +137,7 @@
     const/4 v4, 0x0
 
     .line 160
-    iget-object v2, p0, Lcom/android/settings/personalvibration/PersonalVibrationProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v2, p0, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v3, "registerinfo"
 
@@ -154,14 +154,14 @@
     if-lez v2, :cond_0
 
     .line 163
-    sget-object v2, Lcom/android/settings/personalvibration/PersonalVibrationProvider;->CONTENT_URI:Landroid/net/Uri;
+    sget-object v2, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-static {v2, v0, v1}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
 
     move-result-object p1
 
     .line 164
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/PersonalVibrationProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -206,26 +206,26 @@
 
     .prologue
     .line 116
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/PersonalVibrationProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     .line 117
     .local v0, "context":Landroid/content/Context;
-    new-instance v1, Lcom/android/settings/personalvibration/PersonalVibrationProvider$DatabaseHelper;
+    new-instance v1, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider$DatabaseHelper;
 
-    invoke-direct {v1, v0}, Lcom/android/settings/personalvibration/PersonalVibrationProvider$DatabaseHelper;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v0}, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider$DatabaseHelper;-><init>(Landroid/content/Context;)V
 
     .line 118
-    .local v1, "dbHelper":Lcom/android/settings/personalvibration/PersonalVibrationProvider$DatabaseHelper;
-    invoke-virtual {v1}, Lcom/android/settings/personalvibration/PersonalVibrationProvider$DatabaseHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    .local v1, "dbHelper":Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider$DatabaseHelper;
+    invoke-virtual {v1}, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider$DatabaseHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/personalvibration/PersonalVibrationProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
+    iput-object v2, p0, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     .line 120
-    iget-object v2, p0, Lcom/android/settings/personalvibration/PersonalVibrationProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v2, p0, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     if-nez v2, :cond_0
 
@@ -263,7 +263,7 @@
     invoke-virtual {v0, v1}, Landroid/database/sqlite/SQLiteQueryBuilder;->setTables(Ljava/lang/String;)V
 
     .line 129
-    sget-object v1, Lcom/android/settings/personalvibration/PersonalVibrationProvider;->uriMatcher:Landroid/content/UriMatcher;
+    sget-object v1, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     invoke-virtual {v1, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
@@ -284,7 +284,7 @@
     .line 148
     .local v7, "orderBy":Ljava/lang/String;
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/personalvibration/PersonalVibrationProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v1, p0, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     move-object v2, p2
 
@@ -300,7 +300,7 @@
 
     .line 149
     .local v8, "c":Landroid/database/Cursor;
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/PersonalVibrationProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -325,7 +325,7 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 133
-    iget-object v1, p0, Lcom/android/settings/personalvibration/PersonalVibrationProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v1, p0, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -363,7 +363,7 @@
 
     .line 134
     .restart local v8    # "c":Landroid/database/Cursor;
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/PersonalVibrationProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -446,7 +446,7 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 198
-    iget-object v1, p0, Lcom/android/settings/personalvibration/PersonalVibrationProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v1, p0, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider;->mDB:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v2, "registerinfo"
 
@@ -455,7 +455,7 @@
     move-result v0
 
     .line 199
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/PersonalVibrationProvider;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/PersonalVibrationProvider;->getContext()Landroid/content/Context;
 
     move-result-object v1
 

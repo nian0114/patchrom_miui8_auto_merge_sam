@@ -45,7 +45,7 @@
     <string name="connected_via_wfa">Connected via Wi‑Fi assistant</string>
     <string name="connected_via_passpoint">Connected via %1$s</string>
     <string name="available_via_passpoint">Available via %1$s</string>
-    <string name="settings_package">com.android.settings</string>
+    <string name="settings_package">com.android.settings_ex</string>
     <string name="certinstaller_package">com.android.certinstaller</string>
     <string name="wifi_connected_no_internet">Connected, no Internet</string>
     <string name="bluetooth_disconnected">Disconnected</string>
@@ -147,10 +147,10 @@ All apps stored on this ^1 will be uninstalled and their data will be erased. To
     <string name="input_method_selector_visibility_default_value">0</string>
     <string name="sview_cover_wday_month_day_no_year">E, MMMM d</string>
     <string name="sview_cover_wday_day_month_no_year">E, d MMMM</string>
-    <string name="category_key_wireless">com.android.settings.category.wireless</string>
-    <string name="category_key_device">com.android.settings.category.device</string>
-    <string name="category_key_personal">com.android.settings.category.personal</string>
-    <string name="category_key_system">com.android.settings.category.system</string>
+    <string name="category_key_wireless">com.android.settings_ex.category.wireless</string>
+    <string name="category_key_device">com.android.settings_ex.category.device</string>
+    <string name="category_key_personal">com.android.settings_ex.category.personal</string>
+    <string name="category_key_system">com.android.settings_ex.category.system</string>
     <string name="search_word_pattern">[^ㄱ-ㅎㅏ-ㅣ가-힣a-zA-Z0-9]</string>
     <string name="jansky_settings">Jansky settings</string>
     <string name="international_roaming_setting">Roaming Settings</string>

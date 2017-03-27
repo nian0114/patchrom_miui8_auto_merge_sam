@@ -1,4 +1,4 @@
-.class Lcom/android/settings/ethernet/EthernetConfigDialog$3;
+.class Lcom/android/settings_ex/ethernet/EthernetConfigDialog$3;
 .super Ljava/lang/Object;
 .source "EthernetConfigDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/ethernet/EthernetConfigDialog;
+    value = Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/ethernet/EthernetConfigDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/ethernet/EthernetConfigDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/ethernet/EthernetConfigDialog;)V
     .locals 0
 
     .prologue
     .line 309
-    iput-object p1, p0, Lcom/android/settings/ethernet/EthernetConfigDialog$3;->this$0:Lcom/android/settings/ethernet/EthernetConfigDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/ethernet/EthernetConfigDialog$3;->this$0:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,9 +49,9 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 320
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetConfigDialog$3;->this$0:Lcom/android/settings/ethernet/EthernetConfigDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetConfigDialog$3;->this$0:Lcom/android/settings_ex/ethernet/EthernetConfigDialog;
 
-    invoke-virtual {v0}, Lcom/android/settings/ethernet/EthernetConfigDialog;->enableSaveIfAppropriate()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/ethernet/EthernetConfigDialog;->enableSaveIfAppropriate()V
 
     .line 321
     return-void

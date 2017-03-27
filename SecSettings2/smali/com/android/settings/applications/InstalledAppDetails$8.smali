@@ -1,11 +1,11 @@
-.class Lcom/android/settings/applications/InstalledAppDetails$8;
+.class Lcom/android/settings_ex/applications/InstalledAppDetails$8;
 .super Landroid/content/BroadcastReceiver;
 .source "InstalledAppDetails.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/InstalledAppDetails;
+    value = Lcom/android/settings_ex/applications/InstalledAppDetails;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/applications/InstalledAppDetails;
+.field final synthetic this$0:Lcom/android/settings_ex/applications/InstalledAppDetails;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/applications/InstalledAppDetails;)V
+.method constructor <init>(Lcom/android/settings_ex/applications/InstalledAppDetails;)V
     .locals 0
 
     .prologue
     .line 1316
-    iput-object p1, p0, Lcom/android/settings/applications/InstalledAppDetails$8;->this$0:Lcom/android/settings/applications/InstalledAppDetails;
+    iput-object p1, p0, Lcom/android/settings_ex/applications/InstalledAppDetails$8;->this$0:Lcom/android/settings_ex/applications/InstalledAppDetails;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -40,9 +40,9 @@
 
     .prologue
     .line 1319
-    iget-object v1, p0, Lcom/android/settings/applications/InstalledAppDetails$8;->this$0:Lcom/android/settings/applications/InstalledAppDetails;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/InstalledAppDetails$8;->this$0:Lcom/android/settings_ex/applications/InstalledAppDetails;
 
-    invoke-virtual {p0}, Lcom/android/settings/applications/InstalledAppDetails$8;->getResultCode()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/applications/InstalledAppDetails$8;->getResultCode()I
 
     move-result v0
 
@@ -51,8 +51,8 @@
     const/4 v0, 0x1
 
     :goto_0
-    # invokes: Lcom/android/settings/applications/InstalledAppDetails;->updateForceStopButton(Z)V
-    invoke-static {v1, v0}, Lcom/android/settings/applications/InstalledAppDetails;->access$1300(Lcom/android/settings/applications/InstalledAppDetails;Z)V
+    # invokes: Lcom/android/settings_ex/applications/InstalledAppDetails;->updateForceStopButton(Z)V
+    invoke-static {v1, v0}, Lcom/android/settings_ex/applications/InstalledAppDetails;->access$1300(Lcom/android/settings_ex/applications/InstalledAppDetails;Z)V
 
     .line 1320
     return-void

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/IntervalSeekBar;
+.class public Lcom/android/settings_ex/IntervalSeekBar;
 .super Landroid/widget/SeekBar;
 .source "IntervalSeekBar.java"
 
@@ -6,9 +6,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/IntervalSeekBar$Pointer;,
-        Lcom/android/settings/IntervalSeekBar$Line;,
-        Lcom/android/settings/IntervalSeekBar$Marker;
+        Lcom/android/settings_ex/IntervalSeekBar$Pointer;,
+        Lcom/android/settings_ex/IntervalSeekBar$Line;,
+        Lcom/android/settings_ex/IntervalSeekBar$Marker;
     }
 .end annotation
 
@@ -37,7 +37,7 @@
         value = {
             "Ljava/util/Vector",
             "<",
-            "Lcom/android/settings/IntervalSeekBar$Line;",
+            "Lcom/android/settings_ex/IntervalSeekBar$Line;",
             ">;"
         }
     .end annotation
@@ -48,7 +48,7 @@
         value = {
             "Ljava/util/Vector",
             "<",
-            "Lcom/android/settings/IntervalSeekBar$Marker;",
+            "Lcom/android/settings_ex/IntervalSeekBar$Marker;",
             ">;"
         }
     .end annotation
@@ -65,7 +65,7 @@
         value = {
             "Ljava/util/Vector",
             "<",
-            "Lcom/android/settings/IntervalSeekBar$Pointer;",
+            "Lcom/android/settings_ex/IntervalSeekBar$Pointer;",
             ">;"
         }
     .end annotation
@@ -85,7 +85,7 @@
     .line 35
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lcom/android/settings/IntervalSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, v0}, Lcom/android/settings_ex/IntervalSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 36
     return-void
@@ -100,7 +100,7 @@
     .line 38
     const v0, 0x101007b
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings/IntervalSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings_ex/IntervalSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 39
     return-void
@@ -116,7 +116,7 @@
     .line 41
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/settings/IntervalSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/settings_ex/IntervalSeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 42
     return-void
@@ -144,7 +144,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/IntervalSeekBar;->mIsAnimating:Ljava/lang/Boolean;
+    iput-object v0, p0, Lcom/android/settings_ex/IntervalSeekBar;->mIsAnimating:Ljava/lang/Boolean;
 
     .line 93
     new-array v0, v1, [F
@@ -155,17 +155,17 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/IntervalSeekBar;->mEnableAnimator:Landroid/animation/ValueAnimator;
+    iput-object v0, p0, Lcom/android/settings_ex/IntervalSeekBar;->mEnableAnimator:Landroid/animation/ValueAnimator;
 
     .line 94
-    iput v2, p0, Lcom/android/settings/IntervalSeekBar;->mEnableDuration:I
+    iput v2, p0, Lcom/android/settings_ex/IntervalSeekBar;->mEnableDuration:I
 
     .line 96
-    new-instance v0, Lcom/android/settings/IntervalSeekBar$1;
+    new-instance v0, Lcom/android/settings_ex/IntervalSeekBar$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/IntervalSeekBar$1;-><init>(Lcom/android/settings/IntervalSeekBar;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/IntervalSeekBar$1;-><init>(Lcom/android/settings_ex/IntervalSeekBar;)V
 
-    iput-object v0, p0, Lcom/android/settings/IntervalSeekBar;->mEnableListener:Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+    iput-object v0, p0, Lcom/android/settings_ex/IntervalSeekBar;->mEnableListener:Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
     .line 104
     new-array v0, v1, [F
@@ -176,46 +176,46 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/IntervalSeekBar;->mDisableAnimator:Landroid/animation/ValueAnimator;
+    iput-object v0, p0, Lcom/android/settings_ex/IntervalSeekBar;->mDisableAnimator:Landroid/animation/ValueAnimator;
 
     .line 105
-    iput v2, p0, Lcom/android/settings/IntervalSeekBar;->mDisableDuration:I
+    iput v2, p0, Lcom/android/settings_ex/IntervalSeekBar;->mDisableDuration:I
 
     .line 107
-    new-instance v0, Lcom/android/settings/IntervalSeekBar$2;
+    new-instance v0, Lcom/android/settings_ex/IntervalSeekBar$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/IntervalSeekBar$2;-><init>(Lcom/android/settings/IntervalSeekBar;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/IntervalSeekBar$2;-><init>(Lcom/android/settings_ex/IntervalSeekBar;)V
 
-    iput-object v0, p0, Lcom/android/settings/IntervalSeekBar;->mDisableListener:Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+    iput-object v0, p0, Lcom/android/settings_ex/IntervalSeekBar;->mDisableListener:Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
     .line 133
     new-instance v0, Ljava/util/Vector;
 
     invoke-direct {v0}, Ljava/util/Vector;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/IntervalSeekBar;->mMarkers:Ljava/util/Vector;
+    iput-object v0, p0, Lcom/android/settings_ex/IntervalSeekBar;->mMarkers:Ljava/util/Vector;
 
     .line 134
     new-instance v0, Ljava/util/Vector;
 
     invoke-direct {v0}, Ljava/util/Vector;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/IntervalSeekBar;->mLine:Ljava/util/Vector;
+    iput-object v0, p0, Lcom/android/settings_ex/IntervalSeekBar;->mLine:Ljava/util/Vector;
 
     .line 135
     new-instance v0, Ljava/util/Vector;
 
     invoke-direct {v0}, Ljava/util/Vector;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/IntervalSeekBar;->mPointer:Ljava/util/Vector;
+    iput-object v0, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPointer:Ljava/util/Vector;
 
     .line 45
-    iput-object p1, p0, Lcom/android/settings/IntervalSeekBar;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/IntervalSeekBar;->mContext:Landroid/content/Context;
 
     .line 46
     const v0, 0x7f02033e
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/IntervalSeekBar;->setDrawable(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/IntervalSeekBar;->setDrawable(I)V
 
     .line 47
     return-void
@@ -237,14 +237,14 @@
     .end array-data
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/IntervalSeekBar;F)V
+.method static synthetic access$000(Lcom/android/settings_ex/IntervalSeekBar;F)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/IntervalSeekBar;
+    .param p0, "x0"    # Lcom/android/settings_ex/IntervalSeekBar;
     .param p1, "x1"    # F
 
     .prologue
     .line 23
-    invoke-direct {p0, p1}, Lcom/android/settings/IntervalSeekBar;->animateMarkers(F)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/IntervalSeekBar;->animateMarkers(F)V
 
     return-void
 .end method
@@ -259,7 +259,7 @@
 
     .local v0, "n":I
     :goto_0
-    iget-object v4, p0, Lcom/android/settings/IntervalSeekBar;->mMarkers:Ljava/util/Vector;
+    iget-object v4, p0, Lcom/android/settings_ex/IntervalSeekBar;->mMarkers:Ljava/util/Vector;
 
     invoke-virtual {v4}, Ljava/util/Vector;->size()I
 
@@ -268,21 +268,21 @@
     if-ge v0, v4, :cond_0
 
     .line 221
-    iget-object v4, p0, Lcom/android/settings/IntervalSeekBar;->mMarkers:Ljava/util/Vector;
+    iget-object v4, p0, Lcom/android/settings_ex/IntervalSeekBar;->mMarkers:Ljava/util/Vector;
 
     invoke-virtual {v4, v0}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/IntervalSeekBar$Marker;
+    check-cast v2, Lcom/android/settings_ex/IntervalSeekBar$Marker;
 
     .line 222
-    .local v2, "tempMarker":Lcom/android/settings/IntervalSeekBar$Marker;
-    iget v4, v2, Lcom/android/settings/IntervalSeekBar$Marker;->mStartMarkerX:F
+    .local v2, "tempMarker":Lcom/android/settings_ex/IntervalSeekBar$Marker;
+    iget v4, v2, Lcom/android/settings_ex/IntervalSeekBar$Marker;->mStartMarkerX:F
 
-    iget v5, v2, Lcom/android/settings/IntervalSeekBar$Marker;->mTargetMarkerX:F
+    iget v5, v2, Lcom/android/settings_ex/IntervalSeekBar$Marker;->mTargetMarkerX:F
 
-    iget v6, v2, Lcom/android/settings/IntervalSeekBar$Marker;->mStartMarkerX:F
+    iget v6, v2, Lcom/android/settings_ex/IntervalSeekBar$Marker;->mStartMarkerX:F
 
     sub-float/2addr v5, v6
 
@@ -290,7 +290,7 @@
 
     add-float/2addr v4, v5
 
-    iput v4, v2, Lcom/android/settings/IntervalSeekBar$Marker;->mMarkerX:F
+    iput v4, v2, Lcom/android/settings_ex/IntervalSeekBar$Marker;->mMarkerX:F
 
     .line 220
     add-int/lit8 v0, v0, 0x1
@@ -298,12 +298,12 @@
     goto :goto_0
 
     .line 225
-    .end local v2    # "tempMarker":Lcom/android/settings/IntervalSeekBar$Marker;
+    .end local v2    # "tempMarker":Lcom/android/settings_ex/IntervalSeekBar$Marker;
     :cond_0
     const/4 v0, 0x0
 
     :goto_1
-    iget-object v4, p0, Lcom/android/settings/IntervalSeekBar;->mLine:Ljava/util/Vector;
+    iget-object v4, p0, Lcom/android/settings_ex/IntervalSeekBar;->mLine:Ljava/util/Vector;
 
     invoke-virtual {v4}, Ljava/util/Vector;->size()I
 
@@ -312,21 +312,21 @@
     if-ge v0, v4, :cond_1
 
     .line 226
-    iget-object v4, p0, Lcom/android/settings/IntervalSeekBar;->mLine:Ljava/util/Vector;
+    iget-object v4, p0, Lcom/android/settings_ex/IntervalSeekBar;->mLine:Ljava/util/Vector;
 
     invoke-virtual {v4, v0}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/IntervalSeekBar$Line;
+    check-cast v1, Lcom/android/settings_ex/IntervalSeekBar$Line;
 
     .line 227
-    .local v1, "tempLine":Lcom/android/settings/IntervalSeekBar$Line;
-    iget v4, v1, Lcom/android/settings/IntervalSeekBar$Line;->mStartLineX:F
+    .local v1, "tempLine":Lcom/android/settings_ex/IntervalSeekBar$Line;
+    iget v4, v1, Lcom/android/settings_ex/IntervalSeekBar$Line;->mStartLineX:F
 
-    iget v5, v1, Lcom/android/settings/IntervalSeekBar$Line;->mTargetLineX:F
+    iget v5, v1, Lcom/android/settings_ex/IntervalSeekBar$Line;->mTargetLineX:F
 
-    iget v6, v1, Lcom/android/settings/IntervalSeekBar$Line;->mStartLineX:F
+    iget v6, v1, Lcom/android/settings_ex/IntervalSeekBar$Line;->mStartLineX:F
 
     sub-float/2addr v5, v6
 
@@ -334,7 +334,7 @@
 
     add-float/2addr v4, v5
 
-    iput v4, v1, Lcom/android/settings/IntervalSeekBar$Line;->mLineX:F
+    iput v4, v1, Lcom/android/settings_ex/IntervalSeekBar$Line;->mLineX:F
 
     .line 225
     add-int/lit8 v0, v0, 0x1
@@ -342,12 +342,12 @@
     goto :goto_1
 
     .line 230
-    .end local v1    # "tempLine":Lcom/android/settings/IntervalSeekBar$Line;
+    .end local v1    # "tempLine":Lcom/android/settings_ex/IntervalSeekBar$Line;
     :cond_1
     const/4 v0, 0x0
 
     :goto_2
-    iget-object v4, p0, Lcom/android/settings/IntervalSeekBar;->mPointer:Ljava/util/Vector;
+    iget-object v4, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPointer:Ljava/util/Vector;
 
     invoke-virtual {v4}, Ljava/util/Vector;->size()I
 
@@ -356,21 +356,21 @@
     if-ge v0, v4, :cond_2
 
     .line 231
-    iget-object v4, p0, Lcom/android/settings/IntervalSeekBar;->mPointer:Ljava/util/Vector;
+    iget-object v4, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPointer:Ljava/util/Vector;
 
     invoke-virtual {v4, v0}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/settings/IntervalSeekBar$Pointer;
+    check-cast v3, Lcom/android/settings_ex/IntervalSeekBar$Pointer;
 
     .line 232
-    .local v3, "tempPointer":Lcom/android/settings/IntervalSeekBar$Pointer;
-    iget v4, v3, Lcom/android/settings/IntervalSeekBar$Pointer;->mStartPointerX:F
+    .local v3, "tempPointer":Lcom/android/settings_ex/IntervalSeekBar$Pointer;
+    iget v4, v3, Lcom/android/settings_ex/IntervalSeekBar$Pointer;->mStartPointerX:F
 
-    iget v5, v3, Lcom/android/settings/IntervalSeekBar$Pointer;->mTargetPointerX:F
+    iget v5, v3, Lcom/android/settings_ex/IntervalSeekBar$Pointer;->mTargetPointerX:F
 
-    iget v6, v3, Lcom/android/settings/IntervalSeekBar$Pointer;->mStartPointerX:F
+    iget v6, v3, Lcom/android/settings_ex/IntervalSeekBar$Pointer;->mStartPointerX:F
 
     sub-float/2addr v5, v6
 
@@ -378,7 +378,7 @@
 
     add-float/2addr v4, v5
 
-    iput v4, v3, Lcom/android/settings/IntervalSeekBar$Pointer;->mPointerX:F
+    iput v4, v3, Lcom/android/settings_ex/IntervalSeekBar$Pointer;->mPointerX:F
 
     .line 230
     add-int/lit8 v0, v0, 0x1
@@ -386,7 +386,7 @@
     goto :goto_2
 
     .line 235
-    .end local v3    # "tempPointer":Lcom/android/settings/IntervalSeekBar$Pointer;
+    .end local v3    # "tempPointer":Lcom/android/settings_ex/IntervalSeekBar$Pointer;
     :cond_2
     float-to-double v4, p1
 
@@ -403,10 +403,10 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/IntervalSeekBar;->mIsAnimating:Ljava/lang/Boolean;
+    iput-object v4, p0, Lcom/android/settings_ex/IntervalSeekBar;->mIsAnimating:Ljava/lang/Boolean;
 
     .line 237
-    invoke-direct {p0}, Lcom/android/settings/IntervalSeekBar;->resetMarkers()V
+    invoke-direct {p0}, Lcom/android/settings_ex/IntervalSeekBar;->resetMarkers()V
 
     .line 239
     :cond_3
@@ -454,13 +454,13 @@
 
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/android/settings/IntervalSeekBar;->mPaddingTop:I
+    iget v2, v0, Lcom/android/settings_ex/IntervalSeekBar;->mPaddingTop:I
 
     sub-int/2addr v1, v2
 
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/android/settings/IntervalSeekBar;->mPaddingBottom:I
+    iget v2, v0, Lcom/android/settings_ex/IntervalSeekBar;->mPaddingBottom:I
 
     sub-int/2addr v1, v2
 
@@ -468,7 +468,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v2, v0, Lcom/android/settings_ex/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -480,7 +480,7 @@
 
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/android/settings/IntervalSeekBar;->mPaddingTop:I
+    iget v2, v0, Lcom/android/settings_ex/IntervalSeekBar;->mPaddingTop:I
 
     add-int v11, v1, v2
 
@@ -488,11 +488,11 @@
     .local v11, "markerHeight":I
     move-object/from16 v0, p0
 
-    iget v1, v0, Lcom/android/settings/IntervalSeekBar;->mPaddingLeft:I
+    iget v1, v0, Lcom/android/settings_ex/IntervalSeekBar;->mPaddingLeft:I
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/settings/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v2, v0, Lcom/android/settings_ex/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -513,7 +513,7 @@
     .line 194
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/android/settings/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v1, v0, Lcom/android/settings_ex/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     move-object/from16 v0, p1
 
@@ -526,13 +526,13 @@
 
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/android/settings/IntervalSeekBar;->mPaddingTop:I
+    iget v2, v0, Lcom/android/settings_ex/IntervalSeekBar;->mPaddingTop:I
 
     sub-int/2addr v1, v2
 
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/android/settings/IntervalSeekBar;->mPaddingBottom:I
+    iget v2, v0, Lcom/android/settings_ex/IntervalSeekBar;->mPaddingBottom:I
 
     sub-int/2addr v1, v2
 
@@ -542,7 +542,7 @@
 
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/android/settings/IntervalSeekBar;->mPaddingTop:I
+    iget v2, v0, Lcom/android/settings_ex/IntervalSeekBar;->mPaddingTop:I
 
     add-int/2addr v1, v2
 
@@ -556,13 +556,13 @@
 
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/android/settings/IntervalSeekBar;->mPaddingLeft:I
+    iget v2, v0, Lcom/android/settings_ex/IntervalSeekBar;->mPaddingLeft:I
 
     sub-int/2addr v1, v2
 
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/android/settings/IntervalSeekBar;->mPaddingRight:I
+    iget v2, v0, Lcom/android/settings_ex/IntervalSeekBar;->mPaddingRight:I
 
     sub-int/2addr v1, v2
 
@@ -574,7 +574,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lcom/android/settings/IntervalSeekBar;->mPaint:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/settings_ex/IntervalSeekBar;->mPaint:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -621,7 +621,7 @@
 
     move-object/from16 v0, p0
 
-    iget v5, v0, Lcom/android/settings/IntervalSeekBar;->mPaddingTop:I
+    iget v5, v0, Lcom/android/settings_ex/IntervalSeekBar;->mPaddingTop:I
 
     invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -635,7 +635,7 @@
 
     move-object/from16 v0, p0
 
-    iget v5, v0, Lcom/android/settings/IntervalSeekBar;->mPaddingBottom:I
+    iget v5, v0, Lcom/android/settings_ex/IntervalSeekBar;->mPaddingBottom:I
 
     invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -649,7 +649,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/android/settings/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v5, v0, Lcom/android/settings_ex/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v5}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -672,7 +672,7 @@
     :goto_0
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/android/settings/IntervalSeekBar;->mLine:Ljava/util/Vector;
+    iget-object v1, v0, Lcom/android/settings_ex/IntervalSeekBar;->mLine:Ljava/util/Vector;
 
     invoke-virtual {v1}, Ljava/util/Vector;->size()I
 
@@ -683,21 +683,21 @@
     .line 202
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/android/settings/IntervalSeekBar;->mLine:Ljava/util/Vector;
+    iget-object v1, v0, Lcom/android/settings_ex/IntervalSeekBar;->mLine:Ljava/util/Vector;
 
     invoke-virtual {v1, v13}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
 
     move-result-object v14
 
-    check-cast v14, Lcom/android/settings/IntervalSeekBar$Line;
+    check-cast v14, Lcom/android/settings_ex/IntervalSeekBar$Line;
 
     .line 203
-    .local v14, "tempLine":Lcom/android/settings/IntervalSeekBar$Line;
-    iget v8, v14, Lcom/android/settings/IntervalSeekBar$Line;->mLineX:F
+    .local v14, "tempLine":Lcom/android/settings_ex/IntervalSeekBar$Line;
+    iget v8, v14, Lcom/android/settings_ex/IntervalSeekBar$Line;->mLineX:F
 
     move-object/from16 v0, p0
 
-    iget-object v10, v0, Lcom/android/settings/IntervalSeekBar;->mPaint1:Landroid/graphics/Paint;
+    iget-object v10, v0, Lcom/android/settings_ex/IntervalSeekBar;->mPaint1:Landroid/graphics/Paint;
 
     move-object/from16 v5, p1
 
@@ -715,14 +715,14 @@
     goto :goto_0
 
     .line 206
-    .end local v14    # "tempLine":Lcom/android/settings/IntervalSeekBar$Line;
+    .end local v14    # "tempLine":Lcom/android/settings_ex/IntervalSeekBar$Line;
     :cond_0
     const/4 v13, 0x0
 
     :goto_1
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/android/settings/IntervalSeekBar;->mPointer:Ljava/util/Vector;
+    iget-object v1, v0, Lcom/android/settings_ex/IntervalSeekBar;->mPointer:Ljava/util/Vector;
 
     invoke-virtual {v1}, Ljava/util/Vector;->size()I
 
@@ -733,19 +733,19 @@
     .line 207
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/android/settings/IntervalSeekBar;->mPointer:Ljava/util/Vector;
+    iget-object v1, v0, Lcom/android/settings_ex/IntervalSeekBar;->mPointer:Ljava/util/Vector;
 
     invoke-virtual {v1, v13}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
 
     move-result-object v16
 
-    check-cast v16, Lcom/android/settings/IntervalSeekBar$Pointer;
+    check-cast v16, Lcom/android/settings_ex/IntervalSeekBar$Pointer;
 
     .line 208
-    .local v16, "tempPointer":Lcom/android/settings/IntervalSeekBar$Pointer;
+    .local v16, "tempPointer":Lcom/android/settings_ex/IntervalSeekBar$Pointer;
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/android/settings/IntervalSeekBar;->mContext:Landroid/content/Context;
+    iget-object v1, v0, Lcom/android/settings_ex/IntervalSeekBar;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -761,13 +761,13 @@
     .local v12, "markerRadius":I
     move-object/from16 v0, v16
 
-    iget v1, v0, Lcom/android/settings/IntervalSeekBar$Pointer;->mPointerX:F
+    iget v1, v0, Lcom/android/settings_ex/IntervalSeekBar$Pointer;->mPointerX:F
 
     int-to-float v2, v12
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/android/settings/IntervalSeekBar;->mPaint2:Landroid/graphics/Paint;
+    iget-object v5, v0, Lcom/android/settings_ex/IntervalSeekBar;->mPaint2:Landroid/graphics/Paint;
 
     move-object/from16 v0, p1
 
@@ -780,14 +780,14 @@
 
     .line 212
     .end local v12    # "markerRadius":I
-    .end local v16    # "tempPointer":Lcom/android/settings/IntervalSeekBar$Pointer;
+    .end local v16    # "tempPointer":Lcom/android/settings_ex/IntervalSeekBar$Pointer;
     :cond_1
     const/4 v13, 0x0
 
     :goto_2
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/android/settings/IntervalSeekBar;->mMarkers:Ljava/util/Vector;
+    iget-object v1, v0, Lcom/android/settings_ex/IntervalSeekBar;->mMarkers:Ljava/util/Vector;
 
     invoke-virtual {v1}, Ljava/util/Vector;->size()I
 
@@ -798,17 +798,17 @@
     .line 213
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/android/settings/IntervalSeekBar;->mMarkers:Ljava/util/Vector;
+    iget-object v1, v0, Lcom/android/settings_ex/IntervalSeekBar;->mMarkers:Ljava/util/Vector;
 
     invoke-virtual {v1, v13}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
 
     move-result-object v15
 
-    check-cast v15, Lcom/android/settings/IntervalSeekBar$Marker;
+    check-cast v15, Lcom/android/settings_ex/IntervalSeekBar$Marker;
 
     .line 214
-    .local v15, "tempMarker":Lcom/android/settings/IntervalSeekBar$Marker;
-    iget v1, v15, Lcom/android/settings/IntervalSeekBar$Marker;->mMarkerX:F
+    .local v15, "tempMarker":Lcom/android/settings_ex/IntervalSeekBar$Marker;
+    iget v1, v15, Lcom/android/settings_ex/IntervalSeekBar$Marker;->mMarkerX:F
 
     float-to-int v1, v1
 
@@ -823,7 +823,7 @@
     .line 215
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/android/settings/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v1, v0, Lcom/android/settings_ex/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     move-object/from16 v0, p1
 
@@ -835,7 +835,7 @@
     goto :goto_2
 
     .line 217
-    .end local v15    # "tempMarker":Lcom/android/settings/IntervalSeekBar$Marker;
+    .end local v15    # "tempMarker":Lcom/android/settings_ex/IntervalSeekBar$Marker;
     :cond_2
     return-void
 .end method
@@ -852,13 +852,13 @@
     .line 50
     new-instance v2, Landroid/graphics/Rect;
 
-    iget-object v3, p0, Lcom/android/settings/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v3, p0, Lcom/android/settings_ex/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v3
 
-    iget-object v4, p0, Lcom/android/settings/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v4, p0, Lcom/android/settings_ex/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -866,16 +866,16 @@
 
     invoke-direct {v2, v6, v6, v3, v4}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    iput-object v2, p0, Lcom/android/settings/IntervalSeekBar;->mRect:Landroid/graphics/Rect;
+    iput-object v2, p0, Lcom/android/settings_ex/IntervalSeekBar;->mRect:Landroid/graphics/Rect;
 
     .line 52
-    iget-object v2, p0, Lcom/android/settings/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v2, p0, Lcom/android/settings_ex/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
+    iput-object v2, p0, Lcom/android/settings_ex/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     .line 54
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -888,13 +888,13 @@
 
     move-result v2
 
-    invoke-direct {p0, v2}, Lcom/android/settings/IntervalSeekBar;->colorToColorStateList(I)Landroid/content/res/ColorStateList;
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/IntervalSeekBar;->colorToColorStateList(I)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
     .line 55
     .local v1, "tint_list":Landroid/content/res/ColorStateList;
-    invoke-virtual {p0, v1}, Lcom/android/settings/IntervalSeekBar;->setProgressTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/IntervalSeekBar;->setProgressTintList(Landroid/content/res/ColorStateList;)V
 
     .line 56
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -913,10 +913,10 @@
 
     invoke-direct {v2, v5}, Landroid/graphics/Paint;-><init>(I)V
 
-    iput-object v2, p0, Lcom/android/settings/IntervalSeekBar;->mPaint:Landroid/graphics/Paint;
+    iput-object v2, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPaint:Landroid/graphics/Paint;
 
     .line 59
-    iget-object v2, p0, Lcom/android/settings/IntervalSeekBar;->mPaint:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -931,7 +931,7 @@
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 60
-    iget-object v2, p0, Lcom/android/settings/IntervalSeekBar;->mPaint:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPaint:Landroid/graphics/Paint;
 
     int-to-float v3, v0
 
@@ -942,10 +942,10 @@
 
     invoke-direct {v2, v5}, Landroid/graphics/Paint;-><init>(I)V
 
-    iput-object v2, p0, Lcom/android/settings/IntervalSeekBar;->mPaint1:Landroid/graphics/Paint;
+    iput-object v2, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPaint1:Landroid/graphics/Paint;
 
     .line 63
-    iget-object v2, p0, Lcom/android/settings/IntervalSeekBar;->mPaint1:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPaint1:Landroid/graphics/Paint;
 
     const v3, 0x7f0a011e
 
@@ -956,7 +956,7 @@
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 64
-    iget-object v2, p0, Lcom/android/settings/IntervalSeekBar;->mPaint1:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPaint1:Landroid/graphics/Paint;
 
     int-to-float v3, v0
 
@@ -967,10 +967,10 @@
 
     invoke-direct {v2, v5}, Landroid/graphics/Paint;-><init>(I)V
 
-    iput-object v2, p0, Lcom/android/settings/IntervalSeekBar;->mPaint2:Landroid/graphics/Paint;
+    iput-object v2, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPaint2:Landroid/graphics/Paint;
 
     .line 67
-    iget-object v2, p0, Lcom/android/settings/IntervalSeekBar;->mPaint2:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPaint2:Landroid/graphics/Paint;
 
     const v3, 0x106011d
 
@@ -981,14 +981,14 @@
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 68
-    iget-object v2, p0, Lcom/android/settings/IntervalSeekBar;->mPaint2:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPaint2:Landroid/graphics/Paint;
 
     sget-object v3, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
     .line 70
-    iget-object v2, p0, Lcom/android/settings/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v2, p0, Lcom/android/settings_ex/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2, v1}, Landroid/graphics/drawable/Drawable;->setTintList(Landroid/content/res/ColorStateList;)V
 
@@ -1006,13 +1006,13 @@
     const/4 v12, 0x0
 
     .line 138
-    iget v10, p0, Lcom/android/settings/IntervalSeekBar;->mWidth:I
+    iget v10, p0, Lcom/android/settings_ex/IntervalSeekBar;->mWidth:I
 
-    iget v11, p0, Lcom/android/settings/IntervalSeekBar;->mPaddingLeft:I
+    iget v11, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPaddingLeft:I
 
     sub-int/2addr v10, v11
 
-    iget v11, p0, Lcom/android/settings/IntervalSeekBar;->mPaddingRight:I
+    iget v11, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPaddingRight:I
 
     sub-int/2addr v10, v11
 
@@ -1051,21 +1051,21 @@
     if-ge v5, v7, :cond_1
 
     .line 155
-    new-instance v4, Lcom/android/settings/IntervalSeekBar$Marker;
+    new-instance v4, Lcom/android/settings_ex/IntervalSeekBar$Marker;
 
-    invoke-direct {v4, v12}, Lcom/android/settings/IntervalSeekBar$Marker;-><init>(Lcom/android/settings/IntervalSeekBar$1;)V
+    invoke-direct {v4, v12}, Lcom/android/settings_ex/IntervalSeekBar$Marker;-><init>(Lcom/android/settings_ex/IntervalSeekBar$1;)V
 
     .line 156
-    .local v4, "marker":Lcom/android/settings/IntervalSeekBar$Marker;
-    iput v1, v4, Lcom/android/settings/IntervalSeekBar$Marker;->mStartMarkerX:F
+    .local v4, "marker":Lcom/android/settings_ex/IntervalSeekBar$Marker;
+    iput v1, v4, Lcom/android/settings_ex/IntervalSeekBar$Marker;->mStartMarkerX:F
 
-    iput v1, v4, Lcom/android/settings/IntervalSeekBar$Marker;->mMarkerX:F
+    iput v1, v4, Lcom/android/settings_ex/IntervalSeekBar$Marker;->mMarkerX:F
 
     .line 157
-    iput v8, v4, Lcom/android/settings/IntervalSeekBar$Marker;->mTargetMarkerX:F
+    iput v8, v4, Lcom/android/settings_ex/IntervalSeekBar$Marker;->mTargetMarkerX:F
 
     .line 158
-    iget-object v10, p0, Lcom/android/settings/IntervalSeekBar;->mMarkers:Ljava/util/Vector;
+    iget-object v10, p0, Lcom/android/settings_ex/IntervalSeekBar;->mMarkers:Ljava/util/Vector;
 
     invoke-virtual {v10, v4}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
@@ -1077,7 +1077,7 @@
     .line 147
     .end local v0    # "initialCount":I
     .end local v1    # "initialDistance":F
-    .end local v4    # "marker":Lcom/android/settings/IntervalSeekBar$Marker;
+    .end local v4    # "marker":Lcom/android/settings_ex/IntervalSeekBar$Marker;
     .end local v5    # "n":I
     .end local v7    # "targetCount":I
     .end local v8    # "targetDistance":F
@@ -1096,49 +1096,49 @@
     .restart local v5    # "n":I
     .restart local v8    # "targetDistance":F
     :cond_1
-    new-instance v2, Lcom/android/settings/IntervalSeekBar$Line;
+    new-instance v2, Lcom/android/settings_ex/IntervalSeekBar$Line;
 
-    invoke-direct {v2, v12}, Lcom/android/settings/IntervalSeekBar$Line;-><init>(Lcom/android/settings/IntervalSeekBar$1;)V
+    invoke-direct {v2, v12}, Lcom/android/settings_ex/IntervalSeekBar$Line;-><init>(Lcom/android/settings_ex/IntervalSeekBar$1;)V
 
     .line 162
-    .local v2, "line":Lcom/android/settings/IntervalSeekBar$Line;
+    .local v2, "line":Lcom/android/settings_ex/IntervalSeekBar$Line;
     if-eqz p1, :cond_2
 
     .line 163
-    iput v9, v2, Lcom/android/settings/IntervalSeekBar$Line;->mStartLineX:F
+    iput v9, v2, Lcom/android/settings_ex/IntervalSeekBar$Line;->mStartLineX:F
 
-    iput v9, v2, Lcom/android/settings/IntervalSeekBar$Line;->mLineX:F
+    iput v9, v2, Lcom/android/settings_ex/IntervalSeekBar$Line;->mLineX:F
 
     .line 164
     mul-float v10, v13, v8
 
     sub-float v10, v9, v10
 
-    iput v10, v2, Lcom/android/settings/IntervalSeekBar$Line;->mTargetLineX:F
+    iput v10, v2, Lcom/android/settings_ex/IntervalSeekBar$Line;->mTargetLineX:F
 
     .line 169
     :goto_2
-    iget-object v10, p0, Lcom/android/settings/IntervalSeekBar;->mLine:Ljava/util/Vector;
+    iget-object v10, p0, Lcom/android/settings_ex/IntervalSeekBar;->mLine:Ljava/util/Vector;
 
     invoke-virtual {v10, v2}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
     .line 171
-    new-instance v6, Lcom/android/settings/IntervalSeekBar$Pointer;
+    new-instance v6, Lcom/android/settings_ex/IntervalSeekBar$Pointer;
 
-    invoke-direct {v6, v12}, Lcom/android/settings/IntervalSeekBar$Pointer;-><init>(Lcom/android/settings/IntervalSeekBar$1;)V
+    invoke-direct {v6, v12}, Lcom/android/settings_ex/IntervalSeekBar$Pointer;-><init>(Lcom/android/settings_ex/IntervalSeekBar$1;)V
 
     .line 172
-    .local v6, "pointer":Lcom/android/settings/IntervalSeekBar$Pointer;
-    iget-object v10, p0, Lcom/android/settings/IntervalSeekBar;->mContext:Landroid/content/Context;
+    .local v6, "pointer":Lcom/android/settings_ex/IntervalSeekBar$Pointer;
+    iget-object v10, p0, Lcom/android/settings_ex/IntervalSeekBar;->mContext:Landroid/content/Context;
 
-    invoke-static {v10}, Lcom/android/settings/Utils;->isTablet(Landroid/content/Context;)Z
+    invoke-static {v10}, Lcom/android/settings_ex/Utils;->isTablet(Landroid/content/Context;)Z
 
     move-result v10
 
     if-eqz v10, :cond_3
 
     .line 173
-    sget v3, Lcom/android/settings/FontPreviewTablet;->mSelectedFontSizeSeekBarProgress:I
+    sget v3, Lcom/android/settings_ex/FontPreviewTablet;->mSelectedFontSizeSeekBarProgress:I
 
     .line 177
     .local v3, "mSelectedFontSize":I
@@ -1147,19 +1147,19 @@
 
     mul-float/2addr v10, v1
 
-    iput v10, v6, Lcom/android/settings/IntervalSeekBar$Pointer;->mStartPointerX:F
+    iput v10, v6, Lcom/android/settings_ex/IntervalSeekBar$Pointer;->mStartPointerX:F
 
-    iput v10, v6, Lcom/android/settings/IntervalSeekBar$Pointer;->mPointerX:F
+    iput v10, v6, Lcom/android/settings_ex/IntervalSeekBar$Pointer;->mPointerX:F
 
     .line 178
     int-to-float v10, v3
 
     mul-float/2addr v10, v8
 
-    iput v10, v6, Lcom/android/settings/IntervalSeekBar$Pointer;->mTargetPointerX:F
+    iput v10, v6, Lcom/android/settings_ex/IntervalSeekBar$Pointer;->mTargetPointerX:F
 
     .line 179
-    iget-object v10, p0, Lcom/android/settings/IntervalSeekBar;->mPointer:Ljava/util/Vector;
+    iget-object v10, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPointer:Ljava/util/Vector;
 
     invoke-virtual {v10, v6}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
@@ -1168,25 +1168,25 @@
 
     .line 166
     .end local v3    # "mSelectedFontSize":I
-    .end local v6    # "pointer":Lcom/android/settings/IntervalSeekBar$Pointer;
+    .end local v6    # "pointer":Lcom/android/settings_ex/IntervalSeekBar$Pointer;
     :cond_2
     mul-float v10, v13, v1
 
     sub-float v10, v9, v10
 
-    iput v10, v2, Lcom/android/settings/IntervalSeekBar$Line;->mStartLineX:F
+    iput v10, v2, Lcom/android/settings_ex/IntervalSeekBar$Line;->mStartLineX:F
 
-    iput v10, v2, Lcom/android/settings/IntervalSeekBar$Line;->mLineX:F
+    iput v10, v2, Lcom/android/settings_ex/IntervalSeekBar$Line;->mLineX:F
 
     .line 167
-    iput v9, v2, Lcom/android/settings/IntervalSeekBar$Line;->mTargetLineX:F
+    iput v9, v2, Lcom/android/settings_ex/IntervalSeekBar$Line;->mTargetLineX:F
 
     goto :goto_2
 
     .line 175
-    .restart local v6    # "pointer":Lcom/android/settings/IntervalSeekBar$Pointer;
+    .restart local v6    # "pointer":Lcom/android/settings_ex/IntervalSeekBar$Pointer;
     :cond_3
-    sget v3, Lcom/android/settings/FontPreview;->mSelectedFontSizeSeekBarProgress:I
+    sget v3, Lcom/android/settings_ex/FontPreview;->mSelectedFontSizeSeekBarProgress:I
 
     .restart local v3    # "mSelectedFontSize":I
     goto :goto_3
@@ -1197,17 +1197,17 @@
 
     .prologue
     .line 183
-    iget-object v0, p0, Lcom/android/settings/IntervalSeekBar;->mMarkers:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/android/settings_ex/IntervalSeekBar;->mMarkers:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->clear()V
 
     .line 184
-    iget-object v0, p0, Lcom/android/settings/IntervalSeekBar;->mLine:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/android/settings_ex/IntervalSeekBar;->mLine:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->clear()V
 
     .line 185
-    iget-object v0, p0, Lcom/android/settings/IntervalSeekBar;->mPointer:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPointer:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->clear()V
 
@@ -1223,26 +1223,26 @@
 
     .prologue
     .line 84
-    invoke-direct {p0, p1}, Lcom/android/settings/IntervalSeekBar;->initEnableMarkers(Z)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/IntervalSeekBar;->initEnableMarkers(Z)V
 
     .line 85
-    iget-object v0, p0, Lcom/android/settings/IntervalSeekBar;->mEnableAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/android/settings_ex/IntervalSeekBar;->mEnableAnimator:Landroid/animation/ValueAnimator;
 
-    iget v1, p0, Lcom/android/settings/IntervalSeekBar;->mEnableDuration:I
+    iget v1, p0, Lcom/android/settings_ex/IntervalSeekBar;->mEnableDuration:I
 
     int-to-long v2, v1
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     .line 86
-    iget-object v0, p0, Lcom/android/settings/IntervalSeekBar;->mEnableAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/android/settings_ex/IntervalSeekBar;->mEnableAnimator:Landroid/animation/ValueAnimator;
 
-    iget-object v1, p0, Lcom/android/settings/IntervalSeekBar;->mEnableListener:Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+    iget-object v1, p0, Lcom/android/settings_ex/IntervalSeekBar;->mEnableListener:Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     .line 87
-    iget-object v0, p0, Lcom/android/settings/IntervalSeekBar;->mEnableAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/android/settings_ex/IntervalSeekBar;->mEnableAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
@@ -1253,7 +1253,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/IntervalSeekBar;->mIsAnimating:Ljava/lang/Boolean;
+    iput-object v0, p0, Lcom/android/settings_ex/IntervalSeekBar;->mIsAnimating:Ljava/lang/Boolean;
 
     .line 89
     return-void
@@ -1268,14 +1268,14 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v4, p0, Lcom/android/settings/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v4, p0, Lcom/android/settings_ex/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    iget-object v5, p0, Lcom/android/settings/IntervalSeekBar;->mRect:Landroid/graphics/Rect;
+    iget-object v5, p0, Lcom/android/settings_ex/IntervalSeekBar;->mRect:Landroid/graphics/Rect;
 
     invoke-virtual {v4, v5}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
     .line 245
-    iget-object v4, p0, Lcom/android/settings/IntervalSeekBar;->mIsAnimating:Ljava/lang/Boolean;
+    iget-object v4, p0, Lcom/android/settings_ex/IntervalSeekBar;->mIsAnimating:Ljava/lang/Boolean;
 
     invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -1287,7 +1287,7 @@
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     .line 247
-    invoke-direct {p0, p1}, Lcom/android/settings/IntervalSeekBar;->drawMarkers(Landroid/graphics/Canvas;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/IntervalSeekBar;->drawMarkers(Landroid/graphics/Canvas;)V
 
     .line 248
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
@@ -1310,17 +1310,17 @@
 
     move-result v4
 
-    iget v5, p0, Lcom/android/settings/IntervalSeekBar;->mPaddingTop:I
+    iget v5, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPaddingTop:I
 
     sub-int/2addr v4, v5
 
-    iget v5, p0, Lcom/android/settings/IntervalSeekBar;->mPaddingBottom:I
+    iget v5, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPaddingBottom:I
 
     sub-int/2addr v4, v5
 
     div-int/lit8 v4, v4, 0x2
 
-    iget-object v5, p0, Lcom/android/settings/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v5, p0, Lcom/android/settings_ex/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v5}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -1330,15 +1330,15 @@
 
     sub-int/2addr v4, v5
 
-    iget v5, p0, Lcom/android/settings/IntervalSeekBar;->mPaddingTop:I
+    iget v5, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPaddingTop:I
 
     add-int v3, v4, v5
 
     .line 254
     .local v3, "translate_dx":I
-    iget v4, p0, Lcom/android/settings/IntervalSeekBar;->mPaddingLeft:I
+    iget v4, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPaddingLeft:I
 
-    iget-object v5, p0, Lcom/android/settings/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v5, p0, Lcom/android/settings_ex/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v5}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -1355,7 +1355,7 @@
     invoke-virtual {p1, v4, v5}, Landroid/graphics/Canvas;->translate(FF)V
 
     .line 255
-    iget-object v4, p0, Lcom/android/settings/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v4, p0, Lcom/android/settings_ex/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
@@ -1396,7 +1396,7 @@
 
     move-result-object v5
 
-    iget v6, p0, Lcom/android/settings/IntervalSeekBar;->mPaddingTop:I
+    iget v6, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPaddingTop:I
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1408,7 +1408,7 @@
 
     move-result-object v5
 
-    iget v6, p0, Lcom/android/settings/IntervalSeekBar;->mPaddingBottom:I
+    iget v6, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPaddingBottom:I
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1420,7 +1420,7 @@
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v6, p0, Lcom/android/settings_ex/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v6}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -1437,21 +1437,21 @@
     invoke-static {v4, v5}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 259
-    invoke-virtual {p0}, Lcom/android/settings/IntervalSeekBar;->getMax()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/IntervalSeekBar;->getMax()I
 
     move-result v2
 
     .line 260
     .local v2, "num_of_interval":I
-    iget-object v4, p0, Lcom/android/settings/IntervalSeekBar;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/android/settings_ex/IntervalSeekBar;->mContext:Landroid/content/Context;
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->isFolderModel(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->isFolderModel(Landroid/content/Context;)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v4
 
@@ -1466,11 +1466,11 @@
 
     move-result v4
 
-    iget v5, p0, Lcom/android/settings/IntervalSeekBar;->mPaddingLeft:I
+    iget v5, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPaddingLeft:I
 
     sub-int/2addr v4, v5
 
-    iget v5, p0, Lcom/android/settings/IntervalSeekBar;->mPaddingRight:I
+    iget v5, p0, Lcom/android/settings_ex/IntervalSeekBar;->mPaddingRight:I
 
     sub-int/2addr v4, v5
 
@@ -1486,7 +1486,7 @@
 
     move-result v4
 
-    iput v4, p0, Lcom/android/settings/IntervalSeekBar;->mWidth:I
+    iput v4, p0, Lcom/android/settings_ex/IntervalSeekBar;->mWidth:I
 
     .line 266
     const/4 v0, 0x0
@@ -1501,7 +1501,7 @@
     invoke-virtual {p1, v1, v4}, Landroid/graphics/Canvas;->translate(FF)V
 
     .line 268
-    iget-object v4, p0, Lcom/android/settings/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v4, p0, Lcom/android/settings_ex/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
@@ -1540,7 +1540,7 @@
 
     .prologue
     .line 74
-    iget-object v0, p0, Lcom/android/settings/IntervalSeekBar;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/IntervalSeekBar;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1550,12 +1550,12 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/android/settings_ex/IntervalSeekBar;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     .line 75
-    iget-object v0, p0, Lcom/android/settings/IntervalSeekBar;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/IntervalSeekBar;->mContext:Landroid/content/Context;
 
-    invoke-direct {p0, v0}, Lcom/android/settings/IntervalSeekBar;->init(Landroid/content/Context;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/IntervalSeekBar;->init(Landroid/content/Context;)V
 
     .line 76
     return-void

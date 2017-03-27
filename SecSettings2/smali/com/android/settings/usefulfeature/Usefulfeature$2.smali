@@ -1,11 +1,11 @@
-.class Lcom/android/settings/usefulfeature/Usefulfeature$2;
+.class Lcom/android/settings_ex/usefulfeature/Usefulfeature$2;
 .super Landroid/database/ContentObserver;
 .source "Usefulfeature.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/usefulfeature/Usefulfeature;
+    value = Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+.field final synthetic this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/usefulfeature/Usefulfeature;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/usefulfeature/Usefulfeature;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 150
-    iput-object p1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iput-object p1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -44,10 +44,10 @@
     const/4 v3, 0x1
 
     .line 153
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
-    # invokes: Lcom/android/settings/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$200(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$200(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -59,10 +59,10 @@
 
     .line 154
     .local v0, "onInteractionConrol":I
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
-    # getter for: Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$000(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$000(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -72,10 +72,10 @@
     if-ne v0, v3, :cond_4
 
     .line 156
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
-    # getter for: Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$000(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$000(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -84,10 +84,10 @@
     .line 161
     :cond_0
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
-    # getter for: Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$300(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$300(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -97,10 +97,10 @@
     if-ne v0, v3, :cond_5
 
     .line 163
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
-    # getter for: Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$300(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$300(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -109,10 +109,10 @@
     .line 168
     :cond_1
     :goto_1
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
-    # getter for: Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$400(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$400(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -122,10 +122,10 @@
     if-ne v0, v3, :cond_6
 
     .line 170
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
-    # getter for: Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$400(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$400(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -134,10 +134,10 @@
     .line 175
     :cond_2
     :goto_2
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
-    # getter for: Lcom/android/settings/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$500(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$500(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -147,10 +147,10 @@
     if-ne v0, v3, :cond_7
 
     .line 177
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
-    # getter for: Lcom/android/settings/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$500(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$500(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -163,10 +163,10 @@
 
     .line 158
     :cond_4
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
-    # getter for: Lcom/android/settings/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$000(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPalmSwipeSwitch:Landroid/preference/Preference;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$000(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -176,10 +176,10 @@
 
     .line 165
     :cond_5
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
-    # getter for: Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$300(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpSwitch:Landroid/preference/Preference;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$300(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -189,10 +189,10 @@
 
     .line 172
     :cond_6
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
-    # getter for: Lcom/android/settings/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$400(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mPickUpToCallOutSwitch:Landroid/preference/Preference;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$400(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -202,10 +202,10 @@
 
     .line 179
     :cond_7
-    iget-object v1, p0, Lcom/android/settings/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings/usefulfeature/Usefulfeature;
+    iget-object v1, p0, Lcom/android/settings_ex/usefulfeature/Usefulfeature$2;->this$0:Lcom/android/settings_ex/usefulfeature/Usefulfeature;
 
-    # getter for: Lcom/android/settings/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
-    invoke-static {v1}, Lcom/android/settings/usefulfeature/Usefulfeature;->access$500(Lcom/android/settings/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/usefulfeature/Usefulfeature;->mMergedMutePauseSwitch:Landroid/preference/Preference;
+    invoke-static {v1}, Lcom/android/settings_ex/usefulfeature/Usefulfeature;->access$500(Lcom/android/settings_ex/usefulfeature/Usefulfeature;)Landroid/preference/Preference;
 
     move-result-object v1
 

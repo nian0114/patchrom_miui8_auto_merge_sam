@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/applock/AppLockUtil;
+.class public Lcom/android/settings_ex/applock/AppLockUtil;
 .super Ljava/lang/Object;
 .source "AppLockUtil.java"
 

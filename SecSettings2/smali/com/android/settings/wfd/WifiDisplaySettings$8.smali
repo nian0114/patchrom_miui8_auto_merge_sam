@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wfd/WifiDisplaySettings$8;
+.class Lcom/android/settings_ex/wfd/WifiDisplaySettings$8;
 .super Ljava/lang/Object;
 .source "WifiDisplaySettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wfd/WifiDisplaySettings;
+    value = Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wfd/WifiDisplaySettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wfd/WifiDisplaySettings;)V
     .locals 0
 
     .prologue
     .line 1389
-    iput-object p1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -70,10 +70,10 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iget-object v2, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
-    # getter for: Lcom/android/settings/wfd/WifiDisplaySettings;->mPendingDevice:Ljava/lang/String;
-    invoke-static {v2}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$1200(Lcom/android/settings/wfd/WifiDisplaySettings;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/wfd/WifiDisplaySettings;->mPendingDevice:Ljava/lang/String;
+    invoke-static {v2}, Lcom/android/settings_ex/wfd/WifiDisplaySettings;->access$1200(Lcom/android/settings_ex/wfd/WifiDisplaySettings;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -88,28 +88,28 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1397
-    iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
-    # getter for: Lcom/android/settings/wfd/WifiDisplaySettings;->mIsPendingSetup:Z
-    invoke-static {v0}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$1300(Lcom/android/settings/wfd/WifiDisplaySettings;)Z
+    # getter for: Lcom/android/settings_ex/wfd/WifiDisplaySettings;->mIsPendingSetup:Z
+    invoke-static {v0}, Lcom/android/settings_ex/wfd/WifiDisplaySettings;->access$1300(Lcom/android/settings_ex/wfd/WifiDisplaySettings;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
-    # getter for: Lcom/android/settings/wfd/WifiDisplaySettings;->mConnectingDevice:Ljava/lang/String;
-    invoke-static {v0}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$1400(Lcom/android/settings/wfd/WifiDisplaySettings;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/wfd/WifiDisplaySettings;->mConnectingDevice:Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/settings_ex/wfd/WifiDisplaySettings;->access$1400(Lcom/android/settings_ex/wfd/WifiDisplaySettings;)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
-    # getter for: Lcom/android/settings/wfd/WifiDisplaySettings;->mConnectingDevice:Ljava/lang/String;
-    invoke-static {v0}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$1400(Lcom/android/settings/wfd/WifiDisplaySettings;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/wfd/WifiDisplaySettings;->mConnectingDevice:Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/settings_ex/wfd/WifiDisplaySettings;->access$1400(Lcom/android/settings_ex/wfd/WifiDisplaySettings;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -123,9 +123,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
-    iget-object v0, v0, Lcom/android/settings/wfd/WifiDisplaySettings;->mDisplayManager:Landroid/hardware/display/DisplayManager;
+    iget-object v0, v0, Lcom/android/settings_ex/wfd/WifiDisplaySettings;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManager;->getWifiDisplayStatus()Landroid/hardware/display/WifiDisplayStatus;
 
@@ -140,22 +140,22 @@
     if-ne v0, v1, :cond_0
 
     .line 1399
-    iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
     check-cast p2, Lcom/samsung/android/allshare/ScreenSharingDevice;
 
     .end local p2    # "device":Lcom/samsung/android/allshare/Device;
-    # invokes: Lcom/android/settings/wfd/WifiDisplaySettings;->sendScreenSharingTriggerMsg(Lcom/samsung/android/allshare/ScreenSharingDevice;)V
-    invoke-static {v0, p2}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$1500(Lcom/android/settings/wfd/WifiDisplaySettings;Lcom/samsung/android/allshare/ScreenSharingDevice;)V
+    # invokes: Lcom/android/settings_ex/wfd/WifiDisplaySettings;->sendScreenSharingTriggerMsg(Lcom/samsung/android/allshare/ScreenSharingDevice;)V
+    invoke-static {v0, p2}, Lcom/android/settings_ex/wfd/WifiDisplaySettings;->access$1500(Lcom/android/settings_ex/wfd/WifiDisplaySettings;Lcom/samsung/android/allshare/ScreenSharingDevice;)V
 
     .line 1402
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
     const/16 v1, 0x8
 
-    # invokes: Lcom/android/settings/wfd/WifiDisplaySettings;->scheduleUpdate(I)V
-    invoke-static {v0, v1}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$1100(Lcom/android/settings/wfd/WifiDisplaySettings;I)V
+    # invokes: Lcom/android/settings_ex/wfd/WifiDisplaySettings;->scheduleUpdate(I)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/wfd/WifiDisplaySettings;->access$1100(Lcom/android/settings_ex/wfd/WifiDisplaySettings;I)V
 
     .line 1403
     return-void
@@ -176,12 +176,12 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1392
-    iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$8;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
     const/16 v1, 0x8
 
-    # invokes: Lcom/android/settings/wfd/WifiDisplaySettings;->scheduleUpdate(I)V
-    invoke-static {v0, v1}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$1100(Lcom/android/settings/wfd/WifiDisplaySettings;I)V
+    # invokes: Lcom/android/settings_ex/wfd/WifiDisplaySettings;->scheduleUpdate(I)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/wfd/WifiDisplaySettings;->access$1100(Lcom/android/settings_ex/wfd/WifiDisplaySettings;I)V
 
     .line 1393
     return-void

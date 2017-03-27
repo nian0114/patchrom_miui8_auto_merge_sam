@@ -1,16 +1,16 @@
-.class public Lcom/android/settings/notification/PriorityNotiAppList;
-.super Lcom/android/settings/PinnedHeaderListFragment;
+.class public Lcom/android/settings_ex/notification/PriorityNotiAppList;
+.super Lcom/android/settings_ex/PinnedHeaderListFragment;
 .source "PriorityNotiAppList.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/notification/PriorityNotiAppList$AppRow;,
-        Lcom/android/settings/notification/PriorityNotiAppList$Row;,
-        Lcom/android/settings/notification/PriorityNotiAppList$ClickListener;,
-        Lcom/android/settings/notification/PriorityNotiAppList$NotificationAppAdapter;,
-        Lcom/android/settings/notification/PriorityNotiAppList$ViewHolder;
+        Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;,
+        Lcom/android/settings_ex/notification/PriorityNotiAppList$Row;,
+        Lcom/android/settings_ex/notification/PriorityNotiAppList$ClickListener;,
+        Lcom/android/settings_ex/notification/PriorityNotiAppList$NotificationAppAdapter;,
+        Lcom/android/settings_ex/notification/PriorityNotiAppList$ViewHolder;
     }
 .end annotation
 
@@ -25,7 +25,7 @@
         value = {
             "Ljava/util/Comparator",
             "<",
-            "Lcom/android/settings/notification/PriorityNotiAppList$AppRow;",
+            "Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;",
             ">;"
         }
     .end annotation
@@ -39,9 +39,9 @@
 
 .field private hide_app_notification_list:[Ljava/lang/String;
 
-.field private mAdapter:Lcom/android/settings/notification/PriorityNotiAppList$NotificationAppAdapter;
+.field private mAdapter:Lcom/android/settings_ex/notification/PriorityNotiAppList$NotificationAppAdapter;
 
-.field private final mBackend:Lcom/android/settings/notification/NotificationBackend;
+.field private final mBackend:Lcom/android/settings_ex/notification/NotificationBackend;
 
 .field private final mCollectAppsRunnable:Ljava/lang/Runnable;
 
@@ -71,7 +71,7 @@
             "Landroid/util/ArrayMap",
             "<",
             "Ljava/lang/String;",
-            "Lcom/android/settings/notification/PriorityNotiAppList$AppRow;",
+            "Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;",
             ">;"
         }
     .end annotation
@@ -93,7 +93,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/notification/PriorityNotiAppList$AppRow;",
+            "Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;",
             ">;"
         }
     .end annotation
@@ -116,7 +116,7 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/android/settings/notification/PriorityNotiAppList;->DEBUG:Z
+    sput-boolean v0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->DEBUG:Z
 
     .line 68
     new-instance v0, Landroid/content/Intent;
@@ -131,14 +131,14 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/notification/PriorityNotiAppList;->APP_NOTIFICATION_PREFS_CATEGORY_INTENT:Landroid/content/Intent;
+    sput-object v0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->APP_NOTIFICATION_PREFS_CATEGORY_INTENT:Landroid/content/Intent;
 
     .line 477
-    new-instance v0, Lcom/android/settings/notification/PriorityNotiAppList$3;
+    new-instance v0, Lcom/android/settings_ex/notification/PriorityNotiAppList$3;
 
-    invoke-direct {v0}, Lcom/android/settings/notification/PriorityNotiAppList$3;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/notification/PriorityNotiAppList$3;-><init>()V
 
-    sput-object v0, Lcom/android/settings/notification/PriorityNotiAppList;->mRowComparator:Ljava/util/Comparator;
+    sput-object v0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mRowComparator:Ljava/util/Comparator;
 
     return-void
 .end method
@@ -150,50 +150,50 @@
     const/4 v2, 0x0
 
     .line 53
-    invoke-direct {p0}, Lcom/android/settings/PinnedHeaderListFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/PinnedHeaderListFragment;-><init>()V
 
     .line 62
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mSortedRows:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mSortedRows:Ljava/util/ArrayList;
 
     .line 65
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mHandler:Landroid/os/Handler;
 
     .line 66
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mRows:Landroid/util/ArrayMap;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mRows:Landroid/util/ArrayMap;
 
     .line 67
-    new-instance v0, Lcom/android/settings/notification/NotificationBackend;
+    new-instance v0, Lcom/android/settings_ex/notification/NotificationBackend;
 
-    invoke-direct {v0}, Lcom/android/settings/notification/NotificationBackend;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/notification/NotificationBackend;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mBackend:Lcom/android/settings/notification/NotificationBackend;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mBackend:Lcom/android/settings_ex/notification/NotificationBackend;
 
     .line 71
-    iput-boolean v2, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mHideApp:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mHideApp:Z
 
     .line 72
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mSections:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mSections:Ljava/util/ArrayList;
 
     .line 73
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->hide_app_list:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->hide_app_list:Ljava/lang/String;
 
     .line 75
     const/4 v0, 0x5
@@ -228,33 +228,33 @@
 
     aput-object v2, v0, v1
 
-    iput-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->excludeKnoxApp:[Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->excludeKnoxApp:[Ljava/lang/String;
 
     .line 158
-    new-instance v0, Lcom/android/settings/notification/PriorityNotiAppList$1;
+    new-instance v0, Lcom/android/settings_ex/notification/PriorityNotiAppList$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/notification/PriorityNotiAppList$1;-><init>(Lcom/android/settings/notification/PriorityNotiAppList;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/notification/PriorityNotiAppList$1;-><init>(Lcom/android/settings_ex/notification/PriorityNotiAppList;)V
 
-    iput-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mCollectAppsRunnable:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mCollectAppsRunnable:Ljava/lang/Runnable;
 
     .line 255
-    new-instance v0, Lcom/android/settings/notification/PriorityNotiAppList$2;
+    new-instance v0, Lcom/android/settings_ex/notification/PriorityNotiAppList$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/notification/PriorityNotiAppList$2;-><init>(Lcom/android/settings/notification/PriorityNotiAppList;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/notification/PriorityNotiAppList$2;-><init>(Lcom/android/settings_ex/notification/PriorityNotiAppList;)V
 
-    iput-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mRefreshAppsListRunnable:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mRefreshAppsListRunnable:Ljava/lang/Runnable;
 
     .line 465
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/notification/PriorityNotiAppList;)Landroid/util/ArrayMap;
+.method static synthetic access$000(Lcom/android/settings_ex/notification/PriorityNotiAppList;)Landroid/util/ArrayMap;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/PriorityNotiAppList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/PriorityNotiAppList;
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mRows:Landroid/util/ArrayMap;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mRows:Landroid/util/ArrayMap;
 
     return-object v0
 .end method
@@ -264,7 +264,7 @@
 
     .prologue
     .line 53
-    sget-boolean v0, Lcom/android/settings/notification/PriorityNotiAppList;->DEBUG:Z
+    sget-boolean v0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->DEBUG:Z
 
     return v0
 .end method
@@ -274,95 +274,95 @@
 
     .prologue
     .line 53
-    sget-object v0, Lcom/android/settings/notification/PriorityNotiAppList;->mRowComparator:Ljava/util/Comparator;
+    sget-object v0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mRowComparator:Ljava/util/Comparator;
 
     return-object v0
 .end method
 
-.method static synthetic access$1100(Lcom/android/settings/notification/PriorityNotiAppList;)Ljava/lang/Runnable;
+.method static synthetic access$1100(Lcom/android/settings_ex/notification/PriorityNotiAppList;)Ljava/lang/Runnable;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/PriorityNotiAppList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/PriorityNotiAppList;
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mRefreshAppsListRunnable:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mRefreshAppsListRunnable:Ljava/lang/Runnable;
 
     return-object v0
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/notification/PriorityNotiAppList;)Landroid/os/Handler;
+.method static synthetic access$1200(Lcom/android/settings_ex/notification/PriorityNotiAppList;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/PriorityNotiAppList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/PriorityNotiAppList;
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic access$1300(Lcom/android/settings/notification/PriorityNotiAppList;)V
+.method static synthetic access$1300(Lcom/android/settings_ex/notification/PriorityNotiAppList;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/notification/PriorityNotiAppList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/PriorityNotiAppList;
 
     .prologue
     .line 53
-    invoke-direct {p0}, Lcom/android/settings/notification/PriorityNotiAppList;->refreshDisplayedItems()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/PriorityNotiAppList;->refreshDisplayedItems()V
 
     return-void
 .end method
 
-.method static synthetic access$1400(Lcom/android/settings/notification/PriorityNotiAppList;)Lcom/android/settings/notification/PriorityNotiAppList$NotificationAppAdapter;
+.method static synthetic access$1400(Lcom/android/settings_ex/notification/PriorityNotiAppList;)Lcom/android/settings_ex/notification/PriorityNotiAppList$NotificationAppAdapter;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/PriorityNotiAppList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/PriorityNotiAppList;
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mAdapter:Lcom/android/settings/notification/PriorityNotiAppList$NotificationAppAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mAdapter:Lcom/android/settings_ex/notification/PriorityNotiAppList$NotificationAppAdapter;
 
     return-object v0
 .end method
 
-.method static synthetic access$1500(Lcom/android/settings/notification/PriorityNotiAppList;)Landroid/widget/TextView;
+.method static synthetic access$1500(Lcom/android/settings_ex/notification/PriorityNotiAppList;)Landroid/widget/TextView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/PriorityNotiAppList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/PriorityNotiAppList;
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mTextView:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mTextView:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method static synthetic access$1600(Lcom/android/settings/notification/PriorityNotiAppList;)Landroid/view/LayoutInflater;
+.method static synthetic access$1600(Lcom/android/settings_ex/notification/PriorityNotiAppList;)Landroid/view/LayoutInflater;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/PriorityNotiAppList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/PriorityNotiAppList;
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mInflater:Landroid/view/LayoutInflater;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/notification/PriorityNotiAppList;)Ljava/util/ArrayList;
+.method static synthetic access$200(Lcom/android/settings_ex/notification/PriorityNotiAppList;)Ljava/util/ArrayList;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/PriorityNotiAppList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/PriorityNotiAppList;
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mSortedRows:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mSortedRows:Ljava/util/ArrayList;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/notification/PriorityNotiAppList;)Landroid/content/pm/LauncherApps;
+.method static synthetic access$300(Lcom/android/settings_ex/notification/PriorityNotiAppList;)Landroid/content/pm/LauncherApps;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/PriorityNotiAppList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/PriorityNotiAppList;
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mLauncherApps:Landroid/content/pm/LauncherApps;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mLauncherApps:Landroid/content/pm/LauncherApps;
 
     return-object v0
 .end method
@@ -375,64 +375,64 @@
 
     .prologue
     .line 53
-    invoke-static {p0, p1, p2}, Lcom/android/settings/notification/PriorityNotiAppList;->findPackageInfo(Landroid/content/pm/PackageManager;Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    invoke-static {p0, p1, p2}, Lcom/android/settings_ex/notification/PriorityNotiAppList;->findPackageInfo(Landroid/content/pm/PackageManager;Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/notification/PriorityNotiAppList;)Landroid/content/pm/PackageManager;
+.method static synthetic access$500(Lcom/android/settings_ex/notification/PriorityNotiAppList;)Landroid/content/pm/PackageManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/PriorityNotiAppList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/PriorityNotiAppList;
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mPM:Landroid/content/pm/PackageManager;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mPM:Landroid/content/pm/PackageManager;
 
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/notification/PriorityNotiAppList;)[Ljava/lang/String;
+.method static synthetic access$600(Lcom/android/settings_ex/notification/PriorityNotiAppList;)[Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/PriorityNotiAppList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/PriorityNotiAppList;
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->excludeKnoxApp:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->excludeKnoxApp:[Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/notification/PriorityNotiAppList;)Z
+.method static synthetic access$700(Lcom/android/settings_ex/notification/PriorityNotiAppList;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/PriorityNotiAppList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/PriorityNotiAppList;
 
     .prologue
     .line 53
-    iget-boolean v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mHideApp:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mHideApp:Z
 
     return v0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/notification/PriorityNotiAppList;)[Ljava/lang/String;
+.method static synthetic access$800(Lcom/android/settings_ex/notification/PriorityNotiAppList;)[Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/PriorityNotiAppList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/PriorityNotiAppList;
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->hide_app_notification_list:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->hide_app_notification_list:[Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/notification/PriorityNotiAppList;)Lcom/android/settings/notification/NotificationBackend;
+.method static synthetic access$900(Lcom/android/settings_ex/notification/PriorityNotiAppList;)Lcom/android/settings_ex/notification/NotificationBackend;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/notification/PriorityNotiAppList;
+    .param p0, "x0"    # Lcom/android/settings_ex/notification/PriorityNotiAppList;
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mBackend:Lcom/android/settings/notification/NotificationBackend;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mBackend:Lcom/android/settings_ex/notification/NotificationBackend;
 
     return-object v0
 .end method
@@ -447,7 +447,7 @@
             "Landroid/util/ArrayMap",
             "<",
             "Ljava/lang/String;",
-            "Lcom/android/settings/notification/PriorityNotiAppList$AppRow;",
+            "Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;",
             ">;",
             "Ljava/util/List",
             "<",
@@ -458,9 +458,9 @@
 
     .prologue
     .line 336
-    .local p1, "rows":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Lcom/android/settings/notification/PriorityNotiAppList$AppRow;>;"
+    .local p1, "rows":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;>;"
     .local p2, "resolveInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
-    sget-boolean v5, Lcom/android/settings/notification/PriorityNotiAppList;->DEBUG:Z
+    sget-boolean v5, Lcom/android/settings_ex/notification/PriorityNotiAppList;->DEBUG:Z
 
     if-eqz v5, :cond_0
 
@@ -545,10 +545,10 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;
+    check-cast v4, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;
 
     .line 342
-    .local v4, "row":Lcom/android/settings/notification/PriorityNotiAppList$AppRow;
+    .local v4, "row":Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;
     if-nez v4, :cond_2
 
     .line 343
@@ -595,7 +595,7 @@
     .end local v1    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "ri":Landroid/content/pm/ResolveInfo;
-    .end local v4    # "row":Lcom/android/settings/notification/PriorityNotiAppList$AppRow;
+    .end local v4    # "row":Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;
     :cond_1
     const-string v5, ""
 
@@ -606,9 +606,9 @@
     .restart local v1    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .restart local v2    # "i$":Ljava/util/Iterator;
     .restart local v3    # "ri":Landroid/content/pm/ResolveInfo;
-    .restart local v4    # "row":Lcom/android/settings/notification/PriorityNotiAppList$AppRow;
+    .restart local v4    # "row":Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;
     :cond_2
-    iget-object v5, v4, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;->settingsIntent:Landroid/content/Intent;
+    iget-object v5, v4, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;->settingsIntent:Landroid/content/Intent;
 
     if-eqz v5, :cond_3
 
@@ -655,7 +655,7 @@
     :cond_3
     new-instance v5, Landroid/content/Intent;
 
-    sget-object v6, Lcom/android/settings/notification/PriorityNotiAppList;->APP_NOTIFICATION_PREFS_CATEGORY_INTENT:Landroid/content/Intent;
+    sget-object v6, Lcom/android/settings_ex/notification/PriorityNotiAppList;->APP_NOTIFICATION_PREFS_CATEGORY_INTENT:Landroid/content/Intent;
 
     invoke-direct {v5, v6}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
@@ -667,7 +667,7 @@
 
     move-result-object v5
 
-    iput-object v5, v4, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;->settingsIntent:Landroid/content/Intent;
+    iput-object v5, v4, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;->settingsIntent:Landroid/content/Intent;
 
     goto :goto_1
 
@@ -675,7 +675,7 @@
     .end local v0    # "activityInfo":Landroid/content/pm/ActivityInfo;
     .end local v1    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v3    # "ri":Landroid/content/pm/ResolveInfo;
-    .end local v4    # "row":Lcom/android/settings/notification/PriorityNotiAppList$AppRow;
+    .end local v4    # "row":Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;
     :cond_4
     return-void
 .end method
@@ -785,30 +785,30 @@
     goto :goto_1
 .end method
 
-.method public static loadAppRow(Landroid/content/pm/PackageManager;Landroid/content/pm/ApplicationInfo;Lcom/android/settings/notification/NotificationBackend;)Lcom/android/settings/notification/PriorityNotiAppList$AppRow;
+.method public static loadAppRow(Landroid/content/pm/PackageManager;Landroid/content/pm/ApplicationInfo;Lcom/android/settings_ex/notification/NotificationBackend;)Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;
     .locals 6
     .param p0, "pm"    # Landroid/content/pm/PackageManager;
     .param p1, "app"    # Landroid/content/pm/ApplicationInfo;
-    .param p2, "backend"    # Lcom/android/settings/notification/NotificationBackend;
+    .param p2, "backend"    # Lcom/android/settings_ex/notification/NotificationBackend;
 
     .prologue
     const/4 v5, 0x1
 
     .line 299
-    new-instance v0, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;
+    new-instance v0, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;
 
-    invoke-direct {v0}, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;-><init>()V
 
     .line 300
-    .local v0, "row":Lcom/android/settings/notification/PriorityNotiAppList$AppRow;
+    .local v0, "row":Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;
     iget-object v2, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    iput-object v2, v0, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;->pkg:Ljava/lang/String;
+    iput-object v2, v0, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;->pkg:Ljava/lang/String;
 
     .line 301
     iget v2, p1, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    iput v2, v0, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;->uid:I
+    iput v2, v0, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;->uid:I
 
     .line 303
     :try_start_0
@@ -816,7 +816,7 @@
 
     move-result-object v2
 
-    iput-object v2, v0, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;->label:Ljava/lang/CharSequence;
+    iput-object v2, v0, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;->label:Ljava/lang/CharSequence;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -826,40 +826,40 @@
 
     move-result-object v2
 
-    iput-object v2, v0, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;->icon:Landroid/graphics/drawable/Drawable;
+    iput-object v2, v0, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;->icon:Landroid/graphics/drawable/Drawable;
 
     .line 309
-    iget-object v2, v0, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;->pkg:Ljava/lang/String;
 
-    iget v3, v0, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;->uid:I
+    iget v3, v0, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;->uid:I
 
-    invoke-virtual {p2, v2, v3}, Lcom/android/settings/notification/NotificationBackend;->getNotificationsBanned(Ljava/lang/String;I)Z
+    invoke-virtual {p2, v2, v3}, Lcom/android/settings_ex/notification/NotificationBackend;->getNotificationsBanned(Ljava/lang/String;I)Z
 
     move-result v2
 
-    iput-boolean v2, v0, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;->banned:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;->banned:Z
 
     .line 310
-    iget-object v2, v0, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;->pkg:Ljava/lang/String;
 
-    iget v3, v0, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;->uid:I
+    iget v3, v0, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;->uid:I
 
-    invoke-virtual {p2, v2, v3}, Lcom/android/settings/notification/NotificationBackend;->getHighPriority(Ljava/lang/String;I)Z
+    invoke-virtual {p2, v2, v3}, Lcom/android/settings_ex/notification/NotificationBackend;->getHighPriority(Ljava/lang/String;I)Z
 
     move-result v2
 
-    iput-boolean v2, v0, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;->priority:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;->priority:Z
 
     .line 311
-    iget-object v2, v0, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;->pkg:Ljava/lang/String;
 
-    iget v3, v0, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;->uid:I
+    iget v3, v0, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;->uid:I
 
-    invoke-virtual {p2, v2, v3}, Lcom/android/settings/notification/NotificationBackend;->getSensitive(Ljava/lang/String;I)Z
+    invoke-virtual {p2, v2, v3}, Lcom/android/settings_ex/notification/NotificationBackend;->getSensitive(Ljava/lang/String;I)Z
 
     move-result v2
 
-    iput-boolean v2, v0, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;->sensitive:Z
+    iput-boolean v2, v0, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;->sensitive:Z
 
     .line 312
     return-object v0
@@ -882,7 +882,7 @@
 
     move-result-object v3
 
-    iget-object v4, v0, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;->pkg:Ljava/lang/String;
+    iget-object v4, v0, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;->pkg:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -895,9 +895,9 @@
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 306
-    iget-object v2, v0, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;->pkg:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;->pkg:Ljava/lang/String;
 
-    iput-object v2, v0, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;->label:Ljava/lang/CharSequence;
+    iput-object v2, v0, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;->label:Ljava/lang/CharSequence;
 
     goto :goto_0
 .end method
@@ -907,7 +907,7 @@
 
     .prologue
     .line 155
-    iget-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mCollectAppsRunnable:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mCollectAppsRunnable:Ljava/lang/Runnable;
 
     invoke-static {v0}, Landroid/os/AsyncTask;->execute(Ljava/lang/Runnable;)V
 
@@ -932,7 +932,7 @@
 
     .prologue
     .line 316
-    sget-boolean v1, Lcom/android/settings/notification/PriorityNotiAppList;->DEBUG:Z
+    sget-boolean v1, Lcom/android/settings_ex/notification/PriorityNotiAppList;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
@@ -948,7 +948,7 @@
 
     move-result-object v2
 
-    sget-object v3, Lcom/android/settings/notification/PriorityNotiAppList;->APP_NOTIFICATION_PREFS_CATEGORY_INTENT:Landroid/content/Intent;
+    sget-object v3, Lcom/android/settings_ex/notification/PriorityNotiAppList;->APP_NOTIFICATION_PREFS_CATEGORY_INTENT:Landroid/content/Intent;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -962,7 +962,7 @@
 
     .line 318
     :cond_0
-    sget-object v1, Lcom/android/settings/notification/PriorityNotiAppList;->APP_NOTIFICATION_PREFS_CATEGORY_INTENT:Landroid/content/Intent;
+    sget-object v1, Lcom/android/settings_ex/notification/PriorityNotiAppList;->APP_NOTIFICATION_PREFS_CATEGORY_INTENT:Landroid/content/Intent;
 
     const/4 v2, 0x0
 
@@ -980,7 +980,7 @@
 
     .prologue
     .line 268
-    sget-boolean v5, Lcom/android/settings/notification/PriorityNotiAppList;->DEBUG:Z
+    sget-boolean v5, Lcom/android/settings_ex/notification/PriorityNotiAppList;->DEBUG:Z
 
     if-eqz v5, :cond_0
 
@@ -992,12 +992,12 @@
 
     .line 269
     :cond_0
-    iget-object v5, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mAdapter:Lcom/android/settings/notification/PriorityNotiAppList$NotificationAppAdapter;
+    iget-object v5, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mAdapter:Lcom/android/settings_ex/notification/PriorityNotiAppList$NotificationAppAdapter;
 
-    invoke-virtual {v5}, Lcom/android/settings/notification/PriorityNotiAppList$NotificationAppAdapter;->clear()V
+    invoke-virtual {v5}, Lcom/android/settings_ex/notification/PriorityNotiAppList$NotificationAppAdapter;->clear()V
 
     .line 270
-    iget-object v6, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mSortedRows:Ljava/util/ArrayList;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mSortedRows:Ljava/util/ArrayList;
 
     monitor-enter v6
 
@@ -1007,7 +1007,7 @@
     .line 272
     .local v4, "section":Ljava/lang/String;
     :try_start_0
-    iget-object v5, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mSortedRows:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mSortedRows:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
@@ -1026,22 +1026,22 @@
     if-ge v2, v0, :cond_1
 
     .line 275
-    iget-object v5, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mSortedRows:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mSortedRows:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;
+    check-cast v3, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;
 
     .line 284
-    .local v3, "row":Lcom/android/settings/notification/PriorityNotiAppList$AppRow;
-    iput-boolean v1, v3, Lcom/android/settings/notification/PriorityNotiAppList$AppRow;->first:Z
+    .local v3, "row":Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;
+    iput-boolean v1, v3, Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;->first:Z
 
     .line 285
-    iget-object v5, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mAdapter:Lcom/android/settings/notification/PriorityNotiAppList$NotificationAppAdapter;
+    iget-object v5, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mAdapter:Lcom/android/settings_ex/notification/PriorityNotiAppList$NotificationAppAdapter;
 
-    invoke-virtual {v5, v3}, Lcom/android/settings/notification/PriorityNotiAppList$NotificationAppAdapter;->add(Ljava/lang/Object;)V
+    invoke-virtual {v5, v3}, Lcom/android/settings_ex/notification/PriorityNotiAppList$NotificationAppAdapter;->add(Ljava/lang/Object;)V
 
     .line 286
     const/4 v1, 0x0
@@ -1052,19 +1052,19 @@
     goto :goto_0
 
     .line 288
-    .end local v3    # "row":Lcom/android/settings/notification/PriorityNotiAppList$AppRow;
+    .end local v3    # "row":Lcom/android/settings_ex/notification/PriorityNotiAppList$AppRow;
     :cond_1
     monitor-exit v6
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 289
-    iget-object v5, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mListViewState:Landroid/os/Parcelable;
+    iget-object v5, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mListViewState:Landroid/os/Parcelable;
 
     if-eqz v5, :cond_3
 
     .line 290
-    sget-boolean v5, Lcom/android/settings/notification/PriorityNotiAppList;->DEBUG:Z
+    sget-boolean v5, Lcom/android/settings_ex/notification/PriorityNotiAppList;->DEBUG:Z
 
     if-eqz v5, :cond_2
 
@@ -1076,22 +1076,22 @@
 
     .line 291
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/notification/PriorityNotiAppList;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/PriorityNotiAppList;->getListView()Landroid/widget/ListView;
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mListViewState:Landroid/os/Parcelable;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mListViewState:Landroid/os/Parcelable;
 
     invoke-virtual {v5, v6}, Landroid/widget/ListView;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
     .line 292
     const/4 v5, 0x0
 
-    iput-object v5, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mListViewState:Landroid/os/Parcelable;
+    iput-object v5, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mListViewState:Landroid/os/Parcelable;
 
     .line 294
     :cond_3
-    sget-boolean v5, Lcom/android/settings/notification/PriorityNotiAppList;->DEBUG:Z
+    sget-boolean v5, Lcom/android/settings_ex/notification/PriorityNotiAppList;->DEBUG:Z
 
     if-eqz v5, :cond_4
 
@@ -1107,7 +1107,7 @@
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mSortedRows:Ljava/util/ArrayList;
+    iget-object v7, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mSortedRows:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
@@ -1156,19 +1156,19 @@
 
     .prologue
     .line 129
-    invoke-super {p0, p1}, Lcom/android/settings/PinnedHeaderListFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/PinnedHeaderListFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 130
-    invoke-virtual {p0}, Lcom/android/settings/notification/PriorityNotiAppList;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/PriorityNotiAppList;->getListView()Landroid/widget/ListView;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mAdapter:Lcom/android/settings/notification/PriorityNotiAppList$NotificationAppAdapter;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mAdapter:Lcom/android/settings_ex/notification/PriorityNotiAppList$NotificationAppAdapter;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 131
-    invoke-virtual {p0}, Lcom/android/settings/notification/PriorityNotiAppList;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/PriorityNotiAppList;->getListView()Landroid/widget/ListView;
 
     move-result-object v0
 
@@ -1188,26 +1188,26 @@
     const/4 v2, 0x1
 
     .line 90
-    invoke-super {p0, p1}, Lcom/android/settings/PinnedHeaderListFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/PinnedHeaderListFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 92
-    invoke-virtual {p0}, Lcom/android/settings/notification/PriorityNotiAppList;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/PriorityNotiAppList;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mContext:Landroid/content/Context;
 
     .line 93
-    iget-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mPM:Landroid/content/pm/PackageManager;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mPM:Landroid/content/pm/PackageManager;
 
     .line 94
-    iget-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mContext:Landroid/content/Context;
 
     const-string v1, "layout_inflater"
 
@@ -1217,10 +1217,10 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    iput-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mInflater:Landroid/view/LayoutInflater;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mInflater:Landroid/view/LayoutInflater;
 
     .line 96
-    iget-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mContext:Landroid/content/Context;
 
     const-string v1, "launcherapps"
 
@@ -1230,19 +1230,19 @@
 
     check-cast v0, Landroid/content/pm/LauncherApps;
 
-    iput-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mLauncherApps:Landroid/content/pm/LauncherApps;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mLauncherApps:Landroid/content/pm/LauncherApps;
 
     .line 97
-    new-instance v0, Lcom/android/settings/notification/PriorityNotiAppList$NotificationAppAdapter;
+    new-instance v0, Lcom/android/settings_ex/notification/PriorityNotiAppList$NotificationAppAdapter;
 
-    iget-object v1, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/notification/PriorityNotiAppList$NotificationAppAdapter;-><init>(Lcom/android/settings/notification/PriorityNotiAppList;Landroid/content/Context;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/notification/PriorityNotiAppList$NotificationAppAdapter;-><init>(Lcom/android/settings_ex/notification/PriorityNotiAppList;Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mAdapter:Lcom/android/settings/notification/PriorityNotiAppList$NotificationAppAdapter;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mAdapter:Lcom/android/settings_ex/notification/PriorityNotiAppList$NotificationAppAdapter;
 
     .line 98
-    invoke-virtual {p0}, Lcom/android/settings/notification/PriorityNotiAppList;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/PriorityNotiAppList;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1261,14 +1261,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->hide_app_list:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->hide_app_list:Ljava/lang/String;
 
     .line 100
-    iget-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->hide_app_list:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->hide_app_list:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->hide_app_list:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->hide_app_list:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -1277,10 +1277,10 @@
     if-nez v0, :cond_0
 
     .line 101
-    iput-boolean v2, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mHideApp:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mHideApp:Z
 
     .line 102
-    iget-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->hide_app_list:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->hide_app_list:Ljava/lang/String;
 
     const-string v1, ","
 
@@ -1288,10 +1288,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->hide_app_notification_list:[Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->hide_app_notification_list:[Ljava/lang/String;
 
     .line 103
-    iget-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->hide_app_notification_list:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->hide_app_notification_list:[Ljava/lang/String;
 
     if-nez v0, :cond_0
 
@@ -1305,11 +1305,11 @@
     .line 105
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mHideApp:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mHideApp:Z
 
     .line 108
     :cond_0
-    invoke-virtual {p0, v2}, Lcom/android/settings/notification/PriorityNotiAppList;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/notification/PriorityNotiAppList;->setHasOptionsMenu(Z)V
 
     .line 110
     return-void
@@ -1343,7 +1343,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mTextView:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mTextView:Landroid/widget/TextView;
 
     .line 118
     const v1, 0x7f0d00ea
@@ -1354,10 +1354,10 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mExplanationTextView:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mExplanationTextView:Landroid/widget/TextView;
 
     .line 119
-    iget-object v1, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mExplanationTextView:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mExplanationTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -1368,10 +1368,10 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mExplanationDivider:Landroid/view/View;
+    iput-object v1, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mExplanationDivider:Landroid/view/View;
 
     .line 122
-    iget-object v1, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mExplanationDivider:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mExplanationDivider:Landroid/view/View;
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
 
@@ -1384,12 +1384,12 @@
 
     .prologue
     .line 143
-    invoke-super {p0}, Lcom/android/settings/PinnedHeaderListFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/android/settings_ex/PinnedHeaderListFragment;->onDestroyView()V
 
     .line 144
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mListViewState:Landroid/os/Parcelable;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mListViewState:Landroid/os/Parcelable;
 
     .line 145
     return-void
@@ -1400,10 +1400,10 @@
 
     .prologue
     .line 149
-    invoke-super {p0}, Lcom/android/settings/PinnedHeaderListFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/PinnedHeaderListFragment;->onPause()V
 
     .line 150
-    sget-boolean v0, Lcom/android/settings/notification/PriorityNotiAppList;->DEBUG:Z
+    sget-boolean v0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
@@ -1415,7 +1415,7 @@
 
     .line 151
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/notification/PriorityNotiAppList;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/PriorityNotiAppList;->getListView()Landroid/widget/ListView;
 
     move-result-object v0
 
@@ -1423,7 +1423,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/notification/PriorityNotiAppList;->mListViewState:Landroid/os/Parcelable;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/PriorityNotiAppList;->mListViewState:Landroid/os/Parcelable;
 
     .line 152
     return-void
@@ -1434,10 +1434,10 @@
 
     .prologue
     .line 137
-    invoke-super {p0}, Lcom/android/settings/PinnedHeaderListFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/PinnedHeaderListFragment;->onResume()V
 
     .line 138
-    invoke-direct {p0}, Lcom/android/settings/notification/PriorityNotiAppList;->loadAppsList()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/PriorityNotiAppList;->loadAppsList()V
 
     .line 139
     return-void

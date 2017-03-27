@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/fingerprint/VI/SvgHelper$SvgPath;
+.class public Lcom/android/settings_ex/fingerprint/VI/SvgHelper$SvgPath;
 .super Ljava/lang/Object;
 .source "SvgHelper.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fingerprint/VI/SvgHelper;
+    value = Lcom/android/settings_ex/fingerprint/VI/SvgHelper;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -48,14 +48,14 @@
 
     invoke-direct {v0}, Landroid/graphics/Region;-><init>()V
 
-    sput-object v0, Lcom/android/settings/fingerprint/VI/SvgHelper$SvgPath;->sRegion:Landroid/graphics/Region;
+    sput-object v0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper$SvgPath;->sRegion:Landroid/graphics/Region;
 
     .line 53
     new-instance v0, Landroid/graphics/Region;
 
     invoke-direct {v0, v1, v1, v2, v2}, Landroid/graphics/Region;-><init>(IIII)V
 
-    sput-object v0, Lcom/android/settings/fingerprint/VI/SvgHelper$SvgPath;->sMaxClip:Landroid/graphics/Region;
+    sput-object v0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper$SvgPath;->sMaxClip:Landroid/graphics/Region;
 
     return-void
 .end method
@@ -74,13 +74,13 @@
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/VI/SvgHelper$SvgPath;->renderPath:Landroid/graphics/Path;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper$SvgPath;->renderPath:Landroid/graphics/Path;
 
     .line 65
-    iput-object p1, p0, Lcom/android/settings/fingerprint/VI/SvgHelper$SvgPath;->path:Landroid/graphics/Path;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper$SvgPath;->path:Landroid/graphics/Path;
 
     .line 66
-    iput-object p2, p0, Lcom/android/settings/fingerprint/VI/SvgHelper$SvgPath;->paint:Landroid/graphics/Paint;
+    iput-object p2, p0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper$SvgPath;->paint:Landroid/graphics/Paint;
 
     .line 68
     new-instance v0, Landroid/graphics/PathMeasure;
@@ -89,32 +89,32 @@
 
     invoke-direct {v0, p1, v1}, Landroid/graphics/PathMeasure;-><init>(Landroid/graphics/Path;Z)V
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/VI/SvgHelper$SvgPath;->measure:Landroid/graphics/PathMeasure;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper$SvgPath;->measure:Landroid/graphics/PathMeasure;
 
     .line 69
-    iget-object v0, p0, Lcom/android/settings/fingerprint/VI/SvgHelper$SvgPath;->measure:Landroid/graphics/PathMeasure;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper$SvgPath;->measure:Landroid/graphics/PathMeasure;
 
     invoke-virtual {v0}, Landroid/graphics/PathMeasure;->getLength()F
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/fingerprint/VI/SvgHelper$SvgPath;->length:F
+    iput v0, p0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper$SvgPath;->length:F
 
     .line 71
-    sget-object v0, Lcom/android/settings/fingerprint/VI/SvgHelper$SvgPath;->sRegion:Landroid/graphics/Region;
+    sget-object v0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper$SvgPath;->sRegion:Landroid/graphics/Region;
 
-    sget-object v1, Lcom/android/settings/fingerprint/VI/SvgHelper$SvgPath;->sMaxClip:Landroid/graphics/Region;
+    sget-object v1, Lcom/android/settings_ex/fingerprint/VI/SvgHelper$SvgPath;->sMaxClip:Landroid/graphics/Region;
 
     invoke-virtual {v0, p1, v1}, Landroid/graphics/Region;->setPath(Landroid/graphics/Path;Landroid/graphics/Region;)Z
 
     .line 72
-    sget-object v0, Lcom/android/settings/fingerprint/VI/SvgHelper$SvgPath;->sRegion:Landroid/graphics/Region;
+    sget-object v0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper$SvgPath;->sRegion:Landroid/graphics/Region;
 
     invoke-virtual {v0}, Landroid/graphics/Region;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/VI/SvgHelper$SvgPath;->bounds:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper$SvgPath;->bounds:Landroid/graphics/Rect;
 
     .line 73
     return-void

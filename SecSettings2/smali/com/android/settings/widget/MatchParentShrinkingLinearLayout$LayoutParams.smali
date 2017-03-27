@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;
+.class public Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;
 .super Landroid/view/ViewGroup$MarginLayoutParams;
 .source "MatchParentShrinkingLinearLayout.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/widget/MatchParentShrinkingLinearLayout;
+    value = Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -99,12 +99,12 @@
     .line 1486
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->gravity:I
+    iput v0, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->gravity:I
 
     .line 1525
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->weight:F
+    iput v0, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->weight:F
 
     .line 1526
     return-void
@@ -122,7 +122,7 @@
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 1486
-    iput v3, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->gravity:I
+    iput v3, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->gravity:I
 
     .line 1509
     sget-object v1, Lcom/android/internal/R$styleable;->LinearLayout_Layout:[I
@@ -141,7 +141,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->weight:F
+    iput v1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->weight:F
 
     .line 1514
     const/4 v1, 0x0
@@ -150,7 +150,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->gravity:I
+    iput v1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->gravity:I
 
     .line 1517
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
@@ -170,7 +170,7 @@
     .line 1486
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->gravity:I
+    iput v0, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->gravity:I
 
     .line 1548
     return-void
@@ -198,9 +198,9 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->width:I
+    iget v1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->width:I
 
-    invoke-static {v1}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->sizeToString(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->sizeToString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -214,9 +214,9 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->height:I
+    iget v1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->height:I
 
-    invoke-static {v1}, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->sizeToString(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->sizeToString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -230,7 +230,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->weight:F
+    iget v1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->weight:F
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -260,14 +260,14 @@
     .line 1582
     const-string v0, "layout:weight"
 
-    iget v1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->weight:F
+    iget v1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->weight:F
 
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewHierarchyEncoder;->addProperty(Ljava/lang/String;F)V
 
     .line 1583
     const-string v0, "layout:gravity"
 
-    iget v1, p0, Lcom/android/settings/widget/MatchParentShrinkingLinearLayout$LayoutParams;->gravity:I
+    iget v1, p0, Lcom/android/settings_ex/widget/MatchParentShrinkingLinearLayout$LayoutParams;->gravity:I
 
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewHierarchyEncoder;->addProperty(Ljava/lang/String;I)V
 

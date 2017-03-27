@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fingerprint/FingerPrintRenameDialog$3;
+.class Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog$3;
 .super Ljava/lang/Object;
 .source "FingerPrintRenameDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fingerprint/FingerPrintRenameDialog;->initView(Landroid/view/View;)V
+    value = Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;->initView(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/FingerPrintRenameDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/FingerPrintRenameDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;)V
     .locals 0
 
     .prologue
     .line 216
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerPrintRenameDialog$3;->this$0:Lcom/android/settings/fingerprint/FingerPrintRenameDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog$3;->this$0:Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

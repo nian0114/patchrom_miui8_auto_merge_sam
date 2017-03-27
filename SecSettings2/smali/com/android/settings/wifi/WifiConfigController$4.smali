@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiConfigController$4;
+.class Lcom/android/settings_ex/wifi/WifiConfigController$4;
 .super Ljava/lang/Object;
 .source "WifiConfigController.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiConfigController;->addGatewayRow(Landroid/view/ViewGroup;I)V
+    value = Lcom/android/settings_ex/wifi/WifiConfigController;->addGatewayRow(Landroid/view/ViewGroup;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiConfigController;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiConfigController;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiConfigController;)V
     .locals 0
 
     .prologue
     .line 1113
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiConfigController$4;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiConfigController$4;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,14 +47,14 @@
     const/4 v3, -0x1
 
     .line 1116
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiConfigController$4;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiConfigController$4;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    # setter for: Lcom/android/settings/wifi/WifiConfigController;->mContext:Landroid/content/Context;
-    invoke-static {v1, v2}, Lcom/android/settings/wifi/WifiConfigController;->access$102(Lcom/android/settings/wifi/WifiConfigController;Landroid/content/Context;)Landroid/content/Context;
+    # setter for: Lcom/android/settings_ex/wifi/WifiConfigController;->mContext:Landroid/content/Context;
+    invoke-static {v1, v2}, Lcom/android/settings_ex/wifi/WifiConfigController;->access$102(Lcom/android/settings_ex/wifi/WifiConfigController;Landroid/content/Context;)Landroid/content/Context;
 
     .line 1117
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
@@ -84,7 +84,7 @@
     .line 1122
     .restart local p1    # "v":Landroid/view/View;
     :pswitch_1
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiConfigController$4;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiConfigController$4;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
@@ -92,11 +92,11 @@
 
     float-to-int v2, v2
 
-    # setter for: Lcom/android/settings/wifi/WifiConfigController;->mTouchX:I
-    invoke-static {v1, v2}, Lcom/android/settings/wifi/WifiConfigController;->access$202(Lcom/android/settings/wifi/WifiConfigController;I)I
+    # setter for: Lcom/android/settings_ex/wifi/WifiConfigController;->mTouchX:I
+    invoke-static {v1, v2}, Lcom/android/settings_ex/wifi/WifiConfigController;->access$202(Lcom/android/settings_ex/wifi/WifiConfigController;I)I
 
     .line 1123
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiConfigController$4;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiConfigController$4;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
@@ -104,23 +104,23 @@
 
     float-to-int v2, v2
 
-    # setter for: Lcom/android/settings/wifi/WifiConfigController;->mTouchY:I
-    invoke-static {v1, v2}, Lcom/android/settings/wifi/WifiConfigController;->access$302(Lcom/android/settings/wifi/WifiConfigController;I)I
+    # setter for: Lcom/android/settings_ex/wifi/WifiConfigController;->mTouchY:I
+    invoke-static {v1, v2}, Lcom/android/settings_ex/wifi/WifiConfigController;->access$302(Lcom/android/settings_ex/wifi/WifiConfigController;I)I
 
     .line 1124
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiConfigController$4;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiConfigController$4;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
-    # getter for: Lcom/android/settings/wifi/WifiConfigController;->mTouchX:I
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiConfigController;->access$200(Lcom/android/settings/wifi/WifiConfigController;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiConfigController;->mTouchX:I
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiConfigController;->access$200(Lcom/android/settings_ex/wifi/WifiConfigController;)I
 
     move-result v1
 
     if-lez v1, :cond_2
 
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiConfigController$4;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiConfigController$4;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
-    # getter for: Lcom/android/settings/wifi/WifiConfigController;->mTouchX:I
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiConfigController;->access$200(Lcom/android/settings/wifi/WifiConfigController;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiConfigController;->mTouchX:I
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiConfigController;->access$200(Lcom/android/settings_ex/wifi/WifiConfigController;)I
 
     move-result v2
 
@@ -134,19 +134,19 @@
 
     if-ge v2, v1, :cond_2
 
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiConfigController$4;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiConfigController$4;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
-    # getter for: Lcom/android/settings/wifi/WifiConfigController;->mTouchY:I
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiConfigController;->access$300(Lcom/android/settings/wifi/WifiConfigController;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiConfigController;->mTouchY:I
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiConfigController;->access$300(Lcom/android/settings_ex/wifi/WifiConfigController;)I
 
     move-result v1
 
     if-lez v1, :cond_2
 
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiConfigController$4;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiConfigController$4;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
-    # getter for: Lcom/android/settings/wifi/WifiConfigController;->mTouchY:I
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiConfigController;->access$300(Lcom/android/settings/wifi/WifiConfigController;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiConfigController;->mTouchY:I
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiConfigController;->access$300(Lcom/android/settings_ex/wifi/WifiConfigController;)I
 
     move-result v2
 
@@ -161,8 +161,8 @@
     if-ge v2, v1, :cond_2
 
     .line 1125
-    # getter for: Lcom/android/settings/wifi/WifiConfigController;->DBG:Z
-    invoke-static {}, Lcom/android/settings/wifi/WifiConfigController;->access$000()Z
+    # getter for: Lcom/android/settings_ex/wifi/WifiConfigController;->DBG:Z
+    invoke-static {}, Lcom/android/settings_ex/wifi/WifiConfigController;->access$000()Z
 
     move-result v1
 
@@ -180,10 +180,10 @@
 
     const-string v1, "android.intent.action.VIEW"
 
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiConfigController$4;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiConfigController$4;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
-    # getter for: Lcom/android/settings/wifi/WifiConfigController;->mGateway:Ljava/lang/String;
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiConfigController;->access$400(Lcom/android/settings/wifi/WifiConfigController;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/wifi/WifiConfigController;->mGateway:Ljava/lang/String;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiConfigController;->access$400(Lcom/android/settings_ex/wifi/WifiConfigController;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -195,10 +195,10 @@
 
     .line 1127
     .local v0, "browserIntent":Landroid/content/Intent;
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiConfigController$4;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiConfigController$4;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
-    # getter for: Lcom/android/settings/wifi/WifiConfigController;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiConfigController;->access$100(Lcom/android/settings/wifi/WifiConfigController;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/wifi/WifiConfigController;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiConfigController;->access$100(Lcom/android/settings_ex/wifi/WifiConfigController;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -215,23 +215,23 @@
     invoke-virtual {p1, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
     .line 1130
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiConfigController$4;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiConfigController$4;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
-    # setter for: Lcom/android/settings/wifi/WifiConfigController;->mTouchX:I
-    invoke-static {v1, v3}, Lcom/android/settings/wifi/WifiConfigController;->access$202(Lcom/android/settings/wifi/WifiConfigController;I)I
+    # setter for: Lcom/android/settings_ex/wifi/WifiConfigController;->mTouchX:I
+    invoke-static {v1, v3}, Lcom/android/settings_ex/wifi/WifiConfigController;->access$202(Lcom/android/settings_ex/wifi/WifiConfigController;I)I
 
     .line 1131
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiConfigController$4;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiConfigController$4;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
-    # setter for: Lcom/android/settings/wifi/WifiConfigController;->mTouchY:I
-    invoke-static {v1, v3}, Lcom/android/settings/wifi/WifiConfigController;->access$302(Lcom/android/settings/wifi/WifiConfigController;I)I
+    # setter for: Lcom/android/settings_ex/wifi/WifiConfigController;->mTouchY:I
+    invoke-static {v1, v3}, Lcom/android/settings_ex/wifi/WifiConfigController;->access$302(Lcom/android/settings_ex/wifi/WifiConfigController;I)I
 
     goto/16 :goto_0
 
     .line 1134
     .restart local p1    # "v":Landroid/view/View;
     :pswitch_2
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiConfigController$4;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiConfigController$4;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
@@ -239,11 +239,11 @@
 
     float-to-int v2, v2
 
-    # setter for: Lcom/android/settings/wifi/WifiConfigController;->mTouchX:I
-    invoke-static {v1, v2}, Lcom/android/settings/wifi/WifiConfigController;->access$202(Lcom/android/settings/wifi/WifiConfigController;I)I
+    # setter for: Lcom/android/settings_ex/wifi/WifiConfigController;->mTouchX:I
+    invoke-static {v1, v2}, Lcom/android/settings_ex/wifi/WifiConfigController;->access$202(Lcom/android/settings_ex/wifi/WifiConfigController;I)I
 
     .line 1135
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiConfigController$4;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiConfigController$4;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
@@ -251,23 +251,23 @@
 
     float-to-int v2, v2
 
-    # setter for: Lcom/android/settings/wifi/WifiConfigController;->mTouchY:I
-    invoke-static {v1, v2}, Lcom/android/settings/wifi/WifiConfigController;->access$302(Lcom/android/settings/wifi/WifiConfigController;I)I
+    # setter for: Lcom/android/settings_ex/wifi/WifiConfigController;->mTouchY:I
+    invoke-static {v1, v2}, Lcom/android/settings_ex/wifi/WifiConfigController;->access$302(Lcom/android/settings_ex/wifi/WifiConfigController;I)I
 
     .line 1136
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiConfigController$4;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiConfigController$4;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
-    # getter for: Lcom/android/settings/wifi/WifiConfigController;->mTouchX:I
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiConfigController;->access$200(Lcom/android/settings/wifi/WifiConfigController;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiConfigController;->mTouchX:I
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiConfigController;->access$200(Lcom/android/settings_ex/wifi/WifiConfigController;)I
 
     move-result v1
 
     if-ltz v1, :cond_3
 
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiConfigController$4;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiConfigController$4;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
-    # getter for: Lcom/android/settings/wifi/WifiConfigController;->mTouchX:I
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiConfigController;->access$200(Lcom/android/settings/wifi/WifiConfigController;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiConfigController;->mTouchX:I
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiConfigController;->access$200(Lcom/android/settings_ex/wifi/WifiConfigController;)I
 
     move-result v2
 
@@ -281,19 +281,19 @@
 
     if-gt v2, v1, :cond_3
 
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiConfigController$4;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiConfigController$4;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
-    # getter for: Lcom/android/settings/wifi/WifiConfigController;->mTouchY:I
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiConfigController;->access$300(Lcom/android/settings/wifi/WifiConfigController;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiConfigController;->mTouchY:I
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiConfigController;->access$300(Lcom/android/settings_ex/wifi/WifiConfigController;)I
 
     move-result v1
 
     if-ltz v1, :cond_3
 
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiConfigController$4;->this$0:Lcom/android/settings/wifi/WifiConfigController;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiConfigController$4;->this$0:Lcom/android/settings_ex/wifi/WifiConfigController;
 
-    # getter for: Lcom/android/settings/wifi/WifiConfigController;->mTouchY:I
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiConfigController;->access$300(Lcom/android/settings/wifi/WifiConfigController;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiConfigController;->mTouchY:I
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiConfigController;->access$300(Lcom/android/settings_ex/wifi/WifiConfigController;)I
 
     move-result v2
 

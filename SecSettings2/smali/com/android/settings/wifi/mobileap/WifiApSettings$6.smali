@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApSettings$6;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$6;
 .super Ljava/lang/Object;
 .source "WifiApSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/mobileap/WifiApSettings;->addQrCodePreference()V
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->addQrCodePreference()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WifiApSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;)V
     .locals 0
 
     .prologue
     .line 637
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApSettings$6;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$6;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,9 +42,9 @@
 
     .prologue
     .line 640
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSettings$6;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$6;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/mobileap/WifiApSettings;->showQrCodeGenerated()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->showQrCodeGenerated()V
 
     .line 641
     const/4 v0, 0x1

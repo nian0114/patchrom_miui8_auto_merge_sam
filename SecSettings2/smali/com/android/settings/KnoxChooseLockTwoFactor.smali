@@ -1,12 +1,12 @@
-.class public Lcom/android/settings/KnoxChooseLockTwoFactor;
-.super Lcom/android/settings/SettingsActivity;
+.class public Lcom/android/settings_ex/KnoxChooseLockTwoFactor;
+.super Lcom/android/settings_ex/SettingsActivity;
 .source "KnoxChooseLockTwoFactor.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
+        Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
     }
 .end annotation
 
@@ -17,7 +17,7 @@
 
     .prologue
     .line 51
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivity;-><init>()V
 
     .line 92
     return-void
@@ -32,7 +32,7 @@
     .line 60
     new-instance v1, Landroid/content/Intent;
 
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->getIntent()Landroid/content/Intent;
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
 
@@ -42,7 +42,7 @@
     .local v1, "modIntent":Landroid/content/Intent;
     const-string v3, ":settings:show_fragment"
 
-    const-class v4, Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
+    const-class v4, Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
 
     invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -51,14 +51,14 @@
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 62
-    invoke-static {}, Lcom/android/settings/Utils;->isFullScreenSupported()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isFullScreenSupported()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
     .line 63
-    invoke-virtual {p0}, Lcom/android/settings/KnoxChooseLockTwoFactor;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/KnoxChooseLockTwoFactor;->getWindow()Landroid/view/Window;
 
     move-result-object v2
 
@@ -109,7 +109,7 @@
 
     .prologue
     .line 77
-    const-class v0, Lcom/android/settings/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
+    const-class v0, Lcom/android/settings_ex/KnoxChooseLockTwoFactor$KnoxChooseLockTwoFactorFragment;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -146,7 +146,7 @@
     packed-switch v0, :pswitch_data_0
 
     .line 89
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsActivity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsActivity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v0
 
@@ -157,10 +157,10 @@
     :pswitch_0
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/KnoxChooseLockTwoFactor;->setResult(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/KnoxChooseLockTwoFactor;->setResult(I)V
 
     .line 86
-    invoke-virtual {p0}, Lcom/android/settings/KnoxChooseLockTwoFactor;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/KnoxChooseLockTwoFactor;->finish()V
 
     .line 87
     const/4 v0, 0x1

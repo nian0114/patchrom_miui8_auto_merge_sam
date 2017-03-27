@@ -1,11 +1,11 @@
-.class Lcom/android/settings/LGTRoamingEnv$5;
+.class Lcom/android/settings_ex/LGTRoamingEnv$5;
 .super Landroid/database/ContentObserver;
 .source "LGTRoamingEnv.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/LGTRoamingEnv;
+    value = Lcom/android/settings_ex/LGTRoamingEnv;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/LGTRoamingEnv;
+.field final synthetic this$0:Lcom/android/settings_ex/LGTRoamingEnv;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/LGTRoamingEnv;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/LGTRoamingEnv;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 230
-    iput-object p1, p0, Lcom/android/settings/LGTRoamingEnv$5;->this$0:Lcom/android/settings/LGTRoamingEnv;
+    iput-object p1, p0, Lcom/android/settings_ex/LGTRoamingEnv$5;->this$0:Lcom/android/settings_ex/LGTRoamingEnv;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -43,16 +43,16 @@
 
     .line 234
     :try_start_0
-    iget-object v2, p0, Lcom/android/settings/LGTRoamingEnv$5;->this$0:Lcom/android/settings/LGTRoamingEnv;
+    iget-object v2, p0, Lcom/android/settings_ex/LGTRoamingEnv$5;->this$0:Lcom/android/settings_ex/LGTRoamingEnv;
 
-    # getter for: Lcom/android/settings/LGTRoamingEnv;->mLteRoamingSettings:Landroid/preference/SwitchPreference;
-    invoke-static {v2}, Lcom/android/settings/LGTRoamingEnv;->access$900(Lcom/android/settings/LGTRoamingEnv;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/LGTRoamingEnv;->mLteRoamingSettings:Landroid/preference/SwitchPreference;
+    invoke-static {v2}, Lcom/android/settings_ex/LGTRoamingEnv;->access$900(Lcom/android/settings_ex/LGTRoamingEnv;)Landroid/preference/SwitchPreference;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/LGTRoamingEnv$5;->this$0:Lcom/android/settings/LGTRoamingEnv;
+    iget-object v3, p0, Lcom/android/settings_ex/LGTRoamingEnv$5;->this$0:Lcom/android/settings_ex/LGTRoamingEnv;
 
-    invoke-virtual {v3}, Lcom/android/settings/LGTRoamingEnv;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v3}, Lcom/android/settings_ex/LGTRoamingEnv;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 

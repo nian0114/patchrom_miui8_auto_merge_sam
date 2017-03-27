@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApAllowedList$8;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedList$8;
 .super Ljava/lang/Object;
 .source "WifiApAllowedList.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/mobileap/WifiApAllowedList;->onCreateDialog(I)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedList;->onCreateDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WifiApAllowedList;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedList;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WifiApAllowedList;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedList;)V
     .locals 0
 
     .prologue
     .line 626
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApAllowedList$8;->this$0:Lcom/android/settings/wifi/mobileap/WifiApAllowedList;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedList$8;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApAllowedList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

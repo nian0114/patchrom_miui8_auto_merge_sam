@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/applock/PackageActionReceiver;
+.class public Lcom/android/settings_ex/applock/PackageActionReceiver;
 .super Landroid/content/BroadcastReceiver;
 .source "PackageActionReceiver.java"
 
@@ -13,13 +13,13 @@
 
     .prologue
     .line 9
-    const-class v0, Lcom/android/settings/applock/PackageActionReceiver;
+    const-class v0, Lcom/android/settings_ex/applock/PackageActionReceiver;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/applock/PackageActionReceiver;->TAG:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/applock/PackageActionReceiver;->TAG:Ljava/lang/String;
 
     return-void
 .end method
@@ -42,13 +42,13 @@
 
     .prologue
     .line 31
-    invoke-static {}, Lcom/android/settings/applock/PackageInfoUtil;->getInstance()Lcom/android/settings/applock/PackageInfoUtil;
+    invoke-static {}, Lcom/android/settings_ex/applock/PackageInfoUtil;->getInstance()Lcom/android/settings_ex/applock/PackageInfoUtil;
 
     move-result-object v0
 
     .line 32
-    .local v0, "packageInfoUtil":Lcom/android/settings/applock/PackageInfoUtil;
-    invoke-virtual {v0, p1, p3, p2}, Lcom/android/settings/applock/PackageInfoUtil;->updatePackageChanged(Landroid/content/Context;ILandroid/content/Intent;)V
+    .local v0, "packageInfoUtil":Lcom/android/settings_ex/applock/PackageInfoUtil;
+    invoke-virtual {v0, p1, p3, p2}, Lcom/android/settings_ex/applock/PackageInfoUtil;->updatePackageChanged(Landroid/content/Context;ILandroid/content/Intent;)V
 
     .line 33
     return-void
@@ -65,7 +65,7 @@
     .line 14
     const-string v2, "applock"
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isSupportCHNEnhancedFeature(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isSupportCHNEnhancedFeature(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -109,7 +109,7 @@
     .line 18
     const/4 v2, 0x4
 
-    invoke-direct {p0, p1, p2, v2}, Lcom/android/settings/applock/PackageActionReceiver;->updateStateChanged(Landroid/content/Context;Landroid/content/Intent;I)V
+    invoke-direct {p0, p1, p2, v2}, Lcom/android/settings_ex/applock/PackageActionReceiver;->updateStateChanged(Landroid/content/Context;Landroid/content/Intent;I)V
 
     .line 24
     .end local v0    # "action":Ljava/lang/String;
@@ -133,7 +133,7 @@
     .line 21
     const/4 v2, 0x3
 
-    invoke-direct {p0, p1, p2, v2}, Lcom/android/settings/applock/PackageActionReceiver;->updateStateChanged(Landroid/content/Context;Landroid/content/Intent;I)V
+    invoke-direct {p0, p1, p2, v2}, Lcom/android/settings_ex/applock/PackageActionReceiver;->updateStateChanged(Landroid/content/Context;Landroid/content/Intent;I)V
 
     goto :goto_0
 .end method

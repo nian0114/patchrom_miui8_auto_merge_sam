@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/fingerprint/VI/SvgHelper;
+.class public Lcom/android/settings_ex/fingerprint/VI/SvgHelper;
 .super Ljava/lang/Object;
 .source "SvgHelper.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/fingerprint/VI/SvgHelper$SvgPath;
+        Lcom/android/settings_ex/fingerprint/VI/SvgHelper$SvgPath;
     }
 .end annotation
 
@@ -17,7 +17,7 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/fingerprint/VI/SvgHelper$SvgPath;",
+            "Lcom/android/settings_ex/fingerprint/VI/SvgHelper$SvgPath;",
             ">;"
         }
     .end annotation
@@ -42,33 +42,33 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/fingerprint/VI/SvgHelper;->mPaths:Ljava/util/List;
+    iput-object v0, p0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper;->mPaths:Ljava/util/List;
 
     .line 38
-    iput-object p1, p0, Lcom/android/settings/fingerprint/VI/SvgHelper;->mSourcePaint:Landroid/graphics/Paint;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper;->mSourcePaint:Landroid/graphics/Paint;
 
     .line 39
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/fingerprint/VI/SvgHelper;)Landroid/graphics/Paint;
+.method static synthetic access$000(Lcom/android/settings_ex/fingerprint/VI/SvgHelper;)Landroid/graphics/Paint;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/VI/SvgHelper;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/VI/SvgHelper;
 
     .prologue
     .line 29
-    iget-object v0, p0, Lcom/android/settings/fingerprint/VI/SvgHelper;->mSourcePaint:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper;->mSourcePaint:Landroid/graphics/Paint;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/fingerprint/VI/SvgHelper;)Ljava/util/List;
+.method static synthetic access$100(Lcom/android/settings_ex/fingerprint/VI/SvgHelper;)Ljava/util/List;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/fingerprint/VI/SvgHelper;
+    .param p0, "x0"    # Lcom/android/settings_ex/fingerprint/VI/SvgHelper;
 
     .prologue
     .line 29
-    iget-object v0, p0, Lcom/android/settings/fingerprint/VI/SvgHelper;->mPaths:Ljava/util/List;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper;->mPaths:Ljava/util/List;
 
     return-object v0
 .end method
@@ -84,7 +84,7 @@
             "(II)",
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/fingerprint/VI/SvgHelper$SvgPath;",
+            "Lcom/android/settings_ex/fingerprint/VI/SvgHelper$SvgPath;",
             ">;"
         }
     .end annotation
@@ -93,18 +93,18 @@
     const/high16 v6, 0x40000000    # 2.0f
 
     .line 77
-    iget-object v3, p0, Lcom/android/settings/fingerprint/VI/SvgHelper;->mPaths:Ljava/util/List;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper;->mPaths:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->clear()V
 
     .line 79
-    new-instance v0, Lcom/android/settings/fingerprint/VI/SvgHelper$1;
+    new-instance v0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper$1;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/android/settings/fingerprint/VI/SvgHelper$1;-><init>(Lcom/android/settings/fingerprint/VI/SvgHelper;II)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/android/settings_ex/fingerprint/VI/SvgHelper$1;-><init>(Lcom/android/settings_ex/fingerprint/VI/SvgHelper;II)V
 
     .line 104
     .local v0, "canvas":Landroid/graphics/Canvas;
-    iget-object v3, p0, Lcom/android/settings/fingerprint/VI/SvgHelper;->mSvg:Lcom/caverock/androidsvg/SVG;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper;->mSvg:Lcom/caverock/androidsvg/SVG;
 
     invoke-virtual {v3}, Lcom/caverock/androidsvg/SVG;->getDocumentViewBox()Landroid/graphics/RectF;
 
@@ -169,12 +169,12 @@
     .line 115
     .end local v1    # "scale":F
     :cond_0
-    iget-object v3, p0, Lcom/android/settings/fingerprint/VI/SvgHelper;->mSvg:Lcom/caverock/androidsvg/SVG;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper;->mSvg:Lcom/caverock/androidsvg/SVG;
 
     invoke-virtual {v3, v0}, Lcom/caverock/androidsvg/SVG;->renderToCanvas(Landroid/graphics/Canvas;)V
 
     .line 117
-    iget-object v3, p0, Lcom/android/settings/fingerprint/VI/SvgHelper;->mPaths:Ljava/util/List;
+    iget-object v3, p0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper;->mPaths:Ljava/util/List;
 
     return-object v3
 .end method
@@ -186,7 +186,7 @@
 
     .prologue
     .line 42
-    iget-object v1, p0, Lcom/android/settings/fingerprint/VI/SvgHelper;->mSvg:Lcom/caverock/androidsvg/SVG;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper;->mSvg:Lcom/caverock/androidsvg/SVG;
 
     if-eqz v1, :cond_0
 
@@ -201,10 +201,10 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/fingerprint/VI/SvgHelper;->mSvg:Lcom/caverock/androidsvg/SVG;
+    iput-object v1, p0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper;->mSvg:Lcom/caverock/androidsvg/SVG;
 
     .line 45
-    iget-object v1, p0, Lcom/android/settings/fingerprint/VI/SvgHelper;->mSvg:Lcom/caverock/androidsvg/SVG;
+    iget-object v1, p0, Lcom/android/settings_ex/fingerprint/VI/SvgHelper;->mSvg:Lcom/caverock/androidsvg/SVG;
 
     sget-object v2, Lcom/caverock/androidsvg/PreserveAspectRatio;->UNSCALED:Lcom/caverock/androidsvg/PreserveAspectRatio;
 

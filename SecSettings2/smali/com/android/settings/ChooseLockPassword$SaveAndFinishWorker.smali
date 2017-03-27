@@ -1,11 +1,11 @@
-.class Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;
-.super Lcom/android/settings/SaveChosenLockWorkerBase;
+.class Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;
+.super Lcom/android/settings_ex/SaveChosenLockWorkerBase;
 .source "ChooseLockPassword.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/ChooseLockPassword;
+    value = Lcom/android/settings_ex/ChooseLockPassword;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,18 +28,18 @@
 
     .prologue
     .line 1847
-    invoke-direct {p0}, Lcom/android/settings/SaveChosenLockWorkerBase;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SaveChosenLockWorkerBase;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/ChooseLockPassword$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/ChooseLockPassword$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/ChooseLockPassword$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/ChooseLockPassword$1;
 
     .prologue
     .line 1847
-    invoke-direct {p0}, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;-><init>()V
 
     return-void
 .end method
@@ -57,8 +57,8 @@
 
     .line 1868
     .local v1, "result":Landroid/content/Intent;
-    # getter for: Lcom/android/settings/ChooseLockPassword;->mIsFromKnoxFinger:Z
-    invoke-static {}, Lcom/android/settings/ChooseLockPassword;->access$1000()Z
+    # getter for: Lcom/android/settings_ex/ChooseLockPassword;->mIsFromKnoxFinger:Z
+    invoke-static {}, Lcom/android/settings_ex/ChooseLockPassword;->access$1000()Z
 
     move-result v5
 
@@ -69,52 +69,52 @@
     .line 1870
     .local v3, "userId":I
     :goto_0
-    # getter for: Lcom/android/settings/ChooseLockPassword;->mIsRecovery:Z
-    invoke-static {}, Lcom/android/settings/ChooseLockPassword;->access$1100()Z
+    # getter for: Lcom/android/settings_ex/ChooseLockPassword;->mIsRecovery:Z
+    invoke-static {}, Lcom/android/settings_ex/ChooseLockPassword;->access$1100()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
     .line 1871
-    iget-object v5, p0, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->mUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v5, p0, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->mUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v5, v4}, Lcom/android/internal/widget/LockPatternUtils;->setRecoveryScreenLocked(Z)V
 
     .line 1874
     :cond_0
-    # getter for: Lcom/android/settings/ChooseLockPassword;->mIsFromKnoxFinger:Z
-    invoke-static {}, Lcom/android/settings/ChooseLockPassword;->access$1000()Z
+    # getter for: Lcom/android/settings_ex/ChooseLockPassword;->mIsFromKnoxFinger:Z
+    invoke-static {}, Lcom/android/settings_ex/ChooseLockPassword;->access$1000()Z
 
     move-result v5
 
     if-eqz v5, :cond_5
 
     .line 1875
-    iget-object v4, p0, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->mUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v4, p0, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->mUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    iget-object v5, p0, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->mChosenPassword:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->mChosenPassword:Ljava/lang/String;
 
-    iget-object v6, p0, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->mCurrentPassword:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->mCurrentPassword:Ljava/lang/String;
 
-    iget v7, p0, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->mRequestedQuality:I
+    iget v7, p0, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->mRequestedQuality:I
 
     invoke-virtual {v4, v5, v6, v7, v3}, Lcom/android/internal/widget/LockPatternUtils;->saveLockPassword(Ljava/lang/String;Ljava/lang/String;II)V
 
     .line 1893
     :cond_1
     :goto_1
-    iget-boolean v4, p0, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->mHasChallenge:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->mHasChallenge:Z
 
     if-eqz v4, :cond_3
 
     .line 1896
     :try_start_0
-    iget-object v4, p0, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->mUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v4, p0, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->mUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    iget-object v5, p0, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->mChosenPassword:Ljava/lang/String;
+    iget-object v5, p0, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->mChosenPassword:Ljava/lang/String;
 
-    iget-wide v6, p0, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->mChallenge:J
+    iget-wide v6, p0, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->mChallenge:J
 
     invoke-virtual {v4, v5, v6, v7, v3}, Lcom/android/internal/widget/LockPatternUtils;->verifyPassword(Ljava/lang/String;JI)[B
     :try_end_0
@@ -164,7 +164,7 @@
     .line 1878
     .restart local v3    # "userId":I
     :cond_5
-    iget-object v5, p0, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->mUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v5, p0, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->mUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -173,13 +173,13 @@
     invoke-virtual {v5, v4, v6}, Lcom/android/internal/widget/LockPatternUtils;->setFingerPrintLockscreen(II)V
 
     .line 1879
-    iget-object v5, p0, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->mUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v5, p0, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->mUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    iget-object v6, p0, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->mChosenPassword:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->mChosenPassword:Ljava/lang/String;
 
-    iget-object v7, p0, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->mCurrentPassword:Ljava/lang/String;
+    iget-object v7, p0, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->mCurrentPassword:Ljava/lang/String;
 
-    iget v8, p0, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->mRequestedQuality:I
+    iget v8, p0, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->mRequestedQuality:I
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -188,7 +188,7 @@
     invoke-virtual {v5, v6, v7, v8, v9}, Lcom/android/internal/widget/LockPatternUtils;->saveLockPassword(Ljava/lang/String;Ljava/lang/String;II)V
 
     .line 1881
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -205,7 +205,7 @@
     if-eqz v5, :cond_6
 
     .line 1882
-    iget-object v5, p0, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->mUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v5, p0, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->mUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     const/4 v6, 0x1
 
@@ -217,7 +217,7 @@
 
     .line 1884
     :cond_6
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -233,8 +233,8 @@
 
     if-nez v4, :cond_1
 
-    # getter for: Lcom/android/settings/ChooseLockPassword;->mForFingerprint:Z
-    invoke-static {}, Lcom/android/settings/ChooseLockPassword;->access$900()Z
+    # getter for: Lcom/android/settings_ex/ChooseLockPassword;->mForFingerprint:Z
+    invoke-static {}, Lcom/android/settings_ex/ChooseLockPassword;->access$900()Z
 
     move-result v4
 
@@ -243,12 +243,12 @@
     .line 1885
     const/high16 v4, 0x50000
 
-    iget v5, p0, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->mRequestedQuality:I
+    iget v5, p0, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->mRequestedQuality:I
 
     if-ne v4, v5, :cond_7
 
     .line 1886
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -258,13 +258,13 @@
 
     const-string v7, "Password"
 
-    invoke-static {v4, v5, v6, v7}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5, v6, v7}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     .line 1888
     :cond_7
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -274,7 +274,7 @@
 
     const-string v7, "Pin"
 
-    invoke-static {v4, v5, v6, v7}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5, v6, v7}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -302,19 +302,19 @@
 
     .prologue
     .line 1856
-    invoke-virtual/range {p0 .. p5}, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->prepare(Lcom/android/internal/widget/LockPatternUtils;ZZJ)V
+    invoke-virtual/range {p0 .. p5}, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->prepare(Lcom/android/internal/widget/LockPatternUtils;ZZJ)V
 
     .line 1858
-    iput-object p6, p0, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->mChosenPassword:Ljava/lang/String;
+    iput-object p6, p0, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->mChosenPassword:Ljava/lang/String;
 
     .line 1859
-    iput-object p7, p0, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->mCurrentPassword:Ljava/lang/String;
+    iput-object p7, p0, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->mCurrentPassword:Ljava/lang/String;
 
     .line 1860
-    iput p8, p0, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->mRequestedQuality:I
+    iput p8, p0, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->mRequestedQuality:I
 
     .line 1862
-    invoke-virtual {p0}, Lcom/android/settings/ChooseLockPassword$SaveAndFinishWorker;->start()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/ChooseLockPassword$SaveAndFinishWorker;->start()V
 
     .line 1863
     return-void

@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/DataUsageSummary$DeniedRestrictFragment;
+.class public Lcom/android/settings_ex/DataUsageSummary$DeniedRestrictFragment;
 .super Landroid/app/DialogFragment;
 .source "DataUsageSummary.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DataUsageSummary;
+    value = Lcom/android/settings_ex/DataUsageSummary;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final dialog:Lcom/android/settings/DataUsageSummary$DeniedRestrictFragment;
+.field static final dialog:Lcom/android/settings_ex/DataUsageSummary$DeniedRestrictFragment;
 
 
 # direct methods
@@ -24,11 +24,11 @@
 
     .prologue
     .line 5392
-    new-instance v0, Lcom/android/settings/DataUsageSummary$DeniedRestrictFragment;
+    new-instance v0, Lcom/android/settings_ex/DataUsageSummary$DeniedRestrictFragment;
 
-    invoke-direct {v0}, Lcom/android/settings/DataUsageSummary$DeniedRestrictFragment;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/DataUsageSummary$DeniedRestrictFragment;-><init>()V
 
-    sput-object v0, Lcom/android/settings/DataUsageSummary$DeniedRestrictFragment;->dialog:Lcom/android/settings/DataUsageSummary$DeniedRestrictFragment;
+    sput-object v0, Lcom/android/settings_ex/DataUsageSummary$DeniedRestrictFragment;->dialog:Lcom/android/settings_ex/DataUsageSummary$DeniedRestrictFragment;
 
     return-void
 .end method
@@ -51,7 +51,7 @@
 
     .prologue
     .line 5411
-    invoke-virtual {p0}, Lcom/android/settings/DataUsageSummary$DeniedRestrictFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/DataUsageSummary$DeniedRestrictFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 

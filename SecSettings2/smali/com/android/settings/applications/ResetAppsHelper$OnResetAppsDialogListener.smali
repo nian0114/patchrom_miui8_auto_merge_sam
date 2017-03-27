@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/applications/ResetAppsHelper$OnResetAppsDialogListener;
+.class public interface abstract Lcom/android/settings_ex/applications/ResetAppsHelper$OnResetAppsDialogListener;
 .super Ljava/lang/Object;
 .source "ResetAppsHelper.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/applications/ResetAppsHelper;
+    value = Lcom/android/settings_ex/applications/ResetAppsHelper;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

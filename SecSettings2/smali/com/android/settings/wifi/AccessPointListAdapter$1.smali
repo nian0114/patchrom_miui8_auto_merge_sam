@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settings/wifi/AccessPointListAdapter$1;
+.class synthetic Lcom/android/settings_ex/wifi/AccessPointListAdapter$1;
 .super Ljava/lang/Object;
 .source "AccessPointListAdapter.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/AccessPointListAdapter;
+    value = Lcom/android/settings_ex/wifi/AccessPointListAdapter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

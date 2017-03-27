@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settingslib/animation/AppearAnimationUtils$RowTranslationScaler;
+.class public interface abstract Lcom/android/settings_exlib/animation/AppearAnimationUtils$RowTranslationScaler;
 .super Ljava/lang/Object;
 .source "AppearAnimationUtils.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/animation/AppearAnimationUtils;
+    value = Lcom/android/settings_exlib/animation/AppearAnimationUtils;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

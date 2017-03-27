@@ -1,4 +1,4 @@
-.class Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$3;
+.class Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$3;
 .super Ljava/lang/Object;
 .source "ChooseLockPassword.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
+    value = Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;)V
     .locals 0
 
     .prologue
     .line 796
-    iput-object p1, p0, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$3;->this$0:Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$3;->this$0:Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,19 +47,19 @@
 
     .prologue
     .line 800
-    iget-object v1, p0, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$3;->this$0:Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$3;->this$0:Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;
 
-    # getter for: Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->mPasswordEntry:Landroid/widget/TextView;
-    invoke-static {v1}, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->access$200(Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->mPasswordEntry:Landroid/widget/TextView;
+    invoke-static {v1}, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->access$200(Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;)Landroid/widget/TextView;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$3;->this$0:Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$3;->this$0:Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;
 
-    # getter for: Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->mPasswordEntry:Landroid/widget/TextView;
-    invoke-static {v1}, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->access$200(Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->mPasswordEntry:Landroid/widget/TextView;
+    invoke-static {v1}, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->access$200(Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;)Landroid/widget/TextView;
 
     move-result-object v1
 
@@ -75,22 +75,22 @@
 
     move-result v1
 
-    iget-object v2, p0, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$3;->this$0:Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$3;->this$0:Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;
 
-    # getter for: Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->mPasswordMaxLength:I
-    invoke-static {v2}, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->access$1400(Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;)I
+    # getter for: Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->mPasswordMaxLength:I
+    invoke-static {v2}, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->access$1400(Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;)I
 
     move-result v2
 
     if-lt v1, v2, :cond_0
 
     .line 802
-    iget-object v2, p0, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$3;->this$0:Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$3;->this$0:Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;
 
-    iget-object v1, p0, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$3;->this$0:Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$3;->this$0:Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;
 
-    # getter for: Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->mIsAlphaMode:Z
-    invoke-static {v1}, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->access$1500(Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;)Z
+    # getter for: Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->mIsAlphaMode:Z
+    invoke-static {v1}, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->access$1500(Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;)Z
 
     move-result v1
 
@@ -105,10 +105,10 @@
 
     const/4 v4, 0x0
 
-    iget-object v5, p0, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$3;->this$0:Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
+    iget-object v5, p0, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$3;->this$0:Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;
 
-    # getter for: Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->mPasswordMaxLength:I
-    invoke-static {v5}, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->access$1400(Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;)I
+    # getter for: Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->mPasswordMaxLength:I
+    invoke-static {v5}, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->access$1400(Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;)I
 
     move-result v5
 
@@ -118,16 +118,16 @@
 
     aput-object v5, v3, v4
 
-    invoke-virtual {v2, v1, v3}, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v2, v1, v3}, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 805
     .local v0, "errorText":Ljava/lang/String;
-    iget-object v1, p0, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$3;->this$0:Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment$3;->this$0:Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;
 
-    # getter for: Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->mHeaderText:Landroid/widget/TextView;
-    invoke-static {v1}, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->access$1600(Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;)Landroid/widget/TextView;
+    # getter for: Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->mHeaderText:Landroid/widget/TextView;
+    invoke-static {v1}, Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;->access$1600(Lcom/android/settings_ex/ChooseLockPassword$ChooseLockPasswordFragment;)Landroid/widget/TextView;
 
     move-result-object v1
 

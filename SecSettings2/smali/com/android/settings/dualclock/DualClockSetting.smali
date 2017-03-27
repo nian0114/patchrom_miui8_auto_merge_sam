@@ -1,9 +1,9 @@
-.class public Lcom/android/settings/dualclock/DualClockSetting;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/dualclock/DualClockSetting;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "DualClockSetting.java"
 
 # interfaces
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # instance fields
@@ -11,7 +11,7 @@
 
 .field private mHomeCityTimeZone:Landroid/preference/Preference;
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 
 # direct methods
@@ -20,7 +20,7 @@
 
     .prologue
     .line 59
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     return-void
 .end method
@@ -52,7 +52,7 @@
     .line 269
     .local v0, "date":J
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/dualclock/DualClockSetting;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dualclock/DualClockSetting;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -407,7 +407,7 @@
 
     move-result-object v10
 
-    invoke-direct {p0, v10}, Lcom/android/settings/dualclock/DualClockSetting;->getTimeZoneName(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v10}, Lcom/android/settings_ex/dualclock/DualClockSetting;->getTimeZoneName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -427,7 +427,7 @@
 
     move-result-object v10
 
-    invoke-direct {p0, v10}, Lcom/android/settings/dualclock/DualClockSetting;->getTimeZoneName(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v10}, Lcom/android/settings_ex/dualclock/DualClockSetting;->getTimeZoneName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -467,7 +467,7 @@
 
     move-result-object v10
 
-    invoke-direct {p0, v10}, Lcom/android/settings/dualclock/DualClockSetting;->getTimeZoneName(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v10}, Lcom/android/settings_ex/dualclock/DualClockSetting;->getTimeZoneName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -483,7 +483,7 @@
     const/4 v0, 0x0
 
     .line 131
-    invoke-virtual {p0}, Lcom/android/settings/dualclock/DualClockSetting;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dualclock/DualClockSetting;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -500,17 +500,17 @@
     .line 133
     .local v0, "saved_value":Z
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/dualclock/DualClockSetting;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/dualclock/DualClockSetting;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2, v0}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v2, v0}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 134
-    iget-object v2, p0, Lcom/android/settings/dualclock/DualClockSetting;->mHomeCityTimeZone:Landroid/preference/Preference;
+    iget-object v2, p0, Lcom/android/settings_ex/dualclock/DualClockSetting;->mHomeCityTimeZone:Landroid/preference/Preference;
 
     invoke-virtual {v2, v0}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 135
-    iget-object v2, p0, Lcom/android/settings/dualclock/DualClockSetting;->mHomeCityTimeZone:Landroid/preference/Preference;
+    iget-object v2, p0, Lcom/android/settings_ex/dualclock/DualClockSetting;->mHomeCityTimeZone:Landroid/preference/Preference;
 
     invoke-virtual {v2, v1}, Landroid/preference/Preference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
@@ -546,7 +546,7 @@
 
     .prologue
     .line 140
-    invoke-virtual {p0}, Lcom/android/settings/dualclock/DualClockSetting;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dualclock/DualClockSetting;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v10
 
@@ -558,7 +558,7 @@
 
     .line 141
     .local v9, "tzHomeId":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/dualclock/DualClockSetting;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dualclock/DualClockSetting;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v10
 
@@ -589,7 +589,7 @@
     if-nez v9, :cond_3
 
     .line 146
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v4
 
@@ -688,7 +688,7 @@
 
     .line 155
     .local v3, "hometz":Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticModel()Z
 
     move-result v10
 
@@ -731,7 +731,7 @@
     invoke-static {v10, v11}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 160
-    invoke-virtual {p0}, Lcom/android/settings/dualclock/DualClockSetting;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dualclock/DualClockSetting;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v10
 
@@ -741,7 +741,7 @@
 
     .line 162
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/dualclock/DualClockSetting;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dualclock/DualClockSetting;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v10
 
@@ -784,7 +784,7 @@
     if-eqz v9, :cond_4
 
     .line 169
-    invoke-direct {p0, v9}, Lcom/android/settings/dualclock/DualClockSetting;->getTimeZoneText(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v9}, Lcom/android/settings_ex/dualclock/DualClockSetting;->getTimeZoneText(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -797,11 +797,11 @@
     invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 172
-    invoke-direct {p0, v9}, Lcom/android/settings/dualclock/DualClockSetting;->getTimeZoneName(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v9}, Lcom/android/settings_ex/dualclock/DualClockSetting;->getTimeZoneName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
-    invoke-direct {p0, v9, v10, v0, v1}, Lcom/android/settings/dualclock/DualClockSetting;->getTimeZoneOffset(Ljava/lang/String;Ljava/lang/String;J)Ljava/lang/String;
+    invoke-direct {p0, v9, v10, v0, v1}, Lcom/android/settings_ex/dualclock/DualClockSetting;->getTimeZoneOffset(Ljava/lang/String;Ljava/lang/String;J)Ljava/lang/String;
 
     move-result-object v10
 
@@ -813,7 +813,7 @@
     invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 175
-    iget-object v10, p0, Lcom/android/settings/dualclock/DualClockSetting;->mHomeCityTimeZone:Landroid/preference/Preference;
+    iget-object v10, p0, Lcom/android/settings_ex/dualclock/DualClockSetting;->mHomeCityTimeZone:Landroid/preference/Preference;
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -822,7 +822,7 @@
     invoke-virtual {v10, v11}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 176
-    invoke-virtual {p0}, Lcom/android/settings/dualclock/DualClockSetting;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dualclock/DualClockSetting;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
 
@@ -863,7 +863,7 @@
 
     .line 179
     :cond_4
-    iget-object v10, p0, Lcom/android/settings/dualclock/DualClockSetting;->mHomeCityTimeZone:Landroid/preference/Preference;
+    iget-object v10, p0, Lcom/android/settings_ex/dualclock/DualClockSetting;->mHomeCityTimeZone:Landroid/preference/Preference;
 
     const-string v11, ""
 
@@ -890,55 +890,55 @@
 
     .prologue
     .line 105
-    invoke-virtual {p0}, Lcom/android/settings/dualclock/DualClockSetting;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dualclock/DualClockSetting;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     .line 106
     .local v0, "activity":Landroid/app/Activity;
-    invoke-virtual {p0}, Lcom/android/settings/dualclock/DualClockSetting;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dualclock/DualClockSetting;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/SettingsActivity;
+    check-cast v1, Lcom/android/settings_ex/SettingsActivity;
 
     .line 107
-    .local v1, "mActivity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v1}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v1, "mActivity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/dualclock/DualClockSetting;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v2, p0, Lcom/android/settings_ex/dualclock/DualClockSetting;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 108
-    iget-object v2, p0, Lcom/android/settings/dualclock/DualClockSetting;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/dualclock/DualClockSetting;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v2, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 109
-    iget-object v2, p0, Lcom/android/settings/dualclock/DualClockSetting;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/dualclock/DualClockSetting;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v2}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 111
-    invoke-virtual {p0}, Lcom/android/settings/dualclock/DualClockSetting;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dualclock/DualClockSetting;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isFolderModel(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isFolderModel(Landroid/content/Context;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
     .line 112
-    iget-object v2, p0, Lcom/android/settings/dualclock/DualClockSetting;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/dualclock/DualClockSetting;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2}, Lcom/android/settings/widget/SwitchBar;->requestFocus()Z
+    invoke-virtual {v2}, Lcom/android/settings_ex/widget/SwitchBar;->requestFocus()Z
 
     .line 115
     :cond_0
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 116
     return-void
@@ -952,10 +952,10 @@
     const/4 v2, 0x0
 
     .line 87
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 88
-    invoke-virtual {p0}, Lcom/android/settings/dualclock/DualClockSetting;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dualclock/DualClockSetting;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -965,7 +965,7 @@
 
     .line 89
     .local v0, "intent":Landroid/content/Intent;
-    iput-boolean v2, p0, Lcom/android/settings/dualclock/DualClockSetting;->isFromUnlock:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/dualclock/DualClockSetting;->isFromUnlock:Z
 
     .line 90
     const-string v1, "direct_lockscren"
@@ -974,15 +974,15 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/android/settings/dualclock/DualClockSetting;->isFromUnlock:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/dualclock/DualClockSetting;->isFromUnlock:Z
 
     .line 93
-    iget-boolean v1, p0, Lcom/android/settings/dualclock/DualClockSetting;->isFromUnlock:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/dualclock/DualClockSetting;->isFromUnlock:Z
 
     if-eqz v1, :cond_0
 
     .line 94
-    invoke-virtual {p0}, Lcom/android/settings/dualclock/DualClockSetting;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dualclock/DualClockSetting;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -995,7 +995,7 @@
     invoke-virtual {v1, v2}, Landroid/view/Window;->addFlags(I)V
 
     .line 95
-    invoke-virtual {p0}, Lcom/android/settings/dualclock/DualClockSetting;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dualclock/DualClockSetting;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -1011,16 +1011,16 @@
     :cond_0
     const v1, 0x7f080049
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/dualclock/DualClockSetting;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/dualclock/DualClockSetting;->addPreferencesFromResource(I)V
 
     .line 99
     const-string v1, "homecity_timezone"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/dualclock/DualClockSetting;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/dualclock/DualClockSetting;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/dualclock/DualClockSetting;->mHomeCityTimeZone:Landroid/preference/Preference;
+    iput-object v1, p0, Lcom/android/settings_ex/dualclock/DualClockSetting;->mHomeCityTimeZone:Landroid/preference/Preference;
 
     .line 100
     const-string v1, "DualClockSetting"
@@ -1038,22 +1038,22 @@
 
     .prologue
     .line 191
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroyView()V
 
     .line 192
-    iget-object v0, p0, Lcom/android/settings/dualclock/DualClockSetting;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/dualclock/DualClockSetting;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_0
 
     .line 193
-    iget-object v0, p0, Lcom/android/settings/dualclock/DualClockSetting;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/dualclock/DualClockSetting;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 194
-    iget-object v0, p0, Lcom/android/settings/dualclock/DualClockSetting;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/dualclock/DualClockSetting;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 196
     :cond_0
@@ -1065,7 +1065,7 @@
 
     .prologue
     .line 185
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 186
     const-string v0, "DualClockSetting"
@@ -1136,7 +1136,7 @@
     invoke-virtual {v4, v0, v7}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 216
-    iget-boolean v0, p0, Lcom/android/settings/dualclock/DualClockSetting;->isFromUnlock:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/dualclock/DualClockSetting;->isFromUnlock:Z
 
     if-eqz v0, :cond_0
 
@@ -1157,7 +1157,7 @@
 
     move-object v1, p0
 
-    invoke-virtual/range {v0 .. v5}, Lcom/android/settings/dualclock/DualClockSetting;->startFragment(Landroid/app/Fragment;Ljava/lang/String;ILandroid/os/Bundle;I)Z
+    invoke-virtual/range {v0 .. v5}, Lcom/android/settings_ex/dualclock/DualClockSetting;->startFragment(Landroid/app/Fragment;Ljava/lang/String;ILandroid/os/Bundle;I)Z
 
     move v0, v7
 
@@ -1168,7 +1168,7 @@
 
     .line 224
     :cond_1
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v0
 
@@ -1180,7 +1180,7 @@
 
     .prologue
     .line 124
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 125
     const-string v0, "DualClockSetting"
@@ -1190,10 +1190,10 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 126
-    invoke-direct {p0}, Lcom/android/settings/dualclock/DualClockSetting;->updateCheckedUI()V
+    invoke-direct {p0}, Lcom/android/settings_ex/dualclock/DualClockSetting;->updateCheckedUI()V
 
     .line 127
-    invoke-direct {p0}, Lcom/android/settings/dualclock/DualClockSetting;->updatepreference()V
+    invoke-direct {p0}, Lcom/android/settings_ex/dualclock/DualClockSetting;->updatepreference()V
 
     .line 128
     return-void
@@ -1238,7 +1238,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 202
-    invoke-virtual {p0}, Lcom/android/settings/dualclock/DualClockSetting;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dualclock/DualClockSetting;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -1252,7 +1252,7 @@
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 203
-    iget-object v0, p0, Lcom/android/settings/dualclock/DualClockSetting;->mHomeCityTimeZone:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/dualclock/DualClockSetting;->mHomeCityTimeZone:Landroid/preference/Preference;
 
     invoke-virtual {v0, p2}, Landroid/preference/Preference;->setEnabled(Z)V
 
@@ -1276,11 +1276,11 @@
 
     .prologue
     .line 232
-    invoke-virtual {p0}, Lcom/android/settings/dualclock/DualClockSetting;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/dualclock/DualClockSetting;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     const/4 v4, 0x0
 
@@ -1294,7 +1294,7 @@
 
     move v6, p3
 
-    invoke-virtual/range {v0 .. v6}, Lcom/android/settings/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
+    invoke-virtual/range {v0 .. v6}, Lcom/android/settings_ex/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
 
     .line 234
     const/4 v0, 0x1

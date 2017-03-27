@@ -1,4 +1,4 @@
-.class Lcom/android/settings/MasterClear$1;
+.class Lcom/android/settings_ex/MasterClear$1;
 .super Ljava/lang/Object;
 .source "MasterClear.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/MasterClear;
+    value = Lcom/android/settings_ex/MasterClear;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/MasterClear;
+.field final synthetic this$0:Lcom/android/settings_ex/MasterClear;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/MasterClear;)V
+.method constructor <init>(Lcom/android/settings_ex/MasterClear;)V
     .locals 0
 
     .prologue
     .line 171
-    iput-object p1, p0, Lcom/android/settings/MasterClear$1;->this$0:Lcom/android/settings/MasterClear;
+    iput-object p1, p0, Lcom/android/settings_ex/MasterClear$1;->this$0:Lcom/android/settings_ex/MasterClear;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,18 +46,18 @@
     const/4 v5, -0x1
 
     .line 175
-    iget-object v3, p0, Lcom/android/settings/MasterClear$1;->this$0:Lcom/android/settings/MasterClear;
+    iget-object v3, p0, Lcom/android/settings_ex/MasterClear$1;->this$0:Lcom/android/settings_ex/MasterClear;
 
-    # setter for: Lcom/android/settings/MasterClear;->mPinConfirmed:Z
-    invoke-static {v3, v6}, Lcom/android/settings/MasterClear;->access$002(Lcom/android/settings/MasterClear;Z)Z
+    # setter for: Lcom/android/settings_ex/MasterClear;->mPinConfirmed:Z
+    invoke-static {v3, v6}, Lcom/android/settings_ex/MasterClear;->access$002(Lcom/android/settings_ex/MasterClear;Z)Z
 
     .line 177
-    iget-object v3, p0, Lcom/android/settings/MasterClear$1;->this$0:Lcom/android/settings/MasterClear;
+    iget-object v3, p0, Lcom/android/settings_ex/MasterClear$1;->this$0:Lcom/android/settings_ex/MasterClear;
 
     const/16 v4, 0x37
 
-    # invokes: Lcom/android/settings/MasterClear;->runKeyguardConfirmation(I)Z
-    invoke-static {v3, v4}, Lcom/android/settings/MasterClear;->access$100(Lcom/android/settings/MasterClear;I)Z
+    # invokes: Lcom/android/settings_ex/MasterClear;->runKeyguardConfirmation(I)Z
+    invoke-static {v3, v4}, Lcom/android/settings_ex/MasterClear;->access$100(Lcom/android/settings_ex/MasterClear;I)Z
 
     move-result v3
 
@@ -76,9 +76,9 @@
 
     if-eqz v3, :cond_1
 
-    iget-object v3, p0, Lcom/android/settings/MasterClear$1;->this$0:Lcom/android/settings/MasterClear;
+    iget-object v3, p0, Lcom/android/settings_ex/MasterClear$1;->this$0:Lcom/android/settings_ex/MasterClear;
 
-    invoke-virtual {v3}, Lcom/android/settings/MasterClear;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v3}, Lcom/android/settings_ex/MasterClear;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -97,9 +97,9 @@
     .line 181
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    iget-object v3, p0, Lcom/android/settings/MasterClear$1;->this$0:Lcom/android/settings/MasterClear;
+    iget-object v3, p0, Lcom/android/settings_ex/MasterClear$1;->this$0:Lcom/android/settings_ex/MasterClear;
 
-    invoke-virtual {v3}, Lcom/android/settings/MasterClear;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v3}, Lcom/android/settings_ex/MasterClear;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -119,9 +119,9 @@
     .line 184
     new-instance v1, Landroid/widget/EditText;
 
-    iget-object v3, p0, Lcom/android/settings/MasterClear$1;->this$0:Lcom/android/settings/MasterClear;
+    iget-object v3, p0, Lcom/android/settings_ex/MasterClear$1;->this$0:Lcom/android/settings_ex/MasterClear;
 
-    invoke-virtual {v3}, Lcom/android/settings/MasterClear;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v3}, Lcom/android/settings_ex/MasterClear;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -143,18 +143,18 @@
     .line 189
     const v3, 0x7f0e083a
 
-    new-instance v4, Lcom/android/settings/MasterClear$1$1;
+    new-instance v4, Lcom/android/settings_ex/MasterClear$1$1;
 
-    invoke-direct {v4, p0, v1}, Lcom/android/settings/MasterClear$1$1;-><init>(Lcom/android/settings/MasterClear$1;Landroid/widget/EditText;)V
+    invoke-direct {v4, p0, v1}, Lcom/android/settings_ex/MasterClear$1$1;-><init>(Lcom/android/settings_ex/MasterClear$1;Landroid/widget/EditText;)V
 
     invoke-virtual {v0, v3, v4}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 198
     const v3, 0x7f0e083b
 
-    new-instance v4, Lcom/android/settings/MasterClear$1$2;
+    new-instance v4, Lcom/android/settings_ex/MasterClear$1$2;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/MasterClear$1$2;-><init>(Lcom/android/settings/MasterClear$1;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/MasterClear$1$2;-><init>(Lcom/android/settings_ex/MasterClear$1;)V
 
     invoke-virtual {v0, v3, v4}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -171,10 +171,10 @@
 
     .line 206
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/MasterClear$1;->this$0:Lcom/android/settings/MasterClear;
+    iget-object v3, p0, Lcom/android/settings_ex/MasterClear$1;->this$0:Lcom/android/settings_ex/MasterClear;
 
-    # invokes: Lcom/android/settings/MasterClear;->showFinalConfirmation()V
-    invoke-static {v3}, Lcom/android/settings/MasterClear;->access$200(Lcom/android/settings/MasterClear;)V
+    # invokes: Lcom/android/settings_ex/MasterClear;->showFinalConfirmation()V
+    invoke-static {v3}, Lcom/android/settings_ex/MasterClear;->access$200(Lcom/android/settings_ex/MasterClear;)V
 
     goto :goto_0
 .end method

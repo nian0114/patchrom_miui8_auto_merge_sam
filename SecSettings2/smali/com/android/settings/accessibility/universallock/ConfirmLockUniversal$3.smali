@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$3;
+.class Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$3;
 .super Ljava/lang/Object;
 .source "ConfirmLockUniversal.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->initializeAnimations()V
+    value = Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->initializeAnimations()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)V
     .locals 0
 
     .prologue
     .line 398
-    iput-object p1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$3;->this$0:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$3;->this$0:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,20 +44,20 @@
     const/high16 v1, 0x3f800000    # 1.0f
 
     .line 415
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$3;->this$0:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$3;->this$0:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
-    invoke-static {v0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->access$800(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)Landroid/widget/ImageView;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->access$800(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)Landroid/widget/ImageView;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleX(F)V
 
     .line 416
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$3;->this$0:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$3;->this$0:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
-    invoke-static {v0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->access$800(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)Landroid/widget/ImageView;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->access$800(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)Landroid/widget/ImageView;
 
     move-result-object v0
 
@@ -91,17 +91,17 @@
 
     .prologue
     .line 402
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$3;->this$0:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$3;->this$0:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mStepCircleLayout:Landroid/widget/LinearLayout;
-    invoke-static {v0}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->access$900(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)Landroid/widget/LinearLayout;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mStepCircleLayout:Landroid/widget/LinearLayout;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->access$900(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)Landroid/widget/LinearLayout;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$3;->this$0:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$3;->this$0:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
-    # getter for: Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
-    invoke-static {v1}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;->access$800(Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;)Landroid/widget/ImageView;
+    # getter for: Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->mNewStepCircle:Landroid/widget/ImageView;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;->access$800(Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;)Landroid/widget/ImageView;
 
     move-result-object v1
 

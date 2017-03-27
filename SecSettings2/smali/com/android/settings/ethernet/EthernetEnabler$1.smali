@@ -1,11 +1,11 @@
-.class Lcom/android/settings/ethernet/EthernetEnabler$1;
+.class Lcom/android/settings_ex/ethernet/EthernetEnabler$1;
 .super Landroid/content/BroadcastReceiver;
 .source "EthernetEnabler.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/ethernet/EthernetEnabler;
+    value = Lcom/android/settings_ex/ethernet/EthernetEnabler;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/ethernet/EthernetEnabler;
+.field final synthetic this$0:Lcom/android/settings_ex/ethernet/EthernetEnabler;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/ethernet/EthernetEnabler;)V
+.method constructor <init>(Lcom/android/settings_ex/ethernet/EthernetEnabler;)V
     .locals 0
 
     .prologue
     .line 57
-    iput-object p1, p0, Lcom/android/settings/ethernet/EthernetEnabler$1;->this$0:Lcom/android/settings/ethernet/EthernetEnabler;
+    iput-object p1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler$1;->this$0:Lcom/android/settings_ex/ethernet/EthernetEnabler;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -82,7 +82,7 @@
     if-eqz v0, :cond_1
 
     .line 63
-    iget-object v0, p0, Lcom/android/settings/ethernet/EthernetEnabler$1;->this$0:Lcom/android/settings/ethernet/EthernetEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler$1;->this$0:Lcom/android/settings_ex/ethernet/EthernetEnabler;
 
     const-string v1, "eth_state"
 
@@ -96,8 +96,8 @@
 
     move-result v2
 
-    # invokes: Lcom/android/settings/ethernet/EthernetEnabler;->handleEthStateChanged(II)V
-    invoke-static {v0, v1, v2}, Lcom/android/settings/ethernet/EthernetEnabler;->access$000(Lcom/android/settings/ethernet/EthernetEnabler;II)V
+    # invokes: Lcom/android/settings_ex/ethernet/EthernetEnabler;->handleEthStateChanged(II)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/ethernet/EthernetEnabler;->access$000(Lcom/android/settings_ex/ethernet/EthernetEnabler;II)V
 
     .line 71
     :cond_0
@@ -119,7 +119,7 @@
     if-eqz v0, :cond_0
 
     .line 68
-    iget-object v1, p0, Lcom/android/settings/ethernet/EthernetEnabler$1;->this$0:Lcom/android/settings/ethernet/EthernetEnabler;
+    iget-object v1, p0, Lcom/android/settings_ex/ethernet/EthernetEnabler$1;->this$0:Lcom/android/settings_ex/ethernet/EthernetEnabler;
 
     const-string v0, "networkInfo"
 
@@ -129,8 +129,8 @@
 
     check-cast v0, Landroid/net/NetworkInfo;
 
-    # invokes: Lcom/android/settings/ethernet/EthernetEnabler;->handleNetworkStateChanged(Landroid/net/NetworkInfo;)V
-    invoke-static {v1, v0}, Lcom/android/settings/ethernet/EthernetEnabler;->access$100(Lcom/android/settings/ethernet/EthernetEnabler;Landroid/net/NetworkInfo;)V
+    # invokes: Lcom/android/settings_ex/ethernet/EthernetEnabler;->handleNetworkStateChanged(Landroid/net/NetworkInfo;)V
+    invoke-static {v1, v0}, Lcom/android/settings_ex/ethernet/EthernetEnabler;->access$100(Lcom/android/settings_ex/ethernet/EthernetEnabler;Landroid/net/NetworkInfo;)V
 
     goto :goto_0
 .end method

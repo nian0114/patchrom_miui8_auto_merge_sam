@@ -1,4 +1,4 @@
-.class final Lcom/android/settingslib/bluetooth/HidProfile$InputDeviceServiceListener;
+.class final Lcom/android/settings_exlib/bluetooth/HidProfile$InputDeviceServiceListener;
 .super Ljava/lang/Object;
 .source "HidProfile.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/bluetooth/HidProfile;
+    value = Lcom/android/settings_exlib/bluetooth/HidProfile;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,30 +18,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settingslib/bluetooth/HidProfile;
+.field final synthetic this$0:Lcom/android/settings_exlib/bluetooth/HidProfile;
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/settingslib/bluetooth/HidProfile;)V
+.method private constructor <init>(Lcom/android/settings_exlib/bluetooth/HidProfile;)V
     .locals 0
 
     .prologue
     .line 52
-    iput-object p1, p0, Lcom/android/settingslib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settingslib/bluetooth/HidProfile;
+    iput-object p1, p0, Lcom/android/settings_exlib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settings_exlib/bluetooth/HidProfile;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settingslib/bluetooth/HidProfile;Lcom/android/settingslib/bluetooth/HidProfile$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_exlib/bluetooth/HidProfile;Lcom/android/settings_exlib/bluetooth/HidProfile$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settingslib/bluetooth/HidProfile;
-    .param p2, "x1"    # Lcom/android/settingslib/bluetooth/HidProfile$1;
+    .param p1, "x0"    # Lcom/android/settings_exlib/bluetooth/HidProfile;
+    .param p2, "x1"    # Lcom/android/settings_exlib/bluetooth/HidProfile$1;
 
     .prologue
     .line 52
-    invoke-direct {p0, p1}, Lcom/android/settingslib/bluetooth/HidProfile$InputDeviceServiceListener;-><init>(Lcom/android/settingslib/bluetooth/HidProfile;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_exlib/bluetooth/HidProfile$InputDeviceServiceListener;-><init>(Lcom/android/settings_exlib/bluetooth/HidProfile;)V
 
     return-void
 .end method
@@ -55,8 +55,8 @@
 
     .prologue
     .line 56
-    # getter for: Lcom/android/settingslib/bluetooth/HidProfile;->V:Z
-    invoke-static {}, Lcom/android/settingslib/bluetooth/HidProfile;->access$000()Z
+    # getter for: Lcom/android/settings_exlib/bluetooth/HidProfile;->V:Z
+    invoke-static {}, Lcom/android/settings_exlib/bluetooth/HidProfile;->access$000()Z
 
     move-result v5
 
@@ -70,19 +70,19 @@
 
     .line 57
     :cond_0
-    iget-object v5, p0, Lcom/android/settingslib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settingslib/bluetooth/HidProfile;
+    iget-object v5, p0, Lcom/android/settings_exlib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settings_exlib/bluetooth/HidProfile;
 
     check-cast p2, Landroid/bluetooth/BluetoothInputDevice;
 
     .end local p2    # "proxy":Landroid/bluetooth/BluetoothProfile;
-    # setter for: Lcom/android/settingslib/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
-    invoke-static {v5, p2}, Lcom/android/settingslib/bluetooth/HidProfile;->access$102(Lcom/android/settingslib/bluetooth/HidProfile;Landroid/bluetooth/BluetoothInputDevice;)Landroid/bluetooth/BluetoothInputDevice;
+    # setter for: Lcom/android/settings_exlib/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
+    invoke-static {v5, p2}, Lcom/android/settings_exlib/bluetooth/HidProfile;->access$102(Lcom/android/settings_exlib/bluetooth/HidProfile;Landroid/bluetooth/BluetoothInputDevice;)Landroid/bluetooth/BluetoothInputDevice;
 
     .line 59
-    iget-object v5, p0, Lcom/android/settingslib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settingslib/bluetooth/HidProfile;
+    iget-object v5, p0, Lcom/android/settings_exlib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settings_exlib/bluetooth/HidProfile;
 
-    # getter for: Lcom/android/settingslib/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
-    invoke-static {v5}, Lcom/android/settingslib/bluetooth/HidProfile;->access$100(Lcom/android/settingslib/bluetooth/HidProfile;)Landroid/bluetooth/BluetoothInputDevice;
+    # getter for: Lcom/android/settings_exlib/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
+    invoke-static {v5}, Lcom/android/settings_exlib/bluetooth/HidProfile;->access$100(Lcom/android/settings_exlib/bluetooth/HidProfile;)Landroid/bluetooth/BluetoothInputDevice;
 
     move-result-object v5
 
@@ -119,21 +119,21 @@
 
     .line 62
     .local v1, "device":Landroid/bluetooth/BluetoothDevice;
-    iget-object v5, p0, Lcom/android/settingslib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settingslib/bluetooth/HidProfile;
+    iget-object v5, p0, Lcom/android/settings_exlib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settings_exlib/bluetooth/HidProfile;
 
-    # getter for: Lcom/android/settingslib/bluetooth/HidProfile;->mDeviceManager:Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;
-    invoke-static {v5}, Lcom/android/settingslib/bluetooth/HidProfile;->access$200(Lcom/android/settingslib/bluetooth/HidProfile;)Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;
+    # getter for: Lcom/android/settings_exlib/bluetooth/HidProfile;->mDeviceManager:Lcom/android/settings_exlib/bluetooth/CachedBluetoothDeviceManager;
+    invoke-static {v5}, Lcom/android/settings_exlib/bluetooth/HidProfile;->access$200(Lcom/android/settings_exlib/bluetooth/HidProfile;)Lcom/android/settings_exlib/bluetooth/CachedBluetoothDeviceManager;
 
     move-result-object v5
 
-    invoke-virtual {v5, v1}, Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;->findDevice(Landroid/bluetooth/BluetoothDevice;)Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
+    invoke-virtual {v5, v1}, Lcom/android/settings_exlib/bluetooth/CachedBluetoothDeviceManager;->findDevice(Landroid/bluetooth/BluetoothDevice;)Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;
 
     move-result-object v0
 
     .line 64
-    .local v0, "cachedDevice":Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
-    # getter for: Lcom/android/settingslib/bluetooth/HidProfile;->V:Z
-    invoke-static {}, Lcom/android/settingslib/bluetooth/HidProfile;->access$000()Z
+    .local v0, "cachedDevice":Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;
+    # getter for: Lcom/android/settings_exlib/bluetooth/HidProfile;->V:Z
+    invoke-static {}, Lcom/android/settings_exlib/bluetooth/HidProfile;->access$000()Z
 
     move-result v5
 
@@ -193,28 +193,28 @@
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 67
-    iget-object v5, p0, Lcom/android/settingslib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settingslib/bluetooth/HidProfile;
+    iget-object v5, p0, Lcom/android/settings_exlib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settings_exlib/bluetooth/HidProfile;
 
-    # getter for: Lcom/android/settingslib/bluetooth/HidProfile;->mDeviceManager:Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;
-    invoke-static {v5}, Lcom/android/settingslib/bluetooth/HidProfile;->access$200(Lcom/android/settingslib/bluetooth/HidProfile;)Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;
+    # getter for: Lcom/android/settings_exlib/bluetooth/HidProfile;->mDeviceManager:Lcom/android/settings_exlib/bluetooth/CachedBluetoothDeviceManager;
+    invoke-static {v5}, Lcom/android/settings_exlib/bluetooth/HidProfile;->access$200(Lcom/android/settings_exlib/bluetooth/HidProfile;)Lcom/android/settings_exlib/bluetooth/CachedBluetoothDeviceManager;
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settingslib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settingslib/bluetooth/HidProfile;
+    iget-object v6, p0, Lcom/android/settings_exlib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settings_exlib/bluetooth/HidProfile;
 
-    # getter for: Lcom/android/settingslib/bluetooth/HidProfile;->mLocalAdapter:Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
-    invoke-static {v6}, Lcom/android/settingslib/bluetooth/HidProfile;->access$300(Lcom/android/settingslib/bluetooth/HidProfile;)Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;
+    # getter for: Lcom/android/settings_exlib/bluetooth/HidProfile;->mLocalAdapter:Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
+    invoke-static {v6}, Lcom/android/settings_exlib/bluetooth/HidProfile;->access$300(Lcom/android/settings_exlib/bluetooth/HidProfile;)Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settingslib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settingslib/bluetooth/HidProfile;
+    iget-object v7, p0, Lcom/android/settings_exlib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settings_exlib/bluetooth/HidProfile;
 
-    # getter for: Lcom/android/settingslib/bluetooth/HidProfile;->mProfileManager:Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
-    invoke-static {v7}, Lcom/android/settingslib/bluetooth/HidProfile;->access$400(Lcom/android/settingslib/bluetooth/HidProfile;)Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;
+    # getter for: Lcom/android/settings_exlib/bluetooth/HidProfile;->mProfileManager:Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;
+    invoke-static {v7}, Lcom/android/settings_exlib/bluetooth/HidProfile;->access$400(Lcom/android/settings_exlib/bluetooth/HidProfile;)Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;
 
     move-result-object v7
 
-    invoke-virtual {v5, v6, v7, v1}, Lcom/android/settingslib/bluetooth/CachedBluetoothDeviceManager;->addDevice(Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter;Lcom/android/settingslib/bluetooth/LocalBluetoothProfileManager;Landroid/bluetooth/BluetoothDevice;)Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
+    invoke-virtual {v5, v6, v7, v1}, Lcom/android/settings_exlib/bluetooth/CachedBluetoothDeviceManager;->addDevice(Lcom/android/settings_exlib/bluetooth/LocalBluetoothAdapter;Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfileManager;Landroid/bluetooth/BluetoothDevice;)Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;
 
     move-result-object v0
 
@@ -231,14 +231,14 @@
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 73
-    iget-object v5, p0, Lcom/android/settingslib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settingslib/bluetooth/HidProfile;
+    iget-object v5, p0, Lcom/android/settings_exlib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settings_exlib/bluetooth/HidProfile;
 
     const/4 v6, 0x2
 
-    invoke-virtual {v0, v5, v6}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->onProfileStateChanged(Lcom/android/settingslib/bluetooth/LocalBluetoothProfile;I)V
+    invoke-virtual {v0, v5, v6}, Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;->onProfileStateChanged(Lcom/android/settings_exlib/bluetooth/LocalBluetoothProfile;I)V
 
     .line 75
-    invoke-virtual {v0}, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->refresh()V
+    invoke-virtual {v0}, Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;->refresh()V
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -270,16 +270,16 @@
     goto/16 :goto_0
 
     .line 84
-    .end local v0    # "cachedDevice":Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;
+    .end local v0    # "cachedDevice":Lcom/android/settings_exlib/bluetooth/CachedBluetoothDevice;
     .end local v1    # "device":Landroid/bluetooth/BluetoothDevice;
     .end local v4    # "i$":Ljava/util/Iterator;
     :cond_4
-    iget-object v5, p0, Lcom/android/settingslib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settingslib/bluetooth/HidProfile;
+    iget-object v5, p0, Lcom/android/settings_exlib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settings_exlib/bluetooth/HidProfile;
 
     const/4 v6, 0x1
 
-    # setter for: Lcom/android/settingslib/bluetooth/HidProfile;->mIsProfileReady:Z
-    invoke-static {v5, v6}, Lcom/android/settingslib/bluetooth/HidProfile;->access$502(Lcom/android/settingslib/bluetooth/HidProfile;Z)Z
+    # setter for: Lcom/android/settings_exlib/bluetooth/HidProfile;->mIsProfileReady:Z
+    invoke-static {v5, v6}, Lcom/android/settings_exlib/bluetooth/HidProfile;->access$502(Lcom/android/settings_exlib/bluetooth/HidProfile;Z)Z
 
     .line 85
     return-void
@@ -291,8 +291,8 @@
 
     .prologue
     .line 88
-    # getter for: Lcom/android/settingslib/bluetooth/HidProfile;->V:Z
-    invoke-static {}, Lcom/android/settingslib/bluetooth/HidProfile;->access$000()Z
+    # getter for: Lcom/android/settings_exlib/bluetooth/HidProfile;->V:Z
+    invoke-static {}, Lcom/android/settings_exlib/bluetooth/HidProfile;->access$000()Z
 
     move-result v0
 
@@ -306,18 +306,18 @@
 
     .line 89
     :cond_0
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settingslib/bluetooth/HidProfile;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settings_exlib/bluetooth/HidProfile;
 
     const/4 v1, 0x0
 
-    # setter for: Lcom/android/settingslib/bluetooth/HidProfile;->mIsProfileReady:Z
-    invoke-static {v0, v1}, Lcom/android/settingslib/bluetooth/HidProfile;->access$502(Lcom/android/settingslib/bluetooth/HidProfile;Z)Z
+    # setter for: Lcom/android/settings_exlib/bluetooth/HidProfile;->mIsProfileReady:Z
+    invoke-static {v0, v1}, Lcom/android/settings_exlib/bluetooth/HidProfile;->access$502(Lcom/android/settings_exlib/bluetooth/HidProfile;Z)Z
 
     .line 90
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settingslib/bluetooth/HidProfile;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settings_exlib/bluetooth/HidProfile;
 
-    # getter for: Lcom/android/settingslib/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
-    invoke-static {v0}, Lcom/android/settingslib/bluetooth/HidProfile;->access$100(Lcom/android/settingslib/bluetooth/HidProfile;)Landroid/bluetooth/BluetoothInputDevice;
+    # getter for: Lcom/android/settings_exlib/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
+    invoke-static {v0}, Lcom/android/settings_exlib/bluetooth/HidProfile;->access$100(Lcom/android/settings_exlib/bluetooth/HidProfile;)Landroid/bluetooth/BluetoothInputDevice;
 
     move-result-object v0
 
@@ -330,10 +330,10 @@
 
     const/4 v1, 0x4
 
-    iget-object v2, p0, Lcom/android/settingslib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settingslib/bluetooth/HidProfile;
+    iget-object v2, p0, Lcom/android/settings_exlib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settings_exlib/bluetooth/HidProfile;
 
-    # getter for: Lcom/android/settingslib/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
-    invoke-static {v2}, Lcom/android/settingslib/bluetooth/HidProfile;->access$100(Lcom/android/settingslib/bluetooth/HidProfile;)Landroid/bluetooth/BluetoothInputDevice;
+    # getter for: Lcom/android/settings_exlib/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
+    invoke-static {v2}, Lcom/android/settings_exlib/bluetooth/HidProfile;->access$100(Lcom/android/settings_exlib/bluetooth/HidProfile;)Landroid/bluetooth/BluetoothInputDevice;
 
     move-result-object v2
 
@@ -341,12 +341,12 @@
 
     .line 92
     :cond_1
-    iget-object v0, p0, Lcom/android/settingslib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settingslib/bluetooth/HidProfile;
+    iget-object v0, p0, Lcom/android/settings_exlib/bluetooth/HidProfile$InputDeviceServiceListener;->this$0:Lcom/android/settings_exlib/bluetooth/HidProfile;
 
     const/4 v1, 0x0
 
-    # setter for: Lcom/android/settingslib/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
-    invoke-static {v0, v1}, Lcom/android/settingslib/bluetooth/HidProfile;->access$102(Lcom/android/settingslib/bluetooth/HidProfile;Landroid/bluetooth/BluetoothInputDevice;)Landroid/bluetooth/BluetoothInputDevice;
+    # setter for: Lcom/android/settings_exlib/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
+    invoke-static {v0, v1}, Lcom/android/settings_exlib/bluetooth/HidProfile;->access$102(Lcom/android/settings_exlib/bluetooth/HidProfile;Landroid/bluetooth/BluetoothInputDevice;)Landroid/bluetooth/BluetoothInputDevice;
 
     .line 93
     return-void

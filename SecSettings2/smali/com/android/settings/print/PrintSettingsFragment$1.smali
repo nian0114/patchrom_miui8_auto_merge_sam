@@ -1,11 +1,11 @@
-.class Lcom/android/settings/print/PrintSettingsFragment$1;
+.class Lcom/android/settings_ex/print/PrintSettingsFragment$1;
 .super Landroid/os/Handler;
 .source "PrintSettingsFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/print/PrintSettingsFragment;
+    value = Lcom/android/settings_ex/print/PrintSettingsFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/print/PrintSettingsFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/print/PrintSettingsFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/print/PrintSettingsFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/print/PrintSettingsFragment;)V
     .locals 0
 
     .prologue
     .line 119
-    iput-object p1, p0, Lcom/android/settings/print/PrintSettingsFragment$1;->this$0:Lcom/android/settings/print/PrintSettingsFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/print/PrintSettingsFragment$1;->this$0:Lcom/android/settings_ex/print/PrintSettingsFragment;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -39,10 +39,10 @@
 
     .prologue
     .line 122
-    iget-object v0, p0, Lcom/android/settings/print/PrintSettingsFragment$1;->this$0:Lcom/android/settings/print/PrintSettingsFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/print/PrintSettingsFragment$1;->this$0:Lcom/android/settings_ex/print/PrintSettingsFragment;
 
-    # invokes: Lcom/android/settings/print/PrintSettingsFragment;->updateServicesPreferences()V
-    invoke-static {v0}, Lcom/android/settings/print/PrintSettingsFragment;->access$100(Lcom/android/settings/print/PrintSettingsFragment;)V
+    # invokes: Lcom/android/settings_ex/print/PrintSettingsFragment;->updateServicesPreferences()V
+    invoke-static {v0}, Lcom/android/settings_ex/print/PrintSettingsFragment;->access$100(Lcom/android/settings_ex/print/PrintSettingsFragment;)V
 
     .line 123
     return-void

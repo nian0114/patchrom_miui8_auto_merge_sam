@@ -1,4 +1,4 @@
-.class public abstract Lcom/android/settings/InstrumentedPreferenceActivity;
+.class public abstract Lcom/android/settings_ex/InstrumentedPreferenceActivity;
 .super Landroid/preference/PreferenceActivity;
 .source "InstrumentedPreferenceActivity.java"
 
@@ -27,7 +27,7 @@
     invoke-super {p0}, Landroid/preference/PreferenceActivity;->onPause()V
 
     .line 44
-    invoke-virtual {p0}, Lcom/android/settings/InstrumentedPreferenceActivity;->getMetricsCategory()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/InstrumentedPreferenceActivity;->getMetricsCategory()I
 
     move-result v0
 
@@ -45,7 +45,7 @@
     invoke-super {p0}, Landroid/preference/PreferenceActivity;->onResume()V
 
     .line 38
-    invoke-virtual {p0}, Lcom/android/settings/InstrumentedPreferenceActivity;->getMetricsCategory()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/InstrumentedPreferenceActivity;->getMetricsCategory()I
 
     move-result v0
 

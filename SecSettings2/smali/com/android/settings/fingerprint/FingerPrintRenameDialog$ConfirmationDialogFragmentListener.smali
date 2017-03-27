@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/fingerprint/FingerPrintRenameDialog$ConfirmationDialogFragmentListener;
+.class public interface abstract Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog$ConfirmationDialogFragmentListener;
 .super Ljava/lang/Object;
 .source "FingerPrintRenameDialog.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fingerprint/FingerPrintRenameDialog;
+    value = Lcom/android/settings_ex/fingerprint/FingerPrintRenameDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

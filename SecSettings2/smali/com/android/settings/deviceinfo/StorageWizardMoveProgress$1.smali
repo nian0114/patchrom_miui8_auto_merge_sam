@@ -1,11 +1,11 @@
-.class Lcom/android/settings/deviceinfo/StorageWizardMoveProgress$1;
+.class Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress$1;
 .super Landroid/content/pm/PackageManager$MoveCallback;
 .source "StorageWizardMoveProgress.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;
+    value = Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;)V
     .locals 0
 
     .prologue
     .line 66
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress$1;->this$0:Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress$1;->this$0:Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;
 
     invoke-direct {p0}, Landroid/content/pm/PackageManager$MoveCallback;-><init>()V
 
@@ -41,10 +41,10 @@
 
     .prologue
     .line 69
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress$1;->this$0:Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress$1;->this$0:Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;
 
-    # getter for: Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->mMoveId:I
-    invoke-static {v0}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->access$000(Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;)I
+    # getter for: Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->mMoveId:I
+    invoke-static {v0}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->access$000(Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;)I
 
     move-result v0
 
@@ -91,12 +91,12 @@
     if-eq p2, v0, :cond_1
 
     .line 74
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress$1;->this$0:Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress$1;->this$0:Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;
 
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress$1;->this$0:Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress$1;->this$0:Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;
 
-    # invokes: Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->moveStatusToMessage(I)Ljava/lang/CharSequence;
-    invoke-static {v1, p2}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->access$100(Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;I)Ljava/lang/CharSequence;
+    # invokes: Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->moveStatusToMessage(I)Ljava/lang/CharSequence;
+    invoke-static {v1, p2}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->access$100(Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -110,17 +110,17 @@
 
     .line 77
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress$1;->this$0:Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress$1;->this$0:Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;
 
-    invoke-virtual {v0}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->finishAffinity()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->finishAffinity()V
 
     goto :goto_0
 
     .line 80
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress$1;->this$0:Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress$1;->this$0:Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;
 
-    invoke-virtual {v0, p2}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->setCurrentProgress(I)V
+    invoke-virtual {v0, p2}, Lcom/android/settings_ex/deviceinfo/StorageWizardMoveProgress;->setCurrentProgress(I)V
 
     goto :goto_0
 .end method

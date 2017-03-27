@@ -1,4 +1,4 @@
-.class Lcom/android/settings/spen/AirButtonHelp$4;
+.class Lcom/android/settings_ex/spen/AirButtonHelp$4;
 .super Ljava/lang/Object;
 .source "AirButtonHelp.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/spen/AirButtonHelp;->showTalkBackDisableDialog()V
+    value = Lcom/android/settings_ex/spen/AirButtonHelp;->showTalkBackDisableDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/spen/AirButtonHelp;
+.field final synthetic this$0:Lcom/android/settings_ex/spen/AirButtonHelp;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/spen/AirButtonHelp;)V
+.method constructor <init>(Lcom/android/settings_ex/spen/AirButtonHelp;)V
     .locals 0
 
     .prologue
     .line 234
-    iput-object p1, p0, Lcom/android/settings/spen/AirButtonHelp$4;->this$0:Lcom/android/settings/spen/AirButtonHelp;
+    iput-object p1, p0, Lcom/android/settings_ex/spen/AirButtonHelp$4;->this$0:Lcom/android/settings_ex/spen/AirButtonHelp;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,9 +44,9 @@
     const/4 v0, 0x0
 
     .line 237
-    iget-object v1, p0, Lcom/android/settings/spen/AirButtonHelp$4;->this$0:Lcom/android/settings/spen/AirButtonHelp;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/AirButtonHelp$4;->this$0:Lcom/android/settings_ex/spen/AirButtonHelp;
 
-    invoke-virtual {v1}, Lcom/android/settings/spen/AirButtonHelp;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/spen/AirButtonHelp;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -67,14 +67,14 @@
     .line 239
     .local v0, "airButtonState":Z
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/spen/AirButtonHelp$4;->this$0:Lcom/android/settings/spen/AirButtonHelp;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/AirButtonHelp$4;->this$0:Lcom/android/settings_ex/spen/AirButtonHelp;
 
-    # getter for: Lcom/android/settings/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v1}, Lcom/android/settings/spen/AirButtonHelp;->access$100(Lcom/android/settings/spen/AirButtonHelp;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/spen/AirButtonHelp;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v1}, Lcom/android/settings_ex/spen/AirButtonHelp;->access$100(Lcom/android/settings_ex/spen/AirButtonHelp;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 240
     return-void

@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/spen/PenAirCmdSettingsMenu$2;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu$2;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "PenAirCmdSettingsMenu.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/spen/PenAirCmdSettingsMenu;
+    value = Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 304
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -51,7 +51,7 @@
 
     .line 310
     .local v0, "result":Ljava/util/List;, "Ljava/util/List<Landroid/provider/SearchIndexableResource;>;"
-    invoke-static {p1}, Lcom/android/settings/Utils;->isSupportPenUsp10(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isSupportPenUsp10(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -64,7 +64,7 @@
 
     .line 313
     .local v1, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v2, Lcom/android/settings/spen/PenAirCmdSettingsMenu;
+    const-class v2, Lcom/android/settings_ex/spen/PenAirCmdSettingsMenu;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

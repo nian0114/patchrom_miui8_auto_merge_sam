@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fingerprint/FingerprintSetupWizard$2;
+.class Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard$2;
 .super Ljava/lang/Object;
 .source "FingerprintSetupWizard.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fingerprint/FingerprintSetupWizard;->showSensorErrorDialog()V
+    value = Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;->showSensorErrorDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/FingerprintSetupWizard;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/FingerprintSetupWizard;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;)V
     .locals 0
 
     .prologue
     .line 241
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintSetupWizard$2;->this$0:Lcom/android/settings/fingerprint/FingerprintSetupWizard;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard$2;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintSetupWizard;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

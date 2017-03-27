@@ -1,4 +1,4 @@
-.class Lcom/android/settings/dashboard/DashboardFavoriteTileView$2;
+.class Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView$2;
 .super Ljava/lang/Object;
 .source "DashboardFavoriteTileView.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/dashboard/DashboardFavoriteTileView;->showOnlineHelpDialog()V
+    value = Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView;->showOnlineHelpDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/dashboard/DashboardFavoriteTileView;
+.field final synthetic this$0:Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/dashboard/DashboardFavoriteTileView;)V
+.method constructor <init>(Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView;)V
     .locals 0
 
     .prologue
     .line 217
-    iput-object p1, p0, Lcom/android/settings/dashboard/DashboardFavoriteTileView$2;->this$0:Lcom/android/settings/dashboard/DashboardFavoriteTileView;
+    iput-object p1, p0, Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView$2;->this$0:Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

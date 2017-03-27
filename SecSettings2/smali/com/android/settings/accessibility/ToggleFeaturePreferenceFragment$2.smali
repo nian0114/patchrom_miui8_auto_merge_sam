@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment$2;
+.class Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment$2;
 .super Ljava/lang/Object;
 .source "ToggleFeaturePreferenceFragment.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;
+    value = Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment;)V
     .locals 0
 
     .prologue
     .line 164
-    iput-object p1, p0, Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment$2;->this$0:Lcom/android/settings/accessibility/ToggleFeaturePreferenceFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment$2;->this$0:Lcom/android/settings_ex/accessibility/ToggleFeaturePreferenceFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

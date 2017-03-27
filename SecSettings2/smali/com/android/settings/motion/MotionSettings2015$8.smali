@@ -1,4 +1,4 @@
-.class Lcom/android/settings/motion/MotionSettings2015$8;
+.class Lcom/android/settings_ex/motion/MotionSettings2015$8;
 .super Ljava/lang/Object;
 .source "MotionSettings2015.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/motion/MotionSettings2015;->maketurnOffUniversalPopup()V
+    value = Lcom/android/settings_ex/motion/MotionSettings2015;->maketurnOffUniversalPopup()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/motion/MotionSettings2015;
+.field final synthetic this$0:Lcom/android/settings_ex/motion/MotionSettings2015;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/motion/MotionSettings2015;)V
+.method constructor <init>(Lcom/android/settings_ex/motion/MotionSettings2015;)V
     .locals 0
 
     .prologue
     .line 407
-    iput-object p1, p0, Lcom/android/settings/motion/MotionSettings2015$8;->this$0:Lcom/android/settings/motion/MotionSettings2015;
+    iput-object p1, p0, Lcom/android/settings_ex/motion/MotionSettings2015$8;->this$0:Lcom/android/settings_ex/motion/MotionSettings2015;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,9 +43,9 @@
 
     .prologue
     .line 409
-    iget-object v0, p0, Lcom/android/settings/motion/MotionSettings2015$8;->this$0:Lcom/android/settings/motion/MotionSettings2015;
+    iget-object v0, p0, Lcom/android/settings_ex/motion/MotionSettings2015$8;->this$0:Lcom/android/settings_ex/motion/MotionSettings2015;
 
-    invoke-virtual {v0}, Lcom/android/settings/motion/MotionSettings2015;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/motion/MotionSettings2015;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -53,13 +53,13 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->turnOffUniversalSwitch(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->turnOffUniversalSwitch(Landroid/content/Context;)Z
 
     .line 410
-    iget-object v0, p0, Lcom/android/settings/motion/MotionSettings2015$8;->this$0:Lcom/android/settings/motion/MotionSettings2015;
+    iget-object v0, p0, Lcom/android/settings_ex/motion/MotionSettings2015$8;->this$0:Lcom/android/settings_ex/motion/MotionSettings2015;
 
-    # invokes: Lcom/android/settings/motion/MotionSettings2015;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v0}, Lcom/android/settings/motion/MotionSettings2015;->access$600(Lcom/android/settings/motion/MotionSettings2015;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/motion/MotionSettings2015;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v0}, Lcom/android/settings_ex/motion/MotionSettings2015;->access$600(Lcom/android/settings_ex/motion/MotionSettings2015;)Landroid/content/ContentResolver;
 
     move-result-object v0
 

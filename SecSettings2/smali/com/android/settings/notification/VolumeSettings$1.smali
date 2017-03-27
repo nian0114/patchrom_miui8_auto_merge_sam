@@ -1,4 +1,4 @@
-.class Lcom/android/settings/notification/VolumeSettings$1;
+.class Lcom/android/settings_ex/notification/VolumeSettings$1;
 .super Ljava/lang/Object;
 .source "VolumeSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/notification/VolumeSettings;->onActivityCreated(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/notification/VolumeSettings;->onActivityCreated(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/VolumeSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/VolumeSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/notification/VolumeSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/notification/VolumeSettings;)V
     .locals 0
 
     .prologue
     .line 201
-    iput-object p1, p0, Lcom/android/settings/notification/VolumeSettings$1;->this$0:Lcom/android/settings/notification/VolumeSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/VolumeSettings$1;->this$0:Lcom/android/settings_ex/notification/VolumeSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -78,9 +78,9 @@
     .line 216
     .restart local v0    # "isdown":Z
     :sswitch_1
-    iget-object v5, p0, Lcom/android/settings/notification/VolumeSettings$1;->this$0:Lcom/android/settings/notification/VolumeSettings;
+    iget-object v5, p0, Lcom/android/settings_ex/notification/VolumeSettings$1;->this$0:Lcom/android/settings_ex/notification/VolumeSettings;
 
-    invoke-virtual {v5}, Lcom/android/settings/notification/VolumeSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {v5}, Lcom/android/settings_ex/notification/VolumeSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
@@ -88,9 +88,9 @@
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/android/settings/notification/VolumeSettings$1;->this$0:Lcom/android/settings/notification/VolumeSettings;
+    iget-object v6, p0, Lcom/android/settings_ex/notification/VolumeSettings$1;->this$0:Lcom/android/settings_ex/notification/VolumeSettings;
 
-    invoke-virtual {v6}, Lcom/android/settings/notification/VolumeSettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {v6}, Lcom/android/settings_ex/notification/VolumeSettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v6
 

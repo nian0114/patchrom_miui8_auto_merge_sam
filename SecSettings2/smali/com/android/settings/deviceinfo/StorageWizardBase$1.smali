@@ -1,4 +1,4 @@
-.class Lcom/android/settings/deviceinfo/StorageWizardBase$1;
+.class Lcom/android/settings_ex/deviceinfo/StorageWizardBase$1;
 .super Ljava/lang/Object;
 .source "StorageWizardBase.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/deviceinfo/StorageWizardBase;->setContentView(I)V
+    value = Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->setContentView(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/StorageWizardBase;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/StorageWizardBase;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/StorageWizardBase;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/StorageWizardBase;)V
     .locals 0
 
     .prologue
     .line 96
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/StorageWizardBase$1;->this$0:Lcom/android/settings/deviceinfo/StorageWizardBase;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase$1;->this$0:Lcom/android/settings_ex/deviceinfo/StorageWizardBase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,9 +42,9 @@
 
     .prologue
     .line 99
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StorageWizardBase$1;->this$0:Lcom/android/settings/deviceinfo/StorageWizardBase;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardBase$1;->this$0:Lcom/android/settings_ex/deviceinfo/StorageWizardBase;
 
-    invoke-virtual {v0}, Lcom/android/settings/deviceinfo/StorageWizardBase;->onNavigateNext()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->onNavigateNext()V
 
     .line 100
     return-void

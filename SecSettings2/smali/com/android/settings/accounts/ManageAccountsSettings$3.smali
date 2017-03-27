@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accounts/ManageAccountsSettings$3;
+.class Lcom/android/settings_ex/accounts/ManageAccountsSettings$3;
 .super Landroid/content/BroadcastReceiver;
 .source "ManageAccountsSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accounts/ManageAccountsSettings;
+    value = Lcom/android/settings_ex/accounts/ManageAccountsSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accounts/ManageAccountsSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/accounts/ManageAccountsSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accounts/ManageAccountsSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/accounts/ManageAccountsSettings;)V
     .locals 0
 
     .prologue
     .line 776
-    iput-object p1, p0, Lcom/android/settings/accounts/ManageAccountsSettings$3;->this$0:Lcom/android/settings/accounts/ManageAccountsSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/accounts/ManageAccountsSettings$3;->this$0:Lcom/android/settings_ex/accounts/ManageAccountsSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -40,10 +40,10 @@
 
     .prologue
     .line 779
-    iget-object v0, p0, Lcom/android/settings/accounts/ManageAccountsSettings$3;->this$0:Lcom/android/settings/accounts/ManageAccountsSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/accounts/ManageAccountsSettings$3;->this$0:Lcom/android/settings_ex/accounts/ManageAccountsSettings;
 
-    # invokes: Lcom/android/settings/accounts/ManageAccountsSettings;->showAccountsIfNeeded()V
-    invoke-static {v0}, Lcom/android/settings/accounts/ManageAccountsSettings;->access$100(Lcom/android/settings/accounts/ManageAccountsSettings;)V
+    # invokes: Lcom/android/settings_ex/accounts/ManageAccountsSettings;->showAccountsIfNeeded()V
+    invoke-static {v0}, Lcom/android/settings_ex/accounts/ManageAccountsSettings;->access$100(Lcom/android/settings_ex/accounts/ManageAccountsSettings;)V
 
     .line 780
     return-void

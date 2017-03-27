@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/applock/PackageInfoUtil;
+.class public Lcom/android/settings_ex/applock/PackageInfoUtil;
 .super Ljava/lang/Object;
 .source "PackageInfoUtil.java"
 
@@ -6,10 +6,10 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/applock/PackageInfoUtil$2;,
-        Lcom/android/settings/applock/PackageInfoUtil$PackageUtilHolder;,
-        Lcom/android/settings/applock/PackageInfoUtil$BoardcastType;,
-        Lcom/android/settings/applock/PackageInfoUtil$State;
+        Lcom/android/settings_ex/applock/PackageInfoUtil$2;,
+        Lcom/android/settings_ex/applock/PackageInfoUtil$PackageUtilHolder;,
+        Lcom/android/settings_ex/applock/PackageInfoUtil$BoardcastType;,
+        Lcom/android/settings_ex/applock/PackageInfoUtil$State;
     }
 .end annotation
 
@@ -42,7 +42,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/applock/AppInfo;",
+            "Lcom/android/settings_ex/applock/AppInfo;",
             ">;"
         }
     .end annotation
@@ -84,13 +84,13 @@
 
     .prologue
     .line 24
-    const-class v0, Lcom/android/settings/applock/PackageInfoUtil;
+    const-class v0, Lcom/android/settings_ex/applock/PackageInfoUtil;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/applock/PackageInfoUtil;->TAG:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/applock/PackageInfoUtil;->TAG:Ljava/lang/String;
 
     return-void
 .end method
@@ -105,105 +105,105 @@
     .line 26
     const-string v0, "com.samsung.applock.appInfo"
 
-    iput-object v0, p0, Lcom/android/settings/applock/PackageInfoUtil;->PREF_NAME:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->PREF_NAME:Ljava/lang/String;
 
     .line 27
     const-string v0, "com.samsung.applock.pakcgeInfo"
 
-    iput-object v0, p0, Lcom/android/settings/applock/PackageInfoUtil;->PREF_PACKAGE_ONLY:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->PREF_PACKAGE_ONLY:Ljava/lang/String;
 
     .line 28
     const-string v0, "com.samsung.applock.mark"
 
-    iput-object v0, p0, Lcom/android/settings/applock/PackageInfoUtil;->MARK_PREF_NAME:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->MARK_PREF_NAME:Ljava/lang/String;
 
     .line 29
     const-string v0, "package_remove"
 
-    iput-object v0, p0, Lcom/android/settings/applock/PackageInfoUtil;->PACKAGE_REMOVE:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->PACKAGE_REMOVE:Ljava/lang/String;
 
     .line 30
     const-string v0, "package_add"
 
-    iput-object v0, p0, Lcom/android/settings/applock/PackageInfoUtil;->PACKAGE_ADD:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->PACKAGE_ADD:Ljava/lang/String;
 
     .line 31
     const-string v0, "smartmanager_locked_apps_packages"
 
-    iput-object v0, p0, Lcom/android/settings/applock/PackageInfoUtil;->LOCKED_PACKAGE:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->LOCKED_PACKAGE:Ljava/lang/String;
 
     .line 32
     const-string v0, "smartmanager_locked_apps_classes"
 
-    iput-object v0, p0, Lcom/android/settings/applock/PackageInfoUtil;->LOCKED_CLASSES:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->LOCKED_CLASSES:Ljava/lang/String;
 
     .line 33
     const-string v0, "smartmanager_locked_apps_folders"
 
-    iput-object v0, p0, Lcom/android/settings/applock/PackageInfoUtil;->LOCKED_FOLDERS:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->LOCKED_FOLDERS:Ljava/lang/String;
 
     .line 34
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/settings/applock/PackageInfoUtil;->EMPTY_FOLDER_NAME:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->EMPTY_FOLDER_NAME:Ljava/lang/String;
 
     .line 35
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/applock/PackageInfoUtil;->appList:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->appList:Ljava/util/ArrayList;
 
     .line 36
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/applock/PackageInfoUtil;->mWhiteList:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mWhiteList:Ljava/util/ArrayList;
 
     .line 37
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/applock/PackageInfoUtil;->mFolderList:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mFolderList:Ljava/util/HashMap;
 
     .line 38
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedPackages:Ljava/lang/StringBuilder;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedPackages:Ljava/lang/StringBuilder;
 
     .line 39
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedClasses:Ljava/lang/StringBuilder;
+    iput-object v0, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedClasses:Ljava/lang/StringBuilder;
 
     .line 60
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/applock/PackageInfoUtil$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/applock/PackageInfoUtil$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/applock/PackageInfoUtil$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/applock/PackageInfoUtil$1;
 
     .prologue
     .line 23
-    invoke-direct {p0}, Lcom/android/settings/applock/PackageInfoUtil;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/applock/PackageInfoUtil;-><init>()V
 
     return-void
 .end method
 
-.method public static getInstance()Lcom/android/settings/applock/PackageInfoUtil;
+.method public static getInstance()Lcom/android/settings_ex/applock/PackageInfoUtil;
     .locals 1
 
     .prologue
     .line 53
-    # getter for: Lcom/android/settings/applock/PackageInfoUtil$PackageUtilHolder;->INSTANCE:Lcom/android/settings/applock/PackageInfoUtil;
-    invoke-static {}, Lcom/android/settings/applock/PackageInfoUtil$PackageUtilHolder;->access$000()Lcom/android/settings/applock/PackageInfoUtil;
+    # getter for: Lcom/android/settings_ex/applock/PackageInfoUtil$PackageUtilHolder;->INSTANCE:Lcom/android/settings_ex/applock/PackageInfoUtil;
+    invoke-static {}, Lcom/android/settings_ex/applock/PackageInfoUtil$PackageUtilHolder;->access$000()Lcom/android/settings_ex/applock/PackageInfoUtil;
 
     move-result-object v0
 
@@ -220,7 +220,7 @@
     .line 179
     const-string v5, "com.samsung.applock.appInfo"
 
-    invoke-virtual {p0, p1, v5}, Lcom/android/settings/applock/PackageInfoUtil;->getSharedPreferences(Landroid/content/Context;Ljava/lang/String;)Landroid/content/SharedPreferences;
+    invoke-virtual {p0, p1, v5}, Lcom/android/settings_ex/applock/PackageInfoUtil;->getSharedPreferences(Landroid/content/Context;Ljava/lang/String;)Landroid/content/SharedPreferences;
 
     move-result-object v4
 
@@ -234,10 +234,10 @@
     .local v2, "keys":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;*>;"
     const/4 v5, 0x0
 
-    iput v5, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedAppCount:I
+    iput v5, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedAppCount:I
 
     .line 182
-    invoke-virtual {p0, p1}, Lcom/android/settings/applock/PackageInfoUtil;->getMasterValue(Landroid/content/Context;)Z
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/applock/PackageInfoUtil;->getMasterValue(Landroid/content/Context;)Z
 
     move-result v3
 
@@ -286,11 +286,11 @@
     if-ne v5, v6, :cond_0
 
     .line 187
-    iget v5, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedAppCount:I
+    iget v5, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedAppCount:I
 
     add-int/lit8 v5, v5, 0x1
 
-    iput v5, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedAppCount:I
+    iput v5, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedAppCount:I
 
     goto :goto_0
 
@@ -298,7 +298,7 @@
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;*>;"
     .end local v1    # "i$":Ljava/util/Iterator;
     :cond_1
-    iget v5, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedAppCount:I
+    iget v5, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedAppCount:I
 
     return v5
 .end method
@@ -310,17 +310,17 @@
             "()",
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/applock/AppInfo;",
+            "Lcom/android/settings_ex/applock/AppInfo;",
             ">;"
         }
     .end annotation
 
     .prologue
     .line 99
-    invoke-virtual {p0}, Lcom/android/settings/applock/PackageInfoUtil;->sortList()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/PackageInfoUtil;->sortList()V
 
     .line 100
-    iget-object v0, p0, Lcom/android/settings/applock/PackageInfoUtil;->appList:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->appList:Ljava/util/ArrayList;
 
     return-object v0
 .end method
@@ -354,7 +354,7 @@
 
     .prologue
     .line 463
-    iget-object v0, p0, Lcom/android/settings/applock/PackageInfoUtil;->mFolderList:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mFolderList:Ljava/util/HashMap;
 
     invoke-virtual {v0, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -375,7 +375,7 @@
             ")",
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/applock/AppInfo;",
+            "Lcom/android/settings_ex/applock/AppInfo;",
             ">;"
         }
     .end annotation
@@ -386,16 +386,16 @@
     const/4 v8, 0x1
 
     .line 63
-    iget-object v7, p0, Lcom/android/settings/applock/PackageInfoUtil;->appList:Ljava/util/ArrayList;
+    iget-object v7, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->appList:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->clear()V
 
     .line 64
-    invoke-virtual {p0, p1}, Lcom/android/settings/applock/PackageInfoUtil;->getWhiteList(Landroid/content/Context;)Ljava/util/ArrayList;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/applock/PackageInfoUtil;->getWhiteList(Landroid/content/Context;)Ljava/util/ArrayList;
 
     move-result-object v7
 
-    iput-object v7, p0, Lcom/android/settings/applock/PackageInfoUtil;->mWhiteList:Ljava/util/ArrayList;
+    iput-object v7, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mWhiteList:Ljava/util/ArrayList;
 
     .line 65
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -448,12 +448,12 @@
 
     .line 72
     .local v0, "activityInfo":Landroid/content/pm/ActivityInfo;
-    new-instance v6, Lcom/android/settings/applock/AppInfo;
+    new-instance v6, Lcom/android/settings_ex/applock/AppInfo;
 
-    invoke-direct {v6}, Lcom/android/settings/applock/AppInfo;-><init>()V
+    invoke-direct {v6}, Lcom/android/settings_ex/applock/AppInfo;-><init>()V
 
     .line 73
-    .local v6, "tmpInfo":Lcom/android/settings/applock/AppInfo;
+    .local v6, "tmpInfo":Lcom/android/settings_ex/applock/AppInfo;
     invoke-virtual {v0, v4}, Landroid/content/pm/ActivityInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object v7
@@ -462,29 +462,29 @@
 
     move-result-object v7
 
-    iput-object v7, v6, Lcom/android/settings/applock/AppInfo;->appName:Ljava/lang/String;
+    iput-object v7, v6, Lcom/android/settings_ex/applock/AppInfo;->appName:Ljava/lang/String;
 
     .line 74
     invoke-virtual {v0, v4, v8, v8}, Landroid/content/pm/ActivityInfo;->loadIcon(Landroid/content/pm/PackageManager;ZI)Landroid/graphics/drawable/Drawable;
 
     move-result-object v7
 
-    iput-object v7, v6, Lcom/android/settings/applock/AppInfo;->appIcon:Landroid/graphics/drawable/Drawable;
+    iput-object v7, v6, Lcom/android/settings_ex/applock/AppInfo;->appIcon:Landroid/graphics/drawable/Drawable;
 
     .line 75
     iget-object v7, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    iput-object v7, v6, Lcom/android/settings/applock/AppInfo;->packageName:Ljava/lang/String;
+    iput-object v7, v6, Lcom/android/settings_ex/applock/AppInfo;->packageName:Ljava/lang/String;
 
     .line 76
     iget-object v7, v0, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    iput-object v7, v6, Lcom/android/settings/applock/AppInfo;->mainActivity:Ljava/lang/String;
+    iput-object v7, v6, Lcom/android/settings_ex/applock/AppInfo;->mainActivity:Ljava/lang/String;
 
     .line 77
-    iget-object v7, v6, Lcom/android/settings/applock/AppInfo;->packageName:Ljava/lang/String;
+    iget-object v7, v6, Lcom/android/settings_ex/applock/AppInfo;->packageName:Ljava/lang/String;
 
-    invoke-virtual {p0, p1, v7}, Lcom/android/settings/applock/PackageInfoUtil;->isPkgLocked(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-virtual {p0, p1, v7}, Lcom/android/settings_ex/applock/PackageInfoUtil;->isPkgLocked(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v7
 
@@ -493,19 +493,19 @@
     move v7, v8
 
     :goto_1
-    iput v7, v6, Lcom/android/settings/applock/AppInfo;->locked:I
+    iput v7, v6, Lcom/android/settings_ex/applock/AppInfo;->locked:I
 
     .line 78
-    iget-object v7, v6, Lcom/android/settings/applock/AppInfo;->packageName:Ljava/lang/String;
+    iget-object v7, v6, Lcom/android/settings_ex/applock/AppInfo;->packageName:Ljava/lang/String;
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/applock/PackageInfoUtil;->isWhiteList(Ljava/lang/String;)Z
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/applock/PackageInfoUtil;->isWhiteList(Ljava/lang/String;)Z
 
     move-result v7
 
     if-nez v7, :cond_0
 
     .line 81
-    iget-object v7, p0, Lcom/android/settings/applock/PackageInfoUtil;->appList:Ljava/util/ArrayList;
+    iget-object v7, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->appList:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -520,9 +520,9 @@
     .line 84
     .end local v0    # "activityInfo":Landroid/content/pm/ActivityInfo;
     .end local v2    # "info":Landroid/content/pm/ResolveInfo;
-    .end local v6    # "tmpInfo":Lcom/android/settings/applock/AppInfo;
+    .end local v6    # "tmpInfo":Lcom/android/settings_ex/applock/AppInfo;
     :cond_2
-    sget-object v7, Lcom/android/settings/applock/PackageInfoUtil;->TAG:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/applock/PackageInfoUtil;->TAG:Ljava/lang/String;
 
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -534,7 +534,7 @@
 
     move-result-object v8
 
-    iget-object v9, p0, Lcom/android/settings/applock/PackageInfoUtil;->appList:Ljava/util/ArrayList;
+    iget-object v9, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->appList:Ljava/util/ArrayList;
 
     invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
 
@@ -551,7 +551,7 @@
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 86
-    iget-object v7, p0, Lcom/android/settings/applock/PackageInfoUtil;->appList:Ljava/util/ArrayList;
+    iget-object v7, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->appList:Ljava/util/ArrayList;
 
     return-object v7
 .end method
@@ -561,7 +561,7 @@
 
     .prologue
     .line 338
-    iget v0, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedAppCount:I
+    iget v0, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedAppCount:I
 
     return v0
 .end method
@@ -599,17 +599,17 @@
     goto :goto_0
 .end method
 
-.method public getSamePkgInfo(Landroid/content/Context;Ljava/lang/String;Lcom/android/settings/applock/PackageInfoUtil$State;)V
+.method public getSamePkgInfo(Landroid/content/Context;Ljava/lang/String;Lcom/android/settings_ex/applock/PackageInfoUtil$State;)V
     .locals 8
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "pkgName"    # Ljava/lang/String;
-    .param p3, "states"    # Lcom/android/settings/applock/PackageInfoUtil$State;
+    .param p3, "states"    # Lcom/android/settings_ex/applock/PackageInfoUtil$State;
 
     .prologue
     .line 273
     const-string v5, "com.samsung.applock.appInfo"
 
-    invoke-virtual {p0, p1, v5}, Lcom/android/settings/applock/PackageInfoUtil;->getSharedPreferences(Landroid/content/Context;Ljava/lang/String;)Landroid/content/SharedPreferences;
+    invoke-virtual {p0, p1, v5}, Lcom/android/settings_ex/applock/PackageInfoUtil;->getSharedPreferences(Landroid/content/Context;Ljava/lang/String;)Landroid/content/SharedPreferences;
 
     move-result-object v3
 
@@ -625,7 +625,7 @@
 
     .line 276
     .local v4, "storedName":Ljava/lang/String;
-    iget-object v5, p0, Lcom/android/settings/applock/PackageInfoUtil;->appList:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->appList:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -644,11 +644,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/applock/AppInfo;
+    check-cast v0, Lcom/android/settings_ex/applock/AppInfo;
 
     .line 277
-    .local v0, "appInfo":Lcom/android/settings/applock/AppInfo;
-    iget-object v5, v0, Lcom/android/settings/applock/AppInfo;->packageName:Ljava/lang/String;
+    .local v0, "appInfo":Lcom/android/settings_ex/applock/AppInfo;
+    iget-object v5, v0, Lcom/android/settings_ex/applock/AppInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v5, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -657,12 +657,12 @@
     if-eqz v5, :cond_0
 
     .line 278
-    invoke-virtual {p0, v0}, Lcom/android/settings/applock/PackageInfoUtil;->getStoredName(Lcom/android/settings/applock/AppInfo;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/applock/PackageInfoUtil;->getStoredName(Lcom/android/settings_ex/applock/AppInfo;)Ljava/lang/String;
 
     move-result-object v4
 
     .line 280
-    sget-object v5, Lcom/android/settings/applock/PackageInfoUtil;->TAG:Ljava/lang/String;
+    sget-object v5, Lcom/android/settings_ex/applock/PackageInfoUtil;->TAG:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -695,9 +695,9 @@
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 283
-    sget-object v5, Lcom/android/settings/applock/PackageInfoUtil$2;->$SwitchMap$com$android$settings$applock$PackageInfoUtil$State:[I
+    sget-object v5, Lcom/android/settings_ex/applock/PackageInfoUtil$2;->$SwitchMap$com$android$settings$applock$PackageInfoUtil$State:[I
 
-    invoke-virtual {p3}, Lcom/android/settings/applock/PackageInfoUtil$State;->ordinal()I
+    invoke-virtual {p3}, Lcom/android/settings_ex/applock/PackageInfoUtil$State;->ordinal()I
 
     move-result v6
 
@@ -719,7 +719,7 @@
     goto :goto_0
 
     .line 294
-    .end local v0    # "appInfo":Lcom/android/settings/applock/AppInfo;
+    .end local v0    # "appInfo":Lcom/android/settings_ex/applock/AppInfo;
     :cond_1
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
@@ -737,7 +737,7 @@
 
     move-result-object v5
 
-    invoke-virtual {p0, p1, p2, v5}, Lcom/android/settings/applock/PackageInfoUtil;->removePackageState(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Boolean;)V
+    invoke-virtual {p0, p1, p2, v5}, Lcom/android/settings_ex/applock/PackageInfoUtil;->removePackageState(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Boolean;)V
 
     .line 298
     :cond_2
@@ -768,9 +768,9 @@
     return-object v0
 .end method
 
-.method public getStoredName(Lcom/android/settings/applock/AppInfo;)Ljava/lang/String;
+.method public getStoredName(Lcom/android/settings_ex/applock/AppInfo;)Ljava/lang/String;
     .locals 2
-    .param p1, "appInfo"    # Lcom/android/settings/applock/AppInfo;
+    .param p1, "appInfo"    # Lcom/android/settings_ex/applock/AppInfo;
 
     .prologue
     .line 305
@@ -780,7 +780,7 @@
 
     .line 306
     .local v0, "result":Ljava/lang/StringBuilder;
-    iget-object v1, p1, Lcom/android/settings/applock/AppInfo;->packageName:Ljava/lang/String;
+    iget-object v1, p1, Lcom/android/settings_ex/applock/AppInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -790,7 +790,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 308
-    iget-object v1, p1, Lcom/android/settings/applock/AppInfo;->mainActivity:Ljava/lang/String;
+    iget-object v1, p1, Lcom/android/settings_ex/applock/AppInfo;->mainActivity:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -849,7 +849,7 @@
 
     .prologue
     .line 474
-    iget-object v0, p0, Lcom/android/settings/applock/PackageInfoUtil;->mFolderList:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mFolderList:Ljava/util/HashMap;
 
     invoke-virtual {v0, p2}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -871,7 +871,7 @@
     .line 454
     const-string v4, "com.samsung.applock.pakcgeInfo"
 
-    invoke-virtual {p0, p1, v4}, Lcom/android/settings/applock/PackageInfoUtil;->getSharedPreferences(Landroid/content/Context;Ljava/lang/String;)Landroid/content/SharedPreferences;
+    invoke-virtual {p0, p1, v4}, Lcom/android/settings_ex/applock/PackageInfoUtil;->getSharedPreferences(Landroid/content/Context;Ljava/lang/String;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -901,7 +901,7 @@
 
     .prologue
     .line 90
-    iget-object v2, p0, Lcom/android/settings/applock/PackageInfoUtil;->mWhiteList:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mWhiteList:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -985,7 +985,7 @@
 
     .line 213
     .local v3, "lockedClasses":[Ljava/lang/String;
-    sget-object v6, Lcom/android/settings/applock/PackageInfoUtil;->TAG:Ljava/lang/String;
+    sget-object v6, Lcom/android/settings_ex/applock/PackageInfoUtil;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -1028,7 +1028,7 @@
     .line 218
     const-string v6, "com.samsung.applock.pakcgeInfo"
 
-    invoke-virtual {p0, p1, v6}, Lcom/android/settings/applock/PackageInfoUtil;->getEditor(Landroid/content/Context;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {p0, p1, v6}, Lcom/android/settings_ex/applock/PackageInfoUtil;->getEditor(Landroid/content/Context;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
@@ -1042,7 +1042,7 @@
     .line 221
     const-string v6, "com.samsung.applock.appInfo"
 
-    invoke-virtual {p0, p1, v6}, Lcom/android/settings/applock/PackageInfoUtil;->getEditor(Landroid/content/Context;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {p0, p1, v6}, Lcom/android/settings_ex/applock/PackageInfoUtil;->getEditor(Landroid/content/Context;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
@@ -1112,7 +1112,7 @@
 
     move-result-object v7
 
-    invoke-virtual {p0, p1, v6, v7}, Lcom/android/settings/applock/PackageInfoUtil;->storePackageState(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, v6, v7}, Lcom/android/settings_ex/applock/PackageInfoUtil;->storePackageState(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 226
     add-int/lit8 v2, v2, 0x1
@@ -1135,7 +1135,7 @@
     const/4 v10, 0x0
 
     .line 410
-    iget-object v7, p0, Lcom/android/settings/applock/PackageInfoUtil;->mFolderList:Ljava/util/HashMap;
+    iget-object v7, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mFolderList:Ljava/util/HashMap;
 
     invoke-virtual {v7}, Ljava/util/HashMap;->clear()V
 
@@ -1152,7 +1152,7 @@
 
     .line 413
     .local v3, "folderInfo1":Ljava/lang/String;
-    sget-object v7, Lcom/android/settings/applock/PackageInfoUtil;->TAG:Ljava/lang/String;
+    sget-object v7, Lcom/android/settings_ex/applock/PackageInfoUtil;->TAG:Ljava/lang/String;
 
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -1221,7 +1221,7 @@
     if-ne v7, v11, :cond_0
 
     .line 420
-    iget-object v7, p0, Lcom/android/settings/applock/PackageInfoUtil;->mFolderList:Ljava/util/HashMap;
+    iget-object v7, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mFolderList:Ljava/util/HashMap;
 
     aget-object v8, v1, v10
 
@@ -1237,7 +1237,7 @@
 
     .line 422
     :cond_0
-    iget-object v7, p0, Lcom/android/settings/applock/PackageInfoUtil;->mFolderList:Ljava/util/HashMap;
+    iget-object v7, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mFolderList:Ljava/util/HashMap;
 
     aget-object v8, v1, v10
 
@@ -1298,7 +1298,7 @@
 
     .prologue
     .line 467
-    iget-object v0, p0, Lcom/android/settings/applock/PackageInfoUtil;->mFolderList:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mFolderList:Ljava/util/HashMap;
 
     invoke-virtual {v0, p2}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -1307,14 +1307,14 @@
     if-eqz v0, :cond_0
 
     .line 468
-    iget-object v0, p0, Lcom/android/settings/applock/PackageInfoUtil;->mFolderList:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mFolderList:Ljava/util/HashMap;
 
     invoke-virtual {v0, p2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 469
-    sget-object v0, Lcom/android/settings/applock/PackageInfoUtil$BoardcastType;->FOLDER_CHANGE:Lcom/android/settings/applock/PackageInfoUtil$BoardcastType;
+    sget-object v0, Lcom/android/settings_ex/applock/PackageInfoUtil$BoardcastType;->FOLDER_CHANGE:Lcom/android/settings_ex/applock/PackageInfoUtil$BoardcastType;
 
-    invoke-virtual {p0, p1, p2, v0}, Lcom/android/settings/applock/PackageInfoUtil;->sendMsgToLauncher(Landroid/content/Context;Ljava/lang/Object;Lcom/android/settings/applock/PackageInfoUtil$BoardcastType;)V
+    invoke-virtual {p0, p1, p2, v0}, Lcom/android/settings_ex/applock/PackageInfoUtil;->sendMsgToLauncher(Landroid/content/Context;Ljava/lang/Object;Lcom/android/settings_ex/applock/PackageInfoUtil$BoardcastType;)V
 
     .line 471
     :cond_0
@@ -1331,7 +1331,7 @@
     .line 255
     const-string v1, "com.samsung.applock.pakcgeInfo"
 
-    invoke-virtual {p0, p1, v1}, Lcom/android/settings/applock/PackageInfoUtil;->getEditor(Landroid/content/Context;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {p0, p1, v1}, Lcom/android/settings_ex/applock/PackageInfoUtil;->getEditor(Landroid/content/Context;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
@@ -1350,9 +1350,9 @@
     if-eqz v1, :cond_0
 
     .line 259
-    sget-object v1, Lcom/android/settings/applock/PackageInfoUtil$State;->REMOVE:Lcom/android/settings/applock/PackageInfoUtil$State;
+    sget-object v1, Lcom/android/settings_ex/applock/PackageInfoUtil$State;->REMOVE:Lcom/android/settings_ex/applock/PackageInfoUtil$State;
 
-    invoke-virtual {p0, p1, p2, v1}, Lcom/android/settings/applock/PackageInfoUtil;->getSamePkgInfo(Landroid/content/Context;Ljava/lang/String;Lcom/android/settings/applock/PackageInfoUtil$State;)V
+    invoke-virtual {p0, p1, p2, v1}, Lcom/android/settings_ex/applock/PackageInfoUtil;->getSamePkgInfo(Landroid/content/Context;Ljava/lang/String;Lcom/android/settings_ex/applock/PackageInfoUtil$State;)V
 
     .line 261
     :cond_0
@@ -1368,7 +1368,7 @@
     .line 264
     const-string v1, "com.samsung.applock.appInfo"
 
-    invoke-virtual {p0, p1, v1}, Lcom/android/settings/applock/PackageInfoUtil;->getEditor(Landroid/content/Context;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {p0, p1, v1}, Lcom/android/settings_ex/applock/PackageInfoUtil;->getEditor(Landroid/content/Context;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
@@ -1395,7 +1395,7 @@
 
     const-string v3, "smartmanager_locked_apps_packages"
 
-    iget-object v4, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedPackages:Ljava/lang/StringBuilder;
+    iget-object v4, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedPackages:Ljava/lang/StringBuilder;
 
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1410,7 +1410,7 @@
 
     const-string v3, "smartmanager_locked_apps_classes"
 
-    iget-object v4, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedClasses:Ljava/lang/StringBuilder;
+    iget-object v4, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedClasses:Ljava/lang/StringBuilder;
 
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1443,7 +1443,7 @@
 
     .line 171
     .local v0, "getlockedClasses":Ljava/lang/String;
-    sget-object v2, Lcom/android/settings/applock/PackageInfoUtil;->TAG:Ljava/lang/String;
+    sget-object v2, Lcom/android/settings_ex/applock/PackageInfoUtil;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1482,7 +1482,7 @@
 
     const-string v3, "locked_app_count"
 
-    invoke-virtual {p0}, Lcom/android/settings/applock/PackageInfoUtil;->getLockedAppsCount()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/applock/PackageInfoUtil;->getLockedAppsCount()I
 
     move-result v4
 
@@ -1504,9 +1504,9 @@
     const/4 v9, 0x0
 
     .line 131
-    iget-object v7, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedPackages:Ljava/lang/StringBuilder;
+    iget-object v7, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedPackages:Ljava/lang/StringBuilder;
 
-    iget-object v8, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedPackages:Ljava/lang/StringBuilder;
+    iget-object v8, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedPackages:Ljava/lang/StringBuilder;
 
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->length()I
 
@@ -1515,9 +1515,9 @@
     invoke-virtual {v7, v9, v8}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
     .line 132
-    iget-object v7, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedClasses:Ljava/lang/StringBuilder;
+    iget-object v7, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedClasses:Ljava/lang/StringBuilder;
 
-    iget-object v8, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedClasses:Ljava/lang/StringBuilder;
+    iget-object v8, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedClasses:Ljava/lang/StringBuilder;
 
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->length()I
 
@@ -1534,7 +1534,7 @@
     .local v6, "storedName":Ljava/lang/StringBuilder;
     const-string v7, "com.samsung.applock.appInfo"
 
-    invoke-virtual {p0, p1, v7}, Lcom/android/settings/applock/PackageInfoUtil;->getSharedPreferences(Landroid/content/Context;Ljava/lang/String;)Landroid/content/SharedPreferences;
+    invoke-virtual {p0, p1, v7}, Lcom/android/settings_ex/applock/PackageInfoUtil;->getSharedPreferences(Landroid/content/Context;Ljava/lang/String;)Landroid/content/SharedPreferences;
 
     move-result-object v5
 
@@ -1546,7 +1546,7 @@
 
     .line 136
     .local v3, "keys":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;*>;"
-    invoke-virtual {p0, p1}, Lcom/android/settings/applock/PackageInfoUtil;->getMasterValue(Landroid/content/Context;)Z
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/applock/PackageInfoUtil;->getMasterValue(Landroid/content/Context;)Z
 
     move-result v4
 
@@ -1643,34 +1643,34 @@
 
     move-result-object v7
 
-    invoke-virtual {p0, p1, v7}, Lcom/android/settings/applock/PackageInfoUtil;->removePkgWithClass(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, v7}, Lcom/android/settings_ex/applock/PackageInfoUtil;->removePkgWithClass(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 146
     :cond_1
-    iget-object v7, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedPackages:Ljava/lang/StringBuilder;
+    iget-object v7, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedPackages:Ljava/lang/StringBuilder;
 
     aget-object v8, v2, v9
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 147
-    iget-object v7, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedPackages:Ljava/lang/StringBuilder;
+    iget-object v7, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedPackages:Ljava/lang/StringBuilder;
 
     const-string v8, ","
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 148
-    iget-object v7, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedClasses:Ljava/lang/StringBuilder;
+    iget-object v7, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedClasses:Ljava/lang/StringBuilder;
 
     aget-object v8, v2, v10
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 149
-    iget-object v7, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedClasses:Ljava/lang/StringBuilder;
+    iget-object v7, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedClasses:Ljava/lang/StringBuilder;
 
     const-string v8, ","
 
@@ -1682,7 +1682,7 @@
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;*>;"
     .end local v2    # "info":[Ljava/lang/String;
     :cond_2
-    iget-object v7, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedPackages:Ljava/lang/StringBuilder;
+    iget-object v7, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedPackages:Ljava/lang/StringBuilder;
 
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->length()I
 
@@ -1691,9 +1691,9 @@
     if-eqz v7, :cond_3
 
     .line 153
-    iget-object v7, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedPackages:Ljava/lang/StringBuilder;
+    iget-object v7, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedPackages:Ljava/lang/StringBuilder;
 
-    iget-object v8, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedPackages:Ljava/lang/StringBuilder;
+    iget-object v8, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedPackages:Ljava/lang/StringBuilder;
 
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->length()I
 
@@ -1701,7 +1701,7 @@
 
     add-int/lit8 v8, v8, -0x1
 
-    iget-object v9, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedPackages:Ljava/lang/StringBuilder;
+    iget-object v9, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedPackages:Ljava/lang/StringBuilder;
 
     invoke-virtual {v9}, Ljava/lang/StringBuilder;->length()I
 
@@ -1710,9 +1710,9 @@
     invoke-virtual {v7, v8, v9}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
     .line 155
-    iget-object v7, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedClasses:Ljava/lang/StringBuilder;
+    iget-object v7, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedClasses:Ljava/lang/StringBuilder;
 
-    iget-object v8, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedClasses:Ljava/lang/StringBuilder;
+    iget-object v8, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedClasses:Ljava/lang/StringBuilder;
 
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->length()I
 
@@ -1720,7 +1720,7 @@
 
     add-int/lit8 v8, v8, -0x1
 
-    iget-object v9, p0, Lcom/android/settings/applock/PackageInfoUtil;->mLockedClasses:Ljava/lang/StringBuilder;
+    iget-object v9, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->mLockedClasses:Ljava/lang/StringBuilder;
 
     invoke-virtual {v9}, Ljava/lang/StringBuilder;->length()I
 
@@ -1734,11 +1734,11 @@
     return-void
 .end method
 
-.method public sendMsgToLauncher(Landroid/content/Context;Ljava/lang/Object;Lcom/android/settings/applock/PackageInfoUtil$BoardcastType;)V
+.method public sendMsgToLauncher(Landroid/content/Context;Ljava/lang/Object;Lcom/android/settings_ex/applock/PackageInfoUtil$BoardcastType;)V
     .locals 3
     .param p1, "context"    # Landroid/content/Context;
     .param p2, "subjectInfo"    # Ljava/lang/Object;
-    .param p3, "type"    # Lcom/android/settings/applock/PackageInfoUtil$BoardcastType;
+    .param p3, "type"    # Lcom/android/settings_ex/applock/PackageInfoUtil$BoardcastType;
 
     .prologue
     .line 429
@@ -1748,9 +1748,9 @@
 
     .line 430
     .local v0, "bundle":Landroid/os/Bundle;
-    sget-object v1, Lcom/android/settings/applock/PackageInfoUtil$2;->$SwitchMap$com$android$settings$applock$PackageInfoUtil$BoardcastType:[I
+    sget-object v1, Lcom/android/settings_ex/applock/PackageInfoUtil$2;->$SwitchMap$com$android$settings$applock$PackageInfoUtil$BoardcastType:[I
 
-    invoke-virtual {p3}, Lcom/android/settings/applock/PackageInfoUtil$BoardcastType;->ordinal()I
+    invoke-virtual {p3}, Lcom/android/settings_ex/applock/PackageInfoUtil$BoardcastType;->ordinal()I
 
     move-result v2
 
@@ -1780,7 +1780,7 @@
     .line 433
     const-string v1, "com.samsung.applock.intent.action.APPLOCK_ENABLE_CHANGED"
 
-    invoke-virtual {p0, p1, v0, v1}, Lcom/android/settings/applock/PackageInfoUtil;->sendStatusBroadcast(Landroid/content/Context;Landroid/os/Bundle;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, v0, v1}, Lcom/android/settings_ex/applock/PackageInfoUtil;->sendStatusBroadcast(Landroid/content/Context;Landroid/os/Bundle;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1797,7 +1797,7 @@
     .line 437
     const-string v1, "com.sec.android.launcher.intent.action.FOLDERLOCK_CHANGED"
 
-    invoke-virtual {p0, p1, v0, v1}, Lcom/android/settings/applock/PackageInfoUtil;->sendStatusBroadcast(Landroid/content/Context;Landroid/os/Bundle;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, v0, v1}, Lcom/android/settings_ex/applock/PackageInfoUtil;->sendStatusBroadcast(Landroid/content/Context;Landroid/os/Bundle;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1819,7 +1819,7 @@
 
     .prologue
     .line 445
-    sget-object v1, Lcom/android/settings/applock/PackageInfoUtil;->TAG:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/applock/PackageInfoUtil;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1912,9 +1912,9 @@
 
     move-result-object v2
 
-    sget-object v3, Lcom/android/settings/applock/PackageInfoUtil$BoardcastType;->MASTER_ENABLE:Lcom/android/settings/applock/PackageInfoUtil$BoardcastType;
+    sget-object v3, Lcom/android/settings_ex/applock/PackageInfoUtil$BoardcastType;->MASTER_ENABLE:Lcom/android/settings_ex/applock/PackageInfoUtil$BoardcastType;
 
-    invoke-virtual {p0, p1, v2, v3}, Lcom/android/settings/applock/PackageInfoUtil;->sendMsgToLauncher(Landroid/content/Context;Ljava/lang/Object;Lcom/android/settings/applock/PackageInfoUtil$BoardcastType;)V
+    invoke-virtual {p0, p1, v2, v3}, Lcom/android/settings_ex/applock/PackageInfoUtil;->sendMsgToLauncher(Landroid/content/Context;Ljava/lang/Object;Lcom/android/settings_ex/applock/PackageInfoUtil$BoardcastType;)V
 
     .line 407
     return-void
@@ -1943,13 +1943,13 @@
 
     .line 105
     .local v0, "collator":Ljava/text/Collator;
-    new-instance v1, Lcom/android/settings/applock/PackageInfoUtil$1;
+    new-instance v1, Lcom/android/settings_ex/applock/PackageInfoUtil$1;
 
-    invoke-direct {v1, p0, v0}, Lcom/android/settings/applock/PackageInfoUtil$1;-><init>(Lcom/android/settings/applock/PackageInfoUtil;Ljava/text/Collator;)V
+    invoke-direct {v1, p0, v0}, Lcom/android/settings_ex/applock/PackageInfoUtil$1;-><init>(Lcom/android/settings_ex/applock/PackageInfoUtil;Ljava/text/Collator;)V
 
     .line 123
-    .local v1, "comparator":Ljava/util/Comparator;, "Ljava/util/Comparator<Lcom/android/settings/applock/AppInfo;>;"
-    iget-object v2, p0, Lcom/android/settings/applock/PackageInfoUtil;->appList:Ljava/util/ArrayList;
+    .local v1, "comparator":Ljava/util/Comparator;, "Ljava/util/Comparator<Lcom/android/settings_ex/applock/AppInfo;>;"
+    iget-object v2, p0, Lcom/android/settings_ex/applock/PackageInfoUtil;->appList:Ljava/util/ArrayList;
 
     invoke-static {v2, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
@@ -1967,7 +1967,7 @@
     .line 244
     const-string v1, "com.samsung.applock.pakcgeInfo"
 
-    invoke-virtual {p0, p1, v1}, Lcom/android/settings/applock/PackageInfoUtil;->getEditor(Landroid/content/Context;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {p0, p1, v1}, Lcom/android/settings_ex/applock/PackageInfoUtil;->getEditor(Landroid/content/Context;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
@@ -1981,9 +1981,9 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 247
-    sget-object v1, Lcom/android/settings/applock/PackageInfoUtil$State;->ADD:Lcom/android/settings/applock/PackageInfoUtil$State;
+    sget-object v1, Lcom/android/settings_ex/applock/PackageInfoUtil$State;->ADD:Lcom/android/settings_ex/applock/PackageInfoUtil$State;
 
-    invoke-virtual {p0, p1, p2, v1}, Lcom/android/settings/applock/PackageInfoUtil;->getSamePkgInfo(Landroid/content/Context;Ljava/lang/String;Lcom/android/settings/applock/PackageInfoUtil$State;)V
+    invoke-virtual {p0, p1, p2, v1}, Lcom/android/settings_ex/applock/PackageInfoUtil;->getSamePkgInfo(Landroid/content/Context;Ljava/lang/String;Lcom/android/settings_ex/applock/PackageInfoUtil$State;)V
 
     .line 248
     return-void
@@ -2010,11 +2010,11 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, v0, p3}, Lcom/android/settings/applock/PackageInfoUtil;->saveLockState(Landroid/content/Context;Ljava/lang/Boolean;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, v0, p3}, Lcom/android/settings_ex/applock/PackageInfoUtil;->saveLockState(Landroid/content/Context;Ljava/lang/Boolean;Ljava/lang/String;)V
 
     .line 201
     :goto_0
-    invoke-virtual {p0, p1}, Lcom/android/settings/applock/PackageInfoUtil;->saveDBValue(Landroid/content/Context;)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/applock/PackageInfoUtil;->saveDBValue(Landroid/content/Context;)V
 
     .line 202
     return-void
@@ -2029,7 +2029,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, p1, v0, v1}, Lcom/android/settings/applock/PackageInfoUtil;->saveLockState(Landroid/content/Context;Ljava/lang/Boolean;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, v0, v1}, Lcom/android/settings_ex/applock/PackageInfoUtil;->saveLockState(Landroid/content/Context;Ljava/lang/Boolean;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -2073,12 +2073,12 @@
 
     move-result-object v2
 
-    invoke-virtual {p0, p1, v2, v1}, Lcom/android/settings/applock/PackageInfoUtil;->updateDB(Landroid/content/Context;Ljava/lang/Boolean;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, v2, v1}, Lcom/android/settings_ex/applock/PackageInfoUtil;->updateDB(Landroid/content/Context;Ljava/lang/Boolean;Ljava/lang/String;)V
 
     .line 346
     const-string v2, "package_remove"
 
-    invoke-virtual {p0, p1, v2, v4}, Lcom/android/settings/applock/PackageInfoUtil;->mark(Landroid/content/Context;Ljava/lang/String;Z)V
+    invoke-virtual {p0, p1, v2, v4}, Lcom/android/settings_ex/applock/PackageInfoUtil;->mark(Landroid/content/Context;Ljava/lang/String;Z)V
 
     .line 351
     :cond_0
@@ -2094,7 +2094,7 @@
     .line 349
     const-string v2, "package_add"
 
-    invoke-virtual {p0, p1, v2, v4}, Lcom/android/settings/applock/PackageInfoUtil;->mark(Landroid/content/Context;Ljava/lang/String;Z)V
+    invoke-virtual {p0, p1, v2, v4}, Lcom/android/settings_ex/applock/PackageInfoUtil;->mark(Landroid/content/Context;Ljava/lang/String;Z)V
 
     goto :goto_0
 .end method

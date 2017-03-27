@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/CMCCChargeWarningDialog;
+.class public Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;
 .super Lcom/android/internal/app/AlertActivity;
 .source "CMCCChargeWarningDialog.java"
 
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/wifi/CMCCChargeWarningDialog$UpdateTimeTask;
+        Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog$UpdateTimeTask;
     }
 .end annotation
 
@@ -42,7 +42,7 @@
     .line 50
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->mEnableWarningDialog:Landroid/app/AlertDialog;
+    sput-object v0, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->mEnableWarningDialog:Landroid/app/AlertDialog;
 
     return-void
 .end method
@@ -57,15 +57,15 @@
     invoke-direct {p0}, Lcom/android/internal/app/AlertActivity;-><init>()V
 
     .line 42
-    iput-boolean v0, p0, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->mIsReceiverRegistered:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->mIsReceiverRegistered:Z
 
     .line 46
-    iput-boolean v0, p0, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->donotshowagain:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->donotshowagain:Z
 
     .line 52
     const/4 v0, 0x5
 
-    iput v0, p0, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->ShowPopUpTime:I
+    iput v0, p0, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->ShowPopUpTime:I
 
     .line 147
     return-void
@@ -83,7 +83,7 @@
     invoke-super {p0}, Lcom/android/internal/app/AlertActivity;->finish()V
 
     .line 126
-    invoke-virtual {p0, v0, v0}, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->overridePendingTransition(II)V
+    invoke-virtual {p0, v0, v0}, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->overridePendingTransition(II)V
 
     .line 127
     return-void
@@ -108,7 +108,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->mcheckbox:Landroid/widget/CheckBox;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->mcheckbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v4}, Landroid/widget/CheckBox;->isChecked()Z
 
@@ -125,7 +125,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 99
-    iget-object v2, p0, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->mDoNotShow:Landroid/content/SharedPreferences;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->mDoNotShow:Landroid/content/SharedPreferences;
 
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -135,7 +135,7 @@
     .local v1, "edit_boolean":Landroid/content/SharedPreferences$Editor;
     const-string v2, "cmccap_do_not_show"
 
-    iget-object v3, p0, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->mcheckbox:Landroid/widget/CheckBox;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->mcheckbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v3}, Landroid/widget/CheckBox;->isChecked()Z
 
@@ -162,7 +162,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 105
-    iget-object v2, p0, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->mcheckbox:Landroid/widget/CheckBox;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->mcheckbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v2}, Landroid/widget/CheckBox;->isChecked()Z
 
@@ -171,7 +171,7 @@
     if-eqz v2, :cond_0
 
     .line 106
-    iget-object v2, p0, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->mBeforeValue:Landroid/content/SharedPreferences;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->mBeforeValue:Landroid/content/SharedPreferences;
 
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -198,7 +198,7 @@
     .line 112
     .end local v0    # "edit_beforeValue":Landroid/content/SharedPreferences$Editor;
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->finish()V
 
     goto :goto_0
 
@@ -235,17 +235,17 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->mDoNotShow:Landroid/content/SharedPreferences;
+    iput-object v4, p0, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->mDoNotShow:Landroid/content/SharedPreferences;
 
     .line 59
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->mBeforeValue:Landroid/content/SharedPreferences;
+    iput-object v4, p0, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->mBeforeValue:Landroid/content/SharedPreferences;
 
     .line 60
-    iget-object v4, p0, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->mDoNotShow:Landroid/content/SharedPreferences;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->mDoNotShow:Landroid/content/SharedPreferences;
 
     const-string v5, "cmccap_do_not_show"
 
@@ -255,7 +255,7 @@
 
     .line 61
     .local v1, "do_not_show_again":Z
-    iget-object v4, p0, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->mBeforeValue:Landroid/content/SharedPreferences;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->mBeforeValue:Landroid/content/SharedPreferences;
 
     const-string v5, "cmccap_value"
 
@@ -301,7 +301,7 @@
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 67
-    invoke-virtual {p0}, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->finish()V
 
     .line 93
     :goto_0
@@ -316,7 +316,7 @@
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 71
-    invoke-virtual {p0}, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->finish()V
 
     goto :goto_0
 
@@ -324,20 +324,20 @@
     :cond_1
     const-string v4, "layout_inflater"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Landroid/view/LayoutInflater;
 
-    iput-object v4, p0, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->mInflater:Landroid/view/LayoutInflater;
+    iput-object v4, p0, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->mInflater:Landroid/view/LayoutInflater;
 
     .line 76
-    iget-object v0, p0, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     .line 77
     .local v0, "ap":Lcom/android/internal/app/AlertController$AlertParams;
-    iget-object v4, p0, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v4, p0, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->mInflater:Landroid/view/LayoutInflater;
 
     const v5, 0x7f040267
 
@@ -350,7 +350,7 @@
     iput-object v4, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
 
     .line 78
-    invoke-virtual {p0}, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -363,7 +363,7 @@
     iput-object v4, v0, Lcom/android/internal/app/AlertController$AlertParams;->mTitle:Ljava/lang/CharSequence;
 
     .line 79
-    invoke-virtual {p0}, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -379,7 +379,7 @@
     iput-object p0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mPositiveButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
     .line 83
-    invoke-virtual {p0}, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -403,7 +403,7 @@
 
     check-cast v4, Landroid/widget/CheckBox;
 
-    iput-object v4, p0, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->mcheckbox:Landroid/widget/CheckBox;
+    iput-object v4, p0, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->mcheckbox:Landroid/widget/CheckBox;
 
     .line 86
     iget-object v4, v0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
@@ -422,7 +422,7 @@
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 88
-    invoke-virtual {p0}, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->setupAlert()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->setupAlert()V
 
     .line 89
     const-string v4, "CMCCChargeWaringDialog"
@@ -437,7 +437,7 @@
 
     move-result-object v5
 
-    iget v6, p0, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->ShowPopUpTime:I
+    iget v6, p0, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->ShowPopUpTime:I
 
     mul-int/lit16 v6, v6, 0x3e8
 
@@ -458,11 +458,11 @@
 
     .line 91
     .local v3, "timer":Ljava/util/Timer;
-    new-instance v4, Lcom/android/settings/wifi/CMCCChargeWarningDialog$UpdateTimeTask;
+    new-instance v4, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog$UpdateTimeTask;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/wifi/CMCCChargeWarningDialog$UpdateTimeTask;-><init>(Lcom/android/settings/wifi/CMCCChargeWarningDialog;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog$UpdateTimeTask;-><init>(Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;)V
 
-    iget v5, p0, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->ShowPopUpTime:I
+    iget v5, p0, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->ShowPopUpTime:I
 
     mul-int/lit16 v5, v5, 0x3e8
 
@@ -494,7 +494,7 @@
     invoke-super {p0}, Lcom/android/internal/app/AlertActivity;->onResume()V
 
     .line 131
-    iget-object v2, p0, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->mDoNotShow:Landroid/content/SharedPreferences;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->mDoNotShow:Landroid/content/SharedPreferences;
 
     const-string v3, "cmccap_do_not_show"
 
@@ -504,7 +504,7 @@
 
     .line 132
     .local v0, "do_not_show_again":Z
-    iget-object v2, p0, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->mBeforeValue:Landroid/content/SharedPreferences;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->mBeforeValue:Landroid/content/SharedPreferences;
 
     const-string v3, "cmccap_value"
 
@@ -550,7 +550,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 137
-    invoke-virtual {p0}, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->finish()V
 
     .line 145
     :cond_0
@@ -566,7 +566,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 141
-    invoke-virtual {p0}, Lcom/android/settings/wifi/CMCCChargeWarningDialog;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/wifi/CMCCChargeWarningDialog;->finish()V
 
     goto :goto_0
 .end method

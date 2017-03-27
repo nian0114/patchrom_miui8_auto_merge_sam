@@ -5,6 +5,6 @@
     <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
     <ListView android:id="@id/handwriting_language_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
     <LinearLayout android:orientation="horizontal" android:id="@id/more_button_layout" android:layout_width="fill_parent" style="@style/SecurityPreferenceButtonContainer">
-        <com.android.settings.widget.BottomBarButton android:id="@id/more_button" android:layout_width="fill_parent" android:text="@string/more_languages" style="@style/SecurityPreferenceButton" />
+        <com.android.settings_ex.widget.BottomBarButton android:id="@id/more_button" android:layout_width="fill_parent" android:text="@string/more_languages" style="@style/SecurityPreferenceButton" />
     </LinearLayout>
 </LinearLayout>

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WriteWifiConfigToNfcDialog$4;
+.class Lcom/android/settings_ex/wifi/WriteWifiConfigToNfcDialog$4;
 .super Ljava/lang/Object;
 .source "WriteWifiConfigToNfcDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WriteWifiConfigToNfcDialog;->onTextChanged(Ljava/lang/CharSequence;III)V
+    value = Lcom/android/settings_ex/wifi/WriteWifiConfigToNfcDialog;->onTextChanged(Ljava/lang/CharSequence;III)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WriteWifiConfigToNfcDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WriteWifiConfigToNfcDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WriteWifiConfigToNfcDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WriteWifiConfigToNfcDialog;)V
     .locals 0
 
     .prologue
     .line 333
-    iput-object p1, p0, Lcom/android/settings/wifi/WriteWifiConfigToNfcDialog$4;->this$0:Lcom/android/settings/wifi/WriteWifiConfigToNfcDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WriteWifiConfigToNfcDialog$4;->this$0:Lcom/android/settings_ex/wifi/WriteWifiConfigToNfcDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,10 +41,10 @@
 
     .prologue
     .line 336
-    iget-object v0, p0, Lcom/android/settings/wifi/WriteWifiConfigToNfcDialog$4;->this$0:Lcom/android/settings/wifi/WriteWifiConfigToNfcDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/WriteWifiConfigToNfcDialog$4;->this$0:Lcom/android/settings_ex/wifi/WriteWifiConfigToNfcDialog;
 
-    # invokes: Lcom/android/settings/wifi/WriteWifiConfigToNfcDialog;->enableSubmitIfAppropriate()V
-    invoke-static {v0}, Lcom/android/settings/wifi/WriteWifiConfigToNfcDialog;->access$600(Lcom/android/settings/wifi/WriteWifiConfigToNfcDialog;)V
+    # invokes: Lcom/android/settings_ex/wifi/WriteWifiConfigToNfcDialog;->enableSubmitIfAppropriate()V
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WriteWifiConfigToNfcDialog;->access$600(Lcom/android/settings_ex/wifi/WriteWifiConfigToNfcDialog;)V
 
     .line 337
     return-void

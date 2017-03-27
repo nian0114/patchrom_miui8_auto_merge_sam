@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settingslib/bluetooth/HidProfile$1;
+.class synthetic Lcom/android/settings_exlib/bluetooth/HidProfile$1;
 .super Ljava/lang/Object;
 .source "HidProfile.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/bluetooth/HidProfile;
+    value = Lcom/android/settings_exlib/bluetooth/HidProfile;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

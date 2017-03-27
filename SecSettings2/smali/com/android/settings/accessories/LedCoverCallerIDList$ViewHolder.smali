@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessories/LedCoverCallerIDList$ViewHolder;
+.class Lcom/android/settings_ex/accessories/LedCoverCallerIDList$ViewHolder;
 .super Ljava/lang/Object;
 .source "LedCoverCallerIDList.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessories/LedCoverCallerIDList;
+    value = Lcom/android/settings_ex/accessories/LedCoverCallerIDList;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/WifiInfo;
+.class public Lcom/android/settings_ex/wifi/WifiInfo;
 .super Landroid/preference/PreferenceActivity;
 .source "WifiInfo.java"
 
@@ -27,7 +27,7 @@
     .line 33
     const v0, 0x7f0800c3
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/wifi/WifiInfo;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/wifi/WifiInfo;->addPreferencesFromResource(I)V
 
     .line 34
     return-void

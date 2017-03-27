@@ -1,11 +1,11 @@
-.class Lcom/android/settings/notification/NotificationBackend$Row;
+.class Lcom/android/settings_ex/notification/NotificationBackend$Row;
 .super Ljava/lang/Object;
 .source "NotificationBackend.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/NotificationBackend;
+    value = Lcom/android/settings_ex/notification/NotificationBackend;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

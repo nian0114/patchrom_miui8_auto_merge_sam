@@ -1,4 +1,4 @@
-.class Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$1;
+.class Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$1;
 .super Ljava/lang/Object;
 .source "NfcAdvancedRoutingSetting.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;->showErrorDialog(Ljava/lang/String;)V
+    value = Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;->showErrorDialog(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;
+.field final synthetic this$0:Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;)V
+.method constructor <init>(Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;)V
     .locals 0
 
     .prologue
     .line 277
-    iput-object p1, p0, Lcom/android/settings/nfc/NfcAdvancedRoutingSetting$1;->this$0:Lcom/android/settings/nfc/NfcAdvancedRoutingSetting;
+    iput-object p1, p0, Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting$1;->this$0:Lcom/android/settings_ex/nfc/NfcAdvancedRoutingSetting;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

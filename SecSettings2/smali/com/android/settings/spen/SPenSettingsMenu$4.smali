@@ -1,11 +1,11 @@
-.class Lcom/android/settings/spen/SPenSettingsMenu$4;
+.class Lcom/android/settings_ex/spen/SPenSettingsMenu$4;
 .super Landroid/database/ContentObserver;
 .source "SPenSettingsMenu.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/spen/SPenSettingsMenu;
+    value = Lcom/android/settings_ex/spen/SPenSettingsMenu;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/spen/SPenSettingsMenu;
+.field final synthetic this$0:Lcom/android/settings_ex/spen/SPenSettingsMenu;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/spen/SPenSettingsMenu;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/spen/SPenSettingsMenu;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 482
-    iput-object p1, p0, Lcom/android/settings/spen/SPenSettingsMenu$4;->this$0:Lcom/android/settings/spen/SPenSettingsMenu;
+    iput-object p1, p0, Lcom/android/settings_ex/spen/SPenSettingsMenu$4;->this$0:Lcom/android/settings_ex/spen/SPenSettingsMenu;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -40,10 +40,10 @@
 
     .prologue
     .line 485
-    iget-object v0, p0, Lcom/android/settings/spen/SPenSettingsMenu$4;->this$0:Lcom/android/settings/spen/SPenSettingsMenu;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/SPenSettingsMenu$4;->this$0:Lcom/android/settings_ex/spen/SPenSettingsMenu;
 
-    # invokes: Lcom/android/settings/spen/SPenSettingsMenu;->updateState()V
-    invoke-static {v0}, Lcom/android/settings/spen/SPenSettingsMenu;->access$400(Lcom/android/settings/spen/SPenSettingsMenu;)V
+    # invokes: Lcom/android/settings_ex/spen/SPenSettingsMenu;->updateState()V
+    invoke-static {v0}, Lcom/android/settings_ex/spen/SPenSettingsMenu;->access$400(Lcom/android/settings_ex/spen/SPenSettingsMenu;)V
 
     .line 486
     return-void

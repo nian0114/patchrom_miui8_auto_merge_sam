@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/personalvibration/SelectPatternDialog;
+.class public Lcom/android/settings_ex/personalvibration/SelectPatternDialog;
 .super Landroid/app/Activity;
 .source "SelectPatternDialog.java"
 
@@ -39,7 +39,7 @@
 
 .field private mOlderPosition:I
 
-.field private mPatternListAdapter:Lcom/android/settings/personalvibration/VibrationPatternListAdapter;
+.field private mPatternListAdapter:Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;
 
 .field private mShowDefault:Ljava/lang/Boolean;
 
@@ -65,33 +65,33 @@
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     .line 86
-    iput v2, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAddPos:I
+    iput v2, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAddPos:I
 
     .line 91
-    iput v1, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mStaticItem:I
+    iput v1, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mStaticItem:I
 
     .line 92
-    iput v1, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAddItem:I
+    iput v1, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAddItem:I
 
     .line 93
-    iput-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mDialog:Landroid/app/AlertDialog;
 
     .line 100
-    iput-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mPatternListAdapter:Lcom/android/settings/personalvibration/VibrationPatternListAdapter;
+    iput-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mPatternListAdapter:Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;
 
     .line 101
-    iput-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->ButtonCenter:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->ButtonCenter:Landroid/widget/Button;
 
     .line 103
-    iput v2, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mCurrentSelection:I
+    iput v2, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mCurrentSelection:I
 
     .line 106
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mFlag:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mFlag:Z
 
     .line 107
-    iput-boolean v1, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mSupportFolderType:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mSupportFolderType:Z
 
     return-void
 .end method
@@ -105,13 +105,13 @@
     const/4 v2, 0x0
 
     .line 636
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v0}, Landroid/widget/ListView;->getCheckedItemPosition()I
 
     move-result v0
 
-    iget v1, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mStaticItem:I
+    iget v1, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mStaticItem:I
 
     sub-int v10, v0, v1
 
@@ -120,7 +120,7 @@
     if-ne v10, v12, :cond_1
 
     .line 639
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mShowDefault:Ljava/lang/Boolean;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mShowDefault:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -142,7 +142,7 @@
 
     .line 642
     .local v11, "resultIntent":Landroid/content/Intent;
-    invoke-virtual {p0, v12, v11}, Lcom/android/settings/personalvibration/SelectPatternDialog;->setResult(ILandroid/content/Intent;)V
+    invoke-virtual {p0, v12, v11}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->setResult(ILandroid/content/Intent;)V
 
     .line 663
     .end local v11    # "resultIntent":Landroid/content/Intent;
@@ -161,7 +161,7 @@
 
     .line 647
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -201,7 +201,7 @@
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     .line 652
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mFromContact:Ljava/lang/Boolean;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mFromContact:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -245,7 +245,7 @@
     invoke-virtual {v11, v8}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     .line 657
-    invoke-virtual {p0, v12, v11}, Lcom/android/settings/personalvibration/SelectPatternDialog;->setResult(ILandroid/content/Intent;)V
+    invoke-virtual {p0, v12, v11}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->setResult(ILandroid/content/Intent;)V
 
     goto :goto_0
 
@@ -266,7 +266,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -287,7 +287,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 660
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -316,13 +316,13 @@
     goto/16 :goto_0
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/personalvibration/SelectPatternDialog;)Lcom/android/settings/personalvibration/VibrationPatternListAdapter;
+.method static synthetic access$000(Lcom/android/settings_ex/personalvibration/SelectPatternDialog;)Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/personalvibration/SelectPatternDialog;
+    .param p0, "x0"    # Lcom/android/settings_ex/personalvibration/SelectPatternDialog;
 
     .prologue
     .line 69
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mPatternListAdapter:Lcom/android/settings/personalvibration/VibrationPatternListAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mPatternListAdapter:Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;
 
     return-object v0
 .end method
@@ -335,7 +335,7 @@
     const/4 v2, 0x0
 
     .line 616
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -384,7 +384,7 @@
 
     .line 621
     .local v8, "pattern":I
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
 
     const/4 v1, -0x1
 
@@ -448,7 +448,7 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 495
-    iget-object v1, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mOkBtn:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mOkBtn:Landroid/widget/Button;
 
     const/4 v2, 0x0
 
@@ -460,7 +460,7 @@
 
     .line 497
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mOkBtn:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mOkBtn:Landroid/widget/Button;
 
     const/4 v2, 0x1
 
@@ -486,7 +486,7 @@
 
     .prologue
     .line 705
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->finish()V
 
     .line 706
     return-void
@@ -523,7 +523,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 405
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -586,7 +586,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 411
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -630,14 +630,14 @@
 
     .prologue
     .line 708
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->isFinishing()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->isFinishing()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 709
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->finish()V
 
     .line 711
     :cond_0
@@ -676,16 +676,16 @@
 
     .line 628
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v0}, Landroid/widget/ListView;->getCheckedItemPosition()I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mOlderPosition:I
+    iput v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mOlderPosition:I
 
     .line 629
-    iput-boolean v2, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mFlag:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mFlag:Z
 
     .line 632
     :cond_1
@@ -709,7 +709,7 @@
 
     .line 516
     .local v7, "keyID":I
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -750,7 +750,7 @@
     const-string v9, "content://com.android.settings.personalvibration.PersonalVibrationProvider/1"
 
     .line 521
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -762,7 +762,7 @@
 
     .line 525
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mFromContact:Ljava/lang/Boolean;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mFromContact:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -770,12 +770,12 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mExistingUri:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mExistingUri:Ljava/lang/String;
 
     if-eqz v0, :cond_2
 
     .line 526
-    iget-object v9, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mExistingUri:Ljava/lang/String;
+    iget-object v9, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mExistingUri:Ljava/lang/String;
 
     .line 527
     const-string v0, "SelectPatternDialog"
@@ -796,7 +796,7 @@
 
     .line 528
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mShowDefault:Ljava/lang/Boolean;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mShowDefault:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -804,7 +804,7 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mExistingUri:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mExistingUri:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
@@ -822,7 +822,7 @@
 
     .line 537
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -999,7 +999,7 @@
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     .line 553
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -1062,7 +1062,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mStaticItem:I
+    iget v2, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mStaticItem:I
 
     add-int/2addr v2, v8
 
@@ -1080,7 +1080,7 @@
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     .line 562
-    iget v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mStaticItem:I
+    iget v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mStaticItem:I
 
     add-int/2addr v0, v8
 
@@ -1119,7 +1119,7 @@
 
     .prologue
     .line 729
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
 
     invoke-virtual {v0}, Landroid/os/Vibrator;->cancel()V
 
@@ -1132,10 +1132,10 @@
 
     .line 733
     :pswitch_0
-    invoke-direct {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->PositiveButtonClick()V
+    invoke-direct {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->PositiveButtonClick()V
 
     .line 734
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->finish()V
 
     goto :goto_0
 
@@ -1143,10 +1143,10 @@
     :pswitch_1
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->setResult(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->setResult(I)V
 
     .line 738
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->finish()V
 
     goto :goto_0
 
@@ -1167,11 +1167,11 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 747
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/android/settings/Utils;->applyLandscapeFullScreen(Landroid/content/Context;Landroid/view/Window;)V
+    invoke-static {p0, v0}, Lcom/android/settings_ex/Utils;->applyLandscapeFullScreen(Landroid/content/Context;Landroid/view/Window;)V
 
     .line 748
     return-void
@@ -1221,15 +1221,15 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mPatternListAdapter:Lcom/android/settings/personalvibration/VibrationPatternListAdapter;
+    iget-object v4, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mPatternListAdapter:Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;
 
     iget v5, v0, Landroid/widget/AdapterView$AdapterContextMenuInfo;->position:I
 
-    iget v6, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mStaticItem:I
+    iget v6, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mStaticItem:I
 
     sub-int/2addr v5, v6
 
-    invoke-virtual {v4, v5}, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->getPatternName(I)Ljava/lang/String;
+    invoke-virtual {v4, v5}, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->getPatternName(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1258,7 +1258,7 @@
 
     iget v4, v0, Landroid/widget/AdapterView$AdapterContextMenuInfo;->position:I
 
-    iget v5, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mStaticItem:I
+    iget v5, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mStaticItem:I
 
     sub-int/2addr v4, v5
 
@@ -1283,49 +1283,49 @@
     :pswitch_0
     iget v2, v0, Landroid/widget/AdapterView$AdapterContextMenuInfo;->position:I
 
-    iget v3, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mStaticItem:I
+    iget v3, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mStaticItem:I
 
     sub-int/2addr v2, v3
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/personalvibration/SelectPatternDialog;->deletePattern(I)Z
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->deletePattern(I)Z
 
     .line 322
-    iget-object v2, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mPatternListAdapter:Lcom/android/settings/personalvibration/VibrationPatternListAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mPatternListAdapter:Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;
 
-    invoke-virtual {v2}, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->loadPatternType()V
+    invoke-virtual {v2}, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->loadPatternType()V
 
     .line 323
-    iget-object v2, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mPatternListAdapter:Lcom/android/settings/personalvibration/VibrationPatternListAdapter;
+    iget-object v2, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mPatternListAdapter:Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;
 
-    invoke-virtual {v2}, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v2}, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->notifyDataSetChanged()V
 
     .line 324
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getCurrentSelection()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getCurrentSelection()I
 
     move-result v2
 
-    iput v2, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mCurrentSelection:I
+    iput v2, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mCurrentSelection:I
 
     .line 325
-    iget-object v2, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
+    iget-object v2, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
 
-    iget v3, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mCurrentSelection:I
+    iget v3, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mCurrentSelection:I
 
     invoke-virtual {v2, v3, v7}, Landroid/widget/ListView;->setItemChecked(IZ)V
 
     .line 326
-    iget-object v2, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
+    iget-object v2, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
 
-    iget v3, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mCurrentSelection:I
+    iget v3, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mCurrentSelection:I
 
     invoke-virtual {v2, v3}, Landroid/widget/ListView;->smoothScrollToPosition(I)V
 
     .line 327
-    iget v2, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAddPos:I
+    iget v2, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAddPos:I
 
     add-int/lit8 v2, v2, -0x1
 
-    iput v2, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAddPos:I
+    iput v2, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAddPos:I
 
     goto :goto_0
 
@@ -1333,11 +1333,11 @@
     :pswitch_1
     iget v2, v0, Landroid/widget/AdapterView$AdapterContextMenuInfo;->position:I
 
-    iget v3, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mStaticItem:I
+    iget v3, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mStaticItem:I
 
     sub-int/2addr v2, v3
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/personalvibration/SelectPatternDialog;->showRenameDialog(I)Z
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->showRenameDialog(I)Z
 
     goto :goto_0
 
@@ -1360,7 +1360,7 @@
     invoke-super/range {p0 .. p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 117
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getIntent()Landroid/content/Intent;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getIntent()Landroid/content/Intent;
 
     move-result-object v12
 
@@ -1380,7 +1380,7 @@
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mFromContact:Ljava/lang/Boolean;
+    iput-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mFromContact:Ljava/lang/Boolean;
 
     .line 120
     const-string v3, "show_default"
@@ -1397,7 +1397,7 @@
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mShowDefault:Ljava/lang/Boolean;
+    iput-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mShowDefault:Ljava/lang/Boolean;
 
     .line 122
     const-string v3, "android.intent.extra.pattern.EXISTING_URI"
@@ -1408,14 +1408,14 @@
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mExistingUri:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mExistingUri:Ljava/lang/String;
 
     .line 125
     const-string v3, "layout_inflater"
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -1423,28 +1423,28 @@
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mInflater:Landroid/view/LayoutInflater;
+    iput-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mInflater:Landroid/view/LayoutInflater;
 
     .line 126
-    new-instance v3, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;
+    new-instance v3, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;
 
     move-object/from16 v0, p0
 
-    invoke-direct {v3, v0}, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;-><init>(Landroid/content/Context;)V
+    invoke-direct {v3, v0}, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;-><init>(Landroid/content/Context;)V
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mPatternListAdapter:Lcom/android/settings/personalvibration/VibrationPatternListAdapter;
+    iput-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mPatternListAdapter:Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;
 
     .line 127
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mPatternListAdapter:Lcom/android/settings/personalvibration/VibrationPatternListAdapter;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mPatternListAdapter:Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;
 
-    invoke-virtual {v3}, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->loadPatternType()V
+    invoke-virtual {v3}, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->loadPatternType()V
 
     .line 130
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v3
 
@@ -1453,7 +1453,7 @@
     .line 132
     new-instance v3, Lcom/android/internal/app/AlertController;
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getWindow()Landroid/view/Window;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v4
 
@@ -1465,7 +1465,7 @@
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAlert:Lcom/android/internal/app/AlertController;
+    iput-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAlert:Lcom/android/internal/app/AlertController;
 
     .line 133
     new-instance v3, Lcom/android/internal/app/AlertController$AlertParams;
@@ -1476,12 +1476,12 @@
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iput-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     .line 135
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mFromContact:Ljava/lang/Boolean;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mFromContact:Ljava/lang/Boolean;
 
     invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -1492,13 +1492,13 @@
     .line 136
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     const v4, 0x7f0e1118
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v4}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v4}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1508,11 +1508,11 @@
     :goto_0
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v4, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mInflater:Landroid/view/LayoutInflater;
 
     const v5, 0x7f0400b8
 
@@ -1527,7 +1527,7 @@
     .line 142
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     move-object/from16 v0, p0
 
@@ -1536,7 +1536,7 @@
     .line 143
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     move-object/from16 v0, p0
 
@@ -1545,13 +1545,13 @@
     .line 144
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     const v4, 0x7f0e01ba
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v4}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v4}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1560,13 +1560,13 @@
     .line 145
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     const v4, 0x7f0e083a
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v4}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v4}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1575,7 +1575,7 @@
     .line 147
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     iget-object v3, v3, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
 
@@ -1589,12 +1589,12 @@
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
+    iput-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
 
     .line 148
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
 
     const/4 v4, 0x0
 
@@ -1603,7 +1603,7 @@
     .line 150
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     iget-object v3, v3, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
 
@@ -1617,7 +1617,7 @@
     .local v14, "list_dialog_top_padding_view":Landroid/view/View;
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     iget-object v3, v3, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
 
@@ -1639,7 +1639,7 @@
     invoke-virtual {v14, v3}, Landroid/view/View;->setVisibility(I)V
 
     .line 154
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->setupAlert()V
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->setupAlert()V
 
     .line 188
     .end local v13    # "list_dialog_bottom_padding_view":Landroid/view/View;
@@ -1647,7 +1647,7 @@
     :goto_1
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mShowDefault:Ljava/lang/Boolean;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mShowDefault:Ljava/lang/Boolean;
 
     invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -1656,14 +1656,14 @@
     if-eqz v3, :cond_0
 
     .line 191
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v3
 
     if-eqz v3, :cond_7
 
     .line 192
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v3
 
@@ -1671,7 +1671,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
+    iget-object v5, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
 
     const/4 v7, 0x0
 
@@ -1698,7 +1698,7 @@
     invoke-virtual {v0, v3}, Landroid/widget/CheckedTextView;->setText(I)V
 
     .line 200
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -1719,7 +1719,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v18
 
@@ -1746,7 +1746,7 @@
     .local v11, "density":I
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
 
     move-object/from16 v0, v17
 
@@ -1757,7 +1757,7 @@
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mStaticItem:I
+    iput v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mStaticItem:I
 
     .line 219
     .end local v11    # "density":I
@@ -1767,25 +1767,25 @@
     :cond_0
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mPatternListAdapter:Lcom/android/settings/personalvibration/VibrationPatternListAdapter;
+    iget-object v4, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mPatternListAdapter:Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;
 
     invoke-virtual {v3, v4}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 220
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
 
     move-object/from16 v0, p0
 
     invoke-virtual {v3, v0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 222
-    invoke-static/range {p0 .. p0}, Lcom/android/settings/Utils;->isFolderModel(Landroid/content/Context;)Z
+    invoke-static/range {p0 .. p0}, Lcom/android/settings_ex/Utils;->isFolderModel(Landroid/content/Context;)Z
 
     move-result v3
 
@@ -1794,7 +1794,7 @@
     .line 223
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
 
     move-object/from16 v0, p0
 
@@ -1804,18 +1804,18 @@
     :cond_1
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/personalvibration/SelectPatternDialog;->registerForContextMenu(Landroid/view/View;)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->registerForContextMenu(Landroid/view/View;)V
 
     .line 228
     const-string v3, "vibrator"
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -1823,49 +1823,49 @@
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
+    iput-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
 
     .line 230
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getCurrentSelection()I
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getCurrentSelection()I
 
     move-result v3
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mCurrentSelection:I
+    iput v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mCurrentSelection:I
 
     .line 232
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mCurrentSelection:I
+    iget v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mCurrentSelection:I
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mOlderPosition:I
+    iput v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mOlderPosition:I
 
     .line 234
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mPatternListAdapter:Lcom/android/settings/personalvibration/VibrationPatternListAdapter;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mPatternListAdapter:Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;
 
-    invoke-virtual {v3}, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->getCount()I
+    invoke-virtual {v3}, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->getCount()I
 
     move-result v3
 
     move-object/from16 v0, p0
 
-    iget v4, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mStaticItem:I
+    iget v4, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mStaticItem:I
 
     add-int/2addr v3, v4
 
     move-object/from16 v0, p0
 
-    iput v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAddPos:I
+    iput v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAddPos:I
 
     .line 235
     move-object/from16 v0, p0
 
-    iget v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mCurrentSelection:I
+    iget v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mCurrentSelection:I
 
     const/4 v4, -0x1
 
@@ -1886,7 +1886,7 @@
 
     move-object/from16 v0, p0
 
-    iget v5, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mCurrentSelection:I
+    iget v5, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mCurrentSelection:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1901,11 +1901,11 @@
     .line 237
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
 
     move-object/from16 v0, p0
 
-    iget v4, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mCurrentSelection:I
+    iget v4, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mCurrentSelection:I
 
     const/4 v5, 0x1
 
@@ -1914,11 +1914,11 @@
     .line 239
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
 
     move-object/from16 v0, p0
 
-    iget v4, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mCurrentSelection:I
+    iget v4, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mCurrentSelection:I
 
     invoke-virtual {v3, v4}, Landroid/widget/ListView;->setSelection(I)V
 
@@ -1930,13 +1930,13 @@
     :cond_2
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     const v4, 0x7f0e1105
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v4}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v4}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1946,7 +1946,7 @@
 
     .line 157
     :cond_3
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v10
 
@@ -1969,7 +1969,7 @@
     .line 162
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mFromContact:Ljava/lang/Boolean;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mFromContact:Ljava/lang/Boolean;
 
     invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -1982,7 +1982,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/personalvibration/SelectPatternDialog;->setTitle(I)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->setTitle(I)V
 
     .line 167
     :goto_4
@@ -1990,14 +1990,14 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/personalvibration/SelectPatternDialog;->setContentView(I)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->setContentView(I)V
 
     .line 168
     const v3, 0x7f0d0187
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/personalvibration/SelectPatternDialog;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
@@ -2005,10 +2005,10 @@
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
+    iput-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
 
     .line 169
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v3
 
@@ -2017,7 +2017,7 @@
     .line 171
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
 
     const/4 v4, 0x0
 
@@ -2031,7 +2031,7 @@
 
     .line 174
     :cond_4
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getResources()Landroid/content/res/Resources;
 
     move-result-object v16
 
@@ -2067,7 +2067,7 @@
 
     .line 178
     .local v6, "divider_inset_size":I
-    invoke-static/range {p0 .. p0}, Lcom/android/settings/Utils;->isRTL(Landroid/content/Context;)Z
+    invoke-static/range {p0 .. p0}, Lcom/android/settings_ex/Utils;->isRTL(Landroid/content/Context;)Z
 
     move-result v3
 
@@ -2078,7 +2078,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v3}, Landroid/widget/ListView;->getDivider()Landroid/graphics/drawable/Drawable;
 
@@ -2096,7 +2096,7 @@
     .local v2, "insetdivider":Landroid/graphics/drawable/InsetDrawable;
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v3, v2}, Landroid/widget/ListView;->setDivider(Landroid/graphics/drawable/Drawable;)V
 
@@ -2111,7 +2111,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/personalvibration/SelectPatternDialog;->setTitle(I)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->setTitle(I)V
 
     goto :goto_4
 
@@ -2123,7 +2123,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v3}, Landroid/widget/ListView;->getDivider()Landroid/graphics/drawable/Drawable;
 
@@ -2143,7 +2143,7 @@
     .restart local v2    # "insetdivider":Landroid/graphics/drawable/InsetDrawable;
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
+    iget-object v3, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
 
     invoke-virtual {v3, v2}, Landroid/widget/ListView;->setDivider(Landroid/graphics/drawable/Drawable;)V
 
@@ -2155,7 +2155,7 @@
     .end local v10    # "actionBar":Landroid/app/ActionBar;
     .end local v16    # "resources":Landroid/content/res/Resources;
     :cond_7
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v3
 
@@ -2163,7 +2163,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
+    iget-object v5, v0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mListView:Landroid/widget/ListView;
 
     const/4 v7, 0x0
 
@@ -2250,7 +2250,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getCurrentSelection()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getCurrentSelection()I
 
     move-result v3
 
@@ -2277,7 +2277,7 @@
 
     move-result-object v1
 
-    iget v3, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAddPos:I
+    iget v3, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAddPos:I
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2302,7 +2302,7 @@
 
     move-result-object v1
 
-    iget-object v3, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mFromContact:Ljava/lang/Boolean;
+    iget-object v3, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mFromContact:Ljava/lang/Boolean;
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2317,7 +2317,7 @@
     .line 287
     iget v0, v7, Landroid/widget/AdapterView$AdapterContextMenuInfo;->position:I
 
-    iget v1, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mStaticItem:I
+    iget v1, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mStaticItem:I
 
     add-int/lit8 v1, v1, 0x6
 
@@ -2341,7 +2341,7 @@
     :cond_1
     iget v0, v7, Landroid/widget/AdapterView$AdapterContextMenuInfo;->position:I
 
-    iget v1, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAddPos:I
+    iget v1, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAddPos:I
 
     if-ne v0, v1, :cond_2
 
@@ -2358,13 +2358,13 @@
     :cond_2
     iget v0, v7, Landroid/widget/AdapterView$AdapterContextMenuInfo;->position:I
 
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getCurrentSelection()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getCurrentSelection()I
 
     move-result v1
 
     if-eq v0, v1, :cond_3
 
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mFromContact:Ljava/lang/Boolean;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mFromContact:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -2378,7 +2378,7 @@
 
     .line 304
     :goto_1
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -2402,7 +2402,7 @@
     .local v6, "c":Landroid/database/Cursor;
     iget v0, v7, Landroid/widget/AdapterView$AdapterContextMenuInfo;->position:I
 
-    iget v1, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mStaticItem:I
+    iget v1, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mStaticItem:I
 
     sub-int/2addr v0, v1
 
@@ -2449,11 +2449,11 @@
 
     .prologue
     .line 419
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mDialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->isShowing()Z
 
@@ -2462,14 +2462,14 @@
     if-eqz v0, :cond_0
 
     .line 420
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 421
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mDialog:Landroid/app/AlertDialog;
 
     .line 424
     :cond_0
@@ -2497,7 +2497,7 @@
     .prologue
     .line 341
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
-    iget v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mStaticItem:I
+    iget v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mStaticItem:I
 
     sub-int/2addr p3, v0
 
@@ -2524,7 +2524,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAddPos:I
+    iget v2, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAddPos:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2537,7 +2537,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 343
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
 
     invoke-virtual {v0}, Landroid/os/Vibrator;->cancel()V
 
@@ -2554,10 +2554,10 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 347
-    iput p3, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mOlderPosition:I
+    iput p3, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mOlderPosition:I
 
     .line 348
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -2569,7 +2569,7 @@
 
     .line 349
     .local v10, "temp":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -2610,7 +2610,7 @@
 
     .line 353
     .local v9, "pattern":I
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
 
     const/4 v1, -0x1
 
@@ -2623,14 +2623,14 @@
     .line 356
     .end local v9    # "pattern":I
     :cond_0
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 357
-    invoke-direct {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->PositiveButtonClick()V
+    invoke-direct {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->PositiveButtonClick()V
 
     .line 360
     :cond_1
@@ -2644,11 +2644,11 @@
 
     .line 362
     :cond_2
-    iget v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mStaticItem:I
+    iget v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mStaticItem:I
 
     add-int/2addr v0, p3
 
-    iget v1, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAddPos:I
+    iget v1, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAddPos:I
 
     if-ne v0, v1, :cond_4
 
@@ -2666,7 +2666,7 @@
     invoke-virtual {v7, v0, v1}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 366
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mFromContact:Ljava/lang/Boolean;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mFromContact:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -2688,17 +2688,17 @@
 
     .line 370
     :cond_3
-    invoke-virtual {p0, v7}, Lcom/android/settings/personalvibration/SelectPatternDialog;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->startActivity(Landroid/content/Intent;)V
 
     .line 371
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->finish()V
 
     goto :goto_0
 
     .line 375
     .end local v7    # "i":Landroid/content/Intent;
     :cond_4
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -2749,7 +2749,7 @@
 
     .line 380
     .restart local v9    # "pattern":I
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
 
     const/4 v1, -0x1
 
@@ -2786,48 +2786,48 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 385
-    iget v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mOlderPosition:I
+    iget v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mOlderPosition:I
 
     if-ne v0, p3, :cond_5
 
-    iget-boolean v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mFlag:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mFlag:Z
 
     if-eqz v0, :cond_5
 
     .line 386
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mFlag:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mFlag:Z
 
     .line 388
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v0
 
     if-nez v0, :cond_5
 
     .line 389
-    invoke-direct {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->PositiveButtonClick()V
+    invoke-direct {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->PositiveButtonClick()V
 
     .line 393
     :cond_5
-    iget v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mOlderPosition:I
+    iget v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mOlderPosition:I
 
     if-eq v0, p3, :cond_6
 
     .line 395
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v0
 
     if-nez v0, :cond_6
 
     .line 396
-    invoke-direct {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->PositiveButtonClick()V
+    invoke-direct {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->PositiveButtonClick()V
 
     .line 400
     :cond_6
-    iput p3, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mOlderPosition:I
+    iput p3, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mOlderPosition:I
 
     goto/16 :goto_0
 .end method
@@ -2841,7 +2841,7 @@
 
     .prologue
     .line 670
-    iget v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mStaticItem:I
+    iget v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mStaticItem:I
 
     sub-int/2addr p3, v0
 
@@ -2869,7 +2869,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 672
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
 
     invoke-virtual {v0}, Landroid/os/Vibrator;->cancel()V
 
@@ -2886,7 +2886,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 676
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -2898,7 +2898,7 @@
 
     .line 677
     .local v9, "temp":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -2939,7 +2939,7 @@
 
     .line 681
     .local v8, "pattern":I
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
 
     const/4 v1, -0x1
 
@@ -2963,16 +2963,16 @@
 
     .line 686
     :cond_2
-    iget v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mStaticItem:I
+    iget v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mStaticItem:I
 
     add-int/2addr v0, p3
 
-    iget v1, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAddPos:I
+    iget v1, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAddPos:I
 
     if-eq v0, v1, :cond_1
 
     .line 689
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -3023,7 +3023,7 @@
 
     .line 694
     .restart local v8    # "pattern":I
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
 
     const/4 v1, -0x1
 
@@ -3074,7 +3074,7 @@
     if-ne p1, v3, :cond_0
 
     .line 587
-    iget-object v3, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
+    iget-object v3, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
 
     invoke-virtual {v3}, Landroid/os/Vibrator;->cancel()V
 
@@ -3086,19 +3086,19 @@
 
     .line 592
     .local v2, "ret":Z
-    invoke-static {p0}, Lcom/android/settings/Utils;->isFolderModel(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/android/settings_ex/Utils;->isFolderModel(Landroid/content/Context;)Z
 
     move-result v3
 
-    iput-boolean v3, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mSupportFolderType:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mSupportFolderType:Z
 
     .line 594
-    iget-boolean v3, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mSupportFolderType:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mSupportFolderType:Z
 
     if-eqz v3, :cond_3
 
     .line 595
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getCurrentFocus()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getCurrentFocus()Landroid/view/View;
 
     move-result-object v0
 
@@ -3135,19 +3135,19 @@
 
     .line 605
     :cond_2
-    iget-object v3, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mPatternListAdapter:Lcom/android/settings/personalvibration/VibrationPatternListAdapter;
+    iget-object v3, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mPatternListAdapter:Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;
 
-    invoke-virtual {v3}, Lcom/android/settings/personalvibration/VibrationPatternListAdapter;->getCount()I
+    invoke-virtual {v3}, Lcom/android/settings_ex/personalvibration/VibrationPatternListAdapter;->getCount()I
 
     move-result v3
 
     add-int/lit8 v3, v3, -0x1
 
-    iget v4, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mStaticItem:I
+    iget v4, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mStaticItem:I
 
     sub-int/2addr v3, v4
 
-    invoke-direct {p0, v3}, Lcom/android/settings/personalvibration/SelectPatternDialog;->doVibrate(I)V
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->doVibrate(I)V
 
     .line 612
     .end local v0    # "focusedView":Landroid/view/View;
@@ -3171,7 +3171,7 @@
     .line 607
     const/4 v3, 0x0
 
-    invoke-direct {p0, v3}, Lcom/android/settings/personalvibration/SelectPatternDialog;->doVibrate(I)V
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->doVibrate(I)V
 
     goto :goto_0
 .end method
@@ -3183,14 +3183,14 @@
 
     .prologue
     .line 720
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 721
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAlert:Lcom/android/internal/app/AlertController;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAlert:Lcom/android/internal/app/AlertController;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/internal/app/AlertController;->onKeyUp(ILandroid/view/KeyEvent;)Z
 
@@ -3236,7 +3236,7 @@
     if-ne v0, v1, :cond_0
 
     .line 577
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->finish()V
 
     .line 578
     const/4 v0, 0x1
@@ -3258,12 +3258,12 @@
 
     .prologue
     .line 271
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
 
     if-eqz v0, :cond_0
 
     .line 272
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->vib:Landroid/os/Vibrator;
 
     invoke-virtual {v0}, Landroid/os/Vibrator;->cancel()V
 
@@ -3272,7 +3272,7 @@
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
     .line 276
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->finish()V
 
     .line 277
     return-void
@@ -3286,11 +3286,11 @@
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
     .line 265
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/android/settings/Utils;->applyLandscapeFullScreen(Landroid/content/Context;Landroid/view/Window;)V
+    invoke-static {p0, v0}, Lcom/android/settings_ex/Utils;->applyLandscapeFullScreen(Landroid/content/Context;Landroid/view/Window;)V
 
     .line 266
     return-void
@@ -3313,14 +3313,14 @@
 
     .prologue
     .line 713
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
-    iget-object v1, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAlert:Lcom/android/internal/app/AlertController;
+    iget-object v1, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAlert:Lcom/android/internal/app/AlertController;
 
     invoke-virtual {v0, v1}, Lcom/android/internal/app/AlertController$AlertParams;->apply(Lcom/android/internal/app/AlertController;)V
 
     .line 714
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mAlert:Lcom/android/internal/app/AlertController;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mAlert:Lcom/android/internal/app/AlertController;
 
     invoke-virtual {v0}, Lcom/android/internal/app/AlertController;->installContent()V
 
@@ -3361,7 +3361,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 429
-    invoke-virtual {p0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -3581,7 +3581,7 @@
     .local v10, "maxLength":I
     const-string v0, "input_method"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/personalvibration/SelectPatternDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v9
 
@@ -3656,12 +3656,12 @@
     invoke-virtual {v6, p0}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 448
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mDialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
     .line 449
-    iput-object v2, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mDialog:Landroid/app/AlertDialog;
+    iput-object v2, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mDialog:Landroid/app/AlertDialog;
 
     .line 452
     :cond_0
@@ -3675,9 +3675,9 @@
 
     const v1, 0x7f0e0301
 
-    new-instance v2, Lcom/android/settings/personalvibration/SelectPatternDialog$2;
+    new-instance v2, Lcom/android/settings_ex/personalvibration/SelectPatternDialog$2;
 
-    invoke-direct {v2, p0, v6, v8, v9}, Lcom/android/settings/personalvibration/SelectPatternDialog$2;-><init>(Lcom/android/settings/personalvibration/SelectPatternDialog;Landroid/widget/TextView;ILandroid/view/inputmethod/InputMethodManager;)V
+    invoke-direct {v2, p0, v6, v8, v9}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog$2;-><init>(Lcom/android/settings_ex/personalvibration/SelectPatternDialog;Landroid/widget/TextView;ILandroid/view/inputmethod/InputMethodManager;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -3685,9 +3685,9 @@
 
     const v1, 0x7f0e01ba
 
-    new-instance v2, Lcom/android/settings/personalvibration/SelectPatternDialog$1;
+    new-instance v2, Lcom/android/settings_ex/personalvibration/SelectPatternDialog$1;
 
-    invoke-direct {v2, p0, v9, v6}, Lcom/android/settings/personalvibration/SelectPatternDialog$1;-><init>(Lcom/android/settings/personalvibration/SelectPatternDialog;Landroid/view/inputmethod/InputMethodManager;Landroid/widget/TextView;)V
+    invoke-direct {v2, p0, v9, v6}, Lcom/android/settings_ex/personalvibration/SelectPatternDialog$1;-><init>(Lcom/android/settings_ex/personalvibration/SelectPatternDialog;Landroid/view/inputmethod/InputMethodManager;Landroid/widget/TextView;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -3697,10 +3697,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mDialog:Landroid/app/AlertDialog;
 
     .line 480
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
@@ -3711,12 +3711,12 @@
     invoke-virtual {v0, v1}, Landroid/view/Window;->setSoftInputMode(I)V
 
     .line 481
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
     .line 482
-    iget-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mDialog:Landroid/app/AlertDialog;
 
     const/4 v1, -0x1
 
@@ -3724,7 +3724,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/personalvibration/SelectPatternDialog;->mOkBtn:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/android/settings_ex/personalvibration/SelectPatternDialog;->mOkBtn:Landroid/widget/Button;
 
     .line 483
     invoke-interface {v7}, Landroid/database/Cursor;->close()V

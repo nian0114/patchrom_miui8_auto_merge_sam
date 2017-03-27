@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/ShowInfomationMenu$2;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/ShowInfomationMenu$2;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "ShowInfomationMenu.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/ShowInfomationMenu;
+    value = Lcom/android/settings_ex/ShowInfomationMenu;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 383
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -50,7 +50,7 @@
 
     .line 403
     .local v0, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
-    invoke-static {p1}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -63,7 +63,7 @@
 
     .line 407
     :cond_0
-    invoke-static {p1}, Lcom/android/settings/Utils;->isSupportWeatherMenu(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isSupportWeatherMenu(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -85,7 +85,7 @@
 
     .line 410
     :cond_1
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportWeatherStateSettings()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportWeatherStateSettings()Z
 
     move-result v1
 
@@ -137,7 +137,7 @@
 
     .line 393
     .local v1, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v2, Lcom/android/settings/ShowInfomationMenu;
+    const-class v2, Lcom/android/settings_ex/ShowInfomationMenu;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

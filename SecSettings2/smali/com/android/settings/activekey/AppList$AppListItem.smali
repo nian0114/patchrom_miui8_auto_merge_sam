@@ -1,11 +1,11 @@
-.class Lcom/android/settings/activekey/AppList$AppListItem;
+.class Lcom/android/settings_ex/activekey/AppList$AppListItem;
 .super Ljava/lang/Object;
 .source "AppList.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/activekey/AppList;
+    value = Lcom/android/settings_ex/activekey/AppList;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -37,16 +37,16 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 63
-    iput-object p1, p0, Lcom/android/settings/activekey/AppList$AppListItem;->mPackageName:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/activekey/AppList$AppListItem;->mPackageName:Ljava/lang/String;
 
     .line 64
-    iput-object p2, p0, Lcom/android/settings/activekey/AppList$AppListItem;->mActivityName:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/settings_ex/activekey/AppList$AppListItem;->mActivityName:Ljava/lang/String;
 
     .line 65
-    iput-object p3, p0, Lcom/android/settings/activekey/AppList$AppListItem;->mLabel:Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/settings_ex/activekey/AppList$AppListItem;->mLabel:Ljava/lang/String;
 
     .line 66
-    iput-object p4, p0, Lcom/android/settings/activekey/AppList$AppListItem;->mIcon:Landroid/graphics/drawable/Drawable;
+    iput-object p4, p0, Lcom/android/settings_ex/activekey/AppList$AppListItem;->mIcon:Landroid/graphics/drawable/Drawable;
 
     .line 67
     return-void

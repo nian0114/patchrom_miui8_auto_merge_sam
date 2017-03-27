@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/DeviceInfoSettings$2;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/DeviceInfoSettings$2;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "DeviceInfoSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DeviceInfoSettings;
+    value = Lcom/android/settings_ex/DeviceInfoSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 1361
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -69,7 +69,7 @@
 
     .line 1437
     .local v12, "keys":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v16
 
@@ -116,7 +116,7 @@
 
     move-object/from16 v1, v18
 
-    invoke-static {v0, v1}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v1}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v18
 
@@ -182,7 +182,7 @@
 
     move-object/from16 v1, v18
 
-    invoke-static {v0, v1}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v1}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v18
 
@@ -258,7 +258,7 @@
 
     move-object/from16 v1, v18
 
-    invoke-direct {v0, v1}, Lcom/android/settings/DeviceInfoSettings$2;->isPropertyMissing(Ljava/lang/String;)Z
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/DeviceInfoSettings$2;->isPropertyMissing(Ljava/lang/String;)Z
 
     move-result v18
 
@@ -279,7 +279,7 @@
 
     move-object/from16 v1, v18
 
-    invoke-direct {v0, v1}, Lcom/android/settings/DeviceInfoSettings$2;->isPropertyMissing(Ljava/lang/String;)Z
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/DeviceInfoSettings$2;->isPropertyMissing(Ljava/lang/String;)Z
 
     move-result v18
 
@@ -294,7 +294,7 @@
 
     .line 1478
     :cond_8
-    invoke-static/range {p1 .. p1}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static/range {p1 .. p1}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v18
 
@@ -309,8 +309,8 @@
 
     .line 1482
     :cond_9
-    # invokes: Lcom/android/settings/DeviceInfoSettings;->getFeedbackReporterPackage(Landroid/content/Context;)Ljava/lang/String;
-    invoke-static/range {p1 .. p1}, Lcom/android/settings/DeviceInfoSettings;->access$600(Landroid/content/Context;)Ljava/lang/String;
+    # invokes: Lcom/android/settings_ex/DeviceInfoSettings;->getFeedbackReporterPackage(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static/range {p1 .. p1}, Lcom/android/settings_ex/DeviceInfoSettings;->access$600(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v18
 
@@ -631,7 +631,7 @@
 
     move-object/from16 v1, v18
 
-    invoke-static {v0, v1}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v1}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v18
 
@@ -685,7 +685,7 @@
 
     if-eqz v18, :cond_13
 
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaCMCCModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaCMCCModel()Z
 
     move-result v18
 
@@ -701,7 +701,7 @@
 
     .line 1537
     :cond_14
-    invoke-static {}, Lcom/android/settings/Utils;->isSprModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSprModel()Z
 
     move-result v18
 
@@ -729,8 +729,8 @@
     if-eqz v18, :cond_15
 
     .line 1544
-    # invokes: Lcom/android/settings/DeviceInfoSettings;->readSoftwareUpdateType(Landroid/content/Context;)Ljava/lang/String;
-    invoke-static/range {p1 .. p1}, Lcom/android/settings/DeviceInfoSettings;->access$700(Landroid/content/Context;)Ljava/lang/String;
+    # invokes: Lcom/android/settings_ex/DeviceInfoSettings;->readSoftwareUpdateType(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static/range {p1 .. p1}, Lcom/android/settings_ex/DeviceInfoSettings;->access$700(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v18
 
@@ -746,7 +746,7 @@
 
     move-object/from16 v1, v18
 
-    invoke-static {v0, v1}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v1}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v18
 
@@ -917,7 +917,7 @@
 
     .line 1572
     :cond_1b
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticModel()Z
 
     move-result v18
 
@@ -1054,7 +1054,7 @@
 
     .line 1650
     :cond_20
-    invoke-static {}, Lcom/android/settings/Utils;->isStatusL51menutree()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isStatusL51menutree()Z
 
     move-result v18
 
@@ -1075,7 +1075,7 @@
 
     move-object/from16 v1, v18
 
-    invoke-static {v0, v1}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v1}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v18
 
@@ -1090,7 +1090,7 @@
 
     .line 1661
     :cond_21
-    invoke-static {}, Lcom/android/settings/Utils;->isSimplifiedAboutDevice2015()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSimplifiedAboutDevice2015()Z
 
     move-result v18
 
@@ -1260,7 +1260,7 @@
     .restart local v11    # "keyIndex":Ljava/lang/String;
     .restart local v14    # "ratedValue":Ljava/lang/String;
     :cond_25
-    invoke-static {}, Lcom/android/settings/Utils;->isLDUModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isLDUModel()Z
 
     move-result v18
 
@@ -1308,14 +1308,14 @@
 
     .line 1596
     :cond_27
-    invoke-static/range {p1 .. p1}, Lcom/android/settings/DeviceInfoSettings;->removeSoftwareUpdateKey(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static/range {p1 .. p1}, Lcom/android/settings_ex/DeviceInfoSettings;->removeSoftwareUpdateKey(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v15
 
     .line 1597
     .local v15, "removeKey":Ljava/lang/String;
-    # invokes: Lcom/android/settings/DeviceInfoSettings;->readSoftwareUpdateType(Landroid/content/Context;)Ljava/lang/String;
-    invoke-static/range {p1 .. p1}, Lcom/android/settings/DeviceInfoSettings;->access$700(Landroid/content/Context;)Ljava/lang/String;
+    # invokes: Lcom/android/settings_ex/DeviceInfoSettings;->readSoftwareUpdateType(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static/range {p1 .. p1}, Lcom/android/settings_ex/DeviceInfoSettings;->access$700(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v17
 
@@ -1863,7 +1863,7 @@
             "Z)",
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/search/SearchIndexableRaw;",
+            "Lcom/android/settings_ex/search/SearchIndexableRaw;",
             ">;"
         }
     .end annotation
@@ -1881,23 +1881,23 @@
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     .line 1376
-    .local v2, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/search/SearchIndexableRaw;>;"
+    .local v2, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/search/SearchIndexableRaw;>;"
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
     .line 1378
     .local v1, "res":Landroid/content/res/Resources;
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 1379
-    .local v0, "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .local v0, "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     const-string v3, "VZW"
 
-    # getter for: Lcom/android/settings/DeviceInfoSettings;->sSalesCode:Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/DeviceInfoSettings;->access$500()Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/DeviceInfoSettings;->sSalesCode:Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/DeviceInfoSettings;->access$500()Ljava/lang/String;
 
     move-result-object v4
 
@@ -1907,7 +1907,7 @@
 
     if-eqz v3, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v3
 
@@ -1916,7 +1916,7 @@
     .line 1380
     const-string v3, "device_name"
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 1381
     const v3, 0x7f0e136c
@@ -1925,23 +1925,23 @@
 
     move-result-object v3
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 1382
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 1385
     :cond_0
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    .end local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    .end local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 1386
-    .restart local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .restart local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     const-string v3, "selinux_status"
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 1387
     const v3, 0x7f0e066f
@@ -1950,39 +1950,39 @@
 
     move-result-object v3
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 1388
     const-string v3, ""
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     .line 1389
     const-string v3, ""
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
 
     .line 1390
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 1392
-    invoke-static {}, Lcom/android/settings/Utils;->isSimplifiedAboutDevice2015()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSimplifiedAboutDevice2015()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
     .line 1393
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    .end local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    .end local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 1394
-    .restart local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .restart local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     const-string v3, "status_info"
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 1395
     const v3, 0x7f0e0682
@@ -1991,21 +1991,21 @@
 
     move-result-object v3
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 1396
     invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     .line 1397
     invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
 
     .line 1398
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -2014,7 +2014,7 @@
     :cond_1
     const-string v3, "com.wssyncmldm"
 
-    invoke-static {p1, v3}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v3}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v3
 
@@ -2022,8 +2022,8 @@
 
     const-string v3, "SPR"
 
-    # getter for: Lcom/android/settings/DeviceInfoSettings;->sSalesCode:Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/DeviceInfoSettings;->access$500()Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/DeviceInfoSettings;->sSalesCode:Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/DeviceInfoSettings;->access$500()Ljava/lang/String;
 
     move-result-object v4
 
@@ -2035,8 +2035,8 @@
 
     const-string v3, "BST"
 
-    # getter for: Lcom/android/settings/DeviceInfoSettings;->sSalesCode:Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/DeviceInfoSettings;->access$500()Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/DeviceInfoSettings;->sSalesCode:Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/DeviceInfoSettings;->access$500()Ljava/lang/String;
 
     move-result-object v4
 
@@ -2048,8 +2048,8 @@
 
     const-string v3, "VMU"
 
-    # getter for: Lcom/android/settings/DeviceInfoSettings;->sSalesCode:Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/DeviceInfoSettings;->access$500()Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/DeviceInfoSettings;->sSalesCode:Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/DeviceInfoSettings;->access$500()Ljava/lang/String;
 
     move-result-object v4
 
@@ -2061,8 +2061,8 @@
 
     const-string v3, "XAS"
 
-    # getter for: Lcom/android/settings/DeviceInfoSettings;->sSalesCode:Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/DeviceInfoSettings;->access$500()Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/DeviceInfoSettings;->sSalesCode:Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/DeviceInfoSettings;->access$500()Ljava/lang/String;
 
     move-result-object v4
 
@@ -2073,16 +2073,16 @@
     if-nez v3, :cond_3
 
     .line 1406
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    .end local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    .end local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 1407
-    .restart local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .restart local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     const-string v3, "device_info_software_update"
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 1408
     const v3, 0x7f0e136d
@@ -2091,21 +2091,21 @@
 
     move-result-object v3
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 1409
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     .line 1410
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
 
     .line 1411
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -2113,8 +2113,8 @@
     .line 1413
     const-string v3, "TMB"
 
-    # getter for: Lcom/android/settings/DeviceInfoSettings;->sSalesCode:Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/DeviceInfoSettings;->access$500()Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/DeviceInfoSettings;->sSalesCode:Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/DeviceInfoSettings;->access$500()Ljava/lang/String;
 
     move-result-object v4
 
@@ -2126,8 +2126,8 @@
 
     const-string v3, "TMK"
 
-    # getter for: Lcom/android/settings/DeviceInfoSettings;->sSalesCode:Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/DeviceInfoSettings;->access$500()Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/DeviceInfoSettings;->sSalesCode:Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/DeviceInfoSettings;->access$500()Ljava/lang/String;
 
     move-result-object v4
 
@@ -2138,16 +2138,16 @@
     if-nez v3, :cond_2
 
     .line 1415
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    .end local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    .end local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 1416
-    .restart local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .restart local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     const-string v3, "device_info_software_update_auto_update"
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 1417
     const v3, 0x7f0e1372
@@ -2156,37 +2156,37 @@
 
     move-result-object v3
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 1418
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     .line 1419
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
 
     .line 1420
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 1423
     :cond_2
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    .end local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    .end local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 1424
-    .restart local v0    # "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .restart local v0    # "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     const-string v3, "scheduled_update"
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 1425
     const v3, 0x7f0e1374
@@ -2195,17 +2195,17 @@
 
     move-result-object v3
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 1426
     const-string v3, ""
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     .line 1427
     const-string v3, ""
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
 
     .line 1428
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -2239,7 +2239,7 @@
 
     .line 1367
     .local v0, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v1, Lcom/android/settings/DeviceInfoSettings;
+    const-class v1, Lcom/android/settings_ex/DeviceInfoSettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/notification/ZenModeDNDSettings$2;
+.class Lcom/android/settings_ex/notification/ZenModeDNDSettings$2;
 .super Ljava/lang/Object;
 .source "ZenModeDNDSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/notification/ZenModeDNDSettings;->createPreferenceHierarchy()Landroid/preference/PreferenceScreen;
+    value = Lcom/android/settings_ex/notification/ZenModeDNDSettings;->createPreferenceHierarchy()Landroid/preference/PreferenceScreen;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/ZenModeDNDSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/ZenModeDNDSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/notification/ZenModeDNDSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/notification/ZenModeDNDSettings;)V
     .locals 0
 
     .prologue
     .line 208
-    iput-object p1, p0, Lcom/android/settings/notification/ZenModeDNDSettings$2;->this$0:Lcom/android/settings/notification/ZenModeDNDSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/ZenModeDNDSettings$2;->this$0:Lcom/android/settings_ex/notification/ZenModeDNDSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,10 +42,10 @@
 
     .prologue
     .line 211
-    iget-object v0, p0, Lcom/android/settings/notification/ZenModeDNDSettings$2;->this$0:Lcom/android/settings/notification/ZenModeDNDSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/ZenModeDNDSettings$2;->this$0:Lcom/android/settings_ex/notification/ZenModeDNDSettings;
 
-    # invokes: Lcom/android/settings/notification/ZenModeDNDSettings;->showDaysDialog()V
-    invoke-static {v0}, Lcom/android/settings/notification/ZenModeDNDSettings;->access$300(Lcom/android/settings/notification/ZenModeDNDSettings;)V
+    # invokes: Lcom/android/settings_ex/notification/ZenModeDNDSettings;->showDaysDialog()V
+    invoke-static {v0}, Lcom/android/settings_ex/notification/ZenModeDNDSettings;->access$300(Lcom/android/settings_ex/notification/ZenModeDNDSettings;)V
 
     .line 212
     const/4 v0, 0x1

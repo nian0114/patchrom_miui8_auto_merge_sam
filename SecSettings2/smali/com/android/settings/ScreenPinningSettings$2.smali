@@ -1,4 +1,4 @@
-.class Lcom/android/settings/ScreenPinningSettings$2;
+.class Lcom/android/settings_ex/ScreenPinningSettings$2;
 .super Ljava/lang/Object;
 .source "ScreenPinningSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/ScreenPinningSettings;->screenPinningDisablePopup()V
+    value = Lcom/android/settings_ex/ScreenPinningSettings;->screenPinningDisablePopup()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/ScreenPinningSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/ScreenPinningSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/ScreenPinningSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/ScreenPinningSettings;)V
     .locals 0
 
     .prologue
     .line 353
-    iput-object p1, p0, Lcom/android/settings/ScreenPinningSettings$2;->this$0:Lcom/android/settings/ScreenPinningSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/ScreenPinningSettings$2;->this$0:Lcom/android/settings_ex/ScreenPinningSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,9 +44,9 @@
     const/4 v0, 0x0
 
     .line 356
-    iget-object v1, p0, Lcom/android/settings/ScreenPinningSettings$2;->this$0:Lcom/android/settings/ScreenPinningSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/ScreenPinningSettings$2;->this$0:Lcom/android/settings_ex/ScreenPinningSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/ScreenPinningSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v1}, Lcom/android/settings_ex/ScreenPinningSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -63,25 +63,25 @@
     .line 357
     .local v0, "isEnabled":Z
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/ScreenPinningSettings$2;->this$0:Lcom/android/settings/ScreenPinningSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/ScreenPinningSettings$2;->this$0:Lcom/android/settings_ex/ScreenPinningSettings;
 
-    # getter for: Lcom/android/settings/ScreenPinningSettings;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v1}, Lcom/android/settings/ScreenPinningSettings;->access$100(Lcom/android/settings/ScreenPinningSettings;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/ScreenPinningSettings;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v1}, Lcom/android/settings_ex/ScreenPinningSettings;->access$100(Lcom/android/settings_ex/ScreenPinningSettings;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 358
-    iget-object v1, p0, Lcom/android/settings/ScreenPinningSettings$2;->this$0:Lcom/android/settings/ScreenPinningSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/ScreenPinningSettings$2;->this$0:Lcom/android/settings_ex/ScreenPinningSettings;
 
-    # invokes: Lcom/android/settings/ScreenPinningSettings;->setLockToAppEnabled(Z)V
-    invoke-static {v1, v0}, Lcom/android/settings/ScreenPinningSettings;->access$200(Lcom/android/settings/ScreenPinningSettings;Z)V
+    # invokes: Lcom/android/settings_ex/ScreenPinningSettings;->setLockToAppEnabled(Z)V
+    invoke-static {v1, v0}, Lcom/android/settings_ex/ScreenPinningSettings;->access$200(Lcom/android/settings_ex/ScreenPinningSettings;Z)V
 
     .line 359
-    iget-object v1, p0, Lcom/android/settings/ScreenPinningSettings$2;->this$0:Lcom/android/settings/ScreenPinningSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/ScreenPinningSettings$2;->this$0:Lcom/android/settings_ex/ScreenPinningSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/ScreenPinningSettings;->updateDisplay()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/ScreenPinningSettings;->updateDisplay()V
 
     .line 360
     return-void

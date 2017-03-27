@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/AssistantMenuPreferenceFragment;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/AssistantMenuPreferenceFragment;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "AssistantMenuPreferenceFragment.java"
 
 # interfaces
@@ -10,8 +10,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageZoom;,
-        Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;
+        Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageZoom;,
+        Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;
     }
 .end annotation
 
@@ -21,7 +21,7 @@
 
 .field private mActionBarLayout:Landroid/view/View;
 
-.field private mAssistantMenuEnabler:Lcom/android/settings/AssistantMenuEnabler;
+.field private mAssistantMenuEnabler:Lcom/android/settings_ex/AssistantMenuEnabler;
 
 .field private mAssistantMenuObserver:Landroid/database/ContentObserver;
 
@@ -29,25 +29,25 @@
 
 .field private mCursor:Landroid/preference/PreferenceCategory;
 
-.field private mDominantHand:Lcom/android/settings/DropDownPreference;
+.field private mDominantHand:Lcom/android/settings_ex/DropDownPreference;
 
 .field private mEditMenu:Landroid/preference/Preference;
 
 .field private mFmMagnifierObserver:Landroid/database/ContentObserver;
 
-.field mMagnifierImage:Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;
+.field mMagnifierImage:Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;
 
-.field private mMagnifierSize:Lcom/android/settings/DropDownPreference;
+.field private mMagnifierSize:Lcom/android/settings_ex/DropDownPreference;
 
-.field mMagnifierZoom:Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageZoom;
+.field mMagnifierZoom:Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageZoom;
 
 .field private mMagnifier_settings:Landroid/preference/PreferenceCategory;
 
-.field private mPadSize:Lcom/android/settings/DropDownPreference;
+.field private mPadSize:Lcom/android/settings_ex/DropDownPreference;
 
-.field private mPointerSize:Lcom/android/settings/DropDownPreference;
+.field private mPointerSize:Lcom/android/settings_ex/DropDownPreference;
 
-.field private mPointerSpeed:Lcom/android/settings/DropDownPreference;
+.field private mPointerSpeed:Lcom/android/settings_ex/DropDownPreference;
 
 .field private mPreferenceFragmentActivity:Landroid/app/Activity;
 
@@ -57,9 +57,9 @@
 
 .field private mSearchTargetValue:I
 
-.field protected mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field protected mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-.field protected mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+.field protected mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
 
 # direct methods
@@ -70,91 +70,91 @@
     const/4 v1, 0x0
 
     .line 63
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 96
-    iput-boolean v1, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mSearchStartMenu:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mSearchStartMenu:Z
 
     .line 97
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mSearchTargetKey:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mSearchTargetKey:Ljava/lang/String;
 
     .line 98
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mSearchTargetValue:I
+    iput v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mSearchTargetValue:I
 
     .line 141
-    iput-boolean v1, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->bSupportHoverZoom:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->bSupportHoverZoom:Z
 
     .line 152
-    new-instance v0, Lcom/android/settings/AssistantMenuPreferenceFragment$1;
+    new-instance v0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$1;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/AssistantMenuPreferenceFragment$1;-><init>(Lcom/android/settings/AssistantMenuPreferenceFragment;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$1;-><init>(Lcom/android/settings_ex/AssistantMenuPreferenceFragment;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mAssistantMenuObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mAssistantMenuObserver:Landroid/database/ContentObserver;
 
     .line 159
-    new-instance v0, Lcom/android/settings/AssistantMenuPreferenceFragment$2;
+    new-instance v0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$2;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/AssistantMenuPreferenceFragment$2;-><init>(Lcom/android/settings/AssistantMenuPreferenceFragment;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$2;-><init>(Lcom/android/settings_ex/AssistantMenuPreferenceFragment;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mFmMagnifierObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mFmMagnifierObserver:Landroid/database/ContentObserver;
 
     .line 582
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/AssistantMenuPreferenceFragment;)V
+.method static synthetic access$000(Lcom/android/settings_ex/AssistantMenuPreferenceFragment;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/AssistantMenuPreferenceFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/AssistantMenuPreferenceFragment;
 
     .prologue
     .line 63
-    invoke-direct {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->updateAssistantMenuSaving()V
+    invoke-direct {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->updateAssistantMenuSaving()V
 
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/AssistantMenuPreferenceFragment;)V
+.method static synthetic access$100(Lcom/android/settings_ex/AssistantMenuPreferenceFragment;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/AssistantMenuPreferenceFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/AssistantMenuPreferenceFragment;
 
     .prologue
     .line 63
-    invoke-direct {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->updatePointerSizeMenuStatus()V
+    invoke-direct {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->updatePointerSizeMenuStatus()V
 
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/AssistantMenuPreferenceFragment;)Landroid/app/Activity;
+.method static synthetic access$200(Lcom/android/settings_ex/AssistantMenuPreferenceFragment;)Landroid/app/Activity;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/AssistantMenuPreferenceFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/AssistantMenuPreferenceFragment;
 
     .prologue
     .line 63
-    iget-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPreferenceFragmentActivity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPreferenceFragmentActivity:Landroid/app/Activity;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/AssistantMenuPreferenceFragment;I)V
+.method static synthetic access$300(Lcom/android/settings_ex/AssistantMenuPreferenceFragment;I)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/AssistantMenuPreferenceFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/AssistantMenuPreferenceFragment;
     .param p1, "x1"    # I
 
     .prologue
     .line 63
-    invoke-direct {p0, p1}, Lcom/android/settings/AssistantMenuPreferenceFragment;->refreshImageView(I)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->refreshImageView(I)V
 
     return-void
 .end method
@@ -164,12 +164,12 @@
 
     .prologue
     .line 508
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->onInstallSwitchBarToggleSwitch()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->onInstallSwitchBarToggleSwitch()V
 
     .line 509
-    iget-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 510
     return-void
@@ -204,7 +204,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 526
-    iget-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifierImage:Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;
+    iget-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifierImage:Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;
 
     if-nez v0, :cond_0
 
@@ -214,9 +214,9 @@
 
     .line 527
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifierImage:Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;
+    iget-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifierImage:Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;
 
-    invoke-virtual {v0, p1}, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;->setHoverZoomImageLevel(I)V
+    invoke-virtual {v0, p1}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;->setHoverZoomImageLevel(I)V
 
     .line 528
     const-string v0, "AssistantMenuPreferenceFragment"
@@ -249,16 +249,16 @@
 
     .prologue
     .line 455
-    iget-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 456
-    iget-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iget-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings_ex/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
 
     .line 457
     return-void
@@ -273,7 +273,7 @@
     const/4 v5, 0x0
 
     .line 459
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -285,7 +285,7 @@
 
     .line 461
     .local v0, "assistantMenu_state":I
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -300,53 +300,53 @@
     if-nez v0, :cond_1
 
     .line 463
-    iget-boolean v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->bSupportHoverZoom:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->bSupportHoverZoom:Z
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifierZoom:Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageZoom;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifierZoom:Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageZoom;
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifierZoom:Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageZoom;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifierZoom:Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageZoom;
 
-    invoke-virtual {v2, v5}, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageZoom;->setEnabledZoomButton(Z)V
+    invoke-virtual {v2, v5}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageZoom;->setEnabledZoomButton(Z)V
 
     .line 464
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2, v5}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v2, v5}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     .line 465
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mDominantHand:Lcom/android/settings/DropDownPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mDominantHand:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v2, v5}, Lcom/android/settings/DropDownPreference;->setEnabled(Z)V
+    invoke-virtual {v2, v5}, Lcom/android/settings_ex/DropDownPreference;->setEnabled(Z)V
 
     .line 466
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mEditMenu:Landroid/preference/Preference;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mEditMenu:Landroid/preference/Preference;
 
     invoke-virtual {v2, v5}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 467
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mAssistantPlus:Landroid/preference/Preference;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mAssistantPlus:Landroid/preference/Preference;
 
     invoke-virtual {v2, v5}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 468
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPointerSpeed:Lcom/android/settings/DropDownPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPointerSpeed:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v2, v5}, Lcom/android/settings/DropDownPreference;->setEnabled(Z)V
+    invoke-virtual {v2, v5}, Lcom/android/settings_ex/DropDownPreference;->setEnabled(Z)V
 
     .line 469
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings/DropDownPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v2, v5}, Lcom/android/settings/DropDownPreference;->setEnabled(Z)V
+    invoke-virtual {v2, v5}, Lcom/android/settings_ex/DropDownPreference;->setEnabled(Z)V
 
     .line 470
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPadSize:Lcom/android/settings/DropDownPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPadSize:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v2, v5}, Lcom/android/settings/DropDownPreference;->setEnabled(Z)V
+    invoke-virtual {v2, v5}, Lcom/android/settings_ex/DropDownPreference;->setEnabled(Z)V
 
     .line 486
     :goto_0
@@ -354,33 +354,33 @@
 
     .line 472
     :cond_1
-    iget-boolean v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->bSupportHoverZoom:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->bSupportHoverZoom:Z
 
     if-eqz v2, :cond_2
 
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifierZoom:Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageZoom;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifierZoom:Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageZoom;
 
     if-eqz v2, :cond_2
 
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifierZoom:Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageZoom;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifierZoom:Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageZoom;
 
-    invoke-virtual {v2, v6}, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageZoom;->setEnabledZoomButton(Z)V
+    invoke-virtual {v2, v6}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageZoom;->setEnabledZoomButton(Z)V
 
     .line 473
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v2, v6}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v2, v6}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     .line 474
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mDominantHand:Lcom/android/settings/DropDownPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mDominantHand:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v2, v6}, Lcom/android/settings/DropDownPreference;->setEnabled(Z)V
+    invoke-virtual {v2, v6}, Lcom/android/settings_ex/DropDownPreference;->setEnabled(Z)V
 
     .line 475
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mDominantHand:Lcom/android/settings/DropDownPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mDominantHand:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -394,44 +394,44 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
 
     .line 476
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mEditMenu:Landroid/preference/Preference;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mEditMenu:Landroid/preference/Preference;
 
     invoke-virtual {v2, v6}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 477
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mAssistantPlus:Landroid/preference/Preference;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mAssistantPlus:Landroid/preference/Preference;
 
     invoke-virtual {v2, v6}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 478
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPointerSpeed:Lcom/android/settings/DropDownPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPointerSpeed:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v2, v6}, Lcom/android/settings/DropDownPreference;->setEnabled(Z)V
+    invoke-virtual {v2, v6}, Lcom/android/settings_ex/DropDownPreference;->setEnabled(Z)V
 
     .line 479
     if-ne v1, v6, :cond_3
 
     .line 480
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings/DropDownPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v2, v5}, Lcom/android/settings/DropDownPreference;->setEnabled(Z)V
+    invoke-virtual {v2, v5}, Lcom/android/settings_ex/DropDownPreference;->setEnabled(Z)V
 
     .line 484
     :goto_1
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPadSize:Lcom/android/settings/DropDownPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPadSize:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v2, v6}, Lcom/android/settings/DropDownPreference;->setEnabled(Z)V
+    invoke-virtual {v2, v6}, Lcom/android/settings_ex/DropDownPreference;->setEnabled(Z)V
 
     goto :goto_0
 
     .line 482
     :cond_3
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings/DropDownPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v2, v6}, Lcom/android/settings/DropDownPreference;->setEnabled(Z)V
+    invoke-virtual {v2, v6}, Lcom/android/settings_ex/DropDownPreference;->setEnabled(Z)V
 
     goto :goto_1
 .end method
@@ -445,7 +445,7 @@
     const/4 v4, 0x0
 
     .line 443
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -457,7 +457,7 @@
 
     .line 445
     .local v0, "assistantMenu_state":I
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -475,9 +475,9 @@
     if-ne v1, v5, :cond_1
 
     .line 448
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings/DropDownPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v2, v4}, Lcom/android/settings/DropDownPreference;->setEnabled(Z)V
+    invoke-virtual {v2, v4}, Lcom/android/settings_ex/DropDownPreference;->setEnabled(Z)V
 
     .line 453
     :cond_0
@@ -486,9 +486,9 @@
 
     .line 450
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings/DropDownPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v2, v5}, Lcom/android/settings/DropDownPreference;->setEnabled(Z)V
+    invoke-virtual {v2, v5}, Lcom/android/settings_ex/DropDownPreference;->setEnabled(Z)V
 
     goto :goto_0
 .end method
@@ -500,7 +500,7 @@
 
     .prologue
     .line 512
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -531,27 +531,27 @@
     const/4 v1, 0x0
 
     .line 371
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 373
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 374
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 375
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -566,26 +566,26 @@
     move v1, v2
 
     :cond_0
-    invoke-virtual {v3, v1}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v3, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     .line 376
-    iget-object v1, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1}, Lcom/android/settings/widget/SwitchBar;->getSwitch()Lcom/android/settings/widget/ToggleSwitch;
+    invoke-virtual {v1}, Lcom/android/settings_ex/widget/SwitchBar;->getSwitch()Lcom/android/settings_ex/widget/ToggleSwitch;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iput-object v1, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
     .line 378
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 
     invoke-virtual {v1, v2}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
     .line 379
-    invoke-direct {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->installSwitchBarToggleSwitch()V
+    invoke-direct {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->installSwitchBarToggleSwitch()V
 
     .line 380
     return-void
@@ -607,7 +607,7 @@
     const/4 v4, 0x1
 
     .line 202
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 203
     const-string v3, "AssistantMenuPreferenceFragment"
@@ -617,14 +617,14 @@
     invoke-static {v3, v6}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 204
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPreferenceFragmentActivity:Landroid/app/Activity;
+    iput-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPreferenceFragmentActivity:Landroid/app/Activity;
 
     .line 205
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -634,10 +634,10 @@
 
     move-result v3
 
-    iput-boolean v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->bSupportHoverZoom:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->bSupportHoverZoom:Z
 
     .line 206
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getPreferenceManager()Landroid/preference/PreferenceManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getPreferenceManager()Landroid/preference/PreferenceManager;
 
     move-result-object v1
 
@@ -645,31 +645,31 @@
     .local v1, "preferenceManager":Landroid/preference/PreferenceManager;
     const v3, 0x7f08008c
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/AssistantMenuPreferenceFragment;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->addPreferencesFromResource(I)V
 
     .line 208
     const-string v3, "dominant_hand_side"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/AssistantMenuPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/settings/DropDownPreference;
+    check-cast v3, Lcom/android/settings_ex/DropDownPreference;
 
-    iput-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mDominantHand:Lcom/android/settings/DropDownPreference;
+    iput-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mDominantHand:Lcom/android/settings_ex/DropDownPreference;
 
     .line 209
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mDominantHand:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mDominantHand:Lcom/android/settings_ex/DropDownPreference;
 
     if-eqz v3, :cond_0
 
     .line 210
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mDominantHand:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mDominantHand:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v3}, Lcom/android/settings/DropDownPreference;->clearItems()V
+    invoke-virtual {v3}, Lcom/android/settings_ex/DropDownPreference;->clearItems()V
 
     .line 211
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -681,7 +681,7 @@
 
     .line 212
     .local v2, "values":[Ljava/lang/String;
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mDominantHand:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mDominantHand:Lcom/android/settings_ex/DropDownPreference;
 
     const v6, 0x7f0e15e1
 
@@ -691,10 +691,10 @@
 
     move-result-object v7
 
-    invoke-virtual {v3, v6, v7}, Lcom/android/settings/DropDownPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v3, v6, v7}, Lcom/android/settings_ex/DropDownPreference;->addItem(ILjava/lang/Object;)V
 
     .line 213
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mDominantHand:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mDominantHand:Lcom/android/settings_ex/DropDownPreference;
 
     const v6, 0x7f0e15e2
 
@@ -704,12 +704,12 @@
 
     move-result-object v7
 
-    invoke-virtual {v3, v6, v7}, Lcom/android/settings/DropDownPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v3, v6, v7}, Lcom/android/settings_ex/DropDownPreference;->addItem(ILjava/lang/Object;)V
 
     .line 214
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mDominantHand:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mDominantHand:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -723,71 +723,71 @@
 
     move-result-object v6
 
-    invoke-virtual {v3, v6}, Lcom/android/settings/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
+    invoke-virtual {v3, v6}, Lcom/android/settings_ex/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
 
     .line 215
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mDominantHand:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mDominantHand:Lcom/android/settings_ex/DropDownPreference;
 
-    new-instance v6, Lcom/android/settings/AssistantMenuPreferenceFragment$3;
+    new-instance v6, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$3;
 
-    invoke-direct {v6, p0}, Lcom/android/settings/AssistantMenuPreferenceFragment$3;-><init>(Lcom/android/settings/AssistantMenuPreferenceFragment;)V
+    invoke-direct {v6, p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$3;-><init>(Lcom/android/settings_ex/AssistantMenuPreferenceFragment;)V
 
-    invoke-virtual {v3, v6}, Lcom/android/settings/DropDownPreference;->setCallback(Lcom/android/settings/DropDownPreference$Callback;)V
+    invoke-virtual {v3, v6}, Lcom/android/settings_ex/DropDownPreference;->setCallback(Lcom/android/settings_ex/DropDownPreference$Callback;)V
 
     .line 232
     .end local v2    # "values":[Ljava/lang/String;
     :cond_0
     const-string v3, "menu_edit"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/AssistantMenuPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mEditMenu:Landroid/preference/Preference;
+    iput-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mEditMenu:Landroid/preference/Preference;
 
     .line 233
     const-string v3, "eam_active"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/AssistantMenuPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mAssistantPlus:Landroid/preference/Preference;
+    iput-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mAssistantPlus:Landroid/preference/Preference;
 
     .line 234
     const-string v3, "pointer_category"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/AssistantMenuPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
     check-cast v3, Landroid/preference/PreferenceCategory;
 
-    iput-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mCursor:Landroid/preference/PreferenceCategory;
+    iput-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mCursor:Landroid/preference/PreferenceCategory;
 
     .line 235
     const-string v3, "fmpointer_speed"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/AssistantMenuPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/settings/DropDownPreference;
+    check-cast v3, Lcom/android/settings_ex/DropDownPreference;
 
-    iput-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPointerSpeed:Lcom/android/settings/DropDownPreference;
+    iput-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPointerSpeed:Lcom/android/settings_ex/DropDownPreference;
 
     .line 236
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPointerSpeed:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPointerSpeed:Lcom/android/settings_ex/DropDownPreference;
 
     if-eqz v3, :cond_1
 
     .line 237
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPointerSpeed:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPointerSpeed:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v3}, Lcom/android/settings/DropDownPreference;->clearItems()V
+    invoke-virtual {v3}, Lcom/android/settings_ex/DropDownPreference;->clearItems()V
 
     .line 238
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -799,7 +799,7 @@
 
     .line 239
     .restart local v2    # "values":[Ljava/lang/String;
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPointerSpeed:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPointerSpeed:Lcom/android/settings_ex/DropDownPreference;
 
     const v6, 0x7f0e15e5
 
@@ -809,10 +809,10 @@
 
     move-result-object v7
 
-    invoke-virtual {v3, v6, v7}, Lcom/android/settings/DropDownPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v3, v6, v7}, Lcom/android/settings_ex/DropDownPreference;->addItem(ILjava/lang/Object;)V
 
     .line 240
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPointerSpeed:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPointerSpeed:Lcom/android/settings_ex/DropDownPreference;
 
     const v6, 0x7f0e15e6
 
@@ -822,10 +822,10 @@
 
     move-result-object v7
 
-    invoke-virtual {v3, v6, v7}, Lcom/android/settings/DropDownPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v3, v6, v7}, Lcom/android/settings_ex/DropDownPreference;->addItem(ILjava/lang/Object;)V
 
     .line 241
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPointerSpeed:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPointerSpeed:Lcom/android/settings_ex/DropDownPreference;
 
     const v6, 0x7f0e15e7
 
@@ -835,12 +835,12 @@
 
     move-result-object v7
 
-    invoke-virtual {v3, v6, v7}, Lcom/android/settings/DropDownPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v3, v6, v7}, Lcom/android/settings_ex/DropDownPreference;->addItem(ILjava/lang/Object;)V
 
     .line 242
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPointerSpeed:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPointerSpeed:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -856,42 +856,42 @@
 
     move-result-object v6
 
-    invoke-virtual {v3, v6}, Lcom/android/settings/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
+    invoke-virtual {v3, v6}, Lcom/android/settings_ex/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
 
     .line 243
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPointerSpeed:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPointerSpeed:Lcom/android/settings_ex/DropDownPreference;
 
-    new-instance v6, Lcom/android/settings/AssistantMenuPreferenceFragment$4;
+    new-instance v6, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$4;
 
-    invoke-direct {v6, p0}, Lcom/android/settings/AssistantMenuPreferenceFragment$4;-><init>(Lcom/android/settings/AssistantMenuPreferenceFragment;)V
+    invoke-direct {v6, p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$4;-><init>(Lcom/android/settings_ex/AssistantMenuPreferenceFragment;)V
 
-    invoke-virtual {v3, v6}, Lcom/android/settings/DropDownPreference;->setCallback(Lcom/android/settings/DropDownPreference$Callback;)V
+    invoke-virtual {v3, v6}, Lcom/android/settings_ex/DropDownPreference;->setCallback(Lcom/android/settings_ex/DropDownPreference$Callback;)V
 
     .line 259
     .end local v2    # "values":[Ljava/lang/String;
     :cond_1
     const-string v3, "fmpointer_size"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/AssistantMenuPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/settings/DropDownPreference;
+    check-cast v3, Lcom/android/settings_ex/DropDownPreference;
 
-    iput-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings/DropDownPreference;
+    iput-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings_ex/DropDownPreference;
 
     .line 261
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings_ex/DropDownPreference;
 
     if-eqz v3, :cond_2
 
     .line 262
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v3}, Lcom/android/settings/DropDownPreference;->clearItems()V
+    invoke-virtual {v3}, Lcom/android/settings_ex/DropDownPreference;->clearItems()V
 
     .line 263
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -903,7 +903,7 @@
 
     .line 264
     .restart local v2    # "values":[Ljava/lang/String;
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings_ex/DropDownPreference;
 
     const v6, 0x7f0e15e3
 
@@ -913,10 +913,10 @@
 
     move-result-object v7
 
-    invoke-virtual {v3, v6, v7}, Lcom/android/settings/DropDownPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v3, v6, v7}, Lcom/android/settings_ex/DropDownPreference;->addItem(ILjava/lang/Object;)V
 
     .line 265
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings_ex/DropDownPreference;
 
     const v6, 0x7f0e15e4
 
@@ -926,12 +926,12 @@
 
     move-result-object v7
 
-    invoke-virtual {v3, v6, v7}, Lcom/android/settings/DropDownPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v3, v6, v7}, Lcom/android/settings_ex/DropDownPreference;->addItem(ILjava/lang/Object;)V
 
     .line 266
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -945,42 +945,42 @@
 
     move-result-object v6
 
-    invoke-virtual {v3, v6}, Lcom/android/settings/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
+    invoke-virtual {v3, v6}, Lcom/android/settings_ex/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
 
     .line 267
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPointerSize:Lcom/android/settings_ex/DropDownPreference;
 
-    new-instance v6, Lcom/android/settings/AssistantMenuPreferenceFragment$5;
+    new-instance v6, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$5;
 
-    invoke-direct {v6, p0}, Lcom/android/settings/AssistantMenuPreferenceFragment$5;-><init>(Lcom/android/settings/AssistantMenuPreferenceFragment;)V
+    invoke-direct {v6, p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$5;-><init>(Lcom/android/settings_ex/AssistantMenuPreferenceFragment;)V
 
-    invoke-virtual {v3, v6}, Lcom/android/settings/DropDownPreference;->setCallback(Lcom/android/settings/DropDownPreference$Callback;)V
+    invoke-virtual {v3, v6}, Lcom/android/settings_ex/DropDownPreference;->setCallback(Lcom/android/settings_ex/DropDownPreference$Callback;)V
 
     .line 283
     .end local v2    # "values":[Ljava/lang/String;
     :cond_2
     const-string v3, "fmpad_size"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/AssistantMenuPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/settings/DropDownPreference;
+    check-cast v3, Lcom/android/settings_ex/DropDownPreference;
 
-    iput-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPadSize:Lcom/android/settings/DropDownPreference;
+    iput-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPadSize:Lcom/android/settings_ex/DropDownPreference;
 
     .line 284
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPadSize:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPadSize:Lcom/android/settings_ex/DropDownPreference;
 
     if-eqz v3, :cond_3
 
     .line 285
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPadSize:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPadSize:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v3}, Lcom/android/settings/DropDownPreference;->clearItems()V
+    invoke-virtual {v3}, Lcom/android/settings_ex/DropDownPreference;->clearItems()V
 
     .line 286
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -992,7 +992,7 @@
 
     .line 287
     .restart local v2    # "values":[Ljava/lang/String;
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPadSize:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPadSize:Lcom/android/settings_ex/DropDownPreference;
 
     aget-object v6, v2, v5
 
@@ -1000,10 +1000,10 @@
 
     move-result-object v6
 
-    invoke-virtual {v3, v11, v6}, Lcom/android/settings/DropDownPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v3, v11, v6}, Lcom/android/settings_ex/DropDownPreference;->addItem(ILjava/lang/Object;)V
 
     .line 288
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPadSize:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPadSize:Lcom/android/settings_ex/DropDownPreference;
 
     aget-object v6, v2, v4
 
@@ -1011,10 +1011,10 @@
 
     move-result-object v6
 
-    invoke-virtual {v3, v12, v6}, Lcom/android/settings/DropDownPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v3, v12, v6}, Lcom/android/settings_ex/DropDownPreference;->addItem(ILjava/lang/Object;)V
 
     .line 289
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPadSize:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPadSize:Lcom/android/settings_ex/DropDownPreference;
 
     const v6, 0x7f0e09ff
 
@@ -1024,12 +1024,12 @@
 
     move-result-object v7
 
-    invoke-virtual {v3, v6, v7}, Lcom/android/settings/DropDownPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v3, v6, v7}, Lcom/android/settings_ex/DropDownPreference;->addItem(ILjava/lang/Object;)V
 
     .line 290
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPadSize:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPadSize:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -1043,35 +1043,35 @@
 
     move-result-object v6
 
-    invoke-virtual {v3, v6}, Lcom/android/settings/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
+    invoke-virtual {v3, v6}, Lcom/android/settings_ex/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
 
     .line 292
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPadSize:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPadSize:Lcom/android/settings_ex/DropDownPreference;
 
-    new-instance v6, Lcom/android/settings/AssistantMenuPreferenceFragment$6;
+    new-instance v6, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$6;
 
-    invoke-direct {v6, p0}, Lcom/android/settings/AssistantMenuPreferenceFragment$6;-><init>(Lcom/android/settings/AssistantMenuPreferenceFragment;)V
+    invoke-direct {v6, p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$6;-><init>(Lcom/android/settings_ex/AssistantMenuPreferenceFragment;)V
 
-    invoke-virtual {v3, v6}, Lcom/android/settings/DropDownPreference;->setCallback(Lcom/android/settings/DropDownPreference$Callback;)V
+    invoke-virtual {v3, v6}, Lcom/android/settings_ex/DropDownPreference;->setCallback(Lcom/android/settings_ex/DropDownPreference$Callback;)V
 
     .line 323
     .end local v2    # "values":[Ljava/lang/String;
     :cond_3
     const/4 v3, 0x0
 
-    invoke-static {v3}, Lcom/android/settings/Utils;->isTablet(Landroid/content/Context;)Z
+    invoke-static {v3}, Lcom/android/settings_ex/Utils;->isTablet(Landroid/content/Context;)Z
 
     move-result v3
 
     if-eqz v3, :cond_4
 
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
     if-eqz v3, :cond_4
 
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -1082,7 +1082,7 @@
     if-eqz v3, :cond_4
 
     .line 324
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -1098,16 +1098,16 @@
     :cond_4
     const-string v3, "magnifier_settings"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/AssistantMenuPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
     check-cast v3, Landroid/preference/PreferenceCategory;
 
-    iput-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifier_settings:Landroid/preference/PreferenceCategory;
+    iput-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifier_settings:Landroid/preference/PreferenceCategory;
 
     .line 327
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -1119,7 +1119,7 @@
 
     new-array v7, v4, [Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -1141,23 +1141,23 @@
 
     .line 331
     .local v0, "magnifier":Ljava/lang/String;
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifier_settings:Landroid/preference/PreferenceCategory;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifier_settings:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v3, v0}, Landroid/preference/PreferenceCategory;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 332
-    iget-boolean v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->bSupportHoverZoom:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->bSupportHoverZoom:Z
 
     if-eqz v3, :cond_7
 
     .line 333
-    new-instance v6, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageZoom;
+    new-instance v6, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageZoom;
 
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -1172,25 +1172,25 @@
     move v3, v4
 
     :goto_0
-    invoke-direct {v6, p0, v7, v3}, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageZoom;-><init>(Lcom/android/settings/AssistantMenuPreferenceFragment;Landroid/content/Context;Z)V
+    invoke-direct {v6, p0, v7, v3}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageZoom;-><init>(Lcom/android/settings_ex/AssistantMenuPreferenceFragment;Landroid/content/Context;Z)V
 
-    iput-object v6, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifierZoom:Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageZoom;
+    iput-object v6, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifierZoom:Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageZoom;
 
     .line 334
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifierZoom:Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageZoom;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifierZoom:Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageZoom;
 
     const/4 v6, -0x1
 
-    invoke-virtual {v3, v6}, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageZoom;->setOrder(I)V
+    invoke-virtual {v3, v6}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageZoom;->setOrder(I)V
 
     .line 335
-    new-instance v3, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;
+    new-instance v3, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;
 
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
 
@@ -1200,54 +1200,54 @@
 
     move-result v7
 
-    invoke-direct {v3, v6, v7}, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v3, v6, v7}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;-><init>(Landroid/content/Context;I)V
 
-    iput-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifierImage:Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;
+    iput-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifierImage:Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;
 
     .line 336
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifierImage:Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifierImage:Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;
 
     const/4 v6, -0x2
 
-    invoke-virtual {v3, v6}, Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;->setOrder(I)V
+    invoke-virtual {v3, v6}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;->setOrder(I)V
 
     .line 338
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifier_settings:Landroid/preference/PreferenceCategory;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifier_settings:Landroid/preference/PreferenceCategory;
 
-    iget-object v6, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifierImage:Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageView;
+    iget-object v6, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifierImage:Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageView;
 
     invoke-virtual {v3, v6}, Landroid/preference/PreferenceCategory;->addPreference(Landroid/preference/Preference;)Z
 
     .line 339
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifier_settings:Landroid/preference/PreferenceCategory;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifier_settings:Landroid/preference/PreferenceCategory;
 
-    iget-object v6, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifierZoom:Lcom/android/settings/AssistantMenuPreferenceFragment$MagnifierImageZoom;
+    iget-object v6, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifierZoom:Lcom/android/settings_ex/AssistantMenuPreferenceFragment$MagnifierImageZoom;
 
     invoke-virtual {v3, v6}, Landroid/preference/PreferenceCategory;->addPreference(Landroid/preference/Preference;)Z
 
     .line 341
     const-string v3, "magnifier_size"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/AssistantMenuPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/settings/DropDownPreference;
+    check-cast v3, Lcom/android/settings_ex/DropDownPreference;
 
-    iput-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifierSize:Lcom/android/settings/DropDownPreference;
+    iput-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifierSize:Lcom/android/settings_ex/DropDownPreference;
 
     .line 342
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifierSize:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifierSize:Lcom/android/settings_ex/DropDownPreference;
 
     if-eqz v3, :cond_5
 
     .line 344
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifierSize:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifierSize:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {v3}, Lcom/android/settings/DropDownPreference;->clearItems()V
+    invoke-virtual {v3}, Lcom/android/settings_ex/DropDownPreference;->clearItems()V
 
     .line 345
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -1259,7 +1259,7 @@
 
     .line 346
     .restart local v2    # "values":[Ljava/lang/String;
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifierSize:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifierSize:Lcom/android/settings_ex/DropDownPreference;
 
     aget-object v6, v2, v5
 
@@ -1267,10 +1267,10 @@
 
     move-result-object v6
 
-    invoke-virtual {v3, v11, v6}, Lcom/android/settings/DropDownPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v3, v11, v6}, Lcom/android/settings_ex/DropDownPreference;->addItem(ILjava/lang/Object;)V
 
     .line 347
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifierSize:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifierSize:Lcom/android/settings_ex/DropDownPreference;
 
     aget-object v4, v2, v4
 
@@ -1278,10 +1278,10 @@
 
     move-result-object v4
 
-    invoke-virtual {v3, v12, v4}, Lcom/android/settings/DropDownPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v3, v12, v4}, Lcom/android/settings_ex/DropDownPreference;->addItem(ILjava/lang/Object;)V
 
     .line 348
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifierSize:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifierSize:Lcom/android/settings_ex/DropDownPreference;
 
     const v4, 0x7f0e09ff
 
@@ -1291,12 +1291,12 @@
 
     move-result-object v6
 
-    invoke-virtual {v3, v4, v6}, Lcom/android/settings/DropDownPreference;->addItem(ILjava/lang/Object;)V
+    invoke-virtual {v3, v4, v6}, Lcom/android/settings_ex/DropDownPreference;->addItem(ILjava/lang/Object;)V
 
     .line 349
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifierSize:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifierSize:Lcom/android/settings_ex/DropDownPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1310,16 +1310,16 @@
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/DropDownPreference;->setSelectedValue(Ljava/lang/Object;)V
 
     .line 350
-    iget-object v3, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifierSize:Lcom/android/settings/DropDownPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifierSize:Lcom/android/settings_ex/DropDownPreference;
 
-    new-instance v4, Lcom/android/settings/AssistantMenuPreferenceFragment$7;
+    new-instance v4, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$7;
 
-    invoke-direct {v4, p0}, Lcom/android/settings/AssistantMenuPreferenceFragment$7;-><init>(Lcom/android/settings/AssistantMenuPreferenceFragment;)V
+    invoke-direct {v4, p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$7;-><init>(Lcom/android/settings_ex/AssistantMenuPreferenceFragment;)V
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/DropDownPreference;->setCallback(Lcom/android/settings/DropDownPreference$Callback;)V
+    invoke-virtual {v3, v4}, Lcom/android/settings_ex/DropDownPreference;->setCallback(Lcom/android/settings_ex/DropDownPreference$Callback;)V
 
     .line 367
     .end local v2    # "values":[Ljava/lang/String;
@@ -1335,11 +1335,11 @@
 
     .line 365
     :cond_7
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mMagnifier_settings:Landroid/preference/PreferenceCategory;
+    iget-object v4, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mMagnifier_settings:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v3, v4}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
@@ -1351,10 +1351,10 @@
 
     .prologue
     .line 439
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroyView()V
 
     .line 440
-    invoke-direct {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->removeSwitchBarToggleSwitch()V
+    invoke-direct {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->removeSwitchBarToggleSwitch()V
 
     .line 441
     return-void
@@ -1365,13 +1365,13 @@
 
     .prologue
     .line 489
-    iget-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iget-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
-    new-instance v1, Lcom/android/settings/AssistantMenuPreferenceFragment$8;
+    new-instance v1, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$8;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/AssistantMenuPreferenceFragment$8;-><init>(Lcom/android/settings/AssistantMenuPreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$8;-><init>(Lcom/android/settings_ex/AssistantMenuPreferenceFragment;)V
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/ToggleSwitch;->setOnBeforeCheckedChangeListener(Lcom/android/settings_ex/widget/ToggleSwitch$OnBeforeCheckedChangeListener;)V
 
     .line 505
     return-void
@@ -1382,37 +1382,37 @@
 
     .prologue
     .line 401
-    iget-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 402
-    iget-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mAssistantMenuEnabler:Lcom/android/settings/AssistantMenuEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mAssistantMenuEnabler:Lcom/android/settings_ex/AssistantMenuEnabler;
 
-    invoke-virtual {v0}, Lcom/android/settings/AssistantMenuEnabler;->pause()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/AssistantMenuEnabler;->pause()V
 
     .line 403
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mAssistantMenuObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mAssistantMenuObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 404
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mFmMagnifierObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mFmMagnifierObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 405
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 406
     return-void
@@ -1497,7 +1497,7 @@
 
     .prologue
     .line 516
-    iget-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mEditMenu:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mEditMenu:Landroid/preference/Preference;
 
     invoke-virtual {v0, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1506,9 +1506,9 @@
     if-eqz v0, :cond_1
 
     .line 517
-    iget-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mEditMenu:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mEditMenu:Landroid/preference/Preference;
 
-    const-class v1, Lcom/android/settings/accessibility/assistantmenu/SettingsMenuEditorFragment;
+    const-class v1, Lcom/android/settings_ex/accessibility/assistantmenu/SettingsMenuEditorFragment;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -1519,7 +1519,7 @@
     .line 521
     :cond_0
     :goto_0
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v0
 
@@ -1527,7 +1527,7 @@
 
     .line 518
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mAssistantPlus:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mAssistantPlus:Landroid/preference/Preference;
 
     invoke-virtual {v0, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1536,9 +1536,9 @@
     if-eqz v0, :cond_0
 
     .line 519
-    iget-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mAssistantPlus:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mAssistantPlus:Landroid/preference/Preference;
 
-    const-class v1, Lcom/android/settings/accessibility/assistantmenu/AssistantPlusFragment;
+    const-class v1, Lcom/android/settings_ex/accessibility/assistantmenu/AssistantPlusFragment;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -1556,34 +1556,34 @@
     const/4 v3, 0x1
 
     .line 384
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 385
-    new-instance v0, Lcom/android/settings/AssistantMenuEnabler;
+    new-instance v0, Lcom/android/settings_ex/AssistantMenuEnabler;
 
-    iget-object v1, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mPreferenceFragmentActivity:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPreferenceFragmentActivity:Landroid/app/Activity;
 
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mToggleSwitch:Lcom/android/settings/widget/ToggleSwitch;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mToggleSwitch:Lcom/android/settings_ex/widget/ToggleSwitch;
 
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/AssistantMenuEnabler;-><init>(Landroid/content/Context;Landroid/widget/Switch;)V
+    invoke-direct {v0, v1, v2}, Lcom/android/settings_ex/AssistantMenuEnabler;-><init>(Landroid/content/Context;Landroid/widget/Switch;)V
 
-    iput-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mAssistantMenuEnabler:Lcom/android/settings/AssistantMenuEnabler;
+    iput-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mAssistantMenuEnabler:Lcom/android/settings_ex/AssistantMenuEnabler;
 
     .line 386
-    invoke-direct {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->updateAssistantMenuSaving()V
+    invoke-direct {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->updateAssistantMenuSaving()V
 
     .line 387
-    iget-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mAssistantMenuEnabler:Lcom/android/settings/AssistantMenuEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mAssistantMenuEnabler:Lcom/android/settings_ex/AssistantMenuEnabler;
 
-    invoke-virtual {v0}, Lcom/android/settings/AssistantMenuEnabler;->resume()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/AssistantMenuEnabler;->resume()V
 
     .line 388
-    iget-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 389
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -1593,12 +1593,12 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mAssistantMenuObserver:Landroid/database/ContentObserver;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mAssistantMenuObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 394
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -1608,7 +1608,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mFmMagnifierObserver:Landroid/database/ContentObserver;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mFmMagnifierObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -1623,7 +1623,7 @@
 
     .prologue
     .line 432
-    invoke-virtual {p0}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1648,15 +1648,15 @@
 
     .prologue
     .line 410
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onStop()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onStop()V
 
     .line 411
-    iget-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mActionBarLayout:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mActionBarLayout:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
     .line 412
-    iget-object v0, p0, Lcom/android/settings/AssistantMenuPreferenceFragment;->mActionBarLayout:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mActionBarLayout:Landroid/view/View;
 
     const/4 v1, 0x4
 

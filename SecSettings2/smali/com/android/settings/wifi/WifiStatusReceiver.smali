@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/wifi/WifiStatusReceiver;
+.class public Lcom/android/settings_ex/wifi/WifiStatusReceiver;
 .super Landroid/content/BroadcastReceiver;
 .source "WifiStatusReceiver.java"
 
@@ -38,19 +38,19 @@
     move v0, v1
 
     :cond_0
-    sput-boolean v0, Lcom/android/settings/wifi/WifiStatusReceiver;->DEBUG:Z
+    sput-boolean v0, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->DEBUG:Z
 
     .line 40
-    sput-boolean v1, Lcom/android/settings/wifi/WifiStatusReceiver;->mIsForegroundWifiSettings:Z
+    sput-boolean v1, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->mIsForegroundWifiSettings:Z
 
     .line 41
-    sput-boolean v1, Lcom/android/settings/wifi/WifiStatusReceiver;->mIsForegroundWifiSubSettings:Z
+    sput-boolean v1, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->mIsForegroundWifiSubSettings:Z
 
     .line 43
-    sput-boolean v1, Lcom/android/settings/wifi/WifiStatusReceiver;->mIsbRetryPopup:Z
+    sput-boolean v1, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->mIsbRetryPopup:Z
 
     .line 44
-    sput-boolean v1, Lcom/android/settings/wifi/WifiStatusReceiver;->mIsWifiScreen:Z
+    sput-boolean v1, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->mIsWifiScreen:Z
 
     return-void
 .end method
@@ -71,7 +71,7 @@
 
     .prologue
     .line 138
-    sget-boolean v0, Lcom/android/settings/wifi/WifiStatusReceiver;->DEBUG:Z
+    sget-boolean v0, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
@@ -87,7 +87,7 @@
 
     move-result-object v1
 
-    sget-boolean v2, Lcom/android/settings/wifi/WifiStatusReceiver;->mIsForegroundWifiSettings:Z
+    sget-boolean v2, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->mIsForegroundWifiSettings:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -99,7 +99,7 @@
 
     move-result-object v1
 
-    sget-boolean v2, Lcom/android/settings/wifi/WifiStatusReceiver;->mIsForegroundWifiSubSettings:Z
+    sget-boolean v2, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->mIsForegroundWifiSubSettings:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -113,7 +113,7 @@
 
     .line 140
     :cond_0
-    sget-boolean v0, Lcom/android/settings/wifi/WifiStatusReceiver;->mIsForegroundWifiSettings:Z
+    sget-boolean v0, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->mIsForegroundWifiSettings:Z
 
     if-eqz v0, :cond_1
 
@@ -126,7 +126,7 @@
 
     .line 142
     :cond_1
-    sget-boolean v0, Lcom/android/settings/wifi/WifiStatusReceiver;->mIsForegroundWifiSubSettings:Z
+    sget-boolean v0, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->mIsForegroundWifiSubSettings:Z
 
     if-eqz v0, :cond_2
 
@@ -150,7 +150,7 @@
 
     .prologue
     .line 122
-    sget-boolean v2, Lcom/android/settings/wifi/WifiStatusReceiver;->DEBUG:Z
+    sget-boolean v2, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
@@ -178,7 +178,7 @@
 
     .line 124
     :cond_0
-    invoke-direct {p0, p1}, Lcom/android/settings/wifi/WifiStatusReceiver;->isWifiSettingScreen(Landroid/content/Context;)I
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->isWifiSettingScreen(Landroid/content/Context;)I
 
     move-result v2
 
@@ -196,7 +196,7 @@
     if-lez p3, :cond_1
 
     .line 127
-    sput p3, Lcom/android/settings/wifi/WifiSettings;->mStartWith:I
+    sput p3, Lcom/android/settings_ex/wifi/WifiSettings;->mStartWith:I
 
     .line 128
     :cond_1
@@ -261,7 +261,7 @@
     const/4 v5, 0x0
 
     .line 97
-    sget-boolean v2, Lcom/android/settings/wifi/WifiStatusReceiver;->DEBUG:Z
+    sget-boolean v2, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
@@ -275,7 +275,7 @@
     :cond_0
     const-string v2, "CMCC"
 
-    sget-object v3, Lcom/android/settings/Utils;->CONFIG_WIFI_NOTIFICATION_STYLE:Ljava/lang/String;
+    sget-object v3, Lcom/android/settings_ex/Utils;->CONFIG_WIFI_NOTIFICATION_STYLE:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -288,10 +288,10 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/wifi/WifiStatusReceiver;->mDoNotShow:Landroid/content/SharedPreferences;
+    iput-object v2, p0, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->mDoNotShow:Landroid/content/SharedPreferences;
 
     .line 101
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiStatusReceiver;->mDoNotShow:Landroid/content/SharedPreferences;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->mDoNotShow:Landroid/content/SharedPreferences;
 
     const-string v3, "aplist_do_not_show"
 
@@ -334,7 +334,7 @@
 
     .line 106
     :cond_2
-    invoke-direct {p0, p1}, Lcom/android/settings/wifi/WifiStatusReceiver;->isWifiSettingScreen(Landroid/content/Context;)I
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->isWifiSettingScreen(Landroid/content/Context;)I
 
     move-result v2
 
@@ -347,7 +347,7 @@
 
     .line 108
     .local v1, "startDialogIntent":Landroid/content/Intent;
-    const-class v2, Lcom/android/settings/wifi/WifiPickerDialog;
+    const-class v2, Lcom/android/settings_ex/wifi/WifiPickerDialog;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -417,7 +417,7 @@
 
     .line 50
     .local v1, "action":Ljava/lang/String;
-    sget-boolean v7, Lcom/android/settings/wifi/WifiStatusReceiver;->DEBUG:Z
+    sget-boolean v7, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->DEBUG:Z
 
     if-eqz v7, :cond_0
 
@@ -471,7 +471,7 @@
     if-ne v7, v11, :cond_2
 
     .line 57
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/wifi/WifiStatusReceiver;->startWifiPickerDialog(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->startWifiPickerDialog(Landroid/content/Context;Landroid/content/Intent;)V
 
     .line 94
     :cond_1
@@ -480,7 +480,7 @@
 
     .line 59
     :cond_2
-    invoke-direct {p0, p1, p2, v10}, Lcom/android/settings/wifi/WifiStatusReceiver;->startWifiPickerActivity(Landroid/content/Context;Landroid/content/Intent;I)V
+    invoke-direct {p0, p1, p2, v10}, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->startWifiPickerActivity(Landroid/content/Context;Landroid/content/Intent;I)V
 
     goto :goto_0
 
@@ -496,7 +496,7 @@
 
     const-string v7, "VZW"
 
-    sget-object v8, Lcom/android/settings/Utils;->CONFIG_OP_BRANDING:Ljava/lang/String;
+    sget-object v8, Lcom/android/settings_ex/Utils;->CONFIG_OP_BRANDING:Ljava/lang/String;
 
     invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -515,7 +515,7 @@
 
     .line 64
     .local v2, "config":Landroid/net/wifi/WifiConfiguration;
-    sget-boolean v7, Lcom/android/settings/wifi/WifiStatusReceiver;->mIsWifiScreen:Z
+    sget-boolean v7, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->mIsWifiScreen:Z
 
     if-nez v7, :cond_1
 
@@ -552,7 +552,7 @@
 
     .line 72
     .local v4, "reason":I
-    sget-boolean v7, Lcom/android/settings/wifi/WifiStatusReceiver;->mIsbRetryPopup:Z
+    sget-boolean v7, Lcom/android/settings_ex/wifi/WifiStatusReceiver;->mIsbRetryPopup:Z
 
     if-eqz v7, :cond_1
 
@@ -570,7 +570,7 @@
 
     .line 75
     .local v6, "startDialogIntent":Landroid/content/Intent;
-    const-class v7, Lcom/android/settings/wifi/WifiAuthFailWarningDialog;
+    const-class v7, Lcom/android/settings_ex/wifi/WifiAuthFailWarningDialog;
 
     invoke-virtual {v6, p1, v7}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
@@ -618,18 +618,18 @@
 
     .line 86
     :cond_5
-    new-instance v5, Lcom/android/settings/wifi/WifiReset;
+    new-instance v5, Lcom/android/settings_ex/wifi/WifiReset;
 
-    invoke-direct {v5, p1, v10}, Lcom/android/settings/wifi/WifiReset;-><init>(Landroid/content/Context;Z)V
+    invoke-direct {v5, p1, v10}, Lcom/android/settings_ex/wifi/WifiReset;-><init>(Landroid/content/Context;Z)V
 
     .line 87
-    .local v5, "reset":Lcom/android/settings/wifi/WifiReset;
-    invoke-virtual {v5}, Lcom/android/settings/wifi/WifiReset;->start()V
+    .local v5, "reset":Lcom/android/settings_ex/wifi/WifiReset;
+    invoke-virtual {v5}, Lcom/android/settings_ex/wifi/WifiReset;->start()V
 
     goto :goto_0
 
     .line 88
-    .end local v5    # "reset":Lcom/android/settings/wifi/WifiReset;
+    .end local v5    # "reset":Lcom/android/settings_ex/wifi/WifiReset;
     :cond_6
     const-string v7, "com.samsung.android.net.wifi.WECHAT_LOGOUT"
 
@@ -640,16 +640,16 @@
     if-eqz v7, :cond_1
 
     .line 89
-    new-instance v0, Lcom/android/settings/wifi/WeChatAccessPoint;
+    new-instance v0, Lcom/android/settings_ex/wifi/WeChatAccessPoint;
 
-    invoke-direct {v0}, Lcom/android/settings/wifi/WeChatAccessPoint;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/wifi/WeChatAccessPoint;-><init>()V
 
     .line 90
-    .local v0, "accessPoint":Lcom/android/settings/wifi/WeChatAccessPoint;
+    .local v0, "accessPoint":Lcom/android/settings_ex/wifi/WeChatAccessPoint;
     if-eqz v0, :cond_1
 
     .line 91
-    invoke-virtual {v0, p1}, Lcom/android/settings/wifi/WeChatAccessPoint;->init(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/android/settings_ex/wifi/WeChatAccessPoint;->init(Landroid/content/Context;)V
 
     goto/16 :goto_0
 .end method

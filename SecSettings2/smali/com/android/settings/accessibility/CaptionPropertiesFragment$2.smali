@@ -1,14 +1,14 @@
-.class Lcom/android/settings/accessibility/CaptionPropertiesFragment$2;
+.class Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment$2;
 .super Ljava/lang/Object;
 .source "CaptionPropertiesFragment.java"
 
 # interfaces
-.implements Lcom/android/settings/widget/ToggleSwitch$OnBeforeCheckedChangeListener;
+.implements Lcom/android/settings_ex/widget/ToggleSwitch$OnBeforeCheckedChangeListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/CaptionPropertiesFragment;->onInstallSwitchBarToggleSwitch()V
+    value = Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->onInstallSwitchBarToggleSwitch()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/CaptionPropertiesFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/CaptionPropertiesFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;)V
     .locals 0
 
     .prologue
     .line 238
-    iput-object p1, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment$2;->this$0:Lcom/android/settings/accessibility/CaptionPropertiesFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment$2;->this$0:Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,29 +36,29 @@
 
 
 # virtual methods
-.method public onBeforeCheckedChanged(Lcom/android/settings/widget/ToggleSwitch;Z)Z
+.method public onBeforeCheckedChanged(Lcom/android/settings_ex/widget/ToggleSwitch;Z)Z
     .locals 4
-    .param p1, "toggleSwitch"    # Lcom/android/settings/widget/ToggleSwitch;
+    .param p1, "toggleSwitch"    # Lcom/android/settings_ex/widget/ToggleSwitch;
     .param p2, "checked"    # Z
 
     .prologue
     const/4 v1, 0x0
 
     .line 241
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment$2;->this$0:Lcom/android/settings/accessibility/CaptionPropertiesFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment$2;->this$0:Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;
 
-    # getter for: Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->access$100(Lcom/android/settings/accessibility/CaptionPropertiesFragment;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->access$100(Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v0
 
-    invoke-virtual {v0, p2}, Lcom/android/settings/widget/SwitchBar;->setCheckedInternal(Z)V
+    invoke-virtual {v0, p2}, Lcom/android/settings_ex/widget/SwitchBar;->setCheckedInternal(Z)V
 
     .line 243
     :try_start_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment$2;->this$0:Lcom/android/settings/accessibility/CaptionPropertiesFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment$2;->this$0:Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -76,29 +76,29 @@
     invoke-static {v2, v3, v0}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 245
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment$2;->this$0:Lcom/android/settings/accessibility/CaptionPropertiesFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment$2;->this$0:Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
     invoke-virtual {v0, p2}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
     .line 246
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment$2;->this$0:Lcom/android/settings/accessibility/CaptionPropertiesFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment$2;->this$0:Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;
 
-    # getter for: Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mPreviewText:Lcom/android/internal/widget/SubtitleView;
-    invoke-static {v0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->access$200(Lcom/android/settings/accessibility/CaptionPropertiesFragment;)Lcom/android/internal/widget/SubtitleView;
+    # getter for: Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mPreviewText:Lcom/android/internal/widget/SubtitleView;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->access$200(Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;)Lcom/android/internal/widget/SubtitleView;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 247
-    iget-object v0, p0, Lcom/android/settings/accessibility/CaptionPropertiesFragment$2;->this$0:Lcom/android/settings/accessibility/CaptionPropertiesFragment;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment$2;->this$0:Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;
 
-    # getter for: Lcom/android/settings/accessibility/CaptionPropertiesFragment;->mPreviewText:Lcom/android/internal/widget/SubtitleView;
-    invoke-static {v0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->access$200(Lcom/android/settings/accessibility/CaptionPropertiesFragment;)Lcom/android/internal/widget/SubtitleView;
+    # getter for: Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->mPreviewText:Lcom/android/internal/widget/SubtitleView;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;->access$200(Lcom/android/settings_ex/accessibility/CaptionPropertiesFragment;)Lcom/android/internal/widget/SubtitleView;
 
     move-result-object v2
 

@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/LegalSettings$1;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/LegalSettings$1;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "LegalSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/LegalSettings;
+    value = Lcom/android/settings_ex/LegalSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 68
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -126,7 +126,7 @@
     .local v0, "keys":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v1, "android.settings.TERMS"
 
-    invoke-direct {p0, p1, v1}, Lcom/android/settings/LegalSettings$1;->checkIntentAction(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-direct {p0, p1, v1}, Lcom/android/settings_ex/LegalSettings$1;->checkIntentAction(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -141,7 +141,7 @@
     :cond_0
     const-string v1, "android.settings.LICENSE"
 
-    invoke-direct {p0, p1, v1}, Lcom/android/settings/LegalSettings$1;->checkIntentAction(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-direct {p0, p1, v1}, Lcom/android/settings_ex/LegalSettings$1;->checkIntentAction(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -156,7 +156,7 @@
     :cond_1
     const-string v1, "android.settings.COPYRIGHT"
 
-    invoke-direct {p0, p1, v1}, Lcom/android/settings/LegalSettings$1;->checkIntentAction(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-direct {p0, p1, v1}, Lcom/android/settings_ex/LegalSettings$1;->checkIntentAction(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -171,7 +171,7 @@
     :cond_2
     const-string v1, "android.settings.WEBVIEW_LICENSE"
 
-    invoke-direct {p0, p1, v1}, Lcom/android/settings/LegalSettings$1;->checkIntentAction(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-direct {p0, p1, v1}, Lcom/android/settings_ex/LegalSettings$1;->checkIntentAction(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 

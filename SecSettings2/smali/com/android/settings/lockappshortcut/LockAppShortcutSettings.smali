@@ -1,13 +1,13 @@
-.class public Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "LockAppShortcutSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # instance fields
@@ -30,11 +30,11 @@
 
     .prologue
     .line 156
-    new-instance v0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings$2;
+    new-instance v0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings$2;
 
-    invoke-direct {v0}, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings$2;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings$2;-><init>()V
 
-    sput-object v0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -44,34 +44,34 @@
 
     .prologue
     .line 42
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 50
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->mCurrentHeaderView:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->mCurrentHeaderView:Landroid/view/View;
 
     .line 55
-    new-instance v0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings$1;
+    new-instance v0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings$1;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings$1;-><init>(Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings$1;-><init>(Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->mAppShortcutObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->mAppShortcutObserver:Landroid/database/ContentObserver;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;)V
+.method static synthetic access$000(Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;
 
     .prologue
     .line 42
-    invoke-direct {p0}, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->updateUI()V
+    invoke-direct {p0}, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->updateUI()V
 
     return-void
 .end method
@@ -81,16 +81,16 @@
 
     .prologue
     .line 102
-    iget-object v7, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->mCurrentHeaderView:Landroid/view/View;
+    iget-object v7, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->mCurrentHeaderView:Landroid/view/View;
 
     if-eqz v7, :cond_0
 
     .line 103
-    invoke-virtual {p0}, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v7
 
-    iget-object v8, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->mCurrentHeaderView:Landroid/view/View;
+    iget-object v8, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->mCurrentHeaderView:Landroid/view/View;
 
     invoke-virtual {v7, v8}, Landroid/widget/ListView;->removeHeaderView(Landroid/view/View;)Z
 
@@ -125,7 +125,7 @@
     :cond_0
     const-string v7, "layout_inflater"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -143,7 +143,7 @@
 
     .line 109
     .local v6, "lockSimpleShourtcutPreview":Landroid/view/View;
-    invoke-virtual {p0}, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v7
 
@@ -154,7 +154,7 @@
     invoke-virtual {v7, v6, v8, v9}, Landroid/widget/ListView;->addHeaderView(Landroid/view/View;Ljava/lang/Object;Z)V
 
     .line 111
-    iput-object v6, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->mCurrentHeaderView:Landroid/view/View;
+    iput-object v6, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->mCurrentHeaderView:Landroid/view/View;
 
     .line 113
     const v7, 0x7f0d0339
@@ -177,70 +177,70 @@
 
     .line 118
     .local v5, "ivShortcutPreviewRight":Landroid/widget/ImageView;
-    invoke-virtual {p0}, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
     const/4 v8, 0x1
 
-    new-instance v9, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;
+    new-instance v9, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;
 
-    invoke-direct {v9}, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;-><init>()V
+    invoke-direct {v9}, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;-><init>()V
 
-    invoke-static {v7, v8, v9}, Lcom/android/settings/lockappshortcut/AppShortcutInfo;->getApplicationInfo(Landroid/content/Context;ILcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;)Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;
+    invoke-static {v7, v8, v9}, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo;->getApplicationInfo(Landroid/content/Context;ILcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;)Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;
 
     move-result-object v0
 
     .line 119
-    .local v0, "appInfoLeft":Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;
-    invoke-virtual {p0}, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->getActivity()Landroid/app/Activity;
+    .local v0, "appInfoLeft":Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;
+    invoke-virtual {p0}, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
     const/4 v8, 0x3
 
-    new-instance v9, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;
+    new-instance v9, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;
 
-    invoke-direct {v9}, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;-><init>()V
+    invoke-direct {v9}, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;-><init>()V
 
-    invoke-static {v7, v8, v9}, Lcom/android/settings/lockappshortcut/AppShortcutInfo;->getApplicationInfo(Landroid/content/Context;ILcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;)Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;
+    invoke-static {v7, v8, v9}, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo;->getApplicationInfo(Landroid/content/Context;ILcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;)Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;
 
     move-result-object v1
 
     .line 121
-    .local v1, "appInfoRight":Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;
-    invoke-virtual {p0}, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->getActivity()Landroid/app/Activity;
+    .local v1, "appInfoRight":Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;
+    invoke-virtual {p0}, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
     const/4 v8, 0x0
 
-    invoke-static {v7, v8}, Lcom/android/settings/lockappshortcut/AppShortcutInfo;->getShortcutStatus(Landroid/content/Context;I)Z
+    invoke-static {v7, v8}, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo;->getShortcutStatus(Landroid/content/Context;I)Z
 
     move-result v7
 
-    iput-boolean v7, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->isLeftShortcut:Z
+    iput-boolean v7, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->isLeftShortcut:Z
 
     .line 122
-    invoke-virtual {p0}, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
     const/4 v8, 0x2
 
-    invoke-static {v7, v8}, Lcom/android/settings/lockappshortcut/AppShortcutInfo;->getShortcutStatus(Landroid/content/Context;I)Z
+    invoke-static {v7, v8}, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo;->getShortcutStatus(Landroid/content/Context;I)Z
 
     move-result v7
 
-    iput-boolean v7, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->isRightShortcut:Z
+    iput-boolean v7, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->isRightShortcut:Z
 
     .line 124
-    iget-boolean v7, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->isLeftShortcut:Z
+    iget-boolean v7, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->isLeftShortcut:Z
 
     if-nez v7, :cond_3
 
     .line 125
-    iget-object v7, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->mShortcutOnLeft:Landroid/preference/PreferenceScreen;
+    iget-object v7, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->mShortcutOnLeft:Landroid/preference/PreferenceScreen;
 
     const v8, 0x7f0e0ea7
 
@@ -248,12 +248,12 @@
 
     .line 134
     :goto_0
-    iget-boolean v7, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->isRightShortcut:Z
+    iget-boolean v7, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->isRightShortcut:Z
 
     if-nez v7, :cond_7
 
     .line 135
-    iget-object v7, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->mShortcutOnRight:Landroid/preference/PreferenceScreen;
+    iget-object v7, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->mShortcutOnRight:Landroid/preference/PreferenceScreen;
 
     const v8, 0x7f0e0ea7
 
@@ -263,11 +263,11 @@
     :goto_1
     if-eqz v0, :cond_1
 
-    iget-boolean v7, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->isLeftShortcut:Z
+    iget-boolean v7, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->isLeftShortcut:Z
 
     if-eqz v7, :cond_1
 
-    iget-boolean v7, v0, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->isActive:Z
+    iget-boolean v7, v0, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->isActive:Z
 
     if-nez v7, :cond_b
 
@@ -281,11 +281,11 @@
     :goto_2
     if-eqz v1, :cond_2
 
-    iget-boolean v7, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->isRightShortcut:Z
+    iget-boolean v7, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->isRightShortcut:Z
 
     if-eqz v7, :cond_2
 
-    iget-boolean v7, v1, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->isActive:Z
+    iget-boolean v7, v1, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->isActive:Z
 
     if-nez v7, :cond_c
 
@@ -303,13 +303,13 @@
     :cond_3
     if-eqz v0, :cond_4
 
-    iget-object v7, v0, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->mLabel:Ljava/lang/String;
+    iget-object v7, v0, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->mLabel:Ljava/lang/String;
 
     if-eqz v7, :cond_4
 
     const-string v7, ""
 
-    iget-object v8, v0, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->mLabel:Ljava/lang/String;
+    iget-object v8, v0, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->mLabel:Ljava/lang/String;
 
     invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -319,7 +319,7 @@
 
     .line 127
     :cond_4
-    iget-object v7, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->mShortcutOnLeft:Landroid/preference/PreferenceScreen;
+    iget-object v7, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->mShortcutOnLeft:Landroid/preference/PreferenceScreen;
 
     const v8, 0x7f0e16c9
 
@@ -329,14 +329,14 @@
 
     .line 128
     :cond_5
-    iget-boolean v7, v0, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->isActive:Z
+    iget-boolean v7, v0, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->isActive:Z
 
     if-nez v7, :cond_6
 
     .line 129
-    iget-object v7, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->mShortcutOnLeft:Landroid/preference/PreferenceScreen;
+    iget-object v7, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->mShortcutOnLeft:Landroid/preference/PreferenceScreen;
 
-    invoke-virtual {p0}, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -348,7 +348,7 @@
 
     const/4 v11, 0x0
 
-    iget-object v12, v0, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->mLabel:Ljava/lang/String;
+    iget-object v12, v0, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->mLabel:Ljava/lang/String;
 
     aput-object v12, v10, v11
 
@@ -362,9 +362,9 @@
 
     .line 131
     :cond_6
-    iget-object v7, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->mShortcutOnLeft:Landroid/preference/PreferenceScreen;
+    iget-object v7, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->mShortcutOnLeft:Landroid/preference/PreferenceScreen;
 
-    iget-object v8, v0, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->mLabel:Ljava/lang/String;
+    iget-object v8, v0, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->mLabel:Ljava/lang/String;
 
     invoke-virtual {v7, v8}, Landroid/preference/PreferenceScreen;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -374,13 +374,13 @@
     :cond_7
     if-eqz v1, :cond_8
 
-    iget-object v7, v1, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->mLabel:Ljava/lang/String;
+    iget-object v7, v1, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->mLabel:Ljava/lang/String;
 
     if-eqz v7, :cond_8
 
     const-string v7, ""
 
-    iget-object v8, v1, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->mLabel:Ljava/lang/String;
+    iget-object v8, v1, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->mLabel:Ljava/lang/String;
 
     invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -390,7 +390,7 @@
 
     .line 137
     :cond_8
-    iget-object v7, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->mShortcutOnRight:Landroid/preference/PreferenceScreen;
+    iget-object v7, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->mShortcutOnRight:Landroid/preference/PreferenceScreen;
 
     const v8, 0x7f0e16c9
 
@@ -400,14 +400,14 @@
 
     .line 138
     :cond_9
-    iget-boolean v7, v1, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->isActive:Z
+    iget-boolean v7, v1, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->isActive:Z
 
     if-nez v7, :cond_a
 
     .line 139
-    iget-object v7, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->mShortcutOnRight:Landroid/preference/PreferenceScreen;
+    iget-object v7, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->mShortcutOnRight:Landroid/preference/PreferenceScreen;
 
-    invoke-virtual {p0}, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -419,7 +419,7 @@
 
     const/4 v11, 0x0
 
-    iget-object v12, v1, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->mLabel:Ljava/lang/String;
+    iget-object v12, v1, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->mLabel:Ljava/lang/String;
 
     aput-object v12, v10, v11
 
@@ -433,9 +433,9 @@
 
     .line 141
     :cond_a
-    iget-object v7, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->mShortcutOnRight:Landroid/preference/PreferenceScreen;
+    iget-object v7, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->mShortcutOnRight:Landroid/preference/PreferenceScreen;
 
-    iget-object v8, v1, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->mLabel:Ljava/lang/String;
+    iget-object v8, v1, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->mLabel:Ljava/lang/String;
 
     invoke-virtual {v7, v8}, Landroid/preference/PreferenceScreen;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -443,7 +443,7 @@
 
     .line 147
     :cond_b
-    iget-object v7, v0, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->mIcon:Landroid/graphics/drawable/Drawable;
+    iget-object v7, v0, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->mIcon:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4, v7}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -451,7 +451,7 @@
 
     .line 152
     :cond_c
-    iget-object v7, v1, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppInfo;->mIcon:Landroid/graphics/drawable/Drawable;
+    iget-object v7, v1, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppInfo;->mIcon:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v5, v7}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -478,53 +478,53 @@
     const/4 v1, 0x1
 
     .line 63
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 65
     const v0, 0x7f08006c
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->addPreferencesFromResource(I)V
 
     .line 67
     const-string v0, "left_shortcut"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    iput-object v0, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->mShortcutOnLeft:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->mShortcutOnLeft:Landroid/preference/PreferenceScreen;
 
     .line 68
     const-string v0, "right_shortcut"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    iput-object v0, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->mShortcutOnRight:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->mShortcutOnRight:Landroid/preference/PreferenceScreen;
 
     .line 70
-    iget-object v0, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->mShortcutOnLeft:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->mShortcutOnLeft:Landroid/preference/PreferenceScreen;
 
     if-eqz v0, :cond_0
 
     .line 71
-    iget-object v0, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->mShortcutOnLeft:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->mShortcutOnLeft:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 72
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->mShortcutOnRight:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->mShortcutOnRight:Landroid/preference/PreferenceScreen;
 
     if-eqz v0, :cond_1
 
     .line 73
-    iget-object v0, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->mShortcutOnRight:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->mShortcutOnRight:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->setTwSummaryColorToColorPrimaryDark(Z)V
 
@@ -538,14 +538,14 @@
 
     .prologue
     .line 90
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 91
-    invoke-virtual {p0}, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->mAppShortcutObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->mAppShortcutObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
@@ -558,13 +558,13 @@
 
     .prologue
     .line 82
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 83
-    invoke-direct {p0}, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->updateUI()V
+    invoke-direct {p0}, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->updateUI()V
 
     .line 84
-    invoke-virtual {p0}, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -576,7 +576,7 @@
 
     const/4 v2, 0x1
 
-    iget-object v3, p0, Lcom/android/settings/lockappshortcut/LockAppShortcutSettings;->mAppShortcutObserver:Landroid/database/ContentObserver;
+    iget-object v3, p0, Lcom/android/settings_ex/lockappshortcut/LockAppShortcutSettings;->mAppShortcutObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -589,7 +589,7 @@
 
     .prologue
     .line 97
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onStop()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onStop()V
 
     .line 98
     return-void

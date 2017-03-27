@@ -1,4 +1,4 @@
-.class Lcom/android/settings/OtherSecuritySettings$2;
+.class Lcom/android/settings_ex/OtherSecuritySettings$2;
 .super Ljava/lang/Object;
 .source "OtherSecuritySettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/OtherSecuritySettings;->onResume()V
+    value = Lcom/android/settings_ex/OtherSecuritySettings;->onResume()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/OtherSecuritySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/OtherSecuritySettings;
 
 .field final synthetic val$listView:Landroid/widget/ListView;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/OtherSecuritySettings;Landroid/widget/ListView;)V
+.method constructor <init>(Lcom/android/settings_ex/OtherSecuritySettings;Landroid/widget/ListView;)V
     .locals 0
 
     .prologue
     .line 618
-    iput-object p1, p0, Lcom/android/settings/OtherSecuritySettings$2;->this$0:Lcom/android/settings/OtherSecuritySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/OtherSecuritySettings$2;->this$0:Lcom/android/settings_ex/OtherSecuritySettings;
 
-    iput-object p2, p0, Lcom/android/settings/OtherSecuritySettings$2;->val$listView:Landroid/widget/ListView;
+    iput-object p2, p0, Lcom/android/settings_ex/OtherSecuritySettings$2;->val$listView:Landroid/widget/ListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +45,7 @@
 
     .prologue
     .line 621
-    iget-object v0, p0, Lcom/android/settings/OtherSecuritySettings$2;->val$listView:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/android/settings_ex/OtherSecuritySettings$2;->val$listView:Landroid/widget/ListView;
 
     invoke-virtual {v0}, Landroid/widget/ListView;->requestFocus()Z
 

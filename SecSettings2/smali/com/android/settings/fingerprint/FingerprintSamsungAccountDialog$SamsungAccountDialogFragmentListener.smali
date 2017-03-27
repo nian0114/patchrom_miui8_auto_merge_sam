@@ -1,11 +1,11 @@
-.class public interface abstract Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog$SamsungAccountDialogFragmentListener;
+.class public interface abstract Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog$SamsungAccountDialogFragmentListener;
 .super Ljava/lang/Object;
 .source "FingerprintSamsungAccountDialog.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/fingerprint/FingerprintSamsungAccountDialog;
+    value = Lcom/android/settings_ex/fingerprint/FingerprintSamsungAccountDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

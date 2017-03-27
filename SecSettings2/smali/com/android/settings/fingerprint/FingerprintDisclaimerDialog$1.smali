@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog$1;
+.class Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog$1;
 .super Ljava/lang/Object;
 .source "FingerprintDisclaimerDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;)V
     .locals 0
 
     .prologue
     .line 94
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog$1;->this$0:Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog$1;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/DataSlotChoice$RadioAdapter;
+.class public Lcom/android/settings_ex/DataSlotChoice$RadioAdapter;
 .super Landroid/widget/ArrayAdapter;
 .source "DataSlotChoice.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DataSlotChoice;
+    value = Lcom/android/settings_ex/DataSlotChoice;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -48,21 +48,21 @@
     .line 695
     new-array v0, v1, [Z
 
-    iput-object v0, p0, Lcom/android/settings/DataSlotChoice$RadioAdapter;->mFlag:[Z
+    iput-object v0, p0, Lcom/android/settings_ex/DataSlotChoice$RadioAdapter;->mFlag:[Z
 
     .line 696
     new-array v0, v1, [Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/android/settings/DataSlotChoice$RadioAdapter;->itemList:[Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/DataSlotChoice$RadioAdapter;->itemList:[Ljava/lang/String;
 
     .line 710
-    iput-object p1, p0, Lcom/android/settings/DataSlotChoice$RadioAdapter;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/DataSlotChoice$RadioAdapter;->mContext:Landroid/content/Context;
 
     .line 711
-    iput-object p4, p0, Lcom/android/settings/DataSlotChoice$RadioAdapter;->mFlag:[Z
+    iput-object p4, p0, Lcom/android/settings_ex/DataSlotChoice$RadioAdapter;->mFlag:[Z
 
     .line 712
-    iput-object p3, p0, Lcom/android/settings/DataSlotChoice$RadioAdapter;->itemList:[Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/settings_ex/DataSlotChoice$RadioAdapter;->itemList:[Ljava/lang/String;
 
     .line 713
     return-void
@@ -85,7 +85,7 @@
     if-nez p2, :cond_0
 
     .line 721
-    iget-object v2, p0, Lcom/android/settings/DataSlotChoice$RadioAdapter;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/DataSlotChoice$RadioAdapter;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
@@ -112,21 +112,21 @@
 
     .line 727
     .local v1, "text1":Landroid/widget/TextView;
-    iget-object v2, p0, Lcom/android/settings/DataSlotChoice$RadioAdapter;->itemList:[Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/DataSlotChoice$RadioAdapter;->itemList:[Ljava/lang/String;
 
     aget-object v2, v2, p1
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 728
-    iget-object v2, p0, Lcom/android/settings/DataSlotChoice$RadioAdapter;->mFlag:[Z
+    iget-object v2, p0, Lcom/android/settings_ex/DataSlotChoice$RadioAdapter;->mFlag:[Z
 
     aget-boolean v2, v2, p1
 
     invoke-virtual {p2, v2}, Landroid/view/View;->setEnabled(Z)V
 
     .line 729
-    iget-object v2, p0, Lcom/android/settings/DataSlotChoice$RadioAdapter;->mFlag:[Z
+    iget-object v2, p0, Lcom/android/settings_ex/DataSlotChoice$RadioAdapter;->mFlag:[Z
 
     aget-boolean v2, v2, p1
 
@@ -138,7 +138,7 @@
     invoke-virtual {p2, v2}, Landroid/view/View;->setClickable(Z)V
 
     .line 730
-    iget-object v2, p0, Lcom/android/settings/DataSlotChoice$RadioAdapter;->mFlag:[Z
+    iget-object v2, p0, Lcom/android/settings_ex/DataSlotChoice$RadioAdapter;->mFlag:[Z
 
     aget-boolean v2, v2, p1
 
@@ -169,7 +169,7 @@
 
     .prologue
     .line 716
-    iput-object p1, p0, Lcom/android/settings/DataSlotChoice$RadioAdapter;->mFlag:[Z
+    iput-object p1, p0, Lcom/android/settings_ex/DataSlotChoice$RadioAdapter;->mFlag:[Z
 
     .line 717
     return-void

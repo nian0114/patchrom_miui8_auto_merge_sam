@@ -1,4 +1,4 @@
-.class Lcom/android/settings/nfc/TagsConnectingDevices$2;
+.class Lcom/android/settings_ex/nfc/TagsConnectingDevices$2;
 .super Ljava/lang/Object;
 .source "TagsConnectingDevices.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/nfc/TagsConnectingDevices;->makeAlertDialog()V
+    value = Lcom/android/settings_ex/nfc/TagsConnectingDevices;->makeAlertDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nfc/TagsConnectingDevices;
+.field final synthetic this$0:Lcom/android/settings_ex/nfc/TagsConnectingDevices;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/nfc/TagsConnectingDevices;)V
+.method constructor <init>(Lcom/android/settings_ex/nfc/TagsConnectingDevices;)V
     .locals 0
 
     .prologue
     .line 157
-    iput-object p1, p0, Lcom/android/settings/nfc/TagsConnectingDevices$2;->this$0:Lcom/android/settings/nfc/TagsConnectingDevices;
+    iput-object p1, p0, Lcom/android/settings_ex/nfc/TagsConnectingDevices$2;->this$0:Lcom/android/settings_ex/nfc/TagsConnectingDevices;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,19 +45,19 @@
     const/4 v2, 0x0
 
     .line 161
-    iget-object v0, p0, Lcom/android/settings/nfc/TagsConnectingDevices$2;->this$0:Lcom/android/settings/nfc/TagsConnectingDevices;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/TagsConnectingDevices$2;->this$0:Lcom/android/settings_ex/nfc/TagsConnectingDevices;
 
-    # getter for: Lcom/android/settings/nfc/TagsConnectingDevices;->mNfcAdapter:Landroid/nfc/NfcAdapter;
-    invoke-static {v0}, Lcom/android/settings/nfc/TagsConnectingDevices;->access$200(Lcom/android/settings/nfc/TagsConnectingDevices;)Landroid/nfc/NfcAdapter;
+    # getter for: Lcom/android/settings_ex/nfc/TagsConnectingDevices;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    invoke-static {v0}, Lcom/android/settings_ex/nfc/TagsConnectingDevices;->access$200(Lcom/android/settings_ex/nfc/TagsConnectingDevices;)Landroid/nfc/NfcAdapter;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/nfc/NfcAdapter;->disableNdefPush()Z
 
     .line 162
-    iget-object v0, p0, Lcom/android/settings/nfc/TagsConnectingDevices$2;->this$0:Lcom/android/settings/nfc/TagsConnectingDevices;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/TagsConnectingDevices$2;->this$0:Lcom/android/settings_ex/nfc/TagsConnectingDevices;
 
-    invoke-virtual {v0}, Lcom/android/settings/nfc/TagsConnectingDevices;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/nfc/TagsConnectingDevices;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -70,24 +70,24 @@
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 163
-    iget-object v0, p0, Lcom/android/settings/nfc/TagsConnectingDevices$2;->this$0:Lcom/android/settings/nfc/TagsConnectingDevices;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/TagsConnectingDevices$2;->this$0:Lcom/android/settings_ex/nfc/TagsConnectingDevices;
 
-    # getter for: Lcom/android/settings/nfc/TagsConnectingDevices;->mNfcAdapter:Landroid/nfc/NfcAdapter;
-    invoke-static {v0}, Lcom/android/settings/nfc/TagsConnectingDevices;->access$200(Lcom/android/settings/nfc/TagsConnectingDevices;)Landroid/nfc/NfcAdapter;
+    # getter for: Lcom/android/settings_ex/nfc/TagsConnectingDevices;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    invoke-static {v0}, Lcom/android/settings_ex/nfc/TagsConnectingDevices;->access$200(Lcom/android/settings_ex/nfc/TagsConnectingDevices;)Landroid/nfc/NfcAdapter;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/nfc/NfcAdapter;->readerDisable()Z
 
     .line 164
-    iget-object v0, p0, Lcom/android/settings/nfc/TagsConnectingDevices$2;->this$0:Lcom/android/settings/nfc/TagsConnectingDevices;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/TagsConnectingDevices$2;->this$0:Lcom/android/settings_ex/nfc/TagsConnectingDevices;
 
-    # getter for: Lcom/android/settings/nfc/TagsConnectingDevices;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v0}, Lcom/android/settings/nfc/TagsConnectingDevices;->access$300(Lcom/android/settings/nfc/TagsConnectingDevices;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/nfc/TagsConnectingDevices;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v0}, Lcom/android/settings_ex/nfc/TagsConnectingDevices;->access$300(Lcom/android/settings_ex/nfc/TagsConnectingDevices;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v0, v2}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 165
     return-void

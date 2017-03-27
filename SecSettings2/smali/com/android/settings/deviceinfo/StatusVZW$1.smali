@@ -1,11 +1,11 @@
-.class Lcom/android/settings/deviceinfo/StatusVZW$1;
+.class Lcom/android/settings_ex/deviceinfo/StatusVZW$1;
 .super Landroid/content/BroadcastReceiver;
 .source "StatusVZW.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/StatusVZW;
+    value = Lcom/android/settings_ex/deviceinfo/StatusVZW;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/StatusVZW;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/StatusVZW;)V
     .locals 0
 
     .prologue
     .line 333
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/StatusVZW$1;->this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW$1;->this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -55,34 +55,34 @@
     if-eqz v1, :cond_0
 
     .line 339
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW$1;->this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW$1;->this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
-    # getter for: Lcom/android/settings/deviceinfo/StatusVZW;->mBatteryLevel:Landroid/preference/Preference;
-    invoke-static {v1}, Lcom/android/settings/deviceinfo/StatusVZW;->access$300(Lcom/android/settings/deviceinfo/StatusVZW;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/deviceinfo/StatusVZW;->mBatteryLevel:Landroid/preference/Preference;
+    invoke-static {v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->access$300(Lcom/android/settings_ex/deviceinfo/StatusVZW;)Landroid/preference/Preference;
 
     move-result-object v1
 
-    invoke-static {p2}, Lcom/android/settings/Utils;->getBatteryPercentage(Landroid/content/Intent;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/android/settings_ex/Utils;->getBatteryPercentage(Landroid/content/Intent;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 340
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/StatusVZW$1;->this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW$1;->this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
-    # getter for: Lcom/android/settings/deviceinfo/StatusVZW;->mBatteryStatus:Landroid/preference/Preference;
-    invoke-static {v1}, Lcom/android/settings/deviceinfo/StatusVZW;->access$400(Lcom/android/settings/deviceinfo/StatusVZW;)Landroid/preference/Preference;
+    # getter for: Lcom/android/settings_ex/deviceinfo/StatusVZW;->mBatteryStatus:Landroid/preference/Preference;
+    invoke-static {v1}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->access$400(Lcom/android/settings_ex/deviceinfo/StatusVZW;)Landroid/preference/Preference;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StatusVZW$1;->this$0:Lcom/android/settings/deviceinfo/StatusVZW;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StatusVZW$1;->this$0:Lcom/android/settings_ex/deviceinfo/StatusVZW;
 
-    invoke-virtual {v2}, Lcom/android/settings/deviceinfo/StatusVZW;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Lcom/android/settings_ex/deviceinfo/StatusVZW;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    invoke-static {v2, p2}, Lcom/android/settings/Utils;->getBatteryStatus(Landroid/content/res/Resources;Landroid/content/Intent;)Ljava/lang/String;
+    invoke-static {v2, p2}, Lcom/android/settings_ex/Utils;->getBatteryStatus(Landroid/content/res/Resources;Landroid/content/Intent;)Ljava/lang/String;
 
     move-result-object v2
 

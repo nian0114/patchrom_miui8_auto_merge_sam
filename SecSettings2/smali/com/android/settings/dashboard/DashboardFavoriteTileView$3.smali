@@ -1,4 +1,4 @@
-.class Lcom/android/settings/dashboard/DashboardFavoriteTileView$3;
+.class Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView$3;
 .super Ljava/lang/Object;
 .source "DashboardFavoriteTileView.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/dashboard/DashboardFavoriteTileView;->showOnlineHelpDialog()V
+    value = Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView;->showOnlineHelpDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/dashboard/DashboardFavoriteTileView;
+.field final synthetic this$0:Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView;
 
 .field final synthetic val$checkboxView:Landroid/widget/CheckBox;
 
@@ -26,16 +26,16 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/dashboard/DashboardFavoriteTileView;Landroid/widget/CheckBox;Landroid/content/SharedPreferences$Editor;)V
+.method constructor <init>(Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView;Landroid/widget/CheckBox;Landroid/content/SharedPreferences$Editor;)V
     .locals 0
 
     .prologue
     .line 208
-    iput-object p1, p0, Lcom/android/settings/dashboard/DashboardFavoriteTileView$3;->this$0:Lcom/android/settings/dashboard/DashboardFavoriteTileView;
+    iput-object p1, p0, Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView$3;->this$0:Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView;
 
-    iput-object p2, p0, Lcom/android/settings/dashboard/DashboardFavoriteTileView$3;->val$checkboxView:Landroid/widget/CheckBox;
+    iput-object p2, p0, Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView$3;->val$checkboxView:Landroid/widget/CheckBox;
 
-    iput-object p3, p0, Lcom/android/settings/dashboard/DashboardFavoriteTileView$3;->val$edit:Landroid/content/SharedPreferences$Editor;
+    iput-object p3, p0, Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView$3;->val$edit:Landroid/content/SharedPreferences$Editor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,7 +51,7 @@
 
     .prologue
     .line 210
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardFavoriteTileView$3;->val$checkboxView:Landroid/widget/CheckBox;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView$3;->val$checkboxView:Landroid/widget/CheckBox;
 
     invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
 
@@ -60,7 +60,7 @@
     if-eqz v0, :cond_0
 
     .line 211
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardFavoriteTileView$3;->val$edit:Landroid/content/SharedPreferences$Editor;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView$3;->val$edit:Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "onlinehelp_show_dialog"
 
@@ -69,15 +69,15 @@
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 212
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardFavoriteTileView$3;->val$edit:Landroid/content/SharedPreferences$Editor;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView$3;->val$edit:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 214
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardFavoriteTileView$3;->this$0:Lcom/android/settings/dashboard/DashboardFavoriteTileView;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView$3;->this$0:Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView;
 
-    invoke-virtual {v0}, Lcom/android/settings/dashboard/DashboardFavoriteTileView;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -85,23 +85,23 @@
 
     const-string v2, "HQST"
 
-    invoke-static {v0, v1, v2}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 215
-    iget-object v0, p0, Lcom/android/settings/dashboard/DashboardFavoriteTileView$3;->this$0:Lcom/android/settings/dashboard/DashboardFavoriteTileView;
+    iget-object v0, p0, Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView$3;->this$0:Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView;
 
-    invoke-virtual {v0}, Lcom/android/settings/dashboard/DashboardFavoriteTileView;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/dashboard/DashboardFavoriteTileView$3;->this$0:Lcom/android/settings/dashboard/DashboardFavoriteTileView;
+    iget-object v1, p0, Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView$3;->this$0:Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView;
 
-    # getter for: Lcom/android/settings/dashboard/DashboardFavoriteTileView;->mTile:Lcom/android/settings/dashboard/DashboardTile;
-    invoke-static {v1}, Lcom/android/settings/dashboard/DashboardFavoriteTileView;->access$000(Lcom/android/settings/dashboard/DashboardFavoriteTileView;)Lcom/android/settings/dashboard/DashboardTile;
+    # getter for: Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView;->mTile:Lcom/android/settings_ex/dashboard/DashboardTile;
+    invoke-static {v1}, Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView;->access$000(Lcom/android/settings_ex/dashboard/DashboardFavoriteTileView;)Lcom/android/settings_ex/dashboard/DashboardTile;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/android/settings/dashboard/DashboardTile;->intent:Landroid/content/Intent;
+    iget-object v1, v1, Lcom/android/settings_ex/dashboard/DashboardTile;->intent:Landroid/content/Intent;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 

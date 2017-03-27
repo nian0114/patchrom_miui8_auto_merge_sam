@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/widget/HomeSettingsWidget;
+.class public Lcom/android/settings_ex/widget/HomeSettingsWidget;
 .super Landroid/app/Activity;
 .source "HomeSettingsWidget.java"
 
@@ -71,7 +71,7 @@
 
     const v4, 0x7f0e13b3
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/widget/HomeSettingsWidget;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/widget/HomeSettingsWidget;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -80,7 +80,7 @@
     .line 72
     const/4 v3, -0x1
 
-    invoke-virtual {p0, v3, v1}, Lcom/android/settings/widget/HomeSettingsWidget;->setResult(ILandroid/content/Intent;)V
+    invoke-virtual {p0, v3, v1}, Lcom/android/settings_ex/widget/HomeSettingsWidget;->setResult(ILandroid/content/Intent;)V
 
     .line 73
     return-void
@@ -94,7 +94,7 @@
 
     .prologue
     .line 32
-    invoke-virtual {p0}, Lcom/android/settings/widget/HomeSettingsWidget;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/HomeSettingsWidget;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -138,10 +138,10 @@
     if-eqz v2, :cond_0
 
     .line 37
-    invoke-direct {p0}, Lcom/android/settings/widget/HomeSettingsWidget;->setupShortcut()V
+    invoke-direct {p0}, Lcom/android/settings_ex/widget/HomeSettingsWidget;->setupShortcut()V
 
     .line 38
-    invoke-virtual {p0}, Lcom/android/settings/widget/HomeSettingsWidget;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/HomeSettingsWidget;->finish()V
 
     .line 39
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
@@ -162,7 +162,7 @@
 
     .line 46
     .restart local v1    # "intent":Landroid/content/Intent;
-    invoke-static {}, Lcom/android/settings/Utils;->isJapanDCMModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isJapanDCMModel()Z
 
     move-result v2
 
@@ -187,10 +187,10 @@
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 55
-    invoke-virtual {p0, v1}, Lcom/android/settings/widget/HomeSettingsWidget;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/widget/HomeSettingsWidget;->startActivity(Landroid/content/Intent;)V
 
     .line 57
-    invoke-virtual {p0}, Lcom/android/settings/widget/HomeSettingsWidget;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/HomeSettingsWidget;->finish()V
 
     goto :goto_0
 

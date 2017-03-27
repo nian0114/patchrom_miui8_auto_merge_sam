@@ -1,22 +1,22 @@
-.class public Lcom/android/settings/SoftwareUpdateSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/SoftwareUpdateSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "SoftwareUpdateSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/SoftwareUpdateSettings$InstallTimeBroadcastReceiver;,
-        Lcom/android/settings/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;
+        Lcom/android/settings_ex/SoftwareUpdateSettings$InstallTimeBroadcastReceiver;,
+        Lcom/android/settings_ex/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;
     }
 .end annotation
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 .field private static mEnablePrl:Z
 
@@ -28,11 +28,11 @@
 
 .field private mEKM:Lcom/sec/enterprise/knox/EnterpriseKnoxManager;
 
-.field private mInstallTimeReceiver:Lcom/android/settings/SoftwareUpdateSettings$InstallTimeBroadcastReceiver;
+.field private mInstallTimeReceiver:Lcom/android/settings_ex/SoftwareUpdateSettings$InstallTimeBroadcastReceiver;
 
 .field private mNoChargeFota:Z
 
-.field private mReceiver:Lcom/android/settings/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;
+.field private mReceiver:Lcom/android/settings_ex/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;
 
 .field private mScheduledUpdatePref:Landroid/preference/Preference;
 
@@ -51,14 +51,14 @@
     .line 139
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/android/settings/SoftwareUpdateSettings;->mEnablePrl:Z
+    sput-boolean v0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mEnablePrl:Z
 
     .line 603
-    new-instance v0, Lcom/android/settings/SoftwareUpdateSettings$2;
+    new-instance v0, Lcom/android/settings_ex/SoftwareUpdateSettings$2;
 
-    invoke-direct {v0}, Lcom/android/settings/SoftwareUpdateSettings$2;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/SoftwareUpdateSettings$2;-><init>()V
 
-    sput-object v0, Lcom/android/settings/SoftwareUpdateSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/SoftwareUpdateSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -72,37 +72,37 @@
     const/4 v0, 0x0
 
     .line 54
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 116
-    iput-object v0, p0, Lcom/android/settings/SoftwareUpdateSettings;->mSoftwareUpdatePref:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mSoftwareUpdatePref:Landroid/preference/Preference;
 
     .line 120
-    iput-object v0, p0, Lcom/android/settings/SoftwareUpdateSettings;->mWifiOnlyPref:Landroid/preference/SwitchPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mWifiOnlyPref:Landroid/preference/SwitchPreference;
 
     .line 122
-    iput-object v0, p0, Lcom/android/settings/SoftwareUpdateSettings;->mScheduledUpdatePref:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mScheduledUpdatePref:Landroid/preference/Preference;
 
     .line 124
-    iput-object v0, p0, Lcom/android/settings/SoftwareUpdateSettings;->mReceiver:Lcom/android/settings/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mReceiver:Lcom/android/settings_ex/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;
 
     .line 125
-    iput-object v0, p0, Lcom/android/settings/SoftwareUpdateSettings;->mInstallTimeReceiver:Lcom/android/settings/SoftwareUpdateSettings$InstallTimeBroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mInstallTimeReceiver:Lcom/android/settings_ex/SoftwareUpdateSettings$InstallTimeBroadcastReceiver;
 
     .line 133
-    iput-object v0, p0, Lcom/android/settings/SoftwareUpdateSettings;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
+    iput-object v0, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     .line 135
-    iput-object v0, p0, Lcom/android/settings/SoftwareUpdateSettings;->mEKM:Lcom/sec/enterprise/knox/EnterpriseKnoxManager;
+    iput-object v0, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mEKM:Lcom/sec/enterprise/knox/EnterpriseKnoxManager;
 
     .line 142
-    iput-boolean v1, p0, Lcom/android/settings/SoftwareUpdateSettings;->mDisplaySystemUpdateMenu:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mDisplaySystemUpdateMenu:Z
 
     .line 144
-    iput-boolean v1, p0, Lcom/android/settings/SoftwareUpdateSettings;->mNoChargeFota:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mNoChargeFota:Z
 
     .line 146
-    iput-boolean v1, p0, Lcom/android/settings/SoftwareUpdateSettings;->mWifiDedicated:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mWifiDedicated:Z
 
     .line 169
     return-void
@@ -119,49 +119,49 @@
     .line 405
     const-string v3, "update"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/SoftwareUpdateSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/SoftwareUpdateSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/SoftwareUpdateSettings;->mSoftwareUpdatePref:Landroid/preference/Preference;
+    iput-object v3, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mSoftwareUpdatePref:Landroid/preference/Preference;
 
     .line 406
-    invoke-direct {p0}, Lcom/android/settings/SoftwareUpdateSettings;->addSoftwareUpdateBadge()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->addSoftwareUpdateBadge()V
 
     .line 408
     const-string v3, "scheduled_update"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/SoftwareUpdateSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/SoftwareUpdateSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/android/settings/SoftwareUpdateSettings;->mScheduledUpdatePref:Landroid/preference/Preference;
+    iput-object v3, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mScheduledUpdatePref:Landroid/preference/Preference;
 
     .line 435
     const-string v3, "wifi_only"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/SoftwareUpdateSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/SoftwareUpdateSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v3
 
     check-cast v3, Landroid/preference/SwitchPreference;
 
-    iput-object v3, p0, Lcom/android/settings/SoftwareUpdateSettings;->mWifiOnlyPref:Landroid/preference/SwitchPreference;
+    iput-object v3, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mWifiOnlyPref:Landroid/preference/SwitchPreference;
 
     .line 437
-    iget-object v3, p0, Lcom/android/settings/SoftwareUpdateSettings;->mWifiOnlyPref:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mWifiOnlyPref:Landroid/preference/SwitchPreference;
 
     if-eqz v3, :cond_0
 
     .line 438
-    iget-object v3, p0, Lcom/android/settings/SoftwareUpdateSettings;->mWifiOnlyPref:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mWifiOnlyPref:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v3, v5}, Landroid/preference/SwitchPreference;->setPersistent(Z)V
 
     .line 439
-    iget-object v6, p0, Lcom/android/settings/SoftwareUpdateSettings;->mWifiOnlyPref:Landroid/preference/SwitchPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mWifiOnlyPref:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -179,17 +179,17 @@
     invoke-virtual {v6, v3}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 442
-    iget-object v3, p0, Lcom/android/settings/SoftwareUpdateSettings;->mWifiOnlyPref:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mWifiOnlyPref:Landroid/preference/SwitchPreference;
 
-    new-instance v6, Lcom/android/settings/SoftwareUpdateSettings$1;
+    new-instance v6, Lcom/android/settings_ex/SoftwareUpdateSettings$1;
 
-    invoke-direct {v6, p0}, Lcom/android/settings/SoftwareUpdateSettings$1;-><init>(Lcom/android/settings/SoftwareUpdateSettings;)V
+    invoke-direct {v6, p0}, Lcom/android/settings_ex/SoftwareUpdateSettings$1;-><init>(Lcom/android/settings_ex/SoftwareUpdateSettings;)V
 
     invoke-virtual {v3, v6}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 462
     :cond_0
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v1
 
@@ -219,17 +219,17 @@
 
     .line 471
     .local v2, "wifiDedicated":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {v3}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v3
 
     if-nez v3, :cond_7
 
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -259,10 +259,10 @@
     move v3, v5
 
     :goto_1
-    iput-boolean v3, p0, Lcom/android/settings/SoftwareUpdateSettings;->mWifiDedicated:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mWifiDedicated:Z
 
     .line 476
-    iget-boolean v3, p0, Lcom/android/settings/SoftwareUpdateSettings;->mWifiDedicated:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mWifiDedicated:Z
 
     if-nez v3, :cond_2
 
@@ -283,13 +283,13 @@
     invoke-static {v3, v6}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 478
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v3
 
     const-string v6, "wifi_only"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/SoftwareUpdateSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/SoftwareUpdateSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
@@ -339,10 +339,10 @@
 
     :cond_4
     :goto_2
-    iput-boolean v4, p0, Lcom/android/settings/SoftwareUpdateSettings;->mDisplaySystemUpdateMenu:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mDisplaySystemUpdateMenu:Z
 
     .line 486
-    iget-boolean v3, p0, Lcom/android/settings/SoftwareUpdateSettings;->mDisplaySystemUpdateMenu:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mDisplaySystemUpdateMenu:Z
 
     if-nez v3, :cond_9
 
@@ -354,39 +354,39 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 489
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v3
 
     const-string v4, "update_prl"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/SoftwareUpdateSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/SoftwareUpdateSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     invoke-virtual {v3, v4}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 490
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v3
 
     const-string v4, "update_profile"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/SoftwareUpdateSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/SoftwareUpdateSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
     invoke-virtual {v3, v4}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 491
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v3
 
     const-string v4, "uicc_unlock"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/SoftwareUpdateSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/SoftwareUpdateSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
@@ -437,7 +437,7 @@
 
     move-result v3
 
-    sput-boolean v3, Lcom/android/settings/SoftwareUpdateSettings;->mEnablePrl:Z
+    sput-boolean v3, Lcom/android/settings_ex/SoftwareUpdateSettings;->mEnablePrl:Z
 
     .line 494
     const-string v3, "Software Update"
@@ -452,7 +452,7 @@
 
     move-result-object v4
 
-    sget-boolean v5, Lcom/android/settings/SoftwareUpdateSettings;->mEnablePrl:Z
+    sget-boolean v5, Lcom/android/settings_ex/SoftwareUpdateSettings;->mEnablePrl:Z
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -465,18 +465,18 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 496
-    sget-boolean v3, Lcom/android/settings/SoftwareUpdateSettings;->mEnablePrl:Z
+    sget-boolean v3, Lcom/android/settings_ex/SoftwareUpdateSettings;->mEnablePrl:Z
 
     if-nez v3, :cond_5
 
     .line 497
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v3
 
     const-string v4, "update_prl"
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/SoftwareUpdateSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/SoftwareUpdateSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v4
 
@@ -485,37 +485,37 @@
     goto :goto_3
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/SoftwareUpdateSettings;)V
+.method static synthetic access$000(Lcom/android/settings_ex/SoftwareUpdateSettings;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/SoftwareUpdateSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/SoftwareUpdateSettings;
 
     .prologue
     .line 54
-    invoke-direct {p0}, Lcom/android/settings/SoftwareUpdateSettings;->updateLastCheckedDate()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->updateLastCheckedDate()V
 
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/SoftwareUpdateSettings;)V
+.method static synthetic access$100(Lcom/android/settings_ex/SoftwareUpdateSettings;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/SoftwareUpdateSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/SoftwareUpdateSettings;
 
     .prologue
     .line 54
-    invoke-direct {p0}, Lcom/android/settings/SoftwareUpdateSettings;->updateInstallTime()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->updateInstallTime()V
 
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/SoftwareUpdateSettings;Ljava/lang/String;Ljava/lang/Boolean;)Z
+.method static synthetic access$400(Lcom/android/settings_ex/SoftwareUpdateSettings;Ljava/lang/String;Ljava/lang/Boolean;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/SoftwareUpdateSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/SoftwareUpdateSettings;
     .param p1, "x1"    # Ljava/lang/String;
     .param p2, "x2"    # Ljava/lang/Boolean;
 
     .prologue
     .line 54
-    invoke-direct {p0, p1, p2}, Lcom/android/settings/SoftwareUpdateSettings;->sendOmcUpdate(Ljava/lang/String;Ljava/lang/Boolean;)Z
+    invoke-direct {p0, p1, p2}, Lcom/android/settings_ex/SoftwareUpdateSettings;->sendOmcUpdate(Ljava/lang/String;Ljava/lang/Boolean;)Z
 
     move-result v0
 
@@ -527,7 +527,7 @@
 
     .prologue
     .line 54
-    sget-boolean v0, Lcom/android/settings/SoftwareUpdateSettings;->mEnablePrl:Z
+    sget-boolean v0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mEnablePrl:Z
 
     return v0
 .end method
@@ -537,18 +537,18 @@
 
     .prologue
     .line 664
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->getFotaBadgeCount(Landroid/content/Context;)I
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->getFotaBadgeCount(Landroid/content/Context;)I
 
     move-result v0
 
     if-lez v0, :cond_0
 
     .line 665
-    iget-object v0, p0, Lcom/android/settings/SoftwareUpdateSettings;->mSoftwareUpdatePref:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mSoftwareUpdatePref:Landroid/preference/Preference;
 
     const v1, 0x7f040194
 
@@ -560,7 +560,7 @@
 
     .line 667
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/SoftwareUpdateSettings;->mSoftwareUpdatePref:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mSoftwareUpdatePref:Landroid/preference/Preference;
 
     const/4 v1, 0x0
 
@@ -576,7 +576,7 @@
 
     .prologue
     .line 289
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -588,7 +588,7 @@
     .local v0, "context":Landroid/content/Context;
     const-string v2, "com.samsung.android.app.omcagent"
 
-    invoke-static {v0, v2}, Lcom/android/settings/Utils;->isPackageExists(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0, v2}, Lcom/android/settings_ex/Utils;->isPackageExists(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v2
 
@@ -628,7 +628,7 @@
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 298
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -649,7 +649,7 @@
 
     .prologue
     .line 394
-    invoke-virtual {p0, p1}, Lcom/android/settings/SoftwareUpdateSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/SoftwareUpdateSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
@@ -673,17 +673,17 @@
     .line 387
     const-string v0, "update"
 
-    invoke-direct {p0, v0, p1}, Lcom/android/settings/SoftwareUpdateSettings;->setOTAMenu(Ljava/lang/String;Z)V
+    invoke-direct {p0, v0, p1}, Lcom/android/settings_ex/SoftwareUpdateSettings;->setOTAMenu(Ljava/lang/String;Z)V
 
     .line 389
     const-string v0, "wifi_only"
 
-    invoke-direct {p0, v0, p1}, Lcom/android/settings/SoftwareUpdateSettings;->setOTAMenu(Ljava/lang/String;Z)V
+    invoke-direct {p0, v0, p1}, Lcom/android/settings_ex/SoftwareUpdateSettings;->setOTAMenu(Ljava/lang/String;Z)V
 
     .line 390
     const-string v0, "scheduled_update"
 
-    invoke-direct {p0, v0, p1}, Lcom/android/settings/SoftwareUpdateSettings;->setOTAMenu(Ljava/lang/String;Z)V
+    invoke-direct {p0, v0, p1}, Lcom/android/settings_ex/SoftwareUpdateSettings;->setOTAMenu(Ljava/lang/String;Z)V
 
     .line 391
     return-void
@@ -698,7 +698,7 @@
     const/4 v10, 0x1
 
     .line 357
-    iget-object v3, p0, Lcom/android/settings/SoftwareUpdateSettings;->mScheduledUpdatePref:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mScheduledUpdatePref:Landroid/preference/Preference;
 
     if-nez v3, :cond_0
 
@@ -713,7 +713,7 @@
     .line 364
     .local v2, "summary":Ljava/lang/String;
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -725,7 +725,7 @@
 
     .line 365
     .local v4, "time":J
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -744,7 +744,7 @@
     if-gtz v3, :cond_1
 
     .line 368
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -760,12 +760,12 @@
     .end local v1    # "everyday":I
     .end local v4    # "time":J
     :goto_1
-    iget-object v3, p0, Lcom/android/settings/SoftwareUpdateSettings;->mScheduledUpdatePref:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mScheduledUpdatePref:Landroid/preference/Preference;
 
     invoke-virtual {v3, v2}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 383
-    iget-object v3, p0, Lcom/android/settings/SoftwareUpdateSettings;->mScheduledUpdatePref:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mScheduledUpdatePref:Landroid/preference/Preference;
 
     invoke-virtual {v3, v10}, Landroid/preference/Preference;->setTwSummaryColorToColorPrimaryDark(Z)V
 
@@ -779,7 +779,7 @@
 
     .line 371
     :try_start_1
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -795,7 +795,7 @@
 
     const/4 v7, 0x0
 
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -821,7 +821,7 @@
 
     .line 374
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -837,7 +837,7 @@
 
     const/4 v7, 0x0
 
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -871,7 +871,7 @@
 
     .line 379
     .local v0, "e":Landroid/provider/Settings$SettingNotFoundException;
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -887,7 +887,7 @@
 
     .prologue
     .line 305
-    iget-object v7, p0, Lcom/android/settings/SoftwareUpdateSettings;->mSoftwareUpdatePref:Landroid/preference/Preference;
+    iget-object v7, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mSoftwareUpdatePref:Landroid/preference/Preference;
 
     if-nez v7, :cond_0
 
@@ -901,14 +901,14 @@
 
     .line 310
     .local v2, "summary":Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/Utils;->readSalesCode()Ljava/lang/String;
+    invoke-static {}, Lcom/android/settings_ex/Utils;->readSalesCode()Ljava/lang/String;
 
     move-result-object v1
 
     .line 313
     .local v1, "salesCode":Ljava/lang/String;
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
 
@@ -945,7 +945,7 @@
     if-eqz v7, :cond_5
 
     .line 317
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -992,7 +992,7 @@
     const/4 v7, 0x1
 
     :goto_2
-    iput-boolean v7, p0, Lcom/android/settings/SoftwareUpdateSettings;->mNoChargeFota:Z
+    iput-boolean v7, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mNoChargeFota:Z
 
     .line 340
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -1009,17 +1009,17 @@
 
     .line 343
     .local v6, "wifiDedicated":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
-    invoke-static {v7}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {v7}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v7
 
     if-nez v7, :cond_9
 
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
 
@@ -1053,20 +1053,20 @@
     const/4 v7, 0x0
 
     :goto_3
-    iput-boolean v7, p0, Lcom/android/settings/SoftwareUpdateSettings;->mWifiDedicated:Z
+    iput-boolean v7, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mWifiDedicated:Z
 
     .line 348
-    iget-boolean v7, p0, Lcom/android/settings/SoftwareUpdateSettings;->mNoChargeFota:Z
+    iget-boolean v7, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mNoChargeFota:Z
 
     if-nez v7, :cond_4
 
-    iget-boolean v7, p0, Lcom/android/settings/SoftwareUpdateSettings;->mWifiDedicated:Z
+    iget-boolean v7, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mWifiDedicated:Z
 
     if-eqz v7, :cond_a
 
     .line 349
     :cond_4
-    iget-object v7, p0, Lcom/android/settings/SoftwareUpdateSettings;->mSoftwareUpdatePref:Landroid/preference/Preference;
+    iget-object v7, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mSoftwareUpdatePref:Landroid/preference/Preference;
 
     invoke-virtual {v7, v2}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -1077,7 +1077,7 @@
     .restart local v4    # "time":J
     :cond_5
     :try_start_1
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -1099,7 +1099,7 @@
 
     const/4 v9, 0x0
 
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v10
 
@@ -1113,7 +1113,7 @@
 
     const/4 v9, 0x1
 
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
 
@@ -1155,7 +1155,7 @@
     if-eqz v7, :cond_7
 
     .line 329
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -1169,7 +1169,7 @@
 
     .line 332
     :cond_7
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -1197,7 +1197,7 @@
 
     .line 352
     :cond_a
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -1209,7 +1209,7 @@
 
     .line 353
     .local v3, "summary_charge":Ljava/lang/String;
-    iget-object v7, p0, Lcom/android/settings/SoftwareUpdateSettings;->mSoftwareUpdatePref:Landroid/preference/Preference;
+    iget-object v7, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mSoftwareUpdatePref:Landroid/preference/Preference;
 
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -1258,12 +1258,12 @@
     const/4 v4, 0x0
 
     .line 193
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 195
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/SoftwareUpdateSettings;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->setHasOptionsMenu(Z)V
 
     .line 196
     const-string v0, "Software Update"
@@ -1275,24 +1275,24 @@
     .line 197
     const v0, 0x7f0800bb
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/SoftwareUpdateSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->addPreferencesFromResource(I)V
 
     .line 198
-    invoke-direct {p0}, Lcom/android/settings/SoftwareUpdateSettings;->InitComponent()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->InitComponent()V
 
     .line 200
-    new-instance v0, Lcom/android/settings/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;
+    new-instance v0, Lcom/android/settings_ex/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;
 
-    invoke-direct {v0, p0, v4}, Lcom/android/settings/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;-><init>(Lcom/android/settings/SoftwareUpdateSettings;Lcom/android/settings/SoftwareUpdateSettings$1;)V
+    invoke-direct {v0, p0, v4}, Lcom/android/settings_ex/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;-><init>(Lcom/android/settings_ex/SoftwareUpdateSettings;Lcom/android/settings_ex/SoftwareUpdateSettings$1;)V
 
-    iput-object v0, p0, Lcom/android/settings/SoftwareUpdateSettings;->mReceiver:Lcom/android/settings/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mReceiver:Lcom/android/settings_ex/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;
 
     .line 201
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/SoftwareUpdateSettings;->mReceiver:Lcom/android/settings/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mReceiver:Lcom/android/settings_ex/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;
 
     new-instance v2, Landroid/content/IntentFilter;
 
@@ -1303,18 +1303,18 @@
     invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 203
-    new-instance v0, Lcom/android/settings/SoftwareUpdateSettings$InstallTimeBroadcastReceiver;
+    new-instance v0, Lcom/android/settings_ex/SoftwareUpdateSettings$InstallTimeBroadcastReceiver;
 
-    invoke-direct {v0, p0, v4}, Lcom/android/settings/SoftwareUpdateSettings$InstallTimeBroadcastReceiver;-><init>(Lcom/android/settings/SoftwareUpdateSettings;Lcom/android/settings/SoftwareUpdateSettings$1;)V
+    invoke-direct {v0, p0, v4}, Lcom/android/settings_ex/SoftwareUpdateSettings$InstallTimeBroadcastReceiver;-><init>(Lcom/android/settings_ex/SoftwareUpdateSettings;Lcom/android/settings_ex/SoftwareUpdateSettings$1;)V
 
-    iput-object v0, p0, Lcom/android/settings/SoftwareUpdateSettings;->mInstallTimeReceiver:Lcom/android/settings/SoftwareUpdateSettings$InstallTimeBroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mInstallTimeReceiver:Lcom/android/settings_ex/SoftwareUpdateSettings$InstallTimeBroadcastReceiver;
 
     .line 204
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/SoftwareUpdateSettings;->mInstallTimeReceiver:Lcom/android/settings/SoftwareUpdateSettings$InstallTimeBroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mInstallTimeReceiver:Lcom/android/settings_ex/SoftwareUpdateSettings$InstallTimeBroadcastReceiver;
 
     new-instance v2, Landroid/content/IntentFilter;
 
@@ -1325,7 +1325,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 206
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1337,14 +1337,14 @@
 
     check-cast v0, Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    iput-object v0, p0, Lcom/android/settings/SoftwareUpdateSettings;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
+    iput-object v0, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     .line 208
     invoke-static {}, Lcom/sec/enterprise/knox/EnterpriseKnoxManager;->getInstance()Lcom/sec/enterprise/knox/EnterpriseKnoxManager;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/SoftwareUpdateSettings;->mEKM:Lcom/sec/enterprise/knox/EnterpriseKnoxManager;
+    iput-object v0, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mEKM:Lcom/sec/enterprise/knox/EnterpriseKnoxManager;
 
     .line 210
     return-void
@@ -1359,7 +1359,7 @@
     const/4 v5, 0x1
 
     .line 505
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     .line 506
     const/4 v1, 0x0
@@ -1367,7 +1367,7 @@
     .line 509
     .local v1, "info":Landroid/content/pm/PackageInfo;
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
@@ -1436,27 +1436,27 @@
 
     .prologue
     .line 219
-    iget-object v0, p0, Lcom/android/settings/SoftwareUpdateSettings;->mReceiver:Lcom/android/settings/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;
+    iget-object v0, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mReceiver:Lcom/android/settings_ex/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;
 
     if-eqz v0, :cond_0
 
     .line 220
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/SoftwareUpdateSettings;->mReceiver:Lcom/android/settings/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mReceiver:Lcom/android/settings_ex/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 221
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/SoftwareUpdateSettings;->mReceiver:Lcom/android/settings/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mReceiver:Lcom/android/settings_ex/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;
 
     .line 224
     :cond_0
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroy()V
 
     .line 225
     return-void
@@ -1479,7 +1479,7 @@
     .line 553
     :cond_0
     :goto_0
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v3
 
@@ -1488,11 +1488,11 @@
 
     .line 525
     :pswitch_0
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->isSupportOnlineHelpMenu(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->isSupportOnlineHelpMenu(Landroid/content/Context;)Z
 
     move-result v4
 
@@ -1515,7 +1515,7 @@
     invoke-virtual {v2, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 529
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1548,7 +1548,7 @@
     .line 538
     .local v1, "info":Landroid/content/pm/PackageInfo;
     :try_start_1
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v4
 
@@ -1585,7 +1585,7 @@
     invoke-virtual {v2, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 544
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1659,7 +1659,7 @@
     invoke-virtual {v0, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 567
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1674,13 +1674,13 @@
 
     move-result-object v3
 
-    invoke-direct {p0, v2, v3}, Lcom/android/settings/SoftwareUpdateSettings;->sendOmcUpdate(Ljava/lang/String;Ljava/lang/Boolean;)Z
+    invoke-direct {p0, v2, v3}, Lcom/android/settings_ex/SoftwareUpdateSettings;->sendOmcUpdate(Ljava/lang/String;Ljava/lang/Boolean;)Z
 
     .line 597
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
     :goto_0
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v2
 
@@ -1734,7 +1734,7 @@
     invoke-virtual {v0, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 579
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1772,7 +1772,7 @@
     invoke-virtual {v0, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 584
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1810,7 +1810,7 @@
     invoke-virtual {v0, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 589
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1848,7 +1848,7 @@
     invoke-virtual {v0, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 594
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -1864,22 +1864,22 @@
     const/4 v6, 0x1
 
     .line 229
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 230
-    invoke-direct {p0}, Lcom/android/settings/SoftwareUpdateSettings;->updateLastCheckedDate()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->updateLastCheckedDate()V
 
     .line 231
-    invoke-direct {p0}, Lcom/android/settings/SoftwareUpdateSettings;->updateInstallTime()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->updateInstallTime()V
 
     .line 235
     :try_start_0
-    iget-object v3, p0, Lcom/android/settings/SoftwareUpdateSettings;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
+    iget-object v3, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-eqz v3, :cond_1
 
     .line 236
-    iget-object v3, p0, Lcom/android/settings/SoftwareUpdateSettings;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
+    iget-object v3, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     invoke-virtual {v3}, Landroid/app/enterprise/EnterpriseDeviceManager;->getRestrictionPolicy()Landroid/app/enterprise/RestrictionPolicy;
 
@@ -1891,7 +1891,7 @@
 
     if-eqz v3, :cond_0
 
-    iget-object v3, p0, Lcom/android/settings/SoftwareUpdateSettings;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
+    iget-object v3, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     invoke-virtual {v3}, Landroid/app/enterprise/EnterpriseDeviceManager;->getRestrictionPolicy()Landroid/app/enterprise/RestrictionPolicy;
 
@@ -1914,7 +1914,7 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 240
-    iget-boolean v3, p0, Lcom/android/settings/SoftwareUpdateSettings;->mDisplaySystemUpdateMenu:Z
+    iget-boolean v3, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mDisplaySystemUpdateMenu:Z
 
     if-nez v3, :cond_2
 
@@ -1926,7 +1926,7 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 244
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -1934,7 +1934,7 @@
 
     .line 266
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -1948,7 +1948,7 @@
 
     .line 267
     .local v0, "currentAutoUpdateState":I
-    iget-object v3, p0, Lcom/android/settings/SoftwareUpdateSettings;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
+    iget-object v3, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     invoke-virtual {v3}, Landroid/app/enterprise/EnterpriseDeviceManager;->getRestrictionPolicy()Landroid/app/enterprise/RestrictionPolicy;
 
@@ -1983,7 +1983,7 @@
     invoke-virtual {v2, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 272
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -2000,7 +2000,7 @@
     :cond_2
     const/4 v3, 0x0
 
-    invoke-direct {p0, v3}, Lcom/android/settings/SoftwareUpdateSettings;->setOTAMenu(Z)V
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/SoftwareUpdateSettings;->setOTAMenu(Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2029,14 +2029,14 @@
     .line 252
     const/4 v3, 0x1
 
-    invoke-direct {p0, v3}, Lcom/android/settings/SoftwareUpdateSettings;->setOTAMenu(Z)V
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/SoftwareUpdateSettings;->setOTAMenu(Z)V
 
     goto :goto_0
 
     .line 273
     .restart local v0    # "currentAutoUpdateState":I
     :cond_4
-    iget-object v3, p0, Lcom/android/settings/SoftwareUpdateSettings;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
+    iget-object v3, p0, Lcom/android/settings_ex/SoftwareUpdateSettings;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     invoke-virtual {v3}, Landroid/app/enterprise/EnterpriseDeviceManager;->getRestrictionPolicy()Landroid/app/enterprise/RestrictionPolicy;
 
@@ -2071,7 +2071,7 @@
     invoke-virtual {v2, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 278
-    invoke-virtual {p0}, Lcom/android/settings/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SoftwareUpdateSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/SwitchPreferenceScreen;
+.class public Lcom/android/settings_ex/SwitchPreferenceScreen;
 .super Landroid/preference/SwitchPreferenceScreen;
 .source "SwitchPreferenceScreen.java"
 

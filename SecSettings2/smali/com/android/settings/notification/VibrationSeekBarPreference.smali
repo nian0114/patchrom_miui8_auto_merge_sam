@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/notification/VibrationSeekBarPreference;
+.class public Lcom/android/settings_ex/notification/VibrationSeekBarPreference;
 .super Landroid/preference/SeekBarPreference;
 .source "VibrationSeekBarPreference.java"
 
@@ -25,7 +25,7 @@
     .line 69
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lcom/android/settings/notification/VibrationSeekBarPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, v0}, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 70
     return-void
@@ -40,7 +40,7 @@
     .line 65
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings/notification/VibrationSeekBarPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 66
     return-void
@@ -56,7 +56,7 @@
     .line 61
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/settings/notification/VibrationSeekBarPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 62
     return-void
@@ -80,7 +80,7 @@
     .local v0, "layoutResId":I
     const v1, 0x7f04022e
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/notification/VibrationSeekBarPreference;->setLayoutResource(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->setLayoutResource(I)V
 
     .line 57
     const-string v1, "vibrator"
@@ -91,7 +91,7 @@
 
     check-cast v1, Landroid/os/Vibrator;
 
-    iput-object v1, p0, Lcom/android/settings/notification/VibrationSeekBarPreference;->mVibrator:Landroid/os/Vibrator;
+    iput-object v1, p0, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->mVibrator:Landroid/os/Vibrator;
 
     .line 58
     return-void
@@ -116,7 +116,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/android/settings/notification/VibrationSeekBarPreference;->mType:I
+    iget v2, p0, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->mType:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -129,14 +129,14 @@
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 127
-    iget v0, p0, Lcom/android/settings/notification/VibrationSeekBarPreference;->mType:I
+    iget v0, p0, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->mType:I
 
     if-nez v0, :cond_1
 
     .line 128
-    iget-object v0, p0, Lcom/android/settings/notification/VibrationSeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
 
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationSeekBarPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -165,7 +165,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationSeekBarPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -196,16 +196,16 @@
 
     .line 130
     :cond_1
-    iget v0, p0, Lcom/android/settings/notification/VibrationSeekBarPreference;->mType:I
+    iget v0, p0, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->mType:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_2
 
     .line 131
-    iget-object v0, p0, Lcom/android/settings/notification/VibrationSeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
 
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationSeekBarPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -234,7 +234,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationSeekBarPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -262,16 +262,16 @@
 
     .line 133
     :cond_2
-    iget v0, p0, Lcom/android/settings/notification/VibrationSeekBarPreference;->mType:I
+    iget v0, p0, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->mType:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_0
 
     .line 134
-    iget-object v0, p0, Lcom/android/settings/notification/VibrationSeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
 
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationSeekBarPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -300,7 +300,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationSeekBarPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -337,12 +337,12 @@
     const/4 v2, 0x0
 
     .line 81
-    iget v0, p0, Lcom/android/settings/notification/VibrationSeekBarPreference;->mType:I
+    iget v0, p0, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->mType:I
 
     if-nez v0, :cond_3
 
     .line 82
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationSeekBarPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -384,7 +384,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 84
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationSeekBarPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -407,7 +407,7 @@
 
     .line 89
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationSeekBarPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -451,16 +451,16 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/settings/notification/VibrationSeekBarPreference;->pattern:I
+    iput v0, p0, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->pattern:I
 
     .line 94
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    new-instance v1, Lcom/android/settings/notification/VibrationSeekBarPreference$1;
+    new-instance v1, Lcom/android/settings_ex/notification/VibrationSeekBarPreference$1;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/notification/VibrationSeekBarPreference$1;-><init>(Lcom/android/settings/notification/VibrationSeekBarPreference;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/notification/VibrationSeekBarPreference$1;-><init>(Lcom/android/settings_ex/notification/VibrationSeekBarPreference;)V
 
     invoke-virtual {v0, v1, v8, v9}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
@@ -477,14 +477,14 @@
 
     .line 103
     :cond_3
-    iget v0, p0, Lcom/android/settings/notification/VibrationSeekBarPreference;->mType:I
+    iget v0, p0, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->mType:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_4
 
     .line 104
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationSeekBarPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -530,9 +530,9 @@
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    new-instance v1, Lcom/android/settings/notification/VibrationSeekBarPreference$2;
+    new-instance v1, Lcom/android/settings_ex/notification/VibrationSeekBarPreference$2;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/notification/VibrationSeekBarPreference$2;-><init>(Lcom/android/settings/notification/VibrationSeekBarPreference;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/notification/VibrationSeekBarPreference$2;-><init>(Lcom/android/settings_ex/notification/VibrationSeekBarPreference;)V
 
     invoke-virtual {v0, v1, v8, v9}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
@@ -540,14 +540,14 @@
 
     .line 113
     :cond_4
-    iget v0, p0, Lcom/android/settings/notification/VibrationSeekBarPreference;->mType:I
+    iget v0, p0, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->mType:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_2
 
     .line 114
-    invoke-virtual {p0}, Lcom/android/settings/notification/VibrationSeekBarPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -593,9 +593,9 @@
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    new-instance v1, Lcom/android/settings/notification/VibrationSeekBarPreference$3;
+    new-instance v1, Lcom/android/settings_ex/notification/VibrationSeekBarPreference$3;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/notification/VibrationSeekBarPreference$3;-><init>(Lcom/android/settings/notification/VibrationSeekBarPreference;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/notification/VibrationSeekBarPreference$3;-><init>(Lcom/android/settings_ex/notification/VibrationSeekBarPreference;)V
 
     invoke-virtual {v0, v1, v8, v9}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
@@ -616,7 +616,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 156
-    iget-object v0, p0, Lcom/android/settings/notification/VibrationSeekBarPreference;->mVibrator:Landroid/os/Vibrator;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->mVibrator:Landroid/os/Vibrator;
 
     invoke-virtual {v0}, Landroid/os/Vibrator;->cancel()V
 
@@ -645,7 +645,7 @@
 
     .line 144
     .local v0, "seekBar":Landroid/widget/SeekBar;
-    iget-object v1, p0, Lcom/android/settings/notification/VibrationSeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     if-ne v0, v1, :cond_0
 
@@ -655,30 +655,30 @@
 
     .line 145
     :cond_0
-    iput-object v0, p0, Lcom/android/settings/notification/VibrationSeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iput-object v0, p0, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     .line 146
-    iget-object v1, p0, Lcom/android/settings/notification/VibrationSeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     invoke-virtual {v1, v2}, Landroid/widget/SeekBar;->setSoundEffectsEnabled(Z)V
 
     .line 147
-    iget-object v1, p0, Lcom/android/settings/notification/VibrationSeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     invoke-virtual {v1, v2}, Landroid/widget/SeekBar;->setFluidEnabled(Z)V
 
     .line 148
-    iget-object v1, p0, Lcom/android/settings/notification/VibrationSeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     const/4 v2, 0x5
 
     invoke-virtual {v1, v2}, Landroid/widget/SeekBar;->setMax(I)V
 
     .line 149
-    invoke-direct {p0}, Lcom/android/settings/notification/VibrationSeekBarPreference;->setCurrentProgress()V
+    invoke-direct {p0}, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->setCurrentProgress()V
 
     .line 150
-    iget-object v1, p0, Lcom/android/settings/notification/VibrationSeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v1, p0, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     invoke-virtual {v1, p0}, Landroid/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
 
@@ -699,7 +699,7 @@
     if-eqz p3, :cond_0
 
     .line 76
-    invoke-direct {p0, p2}, Lcom/android/settings/notification/VibrationSeekBarPreference;->setVibrationIntensity(I)V
+    invoke-direct {p0, p2}, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->setVibrationIntensity(I)V
 
     .line 78
     :cond_0
@@ -712,7 +712,7 @@
 
     .prologue
     .line 165
-    iput p1, p0, Lcom/android/settings/notification/VibrationSeekBarPreference;->mType:I
+    iput p1, p0, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->mType:I
 
     .line 166
     const-string v0, "VibrationSeekBarPreference"
@@ -727,7 +727,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/android/settings/notification/VibrationSeekBarPreference;->mType:I
+    iget v2, p0, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->mType:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -755,7 +755,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 161
-    iget-object v0, p0, Lcom/android/settings/notification/VibrationSeekBarPreference;->mVibrator:Landroid/os/Vibrator;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VibrationSeekBarPreference;->mVibrator:Landroid/os/Vibrator;
 
     invoke-virtual {v0}, Landroid/os/Vibrator;->cancel()V
 

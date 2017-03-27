@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment$3;
+.class Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment$3;
 .super Landroid/content/BroadcastReceiver;
 .source "SharedAccessibilityFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;
+    value = Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;)V
     .locals 0
 
     .prologue
     .line 137
-    iput-object p1, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment$3;->this$0:Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment$3;->this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -55,29 +55,29 @@
     if-eqz v1, :cond_1
 
     .line 143
-    iget-object v1, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment$3;->this$0:Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment$3;->this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;
 
-    invoke-virtual {v1}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->isExternalMemoryAvailable(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->isExternalMemoryAvailable(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 144
-    iget-object v1, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment$3;->this$0:Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment$3;->this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;
 
-    # invokes: Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->buildStateDropDown()V
-    invoke-static {v1}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->access$000(Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;)V
+    # invokes: Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->buildStateDropDown()V
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->access$000(Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;)V
 
     .line 145
-    iget-object v1, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment$3;->this$0:Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment$3;->this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;
 
-    # invokes: Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->buildShareViewDropDown()V
-    invoke-static {v1}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->access$100(Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;)V
+    # invokes: Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->buildShareViewDropDown()V
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->access$100(Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;)V
 
     .line 154
     :cond_0
@@ -95,29 +95,29 @@
     if-eqz v1, :cond_0
 
     .line 149
-    iget-object v1, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment$3;->this$0:Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment$3;->this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;
 
-    invoke-virtual {v1}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->isExternalMemoryAvailable(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->isExternalMemoryAvailable(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
     .line 150
-    iget-object v1, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment$3;->this$0:Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment$3;->this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;
 
-    # invokes: Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->buildStateDropDown()V
-    invoke-static {v1}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->access$000(Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;)V
+    # invokes: Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->buildStateDropDown()V
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->access$000(Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;)V
 
     .line 151
-    iget-object v1, p0, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment$3;->this$0:Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment$3;->this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;
 
-    # invokes: Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->buildShareViewDropDown()V
-    invoke-static {v1}, Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;->access$100(Lcom/android/settings/accessibility/sharedaccessibility/SharedAccessibilityFragment;)V
+    # invokes: Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->buildShareViewDropDown()V
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;->access$100(Lcom/android/settings_ex/accessibility/sharedaccessibility/SharedAccessibilityFragment;)V
 
     goto :goto_0
 .end method

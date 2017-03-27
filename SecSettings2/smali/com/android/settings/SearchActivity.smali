@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/SearchActivity;
+.class public Lcom/android/settings_ex/SearchActivity;
 .super Landroid/app/Activity;
 .source "SearchActivity.java"
 
@@ -25,13 +25,13 @@
     .line 42
     .local v13, "cursor":Landroid/database/Cursor;
     :try_start_0
-    invoke-static/range {p0 .. p0}, Lcom/android/settings/search/Index;->getInstance(Landroid/content/Context;)Lcom/android/settings/search/Index;
+    invoke-static/range {p0 .. p0}, Lcom/android/settings_ex/search/Index;->getInstance(Landroid/content/Context;)Lcom/android/settings_ex/search/Index;
 
     move-result-object v2
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v2, v0}, Lcom/android/settings/search/Index;->searchItem(Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v2, v0}, Lcom/android/settings_ex/search/Index;->searchItem(Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v13
 
@@ -155,7 +155,7 @@
 
     .line 65
     .local v7, "screenTitleRes":I
-    const-class v2, Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;
+    const-class v2, Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -172,7 +172,7 @@
 
     .line 69
     :cond_1
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v2
 
@@ -185,7 +185,7 @@
 
     move-object/from16 v2, p0
 
-    invoke-static/range {v2 .. v8}, Lcom/android/settings/Utils;->startWithFragmentBySearch(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Fragment;IILjava/lang/CharSequence;)V
+    invoke-static/range {v2 .. v8}, Lcom/android/settings_ex/Utils;->startWithFragmentBySearch(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Fragment;IILjava/lang/CharSequence;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -230,7 +230,7 @@
     move-object/from16 v2, p0
 
     :try_start_1
-    invoke-static/range {v2 .. v8}, Lcom/android/settings/Utils;->startWithFragment(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Fragment;IILjava/lang/CharSequence;)V
+    invoke-static/range {v2 .. v8}, Lcom/android/settings_ex/Utils;->startWithFragment(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Fragment;IILjava/lang/CharSequence;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -423,7 +423,7 @@
 
     move-object/from16 v1, v17
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/SearchActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/SearchActivity;->startActivity(Landroid/content/Intent;)V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -640,7 +640,7 @@
 
     move-object/from16 v1, v17
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/SearchActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/SearchActivity;->startActivity(Landroid/content/Intent;)V
 
     goto/16 :goto_0
 
@@ -693,14 +693,14 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 22
-    invoke-virtual {p0}, Lcom/android/settings/SearchActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SearchActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/SearchActivity;->onNewIntent(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/SearchActivity;->onNewIntent(Landroid/content/Intent;)V
 
     .line 23
-    invoke-virtual {p0}, Lcom/android/settings/SearchActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/SearchActivity;->finish()V
 
     .line 24
     return-void
@@ -770,7 +770,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 34
-    invoke-direct {p0, v0}, Lcom/android/settings/SearchActivity;->callMenu(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/SearchActivity;->callMenu(Ljava/lang/String;)V
 
     .line 36
     .end local v0    # "mintentdata":Ljava/lang/String;

@@ -1,12 +1,12 @@
-.class public Lcom/android/settings/deviceinfo/PrivateVolumeForget;
-.super Lcom/android/settings/InstrumentedFragment;
+.class public Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget;
+.super Lcom/android/settings_ex/InstrumentedFragment;
 .source "PrivateVolumeForget.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;
+        Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;
     }
 .end annotation
 
@@ -23,26 +23,26 @@
 
     .prologue
     .line 40
-    invoke-direct {p0}, Lcom/android/settings/InstrumentedFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/InstrumentedFragment;-><init>()V
 
     .line 68
-    new-instance v0, Lcom/android/settings/deviceinfo/PrivateVolumeForget$1;
+    new-instance v0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/deviceinfo/PrivateVolumeForget$1;-><init>(Lcom/android/settings/deviceinfo/PrivateVolumeForget;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$1;-><init>(Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget;)V
 
-    iput-object v0, p0, Lcom/android/settings/deviceinfo/PrivateVolumeForget;->mConfirmListener:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget;->mConfirmListener:Landroid/view/View$OnClickListener;
 
     .line 75
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/deviceinfo/PrivateVolumeForget;)Landroid/os/storage/VolumeRecord;
+.method static synthetic access$000(Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget;)Landroid/os/storage/VolumeRecord;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/deviceinfo/PrivateVolumeForget;
+    .param p0, "x0"    # Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget;
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/PrivateVolumeForget;->mRecord:Landroid/os/storage/VolumeRecord;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget;->mRecord:Landroid/os/storage/VolumeRecord;
 
     return-object v0
 .end method
@@ -69,7 +69,7 @@
     const/4 v8, 0x0
 
     .line 53
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/PrivateVolumeForget;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -83,7 +83,7 @@
 
     .line 54
     .local v3, "storage":Landroid/os/storage/StorageManager;
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/PrivateVolumeForget;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget;->getArguments()Landroid/os/Bundle;
 
     move-result-object v5
 
@@ -99,7 +99,7 @@
 
     move-result-object v5
 
-    iput-object v5, p0, Lcom/android/settings/deviceinfo/PrivateVolumeForget;->mRecord:Landroid/os/storage/VolumeRecord;
+    iput-object v5, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget;->mRecord:Landroid/os/storage/VolumeRecord;
 
     .line 57
     const v5, 0x7f0401f1
@@ -136,7 +136,7 @@
 
     new-array v6, v6, [Ljava/lang/Object;
 
-    iget-object v7, p0, Lcom/android/settings/deviceinfo/PrivateVolumeForget;->mRecord:Landroid/os/storage/VolumeRecord;
+    iget-object v7, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget;->mRecord:Landroid/os/storage/VolumeRecord;
 
     invoke-virtual {v7}, Landroid/os/storage/VolumeRecord;->getNickname()Ljava/lang/String;
 
@@ -144,14 +144,14 @@
 
     aput-object v7, v6, v8
 
-    invoke-virtual {p0, v5, v6}, Lcom/android/settings/deviceinfo/PrivateVolumeForget;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v5, v6}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 63
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/PrivateVolumeForget;->mConfirmListener:Landroid/view/View$OnClickListener;
+    iget-object v5, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget;->mConfirmListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v1, v5}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

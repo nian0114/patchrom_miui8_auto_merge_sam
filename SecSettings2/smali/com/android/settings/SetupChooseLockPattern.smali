@@ -1,12 +1,12 @@
-.class public Lcom/android/settings/SetupChooseLockPattern;
-.super Lcom/android/settings/ChooseLockPattern;
+.class public Lcom/android/settings_ex/SetupChooseLockPattern;
+.super Lcom/android/settings_ex/ChooseLockPattern;
 .source "SetupChooseLockPattern.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/SetupChooseLockPattern$SetupChooseLockPatternFragment;
+        Lcom/android/settings_ex/SetupChooseLockPattern$SetupChooseLockPatternFragment;
     }
 .end annotation
 
@@ -17,7 +17,7 @@
 
     .prologue
     .line 41
-    invoke-direct {p0}, Lcom/android/settings/ChooseLockPattern;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/ChooseLockPattern;-><init>()V
 
     .line 79
     return-void
@@ -31,13 +31,13 @@
 
     .prologue
     .line 52
-    invoke-static {p0, p1, p2}, Lcom/android/settings/ChooseLockPattern;->createIntent(Landroid/content/Context;ZLjava/lang/String;)Landroid/content/Intent;
+    invoke-static {p0, p1, p2}, Lcom/android/settings_ex/ChooseLockPattern;->createIntent(Landroid/content/Context;ZLjava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
 
     .line 53
     .local v0, "intent":Landroid/content/Intent;
-    const-class v1, Lcom/android/settings/SetupChooseLockPattern;
+    const-class v1, Lcom/android/settings_ex/SetupChooseLockPattern;
 
     invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
@@ -61,7 +61,7 @@
 
     .prologue
     .line 70
-    const-class v0, Lcom/android/settings/SetupChooseLockPattern$SetupChooseLockPatternFragment;
+    const-class v0, Lcom/android/settings_ex/SetupChooseLockPattern$SetupChooseLockPatternFragment;
 
     return-object v0
 .end method
@@ -72,7 +72,7 @@
 
     .prologue
     .line 65
-    const-class v0, Lcom/android/settings/SetupChooseLockPattern$SetupChooseLockPatternFragment;
+    const-class v0, Lcom/android/settings_ex/SetupChooseLockPattern$SetupChooseLockPatternFragment;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -93,16 +93,16 @@
 
     .prologue
     .line 75
-    invoke-virtual {p0}, Lcom/android/settings/SetupChooseLockPattern;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/SetupChooseLockPattern;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/SetupWizardUtils;->getTheme(Landroid/content/Intent;)I
+    invoke-static {v0}, Lcom/android/settings_ex/SetupWizardUtils;->getTheme(Landroid/content/Intent;)I
 
     move-result p2
 
     .line 76
-    invoke-super {p0, p1, p2, p3}, Lcom/android/settings/ChooseLockPattern;->onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings_ex/ChooseLockPattern;->onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
 
     .line 77
     return-void

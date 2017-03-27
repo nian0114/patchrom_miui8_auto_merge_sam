@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/networkconnect/NetworkManagerUtils$1;
+.class final Lcom/android/settings_ex/networkconnect/NetworkManagerUtils$1;
 .super Ljava/lang/Object;
 .source "NetworkManagerUtils.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/networkconnect/NetworkManagerUtils;
+    value = Lcom/android/settings_ex/networkconnect/NetworkManagerUtils;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Ljava/util/Comparator",
         "<",
-        "Lcom/android/settings/networkconnect/ApplicationNetInfo;",
+        "Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;",
         ">;"
     }
 .end annotation
@@ -44,27 +44,27 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils$1;->sCollator:Ljava/text/Collator;
+    iput-object v0, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils$1;->sCollator:Ljava/text/Collator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public compare(Lcom/android/settings/networkconnect/ApplicationNetInfo;Lcom/android/settings/networkconnect/ApplicationNetInfo;)I
+.method public compare(Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;)I
     .locals 3
-    .param p1, "leftApp"    # Lcom/android/settings/networkconnect/ApplicationNetInfo;
-    .param p2, "rightApp"    # Lcom/android/settings/networkconnect/ApplicationNetInfo;
+    .param p1, "leftApp"    # Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;
+    .param p2, "rightApp"    # Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;
 
     .prologue
     .line 139
-    iget-object v0, p0, Lcom/android/settings/networkconnect/NetworkManagerUtils$1;->sCollator:Ljava/text/Collator;
+    iget-object v0, p0, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils$1;->sCollator:Ljava/text/Collator;
 
-    invoke-virtual {p1}, Lcom/android/settings/networkconnect/ApplicationNetInfo;->getLabel()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->getLabel()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p2}, Lcom/android/settings/networkconnect/ApplicationNetInfo;->getLabel()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->getLabel()Ljava/lang/String;
 
     move-result-object v2
 
@@ -82,13 +82,13 @@
 
     .prologue
     .line 135
-    check-cast p1, Lcom/android/settings/networkconnect/ApplicationNetInfo;
+    check-cast p1, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    check-cast p2, Lcom/android/settings/networkconnect/ApplicationNetInfo;
+    check-cast p2, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;
 
     .end local p2    # "x1":Ljava/lang/Object;
-    invoke-virtual {p0, p1, p2}, Lcom/android/settings/networkconnect/NetworkManagerUtils$1;->compare(Lcom/android/settings/networkconnect/ApplicationNetInfo;Lcom/android/settings/networkconnect/ApplicationNetInfo;)I
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings_ex/networkconnect/NetworkManagerUtils$1;->compare(Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;)I
 
     move-result v0
 

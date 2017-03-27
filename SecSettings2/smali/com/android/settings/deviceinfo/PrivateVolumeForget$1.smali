@@ -1,4 +1,4 @@
-.class Lcom/android/settings/deviceinfo/PrivateVolumeForget$1;
+.class Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$1;
 .super Ljava/lang/Object;
 .source "PrivateVolumeForget.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/PrivateVolumeForget;
+    value = Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/PrivateVolumeForget;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/PrivateVolumeForget;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget;)V
     .locals 0
 
     .prologue
     .line 68
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/PrivateVolumeForget$1;->this$0:Lcom/android/settings/deviceinfo/PrivateVolumeForget;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$1;->this$0:Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,12 +42,12 @@
 
     .prologue
     .line 71
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/PrivateVolumeForget$1;->this$0:Lcom/android/settings/deviceinfo/PrivateVolumeForget;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$1;->this$0:Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget;
 
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/PrivateVolumeForget$1;->this$0:Lcom/android/settings/deviceinfo/PrivateVolumeForget;
+    iget-object v1, p0, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$1;->this$0:Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget;
 
-    # getter for: Lcom/android/settings/deviceinfo/PrivateVolumeForget;->mRecord:Landroid/os/storage/VolumeRecord;
-    invoke-static {v1}, Lcom/android/settings/deviceinfo/PrivateVolumeForget;->access$000(Lcom/android/settings/deviceinfo/PrivateVolumeForget;)Landroid/os/storage/VolumeRecord;
+    # getter for: Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget;->mRecord:Landroid/os/storage/VolumeRecord;
+    invoke-static {v1}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget;->access$000(Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget;)Landroid/os/storage/VolumeRecord;
 
     move-result-object v1
 
@@ -55,7 +55,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/android/settings/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;->show(Landroid/app/Fragment;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/deviceinfo/PrivateVolumeForget$ForgetConfirmFragment;->show(Landroid/app/Fragment;Ljava/lang/String;)V
 
     .line 72
     return-void

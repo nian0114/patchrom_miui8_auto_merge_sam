@@ -1,4 +1,4 @@
-.class Lcom/android/settings/LGTRoamingEnv$6;
+.class Lcom/android/settings_ex/LGTRoamingEnv$6;
 .super Ljava/lang/Object;
 .source "LGTRoamingEnv.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/LGTRoamingEnv;
+    value = Lcom/android/settings_ex/LGTRoamingEnv;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/LGTRoamingEnv;
+.field final synthetic this$0:Lcom/android/settings_ex/LGTRoamingEnv;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/LGTRoamingEnv;)V
+.method constructor <init>(Lcom/android/settings_ex/LGTRoamingEnv;)V
     .locals 0
 
     .prologue
     .line 243
-    iput-object p1, p0, Lcom/android/settings/LGTRoamingEnv$6;->this$0:Lcom/android/settings/LGTRoamingEnv;
+    iput-object p1, p0, Lcom/android/settings_ex/LGTRoamingEnv$6;->this$0:Lcom/android/settings_ex/LGTRoamingEnv;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,15 +47,15 @@
     const/4 v3, 0x0
 
     .line 245
-    iget-object v2, p0, Lcom/android/settings/LGTRoamingEnv$6;->this$0:Lcom/android/settings/LGTRoamingEnv;
+    iget-object v2, p0, Lcom/android/settings_ex/LGTRoamingEnv$6;->this$0:Lcom/android/settings_ex/LGTRoamingEnv;
 
-    # setter for: Lcom/android/settings/LGTRoamingEnv;->mIsRoamingNetworkInit:Z
-    invoke-static {v2, v4}, Lcom/android/settings/LGTRoamingEnv;->access$502(Lcom/android/settings/LGTRoamingEnv;Z)Z
+    # setter for: Lcom/android/settings_ex/LGTRoamingEnv;->mIsRoamingNetworkInit:Z
+    invoke-static {v2, v4}, Lcom/android/settings_ex/LGTRoamingEnv;->access$502(Lcom/android/settings_ex/LGTRoamingEnv;Z)Z
 
     .line 246
-    iget-object v2, p0, Lcom/android/settings/LGTRoamingEnv$6;->this$0:Lcom/android/settings/LGTRoamingEnv;
+    iget-object v2, p0, Lcom/android/settings_ex/LGTRoamingEnv$6;->this$0:Lcom/android/settings_ex/LGTRoamingEnv;
 
-    invoke-virtual {v2}, Lcom/android/settings/LGTRoamingEnv;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {v2}, Lcom/android/settings_ex/LGTRoamingEnv;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v2
 
@@ -84,10 +84,10 @@
     if-ne v2, v3, :cond_0
 
     .line 252
-    iget-object v2, p0, Lcom/android/settings/LGTRoamingEnv$6;->this$0:Lcom/android/settings/LGTRoamingEnv;
+    iget-object v2, p0, Lcom/android/settings_ex/LGTRoamingEnv$6;->this$0:Lcom/android/settings_ex/LGTRoamingEnv;
 
-    # invokes: Lcom/android/settings/LGTRoamingEnv;->setAuto()V
-    invoke-static {v2}, Lcom/android/settings/LGTRoamingEnv;->access$600(Lcom/android/settings/LGTRoamingEnv;)V
+    # invokes: Lcom/android/settings_ex/LGTRoamingEnv;->setAuto()V
+    invoke-static {v2}, Lcom/android/settings_ex/LGTRoamingEnv;->access$600(Lcom/android/settings_ex/LGTRoamingEnv;)V
 
     .line 260
     :goto_0
@@ -95,12 +95,12 @@
 
     .line 254
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/LGTRoamingEnv$6;->this$0:Lcom/android/settings/LGTRoamingEnv;
+    iget-object v2, p0, Lcom/android/settings_ex/LGTRoamingEnv$6;->this$0:Lcom/android/settings_ex/LGTRoamingEnv;
 
     const/4 v3, 0x1
 
-    # setter for: Lcom/android/settings/LGTRoamingEnv;->mIsWaitRadioPowerOff:Z
-    invoke-static {v2, v3}, Lcom/android/settings/LGTRoamingEnv;->access$402(Lcom/android/settings/LGTRoamingEnv;Z)Z
+    # setter for: Lcom/android/settings_ex/LGTRoamingEnv;->mIsWaitRadioPowerOff:Z
+    invoke-static {v2, v3}, Lcom/android/settings_ex/LGTRoamingEnv;->access$402(Lcom/android/settings_ex/LGTRoamingEnv;Z)Z
 
     .line 255
     const/4 v2, 0x0

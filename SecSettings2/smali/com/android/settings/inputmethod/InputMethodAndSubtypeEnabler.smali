@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "InputMethodAndSubtypeEnabler.java"
 
 # interfaces
@@ -57,32 +57,32 @@
 
     .prologue
     .line 45
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 48
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodAndSubtypePrefsMap:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodAndSubtypePrefsMap:Ljava/util/HashMap;
 
     .line 50
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mAutoSelectionPrefsMap:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mAutoSelectionPrefsMap:Ljava/util/HashMap;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;)Ljava/text/Collator;
+.method static synthetic access$000(Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;)Ljava/text/Collator;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;
+    .param p0, "x0"    # Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mCollator:Ljava/text/Collator;
+    iget-object v0, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mCollator:Ljava/text/Collator;
 
     return-object v0
 .end method
@@ -94,7 +94,7 @@
 
     .prologue
     .line 162
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
@@ -135,7 +135,7 @@
     invoke-virtual {v0, v8}, Landroid/preference/PreferenceScreen;->addPreference(Landroid/preference/Preference;)Z
 
     .line 170
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v10
 
@@ -155,15 +155,15 @@
     invoke-virtual {v8, v6}, Landroid/preference/PreferenceCategory;->setKey(Ljava/lang/String;)V
 
     .line 176
-    new-instance v3, Lcom/android/settings/inputmethod/SwitchWithNoTextPreference;
+    new-instance v3, Lcom/android/settings_ex/inputmethod/SwitchWithNoTextPreference;
 
-    invoke-direct {v3, v5}, Lcom/android/settings/inputmethod/SwitchWithNoTextPreference;-><init>(Landroid/content/Context;)V
+    invoke-direct {v3, v5}, Lcom/android/settings_ex/inputmethod/SwitchWithNoTextPreference;-><init>(Landroid/content/Context;)V
 
     .line 177
     .local v3, "autoSelectionPref":Landroid/preference/TwoStatePreference;
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mAutoSelectionPrefsMap:Ljava/util/HashMap;
+    iget-object v0, v0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mAutoSelectionPrefsMap:Ljava/util/HashMap;
 
     move-object/from16 v17, v0
 
@@ -264,11 +264,11 @@
 
     .line 195
     :cond_2
-    new-instance v15, Lcom/android/settings/inputmethod/InputMethodSubtypePreference;
+    new-instance v15, Lcom/android/settings_ex/inputmethod/InputMethodSubtypePreference;
 
     move-object/from16 v0, p1
 
-    invoke-direct {v15, v5, v13, v0}, Lcom/android/settings/inputmethod/InputMethodSubtypePreference;-><init>(Landroid/content/Context;Landroid/view/inputmethod/InputMethodSubtype;Landroid/view/inputmethod/InputMethodInfo;)V
+    invoke-direct {v15, v5, v13, v0}, Lcom/android/settings_ex/inputmethod/InputMethodSubtypePreference;-><init>(Landroid/content/Context;Landroid/view/inputmethod/InputMethodSubtype;Landroid/view/inputmethod/InputMethodInfo;)V
 
     .line 197
     .local v15, "subtypePref":Landroid/preference/Preference;
@@ -282,13 +282,13 @@
     .end local v13    # "subtype":Landroid/view/inputmethod/InputMethodSubtype;
     .end local v15    # "subtypePref":Landroid/preference/Preference;
     :cond_3
-    new-instance v17, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler$1;
+    new-instance v17, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler$1;
 
     move-object/from16 v0, v17
 
     move-object/from16 v1, p0
 
-    invoke-direct {v0, v1}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler$1;-><init>(Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler$1;-><init>(Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;)V
 
     invoke-static/range {v16 .. v17}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
@@ -323,7 +323,7 @@
     invoke-virtual {v11, v0}, Landroid/preference/Preference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 214
-    invoke-static {v11}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeUtil;->removeUnnecessaryNonPersistentPreference(Landroid/preference/Preference;)V
+    invoke-static {v11}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeUtil;->removeUnnecessaryNonPersistentPreference(Landroid/preference/Preference;)V
 
     .line 210
     add-int/lit8 v7, v7, 0x1
@@ -335,7 +335,7 @@
     :cond_4
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodAndSubtypePrefsMap:Ljava/util/HashMap;
+    iget-object v0, v0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodAndSubtypePrefsMap:Ljava/util/HashMap;
 
     move-object/from16 v17, v0
 
@@ -374,7 +374,7 @@
 
     .prologue
     .line 91
-    invoke-virtual {p0}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -400,7 +400,7 @@
     .line 96
     .restart local v1    # "fromIntent":Ljava/lang/String;
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -429,7 +429,7 @@
 
     .prologue
     .line 226
-    iget-object v3, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodAndSubtypePrefsMap:Ljava/util/HashMap;
+    iget-object v3, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodAndSubtypePrefsMap:Ljava/util/HashMap;
 
     invoke-virtual {v3, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -496,7 +496,7 @@
     const/4 v6, 0x0
 
     .line 237
-    iget-object v4, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mAutoSelectionPrefsMap:Ljava/util/HashMap;
+    iget-object v4, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mAutoSelectionPrefsMap:Ljava/util/HashMap;
 
     invoke-virtual {v4, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -518,7 +518,7 @@
     invoke-virtual {v0, p2}, Landroid/preference/TwoStatePreference;->setChecked(Z)V
 
     .line 242
-    iget-object v4, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodAndSubtypePrefsMap:Ljava/util/HashMap;
+    iget-object v4, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodAndSubtypePrefsMap:Ljava/util/HashMap;
 
     invoke-virtual {v4, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -585,18 +585,18 @@
     if-eqz p2, :cond_0
 
     .line 255
-    invoke-virtual {p0}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
-    iget-object v6, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodInfoList:Ljava/util/List;
+    iget-object v6, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodInfoList:Ljava/util/List;
 
-    iget-boolean v7, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mHaveHardKeyboard:Z
+    iget-boolean v7, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mHaveHardKeyboard:Z
 
-    invoke-static {p0, v4, v6, v7}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeUtil;->saveInputMethodSubtypeList(Lcom/android/settings/SettingsPreferenceFragment;Landroid/content/ContentResolver;Ljava/util/List;Z)V
+    invoke-static {p0, v4, v6, v7}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeUtil;->saveInputMethodSubtypeList(Lcom/android/settings_ex/SettingsPreferenceFragment;Landroid/content/ContentResolver;Ljava/util/List;Z)V
 
     .line 257
-    invoke-direct {p0, p1, v5}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->updateImplicitlyEnabledSubtypes(Ljava/lang/String;Z)V
+    invoke-direct {p0, p1, v5}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->updateImplicitlyEnabledSubtypes(Ljava/lang/String;Z)V
 
     goto :goto_0
 .end method
@@ -606,7 +606,7 @@
 
     .prologue
     .line 304
-    iget-object v2, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodAndSubtypePrefsMap:Ljava/util/HashMap;
+    iget-object v2, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodAndSubtypePrefsMap:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
@@ -632,11 +632,11 @@
 
     .line 305
     .local v1, "imiId":Ljava/lang/String;
-    invoke-direct {p0, v1}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->isNoSubtypesExplicitlySelected(Ljava/lang/String;)Z
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->isNoSubtypesExplicitlySelected(Ljava/lang/String;)Z
 
     move-result v2
 
-    invoke-direct {p0, v1, v2}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->setAutoSelectionSubtypesEnabled(Ljava/lang/String;Z)V
+    invoke-direct {p0, v1, v2}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->setAutoSelectionSubtypesEnabled(Ljava/lang/String;Z)V
 
     goto :goto_0
 
@@ -647,7 +647,7 @@
 
     const/4 v3, 0x1
 
-    invoke-direct {p0, v2, v3}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->updateImplicitlyEnabledSubtypes(Ljava/lang/String;Z)V
+    invoke-direct {p0, v2, v3}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->updateImplicitlyEnabledSubtypes(Ljava/lang/String;Z)V
 
     .line 308
     return-void
@@ -660,7 +660,7 @@
 
     .prologue
     .line 263
-    iget-object v4, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodInfoList:Ljava/util/List;
+    iget-object v4, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodInfoList:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -689,7 +689,7 @@
 
     .line 265
     .local v3, "imiId":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mAutoSelectionPrefsMap:Ljava/util/HashMap;
+    iget-object v4, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mAutoSelectionPrefsMap:Ljava/util/HashMap;
 
     invoke-virtual {v4, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -718,7 +718,7 @@
 
     .line 272
     :cond_1
-    invoke-direct {p0, v2, p2}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->updateImplicitlyEnabledSubtypesOf(Landroid/view/inputmethod/InputMethodInfo;Z)V
+    invoke-direct {p0, v2, p2}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->updateImplicitlyEnabledSubtypesOf(Landroid/view/inputmethod/InputMethodInfo;Z)V
 
     goto :goto_0
 
@@ -745,7 +745,7 @@
 
     .line 279
     .local v2, "imiId":Ljava/lang/String;
-    iget-object v9, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodAndSubtypePrefsMap:Ljava/util/HashMap;
+    iget-object v9, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodAndSubtypePrefsMap:Ljava/util/HashMap;
 
     invoke-virtual {v9, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -755,7 +755,7 @@
 
     .line 280
     .local v8, "subtypePrefs":Ljava/util/List;, "Ljava/util/List<Landroid/preference/Preference;>;"
-    iget-object v9, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mImm:Landroid/view/inputmethod/InputMethodManager;
+    iget-object v9, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mImm:Landroid/view/inputmethod/InputMethodManager;
 
     invoke-virtual {v9, p1, v11}, Landroid/view/inputmethod/InputMethodManager;->getEnabledInputMethodSubtypeList(Landroid/view/inputmethod/InputMethodInfo;Z)Ljava/util/List;
 
@@ -888,12 +888,12 @@
 
     .prologue
     .line 102
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 103
     const-string v1, "android.intent.extra.TITLE"
 
-    invoke-direct {p0, v1}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->getStringExtraFromIntentOrArguments(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->getStringExtraFromIntentOrArguments(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -906,7 +906,7 @@
     if-nez v1, :cond_0
 
     .line 105
-    invoke-virtual {p0}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -923,21 +923,21 @@
 
     .prologue
     .line 63
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 64
     const-string v6, "input_method"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Landroid/view/inputmethod/InputMethodManager;
 
-    iput-object v6, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mImm:Landroid/view/inputmethod/InputMethodManager;
+    iput-object v6, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mImm:Landroid/view/inputmethod/InputMethodManager;
 
     .line 65
-    invoke-virtual {p0}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -956,38 +956,38 @@
     const/4 v6, 0x1
 
     :goto_0
-    iput-boolean v6, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mHaveHardKeyboard:Z
+    iput-boolean v6, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mHaveHardKeyboard:Z
 
     .line 72
     const-string v6, "input_method_id"
 
-    invoke-direct {p0, v6}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->getStringExtraFromIntentOrArguments(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v6}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->getStringExtraFromIntentOrArguments(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     .line 75
     .local v5, "targetImi":Ljava/lang/String;
-    iget-object v6, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mImm:Landroid/view/inputmethod/InputMethodManager;
+    iget-object v6, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mImm:Landroid/view/inputmethod/InputMethodManager;
 
     invoke-virtual {v6}, Landroid/view/inputmethod/InputMethodManager;->getInputMethodList()Ljava/util/List;
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodInfoList:Ljava/util/List;
+    iput-object v6, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodInfoList:Ljava/util/List;
 
     .line 76
     invoke-static {}, Ljava/text/Collator;->getInstance()Ljava/text/Collator;
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mCollator:Ljava/text/Collator;
+    iput-object v6, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mCollator:Ljava/text/Collator;
 
     .line 78
-    invoke-virtual {p0}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->getPreferenceManager()Landroid/preference/PreferenceManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->getPreferenceManager()Landroid/preference/PreferenceManager;
 
     move-result-object v6
 
-    invoke-virtual {p0}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
@@ -997,7 +997,7 @@
 
     .line 79
     .local v4, "root":Landroid/preference/PreferenceScreen;
-    iget-object v6, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodInfoList:Ljava/util/List;
+    iget-object v6, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodInfoList:Ljava/util/List;
 
     invoke-interface {v6}, Ljava/util/List;->size()I
 
@@ -1012,7 +1012,7 @@
     if-ge v3, v2, :cond_3
 
     .line 81
-    iget-object v6, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodInfoList:Ljava/util/List;
+    iget-object v6, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodInfoList:Ljava/util/List;
 
     invoke-interface {v6, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1040,7 +1040,7 @@
 
     .line 84
     :cond_0
-    invoke-direct {p0, v1, v4}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->addInputMethodSubtypePreferences(Landroid/view/inputmethod/InputMethodInfo;Landroid/preference/PreferenceScreen;)V
+    invoke-direct {p0, v1, v4}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->addInputMethodSubtypePreferences(Landroid/view/inputmethod/InputMethodInfo;Landroid/preference/PreferenceScreen;)V
 
     .line 80
     :cond_1
@@ -1065,7 +1065,7 @@
     .restart local v4    # "root":Landroid/preference/PreferenceScreen;
     .restart local v5    # "targetImi":Ljava/lang/String;
     :cond_3
-    invoke-virtual {p0, v4}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->setPreferenceScreen(Landroid/preference/PreferenceScreen;)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->setPreferenceScreen(Landroid/preference/PreferenceScreen;)V
 
     .line 88
     return-void
@@ -1076,25 +1076,25 @@
 
     .prologue
     .line 123
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 125
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, v0, v1}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->updateImplicitlyEnabledSubtypes(Ljava/lang/String;Z)V
+    invoke-direct {p0, v0, v1}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->updateImplicitlyEnabledSubtypes(Ljava/lang/String;Z)V
 
     .line 126
-    invoke-virtual {p0}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodInfoList:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodInfoList:Ljava/util/List;
 
-    iget-boolean v2, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mHaveHardKeyboard:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mHaveHardKeyboard:Z
 
-    invoke-static {p0, v0, v1, v2}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeUtil;->saveInputMethodSubtypeList(Lcom/android/settings/SettingsPreferenceFragment;Landroid/content/ContentResolver;Ljava/util/List;Z)V
+    invoke-static {p0, v0, v1, v2}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeUtil;->saveInputMethodSubtypeList(Lcom/android/settings_ex/SettingsPreferenceFragment;Landroid/content/ContentResolver;Ljava/util/List;Z)V
 
     .line 128
     return-void
@@ -1133,7 +1133,7 @@
 
     .line 136
     .local v3, "isChecking":Z
-    iget-object v7, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mAutoSelectionPrefsMap:Ljava/util/HashMap;
+    iget-object v7, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mAutoSelectionPrefsMap:Ljava/util/HashMap;
 
     invoke-virtual {v7}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
@@ -1159,7 +1159,7 @@
 
     .line 138
     .local v2, "imiId":Ljava/lang/String;
-    iget-object v7, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mAutoSelectionPrefsMap:Ljava/util/HashMap;
+    iget-object v7, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mAutoSelectionPrefsMap:Ljava/util/HashMap;
 
     invoke-virtual {v7, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1181,7 +1181,7 @@
 
     move-result v5
 
-    invoke-direct {p0, v2, v5}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->setAutoSelectionSubtypesEnabled(Ljava/lang/String;Z)V
+    invoke-direct {p0, v2, v5}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->setAutoSelectionSubtypesEnabled(Ljava/lang/String;Z)V
 
     move v5, v6
 
@@ -1192,28 +1192,28 @@
     .end local v0    # "autoSelectionPref":Landroid/preference/TwoStatePreference;
     .end local v2    # "imiId":Ljava/lang/String;
     :cond_3
-    instance-of v7, p1, Lcom/android/settings/inputmethod/InputMethodSubtypePreference;
+    instance-of v7, p1, Lcom/android/settings_ex/inputmethod/InputMethodSubtypePreference;
 
     if-eqz v7, :cond_0
 
     move-object v4, p1
 
     .line 148
-    check-cast v4, Lcom/android/settings/inputmethod/InputMethodSubtypePreference;
+    check-cast v4, Lcom/android/settings_ex/inputmethod/InputMethodSubtypePreference;
 
     .line 149
-    .local v4, "subtypePref":Lcom/android/settings/inputmethod/InputMethodSubtypePreference;
-    invoke-virtual {v4, v3}, Lcom/android/settings/inputmethod/InputMethodSubtypePreference;->setChecked(Z)V
+    .local v4, "subtypePref":Lcom/android/settings_ex/inputmethod/InputMethodSubtypePreference;
+    invoke-virtual {v4, v3}, Lcom/android/settings_ex/inputmethod/InputMethodSubtypePreference;->setChecked(Z)V
 
     .line 150
-    invoke-virtual {v4}, Lcom/android/settings/inputmethod/InputMethodSubtypePreference;->isChecked()Z
+    invoke-virtual {v4}, Lcom/android/settings_ex/inputmethod/InputMethodSubtypePreference;->isChecked()Z
 
     move-result v5
 
     if-nez v5, :cond_4
 
     .line 153
-    invoke-direct {p0}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->updateAutoSelectionPreferences()V
+    invoke-direct {p0}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->updateAutoSelectionPreferences()V
 
     :cond_4
     move v5, v6
@@ -1227,32 +1227,32 @@
 
     .prologue
     .line 111
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 114
-    invoke-virtual {p0}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/inputmethod/InputMethodSettingValuesWrapper;->getInstance(Landroid/content/Context;)Lcom/android/settings/inputmethod/InputMethodSettingValuesWrapper;
+    invoke-static {v0}, Lcom/android/settings_ex/inputmethod/InputMethodSettingValuesWrapper;->getInstance(Landroid/content/Context;)Lcom/android/settings_ex/inputmethod/InputMethodSettingValuesWrapper;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/settings/inputmethod/InputMethodSettingValuesWrapper;->refreshAllInputMethodAndSubtypes()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/inputmethod/InputMethodSettingValuesWrapper;->refreshAllInputMethodAndSubtypes()V
 
     .line 116
-    invoke-virtual {p0}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodInfoList:Ljava/util/List;
+    iget-object v1, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodInfoList:Ljava/util/List;
 
-    iget-object v2, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodAndSubtypePrefsMap:Ljava/util/HashMap;
+    iget-object v2, p0, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->mInputMethodAndSubtypePrefsMap:Ljava/util/HashMap;
 
-    invoke-static {p0, v0, v1, v2}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeUtil;->loadInputMethodSubtypeList(Lcom/android/settings/SettingsPreferenceFragment;Landroid/content/ContentResolver;Ljava/util/List;Ljava/util/Map;)V
+    invoke-static {p0, v0, v1, v2}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeUtil;->loadInputMethodSubtypeList(Lcom/android/settings_ex/SettingsPreferenceFragment;Landroid/content/ContentResolver;Ljava/util/List;Ljava/util/Map;)V
 
     .line 118
-    invoke-direct {p0}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;->updateAutoSelectionPreferences()V
+    invoke-direct {p0}, Lcom/android/settings_ex/inputmethod/InputMethodAndSubtypeEnabler;->updateAutoSelectionPreferences()V
 
     .line 119
     return-void

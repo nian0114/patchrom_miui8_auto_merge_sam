@@ -1,11 +1,11 @@
-.class Lcom/android/settings/nfc/PaymentSettings$1;
+.class Lcom/android/settings_ex/nfc/PaymentSettings$1;
 .super Landroid/content/BroadcastReceiver;
 .source "PaymentSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/nfc/PaymentSettings;
+    value = Lcom/android/settings_ex/nfc/PaymentSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nfc/PaymentSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/nfc/PaymentSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/nfc/PaymentSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/nfc/PaymentSettings;)V
     .locals 0
 
     .prologue
     .line 117
-    iput-object p1, p0, Lcom/android/settings/nfc/PaymentSettings$1;->this$0:Lcom/android/settings/nfc/PaymentSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/nfc/PaymentSettings$1;->this$0:Lcom/android/settings_ex/nfc/PaymentSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -46,7 +46,7 @@
 
     .line 121
     .local v0, "action":Ljava/lang/String;
-    sget-boolean v1, Lcom/android/settings/nfc/PaymentSettings;->DBG:Z
+    sget-boolean v1, Lcom/android/settings_ex/nfc/PaymentSettings;->DBG:Z
 
     if-eqz v1, :cond_0
 
@@ -58,7 +58,7 @@
 
     .line 122
     :cond_0
-    sget-boolean v1, Lcom/android/settings/nfc/PaymentSettings;->DBG:Z
+    sget-boolean v1, Lcom/android/settings_ex/nfc/PaymentSettings;->DBG:Z
 
     if-eqz v1, :cond_1
 
@@ -86,7 +86,7 @@
 
     .line 123
     :cond_1
-    sget-boolean v1, Lcom/android/settings/nfc/PaymentSettings;->DBG:Z
+    sget-boolean v1, Lcom/android/settings_ex/nfc/PaymentSettings;->DBG:Z
 
     if-eqz v1, :cond_2
 
@@ -120,9 +120,9 @@
     if-ne v1, v2, :cond_3
 
     .line 128
-    iget-object v1, p0, Lcom/android/settings/nfc/PaymentSettings$1;->this$0:Lcom/android/settings/nfc/PaymentSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/PaymentSettings$1;->this$0:Lcom/android/settings_ex/nfc/PaymentSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/nfc/PaymentSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/nfc/PaymentSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -144,9 +144,9 @@
     if-eqz v1, :cond_5
 
     .line 131
-    iget-object v1, p0, Lcom/android/settings/nfc/PaymentSettings$1;->this$0:Lcom/android/settings/nfc/PaymentSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/PaymentSettings$1;->this$0:Lcom/android/settings_ex/nfc/PaymentSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/nfc/PaymentSettings;->refresh()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/nfc/PaymentSettings;->refresh()V
 
     goto :goto_0
 
@@ -161,14 +161,14 @@
     if-eqz v1, :cond_3
 
     .line 133
-    iget-object v1, p0, Lcom/android/settings/nfc/PaymentSettings$1;->this$0:Lcom/android/settings/nfc/PaymentSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/PaymentSettings$1;->this$0:Lcom/android/settings_ex/nfc/PaymentSettings;
 
-    # getter for: Lcom/android/settings/nfc/PaymentSettings;->mPaymentBackend:Lcom/android/settings/nfc/PaymentBackend;
-    invoke-static {v1}, Lcom/android/settings/nfc/PaymentSettings;->access$100(Lcom/android/settings/nfc/PaymentSettings;)Lcom/android/settings/nfc/PaymentBackend;
+    # getter for: Lcom/android/settings_ex/nfc/PaymentSettings;->mPaymentBackend:Lcom/android/settings_ex/nfc/PaymentBackend;
+    invoke-static {v1}, Lcom/android/settings_ex/nfc/PaymentSettings;->access$100(Lcom/android/settings_ex/nfc/PaymentSettings;)Lcom/android/settings_ex/nfc/PaymentBackend;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/settings/nfc/PaymentBackend;->ActionRetry()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/nfc/PaymentBackend;->ActionRetry()V
 
     goto :goto_0
 .end method

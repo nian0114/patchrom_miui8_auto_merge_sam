@@ -1,11 +1,11 @@
-.class Lcom/android/settings/deviceinfo/StorageSettings$1;
+.class Lcom/android/settings_ex/deviceinfo/StorageSettings$1;
 .super Landroid/os/storage/StorageEventListener;
 .source "StorageSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/deviceinfo/StorageSettings;
+    value = Lcom/android/settings_ex/deviceinfo/StorageSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/StorageSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/StorageSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/StorageSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/StorageSettings;)V
     .locals 0
 
     .prologue
     .line 117
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/StorageSettings$1;->this$0:Lcom/android/settings/deviceinfo/StorageSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/StorageSettings$1;->this$0:Lcom/android/settings_ex/deviceinfo/StorageSettings;
 
     invoke-direct {p0}, Landroid/os/storage/StorageEventListener;-><init>()V
 
@@ -41,18 +41,18 @@
 
     .prologue
     .line 120
-    # invokes: Lcom/android/settings/deviceinfo/StorageSettings;->isInteresting(Landroid/os/storage/VolumeInfo;)Z
-    invoke-static {p1}, Lcom/android/settings/deviceinfo/StorageSettings;->access$000(Landroid/os/storage/VolumeInfo;)Z
+    # invokes: Lcom/android/settings_ex/deviceinfo/StorageSettings;->isInteresting(Landroid/os/storage/VolumeInfo;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/deviceinfo/StorageSettings;->access$000(Landroid/os/storage/VolumeInfo;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 121
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StorageSettings$1;->this$0:Lcom/android/settings/deviceinfo/StorageSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageSettings$1;->this$0:Lcom/android/settings_ex/deviceinfo/StorageSettings;
 
-    # invokes: Lcom/android/settings/deviceinfo/StorageSettings;->refresh()V
-    invoke-static {v0}, Lcom/android/settings/deviceinfo/StorageSettings;->access$100(Lcom/android/settings/deviceinfo/StorageSettings;)V
+    # invokes: Lcom/android/settings_ex/deviceinfo/StorageSettings;->refresh()V
+    invoke-static {v0}, Lcom/android/settings_ex/deviceinfo/StorageSettings;->access$100(Lcom/android/settings_ex/deviceinfo/StorageSettings;)V
 
     .line 123
     :cond_0

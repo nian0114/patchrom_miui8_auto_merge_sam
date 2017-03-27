@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/vpn2/AppPreference;
-.super Lcom/android/settings/vpn2/ManageablePreference;
+.class public Lcom/android/settings_ex/vpn2/AppPreference;
+.super Lcom/android/settings_ex/vpn2/ManageablePreference;
 .source "AppPreference.java"
 
 
@@ -25,21 +25,21 @@
     .line 50
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0, p2}, Lcom/android/settings/vpn2/ManageablePreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;Landroid/view/View$OnClickListener;)V
+    invoke-direct {p0, p1, v0, p2}, Lcom/android/settings_ex/vpn2/ManageablePreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;Landroid/view/View$OnClickListener;)V
 
     .line 43
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/android/settings/vpn2/AppPreference;->mState:I
+    iput v0, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mState:I
 
     .line 51
-    iput-object p3, p0, Lcom/android/settings/vpn2/AppPreference;->mPackageName:Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mPackageName:Ljava/lang/String;
 
     .line 52
-    iput p4, p0, Lcom/android/settings/vpn2/AppPreference;->mUid:I
+    iput p4, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mUid:I
 
     .line 53
-    invoke-direct {p0}, Lcom/android/settings/vpn2/AppPreference;->update()V
+    invoke-direct {p0}, Lcom/android/settings_ex/vpn2/AppPreference;->update()V
 
     .line 54
     return-void
@@ -57,7 +57,7 @@
     .line 128
     new-instance v0, Landroid/os/UserHandle;
 
-    iget v1, p0, Lcom/android/settings/vpn2/AppPreference;->mUid:I
+    iget v1, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mUid:I
 
     invoke-static {v1}, Landroid/os/UserHandle;->getUserId(I)I
 
@@ -67,11 +67,11 @@
 
     .line 129
     .local v0, "user":Landroid/os/UserHandle;
-    invoke-virtual {p0}, Lcom/android/settings/vpn2/AppPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/vpn2/AppPreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/vpn2/AppPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/vpn2/AppPreference;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -93,7 +93,7 @@
 
     .prologue
     .line 88
-    invoke-virtual {p0}, Lcom/android/settings/vpn2/AppPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/vpn2/AppPreference;->getContext()Landroid/content/Context;
 
     move-result-object v7
 
@@ -109,21 +109,21 @@
 
     .line 89
     .local v5, "states":[Ljava/lang/String;
-    iget v7, p0, Lcom/android/settings/vpn2/AppPreference;->mState:I
+    iget v7, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mState:I
 
     if-eqz v7, :cond_2
 
-    iget v7, p0, Lcom/android/settings/vpn2/AppPreference;->mState:I
+    iget v7, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mState:I
 
     aget-object v7, v5, v7
 
     :goto_0
-    invoke-virtual {p0, v7}, Lcom/android/settings/vpn2/AppPreference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/vpn2/AppPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 91
-    iget-object v7, p0, Lcom/android/settings/vpn2/AppPreference;->mPackageName:Ljava/lang/String;
+    iget-object v7, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mPackageName:Ljava/lang/String;
 
-    iput-object v7, p0, Lcom/android/settings/vpn2/AppPreference;->mName:Ljava/lang/String;
+    iput-object v7, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mName:Ljava/lang/String;
 
     .line 92
     const/4 v0, 0x0
@@ -139,7 +139,7 @@
     .line 98
     .local v4, "resizedIcon":Landroid/graphics/drawable/Drawable;
     :try_start_0
-    invoke-direct {p0}, Lcom/android/settings/vpn2/AppPreference;->getUserContext()Landroid/content/Context;
+    invoke-direct {p0}, Lcom/android/settings_ex/vpn2/AppPreference;->getUserContext()Landroid/content/Context;
 
     move-result-object v6
 
@@ -153,7 +153,7 @@
     .line 104
     .local v3, "pm":Landroid/content/pm/PackageManager;
     :try_start_1
-    iget-object v7, p0, Lcom/android/settings/vpn2/AppPreference;->mPackageName:Ljava/lang/String;
+    iget-object v7, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mPackageName:Ljava/lang/String;
 
     const/4 v8, 0x0
 
@@ -177,7 +177,7 @@
     move-result-object v0
 
     .line 107
-    iget-object v7, p0, Lcom/android/settings/vpn2/AppPreference;->mPackageName:Ljava/lang/String;
+    iget-object v7, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mPackageName:Ljava/lang/String;
 
     invoke-static {v6, v7}, Lcom/android/internal/net/VpnConfig;->getVpnLabel(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/CharSequence;
 
@@ -187,7 +187,7 @@
 
     move-result-object v7
 
-    iput-object v7, p0, Lcom/android/settings/vpn2/AppPreference;->mName:Ljava/lang/String;
+    iput-object v7, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mName:Ljava/lang/String;
     :try_end_1
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -199,46 +199,46 @@
 
     .line 113
     :try_start_2
-    invoke-virtual {p0}, Lcom/android/settings/vpn2/AppPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/vpn2/AppPreference;->getContext()Landroid/content/Context;
 
     move-result-object v7
 
-    invoke-static {v7}, Lcom/android/settings/Utils;->getDefaultActivityIconForTray(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v7}, Lcom/android/settings_ex/Utils;->getDefaultActivityIconForTray(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     .line 115
     :cond_1
-    new-instance v1, Lcom/android/settings/IconResizer;
+    new-instance v1, Lcom/android/settings_ex/IconResizer;
 
-    invoke-direct {v1, v6}, Lcom/android/settings/IconResizer;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v6}, Lcom/android/settings_ex/IconResizer;-><init>(Landroid/content/Context;)V
 
     .line 116
-    .local v1, "iconResizer":Lcom/android/settings/IconResizer;
+    .local v1, "iconResizer":Lcom/android/settings_ex/IconResizer;
     const v7, 0x7f0c00ac
 
-    invoke-virtual {v1, v7}, Lcom/android/settings/IconResizer;->setIconSize(I)V
+    invoke-virtual {v1, v7}, Lcom/android/settings_ex/IconResizer;->setIconSize(I)V
 
     .line 117
-    invoke-virtual {v1, v0}, Lcom/android/settings/IconResizer;->createIconThumbnail(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/IconResizer;->createIconThumbnail(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
     :try_end_2
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2 .. :try_end_2} :catch_0
 
     move-result-object v4
 
     .line 121
-    .end local v1    # "iconResizer":Lcom/android/settings/IconResizer;
+    .end local v1    # "iconResizer":Lcom/android/settings_ex/IconResizer;
     .end local v3    # "pm":Landroid/content/pm/PackageManager;
     :goto_2
-    iget-object v7, p0, Lcom/android/settings/vpn2/AppPreference;->mName:Ljava/lang/String;
+    iget-object v7, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mName:Ljava/lang/String;
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/vpn2/AppPreference;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/vpn2/AppPreference;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 122
-    invoke-virtual {p0, v4}, Lcom/android/settings/vpn2/AppPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/vpn2/AppPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 124
-    invoke-virtual {p0}, Lcom/android/settings/vpn2/AppPreference;->notifyHierarchyChanged()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/vpn2/AppPreference;->notifyHierarchyChanged()V
 
     .line 125
     return-void
@@ -277,29 +277,29 @@
 
     .prologue
     .line 134
-    instance-of v2, p1, Lcom/android/settings/vpn2/AppPreference;
+    instance-of v2, p1, Lcom/android/settings_ex/vpn2/AppPreference;
 
     if-eqz v2, :cond_1
 
     move-object v0, p1
 
     .line 135
-    check-cast v0, Lcom/android/settings/vpn2/AppPreference;
+    check-cast v0, Lcom/android/settings_ex/vpn2/AppPreference;
 
     .line 137
-    .local v0, "another":Lcom/android/settings/vpn2/AppPreference;
-    iget v2, v0, Lcom/android/settings/vpn2/AppPreference;->mState:I
+    .local v0, "another":Lcom/android/settings_ex/vpn2/AppPreference;
+    iget v2, v0, Lcom/android/settings_ex/vpn2/AppPreference;->mState:I
 
-    iget v3, p0, Lcom/android/settings/vpn2/AppPreference;->mState:I
+    iget v3, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mState:I
 
     sub-int v1, v2, v3
 
     .local v1, "result":I
     if-nez v1, :cond_0
 
-    iget-object v2, p0, Lcom/android/settings/vpn2/AppPreference;->mName:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mName:Ljava/lang/String;
 
-    iget-object v3, v0, Lcom/android/settings/vpn2/AppPreference;->mName:Ljava/lang/String;
+    iget-object v3, v0, Lcom/android/settings_ex/vpn2/AppPreference;->mName:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
 
@@ -307,9 +307,9 @@
 
     if-nez v1, :cond_0
 
-    iget-object v2, p0, Lcom/android/settings/vpn2/AppPreference;->mPackageName:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mPackageName:Ljava/lang/String;
 
-    iget-object v3, v0, Lcom/android/settings/vpn2/AppPreference;->mPackageName:Ljava/lang/String;
+    iget-object v3, v0, Lcom/android/settings_ex/vpn2/AppPreference;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
@@ -318,14 +318,14 @@
     if-nez v1, :cond_0
 
     .line 140
-    iget v2, p0, Lcom/android/settings/vpn2/AppPreference;->mUid:I
+    iget v2, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mUid:I
 
-    iget v3, v0, Lcom/android/settings/vpn2/AppPreference;->mUid:I
+    iget v3, v0, Lcom/android/settings_ex/vpn2/AppPreference;->mUid:I
 
     sub-int v1, v2, v3
 
     .line 148
-    .end local v0    # "another":Lcom/android/settings/vpn2/AppPreference;
+    .end local v0    # "another":Lcom/android/settings_ex/vpn2/AppPreference;
     .end local v1    # "result":I
     :cond_0
     :goto_0
@@ -333,18 +333,18 @@
 
     .line 143
     :cond_1
-    instance-of v2, p1, Lcom/android/settings/vpn2/ConfigPreference;
+    instance-of v2, p1, Lcom/android/settings_ex/vpn2/ConfigPreference;
 
     if-eqz v2, :cond_2
 
     move-object v0, p1
 
     .line 145
-    check-cast v0, Lcom/android/settings/vpn2/ConfigPreference;
+    check-cast v0, Lcom/android/settings_ex/vpn2/ConfigPreference;
 
     .line 146
-    .local v0, "another":Lcom/android/settings/vpn2/ConfigPreference;
-    invoke-virtual {v0, p0}, Lcom/android/settings/vpn2/ConfigPreference;->compareTo(Landroid/preference/Preference;)I
+    .local v0, "another":Lcom/android/settings_ex/vpn2/ConfigPreference;
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/vpn2/ConfigPreference;->compareTo(Landroid/preference/Preference;)I
 
     move-result v2
 
@@ -353,9 +353,9 @@
     goto :goto_0
 
     .line 148
-    .end local v0    # "another":Lcom/android/settings/vpn2/ConfigPreference;
+    .end local v0    # "another":Lcom/android/settings_ex/vpn2/ConfigPreference;
     :cond_2
-    invoke-super {p0, p1}, Lcom/android/settings/vpn2/ManageablePreference;->compareTo(Landroid/preference/Preference;)I
+    invoke-super {p0, p1}, Lcom/android/settings_ex/vpn2/ManageablePreference;->compareTo(Landroid/preference/Preference;)I
 
     move-result v1
 
@@ -371,7 +371,7 @@
     check-cast p1, Landroid/preference/Preference;
 
     .end local p1    # "x0":Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/vpn2/AppPreference;->compareTo(Landroid/preference/Preference;)I
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/vpn2/AppPreference;->compareTo(Landroid/preference/Preference;)I
 
     move-result v0
 
@@ -383,7 +383,7 @@
 
     .prologue
     .line 67
-    iget-object v0, p0, Lcom/android/settings/vpn2/AppPreference;->mName:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mName:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -395,7 +395,7 @@
     .line 57
     new-instance v2, Landroid/os/UserHandle;
 
-    iget v3, p0, Lcom/android/settings/vpn2/AppPreference;->mUid:I
+    iget v3, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mUid:I
 
     invoke-static {v3}, Landroid/os/UserHandle;->getUserId(I)I
 
@@ -406,7 +406,7 @@
     .line 59
     .local v2, "user":Landroid/os/UserHandle;
     :try_start_0
-    invoke-direct {p0}, Lcom/android/settings/vpn2/AppPreference;->getUserContext()Landroid/content/Context;
+    invoke-direct {p0}, Lcom/android/settings_ex/vpn2/AppPreference;->getUserContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -416,7 +416,7 @@
 
     .line 60
     .local v1, "pm":Landroid/content/pm/PackageManager;
-    iget-object v3, p0, Lcom/android/settings/vpn2/AppPreference;->mPackageName:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mPackageName:Ljava/lang/String;
 
     const/4 v4, 0x0
 
@@ -447,7 +447,7 @@
 
     .prologue
     .line 71
-    iget-object v0, p0, Lcom/android/settings/vpn2/AppPreference;->mPackageName:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mPackageName:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -457,7 +457,7 @@
 
     .prologue
     .line 79
-    iget v0, p0, Lcom/android/settings/vpn2/AppPreference;->mState:I
+    iget v0, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mState:I
 
     return v0
 .end method
@@ -467,7 +467,7 @@
 
     .prologue
     .line 75
-    iget v0, p0, Lcom/android/settings/vpn2/AppPreference;->mUid:I
+    iget v0, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mUid:I
 
     return v0
 .end method
@@ -478,10 +478,10 @@
 
     .prologue
     .line 83
-    iput p1, p0, Lcom/android/settings/vpn2/AppPreference;->mState:I
+    iput p1, p0, Lcom/android/settings_ex/vpn2/AppPreference;->mState:I
 
     .line 84
-    invoke-direct {p0}, Lcom/android/settings/vpn2/AppPreference;->update()V
+    invoke-direct {p0}, Lcom/android/settings_ex/vpn2/AppPreference;->update()V
 
     .line 85
     return-void

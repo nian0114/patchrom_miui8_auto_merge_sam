@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$2;
+.class Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$2;
 .super Ljava/lang/Object;
 .source "AccessibilityDialogPreference.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    value = Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;)V
     .locals 0
 
     .prologue
     .line 54
-    iput-object p1, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$2;->this$0:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$2;->this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,10 +45,10 @@
 
     .prologue
     .line 57
-    iget-object v1, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$2;->this$0:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$2;->this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
-    # getter for: Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mValues:Ljava/util/ArrayList;
-    invoke-static {v1}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->access$000(Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;)Ljava/util/ArrayList;
+    # getter for: Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mValues:Ljava/util/ArrayList;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->access$000(Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -58,23 +58,23 @@
 
     .line 58
     .local v0, "value":Ljava/lang/Object;
-    iget-object v1, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$2;->this$0:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$2;->this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
-    # getter for: Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mCallback:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;
-    invoke-static {v1}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->access$100(Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;)Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;
+    # getter for: Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mCallback:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->access$100(Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;)Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$2;->this$0:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$2;->this$0:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;
 
-    # getter for: Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mCallback:Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;
-    invoke-static {v1}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;->access$100(Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference;)Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;
+    # getter for: Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->mCallback:Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;->access$100(Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference;)Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;
 
     move-result-object v1
 
-    invoke-interface {v1, p3, v0}, Lcom/android/settings/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;->onItemSelected(ILjava/lang/Object;)Z
+    invoke-interface {v1, p3, v0}, Lcom/android/settings_ex/accessibility/sharedaccessibility/AccessibilityDialogPreference$Callback;->onItemSelected(ILjava/lang/Object;)Z
 
     move-result v1
 

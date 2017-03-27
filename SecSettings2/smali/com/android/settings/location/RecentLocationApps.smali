@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/location/RecentLocationApps;
+.class public Lcom/android/settings_ex/location/RecentLocationApps;
 .super Ljava/lang/Object;
 .source "RecentLocationApps.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/location/RecentLocationApps$PackageEntryClickedListener;
+        Lcom/android/settings_ex/location/RecentLocationApps$PackageEntryClickedListener;
     }
 .end annotation
 
@@ -16,7 +16,7 @@
 
 
 # instance fields
-.field private final mActivity:Lcom/android/settings/SettingsActivity;
+.field private final mActivity:Lcom/android/settings_ex/SettingsActivity;
 
 .field private final mPackageManager:Landroid/content/pm/PackageManager;
 
@@ -27,51 +27,51 @@
 
     .prologue
     .line 48
-    const-class v0, Lcom/android/settings/location/RecentLocationApps;
+    const-class v0, Lcom/android/settings_ex/location/RecentLocationApps;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/location/RecentLocationApps;->TAG:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/location/RecentLocationApps;->TAG:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/android/settings/SettingsActivity;)V
+.method public constructor <init>(Lcom/android/settings_ex/SettingsActivity;)V
     .locals 1
-    .param p1, "activity"    # Lcom/android/settings/SettingsActivity;
+    .param p1, "activity"    # Lcom/android/settings_ex/SettingsActivity;
 
     .prologue
     .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 57
-    iput-object p1, p0, Lcom/android/settings/location/RecentLocationApps;->mActivity:Lcom/android/settings/SettingsActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/location/RecentLocationApps;->mActivity:Lcom/android/settings_ex/SettingsActivity;
 
     .line 58
-    invoke-virtual {p1}, Lcom/android/settings/SettingsActivity;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p1}, Lcom/android/settings_ex/SettingsActivity;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/location/RecentLocationApps;->mPackageManager:Landroid/content/pm/PackageManager;
+    iput-object v0, p0, Lcom/android/settings_ex/location/RecentLocationApps;->mPackageManager:Landroid/content/pm/PackageManager;
 
     .line 59
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/location/RecentLocationApps;)Lcom/android/settings/SettingsActivity;
+.method static synthetic access$000(Lcom/android/settings_ex/location/RecentLocationApps;)Lcom/android/settings_ex/SettingsActivity;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/location/RecentLocationApps;
+    .param p0, "x0"    # Lcom/android/settings_ex/location/RecentLocationApps;
 
     .prologue
     .line 47
-    iget-object v0, p0, Lcom/android/settings/location/RecentLocationApps;->mActivity:Lcom/android/settings/SettingsActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/location/RecentLocationApps;->mActivity:Lcom/android/settings_ex/SettingsActivity;
 
     return-object v0
 .end method
 
-.method private createRecentLocationEntry(Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;ZLjava/lang/CharSequence;Landroid/preference/Preference$OnPreferenceClickListener;)Lcom/android/settings/DimmableIconPreference;
+.method private createRecentLocationEntry(Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;ZLjava/lang/CharSequence;Landroid/preference/Preference$OnPreferenceClickListener;)Lcom/android/settings_ex/DimmableIconPreference;
     .locals 4
     .param p1, "icon"    # Landroid/graphics/drawable/Drawable;
     .param p2, "label"    # Ljava/lang/CharSequence;
@@ -81,37 +81,37 @@
 
     .prologue
     .line 88
-    new-instance v1, Lcom/android/settings/DimmableIconPreference;
+    new-instance v1, Lcom/android/settings_ex/DimmableIconPreference;
 
-    iget-object v3, p0, Lcom/android/settings/location/RecentLocationApps;->mActivity:Lcom/android/settings/SettingsActivity;
+    iget-object v3, p0, Lcom/android/settings_ex/location/RecentLocationApps;->mActivity:Lcom/android/settings_ex/SettingsActivity;
 
-    invoke-direct {v1, v3, p4}, Lcom/android/settings/DimmableIconPreference;-><init>(Landroid/content/Context;Ljava/lang/CharSequence;)V
+    invoke-direct {v1, v3, p4}, Lcom/android/settings_ex/DimmableIconPreference;-><init>(Landroid/content/Context;Ljava/lang/CharSequence;)V
 
     .line 90
-    .local v1, "pref":Lcom/android/settings/DimmableIconPreference;
-    new-instance v0, Lcom/android/settings/IconResizer;
+    .local v1, "pref":Lcom/android/settings_ex/DimmableIconPreference;
+    new-instance v0, Lcom/android/settings_ex/IconResizer;
 
-    iget-object v3, p0, Lcom/android/settings/location/RecentLocationApps;->mActivity:Lcom/android/settings/SettingsActivity;
+    iget-object v3, p0, Lcom/android/settings_ex/location/RecentLocationApps;->mActivity:Lcom/android/settings_ex/SettingsActivity;
 
-    invoke-direct {v0, v3}, Lcom/android/settings/IconResizer;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v3}, Lcom/android/settings_ex/IconResizer;-><init>(Landroid/content/Context;)V
 
     .line 91
-    .local v0, "iconResizer":Lcom/android/settings/IconResizer;
+    .local v0, "iconResizer":Lcom/android/settings_ex/IconResizer;
     const v3, 0x7f0c00ac
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/IconResizer;->setIconSize(I)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/IconResizer;->setIconSize(I)V
 
     .line 92
-    invoke-virtual {v0, p1}, Lcom/android/settings/IconResizer;->createIconThumbnail(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, p1}, Lcom/android/settings_ex/IconResizer;->createIconThumbnail(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
     .line 94
     .local v2, "resizedicon":Landroid/graphics/drawable/Drawable;
-    invoke-virtual {v1, v2}, Lcom/android/settings/DimmableIconPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/DimmableIconPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 95
-    invoke-virtual {v1, p2}, Lcom/android/settings/DimmableIconPreference;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, p2}, Lcom/android/settings_ex/DimmableIconPreference;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 96
     if-eqz p3, :cond_0
@@ -119,11 +119,11 @@
     .line 97
     const v3, 0x7f0e078f
 
-    invoke-virtual {v1, v3}, Lcom/android/settings/DimmableIconPreference;->setSummary(I)V
+    invoke-virtual {v1, v3}, Lcom/android/settings_ex/DimmableIconPreference;->setSummary(I)V
 
     .line 101
     :goto_0
-    invoke-virtual {v1, p5}, Lcom/android/settings/DimmableIconPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
+    invoke-virtual {v1, p5}, Lcom/android/settings_ex/DimmableIconPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
     .line 102
     return-object v1
@@ -132,7 +132,7 @@
     :cond_0
     const v3, 0x7f0e0790
 
-    invoke-virtual {v1, v3}, Lcom/android/settings/DimmableIconPreference;->setSummary(I)V
+    invoke-virtual {v1, v3}, Lcom/android/settings_ex/DimmableIconPreference;->setSummary(I)V
 
     goto :goto_0
 .end method
@@ -238,7 +238,7 @@
     if-nez v17, :cond_4
 
     .line 175
-    sget-object v4, Lcom/android/settings/location/RecentLocationApps;->TAG:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/location/RecentLocationApps;->TAG:Ljava/lang/String;
 
     const/4 v9, 0x2
 
@@ -249,7 +249,7 @@
     if-eqz v4, :cond_3
 
     .line 176
-    sget-object v4, Lcom/android/settings/location/RecentLocationApps;->TAG:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/location/RecentLocationApps;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -300,7 +300,7 @@
     const/16 v19, 0x0
 
     .line 188
-    .local v19, "preference":Lcom/android/settings/DimmableIconPreference;
+    .local v19, "preference":Lcom/android/settings_ex/DimmableIconPreference;
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -325,7 +325,7 @@
     if-nez v11, :cond_5
 
     .line 192
-    sget-object v4, Lcom/android/settings/location/RecentLocationApps;->TAG:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/location/RecentLocationApps;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -374,9 +374,9 @@
     :cond_5
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/location/RecentLocationApps;->mActivity:Lcom/android/settings/SettingsActivity;
+    iget-object v4, v0, Lcom/android/settings_ex/location/RecentLocationApps;->mActivity:Lcom/android/settings_ex/SettingsActivity;
 
-    invoke-virtual {v4}, Lcom/android/settings/SettingsActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v4}, Lcom/android/settings_ex/SettingsActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v22
 
@@ -390,7 +390,7 @@
     .local v24, "userHandle":Landroid/os/UserHandle;
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/location/RecentLocationApps;->mPackageManager:Landroid/content/pm/PackageManager;
+    iget-object v4, v0, Lcom/android/settings_ex/location/RecentLocationApps;->mPackageManager:Landroid/content/pm/PackageManager;
 
     const/4 v9, 0x1
 
@@ -402,7 +402,7 @@
     .local v10, "appIcon":Landroid/graphics/drawable/Drawable;
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/location/RecentLocationApps;->mPackageManager:Landroid/content/pm/PackageManager;
+    iget-object v4, v0, Lcom/android/settings_ex/location/RecentLocationApps;->mPackageManager:Landroid/content/pm/PackageManager;
 
     move-object/from16 v0, v24
 
@@ -414,7 +414,7 @@
     .local v5, "icon":Landroid/graphics/drawable/Drawable;
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/location/RecentLocationApps;->mPackageManager:Landroid/content/pm/PackageManager;
+    iget-object v4, v0, Lcom/android/settings_ex/location/RecentLocationApps;->mPackageManager:Landroid/content/pm/PackageManager;
 
     invoke-virtual {v4, v11}, Landroid/content/pm/PackageManager;->getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
 
@@ -424,7 +424,7 @@
     .local v6, "appLabel":Ljava/lang/CharSequence;
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/android/settings/location/RecentLocationApps;->mPackageManager:Landroid/content/pm/PackageManager;
+    iget-object v4, v0, Lcom/android/settings_ex/location/RecentLocationApps;->mPackageManager:Landroid/content/pm/PackageManager;
 
     move-object/from16 v0, v24
 
@@ -449,7 +449,7 @@
 
     .line 208
     :cond_6
-    new-instance v9, Lcom/android/settings/location/RecentLocationApps$PackageEntryClickedListener;
+    new-instance v9, Lcom/android/settings_ex/location/RecentLocationApps$PackageEntryClickedListener;
 
     move-object/from16 v0, p0
 
@@ -457,11 +457,11 @@
 
     move-object/from16 v2, v24
 
-    invoke-direct {v9, v0, v1, v2}, Lcom/android/settings/location/RecentLocationApps$PackageEntryClickedListener;-><init>(Lcom/android/settings/location/RecentLocationApps;Ljava/lang/String;Landroid/os/UserHandle;)V
+    invoke-direct {v9, v0, v1, v2}, Lcom/android/settings_ex/location/RecentLocationApps$PackageEntryClickedListener;-><init>(Lcom/android/settings_ex/location/RecentLocationApps;Ljava/lang/String;Landroid/os/UserHandle;)V
 
     move-object/from16 v4, p0
 
-    invoke-direct/range {v4 .. v9}, Lcom/android/settings/location/RecentLocationApps;->createRecentLocationEntry(Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;ZLjava/lang/CharSequence;Landroid/preference/Preference$OnPreferenceClickListener;)Lcom/android/settings/DimmableIconPreference;
+    invoke-direct/range {v4 .. v9}, Lcom/android/settings_ex/location/RecentLocationApps;->createRecentLocationEntry(Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;ZLjava/lang/CharSequence;Landroid/preference/Preference$OnPreferenceClickListener;)Lcom/android/settings_ex/DimmableIconPreference;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -483,7 +483,7 @@
 
     .line 212
     .local v12, "e":Landroid/os/RemoteException;
-    sget-object v4, Lcom/android/settings/location/RecentLocationApps;->TAG:Ljava/lang/String;
+    sget-object v4, Lcom/android/settings_ex/location/RecentLocationApps;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -553,13 +553,13 @@
     .line 110
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/location/RecentLocationApps;->mActivity:Lcom/android/settings/SettingsActivity;
+    iget-object v0, v0, Lcom/android/settings_ex/location/RecentLocationApps;->mActivity:Lcom/android/settings_ex/SettingsActivity;
 
     move-object/from16 v17, v0
 
     const-string v18, "appops"
 
-    invoke-virtual/range {v17 .. v18}, Lcom/android/settings/SettingsActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual/range {v17 .. v18}, Lcom/android/settings_ex/SettingsActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -599,13 +599,13 @@
     .local v8, "now":J
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/settings/location/RecentLocationApps;->mActivity:Lcom/android/settings/SettingsActivity;
+    iget-object v0, v0, Lcom/android/settings_ex/location/RecentLocationApps;->mActivity:Lcom/android/settings_ex/SettingsActivity;
 
     move-object/from16 v17, v0
 
     const-string v18, "user"
 
-    invoke-virtual/range {v17 .. v18}, Lcom/android/settings/SettingsActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual/range {v17 .. v18}, Lcom/android/settings_ex/SettingsActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v15
 
@@ -716,7 +716,7 @@
     :cond_2
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v15, v8, v9, v7}, Lcom/android/settings/location/RecentLocationApps;->getPreferenceFromOps(Landroid/os/UserManager;JLandroid/app/AppOpsManager$PackageOps;)Landroid/preference/Preference;
+    invoke-direct {v0, v15, v8, v9, v7}, Lcom/android/settings_ex/location/RecentLocationApps;->getPreferenceFromOps(Landroid/os/UserManager;JLandroid/app/AppOpsManager$PackageOps;)Landroid/preference/Preference;
 
     move-result-object v11
 

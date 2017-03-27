@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DataUsageSummary$31$2;
+.class Lcom/android/settings_ex/DataUsageSummary$31$2;
 .super Ljava/lang/Object;
 .source "DataUsageSummary.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DataUsageSummary$31;->onClick(Landroid/view/View;)V
+    value = Lcom/android/settings_ex/DataUsageSummary$31;->onClick(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/DataUsageSummary$31;
+.field final synthetic this$1:Lcom/android/settings_ex/DataUsageSummary$31;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DataUsageSummary$31;)V
+.method constructor <init>(Lcom/android/settings_ex/DataUsageSummary$31;)V
     .locals 0
 
     .prologue
     .line 3622
-    iput-object p1, p0, Lcom/android/settings/DataUsageSummary$31$2;->this$1:Lcom/android/settings/DataUsageSummary$31;
+    iput-object p1, p0, Lcom/android/settings_ex/DataUsageSummary$31$2;->this$1:Lcom/android/settings_ex/DataUsageSummary$31;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

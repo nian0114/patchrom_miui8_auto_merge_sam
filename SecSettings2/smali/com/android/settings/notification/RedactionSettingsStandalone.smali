@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/notification/RedactionSettingsStandalone;
-.super Lcom/android/settings/SettingsActivity;
+.class public Lcom/android/settings_ex/notification/RedactionSettingsStandalone;
+.super Lcom/android/settings_ex/SettingsActivity;
 .source "RedactionSettingsStandalone.java"
 
 
@@ -9,7 +9,7 @@
 
     .prologue
     .line 26
-    invoke-direct {p0}, Lcom/android/settings/SettingsActivity;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsActivity;-><init>()V
 
     return-void
 .end method
@@ -25,7 +25,7 @@
     .line 30
     new-instance v0, Landroid/content/Intent;
 
-    invoke-super {p0}, Lcom/android/settings/SettingsActivity;->getIntent()Landroid/content/Intent;
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -35,7 +35,7 @@
     .local v0, "modIntent":Landroid/content/Intent;
     const-string v1, ":settings:show_fragment"
 
-    const-class v2, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;
+    const-class v2, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -65,7 +65,7 @@
 
     const v3, 0x7f0e0e68
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/notification/RedactionSettingsStandalone;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/notification/RedactionSettingsStandalone;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -86,7 +86,7 @@
 
     .prologue
     .line 42
-    const-class v0, Lcom/android/settings/notification/RedactionInterstitial$RedactionInterstitialFragment;
+    const-class v0, Lcom/android/settings_ex/notification/RedactionInterstitial$RedactionInterstitialFragment;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

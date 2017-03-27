@@ -1,4 +1,4 @@
-.class Lcom/android/settings/inputmethod/SpellCheckersSettings$1;
+.class Lcom/android/settings_ex/inputmethod/SpellCheckersSettings$1;
 .super Ljava/lang/Object;
 .source "SpellCheckersSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/inputmethod/SpellCheckersSettings;->onResume()V
+    value = Lcom/android/settings_ex/inputmethod/SpellCheckersSettings;->onResume()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/inputmethod/SpellCheckersSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/inputmethod/SpellCheckersSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/inputmethod/SpellCheckersSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/inputmethod/SpellCheckersSettings;)V
     .locals 0
 
     .prologue
     .line 158
-    iput-object p1, p0, Lcom/android/settings/inputmethod/SpellCheckersSettings$1;->this$0:Lcom/android/settings/inputmethod/SpellCheckersSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/inputmethod/SpellCheckersSettings$1;->this$0:Lcom/android/settings_ex/inputmethod/SpellCheckersSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,10 +41,10 @@
 
     .prologue
     .line 161
-    iget-object v0, p0, Lcom/android/settings/inputmethod/SpellCheckersSettings$1;->this$0:Lcom/android/settings/inputmethod/SpellCheckersSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/inputmethod/SpellCheckersSettings$1;->this$0:Lcom/android/settings_ex/inputmethod/SpellCheckersSettings;
 
-    # invokes: Lcom/android/settings/inputmethod/SpellCheckersSettings;->updatePreferenceScreen()V
-    invoke-static {v0}, Lcom/android/settings/inputmethod/SpellCheckersSettings;->access$000(Lcom/android/settings/inputmethod/SpellCheckersSettings;)V
+    # invokes: Lcom/android/settings_ex/inputmethod/SpellCheckersSettings;->updatePreferenceScreen()V
+    invoke-static {v0}, Lcom/android/settings_ex/inputmethod/SpellCheckersSettings;->access$000(Lcom/android/settings_ex/inputmethod/SpellCheckersSettings;)V
 
     .line 162
     return-void

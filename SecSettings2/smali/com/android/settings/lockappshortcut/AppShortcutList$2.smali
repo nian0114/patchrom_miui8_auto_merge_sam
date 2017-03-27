@@ -1,4 +1,4 @@
-.class Lcom/android/settings/lockappshortcut/AppShortcutList$2;
+.class Lcom/android/settings_ex/lockappshortcut/AppShortcutList$2;
 .super Ljava/lang/Object;
 .source "AppShortcutList.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/lockappshortcut/AppShortcutList;->onActivityCreated(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/lockappshortcut/AppShortcutList;->onActivityCreated(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/lockappshortcut/AppShortcutList;
+.field final synthetic this$0:Lcom/android/settings_ex/lockappshortcut/AppShortcutList;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/lockappshortcut/AppShortcutList;)V
+.method constructor <init>(Lcom/android/settings_ex/lockappshortcut/AppShortcutList;)V
     .locals 0
 
     .prologue
     .line 176
-    iput-object p1, p0, Lcom/android/settings/lockappshortcut/AppShortcutList$2;->this$0:Lcom/android/settings/lockappshortcut/AppShortcutList;
+    iput-object p1, p0, Lcom/android/settings_ex/lockappshortcut/AppShortcutList$2;->this$0:Lcom/android/settings_ex/lockappshortcut/AppShortcutList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -58,11 +58,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppListItem;
+    check-cast v0, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppListItem;
 
     .line 181
-    .local v0, "Item":Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppListItem;
-    iget-boolean v1, v0, Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppListItem;->mIsActive:Z
+    .local v0, "Item":Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppListItem;
+    iget-boolean v1, v0, Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppListItem;->mIsActive:Z
 
     if-eqz v1, :cond_0
 
@@ -72,9 +72,9 @@
     invoke-virtual {p2, v1}, Landroid/view/View;->setPressed(Z)V
 
     .line 183
-    iget-object v1, p0, Lcom/android/settings/lockappshortcut/AppShortcutList$2;->this$0:Lcom/android/settings/lockappshortcut/AppShortcutList;
+    iget-object v1, p0, Lcom/android/settings_ex/lockappshortcut/AppShortcutList$2;->this$0:Lcom/android/settings_ex/lockappshortcut/AppShortcutList;
 
-    invoke-virtual {v1, v0}, Lcom/android/settings/lockappshortcut/AppShortcutList;->saveApplicationData(Lcom/android/settings/lockappshortcut/AppShortcutInfo$AppListItem;)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/lockappshortcut/AppShortcutList;->saveApplicationData(Lcom/android/settings_ex/lockappshortcut/AppShortcutInfo$AppListItem;)V
 
     .line 185
     :cond_0

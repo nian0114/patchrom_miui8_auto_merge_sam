@@ -1,4 +1,4 @@
-.class Lcom/android/settings/notification/VolumeSeekBarPreference$4;
+.class Lcom/android/settings_ex/notification/VolumeSeekBarPreference$4;
 .super Ljava/lang/Object;
 .source "VolumeSeekBarPreference.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/notification/VolumeSeekBarPreference;->init()V
+    value = Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->init()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/notification/VolumeSeekBarPreference;
+.field final synthetic this$0:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/notification/VolumeSeekBarPreference;)V
+.method constructor <init>(Lcom/android/settings_ex/notification/VolumeSeekBarPreference;)V
     .locals 0
 
     .prologue
     .line 281
-    iput-object p1, p0, Lcom/android/settings/notification/VolumeSeekBarPreference$4;->this$0:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iput-object p1, p0, Lcom/android/settings_ex/notification/VolumeSeekBarPreference$4;->this$0:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,10 +41,10 @@
 
     .prologue
     .line 284
-    iget-object v0, p0, Lcom/android/settings/notification/VolumeSeekBarPreference$4;->this$0:Lcom/android/settings/notification/VolumeSeekBarPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/notification/VolumeSeekBarPreference$4;->this$0:Lcom/android/settings_ex/notification/VolumeSeekBarPreference;
 
-    # invokes: Lcom/android/settings/notification/VolumeSeekBarPreference;->setDualColorSeekbar()V
-    invoke-static {v0}, Lcom/android/settings/notification/VolumeSeekBarPreference;->access$100(Lcom/android/settings/notification/VolumeSeekBarPreference;)V
+    # invokes: Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->setDualColorSeekbar()V
+    invoke-static {v0}, Lcom/android/settings_ex/notification/VolumeSeekBarPreference;->access$100(Lcom/android/settings_ex/notification/VolumeSeekBarPreference;)V
 
     .line 285
     return-void

@@ -1,11 +1,11 @@
-.class Lcom/android/settings/DataUsageSummary$50;
+.class Lcom/android/settings_ex/DataUsageSummary$50;
 .super Lcom/opera/max/sdk/saving/IStateListener$Stub;
 .source "DataUsageSummary.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DataUsageSummary;
+    value = Lcom/android/settings_ex/DataUsageSummary;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DataUsageSummary;
+.field final synthetic this$0:Lcom/android/settings_ex/DataUsageSummary;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DataUsageSummary;)V
+.method constructor <init>(Lcom/android/settings_ex/DataUsageSummary;)V
     .locals 0
 
     .prologue
     .line 6935
-    iput-object p1, p0, Lcom/android/settings/DataUsageSummary$50;->this$0:Lcom/android/settings/DataUsageSummary;
+    iput-object p1, p0, Lcom/android/settings_ex/DataUsageSummary$50;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
     invoke-direct {p0}, Lcom/opera/max/sdk/saving/IStateListener$Stub;-><init>()V
 
@@ -78,17 +78,17 @@
     if-ne p1, v3, :cond_0
 
     .line 6951
-    iget-object v0, p0, Lcom/android/settings/DataUsageSummary$50;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v0, p0, Lcom/android/settings_ex/DataUsageSummary$50;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
-    # setter for: Lcom/android/settings/DataUsageSummary;->mIsDataCompressionEnabled:Z
-    invoke-static {v0, v3}, Lcom/android/settings/DataUsageSummary;->access$1002(Lcom/android/settings/DataUsageSummary;Z)Z
+    # setter for: Lcom/android/settings_ex/DataUsageSummary;->mIsDataCompressionEnabled:Z
+    invoke-static {v0, v3}, Lcom/android/settings_ex/DataUsageSummary;->access$1002(Lcom/android/settings_ex/DataUsageSummary;Z)Z
 
     .line 6956
     :goto_0
-    iget-object v0, p0, Lcom/android/settings/DataUsageSummary$50;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v0, p0, Lcom/android/settings_ex/DataUsageSummary$50;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
-    # invokes: Lcom/android/settings/DataUsageSummary;->updateSavingState()V
-    invoke-static {v0}, Lcom/android/settings/DataUsageSummary;->access$8800(Lcom/android/settings/DataUsageSummary;)V
+    # invokes: Lcom/android/settings_ex/DataUsageSummary;->updateSavingState()V
+    invoke-static {v0}, Lcom/android/settings_ex/DataUsageSummary;->access$8800(Lcom/android/settings_ex/DataUsageSummary;)V
 
     .line 6957
     return-void
@@ -102,12 +102,12 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 6954
-    iget-object v0, p0, Lcom/android/settings/DataUsageSummary$50;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v0, p0, Lcom/android/settings_ex/DataUsageSummary$50;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
     const/4 v1, 0x0
 
-    # setter for: Lcom/android/settings/DataUsageSummary;->mIsDataCompressionEnabled:Z
-    invoke-static {v0, v1}, Lcom/android/settings/DataUsageSummary;->access$1002(Lcom/android/settings/DataUsageSummary;Z)Z
+    # setter for: Lcom/android/settings_ex/DataUsageSummary;->mIsDataCompressionEnabled:Z
+    invoke-static {v0, v1}, Lcom/android/settings_ex/DataUsageSummary;->access$1002(Lcom/android/settings_ex/DataUsageSummary;Z)Z
 
     goto :goto_0
 .end method
@@ -148,18 +148,18 @@
     invoke-static {v0, v1}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 6942
-    iget-object v0, p0, Lcom/android/settings/DataUsageSummary$50;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v0, p0, Lcom/android/settings_ex/DataUsageSummary$50;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
     const/4 v1, 0x0
 
-    # setter for: Lcom/android/settings/DataUsageSummary;->mIsDataCompressionEnabled:Z
-    invoke-static {v0, v1}, Lcom/android/settings/DataUsageSummary;->access$1002(Lcom/android/settings/DataUsageSummary;Z)Z
+    # setter for: Lcom/android/settings_ex/DataUsageSummary;->mIsDataCompressionEnabled:Z
+    invoke-static {v0, v1}, Lcom/android/settings_ex/DataUsageSummary;->access$1002(Lcom/android/settings_ex/DataUsageSummary;Z)Z
 
     .line 6943
-    iget-object v0, p0, Lcom/android/settings/DataUsageSummary$50;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v0, p0, Lcom/android/settings_ex/DataUsageSummary$50;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
-    # invokes: Lcom/android/settings/DataUsageSummary;->updateSavingState()V
-    invoke-static {v0}, Lcom/android/settings/DataUsageSummary;->access$8800(Lcom/android/settings/DataUsageSummary;)V
+    # invokes: Lcom/android/settings_ex/DataUsageSummary;->updateSavingState()V
+    invoke-static {v0}, Lcom/android/settings_ex/DataUsageSummary;->access$8800(Lcom/android/settings_ex/DataUsageSummary;)V
 
     goto :goto_0
 .end method

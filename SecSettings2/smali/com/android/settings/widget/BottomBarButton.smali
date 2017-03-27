@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/widget/BottomBarButton;
+.class public Lcom/android/settings_ex/widget/BottomBarButton;
 .super Landroid/widget/Button;
 .source "BottomBarButton.java"
 
@@ -18,7 +18,7 @@
     .line 19
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lcom/android/settings/widget/BottomBarButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, v0}, Lcom/android/settings_ex/widget/BottomBarButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 20
     return-void
@@ -33,7 +33,7 @@
     .line 23
     const v0, 0x1010048
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings/widget/BottomBarButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings_ex/widget/BottomBarButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 24
     return-void
@@ -49,7 +49,7 @@
     .line 27
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/settings/widget/BottomBarButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/android/settings_ex/widget/BottomBarButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 28
     return-void
@@ -69,10 +69,10 @@
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/Button;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 15
-    iput v0, p0, Lcom/android/settings/widget/BottomBarButton;->mTextColor:I
+    iput v0, p0, Lcom/android/settings_ex/widget/BottomBarButton;->mTextColor:I
 
     .line 16
-    iput-boolean v0, p0, Lcom/android/settings/widget/BottomBarButton;->isEnabledShowBtnBg:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/widget/BottomBarButton;->isEnabledShowBtnBg:Z
 
     .line 32
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -85,14 +85,14 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/widget/BottomBarButton;->mTextColor:I
+    iput v1, p0, Lcom/android/settings_ex/widget/BottomBarButton;->mTextColor:I
 
     .line 33
-    invoke-virtual {p0}, Lcom/android/settings/widget/BottomBarButton;->isEnabled()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/widget/BottomBarButton;->isEnabled()Z
 
     move-result v1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/widget/BottomBarButton;->setEnabled(Z)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/widget/BottomBarButton;->setEnabled(Z)V
 
     .line 34
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -110,17 +110,17 @@
     const/4 v0, 0x1
 
     :cond_0
-    iput-boolean v0, p0, Lcom/android/settings/widget/BottomBarButton;->isEnabledShowBtnBg:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/widget/BottomBarButton;->isEnabledShowBtnBg:Z
 
     .line 35
-    iget-boolean v0, p0, Lcom/android/settings/widget/BottomBarButton;->isEnabledShowBtnBg:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/widget/BottomBarButton;->isEnabledShowBtnBg:Z
 
     if-eqz v0, :cond_1
 
     .line 36
     const v0, 0x7f02035f
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/widget/BottomBarButton;->setBackgroundResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/widget/BottomBarButton;->setBackgroundResource(I)V
 
     .line 38
     :cond_1
@@ -141,9 +141,9 @@
     if-eqz p1, :cond_0
 
     .line 45
-    iget v0, p0, Lcom/android/settings/widget/BottomBarButton;->mTextColor:I
+    iget v0, p0, Lcom/android/settings_ex/widget/BottomBarButton;->mTextColor:I
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/widget/BottomBarButton;->setTextColor(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/widget/BottomBarButton;->setTextColor(I)V
 
     .line 49
     :goto_0
@@ -151,13 +151,13 @@
 
     .line 47
     :cond_0
-    iget v0, p0, Lcom/android/settings/widget/BottomBarButton;->mTextColor:I
+    iget v0, p0, Lcom/android/settings_ex/widget/BottomBarButton;->mTextColor:I
 
     const/high16 v1, 0x47000000    # 32768.0f
 
     add-int/2addr v0, v1
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/widget/BottomBarButton;->setTextColor(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/widget/BottomBarButton;->setTextColor(I)V
 
     goto :goto_0
 .end method

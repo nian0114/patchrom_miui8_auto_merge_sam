@@ -1,9 +1,9 @@
-.class public Lcom/android/settings/WarrantyInfoFragment;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/WarrantyInfoFragment;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "WarrantyInfoFragment.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # direct methods
@@ -12,7 +12,7 @@
 
     .prologue
     .line 94
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 96
     return-void
@@ -36,15 +36,15 @@
 
     .prologue
     .line 100
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 102
     const v1, 0x7f0800d8
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/WarrantyInfoFragment;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/WarrantyInfoFragment;->addPreferencesFromResource(I)V
 
     .line 104
-    invoke-virtual {p0}, Lcom/android/settings/WarrantyInfoFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/WarrantyInfoFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
     .line 111
     const-string v1, "general_terms"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/WarrantyInfoFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/WarrantyInfoFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -84,13 +84,13 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 114
-    invoke-virtual {p0, v0}, Lcom/android/settings/WarrantyInfoFragment;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/WarrantyInfoFragment;->startActivity(Landroid/content/Intent;)V
 
     .line 124
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
     :goto_0
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v1
 
@@ -100,7 +100,7 @@
     :cond_1
     const-string v1, "warranty_exceptions"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/WarrantyInfoFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/WarrantyInfoFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -122,7 +122,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 118
-    invoke-virtual {p0, v0}, Lcom/android/settings/WarrantyInfoFragment;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/WarrantyInfoFragment;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 
@@ -131,7 +131,7 @@
     :cond_2
     const-string v1, "product_warranty"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/WarrantyInfoFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/WarrantyInfoFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v1
 
@@ -153,7 +153,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 122
-    invoke-virtual {p0, v0}, Lcom/android/settings/WarrantyInfoFragment;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/WarrantyInfoFragment;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 .end method

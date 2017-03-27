@@ -1,11 +1,11 @@
-.class Lcom/android/settings/DataUsageSummary$3;
+.class Lcom/android/settings_ex/DataUsageSummary$3;
 .super Landroid/database/ContentObserver;
 .source "DataUsageSummary.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DataUsageSummary;
+    value = Lcom/android/settings_ex/DataUsageSummary;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DataUsageSummary;
+.field final synthetic this$0:Lcom/android/settings_ex/DataUsageSummary;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DataUsageSummary;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/DataUsageSummary;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 740
-    iput-object p1, p0, Lcom/android/settings/DataUsageSummary$3;->this$0:Lcom/android/settings/DataUsageSummary;
+    iput-object p1, p0, Lcom/android/settings_ex/DataUsageSummary$3;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -40,12 +40,12 @@
 
     .prologue
     .line 742
-    iget-object v0, p0, Lcom/android/settings/DataUsageSummary$3;->this$0:Lcom/android/settings/DataUsageSummary;
+    iget-object v0, p0, Lcom/android/settings_ex/DataUsageSummary$3;->this$0:Lcom/android/settings_ex/DataUsageSummary;
 
     const/4 v1, 0x0
 
-    # invokes: Lcom/android/settings/DataUsageSummary;->updatePolicy(Z)V
-    invoke-static {v0, v1}, Lcom/android/settings/DataUsageSummary;->access$400(Lcom/android/settings/DataUsageSummary;Z)V
+    # invokes: Lcom/android/settings_ex/DataUsageSummary;->updatePolicy(Z)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/DataUsageSummary;->access$400(Lcom/android/settings_ex/DataUsageSummary;Z)V
 
     .line 743
     return-void

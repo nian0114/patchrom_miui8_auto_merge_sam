@@ -1,4 +1,4 @@
-.class Lcom/android/settings/RadioInfo$16$1;
+.class Lcom/android/settings_ex/RadioInfo$16$1;
 .super Ljava/lang/Object;
 .source "RadioInfo.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/RadioInfo$16;->onClick(Landroid/view/View;)V
+    value = Lcom/android/settings_ex/RadioInfo$16;->onClick(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/RadioInfo$16;
+.field final synthetic this$1:Lcom/android/settings_ex/RadioInfo$16;
 
 .field final synthetic val$imsManager:Lcom/android/ims/ImsManager;
 
@@ -26,16 +26,16 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/RadioInfo$16;Lcom/android/ims/ImsManager;Z)V
+.method constructor <init>(Lcom/android/settings_ex/RadioInfo$16;Lcom/android/ims/ImsManager;Z)V
     .locals 0
 
     .prologue
     .line 1025
-    iput-object p1, p0, Lcom/android/settings/RadioInfo$16$1;->this$1:Lcom/android/settings/RadioInfo$16;
+    iput-object p1, p0, Lcom/android/settings_ex/RadioInfo$16$1;->this$1:Lcom/android/settings_ex/RadioInfo$16;
 
-    iput-object p2, p0, Lcom/android/settings/RadioInfo$16$1;->val$imsManager:Lcom/android/ims/ImsManager;
+    iput-object p2, p0, Lcom/android/settings_ex/RadioInfo$16$1;->val$imsManager:Lcom/android/ims/ImsManager;
 
-    iput-boolean p3, p0, Lcom/android/settings/RadioInfo$16$1;->val$newValue:Z
+    iput-boolean p3, p0, Lcom/android/settings_ex/RadioInfo$16$1;->val$newValue:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,7 +50,7 @@
     .prologue
     .line 1028
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/RadioInfo$16$1;->val$imsManager:Lcom/android/ims/ImsManager;
+    iget-object v1, p0, Lcom/android/settings_ex/RadioInfo$16$1;->val$imsManager:Lcom/android/ims/ImsManager;
 
     invoke-virtual {v1}, Lcom/android/ims/ImsManager;->getConfigInterface()Lcom/android/ims/ImsConfig;
 
@@ -58,7 +58,7 @@
 
     const/16 v3, 0xa
 
-    iget-boolean v1, p0, Lcom/android/settings/RadioInfo$16$1;->val$newValue:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/RadioInfo$16$1;->val$newValue:Z
 
     if-eqz v1, :cond_0
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApQrCode$3;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode$3;
 .super Ljava/lang/Object;
 .source "WifiApQrCode.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/mobileap/WifiApQrCode;->onActivityCreated(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->onActivityCreated(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WifiApQrCode;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WifiApQrCode;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;)V
     .locals 0
 
     .prologue
     .line 134
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode$3;->this$0:Lcom/android/settings/wifi/mobileap/WifiApQrCode;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode$3;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,10 +42,10 @@
 
     .prologue
     .line 137
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode$3;->this$0:Lcom/android/settings/wifi/mobileap/WifiApQrCode;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode$3;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApQrCode;->mWifiManager:Landroid/net/wifi/WifiManager;
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->access$000(Lcom/android/settings/wifi/mobileap/WifiApQrCode;)Landroid/net/wifi/WifiManager;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->mWifiManager:Landroid/net/wifi/WifiManager;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->access$000(Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;)Landroid/net/wifi/WifiManager;
 
     move-result-object v0
 
@@ -53,14 +53,14 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/wifi/mobileap/WifiApSettings;->mSaveQrWifiConfig:Landroid/net/wifi/WifiConfiguration;
+    sput-object v0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->mSaveQrWifiConfig:Landroid/net/wifi/WifiConfiguration;
 
     .line 138
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApQrCode$3;->this$0:Lcom/android/settings/wifi/mobileap/WifiApQrCode;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode$3;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/wifi/mobileap/WifiApQrCode;->updateView(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/wifi/mobileap/WifiApQrCode;->updateView(Z)V
 
     .line 139
     return-void

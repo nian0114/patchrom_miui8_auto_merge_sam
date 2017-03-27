@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accounts/AccountCommon;
+.class public Lcom/android/settings_ex/accounts/AccountCommon;
 .super Ljava/lang/Object;
 .source "AccountCommon.java"
 
@@ -17,10 +17,10 @@
     const/4 v0, -0x1
 
     .line 38
-    sput v0, Lcom/android/settings/accounts/AccountCommon;->deviceThemeStyle:I
+    sput v0, Lcom/android/settings_ex/accounts/AccountCommon;->deviceThemeStyle:I
 
     .line 39
-    sput v0, Lcom/android/settings/accounts/AccountCommon;->actionMenuTextColor:I
+    sput v0, Lcom/android/settings_ex/accounts/AccountCommon;->actionMenuTextColor:I
 
     return-void
 .end method
@@ -35,13 +35,13 @@
     return-void
 .end method
 
-.method public static getSnsAccountMgr(Landroid/content/Context;)Lcom/android/settings/accounts/SnsAccountManager;
+.method public static getSnsAccountMgr(Landroid/content/Context;)Lcom/android/settings_ex/accounts/SnsAccountManager;
     .locals 1
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
     .line 76
-    invoke-static {p0}, Lcom/android/settings/accounts/SnsAccountManager;->getInstance(Landroid/content/Context;)Lcom/android/settings/accounts/SnsAccountManager;
+    invoke-static {p0}, Lcom/android/settings_ex/accounts/SnsAccountManager;->getInstance(Landroid/content/Context;)Lcom/android/settings_ex/accounts/SnsAccountManager;
 
     move-result-object v0
 

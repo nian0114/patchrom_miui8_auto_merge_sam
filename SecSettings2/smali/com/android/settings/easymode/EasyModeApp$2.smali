@@ -1,4 +1,4 @@
-.class Lcom/android/settings/easymode/EasyModeApp$2;
+.class Lcom/android/settings_ex/easymode/EasyModeApp$2;
 .super Ljava/lang/Object;
 .source "EasyModeApp.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/easymode/EasyModeApp;
+    value = Lcom/android/settings_ex/easymode/EasyModeApp;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/easymode/EasyModeApp;
+.field final synthetic this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/easymode/EasyModeApp;)V
+.method constructor <init>(Lcom/android/settings_ex/easymode/EasyModeApp;)V
     .locals 0
 
     .prologue
     .line 196
-    iput-object p1, p0, Lcom/android/settings/easymode/EasyModeApp$2;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iput-object p1, p0, Lcom/android/settings_ex/easymode/EasyModeApp$2;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,10 +42,10 @@
 
     .prologue
     .line 198
-    iget-object v0, p0, Lcom/android/settings/easymode/EasyModeApp$2;->this$0:Lcom/android/settings/easymode/EasyModeApp;
+    iget-object v0, p0, Lcom/android/settings_ex/easymode/EasyModeApp$2;->this$0:Lcom/android/settings_ex/easymode/EasyModeApp;
 
-    # getter for: Lcom/android/settings/easymode/EasyModeApp;->mEasyModeRadio:Landroid/widget/RadioButton;
-    invoke-static {v0}, Lcom/android/settings/easymode/EasyModeApp;->access$100(Lcom/android/settings/easymode/EasyModeApp;)Landroid/widget/RadioButton;
+    # getter for: Lcom/android/settings_ex/easymode/EasyModeApp;->mEasyModeRadio:Landroid/widget/RadioButton;
+    invoke-static {v0}, Lcom/android/settings_ex/easymode/EasyModeApp;->access$100(Lcom/android/settings_ex/easymode/EasyModeApp;)Landroid/widget/RadioButton;
 
     move-result-object v0
 

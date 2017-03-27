@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wfd/WifiDisplaySettings$13;
+.class Lcom/android/settings_ex/wfd/WifiDisplaySettings$13;
 .super Landroid/database/ContentObserver;
 .source "WifiDisplaySettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wfd/WifiDisplaySettings;
+    value = Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wfd/WifiDisplaySettings;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/wfd/WifiDisplaySettings;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 1636
-    iput-object p1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$13;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$13;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -75,10 +75,10 @@
 
     .line 1641
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$13;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$13;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
-    # invokes: Lcom/android/settings/wfd/WifiDisplaySettings;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v1}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$2000(Lcom/android/settings/wfd/WifiDisplaySettings;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/wfd/WifiDisplaySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v1}, Lcom/android/settings_ex/wfd/WifiDisplaySettings;->access$2000(Lcom/android/settings_ex/wfd/WifiDisplaySettings;)Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -93,27 +93,27 @@
     if-eqz v1, :cond_0
 
     .line 1642
-    iget-object v1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$13;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$13;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
     const/4 v2, 0x1
 
-    iput-boolean v2, v1, Lcom/android/settings/wfd/WifiDisplaySettings;->mTurningWifiDisplayOn:Z
+    iput-boolean v2, v1, Lcom/android/settings_ex/wfd/WifiDisplaySettings;->mTurningWifiDisplayOn:Z
 
     .line 1645
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$13;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$13;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
-    # getter for: Lcom/android/settings/wfd/WifiDisplaySettings;->mWaitingDevice:Ljava/lang/String;
-    invoke-static {v1}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$000(Lcom/android/settings/wfd/WifiDisplaySettings;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/wfd/WifiDisplaySettings;->mWaitingDevice:Ljava/lang/String;
+    invoke-static {v1}, Lcom/android/settings_ex/wfd/WifiDisplaySettings;->access$000(Lcom/android/settings_ex/wfd/WifiDisplaySettings;)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$13;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$13;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
-    # getter for: Lcom/android/settings/wfd/WifiDisplaySettings;->mReadyToConnect:Z
-    invoke-static {v1}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$1800(Lcom/android/settings/wfd/WifiDisplaySettings;)Z
+    # getter for: Lcom/android/settings_ex/wfd/WifiDisplaySettings;->mReadyToConnect:Z
+    invoke-static {v1}, Lcom/android/settings_ex/wfd/WifiDisplaySettings;->access$1800(Lcom/android/settings_ex/wfd/WifiDisplaySettings;)Z
 
     move-result v1
 
@@ -121,12 +121,12 @@
 
     .line 1646
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$13;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$13;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
     const/4 v2, 0x1
 
-    # invokes: Lcom/android/settings/wfd/WifiDisplaySettings;->scheduleUpdate(I)V
-    invoke-static {v1, v2}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$1100(Lcom/android/settings/wfd/WifiDisplaySettings;I)V
+    # invokes: Lcom/android/settings_ex/wfd/WifiDisplaySettings;->scheduleUpdate(I)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/wfd/WifiDisplaySettings;->access$1100(Lcom/android/settings_ex/wfd/WifiDisplaySettings;I)V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 

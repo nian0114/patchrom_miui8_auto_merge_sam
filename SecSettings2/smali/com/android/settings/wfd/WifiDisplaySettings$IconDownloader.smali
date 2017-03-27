@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/wfd/WifiDisplaySettings$IconDownloader;
+.class public Lcom/android/settings_ex/wfd/WifiDisplaySettings$IconDownloader;
 .super Landroid/os/AsyncTask;
 .source "WifiDisplaySettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wfd/WifiDisplaySettings;
+    value = Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -32,26 +32,26 @@
 
 .field private mUri:Landroid/net/Uri;
 
-.field final synthetic this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/settings/wfd/WifiDisplaySettings;Landroid/net/Uri;Ljava/lang/String;)V
+.method public constructor <init>(Lcom/android/settings_ex/wfd/WifiDisplaySettings;Landroid/net/Uri;Ljava/lang/String;)V
     .locals 0
     .param p2, "uri"    # Landroid/net/Uri;
     .param p3, "id"    # Ljava/lang/String;
 
     .prologue
     .line 2282
-    iput-object p1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$IconDownloader;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$IconDownloader;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
     .line 2283
-    iput-object p2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$IconDownloader;->mUri:Landroid/net/Uri;
+    iput-object p2, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$IconDownloader;->mUri:Landroid/net/Uri;
 
     .line 2284
-    iput-object p3, p0, Lcom/android/settings/wfd/WifiDisplaySettings$IconDownloader;->mDeviceId:Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$IconDownloader;->mDeviceId:Ljava/lang/String;
 
     .line 2285
     return-void
@@ -70,7 +70,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v6, p0, Lcom/android/settings/wfd/WifiDisplaySettings$IconDownloader;->mUri:Landroid/net/Uri;
+    iget-object v6, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$IconDownloader;->mUri:Landroid/net/Uri;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -91,7 +91,7 @@
     :try_start_1
     new-instance v4, Ljava/net/URL;
 
-    iget-object v6, p0, Lcom/android/settings/wfd/WifiDisplaySettings$IconDownloader;->mUri:Landroid/net/Uri;
+    iget-object v6, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$IconDownloader;->mUri:Landroid/net/Uri;
 
     invoke-virtual {v6}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -250,18 +250,18 @@
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/wfd/WifiDisplaySettings$IconDownloader;->mRetBitmap:Landroid/graphics/Bitmap;
+    iput-object v6, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$IconDownloader;->mRetBitmap:Landroid/graphics/Bitmap;
 
     .line 2312
-    sget-object v6, Lcom/android/settings/wfd/WifiDisplaySettings;->mIconCache:Ljava/util/HashMap;
+    sget-object v6, Lcom/android/settings_ex/wfd/WifiDisplaySettings;->mIconCache:Ljava/util/HashMap;
 
-    iget-object v7, p0, Lcom/android/settings/wfd/WifiDisplaySettings$IconDownloader;->mUri:Landroid/net/Uri;
+    iget-object v7, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$IconDownloader;->mUri:Landroid/net/Uri;
 
     invoke-virtual {v7}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v7
 
-    iget-object v8, p0, Lcom/android/settings/wfd/WifiDisplaySettings$IconDownloader;->mRetBitmap:Landroid/graphics/Bitmap;
+    iget-object v8, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$IconDownloader;->mRetBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v6, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_4
@@ -300,7 +300,7 @@
     check-cast p1, [Landroid/os/Handler;
 
     .end local p1    # "x0":[Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/wfd/WifiDisplaySettings$IconDownloader;->doInBackground([Landroid/os/Handler;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/wfd/WifiDisplaySettings$IconDownloader;->doInBackground([Landroid/os/Handler;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -319,7 +319,7 @@
     invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
 
     .line 2332
-    iget-object v6, p0, Lcom/android/settings/wfd/WifiDisplaySettings$IconDownloader;->mUri:Landroid/net/Uri;
+    iget-object v6, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$IconDownloader;->mUri:Landroid/net/Uri;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -347,7 +347,7 @@
 
     move-result-object v7
 
-    iget-object v8, p0, Lcom/android/settings/wfd/WifiDisplaySettings$IconDownloader;->mUri:Landroid/net/Uri;
+    iget-object v8, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$IconDownloader;->mUri:Landroid/net/Uri;
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -360,14 +360,14 @@
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 2336
-    iget-object v6, p0, Lcom/android/settings/wfd/WifiDisplaySettings$IconDownloader;->mRetBitmap:Landroid/graphics/Bitmap;
+    iget-object v6, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$IconDownloader;->mRetBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v6, :cond_0
 
     .line 2337
-    iget-object v6, p0, Lcom/android/settings/wfd/WifiDisplaySettings$IconDownloader;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
+    iget-object v6, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$IconDownloader;->this$0:Lcom/android/settings_ex/wfd/WifiDisplaySettings;
 
-    invoke-virtual {v6}, Lcom/android/settings/wfd/WifiDisplaySettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {v6}, Lcom/android/settings_ex/wfd/WifiDisplaySettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v5
 
@@ -390,31 +390,31 @@
 
     .line 2340
     .local v4, "pref":Landroid/preference/Preference;
-    instance-of v6, v4, Lcom/android/settings/wfd/WifiDisplaySettings$DLNAPreference;
+    instance-of v6, v4, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DLNAPreference;
 
     if-eqz v6, :cond_2
 
     .line 2341
     move-object v0, v4
 
-    check-cast v0, Lcom/android/settings/wfd/WifiDisplaySettings$DLNAPreference;
+    check-cast v0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DLNAPreference;
 
     move-object v1, v0
 
     .line 2342
-    .local v1, "dlnaPref":Lcom/android/settings/wfd/WifiDisplaySettings$DLNAPreference;
-    iget-object v6, p0, Lcom/android/settings/wfd/WifiDisplaySettings$IconDownloader;->mDeviceId:Ljava/lang/String;
+    .local v1, "dlnaPref":Lcom/android/settings_ex/wfd/WifiDisplaySettings$DLNAPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$IconDownloader;->mDeviceId:Ljava/lang/String;
 
     if-eqz v6, :cond_2
 
-    iget-object v6, p0, Lcom/android/settings/wfd/WifiDisplaySettings$IconDownloader;->mDeviceId:Ljava/lang/String;
+    iget-object v6, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$IconDownloader;->mDeviceId:Ljava/lang/String;
 
-    # getter for: Lcom/android/settings/wfd/WifiDisplaySettings$DLNAPreference;->mDLNA:Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;
-    invoke-static {v1}, Lcom/android/settings/wfd/WifiDisplaySettings$DLNAPreference;->access$3400(Lcom/android/settings/wfd/WifiDisplaySettings$DLNAPreference;)Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;
+    # getter for: Lcom/android/settings_ex/wfd/WifiDisplaySettings$DLNAPreference;->mDLNA:Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;
+    invoke-static {v1}, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DLNAPreference;->access$3400(Lcom/android/settings_ex/wfd/WifiDisplaySettings$DLNAPreference;)Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;
 
     move-result-object v7
 
-    invoke-virtual {v7}, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->getId()Ljava/lang/String;
+    invoke-virtual {v7}, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->getId()Ljava/lang/String;
 
     move-result-object v7
 
@@ -424,12 +424,12 @@
 
     if-eqz v6, :cond_2
 
-    # getter for: Lcom/android/settings/wfd/WifiDisplaySettings$DLNAPreference;->mDLNA:Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;
-    invoke-static {v1}, Lcom/android/settings/wfd/WifiDisplaySettings$DLNAPreference;->access$3400(Lcom/android/settings/wfd/WifiDisplaySettings$DLNAPreference;)Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;
+    # getter for: Lcom/android/settings_ex/wfd/WifiDisplaySettings$DLNAPreference;->mDLNA:Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;
+    invoke-static {v1}, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DLNAPreference;->access$3400(Lcom/android/settings_ex/wfd/WifiDisplaySettings$DLNAPreference;)Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lcom/android/settings/wfd/WifiDisplaySettings$DeviceWrapper;->getId()Ljava/lang/String;
+    invoke-virtual {v6}, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DeviceWrapper;->getId()Ljava/lang/String;
 
     move-result-object v6
 
@@ -438,7 +438,7 @@
     .line 2343
     new-instance v2, Landroid/graphics/drawable/BitmapDrawable;
 
-    iget-object v6, p0, Lcom/android/settings/wfd/WifiDisplaySettings$IconDownloader;->mRetBitmap:Landroid/graphics/Bitmap;
+    iget-object v6, p0, Lcom/android/settings_ex/wfd/WifiDisplaySettings$IconDownloader;->mRetBitmap:Landroid/graphics/Bitmap;
 
     invoke-direct {v2, v6}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/graphics/Bitmap;)V
 
@@ -447,14 +447,14 @@
     if-eqz v2, :cond_2
 
     .line 2345
-    invoke-virtual {v1, v2}, Lcom/android/settings/wfd/WifiDisplaySettings$DLNAPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/wfd/WifiDisplaySettings$DLNAPreference;->setIcon(Landroid/graphics/drawable/Drawable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
     .line 2331
-    .end local v1    # "dlnaPref":Lcom/android/settings/wfd/WifiDisplaySettings$DLNAPreference;
+    .end local v1    # "dlnaPref":Lcom/android/settings_ex/wfd/WifiDisplaySettings$DLNAPreference;
     .end local v2    # "drawable_icon":Landroid/graphics/drawable/Drawable;
     .end local v3    # "i":I
     .end local v4    # "pref":Landroid/preference/Preference;
@@ -497,7 +497,7 @@
     check-cast p1, [Ljava/lang/Integer;
 
     .end local p1    # "x0":[Ljava/lang/Object;
-    invoke-virtual {p0, p1}, Lcom/android/settings/wfd/WifiDisplaySettings$IconDownloader;->onProgressUpdate([Ljava/lang/Integer;)V
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/wfd/WifiDisplaySettings$IconDownloader;->onProgressUpdate([Ljava/lang/Integer;)V
 
     return-void
 .end method

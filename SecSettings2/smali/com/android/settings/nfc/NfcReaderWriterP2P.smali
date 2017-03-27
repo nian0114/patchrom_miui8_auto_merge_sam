@@ -1,9 +1,9 @@
-.class public Lcom/android/settings/nfc/NfcReaderWriterP2P;
+.class public Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;
 .super Landroid/app/Fragment;
 .source "NfcReaderWriterP2P.java"
 
 # interfaces
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # instance fields
@@ -13,19 +13,19 @@
 
 .field private activity:Landroid/app/Activity;
 
-.field private activitySwitchBar:Lcom/android/settings/SettingsActivity;
+.field private activitySwitchBar:Lcom/android/settings_ex/SettingsActivity;
 
 .field private final carrier:Ljava/lang/String;
 
 .field private mNfcAdapter:Landroid/nfc/NfcAdapter;
 
-.field private mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+.field private mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
 .field private mOldActivityTitle:Ljava/lang/CharSequence;
 
 .field private final mReceiver:Landroid/content/BroadcastReceiver;
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 .field private mView:Landroid/view/View;
 
@@ -47,7 +47,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->OMC_SALES_CODE:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->OMC_SALES_CODE:Ljava/lang/String;
 
     .line 72
     const-string v0, "ro.csc.sales_code"
@@ -56,14 +56,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->CSC_SALES_CODE:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->CSC_SALES_CODE:Ljava/lang/String;
 
     .line 73
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->OMC_SALES_CODE:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->OMC_SALES_CODE:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->OMC_SALES_CODE:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->OMC_SALES_CODE:Ljava/lang/String;
 
     const-string v1, ""
 
@@ -74,34 +74,34 @@
     if-eqz v0, :cond_1
 
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->CSC_SALES_CODE:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->CSC_SALES_CODE:Ljava/lang/String;
 
     :goto_0
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->carrier:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->carrier:Ljava/lang/String;
 
     .line 75
-    new-instance v0, Lcom/android/settings/nfc/NfcReaderWriterP2P$1;
+    new-instance v0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/nfc/NfcReaderWriterP2P$1;-><init>(Lcom/android/settings/nfc/NfcReaderWriterP2P;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P$1;-><init>(Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;)V
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mReceiver:Landroid/content/BroadcastReceiver;
 
     return-void
 
     .line 73
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->OMC_SALES_CODE:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->OMC_SALES_CODE:Ljava/lang/String;
 
     goto :goto_0
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/nfc/NfcReaderWriterP2P;)Lcom/android/settings/widget/SwitchBar;
+.method static synthetic access$000(Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;)Lcom/android/settings_ex/widget/SwitchBar;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/nfc/NfcReaderWriterP2P;
+    .param p0, "x0"    # Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;
 
     .prologue
     .line 56
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     return-object v0
 .end method
@@ -154,54 +154,54 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 108
-    new-instance v0, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    new-instance v0, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->activity:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->activity:Landroid/app/Activity;
 
-    invoke-direct {v0, v1}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
     .line 110
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcReaderWriterP2P;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->activitySwitchBar:Lcom/android/settings/SettingsActivity;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->activitySwitchBar:Lcom/android/settings_ex/SettingsActivity;
 
     .line 111
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->activitySwitchBar:Lcom/android/settings/SettingsActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->activitySwitchBar:Lcom/android/settings_ex/SettingsActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 113
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->activity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->activity:Landroid/app/Activity;
 
     invoke-static {v0}, Landroid/nfc/NfcAdapter;->getDefaultAdapter(Landroid/content/Context;)Landroid/nfc/NfcAdapter;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     .line 114
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mNfcAdapter:Landroid/nfc/NfcAdapter;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_0
 
     .line 115
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v0}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->getRWP2pStatus()I
+    invoke-virtual {v0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->getRWP2pStatus()I
 
     move-result v0
 
@@ -210,26 +210,26 @@
     if-ne v0, v1, :cond_2
 
     .line 116
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v2}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v0, v2}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 122
     :cond_0
     :goto_0
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_1
 
     .line 123
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v2}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v2}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 124
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 127
     :cond_1
@@ -244,11 +244,11 @@
 
     .line 118
     :cond_2
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     goto :goto_0
 .end method
@@ -268,29 +268,29 @@
     invoke-super {p0, p1}, Landroid/app/Fragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 133
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcReaderWriterP2P;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->activity:Landroid/app/Activity;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->activity:Landroid/app/Activity;
 
     .line 134
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcReaderWriterP2P;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/SettingsActivity;
+    check-cast v1, Lcom/android/settings_ex/SettingsActivity;
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->activitySwitchBar:Lcom/android/settings/SettingsActivity;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->activitySwitchBar:Lcom/android/settings_ex/SettingsActivity;
 
     .line 135
-    new-instance v1, Lcom/android/settings/widget/SwitchBar;
+    new-instance v1, Lcom/android/settings_ex/widget/SwitchBar;
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->activitySwitchBar:Lcom/android/settings/SettingsActivity;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->activitySwitchBar:Lcom/android/settings_ex/SettingsActivity;
 
-    invoke-direct {v1, v2}, Lcom/android/settings/widget/SwitchBar;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Lcom/android/settings_ex/widget/SwitchBar;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 137
     const-string v1, "[NfcReaderWriterP2P]"
@@ -300,14 +300,14 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 139
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->activity:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->activity:Landroid/app/Activity;
 
     instance-of v1, v1, Landroid/preference/PreferenceActivity;
 
     if-eqz v1, :cond_0
 
     .line 140
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->activity:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->activity:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
@@ -321,12 +321,12 @@
 
     .line 141
     .local v0, "padding":I
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1, v3, v3, v0, v3}, Lcom/android/settings/widget/SwitchBar;->setPaddingRelative(IIII)V
+    invoke-virtual {v1, v3, v3, v0, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setPaddingRelative(IIII)V
 
     .line 142
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->activity:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->activity:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
@@ -335,13 +335,13 @@
     invoke-virtual {v1, v4, v4}, Landroid/app/ActionBar;->setDisplayOptions(II)V
 
     .line 143
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->activity:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->activity:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     new-instance v3, Landroid/app/ActionBar$LayoutParams;
 
@@ -352,7 +352,7 @@
     invoke-virtual {v1, v2, v3}, Landroid/app/ActionBar;->setCustomView(Landroid/view/View;Landroid/app/ActionBar$LayoutParams;)V
 
     .line 148
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->activity:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->activity:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
@@ -362,10 +362,10 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mOldActivityTitle:Ljava/lang/CharSequence;
+    iput-object v1, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mOldActivityTitle:Ljava/lang/CharSequence;
 
     .line 149
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->activity:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->activity:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
@@ -404,15 +404,15 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mView:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mView:Landroid/view/View;
 
     .line 187
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mView:Landroid/view/View;
 
-    invoke-direct {p0, v0}, Lcom/android/settings/nfc/NfcReaderWriterP2P;->initView(Landroid/view/View;)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->initView(Landroid/view/View;)V
 
     .line 188
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mView:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mView:Landroid/view/View;
 
     return-object v0
 .end method
@@ -425,7 +425,7 @@
     invoke-super {p0}, Landroid/app/Fragment;->onDestroyView()V
 
     .line 194
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcReaderWriterP2P;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -438,12 +438,12 @@
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setCustomView(Landroid/view/View;)V
 
     .line 195
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mOldActivityTitle:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mOldActivityTitle:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_0
 
     .line 196
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcReaderWriterP2P;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -451,7 +451,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mOldActivityTitle:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mOldActivityTitle:Ljava/lang/CharSequence;
 
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
@@ -475,23 +475,23 @@
     invoke-super {p0}, Landroid/app/Fragment;->onPause()V
 
     .line 175
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcReaderWriterP2P;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 177
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_0
 
     .line 178
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 180
     :cond_0
@@ -524,41 +524,41 @@
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mfilter:Landroid/content/IntentFilter;
+    iput-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mfilter:Landroid/content/IntentFilter;
 
     .line 161
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mfilter:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mfilter:Landroid/content/IntentFilter;
 
     if-eqz v0, :cond_0
 
     .line 162
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mfilter:Landroid/content/IntentFilter;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mfilter:Landroid/content/IntentFilter;
 
     const-string v1, "com.felicanetworks.nfc.action.ADAPTER_RW_P2P_STATE_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 163
-    invoke-virtual {p0}, Lcom/android/settings/nfc/NfcReaderWriterP2P;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mfilter:Landroid/content/IntentFilter;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mfilter:Landroid/content/IntentFilter;
 
     invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 166
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     if-eqz v0, :cond_1
 
     .line 167
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 169
     :cond_1
@@ -588,7 +588,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->carrier:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->carrier:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -614,9 +614,9 @@
     if-eqz p2, :cond_1
 
     .line 212
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v0}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->getRWP2pStatus()I
+    invoke-virtual {v0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->getRWP2pStatus()I
 
     move-result v0
 
@@ -625,21 +625,21 @@
     if-eq v0, v1, :cond_0
 
     .line 213
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 214
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v0, v4}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->setRWP2pStatus(Z)Z
+    invoke-virtual {v0, v4}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->setRWP2pStatus(Z)Z
 
     .line 215
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
     const-string v0, "KDI"
 
-    iget-object v1, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->carrier:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->carrier:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -648,18 +648,18 @@
     if-eqz v0, :cond_0
 
     .line 216
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v0}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->getABeamStatus()Z
+    invoke-virtual {v0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->getABeamStatus()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 218
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v0, v4}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->setABeamStatus(Z)Z
+    invoke-virtual {v0, v4}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->setABeamStatus(Z)Z
 
     .line 228
     :cond_0
@@ -668,9 +668,9 @@
 
     .line 223
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v0}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->getRWP2pStatus()I
+    invoke-virtual {v0}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->getRWP2pStatus()I
 
     move-result v0
 
@@ -679,14 +679,14 @@
     if-eq v0, v1, :cond_0
 
     .line 224
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 225
-    iget-object v0, p0, Lcom/android/settings/nfc/NfcReaderWriterP2P;->mNfcOsaifuSettingsData:Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;
+    iget-object v0, p0, Lcom/android/settings_ex/nfc/NfcReaderWriterP2P;->mNfcOsaifuSettingsData:Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;
 
-    invoke-virtual {v0, v3}, Lcom/android/settings/nfc/NfcOsaifukeitaiSettingsData;->setRWP2pStatus(Z)Z
+    invoke-virtual {v0, v3}, Lcom/android/settings_ex/nfc/NfcOsaifukeitaiSettingsData;->setRWP2pStatus(Z)Z
 
     goto :goto_0
 .end method

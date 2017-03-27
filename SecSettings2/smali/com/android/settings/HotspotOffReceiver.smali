@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/HotspotOffReceiver;
+.class public Lcom/android/settings_ex/HotspotOffReceiver;
 .super Landroid/content/BroadcastReceiver;
 .source "HotspotOffReceiver.java"
 
@@ -21,7 +21,7 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/android/settings/HotspotOffReceiver;->DEBUG:Z
+    sput-boolean v0, Lcom/android/settings_ex/HotspotOffReceiver;->DEBUG:Z
 
     return-void
 .end method
@@ -77,7 +77,7 @@
     if-ne v1, v2, :cond_1
 
     .line 26
-    sget-boolean v1, Lcom/android/settings/HotspotOffReceiver;->DEBUG:Z
+    sget-boolean v1, Lcom/android/settings_ex/HotspotOffReceiver;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
@@ -91,7 +91,7 @@
     :cond_0
     const/4 v1, 0x0
 
-    invoke-static {p1, v1}, Lcom/android/settings/TetherService;->cancelRecheckAlarmIfNecessary(Landroid/content/Context;I)V
+    invoke-static {p1, v1}, Lcom/android/settings_ex/TetherService;->cancelRecheckAlarmIfNecessary(Landroid/content/Context;I)V
 
     .line 31
     .end local v0    # "wifiManager":Landroid/net/wifi/WifiManager;

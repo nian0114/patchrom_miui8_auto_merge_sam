@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wifi/SetupWizardWifiScreen$1;
+.class Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$1;
 .super Landroid/content/BroadcastReceiver;
 .source "SetupWizardWifiScreen.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/SetupWizardWifiScreen;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/SetupWizardWifiScreen;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;)V
     .locals 0
 
     .prologue
     .line 200
-    iput-object p1, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$1;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$1;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -40,10 +40,10 @@
 
     .prologue
     .line 203
-    iget-object v0, p0, Lcom/android/settings/wifi/SetupWizardWifiScreen$1;->this$0:Lcom/android/settings/wifi/SetupWizardWifiScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen$1;->this$0:Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;
 
-    # invokes: Lcom/android/settings/wifi/SetupWizardWifiScreen;->handleConnectionEvent(Landroid/content/Context;Landroid/content/Intent;)V
-    invoke-static {v0, p1, p2}, Lcom/android/settings/wifi/SetupWizardWifiScreen;->access$400(Lcom/android/settings/wifi/SetupWizardWifiScreen;Landroid/content/Context;Landroid/content/Intent;)V
+    # invokes: Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->handleConnectionEvent(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-static {v0, p1, p2}, Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;->access$400(Lcom/android/settings_ex/wifi/SetupWizardWifiScreen;Landroid/content/Context;Landroid/content/Intent;)V
 
     .line 204
     return-void

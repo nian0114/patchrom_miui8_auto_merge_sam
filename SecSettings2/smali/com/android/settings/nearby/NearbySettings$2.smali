@@ -1,11 +1,11 @@
-.class Lcom/android/settings/nearby/NearbySettings$2;
+.class Lcom/android/settings_ex/nearby/NearbySettings$2;
 .super Landroid/os/Handler;
 .source "NearbySettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/nearby/NearbySettings;
+    value = Lcom/android/settings_ex/nearby/NearbySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/nearby/NearbySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/nearby/NearbySettings;)V
+.method constructor <init>(Lcom/android/settings_ex/nearby/NearbySettings;)V
     .locals 0
 
     .prologue
     .line 646
-    iput-object p1, p0, Lcom/android/settings/nearby/NearbySettings$2;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/nearby/NearbySettings$2;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -63,7 +63,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 651
     :try_start_0
@@ -96,7 +96,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 666
     :goto_0
@@ -110,24 +110,24 @@
 
     const-string v3, "HANDLER_SELF_FINISH"
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 654
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbySettings$2;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbySettings$2;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/nearby/NearbySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/nearby/NearbySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-virtual {v1}, Landroid/app/Activity;->finish()V
 
     .line 655
-    iget-object v1, p0, Lcom/android/settings/nearby/NearbySettings$2;->this$0:Lcom/android/settings/nearby/NearbySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/nearby/NearbySettings$2;->this$0:Lcom/android/settings_ex/nearby/NearbySettings;
 
     const/4 v2, 0x1
 
-    # setter for: Lcom/android/settings/nearby/NearbySettings;->bSelfFinish:Z
-    invoke-static {v1, v2}, Lcom/android/settings/nearby/NearbySettings;->access$702(Lcom/android/settings/nearby/NearbySettings;Z)Z
+    # setter for: Lcom/android/settings_ex/nearby/NearbySettings;->bSelfFinish:Z
+    invoke-static {v1, v2}, Lcom/android/settings_ex/nearby/NearbySettings;->access$702(Lcom/android/settings_ex/nearby/NearbySettings;Z)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -161,7 +161,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v2, v3}, Lcom/android/settings/nearby/DLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcom/android/settings_ex/nearby/DLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 664
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V

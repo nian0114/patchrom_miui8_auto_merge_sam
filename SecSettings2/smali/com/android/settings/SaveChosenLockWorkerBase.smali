@@ -1,4 +1,4 @@
-.class abstract Lcom/android/settings/SaveChosenLockWorkerBase;
+.class abstract Lcom/android/settings_ex/SaveChosenLockWorkerBase;
 .super Landroid/app/Fragment;
 .source "SaveChosenLockWorkerBase.java"
 
@@ -6,9 +6,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/SaveChosenLockWorkerBase$1;,
-        Lcom/android/settings/SaveChosenLockWorkerBase$Listener;,
-        Lcom/android/settings/SaveChosenLockWorkerBase$Task;
+        Lcom/android/settings_ex/SaveChosenLockWorkerBase$1;,
+        Lcom/android/settings_ex/SaveChosenLockWorkerBase$Listener;,
+        Lcom/android/settings_ex/SaveChosenLockWorkerBase$Task;
     }
 .end annotation
 
@@ -20,7 +20,7 @@
 
 .field protected mHasChallenge:Z
 
-.field private mListener:Lcom/android/settings/SaveChosenLockWorkerBase$Listener;
+.field private mListener:Lcom/android/settings_ex/SaveChosenLockWorkerBase$Listener;
 
 .field private mResultData:Landroid/content/Intent;
 
@@ -51,24 +51,24 @@
     .line 84
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/SaveChosenLockWorkerBase;->mFinished:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/SaveChosenLockWorkerBase;->mFinished:Z
 
     .line 85
-    iput-object p1, p0, Lcom/android/settings/SaveChosenLockWorkerBase;->mResultData:Landroid/content/Intent;
+    iput-object p1, p0, Lcom/android/settings_ex/SaveChosenLockWorkerBase;->mResultData:Landroid/content/Intent;
 
     .line 86
-    iget-object v0, p0, Lcom/android/settings/SaveChosenLockWorkerBase;->mListener:Lcom/android/settings/SaveChosenLockWorkerBase$Listener;
+    iget-object v0, p0, Lcom/android/settings_ex/SaveChosenLockWorkerBase;->mListener:Lcom/android/settings_ex/SaveChosenLockWorkerBase$Listener;
 
     if-eqz v0, :cond_0
 
     .line 87
-    iget-object v0, p0, Lcom/android/settings/SaveChosenLockWorkerBase;->mListener:Lcom/android/settings/SaveChosenLockWorkerBase$Listener;
+    iget-object v0, p0, Lcom/android/settings_ex/SaveChosenLockWorkerBase;->mListener:Lcom/android/settings_ex/SaveChosenLockWorkerBase$Listener;
 
-    iget-boolean v1, p0, Lcom/android/settings/SaveChosenLockWorkerBase;->mWasSecureBefore:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/SaveChosenLockWorkerBase;->mWasSecureBefore:Z
 
-    iget-object v2, p0, Lcom/android/settings/SaveChosenLockWorkerBase;->mResultData:Landroid/content/Intent;
+    iget-object v2, p0, Lcom/android/settings_ex/SaveChosenLockWorkerBase;->mResultData:Landroid/content/Intent;
 
-    invoke-interface {v0, v1, v2}, Lcom/android/settings/SaveChosenLockWorkerBase$Listener;->onChosenLockSaveFinished(ZLandroid/content/Intent;)V
+    invoke-interface {v0, v1, v2}, Lcom/android/settings_ex/SaveChosenLockWorkerBase$Listener;->onChosenLockSaveFinished(ZLandroid/content/Intent;)V
 
     .line 89
     :cond_0
@@ -86,7 +86,7 @@
     .line 45
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/SaveChosenLockWorkerBase;->setRetainInstance(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/SaveChosenLockWorkerBase;->setRetainInstance(Z)V
 
     .line 46
     return-void
@@ -101,16 +101,16 @@
 
     .prologue
     .line 61
-    iput-object p1, p0, Lcom/android/settings/SaveChosenLockWorkerBase;->mUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object p1, p0, Lcom/android/settings_ex/SaveChosenLockWorkerBase;->mUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 63
-    iput-boolean p3, p0, Lcom/android/settings/SaveChosenLockWorkerBase;->mHasChallenge:Z
+    iput-boolean p3, p0, Lcom/android/settings_ex/SaveChosenLockWorkerBase;->mHasChallenge:Z
 
     .line 64
-    iput-wide p4, p0, Lcom/android/settings/SaveChosenLockWorkerBase;->mChallenge:J
+    iput-wide p4, p0, Lcom/android/settings_ex/SaveChosenLockWorkerBase;->mChallenge:J
 
     .line 65
-    iget-object v0, p0, Lcom/android/settings/SaveChosenLockWorkerBase;->mUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/SaveChosenLockWorkerBase;->mUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -120,22 +120,22 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/SaveChosenLockWorkerBase;->mWasSecureBefore:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/SaveChosenLockWorkerBase;->mWasSecureBefore:Z
 
     .line 67
-    iget-object v0, p0, Lcom/android/settings/SaveChosenLockWorkerBase;->mUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/SaveChosenLockWorkerBase;->mUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v0, p2}, Lcom/android/internal/widget/LockPatternUtils;->setCredentialRequiredToDecrypt(Z)V
 
     .line 69
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/SaveChosenLockWorkerBase;->mFinished:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/SaveChosenLockWorkerBase;->mFinished:Z
 
     .line 70
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/SaveChosenLockWorkerBase;->mResultData:Landroid/content/Intent;
+    iput-object v0, p0, Lcom/android/settings_ex/SaveChosenLockWorkerBase;->mResultData:Landroid/content/Intent;
 
     .line 71
     return-void
@@ -144,13 +144,13 @@
 .method protected abstract saveAndVerifyInBackground()Landroid/content/Intent;
 .end method
 
-.method public setListener(Lcom/android/settings/SaveChosenLockWorkerBase$Listener;)V
+.method public setListener(Lcom/android/settings_ex/SaveChosenLockWorkerBase$Listener;)V
     .locals 3
-    .param p1, "listener"    # Lcom/android/settings/SaveChosenLockWorkerBase$Listener;
+    .param p1, "listener"    # Lcom/android/settings_ex/SaveChosenLockWorkerBase$Listener;
 
     .prologue
     .line 49
-    iget-object v0, p0, Lcom/android/settings/SaveChosenLockWorkerBase;->mListener:Lcom/android/settings/SaveChosenLockWorkerBase$Listener;
+    iget-object v0, p0, Lcom/android/settings_ex/SaveChosenLockWorkerBase;->mListener:Lcom/android/settings_ex/SaveChosenLockWorkerBase$Listener;
 
     if-ne v0, p1, :cond_1
 
@@ -161,25 +161,25 @@
 
     .line 53
     :cond_1
-    iput-object p1, p0, Lcom/android/settings/SaveChosenLockWorkerBase;->mListener:Lcom/android/settings/SaveChosenLockWorkerBase$Listener;
+    iput-object p1, p0, Lcom/android/settings_ex/SaveChosenLockWorkerBase;->mListener:Lcom/android/settings_ex/SaveChosenLockWorkerBase$Listener;
 
     .line 54
-    iget-boolean v0, p0, Lcom/android/settings/SaveChosenLockWorkerBase;->mFinished:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/SaveChosenLockWorkerBase;->mFinished:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/SaveChosenLockWorkerBase;->mListener:Lcom/android/settings/SaveChosenLockWorkerBase$Listener;
+    iget-object v0, p0, Lcom/android/settings_ex/SaveChosenLockWorkerBase;->mListener:Lcom/android/settings_ex/SaveChosenLockWorkerBase$Listener;
 
     if-eqz v0, :cond_0
 
     .line 55
-    iget-object v0, p0, Lcom/android/settings/SaveChosenLockWorkerBase;->mListener:Lcom/android/settings/SaveChosenLockWorkerBase$Listener;
+    iget-object v0, p0, Lcom/android/settings_ex/SaveChosenLockWorkerBase;->mListener:Lcom/android/settings_ex/SaveChosenLockWorkerBase$Listener;
 
-    iget-boolean v1, p0, Lcom/android/settings/SaveChosenLockWorkerBase;->mWasSecureBefore:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/SaveChosenLockWorkerBase;->mWasSecureBefore:Z
 
-    iget-object v2, p0, Lcom/android/settings/SaveChosenLockWorkerBase;->mResultData:Landroid/content/Intent;
+    iget-object v2, p0, Lcom/android/settings_ex/SaveChosenLockWorkerBase;->mResultData:Landroid/content/Intent;
 
-    invoke-interface {v0, v1, v2}, Lcom/android/settings/SaveChosenLockWorkerBase$Listener;->onChosenLockSaveFinished(ZLandroid/content/Intent;)V
+    invoke-interface {v0, v1, v2}, Lcom/android/settings_ex/SaveChosenLockWorkerBase$Listener;->onChosenLockSaveFinished(ZLandroid/content/Intent;)V
 
     goto :goto_0
 .end method
@@ -189,17 +189,17 @@
 
     .prologue
     .line 74
-    new-instance v0, Lcom/android/settings/SaveChosenLockWorkerBase$Task;
+    new-instance v0, Lcom/android/settings_ex/SaveChosenLockWorkerBase$Task;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/SaveChosenLockWorkerBase$Task;-><init>(Lcom/android/settings/SaveChosenLockWorkerBase;Lcom/android/settings/SaveChosenLockWorkerBase$1;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/SaveChosenLockWorkerBase$Task;-><init>(Lcom/android/settings_ex/SaveChosenLockWorkerBase;Lcom/android/settings_ex/SaveChosenLockWorkerBase$1;)V
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/SaveChosenLockWorkerBase$Task;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/SaveChosenLockWorkerBase$Task;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     .line 75
     return-void

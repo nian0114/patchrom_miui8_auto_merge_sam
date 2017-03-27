@@ -1,11 +1,11 @@
-.class Lcom/android/settings/accessibility/AccessibilitySettingsVision$10;
+.class Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$10;
 .super Landroid/database/ContentObserver;
 .source "AccessibilitySettingsVision.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    value = Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/AccessibilitySettingsVision;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 305
-    iput-object p1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$10;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$10;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -42,10 +42,10 @@
     const/4 v2, 0x0
 
     .line 308
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$10;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$10;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    # invokes: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->getContentResolver()Landroid/content/ContentResolver;
-    invoke-static {v0}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$1700(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)Landroid/content/ContentResolver;
+    # invokes: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$1700(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -58,10 +58,10 @@
     if-eqz v0, :cond_0
 
     .line 310
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$10;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$10;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    # getter for: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->mHighContrastFontCheckbox:Landroid/preference/SwitchPreference;
-    invoke-static {v0}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$1800(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->mHighContrastFontCheckbox:Landroid/preference/SwitchPreference;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$1800(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)Landroid/preference/SwitchPreference;
 
     move-result-object v0
 
@@ -75,10 +75,10 @@
 
     .line 312
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$10;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$10;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    # getter for: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->mHighContrastFontCheckbox:Landroid/preference/SwitchPreference;
-    invoke-static {v0}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$1800(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->mHighContrastFontCheckbox:Landroid/preference/SwitchPreference;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$1800(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)Landroid/preference/SwitchPreference;
 
     move-result-object v0
 

@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accessibility/MagnifierService;
+.class public Lcom/android/settings_ex/accessibility/MagnifierService;
 .super Landroid/app/Service;
 .source "MagnifierService.java"
 
@@ -6,8 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/accessibility/MagnifierService$DetectBinder;,
-        Lcom/android/settings/accessibility/MagnifierService$MyReceiver;
+        Lcom/android/settings_ex/accessibility/MagnifierService$DetectBinder;,
+        Lcom/android/settings_ex/accessibility/MagnifierService$MyReceiver;
     }
 .end annotation
 
@@ -25,15 +25,15 @@
 
 .field private mCoverStateListener:Lcom/samsung/android/sdk/cover/ScoverManager$StateListener;
 
-.field mDetectBinder:Lcom/android/settings/accessibility/MagnifierService$DetectBinder;
+.field mDetectBinder:Lcom/android/settings_ex/accessibility/MagnifierService$DetectBinder;
 
 .field mHoverScaleObserver:Landroid/database/ContentObserver;
 
 .field mMagnificationWindowSizeObserver:Landroid/database/ContentObserver;
 
-.field mMagnifierSurfaceView:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+.field mMagnifierSurfaceView:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-.field private mReceiver:Lcom/android/settings/accessibility/MagnifierService$MyReceiver;
+.field private mReceiver:Lcom/android/settings_ex/accessibility/MagnifierService$MyReceiver;
 
 .field private mScover:Lcom/samsung/android/sdk/cover/Scover;
 
@@ -51,84 +51,84 @@
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
     .line 45
-    iput-object v2, p0, Lcom/android/settings/accessibility/MagnifierService;->mContext:Landroid/content/Context;
+    iput-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mContext:Landroid/content/Context;
 
     .line 47
-    new-instance v0, Lcom/android/settings/accessibility/MagnifierService$DetectBinder;
+    new-instance v0, Lcom/android/settings_ex/accessibility/MagnifierService$DetectBinder;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/accessibility/MagnifierService$DetectBinder;-><init>(Lcom/android/settings/accessibility/MagnifierService;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/accessibility/MagnifierService$DetectBinder;-><init>(Lcom/android/settings_ex/accessibility/MagnifierService;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/MagnifierService;->mDetectBinder:Lcom/android/settings/accessibility/MagnifierService$DetectBinder;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mDetectBinder:Lcom/android/settings_ex/accessibility/MagnifierService$DetectBinder;
 
     .line 53
-    iput v1, p0, Lcom/android/settings/accessibility/MagnifierService;->ViewCoverType:I
+    iput v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->ViewCoverType:I
 
     .line 54
-    new-instance v0, Lcom/android/settings/accessibility/MagnifierService$MyReceiver;
+    new-instance v0, Lcom/android/settings_ex/accessibility/MagnifierService$MyReceiver;
 
-    invoke-direct {v0, p0, v2}, Lcom/android/settings/accessibility/MagnifierService$MyReceiver;-><init>(Lcom/android/settings/accessibility/MagnifierService;Lcom/android/settings/accessibility/MagnifierService$1;)V
+    invoke-direct {v0, p0, v2}, Lcom/android/settings_ex/accessibility/MagnifierService$MyReceiver;-><init>(Lcom/android/settings_ex/accessibility/MagnifierService;Lcom/android/settings_ex/accessibility/MagnifierService$1;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/MagnifierService;->mReceiver:Lcom/android/settings/accessibility/MagnifierService$MyReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mReceiver:Lcom/android/settings_ex/accessibility/MagnifierService$MyReceiver;
 
     .line 55
-    iput-boolean v1, p0, Lcom/android/settings/accessibility/MagnifierService;->isScoverClosed:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->isScoverClosed:Z
 
     .line 57
-    new-instance v0, Lcom/android/settings/accessibility/MagnifierService$1;
+    new-instance v0, Lcom/android/settings_ex/accessibility/MagnifierService$1;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/accessibility/MagnifierService$1;-><init>(Lcom/android/settings/accessibility/MagnifierService;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/accessibility/MagnifierService$1;-><init>(Lcom/android/settings_ex/accessibility/MagnifierService;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/MagnifierService;->mAccessibilityMagnifierObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mAccessibilityMagnifierObserver:Landroid/database/ContentObserver;
 
     .line 73
-    new-instance v0, Lcom/android/settings/accessibility/MagnifierService$2;
+    new-instance v0, Lcom/android/settings_ex/accessibility/MagnifierService$2;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/accessibility/MagnifierService$2;-><init>(Lcom/android/settings/accessibility/MagnifierService;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/accessibility/MagnifierService$2;-><init>(Lcom/android/settings_ex/accessibility/MagnifierService;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/MagnifierService;->mHoverScaleObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mHoverScaleObserver:Landroid/database/ContentObserver;
 
     .line 81
-    new-instance v0, Lcom/android/settings/accessibility/MagnifierService$3;
+    new-instance v0, Lcom/android/settings_ex/accessibility/MagnifierService$3;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/accessibility/MagnifierService$3;-><init>(Lcom/android/settings/accessibility/MagnifierService;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/accessibility/MagnifierService$3;-><init>(Lcom/android/settings_ex/accessibility/MagnifierService;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/MagnifierService;->mMagnificationWindowSizeObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mMagnificationWindowSizeObserver:Landroid/database/ContentObserver;
 
     .line 128
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/accessibility/MagnifierService;)Z
+.method static synthetic access$100(Lcom/android/settings_ex/accessibility/MagnifierService;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/accessibility/MagnifierService;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/MagnifierService;
 
     .prologue
     .line 43
-    iget-boolean v0, p0, Lcom/android/settings/accessibility/MagnifierService;->isScoverClosed:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->isScoverClosed:Z
 
     return v0
 .end method
 
-.method static synthetic access$102(Lcom/android/settings/accessibility/MagnifierService;Z)Z
+.method static synthetic access$102(Lcom/android/settings_ex/accessibility/MagnifierService;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/accessibility/MagnifierService;
+    .param p0, "x0"    # Lcom/android/settings_ex/accessibility/MagnifierService;
     .param p1, "x1"    # Z
 
     .prologue
     .line 43
-    iput-boolean p1, p0, Lcom/android/settings/accessibility/MagnifierService;->isScoverClosed:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->isScoverClosed:Z
 
     return p1
 .end method
@@ -146,7 +146,7 @@
     .local v2, "type":I
     new-instance v0, Lcom/samsung/android/sdk/cover/ScoverManager;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/MagnifierService;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/MagnifierService;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -182,7 +182,7 @@
 
     .prologue
     .line 207
-    iget-object v0, p0, Lcom/android/settings/accessibility/MagnifierService;->mDetectBinder:Lcom/android/settings/accessibility/MagnifierService$DetectBinder;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mDetectBinder:Lcom/android/settings_ex/accessibility/MagnifierService$DetectBinder;
 
     return-object v0
 .end method
@@ -196,7 +196,7 @@
     invoke-super {p0, p1}, Landroid/app/Service;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 213
-    iget-object v0, p0, Lcom/android/settings/accessibility/MagnifierService;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -215,14 +215,14 @@
     if-eq v0, v1, :cond_1
 
     .line 215
-    iget-object v0, p0, Lcom/android/settings/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
     if-eqz v0, :cond_0
 
     .line 216
-    iget-object v0, p0, Lcom/android/settings/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/MagnifierSurfaceView;->removeView()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->removeView()V
 
     .line 221
     :cond_0
@@ -231,14 +231,14 @@
 
     .line 218
     :cond_1
-    iget-boolean v0, p0, Lcom/android/settings/accessibility/MagnifierService;->isScoverClosed:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->isScoverClosed:Z
 
     if-nez v0, :cond_0
 
     .line 219
-    iget-object v0, p0, Lcom/android/settings/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/MagnifierSurfaceView;->configurationChange()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->configurationChange()V
 
     goto :goto_0
 .end method
@@ -253,23 +253,23 @@
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
     .line 137
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/MagnifierService;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/MagnifierService;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mContext:Landroid/content/Context;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mContext:Landroid/content/Context;
 
     .line 138
-    new-instance v1, Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    new-instance v1, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierService;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mContext:Landroid/content/Context;
 
-    invoke-direct {v1, v2}, Lcom/android/settings/accessibility/MagnifierSurfaceView;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
     .line 139
-    iget-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -281,12 +281,12 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierService;->mAccessibilityMagnifierObserver:Landroid/database/ContentObserver;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mAccessibilityMagnifierObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v1, v2, v4, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 140
-    iget-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -298,12 +298,12 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierService;->mHoverScaleObserver:Landroid/database/ContentObserver;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mHoverScaleObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v1, v2, v4, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 141
-    iget-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -315,7 +315,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/accessibility/MagnifierService;->mMagnificationWindowSizeObserver:Landroid/database/ContentObserver;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mMagnificationWindowSizeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v1, v2, v4, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -324,13 +324,13 @@
 
     invoke-direct {v1}, Lcom/samsung/android/sdk/cover/Scover;-><init>()V
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mScover:Lcom/samsung/android/sdk/cover/Scover;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mScover:Lcom/samsung/android/sdk/cover/Scover;
 
     .line 145
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mScover:Lcom/samsung/android/sdk/cover/Scover;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mScover:Lcom/samsung/android/sdk/cover/Scover;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/MagnifierService;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/MagnifierService;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -341,29 +341,29 @@
 
     .line 151
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/MagnifierService;->getTypeOfCover()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/MagnifierService;->getTypeOfCover()I
 
     move-result v1
 
-    iput v1, p0, Lcom/android/settings/accessibility/MagnifierService;->ViewCoverType:I
+    iput v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->ViewCoverType:I
 
     .line 152
     new-instance v1, Lcom/samsung/android/sdk/cover/ScoverManager;
 
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/MagnifierService;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/MagnifierService;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
 
     invoke-direct {v1, v2}, Lcom/samsung/android/sdk/cover/ScoverManager;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mCoverManager:Lcom/samsung/android/sdk/cover/ScoverManager;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mCoverManager:Lcom/samsung/android/sdk/cover/ScoverManager;
 
     .line 154
-    new-instance v1, Lcom/android/settings/accessibility/MagnifierService$4;
+    new-instance v1, Lcom/android/settings_ex/accessibility/MagnifierService$4;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/accessibility/MagnifierService$4;-><init>(Lcom/android/settings/accessibility/MagnifierService;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/accessibility/MagnifierService$4;-><init>(Lcom/android/settings_ex/accessibility/MagnifierService;)V
 
-    iput-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mCoverStateListener:Lcom/samsung/android/sdk/cover/ScoverManager$StateListener;
+    iput-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mCoverStateListener:Lcom/samsung/android/sdk/cover/ScoverManager$StateListener;
 
     .line 165
     return-void
@@ -395,81 +395,81 @@
 
     .prologue
     .line 185
-    iget-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
     if-eqz v1, :cond_0
 
     .line 186
-    iget-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    invoke-virtual {v1}, Lcom/android/settings/accessibility/MagnifierSurfaceView;->removeView()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->removeView()V
 
     .line 187
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierService;->mAccessibilityMagnifierObserver:Landroid/database/ContentObserver;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mAccessibilityMagnifierObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v1, v2}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 188
-    iget-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierService;->mHoverScaleObserver:Landroid/database/ContentObserver;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mHoverScaleObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v1, v2}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 189
-    iget-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierService;->mMagnificationWindowSizeObserver:Landroid/database/ContentObserver;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mMagnificationWindowSizeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v1, v2}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 190
-    iget-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierService;->mReceiver:Lcom/android/settings/accessibility/MagnifierService$MyReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mReceiver:Lcom/android/settings_ex/accessibility/MagnifierService$MyReceiver;
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 191
-    iget-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mCoverManager:Lcom/samsung/android/sdk/cover/ScoverManager;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mCoverManager:Lcom/samsung/android/sdk/cover/ScoverManager;
 
     if-eqz v1, :cond_1
 
     .line 192
-    iget-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mCoverManager:Lcom/samsung/android/sdk/cover/ScoverManager;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mCoverManager:Lcom/samsung/android/sdk/cover/ScoverManager;
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierService;->mCoverStateListener:Lcom/samsung/android/sdk/cover/ScoverManager$StateListener;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mCoverStateListener:Lcom/samsung/android/sdk/cover/ScoverManager$StateListener;
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/sdk/cover/ScoverManager;->unregisterListener(Lcom/samsung/android/sdk/cover/ScoverManager$StateListener;)V
 
     .line 195
     :cond_1
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mContext:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isSupportPenUsp10(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isSupportPenUsp10(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
     .line 196
-    iget-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -486,7 +486,7 @@
     if-nez v1, :cond_2
 
     .line 197
-    iget-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -527,14 +527,14 @@
 
     .prologue
     .line 170
-    iget-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    invoke-virtual {v1}, Lcom/android/settings/accessibility/MagnifierSurfaceView;->showView()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->showView()V
 
     .line 171
-    iget-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mCoverManager:Lcom/samsung/android/sdk/cover/ScoverManager;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mCoverManager:Lcom/samsung/android/sdk/cover/ScoverManager;
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierService;->mCoverStateListener:Lcom/samsung/android/sdk/cover/ScoverManager$StateListener;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mCoverStateListener:Lcom/samsung/android/sdk/cover/ScoverManager$StateListener;
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/sdk/cover/ScoverManager;->registerListener(Lcom/samsung/android/sdk/cover/ScoverManager$StateListener;)V
 
@@ -565,9 +565,9 @@
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 179
-    iget-object v1, p0, Lcom/android/settings/accessibility/MagnifierService;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierService;->mReceiver:Lcom/android/settings/accessibility/MagnifierService$MyReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mReceiver:Lcom/android/settings_ex/accessibility/MagnifierService$MyReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -586,7 +586,7 @@
 
     .line 225
     .local v0, "magSize":I
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierService;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -601,7 +601,7 @@
     move-result v0
 
     .line 226
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierService;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -617,9 +617,9 @@
 
     .line 227
     .local v1, "scaleSize":I
-    iget-object v2, p0, Lcom/android/settings/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings/accessibility/MagnifierSurfaceView;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/MagnifierService;->mMagnifierSurfaceView:Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;
 
-    invoke-virtual {v2, v0, v1}, Lcom/android/settings/accessibility/MagnifierSurfaceView;->update(II)V
+    invoke-virtual {v2, v0, v1}, Lcom/android/settings_ex/accessibility/MagnifierSurfaceView;->update(II)V
 
     .line 228
     return-void

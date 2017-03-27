@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiSettings$35;
+.class Lcom/android/settings_ex/wifi/WifiSettings$35;
 .super Ljava/lang/Object;
 .source "WifiSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSettings;->onCreateDialog(I)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/wifi/WifiSettings;->onCreateDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSettings;)V
     .locals 0
 
     .prologue
     .line 3700
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSettings$35;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSettings$35;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -52,8 +52,8 @@
     .line 3704
     const/4 v0, 0x0
 
-    # setter for: Lcom/android/settings/wifi/WifiSettings;->tempConfig:Landroid/net/wifi/WifiConfiguration;
-    invoke-static {v0}, Lcom/android/settings/wifi/WifiSettings;->access$4602(Landroid/net/wifi/WifiConfiguration;)Landroid/net/wifi/WifiConfiguration;
+    # setter for: Lcom/android/settings_ex/wifi/WifiSettings;->tempConfig:Landroid/net/wifi/WifiConfiguration;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/WifiSettings;->access$4602(Landroid/net/wifi/WifiConfiguration;)Landroid/net/wifi/WifiConfiguration;
 
     .line 3705
     return-void

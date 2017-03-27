@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/networkconnect/ApplicationNetInfo;
+.class public Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;
 .super Ljava/lang/Object;
 .source "ApplicationNetInfo.java"
 
@@ -62,28 +62,28 @@
     .line 30
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/settings/networkconnect/ApplicationNetInfo;->isWarningAllowed:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->isWarningAllowed:Z
 
     .line 35
-    iput-object p1, p0, Lcom/android/settings/networkconnect/ApplicationNetInfo;->packageName:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->packageName:Ljava/lang/String;
 
     .line 36
-    iput-object p2, p0, Lcom/android/settings/networkconnect/ApplicationNetInfo;->label:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->label:Ljava/lang/String;
 
     .line 37
-    iput p3, p0, Lcom/android/settings/networkconnect/ApplicationNetInfo;->uid:I
+    iput p3, p0, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->uid:I
 
     .line 38
-    iput-object p4, p0, Lcom/android/settings/networkconnect/ApplicationNetInfo;->uids:Ljava/util/ArrayList;
+    iput-object p4, p0, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->uids:Ljava/util/ArrayList;
 
     .line 39
-    iput-boolean p5, p0, Lcom/android/settings/networkconnect/ApplicationNetInfo;->isDataAllowed:Z
+    iput-boolean p5, p0, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->isDataAllowed:Z
 
     .line 40
-    iput-boolean p6, p0, Lcom/android/settings/networkconnect/ApplicationNetInfo;->isWlanAllowed:Z
+    iput-boolean p6, p0, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->isWlanAllowed:Z
 
     .line 41
-    iput-boolean p7, p0, Lcom/android/settings/networkconnect/ApplicationNetInfo;->isWarningAllowed:Z
+    iput-boolean p7, p0, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->isWarningAllowed:Z
 
     .line 42
     return-void
@@ -96,7 +96,7 @@
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/android/settings/networkconnect/ApplicationNetInfo;->label:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->label:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -106,7 +106,7 @@
 
     .prologue
     .line 55
-    iget-object v0, p0, Lcom/android/settings/networkconnect/ApplicationNetInfo;->packageName:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->packageName:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -116,7 +116,7 @@
 
     .prologue
     .line 63
-    iget v0, p0, Lcom/android/settings/networkconnect/ApplicationNetInfo;->uid:I
+    iget v0, p0, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->uid:I
 
     return v0
 .end method
@@ -135,7 +135,7 @@
 
     .prologue
     .line 71
-    iget-object v0, p0, Lcom/android/settings/networkconnect/ApplicationNetInfo;->uids:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->uids:Ljava/util/ArrayList;
 
     return-object v0
 .end method
@@ -145,7 +145,7 @@
 
     .prologue
     .line 87
-    iget-boolean v0, p0, Lcom/android/settings/networkconnect/ApplicationNetInfo;->isDataAllowed:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->isDataAllowed:Z
 
     return v0
 .end method
@@ -155,7 +155,7 @@
 
     .prologue
     .line 119
-    iget-boolean v0, p0, Lcom/android/settings/networkconnect/ApplicationNetInfo;->isWarningAllowed:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->isWarningAllowed:Z
 
     return v0
 .end method
@@ -165,7 +165,7 @@
 
     .prologue
     .line 95
-    iget-boolean v0, p0, Lcom/android/settings/networkconnect/ApplicationNetInfo;->isWlanAllowed:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->isWlanAllowed:Z
 
     return v0
 .end method
@@ -176,7 +176,7 @@
 
     .prologue
     .line 91
-    iput-boolean p1, p0, Lcom/android/settings/networkconnect/ApplicationNetInfo;->isDataAllowed:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->isDataAllowed:Z
 
     .line 92
     return-void
@@ -188,7 +188,7 @@
 
     .prologue
     .line 107
-    iput-wide p1, p0, Lcom/android/settings/networkconnect/ApplicationNetInfo;->dataTotal:J
+    iput-wide p1, p0, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->dataTotal:J
 
     .line 108
     return-void
@@ -200,7 +200,7 @@
 
     .prologue
     .line 123
-    iput-boolean p1, p0, Lcom/android/settings/networkconnect/ApplicationNetInfo;->isWarningAllowed:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->isWarningAllowed:Z
 
     .line 124
     return-void
@@ -212,7 +212,7 @@
 
     .prologue
     .line 99
-    iput-boolean p1, p0, Lcom/android/settings/networkconnect/ApplicationNetInfo;->isWlanAllowed:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->isWlanAllowed:Z
 
     .line 100
     return-void
@@ -224,7 +224,7 @@
 
     .prologue
     .line 115
-    iput-wide p1, p0, Lcom/android/settings/networkconnect/ApplicationNetInfo;->wlanTotal:J
+    iput-wide p1, p0, Lcom/android/settings_ex/networkconnect/ApplicationNetInfo;->wlanTotal:J
 
     .line 116
     return-void

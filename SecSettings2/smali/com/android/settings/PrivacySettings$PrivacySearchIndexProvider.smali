@@ -1,11 +1,11 @@
-.class Lcom/android/settings/PrivacySettings$PrivacySearchIndexProvider;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class Lcom/android/settings_ex/PrivacySettings$PrivacySearchIndexProvider;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "PrivacySettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/PrivacySettings;
+    value = Lcom/android/settings_ex/PrivacySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
 
     .prologue
     .line 683
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     .line 685
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
@@ -36,7 +36,7 @@
     const/4 v0, 0x1
 
     :goto_0
-    iput-boolean v0, p0, Lcom/android/settings/PrivacySettings$PrivacySearchIndexProvider;->mIsPrimary:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/PrivacySettings$PrivacySearchIndexProvider;->mIsPrimary:Z
 
     .line 686
     return-void
@@ -73,8 +73,8 @@
 
     .line 710
     .local v0, "nonVisibleKeys":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
-    # invokes: Lcom/android/settings/PrivacySettings;->getNonVisibleKeys(Landroid/content/Context;Ljava/util/Collection;)V
-    invoke-static {p1, v0}, Lcom/android/settings/PrivacySettings;->access$1200(Landroid/content/Context;Ljava/util/Collection;)V
+    # invokes: Lcom/android/settings_ex/PrivacySettings;->getNonVisibleKeys(Landroid/content/Context;Ljava/util/Collection;)V
+    invoke-static {p1, v0}, Lcom/android/settings_ex/PrivacySettings;->access$1200(Landroid/content/Context;Ljava/util/Collection;)V
 
     .line 711
     return-object v0
@@ -104,7 +104,7 @@
 
     .line 695
     .local v0, "result":Ljava/util/List;, "Ljava/util/List<Landroid/provider/SearchIndexableResource;>;"
-    iget-boolean v2, p0, Lcom/android/settings/PrivacySettings$PrivacySearchIndexProvider;->mIsPrimary:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/PrivacySettings$PrivacySearchIndexProvider;->mIsPrimary:Z
 
     if-nez v2, :cond_0
 
@@ -120,7 +120,7 @@
 
     .line 700
     .local v1, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v2, Lcom/android/settings/PrivacySettings;
+    const-class v2, Lcom/android/settings_ex/PrivacySettings;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

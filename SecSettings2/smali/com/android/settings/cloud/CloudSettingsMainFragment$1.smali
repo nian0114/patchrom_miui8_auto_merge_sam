@@ -1,11 +1,11 @@
-.class Lcom/android/settings/cloud/CloudSettingsMainFragment$1;
+.class Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$1;
 .super Landroid/app/ProgressDialog;
 .source "CloudSettingsMainFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/cloud/CloudSettingsMainFragment;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/cloud/CloudSettingsMainFragment;Landroid/content/Context;)V
+.method constructor <init>(Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;Landroid/content/Context;)V
     .locals 0
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
     .line 273
-    iput-object p1, p0, Lcom/android/settings/cloud/CloudSettingsMainFragment$1;->this$0:Lcom/android/settings/cloud/CloudSettingsMainFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/cloud/CloudSettingsMainFragment$1;->this$0:Lcom/android/settings_ex/cloud/CloudSettingsMainFragment;
 
     invoke-direct {p0, p2}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
 

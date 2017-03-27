@@ -1,4 +1,4 @@
-.class Lcom/android/settings/cpa/CpaAdvancedSettings$2;
+.class Lcom/android/settings_ex/cpa/CpaAdvancedSettings$2;
 .super Ljava/lang/Object;
 .source "CpaAdvancedSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/cpa/CpaAdvancedSettings;->showAlertDialogAboutInvalid(Ljava/lang/String;)V
+    value = Lcom/android/settings_ex/cpa/CpaAdvancedSettings;->showAlertDialogAboutInvalid(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/cpa/CpaAdvancedSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/cpa/CpaAdvancedSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/cpa/CpaAdvancedSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/cpa/CpaAdvancedSettings;)V
     .locals 0
 
     .prologue
     .line 433
-    iput-object p1, p0, Lcom/android/settings/cpa/CpaAdvancedSettings$2;->this$0:Lcom/android/settings/cpa/CpaAdvancedSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/cpa/CpaAdvancedSettings$2;->this$0:Lcom/android/settings_ex/cpa/CpaAdvancedSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

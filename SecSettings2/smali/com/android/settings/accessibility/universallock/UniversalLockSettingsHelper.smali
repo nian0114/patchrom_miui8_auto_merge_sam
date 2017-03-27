@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;
+.class public Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;
 .super Ljava/lang/Object;
 .source "UniversalLockSettingsHelper.java"
 
@@ -14,7 +14,7 @@
 
 .field private mActivity:Landroid/app/Activity;
 
-.field private mChooseLockSettingsHelper:Lcom/android/settings/ChooseLockSettingsHelper;
+.field private mChooseLockSettingsHelper:Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
 .field private mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
@@ -33,7 +33,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mBuildCharacteristics:Ljava/lang/String;
+    sput-object v0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mBuildCharacteristics:Ljava/lang/String;
 
     return-void
 .end method
@@ -47,23 +47,23 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 77
-    iput-object p1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
 
     .line 78
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->isMobileKeyboardCovered(Landroid/content/Context;)Z
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->isMobileKeyboardCovered(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 79
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
@@ -77,15 +77,15 @@
 
     float-to-int v0, v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->SETTINGS_ARROW_SIZE:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->SETTINGS_ARROW_SIZE:I
 
     .line 83
     :goto_0
-    new-instance v0, Lcom/android/settings/ChooseLockSettingsHelper;
+    new-instance v0, Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
-    invoke-direct {v0, p1}, Lcom/android/settings/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;)V
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mChooseLockSettingsHelper:Lcom/android/settings/ChooseLockSettingsHelper;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mChooseLockSettingsHelper:Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
     .line 84
     const-string v0, "accessibility"
@@ -96,19 +96,19 @@
 
     check-cast v0, Landroid/view/accessibility/AccessibilityManager;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
 
     .line 85
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mChooseLockSettingsHelper:Lcom/android/settings/ChooseLockSettingsHelper;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mChooseLockSettingsHelper:Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
-    invoke-virtual {v0}, Lcom/android/settings/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
+    invoke-virtual {v0}, Lcom/android/settings_ex/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 86
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
 
     const-string v1, "fingerprint"
 
@@ -118,14 +118,14 @@
 
     check-cast v0, Landroid/hardware/fingerprint/FingerprintManager;
 
-    iput-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
+    iput-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     .line 87
     return-void
 
     .line 81
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
@@ -139,7 +139,7 @@
 
     float-to-int v0, v0
 
-    iput v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->SETTINGS_ARROW_SIZE:I
+    iput v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->SETTINGS_ARROW_SIZE:I
 
     goto :goto_0
 .end method
@@ -261,7 +261,7 @@
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 243
-    iget-object v2, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
 
     const/16 v3, 0x65
 
@@ -365,7 +365,7 @@
     invoke-static {p1, p2, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     .line 301
-    invoke-virtual {p0, v1, p3, p4}, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->calculateInSampleSize(Landroid/graphics/BitmapFactory$Options;II)I
+    invoke-virtual {p0, v1, p3, p4}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->calculateInSampleSize(Landroid/graphics/BitmapFactory$Options;II)I
 
     move-result v4
 
@@ -472,7 +472,7 @@
     const/4 v0, 0x0
 
     .line 158
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
@@ -485,7 +485,7 @@
     if-nez v1, :cond_1
 
     .line 159
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
@@ -503,7 +503,7 @@
     return v0
 
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/LockPatternUtils;->getKeyguardStoredPasswordQuality()I
 
@@ -521,7 +521,7 @@
 
     .line 100
     .local v1, "mResID":I
-    iget-object v3, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v3}, Lcom/android/internal/widget/LockPatternUtils;->getKeyguardStoredPasswordQuality()I
 
@@ -552,7 +552,7 @@
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 104
-    iget-object v3, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -564,7 +564,7 @@
 
     .line 105
     .local v0, "fingerLockEnabledType":I
-    iget-object v3, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -577,7 +577,7 @@
     if-nez v3, :cond_1
 
     .line 106
-    iget-object v3, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v3, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -710,7 +710,7 @@
 
     .prologue
     .line 279
-    sget-object v0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mBuildCharacteristics:Ljava/lang/String;
+    sget-object v0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mBuildCharacteristics:Ljava/lang/String;
 
     const-string v1, "tablet"
 
@@ -726,7 +726,7 @@
 
     .prologue
     .line 265
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
 
     invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()Z
 
@@ -745,7 +745,7 @@
     const/4 v8, 0x0
 
     .line 178
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->getCurrentLockScreen()I
+    invoke-virtual {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->getCurrentLockScreen()I
 
     move-result v3
 
@@ -772,20 +772,20 @@
 
     invoke-direct {v5}, Landroid/content/Intent;-><init>()V
 
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v6}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v6
 
-    const-class v7, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    const-class v7, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 
     invoke-virtual {v5, v6, v7}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
     move-result-object v1
 
     .line 194
-    iget-object v5, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
 
     const/16 v6, 0x66
 
@@ -806,7 +806,7 @@
     if-eq v3, v5, :cond_2
 
     .line 204
-    iget-object v5, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v5}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -826,13 +826,13 @@
     if-eqz p1, :cond_0
 
     .line 215
-    iget-object v5, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mChooseLockSettingsHelper:Lcom/android/settings/ChooseLockSettingsHelper;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mChooseLockSettingsHelper:Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
     const/16 v6, 0x65
 
     const/4 v7, 0x0
 
-    invoke-virtual {v5, v6, v7, v8}, Lcom/android/settings/ChooseLockSettingsHelper;->launchConfirmationActivity(ILjava/lang/CharSequence;Z)Z
+    invoke-virtual {v5, v6, v7, v8}, Lcom/android/settings_ex/ChooseLockSettingsHelper;->launchConfirmationActivity(ILjava/lang/CharSequence;Z)Z
 
     move-result v4
 
@@ -842,7 +842,7 @@
     .line 220
     if-nez v0, :cond_3
 
-    iget-object v5, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mFingerprintManager:Landroid/hardware/fingerprint/FingerprintManager;
 
     invoke-virtual {v5}, Landroid/hardware/fingerprint/FingerprintManager;->hasEnrolledFingerprints()Z
 
@@ -854,7 +854,7 @@
     const/4 v0, 0x1
 
     .line 223
-    invoke-direct {p0}, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->confirmFingerprintPassword()V
+    invoke-direct {p0}, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->confirmFingerprintPassword()V
 
     goto :goto_0
 
@@ -867,13 +867,13 @@
 
     invoke-direct {v5}, Landroid/content/Intent;-><init>()V
 
-    iget-object v6, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
+    iget-object v6, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v6}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v6
 
-    const-class v7, Lcom/android/settings/accessibility/universallock/ChooseLockUniversal;
+    const-class v7, Lcom/android/settings_ex/accessibility/universallock/ChooseLockUniversal;
 
     invoke-virtual {v5, v6, v7}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
@@ -881,7 +881,7 @@
 
     .line 231
     .local v2, "intent1":Landroid/content/Intent;
-    iget-object v5, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
+    iget-object v5, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v5, v2}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
@@ -896,7 +896,7 @@
 
     .prologue
     .line 269
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Lcom/android/internal/widget/LockPatternUtils;->isDeviceEncrypted()Z
 
@@ -904,7 +904,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
@@ -935,9 +935,9 @@
 
     .prologue
     .line 259
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v1}, Lcom/android/internal/widget/LockPatternUtils;->getCurrentUser()I
 
@@ -946,7 +946,7 @@
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/LockPatternUtils;->clearLock(I)V
 
     .line 260
-    iget-object v0, p0, Lcom/android/settings/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/universallock/UniversalLockSettingsHelper;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 

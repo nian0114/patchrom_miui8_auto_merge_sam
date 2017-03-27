@@ -1,4 +1,4 @@
-.class Lcom/android/settings/helpdialog/TwHelpAnimatedDialog$1;
+.class Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog$1;
 .super Ljava/lang/Object;
 .source "TwHelpAnimatedDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->init(Landroid/content/Context;)V
+    value = Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->init(Landroid/content/Context;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;)V
     .locals 0
 
     .prologue
     .line 104
-    iput-object p1, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog$1;->this$0:Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog$1;->this$0:Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,27 +44,27 @@
     const-wide/16 v2, 0x12c
 
     .line 107
-    iget-object v0, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog$1;->this$0:Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog$1;->this$0:Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;
 
-    # getter for: Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mBubbleAnimation:Landroid/view/animation/Animation;
-    invoke-static {v0}, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->access$000(Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;)Landroid/view/animation/Animation;
+    # getter for: Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mBubbleAnimation:Landroid/view/animation/Animation;
+    invoke-static {v0}, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->access$000(Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;)Landroid/view/animation/Animation;
 
     move-result-object v0
 
     invoke-virtual {v0, v2, v3}, Landroid/view/animation/Animation;->setStartOffset(J)V
 
     .line 108
-    iget-object v0, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog$1;->this$0:Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog$1;->this$0:Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;
 
-    # getter for: Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mPointAnimations:Ljava/util/List;
-    invoke-static {v0}, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->access$200(Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;)Ljava/util/List;
+    # getter for: Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mPointAnimations:Ljava/util/List;
+    invoke-static {v0}, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->access$200(Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;)Ljava/util/List;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog$1;->this$0:Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog$1;->this$0:Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;
 
-    # getter for: Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->mCurrentPointAnimation:I
-    invoke-static {v1}, Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;->access$100(Lcom/android/settings/helpdialog/TwHelpAnimatedDialog;)I
+    # getter for: Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->mCurrentPointAnimation:I
+    invoke-static {v1}, Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;->access$100(Lcom/android/settings_ex/helpdialog/TwHelpAnimatedDialog;)I
 
     move-result v1
 

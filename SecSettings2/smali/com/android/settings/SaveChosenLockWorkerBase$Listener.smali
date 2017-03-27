@@ -1,11 +1,11 @@
-.class interface abstract Lcom/android/settings/SaveChosenLockWorkerBase$Listener;
+.class interface abstract Lcom/android/settings_ex/SaveChosenLockWorkerBase$Listener;
 .super Ljava/lang/Object;
 .source "SaveChosenLockWorkerBase.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/SaveChosenLockWorkerBase;
+    value = Lcom/android/settings_ex/SaveChosenLockWorkerBase;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

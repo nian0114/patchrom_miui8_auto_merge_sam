@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiSettings$31;
+.class Lcom/android/settings_ex/wifi/WifiSettings$31;
 .super Ljava/lang/Object;
 .source "WifiSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSettings;->showWeChatDialog()V
+    value = Lcom/android/settings_ex/wifi/WifiSettings;->showWeChatDialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/WifiSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSettings;)V
     .locals 0
 
     .prologue
     .line 3492
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSettings$31;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSettings$31;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,19 +43,19 @@
 
     .prologue
     .line 3494
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings$31;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSettings$31;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mWeChatSsidToConnect:Ljava/lang/String;
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiSettings;->access$4300(Lcom/android/settings/wifi/WifiSettings;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mWeChatSsidToConnect:Ljava/lang/String;
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiSettings;->access$4300(Lcom/android/settings_ex/wifi/WifiSettings;)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings$31;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSettings$31;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mWeChatBssidToConnect:Ljava/lang/String;
-    invoke-static {v1}, Lcom/android/settings/wifi/WifiSettings;->access$4400(Lcom/android/settings/wifi/WifiSettings;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mWeChatBssidToConnect:Ljava/lang/String;
+    invoke-static {v1}, Lcom/android/settings_ex/wifi/WifiSettings;->access$4400(Lcom/android/settings_ex/wifi/WifiSettings;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -75,10 +75,10 @@
     .line 3497
     const-string v1, "ssid"
 
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSettings$31;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSettings$31;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mWeChatSsidToConnect:Ljava/lang/String;
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiSettings;->access$4300(Lcom/android/settings/wifi/WifiSettings;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mWeChatSsidToConnect:Ljava/lang/String;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiSettings;->access$4300(Lcom/android/settings_ex/wifi/WifiSettings;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -87,10 +87,10 @@
     .line 3498
     const-string v1, "bssid"
 
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSettings$31;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSettings$31;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mWeChatBssidToConnect:Ljava/lang/String;
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiSettings;->access$4400(Lcom/android/settings/wifi/WifiSettings;)Ljava/lang/String;
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mWeChatBssidToConnect:Ljava/lang/String;
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiSettings;->access$4400(Lcom/android/settings_ex/wifi/WifiSettings;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -99,19 +99,19 @@
     .line 3499
     const-string v1, "rssi"
 
-    iget-object v2, p0, Lcom/android/settings/wifi/WifiSettings$31;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/wifi/WifiSettings$31;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    # getter for: Lcom/android/settings/wifi/WifiSettings;->mWeChatRssiToConnect:I
-    invoke-static {v2}, Lcom/android/settings/wifi/WifiSettings;->access$4500(Lcom/android/settings/wifi/WifiSettings;)I
+    # getter for: Lcom/android/settings_ex/wifi/WifiSettings;->mWeChatRssiToConnect:I
+    invoke-static {v2}, Lcom/android/settings_ex/wifi/WifiSettings;->access$4500(Lcom/android/settings_ex/wifi/WifiSettings;)I
 
     move-result v2
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 3500
-    iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings$31;->this$0:Lcom/android/settings/wifi/WifiSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/wifi/WifiSettings$31;->this$0:Lcom/android/settings_ex/wifi/WifiSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/wifi/WifiSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings_ex/wifi/WifiSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 

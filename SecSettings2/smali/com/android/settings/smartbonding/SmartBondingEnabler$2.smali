@@ -1,11 +1,11 @@
-.class Lcom/android/settings/smartbonding/SmartBondingEnabler$2;
+.class Lcom/android/settings_ex/smartbonding/SmartBondingEnabler$2;
 .super Landroid/database/ContentObserver;
 .source "SmartBondingEnabler.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/smartbonding/SmartBondingEnabler;
+    value = Lcom/android/settings_ex/smartbonding/SmartBondingEnabler;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/smartbonding/SmartBondingEnabler;
+.field final synthetic this$0:Lcom/android/settings_ex/smartbonding/SmartBondingEnabler;
 
 
 # virtual methods
@@ -25,9 +25,9 @@
 
     .prologue
     .line 64
-    iget-object v0, p0, Lcom/android/settings/smartbonding/SmartBondingEnabler$2;->this$0:Lcom/android/settings/smartbonding/SmartBondingEnabler;
+    iget-object v0, p0, Lcom/android/settings_ex/smartbonding/SmartBondingEnabler$2;->this$0:Lcom/android/settings_ex/smartbonding/SmartBondingEnabler;
 
-    invoke-virtual {v0}, Lcom/android/settings/smartbonding/SmartBondingEnabler;->updateSmartBondingState()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/smartbonding/SmartBondingEnabler;->updateSmartBondingState()V
 
     .line 65
     return-void

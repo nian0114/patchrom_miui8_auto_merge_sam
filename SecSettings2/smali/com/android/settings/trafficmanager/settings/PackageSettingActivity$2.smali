@@ -1,4 +1,4 @@
-.class Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$2;
+.class Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$2;
 .super Ljava/lang/Object;
 .source "PackageSettingActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->sendText()V
+    value = Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->sendText()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;)V
     .locals 0
 
     .prologue
     .line 856
-    iput-object p1, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$2;->this$0:Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$2;->this$0:Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +41,9 @@
 
     .prologue
     .line 858
-    iget-object v0, p0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity$2;->this$0:Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity$2;->this$0:Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;
 
-    iget-object v0, v0, Lcom/android/settings/trafficmanager/settings/PackageSettingActivity;->databaseHandler:Landroid/os/Handler;
+    iget-object v0, v0, Lcom/android/settings_ex/trafficmanager/settings/PackageSettingActivity;->databaseHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
 

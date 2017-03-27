@@ -10,6 +10,6 @@
         <CheckBox android:gravity="top" android:layout_gravity="bottom" android:id="@id/fast_encryption" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/encrypt_tablet_fast_encryption" style="@style/crypt_keeper_checkbox" />
     </LinearLayout>
     <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" style="@style/SecurityPreferenceButtonContainer">
-        <com.android.settings.widget.BottomBarButton android:textSize="17.0sp" android:id="@id/execute_encrypt" android:layout_width="fill_parent" android:text="@string/crypt_keeper_button_text" style="@style/SecurityPreferenceButton" />
+        <com.android.settings_ex.widget.BottomBarButton android:textSize="17.0sp" android:id="@id/execute_encrypt" android:layout_width="fill_parent" android:text="@string/crypt_keeper_button_text" style="@style/SecurityPreferenceButton" />
     </LinearLayout>
 </LinearLayout>

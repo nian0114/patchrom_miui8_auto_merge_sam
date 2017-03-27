@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/notification/NotificationsSubSettings$11;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/notification/NotificationsSubSettings$11;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "NotificationsSubSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/NotificationsSubSettings;
+    value = Lcom/android/settings_ex/notification/NotificationsSubSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 1083
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -52,7 +52,7 @@
 
     .line 1115
     .local v6, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
-    invoke-static {p1}, Lcom/android/settings/Utils;->isVoiceCapable(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isVoiceCapable(Landroid/content/Context;)Z
 
     move-result v7
 
@@ -65,7 +65,7 @@
 
     .line 1119
     :cond_0
-    invoke-static {}, Lcom/android/settings/Utils;->isMultisimModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isMultisimModel()Z
 
     move-result v7
 
@@ -132,7 +132,7 @@
     :cond_2
     const-string v7, "com.android.calendar"
 
-    invoke-static {p1, v7}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v7}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v7
 
@@ -147,13 +147,13 @@
     :cond_3
     const-string v7, "com.samsung.android.email.provider"
 
-    invoke-static {p1, v7}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v7}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v7
 
     if-eqz v7, :cond_4
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->getNumberOfEmailAccount(Landroid/content/Context;)I
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->getNumberOfEmailAccount(Landroid/content/Context;)I
 
     move-result v7
 
@@ -194,7 +194,7 @@
 
     .line 1149
     :cond_6
-    invoke-static {p1}, Lcom/android/settings/Utils;->isEnabledUltraPowerSaving(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isEnabledUltraPowerSaving(Landroid/content/Context;)Z
 
     move-result v7
 
@@ -229,13 +229,13 @@
     :cond_7
     const-string v7, "com.android.mms"
 
-    invoke-static {p1, v7}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v7}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v7
 
     if-eqz v7, :cond_8
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v7
 
@@ -255,12 +255,12 @@
     .line 1164
     :cond_9
     :goto_1
-    # getter for: Lcom/android/settings/notification/NotificationsSubSettings;->PREFS:[Lcom/android/settings/notification/SettingPref;
-    invoke-static {}, Lcom/android/settings/notification/NotificationsSubSettings;->access$1500()[Lcom/android/settings/notification/SettingPref;
+    # getter for: Lcom/android/settings_ex/notification/NotificationsSubSettings;->PREFS:[Lcom/android/settings_ex/notification/SettingPref;
+    invoke-static {}, Lcom/android/settings_ex/notification/NotificationsSubSettings;->access$1500()[Lcom/android/settings_ex/notification/SettingPref;
 
     move-result-object v0
 
-    .local v0, "arr$":[Lcom/android/settings/notification/SettingPref;
+    .local v0, "arr$":[Lcom/android/settings_ex/notification/SettingPref;
     array-length v3, v0
 
     .local v3, "len$":I
@@ -273,15 +273,15 @@
     aget-object v5, v0, v2
 
     .line 1165
-    .local v5, "pref":Lcom/android/settings/notification/SettingPref;
-    invoke-virtual {v5, p1}, Lcom/android/settings/notification/SettingPref;->isApplicable(Landroid/content/Context;)Z
+    .local v5, "pref":Lcom/android/settings_ex/notification/SettingPref;
+    invoke-virtual {v5, p1}, Lcom/android/settings_ex/notification/SettingPref;->isApplicable(Landroid/content/Context;)Z
 
     move-result v7
 
     if-nez v7, :cond_a
 
     .line 1166
-    invoke-virtual {v5}, Lcom/android/settings/notification/SettingPref;->getKey()Ljava/lang/String;
+    invoke-virtual {v5}, Lcom/android/settings_ex/notification/SettingPref;->getKey()Ljava/lang/String;
 
     move-result-object v7
 
@@ -294,12 +294,12 @@
     goto :goto_2
 
     .line 1124
-    .end local v0    # "arr$":[Lcom/android/settings/notification/SettingPref;
+    .end local v0    # "arr$":[Lcom/android/settings_ex/notification/SettingPref;
     .end local v1    # "download_contents":Ljava/lang/String;
     .end local v2    # "i$":I
     .end local v3    # "len$":I
     .end local v4    # "mRingtoneType":Ljava/lang/String;
-    .end local v5    # "pref":Lcom/android/settings/notification/SettingPref;
+    .end local v5    # "pref":Lcom/android/settings_ex/notification/SettingPref;
     :cond_b
     const-string v7, "ringtone2"
 
@@ -345,7 +345,7 @@
     goto :goto_1
 
     .line 1170
-    .restart local v0    # "arr$":[Lcom/android/settings/notification/SettingPref;
+    .restart local v0    # "arr$":[Lcom/android/settings_ex/notification/SettingPref;
     .restart local v2    # "i$":I
     .restart local v3    # "len$":I
     :cond_e
@@ -458,7 +458,7 @@
             "Z)",
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/search/SearchIndexableRaw;",
+            "Lcom/android/settings_ex/search/SearchIndexableRaw;",
             ">;"
         }
     .end annotation
@@ -470,31 +470,31 @@
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     .line 1098
-    .local v2, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/search/SearchIndexableRaw;>;"
+    .local v2, "result":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/search/SearchIndexableRaw;>;"
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
     .line 1101
     .local v1, "res":Landroid/content/res/Resources;
-    new-instance v0, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v0, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    invoke-direct {v0, p1}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 1102
-    .local v0, "data":Lcom/android/settings/search/SearchIndexableRaw;
+    .local v0, "data":Lcom/android/settings_ex/search/SearchIndexableRaw;
     const-string v3, "splanner_sound"
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 1103
     const-string v3, "com.android.calendar"
 
-    invoke-static {p1, v3}, Lcom/android/settings/Utils;->getLabelPackage(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v3}, Lcom/android/settings_ex/Utils;->getLabelPackage(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     if-nez v3, :cond_0
 
@@ -505,7 +505,7 @@
 
     move-result-object v3
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 1106
     :cond_0
@@ -515,7 +515,7 @@
 
     move-result-object v3
 
-    iput-object v3, v0, Lcom/android/settings/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
+    iput-object v3, v0, Lcom/android/settings_ex/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
 
     .line 1107
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -548,7 +548,7 @@
 
     .line 1088
     .local v0, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v1, Lcom/android/settings/notification/NotificationsSubSettings;
+    const-class v1, Lcom/android/settings_ex/notification/NotificationsSubSettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

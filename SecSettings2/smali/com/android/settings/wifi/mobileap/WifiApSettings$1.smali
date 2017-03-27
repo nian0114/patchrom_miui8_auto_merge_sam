@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApSettings$1;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$1;
 .super Landroid/os/Handler;
 .source "WifiApSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WifiApSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;)V
     .locals 0
 
     .prologue
     .line 291
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApSettings$1;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$1;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
@@ -50,28 +50,28 @@
 
     .line 297
     :pswitch_0
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSettings$1;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$1;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/mobileap/WifiApSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 298
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSettings$1;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$1;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/mobileap/WifiApSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
     .line 299
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSettings$1;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$1;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApSettings;->mIsTablet:Z
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WifiApSettings;->access$000(Lcom/android/settings/wifi/mobileap/WifiApSettings;)Z
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->mIsTablet:Z
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->access$000(Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;)Z
 
     move-result v0
 
@@ -79,7 +79,7 @@
 
     const-string v0, "VZW"
 
-    sget-object v1, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -89,7 +89,7 @@
 
     const-string v0, "SPRINT"
 
-    sget-object v1, Lcom/android/settings/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings_ex/Utils;->CONFIGOPBRANDINGFORMOBILEAP:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -100,13 +100,13 @@
     .line 301
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/android/settings/wifi/mobileap/WifiApBroadcastReceiver;->mIsHelpFromWifiApSettings:Z
+    sput-boolean v0, Lcom/android/settings_ex/wifi/mobileap/WifiApBroadcastReceiver;->mIsHelpFromWifiApSettings:Z
 
     .line 303
     :cond_1
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSettings$1;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$1;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/mobileap/WifiApSettings;->onDestroy()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->onDestroy()V
 
     goto :goto_0
 

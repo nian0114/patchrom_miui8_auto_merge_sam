@@ -1,11 +1,11 @@
-.class Lcom/android/settings/voice/VoiceInputListPreference$CustomAdapter;
+.class Lcom/android/settings_ex/voice/VoiceInputListPreference$CustomAdapter;
 .super Landroid/widget/ArrayAdapter;
 .source "VoiceInputListPreference.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/voice/VoiceInputListPreference;
+    value = Lcom/android/settings_ex/voice/VoiceInputListPreference;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,11 +26,11 @@
 # instance fields
 .field private mSelectedIndex:I
 
-.field final synthetic this$0:Lcom/android/settings/voice/VoiceInputListPreference;
+.field final synthetic this$0:Lcom/android/settings_ex/voice/VoiceInputListPreference;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/settings/voice/VoiceInputListPreference;Landroid/content/Context;[Ljava/lang/CharSequence;I)V
+.method public constructor <init>(Lcom/android/settings_ex/voice/VoiceInputListPreference;Landroid/content/Context;[Ljava/lang/CharSequence;I)V
     .locals 1
     .param p2, "context"    # Landroid/content/Context;
     .param p3, "objects"    # [Ljava/lang/CharSequence;
@@ -38,7 +38,7 @@
 
     .prologue
     .line 151
-    iput-object p1, p0, Lcom/android/settings/voice/VoiceInputListPreference$CustomAdapter;->this$0:Lcom/android/settings/voice/VoiceInputListPreference;
+    iput-object p1, p0, Lcom/android/settings_ex/voice/VoiceInputListPreference$CustomAdapter;->this$0:Lcom/android/settings_ex/voice/VoiceInputListPreference;
 
     .line 152
     const v0, 0x1020014
@@ -48,10 +48,10 @@
     .line 149
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/android/settings/voice/VoiceInputListPreference$CustomAdapter;->mSelectedIndex:I
+    iput v0, p0, Lcom/android/settings_ex/voice/VoiceInputListPreference$CustomAdapter;->mSelectedIndex:I
 
     .line 153
-    iput p4, p0, Lcom/android/settings/voice/VoiceInputListPreference$CustomAdapter;->mSelectedIndex:I
+    iput p4, p0, Lcom/android/settings_ex/voice/VoiceInputListPreference$CustomAdapter;->mSelectedIndex:I
 
     .line 154
     return-void
@@ -77,7 +77,7 @@
 
     .prologue
     .line 163
-    invoke-virtual {p0}, Lcom/android/settings/voice/VoiceInputListPreference$CustomAdapter;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/voice/VoiceInputListPreference$CustomAdapter;->getContext()Landroid/content/Context;
 
     move-result-object v5
 
@@ -119,7 +119,7 @@
 
     .line 167
     .local v3, "textView":Landroid/widget/TextView;
-    invoke-virtual {p0, p1}, Lcom/android/settings/voice/VoiceInputListPreference$CustomAdapter;->getItem(I)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/voice/VoiceInputListPreference$CustomAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object v5
 
@@ -128,7 +128,7 @@
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 169
-    iget v5, p0, Lcom/android/settings/voice/VoiceInputListPreference$CustomAdapter;->mSelectedIndex:I
+    iget v5, p0, Lcom/android/settings_ex/voice/VoiceInputListPreference$CustomAdapter;->mSelectedIndex:I
 
     if-ne p1, v5, :cond_0
 
@@ -154,10 +154,10 @@
     invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 176
-    iget-object v5, p0, Lcom/android/settings/voice/VoiceInputListPreference$CustomAdapter;->this$0:Lcom/android/settings/voice/VoiceInputListPreference;
+    iget-object v5, p0, Lcom/android/settings_ex/voice/VoiceInputListPreference$CustomAdapter;->this$0:Lcom/android/settings_ex/voice/VoiceInputListPreference;
 
-    # getter for: Lcom/android/settings/voice/VoiceInputListPreference;->mAvailableIndexes:Ljava/util/List;
-    invoke-static {v5}, Lcom/android/settings/voice/VoiceInputListPreference;->access$000(Lcom/android/settings/voice/VoiceInputListPreference;)Ljava/util/List;
+    # getter for: Lcom/android/settings_ex/voice/VoiceInputListPreference;->mAvailableIndexes:Ljava/util/List;
+    invoke-static {v5}, Lcom/android/settings_ex/voice/VoiceInputListPreference;->access$000(Lcom/android/settings_ex/voice/VoiceInputListPreference;)Ljava/util/List;
 
     move-result-object v5
 

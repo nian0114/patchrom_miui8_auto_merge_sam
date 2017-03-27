@@ -1,11 +1,11 @@
-.class Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;
+.class Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;
 .super Landroid/content/BroadcastReceiver;
 .source "GigaMultiPath.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/GigaMultiPath;
+    value = Lcom/android/settings_ex/GigaMultiPath;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/GigaMultiPath;
+.field final synthetic this$0:Lcom/android/settings_ex/GigaMultiPath;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/GigaMultiPath;)V
+.method constructor <init>(Lcom/android/settings_ex/GigaMultiPath;)V
     .locals 0
 
     .prologue
     .line 358
-    iput-object p1, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iput-object p1, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -82,19 +82,19 @@
     if-eqz v6, :cond_4
 
     .line 364
-    iget-object v6, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v6, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
-    invoke-static {v6}, Lcom/android/settings/GigaMultiPath;->access$1000(Lcom/android/settings/GigaMultiPath;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
+    invoke-static {v6}, Lcom/android/settings_ex/GigaMultiPath;->access$1000(Lcom/android/settings_ex/GigaMultiPath;)Landroid/app/ProgressDialog;
 
     move-result-object v6
 
     if-eqz v6, :cond_0
 
-    iget-object v6, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v6, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
-    invoke-static {v6}, Lcom/android/settings/GigaMultiPath;->access$1000(Lcom/android/settings/GigaMultiPath;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
+    invoke-static {v6}, Lcom/android/settings_ex/GigaMultiPath;->access$1000(Lcom/android/settings_ex/GigaMultiPath;)Landroid/app/ProgressDialog;
 
     move-result-object v6
 
@@ -105,27 +105,27 @@
     if-eqz v6, :cond_0
 
     .line 365
-    iget-object v6, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v6, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->mHoldingHandler:Landroid/os/Handler;
-    invoke-static {v6}, Lcom/android/settings/GigaMultiPath;->access$1200(Lcom/android/settings/GigaMultiPath;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->mHoldingHandler:Landroid/os/Handler;
+    invoke-static {v6}, Lcom/android/settings_ex/GigaMultiPath;->access$1200(Lcom/android/settings_ex/GigaMultiPath;)Landroid/os/Handler;
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v7, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->mRemoveProgress:Ljava/lang/Runnable;
-    invoke-static {v7}, Lcom/android/settings/GigaMultiPath;->access$1100(Lcom/android/settings/GigaMultiPath;)Ljava/lang/Runnable;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->mRemoveProgress:Ljava/lang/Runnable;
+    invoke-static {v7}, Lcom/android/settings_ex/GigaMultiPath;->access$1100(Lcom/android/settings_ex/GigaMultiPath;)Ljava/lang/Runnable;
 
     move-result-object v7
 
     invoke-virtual {v6, v7}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     .line 366
-    iget-object v6, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v6, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
-    invoke-static {v6}, Lcom/android/settings/GigaMultiPath;->access$1000(Lcom/android/settings/GigaMultiPath;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
+    invoke-static {v6}, Lcom/android/settings_ex/GigaMultiPath;->access$1000(Lcom/android/settings_ex/GigaMultiPath;)Landroid/app/ProgressDialog;
 
     move-result-object v6
 
@@ -133,14 +133,14 @@
 
     .line 368
     :cond_0
-    iget-object v6, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v6, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v6}, Lcom/android/settings/GigaMultiPath;->access$300(Lcom/android/settings/GigaMultiPath;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v6}, Lcom/android/settings_ex/GigaMultiPath;->access$300(Lcom/android/settings_ex/GigaMultiPath;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v6
 
-    invoke-virtual {v6, v4}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v6, v4}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 369
     const-string v6, "GigaMultiPath"
@@ -161,14 +161,14 @@
     if-nez v2, :cond_2
 
     .line 372
-    iget-object v4, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v4, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v4}, Lcom/android/settings/GigaMultiPath;->access$300(Lcom/android/settings/GigaMultiPath;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v4}, Lcom/android/settings_ex/GigaMultiPath;->access$300(Lcom/android/settings_ex/GigaMultiPath;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v4
 
-    invoke-virtual {v4, v5}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v4, v5}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 405
     .end local v2    # "mptcpState":I
@@ -182,14 +182,14 @@
     if-ne v2, v4, :cond_3
 
     .line 374
-    iget-object v5, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v5, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v5}, Lcom/android/settings/GigaMultiPath;->access$300(Lcom/android/settings/GigaMultiPath;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v5}, Lcom/android/settings_ex/GigaMultiPath;->access$300(Lcom/android/settings_ex/GigaMultiPath;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v5
 
-    invoke-virtual {v5, v4}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v5, v4}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     goto :goto_0
 
@@ -202,14 +202,14 @@
     invoke-static {v4, v6}, Landroid/util/secutil/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 377
-    iget-object v4, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v4, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v4}, Lcom/android/settings/GigaMultiPath;->access$300(Lcom/android/settings/GigaMultiPath;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v4}, Lcom/android/settings_ex/GigaMultiPath;->access$300(Lcom/android/settings_ex/GigaMultiPath;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v4
 
-    invoke-virtual {v4, v5}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v4, v5}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     goto :goto_0
 
@@ -240,28 +240,28 @@
     if-eq v6, v3, :cond_1
 
     .line 383
-    iget-object v6, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v6, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # invokes: Lcom/android/settings/GigaMultiPath;->getWiFiState(I)Z
-    invoke-static {v6, v3}, Lcom/android/settings/GigaMultiPath;->access$1300(Lcom/android/settings/GigaMultiPath;I)Z
+    # invokes: Lcom/android/settings_ex/GigaMultiPath;->getWiFiState(I)Z
+    invoke-static {v6, v3}, Lcom/android/settings_ex/GigaMultiPath;->access$1300(Lcom/android/settings_ex/GigaMultiPath;I)Z
 
     move-result v1
 
     .line 384
     .local v1, "isState":Z
-    iget-object v6, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v6, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->isNetworkEnabling:Z
-    invoke-static {v6}, Lcom/android/settings/GigaMultiPath;->access$400(Lcom/android/settings/GigaMultiPath;)Z
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->isNetworkEnabling:Z
+    invoke-static {v6}, Lcom/android/settings_ex/GigaMultiPath;->access$400(Lcom/android/settings_ex/GigaMultiPath;)Z
 
     move-result v6
 
     if-eqz v6, :cond_5
 
-    iget-object v6, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v6, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->isWiFiEnabling:Z
-    invoke-static {v6}, Lcom/android/settings/GigaMultiPath;->access$600(Lcom/android/settings/GigaMultiPath;)Z
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->isWiFiEnabling:Z
+    invoke-static {v6}, Lcom/android/settings_ex/GigaMultiPath;->access$600(Lcom/android/settings_ex/GigaMultiPath;)Z
 
     move-result v6
 
@@ -270,91 +270,91 @@
     if-eqz v1, :cond_5
 
     .line 385
-    iget-object v4, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v4, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # setter for: Lcom/android/settings/GigaMultiPath;->isWiFiEnabling:Z
-    invoke-static {v4, v5}, Lcom/android/settings/GigaMultiPath;->access$602(Lcom/android/settings/GigaMultiPath;Z)Z
+    # setter for: Lcom/android/settings_ex/GigaMultiPath;->isWiFiEnabling:Z
+    invoke-static {v4, v5}, Lcom/android/settings_ex/GigaMultiPath;->access$602(Lcom/android/settings_ex/GigaMultiPath;Z)Z
 
     .line 386
-    iget-object v4, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v4, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->isMobileDataEnabling:Z
-    invoke-static {v4}, Lcom/android/settings/GigaMultiPath;->access$500(Lcom/android/settings/GigaMultiPath;)Z
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->isMobileDataEnabling:Z
+    invoke-static {v4}, Lcom/android/settings_ex/GigaMultiPath;->access$500(Lcom/android/settings_ex/GigaMultiPath;)Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
     .line 387
-    iget-object v4, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v4, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # setter for: Lcom/android/settings/GigaMultiPath;->isNetworkEnabling:Z
-    invoke-static {v4, v5}, Lcom/android/settings/GigaMultiPath;->access$402(Lcom/android/settings/GigaMultiPath;Z)Z
+    # setter for: Lcom/android/settings_ex/GigaMultiPath;->isNetworkEnabling:Z
+    invoke-static {v4, v5}, Lcom/android/settings_ex/GigaMultiPath;->access$402(Lcom/android/settings_ex/GigaMultiPath;Z)Z
 
     .line 388
-    iget-object v4, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v4, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    iget-object v5, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v5, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v5}, Lcom/android/settings/GigaMultiPath;->access$300(Lcom/android/settings/GigaMultiPath;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v5}, Lcom/android/settings_ex/GigaMultiPath;->access$300(Lcom/android/settings_ex/GigaMultiPath;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/android/settings/widget/SwitchBar;->isChecked()Z
+    invoke-virtual {v5}, Lcom/android/settings_ex/widget/SwitchBar;->isChecked()Z
 
     move-result v5
 
-    # invokes: Lcom/android/settings/GigaMultiPath;->sendMptcpStartBroadCast(Z)V
-    invoke-static {v4, v5}, Lcom/android/settings/GigaMultiPath;->access$700(Lcom/android/settings/GigaMultiPath;Z)V
+    # invokes: Lcom/android/settings_ex/GigaMultiPath;->sendMptcpStartBroadCast(Z)V
+    invoke-static {v4, v5}, Lcom/android/settings_ex/GigaMultiPath;->access$700(Lcom/android/settings_ex/GigaMultiPath;Z)V
 
     goto :goto_0
 
     .line 390
     :cond_5
-    iget-object v6, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v6, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->isWiFiEnabling:Z
-    invoke-static {v6}, Lcom/android/settings/GigaMultiPath;->access$600(Lcom/android/settings/GigaMultiPath;)Z
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->isWiFiEnabling:Z
+    invoke-static {v6}, Lcom/android/settings_ex/GigaMultiPath;->access$600(Lcom/android/settings_ex/GigaMultiPath;)Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
     .line 391
-    iget-object v6, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v6, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # setter for: Lcom/android/settings/GigaMultiPath;->isWiFiEnabling:Z
-    invoke-static {v6, v5}, Lcom/android/settings/GigaMultiPath;->access$602(Lcom/android/settings/GigaMultiPath;Z)Z
+    # setter for: Lcom/android/settings_ex/GigaMultiPath;->isWiFiEnabling:Z
+    invoke-static {v6, v5}, Lcom/android/settings_ex/GigaMultiPath;->access$602(Lcom/android/settings_ex/GigaMultiPath;Z)Z
 
     .line 392
     if-eqz v1, :cond_6
 
     .line 393
-    iget-object v4, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v4, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    iget-object v5, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v5, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v5}, Lcom/android/settings/GigaMultiPath;->access$300(Lcom/android/settings/GigaMultiPath;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v5}, Lcom/android/settings_ex/GigaMultiPath;->access$300(Lcom/android/settings_ex/GigaMultiPath;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/android/settings/widget/SwitchBar;->isChecked()Z
+    invoke-virtual {v5}, Lcom/android/settings_ex/widget/SwitchBar;->isChecked()Z
 
     move-result v5
 
-    # invokes: Lcom/android/settings/GigaMultiPath;->sendMptcpStartBroadCast(Z)V
-    invoke-static {v4, v5}, Lcom/android/settings/GigaMultiPath;->access$700(Lcom/android/settings/GigaMultiPath;Z)V
+    # invokes: Lcom/android/settings_ex/GigaMultiPath;->sendMptcpStartBroadCast(Z)V
+    invoke-static {v4, v5}, Lcom/android/settings_ex/GigaMultiPath;->access$700(Lcom/android/settings_ex/GigaMultiPath;Z)V
 
     goto/16 :goto_0
 
     .line 395
     :cond_6
-    iget-object v6, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v6, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
-    invoke-static {v6}, Lcom/android/settings/GigaMultiPath;->access$1000(Lcom/android/settings/GigaMultiPath;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
+    invoke-static {v6}, Lcom/android/settings_ex/GigaMultiPath;->access$1000(Lcom/android/settings_ex/GigaMultiPath;)Landroid/app/ProgressDialog;
 
     move-result-object v6
 
@@ -365,27 +365,27 @@
     if-eqz v6, :cond_7
 
     .line 396
-    iget-object v6, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v6, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->mHoldingHandler:Landroid/os/Handler;
-    invoke-static {v6}, Lcom/android/settings/GigaMultiPath;->access$1200(Lcom/android/settings/GigaMultiPath;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->mHoldingHandler:Landroid/os/Handler;
+    invoke-static {v6}, Lcom/android/settings_ex/GigaMultiPath;->access$1200(Lcom/android/settings_ex/GigaMultiPath;)Landroid/os/Handler;
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v7, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->mRemoveProgress:Ljava/lang/Runnable;
-    invoke-static {v7}, Lcom/android/settings/GigaMultiPath;->access$1100(Lcom/android/settings/GigaMultiPath;)Ljava/lang/Runnable;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->mRemoveProgress:Ljava/lang/Runnable;
+    invoke-static {v7}, Lcom/android/settings_ex/GigaMultiPath;->access$1100(Lcom/android/settings_ex/GigaMultiPath;)Ljava/lang/Runnable;
 
     move-result-object v7
 
     invoke-virtual {v6, v7}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     .line 397
-    iget-object v6, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v6, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
-    invoke-static {v6}, Lcom/android/settings/GigaMultiPath;->access$1000(Lcom/android/settings/GigaMultiPath;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->progressDialog:Landroid/app/ProgressDialog;
+    invoke-static {v6}, Lcom/android/settings_ex/GigaMultiPath;->access$1000(Lcom/android/settings_ex/GigaMultiPath;)Landroid/app/ProgressDialog;
 
     move-result-object v6
 
@@ -393,27 +393,27 @@
 
     .line 399
     :cond_7
-    iget-object v6, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v6, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v6}, Lcom/android/settings/GigaMultiPath;->access$300(Lcom/android/settings/GigaMultiPath;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v6}, Lcom/android/settings_ex/GigaMultiPath;->access$300(Lcom/android/settings_ex/GigaMultiPath;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v6
 
-    invoke-virtual {v6, v4}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v6, v4}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 400
-    iget-object v6, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v6, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
-    invoke-static {v6}, Lcom/android/settings/GigaMultiPath;->access$300(Lcom/android/settings/GigaMultiPath;)Lcom/android/settings/widget/SwitchBar;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
+    invoke-static {v6}, Lcom/android/settings_ex/GigaMultiPath;->access$300(Lcom/android/settings_ex/GigaMultiPath;)Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/settings/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings/GigaMultiPath;
+    iget-object v7, p0, Lcom/android/settings_ex/GigaMultiPath$MptcpStateReceiver;->this$0:Lcom/android/settings_ex/GigaMultiPath;
 
-    # getter for: Lcom/android/settings/GigaMultiPath;->mContext:Landroid/content/Context;
-    invoke-static {v7}, Lcom/android/settings/GigaMultiPath;->access$000(Lcom/android/settings/GigaMultiPath;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/GigaMultiPath;->mContext:Landroid/content/Context;
+    invoke-static {v7}, Lcom/android/settings_ex/GigaMultiPath;->access$000(Lcom/android/settings_ex/GigaMultiPath;)Landroid/content/Context;
 
     move-result-object v7
 
@@ -430,7 +430,7 @@
     if-eqz v7, :cond_8
 
     :goto_1
-    invoke-virtual {v6, v4}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v6, v4}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     goto/16 :goto_0
 

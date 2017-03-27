@@ -1,11 +1,11 @@
-.class Lcom/android/settings/users/UserSettings$2;
+.class Lcom/android/settings_ex/users/UserSettings$2;
 .super Landroid/content/BroadcastReceiver;
 .source "UserSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/users/UserSettings;
+    value = Lcom/android/settings_ex/users/UserSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/users/UserSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/users/UserSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/users/UserSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/users/UserSettings;)V
     .locals 0
 
     .prologue
     .line 185
-    iput-object p1, p0, Lcom/android/settings/users/UserSettings$2;->this$0:Lcom/android/settings/users/UserSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/users/UserSettings$2;->this$0:Lcom/android/settings_ex/users/UserSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -55,18 +55,18 @@
     if-eqz v1, :cond_1
 
     .line 189
-    iget-object v1, p0, Lcom/android/settings/users/UserSettings$2;->this$0:Lcom/android/settings/users/UserSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/users/UserSettings$2;->this$0:Lcom/android/settings_ex/users/UserSettings;
 
-    # setter for: Lcom/android/settings/users/UserSettings;->mRemovingUserId:I
-    invoke-static {v1, v3}, Lcom/android/settings/users/UserSettings;->access$302(Lcom/android/settings/users/UserSettings;I)I
+    # setter for: Lcom/android/settings_ex/users/UserSettings;->mRemovingUserId:I
+    invoke-static {v1, v3}, Lcom/android/settings_ex/users/UserSettings;->access$302(Lcom/android/settings_ex/users/UserSettings;I)I
 
     .line 199
     :cond_0
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/users/UserSettings$2;->this$0:Lcom/android/settings/users/UserSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/users/UserSettings$2;->this$0:Lcom/android/settings_ex/users/UserSettings;
 
-    # getter for: Lcom/android/settings/users/UserSettings;->mHandler:Landroid/os/Handler;
-    invoke-static {v1}, Lcom/android/settings/users/UserSettings;->access$600(Lcom/android/settings/users/UserSettings;)Landroid/os/Handler;
+    # getter for: Lcom/android/settings_ex/users/UserSettings;->mHandler:Landroid/os/Handler;
+    invoke-static {v1}, Lcom/android/settings_ex/users/UserSettings;->access$600(Lcom/android/settings_ex/users/UserSettings;)Landroid/os/Handler;
 
     move-result-object v1
 
@@ -103,10 +103,10 @@
     if-eq v0, v3, :cond_0
 
     .line 193
-    iget-object v1, p0, Lcom/android/settings/users/UserSettings$2;->this$0:Lcom/android/settings/users/UserSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/users/UserSettings$2;->this$0:Lcom/android/settings_ex/users/UserSettings;
 
-    # getter for: Lcom/android/settings/users/UserSettings;->mUserIcons:Landroid/util/SparseArray;
-    invoke-static {v1}, Lcom/android/settings/users/UserSettings;->access$400(Lcom/android/settings/users/UserSettings;)Landroid/util/SparseArray;
+    # getter for: Lcom/android/settings_ex/users/UserSettings;->mUserIcons:Landroid/util/SparseArray;
+    invoke-static {v1}, Lcom/android/settings_ex/users/UserSettings;->access$400(Lcom/android/settings_ex/users/UserSettings;)Landroid/util/SparseArray;
 
     move-result-object v1
 
@@ -130,12 +130,12 @@
     if-eqz v1, :cond_0
 
     .line 197
-    iget-object v1, p0, Lcom/android/settings/users/UserSettings$2;->this$0:Lcom/android/settings/users/UserSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/users/UserSettings$2;->this$0:Lcom/android/settings_ex/users/UserSettings;
 
     const/4 v2, 0x3
 
-    # invokes: Lcom/android/settings/users/UserSettings;->removeDialog(I)V
-    invoke-static {v1, v2}, Lcom/android/settings/users/UserSettings;->access$500(Lcom/android/settings/users/UserSettings;I)V
+    # invokes: Lcom/android/settings_ex/users/UserSettings;->removeDialog(I)V
+    invoke-static {v1, v2}, Lcom/android/settings_ex/users/UserSettings;->access$500(Lcom/android/settings_ex/users/UserSettings;I)V
 
     goto :goto_0
 .end method

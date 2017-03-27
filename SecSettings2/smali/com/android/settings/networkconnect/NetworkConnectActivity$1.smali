@@ -1,4 +1,4 @@
-.class Lcom/android/settings/networkconnect/NetworkConnectActivity$1;
+.class Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$1;
 .super Ljava/lang/Object;
 .source "NetworkConnectActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/networkconnect/NetworkConnectActivity;->onClick(Landroid/view/View;)V
+    value = Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->onClick(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/networkconnect/NetworkConnectActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)V
     .locals 0
 
     .prologue
     .line 208
-    iput-object p1, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$1;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$1;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,22 +41,22 @@
 
     .prologue
     .line 211
-    sget-boolean v0, Lcom/android/settings/networkconnect/NetworkManagerActivity;->mIsWarningStatus:Z
+    sget-boolean v0, Lcom/android/settings_ex/networkconnect/NetworkManagerActivity;->mIsWarningStatus:Z
 
     if-nez v0, :cond_0
 
     .line 212
-    iget-object v0, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$1;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$1;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mPolicyManager:Landroid/net/NetworkPolicyManager;
-    invoke-static {v0}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$100(Lcom/android/settings/networkconnect/NetworkConnectActivity;)Landroid/net/NetworkPolicyManager;
+    # getter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mPolicyManager:Landroid/net/NetworkPolicyManager;
+    invoke-static {v0}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$100(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)Landroid/net/NetworkPolicyManager;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$1;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v1, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$1;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mUidAllowedMap:Ljava/util/Map;
-    invoke-static {v1}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$000(Lcom/android/settings/networkconnect/NetworkConnectActivity;)Ljava/util/Map;
+    # getter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mUidAllowedMap:Ljava/util/Map;
+    invoke-static {v1}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$000(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)Ljava/util/Map;
 
     move-result-object v1
 
@@ -64,10 +64,10 @@
 
     .line 214
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/networkconnect/NetworkConnectActivity$1;->this$0:Lcom/android/settings/networkconnect/NetworkConnectActivity;
+    iget-object v0, p0, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity$1;->this$0:Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;
 
-    # getter for: Lcom/android/settings/networkconnect/NetworkConnectActivity;->mDialog:Landroid/app/ProgressDialog;
-    invoke-static {v0}, Lcom/android/settings/networkconnect/NetworkConnectActivity;->access$200(Lcom/android/settings/networkconnect/NetworkConnectActivity;)Landroid/app/ProgressDialog;
+    # getter for: Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->mDialog:Landroid/app/ProgressDialog;
+    invoke-static {v0}, Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;->access$200(Lcom/android/settings_ex/networkconnect/NetworkConnectActivity;)Landroid/app/ProgressDialog;
 
     move-result-object v0
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DataSlotChoice$1;
+.class Lcom/android/settings_ex/DataSlotChoice$1;
 .super Ljava/lang/Object;
 .source "DataSlotChoice.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DataSlotChoice;->onRoamingDisplayMobileDataOnAlert()V
+    value = Lcom/android/settings_ex/DataSlotChoice;->onRoamingDisplayMobileDataOnAlert()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DataSlotChoice;
+.field final synthetic this$0:Lcom/android/settings_ex/DataSlotChoice;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DataSlotChoice;)V
+.method constructor <init>(Lcom/android/settings_ex/DataSlotChoice;)V
     .locals 0
 
     .prologue
     .line 457
-    iput-object p1, p0, Lcom/android/settings/DataSlotChoice$1;->this$0:Lcom/android/settings/DataSlotChoice;
+    iput-object p1, p0, Lcom/android/settings_ex/DataSlotChoice$1;->this$0:Lcom/android/settings_ex/DataSlotChoice;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

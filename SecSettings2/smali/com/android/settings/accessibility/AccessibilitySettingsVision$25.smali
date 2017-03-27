@@ -1,4 +1,4 @@
-.class Lcom/android/settings/accessibility/AccessibilitySettingsVision$25;
+.class Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$25;
 .super Ljava/lang/Object;
 .source "AccessibilitySettingsVision.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/accessibility/AccessibilitySettingsVision;->onCreateDialog(I)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->onCreateDialog(I)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+.field final synthetic this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)V
+.method constructor <init>(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)V
     .locals 0
 
     .prologue
     .line 1366
-    iput-object p1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$25;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iput-object p1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$25;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,54 +45,54 @@
     const/4 v3, 0x1
 
     .line 1368
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$25;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$25;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    # getter for: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$3600(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->mContext:Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$3600(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$25;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$25;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    # getter for: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->mDisableExclusiveOptionsFlag:I
-    invoke-static {v1}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$4100(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)I
+    # getter for: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->mDisableExclusiveOptionsFlag:I
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$4100(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)I
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/android/settings/accessibility/AccessibilityUtils;->turnOffScreenReaderExclusiveOptions(Landroid/content/Context;I)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->turnOffScreenReaderExclusiveOptions(Landroid/content/Context;I)V
 
     .line 1369
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$25;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$25;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    # getter for: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$3600(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->mContext:Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$3600(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->turnOffTalkBack(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->turnOffTalkBack(Landroid/content/Context;)Z
 
     .line 1370
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$25;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$25;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    # getter for: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$3600(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->mContext:Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$3600(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0, v3}, Lcom/android/settings/accessibility/AccessibilityUtils;->turnOnOffScreenReader(Landroid/content/Context;Z)V
+    invoke-static {v0, v3}, Lcom/android/settings_ex/accessibility/AccessibilityUtils;->turnOnOffScreenReader(Landroid/content/Context;Z)V
 
     .line 1371
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$25;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$25;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    # getter for: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$3600(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->mContext:Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$3600(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$25;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v1, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$25;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    # getter for: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$3600(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$3600(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -115,10 +115,10 @@
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
     .line 1373
-    iget-object v0, p0, Lcom/android/settings/accessibility/AccessibilitySettingsVision$25;->this$0:Lcom/android/settings/accessibility/AccessibilitySettingsVision;
+    iget-object v0, p0, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision$25;->this$0:Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;
 
-    # getter for: Lcom/android/settings/accessibility/AccessibilitySettingsVision;->mScreenReaderPreference:Landroid/preference/SwitchPreference;
-    invoke-static {v0}, Lcom/android/settings/accessibility/AccessibilitySettingsVision;->access$4200(Lcom/android/settings/accessibility/AccessibilitySettingsVision;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->mScreenReaderPreference:Landroid/preference/SwitchPreference;
+    invoke-static {v0}, Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;->access$4200(Lcom/android/settings_ex/accessibility/AccessibilitySettingsVision;)Landroid/preference/SwitchPreference;
 
     move-result-object v0
 

@@ -1,4 +1,4 @@
-.class Lcom/android/settings/FontPreview$9;
+.class Lcom/android/settings_ex/FontPreview$9;
 .super Ljava/lang/Object;
 .source "FontPreview.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/FontPreview;->badFontDialog(Ljava/lang/String;)V
+    value = Lcom/android/settings_ex/FontPreview;->badFontDialog(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/FontPreview;
+.field final synthetic this$0:Lcom/android/settings_ex/FontPreview;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/FontPreview;)V
+.method constructor <init>(Lcom/android/settings_ex/FontPreview;)V
     .locals 0
 
     .prologue
     .line 1382
-    iput-object p1, p0, Lcom/android/settings/FontPreview$9;->this$0:Lcom/android/settings/FontPreview;
+    iput-object p1, p0, Lcom/android/settings_ex/FontPreview$9;->this$0:Lcom/android/settings_ex/FontPreview;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,9 +42,9 @@
 
     .prologue
     .line 1385
-    iget-object v0, p0, Lcom/android/settings/FontPreview$9;->this$0:Lcom/android/settings/FontPreview;
+    iget-object v0, p0, Lcom/android/settings_ex/FontPreview$9;->this$0:Lcom/android/settings_ex/FontPreview;
 
-    invoke-virtual {v0}, Lcom/android/settings/FontPreview;->onCancelButtonPressed()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/FontPreview;->onCancelButtonPressed()V
 
     .line 1386
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V

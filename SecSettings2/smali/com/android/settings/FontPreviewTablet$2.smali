@@ -1,4 +1,4 @@
-.class Lcom/android/settings/FontPreviewTablet$2;
+.class Lcom/android/settings_ex/FontPreviewTablet$2;
 .super Ljava/lang/Object;
 .source "FontPreviewTablet.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/FontPreviewTablet;->setFontsizeLayoutSevenOrEleven(Z)V
+    value = Lcom/android/settings_ex/FontPreviewTablet;->setFontsizeLayoutSevenOrEleven(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/FontPreviewTablet;
+.field final synthetic this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/FontPreviewTablet;)V
+.method constructor <init>(Lcom/android/settings_ex/FontPreviewTablet;)V
     .locals 0
 
     .prologue
     .line 294
-    iput-object p1, p0, Lcom/android/settings/FontPreviewTablet$2;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iput-object p1, p0, Lcom/android/settings_ex/FontPreviewTablet$2;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
     .line 298
     new-instance v0, Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/android/settings/FontPreviewTablet$2;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreviewTablet$2;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
     invoke-direct {v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
@@ -54,10 +54,10 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setGravity(I)V
 
     .line 300
-    iget-object v1, p0, Lcom/android/settings/FontPreviewTablet$2;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreviewTablet$2;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    # getter for: Lcom/android/settings/FontPreviewTablet;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/FontPreviewTablet;->access$500(Lcom/android/settings/FontPreviewTablet;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/FontPreviewTablet;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/FontPreviewTablet;->access$500(Lcom/android/settings_ex/FontPreviewTablet;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -76,10 +76,10 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 301
-    iget-object v1, p0, Lcom/android/settings/FontPreviewTablet$2;->this$0:Lcom/android/settings/FontPreviewTablet;
+    iget-object v1, p0, Lcom/android/settings_ex/FontPreviewTablet$2;->this$0:Lcom/android/settings_ex/FontPreviewTablet;
 
-    # getter for: Lcom/android/settings/FontPreviewTablet;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcom/android/settings/FontPreviewTablet;->access$500(Lcom/android/settings/FontPreviewTablet;)Landroid/content/Context;
+    # getter for: Lcom/android/settings_ex/FontPreviewTablet;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/settings_ex/FontPreviewTablet;->access$500(Lcom/android/settings_ex/FontPreviewTablet;)Landroid/content/Context;
 
     move-result-object v1
 

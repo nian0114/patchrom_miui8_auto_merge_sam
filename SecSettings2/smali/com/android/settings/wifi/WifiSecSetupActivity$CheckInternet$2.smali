@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet$2;
+.class Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet$2;
 .super Ljava/lang/Object;
 .source "WifiSecSetupActivity.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet;->onPostExecute(Ljava/lang/Integer;)V
+    value = Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet;->onPostExecute(Ljava/lang/Integer;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet;
+.field final synthetic this$1:Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet;
 
 .field final synthetic val$result:Ljava/lang/Integer;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet;Ljava/lang/Integer;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet;Ljava/lang/Integer;)V
     .locals 0
 
     .prologue
     .line 1046
-    iput-object p1, p0, Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet$2;->this$1:Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet$2;->this$1:Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet;
 
-    iput-object p2, p0, Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet$2;->val$result:Ljava/lang/Integer;
+    iput-object p2, p0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet$2;->val$result:Ljava/lang/Integer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -57,7 +57,7 @@
 
     .line 1053
     .local v2, "message":I
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet$2;->val$result:Ljava/lang/Integer;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet$2;->val$result:Ljava/lang/Integer;
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
@@ -68,12 +68,12 @@
     .line 1069
     :goto_0
     :pswitch_0
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet$2;->this$1:Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet$2;->this$1:Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet;
 
-    iget-object v3, v3, Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet;->this$0:Lcom/android/settings/wifi/WifiSecSetupActivity;
+    iget-object v3, v3, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet;->this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
 
-    # invokes: Lcom/android/settings/wifi/WifiSecSetupActivity;->allowToGoNext(ZZI)V
-    invoke-static {v3, v1, v0, v2}, Lcom/android/settings/wifi/WifiSecSetupActivity;->access$900(Lcom/android/settings/wifi/WifiSecSetupActivity;ZZI)V
+    # invokes: Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->allowToGoNext(ZZI)V
+    invoke-static {v3, v1, v0, v2}, Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->access$900(Lcom/android/settings_ex/wifi/WifiSecSetupActivity;ZZI)V
 
     .line 1070
     return-void
@@ -98,19 +98,19 @@
 
     .line 1065
     :pswitch_4
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet$2;->this$1:Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet$2;->this$1:Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet;
 
-    iget-object v3, v3, Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet;->this$0:Lcom/android/settings/wifi/WifiSecSetupActivity;
+    iget-object v3, v3, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet;->this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
 
-    iget-boolean v3, v3, Lcom/android/settings/wifi/WifiSecSetupActivity;->FLAG_GOOGLE_FRP_FOR_WIFISETUPWIZARD:Z
+    iget-boolean v3, v3, Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->FLAG_GOOGLE_FRP_FOR_WIFISETUPWIZARD:Z
 
     if-nez v3, :cond_0
 
-    iget-object v3, p0, Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet$2;->this$1:Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet;
+    iget-object v3, p0, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet$2;->this$1:Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet;
 
-    iget-object v3, v3, Lcom/android/settings/wifi/WifiSecSetupActivity$CheckInternet;->this$0:Lcom/android/settings/wifi/WifiSecSetupActivity;
+    iget-object v3, v3, Lcom/android/settings_ex/wifi/WifiSecSetupActivity$CheckInternet;->this$0:Lcom/android/settings_ex/wifi/WifiSecSetupActivity;
 
-    iget-boolean v3, v3, Lcom/android/settings/wifi/WifiSecSetupActivity;->FLAG_SAMSUNGACCOUNT_FOR_WIFISETUPWIZARD:Z
+    iget-boolean v3, v3, Lcom/android/settings_ex/wifi/WifiSecSetupActivity;->FLAG_SAMSUNGACCOUNT_FOR_WIFISETUPWIZARD:Z
 
     if-nez v3, :cond_0
 

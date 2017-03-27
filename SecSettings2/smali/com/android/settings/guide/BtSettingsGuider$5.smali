@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settings/guide/BtSettingsGuider$5;
+.class synthetic Lcom/android/settings_ex/guide/BtSettingsGuider$5;
 .super Ljava/lang/Object;
 .source "BtSettingsGuider.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/guide/BtSettingsGuider;
+    value = Lcom/android/settings_ex/guide/BtSettingsGuider;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
 
     .prologue
     .line 690
-    invoke-static {}, Lcom/android/settings/guide/BtSettingsGuider$BluetoothBroadcastActions;->values()[Lcom/android/settings/guide/BtSettingsGuider$BluetoothBroadcastActions;
+    invoke-static {}, Lcom/android/settings_ex/guide/BtSettingsGuider$BluetoothBroadcastActions;->values()[Lcom/android/settings_ex/guide/BtSettingsGuider$BluetoothBroadcastActions;
 
     move-result-object v0
 
@@ -34,12 +34,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/settings/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$BluetoothBroadcastActions:[I
+    sput-object v0, Lcom/android/settings_ex/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$BluetoothBroadcastActions:[I
 
     :try_start_0
-    sget-object v0, Lcom/android/settings/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$BluetoothBroadcastActions:[I
+    sget-object v0, Lcom/android/settings_ex/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$BluetoothBroadcastActions:[I
 
-    sget-object v1, Lcom/android/settings/guide/BtSettingsGuider$BluetoothBroadcastActions;->STATE_CHANGED:Lcom/android/settings/guide/BtSettingsGuider$BluetoothBroadcastActions;
+    sget-object v1, Lcom/android/settings_ex/guide/BtSettingsGuider$BluetoothBroadcastActions;->STATE_CHANGED:Lcom/android/settings_ex/guide/BtSettingsGuider$BluetoothBroadcastActions;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -53,9 +53,9 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/android/settings/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$BluetoothBroadcastActions:[I
+    sget-object v0, Lcom/android/settings_ex/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$BluetoothBroadcastActions:[I
 
-    sget-object v1, Lcom/android/settings/guide/BtSettingsGuider$BluetoothBroadcastActions;->DISCOVERY_STARTED:Lcom/android/settings/guide/BtSettingsGuider$BluetoothBroadcastActions;
+    sget-object v1, Lcom/android/settings_ex/guide/BtSettingsGuider$BluetoothBroadcastActions;->DISCOVERY_STARTED:Lcom/android/settings_ex/guide/BtSettingsGuider$BluetoothBroadcastActions;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -69,9 +69,9 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/android/settings/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$BluetoothBroadcastActions:[I
+    sget-object v0, Lcom/android/settings_ex/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$BluetoothBroadcastActions:[I
 
-    sget-object v1, Lcom/android/settings/guide/BtSettingsGuider$BluetoothBroadcastActions;->DISCOVERY_FINISHED:Lcom/android/settings/guide/BtSettingsGuider$BluetoothBroadcastActions;
+    sget-object v1, Lcom/android/settings_ex/guide/BtSettingsGuider$BluetoothBroadcastActions;->DISCOVERY_FINISHED:Lcom/android/settings_ex/guide/BtSettingsGuider$BluetoothBroadcastActions;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -85,9 +85,9 @@
 
     :goto_2
     :try_start_3
-    sget-object v0, Lcom/android/settings/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$BluetoothBroadcastActions:[I
+    sget-object v0, Lcom/android/settings_ex/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$BluetoothBroadcastActions:[I
 
-    sget-object v1, Lcom/android/settings/guide/BtSettingsGuider$BluetoothBroadcastActions;->BOND_STATE_CHANGED:Lcom/android/settings/guide/BtSettingsGuider$BluetoothBroadcastActions;
+    sget-object v1, Lcom/android/settings_ex/guide/BtSettingsGuider$BluetoothBroadcastActions;->BOND_STATE_CHANGED:Lcom/android/settings_ex/guide/BtSettingsGuider$BluetoothBroadcastActions;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -101,7 +101,7 @@
 
     .line 306
     :goto_3
-    invoke-static {}, Lcom/android/settings/guide/BtSettingsGuider$GuideStates;->values()[Lcom/android/settings/guide/BtSettingsGuider$GuideStates;
+    invoke-static {}, Lcom/android/settings_ex/guide/BtSettingsGuider$GuideStates;->values()[Lcom/android/settings_ex/guide/BtSettingsGuider$GuideStates;
 
     move-result-object v0
 
@@ -109,12 +109,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/settings/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$GuideStates:[I
+    sput-object v0, Lcom/android/settings_ex/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$GuideStates:[I
 
     :try_start_4
-    sget-object v0, Lcom/android/settings/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$GuideStates:[I
+    sget-object v0, Lcom/android/settings_ex/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$GuideStates:[I
 
-    sget-object v1, Lcom/android/settings/guide/BtSettingsGuider$GuideStates;->SCANNING:Lcom/android/settings/guide/BtSettingsGuider$GuideStates;
+    sget-object v1, Lcom/android/settings_ex/guide/BtSettingsGuider$GuideStates;->SCANNING:Lcom/android/settings_ex/guide/BtSettingsGuider$GuideStates;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -128,9 +128,9 @@
 
     :goto_4
     :try_start_5
-    sget-object v0, Lcom/android/settings/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$GuideStates:[I
+    sget-object v0, Lcom/android/settings_ex/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$GuideStates:[I
 
-    sget-object v1, Lcom/android/settings/guide/BtSettingsGuider$GuideStates;->FOUND:Lcom/android/settings/guide/BtSettingsGuider$GuideStates;
+    sget-object v1, Lcom/android/settings_ex/guide/BtSettingsGuider$GuideStates;->FOUND:Lcom/android/settings_ex/guide/BtSettingsGuider$GuideStates;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -144,9 +144,9 @@
 
     :goto_5
     :try_start_6
-    sget-object v0, Lcom/android/settings/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$GuideStates:[I
+    sget-object v0, Lcom/android/settings_ex/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$GuideStates:[I
 
-    sget-object v1, Lcom/android/settings/guide/BtSettingsGuider$GuideStates;->CONNECTED:Lcom/android/settings/guide/BtSettingsGuider$GuideStates;
+    sget-object v1, Lcom/android/settings_ex/guide/BtSettingsGuider$GuideStates;->CONNECTED:Lcom/android/settings_ex/guide/BtSettingsGuider$GuideStates;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -160,9 +160,9 @@
 
     :goto_6
     :try_start_7
-    sget-object v0, Lcom/android/settings/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$GuideStates:[I
+    sget-object v0, Lcom/android/settings_ex/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$GuideStates:[I
 
-    sget-object v1, Lcom/android/settings/guide/BtSettingsGuider$GuideStates;->ENABLE:Lcom/android/settings/guide/BtSettingsGuider$GuideStates;
+    sget-object v1, Lcom/android/settings_ex/guide/BtSettingsGuider$GuideStates;->ENABLE:Lcom/android/settings_ex/guide/BtSettingsGuider$GuideStates;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -176,9 +176,9 @@
 
     :goto_7
     :try_start_8
-    sget-object v0, Lcom/android/settings/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$GuideStates:[I
+    sget-object v0, Lcom/android/settings_ex/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$GuideStates:[I
 
-    sget-object v1, Lcom/android/settings/guide/BtSettingsGuider$GuideStates;->SCAN:Lcom/android/settings/guide/BtSettingsGuider$GuideStates;
+    sget-object v1, Lcom/android/settings_ex/guide/BtSettingsGuider$GuideStates;->SCAN:Lcom/android/settings_ex/guide/BtSettingsGuider$GuideStates;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -192,9 +192,9 @@
 
     :goto_8
     :try_start_9
-    sget-object v0, Lcom/android/settings/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$GuideStates:[I
+    sget-object v0, Lcom/android/settings_ex/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$GuideStates:[I
 
-    sget-object v1, Lcom/android/settings/guide/BtSettingsGuider$GuideStates;->NOT_FOUND:Lcom/android/settings/guide/BtSettingsGuider$GuideStates;
+    sget-object v1, Lcom/android/settings_ex/guide/BtSettingsGuider$GuideStates;->NOT_FOUND:Lcom/android/settings_ex/guide/BtSettingsGuider$GuideStates;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -208,9 +208,9 @@
 
     :goto_9
     :try_start_a
-    sget-object v0, Lcom/android/settings/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$GuideStates:[I
+    sget-object v0, Lcom/android/settings_ex/guide/BtSettingsGuider$5;->$SwitchMap$com$android$settings$guide$BtSettingsGuider$GuideStates:[I
 
-    sget-object v1, Lcom/android/settings/guide/BtSettingsGuider$GuideStates;->NONE:Lcom/android/settings/guide/BtSettingsGuider$GuideStates;
+    sget-object v1, Lcom/android/settings_ex/guide/BtSettingsGuider$GuideStates;->NONE:Lcom/android/settings_ex/guide/BtSettingsGuider$GuideStates;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 

@@ -1,11 +1,11 @@
-.class synthetic Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$12;
+.class synthetic Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$12;
 .super Ljava/lang/Object;
 .source "ConfirmLockUniversal.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal;
+    value = Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
 
     .prologue
     .line 897
-    invoke-static {}, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;->values()[Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;
+    invoke-static {}, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;->values()[Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;
 
     move-result-object v0
 
@@ -32,12 +32,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$12;->$SwitchMap$com$android$settings$accessibility$universallock$ConfirmLockUniversal$Stage:[I
+    sput-object v0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$12;->$SwitchMap$com$android$settings$accessibility$universallock$ConfirmLockUniversal$Stage:[I
 
     :try_start_0
-    sget-object v0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$12;->$SwitchMap$com$android$settings$accessibility$universallock$ConfirmLockUniversal$Stage:[I
+    sget-object v0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$12;->$SwitchMap$com$android$settings$accessibility$universallock$ConfirmLockUniversal$Stage:[I
 
-    sget-object v1, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;->NeedToUnlock:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;
+    sget-object v1, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;->NeedToUnlock:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -51,9 +51,9 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$12;->$SwitchMap$com$android$settings$accessibility$universallock$ConfirmLockUniversal$Stage:[I
+    sget-object v0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$12;->$SwitchMap$com$android$settings$accessibility$universallock$ConfirmLockUniversal$Stage:[I
 
-    sget-object v1, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;->NeedToUnlockWrong:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;
+    sget-object v1, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;->NeedToUnlockWrong:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -67,9 +67,9 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$12;->$SwitchMap$com$android$settings$accessibility$universallock$ConfirmLockUniversal$Stage:[I
+    sget-object v0, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$12;->$SwitchMap$com$android$settings$accessibility$universallock$ConfirmLockUniversal$Stage:[I
 
-    sget-object v1, Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;->LockedOut:Lcom/android/settings/accessibility/universallock/ConfirmLockUniversal$Stage;
+    sget-object v1, Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;->LockedOut:Lcom/android/settings_ex/accessibility/universallock/ConfirmLockUniversal$Stage;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 

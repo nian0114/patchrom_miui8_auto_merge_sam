@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/OwnerInfoSettings;
+.class public Lcom/android/settings_ex/OwnerInfoSettings;
 .super Landroid/app/DialogFragment;
 .source "OwnerInfoSettings.java"
 
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/OwnerInfoSettings$DialogFragmentListener;
+        Lcom/android/settings_ex/OwnerInfoSettings$DialogFragmentListener;
     }
 .end annotation
 
@@ -25,7 +25,7 @@
 
 .field isFromUnlock:Z
 
-.field private listener:Lcom/android/settings/OwnerInfoSettings$DialogFragmentListener;
+.field private listener:Lcom/android/settings_ex/OwnerInfoSettings$DialogFragmentListener;
 
 .field private mAlertDialog:Landroid/app/AlertDialog;
 
@@ -56,7 +56,7 @@
 
     move-result v0
 
-    sput v0, Lcom/android/settings/OwnerInfoSettings;->MY_USER_ID:I
+    sput v0, Lcom/android/settings_ex/OwnerInfoSettings;->MY_USER_ID:I
 
     return-void
 .end method
@@ -71,75 +71,75 @@
     .line 76
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/OwnerInfoSettings;->info:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/OwnerInfoSettings;->info:Ljava/lang/String;
 
     .line 87
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/OwnerInfoSettings;)Landroid/widget/EditText;
+.method static synthetic access$000(Lcom/android/settings_ex/OwnerInfoSettings;)Landroid/widget/EditText;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/OwnerInfoSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/OwnerInfoSettings;
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/OwnerInfoSettings;)V
+.method static synthetic access$100(Lcom/android/settings_ex/OwnerInfoSettings;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/OwnerInfoSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/OwnerInfoSettings;
 
     .prologue
     .line 58
-    invoke-direct {p0}, Lcom/android/settings/OwnerInfoSettings;->showInputMethod()V
+    invoke-direct {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->showInputMethod()V
 
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/OwnerInfoSettings;)Ljava/lang/String;
+.method static synthetic access$200(Lcom/android/settings_ex/OwnerInfoSettings;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/OwnerInfoSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/OwnerInfoSettings;
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/android/settings/OwnerInfoSettings;->info:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/OwnerInfoSettings;->info:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$202(Lcom/android/settings/OwnerInfoSettings;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$202(Lcom/android/settings_ex/OwnerInfoSettings;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/OwnerInfoSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/OwnerInfoSettings;
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
     .line 58
-    iput-object p1, p0, Lcom/android/settings/OwnerInfoSettings;->info:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->info:Ljava/lang/String;
 
     return-object p1
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/OwnerInfoSettings;)Landroid/widget/TextView;
+.method static synthetic access$300(Lcom/android/settings_ex/OwnerInfoSettings;)Landroid/widget/TextView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/OwnerInfoSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/OwnerInfoSettings;
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/android/settings/OwnerInfoSettings;->mErrorTextView:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mErrorTextView:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/OwnerInfoSettings;)Landroid/widget/ScrollView;
+.method static synthetic access$400(Lcom/android/settings_ex/OwnerInfoSettings;)Landroid/widget/ScrollView;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/OwnerInfoSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/OwnerInfoSettings;
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/android/settings/OwnerInfoSettings;->mScrollView:Landroid/widget/ScrollView;
+    iget-object v0, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mScrollView:Landroid/widget/ScrollView;
 
     return-object v0
 .end method
@@ -149,7 +149,7 @@
 
     .prologue
     .line 353
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -163,7 +163,7 @@
 
     .line 354
     .local v0, "imm":Landroid/view/inputmethod/InputMethodManager;
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->getWindowToken()Landroid/os/IBinder;
 
@@ -187,7 +187,7 @@
     const/16 v4, 0x8
 
     .line 137
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -197,18 +197,18 @@
 
     .line 138
     .local v1, "res":Landroid/content/ContentResolver;
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    sget v3, Lcom/android/settings/OwnerInfoSettings;->MY_USER_ID:I
+    sget v3, Lcom/android/settings_ex/OwnerInfoSettings;->MY_USER_ID:I
 
     invoke-virtual {v2, v3}, Lcom/android/internal/widget/LockPatternUtils;->getOwnerInfo(I)Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->info:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->info:Ljava/lang/String;
 
     .line 139
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->info:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->info:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -216,7 +216,7 @@
 
     if-nez v2, :cond_0
 
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->info:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->info:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
@@ -225,7 +225,7 @@
     if-le v2, v5, :cond_0
 
     .line 140
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->info:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->info:Ljava/lang/String;
 
     const/4 v3, 0x0
 
@@ -233,13 +233,13 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->info:Ljava/lang/String;
+    iput-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->info:Ljava/lang/String;
 
     .line 142
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    sget v3, Lcom/android/settings/OwnerInfoSettings;->MY_USER_ID:I
+    sget v3, Lcom/android/settings_ex/OwnerInfoSettings;->MY_USER_ID:I
 
     invoke-virtual {v2, v3}, Lcom/android/internal/widget/LockPatternUtils;->isOwnerInfoEnabled(I)Z
 
@@ -247,7 +247,7 @@
 
     .line 144
     .local v0, "enabled":Z
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mView:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mView:Landroid/view/View;
 
     const v3, 0x7f0d039f
 
@@ -257,10 +257,10 @@
 
     check-cast v2, Landroid/widget/ScrollView;
 
-    iput-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mScrollView:Landroid/widget/ScrollView;
+    iput-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mScrollView:Landroid/widget/ScrollView;
 
     .line 146
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mView:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mView:Landroid/view/View;
 
     const v3, 0x7f0d03a3
 
@@ -270,10 +270,10 @@
 
     check-cast v2, Landroid/widget/CheckBox;
 
-    iput-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mCheckbox:Landroid/widget/CheckBox;
+    iput-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mCheckbox:Landroid/widget/CheckBox;
 
     .line 147
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mView:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mView:Landroid/view/View;
 
     const v3, 0x7f0d03a1
 
@@ -283,20 +283,20 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    iput-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mErrorTextView:Landroid/widget/TextView;
+    iput-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mErrorTextView:Landroid/widget/TextView;
 
     .line 148
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mErrorTextView:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mErrorTextView:Landroid/widget/TextView;
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 149
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mCheckbox:Landroid/widget/CheckBox;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mCheckbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v2, v4}, Landroid/widget/CheckBox;->setVisibility(I)V
 
     .line 150
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mView:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mView:Landroid/view/View;
 
     const v3, 0x7f0d03a0
 
@@ -306,10 +306,10 @@
 
     check-cast v2, Landroid/widget/EditText;
 
-    iput-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    iput-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
 
     .line 151
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->info:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->info:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -317,7 +317,7 @@
 
     if-nez v2, :cond_1
 
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->info:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->info:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
@@ -326,7 +326,7 @@
     if-lez v2, :cond_1
 
     .line 152
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
 
     const/16 v3, 0x10
 
@@ -334,25 +334,25 @@
 
     .line 154
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
 
-    iget-object v3, p0, Lcom/android/settings/OwnerInfoSettings;->info:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/OwnerInfoSettings;->info:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 155
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    iget-boolean v2, p0, Lcom/android/settings/OwnerInfoSettings;->isFromUnlock:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->isFromUnlock:Z
 
     if-eqz v2, :cond_2
 
     .line 158
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
 
     const-string v3, "inputType=option"
 
@@ -360,7 +360,7 @@
 
     .line 160
     :cond_2
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->info:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->info:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -368,9 +368,9 @@
 
     if-nez v2, :cond_3
 
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
 
-    iget-object v3, p0, Lcom/android/settings/OwnerInfoSettings;->info:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings_ex/OwnerInfoSettings;->info:Ljava/lang/String;
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -380,7 +380,7 @@
 
     .line 162
     :cond_3
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mView:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mView:Landroid/view/View;
 
     const v3, 0x7f0d03a2
 
@@ -390,21 +390,21 @@
 
     check-cast v2, Landroid/widget/EditText;
 
-    iput-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mNickname:Landroid/widget/EditText;
+    iput-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mNickname:Landroid/widget/EditText;
 
     .line 163
-    iget-boolean v2, p0, Lcom/android/settings/OwnerInfoSettings;->mShowNickname:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mShowNickname:Z
 
     if-nez v2, :cond_5
 
     .line 164
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mNickname:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mNickname:Landroid/widget/EditText;
 
     invoke-virtual {v2, v4}, Landroid/widget/EditText;->setVisibility(I)V
 
     .line 169
     :goto_0
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mCheckbox:Landroid/widget/CheckBox;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mCheckbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v2, v0}, Landroid/widget/CheckBox;->setChecked(Z)V
 
@@ -416,7 +416,7 @@
     if-eqz v2, :cond_4
 
     .line 171
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -431,7 +431,7 @@
     if-eqz v2, :cond_6
 
     .line 172
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mCheckbox:Landroid/widget/CheckBox;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mCheckbox:Landroid/widget/CheckBox;
 
     const v3, 0x7f0e01fe
 
@@ -440,25 +440,25 @@
     .line 177
     :cond_4
     :goto_1
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mCheckbox:Landroid/widget/CheckBox;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mCheckbox:Landroid/widget/CheckBox;
 
-    new-instance v3, Lcom/android/settings/OwnerInfoSettings$1;
+    new-instance v3, Lcom/android/settings_ex/OwnerInfoSettings$1;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/OwnerInfoSettings$1;-><init>(Lcom/android/settings/OwnerInfoSettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/OwnerInfoSettings$1;-><init>(Lcom/android/settings_ex/OwnerInfoSettings;)V
 
     invoke-virtual {v2, v3}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     .line 183
-    invoke-direct {p0}, Lcom/android/settings/OwnerInfoSettings;->showInputMethod()V
+    invoke-direct {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->showInputMethod()V
 
     .line 184
     return-void
 
     .line 166
     :cond_5
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mNickname:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mNickname:Landroid/widget/EditText;
 
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -473,7 +473,7 @@
     invoke-virtual {v2, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 167
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mNickname:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mNickname:Landroid/widget/EditText;
 
     const/4 v3, 0x1
 
@@ -483,7 +483,7 @@
 
     .line 174
     :cond_6
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mCheckbox:Landroid/widget/CheckBox;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mCheckbox:Landroid/widget/CheckBox;
 
     const v3, 0x7f0e01fc
 
@@ -492,18 +492,18 @@
     goto :goto_1
 .end method
 
-.method public static newInstance(I)Lcom/android/settings/OwnerInfoSettings;
+.method public static newInstance(I)Lcom/android/settings_ex/OwnerInfoSettings;
     .locals 3
     .param p0, "title"    # I
 
     .prologue
     .line 81
-    new-instance v1, Lcom/android/settings/OwnerInfoSettings;
+    new-instance v1, Lcom/android/settings_ex/OwnerInfoSettings;
 
-    invoke-direct {v1}, Lcom/android/settings/OwnerInfoSettings;-><init>()V
+    invoke-direct {v1}, Lcom/android/settings_ex/OwnerInfoSettings;-><init>()V
 
     .line 82
-    .local v1, "frag":Lcom/android/settings/OwnerInfoSettings;
+    .local v1, "frag":Lcom/android/settings_ex/OwnerInfoSettings;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
@@ -515,7 +515,7 @@
     invoke-virtual {v0, v2, p0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 84
-    invoke-virtual {v1, v0}, Lcom/android/settings/OwnerInfoSettings;->setArguments(Landroid/os/Bundle;)V
+    invoke-virtual {v1, v0}, Lcom/android/settings_ex/OwnerInfoSettings;->setArguments(Landroid/os/Bundle;)V
 
     .line 85
     return-object v1
@@ -539,15 +539,15 @@
 
     .line 373
     :cond_0
-    new-instance v0, Lcom/android/settings/OwnerInfoSettings;
+    new-instance v0, Lcom/android/settings_ex/OwnerInfoSettings;
 
-    invoke-direct {v0}, Lcom/android/settings/OwnerInfoSettings;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/OwnerInfoSettings;-><init>()V
 
     .line 374
-    .local v0, "dialog":Lcom/android/settings/OwnerInfoSettings;
+    .local v0, "dialog":Lcom/android/settings_ex/OwnerInfoSettings;
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p0, v1}, Lcom/android/settings/OwnerInfoSettings;->setTargetFragment(Landroid/app/Fragment;I)V
+    invoke-virtual {v0, p0, v1}, Lcom/android/settings_ex/OwnerInfoSettings;->setTargetFragment(Landroid/app/Fragment;I)V
 
     .line 375
     invoke-virtual {p0}, Landroid/app/Fragment;->getFragmentManager()Landroid/app/FragmentManager;
@@ -556,7 +556,7 @@
 
     const-string v2, "ownerInfo"
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/OwnerInfoSettings;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/OwnerInfoSettings;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -566,7 +566,7 @@
 
     .prologue
     .line 190
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->isEnabled()Z
 
@@ -575,23 +575,23 @@
     if-eqz v1, :cond_1
 
     .line 191
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->setFocusableInTouchMode(Z)V
 
     .line 192
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->requestFocus()Z
 
     .line 193
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
 
-    new-instance v2, Lcom/android/settings/OwnerInfoSettings$2;
+    new-instance v2, Lcom/android/settings_ex/OwnerInfoSettings$2;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/OwnerInfoSettings$2;-><init>(Lcom/android/settings/OwnerInfoSettings;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/OwnerInfoSettings$2;-><init>(Lcom/android/settings_ex/OwnerInfoSettings;)V
 
     const-wide/16 v4, 0xc8
 
@@ -604,13 +604,13 @@
 
     .line 212
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->getDialog()Landroid/app/Dialog;
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->getDialog()Landroid/app/Dialog;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->getDialog()Landroid/app/Dialog;
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->getDialog()Landroid/app/Dialog;
 
     move-result-object v1
 
@@ -621,7 +621,7 @@
     if-eqz v1, :cond_0
 
     .line 215
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->getDialog()Landroid/app/Dialog;
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->getDialog()Landroid/app/Dialog;
 
     move-result-object v1
 
@@ -634,7 +634,7 @@
     invoke-virtual {v1, v2}, Landroid/view/Window;->setSoftInputMode(I)V
 
     .line 216
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -648,7 +648,7 @@
 
     .line 217
     .local v0, "imm":Landroid/view/inputmethod/InputMethodManager;
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->getWindowToken()Landroid/os/IBinder;
 
@@ -685,45 +685,45 @@
 
     .line 308
     :pswitch_0
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->listener:Lcom/android/settings/OwnerInfoSettings$DialogFragmentListener;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->listener:Lcom/android/settings_ex/OwnerInfoSettings$DialogFragmentListener;
 
-    instance-of v1, v1, Lcom/android/settings/LockscreenMenuSettings;
+    instance-of v1, v1, Lcom/android/settings_ex/LockscreenMenuSettings;
 
     if-eqz v1, :cond_3
 
     .line 309
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->saveChanges()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->saveChanges()V
 
     .line 310
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    iget-object v4, p0, Lcom/android/settings/OwnerInfoSettings;->mCheckbox:Landroid/widget/CheckBox;
+    iget-object v4, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mCheckbox:Landroid/widget/CheckBox;
 
     invoke-virtual {v4}, Landroid/widget/CheckBox;->isChecked()Z
 
     move-result v4
 
-    sget v5, Lcom/android/settings/OwnerInfoSettings;->MY_USER_ID:I
+    sget v5, Lcom/android/settings_ex/OwnerInfoSettings;->MY_USER_ID:I
 
     invoke-virtual {v1, v4, v5}, Lcom/android/internal/widget/LockPatternUtils;->setOwnerInfoEnabled(ZI)V
 
     .line 311
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->listener:Lcom/android/settings/OwnerInfoSettings$DialogFragmentListener;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->listener:Lcom/android/settings_ex/OwnerInfoSettings$DialogFragmentListener;
 
-    invoke-interface {v1}, Lcom/android/settings/OwnerInfoSettings$DialogFragmentListener;->onPositiveClick()V
+    invoke-interface {v1}, Lcom/android/settings_ex/OwnerInfoSettings$DialogFragmentListener;->onPositiveClick()V
 
     .line 319
     :cond_1
     :goto_1
-    invoke-direct {p0}, Lcom/android/settings/OwnerInfoSettings;->hideSoftInput()V
+    invoke-direct {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->hideSoftInput()V
 
     .line 321
-    sget-boolean v1, Lcom/android/settings/Utils;->isEnabledSurveyMode:Z
+    sget-boolean v1, Lcom/android/settings_ex/Utils;->isEnabledSurveyMode:Z
 
     if-eqz v1, :cond_2
 
     .line 322
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -740,7 +740,7 @@
     if-lez v1, :cond_5
 
     .line 323
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->context:Landroid/content/Context;
 
     const-string v3, "com.android.settings"
 
@@ -748,12 +748,12 @@
 
     const/16 v5, 0x3e8
 
-    invoke-static {v1, v3, v4, v5}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-static {v1, v3, v4, v5}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 330
     :cond_2
     :goto_2
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -792,7 +792,7 @@
 
     move-result-object v1
 
-    iget-object v5, p0, Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    iget-object v5, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
 
     invoke-virtual {v5}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -822,10 +822,10 @@
 
     .line 313
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->saveChanges()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->saveChanges()V
 
     .line 314
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -837,7 +837,7 @@
 
     .line 315
     .local v7, "info":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/OwnerInfoSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v4, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v7}, Ljava/lang/String;->length()I
 
@@ -848,19 +848,19 @@
     move v1, v2
 
     :goto_3
-    sget v5, Lcom/android/settings/OwnerInfoSettings;->MY_USER_ID:I
+    sget v5, Lcom/android/settings_ex/OwnerInfoSettings;->MY_USER_ID:I
 
     invoke-virtual {v4, v1, v5}, Lcom/android/internal/widget/LockPatternUtils;->setOwnerInfoEnabled(ZI)V
 
     .line 316
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->getTargetFragment()Landroid/app/Fragment;
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->getTargetFragment()Landroid/app/Fragment;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
     .line 317
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->getTargetFragment()Landroid/app/Fragment;
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->getTargetFragment()Landroid/app/Fragment;
 
     move-result-object v1
 
@@ -885,19 +885,19 @@
     .line 325
     .end local v7    # "info":Ljava/lang/String;
     :cond_5
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->context:Landroid/content/Context;
 
     const-string v4, "com.android.settings"
 
     const-string v5, "OWST"
 
-    invoke-static {v1, v4, v5, v3}, Lcom/android/settings/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-static {v1, v4, v5, v3}, Lcom/android/settings_ex/Utils;->insertLog(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_2
 
     .line 338
     :pswitch_1
-    invoke-direct {p0}, Lcom/android/settings/OwnerInfoSettings;->hideSoftInput()V
+    invoke-direct {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->hideSoftInput()V
 
     goto/16 :goto_0
 
@@ -920,7 +920,7 @@
     invoke-super {p0, p1}, Landroid/app/DialogFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 228
-    invoke-direct {p0}, Lcom/android/settings/OwnerInfoSettings;->showInputMethod()V
+    invoke-direct {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->showInputMethod()V
 
     .line 229
     return-void
@@ -937,7 +937,7 @@
     invoke-super {p0, p1}, Landroid/app/DialogFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 98
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -960,18 +960,18 @@
 
     move-result v2
 
-    iput-boolean v2, p0, Lcom/android/settings/OwnerInfoSettings;->mShowNickname:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mShowNickname:Z
 
     .line 102
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->context:Landroid/content/Context;
+    iput-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->context:Landroid/content/Context;
 
     .line 103
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -981,7 +981,7 @@
 
     .line 104
     .local v1, "intent":Landroid/content/Intent;
-    iput-boolean v3, p0, Lcom/android/settings/OwnerInfoSettings;->isFromUnlock:Z
+    iput-boolean v3, p0, Lcom/android/settings_ex/OwnerInfoSettings;->isFromUnlock:Z
 
     .line 105
     const-string v2, "direct_lockscren"
@@ -990,7 +990,7 @@
 
     move-result v2
 
-    iput-boolean v2, p0, Lcom/android/settings/OwnerInfoSettings;->isFromUnlock:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->isFromUnlock:Z
 
     .line 107
     return-void
@@ -1004,7 +1004,7 @@
     const/4 v3, 0x0
 
     .line 118
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -1018,26 +1018,26 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->mView:Landroid/view/View;
+    iput-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mView:Landroid/view/View;
 
     .line 119
     new-instance v1, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     invoke-direct {v1, v2}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 120
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->mView:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mView:Landroid/view/View;
 
-    invoke-direct {p0, v1}, Lcom/android/settings/OwnerInfoSettings;->initView(Landroid/view/View;)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/OwnerInfoSettings;->initView(Landroid/view/View;)V
 
     .line 122
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->getArguments()Landroid/os/Bundle;
 
     move-result-object v1
 
@@ -1062,13 +1062,13 @@
     :cond_0
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     invoke-direct {v1, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->mView:Landroid/view/View;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mView:Landroid/view/View;
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
 
@@ -1094,10 +1094,10 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->mAlertDialog:Landroid/app/AlertDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mAlertDialog:Landroid/app/AlertDialog;
 
     .line 133
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->mAlertDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mAlertDialog:Landroid/app/AlertDialog;
 
     return-object v1
 .end method
@@ -1122,7 +1122,7 @@
 
     .prologue
     .line 348
-    invoke-direct {p0}, Lcom/android/settings/OwnerInfoSettings;->hideSoftInput()V
+    invoke-direct {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->hideSoftInput()V
 
     .line 349
     invoke-super {p0}, Landroid/app/DialogFragment;->onDestroyView()V
@@ -1152,7 +1152,7 @@
     invoke-super {p0}, Landroid/app/DialogFragment;->onResume()V
 
     .line 241
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -1162,7 +1162,7 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v1, v2, v3, v4}, Lcom/android/settings/Utils;->getEnterprisePolicyStringValue(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2, v3, v4}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyStringValue(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1171,22 +1171,22 @@
     if-eqz v0, :cond_0
 
     .line 244
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
 
     invoke-virtual {v1, v5}, Landroid/widget/EditText;->setEnabled(Z)V
 
     .line 245
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
 
     invoke-virtual {v1, v5}, Landroid/widget/EditText;->setEnabled(Z)V
 
     .line 246
-    iput-object v0, p0, Lcom/android/settings/OwnerInfoSettings;->info:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/OwnerInfoSettings;->info:Ljava/lang/String;
 
     .line 247
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
 
-    iget-object v2, p0, Lcom/android/settings/OwnerInfoSettings;->info:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/settings_ex/OwnerInfoSettings;->info:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
@@ -1199,11 +1199,11 @@
 
     .line 258
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
 
-    new-instance v2, Lcom/android/settings/OwnerInfoSettings$3;
+    new-instance v2, Lcom/android/settings_ex/OwnerInfoSettings$3;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/OwnerInfoSettings$3;-><init>(Lcom/android/settings/OwnerInfoSettings;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/OwnerInfoSettings$3;-><init>(Lcom/android/settings_ex/OwnerInfoSettings;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
@@ -1212,7 +1212,7 @@
 
     .line 253
     :cond_0
-    invoke-direct {p0}, Lcom/android/settings/OwnerInfoSettings;->showInputMethod()V
+    invoke-direct {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->showInputMethod()V
 
     goto :goto_0
 .end method
@@ -1222,7 +1222,7 @@
 
     .prologue
     .line 357
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1232,7 +1232,7 @@
 
     .line 358
     .local v3, "res":Landroid/content/ContentResolver;
-    iget-object v4, p0, Lcom/android/settings/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mOwnerInfo:Landroid/widget/EditText;
 
     invoke-virtual {v4}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -1244,19 +1244,19 @@
 
     .line 359
     .local v0, "info":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/OwnerInfoSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v4, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    sget v5, Lcom/android/settings/OwnerInfoSettings;->MY_USER_ID:I
+    sget v5, Lcom/android/settings_ex/OwnerInfoSettings;->MY_USER_ID:I
 
     invoke-virtual {v4, v0, v5}, Lcom/android/internal/widget/LockPatternUtils;->setOwnerInfo(Ljava/lang/String;I)V
 
     .line 360
-    iget-boolean v4, p0, Lcom/android/settings/OwnerInfoSettings;->mShowNickname:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mShowNickname:Z
 
     if-eqz v4, :cond_0
 
     .line 361
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -1270,7 +1270,7 @@
 
     .line 362
     .local v2, "oldName":Ljava/lang/String;
-    iget-object v4, p0, Lcom/android/settings/OwnerInfoSettings;->mNickname:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/android/settings_ex/OwnerInfoSettings;->mNickname:Landroid/widget/EditText;
 
     invoke-virtual {v4}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -1291,7 +1291,7 @@
     if-nez v4, :cond_0
 
     .line 364
-    invoke-virtual {p0}, Lcom/android/settings/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/OwnerInfoSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 

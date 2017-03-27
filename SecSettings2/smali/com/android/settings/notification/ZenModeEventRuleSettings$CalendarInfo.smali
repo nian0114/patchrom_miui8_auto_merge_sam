@@ -1,11 +1,11 @@
-.class public Lcom/android/settings/notification/ZenModeEventRuleSettings$CalendarInfo;
+.class public Lcom/android/settings_ex/notification/ZenModeEventRuleSettings$CalendarInfo;
 .super Ljava/lang/Object;
 .source "ZenModeEventRuleSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/notification/ZenModeEventRuleSettings;
+    value = Lcom/android/settings_ex/notification/ZenModeEventRuleSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

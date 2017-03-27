@@ -1,11 +1,11 @@
-.class Lcom/android/settings/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;
+.class Lcom/android/settings_ex/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;
 .super Landroid/content/BroadcastReceiver;
 .source "SoftwareUpdateSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/SoftwareUpdateSettings;
+    value = Lcom/android/settings_ex/SoftwareUpdateSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,30 +15,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/SoftwareUpdateSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/SoftwareUpdateSettings;
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/settings/SoftwareUpdateSettings;)V
+.method private constructor <init>(Lcom/android/settings_ex/SoftwareUpdateSettings;)V
     .locals 0
 
     .prologue
     .line 148
-    iput-object p1, p0, Lcom/android/settings/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;->this$0:Lcom/android/settings/SoftwareUpdateSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;->this$0:Lcom/android/settings_ex/SoftwareUpdateSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/settings/SoftwareUpdateSettings;Lcom/android/settings/SoftwareUpdateSettings$1;)V
+.method synthetic constructor <init>(Lcom/android/settings_ex/SoftwareUpdateSettings;Lcom/android/settings_ex/SoftwareUpdateSettings$1;)V
     .locals 0
-    .param p1, "x0"    # Lcom/android/settings/SoftwareUpdateSettings;
-    .param p2, "x1"    # Lcom/android/settings/SoftwareUpdateSettings$1;
+    .param p1, "x0"    # Lcom/android/settings_ex/SoftwareUpdateSettings;
+    .param p2, "x1"    # Lcom/android/settings_ex/SoftwareUpdateSettings$1;
 
     .prologue
     .line 148
-    invoke-direct {p0, p1}, Lcom/android/settings/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;-><init>(Lcom/android/settings/SoftwareUpdateSettings;)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;-><init>(Lcom/android/settings_ex/SoftwareUpdateSettings;)V
 
     return-void
 .end method
@@ -107,10 +107,10 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 165
-    iget-object v1, p0, Lcom/android/settings/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;->this$0:Lcom/android/settings/SoftwareUpdateSettings;
+    iget-object v1, p0, Lcom/android/settings_ex/SoftwareUpdateSettings$UpdateTimeBroadcastReceiver;->this$0:Lcom/android/settings_ex/SoftwareUpdateSettings;
 
-    # invokes: Lcom/android/settings/SoftwareUpdateSettings;->updateLastCheckedDate()V
-    invoke-static {v1}, Lcom/android/settings/SoftwareUpdateSettings;->access$000(Lcom/android/settings/SoftwareUpdateSettings;)V
+    # invokes: Lcom/android/settings_ex/SoftwareUpdateSettings;->updateLastCheckedDate()V
+    invoke-static {v1}, Lcom/android/settings_ex/SoftwareUpdateSettings;->access$000(Lcom/android/settings_ex/SoftwareUpdateSettings;)V
 
     goto :goto_0
 .end method

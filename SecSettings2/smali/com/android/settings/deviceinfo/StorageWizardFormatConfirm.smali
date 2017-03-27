@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;
-.super Lcom/android/settings/deviceinfo/StorageWizardBase;
+.class public Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;
+.super Lcom/android/settings_ex/deviceinfo/StorageWizardBase;
 .source "StorageWizardFormatConfirm.java"
 
 
@@ -13,7 +13,7 @@
 
     .prologue
     .line 25
-    invoke-direct {p0}, Lcom/android/settings/deviceinfo/StorageWizardBase;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;-><init>()V
 
     return-void
 .end method
@@ -32,15 +32,15 @@
     const/4 v3, 0x0
 
     .line 33
-    invoke-super {p0, p1}, Lcom/android/settings/deviceinfo/StorageWizardBase;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/deviceinfo/StorageWizardBase;->onCreate(Landroid/os/Bundle;)V
 
     .line 34
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->mDisk:Landroid/os/storage/DiskInfo;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->mDisk:Landroid/os/storage/DiskInfo;
 
     if-nez v0, :cond_0
 
     .line 35
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->finish()V
 
     .line 54
     :goto_0
@@ -50,10 +50,10 @@
     :cond_0
     const v0, 0x7f0401f6
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->setContentView(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->setContentView(I)V
 
     .line 40
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -63,15 +63,15 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->mFormatPrivate:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->mFormatPrivate:Z
 
     .line 41
-    iget-boolean v0, p0, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->mFormatPrivate:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->mFormatPrivate:Z
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->setIllustrationInternal(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->setIllustrationInternal(Z)V
 
     .line 43
-    iget-boolean v0, p0, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->mFormatPrivate:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->mFormatPrivate:Z
 
     if-eqz v0, :cond_1
 
@@ -80,14 +80,14 @@
 
     new-array v1, v3, [Ljava/lang/String;
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->setHeaderText(I[Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->setHeaderText(I[Ljava/lang/String;)V
 
     .line 45
     const v0, 0x7f0e06df
 
     new-array v1, v5, [Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->mDisk:Landroid/os/storage/DiskInfo;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->mDisk:Landroid/os/storage/DiskInfo;
 
     invoke-virtual {v2}, Landroid/os/storage/DiskInfo;->getDescription()Ljava/lang/String;
 
@@ -95,7 +95,7 @@
 
     aput-object v2, v1, v3
 
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->mDisk:Landroid/os/storage/DiskInfo;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->mDisk:Landroid/os/storage/DiskInfo;
 
     invoke-virtual {v2}, Landroid/os/storage/DiskInfo;->getDescription()Ljava/lang/String;
 
@@ -103,11 +103,11 @@
 
     aput-object v2, v1, v4
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->setBodyText(I[Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->setBodyText(I[Ljava/lang/String;)V
 
     .line 53
     :goto_1
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->getNextButton()Landroid/widget/TextView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->getNextButton()Landroid/widget/TextView;
 
     move-result-object v0
 
@@ -123,7 +123,7 @@
 
     new-array v1, v3, [Ljava/lang/String;
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->setHeaderText(I[Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->setHeaderText(I[Ljava/lang/String;)V
 
     .line 49
     const v0, 0x7f0e06e1
@@ -132,7 +132,7 @@
 
     new-array v1, v1, [Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->mDisk:Landroid/os/storage/DiskInfo;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->mDisk:Landroid/os/storage/DiskInfo;
 
     invoke-virtual {v2}, Landroid/os/storage/DiskInfo;->getDescription()Ljava/lang/String;
 
@@ -140,7 +140,7 @@
 
     aput-object v2, v1, v3
 
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->mDisk:Landroid/os/storage/DiskInfo;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->mDisk:Landroid/os/storage/DiskInfo;
 
     invoke-virtual {v2}, Landroid/os/storage/DiskInfo;->getDescription()Ljava/lang/String;
 
@@ -148,7 +148,7 @@
 
     aput-object v2, v1, v4
 
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->mDisk:Landroid/os/storage/DiskInfo;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->mDisk:Landroid/os/storage/DiskInfo;
 
     invoke-virtual {v2}, Landroid/os/storage/DiskInfo;->getDescription()Ljava/lang/String;
 
@@ -156,7 +156,7 @@
 
     aput-object v2, v1, v5
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->setBodyText(I[Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->setBodyText(I[Ljava/lang/String;)V
 
     goto :goto_1
 .end method
@@ -168,7 +168,7 @@
     .line 58
     new-instance v0, Landroid/content/Intent;
 
-    const-class v1, Lcom/android/settings/deviceinfo/StorageWizardFormatProgress;
+    const-class v1, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatProgress;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -176,7 +176,7 @@
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "android.os.storage.extra.DISK_ID"
 
-    iget-object v2, p0, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->mDisk:Landroid/os/storage/DiskInfo;
+    iget-object v2, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->mDisk:Landroid/os/storage/DiskInfo;
 
     invoke-virtual {v2}, Landroid/os/storage/DiskInfo;->getId()Ljava/lang/String;
 
@@ -187,14 +187,14 @@
     .line 60
     const-string v1, "format_private"
 
-    iget-boolean v2, p0, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->mFormatPrivate:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->mFormatPrivate:Z
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 61
     const-string v1, "forget_uuid"
 
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -207,10 +207,10 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 62
-    invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->startActivity(Landroid/content/Intent;)V
 
     .line 63
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/StorageWizardFormatConfirm;->finishAffinity()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/StorageWizardFormatConfirm;->finishAffinity()V
 
     .line 64
     return-void

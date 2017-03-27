@@ -1,4 +1,4 @@
-.class Lcom/android/settings/location/SatelliteView$2;
+.class Lcom/android/settings_ex/location/SatelliteView$2;
 .super Ljava/lang/Object;
 .source "SatelliteView.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/location/SatelliteView;
+    value = Lcom/android/settings_ex/location/SatelliteView;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/location/SatelliteView;
+.field final synthetic this$0:Lcom/android/settings_ex/location/SatelliteView;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/location/SatelliteView;)V
+.method constructor <init>(Lcom/android/settings_ex/location/SatelliteView;)V
     .locals 0
 
     .prologue
     .line 342
-    iput-object p1, p0, Lcom/android/settings/location/SatelliteView$2;->this$0:Lcom/android/settings/location/SatelliteView;
+    iput-object p1, p0, Lcom/android/settings_ex/location/SatelliteView$2;->this$0:Lcom/android/settings_ex/location/SatelliteView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,9 +49,9 @@
     if-ne v4, p1, :cond_2
 
     .line 348
-    iget-object v4, p0, Lcom/android/settings/location/SatelliteView$2;->this$0:Lcom/android/settings/location/SatelliteView;
+    iget-object v4, p0, Lcom/android/settings_ex/location/SatelliteView$2;->this$0:Lcom/android/settings_ex/location/SatelliteView;
 
-    iget-object v4, v4, Lcom/android/settings/location/SatelliteView;->mLocationManager:Landroid/location/LocationManager;
+    iget-object v4, v4, Lcom/android/settings_ex/location/SatelliteView;->mLocationManager:Landroid/location/LocationManager;
 
     if-nez v4, :cond_1
 
@@ -69,9 +69,9 @@
 
     .line 352
     :cond_1
-    iget-object v4, p0, Lcom/android/settings/location/SatelliteView$2;->this$0:Lcom/android/settings/location/SatelliteView;
+    iget-object v4, p0, Lcom/android/settings_ex/location/SatelliteView$2;->this$0:Lcom/android/settings_ex/location/SatelliteView;
 
-    iget-object v4, v4, Lcom/android/settings/location/SatelliteView;->mLocationManager:Landroid/location/LocationManager;
+    iget-object v4, v4, Lcom/android/settings_ex/location/SatelliteView;->mLocationManager:Landroid/location/LocationManager;
 
     invoke-virtual {v4, v5}, Landroid/location/LocationManager;->getGpsStatus(Landroid/location/GpsStatus;)Landroid/location/GpsStatus;
 
@@ -79,14 +79,14 @@
 
     .line 353
     .local v0, "gs":Landroid/location/GpsStatus;
-    iget-object v4, p0, Lcom/android/settings/location/SatelliteView$2;->this$0:Lcom/android/settings/location/SatelliteView;
+    iget-object v4, p0, Lcom/android/settings_ex/location/SatelliteView$2;->this$0:Lcom/android/settings_ex/location/SatelliteView;
 
     invoke-virtual {v0}, Landroid/location/GpsStatus;->getTimeToFirstFix()I
 
     move-result v5
 
-    # setter for: Lcom/android/settings/location/SatelliteView;->ttff:I
-    invoke-static {v4, v5}, Lcom/android/settings/location/SatelliteView;->access$002(Lcom/android/settings/location/SatelliteView;I)I
+    # setter for: Lcom/android/settings_ex/location/SatelliteView;->ttff:I
+    invoke-static {v4, v5}, Lcom/android/settings_ex/location/SatelliteView;->access$002(Lcom/android/settings_ex/location/SatelliteView;I)I
 
     goto :goto_0
 
@@ -98,9 +98,9 @@
     if-ne v4, p1, :cond_0
 
     .line 360
-    iget-object v4, p0, Lcom/android/settings/location/SatelliteView$2;->this$0:Lcom/android/settings/location/SatelliteView;
+    iget-object v4, p0, Lcom/android/settings_ex/location/SatelliteView$2;->this$0:Lcom/android/settings_ex/location/SatelliteView;
 
-    iget-object v4, v4, Lcom/android/settings/location/SatelliteView;->mLocationManager:Landroid/location/LocationManager;
+    iget-object v4, v4, Lcom/android/settings_ex/location/SatelliteView;->mLocationManager:Landroid/location/LocationManager;
 
     if-nez v4, :cond_3
 
@@ -115,9 +115,9 @@
 
     .line 365
     :cond_3
-    iget-object v4, p0, Lcom/android/settings/location/SatelliteView$2;->this$0:Lcom/android/settings/location/SatelliteView;
+    iget-object v4, p0, Lcom/android/settings_ex/location/SatelliteView$2;->this$0:Lcom/android/settings_ex/location/SatelliteView;
 
-    iget-object v4, v4, Lcom/android/settings/location/SatelliteView;->mLocationManager:Landroid/location/LocationManager;
+    iget-object v4, v4, Lcom/android/settings_ex/location/SatelliteView;->mLocationManager:Landroid/location/LocationManager;
 
     invoke-virtual {v4, v5}, Landroid/location/LocationManager;->getGpsStatus(Landroid/location/GpsStatus;)Landroid/location/GpsStatus;
 
@@ -135,11 +135,11 @@
 
     .line 368
     .local v1, "list":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/location/GpsSatellite;>;"
-    iget-object v4, p0, Lcom/android/settings/location/SatelliteView$2;->this$0:Lcom/android/settings/location/SatelliteView;
+    iget-object v4, p0, Lcom/android/settings_ex/location/SatelliteView$2;->this$0:Lcom/android/settings_ex/location/SatelliteView;
 
     const/4 v5, 0x0
 
-    iput v5, v4, Lcom/android/settings/location/SatelliteView;->sv_list_mask:I
+    iput v5, v4, Lcom/android/settings_ex/location/SatelliteView;->sv_list_mask:I
 
     .line 370
     :cond_4
@@ -165,8 +165,8 @@
 
     .line 374
     .local v2, "prn":I
-    # getter for: Lcom/android/settings/location/SatelliteView;->DEBUG:Ljava/lang/Boolean;
-    invoke-static {}, Lcom/android/settings/location/SatelliteView;->access$100()Ljava/lang/Boolean;
+    # getter for: Lcom/android/settings_ex/location/SatelliteView;->DEBUG:Ljava/lang/Boolean;
+    invoke-static {}, Lcom/android/settings_ex/location/SatelliteView;->access$100()Ljava/lang/Boolean;
 
     move-result-object v4
 
@@ -206,18 +206,18 @@
     if-gt v2, v4, :cond_4
 
     .line 381
-    iget-object v4, p0, Lcom/android/settings/location/SatelliteView$2;->this$0:Lcom/android/settings/location/SatelliteView;
+    iget-object v4, p0, Lcom/android/settings_ex/location/SatelliteView$2;->this$0:Lcom/android/settings_ex/location/SatelliteView;
 
-    iget-object v4, v4, Lcom/android/settings/location/SatelliteView;->sv_list:[Landroid/location/GpsSatellite;
+    iget-object v4, v4, Lcom/android/settings_ex/location/SatelliteView;->sv_list:[Landroid/location/GpsSatellite;
 
     add-int/lit8 v5, v2, -0x1
 
     aput-object v3, v4, v5
 
     .line 382
-    iget-object v4, p0, Lcom/android/settings/location/SatelliteView$2;->this$0:Lcom/android/settings/location/SatelliteView;
+    iget-object v4, p0, Lcom/android/settings_ex/location/SatelliteView$2;->this$0:Lcom/android/settings_ex/location/SatelliteView;
 
-    iget v5, v4, Lcom/android/settings/location/SatelliteView;->sv_list_mask:I
+    iget v5, v4, Lcom/android/settings_ex/location/SatelliteView;->sv_list_mask:I
 
     const/4 v6, 0x1
 
@@ -227,7 +227,7 @@
 
     or-int/2addr v5, v6
 
-    iput v5, v4, Lcom/android/settings/location/SatelliteView;->sv_list_mask:I
+    iput v5, v4, Lcom/android/settings_ex/location/SatelliteView;->sv_list_mask:I
 
     goto :goto_1
 
@@ -235,9 +235,9 @@
     .end local v2    # "prn":I
     .end local v3    # "sat":Landroid/location/GpsSatellite;
     :cond_6
-    iget-object v4, p0, Lcom/android/settings/location/SatelliteView$2;->this$0:Lcom/android/settings/location/SatelliteView;
+    iget-object v4, p0, Lcom/android/settings_ex/location/SatelliteView$2;->this$0:Lcom/android/settings_ex/location/SatelliteView;
 
-    invoke-virtual {v4}, Lcom/android/settings/location/SatelliteView;->showSVStatus()V
+    invoke-virtual {v4}, Lcom/android/settings_ex/location/SatelliteView;->showSVStatus()V
 
     goto/16 :goto_0
 .end method

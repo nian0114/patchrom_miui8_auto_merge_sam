@@ -1,14 +1,14 @@
-.class Lcom/android/settings/AssistantMenuPreferenceFragment$3;
+.class Lcom/android/settings_ex/AssistantMenuPreferenceFragment$3;
 .super Ljava/lang/Object;
 .source "AssistantMenuPreferenceFragment.java"
 
 # interfaces
-.implements Lcom/android/settings/DropDownPreference$Callback;
+.implements Lcom/android/settings_ex/DropDownPreference$Callback;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/AssistantMenuPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/AssistantMenuPreferenceFragment;
+.field final synthetic this$0:Lcom/android/settings_ex/AssistantMenuPreferenceFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/AssistantMenuPreferenceFragment;)V
+.method constructor <init>(Lcom/android/settings_ex/AssistantMenuPreferenceFragment;)V
     .locals 0
 
     .prologue
     .line 215
-    iput-object p1, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$3;->this$0:Lcom/android/settings/AssistantMenuPreferenceFragment;
+    iput-object p1, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$3;->this$0:Lcom/android/settings_ex/AssistantMenuPreferenceFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -52,9 +52,9 @@
 
     .line 222
     .local v1, "value":I
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$3;->this$0:Lcom/android/settings/AssistantMenuPreferenceFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$3;->this$0:Lcom/android/settings_ex/AssistantMenuPreferenceFragment;
 
-    invoke-virtual {v2}, Lcom/android/settings/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v2}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -74,10 +74,10 @@
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 226
-    iget-object v2, p0, Lcom/android/settings/AssistantMenuPreferenceFragment$3;->this$0:Lcom/android/settings/AssistantMenuPreferenceFragment;
+    iget-object v2, p0, Lcom/android/settings_ex/AssistantMenuPreferenceFragment$3;->this$0:Lcom/android/settings_ex/AssistantMenuPreferenceFragment;
 
-    # getter for: Lcom/android/settings/AssistantMenuPreferenceFragment;->mPreferenceFragmentActivity:Landroid/app/Activity;
-    invoke-static {v2}, Lcom/android/settings/AssistantMenuPreferenceFragment;->access$200(Lcom/android/settings/AssistantMenuPreferenceFragment;)Landroid/app/Activity;
+    # getter for: Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->mPreferenceFragmentActivity:Landroid/app/Activity;
+    invoke-static {v2}, Lcom/android/settings_ex/AssistantMenuPreferenceFragment;->access$200(Lcom/android/settings_ex/AssistantMenuPreferenceFragment;)Landroid/app/Activity;
 
     move-result-object v2
 

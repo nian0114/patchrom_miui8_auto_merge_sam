@@ -1,4 +1,4 @@
-.class Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog$2;
+.class Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog$2;
 .super Ljava/lang/Object;
 .source "FingerprintDisclaimerDialog.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    value = Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;
+.field final synthetic this$0:Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;)V
+.method constructor <init>(Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;)V
     .locals 0
 
     .prologue
     .line 123
-    iput-object p1, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog$2;->this$0:Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog$2;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,23 +43,23 @@
 
     .prologue
     .line 127
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog$2;->this$0:Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog$2;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;
 
     const-string v1, "fingerprint_disclaimer_noti"
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->setPreferences(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->setPreferences(Ljava/lang/String;Z)V
 
     .line 128
-    iget-object v0, p0, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog$2;->this$0:Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog$2;->this$0:Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;
 
-    # getter for: Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->listener:Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog$FingerprintDisclaimerDialogListener;
-    invoke-static {v0}, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;->access$000(Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog;)Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog$FingerprintDisclaimerDialogListener;
+    # getter for: Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->listener:Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog$FingerprintDisclaimerDialogListener;
+    invoke-static {v0}, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;->access$000(Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog;)Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog$FingerprintDisclaimerDialogListener;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/android/settings/fingerprint/FingerprintDisclaimerDialog$FingerprintDisclaimerDialogListener;->startDisclaimerFromRegister()V
+    invoke-interface {v0}, Lcom/android/settings_ex/fingerprint/FingerprintDisclaimerDialog$FingerprintDisclaimerDialogListener;->startDisclaimerFromRegister()V
 
     .line 129
     return-void

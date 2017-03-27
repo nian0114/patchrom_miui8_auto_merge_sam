@@ -1,10 +1,10 @@
-.class public Lcom/android/settings/widget/LinkTextView;
+.class public Lcom/android/settings_ex/widget/LinkTextView;
 .super Landroid/widget/TextView;
 .source "LinkTextView.java"
 
 
 # instance fields
-.field private mAccessibilityHelper:Lcom/android/settings/widget/LinkAccessibilityHelper;
+.field private mAccessibilityHelper:Lcom/android/settings_ex/widget/LinkAccessibilityHelper;
 
 
 # direct methods
@@ -16,7 +16,7 @@
     .line 33
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lcom/android/settings/widget/LinkTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, v0}, Lcom/android/settings_ex/widget/LinkTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 34
     return-void
@@ -32,16 +32,16 @@
     invoke-direct {p0, p1, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 38
-    new-instance v0, Lcom/android/settings/widget/LinkAccessibilityHelper;
+    new-instance v0, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/widget/LinkAccessibilityHelper;-><init>(Landroid/widget/TextView;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;-><init>(Landroid/widget/TextView;)V
 
-    iput-object v0, p0, Lcom/android/settings/widget/LinkTextView;->mAccessibilityHelper:Lcom/android/settings/widget/LinkAccessibilityHelper;
+    iput-object v0, p0, Lcom/android/settings_ex/widget/LinkTextView;->mAccessibilityHelper:Lcom/android/settings_ex/widget/LinkAccessibilityHelper;
 
     .line 39
-    iget-object v0, p0, Lcom/android/settings/widget/LinkTextView;->mAccessibilityHelper:Lcom/android/settings/widget/LinkAccessibilityHelper;
+    iget-object v0, p0, Lcom/android/settings_ex/widget/LinkTextView;->mAccessibilityHelper:Lcom/android/settings_ex/widget/LinkAccessibilityHelper;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/widget/LinkTextView;->setAccessibilityDelegate(Landroid/view/View$AccessibilityDelegate;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/widget/LinkTextView;->setAccessibilityDelegate(Landroid/view/View$AccessibilityDelegate;)V
 
     .line 40
     return-void
@@ -55,9 +55,9 @@
 
     .prologue
     .line 44
-    iget-object v0, p0, Lcom/android/settings/widget/LinkTextView;->mAccessibilityHelper:Lcom/android/settings/widget/LinkAccessibilityHelper;
+    iget-object v0, p0, Lcom/android/settings_ex/widget/LinkTextView;->mAccessibilityHelper:Lcom/android/settings_ex/widget/LinkAccessibilityHelper;
 
-    invoke-virtual {v0, p1}, Lcom/android/settings/widget/LinkAccessibilityHelper;->dispatchHoverEvent(Landroid/view/MotionEvent;)Z
+    invoke-virtual {v0, p1}, Lcom/android/settings_ex/widget/LinkAccessibilityHelper;->dispatchHoverEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 

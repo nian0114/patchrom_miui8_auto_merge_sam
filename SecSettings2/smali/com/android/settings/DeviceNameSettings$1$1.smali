@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DeviceNameSettings$1$1;
+.class Lcom/android/settings_ex/DeviceNameSettings$1$1;
 .super Ljava/lang/Object;
 .source "DeviceNameSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DeviceNameSettings$1;->onTextChanged(Ljava/lang/CharSequence;III)V
+    value = Lcom/android/settings_ex/DeviceNameSettings$1;->onTextChanged(Ljava/lang/CharSequence;III)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/settings/DeviceNameSettings$1;
+.field final synthetic this$1:Lcom/android/settings_ex/DeviceNameSettings$1;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DeviceNameSettings$1;)V
+.method constructor <init>(Lcom/android/settings_ex/DeviceNameSettings$1;)V
     .locals 0
 
     .prologue
     .line 120
-    iput-object p1, p0, Lcom/android/settings/DeviceNameSettings$1$1;->this$1:Lcom/android/settings/DeviceNameSettings$1;
+    iput-object p1, p0, Lcom/android/settings_ex/DeviceNameSettings$1$1;->this$1:Lcom/android/settings_ex/DeviceNameSettings$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,12 +41,12 @@
 
     .prologue
     .line 123
-    iget-object v0, p0, Lcom/android/settings/DeviceNameSettings$1$1;->this$1:Lcom/android/settings/DeviceNameSettings$1;
+    iget-object v0, p0, Lcom/android/settings_ex/DeviceNameSettings$1$1;->this$1:Lcom/android/settings_ex/DeviceNameSettings$1;
 
-    iget-object v0, v0, Lcom/android/settings/DeviceNameSettings$1;->this$0:Lcom/android/settings/DeviceNameSettings;
+    iget-object v0, v0, Lcom/android/settings_ex/DeviceNameSettings$1;->this$0:Lcom/android/settings_ex/DeviceNameSettings;
 
-    # getter for: Lcom/android/settings/DeviceNameSettings;->mDeviceNameScrollView:Landroid/widget/ScrollView;
-    invoke-static {v0}, Lcom/android/settings/DeviceNameSettings;->access$500(Lcom/android/settings/DeviceNameSettings;)Landroid/widget/ScrollView;
+    # getter for: Lcom/android/settings_ex/DeviceNameSettings;->mDeviceNameScrollView:Landroid/widget/ScrollView;
+    invoke-static {v0}, Lcom/android/settings_ex/DeviceNameSettings;->access$500(Lcom/android/settings_ex/DeviceNameSettings;)Landroid/widget/ScrollView;
 
     move-result-object v0
 

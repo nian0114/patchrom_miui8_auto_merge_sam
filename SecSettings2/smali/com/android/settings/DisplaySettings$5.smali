@@ -1,11 +1,11 @@
-.class Lcom/android/settings/DisplaySettings$5;
+.class Lcom/android/settings_ex/DisplaySettings$5;
 .super Landroid/database/ContentObserver;
 .source "DisplaySettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DisplaySettings;
+    value = Lcom/android/settings_ex/DisplaySettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DisplaySettings;
+.field final synthetic this$0:Lcom/android/settings_ex/DisplaySettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DisplaySettings;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/DisplaySettings;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 291
-    iput-object p1, p0, Lcom/android/settings/DisplaySettings$5;->this$0:Lcom/android/settings/DisplaySettings;
+    iput-object p1, p0, Lcom/android/settings_ex/DisplaySettings$5;->this$0:Lcom/android/settings_ex/DisplaySettings;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -40,18 +40,18 @@
 
     .prologue
     .line 294
-    iget-object v1, p0, Lcom/android/settings/DisplaySettings$5;->this$0:Lcom/android/settings/DisplaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/DisplaySettings$5;->this$0:Lcom/android/settings_ex/DisplaySettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/DisplaySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v1}, Lcom/android/settings_ex/DisplaySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     .line 295
     .local v0, "resolver":Landroid/content/ContentResolver;
-    iget-object v1, p0, Lcom/android/settings/DisplaySettings$5;->this$0:Lcom/android/settings/DisplaySettings;
+    iget-object v1, p0, Lcom/android/settings_ex/DisplaySettings$5;->this$0:Lcom/android/settings_ex/DisplaySettings;
 
-    # getter for: Lcom/android/settings/DisplaySettings;->mScreenTimeoutPreference:Lcom/android/settings/SettingsListPreference;
-    invoke-static {v1}, Lcom/android/settings/DisplaySettings;->access$400(Lcom/android/settings/DisplaySettings;)Lcom/android/settings/SettingsListPreference;
+    # getter for: Lcom/android/settings_ex/DisplaySettings;->mScreenTimeoutPreference:Lcom/android/settings_ex/SettingsListPreference;
+    invoke-static {v1}, Lcom/android/settings_ex/DisplaySettings;->access$400(Lcom/android/settings_ex/DisplaySettings;)Lcom/android/settings_ex/SettingsListPreference;
 
     move-result-object v1
 
@@ -67,7 +67,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/SettingsListPreference;->setValue(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lcom/android/settings_ex/SettingsListPreference;->setValue(Ljava/lang/String;)V
 
     .line 296
     return-void

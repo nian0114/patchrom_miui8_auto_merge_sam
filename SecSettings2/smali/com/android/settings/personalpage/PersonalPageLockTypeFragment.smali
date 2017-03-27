@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "PersonalPageLockTypeFragment.java"
 
 # interfaces
@@ -15,7 +15,7 @@
 
 .field private mHandler:Landroid/os/Handler;
 
-.field private mInlineHelp:Lcom/android/settings/UnclickablePreference;
+.field private mInlineHelp:Lcom/android/settings_ex/UnclickablePreference;
 
 .field private mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
@@ -36,12 +36,12 @@
 
     .prologue
     .line 45
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 85
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->fromBackupKey:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->fromBackupKey:Z
 
     return-void
 .end method
@@ -62,7 +62,7 @@
     .line 268
     const-string v7, "device_policy"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -95,11 +95,11 @@
 
     invoke-direct {v7}, Landroid/content/Intent;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
-    const-class v9, Lcom/android/settings/ChooseLockPassword;
+    const-class v9, Lcom/android/settings_ex/ChooseLockPassword;
 
     invoke-virtual {v7, v8, v9}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
@@ -147,7 +147,7 @@
     const/4 v5, 0x3
 
     :goto_1
-    invoke-virtual {p0, v1, v5}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v1, v5}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->startActivityForResult(Landroid/content/Intent;I)V
 
     .line 286
     return-void
@@ -167,48 +167,48 @@
     goto :goto_1
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;)Landroid/os/Handler;
+.method static synthetic access$000(Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic access$002(Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;Landroid/os/Handler;)Landroid/os/Handler;
+.method static synthetic access$002(Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;Landroid/os/Handler;)Landroid/os/Handler;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;
     .param p1, "x1"    # Landroid/os/Handler;
 
     .prologue
     .line 45
-    iput-object p1, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mHandler:Landroid/os/Handler;
+    iput-object p1, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mHandler:Landroid/os/Handler;
 
     return-object p1
 .end method
 
-.method static synthetic access$102(Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;Z)Z
+.method static synthetic access$102(Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;
     .param p1, "x1"    # Z
 
     .prologue
     .line 45
-    iput-boolean p1, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->fromBackupKey:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->fromBackupKey:Z
 
     return p1
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;)V
+.method static synthetic access$200(Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;
+    .param p0, "x0"    # Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;
 
     .prologue
     .line 45
-    invoke-direct {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->verifySecuredLock()V
+    invoke-direct {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->verifySecuredLock()V
 
     return-void
 .end method
@@ -231,7 +231,7 @@
 
     .line 206
     .local v1, "bundle":Landroid/os/Bundle;
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
@@ -257,7 +257,7 @@
     .line 228
     :cond_0
     :goto_0
-    invoke-direct {p0, v1}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->identifyFinger(Landroid/os/Bundle;)I
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->identifyFinger(Landroid/os/Bundle;)I
 
     move-result v2
 
@@ -276,7 +276,7 @@
     :pswitch_0
     const-string v5, "button_name"
 
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -286,7 +286,7 @@
 
     new-array v7, v4, [Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -314,7 +314,7 @@
     :pswitch_1
     const-string v5, "button_name"
 
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -324,7 +324,7 @@
 
     new-array v7, v4, [Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -352,7 +352,7 @@
     :pswitch_2
     const-string v5, "button_name"
 
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -362,7 +362,7 @@
 
     new-array v7, v4, [Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -418,11 +418,11 @@
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
-    const-class v5, Lcom/android/settings/ConfirmLockPassword;
+    const-class v5, Lcom/android/settings_ex/ConfirmLockPassword;
 
     invoke-virtual {v3, v4, v5}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
@@ -449,7 +449,7 @@
     invoke-virtual {v0, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 261
-    invoke-virtual {p0, v0, p3}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v0, p3}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->startActivityForResult(Landroid/content/Intent;I)V
 
     .line 262
     return v2
@@ -470,7 +470,7 @@
     const/4 v1, 0x1
 
     .line 238
-    iget-object v2, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v2, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     sget-object v3, Lcom/android/internal/widget/LockPatternUtils$SecPrivateMode;->Pattern:Lcom/android/internal/widget/LockPatternUtils$SecPrivateMode;
 
@@ -497,11 +497,11 @@
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    const-class v4, Lcom/android/settings/ConfirmLockPattern;
+    const-class v4, Lcom/android/settings_ex/ConfirmLockPattern;
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
@@ -514,7 +514,7 @@
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 247
-    invoke-virtual {p0, v0, p1}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v0, p1}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->startActivityForResult(Landroid/content/Intent;I)V
 
     goto :goto_0
 .end method
@@ -525,15 +525,15 @@
 
     .prologue
     .line 413
-    iget-object v1, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mFingerprintManager:Lcom/samsung/android/fingerprint/FingerprintManager;
+    iget-object v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mFingerprintManager:Lcom/samsung/android/fingerprint/FingerprintManager;
 
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    new-instance v3, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment$2;
+    new-instance v3, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment$2;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment$2;-><init>(Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment$2;-><init>(Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;)V
 
     invoke-virtual {v1, v2, v3, p1}, Lcom/samsung/android/fingerprint/FingerprintManager;->identifyWithDialog(Landroid/content/Context;Lcom/samsung/android/fingerprint/IFingerprintClient;Landroid/os/Bundle;)I
 
@@ -550,7 +550,7 @@
 
     .prologue
     .line 484
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -571,12 +571,12 @@
 
     .line 521
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, p1}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 522
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -665,7 +665,7 @@
     const/16 v3, 0xb
 
     .line 169
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -685,25 +685,25 @@
 
     .line 174
     :pswitch_0
-    invoke-direct {p0, v3}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->confirmPattern(I)Z
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->confirmPattern(I)Z
 
     goto :goto_0
 
     .line 177
     :pswitch_1
-    invoke-direct {p0, v0, v5, v3}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->confirmPassword(III)Z
+    invoke-direct {p0, v0, v5, v3}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->confirmPassword(III)Z
 
     goto :goto_0
 
     .line 180
     :pswitch_2
-    invoke-direct {p0, v0, v6, v3}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->confirmPassword(III)Z
+    invoke-direct {p0, v0, v6, v3}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->confirmPassword(III)Z
 
     goto :goto_0
 
     .line 186
     :pswitch_3
-    iget-object v1, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mFingerprintManager:Lcom/samsung/android/fingerprint/FingerprintManager;
+    iget-object v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mFingerprintManager:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     invoke-virtual {v1}, Lcom/samsung/android/fingerprint/FingerprintManager;->getEnrolledFingers()I
 
@@ -711,17 +711,17 @@
 
     if-eqz v1, :cond_1
 
-    iget-boolean v1, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->fromBackupKey:Z
+    iget-boolean v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->fromBackupKey:Z
 
     if-nez v1, :cond_1
 
     .line 187
-    invoke-direct {p0, v3}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->confirmFingerprintPassword(I)Z
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->confirmFingerprintPassword(I)Z
 
     .line 197
     :cond_0
     :goto_1
-    iput-boolean v4, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->fromBackupKey:Z
+    iput-boolean v4, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->fromBackupKey:Z
 
     goto :goto_0
 
@@ -732,7 +732,7 @@
     if-ne v0, v1, :cond_2
 
     .line 190
-    invoke-direct {p0, v3}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->confirmPattern(I)Z
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->confirmPattern(I)Z
 
     goto :goto_1
 
@@ -743,7 +743,7 @@
     if-ne v0, v1, :cond_3
 
     .line 192
-    invoke-direct {p0, v0, v5, v3}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->confirmPassword(III)Z
+    invoke-direct {p0, v0, v5, v3}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->confirmPassword(III)Z
 
     goto :goto_1
 
@@ -754,7 +754,7 @@
     if-ne v0, v1, :cond_0
 
     .line 194
-    invoke-direct {p0, v0, v6, v3}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->confirmPassword(III)Z
+    invoke-direct {p0, v0, v6, v3}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->confirmPassword(III)Z
 
     goto :goto_1
 
@@ -794,90 +794,90 @@
     .line 140
     const-string v2, "personalpage_inline_help"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/settings/UnclickablePreference;
+    check-cast v2, Lcom/android/settings_ex/UnclickablePreference;
 
-    iput-object v2, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mInlineHelp:Lcom/android/settings/UnclickablePreference;
+    iput-object v2, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mInlineHelp:Lcom/android/settings_ex/UnclickablePreference;
 
     .line 141
     const-string v2, "locktype_category"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockTypeCategory:Landroid/preference/Preference;
+    iput-object v2, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockTypeCategory:Landroid/preference/Preference;
 
     .line 142
     const-string v2, "personalpage_locktype_pattern"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockTypePattern:Landroid/preference/Preference;
+    iput-object v2, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockTypePattern:Landroid/preference/Preference;
 
     .line 143
     const-string v2, "personalpage_locktype_pin"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockTypePin:Landroid/preference/Preference;
+    iput-object v2, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockTypePin:Landroid/preference/Preference;
 
     .line 144
     const-string v2, "personalpage_locktype_password"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockTypePassword:Landroid/preference/Preference;
+    iput-object v2, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockTypePassword:Landroid/preference/Preference;
 
     .line 145
     const-string v2, "peraonlpage_finger_category"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
     check-cast v2, Landroid/preference/PreferenceCategory;
 
-    iput-object v2, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mFingerCategory:Landroid/preference/PreferenceCategory;
+    iput-object v2, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mFingerCategory:Landroid/preference/PreferenceCategory;
 
     .line 146
     const-string v2, "personalpage_locktype_fingerprint"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v2
 
     check-cast v2, Landroid/preference/SwitchPreference;
 
-    iput-object v2, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
+    iput-object v2, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
 
     .line 148
-    iget-object v2, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v2, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 150
-    iget-object v2, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mInlineHelp:Lcom/android/settings/UnclickablePreference;
+    iget-object v2, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mInlineHelp:Lcom/android/settings_ex/UnclickablePreference;
 
     const v3, 0x7f0e11d3
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/UnclickablePreference;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v2, v3}, Lcom/android/settings_ex/UnclickablePreference;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 152
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -896,50 +896,50 @@
     if-eq v1, v2, :cond_1
 
     .line 156
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mInlineHelp:Lcom/android/settings/UnclickablePreference;
+    iget-object v3, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mInlineHelp:Lcom/android/settings_ex/UnclickablePreference;
 
     invoke-virtual {v2, v3}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 157
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockTypeCategory:Landroid/preference/Preference;
+    iget-object v3, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockTypeCategory:Landroid/preference/Preference;
 
     invoke-virtual {v2, v3}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 162
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->hasFingerprintFeature(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->hasFingerprintFeature(Landroid/content/Context;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
     .line 163
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mFingerCategory:Landroid/preference/PreferenceCategory;
+    iget-object v3, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mFingerCategory:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v2, v3}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 164
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v2, v3}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
@@ -949,7 +949,7 @@
 
     .line 159
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v2, v4}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
@@ -1001,19 +1001,19 @@
     invoke-static {v3, v4}, Landroid/util/secutil/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 321
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/settings/SettingsActivity;
+    check-cast v1, Lcom/android/settings_ex/SettingsActivity;
 
     .line 322
-    .local v1, "SettingsActivity":Lcom/android/settings/SettingsActivity;
+    .local v1, "SettingsActivity":Lcom/android/settings_ex/SettingsActivity;
     const/4 v2, 0x0
 
     .line 324
     .local v2, "bSuccess":I
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -1041,7 +1041,7 @@
     if-lt v0, v7, :cond_1
 
     .line 333
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -1057,13 +1057,13 @@
 
     .line 340
     :cond_0
-    invoke-virtual {v1, p0, v2, v6}, Lcom/android/settings/SettingsActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
+    invoke-virtual {v1, p0, v2, v6}, Lcom/android/settings_ex/SettingsActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
 
     goto :goto_0
 
     .line 335
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -1081,7 +1081,7 @@
     if-lt v0, v7, :cond_4
 
     .line 347
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1102,7 +1102,7 @@
 
     .line 355
     :cond_2
-    invoke-virtual {v1, p0, v2, v6}, Lcom/android/settings/SettingsActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
+    invoke-virtual {v1, p0, v2, v6}, Lcom/android/settings_ex/SettingsActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
 
     goto :goto_0
 
@@ -1114,7 +1114,7 @@
 
     .line 350
     :cond_4
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -1133,13 +1133,13 @@
     .line 361
     const/4 v3, 0x1
 
-    invoke-direct {p0, v3}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->switchChangedFingerprint(Z)V
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->switchChangedFingerprint(Z)V
 
     goto :goto_0
 
     .line 364
     :cond_5
-    invoke-virtual {v1, p0, v2, v6}, Lcom/android/settings/SettingsActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
+    invoke-virtual {v1, p0, v2, v6}, Lcom/android/settings_ex/SettingsActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
 
     goto :goto_0
 
@@ -1168,7 +1168,7 @@
     const/4 v2, -0x1
 
     .line 375
-    invoke-virtual {v1, p0, v2, v6}, Lcom/android/settings/SettingsActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
+    invoke-virtual {v1, p0, v2, v6}, Lcom/android/settings_ex/SettingsActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
 
     goto :goto_0
 
@@ -1204,7 +1204,7 @@
 
     .line 386
     :cond_7
-    invoke-virtual {v1, p0, v2, v6}, Lcom/android/settings/SettingsActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
+    invoke-virtual {v1, p0, v2, v6}, Lcom/android/settings_ex/SettingsActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
 
     goto/16 :goto_0
 
@@ -1226,21 +1226,21 @@
 
     .prologue
     .line 89
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 90
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object v0, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 91
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1250,10 +1250,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mFingerprintManager:Lcom/samsung/android/fingerprint/FingerprintManager;
+    iput-object v0, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mFingerprintManager:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     .line 92
-    invoke-direct {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->verifySecuredLock()V
+    invoke-direct {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->verifySecuredLock()V
 
     .line 93
     return-void
@@ -1279,10 +1279,10 @@
     .local v0, "view":Landroid/view/View;
     const v1, 0x7f080089
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->addPreferencesFromResource(I)V
 
     .line 99
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -1295,7 +1295,7 @@
     invoke-virtual {v1, v2}, Landroid/app/ActionBar;->setTitle(I)V
 
     .line 100
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->initPref()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->initPref()V
 
     .line 101
     return-object v0
@@ -1313,7 +1313,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 129
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 130
     return-void
@@ -1326,7 +1326,7 @@
 
     .prologue
     .line 294
-    iget-object v0, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
 
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1342,7 +1342,7 @@
 
     move-result v0
 
-    invoke-direct {p0, v0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->switchChangedFingerprint(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->switchChangedFingerprint(Z)V
 
     .line 297
     :cond_0
@@ -1358,7 +1358,7 @@
 
     .prologue
     .line 304
-    iget-object v1, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockTypePattern:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockTypePattern:Landroid/preference/Preference;
 
     invoke-virtual {p2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1369,11 +1369,11 @@
     .line 305
     new-instance v0, Landroid/content/Intent;
 
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    const-class v2, Lcom/android/settings/ChooseLockPattern;
+    const-class v2, Lcom/android/settings_ex/ChooseLockPattern;
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
@@ -1395,13 +1395,13 @@
     .line 308
     const/4 v1, 0x2
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->startActivityForResult(Landroid/content/Intent;I)V
 
     .line 315
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
     :goto_0
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v1
 
@@ -1409,7 +1409,7 @@
 
     .line 309
     :cond_1
-    iget-object v1, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockTypePin:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockTypePin:Landroid/preference/Preference;
 
     invoke-virtual {p2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1420,13 +1420,13 @@
     .line 310
     const/high16 v1, 0x20000
 
-    invoke-direct {p0, v1}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->StartChooseLockPassword(I)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->StartChooseLockPassword(I)V
 
     goto :goto_0
 
     .line 311
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockTypePassword:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockTypePassword:Landroid/preference/Preference;
 
     invoke-virtual {p2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1437,7 +1437,7 @@
     .line 312
     const/high16 v1, 0x40000
 
-    invoke-direct {p0, v1}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->StartChooseLockPassword(I)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->StartChooseLockPassword(I)V
 
     goto :goto_0
 .end method
@@ -1460,7 +1460,7 @@
     invoke-static {v1, v2}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 107
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -1479,17 +1479,17 @@
     if-ge v0, v1, :cond_1
 
     .line 110
-    iget-object v1, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v4}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 119
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mFingerprintManager:Lcom/samsung/android/fingerprint/FingerprintManager;
+    iget-object v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mFingerprintManager:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mFingerprintManager:Lcom/samsung/android/fingerprint/FingerprintManager;
+    iget-object v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mFingerprintManager:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     invoke-virtual {v1}, Lcom/samsung/android/fingerprint/FingerprintManager;->getEnrolledFingers()I
 
@@ -1498,20 +1498,20 @@
     if-nez v1, :cond_0
 
     .line 120
-    iget-object v1, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
 
     const v2, 0x7f0e11e1
 
     invoke-virtual {v1, v2}, Landroid/preference/SwitchPreference;->setSummary(I)V
 
     .line 121
-    iget-object v1, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v3}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 123
     :cond_0
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 124
     return-void
@@ -1521,7 +1521,7 @@
     if-nez v0, :cond_2
 
     .line 112
-    iget-object v1, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v3}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
@@ -1532,12 +1532,12 @@
     if-ne v0, v5, :cond_3
 
     .line 114
-    iget-object v1, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v4}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 115
-    iget-object v1, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v3}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
@@ -1545,7 +1545,7 @@
 
     .line 117
     :cond_3
-    iget-object v1, p0, Lcom/android/settings/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/personalpage/PersonalPageLockTypeFragment;->mLockTypeFinger:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v3}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
@@ -1557,7 +1557,7 @@
 
     .prologue
     .line 134
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onStop()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onStop()V
 
     .line 135
     const-string v0, "PersonalPageLockTypeFragment"

@@ -1,4 +1,4 @@
-.class final Lcom/android/settings/MasterClear$4;
+.class final Lcom/android/settings_ex/MasterClear$4;
 .super Ljava/lang/Object;
 .source "MasterClear.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/MasterClear;
+    value = Lcom/android/settings_ex/MasterClear;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -87,7 +87,7 @@
     check-cast p2, Landroid/widget/TextView;
 
     .end local p2    # "x1":Ljava/lang/Object;
-    invoke-virtual {p0, p1, p2}, Lcom/android/settings/MasterClear$4;->compare(Landroid/widget/TextView;Landroid/widget/TextView;)I
+    invoke-virtual {p0, p1, p2}, Lcom/android/settings_ex/MasterClear$4;->compare(Landroid/widget/TextView;Landroid/widget/TextView;)I
 
     move-result v0
 

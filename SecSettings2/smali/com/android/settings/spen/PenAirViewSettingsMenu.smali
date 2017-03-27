@@ -1,9 +1,9 @@
-.class public Lcom/android/settings/spen/PenAirViewSettingsMenu;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "PenAirViewSettingsMenu.java"
 
 # interfaces
-.implements Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;
+.implements Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;
 
 
 # static fields
@@ -21,13 +21,13 @@
 
 .field private mPointArea:Landroid/widget/LinearLayout;
 
-.field private mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+.field private mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
 .field private mTalkbackDisableDialog:Landroid/app/AlertDialog;
 
-.field private mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+.field private mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-.field private mViewPagerAdapter:Lcom/android/settings/spen/PenAirViewPagerAdapter;
+.field private mViewPagerAdapter:Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;
 
 
 # direct methods
@@ -38,30 +38,30 @@
     const/4 v0, 0x0
 
     .line 59
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 75
-    iput-object v0, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mAirViewDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mAirViewDialog:Landroid/app/AlertDialog;
 
     .line 76
-    iput-object v0, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
 
     .line 83
-    iput-object v0, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 86
-    iput-object v0, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->guideView:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->guideView:Landroid/view/View;
 
     .line 93
-    new-instance v0, Lcom/android/settings/spen/PenAirViewSettingsMenu$1;
+    new-instance v0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu$1;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/spen/PenAirViewSettingsMenu$1;-><init>(Lcom/android/settings/spen/PenAirViewSettingsMenu;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu$1;-><init>(Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mAirViewObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mAirViewObserver:Landroid/database/ContentObserver;
 
     return-void
 .end method
@@ -71,66 +71,66 @@
 
     .prologue
     .line 59
-    sget-object v0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mActivity:Landroid/app/Activity;
+    sget-object v0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mActivity:Landroid/app/Activity;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/spen/PenAirViewSettingsMenu;)Lcom/android/settings/widget/SwitchBar;
+.method static synthetic access$100(Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;)Lcom/android/settings_ex/widget/SwitchBar;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/spen/PenAirViewSettingsMenu;
+    .param p0, "x0"    # Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;
 
     .prologue
     .line 59
-    iget-object v0, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/settings/spen/PenAirViewSettingsMenu;)Lcom/android/settings/WrapContentHeightViewPager;
+.method static synthetic access$200(Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;)Lcom/android/settings_ex/WrapContentHeightViewPager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/spen/PenAirViewSettingsMenu;
+    .param p0, "x0"    # Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;
 
     .prologue
     .line 59
-    iget-object v0, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/spen/PenAirViewSettingsMenu;)Landroid/content/ContentResolver;
+.method static synthetic access$300(Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/spen/PenAirViewSettingsMenu;
+    .param p0, "x0"    # Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;
 
     .prologue
     .line 59
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/spen/PenAirViewSettingsMenu;)Landroid/content/ContentResolver;
+.method static synthetic access$400(Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/spen/PenAirViewSettingsMenu;
+    .param p0, "x0"    # Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;
 
     .prologue
     .line 59
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/spen/PenAirViewSettingsMenu;)Landroid/content/ContentResolver;
+.method static synthetic access$500(Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;)Landroid/content/ContentResolver;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/spen/PenAirViewSettingsMenu;
+    .param p0, "x0"    # Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;
 
     .prologue
     .line 59
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -159,10 +159,10 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->guideView:Landroid/view/View;
+    iput-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->guideView:Landroid/view/View;
 
     .line 127
-    iget-object v4, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->guideView:Landroid/view/View;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->guideView:Landroid/view/View;
 
     const v5, 0x7f0d00cd
 
@@ -170,50 +170,50 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/WrapContentHeightViewPager;
+    check-cast v4, Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    iput-object v4, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iput-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
     .line 128
-    new-instance v4, Lcom/android/settings/spen/PenAirViewPagerAdapter;
+    new-instance v4, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;
 
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v5
 
-    invoke-direct {v4, v5}, Lcom/android/settings/spen/PenAirViewPagerAdapter;-><init>(Landroid/content/Context;)V
+    invoke-direct {v4, v5}, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;-><init>(Landroid/content/Context;)V
 
-    iput-object v4, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mViewPagerAdapter:Lcom/android/settings/spen/PenAirViewPagerAdapter;
+    iput-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mViewPagerAdapter:Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;
 
     .line 129
-    iget-object v4, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    iget-object v5, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mViewPagerAdapter:Lcom/android/settings/spen/PenAirViewPagerAdapter;
+    iget-object v5, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mViewPagerAdapter:Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;
 
-    invoke-virtual {v4, v5}, Lcom/android/settings/WrapContentHeightViewPager;->setAdapter(Landroid/support/v4/view/PagerAdapter;)V
+    invoke-virtual {v4, v5}, Lcom/android/settings_ex/WrapContentHeightViewPager;->setAdapter(Landroid/support/v4/view/PagerAdapter;)V
 
     .line 130
-    iget-object v4, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    iget-object v5, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mViewPagerAdapter:Lcom/android/settings/spen/PenAirViewPagerAdapter;
+    iget-object v5, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mViewPagerAdapter:Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;
 
-    invoke-virtual {v5}, Lcom/android/settings/spen/PenAirViewPagerAdapter;->getCount()I
+    invoke-virtual {v5}, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;->getCount()I
 
     move-result v5
 
-    invoke-virtual {v4, v5}, Lcom/android/settings/WrapContentHeightViewPager;->setOffscreenPageLimit(I)V
+    invoke-virtual {v4, v5}, Lcom/android/settings_ex/WrapContentHeightViewPager;->setOffscreenPageLimit(I)V
 
     .line 131
-    iget-object v4, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mViewPager:Lcom/android/settings/WrapContentHeightViewPager;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mViewPager:Lcom/android/settings_ex/WrapContentHeightViewPager;
 
-    new-instance v5, Lcom/android/settings/spen/PenAirViewSettingsMenu$2;
+    new-instance v5, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu$2;
 
-    invoke-direct {v5, p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu$2;-><init>(Lcom/android/settings/spen/PenAirViewSettingsMenu;)V
+    invoke-direct {v5, p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu$2;-><init>(Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;)V
 
-    invoke-virtual {v4, v5}, Lcom/android/settings/WrapContentHeightViewPager;->setOnPageChangeListener(Landroid/support/v4/view/ViewPager$OnPageChangeListener;)V
+    invoke-virtual {v4, v5}, Lcom/android/settings_ex/WrapContentHeightViewPager;->setOnPageChangeListener(Landroid/support/v4/view/ViewPager$OnPageChangeListener;)V
 
     .line 144
-    iget-object v4, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->guideView:Landroid/view/View;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->guideView:Landroid/view/View;
 
     const v5, 0x7f0d02ea
 
@@ -223,12 +223,12 @@
 
     check-cast v4, Landroid/widget/LinearLayout;
 
-    iput-object v4, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mPointArea:Landroid/widget/LinearLayout;
+    iput-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mPointArea:Landroid/widget/LinearLayout;
 
     .line 145
-    iget-object v4, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mViewPagerAdapter:Lcom/android/settings/spen/PenAirViewPagerAdapter;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mViewPagerAdapter:Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;
 
-    invoke-virtual {v4}, Lcom/android/settings/spen/PenAirViewPagerAdapter;->getCount()I
+    invoke-virtual {v4}, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;->getCount()I
 
     move-result v3
 
@@ -259,7 +259,7 @@
     .local v2, "point":Landroid/widget/ImageView;
     const v4, 0x7f0e1283
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -290,14 +290,14 @@
     invoke-virtual {v2, v4}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 151
-    new-instance v4, Lcom/android/settings/spen/PenAirViewSettingsMenu$3;
+    new-instance v4, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu$3;
 
-    invoke-direct {v4, p0, v0}, Lcom/android/settings/spen/PenAirViewSettingsMenu$3;-><init>(Lcom/android/settings/spen/PenAirViewSettingsMenu;I)V
+    invoke-direct {v4, p0, v0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu$3;-><init>(Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;I)V
 
     invoke-virtual {v2, v4}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 158
-    iget-object v4, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mPointArea:Landroid/widget/LinearLayout;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mPointArea:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
@@ -310,7 +310,7 @@
     .end local v0    # "current":I
     .end local v2    # "point":Landroid/widget/ImageView;
     :cond_1
-    iget-object v4, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mPointArea:Landroid/widget/LinearLayout;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mPointArea:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4}, Landroid/widget/LinearLayout;->getChildCount()I
 
@@ -319,7 +319,7 @@
     if-lez v4, :cond_2
 
     .line 162
-    iget-object v4, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mPointArea:Landroid/widget/LinearLayout;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mPointArea:Landroid/widget/LinearLayout;
 
     invoke-virtual {v4, v8}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
@@ -333,7 +333,7 @@
 
     .line 167
     :cond_2
-    iget-object v4, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->guideView:Landroid/view/View;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->guideView:Landroid/view/View;
 
     return-object v4
 .end method
@@ -343,19 +343,19 @@
 
     .prologue
     .line 320
-    iget-object v0, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
     .line 321
-    iget-object v0, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 322
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
 
     .line 324
     :cond_0
@@ -367,7 +367,7 @@
 
     .prologue
     .line 272
-    invoke-direct {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->dismissAllDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->dismissAllDialog()V
 
     .line 274
     new-instance v1, Ljava/lang/StringBuilder;
@@ -376,7 +376,7 @@
 
     const v2, 0x7f0e1285
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -396,13 +396,13 @@
 
     .line 276
     .local v0, "message":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     const-string v2, "com.samsung.android.app.talkback"
 
-    invoke-static {v1, v2}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -425,7 +425,7 @@
 
     const v2, 0x7f0e0a20
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -439,13 +439,13 @@
 
     .line 280
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     const-string v2, "com.google.android.marvin.talkback"
 
-    invoke-static {v1, v2}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -468,7 +468,7 @@
 
     const v2, 0x7f0e0a1f
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -498,7 +498,7 @@
 
     const v2, 0x7f0e0922
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -511,7 +511,7 @@
     move-result-object v0
 
     .line 284
-    sget-object v1, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mActivity:Landroid/app/Activity;
+    sget-object v1, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mActivity:Landroid/app/Activity;
 
     const-string v2, "com.sec.feature.overlaymagnifier"
 
@@ -538,7 +538,7 @@
 
     const v2, 0x7f0e0927
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -554,7 +554,7 @@
     :cond_2
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
-    sget-object v2, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mActivity:Landroid/app/Activity;
+    sget-object v2, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mActivity:Landroid/app/Activity;
 
     invoke-direct {v1, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -564,9 +564,9 @@
 
     const v2, 0x7f0e1282
 
-    new-instance v3, Lcom/android/settings/spen/PenAirViewSettingsMenu$5;
+    new-instance v3, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu$5;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu$5;-><init>(Lcom/android/settings/spen/PenAirViewSettingsMenu;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu$5;-><init>(Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;)V
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -574,9 +574,9 @@
 
     const/high16 v2, 0x1040000
 
-    new-instance v3, Lcom/android/settings/spen/PenAirViewSettingsMenu$4;
+    new-instance v3, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu$4;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu$4;-><init>(Lcom/android/settings/spen/PenAirViewSettingsMenu;)V
+    invoke-direct {v3, p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu$4;-><init>(Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;)V
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -586,19 +586,19 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
+    iput-object v1, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
 
     .line 309
-    iget-object v1, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
 
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
     .line 310
-    iget-object v1, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mTalkbackDisableDialog:Landroid/app/AlertDialog;
 
-    new-instance v2, Lcom/android/settings/spen/PenAirViewSettingsMenu$6;
+    new-instance v2, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu$6;
 
-    invoke-direct {v2, p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu$6;-><init>(Lcom/android/settings/spen/PenAirViewSettingsMenu;)V
+    invoke-direct {v2, p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu$6;-><init>(Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;)V
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
@@ -618,7 +618,7 @@
 
     .local v0, "i":I
     :goto_0
-    iget-object v1, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mPointArea:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mPointArea:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->getChildCount()I
 
@@ -627,7 +627,7 @@
     if-ge v0, v1, :cond_0
 
     .line 172
-    iget-object v1, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mPointArea:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mPointArea:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
@@ -646,7 +646,7 @@
 
     .line 174
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mPointArea:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mPointArea:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, p1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
@@ -678,27 +678,27 @@
 
     .prologue
     .line 113
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 114
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
     .line 115
-    .local v0, "activity":Lcom/android/settings/SettingsActivity;
-    invoke-virtual {v0}, Lcom/android/settings/SettingsActivity;->getSwitchBar()Lcom/android/settings/widget/SwitchBar;
+    .local v0, "activity":Lcom/android/settings_ex/SettingsActivity;
+    invoke-virtual {v0}, Lcom/android/settings_ex/SettingsActivity;->getSwitchBar()Lcom/android/settings_ex/widget/SwitchBar;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iput-object v1, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     .line 116
-    iget-object v1, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v1}, Lcom/android/settings/widget/SwitchBar;->show()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/widget/SwitchBar;->show()V
 
     .line 117
     return-void
@@ -710,10 +710,10 @@
 
     .prologue
     .line 180
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 181
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -723,13 +723,13 @@
 
     .line 182
     .local v0, "inflater":Landroid/view/LayoutInflater;
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getView()Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/view/ViewGroup;
 
-    invoke-direct {p0, v0, v1}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->createAirViewSetting(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-direct {p0, v0, v1}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->createAirViewSetting(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
 
     .line 183
     return-void
@@ -748,23 +748,23 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 106
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 107
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mActivity:Landroid/app/Activity;
+    sput-object v0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mActivity:Landroid/app/Activity;
 
     .line 108
-    sget-object v0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mActivity:Landroid/app/Activity;
+    sget-object v0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mContext:Landroid/content/Context;
 
     .line 109
     return-void
@@ -780,7 +780,7 @@
     .line 120
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->createAirViewSetting(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-direct {p0, p1, v0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->createAirViewSetting(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
@@ -792,12 +792,12 @@
 
     .prologue
     .line 215
-    iget-object v0, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0}, Lcom/android/settings/widget/SwitchBar;->hide()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/widget/SwitchBar;->hide()V
 
     .line 216
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroyView()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroyView()V
 
     .line 217
     return-void
@@ -815,26 +815,26 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 222
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 223
-    iget-object v0, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 224
-    iget-object v0, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v0, p0}, Lcom/android/settings_ex/widget/SwitchBar;->removeOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 225
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mAirViewObserver:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mAirViewObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
@@ -858,10 +858,10 @@
     invoke-static {v4, v5}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 188
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 190
-    sget-object v4, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mActivity:Landroid/app/Activity;
+    sget-object v4, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v4}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -880,23 +880,23 @@
     .line 192
     .local v0, "airViewState":Z
     :goto_0
-    iget-object v4, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v4, v0}, Lcom/android/settings/widget/SwitchBar;->setChecked(Z)V
+    invoke-virtual {v4, v0}, Lcom/android/settings_ex/widget/SwitchBar;->setChecked(Z)V
 
     .line 193
-    iget-object v4, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v4, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
+    invoke-virtual {v4, p0}, Lcom/android/settings_ex/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings_ex/widget/SwitchBar$OnSwitchChangeListener;)V
 
     .line 195
-    sget-object v4, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mActivity:Landroid/app/Activity;
+    sget-object v4, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mActivity:Landroid/app/Activity;
 
     const-string v5, "content://com.sec.knox.provider2/KioskMode"
 
     const-string v6, "isAirViewModeAllowed"
 
-    invoke-static {v4, v5, v6}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v5, v6}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
@@ -905,13 +905,13 @@
     if-nez v1, :cond_0
 
     .line 199
-    iget-object v4, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v4, v3}, Lcom/android/settings/widget/SwitchBar;->setEnabled(Z)V
+    invoke-virtual {v4, v3}, Lcom/android/settings_ex/widget/SwitchBar;->setEnabled(Z)V
 
     .line 202
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -921,7 +921,7 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mAirViewObserver:Landroid/database/ContentObserver;
+    iget-object v5, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mAirViewObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v3, v4, v2, v5}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -949,7 +949,7 @@
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 210
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onStop()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onStop()V
 
     .line 211
     return-void
@@ -966,9 +966,9 @@
     const/4 v3, 0x0
 
     .line 231
-    iget-object v4, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mSwitchBar:Lcom/android/settings_ex/widget/SwitchBar;
 
-    invoke-virtual {v4}, Lcom/android/settings/widget/SwitchBar;->getSwitch()Lcom/android/settings/widget/ToggleSwitch;
+    invoke-virtual {v4}, Lcom/android/settings_ex/widget/SwitchBar;->getSwitch()Lcom/android/settings_ex/widget/ToggleSwitch;
 
     move-result-object v4
 
@@ -992,7 +992,7 @@
 
     .line 237
     .local v1, "magnifier":Z
-    sget-object v4, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mActivity:Landroid/app/Activity;
+    sget-object v4, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mActivity:Landroid/app/Activity;
 
     const-string v5, "com.sec.feature.overlaymagnifier"
 
@@ -1003,7 +1003,7 @@
     if-eqz v4, :cond_2
 
     .line 238
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1020,15 +1020,15 @@
     .line 241
     :cond_2
     :goto_1
-    sget-object v4, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mActivity:Landroid/app/Activity;
+    sget-object v4, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mActivity:Landroid/app/Activity;
 
-    invoke-static {v4}, Lcom/android/settings/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/android/settings_ex/Utils;->isTalkBackEnabled(Landroid/content/Context;)Z
 
     move-result v4
 
     if-nez v4, :cond_3
 
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1046,7 +1046,7 @@
 
     .line 245
     :cond_3
-    invoke-direct {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->showTalkBackDisableDialog()V
+    invoke-direct {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->showTalkBackDisableDialog()V
 
     goto :goto_0
 
@@ -1058,7 +1058,7 @@
 
     .line 247
     :cond_5
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -1067,7 +1067,7 @@
     invoke-static {v3, v4, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 249
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -1076,7 +1076,7 @@
     invoke-static {v3, v4, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 250
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -1085,7 +1085,7 @@
     invoke-static {v3, v4, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 251
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -1094,7 +1094,7 @@
     invoke-static {v3, v4, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 252
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -1103,16 +1103,16 @@
     invoke-static {v3, v4, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 253
-    iget-object v3, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mContext:Landroid/content/Context;
 
-    invoke-static {v3}, Lcom/android/settings/Utils;->isSupportPenUsp10(Landroid/content/Context;)Z
+    invoke-static {v3}, Lcom/android/settings_ex/Utils;->isSupportPenUsp10(Landroid/content/Context;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
     .line 254
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -1126,7 +1126,7 @@
     .end local v0    # "hoverZoom":Z
     .end local v1    # "magnifier":Z
     :cond_6
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -1135,7 +1135,7 @@
     invoke-static {v2, v4, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 261
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -1144,7 +1144,7 @@
     invoke-static {v2, v4, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 262
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -1153,7 +1153,7 @@
     invoke-static {v2, v4, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 263
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -1162,7 +1162,7 @@
     invoke-static {v2, v4, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 264
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -1171,16 +1171,16 @@
     invoke-static {v2, v4, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 265
-    iget-object v2, p0, Lcom/android/settings/spen/PenAirViewSettingsMenu;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->mContext:Landroid/content/Context;
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isSupportPenUsp10(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isSupportPenUsp10(Landroid/content/Context;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
     .line 266
-    invoke-virtual {p0}, Lcom/android/settings/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/spen/PenAirViewSettingsMenu;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 

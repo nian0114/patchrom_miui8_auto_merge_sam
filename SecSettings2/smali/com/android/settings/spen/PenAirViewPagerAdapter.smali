@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/spen/PenAirViewPagerAdapter;
+.class public Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;
 .super Landroid/support/v4/view/PagerAdapter;
 .source "PenAirViewPagerAdapter.java"
 
@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
+        Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
     }
 .end annotation
 
@@ -19,7 +19,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;",
+            "Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;",
             ">;"
         }
     .end annotation
@@ -42,20 +42,20 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/settings/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     .line 41
-    iput-object p1, p0, Lcom/android/settings/spen/PenAirViewPagerAdapter;->context:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;->context:Landroid/content/Context;
 
     .line 42
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/spen/PenAirViewPagerAdapter;->mInflater:Landroid/view/LayoutInflater;
+    iput-object v0, p0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     .line 44
-    invoke-direct {p0}, Lcom/android/settings/spen/PenAirViewPagerAdapter;->setDescriptions()V
+    invoke-direct {p0}, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;->setDescriptions()V
 
     .line 45
     return-void
@@ -66,157 +66,157 @@
 
     .prologue
     .line 92
-    new-instance v0, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
+    new-instance v0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
 
-    invoke-direct {v0}, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;-><init>()V
 
     .line 95
-    .local v0, "description":Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
-    new-instance v0, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
+    .local v0, "description":Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
+    new-instance v0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
 
-    .end local v0    # "description":Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
-    invoke-direct {v0}, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;-><init>()V
+    .end local v0    # "description":Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
+    invoke-direct {v0}, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;-><init>()V
 
     .line 96
-    .restart local v0    # "description":Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
+    .restart local v0    # "description":Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
     const v1, 0x7f0202e7
 
-    iput v1, v0, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;->animation:I
 
     .line 97
     const v1, 0x7f0e15b2
 
-    iput v1, v0, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;->summary:I
 
     .line 98
-    iget-object v1, p0, Lcom/android/settings/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 101
-    new-instance v0, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
+    new-instance v0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
 
-    .end local v0    # "description":Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
-    invoke-direct {v0}, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;-><init>()V
+    .end local v0    # "description":Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
+    invoke-direct {v0}, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;-><init>()V
 
     .line 102
-    .restart local v0    # "description":Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
+    .restart local v0    # "description":Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
     const v1, 0x7f0202e8
 
-    iput v1, v0, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;->animation:I
 
     .line 103
     const v1, 0x7f0e15b3
 
-    iput v1, v0, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;->summary:I
 
     .line 104
-    iget-object v1, p0, Lcom/android/settings/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 107
-    new-instance v0, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
+    new-instance v0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
 
-    .end local v0    # "description":Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
-    invoke-direct {v0}, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;-><init>()V
+    .end local v0    # "description":Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
+    invoke-direct {v0}, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;-><init>()V
 
     .line 108
-    .restart local v0    # "description":Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
+    .restart local v0    # "description":Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
     const v1, 0x7f0202e9
 
-    iput v1, v0, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;->animation:I
 
     .line 109
     const v1, 0x7f0e15b4
 
-    iput v1, v0, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;->summary:I
 
     .line 110
-    iget-object v1, p0, Lcom/android/settings/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 113
-    new-instance v0, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
+    new-instance v0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
 
-    .end local v0    # "description":Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
-    invoke-direct {v0}, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;-><init>()V
+    .end local v0    # "description":Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
+    invoke-direct {v0}, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;-><init>()V
 
     .line 114
-    .restart local v0    # "description":Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
+    .restart local v0    # "description":Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
     const v1, 0x7f0202ea
 
-    iput v1, v0, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;->animation:I
 
     .line 115
     const v1, 0x7f0e15b5
 
-    iput v1, v0, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;->summary:I
 
     .line 116
-    iget-object v1, p0, Lcom/android/settings/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 119
-    new-instance v0, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
+    new-instance v0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
 
-    .end local v0    # "description":Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
-    invoke-direct {v0}, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;-><init>()V
+    .end local v0    # "description":Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
+    invoke-direct {v0}, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;-><init>()V
 
     .line 120
-    .restart local v0    # "description":Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
+    .restart local v0    # "description":Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
     const v1, 0x7f0202eb
 
-    iput v1, v0, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;->animation:I
 
     .line 121
     const v1, 0x7f0e15b6
 
-    iput v1, v0, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;->summary:I
 
     .line 122
-    iget-object v1, p0, Lcom/android/settings/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 124
-    iget-object v1, p0, Lcom/android/settings/spen/PenAirViewPagerAdapter;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;->context:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/settings/spen/PenAirViewPagerAdapter;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;->context:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isSupportPenUsp10(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isSupportPenUsp10(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
     .line 126
-    new-instance v0, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
+    new-instance v0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
 
-    .end local v0    # "description":Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
-    invoke-direct {v0}, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;-><init>()V
+    .end local v0    # "description":Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
+    invoke-direct {v0}, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;-><init>()V
 
     .line 127
-    .restart local v0    # "description":Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
+    .restart local v0    # "description":Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
     const v1, 0x7f0202ec
 
-    iput v1, v0, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;->animation:I
+    iput v1, v0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;->animation:I
 
     .line 128
     const v1, 0x7f0e15b7
 
-    iput v1, v0, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;->summary:I
+    iput v1, v0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;->summary:I
 
     .line 129
-    iget-object v1, p0, Lcom/android/settings/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -252,7 +252,7 @@
 
     .prologue
     .line 49
-    iget-object v0, p0, Lcom/android/settings/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -276,7 +276,7 @@
 
     .line 61
     .local v3, "v":Landroid/view/View;
-    iget-object v4, p0, Lcom/android/settings/spen/PenAirViewPagerAdapter;->mInflater:Landroid/view/LayoutInflater;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     const v5, 0x7f040164
 
@@ -327,15 +327,15 @@
     invoke-virtual {v2, v8}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 67
-    iget-object v4, p0, Lcom/android/settings/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v4, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
+    check-cast v4, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
 
-    iget v4, v4, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;->summary:I
+    iget v4, v4, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;->summary:I
 
     if-nez v4, :cond_0
 
@@ -344,15 +344,15 @@
 
     .line 74
     :goto_0
-    iget-object v4, p0, Lcom/android/settings/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v4, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
+    check-cast v4, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
 
-    iget v4, v4, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;->animation:I
+    iget v4, v4, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;->animation:I
 
     if-nez v4, :cond_1
 
@@ -375,15 +375,15 @@
     invoke-virtual {v1, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 71
-    iget-object v4, p0, Lcom/android/settings/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v4, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
+    check-cast v4, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
 
-    iget v4, v4, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;->summary:I
+    iget v4, v4, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;->summary:I
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setText(I)V
 
@@ -394,15 +394,15 @@
     invoke-virtual {v0, v7}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 78
-    iget-object v4, p0, Lcom/android/settings/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter;->mDescriptions:Ljava/util/ArrayList;
 
     invoke-virtual {v4, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;
+    check-cast v4, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;
 
-    iget v4, v4, Lcom/android/settings/spen/PenAirViewPagerAdapter$Description;->animation:I
+    iget v4, v4, Lcom/android/settings_ex/spen/PenAirViewPagerAdapter$Description;->animation:I
 
     invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setImageResource(I)V
 

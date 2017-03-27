@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/deviceinfo/legal/PrivacyAlertDialogActivity;
+.class public Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertDialogActivity;
 .super Lcom/android/internal/app/AlertActivity;
 .source "PrivacyAlertDialogActivity.java"
 
@@ -22,7 +22,7 @@
 
     .prologue
     .line 51
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/legal/PrivacyAlertDialogActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertDialogActivity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v2
 
@@ -48,7 +48,7 @@
     .local v0, "contentView":Landroid/widget/TextView;
     const v2, 0x7f0e13c7
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/deviceinfo/legal/PrivacyAlertDialogActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertDialogActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -87,12 +87,12 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 63
-    invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/legal/PrivacyAlertDialogActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertDialogActivity;->startActivity(Landroid/content/Intent;)V
 
     .line 65
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/legal/PrivacyAlertDialogActivity;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertDialogActivity;->finish()V
 
     .line 66
     return-void
@@ -107,20 +107,20 @@
     invoke-super {p0, p1}, Lcom/android/internal/app/AlertActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 40
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/legal/PrivacyAlertDialogActivity;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertDialogActivity;->mAlertParams:Lcom/android/internal/app/AlertController$AlertParams;
 
     .line 41
     .local v0, "p":Lcom/android/internal/app/AlertController$AlertParams;
     const v1, 0x7f0e135e
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/deviceinfo/legal/PrivacyAlertDialogActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertDialogActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mTitle:Ljava/lang/CharSequence;
 
     .line 42
-    invoke-direct {p0}, Lcom/android/settings/deviceinfo/legal/PrivacyAlertDialogActivity;->createView()Landroid/view/View;
+    invoke-direct {p0}, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertDialogActivity;->createView()Landroid/view/View;
 
     move-result-object v1
 
@@ -129,7 +129,7 @@
     .line 43
     const v1, 0x7f0e13c8
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/deviceinfo/legal/PrivacyAlertDialogActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertDialogActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -141,7 +141,7 @@
     .line 45
     const v1, 0x7f0e01ba
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/deviceinfo/legal/PrivacyAlertDialogActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertDialogActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -151,7 +151,7 @@
     iput-object p0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mNegativeButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
     .line 47
-    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/legal/PrivacyAlertDialogActivity;->setupAlert()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/deviceinfo/legal/PrivacyAlertDialogActivity;->setupAlert()V
 
     .line 48
     return-void

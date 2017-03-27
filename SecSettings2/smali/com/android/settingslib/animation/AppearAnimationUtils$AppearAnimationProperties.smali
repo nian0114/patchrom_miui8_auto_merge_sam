@@ -1,11 +1,11 @@
-.class public Lcom/android/settingslib/animation/AppearAnimationUtils$AppearAnimationProperties;
+.class public Lcom/android/settings_exlib/animation/AppearAnimationUtils$AppearAnimationProperties;
 .super Ljava/lang/Object;
 .source "AppearAnimationUtils.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/animation/AppearAnimationUtils;
+    value = Lcom/android/settings_exlib/animation/AppearAnimationUtils;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settingslib/animation/AppearAnimationUtils;
+.field final synthetic this$0:Lcom/android/settings_exlib/animation/AppearAnimationUtils;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/settingslib/animation/AppearAnimationUtils;)V
+.method public constructor <init>(Lcom/android/settings_exlib/animation/AppearAnimationUtils;)V
     .locals 0
 
     .prologue
     .line 243
-    iput-object p1, p0, Lcom/android/settingslib/animation/AppearAnimationUtils$AppearAnimationProperties;->this$0:Lcom/android/settingslib/animation/AppearAnimationUtils;
+    iput-object p1, p0, Lcom/android/settings_exlib/animation/AppearAnimationUtils$AppearAnimationProperties;->this$0:Lcom/android/settings_exlib/animation/AppearAnimationUtils;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

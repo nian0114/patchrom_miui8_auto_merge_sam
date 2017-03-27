@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/DockSettings$3;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/DockSettings$3;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "DockSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DockSettings;
+    value = Lcom/android/settings_ex/DockSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 551
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -50,7 +50,7 @@
 
     .line 566
     .local v0, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v2
 
@@ -113,7 +113,7 @@
 
     if-ge v2, v3, :cond_3
 
-    invoke-static {p1}, Lcom/android/settings/Utils;->isCoverVerified(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isCoverVerified(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -158,7 +158,7 @@
     .line 601
     :cond_4
     :goto_0
-    invoke-static {}, Lcom/android/settings/Utils;->hasHDMImenuinAccessories()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->hasHDMImenuinAccessories()Z
 
     move-result v2
 
@@ -176,7 +176,7 @@
 
     .line 605
     :cond_5
-    invoke-static {p1}, Lcom/android/settings/Utils;->isExistCoverNotePackage(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isExistCoverNotePackage(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -210,7 +210,7 @@
     .local v1, "show":I
     if-eqz v1, :cond_7
 
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportFastWirelessCharger()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportFastWirelessCharger()Z
 
     move-result v2
 
@@ -234,7 +234,7 @@
     .line 583
     .end local v1    # "show":I
     :cond_9
-    invoke-static {}, Lcom/android/settings/Utils;->isTablet()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isTablet()Z
 
     move-result v2
 
@@ -269,7 +269,7 @@
 
     .line 590
     :cond_a
-    invoke-static {p1}, Lcom/android/settings/Utils;->hasCoverWallpaper(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->hasCoverWallpaper(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -282,7 +282,7 @@
 
     .line 592
     :cond_b
-    invoke-static {p1}, Lcom/android/settings/Utils;->hasCoverSettingOptions(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->hasCoverSettingOptions(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -295,7 +295,7 @@
 
     .line 594
     :cond_c
-    invoke-static {p1}, Lcom/android/settings/Utils;->hasCoverDualClockOptionOnly(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->hasCoverDualClockOptionOnly(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -308,7 +308,7 @@
 
     .line 596
     :cond_d
-    invoke-static {p1}, Lcom/android/settings/Utils;->hasCoverSettingShowNotifications(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->hasCoverSettingShowNotifications(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -321,7 +321,7 @@
 
     .line 598
     :cond_e
-    invoke-static {p1}, Lcom/android/settings/Utils;->hasCoverLEDCallerID(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->hasCoverLEDCallerID(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -359,7 +359,7 @@
 
     .line 557
     .local v0, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v1, Lcom/android/settings/DockSettings;
+    const-class v1, Lcom/android/settings_ex/DockSettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

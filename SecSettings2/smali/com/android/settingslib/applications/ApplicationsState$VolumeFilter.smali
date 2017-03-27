@@ -1,14 +1,14 @@
-.class public Lcom/android/settingslib/applications/ApplicationsState$VolumeFilter;
+.class public Lcom/android/settings_exlib/applications/ApplicationsState$VolumeFilter;
 .super Ljava/lang/Object;
 .source "ApplicationsState.java"
 
 # interfaces
-.implements Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+.implements Lcom/android/settings_exlib/applications/ApplicationsState$AppFilter;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settingslib/applications/ApplicationsState;
+    value = Lcom/android/settings_exlib/applications/ApplicationsState;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -31,7 +31,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1439
-    iput-object p1, p0, Lcom/android/settingslib/applications/ApplicationsState$VolumeFilter;->mVolumeUuid:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/settings_exlib/applications/ApplicationsState$VolumeFilter;->mVolumeUuid:Ljava/lang/String;
 
     .line 1440
     return-void
@@ -39,17 +39,17 @@
 
 
 # virtual methods
-.method public filterApp(Lcom/android/settingslib/applications/ApplicationsState$AppEntry;)Z
+.method public filterApp(Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;)Z
     .locals 2
-    .param p1, "info"    # Lcom/android/settingslib/applications/ApplicationsState$AppEntry;
+    .param p1, "info"    # Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;
 
     .prologue
     .line 1448
-    iget-object v0, p1, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
+    iget-object v0, p1, Lcom/android/settings_exlib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
 
     iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->volumeUuid:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/android/settingslib/applications/ApplicationsState$VolumeFilter;->mVolumeUuid:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_exlib/applications/ApplicationsState$VolumeFilter;->mVolumeUuid:Ljava/lang/String;
 
     invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 

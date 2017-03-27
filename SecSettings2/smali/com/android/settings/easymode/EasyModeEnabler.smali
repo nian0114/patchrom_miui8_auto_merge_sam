@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/easymode/EasyModeEnabler;
+.class public Lcom/android/settings_ex/easymode/EasyModeEnabler;
 .super Ljava/lang/Object;
 .source "EasyModeEnabler.java"
 
@@ -19,23 +19,23 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 39
-    iput-object p1, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
 
     .line 40
-    iget-object v0, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
 
     if-eqz v0, :cond_0
 
     .line 41
     new-instance v1, Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;
 
-    iget-object v0, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
 
     check-cast v0, Landroid/app/Activity;
 
     invoke-direct {v1, v0}, Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;-><init>(Landroid/app/Activity;)V
 
-    iput-object v1, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mMw:Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;
+    iput-object v1, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mMw:Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;
 
     .line 42
     :cond_0
@@ -50,7 +50,7 @@
 
     .prologue
     .line 49
-    iget-object v1, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -80,7 +80,7 @@
 
     .line 55
     .local v0, "easy_mode_app_intent":Landroid/content/Intent;
-    iget-object v1, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
@@ -107,7 +107,7 @@
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 79
-    iget-object v1, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
@@ -134,7 +134,7 @@
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 61
-    iget-object v1, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
@@ -161,7 +161,7 @@
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 85
-    iget-object v1, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
@@ -188,7 +188,7 @@
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 67
-    iget-object v1, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
@@ -215,7 +215,7 @@
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 91
-    iget-object v1, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
@@ -230,7 +230,7 @@
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -251,7 +251,7 @@
     const/4 v5, 0x0
 
     .line 114
-    iget-object v3, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -262,7 +262,7 @@
     invoke-static {v3, v4, v5}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 115
-    iget-object v3, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -273,7 +273,7 @@
     invoke-static {v3, v4, v5}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 117
-    iget-object v3, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mMw:Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;
+    iget-object v3, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mMw:Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;
 
     if-eqz v3, :cond_0
 
@@ -286,7 +286,7 @@
 
     .line 119
     .local v2, "key":Ljava/lang/StringBuilder;
-    iget-object v3, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mMw:Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;
+    iget-object v3, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mMw:Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;
 
     invoke-virtual {v3, v2, v5}, Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;->updateMultiWindowSetting(Ljava/lang/StringBuilder;Z)V
 
@@ -313,7 +313,7 @@
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 124
-    iget-object v3, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
@@ -338,7 +338,7 @@
     invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 129
-    iget-object v3, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
@@ -381,7 +381,7 @@
 
     .line 141
     :try_start_0
-    iget-object v2, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
     :try_end_0
@@ -411,7 +411,7 @@
     const/4 v5, 0x1
 
     .line 95
-    iget-object v3, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -422,7 +422,7 @@
     invoke-static {v3, v4, v5}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 96
-    iget-object v3, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -433,7 +433,7 @@
     invoke-static {v3, v4, v5}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 98
-    iget-object v3, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mMw:Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;
+    iget-object v3, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mMw:Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;
 
     if-eqz v3, :cond_0
 
@@ -446,7 +446,7 @@
 
     .line 100
     .local v2, "key":Ljava/lang/StringBuilder;
-    iget-object v3, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mMw:Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;
+    iget-object v3, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mMw:Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;
 
     invoke-virtual {v3, v2, v5}, Lcom/samsung/android/sdk/multiwindow/SMultiWindowActivity;->updateMultiWindowSetting(Ljava/lang/StringBuilder;Z)V
 
@@ -473,7 +473,7 @@
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 105
-    iget-object v3, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
@@ -498,7 +498,7 @@
     invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 110
-    iget-object v3, p0, Lcom/android/settings/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/android/settings_ex/easymode/EasyModeEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 

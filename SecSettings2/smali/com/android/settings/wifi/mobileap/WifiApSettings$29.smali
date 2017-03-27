@@ -1,4 +1,4 @@
-.class Lcom/android/settings/wifi/mobileap/WifiApSettings$29;
+.class Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$29;
 .super Ljava/lang/Object;
 .source "WifiApSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/wifi/mobileap/WifiApSettings;->createHelpStep1Dialog()V
+    value = Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->createHelpStep1Dialog()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wifi/mobileap/WifiApSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;)V
     .locals 0
 
     .prologue
     .line 2331
-    iput-object p1, p0, Lcom/android/settings/wifi/mobileap/WifiApSettings$29;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$29;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,32 +42,32 @@
 
     .prologue
     .line 2335
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSettings$29;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$29;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
-    # getter for: Lcom/android/settings/wifi/mobileap/WifiApSettings;->mHelpStep1Dialog:Lcom/android/settings/helpdialog/TwHelpDialog;
-    invoke-static {v0}, Lcom/android/settings/wifi/mobileap/WifiApSettings;->access$400(Lcom/android/settings/wifi/mobileap/WifiApSettings;)Lcom/android/settings/helpdialog/TwHelpDialog;
+    # getter for: Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->mHelpStep1Dialog:Lcom/android/settings_ex/helpdialog/TwHelpDialog;
+    invoke-static {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->access$400(Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;)Lcom/android/settings_ex/helpdialog/TwHelpDialog;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/settings/helpdialog/TwHelpDialog;->dismiss()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/helpdialog/TwHelpDialog;->dismiss()V
 
     .line 2336
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSettings$29;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$29;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
     const/4 v1, 0x0
 
-    # setter for: Lcom/android/settings/wifi/mobileap/WifiApSettings;->mHelpStep1Dialog:Lcom/android/settings/helpdialog/TwHelpDialog;
-    invoke-static {v0, v1}, Lcom/android/settings/wifi/mobileap/WifiApSettings;->access$402(Lcom/android/settings/wifi/mobileap/WifiApSettings;Lcom/android/settings/helpdialog/TwHelpDialog;)Lcom/android/settings/helpdialog/TwHelpDialog;
+    # setter for: Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->mHelpStep1Dialog:Lcom/android/settings_ex/helpdialog/TwHelpDialog;
+    invoke-static {v0, v1}, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->access$402(Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;Lcom/android/settings_ex/helpdialog/TwHelpDialog;)Lcom/android/settings_ex/helpdialog/TwHelpDialog;
 
     .line 2337
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSettings$29;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$29;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/mobileap/WifiApSettings;->createHelpStep2Dialog()V
+    invoke-virtual {v0}, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->createHelpStep2Dialog()V
 
     .line 2338
-    iget-object v0, p0, Lcom/android/settings/wifi/mobileap/WifiApSettings$29;->this$0:Lcom/android/settings/wifi/mobileap/WifiApSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings$29;->this$0:Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;
 
-    iget-object v0, v0, Lcom/android/settings/wifi/mobileap/WifiApSettings;->mHandler:Landroid/os/Handler;
+    iget-object v0, v0, Lcom/android/settings_ex/wifi/mobileap/WifiApSettings;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
 

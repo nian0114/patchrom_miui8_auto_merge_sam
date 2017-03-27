@@ -1,4 +1,4 @@
-.class Lcom/android/settings/applications/ManageAssist$2;
+.class Lcom/android/settings_ex/applications/ManageAssist$2;
 .super Ljava/lang/Object;
 .source "ManageAssist.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/applications/ManageAssist;->confirmNewAssist(Ljava/lang/String;)V
+    value = Lcom/android/settings_ex/applications/ManageAssist;->confirmNewAssist(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/applications/ManageAssist;
+.field final synthetic this$0:Lcom/android/settings_ex/applications/ManageAssist;
 
 .field final synthetic val$newAssitPackage:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/applications/ManageAssist;Ljava/lang/String;)V
+.method constructor <init>(Lcom/android/settings_ex/applications/ManageAssist;Ljava/lang/String;)V
     .locals 0
 
     .prologue
     .line 187
-    iput-object p1, p0, Lcom/android/settings/applications/ManageAssist$2;->this$0:Lcom/android/settings/applications/ManageAssist;
+    iput-object p1, p0, Lcom/android/settings_ex/applications/ManageAssist$2;->this$0:Lcom/android/settings_ex/applications/ManageAssist;
 
-    iput-object p2, p0, Lcom/android/settings/applications/ManageAssist$2;->val$newAssitPackage:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/settings_ex/applications/ManageAssist$2;->val$newAssitPackage:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,12 +47,12 @@
 
     .prologue
     .line 190
-    iget-object v0, p0, Lcom/android/settings/applications/ManageAssist$2;->this$0:Lcom/android/settings/applications/ManageAssist;
+    iget-object v0, p0, Lcom/android/settings_ex/applications/ManageAssist$2;->this$0:Lcom/android/settings_ex/applications/ManageAssist;
 
-    iget-object v1, p0, Lcom/android/settings/applications/ManageAssist$2;->val$newAssitPackage:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/settings_ex/applications/ManageAssist$2;->val$newAssitPackage:Ljava/lang/String;
 
-    # invokes: Lcom/android/settings/applications/ManageAssist;->setDefaultAssist(Ljava/lang/String;)V
-    invoke-static {v0, v1}, Lcom/android/settings/applications/ManageAssist;->access$100(Lcom/android/settings/applications/ManageAssist;Ljava/lang/String;)V
+    # invokes: Lcom/android/settings_ex/applications/ManageAssist;->setDefaultAssist(Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/android/settings_ex/applications/ManageAssist;->access$100(Lcom/android/settings_ex/applications/ManageAssist;Ljava/lang/String;)V
 
     .line 191
     return-void

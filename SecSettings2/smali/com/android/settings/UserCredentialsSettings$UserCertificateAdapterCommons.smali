@@ -1,11 +1,11 @@
-.class interface abstract Lcom/android/settings/UserCredentialsSettings$UserCertificateAdapterCommons;
+.class interface abstract Lcom/android/settings_ex/UserCredentialsSettings$UserCertificateAdapterCommons;
 .super Ljava/lang/Object;
 .source "UserCredentialsSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/UserCredentialsSettings;
+    value = Lcom/android/settings_ex/UserCredentialsSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract getListViewId(Lcom/android/settings/UserCredentialsSettings$Tab;)I
+.method public abstract getListViewId(Lcom/android/settings_ex/UserCredentialsSettings$Tab;)I
 .end method
 
 .method public abstract load()V
@@ -24,5 +24,5 @@
 .method public abstract notifyDataSetChanged()V
 .end method
 
-.method public abstract remove(Lcom/android/settings/UserCredentialsSettings$CertHolder;)V
+.method public abstract remove(Lcom/android/settings_ex/UserCredentialsSettings$CertHolder;)V
 .end method

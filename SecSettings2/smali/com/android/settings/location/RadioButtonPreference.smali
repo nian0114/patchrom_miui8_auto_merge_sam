@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/location/RadioButtonPreference;
+.class public Lcom/android/settings_ex/location/RadioButtonPreference;
 .super Landroid/preference/CheckBoxPreference;
 .source "RadioButtonPreference.java"
 
@@ -6,13 +6,13 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/location/RadioButtonPreference$OnClickListener;
+        Lcom/android/settings_ex/location/RadioButtonPreference$OnClickListener;
     }
 .end annotation
 
 
 # instance fields
-.field private mListener:Lcom/android/settings/location/RadioButtonPreference$OnClickListener;
+.field private mListener:Lcom/android/settings_ex/location/RadioButtonPreference$OnClickListener;
 
 
 # direct methods
@@ -24,7 +24,7 @@
     .line 55
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lcom/android/settings/location/RadioButtonPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, v0}, Lcom/android/settings_ex/location/RadioButtonPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 56
     return-void
@@ -39,7 +39,7 @@
     .line 51
     const v0, 0x101008f
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings/location/RadioButtonPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/android/settings_ex/location/RadioButtonPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 52
     return-void
@@ -58,17 +58,17 @@
     .line 42
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/location/RadioButtonPreference;->mListener:Lcom/android/settings/location/RadioButtonPreference$OnClickListener;
+    iput-object v0, p0, Lcom/android/settings_ex/location/RadioButtonPreference;->mListener:Lcom/android/settings_ex/location/RadioButtonPreference$OnClickListener;
 
     .line 46
     const v0, 0x7f04018a
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/location/RadioButtonPreference;->setLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/location/RadioButtonPreference;->setLayoutResource(I)V
 
     .line 47
     const v0, 0x7f04019f
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/location/RadioButtonPreference;->setWidgetLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/location/RadioButtonPreference;->setWidgetLayoutResource(I)V
 
     .line 48
     return-void
@@ -117,27 +117,27 @@
 
     .prologue
     .line 64
-    iget-object v0, p0, Lcom/android/settings/location/RadioButtonPreference;->mListener:Lcom/android/settings/location/RadioButtonPreference$OnClickListener;
+    iget-object v0, p0, Lcom/android/settings_ex/location/RadioButtonPreference;->mListener:Lcom/android/settings_ex/location/RadioButtonPreference$OnClickListener;
 
     if-eqz v0, :cond_0
 
     .line 65
-    iget-object v0, p0, Lcom/android/settings/location/RadioButtonPreference;->mListener:Lcom/android/settings/location/RadioButtonPreference$OnClickListener;
+    iget-object v0, p0, Lcom/android/settings_ex/location/RadioButtonPreference;->mListener:Lcom/android/settings_ex/location/RadioButtonPreference$OnClickListener;
 
-    invoke-interface {v0, p0}, Lcom/android/settings/location/RadioButtonPreference$OnClickListener;->onRadioButtonClicked(Lcom/android/settings/location/RadioButtonPreference;)V
+    invoke-interface {v0, p0}, Lcom/android/settings_ex/location/RadioButtonPreference$OnClickListener;->onRadioButtonClicked(Lcom/android/settings_ex/location/RadioButtonPreference;)V
 
     .line 67
     :cond_0
     return-void
 .end method
 
-.method setOnClickListener(Lcom/android/settings/location/RadioButtonPreference$OnClickListener;)V
+.method setOnClickListener(Lcom/android/settings_ex/location/RadioButtonPreference$OnClickListener;)V
     .locals 0
-    .param p1, "listener"    # Lcom/android/settings/location/RadioButtonPreference$OnClickListener;
+    .param p1, "listener"    # Lcom/android/settings_ex/location/RadioButtonPreference$OnClickListener;
 
     .prologue
     .line 59
-    iput-object p1, p0, Lcom/android/settings/location/RadioButtonPreference;->mListener:Lcom/android/settings/location/RadioButtonPreference$OnClickListener;
+    iput-object p1, p0, Lcom/android/settings_ex/location/RadioButtonPreference;->mListener:Lcom/android/settings_ex/location/RadioButtonPreference$OnClickListener;
 
     .line 60
     return-void

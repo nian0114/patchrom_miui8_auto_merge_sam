@@ -1,22 +1,22 @@
-.class public Lcom/android/settings/ApplicationsSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/ApplicationsSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "ApplicationsSettings.java"
 
 # interfaces
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/ApplicationsSettings$AlphaComparator;,
-        Lcom/android/settings/ApplicationsSettings$AppSettingsPreference;
+        Lcom/android/settings_ex/ApplicationsSettings$AlphaComparator;,
+        Lcom/android/settings_ex/ApplicationsSettings$AppSettingsPreference;
     }
 .end annotation
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 .field private static mAppPermission:Landroid/preference/PreferenceScreen;
 
@@ -41,14 +41,14 @@
     .line 76
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/android/settings/ApplicationsSettings;->mIsLoggingEnabled:Z
+    sput-boolean v0, Lcom/android/settings_ex/ApplicationsSettings;->mIsLoggingEnabled:Z
 
     .line 232
-    new-instance v0, Lcom/android/settings/ApplicationsSettings$1;
+    new-instance v0, Lcom/android/settings_ex/ApplicationsSettings$1;
 
-    invoke-direct {v0}, Lcom/android/settings/ApplicationsSettings$1;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/ApplicationsSettings$1;-><init>()V
 
-    sput-object v0, Lcom/android/settings/ApplicationsSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/ApplicationsSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -58,7 +58,7 @@
 
     .prologue
     .line 59
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 215
     return-void
@@ -69,18 +69,18 @@
 
     .prologue
     .line 59
-    sget-boolean v0, Lcom/android/settings/ApplicationsSettings;->mIsLoggingEnabled:Z
+    sget-boolean v0, Lcom/android/settings_ex/ApplicationsSettings;->mIsLoggingEnabled:Z
 
     return v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/ApplicationsSettings;)Landroid/content/pm/PackageManager;
+.method static synthetic access$100(Lcom/android/settings_ex/ApplicationsSettings;)Landroid/content/pm/PackageManager;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/ApplicationsSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/ApplicationsSettings;
 
     .prologue
     .line 59
-    iget-object v0, p0, Lcom/android/settings/ApplicationsSettings;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v0, p0, Lcom/android/settings_ex/ApplicationsSettings;->mPm:Landroid/content/pm/PackageManager;
 
     return-object v0
 .end method
@@ -92,7 +92,7 @@
 
     .prologue
     .line 136
-    invoke-virtual {p0}, Lcom/android/settings/ApplicationsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ApplicationsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -111,7 +111,7 @@
     invoke-virtual {v7, v12}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 140
-    iget-object v12, p0, Lcom/android/settings/ApplicationsSettings;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v12, p0, Lcom/android/settings_ex/ApplicationsSettings;->mPm:Landroid/content/pm/PackageManager;
 
     const/4 v13, 0x0
 
@@ -121,9 +121,9 @@
 
     .line 141
     .local v8, "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
-    new-instance v12, Lcom/android/settings/ApplicationsSettings$AlphaComparator;
+    new-instance v12, Lcom/android/settings_ex/ApplicationsSettings$AlphaComparator;
 
-    invoke-direct {v12, p0}, Lcom/android/settings/ApplicationsSettings$AlphaComparator;-><init>(Lcom/android/settings/ApplicationsSettings;)V
+    invoke-direct {v12, p0}, Lcom/android/settings_ex/ApplicationsSettings$AlphaComparator;-><init>(Lcom/android/settings_ex/ApplicationsSettings;)V
 
     invoke-static {v8, v12}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
@@ -187,13 +187,13 @@
     if-eqz v12, :cond_1
 
     .line 148
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v12
 
     if-eqz v12, :cond_0
 
-    invoke-static {v2}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v12
 
@@ -216,7 +216,7 @@
     .line 154
     :cond_1
     :try_start_0
-    iget-object v12, p0, Lcom/android/settings/ApplicationsSettings;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v12, p0, Lcom/android/settings_ex/ApplicationsSettings;->mPm:Landroid/content/pm/PackageManager;
 
     const/4 v13, 0x1
 
@@ -226,7 +226,7 @@
 
     .line 155
     .local v5, "icon":Landroid/graphics/drawable/Drawable;
-    iget-object v12, p0, Lcom/android/settings/ApplicationsSettings;->mPm:Landroid/content/pm/PackageManager;
+    iget-object v12, p0, Lcom/android/settings_ex/ApplicationsSettings;->mPm:Landroid/content/pm/PackageManager;
 
     iget-object v13, v6, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
@@ -238,7 +238,7 @@
 
     .line 156
     .local v9, "name":Ljava/lang/CharSequence;
-    invoke-static {v2}, Lcom/android/settings/Utils;->isRTL(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/settings_ex/Utils;->isRTL(Landroid/content/Context;)Z
 
     move-result v12
 
@@ -264,12 +264,12 @@
     .line 160
     .end local v1    # "bidiFormatter":Landroid/text/BidiFormatter;
     :cond_2
-    new-instance v11, Lcom/android/settings/ApplicationsSettings$AppSettingsPreference;
+    new-instance v11, Lcom/android/settings_ex/ApplicationsSettings$AppSettingsPreference;
 
-    invoke-direct {v11, p0, v2, v5, v9}, Lcom/android/settings/ApplicationsSettings$AppSettingsPreference;-><init>(Lcom/android/settings/ApplicationsSettings;Landroid/content/Context;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;)V
+    invoke-direct {v11, p0, v2, v5, v9}, Lcom/android/settings_ex/ApplicationsSettings$AppSettingsPreference;-><init>(Lcom/android/settings_ex/ApplicationsSettings;Landroid/content/Context;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;)V
 
     .line 161
-    .local v11, "pref":Lcom/android/settings/ApplicationsSettings$AppSettingsPreference;
+    .local v11, "pref":Lcom/android/settings_ex/ApplicationsSettings$AppSettingsPreference;
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
@@ -294,17 +294,17 @@
     invoke-virtual {v0, v12, v13}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 164
-    invoke-virtual {v11, v0}, Lcom/android/settings/ApplicationsSettings$AppSettingsPreference;->setIntent(Landroid/content/Intent;)V
+    invoke-virtual {v11, v0}, Lcom/android/settings_ex/ApplicationsSettings$AppSettingsPreference;->setIntent(Landroid/content/Intent;)V
 
     .line 165
     iget-object v12, v6, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v12, v12, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    invoke-virtual {v11, v12}, Lcom/android/settings/ApplicationsSettings$AppSettingsPreference;->setKey(Ljava/lang/String;)V
+    invoke-virtual {v11, v12}, Lcom/android/settings_ex/ApplicationsSettings$AppSettingsPreference;->setKey(Ljava/lang/String;)V
 
     .line 166
-    invoke-virtual {p0}, Lcom/android/settings/ApplicationsSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ApplicationsSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v12
 
@@ -318,7 +318,7 @@
     .end local v0    # "appIntent":Landroid/content/Intent;
     .end local v5    # "icon":Landroid/graphics/drawable/Drawable;
     .end local v9    # "name":Ljava/lang/CharSequence;
-    .end local v11    # "pref":Lcom/android/settings/ApplicationsSettings$AppSettingsPreference;
+    .end local v11    # "pref":Lcom/android/settings_ex/ApplicationsSettings$AppSettingsPreference;
     :catch_0
     move-exception v3
 
@@ -358,10 +358,10 @@
     const/4 v2, 0x0
 
     .line 122
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
     .line 124
-    invoke-virtual {p0}, Lcom/android/settings/ApplicationsSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ApplicationsSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v12
 
@@ -391,11 +391,11 @@
 
     .line 129
     .local v4, "divider_inset_size":I
-    invoke-virtual {p0}, Lcom/android/settings/ApplicationsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ApplicationsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isRTL(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isRTL(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -403,7 +403,7 @@
 
     new-instance v0, Landroid/graphics/drawable/InsetDrawable;
 
-    invoke-virtual {p0}, Lcom/android/settings/ApplicationsSettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ApplicationsSettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v1
 
@@ -422,7 +422,7 @@
     .line 131
     .local v11, "insetdivider":Landroid/graphics/drawable/InsetDrawable;
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/ApplicationsSettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ApplicationsSettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v0
 
@@ -436,7 +436,7 @@
     :cond_0
     new-instance v5, Landroid/graphics/drawable/InsetDrawable;
 
-    invoke-virtual {p0}, Lcom/android/settings/ApplicationsSettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ApplicationsSettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v0
 
@@ -465,72 +465,72 @@
 
     .prologue
     .line 80
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 82
     const v0, 0x7f08001c
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/ApplicationsSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/ApplicationsSettings;->addPreferencesFromResource(I)V
 
     .line 84
     const-string v0, "application_settings"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/ApplicationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/ApplicationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    iput-object v0, p0, Lcom/android/settings/ApplicationsSettings;->mAppManager:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/ApplicationsSettings;->mAppManager:Landroid/preference/PreferenceScreen;
 
     .line 85
     const-string v0, "application_permission"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/ApplicationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/ApplicationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    sput-object v0, Lcom/android/settings/ApplicationsSettings;->mAppPermission:Landroid/preference/PreferenceScreen;
+    sput-object v0, Lcom/android/settings_ex/ApplicationsSettings;->mAppPermission:Landroid/preference/PreferenceScreen;
 
     .line 86
     const-string v0, "launch_application_settings"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/ApplicationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/ApplicationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    iput-object v0, p0, Lcom/android/settings/ApplicationsSettings;->mAppLauncher:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/ApplicationsSettings;->mAppLauncher:Landroid/preference/PreferenceScreen;
 
     .line 87
-    invoke-virtual {p0}, Lcom/android/settings/ApplicationsSettings;->updatePref()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/ApplicationsSettings;->updatePref()V
 
     .line 88
     const-string v0, "apps_category"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/ApplicationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/ApplicationsSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceCategory;
 
-    iput-object v0, p0, Lcom/android/settings/ApplicationsSettings;->mAppsCategory:Landroid/preference/PreferenceCategory;
+    iput-object v0, p0, Lcom/android/settings_ex/ApplicationsSettings;->mAppsCategory:Landroid/preference/PreferenceCategory;
 
     .line 90
-    invoke-virtual {p0}, Lcom/android/settings/ApplicationsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ApplicationsSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    sget-object v1, Lcom/android/settings/ApplicationsSettings;->mAppPermission:Landroid/preference/PreferenceScreen;
+    sget-object v1, Lcom/android/settings_ex/ApplicationsSettings;->mAppPermission:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v1}, Landroid/preference/PreferenceScreen;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/android/settings/Utils;->isIntentAvailable(Landroid/content/Context;Landroid/content/Intent;)Z
+    invoke-static {v0, v1}, Lcom/android/settings_ex/Utils;->isIntentAvailable(Landroid/content/Context;Landroid/content/Intent;)Z
 
     move-result v0
 
@@ -544,21 +544,21 @@
 
     .line 91
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/ApplicationsSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ApplicationsSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
-    sget-object v1, Lcom/android/settings/ApplicationsSettings;->mAppPermission:Landroid/preference/PreferenceScreen;
+    sget-object v1, Lcom/android/settings_ex/ApplicationsSettings;->mAppPermission:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 94
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/ApplicationsSettings;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ApplicationsSettings;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/ApplicationsSettings;->mPm:Landroid/content/pm/PackageManager;
+    iput-object v0, p0, Lcom/android/settings_ex/ApplicationsSettings;->mPm:Landroid/content/pm/PackageManager;
 
     .line 95
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
@@ -574,7 +574,7 @@
     if-eqz v0, :cond_3
 
     .line 96
-    invoke-virtual {p0}, Lcom/android/settings/ApplicationsSettings;->buildApplicationSettingsList()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/ApplicationsSettings;->buildApplicationSettingsList()V
 
     .line 101
     :goto_0
@@ -593,7 +593,7 @@
     .line 102
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/android/settings/ApplicationsSettings;->mIsLoggingEnabled:Z
+    sput-boolean v0, Lcom/android/settings_ex/ApplicationsSettings;->mIsLoggingEnabled:Z
 
     .line 104
     :cond_2
@@ -601,11 +601,11 @@
 
     .line 98
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/ApplicationsSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/ApplicationsSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/ApplicationsSettings;->mAppsCategory:Landroid/preference/PreferenceCategory;
+    iget-object v1, p0, Lcom/android/settings_ex/ApplicationsSettings;->mAppsCategory:Landroid/preference/PreferenceCategory;
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
@@ -619,36 +619,36 @@
     const v2, 0x7f04010f
 
     .line 112
-    iget-object v0, p0, Lcom/android/settings/ApplicationsSettings;->mAppManager:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/ApplicationsSettings;->mAppManager:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v2}, Landroid/preference/PreferenceScreen;->setLayoutResource(I)V
 
     .line 113
-    iget-object v0, p0, Lcom/android/settings/ApplicationsSettings;->mAppManager:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/ApplicationsSettings;->mAppManager:Landroid/preference/PreferenceScreen;
 
     const v1, 0x7f0202ee
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->setIcon(I)V
 
     .line 114
-    sget-object v0, Lcom/android/settings/ApplicationsSettings;->mAppPermission:Landroid/preference/PreferenceScreen;
+    sget-object v0, Lcom/android/settings_ex/ApplicationsSettings;->mAppPermission:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v2}, Landroid/preference/PreferenceScreen;->setLayoutResource(I)V
 
     .line 115
-    sget-object v0, Lcom/android/settings/ApplicationsSettings;->mAppPermission:Landroid/preference/PreferenceScreen;
+    sget-object v0, Lcom/android/settings_ex/ApplicationsSettings;->mAppPermission:Landroid/preference/PreferenceScreen;
 
     const v1, 0x7f0202ef
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->setIcon(I)V
 
     .line 116
-    iget-object v0, p0, Lcom/android/settings/ApplicationsSettings;->mAppLauncher:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/ApplicationsSettings;->mAppLauncher:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v0, v2}, Landroid/preference/PreferenceScreen;->setLayoutResource(I)V
 
     .line 117
-    iget-object v0, p0, Lcom/android/settings/ApplicationsSettings;->mAppLauncher:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/settings_ex/ApplicationsSettings;->mAppLauncher:Landroid/preference/PreferenceScreen;
 
     const v1, 0x7f0202f0
 

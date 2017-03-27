@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings$6;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings$6;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "InputMethodAndLanguageSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;
+    value = Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 985
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -71,7 +71,7 @@
 
     .line 1190
     :cond_0
-    invoke-static {p1}, Lcom/android/settings/inputmethod/UserDictionaryList;->getUserDictionaryLocalesSet(Landroid/content/Context;)Ljava/util/TreeSet;
+    invoke-static {p1}, Lcom/android/settings_ex/inputmethod/UserDictionaryList;->getUserDictionaryLocalesSet(Landroid/content/Context;)Ljava/util/TreeSet;
 
     move-result-object v2
 
@@ -96,7 +96,7 @@
 
     .line 1199
     .local v6, "tsm":Landroid/view/textservice/TextServicesManager;
-    invoke-static {p1}, Lcom/android/settings/Utils;->isInstalledAnySpellCheckerPakcage(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/android/settings_ex/Utils;->isInstalledAnySpellCheckerPakcage(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -234,8 +234,8 @@
 
     .line 1247
     :cond_5
-    # invokes: Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;->haveInputDeviceWithVibrator()Z
-    invoke-static {}, Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;->access$1100()Z
+    # invokes: Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;->haveInputDeviceWithVibrator()Z
+    invoke-static {}, Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;->access$1100()Z
 
     move-result v9
 
@@ -344,7 +344,7 @@
             "Z)",
             "Ljava/util/List",
             "<",
-            "Lcom/android/settings/search/SearchIndexableRaw;",
+            "Lcom/android/settings_ex/search/SearchIndexableRaw;",
             ">;"
         }
     .end annotation
@@ -356,7 +356,7 @@
     invoke-direct {v13}, Ljava/util/ArrayList;-><init>()V
 
     .line 1000
-    .local v13, "indexables":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings/search/SearchIndexableRaw;>;"
+    .local v13, "indexables":Ljava/util/List;, "Ljava/util/List<Lcom/android/settings_ex/search/SearchIndexableRaw;>;"
     const v29, 0x7f0e0880
 
     move-object/from16 v0, p1
@@ -369,14 +369,14 @@
 
     .line 1001
     .local v22, "screenTitle":Ljava/lang/String;
-    new-instance v12, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v12, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
     move-object/from16 v0, p1
 
-    invoke-direct {v12, v0}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    invoke-direct {v12, v0}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 1056
-    .local v12, "indexable":Lcom/android/settings/search/SearchIndexableRaw;
+    .local v12, "indexable":Lcom/android/settings_ex/search/SearchIndexableRaw;
     const-string v29, "input_method"
 
     move-object/from16 v0, p1
@@ -391,16 +391,16 @@
 
     .line 1058
     .local v17, "inputMethodManager":Landroid/view/inputmethod/InputMethodManager;
-    invoke-static/range {p1 .. p1}, Lcom/android/settings/inputmethod/InputMethodSettingValuesWrapper;->getInstance(Landroid/content/Context;)Lcom/android/settings/inputmethod/InputMethodSettingValuesWrapper;
+    invoke-static/range {p1 .. p1}, Lcom/android/settings_ex/inputmethod/InputMethodSettingValuesWrapper;->getInstance(Landroid/content/Context;)Lcom/android/settings_ex/inputmethod/InputMethodSettingValuesWrapper;
 
     move-result-object v11
 
     .line 1060
-    .local v11, "immValues":Lcom/android/settings/inputmethod/InputMethodSettingValuesWrapper;
-    invoke-virtual {v11}, Lcom/android/settings/inputmethod/InputMethodSettingValuesWrapper;->refreshAllInputMethodAndSubtypes()V
+    .local v11, "immValues":Lcom/android/settings_ex/inputmethod/InputMethodSettingValuesWrapper;
+    invoke-virtual {v11}, Lcom/android/settings_ex/inputmethod/InputMethodSettingValuesWrapper;->refreshAllInputMethodAndSubtypes()V
 
     .line 1063
-    invoke-virtual {v11}, Lcom/android/settings/inputmethod/InputMethodSettingValuesWrapper;->getInputMethodList()Ljava/util/List;
+    invoke-virtual {v11}, Lcom/android/settings_ex/inputmethod/InputMethodSettingValuesWrapper;->getInputMethodList()Ljava/util/List;
 
     move-result-object v18
 
@@ -597,7 +597,7 @@
 
     move-object/from16 v0, v29
 
-    iput-object v0, v12, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v0, v12, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 1089
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -616,22 +616,22 @@
 
     move-object/from16 v0, v29
 
-    iput-object v0, v12, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v0, v12, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 1090
     move-object/from16 v0, v28
 
-    iput-object v0, v12, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v0, v12, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     .line 1091
     move-object/from16 v0, v28
 
-    iput-object v0, v12, Lcom/android/settings/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
+    iput-object v0, v12, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
 
     .line 1092
     move-object/from16 v0, v22
 
-    iput-object v0, v12, Lcom/android/settings/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
+    iput-object v0, v12, Lcom/android/settings_ex/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
 
     .line 1093
     invoke-interface {v13, v12}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -754,22 +754,22 @@
     .line 1123
     .restart local v28    # "summary":Ljava/lang/String;
     :goto_6
-    new-instance v12, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v12, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    .end local v12    # "indexable":Lcom/android/settings/search/SearchIndexableRaw;
+    .end local v12    # "indexable":Lcom/android/settings_ex/search/SearchIndexableRaw;
     move-object/from16 v0, p1
 
-    invoke-direct {v12, v0}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    invoke-direct {v12, v0}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 1124
-    .restart local v12    # "indexable":Lcom/android/settings/search/SearchIndexableRaw;
+    .restart local v12    # "indexable":Lcom/android/settings_ex/search/SearchIndexableRaw;
     invoke-virtual {v6}, Landroid/view/InputDevice;->getName()Ljava/lang/String;
 
     move-result-object v29
 
     move-object/from16 v0, v29
 
-    iput-object v0, v12, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v0, v12, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 1125
     invoke-virtual {v6}, Landroid/view/InputDevice;->getName()Ljava/lang/String;
@@ -778,22 +778,22 @@
 
     move-object/from16 v0, v29
 
-    iput-object v0, v12, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v0, v12, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 1126
     move-object/from16 v0, v28
 
-    iput-object v0, v12, Lcom/android/settings/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
+    iput-object v0, v12, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOn:Ljava/lang/String;
 
     .line 1127
     move-object/from16 v0, v28
 
-    iput-object v0, v12, Lcom/android/settings/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
+    iput-object v0, v12, Lcom/android/settings_ex/search/SearchIndexableRaw;->summaryOff:Ljava/lang/String;
 
     .line 1128
     move-object/from16 v0, v22
 
-    iput-object v0, v12, Lcom/android/settings/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
+    iput-object v0, v12, Lcom/android/settings_ex/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
 
     .line 1129
     invoke-interface {v13, v12}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -834,20 +834,20 @@
     if-eqz v8, :cond_9
 
     .line 1134
-    new-instance v12, Lcom/android/settings/search/SearchIndexableRaw;
+    new-instance v12, Lcom/android/settings_ex/search/SearchIndexableRaw;
 
-    .end local v12    # "indexable":Lcom/android/settings/search/SearchIndexableRaw;
+    .end local v12    # "indexable":Lcom/android/settings_ex/search/SearchIndexableRaw;
     move-object/from16 v0, p1
 
-    invoke-direct {v12, v0}, Lcom/android/settings/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
+    invoke-direct {v12, v0}, Lcom/android/settings_ex/search/SearchIndexableRaw;-><init>(Landroid/content/Context;)V
 
     .line 1135
-    .restart local v12    # "indexable":Lcom/android/settings/search/SearchIndexableRaw;
+    .restart local v12    # "indexable":Lcom/android/settings_ex/search/SearchIndexableRaw;
     const-string v29, "builtin_keyboard_settings"
 
     move-object/from16 v0, v29
 
-    iput-object v0, v12, Lcom/android/settings/search/SearchIndexableRaw;->key:Ljava/lang/String;
+    iput-object v0, v12, Lcom/android/settings_ex/search/SearchIndexableRaw;->key:Ljava/lang/String;
 
     .line 1136
     const v29, 0x7f0e08d2
@@ -862,12 +862,12 @@
 
     move-object/from16 v0, v29
 
-    iput-object v0, v12, Lcom/android/settings/search/SearchIndexableRaw;->title:Ljava/lang/String;
+    iput-object v0, v12, Lcom/android/settings_ex/search/SearchIndexableRaw;->title:Ljava/lang/String;
 
     .line 1138
     move-object/from16 v0, v22
 
-    iput-object v0, v12, Lcom/android/settings/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
+    iput-object v0, v12, Lcom/android/settings_ex/search/SearchIndexableRaw;->screenTitle:Ljava/lang/String;
 
     .line 1139
     invoke-interface {v13, v12}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -901,7 +901,7 @@
 
     .line 991
     .local v0, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v1, Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;
+    const-class v1, Lcom/android/settings_ex/inputmethod/InputMethodAndLanguageSettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

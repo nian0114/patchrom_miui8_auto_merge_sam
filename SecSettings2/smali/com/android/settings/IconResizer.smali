@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/IconResizer;
+.class public Lcom/android/settings_ex/IconResizer;
 .super Ljava/lang/Object;
 .source "IconResizer.java"
 
@@ -33,33 +33,33 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 40
-    iput v3, p0, Lcom/android/settings/IconResizer;->mIconWidth:I
+    iput v3, p0, Lcom/android/settings_ex/IconResizer;->mIconWidth:I
 
     .line 41
-    iput v3, p0, Lcom/android/settings/IconResizer;->mIconHeight:I
+    iput v3, p0, Lcom/android/settings_ex/IconResizer;->mIconHeight:I
 
     .line 44
-    iput-boolean v2, p0, Lcom/android/settings/IconResizer;->mScreenIsLarge:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/IconResizer;->mScreenIsLarge:Z
 
     .line 45
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v3, p0, Lcom/android/settings/IconResizer;->mOldBounds:Landroid/graphics/Rect;
+    iput-object v3, p0, Lcom/android/settings_ex/IconResizer;->mOldBounds:Landroid/graphics/Rect;
 
     .line 46
     new-instance v3, Landroid/graphics/Canvas;
 
     invoke-direct {v3}, Landroid/graphics/Canvas;-><init>()V
 
-    iput-object v3, p0, Lcom/android/settings/IconResizer;->mCanvas:Landroid/graphics/Canvas;
+    iput-object v3, p0, Lcom/android/settings_ex/IconResizer;->mCanvas:Landroid/graphics/Canvas;
 
     .line 50
-    iput-object p1, p0, Lcom/android/settings/IconResizer;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/android/settings_ex/IconResizer;->mContext:Landroid/content/Context;
 
     .line 51
-    iget-object v3, p0, Lcom/android/settings/IconResizer;->mCanvas:Landroid/graphics/Canvas;
+    iget-object v3, p0, Lcom/android/settings_ex/IconResizer;->mCanvas:Landroid/graphics/Canvas;
 
     new-instance v4, Landroid/graphics/PaintFlagsDrawFilter;
 
@@ -84,9 +84,9 @@
 
     float-to-int v3, v3
 
-    iput v3, p0, Lcom/android/settings/IconResizer;->mIconHeight:I
+    iput v3, p0, Lcom/android/settings_ex/IconResizer;->mIconHeight:I
 
-    iput v3, p0, Lcom/android/settings/IconResizer;->mIconWidth:I
+    iput v3, p0, Lcom/android/settings_ex/IconResizer;->mIconWidth:I
 
     .line 55
     invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
@@ -109,7 +109,7 @@
     const/4 v2, 0x1
 
     :cond_1
-    iput-boolean v2, p0, Lcom/android/settings/IconResizer;->mScreenIsLarge:Z
+    iput-boolean v2, p0, Lcom/android/settings_ex/IconResizer;->mScreenIsLarge:Z
 
     .line 57
     const-string v2, "IconResizer"
@@ -124,7 +124,7 @@
 
     move-result-object v3
 
-    iget-boolean v4, p0, Lcom/android/settings/IconResizer;->mScreenIsLarge:Z
+    iget-boolean v4, p0, Lcom/android/settings_ex/IconResizer;->mScreenIsLarge:Z
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -150,11 +150,11 @@
     const/4 v13, 0x0
 
     .line 73
-    iget v8, p0, Lcom/android/settings/IconResizer;->mIconWidth:I
+    iget v8, p0, Lcom/android/settings_ex/IconResizer;->mIconWidth:I
 
     .line 74
     .local v8, "width":I
-    iget v2, p0, Lcom/android/settings/IconResizer;->mIconHeight:I
+    iget v2, p0, Lcom/android/settings_ex/IconResizer;->mIconHeight:I
 
     .line 75
     .local v2, "height":I
@@ -233,9 +233,9 @@
     .line 96
     .local v0, "c":Landroid/graphics/Bitmap$Config;
     :goto_1
-    iget v11, p0, Lcom/android/settings/IconResizer;->mIconWidth:I
+    iget v11, p0, Lcom/android/settings_ex/IconResizer;->mIconWidth:I
 
-    iget v12, p0, Lcom/android/settings/IconResizer;->mIconHeight:I
+    iget v12, p0, Lcom/android/settings_ex/IconResizer;->mIconHeight:I
 
     invoke-static {v11, v12, v0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
@@ -243,14 +243,14 @@
 
     .line 97
     .local v7, "thumb":Landroid/graphics/Bitmap;
-    iget-object v1, p0, Lcom/android/settings/IconResizer;->mCanvas:Landroid/graphics/Canvas;
+    iget-object v1, p0, Lcom/android/settings_ex/IconResizer;->mCanvas:Landroid/graphics/Canvas;
 
     .line 98
     .local v1, "canvas":Landroid/graphics/Canvas;
     invoke-virtual {v1, v7}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
     .line 104
-    iget-object v11, p0, Lcom/android/settings/IconResizer;->mOldBounds:Landroid/graphics/Rect;
+    iget-object v11, p0, Lcom/android/settings_ex/IconResizer;->mOldBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
@@ -259,7 +259,7 @@
     invoke-virtual {v11, v12}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     .line 105
-    iget v11, p0, Lcom/android/settings/IconResizer;->mIconWidth:I
+    iget v11, p0, Lcom/android/settings_ex/IconResizer;->mIconWidth:I
 
     sub-int/2addr v11, v8
 
@@ -267,7 +267,7 @@
 
     .line 106
     .local v9, "x":I
-    iget v11, p0, Lcom/android/settings/IconResizer;->mIconHeight:I
+    iget v11, p0, Lcom/android/settings_ex/IconResizer;->mIconHeight:I
 
     sub-int/2addr v11, v2
 
@@ -285,7 +285,7 @@
     invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     .line 109
-    iget-object v11, p0, Lcom/android/settings/IconResizer;->mOldBounds:Landroid/graphics/Rect;
+    iget-object v11, p0, Lcom/android/settings_ex/IconResizer;->mOldBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v11}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
@@ -293,7 +293,7 @@
     new-instance p1, Landroid/graphics/drawable/BitmapDrawable;
 
     .end local p1    # "icon":Landroid/graphics/drawable/Drawable;
-    iget-object v11, p0, Lcom/android/settings/IconResizer;->mContext:Landroid/content/Context;
+    iget-object v11, p0, Lcom/android/settings_ex/IconResizer;->mContext:Landroid/content/Context;
 
     invoke-virtual {v11}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -354,9 +354,9 @@
 
     .line 116
     .restart local v0    # "c":Landroid/graphics/Bitmap$Config;
-    iget v11, p0, Lcom/android/settings/IconResizer;->mIconWidth:I
+    iget v11, p0, Lcom/android/settings_ex/IconResizer;->mIconWidth:I
 
-    iget v12, p0, Lcom/android/settings/IconResizer;->mIconHeight:I
+    iget v12, p0, Lcom/android/settings_ex/IconResizer;->mIconHeight:I
 
     invoke-static {v11, v12, v0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
@@ -364,14 +364,14 @@
 
     .line 117
     .restart local v7    # "thumb":Landroid/graphics/Bitmap;
-    iget-object v1, p0, Lcom/android/settings/IconResizer;->mCanvas:Landroid/graphics/Canvas;
+    iget-object v1, p0, Lcom/android/settings_ex/IconResizer;->mCanvas:Landroid/graphics/Canvas;
 
     .line 118
     .restart local v1    # "canvas":Landroid/graphics/Canvas;
     invoke-virtual {v1, v7}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
     .line 119
-    iget-object v11, p0, Lcom/android/settings/IconResizer;->mOldBounds:Landroid/graphics/Rect;
+    iget-object v11, p0, Lcom/android/settings_ex/IconResizer;->mOldBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
@@ -402,7 +402,7 @@
     invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     .line 124
-    iget-object v11, p0, Lcom/android/settings/IconResizer;->mOldBounds:Landroid/graphics/Rect;
+    iget-object v11, p0, Lcom/android/settings_ex/IconResizer;->mOldBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v11}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
@@ -410,7 +410,7 @@
     new-instance p1, Landroid/graphics/drawable/BitmapDrawable;
 
     .end local p1    # "icon":Landroid/graphics/drawable/Drawable;
-    iget-object v11, p0, Lcom/android/settings/IconResizer;->mContext:Landroid/content/Context;
+    iget-object v11, p0, Lcom/android/settings_ex/IconResizer;->mContext:Landroid/content/Context;
 
     invoke-virtual {v11}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -431,7 +431,7 @@
 
     .prologue
     .line 134
-    iget-object v0, p0, Lcom/android/settings/IconResizer;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/settings_ex/IconResizer;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -443,9 +443,9 @@
 
     float-to-int v0, v0
 
-    iput v0, p0, Lcom/android/settings/IconResizer;->mIconHeight:I
+    iput v0, p0, Lcom/android/settings_ex/IconResizer;->mIconHeight:I
 
-    iput v0, p0, Lcom/android/settings/IconResizer;->mIconWidth:I
+    iput v0, p0, Lcom/android/settings_ex/IconResizer;->mIconWidth:I
 
     .line 135
     return-void

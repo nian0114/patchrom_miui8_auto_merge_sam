@@ -1,14 +1,14 @@
-.class public Lcom/android/settings/activekey/ActiveKeySettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/activekey/ActiveKeySettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "ActiveKeySettings.java"
 
 # interfaces
 .implements Landroid/preference/Preference$OnPreferenceChangeListener;
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # static fields
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 
 # instance fields
@@ -27,11 +27,11 @@
 
     .prologue
     .line 234
-    new-instance v0, Lcom/android/settings/activekey/ActiveKeySettings$1;
+    new-instance v0, Lcom/android/settings_ex/activekey/ActiveKeySettings$1;
 
-    invoke-direct {v0}, Lcom/android/settings/activekey/ActiveKeySettings$1;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/activekey/ActiveKeySettings$1;-><init>()V
 
-    sput-object v0, Lcom/android/settings/activekey/ActiveKeySettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/activekey/ActiveKeySettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -41,12 +41,12 @@
 
     .prologue
     .line 47
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 70
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/activekey/ActiveKeySettings;->mCurrentHeaderView:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/settings_ex/activekey/ActiveKeySettings;->mCurrentHeaderView:Landroid/view/View;
 
     return-void
 .end method
@@ -56,16 +56,16 @@
 
     .prologue
     .line 117
-    iget-object v8, p0, Lcom/android/settings/activekey/ActiveKeySettings;->mCurrentHeaderView:Landroid/view/View;
+    iget-object v8, p0, Lcom/android/settings_ex/activekey/ActiveKeySettings;->mCurrentHeaderView:Landroid/view/View;
 
     if-eqz v8, :cond_0
 
     .line 118
-    invoke-virtual {p0}, Lcom/android/settings/activekey/ActiveKeySettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v8
 
-    iget-object v9, p0, Lcom/android/settings/activekey/ActiveKeySettings;->mCurrentHeaderView:Landroid/view/View;
+    iget-object v9, p0, Lcom/android/settings_ex/activekey/ActiveKeySettings;->mCurrentHeaderView:Landroid/view/View;
 
     invoke-virtual {v8, v9}, Landroid/widget/ListView;->removeHeaderView(Landroid/view/View;)Z
 
@@ -98,9 +98,9 @@
     .line 122
     .end local v2    # "isRemoved":Z
     :cond_0
-    iget-object v9, p0, Lcom/android/settings/activekey/ActiveKeySettings;->mOnLockScreen:Landroid/preference/SwitchPreference;
+    iget-object v9, p0, Lcom/android/settings_ex/activekey/ActiveKeySettings;->mOnLockScreen:Landroid/preference/SwitchPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/activekey/ActiveKeySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v8
 
@@ -124,7 +124,7 @@
     invoke-virtual {v9, v8}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 124
-    invoke-virtual {p0}, Lcom/android/settings/activekey/ActiveKeySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v8
 
@@ -140,14 +140,14 @@
 
     .line 126
     .local v3, "longPressDB":Ljava/lang/String;
-    invoke-static {}, Lcom/android/settings/Utils;->hasXcoverKeySetting()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->hasXcoverKeySetting()Z
 
     move-result v8
 
     if-eqz v8, :cond_4
 
     .line 127
-    invoke-virtual {p0}, Lcom/android/settings/activekey/ActiveKeySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v8
 
@@ -159,13 +159,13 @@
 
     .line 131
     :goto_1
-    invoke-virtual {p0, v5}, Lcom/android/settings/activekey/ActiveKeySettings;->getApplicationName(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->getApplicationName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
     .line 132
     .local v6, "short_press_app":Ljava/lang/String;
-    invoke-virtual {p0, v3}, Lcom/android/settings/activekey/ActiveKeySettings;->getApplicationName(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->getApplicationName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -239,7 +239,7 @@
     .line 136
     const-string v8, "layout_inflater"
 
-    invoke-virtual {p0, v8}, Lcom/android/settings/activekey/ActiveKeySettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v8}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -267,7 +267,7 @@
 
     .line 141
     .local v7, "tvSummary":Landroid/widget/TextView;
-    invoke-static {}, Lcom/android/settings/Utils;->hasXcoverKeySetting()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->hasXcoverKeySetting()Z
 
     move-result v8
 
@@ -292,7 +292,7 @@
 
     .line 149
     :cond_1
-    invoke-static {}, Lcom/android/settings/Utils;->hasXcoverKeySetting()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->hasXcoverKeySetting()Z
 
     move-result v8
 
@@ -310,7 +310,7 @@
     if-eqz v8, :cond_6
 
     .line 151
-    iget-object v8, p0, Lcom/android/settings/activekey/ActiveKeySettings;->mShortPress:Landroid/preference/PreferenceScreen;
+    iget-object v8, p0, Lcom/android/settings_ex/activekey/ActiveKeySettings;->mShortPress:Landroid/preference/PreferenceScreen;
 
     const v9, 0x7f0e00a4
 
@@ -330,7 +330,7 @@
 
     .line 165
     :cond_2
-    invoke-static {}, Lcom/android/settings/Utils;->hasXcoverKeySetting()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->hasXcoverKeySetting()Z
 
     move-result v8
 
@@ -348,7 +348,7 @@
     if-eqz v8, :cond_9
 
     .line 167
-    iget-object v8, p0, Lcom/android/settings/activekey/ActiveKeySettings;->mLongPress:Landroid/preference/PreferenceScreen;
+    iget-object v8, p0, Lcom/android/settings_ex/activekey/ActiveKeySettings;->mLongPress:Landroid/preference/PreferenceScreen;
 
     const v9, 0x7f0e00a4
 
@@ -356,7 +356,7 @@
 
     .line 179
     :goto_4
-    invoke-virtual {p0}, Lcom/android/settings/activekey/ActiveKeySettings;->getListView()Landroid/widget/ListView;
+    invoke-virtual {p0}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->getListView()Landroid/widget/ListView;
 
     move-result-object v8
 
@@ -367,7 +367,7 @@
     invoke-virtual {v8, v0, v9, v10}, Landroid/widget/ListView;->addHeaderView(Landroid/view/View;Ljava/lang/Object;Z)V
 
     .line 180
-    iput-object v0, p0, Lcom/android/settings/activekey/ActiveKeySettings;->mCurrentHeaderView:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/settings_ex/activekey/ActiveKeySettings;->mCurrentHeaderView:Landroid/view/View;
 
     .line 181
     return-void
@@ -389,7 +389,7 @@
     .restart local v3    # "longPressDB":Ljava/lang/String;
     .restart local v5    # "shortPressDB":Ljava/lang/String;
     :cond_4
-    invoke-virtual {p0}, Lcom/android/settings/activekey/ActiveKeySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v8
 
@@ -414,7 +414,7 @@
 
     const v9, 0x7f0e0096
 
-    invoke-virtual {p0, v9}, Lcom/android/settings/activekey/ActiveKeySettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
@@ -430,7 +430,7 @@
 
     const v9, 0x7f0e009a
 
-    invoke-virtual {p0, v9}, Lcom/android/settings/activekey/ActiveKeySettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v9}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
@@ -448,7 +448,7 @@
 
     .line 153
     :cond_6
-    iget-object v8, p0, Lcom/android/settings/activekey/ActiveKeySettings;->mShortPress:Landroid/preference/PreferenceScreen;
+    iget-object v8, p0, Lcom/android/settings_ex/activekey/ActiveKeySettings;->mShortPress:Landroid/preference/PreferenceScreen;
 
     const v9, 0x7f0e00a3
 
@@ -458,14 +458,14 @@
 
     .line 155
     :cond_7
-    iget-object v8, p0, Lcom/android/settings/activekey/ActiveKeySettings;->mShortPress:Landroid/preference/PreferenceScreen;
+    iget-object v8, p0, Lcom/android/settings_ex/activekey/ActiveKeySettings;->mShortPress:Landroid/preference/PreferenceScreen;
 
     const v9, 0x7f0e0fa5
 
     invoke-virtual {v8, v9}, Landroid/preference/PreferenceScreen;->setSummary(I)V
 
     .line 156
-    invoke-virtual {p0}, Lcom/android/settings/activekey/ActiveKeySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v8
 
@@ -479,7 +479,7 @@
 
     .line 161
     :cond_8
-    iget-object v8, p0, Lcom/android/settings/activekey/ActiveKeySettings;->mShortPress:Landroid/preference/PreferenceScreen;
+    iget-object v8, p0, Lcom/android/settings_ex/activekey/ActiveKeySettings;->mShortPress:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v8, v6}, Landroid/preference/PreferenceScreen;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -487,7 +487,7 @@
 
     .line 169
     :cond_9
-    iget-object v8, p0, Lcom/android/settings/activekey/ActiveKeySettings;->mLongPress:Landroid/preference/PreferenceScreen;
+    iget-object v8, p0, Lcom/android/settings_ex/activekey/ActiveKeySettings;->mLongPress:Landroid/preference/PreferenceScreen;
 
     const v9, 0x7f0e00a3
 
@@ -497,14 +497,14 @@
 
     .line 171
     :cond_a
-    iget-object v8, p0, Lcom/android/settings/activekey/ActiveKeySettings;->mLongPress:Landroid/preference/PreferenceScreen;
+    iget-object v8, p0, Lcom/android/settings_ex/activekey/ActiveKeySettings;->mLongPress:Landroid/preference/PreferenceScreen;
 
     const v9, 0x7f0e0fa5
 
     invoke-virtual {v8, v9}, Landroid/preference/PreferenceScreen;->setSummary(I)V
 
     .line 172
-    invoke-virtual {p0}, Lcom/android/settings/activekey/ActiveKeySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v8
 
@@ -518,7 +518,7 @@
 
     .line 176
     :cond_b
-    iget-object v8, p0, Lcom/android/settings/activekey/ActiveKeySettings;->mLongPress:Landroid/preference/PreferenceScreen;
+    iget-object v8, p0, Lcom/android/settings_ex/activekey/ActiveKeySettings;->mLongPress:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v8, v4}, Landroid/preference/PreferenceScreen;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -612,7 +612,7 @@
     .line 194
     .local v1, "activity_name":Ljava/lang/String;
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/settings/activekey/ActiveKeySettings;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v8
 
@@ -628,7 +628,7 @@
 
     .line 196
     .local v5, "info":Landroid/content/pm/ActivityInfo;
-    invoke-virtual {p0}, Lcom/android/settings/activekey/ActiveKeySettings;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v8
 
@@ -686,10 +686,10 @@
 
     .prologue
     .line 78
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 80
-    invoke-static {}, Lcom/android/settings/Utils;->hasXcoverKeySetting()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->hasXcoverKeySetting()Z
 
     move-result v0
 
@@ -698,44 +698,44 @@
     .line 81
     const v0, 0x7f0800eb
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/activekey/ActiveKeySettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->addPreferencesFromResource(I)V
 
     .line 85
     :goto_0
     const-string v0, "short_press_key"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/activekey/ActiveKeySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    iput-object v0, p0, Lcom/android/settings/activekey/ActiveKeySettings;->mShortPress:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/activekey/ActiveKeySettings;->mShortPress:Landroid/preference/PreferenceScreen;
 
     .line 86
     const-string v0, "long_press_key"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/activekey/ActiveKeySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/PreferenceScreen;
 
-    iput-object v0, p0, Lcom/android/settings/activekey/ActiveKeySettings;->mLongPress:Landroid/preference/PreferenceScreen;
+    iput-object v0, p0, Lcom/android/settings_ex/activekey/ActiveKeySettings;->mLongPress:Landroid/preference/PreferenceScreen;
 
     .line 87
     const-string v0, "active_key_on_lockscreen_key"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/activekey/ActiveKeySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/SwitchPreference;
 
-    iput-object v0, p0, Lcom/android/settings/activekey/ActiveKeySettings;->mOnLockScreen:Landroid/preference/SwitchPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/activekey/ActiveKeySettings;->mOnLockScreen:Landroid/preference/SwitchPreference;
 
     .line 88
-    iget-object v0, p0, Lcom/android/settings/activekey/ActiveKeySettings;->mOnLockScreen:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/activekey/ActiveKeySettings;->mOnLockScreen:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v0, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -746,7 +746,7 @@
     :cond_0
     const v0, 0x7f08000b
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/activekey/ActiveKeySettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->addPreferencesFromResource(I)V
 
     goto :goto_0
 .end method
@@ -756,7 +756,7 @@
 
     .prologue
     .line 105
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 106
     const-string v0, "ActiveKeySettings"
@@ -789,7 +789,7 @@
 
     .line 226
     .local v0, "value":Z
-    iget-object v3, p0, Lcom/android/settings/activekey/ActiveKeySettings;->mOnLockScreen:Landroid/preference/SwitchPreference;
+    iget-object v3, p0, Lcom/android/settings_ex/activekey/ActiveKeySettings;->mOnLockScreen:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v3, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -798,7 +798,7 @@
     if-eqz v3, :cond_1
 
     .line 227
-    invoke-virtual {p0}, Lcom/android/settings/activekey/ActiveKeySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -834,7 +834,7 @@
     const/4 v1, 0x1
 
     .line 206
-    iget-object v2, p0, Lcom/android/settings/activekey/ActiveKeySettings;->mShortPress:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/activekey/ActiveKeySettings;->mShortPress:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {p2, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -863,7 +863,7 @@
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 210
-    invoke-virtual {p0, v0}, Lcom/android/settings/activekey/ActiveKeySettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->startActivity(Landroid/content/Intent;)V
 
     .line 219
     .end local v0    # "intent":Landroid/content/Intent;
@@ -872,7 +872,7 @@
 
     .line 212
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/activekey/ActiveKeySettings;->mLongPress:Landroid/preference/PreferenceScreen;
+    iget-object v2, p0, Lcom/android/settings_ex/activekey/ActiveKeySettings;->mLongPress:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {p2, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -901,14 +901,14 @@
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 216
-    invoke-virtual {p0, v0}, Lcom/android/settings/activekey/ActiveKeySettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 
     .line 219
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_1
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v1
 
@@ -920,7 +920,7 @@
 
     .prologue
     .line 92
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 95
     new-instance v0, Landroid/content/Intent;
@@ -934,14 +934,14 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 97
-    invoke-virtual {p0}, Lcom/android/settings/activekey/ActiveKeySettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;)V
 
     .line 99
-    invoke-direct {p0}, Lcom/android/settings/activekey/ActiveKeySettings;->updateUI()V
+    invoke-direct {p0}, Lcom/android/settings_ex/activekey/ActiveKeySettings;->updateUI()V
 
     .line 100
     const-string v1, "ActiveKeySettings"
@@ -959,7 +959,7 @@
 
     .prologue
     .line 111
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onStop()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onStop()V
 
     .line 112
     const-string v0, "ActiveKeySettings"

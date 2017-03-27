@@ -1,11 +1,11 @@
-.class Lcom/android/settings/WirelessSettings$3;
+.class Lcom/android/settings_ex/WirelessSettings$3;
 .super Landroid/database/ContentObserver;
 .source "WirelessSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/WirelessSettings;
+    value = Lcom/android/settings_ex/WirelessSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/WirelessSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/WirelessSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/WirelessSettings;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/settings_ex/WirelessSettings;Landroid/os/Handler;)V
     .locals 0
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
     .line 180
-    iput-object p1, p0, Lcom/android/settings/WirelessSettings$3;->this$0:Lcom/android/settings/WirelessSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/WirelessSettings$3;->this$0:Lcom/android/settings_ex/WirelessSettings;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -40,18 +40,18 @@
 
     .prologue
     .line 183
-    iget-object v2, p0, Lcom/android/settings/WirelessSettings$3;->this$0:Lcom/android/settings/WirelessSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/WirelessSettings$3;->this$0:Lcom/android/settings_ex/WirelessSettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Lcom/android/settings_ex/WirelessSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
     .line 184
-    iget-object v2, p0, Lcom/android/settings/WirelessSettings$3;->this$0:Lcom/android/settings/WirelessSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/WirelessSettings$3;->this$0:Lcom/android/settings_ex/WirelessSettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Lcom/android/settings_ex/WirelessSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -63,17 +63,17 @@
     .local v1, "resolver":Landroid/content/ContentResolver;
     if-eqz v1, :cond_0
 
-    iget-object v2, p0, Lcom/android/settings/WirelessSettings$3;->this$0:Lcom/android/settings/WirelessSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/WirelessSettings$3;->this$0:Lcom/android/settings_ex/WirelessSettings;
 
-    # getter for: Lcom/android/settings/WirelessSettings;->mNearbyScanning:Landroid/preference/PreferenceScreen;
-    invoke-static {v2}, Lcom/android/settings/WirelessSettings;->access$100(Lcom/android/settings/WirelessSettings;)Landroid/preference/PreferenceScreen;
+    # getter for: Lcom/android/settings_ex/WirelessSettings;->mNearbyScanning:Landroid/preference/PreferenceScreen;
+    invoke-static {v2}, Lcom/android/settings_ex/WirelessSettings;->access$100(Lcom/android/settings_ex/WirelessSettings;)Landroid/preference/PreferenceScreen;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
     .line 186
-    invoke-static {v1}, Lcom/android/settings/nearbyscan/Util;->getDBInt(Landroid/content/ContentResolver;)I
+    invoke-static {v1}, Lcom/android/settings_ex/nearbyscan/Util;->getDBInt(Landroid/content/ContentResolver;)I
 
     move-result v0
 
@@ -102,10 +102,10 @@
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 189
-    iget-object v2, p0, Lcom/android/settings/WirelessSettings$3;->this$0:Lcom/android/settings/WirelessSettings;
+    iget-object v2, p0, Lcom/android/settings_ex/WirelessSettings$3;->this$0:Lcom/android/settings_ex/WirelessSettings;
 
-    # getter for: Lcom/android/settings/WirelessSettings;->mNearbyScanning:Landroid/preference/PreferenceScreen;
-    invoke-static {v2}, Lcom/android/settings/WirelessSettings;->access$100(Lcom/android/settings/WirelessSettings;)Landroid/preference/PreferenceScreen;
+    # getter for: Lcom/android/settings_ex/WirelessSettings;->mNearbyScanning:Landroid/preference/PreferenceScreen;
+    invoke-static {v2}, Lcom/android/settings_ex/WirelessSettings;->access$100(Lcom/android/settings_ex/WirelessSettings;)Landroid/preference/PreferenceScreen;
 
     move-result-object v3
 

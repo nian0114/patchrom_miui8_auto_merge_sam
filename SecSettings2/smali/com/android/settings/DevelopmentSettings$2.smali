@@ -1,4 +1,4 @@
-.class Lcom/android/settings/DevelopmentSettings$2;
+.class Lcom/android/settings_ex/DevelopmentSettings$2;
 .super Ljava/lang/Object;
 .source "DevelopmentSettings.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/DevelopmentSettings;->confirmEnableOemUnlock()V
+    value = Lcom/android/settings_ex/DevelopmentSettings;->confirmEnableOemUnlock()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/DevelopmentSettings;
+.field final synthetic this$0:Lcom/android/settings_ex/DevelopmentSettings;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/DevelopmentSettings;)V
+.method constructor <init>(Lcom/android/settings_ex/DevelopmentSettings;)V
     .locals 0
 
     .prologue
     .line 1753
-    iput-object p1, p0, Lcom/android/settings/DevelopmentSettings$2;->this$0:Lcom/android/settings/DevelopmentSettings;
+    iput-object p1, p0, Lcom/android/settings_ex/DevelopmentSettings$2;->this$0:Lcom/android/settings_ex/DevelopmentSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,10 +43,10 @@
 
     .prologue
     .line 1756
-    iget-object v0, p0, Lcom/android/settings/DevelopmentSettings$2;->this$0:Lcom/android/settings/DevelopmentSettings;
+    iget-object v0, p0, Lcom/android/settings_ex/DevelopmentSettings$2;->this$0:Lcom/android/settings_ex/DevelopmentSettings;
 
-    # getter for: Lcom/android/settings/DevelopmentSettings;->mEnableOemUnlock:Landroid/preference/SwitchPreference;
-    invoke-static {v0}, Lcom/android/settings/DevelopmentSettings;->access$100(Lcom/android/settings/DevelopmentSettings;)Landroid/preference/SwitchPreference;
+    # getter for: Lcom/android/settings_ex/DevelopmentSettings;->mEnableOemUnlock:Landroid/preference/SwitchPreference;
+    invoke-static {v0}, Lcom/android/settings_ex/DevelopmentSettings;->access$100(Lcom/android/settings_ex/DevelopmentSettings;)Landroid/preference/SwitchPreference;
 
     move-result-object v0
 

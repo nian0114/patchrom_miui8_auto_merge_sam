@@ -1,17 +1,17 @@
-.class public Lcom/android/settings/LockscreenMenuSettings;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/LockscreenMenuSettings;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "LockscreenMenuSettings.java"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnClickListener;
 .implements Landroid/preference/Preference$OnPreferenceChangeListener;
-.implements Lcom/android/settings/search/Indexable;
+.implements Lcom/android/settings_ex/search/Indexable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/settings/LockscreenMenuSettings$ScreenLockSearchIndexProvider;
+        Lcom/android/settings_ex/LockscreenMenuSettings$ScreenLockSearchIndexProvider;
     }
 .end annotation
 
@@ -19,7 +19,7 @@
 # static fields
 .field private static final MY_USER_ID:I
 
-.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+.field public static final SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
 .field public static mContext:Landroid/content/Context;
 
@@ -29,7 +29,7 @@
 
 .field private mAppOpsSettings:Landroid/preference/Preference;
 
-.field private mChooseLockSettingsHelper:Lcom/android/settings/ChooseLockSettingsHelper;
+.field private mChooseLockSettingsHelper:Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
 .field private mDPM:Landroid/app/admin/DevicePolicyManager;
 
@@ -70,14 +70,14 @@
 
     move-result v0
 
-    sput v0, Lcom/android/settings/LockscreenMenuSettings;->MY_USER_ID:I
+    sput v0, Lcom/android/settings_ex/LockscreenMenuSettings;->MY_USER_ID:I
 
     .line 880
-    new-instance v0, Lcom/android/settings/LockscreenMenuSettings$ScreenLockSearchIndexProvider;
+    new-instance v0, Lcom/android/settings_ex/LockscreenMenuSettings$ScreenLockSearchIndexProvider;
 
-    invoke-direct {v0}, Lcom/android/settings/LockscreenMenuSettings$ScreenLockSearchIndexProvider;-><init>()V
+    invoke-direct {v0}, Lcom/android/settings_ex/LockscreenMenuSettings$ScreenLockSearchIndexProvider;-><init>()V
 
-    sput-object v0, Lcom/android/settings/LockscreenMenuSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings/search/Indexable$SearchIndexProvider;
+    sput-object v0, Lcom/android/settings_ex/LockscreenMenuSettings;->SEARCH_INDEX_DATA_PROVIDER:Lcom/android/settings_ex/search/Indexable$SearchIndexProvider;
 
     return-void
 .end method
@@ -89,16 +89,16 @@
     const/4 v0, 0x0
 
     .line 76
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 101
-    iput-boolean v0, p0, Lcom/android/settings/LockscreenMenuSettings;->mHasSPenFeature:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mHasSPenFeature:Z
 
     .line 129
-    iput-boolean v0, p0, Lcom/android/settings/LockscreenMenuSettings;->isKioskContainer:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->isKioskContainer:Z
 
     .line 134
-    iput-boolean v0, p0, Lcom/android/settings/LockscreenMenuSettings;->mFromPackageInstaller:Z
+    iput-boolean v0, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mFromPackageInstaller:Z
 
     .line 881
     return-void
@@ -114,13 +114,13 @@
     .line 370
     const-string v6, "unlock_set_or_change"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
     check-cast v6, Landroid/preference/PreferenceScreen;
 
-    iput-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mLockType:Landroid/preference/PreferenceScreen;
+    iput-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockType:Landroid/preference/PreferenceScreen;
 
     .line 373
     const-string v6, "persist.keyguard.ucs.csname"
@@ -133,7 +133,7 @@
 
     .line 374
     .local v4, "ucmPasswordcsName":Ljava/lang/String;
-    iget-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mLockType:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockType:Landroid/preference/PreferenceScreen;
 
     if-eqz v6, :cond_1
 
@@ -182,7 +182,7 @@
 
     .line 380
     :cond_0
-    iget-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mLockType:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockType:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v6, v4}, Landroid/preference/PreferenceScreen;->setSummary(Ljava/lang/CharSequence;)V
 
@@ -192,49 +192,49 @@
     :goto_0
     const-string v6, "secured_lock_settigns"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
     check-cast v6, Landroid/preference/PreferenceScreen;
 
-    iput-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mSecuredLockSettings:Landroid/preference/PreferenceScreen;
+    iput-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mSecuredLockSettings:Landroid/preference/PreferenceScreen;
 
     .line 387
     const-string v6, "show_information"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
     check-cast v6, Landroid/preference/PreferenceScreen;
 
-    iput-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mShowInfomation:Landroid/preference/PreferenceScreen;
+    iput-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mShowInfomation:Landroid/preference/PreferenceScreen;
 
     .line 388
     const-string v6, "lock_screen_menu_notifications"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
     check-cast v6, Landroid/preference/PreferenceScreen;
 
-    iput-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mLockscreenNotification:Landroid/preference/PreferenceScreen;
+    iput-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockscreenNotification:Landroid/preference/PreferenceScreen;
 
     .line 389
-    iget-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mLockscreenNotification:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockscreenNotification:Landroid/preference/PreferenceScreen;
 
     if-eqz v6, :cond_2
 
     .line 390
-    iget-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mLockscreenNotification:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockscreenNotification:Landroid/preference/PreferenceScreen;
 
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
-    invoke-static {v7}, Lcom/android/settings/Utils;->getLockScreenShowNotificationSummary(Landroid/content/Context;)I
+    invoke-static {v7}, Lcom/android/settings_ex/Utils;->getLockScreenShowNotificationSummary(Landroid/content/Context;)I
 
     move-result v7
 
@@ -242,37 +242,37 @@
 
     .line 393
     :cond_2
-    iget-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mShowInfomation:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mShowInfomation:Landroid/preference/PreferenceScreen;
 
     if-eqz v6, :cond_3
 
     .line 394
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/android/settings/Utils;->isCoverVerified(Landroid/content/Context;)Z
+    invoke-static {v6}, Lcom/android/settings_ex/Utils;->isCoverVerified(Landroid/content/Context;)Z
 
     move-result v6
 
     if-eqz v6, :cond_c
 
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/android/settings/Utils;->hasCoverSettingOptions(Landroid/content/Context;)Z
+    invoke-static {v6}, Lcom/android/settings_ex/Utils;->hasCoverSettingOptions(Landroid/content/Context;)Z
 
     move-result v6
 
     if-eqz v6, :cond_c
 
     .line 395
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/android/settings/Utils;->getTypeOfCover(Landroid/content/Context;)I
+    invoke-static {v6}, Lcom/android/settings_ex/Utils;->getTypeOfCover(Landroid/content/Context;)I
 
     move-result v0
 
@@ -283,7 +283,7 @@
     if-eq v0, v6, :cond_3
 
     .line 397
-    iget-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mShowInfomation:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mShowInfomation:Landroid/preference/PreferenceScreen;
 
     const v7, 0x7f0e14f5
 
@@ -295,43 +295,43 @@
     :goto_1
     const-string v6, "swipe_lock_settings"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
     check-cast v6, Landroid/preference/PreferenceScreen;
 
-    iput-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mSwipeLockSettings:Landroid/preference/PreferenceScreen;
+    iput-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mSwipeLockSettings:Landroid/preference/PreferenceScreen;
 
     .line 405
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/android/settings/Utils;->hasSPenFeature(Landroid/content/Context;)Z
+    invoke-static {v6}, Lcom/android/settings_ex/Utils;->hasSPenFeature(Landroid/content/Context;)Z
 
     move-result v6
 
-    iput-boolean v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mHasSPenFeature:Z
+    iput-boolean v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mHasSPenFeature:Z
 
     .line 407
     const-string v6, "unlock_effect_with_preview"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
     check-cast v6, Landroid/preference/PreferenceScreen;
 
-    iput-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mUnlockEffect:Landroid/preference/PreferenceScreen;
+    iput-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mUnlockEffect:Landroid/preference/PreferenceScreen;
 
     .line 408
-    iget-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mUnlockEffect:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mUnlockEffect:Landroid/preference/PreferenceScreen;
 
     if-eqz v6, :cond_4
 
     .line 409
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -345,9 +345,9 @@
 
     .line 410
     .local v5, "value":I
-    iget-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mUnlockEffect:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mUnlockEffect:Landroid/preference/PreferenceScreen;
 
-    sget-object v7, Lcom/android/settings/UnlockEffect;->EffectName:[I
+    sget-object v7, Lcom/android/settings_ex/UnlockEffect;->EffectName:[I
 
     aget v7, v7, v5
 
@@ -358,42 +358,42 @@
     :cond_4
     const-string v6, "toggle_install_applications"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
     check-cast v6, Landroid/preference/SwitchPreference;
 
-    iput-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iput-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     .line 417
-    iget-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     if-eqz v6, :cond_5
 
     .line 418
-    iget-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
-    invoke-direct {p0}, Lcom/android/settings/LockscreenMenuSettings;->isNonMarketAppsAllowed()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->isNonMarketAppsAllowed()Z
 
     move-result v7
 
     invoke-virtual {v6, v7}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 419
-    iget-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v6, p0}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
     .line 420
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v6
 
     if-eqz v6, :cond_5
 
     .line 421
-    iget-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     const v7, 0x7f0e163a
 
@@ -403,22 +403,22 @@
     :cond_5
     const-string v6, "find_my_mobile"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mFindMyMobile:Landroid/preference/Preference;
+    iput-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mFindMyMobile:Landroid/preference/Preference;
 
     .line 427
     const/4 v3, 0x0
 
     .line 428
     .local v3, "isSupportLMM":Z
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/android/settings/Utils;->isSupportLMM(Landroid/content/Context;)Z
+    invoke-static {v6}, Lcom/android/settings_ex/Utils;->isSupportLMM(Landroid/content/Context;)Z
 
     move-result v6
 
@@ -439,11 +439,11 @@
 
     .line 433
     .local v1, "hasFMMDMClient":Z
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/android/settings/Utils;->hasFMMDMClient(Landroid/content/Context;)Z
+    invoke-static {v6}, Lcom/android/settings_ex/Utils;->hasFMMDMClient(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -453,14 +453,14 @@
     if-nez v1, :cond_7
 
     .line 437
-    iget-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mFindMyMobile:Landroid/preference/Preference;
+    iget-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mFindMyMobile:Landroid/preference/Preference;
 
     const-string v7, ""
 
     invoke-virtual {v6, v7}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
     .line 438
-    iget-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mFindMyMobile:Landroid/preference/Preference;
+    iget-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mFindMyMobile:Landroid/preference/Preference;
 
     const v7, 0x7f0e1331
 
@@ -470,50 +470,50 @@
     :cond_7
     const-string v6, "finger_scanner"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mFingerSanner:Landroid/preference/Preference;
+    iput-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mFingerSanner:Landroid/preference/Preference;
 
     .line 442
     const-string v6, "app_ops_settings"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v6
 
-    iput-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mAppOpsSettings:Landroid/preference/Preference;
+    iput-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mAppOpsSettings:Landroid/preference/Preference;
 
     .line 444
-    iget-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mLockType:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockType:Landroid/preference/PreferenceScreen;
 
     if-eqz v6, :cond_8
 
     .line 445
-    iget-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mLockType:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockType:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v6, v9}, Landroid/preference/PreferenceScreen;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 446
     :cond_8
-    iget-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mLockscreenNotification:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockscreenNotification:Landroid/preference/PreferenceScreen;
 
     if-eqz v6, :cond_9
 
     .line 447
-    iget-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mLockscreenNotification:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockscreenNotification:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v6, v9}, Landroid/preference/PreferenceScreen;->setTwSummaryColorToColorPrimaryDark(Z)V
 
     .line 448
     :cond_9
-    iget-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mUnlockEffect:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mUnlockEffect:Landroid/preference/PreferenceScreen;
 
     if-eqz v6, :cond_a
 
     .line 449
-    iget-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mUnlockEffect:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mUnlockEffect:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v6, v9}, Landroid/preference/PreferenceScreen;->setTwSummaryColorToColorPrimaryDark(Z)V
 
@@ -528,9 +528,9 @@
     if-eqz p1, :cond_1
 
     .line 382
-    iget-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mLockType:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockType:Landroid/preference/PreferenceScreen;
 
-    invoke-direct {p0, p1}, Lcom/android/settings/LockscreenMenuSettings;->getLockTypeSummary(I)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/LockscreenMenuSettings;->getLockTypeSummary(I)Ljava/lang/String;
 
     move-result-object v7
 
@@ -540,18 +540,18 @@
 
     .line 399
     :cond_c
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/android/settings/Utils;->isWifiOnly(Landroid/content/Context;)Z
+    invoke-static {v6}, Lcom/android/settings_ex/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result v6
 
     if-eqz v6, :cond_3
 
     .line 400
-    iget-object v6, p0, Lcom/android/settings/LockscreenMenuSettings;->mShowInfomation:Landroid/preference/PreferenceScreen;
+    iget-object v6, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mShowInfomation:Landroid/preference/PreferenceScreen;
 
     const v7, 0x7f0e14f4
 
@@ -565,7 +565,7 @@
 
     .prologue
     .line 477
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v13
 
@@ -573,13 +573,13 @@
 
     move-result-object v13
 
-    invoke-static {v13}, Lcom/android/settings/Utils;->isShopDemo(Landroid/content/Context;)Z
+    invoke-static {v13}, Lcom/android/settings_ex/Utils;->isShopDemo(Landroid/content/Context;)Z
 
     move-result v8
 
     .line 478
     .local v8, "isShopDemo":Z
-    invoke-static {}, Lcom/android/settings/Utils;->isLDUModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isLDUModel()Z
 
     move-result v4
 
@@ -589,7 +589,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v13}, Lcom/android/settings/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v13}, Lcom/android/settings_ex/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v10
 
@@ -608,9 +608,9 @@
     :cond_1
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    sget v14, Lcom/android/settings/LockscreenMenuSettings;->MY_USER_ID:I
+    sget v14, Lcom/android/settings_ex/LockscreenMenuSettings;->MY_USER_ID:I
 
     invoke-virtual {v13, v14}, Lcom/android/internal/widget/LockPatternUtils;->isSecure(I)Z
 
@@ -620,9 +620,9 @@
     .local v7, "isSecured":Z
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    sget v14, Lcom/android/settings/LockscreenMenuSettings;->MY_USER_ID:I
+    sget v14, Lcom/android/settings_ex/LockscreenMenuSettings;->MY_USER_ID:I
 
     invoke-virtual {v13, v14}, Lcom/android/internal/widget/LockPatternUtils;->isLockScreenDisabled(I)Z
 
@@ -632,7 +632,7 @@
     .local v5, "isLockScreenDisabled":Z
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mLockType:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockType:Landroid/preference/PreferenceScreen;
 
     if-eqz v13, :cond_3
 
@@ -646,7 +646,7 @@
     :cond_2
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mLockType:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockType:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v10, v13}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
@@ -654,7 +654,7 @@
     :cond_3
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mSecuredLockSettings:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mSecuredLockSettings:Landroid/preference/PreferenceScreen;
 
     if-eqz v13, :cond_1c
 
@@ -663,7 +663,7 @@
     .line 491
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mSecuredLockSettings:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mSecuredLockSettings:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v10, v13}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
@@ -672,7 +672,7 @@
     :goto_1
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mShowInfomation:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mShowInfomation:Landroid/preference/PreferenceScreen;
 
     if-eqz v13, :cond_5
 
@@ -681,7 +681,7 @@
     .line 497
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mShowInfomation:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mShowInfomation:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v10, v13}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
@@ -692,14 +692,14 @@
     .line 501
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mLockscreenNotification:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockscreenNotification:Landroid/preference/PreferenceScreen;
 
     if-eqz v13, :cond_6
 
     .line 502
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mLockscreenNotification:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockscreenNotification:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v10, v13}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
@@ -707,22 +707,22 @@
     :cond_6
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mSwipeLockSettings:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mSwipeLockSettings:Landroid/preference/PreferenceScreen;
 
     if-eqz v13, :cond_8
 
     .line 507
-    sget-object v13, Lcom/android/settings/LockscreenMenuSettings;->mContext:Landroid/content/Context;
+    sget-object v13, Lcom/android/settings_ex/LockscreenMenuSettings;->mContext:Landroid/content/Context;
 
-    invoke-static {v13}, Lcom/android/settings/Utils;->isSupportedActionMemo(Landroid/content/Context;)Z
+    invoke-static {v13}, Lcom/android/settings_ex/Utils;->isSupportedActionMemo(Landroid/content/Context;)Z
 
     move-result v13
 
     if-eqz v13, :cond_7
 
-    sget-object v13, Lcom/android/settings/LockscreenMenuSettings;->mContext:Landroid/content/Context;
+    sget-object v13, Lcom/android/settings_ex/LockscreenMenuSettings;->mContext:Landroid/content/Context;
 
-    invoke-static {v13}, Lcom/android/settings/Utils;->isSupportedActionMemo(Landroid/content/Context;)Z
+    invoke-static {v13}, Lcom/android/settings_ex/Utils;->isSupportedActionMemo(Landroid/content/Context;)Z
 
     move-result v13
 
@@ -736,7 +736,7 @@
     :cond_7
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mSwipeLockSettings:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mSwipeLockSettings:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v10, v13}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
@@ -744,22 +744,22 @@
     :cond_8
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mUnlockEffect:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mUnlockEffect:Landroid/preference/PreferenceScreen;
 
     if-eqz v13, :cond_9
 
     .line 514
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mUnlockEffect:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mUnlockEffect:Landroid/preference/PreferenceScreen;
 
     invoke-virtual {v10, v13}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
     .line 532
     :cond_9
-    sget-object v13, Lcom/android/settings/LockscreenMenuSettings;->mContext:Landroid/content/Context;
+    sget-object v13, Lcom/android/settings_ex/LockscreenMenuSettings;->mContext:Landroid/content/Context;
 
-    invoke-static {v13}, Lcom/android/settings/Utils;->isLockMenuDisabledByEdm(Landroid/content/Context;)Z
+    invoke-static {v13}, Lcom/android/settings_ex/Utils;->isLockMenuDisabledByEdm(Landroid/content/Context;)Z
 
     move-result v13
 
@@ -776,7 +776,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v13}, Lcom/android/settings/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {v0, v13}, Lcom/android/settings_ex/LockscreenMenuSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v11
 
@@ -787,7 +787,7 @@
     if-eqz v11, :cond_0
 
     .line 545
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v13
 
@@ -803,7 +803,7 @@
     .local v12, "um":Landroid/os/UserManager;
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     if-eqz v13, :cond_e
 
@@ -813,7 +813,7 @@
     .line 549
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v14, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -855,7 +855,7 @@
     :cond_a
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     const/4 v14, 0x0
 
@@ -867,7 +867,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v13}, Lcom/android/settings/LockscreenMenuSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v13}, Lcom/android/settings_ex/LockscreenMenuSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v13
 
@@ -875,12 +875,12 @@
 
     move-object/from16 v0, p0
 
-    iput-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    iput-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mDPM:Landroid/app/admin/DevicePolicyManager;
 
     .line 558
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mDPM:Landroid/app/admin/DevicePolicyManager;
 
     const/4 v14, 0x0
 
@@ -892,7 +892,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mDPM:Landroid/app/admin/DevicePolicyManager;
 
     const/4 v14, 0x0
 
@@ -908,7 +908,7 @@
     .line 560
     .local v2, "blockUnsignedAppInstall":Z
     :goto_4
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v13
 
@@ -916,7 +916,7 @@
 
     const-string v15, "isNonMarketAppAllowed"
 
-    invoke-static {v13, v14, v15}, Lcom/android/settings/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v13, v14, v15}, Lcom/android/settings_ex/Utils;->getEnterprisePolicyEnabled(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v6
 
@@ -933,7 +933,7 @@
     .local v1, "allowSet":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mDPM:Landroid/app/admin/DevicePolicyManager;
 
     const/4 v14, 0x0
 
@@ -961,7 +961,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v13}, Landroid/preference/SwitchPreference;->isEnabled()Z
 
@@ -972,7 +972,7 @@
     .line 570
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     const/4 v14, 0x0
 
@@ -981,7 +981,7 @@
     .line 571
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     const v14, 0x10408a3
 
@@ -990,7 +990,7 @@
     .line 572
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     const/4 v14, 0x0
 
@@ -1001,7 +1001,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v13}, Lcom/android/settings/LockscreenMenuSettings;->setNonMarketAppsAllowed(Z)V
+    invoke-direct {v0, v13}, Lcom/android/settings_ex/LockscreenMenuSettings;->setNonMarketAppsAllowed(Z)V
 
     .line 590
     .end local v2    # "blockUnsignedAppInstall":Z
@@ -1010,14 +1010,14 @@
     :goto_5
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mAppOpsSettings:Landroid/preference/Preference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mAppOpsSettings:Landroid/preference/Preference;
 
     if-eqz v13, :cond_f
 
     .line 591
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mAppOpsSettings:Landroid/preference/Preference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mAppOpsSettings:Landroid/preference/Preference;
 
     invoke-virtual {v11, v13}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
@@ -1025,22 +1025,22 @@
     :cond_f
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mFingerSanner:Landroid/preference/Preference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mFingerSanner:Landroid/preference/Preference;
 
     if-eqz v13, :cond_10
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v13
 
-    invoke-static {v13}, Lcom/android/settings/Utils;->hasFingerprintFeature(Landroid/content/Context;)Z
+    invoke-static {v13}, Lcom/android/settings_ex/Utils;->hasFingerprintFeature(Landroid/content/Context;)Z
 
     move-result v13
 
     if-eqz v13, :cond_11
 
     :cond_10
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/LockscreenMenuSettings;->isGuestUser()Z
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->isGuestUser()Z
 
     move-result v13
 
@@ -1052,7 +1052,7 @@
     :cond_11
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mFingerSanner:Landroid/preference/Preference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mFingerSanner:Landroid/preference/Preference;
 
     invoke-virtual {v11, v13}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
@@ -1063,11 +1063,11 @@
 
     .line 601
     .local v9, "isSupportLMM":Z
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v13
 
-    invoke-static {v13}, Lcom/android/settings/Utils;->isSupportLMM(Landroid/content/Context;)Z
+    invoke-static {v13}, Lcom/android/settings_ex/Utils;->isSupportLMM(Landroid/content/Context;)Z
 
     move-result v13
 
@@ -1088,11 +1088,11 @@
 
     .line 606
     .local v3, "hasFMMDMClient":Z
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v13
 
-    invoke-static {v13}, Lcom/android/settings/Utils;->hasFMMDMClient(Landroid/content/Context;)Z
+    invoke-static {v13}, Lcom/android/settings_ex/Utils;->hasFMMDMClient(Landroid/content/Context;)Z
 
     move-result v3
 
@@ -1109,11 +1109,11 @@
 
     move-result-object v14
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v15
 
-    invoke-static {v15}, Lcom/android/settings/Utils;->isSupportLMM(Landroid/content/Context;)Z
+    invoke-static {v15}, Lcom/android/settings_ex/Utils;->isSupportLMM(Landroid/content/Context;)Z
 
     move-result v15
 
@@ -1163,13 +1163,13 @@
 
     move-result-object v14
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v15
 
     const-string v16, "com.sec.android.app.mt"
 
-    invoke-static/range {v15 .. v16}, Lcom/android/settings/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static/range {v15 .. v16}, Lcom/android/settings_ex/Utils;->hasPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v15
 
@@ -1196,11 +1196,11 @@
 
     move-result-object v14
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v15
 
-    invoke-static {v15}, Lcom/android/settings/Utils;->isSmsCapable(Landroid/content/Context;)Z
+    invoke-static {v15}, Lcom/android/settings_ex/Utils;->isSmsCapable(Landroid/content/Context;)Z
 
     move-result v15
 
@@ -1217,17 +1217,17 @@
     .line 613
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mFindMyMobile:Landroid/preference/Preference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mFindMyMobile:Landroid/preference/Preference;
 
     if-eqz v13, :cond_25
 
-    invoke-static {}, Lcom/android/settings/Utils;->isSprModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSprModel()Z
 
     move-result v13
 
     if-nez v13, :cond_14
 
-    invoke-static {}, Lcom/android/settings/Utils;->isT4RModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isT4RModel()Z
 
     move-result v13
 
@@ -1237,14 +1237,14 @@
     :cond_14
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mFindMyMobile:Landroid/preference/Preference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mFindMyMobile:Landroid/preference/Preference;
 
     invoke-virtual {v11, v13}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
     .line 625
     :cond_15
     :goto_7
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v13
 
@@ -1254,26 +1254,26 @@
 
     move-object/from16 v0, p0
 
-    iput-boolean v13, v0, Lcom/android/settings/LockscreenMenuSettings;->isKioskContainer:Z
+    iput-boolean v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->isKioskContainer:Z
 
     .line 627
     move-object/from16 v0, p0
 
-    iget-boolean v13, v0, Lcom/android/settings/LockscreenMenuSettings;->isKioskContainer:Z
+    iget-boolean v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->isKioskContainer:Z
 
     if-eqz v13, :cond_0
 
     .line 628
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mLockType:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockType:Landroid/preference/PreferenceScreen;
 
     if-eqz v13, :cond_16
 
     .line 629
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mLockType:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockType:Landroid/preference/PreferenceScreen;
 
     const/4 v14, 0x0
 
@@ -1283,14 +1283,14 @@
     :cond_16
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mUnlockEffect:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mUnlockEffect:Landroid/preference/PreferenceScreen;
 
     if-eqz v13, :cond_17
 
     .line 633
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mUnlockEffect:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mUnlockEffect:Landroid/preference/PreferenceScreen;
 
     const/4 v14, 0x0
 
@@ -1300,14 +1300,14 @@
     :cond_17
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mShowInfomation:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mShowInfomation:Landroid/preference/PreferenceScreen;
 
     if-eqz v13, :cond_18
 
     .line 637
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mShowInfomation:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mShowInfomation:Landroid/preference/PreferenceScreen;
 
     const/4 v14, 0x0
 
@@ -1317,14 +1317,14 @@
     :cond_18
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mSecuredLockSettings:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mSecuredLockSettings:Landroid/preference/PreferenceScreen;
 
     if-eqz v13, :cond_19
 
     .line 641
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mSecuredLockSettings:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mSecuredLockSettings:Landroid/preference/PreferenceScreen;
 
     const/4 v14, 0x0
 
@@ -1334,14 +1334,14 @@
     :cond_19
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mLockscreenNotification:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockscreenNotification:Landroid/preference/PreferenceScreen;
 
     if-eqz v13, :cond_1a
 
     .line 645
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mLockscreenNotification:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockscreenNotification:Landroid/preference/PreferenceScreen;
 
     const/4 v14, 0x0
 
@@ -1354,14 +1354,14 @@
     .line 649
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     if-eqz v13, :cond_1b
 
     .line 650
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v11, v13}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
@@ -1369,14 +1369,14 @@
     :cond_1b
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mFindMyMobile:Landroid/preference/Preference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mFindMyMobile:Landroid/preference/Preference;
 
     if-eqz v13, :cond_0
 
     .line 654
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mFindMyMobile:Landroid/preference/Preference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mFindMyMobile:Landroid/preference/Preference;
 
     invoke-virtual {v11, v13}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
@@ -1390,11 +1390,11 @@
     :cond_1c
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mSecuredLockSettings:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mSecuredLockSettings:Landroid/preference/PreferenceScreen;
 
     if-eqz v13, :cond_4
 
-    invoke-static {}, Lcom/android/settings/Utils;->isSupportPowerKey()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isSupportPowerKey()Z
 
     move-result v13
 
@@ -1403,7 +1403,7 @@
     .line 493
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mSecuredLockSettings:Landroid/preference/PreferenceScreen;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mSecuredLockSettings:Landroid/preference/PreferenceScreen;
 
     const/4 v14, 0x0
 
@@ -1440,7 +1440,7 @@
     if-nez v2, :cond_e
 
     .line 575
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaModel()Z
 
     move-result v13
 
@@ -1449,7 +1449,7 @@
     .line 576
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     const v14, 0x7f0e163a
 
@@ -1464,7 +1464,7 @@
     .line 583
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v14, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     const/4 v13, 0x1
 
@@ -1478,9 +1478,9 @@
     .line 584
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
-    invoke-direct/range {p0 .. p0}, Lcom/android/settings/LockscreenMenuSettings;->isNonMarketAppsAllowed()Z
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->isNonMarketAppsAllowed()Z
 
     move-result v14
 
@@ -1492,7 +1492,7 @@
     :cond_21
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     const v14, 0x7f0e0805
 
@@ -1512,7 +1512,7 @@
     :cond_23
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mFingerSanner:Landroid/preference/Preference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mFingerSanner:Landroid/preference/Preference;
 
     if-eqz v13, :cond_12
 
@@ -1526,7 +1526,7 @@
     :cond_24
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mFingerSanner:Landroid/preference/Preference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mFingerSanner:Landroid/preference/Preference;
 
     invoke-virtual {v11, v13}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
@@ -1538,7 +1538,7 @@
     :cond_25
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mFindMyMobile:Landroid/preference/Preference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mFindMyMobile:Landroid/preference/Preference;
 
     if-eqz v13, :cond_27
 
@@ -1558,7 +1558,7 @@
     :cond_26
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mFindMyMobile:Landroid/preference/Preference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mFindMyMobile:Landroid/preference/Preference;
 
     invoke-virtual {v11, v13}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
@@ -1568,7 +1568,7 @@
     :cond_27
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mFindMyMobile:Landroid/preference/Preference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mFindMyMobile:Landroid/preference/Preference;
 
     if-eqz v13, :cond_15
 
@@ -1579,32 +1579,32 @@
     .line 618
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/settings/LockscreenMenuSettings;->mFindMyMobile:Landroid/preference/Preference;
+    iget-object v13, v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mFindMyMobile:Landroid/preference/Preference;
 
     invoke-virtual {v11, v13}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
     goto/16 :goto_7
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/LockscreenMenuSettings;Z)V
+.method static synthetic access$000(Lcom/android/settings_ex/LockscreenMenuSettings;Z)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/LockscreenMenuSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/LockscreenMenuSettings;
     .param p1, "x1"    # Z
 
     .prologue
     .line 76
-    invoke-direct {p0, p1}, Lcom/android/settings/LockscreenMenuSettings;->setNonMarketAppsAllowed(Z)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/LockscreenMenuSettings;->setNonMarketAppsAllowed(Z)V
 
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/LockscreenMenuSettings;)Landroid/preference/SwitchPreference;
+.method static synthetic access$100(Lcom/android/settings_ex/LockscreenMenuSettings;)Landroid/preference/SwitchPreference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LockscreenMenuSettings;
+    .param p0, "x0"    # Lcom/android/settings_ex/LockscreenMenuSettings;
 
     .prologue
     .line 76
-    iget-object v0, p0, Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     return-object v0
 .end method
@@ -1614,7 +1614,7 @@
 
     .prologue
     .line 76
-    sget v0, Lcom/android/settings/LockscreenMenuSettings;->MY_USER_ID:I
+    sget v0, Lcom/android/settings_ex/LockscreenMenuSettings;->MY_USER_ID:I
 
     return v0
 .end method
@@ -1624,7 +1624,7 @@
 
     .prologue
     .line 189
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v7
 
@@ -1639,10 +1639,10 @@
     :cond_0
     const v10, 0x7f0800a1
 
-    invoke-virtual {p0, v10}, Lcom/android/settings/LockscreenMenuSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v10}, Lcom/android/settings_ex/LockscreenMenuSettings;->addPreferencesFromResource(I)V
 
     .line 196
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v7
 
@@ -1672,15 +1672,15 @@
     if-eqz v2, :cond_1
 
     .line 202
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v11
 
     const-string v12, "is_secured_lock"
 
-    iget-object v10, p0, Lcom/android/settings/LockscreenMenuSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v10, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    sget v13, Lcom/android/settings/LockscreenMenuSettings;->MY_USER_ID:I
+    sget v13, Lcom/android/settings_ex/LockscreenMenuSettings;->MY_USER_ID:I
 
     invoke-virtual {v10, v13}, Lcom/android/internal/widget/LockPatternUtils;->isSecure(I)Z
 
@@ -1695,9 +1695,9 @@
 
     .line 205
     :cond_1
-    iget-object v10, p0, Lcom/android/settings/LockscreenMenuSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v10, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    sget v11, Lcom/android/settings/LockscreenMenuSettings;->MY_USER_ID:I
+    sget v11, Lcom/android/settings_ex/LockscreenMenuSettings;->MY_USER_ID:I
 
     invoke-virtual {v10, v11}, Lcom/android/internal/widget/LockPatternUtils;->isSecure(I)Z
 
@@ -1706,9 +1706,9 @@
     if-nez v10, :cond_5
 
     .line 206
-    iget-object v10, p0, Lcom/android/settings/LockscreenMenuSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v10, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    sget v11, Lcom/android/settings/LockscreenMenuSettings;->MY_USER_ID:I
+    sget v11, Lcom/android/settings_ex/LockscreenMenuSettings;->MY_USER_ID:I
 
     invoke-virtual {v10, v11}, Lcom/android/internal/widget/LockPatternUtils;->isLockScreenDisabled(I)Z
 
@@ -1721,13 +1721,13 @@
 
     .line 241
     :goto_1
-    invoke-direct {p0, v5}, Lcom/android/settings/LockscreenMenuSettings;->InitValue(I)V
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/LockscreenMenuSettings;->InitValue(I)V
 
     .line 242
-    invoke-direct {p0}, Lcom/android/settings/LockscreenMenuSettings;->RemoveMenu()V
+    invoke-direct {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->RemoveMenu()V
 
     .line 247
-    sget v10, Lcom/android/settings/LockscreenMenuSettings;->MY_USER_ID:I
+    sget v10, Lcom/android/settings_ex/LockscreenMenuSettings;->MY_USER_ID:I
 
     if-nez v10, :cond_6
 
@@ -1738,17 +1738,17 @@
     :goto_2
     if-eqz v4, :cond_2
 
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getContext()Landroid/content/Context;
 
     move-result-object v10
 
-    invoke-static {v10}, Lcom/android/settings/Utils;->isShopDemo(Landroid/content/Context;)Z
+    invoke-static {v10}, Lcom/android/settings_ex/Utils;->isShopDemo(Landroid/content/Context;)Z
 
     move-result v10
 
     if-nez v10, :cond_2
 
-    invoke-static {}, Lcom/android/settings/Utils;->isLDUModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isLDUModel()Z
 
     move-result v10
 
@@ -1764,13 +1764,13 @@
     .line 252
     const v10, 0x7f0800a5
 
-    invoke-virtual {p0, v10}, Lcom/android/settings/LockscreenMenuSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v10}, Lcom/android/settings_ex/LockscreenMenuSettings;->addPreferencesFromResource(I)V
 
     .line 259
     :goto_3
-    new-instance v1, Lcom/android/settings/encryption/EncryptionPreferenceManager;
+    new-instance v1, Lcom/android/settings_ex/encryption/EncryptionPreferenceManager;
 
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
 
@@ -1778,13 +1778,13 @@
 
     move-result-object v10
 
-    invoke-direct {v1, v10}, Lcom/android/settings/encryption/EncryptionPreferenceManager;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v10}, Lcom/android/settings_ex/encryption/EncryptionPreferenceManager;-><init>(Landroid/content/Context;)V
 
     .line 261
-    .local v1, "epm":Lcom/android/settings/encryption/EncryptionPreferenceManager;
+    .local v1, "epm":Lcom/android/settings_ex/encryption/EncryptionPreferenceManager;
     new-instance v3, Landroid/dirEncryption/DirEncryptionManager;
 
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
 
@@ -1794,7 +1794,7 @@
     .local v3, "mDem":Landroid/dirEncryption/DirEncryptionManager;
     if-eqz v1, :cond_2
 
-    invoke-virtual {v1}, Lcom/android/settings/encryption/EncryptionPreferenceManager;->isSDcardEncryptionPossible()Z
+    invoke-virtual {v1}, Lcom/android/settings_ex/encryption/EncryptionPreferenceManager;->isSDcardEncryptionPossible()Z
 
     move-result v10
 
@@ -1818,10 +1818,10 @@
     .line 266
     const v10, 0x7f0800a9
 
-    invoke-virtual {p0, v10}, Lcom/android/settings/LockscreenMenuSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v10}, Lcom/android/settings_ex/LockscreenMenuSettings;->addPreferencesFromResource(I)V
 
     .line 290
-    .end local v1    # "epm":Lcom/android/settings/encryption/EncryptionPreferenceManager;
+    .end local v1    # "epm":Lcom/android/settings_ex/encryption/EncryptionPreferenceManager;
     .end local v3    # "mDem":Landroid/dirEncryption/DirEncryptionManager;
     .end local v8    # "state":Ljava/lang/String;
     .end local v9    # "status":I
@@ -1829,7 +1829,7 @@
     :goto_4
     new-instance v6, Landroid/preference/Preference;
 
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
 
@@ -1883,7 +1883,7 @@
 
     .line 212
     :cond_5
-    iget-object v10, p0, Lcom/android/settings/LockscreenMenuSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v10, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v10}, Lcom/android/internal/widget/LockPatternUtils;->getKeyguardStoredPasswordQuality()I
 
@@ -1945,17 +1945,17 @@
     :cond_7
     const v10, 0x7f0800b1
 
-    invoke-virtual {p0, v10}, Lcom/android/settings/LockscreenMenuSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v10}, Lcom/android/settings_ex/LockscreenMenuSettings;->addPreferencesFromResource(I)V
 
     goto/16 :goto_3
 
     .line 267
-    .restart local v1    # "epm":Lcom/android/settings/encryption/EncryptionPreferenceManager;
+    .restart local v1    # "epm":Lcom/android/settings_ex/encryption/EncryptionPreferenceManager;
     .restart local v3    # "mDem":Landroid/dirEncryption/DirEncryptionManager;
     .restart local v8    # "state":Ljava/lang/String;
     .restart local v9    # "status":I
     :cond_8
-    iget-object v10, p0, Lcom/android/settings/LockscreenMenuSettings;->mDPM:Landroid/app/admin/DevicePolicyManager;
+    iget-object v10, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mDPM:Landroid/app/admin/DevicePolicyManager;
 
     const/4 v11, 0x0
 
@@ -1966,7 +1966,7 @@
     if-eqz v10, :cond_c
 
     .line 268
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
 
@@ -1992,7 +1992,7 @@
     :cond_9
     const v10, 0x7f0800af
 
-    invoke-virtual {p0, v10}, Lcom/android/settings/LockscreenMenuSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v10}, Lcom/android/settings_ex/LockscreenMenuSettings;->addPreferencesFromResource(I)V
 
     goto/16 :goto_4
 
@@ -2011,7 +2011,7 @@
     .line 273
     const v10, 0x7f0800b0
 
-    invoke-virtual {p0, v10}, Lcom/android/settings/LockscreenMenuSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v10}, Lcom/android/settings_ex/LockscreenMenuSettings;->addPreferencesFromResource(I)V
 
     goto/16 :goto_4
 
@@ -2019,7 +2019,7 @@
     :cond_b
     const v10, 0x7f0800ae
 
-    invoke-virtual {p0, v10}, Lcom/android/settings/LockscreenMenuSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v10}, Lcom/android/settings_ex/LockscreenMenuSettings;->addPreferencesFromResource(I)V
 
     goto/16 :goto_4
 
@@ -2038,7 +2038,7 @@
     :cond_d
     const v10, 0x7f0800ae
 
-    invoke-virtual {p0, v10}, Lcom/android/settings/LockscreenMenuSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v10}, Lcom/android/settings_ex/LockscreenMenuSettings;->addPreferencesFromResource(I)V
 
     goto/16 :goto_4
 
@@ -2046,7 +2046,7 @@
     :cond_e
     const v10, 0x7f0800af
 
-    invoke-virtual {p0, v10}, Lcom/android/settings/LockscreenMenuSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v10}, Lcom/android/settings_ex/LockscreenMenuSettings;->addPreferencesFromResource(I)V
 
     goto/16 :goto_4
 
@@ -2082,7 +2082,7 @@
 
     .line 357
     .local v0, "ISO639_ARABIC":Ljava/lang/String;
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -2113,7 +2113,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0, p1}, Lcom/android/settings/LockscreenMenuSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/android/settings_ex/LockscreenMenuSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -2127,7 +2127,7 @@
 
     const v5, 0x7f0e11f6
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/LockscreenMenuSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/LockscreenMenuSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -2160,9 +2160,9 @@
 
     .line 304
     .local v2, "summary":Ljava/lang/String;
-    iget-object v3, p0, Lcom/android/settings/LockscreenMenuSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    sget v4, Lcom/android/settings/LockscreenMenuSettings;->MY_USER_ID:I
+    sget v4, Lcom/android/settings_ex/LockscreenMenuSettings;->MY_USER_ID:I
 
     invoke-virtual {v3, v4}, Lcom/android/internal/widget/LockPatternUtils;->isSecure(I)Z
 
@@ -2171,9 +2171,9 @@
     if-nez v3, :cond_1
 
     .line 305
-    iget-object v3, p0, Lcom/android/settings/LockscreenMenuSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    sget v4, Lcom/android/settings/LockscreenMenuSettings;->MY_USER_ID:I
+    sget v4, Lcom/android/settings_ex/LockscreenMenuSettings;->MY_USER_ID:I
 
     invoke-virtual {v3, v4}, Lcom/android/internal/widget/LockPatternUtils;->isLockScreenDisabled(I)Z
 
@@ -2184,7 +2184,7 @@
     .line 306
     const v3, 0x7f0e0287
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/LockscreenMenuSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/LockscreenMenuSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2196,7 +2196,7 @@
     :cond_0
     const v3, 0x7f0e0288
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/LockscreenMenuSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/LockscreenMenuSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2208,7 +2208,7 @@
 
     .line 312
     .local v1, "isFingerLockEnabled":Z
-    iget-object v3, p0, Lcom/android/settings/LockscreenMenuSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -2234,7 +2234,7 @@
 
     .line 318
     :cond_3
-    iget-object v3, p0, Lcom/android/settings/LockscreenMenuSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iget-object v3, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v3}, Lcom/android/internal/widget/LockPatternUtils;->getKeyguardStoredPasswordQuality()I
 
@@ -2248,7 +2248,7 @@
     :sswitch_0
     const v3, 0x7f0e0a8f
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/LockscreenMenuSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/LockscreenMenuSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2259,7 +2259,7 @@
     :sswitch_1
     const v3, 0x7f0e13c4
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/LockscreenMenuSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/LockscreenMenuSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2270,7 +2270,7 @@
     :sswitch_2
     if-eqz v1, :cond_4
 
-    invoke-direct {p0, v5}, Lcom/android/settings/LockscreenMenuSettings;->getFingerprintLockSummary(I)Ljava/lang/String;
+    invoke-direct {p0, v5}, Lcom/android/settings_ex/LockscreenMenuSettings;->getFingerprintLockSummary(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2280,7 +2280,7 @@
 
     .line 329
     :cond_4
-    invoke-virtual {p0, v5}, Lcom/android/settings/LockscreenMenuSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/android/settings_ex/LockscreenMenuSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2290,7 +2290,7 @@
     :sswitch_3
     if-eqz v1, :cond_5
 
-    invoke-direct {p0, v6}, Lcom/android/settings/LockscreenMenuSettings;->getFingerprintLockSummary(I)Ljava/lang/String;
+    invoke-direct {p0, v6}, Lcom/android/settings_ex/LockscreenMenuSettings;->getFingerprintLockSummary(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2300,7 +2300,7 @@
 
     .line 334
     :cond_5
-    invoke-virtual {p0, v6}, Lcom/android/settings/LockscreenMenuSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/LockscreenMenuSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2310,7 +2310,7 @@
     :sswitch_4
     if-eqz v1, :cond_6
 
-    invoke-direct {p0, v7}, Lcom/android/settings/LockscreenMenuSettings;->getFingerprintLockSummary(I)Ljava/lang/String;
+    invoke-direct {p0, v7}, Lcom/android/settings_ex/LockscreenMenuSettings;->getFingerprintLockSummary(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2320,7 +2320,7 @@
 
     .line 340
     :cond_6
-    invoke-virtual {p0, v7}, Lcom/android/settings/LockscreenMenuSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v7}, Lcom/android/settings_ex/LockscreenMenuSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2330,7 +2330,7 @@
     :sswitch_5
     const v3, 0x7f0e0265
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/LockscreenMenuSettings;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/android/settings_ex/LockscreenMenuSettings;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2430,7 +2430,7 @@
     const/4 v0, 0x0
 
     .line 174
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -2454,7 +2454,7 @@
 
     .prologue
     .line 724
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -2482,7 +2482,7 @@
 
     .line 729
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -2522,7 +2522,7 @@
 
     .line 691
     :try_start_0
-    invoke-virtual {p0, v1}, Lcom/android/settings/LockscreenMenuSettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings_ex/LockscreenMenuSettings;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2554,7 +2554,7 @@
 
     .line 737
     .local v1, "positiveStringRes":I
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticModel()Z
 
     move-result v2
 
@@ -2568,12 +2568,12 @@
 
     .line 741
     :cond_0
-    iget-object v2, p0, Lcom/android/settings/LockscreenMenuSettings;->mWarnInstallApps:Landroid/content/DialogInterface;
+    iget-object v2, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mWarnInstallApps:Landroid/content/DialogInterface;
 
     if-eqz v2, :cond_1
 
     .line 742
-    iget-object v2, p0, Lcom/android/settings/LockscreenMenuSettings;->mWarnInstallApps:Landroid/content/DialogInterface;
+    iget-object v2, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mWarnInstallApps:Landroid/content/DialogInterface;
 
     invoke-interface {v2}, Landroid/content/DialogInterface;->dismiss()V
 
@@ -2581,13 +2581,13 @@
     :cond_1
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
     invoke-direct {v2, v3}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -2625,7 +2625,7 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/LockscreenMenuSettings;->mWarnInstallApps:Landroid/content/DialogInterface;
+    iput-object v2, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mWarnInstallApps:Landroid/content/DialogInterface;
 
     .line 750
     return-void
@@ -2642,7 +2642,7 @@
     .line 753
     const-string v6, "layout_inflater"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/LockscreenMenuSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/LockscreenMenuSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2678,7 +2678,7 @@
 
     .line 757
     .local v2, "mCheck":Landroid/widget/CheckBox;
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -2698,7 +2698,7 @@
 
     .line 759
     .local v4, "positiveStringRes":I
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticModel()Z
 
     move-result v5
 
@@ -2716,7 +2716,7 @@
     :cond_0
     new-instance v5, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -2732,9 +2732,9 @@
 
     move-result-object v5
 
-    new-instance v6, Lcom/android/settings/LockscreenMenuSettings$1;
+    new-instance v6, Lcom/android/settings_ex/LockscreenMenuSettings$1;
 
-    invoke-direct {v6, p0, v2}, Lcom/android/settings/LockscreenMenuSettings$1;-><init>(Lcom/android/settings/LockscreenMenuSettings;Landroid/widget/CheckBox;)V
+    invoke-direct {v6, p0, v2}, Lcom/android/settings_ex/LockscreenMenuSettings$1;-><init>(Lcom/android/settings_ex/LockscreenMenuSettings;Landroid/widget/CheckBox;)V
 
     invoke-virtual {v5, v4, v6}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -2750,7 +2750,7 @@
 
     move-result-object v5
 
-    iput-object v5, p0, Lcom/android/settings/LockscreenMenuSettings;->mWarnInstallApps:Landroid/content/DialogInterface;
+    iput-object v5, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mWarnInstallApps:Landroid/content/DialogInterface;
 
     .line 799
     return-void
@@ -2787,7 +2787,7 @@
     if-eqz v1, :cond_0
 
     .line 463
-    sget-object v1, Lcom/android/settings/LockscreenMenuSettings;->mContext:Landroid/content/Context;
+    sget-object v1, Lcom/android/settings_ex/LockscreenMenuSettings;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Landroid/os/UserManager;->get(Landroid/content/Context;)Landroid/os/UserManager;
 
@@ -2832,16 +2832,16 @@
     const/4 v4, 0x0
 
     .line 821
-    sget-object v0, Lcom/android/settings/LockscreenMenuSettings;->mContext:Landroid/content/Context;
+    sget-object v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/android/settings/LockscreenMenuSettings;->isExistSamsungAccount(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/LockscreenMenuSettings;->isExistSamsungAccount(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 822
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -2875,7 +2875,7 @@
     const/16 v0, 0x3e9
 
     :try_start_0
-    invoke-virtual {p0, v8, v0}, Lcom/android/settings/LockscreenMenuSettings;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v8, v0}, Lcom/android/settings_ex/LockscreenMenuSettings;->startActivityForResult(Landroid/content/Intent;I)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2899,13 +2899,13 @@
     .end local v7    # "e":Landroid/content/ActivityNotFoundException;
     .end local v8    # "mIntent":Landroid/content/Intent;
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
-    const-class v1, Lcom/android/settings/fmm/FindMyMobileSettings;
+    const-class v1, Lcom/android/settings_ex/fmm/FindMyMobileSettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -2921,7 +2921,7 @@
 
     move-object v5, v4
 
-    invoke-virtual/range {v0 .. v6}, Lcom/android/settings/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
+    invoke-virtual/range {v0 .. v6}, Lcom/android/settings_ex/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
 
     goto :goto_0
 .end method
@@ -2936,7 +2936,7 @@
     const/4 v4, 0x0
 
     .line 180
-    invoke-super {p0, p1, p2, p3}, Lcom/android/settings/SettingsPreferenceFragment;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 181
     const/16 v0, 0x3e9
@@ -2949,13 +2949,13 @@
     if-ne p2, v0, :cond_0
 
     .line 183
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/settings/SettingsActivity;
+    check-cast v0, Lcom/android/settings_ex/SettingsActivity;
 
-    const-class v1, Lcom/android/settings/fmm/FindMyMobileSettings;
+    const-class v1, Lcom/android/settings_ex/fmm/FindMyMobileSettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -2971,7 +2971,7 @@
 
     move-object v5, v4
 
-    invoke-virtual/range {v0 .. v6}, Lcom/android/settings/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
+    invoke-virtual/range {v0 .. v6}, Lcom/android/settings_ex/SettingsActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
 
     .line 187
     :cond_0
@@ -2985,7 +2985,7 @@
 
     .prologue
     .line 803
-    iget-object v1, p0, Lcom/android/settings/LockscreenMenuSettings;->mWarnInstallApps:Landroid/content/DialogInterface;
+    iget-object v1, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mWarnInstallApps:Landroid/content/DialogInterface;
 
     if-ne p1, v1, :cond_0
 
@@ -2999,15 +2999,15 @@
     .line 805
     .local v0, "turnOn":Z
     :goto_0
-    invoke-direct {p0, v0}, Lcom/android/settings/LockscreenMenuSettings;->setNonMarketAppsAllowed(Z)V
+    invoke-direct {p0, v0}, Lcom/android/settings_ex/LockscreenMenuSettings;->setNonMarketAppsAllowed(Z)V
 
     .line 806
-    iget-object v1, p0, Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     if-eqz v1, :cond_0
 
     .line 807
-    iget-object v1, p0, Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v0}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
@@ -3029,10 +3029,10 @@
 
     .prologue
     .line 145
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 147
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -3040,34 +3040,34 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/LockscreenMenuSettings;->mContext:Landroid/content/Context;
+    sput-object v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mContext:Landroid/content/Context;
 
     .line 148
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/LockscreenMenuSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    iput-object v0, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     .line 149
-    new-instance v0, Lcom/android/settings/ChooseLockSettingsHelper;
+    new-instance v0, Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/android/settings/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v0, v1}, Lcom/android/settings_ex/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;)V
 
-    iput-object v0, p0, Lcom/android/settings/LockscreenMenuSettings;->mChooseLockSettingsHelper:Lcom/android/settings/ChooseLockSettingsHelper;
+    iput-object v0, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mChooseLockSettingsHelper:Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
     .line 150
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/LockscreenMenuSettings;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/LockscreenMenuSettings;->setHasOptionsMenu(Z)V
 
     .line 152
     return-void
@@ -3082,12 +3082,12 @@
     const/4 v2, 0x0
 
     .line 855
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     .line 857
-    sget-object v0, Lcom/android/settings/LockscreenMenuSettings;->mContext:Landroid/content/Context;
+    sget-object v0, Lcom/android/settings_ex/LockscreenMenuSettings;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isSupportOnlineHelpMenu(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isSupportOnlineHelpMenu(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -3120,15 +3120,15 @@
 
     .prologue
     .line 814
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onDestroy()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onDestroy()V
 
     .line 815
-    iget-object v0, p0, Lcom/android/settings/LockscreenMenuSettings;->mWarnInstallApps:Landroid/content/DialogInterface;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mWarnInstallApps:Landroid/content/DialogInterface;
 
     if-eqz v0, :cond_0
 
     .line 816
-    iget-object v0, p0, Lcom/android/settings/LockscreenMenuSettings;->mWarnInstallApps:Landroid/content/DialogInterface;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mWarnInstallApps:Landroid/content/DialogInterface;
 
     invoke-interface {v0}, Landroid/content/DialogInterface;->dismiss()V
 
@@ -3150,7 +3150,7 @@
     packed-switch v1, :pswitch_data_0
 
     .line 873
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v1
 
@@ -3174,7 +3174,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 870
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -3232,17 +3232,17 @@
     if-eqz v2, :cond_2
 
     .line 704
-    iget-object v2, p0, Lcom/android/settings/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
+    iget-object v2, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mToggleAppInstallation:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v2, v3}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
     .line 705
-    iget-boolean v2, p0, Lcom/android/settings/LockscreenMenuSettings;->mFromPackageInstaller:Z
+    iget-boolean v2, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mFromPackageInstaller:Z
 
     if-eqz v2, :cond_1
 
     .line 706
-    invoke-direct {p0}, Lcom/android/settings/LockscreenMenuSettings;->warnAppInstallationFromPackageInstaller()V
+    invoke-direct {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->warnAppInstallationFromPackageInstaller()V
 
     .line 708
     const/4 v1, 0x0
@@ -3254,7 +3254,7 @@
 
     .line 710
     :cond_1
-    invoke-direct {p0}, Lcom/android/settings/LockscreenMenuSettings;->warnAppInstallation()V
+    invoke-direct {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->warnAppInstallation()V
 
     .line 713
     const/4 v1, 0x0
@@ -3263,7 +3263,7 @@
 
     .line 716
     :cond_2
-    invoke-direct {p0, v3}, Lcom/android/settings/LockscreenMenuSettings;->setNonMarketAppsAllowed(Z)V
+    invoke-direct {p0, v3}, Lcom/android/settings_ex/LockscreenMenuSettings;->setNonMarketAppsAllowed(Z)V
 
     goto :goto_0
 .end method
@@ -3283,9 +3283,9 @@
 
     .line 665
     .local v7, "key":Ljava/lang/String;
-    iget-object v0, p0, Lcom/android/settings/LockscreenMenuSettings;->mChooseLockSettingsHelper:Lcom/android/settings/ChooseLockSettingsHelper;
+    iget-object v0, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mChooseLockSettingsHelper:Lcom/android/settings_ex/ChooseLockSettingsHelper;
 
-    invoke-virtual {v0}, Lcom/android/settings/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
+    invoke-virtual {v0}, Lcom/android/settings_ex/ChooseLockSettingsHelper;->utils()Lcom/android/internal/widget/LockPatternUtils;
 
     move-result-object v8
 
@@ -3312,7 +3312,7 @@
 
     move-object v1, p0
 
-    invoke-virtual/range {v0 .. v5}, Lcom/android/settings/LockscreenMenuSettings;->startFragment(Landroid/app/Fragment;Ljava/lang/String;IILandroid/os/Bundle;)Z
+    invoke-virtual/range {v0 .. v5}, Lcom/android/settings_ex/LockscreenMenuSettings;->startFragment(Landroid/app/Fragment;Ljava/lang/String;IILandroid/os/Bundle;)Z
 
     :goto_0
     move v0, v9
@@ -3345,7 +3345,7 @@
     invoke-virtual {v6, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     .line 672
-    invoke-virtual {p0, v6}, Lcom/android/settings/LockscreenMenuSettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v6}, Lcom/android/settings_ex/LockscreenMenuSettings;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 
@@ -3361,7 +3361,7 @@
     if-eqz v0, :cond_2
 
     .line 674
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->moveFindMyMobile()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->moveFindMyMobile()V
 
     goto :goto_0
 
@@ -3376,7 +3376,7 @@
     if-eqz v0, :cond_4
 
     .line 676
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->isResumed()Z
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->isResumed()Z
 
     move-result v0
 
@@ -3389,13 +3389,13 @@
 
     .line 679
     :cond_3
-    invoke-direct {p0}, Lcom/android/settings/LockscreenMenuSettings;->startFingerprintScanner()V
+    invoke-direct {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->startFingerprintScanner()V
 
     goto :goto_0
 
     .line 681
     :cond_4
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v0
 
@@ -3407,13 +3407,13 @@
 
     .prologue
     .line 155
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 158
-    invoke-direct {p0}, Lcom/android/settings/LockscreenMenuSettings;->createPreferenceHierarchy()Landroid/preference/PreferenceScreen;
+    invoke-direct {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->createPreferenceHierarchy()Landroid/preference/PreferenceScreen;
 
     .line 160
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -3451,11 +3451,11 @@
     :cond_0
     const/4 v1, 0x1
 
-    iput-boolean v1, p0, Lcom/android/settings/LockscreenMenuSettings;->mFromPackageInstaller:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mFromPackageInstaller:Z
 
     .line 169
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/LockscreenMenuSettings;->buildPreferenceForCOM()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/LockscreenMenuSettings;->buildPreferenceForCOM()V
 
     .line 171
     return-void
@@ -3464,7 +3464,7 @@
     :cond_1
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lcom/android/settings/LockscreenMenuSettings;->mFromPackageInstaller:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/LockscreenMenuSettings;->mFromPackageInstaller:Z
 
     goto :goto_0
 .end method

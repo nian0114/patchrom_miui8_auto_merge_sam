@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/accessibility/sharedaccessibility/scloud/BNRTask;
+.class public Lcom/android/settings_ex/accessibility/sharedaccessibility/scloud/BNRTask;
 .super Ljava/lang/Object;
 .source "BNRTask.java"
 
@@ -171,15 +171,15 @@
     .line 68
     :cond_0
     :goto_0
-    sput v8, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccVariable;->SaveFlag:I
+    sput v8, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccVariable;->SaveFlag:I
 
     .line 70
-    sget-object v4, Lcom/android/settings/accessibility/sharedaccessibility/scloud/BNRTask;->settingValue:Ljava/util/HashMap;
+    sget-object v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/scloud/BNRTask;->settingValue:Ljava/util/HashMap;
 
     if-eqz v4, :cond_1
 
     .line 71
-    sget-object v4, Lcom/android/settings/accessibility/sharedaccessibility/scloud/BNRTask;->settingValue:Ljava/util/HashMap;
+    sget-object v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/scloud/BNRTask;->settingValue:Ljava/util/HashMap;
 
     invoke-virtual {v4}, Ljava/util/HashMap;->clear()V
 
@@ -189,16 +189,16 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->saveValue(Landroid/content/Context;)Ljava/util/HashMap;
+    invoke-static {v4}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->saveValue(Landroid/content/Context;)Ljava/util/HashMap;
 
     move-result-object v4
 
-    sput-object v4, Lcom/android/settings/accessibility/sharedaccessibility/scloud/BNRTask;->settingValue:Ljava/util/HashMap;
+    sput-object v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/scloud/BNRTask;->settingValue:Ljava/util/HashMap;
 
     .line 75
-    sget-object v4, Lcom/android/settings/accessibility/sharedaccessibility/scloud/BNRTask;->settingValue:Ljava/util/HashMap;
+    sget-object v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/scloud/BNRTask;->settingValue:Ljava/util/HashMap;
 
-    invoke-static {v4, v3}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->saveValueToFile(Ljava/util/HashMap;Ljava/io/File;)V
+    invoke-static {v4, v3}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->saveValueToFile(Ljava/util/HashMap;Ljava/io/File;)V
 
     .line 79
     const/4 v1, 0x0
@@ -229,9 +229,9 @@
 
     move-result-wide v6
 
-    new-instance v5, Lcom/android/settings/accessibility/sharedaccessibility/scloud/BNRTask$1;
+    new-instance v5, Lcom/android/settings_ex/accessibility/sharedaccessibility/scloud/BNRTask$1;
 
-    invoke-direct {v5, p0, p3}, Lcom/android/settings/accessibility/sharedaccessibility/scloud/BNRTask$1;-><init>(Lcom/android/settings/accessibility/sharedaccessibility/scloud/BNRTask;Lcom/samsung/android/scloud/oem/lib/qbnr/ISCloudQBNRClient$QuickBackupListener;)V
+    invoke-direct {v5, p0, p3}, Lcom/android/settings_ex/accessibility/sharedaccessibility/scloud/BNRTask$1;-><init>(Lcom/android/settings_ex/accessibility/sharedaccessibility/scloud/BNRTask;Lcom/samsung/android/scloud/oem/lib/qbnr/ISCloudQBNRClient$QuickBackupListener;)V
 
     invoke-static {v4, v6, v7, v2, v5}, Lcom/samsung/android/scloud/oem/lib/FileTool;->writeToFile(Ljava/lang/String;JLjava/io/FileOutputStream;Lcom/samsung/android/scloud/oem/lib/FileTool$PDMProgressListener;)V
     :try_end_2
@@ -239,7 +239,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     .line 94
-    invoke-direct {p0, v2}, Lcom/android/settings/accessibility/sharedaccessibility/scloud/BNRTask;->close(Ljava/io/OutputStream;)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/accessibility/sharedaccessibility/scloud/BNRTask;->close(Ljava/io/OutputStream;)V
 
     .line 96
     invoke-interface {p3, v8}, Lcom/samsung/android/scloud/oem/lib/qbnr/ISCloudQBNRClient$QuickBackupListener;->complete(Z)V
@@ -291,7 +291,7 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     .line 94
-    invoke-direct {p0, v1}, Lcom/android/settings/accessibility/sharedaccessibility/scloud/BNRTask;->close(Ljava/io/OutputStream;)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/scloud/BNRTask;->close(Ljava/io/OutputStream;)V
 
     goto :goto_1
 
@@ -300,7 +300,7 @@
     move-exception v4
 
     :goto_3
-    invoke-direct {p0, v1}, Lcom/android/settings/accessibility/sharedaccessibility/scloud/BNRTask;->close(Ljava/io/OutputStream;)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/scloud/BNRTask;->close(Ljava/io/OutputStream;)V
 
     throw v4
 
@@ -532,9 +532,9 @@
 
     move-result-object v3
 
-    new-instance v6, Lcom/android/settings/accessibility/sharedaccessibility/scloud/BNRTask$2;
+    new-instance v6, Lcom/android/settings_ex/accessibility/sharedaccessibility/scloud/BNRTask$2;
 
-    invoke-direct {v6, p0, p3}, Lcom/android/settings/accessibility/sharedaccessibility/scloud/BNRTask$2;-><init>(Lcom/android/settings/accessibility/sharedaccessibility/scloud/BNRTask;Lcom/samsung/android/scloud/oem/lib/qbnr/ISCloudQBNRClient$QuickBackupListener;)V
+    invoke-direct {v6, p0, p3}, Lcom/android/settings_ex/accessibility/sharedaccessibility/scloud/BNRTask$2;-><init>(Lcom/android/settings_ex/accessibility/sharedaccessibility/scloud/BNRTask;Lcom/samsung/android/scloud/oem/lib/qbnr/ISCloudQBNRClient$QuickBackupListener;)V
 
     invoke-static {v1, v4, v5, v3, v6}, Lcom/samsung/android/scloud/oem/lib/FileTool;->writeToFile(Ljava/io/InputStream;JLjava/lang/String;Lcom/samsung/android/scloud/oem/lib/FileTool$PDMProgressListener;)V
     :try_end_0
@@ -542,7 +542,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 124
-    invoke-direct {p0, v1}, Lcom/android/settings/accessibility/sharedaccessibility/scloud/BNRTask;->close(Ljava/io/InputStream;)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/scloud/BNRTask;->close(Ljava/io/InputStream;)V
 
     .line 126
     const/4 v3, 0x1
@@ -557,17 +557,17 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v3, v4}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->LoadValue(Ljava/lang/String;Landroid/os/ParcelFileDescriptor;)Ljava/util/HashMap;
+    invoke-static {v3, v4}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->LoadValue(Ljava/lang/String;Landroid/os/ParcelFileDescriptor;)Ljava/util/HashMap;
 
     move-result-object v3
 
-    sput-object v3, Lcom/android/settings/accessibility/sharedaccessibility/scloud/BNRTask;->revSettingValues:Ljava/util/HashMap;
+    sput-object v3, Lcom/android/settings_ex/accessibility/sharedaccessibility/scloud/BNRTask;->revSettingValues:Ljava/util/HashMap;
     :try_end_1
     .catch Ljavax/xml/parsers/ParserConfigurationException; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 138
     :goto_0
-    sget-object v3, Lcom/android/settings/accessibility/sharedaccessibility/scloud/BNRTask;->revSettingValues:Ljava/util/HashMap;
+    sget-object v3, Lcom/android/settings_ex/accessibility/sharedaccessibility/scloud/BNRTask;->revSettingValues:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->toString()Ljava/lang/String;
 
@@ -606,7 +606,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 124
-    invoke-direct {p0, v1}, Lcom/android/settings/accessibility/sharedaccessibility/scloud/BNRTask;->close(Ljava/io/InputStream;)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/scloud/BNRTask;->close(Ljava/io/InputStream;)V
 
     goto :goto_1
 
@@ -614,7 +614,7 @@
     :catchall_0
     move-exception v3
 
-    invoke-direct {p0, v1}, Lcom/android/settings/accessibility/sharedaccessibility/scloud/BNRTask;->close(Ljava/io/InputStream;)V
+    invoke-direct {p0, v1}, Lcom/android/settings_ex/accessibility/sharedaccessibility/scloud/BNRTask;->close(Ljava/io/InputStream;)V
 
     throw v3
 
@@ -635,9 +635,9 @@
 
     move-result-object v3
 
-    sget-object v4, Lcom/android/settings/accessibility/sharedaccessibility/scloud/BNRTask;->revSettingValues:Ljava/util/HashMap;
+    sget-object v4, Lcom/android/settings_ex/accessibility/sharedaccessibility/scloud/BNRTask;->revSettingValues:Ljava/util/HashMap;
 
-    invoke-static {v3, v4}, Lcom/android/settings/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->applySettings(Landroid/content/Context;Ljava/util/HashMap;)V
+    invoke-static {v3, v4}, Lcom/android/settings_ex/accessibility/sharedaccessibility/ShareAccessibilitySettingsCommonFunction;->applySettings(Landroid/content/Context;Ljava/util/HashMap;)V
 
     goto :goto_1
 .end method

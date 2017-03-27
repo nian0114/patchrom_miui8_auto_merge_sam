@@ -1,5 +1,5 @@
-.class public Lcom/android/settings/LGTRoamingEnv;
-.super Lcom/android/settings/SettingsPreferenceFragment;
+.class public Lcom/android/settings_ex/LGTRoamingEnv;
+.super Lcom/android/settings_ex/SettingsPreferenceFragment;
 .source "LGTRoamingEnv.java"
 
 
@@ -47,117 +47,117 @@
     const/4 v1, 0x0
 
     .line 77
-    invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;-><init>()V
 
     .line 93
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->curSimVer:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->curSimVer:Ljava/lang/String;
 
     .line 95
-    iput-boolean v1, p0, Lcom/android/settings/LGTRoamingEnv;->mIsRoamingNetworkInit:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mIsRoamingNetworkInit:Z
 
     .line 96
-    iput-boolean v1, p0, Lcom/android/settings/LGTRoamingEnv;->mIsWaitRadioPowerOff:Z
+    iput-boolean v1, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mIsWaitRadioPowerOff:Z
 
     .line 98
-    new-instance v0, Lcom/android/settings/LGTRoamingEnv$1;
+    new-instance v0, Lcom/android/settings_ex/LGTRoamingEnv$1;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/LGTRoamingEnv$1;-><init>(Lcom/android/settings/LGTRoamingEnv;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/LGTRoamingEnv$1;-><init>(Lcom/android/settings_ex/LGTRoamingEnv;)V
 
-    iput-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mReceiver:Landroid/content/BroadcastReceiver;
 
     .line 147
-    new-instance v0, Lcom/android/settings/LGTRoamingEnv$2;
+    new-instance v0, Lcom/android/settings_ex/LGTRoamingEnv$2;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/LGTRoamingEnv$2;-><init>(Lcom/android/settings/LGTRoamingEnv;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/LGTRoamingEnv$2;-><init>(Lcom/android/settings_ex/LGTRoamingEnv;)V
 
-    iput-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
+    iput-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
     .line 166
-    new-instance v0, Lcom/android/settings/LGTRoamingEnv$3;
+    new-instance v0, Lcom/android/settings_ex/LGTRoamingEnv$3;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/LGTRoamingEnv$3;-><init>(Lcom/android/settings/LGTRoamingEnv;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/LGTRoamingEnv$3;-><init>(Lcom/android/settings_ex/LGTRoamingEnv;)V
 
-    iput-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mHandler:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mHandler:Landroid/os/Handler;
 
     .line 210
-    new-instance v0, Lcom/android/settings/LGTRoamingEnv$4;
+    new-instance v0, Lcom/android/settings_ex/LGTRoamingEnv$4;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/LGTRoamingEnv$4;-><init>(Lcom/android/settings/LGTRoamingEnv;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/LGTRoamingEnv$4;-><init>(Lcom/android/settings_ex/LGTRoamingEnv;)V
 
-    iput-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mAirplaneModeChangeReceiver:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mAirplaneModeChangeReceiver:Landroid/content/BroadcastReceiver;
 
     .line 230
-    new-instance v0, Lcom/android/settings/LGTRoamingEnv$5;
+    new-instance v0, Lcom/android/settings_ex/LGTRoamingEnv$5;
 
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/settings/LGTRoamingEnv$5;-><init>(Lcom/android/settings/LGTRoamingEnv;Landroid/os/Handler;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/settings_ex/LGTRoamingEnv$5;-><init>(Lcom/android/settings_ex/LGTRoamingEnv;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mUseLTERoamingObserver:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mUseLTERoamingObserver:Landroid/database/ContentObserver;
 
     .line 242
-    new-instance v0, Lcom/android/settings/LGTRoamingEnv$6;
+    new-instance v0, Lcom/android/settings_ex/LGTRoamingEnv$6;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/LGTRoamingEnv$6;-><init>(Lcom/android/settings/LGTRoamingEnv;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/LGTRoamingEnv$6;-><init>(Lcom/android/settings_ex/LGTRoamingEnv;)V
 
-    iput-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mRoamNetworkInitListener:Landroid/content/DialogInterface$OnClickListener;
+    iput-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mRoamNetworkInitListener:Landroid/content/DialogInterface$OnClickListener;
 
     .line 263
-    new-instance v0, Lcom/android/settings/LGTRoamingEnv$7;
+    new-instance v0, Lcom/android/settings_ex/LGTRoamingEnv$7;
 
-    invoke-direct {v0, p0}, Lcom/android/settings/LGTRoamingEnv$7;-><init>(Lcom/android/settings/LGTRoamingEnv;)V
+    invoke-direct {v0, p0}, Lcom/android/settings_ex/LGTRoamingEnv$7;-><init>(Lcom/android/settings_ex/LGTRoamingEnv;)V
 
-    iput-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mDisabledMobileDataClickListener:Landroid/content/DialogInterface$OnClickListener;
+    iput-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mDisabledMobileDataClickListener:Landroid/content/DialogInterface$OnClickListener;
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/settings/LGTRoamingEnv;)Landroid/os/Handler;
+.method static synthetic access$000(Lcom/android/settings_ex/LGTRoamingEnv;)Landroid/os/Handler;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LGTRoamingEnv;
+    .param p0, "x0"    # Lcom/android/settings_ex/LGTRoamingEnv;
 
     .prologue
     .line 77
-    iget-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mHandler:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/android/settings/LGTRoamingEnv;)Landroid/app/ProgressDialog;
+.method static synthetic access$100(Lcom/android/settings_ex/LGTRoamingEnv;)Landroid/app/ProgressDialog;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LGTRoamingEnv;
+    .param p0, "x0"    # Lcom/android/settings_ex/LGTRoamingEnv;
 
     .prologue
     .line 77
-    iget-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mProgressDialog:Landroid/app/ProgressDialog;
 
     return-object v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/LGTRoamingEnv;Z)V
+.method static synthetic access$1000(Lcom/android/settings_ex/LGTRoamingEnv;Z)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/LGTRoamingEnv;
+    .param p0, "x0"    # Lcom/android/settings_ex/LGTRoamingEnv;
     .param p1, "x1"    # Z
 
     .prologue
     .line 77
-    invoke-direct {p0, p1}, Lcom/android/settings/LGTRoamingEnv;->toggleLteRoaming(Z)V
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/LGTRoamingEnv;->toggleLteRoaming(Z)V
 
     return-void
 .end method
 
-.method static synthetic access$102(Lcom/android/settings/LGTRoamingEnv;Landroid/app/ProgressDialog;)Landroid/app/ProgressDialog;
+.method static synthetic access$102(Lcom/android/settings_ex/LGTRoamingEnv;Landroid/app/ProgressDialog;)Landroid/app/ProgressDialog;
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/LGTRoamingEnv;
+    .param p0, "x0"    # Lcom/android/settings_ex/LGTRoamingEnv;
     .param p1, "x1"    # Landroid/app/ProgressDialog;
 
     .prologue
     .line 77
-    iput-object p1, p0, Lcom/android/settings/LGTRoamingEnv;->mProgressDialog:Landroid/app/ProgressDialog;
+    iput-object p1, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mProgressDialog:Landroid/app/ProgressDialog;
 
     return-object p1
 .end method
@@ -167,110 +167,110 @@
 
     .prologue
     .line 77
-    sget-object v0, Lcom/android/settings/LGTRoamingEnv;->mContext:Landroid/content/Context;
+    sget-object v0, Lcom/android/settings_ex/LGTRoamingEnv;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/settings/LGTRoamingEnv;)Ljava/lang/String;
+.method static synthetic access$300(Lcom/android/settings_ex/LGTRoamingEnv;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LGTRoamingEnv;
+    .param p0, "x0"    # Lcom/android/settings_ex/LGTRoamingEnv;
 
     .prologue
     .line 77
-    invoke-direct {p0}, Lcom/android/settings/LGTRoamingEnv;->getSIMVersion()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/settings_ex/LGTRoamingEnv;->getSIMVersion()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/settings/LGTRoamingEnv;)Z
+.method static synthetic access$400(Lcom/android/settings_ex/LGTRoamingEnv;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LGTRoamingEnv;
+    .param p0, "x0"    # Lcom/android/settings_ex/LGTRoamingEnv;
 
     .prologue
     .line 77
-    iget-boolean v0, p0, Lcom/android/settings/LGTRoamingEnv;->mIsWaitRadioPowerOff:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mIsWaitRadioPowerOff:Z
 
     return v0
 .end method
 
-.method static synthetic access$402(Lcom/android/settings/LGTRoamingEnv;Z)Z
+.method static synthetic access$402(Lcom/android/settings_ex/LGTRoamingEnv;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/LGTRoamingEnv;
+    .param p0, "x0"    # Lcom/android/settings_ex/LGTRoamingEnv;
     .param p1, "x1"    # Z
 
     .prologue
     .line 77
-    iput-boolean p1, p0, Lcom/android/settings/LGTRoamingEnv;->mIsWaitRadioPowerOff:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mIsWaitRadioPowerOff:Z
 
     return p1
 .end method
 
-.method static synthetic access$500(Lcom/android/settings/LGTRoamingEnv;)Z
+.method static synthetic access$500(Lcom/android/settings_ex/LGTRoamingEnv;)Z
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LGTRoamingEnv;
+    .param p0, "x0"    # Lcom/android/settings_ex/LGTRoamingEnv;
 
     .prologue
     .line 77
-    iget-boolean v0, p0, Lcom/android/settings/LGTRoamingEnv;->mIsRoamingNetworkInit:Z
+    iget-boolean v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mIsRoamingNetworkInit:Z
 
     return v0
 .end method
 
-.method static synthetic access$502(Lcom/android/settings/LGTRoamingEnv;Z)Z
+.method static synthetic access$502(Lcom/android/settings_ex/LGTRoamingEnv;Z)Z
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/LGTRoamingEnv;
+    .param p0, "x0"    # Lcom/android/settings_ex/LGTRoamingEnv;
     .param p1, "x1"    # Z
 
     .prologue
     .line 77
-    iput-boolean p1, p0, Lcom/android/settings/LGTRoamingEnv;->mIsRoamingNetworkInit:Z
+    iput-boolean p1, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mIsRoamingNetworkInit:Z
 
     return p1
 .end method
 
-.method static synthetic access$600(Lcom/android/settings/LGTRoamingEnv;)V
+.method static synthetic access$600(Lcom/android/settings_ex/LGTRoamingEnv;)V
     .locals 0
-    .param p0, "x0"    # Lcom/android/settings/LGTRoamingEnv;
+    .param p0, "x0"    # Lcom/android/settings_ex/LGTRoamingEnv;
 
     .prologue
     .line 77
-    invoke-direct {p0}, Lcom/android/settings/LGTRoamingEnv;->setAuto()V
+    invoke-direct {p0}, Lcom/android/settings_ex/LGTRoamingEnv;->setAuto()V
 
     return-void
 .end method
 
-.method static synthetic access$700(Lcom/android/settings/LGTRoamingEnv;)Ljava/lang/String;
+.method static synthetic access$700(Lcom/android/settings_ex/LGTRoamingEnv;)Ljava/lang/String;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LGTRoamingEnv;
+    .param p0, "x0"    # Lcom/android/settings_ex/LGTRoamingEnv;
 
     .prologue
     .line 77
-    iget-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->curSimVer:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->curSimVer:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic access$800(Lcom/android/settings/LGTRoamingEnv;)Landroid/preference/Preference;
+.method static synthetic access$800(Lcom/android/settings_ex/LGTRoamingEnv;)Landroid/preference/Preference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LGTRoamingEnv;
+    .param p0, "x0"    # Lcom/android/settings_ex/LGTRoamingEnv;
 
     .prologue
     .line 77
-    iget-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mButtonCountryUpdate:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mButtonCountryUpdate:Landroid/preference/Preference;
 
     return-object v0
 .end method
 
-.method static synthetic access$900(Lcom/android/settings/LGTRoamingEnv;)Landroid/preference/SwitchPreference;
+.method static synthetic access$900(Lcom/android/settings_ex/LGTRoamingEnv;)Landroid/preference/SwitchPreference;
     .locals 1
-    .param p0, "x0"    # Lcom/android/settings/LGTRoamingEnv;
+    .param p0, "x0"    # Lcom/android/settings_ex/LGTRoamingEnv;
 
     .prologue
     .line 77
-    iget-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mLteRoamingSettings:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mLteRoamingSettings:Landroid/preference/SwitchPreference;
 
     return-object v0
 .end method
@@ -282,7 +282,7 @@
     const/4 v1, 0x1
 
     .line 364
-    sget-object v2, Lcom/android/settings/LGTRoamingEnv;->mContext:Landroid/content/Context;
+    sget-object v2, Lcom/android/settings_ex/LGTRoamingEnv;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -468,7 +468,7 @@
     .line 398
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    sget-object v1, Lcom/android/settings/LGTRoamingEnv;->mContext:Landroid/content/Context;
+    sget-object v1, Lcom/android/settings_ex/LGTRoamingEnv;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -486,7 +486,7 @@
 
     const v1, 0x1040013
 
-    iget-object v2, p0, Lcom/android/settings/LGTRoamingEnv;->mRoamNetworkInitListener:Landroid/content/DialogInterface$OnClickListener;
+    iget-object v2, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mRoamNetworkInitListener:Landroid/content/DialogInterface$OnClickListener;
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -537,7 +537,7 @@
 
     .line 505
     :try_start_0
-    invoke-virtual {p0, v2}, Lcom/android/settings/LGTRoamingEnv;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v2}, Lcom/android/settings_ex/LGTRoamingEnv;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
@@ -597,7 +597,7 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 371
-    iget-object v1, p0, Lcom/android/settings/LGTRoamingEnv;->mLteRoamingSettings:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mLteRoamingSettings:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, p1}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
@@ -615,7 +615,7 @@
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 374
-    invoke-virtual {p0}, Lcom/android/settings/LGTRoamingEnv;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LGTRoamingEnv;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -636,7 +636,7 @@
     const/4 v11, 0x0
 
     .line 411
-    sget-object v0, Lcom/android/settings/LGTRoamingEnv;->mContext:Landroid/content/Context;
+    sget-object v0, Lcom/android/settings_ex/LGTRoamingEnv;->mContext:Landroid/content/Context;
 
     const-string v1, "connectivity"
 
@@ -668,14 +668,14 @@
     if-eqz v0, :cond_1
 
     .line 416
-    invoke-direct {p0}, Lcom/android/settings/LGTRoamingEnv;->getRejectValue()I
+    invoke-direct {p0}, Lcom/android/settings_ex/LGTRoamingEnv;->getRejectValue()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 417
-    sget-object v0, Lcom/android/settings/LGTRoamingEnv;->mContext:Landroid/content/Context;
+    sget-object v0, Lcom/android/settings_ex/LGTRoamingEnv;->mContext:Landroid/content/Context;
 
     const v1, 0x7f0e1556
 
@@ -693,7 +693,7 @@
 
     .line 421
     :cond_0
-    sget-object v0, Lcom/android/settings/LGTRoamingEnv;->mContext:Landroid/content/Context;
+    sget-object v0, Lcom/android/settings_ex/LGTRoamingEnv;->mContext:Landroid/content/Context;
 
     const v1, 0x7f0e1557
 
@@ -720,9 +720,9 @@
     .line 431
     .end local v9    # "e":Landroid/os/RemoteException;
     :cond_1
-    sget-object v0, Lcom/android/settings/LGTRoamingEnv;->mContext:Landroid/content/Context;
+    sget-object v0, Lcom/android/settings_ex/LGTRoamingEnv;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/android/settings/Utils;->isSupportKorRoamingConcept(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/android/settings_ex/Utils;->isSupportKorRoamingConcept(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -731,7 +731,7 @@
     .line 432
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    sget-object v1, Lcom/android/settings/LGTRoamingEnv;->mContext:Landroid/content/Context;
+    sget-object v1, Lcom/android/settings_ex/LGTRoamingEnv;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -754,7 +754,7 @@
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
     .line 437
-    iget-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mButtonCountryUpdate:Landroid/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mButtonCountryUpdate:Landroid/preference/Preference;
 
     invoke-virtual {v0, v11}, Landroid/preference/Preference;->setEnabled(Z)V
 
@@ -771,7 +771,7 @@
     .line 439
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    sget-object v1, Lcom/android/settings/LGTRoamingEnv;->mContext:Landroid/content/Context;
+    sget-object v1, Lcom/android/settings_ex/LGTRoamingEnv;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -787,7 +787,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/settings/LGTRoamingEnv;->mDisabledMobileDataClickListener:Landroid/content/DialogInterface$OnClickListener;
+    iget-object v1, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mDisabledMobileDataClickListener:Landroid/content/DialogInterface$OnClickListener;
 
     invoke-virtual {v0, v3, v1}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -795,7 +795,7 @@
 
     const v1, 0x1040009
 
-    iget-object v2, p0, Lcom/android/settings/LGTRoamingEnv;->mDisabledMobileDataClickListener:Landroid/content/DialogInterface$OnClickListener;
+    iget-object v2, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mDisabledMobileDataClickListener:Landroid/content/DialogInterface$OnClickListener;
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -807,7 +807,7 @@
 
     .line 446
     :cond_3
-    sget-object v0, Lcom/android/settings/LGTRoamingEnv;->mContext:Landroid/content/Context;
+    sget-object v0, Lcom/android/settings_ex/LGTRoamingEnv;->mContext:Landroid/content/Context;
 
     new-instance v1, Landroid/content/Intent;
 
@@ -817,7 +817,7 @@
 
     const-string v2, "android.permission.sec.MDM_ROAMING"
 
-    iget-object v3, p0, Lcom/android/settings/LGTRoamingEnv;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v3, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mReceiver:Landroid/content/BroadcastReceiver;
 
     const/4 v5, -0x1
 
@@ -830,28 +830,28 @@
     .line 455
     new-instance v0, Landroid/app/ProgressDialog;
 
-    sget-object v1, Lcom/android/settings/LGTRoamingEnv;->mContext:Landroid/content/Context;
+    sget-object v1, Lcom/android/settings_ex/LGTRoamingEnv;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mProgressDialog:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mProgressDialog:Landroid/app/ProgressDialog;
 
     .line 456
-    iget-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mProgressDialog:Landroid/app/ProgressDialog;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setIndeterminate(Z)V
 
     .line 457
-    iget-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0, v11}, Landroid/app/ProgressDialog;->setCanceledOnTouchOutside(Z)V
 
     .line 458
-    iget-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mProgressDialog:Landroid/app/ProgressDialog;
 
-    sget-object v1, Lcom/android/settings/LGTRoamingEnv;->mContext:Landroid/content/Context;
+    sget-object v1, Lcom/android/settings_ex/LGTRoamingEnv;->mContext:Landroid/content/Context;
 
     const v2, 0x7f0e1529
 
@@ -862,25 +862,25 @@
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
     .line 459
-    iget-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mProgressDialog:Landroid/app/ProgressDialog;
 
-    new-instance v1, Lcom/android/settings/LGTRoamingEnv$9;
+    new-instance v1, Lcom/android/settings_ex/LGTRoamingEnv$9;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/LGTRoamingEnv$9;-><init>(Lcom/android/settings/LGTRoamingEnv;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/LGTRoamingEnv$9;-><init>(Lcom/android/settings_ex/LGTRoamingEnv;)V
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
     .line 466
-    iget-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mProgressDialog:Landroid/app/ProgressDialog;
 
-    new-instance v1, Lcom/android/settings/LGTRoamingEnv$10;
+    new-instance v1, Lcom/android/settings_ex/LGTRoamingEnv$10;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/LGTRoamingEnv$10;-><init>(Lcom/android/settings/LGTRoamingEnv;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/LGTRoamingEnv$10;-><init>(Lcom/android/settings_ex/LGTRoamingEnv;)V
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 471
-    iget-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mProgressDialog:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mProgressDialog:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->show()V
 
@@ -891,10 +891,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->curSimVer:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->curSimVer:Ljava/lang/String;
 
     .line 473
-    iget-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mHandler:Landroid/os/Handler;
 
     const/16 v1, 0x64
 
@@ -930,77 +930,77 @@
 
     .prologue
     .line 288
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 289
-    invoke-static {}, Lcom/android/settings/Utils;->isDomesticLGTModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isDomesticLGTModel()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 290
-    invoke-virtual {p0}, Lcom/android/settings/LGTRoamingEnv;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/LGTRoamingEnv;->finish()V
 
     .line 292
     :cond_0
     const-string v0, "phone"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/LGTRoamingEnv;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/LGTRoamingEnv;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    iput-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    iput-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     .line 293
-    invoke-virtual {p0}, Lcom/android/settings/LGTRoamingEnv;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LGTRoamingEnv;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/settings/LGTRoamingEnv;->mContext:Landroid/content/Context;
+    sput-object v0, Lcom/android/settings_ex/LGTRoamingEnv;->mContext:Landroid/content/Context;
 
     .line 294
     const v0, 0x7f080066
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/LGTRoamingEnv;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/LGTRoamingEnv;->addPreferencesFromResource(I)V
 
     .line 296
     const-string v0, "button_country_update"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/LGTRoamingEnv;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/LGTRoamingEnv;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mButtonCountryUpdate:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mButtonCountryUpdate:Landroid/preference/Preference;
 
     .line 297
     const-string v0, "button_reset_setting"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/LGTRoamingEnv;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/LGTRoamingEnv;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mButtonReset:Landroid/preference/Preference;
+    iput-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mButtonReset:Landroid/preference/Preference;
 
     .line 299
     const-string v0, "button_lte_roaming"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/LGTRoamingEnv;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/LGTRoamingEnv;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
     check-cast v0, Landroid/preference/SwitchPreference;
 
-    iput-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mLteRoamingSettings:Landroid/preference/SwitchPreference;
+    iput-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mLteRoamingSettings:Landroid/preference/SwitchPreference;
 
     .line 300
-    iget-object v0, p0, Lcom/android/settings/LGTRoamingEnv;->mLteRoamingSettings:Landroid/preference/SwitchPreference;
+    iget-object v0, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mLteRoamingSettings:Landroid/preference/SwitchPreference;
 
-    new-instance v1, Lcom/android/settings/LGTRoamingEnv$8;
+    new-instance v1, Lcom/android/settings_ex/LGTRoamingEnv$8;
 
-    invoke-direct {v1, p0}, Lcom/android/settings/LGTRoamingEnv$8;-><init>(Lcom/android/settings/LGTRoamingEnv;)V
+    invoke-direct {v1, p0}, Lcom/android/settings_ex/LGTRoamingEnv$8;-><init>(Lcom/android/settings_ex/LGTRoamingEnv;)V
 
     invoke-virtual {v0, v1}, Landroid/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -1013,24 +1013,24 @@
 
     .prologue
     .line 346
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPause()V
 
     .line 348
     :try_start_0
-    iget-object v1, p0, Lcom/android/settings/LGTRoamingEnv;->mAirplaneModeChangeReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mAirplaneModeChangeReceiver:Landroid/content/BroadcastReceiver;
 
     if-eqz v1, :cond_0
 
     .line 349
-    sget-object v1, Lcom/android/settings/LGTRoamingEnv;->mContext:Landroid/content/Context;
+    sget-object v1, Lcom/android/settings_ex/LGTRoamingEnv;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/settings/LGTRoamingEnv;->mAirplaneModeChangeReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mAirplaneModeChangeReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 351
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/LGTRoamingEnv;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LGTRoamingEnv;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -1040,7 +1040,7 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcom/android/settings/LGTRoamingEnv;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v1, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mReceiver:Landroid/content/BroadcastReceiver;
 
     if-eqz v1, :cond_1
 
@@ -1052,9 +1052,9 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 353
-    sget-object v1, Lcom/android/settings/LGTRoamingEnv;->mContext:Landroid/content/Context;
+    sget-object v1, Lcom/android/settings_ex/LGTRoamingEnv;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/settings/LGTRoamingEnv;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
     :try_end_0
@@ -1089,7 +1089,7 @@
 
     .line 386
     .local v0, "key":Ljava/lang/String;
-    sget-boolean v1, Lcom/android/settings/Utils;->DBG:Z
+    sget-boolean v1, Lcom/android/settings_ex/Utils;->DBG:Z
 
     if-eqz v1, :cond_0
 
@@ -1117,7 +1117,7 @@
 
     .line 387
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/LGTRoamingEnv;->mButtonCountryUpdate:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mButtonCountryUpdate:Landroid/preference/Preference;
 
     invoke-virtual {v1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1126,12 +1126,12 @@
     if-eqz v1, :cond_2
 
     .line 388
-    invoke-direct {p0}, Lcom/android/settings/LGTRoamingEnv;->updateCountryInfo()V
+    invoke-direct {p0}, Lcom/android/settings_ex/LGTRoamingEnv;->updateCountryInfo()V
 
     .line 392
     :cond_1
     :goto_0
-    invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
+    invoke-super {p0, p1, p2}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 
     move-result v1
 
@@ -1139,7 +1139,7 @@
 
     .line 389
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/LGTRoamingEnv;->mButtonReset:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mButtonReset:Landroid/preference/Preference;
 
     invoke-virtual {v1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1148,7 +1148,7 @@
     if-eqz v1, :cond_1
 
     .line 390
-    invoke-direct {p0}, Lcom/android/settings/LGTRoamingEnv;->resetSettings()V
+    invoke-direct {p0}, Lcom/android/settings_ex/LGTRoamingEnv;->resetSettings()V
 
     goto :goto_0
 .end method
@@ -1160,12 +1160,12 @@
     const/4 v5, 0x0
 
     .line 313
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
+    invoke-super {p0}, Lcom/android/settings_ex/SettingsPreferenceFragment;->onResume()V
 
     .line 315
-    sget-object v1, Lcom/android/settings/LGTRoamingEnv;->mContext:Landroid/content/Context;
+    sget-object v1, Lcom/android/settings_ex/LGTRoamingEnv;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/settings/LGTRoamingEnv;->mAirplaneModeChangeReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mAirplaneModeChangeReceiver:Landroid/content/BroadcastReceiver;
 
     new-instance v3, Landroid/content/IntentFilter;
 
@@ -1176,31 +1176,31 @@
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 317
-    iget-object v1, p0, Lcom/android/settings/LGTRoamingEnv;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    iget-object v1, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    iget-object v2, p0, Lcom/android/settings/LGTRoamingEnv;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
+    iget-object v2, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
     const/16 v3, 0x41
 
     invoke-virtual {v1, v2, v3}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
     .line 320
-    sget-object v1, Lcom/android/settings/LGTRoamingEnv;->mContext:Landroid/content/Context;
+    sget-object v1, Lcom/android/settings_ex/LGTRoamingEnv;->mContext:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isAirplaneModeEnabled(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isAirplaneModeEnabled(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 321
-    iget-object v1, p0, Lcom/android/settings/LGTRoamingEnv;->mButtonCountryUpdate:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mButtonCountryUpdate:Landroid/preference/Preference;
 
     invoke-virtual {v1, v5}, Landroid/preference/Preference;->setEnabled(Z)V
 
     .line 329
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/LGTRoamingEnv;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/LGTRoamingEnv;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -1210,28 +1210,28 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/LGTRoamingEnv;->mUseLTERoamingObserver:Landroid/database/ContentObserver;
+    iget-object v3, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mUseLTERoamingObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v1, v2, v5, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     .line 331
-    sget-object v1, Lcom/android/settings/LGTRoamingEnv;->mContext:Landroid/content/Context;
+    sget-object v1, Lcom/android/settings_ex/LGTRoamingEnv;->mContext:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isAirplaneModeEnabled(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isAirplaneModeEnabled(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    sget-object v1, Lcom/android/settings/LGTRoamingEnv;->mContext:Landroid/content/Context;
+    sget-object v1, Lcom/android/settings_ex/LGTRoamingEnv;->mContext:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isSupportKorRoamingConcept(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isSupportKorRoamingConcept(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    invoke-static {}, Lcom/android/settings/Utils;->isExceptionalUSIM()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isExceptionalUSIM()Z
 
     move-result v1
 
@@ -1239,12 +1239,12 @@
 
     .line 332
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/LGTRoamingEnv;->mLteRoamingSettings:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mLteRoamingSettings:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v5}, Landroid/preference/SwitchPreference;->setEnabled(Z)V
 
     .line 333
-    iget-object v1, p0, Lcom/android/settings/LGTRoamingEnv;->mLteRoamingSettings:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mLteRoamingSettings:Landroid/preference/SwitchPreference;
 
     invoke-virtual {v1, v5}, Landroid/preference/SwitchPreference;->setChecked(Z)V
 
@@ -1271,9 +1271,9 @@
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 341
-    sget-object v1, Lcom/android/settings/LGTRoamingEnv;->mContext:Landroid/content/Context;
+    sget-object v1, Lcom/android/settings_ex/LGTRoamingEnv;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/android/settings/LGTRoamingEnv;->mReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -1283,16 +1283,16 @@
     .line 323
     .end local v0    # "intentFilter":Landroid/content/IntentFilter;
     :cond_1
-    sget-object v1, Lcom/android/settings/LGTRoamingEnv;->mContext:Landroid/content/Context;
+    sget-object v1, Lcom/android/settings_ex/LGTRoamingEnv;->mContext:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/android/settings/Utils;->isSupportKorRoamingConcept(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/android/settings_ex/Utils;->isSupportKorRoamingConcept(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
     .line 324
-    iget-object v1, p0, Lcom/android/settings/LGTRoamingEnv;->mButtonCountryUpdate:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mButtonCountryUpdate:Landroid/preference/Preference;
 
     invoke-virtual {v1, v5}, Landroid/preference/Preference;->setEnabled(Z)V
 
@@ -1300,7 +1300,7 @@
 
     .line 326
     :cond_2
-    iget-object v1, p0, Lcom/android/settings/LGTRoamingEnv;->mButtonCountryUpdate:Landroid/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mButtonCountryUpdate:Landroid/preference/Preference;
 
     const/4 v2, 0x1
 
@@ -1310,9 +1310,9 @@
 
     .line 335
     :cond_3
-    iget-object v1, p0, Lcom/android/settings/LGTRoamingEnv;->mLteRoamingSettings:Landroid/preference/SwitchPreference;
+    iget-object v1, p0, Lcom/android/settings_ex/LGTRoamingEnv;->mLteRoamingSettings:Landroid/preference/SwitchPreference;
 
-    invoke-direct {p0}, Lcom/android/settings/LGTRoamingEnv;->getLteRoamingState()Z
+    invoke-direct {p0}, Lcom/android/settings_ex/LGTRoamingEnv;->getLteRoamingState()Z
 
     move-result v2
 

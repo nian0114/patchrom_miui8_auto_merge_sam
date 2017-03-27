@@ -1,11 +1,11 @@
-.class Lcom/android/settings/deviceinfo/StorageWizardMigrateConfirm$1;
-.super Lcom/android/settings/deviceinfo/MigrateEstimateTask;
+.class Lcom/android/settings_ex/deviceinfo/StorageWizardMigrateConfirm$1;
+.super Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;
 .source "StorageWizardMigrateConfirm.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/settings/deviceinfo/StorageWizardMigrateConfirm;->onCreate(Landroid/os/Bundle;)V
+    value = Lcom/android/settings_ex/deviceinfo/StorageWizardMigrateConfirm;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,19 +15,19 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/deviceinfo/StorageWizardMigrateConfirm;
+.field final synthetic this$0:Lcom/android/settings_ex/deviceinfo/StorageWizardMigrateConfirm;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/deviceinfo/StorageWizardMigrateConfirm;Landroid/content/Context;)V
+.method constructor <init>(Lcom/android/settings_ex/deviceinfo/StorageWizardMigrateConfirm;Landroid/content/Context;)V
     .locals 0
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
     .line 57
-    iput-object p1, p0, Lcom/android/settings/deviceinfo/StorageWizardMigrateConfirm$1;->this$0:Lcom/android/settings/deviceinfo/StorageWizardMigrateConfirm;
+    iput-object p1, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardMigrateConfirm$1;->this$0:Lcom/android/settings_ex/deviceinfo/StorageWizardMigrateConfirm;
 
-    invoke-direct {p0, p2}, Lcom/android/settings/deviceinfo/MigrateEstimateTask;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p2}, Lcom/android/settings_ex/deviceinfo/MigrateEstimateTask;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -41,7 +41,7 @@
 
     .prologue
     .line 60
-    iget-object v0, p0, Lcom/android/settings/deviceinfo/StorageWizardMigrateConfirm$1;->this$0:Lcom/android/settings/deviceinfo/StorageWizardMigrateConfirm;
+    iget-object v0, p0, Lcom/android/settings_ex/deviceinfo/StorageWizardMigrateConfirm$1;->this$0:Lcom/android/settings_ex/deviceinfo/StorageWizardMigrateConfirm;
 
     const v1, 0x7f0e06ea
 
@@ -57,7 +57,7 @@
 
     aput-object p1, v2, v3
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/settings/deviceinfo/StorageWizardMigrateConfirm;->setBodyText(I[Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/android/settings_ex/deviceinfo/StorageWizardMigrateConfirm;->setBodyText(I[Ljava/lang/String;)V
 
     .line 61
     return-void

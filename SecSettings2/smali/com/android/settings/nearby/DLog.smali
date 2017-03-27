@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/nearby/DLog;
+.class public Lcom/android/settings_ex/nearby/DLog;
 .super Ljava/lang/Object;
 .source "DLog.java"
 
@@ -15,7 +15,7 @@
     .line 22
     const/16 v0, 0x9
 
-    sput v0, Lcom/android/settings/nearby/DLog;->debugLevel:I
+    sput v0, Lcom/android/settings_ex/nearby/DLog;->debugLevel:I
 
     return-void
 .end method
@@ -28,7 +28,7 @@
 
     .prologue
     .line 53
-    sget v0, Lcom/android/settings/nearby/DLog;->debugLevel:I
+    sget v0, Lcom/android/settings_ex/nearby/DLog;->debugLevel:I
 
     const/4 v1, 0x4
 
@@ -84,7 +84,7 @@
 
     .prologue
     .line 112
-    sget v0, Lcom/android/settings/nearby/DLog;->debugLevel:I
+    sget v0, Lcom/android/settings_ex/nearby/DLog;->debugLevel:I
 
     const/4 v1, 0x1
 
@@ -140,7 +140,7 @@
 
     .prologue
     .line 65
-    sget v0, Lcom/android/settings/nearby/DLog;->debugLevel:I
+    sget v0, Lcom/android/settings_ex/nearby/DLog;->debugLevel:I
 
     const/4 v1, 0x3
 
@@ -196,7 +196,7 @@
 
     .prologue
     .line 39
-    sget v0, Lcom/android/settings/nearby/DLog;->debugLevel:I
+    sget v0, Lcom/android/settings_ex/nearby/DLog;->debugLevel:I
 
     const/16 v1, 0x9
 
@@ -252,7 +252,7 @@
 
     .prologue
     .line 76
-    sget v0, Lcom/android/settings/nearby/DLog;->debugLevel:I
+    sget v0, Lcom/android/settings_ex/nearby/DLog;->debugLevel:I
 
     const/4 v1, 0x2
 
@@ -309,7 +309,7 @@
 
     .prologue
     .line 88
-    sget v0, Lcom/android/settings/nearby/DLog;->debugLevel:I
+    sget v0, Lcom/android/settings_ex/nearby/DLog;->debugLevel:I
 
     const/4 v1, 0x2
 

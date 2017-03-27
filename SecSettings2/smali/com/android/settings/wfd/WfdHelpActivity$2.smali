@@ -1,11 +1,11 @@
-.class Lcom/android/settings/wfd/WfdHelpActivity$2;
+.class Lcom/android/settings_ex/wfd/WfdHelpActivity$2;
 .super Landroid/content/BroadcastReceiver;
 .source "WfdHelpActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/wfd/WfdHelpActivity;
+    value = Lcom/android/settings_ex/wfd/WfdHelpActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/settings/wfd/WfdHelpActivity;
+.field final synthetic this$0:Lcom/android/settings_ex/wfd/WfdHelpActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/settings/wfd/WfdHelpActivity;)V
+.method constructor <init>(Lcom/android/settings_ex/wfd/WfdHelpActivity;)V
     .locals 0
 
     .prologue
     .line 71
-    iput-object p1, p0, Lcom/android/settings/wfd/WfdHelpActivity$2;->this$0:Lcom/android/settings/wfd/WfdHelpActivity;
+    iput-object p1, p0, Lcom/android/settings_ex/wfd/WfdHelpActivity$2;->this$0:Lcom/android/settings_ex/wfd/WfdHelpActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -78,9 +78,9 @@
     if-eqz v1, :cond_0
 
     .line 77
-    iget-object v1, p0, Lcom/android/settings/wfd/WfdHelpActivity$2;->this$0:Lcom/android/settings/wfd/WfdHelpActivity;
+    iget-object v1, p0, Lcom/android/settings_ex/wfd/WfdHelpActivity$2;->this$0:Lcom/android/settings_ex/wfd/WfdHelpActivity;
 
-    invoke-virtual {v1}, Lcom/android/settings/wfd/WfdHelpActivity;->finish()V
+    invoke-virtual {v1}, Lcom/android/settings_ex/wfd/WfdHelpActivity;->finish()V
 
     .line 79
     :cond_0

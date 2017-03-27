@@ -1,11 +1,11 @@
-.class final Lcom/android/settings/DevelopmentSettings$5;
-.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.class final Lcom/android/settings_ex/DevelopmentSettings$5;
+.super Lcom/android/settings_ex/search/BaseSearchIndexProvider;
 .source "DevelopmentSettings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/DevelopmentSettings;
+    value = Lcom/android/settings_ex/DevelopmentSettings;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 
     .prologue
     .line 2252
-    invoke-direct {p0}, Lcom/android/settings/search/BaseSearchIndexProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/settings_ex/search/BaseSearchIndexProvider;-><init>()V
 
     return-void
 .end method
@@ -75,7 +75,7 @@
 
     .prologue
     .line 2277
-    invoke-direct {p0, p1}, Lcom/android/settings/DevelopmentSettings$5;->isShowingDeveloperOptions(Landroid/content/Context;)Z
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/DevelopmentSettings$5;->isShowingDeveloperOptions(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -97,8 +97,8 @@
 
     .line 2282
     .local v0, "keys":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
-    # invokes: Lcom/android/settings/DevelopmentSettings;->showEnableOemUnlockPreference()Z
-    invoke-static {}, Lcom/android/settings/DevelopmentSettings;->access$400()Z
+    # invokes: Lcom/android/settings_ex/DevelopmentSettings;->showEnableOemUnlockPreference()Z
+    invoke-static {}, Lcom/android/settings_ex/DevelopmentSettings;->access$400()Z
 
     move-result v1
 
@@ -111,8 +111,8 @@
 
     .line 2285
     :cond_2
-    # invokes: Lcom/android/settings/DevelopmentSettings;->showEnableMultiWindowPreference()Z
-    invoke-static {}, Lcom/android/settings/DevelopmentSettings;->access$500()Z
+    # invokes: Lcom/android/settings_ex/DevelopmentSettings;->showEnableMultiWindowPreference()Z
+    invoke-static {}, Lcom/android/settings_ex/DevelopmentSettings;->access$500()Z
 
     move-result v1
 
@@ -144,8 +144,8 @@
     :cond_4
     const-string v1, "com.android.terminal"
 
-    # invokes: Lcom/android/settings/DevelopmentSettings;->isPackageInstalled(Landroid/content/Context;Ljava/lang/String;)Z
-    invoke-static {p1, v1}, Lcom/android/settings/DevelopmentSettings;->access$600(Landroid/content/Context;Ljava/lang/String;)Z
+    # invokes: Lcom/android/settings_ex/DevelopmentSettings;->isPackageInstalled(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v1}, Lcom/android/settings_ex/DevelopmentSettings;->access$600(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -196,7 +196,7 @@
 
     .line 2303
     :cond_7
-    invoke-static {}, Lcom/android/settings/Utils;->isChinaCMCCModel()Z
+    invoke-static {}, Lcom/android/settings_ex/Utils;->isChinaCMCCModel()Z
 
     move-result v1
 
@@ -263,7 +263,7 @@
 
     .prologue
     .line 2265
-    invoke-direct {p0, p1}, Lcom/android/settings/DevelopmentSettings$5;->isShowingDeveloperOptions(Landroid/content/Context;)Z
+    invoke-direct {p0, p1}, Lcom/android/settings_ex/DevelopmentSettings$5;->isShowingDeveloperOptions(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -284,7 +284,7 @@
 
     .line 2270
     .local v0, "sir":Landroid/provider/SearchIndexableResource;
-    const-class v1, Lcom/android/settings/DevelopmentSettings;
+    const-class v1, Lcom/android/settings_ex/DevelopmentSettings;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

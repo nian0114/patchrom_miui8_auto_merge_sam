@@ -1,4 +1,4 @@
-.class public Lcom/android/settings/personalpage/PersonalPageDisclaimer;
+.class public Lcom/android/settings_ex/personalpage/PersonalPageDisclaimer;
 .super Landroid/app/Activity;
 .source "PersonalPageDisclaimer.java"
 
@@ -48,7 +48,7 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/settings/personalpage/PersonalPageDisclaimer;->bSwitchon:Ljava/lang/Boolean;
+    iget-object v3, p0, Lcom/android/settings_ex/personalpage/PersonalPageDisclaimer;->bSwitchon:Ljava/lang/Boolean;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -96,7 +96,7 @@
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 64
-    invoke-virtual {p0, v0}, Lcom/android/settings/personalpage/PersonalPageDisclaimer;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    invoke-virtual {p0, v0}, Lcom/android/settings_ex/personalpage/PersonalPageDisclaimer;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     .line 65
     return-void
@@ -121,7 +121,7 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 29
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageDisclaimer;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageDisclaimer;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
@@ -133,17 +133,17 @@
 
     check-cast v2, Ljava/lang/Boolean;
 
-    iput-object v2, p0, Lcom/android/settings/personalpage/PersonalPageDisclaimer;->bSwitchon:Ljava/lang/Boolean;
+    iput-object v2, p0, Lcom/android/settings_ex/personalpage/PersonalPageDisclaimer;->bSwitchon:Ljava/lang/Boolean;
 
     .line 31
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/settings/personalpage/PersonalPageDisclaimer;->mSharedPreferences:Landroid/content/SharedPreferences;
+    iput-object v2, p0, Lcom/android/settings_ex/personalpage/PersonalPageDisclaimer;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     .line 33
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageDisclaimer;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageDisclaimer;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
@@ -166,7 +166,7 @@
     if-eqz v2, :cond_1
 
     .line 36
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageDisclaimer;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageDisclaimer;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -222,7 +222,7 @@
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 41
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageDisclaimer;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageDisclaimer;->finish()V
 
     .line 53
     .end local v1    # "state":I
@@ -248,23 +248,23 @@
     invoke-static {v2, v3}, Landroid/util/secutil/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 46
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageDisclaimer;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageDisclaimer;->finish()V
 
     goto :goto_0
 
     .line 51
     .end local v1    # "state":I
     :cond_1
-    iget-object v2, p0, Lcom/android/settings/personalpage/PersonalPageDisclaimer;->bSwitchon:Ljava/lang/Boolean;
+    iget-object v2, p0, Lcom/android/settings_ex/personalpage/PersonalPageDisclaimer;->bSwitchon:Ljava/lang/Boolean;
 
     invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v2
 
-    invoke-direct {p0, v2}, Lcom/android/settings/personalpage/PersonalPageDisclaimer;->sendVeificationRequest(Z)V
+    invoke-direct {p0, v2}, Lcom/android/settings_ex/personalpage/PersonalPageDisclaimer;->sendVeificationRequest(Z)V
 
     .line 52
-    invoke-virtual {p0}, Lcom/android/settings/personalpage/PersonalPageDisclaimer;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings_ex/personalpage/PersonalPageDisclaimer;->finish()V
 
     goto :goto_0
 .end method
